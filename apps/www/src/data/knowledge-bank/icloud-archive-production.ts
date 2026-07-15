@@ -16,7 +16,8 @@ export const icloudArchiveProjects = [
     entityIds: [],
     publicSurfaceCandidates: [],
     photoResearchPrompts: [
-      "Interfaces, installation views, working sessions, projection tests, and credited public artifacts for NTER CHNG, the Monthly Music Hackathon prototype, and the Horse Lords video, with collaborator and participant rights reviewed."
+      "Interfaces, installation views, working sessions, projection tests, and credited public artifacts for NTER CHNG, the Monthly Music Hackathon prototype, and the Horse Lords video, with collaborator and participant rights reviewed.",
+      "NTER CHNG's 2011 restaging process: software and display tests, wall reconstruction, projection setup, floor markings, wiring, collaborator work sessions, gallery installation, and teardown, with private communications and complete labor credit protected."
     ]
   },
   {

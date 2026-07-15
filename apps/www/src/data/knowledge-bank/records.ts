@@ -68,14 +68,17 @@ import {
   campaignPressSources
 } from "./press-catalog.ts";
 import {
+  clevelandAveProject,
   kcTownHallClaims,
   kcTownHallCorrections,
   kcTownHallInquiry,
+  kcTownHallNeighborhoodInquiries,
   kcTownHallTransitionInquiry,
   kcTownHallIntakes,
   kcTownHallPage,
   kcTownHallProject,
-  kcTownHallSources
+  kcTownHallSources,
+  tiredOfTiresProject
 } from "./kc-town-hall-council-action.ts";
 
 const knowledgeBankInput = {
@@ -620,6 +623,8 @@ const knowledgeBankInput = {
     ...socialArchiveProjects,
     ...icloudArchiveProjects,
     kcTownHallProject,
+    tiredOfTiresProject,
+    clevelandAveProject,
     {
       id: "callnyc",
       title: "CallNYC",
@@ -992,6 +997,7 @@ const knowledgeBankInput = {
     ...icloudArchiveResearchInquiries,
     kcTownHallInquiry,
     kcTownHallTransitionInquiry,
+    ...kcTownHallNeighborhoodInquiries,
     {
       id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
       project: "callnyc",

@@ -393,6 +393,90 @@ test("KC Town Hall transition memory remains deferred and outside public composi
   assert.equal(result.findings.some((item) => item.code === "kc-disposition-public-conclusion"), true);
 });
 
+test("KC Town Hall Phase One keeps scope, completion, and general-contractor role distinct", () => {
+  const required = suite.requiredKcNeighborhoodStewardship;
+  const bank = structuredClone(knowledgeBank);
+  const completion = bank.claims.find((item) => item.id === required.completionClaimId);
+  const role = bank.claims.find((item) => item.id === required.generalContractorClaimId);
+  completion.status = "confirmed";
+  completion.boundaries = [];
+  completion.antiClaims = [];
+  role.status = "confirmed";
+  role.publicationStatus = "ready";
+  role.evidence.find((edge) => edge.sourceId === required.packetSourceId).relationship = "direct-support";
+  role.boundaries = [];
+  role.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-phase-one-completion-tension"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-general-contractor-attribution"), true);
+});
+
+test("KC Town Hall protected packet cannot become a public path or role credential", () => {
+  const required = suite.requiredKcNeighborhoodStewardship;
+  const bank = structuredClone(knowledgeBank);
+  const packet = bank.sources.find((item) => item.id === required.packetSourceId);
+  packet.visibility = "public";
+  packet.preservationStatus = "live";
+  packet.canonicalUrl = "https://example.com/private-proposal.pdf";
+  packet.doesNotEstablish = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-neighborhood-protected-source"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-phase-one-packet-scope"), true);
+});
+
+test("KC Town Hall survey system keeps authorship and resident data bounded", () => {
+  const required = suite.requiredKcNeighborhoodStewardship;
+  const bank = structuredClone(knowledgeBank);
+  const role = bank.claims.find((item) => item.id === required.surveyRoleClaimId);
+  role.status = "confirmed";
+  role.publicationStatus = "ready";
+  role.evidence.find((edge) => edge.sourceId === required.packetSourceId).relationship = "direct-support";
+  role.boundaries = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-survey-role-and-privacy"), true);
+});
+
+test("TiredOfTires private total cannot become audited public impact", () => {
+  const required = suite.requiredKcNeighborhoodStewardship;
+  const bank = structuredClone(knowledgeBank);
+  const metric = bank.claims.find((item) => item.id === required.tireMetricClaimId);
+  metric.status = "confirmed";
+  metric.publicationStatus = "ready";
+  metric.projections = [{
+    id: "tire-impact",
+    text: "Jamie removed 1,970 unique tires, producing verified environmental impact.",
+    surfaces: ["/work/kc-town-hall"],
+    status: "active"
+  }];
+  metric.boundaries = [];
+  metric.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "tired-of-tires-metric-boundary"), true);
+});
+
+test("Cleveland Avenue preserves Pastor Lee, collective credit, and causality limits", () => {
+  const required = suite.requiredKcNeighborhoodStewardship;
+  const bank = structuredClone(knowledgeBank);
+  const role = bank.claims.find((item) => item.id === required.clevelandRoleClaimId);
+  role.internalClaim = "Jamie solely founded Cleveland Avenue and secured corridor capital funding.";
+  role.evidence.find((edge) => edge.sourceId === required.hencSourceId).relationship = "direct-support";
+  role.boundaries = [];
+  role.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "cleveland-ave-role-credit"), true);
+});
+
+test("TiredOfTires Indian Mound expansion remains an internal research lead", () => {
+  const required = suite.requiredKcNeighborhoodStewardship;
+  const bank = structuredClone(knowledgeBank);
+  const expansion = bank.claims.find((item) => item.id === required.indianMoundClaimId);
+  expansion.status = "confirmed";
+  expansion.publicationStatus = "ready";
+  expansion.boundaries = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "tired-of-tires-indian-mound"), true);
+});
+
 test("iCloud Teams archival production covers all required archives and records", () => {
   const required = suite.requiredIcloudArchiveProduction;
   assert.deepEqual(required.archiveNames, ["Jamie Projects History", "CRS", "job-hunt"]);
@@ -1343,6 +1427,16 @@ test("Google Drive archival production keeps private sources, media holds, and a
   });
   const sundayDinner = knowledgeBank.claims.find((item) => item.id === required.sundayDinnerClaimId);
   assert.match(sundayDinner.antiClaims.join(" "), /33 Zoom events/);
+
+  const installPlan = knowledgeBank.sources.find((item) => item.id === required.nterChngInstallPlanSourceId);
+  const workingCompilation = knowledgeBank.sources.find((item) => item.id === required.nterChngWorkingCompilationSourceId);
+  const restaging = knowledgeBank.claims.find((item) => item.id === required.nterChngRestagingClaimId);
+  const framing = knowledgeBank.claims.find((item) => item.id === required.nterChngFramingClaimId);
+  assert.match(installPlan?.doesNotEstablish.join(" ") ?? "", /completion of every planned task/);
+  assert.match(workingCompilation?.doesNotEstablish.join(" ") ?? "", /phone numbers or message text/);
+  assert.equal(restaging?.publicationStatus, "internal-only");
+  assert.equal(framing?.publicationStatus, "protected");
+  assert.match(framing?.internalClaim ?? "", /Drew Bolton.*Jamie Burkart.*Garrett Fuselier/);
 });
 
 test("Google Drive eval rejects exposed locators, cleared media, and event-count inflation", () => {
@@ -1363,6 +1457,28 @@ test("Google Drive eval rejects exposed locators, cleared media, and event-count
   assert.equal(result.findings.some((item) => item.code === "drive-private-source-boundary"), true);
   assert.equal(result.findings.some((item) => item.code === "drive-media-rights"), true);
   assert.equal(result.findings.some((item) => item.code === "drive-asset-event-boundary"), true);
+});
+
+test("Google Drive eval rejects NTER CHNG plan completion, sole credit, and message exposure", () => {
+  const required = suite.requiredGoogleDriveArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const installPlan = bank.sources.find((item) => item.id === required.nterChngInstallPlanSourceId);
+  const workingCompilation = bank.sources.find((item) => item.id === required.nterChngWorkingCompilationSourceId);
+  const restaging = bank.claims.find((item) => item.id === required.nterChngRestagingClaimId);
+  const framing = bank.claims.find((item) => item.id === required.nterChngFramingClaimId);
+  installPlan.doesNotEstablish = [];
+  workingCompilation.doesNotEstablish = [];
+  restaging.internalClaim = "Jamie completed every NTER CHNG restaging task for America: Now and Here.";
+  restaging.boundaries = [];
+  restaging.antiClaims = [];
+  framing.internalClaim = "Jamie solely authored NTER CHNG and its response archive.";
+  framing.boundaries = [];
+  framing.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "drive-nter-install-plan-scope"), true);
+  assert.equal(result.findings.some((item) => item.code === "drive-nter-working-compilation-scope"), true);
+  assert.equal(result.findings.some((item) => item.code === "drive-nter-restaging-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "drive-nter-framing-privacy"), true);
 });
 
 test("missing supplied URLs fail capture integrity", () => {

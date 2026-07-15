@@ -133,6 +133,110 @@ export const kcTownHallIntakes = [
     claimIds: [],
     inquiryIds: ["INQ-KC-TOWN-HALL-PROJECT-TRANSITION"],
     dispositionReason: "The recollection is public-safe but remains first-party. Corroborating public evidence and recipient confirmation should precede public projection."
+  },
+  {
+    id: "INT-2026-07-15-KC-TOWN-HALL-PHASE-ONE-PACKET",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "KC Town Hall's 2019 CCED proposal packet, closely reviewed for Phase One restoration scope, neighborhood-survey process, local hiring, and trade-learning evidence while excluding its private financial appendix.",
+    projectIds: ["kc-town-hall"],
+    entityIds: [],
+    dateHints: ["2018", "2019"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019"],
+    claimIds: [
+      "CLM-KC-TOWN-HALL-PHASE-ONE-SCOPE",
+      "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+      "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY"
+    ],
+    inquiryIds: ["INQ-KC-TOWN-HALL-PHASE-ONE-ROLE"],
+    protectedLocatorId: "KC-TOWN-HALL-PHASE-ONE-PACKET-2019"
+  },
+  {
+    id: "INT-2026-07-15-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY",
+    kind: "memory",
+    capturedAt: "2026-07-15",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "Jamie's first-person account of Phase One general-contractor work, survey-system design, TiredOfTires operations, and Cleveland Avenue civic-design support.",
+    projectIds: [
+      "kc-town-hall",
+      "tired-of-tires",
+      "cleveland-ave-unify-to-beautify"
+    ],
+    entityIds: [],
+    dateHints: ["2018", "2019", "2020", "2021", "2022"],
+    sensitivity: "private-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026"],
+    claimIds: [
+      "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+      "CLM-KC-TOWN-HALL-SURVEY-SYSTEM-ROLE",
+      "CLM-TIRED-OF-TIRES-JAMIE-ROLE",
+      "CLM-TIRED-OF-TIRES-INDIAN-MOUND-EXPANSION",
+      "CLM-CLEVELAND-AVE-JAMIE-DESIGN-OPERATIONS-ROLE"
+    ],
+    inquiryIds: [
+      "INQ-KC-TOWN-HALL-PHASE-ONE-ROLE",
+      "INQ-KC-TOWN-HALL-SURVEY-SYSTEM",
+      "INQ-TIRED-OF-TIRES-OPERATIONS",
+      "INQ-CLEVELAND-AVE-JAMIE-ROLE"
+    ],
+    protectedLocatorId: "JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026"
+  },
+  {
+    id: "INT-2026-07-15-TIRED-OF-TIRES-CALCULATOR",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex iCloud archival review",
+    publicSafeDescription: "Private KC Town Hall operating calculator with monthly tire-count rows from May 2019 through September 2022.",
+    projectIds: ["tired-of-tires"],
+    entityIds: [],
+    dateHints: ["2019-05", "2022-09"],
+    sensitivity: "private-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-TIRED-OF-TIRES-OPERATIONS-CALCULATOR-2019-2022"],
+    claimIds: ["CLM-TIRED-OF-TIRES-INTERNAL-LOG-AGGREGATE"],
+    inquiryIds: ["INQ-TIRED-OF-TIRES-OPERATIONS"],
+    protectedLocatorId: "TIRED-OF-TIRES-OPERATIONS-CALCULATOR-2019-2022"
+  },
+  {
+    id: "INT-2026-07-15-TIRED-OF-TIRES-FACEBOOK-POST",
+    kind: "url",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex authenticated Facebook review",
+    publicSafeDescription: "Public Cleveland Ave KC post describing a monthly residential tire-pickup service operated by KC Town Hall with the Oak Park Neighborhood Association.",
+    submittedUrl: "https://www.facebook.com/ClevelandAveKC/posts/1633775000115273",
+    projectIds: ["tired-of-tires"],
+    entityIds: [],
+    dateHints: ["2020-09"],
+    sensitivity: "public-safe",
+    availability: "live",
+    status: "promoted",
+    sourceIds: ["SRC-FB-CLEVELAND-AVE-TIRED-OF-TIRES-2020"],
+    claimIds: ["CLM-TIRED-OF-TIRES-OPERATING-PROGRAM"],
+    inquiryIds: ["INQ-TIRED-OF-TIRES-OPERATIONS"]
+  },
+  {
+    id: "INT-2026-07-15-HENC-STRATEGIC-PLAN",
+    kind: "url",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex public-source research",
+    publicSafeDescription: "HENC's public strategic plan describing the coalition's history, purpose, and neighborhood-association structure.",
+    submittedUrl: "https://extension.missouri.edu/media/wysiwyg/News/TheNetwork/March2024/HENC%20Strategic%20Plan%203.0%20%28PDF%29.pdf",
+    projectIds: ["cleveland-ave-unify-to-beautify"],
+    entityIds: [],
+    dateHints: ["2009", "2024"],
+    sensitivity: "public-safe",
+    availability: "live",
+    status: "promoted",
+    sourceIds: ["SRC-HENC-STRATEGIC-PLAN-2024"],
+    claimIds: ["CLM-CLEVELAND-AVE-JAMIE-DESIGN-OPERATIONS-ROLE"],
+    inquiryIds: ["INQ-CLEVELAND-AVE-JAMIE-ROLE"]
   }
 ] satisfies IntakeItem[];
 
@@ -145,7 +249,34 @@ export const kcTownHallProject = {
   entityIds: [],
   publicSurfaceCandidates: ["/work/kc-town-hall", "/work", "/work/technical-operations"],
   photoResearchPrompts: [
-    "Board presentation materials, the building and neighborhood context, planning sessions, public-benefit documentation, and collaborators, with property, participant, and private-record boundaries reviewed."
+    "Board presentation materials, the building and neighborhood context, planning sessions, public-benefit documentation, and collaborators, with property, participant, and private-record boundaries reviewed.",
+    "Phase One roof, masonry, carpentry, welding, water-service, egress, and scaffolding work; measured drawings and survey cards; daily site coordination; and neighborhood conversations, with worker credit and site-safety context preserved."
+  ]
+} satisfies ProjectRecord;
+
+export const tiredOfTiresProject = {
+  id: "tired-of-tires",
+  title: "TiredOfTires",
+  summary: "Recurring free residential tire-pickup operations associated with KC Town Hall and the Oak Park Neighborhood Association, documented through public posts and a private operating calculator.",
+  status: "historical",
+  period: { start: "2019", end: "2022" },
+  entityIds: [],
+  publicSurfaceCandidates: [],
+  photoResearchPrompts: [
+    "Monthly pickup routes, collected tires, handbills, city recycling handoff, neighborhood partners, and volunteer operations, without exposing resident addresses or request records."
+  ]
+} satisfies ProjectRecord;
+
+export const clevelandAveProject = {
+  id: "cleveland-ave-unify-to-beautify",
+  title: "Cleveland Ave Unify to Beautify",
+  summary: "A neighborhood-corridor initiative associated with the Historic East Neighborhoods Coalition, currently preserved as a research project pending fuller source recovery and collaborator confirmation.",
+  status: "research",
+  period: {},
+  entityIds: [],
+  publicSurfaceCandidates: [],
+  photoResearchPrompts: [
+    "Cleveland Avenue listening sessions, corridor maps, identity materials, handbills, public meetings, participating neighborhood associations, and elected-official context, with creator and participant credit reviewed."
   ]
 } satisfies ProjectRecord;
 
@@ -351,6 +482,182 @@ export const kcTownHallSources = [
       "an executed funding agreement",
       "any disbursement, receipt, or expenditure",
       "current property status"
+    ]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+    title: "KC Town Hall CCED proposal and supporting letters",
+    organization: "KC Town Hall",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2019-03-25",
+    accessedAt: "2026-07-15",
+    publicCitation: "KC Town Hall, CCED proposal and supporting letters, 2019.",
+    publicNote: "The project packet documents Phase One's cold-shell scope, neighborhood-survey process, local hiring, trade learning, and a line-item budget while containing a private appendix that is excluded from the public repository.",
+    locator: "PDF pp. 4, 7, and 11-12; private appendix excluded.",
+    projectIds: ["kc-town-hall"],
+    intakeIds: ["INT-2026-07-15-KC-TOWN-HALL-PHASE-ONE-PACKET"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex text extraction and visual PDF inspection"],
+    supportsGenerally: [
+      "Phase One cold-shell scope",
+      "$189,629 Phase One budget",
+      "2018 roof and structural-masonry progress",
+      "2019 completion column in the Phase One budget",
+      "neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church",
+      "project-reported local hiring and masonry trade learning"
+    ],
+    doesNotEstablish: [
+      "Jamie's general-contractor role",
+      "the general contractor of record",
+      "independent audit or closeout of Phase One completion",
+      "Jamie as sole author of the survey or proposal",
+      "Phase Two construction or completion",
+      "public suitability of the packet's financial appendix"
+    ],
+    protectedLocatorId: "KC-TOWN-HALL-PHASE-ONE-PACKET-2019"
+  },
+  {
+    id: "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026",
+    title: "Jamie Burkart first-person KC neighborhood-stewardship note",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-07-15",
+    publicCitation: "Jamie Burkart, first-person archival note, July 15, 2026.",
+    publicNote: "Jamie describes his Phase One site-coordination role, survey-system work, TiredOfTires operations, and Cleveland Avenue design and communications support.",
+    locator: "First-person archival submission; public-safe synopsis only.",
+    projectIds: [
+      "kc-town-hall",
+      "tired-of-tires",
+      "cleveland-ave-unify-to-beautify"
+    ],
+    intakeIds: ["INT-2026-07-15-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart submission and Codex claim decomposition"],
+    supportsGenerally: [
+      "Jamie's attributed Phase One general-contractor and daily site-coordination role",
+      "Jamie's attributed survey-handbill and data-system role",
+      "Jamie's attributed TiredOfTires design, city-coordination, and monthly pickup role",
+      "Jamie's attributed Indian Mound expansion recollection",
+      "Jamie's attributed Cleveland Avenue identity, mapping, photography, social, print, and meeting-support role",
+      "Pastor Lee's credited corridor concept"
+    ],
+    doesNotEstablish: [
+      "independent corroboration",
+      "contractor-of-record or licensure status",
+      "sole authorship, sole founding, or sole operational responsibility",
+      "audited tire-removal totals",
+      "causality for municipal capital decisions",
+      "authority to speak for neighborhood associations, HENC, Pastor Lee, or other collaborators"
+    ],
+    protectedLocatorId: "JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026"
+  },
+  {
+    id: "SRC-TIRED-OF-TIRES-OPERATIONS-CALCULATOR-2019-2022",
+    title: "KC Town Hall tire-pickup operations calculator",
+    organization: "KC Town Hall",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-01-26",
+    accessedAt: "2026-07-15",
+    publicCitation: "KC Town Hall, tire-pickup operations calculator, 2019-2022.",
+    publicNote: "The private calculator records monthly rimmed, rimless, large-tire, total-count, and estimated-fee rows from May 2019 through September 2022.",
+    locator: "Monthly columns and total-count row; public-safe aggregate only.",
+    projectIds: ["tired-of-tires"],
+    intakeIds: ["INT-2026-07-15-TIRED-OF-TIRES-CALCULATOR"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex structured CSV review"],
+    supportsGenerally: [
+      "26 monthly columns from May 2019 through September 2022",
+      "25 nonzero logged pickup months",
+      "1,970 aggregate tires in the total-count row",
+      "project-reported operating geography fields"
+    ],
+    doesNotEstablish: [
+      "independent audit",
+      "unique tires or unique households",
+      "who performed each pickup",
+      "complete program history",
+      "independently verified disposal-fee savings",
+      "Indian Mound expansion"
+    ],
+    protectedLocatorId: "TIRED-OF-TIRES-OPERATIONS-CALCULATOR-2019-2022"
+  },
+  {
+    id: "SRC-FB-CLEVELAND-AVE-TIRED-OF-TIRES-2020",
+    title: "Cleveland Ave KC post about monthly free tire pickup",
+    organization: "Cleveland Ave KC",
+    kind: "institutional-social-post",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.facebook.com/ClevelandAveKC/posts/1633775000115273",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Cleveland Ave KC, public Facebook post about monthly free tire pickup, 2020.",
+    publicNote: "The post says KC Town Hall and the Oak Park Neighborhood Association offered monthly free residential tire pickup in historic east Kansas City and routed residents to request pickup or volunteer.",
+    locator: "Public post text beginning 'KC Town Hall & the Oak Park Neighborhood Association'.",
+    projectIds: ["tired-of-tires"],
+    intakeIds: ["INT-2026-07-15-TIRED-OF-TIRES-FACEBOOK-POST"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex authenticated Facebook inspection"],
+    supportsGenerally: [
+      "monthly free residential tire-pickup program",
+      "KC Town Hall and Oak Park Neighborhood Association program framing",
+      "historic east Kansas City service area",
+      "pickup-request and volunteer routes",
+      "project-reported disposal-fee savings"
+    ],
+    doesNotEstablish: [
+      "Jamie's individual role",
+      "independently verified tire or savings totals",
+      "complete program duration",
+      "Indian Mound expansion",
+      "sole ownership by KC Town Hall or Oak Park Neighborhood Association"
+    ]
+  },
+  {
+    id: "SRC-HENC-STRATEGIC-PLAN-2024",
+    title: "HENC Strategic Plan 3.0",
+    organization: "Historic East Neighborhoods Coalition",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2024-01-01",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://extension.missouri.edu/media/wysiwyg/News/TheNetwork/March2024/HENC%20Strategic%20Plan%203.0%20%28PDF%29.pdf",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Historic East Neighborhoods Coalition, HENC Strategic Plan 3.0, 2024.",
+    publicNote: "The plan describes HENC as a coalition of neighborhood associations and community stakeholders formed in 2009 to support and empower Kansas City's east-side neighborhoods.",
+    locator: "PDF pp. 2-3, About HENC and historic membership.",
+    projectIds: ["cleveland-ave-unify-to-beautify"],
+    intakeIds: ["INT-2026-07-15-HENC-STRATEGIC-PLAN"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public-source review"],
+    supportsGenerally: [
+      "HENC organization and mission",
+      "2009 coalition origin",
+      "neighborhood-association and community-stakeholder structure",
+      "east-side neighborhood focus"
+    ],
+    doesNotEstablish: [
+      "Cleveland Ave Unify to Beautify program details",
+      "Jamie's membership, co-founding, or design role",
+      "Pastor Lee's authorship of the corridor concept",
+      "specific meetings, participants, funding decisions, or capital outcomes"
     ]
   }
 ] satisfies SourceRecord[];
@@ -638,6 +945,383 @@ export const kcTownHallClaims = [
     ],
     reviewedAt: "2026-07-14",
     reviewedBy: ["Codex public-record review"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-PHASE-ONE-SCOPE",
+    project: "kc-town-hall",
+    claimType: "activity",
+    internalClaim: "KC Town Hall's 2019 CCED packet defines Phase One as a $189,629 cold-shell scope spanning roof and TPO membrane work, structural masonry, floor framing, water service, construction staging, debris and tree removal, basement egress, material transport, property acquisition, site safety, air-quality controls, and supporting costs.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+        relationship: "direct-support",
+        supports: ["Phase One cold-shell definition", "$189,629 total", "line-item work categories"],
+        locator: "PDF pp. 11-12, Summary of Budget and Phase One budget detail.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The project-authored packet establishes the documented scope and budget, not an independent construction audit or Jamie's individual role.",
+      "Specialized work categories do not establish who contracted, supervised, designed, stamped, or performed each task."
+    ],
+    antiClaims: [
+      "The packet independently verifies that every Phase One line item was completed exactly as budgeted.",
+      "Jamie personally performed every trade represented in the Phase One scope.",
+      "Phase One included the later Phase Two warm-shell buildout."
+    ],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-PHASE-ONE-ROLE"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex close reading and visual PDF inspection"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+    project: "kc-town-hall",
+    claimType: "chronology",
+    internalClaim: "The March 2019 packet records 2018 roof and structural-masonry progress and labels its Phase One budget 'Completed 2019'; Jamie separately remembers Phase One reaching completion in 2019.",
+    status: "use-with-care",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+        relationship: "direct-support",
+        supports: ["2018 documented progress", "2019 completion label", "2018 and 2019 budget columns"],
+        locator: "PDF pp. 11-12.",
+        confidence: "moderate",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026",
+        relationship: "private-support",
+        supports: ["Jamie's attributed 2019 completion recollection"],
+        locator: "First-person archival submission.",
+        confidence: "moderate",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The same contemporaneous packet says Phase One was 66 percent complete and slated for completion in 2019 before presenting a later budget page labeled completed; the internal timing requires care.",
+      "No independent closeout report, permit completion, contractor affidavit, or final invoice set has yet been linked."
+    ],
+    antiClaims: [
+      "The packet independently proves a formally certified Phase One closeout.",
+      "Phase Two was completed in 2019.",
+      "The full KC Town Hall redevelopment was completed."
+    ],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-PHASE-ONE-ROLE"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart first-person account and Codex source review"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+    project: "kc-town-hall",
+    claimType: "role",
+    internalClaim: "Jamie states that he served as general contractor for Phase One, coordinating historic brick masonry, roofing, carpentry, welding, engineering, architecture, plumbing, site sequencing, measurements, and daily work from basement through roof deck.",
+    status: "use-with-care",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026",
+        relationship: "private-support",
+        supports: ["attributed general-contractor role", "attributed daily site coordination", "attributed multi-trade sequencing"],
+        locator: "First-person archival submission.",
+        confidence: "moderate",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+        relationship: "context",
+        supports: ["specialized Phase One workstreams", "roof, masonry, framing, water, egress, safety, and air-quality scope"],
+        locator: "PDF pp. 7 and 11-12.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The role is presently Jamie's first-person account; the packet corroborates the scope but does not name the general contractor.",
+      "General-contractor coordination does not erase Julia Fredenburg, trade contractors, architects, engineers, neighborhood collaborators, or workers.",
+      "The current record does not establish a statutory contractor-of-record designation or licensure status."
+    ],
+    antiClaims: [
+      "The CCED packet names Jamie as general contractor.",
+      "Jamie solely designed, engineered, restored, or constructed the building.",
+      "Jamie personally performed licensed architectural, engineering, plumbing, roofing, masonry, carpentry, or welding work."
+    ],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-PHASE-ONE-ROLE"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart first-person account and Codex claim review"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+    project: "kc-town-hall",
+    claimType: "activity",
+    internalClaim: "The 2019 packet documents an ongoing neighborhood survey conducted with the Oak Park Neighborhood Association and New Horizon Missionary Baptist Church and states that survey results directly shaped the proposal.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+        relationship: "direct-support",
+        supports: ["survey existence", "named neighborhood partners", "survey questions", "project-reported influence on proposal"],
+        locator: "PDF p. 4, Neighborhood Process; p. 23, support letter.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The packet is project-authored and reports that the survey shaped the proposal; no response denominator, raw dataset, or independent evaluation is currently linked.",
+      "The source does not assign sole authorship of the survey or data system to Jamie."
+    ],
+    antiClaims: [
+      "The survey represented every neighborhood resident.",
+      "The packet independently verifies survey methodology or impact.",
+      "Jamie alone designed or conducted the neighborhood process."
+    ],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-SURVEY-SYSTEM"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex close reading and visual PDF inspection"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-SURVEY-SYSTEM-ROLE",
+    project: "kc-town-hall",
+    claimType: "role",
+    internalClaim: "Jamie states that he designed a 4-by-6-inch neighborhood survey handbill and backing contact-and-response system and used daily site presence and neighborhood service routes to collect visions, stories, contacts, and priorities.",
+    status: "use-with-care",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026",
+        relationship: "private-support",
+        supports: ["attributed handbill design", "attributed backing-data system", "attributed field collection practice"],
+        locator: "First-person archival submission.",
+        confidence: "moderate",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+        relationship: "corroborating",
+        supports: ["surviving survey handbill image", "survey fields", "named neighborhood partners", "project-reported proposal influence"],
+        locator: "PDF p. 4, Neighborhood Process.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The surviving packet corroborates the handbill and process, not Jamie's sole design authorship or the architecture of the backing data system.",
+      "Resident stories, contact records, addresses, and raw responses remain protected."
+    ],
+    antiClaims: [
+      "Jamie alone authored every survey question or neighborhood-process decision.",
+      "The raw survey dataset belongs in the public repository.",
+      "The survey proves representative neighborhood consensus."
+    ],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-SURVEY-SYSTEM"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart first-person account and Codex source review"]
+  },
+  {
+    id: "CLM-TIRED-OF-TIRES-OPERATING-PROGRAM",
+    project: "tired-of-tires",
+    claimType: "activity",
+    internalClaim: "Public KC Town Hall and Cleveland Ave KC records document TiredOfTires as a recurring free residential tire-pickup program associated with KC Town Hall and the Oak Park Neighborhood Association in historic east Kansas City.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-FB-CLEVELAND-AVE-TIRED-OF-TIRES-2020",
+        relationship: "direct-support",
+        supports: ["monthly free residential pickup", "KC Town Hall and Oak Park program framing", "historic east Kansas City service area", "request and volunteer route"],
+        locator: "Public post text.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-X-KC-TOWN-HALL-CORPUS-2026",
+        relationship: "corroborating",
+        supports: ["107 TiredOfTires-tagged records", "2018-2022 recurring operations communication"],
+        locator: "Reconciled private corpus summary.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The records establish a recurring public program and action route, not every pickup, participant, disposal receipt, or outcome.",
+      "Program association does not assign every post or operational task to Jamie."
+    ],
+    antiClaims: [
+      "Every TiredOfTires post represents a separate completed pickup.",
+      "KC Town Hall or Jamie solely owned the neighborhood program.",
+      "Public posts independently verify tire totals, disposal, savings, environmental outcomes, or neighborhood-wide coverage."
+    ],
+    researchInquiryIds: ["INQ-TIRED-OF-TIRES-OPERATIONS"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex authenticated Facebook and social-corpus review"]
+  },
+  {
+    id: "CLM-TIRED-OF-TIRES-INTERNAL-LOG-AGGREGATE",
+    project: "tired-of-tires",
+    claimType: "metric",
+    internalClaim: "A private KC Town Hall calculator records 1,970 tires across 25 nonzero logged pickup months within 26 monthly columns from May 2019 through September 2022.",
+    status: "use-with-care",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-TIRED-OF-TIRES-OPERATIONS-CALCULATOR-2019-2022",
+        relationship: "private-support",
+        supports: ["1,970 total-count aggregate", "25 nonzero months", "May 2019 through September 2022 columns"],
+        locator: "Monthly headers and total-count row.",
+        confidence: "moderate",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "This is an internal project calculator, not an independent audit, city disposal ledger, or household-level dataset.",
+      "The aggregate may include repeated locations, tires collected outside a narrow walk area, or operating definitions that require collaborator review."
+    ],
+    antiClaims: [
+      "An independent source verified 1,970 unique tires or households.",
+      "The spreadsheet proves Jamie personally collected every logged tire.",
+      "The recorded fee estimate is audited savings or measured economic impact."
+    ],
+    researchInquiryIds: ["INQ-TIRED-OF-TIRES-OPERATIONS"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex structured CSV review"]
+  },
+  {
+    id: "CLM-TIRED-OF-TIRES-JAMIE-ROLE",
+    project: "tired-of-tires",
+    claimType: "role",
+    internalClaim: "Jamie states that he designed the TiredOfTires program, coordinated its free-pickup arrangement with Kansas City on behalf of the Oak Park Neighborhood Association, produced outreach materials, collected tires monthly, delivered them to the city recycling center, and maintained the operating spreadsheet.",
+    status: "use-with-care",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026",
+        relationship: "private-support",
+        supports: ["attributed program design", "attributed city coordination", "attributed monthly field operations", "attributed print and recordkeeping role"],
+        locator: "First-person archival submission.",
+        confidence: "moderate",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-FB-CLEVELAND-AVE-TIRED-OF-TIRES-2020",
+        relationship: "context",
+        supports: ["public program framing", "monthly pickup cadence", "KC Town Hall and Oak Park association"],
+        locator: "Public post text.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-TIRED-OF-TIRES-OPERATIONS-CALCULATOR-2019-2022",
+        relationship: "corroborating",
+        supports: ["surviving monthly operational record"],
+        locator: "Monthly columns and total-count row.",
+        confidence: "moderate",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "Jamie's individual role remains first-party; public program records and the calculator corroborate the operation, not who performed each task.",
+      "Credit remains collective with Oak Park Neighborhood Association, city staff, residents, volunteers, KC Town Hall collaborators, and later neighborhood partners."
+    ],
+    antiClaims: [
+      "Jamie alone created, operated, or delivered TiredOfTires.",
+      "The public Facebook post names Jamie as program designer or operator.",
+      "Jamie has independently verified every pickup, tire count, disposal, or savings estimate."
+    ],
+    researchInquiryIds: ["INQ-TIRED-OF-TIRES-OPERATIONS"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart first-person account and Codex evidence review"]
+  },
+  {
+    id: "CLM-TIRED-OF-TIRES-INDIAN-MOUND-EXPANSION",
+    project: "tired-of-tires",
+    claimType: "chronology",
+    internalClaim: "Jamie remembers the TiredOfTires program later expanding to include the Indian Mound neighborhood.",
+    status: "use-with-care",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026",
+        relationship: "private-support",
+        supports: ["attributed Indian Mound expansion recollection"],
+        locator: "First-person archival submission.",
+        confidence: "limited",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "No dated public post, city record, operational log field, or Indian Mound collaborator confirmation has yet been linked."
+    ],
+    antiClaims: [
+      "The current source set independently confirms the Indian Mound expansion date, scope, or duration.",
+      "The program served every household in Indian Mound."
+    ],
+    researchInquiryIds: ["INQ-TIRED-OF-TIRES-OPERATIONS"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart first-person account and Codex claim review"]
+  },
+  {
+    id: "CLM-CLEVELAND-AVE-JAMIE-DESIGN-OPERATIONS-ROLE",
+    project: "cleveland-ave-unify-to-beautify",
+    claimType: "role",
+    internalClaim: "Jamie states that he was a co-founding member of Cleveland Ave Unify to Beautify and served as a pro bono design, print, photography, mapping, social-media, and listening-session support studio; he credits Pastor Lee with the corridor concept connecting east-side neighborhood-association areas.",
+    status: "use-with-care",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026",
+        relationship: "private-support",
+        supports: ["attributed co-founding membership", "attributed design and print role", "Pastor Lee concept credit", "attributed meeting and corridor-map support"],
+        locator: "First-person archival submission.",
+        confidence: "moderate",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-HENC-STRATEGIC-PLAN-2024",
+        relationship: "context",
+        supports: ["HENC coalition identity", "east-side neighborhood-association structure", "coalition mission"],
+        locator: "PDF pp. 2-3.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The current public HENC source establishes organizational context, not Cleveland Ave program details or Jamie's role.",
+      "Pastor Lee retains credit for the corridor concept in Jamie's account; other founders, residents, neighborhood associations, elected officials, and city staff require fuller identification.",
+      "No public capital-allocation record has yet been linked to establish program causality."
+    ],
+    antiClaims: [
+      "Jamie solely founded, authored, or led Cleveland Ave Unify to Beautify.",
+      "Jamie originated Pastor Lee's Cleveland Avenue corridor concept.",
+      "The initiative caused a specific discretionary funding or capital-improvement decision.",
+      "Jamie speaks for HENC, Pastor Lee, participating neighborhoods, residents, elected officials, or city staff."
+    ],
+    researchInquiryIds: ["INQ-CLEVELAND-AVE-JAMIE-ROLE"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart first-person account and Codex source review"]
   }
 ] satisfies ClaimRecord[];
 
@@ -694,6 +1378,136 @@ export const kcTownHallTransitionInquiry = {
   ],
   sourceIds: []
 } satisfies ResearchInquiry;
+
+export const kcTownHallNeighborhoodInquiries = [
+  {
+    id: "INQ-KC-TOWN-HALL-PHASE-ONE-ROLE",
+    project: "kc-town-hall",
+    intakeIds: [
+      "INT-2026-07-15-KC-TOWN-HALL-PHASE-ONE-PACKET",
+      "INT-2026-07-15-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY"
+    ],
+    question: "What contemporaneous records and collaborator accounts can corroborate Jamie's Phase One general-contractor role and establish the construction-completion chronology?",
+    methods: [
+      "Recover contracts, proposals, invoices, payment records, permits, inspection records, measured drawings, schedules, photographs, and project correspondence.",
+      "Seek public-safe confirmation from Julia Fredenburg and the masonry, roofing, carpentry, welding, engineering, architecture, plumbing, and other trade teams.",
+      "Separate daily field coordination from contractor-of-record, licensed design, trade performance, ownership, and collective project leadership."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The project packet establishes the specialized Phase One scope and a $189,629 budget.",
+      "The packet records 2018 roof and structural-masonry progress and contains a 2019 completion label.",
+      "Jamie supplied a detailed first-person account of serving as general contractor and coordinating daily site work."
+    ],
+    limitations: [
+      "The packet does not name the general contractor.",
+      "The packet's narrative and budget pages use different temporal frames for 2019 completion.",
+      "No independent closeout record or collaborator confirmation has yet been linked."
+    ],
+    sourceIds: [
+      "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+      "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026"
+    ],
+    protectedLocatorId: "KC-TOWN-HALL-PHASE-ONE-ROLE-RESEARCH-2026"
+  },
+  {
+    id: "INQ-KC-TOWN-HALL-SURVEY-SYSTEM",
+    project: "kc-town-hall",
+    intakeIds: [
+      "INT-2026-07-15-KC-TOWN-HALL-PHASE-ONE-PACKET",
+      "INT-2026-07-15-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY"
+    ],
+    question: "What surviving artifacts and collaborator accounts can document Jamie's role in the KC Town Hall neighborhood-survey handbill and backing data system?",
+    methods: [
+      "Recover the original handbill source file, print runs, response schema, intake forms, contact-system structure, and aggregate response analysis without exposing resident data.",
+      "Seek public-safe confirmation from Oak Park Neighborhood Association, New Horizon Missionary Baptist Church, Julia Fredenburg, and other process collaborators.",
+      "Compare survey fields and proposal choices while avoiding representative-consensus or causal claims unsupported by method and response data."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The packet reproduces the survey handbill and names two neighborhood partners.",
+      "The packet states that survey results directly shaped the proposal.",
+      "Jamie supplied a first-person account of designing the handbill and backing system and using field operations to collect responses."
+    ],
+    limitations: [
+      "The raw responses and contact records are protected.",
+      "No original design file, response denominator, method note, or collaborator confirmation has yet been linked.",
+      "The current record does not support sole authorship or representative-consensus claims."
+    ],
+    sourceIds: [
+      "SRC-KC-TOWN-HALL-PHASE-ONE-PACKET-2019",
+      "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026"
+    ],
+    protectedLocatorId: "KC-TOWN-HALL-SURVEY-SYSTEM-RESEARCH-2026"
+  },
+  {
+    id: "INQ-TIRED-OF-TIRES-OPERATIONS",
+    project: "tired-of-tires",
+    intakeIds: [
+      "INT-2026-07-15-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY",
+      "INT-2026-07-15-TIRED-OF-TIRES-CALCULATOR",
+      "INT-2026-07-15-TIRED-OF-TIRES-FACEBOOK-POST"
+    ],
+    question: "What public-safe records can corroborate Jamie's individual TiredOfTires role, reconcile the private operating totals, and document the remembered Indian Mound expansion?",
+    methods: [
+      "Recover city recycling receipts, fee schedules, route logs, pickup forms, handbills, public posts, neighborhood-association minutes, and city correspondence.",
+      "Seek collaborator confirmation from Oak Park Neighborhood Association, Indian Mound neighborhood participants, KC Town Hall collaborators, volunteers, and city staff.",
+      "Reconcile monthly spreadsheet definitions with public post totals without exposing resident addresses, pickup requests, or personal contact data."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "A public Cleveland Ave KC post documents a monthly KC Town Hall and Oak Park residential pickup program.",
+      "The reconciled KC Town Hall X corpus contains 107 TiredOfTires-tagged records.",
+      "A private calculator records 1,970 tires across 25 nonzero logged months from May 2019 through September 2022.",
+      "Jamie supplied a first-person account of program design, city coordination, monthly field operations, and later Indian Mound expansion."
+    ],
+    limitations: [
+      "The calculator is not an independent audit or city disposal ledger.",
+      "Public program records do not identify who performed each pickup or authored each post.",
+      "No dated Indian Mound source or collaborator confirmation has yet been linked."
+    ],
+    sourceIds: [
+      "SRC-FB-CLEVELAND-AVE-TIRED-OF-TIRES-2020",
+      "SRC-X-KC-TOWN-HALL-CORPUS-2026",
+      "SRC-TIRED-OF-TIRES-OPERATIONS-CALCULATOR-2019-2022",
+      "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026"
+    ],
+    protectedLocatorId: "TIRED-OF-TIRES-OPERATIONS-RESEARCH-2026"
+  },
+  {
+    id: "INQ-CLEVELAND-AVE-JAMIE-ROLE",
+    project: "cleveland-ave-unify-to-beautify",
+    intakeIds: [
+      "INT-2026-07-15-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY",
+      "INT-2026-07-15-HENC-STRATEGIC-PLAN"
+    ],
+    question: "What records and collaborator accounts can document Cleveland Ave Unify to Beautify, Pastor Lee's corridor concept, Jamie's co-founding and design role, participating neighborhoods, and any relationship to public capital decisions?",
+    methods: [
+      "Recover public Page posts, identity source files, maps, photography, handbills, meeting notices, listening-session materials, sign-in records, and HENC or neighborhood-association minutes.",
+      "Seek public-safe confirmation from Pastor Lee, HENC, participating neighborhood associations, residents, elected officials, and city staff.",
+      "Locate official discretionary-funding or capital-improvement records before making any contribution or causality claim."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "inconclusive",
+    findings: [
+      "HENC's strategic plan establishes the coalition's east-side neighborhood-association structure and mission.",
+      "Jamie supplied a first-person account that credits Pastor Lee with the corridor concept and describes Jamie's co-founding, design, print, photography, mapping, social, and meeting-support role."
+    ],
+    limitations: [
+      "The reviewed HENC plan does not describe Cleveland Ave Unify to Beautify or Jamie's role.",
+      "No collaborator confirmation, source-design files, meeting packet, or capital-decision record has yet been linked.",
+      "The current record does not support sole founding, sole authorship, or funding-causality claims."
+    ],
+    sourceIds: [
+      "SRC-HENC-STRATEGIC-PLAN-2024",
+      "SRC-JAMIE-KC-NEIGHBORHOOD-STEWARDSHIP-MEMORY-2026"
+    ],
+    protectedLocatorId: "CLEVELAND-AVE-JAMIE-ROLE-RESEARCH-2026"
+  }
+] satisfies ResearchInquiry[];
 
 export const kcTownHallCorrections = [
   {

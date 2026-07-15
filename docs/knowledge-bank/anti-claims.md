@@ -46,6 +46,17 @@ launch of America: Now and Here into a commission, acquisition, visitor-impact
 claim, or presentation at the Nerman Museum. The Nerman page supplies wider
 exhibition context but does not name NTER CHNG.
 
+Do not convert the protected 2011 NTER CHNG America: Now and Here staging plan
+into proof that every listed task was completed, that Jamie performed every
+software, fabrication, transport, installation, or teardown task, or that the
+document is a contract, commission, or final production report.
+
+Do not assign sole authorship of the protected working compilation to Jamie.
+Do not publish its Drive identifier, sharing URL, phone numbers, message text,
+or inferred contributor identities. Candidate prompts and compiled responses
+do not establish that every item appeared publicly in the installation or was
+approved for republication.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -222,6 +233,46 @@ records withdrawal and reclamation of the unused allocation without describing
 how project stewardship changed. Jamie's recollection of a transition to a
 mission-aligned organization is a deferred first-party research lead, not active
 public copy.
+
+The protected 2019 proposal packet supports the Phase One cold-shell scope,
+its $189,629 internal budget, specialized construction workstreams, the
+neighborhood survey, local hiring, and trade-learning context. It does not by
+itself assign Jamie the general-contractor title or independently certify that
+every item was completed. Do not erase the packet's internal chronology
+tension: one page says 66 percent complete and slated for 2019, while a later
+budget page is labeled completed 2019. Do not convert this into completion of
+the full redevelopment.
+
+Jamie's account of serving as Phase One general contractor and coordinating
+daily work is an attributed first-person claim pending collaborator, contract,
+permit, invoice, or closeout corroboration. Do not turn broad coordination into
+personal performance of every trade. Keep resident survey responses, contact
+data, financial appendices, and private source locations offline.
+
+## TiredOfTires
+
+Public records support a recurring free residential pickup program associated
+with KC Town Hall and the Oak Park Neighborhood Association. A private
+project-maintained calculator records 1,970 tires across 25 nonzero logged
+months within 26 monthly columns. Do not call that total independently audited,
+unique households, verified environmental impact, reach, or city reporting.
+
+Jamie's program-design, coordination, print, pickup, delivery, and spreadsheet
+roles remain attributed pending collaborator or city corroboration. Do not
+assign sole ownership or labor to Jamie; preserve credit for the neighborhood
+association, city staff, residents, volunteers, and collaborators. The
+remembered expansion to Indian Mound is an internal research lead, not a
+confirmed public claim.
+
+## Cleveland Ave Unify To Beautify
+
+Jamie's co-founding and pro bono design-studio account remains attributed.
+Preserve his explicit credit to Pastor Lee for the Cleveland Avenue corridor
+concept and preserve the agency of participating neighborhoods and officials.
+The public HENC plan establishes coalition context only; it does not establish
+the initiative's details or Jamie's role. Do not claim Jamie solely founded or
+led the initiative, originated Pastor Lee's concept, or caused discretionary
+capital-improvement decisions.
 
 ## Source-Backed Team Memory
 

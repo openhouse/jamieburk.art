@@ -371,6 +371,176 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredKcNeighborhoodStewardship) {
+    const required = suite.requiredKcNeighborhoodStewardship;
+    const claim = (id) => bank.claims.find((item) => item.id === id);
+    const source = (id) => bank.sources.find((item) => item.id === id);
+
+    for (const projectId of required.projectIds) {
+      if (!projectIds.has(projectId)) add("project_context", "missing-kc-neighborhood-project", `Missing ${projectId}`);
+    }
+    for (const intakeId of required.intakeIds) {
+      if (!intakeIds.has(intakeId)) add("capture_integrity", "missing-kc-neighborhood-intake", `Missing ${intakeId}`);
+    }
+    for (const sourceId of required.sourceIds) {
+      if (!sourceIds.has(sourceId)) add("source_decomposition", "missing-kc-neighborhood-source", `Missing ${sourceId}`);
+    }
+    for (const claimId of required.claimIds) {
+      if (!claimIds.has(claimId)) add("provenance_closure", "missing-kc-neighborhood-claim", `Missing ${claimId}`);
+    }
+    for (const inquiryId of required.inquiryIds) {
+      if (!inquiryIds.has(inquiryId)) add("research_honesty", "missing-kc-neighborhood-inquiry", `Missing ${inquiryId}`);
+    }
+
+    for (const sourceId of [required.packetSourceId, required.memorySourceId, required.calculatorSourceId]) {
+      const protectedSource = source(sourceId);
+      if (
+        protectedSource &&
+        (protectedSource.visibility !== "protected" ||
+          protectedSource.preservationStatus !== "private" ||
+          !protectedSource.protectedLocatorId ||
+          protectedSource.canonicalUrl ||
+          protectedSource.archiveUrls?.length)
+      ) {
+        add("projection_restraint", "kc-neighborhood-protected-source", `${sourceId} does not preserve its protected-source boundary`);
+      }
+    }
+
+    const packet = source(required.packetSourceId);
+    if (
+      packet &&
+      (!packet.supportsGenerally.some((item) => item.includes(`$${required.phaseOneBudget.toLocaleString("en-US")}`)) ||
+        !packet.doesNotEstablish.some((item) => /general.contractor role|general contractor of record/i.test(item)) ||
+        !packet.doesNotEstablish.some((item) => /audit|closeout/i.test(item)))
+    ) {
+      add("source_decomposition", "kc-phase-one-packet-scope", `${required.packetSourceId} loses scope or non-support boundaries`);
+    }
+
+    const scopeClaim = claim(required.scopeClaimId);
+    const completionClaim = claim(required.completionClaimId);
+    const generalContractorClaim = claim(required.generalContractorClaimId);
+    if (
+      scopeClaim &&
+      (scopeClaim.status !== "confirmed-with-boundary" ||
+        scopeClaim.publicationStatus !== "internal-only" ||
+        scopeClaim.projections.length > 0 ||
+        !scopeClaim.evidence.some((edge) => edge.sourceId === required.packetSourceId && edge.relationship === "direct-support"))
+    ) {
+      add("status_separation", "kc-phase-one-scope-boundary", `${required.scopeClaimId} is not a bounded internal scope claim`);
+    }
+    if (
+      completionClaim &&
+      (completionClaim.status !== "use-with-care" ||
+        completionClaim.publicationStatus !== "internal-only" ||
+        completionClaim.projections.length > 0 ||
+        !completionClaim.boundaries.some((item) => /66 percent complete|timing requires care/i.test(item)) ||
+        !completionClaim.antiClaims.some((item) => /certified.*closeout|formally certified/i.test(item)))
+    ) {
+      add("research_honesty", "kc-phase-one-completion-tension", `${required.completionClaimId} erases the packet's timing tension or closeout boundary`);
+    }
+    if (
+      generalContractorClaim &&
+      (generalContractorClaim.status !== "use-with-care" ||
+        generalContractorClaim.publicationStatus !== "internal-only" ||
+        generalContractorClaim.projections.length > 0 ||
+        !generalContractorClaim.evidence.some((edge) => edge.sourceId === required.memorySourceId && edge.relationship === "private-support") ||
+        !generalContractorClaim.evidence.some((edge) => edge.sourceId === required.packetSourceId && edge.relationship === "context") ||
+        generalContractorClaim.evidence.some((edge) => edge.sourceId === required.packetSourceId && edge.relationship === "direct-support") ||
+        !generalContractorClaim.boundaries.some((item) => /first-person|does not name the general contractor/i.test(item)) ||
+        !generalContractorClaim.antiClaims.some((item) => /personally performed|solely.*constructed/i.test(item)))
+    ) {
+      add("provenance_closure", "kc-general-contractor-attribution", `${required.generalContractorClaimId} overstates or loses its first-person evidence relationship`);
+    }
+
+    const surveyClaim = claim(required.surveyClaimId);
+    const surveyRoleClaim = claim(required.surveyRoleClaimId);
+    if (
+      surveyClaim &&
+      !surveyClaim.evidence.some((edge) => edge.sourceId === required.packetSourceId && edge.relationship === "direct-support")
+    ) {
+      add("provenance_closure", "kc-survey-artifact-evidence", `${required.surveyClaimId} lacks direct packet support`);
+    }
+    if (
+      surveyRoleClaim &&
+      (surveyRoleClaim.status !== "use-with-care" ||
+        surveyRoleClaim.publicationStatus !== "internal-only" ||
+        surveyRoleClaim.projections.length > 0 ||
+        !surveyRoleClaim.evidence.some((edge) => edge.sourceId === required.memorySourceId && edge.relationship === "private-support") ||
+        !surveyRoleClaim.evidence.some((edge) => edge.sourceId === required.packetSourceId && edge.relationship === "corroborating") ||
+        !surveyRoleClaim.boundaries.some((item) => /Resident stories|contact records|raw responses.*protected/i.test(item)))
+    ) {
+      add("projection_restraint", "kc-survey-role-and-privacy", `${required.surveyRoleClaimId} loses attribution, artifact separation, or resident privacy`);
+    }
+
+    const tireProgramClaim = claim(required.tireProgramClaimId);
+    const tireMetricClaim = claim(required.tireMetricClaimId);
+    const tireRoleClaim = claim(required.tireRoleClaimId);
+    const indianMoundClaim = claim(required.indianMoundClaimId);
+    if (
+      tireProgramClaim &&
+      (tireProgramClaim.status !== "confirmed-with-boundary" ||
+        tireProgramClaim.publicationStatus !== "qualified" ||
+        tireProgramClaim.editorialStatus !== "unused" ||
+        tireProgramClaim.projections.length > 0 ||
+        !tireProgramClaim.boundaries.some((item) => /does not assign.*Jamie|not every pickup/i.test(item)))
+    ) {
+      add("status_separation", "tired-of-tires-program-boundary", `${required.tireProgramClaimId} conflates program existence with individual authorship or complete operations`);
+    }
+    const metricText = tireMetricClaim ? JSON.stringify(tireMetricClaim) : "";
+    if (
+      tireMetricClaim &&
+      (tireMetricClaim.status !== "use-with-care" ||
+        tireMetricClaim.publicationStatus !== "internal-only" ||
+        tireMetricClaim.projections.length > 0 ||
+        !metricText.includes(required.tireTotal.toLocaleString("en-US")) ||
+        !metricText.includes(`${required.tireNonzeroMonths} nonzero`) ||
+        !metricText.includes(`${required.tireMonthlyColumns} monthly`) ||
+        !tireMetricClaim.boundaries.some((item) => /not an independent audit|not.*audit/i.test(item)) ||
+        !tireMetricClaim.antiClaims.some((item) => /unique tires|unique households/i.test(item)))
+    ) {
+      add("research_honesty", "tired-of-tires-metric-boundary", `${required.tireMetricClaimId} promotes or misstates the private operating aggregate`);
+    }
+    if (
+      tireRoleClaim &&
+      (tireRoleClaim.status !== "use-with-care" ||
+        tireRoleClaim.publicationStatus !== "internal-only" ||
+        tireRoleClaim.projections.length > 0 ||
+        !tireRoleClaim.evidence.some((edge) => edge.sourceId === required.memorySourceId && edge.relationship === "private-support") ||
+        !tireRoleClaim.boundaries.some((item) => /Oak Park Neighborhood Association.*city staff.*residents.*volunteers/i.test(item)) ||
+        !tireRoleClaim.antiClaims.some((item) => /alone created, operated, or delivered/i.test(item)))
+    ) {
+      add("projection_restraint", "tired-of-tires-role-credit", `${required.tireRoleClaimId} loses first-person or collective-credit boundaries`);
+    }
+    if (
+      indianMoundClaim &&
+      (indianMoundClaim.status !== "use-with-care" ||
+        indianMoundClaim.publicationStatus !== "internal-only" ||
+        indianMoundClaim.projections.length > 0 ||
+        indianMoundClaim.evidence.length !== 1 ||
+        indianMoundClaim.evidence[0].sourceId !== required.memorySourceId ||
+        !indianMoundClaim.boundaries.some((item) => /No dated public post|confirmation has yet been linked/i.test(item)))
+    ) {
+      add("research_honesty", "tired-of-tires-indian-mound", `${required.indianMoundClaimId} overstates the remembered expansion`);
+    }
+
+    const clevelandRoleClaim = claim(required.clevelandRoleClaimId);
+    if (
+      clevelandRoleClaim &&
+      (clevelandRoleClaim.status !== "use-with-care" ||
+        clevelandRoleClaim.publicationStatus !== "internal-only" ||
+        clevelandRoleClaim.projections.length > 0 ||
+        !clevelandRoleClaim.internalClaim.includes("Pastor Lee") ||
+        !clevelandRoleClaim.evidence.some((edge) => edge.sourceId === required.memorySourceId && edge.relationship === "private-support") ||
+        !clevelandRoleClaim.evidence.some((edge) => edge.sourceId === required.hencSourceId && edge.relationship === "context") ||
+        clevelandRoleClaim.evidence.some((edge) => edge.sourceId === required.hencSourceId && edge.relationship === "direct-support") ||
+        !clevelandRoleClaim.boundaries.some((item) => /not Cleveland Ave program details or Jamie's role/i.test(item)) ||
+        !clevelandRoleClaim.antiClaims.some((item) => /solely founded|originated Pastor Lee/i.test(item)) ||
+        !clevelandRoleClaim.antiClaims.some((item) => /caused a specific.*funding|capital-improvement/i.test(item)))
+    ) {
+      add("provenance_closure", "cleveland-ave-role-credit", `${required.clevelandRoleClaimId} loses Pastor Lee, HENC-context, collective-credit, or causality boundaries`);
+    }
+  }
+
   if (suite.requiredIcloudArchiveProduction) {
     const required = suite.requiredIcloudArchiveProduction;
     const requiredIntakes = required.intakeIds
@@ -2229,6 +2399,67 @@ export function validateKnowledgeLifecycle(bank, suite) {
       !sundayDinner.antiClaims.some((item) => /33 Zoom events/i.test(item))
     ) {
       add("research_honesty", "drive-asset-event-boundary", `${required.sundayDinnerClaimId} converts stored assets into event counts`);
+    }
+
+    const installPlanSource = sourceById.get(required.nterChngInstallPlanSourceId);
+    const workingCompilationSource = sourceById.get(required.nterChngWorkingCompilationSourceId);
+    if (
+      !installPlanSource ||
+      !installPlanSource.supportsGenerally.some((item) => /software.*server-side.*wall-side|projection.*wiring.*networking/i.test(item)) ||
+      !installPlanSource.doesNotEstablish.some((item) => /completion of every planned task/i.test(item)) ||
+      !installPlanSource.doesNotEstablish.some((item) => /individual responsible|complete labor credit/i.test(item))
+    ) {
+      add("source_decomposition", "drive-nter-install-plan-scope", `${required.nterChngInstallPlanSourceId} loses planned-work or labor-attribution boundaries`);
+    }
+    if (
+      !workingCompilationSource ||
+      !workingCompilationSource.supportsGenerally.some((item) => /one-to-one.*many-to-many|social information space/i.test(item)) ||
+      !workingCompilationSource.doesNotEstablish.some((item) => /provenance or public publication status/i.test(item)) ||
+      !workingCompilationSource.doesNotEstablish.some((item) => /phone numbers or message text/i.test(item))
+    ) {
+      add("source_decomposition", "drive-nter-working-compilation-scope", `${required.nterChngWorkingCompilationSourceId} loses provenance, consent, or contact-data boundaries`);
+    }
+
+    const restaging = bank.claims.find((item) => item.id === required.nterChngRestagingClaimId);
+    if (
+      !restaging ||
+      restaging.status !== "confirmed-with-boundary" ||
+      restaging.publicationStatus !== "internal-only" ||
+      restaging.projections.length > 0 ||
+      !/planned.*workflow/i.test(restaging.internalClaim) ||
+      !restaging.boundaries.some((item) => /planning, not completion|not completion of every task/i.test(item)) ||
+      !restaging.boundaries.some((item) => /does not assign all.*labor to Jamie/i.test(item)) ||
+      !restaging.antiClaims.some((item) => /Jamie alone restaged/i.test(item)) ||
+      !restaging.antiClaims.some((item) => /Every checklist item was completed/i.test(item))
+    ) {
+      add("research_honesty", "drive-nter-restaging-boundary", `${required.nterChngRestagingClaimId} converts a working plan into completion or sole labor`);
+    }
+
+    const framing = bank.claims.find((item) => item.id === required.nterChngFramingClaimId);
+    if (
+      !framing ||
+      framing.status !== "use-with-care" ||
+      framing.publicationStatus !== "protected" ||
+      framing.projections.length > 0 ||
+      !/Drew Bolton.*Jamie Burkart.*Garrett Fuselier/i.test(framing.internalClaim) ||
+      !/one-to-one.*many-to-many/i.test(framing.internalClaim) ||
+      !framing.boundaries.some((item) => /Phone numbers, message text.*remain protected/i.test(item)) ||
+      !framing.boundaries.some((item) => /does not establish sole prose authorship|public provenance/i.test(item)) ||
+      !framing.antiClaims.some((item) => /Jamie solely authored/i.test(item)) ||
+      !framing.antiClaims.some((item) => /Personal contact information or message text/i.test(item))
+    ) {
+      add("projection_restraint", "drive-nter-framing-privacy", `${required.nterChngFramingClaimId} loses collective credit, provenance, or message privacy`);
+    }
+
+    const nterInquiry = bank.researchInquiries.find((item) => item.id === required.nterChngInquiryId);
+    if (
+      !nterInquiry ||
+      nterInquiry.resultStatus !== "partially-recovered" ||
+      !required.sourceIds.filter((id) => id.includes("NTER-CHNG")).every((id) => nterInquiry.sourceIds.includes(id)) ||
+      !nterInquiry.limitations.some((item) => /assigns every workstream.*individual/i.test(item)) ||
+      !nterInquiry.limitations.some((item) => /personal contact information.*remain protected/i.test(item))
+    ) {
+      add("research_honesty", "drive-nter-inquiry-boundary", `${required.nterChngInquiryId} over-resolves labor, authorship, or privacy questions`);
     }
   }
 

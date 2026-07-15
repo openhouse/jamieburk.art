@@ -73,6 +73,40 @@ export const googleDriveArchiveIntakes = [
     claimIds: ["CLM-SUNDAY-DINNER-ZOOM-ARCHIVE-DEPTH"],
     inquiryIds: ["INQ-GDRIVE-SUNDAY-DINNER-ZOOM-RECONSTRUCTION"],
     protectedLocatorId: "GDRIVE-SUNDAY-DINNER-ZOOM-ARCHIVE-2023-001"
+  },
+  {
+    id: "INT-2026-07-15-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "A private April 2011 NTER CHNG working plan for staging the installation for America: Now and Here.",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2011-04", "2011-05"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011"],
+    claimIds: ["CLM-NTER-CHNG-ANH-RESTAGING-PLAN"],
+    inquiryIds: ["INQ-GDRIVE-NTER-CHNG-WORKING-ARTIFACTS"],
+    protectedLocatorId: "GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011-001"
+  },
+  {
+    id: "INT-2026-07-15-GDRIVE-NTER-CHNG-WORKING-COMPILATION",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "A private 2010-2011 NTER CHNG working compilation containing exhibit-description language, project prompts, and response material.",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2010-01", "2011-04"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-GDRIVE-NTER-CHNG-WORKING-COMPILATION-2010-2011"],
+    claimIds: ["CLM-NTER-CHNG-SOCIAL-INFORMATION-SPACE-FRAMING"],
+    inquiryIds: ["INQ-GDRIVE-NTER-CHNG-WORKING-ARTIFACTS"],
+    protectedLocatorId: "GDRIVE-NTER-CHNG-WORKING-COMPILATION-2010-2011-001"
   }
 ] satisfies IntakeItem[];
 
@@ -163,6 +197,74 @@ export const googleDriveArchiveSources = [
     doesNotEstablish: ["33 distinct events", "participant identities", "public-use permission", "content or outcomes of the recordings"],
     protectedLocatorId: "GDRIVE-SUNDAY-DINNER-ZOOM-ARCHIVE-2023-001",
     media: { mediaKind: "other", rightsStatus: "permission-needed", consentStatus: "review-needed", publicDisplayStatus: "hold" }
+  },
+  {
+    id: "SRC-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011",
+    title: "NTER CHNG America: Now and Here staging plan",
+    organization: "NTER CHNG",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-07-15",
+    publicCitation: "Protected NTER CHNG America: Now and Here staging plan, reviewed July 15, 2026.",
+    publicNote: "The contemporaneous working plan documents preparation for a May 2011 restaging across software, computers, projection, networking, wall fabrication, gallery installation, fine-tuning, and teardown.",
+    locator: "Pre-prep, workshop-prep, installation, gallery-experience, interview, and teardown sections; private source synopsis only.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-15-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex Google Docs close reading"],
+    supportsGenerally: [
+      "a contemporaneous April 2011 America: Now and Here restaging plan",
+      "planned software revision and server-side and wall-side work",
+      "planned display-computer, projection, wiring, and networking work",
+      "planned wall fabrication, installation, floor markings, gallery fine-tuning, and teardown",
+      "collective three-creator interview planning"
+    ],
+    doesNotEstablish: [
+      "completion of every planned task",
+      "the individual responsible for each software, fabrication, transport, installation, or teardown task",
+      "contractor, employee, or commissioned-artist status",
+      "complete labor credit",
+      "permission to publish the working document",
+      "the final exhibition venue without separate corroboration"
+    ],
+    protectedLocatorId: "GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011-001"
+  },
+  {
+    id: "SRC-GDRIVE-NTER-CHNG-WORKING-COMPILATION-2010-2011",
+    title: "NTER CHNG working prompt and exhibit-description compilation",
+    organization: "NTER CHNG",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-07-15",
+    publicCitation: "Protected NTER CHNG working compilation, reviewed July 15, 2026.",
+    publicNote: "The working compilation preserves a 2010 exhibit description, joint creator credit, social-information-space framing, candidate prompts, and response material while requiring strict contact and message privacy.",
+    locator: "Exhibit-information and prompt-response sections; phone numbers and message text excluded from the repository.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-15-GDRIVE-NTER-CHNG-WORKING-COMPILATION"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex Google Docs close reading"],
+    supportsGenerally: [
+      "joint creator credit for Drew Bolton, Jamie Burkart, and Garrett Fuselier",
+      "project language describing software and architectural installation",
+      "project framing of private one-to-one texting becoming shared many-to-many dialogue",
+      "project framing of NTER CHNG as a social information space",
+      "existence of 2011 prompt and response development material"
+    ],
+    doesNotEstablish: [
+      "sole authorship by Jamie",
+      "the provenance or public publication status of every compiled paragraph",
+      "the identity, consent, or public status of message contributors",
+      "permission to publish phone numbers or message text",
+      "that every candidate prompt or response appeared in the exhibition",
+      "the division of technical labor among collaborators"
+    ],
+    protectedLocatorId: "GDRIVE-NTER-CHNG-WORKING-COMPILATION-2010-2011-001"
   }
 ] satisfies SourceRecord[];
 
@@ -214,6 +316,66 @@ export const googleDriveArchiveClaims = [
     researchInquiryIds: ["INQ-GDRIVE-SUNDAY-DINNER-ZOOM-RECONSTRUCTION"],
     reviewedAt: "2026-07-14",
     reviewedBy: ["Codex Google Drive metadata review"]
+  },
+  {
+    id: "CLM-NTER-CHNG-ANH-RESTAGING-PLAN",
+    project: "creative-technical-systems",
+    claimType: "activity",
+    internalClaim: "An April 2011 working document records NTER CHNG's planned America: Now and Here restaging as an integrated software, projection, networking, architectural-wall, gallery-installation, and teardown workflow.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011",
+      relationship: "private-support",
+      supports: ["restaging plan", "technical and physical workstreams", "collective interview planning", "installation and teardown workflow"],
+      locator: "Pre-prep through teardown sections.",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: [
+      "The document establishes contemporaneous planning, not completion of every task or the final allocation of work.",
+      "It does not assign all software, fabrication, transport, installation, gallery, or teardown labor to Jamie."
+    ],
+    antiClaims: [
+      "Jamie alone restaged NTER CHNG for America: Now and Here.",
+      "Every checklist item was completed exactly as planned.",
+      "The working plan is an exhibition contract, commission, or final production report."
+    ],
+    researchInquiryIds: ["INQ-GDRIVE-NTER-CHNG-WORKING-ARTIFACTS"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex Google Docs close reading"]
+  },
+  {
+    id: "CLM-NTER-CHNG-SOCIAL-INFORMATION-SPACE-FRAMING",
+    project: "creative-technical-systems",
+    claimType: "activity",
+    internalClaim: "A private NTER CHNG working compilation frames the installation as a social information space that makes a private one-to-one text exchange public and many-to-many, while preserving joint credit for Drew Bolton, Jamie Burkart, and Garrett Fuselier.",
+    status: "use-with-care",
+    publicationStatus: "protected",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-GDRIVE-NTER-CHNG-WORKING-COMPILATION-2010-2011",
+      relationship: "private-support",
+      supports: ["project design framing", "joint creator credit", "candidate prompt and response development"],
+      locator: "Exhibit-information and prompt-response sections, with personal data excluded.",
+      confidence: "moderate",
+      renderCitation: false
+    }],
+    boundaries: [
+      "The compilation may combine exhibit copy, collaborator language, prompts, and response material; it does not establish sole prose authorship or the public provenance of every passage.",
+      "Phone numbers, message text, contributor identities, and consent status remain protected."
+    ],
+    antiClaims: [
+      "Jamie solely authored the NTER CHNG exhibit description or every compiled message.",
+      "Every response was publicly submitted, displayed, or approved for republication.",
+      "Personal contact information or message text belongs in the public repository."
+    ],
+    researchInquiryIds: ["INQ-GDRIVE-NTER-CHNG-WORKING-ARTIFACTS"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex Google Docs close reading"]
   }
 ] satisfies ClaimRecord[];
 
@@ -259,5 +421,39 @@ export const googleDriveArchiveResearchInquiries = [
     sourceIds: ["SRC-GDRIVE-SUNDAY-DINNER-ZOOM-ARCHIVE-2023"],
     publicSummary: "The Zoom archive is substantial but not yet reconstructed into distinct events or approved public evidence.",
     protectedLocatorId: "GDRIVE-SUNDAY-DINNER-ZOOM-ARCHIVE-2023-001"
+  },
+  {
+    id: "INQ-GDRIVE-NTER-CHNG-WORKING-ARTIFACTS",
+    project: "creative-technical-systems",
+    intakeIds: [
+      "INT-2026-07-15-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN",
+      "INT-2026-07-15-GDRIVE-NTER-CHNG-WORKING-COMPILATION"
+    ],
+    question: "What do the newly surfaced NTER CHNG working documents establish about the 2011 restaging workflow, project language, collaborator roles, and safe public use?",
+    methods: [
+      "Read both native Google Docs through the connected Google Docs API.",
+      "Separated planned work from completed installation evidence and individual responsibility.",
+      "Separated exhibit-description language from prompt and response material.",
+      "Excluded Drive identifiers, phone numbers, message text, and personal contact details from the public repository."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The install plan documents a cross-disciplinary restaging workflow spanning software, hardware, networking, projection, wall construction, gallery installation, fine-tuning, and teardown.",
+      "The working compilation preserves joint creator credit and a social-information-space framing of the installation.",
+      "Existing public organizer evidence independently confirms NTER CHNG's inclusion and participant use at America: Now and Here, but the private plan alone does not prove every task was completed as written."
+    ],
+    limitations: [
+      "Neither document assigns every workstream to an individual collaborator.",
+      "The working compilation does not establish the provenance or public publication status of every paragraph.",
+      "Prompt responses contain personal contact information and message content that remain protected.",
+      "Collaborator confirmation and public production records would strengthen division-of-labor claims."
+    ],
+    sourceIds: [
+      "SRC-GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011",
+      "SRC-GDRIVE-NTER-CHNG-WORKING-COMPILATION-2010-2011"
+    ],
+    publicSummary: "Two protected NTER CHNG working documents deepen the production and design record while leaving individual labor, authorship, and response-publication questions open.",
+    protectedLocatorId: "GDRIVE-NTER-CHNG-WORKING-ARTIFACTS-2010-2011-001"
   }
 ] satisfies ResearchInquiry[];

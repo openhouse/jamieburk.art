@@ -48,6 +48,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## nter-chng-working-artifacts - Restaging plan and social-information-space framing
+
+**Status:** Internal only / Protected
+**Support level:** Confirmed with boundary / Use with care
+**Evidence class:** Protected contemporaneous working documents / separately verified public exhibition record
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** A protected April 2011 working plan records NTER CHNG's America: Now and Here restaging as an integrated software, projection, networking, architectural-wall, gallery-installation, and teardown workflow. A second protected compilation frames the installation as a social information space that turns private one-to-one texting into shared many-to-many dialogue and preserves joint credit for Drew Bolton, Jamie Burkart, and Garrett Fuselier.
+**Where to project:** Bank only. Consider later composition for a creative-technical-systems case study after collaborator, provenance, and rights review.
+**Why it matters:** Makes visible the combined technical, spatial, participatory, and production architecture behind the installation without assigning unsupported individual labor.
+**Guardrail:** The install document proves planning, not completion of every task or its assignment to Jamie. The compilation may combine exhibit copy, collaborator language, prompts, and responses; it does not establish sole prose authorship or public provenance for every passage.
+**Do not say:** Jamie alone restaged or authored NTER CHNG; every checklist item was completed as written; every response was publicly displayed or approved; America: Now and Here commissioned or acquired the work.
+**Protected boundaries:** Drive identifiers, sharing URLs, raw documents, phone numbers, participant messages, contributor identities, and consent status stay outside the public repo.
+**Review owner:** Jamie / collaborator and provenance confirmation
+**Last reviewed:** 2026-07-15
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  
@@ -289,6 +304,41 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
+
+### KC Town Hall Phase One restoration scope and completion chronology
+
+**Status:** Confirmed with boundary / Use with care
+**Evidence class:** Protected 2019 project packet / attributed first-person account
+**Internal wording:** The proposal packet defines a $189,629 Phase One cold-shell scope spanning roof and TPO membrane work, structural masonry, floor framing, water service, staging, egress, safety, air-quality controls, and supporting costs. It records 2018 progress and labels a budget column "Completed 2019," while an earlier page says the phase was 66 percent complete and slated for 2019 completion.
+**Guardrail:** Keep scope and completion as separate claims. The packet establishes the work plan and internal project chronology, not an independently certified closeout or proof that every line item was completed exactly as budgeted.
+**Do not say:** The packet independently certifies Phase One completion; the entire redevelopment was completed; Jamie personally performed every trade.
+
+### Jamie's Phase One general-contractor role
+
+**Status:** Use with care
+**Publication status:** Internal only
+**Evidence class:** Attributed first-person account / protected packet context
+**Internal wording:** Jamie states that he served as Phase One general contractor and coordinated masonry, roofing, carpentry, welding, engineering, architecture, plumbing, measurements, sequencing, and daily work across the building.
+**Guardrail:** The packet corroborates the specialized workstreams and participatory setting, but it does not itself assign Jamie the general-contractor title. Seek collaborator, contract, permit, invoice, or closeout corroboration before public projection.
+**Do not say:** Independently verified general contractor; sole builder; Jamie performed all trades.
+
+### KC Town Hall neighborhood-survey system
+
+**Status:** Confirmed with boundary / Use with care
+**Publication status:** Qualified / Internal only for Jamie's sole role
+**Evidence class:** Protected proposal packet / attributed first-person account
+**Internal wording:** The packet documents a compact neighborhood survey asking what residents wanted at 36th and Indiana and says neighborhood responses directly shaped the proposal. Jamie states that he designed the handbill and backing data-collection system and used it during site and neighborhood work.
+**Guardrail:** The artifact and listening process are confirmed. Jamie's individual design and operating role remains attributed pending corroboration. Resident responses, names, addresses, contact fields, and raw datasets stay protected.
+**Do not say:** Jamie alone created the participatory process; every response was representative; private resident data is public evidence.
+
+### TiredOfTires and Cleveland Avenue neighborhood stewardship
+
+**Status:** Confirmed with boundary / Use with care
+**Publication status:** Qualified for the public program; internal only for Jamie's individual roles and private totals
+**Evidence class:** Public project posts / protected operating calculator / attributed first-person account / public HENC context
+**Internal wording:** Public records document TiredOfTires as a recurring free residential tire-pickup program associated with KC Town Hall and the Oak Park Neighborhood Association. A private calculator records 1,970 tires across 25 nonzero logged months within 26 monthly columns from May 2019 through September 2022. Jamie describes designing and operating the program and later supporting Cleveland Ave Unify to Beautify through identity, print, photography, mapping, social, and listening-session work while crediting Pastor Lee with the corridor concept.
+**Guardrail:** Treat the private total as a project-maintained operating record, not audited reach or impact. Preserve collective credit with neighborhood associations, city staff, residents, volunteers, KC Town Hall collaborators, and Pastor Lee. The remembered Indian Mound expansion and Jamie's individual roles require further corroboration.
+**Do not say:** Jamie alone created or operated either initiative; 1,970 is an independently audited impact figure; HENC's plan proves Jamie's role; Jamie originated Pastor Lee's corridor concept; Jamie's work caused a particular capital allocation.
 
 ## source-backed-team-memory-method - Source-backed team memory
 

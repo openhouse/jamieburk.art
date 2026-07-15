@@ -29,6 +29,13 @@ Drives pass](research/google-drive-shared-drives-archival-production-2026-07.md)
 adds private workflow evidence and rights-aware audiovisual research queues
 without publishing Drive identifiers or source materials.
 
+The [NTER CHNG working-artifact pass](research/nter-chng-google-drive-working-artifacts-2010-2011.md)
+adds protected 2010-2011 production and design records: an America: Now and Here
+restaging plan and a prompt/exhibit-description compilation. It preserves
+cross-disciplinary production depth and project language while withholding
+Drive identifiers, contact details, message text, and unsupported individual
+labor or authorship claims.
+
 The [NYC Artist Coalition Facebook event pass](research/nycartc-facebook-events-archival-production-2026-07.md)
 accounts for a 34-slot event control with 33 recovered records and one unresolved
 slot. It preserves the complete surviving chronology, Page-host boundaries,
@@ -148,3 +155,20 @@ Talks Not Raids, and CallNYC research. It also promotes one independent Pitch
 article reporting that Jamie and his fellow artists reached the Gulf of Mexico
 four months after leaving Kansas City on their raft. See the [research
 note](research/jamie-personal-facebook-posts-archival-production-2026-07.md).
+
+## KC Town Hall Phase One And Neighborhood Stewardship
+
+The July 15, 2026 pass separates four connected bodies of work that should not
+be collapsed into one oversized claim: the Phase One cold-shell restoration,
+the neighborhood survey and contact system, TiredOfTires operations, and
+Cleveland Ave Unify to Beautify civic-design support.
+
+The 2019 CCED proposal packet directly supports a $189,629 Phase One scope,
+specialized construction work, local hiring and trade-learning context, and a
+listening process that shaped the proposal. Jamie's general-contractor title,
+daily site-coordination account, and individual design and operating roles are
+preserved as attributed first-person claims pending collaborator or closeout
+corroboration. A private operating calculator records 1,970 tires across 25
+nonzero logged months within 26 monthly columns; that internal total is not an
+independently audited public impact metric. See the [public-safe research
+note](research/kc-town-hall-phase-one-neighborhood-stewardship-2018-2022.md).

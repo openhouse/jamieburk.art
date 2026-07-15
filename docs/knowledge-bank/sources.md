@@ -31,6 +31,27 @@ Approved public artifact examples for this launch pass include:
 - Oddities Prints Mutual Aid Print Exchange product page benefiting KC Spaces Fund and KC Tenants.
 - Private public-safe metadata from the KC Spaces Fund site, campaign-theme, fundraising-widget, deployment, and launch-operation archive.
 
+## KC Town Hall Phase One And Neighborhood Stewardship Sources
+
+The July 15, 2026 pass represents one protected proposal packet, one protected
+first-person memory record, and one protected operating calculator through
+public-safe metadata only. The repository contains no private packet path,
+financial appendix, resident response, contact record, or raw spreadsheet.
+
+The proposal packet supports Phase One scope, budget, chronology, specialized
+trades, local hiring, trade learning, and the neighborhood-survey artifact. It
+does not independently assign Jamie the general-contractor title or certify
+closeout. The operating calculator supports a project-maintained count of 1,970
+tires across 25 nonzero logged months within 26 monthly columns, not an audited
+impact metric.
+
+Public source nodes include a Cleveland Ave KC Facebook post describing the
+monthly residential TiredOfTires service and the University of Missouri
+Extension-hosted HENC Strategic Plan 3.0. The Facebook post supports program
+framing, not Jamie's individual role. The HENC plan supports coalition context,
+not Cleveland Ave Unify to Beautify details or Jamie's role. See the [research
+note](research/kc-town-hall-phase-one-neighborhood-stewardship-2018-2022.md).
+
 ## First Lifecycle Corpus
 
 The July 13, 2026 lifecycle run closely reviewed:
@@ -130,6 +151,14 @@ onboarding workflow, a WOW List member-meeting video, Fair Rent NYC event
 visuals, and a Sunday Dinner Zoom archive. No Drive ID, URL, raw artifact,
 participant name, or access instruction is stored in the repository. See the
 [research note](research/google-drive-shared-drives-archival-production-2026-07.md).
+
+On July 15, two additional protected NTER CHNG working documents were
+close-read. An April 2011 staging plan supports a bounded account of software,
+hardware, projection, networking, wall, gallery, and teardown planning for the
+America: Now and Here restaging. A second compilation preserves project design
+language and joint creator credit alongside private prompt-response material.
+Neither source URL, Drive identifier, phone number, message text, nor raw
+document is stored. See the [public-safe research note](research/nter-chng-google-drive-working-artifacts-2010-2011.md).
 
 ## NYC Artist Coalition Facebook Events
 
