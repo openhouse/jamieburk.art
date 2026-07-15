@@ -152,3 +152,21 @@ still requires Jamie's explicit approval.
 Two exact-final independent judges scored Chad's criterion **5 / 5**. The runner
 reported **100 / 100**, stable pair `yes`, recommendation `criterion-met`, with
 all six dimensions addressed and every deterministic gate passing.
+
+## WOW List full-population release pass
+
+- Made Jamie's product and operating contribution legible without assigning
+  him every post, repost, or third-party use in a collectively used account.
+- Repaired every public and public-safe `35+` projection so the reader can see
+  the qualifying threshold: each city or region entry had at least 50 geocoded
+  posts or events.
+- Bound both WOW List claims to the exact-route manifest and kept the complete
+  38-record social archive in the knowledge bank rather than burdening the case
+  study with an archival inventory.
+- Preserved dated interaction counters as context, not as claims of reach,
+  endorsement, conversion, attendance, or impact.
+
+Two fresh independent judges scored Chad's criterion **4 / 4**. The release
+runner reported **80 / 80**, stable pair `yes`, recommendation
+`criterion-met`, with every deterministic gate passing. Production publication
+still requires Jamie's explicit approval.

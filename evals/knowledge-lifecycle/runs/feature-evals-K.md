@@ -257,3 +257,36 @@ exact-destination manifests, and 15 media leads. All 42 lifecycle tests passed.
 Two independent final judges scored the lifecycle **91 / 90**, stable pair
 `yes`, with every criterion at least 4 and both recommendations
 `framework-ready`.
+
+## WOW List full-population release pass
+
+The July 15 release pass reconciled all 38 profile-displayed `@wowlist`
+records: 37 appeared in Posts, 38 in Replies, and their union remained 38 after
+seven no-growth traversals. The population contains 16 original posts, 6
+replies, and 16 reposted external records. It preserves 35 posted-link
+occurrences, dated counters for all 22 account-authored records, and a bounded
+10-account external-use sample in which 9 accounts independently posted WOW
+List URLs.
+
+The pass separates the account's public record from the protected production
+analysis that supports historical scale. Exact internal figures remain
+protected: 1,846 users, 16,142 posts or events, and 35 city or region entries
+meeting the named threshold of at least 50 geocoded posts or events. Public
+projections use rounded figures and keep that threshold attached wherever the
+35+ figure appears.
+
+The lifecycle now contains 61 leads and receipts, 107 observations, 43
+candidate claims, 33 research tasks, 51 decisions, 10 editorial briefs, 15
+exact-destination manifests, 15 media leads, and 4 source collections containing
+45 campaign press listings. All 44 lifecycle tests passed. The exact WOW List
+manifest inventories both rendered canonical claims, and the runner now rejects
+schema-invalid, stale-revision, duplicate-evaluator, or unstable confirming
+scorecards.
+
+The final independent release pair scored **97 / 95**, stable pair `yes`, with
+both recommendations `framework-ready`. Interaction counters remain dated and
+mutable; they are not treated as people, reach, conversion, attendance,
+endorsement, or impact. Collective authorship, privacy, lifetime-population,
+and current-status boundaries remain explicit. There is no public `/proofs`,
+`/knowledge-bank`, or `/public-claims` route, and production remains Jamie's
+explicit decision.

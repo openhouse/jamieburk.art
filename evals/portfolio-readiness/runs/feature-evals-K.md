@@ -124,3 +124,24 @@ explicit human decision.
 The exact-final portfolio pair scored **98 / 100**, stable pair `yes`, with both
 judges recommending `application-ready`. All deterministic fast gates passed.
 Production publication remains Jamie's explicit human decision.
+
+## WOW List full-population release pass
+
+- Ingested the complete 38-record profile-displayed `@wowlist` population,
+  posted-link ledger, dated interaction snapshot, and bounded external-use
+  sample without turning the portfolio into a social archive.
+- Projected the strongest defensible scale claim selectively: 1,800+ users,
+  16,000+ posts or events, and 35+ city or region entries, each with at least
+  50 geocoded posts or events.
+- Updated the phone-bearing two-page resume to carry the same threshold-bound
+  wording, collaborator credit, and adoption boundary as the governed site.
+- Refreshed 42 production-browser route and viewport observations and 19
+  source-bound captures; the application path, both resume pages, and governed
+  WOW List surface remain current.
+
+The final independent portfolio pair scored **98 / 100**, stable pair `yes`,
+with both judges recommending `application-ready`. The full deterministic
+release gate passed, including 14 citation tests, 6 eval-runner tests, 44
+lifecycle tests, typecheck, lint, production builds, public safety, route
+checks, and compiled-locator checks. Production publication remains Jamie's
+explicit human decision.
