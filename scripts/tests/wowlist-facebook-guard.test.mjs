@@ -41,7 +41,8 @@ const prohibitedMutations = [
   "Jamie served as the Page administrator.",
   "The WOW List Page was administered by Jamie.",
   "Member feedback improved the site.",
-  "The team adopted member suggestions."
+  "The team adopted member suggestions.",
+  "Jamie manages the WOW List Page."
 ];
 
 for (const mutation of prohibitedMutations) {
@@ -64,7 +65,8 @@ const boundedStatements = [
   "It has not been established that Jamie was the Page administrator.",
   "Jamie was not the Page manager.",
   "No evidence shows member input informed the roadmap.",
-  "Member feedback did not improve the site."
+  "Member feedback did not improve the site.",
+  "The project was not community-governed."
 ];
 
 for (const statement of boundedStatements) {
