@@ -105,6 +105,18 @@ from the article's issue context, links both to the maturation inquiry, and
 derives coverage from all 16 intake source IDs rather than only the 15 source
 records newly defined by this pass.
 
+### Iteration 13: recursive value safety and independent contracts
+
+An adversarial judge showed that exact object keys alone did not prevent nested
+personal metadata, false verification values, identifying detail appended to
+an unresolved reason, or a simultaneous overclaim in both mirrored semantic
+records. The evaluator now validates every method array as strings, pins the
+fresh-verification values, requires exact generic unresolved reasons, applies
+independent source, claim, and observation contracts, and rejects positive
+sole-credit or causation language. Four verified short-link-to-source edges are
+also machine-readable, and personal or individual social posts no longer use
+institutional metadata.
+
 ## Acceptance Contract
 
 `KB-EVAL-URBANHERMIT-FULL-POPULATION` fails if:
@@ -116,6 +128,10 @@ records newly defined by this pass.
   fingerprint;
 - raw post text, private paths, contact details, credentials, or session data
   enter the ledger;
+- allowed arrays or unresolved reasons gain nested or identifying metadata;
+- fresh-verification values drift from the population control;
+- source, claim, and observation semantics violate independent contracts;
+- a verified short-link-to-source edge is removed or altered;
 - source-status metrics enter Jamie's traction aggregate;
 - source, observation, claim, or inquiry counts drift;
 - a source loses its scope boundary;

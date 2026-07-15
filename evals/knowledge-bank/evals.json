@@ -579,6 +579,57 @@
       "expectedObservationCount": 19,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 3,
+      "expectedLinkedSourceEdgeCount": 4,
+      "methodContract": {
+        "surfaces": [
+          "Posts tab",
+          "Replies tab",
+          "bounded latest-results date searches",
+          "public status pages"
+        ],
+        "broadDateWindowsSearched": ["2008-2012", "2012-2016", "2016-2020", "2020-2024"],
+        "annualWindowsSearched": "2008 through 2024 inclusive",
+        "exclusions": [
+          "authentication, cookies, session material, and credentials",
+          "private messages, private analytics, and account-administration records",
+          "raw post text and raw browser recovery files",
+          "personal names, links, and status URLs from context-only or protected-context records",
+          "inferences that Jamie authored source statuses he reposted"
+        ]
+      },
+      "linkedSourceContracts": [
+        ["201361243104227328", "https://t.co/rnFDpjK6", "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012"],
+        ["596692863532007424", "http://t.co/76aSNfRb9s", "SRC-GOOD-TIMES-ZINES-2-2015"],
+        ["726092227856969728", "https://t.co/fzIgyhK3Cp", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016"],
+        ["726144972802691073", "https://t.co/KNY46agt6a", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016"]
+      ],
+      "sourceContracts": {
+        "SRC-X-URBANHERMIT-POPULATION-AUDIT-2026-07-14": ["434-slot population reconciliation", "a platform export, deletion history, or proof that the nine unresolved records no longer exist"],
+        "SRC-X-URBANHERMIT-RIVER-OFFICE-HOURS-2009": ["public invitation", "attendance"],
+        "SRC-X-URBANHERMIT-HJE-WEBSITE-2010": ["self-authored website-making statement", "complete implementation scope"],
+        "SRC-X-URBANHERMIT-UCP-CURFEW-VIDEO-2012": ["self-authored video-making statement", "UCP's complete program"],
+        "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012": ["continued public availability of the linked video artifact", "complete authorship credit"],
+        "SRC-X-KCUR-CENTRAL-STANDARD-JAMIE-WATER-2015": ["outside-authored public quotation", "complete interview"],
+        "SRC-X-URBANHERMIT-HORSE-LORDS-2016": ["self-authored co-making credit", "complete production roles"],
+        "SRC-X-THRILL-JOCKEY-HORSE-LORDS-2016": ["outside institutional co-making credit", "complete production-role breakdown"],
+        "SRC-NPR-HORSE-LORDS-TRUTHERS-2016": ["NPR publication of the Horse Lords Truthers video", "Jamie's complete production role without the corroborating credit post"],
+        "SRC-X-URBANHERMIT-LETNYCDANCE-REPEAL-2017": ["Jamie's public campaign circulation", "sole causation"],
+        "SRC-X-URBANHERMIT-TALKSNOTRAIDS-2019": ["Jamie's public campaign circulation", "sole authorship"],
+        "SRC-X-URBANHERMIT-MEDIA-ARCHAEOLOGY-2020": ["public technical guidance", "complete technical practice"],
+        "SRC-X-LETSGLITCHIT-JAMIE-CONNECTIONS-2023": ["outside-authored public recognition", "a formal testimonial"],
+        "SRC-X-URBANHERMIT-GOOD-TIMES-ZINES-2-2015": ["Jamie's public source routing", "article authorship"],
+        "SRC-OBSERVER-MARKET-HOTEL-2016": ["public context for one cultural-space-safety link circulated by the account", "press coverage of Jamie"]
+      },
+      "claimContracts": {
+        "CLM-URBANHERMIT-SOCIAL-POPULATION-DISPOSITION": ["425 locally recovered items and nine explicit unresolved slots", "Full disposition is not full public item recovery or a platform export."],
+        "CLM-URBANHERMIT-PRACTICE-CONTINUITY": ["recurring public practices", "Continuity means recurring surviving evidence, not uninterrupted activity or equal effort across years."],
+        "CLM-URBANHERMIT-WATERWAYS-PRACTICE": ["public traces of Jamie's participatory waterways practice", "not complete project histories, attendance, or outcomes"],
+        "CLM-URBANHERMIT-PUBLIC-MEDIA-MAKING": ["co-making Horse Lords' Truthers video with Martin Schmidt", "Keep Martin Schmidt's co-credit visible."],
+        "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION": ["carry NYC Artist Coalition campaign signals", "not sole authorship, coalition control, policy causality, or impact"],
+        "CLM-URBANHERMIT-TECHNICAL-PRACTICE": ["examples of Jamie's technical practice", "not as a skills rating or complete technical portfolio"],
+        "CLM-URBANHERMIT-OUTSIDE-RECOGNITION-FLOOR": ["Three source statuses", "not a comprehensive mention search or testimonial collection"],
+        "CLM-URBANHERMIT-VISIBLE-TRACTION-SNAPSHOT": ["35 of 81", "Exclude all source-status metrics from Jamie's traction."]
+      },
       "observationContracts": {
         "OBS-URBANHERMIT-UCP-VIDEO-SELF-REPORT": {
           "sourceId": "SRC-X-URBANHERMIT-UCP-CURFEW-VIDEO-2012",

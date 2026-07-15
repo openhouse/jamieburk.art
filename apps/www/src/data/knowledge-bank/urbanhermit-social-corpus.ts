@@ -41,7 +41,9 @@ const publicPost = (
   id,
   title,
   organization,
-  kind: "institutional-social-post" as const,
+  kind: (organization === "Jamie Burkart" || organization === "letsglitchit"
+    ? "public-social-post"
+    : "institutional-social-post") as "public-social-post" | "institutional-social-post",
   visibility: "public" as const,
   preservationStatus: "live" as const,
   publishedAt,

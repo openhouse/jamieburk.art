@@ -133,6 +133,32 @@
       "metricsCommitted": false
     }
   },
+  "linkedSourceEdges": [
+    {
+      "statusId": "201361243104227328",
+      "shortUrl": "https://t.co/rnFDpjK6",
+      "destinationSourceId": "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012",
+      "resolutionStatus": "verified-redirect"
+    },
+    {
+      "statusId": "596692863532007424",
+      "shortUrl": "http://t.co/76aSNfRb9s",
+      "destinationSourceId": "SRC-GOOD-TIMES-ZINES-2-2015",
+      "resolutionStatus": "verified-redirect"
+    },
+    {
+      "statusId": "726092227856969728",
+      "shortUrl": "https://t.co/fzIgyhK3Cp",
+      "destinationSourceId": "SRC-NPR-HORSE-LORDS-TRUTHERS-2016",
+      "resolutionStatus": "verified-redirect"
+    },
+    {
+      "statusId": "726144972802691073",
+      "shortUrl": "https://t.co/KNY46agt6a",
+      "destinationSourceId": "SRC-NPR-HORSE-LORDS-TRUTHERS-2016",
+      "resolutionStatus": "verified-redirect"
+    }
+  ],
   "unresolvedItems": [
     {
       "slot": 1,

@@ -1424,6 +1424,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     : null;
   const urbanLedger = fixtures.urbanhermitLedger ?? urbanCanonicalLedger;
   const urbanRecords = urbanLedger?.records ?? [];
+  const urbanLinkedSourceEdges = urbanLedger?.linkedSourceEdges ?? [];
   const urbanRecordIds = new Set(urbanRecords.map((record) => record.statusId));
   const urbanWithheldDispositions = urbanLedger?.withheldPopulationDispositions ?? [];
   const urbanContextDisposition = urbanWithheldDispositions.find(
@@ -1532,10 +1533,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     Boolean(actual && expected && fields.every(
       (field) => JSON.stringify(actual[field]) === JSON.stringify(expected[field])
     ));
+  const urbanStringArray = (value) =>
+    Array.isArray(value) && value.every((item) => typeof item === "string");
   const urbanAllowedTopLevelFields = new Set([
     "schemaVersion", "reviewedAt", "sourceProfile", "populationDefinition", "populationAudit",
     "method", "contentBoundary", "metricBoundary", "aggregateFindings", "unresolvedItems", "records",
-    "withheldPopulationDispositions"
+    "withheldPopulationDispositions", "linkedSourceEdges"
   ]);
   const urbanAllowedPopulationAuditFields = new Set([
     "profileCountObserved", "profileAndBoundedSearchItemsRecovered", "unresolvedPopulationSlots",
@@ -1590,12 +1593,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     "statuses", "statusesWithVisibleReaction", "replies", "reposts", "likes"
   ]);
   const urbanAllowedCurrentMetricFields = new Set(["replies", "reposts", "likes"]);
+  const urbanAllowedLinkedSourceFields = new Set([
+    "statusId", "shortUrl", "destinationSourceId", "resolutionStatus"
+  ]);
   const urbanAllowedWithheldFields = new Set(["disposition", "count", "publicDetail"]);
   const urbanAllowedUnresolvedFields = new Set(["slot", "disposition", "reason"]);
   const urbanNonRecordMetadata = urbanLedger ? structuredClone(urbanLedger) : null;
   if (urbanNonRecordMetadata) {
     urbanNonRecordMetadata.records = [];
     urbanNonRecordMetadata.aggregateFindings.selectedMissionSourceStatusIds = [];
+    urbanNonRecordMetadata.linkedSourceEdges = [];
   }
   const urbanNonRecordMetadataText = urbanNonRecordMetadata
     ? JSON.stringify(urbanNonRecordMetadata)
@@ -1666,6 +1673,68 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
         contract.requiredPhrases.every((phrase) => observation.text.includes(phrase));
     }
   );
+  const urbanSourceContractsHold = Object.entries(urbanFull.sourceContracts).every(
+    ([sourceId, [requiredSupport, requiredBoundary]]) => {
+      const source = sourceById.get(sourceId);
+      return source?.supportsGenerally.includes(requiredSupport) &&
+        source.doesNotEstablish.includes(requiredBoundary);
+    }
+  );
+  const urbanClaimContractsHold = Object.entries(urbanFull.claimContracts).every(
+    ([claimId, [requiredClaimPhrase, requiredBoundaryPhrase]]) => {
+      const claim = claimById.get(claimId);
+      return claim?.internalClaim.includes(requiredClaimPhrase) &&
+        claim.boundaries.some((boundary) => boundary.includes(requiredBoundaryPhrase));
+    }
+  );
+  const urbanPositiveSemanticText = JSON.stringify({
+    sourceSupports: urbanFullSources.map((source) => source?.supportsGenerally),
+    observations: urbanFullObservations.map((observation) => observation?.text),
+    claims: urbanFullClaims.map((claim) => ({
+      internalClaim: claim?.internalClaim,
+      projections: claim?.projections.map((projection) => projection.text)
+    })),
+    inquiries: urbanFullInquiries.map((inquiry) => ({
+      findings: inquiry?.findings,
+      publicSummary: inquiry?.publicSummary
+    }))
+  });
+  const urbanPositiveSemanticsBounded =
+    !/(?:single-handedly|solely led|caused (?:the )?(?:policy|outcome)|proves? (?:all|every)|every coalition campaign|definitively delivered|all of Jamie's professional impact)/i.test(
+      urbanPositiveSemanticText
+    );
+  const urbanMethodContractHolds = Boolean(
+    urbanStringArray(urbanLedger?.method?.surfaces) &&
+      JSON.stringify(urbanLedger.method.surfaces) === JSON.stringify(urbanFull.methodContract.surfaces) &&
+      urbanStringArray(urbanLedger.method.exclusions) &&
+      JSON.stringify(urbanLedger.method.exclusions) === JSON.stringify(urbanFull.methodContract.exclusions) &&
+      urbanStringArray(urbanLedger.method.freshVerification.broadDateWindowsSearched) &&
+      JSON.stringify(urbanLedger.method.freshVerification.broadDateWindowsSearched) ===
+        JSON.stringify(urbanFull.methodContract.broadDateWindowsSearched) &&
+      urbanLedger.method.freshVerification.annualWindowsSearched ===
+        urbanFull.methodContract.annualWindowsSearched &&
+      urbanLedger.method.freshVerification.verifiedAt === urbanLedger.reviewedAt &&
+      urbanLedger.method.freshVerification.profileCountReconfirmed === urbanFull.expectedProfileCount &&
+      urbanLedger.method.freshVerification.uniqueItemRecords === urbanFull.expectedUniqueItems &&
+      urbanLedger.method.freshVerification.profileTraversalReachedOldestRecoveredStatus === true &&
+      urbanLedger.method.freshVerification.repliesSurfaceCarrierErrorObserved === true
+  );
+  const urbanLinkedSourceContractsHold = Boolean(
+    urbanLinkedSourceEdges.length === urbanFull.expectedLinkedSourceEdgeCount &&
+      urbanLinkedSourceEdges.every((edge) =>
+        hasExactKeys(edge, urbanAllowedLinkedSourceFields) &&
+          edge.resolutionStatus === "verified-redirect" &&
+          urbanRecordIds.has(edge.statusId) &&
+          urbanRecords.find((record) => record.statusId === edge.statusId)?.postedUrls.includes(edge.shortUrl) &&
+          urbanFullIntake?.sourceIds.includes(edge.destinationSourceId) &&
+          sourceById.get(edge.destinationSourceId)?.visibility === "public"
+      ) &&
+      new Set(urbanLinkedSourceEdges.map((edge) => `${edge.statusId}|${edge.shortUrl}|${edge.destinationSourceId}`)).size ===
+        urbanFull.expectedLinkedSourceEdgeCount &&
+      JSON.stringify(urbanLinkedSourceEdges.map((edge) => [
+        edge.statusId, edge.shortUrl, edge.destinationSourceId
+      ])) === JSON.stringify(urbanFull.linkedSourceContracts)
+  );
   const urbanIntakeSourceGraphComplete = Boolean(
     urbanFullIntake?.sourceIds.length === urbanFull.expectedLinkedSourceCount &&
       new Set(urbanFullIntake.sourceIds).size === urbanFull.expectedLinkedSourceCount &&
@@ -1700,26 +1769,28 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       urbanLedger.populationAudit.profileAndBoundedSearchItemsRecovered === urbanFull.expectedUniqueItems &&
       urbanLedger.populationAudit.unresolvedPopulationSlots === urbanFull.expectedUnresolvedSlots &&
       urbanLedger.populationAudit.dispositionTotal === urbanFull.expectedProfileCount &&
+      urbanLedger.populationAudit.publicEvidenceItemRecordsPublished === urbanFull.expectedPublicSafeEvidenceRecords &&
+      urbanLedger.populationAudit.contextItemsWithheldFromPublicLedger === urbanFull.expectedContextOnlyRecords &&
+      urbanLedger.populationAudit.protectedItemsWithheldFromPublicLedger === urbanFull.expectedProtectedContextRecords &&
       urbanLedger.unresolvedItems.length === urbanFull.expectedUnresolvedSlots &&
       urbanLedger.unresolvedItems.every((item, index) =>
         hasExactKeys(item, urbanAllowedUnresolvedFields) &&
           item.slot === index + 1 &&
           item.disposition === "carrier-limited-not-recovered" &&
-          /profile count exceeded/i.test(item.reason)
+          item.reason === "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
       ) &&
       /population reconciliation, not a platform export/i.test(urbanLedger.populationAudit.completenessStatement) &&
       urbanLedger.method.authenticatedReadOnlyReview === true &&
-      JSON.stringify(urbanLedger.method.surfaces) === JSON.stringify([
-        "Posts tab", "Replies tab", "bounded latest-results date searches", "public status pages"
-      ]) &&
-      JSON.stringify(urbanLedger.method.freshVerification.broadDateWindowsSearched) === JSON.stringify([
-        "2008-2012", "2012-2016", "2016-2020", "2020-2024"
-      ]) &&
-      urbanLedger.method.freshVerification.annualWindowsSearched === "2008 through 2024 inclusive" &&
-      urbanLedger.method.exclusions.some((item) => /cookies, session material, and credentials/i.test(item)) &&
+      urbanMethodContractHolds &&
       urbanLedger.contentBoundary.rawTextCommitted === false &&
       urbanLedger.contentBoundary.nonEvidenceItemRecordsCommitted === false &&
+      urbanLedger.contentBoundary.publicSafeEvidenceLinksCommitted === true &&
       urbanLedger.contentBoundary.publicRecordCrosswalkCommitted === false &&
+      typeof urbanLedger.contentBoundary.rationale === "string" &&
+      !/https?:\/\//i.test(urbanLedger.contentBoundary.rationale) &&
+      typeof urbanLedger.metricBoundary.accountAuthoredMetrics === "string" &&
+      typeof urbanLedger.metricBoundary.repostSourceMetrics === "string" &&
+      urbanStringArray(urbanLedger.metricBoundary.doesNotEstablish) &&
       urbanRecords.length + urbanContextDisposition?.count + urbanProtectedDisposition?.count +
         urbanLedger.unresolvedItems.length === urbanFull.expectedProfileCount &&
       urbanRecords.length + urbanContextDisposition?.count + urbanProtectedDisposition?.count ===
@@ -1738,6 +1809,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
           Array.isArray(record.mentionedHandles) &&
           Array.isArray(record.hashtags) &&
           Array.isArray(record.postedUrls) &&
+          urbanStringArray(record.projectIds) &&
+          urbanStringArray(record.themes) &&
+          urbanStringArray(record.mentionedHandles) &&
+          urbanStringArray(record.hashtags) &&
+          urbanStringArray(record.postedUrls) &&
           record.postedUrls.every((url) => /^https?:\/\//.test(url)) &&
           (record.relationship === "native-repost-source-status"
             ? record.metricOwner === "source-status-excluded" &&
@@ -1827,6 +1903,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       urbanhermitSocialCorpus.researchInquiries.length === urbanFull.expectedInquiryCount &&
       urbanObservationsAtomic &&
       urbanObservationContractsHold &&
+      urbanSourceContractsHold &&
+      urbanClaimContractsHold &&
+      urbanPositiveSemanticsBounded &&
+      urbanLinkedSourceContractsHold &&
       urbanIntakeSourceGraphComplete &&
       urbanSemanticContractsHold &&
       urbanFullSources.every((source) =>

@@ -54,6 +54,8 @@ in the public repository. The detailed review material stays outside it.
    handles, and posted URLs.
 8. Closely read high-signal records and verified selected linked public
    artifacts without making the build dependent on external network access.
+   Four verified short-link relationships are retained as machine-readable
+   edges from the originating status to the canonical source record.
 9. Committed only the 141-record public-safe evidence ledger, two aggregate-
    only withheld disposition counts, and bounded knowledge records.
 
@@ -137,6 +139,11 @@ a project artifact, public resource, contextual article, or research lead. It
 does not automatically establish coverage of Jamie, partnership, endorsement,
 adoption, or impact.
 
+Four high-signal short URLs are also bound to their canonical source records:
+the UCP post to Vimeo, the Good Times routing post to the archived article,
+and two Horse Lords posts to NPR Music. These edges preserve recoverable source
+relationships without pretending that every legacy short URL has been resolved.
+
 At the July 2026 snapshot, 35 of the 81 mission-relevant public account-
 authored evidence records displayed at least one reaction, totaling four
 replies, 26 reposts, and 67 likes. These counts are mutable current
@@ -163,6 +170,7 @@ specific application.
 - aggregate-only accounting for 271 context-only and 13 protected-context
   items, with no public item-level crosswalk;
 - 87 distinct public source links;
+- four verified status-to-source short-link edges;
 - bounded practice and project signal maps;
 - source-specific leads for waterways, public media, coalition campaigns,
   technical making, and community infrastructure;

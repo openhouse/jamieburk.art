@@ -1116,6 +1116,7 @@ test("urbanhermit context and protected records remain aggregate-only and unlink
   const nonRecordMetadata = structuredClone(urbanhermitLedger);
   nonRecordMetadata.records = [];
   nonRecordMetadata.aggregateFindings.selectedMissionSourceStatusIds = [];
+  nonRecordMetadata.linkedSourceEdges = [];
   assert.doesNotMatch(JSON.stringify(nonRecordMetadata), /\b\d{15,}\b/);
   assert.doesNotMatch(JSON.stringify(nonRecordMetadata), /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/);
   assert.equal(Object.hasOwn(urbanhermitLedger.aggregateFindings, "relationshipCounts"), false);
@@ -1322,6 +1323,50 @@ test("urbanhermit eval rejects unexpected disposition categories", () => {
   );
 });
 
+test("urbanhermit eval rejects nested personal metadata in allowed arrays", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.method.exclusions.push({
+    withheldPerson: { name: "Protected Person", profile: "https://example.com/private-profile" }
+  });
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
+test("urbanhermit eval rejects false fresh-verification values", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  Object.assign(alteredLedger.method.freshVerification, {
+    profileCountReconfirmed: 0,
+    uniqueItemRecords: 0,
+    profileTraversalReachedOldestRecoveredStatus: false,
+    repliesSurfaceCarrierErrorObserved: false
+  });
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
+test("urbanhermit eval rejects identifying detail appended to unresolved reasons", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.unresolvedItems[0].reason +=
+    " Protected Person at https://example.com/private-profile";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
 test("urbanhermit eval rejects an empty selected-source inventory", () => {
   const alteredLedger = structuredClone(urbanhermitLedger);
   alteredLedger.aggregateFindings.selectedMissionSourceStatusIds = [];
@@ -1346,6 +1391,29 @@ test("urbanhermit eval rejects empty recomputed aggregate maps", () => {
       1
     );
   }
+});
+
+test("urbanhermit linked-source edges bind short URLs to canonical sources", () => {
+  assert.equal(
+    urbanhermitLedger.linkedSourceEdges.length,
+    suite.pilot.urbanhermitFullPopulation.expectedLinkedSourceEdgeCount
+  );
+  for (const edge of urbanhermitLedger.linkedSourceEdges) {
+    const record = urbanhermitLedger.records.find((item) => item.statusId === edge.statusId);
+    assert.ok(record?.postedUrls.includes(edge.shortUrl));
+    assert.ok(knowledgeBank.sources.some((source) => source.id === edge.destinationSourceId));
+  }
+});
+
+test("urbanhermit eval rejects removal of a linked-source edge", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.linkedSourceEdges.pop();
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
 });
 
 test("urbanhermit eval binds source-status URL, author, date, and summary", () => {
@@ -1450,6 +1518,54 @@ test("urbanhermit semantic contracts cover sources, claims, projections, and inq
       target[field] = original;
     }
   }
+});
+
+test("urbanhermit independent contracts reject dual-sided semantic overclaims", () => {
+  const moduleSource = urbanhermitSocialCorpus.sources.find(
+    (item) => item.id === "SRC-OBSERVER-MARKET-HOTEL-2016"
+  );
+  const bankSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-OBSERVER-MARKET-HOTEL-2016"
+  );
+  const moduleClaim = urbanhermitSocialCorpus.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION"
+  );
+  const bankClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION"
+  );
+  assert.ok(moduleSource && bankSource && moduleClaim && bankClaim);
+  const sourceOriginals = [moduleSource.supportsGenerally, bankSource.supportsGenerally];
+  const claimOriginals = [moduleClaim.internalClaim, bankClaim.internalClaim];
+
+  try {
+    moduleSource.supportsGenerally = ["Jamie caused the policy outcome."];
+    bankSource.supportsGenerally = ["Jamie caused the policy outcome."];
+    moduleClaim.internalClaim = "Jamie single-handedly led every coalition campaign.";
+    bankClaim.internalClaim = "Jamie single-handedly led every coalition campaign.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    moduleSource.supportsGenerally = sourceOriginals[0];
+    bankSource.supportsGenerally = sourceOriginals[1];
+    moduleClaim.internalClaim = claimOriginals[0];
+    bankClaim.internalClaim = claimOriginals[1];
+  }
+});
+
+test("urbanhermit personal and individual posts are not institutional metadata", () => {
+  const personal = urbanhermitSocialCorpus.sources.find(
+    (source) => source.id === "SRC-X-URBANHERMIT-RIVER-OFFICE-HOURS-2009"
+  );
+  const individual = urbanhermitSocialCorpus.sources.find(
+    (source) => source.id === "SRC-X-LETSGLITCHIT-JAMIE-CONNECTIONS-2023"
+  );
+
+  assert.equal(personal?.kind, "public-social-post");
+  assert.equal(individual?.kind, "public-social-post");
 });
 
 test("urbanhermit native repost boundary preserves source authorship", () => {

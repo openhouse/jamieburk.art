@@ -19,6 +19,7 @@ export const sourceVisibilitySchema = z.enum([
 export const sourceKindSchema = z.enum([
   "government-record",
   "government-social-post",
+  "public-social-post",
   "institutional-web-page",
   "institutional-social-post",
   "archived-web-capture",
