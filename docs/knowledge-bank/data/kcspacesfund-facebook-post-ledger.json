@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-07-15",
+  "account": {
+    "name": "KC Spaces Fund",
+    "surface": "https://www.facebook.com/KCSpacesFund/"
+  },
+  "population": {
+    "distinctSurvivingPosts": 35,
+    "earliestObserved": "2020-04-07",
+    "latestObserved": "2020-07-09",
+    "independentPasses": 2,
+    "terminalNoNewContentConfirmations": 7,
+    "boundary": "Complete means all distinct posts exposed by the surviving July 2026 Page surface received a disposition. This is not a native Meta export or deletion history and cannot account for deleted, hidden, or unavailable historical posts."
+  },
+  "recovery": {
+    "postsWithStableAttachmentIds": 20,
+    "recordsWithUnavailableSharedContent": 5,
+    "boundary": "Stable attachment identifiers supported deduplication where present. Mutable render tokens are not archival identifiers, and unavailable shared content was not reconstructed from memory."
+  },
+  "surfaceSnapshot": {
+    "currentFollowers": 108,
+    "currentFollowing": 1,
+    "boundary": "Current profile labels are mutable and do not establish historical audience, unique people, readership, endorsement, stakeholder composition, or impact."
+  },
+  "primaryThemeCounts": {
+    "grant-recipient-reporting": 12,
+    "application-donation-and-deadline-routing": 10,
+    "fundraising-partner-and-print-mobilization": 7,
+    "public-context-mutual-aid-and-unavailable": 6
+  },
+  "destinationInventory": {
+    "canonicalDestinations": [
+      "https://kcspacesfund.com/",
+      "https://kcspacesfund.com/apply/",
+      "https://www.gofundme.com/f/kcspacesfund",
+      "https://www.odditiesprints.com/covid-19-fundraise",
+      "http://twocc.us/donate",
+      "https://do816.com/p/the-daily-dogood-kansas-city"
+    ],
+    "boundary": "A posted destination establishes routing, not click-through, readership, endorsement, partnership, conversion, stakeholder response, or impact. Internal Facebook attachment routes, profile links, personal contact details, comments, and controls are excluded."
+  },
+  "institutionalResponseSignals": {
+    "count": 3,
+    "organizations": [
+      "Blackbox on Troost",
+      "Vulpes Bastille",
+      "Fishtank Theatre"
+    ],
+    "boundary": "These are visible organization-attributed public reply examples, not a complete stakeholder census. Thanks or application acknowledgment do not prove payment, grant approval, partnership, representative sentiment, campaign causality, or durable impact."
+  },
+  "visibleReactionSnapshot": {
+    "postsWithVisibleReactionLabels": 27,
+    "totalVisibleReactions": 115,
+    "reactionKinds": {
+      "Like": 77,
+      "Love": 38
+    },
+    "boundary": "These are mutable July 15, 2026 interface labels, not unique people, historical analytics, stakeholder-group engagement, reach, endorsement, grant outcomes, or impact."
+  },
+  "authorshipAndCredit": {
+    "pagePublisherFinding": "The surviving public Page surface does not identify individual publishers.",
+    "jamieRoleBoundary": "This Facebook record must not attribute Page posting, account ownership, stakeholder status, grant decisions, fiscal sponsorship, organizer status, or campaign ownership to Jamie. Separate archival code evidence supports Jamie's behind-the-scenes website and digital-infrastructure contribution.",
+    "collectiveCredit": "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as named by the campaign; Allied Media Projects remains identified as fiscal sponsor in the existing GoFundMe record.",
+    "nameMemory": "Jamie remembers supporting selection of a project name available uniformly across social platforms and domain names. This remains an attributed research lead pending registration history or collaborator corroboration."
+  },
+  "records": [
+    { "id": "FB-KCSPACES-001", "timelineSlot": 1, "publishedAt": "2020-07-09", "primaryTheme": "grant-recipient-reporting", "routeLabel": "Vulpes Bastille recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-002", "timelineSlot": 2, "publishedAt": "2020-06-30", "primaryTheme": "grant-recipient-reporting", "routeLabel": "SWAN recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-003", "timelineSlot": 3, "publishedAt": "2020-06-14", "primaryTheme": "grant-recipient-reporting", "routeLabel": "Kansas City Textile Arts Center recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-004", "timelineSlot": 4, "publishedAt": "2020-06-11", "primaryTheme": "grant-recipient-reporting", "routeLabel": "Parker 2 recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-005", "timelineSlot": 5, "publishedAt": "2020-06-09", "primaryTheme": "grant-recipient-reporting", "routeLabel": "Farewell Transmission recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-006", "timelineSlot": 6, "publishedAt": "2020-05-30", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "June 1 application deadline reminder", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-007", "timelineSlot": 7, "publishedAt": "2020-05-28", "primaryTheme": "fundraising-partner-and-print-mobilization", "routeLabel": "David Alpert fundraising graphic", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-008", "timelineSlot": 8, "publishedAt": "2020-05-26", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "June 1 application deadline route", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-009", "timelineSlot": 9, "publishedAt": "2020-05-24", "primaryTheme": "fundraising-partner-and-print-mobilization", "routeLabel": "State of the Art Frames and Oddities Prints support", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-010", "timelineSlot": 10, "publishedAt": "2020-05-22", "primaryTheme": "grant-recipient-reporting", "routeLabel": "One Mic Stand recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-011", "timelineSlot": 11, "publishedAt": "2020-05-21", "primaryTheme": "grant-recipient-reporting", "routeLabel": "Blackbox on Troost recipient highlight and response", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-012", "timelineSlot": 12, "publishedAt": "2020-05-19", "primaryTheme": "fundraising-partner-and-print-mobilization", "routeLabel": "Single Wing Creative and Oddities Prints partnership", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-013", "timelineSlot": 13, "publishedAt": "2020-05-18", "primaryTheme": "grant-recipient-reporting", "routeLabel": "Trans Women of Color Collective fund highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-014", "timelineSlot": 14, "publishedAt": "2020-05-11", "primaryTheme": "fundraising-partner-and-print-mobilization", "routeLabel": "Oddities Prints risograph partnership", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-015", "timelineSlot": 15, "publishedAt": "2020-05-17", "primaryTheme": "fundraising-partner-and-print-mobilization", "routeLabel": "Fundraising media share", "contentAvailability": "unavailable-shared-content" },
+    { "id": "FB-KCSPACES-016", "timelineSlot": 16, "publishedAt": "2020-05-14", "primaryTheme": "fundraising-partner-and-print-mobilization", "routeLabel": "Oddities Prints availability and artist thanks", "contentAvailability": "partial" },
+    { "id": "FB-KCSPACES-017", "timelineSlot": 17, "publishedAt": "2020-05-13", "primaryTheme": "grant-recipient-reporting", "routeLabel": "GetWoke QTPoC recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-018", "timelineSlot": 18, "publishedAt": "2020-05-11", "primaryTheme": "fundraising-partner-and-print-mobilization", "routeLabel": "Partner content share", "contentAvailability": "unavailable-shared-content" },
+    { "id": "FB-KCSPACES-019", "timelineSlot": 19, "publishedAt": "2020-05-05", "primaryTheme": "public-context-mutual-aid-and-unavailable", "routeLabel": "Giving Tuesday support for artist-run spaces", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-020", "timelineSlot": 20, "publishedAt": "2020-05-04", "primaryTheme": "grant-recipient-reporting", "routeLabel": "Funding update with recipient unavailable in current display", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-021", "timelineSlot": 21, "publishedAt": "2020-04-30", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Priority deadline reminder and Vulpes application response", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-022", "timelineSlot": 22, "publishedAt": "2020-04-29", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Priority deadline and grants up to 500 dollars", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-023", "timelineSlot": 23, "publishedAt": "2020-04-28", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Service-area expansion to Lawrence Kansas", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-024", "timelineSlot": 24, "publishedAt": "2020-04-25", "primaryTheme": "public-context-mutual-aid-and-unavailable", "routeLabel": "Mutual-aid care for spaces to gather and make", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-025", "timelineSlot": 25, "publishedAt": "2020-04-23", "primaryTheme": "grant-recipient-reporting", "routeLabel": "UN Tucked recipient highlight", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-026", "timelineSlot": 26, "publishedAt": "2020-04-21", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Application route and priority criteria", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-027", "timelineSlot": 27, "publishedAt": "2020-04-21", "primaryTheme": "public-context-mutual-aid-and-unavailable", "routeLabel": "Do816 Daily DoGood article share", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-028", "timelineSlot": 28, "publishedAt": "2020-04-18", "primaryTheme": "grant-recipient-reporting", "routeLabel": "First-round reporting and Latino Foundation for the Arts", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-029", "timelineSlot": 29, "publishedAt": "2020-04-12", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Rolling April through June relief framing", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-030", "timelineSlot": 30, "publishedAt": "2020-04-10", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Donation and application launch routes", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-031", "timelineSlot": 31, "publishedAt": "2020-04-10", "primaryTheme": "public-context-mutual-aid-and-unavailable", "routeLabel": "Launch-period shared status", "contentAvailability": "unavailable-shared-content" },
+    { "id": "FB-KCSPACES-032", "timelineSlot": 32, "publishedAt": "2020-04-09", "primaryTheme": "public-context-mutual-aid-and-unavailable", "routeLabel": "GoFundMe campaign share and Fishtank Theatre response", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-033", "timelineSlot": 33, "publishedAt": "2020-04-08", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Application route", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-034", "timelineSlot": 34, "publishedAt": "2020-04-07", "primaryTheme": "application-donation-and-deadline-routing", "routeLabel": "Campaign launch and donation route", "contentAvailability": "visible" },
+    { "id": "FB-KCSPACES-035", "timelineSlot": 35, "publishedAt": "2020-04-07", "primaryTheme": "public-context-mutual-aid-and-unavailable", "routeLabel": "Initial campaign status", "contentAvailability": "unavailable-shared-content" }
+  ],
+  "publicSafety": {
+    "excluded": [
+      "raw post and comment text",
+      "personal contact details",
+      "authentication and administrator state",
+      "private analytics",
+      "applicant, donor, payment, subscriber, credential, and correspondence records",
+      "participant-level relationship graphs"
+    ],
+    "creditBoundary": "The account is collective campaign infrastructure. The Facebook surface does not identify its publishers and must not be used to attribute posting or stakeholder ownership to Jamie."
+  }
+}

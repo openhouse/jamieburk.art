@@ -1,6 +1,8 @@
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { callNycSocialCorpus } from "./callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "./google-drive-shared-drives-production.ts";
+import { jamiePersonalFacebookPosts } from "./jamie-personal-facebook-posts.ts";
+import { kcSpacesFundFacebookPosts } from "./kcspacesfund-facebook-posts.ts";
 import { kcTownHallFunding } from "./kc-town-hall-funding.ts";
 import { kcTownHallPhaseOne } from "./kc-town-hall-phase-one.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
@@ -42,6 +44,8 @@ const knowledgeBankInput = {
     ...historicalKnowledge.intakeItems,
     ...googleDriveSharedDrivesProduction.intakeItems,
     ...teamsArchiveProduction.intakeItems,
+    ...jamiePersonalFacebookPosts.intakeItems,
+    ...kcSpacesFundFacebookPosts.intakeItems,
     ...kcTownHallPhaseOne.intakeItems,
     ...kcTownHallFunding.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
@@ -79,6 +83,8 @@ const knowledgeBankInput = {
     ...historicalKnowledge.observations,
     ...googleDriveSharedDrivesProduction.observations,
     ...teamsArchiveProduction.observations,
+    ...jamiePersonalFacebookPosts.observations,
+    ...kcSpacesFundFacebookPosts.observations,
     ...kcTownHallPhaseOne.observations,
     ...kcTownHallFunding.observations,
     ...kcTownHallSocialCorpus.observations,
@@ -243,6 +249,8 @@ const knowledgeBankInput = {
     ...historicalKnowledge.sources,
     ...googleDriveSharedDrivesProduction.sources,
     ...teamsArchiveProduction.sources,
+    ...jamiePersonalFacebookPosts.sources,
+    ...kcSpacesFundFacebookPosts.sources,
     ...kcTownHallPhaseOne.sources,
     ...kcTownHallFunding.sources,
     ...kcTownHallSocialCorpus.sources,
@@ -360,6 +368,8 @@ const knowledgeBankInput = {
     ...historicalKnowledge.claims,
     ...googleDriveSharedDrivesProduction.claims,
     ...teamsArchiveProduction.claims,
+    ...jamiePersonalFacebookPosts.claims,
+    ...kcSpacesFundFacebookPosts.claims,
     ...kcTownHallPhaseOne.claims,
     ...kcTownHallFunding.claims,
     ...kcTownHallSocialCorpus.claims,
@@ -417,6 +427,8 @@ const knowledgeBankInput = {
     ...historicalKnowledge.researchInquiries,
     ...googleDriveSharedDrivesProduction.researchInquiries,
     ...teamsArchiveProduction.researchInquiries,
+    ...jamiePersonalFacebookPosts.researchInquiries,
+    ...kcSpacesFundFacebookPosts.researchInquiries,
     ...kcTownHallPhaseOne.researchInquiries,
     ...kcTownHallFunding.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,

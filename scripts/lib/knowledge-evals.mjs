@@ -4,6 +4,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowledge-bank/google-drive-shared-drives-production.ts";
+import { jamiePersonalFacebookPostAudit, jamiePersonalFacebookPosts } from "../../apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts.ts";
+import { kcSpacesFundFacebookPostAudit, kcSpacesFundFacebookPosts } from "../../apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts.ts";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { kcTownHallPhaseOne } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-phase-one.ts";
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
@@ -3823,9 +3825,688 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const nycacFacebookPostPopulationComplete = Object.values(
     nycacFacebookDiagnostics
   ).every(Boolean);
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...kcPhaseObservations, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...kcPhaseClaims, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...kcPhaseInquiries, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries];
+  const kcSpacesFacebook = suite.pilot.kcSpacesFundFacebookPosts;
+  const kcSpacesFacebookLedgerPath = path.join(repoRoot, kcSpacesFacebook.ledgerPath);
+  const kcSpacesFacebookReportPath = path.join(repoRoot, kcSpacesFacebook.reportPath);
+  const kcSpacesFacebookLedgerText = fixtures.kcSpacesFundFacebookPostLedgerText ??
+    (existsSync(kcSpacesFacebookLedgerPath)
+      ? readFileSync(kcSpacesFacebookLedgerPath, "utf8")
+      : "{}");
+  const kcSpacesFacebookLedger = fixtures.kcSpacesFundFacebookPostLedger ??
+    JSON.parse(kcSpacesFacebookLedgerText);
+  const kcSpacesFacebookReport = fixtures.kcSpacesFundFacebookPostReport ??
+    (existsSync(kcSpacesFacebookReportPath)
+      ? readFileSync(kcSpacesFacebookReportPath, "utf8")
+      : "");
+  const kcSpacesFacebookIntakes = kcSpacesFundFacebookPosts.intakeItems.map((item) =>
+    intakeById.get(item.id)
+  );
+  const kcSpacesFacebookSources = kcSpacesFundFacebookPosts.sources.map((source) =>
+    sourceById.get(source.id)
+  );
+  const kcSpacesFacebookObservations = kcSpacesFundFacebookPosts.observations.map(
+    (observation) => observationById.get(observation.id)
+  );
+  const kcSpacesFacebookClaims = kcSpacesFacebook.claimIds.map((id) => claimById.get(id));
+  const kcSpacesFacebookInquiries = kcSpacesFacebook.inquiryIds.map((id) =>
+    inquiryById.get(id)
+  );
+  const kcSpacesFacebookSelectedSources = kcSpacesFacebook.selectedPublicSourceIds.map(
+    (id) => sourceById.get(id)
+  );
+  const kcSpacesFacebookMemoryClaim = claimById.get(
+    kcSpacesFacebook.heldMemoryClaimId
+  );
+  const kcSpacesFacebookPopulationClaim = claimById.get(
+    "CLM-KCSPACES-FACEBOOK-SURVIVING-POST-POPULATION"
+  );
+  const kcSpacesFacebookResponseClaim = claimById.get(
+    "CLM-KCSPACES-FACEBOOK-INSTITUTIONAL-RESPONSE-SIGNALS"
+  );
+  const kcSpacesFacebookTractionClaim = claimById.get(
+    "CLM-KCSPACES-FACEBOOK-VISIBLE-TRACTION-SNAPSHOT"
+  );
+  const kcSpacesFacebookRecords = Array.isArray(kcSpacesFacebookLedger.records)
+    ? kcSpacesFacebookLedger.records
+    : [];
+  const kcSpacesFacebookRecordKeys = [
+    "id",
+    "timelineSlot",
+    "publishedAt",
+    "primaryTheme",
+    "routeLabel",
+    "contentAvailability"
+  ];
+  const kcSpacesFacebookRecordIds = new Set(
+    kcSpacesFacebookRecords.map((record) => record.id)
+  );
+  const kcSpacesFacebookRecordSlots = new Set(
+    kcSpacesFacebookRecords.map((record) => record.timelineSlot)
+  );
+  const kcSpacesFacebookThemeCounts = kcSpacesFacebookRecords.reduce(
+    (counts, record) => {
+      counts[record.primaryTheme] = (counts[record.primaryTheme] ?? 0) + 1;
+      return counts;
+    },
+    {}
+  );
+  const kcSpacesFacebookDestinations =
+    kcSpacesFacebookLedger.destinationInventory?.canonicalDestinations ?? [];
+  const kcSpacesFacebookPublicText = [
+    kcSpacesFacebookLedgerText,
+    kcSpacesFacebookReport,
+    JSON.stringify(kcSpacesFundFacebookPosts)
+  ].join("\n");
+  const kcSpacesFacebookPrivatePathViolation =
+    /(?:\/(?:Users|Volumes|private\/tmp)\/|GoogleDrive-|Mobile Documents)/.test(
+      kcSpacesFacebookPublicText
+    );
+  const kcSpacesFacebookPersonalDataViolation =
+    /(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(
+      kcSpacesFacebookPublicText
+    );
+  const kcSpacesFacebookRawFieldViolation = kcSpacesFacebookRecords.some((record) =>
+    Object.keys(record).some((key) => !kcSpacesFacebookRecordKeys.includes(key))
+  );
+  const kcSpacesFacebookThemeContract = Object.entries(
+    kcSpacesFacebook.expectedThemeCounts
+  ).every(([theme, expected]) => kcSpacesFacebookThemeCounts[theme] === expected);
+  const kcSpacesFacebookDiagnostics = {
+    population: Boolean(
+      kcSpacesFacebookLedger.population?.distinctSurvivingPosts ===
+        kcSpacesFacebook.expectedDistinctPosts &&
+      kcSpacesFacebookLedger.population?.earliestObserved ===
+        kcSpacesFacebook.expectedEarliestObserved &&
+      kcSpacesFacebookLedger.population?.latestObserved ===
+        kcSpacesFacebook.expectedLatestObserved &&
+      kcSpacesFacebookLedger.population?.independentPasses ===
+        kcSpacesFacebook.expectedIndependentPasses &&
+      kcSpacesFacebookLedger.population?.terminalNoNewContentConfirmations ===
+        kcSpacesFacebook.expectedTerminalConfirmations &&
+      /not a native Meta export or deletion history/i.test(
+        kcSpacesFacebookLedger.population?.boundary ?? ""
+      ) &&
+      kcSpacesFacebookRecords.length === kcSpacesFacebook.expectedDistinctPosts &&
+      kcSpacesFacebookRecordIds.size === kcSpacesFacebook.expectedDistinctPosts &&
+      kcSpacesFacebookRecordSlots.size === kcSpacesFacebook.expectedDistinctPosts &&
+      kcSpacesFacebookRecords.every(
+        (record, index) => record.timelineSlot === index + 1
+      ) &&
+      kcSpacesFundFacebookPostAudit.distinctSurvivingPosts ===
+        kcSpacesFacebook.expectedDistinctPosts
+    ),
+    recoveryBoundary: Boolean(
+      kcSpacesFacebookLedger.recovery?.postsWithStableAttachmentIds ===
+        kcSpacesFacebook.expectedStableAttachmentIds &&
+      kcSpacesFacebookLedger.recovery?.recordsWithUnavailableSharedContent ===
+        kcSpacesFacebook.expectedUnavailableSharedContent &&
+      /not archival identifiers/i.test(
+        kcSpacesFacebookLedger.recovery?.boundary ?? ""
+      ) &&
+      kcSpacesFacebookRecords.filter(
+        (record) => record.contentAvailability !== "visible"
+      ).length === kcSpacesFacebook.expectedUnavailableSharedContent
+    ),
+    themeDisposition: Boolean(
+      kcSpacesFacebookThemeContract &&
+      Object.values(kcSpacesFacebookThemeCounts).reduce(
+        (sum, value) => sum + value,
+        0
+      ) === kcSpacesFacebook.expectedDistinctPosts
+    ),
+    destinationInventory: Boolean(
+      kcSpacesFacebookDestinations.length ===
+        kcSpacesFacebook.expectedUniqueDestinations &&
+      new Set(kcSpacesFacebookDestinations).size ===
+        kcSpacesFacebook.expectedUniqueDestinations &&
+      kcSpacesFacebookDestinations.every((url) => {
+        try {
+          return /^https?:$/.test(new URL(url).protocol);
+        } catch {
+          return false;
+        }
+      }) &&
+      /not click-through/i.test(
+        kcSpacesFacebookLedger.destinationInventory?.boundary ?? ""
+      )
+    ),
+    responseBoundary: Boolean(
+      kcSpacesFacebookLedger.institutionalResponseSignals?.count ===
+        kcSpacesFacebook.expectedInstitutionalResponseSignals &&
+      kcSpacesFacebookLedger.institutionalResponseSignals?.organizations?.length ===
+        kcSpacesFacebook.expectedInstitutionalResponseSignals &&
+      /not a complete stakeholder census/i.test(
+        kcSpacesFacebookLedger.institutionalResponseSignals?.boundary ?? ""
+      ) &&
+      kcSpacesFacebookResponseClaim?.status === "use-with-care" &&
+      kcSpacesFacebookResponseClaim.antiClaims.some((claim) =>
+        /Only three organizations engaged/i.test(claim)
+      )
+    ),
+    tractionBoundary: Boolean(
+      kcSpacesFacebookLedger.visibleReactionSnapshot?.postsWithVisibleReactionLabels ===
+        kcSpacesFacebook.expectedPostsWithVisibleReactions &&
+      kcSpacesFacebookLedger.visibleReactionSnapshot?.totalVisibleReactions ===
+        kcSpacesFacebook.expectedTotalVisibleReactions &&
+      numericRecordEquals(
+        kcSpacesFacebookLedger.visibleReactionSnapshot?.reactionKinds,
+        kcSpacesFacebook.expectedReactionKinds
+      ) &&
+      /not unique people/i.test(
+        kcSpacesFacebookLedger.visibleReactionSnapshot?.boundary ?? ""
+      ) &&
+      /stakeholder-group engagement/i.test(
+        kcSpacesFacebookLedger.visibleReactionSnapshot?.boundary ?? ""
+      ) &&
+      kcSpacesFacebookTractionClaim?.status === "use-with-care" &&
+      kcSpacesFacebookTractionClaim.antiClaims.some((claim) =>
+        /One hundred fifteen people engaged/i.test(claim)
+      )
+    ),
+    moduleShapeAndGraph: Boolean(
+      kcSpacesFundFacebookPosts.intakeItems.length ===
+        kcSpacesFacebook.expectedIntakeCount &&
+      kcSpacesFundFacebookPosts.sources.length ===
+        kcSpacesFacebook.expectedSourceCount &&
+      kcSpacesFundFacebookPosts.observations.length ===
+        kcSpacesFacebook.expectedObservationCount &&
+      kcSpacesFundFacebookPosts.claims.length ===
+        kcSpacesFacebook.expectedClaimCount &&
+      kcSpacesFundFacebookPosts.researchInquiries.length ===
+        kcSpacesFacebook.expectedInquiryCount &&
+      kcSpacesFacebookIntakes.every((item) =>
+        item?.boundaries.length >= 3 &&
+        item.observationIds.every((id) => observationById.has(id)) &&
+        item.sourceIds.every((id) => sourceById.has(id)) &&
+        item.researchInquiryIds.every((id) => inquiryById.has(id))
+      ) &&
+      kcSpacesFacebookObservations.every((observation) =>
+        observation?.limitations.length >= 2 &&
+        observation.claimIds.length && observation.researchInquiryIds.length
+      ) &&
+      kcSpacesFacebookClaims.every((claim) =>
+        claim?.boundaries.length >= 2 && claim.antiClaims.length >= 3 &&
+        claim.reviewedBy.length >= 2
+      ) &&
+      kcSpacesFacebookInquiries.every((inquiry) =>
+        inquiry?.findings.length >= 4 && inquiry.limitations.length >= 4 &&
+        inquiry.sourceIds.every((id) => sourceById.has(id))
+      )
+    ),
+    sourceScope: Boolean(
+      kcSpacesFacebookSources.every((source) =>
+        source?.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      kcSpacesFacebookSelectedSources.every((source) =>
+        source?.visibility === "public" && source.canonicalUrl &&
+        source.supportsGenerally.length && source.doesNotEstablish.length
+      )
+    ),
+    roleAndCollectiveCredit: Boolean(
+      /does not identify individual publishers/i.test(
+        kcSpacesFacebookLedger.authorshipAndCredit?.pagePublisherFinding ?? ""
+      ) &&
+      /must not attribute Page posting, account ownership, stakeholder status, grant decisions/i.test(
+        kcSpacesFacebookLedger.authorshipAndCredit?.jamieRoleBoundary ?? ""
+      ) &&
+      /Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo/i.test(
+        kcSpacesFacebookLedger.authorshipAndCredit?.collectiveCredit ?? ""
+      ) &&
+      kcSpacesFacebookClaims.every((claim) =>
+        claim?.antiClaims.some((antiClaim) =>
+          /Jamie|stakeholder|impact|lifetime|people|organizations/i.test(antiClaim)
+        )
+      )
+    ),
+    memoryHeld: Boolean(
+      kcSpacesFacebookMemoryClaim?.status === "use-with-care" &&
+      kcSpacesFacebookMemoryClaim.evidence.length === 0 &&
+      kcSpacesFacebookMemoryClaim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      kcSpacesFacebookMemoryClaim.boundaries.some((boundary) =>
+        /attributed first-person memory/i.test(boundary)
+      ) &&
+      /pending registration history or collaborator corroboration/i.test(
+        kcSpacesFacebookLedger.authorshipAndCredit?.nameMemory ?? ""
+      )
+    ),
+    deliberateComposition: Boolean(
+      kcSpacesFacebookClaims
+        .filter((claim) => claim?.id !== kcSpacesFacebook.heldMemoryClaimId)
+        .every((claim) =>
+          claim?.projections.every((projection) =>
+            projection.key === "archive-note" &&
+            projection.surfaces.every(
+              (surface) => surface === kcSpacesFacebook.reportPath
+            )
+          )
+        ) &&
+      kcSpacesFacebookReport.includes("No new visible portfolio sentence is forced") &&
+      kcSpacesFacebookClaims.every(
+        (claim) => !publicRegistryText.includes(claim?.id ?? "")
+      )
+    ),
+    reportContract: Boolean(
+      kcSpacesFacebookReport.includes("35 distinct posts") &&
+      kcSpacesFacebookReport.includes("not a native Meta export or deletion history") &&
+      kcSpacesFacebookReport.includes("at least 11 named recipient or grantee highlights") &&
+      kcSpacesFacebookReport.includes("three named arts organizations or spaces") &&
+      kcSpacesFacebookReport.includes("does not identify its individual publishers") &&
+      kcSpacesFacebookReport.includes("attributed research lead")
+    ),
+    redactedLedgerShape: Boolean(
+      !kcSpacesFacebookRawFieldViolation &&
+      kcSpacesFacebookRecords.every((record) =>
+        Object.keys(record).sort().join("|") ===
+          [...kcSpacesFacebookRecordKeys].sort().join("|") &&
+        typeof record.routeLabel === "string" && record.routeLabel.length > 5
+      )
+    ),
+    publicSafety: Boolean(
+      !kcSpacesFacebookPrivatePathViolation &&
+      !kcSpacesFacebookPersonalDataViolation &&
+      !/(?:rawPostText|rawText|commentText|participantProfiles|managerToken|authenticationState)/.test(
+        kcSpacesFacebookLedgerText
+      ) &&
+      kcSpacesFacebookLedger.publicSafety?.excluded?.includes(
+        "raw post and comment text"
+      )
+    ),
+    populationSemantics: Boolean(
+      kcSpacesFacebookPopulationClaim?.antiClaims.some((claim) =>
+        /published only 35/i.test(claim)
+      )
+    )
+  };
+  const kcSpacesFundFacebookPostPopulationComplete = Object.values(
+    kcSpacesFacebookDiagnostics
+  ).every(Boolean);
+  const personalFacebook = suite.pilot.jamiePersonalFacebookPosts;
+  const personalFacebookControlsPath = path.join(
+    repoRoot,
+    personalFacebook.controlsPath
+  );
+  const personalFacebookReportPath = path.join(
+    repoRoot,
+    personalFacebook.reportPath
+  );
+  const personalFacebookControlsText =
+    fixtures.jamiePersonalFacebookPostControlsText ??
+    (existsSync(personalFacebookControlsPath)
+      ? readFileSync(personalFacebookControlsPath, "utf8")
+      : "{}");
+  const personalFacebookControls =
+    fixtures.jamiePersonalFacebookPostControls ??
+    JSON.parse(personalFacebookControlsText);
+  const personalFacebookReport =
+    fixtures.jamiePersonalFacebookPostReport ??
+    (existsSync(personalFacebookReportPath)
+      ? readFileSync(personalFacebookReportPath, "utf8")
+      : "");
+  const personalFacebookIntakes = jamiePersonalFacebookPosts.intakeItems.map(
+    (item) => intakeById.get(item.id)
+  );
+  const personalFacebookSources = jamiePersonalFacebookPosts.sources.map(
+    (source) => sourceById.get(source.id)
+  );
+  const personalFacebookObservations =
+    jamiePersonalFacebookPosts.observations.map((observation) =>
+      observationById.get(observation.id)
+    );
+  const personalFacebookClaims = personalFacebook.claimIds.map((id) =>
+    claimById.get(id)
+  );
+  const personalFacebookInquiries = personalFacebook.inquiryIds.map((id) =>
+    inquiryById.get(id)
+  );
+  const personalFacebookSelectedSources =
+    personalFacebook.selectedPublicSourceIds.map((id) => sourceById.get(id));
+  const personalFacebookPublicPostSources =
+    personalFacebookSelectedSources.filter(
+      (source) => source?.kind === "public-social-post"
+    );
+  const personalFacebookPopulationClaim = claimById.get(
+    "CLM-FB-JAMIE-POST-POPULATION-2026"
+  );
+  const personalFacebookMissionClaim = claimById.get(
+    "CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE"
+  );
+  const personalFacebookUrlClaim = claimById.get(
+    "CLM-FB-JAMIE-POSTED-URL-ROUTING-2026"
+  );
+  const personalFacebookStakeholderClaim = claimById.get(
+    "CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026"
+  );
+  const personalFacebookTractionClaim = claimById.get(
+    "CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-SNAPSHOT-2026"
+  );
+  const personalFacebookActionClaim = claimById.get(
+    "CLM-FB-JAMIE-PROJECT-ACTION-ROUTING"
+  );
+  const personalFacebookCouncilStatClaim = claimById.get(
+    personalFacebook.heldClaimId
+  );
+  const personalFacebookYearTotal = Object.values(
+    personalFacebookControls.recordsByYear ?? {}
+  ).reduce((sum, value) => sum + value, 0);
+  const personalFacebookFormTotal = Object.values(
+    personalFacebookControls.recordForms ?? {}
+  ).reduce((sum, value) => sum + value, 0);
+  const personalFacebookAudienceTotal = [
+    personalFacebookControls.audienceLabels?.public,
+    personalFacebookControls.audienceLabels?.onlyMe,
+    personalFacebookControls.audienceLabels?.friends,
+    personalFacebookControls.audienceLabels?.notExposedInCrawl
+  ].reduce((sum, value) => sum + (value ?? 0), 0);
+  const personalFacebookSelectedControls =
+    personalFacebookControls.selectedPublicSourceControls ?? [];
+  const personalFacebookPublicText = [
+    personalFacebookControlsText,
+    personalFacebookReport,
+    JSON.stringify(jamiePersonalFacebookPosts)
+  ].join("\n");
+  const personalFacebookPrivatePathViolation =
+    /(?:\/(?:Users|Volumes|private\/tmp)\/|GoogleDrive-|Mobile Documents)/.test(
+      personalFacebookPublicText
+    );
+  const personalFacebookContactViolation =
+    /(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(
+      personalFacebookPublicText
+    );
+  const personalFacebookDiagnostics = {
+    population: Boolean(
+      personalFacebookControls.populationDefinition ===
+        jamiePersonalFacebookPostAudit.populationDefinition &&
+      personalFacebookControls.populationControl?.cursorPages ===
+        personalFacebook.expectedCursorPages &&
+      personalFacebookControls.populationControl?.returnedNodes ===
+        personalFacebook.expectedReturnedNodes &&
+      personalFacebookControls.populationControl?.uniqueRecords ===
+        personalFacebook.expectedUniqueRecords &&
+      personalFacebookControls.populationControl?.terminalHasNextPage === false &&
+      personalFacebookControls.populationControl?.missingDates === 0 &&
+      personalFacebookControls.populationControl?.ownerAbsentRecords === 0 &&
+      personalFacebookControls.populationControl?.recoveredStart ===
+        personalFacebook.expectedRecoveredStart &&
+      personalFacebookControls.populationControl?.recoveredEnd ===
+        personalFacebook.expectedRecoveredEnd &&
+      /not a native Meta export, deletion history, or immutable lifetime population/i.test(
+        personalFacebookControls.completenessBoundary ?? ""
+      ) &&
+      jamiePersonalFacebookPostAudit.uniqueRecords ===
+        personalFacebook.expectedUniqueRecords &&
+      jamiePersonalFacebookPostAudit.terminalHasNextPage === false
+    ),
+    audienceBoundary: Boolean(
+      numericRecordEquals(
+        {
+          public: personalFacebookControls.audienceLabels?.public,
+          onlyMe: personalFacebookControls.audienceLabels?.onlyMe,
+          friends: personalFacebookControls.audienceLabels?.friends,
+          notExposedInCrawl:
+            personalFacebookControls.audienceLabels?.notExposedInCrawl
+        },
+        personalFacebook.expectedAudienceLabels
+      ) &&
+      personalFacebookAudienceTotal === personalFacebook.expectedUniqueRecords &&
+      /unknown, not public/i.test(
+        personalFacebookControls.audienceLabels?.boundary ?? ""
+      ) &&
+      personalFacebookPopulationClaim?.antiClaims.some((claim) =>
+        /All 1,243 records were public/i.test(claim)
+      )
+    ),
+    yearReconciliation: Boolean(
+      numericRecordEquals(
+        personalFacebookControls.recordsByYear,
+        personalFacebook.expectedRecordsByYear
+      ) &&
+      personalFacebookYearTotal === personalFacebook.expectedUniqueRecords
+    ),
+    formReconciliation: Boolean(
+      numericRecordEquals(
+        personalFacebookControls.recordForms,
+        personalFacebook.expectedRecordForms
+      ) &&
+      personalFacebookFormTotal === personalFacebook.expectedUniqueRecords
+    ),
+    missionRouting: Boolean(
+      personalFacebookControls.missionRouting?.uniqueRecords ===
+        personalFacebook.expectedMissionRoutedRecords &&
+      numericRecordEquals(
+        personalFacebookControls.missionRouting?.projectRecordCounts,
+        personalFacebook.expectedProjectRecordCounts
+      ) &&
+      /Overlapping deterministic research routes/i.test(
+        personalFacebookControls.missionRouting?.classificationBoundary ?? ""
+      ) &&
+      /not exclusive semantic judgments, effort measures, engagement, or impact/i.test(
+        personalFacebookControls.missionRouting?.classificationBoundary ?? ""
+      ) &&
+      personalFacebookMissionClaim?.antiClaims.some((claim) =>
+        /summed into a second population/i.test(claim)
+      )
+    ),
+    urlRouting: Boolean(
+      personalFacebookControls.postedUrlInventory?.urlBearingRecords ===
+        personalFacebook.expectedUrlBearingRecords &&
+      personalFacebookControls.postedUrlInventory
+        ?.uniqueNormalizedExternalUrls ===
+        personalFacebook.expectedUniqueNormalizedExternalUrls &&
+      /source lead until independently recovered, close-read, and decomposed/i.test(
+        personalFacebookControls.postedUrlInventory?.routingBoundary ?? ""
+      ) &&
+      personalFacebookUrlClaim?.antiClaims.some((claim) =>
+        /549 links are 549 corroborating sources/i.test(claim)
+      )
+    ),
+    stakeholderRouting: Boolean(
+      numericRecordEquals(
+        personalFacebookControls.stakeholderRouting?.recordCounts,
+        personalFacebook.expectedStakeholderRecordCounts
+      ) &&
+      /not actions by the named stakeholders/i.test(
+        personalFacebookControls.stakeholderRouting?.classificationBoundary ?? ""
+      ) &&
+      /not evidence of engagement/i.test(
+        personalFacebookControls.stakeholderRouting?.classificationBoundary ?? ""
+      ) &&
+      personalFacebookStakeholderClaim?.antiClaims.some((claim) =>
+        /Twenty City Council members engaged/i.test(claim)
+      ) &&
+      personalFacebookStakeholderClaim?.antiClaims.some((claim) =>
+        /Rafael Espinal engaged 18 times/i.test(claim)
+      )
+    ),
+    moduleShapeAndGraph: Boolean(
+      jamiePersonalFacebookPosts.intakeItems.length ===
+        personalFacebook.expectedIntakeCount &&
+      jamiePersonalFacebookPosts.sources.length ===
+        personalFacebook.expectedSourceCount &&
+      jamiePersonalFacebookPosts.observations.length ===
+        personalFacebook.expectedObservationCount &&
+      jamiePersonalFacebookPosts.claims.length ===
+        personalFacebook.expectedClaimCount &&
+      jamiePersonalFacebookPosts.researchInquiries.length ===
+        personalFacebook.expectedInquiryCount &&
+      personalFacebookIntakes.every(
+        (item) =>
+          item?.boundaries.length >= 3 &&
+          item.sourceIds.every((id) => sourceById.has(id)) &&
+          item.observationIds.every((id) => observationById.has(id)) &&
+          item.researchInquiryIds.every((id) => inquiryById.has(id))
+      ) &&
+      personalFacebookObservations.every(
+        (observation) =>
+          observation?.locator &&
+          observation.limitations.length >= 2 &&
+          observation.claimIds.length > 0 &&
+          observation.researchInquiryIds.length > 0
+      ) &&
+      personalFacebookClaims.every(
+        (claim) =>
+          claim?.boundaries.length >= 2 &&
+          claim.antiClaims.length >= 3 &&
+          claim.reviewedBy.length >= 2
+      ) &&
+      personalFacebookInquiries.every(
+        (inquiry) =>
+          inquiry?.findings.length >= 4 &&
+          inquiry.limitations.length >= 4 &&
+          inquiry.sourceIds.every((id) => sourceById.has(id))
+      )
+    ),
+    sourceScope: Boolean(
+      personalFacebookSources.every(
+        (source) =>
+          source?.supportsGenerally.length > 0 &&
+          source.doesNotEstablish.length > 0
+      ) &&
+      personalFacebookSelectedSources.every(
+        (source) =>
+          source?.visibility === "public" &&
+          source.canonicalUrl &&
+          source.supportsGenerally.length > 0 &&
+          source.doesNotEstablish.length > 0
+      ) &&
+      personalFacebookPublicPostSources.length ===
+        personalFacebook.expectedPublicPostSourceCount
+    ),
+    selectedPublicControls: Boolean(
+      personalFacebookSelectedControls.length ===
+        personalFacebook.expectedPublicPostSourceCount &&
+      stringSetEquals(
+        personalFacebookSelectedControls.map((item) => item.sourceId),
+        personalFacebook.selectedPublicSourceIds.slice(
+          0,
+          personalFacebook.expectedPublicPostSourceCount
+        )
+      ) &&
+      personalFacebookSelectedControls.every(
+        (item) => item.publicAudienceRecheckedAt === "2026-07-15"
+      )
+    ),
+    tractionBoundary: Boolean(
+      personalFacebookSelectedControls.find(
+        (item) => item.sourceId === "SRC-FB-JAMIE-WOWLIST-NINE-CITIES-2015"
+      )?.currentCounters?.likes === 28 &&
+      personalFacebookSelectedControls.find(
+        (item) => item.sourceId === "SRC-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-2016"
+      )?.currentCounters?.likes === 7 &&
+      personalFacebookSelectedControls.find(
+        (item) => item.sourceId === "SRC-FB-JAMIE-LETNYCDANCE-NPR-2017"
+      )?.currentCounters?.reactions === 24 &&
+      personalFacebookSelectedControls.find(
+        (item) => item.sourceId === "SRC-FB-JAMIE-KCTOWNHALL-START-2018"
+      )?.currentCounters?.reactions === 106 &&
+      personalFacebookSelectedControls.find(
+        (item) => item.sourceId === "SRC-FB-JAMIE-KCTOWNHALL-START-2018"
+      )?.currentCounters?.comments === 14 &&
+      /Do not sum them into reach, unique people, stakeholder engagement/i.test(
+        personalFacebookControls.engagementBoundary ?? ""
+      ) &&
+      personalFacebookTractionClaim?.status === "use-with-care" &&
+      personalFacebookTractionClaim.antiClaims.some((claim) =>
+        /summed into reach/i.test(claim)
+      )
+    ),
+    councilStatBoundary: Boolean(
+      personalFacebookCouncilStatClaim?.status === "use-with-care" &&
+      personalFacebookCouncilStatClaim.projections.every(
+        (projection) =>
+          projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      personalFacebookCouncilStatClaim.evidence.some(
+        (evidence) =>
+          evidence.sourceId ===
+            "SRC-NYC-COUNCIL-LABS-CONSTITUENT-SERVICES-2016" &&
+          evidence.relationship === "context"
+      ) &&
+      personalFacebookCouncilStatClaim.antiClaims.some((claim) =>
+        /employed by the New York City Council/i.test(claim)
+      ) &&
+      personalFacebookCouncilStatClaim.antiClaims.some((claim) =>
+        /hiring authority/i.test(claim)
+      )
+    ),
+    roleAndCollectiveCredit: Boolean(
+      sourceById
+        .get("SRC-FB-JAMIE-NTER-OPENING-2010")
+        ?.doesNotEstablish.some((item) => /sole authorship/i.test(item)) &&
+      sourceById
+        .get("SRC-FB-JAMIE-KCTOWNHALL-START-2018")
+        ?.supportsGenerally.some((item) => /Julia Fredenburg/i.test(item)) &&
+      personalFacebookClaims.every((claim) =>
+        claim?.antiClaims.some((antiClaim) =>
+          /impact|public|source|engag|sole|exactly|lifetime|Council|city|reach|outcome/i.test(
+            antiClaim
+          )
+        )
+      )
+    ),
+    actionRoutingBoundary: Boolean(
+      personalFacebookActionClaim?.status === "confirmed-with-boundary" &&
+      personalFacebookActionClaim.evidence.length >= 5 &&
+      personalFacebookActionClaim.boundaries.some((boundary) =>
+        /does not establish whether readers clicked, joined, called, attended, converted, or caused an outcome/i.test(
+          boundary
+        )
+      ) &&
+      personalFacebookActionClaim.antiClaims.some((claim) =>
+        /solely authored every project/i.test(claim)
+      )
+    ),
+    deliberateComposition: Boolean(
+      personalFacebookClaims.every((claim) =>
+        claim?.projections.every((projection) =>
+          projection.status === "hold"
+            ? projection.surfaces.length === 0
+            : projection.key === "archive-note" &&
+              projection.surfaces.every(
+                (surface) => surface === personalFacebook.reportPath
+              )
+        )
+      ) &&
+      personalFacebookReport.includes(
+        "No new visible portfolio sentence is forced"
+      ) &&
+      personalFacebookClaims.every(
+        (claim) => !publicRegistryText.includes(claim?.id ?? "")
+      )
+    ),
+    reportContract: Boolean(
+      personalFacebookReport.includes("1,243 owner-filtered records") &&
+      /not\s+(?:mean\s+)?a\s+native Meta export/i.test(
+        personalFacebookReport
+      ) &&
+      personalFacebookReport.includes("973") &&
+      /549 unique normalized\s+external destinations/i.test(
+        personalFacebookReport
+      ) &&
+      personalFacebookReport.includes("outbound") &&
+      personalFacebookReport.includes("usable participation route") &&
+      personalFacebookReport.includes("No new visible portfolio sentence is forced")
+    ),
+    publicSafety: Boolean(
+      !personalFacebookPrivatePathViolation &&
+      !personalFacebookContactViolation &&
+      personalFacebookControls.rawPopulation?.status ===
+        "protected outside repository" &&
+      personalFacebookControls.rawPopulation?.excluded?.includes(
+        "raw post and comment text"
+      ) &&
+      !/(?:rawPostText|rawText|commentText|participantProfiles|managerToken|authenticationState)/.test(
+        personalFacebookControlsText
+      )
+    )
+  };
+  const jamiePersonalFacebookPostPopulationComplete = Object.values(
+    personalFacebookDiagnostics
+  ).every(Boolean);
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...kcPhaseObservations, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations, ...kcSpacesFacebookObservations, ...personalFacebookObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...kcPhaseClaims, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims, ...kcSpacesFacebookClaims, ...personalFacebookClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...kcPhaseInquiries, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries, ...kcSpacesFacebookInquiries, ...personalFacebookInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -4075,6 +4756,20 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [nycacFacebookPostPopulationComplete
         ? `All ${nycacFacebook.expectedPublicContentSignatures} conservative public-surface signatures and ${nycacFacebook.expectedNativePosts} exact native post IDs have redacted dispositions as overlapping controls; ${nycacFacebook.expectedDestinationOccurrences} public-safe route occurrences resolve to ${nycacFacebook.expectedUniqueDestinations} destinations; failed controls, source authorship, collective credit, sensitive evidence, mutable metrics, stakeholder response, and impact remain bounded; and no new visible portfolio claim is forced from the archive`
         : `NYC Artist Coalition Facebook post criterion failed: ${Object.entries(nycacFacebookDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
+    },
+    {
+      criterionId: "KB-EVAL-KCSPACES-FACEBOOK-POSTS",
+      score: score(kcSpacesFundFacebookPostPopulationComplete),
+      evidence: [kcSpacesFundFacebookPostPopulationComplete
+        ? `All ${kcSpacesFacebook.expectedDistinctPosts} posts exposed by the surviving KC Spaces Fund Facebook Page have redacted dispositions; ${kcSpacesFacebook.expectedUniqueDestinations} public-safe destinations, ${kcSpacesFacebook.expectedInstitutionalResponseSignals} bounded organization-attributed response examples, and ${kcSpacesFacebook.expectedTotalVisibleReactions} mutable reaction labels remain inspectable while lifetime completeness, publisher identity, collective credit, Jamie's separate digital role and held naming memory, stakeholder totals, grant decisions, and impact stay distinct; no new visible portfolio claim is forced`
+        : `KC Spaces Fund Facebook post criterion failed: ${Object.entries(kcSpacesFacebookDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
+    },
+    {
+      criterionId: "KB-EVAL-JAMIE-PERSONAL-FACEBOOK-POSTS",
+      score: score(jamiePersonalFacebookPostPopulationComplete),
+      evidence: [jamiePersonalFacebookPostPopulationComplete
+        ? `All ${personalFacebook.expectedUniqueRecords} records returned by the authenticated owner-filtered surface are reconciled across ${personalFacebook.expectedCursorPages} cursor pages; year, form, audience, mission, URL, stakeholder, and selected-public-source controls remain bounded; raw and unknown-audience material stays protected; ${personalFacebook.expectedUniqueNormalizedExternalUrls} destinations remain a source queue; outbound stakeholder routes, mutable counters, collective credit, and unresolved CouncilStat role language remain distinct from engagement and impact; and no visible portfolio claim is forced`
+        : `Jamie personal Facebook post criterion failed: ${Object.entries(personalFacebookDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
     }
   ];
 

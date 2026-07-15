@@ -4,6 +4,8 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
+import { jamiePersonalFacebookPostAudit, jamiePersonalFacebookPosts } from "../../apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts.ts";
+import { kcSpacesFundFacebookPostAudit, kcSpacesFundFacebookPosts } from "../../apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts.ts";
 import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
@@ -79,6 +81,25 @@ const nycacFacebookPostReport = readFileSync(
   new URL("../../docs/knowledge-bank/nycartc-facebook-posts-2017-2021.md", import.meta.url),
   "utf8"
 );
+const kcSpacesFundFacebookPostLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json", import.meta.url),
+  "utf8"
+));
+const kcSpacesFundFacebookPostReport = readFileSync(
+  new URL("../../docs/knowledge-bank/kcspacesfund-facebook-posts-2020.md", import.meta.url),
+  "utf8"
+);
+const jamiePersonalFacebookPostControlsText = readFileSync(
+  new URL("../../docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json", import.meta.url),
+  "utf8"
+);
+const jamiePersonalFacebookPostControls = JSON.parse(
+  jamiePersonalFacebookPostControlsText
+);
+const jamiePersonalFacebookPostReport = readFileSync(
+  new URL("../../docs/knowledge-bank/projects/jamie-personal-facebook-posts.md", import.meta.url),
+  "utf8"
+);
 const fairRentMdx = readFileSync(
   new URL("../../apps/www/src/content/work/fair-rent-nyc.mdx", import.meta.url),
   "utf8"
@@ -101,6 +122,14 @@ const wowlistFacebookPostCriterionScore = (result) =>
 const nycacFacebookPostCriterionScore = (result) =>
   result.criteria.find(
     (item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+  )?.score;
+const kcSpacesFundFacebookPostCriterionScore = (result) =>
+  result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-KCSPACES-FACEBOOK-POSTS"
+  )?.score;
+const jamiePersonalFacebookPostCriterionScore = (result) =>
+  result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-JAMIE-PERSONAL-FACEBOOK-POSTS"
   )?.score;
 
 function evaluateEventLedgerWithReboundDigest(altered) {
@@ -3594,6 +3623,346 @@ test("NYC Artist Coalition Facebook post report preserves population, source, tr
   assert.match(nycacFacebookPostReport, /must never be added/);
   assert.match(nycacFacebookPostReport, /No defensible count of reciprocal engagement/);
   assert.match(nycacFacebookPostReport, /Jamie's role and collective credit/);
+});
+
+test("KC Spaces Fund Facebook post population meets the complete surviving-surface control", () => {
+  assert.equal(kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 5);
+  assert.equal(kcSpacesFundFacebookPosts.intakeItems.length, 2);
+  assert.equal(kcSpacesFundFacebookPosts.sources.length, 3);
+  assert.equal(kcSpacesFundFacebookPostAudit.distinctSurvivingPosts, 35);
+  assert.equal(kcSpacesFundFacebookPostLedger.records.length, 35);
+});
+
+test("KC Spaces Fund Facebook post eval rejects lifetime-population inflation", () => {
+  const altered = structuredClone(kcSpacesFundFacebookPostLedger);
+  altered.population.boundary =
+    "These are the exact 35 lifetime posts and prove no post was deleted.";
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post eval rejects an incomplete disposition", () => {
+  const altered = structuredClone(kcSpacesFundFacebookPostLedger);
+  altered.records.pop();
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post eval rejects raw post fields", () => {
+  const altered = structuredClone(kcSpacesFundFacebookPostLedger);
+  altered.records[0].rawText = "Raw post content must remain outside the repository.";
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostLedger: altered,
+      kcSpacesFundFacebookPostLedgerText: JSON.stringify(altered)
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post eval rejects people inflation from reactions", () => {
+  const altered = structuredClone(kcSpacesFundFacebookPostLedger);
+  altered.visibleReactionSnapshot.boundary =
+    "These labels prove 115 unique stakeholders engaged and measure impact.";
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post eval rejects complete-stakeholder inference", () => {
+  const altered = structuredClone(kcSpacesFundFacebookPostLedger);
+  altered.institutionalResponseSignals.boundary =
+    "These are the only three organizations that engaged and represent the ecosystem.";
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post eval preserves publisher non-attribution and collective credit", () => {
+  const altered = structuredClone(kcSpacesFundFacebookPostLedger);
+  altered.authorshipAndCredit.jamieRoleBoundary =
+    "Jamie owned the account, authored every post, selected every grantee, and controlled the campaign.";
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post eval keeps the naming memory held", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCSPACES-UNIFORM-NAME-CONTRIBUTION-MEMORY"
+  );
+  assert.ok(claim);
+  const originalProjection = structuredClone(claim.projections[0]);
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/technical-operations"];
+    assert.equal(
+      kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.projections[0] = originalProjection;
+  }
+});
+
+test("KC Spaces Fund Facebook post eval rejects route-to-impact inference", () => {
+  const altered = structuredClone(kcSpacesFundFacebookPostLedger);
+  altered.destinationInventory.boundary =
+    "Every posted route proves click-through, partnership, conversion, and impact.";
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post eval does not force archive depth onto the site", () => {
+  const alteredReport = kcSpacesFundFacebookPostReport.replace(
+    "No new visible portfolio sentence is forced",
+    "Every recovered claim is forced onto the visible portfolio"
+  );
+  assert.equal(
+    kcSpacesFundFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      kcSpacesFundFacebookPostReport: alteredReport
+    })),
+    1
+  );
+});
+
+test("KC Spaces Fund Facebook post report preserves census, response, role, and memory boundaries", () => {
+  assert.match(kcSpacesFundFacebookPostReport, /35 distinct posts/);
+  assert.match(kcSpacesFundFacebookPostReport, /not a native Meta export or deletion history/);
+  assert.match(kcSpacesFundFacebookPostReport, /at least 11 named recipient or grantee highlights/);
+  assert.match(kcSpacesFundFacebookPostReport, /does not identify its individual publishers/);
+  assert.match(kcSpacesFundFacebookPostReport, /attributed research lead/);
+});
+
+test("Jamie personal Facebook post population meets the complete returned-surface control", () => {
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite)),
+    5
+  );
+  assert.equal(jamiePersonalFacebookPostAudit.uniqueRecords, 1243);
+  assert.equal(jamiePersonalFacebookPostAudit.cursorPages, 621);
+  assert.equal(jamiePersonalFacebookPostAudit.terminalHasNextPage, false);
+  assert.equal(jamiePersonalFacebookPosts.intakeItems.length, 2);
+  assert.equal(jamiePersonalFacebookPosts.sources.length, 10);
+});
+
+test("Jamie personal Facebook eval rejects lifetime-population inflation", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.completenessBoundary =
+    "This is Jamie's immutable lifetime total and proves no post was deleted.";
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval rejects unknown-audience conversion to public", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.audienceLabels.boundary =
+    "All 1,243 records are public because the owner-filtered surface returned them.";
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval rejects year-accounting drift", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.recordsByYear[2009] += 1;
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval rejects record-form accounting drift", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.recordForms.sharedStory -= 1;
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval rejects mission frequency as importance or impact", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.missionRouting.classificationBoundary =
+    "The 181 records rank Jamie's most important and impactful work.";
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval rejects posted destinations as corroboration", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.postedUrlInventory.routingBoundary =
+    "All 549 destinations are corroborating sources and prove every linked proposition.";
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval rejects outbound stakeholder routes as inbound engagement", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.stakeholderRouting.classificationBoundary =
+    "Twenty Council members and Rafael Espinal engaged with Jamie and endorsed the work.";
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval requires all six public-post controls", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.selectedPublicSourceControls.pop();
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval rejects mutable counters as people or impact", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.engagementBoundary =
+    "The selected counters total unique stakeholders, historical reach, and impact.";
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval keeps the CouncilStat role interpretation held", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE"
+  );
+  assert.ok(claim);
+  const originalProjection = structuredClone(claim.projections[0]);
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/callnyc"];
+    assert.equal(
+      jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.projections[0] = originalProjection;
+  }
+});
+
+test("Jamie personal Facebook eval preserves NTER CHNG and KC Town Hall collective credit", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-FB-JAMIE-KCTOWNHALL-START-2018"
+  );
+  assert.ok(source);
+  const originalSupports = [...source.supportsGenerally];
+  try {
+    source.supportsGenerally = source.supportsGenerally.filter(
+      (item) => !/Julia Fredenburg/i.test(item)
+    );
+    assert.equal(
+      jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    source.supportsGenerally = originalSupports;
+  }
+});
+
+test("Jamie personal Facebook eval rejects participation routes as outcomes", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-FB-JAMIE-PROJECT-ACTION-ROUTING"
+  );
+  assert.ok(claim);
+  const originalBoundaries = [...claim.boundaries];
+  try {
+    claim.boundaries = [
+      "The posts prove that readers clicked, joined, called, attended, converted, and caused outcomes.",
+      "The participation routes establish policy impact."
+    ];
+    assert.equal(
+      jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.boundaries = originalBoundaries;
+  }
+});
+
+test("Jamie personal Facebook eval rejects raw corpus material and private paths", () => {
+  const altered = structuredClone(jamiePersonalFacebookPostControls);
+  altered.rawText = "Private record material";
+  altered.privatePath = "/Users/jburkart/private-facebook-corpus.json";
+  const alteredText = JSON.stringify(altered);
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostControls: altered,
+      jamiePersonalFacebookPostControlsText: alteredText
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook eval does not force archive depth onto the site", () => {
+  const alteredReport = jamiePersonalFacebookPostReport.replace(
+    "No new visible portfolio sentence is forced",
+    "Every recovered claim is forced onto the visible portfolio"
+  );
+  assert.equal(
+    jamiePersonalFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      jamiePersonalFacebookPostReport: alteredReport
+    })),
+    1
+  );
+});
+
+test("Jamie personal Facebook report preserves population, source, stakeholder, and role boundaries", () => {
+  assert.match(jamiePersonalFacebookPostReport, /1,243 owner-filtered records/);
+  assert.match(jamiePersonalFacebookPostReport, /An unexposed label is unknown, not public/);
+  assert.match(jamiePersonalFacebookPostReport, /549 unique normalized/);
+  assert.match(jamiePersonalFacebookPostReport, /outbound/);
+  assert.match(jamiePersonalFacebookPostReport, /usable participation route/);
+  assert.match(jamiePersonalFacebookPostReport, /does not mention Jamie/);
 });
 
 test("complete maturation pilot meets every floor", () => {
