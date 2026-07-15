@@ -583,7 +583,7 @@
       "expectedLedgerSha256": "c90245a454e7fdf1cf48f499a2abad7c717762da1e3b6135b8dc18c0062911fa",
       "expectedLedgerMetadataSha256": "22fc6d051dd57a476015117ca5aa9e91d27db861faf4d57df86a9451edc1124d",
       "expectedKnowledgeGraphSha256": "67de57f549c5145936116c50b3579a2c94d87e7cd41f28873154036818a4e4f0",
-      "expectedPublicSurfaceSha256": "7417df02e3f81897dda19ef445881b5efdd0d67ff5bf0e236589b99bfdb06ff6",
+      "expectedPublicSurfaceSha256": "78676b241cfae00f056f23daeb75be774ae6607d8d6ca48fa4c5b5cd7c26ff44",
       "expectedSemanticContractSha256": "5e735233a76fe98098c09bc9f6e8f4c170bd1bbfbd7e2e84104ba8ac0a8d34dd",
       "methodContract": {
         "surfaces": [

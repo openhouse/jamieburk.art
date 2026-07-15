@@ -1731,18 +1731,31 @@ test("urbanhermit public-surface contract rejects summary, inventory, and docume
     }
   }
 
-  const documentation = readFileSync(
-    new URL("../../docs/knowledge-bank/intake/2026-07-14-urbanhermit-full-population-social-corpus.md", import.meta.url),
-    "utf8"
-  );
-  const result = evaluateKnowledgeBank(suite, {
-    urbanhermitDocumentation: `${documentation}\nAll 434 records were fully recovered.`
-  });
-  assert.equal(
-    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
-    1
-  );
-  assert.equal(result.accepted, false);
+  const documentationFixtures = [
+    [
+      "urbanhermitDocumentation",
+      "../../docs/knowledge-bank/intake/2026-07-14-urbanhermit-full-population-social-corpus.md"
+    ],
+    ["urbanhermitSourcesDocumentation", "../../docs/knowledge-bank/sources.md"],
+    ["urbanhermitKnowledgeBankDocumentation", "../../docs/knowledge-bank/README.md"],
+    [
+      "urbanhermitSocialArchiveDocumentation",
+      "../../docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md"
+    ]
+  ];
+
+  for (const [fixture, relativePath] of documentationFixtures) {
+    const documentation = readFileSync(new URL(relativePath, import.meta.url), "utf8");
+    const result = evaluateKnowledgeBank(suite, {
+      [fixture]: `${documentation}\nAll 434 records were fully recovered.`
+    });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1,
+      `expected ${relativePath} drift to fail`
+    );
+    assert.equal(result.accepted, false);
+  }
 });
 
 test("urbanhermit personal and individual posts are not institutional metadata", () => {

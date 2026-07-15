@@ -1424,6 +1424,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const urbanDocumentation = fixtures.urbanhermitDocumentation ?? (existsSync(path.join(repoRoot, urbanFull.documentationPath))
     ? readFileSync(path.join(repoRoot, urbanFull.documentationPath), "utf8")
     : "");
+  const urbanSourcesDocumentation = fixtures.urbanhermitSourcesDocumentation ?? readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/sources.md"),
+    "utf8"
+  );
+  const urbanKnowledgeBankDocumentation = fixtures.urbanhermitKnowledgeBankDocumentation ?? readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/README.md"),
+    "utf8"
+  );
+  const urbanSocialArchiveDocumentation = fixtures.urbanhermitSocialArchiveDocumentation ?? readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md"),
+    "utf8"
+  );
   const urbanCanonicalLedger = existsSync(urbanLedgerPath)
     ? JSON.parse(readFileSync(urbanLedgerPath, "utf8"))
     : null;
@@ -1728,7 +1740,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     populationAudit: urbanhermitPopulationAudit,
     corpusFindings: urbanhermitCorpusFindings,
     personalInventory: urbanPersonalInventory,
-    documentation: urbanDocumentation
+    documentation: urbanDocumentation,
+    sourcesDocumentation: urbanSourcesDocumentation,
+    knowledgeBankDocumentation: urbanKnowledgeBankDocumentation,
+    socialArchiveDocumentation: urbanSocialArchiveDocumentation
   }));
   const urbanSemanticContractHash = sha256(JSON.stringify({
     sources: urbanFullSources.map((source) => source && ({
