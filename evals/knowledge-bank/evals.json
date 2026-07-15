@@ -583,7 +583,7 @@
       "expectedLedgerSha256": "c90245a454e7fdf1cf48f499a2abad7c717762da1e3b6135b8dc18c0062911fa",
       "expectedLedgerMetadataSha256": "22fc6d051dd57a476015117ca5aa9e91d27db861faf4d57df86a9451edc1124d",
       "expectedKnowledgeGraphSha256": "67de57f549c5145936116c50b3579a2c94d87e7cd41f28873154036818a4e4f0",
-      "expectedPublicSurfaceSha256": "78676b241cfae00f056f23daeb75be774ae6607d8d6ca48fa4c5b5cd7c26ff44",
+      "expectedPublicSurfaceSha256": "66eae4b26a26c316ea82a66eb8578b5caff3a8194ad75710a284f0d5fa62f5d4",
       "expectedCrossLedgerSha256": "44929bacce524518dbe8951f51318b35adfa1ce0861d7ab95584c16339d3c401",
       "expectedSemanticContractSha256": "5e735233a76fe98098c09bc9f6e8f4c170bd1bbfbd7e2e84104ba8ac0a8d34dd",
       "methodContract": {
@@ -681,6 +681,89 @@
         "CLM-URBANHERMIT-VISIBLE-TRACTION-SNAPSHOT"
       ],
       "auditSourceId": "SRC-X-URBANHERMIT-POPULATION-AUDIT-2026-07-14"
+    },
+    "nycacFacebookEvents": {
+      "eventLedgerPath": "docs/knowledge-bank/data/nycartc-public-facebook-event-ledger.json",
+      "linkLedgerPath": "docs/knowledge-bank/data/nycartc-public-facebook-event-link-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-event-population.md",
+      "projectReportPath": "docs/knowledge-bank/projects/nycartc-facebook-events-2026-07-14.md",
+      "expectedEventLedgerDigestSha256": "79b8cb8b652b01a6e96d46aa51dd47b519efc03ac3bf8514eb6cbb5141ef09d7",
+      "expectedLinkLedgerDigestSha256": "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02",
+      "expectedControlSlots": 34,
+      "expectedRecoveredRecords": 33,
+      "expectedUnresolvedSlots": 1,
+      "expectedYearCounts": { "2017": 17, "2018": 3, "2019": 6, "2020": 6, "2021": 1 },
+      "expectedDirectHostCards": 24,
+      "expectedAlignedHostCards": 9,
+      "expectedRecurringMeetingRecords": 12,
+      "expectedDistinctPhysicalVenues": 10,
+      "expectedVirtualMeetingRecords": 2,
+      "expectedResponseDisplays": 32,
+      "expectedMinimumResponseDisplay": 9,
+      "expectedMaximumResponseDisplay": 1700,
+      "expectedResponseDisplaysAtLeast100": 19,
+      "expectedResponseDisplaysAtLeast400": 9,
+      "expectedResponseDisplaysAtLeast1000": 3,
+      "expectedEventsWithOutboundLinks": 25,
+      "expectedOutboundLinkOccurrences": 61,
+      "expectedNormalizedLinkRows": 38,
+      "expectedArticleRoutes": 7,
+      "expectedProtectedLinkRows": 1,
+      "expectedUnresolvedLinkRows": 4,
+      "expectedCurrentReplayHeaders": 33,
+      "expectedCurrentReplayFullBodies": 22,
+      "expectedCurrentReplayHeaderOnlyBodies": 11,
+      "expectedCurrentReplayHeaderOnlyEventIds": [
+        "109513027694163",
+        "1451617855032658",
+        "533594734223350",
+        "2616087105332260",
+        "790581997948463",
+        "1916200875140739",
+        "383292402137451",
+        "133554860735306",
+        "120802405289008",
+        "113308576029782",
+        "472114119789400"
+      ],
+      "expectedNewSourceCount": 17,
+      "expectedObservationCount": 24,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "selectedClaimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "heldClaimIds": [
+        "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
+        "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY",
+        "CLM-NYCAC-FACEBOOK-EVENT-LINK-NETWORK",
+        "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE"
+      ],
+      "eventSourceIds": [
+        "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-HEARING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NOVEMBER-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHT-MAYOR-PANEL-2018",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-HEARING-2019",
+        "SRC-NYCAC-FACEBOOK-EVENT-SUMMER-MEETING-2019",
+        "SRC-NYCAC-FACEBOOK-EVENT-COVID-RELIEF-2020"
+      ],
+      "sourceContracts": {
+        "SRC-NYCAC-FACEBOOK-EVENTS-CONTROL-2026": ["34-event displayed control", "native Meta export"],
+        "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026": ["34-slot accounting", "attendance or unique response"],
+        "SRC-NYCAC-FACEBOOK-EVENT-LINK-LEDGER-2026": ["61 link occurrences", "readership"],
+        "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026": ["first-person contribution account", "sole organization of every event"],
+        "SRC-NYCAC-GOTHAMIST-COMMERCIAL-RENT-BILL-2019-11-06": ["2019 proposal", "bill passage"],
+        "SRC-NYCAC-NYPOST-FOOTLOOSE-CABARET-2017-04-08": ["Cabaret Law advocacy", "Jamie's individual role"]
+      },
+      "claimContracts": {
+        "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026": ["33 event records", "one historical control slot remains unresolved"],
+        "CLM-NYCAC-PARTICIPATION-SYSTEM": ["describes his contribution as helping establish and produce", "collective surfaces"],
+        "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY": ["must remain event-level platform signals", "Do not sum event responses"],
+        "CLM-NYCAC-FACEBOOK-EVENT-LINK-NETWORK": ["38 research routes", "not automatic corroboration"],
+        "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE": ["Jamie interprets", "not neutral platform metadata"]
+      }
     }
   },
   "criteria": [
@@ -809,6 +892,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 434 displayed personal-account slots receive honest dispositions; mission-relevant public evidence remains inspectable; ordinary and protected life context is counted without republication; source-status authorship and metrics remain with their source; self-report, outside corroboration, mutable reactions, and impact remain distinct; and all newly matured claims stay held until deliberate composition."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      "label": "NYC Artist Coalition Facebook event population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 34 displayed Facebook event slots are honestly dispositioned; 33 recovered events remain useful historical plot points; rotating venues, event formats, source routes, and retrieval drift are reproducible; responses never become attendance; private people and access data remain absent; collective authorship is preserved; and only Jamie's bounded participation-system contribution is composed into the public site."
     }
   ],
   "hillClimb": {

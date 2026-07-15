@@ -329,6 +329,47 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
+      "title": "Redacted NYC Artist Coalition Facebook event disposition ledger",
+      "organization": "Jamie Burkart portfolio research",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/nycartc-public-facebook-event-ledger.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Redacted row-level NYC Artist Coalition Facebook event disposition ledger, July 14, 2026.",
+      "publicNote": "Contains 34 ordered dispositions: 33 recovered public event records and one metadata-free unresolved control slot. Guest and account-private data are excluded.",
+      "doesNotEstablish": [
+        "events absent from the current control",
+        "guest identities",
+        "attendance or unique response",
+        "individual page authorship",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+      "title": "DIY: NYC Artist Coalition - General Meeting",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-02-06",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/406505576359490/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition and event partners, 'DIY: NYC Artist Coalition - General Meeting,' Facebook event, 2017-02-06.",
+      "publicNote": "Open coalition meeting at Magick City for shared priority-setting, cultural-plan work, and participant-proposed action.",
+      "doesNotEstablish": [
+        "individual authorship or production responsibility",
+        "physical attendance or unique reach",
+        "participant consensus",
+        "policy causality"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
       "title": "6 Things to Know About Making DIY Spaces Work",
       "organization": "Bedford + Bowery",
@@ -1059,6 +1100,64 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie describes his contribution as helping establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "the recurring event and venue pattern"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "one documented part of the participation system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+          "relationship": "corroborating",
+          "supports": [
+            "one documented part of the participation system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "one documented part of the participation system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute the broad role to Jamie's first-person account; the event pages and outcomes are collective surfaces.",
+        "The rotating-venue pattern does not establish an uninterrupted monthly schedule or a different venue for every coalition event.",
+        "Independent reporting corroborates specific Jamie organizing and speaking roles, not production responsibility for the entire event population."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1580,6 +1679,8 @@
         "SRC-NYCAC-NPR-CABARET-2017-09-20",
         "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
         "SRC-NYCAC-SUPPORTERS-LIST",
+        "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
+        "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
         "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYC-SBJSA-HEARING-2018-10-22"
@@ -1601,6 +1702,17 @@
             "SRC-NYCAC-NPR-CABARET-2017-09-20",
             "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
             "SRC-NYCAC-SUPPORTERS-LIST"
+          ]
+        },
+        {
+          "id": "participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+            "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
+            "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+            "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12"
           ]
         },
         {

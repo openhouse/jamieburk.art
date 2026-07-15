@@ -129,14 +129,14 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
-**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
+**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability. He describes his contribution as also helping establish and produce a recurring participation system of public event pages, meetings in cultural spaces, practical support sessions, hearings, and campaign action.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
 **Why it matters:** Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.
 **Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.
-**Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
+**Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie individually produced or authored every coalition event; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-14
 
 ## wowlist-community-platform - Followable community platform
 

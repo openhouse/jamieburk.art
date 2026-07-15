@@ -308,9 +308,9 @@ export const proofClaims: ProofClaim[] = [
       "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.",
     shortWording: "Civic systems and coalition operations for NYC Artist Coalition",
     detailedPublicWording:
-      "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+      "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability. He describes his contribution as also helping establish and produce a recurring participation system of public event pages, meetings in cultural spaces, practical support sessions, hearings, and campaign action.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, independent reporting, Jamie's bounded first-person account, and the public-safe 34-slot NYC Artist Coalition Facebook event census.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -319,6 +319,7 @@ export const proofClaims: ProofClaim[] = [
       "Jamie alone repealed the Cabaret Law",
       "Jamie alone created the Office of Nightlife",
       "Jamie alone passed nightlife enforcement reporting legislation",
+      "Do not claim Jamie individually produced or authored every coalition event",
       "Jamie speaks for every NYC Artist Coalition collaborator"
     ],
     protectedBoundaries: [
@@ -337,7 +338,7 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "wowlist-community-platform",

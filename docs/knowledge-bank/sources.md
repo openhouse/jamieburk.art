@@ -66,6 +66,16 @@ outside corroboration, contextual links, and source-status metrics remain
 distinct. See
 [intake/2026-07-14-urbanhermit-full-population-social-corpus.md](intake/2026-07-14-urbanhermit-full-population-social-corpus.md).
 
+The NYC Artist Coalition Facebook event audit accounts for all 34 displayed
+past-event control slots through 33 recovered public event records and one
+metadata-free unresolved slot. Its public ledgers retain dates, titles, venues
+or modes, event formats, host-card relationships, bounded response displays,
+event URLs, and public source routes while excluding guest identities, invite
+context, comments, participant profiles, private administration, meeting
+credentials, and working-document locators. Facebook responses remain mutable
+event-level signals, never attendance or unique reach. See
+[intake/2026-07-14-nycartc-facebook-event-population.md](intake/2026-07-14-nycartc-facebook-event-population.md).
+
 KCUR election guidance, Northeast News affordable-housing reporting, Curbed
 housing-policy reporting, and Kansas City Star reporting about Leon's Thriftway
 are retained as sources routed by the account. Their appearance establishes

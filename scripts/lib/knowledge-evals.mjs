@@ -6,6 +6,7 @@ import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } fr
 import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowledge-bank/google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
+import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import { nycacCorpusFindings, nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -19,6 +20,10 @@ import { validateKnowledgeBank } from "./citation-validation.mjs";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const suitePath = path.join(repoRoot, "evals/knowledge-bank/evals.json");
 const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json");
+const nycacEventLedgerPublicContractSha256 = "79b8cb8b652b01a6e96d46aa51dd47b519efc03ac3bf8514eb6cbb5141ef09d7";
+const nycacLinkLedgerPublicContractSha256 = "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02";
+const nycacCanonicalGraphPublicContractSha256 = "c942679699704f89955c15c8d878bb3e9e1ff14db8abce0a68db2e3d4c51f06f";
+const nycacNarrativePublicContractSha256 = "2957de5d218fc7b91ee7566415ae952c467af1cce2629c6fe33c4c49fabbf81a";
 
 export function loadKnowledgeEvalSuite() {
   return JSON.parse(readFileSync(suitePath, "utf8"));
@@ -32,6 +37,244 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function numericRecordEquals(left, right) {
+  const leftEntries = Object.entries(left ?? {}).sort(([a], [b]) => a.localeCompare(b));
+  const rightEntries = Object.entries(right ?? {}).sort(([a], [b]) => a.localeCompare(b));
+  return JSON.stringify(leftEntries) === JSON.stringify(rightEntries);
+}
+
+function stringSetEquals(values, expectedValues) {
+  if (!Array.isArray(values) || !Array.isArray(expectedValues)) return false;
+  return values.length === new Set(values).size &&
+    values.length === expectedValues.length &&
+    values.every((value) => expectedValues.includes(value));
+}
+
+function normalizeInspectionText(value) {
+  return String(value)
+    .normalize("NFKC")
+    .replace(/\p{Cf}/gu, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function containsUnsafeAttendanceConversion(text) {
+  const normalized = normalizeInspectionText(text);
+  const sentenceText = normalized.replace(/(?<=\d)\.(?=\d)/g, "__DECIMAL__");
+  const sentences = sentenceText.match(/[^.!?;]+[.!?;]?/g) ?? [];
+  const signalPattern = /\b(?:(?:Facebook|platform(?:['’]s)?)\b[^.?!;]{0,70}\b(?:event\s+)?(?:responses?|replies|RSVPs?|numbers?|figures?|confirmations?|tall(?:y|ies)|counts?|totals?|metrics?|counter|indicator|clicks?|Going|Interested|acknowledgments?)|(?:responses?|replies|RSVPs?|numbers?|figures?|confirmations?|tall(?:y|ies)|counts?|totals?|metrics?|counter|indicator|clicks?|Going|Interested|people\s+responding)\b[^.?!;]{0,70}\b(?:Facebook|platform)|response\s+(?:totals?|counts?|figures?|numbers?|metrics?)|RSVPs?|(?:numbers?|counts?|figures?|people)\s+(?:responding|responded)\s+(?:on\s+)?Facebook|(?:clicked|clicking)\s+(?:Going|Interested)\s+on\s+Facebook|(?:Facebook\s+)?event[- ]card\s+(?:counter|signal|figure|total|clicks?|responses?)|blue[- ]button\s+(?:counter|total|figure)|event[- ]page\s+acceptances?|social\s+RSVP\s+roll|Going\s+marks?|platform\s+acknowledgments?|digital\s+replies)\b/i;
+  const outcomePattern = /\b(?:attend(?:ance|ed|ees?)|turnout|footfall|room[- ]fill|head\s*count|gate\s*count|door\s*(?:count|sheet)|crowd\s+size|audience(?:\s+size|\s+in\s+person)?|packed\s+(?:hall|house|room|venue)|\d[\d,]*(?:-strong|\s+strong)\s+(?:hall|house|room|venue)|fill(?:ed|ing|s)?\s+(?:the\s+)?(?:hall|house|room|venue)|bodies?\s+(?:under\s+one\s+roof|in\s+the\s+room)|(?:seats?|chairs?)\s+(?:occupied|filled)|(?:occupied|filled)\s+(?:seats?|chairs?)|people\s+in\s+(?:the\s+)?(?:hall|room|seats)|(?:visitors?|neighbors?)\s+(?:arrived|present|physically\s+present)|entered\s+(?:the\s+)?building|crossed\s+(?:the\s+)?(?:venue\s+)?threshold|on[- ]site\s+(?:population|count|presence)|in[- ]person\s+(?:presence|count|audience)|physical\s+presence|people\s+(?:who\s+)?(?:present|reached|showed|showing|attended|arrived|entered|backed|supported|came\s+through\s+the\s+door)\s*(?:up|in\s+the\s+room|the\s+campaign)?|number\s+(?:who|of\s+people)\s+(?:arrived|attended|entered|came\s+through\s+the\s+door)|count\s+of\s+people\s+present|distinct\s+participants?|(?:total|unique)\s+(?:people|individuals?|reach)|(?:live[- ]room\s+)?census(?:\s+of\s+(?:the\s+)?(?:room|venue|coalition['’]s\s+supporters?))?|constituency\s+(?:size|reached)|size\s+of\s+(?:the\s+)?constituency|community\s+mandate|vote\s+of\s+confidence|campaign\s+(?:reach|spread|travel(?:ed|led))|participation|endorsement|impact|repeal|law|policy\s+outcome|agency\s+outcome)\b/i;
+  const referentPattern = /\b(?:they|them|those|these|this|it|that|value|indicator|counter|clicks?|the\s+(?:same\s+)?(?:value|figures?|numbers?|counts?|totals?|signals?|tall(?:y|ies)|confirmations?)|the\s+same\s+number)\b/i;
+  const outerNegationPattern = /\b(?:(?:it|that)\s+is|it's)\s+(?:not\s+)?(?:false|untrue|incorrect)\s+that\b|\bnot\s+(?:true|false)\s+that\b|\b(?:the\s+)?(?:claim|statement|assertion|idea|belief|proposition)\s+that\b[^.?!;]{0,180}\b(?:is|was)\s+(?:not\s+)?(?:false|untrue|incorrect|unsupported)\b/i;
+  let signalContext = 0;
+
+  for (const rawSentence of sentences) {
+    const sentence = rawSentence.trim();
+    if (!sentence) continue;
+    const rejectsQuotedClaim = /\b(?:quote[sd]?|phrase|wording|claim|statement)\b[^.?!;]{0,180}\b(?:only\s+to\s+reject|is\s+prohibited|we\s+reject|must\s+not\s+be\s+used|appears?\s+only\s+as\s+(?:a\s+)?claim\s+we\s+reject)\b/i.test(sentence);
+    if (rejectsQuotedClaim) continue;
+    const hasDirectSignal = signalPattern.test(sentence);
+    const hasSignalReferent = signalContext > 0 && referentPattern.test(sentence);
+    const hasSignal = hasDirectSignal || hasSignalReferent;
+    const hasOutcome = outcomePattern.test(sentence);
+
+    if (hasSignal && hasOutcome) {
+      if (outerNegationPattern.test(sentence)) return true;
+
+      const directNegation = /\b(?:do|does|did)\s+not\s+(?:establish|prove|verify|measure|represent|equal|demonstrate|track|validate|count|convert|backfill|show|indicate|support|determine|substantiate)\b/i.test(sentence);
+      const cannotRelate = /\b(?:cannot|can't|can\s+not)\s+(?:be\s+)?(?:used|treated|read|interpreted|counted|mistaken|converted|summed|understood|establish(?:ed)?|prov(?:e|ed)|verif(?:y|ied)|measur(?:e|ed)|represent(?:ed)?|show(?:n)?|indicat(?:e|ed)|support(?:ed)?|determin(?:e|ed)|substantiat(?:e|ed)|tell|infer(?:red)?)\b/i.test(sentence);
+      const neverRelate = /\b(?:should|must)\s+never\s+(?:be\s+)?(?:used|treated|read|interpreted|counted|mistaken|converted|summed|understood)\b/i.test(sentence);
+      const deniedCopula = /\b(?:is|are|was|were)\s+(?:also\s+)?(?:not|never)\s+(?:(?:an?|the)\s+)?(?:(?:valid|reliable)\s+)?(?:evidence|proof|measure|count|indicator|proxy)?\s*(?:of|for|as|that)?\s*(?:unique[- ]person\s+(?:or|and)\s+)?(?:physical\s+)?(?:attendance|turnout|head\s*count|crowd\s+size|audience\s+size|unique\s+(?:people|reach)|participation|endorsement|impact|policy\s+outcome)\b(?:\s+(?:counts?|measures?))?/i.test(sentence);
+      const explicitContrastBoundary = /\b(?:is|are|was|were)\b[^.?!;]{0,80},\s+(?:but\s+)?not\s+(?:(?:an?|the)\s+)?(?:attendance|turnout|head\s*count|crowd\s+size|audience\s+size|physical\s+presence|participation|endorsement|impact)\b/i.test(sentence);
+      const explicitInstruction = /\b(?:never|must\s+not|do\s+not|does\s+not)\s+(?:claim\s+that\s+)?(?:be\s+)?(?:convert(?:ed)?|backfill(?:ed)?|treat(?:ed)?|read|interpret(?:ed)?|use(?:d)?|summed?|claim(?:ed)?|equate(?:d)?|count(?:ed)?|infer(?:red)?|mistake(?:n)?)\b/i.test(sentence);
+      const noEvidenceBoundary = /\b(?:there\s+(?:is|was)\s+no\s+(?:evidence|proof|support)|(?:is|are|was|were)\s+not\s+(?:evidence|proof|support)\s+that|(?:provide|provides|provided|give|gives|gave|offer|offers|offered|supply|supplies|supplied|constitute|constitutes|constituted)\s+no\s+(?:evidence|proof|support|measure|measurement|indicator|proxy)|(?:is|are|was|were)\s+insufficient\s+(?:evidence|proof|support))\s+(?:of|for|that)?\b/i.test(sentence);
+      const separationBoundary = /\b(?:(?:must|should)\s+be\s+kept|keep)\s+[^.?!;]{0,60}\b(?:separate|distinct)\b|\b(?:are|remain|stayed|were)\s+(?:independent|separate|distinct)\s+(?:measurements?|measures?|signals?|datasets?|records?)\b|\b(?:independent|separate)\s+(?:reporting|measurement|source)\b|\b(?:separately|independently)\s+(?:reported|measured|documented|counted|described)\b|\b(?:non[- ]equivalence|not\s+equivalent)\b|\bdo\s+not\s+(?:conflate|collapse)\b|\b(?:say|says|said|tell|tells|told)\s+nothing\s+about\b|\bno\s+(?:valid\s+)?inference\b[^.?!;]{0,80}\b(?:from|between)\b/i.test(sentence);
+      const directBoundary = directNegation || cannotRelate || neverRelate || deniedCopula || explicitContrastBoundary || explicitInstruction || noEvidenceBoundary || separationBoundary;
+      const positiveReversal = /\b(?:although|though|whereas|but|however|yet|therefore|nevertheless|actually|in\s+fact|and\s+therefore)\b[^.?!;]{0,120}\b(?:equal(?:s|ed)?|represent(?:s|ed)?|demonstrat(?:e[sd]?|ing)|establish(?:es|ed)?|prov(?:e[sd]?|ing)|verif(?:y|ies|ied)|measur(?:e[sd]?|ing)|track(?:s|ed)?|validat(?:e[sd]?|ing)|count(?:s|ed)?|match(?:es|ed)?|correspond(?:s|ed)?\s+to)\b|\b(?:although|though|whereas|but|however|yet|therefore|nevertheless|actually|in\s+fact|and\s+therefore)\b[^.?!;]{0,120}\b(?:is|are|was|were)\s+(?:the\s+)?(?:attendance|turnout|head\s*count|crowd\s+size|audience\s+size|physical\s+presence)\b/i.test(sentence);
+
+      if (!directBoundary || positiveReversal) return true;
+    }
+
+    if (hasDirectSignal) signalContext = 2;
+    else if (hasSignalReferent) signalContext = Math.max(signalContext - 1, 1);
+    else signalContext = 0;
+  }
+
+  return false;
+}
+
+export function containsNycacSoleCreditClaim(text) {
+  const normalized = normalizeInspectionText(text);
+  const sentences = normalized.match(/[^.!?;]+[.!?;]?/g) ?? [];
+  const productionPattern = /\b(?:work|calendar|series|events?|event\s+designs?|handiwork|brainchild|maker(?:'s|’s)?|imprint|ownership|originat(?:e[sd]?|ing|or)|stag(?:e[sd]?|ing)|design(?:e[sd]?|ing|s)|organiz(?:e[sd]?|ing|ation)|produc(?:e[sd]?|ing|tion|er)|author(?:ed|ing|ship)?|creat(?:e[sd]?|ing|ion|or)|ran|run|led|lead|manag(?:e[sd]?|ing|er)|coordinat(?:e[sd]?|ing|ion|or)|secur(?:e[sd]?|ing)|own(?:ed|ership)?|credit|responsib(?:le|ility))\b/i;
+  const exclusivePattern = /\b(?:all|every|each|entire|entirely|whole|wholly|(?:full|complete|total)\s+(?:(?:production|policy|event)\s+)?(?:responsibility|credit|control|authorship)|completely|totally|singular|sole|solely|only|exclusive|exclusively|independently|alone|by\s+himself|himself|single[- ]handedly|single\s+hand|one\s+(?:person|individual)|nobody|no\s+one|without|but\s+for|from\s+start\s+to\s+finish|end[- ]to[- ]end|100\s*(?:%|percent))\b/i;
+  const policyPattern = /\b(?:law|legislation|policy|repeal|office|agency|passage|public\s+outcome)\b/i;
+  const causalityPattern = /\b(?:caus(?:e[sd]?|ality)|catalyst|legacy|unlock(?:ed|ing|s)?|secur(?:e[sd]?|ing)|pass(?:ed|age)|succeed(?:ed|s)?|exist(?:s|ed)?|achiev(?:e[sd]?|ement)|accomplish(?:ed|ment)|deliver(?:ed|y)|(?:get|gets|got|getting)\s+(?:the\s+)?(?:law|policy|repeal)\s+over\s+the\s+line|came\s+into\s+being|(?:made|make)\s+(?:(?:the\s+)?(?:law|policy|repeal|series)[^.?!;]{0,20}|it\s+)happen|made\s+(?:the\s+)?series\s+possible|happen(?:ed)?|owed\s+its\s+existence|owing\s+(?:entirely|solely)\s+to|thanks\s+to|(?:never\s+)?would\s+not\s+have\s+passed|but\s+for|due\s+to|attributable\s+to)\b/i;
+  const namesJamiePattern = /\bJamie(?:['’]s|s)?\b/i;
+  const jamiePronounPattern = /\b(?:he|him|his)\b/i;
+  const outerNegationPattern = /\b(?:(?:it|that)\s+is|it's)\s+(?:false|untrue|incorrect)\s+that\b|\bnot\s+true\s+that\b|\b(?:the\s+)?(?:claim|statement|assertion|idea)\s+that\b[^.?!;]{0,180}\b(?:is|was)\s+(?:false|untrue|incorrect)\b/i;
+  let jamieContext = 0;
+  let policyContext = 0;
+
+  if (/\b(?:all|sole|exclusive)\s+credit\b[^.?!;]{0,120}\b(?:creator|producer|author|organizer)\b[^.?!]{0,10}[.?!]\s*Jamie\b[^.?!;]{0,50}\b(?:was|is)\s+(?:that|the)\s+(?:creator|producer|author|organizer)\b/i.test(normalized)) {
+    return true;
+  }
+  if (/\b(?:who|what)\s+made\s+(?:the\s+)?(?:calendar|series|events?)\s+possible\b[^.?!]{0,15}[.?!;]\s*(?:the\s+)?answer\s+(?:is|was)\s+Jamie\b/i.test(normalized)) {
+    return true;
+  }
+  if (/\bno\s+(?:page|event|invitation|description)\b[^.?!;]{0,100}\b(?:hand|author|maker|producer)\b[^.?!;]{0,50}\bother\s+than\s+Jamie(?:['’]s)?\b/i.test(normalized) ||
+      /\bauthorship\b[^.?!;]{0,100}\btraces?\s+back\s+to\s+Jamie\b/i.test(normalized) ||
+      /\bremove\s+Jamie\b[^.?!;]{0,100}\b(?:repeal|law|policy|office|agency)\b[^.?!;]{0,60}\b(?:disappears?|vanishes?|fails?|does\s+not\s+exist)\b/i.test(normalized) ||
+      /\b(?:City\s+Hall['’]s\s+decision|repeal|law|policy|office|agency)\b[^.?!;]{0,100}\bbears?\s+Jamie(?:['’]s)?\s+fingerprints?\b/i.test(normalized) ||
+      /\bcoalition\b[^.?!]{0,80}\b(?:masthead|name|banner|shell)\b[^.?!]{0,100}\bJamie\b[^.?!]{0,100}\b(?:supplied|built|made|created|owned)\b[^.?!]{0,50}\b(?:event\s+machine|system|calendar|series|everything\s+that\s+made\s+the\s+events\s+real)\b/i.test(normalized) ||
+      /\bJamie\b[^.?!;]{0,80}\bindispensable\s+architect\b[^.?!;]{0,80}\b(?:calendar|series|events?)\b/i.test(normalized) ||
+      /\b(?:nothing|no\s+part)\b[^.?!;]{0,80}\b(?:calendar|series|events?)\b[^.?!;]{0,80}\b(?:exist|happen|occur)\w*\b[^.?!;]{0,50}\b(?:absent|without)\s+Jamie\b/i.test(normalized) ||
+      /\bJamie\b[^.?!;]{0,80}\bnecessary\s+condition\b[^.?!;]{0,80}\b(?:law|policy|repeal|enactment|passage)\b/i.test(normalized)) {
+    return true;
+  }
+
+  for (let index = 0; index < sentences.length; index += 1) {
+    const sentence = sentences[index].trim();
+    if (!sentence) continue;
+    const rejectsQuotedClaim = /\b(?:quote[sd]?|phrase|wording|claim|statement)\b[^.?!;]{0,180}\b(?:only\s+to\s+reject|is\s+prohibited|we\s+reject|must\s+not\s+be\s+used|appears?\s+here\s+only\s+as\s+(?:a\s+)?claim\s+we\s+reject)\b/i.test(sentence);
+    if (rejectsQuotedClaim) continue;
+    const namesJamie = namesJamiePattern.test(sentence);
+    const nextNamesJamie = namesJamiePattern.test(sentences[index + 1] ?? "");
+    const hasPronoun = jamiePronounPattern.test(sentence);
+    const refersToJamie = namesJamie || (hasPronoun && (jamieContext > 0 || nextNamesJamie));
+    const claimsExclusiveProduction = refersToJamie && productionPattern.test(sentence) && exclusivePattern.test(sentence);
+    const claimsOwnedProduction = refersToJamie && productionPattern.test(sentence) && (
+      /\b(?:calendar|series|events?|production|program|system)\b[^.?!;]{0,80}\b(?:is|was|were|are)\s+Jamie(?:['’]s|s)\s+(?:creation|work|production|handiwork|brainchild|design|responsibility)\b/i.test(sentence) ||
+      /\b(?:production\s+)?ownership\b[^.?!;]{0,80}\b(?:belongs?|belonged)\s+to\s+Jamie\b/i.test(sentence)
+    );
+    const claimsUnqualifiedProduction = refersToJamie &&
+      /\b(?:calendar|series|every\s+event|all\s+(?:coalition\s+)?events?|event\s+designs?)\b/i.test(sentence) &&
+      /\b(?:brainchild|originat(?:e[sd]?|ing)|maker(?:'s|’s)?|imprint|design(?:e[sd]?|ing|s)|stag(?:e[sd]?|ing)|creat(?:e[sd]?|ing)|produc(?:e[sd]?|ing)|author(?:ed|ing)|made\s+possible)\b/i.test(sentence) &&
+      !/\b(?:helped|supported|contributed\s+to|co[- ]|with\s+(?:the\s+)?(?:coalition|collaborators?|team|partners?)|alongside)\b/i.test(sentence);
+    const hasPolicyContext = policyPattern.test(sentence) || policyContext > 0;
+    const hasDirectPolicyCausality = causalityPattern.test(sentence) ||
+      /\b(?:achievement|cause|because\s+of|without|direct\s+result\s+of)\b/i.test(sentence);
+    const causalityIsQualified = /\b(?:helped|supported|contributed\s+to|participated\s+in|worked\s+with|alongside|as\s+one\s+of)\b/i.test(sentence);
+    const claimsExclusivePolicyCausality = refersToJamie && hasPolicyContext && hasDirectPolicyCausality &&
+      (exclusivePattern.test(sentence) || !causalityIsQualified);
+
+    if (claimsExclusiveProduction || claimsOwnedProduction || claimsUnqualifiedProduction || claimsExclusivePolicyCausality) {
+      if (outerNegationPattern.test(sentence)) return true;
+
+      const directlyDeniesExclusiveRole = /\b(?:Jamie|he)\b[^.?!;]{0,60}\b(?:is|was)\s+not\s+(?:(?:the\s+)?(?:sole|only|exclusive|one\s+(?:person|individual))|(?:solely|exclusively)\s+responsible|alone\s+in)\b/i.test(sentence) ||
+        /\b(?:Jamie|he)\b[^.?!;]{0,60}\b(?:isn't|wasn't)\s+(?:(?:the\s+)?(?:sole|only|exclusive)|(?:solely|exclusively)\s+responsible)\b/i.test(sentence) ||
+        /\b(?:Jamie|he)\b[^.?!;]{0,35}\b(?:did|does|do)\s+not\s+(?:solely|exclusively|alone|single[- ]handedly)?\s*(?:organize|produce|author|create|run|lead|manage|coordinate|cause|deliver|achieve|accomplish)\b/i.test(sentence) ||
+        /\b(?:did|does|do)\s+not\s+(?:solely|exclusively|alone|single[- ]handedly)\s+(?:organize|produce|author|create|run|lead|manage|coordinate|cause|deliver|achieve|accomplish)\b/i.test(sentence) ||
+        /\b(?:Jamie|he)\b[^.?!;]{0,35}\bnever\s+(?:solely|exclusively|alone|single[- ]handedly)\s+(?:caused?|delivered?|achieved?|accomplished?|made)\b/i.test(sentence) ||
+        /\b(?:calendar|series|events?|law|legislation|policy|repeal)\b[^.?!;]{0,60}\b(?:is|are|was|were)\s+not\s+(?:organized|produced|authored|created|run|led|managed|coordinated|caused|delivered)\s+by\s+(?:Jamie|him)\s+(?:alone|solely|exclusively|single[- ]handedly)\b/i.test(sentence) ||
+        /\b(?:law|legislation|policy|repeal)\b[^.?!;]{0,60}\b(?:did|does|do)\s+not\s+(?:pass|happen)\s+(?:solely|only|exclusively)?\s*(?:because\s+of|through)\s+Jamie\b/i.test(sentence) ||
+        /\b(?:law|legislation|policy|repeal)\b[^.?!;]{0,60}\b(?:is|are|was|were)\s+not\s+(?:solely|only|exclusively)?\s*(?:Jamie's|his)\s+(?:achievement|accomplishment|doing|work)\b/i.test(sentence);
+      const instructsAgainstExclusiveCredit = /\b(?:no\s+one\s+should|do\s+not|does\s+not|did\s+not)\s+(?:claim|infer|assign|attribute|state|say)\b[^.?!;]{0,140}\bJamie\b/i.test(sentence) &&
+        !/\b(?:however|nevertheless|actually|in\s+fact)\b/i.test(sentence);
+      const epistemicBoundary = /\b(?:do|does|did)\s+not\s+(?:[^.?!;]{0,40}\s)?(?:establish|prove|show|demonstrate|support|assign)\b[^.?!;]{0,160}\bJamie\b/i.test(sentence) ||
+        /\bnot\s+(?:(?:an?|the)\s+)?(?:[^.?!;]{0,100}\s)?(?:claim|assertion|statement)\s+that\s+Jamie\b/i.test(sentence) ||
+        /\b(?:cannot\s+be|must\s+not\s+be)\b[^.?!;]{0,180}\b(?:attributed|assigned)\b[^.?!;]{0,100}\bJamie\b/i.test(sentence) ||
+        /\bthere\s+(?:is|was)\s+no\s+evidence\s+that\b[^.?!;]{0,180}\bJamie\b/i.test(sentence);
+      const collaborativeBoundary = /\b(?:co[- ](?:produced?|organized?|created?|led)|helped?\s+(?:produce|organize|create|lead))\b[^.?!;]{0,120}\b(?:with|alongside)\s+(?:the\s+)?(?:coalition|collaborators?|team|partners?)\b/i.test(sentence) ||
+        /\bJamie\s+and\s+(?:the\s+)?(?:coalition|collaborators?|team|partners?)\b[^.?!;]{0,120}\b(?:organized?|produced?|created?|led)\b/i.test(sentence) ||
+        /\bJamie\s+was\s+one\s+contributor\s+among\s+many\b/i.test(sentence) ||
+        /\b(?:collaborators?|the\s+coalition|the\s+team|partners?)\b[^.?!;]{0,80}\b(?:produced?|organized?|created?|led|authored?)\s+(?:them|(?:all|every)\s+(?:event|event\s+description)|the\s+(?:events?|calendar|series))\b/i.test(sentence);
+      if (!directlyDeniesExclusiveRole && !instructsAgainstExclusiveCredit && !epistemicBoundary && !collaborativeBoundary) return true;
+    }
+
+    if (namesJamie) jamieContext = 3;
+    else if (jamieContext > 0) jamieContext -= 1;
+
+    if (policyPattern.test(sentence)) policyContext = 2;
+    else if (policyContext > 0) policyContext -= 1;
+  }
+
+  return false;
+}
+
+function containsNycacHeldInterpretation(text) {
+  const normalized = normalizeInspectionText(text);
+  return /\b(?:democracy\s+lab|democratic\s+listening\s+(?:and\s+translation\s+)?practice|(?:civic|democratic|participatory)\s+(?:experiment(?:ation)?|laboratory|lab|workshop)|civic\s+sensorium|municipal\s+synapse|(?:the\s+)?city(?:'s|’s|s)\s+nervous\s+system|(?:city|cultural\s+advocates?)\b[^.?!;]{0,60}\b(?:sensory|neural|nervous|listening)\s+(?:network|system)|believ(?:e|es|ed|ing)\s+artists|artists?['’]?\s+(?:testimony|voices?|lived\s+knowledge)\b[^.?!;]{0,60}\b(?:as\s+)?(?:truth|authoritative|authority)|artists?\b[^.?!;]{0,50}\bauthoritative\s+witnesses?|events?\s+as\s+(?:an?\s+)?art\s+form|(?:events?|gatherings?|event\s+circuit)\b[^.?!;]{0,50}\b(?:creative\s+works?|art\s+forms?|public\s+artwork)|expanded?\s+(?:the\s+)?public\s+imagination|(?:event\s+sequence|gatherings?|practice)\b[^.?!;]{0,80}\b(?:broaden(?:ed|ing)|expanded?|compos(?:e[sd]?|ing))\b[^.?!;]{0,60}\b(?:possible|possibility|imagination)|(?:participatory\s+)?(?:ear|listening\s+practice)\b[^.?!;]{0,100}\b(?:lived\s+experience|government|civic\s+action))\b/i.test(normalized) ||
+    /\b(?:convenings?|event\s+(?:circuit|sequence|series)|recurring\s+(?:sequence|gatherings?))\b[^.?!;]{0,100}\b(?:sensorium|synapse|authoritative\s+witness|artists?['’]\s+lived\s+knowledge)\b/i.test(normalized) ||
+    /\b(?:event\s+(?:series|system|practice|sequence)|recurring\s+gatherings?|participation\s+system)\b[^.?!;]{0,100}\b(?:caus(?:e[sd]?|ing)|deliver(?:ed|ing)|produced?|converted?)\b[^.?!;]{0,80}\b(?:policy|law|legislation|repeal|agency|city\s+reform|government\s+action)\b/i.test(normalized) ||
+    /\b(?:meetings?|convening\s+network|sequence)\b[^.?!;]{0,80}\b(?:civic\s+circulatory\s+system|City\s+Hall['’]s\s+collective\s+ear|socially\s+engaged\s+art|horizon\s+of\s+civic\s+possibility)\b/i.test(normalized) ||
+    /\bartists?['’]\s+lived\s+accounts?\b[^.?!;]{0,80}\bfinal\s+word\b[^.?!;]{0,80}\bmunicipal\s+decisions?\b/i.test(normalized);
+}
+
+function containsPersonalIdentityMaterial(value) {
+  const normalized = normalizeInspectionText(value);
+  const labeledName = /\b(?:[Gg]uests?|[Aa]ttendees?|[Pp]articipants?|[Ii]nvitees?|[Ii]nvited\s+by)\b(?:\s*(?:No\.?|#|№)\s*\d+)?\s*(?::|#|-|–|—)?\s+\p{Lu}[\p{L}'’-]+(?:\s+\p{Lu}[\p{L}'’-]+){1,3}/u;
+  const labeledCaseInsensitiveName = /\b(?:guests?|attendees?|participants?|invitees?|invited\s+by|names?|(?:door|check[- ]in|private)\s+roster)\b(?:\s*(?:no\.?|#|№)\s*\d+)?\s*(?:(?::|#|-|–|—)\s*[\p{L}'’-]+(?:\s+[\p{L}'’-]+){0,3}|[\p{L}'’-]+\s+[\p{L}'’-]+(?:\s+[\p{L}'’-]+){0,2})(?=$|[\s,.;)])/iu;
+  const separatorFreeLabel = /\b(?:guest|attendee|participant|invitee)(?:no\.?|#|№)?\d*\p{Lu}[\p{L}'’-]+(?:\s+\p{Lu}[\p{L}'’-]+){1,3}/u;
+  const numberedNameList = /(?:^|\s)\d+\s*(?:[).:#-]|№)\s*[\p{L}'’-]+(?:\s+[\p{L}'’-]+){1,3}\s*(?:;|,)\s*\d+\s*(?:[).:#-]|№)\s*[\p{L}'’-]+(?:\s+[\p{L}'’-]+){1,3}/iu;
+  const directContact = /(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i;
+  return labeledName.test(normalized) || labeledCaseInsensitiveName.test(normalized) || separatorFreeLabel.test(normalized) ||
+    numberedNameList.test(normalized) || directContact.test(normalized);
+}
+
+function containsExplicitPersonalIdentityMaterial(value) {
+  const normalized = normalizeInspectionText(value);
+  const explicitlyLabeledName = /\b(?:[Gg]uests?|[Aa]ttendees?|[Pp]articipants?|[Ii]nvitees?|[Gg]uestbook\s+(?:records?|lists?)|[Dd]oor\s+[Ll]ist|(?:[Dd]oor|[Cc]heck[- ]in|[Pp]rivate)\s+[Rr]oster)\b(?:\s*(?:[Nn]o\.?|#|№)\s*\d+)?\s*(?:(?::|#|-|–|—)\s*|(?:was\s+present|includes?|names?|lists?)\s+)\p{Lu}[\p{L}'’-]+(?:\s+\p{Lu}[\p{L}'’-]+){1,3}\b/u;
+  const directContact = /(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b[A-Z0-9._%+-]+\s*(?:\[|\()?at(?:\]|\))?\s*[A-Z0-9.-]+\s*(?:\[|\()?dot(?:\]|\))?\s*[A-Z]{2,}\b|\b(?:\+?1[-. •]?)?\(?\d{3}\)?[-. •]\d{3}[-. •]\d{4}\b)/i;
+  return explicitlyLabeledName.test(normalized) || directContact.test(normalized);
+}
+
+function containsProtectedLocator(value) {
+  return /(?:https?:\/\/)?(?:docs|drive)\s*\.\s*google\s*\.\s*com(?::\d+)?\/|(?:https?:\/\/)?(?:[a-z0-9-]+\.)?zoom\.us(?::\d+)?\/(?:j|my|w|wc\/join)\/|(?:https?:\/\/)?meet\.google\.com(?::\d+)?\/[a-z0-9-]+|(?:https?:\/\/)?(?:teams\.microsoft\.com|teams\.live\.com)(?::\d+)?\/(?:l\/meetup-join|meet)\/|(?:https?:\/\/)?meet\.jit\.si(?::\d+)?\/|(?:https?:\/\/)?(?:[a-z0-9-]+\.)?webex\.com(?::\d+)?\/|(?:https?:\/\/)?(?:[a-z0-9-]+\.)?gotomeeting\.com(?::\d+)?\/|(?:https?:\/\/)?whereby\.com(?::\d+)?\/|(?:https?:\/\/)?(?:www\.)?notion\.(?:so|site)(?::\d+)?\/|(?:https?:\/\/)?[a-z0-9-]+\.sharepoint\.com(?::\d+)?\/|[?&](?:X-Amz-(?:Signature|Credential)|Signature|token|access_token)=/i.test(
+    normalizeInspectionText(value).replace(/hxxps?:\/\//gi, "https://").replace(/\[\.\]/g, ".")
+  );
+}
+
+function containsCredentialMaterial(value) {
+  return /\b(?:pin|pass\s*code|password|meeting\s+id|access\s+code|room\s+code|credential|secret\s+(?:key|code|token)|api\s+key|token)\b\s*(?::|is|=)?\s*[A-Z0-9-]{4,}/i.test(
+    normalizeInspectionText(value)
+  );
+}
+
+function publicLinkRowIsSafe(row) {
+  const allowedCategories = new Set([
+    "action-or-registration-path",
+    "campaign-or-organization",
+    "public-resource",
+    "published-article",
+    "unresolved-short-link",
+    "working-document"
+  ]);
+  const allowedDispositions = new Set(["protected", "public-lead", "research-needed", "source-routed"]);
+  if (!allowedCategories.has(row.category) || !allowedDispositions.has(row.disposition)) return false;
+
+  const strings = deepStringValues(row).map(normalizeInspectionText);
+  if (strings.some(containsProtectedLocator)) {
+    return false;
+  }
+
+  if (row.publicUrl === null) return row.disposition === "protected" || row.disposition === "research-needed";
+  if (row.disposition === "protected") return false;
+
+  try {
+    const urlHost = new URL(row.publicUrl).hostname.toLowerCase().replace(/^www\./, "");
+    const declaredHost = row.host.toLowerCase().replace(/^www\./, "");
+    return urlHost === declaredHost;
+  } catch {
+    return false;
+  }
+}
+
+function deepStringValues(value) {
+  if (typeof value === "string") return [value];
+  if (Array.isArray(value)) return value.flatMap(deepStringValues);
+  if (value && typeof value === "object") return Object.values(value).flatMap(deepStringValues);
+  return [];
+}
+
+function parseFacebookResponseDisplay(value) {
+  if (value === null) return null;
+  if (typeof value !== "string") return Number.NaN;
+  const match = value.match(/^(\d+(?:\.\d+)?)(K)? people responded$/i);
+  if (!match) return Number.NaN;
+  return Number(match[1]) * (match[2] ? 1000 : 1);
+}
+
 export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures = {}) {
   const intakeById = new Map(knowledgeBank.intakeItems.map((item) => [item.id, item]));
   const observationById = new Map(knowledgeBank.observations.map((item) => [item.id, item]));
@@ -39,14 +282,17 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const claimById = new Map(knowledgeBank.claims.map((item) => [item.id, item]));
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((item) => [item.id, item]));
   const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
-  const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
+  const nycacProof = proofClaims.find((proof) => proof.id === "nyc-artist-coalition-civic-systems");
+  const fairRentMdxOnDisk = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
+  const fairRentMdx = fixtures.fairRentMdx ?? fairRentMdxOnDisk;
   const callnycMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/callnyc.mdx"), "utf8");
   const wowlistMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/wowlist.mdx"), "utf8");
   const kcTownHallMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"), "utf8");
   const sundayDinnerMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/196-sunday-dinner.mdx"), "utf8");
   const workData = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
-  const proofData = readFileSync(path.join(repoRoot, "apps/www/src/data/proofs.ts"), "utf8");
-  const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
+  const proofData = fixtures.proofData ?? readFileSync(path.join(repoRoot, "apps/www/src/data/proofs.ts"), "utf8");
+  const publicRegistryTextOnDisk = readFileSync(publicRegistryPath, "utf8");
+  const publicRegistryText = fixtures.publicRegistryText ?? publicRegistryTextOnDisk;
   const errors = validateKnowledgeBank();
 
   const pilotIntakes = suite.pilot.intakeIds.map((id) => intakeById.get(id));
@@ -2055,9 +2301,572 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       !/(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(urbanLedgerText) &&
       urbanFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries];
+  const nycacEvents = suite.pilot.nycacFacebookEvents;
+  const nycacEventLedgerPath = path.join(repoRoot, nycacEvents.eventLedgerPath);
+  const nycacEventLinkLedgerPath = path.join(repoRoot, nycacEvents.linkLedgerPath);
+  const nycacEventLedger = fixtures.nycacFacebookEventLedger ?? (existsSync(nycacEventLedgerPath)
+    ? JSON.parse(readFileSync(nycacEventLedgerPath, "utf8"))
+    : null);
+  const nycacEventLinkLedger = fixtures.nycacFacebookEventLinkLedger ?? (existsSync(nycacEventLinkLedgerPath)
+    ? JSON.parse(readFileSync(nycacEventLinkLedgerPath, "utf8"))
+    : null);
+  const nycacEventDocumentationOnDisk = existsSync(path.join(repoRoot, nycacEvents.documentationPath))
+    ? readFileSync(path.join(repoRoot, nycacEvents.documentationPath), "utf8")
+    : "";
+  const nycacEventReportOnDisk = existsSync(path.join(repoRoot, nycacEvents.projectReportPath))
+    ? readFileSync(path.join(repoRoot, nycacEvents.projectReportPath), "utf8")
+    : "";
+  const nycacClaimsDocumentationOnDisk = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/claims.md"),
+    "utf8"
+  );
+  const nycacProjectOverviewOnDisk = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md"),
+    "utf8"
+  );
+  const nycacEventDocumentation = fixtures.nycacFacebookEventDocumentation ?? nycacEventDocumentationOnDisk;
+  const nycacEventReport = fixtures.nycacFacebookEventReport ?? nycacEventReportOnDisk;
+  const nycacProjectOverview = fixtures.nycacProjectOverview ?? nycacProjectOverviewOnDisk;
+  const nycacClaimsNarrative = fixtures.nycacClaimsDocumentation !== undefined
+    ? fixtures.nycacClaimsDocumentation
+    : (nycacClaimsDocumentationOnDisk.match(
+      /## nyc-artist-coalition-civic-systems\b[\s\S]*?(?=\n## |\s*$)/
+    )?.[0] ?? "").replace(/^\*\*Do not say:\*\*.*$/gmi, "");
+  const nycacEventRows = nycacEventLedger?.records ?? [];
+  const nycacRecoveredEventRows = nycacEventRows.filter((record) => record.eventId);
+  const nycacUnresolvedEventRows = nycacEventRows.filter(
+    (record) => record.recoveryStatus === "unresolved-control-slot"
+  );
+  const nycacEventYearCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(nycacRecoveredEventRows, (record) => record.date?.slice(0, 4)))
+      .map(([year, records]) => [year, records.length])
+  );
+  const nycacEventRelationshipCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(nycacRecoveredEventRows, (record) => record.pageRelationship))
+      .map(([relationship, records]) => [relationship, records.length])
+  );
+  const nycacRecurringRows = nycacRecoveredEventRows.filter((record) => record.isRecurringMeeting);
+  const nycacVirtualMeetingRows = nycacRecurringRows.filter((record) => record.venueOrMode === "Virtual");
+  const nycacPhysicalMeetingVenues = new Set(
+    nycacRecurringRows
+      .filter((record) => record.venueOrMode && record.venueOrMode !== "Virtual")
+      .map((record) => record.venueOrMode)
+  );
+  const nycacResponseValues = nycacRecoveredEventRows
+    .map((record) => record.responseValue)
+    .filter((value) => Number.isFinite(value));
+  const nycacDerivedResponseAccounting = {
+    displayed: nycacResponseValues.length,
+    missing: nycacRecoveredEventRows.length - nycacResponseValues.length,
+    minimum: nycacResponseValues.length ? Math.min(...nycacResponseValues) : null,
+    maximum: nycacResponseValues.length ? Math.max(...nycacResponseValues) : null,
+    atLeast100: nycacResponseValues.filter((value) => value >= 100).length,
+    atLeast400: nycacResponseValues.filter((value) => value >= 400).length,
+    atLeast1000: nycacResponseValues.filter((value) => value >= 1000).length
+  };
+  const nycacLinkRows = nycacEventLinkLedger?.rows ?? [];
+  const nycacLinkedEventIds = new Set(nycacLinkRows.flatMap((row) => row.eventIds ?? []));
+  const nycacLinkOccurrences = nycacLinkRows.reduce((total, row) => total + (row.occurrences ?? 0), 0);
+  const nycacArticleRows = nycacLinkRows.filter((row) => row.category === "published-article");
+  const nycacProtectedLinkRows = nycacLinkRows.filter((row) => row.disposition === "protected");
+  const nycacUnresolvedLinkRows = nycacLinkRows.filter((row) => row.disposition === "research-needed");
+  const nycacDerivedLinkAccounting = {
+    linkOccurrences: nycacLinkOccurrences,
+    normalizedUrlRows: nycacLinkRows.length,
+    eventsWithOutboundLinks: nycacLinkedEventIds.size,
+    sourceArticles: nycacArticleRows.length,
+    protectedRows: nycacProtectedLinkRows.length,
+    researchNeededRows: nycacUnresolvedLinkRows.length
+  };
+  const nycacEventTitleById = new Map(
+    nycacRecoveredEventRows.map((record) => [record.eventId, record.title])
+  );
+  const nycacLinkRowsMatchEventLedger = nycacLinkRows.every((row) =>
+    Array.isArray(row.eventIds) &&
+    Array.isArray(row.eventTitles) &&
+    row.eventTitles.length > 0 &&
+    (
+      row.eventTitles.length === 1
+        ? row.eventIds.every((eventId) =>
+            nycacEventTitleById.get(eventId) === row.eventTitles[0]
+          )
+        : row.eventIds.length === row.eventTitles.length &&
+          row.eventIds.every((eventId, index) =>
+            nycacEventTitleById.get(eventId) === row.eventTitles[index]
+          )
+    )
+  );
+  const nycacEventIntake = intakeById.get("INTAKE-NYCAC-FACEBOOK-EVENT-POPULATION-2026");
+  const nycacEventSources = nycacFacebookEvents.sources.map((source) => sourceById.get(source.id));
+  const nycacEventObservations = nycacFacebookEvents.observations.map(
+    (observation) => observationById.get(observation.id)
+  );
+  const nycacEventClaims = nycacFacebookEvents.claims.map((claim) => claimById.get(claim.id));
+  const nycacEventInquiries = nycacFacebookEvents.researchInquiries.map(
+    (inquiry) => inquiryById.get(inquiry.id)
+  );
+  const nycacParticipationClaim = claimById.get(nycacEvents.selectedClaimId);
+  const nycacHeldEventClaims = nycacEvents.heldClaimIds.map((id) => claimById.get(id));
+  const nycacEventPageOccurrence = fairRentPage?.occurrences.find(
+    (occurrence) => occurrence.claimId === nycacEvents.selectedClaimId
+  );
+  const exactEventRecordKeys = new Set([
+    "slotId", "eventId", "date", "title", "pageRelationship", "venueOrMode",
+    "eventFormat", "primaryProgram", "isRecurringMeeting", "responseDisplay",
+    "responseValue", "recoveryStatus", "sourceUrl"
+  ]);
+  const exactEventLinkKeys = new Set([
+    "rowId", "host", "category", "disposition", "publicUrl", "eventIds",
+    "eventTitles", "occurrences"
+  ]);
+  const exactEventLedgerKeys = new Set([
+    "account", "accounting", "capturedAt", "liveReplay", "populationDefinition",
+    "privacyBoundary", "records", "revalidatedAt", "schemaVersion", "surface"
+  ]);
+  const exactEventLinkLedgerKeys = new Set([
+    "account", "accounting", "capturedAt", "interpretationBoundary", "method",
+    "privacyBoundary", "revalidatedAt", "rows", "schemaVersion", "surface"
+  ]);
+  const exactEventAccountingKeys = new Set([
+    "controlSlots", "recoveredRecords", "unresolvedSlots", "yearCounts", "responseSignals"
+  ]);
+  const exactResponseAccountingKeys = new Set([
+    "displayed", "missing", "minimum", "maximum", "atLeast100", "atLeast400",
+    "atLeast1000", "boundary"
+  ]);
+  const exactReplayKeys = new Set([
+    "authenticatedUrlsOpened", "eventHeadersRecovered", "currentFullDetailModules",
+    "currentHeaderOnlyUnavailableModules", "currentHeaderOnlyUnavailableEventIds", "note"
+  ]);
+  const exactLinkAccountingKeys = new Set([
+    "linkOccurrences", "normalizedUrlRows", "eventsWithOutboundLinks", "sourceArticles",
+    "protectedRows", "researchNeededRows"
+  ]);
+  const isStringOrNull = (value) => typeof value === "string" || value === null;
+  const isFiniteNumberOrNull = (value) => Number.isFinite(value) || value === null;
+  const nycacEventRecordShapesValid = nycacEventRows.every((row) =>
+    hasExactKeys(row, exactEventRecordKeys) &&
+    typeof row.slotId === "string" &&
+    isStringOrNull(row.eventId) &&
+    isStringOrNull(row.date) &&
+    isStringOrNull(row.title) &&
+    typeof row.pageRelationship === "string" &&
+    isStringOrNull(row.venueOrMode) &&
+    isStringOrNull(row.eventFormat) &&
+    isStringOrNull(row.primaryProgram) &&
+    typeof row.isRecurringMeeting === "boolean" &&
+    isStringOrNull(row.responseDisplay) &&
+    isFiniteNumberOrNull(row.responseValue) &&
+    typeof row.recoveryStatus === "string" &&
+    isStringOrNull(row.sourceUrl)
+  );
+  const nycacLinkRowShapesValid = nycacLinkRows.every((row) =>
+    hasExactKeys(row, exactEventLinkKeys) &&
+    typeof row.rowId === "string" &&
+    typeof row.host === "string" &&
+    typeof row.category === "string" &&
+    typeof row.disposition === "string" &&
+    isStringOrNull(row.publicUrl) &&
+    Array.isArray(row.eventIds) && row.eventIds.every((value) => typeof value === "string") &&
+    Array.isArray(row.eventTitles) && row.eventTitles.every((value) => typeof value === "string") &&
+    Number.isInteger(row.occurrences)
+  );
+  const nycacEventLedgerShapeValid = Boolean(
+    hasExactKeys(nycacEventLedger, exactEventLedgerKeys) &&
+    typeof nycacEventLedger.account === "string" &&
+    typeof nycacEventLedger.capturedAt === "string" &&
+    typeof nycacEventLedger.populationDefinition === "string" &&
+    typeof nycacEventLedger.privacyBoundary === "string" &&
+    nycacEventLedger.privacyBoundary.includes("Public institutional event metadata only") &&
+    nycacEventLedger.privacyBoundary.includes("Guest identities") &&
+    nycacEventLedger.privacyBoundary.includes("excluded") &&
+    typeof nycacEventLedger.revalidatedAt === "string" &&
+    typeof nycacEventLedger.schemaVersion === "string" &&
+    typeof nycacEventLedger.surface === "string" &&
+    Array.isArray(nycacEventLedger.records) &&
+    hasExactKeys(nycacEventLedger.accounting, exactEventAccountingKeys) &&
+    Object.values(nycacEventLedger.accounting.yearCounts ?? {}).every(Number.isInteger) &&
+    hasExactKeys(nycacEventLedger.accounting.responseSignals, exactResponseAccountingKeys) &&
+    Object.entries(nycacEventLedger.accounting.responseSignals).every(([key, value]) =>
+      key === "boundary" ? typeof value === "string" : Number.isFinite(value)
+    ) &&
+    hasExactKeys(nycacEventLedger.liveReplay, exactReplayKeys) &&
+    Number.isInteger(nycacEventLedger.liveReplay.authenticatedUrlsOpened) &&
+    Number.isInteger(nycacEventLedger.liveReplay.eventHeadersRecovered) &&
+    Number.isInteger(nycacEventLedger.liveReplay.currentFullDetailModules) &&
+    Number.isInteger(nycacEventLedger.liveReplay.currentHeaderOnlyUnavailableModules) &&
+    Array.isArray(nycacEventLedger.liveReplay.currentHeaderOnlyUnavailableEventIds) &&
+    nycacEventLedger.liveReplay.currentHeaderOnlyUnavailableEventIds.every((value) => typeof value === "string") &&
+    typeof nycacEventLedger.liveReplay.note === "string" &&
+    nycacEventRecordShapesValid
+  );
+  const nycacLinkLedgerShapeValid = Boolean(
+    hasExactKeys(nycacEventLinkLedger, exactEventLinkLedgerKeys) &&
+    typeof nycacEventLinkLedger.account === "string" &&
+    typeof nycacEventLinkLedger.capturedAt === "string" &&
+    typeof nycacEventLinkLedger.interpretationBoundary === "string" &&
+    typeof nycacEventLinkLedger.method === "string" &&
+    typeof nycacEventLinkLedger.privacyBoundary === "string" &&
+    nycacEventLinkLedger.privacyBoundary.includes("Meeting access paths") &&
+    nycacEventLinkLedger.privacyBoundary.includes("withheld") &&
+    typeof nycacEventLinkLedger.revalidatedAt === "string" &&
+    typeof nycacEventLinkLedger.schemaVersion === "string" &&
+    typeof nycacEventLinkLedger.surface === "string" &&
+    Array.isArray(nycacEventLinkLedger.rows) &&
+    hasExactKeys(nycacEventLinkLedger.accounting, exactLinkAccountingKeys) &&
+    Object.values(nycacEventLinkLedger.accounting).every(Number.isInteger) &&
+    nycacLinkRowShapesValid
+  );
+  const nycacEventLedgerText = nycacEventLedger ? JSON.stringify(nycacEventLedger) : "";
+  const nycacEventLinkLedgerText = nycacEventLinkLedger ? JSON.stringify(nycacEventLinkLedger) : "";
+  const nycacEventLedgerDigestMatches = sha256(nycacEventLedgerText) === nycacEvents.expectedEventLedgerDigestSha256;
+  const nycacEventLinkLedgerDigestMatches = sha256(nycacEventLinkLedgerText) === nycacEvents.expectedLinkLedgerDigestSha256;
+  const nycacCanonicalPublicData = {
+    sources: nycacEventSources,
+    observations: nycacEventObservations,
+    selectedClaim: nycacParticipationClaim
+  };
+  const nycacCanonicalGraph = {
+    intakeItems: [nycacEventIntake],
+    sources: nycacEventSources,
+    observations: nycacEventObservations,
+    claims: nycacEventClaims,
+    researchInquiries: nycacEventInquiries
+  };
+  const nycacCanonicalPublicText = JSON.stringify(nycacCanonicalPublicData);
+  const nycacCanonicalGraphText = JSON.stringify(nycacCanonicalGraph);
+  const nycacNarrativePublicContractText = JSON.stringify({
+    fairRentMdx: fairRentMdxOnDisk,
+    documentation: nycacEventDocumentationOnDisk,
+    report: nycacEventReportOnDisk,
+    claimsDocumentation: nycacClaimsDocumentationOnDisk,
+    projectOverview: nycacProjectOverviewOnDisk,
+    publicRegistry: publicRegistryTextOnDisk,
+    proofNarrative: {
+      publicWording: nycacProof?.publicWording,
+      shortWording: nycacProof?.shortWording,
+      detailedPublicWording: nycacProof?.detailedPublicWording,
+      whyItMatters: nycacProof?.whyItMatters
+    }
+  });
+  const nycacEventPublicText = [
+    nycacEventLedgerText,
+    nycacEventLinkLedgerText,
+    nycacCanonicalPublicText,
+    nycacEventDocumentation,
+    nycacEventReport,
+    nycacClaimsNarrative,
+    nycacProjectOverview,
+    fairRentMdx,
+    proofData
+  ].join("\n");
+  const nycacEventSourceContractsPass = Object.entries(nycacEvents.sourceContracts).every(
+    ([id, [supportPhrase, boundaryPhrase]]) => {
+      const source = sourceById.get(id);
+      return source &&
+        source.supportsGenerally.join(" ").includes(supportPhrase) &&
+        source.doesNotEstablish.join(" ").includes(boundaryPhrase);
+    }
+  );
+  const nycacEventClaimContractsPass = Object.entries(nycacEvents.claimContracts).every(
+    ([id, phrases]) => {
+      const claim = claimById.get(id);
+      const text = claim ? JSON.stringify(claim) : "";
+      return phrases.every((phrase) => text.includes(phrase));
+    }
+  );
+  const nycacParticipationPublicText = nycacParticipationClaim ? [
+    nycacParticipationClaim.internalClaim,
+    ...nycacParticipationClaim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text)
+  ].join(" ") : "";
+  const nycacProofNarrativeSurfaces = fixtures.nycacProofNarrative === undefined
+    ? [
+      nycacProof?.publicWording,
+      nycacProof?.shortWording,
+      nycacProof?.detailedPublicWording,
+      nycacProof?.whyItMatters
+    ].filter(Boolean)
+    : [fixtures.nycacProofNarrative];
+  const nycacCanonicalNarrativeSurfaces = [
+    ...nycacEventSources.flatMap((source) => [source?.publicNote, source?.publicCitation]),
+    ...nycacEventObservations.map((observation) => observation?.text)
+  ].filter(Boolean);
+  const nycacNarrativeSurfaces = [
+    nycacParticipationPublicText,
+    nycacEventDocumentation,
+    nycacEventReport,
+    nycacClaimsNarrative,
+    nycacProjectOverview,
+    fairRentMdx,
+    ...nycacProofNarrativeSurfaces,
+    ...nycacCanonicalNarrativeSurfaces
+  ];
+  const nycacPublicProjectionSurfaces = [
+    nycacParticipationPublicText,
+    fairRentMdx,
+    ...nycacProofNarrativeSurfaces
+  ];
+  const nycacSoleCreditViolation = nycacNarrativeSurfaces.some(containsNycacSoleCreditClaim);
+  const nycacAttendanceConversionViolation = nycacNarrativeSurfaces.some(containsUnsafeAttendanceConversion);
+  const nycacHeldInterpretationViolation = nycacPublicProjectionSurfaces.some(containsNycacHeldInterpretation);
+  const nycacCanonicalPersonalMetadataViolation = deepStringValues(nycacCanonicalPublicData)
+    .some(containsExplicitPersonalIdentityMaterial);
+  const nycacCanonicalProtectedLocatorViolation = deepStringValues(nycacCanonicalPublicData)
+    .some(containsProtectedLocator);
+  const nycacCanonicalCredentialViolation = deepStringValues(nycacCanonicalPublicData)
+    .some(containsCredentialMaterial);
+  let nycacRegistryProjectionMatches = false;
+  let nycacRegistryPublicSafetyPasses = false;
+  try {
+    const registry = JSON.parse(publicRegistryText);
+    const registryClaim = registry.claims.find((claim) => claim.id === nycacEvents.selectedClaimId);
+    const registrySourceIds = new Set([
+      ...nycacEvents.eventSourceIds,
+      ...(nycacParticipationClaim?.evidence ?? []).filter((evidence) => evidence.renderCitation).map((evidence) => evidence.sourceId)
+    ]);
+    const registrySlice = {
+      claim: registryClaim,
+      sources: registry.sources.filter((source) => registrySourceIds.has(source.id)),
+      page: registry.pages.find((page) => page.id === "fair-rent-nyc")
+    };
+    const activeProjections = nycacParticipationClaim?.projections.filter(
+      (projection) => projection.status === "active"
+    ) ?? [];
+    nycacRegistryProjectionMatches = Boolean(
+      registryClaim &&
+      JSON.stringify(registryClaim.projections) === JSON.stringify(activeProjections)
+    );
+    nycacRegistryPublicSafetyPasses = publicRegistryText === publicRegistryTextOnDisk &&
+      !deepStringValues(registrySlice).some(containsExplicitPersonalIdentityMaterial) &&
+      !deepStringValues(registrySlice).some(containsProtectedLocator) &&
+      !deepStringValues(registrySlice).some(containsCredentialMaterial);
+  } catch {
+    nycacRegistryProjectionMatches = false;
+    nycacRegistryPublicSafetyPasses = false;
+  }
+  const nycacEventAccountingMatchesRows = Boolean(
+    nycacEventLedger?.accounting?.controlSlots === nycacEventRows.length &&
+      nycacEventLedger.accounting.recoveredRecords === nycacRecoveredEventRows.length &&
+      nycacEventLedger.accounting.unresolvedSlots === nycacUnresolvedEventRows.length &&
+      numericRecordEquals(nycacEventLedger.accounting.yearCounts, nycacEventYearCounts) &&
+      Object.entries(nycacDerivedResponseAccounting).every(
+        ([key, value]) => nycacEventLedger.accounting.responseSignals?.[key] === value
+      )
+  );
+  const nycacLinkAccountingMatchesRows = Boolean(
+    nycacEventLinkLedger?.accounting &&
+      Object.entries(nycacDerivedLinkAccounting).every(
+        ([key, value]) => nycacEventLinkLedger.accounting[key] === value
+      )
+  );
+  const nycacReplayEventIdsValid = Boolean(
+    nycacEventLedger?.liveReplay &&
+      stringSetEquals(
+        nycacEventLedger.liveReplay.currentHeaderOnlyUnavailableEventIds,
+        nycacEvents.expectedCurrentReplayHeaderOnlyEventIds
+      ) &&
+      nycacEventLedger.liveReplay.currentHeaderOnlyUnavailableEventIds.every((eventId) =>
+        nycacEventTitleById.has(eventId)
+      )
+  );
+  const nycacEmbeddedPersonalMetadataViolation = [nycacEventLedger, nycacEventLinkLedger]
+    .flatMap(deepStringValues)
+    .some(containsPersonalIdentityMaterial);
+  const nycacProtectedLocatorViolation = [nycacEventLedger, nycacEventLinkLedger]
+    .flatMap(deepStringValues)
+    .some(containsProtectedLocator);
+  const nycacEventRowIdentifiersValid = Boolean(
+    nycacEventRows.length === new Set(nycacEventRows.map((row) => row.slotId)).size &&
+      nycacRecoveredEventRows.length === new Set(nycacRecoveredEventRows.map((row) => row.eventId)).size &&
+      nycacRecoveredEventRows.length === new Set(nycacRecoveredEventRows.map((row) => row.sourceUrl)).size &&
+      nycacRecoveredEventRows.every((row) =>
+        typeof row.eventId === "string" && /^\d+$/.test(row.eventId) &&
+        row.sourceUrl === `https://www.facebook.com/events/${row.eventId}/` &&
+        /^\d{4}-\d{2}-\d{2}$/.test(row.date) &&
+        parseFacebookResponseDisplay(row.responseDisplay) === row.responseValue
+      )
+  );
+  const nycacLinkRowIdentifiersValid = Boolean(
+    nycacLinkRows.length === new Set(nycacLinkRows.map((row) => row.rowId)).size &&
+      nycacLinkRows.every((row) =>
+        row.eventIds.length === new Set(row.eventIds).size &&
+        typeof row.host === "string" && !/[\s/?#]/.test(row.host) &&
+        Number.isInteger(row.occurrences) && row.occurrences > 0 &&
+        publicLinkRowIsSafe(row)
+      )
+  );
+  const nycacCanonicalEventSourcesMatchLedger = nycacEvents.eventSourceIds.every((id) => {
+    const source = sourceById.get(id);
+    const eventId = source?.canonicalUrl?.match(/facebook\.com\/events\/(\d+)/)?.[1];
+    const record = eventId ? nycacRecoveredEventRows.find((row) => row.eventId === eventId) : null;
+    return Boolean(
+      source && record && source.title === record.title &&
+      source.publishedAt === record.date &&
+      source.canonicalUrl === record.sourceUrl
+    );
+  });
+  const nycacEventPopulationComplete = Boolean(
+    nycacEventLedger &&
+      nycacEventLinkLedger &&
+      nycacEventLedger.account === "@nycartc" &&
+      nycacEventLedger.surface === "Facebook past events" &&
+      nycacEventLedger.populationDefinition.includes("current authenticated host-card control") &&
+      nycacEventRows.length === nycacEvents.expectedControlSlots &&
+      nycacRecoveredEventRows.length === nycacEvents.expectedRecoveredRecords &&
+      nycacUnresolvedEventRows.length === nycacEvents.expectedUnresolvedSlots &&
+      nycacEventLedgerDigestMatches &&
+      nycacEventLinkLedgerDigestMatches &&
+      sha256(nycacEventLedgerText) === nycacEventLedgerPublicContractSha256 &&
+      sha256(nycacEventLinkLedgerText) === nycacLinkLedgerPublicContractSha256 &&
+      sha256(nycacCanonicalGraphText) === nycacCanonicalGraphPublicContractSha256 &&
+      sha256(nycacNarrativePublicContractText) === nycacNarrativePublicContractSha256 &&
+      nycacEventLedgerShapeValid &&
+      nycacLinkLedgerShapeValid &&
+      nycacEventAccountingMatchesRows &&
+      Object.entries(nycacEvents.expectedYearCounts).every(([year, count]) => nycacEventYearCounts[year] === count) &&
+      nycacEventRelationshipCounts["direct-card-host"] === nycacEvents.expectedDirectHostCards &&
+      nycacEventRelationshipCounts["cohosted-or-associated"] === nycacEvents.expectedAlignedHostCards &&
+      nycacRecurringRows.length === nycacEvents.expectedRecurringMeetingRecords &&
+      nycacPhysicalMeetingVenues.size === nycacEvents.expectedDistinctPhysicalVenues &&
+      nycacVirtualMeetingRows.length === nycacEvents.expectedVirtualMeetingRecords &&
+      nycacResponseValues.length === nycacEvents.expectedResponseDisplays &&
+      Math.min(...nycacResponseValues) === nycacEvents.expectedMinimumResponseDisplay &&
+      Math.max(...nycacResponseValues) === nycacEvents.expectedMaximumResponseDisplay &&
+      nycacResponseValues.filter((value) => value >= 100).length === nycacEvents.expectedResponseDisplaysAtLeast100 &&
+      nycacResponseValues.filter((value) => value >= 400).length === nycacEvents.expectedResponseDisplaysAtLeast400 &&
+      nycacResponseValues.filter((value) => value >= 1000).length === nycacEvents.expectedResponseDisplaysAtLeast1000 &&
+      nycacEventLedger.accounting.responseSignals.boundary.includes("must not be summed") &&
+      nycacEventLedger.liveReplay.eventHeadersRecovered === nycacEvents.expectedCurrentReplayHeaders &&
+      nycacEventLedger.liveReplay.currentFullDetailModules === nycacEvents.expectedCurrentReplayFullBodies &&
+      nycacEventLedger.liveReplay.currentHeaderOnlyUnavailableModules === nycacEvents.expectedCurrentReplayHeaderOnlyBodies &&
+      nycacEventLedger.liveReplay.authenticatedUrlsOpened === nycacRecoveredEventRows.length &&
+      nycacEventLedger.liveReplay.currentFullDetailModules + nycacEventLedger.liveReplay.currentHeaderOnlyUnavailableModules === nycacRecoveredEventRows.length &&
+      nycacReplayEventIdsValid &&
+      nycacEventLinkLedger.account === "@nycartc" &&
+      nycacLinkAccountingMatchesRows &&
+      nycacLinkRows.length === nycacEvents.expectedNormalizedLinkRows &&
+      nycacLinkedEventIds.size === nycacEvents.expectedEventsWithOutboundLinks &&
+      nycacLinkOccurrences === nycacEvents.expectedOutboundLinkOccurrences &&
+      nycacArticleRows.length === nycacEvents.expectedArticleRoutes &&
+      nycacProtectedLinkRows.length === nycacEvents.expectedProtectedLinkRows &&
+      nycacProtectedLinkRows.every((row) => row.publicUrl === null) &&
+      nycacUnresolvedLinkRows.length === nycacEvents.expectedUnresolvedLinkRows &&
+      nycacLinkRowsMatchEventLedger &&
+      nycacEventRows.every((row) => hasExactKeys(row, exactEventRecordKeys)) &&
+      nycacLinkRows.every((row) => hasExactKeys(row, exactEventLinkKeys)) &&
+      hasExactKeys(nycacEventLedger, exactEventLedgerKeys) &&
+      hasExactKeys(nycacEventLinkLedger, exactEventLinkLedgerKeys) &&
+      hasExactKeys(nycacEventLedger.accounting, exactEventAccountingKeys) &&
+      hasExactKeys(nycacEventLedger.accounting.responseSignals, exactResponseAccountingKeys) &&
+      hasExactKeys(nycacEventLedger.liveReplay, exactReplayKeys) &&
+      hasExactKeys(nycacEventLinkLedger.accounting, exactLinkAccountingKeys) &&
+      nycacEventRowIdentifiersValid &&
+      nycacLinkRowIdentifiersValid &&
+      nycacUnresolvedEventRows.every((row) =>
+        row.slotId === "unresolved-034" &&
+        row.eventId === null && row.date === null && row.title === null &&
+        row.venueOrMode === null && row.eventFormat === null &&
+        row.primaryProgram === null && row.responseDisplay === null &&
+        row.responseValue === null && row.sourceUrl === null &&
+        row.pageRelationship === "control-only" && row.isRecurringMeeting === false
+      ) &&
+      !nycacEmbeddedPersonalMetadataViolation &&
+      !nycacProtectedLocatorViolation &&
+      nycacFacebookEventPopulationAudit.controlSlots === nycacEvents.expectedControlSlots &&
+      nycacFacebookEventPopulationAudit.recoveredRecords === nycacEvents.expectedRecoveredRecords &&
+      nycacFacebookEventPopulationAudit.unresolvedSlots === nycacEvents.expectedUnresolvedSlots &&
+      nycacFacebookEventFindings.currentReplayFullBodies === nycacEvents.expectedCurrentReplayFullBodies &&
+      nycacFacebookEventFindings.currentReplayHeaderOnlyBodies === nycacEvents.expectedCurrentReplayHeaderOnlyBodies &&
+      nycacFacebookEvents.sources.length === nycacEvents.expectedNewSourceCount &&
+      nycacFacebookEvents.observations.length === nycacEvents.expectedObservationCount &&
+      nycacFacebookEvents.claims.length === nycacEvents.expectedClaimCount &&
+      nycacFacebookEvents.researchInquiries.length === nycacEvents.expectedInquiryCount &&
+      nycacEventIntake?.disposition === "integrated" &&
+      nycacEventIntake.boundaries.length >= 4 &&
+      nycacEventIntake.sourceIds.every((id) => sourceById.has(id)) &&
+      nycacEventIntake.observationIds.every((id) => observationById.has(id)) &&
+      nycacEventSources.every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+      nycacEventObservations.every((observation) =>
+        observation?.locator && observation.limitations.length &&
+        observation.sourceId && observation.claimIds.length && observation.researchInquiryIds.length
+      ) &&
+      nycacEventClaims.every((claim) =>
+        claim?.boundaries.length >= 2 && claim.antiClaims.length >= 3 && claim.reviewedBy.length >= 2
+      ) &&
+      nycacEventInquiries.every((inquiry) => inquiry?.findings.length >= 3 && inquiry.limitations.length >= 3) &&
+      nycacEventSourceContractsPass &&
+      nycacEventClaimContractsPass &&
+      nycacEvents.eventSourceIds.every((id) => sourceById.get(id)?.canonicalUrl?.includes("facebook.com/events/")) &&
+      nycacCanonicalEventSourcesMatchLedger &&
+      nycacParticipationClaim?.status === "confirmed-with-boundary" &&
+      nycacParticipationClaim.projections.length === 1 &&
+      nycacParticipationClaim.projections.some((projection) =>
+        projection.status === "active" &&
+        projection.surfaces.includes("/work/fair-rent-nyc") &&
+        projection.text.includes("describes his contribution as helping establish and produce")
+      ) &&
+      !nycacSoleCreditViolation &&
+      !nycacHeldInterpretationViolation &&
+      nycacRegistryProjectionMatches &&
+      nycacRegistryPublicSafetyPasses &&
+      nycacParticipationClaim.evidence.some((evidence) =>
+        evidence.sourceId === "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026" &&
+        evidence.relationship === "private-support" && evidence.renderCitation === false
+      ) &&
+      nycacParticipationClaim.evidence.some((evidence) =>
+        evidence.sourceId === "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12" && evidence.renderCitation
+      ) &&
+      nycacHeldEventClaims.every((claim) =>
+        claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+      ) &&
+      claimById.get("CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE")?.status === "inference" &&
+      nycacEventPageOccurrence?.id === "participation-system" &&
+      fairRentMdx.includes("CLM-NYCAC-PARTICIPATION-SYSTEM") &&
+      nycacEventDocumentation.includes("33 recovered event records") &&
+      nycacEventDocumentation.includes("one unresolved historical slot") &&
+      nycacEventDocumentation.includes("22 full bodies and 11 header-only bodies") &&
+      nycacEventReport.includes("Being there changes everything") &&
+      nycacEventReport.includes("describes his contribution as helping establish and produce") &&
+      nycacEventReport.includes("not unique-person or attendance counts") &&
+      !/(?:\/(?:Users|Volumes|private\/tmp)\/|GoogleDrive-|Mobile Documents)/.test(nycacEventPublicText) &&
+      !/(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(nycacEventPublicText) &&
+      !nycacCanonicalPersonalMetadataViolation &&
+      !nycacCanonicalProtectedLocatorViolation &&
+      !nycacCanonicalCredentialViolation &&
+      !nycacAttendanceConversionViolation &&
+      nycacEvents.heldClaimIds.every((id) => !publicRegistryText.includes(id))
+  );
+  const nycacEventDiagnostics = {
+    population: nycacEventRows.length === 34 && nycacRecoveredEventRows.length === 33 && nycacUnresolvedEventRows.length === 1 && Object.entries(nycacEvents.expectedYearCounts).every(([year, count]) => nycacEventYearCounts[year] === count),
+    relationshipsAndVenues: nycacEventRelationshipCounts["direct-card-host"] === 24 && nycacEventRelationshipCounts["cohosted-or-associated"] === 9 && nycacRecurringRows.length === 12 && nycacPhysicalMeetingVenues.size === 10 && nycacVirtualMeetingRows.length === 2,
+    responsesAndReplay: nycacResponseValues.length === 32 && Math.min(...nycacResponseValues) === 9 && Math.max(...nycacResponseValues) === 1700 && nycacEventAccountingMatchesRows && nycacEventLedger?.liveReplay.currentFullDetailModules === 22 && nycacEventLedger?.liveReplay.currentHeaderOnlyUnavailableModules === 11 && nycacReplayEventIdsValid,
+    links: nycacLinkRows.length === 38 && nycacLinkedEventIds.size === 25 && nycacLinkOccurrences === 61 && nycacArticleRows.length === 7 && nycacProtectedLinkRows.length === 1 && nycacUnresolvedLinkRows.length === 4 && nycacLinkRowsMatchEventLedger && nycacLinkAccountingMatchesRows,
+    immutableLedgerContracts: sha256(nycacEventLedgerText) === nycacEventLedgerPublicContractSha256 && sha256(nycacEventLinkLedgerText) === nycacLinkLedgerPublicContractSha256 && sha256(nycacCanonicalGraphText) === nycacCanonicalGraphPublicContractSha256 && sha256(nycacNarrativePublicContractText) === nycacNarrativePublicContractSha256,
+    ledgerShapes: nycacEventLedgerShapeValid && nycacLinkLedgerShapeValid,
+    suiteLedgerDigests: nycacEventLedgerDigestMatches && nycacEventLinkLedgerDigestMatches,
+    eventLedgerIdentifiers: nycacEventRowIdentifiersValid,
+    linkLedgerIdentifiers: nycacLinkRowIdentifiersValid,
+    unresolvedSlotShape: nycacUnresolvedEventRows.every((row) => row.slotId === "unresolved-034" && row.title === null && row.responseDisplay === null && row.responseValue === null && row.sourceUrl === null),
+    ledgerIdentitySafety: !nycacEmbeddedPersonalMetadataViolation,
+    canonicalEventSources: nycacCanonicalEventSourcesMatchLedger,
+    rowContracts: nycacEventLedgerDigestMatches && nycacEventLinkLedgerDigestMatches && sha256(nycacEventLedgerText) === nycacEventLedgerPublicContractSha256 && sha256(nycacEventLinkLedgerText) === nycacLinkLedgerPublicContractSha256 && nycacEventLedgerShapeValid && nycacLinkLedgerShapeValid && nycacEventRowIdentifiersValid && nycacLinkRowIdentifiersValid && nycacUnresolvedEventRows.every((row) => row.slotId === "unresolved-034" && row.title === null && row.responseDisplay === null && row.responseValue === null && row.sourceUrl === null) && !nycacEmbeddedPersonalMetadataViolation && nycacCanonicalEventSourcesMatchLedger,
+    moduleCounts: nycacFacebookEvents.sources.length === 17 && nycacFacebookEvents.observations.length === 24 && nycacFacebookEvents.claims.length === 5 && nycacFacebookEvents.researchInquiries.length === 2,
+    graph: Boolean(nycacEventIntake?.sourceIds.every((id) => sourceById.has(id)) && nycacEventIntake.observationIds.every((id) => observationById.has(id)) && nycacEventSources.every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) && nycacEventObservations.every((observation) => observation?.locator && observation.limitations.length && observation.sourceId && observation.claimIds.length && observation.researchInquiryIds.length)),
+    semanticContracts: nycacEventSourceContractsPass && nycacEventClaimContractsPass,
+    selectedProjection: Boolean(nycacParticipationClaim?.projections.some((projection) => projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc") && projection.text.includes("describes his contribution as helping establish and produce")) && nycacEventPageOccurrence?.id === "participation-system" && fairRentMdx.includes("CLM-NYCAC-PARTICIPATION-SYSTEM")),
+    soleCreditSafety: !nycacSoleCreditViolation,
+    attendanceSafety: !nycacAttendanceConversionViolation,
+    heldInterpretationSafety: !nycacHeldInterpretationViolation,
+    publicRegistryBinding: nycacRegistryProjectionMatches && nycacRegistryPublicSafetyPasses,
+    heldDepth: nycacHeldEventClaims.every((claim) => claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)) && claimById.get("CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE")?.status === "inference",
+    documentation: nycacEventDocumentation.includes("33 recovered event records") && nycacEventDocumentation.includes("one unresolved historical slot") && nycacEventDocumentation.includes("22 full bodies and 11 header-only bodies") && nycacEventReport.includes("Being there changes everything") && nycacEventReport.includes("describes his contribution as helping establish and produce") && nycacEventReport.includes("not unique-person or attendance counts") && !nycacAttendanceConversionViolation,
+    safety: !/(?:\/(?:Users|Volumes|private\/tmp)\/|GoogleDrive-|Mobile Documents)/.test(nycacEventPublicText) && !/(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(nycacEventPublicText) && !nycacCanonicalPersonalMetadataViolation && !nycacCanonicalProtectedLocatorViolation && !nycacCanonicalCredentialViolation
+  };
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -2272,6 +3081,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [urbanFullPopulationComplete
         ? `All ${urbanFull.expectedProfileCount} displayed personal-account slots are dispositioned through ${urbanRecords.length} public mission-relevant item records, ${urbanContextDisposition.count + urbanProtectedDisposition.count} aggregate-only withheld dispositions, and ${urbanFull.expectedUnresolvedSlots} carrier-limited slots; ${urbanUniquePostedUrls.size} distinct posted URLs are retained, source-status metrics are excluded, no public item-level crosswalk exists for withheld context, and all ${urbanHeldClaims.length} claims remain held for deliberate future composition`
         : "Personal-account population arithmetic, aggregate-only withholding, source-link inventory, metric ownership, source maturation, held composition, documentation, or public safety is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      score: score(nycacEventPopulationComplete),
+      evidence: [nycacEventPopulationComplete
+        ? `All ${nycacEvents.expectedControlSlots} displayed Facebook event slots are dispositioned through ${nycacRecoveredEventRows.length} recovered public event records and one unresolved historical slot; ${nycacRecurringRows.length} recurring meetings span ${nycacPhysicalMeetingVenues.size} physical cultural spaces and ${nycacVirtualMeetingRows.length} virtual meetings; ${nycacLinkRows.length} source-route rows remain bounded; responses are not attendance; and only the collective-credit participation-system claim is composed into the site`
+        : `Facebook event criterion failed: ${Object.entries(nycacEventDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
     }
   ];
 

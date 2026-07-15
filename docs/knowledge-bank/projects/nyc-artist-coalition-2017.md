@@ -51,6 +51,17 @@ for the complete ledger and maturation rules.
 
 ## Defensible claims
 
+- A complete accounting of the current Facebook past-events control recovers
+  33 event records and leaves one of 34 displayed slots explicitly unresolved.
+  Twelve recurring-meeting records include ten distinct named physical
+  cultural spaces and two virtual meetings.
+- Jamie describes his contribution as helping establish and produce the coalition's recurring participation
+  system: public event pages, meetings rotated among cultural spaces, practical
+  safety and advocacy sessions, and pathways from artist concerns to public
+  hearings and campaign action. This wording combines Jamie's bounded
+  first-person account, the recovered event pattern, and independent reporting
+  about specific organizing and speaking roles while preserving collective
+  event authorship.
 - Gothamist documented Jamie organizing fire-code study groups for DIY venues,
   rallying at City Hall for full Cabaret Law repeal, and articulating how
   licensing fear could deter spaces from seeking fire-safety guidance.
@@ -89,6 +100,15 @@ collaborator.
 The 100-plus figure is a signup count reported in February 2017. It is not a
 current membership count, an active-participation count, or a measure of people
 served.
+
+Facebook response displays are also not attendance. Thirty-two event pages
+retain response totals from nine to 1.7K, but those figures are mutable,
+event-level platform signals that cannot be summed into unique people, turnout,
+reach, endorsement, or impact.
+
+See
+[nycartc-facebook-events-2026-07-14.md](nycartc-facebook-events-2026-07-14.md)
+for the full event production pass and public-safe source inventory.
 
 ## Shared social identity
 

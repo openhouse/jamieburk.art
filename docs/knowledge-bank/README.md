@@ -103,3 +103,11 @@ for the population-reconciled pass on Jamie's personal public account. It
 preserves 141 mission-relevant records and 87 distinct posted source URLs while
 counting 284 ordinary or protected-context items through aggregate-only
 dispositions, with no public item-level crosswalk or fingerprint.
+
+See
+[intake/2026-07-14-nycartc-facebook-event-population.md](intake/2026-07-14-nycartc-facebook-event-population.md)
+for the full-population pass on NYC Artist Coalition's Facebook event surface.
+It accounts for all 34 displayed control slots through 33 recovered public
+event records and one unresolved slot, preserving the event chronology,
+rotating-venue practice, public source routes, platform drift, and a bounded
+claim about Jamie's role in the recurring participation system.

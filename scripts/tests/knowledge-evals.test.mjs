@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { urbanhermitCorpusFindings, urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
@@ -32,6 +34,49 @@ const urbanhermitLedger = JSON.parse(readFileSync(
   new URL("../../docs/knowledge-bank/data/urbanhermit-public-post-ledger.json", import.meta.url),
   "utf8"
 ));
+const nycacFacebookEventLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/nycartc-public-facebook-event-ledger.json", import.meta.url),
+  "utf8"
+));
+const nycacFacebookEventLinkLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/nycartc-public-facebook-event-link-ledger.json", import.meta.url),
+  "utf8"
+));
+const nycacFacebookEventDocumentation = readFileSync(
+  new URL("../../docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-event-population.md", import.meta.url),
+  "utf8"
+);
+const nycacFacebookEventReport = readFileSync(
+  new URL("../../docs/knowledge-bank/projects/nycartc-facebook-events-2026-07-14.md", import.meta.url),
+  "utf8"
+);
+const fairRentMdx = readFileSync(
+  new URL("../../apps/www/src/content/work/fair-rent-nyc.mdx", import.meta.url),
+  "utf8"
+);
+const publicRegistryText = readFileSync(
+  new URL("../../apps/www/src/data/knowledge-bank/public-registry.json", import.meta.url),
+  "utf8"
+);
+
+const knowledgeCriterionScore = (result) =>
+  result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score;
+
+function evaluateEventLedgerWithReboundDigest(altered) {
+  const alteredSuite = structuredClone(suite);
+  alteredSuite.pilot.nycacFacebookEvents.expectedEventLedgerDigestSha256 = createHash("sha256")
+    .update(JSON.stringify(altered))
+    .digest("hex");
+  return evaluateKnowledgeBank(alteredSuite, { nycacFacebookEventLedger: altered });
+}
+
+function evaluateLinkLedgerWithReboundDigest(altered) {
+  const alteredSuite = structuredClone(suite);
+  alteredSuite.pilot.nycacFacebookEvents.expectedLinkLedgerDigestSha256 = createHash("sha256")
+    .update(JSON.stringify(altered))
+    .digest("hex");
+  return evaluateKnowledgeBank(alteredSuite, { nycacFacebookEventLinkLedger: altered });
+}
 
 test("knowledge-bank pilot retains every supplied intake item", () => {
   const result = evaluateKnowledgeBank(suite);
@@ -1904,6 +1949,983 @@ test("NYC Artist Coalition reserve depth stays off public surfaces", () => {
       )
     )
   );
+});
+
+test("NYC Artist Coalition Facebook event population meets the complete criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    5
+  );
+  assert.equal(nycacFacebookEventPopulationAudit.controlSlots, 34);
+  assert.equal(nycacFacebookEventPopulationAudit.recoveredRecords, 33);
+  assert.equal(nycacFacebookEventPopulationAudit.unresolvedSlots, 1);
+  assert.equal(nycacFacebookEventFindings.currentReplayFullBodies, 22);
+  assert.equal(nycacFacebookEventFindings.currentReplayHeaderOnlyBodies, 11);
+});
+
+test("NYC Artist Coalition event eval rejects erasing the unresolved slot", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.records.pop();
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects invented unresolved metadata", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.records.at(-1).title = "Inferred missing event";
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects response-as-attendance wording", () => {
+  const result = evaluateKnowledgeBank(suite, {
+    nycacFacebookEventDocumentation:
+      `${nycacFacebookEventDocumentation}\n\nThe response totals equal attendance at these events.`
+  });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects RSVP-as-turnout paraphrases", () => {
+  const result = evaluateKnowledgeBank(suite, {
+    nycacFacebookEventDocumentation:
+      `${nycacFacebookEventDocumentation}\n\nFacebook RSVPs were the turnout.`
+  });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects semantic attendance bypasses", () => {
+  for (const sentence of [
+    "Facebook RSVPs demonstrate turnout.",
+    "Facebook responses are not unique reach, but Facebook RSVPs were the turnout.",
+    "The Facebook response total was attendance.",
+    "Attendance matched Facebook response totals.",
+    "Although Facebook responses are not unique reach, Facebook RSVPs were the turnout.",
+    "Treat Facebook responses as attendance.",
+    "Facebook RSVPs verify turnout.",
+    "Facebook responses are not estimates and Facebook RSVPs were the turnout.",
+    "Facebook RSVPs were the headcount.",
+    "Facebook responses tracked how many people showed up.",
+    "Treat Facebook responses as the crowd size.",
+    "Facebook response totals measure in-person presence.",
+    "Facebook RSVPs prove audience size.",
+    "Facebook responses did not merely suggest attendance but verified it.",
+    "Facebook responses aren't just platform signals - they prove turnout.",
+    "No one doubts Facebook responses prove turnout.",
+    "Facebook responses cannot be distinguished from attendance.",
+    "Facebook responses did not fail to represent attendance.",
+    "Facebook responses are not estimates and therefore represent attendance.",
+    "Facebook response totals were recorded. They establish the turnout.",
+    "The audience size was exactly the Facebook reply figure.",
+    "It is false that Facebook RSVPs do not represent attendance.",
+    "Attendance was the thing those Facebook numbers measured.",
+    "Use the number responding on Facebook as the count of people present in the room.",
+    "Facebook responses validate physical presence.",
+    "People who clicked Going on Facebook were the people who showed up.",
+    "The Going tally on Facebook was the headcount.",
+    "Facebook event confirmations measured audience size.",
+    "Facebook RSVPs were recorded. This establishes turnout.",
+    "The claim that Facebook RSVPs do not represent attendance is false.",
+    "The Interested tally on Facebook represented attendance.",
+    "Facebook's Going count was the crowd size.",
+    "Facebook response totals were recorded. Those verify physical presence.",
+    "Facebook's Interested metric established turnout.",
+    "The response figures measured the audience size.",
+    "Facebook response totals prove that 400 people attended.",
+    "Facebook RSVPs counted the attendees.",
+    "It is not false that Facebook responses do not establish attendance.",
+    "The claim that Facebook RSVPs cannot establish turnout is unsupported.",
+    "The audience consisted of the people responding on Facebook.",
+    "Facebook responses supplied the number of unique individuals reached.",
+    "Facebook RSVPs establish footfall at coalition events.",
+    "Facebook response totals supplied the number who came through the door.",
+    "The Facebook Going figure was our total reach.",
+    "Facebook replies served as the on-site gate count.",
+    "Facebook confirmations show how many visitors arrived.",
+    "Facebook's response figures became our room-fill number: 1,700 bodies under one roof.",
+    "The Facebook tally gives the number of seats occupied at the venue.",
+    "Nobody can say the Facebook count failed to capture how many New Yorkers crossed the threshold.",
+    "Facebook responses were a community mandate for the repeal.",
+    "The response totals quantify how far the campaign traveled through the city.",
+    "Facebook RSVPs translated one-for-one into people in the hall.",
+    "It would be wrong to say the Facebook figures did not reveal a packed house.",
+    "Facebook logged 1.7K responses. The same number filled the room.",
+    "Facebook logged 1.7K responses. That became 1.7K people in seats.",
+    "The Facebook response count delivered the repeal.",
+    "The Going total on Facebook amounted to a vote of confidence from the community.",
+    "Facebook responses measured the size of the constituency the campaign reached.",
+    "Facebook responses documented a 1,700-strong room.",
+    "It is not true that Facebook responses failed to mirror the bodies in the room.",
+    "A packed hall was inferred from the Facebook totals.",
+    "“Facebook responses are a community mandate,” the caption declared.",
+    "Facebook showed 1.7K responses, a census of the coalition’s supporters.",
+    "The platform’s event reply indicator furnished the number who entered the building.",
+    "The Facebook event card recorded 400 clicks; each click stands for a distinct participant.",
+    "Facebook displayed the response figure. This was retained for context. The value was the on-site population.",
+    "The blue-button total doubled as the door sheet for the night.",
+    "Facebook’s event counter represented the people who backed the campaign.",
+    "The event-page acceptances counted everyone who crossed the venue threshold.",
+    "The social RSVP roll was our census of the room.",
+    "Each Going mark corresponded to one occupied chair.",
+    "The platform acknowledgments reveal the number of neighbors physically present.",
+    "Digital replies furnished the live-room census."
+  ]) {
+    const result = evaluateKnowledgeBank(suite, {
+      nycacFacebookEventDocumentation: `${nycacFacebookEventDocumentation}\n\n${sentence}`
+    });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1,
+      sentence
+    );
+  }
+});
+
+test("NYC Artist Coalition event eval accepts direct response boundaries", () => {
+  for (const sentence of [
+    "Facebook response totals do not establish physical attendance.",
+    "Never use Facebook RSVP totals as a headcount.",
+    "Facebook RSVPs cannot be used as attendance.",
+    "Facebook responses are not a measure of turnout.",
+    "Facebook responses are not attendance.",
+    "Do not infer turnout from Facebook RSVP figures.",
+    "Facebook RSVPs should never be mistaken for attendance.",
+    "Facebook RSVP totals provide no evidence of attendance.",
+    "Facebook responses cannot establish attendance but remain useful platform signals.",
+    "Facebook response totals give no measure of turnout.",
+    "Facebook RSVPs do not indicate turnout.",
+    "Facebook responses cannot tell us attendance.",
+    "Facebook response totals are not evidence of attendance.",
+    "Facebook responses and attendance must be kept separate.",
+    "Do not conflate Facebook responses with turnout.",
+    "Facebook response totals say nothing about attendance.",
+    "No valid inference from Facebook responses to attendance is available.",
+    "There is no evidence that Facebook responses establish attendance.",
+    "Attendance cannot be established from Facebook responses.",
+    "Keep Facebook responses separate from attendance.",
+    "Attendance cannot be inferred from Facebook RSVPs.",
+    "Facebook responses are insufficient evidence of turnout.",
+    "Facebook response totals offer no support for any participation claim.",
+    "Facebook response totals and independently reported attendance are separate measurements.",
+    "Facebook responses may be compared with event-specific attendance only to illustrate their non-equivalence.",
+    "Facebook responses and a separately measured door count are independent datasets; neither substitutes for the other.",
+    "The venue separately reported 100 attendees; Facebook displayed 1.2K responses. Those sources must be kept distinct.",
+    "Independent reporting described about 100 people physically attending, while Facebook showed 1.2K responses.",
+    "Facebook showed 1.2K responses, whereas the newspaper separately reported roughly 100 attendees.",
+    "The report quotes “Facebook RSVPs equal attendance” only to reject that equation.",
+    "The phrase “Facebook totals equal turnout” is prohibited.",
+    "Facebook showed 1.2K responses. Separately, an independently preserved venue log records 86 people inside the hall.",
+    "Never use an event-card reaction number as a proxy for physical presence.",
+    "A separately archived turnstile log establishes attendance; Facebook responses do not establish it.",
+    "A fire inspector independently reported 86 occupants. Facebook totals were never used to derive that count."
+    ,"An RSVP is an interface state, not a headcount of anyone inside the venue."
+  ]) {
+    const result = evaluateKnowledgeBank(suite, {
+      nycacFacebookEventDocumentation: `${nycacFacebookEventDocumentation}\n\n${sentence}`
+    });
+    assert.equal(knowledgeCriterionScore(result), 5, sentence);
+  }
+});
+
+test("NYC Artist Coalition event eval scans the report for attendance conversion", () => {
+  const result = evaluateKnowledgeBank(suite, {
+    nycacFacebookEventReport:
+      `${nycacFacebookEventReport}\n\nFacebook responses equal attendance.`
+  });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval scans public page and proof copy for attendance conversion", () => {
+  for (const fixture of [
+    { fairRentMdx: `${fairRentMdx}\n\nFacebook responses are the attendance.` },
+    { nycacProofNarrative: "Facebook response totals represent unique people." }
+  ]) {
+    const result = evaluateKnowledgeBank(suite, fixture);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1,
+      JSON.stringify(fixture)
+    );
+  }
+});
+
+test("NYC Artist Coalition event eval scans canonical source notes and observations", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026"
+  );
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-NYCAC-FACEBOOK-RESPONSE-SIGNALS"
+  );
+  assert.ok(source);
+  assert.ok(observation);
+  const originalSourceNote = source.publicNote;
+  const originalObservationText = observation.text;
+  try {
+    source.publicNote = `${originalSourceNote} Facebook responses equal attendance.`;
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+
+    source.publicNote = `${originalSourceNote} The response figures became our room-fill number.`;
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+
+    source.publicNote = originalSourceNote;
+    observation.text = `${originalObservationText} Jamie alone delivered the repeal.`;
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+
+    observation.text = `${originalObservationText} The event calendar was Jamie's brainchild.`;
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    source.publicNote = originalSourceNote;
+    observation.text = originalObservationText;
+  }
+});
+
+test("NYC Artist Coalition event eval scans canonical public fields for people and private locators", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026"
+  );
+  assert.ok(source);
+  const original = {
+    publicNote: source.publicNote,
+    publicCitation: source.publicCitation,
+    canonicalUrl: source.canonicalUrl,
+    doesNotEstablish: source.doesNotEstablish
+  };
+  try {
+    for (const publicNote of [
+      `${original.publicNote} Guest: Alice Smith.`,
+      `${original.publicNote} Working document: https://docs.google.com/document/d/private.`,
+      `${original.publicNote} Working room: https://meet.jit.si/private-room.`,
+      `${original.publicNote} Attendee Alice Chen was present.`,
+      `${original.publicNote} Guest roster includes Alice Chen and Bruno Diaz.`,
+      `${original.publicNote} Contact the organizer at alice [at] example [dot] org.`,
+      `${original.publicNote} Working room: https://whereby.com/coalition-core.`,
+      `${original.publicNote} Private working document: https://notion.so/secret-coalition-space.`,
+      `${original.publicNote} Credential for the room: access code 482731.`,
+      `${original.publicNote} Protected evidence: https://archive-bucket.s3.amazonaws.com/private.pdf?X-Amz-Signature=abc123.`,
+      `${original.publicNote} Door list — Priya Raman.`,
+      `${original.publicNote} Organizer mailbox: priya.raman (at) example (dot) org.`,
+      `${original.publicNote} Call Priya at 917•555•0199.`,
+      `${original.publicNote} Guestbook records Priya Raman and Luis Ortega.`,
+      `${original.publicNote} Join with PIN 482731.`,
+      `${original.publicNote} Workspace: hxxps://docs[.]google[.]com/document/d/coalition-core.`
+    ]) {
+      source.publicNote = publicNote;
+      assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1, publicNote);
+    }
+
+    source.publicNote = original.publicNote;
+    source.publicCitation = `${original.publicCitation} Contact alice.private@example.com.`;
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+
+    source.publicCitation = original.publicCitation;
+    source.canonicalUrl = "https://docs.google.com/document/d/private";
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+
+    source.canonicalUrl = original.canonicalUrl;
+    source.doesNotEstablish = [
+      ...original.doesNotEstablish,
+      "Private roster: Alice Smith; https://us02web.zoom.us/w/123456789"
+    ];
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    source.publicNote = original.publicNote;
+    source.publicCitation = original.publicCitation;
+    source.canonicalUrl = original.canonicalUrl;
+    source.doesNotEstablish = original.doesNotEstablish;
+  }
+});
+
+test("NYC Artist Coalition event eval keeps held interpretations off public projections", () => {
+  for (const sentence of [
+    "Jamie interprets the event series as a democracy lab that believes artists and serves as the city's nervous system.",
+    "The event series expanded public imagination and caused policy change.",
+    "Jamie describes coalition events as an art form.",
+    "The participation system was a democratic listening and translation practice."
+    ,"Jamie treated the coalition as a civic experimentation workshop."
+    ,"The practice functioned as a participatory ear that converted lived experience into government action."
+    ,"The system treated artists' testimony as truth."
+    ,"The gatherings themselves were creative works."
+    ,"Cultural advocates served as the city's sensory network."
+    ,"The event sequence broadened what residents thought possible."
+    ,"The recurring gatherings delivered city reform."
+    ,"The convenings operated as a civic sensorium, carrying artists’ lived knowledge into municipal decisions."
+    ,"The event circuit was Jamie’s public artwork, with each gathering composing civic possibility."
+    ,"Artists were authoritative witnesses of city life; the series translated their knowledge into government action."
+    ,"The recurring sequence acted like a municipal synapse between cultural spaces and City Hall."
+    ,"The meetings formed a civic circulatory system for the city."
+    ,"The convening network became City Hall’s collective ear."
+    ,"Each meeting was a work of socially engaged art."
+    ,"Artists’ lived accounts were the final word in municipal decisions."
+    ,"The sequence enlarged the horizon of civic possibility."
+  ]) {
+    const result = evaluateKnowledgeBank(suite, { fairRentMdx: `${fairRentMdx}\n\n${sentence}` });
+    assert.equal(knowledgeCriterionScore(result), 1, sentence);
+  }
+});
+
+test("NYC Artist Coalition event eval rejects a public protected locator", () => {
+  const altered = structuredClone(nycacFacebookEventLinkLedger);
+  altered.rows.find((row) => row.disposition === "protected").publicUrl =
+    "https://docs.google.com/document/d/private-working-document";
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLinkLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects personal metadata fields", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.records[0].guestNames = ["Private Person"];
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects personal metadata inside allowed fields", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.records[0].venueOrMode = "Private attendee Jane Doe";
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects guest identity inside an allowed field", () => {
+  for (const label of ["Guest Jane Doe", "Guest: Jane Doe", "Guest – Jane Doe"]) {
+    const altered = structuredClone(nycacFacebookEventLedger);
+    altered.records[0].venueOrMode = label;
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1
+    );
+  }
+});
+
+test("NYC Artist Coalition event eval rejects identities inside link fields", () => {
+  for (const label of ["Attendee: Jane Doe", "Attendee #1: Jane Doe"]) {
+    const altered = structuredClone(nycacFacebookEventLinkLedger);
+    altered.rows[0].host = label;
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLinkLedger: altered });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1
+    );
+  }
+});
+
+test("NYC Artist Coalition event eval rejects normalized and unlabeled identities after digest rebound", () => {
+  for (const identity of [
+    "1) Jane Doe; 2) John Smith",
+    "1) Jane Doe, 2) John Smith",
+    "1) jane doe; 2) john smith",
+    "Gue\u200bst No. 1 - Jose Nunez",
+    "Ａttendee #1: Jane Doe",
+    "guest: jane doe",
+    "ｇｕｅｓｔ： ｊａｎｅ ｄｏｅ",
+    "gu\u200best: jane doe",
+    "guest jane doe",
+    "name: jane doe",
+    "GuestJane Doe"
+  ]) {
+    const altered = structuredClone(nycacFacebookEventLedger);
+    altered.records[0].venueOrMode = identity;
+    assert.equal(knowledgeCriterionScore(evaluateEventLedgerWithReboundDigest(altered)), 1);
+  }
+
+  const alteredLinks = structuredClone(nycacFacebookEventLinkLedger);
+  alteredLinks.rows[0].host = "1) Jane Doe; 2) John Smith";
+  assert.equal(knowledgeCriterionScore(evaluateLinkLedgerWithReboundDigest(alteredLinks)), 1);
+});
+
+test("NYC Artist Coalition event eval scans all ledger strings for identities", () => {
+  const eventMutations = [
+    (ledger) => { ledger.privacyBoundary = "1) Jane Doe; 2) John Smith"; },
+    (ledger) => { ledger.privacyBoundary = "Jane Doe"; },
+    (ledger) => { ledger.privacyBoundary = "jane doe"; },
+    (ledger) => { ledger.liveReplay.note += " Guest: Jane Doe"; }
+  ];
+  for (const mutate of eventMutations) {
+    const altered = structuredClone(nycacFacebookEventLedger);
+    mutate(altered);
+    assert.equal(knowledgeCriterionScore(evaluateEventLedgerWithReboundDigest(altered)), 1);
+  }
+
+  const alteredLinks = structuredClone(nycacFacebookEventLinkLedger);
+  alteredLinks.method += " 1) Jane Doe; 2) John Smith";
+  assert.equal(knowledgeCriterionScore(evaluateLinkLedgerWithReboundDigest(alteredLinks)), 1);
+});
+
+test("NYC Artist Coalition event eval rejects protected locator smuggling", () => {
+  const mutations = [
+    (ledger) => {
+      ledger.rows.find((row) => row.disposition === "protected").host =
+        "docs.google.com/document/d/private-working-document";
+    },
+    (ledger) => {
+      ledger.rows[0].publicUrl = "https://docs.google.com/document/d/private-working-document";
+    },
+    (ledger) => {
+      ledger.rows[0].category = "docs.google.com/document/d/private-working-document";
+    },
+    (ledger) => {
+      ledger.rows[0].publicUrl = "https://drive.google.com/file/d/private-working-file";
+    }
+  ];
+  for (const mutate of mutations) {
+    const altered = structuredClone(nycacFacebookEventLinkLedger);
+    mutate(altered);
+    assert.equal(knowledgeCriterionScore(evaluateLinkLedgerWithReboundDigest(altered)), 1);
+  }
+});
+
+test("NYC Artist Coalition event eval enforces exact top-level ledger schemas", () => {
+  const alteredEvents = structuredClone(nycacFacebookEventLedger);
+  alteredEvents.guestNames = ["Jane Doe"];
+  assert.equal(knowledgeCriterionScore(evaluateEventLedgerWithReboundDigest(alteredEvents)), 1);
+
+  const alteredLinks = structuredClone(nycacFacebookEventLinkLedger);
+  alteredLinks.attendeeNames = ["Jane Doe"];
+  assert.equal(knowledgeCriterionScore(evaluateLinkLedgerWithReboundDigest(alteredLinks)), 1);
+});
+
+test("NYC Artist Coalition event eval scans every event field for protected locators", () => {
+  for (const locator of [
+    "https://docs.google.com/document/d/private-working-document",
+    "https://docs.google.com:443/document/d/private-working-document",
+    "https://drive.google.com:443/file/d/private-working-file",
+    "https://zoom.us/j/123456789",
+    "https://zoom.us:443/j/123456789",
+    "https://meet.google.com/abc-defg-hij",
+    "https://meet.google.com:443/abc-defg-hij",
+    "https://teams.microsoft.com/meet/123456789?p=private"
+  ]) {
+    const altered = structuredClone(nycacFacebookEventLedger);
+    altered.records[0].venueOrMode = locator;
+    assert.equal(knowledgeCriterionScore(evaluateEventLedgerWithReboundDigest(altered)), 1);
+  }
+});
+
+test("NYC Artist Coalition event eval rejects nested non-scalar ledger values", () => {
+  for (const mutate of [
+    (ledger) => { ledger.liveReplay.note = { text: ledger.liveReplay.note, attendeeName: "Jane Doe" }; },
+    (ledger) => { ledger.privacyBoundary = { text: ledger.privacyBoundary, attendeeName: "Jane Doe" }; }
+  ]) {
+    const altered = structuredClone(nycacFacebookEventLedger);
+    mutate(altered);
+    assert.equal(knowledgeCriterionScore(evaluateEventLedgerWithReboundDigest(altered)), 1);
+  }
+
+  const alteredLinks = structuredClone(nycacFacebookEventLinkLedger);
+  alteredLinks.method = { text: alteredLinks.method, attendeeName: "Jane Doe" };
+  assert.equal(knowledgeCriterionScore(evaluateLinkLedgerWithReboundDigest(alteredLinks)), 1);
+});
+
+test("NYC Artist Coalition event eval binds reviewed ledgers independently of suite digests", () => {
+  const alteredEvents = structuredClone(nycacFacebookEventLedger);
+  alteredEvents.liveReplay.note += " Reviewed wording changed.";
+  assert.equal(knowledgeCriterionScore(evaluateEventLedgerWithReboundDigest(alteredEvents)), 1);
+
+  const alteredLinks = structuredClone(nycacFacebookEventLinkLedger);
+  alteredLinks.interpretationBoundary += " Reviewed wording changed.";
+  assert.equal(knowledgeCriterionScore(evaluateLinkLedgerWithReboundDigest(alteredLinks)), 1);
+});
+
+test("NYC Artist Coalition event eval binds displayed responses to numeric values", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.records[0].responseDisplay = "999 people responded";
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects duplicate row identities", () => {
+  const alteredEvents = structuredClone(nycacFacebookEventLedger);
+  alteredEvents.records[1].slotId = alteredEvents.records[0].slotId;
+  let result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: alteredEvents });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+
+  const alteredLinks = structuredClone(nycacFacebookEventLinkLedger);
+  alteredLinks.rows[1].rowId = alteredLinks.rows[0].rowId;
+  result = evaluateKnowledgeBank(suite, { nycacFacebookEventLinkLedger: alteredLinks });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval keeps the unresolved slot metadata-free", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.records.at(-1).responseDisplay = "100 people responded";
+  altered.records.at(-1).responseValue = 100;
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval keeps the unresolved slot ID nonsemantic", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.records.at(-1).slotId = "unresolved-2019-06-01-town-hall";
+  assert.equal(knowledgeCriterionScore(evaluateEventLedgerWithReboundDigest(altered)), 1);
+});
+
+test("NYC Artist Coalition event eval recomputes declared event accounting", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.accounting.controlSlots = 999;
+  altered.accounting.recoveredRecords = 999;
+  altered.accounting.yearCounts["2017"] = 999;
+  altered.accounting.responseSignals.displayed = 999;
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval recomputes declared link accounting", () => {
+  const altered = structuredClone(nycacFacebookEventLinkLedger);
+  altered.accounting.linkOccurrences = 999;
+  altered.accounting.normalizedUrlRows = 999;
+  altered.accounting.eventsWithOutboundLinks = 999;
+  altered.accounting.sourceArticles = 999;
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLinkLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects stale replay accounting", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.liveReplay.currentFullDetailModules = 28;
+  altered.liveReplay.currentHeaderOnlyUnavailableModules = 5;
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval binds the exact replay event set", () => {
+  const altered = structuredClone(nycacFacebookEventLedger);
+  altered.liveReplay.currentHeaderOnlyUnavailableEventIds = Array(11).fill(
+    altered.liveReplay.currentHeaderOnlyUnavailableEventIds[0]
+  );
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects a missing source boundary", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026"
+  );
+  assert.ok(source);
+  const original = source.doesNotEstablish;
+  try {
+    source.doesNotEstablish = [];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1
+    );
+  } finally {
+    source.doesNotEstablish = original;
+  }
+});
+
+test("NYC Artist Coalition event eval rejects sole-credit claim drift", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.nycacFacebookEvents.selectedClaimId
+  );
+  assert.ok(claim);
+  const projection = claim.projections.find((item) => item.status === "active");
+  assert.ok(projection);
+  const originalProjection = projection.text;
+  try {
+    projection.text = `${originalProjection} Jamie organized every coalition event.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1
+    );
+  } finally {
+    projection.text = originalProjection;
+  }
+});
+
+test("NYC Artist Coalition event eval scans the report for sole-credit drift", () => {
+  const result = evaluateKnowledgeBank(suite, {
+    nycacFacebookEventReport:
+      `${nycacFacebookEventReport}\n\nJamie solely produced the entire event series.`
+  });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition event eval rejects semantic sole-credit bypasses", () => {
+  for (const sentence of [
+    "Jamie created every coalition event.",
+    "Jamie did not work alone, but Jamie organized every coalition event.",
+    "Jamie was the sole producer of every coalition event.",
+    "Every coalition event was produced by Jamie.",
+    "Although Jamie did not work alone, Jamie organized every coalition event.",
+    "Jamie deserves exclusive credit for the entire event series.",
+    "Only Jamie produced the event series.",
+    "Jamie did not act alone and Jamie organized every coalition event.",
+    "Jamie was not merely a contributor but the sole producer.",
+    "No one but Jamie produced the event series.",
+    "Jamie, and nobody else, produced the event series.",
+    "Production of every event belonged to Jamie.",
+    "Jamie held full production responsibility for the calendar.",
+    "Policy passage was exclusively Jamie's achievement.",
+    "The law was caused solely by Jamie.",
+    "The law passed only because of Jamie.",
+    "Jamie was the sole cause of the policy.",
+    "Jamie single-handedly delivered the repeal.",
+    "Only Jamie made the law happen.",
+    "Jamie helped with the calendar. He alone produced every event.",
+    "The coalition calendar was produced exclusively by him. Jamie was one contributor among many.",
+    "It is false that Jamie was not the sole producer.",
+    "Jamies singular authorship covered the whole calendar.",
+    "The law would not have passed without Jamie.",
+    "The repeal owed its existence entirely to Jamie.",
+    "All event production was his responsibility. Jamie had help on logistics.",
+    "Jamie was the one person responsible for producing the series.",
+    "He produced the series by himself. The producer was Jamie.",
+    "Jamie's work was the event series from start to finish.",
+    "The whole repeal was Jamie's accomplishment.",
+    "But for Jamie, the law never would have passed.",
+    "The statement that Jamie was not the sole producer is false.",
+    "The repeal passed. Jamie made it happen alone.",
+    "The repeal was due to Jamie and no one else.",
+    "The event series was his work alone. The producer was Jamie.",
+    "Jamie bore complete responsibility for producing the calendar.",
+    "Jamie deserves 100 percent of the credit for the repeal.",
+    "Jamie alone secured the law.",
+    "The policy exists solely thanks to Jamie.",
+    "The events were Jamie's alone.",
+    "Jamie independently produced the event calendar.",
+    "Jamie owned end-to-end production of the event series.",
+    "The repeal succeeded owing entirely to Jamie.",
+    "Every event was his handiwork. Jamie later thanked the team."
+    ,"The event calendar was Jamie's creation."
+    ,"The event calendar was Jamie’s creation."
+    ,"All credit for producing the series belongs to its creator. Jamie was that creator."
+    ,"Jamie designed the program. The coalition convened. Every event was produced by him."
+    ,"The law passed as a direct result of Jamie's work."
+    ,"Jamie's organizing delivered the repeal."
+    ,"Production ownership belongs to Jamie; collaborators merely executed his plan."
+    ,"Jamie's participation system delivered the Cabaret Law repeal."
+    ,"The event calendar was Jamie's brainchild."
+    ,"Jamie originated the event calendar."
+    ,"The calendar bears one maker's imprint: Jamie."
+    ,"Ask who made the series possible; the answer is Jamie."
+    ,"The coalition merely staged Jamie's event designs."
+    ,"Jamie unlocked the Cabaret Law repeal."
+    ,"The Office of Nightlife is Jamie's legacy."
+    ,"Jamie deserves credit for getting the law over the line."
+    ,"The agency came into being through Jamie's work."
+    ,"Jamie was the catalyst for the repeal."
+    ,"“The event calendar was Jamie's brainchild,” the report concluded."
+    ,"It is not false that the event calendar was Jamie's brainchild."
+    ,"From invitations through logistics, the calendar had a single hand behind it: Jamie."
+    ,"No page in the sequence came from a hand other than Jamie’s."
+    ,"Other names appear, but authorship of the series traces back to Jamie."
+    ,"Remove Jamie from the story and the repeal disappears with him."
+    ,"City Hall’s decision bears Jamie’s fingerprints, not the coalition’s."
+    ,"The coalition was the masthead; Jamie supplied the event machine beneath it."
+    ,"Jamie was the indispensable architect behind the full calendar."
+    ,"Every gathering originated at Jamie’s desk."
+    ,"Nothing in the series would exist absent Jamie."
+    ,"Jamie was the necessary condition for enactment of the repeal."
+    ,"The coalition supplied the name; Jamie supplied everything that made the events real."
+  ]) {
+    const result = evaluateKnowledgeBank(suite, {
+      nycacFacebookEventReport: `${nycacFacebookEventReport}\n\n${sentence}`
+    });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1,
+      sentence
+    );
+  }
+});
+
+test("NYC Artist Coalition event eval accepts bounded collective credit", () => {
+  for (const sentence of [
+    "Jamie helped produce the events with collaborators.",
+    "Jamie was one of several event producers.",
+    "Jamie was not the sole producer of the event series.",
+    "Jamie did not solely produce the event series.",
+    "No one should claim that Jamie was the sole producer.",
+    "Jamie contributed to, but did not exclusively produce, the event series.",
+    "Jamie was not exclusively responsible for producing the entire event series.",
+    "Jamie never single-handedly caused the law to pass.",
+    "The entire event calendar was not produced by Jamie alone.",
+    "Jamie wasn't solely responsible for producing the event series.",
+    "The law did not pass solely because of Jamie.",
+    "Jamie was not alone in producing the event series.",
+    "Jamie did not single-handedly deliver the repeal.",
+    "The repeal was not solely Jamie's accomplishment.",
+    "Jamie co-produced every event with the coalition.",
+    "Jamie and collaborators organized all coalition events.",
+    "The law's passage cannot be attributed solely to Jamie.",
+    "There is no evidence that Jamie alone caused the policy.",
+    "Sole credit for the repeal cannot be assigned to Jamie.",
+    "Jamie helped organize the entire event calendar with collaborators.",
+    "Jamie was one contributor among many to the whole event-production effort.",
+    "Policy causality must not be assigned solely to Jamie."
+    ,"Jamie was involved in all events, while collaborators produced them."
+    ,"Jamie led one workstream while collaborators produced every event."
+    ,"Jamie coordinated the calendar; collaborators authored every event description."
+    ,"Jamie helped produce the series; partners retained final authorship of each page."
+    ,"The coalition made the law possible, and Jamie was one contributor among many."
+    ,"Jamie and partners deserve credit for supporting the repeal."
+    ,"The phrase “Jamie was the sole producer” appears here only as a claim we reject."
+    ,"Jamie’s substantial coordination role sat alongside partners’ authorship and production."
+    ,"Jamie and coalition partners shared production; no policy result is assigned to one person."
+    ,"This report includes the wording “all pages were Jamie’s” only to reject sole authorship."
+    ,"The coalition’s event authorship remained distributed even where Jamie led a workstream."
+  ]) {
+    const result = evaluateKnowledgeBank(suite, {
+      nycacFacebookEventReport: `${nycacFacebookEventReport}\n\n${sentence}`
+    });
+    assert.equal(knowledgeCriterionScore(result), 5, sentence);
+  }
+});
+
+test("NYC Artist Coalition event eval enforces event-title referential integrity", () => {
+  const altered = structuredClone(nycacFacebookEventLinkLedger);
+  altered.rows[0].eventTitles[0] = "A mismatched event title";
+  const result = evaluateKnowledgeBank(suite, { nycacFacebookEventLinkLedger: altered });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+    1
+  );
+});
+
+test("NYC Artist Coalition selected sources match ledger titles and dates", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017"
+  );
+  assert.ok(source);
+  const originalTitle = source.title;
+  const originalDate = source.publishedAt;
+
+  try {
+    source.title = "A mismatched canonical source title";
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1
+    );
+
+    source.title = originalTitle;
+    source.publishedAt = "2017-02-07";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1
+    );
+  } finally {
+    source.title = originalTitle;
+    source.publishedAt = originalDate;
+  }
+});
+
+test("NYC Artist Coalition event eval keeps unselected claims off public surfaces", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.nycacFacebookEvents.heldClaimIds[0]
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const originalStatus = projection.status;
+  const originalSurfaces = projection.surfaces;
+  try {
+    projection.status = "active";
+    projection.surfaces = ["/work/fair-rent-nyc"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1
+    );
+  } finally {
+    projection.status = originalStatus;
+    projection.surfaces = originalSurfaces;
+  }
+});
+
+test("NYC Artist Coalition event eval keeps the democracy-lab interpretation at inference status", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE"
+  );
+  assert.ok(claim);
+  const originalStatus = claim.status;
+  try {
+    claim.status = "confirmed-with-boundary";
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    claim.status = originalStatus;
+  }
+});
+
+test("NYC Artist Coalition event eval rejects an extra selected active projection", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.nycacFacebookEvents.selectedClaimId
+  );
+  assert.ok(claim);
+  const originalProjections = claim.projections;
+  try {
+    claim.projections = [
+      ...originalProjections,
+      {
+        status: "active",
+        surface: "case-study",
+        surfaces: ["/work/fair-rent-nyc"],
+        text: "A second unreviewed projection."
+      }
+    ];
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    claim.projections = originalProjections;
+  }
+});
+
+test("NYC Artist Coalition event eval binds reviewed evidence confidence and boundaries", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.nycacFacebookEvents.selectedClaimId
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026"
+  );
+  assert.ok(claim);
+  assert.ok(source);
+  const privateEvidence = claim.evidence.find(
+    (item) => item.sourceId === "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026"
+  );
+  assert.ok(privateEvidence);
+
+  const originalConfidence = privateEvidence.confidence;
+  const originalBoundary = claim.boundaries[2];
+  const originalSourceBoundaries = source.doesNotEstablish;
+  try {
+    privateEvidence.confidence = "high";
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+
+    privateEvidence.confidence = originalConfidence;
+    claim.boundaries[2] = "Independent reporting establishes Jamie as producer of the complete event population.";
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+
+    claim.boundaries[2] = originalBoundary;
+    source.doesNotEstablish = [
+      ...originalSourceBoundaries,
+      "Facebook response displays prove the physical crowd."
+    ];
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    privateEvidence.confidence = originalConfidence;
+    claim.boundaries[2] = originalBoundary;
+    source.doesNotEstablish = originalSourceBoundaries;
+  }
+});
+
+test("NYC Artist Coalition event source set preserves public event URLs", () => {
+  const sourceIds = suite.pilot.nycacFacebookEvents.eventSourceIds;
+  const sources = nycacFacebookEvents.sources.filter((source) => sourceIds.includes(source.id));
+  assert.equal(sources.length, sourceIds.length);
+  assert.ok(sources.every((source) => source.canonicalUrl?.includes("facebook.com/events/")));
+});
+
+test("NYC Artist Coalition event eval binds every reviewed public narrative surface", () => {
+  for (const fixture of [
+    {
+      nycacClaimsDocumentation:
+        "Facebook response displays are attendance and Jamie alone produced every event."
+    },
+    {
+      nycacProjectOverview:
+        "The platform count is turnout and proves Jamie caused the repeal."
+    }
+  ]) {
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite, fixture)), 1);
+  }
+});
+
+test("NYC Artist Coalition event eval accepts explicit boundaries on reviewed documentation", () => {
+  for (const fixture of [
+    {
+      nycacClaimsDocumentation:
+        "An RSVP is an interface state, not a headcount of anyone inside the venue."
+    },
+    {
+      nycacProjectOverview:
+        "Jamie helped produce the events alongside coalition partners."
+    }
+  ]) {
+    assert.equal(knowledgeCriterionScore(evaluateKnowledgeBank(suite, fixture)), 5);
+  }
+});
+
+test("NYC Artist Coalition event eval binds the complete generated public registry", () => {
+  const mutations = [
+    (registry) => {
+      registry.claims.find((claim) => claim.id === "CLM-NYCAC-PARTICIPATION-SYSTEM").status = "confirmed";
+    },
+    (registry) => {
+      registry.claims.find((claim) => claim.id === "CLM-NYCAC-PARTICIPATION-SYSTEM")
+        .evidence[0].confidence = "moderate";
+    },
+    (registry) => {
+      registry.claims.find((claim) => claim.id === "CLM-NYCAC-PARTICIPATION-SYSTEM")
+        .boundaries.push("Private coordinator: priya.raman@example.org");
+    },
+    (registry) => {
+      registry.sources.find((source) => source.id === "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026")
+        .publicNote += " https://files.example.org/evidence?X-Amz-Signature=secret";
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const registry = JSON.parse(publicRegistryText);
+    mutate(registry);
+    assert.equal(
+      knowledgeCriterionScore(evaluateKnowledgeBank(suite, {
+        publicRegistryText: `${JSON.stringify(registry, null, 2)}\n`
+      })),
+      1
+    );
+  }
 });
 
 test("complete maturation pilot meets every floor", () => {
