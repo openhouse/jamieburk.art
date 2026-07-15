@@ -94,7 +94,12 @@ const prohibited = [
   "Jamie was effectively the Page's principal voice.",
   "Jamie remained able to publish through Page controls.",
   "The surviving archive is definitive for NYCAC's Facebook history.",
-  "Page controls show Jamie is still able to post."
+  "Page controls show Jamie is still able to post.",
+  "Jamie furnished the words used on NYCAC's Facebook Page.",
+  "This ledger is the authoritative record of everything NYCAC posted.",
+  "Repost volume got the measure over the line.",
+  "Jamie functioned as NYCAC's chief social editor.",
+  "No earlier Facebook material falls outside this corpus."
 ];
 
 for (const statement of prohibited) {
@@ -127,7 +132,10 @@ const bounded = [
   "The current census is not exhaustive or definitive for NYCAC's Facebook history.",
   "References do not establish that agency staff were at coalition gatherings.",
   "Reaction totals do not establish political movement or a policy result.",
-  "Jamie supplied research language about Facebook; authorship remains unresolved."
+  "Jamie supplied research language about Facebook; authorship remains unresolved.",
+  "The ledger is authoritative only for its public-safe row schema, not everything ever posted.",
+  "Repost volume does not establish passage of a measure.",
+  "The logged-in console did not reveal Jamie's posting privileges."
 ];
 
 for (const statement of bounded) {
