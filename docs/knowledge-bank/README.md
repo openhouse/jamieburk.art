@@ -101,6 +101,13 @@ Fuselier as visual artists. The claim remains deferred from website projection,
 and the Nerman Museum record is retained as program context rather than proof
 that NTER CHNG was installed at the museum.
 
+The same memo now incorporates two protected April 2011 working artifacts. One
+documents the planned technical and physical installation workflow and Jamie's
+scheduled participation; the other corroborates the prompt-driven design and a
+Jamie-attributed connection purpose already visible on the official program
+page. Raw documents, sharing URLs, contact details, and message text remain
+outside the repository.
+
 The
 [NYC Artist Coalition government-interface memo](research/nycartc-dcla-council-interface-2026-07-15.md)
 connects Jamie's documented participation-system work with official DCLA,

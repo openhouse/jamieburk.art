@@ -65,7 +65,11 @@ export const nterChngAmericaNowHereIntake = [
     entityIds: ["ENT-AMERICA-NOW-AND-HERE", "ENT-NTER-CHNG"],
     disposition: "source-created",
     sourceIds: ["SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"],
-    claimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"],
+    claimIds: [
+      "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011",
+      "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011",
+      "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
+    ],
     researchTaskIds: ["TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY"],
     rawMaterialPolicy: "public-source-only"
   },
@@ -84,6 +88,37 @@ export const nterChngAmericaNowHereIntake = [
     claimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"],
     researchTaskIds: ["TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY"],
     rawMaterialPolicy: "public-source-only"
+  },
+  {
+    id: "INTAKE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+    receivedAt: "2026-07-15",
+    kind: "private-archive-pointer",
+    publicSafeSummary:
+      "Contemporaneous collaborative planning document for NTER CHNG's America: Now and Here installation, covering software, fabrication, equipment, logistics, on-site work, and takedown.",
+    submittedBy: "Jamie Burkart",
+    entityIds: ["ENT-NTER-CHNG", "ENT-AMERICA-NOW-AND-HERE"],
+    disposition: "source-created",
+    sourceIds: ["SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"],
+    claimIds: ["CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"],
+    researchTaskIds: [
+      "TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY",
+      "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"
+    ],
+    rawMaterialPolicy: "protected-outside-repo"
+  },
+  {
+    id: "INTAKE-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011",
+    receivedAt: "2026-07-15",
+    kind: "private-archive-pointer",
+    publicSafeSummary:
+      "Contemporaneous working compilation of NTER CHNG exhibit information, artist materials, participation prompts, and response samples; raw contact details and messages remain protected.",
+    submittedBy: "Jamie Burkart",
+    entityIds: ["ENT-NTER-CHNG", "ENT-AMERICA-NOW-AND-HERE"],
+    disposition: "source-created",
+    sourceIds: ["SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"],
+    claimIds: ["CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"],
+    researchTaskIds: ["TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"],
+    rawMaterialPolicy: "protected-outside-repo"
   }
 ] satisfies IntakeRecord[];
 
@@ -173,7 +208,8 @@ export const nterChngAmericaNowHereSources = [
       "NTER CHNG's inclusion in the America: Now and Here Kansas City artist roster",
       "Drew Bolton, Jamie Burkart, and Garrett Fuselier as the named visual artists",
       "the work's participatory text-messaging behavior and artistic purpose",
-      "the collaborators' combined scenic-design, programming, motion-graphics, and experiential-production backgrounds"
+      "the collaborators' combined scenic-design, programming, motion-graphics, and experiential-production backgrounds",
+      "Jamie's stated intention to help gallery visitors connect beyond their existing contact lists"
     ],
     doesNotEstablish: [
       "sole authorship by Jamie",
@@ -213,6 +249,60 @@ export const nterChngAmericaNowHereSources = [
       "Jamie as an America: Now and Here organizer",
       "the exact NTER CHNG installation venue or dates within the program"
     ]
+  },
+  {
+    id: "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+    title: "NTER CHNG America: Now and Here installation plan",
+    author: "NTER CHNG collaborators",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2011-04-13",
+    publicCitation:
+      "Contemporaneous collaborative NTER CHNG installation plan for America: Now and Here, April 2011.",
+    publicNote:
+      "The public-safe description records a planned implementation workflow spanning software reliability, hosting, display equipment, wall fabrication, transport, wiring, participant wayfinding, on-site installation, experience tuning, and takedown. The underlying document remains protected.",
+    intakeIds: ["INTAKE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"],
+    supportsGenerally: [
+      "a multi-layer technical and physical installation workflow",
+      "Jamie's scheduled participation in preparation and installation",
+      "a planned late-April 2011 installation sequence at Leedy-Voulkos",
+      "collective responsibility across software, fabrication, logistics, and gallery experience"
+    ],
+    doesNotEstablish: [
+      "completion of every planned task",
+      "sole project management or implementation by Jamie",
+      "the final division of labor among collaborators",
+      "the exact public presentation dates or a completed installation at the planned venue"
+    ],
+    protectedLocatorId: "ARCHIVE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
+  },
+  {
+    id: "SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011",
+    title: "NTER CHNG working artist and participation materials",
+    author: "NTER CHNG collaborators",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2011-04-06",
+    publicCitation:
+      "Contemporaneous NTER CHNG working artist and participation materials, April 2011.",
+    publicNote:
+      "The working compilation joins prior exhibit information, the artist statement, biographies, three participation prompts, nine dated message samples, and a Jamie-attributed statement of purpose later published by America: Now and Here. Raw contact details and message text are not retained in the repository.",
+    intakeIds: ["INTAKE-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"],
+    supportsGenerally: [
+      "the three-maker project credit",
+      "the prompt-driven participation structure",
+      "nine preserved message samples associated with three prompts",
+      "Jamie's stated intention to help gallery visitors make connections beyond existing contacts"
+    ],
+    doesNotEstablish: [
+      "that the message senders were public visitors rather than collaborators or test participants",
+      "permission to publish contact details or message text",
+      "measured connection, behavior change, audience scale, or impact",
+      "sole authorship or a complete technical division of labor"
+    ],
+    protectedLocatorId: "ARCHIVE-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
   }
 ] satisfies SourceRecord[];
 
@@ -322,6 +412,14 @@ export const nterChngAmericaNowHereReadings = [
         supportTags: ["nter-chng-anh-2011-inclusion"],
         confidence: "high",
         locator: "Official program domain, visual-artist hierarchy, and NTER CHNG statement"
+      },
+      {
+        id: "PROP-NTER-CHNG-ANH-JAMIE-CONNECTION-PURPOSE",
+        text: "America: Now and Here's official artist page attributes to Jamie the aim of helping gallery visitors make new connections by reaching beyond their existing address books and contact lists.",
+        relationToJamie: "direct-role",
+        supportTags: ["nter-chng-anh-jamie-connection-purpose"],
+        confidence: "high",
+        locator: "Jamie-attributed statement in the final artist-statement paragraph"
       }
     ],
     limitations: [
@@ -361,6 +459,87 @@ export const nterChngAmericaNowHereReadings = [
       "Its program-scale descriptions contextualize the launch but do not establish NTER CHNG's exact presentation details."
     ],
     researchTaskIds: ["TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY"]
+  },
+  {
+    id: "READ-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+    sourceId: "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+    status: "closely-read",
+    readAt: "2026-07-15",
+    propositions: [
+      {
+        id: "PROP-NTER-CHNG-ANH-DEPLOYMENT-SCOPE",
+        text: "The collaborative plan treats NTER CHNG as a multi-layer deployment spanning software reliability, server hosting, display computers and projectors, wall fabrication, transport, networking and wiring, participant wayfinding, on-site assembly, experience tuning, and takedown.",
+        relationToJamie: "collective-role",
+        supportTags: ["nter-chng-anh-deployment-scope"],
+        confidence: "high",
+        locator: "Preparation, software, fabrication, installation, remaining-tasks, and takedown sections"
+      },
+      {
+        id: "PROP-NTER-CHNG-ANH-JAMIE-INSTALLATION-SEQUENCE",
+        text: "The plan explicitly schedules Jamie into the preparation and installation sequence for the America: Now and Here presentation.",
+        relationToJamie: "direct-role",
+        supportTags: ["nter-chng-anh-jamie-installation-sequence"],
+        confidence: "high",
+        locator: "Dated preparation and installation sequence"
+      },
+      {
+        id: "PROP-NTER-CHNG-ANH-PLANNED-LEEDY-VOULKOS",
+        text: "The plan identifies Leedy-Voulkos as the intended on-site installation location and schedules installation to begin in late April 2011.",
+        relationToJamie: "project-context",
+        supportTags: ["nter-chng-anh-planned-leedy-voulkos"],
+        confidence: "high",
+        locator: "Installation heading and sequence"
+      }
+    ],
+    limitations: [
+      "This is a forward-looking plan, not a completion report or formal exhibition checklist.",
+      "The source does not assign every listed task to a named collaborator or establish sole project management by Jamie.",
+      "The planned venue and sequence require after-the-fact corroboration before they become final presentation details.",
+      "Private preparation-location details are intentionally omitted from the public-safe record."
+    ],
+    researchTaskIds: [
+      "TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY",
+      "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"
+    ]
+  },
+  {
+    id: "READ-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011",
+    sourceId: "SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011",
+    status: "closely-read",
+    readAt: "2026-07-15",
+    propositions: [
+      {
+        id: "PROP-NTER-CHNG-WORKING-PROMPT-STRUCTURE",
+        text: "The working compilation organizes three open-ended prompts about American journeys, encounters with art, and identifying as an artist alongside exhibit and artist materials.",
+        relationToJamie: "collective-role",
+        supportTags: ["nter-chng-working-prompt-structure"],
+        confidence: "high",
+        locator: "Prompt and exhibit-information sections"
+      },
+      {
+        id: "PROP-NTER-CHNG-WORKING-NINE-MESSAGE-SAMPLES",
+        text: "The document preserves nine dated message samples associated with the three prompts while leaving sender identity and participation context unresolved.",
+        relationToJamie: "project-context",
+        supportTags: ["nter-chng-working-nine-message-samples"],
+        confidence: "high",
+        locator: "Three prompt-and-response groups"
+      },
+      {
+        id: "PROP-NTER-CHNG-WORKING-JAMIE-CONNECTION-PURPOSE",
+        text: "The working materials attribute to Jamie an intention to help gallery visitors make new connections by reaching beyond their existing contacts.",
+        relationToJamie: "direct-role",
+        supportTags: ["nter-chng-working-jamie-connection-purpose"],
+        confidence: "high",
+        locator: "Jamie-attributed project-purpose statement"
+      }
+    ],
+    limitations: [
+      "The repository does not retain or reproduce the underlying phone numbers or message text.",
+      "The document does not establish whether message senders were visitors, collaborators, or test participants.",
+      "A working compilation is not proof of audience scale, connection, behavior change, or civic impact.",
+      "The exact technical and editorial division of labor among the three makers remains unresolved."
+    ],
+    researchTaskIds: ["TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"]
   }
 ] satisfies SourceReading[];
 
@@ -470,6 +649,145 @@ export const nterChngAmericaNowHereClaims = [
     researchInquiryIds: [],
     reviewedAt: "2026-07-15",
     reviewedBy: ["Codex Wayback and public-source review"]
+  },
+  {
+    id: "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011",
+    project: "nter-chng",
+    internalClaim:
+      "Jamie co-created NTER CHNG's participatory interface and publicly framed its intended end as helping gallery visitors make connections beyond their existing address books and contact lists.",
+    status: "confirmed-with-boundary",
+    maturity: "public-ready",
+    intakeIds: [
+      "INTAKE-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011",
+      "INTAKE-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
+    ],
+    requiredSupportTags: [
+      "nter-chng-anh-jamie-connection-purpose",
+      "nter-chng-working-jamie-connection-purpose"
+    ],
+    composition: {
+      action:
+        "Co-created a software-and-architecture interface that invited gallery visitors to participate through their own phones.",
+      intendedEnd:
+        "Help visitors move beyond private one-to-one texting and make connections outside their existing contact lists.",
+      usableResult:
+        "A shared public text environment in which messages could become part of a many-to-many gallery experience.",
+      audience:
+        "Gallery visitors, including people invited to contribute without already knowing one another.",
+      collectiveCredit:
+        "Credit Drew Bolton, Jamie Burkart, and Garrett Fuselier as co-creators; the Jamie-attributed statement identifies his articulated purpose, not sole authorship of the work's concept or implementation.",
+      causalBoundary:
+        "The record establishes the intended participation design and a public Jamie-attributed statement, not measured new relationships, behavior change, audience scale, or a complete technical division of labor."
+    },
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011",
+        relationship: "direct-support",
+        supports: [
+          "the official public attribution to Jamie",
+          "the aim of connections beyond existing contacts"
+        ],
+        propositionIds: ["PROP-NTER-CHNG-ANH-JAMIE-CONNECTION-PURPOSE"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011",
+        relationship: "private-support",
+        supports: ["the same Jamie-attributed purpose in contemporaneous working materials"],
+        propositionIds: ["PROP-NTER-CHNG-WORKING-JAMIE-CONNECTION-PURPOSE"],
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "Use co-created and preserve all three makers' credit.",
+      "Describe the connection language as Jamie's stated intention, not a measured outcome.",
+      "Do not publish raw message text or contact details from the protected working artifact."
+    ],
+    antiClaims: [
+      "Jamie alone conceived or created NTER CHNG.",
+      "NTER CHNG measurably created new relationships or changed participant behavior.",
+      "The preserved message samples establish audience adoption or impact.",
+      "The Jamie-attributed statement establishes his sole responsibility for software, fabrication, or installation."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex Google Drive and public-source review"]
+  },
+  {
+    id: "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011",
+    project: "nter-chng",
+    internalClaim:
+      "A contemporaneous installation plan situates Jamie in NTER CHNG's preparation for America: Now and Here and documents a planned implementation workflow spanning software reliability, hosting, displays and projectors, wall fabrication, transport, networking, participant wayfinding, on-site installation, experience tuning, and takedown.",
+    status: "confirmed-with-boundary",
+    maturity: "corroborated",
+    intakeIds: [
+      "INTAKE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+      "INTAKE-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"
+    ],
+    requiredSupportTags: [
+      "nter-chng-anh-deployment-scope",
+      "nter-chng-anh-jamie-installation-sequence",
+      "nter-chng-anh-2011-inclusion"
+    ],
+    composition: {
+      action:
+        "Participated in preparing a technically and physically integrated installation across software, hosting, hardware, fabrication, logistics, networking, wayfinding, and on-site work.",
+      intendedEnd:
+        "Make the participatory text system reliable, legible, and usable as a gallery-scale experience.",
+      usableResult:
+        "A concrete implementation plan connected the software service, constructed wall, display hardware, visitor interface, installation sequence, tuning, and takedown.",
+      audience:
+        "NTER CHNG collaborators, America: Now and Here organizers, installation partners, and gallery visitors.",
+      collectiveCredit:
+        "The planning artifact belongs to the three-maker collaboration and does not assign every workstream to Jamie or identify a sole project manager.",
+      causalBoundary:
+        "The plan documents scope, sequence, and Jamie's scheduled participation; it does not prove that every listed task was completed, establish the final labor split, or independently confirm final venue and presentation dates."
+    },
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+        relationship: "private-support",
+        supports: [
+          "the implementation workstreams",
+          "Jamie's scheduled participation",
+          "the planned installation sequence"
+        ],
+        propositionIds: [
+          "PROP-NTER-CHNG-ANH-DEPLOYMENT-SCOPE",
+          "PROP-NTER-CHNG-ANH-JAMIE-INSTALLATION-SEQUENCE",
+          "PROP-NTER-CHNG-ANH-PLANNED-LEEDY-VOULKOS"
+        ],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011",
+        relationship: "corroborating",
+        supports: ["official inclusion in the America: Now and Here Kansas City program"],
+        propositionIds: ["PROP-NTER-CHNG-ANH-INCLUSION"],
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "Describe this as a contemporaneous implementation plan and Jamie's scheduled participation.",
+      "Keep planned work distinct from independently verified completion.",
+      "Keep collective credit and do not assign every workstream to Jamie.",
+      "Treat Leedy-Voulkos as the planned venue until an after-the-fact installation-specific source confirms the final presentation details."
+    ],
+    antiClaims: [
+      "Jamie solely managed or implemented the America: Now and Here installation.",
+      "Jamie personally completed every listed technical, fabrication, and logistics task.",
+      "The planning document alone proves final installation dates or completed presentation at Leedy-Voulkos.",
+      "The implementation plan establishes audience scale or measured impact."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex Google Drive and public-source review"]
   }
 ] satisfies ClaimRecord[];
 
@@ -486,20 +804,54 @@ export const nterChngAmericaNowHereResearchTasks = [
       "INTAKE-NTER-CHNG-PROJECT-WAYBACK-2011",
       "INTAKE-ANH-KC-ABOUT-WAYBACK-2011",
       "INTAKE-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011",
-      "INTAKE-NERMAN-AMERICA-NOW-HERE-2011"
+      "INTAKE-NERMAN-AMERICA-NOW-HERE-2011",
+      "INTAKE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
     ],
     sourceIds: [
       "SRC-NTER-CHNG-PROJECT-WAYBACK-2011",
       "SRC-ANH-KC-ABOUT-WAYBACK-2011",
       "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011",
-      "SRC-NERMAN-AMERICA-NOW-HERE-2011"
+      "SRC-NERMAN-AMERICA-NOW-HERE-2011",
+      "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
     ],
-    claimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"],
+    claimIds: [
+      "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011",
+      "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
+    ],
     nextActions: [
       "Search the archived Kansas City calendar, artist index, uploads, and linked national site for NTER CHNG-specific venue or date language.",
       "Review the Smithsonian Archives of American Art finding aid and request the relevant America: Now and Here Kansas City checklist or digital-program material if needed.",
       "Search collaborator archives for a dated installation view, program, or correspondence that can be described publicly without exposing private contact information.",
-      "Keep the current inclusion claim; add venue or date detail only when an installation-specific source supports it."
+      "Treat the protected plan as evidence of intended venue and sequence, not completed presentation details.",
+      "Keep the current inclusion claim; add venue or date detail only when an after-the-fact installation-specific source supports it."
+    ]
+  },
+  {
+    id: "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT",
+    project: "nter-chng",
+    question:
+      "Which planned NTER CHNG software, hosting, fabrication, equipment, logistics, installation, and gallery-experience tasks were completed for America: Now and Here, and how should collaborator credit be assigned?",
+    status: "open",
+    priority: "medium",
+    openedAt: "2026-07-15",
+    intakeIds: [
+      "INTAKE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+      "INTAKE-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
+    ],
+    sourceIds: [
+      "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+      "SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011",
+      "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"
+    ],
+    claimIds: [
+      "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011",
+      "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
+    ],
+    nextActions: [
+      "Recover dated installation photographs, completed-task notes, code or deployment history, equipment records, and after-the-fact program material.",
+      "Ask Drew Bolton and Garrett Fuselier to confirm the completed workstreams and the collaborators' division of labor.",
+      "Separate software, hosting, fabrication, installation, content, and production responsibilities rather than assigning the plan wholesale to one maker.",
+      "Preserve the public Jamie-attributed participation purpose while treating implementation completion and individual credit as distinct research questions."
     ]
   }
 ] satisfies ResearchTask[];
@@ -512,6 +864,16 @@ export const nterChngAmericaNowHereDecisions = [
     decision: "defer",
     rationale:
       "The exhibition-inclusion claim is public-ready and materially strengthens the professional record, but this accession preserves it in the compositional palette without automatically expanding the current website.",
+    decidedAt: "2026-07-15",
+    reviewedBy: ["Codex archival-production review"]
+  },
+  {
+    id: "DEC-NTER-CHNG-JAMIE-CONNECTION-DESIGN-DEFER",
+    claimId: "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011",
+    surface: "future-portfolio-composition",
+    decision: "defer",
+    rationale:
+      "The purpose claim is public-ready and directly attributed on the official program page, but it remains reserve depth until a future portfolio composition needs this participatory-design example.",
     decidedAt: "2026-07-15",
     reviewedBy: ["Codex archival-production review"]
   }

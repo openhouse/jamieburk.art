@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "8ac278552b9ed2e3b7c5b07d1df886abf57c4beb4a527f60fa497c4b0b16a1d4",
+    "fingerprint": "35e942e0ddbc875168daccc00e9b021d2cf4d8bcbb53dbc7fa4e3eb4318d744c",
     "counts": {
       "entities": 32,
-      "intake": 135,
-      "sources": 258,
-      "sourceReadings": 258,
-      "claims": 111,
-      "researchTasks": 48,
-      "projectionDecisions": 89
+      "intake": 137,
+      "sources": 260,
+      "sourceReadings": 260,
+      "claims": 113,
+      "researchTasks": 49,
+      "projectionDecisions": 90
     }
   },
   "judge": {
@@ -28,16 +28,12 @@
             "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "INTAKE-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "COR-CALLNYC-SUPERLATIVE-2026"
-          },
-          {
             "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
             "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "INTAKE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
           }
         ]
       },
@@ -50,16 +46,16 @@
             "record": "atomicPropositionSchema"
           },
           {
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "READ-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "READ-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
             "record": "READ-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "READ-NYCARTC-CABARET-TESTIMONY-2017"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
           }
         ]
       },
@@ -68,16 +64,12 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "CLM-NYCARTC-FINKELPEARL-TESTIMONY-SIGNIFICANCE-2017"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -88,8 +80,8 @@
             "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "NTER CHNG separates Jamie's public connection purpose from planned installation execution"
           }
         ]
       },
@@ -98,8 +90,8 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "TASK-NYCARTC-INSTITUTIONAL-INTERFACE-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -107,15 +99,11 @@
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
+            "file": "docs/knowledge-bank/research/nter-chng-america-now-and-here-2026-07-15.md",
+            "record": "The technical-credit follow-up"
           }
         ]
       },
@@ -124,12 +112,12 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "nycArtCGovernmentInterfaceDecisions"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "DEC-NTER-CHNG-JAMIE-CONNECTION-DESIGN-DEFER"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-PUBLISH-CALLNYC-DATE"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -138,10 +126,6 @@
           {
             "file": "apps/www/src/data/knowledge-bank/public.ts",
             "record": "getClaimProjection"
-          },
-          {
-            "file": "docs/knowledge-bank/projection-map.md",
-            "record": "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017"
           }
         ]
       },
@@ -150,24 +134,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/public.ts",
-            "record": "publicSourceSchema"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "sourceRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "SRC-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
-          },
-          {
-            "file": "docs/knowledge-bank/public-safety.md",
-            "record": "Prohibited Materials"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
           },
           {
             "file": "scripts/tests/citations.test.mjs",
             "record": "private and metadata-only evidence is absent from the public registry"
+          },
+          {
+            "file": "docs/knowledge-bank/anti-claims.md",
+            "record": "NTER CHNG Working Artifacts"
           }
         ]
       },
@@ -180,24 +164,20 @@
             "record": "claimRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"
           },
           {
             "file": "docs/knowledge-bank/projection-map.md",
-            "record": "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
+            "record": "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"
+          },
+          {
+            "file": "docs/knowledge-bank/proofs.md",
+            "record": "contemporaneous collaborative plan"
           }
         ]
       }
@@ -220,5 +200,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh independent inspection found all seven deterministic hard gates and all four quality targets passing. The 106 knowledge-lifecycle tests, public-safety gate, citation consistency check, and 10 citation tests also passed. Captured, researching, corroborated, public-ready, projected, rejected, and superseded records were inspected. The NYC Artist Coalition answer correctly separates direct public evidence from governance interpretation: the Council transcript, CreateNYC records, coalition tools and testimony, and Council advisory-board record establish reciprocal feedback, organized recommendations, constituent-facing policy translation, repeat testimony, stakeholder expertise, and coalition representation. The civic-cultural-intermediary explanation is explicitly labeled an inference; Finkelpearl's complete private motive remains unknown. Espinal retains credit for legislative authority, Olympia Kazi for testimony and her board appointment, and other participants for collective work. Jamie's event and participation-system role is separately linked to direct-role evidence and bounded against sole authorship. Government recognition, interaction, advisory representation, and campaign activity are not converted into policy adoption or causation. The two accomplishment claims remain public-ready but deferred, while the two governance explanations remain corroborated and unprojected. External spot checks of the [Council transcript](https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F), [CreateNYC record](https://createnyc.cityofnewyork.us/the-cultural-plan/issue-areas/nyc-artsts/), [Council advisory-board announcement](https://council.nyc.gov/press/2018/07/12/1624/), and [coalition testimony](https://nycartc.com/nyc-artist-coalition-repeal-the-cabaret-law-bill-1652-testimony/) matched the canonical propositions. All human gates remain pending."
+  "summary": "Fresh independent assessment of the current diff and canonical graph found all seven deterministic hard gates and all four quality targets passing at fingerprint 35e942e0ddbc875168daccc00e9b021d2cf4d8bcbb53dbc7fa4e3eb4318d744c. The lifecycle contract, 108 lifecycle tests, knowledge-bank check, public-safety check, citation consistency check, and 10 citation tests passed under Node 26.4.0 and npm 11.17.0; the knowledge-bank and public-safety commands retained nine pre-existing careful-wording warnings and reported no failures. Inspection included captured, researching, corroborated, public-ready, projected, rejected, and superseded claims. The two NTER CHNG artifacts are represented as protected/private sources with opaque protected locator IDs and no canonical, archive, asset, Google document, or sharing URLs; the current diff contains no raw phone number or email pattern, and the records retain no raw messages or private preparation locations. The installation plan is explicitly forward-looking, not a completion report: it supports planned multi-layer implementation scope and Jamie's scheduled participation while preserving Drew Bolton, Jamie Burkart, and Garrett Fuselier's shared credit, leaving completed work and individual responsibility to an open corroboration task. A fresh retrieval of the [official archived America: Now and Here artist page](https://web.archive.org/web/20110518071626/http://kansascity.americanowandhere.org/the-visual-artists/drew-bolton-jamie-burkart-and-garrett-fuselier/) confirmed that the program names all three as visual artists, describes NTER CHNG as their interactive text-messaging experience, and directly attributes to Burkart the purpose of helping gallery visitors make connections beyond existing contact lists. The public-ready purpose claim accurately treats this as design intent rather than measured connection, adoption, behavior change, audience scale, or impact and remains deferred. The installation-operations claim remains corroborated, has no projection, and combines protected plan support with the official program's inclusion evidence without converting planning into execution. All human gates remain pending."
 }

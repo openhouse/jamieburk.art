@@ -492,6 +492,58 @@ test("NTER CHNG exhibition inclusion uses the official program record without ov
   assert.ok(task.nextActions.some((item) => /checklist|catalog|program schedule/i.test(item)));
 });
 
+test("NTER CHNG working artifacts preserve implementation depth without exposing raw material", () => {
+  const sourceIds = [
+    "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011",
+    "SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
+  ];
+  const sources = sourceIds.map((id) =>
+    knowledgeBank.sources.find((item) => item.id === id)
+  );
+  const planReading = knowledgeBank.sourceReadings.find(
+    (item) => item.id === "READ-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
+  );
+
+  assert.ok(sources.every((source) => source.visibility === "protected"));
+  assert.ok(sources.every((source) => source.preservationStatus === "private"));
+  assert.ok(sources.every((source) => source.protectedLocatorId));
+  assert.ok(sources.every((source) => source.canonicalUrl === undefined));
+  assert.ok(sources.every((source) => source.archiveUrl === undefined));
+  assert.ok(sources.every((source) => source.assetUrl === undefined));
+  assert.doesNotMatch(JSON.stringify(sources), /docs\.google\.com|\b(?:816|501)-\d{3}-\d{4}\b/);
+  assert.ok(planReading.propositions.some((item) => /software reliability.*server hosting.*wall fabrication.*takedown/i.test(item.text)));
+  assert.ok(planReading.limitations.some((item) => /forward-looking plan.*not a completion report/i.test(item)));
+});
+
+test("NTER CHNG separates Jamie's public connection purpose from planned installation execution", () => {
+  const purposeClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"
+  );
+  const operationsClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
+  );
+  const purposeDecision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === purposeClaim.id
+  );
+  const executionTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"
+  );
+
+  assert.equal(purposeClaim.maturity, "public-ready");
+  assert.equal(purposeDecision.decision, "defer");
+  assert.match(purposeClaim.composition.intendedEnd, /connections outside their existing contact lists/i);
+  assert.match(purposeClaim.composition.collectiveCredit, /Drew Bolton.*Jamie Burkart.*Garrett Fuselier/i);
+  assert.ok(purposeClaim.antiClaims.some((item) => /measurably created new relationships/i.test(item)));
+  assert.ok(purposeClaim.evidence.some((item) => item.sourceId === "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011" && item.relationship === "direct-support"));
+
+  assert.equal(operationsClaim.maturity, "corroborated");
+  assert.equal(operationsClaim.projections.length, 0);
+  assert.ok(operationsClaim.boundaries.some((item) => /planned work distinct from independently verified completion/i.test(item)));
+  assert.ok(operationsClaim.antiClaims.some((item) => /solely managed or implemented/i.test(item)));
+  assert.equal(executionTask.status, "open");
+  assert.ok(executionTask.nextActions.some((item) => /Drew Bolton and Garrett Fuselier/i.test(item)));
+});
+
 test("NYC Artist Coalition Wikipedia handoff separates drafting, editing, and publication", () => {
   const claim = knowledgeBank.claims.find(
     (item) => item.id === "CLM-NYCAC-WIKIPEDIA-SOURCE-HANDOFF-2025"

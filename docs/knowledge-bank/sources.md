@@ -280,9 +280,20 @@ Kruger component.
 
 The official artist page supplies the direct evidence. It lists the three
 collaborators as visual artists and publishes their NTER CHNG artist statement.
+It also attributes to Jamie the aim of helping gallery visitors make new
+connections beyond their existing contacts.
 The Nerman record establishes wider May 2011 program context but does not name
 NTER CHNG or place it at the museum. Historical phone numbers and visitor
 responses visible in the Wayback capture are not reproduced in this repository.
+
+Two newly surfaced April 2011 working artifacts are represented only through
+protected, public-safe source descriptions. A collaborative installation plan
+documents planned software, hosting, equipment, fabrication, logistics,
+networking, wayfinding, installation, tuning, and takedown work, and schedules
+Jamie into the preparation sequence. A working artist-materials document
+preserves three prompts, nine message samples, and the Jamie-attributed purpose
+later published by the program. Neither underlying document, its sharing URL,
+contact details, nor raw message text is stored in the repository.
 
 See
 `docs/knowledge-bank/research/nter-chng-america-now-and-here-2026-07-15.md`.

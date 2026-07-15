@@ -70,6 +70,17 @@ credit all three makers, preserve the linked supporting credits, and do not
 place NTER CHNG at the Nerman Museum without a separate installation-specific
 source.
 
+Keep `CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011` as public-ready reserve
+depth for a future participatory-design or technical-implementation narrative.
+If projected, preserve the official Jamie attribution as design intent, credit
+all three makers, and do not convert intention into measured connection or
+impact.
+
+Keep `CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011` unprojected while it is
+corroborated rather than public-ready. The planning artifact makes the breadth
+of implementation work visible, but a future public accomplishment claim needs
+after-the-fact execution evidence and collaborator-specific credit.
+
 ## NYC Artist Coalition Government Interface
 
 Keep `CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017` and

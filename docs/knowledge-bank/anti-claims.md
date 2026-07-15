@@ -253,6 +253,24 @@ or policy causation. Do not publish guest identities, friend or invite context,
 comments, profiles, contact details, meeting credentials, working documents,
 private administration, or raw authenticated captures.
 
+## NTER CHNG Working Artifacts
+
+Do not publish the newly surfaced working documents, their sharing URLs,
+historical contact details, raw message text, or private preparation-location
+details. The message samples do not establish that their senders were public
+visitors, and they are not evidence of attendance, adoption, connection, or
+behavior change.
+
+Do not treat the collaborative installation plan as a completion report. It
+documents intended work and Jamie's scheduled participation, not sole project
+management, completion of every task, or the final division of labor. Treat
+Leedy-Voulkos as a planned location until an after-the-fact source confirms the
+final installation details.
+
+Do not use Jamie's publicly attributed connection purpose to erase Drew Bolton
+or Garrett Fuselier's co-creation, assign Jamie every conceptual or technical
+decision, or claim that the intended outcome was measured.
+
 ## NYC Artist Coalition Government Interface
 
 Do not say DCLA, the Council, Tom Finkelpearl, or Rafael Espinal could not act

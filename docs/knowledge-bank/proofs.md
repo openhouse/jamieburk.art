@@ -28,6 +28,17 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
   participatory texting installation. The Nerman Museum record supplies wider
   program context but does not place NTER CHNG at the museum.
 
+- Jamie publicly framed NTER CHNG's intended end as helping gallery visitors
+  make connections beyond their existing contacts. This is a design-purpose
+  claim, not evidence that the installation measurably produced new
+  relationships.
+
+- A contemporaneous collaborative plan situates Jamie in preparation for NTER
+  CHNG's America: Now and Here presentation and documents planned work across
+  software reliability, hosting, hardware, fabrication, logistics, networking,
+  wayfinding, installation, tuning, and takedown. It remains corroborated rather
+  than public-ready until execution and collaborator credit are confirmed.
+
 - The HJE two-times revenue contribution claim remains preserved as a research
   record but is not projected. Independent 2016 KCUR reporting supplies a
   narrower company-level context: online sales accounted for half of the

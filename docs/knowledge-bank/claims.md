@@ -461,6 +461,36 @@ stay outside the repo.
 **Review owner:** Jamie / Codex
 **Last reviewed:** 2026-07-15
 
+## nter-chng-jamie-connection-design - Participatory connection purpose
+
+**Status:** Ready but deferred
+**Support level:** Strong with intention-versus-outcome boundary
+**Evidence class:** Official archived program page / protected working project material
+**Public wording:** Jamie co-created NTER CHNG's participatory interface and publicly framed its purpose as helping gallery visitors make connections beyond their existing contacts.
+**Detailed public-safe wording:** America: Now and Here's official artist page attributes to Jamie the intention to move visitors beyond private address-book communication; a contemporaneous working compilation preserves the same attribution.
+**Where to project:** Reserve depth for participatory-design, cultural-technology, and facilitation narratives.
+**Why it matters:** Connects the technical interface to the human end it was built to serve.
+**Guardrail:** Present this as Jamie's stated intention within a three-maker collaboration, not as a measured outcome or sole concept credit.
+**Do not say:** Jamie alone conceived NTER CHNG; the installation measurably created new relationships; preserved messages prove adoption or behavior change.
+**Protected boundaries:** Do not expose the working document, sharing URL, contact details, or raw message text.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-15
+
+## nter-chng-anh-installation-operations - Implementation-plan depth
+
+**Status:** Corroborated; research remains open
+**Support level:** Strong for planned scope and Jamie's scheduled participation; incomplete for execution and individual credit
+**Evidence class:** Protected contemporaneous installation plan / official archived program page
+**Public wording:** A contemporaneous plan situates Jamie in NTER CHNG's America: Now and Here preparation and documents an implementation spanning software, hosting, display hardware, fabrication, logistics, networking, wayfinding, installation, tuning, and takedown.
+**Detailed public-safe wording:** The record shows the breadth and integration of the planned work while keeping planned tasks distinct from completed tasks and shared responsibility distinct from individual attribution.
+**Where to project:** Knowledge-bank reserve pending completed-work and collaborator corroboration.
+**Why it matters:** Makes visible the technical project and implementation work beneath the gallery experience.
+**Guardrail:** Call this a plan and Jamie's scheduled participation until after-the-fact evidence confirms completion and responsibility.
+**Do not say:** Jamie solely managed or implemented the installation; Jamie completed every workstream; the plan proves the final venue or public dates.
+**Protected boundaries:** Private preparation-location details and the source document remain outside the repository.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready

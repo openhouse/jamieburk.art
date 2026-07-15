@@ -14,6 +14,12 @@ statement.
 This is direct program evidence. It moves the exhibition-inclusion fact beyond
 inference from later institutional context.
 
+Two contemporaneous working documents surfaced after the public-source pass.
+They deepen the record without changing the exhibition-inclusion conclusion:
+one documents the planned technical and physical implementation workflow; the
+other preserves the participatory prompts, working artist materials, and a
+Jamie-attributed statement of purpose later published by the program.
+
 ## Recovered sources
 
 ### NTER CHNG project site
@@ -46,6 +52,11 @@ provides the strongest evidence. The official page:
 The capture also contains historical phone numbers and visitor-response
 excerpts. Those details are not reproduced in the knowledge bank.
 
+The official page also attributes a specific participation aim to Jamie: help
+gallery visitors make connections beyond their existing address books and
+contact lists. This supports a bounded direct-role claim about design intent,
+not a claim that the installation measurably produced new relationships.
+
 ### Nerman Museum context
 
 [The Nerman Museum record](https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html)
@@ -55,6 +66,35 @@ Museum on May 11 and 12, 2011.
 
 The Nerman source does **not** name NTER CHNG. It establishes institutional and
 program context, not NTER CHNG's presentation at the museum.
+
+## Protected working artifacts
+
+### Installation plan
+
+A contemporaneous April 2011 collaborative plan treats the America: Now and
+Here presentation as a multi-layer implementation. Its workstreams include
+software reliability, server hosting, display computers and projectors, wall
+fabrication, transport, networking and wiring, participant wayfinding, on-site
+assembly, experience tuning, and takedown. It explicitly schedules Jamie into
+the preparation and installation sequence.
+
+The plan names Leedy-Voulkos as the intended installation location and places
+the start of installation in late April. This is planning evidence, not an
+after-the-fact checklist. It does not prove that every task occurred, assign
+every task to a collaborator, or independently confirm the final venue and
+public presentation dates.
+
+### Working artist and participation materials
+
+A second April 2011 working compilation joins prior exhibit information,
+artist materials, three open-ended participation prompts, and nine dated
+message samples. It also preserves the Jamie-attributed connection purpose
+that appears on the official America: Now and Here artist page.
+
+The underlying document contains contact details and message text. Neither is
+stored in this repository. The record also does not establish whether the
+message senders were visitors, collaborators, or test participants, so the
+samples are not treated as audience, adoption, or impact evidence.
 
 ## Public-ready claim
 
@@ -66,6 +106,19 @@ program context, not NTER CHNG's presentation at the museum.
 The claim is preserved as public-ready and deferred from website projection.
 It expands the compositional palette without automatically expanding the live
 portfolio.
+
+## Additional claims
+
+**Public-ready, deferred:** Jamie co-created NTER CHNG's participatory
+interface and publicly framed its intended end as helping gallery visitors
+make connections beyond their existing contacts. The official program page
+directly supports the attribution; the protected working compilation
+corroborates it.
+
+**Corroborated, unprojected:** A contemporaneous plan situates Jamie in the
+America: Now and Here preparation sequence and documents the breadth of the
+planned implementation workflow. This claim remains below public-ready until
+completed workstreams and collaborator credit are corroborated.
 
 ## Chad's lens
 
@@ -93,6 +146,12 @@ for Megan Mantia and Elisha Stetson.
   from exhibition inclusion.
 - Do not republish historical phone numbers or visitor-response excerpts from
   the archived artist page.
+- Do not treat the installation plan as proof that every listed task was
+  completed or that Jamie performed every workstream.
+- Do not convert the planned Leedy-Voulkos location into a final presentation
+  claim without after-the-fact corroboration.
+- Do not treat preserved message samples as evidence of public attendance,
+  adoption, connection, or behavior change.
 
 ## Open research
 
@@ -101,3 +160,9 @@ venue-specific record could establish NTER CHNG's exact location and dates
 within the Kansas City launch. Until that is recovered, the safe language is
 "included in the 2011 Kansas City launch" or "listed in its official
 visual-artist roster."
+
+The technical-credit follow-up should recover completed-task records,
+installation photographs, code or deployment history, and collaborator
+confirmation. Software, hosting, fabrication, installation, content, and
+production responsibilities should be attributed separately rather than
+assigned wholesale from a shared plan.
