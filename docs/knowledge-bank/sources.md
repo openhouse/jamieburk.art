@@ -139,6 +139,25 @@ resources, planning resources, registrations, and published reporting. A
 posted URL remains a discovery and routing trace until the destination is
 independently reviewed. See the [complete public-safe research note](research/nycartc-facebook-events-archival-production-2026-07.md).
 
+## Personal and WOW List Facebook Events
+
+The July 14, 2026 authenticated pass reconciled Jamie's complete current
+personal Facebook event controls: 502 IDs on the Past surface, 21 IDs on the
+Hosted tab, 18 overlaps, and 505 distinct IDs across both tabs. A second Past
+traversal returned the same 502-ID set. The complete 20-card subset displaying
+Jamie as host was classified and close-read; nine professionally relevant
+public pages became source nodes.
+
+The Past surface is an association graph, not attendance or a portfolio. The
+Hosted tab is a platform classification, not an authorship or sole-production
+roster. Mutable response displays are not attendance, reach, endorsement, or
+impact. Posted URLs are research routes until separately reviewed.
+
+The current WOW List public and authenticated Page-management event surfaces
+displayed zero records. A bounded Facebook and Wayback search recovered none.
+The finding is **not recovered**, never **did not exist**. See the [public-safe
+research note](research/personal-wowlist-facebook-events-archival-production-2026-07.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

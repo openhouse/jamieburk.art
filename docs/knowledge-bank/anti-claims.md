@@ -84,6 +84,25 @@ also preserves Olympia Kazi's and other contributors' work.
 Do not count stakeholder mentions as replies, amplification, endorsement, or
 engagement without inspecting the actual relationship.
 
+## Personal and WOW List Facebook Events
+
+Do not describe Jamie's 502 current Past event associations as events he
+attended, endorsed, participated in, authored, produced, or found
+professionally significant. Do not describe Facebook's 21-record Hosted tab as
+an authorship or sole-production roster; five cards display another host.
+
+Do not publish the record-level personal association graph, other host names as
+a relational ledger, guests, relationship context, exact private locations,
+comments, authentication material, or mutable response displays. Do not sum
+response displays or call them unique people, attendance, reach, endorsement,
+causality, or impact.
+
+Do not treat URLs posted in an event description as automatic corroboration,
+participant readership, endorsement, attendance, or impact.
+
+Do not turn the current zero-record WOW List event display or bounded historical
+non-recovery into a claim that WOW List never had a Facebook event.
+
 ## NYC Artist Coalition Facebook Events
 
 Do not describe 33 recovered records as 34 recovered records or invent the

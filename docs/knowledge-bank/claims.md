@@ -153,6 +153,36 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## personal-facebook-displayed-host-event-practice - Event-making research reserve
+
+**Status:** Research reserve
+**Support level:** Confirmed with boundaries
+**Evidence class:** Authenticated current-surface control / selected public event pages / protected aggregate research run
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** Twenty current Past event cards displaying Jamie as host from 2006 through 2017 document recurring structures for cultural production, hospitality and care, participatory place and water work, networked public culture, and civic learning.
+**Where to project:** Bank only. Consider future role-specific composition when facilitation, cultural production, hospitality systems, participatory design, or place-based work is material.
+**Why it matters:** Preserves a long event-making throughline without allowing a social platform's association graph to become a professional claim by itself.
+**Guardrail:** The Past surface contains 502 current associations; the Hosted tab contains 21 records, with 18 overlaps and 505 distinct IDs across both controls. Association is not attendance or production, the Hosted tab is a platform classification, and displayed host attribution is not author metadata or sole production.
+**Do not say:** Jamie attended or produced all 502 associations; Jamie solely produced all 21 Hosted-tab records; every current association is professionally significant; mutable response displays measure attendance, reach, endorsement, or impact.
+**Protected boundaries:** Record-level associations, other host names as a relational graph, guest and relationship context, exact private locations, comments, authentication data, and mutable response displays remain outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-facebook-events-not-recovered - Bounded negative finding
+
+**Status:** Internal only
+**Support level:** Negative research finding
+**Evidence class:** Authenticated current controls / bounded Facebook and Wayback research run
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** The current WOW List public and Page-management Facebook event surfaces displayed zero records, and a bounded historical search recovered none.
+**Where to project:** Internal research note only.
+**Why it matters:** Records a completed search disposition so later agents do not repeat it or turn an empty current interface into historical certainty.
+**Guardrail:** Not recovered does not mean did not exist.
+**Do not say:** WOW List never had a Facebook event; WOW List had no event community; the Facebook control measures WOW List's own platform activity.
+**Protected boundaries:** Do not expose account-management state, authentication material, or personal association records.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
 **Status:** Careful

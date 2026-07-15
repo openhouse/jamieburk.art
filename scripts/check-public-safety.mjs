@@ -21,6 +21,7 @@ const ignoredDirs = new Set([
 
 const textExtensions = new Set([
   ".css",
+  ".csv",
   ".example",
   ".html",
   ".js",
@@ -145,6 +146,11 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const personalFacebookEventDataFiles = textFiles.filter((file) =>
+  /^docs\/knowledge-bank\/data\/(?:personal-wowlist-facebook-event-controls\.json|jamie-facebook-displayed-host-event-census-2026-07-14\.csv)$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -190,6 +196,18 @@ scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
   /\b(?:PRIVATE|CONFIDENTIAL)\b/
+);
+
+scanPattern(
+  personalFacebookEventDataFiles,
+  "public personal-event aggregate exposes a record-level ID, URL, title, venue, guest, relationship, comment, or authentication field",
+  /(?:"(?:eventId|eventUrl|title|venue|location|guestIdentities|friendContext|inviteContext|comments|authentication|accountAdmin)"\s*:|^(?:event_id|event_url|title|venue|location|guest|relationship|comment|authentication),)/im
+);
+
+scanPattern(
+  personalFacebookEventDataFiles,
+  "public personal-event aggregate exposes attendance or mutable per-record response fields",
+  /(?:"(?:attendance|went|interested|responses|uniqueResponders|peopleReached)"\s*:|^(?:attendance|went|interested|responses|unique_responders|people_reached),)/im
 );
 
 const credentialPatterns = [

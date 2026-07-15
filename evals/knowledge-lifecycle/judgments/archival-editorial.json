@@ -1,29 +1,29 @@
 {
-  "judgeId": "archival-editorial-final-c-20260714-a91e6f",
+  "judgeId": "archival-editorial-personal-fb-20260714",
   "lens": "archival-editorial",
-  "candidate": "sha256:c5eb3c220af65798246d2a33ba0c3d4a2df0b67ff41fe0d507115ec6fbdd9c95",
-  "contract": "sha256:bf2d38dde11edfad5d59d9d52c20e29bd32c36a68f332d3f9b563707ca093d43",
+  "candidate": "sha256:4fff9074e7326f21d485d36c9652a0e43bc25be6c65cb338b64f861336d6687d",
+  "contract": "sha256:9658240a1c58b5e94769df8a249c0890651c5decb0cca47cedc02196d113a7fd",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
     "source_decomposition": 4,
     "claim_atomicity": 3,
-    "provenance_closure": 3,
+    "provenance_closure": 4,
     "status_separation": 4,
     "project_context": 4,
     "research_honesty": 4,
     "projection_restraint": 4
   },
   "evidence": [
-    { "rubric": "capture_integrity", "observation": "The candidate and contract hashes match exactly. All 58 intakes have completed dispositions, all 34 displayed Facebook event-control slots remain accounted for as 33 recovered records and one unresolved slot, and the deterministic evaluation reports no findings." },
-    { "rubric": "source_decomposition", "observation": "The event corpus retains availability-matched review depth: 26 substantive bodies are close-read, five bounded permalink records are metadata-reviewed, and two list-only records are metadata-reviewed and marked dead. Hosting, association, response, attendance, stakeholder, authorship, and policy-causality non-support boundaries remain intact." },
-    { "rubric": "claim_atomicity", "observation": "The system keeps population accounting, participation contribution, response signals, source routing, official programs, attendance, and policy outcomes separately evaluable. The participation projection is necessarily synthetic but remains one explicitly attributed and collectively bounded practice claim." },
-    { "rubric": "provenance_closure", "observation": "No provenance regressed. The full claim retains Jamie's protected first-person source, four event records, independent attendance reporting, and organizer-context reporting. The public occurrence selects three representative sources for recurring practice, public-action routing, and Jamie's organizer context without deleting the fuller evidence graph." },
-    { "rubric": "status_separation", "observation": "CallNYC event-branding evidence remains reviewed, directly supported, confirmed-with-boundary, qualified, editorially unused, and held rather than removed. Its source and claim remain in the knowledge bank while disappearing from the public registry and CallNYC citation plan." },
-    { "rubric": "project_context", "observation": "The NYC Artist Coalition dossier still reconciles the 33-plus-one event accounting, recurring rotating venues, independent about-one-hundred town-hall report, collective campaign context, open production-share research, and future photo priorities." },
-    { "rubric": "research_honesty", "observation": "No research-honesty boundary regressed: the candidate still distinguishes displayed-control accounting from historical completeness, records seven degraded detail surfaces, requires a Meta export for the unresolved slot, keeps Facebook responses separate from attendance, and refuses inferred hosting, official attendance, authorship, endorsement, or policy causality." },
-    { "rubric": "projection_restraint", "observation": "The simplified public projection directly says 'Jamie describes,' explicitly states that the work was shared across the coalition, and uses three representative public sources rather than presenting the full evidence inventory. The separate October-town-hall occurrence preserves the independently reported about-one-hundred figure. All 45 lifecycle tests and all 10 citation tests pass." }
+    { "rubric": "capture_integrity", "observation": "The requested hashes match. Two terminal Past traversals produced the same 502-ID set; 20 displayed Jamie as host and 482 another host. The separate 21-record Hosted control reconciles through 18 overlaps to 505 distinct IDs, and the anonymous census accounts for all 20 displayed-Jamie-host cards." },
+    { "rubric": "source_decomposition", "observation": "Protected population runs preserve record-level accounting behind opaque locators, nine selected public event pages are close-read with literal displayed-host boundaries, and the three posted destinations are metadata-reviewed routes whose contents are not used as claim evidence." },
+    { "rubric": "claim_atomicity", "observation": "Past association population, Hosted-tab population, displayed-host practice, current WOW List zero display, and historical WOW List non-recovery are separate claims. The five-form practice claim is synthetic but remains explicitly interpretive and bounded rather than becoming authorship, attendance, or impact." },
+    { "rubric": "provenance_closure", "observation": "Every new mature or negative claim resolves to its control source, protected research run, selected event sources, and inquiry. The complete 20-card classification has protected aggregate support, while selected public pages support only individual plot points and never sole production." },
+    { "rubric": "status_separation", "observation": "All five personal and WOW List Facebook claims are internal-only, editorially unused, and limited to held archive-note projections. No related claim appears in a public citation page or the public registry." },
+    { "rubric": "project_context", "observation": "The research note supplies reproducible controls, year and practice-form accounting, nine bounded historical plot points, cross-project links to Sunday Dinner and water work, privacy rules, data-quality limits, and an explicit reserve-depth editorial decision suitable for future researchers." },
+    { "rubric": "research_honesty", "observation": "The candidate repeatedly separates association, Hosted classification, displayed host labels, authorship, production, attendance, endorsement, response displays, causality, and impact. It records WOW List as a current zero display plus bounded historical non-recovery, explicitly not proof that no event existed." },
+    { "rubric": "projection_restraint", "observation": "The aggregate controls and anonymous census omit the relational ledger, nonselected event IDs and titles, URLs, guests, relationship context, exact private locations, comments, authentication material, and event-level mutable metrics. Human claims and anti-claims registers now explicitly bar public inflation, posted-URL corroboration, personal-data publication, WOW List nonexistence claims, and hiring-site projection of the research reserve. The evaluator reports zero findings, all 50 lifecycle tests pass, and the public-safety check passes." }
   ],
   "regressions": [],
-  "nextAction": "Stop this lifecycle cycle, preserve the unused CallNYC branding claim for future composition, and retain first-person attribution until collaborator or event-level evidence supports stronger role allocation."
+  "nextAction": "Stop this lifecycle cycle and retain the personal event practice as bank-only reserve depth unless a future role-specific composition receives a fresh source, privacy, and collective-credit review."
 }

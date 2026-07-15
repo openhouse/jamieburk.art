@@ -840,6 +840,258 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredPersonalWowlistFacebookEvents) {
+    const required = suite.requiredPersonalWowlistFacebookEvents;
+    for (const intakeId of required.intakeIds) {
+      if (!intakeIds.has(intakeId)) {
+        add("capture_integrity", "missing-personal-facebook-event-intake", `Missing ${intakeId}`);
+      }
+    }
+    for (const sourceId of required.sourceIds) {
+      if (!sourceIds.has(sourceId)) {
+        add("source_decomposition", "missing-personal-facebook-event-source", `Missing ${sourceId}`);
+      }
+    }
+    for (const claimId of required.claimIds) {
+      if (!claimIds.has(claimId)) {
+        add("provenance_closure", "missing-personal-facebook-event-claim", `Missing ${claimId}`);
+      }
+    }
+    for (const inquiryId of required.inquiryIds) {
+      if (!inquiryIds.has(inquiryId)) {
+        add("research_honesty", "missing-personal-facebook-event-inquiry", `Missing ${inquiryId}`);
+      }
+    }
+
+    const primaryIntake = bank.intakeItems.find(
+      (item) => item.id === required.intakeIds[0]
+    );
+    if (
+      !primaryIntake ||
+      primaryIntake.sensitivity !== "protected-reference" ||
+      primaryIntake.availability !== "local-private" ||
+      !primaryIntake.protectedLocatorId ||
+      primaryIntake.submittedUrl
+    ) {
+      add(
+        "projection_restraint",
+        "personal-facebook-event-intake-boundary",
+        `${required.intakeIds[0]} exposes the protected personal event corpus`
+      );
+    }
+
+    const associationSource = sourceById.get(
+      "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-RUN-2026"
+    );
+    const hostedSource = sourceById.get(
+      "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026"
+    );
+    const practiceSource = sourceById.get(
+      "SRC-JAMIE-FACEBOOK-DISPLAYED-HOST-PRACTICE-RUN-2026"
+    );
+    if (
+      !associationSource ||
+      associationSource.visibility !== "protected" ||
+      associationSource.preservationStatus !== "private" ||
+      !associationSource.protectedLocatorId ||
+      !associationSource.supportsGenerally.some((item) => item.includes(String(required.pastCount))) ||
+      !associationSource.supportsGenerally.some((item) => item.includes(String(required.pastJamieDisplayedHostCount)) && item.includes(String(required.pastOtherDisplayedHostCount))) ||
+      !associationSource.supportsGenerally.some((item) => item.includes(String(required.distinctPastHostLabels))) ||
+      !associationSource.doesNotEstablish.some((item) => /attendance.*endorsement.*participation.*production.*authorship/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-association-boundary",
+        "Personal Past event accounting loses its exact population or association boundary"
+      );
+    }
+    if (
+      !hostedSource ||
+      hostedSource.visibility !== "protected" ||
+      hostedSource.preservationStatus !== "private" ||
+      !hostedSource.protectedLocatorId ||
+      !hostedSource.supportsGenerally.some((item) => item.includes(String(required.hostedCount))) ||
+      !hostedSource.supportsGenerally.some((item) => item.includes(String(required.overlapCount)) && item.includes(String(required.distinctUnionCount))) ||
+      !hostedSource.supportsGenerally.some((item) => item.includes(String(required.hostedJamieDisplayedHostCount)) && item.includes(String(required.hostedOtherDisplayedHostCount))) ||
+      !hostedSource.doesNotEstablish.some((item) => /sole production or authorship/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-hosted-boundary",
+        "Hosted-tab accounting loses its exact reconciliation or platform-classification boundary"
+      );
+    }
+    if (
+      !practiceSource ||
+      practiceSource.visibility !== "protected" ||
+      practiceSource.preservationStatus !== "private" ||
+      !practiceSource.protectedLocatorId ||
+      !practiceSource.supportsGenerally.some((item) => item.includes(String(required.pastJamieDisplayedHostCount))) ||
+      !practiceSource.doesNotEstablish.some((item) => /attendance.*reach.*endorsement.*causality.*impact/i.test(item))
+    ) {
+      add(
+        "projection_restraint",
+        "personal-facebook-practice-source",
+        "Displayed-host practice source loses its protected aggregate or mutable-metric boundary"
+      );
+    }
+
+    const selectedSources = required.displayedHostSourceIds.map((sourceId) =>
+      sourceById.get(sourceId)
+    );
+    if (
+      selectedSources.some(
+        (source) =>
+          !source ||
+          source.visibility !== "public" ||
+          source.reviewDepth !== "close-reading" ||
+          source.author ||
+          !source.publicNote?.includes("bounded platform attribution") ||
+          !source.doesNotEstablish.some((item) => /sole production/i.test(item))
+      )
+    ) {
+      add(
+        "source_decomposition",
+        "personal-facebook-selected-event-source",
+        "Selected event sources lose close-reading, literal platform-label, or collective-credit boundaries"
+      );
+    }
+
+    const destinationSources = required.postedDestinationSourceIds.map(
+      (sourceId) => sourceById.get(sourceId)
+    );
+    const destinationEvidence = bank.claims.flatMap((claim) =>
+      claim.evidence.filter((evidence) =>
+        required.postedDestinationSourceIds.includes(evidence.sourceId)
+      )
+    );
+    if (
+      destinationSources.some(
+        (source) =>
+          !source ||
+          source.reviewDepth !== "metadata" ||
+          !source.doesNotEstablish.some((item) => /read|adopt|endorse|participant/i.test(item))
+      ) ||
+      destinationEvidence.length
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-posted-url-boundary",
+        "Posted destinations are being treated as corroboration or participant-use evidence"
+      );
+    }
+
+    const associationClaim = bank.claims.find(
+      (claim) => claim.id === required.associationClaimId
+    );
+    const hostedClaim = bank.claims.find(
+      (claim) => claim.id === required.hostedClaimId
+    );
+    const practiceClaim = bank.claims.find(
+      (claim) => claim.id === required.practiceClaimId
+    );
+    const wowlistLiveClaim = bank.claims.find(
+      (claim) => claim.id === required.wowlistLiveClaimId
+    );
+    const wowlistNegativeClaim = bank.claims.find(
+      (claim) => claim.id === required.wowlistNegativeClaimId
+    );
+    const eventClaims = [
+      associationClaim,
+      hostedClaim,
+      practiceClaim,
+      wowlistLiveClaim,
+      wowlistNegativeClaim
+    ];
+    if (
+      eventClaims.some(
+        (claim) =>
+          !claim ||
+          claim.publicationStatus !== "internal-only" ||
+          claim.editorialStatus !== "unused" ||
+          claim.projections.some((projection) => projection.status === "active")
+      )
+    ) {
+      add(
+        "projection_restraint",
+        "personal-facebook-projection-boundary",
+        "Personal or WOW List Facebook event research is projected publicly instead of retained as reserve depth"
+      );
+    }
+    if (
+      !associationClaim?.boundaries.some((item) => /Association does not establish attendance/i.test(item)) ||
+      !associationClaim?.antiClaims.some((item) => /attended or produced all 502/i.test(item)) ||
+      !hostedClaim?.boundaries.some((item) => /platform classification/i.test(item)) ||
+      !hostedClaim?.antiClaims.some((item) => /solely produced/i.test(item))
+    ) {
+      add(
+        "projection_restraint",
+        "personal-facebook-credit-boundary",
+        "Association or Hosted-tab claims overstate attendance, authorship, or sole production"
+      );
+    }
+    if (
+      !practiceClaim ||
+      !required.displayedHostSourceIds.every((sourceId) =>
+        practiceClaim.evidence.some((evidence) => evidence.sourceId === sourceId)
+      ) ||
+      !practiceClaim.boundaries.some((item) => /interpretive classifications/i.test(item)) ||
+      !practiceClaim.boundaries.some((item) => /Host attribution is not sole production/i.test(item)) ||
+      !practiceClaim.antiClaims.some((item) => /numeric displays measure attendance or impact/i.test(item))
+    ) {
+      add(
+        "provenance_closure",
+        "personal-facebook-practice-claim",
+        `${required.practiceClaimId} loses selected sources or its interpretive and traction boundaries`
+      );
+    }
+    if (
+      wowlistNegativeClaim?.status !== "not-recovered" ||
+      !wowlistLiveClaim?.boundaries.some((item) => /does not establish.*never/i.test(item)) ||
+      !wowlistNegativeClaim?.boundaries.some((item) => /does not establish.*ever existed/i.test(item)) ||
+      !wowlistNegativeClaim?.antiClaims.some((item) => /never had a Facebook event/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-nonrecovery-boundary",
+        "WOW List Facebook non-recovery is being converted into historical nonexistence"
+      );
+    }
+
+    const personalInquiry = bank.researchInquiries.find(
+      (inquiry) => inquiry.id === required.personalInquiryId
+    );
+    const personalInquiryText = JSON.stringify(personalInquiry ?? {});
+    if (
+      !personalInquiry ||
+      personalInquiry.resultStatus !== "partially-recovered" ||
+      ![required.pastCount, required.hostedCount, required.overlapCount, required.distinctUnionCount, required.pastJamieDisplayedHostCount, required.pastOtherDisplayedHostCount, required.hostedJamieDisplayedHostCount, required.hostedOtherDisplayedHostCount].every((count) => personalInquiryText.includes(String(count))) ||
+      !personalInquiry.limitations.some((item) => /not an official Facebook export/i.test(item)) ||
+      !personalInquiry.limitations.some((item) => /response displays are not unique people, attendance, reach/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-inquiry",
+        `${required.personalInquiryId} does not preserve the complete accounting and source limits`
+      );
+    }
+    const wowlistInquiry = bank.researchInquiries.find(
+      (inquiry) => inquiry.id === required.wowlistInquiryId
+    );
+    if (
+      !wowlistInquiry ||
+      wowlistInquiry.resultStatus !== "not-recovered" ||
+      !wowlistInquiry.findings.some((item) => /three bounded Wayback patterns.*one legacy pattern timed out/i.test(item)) ||
+      !wowlistInquiry.limitations.some((item) => /do not establish.*ever existed/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-inquiry",
+        `${required.wowlistInquiryId} does not preserve bounded non-recovery`
+      );
+    }
+  }
+
   if (suite.requiredGoogleDriveArchiveProduction) {
     const required = suite.requiredGoogleDriveArchiveProduction;
     for (const intakeId of required.intakeIds) {

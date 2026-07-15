@@ -681,6 +681,126 @@ test("Facebook event eval keeps posted URLs as private research routing", () => 
   assert.equal(result.findings.some((item) => item.code === "facebook-event-source-routing"), true);
 });
 
+test("personal and WOW List Facebook event controls account for every current slot", () => {
+  const required = suite.requiredPersonalWowlistFacebookEvents;
+  const controls = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json",
+      "utf8"
+    )
+  );
+  assert.equal(controls.personalPastEventsSurface.currentRecords, required.pastCount);
+  assert.equal(controls.personalPastEventsSurface.secondPassExactIdMatch, true);
+  assert.deepEqual(controls.personalPastEventsSurface.displayedHostAccounting, {
+    jamie: required.pastJamieDisplayedHostCount,
+    anotherHost: required.pastOtherDisplayedHostCount,
+    distinctHostLabelsIncludingUnresolved: required.distinctPastHostLabels
+  });
+  assert.equal(controls.personalHostedEventsTab.currentRecords, required.hostedCount);
+  assert.equal(controls.personalHostedEventsTab.recoveredRecords, required.hostedCount);
+  assert.equal(controls.personalHostedEventsTab.unresolvedRecords, 0);
+  assert.equal(controls.personalHostedEventsTab.overlapWithPastSurface, required.overlapCount);
+  assert.equal(controls.personalHostedEventsTab.hostedTabOnlyRecords, required.hostedOnlyCount);
+  assert.equal(controls.personalHostedEventsTab.distinctRecordsAcrossBothTabs, required.distinctUnionCount);
+  assert.deepEqual(controls.personalHostedEventsTab.displayedHostAccounting, {
+    jamie: required.hostedJamieDisplayedHostCount,
+    anotherHost: required.hostedOtherDisplayedHostCount
+  });
+  assert.equal(controls.wowlist.currentDisplayedRecords, 0);
+  assert.equal(controls.wowlist.historicalDisposition, "not-recovered");
+
+  const census = readFileSync(
+    "docs/knowledge-bank/data/jamie-facebook-displayed-host-event-census-2026-07-14.csv",
+    "utf8"
+  ).trim().split("\n");
+  assert.equal(census.length, required.pastJamieDisplayedHostCount + 1);
+  assert.equal(census.slice(1).every((row) => /,Jamie Burkart,recovered,/.test(row)), true);
+  assert.equal(census.filter((row) => row.endsWith("cultural-performance-and-production")).length, 7);
+  assert.equal(census.filter((row) => row.endsWith("recurring-hospitality-and-care")).length, 4);
+  assert.equal(census.filter((row) => row.endsWith("participatory-place-travel-and-water")).length, 4);
+  assert.equal(census.filter((row) => row.endsWith("networked-culture-and-public-history")).length, 3);
+  assert.equal(census.filter((row) => row.endsWith("civic-learning-and-making")).length, 2);
+});
+
+test("personal Facebook event aggregate omits the relational ledger and mutable metrics", () => {
+  const aggregate = [
+    readFileSync("docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json", "utf8"),
+    readFileSync("docs/knowledge-bank/data/jamie-facebook-displayed-host-event-census-2026-07-14.csv", "utf8")
+  ].join("\n");
+  assert.doesNotMatch(aggregate, /"(?:eventId|eventUrl|guestIdentities|friendContext|inviteContext|comments|accountAdmin)"\s*:/i);
+  assert.doesNotMatch(aggregate, /^(?:event_id|event_url|guest|relationship|comment|account_admin),/im);
+  assert.doesNotMatch(aggregate, /"(?:attendance|went|interested|responses|peopleReached)"\s*:/i);
+  assert.doesNotMatch(aggregate, /^(?:attendance|went|interested|responses|people_reached),/im);
+});
+
+test("personal Facebook event production preserves selected-source and reserve-depth boundaries", () => {
+  const required = suite.requiredPersonalWowlistFacebookEvents;
+  for (const sourceId of required.displayedHostSourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    assert.ok(source, sourceId);
+    assert.equal(source.visibility, "public");
+    assert.equal(source.reviewDepth, "close-reading");
+    assert.equal(source.author, undefined);
+    assert.match(source.publicNote, /bounded platform attribution/);
+  }
+  for (const claimId of required.claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    assert.ok(claim, claimId);
+    assert.equal(claim.publicationStatus, "internal-only");
+    assert.equal(claim.editorialStatus, "unused");
+    assert.equal(claim.projections.some((projection) => projection.status === "active"), false);
+  }
+  const personalInquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === required.personalInquiryId
+  );
+  assert.equal(personalInquiry.resultStatus, "partially-recovered");
+  assert.match(personalInquiry.publicSummary, /502 Past IDs and 21 Hosted IDs.*18 overlaps and 505 distinct records/);
+});
+
+test("personal Facebook event eval rejects association, authorship, and traction inflation", () => {
+  const required = suite.requiredPersonalWowlistFacebookEvents;
+  const bank = structuredClone(knowledgeBank);
+  const association = bank.claims.find((item) => item.id === required.associationClaimId);
+  const hosted = bank.claims.find((item) => item.id === required.hostedClaimId);
+  const practice = bank.claims.find((item) => item.id === required.practiceClaimId);
+  association.boundaries = [];
+  association.antiClaims = [];
+  hosted.boundaries = [];
+  hosted.antiClaims = [];
+  practice.boundaries = [];
+  practice.antiClaims = [];
+  practice.publicationStatus = "public";
+  practice.editorialStatus = "active";
+  practice.projections[0].status = "active";
+  practice.projections[0].surfaces = ["/about"];
+  practice.projections[0].text = "Jamie produced 502 events that reached thousands of people.";
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-credit-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-practice-claim"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-projection-boundary"), true);
+});
+
+test("personal Facebook event eval keeps posted URLs as routing and WOW List as non-recovery", () => {
+  const required = suite.requiredPersonalWowlistFacebookEvents;
+  const bank = structuredClone(knowledgeBank);
+  const practice = bank.claims.find((item) => item.id === required.practiceClaimId);
+  const wowlist = bank.claims.find((item) => item.id === required.wowlistNegativeClaimId);
+  practice.evidence.push({
+    sourceId: required.postedDestinationSourceIds[0],
+    relationship: "direct-support",
+    supports: ["participant endorsement"],
+    confidence: "high",
+    renderCitation: false
+  });
+  wowlist.status = "confirmed";
+  wowlist.internalClaim = "WOW List never had a Facebook event.";
+  wowlist.boundaries = [];
+  wowlist.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-posted-url-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "wowlist-facebook-nonrecovery-boundary"), true);
+});
+
 test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {
   const required = suite.requiredGoogleDriveArchiveProduction;
   for (const sourceId of required.sourceIds) {

@@ -21,3 +21,12 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 ## Projection Rule
 
 Public pages may simplify this language, but they must not strengthen ownership, causality, authority, or current-status claims beyond the guardrails in `claims.md`.
+
+## Research Reserve
+
+- Twenty current Facebook Past event cards displaying Jamie as host from 2006
+  through 2017 preserve a source-backed throughline across cultural production,
+  hospitality and care, participatory place and water work, networked public
+  culture, and civic learning. This remains bank-only reserve depth: displayed
+  host attribution is not author metadata, sole production, attendance, or
+  impact.

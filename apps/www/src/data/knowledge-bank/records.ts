@@ -32,6 +32,12 @@ import {
   nycArtcFacebookEventSources
 } from "./facebook-events-archive-production.ts";
 import {
+  personalWowlistFacebookEventClaims,
+  personalWowlistFacebookEventIntakes,
+  personalWowlistFacebookEventResearchInquiries,
+  personalWowlistFacebookEventSources
+} from "./personal-wowlist-facebook-events-archive-production.ts";
+import {
   campaignPressCollections,
   campaignPressIntakes,
   campaignPressSources
@@ -51,6 +57,7 @@ const knowledgeBankInput = {
   intakeItems: [
     ...googleDriveArchiveIntakes,
     ...socialArchiveIntakes,
+    ...personalWowlistFacebookEventIntakes,
     ...nycArtcFacebookEventIntakes,
     ...icloudArchiveIntakes,
     ...campaignPressIntakes,
@@ -649,6 +656,7 @@ const knowledgeBankInput = {
   sources: [
     ...googleDriveArchiveSources,
     ...socialArchiveSources,
+    ...personalWowlistFacebookEventSources,
     ...nycArtcFacebookEventSources,
     ...icloudArchiveSources,
     ...kcTownHallSources,
@@ -822,6 +830,7 @@ const knowledgeBankInput = {
     ...nycArtcFacebookEventClaims,
     ...googleDriveArchiveClaims,
     ...socialArchiveClaims,
+    ...personalWowlistFacebookEventClaims,
     ...icloudArchiveClaims,
     ...kcTownHallClaims,
     {
@@ -936,6 +945,7 @@ const knowledgeBankInput = {
   researchInquiries: [
     ...googleDriveArchiveResearchInquiries,
     ...socialArchiveResearchInquiries,
+    ...personalWowlistFacebookEventResearchInquiries,
     ...nycArtcFacebookEventResearchInquiries,
     ...icloudArchiveResearchInquiries,
     kcTownHallInquiry,

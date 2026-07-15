@@ -55,6 +55,21 @@ Ask:
     contribution clearly while preserving collective event authorship, the
     rotating-but-not-uninterrupted meeting pattern, and the independent
     about-one-hundred attendance report for the October 2017 town hall?
+20. Do two exact 502-ID Past-event traversals, the 21-record Hosted tab, their
+    18-record overlap, and their 505-record union remain separate, reproducible
+    current-surface controls rather than claims about every historical event?
+21. Does the full personal-event accounting keep association, Facebook's Hosted
+    classification, displayed host labels, authorship, sole production,
+    attendance, endorsement, professional significance, and impact distinct?
+22. Does the anonymous 20-card displayed-Jamie-host census account for every
+    card while omitting event IDs, nonselected titles, URLs, locations, guests,
+    relationship context, comments, authentication data, and mutable metrics?
+23. Are the five event-practice forms treated as interpretive handles, with
+    selected public pages supporting plot points rather than sole authorship?
+24. Are posted destinations retained as source-discovery routes instead of
+    corroboration, participant readership, endorsement, attendance, or impact?
+25. Does the WOW List result remain a bounded current zero display and
+    historical non-recovery, never a claim that no Facebook event existed?
 
 Return JSON with:
 

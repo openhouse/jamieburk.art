@@ -35,6 +35,13 @@ slot. It preserves the complete surviving chronology, Page-host boundaries,
 rotating-venue practice, public-institution interfaces, posted-source routes,
 and the difference between response signals and attendance.
 
+The [personal and WOW List Facebook event pass](research/personal-wowlist-facebook-events-archival-production-2026-07.md)
+accounts for 502 Past event IDs and 21 Hosted-tab IDs on Jamie's current
+personal controls, reconciles them to 505 distinct IDs, close-reads the complete
+20-card subset displaying Jamie as host, and records a bounded WOW List
+non-recovery. It keeps association, displayed host labels, authorship,
+attendance, response displays, and professional significance separate.
+
 ## Purpose
 
 The knowledge bank exists to:
