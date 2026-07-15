@@ -121,6 +121,23 @@ article about a $20,000 Denver DIY Spaces Fund was close-read; the remaining
 destinations stay in the research lifecycle. See
 `docs/knowledge-bank/projects/wowlist-facebook-posts.md`.
 
+### NTER CHNG protected working artifacts
+
+Two native 2011 Google Docs are represented as protected project-archive
+sources without publishing their URLs, IDs, permissions, or raw bodies:
+
+- `NTER CHNG Installer`, created April 13, 2011, documents planned software,
+  hosting, display-hardware, fabrication, projection, transport, wiring,
+  installation, and experience-tuning work for the May restaging.
+- `inerchng 2011`, created April 6, 2011, preserves dated working exchanges and
+  a copy labeled `January 2010 Exhibit Information`.
+
+These artifacts support bounded observations about collective production scope
+and message capture during preparation. They do not prove task completion,
+individual ownership, final venue, public visitor status, attendance, or
+impact. Phone numbers, raw messages, personal working details, and authenticated
+access state remain outside Git.
+
 ### KC Town Hall public record and first-hand clarification
 
 The July 14 funding-status pass recovered four official KCMO sources:

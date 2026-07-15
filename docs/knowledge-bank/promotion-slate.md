@@ -146,6 +146,11 @@ website selection. It is a recommendation, not publication approval.
   early lineage of participatory system design across software, space, and
   real-time public interaction. Best use: a future creative-technology or
   experience-design case after visual-rights and division-of-work review.
+- `CLM-NTERCHNG-INSTALLATION-OPERATIONS`: a protected 2011 installer plan
+  documents collective delivery across software behavior, hosting, display
+  hardware, fabrication, projection, transport, wiring, site installation, and
+  gallery tuning. Best use: future technical-operations or experience-delivery
+  evidence after plan-versus-completion and division-of-work review.
 - `CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION`: the official archived exhibition
   site lists Jamie, Drew Bolton, and Garrett Fuselier as visual artists and
   presents NTER CHNG on their shared page. Preserve the group-exhibition and

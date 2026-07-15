@@ -83,6 +83,22 @@ claim beyond the wording and guardrails here.
 **Public wording:** Jamie used product-discovery conversations to pressure-test a knowledge-system concept against specific users, valuable problems, inspectable context, user control, and privacy.
 **Guardrail:** Do not name the private collaborator or claim market validation, purchase, testimonial, or direct lineage into unread later materials.
 
+## NTER CHNG Development Claim
+
+### CLM-NTERCHNG-INSTALLATION-OPERATIONS
+
+**Status:** Public-safe candidate, held from current site
+**Support level:** Strong for collective planned scope; completion and individual roles remain open
+**Evidence class:** Protected 2011 project artifacts / official exhibition sources
+**Public wording:** A 2011 installer plan documents NTER CHNG as an integrated software, hardware, fabrication, projection, wiring, site-installation, and experience-tuning workflow developed collectively for its America: Now and Here restaging.
+**Where to project:** Knowledge bank only; possible future Technical Operations evidence after further review.
+**Why it matters:** Makes the project's delivery system concrete, connecting participatory concept to software behavior, physical production, installation logistics, and situated experience.
+**Guardrail:** A working plan establishes intended scope, not completion, final venue, or individual task ownership. Dated exchanges show message capture during preparation, not established public participation.
+**Do not say:** Jamie completed every task; every planned task was completed; the work was publicly displayed at the intended venue; the exchanges measure public engagement.
+**Protected boundaries:** Google Drive locators, phone numbers, raw messages, personal working details, and authenticated state stay outside Git.
+**Review owner:** Jamie / Drew Bolton and Garrett Fuselier for division-of-work corroboration
+**Last reviewed:** 2026-07-15
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  

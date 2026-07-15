@@ -79,8 +79,10 @@ research queue.
 
 See [projects/nterchng.md](projects/nterchng.md) for a recovered early
 participatory-system project whose collaborative installation form and 2011
-America: Now and Here inclusion are source-backed but not selected for the
-current website.
+America: Now and Here inclusion are source-backed. Protected 2011 working
+documents also establish an integrated software-to-installation production
+scope while leaving completion and individual task ownership open. The project
+is not selected for the current website.
 
 See [projects/urbanhermit.md](projects/urbanhermit.md) for the public-safe
 full-population review of Jamie's personal `@urbanhermit` account, its bounded

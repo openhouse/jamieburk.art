@@ -56,6 +56,22 @@ as every historical user or stakeholder. Do not say WOW List organized every
 event it distributed, that visible interaction units establish attendance or
 impact, or that Jamie authored every institutional-account post.
 
+## NTER CHNG
+
+Do not describe NTER CHNG as Jamie's solo work. Credit Drew Bolton and Garrett
+Fuselier equally, and do not assign coding, spatial design, motion graphics,
+fabrication, or installation tasks to an individual without dated evidence or
+collaborator confirmation.
+
+Do not treat the April 2011 installer plan as proof that every listed task was
+completed or that the intended Leedy-Voulkos installation became the final
+public display. Do not describe the dated April exchanges as public visitor
+participation, attendance, engagement, or impact; they may reflect collaborator
+testing or another working use.
+
+Do not publish the protected Google Docs, their URLs or IDs, phone numbers, raw
+messages, personal working details, or authenticated-session state.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

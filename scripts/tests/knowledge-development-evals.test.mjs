@@ -468,12 +468,12 @@ test("Google Shared Drive sources expose no locators and never render citations"
 });
 
 test("NTER CHNG archival production preserves collaboration and exhibition evidence", () => {
-  assert.equal(nterchngCaptures.length, 1);
-  assert.equal(nterchngSources.length, 7);
-  assert.equal(nterchngObservations.length, 8);
-  assert.equal(nterchngClaims.length, 2);
+  assert.equal(nterchngCaptures.length, 2);
+  assert.equal(nterchngSources.length, 9);
+  assert.equal(nterchngObservations.length, 12);
+  assert.equal(nterchngClaims.length, 3);
   assert.equal(nterchngResearchTasks.length, 1);
-  assert.equal(nterchngInquiries.length, 1);
+  assert.equal(nterchngInquiries.length, 2);
 
   const installation = nterchngClaims.find(
     (claim) => claim.id === "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
@@ -481,13 +481,30 @@ test("NTER CHNG archival production preserves collaboration and exhibition evide
   const exhibition = nterchngClaims.find(
     (claim) => claim.id === "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
   );
+  const operations = nterchngClaims.find(
+    (claim) => claim.id === "CLM-NTERCHNG-INSTALLATION-OPERATIONS",
+  );
   assert.ok(installation);
   assert.ok(exhibition);
+  assert.ok(operations);
   assert.match(installation.internalClaim, /Drew Bolton/);
   assert.match(installation.internalClaim, /Garrett Fuselier/);
   assert.match(exhibition.internalClaim, /official archived/i);
   assert.equal(installation.selectionState, "dormant");
   assert.equal(exhibition.selectionState, "dormant");
+  assert.equal(operations.selectionState, "candidate");
+  assert.equal(operations.publicationState, "public-safe");
+  assert.equal(operations.status, "confirmed-with-boundary");
+  assert.ok(
+    operations.boundaries.some((boundary) =>
+      /collective work by Drew Bolton, Jamie Burkart, and Garrett Fuselier/i.test(
+        boundary,
+      ),
+    ),
+  );
+  assert.ok(
+    operations.boundaries.some((boundary) => /plan establishes intended workflow/i.test(boundary)),
+  );
   assert.ok(
     exhibition.boundaries.some((boundary) => /not a solo exhibition/i.test(boundary)),
   );
@@ -496,7 +513,7 @@ test("NTER CHNG archival production preserves collaboration and exhibition evide
   );
 });
 
-test("NTER CHNG metadata-only detail source cannot expose historical contact data", () => {
+test("NTER CHNG protected sources cannot expose historical or Drive data", () => {
   const detail = nterchngSources.find(
     (source) =>
       source.id === "SRC-NTERCHNG-ANH-ARTIST-DETAIL-2011-05-18",
@@ -508,6 +525,32 @@ test("NTER CHNG metadata-only detail source cannot expose historical contact dat
   assert.equal(detail.assetUrl, undefined);
   assert.ok(detail.protectedLocatorId);
 
+  const protectedSources = nterchngSources.filter((source) =>
+    [
+      "SRC-NTERCHNG-ANH-ARTIST-DETAIL-2011-05-18",
+      "SRC-NTERCHNG-INSTALLER-PLAN-2011-04-13",
+      "SRC-NTERCHNG-WORKING-TRANSCRIPT-2011-04-06",
+    ].includes(source.id),
+  );
+  assert.equal(protectedSources.length, 3);
+  for (const source of protectedSources) {
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+    assert.ok(source.protectedLocatorId);
+  }
+
+  const installer = protectedSources.find(
+    (source) => source.id === "SRC-NTERCHNG-INSTALLER-PLAN-2011-04-13",
+  );
+  const working = protectedSources.find(
+    (source) => source.id === "SRC-NTERCHNG-WORKING-TRANSCRIPT-2011-04-06",
+  );
+  assert.ok(installer.supportsGenerally.some((item) => /back-queuing/i.test(item)));
+  assert.ok(
+    working.doesNotEstablish.some((item) => /public exhibition visitors/i.test(item)),
+  );
+
   const serialized = JSON.stringify({
     nterchngCaptures,
     nterchngSources,
@@ -518,14 +561,17 @@ test("NTER CHNG metadata-only detail source cannot expose historical contact dat
   });
   assert.doesNotMatch(
     serialized,
-    /(?:\+?1[-.\s])?(?:\([2-9]\d{2}\)[-.\s]?|[2-9]\d{2}[-.\s])[2-9]\d{2}[-.\s]\d{4}|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/,
+    /(?:\+?1[-.\s])?(?:\([2-9]\d{2}\)[-.\s]?|[2-9]\d{2}[-.\s])[2-9]\d{2}[-.\s]\d{4}|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|docs\.google\.com|drive\.google\.com/i,
   );
 
   for (const claim of nterchngClaims) {
-    const relationship = claim.evidence.find(
-      (item) => item.sourceId === detail.id,
+    const relationships = claim.evidence.filter((item) =>
+      protectedSources.some((source) => source.id === item.sourceId),
     );
-    if (relationship) assert.equal(relationship.renderCitation, false);
+    assert.ok(
+      relationships.every((relationship) => relationship.renderCitation === false),
+      `${claim.id} renders protected evidence`,
+    );
   }
 });
 

@@ -10,6 +10,7 @@ import type {
 const projectId = "nterchng";
 const installationClaimId = "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION";
 const exhibitionClaimId = "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION";
+const installationOperationsClaimId = "CLM-NTERCHNG-INSTALLATION-OPERATIONS";
 
 const homepageSourceId = "SRC-NTERCHNG-HOMEPAGE-2011-01-28";
 const documentationSourceId = "SRC-NTERCHNG-HOMEPAGE-2013-06-15";
@@ -18,6 +19,8 @@ const artistIndexSourceId = "SRC-NTERCHNG-ANH-ARTIST-INDEX-2011-05-16";
 const artistDetailSourceId = "SRC-NTERCHNG-ANH-ARTIST-DETAIL-2011-05-18";
 const kcStudioSourceId = "SRC-NTERCHNG-KC-STUDIO-ANH-2011-05-06";
 const nermanSourceId = "SRC-NTERCHNG-NERMAN-ANH-2011-04-30";
+const installerPlanSourceId = "SRC-NTERCHNG-INSTALLER-PLAN-2011-04-13";
+const workingTranscriptSourceId = "SRC-NTERCHNG-WORKING-TRANSCRIPT-2011-04-06";
 
 export const nterchngCaptures = [
   {
@@ -60,6 +63,34 @@ export const nterchngCaptures = [
     researchTaskIds: ["RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK"],
     disposition:
       "Recovered the project site, independent contemporaneous coverage, the official America: Now and Here artist index and detail record, and exhibition context. Preserve collective credit and keep historical personal phone numbers out of the repository and citation layer.",
+  },
+  {
+    id: "CAP-NTERCHNG-WORKING-DOCUMENTS-2026",
+    receivedAt: "2026-07-15",
+    submittedBy: "Jamie Burkart",
+    kind: "artifact",
+    summary:
+      "Two protected 2011 Google Docs preserving NTER CHNG installation planning, software and hardware tasks, dated text exchanges, and a copy of January 2010 exhibit information.",
+    status: "integrated",
+    publicSafety: "protected-pointer",
+    potentialProjectIds: [projectId],
+    potentialClaimFamilies: [
+      "installation operations",
+      "software and display-system delivery",
+      "America: Now and Here restaging preparation",
+      "participatory-system testing",
+      "collective division of work",
+    ],
+    sourceIds: [installerPlanSourceId, workingTranscriptSourceId],
+    observationIds: [
+      "OBS-NTERCHNG-INSTALLER-PRODUCTION-SCOPE",
+      "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN",
+      "OBS-NTERCHNG-WORKING-DATED-EXCHANGES",
+      "OBS-NTERCHNG-WORKING-EXHIBIT-INFORMATION-COPY",
+    ],
+    researchTaskIds: ["RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK"],
+    disposition:
+      "Integrated as protected project-archive evidence. The public graph preserves bounded production and testing observations without exposing Google Drive locators, phone numbers, raw messages, personal working-location details, or authenticated access state.",
   },
 ] satisfies CaptureRecord[];
 
@@ -259,6 +290,61 @@ export const nterchngSources = [
       "a relationship between Jamie and Barbara Kruger",
     ],
   },
+  {
+    id: installerPlanSourceId,
+    title: "NTER CHNG Installer",
+    organization: "NTER CHNG",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2011-04-13T18:25:12.160Z",
+    accessedAt: "2026-07-15",
+    publicCitation:
+      "NTER CHNG Installer, protected working document created April 13, 2011.",
+    publicNote:
+      "A project installation plan covering America: Now and Here staging, software revision, hosting, display hardware, wall fabrication, projection, wiring, transport, site installation, and experience tuning. The underlying locator and personal working details remain protected.",
+    protectedLocatorId: "PTR-NTERCHNG-INSTALLER-PLAN-2011-04-13",
+    supportsGenerally: [
+      "a concrete cross-disciplinary installation workflow",
+      "planned software work on server and wall components",
+      "a planned fix for rapid-message back-queuing",
+      "hosting, display-computer, projection, wall-fabrication, wiring, transport, and site-installation tasks",
+      "planned staging for America: Now and Here in May 2011",
+    ],
+    doesNotEstablish: [
+      "which collaborator completed each task",
+      "that every planned task was completed",
+      "that the planned venue became the final display venue",
+      "permission to publish personal working-location details",
+    ],
+  },
+  {
+    id: workingTranscriptSourceId,
+    title: "inerchng 2011",
+    organization: "NTER CHNG",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2011-04-06T19:49:17.517Z",
+    accessedAt: "2026-07-15",
+    publicCitation:
+      "inerchng 2011, protected working document created April 6, 2011.",
+    publicNote:
+      "A working document containing dated prompt-and-response exchanges and a copy labeled January 2010 Exhibit Information. Raw phone numbers, messages, and identifying metadata remain protected.",
+    protectedLocatorId: "PTR-NTERCHNG-WORKING-TRANSCRIPT-2011-04-06",
+    supportsGenerally: [
+      "dated text exchanges responsive to project prompts on April 5-6, 2011",
+      "a working or test use of the text-dialog system",
+      "a retained copy of January 2010 exhibit information naming the three collaborators",
+      "the software-and-architectural-installation and many-to-many dialog framing",
+    ],
+    doesNotEstablish: [
+      "that the message authors were public exhibition visitors",
+      "public attendance, message volume, or measured impact",
+      "independent corroboration of the copied exhibit language",
+      "permission to republish phone numbers or raw messages",
+    ],
+  },
 ] satisfies SourceRecord[];
 
 export const nterchngObservations = [
@@ -382,6 +468,72 @@ export const nterchngObservations = [
     supportsClaimIds: [exhibitionClaimId],
     reviewedAt: "2026-07-15",
   },
+  {
+    id: "OBS-NTERCHNG-INSTALLER-PRODUCTION-SCOPE",
+    sourceId: installerPlanSourceId,
+    project: projectId,
+    statement:
+      "The April 2011 installer plan documents a collective delivery workflow spanning server- and wall-side software, rapid-message queue behavior, hosting, display computers, a fabricated wall, projectors, floor labeling, transport, networking and wiring, site installation, and final gallery-experience tuning.",
+    observationType: "explicit",
+    locator:
+      "Revisit Software, PREP, INSTALL, Remaining Tasks, and gallery-experience sections; protected working details omitted.",
+    confidence: "high",
+    limitations: [
+      "The plan establishes project scope, not completion of every item or the collaborator responsible for each task.",
+      "Personal working-location details remain protected.",
+    ],
+    supportsClaimIds: [installationClaimId, installationOperationsClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN",
+    sourceId: installerPlanSourceId,
+    project: projectId,
+    statement:
+      "The installer document identifies the work as staging for America: Now and Here in May 2011 and schedules preparation and a planned installation beginning April 22 at Leedy-Voulkos.",
+    observationType: "explicit",
+    locator: "Document subtitle and PREP / INSTALL headings.",
+    confidence: "high",
+    limitations: [
+      "A working schedule is evidence of preparation and intended venue, not proof that installation or public display occurred exactly as planned.",
+      "The official exhibition sources remain authoritative for inclusion and dates.",
+    ],
+    supportsClaimIds: [exhibitionClaimId, installationOperationsClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-NTERCHNG-WORKING-DATED-EXCHANGES",
+    sourceId: workingTranscriptSourceId,
+    project: projectId,
+    statement:
+      "A protected working document retains prompt-and-response text exchanges dated April 5-6, 2011, demonstrating that messages responsive to project questions were captured during preparation for the May restaging.",
+    observationType: "explicit",
+    locator: "Three dated prompt-and-response sections; phone numbers and raw messages omitted.",
+    confidence: "high",
+    limitations: [
+      "The artifact does not identify the exchange as public visitor participation rather than collaborator testing or another working use.",
+      "It does not establish a participation denominator, exhibition attendance, or measured outcome.",
+      "Raw messages and identifying phone numbers remain protected.",
+    ],
+    supportsClaimIds: [installationClaimId, installationOperationsClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-NTERCHNG-WORKING-EXHIBIT-INFORMATION-COPY",
+    sourceId: workingTranscriptSourceId,
+    project: projectId,
+    statement:
+      "The same protected document preserves a section labeled January 2010 Exhibit Information that names Drew Bolton, Jamie Burkart, and Garrett Fuselier, describes the software-and-architectural installation and many-to-many dialog, and calls the work their collective product.",
+    observationType: "explicit",
+    locator: "January 2010 Exhibit Information section; contact details omitted.",
+    confidence: "high",
+    limitations: [
+      "This appears to preserve a working copy of project exhibit language, not an independently published source or the canonical press-release file.",
+      "The collective description does not allocate individual responsibilities.",
+    ],
+    supportsClaimIds: [installationClaimId],
+    reviewedAt: "2026-07-15",
+  },
 ] satisfies ObservationRecord[];
 
 export const nterchngClaims = [
@@ -449,22 +601,141 @@ export const nterchngClaims = [
         confidence: "high",
         renderCitation: false,
       },
+      {
+        sourceId: installerPlanSourceId,
+        relationship: "private-support",
+        supports: [
+          "the integrated software, hardware, fabrication, installation, and gallery-tuning scope",
+          "planned rapid-message queue remediation",
+        ],
+        locator: "Sanitized installer-plan observations.",
+        publicNote:
+          "Protected project artifact: personal working details are withheld and the source must not render as a public citation.",
+        confidence: "high",
+        renderCitation: false,
+      },
+      {
+        sourceId: workingTranscriptSourceId,
+        relationship: "private-support",
+        supports: [
+          "dated working exchanges captured by the project",
+          "a retained copy of collective January 2010 exhibit information",
+        ],
+        locator: "Sanitized working-transcript observations.",
+        publicNote:
+          "Protected project artifact: phone numbers and raw messages are withheld and the source must not render as a public citation.",
+        confidence: "high",
+        renderCitation: false,
+      },
     ],
     boundaries: [
       "Always credit Drew Bolton and Garrett Fuselier alongside Jamie.",
       "The recovered sources describe combined capabilities but do not establish which collaborator wrote code, designed the wall, produced motion graphics, or led installation work.",
+      "The 2011 installer plan establishes collective production scope, not completion or individual task ownership.",
+      "The dated working exchanges may be collaborator testing or another working use; do not call them public visitor participation.",
       "Do not publish participant messages, historical phone numbers, attendance, or engagement counts without separate rights-aware evidence.",
     ],
     antiClaims: [
       "Jamie solely created NTER CHNG",
       "Jamie alone programmed or designed every component",
       "The installation's participation or impact was measured",
+      "The April 2011 exchanges prove public visitor participation",
       "Archived participant contact details are appropriate portfolio content",
     ],
     researchTaskIds: ["RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK"],
-    researchInquiryIds: ["INQ-NTERCHNG-WAYBACK-ANH-2026-07-15"],
+    researchInquiryIds: [
+      "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+      "INQ-NTERCHNG-WORKING-DOCUMENTS-2026-07-15",
+    ],
     reviewedAt: "2026-07-15",
-    reviewedBy: ["Codex public-source and Wayback review"],
+    reviewedBy: [
+      "Codex public-source and Wayback review",
+      "Codex protected Google Docs archival review",
+    ],
+  },
+  {
+    id: installationOperationsClaimId,
+    project: projectId,
+    claimType: "method",
+    internalClaim:
+      "A protected April 2011 installer plan documents NTER CHNG as an integrated delivery system spanning software behavior, hosting, display hardware, wall fabrication, projection, transport, networking and wiring, site installation, floor interface, and gallery-experience tuning; a separate working artifact records dated text exchanges during preparation for the May restaging.",
+    epistemicState: "sourced",
+    publicationState: "public-safe",
+    selectionState: "candidate",
+    status: "confirmed-with-boundary",
+    observationIds: [
+      "OBS-NTERCHNG-INSTALLER-PRODUCTION-SCOPE",
+      "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN",
+      "OBS-NTERCHNG-WORKING-DATED-EXCHANGES",
+    ],
+    projections: [
+      {
+        key: "archive-note",
+        text:
+          "A 2011 installer plan documents NTER CHNG as an integrated software, hardware, fabrication, projection, wiring, site-installation, and experience-tuning workflow developed collectively for its America: Now and Here restaging.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/nterchng"],
+      },
+      {
+        key: "technical-operations",
+        text:
+          "Co-developed an interactive installation delivery system spanning software behavior, hosting, display hardware, fabrication, projection, wiring, and site operations.",
+        status: "hold",
+        citationRequired: true,
+        surfaces: ["/work/technical-operations"],
+      },
+    ],
+    evidence: [
+      {
+        sourceId: installerPlanSourceId,
+        relationship: "private-support",
+        supports: [
+          "cross-disciplinary production scope",
+          "software queue-remediation plan",
+          "hosting and display-computer work",
+          "fabrication, projection, wiring, transport, installation, and tuning workflow",
+          "America: Now and Here restaging preparation",
+        ],
+        locator: "Sanitized production-scope and staging observations.",
+        publicNote:
+          "Protected working plan with personal details withheld; it cannot render as a public citation.",
+        confidence: "high",
+        renderCitation: false,
+      },
+      {
+        sourceId: workingTranscriptSourceId,
+        relationship: "private-support",
+        supports: ["dated message capture during project preparation"],
+        locator: "Sanitized April 5-6, 2011 exchange observation.",
+        publicNote:
+          "Protected working document with phone numbers and raw messages withheld; it cannot render as a public citation.",
+        confidence: "high",
+        renderCitation: false,
+      },
+    ],
+    boundaries: [
+      "Treat the production scope as collective work by Drew Bolton, Jamie Burkart, and Garrett Fuselier until dated records or collaborator confirmation allocate individual responsibilities.",
+      "A working installer plan establishes intended workflow, not completion of every task.",
+      "The planned Leedy-Voulkos installation does not by itself prove the final display venue or completed installation.",
+      "The dated text exchanges may represent collaborator testing or another working use, not public visitor participation.",
+      "Keep Google Drive locators, phone numbers, raw messages, and personal working details protected.",
+    ],
+    antiClaims: [
+      "Jamie individually completed every software, fabrication, hardware, and installation task",
+      "The working plan proves every listed task was completed",
+      "NTER CHNG was publicly displayed at Leedy-Voulkos exactly as planned",
+      "The April 2011 exchanges are a measured public-participation result",
+      "The raw Google Docs are public-safe portfolio artifacts",
+    ],
+    researchTaskIds: ["RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK"],
+    researchInquiryIds: ["INQ-NTERCHNG-WORKING-DOCUMENTS-2026-07-15"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: [
+      "Codex protected Google Docs archival review",
+      "collective-credit review",
+      "public-safety review",
+    ],
   },
   {
     id: exhibitionClaimId,
@@ -481,6 +752,7 @@ export const nterchngClaims = [
       "OBS-NTERCHNG-ANH-PARTICIPATORY-SYSTEM",
       "OBS-NTERCHNG-ANH-KANSAS-CITY-LAUNCH",
       "OBS-NTERCHNG-NERMAN-CONTEXT",
+      "OBS-NTERCHNG-INSTALLER-ANH-STAGING-PLAN",
     ],
     projections: [
       {
@@ -540,23 +812,44 @@ export const nterchngClaims = [
         confidence: "high",
         renderCitation: false,
       },
+      {
+        sourceId: installerPlanSourceId,
+        relationship: "private-support",
+        supports: [
+          "project preparation for the May 2011 America: Now and Here restaging",
+          "the planned installation schedule and intended venue",
+        ],
+        locator: "Sanitized installer-plan staging observation.",
+        publicNote:
+          "Planning evidence only; the protected working source does not establish completed installation or final venue.",
+        confidence: "high",
+        renderCitation: false,
+      },
     ],
     boundaries: [
       "Describe this as inclusion in a multidisciplinary group exhibition, not a solo exhibition or commission.",
       "Credit Drew Bolton and Garrett Fuselier equally with Jamie.",
       "The Nerman Museum page documents a separate Barbara Kruger component and must not be used to place NTER CHNG at Nerman.",
+      "The installer plan documents America: Now and Here preparation and an intended Leedy-Voulkos installation, not completed display at that venue.",
       "Do not imply a personal collaboration with every nationally known artist in the exhibition.",
     ],
     antiClaims: [
       "Jamie had a solo exhibition at America: Now and Here",
       "NTER CHNG was exhibited at the Nerman Museum",
+      "The installer plan alone proves NTER CHNG was publicly displayed at Leedy-Voulkos",
       "Jamie collaborated directly with Barbara Kruger",
       "Jamie was the sole artist behind NTER CHNG",
     ],
     researchTaskIds: ["RT-NTERCHNG-ARTIFACTS-AND-DIVISION-OF-WORK"],
-    researchInquiryIds: ["INQ-NTERCHNG-WAYBACK-ANH-2026-07-15"],
+    researchInquiryIds: [
+      "INQ-NTERCHNG-WAYBACK-ANH-2026-07-15",
+      "INQ-NTERCHNG-WORKING-DOCUMENTS-2026-07-15",
+    ],
     reviewedAt: "2026-07-15",
-    reviewedBy: ["Codex public-source and Wayback review"],
+    reviewedBy: [
+      "Codex public-source and Wayback review",
+      "Codex protected Google Docs archival review",
+    ],
   },
 ] satisfies ClaimRecord[];
 
@@ -567,28 +860,40 @@ export const nterchngResearchTasks = [
     question:
       "What public-safe artifacts and collaborator evidence can document NTER CHNG's implementation and the individual division of work without exposing participant or historical contact data?",
     priority: "medium",
-    status: "open",
-    captureIds: ["CAP-NTERCHNG-WAYBACK-AND-ANH-2026"],
+    status: "in-progress",
+    captureIds: [
+      "CAP-NTERCHNG-WAYBACK-AND-ANH-2026",
+      "CAP-NTERCHNG-WORKING-DOCUMENTS-2026",
+    ],
     sourceIds: [
       homepageSourceId,
       documentationSourceId,
       artistDetailSourceId,
+      installerPlanSourceId,
+      workingTranscriptSourceId,
     ],
-    claimIds: [installationClaimId, exhibitionClaimId],
+    claimIds: [
+      installationClaimId,
+      installationOperationsClaimId,
+      exhibitionClaimId,
+    ],
     successCriteria: [
       "Recover playable or downloadable installation documentation with rights metadata.",
       "Recover the original press release or equivalent contemporaneous production record.",
       "Document the collaborators' individual technical, spatial, motion, and production responsibilities through dated records or collaborator confirmation.",
+      "Reconcile planned installer tasks with completion evidence and the final America: Now and Here display venue.",
+      "Determine whether the April 2011 exchanges were collaborator testing, installation testing, or public participation without publishing their contents or identifiers.",
       "Create a public-safe visual inventory that excludes participant messages, phone numbers, and unapproved identifiable people.",
     ],
     nextActions: [
       "Investigate the embedded Vimeo identifier and any archived media assets.",
       "Search Jamie's project archives and code repositories for NTER CHNG implementation records.",
+      "Search for task assignments, commits, invoices, photographs, installation reports, or correspondence that distinguish plan from completion.",
       "Invite Drew Bolton and Garrett Fuselier to correct or expand the division-of-work account.",
       "Seek visual-use permission before considering a public portfolio projection.",
     ],
     publicNote:
-      "The project and exhibition inclusion are source-backed. Implementation ownership, reusable media, participation measures, and individual division of work remain open research.",
+      "The project, exhibition inclusion, and integrated production scope are source-backed. Task completion, individual ownership, final venue, reusable media, and participation measures remain open research.",
     owner: "Jamie Burkart / archival reviewer",
     reviewedAt: "2026-07-15",
   },
@@ -635,5 +940,40 @@ export const nterchngInquiries = [
     ],
     publicSummary:
       "Public archival sources establish NTER CHNG as a collaborative interactive texting installation by Drew Bolton, Jamie Burkart, and Garrett Fuselier and establish the three collaborators' inclusion as visual artists in the 2011 Kansas City launch of America: Now and Here. The individual division of work and reusable media remain open.",
+  },
+  {
+    id: "INQ-NTERCHNG-WORKING-DOCUMENTS-2026-07-15",
+    project: projectId,
+    question:
+      "What do two newly surfaced 2011 Google Docs establish about NTER CHNG's production system, America: Now and Here preparation, working text exchanges, and collaborator roles, and what must remain protected?",
+    methods: [
+      "Fetch native Google Docs metadata and paragraph text through Jamie's authorized Drive connection.",
+      "Separate direct operational statements from plans, copied exhibit language, interpretation, and unresolved completion states.",
+      "Map the installer plan across software, hosting, hardware, fabrication, projection, wiring, transport, site installation, and experience-tuning functions.",
+      "Review the dated exchange document without reproducing phone numbers, raw messages, or identifying metadata.",
+      "Compare the section labeled January 2010 Exhibit Information with already recovered public and official project language.",
+      "Store only protected source pointers and public-safe observations in the repository; omit Google Drive URLs, document IDs, personal working details, raw messages, and authenticated state.",
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The April 13 installer plan documents an integrated workflow spanning software behavior, hosting, display computers, wall fabrication, projection, floor labeling, transport, wiring, site installation, and gallery-experience tuning.",
+      "The installer plan identifies the work as staging for America: Now and Here in May 2011 and records an intended installation beginning April 22 at Leedy-Voulkos.",
+      "The April 6 working document retains prompt-and-response exchanges dated April 5-6, 2011, showing that responsive messages were captured during project preparation.",
+      "The working document also preserves a section labeled January 2010 Exhibit Information that names Drew Bolton, Jamie Burkart, and Garrett Fuselier and describes the work as their collective product.",
+      "The newly recovered documents strengthen the project's integrated production-system account but do not allocate individual responsibilities among the three collaborators.",
+    ],
+    limitations: [
+      "A working plan does not establish that every listed task was completed.",
+      "The intended Leedy-Voulkos schedule does not by itself establish completed public display or final venue.",
+      "The dated exchanges may be collaborator testing or another working use; they are not established as public visitor participation.",
+      "The copied January 2010 exhibit information is not an independent source or a recovered canonical public press-release file.",
+      "The documents contain phone numbers, raw messages, and personal working details that remain protected.",
+      "No Google Drive URL, document ID, raw text body, or authenticated access state is published in the repository.",
+    ],
+    sourceIds: [installerPlanSourceId, workingTranscriptSourceId],
+    publicSummary:
+      "Two protected 2011 working documents strengthen the collective NTER CHNG production account: one maps an integrated software-to-installation workflow for the America: Now and Here restaging, and the other retains dated working exchanges and January 2010 exhibit language. Completion, final venue, participant status, and individual division of work remain open.",
+    protectedLocatorId: "PTR-NTERCHNG-WORKING-DOCUMENTS-2026-07-15",
   },
 ] satisfies ResearchInquiry[];
