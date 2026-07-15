@@ -310,6 +310,24 @@
       "blockers": [
         "Two fresh independent judges must review the repaired holdout contract and unchanged public-safe Urbanhermit content on a newly frozen revision."
       ]
+    },
+    {
+      "judgeId": "urbanhermit-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T10:07:00Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "urbanhermit-holdout-hiring-editor-credit-2026-07-15-final-d",
+      "completedAt": "2026-07-15T10:07:35Z",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

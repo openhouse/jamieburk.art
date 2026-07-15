@@ -134,4 +134,15 @@ A later frozen revision passed every substantive check but one reviewer rejected
 it because the holdout regression still named the prior NYC Artist Coalition
 judges. That reviewer correctly treated the stale contract as a blocker. The
 test now predeclares two new Urbanhermit reviewer IDs, the protocol has reset,
-and the unchanged public-safe content requires two fresh final reviews.
+and the unchanged public-safe content received two fresh final reviews on
+commit `069f4fdd`:
+
+- `urbanhermit-holdout-data-integrity-privacy-2026-07-15-final-c`
+- `urbanhermit-holdout-hiring-editor-credit-2026-07-15-final-d`
+
+Both reviewers scored all 17 criteria at 5 / 5 with no blockers. The
+data-integrity reviewer independently reconciled 434 / 434 profile records,
+verified all five review locks, and confirmed that superseded unredacted local
+commits are not ancestors of the publishable branch. The hiring editor accepted
+the source, collective-credit, metric, privacy, and selective-projection
+boundaries. Independent holdout acceptance is 2 / 2.
