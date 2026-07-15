@@ -57,7 +57,8 @@ for (const required of [
   "private-owner-post-population-and-public-source-selection",
   "private-collaborative-production-record",
   "protected-authored-policy-provenance",
-  "credential-completion-boundary"
+  "credential-completion-boundary",
+  "institutional-reciprocity-without-mind-reading"
 ]) {
   if (!fixtureIds.has(required)) fail(`Lifecycle eval is missing fixture ${required}`);
 }

@@ -430,13 +430,13 @@ export const proofClaims: ProofClaim[] = [
       "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.",
     shortWording: "Civic systems and coalition operations for NYC Artist Coalition",
     detailedPublicWording:
-      "Jamie built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. Campaign decisions and accomplishments remained collective.",
+      "Jamie built and stewarded workflows and shared materials that helped collaborators turn lived conditions in informal cultural spaces into formal recommendations, public participation, testimony, and policy communication. Official DCLA records separately describe the DIY engagement as producing formal recommendations, continued independent organizing, and a thoughtful civic dialogue. Campaign decisions and accomplishments remained collective.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and protected Shared Drive records with Jamie-attributed revision history for member onboarding, web deployment, public-meeting production, and machine-readable policy implementation.",
+      "Approved resume language, public campaign surfaces, official DCLA and Council records, and protected Shared Drive records with Jamie-attributed revision history for member onboarding, web deployment, public-meeting production, and machine-readable policy implementation.",
     whyItMatters:
-      "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
+      "Shows that Jamie's operating infrastructure helped community knowledge cross an institutional boundary in forms that agencies, Council members, collaborators, and the public could use, without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
-      "Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.",
+      "Use campaign-support and systems language. Official records establish the coalition's institutional function, not Jamie's sole authorship, an official's private motive, literal government dependency, legal authority, or sole causality for public policy outcomes.",
     doNotSay: [
       "Jamie alone repealed the Cabaret Law",
       "Jamie alone created the Office of Nightlife",
@@ -459,8 +459,13 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    structuredClaimIds: ["CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019"],
-    lastReviewed: "2026-07-14"
+    structuredClaimIds: [
+      "CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019",
+      "CLM-NYCA-DCLA-ENGAGEMENT-OUTCOME-2017",
+      "CLM-NYCA-CIVIC-INTERMEDIARY-VALUE",
+      "CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyca-participation-system",
@@ -508,8 +513,11 @@ export const proofClaims: ProofClaim[] = [
       "public-guidance",
       "civic-systems"
     ],
-    structuredClaimIds: ["CLM-NYCAC-PARTICIPATION-SYSTEM"],
-    lastReviewed: "2026-07-14"
+    structuredClaimIds: [
+      "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "wowlist-community-platform",

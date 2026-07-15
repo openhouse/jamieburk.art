@@ -254,3 +254,18 @@ Cloud presence and job-search wording were used for discovery, not as automatic
 proof. The source object carries only the propositions visible in or directly
 established by that object. Private paths, cloud identifiers, raw working files,
 contact data, correspondence, and credential assets remain outside the repo.
+
+## NYC Artist Coalition Institutional Value
+
+The July 15, 2026 institutional-value pass is documented in
+`docs/knowledge-bank/projects/nyca-institutional-reciprocity-2026-07-15.md`.
+It adds six public government sources: Finkelpearl's February 2017 CreateNYC
+testimony; the official CreateNYC NYC Artists page and forward; the official
+appendix copy of NYC Artist Coalition's recommendations; and Council records
+for Int. 1652-2017 and Int. 1688-2017.
+
+Read these records together but do not collapse them. The February testimony
+describes members of the DIY community without naming NYC Artist Coalition.
+Later CreateNYC records make that identification explicit. The Council records
+establish Espinal's sponsorship and formal legislative pathways; they do not
+establish his private motives or coalition authorship of legislation.

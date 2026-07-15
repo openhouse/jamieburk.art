@@ -402,3 +402,31 @@ test("iCloud Teams source deepening preserves policy, ordinal, and credential bo
   assert.match((certificateClaim?.antiClaims ?? []).join("\n"), /certified AI evaluator/i);
   assert.match((certificateClaim?.antiClaims ?? []).join("\n"), /completion date, curriculum, score, or proficiency/i);
 });
+
+test("NYC Artist Coalition institutional-value claims preserve fact, inference, and reciprocal credit", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+
+  const testimony = sourceById.get("SRC-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27");
+  const outcome = claimById.get("CLM-NYCA-DCLA-ENGAGEMENT-OUTCOME-2017");
+  const intermediary = claimById.get("CLM-NYCA-CIVIC-INTERMEDIARY-VALUE");
+  const council = claimById.get("CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY");
+
+  assert.equal(testimony?.visibility, "public");
+  assert.match(testimony?.canonicalUrl ?? "", /Commissioner-Tom-Finkelpearl_Testimony\.pdf$/);
+  assert.ok(testimony?.doesNotEstablish.some((item) => /does not name NYC Artist Coalition/i.test(item)));
+  assert.equal(outcome?.status, "confirmed-with-boundary");
+  assert.ok(outcome?.boundaries.some((item) => /does not name NYC Artist Coalition/i.test(item)));
+  assert.ok(outcome?.antiClaims.some((item) => /testified that he needed/i.test(item)));
+
+  assert.equal(intermediary?.status, "inference");
+  assert.match(intermediary?.internalClaim ?? "", /support the inference.*civic intermediary/is);
+  assert.ok(intermediary?.antiClaims.some((item) => /official representative of every artist/i.test(item)));
+  assert.ok(intermediary?.antiClaims.some((item) => /commissioned the coalition/i.test(item)));
+
+  assert.equal(council?.status, "inference");
+  assert.match(council?.internalClaim ?? "", /reciprocal-capacity analysis/i);
+  assert.ok(council?.boundaries.some((item) => /not a statement of Espinal's private motive/i.test(item)));
+  assert.ok(council?.antiClaims.some((item) => /coalition alone caused/i.test(item)));
+  assert.ok(council?.antiClaims.some((item) => /Jamie personally supplied every witness/i.test(item)));
+});

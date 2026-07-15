@@ -106,6 +106,9 @@ current site:
 - `CLM-FB-JAMIE-PROJECT-ACTION-ROUTING`
 - `CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE`
 - `CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE`
+- `CLM-NYCA-DCLA-ENGAGEMENT-OUTCOME-2017`
+- `CLM-NYCA-CIVIC-INTERMEDIARY-VALUE`
+- `CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY`
 
 The personal-account population accounting, inbound-search floor, and thematic
 retrieval aids remain Knowledge Bank method records rather than website copy.
@@ -144,6 +147,13 @@ instructors, and issuer; date and curriculum language remain separately sourced.
 The Sunday Dinner hundredth-iteration trace remains bank-only depth. It is a
 public ordinal floor and image credit, not a replacement for aggregate scale,
 attendance, role, date, or rights evidence.
+
+The NYC Artist Coalition institutional-value claims also remain bank-only.
+They answer why the work mattered by distinguishing observable engagement
+outcomes from institutional inference: the coalition translated community
+experience into usable civic forms while DCLA and Council supplied formal
+planning and policy channels. This is not evidence of an official's private
+motive, literal dependency, endorsement, or sole causality.
 
 Bank-only does not mean weak or unimportant. It means the current public
 argument does not yet require the claim, the claim is still maturing, or both.

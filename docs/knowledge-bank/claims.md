@@ -192,23 +192,23 @@ claim beyond the wording and guardrails here.
 
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 
-**Structured claim IDs:** `CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019`
+**Structured claim IDs:** `CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019`, `CLM-NYCA-DCLA-ENGAGEMENT-OUTCOME-2017`, `CLM-NYCA-CIVIC-INTERMEDIARY-VALUE`, `CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY`
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
-**Detailed public-safe wording:** Protected records with Jamie-attributed revision history document member onboarding and shared resources, Let NYC Dance deployment context, a 21-day public-meeting production checklist, and a note translating legislation into machine-readable data requirements from 2017 through 2019. Revision attribution supports maintenance, not sole authorship. Campaign decisions and accomplishments remained collective.
+**Detailed public-safe wording:** Jamie built and stewarded workflows and shared materials that helped collaborators turn lived conditions in informal cultural spaces into formal recommendations, public participation, testimony, and policy communication. Protected records with Jamie-attributed revision history document member onboarding, Let NYC Dance deployment context, a 21-day public-meeting production checklist, and a note translating legislation into machine-readable data requirements. Official DCLA records separately describe the DIY engagement as producing formal recommendations, continued independent organizing, and a thoughtful civic dialogue. Revision attribution supports maintenance, not sole authorship; campaign decisions and accomplishments remained collective.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
-**Why it matters:** Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.
-**Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.
+**Why it matters:** Shows that Jamie's operating infrastructure helped community knowledge cross an institutional boundary in forms that agencies, Council members, collaborators, and the public could use, without turning collective advocacy outcomes into solo accomplishments.
+**Guardrail:** Use campaign-support and systems language. Official records establish the coalition's institutional function, not Jamie's sole authorship, an official's private motive, literal government dependency, legal authority, or sole causality for public policy outcomes.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-15
 
 ## nyca-participation-system - Recurring participation system
 
-**Structured claim IDs:** `CLM-NYCAC-PARTICIPATION-SYSTEM`
+**Structured claim IDs:** `CLM-NYCAC-PARTICIPATION-SYSTEM`, `CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY`
 
 **Status:** Careful
 
@@ -232,7 +232,7 @@ claim beyond the wording and guardrails here.
 
 **Review owner:** Jamie / Collaborator confirmation useful for event-level credit
 
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-15
 
 ## jamie-facebook-event-association-population - Personal event controls
 

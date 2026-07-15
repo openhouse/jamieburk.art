@@ -14,6 +14,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition institutional value: approved for bank-only use as a bounded reciprocal-capacity analysis. Official records support the coalition's recommendation, participation, testimony, communication, and dialogue functions, while DCLA and Council supplied formal planning and policy pathways. Do not claim private motives, literal government dependency, commissioning, endorsement, bill authorship, adoption of every recommendation, or sole causality. Finkelpearl's February testimony does not name NYC Artist Coalition; later CreateNYC records make the connection.
 - NYC Artist Coalition press architecture: 46 placements representing 45 distinct articles across four campaign sites is approved with the live/archive date boundary; press placement is not publisher endorsement or individual credit for collective outcomes.
 - Project social identity systems: Jamie's first-person account that he established the verified project accounts is approved with public-profile corroboration of the account map. Do not attribute every post, later stewardship action, reaction, or project outcome to Jamie.
 - NYC Artist Coalition account engagement: the recovered minimum of 20 in-term posts returned from seven then-sitting Council-member accounts is approved as account-level engagement, not formal endorsement, personal authorship, commissioning, adoption, partnership, or policy causality.
@@ -88,3 +89,4 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Independent support for the HJE growth contribution and its causal boundary.
 - Canonical support for WOW List adoption scale, the 300-plus Sunday Dinner aggregate, and the 20-plus 196 Artists Residency aggregate.
 - Remaining NYC Artist Coalition co-founder, responsibility, and public-web authorship details.
+- Direct public statements from Finkelpearl or Espinal about how they understood NYC Artist Coalition's value, if stronger motive language is ever desired.

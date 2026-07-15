@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "evaluatedThrough": "2026-07-15",
+  "iterations": 4,
+  "status": "passed",
+  "graphSnapshot": {
+    "intakeRecords": 57,
+    "sources": 219,
+    "claims": 95,
+    "researchInquiries": 31,
+    "activeProjections": 60,
+    "heldProjections": 37
+  },
+  "qualifyingRounds": [3, 4],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 80,
+      "editorialFutureUseScore": 84,
+      "result": "revise",
+      "finding": "The first answer translated institutional value into literal need, risked attributing private motives to named officials, and did not distinguish coalition-level value from Jamie's individual responsibility map."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 94,
+      "editorialFutureUseScore": 96,
+      "result": "revise",
+      "finding": "The revision framed reciprocal capacity and preserved collective causality, but still needed to state that Finkelpearl's February testimony describes the DIY community without naming NYC Artist Coalition and that later official records supply the identification."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 100,
+      "result": "qualifying-pass",
+      "finding": "The graph now separates explicit source statements from institutional inference, names complementary community and government capacities, preserves the testimony's naming boundary, and keeps Jamie's documented work distinct from coalition and legislative credit."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 100,
+      "result": "qualifying-pass",
+      "finding": "A second independent challenge repeated every hard-gate and scored-criterion pass with no regression, including motive, dependency, endorsement, authorship, adoption, and sole-causality guards."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "unresolvedCriteria": [],
+  "contentClusters": [
+    {
+      "id": "nyca-institutional-reciprocity",
+      "sourceIds": [
+        "SRC-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
+        "SRC-CREATENYC-NYCA-CIVIC-DIALOGUE-2017",
+        "SRC-CREATENYC-NYCA-FORWARD-2017",
+        "SRC-CREATENYC-NYCA-RECOMMENDATIONS-APPENDIX-2017",
+        "SRC-NYC-COUNCIL-INT-1652-2017",
+        "SRC-NYC-COUNCIL-INT-1688-2017"
+      ],
+      "claimIds": [
+        "CLM-NYCA-DCLA-ENGAGEMENT-OUTCOME-2017",
+        "CLM-NYCA-CIVIC-INTERMEDIARY-VALUE",
+        "CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY"
+      ],
+      "researchInquiryIds": [
+        "INQ-NYCA-INSTITUTIONAL-RECIPROCITY-2026-07-15"
+      ],
+      "projectionDecision": "Retain the institutional-value claims as bank-only depth. The official record supports recommendation, participation, testimony, communication, and continuing-dialogue functions; complementary-capacity language remains inference and cannot become private-motive, literal-dependency, commissioning, endorsement, bill-authorship, adoption, or sole-causality language."
+    }
+  ],
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS",
+    "INTAKE-2026-07-14-WOWLIST-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-WOWLIST-SOCIAL-MANAGEMENT-MEMORY",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-PUBLISHING-MEMORY",
+    "INTAKE-2026-07-14-KCSPACES-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-KCSPACES-NAMING-ROLE-CORRECTION",
+    "INTAKE-2026-07-15-NTERCHNG-AMERICA-NOW-AND-HERE",
+    "INTAKE-2026-07-15-NTERCHNG-PRODUCTION-ARTIFACTS",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-PROPOSAL",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-ROLE",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-PUBLIC-PROJECT-POSTS",
+    "INTAKE-2026-07-15-ICLOUD-TEAMS-DEEPENING",
+    "INTAKE-2026-07-15-NYCA-INSTITUTIONAL-RECIPROCITY"
+  ]
+}

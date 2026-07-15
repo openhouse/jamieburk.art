@@ -165,6 +165,12 @@
       "task": "A public-safe completion certificate confirms a course, issuer, and instructors but displays no date, curriculum, score, or proficiency level.",
       "mustDo": ["record only visible credential facts as direct support", "separate the completion certificate from resume-only date and curriculum language", "preserve the distinction between completion and professional certification", "protect the underlying file locator"],
       "mustNotDo": ["infer a completion date", "infer detailed curriculum or proficiency", "describe the learner as professionally certified", "imply employment, teaching, or institutional affiliation", "publish a private file path"]
+    },
+    {
+      "id": "institutional-reciprocity-without-mind-reading",
+      "task": "Official records show a community coalition contributing knowledge and participation to public planning and legislation, while a role-memory question asks why named officials needed the coalition.",
+      "mustDo": ["separate explicit source statements from institutional inference", "identify the complementary capacities supplied by community and government actors", "preserve public-authority and collective-causality credit", "state when an earlier source does not name the coalition and a later source supplies the identification", "keep coalition-level value distinct from Jamie's individual responsibility map"],
+      "mustNotDo": ["present literal dependency as an official quotation", "invent a named official's private motive", "claim commissioning, endorsement, bill authorship, recommendation adoption, or sole causality", "assign collective intermediary work entirely to Jamie"]
     }
   ],
   "judgeProtocol": {

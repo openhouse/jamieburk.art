@@ -271,3 +271,21 @@ Do not infer a completion date, curriculum, score, or proficiency from the AI
 Evals certificate. Course completion is not professional certification and does
 not establish employment, teaching, or institutional affiliation with Maven or
 the instructors.
+
+## NYC Artist Coalition Institutional Reciprocity
+
+Do not say Finkelpearl testified that he needed NYC Artist Coalition. His
+February 2017 testimony describes members of the DIY community; later official
+CreateNYC records identify the Office Hours outcome with NYC Artist Coalition.
+
+Do not convert institutional value into mind-reading. The records support a
+bounded inference that the coalition supplied issue framing, formal
+recommendations, participation, testimony, communication, and continuing
+feedback while public officials supplied planning, hearings, sponsorship, and
+legislative pathways. They do not prove literal dependency, commissioning,
+endorsement, bill authorship, adoption of every recommendation, or sole
+coalition causality.
+
+Do not assign the coalition-level intermediary function entirely to Jamie.
+Keep his documented operating, web, organizing, and testimony contributions
+visible while preserving collaborator, official, and legislative credit.
