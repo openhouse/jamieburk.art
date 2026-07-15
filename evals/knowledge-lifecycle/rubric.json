@@ -52,6 +52,13 @@
       "command": "npm run check:social-archive"
     },
     {
+      "id": "nycartc-full-population-contract",
+      "description": "The NYC Artist Coalition population accounting, item classifications, URL dispositions, stakeholder boundaries, privacy mutations, lifecycle integration, and projection holds reproduce exactly.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:nycartc-corpus && npm run evals:nycartc-x"
+    },
+    {
       "id": "campaign-press-corpus-complete",
       "description": "Campaign press collections retain their declared article counts, canonical references, generated index, and provenance boundaries.",
       "profiles": ["fast", "release"],
