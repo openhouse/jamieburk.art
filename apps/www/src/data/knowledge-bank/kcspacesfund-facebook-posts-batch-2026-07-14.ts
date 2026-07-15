@@ -179,7 +179,7 @@ export const kcSpacesFundFacebookPostsBatch = {
       publishedAt: "2026-07-15",
       accessedAt: "2026-07-15",
       canonicalUrl:
-        "https://github.com/openhouse/jamieburk.art/blob/feature/evals-B/docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json",
+        "https://github.com/openhouse/jamieburk.art/blob/25d5237a5d1a49c06c50793f965e3709a77cf50c/docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json",
       preferredPublicUrl: "canonical",
       publicCitation:
         "Public-safe 38-row disposition ledger for the surviving KC Spaces Fund Facebook Page surface, July 2026.",
@@ -206,7 +206,7 @@ export const kcSpacesFundFacebookPostsBatch = {
       publishedAt: "2026-07-15",
       accessedAt: "2026-07-15",
       canonicalUrl:
-        "https://github.com/openhouse/jamieburk.art/blob/feature/evals-B/docs/knowledge-bank/data/kcspacesfund-facebook-post-route-ledger.json",
+        "https://github.com/openhouse/jamieburk.art/blob/25d5237a5d1a49c06c50793f965e3709a77cf50c/docs/knowledge-bank/data/kcspacesfund-facebook-post-route-ledger.json",
       preferredPublicUrl: "canonical",
       publicCitation:
         "Public-safe KC Spaces Fund Facebook posted-route ledger, July 2026.",

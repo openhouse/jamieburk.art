@@ -490,6 +490,62 @@ if (existsSync(nycartcFacebookBatchSourcePath)) {
   }
 }
 
+const kcSpacesFundFacebookPinnedArtifacts = [
+  "docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json",
+  "docs/knowledge-bank/data/kcspacesfund-facebook-post-route-ledger.json"
+];
+const kcSpacesFundFacebookBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts"
+);
+if (existsSync(kcSpacesFundFacebookBatchSourcePath)) {
+  const batchSource = readText(kcSpacesFundFacebookBatchSourcePath);
+  for (const artifactPath of kcSpacesFundFacebookPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(
+        kcSpacesFundFacebookBatchSourcePath,
+        `KC Spaces Fund Facebook public artifact lacks an immutable Git citation: ${artifactPath}`
+      );
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(
+          currentPath,
+          "KC Spaces Fund Facebook immutable citation does not match the current public-safe artifact"
+        );
+      }
+      if (hasKcSpacesFundFacebookPublicArtifactRisk(pinnedText)) {
+        addFailure(
+          currentPath,
+          "KC Spaces Fund Facebook immutable citation contains prohibited population, authorship, engagement, or impact wording"
+        );
+      }
+    } catch {
+      addFailure(
+        kcSpacesFundFacebookBatchSourcePath,
+        `KC Spaces Fund Facebook immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`
+      );
+    }
+  }
+}
+
 scanPattern(
   nycartcFacebookEventLedgerFiles,
   "public Facebook event ledger contains an invalid aggregate response or attendance field",
