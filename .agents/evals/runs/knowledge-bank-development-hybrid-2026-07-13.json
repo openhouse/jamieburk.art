@@ -1,16 +1,16 @@
 {
-  "candidate_sha": "4cc8ee28dc9507c90792096abae39c4628b7288f",
+  "candidate_sha": "9473566c389a9e69f58fb63276e220283c778c6f",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 4cc8ee28dc9507c90792096abae39c4628b7288f and scored collective-credit integrity at 4/4 with no deficiencies.",
-        "All 33 collective-work claims retain explicit boundaries and anti-claims; neither account output nor institutional, movement, collaborator, or policy activity becomes Jamie-only causation.",
-        "The 71 recurring recognition posts are project-account output naming 26 Council-member recipients, while eight separately sourced interactions remain the bounded stakeholder-response floor.",
-        "The launch-period first-person post supports Jamie's account stewardship without proving sole creation, exclusive ownership, or later-post authorship.",
-        "Politico-backed product decisions remain specific, and external links retain original authorship, dated-access, current-availability, endorsement, adoption, and outcome boundaries."
+        "Two fresh independent graders audited exact candidate 9473566c389a9e69f58fb63276e220283c778c6f and scored collective-credit integrity at 4/4 with no deficiencies.",
+        "The canonical record names Drew Bolton, Jamie Burkart, and Garrett Fuselier as NTER CHNG's co-creators and separately preserves Mary Nichols's documented wall-engineering and construction help.",
+        "All three collective claims contain explicit boundaries and anti-claims against solo creation, technical ownership, quantified impact, curation, and national-tour presentation.",
+        "The America: Now and Here claim uses the archived exhibition artist page as direct support and the Nerman Museum record only for launch and exhibition context.",
+        "The unresolved task concerns exact role and technical allocation, not whether Jamie had a documented role."
       ],
       "findings": [],
       "confidence": 0.99
@@ -20,16 +20,15 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders scored public-claim coverage and recursive maintainability at 4/4 after running the committed derivation against the exact candidate.",
-        "The committed browser extraction hashes to b6b6eaa9d1947655a6c18dd96c9eba96c2752943c3f31f6f06f08faeaee123d7 and reproduces all 107 derived item records through the checked-in script and manifest.",
-        "Independent recomputation recovered the explicit 110/107/3 population boundary, 92 authored and 15 reposted items, 71 recognition posts, 26 recipients, 82 @NYCCouncil mentions, 87 linked authored posts, and 75 media-bearing authored posts.",
-        "The URL ladder is inspectable: 98 outgoing-link occurrences, 85 internal and 13 external, 65 displayed internal strings, 63 normalized destinations, and 61 normalized issue pages; public surfaces use the defensible 61-page meaning.",
-        "Dated authored-only engagement totals of 59 of 92 posts, eight replies, 74 reposts, and 111 likes remain held from headline use; the three-item population gap and external-link preservation remain research-queued.",
-        "The technical-operations surface describes a product affordance rather than an unevidenced resident-use outcome, and active, archive-only, and held claims retain explicit dispositions."
+        "Two fresh independent graders audited exact candidate 9473566c389a9e69f58fb63276e220283c778c6f and scored public-claim coverage and recursive maintainability at 4/4 with no deficiencies.",
+        "The earlier ntr-chng lead, duplicate Pitch source, stale research-needed role claim, and obsolete recovery task were consolidated into one canonical project record without silently discarding the earlier uncertainty or installation evidence.",
+        "The project site, Vimeo record, official archived America: Now and Here artist page, and Nerman context are decomposed into five sources, eight assertions, three bounded claims, one inquiry, and one continuing technical-role task.",
+        "The linked press release remains explicitly not recovered, with a limitation that this is not evidence no copy survives elsewhere.",
+        "The claim register explicitly selects the knowledge-bank project note and holds NTER CHNG from the current portfolio website until it serves the hiring argument; depth does not force display."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact commit 4cc8ee28dc9507c90792096abae39c4628b7288f passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The hill climb corrected a destination-denominator overstatement, committed the public source extraction and deterministic derivation, declared the recognition rule, and replaced an unsupported resident-outcome sentence while preserving the 110/107 population boundary, collective credit, dated-metric limits, and selective public projection."
+  "overall_finding": "Exact commit 9473566c389a9e69f58fb63276e220283c778c6f passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The hill climb consolidated a stale split project identity and duplicate source while preserving collective credit, missingness, unresolved technical-role research, and an explicit decision to keep the project in the knowledge bank rather than force it onto the current portfolio site."
 }
