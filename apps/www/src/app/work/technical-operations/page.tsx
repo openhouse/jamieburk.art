@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -36,7 +38,7 @@ const operationsMap = [
 
 const proofMap = [
   {
-    project: "HJE",
+    project: "Harry J. Epstein Company",
     proof:
       "Jamie helped modernize e-commerce, analytics, marketing, content, and operations workflows in a legacy business."
   },
@@ -140,6 +142,21 @@ export default function TechnicalOperationsPage() {
                 </li>
               ))}
             </ul>
+            <div className="mt-6 border-t border-jb-ink/10 pt-4">
+              <h3 className="text-sm font-semibold text-jb-ink">View related work</h3>
+              <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold">
+                {row.destinations.map((destination) => (
+                  <li key={destination.href}>
+                    <Link
+                      className="text-jb-blue underline decoration-jb-blue/30 underline-offset-4 hover:text-jb-green"
+                      href={destination.href as Route}
+                    >
+                      {destination.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </JBCard>
         ))}
       </div>

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { technicalOperationsProofRows } from "../../apps/www/src/data/proofs.ts";
 import { validateSuite } from "../check-portfolio-evals.mjs";
 
 const suite = JSON.parse(
@@ -69,4 +70,16 @@ test("knowledge lifecycle keeps intake and maturation as blocking gates", () => 
   const errors = validateSuite(candidate).errors.join("\n");
   assert.match(errors, /PR-016 knowledge-lifecycle eval must be blocking/);
   assert.match(errors, /application-share threshold must require PR-017/);
+});
+
+test("every Technical Operations capability has a deeper proof destination", () => {
+  assert.ok(technicalOperationsProofRows.length >= 4);
+  for (const row of technicalOperationsProofRows) {
+    assert.ok(row.proofs.length > 0, `${row.capability} needs proof`);
+    assert.ok(row.destinations.length > 0, `${row.capability} needs a destination`);
+    assert.ok(
+      row.destinations.every(({ href, label }) => href.startsWith("/") && label),
+      `${row.capability} needs labeled internal destinations`
+    );
+  }
 });

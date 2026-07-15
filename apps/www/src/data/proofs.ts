@@ -791,6 +791,11 @@ export const technicalOperationsProofRows = [
   {
     capability: "Delivery coordination",
     toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
+    destinations: [
+      { href: "/work/harry-j-epstein", label: "Harry J. Epstein" },
+      { href: "/work/callnyc", label: "CallNYC" },
+      { href: "/work/wowlist", label: "WOWList" }
+    ],
     proofIds: [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
@@ -801,6 +806,10 @@ export const technicalOperationsProofRows = [
   {
     capability: "Risk surfacing and decision clarity",
     toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
+    destinations: [
+      { href: "/work/fair-rent-nyc", label: "FairRentNYC" },
+      { href: "/work/kc-town-hall", label: "KC Town Hall" }
+    ],
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
@@ -810,6 +819,14 @@ export const technicalOperationsProofRows = [
   {
     capability: "Operating documentation people use",
     toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
+    destinations: [
+      { href: "/work/fair-rent-nyc", label: "FairRentNYC" },
+      { href: "/work/196-sunday-dinner", label: "Sunday Dinner / 196" },
+      {
+        href: "/lab/source-backed-team-memory",
+        label: "Source-Backed Team Memory"
+      }
+    ],
     proofIds: [
       "fair-rent-campaign-memory",
       "sunday-dinner-196-participation-infrastructure",
@@ -819,6 +836,12 @@ export const technicalOperationsProofRows = [
   {
     capability: "Public-facing launch and adoption",
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
+    destinations: [
+      { href: "/work/fair-rent-nyc", label: "NYC Artist Coalition / FairRentNYC" },
+      { href: "/work/callnyc", label: "CallNYC" },
+      { href: "/work/wowlist", label: "WOWList" },
+      { href: "/work/harry-j-epstein", label: "Harry J. Epstein" }
+    ],
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
