@@ -146,6 +146,16 @@ export default function HomePage() {
             adoption, and leave behind materials that make the work easier to
             maintain.
           </p>
+          <p className="leading-8 text-jb-ink/72">
+            The method grew from participatory art and social-software
+            practice: design conditions people can enter, make feedback
+            legible, and leave structures others can adapt together. The
+            source-backed throughline is documented on the{" "}
+            <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/about">
+              About page
+            </Link>
+            .
+          </p>
           <ContactCTA />
         </div>
       </section>

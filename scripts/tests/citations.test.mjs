@@ -28,8 +28,9 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
-test("structured citations extend across five public case studies", () => {
-  assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist", "196-sunday-dinner"]);
+test("structured citations extend across About and five public case studies", () => {
+  assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["about", "callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist", "196-sunday-dinner"]);
+  assert.deepEqual(resolveCitationOccurrence("about", "nter-chng-participatory-installation").sources.map((item) => item.number), [1, 2]);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "public-storefront").sources[0].number, 1);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "online-sales-share-2016").sources[0].number, 2);
   assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 1);

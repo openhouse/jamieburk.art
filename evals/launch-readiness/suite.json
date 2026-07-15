@@ -1,6 +1,6 @@
 {
   "id": "portfolio-launch-readiness",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "objective": "Make Jamie legible and credible to a busy hiring reader while preserving factual accuracy, collective credit, public safety, accessibility, and a clear path to action.",
   "releaseThresholds": {
     "hardGateFailures": 0,
@@ -54,6 +54,16 @@
       "description": "The primary-domain cutover must have a tested fingerprint, verification plan, rollback path, and explicit human authorization.",
       "evaluationIds": ["production-cutover-is-operationalized", "primary-domain-serves-current-portfolio"],
       "humanGateIds": ["jamie-production-approval"]
+    },
+    {
+      "id": "artistic-operating-throughline",
+      "description": "The portfolio must preserve a legible connection among Jamie's artistic, civic, technical, and social practices rather than reducing every project to organizational utility.",
+      "evaluationIds": ["margaret-morse-lens"]
+    },
+    {
+      "id": "social-systems-mechanism",
+      "description": "The portfolio must connect participation patterns to concrete interfaces, workflows, feedback loops, recursive effects, and collective authorship.",
+      "evaluationIds": ["warren-sack-lens"]
     }
   ],
   "routes": [
@@ -212,56 +222,70 @@
   "judgeCriteria": [
     {
       "id": "hiring-reader-clarity",
-      "weight": 14,
+      "weight": 12,
       "floor": 3,
       "question": "Can a busy hiring reader understand Jamie's professional shape, strongest fit, and next action in one pass?"
     },
     {
       "id": "agency-purpose-usability",
-      "weight": 10,
+      "weight": 9,
       "floor": 3,
       "question": "Do important claims name Jamie's agency, the end the work served, and what became usable?"
     },
     {
       "id": "chad-lens",
-      "weight": 12,
+      "weight": 10,
       "floor": 4,
       "minimumEvidence": 4,
       "question": "Across the homepage, resume, role-fit page, and flagship case studies, does the first-pass rhetoric apply Chad's lens: put Jamie's agency first, name the end served, state what became usable, translate specialized language, preserve precise collective credit, and minimize the hiring reader's interpretive burden?"
     },
     {
+      "id": "margaret-morse-lens",
+      "weight": 8,
+      "floor": 4,
+      "minimumEvidence": 4,
+      "question": "Across first-pass and selected project surfaces, does the portfolio show that Jamie's operating practice is shaped by embodied inquiry, attention, hospitality, media archaeology, and participation, preserving a legible connection among artistic, civic, technical, and social work without sacrificing hiring clarity or factual restraint?"
+    },
+    {
+      "id": "warren-sack-lens",
+      "weight": 8,
+      "floor": 4,
+      "minimumEvidence": 4,
+      "question": "Does the portfolio make Jamie's social-systems practice legible by connecting observed participation patterns to technical mechanisms, interfaces, feedback loops, and structures others can enter, adapt, and continue, with inspectable examples and precise collective credit?"
+    },
+    {
       "id": "role-fit-proof",
-      "weight": 12,
+      "weight": 10,
       "floor": 3,
       "question": "Does the site demonstrate technical project management, product operations, implementation, and delivery coordination with concrete proof?"
     },
     {
       "id": "evidence-traceability",
-      "weight": 13,
+      "weight": 11,
       "floor": 3,
       "question": "Can a reader inspect support for the strongest factual, quantitative, and causal claims?"
     },
     {
       "id": "collective-credit-and-anti-claims",
-      "weight": 11,
+      "weight": 10,
       "floor": 3,
       "question": "Does the rhetoric preserve collective credit and avoid stronger ownership, causality, authority, or adoption claims than the evidence establishes?"
     },
     {
       "id": "public-safety-and-boundaries",
-      "weight": 14,
+      "weight": 12,
       "floor": 4,
       "question": "Are private evidence, consent limits, legal boundaries, current-service disclaimers, and protected records handled safely without weakening defensible claims?"
     },
     {
       "id": "visual-proof",
-      "weight": 8,
+      "weight": 5,
       "floor": 2,
       "question": "Do real, relevant, rights-cleared artifacts help readers inspect the work, with useful captions and provenance?"
     },
     {
       "id": "completion-confidence",
-      "weight": 6,
+      "weight": 5,
       "floor": 3,
       "question": "Does the public site feel intentionally complete rather than exposing internal production state or unresolved placeholders?"
     }

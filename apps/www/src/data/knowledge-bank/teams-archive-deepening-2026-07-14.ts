@@ -677,7 +677,7 @@ export const teamsArchiveDeepeningClaims = [
     internalClaim:
       "In 2010, Jamie co-designed NTER CHNG, a software and architectural installation that let gallery visitors use text messages to build a shared real-time dialogue.",
     status: "confirmed-with-boundary",
-    maturity: "public-ready",
+    maturity: "projected",
     intakeIds: ["INTAKE-PITCH-NTER-CHNG-2010", "INTAKE-VIMEO-NTER-CHNG-2011"],
     requiredSupportTags: [
       "nter-chng-participatory-interface",
@@ -699,7 +699,16 @@ export const teamsArchiveDeepeningClaims = [
       causalBoundary:
         "The sources establish project behavior and collaborative credits, not sole authorship, a detailed technical split, audience scale, or long-term impact."
     },
-    projections: [],
+    projections: [
+      {
+        key: "archive-note",
+        text:
+          "With Drew Bolton and Garrett Fuselier, I co-designed NTER CHNG, a 2010 participatory installation combining software with a constructed gallery interface so visitors could use their own phones to contribute to a shared dialogue. Public credits also name Mary Nichols for wall engineering and construction support, and Megan Mantia and Elisha Stetson as actors.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/about"]
+      }
+    ],
     evidence: [
       {
         sourceId: "SRC-PITCH-NTER-CHNG-2010",
@@ -711,7 +720,7 @@ export const teamsArchiveDeepeningClaims = [
           "PROP-NTER-CHNG-JANUARY-2010-PRESENTATION"
         ],
         confidence: "high",
-        renderCitation: false
+        renderCitation: true
       },
       {
         sourceId: "SRC-VIMEO-NTER-CHNG-2011",
@@ -723,7 +732,7 @@ export const teamsArchiveDeepeningClaims = [
           "PROP-NTER-CHNG-DESIGNER-CREDIT"
         ],
         confidence: "high",
-        renderCitation: false
+        renderCitation: true
       }
     ],
     boundaries: [
@@ -992,7 +1001,11 @@ export const teamsArchiveDeepeningResearchTasks = [
 
 export const teamsArchiveDeepeningDecisions = [
   ...teamsArchiveDeepeningClaims
-    .filter((claim) => claim.id !== "CLM-HJE-ONLINE-SALES-SHARE-2016")
+    .filter(
+      (claim) =>
+        claim.id !== "CLM-HJE-ONLINE-SALES-SHARE-2016" &&
+        claim.id !== "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
+    )
     .map((claim) => ({
     id: `DEC-${claim.id.replace(/^CLM-/, "")}-DEFER`,
     claimId: claim.id,
@@ -1003,6 +1016,16 @@ export const teamsArchiveDeepeningDecisions = [
     decidedAt: "2026-07-14",
     reviewedBy: ["Codex archival-production review"]
     })),
+  {
+    id: "DEC-PUBLISH-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
+    claimId: "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
+    surface: "/about",
+    decision: "publish",
+    rationale:
+      "This bounded collaborative example makes Jamie's artistic, social-software, and implementation formation inspectable without implying sole authorship, measured adoption, or long-term impact.",
+    decidedAt: "2026-07-15",
+    reviewedBy: ["Codex archival-production and public-source review"]
+  },
   {
     id: "DEC-PUBLISH-HJE-ONLINE-SALES-SHARE-2016",
     claimId: "CLM-HJE-ONLINE-SALES-SHARE-2016",

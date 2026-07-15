@@ -26,7 +26,12 @@ test("launch-readiness contract is internally consistent", () => {
   const chadLens = suite.judgeCriteria.find((criterion) => criterion.id === "chad-lens");
   assert.equal(chadLens.floor, 4);
   assert.equal(chadLens.minimumEvidence, 4);
-  assert.equal(suite.blindSpotCoverage.length, 8);
+  for (const lensId of ["margaret-morse-lens", "warren-sack-lens"]) {
+    const lens = suite.judgeCriteria.find((criterion) => criterion.id === lensId);
+    assert.equal(lens.floor, 4);
+    assert.equal(lens.minimumEvidence, 4);
+  }
+  assert.equal(suite.blindSpotCoverage.length, 10);
   assert.equal(
     new Set(suite.blindSpotCoverage.map((item) => item.id)).size,
     suite.blindSpotCoverage.length
@@ -137,6 +142,43 @@ test("Chad's lens requires broad evidence and a perfect floor score", () => {
   scored = scoreAssessment(almost, suite);
   assert.deepEqual(scored.judgeFloorFailures, ["chad-lens"]);
   assert.equal(scored.judgeThresholdMet, false);
+});
+
+test("Morse and Sack lenses require broad evidence and perfect floor scores", () => {
+  for (const lensId of ["margaret-morse-lens", "warren-sack-lens"]) {
+    const thin = completeAssessment();
+    thin.judge.scores.find((item) => item.criterionId === lensId).evidence = [
+      "homepage",
+      "about"
+    ];
+    let scored = scoreAssessment(thin, suite);
+    assert.equal(scored.valid, false);
+    assert.ok(
+      scored.failures.some((failure) =>
+        failure.includes(`${lensId} requires at least 4`)
+      )
+    );
+
+    const almost = completeAssessment();
+    almost.judge.scores.find((item) => item.criterionId === lensId).score = 3;
+    scored = scoreAssessment(almost, suite);
+    assert.ok(scored.judgeFloorFailures.includes(lensId));
+    assert.equal(scored.judgeThresholdMet, false);
+  }
+});
+
+test("Morse and Sack lens contracts preserve source and anti-gaming boundaries", () => {
+  const judgePrompt = readFileSync("evals/launch-readiness/judge-prompt.md", "utf8");
+  for (const [lensId, path] of [
+    ["margaret-morse-lens", "evals/launch-readiness/margaret-morse-lens.md"],
+    ["warren-sack-lens", "evals/launch-readiness/warren-sack-lens.md"]
+  ]) {
+    const contract = readFileSync(path, "utf8");
+    assert.match(contract, /historical evidence, not a claim/i);
+    assert.match(contract, /Award 4 only/i);
+    assert.match(contract, /Do not award 4/i);
+    assert.match(judgePrompt, new RegExp(lensId));
+  }
 });
 
 test("objective comparison accepts only lexicographic improvement", () => {

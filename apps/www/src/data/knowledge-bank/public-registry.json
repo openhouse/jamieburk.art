@@ -182,6 +182,47 @@
       ]
     },
     {
+      "id": "SRC-PITCH-NTER-CHNG-2010",
+      "title": "NTR CHNG",
+      "organization": "The Pitch",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2010-01-07",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.thepitchkc.com/ntr-chng/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "The Pitch, 'NTR CHNG,' January 7, 2010.",
+      "publicNote": "The listing describes the installation's public behavior and scheduled opening but does not name its makers.",
+      "doesNotEstablish": [
+        "Jamie's individual role",
+        "the division of technical work",
+        "audience size or measured engagement",
+        "long-term project impact"
+      ]
+    },
+    {
+      "id": "SRC-VIMEO-NTER-CHNG-2011",
+      "title": "NTER CHNG project video and credits",
+      "organization": "Vimeo",
+      "author": "Garrett Fuselier",
+      "kind": "personal-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2011-03-23",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://vimeo.com/21395655",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Garrett Fuselier, 'NTER CHNG,' Vimeo, March 23, 2011.",
+      "publicNote": "Official Vimeo metadata names Drew Bolton, Jamie Burkart, and Garrett Fuselier as the installation makers and preserves additional construction and performer credit.",
+      "doesNotEstablish": [
+        "Jamie's sole authorship",
+        "a precise division of software, design, and fabrication labor",
+        "audience size or measured engagement",
+        "the installation's long-term impact"
+      ]
+    },
+    {
       "id": "SRC-KCUR-HJE-ONLINE-SALES-2016",
       "title": "How Flying Dolphins Kept This Old-School Kansas City Hardware Store Alive",
       "organization": "KCUR 89.3",
@@ -620,6 +661,49 @@
       ]
     },
     {
+      "id": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "With Drew Bolton and Garrett Fuselier, I co-designed NTER CHNG, a 2010 participatory installation combining software with a constructed gallery interface so visitors could use their own phones to contribute to a shared dialogue. Public credits also name Mary Nichols for wall engineering and construction support, and Megan Mantia and Elisha Stetson as actors.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PITCH-NTER-CHNG-2010",
+          "relationship": "direct-support",
+          "supports": [
+            "participatory interface",
+            "shared dialogue",
+            "January 2010 presentation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-VIMEO-NTER-CHNG-2011",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie designer credit",
+            "three collaborative makers",
+            "supporting collaborators"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use co-designed and retain all named collaborator credits.",
+        "Describe the visible participatory behavior without inventing audience or engagement totals."
+      ]
+    },
+    {
       "id": "CLM-HJE-ONLINE-SALES-SHARE-2016",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -793,6 +877,25 @@
     }
   ],
   "pages": [
+    {
+      "id": "about",
+      "surface": "/about",
+      "sourceOrder": [
+        "SRC-PITCH-NTER-CHNG-2010",
+        "SRC-VIMEO-NTER-CHNG-2011"
+      ],
+      "occurrences": [
+        {
+          "id": "nter-chng-participatory-installation",
+          "claimId": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
+          "projection": "archive-note",
+          "sourceIds": [
+            "SRC-PITCH-NTER-CHNG-2010",
+            "SRC-VIMEO-NTER-CHNG-2011"
+          ]
+        }
+      ]
+    },
     {
       "id": "callnyc",
       "surface": "/work/callnyc",

@@ -441,13 +441,15 @@ test("NTER CHNG preserves participatory behavior and every recovered collaborato
     (item) => item.claimId === claim.id
   );
 
-  assert.equal(claim.maturity, "public-ready");
-  assert.equal(claim.projections.length, 0);
+  assert.equal(claim.maturity, "projected");
+  assert.deepEqual(claim.projections.map((item) => item.surfaces), [["/about"]]);
+  assert.ok(claim.projections.every((item) => item.citationRequired));
   assert.match(claim.composition.action, /co-designed.*participatory texting installation/i);
   assert.match(claim.composition.usableResult, /participant text messages.*digital wall/i);
   assert.match(claim.composition.collectiveCredit, /Drew Bolton.*Garrett Fuselier.*Mary Nichols.*Megan Mantia.*Elisha Stetson/i);
   assert.ok(claim.antiClaims.some((item) => /alone created/i.test(item)));
-  assert.equal(decision.decision, "defer");
+  assert.equal(decision.decision, "publish");
+  assert.equal(decision.surface, "/about");
 
   const publicSources = claim.evidence.map((item) =>
     knowledgeBank.sources.find((source) => source.id === item.sourceId)
@@ -455,6 +457,10 @@ test("NTER CHNG preserves participatory behavior and every recovered collaborato
   assert.equal(publicSources.length, 2);
   assert.ok(publicSources.every((source) => source.visibility === "public"));
   assert.ok(publicSources.every((source) => source.canonicalUrl));
+  assert.ok(claim.evidence.every((item) => item.renderCitation));
+  const aboutPage = knowledgeBank.pages.find((page) => page.id === "about");
+  assert.equal(aboutPage.surface, "/about");
+  assert.deepEqual(aboutPage.sourceOrder, claim.evidence.map((item) => item.sourceId));
 });
 
 test("NTER CHNG exhibition inclusion uses the official program record without overstating venue", () => {

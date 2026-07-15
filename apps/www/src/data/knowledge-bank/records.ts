@@ -700,6 +700,19 @@ const knowledgeBankInput = {
   ],
   pages: [
     {
+      id: "about",
+      surface: "/about",
+      sourceOrder: ["SRC-PITCH-NTER-CHNG-2010", "SRC-VIMEO-NTER-CHNG-2011"],
+      occurrences: [
+        {
+          id: "nter-chng-participatory-installation",
+          claimId: "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
+          projection: "archive-note",
+          sourceIds: ["SRC-PITCH-NTER-CHNG-2010", "SRC-VIMEO-NTER-CHNG-2011"]
+        }
+      ]
+    },
+    {
       id: "callnyc",
       surface: "/work/callnyc",
       sourceOrder: [

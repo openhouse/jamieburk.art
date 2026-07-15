@@ -85,6 +85,13 @@ WOW List zero display is a research control rather than an accomplishment.
 
 ## NTER CHNG / America: Now and Here
 
+Project `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010` on `/about` as a compact
+source-backed formation example. The composition credits all three makers,
+preserves the linked supporting credits, and connects Jamie's participatory
+art and social-software practice to his present implementation judgment. It
+does not place NTER CHNG at the Nerman Museum, assign sole authorship, or claim
+audience scale or long-term impact.
+
 Keep `CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011` in reserve for future
 participatory-design, cultural-technology, exhibition-history, or early-career
 compositions. Do not automatically add it to a current page. If projected,

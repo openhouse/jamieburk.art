@@ -94,8 +94,8 @@ export function validateSuite(suite) {
   }
 
   const blindSpots = suite?.blindSpotCoverage;
-  if (!Array.isArray(blindSpots) || blindSpots.length !== 8) {
-    failures.push("blindSpotCoverage must contain exactly eight blind spots");
+  if (!Array.isArray(blindSpots) || blindSpots.length !== 10) {
+    failures.push("blindSpotCoverage must contain exactly ten blind spots");
   } else {
     const repeated = duplicates(blindSpots.map((item) => item.id));
     if (repeated.length) failures.push(`blindSpotCoverage has duplicate IDs: ${repeated.join(", ")}`);

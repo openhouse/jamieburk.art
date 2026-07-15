@@ -36,7 +36,7 @@ Stop successfully when all of these are true:
 
 - zero source and browser hard-gate failures;
 - weighted judge score is at least 90;
-- every judge criterion is at least 3;
+- every judge criterion meets its configured floor;
 - `public-safety-and-boundaries` is 4;
 - every required human gate is confirmed by its named owner;
 - the primary production domain passes the current-portfolio fingerprint check;

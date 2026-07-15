@@ -83,6 +83,15 @@ export default function TechnicalOperationsPage() {
           coalition work, community platforms, and source-backed knowledge
           systems, with collective credit and public/private limits kept visible.
         </p>
+        <p className="mt-4 leading-8 text-jb-ink/72">
+          I also treat implementation as social-system design: identify who can
+          enter, what each person can contribute, how those signals become
+          decisions or next steps, and what documentation lets another person
+          continue the loop. WOWList made community vocabulary a publishing and
+          discovery mechanism; FairRentNYC made meetings and sources reusable
+          coalition memory; Sunday Dinner made hosting rhythms and handoffs part
+          of continuity.
+        </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
         <JBCard>
