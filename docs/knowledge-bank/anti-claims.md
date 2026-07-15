@@ -49,6 +49,16 @@ total or say 20 Council members endorsed CallNYC. The authenticated count is a
 lower bound and excludes likes, follows, private interactions, deleted posts,
 hidden replies, and inaccessible activity.
 
+Do not say all 110 profile-reported posts were recovered. The corpus preserves
+all 107 distinct items rendered by the authenticated replies-inclusive timeline
+and retains the three-count difference as unresolved.
+
+Do not collapse the 26 Council members named by CallNYC's outbound recognition
+posts into the separate lower bound of 20 members whose accounts visibly
+engaged. Do not treat current visible likes, reposts, or replies as complete
+lifetime analytics, resident outcomes, or policy impact. Do not assign Jamie
+authorship of every account post.
+
 Do not broaden “first CouncilStat hackathon” into a claim about the Council's
 first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,

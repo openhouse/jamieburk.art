@@ -303,7 +303,7 @@ const workItemsInput = [
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
       "A historical civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
-    artifactTypes: ["prototype", "guide", "map", "press"],
+    artifactTypes: ["prototype", "guide", "map", "press", "analytics summary"],
     artifacts: [
       {
         title: "Issue pathway prototype",
@@ -322,6 +322,12 @@ const workItemsInput = [
         description:
           "Politico New York covered CallNYC in 2016 as a public way to explore City Council constituent-services data.",
         type: "press"
+      },
+      {
+        title: "Authenticated social corpus",
+        description:
+          "A reproducible 107-item public timeline corpus with authored posts, reposts, links, visible interaction labels, and an explicit three-item profile-count discrepancy.",
+        type: "analytics summary"
       }
     ],
     tags: [
@@ -343,12 +349,16 @@ const workItemsInput = [
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
       },
-      { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" }
+      { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" },
+      {
+        label: "CallNYC social corpus",
+        url: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/corpora/callnyc-x-full-population-2026-07-14.json"
+      }
     ],
     careNote:
       "Historical independently developed civic-data prototype. No official city affiliation is claimed, and its content is not current legal, emergency, or constituent-service guidance.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, historical project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, historical project context, verified Politico New York coverage, public GitHub repository, and a reproducible authenticated 107-item public social corpus with a three-item profile-count discrepancy retained.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the historical, independently developed status and present-day guidance boundary visible wherever the project is summarized."

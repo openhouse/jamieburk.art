@@ -57,6 +57,12 @@ import {
   socialMediaArchiveIntake,
   socialMediaArchiveSources
 } from "./social-media-archive-production.ts";
+import {
+  callNycFullPopulationClaims,
+  callNycFullPopulationInquiries,
+  callNycFullPopulationIntake,
+  callNycFullPopulationSources
+} from "./callnyc-x-full-population.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -69,7 +75,8 @@ const knowledgeBankInput = {
     ...nterChngIntake,
     ...icloudArchiveIntake,
     ...googleDriveArchiveIntake,
-    ...socialMediaArchiveIntake
+    ...socialMediaArchiveIntake,
+    ...callNycFullPopulationIntake
   ],
   sources: [
     {
@@ -201,7 +208,8 @@ const knowledgeBankInput = {
     ...nterChngSources,
     ...icloudArchiveSources,
     ...googleDriveArchiveSources,
-    ...socialMediaArchiveSources
+    ...socialMediaArchiveSources,
+    ...callNycFullPopulationSources
   ],
   claims: [
     {
@@ -297,7 +305,8 @@ const knowledgeBankInput = {
     ...nterChngClaims,
     ...icloudArchiveClaims,
     ...googleDriveArchiveClaims,
-    ...socialMediaArchiveClaims
+    ...socialMediaArchiveClaims,
+    ...callNycFullPopulationClaims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -311,7 +320,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...portfolioHistoryInquiries, ...campaignPressInquiries, ...kcTownHallCouncilActionInquiries, ...kcTownHallStewardshipTransitionInquiries, ...kcTownHallPhaseOneNeighborhoodInquiries, ...nterChngInquiries, ...icloudArchiveInquiries, ...googleDriveArchiveInquiries, ...socialMediaArchiveInquiries],
+  }, ...portfolioHistoryInquiries, ...campaignPressInquiries, ...kcTownHallCouncilActionInquiries, ...kcTownHallStewardshipTransitionInquiries, ...kcTownHallPhaseOneNeighborhoodInquiries, ...nterChngInquiries, ...icloudArchiveInquiries, ...googleDriveArchiveInquiries, ...socialMediaArchiveInquiries, ...callNycFullPopulationInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -327,16 +336,19 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
       "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      "SRC-CALLNYC-X-API-2016",
       "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
-      "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
+      "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+      "SRC-CALLNYC-X-CORPUS-2026-07-14"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
       { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
+      { id: "product-iteration", claimId: "CLM-CALLNYC-PRODUCT-ITERATION-DECISIONS", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-X-API-2016"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-      { id: "social-public-feedback-loop", claimId: "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"] },
+      { id: "social-public-feedback-loop", claimId: "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28", "SRC-CALLNYC-X-CORPUS-2026-07-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }, ...sourceExpansionPages]

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -61,6 +62,15 @@ import {
   socialMediaArchiveIntake,
   socialMediaArchiveSources
 } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
+import {
+  callNycFullPopulationClaims,
+  callNycFullPopulationInquiries,
+  callNycFullPopulationIntake,
+  callNycFullPopulationSources
+} from "../../apps/www/src/data/knowledge-bank/callnyc-x-full-population.ts";
+import {
+  validateCommittedCorpus
+} from "../derive-callnyc-x-corpus.mjs";
 import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
@@ -144,6 +154,91 @@ test("CallNYC social audit enforces the 20-member lower bound and eight authored
   assert.ok(claim.antiClaims.some((item) => /endorsed CallNYC/i.test(item)));
   assert.equal(inquiry.resultStatus, "partially-recovered");
   assert.match(inquiry.publicSummary, /at least 20/);
+});
+
+test("CallNYC full-population corpus is complete, reproducible, and honestly bounded", () => {
+  const rawPath =
+    "docs/knowledge-bank/corpora/source-captures/callnyc-x-browser-extraction-2026-07-15-utc.json";
+  const corpusPath =
+    "docs/knowledge-bank/corpora/callnyc-x-full-population-2026-07-14.json";
+  const manifestPath =
+    "docs/knowledge-bank/corpora/callnyc-x-full-population-2026-07-14.manifest.json";
+  const rawText = readFileSync(rawPath, "utf8");
+  const corpusText = readFileSync(corpusPath, "utf8");
+  const manifestText = readFileSync(manifestPath, "utf8");
+  const corpus = JSON.parse(corpusText);
+  const manifest = JSON.parse(manifestText);
+  const metrics = validateCommittedCorpus(rawText, corpus);
+
+  for (const publicArtifact of [rawText, corpusText, manifestText]) {
+    assert.doesNotMatch(publicArtifact, /authenticated(?:As|SessionIdentity)/);
+    assert.doesNotMatch(publicArtifact, /@urbanhermit/i);
+  }
+
+  assert.equal(
+    createHash("sha256").update(rawText).digest("hex"),
+    manifest.capture.rawArtifactSha256
+  );
+  assert.equal(corpus.items.length, 107);
+  assert.ok(
+    corpus.boundaries.some((boundary) =>
+      /telephone numbers.*must not be treated as current guidance/i.test(boundary)
+    )
+  );
+  assert.equal(new Set(corpus.items.map((item) => item.canonicalUrl)).size, 107);
+  assert.deepEqual(corpus.items.map((item) => item.index),
+    Array.from({ length: 107 }, (_, index) => index + 1));
+  assert.deepEqual(
+    {
+      profileReported: metrics.profileReported,
+      renderedDistinct: metrics.renderedDistinct,
+      authored: metrics.authored,
+      reposted: metrics.reposted,
+      unresolvedCountDifference: metrics.unresolvedCountDifference,
+      recognitionPosts: metrics.recognitionPosts,
+      recognitionRecipients: metrics.recognitionRecipients.length,
+      issuePages: metrics.distinctNormalizedIssuePageDestinations,
+      outgoingLinks: metrics.outgoingLinkOccurrences,
+      externalLinks: metrics.externalLinkOccurrences,
+      visibleMedia: metrics.authoredPostsWithVisibleMedia,
+      engagedAuthored: metrics.authoredPostsWithVisibleEngagement,
+      engagementTotals: metrics.authoredEngagementTotals
+    },
+    {
+      profileReported: 110,
+      renderedDistinct: 107,
+      authored: 92,
+      reposted: 15,
+      unresolvedCountDifference: 3,
+      recognitionPosts: 71,
+      recognitionRecipients: 26,
+      issuePages: 61,
+      outgoingLinks: 98,
+      externalLinks: 13,
+      visibleMedia: 75,
+      engagedAuthored: 59,
+      engagementTotals: { replies: 8, reposts: 74, likes: 111 }
+    }
+  );
+
+  assert.equal(callNycFullPopulationSources.length, 8);
+  assert.equal(callNycFullPopulationClaims.length, 3);
+  assert.equal(callNycFullPopulationInquiries.length, 1);
+  assert.equal(callNycFullPopulationIntake.length, 1);
+  assert.equal(callNycFullPopulationInquiries[0].resultStatus, "partially-recovered");
+  assert.match(callNycFullPopulationInquiries[0].publicSummary, /three-item profile-count discrepancy/);
+  assert.ok(
+    callNycFullPopulationClaims
+      .find((claim) => claim.id === "CLM-CALLNYC-SOCIAL-TRACTION-OBSERVATION")
+      .projections.every((projection) => projection.status === "hold")
+  );
+
+  const publicFeedbackClaim = socialMediaArchiveClaims.find(
+    (claim) => claim.id === "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP"
+  );
+  assert.ok(publicFeedbackClaim.boundaries.some((boundary) => /107 distinct items/.test(boundary)));
+  assert.ok(publicFeedbackClaim.antiClaims.some((antiClaim) => /all 110/.test(antiClaim)));
+  assert.ok(publicFeedbackClaim.boundaries.some((boundary) => /Twenty-six describes/.test(boundary)));
 });
 
 test("NYC Artist Coalition count separates direct, mission-relevant, and thread-context records", () => {

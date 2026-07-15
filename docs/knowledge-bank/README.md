@@ -115,3 +115,9 @@ NYC Artist Coalition and its shared campaigns, WOW List, KC Town Hall, and KC
 Spaces Fund. It keeps project identity, account establishment, shared use,
 individual post authorship, public interaction, endorsement, and policy
 causation as separate claim types.
+
+The CallNYC pass also preserves a reproducible item-level corpus: 107 distinct
+timeline items recovered against a 110-post profile baseline, with the raw
+authenticated capture, transformation manifest, derivation script, posted URL
+inventory, and unresolved three-count difference kept together. See the
+[full-population research run](runs/2026-07-15-callnyc-x-full-population.md).

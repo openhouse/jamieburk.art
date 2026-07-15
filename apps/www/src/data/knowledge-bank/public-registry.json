@@ -486,6 +486,46 @@
         "survey response count",
         "representativeness"
       ]
+    },
+    {
+      "id": "SRC-CALLNYC-X-CORPUS-2026-07-14",
+      "title": "Authenticated CallNYC full recoverable timeline corpus",
+      "author": "Codex authenticated browser review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/CallNYCapp/with_replies",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated item-level review of the replies-inclusive @CallNYCapp timeline, July 14-15, 2026.",
+      "publicNote": "The profile reported 110 posts. Repeated complete timeline passes rendered 107 distinct items: 92 authored posts and 15 reposts. The public repository preserves every recoverable item and retains the three-count difference as unresolved.",
+      "doesNotEstablish": [
+        "the identity of the three profile-counted items that did not render",
+        "deleted, hidden, private, or otherwise unavailable activity",
+        "complete lifetime engagement",
+        "Jamie's authorship of every account post",
+        "official City sponsorship or policy causation"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-X-API-2016",
+      "title": "CallNYC Council-member JSON API announcement",
+      "author": "Call NYC (@CallNYCapp)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-04-20",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/722837286476390401",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Call NYC publicly described a JSON interface for retrieving New York City Council members' Twitter usernames on April 20, 2016.",
+      "publicNote": "A public project-account post establishes what the account published. It identifies an individual author only when the post itself does so.",
+      "doesNotEstablish": [
+        "current API availability",
+        "official Council API status",
+        "complete API documentation"
+      ]
     }
   ],
   "claims": [
@@ -1119,7 +1159,7 @@
           "surfaces": [
             "/work/callnyc"
           ],
-          "rationale": "Use the lower-bound count and communication-system pattern to show public uptake while keeping the full account ledger and platform limitations in the knowledge bank."
+          "rationale": "Use the lower-bound count and communication-system pattern to show attributable public response while keeping the full account ledger and platform limitations in the knowledge bank."
         }
       ],
       "evidence": [
@@ -1144,9 +1184,23 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-X-CORPUS-2026-07-14",
+          "relationship": "direct-support",
+          "supports": [
+            "107-item recoverable population",
+            "71 recognition posts",
+            "26 named Council members",
+            "61 normalized issue pages"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
+        "The profile reported 110 posts; the corpus includes every one of the 107 distinct items the authenticated timeline rendered and retains the three-count difference as unresolved.",
+        "Twenty-six describes Council members named by CallNYC output; at least 20 describes separately verified incoming engagement.",
         "Present 20 as a recovered lower bound, not a complete lifetime count.",
         "Likes, follows, private interactions, deleted posts, and hidden replies are excluded.",
         "Interaction does not establish endorsement, adoption, or official City status."
@@ -1369,6 +1423,50 @@
         "Do not assign every account post or later operation to Jamie.",
         "Public dialogue does not establish project completion, policy causation, or independent verification of service totals."
       ]
+    },
+    {
+      "id": "CLM-CALLNYC-PRODUCT-ITERATION-DECISIONS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie filtered records to reduce out-of-city and spam entries, added Council-member Twitter contacts after learning that some residents were wary of calling, exposed a small JSON interface, and designed issue pages for sharing and search discovery.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ],
+          "rationale": "Show the product judgment beneath the interface with direct attribution and without inflating informal conversations into representative research."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-POLITICO-2016-03-14",
+          "relationship": "direct-support",
+          "supports": [
+            "borough-based filtering",
+            "resident communication preferences",
+            "social sharing",
+            "search discovery",
+            "rapid implementation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-X-API-2016",
+          "relationship": "corroborating",
+          "supports": [
+            "public JSON interface for Council-member Twitter usernames"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The communication-preference evidence came from conversations with neighbors and friends, not a representative usability study.",
+        "The API post establishes a public interface at the time, not current availability or complete documentation."
+      ]
     }
   ],
   "pages": [
@@ -1381,8 +1479,10 @@
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
         "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-X-API-2016",
         "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
-        "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+        "SRC-CALLNYC-X-CORPUS-2026-07-14"
       ],
       "occurrences": [
         {
@@ -1420,6 +1520,15 @@
           ]
         },
         {
+          "id": "product-iteration",
+          "claimId": "CLM-CALLNYC-PRODUCT-ITERATION-DECISIONS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-POLITICO-2016-03-14",
+            "SRC-CALLNYC-X-API-2016"
+          ]
+        },
+        {
           "id": "press-coverage",
           "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
           "projection": "case-study",
@@ -1433,7 +1542,8 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
-            "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
+            "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+            "SRC-CALLNYC-X-CORPUS-2026-07-14"
           ]
         },
         {

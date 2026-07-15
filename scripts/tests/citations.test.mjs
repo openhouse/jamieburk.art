@@ -19,8 +19,8 @@ test("repeated sources retain one note and unique backlinks", () => {
   const council = references.find((item) => item.number === 2);
   const politico = references.find((item) => item.number === 3);
   assert.equal(council.backlinks.length, 2);
-  assert.equal(politico.backlinks.length, 3);
-  assert.equal(new Set(politico.backlinks.map((item) => item.id)).size, 3);
+  assert.equal(politico.backlinks.length, 4);
+  assert.equal(new Set(politico.backlinks.map((item) => item.id)).size, 4);
   assert.equal(council.noteId, citationNoteId("callnyc", 2));
 });
 
@@ -50,8 +50,15 @@ test("new case-study citations expose only selected public sources", () => {
     ),
     [
       "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
-      "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
+      "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+      "SRC-CALLNYC-X-CORPUS-2026-07-14"
     ]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("callnyc", "product-iteration").sources.map(
+      (item) => item.source.id
+    ),
+    ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-X-API-2016"]
   );
   assert.deepEqual(
     resolveCitationOccurrence("fair-rent-nyc", "social-identity-system").sources.map(

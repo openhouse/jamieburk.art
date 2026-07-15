@@ -143,7 +143,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "CallNYC turned open constituent-services data into 61 issue pathways with district context and resident-facing guidance. The social layer directed 71 recognition posts to 26 Council accounts; an authenticated audit recovered attributable public interactions from at least 20 serving Council-member accounts, including eight member-authored posts or replies. This portfolio presents the project as historical evidence, and Politico New York covered it in 2016.",
     sourceBasis:
-      "Approved resume language, historical prototype context, public open-data context, public GitHub repository, verified Politico New York coverage, and a public-safe authenticated social-account audit.",
+      "Approved resume language, historical prototype context, public open-data context, public GitHub repository, verified Politico New York coverage, and a reproducible 107-item authenticated social corpus with a separately verified Council-member response ledger.",
     guardrail: "Describe it as historical and independently developed; do not imply official city affiliation or current guidance.",
     doNotSay: [
       "Broader historical hackathon superlatives",
@@ -159,7 +159,8 @@ export const proofClaims: ProofClaim[] = [
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
     canonicalClaimIds: [
       "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
-      "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP"
+      "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP",
+      "CLM-CALLNYC-PRODUCT-ITERATION-DECISIONS"
     ],
     lastReviewed: "2026-07-15"
   },

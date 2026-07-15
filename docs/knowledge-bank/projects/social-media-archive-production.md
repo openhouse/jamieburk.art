@@ -41,11 +41,18 @@ as a project account.
 ## CallNYC
 
 CallNYC used social media as a public feedback loop around a resident-facing
-interpretation of CouncilStat data. The recovered corpus contains 71 recognition
-posts directed to 26 Council accounts and connected to 61 issue pages. A fresh
-authenticated audit then reproduced attributable public interactions from at
-least **20 distinct accounts belonging to serving New York City Council
-members**:
+interpretation of CouncilStat data. The profile reported 110 posts. Repeated
+replies-inclusive passes recovered 107 distinct items: 92 authored posts and 15
+reposts. The item-level corpus preserves 100% of those 107 recoverable records;
+it does not relabel them as all 110 profile-reported posts. The three-count
+difference remains an explicit research task.
+
+The recoverable corpus contains 71 recognition posts directed to 26 Council
+accounts and connected to 61 normalized issue pages. Eighty-seven of 92 authored
+posts carried outgoing links, 82 mentioned `@NYCCouncil`, and 75 included
+visible media. A fresh authenticated response audit reproduced attributable
+public interactions from at least **20 distinct accounts belonging to serving
+New York City Council members**:
 
 - 19 member identities appeared in public repost lists for CallNYC posts; and
 - Ydanis Rodriguez supplied the one additional person through a separate quote
@@ -80,6 +87,31 @@ Engagement does not establish endorsement, Council adoption, or official City
 status. [Politico New York's 2016 coverage](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf)
 remains the strongest recovered published article explaining Jamie's independent
 development of the project.
+
+The corpus preserves 98 outgoing-link occurrences represented by 84 distinct
+short URLs. Eighty-five occurrences pointed to CallNYC; 13 connected the project
+to Politico and Gothamist reporting, Gizmodo's coverage of the peer Renter Be
+Aware project, City benefit and legal-services resources, Civic Hall, BetaNYC,
+Council Labs, NYC Technology Working Group, 311Buddy, WOW List, and
+popular.vote. These links establish public resource curation and ecosystem
+context, not authorship of peer projects or present-day guidance.
+
+Politico's contemporaneous reporting attributes several product decisions to
+Jamie: borough-based filtering to reduce out-of-city queries and spam, adding
+Council-member Twitter contacts after learning some residents were wary of
+calling, and designing for social sharing and search discovery. An April 20,
+2016 account post separately documents a JSON interface for Council-member
+Twitter usernames.
+
+On July 14, 2026, 59 of 92 authored posts retained at least one visible reply,
+repost, or like. The dated totals were eight replies, 74 reposts, and 111 likes.
+They remain in the deeper archive because visible platform labels are unstable,
+incomplete, and not measures of resident outcomes or policy impact.
+
+A March 16, 2016 account reply identifies the speaker as Jamie Burkart and calls
+CallNYC his first civic-technology project. That directly supports launch-period
+account stewardship, but not sole account creation or authorship of every later
+post.
 
 ## NYC Artist Coalition and Campaigns
 

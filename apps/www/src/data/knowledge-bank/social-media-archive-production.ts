@@ -328,18 +328,19 @@ export const socialMediaArchiveClaims: ClaimRecord[] = [
   {
     id: "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP",
     project: "callnyc",
-    internalClaim: "A fresh authenticated audit reproduced public CallNYC interactions from at least 20 distinct accounts belonging to serving New York City Council members: 19 public repost-list identities plus Ydanis Rodriguez's separate quote post; eight members authored posts or replies explicitly involving CallNYC.",
+    internalClaim: "The complete recoverable @CallNYCapp corpus contains 71 service-recognition posts naming 26 Council members and links to 61 normalized issue pages. A separate authenticated response audit reproduced public interactions from at least 20 distinct accounts belonging to serving New York City Council members: 19 public repost-list identities plus Ydanis Rodriguez's separate quote post; eight members authored posts or replies explicitly involving CallNYC.",
     status: "confirmed-with-boundary",
-    projections: [{ key: "case-study", text: "CallNYC paired 61 resident-facing issue pages with recognition posts directed to 26 Council accounts. A fresh authenticated audit recovered attributable interactions from at least 20 serving Council member accounts, including eight member-authored posts or replies.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"], rationale: "Use the lower-bound count and communication-system pattern to show public uptake while keeping the full account ledger and platform limitations in the knowledge bank." }],
+    projections: [{ key: "case-study", text: "CallNYC paired 61 resident-facing issue pages with recognition posts directed to 26 Council accounts. A fresh authenticated audit recovered attributable interactions from at least 20 serving Council member accounts, including eight member-authored posts or replies.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"], rationale: "Use the lower-bound count and communication-system pattern to show attributable public response while keeping the full account ledger and platform limitations in the knowledge bank." }],
     evidence: [
       { sourceId: "SRC-SOCIAL-ARCHIVE-INVENTORY-2026", relationship: "direct-support", supports: ["account-level audit method", "19 repost-list identities", "20-person unique lower bound", "eight member-authored interactions", "61 issue pages and 26 addressed Council accounts"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28", relationship: "corroborating", supports: ["historical Council service for the named account holders"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-CALLNYC-X-CORPUS-2026-07-14", relationship: "direct-support", supports: ["107-item recoverable population", "71 recognition posts", "26 named Council members", "61 normalized issue pages"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-CALLNYC-X-PROFILE-2026", relationship: "context", supports: ["dedicated public project identity", "dated profile discovery metadata"], confidence: "high", renderCitation: false },
       ...callNycSourceIds.map((sourceId) => ({ sourceId, relationship: "direct-support" as const, supports: ["one attributable public Council-account interaction"], confidence: "high" as const, renderCitation: false }))
     ],
-    boundaries: ["Present 20 as a recovered lower bound, not a complete lifetime count.", "Likes, follows, private interactions, deleted posts, and hidden replies are excluded.", "Interaction does not establish endorsement, adoption, or official City status."],
-    antiClaims: ["exactly 20 Council members ever engaged", "20 Council members endorsed CallNYC", "the Council adopted CallNYC", "CallNYC was an official City service", "Jamie authored every account post"],
-    researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT"],
+    boundaries: ["The profile reported 110 posts; the corpus includes every one of the 107 distinct items the authenticated timeline rendered and retains the three-count difference as unresolved.", "Twenty-six describes Council members named by CallNYC output; at least 20 describes separately verified incoming engagement.", "Present 20 as a recovered lower bound, not a complete lifetime count.", "Likes, follows, private interactions, deleted posts, and hidden replies are excluded.", "Interaction does not establish endorsement, adoption, or official City status."],
+    antiClaims: ["all 110 profile-reported posts were individually recovered", "26 Council members engaged back", "exactly 20 Council members ever engaged", "20 Council members endorsed CallNYC", "the Council adopted CallNYC", "CallNYC was an official City service", "Jamie authored every account post"],
+    researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT", "INQ-CALLNYC-X-FULL-POPULATION-2026"],
     reviewedAt,
     reviewedBy
   },

@@ -107,6 +107,17 @@ records every placement's source-page order, exact listed URL, normalized
 source ID, dated capture, and duplicate disposition. The lifecycle suite uses
 it to reproduce the four manifests offline.
 
+### CallNYC authenticated social corpus
+
+The July 15 archival-production pass preserves all 107 distinct items rendered
+by the authenticated replies-inclusive `@CallNYCapp` timeline against a
+110-post profile baseline. The public-safe corpus records authored-versus-
+reposted classification, visible text, dates, public interaction labels,
+mentions, outgoing links, and media presence. A raw public capture, SHA-256
+manifest, and derivation script make the transformation and aggregate findings
+reproducible. The three-count difference is unresolved and must not be silently
+converted into completeness.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

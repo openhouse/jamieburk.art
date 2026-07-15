@@ -145,6 +145,9 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const publicArchiveFiles = textFiles.filter((file) =>
+  relative(file).startsWith("docs/knowledge-bank/corpora/")
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -190,6 +193,12 @@ scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
   /\b(?:PRIVATE|CONFIDENTIAL)\b/
+);
+
+scanPattern(
+  publicArchiveFiles,
+  "authenticated-session identity must not be published in a public corpus artifact",
+  /"(?:authenticatedAs|authenticatedSessionIdentity)"\s*:/i
 );
 
 const credentialPatterns = [

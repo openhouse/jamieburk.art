@@ -8,6 +8,8 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.
 - Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
+- Turned CallNYC's public account into a repeatable data-backed communication system: 71 recognition posts named 26 Council members and linked to 61 issue pages; a separate authenticated audit recovered engagement from at least 20 serving Council-member accounts, including eight member-authored posts or replies.
+- Made concrete CallNYC product decisions around record filtering, written contact options, a small JSON interface, social sharing, and search discovery, documented in contemporaneous reporting and project-account records.
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
