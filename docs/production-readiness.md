@@ -31,6 +31,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run evals:nycartc-x`
 - [ ] `npm run check:urbanhermit-corpus`
 - [ ] `npm run evals:urbanhermit-x`
+- [ ] `npm run evals:nycac-facebook-events`
 - [ ] `npm run public-safety`
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`

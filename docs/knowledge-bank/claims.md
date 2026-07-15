@@ -125,6 +125,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-09
 
+## nyc-artist-coalition-participation-system - Recurring participation system
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system across cultural spaces, practical support sessions, public hearings, town halls, campaign actions, and relief convenings.
+**Detailed public-safe wording:** Jamie connected lessons from WOW List with coalition advocacy through public event pages, meetings rotating among small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.
+**Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Shows event production and recurring participation as civic operating infrastructure while preserving the coalition, hosts, partners, and participants as co-authors of the work.
+**Guardrail:** Use helped establish and produce. Do not assign Jamie sole authorship of every event, treat Facebook response labels as attendance, or claim that the event system alone caused a policy outcome.
+**Do not say:** Jamie solely produced every event; 9,989 people attended; Facebook responses equal attendance or unique reach; every event used a different venue; the event program alone repealed the Cabaret Law.
+**Protected boundaries:** Raw event descriptions, attendee identities, comments and reactions, contact details, meeting credentials, private working links, and authenticated-session data stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful

@@ -20,6 +20,11 @@ import {
   urbanhermitXCorpusResearchInquiries,
   urbanhermitXCorpusSources
 } from "./urbanhermit-x-corpus.ts";
+import {
+  nycacFacebookEventClaims,
+  nycacFacebookEventResearchInquiries,
+  nycacFacebookEventSources
+} from "./nycac-facebook-events.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -29,6 +34,7 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.sources,
     ...nycartcXCorpusSources,
     ...urbanhermitXCorpusSources,
+    ...nycacFacebookEventSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1139,6 +1145,7 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.claims,
     ...nycartcXCorpusClaims,
     ...urbanhermitXCorpusClaims,
+    ...nycacFacebookEventClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -1472,6 +1479,7 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycartcXCorpusResearchInquiries,
     ...urbanhermitXCorpusResearchInquiries,
+    ...nycacFacebookEventResearchInquiries,
     {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
@@ -1530,11 +1538,12 @@ const knowledgeBankInput = {
     {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
-      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"],
+      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018", "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017"],
       occurrences: [
         { id: "office-nightlife-town-hall", claimId: "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study" },
         { id: "commercial-rent-testimony", claimId: "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018", projection: "case-study" },
-        { id: "shared-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] }
+        { id: "shared-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] },
+        { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017"] }
       ]
     },
     {

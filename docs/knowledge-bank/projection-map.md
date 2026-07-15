@@ -22,6 +22,7 @@ composed public surface, not a claim database.
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `nyc-artist-coalition-civic-systems`
+- `nyc-artist-coalition-participation-system`
 - `callnyc-civic-data-guidance`
 - `technical-operations-operating-backbone`
 
@@ -172,6 +173,7 @@ composed public surface, not a claim database.
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `nyc-artist-coalition-civic-systems`
+- `nyc-artist-coalition-participation-system`
 - `callnyc-civic-data-guidance`
 - `wowlist-community-platform`
 - `sunday-dinner-196-participation-infrastructure`
@@ -223,7 +225,7 @@ composed public surface, not a claim database.
 **Surface:** `case-study`
 **Destination type:** `route`
 **Audience:** Readers validating Jamie's coalition and civic systems work
-**Purpose:** Show Jamie's documented action inside collective cultural-space advocacy.
+**Purpose:** Show Jamie's documented action and recurring participation-system contribution inside collective cultural-space advocacy.
 
 ### Approved Proofs
 
@@ -231,20 +233,24 @@ composed public surface, not a claim database.
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `nyc-artist-coalition-civic-systems`
+- `nyc-artist-coalition-participation-system`
 
 ### Required Canonical Claims
 
-- None
+- `CLM-NYCAC-PARTICIPATION-SYSTEM`
 
 ### Exclusions
 
 - Private coalition strategy
 - Individual policy causality
+- Sole event production or page authorship
+- Facebook responses as attendance
 
 ### Guardrails
 
 - Credit collaborators
 - Do not expose private records
+- Do not convert response counters into attendance
 ## `/work/callnyc`
 
 **Surface:** `case-study`

@@ -19,6 +19,8 @@
 - [ ] `npm run check:urbanhermit-corpus` and `npm run evals:urbanhermit-x`
   reproduce the 434-record census, aggregate-only privacy boundary, source
   maturation, stakeholder limits, and no-route decision.
+- [ ] `npm run evals:nycac-facebook-events` reproduces the 34-slot accounting,
+  33-record census, role guardrails, response semantics, and privacy boundary.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [x] Jamie approves resume PDF and phone-in-PDF behavior.

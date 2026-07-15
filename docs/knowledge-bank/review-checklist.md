@@ -32,6 +32,7 @@ changes public claims.
 - [ ] `npm run evals:nycartc-x` passes.
 - [ ] `npm run check:urbanhermit-corpus` passes.
 - [ ] `npm run evals:urbanhermit-x` passes.
+- [ ] `npm run evals:nycac-facebook-events` passes.
 - [ ] `npm run public-safety` passes.
 - [ ] `npm run check:routes` passes.
 - [ ] `npm run preflight:staging` passes.
