@@ -2,6 +2,31 @@
 
 Status: bounded public projection with official status correction.
 
+## Phase One and neighborhood practice
+
+The knowledge bank now separately preserves Jamie's account of serving as
+general contractor and daily field coordinator for the Phase One cold-shell
+restoration completed in 2019. A protected contemporaneous application
+corroborates his and Julia Fredenburg's founder/project-manager roles, the
+multidisciplinary team, construction scope, resident survey artifact, and
+listening-driven process. It does not independently assign Jamie the
+general-contractor title, verify every duty, or function as a completion
+certificate or reconciled audit.
+
+The bank also records:
+
+- Jamie's survey-handbill and data-workflow authorship as first-person evidence
+  alongside a reproduced survey artifact and two named neighborhood partners;
+- an archived, jointly authored Tired of Tires page documenting a monthly Oak
+  Park operating system and a 2019 project post naming Jamie among
+  participants;
+- Cleveland Avenue Unify to Beautify, the remembered Indian Mound expansion,
+  and pro bono design/print operations as active research leads rather than
+  public claims.
+
+These records remain held from the website. See
+[the Phase One and neighborhood-practice research note](../research/2026-07-15-kc-town-hall-phase-one-and-neighborhood-practice.md).
+
 ## Supported chronology
 
 - On June 12, 2019, Kansas City CCED public minutes listed Jamie as the KC Town
@@ -44,6 +69,19 @@ dated, direct check on the appropriation-versus-disbursement distinction.
 ## Boundaries
 
 - Do not say the redevelopment was completed.
+- Phase One cold-shell completion may be stated only with its source boundary;
+  do not turn it into full-project or Phase Two completion.
+- Do not imply Jamie personally performed licensed work assigned to masonry,
+  roofing, engineering, architecture, electrical, plumbing, or other teams.
+- Do not present the protected application as an audit or completion
+  certificate.
+- Do not publish respondent data, private financial appendices, signatures,
+  personal contact information, or unapproved photographs.
+- Do not claim sole operation of TiredOfTires, audited program outcomes, every
+  later service date, or independent corroboration of the Indian Mound
+  expansion.
+- Do not publish the Cleveland Avenue role, capital-planning relationship, or
+  print-production quantities as independently corroborated yet.
 - Do not say Jamie personally received $490,539.
 - Do not say an agreement was executed or funds were paid or disbursed.
 - Do not generalize the May 2022 no-disbursement status beyond that reporting

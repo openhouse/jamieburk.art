@@ -91,3 +91,9 @@ See
 [research/2026-07-15-nter-chng-archive-recovery.md](research/2026-07-15-nter-chng-archive-recovery.md)
 for a recovered participatory installation, official exhibition-site context,
 collective-credit boundaries, and deliberate non-projection.
+See
+[projects/kc-town-hall.md](projects/kc-town-hall.md) and
+[research/2026-07-15-kc-town-hall-phase-one-and-neighborhood-practice.md](research/2026-07-15-kc-town-hall-phase-one-and-neighborhood-practice.md)
+for a source-aware account of Phase One construction coordination, resident
+input infrastructure, neighborhood service operations, collective credit, and
+active research leads held from public projection.

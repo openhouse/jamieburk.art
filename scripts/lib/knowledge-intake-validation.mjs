@@ -28,6 +28,10 @@ export const requiredSeedIntakeIds = [
   "INTAKE-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022-2026",
   "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",
   "INTAKE-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
+  "INTAKE-KCTH-PHASE-ONE-FIELD-PRACTICE-2026",
+  "INTAKE-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM-2026",
+  "INTAKE-KCTH-TIRED-OF-TIRES-OPERATIONS-2026",
+  "INTAKE-KCTH-CLEVELAND-AND-PRO-BONO-DESIGN-2026",
   "INTAKE-CLAUDETTE-AR-COLLABORATION-2026",
   "INTAKE-NTERCHNG-PROJECT-SITE-2026",
   "INTAKE-NTERCHNG-ANH-INCLUSION-2026",
@@ -47,6 +51,8 @@ export const requiredResearchSourceIds = [
   "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
   "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
   "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
+  "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
+  "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019",
   "SRC-CLAUDETTE-MICHAEL-REES-AR-COLLABORATION",
   "SRC-NTERCHNG-PROJECT-SITE-2011",
   "SRC-NTERCHNG-ANH-ARTIST-PAGE-2011",
@@ -807,12 +813,164 @@ export function validateKnowledgeIntake() {
     "CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022",
     "CLM-KC-TOWN-HALL-WITHDRAWN-2024"
   ];
+  const requiredKcTownHallPracticeSourceIds = [
+    "SRC-KCTH-CCED-PROPOSAL-PHASE-ONE-2019",
+    "SRC-KCTH-JAMIE-FIELD-PRACTICE-MEMORY-2026",
+    "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
+    "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019"
+  ];
+  const requiredKcTownHallPracticeClaimIds = [
+    "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+    "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+    "CLM-KCTH-SITE-BASED-LISTENING-PRACTICE",
+    "CLM-KCTH-TIRED-OF-TIRES-OPERATIONS",
+    "CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-ROLE",
+    "CLM-KCTH-PRO-BONO-NEIGHBORHOOD-DESIGN"
+  ];
+  const requiredKcTownHallPracticeIntakeIds = [
+    "INTAKE-KCTH-PHASE-ONE-FIELD-PRACTICE-2026",
+    "INTAKE-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM-2026",
+    "INTAKE-KCTH-TIRED-OF-TIRES-OPERATIONS-2026",
+    "INTAKE-KCTH-CLEVELAND-AND-PRO-BONO-DESIGN-2026"
+  ];
+  const requiredKcTownHallPracticeInquiryIds = [
+    "INQ-KCTH-PHASE-ONE-FIELD-PRACTICE-2026",
+    "INQ-KCTH-NEIGHBORHOOD-PRACTICE-2026"
+  ];
 
   for (const sourceId of requiredKcTownHallSourceIds) {
     if (!sourceById.has(sourceId)) kcTownHallErrors.push(`KC Town Hall sequence is missing ${sourceId}`);
   }
   for (const claimId of requiredKcTownHallClaimIds) {
     if (!claimById.has(claimId)) kcTownHallErrors.push(`KC Town Hall sequence is missing ${claimId}`);
+  }
+  for (const sourceId of requiredKcTownHallPracticeSourceIds) {
+    if (!sourceById.has(sourceId)) kcTownHallErrors.push(`KC Town Hall field-practice record is missing ${sourceId}`);
+  }
+  for (const claimId of requiredKcTownHallPracticeClaimIds) {
+    if (!claimById.has(claimId)) kcTownHallErrors.push(`KC Town Hall field-practice record is missing ${claimId}`);
+  }
+  for (const intakeId of requiredKcTownHallPracticeIntakeIds) {
+    if (!intakeIdSet.has(intakeId)) kcTownHallErrors.push(`KC Town Hall field-practice record is missing ${intakeId}`);
+  }
+  for (const inquiryId of requiredKcTownHallPracticeInquiryIds) {
+    if (!inquiryById.has(inquiryId)) kcTownHallErrors.push(`KC Town Hall field-practice record is missing ${inquiryId}`);
+  }
+
+  const phaseOneSource = sourceById.get("SRC-KCTH-CCED-PROPOSAL-PHASE-ONE-2019");
+  const fieldMemorySource = sourceById.get("SRC-KCTH-JAMIE-FIELD-PRACTICE-MEMORY-2026");
+  const phaseOneClaim = claimById.get("CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE");
+  const surveyClaim = claimById.get("CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM");
+  const tiredOfTiresClaim = claimById.get("CLM-KCTH-TIRED-OF-TIRES-OPERATIONS");
+  const clevelandClaim = claimById.get("CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-ROLE");
+  const proBonoDesignClaim = claimById.get("CLM-KCTH-PRO-BONO-NEIGHBORHOOD-DESIGN");
+
+  for (const source of [phaseOneSource, fieldMemorySource]) {
+    if (
+      !source ||
+      source.visibility !== "protected" ||
+      source.preservationStatus !== "private" ||
+      source.canonicalUrl ||
+      source.archiveUrl ||
+      source.assetUrl
+    ) {
+      kcTownHallErrors.push("KC Town Hall proposal and first-person field records must remain protected without exposed URLs");
+      break;
+    }
+  }
+
+  for (const claimId of requiredKcTownHallPracticeClaimIds) {
+    const claim = claimById.get(claimId);
+    if (claim?.projections.some(
+      (projection) => projection.status !== "hold" || projection.surfaces.length > 0
+    )) {
+      kcTownHallErrors.push(`${claimId} must remain held from public-site projection in this intake pass`);
+    }
+  }
+
+  const phaseOneBoundaryText = JSON.stringify([
+    phaseOneSource?.doesNotEstablish,
+    fieldMemorySource?.doesNotEstablish,
+    phaseOneClaim?.boundaries,
+    phaseOneClaim?.antiClaims
+  ]).toLowerCase();
+  for (const requiredBoundary of [
+    "general-contractor title",
+    "licensed",
+    "julia",
+    "audited",
+    "full adaptive reuse"
+  ]) {
+    if (!phaseOneBoundaryText.includes(requiredBoundary)) {
+      kcTownHallErrors.push(`KC Town Hall Phase One record is missing the ${requiredBoundary} boundary`);
+    }
+  }
+  const phaseOneMemoryEvidence = phaseOneClaim?.evidence.find(
+    (evidence) => evidence.sourceId === fieldMemorySource?.id
+  );
+  const phaseOneProposalEvidence = phaseOneClaim?.evidence.find(
+    (evidence) => evidence.sourceId === phaseOneSource?.id
+  );
+  if (
+    phaseOneMemoryEvidence?.relationship !== "private-support" ||
+    phaseOneMemoryEvidence.renderCitation ||
+    phaseOneProposalEvidence?.relationship !== "corroborating" ||
+    phaseOneProposalEvidence.renderCitation
+  ) {
+    kcTownHallErrors.push("KC Town Hall Phase One claim must separate private role testimony from protected proposal corroboration");
+  }
+
+  const surveyBoundaryText = JSON.stringify([
+    surveyClaim?.boundaries,
+    surveyClaim?.antiClaims
+  ]).toLowerCase();
+  for (const requiredBoundary of ["respondent", "statistically representative", "individual designer"]) {
+    if (!surveyBoundaryText.includes(requiredBoundary)) {
+      kcTownHallErrors.push(`KC Town Hall survey record is missing the ${requiredBoundary} boundary`);
+    }
+  }
+
+  const tiredOfTiresEvidenceIds = new Set(
+    tiredOfTiresClaim?.evidence.map((evidence) => evidence.sourceId) ?? []
+  );
+  for (const sourceId of [
+    "SRC-KCTH-JAMIE-FIELD-PRACTICE-MEMORY-2026",
+    "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
+    "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019"
+  ]) {
+    if (!tiredOfTiresEvidenceIds.has(sourceId)) {
+      kcTownHallErrors.push(`KC Town Hall TiredOfTires claim is missing ${sourceId}`);
+    }
+  }
+  const tiredBoundaryText = JSON.stringify([
+    tiredOfTiresClaim?.boundaries,
+    tiredOfTiresClaim?.antiClaims
+  ]).toLowerCase();
+  for (const requiredBoundary of ["sole", "indian mound", "audited", "later service date"]) {
+    if (!tiredBoundaryText.includes(requiredBoundary)) {
+      kcTownHallErrors.push(`KC Town Hall TiredOfTires record is missing the ${requiredBoundary} boundary`);
+    }
+  }
+
+  for (const claim of [clevelandClaim, proBonoDesignClaim]) {
+    if (
+      claim?.status !== "use-with-care" ||
+      claim.evidence.some(
+        (evidence) => evidence.sourceId !== fieldMemorySource?.id || evidence.relationship !== "private-support" || evidence.renderCitation
+      )
+    ) {
+      kcTownHallErrors.push("KC Town Hall Cleveland Avenue and pro bono design records must remain first-person, use-with-care research leads");
+      break;
+    }
+  }
+  const clevelandBoundaryText = JSON.stringify([
+    clevelandClaim?.boundaries,
+    clevelandClaim?.antiClaims
+  ]).toLowerCase();
+  for (const requiredBoundary of ["pastor lee", "henc", "capital allocation", "sole"]) {
+    if (!clevelandBoundaryText.includes(requiredBoundary)) {
+      kcTownHallErrors.push(`KC Town Hall Cleveland Avenue record is missing the ${requiredBoundary} boundary`);
+    }
   }
 
   const acceptanceClaim = claimById.get("CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019");
@@ -1117,7 +1275,7 @@ export function validateKnowledgeIntake() {
       kcTownHall: {
         passed: kcTownHallErrors.length === 0,
         errors: kcTownHallErrors,
-        evidence: "KC Town Hall preserves the official proposal, recommendation, Council acceptance, $490,539 appropriation, May 2022 negotiation and no-reported-disbursement-amount status, withdrawal, and reappropriation sequence, then separately records Jamie's bounded transition to a mission-aligned organization without exposing private circumstances or treating the City record as proof of that transition."
+        evidence: "KC Town Hall preserves the municipal funding and stewardship sequence plus a separately governed Phase One field-practice layer: protected proposal and participant-memory sources, six atomic construction and neighborhood-operation claims, two public TiredOfTires sources, explicit collective credit, active research leads, and no automatic public projection."
       },
       archiveProduction: {
         passed: archiveProductionErrors.length === 0,

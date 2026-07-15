@@ -73,6 +73,24 @@ record, name the organization, infer a transfer of public funds, property, or
 assets, claim current operation, or publish the circumstances of the
 transition without separate evidence and approval.
 
+Phase One is a narrower record. Do not turn Jamie's first-person account of
+2019 cold-shell completion into a claim that Phase Two or the full adaptive
+reuse was completed. Do not imply the protected application independently
+assigns Jamie the general-contractor title, certifies completion, reconciles
+the displayed project total, or proves every field duty. Do not imply Jamie
+personally performed licensed trade work assigned to contractors.
+
+Do not describe the resident survey as statistically representative, publish
+respondent data, or imply every request was implemented. Do not assign sole
+operation of TiredOfTires to Jamie, treat first-party tire or savings figures
+as audited outcomes, assign every later pickup to him, or say the Indian Mound
+expansion is independently corroborated by the current source set.
+
+Do not say Jamie originated Pastor Lee's Cleveland Avenue corridor concept,
+alone founded or ran Cleveland Avenue Unify to Beautify, caused a particular
+capital allocation, or produced a quantified number of handbills without
+additional evidence. Those records remain first-person research leads.
+
 ## NTER CHNG
 
 Do not say Jamie created NTER CHNG alone or assign him sole responsibility for

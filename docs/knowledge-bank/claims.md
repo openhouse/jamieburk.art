@@ -213,6 +213,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-14
 
+## kc-town-hall-phase-one-field-practice - Construction and neighborhood operations
+
+**Status:** Ready in knowledge bank with source boundaries; held from public projection
+**Support level:** Strong mixed-source record
+**Evidence class:** Protected contemporaneous proposal / first-person participant memory / archived project page / public project post
+**Public wording:** Jamie served as general contractor and daily field coordinator for KC Town Hall's Phase One cold-shell restoration, completed in 2019, coordinating dependencies across a multidisciplinary team. The exact title, complete duty list, and completion account remain first-person evidence; a contemporaneous package independently corroborates his project-manager role, the team, scope, survey infrastructure, and listening-driven process.
+**Detailed public-safe wording:** The knowledge bank also preserves Jamie's design of a compact resident survey and data workflow, the documented monthly TiredOfTires operating system and his 2019 participation, and research leads concerning Cleveland Avenue Unify to Beautify and pro bono neighborhood communications.
+**Where to project:** Knowledge bank only in this pass. Consider Technical Operations, resume, or the KC Town Hall case study after a separate audience, citation, credit, and composition review.
+**Why it matters:** Shows construction coordination, dependency sequencing, vendor alignment, participatory research, recurring service operations, field documentation, and communications as one implementation practice.
+**Guardrail:** Credit Julia Fredenburg, contractors and consultants, Pastor Lee, HENC, neighborhood associations, churches, residents, volunteers, and city/recycling staff. Distinguish protected proposal corroboration, first-person role evidence, and public program records.
+**Do not say:** Jamie alone restored KC Town Hall; Jamie personally performed licensed trade work; the proposal is an audit or completion certificate; Phase One means the full redevelopment was completed; Jamie alone ran TiredOfTires; program quantities are independently audited; Indian Mound, Cleveland Avenue, print quantities, or capital-allocation causality are independently corroborated.
+**Protected boundaries:** Source PDF, personal finances, banking records, signatures, contact details, respondent data, raw survey responses, resident stories, volunteer records, and unapproved photographs stay offline.
+**Review owner:** Jamie / collaborator and artifact review needed for broader projection
+**Last reviewed:** 2026-07-15
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

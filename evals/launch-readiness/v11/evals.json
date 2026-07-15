@@ -215,19 +215,21 @@
     },
     {
       "id": "KCTH-001",
-      "name": "KC Town Hall municipal funding and stewardship sequence remains complete and bounded",
+      "name": "KC Town Hall municipal, field-practice, and stewardship records remain complete and bounded",
       "layer": "deterministic",
       "gate": "hard",
       "weight": 0,
-      "intent": "The portfolio should name the consequential Council action and Jamie's later stewardship transition without converting either into unsupported payment, transfer, construction, causality, or present-status claims.",
+      "intent": "The knowledge bank should retain the consequential Council action, Jamie's Phase One and neighborhood operating practice, and his later stewardship transition without converting mixed evidence into unsupported payment, transfer, construction, causality, sole-credit, or present-status claims.",
       "evidence": [
         "apps/www/src/data/knowledge-bank/intake-2026-07-13.ts",
+        "apps/www/src/data/knowledge-bank/kc-town-hall-field-intake-2026-07-15.ts",
         "apps/www/src/data/knowledge-bank/records.ts",
         "apps/www/src/content/work/kc-town-hall.mdx",
         "docs/knowledge-bank/research/2026-07-14-kc-town-hall-council-action.md",
+        "docs/knowledge-bank/research/2026-07-15-kc-town-hall-phase-one-and-neighborhood-practice.md",
         "KC Town Hall validation in scripts/lib/knowledge-intake-validation.mjs"
       ],
-      "passCondition": "The official sequence preserves the 2019 proposal, CCED Board recommendation, Council acceptance through Resolution 190649, $490,539 appropriation through Ordinance 190642, the May 2022 negotiation status and absence of a reported disbursement amount at that point, and 2024 withdrawal and reappropriation. A separate, non-rendered first-person evidence relationship supports Jamie's public statement that he transitioned the project to a mission-aligned organization. The system prohibits treating the City record as proof of that transition or inferring an executed agreement, later non-disbursement from the interim snapshot, completed construction, sole causality, the organization's identity, transfer mechanics, current operation, or private circumstances.",
+      "passCondition": "The official sequence preserves the 2019 proposal, CCED Board recommendation, Council acceptance through Resolution 190649, $490,539 appropriation through Ordinance 190642, the May 2022 negotiation status and absence of a reported disbursement amount at that point, and 2024 withdrawal and reappropriation. A separate field-practice layer distinguishes protected proposal corroboration, Jamie's first-person general-contractor and completion account, public TiredOfTires evidence, and research leads for Cleveland Avenue, Indian Mound, and pro bono design. It credits collaborators, protects respondent and source data, distinguishes Phase One from full-project completion, and holds all new projections. A separate, non-rendered first-person evidence relationship supports Jamie's public statement that he transitioned the project to a mission-aligned organization.",
       "antiGaming": [
         "Do not weaken the Council action back to a recommendation-only claim.",
         "Do not describe an appropriation as money received, paid, or spent.",
@@ -235,7 +237,11 @@
         "Do not remove the later withdrawal and reappropriation context.",
         "Do not omit Jamie's later transition or attribute it to the municipal record.",
         "Do not name the receiving organization or infer a transfer of public funds, property, assets, current operation, or private circumstances.",
-        "Do not attribute the collective or municipal outcome solely to Jamie."
+        "Do not attribute the collective or municipal outcome solely to Jamie.",
+        "Do not collapse first-person role evidence into independent proposal corroboration.",
+        "Do not turn Phase One cold-shell completion into full adaptive-reuse completion.",
+        "Do not expose the proposal PDF, respondent data, financial appendices, contact details, signatures, or unapproved photographs.",
+        "Do not project Cleveland Avenue, Indian Mound, pro bono print quantities, or capital-allocation causality as independently corroborated."
       ]
     },
     {
