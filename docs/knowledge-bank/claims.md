@@ -246,3 +246,63 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not reproduce archived phone numbers, participant messages, or media without separate permission and review.
 **Review owner:** Jamie / collaborator confirmation needed for a detailed division of labor
 **Last reviewed:** 2026-07-15
+
+## urbanhermit-personal-public-working-surface - Personal public working surface
+
+**Status:** Careful
+**Support level:** Strong with boundaries
+**Evidence class:** Authenticated full-population census / public status metadata / protected research run
+**Public wording:** Jamie's personal @urbanhermit account preserves a 2008-2023 cross-project public record; a public-safe aggregate fixture documents the complete review of all 434 records counted by the live profile on July 15, 2026.
+**Detailed public-safe wording:** The population includes 353 Jamie-authored originals or replies and 81 external-source native reposts, with 321 distinct posted short URLs and a bounded incoming-response inventory.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves a broad discovery surface for future source-backed composition without forcing personal history onto the hiring site.
+**Guardrail:** The exact denominator is the live profile-counted population on the capture date, not every post Jamie ever published. Frequency and dated interactions are not labor, priority, reach, endorsement, conversion, or impact.
+**Do not say:** Jamie authored all 434 source records; the live profile is a complete owner archive; every linked source endorses Jamie; incoming mentions measure total engagement or impact.
+**Protected boundaries:** Raw post text, personal material, non-evidence item identifiers, historical contact details, authentication state, direct messages, private activity, and local archive paths stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-horse-lords-video - Horse Lords "Truthers" video
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** NPR published article / Jamie contemporaneous statement / two public collaborator-network accounts
+**Public wording:** Co-created the music video for Horse Lords' "Truthers" with M.C. Schmidt; NPR published the video and directly credited both collaborators.
+**Detailed public-safe wording:** NPR also attributes to Horse Lords member Andrew Bernstein an explanation of how the video's materials, repetition, variation, color, and text mirror the band's music.
+**Where to project:** Knowledge-bank project note only; future creative-technology feature after editorial and rights review.
+**Why it matters:** Adds independently published evidence of Jamie's collaborative creative-technology and moving-image practice.
+**Guardrail:** Always credit M.C. Schmidt. The sources do not establish the precise production split, commission terms, media rights, or audience impact.
+**Do not say:** Jamie solely created or directed the video; Jamie performed every production role; NPR commissioned the video; the video is cleared for republication.
+**Protected boundaries:** Do not embed or republish the video or project assets without rights and current playability review.
+**Review owner:** Jamie / collaborator review needed for detailed production roles and asset rights
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-eighth-street-tunnel-screening - 8th Street Tunnel participatory screening
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** KCUR published article / public collaborator response
+**Public wording:** In 2006, Jamie led participants through downtown Kansas City on a scavenger hunt and hosted a three-part film screening inside the historic 8th Street Tunnel.
+**Detailed public-safe wording:** KCUR documents the combination of artist, popular, and archival media and records Jamie's public-history and youth-imagination rationale for access.
+**Where to project:** Knowledge-bank project note only; future participatory-public-history feature after editorial, rights, and safety review.
+**Why it matters:** Makes a concrete early example of Jamie's practice of building participatory structures from place, media, public memory, and shared movement.
+**Guardrail:** Describe a participatory screening, not tunnel restoration, ownership, permanent opening, or currently authorized access. Attendance and measured impact are not established.
+**Do not say:** Jamie restored or reopened the tunnel; Jamie controlled public access; the event's attendance or educational impact was measured; the access model should be repeated without current authorization and safety review.
+**Protected boundaries:** Do not republish event media or identify access details without rights, authorization, and safety review.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-kc-town-hall-tire-participation - KC Town Hall tire-pickup participation
+
+**Status:** Careful
+**Support level:** Strong with boundaries
+**Evidence class:** Participant first-hand public account / shared project-account operating update
+**Public wording:** Directly participated in KC Town Hall's recurring TiredOfTires neighborhood workflow, including a documented dump-truck pickup shift around Northeast Kansas City.
+**Detailed public-safe wording:** A participant's first-hand public account and a KC Town Hall operating update independently connect Jamie to the recurring curbside tire-disposal workflow.
+**Where to project:** Knowledge-bank project note only; reserve for a future service-delivery context.
+**Why it matters:** Adds a material example of Jamie participating directly in the operational work behind a public-facing neighborhood service.
+**Guardrail:** Direct participation is not sole program ownership. First-party tire and resident-savings quantities remain unaudited and should not become Jamie's personal outcomes.
+**Do not say:** Jamie alone ran TiredOfTires; Jamie personally collected every tire; the project's quantities are independently audited; one participant post establishes the complete program history.
+**Protected boundaries:** Do not republish participant photographs without permission or infer the identity and responsibilities of every participant.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15

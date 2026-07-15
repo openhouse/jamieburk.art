@@ -127,8 +127,8 @@ any governed claim or public surface changed.
 
 ## Current Intake Threads
 
-The structured intake records currently preserve eighteen threads surfaced on
-July 12-14, 2026:
+The structured intake records currently preserve nineteen threads surfaced on
+July 12-15, 2026:
 
 - waterways, communal space, and participatory cultural practice;
 - Sunday Dinner as recurring open community infrastructure;
@@ -166,7 +166,10 @@ July 12-14, 2026:
 - longitudinal HUD-USPS vacancy-source stewardship and mixed-format archive
   automation; and
 - Google Drive project-workspace topology as a bounded research map for future
-  handoff and collaborator evidence.
+  handoff and collaborator evidence; and
+- the 434-of-434 live @urbanhermit profile population, its 321-link source
+  inventory, bounded incoming-response set, and source-backed Horse Lords,
+  8th Street Tunnel, and KC Town Hall participation claims.
 
 The waterways and Sunday Dinner threads have reached `claim-candidate`. The
 campaign-press and several social-evidence threads remain `researching`; the
@@ -197,4 +200,7 @@ thread now links one governed reserve claim for NTER CHNG's 2011 America: Now
 and Here inclusion; that claim remains outside the current website and public
 citation registry. The Google Drive pass adds two more
 `claim-candidate` threads and one `researching` thread; all three remain outside
-the website and generated public registry.
+the website and generated public registry. The personal-account pass is
+`integrated` into four governed reserve claims, but raw historical post text
+remains protected and no `/proofs`, `/urbanhermit`, or other public route is
+created.

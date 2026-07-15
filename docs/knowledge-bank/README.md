@@ -140,3 +140,14 @@ official exhibition artist page, a first-party account of visitor use, and an
 institutional context page support different parts of the record. The resulting
 [creative-technology practice note](projects/creative-technology-practice.md)
 is reserve knowledge, not an automatic website projection.
+
+The [@urbanhermit full-population archival-production
+note](research/2026-07-15-urbanhermit-x-full-population-archival-production.md)
+demonstrates exact reconciliation of a 434-record personal public profile while
+keeping raw historical post text and non-evidence item identifiers outside the
+repo. Its aggregate fixture separates Jamie-authored records from native repost
+sources, inventories 321 distinct posted short URLs, preserves a bounded
+incoming-response set, and develops source-backed Horse Lords, 8th Street
+Tunnel, and KC Town Hall claims.
+The [project note](projects/urbanhermit.md) records their editorial disposition:
+reserve knowledge, not an automatic website projection.

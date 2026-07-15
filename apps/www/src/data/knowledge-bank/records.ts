@@ -19,6 +19,12 @@ import {
   nycaSourceTrailSourceIds,
   projectSocialSources
 } from "./projectSocial.ts";
+import {
+  urbanhermitClaims,
+  urbanhermitIntakeItems,
+  urbanhermitResearchInquiries,
+  urbanhermitSources
+} from "./urbanhermit.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -751,7 +757,8 @@ const knowledgeBankInput = {
       protectedLocatorId: "LOC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026"
     },
     ...campaignPressSources,
-    ...projectSocialSources
+    ...projectSocialSources,
+    ...urbanhermitSources
   ],
   claims: [
     {
@@ -987,7 +994,8 @@ const knowledgeBankInput = {
       researchInquiryIds: [],
       reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex public-record review"]
-    }
+    },
+    ...urbanhermitClaims
   ],
   researchInquiries: [
     {
@@ -1062,7 +1070,8 @@ const knowledgeBankInput = {
       ],
       sourceIds: ["SRC-NTER-CHNG-PROJECT-SITE-2011", "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", "SRC-NERMAN-AMERICA-NOW-HERE-2011"],
       publicSummary: "America: Now and Here's archived official pages establish NTER CHNG's 2011 Kansas City exhibition inclusion, shared Drew Bolton / Jamie Burkart / Garrett Fuselier visual-artist credit, and observed visitor use; the Nerman Museum page supplies context rather than project-specific proof."
-    }
+    },
+    ...urbanhermitResearchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -2791,7 +2800,8 @@ const knowledgeBankInput = {
       receivedAt: "2026-07-14",
       reviewedAt: "2026-07-14",
       reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
-    }
+    },
+    ...urbanhermitIntakeItems
   ],
   pages: [
     {

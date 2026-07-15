@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-07-15",
+  "account": "@urbanhermit",
+  "publicSafety": {
+    "status": "public-safe-aggregate-only",
+    "included": "Population arithmetic, aggregate date and relationship counts, aggregate link and mission-signal counts, bounded stakeholder-group counts, dated account-authored interaction totals, classifier rules, and SHA-256 digests of the protected record sets.",
+    "excluded": "Raw post text, item-level status URLs outside separately governed claim sources, item-level dates and interaction tuples, profile biography text, historical contact details, cookies, session data, direct messages, private activity, and local archive paths.",
+    "rawCaptureLocation": "protected pointer outside the public repository",
+    "reason": "Item-level identifiers can reconstruct personal history even when raw text is omitted. The public artifact proves the aggregate review contract without creating a new index of ordinary or sensitive life context."
+  },
+  "populationReconciliation": {
+    "profileReportedPostCount": 434,
+    "postsTimelineUniqueCount": 421,
+    "repliesTimelineRenderedArticleCount": 436,
+    "repliesTimelineConversationContextCount": 2,
+    "repliesTimelinePrimaryRecordCount": 434,
+    "recoveredUnionRecordCount": 434,
+    "recoveredPopulationReviewedPercent": 100,
+    "profileCountNotMaterialized": 0,
+    "dateRange": {
+      "earliestYear": 2008,
+      "latestYear": 2023
+    },
+    "traversalPasses": {
+      "posts": 137,
+      "replies": 141
+    },
+    "repeatedNoGrowthPasses": {
+      "posts": 14,
+      "replies": 16
+    },
+    "protectedRecordSetSha256": "4a348d56fe961ea19767b2c7de48da3026cba5f274c027da11dcb2371672d277",
+    "conclusion": "Every one of the 434 records reported by the @urbanhermit profile counter materialized and was reviewed. Posts yielded 421 primary records. Replies rendered 436 article cards: 434 primary profile-counted records plus two conversation-parent cards authored by another account. Excluding those two contexts produces a 434-record union that reconciles exactly to the profile counter.",
+    "boundary": "This is a complete review of the live profile-counted population visible in the authenticated interface on July 15, 2026. It does not establish that no older post was deleted, withheld, or otherwise absent from the live profile before capture."
+  },
+  "recordTypeCounts": {
+    "original": 340,
+    "reply": 13,
+    "repost": 81
+  },
+  "recordsByYear": {
+    "2008": 1,
+    "2009": 49,
+    "2010": 6,
+    "2011": 4,
+    "2012": 12,
+    "2013": 58,
+    "2014": 114,
+    "2015": 18,
+    "2016": 37,
+    "2017": 67,
+    "2018": 25,
+    "2019": 31,
+    "2020": 8,
+    "2021": 1,
+    "2022": 2,
+    "2023": 1
+  },
+  "publishingPattern": {
+    "accountAuthoredRecordCount": 353,
+    "accountAuthoredOriginalCount": 340,
+    "accountAuthoredReplyCount": 13,
+    "externalSourceNativeRepostRecordCount": 81,
+    "recordsWithExternalLinks": 277,
+    "externalLinkOccurrences": 349,
+    "distinctExternalShortUrls": 321,
+    "accountAuthoredExternalLinkOccurrences": 292,
+    "accountAuthoredDistinctExternalShortUrls": 277,
+    "missionSignalRecordCounts": {
+      "community-platforms-and-gatherings": 35,
+      "civic-participation-and-service": 8,
+      "cultural-space-advocacy": 45,
+      "public-history-place-and-waterways": 2,
+      "creative-technology-and-media": 4,
+      "neighborhood-mutual-aid": 1
+    },
+    "recurringFunctions": [
+      "community-platform and gathering documentation",
+      "civic participation and service guidance",
+      "cultural-space advocacy and safety",
+      "public history, place, and waterways",
+      "creative technology and media practice",
+      "neighborhood mutual-aid coordination"
+    ],
+    "classificationMethod": "The checked-in rule manifest was applied to source-post bodies, hashtags, and displayed link destinations in the protected capture. Quoted-card text was excluded. For native reposts, a positive signal describes the external source record that Jamie redistributed, not Jamie's authorship of its words."
+  },
+  "postedUrlInventory": {
+    "recordCountWithExternalLinks": 277,
+    "externalLinkOccurrences": 349,
+    "distinctExternalShortUrls": 321,
+    "boundary": "A posted URL documents publication or redistribution. It does not by itself establish authorship, endorsement, readership, participation, or impact. Item-level destinations remain protected until separately close-read and accessioned as public-safe sources."
+  },
+  "stakeholderInventory": {
+    "query": "@urbanhermit -from:urbanhermit",
+    "yearlySearchWindow": "2008-2026",
+    "recoveredPublicIncomingRecordCount": 26,
+    "missionRelevantThirdPartyRecordCount": 15,
+    "missionRelevantThirdPartyAccountCount": 9,
+    "missionRelevantConversationContextCount": 2,
+    "contextLimitedRecordCount": 9,
+    "protectedIncomingRecordSetSha256": "700cd3f0412b872482ec7e01ee6627f2320cb19db4ac1822660273ed6282bda0",
+    "stakeholderGroupCounts": {
+      "civic-design-peer": 2,
+      "coalition-project-account": 4,
+      "creative-community-peer": 1,
+      "creative-media-collaborator": 2,
+      "creative-technology-peer": 2,
+      "neighborhood-collaborator": 1,
+      "neighborhood-project-account": 2,
+      "public-history-collaborator": 1
+    },
+    "findings": [
+      "Creative-technology peers and collaborators publicly attributed WOW List development, the Horse Lords video, and analog-video community work to Jamie.",
+      "NYC Artist Coalition and a civic-design peer publicly connected Jamie to Cabaret Law repeal, cultural-space advocacy, and the Save NYC Spaces town hall.",
+      "KC Town Hall and a neighborhood collaborator publicly connected Jamie to recurring free tire-disposal work.",
+      "A KCUR-linked collaborator post and a separate published article connect Jamie to public-history interpretation of Kansas City's 8th Street Tunnel."
+    ],
+    "boundary": "This is a bounded year-by-year public-index search, not a complete historical engagement archive. It excludes likes, private activity, deleted or unindexed records, direct messages, and engagement that does not mention the handle. Context records remain protected rather than becoming a public item-level index."
+  },
+  "visibleEngagementSnapshot": {
+    "capturedAt": "2026-07-15",
+    "accountAuthoredRecordsWithAnyDisplayedInteraction": 85,
+    "accountAuthoredDisplayedInteractionTotals": {
+      "likes": 175,
+      "replies": 8,
+      "reposts": 60,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "boundary": "Dated interface counts are volatile. They are not unique people, reach, endorsement, conversion, attendance, or impact. Counts on external-source native repost records are excluded from account-authored totals."
+  },
+  "missionSignalClassification": {
+    "rules": [
+      {
+        "signalId": "community-platforms-and-gatherings",
+        "pattern": "wow\\s*list|sunday dinner|open house|monthly music hackathon|popular\\.vote|allied media conference",
+        "flags": "i"
+      },
+      {
+        "signalId": "civic-participation-and-service",
+        "pattern": "callnyc|council20|councilstat|#civictech|#nycvotes|public hearing|civic design|organizing 2\\.0",
+        "flags": "i"
+      },
+      {
+        "signalId": "cultural-space-advocacy",
+        "pattern": "let\\s*nyc\\s*dance|#letnycdance|cabaret law|save\\s*nyc\\s*spaces|#savenycspaces|#nightmayor|nyc artist coalition|ghost ship|diy (?:art|music|cultural)?\\s*space",
+        "flags": "i"
+      },
+      {
+        "signalId": "public-history-place-and-waterways",
+        "pattern": "8th street tunnel|8sttunnel|great accommodations|cities on the water|mississippi river|kansas city riverfront|immersive cinema",
+        "flags": "i"
+      },
+      {
+        "signalId": "creative-technology-and-media",
+        "pattern": "horse\\s*lords|analog video|video synthesis|video effect|media archaeology|glitch video|immersive cinema|music hackathon",
+        "flags": "i"
+      },
+      {
+        "signalId": "neighborhood-mutual-aid",
+        "pattern": "kc town hall|#kctownhall|#tiredoftires|free tire disposal|tire pickup|oak park neighborhood|mutual aid fund",
+        "flags": "i"
+      }
+    ],
+    "inputFields": [
+      "source-post-body",
+      "hashtag",
+      "displayed-link-destination"
+    ],
+    "boundary": "Positive labels are reproducible against the protected capture. The public aggregate intentionally cannot replay record-level classifications because raw text and item identifiers remain outside the repository."
+  }
+}

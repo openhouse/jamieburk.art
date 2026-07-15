@@ -104,6 +104,15 @@ URLs, bounded tire and survey classifications, access-time labels, and three
 direct then-serving Council-member account responses. Shared-account authorship,
 first-party program quantities, and post-transition operation remain unassigned.
 
+The dedicated [@urbanhermit full-population
+note](research/2026-07-15-urbanhermit-x-full-population-archival-production.md)
+applies the same discipline to a personal public account. Its aggregate fixture
+distinguishes account originals, replies, and external-source native reposts;
+excludes raw historical post text and non-evidence item identifiers; and treats
+incoming mentions and dated interaction labels as bounded discovery evidence
+rather than reach, endorsement, or impact. A complete live-profile
+reconciliation is not a complete account-owner archive.
+
 ### Creative Technology Exhibition Records
 
 The NTER CHNG record uses four public sources with deliberately different
