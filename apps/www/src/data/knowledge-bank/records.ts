@@ -15,6 +15,7 @@ import { nycacSourceExpansionII } from "./nycac-source-expansion-ii.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07.ts";
+import { urbanhermitSocialPopulationJuly2026 } from "./urbanhermit-social-population-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
 
 const knowledgeBankInput = {
@@ -42,6 +43,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
+    ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
@@ -76,6 +78,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
     ...socialMediaProductionJuly2026.observations,
+    ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListSocialPopulationJuly2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
@@ -214,6 +217,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
     ...socialMediaProductionJuly2026.sources,
+    ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListSocialPopulationJuly2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
@@ -321,6 +325,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
     ...socialMediaProductionJuly2026.claims,
+    ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListSocialPopulationJuly2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
@@ -375,6 +380,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
+    ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,

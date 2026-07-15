@@ -10,10 +10,12 @@ import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCo
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/nycac-social-population-2026-07.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
+import { urbanhermitSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-population-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/wowlist-social-population-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
 import { nycacMissionSignalRules, nycacSelfRepostAppearanceUrls } from "./nycac-mission-classifier.mjs";
+import { urbanhermitMissionSignalRules } from "./urbanhermit-mission-classifier.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const suitePath = path.join(repoRoot, "evals/knowledge-bank/evals.json");
@@ -34,6 +36,13 @@ const NYCAC_SOCIAL_REVIEW_LOCKS = Object.freeze({
   incomingRecordsSha256: "d190361370c1ce18723fc472d0b2fce6c9f520797c9fca32ae80c3912dc83a09",
   governedModuleSha256: "727178b4389b1def93fb99ea7a402b9fb70d48412ed05cb04745d6305910c55d",
   publicReportSha256: "6a09c5f2fd3520b8238f5f54c2c4ceb3a2222fb72a6c09b64591ac3b4d6782cf"
+});
+const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
+  manifestSha256: "9fedab737b1e4d6ded779942203d4a77272fe0120663f50402c81bdbcdc0c455",
+  recordsSha256: "4a348d56fe961ea19767b2c7de48da3026cba5f274c027da11dcb2371672d277",
+  incomingRecordsSha256: "c09b3150e127e69f0382cbad3ffa350fb2fccdfb3b0fc1b41943325f16ac5f1f",
+  governedModuleSha256: "8e97d84adf69cec38fad3a37108ccbcfa0b4e0b8d0630b8f63bff1e32b7f7a94",
+  publicReportSha256: "c1dcc58a79ff1c51a3c2e9bcd2803f711d4234a61e22bff5f9e8d54babea16f6"
 });
 
 export function loadKnowledgeEvalSuite() {
@@ -1429,6 +1438,311 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     .filter(([, passed]) => !passed)
     .map(([name]) => name);
   const nycacRetrievablePopulationComplete = nycacFailedChecks.length === 0;
+  const urbanhermitFull = suite.pilot.urbanhermitFullPopulation;
+  const urbanhermitManifestPath = path.join(repoRoot, urbanhermitFull.manifestPath);
+  const urbanhermitReportPath = path.join(repoRoot, urbanhermitFull.reportPath);
+  const urbanhermitManifestText = readFileSync(urbanhermitManifestPath, "utf8");
+  const urbanhermitManifest = overrides.urbanhermitPopulation ?? JSON.parse(urbanhermitManifestText);
+  const urbanhermitReport = overrides.urbanhermitPopulationReport ?? readFileSync(urbanhermitReportPath, "utf8");
+  const urbanhermitManifestSha256 = createHash("sha256").update(urbanhermitManifestText).digest("hex");
+  const urbanhermitRecordsSha256 = createHash("sha256")
+    .update(JSON.stringify(urbanhermitManifest.records ?? []))
+    .digest("hex");
+  const urbanhermitIncomingRecordsSha256 = createHash("sha256")
+    .update(JSON.stringify(urbanhermitManifest.stakeholderInventory?.records ?? []))
+    .digest("hex");
+  const urbanhermitModulePath = path.join(repoRoot, "apps/www/src/data/knowledge-bank/urbanhermit-social-population-2026-07.ts");
+  const urbanhermitModuleText = readFileSync(urbanhermitModulePath, "utf8");
+  const urbanhermitGovernedModuleSha256 = createHash("sha256")
+    .update(urbanhermitModuleText)
+    .digest("hex");
+  const urbanhermitPublicReportSha256 = createHash("sha256")
+    .update(readFileSync(urbanhermitReportPath, "utf8"))
+    .digest("hex");
+  const urbanhermitReviewLocksMatch =
+    urbanhermitManifestSha256 === URBANHERM_SOCIAL_REVIEW_LOCKS.manifestSha256 &&
+    urbanhermitRecordsSha256 === URBANHERM_SOCIAL_REVIEW_LOCKS.recordsSha256 &&
+    urbanhermitIncomingRecordsSha256 === URBANHERM_SOCIAL_REVIEW_LOCKS.incomingRecordsSha256 &&
+    urbanhermitGovernedModuleSha256 === URBANHERM_SOCIAL_REVIEW_LOCKS.governedModuleSha256 &&
+    urbanhermitPublicReportSha256 === URBANHERM_SOCIAL_REVIEW_LOCKS.publicReportSha256;
+  const urbanhermitRecords = urbanhermitManifest.records ?? [];
+  const urbanhermitRecordUrls = new Set(urbanhermitRecords.map((record) => record.url));
+  const urbanhermitRecordTypeCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(urbanhermitRecords, (record) => record.recordType))
+      .map(([recordType, records]) => [recordType, records.length])
+  );
+  const urbanhermitAuthoredRecords = urbanhermitRecords.filter((record) =>
+    record.sourceAuthorship === "account-authored" && ["original", "reply"].includes(record.recordType)
+  );
+  const urbanhermitRepostRecords = urbanhermitRecords.filter((record) =>
+    record.sourceAuthorship === "external-source-native-repost" && record.recordType === "repost"
+  );
+  const urbanhermitLinks = urbanhermitRecords.flatMap((record) => record.externalLinks ?? []);
+  const urbanhermitShortUrls = new Set(urbanhermitLinks.map((link) => link.shortUrl));
+  const urbanhermitRecordsWithLinks = urbanhermitRecords.filter((record) => record.externalLinks?.length);
+  const urbanhermitMissionSignalCounts = Object.fromEntries(
+    urbanhermitMissionSignalRules.map((rule) => [
+      rule.id,
+      urbanhermitRecords.filter((record) => record.missionSignals?.includes(rule.id)).length
+    ])
+  );
+  const urbanhermitRuleManifestMatches = sameOrderedValues(
+    urbanhermitManifest.missionSignalClassification?.rules?.map((rule) =>
+      `${rule.signalId}:${rule.pattern}:${rule.flags}`
+    ),
+    urbanhermitMissionSignalRules.map((rule) => `${rule.id}:${rule.pattern.source}:${rule.pattern.flags}`)
+  );
+  const urbanhermitClassificationEvidenceValid = urbanhermitRecords.every((record) =>
+    /^[a-f0-9]{64}$/.test(record.classificationInputDigest) &&
+    Array.isArray(record.missionSignals) &&
+    Array.isArray(record.missionSignalEvidence) &&
+    record.missionSignals.length === record.missionSignalEvidence.length &&
+    record.missionSignalEvidence.every((evidence) =>
+      record.missionSignals.includes(evidence.signalId) &&
+      urbanhermitMissionSignalRules.some((rule) => rule.id === evidence.signalId) &&
+      ["source-post-body", "hashtag", "displayed-link-destination"].includes(evidence.inputField) &&
+      typeof evidence.matchedValue === "string" && evidence.matchedValue.length > 0
+    )
+  );
+  const urbanhermitIncoming = urbanhermitManifest.stakeholderInventory;
+  const urbanhermitIncomingRecords = urbanhermitIncoming?.records ?? [];
+  const urbanhermitIdentifiedIncomingRecords = urbanhermitIncomingRecords.filter((record) =>
+    record.classification !== "context-limited-personal-or-network"
+  );
+  const urbanhermitIncomingUrls = new Set(urbanhermitIdentifiedIncomingRecords.map((record) => record.url));
+  const urbanhermitMissionRelevantIncoming = urbanhermitIncomingRecords.filter((record) =>
+    record.classification === "mission-relevant-third-party"
+  );
+  const urbanhermitMissionRelevantIncomingAccounts = new Set(
+    urbanhermitMissionRelevantIncoming
+      .filter((record) => typeof record.authorHandle === "string")
+      .map((record) => record.authorHandle.toLowerCase())
+  );
+  const urbanhermitIncomingConversationContext = urbanhermitIncomingRecords.filter((record) =>
+    record.classification === "mission-relevant-conversation-context"
+  );
+  const urbanhermitIncomingPersonalContext = urbanhermitIncomingRecords.filter((record) =>
+    record.classification === "context-limited-personal-or-network"
+  );
+  const urbanhermitStakeholderGroupCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(urbanhermitMissionRelevantIncoming, (record) => record.stakeholderGroup))
+      .map(([group, records]) => [group, records.length])
+  );
+  const urbanhermitAuthoredWithInteraction = urbanhermitAuthoredRecords.filter((record) => {
+    const metrics = record.visibleEngagement;
+    return metrics.likes + metrics.replies + metrics.reposts > 0;
+  });
+  const urbanhermitDisplayedLikes = urbanhermitAuthoredRecords.reduce(
+    (total, record) => total + record.visibleEngagement.likes,
+    0
+  );
+  const urbanhermitDisplayedReplies = urbanhermitAuthoredRecords.reduce(
+    (total, record) => total + record.visibleEngagement.replies,
+    0
+  );
+  const urbanhermitDisplayedReposts = urbanhermitAuthoredRecords.reduce(
+    (total, record) => total + record.visibleEngagement.reposts,
+    0
+  );
+  const urbanhermitContextRecords = urbanhermitManifest.conversationContextRecords ?? [];
+  const urbanhermitIntakes = urbanhermitSocialPopulationJuly2026.intakeItems.map((item) => intakeById.get(item.id));
+  const urbanhermitObservations = urbanhermitSocialPopulationJuly2026.observations.map((item) => observationById.get(item.id));
+  const urbanhermitSources = urbanhermitSocialPopulationJuly2026.sources.map((item) => sourceById.get(item.id));
+  const urbanhermitClaims = urbanhermitSocialPopulationJuly2026.claims.map((item) => claimById.get(item.id));
+  const urbanhermitInquiries = urbanhermitSocialPopulationJuly2026.researchInquiries.map((item) => inquiryById.get(item.id));
+  const urbanhermitHeldClaims = urbanhermitFull.heldClaimIds.map((id) => claimById.get(id));
+  const urbanhermitOwnerArchiveInquiry = inquiryById.get(urbanhermitFull.ownerArchiveInquiryId);
+  const urbanhermitPostedSourceInquiry = inquiryById.get(urbanhermitFull.postedSourceInquiryId);
+  const urbanhermitManifestSource = sourceById.get(urbanhermitFull.manifestSourceId);
+  const urbanhermitTunnelClaim = claimById.get("CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING");
+  const urbanhermitTireClaim = claimById.get("CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION");
+  const urbanhermitBrooklynSource = sourceById.get("SRC-URBANHERM-BROOKLYN-EAGLE-NIGHTLIFE-2017");
+  const urbanhermitHorseObservation = observationById.get("OBS-URBANHERM-X-HORSE-LORDS-CORROBORATION");
+  const urbanhermitBrooklynObservation = observationById.get("OBS-URBANHERM-BROOKLYN-EAGLE-NYCAC-NIGHTLIFE-SEQUENCE");
+  const urbanhermitHorseClaim = claimById.get("CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016");
+  const urbanhermitArchiveText = JSON.stringify({
+    intakes: urbanhermitIntakes,
+    observations: urbanhermitObservations,
+    sources: urbanhermitSources,
+    claims: urbanhermitClaims,
+    inquiries: urbanhermitInquiries,
+    manifest: urbanhermitManifest,
+    report: urbanhermitReport
+  });
+  const urbanhermitForbiddenPublicKeys = /"(?:text|body|profileBiography|phone|email|address|cookie|cookies|session|sessionToken|directMessage)"\s*:/i;
+  const urbanhermitFullPopulationChecks = {
+    filesAndReconciliation: Boolean(
+      existsSync(urbanhermitManifestPath) &&
+      existsSync(urbanhermitReportPath) &&
+      urbanhermitManifest.account === "@urbanhermit" &&
+      urbanhermitManifest.generatedAt === urbanhermitFull.reviewedAt &&
+      urbanhermitManifest.populationReconciliation.profileReportedPostCount === urbanhermitFull.expectedProfileCount &&
+      urbanhermitManifest.populationReconciliation.postsTimelineUniqueCount === urbanhermitFull.expectedPostsTimelineCount &&
+      urbanhermitManifest.populationReconciliation.repliesTimelineRenderedArticleCount === urbanhermitFull.expectedRepliesRenderedCount &&
+      urbanhermitManifest.populationReconciliation.repliesTimelinePrimaryRecordCount === urbanhermitFull.expectedRepliesPrimaryCount &&
+      urbanhermitManifest.populationReconciliation.repliesTimelineConversationContextCount === urbanhermitFull.expectedConversationContextCount &&
+      urbanhermitManifest.populationReconciliation.recoveredUnionRecordCount === urbanhermitFull.expectedRecoveredCount &&
+      urbanhermitManifest.populationReconciliation.recoveredPopulationReviewedPercent === 100 &&
+      urbanhermitManifest.populationReconciliation.profileCountNotMaterialized === urbanhermitFull.expectedCounterRemainder &&
+      /does not establish that no older post was deleted, withheld, or otherwise absent/i.test(urbanhermitManifest.populationReconciliation.boundary)
+    ),
+    recordIdentityAndAuthorship: Boolean(
+      urbanhermitRecords.length === urbanhermitFull.expectedRecoveredCount &&
+      urbanhermitRecordUrls.size === urbanhermitFull.expectedRecoveredCount &&
+      Object.entries(urbanhermitFull.expectedRecordTypeCounts).every(([recordType, count]) =>
+        urbanhermitRecordTypeCounts[recordType] === count && urbanhermitManifest.recordTypeCounts[recordType] === count
+      ) &&
+      urbanhermitAuthoredRecords.length === urbanhermitFull.expectedAuthoredCount &&
+      urbanhermitAuthoredRecords.every((record) => record.authorHandle.toLowerCase() === "@urbanhermit") &&
+      urbanhermitRepostRecords.length === urbanhermitFull.expectedRecordTypeCounts.repost &&
+      urbanhermitRepostRecords.every((record) => record.authorHandle.toLowerCase() !== "@urbanhermit") &&
+      urbanhermitRecords.every((record) =>
+        /^https:\/\/x\.com\/[^/]+\/status\/\d+$/.test(record.url) &&
+        /^\d{4}-\d{2}-\d{2}T/.test(record.publishedAt) &&
+        Array.isArray(record.recoveredFrom) && record.recoveredFrom.length > 0 &&
+        Array.isArray(record.externalLinks) &&
+        Array.isArray(record.mentions) &&
+        Array.isArray(record.hashtags) &&
+        Number.isInteger(record.visibleEngagement?.likes) &&
+        Number.isInteger(record.visibleEngagement?.replies) &&
+        Number.isInteger(record.visibleEngagement?.reposts)
+      ) &&
+      urbanhermitContextRecords.length === urbanhermitFull.expectedConversationContextCount &&
+      urbanhermitContextRecords.every((record) =>
+        !urbanhermitRecordUrls.has(record.url) &&
+        record.authorHandle.toLowerCase() !== "@urbanhermit" &&
+        record.contextType === "conversation-parent-excluded-from-profile-population"
+      )
+    ),
+    linksAndMissionClassification: Boolean(
+      urbanhermitLinks.length === urbanhermitFull.expectedExternalLinkOccurrences &&
+      urbanhermitShortUrls.size === urbanhermitFull.expectedDistinctShortUrls &&
+      urbanhermitRecordsWithLinks.length === urbanhermitFull.expectedRecordsWithExternalLinks &&
+      urbanhermitManifest.postedUrlInventory.externalLinkOccurrences === urbanhermitFull.expectedExternalLinkOccurrences &&
+      urbanhermitManifest.postedUrlInventory.distinctExternalShortUrls === urbanhermitFull.expectedDistinctShortUrls &&
+      urbanhermitLinks.every((link) =>
+        /^https?:\/\//.test(link.shortUrl) &&
+        typeof link.displayedDestination === "string" && link.displayedDestination.length > 0
+      ) &&
+      Object.entries(urbanhermitFull.expectedMissionSignalCounts).every(([signal, count]) =>
+        urbanhermitMissionSignalCounts[signal] === count &&
+        urbanhermitManifest.publishingPattern.missionSignalRecordCounts[signal] === count
+      ) &&
+      urbanhermitRuleManifestMatches &&
+      urbanhermitClassificationEvidenceValid &&
+      /not.*authorship.*endorsement.*readership.*participation.*impact/i.test(urbanhermitManifest.postedUrlInventory.boundary)
+    ),
+    incomingResponse: Boolean(
+      urbanhermitIncomingRecords.length === urbanhermitFull.expectedIncomingRecordCount &&
+      urbanhermitIdentifiedIncomingRecords.length === urbanhermitFull.expectedPublicIdentifiedIncomingRecordCount &&
+      urbanhermitIncomingUrls.size === urbanhermitFull.expectedPublicIdentifiedIncomingRecordCount &&
+      urbanhermitIdentifiedIncomingRecords.every((record) =>
+        /^https:\/\/x\.com\/[^/]+\/status\/\d+$/.test(record.url) &&
+        typeof record.authorHandle === "string" && record.authorHandle.startsWith("@") &&
+        /^\d{4}-\d{2}-\d{2}T/.test(record.publishedAt)
+      ) &&
+      urbanhermitMissionRelevantIncoming.length === urbanhermitFull.expectedMissionRelevantIncomingRecordCount &&
+      urbanhermitMissionRelevantIncomingAccounts.size === urbanhermitFull.expectedMissionRelevantIncomingAccountCount &&
+      urbanhermitIncomingConversationContext.length === urbanhermitFull.expectedIncomingConversationContextCount &&
+      urbanhermitIncomingPersonalContext.length === urbanhermitFull.expectedIncomingPersonalContextCount &&
+      urbanhermitIncoming.contextLimitedPublicRedactionCount === urbanhermitFull.expectedIncomingPersonalContextRedactionCount &&
+      urbanhermitIncomingPersonalContext.every((record, index) =>
+        record.redactionId === `context-limited-${String(index + 1).padStart(2, "0")}` &&
+        record.stakeholderGroup === "context-limited" &&
+        record.publicDisposition === "identity-date-and-metrics-withheld-as-non-mission-personal-context" &&
+        !("url" in record) && !("authorHandle" in record) && !("publishedAt" in record) && !("visibleEngagement" in record)
+      ) &&
+      urbanhermitIncoming.recoveredPublicIncomingRecordCount === urbanhermitFull.expectedIncomingRecordCount &&
+      urbanhermitIncoming.missionRelevantThirdPartyRecordCount === urbanhermitFull.expectedMissionRelevantIncomingRecordCount &&
+      urbanhermitIncoming.missionRelevantThirdPartyAccountCount === urbanhermitFull.expectedMissionRelevantIncomingAccountCount &&
+      Object.entries(urbanhermitFull.expectedStakeholderGroupCounts).every(([group, count]) =>
+        urbanhermitStakeholderGroupCounts[group] === count &&
+        urbanhermitIncoming.stakeholderGroupCounts[group] === count
+      ) &&
+      /not a complete historical engagement archive/i.test(urbanhermitIncoming.boundary) &&
+      /conversation-context records are retained without converting them into mission-relevant traction/i.test(urbanhermitIncoming.boundary) &&
+      /identities, dates, URLs, and metrics of nine non-mission personal or network-context records are withheld/i.test(urbanhermitIncoming.boundary)
+    ),
+    visibleEngagementBoundary: Boolean(
+      urbanhermitAuthoredWithInteraction.length === urbanhermitFull.expectedAuthoredRecordsWithDisplayedInteraction &&
+      urbanhermitDisplayedLikes === urbanhermitFull.expectedDisplayedLikes &&
+      urbanhermitDisplayedReplies === urbanhermitFull.expectedDisplayedReplies &&
+      urbanhermitDisplayedReposts === urbanhermitFull.expectedDisplayedReposts &&
+      urbanhermitDisplayedLikes + urbanhermitDisplayedReplies + urbanhermitDisplayedReposts === urbanhermitFull.expectedDisplayedInteractionUnits &&
+      urbanhermitManifest.visibleEngagementSnapshot.accountAuthoredRecordsWithAnyDisplayedInteraction === urbanhermitFull.expectedAuthoredRecordsWithDisplayedInteraction &&
+      urbanhermitManifest.visibleEngagementSnapshot.accountAuthoredDisplayedInteractionTotals.likes === urbanhermitFull.expectedDisplayedLikes &&
+      urbanhermitManifest.visibleEngagementSnapshot.accountAuthoredDisplayedInteractionTotals.replies === urbanhermitFull.expectedDisplayedReplies &&
+      urbanhermitManifest.visibleEngagementSnapshot.accountAuthoredDisplayedInteractionTotals.reposts === urbanhermitFull.expectedDisplayedReposts &&
+      /not unique people, reach, endorsement, conversion, attendance, or impact/i.test(urbanhermitManifest.visibleEngagementSnapshot.boundary) &&
+      /external-source native repost records are excluded/i.test(urbanhermitManifest.visibleEngagementSnapshot.boundary)
+    ),
+    governedLifecycle: Boolean(
+      urbanhermitIntakes.length === urbanhermitFull.expectedIntakeCount &&
+      urbanhermitObservations.length === urbanhermitFull.expectedObservationCount &&
+      urbanhermitSources.length === urbanhermitFull.expectedSourceCount &&
+      urbanhermitClaims.length === urbanhermitFull.expectedClaimCount &&
+      urbanhermitInquiries.length === urbanhermitFull.expectedInquiryCount &&
+      urbanhermitIntakes.every((intake) =>
+        intake?.disposition === "integrated" && intake.visibility === "public-safe" && intake.boundaries.length >= 2
+      ) &&
+      urbanhermitObservations.every((observation) =>
+        observation?.locator && observation.publicSafe === true && observation.limitations.length >= 2 &&
+        (observation.claimIds.length > 0 || observation.researchInquiryIds.length > 0)
+      ) &&
+      urbanhermitSources.every((source) =>
+        source && source.doesNotEstablish.length >= 4 &&
+        (source.visibility === "public"
+          ? source.canonicalUrl?.startsWith("https://")
+          : source.visibility === "protected" && !source.canonicalUrl && source.protectedLocatorId)
+      ) &&
+      urbanhermitManifestSource?.visibility === "public"
+    ),
+    claimsAndInquiries: Boolean(
+      urbanhermitHeldClaims.every((claim) =>
+        claim?.status === "confirmed-with-boundary" &&
+        claim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0) &&
+        claim.boundaries.length >= 4 && claim.antiClaims.length >= 5 && claim.evidence.length >= 2
+      ) &&
+      urbanhermitOwnerArchiveInquiry?.resultStatus === "partially-recovered" &&
+      /all-ever historical completeness remains an owner-archive question/i.test(urbanhermitOwnerArchiveInquiry.publicSummary) &&
+      urbanhermitPostedSourceInquiry?.resultStatus === "partially-recovered" &&
+      /All 321 distinct short URLs have an inventory disposition/.test(urbanhermitPostedSourceInquiry.findings.join(" ")) &&
+      /not all 321 destinations have been resolved and close-read/i.test(urbanhermitPostedSourceInquiry.limitations.join(" ")) &&
+      urbanhermitTunnelClaim?.antiClaims.includes("Jamie restored the 8th Street Tunnel") &&
+      !/(?:Jamie|he)[^.]{0,80}(?:restored|owned|controlled|permanently opened)[^.]{0,80}(?:tunnel|8th Street)/i.test(
+        `${urbanhermitTunnelClaim?.internalClaim ?? ""} ${urbanhermitTunnelClaim?.projections.map((projection) => projection.text).join(" ") ?? ""}`
+      ) &&
+      urbanhermitTireClaim?.antiClaims.includes("Jamie alone created or operated Tired of Tires") &&
+      !/(?:Jamie|he)[^.]{0,80}(?:alone|solely)[^.]{0,80}(?:created|designed|operated|ran|coordinated)[^.]{0,80}(?:Tired of Tires|tire)/i.test(
+        `${urbanhermitTireClaim?.internalClaim ?? ""} ${urbanhermitTireClaim?.projections.map((projection) => projection.text).join(" ") ?? ""}`
+      ) &&
+      urbanhermitBrooklynSource?.doesNotEstablish.includes("Jamie's individual authorship or role") &&
+      urbanhermitHorseClaim?.internalClaim.includes("M.C. Schmidt") &&
+      urbanhermitHorseObservation?.text.includes("M.C. Schmidt") &&
+      urbanhermitHorseObservation?.limitations.some((limitation) => /credit M\.C\. Schmidt alongside Jamie/i.test(limitation)) &&
+      urbanhermitBrooklynObservation?.limitations.some((limitation) => /does not name Jamie or establish his individual authorship/i.test(limitation)) &&
+      !/(?:Jamie|Burkart|he)[^.]{0,100}(?:authored|wrote|created)[^.]{0,100}(?:coalition statement|NYC Artist Coalition statement)/i.test(urbanhermitBrooklynObservation?.text ?? "") &&
+      !/(?:Jamie|Burkart|he)[^.]{0,100}(?:caused|created|secured|established)[^.]{0,100}(?:Office of Nightlife|nightlife office)/i.test(urbanhermitBrooklynObservation?.text ?? "")
+    ),
+    projectionAndPublicDocumentation: Boolean(
+      urbanhermitReviewLocksMatch &&
+      urbanhermitHeldClaims.every((claim) =>
+        !knowledgeBank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id))
+      ) &&
+      /100 percent of the live profile-counted population/i.test(urbanhermitReport) &&
+      /321 distinct short URLs/i.test(urbanhermitReport) &&
+      /not 243 people/i.test(urbanhermitReport) &&
+      /does not name[\n ]+Jamie/i.test(urbanhermitReport) &&
+      /No `\/proofs`, `\/urbanhermit`, or other new[\n ]+public route is created/i.test(urbanhermitReport) &&
+      /account-owner X Archive remains[\n ]+an open historical-completeness task/i.test(urbanhermitReport) &&
+      !urbanhermitForbiddenPublicKeys.test(JSON.stringify(urbanhermitManifest)) &&
+      !/\/Users\/|\/Volumes\/|\/private\/tmp|auth token|session token/i.test(urbanhermitArchiveText)
+    )
+  };
+  const urbanhermitFailedChecks = Object.entries(urbanhermitFullPopulationChecks)
+    .filter(([, passed]) => !passed)
+    .map(([name]) => name);
+  const urbanhermitFullPopulationComplete = urbanhermitFailedChecks.length === 0;
   const callNycFull = suite.pilot.callNycFullPopulation;
   const callNycFullIntakes = callNycSocialPopulationJuly2026.intakeItems.map((item) => intakeById.get(item.id));
   const callNycFullObservations = callNycSocialPopulationJuly2026.observations.map((item) => observationById.get(item.id));
@@ -2376,6 +2690,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         googleDriveComplete &&
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
+        urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 3 && item.sourceIds.length > 1 && item.observationIds.length)
       ),
@@ -2389,6 +2704,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         googleDriveComplete &&
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
+        urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
         allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
       ),
@@ -2406,6 +2722,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         googleDriveComplete &&
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
+        urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
@@ -2424,6 +2741,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         googleDriveComplete &&
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
+        urbanhermitFullPopulationComplete &&
         fieldPracticeComplete,
         triangulatedExpansionClaims.length >= 8
       ),
@@ -2442,6 +2760,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         googleDriveComplete &&
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
+        urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
         Boolean(fairRentPage)
       ),
@@ -2461,6 +2780,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         googleDriveComplete &&
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
+        urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
@@ -2468,7 +2788,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     },
     {
       criterionId: "KB-EVAL-SAFETY",
-      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && nycacRetrievablePopulationComplete && fieldPracticeComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
+      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && nycacRetrievablePopulationComplete && urbanhermitFullPopulationComplete && fieldPracticeComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
       evidence: [errors.length ? `${errors.length} canonical validation errors` : "Canonical validation passes with no private-path or protected-locator leak"]
     },
     {
@@ -2487,6 +2807,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         googleDriveComplete &&
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
+        urbanhermitFullPopulationComplete &&
         fieldPracticeComplete
       ),
       evidence: [photoChainComplete
@@ -2534,6 +2855,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [nycacRetrievablePopulationComplete
         ? `Every one of the ${nycacRecords.length} records in the retrievable @NYCArtC union is classified across ${nycacShortUrls.size} distinct posted short URLs, ${nycacSourceAuthors.size} source authors, six replayable mission signals, and ${nycacIncomingRecords.length} bounded later incoming records; the ${nycacFull.expectedCounterRemainder}-record owner-archive gap, shared authorship, repost-source, timestamp, and mutable-engagement boundaries remain explicit`
         : `NYC Artist Coalition production failed: ${nycacFailedChecks.join(", ")}`]
+    },
+    {
+      criterionId: "KB-EVAL-URBANHERM-FULL-POPULATION",
+      score: score(urbanhermitFullPopulationComplete),
+      evidence: [urbanhermitFullPopulationComplete
+        ? `Every one of the ${urbanhermitRecords.length} live profile-counted @urbanhermit records is classified across ${urbanhermitShortUrls.size} distinct posted short URLs, six replayable mission signals, and ${urbanhermitIncomingRecords.length} bounded incoming records; account authorship, repost sources, personal context, mutable engagement, raw-text safety, owner-archive completeness, mature source scope, and selective non-projection remain explicit`
+        : `Urbanhermit production failed: ${urbanhermitFailedChecks.join(", ")}`]
     },
     {
       criterionId: "KB-EVAL-KCTH-FULL-POPULATION",
@@ -2603,6 +2931,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         governedModuleSha256: nycacGovernedModuleSha256,
         publicReportSha256: nycacPublicReportSha256,
         reviewLocksMatch: nycacReviewLocksMatch
+      },
+      urbanhermitSocialPopulation: {
+        manifestSha256: urbanhermitManifestSha256,
+        recordsSha256: urbanhermitRecordsSha256,
+        incomingRecordsSha256: urbanhermitIncomingRecordsSha256,
+        governedModuleSha256: urbanhermitGovernedModuleSha256,
+        publicReportSha256: urbanhermitPublicReportSha256,
+        reviewLocksMatch: urbanhermitReviewLocksMatch
       }
     },
     accepted: errors.length === 0 &&

@@ -13,12 +13,14 @@ import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/sr
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 import { nycacMissionSignalRules } from "../lib/nycac-mission-classifier.mjs";
+import { urbanhermitMissionSignalRules } from "../lib/urbanhermit-mission-classifier.mjs";
 
 const suite = loadKnowledgeEvalSuite();
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const callNycPopulationPath = path.join(repoRoot, suite.pilot.callNycFullPopulation.manifestPath);
 const wowListPopulationPath = path.join(repoRoot, suite.pilot.wowListFullPopulation.manifestPath);
 const nycacPopulationPath = path.join(repoRoot, suite.pilot.nycacRetrievablePopulation.manifestPath);
+const urbanhermitPopulationPath = path.join(repoRoot, suite.pilot.urbanhermitFullPopulation.manifestPath);
 const kcTownHallLedgerPath = path.join(repoRoot, suite.pilot.kcTownHallFullPopulation.ledgerPath);
 
 function loadCallNycPopulation() {
@@ -31,6 +33,10 @@ function loadWowListPopulation() {
 
 function loadNycacPopulation() {
   return JSON.parse(readFileSync(nycacPopulationPath, "utf8"));
+}
+
+function loadUrbanhermitPopulation() {
+  return JSON.parse(readFileSync(urbanhermitPopulationPath, "utf8"));
 }
 
 function loadKcTownHallLedger() {
@@ -1936,6 +1942,197 @@ test("NYC Artist Coalition selected projection rejects interaction units as peop
     assert.equal(result.accepted, false);
   } finally {
     claim.projections[0].text = original;
+  }
+});
+
+test("Urbanhermit full-population production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score,
+    5
+  );
+  assert.equal(result.contentApprovals.urbanhermitSocialPopulation.reviewLocksMatch, true);
+});
+
+test("Urbanhermit eval preserves the live-profile versus owner-archive boundary", () => {
+  const population = loadUrbanhermitPopulation();
+  population.populationReconciliation.profileReportedPostCount = 433;
+  population.populationReconciliation.boundary = "This is every post Jamie ever published.";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("Urbanhermit eval rejects a dropped or duplicated profile record", () => {
+  const dropped = loadUrbanhermitPopulation();
+  dropped.records.pop();
+  let result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: dropped });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+
+  const duplicated = loadUrbanhermitPopulation();
+  duplicated.records[1].url = duplicated.records[0].url;
+  result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: duplicated });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+});
+
+test("Urbanhermit row locks reject count-preserving identity mutations", () => {
+  const mutations = [
+    (population) => {
+      const other = population.records.find((record) => record.authorHandle !== population.records[0].authorHandle);
+      [population.records[0].authorHandle, other.authorHandle] = [other.authorHandle, population.records[0].authorHandle];
+    },
+    (population) => {
+      [population.records[0].publishedAt, population.records[1].publishedAt] =
+        [population.records[1].publishedAt, population.records[0].publishedAt];
+    },
+    (population) => {
+      const linked = population.records.filter((record) => record.externalLinks.length > 0);
+      [linked[0].externalLinks, linked[1].externalLinks] = [linked[1].externalLinks, linked[0].externalLinks];
+    },
+    (population) => {
+      population.records[0].classificationInputDigest = "a".repeat(64);
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const population = loadUrbanhermitPopulation();
+    mutate(population);
+    const result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: population });
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  }
+});
+
+test("Urbanhermit eval rejects mission-classification drift", () => {
+  const population = loadUrbanhermitPopulation();
+  population.missionSignalClassification.rules[0].pattern = "anything";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  assert.deepEqual(
+    population.missionSignalClassification.rules.map((rule) => rule.signalId),
+    urbanhermitMissionSignalRules.map((rule) => rule.id)
+  );
+});
+
+test("Urbanhermit eval rejects repost-source authorship inflation", () => {
+  const population = loadUrbanhermitPopulation();
+  const repost = population.records.find((record) => record.recordType === "repost");
+  assert.ok(repost);
+  repost.authorHandle = "@urbanhermit";
+  repost.sourceAuthorship = "account-authored";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+});
+
+test("Urbanhermit eval rejects professional-traction inflation from context records", () => {
+  const population = loadUrbanhermitPopulation();
+  const context = population.stakeholderInventory.records.find(
+    (record) => record.classification === "context-limited-personal-or-network"
+  );
+  assert.ok(context);
+  context.classification = "mission-relevant-third-party";
+  context.stakeholderGroup = "creative-community-peer";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+});
+
+test("Urbanhermit public fixture withholds non-mission personal-context identities", () => {
+  const population = loadUrbanhermitPopulation();
+  const personalContext = population.stakeholderInventory.records.filter(
+    (record) => record.classification === "context-limited-personal-or-network"
+  );
+  assert.equal(personalContext.length, 9);
+  assert.ok(personalContext.every((record) =>
+    record.publicDisposition === "identity-date-and-metrics-withheld-as-non-mission-personal-context" &&
+    !("url" in record) && !("authorHandle" in record) && !("publishedAt" in record) && !("visibleEngagement" in record)
+  ));
+});
+
+test("Urbanhermit eval rejects visible-interaction inflation", () => {
+  const population = loadUrbanhermitPopulation();
+  const authored = population.records.find((record) => record.sourceAuthorship === "account-authored");
+  assert.ok(authored);
+  authored.visibleEngagement.likes += 1;
+  const result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+});
+
+test("Urbanhermit public fixture rejects raw post-body leakage", () => {
+  const population = loadUrbanhermitPopulation();
+  population.records[0].text = "Synthetic raw post body that must never enter the public fixture.";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("Urbanhermit mature claims reject silent website promotion", () => {
+  const claim = knowledgeBank.claims.find((item) => item.id === "CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING");
+  assert.ok(claim?.projections[0]);
+  const original = structuredClone(claim.projections[0]);
+
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/eighth-street-tunnel"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  } finally {
+    Object.assign(claim.projections[0], original);
+  }
+});
+
+test("Urbanhermit mature claims reject tunnel and tire role inflation", () => {
+  const tunnel = knowledgeBank.claims.find((item) => item.id === "CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING");
+  const tire = knowledgeBank.claims.find((item) => item.id === "CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION");
+  assert.ok(tunnel && tire);
+  const tunnelOriginal = tunnel.internalClaim;
+  const tireOriginal = tire.internalClaim;
+
+  try {
+    tunnel.internalClaim = `${tunnelOriginal} Jamie restored the 8th Street Tunnel.`;
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+
+    tunnel.internalClaim = tunnelOriginal;
+    tire.internalClaim = `${tireOriginal} Jamie alone created and operated Tired of Tires.`;
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  } finally {
+    tunnel.internalClaim = tunnelOriginal;
+    tire.internalClaim = tireOriginal;
+  }
+});
+
+test("Urbanhermit source maturation preserves Horse Lords shared credit", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-URBANHERM-X-HORSE-LORDS-CORROBORATION"
+  );
+  assert.ok(observation);
+  const originalText = observation.text;
+  const originalLimitations = observation.limitations;
+
+  try {
+    observation.text = observation.text.replaceAll("M.C. Schmidt", "Jamie Burkart");
+    observation.limitations = observation.limitations.filter((limitation) => !/M\.C\. Schmidt/.test(limitation));
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  } finally {
+    observation.text = originalText;
+    observation.limitations = originalLimitations;
+  }
+});
+
+test("Urbanhermit source maturation rejects Jamie attribution from Brooklyn Eagle", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-URBANHERM-BROOKLYN-EAGLE-NYCAC-NIGHTLIFE-SEQUENCE"
+  );
+  assert.ok(observation);
+  const originalText = observation.text;
+
+  try {
+    observation.text = `${observation.text} Jamie authored the NYC Artist Coalition statement and caused the Office of Nightlife.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERM-FULL-POPULATION")?.score, 1);
+  } finally {
+    observation.text = originalText;
   }
 });
 

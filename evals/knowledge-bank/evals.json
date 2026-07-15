@@ -612,6 +612,70 @@
       "postedSourceInquiryId": "INQ-NYCAC-X-POSTED-SOURCE-MATURATION",
       "manifestSourceId": "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026"
     },
+    "urbanhermitFullPopulation": {
+      "reviewedAt": "2026-07-15",
+      "manifestPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
+      "reportPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
+      "expectedProfileCount": 434,
+      "expectedPostsTimelineCount": 421,
+      "expectedRepliesRenderedCount": 436,
+      "expectedRepliesPrimaryCount": 434,
+      "expectedConversationContextCount": 2,
+      "expectedRecoveredCount": 434,
+      "expectedCounterRemainder": 0,
+      "expectedRecordTypeCounts": {
+        "original": 340,
+        "reply": 13,
+        "repost": 81
+      },
+      "expectedAuthoredCount": 353,
+      "expectedExternalLinkOccurrences": 349,
+      "expectedDistinctShortUrls": 321,
+      "expectedRecordsWithExternalLinks": 277,
+      "expectedMissionSignalCounts": {
+        "community-platforms-and-gatherings": 35,
+        "civic-participation-and-service": 8,
+        "cultural-space-advocacy": 45,
+        "public-history-place-and-waterways": 2,
+        "creative-technology-and-media": 4,
+        "neighborhood-mutual-aid": 1
+      },
+      "expectedIncomingRecordCount": 26,
+      "expectedPublicIdentifiedIncomingRecordCount": 17,
+      "expectedMissionRelevantIncomingRecordCount": 15,
+      "expectedMissionRelevantIncomingAccountCount": 9,
+      "expectedIncomingConversationContextCount": 2,
+      "expectedIncomingPersonalContextCount": 9,
+      "expectedIncomingPersonalContextRedactionCount": 9,
+      "expectedStakeholderGroupCounts": {
+        "civic-design-peer": 2,
+        "coalition-project-account": 4,
+        "creative-community-peer": 1,
+        "creative-media-collaborator": 2,
+        "creative-technology-peer": 2,
+        "neighborhood-collaborator": 1,
+        "neighborhood-project-account": 2,
+        "public-history-collaborator": 1
+      },
+      "expectedAuthoredRecordsWithDisplayedInteraction": 85,
+      "expectedDisplayedLikes": 175,
+      "expectedDisplayedReplies": 8,
+      "expectedDisplayedReposts": 60,
+      "expectedDisplayedInteractionUnits": 243,
+      "expectedIntakeCount": 4,
+      "expectedObservationCount": 10,
+      "expectedSourceCount": 8,
+      "expectedClaimCount": 3,
+      "expectedInquiryCount": 2,
+      "heldClaimIds": [
+        "CLM-URBANHERM-X-PERSONAL-PUBLIC-WORKING-SURFACE",
+        "CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING",
+        "CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION"
+      ],
+      "ownerArchiveInquiryId": "INQ-URBANHERM-X-OWNER-ARCHIVE-RECONCILIATION",
+      "postedSourceInquiryId": "INQ-URBANHERM-X-POSTED-SOURCE-MATURATION",
+      "manifestSourceId": "SRC-URBANHERM-X-FULL-POPULATION-2026"
+    },
     "kcTownHallFullPopulation": {
       "reviewedAt": "2026-07-15",
       "ledgerPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
@@ -869,6 +933,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every record in the 3,123-record retrievable public union, all posted URLs, mission classifications, source-network appearances, bounded incoming response, access-time engagement, platform limits, shared authorship, and the 2,001-record owner-archive gap remain complete, replayable, public-safe, and non-inflationary."
+    },
+    {
+      "id": "KB-EVAL-URBANHERM-FULL-POPULATION",
+      "label": "Urbanhermit full live-profile population archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 434 capture-date live-profile records, all 321 posted short URLs, source authorship, mission classifications, bounded incoming response, visible interaction ownership, personal-context exclusions, mature source findings, owner-archive boundary, and selective non-projection remain complete, replayable, public-safe, and non-inflationary."
     },
     {
       "id": "KB-EVAL-KCTH-FULL-POPULATION",

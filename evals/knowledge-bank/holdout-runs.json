@@ -268,6 +268,17 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-urbanhermit-full-population-2026-07-15",
+      "completedAt": "2026-07-15T09:35:27Z",
+      "lens": "Protocol reset because the prior holdout state predated the 434-record Urbanhermit full live-profile population, personal-context controls, source maturation, and dedicated adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the live-profile versus owner-archive boundary, row-level reconciliation, source authorship, posted-link and mission classifications, personal-context exclusions, stakeholder and interaction semantics, public safety, source-specific role claims, selective non-projection, and count-preserving mutation resistance on a frozen revision."
+      ]
     }
   ]
 }

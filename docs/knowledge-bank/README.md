@@ -143,6 +143,14 @@ preserves the rejected holdouts, repairs, final independent acceptance, and
 stopping decision.
 
 See
+[projects/urbanhermit-social-population.md](projects/urbanhermit-social-population.md)
+and its
+[434-row public-safe fixture](../../apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json)
+for the complete capture-date `@urbanhermit` live-profile population, all 321
+distinct posted short URLs, source-authorship and mission-signal separation,
+bounded incoming response, mature source findings, and owner-archive boundary.
+
+See
 [projects/callnyc-social-population.md](projects/callnyc-social-population.md)
 and its
 [110-row machine-readable manifest](data/callnyc-x-population-2026-07-15.json)
