@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Route } from "next";
+import { Claim } from "@/components/citations";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
@@ -24,7 +25,17 @@ export function WorkCard({ item }: WorkCardProps) {
             <span className="font-semibold text-jb-ink">My role:</span>{" "}
             {item.role}
           </p>
-          <p className="mt-4 leading-7 text-jb-ink/76">{item.summary}</p>
+          <p className="mt-4 leading-7 text-jb-ink/76">
+            {item.slug === "callnyc" ? (
+              <Claim
+                claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+                projection="work-card"
+                surface="/work"
+              />
+            ) : (
+              item.summary
+            )}
+          </p>
         </div>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>

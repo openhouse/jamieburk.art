@@ -465,7 +465,24 @@ export function buildNycArtCCorpus(rawCaptureText) {
     raw.captureAudit.historicalAuthoredSearchAdditions,
     historicalSearchItems.length
   );
-  assert(historicalSearchItems.every((item) => item.kind === "authored"));
+  const profileTimelineCutoff =
+    raw.captureAudit.profileTimelineOldestVisible;
+  assert(
+    profileTimelineItems.every(
+      (item) => item.postedAt >= profileTimelineCutoff
+    )
+  );
+  assert(
+    historicalSearchItems.every(
+      (item) =>
+        item.kind === "authored" && item.postedAt < profileTimelineCutoff
+    )
+  );
+  assert(
+    rawContextItems.every(
+      (item) => item.recoveryPartition === "supplemental-context"
+    )
+  );
   assert.equal(
     profileTimelineItems
       .map((item) => item.postedAt)

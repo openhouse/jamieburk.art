@@ -28,6 +28,7 @@ import {
   validateNycArtCCorpus
 } from "../derive-nycartc-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { claimRecordSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-bank-development.json", "utf8")
@@ -997,6 +998,31 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
 
   const accountItems = raw.items.filter((item) => item.kind !== "context");
   const contexts = raw.items.filter((item) => item.kind === "context");
+  const profileTimelineCutoff = raw.captureAudit.profileTimelineOldestVisible;
+  const profileTimelineItems = accountItems.filter(
+    (item) => item.recoveryPartition === "profile-timeline"
+  );
+  const historicalSearchItems = accountItems.filter(
+    (item) => item.recoveryPartition === "historical-authored-search"
+  );
+  assert.equal(profileTimelineItems.length, 3_031);
+  assert.equal(historicalSearchItems.length, 336);
+  assert.ok(
+    profileTimelineItems.every(
+      (item) => item.postedAt >= profileTimelineCutoff
+    )
+  );
+  assert.ok(
+    historicalSearchItems.every(
+      (item) =>
+        item.kind === "authored" && item.postedAt < profileTimelineCutoff
+    )
+  );
+  assert.ok(
+    contexts.every(
+      (item) => item.recoveryPartition === "supplemental-context"
+    )
+  );
   const resolutions = new Set(
     raw.shortUrlResolutions.map((item) => item.shortUrl)
   );
@@ -1100,6 +1126,22 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
     " altered";
   assert.throws(() =>
     buildNycArtCCorpus(`${JSON.stringify(rawWithStaleTextHash, null, 2)}\n`)
+  );
+  const rawWithWrongPartition = JSON.parse(rawCaptureText);
+  const historicalItem = rawWithWrongPartition.items.find(
+    (item) => item.recoveryPartition === "historical-authored-search"
+  );
+  historicalItem.recoveryPartition = "profile-timeline";
+  const repairedPartitionCapture = JSON.parse(
+    sanitizeNycArtCRawCapture(
+      `${JSON.stringify(rawWithWrongPartition, null, 2)}\n`
+    )
+  );
+  assert.equal(
+    repairedPartitionCapture.items.find(
+      (item) => item.statusId === historicalItem.statusId
+    ).recoveryPartition,
+    "historical-authored-search"
   );
 
   const sharedLayer = knowledgeBank.claims.find(
@@ -1235,10 +1277,10 @@ test("an intake-linked source without decomposition fails KB-003", () => {
   assert.match(sourceDecomposition.findings.join("\n"), /no atomic assertion/);
 });
 
-test("coalition claims cannot opt out of collective-credit evaluation", () => {
+test("policy-scoped collective claims cannot opt out of collective-credit evaluation", () => {
   const candidate = structuredClone(knowledgeBank);
   const claim = candidate.claims.find(
-    (item) => item.id === "CLM-NAC-CABARET-REPEAL-OUTCOME"
+    (item) => item.id === "CLM-KCTH-COUNCIL-APPROVAL-190649"
   );
   claim.collectiveWork = false;
   claim.boundaries = [];
@@ -1249,7 +1291,10 @@ test("coalition claims cannot opt out of collective-credit evaluation", () => {
     (entry) => entry.eval_id === "KB-007"
   );
   assert.equal(collectiveCredit.pass, false);
-  assert.match(collectiveCredit.findings.join("\n"), /not classified as collective/);
+  assert.match(
+    collectiveCredit.findings.join("\n"),
+    /policy-scoped collective work but is not classified as collective/
+  );
 });
 
 test("active projections require a known and realized surface", () => {
@@ -1267,6 +1312,65 @@ test("active projections require a known and realized surface", () => {
   );
   assert.equal(projectionCoverage.pass, false);
   assert.match(projectionCoverage.findings.join("\n"), /targets unknown/);
+});
+
+test("case-study projections cannot move to an unrelated known route", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const claim = candidate.claims.find(
+    (item) => item.id === "CLM-NAC-FIRE-CODE-STUDY-GROUPS"
+  );
+  claim.projections.find((item) => item.key === "case-study").surfaces = [
+    "/work/callnyc"
+  ];
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const projectionCoverage = result.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(projectionCoverage.pass, false);
+  assert.match(
+    projectionCoverage.findings.join("\n"),
+    /is not realized on \/work\/callnyc/
+  );
+});
+
+test("technical projections cannot move to an unrelated known route", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const claim = candidate.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-MEMORY-SYSTEM"
+  );
+  claim.projections.find(
+    (item) => item.key === "technical-operations"
+  ).surfaces = ["/work/callnyc"];
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const projectionCoverage = result.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(projectionCoverage.pass, false);
+  assert.match(
+    projectionCoverage.findings.join("\n"),
+    /is not realized on \/work\/callnyc/
+  );
+});
+
+test("duplicate projection keys fail public projection coverage", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const claim = candidate.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-MEMORY-SYSTEM"
+  );
+  claim.projections.push(structuredClone(claim.projections[1]));
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const projectionCoverage = result.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(projectionCoverage.pass, false);
+  assert.match(
+    projectionCoverage.findings.join("\n"),
+    /duplicates projection key technical-operations/
+  );
+  assert.throws(() => claimRecordSchema.parse(claim));
 });
 
 test("a research-stage claim cannot become projection-eligible", () => {

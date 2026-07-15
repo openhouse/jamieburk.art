@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "collectiveProjects": [
+    "196-sunday-dinner",
+    "commercial-rent-data",
+    "fair-rent-nyc",
+    "kc-spaces-fund",
+    "kc-town-hall",
+    "nter-chng",
+    "nyc-artist-coalition",
+    "participatory-programs",
+    "portfolio-archive",
+    "sunday-dinner",
+    "wowlist"
+  ],
+  "collectiveClaims": [
+    "CLM-WATER-RAFT-CONCEPT",
+    "CLM-WATER-GULF-ROUTE",
+    "CLM-WATER-PARTICIPATORY-THROUGHLINE"
+  ]
+}

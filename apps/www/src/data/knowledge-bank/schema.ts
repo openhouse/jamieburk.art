@@ -238,7 +238,19 @@ export const claimRecordSchema = z.object({
   ]),
   projectionEligibility: z.enum(["eligible", "hold", "disallowed"]),
   collectiveWork: z.boolean(),
-  projections: z.array(claimProjectionSchema),
+  projections: z.array(claimProjectionSchema).superRefine((projections, context) => {
+    const keys = new Set<string>();
+    projections.forEach((projection, index) => {
+      if (keys.has(projection.key)) {
+        context.addIssue({
+          code: "custom",
+          message: `Projection key ${projection.key} must be unique within a claim`,
+          path: [index, "key"]
+        });
+      }
+      keys.add(projection.key);
+    });
+  }),
   evidence: z.array(evidenceRelationshipSchema),
   boundaries: z.array(z.string().min(1)).default([]),
   antiClaims: z.array(z.string().min(1)).default([]),
