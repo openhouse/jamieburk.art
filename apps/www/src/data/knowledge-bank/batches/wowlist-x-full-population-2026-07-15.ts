@@ -470,7 +470,7 @@ export const wowListXFullPopulationBatch20260715: {
         {
           key: "case-study",
           text:
-            "The public trace shows the calendar practice extending beyond event promotion into demonstrations, vigils, fundraisers, and mutual-aid circulation.",
+            "The project account's public trace combines direct calendar links with curation of demonstrations, vigils, fundraisers, and mutual-aid resources.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/wowlist"]

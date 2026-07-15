@@ -182,7 +182,6 @@ export function deriveCorpusItems(rawCapture) {
     (item) => item.shortUrl
   );
 
-  assert.equal(new Set(postedShortUrls).size, postedShortUrls.length);
   assert.equal(new Set(resolvedShortUrls).size, resolvedShortUrls.length);
   assert.deepEqual(
     new Set(resolvedShortUrls),
@@ -382,14 +381,14 @@ export function buildManifest(
 
 export function validateCommittedCorpus(
   rawCaptureText,
-  corpus,
+  corpusText,
   manifest,
   rawPath = defaultRawPath,
   corpusPath = defaultCorpusPath
 ) {
+  const corpus = JSON.parse(corpusText);
   assert.equal(sha256(rawCaptureText), corpus.rawCaptureSha256);
   assert.deepEqual(buildCorpus(rawCaptureText), corpus);
-  const corpusText = `${JSON.stringify(corpus, null, 2)}\n`;
   assert.deepEqual(
     manifest,
     buildManifest(rawPath, rawCaptureText, corpusPath, corpusText, corpus)
@@ -425,7 +424,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     ? writeArtifacts(rawPath, corpusPath, manifestPath)
     : validateCommittedCorpus(
         readFileSync(rawPath, "utf8"),
-        JSON.parse(readFileSync(corpusPath, "utf8")),
+        readFileSync(corpusPath, "utf8"),
         JSON.parse(readFileSync(manifestPath, "utf8")),
         rawPath,
         corpusPath

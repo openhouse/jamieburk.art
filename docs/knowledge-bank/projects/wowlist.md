@@ -45,7 +45,8 @@ Reposting an institution such as Meow Wolf is curation by WOW List, not evidence
 
 ## Mission patterns
 
-The corpus shows the calendar practice extending beyond event promotion:
+The corpus shows the project account combining direct calendar links with
+curation beyond event promotion:
 
 - demonstrations connected to Black Lives Matter and post-election organizing;
 - mourning and relief links after the Ghost Ship fire;

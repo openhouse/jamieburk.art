@@ -458,7 +458,7 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Public support threads document location-scope, list-discovery, and event-entry workflow questions",
-      "The public trace extends from cultural events into demonstrations, vigils, fundraisers, and mutual-aid circulation",
+      "The project account's public trace combines direct calendar links with curation of demonstrations, vigils, fundraisers, and mutual-aid resources",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],

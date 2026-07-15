@@ -12,6 +12,7 @@ import {
 } from "../derive-callnyc-x-corpus.mjs";
 import {
   buildCorpus as buildWowListCorpus,
+  deriveCorpusItems as deriveWowListCorpusItems,
   validateCommittedCorpus as validateWowListCorpus
 } from "../derive-wowlist-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -308,12 +309,11 @@ test("CallNYC corpus accounts for every recoverable timeline item and preserves 
 });
 
 test("WOW List corpus accounts for the full profile-reported population and preserves product-support context", () => {
-  const corpus = JSON.parse(
-    readFileSync(
-      "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json",
-      "utf8"
-    )
+  const corpusText = readFileSync(
+    "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json",
+    "utf8"
   );
+  const corpus = JSON.parse(corpusText);
   const rawCaptureText = readFileSync(
     "docs/knowledge-bank/corpora/source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json",
     "utf8"
@@ -324,12 +324,15 @@ test("WOW List corpus accounts for the full profile-reported population and pres
       "utf8"
     )
   );
-  const metrics = validateWowListCorpus(rawCaptureText, corpus, manifest);
+  const metrics = validateWowListCorpus(rawCaptureText, corpusText, manifest);
   assert.throws(() =>
-    validateWowListCorpus(rawCaptureText, corpus, {
+    validateWowListCorpus(rawCaptureText, corpusText, {
       ...manifest,
       corpusItems: 37
     })
+  );
+  assert.throws(() =>
+    validateWowListCorpus(rawCaptureText, ` ${corpusText}`, manifest)
   );
   const rawCaptureWithoutRepostResolution = JSON.parse(rawCaptureText);
   const repostOnlyShortUrl = rawCaptureWithoutRepostResolution.items
@@ -347,6 +350,22 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     buildWowListCorpus(
       `${JSON.stringify(rawCaptureWithoutRepostResolution, null, 2)}\n`
     )
+  );
+  const rawCaptureWithRepeatedOccurrence = JSON.parse(rawCaptureText);
+  const sourceItemWithLink = rawCaptureWithRepeatedOccurrence.items.find(
+    (item) => item.links.some((link) => /^https?:\/\/t\.co\//.test(link.href))
+  );
+  const repeatedLink = sourceItemWithLink.links.find((link) =>
+    /^https?:\/\/t\.co\//.test(link.href)
+  );
+  rawCaptureWithRepeatedOccurrence.items
+    .find((item) => item.statusUrl !== sourceItemWithLink.statusUrl)
+    .links.push(repeatedLink);
+  assert.equal(
+    deriveWowListCorpusItems(rawCaptureWithRepeatedOccurrence)
+      .flatMap((item) => item.outgoingLinks)
+      .filter((item) => item.shortUrl === repeatedLink.href).length,
+    2
   );
   const canonicalUrls = new Set(corpus.items.map((item) => item.canonicalUrl));
   const authored = corpus.items.filter((item) => item.type === "authored");
@@ -422,11 +441,26 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   const priorObservationAssertion = knowledgeBank.sourceAssertions.find(
     (item) => item.id === "AST-WOWLIST-ACCOUNT-OBSERVATION"
   );
-  const intakeSourceIds = knowledgeBank.intake.find(
+  const currentIntake = knowledgeBank.intake.find(
     (item) => item.id === "INT-WOWLIST-X-FULL-POPULATION-2026"
-  ).sourceIds;
+  );
+  const intakeSourceIds = currentIntake.sourceIds;
   const decomposedSourceIds = new Set(
     knowledgeBank.sourceAssertions.map((assertion) => assertion.sourceId)
+  );
+  const currentCorpusSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WOWLIST-X-CORPUS-2026-07-15"
+  );
+  const currentInquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-WOWLIST-X-FULL-POPULATION-2026"
+  );
+  const projectNote = readFileSync(
+    "docs/knowledge-bank/projects/wowlist.md",
+    "utf8"
+  );
+  const runNote = readFileSync(
+    "docs/knowledge-bank/runs/2026-07-15-wowlist-x-full-population.md",
+    "utf8"
   );
 
   assert.equal(supportClaim.projectionEligibility, "eligible");
@@ -443,7 +477,10 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     civicClaim.id
   );
   assert.match(work, /location-scope, list-discovery, and event-entry workflow questions/);
-  assert.match(work, /demonstrations, vigils, fundraisers, and mutual-aid circulation/);
+  assert.match(
+    work,
+    /combines direct calendar links with curation of demonstrations, vigils, fundraisers, and mutual-aid resources/
+  );
   assert.equal(
     Number(priorObservation.publicNote.match(/profile reported (\d+) posts/)?.[1]),
     corpus.population.profileReported
@@ -455,6 +492,42 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   assert.equal(
     Number(priorObservationAssertion.assertion.match(/recovered all (\d+)/)?.[1]),
     corpus.population.profileReported
+  );
+  assert.equal(
+    Number(currentCorpusSource.publicNote.match(/reported (\d+) posts/)?.[1]),
+    corpus.population.profileReported
+  );
+  assert.equal(
+    Number(currentCorpusSource.publicNote.match(/yielded (\d+) distinct/)?.[1]),
+    corpus.population.renderedDistinct
+  );
+  assert.equal(
+    Number(currentIntake.publicSafeSummary.match(/all (\d+) profile-reported/)?.[1]),
+    corpus.population.profileReported
+  );
+  assert.equal(
+    Number(currentIntake.notes[0].match(/reported (\d+) posts/)?.[1]),
+    corpus.population.profileReported
+  );
+  assert.equal(
+    Number(currentIntake.notes[0].match(/rendered (\d+) distinct/)?.[1]),
+    corpus.population.renderedDistinct
+  );
+  assert.match(
+    currentInquiry.findings[0],
+    new RegExp(`exactly at ${corpus.population.profileReported} items`)
+  );
+  assert.match(
+    projectNote,
+    new RegExp(
+      `- ${corpus.population.profileReported} profile-reported posts\\n- ${corpus.population.renderedDistinct} distinct canonical status IDs recovered`
+    )
+  );
+  assert.match(
+    runNote,
+    new RegExp(
+      `Population: ${corpus.population.renderedDistinct} of ${corpus.population.profileReported} profile-reported items recovered`
+    )
   );
   assert.ok(intakeSourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
   assert.match(
