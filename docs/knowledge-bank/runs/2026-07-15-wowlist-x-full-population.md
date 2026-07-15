@@ -27,13 +27,13 @@ What does the complete profile-reported `@wowlist` post population establish abo
 - Population: 38 of 38 profile-reported items recovered.
 - Composition: 22 authored posts and 16 reposts.
 - Range: February 12, 2014-January 12, 2017.
-- Replies: six authored posts appear as replies; three public parent questions were recovered and one parent was deleted.
+- Replies: five authored posts are top-level replies; three public parent questions were recovered and one parent was deleted. A sixth `Replying to` string appears only inside a quoted post.
 - Links: 35 short-URL occurrences in the full population.
 - Authored links: 23 occurrences across 19 posts, comprising 12 WOW List destinations, two NYCdiy destinations, and nine external destinations.
 - Public support: three recovered threads concern location scope, finding personal lists, and excessive clicks in the add-event workflow.
 - Organizer/collaborator use: Punks & Criminals reported adding shows; Richard tagged the account with an event; COTFG linked a WOW List event page.
 - Civic/care pattern: eight items linked or amplified demonstrations, vigils, fundraisers, or mutual-aid resources.
-- Field-learning pattern: a member-made tutorial, grassroots venue guidance, DIY documentation reporting, Allied Media Conference, and peer DIY funding infrastructure.
+- Field-learning pattern: a member-made tutorial, grassroots venue guidance, Allied Media Conference, peer DIY funding infrastructure, and a posted but unrecovered article lead the account described as concerning DIY documentation.
 - Dated visible engagement: 12 of 22 authored posts showed interaction; totals were two replies, 20 reposts, and 21 likes.
 
 ## Editorial decisions

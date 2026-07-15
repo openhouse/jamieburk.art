@@ -310,7 +310,7 @@ export const wowListXFullPopulationBatch20260715: {
       sourceId: "SRC-WOWLIST-X-CORPUS-2026-07-15",
       project: "wowlist",
       assertion:
-        "The corpus links a member-made tutorial, a grassroots venue manual review, DIY documentation reporting, Allied Media Conference, and peer DIY funding infrastructure.",
+        "The corpus links a member-made tutorial, a grassroots venue manual review, Allied Media Conference, peer DIY funding infrastructure, and an unrecovered article the account described as concerning DIY documentation.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: ["CLM-WOWLIST-FIELD-LEARNING-PRACTICE"],
@@ -506,7 +506,7 @@ export const wowListXFullPopulationBatch20260715: {
       id: "CLM-WOWLIST-FIELD-LEARNING-PRACTICE",
       project: "wowlist",
       internalClaim:
-        "The account connected product operation to peer learning through a member-made tutorial, grassroots venue guidance, DIY documentation reporting, Allied Media Conference, and peer funding infrastructure.",
+        "The account connected product operation to peer learning through a member-made tutorial, grassroots venue guidance, Allied Media Conference, peer funding infrastructure, and an unrecovered article the account described as concerning DIY documentation.",
       status: "confirmed-with-boundary",
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
@@ -515,7 +515,7 @@ export const wowListXFullPopulationBatch20260715: {
         {
           key: "archive-note",
           text:
-            "The project account paired product support with field learning: a member-made tutorial, grassroots venue guidance, DIY documentation reporting, Allied Media Conference, and peer funding infrastructure.",
+            "The project account paired product support with field learning: a member-made tutorial, grassroots venue guidance, Allied Media Conference, peer funding infrastructure, and a posted but unrecovered DIY-documentation article lead.",
           status: "active",
           citationRequired: true,
           surfaces: ["docs/knowledge-bank/projects/wowlist"]
@@ -681,7 +681,7 @@ export const wowListXFullPopulationBatch20260715: {
         "Three public support threads preserve user questions about location scope, finding personal lists, and excessive clicks in the add-event workflow, together with project-account responses.",
         "Organizer and collaborator posts include Punks & Criminals reporting that shows were being added, Richard tagging @wowlist with a San Francisco event, and COTFG linking a WOW List event page.",
         "Eight items document a civic and care pattern spanning demonstrations, vigils, fundraisers, and mutual-aid circulation.",
-        "The source ecosystem includes a member-made tutorial, a grassroots venue manual review, DIY documentation reporting, Allied Media Conference, and peer DIY funding infrastructure.",
+        "The source ecosystem includes a member-made tutorial, a grassroots venue manual review, Allied Media Conference, peer DIY funding infrastructure, and an unrecovered article the account described as concerning DIY documentation.",
         "Twelve authored posts retained visible interaction on July 15, 2026; the dated totals are held from public accomplishment messaging."
       ],
       limitations: [

@@ -40,7 +40,7 @@ const missionPatterns = [
   {
     id: "civic-and-mutual-aid-use",
     summary:
-      "The account and its reposts used calendar infrastructure to circulate demonstrations, vigils, fundraisers, and mutual-aid resources.",
+      "The project account combined direct calendar links with authored curation and reposted amplification of demonstrations, vigils, fundraisers, and mutual-aid resources.",
     statusIds: [
       "592424659225845760",
       "751150062458269696",
@@ -50,12 +50,28 @@ const missionPatterns = [
       "805210387004223488",
       "806517013472485376",
       "807395049814290433"
-    ]
+    ],
+    composition: {
+      directCalendarStatusIds: [
+        "751150062458269696",
+        "796473557387575297"
+      ],
+      authoredExternalCurationStatusIds: [
+        "798274424763981824",
+        "805210387004223488",
+        "806517013472485376"
+      ],
+      repostedExternalAmplificationStatusIds: [
+        "592424659225845760",
+        "801883926029447168",
+        "807395049814290433"
+      ]
+    }
   },
   {
     id: "field-learning-and-peer-infrastructure",
     summary:
-      "Posts linked a grassroots venue manual, reporting on DIY documentation, a member-made tutorial, Allied Media Conference, and peer DIY funding infrastructure.",
+      "Posts linked a grassroots venue manual, a member-made tutorial, Allied Media Conference, peer DIY funding infrastructure, and an unrecovered article the account described as concerning DIY documentation.",
     statusIds: [
       "590942060829663232",
       "592810776961916929",
@@ -160,6 +176,10 @@ function statusId(url) {
   return url.match(/\/status\/(\d+)/)?.[1];
 }
 
+function isTopLevelReply(text) {
+  return /^WOW List!\n@wowlist\n·\n[^\n]+\nReplying to\b/.test(text);
+}
+
 export function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
@@ -194,6 +214,9 @@ export function deriveCorpusItems(rawCapture) {
   return [...rawCapture.items]
     .sort((left, right) => left.datetime.localeCompare(right.datetime))
     .map((item, index) => {
+      const type = item.text.startsWith("WOW List! reposted\n")
+        ? "reposted"
+        : "authored";
       const outgoingShortUrls = unique(
         item.links
           .map((link) => link.href)
@@ -204,9 +227,9 @@ export function deriveCorpusItems(rawCapture) {
         index: index + 1,
         canonicalUrl: new URL(item.statusUrl, "https://x.com").toString(),
         publishedAt: item.datetime,
-        type: item.text.startsWith("WOW List! reposted\n")
-          ? "reposted"
-          : "authored",
+        type,
+        isTopLevelReply:
+          type === "authored" && isTopLevelReply(item.text),
         visibleText: item.text,
         engagement: parseEngagement(item.engagementLabel),
         engagementLabel: item.engagementLabel,
@@ -250,9 +273,7 @@ export function deriveWowListCorpusMetrics(corpus) {
     renderedDistinct: corpus.items.length,
     authored: authored.length,
     reposted: reposted.length,
-    authoredReplies: authored.filter((item) =>
-      item.visibleText.includes("Replying to")
-    ).length,
+    authoredReplies: authored.filter((item) => item.isTopLevelReply).length,
     unresolvedCountDifference:
       corpus.population.profileReported - corpus.items.length,
     authoredPostsWithOutgoingLinks: authored.filter(
@@ -336,7 +357,7 @@ export function buildCorpus(rawCaptureText) {
     renderedDistinct: 38,
     authored: 22,
     reposted: 16,
-    authoredReplies: 6,
+    authoredReplies: 5,
     unresolvedCountDifference: 0,
     authoredPostsWithOutgoingLinks: 19,
     allOutgoingLinkOccurrences: 35,
@@ -352,6 +373,42 @@ export function buildCorpus(rawCaptureText) {
   const knownIds = new Set(items.map((item) => statusId(item.canonicalUrl)));
   for (const pattern of missionPatterns) {
     for (const id of pattern.statusIds) assert(knownIds.has(id));
+  }
+  const itemById = new Map(
+    items.map((item) => [statusId(item.canonicalUrl), item])
+  );
+  const civicPattern = missionPatterns.find(
+    (pattern) => pattern.id === "civic-and-mutual-aid-use"
+  );
+  const civicComposition = civicPattern.composition;
+  assert.deepEqual(
+    new Set([
+      ...civicComposition.directCalendarStatusIds,
+      ...civicComposition.authoredExternalCurationStatusIds,
+      ...civicComposition.repostedExternalAmplificationStatusIds
+    ]),
+    new Set(civicPattern.statusIds)
+  );
+  for (const id of civicComposition.directCalendarStatusIds) {
+    const item = itemById.get(id);
+    assert.equal(item.type, "authored");
+    assert(item.outgoingLinks.some((link) =>
+      new URL(link.resolvedDestination).hostname.endsWith("wowlist.org")
+    ));
+  }
+  for (const id of civicComposition.authoredExternalCurationStatusIds) {
+    const item = itemById.get(id);
+    assert.equal(item.type, "authored");
+    assert(item.outgoingLinks.every((link) =>
+      !new URL(link.resolvedDestination).hostname.endsWith("wowlist.org")
+    ));
+  }
+  for (const id of civicComposition.repostedExternalAmplificationStatusIds) {
+    const item = itemById.get(id);
+    assert.equal(item.type, "reposted");
+    assert(item.outgoingLinks.every((link) =>
+      !new URL(link.resolvedDestination).hostname.endsWith("wowlist.org")
+    ));
   }
   for (const lead of sourceLeads) assert(knownIds.has(lead.postedByStatusId));
 

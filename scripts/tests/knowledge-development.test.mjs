@@ -388,7 +388,7 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     renderedDistinct: 38,
     authored: 22,
     reposted: 16,
-    authoredReplies: 6,
+    authoredReplies: 5,
     unresolvedCountDifference: 0,
     authoredPostsWithOutgoingLinks: 19,
     allOutgoingLinkOccurrences: 35,
@@ -400,6 +400,12 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     authoredPostsWithVisibleEngagement: 12,
     authoredEngagementTotals: { replies: 2, reposts: 20, likes: 21 }
   });
+  assert.equal(authored.filter((item) => item.isTopLevelReply).length, 5);
+  const quotedReplyText = corpus.items.find((item) =>
+    item.canonicalUrl.endsWith("/771412862191407104")
+  );
+  assert.equal(quotedReplyText.isTopLevelReply, false);
+  assert.match(quotedReplyText.visibleText, /Quote[\s\S]+Replying to/);
   assert.equal(corpus.supplementalThreads.length, 4);
   assert.equal(
     corpus.supplementalThreads.filter((thread) => thread.parentCanonicalUrl).length,
@@ -411,6 +417,23 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     )
   );
   assert.equal(corpus.missionPatterns.length, 5);
+  const civicPattern = corpus.missionPatterns.find(
+    (pattern) => pattern.id === "civic-and-mutual-aid-use"
+  );
+  assert.deepEqual(
+    Object.fromEntries(
+      Object.entries(civicPattern.composition).map(([key, value]) => [
+        key,
+        value.length
+      ])
+    ),
+    {
+      directCalendarStatusIds: 2,
+      authoredExternalCurationStatusIds: 3,
+      repostedExternalAmplificationStatusIds: 3
+    }
+  );
+  assert.match(civicPattern.summary, /direct calendar links with authored curation/);
   assert.equal(corpus.sourceLeads.length, 7);
   assert.ok(
     corpus.sourceLeads.some(
