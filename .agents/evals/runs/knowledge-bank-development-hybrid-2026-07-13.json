@@ -1,16 +1,16 @@
 {
-  "candidate_sha": "5689822d3c5b085fb06eca879330b1ad58f9327a",
+  "candidate_sha": "4cc8ee28dc9507c90792096abae39c4628b7288f",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders verified exact candidate 5689822d3c5b085fb06eca879330b1ad58f9327a and scored collective-credit integrity at 4/4 with no deficiencies.",
-        "All 33 collective-work claims retain explicit boundaries and anti-claims.",
-        "NYC Artist Coalition account output remains collective; WOW List names Richard as co-builder; KC Spaces Fund preserves organizer credit and rejects unsupported Jamie-specific grant selection, administration, and post authorship.",
-        "Jamie's first-person recollection that he established the project accounts remains held for creation-record or collaborator corroboration.",
-        "Official Council records independently corroborate officeholder identity without converting social engagement into endorsement, adoption, or policy causation."
+        "Two fresh independent graders audited exact candidate 4cc8ee28dc9507c90792096abae39c4628b7288f and scored collective-credit integrity at 4/4 with no deficiencies.",
+        "All 33 collective-work claims retain explicit boundaries and anti-claims; neither account output nor institutional, movement, collaborator, or policy activity becomes Jamie-only causation.",
+        "The 71 recurring recognition posts are project-account output naming 26 Council-member recipients, while eight separately sourced interactions remain the bounded stakeholder-response floor.",
+        "The launch-period first-person post supports Jamie's account stewardship without proving sole creation, exclusive ownership, or later-post authorship.",
+        "Politico-backed product decisions remain specific, and external links retain original authorship, dated-access, current-availability, endorsement, adoption, and outcome boundaries."
       ],
       "findings": [],
       "confidence": 0.99
@@ -20,15 +20,16 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders scored selective public projection at 4/4 after tracing the canonical graph, public registry, page plans, work metadata, MDX, account inventory, and run record.",
-        "CallNYC's lower-bound result cites eight distinct interactions plus official Council corroboration; NYC Artist Coalition's four-account result cites six posts spanning March 2018-December 2020 plus four official identity records.",
-        "WOW List and Sunday Dinner lineage is selectively projected on both relevant case studies, while unstable profile metrics, KC supporting detail, collaborator adoption, and account-establishment memory remain deeper or held.",
-        "All eleven KC Spaces Fund highlights have inspectable post records and assertions without being promoted onto the current portfolio surface.",
-        "The account map distinguishes dedicated, umbrella, related-lineage, unresolved historical-label, and not-recovered states without categorical negative-search claims."
+        "Two fresh independent graders scored public-claim coverage and recursive maintainability at 4/4 after running the committed derivation against the exact candidate.",
+        "The committed browser extraction hashes to b6b6eaa9d1947655a6c18dd96c9eba96c2752943c3f31f6f06f08faeaee123d7 and reproduces all 107 derived item records through the checked-in script and manifest.",
+        "Independent recomputation recovered the explicit 110/107/3 population boundary, 92 authored and 15 reposted items, 71 recognition posts, 26 recipients, 82 @NYCCouncil mentions, 87 linked authored posts, and 75 media-bearing authored posts.",
+        "The URL ladder is inspectable: 98 outgoing-link occurrences, 85 internal and 13 external, 65 displayed internal strings, 63 normalized destinations, and 61 normalized issue pages; public surfaces use the defensible 61-page meaning.",
+        "Dated authored-only engagement totals of 59 of 92 posts, eight replies, 74 reposts, and 111 likes remain held from headline use; the three-item population gap and external-link preservation remain research-queued.",
+        "The technical-operations surface describes a product affordance rather than an unevidenced resident-use outcome, and active, archive-only, and held claims retain explicit dispositions."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact commit 5689822d3c5b085fb06eca879330b1ad58f9327a passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The social-account production pass establishes bounded Council engagement, collaborator adoption, organizer use, public listening, and campaign documentation while preserving shared authorship, official credit, platform missingness, and selective public projection."
+  "overall_finding": "Exact commit 4cc8ee28dc9507c90792096abae39c4628b7288f passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The hill climb corrected a destination-denominator overstatement, committed the public source extraction and deterministic derivation, declared the recognition rule, and replaced an unsupported resident-outcome sentence while preserving the 110/107 population boundary, collective credit, dated-metric limits, and selective public projection."
 }

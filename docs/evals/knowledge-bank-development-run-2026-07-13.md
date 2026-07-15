@@ -170,3 +170,42 @@ Two fresh independent graders then evaluated immutable content commit
 `5689822d3c5b085fb06eca879330b1ad58f9327a`. Both scored `KB-007` and `KB-009`
 at `4/4` with no deficiencies. The deterministic suite reached weighted score
 `1.0000` and `threshold_met` after two consecutive passing runs.
+
+## CallNYC Full-Population Pass - 2026-07-14
+
+The replies-inclusive authenticated timeline pass recovered 107 distinct items
+from a profile reporting 110 posts: 92 authored posts and 15 reposts. The public
+corpus preserves every recoverable item and retains the three-count difference
+as unresolved. It does not silently redefine 107 as the complete historical
+population.
+
+The first independent review reproduced the population and engagement counts
+but rejected `KB-009`. The candidate had promoted 65 distinct displayed link
+strings as 65 issue destinations, even though normalization produced 63
+destinations and excluding the site root and API produced 61 issue pages. The
+review also found that the raw capture, transformation, and recurring
+recognition rule were not checked in, and that the technical-operations page
+described an unmeasured resident outcome.
+
+The repair committed the public browser extraction, its SHA-256 digest, a
+transformation manifest, and `scripts/derive-callnyc-x-corpus.mjs`. The script
+reproduces all 107 item records and derives the full metric ladder: 71 recurring
+recognition posts naming 26 Council-member recipients; 82 authored posts
+mentioning `@NYCCouncil`; 87 authored posts with outgoing links; 75 with visible
+media; and 59 of 92 authored posts with dated visible engagement. The URL
+denominator now remains inspectable as 98 total occurrences, 85 internal and 13
+external, 65 displayed internal strings, 63 normalized destinations, and 61
+normalized issue pages. Public copy uses the 61-page meaning.
+
+Two fresh independent graders then evaluated immutable content commit
+`4cc8ee28dc9507c90792096abae39c4628b7288f`. Both scored `KB-007` and `KB-009`
+at `4/4` with no deficiencies. They confirmed that 26 named recipients remain
+separate from the lower bound of eight Council members who visibly engaged
+back, the 110/107 gap remains explicit, authored-only engagement remains held
+from headline use, account and external-source authorship boundaries remain
+intact, and the committed derivation is recursively checkable.
+
+Final browser QA passed for `/work/callnyc` at `1440x1000` and `390x844`, and
+for `/work/technical-operations` at `390x844`: the corrected claims rendered,
+both routes returned 200, no horizontal overflow appeared, and the browser
+reported no console errors or warnings.
