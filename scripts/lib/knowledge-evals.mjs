@@ -4130,27 +4130,31 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const nycacFacebookPostEditorialInflationPatterns = [
     /(?:complete|entire) lifetime (?:Facebook |Meta )?(?:history|archive)/i,
     /Jamie[^.]{0,100}(?:authored|wrote|published)[^.]{0,60}(?:all|every)[^.]{0,40}(?:post|feed)/i,
+    /(?:all|every|\b445\b)[^.]{0,80}(?:posts?|feed)[^.]{0,80}(?:authored|written|published|posted|managed|created)[^.]{0,50}(?:by )?Jamie/i,
     /current (?:authenticated )?(?:access|custody|management)[^.]{0,100}(?:proves?|establishes?|confirms?|demonstrates?)[^.]{0,80}historical authorship/i,
     /(?:reference|tag|route|account-reference)[^.]{0,100}(?:proves?|establishes?|confirms?|demonstrates?)[^.]{0,80}(?:incoming engagement|official engagement|endorsement|partnership)/i,
-    /(?:reactions|comments|shares|interaction counts?)[^.]{0,100}(?:prove|demonstrate|equal|represent|measure)[^.]{0,100}(?:reach|attendance|conversion|endorsement|mandate|impact)/i,
+    /(?:reactions|comments|shares|interaction counts?)[^.]{0,100}(?:prove|demonstrate|equal|represent|measure)[^.]{0,100}(?:reach|attendance|conversion|endorsement|mandate|impact|(?:unique )?(?:people|persons|users|accounts|individuals))/i,
+    /\b(?:source|article|link|route)(?:s| distribution| sharing| posting)?\b[^.]{0,100}\b(?:documents?|proves?|shows?|establishes?|confirms?|means?|represents?|constitutes?|is|are)\b[^.]{0,80}\b(?:agreement|endorsement|partnership|adoption|coverage)\b/i,
     /(?:Page|Facebook record|issue continuity)[^.]{0,100}(?:caused|secured|delivered|produced)[^.]{0,100}(?:repeal|Office of Nightlife|M\.A\.R\.C\.H\.|law|policy outcome)/i
   ];
   const nycacFacebookPostNoSharingInflationPattern =
-    /zero (?:displayed )?shares[^.]{0,80}(?:means|proves|shows)[^.]{0,50}no (?:one )?shared/i;
+    /(?:zero|no|absence of|absent) (?:displayed )?(?:share(?: count| label)?s?)[^.]{0,100}(?:means?|meant|proves?|proved|shows?|showed|establishes?|established|confirms?|confirmed|demonstrates?|demonstrated|documents?|documented|indicates?|indicated|is|was)[^.]{0,80}(?:no (?:one|person|people|user|account)?|nobody|none|never)[^.]{0,40}(?:shared|sharing|share)/i;
   const nycacFacebookPostEditorialClaimIsNegated = (sentence) =>
-    /\b(?:does|do|did|is|are|was|were|can|could|should|would|must|has|have|had) not\b|\bcannot\b|\bcan't\b|\bnot (?:a claim|evidence|proof)\b|\b(?:unresolved|research lead|rather than|remain(?:s)? open)\b/i.test(sentence) ||
-    /^no (?:reference|tag|route|account-reference|reaction|comment|share|interaction count)\b/i.test(sentence);
+    /\b(?:does|do|did|is|are|was|were|can|could|should|would|must|has|have|had) not\b|\bcannot\b|\bcan't\b|\bnot (?:a claim|evidence|proof|all|every)\b|\b(?:unresolved|research lead|rather than|remain(?:s)? open)\b/i.test(sentence) ||
+    /^no (?:source|article|link|route|reference|tag|account-reference|reaction|comment|share|interaction count)\b/i.test(sentence);
   const nycacFacebookPostUnsafeEditorialSentences = nycacFacebookPostEditorialText
     .split(/[.!?]+/)
     .map((sentence) => sentence.replace(/[*_]/g, "").trim())
     .filter(Boolean)
-    .filter((sentence) =>
-      nycacFacebookPostNoSharingInflationPattern.test(sentence) ||
-      (
+    .filter((sentence) => {
+      const assertionIsNegated = nycacFacebookPostEditorialClaimIsNegated(sentence);
+      return (
+        nycacFacebookPostNoSharingInflationPattern.test(sentence) && !assertionIsNegated
+      ) || (
         nycacFacebookPostEditorialInflationPatterns.some((pattern) => pattern.test(sentence)) &&
-        !nycacFacebookPostEditorialClaimIsNegated(sentence)
-      )
-    );
+        !assertionIsNegated
+      );
+    });
   const nycacFacebookPostEditorialInflationFree =
     nycacFacebookPostUnsafeEditorialSentences.length === 0;
   const nycacFacebookPostManifestContentSha256 = createHash("sha256").update(JSON.stringify(

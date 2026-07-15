@@ -675,6 +675,39 @@
       "blockers": [
         "Two fresh independent judges must verify that no displayed share label cannot become a claim of no sharing anywhere in claims, proofs, reports, or public work data while legitimate bounded negations remain accepted."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-e",
+      "completedAt": "2026-07-15T15:54:52-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, projection, and mutation-resistance review of frozen commit 276b32634e5c9a6852c8bb617c97ff81257a8f86",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The unlocked work-page path still accepted the past-tense and pronoun variant Zero displayed shares meant nobody shared the posts because the permanent guard covered means, proves, shows, and no one only."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-f",
+      "completedAt": "2026-07-15T19:54:11Z",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and checksum-refresh-resistant adversarial evaluator",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Unlocked public work and checksum-refreshed proof paths still accepted passive sole authorship, source distribution as agreement, every linked article as coalition coverage, and reaction totals as unique people."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-assertion-families-2026-07-15",
+      "completedAt": "2026-07-15T15:56:43-04:00",
+      "lens": "Protocol reset after expanding checksum-independent editorial protection across tense, pronoun, passive-credit, source-agreement, coverage, and unique-person assertion families with explicit safe-negation regressions",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must invent adjacent public-work and proof wording and verify that sole credit, agreement or coverage, interaction-as-people, and no-sharing assertions fail independently of ordinary review checksums while their explicit negations remain valid."
+      ]
     }
   ]
 }

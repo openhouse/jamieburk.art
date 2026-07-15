@@ -3999,12 +3999,52 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
     item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
   )?.score, 1);
 
+  const workText = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
+  const adjacentInflations = [
+    "Zero displayed shares meant nobody shared the posts.",
+    "All 445 posts were authored by Jamie.",
+    "Source distribution documents agreement with every linked statement.",
+    "Every linked article is coverage of NYC Artist Coalition.",
+    "The 2,291 reactions represent 2,291 unique people."
+  ];
+  for (const text of adjacentInflations) {
+    result = evaluateKnowledgeBank(suite, {
+      nycacFacebookPostWorkText: workText + `\n${text}\n`
+    });
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false, text);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 1, text);
+
+    const mutatedProof = structuredClone(proofClaims.find((item) =>
+      item.id === suite.pilot.nycacFacebookPosts.proofId
+    ));
+    mutatedProof.whyItMatters = text;
+    result = evaluateKnowledgeBank(suite, { nycacFacebookPostProof: mutatedProof });
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false, text);
+  }
+
+  const legitimateBoundaries = [
+    "Zero displayed shares does not mean nobody shared the posts.",
+    "The record does not establish that all posts were authored by Jamie.",
+    "Source distribution does not establish agreement or coverage.",
+    "The 2,291 reactions do not represent 2,291 unique people."
+  ];
+  for (const text of legitimateBoundaries) {
+    result = evaluateKnowledgeBank(suite, {
+      nycacFacebookPostWorkText: workText + `\n${text}\n`
+    });
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, true, text);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 5, text);
+  }
+
   result = evaluateKnowledgeBank(suite, {
     nycacFacebookPostReport: report + "\nThe 445 posts are the complete lifetime Facebook history.\n"
   });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
 
-  const workText = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
   result = evaluateKnowledgeBank(suite, {
     nycacFacebookPostWorkText:
       workText + "\nZero displayed shares means no one shared the posts.\n"
