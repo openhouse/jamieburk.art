@@ -185,3 +185,22 @@ collaborators approve.
 Five additional event-posted article routes reuse existing WNYC, Metro, New
 Yorker, Baffler, and Curbed source records. A route in an event establishes
 circulation context, not adoption of every article statement.
+
+## Personal and WOWList Facebook Events
+
+The [event archival-production report](projects/jamie-wowlist-facebook-events.md)
+keeps two source populations separate:
+
+- Jamie's current Past Events interface displayed 21 control slots. Repeated
+  terminal scrolling exposed 20 event identities, and every exposed detail page
+  was reviewed. The final slot remains unresolved.
+- WOWList's current Events interface displayed no event cards. A separate
+  full-population search of the preserved WOWList page-post corpus recovered
+  two externally hosted event routes; neither is counted as a WOWList event.
+
+The public fixtures retain dates, titles, organizer displays, broad venues,
+purpose summaries, bounded response labels, and selected normalized resource
+routes. Protected research records retain traversal provenance. Exact home
+addresses, phone numbers, guests, comments, invite context, raw event bodies,
+account administration, local archive paths, and session state remain outside
+the repository.

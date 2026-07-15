@@ -32,6 +32,12 @@ import {
   nycacFacebookEventSourceIds,
   nycacFacebookEventSources
 } from "./nycacFacebookEvents.ts";
+import {
+  jamieWowlistFacebookEventClaims,
+  jamieWowlistFacebookEventIntakeItems,
+  jamieWowlistFacebookEventResearchInquiries,
+  jamieWowlistFacebookEventSources
+} from "./jamieWowlistFacebookEvents.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -766,7 +772,8 @@ const knowledgeBankInput = {
     ...campaignPressSources,
     ...projectSocialSources,
     ...urbanhermitSources,
-    ...nycacFacebookEventSources
+    ...nycacFacebookEventSources,
+    ...jamieWowlistFacebookEventSources
   ],
   claims: [
     {
@@ -1004,7 +1011,8 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex public-record review"]
     },
     ...urbanhermitClaims,
-    ...nycacFacebookEventClaims
+    ...nycacFacebookEventClaims,
+    ...jamieWowlistFacebookEventClaims
   ],
   researchInquiries: [
     {
@@ -1081,7 +1089,8 @@ const knowledgeBankInput = {
       publicSummary: "America: Now and Here's archived official pages establish NTER CHNG's 2011 Kansas City exhibition inclusion, shared Drew Bolton / Jamie Burkart / Garrett Fuselier visual-artist credit, and observed visitor use; the Nerman Museum page supplies context rather than project-specific proof."
     },
     ...urbanhermitResearchInquiries,
-    ...nycacFacebookEventResearchInquiries
+    ...nycacFacebookEventResearchInquiries,
+    ...jamieWowlistFacebookEventResearchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -2812,7 +2821,8 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
     },
     ...urbanhermitIntakeItems,
-    ...nycacFacebookEventIntakeItems
+    ...nycacFacebookEventIntakeItems,
+    ...jamieWowlistFacebookEventIntakeItems
   ],
   pages: [
     {

@@ -79,3 +79,11 @@ receives only two governed claims: Jamie helped establish and produce the
 recurring participation system, and 19 event pages displayed at least 100
 Facebook responses, with an explicit no-attendance boundary. No event archive
 or knowledge-bank route is created.
+
+Jamie's personal and WOWList Facebook event ledgers are reserve material. Their
+active projections resolve only to
+`docs/knowledge-bank/projects/jamie-wowlist-facebook-events.md`. They do not add
+copy to the hiring website and do not authorize `/proofs`, `/events`,
+`/knowledge-bank`, or another public archive route. Future website use must
+select a governed claim for a specific audience and preserve cohost,
+response-label, shared-account, and current-zero-state boundaries.

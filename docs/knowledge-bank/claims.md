@@ -366,3 +366,78 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not republish participant photographs without permission or infer the identity and responsibilities of every participant.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
+
+## jamie-facebook-event-population - Personal Facebook event population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public surface / public-safe full-population fixture / protected traversal record
+**Public wording:** Facebook displayed 21 past-event slots for Jamie. The knowledge bank recovered all 20 event identities exposed by the live index and records the remaining slot as unresolved.
+**Detailed public-safe wording:** The current personal Past Events control displayed 21 slots; repeated terminal scrolling exposed 20 unique event identities, and every exposed detail page was reviewed. The remaining metadata-free slot stays unresolved.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Establishes an auditable denominator without erasing the part of the historical record Facebook did not materialize.
+**Guardrail:** This is complete control-slot accounting, not a Meta owner export or proof that no older event was deleted or withheld.
+**Do not say:** All 21 pages were recovered; Jamie organized exactly 21 events; the unresolved event never existed; Facebook is a complete archive.
+**Protected boundaries:** Residential addresses, contacts, guest identities, comments, invite context, raw event bodies, and authenticated-session state stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## jamie-event-practice-long-arc - Event and program formation across time
+
+**Status:** Confirmed with boundary
+**Support level:** Strong with collaborator-credit boundary
+**Evidence class:** Twenty recovered public event pages
+**Public wording:** Twenty recovered public event pages from December 2006 through February 2019 name Jamie as organizer or co-organizer across participatory art, public history, DIY music, recurring hosting, mutual aid, civic preparation, cultural-space safety, and interactive media.
+**Detailed public-safe wording:** Thirteen pages display Jamie alone and seven preserve cohost credit; their public-safe purpose summaries document gatherings, screenings, installations, meals, practical training, public art, and music programs built around emerging cultural and civic premises.
+**Where to project:** Knowledge-bank project note only; reserve for later audience-specific composition.
+**Why it matters:** Shows a durable practice of giving emerging cultural, civic, and community needs a usable form people could enter.
+**Guardrail:** Preserve cohost credit. Organizer displays do not prove complete task ownership, sole authorship, attendance, or impact.
+**Do not say:** Jamie solely created every event; Facebook preserves his complete event history; every event belonged to one continuous formal program.
+**Protected boundaries:** Residential addresses, contacts, guests, comments, invite context, raw event bodies, unapproved media, and authenticated-session state stay protected.
+**Review owner:** Jamie / collaborator review welcome for event-level credit
+**Last reviewed:** 2026-07-15
+
+## jamie-facebook-event-response-signals - Personal event-platform signals
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Public-safe full-population fixture
+**Public wording:** Six recovered event pages retain historical Facebook response labels; five display at least 20 responses and two at least 100.
+**Detailed public-safe wording:** The threshold counts preserve visible event-level platform signals without summing repeat responders into a people-reached total.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Supplies a bounded public traction signal while preserving the difference between an interface action and a person in a room.
+**Guardrail:** These are not verified attendance, unique people, reach, participation, endorsement, conversion, mandate, or impact; do not sum them.
+**Do not say:** 329 unique people engaged; Facebook responses equal attendance; response labels prove impact.
+**Protected boundaries:** Do not publish responder identities, guest lists, comments, reactions, invite context, or private analytics.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-event-zero-state - Current WOWList event absence
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the capture-date interface state
+**Evidence class:** Authenticated public surface
+**Public wording:** WOWList's current Facebook Events surface says "No events to show." The knowledge bank records that as a capture-date zero-state, not proof that no historical WOWList event existed.
+**Detailed public-safe wording:** The current authenticated interface exposed no event cards; historical hosted-event completeness remains open pending a native Meta owner export or equivalent page archive.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves a visible archival absence without converting platform loss or migration into false historical certainty.
+**Guardrail:** Do not convert current absence into a historical negative.
+**Do not say:** WOWList never hosted a Facebook event; the page has no event history; Facebook preserves a complete owner archive.
+**Protected boundaries:** Account administration, internal page identifiers, archive paths, raw post data, and authenticated-session state stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-event-cross-surface - Event routing through a shared project identity
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Complete preserved page-post event-link search / two public event pages
+**Public wording:** Two externally hosted Facebook event routes survive in the preserved WOWList page-post corpus: one linked a dedicated WOWList scene page and one carried New York cultural-space safety advocacy.
+**Detailed public-safe wording:** One Chicago DIY gathering linked a WOWList scene page from its event description, and the WOWList account circulated a New York cultural-space safety meeting; neither event was hosted by WOWList.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves evidence of the project account routing between scene, calendar, event, and civic surfaces.
+**Guardrail:** Neither route was hosted by WOWList; shared-account custody does not establish Jamie's individual post authorship.
+**Do not say:** WOWList hosted both events; Jamie authored both posts; two links prove broad adoption or impact.
+**Protected boundaries:** Raw page-post bodies, comments, reactions, account administration, archive paths, and authenticated-session state stay protected.
+**Review owner:** Jamie / collaborator review welcome for shared-account authorship
+**Last reviewed:** 2026-07-15

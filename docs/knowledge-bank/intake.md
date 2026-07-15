@@ -213,3 +213,13 @@ and promotes bounded participation-system and response-signal claims. Jamie's
 democracy-lab framing remains attributed interpretation. The intake itself is
 non-projectable; attendee identities, comments, raw event bodies, credentials,
 private working links, and authenticated-session data remain protected.
+
+The personal and WOWList Facebook event pass adds two more integrated,
+non-projecting records. `INTAKE-JAMIE-FACEBOOK-EVENT-POPULATION-2026-07-15`
+reconciles 21 displayed personal control slots as 20 recovered event pages and
+one unresolved slot, preserving a 2006-2019 organizer and co-organizer ledger.
+`INTAKE-WOWLIST-FACEBOOK-EVENT-POPULATION-2026-07-15` records the current
+WOWList zero-state separately from two externally hosted event routes in the
+preserved page-post corpus. Neither intake creates a public archive route, and
+residential, contact, participant, comment, administration, and session data
+remain protected.
