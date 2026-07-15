@@ -1,0 +1,200 @@
+{
+  "suite_id": "knowledge-bank-development",
+  "target": "claim-development",
+  "candidate_sha": "6b34a324e09499221cc4f56d959f226e805cd60f",
+  "rubric_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "content_scope": [
+    "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12",
+    "INTAKE-SUNDAY-DINNER-COMMUNITY-HOSTING-2026-07-13",
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
+    "INTAKE-NYCA-CAMPAIGN-PRESS-CORPUS-2026-07-13",
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12",
+    "INTAKE-PROJECT-SOCIAL-IDENTITY-SYSTEM-2026-07-14",
+    "INTAKE-NYCA-COUNCIL-SOCIAL-ENGAGEMENT-2026-07-14",
+    "INTAKE-WOWLIST-SOCIAL-RECORD-2026-07-14",
+    "INTAKE-KC-SPACES-FUND-SOCIAL-RECORD-2026-07-14",
+    "INTAKE-KC-TOWN-HALL-SOCIAL-CONTINUITY-2026-07-14",
+    "INTAKE-KC-TOWN-HALL-CCED-ALLOCATION-2026-07-13",
+    "INTAKE-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026-07-14",
+    "INTAKE-INTERACTIVE-MEDIA-PRACTICE-2026-07-14",
+    "INTAKE-CRS-OPERATING-AND-DATA-INFRASTRUCTURE-2026-07-14",
+    "INTAKE-EVALS-AND-SOURCE-BACKED-SPRINT-2026-07-14",
+    "INTAKE-GDRIVE-196-RESIDENCY-OPERATIONS-2026-07-14",
+    "INTAKE-GDRIVE-VACANCY-ARCHIVE-AND-OVERVIEW-AUTOMATION-2026-07-14",
+    "INTAKE-GDRIVE-SHARED-WORKSPACE-PRACTICE-2026-07-14"
+  ],
+  "results": [
+    {
+      "eval_id": "KB-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Fresh npm run check:citations, npm run test:citations, npm run knowledge-bank, and npm run public-safety all exited 0; citation tests passed 22/22 and reported the public registry current and redacted.",
+        "A fresh runtime inventory imported records.ts and projectSocial.ts and found exactly 18 intake items, 128 unique intake-associated sources, 46 unique project-social sources, zero unresolved source IDs, zero source-boundary gaps, and zero intake, protected-locator, non-public-source, or project-social-source leaks in public-registry.json.",
+        "apps/www/src/data/knowledge-bank/projectSocial.ts:114-139 keeps the authenticated census and historical roster behind opaque protected locators; records.ts:1504-1508,1680-1681,1728-1729 states credential, authorship, consent, grant, transition, and private-crisis boundaries.",
+        "A fresh candidate-diff scan for private paths, signed URLs, credentials, keys, passwords, secrets, and tokens returned no matches; git status showed only the disclosed untracked eval baseline."
+      ],
+      "findings": [
+        "All eighteen intake records are public-safe, provenance-typed, reviewed, and excluded from direct public projection.",
+        "The social material exposes public profiles and status URLs but not authenticated-session credentials, private analytics, administrator records, raw exports, or protected archive locations."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-002",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh runtime inspection found 71 propositions, zero proposition sources outside their intake source sets, zero unresolved proposition sources, zero candidate-claim mismatches, and zero context-only, memory-lead, or research-only propositions missing nextStep.",
+        "docs/knowledge-bank/research/2026-07-14-project-social-media-archival-production.md:36-58 documents authenticated profile recovery, deduplication, chronological search, roster matching, thread inspection, and recovery limitations; lines 60-111 preserves strict CallNYC and NYC Artist Coalition classification and false-positive exclusions.",
+        "apps/www/src/data/knowledge-bank/records.ts:1395-1425 decomposes CallNYC account count, interaction forms, 106-of-110 recovery, and mention-search evidence; lines 1527-1561 separates NYC Artist Coalition's strict five-account/15-interaction floor, mission patterns, Olympia Kazi's 89-result corpus, and the 526-result search boundary.",
+        "scripts/tests/citations.test.mjs:493-499 confirms that the 15-interaction NYC Artist Coalition proposition has 11 registered status-level source IDs plus the protected aggregate census, rather than 15 independently registered interaction records."
+      ],
+      "findings": [
+        "The bank strongly separates existence, identity, action, chronology, scale, outcome, authorship, and causality, and context-only evidence is not promoted into candidateClaims.",
+        "The score is capped at 3 because four of the 15 strict NYC Artist Coalition interactions lack individual source records, live X sources lack stable archive captures, and the research note at lines 148-152 briefly phrases Jamie's identity-system establishment as an interpretation even though lines 26-29 and records.ts:1478-1486 correctly retain it as a memory lead requiring corroboration."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.97
+    },
+    {
+      "eval_id": "KB-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/records.ts:1478-1495 keeps Jamie's account-establishment statement source-free and at memory-lead while separately crediting collective use and Olympia Kazi's sustained public activity.",
+        "records.ts:1527-1552 attributes Council interactions to member accounts, preserves five-account and Olympia Kazi credit, and rejects endorsement, legislative authorship, sole leadership, and policy causality.",
+        "records.ts:1641-1681 limits Jamie to the existing behind-the-scenes KC Spaces Fund proof, preserves organizer credit for Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo, and excludes grant decisions, fundraising ownership, fiscal sponsorship, and post authorship.",
+        "records.ts:1698-1729 separates KC Town Hall's public identity and later continuity from Jamie's stewardship period and prohibits attribution of post-transition posts or outcomes; lines 1919-1946 likewise preserves named collaborator, engineering, platform, and equal-artist credit in the interactive-media thread."
+      ],
+      "findings": [
+        "Across all eighteen threads Jamie is visible through concrete mechanisms without becoming the sole cause of collective campaigns, government decisions, grants, participant work, or successor activity.",
+        "Named collaborators, organizers, public officials, institutions, recipients, shared-account users, and successor actors retain appropriate credit and authority boundaries."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.98
+    },
+    {
+      "eval_id": "KB-004",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh runtime inspection found 20 candidate claims and 71 atomic propositions; every candidate claim exactly resolves to a direct-support, supported-with-boundary, or synthesis-with-boundary proposition.",
+        "apps/www/src/data/knowledge-bank/records.ts:804-845 names concrete Shop Shows, Open House, raft-expedition, and Great Accommodations actions; lines 1993-2033 names six shared goods, running minutes, an open-data memo, and a three-table privacy-preserving pilot.",
+        "records.ts:1395-1425 makes CallNYC's actors, interaction forms, denominator, recovery gap, and decision use legible; lines 1593-1619 preserves WOW List's Sunday Dinner origin, a material external-use scene, and its corpus boundary.",
+        "docs/knowledge-bank/intake.md:98-105 defines actor, action, useful end, output, reconciliation, and governance as separate formation steps."
+      ],
+      "findings": [
+        "The claim-candidate material is concrete and hiring-readable while the six social threads correctly remain researching with no candidateClaims.",
+        "The score is 3 rather than 4 because consequential social actor claims, especially account establishment and parts of the KC Town Hall transition chronology, still depend on attributed memory or incomplete corroboration."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "KB-005",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/research/2026-07-14-project-social-media-archival-production.md:60-87 dates CallNYC's eight interactions and exposes the 106-of-110 plus 11-result recovery; lines 89-111 preserves the NYC Artist Coalition 2017-2025 window, strict 15-result subset, and excluded conversation matches.",
+        "The same note at lines 154-223 distinguishes WOW List's 2016-2017 specimens, KC Spaces Fund's April-July 2020 arc, and KC Town Hall's July 2018-September 2022 record from Jamie's unresolved stewardship transition.",
+        "docs/knowledge-bank/research/2026-07-13-kc-town-hall-cced-allocation.md:48-58 orders Board recommendation, Council acceptance, appropriation, withdrawal, and reappropriation without conflating allocation with receipt or expenditure.",
+        "apps/www/src/data/knowledge-bank/records.ts:1429-1434,1565-1569,1623-1624,1680-1681,1728-1729 keeps missing statuses, unstable denominators, archive gaps, authorship, handoff, and later-corroboration questions visible."
+      ],
+      "findings": [
+        "Known dates, historical officeholder classifications, project-account states, institutional actions, and later continuity are internally coherent and bounded.",
+        "The score is capped at 3 because several consequential chronology gaps remain open, including missing X items, stable archival captures, exact account-control dates, and the KC Town Hall handoff period."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.96
+    },
+    {
+      "eval_id": "KB-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Fresh npm run evals:knowledge-bank and npm run test:knowledge-bank-evals exited 0; all 16 eval-contract tests passed, including maturity, source containment, proof-link, tension, correction-trigger, and two-run requirements.",
+        "Fresh runtime inspection found seven claim-candidate, ten researching, one captured, and zero integrated items; all 18 have no-public-projection and all 20 candidate claims resolve to admissible propositions.",
+        "apps/www/src/data/knowledge-bank/schema.ts:301-373 enforces maturity structure, candidate-claim resolution, integrated-claim linkage, and no-public-projection.",
+        "git diff --exit-code between the candidate and its parent over apps/www/src/app, components, content, proofs.ts, and public-registry.json exited 0; fresh npm run check:routes also exited 0."
+      ],
+      "findings": [
+        "Every intake maturity state satisfies its deterministic contract, and no intake record bypasses governed-claim review.",
+        "The candidate changes knowledge records, research documentation, and tests without changing a website route, governed proof, or generated public projection."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-007",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh npm run evals:knowledge-bank exited 0; scripts/check-knowledge-bank-evals.mjs:37-41 requires at least three material boundaries and three answerable questions for every non-integrated intake item.",
+        "apps/www/src/data/knowledge-bank/records.ts:1429-1434 ties CallNYC questions to exports, stable identities, archives, denominator wording, and projection; lines 1499-1502 ties identity-system gaps to account-creation evidence, collaborators, and preservation.",
+        "records.ts:1565-1569,1623-1624,1680-1681,1728-1729 names platform exports, web archives, collaborator accounts, fiscal-sponsor records, recipient evidence, handoff confirmation, and independent corroboration.",
+        "docs/knowledge-bank/research/2026-07-13-sunday-dinner-nyca-source-ingestion.md:96-115 provides a ranked role-, authorship-, scale-, outcome-, and institutional-status research queue; the social note at lines 251-264 prioritizes export recovery, preservation, and collaborator confirmation."
+      ],
+      "findings": [
+        "Questions distinguish missing evidence from missing certainty and usually name both a recoverable source class and the claim decision it would change.",
+        "The score remains 3 because there is no single ranked queue comparing the unresolved decisions across all eighteen threads."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.96
+    },
+    {
+      "eval_id": "KB-008",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/intake.md:128-183 inventories eighteen threads spanning participatory art, recurring hosting, cultural policy, press architecture, civic data, social identity, public funding, interactive media, privacy-aware data, evaluation, residency operations, longitudinal archives, and automation.",
+        "apps/www/src/data/knowledge-bank/records.ts:1395-1729 preserves typed social interactions, public-official dialogue, an external WOW List usage scene, recipient chronology, shared identity stewardship, and later account continuity through proposition-level decisionUse and non-use boundaries.",
+        "docs/knowledge-bank/README.md:102-109 and docs/knowledge-bank/sources.md:65-83 retain social evidence as distinct replies, mentions, reposts, shares, and conversation matches rather than a generic promotional metric.",
+        "The fresh public-surface diff was empty, so the added texture remains available for future composition without crowding the current portfolio."
+      ],
+      "findings": [
+        "The bank preserves civic, cultural, technical, facilitation, artistic, archival, and relational texture capable of supporting multiple future narratives.",
+        "Future uses and non-uses are legible proposition by proposition, but the repository does not contain a complete eighteen-thread audience-use matrix, so the score remains 3."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "KB-009",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/records.ts:1470-1476 distinguishes unrecovered campaign handles from proof they never existed; lines 1527-1561 preserves strict-versus-thread-result exclusions and live-search limitations.",
+        "records.ts:1420-1425,1613-1619,1670-1676,1718-1724 exposes four, one, one, and thirteen profile-counted recovery gaps and prohibits treating profile virtualization or search as a complete export.",
+        "Fresh runtime inspection found six formal tensions and 14 confirm-or-correct triggers across five intake items; fresh citation tests passed correction retirement and negative-research checks.",
+        "docs/knowledge-bank/research/2026-07-14-project-social-media-archival-production.md:31-34,45-58,107-111,251-264 preserves current-nonexistence limits, roster limits, false positives, missing material, authorship uncertainty, and correction-oriented research."
+      ],
+      "findings": [
+        "Known conflicts, false positives, incomplete recovery, and negative-search limits are explicit, and aggregate social wording consistently uses recovery floors rather than completeness claims.",
+        "Correction readiness is strong but not exceptional: none of the six social threads has a formal tension or correction trigger, despite the identity-establishment wording inconsistency and the incomplete status-level support for the 15-interaction aggregate."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.97
+    },
+    {
+      "eval_id": "KB-010",
+      "score": 1,
+      "pass": false,
+      "evidence": [
+        "git rev-parse and git show confirmed candidate 6b34a324e09499221cc4f56d959f226e805cd60f with parent 9e42ed616ae20320197fb728cc9b3e77fd29b021; git merge-base --is-ancestor succeeded and the rubric predates the candidate by 39 commits.",
+        "The rubric blobs are identical at the rubric and candidate commits: .agents/evals/knowledge-bank-development.json is 2cf0cb573345b8d328e8274922b70f36081bd311 and docs/evals/knowledge-bank-development.md is 4dd7df7d028c29d3616ff991bd43dd5285a62411.",
+        "git status shows docs/evals/runs/knowledge-bank-development-project-social-baseline-6b34a324.json only as untracked; its SHA-256 is 74d655cf6fdd36f5e6a1678c29204784425ddced4a7c0dab65a4e04c588bd314, while git ls-tree, git grep, git log, and the candidate diff found no candidate-specific run or iteration artifact in any committed candidate evidence.",
+        "Fresh npm run evals:knowledge-bank:score against the visible baseline exited 1: weighted_score 0.835, eligible false, with blockers for KB-010 score 1, the blocking eval failure, and fewer than two consecutive passing runs."
+      ],
+      "findings": [
+        "Candidate-specific process evidence is now visible in the working tree, but it is not durable committed evidence available from the candidate tree or another commit at judgment time; visibility alone does not establish a reproducible iteration history.",
+        "The visible file is a baseline run record, not an iteration record with candidate-before, selected failure, before/after evidence and scores, regressions, decision, and demonstrated optimizer/judge separation.",
+        "This independent follow-up also fails KB-010, so there are zero consecutive passing judgments on the unchanged candidate and this judgment is not a certification."
+      ],
+      "recommended_next_move": "Commit the visible baseline as a process-only artifact, then add a candidate-specific iteration record documenting the content transition to 6b34a324, evaluator separation, before-and-after evidence and scores, regressions, and a rubric-valid decision before seeking two fresh independent passing judgments on unchanged content.",
+      "confidence": 0.99
+    }
+  ],
+  "consecutive_passing_runs": 0
+}
