@@ -38,7 +38,7 @@ inspections continued.
 
 An authenticated July 2026 observation recovered visible direct engagement
 with `@NYCArtC` by at least four sitting Council member accounts from March 2018
-through October 2020. The posts connected the coalition identity to the
+through December 2020. The posts connected the coalition identity to the
 nightlife town hall, MARCH accountability testimony, arts advocacy, and
 commercial-rent work. Olympia Kazi and partner organizations also used the
 identity for relief advocacy, public events, and professional resources.

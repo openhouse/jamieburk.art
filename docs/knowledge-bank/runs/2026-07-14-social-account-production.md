@@ -19,7 +19,7 @@ The browser session displayed Jamie's signed-in `@urbanhermit` identity before r
 3. Scrolled each rendered profile timeline and deduplicated canonical status URLs.
 4. Searched direct mentions of CallNYC and NYC Artist Coalition.
 5. Queried a historical NYC Council handle roster in small groups and inspected every returned post before counting it.
-6. Distinguished people serving on the Council at the interaction date from later officeholders.
+6. Cross-checked office identity against official Council meeting minutes and person records, distinguishing people serving on the Council at the interaction date from later officeholders.
 7. Decomposed significant posts into sources, source assertions, claims, boundaries, anti-claims, research tasks, and selective public projections.
 
 ## Observation sets
@@ -55,7 +55,7 @@ At least eight sitting Council member accounts visibly engaged with CallNYC from
 
 ### NYC Artist Coalition
 
-At least four sitting Council member accounts visibly engaged with `@NYCArtC` from March 2018 through October 2020. The posts connect the coalition identity to the nightlife town hall, Talks Not Raids hearing and testimony, arts advocacy, and commercial-rent work. This lower-bound result is now eligible for the NYC Artist Coalition / Fair Rent NYC case study.
+At least four sitting Council member accounts visibly engaged with `@NYCArtC` from March 2018 through December 2020. The posts connect the coalition identity to the nightlife town hall, Talks Not Raids hearing and testimony, arts advocacy, and commercial-rent work. This lower-bound result is now eligible for the NYC Artist Coalition / Fair Rent NYC case study.
 
 Olympia Kazi and partner organizations also used the identity for relief advocacy, public events, and professional-resource coordination. That finding is mature in the bank but remains a deeper archive note.
 
@@ -83,8 +83,8 @@ Jamie recalls establishing the accounts and a public identity system that teamma
 
 - Two intake items created.
 - Five account-level research sources created.
-- Twenty-five representative post sources created.
-- Eighteen atomic source assertions created.
+- Thirty-six post-level sources and five official Council records created.
+- Thirty-four atomic source assertions created.
 - Six new bounded claims created; the existing CallNYC engagement claim matured from research-needed to confirmed-with-boundary.
 - Two open tasks created for authorship corroboration and WOW List handle history; the CallNYC engagement task completed.
 - One research inquiry records method, findings, and missingness.

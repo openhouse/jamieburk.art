@@ -177,7 +177,7 @@ export const socialAccountProductionBatch20260714: {
       supportsGenerally: [
         "a durable umbrella identity for Save NYC Spaces, Let NYC Dance, Talks Not Raids, and Fair Rent NYC",
         "visible use by collaborators, partner organizations, and public officials over multiple years",
-        "at least four sitting Council member accounts with visible direct engagement from March 2018-October 2020"
+        "at least four sitting Council member accounts with visible direct engagement from March 2018-December 2020"
       ],
       doesNotEstablish: [
         "Jamie's authorship of the account's posts",
@@ -264,6 +264,84 @@ export const socialAccountProductionBatch20260714: {
         "Jamie's authorship of campaign posts",
         "permission to publish private applicant or donor records"
       ]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-STATED-MEETING-2017-04-25",
+      title: "Minutes of the New York City Council stated meeting, April 25, 2017",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-04-25",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=9F25F672-8EDB-4DF7-B73F-8F308EF0DCEC&ID=5245939&M=F",
+      preferredPublicUrl: "canonical",
+      publicCitation:
+        "Official New York City Council stated-meeting minutes listing Margaret Chin, Rosie Mendez, Helen Rosenthal, Ydanis Rodriguez, Peter Koo, Ruben Wills, Mathieu Eugene, and Steven Matteo as Council members on April 25, 2017.",
+      supportsGenerally: [
+        "independent Council-member attribution for all eight counted CallNYC accounts during the observation period"
+      ],
+      doesNotEstablish: [
+        "the historical social handles by itself",
+        "every officeholder interaction with CallNYC",
+        "a complete engagement corpus"
+      ]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-PERSON-ESPINAL",
+      title: "New York City Council person record for Rafael Espinal",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://legistar.council.nyc.gov/PersonDetail.aspx?GUID=B6174188-2A47-4211-B62F-0990C615018B&ID=125477",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Official New York City Council person record identifying Rafael Espinal as a District 37 Council member.",
+      supportsGenerally: ["Rafael Espinal's Council-member identity during the cited 2018-2019 interactions"],
+      doesNotEstablish: ["the social handle by itself", "every date of service", "endorsement or policy causation"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-PERSON-LEVIN",
+      title: "New York City Council person record for Stephen Levin",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://legistar.council.nyc.gov/PersonDetail.aspx?GUID=9674B5A6-D5DB-470F-96C9-2CDA752A9F41&ID=42519",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Official New York City Council person record identifying Stephen Levin as a District 33 Council member.",
+      supportsGenerally: ["Stephen Levin's Council-member identity during the cited 2019-2020 interactions"],
+      doesNotEstablish: ["the social handle by itself", "every date of service", "endorsement or policy causation"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-PERSON-MARK-LEVINE",
+      title: "New York City Council person record for Mark Levine",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://legistar.council.nyc.gov/PersonDetail.aspx?GUID=A3E58905-149D-4333-90B6-761652D65616&ID=125482",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Official New York City Council person record identifying Mark Levine as a District 7 Council member.",
+      supportsGenerally: ["Mark Levine's Council-member identity during the cited 2020 interaction"],
+      doesNotEstablish: ["the social handle by itself", "every date of service", "endorsement or policy causation"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-PERSON-VAN-BRAMER",
+      title: "New York City Council person record for James Van Bramer",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://legistar.council.nyc.gov/PersonDetail.aspx?GUID=82692886-6ADF-48DF-A642-AF4292914DAA&ID=42521",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Official New York City Council person record identifying James Van Bramer as a District 26 Council member.",
+      supportsGenerally: ["James Van Bramer's Council-member identity during the cited 2020 interaction"],
+      doesNotEstablish: ["the social handle by itself", "every date of service", "endorsement or policy causation"]
     },
     councilPost(
       "SRC-CALLNYC-COUNCIL-CHIN-2017",
@@ -499,6 +577,30 @@ export const socialAccountProductionBatch20260714: {
       "AY Young publicly thanked KC Spaces Fund for support on April 20, 2020.",
       ["a public recipient acknowledgment", "campaign reach"],
       ["the complete recipient roster", "Jamie's role in selection or disbursement"]
+    ),
+    ...[
+      ["VULPES-BASTILLE", "Vulpes Bastille", "2020-07-09", "1281300779266125826"],
+      ["SWAN", "SWAN", "2020-06-30", "1278061185871552512"],
+      ["KC-TEXTILE-ARTS-CENTER", "KC Textile Arts Center", "2020-06-14", "1272260009695551489"],
+      ["PARKER-2", "Parker 2", "2020-06-11", "1271219713188810753"],
+      ["FAREWELL-TRANSMISSION", "Farewell Transmission", "2020-06-10", "1270549089076359174"],
+      ["ONE-MIC-STAND", "One Mic Stand", "2020-05-22", "1263927272802746368"],
+      ["BLACKBOX-ON-TROOST", "Blackbox on Troost", "2020-05-21", "1263599910781440000"],
+      ["TRANS-WOMEN-OF-COLOR", "Trans Women of Color Collective", "2020-05-18", "1262524545275244545"],
+      ["GETWOKE", "GetWoke", "2020-05-13", "1260590429730414592"],
+      ["UN-TUCK", "UN/TUCK", "2020-04-23", "1253445776224722945"],
+      ["LATINO-ARTS-FOUNDATION", "Latino Arts Foundation", "2020-04-18", "1251553551454797830"]
+    ].map(([suffix, name, publishedAt, statusId]) =>
+      institutionalPost(
+        `SRC-KCSPACES-HIGHLIGHT-${suffix}-2020`,
+        `KC Spaces Fund highlights ${name}`,
+        "KC Spaces Fund (@KCSpacesFund)",
+        publishedAt,
+        `https://x.com/KCSpacesFund/status/${statusId}`,
+        `KC Spaces Fund publicly named ${name} in a grantee or funded-space highlight on ${publishedAt}.`,
+        ["a visible named grantee or funded-space highlight"],
+        ["the complete grant ledger", "Jamie's role in selection, administration, disbursement, or post authorship"]
+      )
     )
   ],
   sourceAssertions: [
@@ -522,6 +624,19 @@ export const socialAccountProductionBatch20260714: {
       assertion:
         "The eight-account result excludes likes, follows, private interactions, hidden replies, deleted posts, and later officeholders who were not Council members at interaction time.",
       relationship: "bounds",
+      confidence: "high",
+      candidateClaimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-CALLNYC-OFFICIAL-COUNCIL-ROSTER",
+      sourceId: "SRC-NYC-COUNCIL-STATED-MEETING-2017-04-25",
+      project: "callnyc",
+      assertion:
+        "Official Council minutes independently identify all eight counted people as Council members during the CallNYC observation period.",
+      relationship: "corroborates",
       confidence: "high",
       candidateClaimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT"],
       publicSafe: true,
@@ -554,7 +669,7 @@ export const socialAccountProductionBatch20260714: {
       sourceId: "SRC-SOCIAL-NYCARTC-AUTH-OBSERVATION-2026",
       project: "nyc-artist-coalition",
       assertion:
-        "Roster-based authenticated searches recovered visible direct engagement by at least four sitting Council member accounts from March 2018 through October 2020.",
+        "Roster-based authenticated searches recovered visible direct engagement by at least four sitting Council member accounts from March 2018 through December 2020.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: ["CLM-NAC-SOCIAL-COUNCIL-ENGAGEMENT"],
@@ -562,6 +677,23 @@ export const socialAccountProductionBatch20260714: {
       reviewedAt: "2026-07-14",
       reviewedBy
     },
+    ...[
+      ["ESPINAL", "SRC-NYC-COUNCIL-PERSON-ESPINAL", "Rafael Espinal"],
+      ["LEVIN", "SRC-NYC-COUNCIL-PERSON-LEVIN", "Stephen Levin"],
+      ["MARK-LEVINE", "SRC-NYC-COUNCIL-PERSON-MARK-LEVINE", "Mark Levine"],
+      ["VAN-BRAMER", "SRC-NYC-COUNCIL-PERSON-VAN-BRAMER", "James Van Bramer"]
+    ].map(([suffix, sourceId, name]) => ({
+      id: `AST-NAC-OFFICIAL-COUNCIL-${suffix}`,
+      sourceId,
+      project: "nyc-artist-coalition",
+      assertion: `The official Council person record independently identifies ${name} as a New York City Council member.`,
+      relationship: "corroborates" as const,
+      confidence: "high" as const,
+      candidateClaimIds: ["CLM-NAC-SOCIAL-COUNCIL-ENGAGEMENT"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    })),
     {
       id: "AST-NAC-COLLABORATOR-ADOPTION",
       sourceId: "SRC-NAC-OLYMPIA-KAZI-RELIEF-2020",
@@ -652,14 +784,38 @@ export const socialAccountProductionBatch20260714: {
       publicSafe: true,
       reviewedAt: "2026-07-14",
       reviewedBy
-    }
+    },
+    ...[
+      ["VULPES-BASTILLE", "Vulpes Bastille"],
+      ["SWAN", "SWAN"],
+      ["KC-TEXTILE-ARTS-CENTER", "KC Textile Arts Center"],
+      ["PARKER-2", "Parker 2"],
+      ["FAREWELL-TRANSMISSION", "Farewell Transmission"],
+      ["ONE-MIC-STAND", "One Mic Stand"],
+      ["BLACKBOX-ON-TROOST", "Blackbox on Troost"],
+      ["TRANS-WOMEN-OF-COLOR", "Trans Women of Color Collective"],
+      ["GETWOKE", "GetWoke"],
+      ["UN-TUCK", "UN/TUCK"],
+      ["LATINO-ARTS-FOUNDATION", "Latino Arts Foundation"]
+    ].map(([suffix, name]) => ({
+      id: `AST-KCSPACES-HIGHLIGHT-${suffix}`,
+      sourceId: `SRC-KCSPACES-HIGHLIGHT-${suffix}-2020`,
+      project: "kc-spaces-fund",
+      assertion: `A visible KC Spaces Fund post names ${name} in a grantee or funded-space highlight.`,
+      relationship: "supports" as const,
+      confidence: "high" as const,
+      candidateClaimIds: ["CLM-KCSPACES-SOCIAL-GRANTEE-DOCUMENTATION"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    }))
   ],
   claims: [
     {
       id: "CLM-NAC-SOCIAL-COUNCIL-ENGAGEMENT",
       project: "nyc-artist-coalition",
       internalClaim:
-        "Authenticated roster-based searches recovered visible direct engagement with @NYCArtC by at least four sitting NYC Council member accounts between March 2018 and October 2020: Rafael Espinal, Stephen Levin, Mark Levine, and Jimmy Van Bramer.",
+        "Authenticated roster-based searches recovered visible direct engagement with @NYCArtC by at least four sitting NYC Council member accounts between March 2018 and December 2020: Rafael Espinal, Stephen Levin, Mark Levine, and Jimmy Van Bramer.",
       status: "confirmed-with-boundary",
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
@@ -677,8 +833,14 @@ export const socialAccountProductionBatch20260714: {
       evidence: [
         { sourceId: "SRC-NAC-COUNCIL-ESPINAL-TOWN-HALL-2018", relationship: "direct-support", supports: ["Rafael Espinal engagement", "nightlife town hall"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NAC-COUNCIL-LEVIN-HEARING-2019", relationship: "direct-support", supports: ["Stephen Levin engagement", "Talks Not Raids hearing"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NAC-COUNCIL-LEVIN-TESTIMONY-2019", relationship: "direct-support", supports: ["Stephen Levin engagement", "Talks Not Raids testimony"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020", relationship: "direct-support", supports: ["Stephen Levin engagement", "commercial-rent work"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NAC-COUNCIL-LEVINE-2020", relationship: "direct-support", supports: ["Mark Levine engagement"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NAC-COUNCIL-VANBRAMER-2020", relationship: "direct-support", supports: ["Jimmy Van Bramer engagement", "arts advocacy"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NYC-COUNCIL-PERSON-ESPINAL", relationship: "corroborating", supports: ["official Council identity for Rafael Espinal"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYC-COUNCIL-PERSON-LEVIN", relationship: "corroborating", supports: ["official Council identity for Stephen Levin"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYC-COUNCIL-PERSON-MARK-LEVINE", relationship: "corroborating", supports: ["official Council identity for Mark Levine"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYC-COUNCIL-PERSON-VAN-BRAMER", relationship: "corroborating", supports: ["official Council identity for James Van Bramer"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-SOCIAL-NYCARTC-AUTH-OBSERVATION-2026", relationship: "supports-boundary", supports: ["search method", "lower-bound limits"], confidence: "high", renderCitation: false }
       ],
       boundaries: [
@@ -842,6 +1004,25 @@ export const socialAccountProductionBatch20260714: {
       ],
       evidence: [
         { sourceId: "SRC-SOCIAL-KCSPACES-AUTH-OBSERVATION-2026", relationship: "direct-support", supports: ["eleven visible highlights", "observation limits"], confidence: "high", renderCitation: true },
+        ...[
+          ["VULPES-BASTILLE", "Vulpes Bastille"],
+          ["SWAN", "SWAN"],
+          ["KC-TEXTILE-ARTS-CENTER", "KC Textile Arts Center"],
+          ["PARKER-2", "Parker 2"],
+          ["FAREWELL-TRANSMISSION", "Farewell Transmission"],
+          ["ONE-MIC-STAND", "One Mic Stand"],
+          ["BLACKBOX-ON-TROOST", "Blackbox on Troost"],
+          ["TRANS-WOMEN-OF-COLOR", "Trans Women of Color Collective"],
+          ["GETWOKE", "GetWoke"],
+          ["UN-TUCK", "UN/TUCK"],
+          ["LATINO-ARTS-FOUNDATION", "Latino Arts Foundation"]
+        ].map(([suffix, name]) => ({
+          sourceId: `SRC-KCSPACES-HIGHLIGHT-${suffix}-2020`,
+          relationship: "direct-support" as const,
+          supports: [`visible highlight naming ${name}`],
+          confidence: "high" as const,
+          renderCitation: true
+        })),
         { sourceId: "SRC-KCSPACES-APPLICATION-2020", relationship: "corroborating", supports: ["public applications", "grant ceiling", "rolling distribution"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-KCSPACES-RECIPIENT-THANKS-2020", relationship: "corroborating", supports: ["public recipient acknowledgment"], confidence: "high", renderCitation: true }
       ],
@@ -903,15 +1084,15 @@ export const socialAccountProductionBatch20260714: {
       methods: [
         "Used an authenticated in-app browser session and verified the signed-in account before observation.",
         "Inventoried recovered project profiles and scrolled rendered timelines while deduplicating canonical status URLs.",
-        "Searched direct mentions and a dated NYC Council handle roster, then inspected each counted interaction.",
+        "Searched direct mentions and a dated NYC Council handle roster, then inspected each counted interaction and cross-checked office identity against official Council records.",
         "Separated current profile metadata, visible post-level evidence, lower-bound findings, and unresolved authorship questions."
       ],
       runAt: "2026-07-14",
       resultStatus: "partially-recovered",
       findings: [
-        "Five dedicated project accounts were recovered: @CallNYCapp, @NYCArtC, @wowlist, @KCTownHall, and @KCSpacesFund.",
+        "Five project account identities were recovered: dedicated accounts for CallNYC, WOW List, KC Town Hall, and KC Spaces Fund, plus the shared @NYCArtC umbrella identity for four coalition campaigns.",
         "At least eight sitting NYC Council member accounts visibly engaged with @CallNYCapp from April 2016-July 2017 under the defined direct-interaction rule.",
-        "At least four sitting NYC Council member accounts visibly engaged with @NYCArtC from March 2018-October 2020; several posts directly connected the identity to a nightlife town hall, Talks Not Raids, arts advocacy, and commercial-rent work.",
+        "At least four sitting NYC Council member accounts visibly engaged with @NYCArtC from March 2018-December 2020; several posts directly connected the identity to a nightlife town hall, Talks Not Raids, arts advocacy, and commercial-rent work.",
         "Olympia Kazi and partner organizations publicly used the NYC Artist Coalition identity for relief advocacy, events, and professional resources.",
         "WOW List posts explicitly connect the product to Sunday Dinner calendars and show organizer use.",
         "KC Town Hall used its account as a public mission, listening, and documentation surface; KC Spaces Fund visibly documented applications, recipient thanks, and at least eleven named grantee or funded-space highlights."
@@ -928,7 +1109,25 @@ export const socialAccountProductionBatch20260714: {
         "SRC-SOCIAL-NYCARTC-AUTH-OBSERVATION-2026",
         "SRC-SOCIAL-WOWLIST-AUTH-OBSERVATION-2026",
         "SRC-SOCIAL-KCTOWNHALL-AUTH-OBSERVATION-2026",
-        "SRC-SOCIAL-KCSPACES-AUTH-OBSERVATION-2026"
+        "SRC-SOCIAL-KCSPACES-AUTH-OBSERVATION-2026",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2017-04-25",
+        "SRC-NYC-COUNCIL-PERSON-ESPINAL",
+        "SRC-NYC-COUNCIL-PERSON-LEVIN",
+        "SRC-NYC-COUNCIL-PERSON-MARK-LEVINE",
+        "SRC-NYC-COUNCIL-PERSON-VAN-BRAMER",
+        ...[
+          "VULPES-BASTILLE",
+          "SWAN",
+          "KC-TEXTILE-ARTS-CENTER",
+          "PARKER-2",
+          "FAREWELL-TRANSMISSION",
+          "ONE-MIC-STAND",
+          "BLACKBOX-ON-TROOST",
+          "TRANS-WOMEN-OF-COLOR",
+          "GETWOKE",
+          "UN-TUCK",
+          "LATINO-ARTS-FOUNDATION"
+        ].map((suffix) => `SRC-KCSPACES-HIGHLIGHT-${suffix}-2020`)
       ],
       publicSummary:
         "An authenticated July 2026 observation recovered five project accounts and bounded evidence of Council engagement, collaborator adoption, organizer use, public listening, and campaign outcome documentation while preserving platform missingness and shared authorship."

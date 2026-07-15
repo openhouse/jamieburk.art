@@ -676,6 +676,48 @@
       ]
     },
     {
+      "id": "SRC-NAC-COUNCIL-LEVIN-TESTIMONY-2019",
+      "title": "Stephen Levin thanks NYC Artist Coalition after MARCH testimony",
+      "organization": "New York City Council member account",
+      "author": "Stephen Levin (@StephenLevin33)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/StephenLevin33/status/1095020293112979457",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Stephen Levin publicly thanked @NYCArtC and participating venues for MARCH testimony on February 11, 2019.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020",
+      "title": "Stephen Levin invites the public to NYC Artist Coalition commercial-rent event",
+      "organization": "New York City Council member account",
+      "author": "Stephen Levin (@StephenLevin33)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-12-09",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/StephenLevin33/status/1336765371773173761",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Stephen Levin publicly invited residents to an @NYCArtC event on saving small businesses and commercial rent stabilization on December 9, 2020.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
       "id": "SRC-NAC-COUNCIL-VANBRAMER-2020",
       "title": "Jimmy Van Bramer includes NYC Artist Coalition in arts advocacy",
       "organization": "New York City Council member account",
@@ -1900,6 +1942,26 @@
           "renderCitation": true
         },
         {
+          "sourceId": "SRC-NAC-COUNCIL-LEVIN-TESTIMONY-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Stephen Levin engagement",
+            "Talks Not Raids testimony"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "Stephen Levin engagement",
+            "commercial-rent work"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
           "sourceId": "SRC-NAC-COUNCIL-LEVINE-2020",
           "relationship": "direct-support",
           "supports": [
@@ -2106,6 +2168,8 @@
         "SRC-NAC-FAIR-RENT-NYC-PRESS-INDEX-2021",
         "SRC-NAC-COUNCIL-ESPINAL-TOWN-HALL-2018",
         "SRC-NAC-COUNCIL-LEVIN-HEARING-2019",
+        "SRC-NAC-COUNCIL-LEVIN-TESTIMONY-2019",
+        "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020",
         "SRC-NAC-COUNCIL-LEVINE-2020",
         "SRC-NAC-COUNCIL-VANBRAMER-2020"
       ],
@@ -2221,6 +2285,8 @@
           "sourceIds": [
             "SRC-NAC-COUNCIL-ESPINAL-TOWN-HALL-2018",
             "SRC-NAC-COUNCIL-LEVIN-HEARING-2019",
+            "SRC-NAC-COUNCIL-LEVIN-TESTIMONY-2019",
+            "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020",
             "SRC-NAC-COUNCIL-LEVINE-2020",
             "SRC-NAC-COUNCIL-VANBRAMER-2020"
           ]

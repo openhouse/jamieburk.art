@@ -20,11 +20,11 @@ Current post, follower, and following counts are unstable profile snapshots. The
 | Sunday Dinner / 196 Artists Residency | [@wowlist](https://x.com/wowlist) | Related project lineage, not a dedicated account | Recovered as related evidence |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | Dedicated project account | Recovered |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | Dedicated campaign account | Recovered |
-| Harry J. Epstein Company | None recovered in this pass | No dedicated project account established | Not recovered |
+| Harry J. Epstein Company | None recovered in this pass | No dedicated project account recovered | Not recovered |
 
 Jamie's personal [@urbanhermit](https://x.com/urbanhermit) account appears in origin and amplification records. It is not counted as a project account.
 
-Historical WOW List code and one 2015 organizer post use `@wowlistnyc`. The current account at that handle does not exist, and no public bridge proving a migration to `@wowlist` was recovered. The historical label remains unresolved.
+Historical WOW List code and one 2015 organizer post use `@wowlistnyc`. No current profile or public bridge proving a migration to `@wowlist` was recovered at that handle. The historical label remains unresolved.
 
 ## CallNYC: @CallNYCapp
 
@@ -57,7 +57,7 @@ The account served as an umbrella identity across Let NYC Dance, Save NYC Spaces
 
 ### Council engagement
 
-At least four sitting Council member accounts visibly engaged with `@NYCArtC` between March 2018 and October 2020:
+At least four sitting Council member accounts visibly engaged with `@NYCArtC` between March 2018 and December 2020:
 
 - Rafael Espinal described working with the coalition around a nightlife town hall, Save NYC Spaces, and Talks Not Raids.
 - Stephen Levin amplified a MARCH accountability hearing, thanked the coalition and venues after testimony, and invited the public to a commercial-rent event.
@@ -96,7 +96,19 @@ Knowledge-bank status: confirmed with boundaries. The evidence does not establis
 
 Profile snapshot: joined April 2020; 35 posts reported; 34 unique status URLs rendered.
 
-The account promoted rolling emergency-relief applications for grants up to $500, preserved public recipient acknowledgments, and contains at least eleven visible project-authored posts naming grantee or funded-space highlights.
+The account promoted rolling emergency-relief applications for grants up to $500, preserved public recipient acknowledgments, and contains at least eleven visible project-authored posts naming grantee or funded-space highlights:
+
+- [Latino Arts Foundation, April 18, 2020](https://x.com/KCSpacesFund/status/1251553551454797830)
+- [UN/TUCK, April 23, 2020](https://x.com/KCSpacesFund/status/1253445776224722945)
+- [GetWoke, May 13, 2020](https://x.com/KCSpacesFund/status/1260590429730414592)
+- [Trans Women of Color Collective, May 18, 2020](https://x.com/KCSpacesFund/status/1262524545275244545)
+- [Blackbox on Troost, May 21, 2020](https://x.com/KCSpacesFund/status/1263599910781440000)
+- [One Mic Stand, May 22, 2020](https://x.com/KCSpacesFund/status/1263927272802746368)
+- [Farewell Transmission, June 10, 2020](https://x.com/KCSpacesFund/status/1270549089076359174)
+- [Parker 2, June 11, 2020](https://x.com/KCSpacesFund/status/1271219713188810753)
+- [KC Textile Arts Center, June 14, 2020](https://x.com/KCSpacesFund/status/1272260009695551489)
+- [SWAN, June 30, 2020](https://x.com/KCSpacesFund/status/1278061185871552512)
+- [Vulpes Bastille, July 9, 2020](https://x.com/KCSpacesFund/status/1281300779266125826)
 
 Knowledge-bank status: confirmed with boundaries. Eleven is a visible lower bound, not a complete grant ledger. The evidence does not establish that Jamie selected grantees, administered funds, or authored campaign posts. Named public organizers retain organizing credit; Jamie's separately documented contribution is behind-the-scenes digital infrastructure.
 

@@ -186,7 +186,8 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-COUNCIL-EUGENE-2016",
         "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
         "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
-        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"
+        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2017-04-25"
       ],
       claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT"],
       researchTaskIds: ["TASK-CALLNYC-COUNCIL-ENGAGEMENT"],
@@ -998,6 +999,7 @@ const knowledgeBankInput = {
         { sourceId: "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016", relationship: "direct-support", supports: ["Helen Rosenthal interaction"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-COUNCIL-MENDEZ-2016", relationship: "direct-support", supports: ["Rosie Mendez interaction"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016", relationship: "direct-support", supports: ["Ydanis Rodriguez interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NYC-COUNCIL-STATED-MEETING-2017-04-25", relationship: "corroborating", supports: ["official Council-member attribution for all eight counted people"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-SOCIAL-CALLNYC-AUTH-OBSERVATION-2026", relationship: "supports-boundary", supports: ["authenticated observation method", "timeline and search missingness", "lower-bound definition"], confidence: "high", renderCitation: false }
       ],
       boundaries: [
@@ -1113,7 +1115,8 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-COUNCIL-EUGENE-2016",
         "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
         "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
-        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"
+        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2017-04-25"
       ],
       claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT"],
       publicSummary: "An authenticated observation recovered visible direct engagement by at least eight sitting Council member accounts from April 2016 through July 2017, with every counted interaction cited and missingness preserved.",
