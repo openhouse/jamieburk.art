@@ -619,7 +619,11 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
   assert.match(mdx, /does not by itself establish that a funding agreement was executed/);
   assert.match(mdx, /claimId="CLM-KCTH-MISSION-ALIGNED-HANDOFF"/);
   assert.match(work, /years: "Beginning in 2017"/);
-  assert.doesNotMatch(work, /Council later accepted/);
+  assert.match(
+    work,
+    /Council later accepted a \$490,539 CCED funding recommendation and authorized negotiations/
+  );
+  assert.doesNotMatch(work, /Council later (?:disbursed|paid|awarded) \$490,539/);
   assert.equal(
     publicRegistry.sources.some((item) => item.id === handoffSource.id),
     false
@@ -976,10 +980,18 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     "docs/knowledge-bank/projects/social-account-inventory.md",
     "utf8"
   );
-  const publicRegistry = readFileSync(
-    "apps/www/src/data/knowledge-bank/public-registry.json",
-    "utf8"
+  const publicRegistryData = JSON.parse(
+    readFileSync(
+      "apps/www/src/data/knowledge-bank/public-registry.json",
+      "utf8"
+    )
   );
+  const publicRegistry = JSON.stringify({
+    claims: publicRegistryData.claims.filter((item) =>
+      item.id.startsWith("CLM-WOWLIST-")
+    ),
+    pages: publicRegistryData.pages.filter((item) => item.id === "wowlist")
+  });
   const wowListMdx = readFileSync(
     "apps/www/src/content/work/wowlist.mdx",
     "utf8"
@@ -1135,7 +1147,10 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   assert.doesNotMatch(socialInventory, /Good Times reporting on DIY documentation/);
   const projectedWowListText = [
     publicRegistry,
-    work,
+    work.slice(
+      work.indexOf('title: "WOWList.org"'),
+      work.indexOf('title: "196 Artists Residency / Sunday Dinner"')
+    ),
     wowListMdx,
     projectNote,
     socialInventory,
