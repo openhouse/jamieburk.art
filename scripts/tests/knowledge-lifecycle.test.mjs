@@ -214,6 +214,40 @@ test("KC Town Hall stewardship transition stays distinct from municipal withdraw
   assert.match(caseStudy, /Separately, the municipal funding project later withdrew/);
 });
 
+test("KC Spaces Fund Facebook census preserves collective credit and full-population boundaries", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const intake = knowledgeBank.intakeItems.find(
+    (item) =>
+      item.id === "INTAKE-2026-07-15-KCSPACES-FACEBOOK-POST-FULL-POPULATION"
+  );
+  const population = claimById.get("CLM-KCSPACES-FACEBOOK-SURVIVING-POPULATION");
+  const role = claimById.get("CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT");
+  const traction = claimById.get("CLM-KCSPACES-FACEBOOK-INTERACTION-SIGNALS");
+
+  assert.equal(intake?.researchStatus, "researched");
+  assert.equal(intake?.publicationStatus, "eligible");
+  assert.equal(intake?.sourceIds.length, 10);
+  assert.equal(intake?.observationIds.length, 11);
+  assert.equal(intake?.claimIds.length, 5);
+  assert.equal(intake?.researchInquiryIds.length, 3);
+  assert.equal(population?.status, "confirmed-with-boundary");
+  assert.ok(population?.boundaries.some((value) => /capture-date Page feed/i.test(value)));
+  assert.equal(role?.status, "confirmed-with-boundary");
+  assert.ok(role?.antiClaims.includes("Jamie managed or posted from the KC Spaces Fund Facebook Page."));
+  assert.ok(role?.boundaries.some((value) => /Public organizer credit remains/i.test(value)));
+  assert.equal(traction?.status, "use-with-care");
+  assert.ok(traction?.projections.every((projection) => projection.status === "hold"));
+  assert.equal(
+    sourceById.get("SRC-KCSPACES-JAMIE-ROLE-CLARIFICATION-2026")?.visibility,
+    "protected"
+  );
+  assert.equal(
+    sourceById.get("SRC-KCSPACES-KANSAS-CITY-STAR-2020-04-10")?.kind,
+    "published-article"
+  );
+});
+
 test("KC neighborhood archive recovery strengthens the ledger without overstating Jamie's role", () => {
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   const tired = claimById.get("CLM-KC-TIRED-OF-TIRES-OPERATIONS");

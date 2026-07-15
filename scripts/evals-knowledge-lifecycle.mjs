@@ -113,6 +113,19 @@ const nterChngArchiveSourceIds = [
   "SRC-AMERICA-NOW-HERE-WAYBACK-RESEARCH-2026"
 ];
 
+const kcSpacesFundFacebookSourceIds = [
+  "SRC-KCSPACES-FACEBOOK-POST-CENSUS-2026",
+  "SRC-KCSPACES-FACEBOOK-POST-REPORT-2026",
+  "SRC-KCSPACES-FACEBOOK-PAGE",
+  "SRC-KCSPACES-FACEBOOK-PROTECTED-RUN-2026",
+  "SRC-KCSPACES-CAMPAIGN-SITE-2020",
+  "SRC-KCSPACES-GOFUNDME-2020",
+  "SRC-KCSPACES-JAMIE-ROLE-CLARIFICATION-2026",
+  "SRC-KCSPACES-DIGITAL-INFRASTRUCTURE-ARCHIVE-2026",
+  "SRC-KCSPACES-KANSAS-CITY-STAR-2020-04-10",
+  "SRC-KCSPACES-ODDITIES-KAIJU-PRINT-2020"
+];
+
 const callnycXCorpusSourceIds = [
   "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
   "SRC-CALLNYC-X-LAUNCH-2016-03-05",
@@ -286,6 +299,29 @@ check(
       ?.doesNotEstablish.includes("CallNYC coverage by Gizmodo") &&
     sourceById.get("SRC-CALLNYC-GOTHAMIST-PULASKI-2016-04-28")
       ?.doesNotEstablish.includes("CallNYC coverage by Gothamist"),
+  true
+);
+
+check(
+  "Source quality",
+  "KC Spaces Fund Facebook recovery governs the population, public campaign routes, independent context, and protected role evidence",
+  8,
+  kcSpacesFundFacebookSourceIds.every((id) => sourceById.has(id)) &&
+    sourceById.get("SRC-KCSPACES-FACEBOOK-POST-CENSUS-2026")?.visibility ===
+      "public" &&
+    sourceById.get("SRC-KCSPACES-FACEBOOK-PROTECTED-RUN-2026")?.visibility ===
+      "protected" &&
+    sourceById.get("SRC-KCSPACES-JAMIE-ROLE-CLARIFICATION-2026")
+      ?.visibility === "protected" &&
+    sourceById.get("SRC-KCSPACES-DIGITAL-INFRASTRUCTURE-ARCHIVE-2026")
+      ?.visibility === "protected" &&
+    sourceById.get("SRC-KCSPACES-KANSAS-CITY-STAR-2020-04-10")?.kind ===
+      "published-article" &&
+    sourceById
+      .get("SRC-KCSPACES-KANSAS-CITY-STAR-2020-04-10")
+      ?.doesNotEstablish.includes("Facebook distribution") &&
+    sourceById.get("SRC-KCSPACES-ODDITIES-KAIJU-PRINT-2020")
+      ?.doesNotEstablish.includes("amount raised"),
   true
 );
 
@@ -664,6 +700,35 @@ check(
         .get("INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026")
         ?.sourceIds.includes(sourceId)
     ),
+  true
+);
+
+check(
+  "Research recursion",
+  "KC Spaces Fund Facebook claims preserve complete-population, collective-credit, traction, and source-discovery boundaries",
+  8,
+  claimById.get("CLM-KCSPACES-FACEBOOK-SURVIVING-POPULATION")?.status ===
+      "confirmed-with-boundary" &&
+    claimById.get("CLM-KCSPACES-FACEBOOK-MUTUAL-AID-ROUTING")?.status ===
+      "confirmed-with-boundary" &&
+    claimById.get("CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT")?.status ===
+      "confirmed-with-boundary" &&
+    claimById.get("CLM-KCSPACES-FACEBOOK-INTERACTION-SIGNALS")?.status ===
+      "use-with-care" &&
+    claimById
+      .get("CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT")
+      ?.antiClaims.includes(
+        "Jamie managed or posted from the KC Spaces Fund Facebook Page."
+      ) &&
+    claimById
+      .get("CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT")
+      ?.boundaries.some((value) => /Public organizer credit remains/i.test(value)) &&
+    inquiryById.get("INQ-KCSPACES-FACEBOOK-NATIVE-EXPORT")?.resultStatus ===
+      "inconclusive" &&
+    inquiryById.get("INQ-KCSPACES-FACEBOOK-STEWARDSHIP")?.resultStatus ===
+      "partially-recovered" &&
+    inquiryById.get("INQ-KCSPACES-FACEBOOK-SOURCE-PRESERVATION")
+      ?.limitations.some((value) => /must not be described as Page-posted/i.test(value)),
   true
 );
 
