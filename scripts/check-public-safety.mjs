@@ -177,6 +177,16 @@ const nycartcFacebookPostArtifactFiles = textFiles.filter((file) =>
     relative(file)
   )
 );
+const nycartcFacebookPostGovernanceFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/nycartc-facebook-posts-batch-2026-07-14\.ts|docs\/knowledge-bank\/(?:data\/nycartc-public-facebook-post(?:-route)?-ledger\.json|projects\/nycartc-facebook-post-population-2026-07-14\.md))$/i.test(
+    relative(file)
+  )
+);
+const nycartcFacebookPostLedgerFiles = textFiles.filter((file) =>
+  /docs\/knowledge-bank\/data\/nycartc-public-facebook-post-ledger\.json$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -257,6 +267,18 @@ for (const file of nycartcFacebookPostArtifactFiles) {
   const risk = findNycartcFacebookPublicArtifactRisk(readText(file));
   if (risk) addFailure(file, `NYC Artist Coalition Facebook public artifact contains ${risk}`);
 }
+
+scanPattern(
+  nycartcFacebookPostGovernanceFiles,
+  "NYC Artist Coalition Facebook governance artifact exposes authenticated account or management state",
+  /\b(?:authenticated (?:account|session|dashboard|Meta|Page)|Meta Business Suite|signed[- ]in|logged[- ]in|current account access|current Page-management controls?|current administrator|task access)\b/i
+);
+
+scanPattern(
+  nycartcFacebookPostLedgerFiles,
+  "NYC Artist Coalition Facebook population ledger exposes record-level text, URL, metric, identity, or account-state fields",
+  /"(?:postUrl|statusUrl|publicUrl|rawText|fullText|message|comments|reactions|shares|actorIdentity|publisherIdentity|accountState|privateAnalytics)"\s*:/i
+);
 
 const wowlistPinnedArtifacts = [
   "docs/knowledge-bank/data/wowlist-public-facebook-post-ledger.json",
@@ -348,6 +370,17 @@ if (existsSync(nycartcFacebookBatchSourcePath)) {
         addFailure(
           currentPath,
           "NYC Artist Coalition Facebook immutable citation contains prohibited population, authorship, engagement, or impact wording"
+        );
+      }
+      const originRefs = execFileSync(
+        "git",
+        ["for-each-ref", "--format=%(refname)", "--contains", commit, "refs/remotes/origin"],
+        { cwd: repoRoot, encoding: "utf8" }
+      ).trim();
+      if (!originRefs) {
+        addFailure(
+          currentPath,
+          "NYC Artist Coalition Facebook immutable citation is not reachable from a fetched origin ref"
         );
       }
     } catch {

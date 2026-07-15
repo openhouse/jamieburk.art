@@ -21,7 +21,22 @@ const prohibited = [
   "Interactions caused policy change.",
   "The authenticated dashboard exposed Jamie's administrator role.",
   "Meta Business Suite showed Jamie's task access.",
-  "The signed-in account confirmed Jamie as Page owner."
+  "The signed-in account confirmed Jamie as Page owner.",
+  "Our audit accounts for the whole NYC Artist Coalition Facebook archive.",
+  "The ledger covers the total Page posting history.",
+  "No Facebook post is missing from this census.",
+  "Jamie handled Facebook publishing for NYC Artist Coalition.",
+  "Jamie led the coalition's Facebook operations.",
+  "The Page was primarily run by Jamie.",
+  "Council offices interacted with the campaign across 88 records.",
+  "Agency tags demonstrate official support.",
+  "Partner references show collaboration.",
+  "The 2,374 reactions show broad public attention.",
+  "The 611 shares amplified the campaign's reach.",
+  "The response floor demonstrates traction.",
+  "The first-party management view showed who administered the Page.",
+  "Signed-in controls confirmed Page access.",
+  "The Page dashboard exposed management permissions."
 ];
 
 for (const statement of prohibited) {
@@ -40,7 +55,11 @@ const bounded = [
   "Tags do not prove endorsement or response.",
   "Current reactions do not establish reach, attendance, conversion, or impact.",
   "The management control did not expose historic human-level publisher metadata.",
-  "A current account relationship is not historical role proof."
+  "A current account relationship is not historical role proof.",
+  "The whole currently recoverable timeline received a disposition; historical posts may still be missing.",
+  "Jamie recalls handling much of the Page publishing, but no record-level attribution was recovered.",
+  "Council offices appear in the routing classification; this does not establish interaction or support.",
+  "The response floor is preserved only as a mutable interface observation, not attention or traction."
 ];
 
 for (const statement of bounded) {

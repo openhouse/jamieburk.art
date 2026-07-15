@@ -240,7 +240,7 @@
       "category": "press-or-public-knowledge",
       "occurrences": 1,
       "publicUrl": "https://www.cityandstateny.com/opinion/2018/09/a-compromise-for-nightlife-venues-and-their-neighbors/178085/",
-      "sourceId": "SRC-CITY-AND-STATE-AGENT-OF-CHANGE-2018",
+      "sourceId": "SRC-CITY-STATE-AGENT-OF-CHANGE-2018",
       "disposition": "source-record",
       "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
     },
@@ -249,7 +249,7 @@
       "category": "press-or-public-knowledge",
       "occurrences": 2,
       "publicUrl": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html",
-      "sourceId": "SRC-PRESS-NYT-CABARET-REPEAL-2017",
+      "sourceId": "SRC-NYT-CABARET-REPEAL-2017-10-30",
       "disposition": "source-record",
       "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
     },
@@ -276,7 +276,7 @@
       "category": "press-or-public-knowledge",
       "occurrences": 1,
       "publicUrl": "https://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law/",
-      "sourceId": "SRC-PRESS-WNYC-CABARET-LAW-2017",
+      "sourceId": "SRC-WNYC-CABARET-LAW-2017",
       "disposition": "source-record",
       "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
     },

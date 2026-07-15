@@ -12,28 +12,29 @@ into impact?
 
 ## Population Control
 
-Two authenticated Page traversals used distinct scroll cadences across
+Two browser-based Page traversals used distinct scroll cadences across
 824 combined scroll operations. They recovered the same **444 distinct
 surviving Page-post identities**, spanning January 29, 2017, through September
 15, 2021. The pass was accepted only after the exact identity sets matched and
 42 and 41 terminal scroll controls produced no additional records.
 
-Every recovered record received a public-safe disposition. The repository
+Every recovered record received a public-safe disposition. The population
 ledger retains only a stable ID, sequence, form, primary theme, classification
-counts, and a visible-interaction boolean. Raw text, comments, names, post
-URLs, per-record metrics, media, relationship data, manager state,
+counts, and a visible-interaction boolean. Raw text, comments, names, the full
+post-URL set, per-record metrics, media, relationship data, account state,
 authentication material, and sensitive or stale action routes remain outside
-the repository.
+the repository. Only the three public records selected for close reading below
+are cited by URL.
 
 This is 100 percent disposition coverage of the surviving July 2026 Page
 surface. It is not a native Meta export, deletion history, or proof that no
 historical record is missing.
 
-## Separate Meta Control
+## Separate Content Control
 
-The authenticated Meta Business Suite content surface was reviewed as a
-separate modern control. It did not expose a historic human-level publisher
-field and was not used as the denominator for the 2017-2021 public chronology.
+A separately recovered content-control comparison did not expose a historic
+human-level publisher field and was not used as the denominator for the
+2017-2021 public chronology.
 
 All 444 timeline records displayed a Page-level action control for NYC Artist
 Coalition. That identifies the publishing identity, not the human who created,
@@ -226,5 +227,5 @@ and practical resources through a coherent collective identity.
 - Public-safe route ledger:
   `docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json`
 - Parent social inventory:
-  `docs/knowledge-bank/research/social-account-archive-production-2026-07-14.md`
-- Lifecycle tests: `scripts/tests/knowledge-lifecycle-evals.test.mjs`
+  `docs/knowledge-bank/projects/project-social-accounts-2026-07-14.md`
+- Lifecycle tests: `scripts/tests/nycartc-facebook-guard.test.mjs`

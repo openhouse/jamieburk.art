@@ -3,7 +3,7 @@
   "observedAt": "2026-07-14",
   "account": "NYC Artist Coalition Facebook Page",
   "population": {
-    "authenticatedTerminalTraversals": 2,
+    "terminalTraversals": 2,
     "scrollIterations": 824,
     "terminalScrollsWithoutAddition": [
       42,
@@ -13,12 +13,11 @@
     "sortedIdentitySetSha256": "f1f00d902415ebad0aa37043d7f64070d754c17449c396ac61aa34dec7733955",
     "distinctSurvivingPosts": 444,
     "recoveredRange": "2017-01-29 through 2021-09-15",
-    "pageActionControlsObserved": 444,
     "humanPublisherAttribution": "not-exposed",
     "completenessBoundary": "Two terminal traversals with distinct scroll cadences recovered the same 444 record identities; every recovered record received a public-safe disposition. This is not a native Meta export, deletion history, lifetime total, or proof that no historical post is missing."
   },
   "separateControls": {
-    "metaBusinessSuiteContentControl": "The authenticated modern content control was reviewed separately. It did not expose a historic human-level publisher field and is not used as the 2017-2021 timeline denominator.",
+    "contentControl": "A separately recovered content-control comparison did not expose a historic human-level publisher field and is not used as the 2017-2021 timeline denominator.",
     "controlBoundary": "Page-level action controls identify the NYC Artist Coalition publishing identity, not the human who created each post."
   },
   "forms": {

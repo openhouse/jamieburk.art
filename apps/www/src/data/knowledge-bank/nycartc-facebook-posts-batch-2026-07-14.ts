@@ -187,7 +187,7 @@ export const nycartcFacebookPostIntake = [
     ],
     protectedLocatorId: "RESEARCH-NYCAC-FACEBOOK-POSTS-2026-001",
     reviewedAt: "2026-07-14",
-    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
   },
   {
     id: "INTAKE-2026-07-14-NYCAC-FACEBOOK-PUBLISHING-MEMORY",
@@ -267,7 +267,7 @@ export const nycartcFacebookPostSources = [
   },
   {
     id: "SRC-FB-NYCAC-MANAGED-CONTENT-CROSSCHECK-2026",
-    title: "NYC Artist Coalition Facebook managed-content crosscheck",
+    title: "NYC Artist Coalition Facebook separate content-control crosscheck",
     kind: "research-run",
     visibility: "protected",
     preservationStatus: "private",
@@ -276,10 +276,10 @@ export const nycartcFacebookPostSources = [
     publicCitation:
       "Public-safe boundary metadata from a July 2026 first-party managed-content crosscheck.",
     publicNote:
-      "The first-party management surface displayed later event-maintenance activity not present in the 444-record public timeline. The surface did not expose individual publisher attribution for the inspected records.",
+      "Separately recovered content-control metadata displayed later event-maintenance activity not present in the 444-record public timeline and did not expose individual publisher attribution for the inspected records.",
     protectedLocatorId: "RESEARCH-NYCAC-FACEBOOK-MANAGED-CONTENT-2026-001",
     supportsGenerally: [
-      "the public owner timeline and first-party managed-content surface are not equivalent",
+      "the public owner timeline and separate content-control record are not equivalent",
       "later event-maintenance activity exists outside the recovered public timeline",
       "individual publisher attribution remained unresolved on the inspected surfaces"
     ],
@@ -537,7 +537,7 @@ export const nycartcFacebookPostClaims = [
     proofClaimIds: [],
     researchInquiryIds: ["INQ-NYCAC-FACEBOOK-POSTS-2026"],
     reviewedAt: "2026-07-14",
-    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
   },
   {
     id: "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
@@ -688,7 +688,7 @@ export const nycartcFacebookPostClaims = [
     boundaries: [
       "Counts are mutable current platform signals attached to records, not historical peaks.",
       "Reactions, comments, and shares are different actions and must not be added together as unique people.",
-      "No interaction identity is published from the authenticated archive pass."
+      "No interaction identity is published from the archive pass."
     ],
     antiClaims: [
       "The current response counters measure unique people reached",
@@ -698,7 +698,7 @@ export const nycartcFacebookPostClaims = [
     proofClaimIds: [],
     researchInquiryIds: ["INQ-NYCAC-FACEBOOK-POSTS-2026"],
     reviewedAt: "2026-07-14",
-    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
   },
   {
     id: "CLM-NYCAC-FACEBOOK-POSTED-URL-ROUTING",
@@ -819,13 +819,13 @@ export const nycartcFacebookPostInquiries = [
     question:
       "Can the full surviving public Page timeline be recovered and interpreted while distinguishing publication, stakeholder routing, visible interactions, managed content, and individual publisher identity?",
     methods: [
-      "Used two authenticated public Page timeline traversals and checkpointed record fingerprints across 824 scroll operations so a browser interruption could not silently erase the census.",
+      "Used two browser-based public Page timeline traversals and checkpointed record fingerprints across 824 scroll operations so an interruption could not silently erase the census.",
       "After reaching 444 unique records, performed 42 and 41 terminal scroll controls; no additional public timeline record appeared.",
       "Compared the two 444-record identity sets and required an exact set match before classifying the population.",
       "Used Page date filters to confirm no public timeline records in 2015 or 2016 and to locate the first surviving record on January 29, 2017.",
       "Classified every record by form, primary theme, stakeholder-reference groups, direct outbound links, and currently visible interaction signals.",
       "Close-read representative records across Cabaret Law repeal, Office of Nightlife, MARCH transparency, cultural-space care, public resources, and FairRentNYC, and associated existing press and government sources where appropriate.",
-      "Crosschecked a first-party managed-content surface and recorded that later event-maintenance activity exists outside the public timeline.",
+      "Crosschecked separately recovered content-control metadata and recorded that later event-maintenance activity exists outside the public timeline.",
       "Withheld raw text, comments, actor identities, authentication, administrative locators, and Page-management context from the public repository."
     ],
     runAt: "2026-07-14",
@@ -902,7 +902,7 @@ export const nycartcFacebookPostInquiries = [
       "What native account records or collaborator proof notes can establish the historical division of NYC Artist Coalition Facebook publishing labor?",
     methods: [
       "Accessioned Jamie's first-person recollection with its explicit shared-use boundary.",
-      "Reviewed current Page-management and Meta content controls for historical human-level publisher attribution.",
+      "Compared separately recovered public-timeline and content-control metadata for historical human-level publisher attribution.",
       "Separated current account relationship, Page identity, and record-level human authorship."
     ],
     runAt: "2026-07-14",
@@ -913,7 +913,7 @@ export const nycartcFacebookPostInquiries = [
       "No inspected surface exposed a historic human publisher field or quantified the division of publishing labor."
     ],
     limitations: [
-      "Current account access does not establish historical exclusivity.",
+      "Present-day content-control metadata does not establish historical exclusivity.",
       "Memory does not assign a human publisher to any specific post or quantify a publishing share.",
       "Collaborator perspectives and a native Page export have not yet been recovered."
     ],
