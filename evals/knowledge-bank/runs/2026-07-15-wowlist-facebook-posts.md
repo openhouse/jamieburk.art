@@ -184,3 +184,25 @@ is pending from:
 
 - `wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g`
 - `wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h`
+
+## Final holdout acceptance
+
+Both fresh reviewers accepted frozen commit `dc89243c`. The data-integrity
+reviewer independently reconciled the complete capture-date population and
+route inventory, then rejected the two governed-route swaps, all ten adjacent
+projection overclaims, 18 projection-contract mutations, and additional
+population, privacy, credit, interaction, and website-promotion attacks. It
+also forced the ordinary review-lock result to true analytically and confirmed
+that the projection-semantic gate still rejected every wording attack.
+
+The hiring and collective-credit reviewer found the deeper record useful for
+understanding WOW List as organizer-facing product infrastructure and cultural
+information practice. It confirmed that the existing public case study remains
+the clearer hiring projection, while the three new claims stay held, Jamie's
+social-management memory remains an inquiry, project credit remains shared
+with Richard Caceres, and linked organizers, artists, venues, publishers, and
+contributors retain their own work and voices.
+
+The recursive protocol closes with two consecutive accepted holdouts, all 20
+criteria at 5 / 5, no canonical errors, and every WOW List Facebook diagnostic
+passing.

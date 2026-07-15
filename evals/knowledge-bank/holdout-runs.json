@@ -587,6 +587,24 @@
       "blockers": [
         "Two fresh independent judges must verify that passive sole credit, current access recast as historical authorship, distribution recast as agreement, issue context recast as coverage, source relationships recast as partnerships or adoption, route and interaction counts recast as impact, volatility omitted from maxima, capture completeness recast as lifetime history, and an empty bounded Business Suite window recast as historical nonexistence all fail independently of ordinary review checksums."
       ]
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g",
+      "completedAt": "2026-07-15T13:55:13-04:00",
+      "lens": "Fresh independent archival data-integrity, privacy, provenance, and mutation-resistance review of frozen commit dc89243c9b44645d4e71529d39ae5b8fee63ea7a",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h",
+      "completedAt": "2026-07-15T13:53:19-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, archival interpretation reviewer, and checksum-refresh-resistant semantic reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }
