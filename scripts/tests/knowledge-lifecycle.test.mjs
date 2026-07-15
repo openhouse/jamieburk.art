@@ -50,6 +50,18 @@ import {
   googleDriveArchiveSources
 } from "../../apps/www/src/data/knowledge-bank/google-drive-archive-production.ts";
 import {
+  callNycCouncilReposts,
+  callNycMemberAuthoredInteractions,
+  kcSpacesFundHighlights,
+  nycArtistCoalitionCouncilInteractions,
+  olympiaKaziCoalitionIdentityPosts,
+  projectSocialAccounts,
+  socialMediaArchiveClaims,
+  socialMediaArchiveInquiries,
+  socialMediaArchiveIntake,
+  socialMediaArchiveSources
+} from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -71,6 +83,156 @@ const normalizeSourceUrl = (value) =>
 
 test("canonical knowledge lifecycle is valid", () => {
   assert.deepEqual(validateKnowledgeLifecycle(), []);
+});
+
+test("social account inventory preserves project relationships and dated metrics", () => {
+  const recoveredHandles = new Set(
+    projectSocialAccounts
+      .filter((account) => account.status === "recovered")
+      .map((account) => account.handle)
+  );
+  assert.deepEqual(recoveredHandles, new Set([
+    "@CallNYCapp",
+    "@NYCArtC",
+    "@wowlist",
+    "@KCTownHall",
+    "@KCSpacesFund"
+  ]));
+  assert.equal(
+    projectSocialAccounts.filter((account) => account.handle === "@NYCArtC").length,
+    5
+  );
+  assert.equal(
+    projectSocialAccounts.find((account) => account.projectId === "sunday-dinner")
+      .status,
+    "not-recovered"
+  );
+
+  const activeSocialCopy = socialMediaArchiveClaims.flatMap((claim) =>
+    claim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text)
+  ).join("\n");
+  assert.doesNotMatch(activeSocialCopy, /\b(?:followers|following)\b/i);
+});
+
+test("CallNYC social audit enforces the 20-member lower bound and eight authored interactions", () => {
+  assert.equal(callNycCouncilReposts.length, 19);
+  assert.equal(callNycMemberAuthoredInteractions.length, 8);
+
+  const repostPeople = new Set(callNycCouncilReposts.map((event) => event.name));
+  const authoredPeople = new Set(
+    callNycMemberAuthoredInteractions.map((event) => event.name)
+  );
+  const union = new Set([...repostPeople, ...authoredPeople]);
+  assert.equal(union.size, 20);
+  assert.deepEqual(
+    [...authoredPeople].filter((name) => !repostPeople.has(name)),
+    ["Ydanis Rodriguez"]
+  );
+
+  const claim = socialMediaArchiveClaims.find(
+    (item) => item.id === "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP"
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-CALLNYC-COUNCIL-ENGAGEMENT"
+  );
+  assert.match(claim.internalClaim, /at least 20 distinct accounts/);
+  assert.match(claim.internalClaim, /eight members authored/);
+  assert.ok(claim.boundaries.some((item) => /lower bound/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /exactly 20/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /endorsed CallNYC/i.test(item)));
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.match(inquiry.publicSummary, /at least 20/);
+});
+
+test("NYC Artist Coalition count separates direct, mission-relevant, and thread-context records", () => {
+  const directPeople = new Set(
+    nycArtistCoalitionCouncilInteractions.map((event) => event.name)
+  );
+  const missionPeople = new Set(
+    nycArtistCoalitionCouncilInteractions
+      .filter((event) => event.missionRelevant)
+      .map((event) => event.name)
+  );
+  assert.equal(directPeople.size, 5);
+  assert.equal(missionPeople.size, 4);
+  assert.ok(!directPeople.has("Carlina Rivera"));
+  assert.ok(!directPeople.has("Brad Lander"));
+  assert.equal(
+    nycArtistCoalitionCouncilInteractions.find(
+      (event) => event.name === "Justin Brannan"
+    ).missionRelevant,
+    false
+  );
+
+  const claim = socialMediaArchiveClaims.find(
+    (item) => item.id === "CLM-NYCAC-SOCIAL-COUNCIL-ENGAGEMENT"
+  );
+  assert.match(claim.internalClaim, /at least five accounts/);
+  assert.ok(claim.boundaries.some((item) => /Carlina Rivera and Brad Lander/.test(item)));
+  assert.ok(claim.boundaries.some((item) => /Justin Brannan/.test(item)));
+});
+
+test("shared identity evidence credits Jamie's establishment and preserves collaborator authorship", () => {
+  assert.deepEqual(
+    olympiaKaziCoalitionIdentityPosts.map((post) => post.publishedAt.slice(0, 4)),
+    ["2020", "2021", "2022"]
+  );
+  const claim = socialMediaArchiveClaims.find(
+    (item) => item.id === "CLM-SOCIAL-PROJECT-IDENTITY-ESTABLISHMENT"
+  );
+  assert.match(claim.internalClaim, /Jamie states that he established/);
+  assert.ok(claim.boundaries.some((item) => /first-person account/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /every project-account post/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /Olympia Kazi authored every/i.test(item)));
+});
+
+test("other project social archives retain population and role boundaries", () => {
+  const wowClaim = socialMediaArchiveClaims.find(
+    (item) => item.id === "CLM-WOWLIST-SOCIAL-PROVENANCE-SUPPORT"
+  );
+  const kcTownHallClaim = socialMediaArchiveClaims.find(
+    (item) => item.id === "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS"
+  );
+  const kcSpacesClaim = socialMediaArchiveClaims.find(
+    (item) => item.id === "CLM-KCSPACES-SOCIAL-GRANTEE-DOCUMENTATION"
+  );
+  assert.match(wowClaim.internalClaim, /complete recovered @wowlist profile population/);
+  assert.match(kcTownHallClaim.internalClaim, /at least three then-sitting Council-member accounts/);
+  assert.equal(kcSpacesFundHighlights.length, 11);
+  assert.equal(kcSpacesClaim.projections[0].status, "hold");
+  assert.deepEqual(kcSpacesClaim.projections[0].surfaces, []);
+  assert.ok(kcSpacesClaim.antiClaims.some((item) => /complete grant ledger/i.test(item)));
+});
+
+test("social archival production is dispositioned and publishes a reproducible contract", () => {
+  const sourceIds = new Set(socialMediaArchiveSources.map((source) => source.id));
+  const linkedSourceIds = new Set([
+    ...socialMediaArchiveClaims.flatMap((claim) =>
+      claim.evidence.map((relationship) => relationship.sourceId)
+    ),
+    ...socialMediaArchiveInquiries.flatMap((inquiry) => inquiry.sourceIds),
+    ...socialMediaArchiveIntake.flatMap((record) => record.sourceIds)
+  ]);
+  assert.ok([...sourceIds].every((sourceId) => linkedSourceIds.has(sourceId)));
+  assert.ok(
+    socialMediaArchiveIntake.every(
+      (record) => record.status === "matured" && record.claimIds.length > 0
+    )
+  );
+
+  const report = readFileSync(
+    "docs/knowledge-bank/projects/social-media-archive-production.md",
+    "utf8"
+  );
+  assert.match(report, /authenticated X session/);
+  assert.match(report, /at\s+least \*\*20 distinct accounts/);
+  assert.match(report, /at least \*\*five\s+serving Council-member accounts/);
+  assert.match(report, /lower bounds?/i);
+  assert.match(report, /No dedicated account recovered/);
+  assert.match(report, /do not establish who authored every coalition post/i);
+  assert.doesNotMatch(report, /auth_token=|ct0=|bearer [A-Za-z0-9]/i);
 });
 
 test("ten-source expansion is complete and dispositioned", () => {
@@ -120,7 +282,10 @@ test("KC Town Hall Council action is exact, complete, and dispositioned", () => 
       claim.evidence.some((relationship) => relationship.sourceId === sourceId)
     )
   );
-  assert.deepEqual(proof.canonicalClaimIds, [claim.id]);
+  assert.deepEqual(proof.canonicalClaimIds, [
+    claim.id,
+    "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS"
+  ]);
 
   assert.match(projection.text, /CCED Board unanimously recommended \$490,539/);
   assert.match(projection.text, /City Council then adopted/);
@@ -881,7 +1046,7 @@ test("Google Drive findings promote only what the reviewed records establish", (
   );
   assert.deepEqual(
     proofById.get("nyc-artist-coalition-public-web-infrastructure").canonicalClaimIds,
-    [web.id]
+    [web.id, "CLM-SOCIAL-PROJECT-IDENTITY-ESTABLISHMENT"]
   );
   assert.deepEqual(
     proofById.get("sunday-dinner-196-participation-infrastructure").canonicalClaimIds,

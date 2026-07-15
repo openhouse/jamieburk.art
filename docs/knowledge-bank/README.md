@@ -108,3 +108,10 @@ vacancy public-data design, Fair Rent NYC web operations, and Sunday Dinner /
 photographs, recordings, video, brand-system, and cultural-media leads remain
 inquiries where authorship, methodology, role, completion, consent, accuracy,
 context, or rights are unresolved.
+
+The July 15 [social-media archival-production pass](projects/social-media-archive-production.md)
+adds a public-safe account registry and bounded engagement ledgers for CallNYC,
+NYC Artist Coalition and its shared campaigns, WOW List, KC Town Hall, and KC
+Spaces Fund. It keeps project identity, account establishment, shared use,
+individual post authorship, public interaction, endorsement, and policy
+causation as separate claim types.

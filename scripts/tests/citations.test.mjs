@@ -40,10 +40,31 @@ test("multi-source occurrences preserve editorial order", () => {
 });
 
 test("new case-study citations expose only selected public sources", () => {
-  assert.equal(resolveCitationReferences("wowlist").length, 2);
+  assert.equal(resolveCitationReferences("wowlist").length, 5);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
-  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 2);
-  assert.equal(resolveCitationReferences("kc-town-hall").length, 4);
+  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 8);
+  assert.equal(resolveCitationReferences("kc-town-hall").length, 7);
+  assert.deepEqual(
+    resolveCitationOccurrence("callnyc", "social-public-feedback-loop").sources.map(
+      (item) => item.source.id
+    ),
+    [
+      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
+      "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
+    ]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("fair-rent-nyc", "social-identity-system").sources.map(
+      (item) => item.source.id
+    ),
+    [
+      "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
+      "SRC-NYCAC-X-PROFILE-2026",
+      "SRC-NYCAC-OLYMPIA-RELIEF-2020",
+      "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
+      "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
+    ]
+  );
 });
 
 test("Claim resolver returns only active approved projections", () => {

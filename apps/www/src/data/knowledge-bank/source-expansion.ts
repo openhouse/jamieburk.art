@@ -640,7 +640,10 @@ export const sourceExpansionPages = [
     surface: "/work/wowlist",
     sourceOrder: [
       "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
-      "SRC-WOWLIST-SBDIY"
+      "SRC-WOWLIST-SBDIY",
+      "SRC-WOWLIST-X-PROFILE-2026",
+      "SRC-WOWLIST-ORIGIN-2014",
+      "SRC-WOWLIST-SUPPORT-2016"
     ],
     occurrences: [
       {
@@ -650,6 +653,16 @@ export const sourceExpansionPages = [
         sourceIds: [
           "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
           "SRC-WOWLIST-SBDIY"
+        ]
+      },
+      {
+        id: "social-provenance-support",
+        claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-SUPPORT",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-WOWLIST-X-PROFILE-2026",
+          "SRC-WOWLIST-ORIGIN-2014",
+          "SRC-WOWLIST-SUPPORT-2016"
         ]
       }
     ]
@@ -672,7 +685,13 @@ export const sourceExpansionPages = [
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
       "SRC-NYCAC-SAVE-NYC-SPACES",
-      "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22"
+      "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22",
+      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
+      "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
+      "SRC-NYCAC-X-PROFILE-2026",
+      "SRC-NYCAC-OLYMPIA-RELIEF-2020",
+      "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
+      "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
     ],
     occurrences: [
       {
@@ -686,6 +705,24 @@ export const sourceExpansionPages = [
         claimId: "CLM-NYCAC-COMMERCIAL-RENT-TESTIMONY",
         projection: "case-study",
         sourceIds: ["SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22"]
+      },
+      {
+        id: "social-council-engagement",
+        claimId: "CLM-NYCAC-SOCIAL-COUNCIL-ENGAGEMENT",
+        projection: "case-study",
+        sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026"]
+      },
+      {
+        id: "social-identity-system",
+        claimId: "CLM-SOCIAL-PROJECT-IDENTITY-ESTABLISHMENT",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
+          "SRC-NYCAC-X-PROFILE-2026",
+          "SRC-NYCAC-OLYMPIA-RELIEF-2020",
+          "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
+          "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
+        ]
       }
     ]
   },
@@ -696,7 +733,10 @@ export const sourceExpansionPages = [
       "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
       "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
       "SRC-KC-TOWN-HALL-ORDINANCE-240317",
-      "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12"
+      "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
+      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
+      "SRC-KCTH-MISSION-2018",
+      "SRC-KCTH-SURVEY-2018"
     ],
     occurrences: [
       {
@@ -708,6 +748,16 @@ export const sourceExpansionPages = [
           "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
           "SRC-KC-TOWN-HALL-ORDINANCE-240317",
           "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12"
+        ]
+      },
+      {
+        id: "social-public-operations",
+        claimId: "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
+          "SRC-KCTH-MISSION-2018",
+          "SRC-KCTH-SURVEY-2018"
         ]
       }
     ]

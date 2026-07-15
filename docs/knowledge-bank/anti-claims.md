@@ -13,6 +13,12 @@ Do not imply Source-Backed Team Memory is a finished SaaS product.
 Do not imply AI replaces human judgment.
 Do not imply private archives are browsable or available.
 
+Do not describe a repost, reply, quote post, mention, follow, or like as formal
+endorsement, institutional adoption, policy causation, or proof of current
+service status. Social-account metrics are dated discovery metadata, not stable
+impact claims. Attribute a post to its named author or shared account unless a
+separate record establishes individual authorship.
+
 ## HJE
 
 Do not say Jamie caused 2x revenue growth.
@@ -28,9 +34,20 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say every post from `@NYCArtC` was written by Jamie. Jamie's first-person
+account supports establishment of the project identity system; it does not
+identify every administrator or post author. Do not count thread-context posts
+by Carlina Rivera or Brad Lander as direct `@NYCArtC` engagement, and do not
+represent Justin Brannan's unrelated direct reply as mission traction.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
+
+Do not describe the recovered 20-member engagement count as a complete lifetime
+total or say 20 Council members endorsed CallNYC. The authenticated count is a
+lower bound and excludes likes, follows, private interactions, deleted posts,
+hidden replies, and inaccessible activity.
 
 Do not broaden “first CouncilStat hackathon” into a claim about the Council's
 first hackathon, first civic-data hackathon, or first civic-technology
@@ -40,6 +57,11 @@ selected, or a winner without new evidence and review.
 ## WOWList
 
 Do not name collaborators unless approved.
+
+Do not treat 38 recovered profile-reported items as proof that the service is
+currently available or that every requested interface change shipped. Do not
+assert a migration from historical `@wowlistnyc` references to `@wowlist`
+without a recovered public bridge.
 
 ## 196 / Sunday Dinner
 
@@ -56,6 +78,10 @@ Do not present AI-assisted archival review as a human collaborator testimonial.
 Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or
 private Drive documents.
+
+Do not turn 11 recovered `#FUNDED` account highlights into a complete audited
+grantee ledger or infer that Jamie selected grantees, made disbursements, or
+authored the campaign posts.
 
 ## KC Town Hall
 
@@ -84,6 +110,11 @@ Do not publish neighborhood survey responses or contact data, claim the survey
 statistically represented the whole neighborhood, or omit Oak Park Neighborhood
 Association and New Horizon Missionary Baptist Church from the documented
 process.
+
+Do not publish historical phone numbers or addresses recovered in KC Town Hall
+posts. Do not say Jamie authored every project-account post or that public
+dialogue with Council members and KCMO 311 proves endorsement, service totals,
+or completion of the redevelopment proposal.
 
 ## Kansas City Neighborhood Operations
 

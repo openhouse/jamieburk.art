@@ -141,9 +141,9 @@ export const proofClaims: ProofClaim[] = [
       "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
     shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and resident-facing guidance; this portfolio presents it as historical evidence, and Politico New York covered the project in 2016.",
+      "CallNYC turned open constituent-services data into 61 issue pathways with district context and resident-facing guidance. The social layer directed 71 recognition posts to 26 Council accounts; an authenticated audit recovered attributable public interactions from at least 20 serving Council-member accounts, including eight member-authored posts or replies. This portfolio presents the project as historical evidence, and Politico New York covered it in 2016.",
     sourceBasis:
-      "Approved resume language, historical prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+      "Approved resume language, historical prototype context, public open-data context, public GitHub repository, verified Politico New York coverage, and a public-safe authenticated social-account audit.",
     guardrail: "Describe it as historical and independently developed; do not imply official city affiliation or current guidance.",
     doNotSay: [
       "Broader historical hackathon superlatives",
@@ -157,8 +157,11 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    canonicalClaimIds: ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"],
-    lastReviewed: "2026-07-11"
+    canonicalClaimIds: [
+      "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+      "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "fair-rent-campaign-memory",
@@ -246,7 +249,7 @@ export const proofClaims: ProofClaim[] = [
       "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
-      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy. A co-edited 2023 Fair Rent NYC record directly documents one concrete launch and operations cycle.",
+      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: a shared identity system, campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy. Olympia Kazi's attributable posts show the shared identity being used across 2020-2022 without assigning those posts or the whole account to Jamie. A co-edited 2023 Fair Rent NYC record directly documents one concrete launch and operations cycle.",
     sourceBasis:
       "Approved resume language, Jamie confirmation, public campaign websites, and protected review of a Fair Rent NYC web operations record.",
     whyItMatters:
@@ -271,7 +274,10 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    canonicalClaimIds: ["CLM-FAIR-RENT-WEB-OPERATIONS-2023"],
+    canonicalClaimIds: [
+      "CLM-FAIR-RENT-WEB-OPERATIONS-2023",
+      "CLM-SOCIAL-PROJECT-IDENTITY-ESTABLISHMENT"
+    ],
     lastReviewed: "2026-07-15"
   },
   {
@@ -285,7 +291,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, public-safe NYC Artist Coalition project history, and an authenticated audit of direct public account interactions.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -312,7 +318,8 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    canonicalClaimIds: ["CLM-NYCAC-SOCIAL-COUNCIL-ENGAGEMENT"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "wowlist-community-platform",
@@ -346,7 +353,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-WOWLIST-SOCIAL-PROVENANCE-SUPPORT"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -430,7 +438,8 @@ export const proofClaims: ProofClaim[] = [
       "implementation",
       "technical-operations"
     ],
-    lastReviewed: "2026-07-09"
+    canonicalClaimIds: ["CLM-KCSPACES-SOCIAL-GRANTEE-DOCUMENTATION"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",
@@ -465,8 +474,11 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    canonicalClaimIds: ["CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS"],
-    lastReviewed: "2026-07-14"
+    canonicalClaimIds: [
+      "CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS",
+      "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "source-backed-team-memory-method",

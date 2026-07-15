@@ -529,22 +529,25 @@ export const portfolioHistoryInquiries = [
     project: "callnyc",
     question: "Which New York City Council member accounts engaged with CallNYC, through what interaction types, over what period, and against what complete denominator?",
     methods: [
-      "Defined the required account roster, interaction taxonomy, date range, capture method, and missing-post limitations.",
-      "Deferred quantitative scoring until an authenticated or archival timeline capture can be preserved and independently checked."
+      "Reviewed the public CallNYC profile and exact post/activity URLs through Jamie's authenticated X session.",
+      "Reproduced 19 distinct Council-member identities in public repost lists and eight Council-member-authored posts or replies involving CallNYC.",
+      "Deduplicated the repost-list and authored-interaction ledgers by historical person identity and checked service against an official Council roster.",
+      "Reconciled the result against the 71-post, 26-addressed-account, 61-issue-page CallNYC corpus."
     ],
-    runAt: "2026-07-12",
-    resultStatus: "open",
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
     findings: [
-      "Council-account engagement is a potentially useful quantitative proof.",
-      "No complete authenticated or archival engagement dataset was preserved in this public-safe pass."
+      "At least 20 distinct serving Council-member accounts engaged publicly with CallNYC: 19 public repost-list identities plus Ydanis Rodriguez's separate quote post.",
+      "Eight Council members authored posts or replies explicitly involving CallNYC.",
+      "Twenty corrects an earlier working count of 19; eight corrects an earlier authored-interaction count of six."
     ],
     limitations: [
-      "Public timelines may be incomplete or access-limited.",
-      "Deleted posts and changed account identities can affect counts.",
-      "A defensible metric requires a declared denominator and deduplication method."
+      "Twenty is a recovered lower bound, not a complete lifetime denominator.",
+      "Likes, follows, private interactions, deleted posts, hidden replies, and inaccessible platform activity are excluded.",
+      "Current handles can differ from interaction-time handles, and interaction does not establish endorsement, adoption, or official City status."
     ],
-    sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"],
-    publicSummary: "Council-account engagement with CallNYC remains an open quantitative research inquiry pending a complete, reproducible capture and denominator."
+    sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"],
+    publicSummary: "An authenticated, identity-deduplicated audit recovered attributable CallNYC interactions from at least 20 serving Council-member accounts, including eight member-authored posts or replies; the result remains a lower bound rather than a complete platform census."
   },
   {
     id: "INQ-PHOTO-ARCHIVE-CLAIM-DISCOVERY",
