@@ -12,6 +12,7 @@ import { nycacSourceExpansionII } from "./nycac-source-expansion-ii.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07.ts";
+import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -38,6 +39,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
+    ...wowListSocialPopulationJuly2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacInstitutionalCapacity.intakeItems,
@@ -68,6 +70,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
     ...socialMediaProductionJuly2026.observations,
+    ...wowListSocialPopulationJuly2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacInstitutionalCapacity.observations,
@@ -202,6 +205,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
     ...socialMediaProductionJuly2026.sources,
+    ...wowListSocialPopulationJuly2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...nycacImplementationEvidence.sources,
     ...nycacSourceExpansion.sources,
@@ -305,6 +309,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
     ...socialMediaProductionJuly2026.claims,
+    ...wowListSocialPopulationJuly2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacInstitutionalCapacity.claims,
@@ -355,6 +360,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
+    ...wowListSocialPopulationJuly2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
@@ -465,11 +471,14 @@ const knowledgeBankInput = {
     id: "wowlist",
     surface: "/work/wowlist",
     sourceOrder: [
+      "SRC-WOWLIST-X-POPULATION-MANIFEST",
       "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
-      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+      "SRC-WOWLIST-SBDIY-ADOPTION"
     ],
     occurrences: [
-      { id: "social-provenance-and-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"] }
+      { id: "social-provenance-and-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-WOWLIST-X-POPULATION-MANIFEST", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] }
     ]
   }, {
     id: "196-sunday-dinner",

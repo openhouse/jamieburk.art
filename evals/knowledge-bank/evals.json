@@ -513,6 +513,47 @@
         "SRC-CALLNYC-311-BUDDY"
       ]
     },
+    "wowListFullPopulation": {
+      "reviewedAt": "2026-07-15",
+      "manifestPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
+      "reportPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "expectedPopulationCount": 38,
+      "expectedRecoveredCount": 38,
+      "expectedNotRecoveredCount": 0,
+      "expectedRelationshipCounts": {
+        "project-post": 16,
+        "project-reply": 6,
+        "project-repost": 16
+      },
+      "expectedPostedUrlCount": 35,
+      "expectedAuthoredOrReplyCount": 22,
+      "expectedRepostBearingPostCount": 10,
+      "expectedDisplayedReplyCount": 2,
+      "expectedDisplayedRepostCount": 20,
+      "expectedDisplayedLikeCount": 21,
+      "expectedPublicReposterAppearanceCount": 16,
+      "expectedDistinctPublicReposterCount": 8,
+      "expectedUnassignedRepostCount": 4,
+      "expectedExternalAdoptionPostCount": 8,
+      "expectedIntakeCount": 3,
+      "expectedObservationCount": 8,
+      "expectedSourceCount": 8,
+      "expectedClaimCount": 1,
+      "expectedInquiryCount": 1,
+      "claimId": "CLM-WOWLIST-SOCIAL-POPULATION-ARCHIVE",
+      "inquiryId": "INQ-WOWLIST-X-EXTERNAL-ENGAGEMENT",
+      "publicClaimId": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+      "independentUseSourceIds": [
+        "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+        "SRC-WOWLIST-SBDIY-ADOPTION"
+      ],
+      "missionContextSourceIds": [
+        "SRC-WOWLIST-GRASSTRONAUT-HOMEWORK-2015",
+        "SRC-WOWLIST-GOOD-TIMES-ZINES-2015"
+      ],
+      "conveningContextSourceId": "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015",
+      "historicalProductScopeSourceId": "SRC-WOWLIST-TRADEMARK-RECORD"
+    },
     "agencyGraph": {
       "expectedEntityCount": 31,
       "expectedRelationCount": 31,
@@ -644,6 +685,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 110 profile-reported population slots have explicit dispositions; recovered content, posted URLs, issue distribution, engagement identities, source roles, unresolved records, and projection boundaries remain complete, reproducible, and non-inflationary."
+    },
+    {
+      "id": "KB-EVAL-WOWLIST-FULL-POPULATION",
+      "label": "WOW List full-population archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 38 profile-reported objects, 35 posted URLs, historical workflows, source roles, account-owned engagement, bounded external adoption, authorship limits, and selective projection remain complete, reproducible, and non-inflationary."
     }
   ],
   "hillClimb": {

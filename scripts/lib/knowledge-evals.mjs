@@ -7,6 +7,7 @@ import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac
 import { callNycSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/callnyc-social-population-2026-07.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
+import { wowListSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/wowlist-social-population-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
 
@@ -1272,9 +1273,132 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       callNycManifest.publicSafety.containsPrivateSessionData === false &&
       !/\/Users\/|\/Volumes\/|\/private\/tmp|cookie|auth token|session token/i.test(callNycFullArchiveText)
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries];
+  const wowListFull = suite.pilot.wowListFullPopulation;
+  const wowListFullIntakes = wowListSocialPopulationJuly2026.intakeItems.map((item) => intakeById.get(item.id));
+  const wowListFullObservations = wowListSocialPopulationJuly2026.observations.map((item) => observationById.get(item.id));
+  const wowListFullSources = wowListSocialPopulationJuly2026.sources.map((item) => sourceById.get(item.id));
+  const wowListFullClaims = wowListSocialPopulationJuly2026.claims.map((item) => claimById.get(item.id));
+  const wowListFullInquiries = wowListSocialPopulationJuly2026.researchInquiries.map((item) => inquiryById.get(item.id));
+  const wowListManifestPath = path.join(repoRoot, wowListFull.manifestPath);
+  const wowListReportPath = path.join(repoRoot, wowListFull.reportPath);
+  const wowListManifest = overrides.wowListPopulation ?? JSON.parse(readFileSync(wowListManifestPath, "utf8"));
+  const wowListReport = overrides.wowListPopulationReport ?? readFileSync(wowListReportPath, "utf8");
+  const wowListRecoveredRows = wowListManifest.population.filter((row) => row.populationDisposition === "recovered");
+  const wowListNotRecoveredRows = wowListManifest.population.filter((row) => row.populationDisposition === "not-recovered");
+  const wowListRecoveredIds = new Set(wowListRecoveredRows.map((row) => row.statusId));
+  const wowListRelationshipCounts = wowListRecoveredRows.reduce((counts, row) => {
+    counts[row.relationship] = (counts[row.relationship] ?? 0) + 1;
+    return counts;
+  }, {});
+  const wowListShortUrls = new Set(wowListManifest.postedUrlInventory.map((item) => item.shortUrl));
+  const wowListPublicReposterHandles = wowListManifest.publicReposterAudit.flatMap((item) => item.publicReposterHandles);
+  const wowListDistinctPublicReposters = new Set(wowListPublicReposterHandles.map((handle) => handle.toLowerCase()));
+  const wowListExternalAdoptionIds = new Set(wowListManifest.externalAdoptionEvidence.map((item) => item.statusId));
+  const wowListSourceRoles = new Map(wowListManifest.sourceReadings.map((item) => [item.sourceId, item.role]));
+  const wowListPopulationClaim = claimById.get(wowListFull.claimId);
+  const wowListPopulationInquiry = inquiryById.get(wowListFull.inquiryId);
+  const wowListPublicClaim = claimById.get(wowListFull.publicClaimId);
+  const wowListFullArchiveText = JSON.stringify({
+    intakes: wowListFullIntakes,
+    observations: wowListFullObservations,
+    sources: wowListFullSources,
+    claims: wowListFullClaims,
+    inquiries: wowListFullInquiries,
+    manifest: wowListManifest
+  });
+  const wowListFullPopulationComplete = Boolean(
+    existsSync(wowListManifestPath) &&
+      existsSync(wowListReportPath) &&
+      wowListManifest.reviewedAt === wowListFull.reviewedAt &&
+      wowListManifest.account === "@wowlist" &&
+      wowListManifest.population.length === wowListFull.expectedPopulationCount &&
+      wowListManifest.populationSummary.profileDisplayedPostCount === wowListFull.expectedPopulationCount &&
+      wowListManifest.populationSummary.populationDispositionCount === wowListFull.expectedPopulationCount &&
+      wowListRecoveredRows.length === wowListFull.expectedRecoveredCount &&
+      wowListNotRecoveredRows.length === wowListFull.expectedNotRecoveredCount &&
+      wowListRecoveredIds.size === wowListFull.expectedRecoveredCount &&
+      Object.entries(wowListFull.expectedRelationshipCounts).every(([relationship, count]) =>
+        wowListRelationshipCounts[relationship] === count && wowListManifest.populationSummary.relationshipCounts[relationship] === count
+      ) &&
+      wowListManifest.populationSummary.contentRecoveryRate === 1 &&
+      /complete profile-population snapshot/i.test(wowListManifest.populationSummary.boundary) &&
+      wowListRecoveredRows.every((row) =>
+        row.statusUrl.endsWith(`/status/${row.statusId}`) &&
+        row.missionTags.length > 0 &&
+        row.workflowTags.length > 0 &&
+        row.stakeholderGroups.length > 0 &&
+        !Object.hasOwn(row, "text")
+      ) &&
+      wowListManifest.contentSystemSummary.wowListAuthoredOrReplyPostCount === wowListFull.expectedAuthoredOrReplyCount &&
+      wowListManifest.contentSystemSummary.uniquePostedShortUrlCount === wowListFull.expectedPostedUrlCount &&
+      wowListManifest.contentSystemSummary.resolvedDestinationCount === wowListFull.expectedPostedUrlCount &&
+      wowListManifest.postedUrlInventory.length === wowListFull.expectedPostedUrlCount &&
+      wowListShortUrls.size === wowListFull.expectedPostedUrlCount &&
+      wowListManifest.postedUrlInventory.every((item) =>
+        item.shortUrl.startsWith("https://t.co/") && item.resolvedUrl.startsWith("https://") && wowListRecoveredIds.has(item.statusId)
+      ) &&
+      wowListManifest.engagementSummary.wowListAuthoredOrReplyPostCount === wowListFull.expectedAuthoredOrReplyCount &&
+      wowListManifest.engagementSummary.wowListAuthoredOrReplyPostsWithDisplayedReposts === wowListFull.expectedRepostBearingPostCount &&
+      wowListManifest.engagementSummary.displayedAccountOwnedEngagement.replies === wowListFull.expectedDisplayedReplyCount &&
+      wowListManifest.engagementSummary.displayedAccountOwnedEngagement.reposts === wowListFull.expectedDisplayedRepostCount &&
+      wowListManifest.engagementSummary.displayedAccountOwnedEngagement.likes === wowListFull.expectedDisplayedLikeCount &&
+      wowListManifest.engagementSummary.currentlyPublicReposterAppearances === wowListFull.expectedPublicReposterAppearanceCount &&
+      wowListManifest.engagementSummary.distinctCurrentlyPublicReposterAccounts === wowListFull.expectedDistinctPublicReposterCount &&
+      wowListManifest.engagementSummary.displayedRepostsWithoutPublicAccountIdentity === wowListFull.expectedUnassignedRepostCount &&
+      wowListManifest.engagementSummary.boundedExternalAdoptionPostCount === wowListFull.expectedExternalAdoptionPostCount &&
+      wowListManifest.engagementSummary.boundaries.some((boundary) => /external posts reposted by WOW List belong to their original authors/i.test(boundary)) &&
+      wowListManifest.engagementSummary.boundaries.some((boundary) => /Like identities were not audited/i.test(boundary)) &&
+      wowListManifest.publicReposterAudit.length === wowListFull.expectedRepostBearingPostCount &&
+      wowListManifest.publicReposterAudit.every((item) =>
+        wowListRecoveredIds.has(item.statusId) && item.displayedReposts === item.publicReposterHandles.length + item.publicIdentityRemainder
+      ) &&
+      wowListPublicReposterHandles.length === wowListFull.expectedPublicReposterAppearanceCount &&
+      wowListDistinctPublicReposters.size === wowListFull.expectedDistinctPublicReposterCount &&
+      wowListManifest.externalAdoptionEvidence.length === wowListFull.expectedExternalAdoptionPostCount &&
+      wowListExternalAdoptionIds.size === wowListFull.expectedExternalAdoptionPostCount &&
+      wowListManifest.externalAdoptionEvidence.every((item) =>
+        item.statusUrl.endsWith(`/status/${item.statusId}`) && item.handle.startsWith("@") && item.signal.length > 20
+      ) &&
+      wowListFull.independentUseSourceIds.every((sourceId) =>
+        ["independent-product-tutorial", "external-organizer-adoption"].includes(wowListSourceRoles.get(sourceId))
+      ) &&
+      wowListFull.missionContextSourceIds.every((sourceId) => wowListSourceRoles.get(sourceId) === "mission-context") &&
+      wowListSourceRoles.get(wowListFull.conveningContextSourceId) === "convening-context" &&
+      wowListSourceRoles.get(wowListFull.historicalProductScopeSourceId) === "historical-product-scope" &&
+      wowListFullIntakes.length === wowListFull.expectedIntakeCount &&
+      wowListFullObservations.length === wowListFull.expectedObservationCount &&
+      wowListFullSources.length === wowListFull.expectedSourceCount &&
+      wowListFullClaims.length === wowListFull.expectedClaimCount &&
+      wowListFullInquiries.length === wowListFull.expectedInquiryCount &&
+      wowListFullIntakes.every((intake) => intake?.disposition === "integrated" && intake.visibility === "public-safe" && intake.boundaries.length >= 2) &&
+      wowListFullObservations.every((observation) => observation?.locator && observation.limitations.length >= 2 && observation.publicSafe === true) &&
+      wowListFullSources.every((source) => source?.visibility === "public" && source.canonicalUrl.startsWith("https://") && source.doesNotEstablish.length >= 4) &&
+      wowListPopulationClaim?.status === "confirmed-with-boundary" &&
+      wowListPopulationClaim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0) &&
+      wowListPopulationClaim.boundaries.length >= 4 &&
+      wowListPopulationClaim.antiClaims.length >= 7 &&
+      wowListPopulationInquiry?.resultStatus === "partially-recovered" &&
+      wowListPopulationInquiry.findings.length >= 3 &&
+      wowListPopulationInquiry.limitations.length >= 2 &&
+      wowListPublicClaim?.projections.some((projection) =>
+        projection.status === "active" &&
+        /complete recovered public-account population/.test(projection.text) &&
+        /weekly email/.test(projection.text) &&
+        /independent organizers/.test(projection.text)
+      ) &&
+      /100 percent profile-population recovery/.test(wowListReport) &&
+      /Original-author metrics on reposted external posts are not WOW List[\n ]+traction/.test(wowListReport) &&
+      /not a complete adoption census/.test(wowListReport) &&
+      antiClaimsText.includes("38-object profile census") &&
+      antiClaimsText.includes("16 external posts reposted by") &&
+      antiClaimsText.includes("eight externally authored posts") &&
+      wowListManifest.publicSafety.containsRawTweetBodies === false &&
+      wowListManifest.publicSafety.containsPrivateSessionData === false &&
+      !/\/Users\/|\/Volumes\/|\/private\/tmp|cookie|auth token|session token/i.test(wowListFullArchiveText)
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -1607,6 +1731,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [callNycFullPopulationComplete
         ? `${callNycManifest.population.length} population dispositions preserve ${callNycRecoveredRows.length} recovered objects and ${callNycNotRecoveredRows.length} unresolved records; ${callNycManifest.postedUrlInventory.length} posted URLs, ${callNycManifest.contentSystemSummary.recognitionPostCount} recognition posts, ${callNycManifest.contentSystemSummary.recognitionDistinctIssuePageCount} issue pages, ${callNycCouncilNames.size} Council-member reposters, and ${callNycAuthoredIds.size} member-authored interactions pass completeness, role, attribution, and projection checks`
         : "CallNYC full-population production is missing a disposition, recovered-object boundary, URL, source role, repost attribution limit, Council identity, governed lifecycle record, or selective projection"]
+    },
+    {
+      criterionId: "KB-EVAL-WOWLIST-FULL-POPULATION",
+      score: score(wowListFullPopulationComplete),
+      evidence: [wowListFullPopulationComplete
+        ? `${wowListManifest.population.length} recovered profile objects, ${wowListManifest.postedUrlInventory.length} resolved posted URLs, ${wowListManifest.publicReposterAudit.length} account-owned repost audits, ${wowListDistinctPublicReposters.size} named public reposter accounts, and ${wowListExternalAdoptionIds.size} bounded external-use examples pass completeness, source-role, authorship, traction, and projection checks`
+        : "WOW List full-population production is missing a profile object, resolved URL, workflow classification, source role, account-owned engagement boundary, external-use example, governed lifecycle record, or selective projection"]
     }
   ];
 

@@ -121,3 +121,11 @@ and its
 [110-row machine-readable manifest](data/callnyc-x-population-2026-07-15.json)
 for the full-population disposition pass on `@CallNYCapp`, the posted-URL
 inventory, issue-distribution analysis, and complete public-repost audit.
+
+See
+[projects/wowlist-social-population.md](projects/wowlist-social-population.md)
+and its
+[38-row machine-readable manifest](data/wowlist-x-population-2026-07-15.json)
+for the complete recovered `@wowlist` profile population, all 35 posted URLs,
+historical product-workflow findings, bounded external-adoption evidence, and
+the account-owned engagement audit.

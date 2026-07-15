@@ -58,11 +58,23 @@ selected, or a winner without new evidence and review.
 
 ## WOWList
 
-Do not name collaborators unless approved.
-
 Do not use the public account as proof that Jamie alone created WOW List, that
-the surviving timeline is complete, or that the historical product is still
+Jamie authored every post, that the 38-object profile census is a complete
+product or lifetime engagement archive, or that the historical product is still
 operating.
+
+Do not count reply, repost, or like metrics on the 16 external posts reposted by
+WOW List as WOW List traction. Those metrics belong to the original authors.
+
+Do not turn eight externally authored posts linking WOW List pages into a
+complete adoption census, formal partnership claim, or proof of the platform's
+aggregate scale. Keep account establishment, administration, and post-level
+authorship separate.
+
+Do not present Grasstronaut, Good Times, or the Allied Media Conference page as
+direct coverage of WOW List. They supply mission or convening context. Do not
+use the historical trademark record as proof of operation, adoption, or
+outcomes.
 
 ## Social account authorship
 

@@ -14,9 +14,14 @@ import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-
 const suite = loadKnowledgeEvalSuite();
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const callNycPopulationPath = path.join(repoRoot, suite.pilot.callNycFullPopulation.manifestPath);
+const wowListPopulationPath = path.join(repoRoot, suite.pilot.wowListFullPopulation.manifestPath);
 
 function loadCallNycPopulation() {
   return JSON.parse(readFileSync(callNycPopulationPath, "utf8"));
+}
+
+function loadWowListPopulation() {
+  return JSON.parse(readFileSync(wowListPopulationPath, "utf8"));
 }
 
 test("knowledge-bank gate invalidates stale holdouts after the eval suite changes", () => {
@@ -1637,6 +1642,67 @@ test("CallNYC full-population eval rejects contextual reporting as direct covera
   gizmodo.role = "direct-project-coverage";
   const result = evaluateKnowledgeBank(suite, { callNycPopulation: manifest });
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("WOW List full-population production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 5);
+
+  const manifest = loadWowListPopulation();
+  assert.equal(manifest.population.length, 38);
+  assert.equal(manifest.population.filter((row) => row.populationDisposition === "recovered").length, 38);
+  assert.equal(manifest.population.filter((row) => row.populationDisposition === "not-recovered").length, 0);
+});
+
+test("WOW List full-population eval rejects a dropped profile object", () => {
+  const manifest = loadWowListPopulation();
+  manifest.population.pop();
+  const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("WOW List full-population eval rejects relationship inflation", () => {
+  const manifest = loadWowListPopulation();
+  manifest.population.find((row) => row.relationship === "project-repost").relationship = "project-post";
+  const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("WOW List full-population eval rejects original-author metrics as project traction", () => {
+  const manifest = loadWowListPopulation();
+  manifest.engagementSummary.boundaries = manifest.engagementSummary.boundaries.filter(
+    (boundary) => !/external posts reposted by WOW List belong to their original authors/i.test(boundary)
+  );
+  const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("WOW List full-population eval rejects mission context as product-use evidence", () => {
+  const manifest = loadWowListPopulation();
+  manifest.sourceReadings.find((item) => item.sourceId === "SRC-WOWLIST-GOOD-TIMES-ZINES-2015").role = "independent-product-tutorial";
+  const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("WOW List full-population eval rejects a duplicated external-adoption identity", () => {
+  const manifest = loadWowListPopulation();
+  manifest.externalAdoptionEvidence[1].statusId = manifest.externalAdoptionEvidence[0].statusId;
+  manifest.externalAdoptionEvidence[1].statusUrl = manifest.externalAdoptionEvidence[0].statusUrl;
+  const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("WOW List public manifest rejects raw post-body leakage", () => {
+  const manifest = loadWowListPopulation();
+  manifest.population[0].text = "raw body should not be public";
+  const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
   assert.equal(result.accepted, false);
 });
 

@@ -8,7 +8,10 @@ discovery, claim maturation, selective site projection, and eval integration.
 **Status note:** the preliminary CallNYC count in the original run was
 superseded later the same day by the
 [full-population pass](2026-07-15-callnyc-full-social-population.md). Current
-CallNYC claims use that later record.
+CallNYC claims use that later record. The preliminary WOW List finding was also
+superseded by its [full-population pass](2026-07-15-wowlist-full-social-population.md),
+which reconciles all 38 profile-reported objects and governs current WOW List
+claims.
 
 ## Objective
 

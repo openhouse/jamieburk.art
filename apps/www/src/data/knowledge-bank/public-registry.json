@@ -403,6 +403,68 @@
       ]
     },
     {
+      "id": "SRC-WOWLIST-X-POPULATION-MANIFEST",
+      "title": "WOW List X full-population and engagement manifest",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List X full-population and engagement manifest, July 15, 2026.",
+      "publicNote": "A public-safe 38-row manifest with resolved URLs, bounded classifications, named public repost identities, and external-adoption examples; raw post bodies and session data are excluded.",
+      "doesNotEstablish": [
+        "a complete product archive",
+        "a complete lifetime engagement census",
+        "individual post authorship",
+        "current product availability",
+        "formal institutional adoption"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+      "title": "SHELBY'S WOWLIST TUTORIAL - for my new fave events website",
+      "organization": "Shelby Turner / YouTube",
+      "author": "Shelby Turner",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-08-14",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.youtube.com/watch?v=nQg47LtixPI",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Shelby Turner, 'SHELBY'S WOWLIST TUTORIAL - for my new fave events website,' YouTube, 2015.",
+      "publicNote": "Public video metadata and the account post identify an independently published WOW List tutorial.",
+      "doesNotEstablish": [
+        "complete tutorial contents without transcript review",
+        "platform-wide adoption",
+        "formal partnership",
+        "Jamie's authorship",
+        "current product availability"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-SBDIY-ADOPTION",
+      "title": "Santa Barbara DIY resource page",
+      "organization": "Santa Barbara DIY",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.sbdiy.org/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Santa Barbara DIY resource page, accessed July 15, 2026.",
+      "publicNote": "The page directs visitors to add events to the wowlist.org/sbdiy calendar and links its WOW List page.",
+      "doesNotEstablish": [
+        "current WOW List availability",
+        "usage volume",
+        "formal partnership",
+        "Jamie's individual role",
+        "city-ecosystem scale"
+      ]
+    },
+    {
       "id": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
       "title": "Second Committee Substitute for Resolution No. 190649",
       "organization": "Council of Kansas City, Missouri",
@@ -1215,7 +1277,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "WOW List's public account preserves the project's social origin and operating texture: its first recovered post credits Richard and Jamie and connects the platform to Sunday Dinner calendars, while a later support thread explains how organizers joined, published events, and followed community calendars.",
+          "text": "WOW List's complete recovered public-account population preserves the project's social origin and operating texture: the first authored post credits Richard and Jamie and connects the platform to Sunday Dinner calendars; support threads explain joining, publishing, profiles, followed lists, and weekly email; and independent organizers published a tutorial and linked local event calendars through the system.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1224,6 +1286,17 @@
         }
       ],
       "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-X-POPULATION-MANIFEST",
+          "relationship": "direct-support",
+          "supports": [
+            "complete 38-object profile population",
+            "historical workflow classifications",
+            "bounded external adoption ledger"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
         {
           "sourceId": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
           "relationship": "direct-support",
@@ -1243,11 +1316,30 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "independent organizer-facing tutorial"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SBDIY-ADOPTION",
+          "relationship": "direct-support",
+          "supports": [
+            "external local-calendar adoption"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
         "Keep credit shared with Richard, Sunday Dinner participants, organizers, and other collaborators.",
-        "Describe historical workflows rather than current service availability."
+        "Describe historical workflows rather than current service availability.",
+        "Treat external-link search results as bounded evidence rather than a complete adoption census."
       ]
     },
     {
@@ -1870,8 +1962,11 @@
       "id": "wowlist",
       "surface": "/work/wowlist",
       "sourceOrder": [
+        "SRC-WOWLIST-X-POPULATION-MANIFEST",
         "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
-        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+        "SRC-WOWLIST-SBDIY-ADOPTION"
       ],
       "occurrences": [
         {
@@ -1879,8 +1974,11 @@
           "claimId": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
           "projection": "case-study",
           "sourceIds": [
+            "SRC-WOWLIST-X-POPULATION-MANIFEST",
             "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
-            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+            "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+            "SRC-WOWLIST-SBDIY-ADOPTION"
           ]
         }
       ]

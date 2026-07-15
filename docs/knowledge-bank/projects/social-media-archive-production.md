@@ -134,18 +134,42 @@ individual causal credit.
 
 ## WOW List
 
-The bounded review recovered 37 of 38 posts displayed by the profile.
+Reconciled Posts and Replies crawls recovered all 38 posts displayed by the
+profile: 16 ordinary WOW List-authored posts, six replies, and 16 reposted
+external posts spanning February 2014 through January 2017. The population
+contains 35 distinct posted short URLs; all 35 resolved to public destinations
+during the review.
 
 - The [first recovered authored post](https://x.com/wowlist/status/433671630837919744)
   credits “Richard & Jamie” and says the project grew from WOW List calendars
   made at Sunday Dinner.
+- April 2015 replies explain followed local calendars, profiles, publishing an
+  event, and adding one event to multiple lists.
 - A [2016 product-support thread](https://x.com/wowlist/status/771457416298921985)
-  describes WOW List as a DIY community-calendar project from Sunday Dinner and
-  explains joining, adding events, profiles, and followed calendars.
+  explains joining NYCdiy, adding shows, and receiving the weekly email.
+- [Shelby Turner's tutorial](https://www.youtube.com/watch?v=nQg47LtixPI)
+  and the [Santa Barbara DIY resource page](https://www.sbdiy.org/) independently
+  document organizer-facing use.
+- A bounded public search recovered eight independently authored posts linking
+  WOW List event or profile pages across music, performance, a neighborhood
+  forum, and an all-ages benefit.
 
-The account also routed event and movement information across city scenes. The
-strongest portfolio use is the direct shared provenance and historical product
-workflow, not a claim that every repost or calendar belonged to Jamie.
+The 22 account-authored or reply posts displayed 20 reposts, 21 likes, and two
+replies at review time. All 10 with displayed reposts were audited; current
+public lists exposed 16 account appearances from eight distinct accounts, while
+four displayed reposts had no public identity. Original-author metrics on the
+16 reposted external posts are excluded from WOW List traction.
+
+The account also routed event, movement, and mutual-aid information across city
+scenes, including Black Lives Matter demonstrations, post-election marches,
+Standing Rock support, Ghost Ship relief and vigils, and support for DIY spaces.
+The strongest portfolio use is shared provenance, organizer workflow, and
+bounded independent adoption, not a claim that every post belonged to Jamie or
+that the historical product remains available.
+
+The complete method, URL inventory, source-role table, adoption ledger, and
+anti-inflation boundaries are in the
+[WOW List full social-population report](wowlist-social-population.md).
 
 ## KC Town Hall
 
