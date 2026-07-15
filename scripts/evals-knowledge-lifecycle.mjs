@@ -91,6 +91,18 @@ const kcTownHallPhaseOneSourceIds = [
 const kcTownHallTransitionSourceId =
   "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15";
 
+const googleDriveProtectedSourceIds = [
+  "SRC-JAMIE-SHARED-DRIVE-PRACTICE-2026-07-15",
+  "SRC-GDRIVE-PORTFOLIO-ARCHIVE-REVIEW-2026-07-15",
+  "SRC-GDRIVE-FAIR-RENT-IMPLEMENTATION-2023",
+  "SRC-GDRIVE-196-ONBOARDING-2023"
+];
+
+const googleDrivePromotedClaimIds = [
+  "CLM-FAIR-RENT-WEB-IMPLEMENTATION-2023",
+  "CLM-196-ARTIST-RESIDENCY-ONBOARDING-2023"
+];
+
 check(
   "Source quality",
   "Every supplied and portfolio-expansion URL has a canonical source record",
@@ -174,6 +186,23 @@ check(
 );
 
 check(
+  "Source quality",
+  "Shared Drive evidence stays protected and omits underlying URLs",
+  6,
+  googleDriveProtectedSourceIds.every((id) => {
+    const source = sourceById.get(id);
+    return source?.visibility === "protected" &&
+      source.preservationStatus === "private" &&
+      source.protectedLocatorId &&
+      !source.canonicalUrl &&
+      !source.archiveUrl &&
+      !source.assetUrl &&
+      source.doesNotEstablish.length >= 4;
+  }),
+  true
+);
+
+check(
   "Atomic observations",
   "Every researched intake links atomic observations",
   5,
@@ -203,6 +232,31 @@ check(
     knowledgeBank.observations.some(
       (observation) => observation.project === "nyc-artist-coalition"
     )
+);
+
+check(
+  "Atomic observations",
+  "Shared Drive ingestion preserves handoff, Fair Rent, and 196 as separate observations",
+  5,
+  [
+    "OBS-GDRIVE-JAMIE-HANDOFF-PRACTICE",
+    "OBS-GDRIVE-FAIR-RENT-DELIVERY-STATE",
+    "OBS-GDRIVE-196-ONBOARDING-WORKFLOW"
+  ].every((id) => observationById.get(id)?.status === "verified")
+);
+
+check(
+  "Claim maturity",
+  "Shared Drive projections retain explicit scope and anti-claim boundaries",
+  6,
+  googleDrivePromotedClaimIds.every((id) => {
+    const claim = claimById.get(id);
+    return claim?.status === "confirmed-with-boundary" &&
+      claim.boundaries.length >= 2 &&
+      claim.antiClaims.length >= 3 &&
+      claim.evidence.every((item) => sourceById.has(item.sourceId));
+  }),
+  true
 );
 
 check(

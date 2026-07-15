@@ -48,6 +48,12 @@ Create one source record per artifact. Record what the source supports and what
 it does not establish. Prefer primary government or institutional records for
 formal outcomes and independent reporting for role attribution and context.
 
+For collaborative workspaces such as Shared Drives, treat access and artifact
+presence as research leads rather than authorship. Keep workspace names, file
+metadata, collaborators, raw structures, and contents outside the public repo
+unless they are independently public and necessary. Establish role, authorship,
+rights, consent, adoption, and outcomes as separate propositions.
+
 ### 4. Decompose
 
 Write atomic observations. Separate direct action, collective accomplishment,

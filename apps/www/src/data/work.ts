@@ -220,6 +220,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Implementation and handoff record",
+        description:
+          "A dated 2023 working record documents a FairRentNYC site-live state, an administrative handoff, restored campaign email service, and still-open work.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -248,7 +254,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, a recovered 44-article campaign press corpus, and protected operating-plan, running-minutes, public-data, and legislative-provenance artifacts.",
+      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, a recovered 44-article campaign press corpus, a protected 2023 web implementation record, and protected operating-plan, running-minutes, public-data, and legislative-provenance artifacts.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -265,13 +271,14 @@ const workItemsInput = [
       "Shared campaign-memory architecture for decisions, ownership, open questions, city/state lanes, consent levels, and next steps",
       "Running minutes, decision records, action trackers, and an unofficial legislative provenance redline",
       "Jamie-built campaign websites for Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC",
+      "A dated 2023 implementation record documents a FairRentNYC site-live state, an administrative handoff, restored campaign email service, and still-open work",
       "Recovered campaign press corpus: 45 placements and 44 distinct articles across four campaign sites",
       "Legal/policy questions organized for collaborators",
       "An authored open-data proposal for aggregate rent and vacancy indicators with privacy and licensing safeguards"
     ],
     knownOpenProtected: {
       known:
-        "Contemporaneous reporting identifies Jamie as a founding member and organizer of NYC Artist Coalition. Jamie directly confirms that he made the Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC websites; the recovered press corpus documents the wider collective campaign context.",
+        "Contemporaneous reporting identifies Jamie as a founding member and organizer of NYC Artist Coalition. Jamie directly confirms that he made the Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC websites; a protected 2023 implementation record corroborates FairRentNYC delivery and handoff, and the recovered press corpus documents the wider collective campaign context.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -453,10 +460,16 @@ const workItemsInput = [
         description:
           "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
         type: "workflow"
+      },
+      {
+        title: "Artist onboarding",
+        description:
+          "A 2023 record signed by Jamie documents invitation, pre-arrival space planning, independent access arrangements, and protected handoff records.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
-    capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support"],
+    capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support", "Access Coordination"],
     links: [
       {
         label: "Greene Hill Food Co-op profile",
@@ -466,7 +479,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Greene Hill Food Co-op's public 2017 profile, public-safe aggregate history, and private participant records intentionally omitted.",
+      "Greene Hill Food Co-op's public 2017 profile, a protected 2023 artist-onboarding record signed by Jamie, and private participant records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -474,6 +487,7 @@ const workItemsInput = [
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
       "Weekly community-open Sunday dinners independently documented in 2017",
+      "A 2023 onboarding record documents invitation, pre-arrival space planning, and independent access arrangements",
       "300+ hosted gatherings",
       "20+ resident artists supported",
       "Onboarding and participation systems",
@@ -481,7 +495,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie and Julie Fredenberg co-hosted a weekly community-open dinner; Jamie created and sustained participation infrastructure across the longer-running gathering and artist-residency context.",
+        "Jamie and Julie Fredenberg co-hosted a weekly community-open dinner. A protected 2023 record signed by Jamie documents one artist-residency onboarding workflow through invitation, pre-arrival space planning, and independent access arrangements.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:

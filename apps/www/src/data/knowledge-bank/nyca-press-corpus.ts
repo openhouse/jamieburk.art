@@ -2097,6 +2097,18 @@ export const nycaPressClaims: KnowledgeBank["claims"] = [
         confidence: "high",
         renderCitation: false
       },
+      {
+        sourceId: "SRC-GDRIVE-FAIR-RENT-IMPLEMENTATION-2023",
+        relationship: "corroborating",
+        supports: [
+          "a dated FairRentNYC site-live state",
+          "an administrative handoff",
+          "restored campaign email service",
+          "an explicit distinction between completed and open work"
+        ],
+        confidence: "high",
+        renderCitation: false
+      },
       ...Object.values(nycaPressCampaigns).map((meta) => ({
         sourceId: meta.indexSourceId,
         relationship: "context" as const,
@@ -2107,7 +2119,8 @@ export const nycaPressClaims: KnowledgeBank["claims"] = [
     ],
     boundaries: [
       "Website authorship is distinct from sole authorship of campaign policy, reporting, visual assets, or collaborators' contributions.",
-      "Campaign outcomes and accomplishments remain collective."
+      "Campaign outcomes and accomplishments remain collective.",
+      "Work still recorded as open in the protected implementation record must not be described as completed."
     ],
     antiClaims: [
       "Jamie solely led all four campaigns.",
@@ -2115,8 +2128,8 @@ export const nycaPressClaims: KnowledgeBank["claims"] = [
       "Jamie alone caused the campaigns' policy outcomes."
     ],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-13",
-    reviewedBy: ["Jamie Burkart", "Codex source review"]
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart", "Codex source and protected-document review"]
   },
   {
     id: "CLM-NYCA-CAMPAIGN-PRESS-CORPUS",

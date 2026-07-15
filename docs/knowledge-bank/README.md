@@ -88,3 +88,7 @@ shows an anchor-first pass through Jamie Projects History, CRS, and job-hunt:
 project ledgers and public captures become bounded claims, protected operating
 records strengthen selected website language, and unselected creative and civic
 depth remains available for future composition.
+The [Google Drive Shared Drives receipt](intake/2026-07-15-google-drive-shared-drives.md)
+applies the same method to collaborative workspaces: the public bank retains
+bounded handoff, implementation, and onboarding claims while Drive names, file
+metadata, collaborators, private structures, and raw materials remain protected.

@@ -53,6 +53,12 @@ Jamie directly confirmed that he made the Let NYC Dance, Talks Not Raids, Save
 NYC Spaces, and FairRentNYC websites. That establishes website authorship, not
 sole authorship of each campaign's policy, organizing, or collective outcomes.
 
+A protected 2023 FairRentNYC implementation record adds a dated delivery layer:
+it documents a site-live state, an administrative handoff, restored campaign
+email service, and a distinction between completed and still-open work. The
+record strengthens implementation and handoff language without exposing system
+details or converting open tasks into completed work.
+
 A July 2026 recovery pass extracted every press link presented by those four
 sites: 21 Let NYC Dance placements, 7 Talks Not Raids placements, 8 Save NYC
 Spaces placements, and 9 FairRentNYC placements. One NPR article appears on two
@@ -116,6 +122,8 @@ The Office of Nightlife and Talks Not Raids long-arc claims are use-with-care.
 The co-founder and early organizer claims are confirmed with boundaries. Exact
 founding responsibilities and Jamie's complete town-hall production role remain
 open research questions. Jamie's four-site authorship and the recovered
-campaign-press corpus are confirmed with boundaries. The commercial-rent source
+campaign-press corpus are confirmed with boundaries. The protected 2023
+FairRentNYC record independently strengthens the implementation state of one
+site while preserving its open-work boundary. The commercial-rent source
 context is confirmed, while Jamie's exact role in every cited commercial-rent
 action remains deliberately unclaimed.
