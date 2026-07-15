@@ -379,6 +379,122 @@ test("KC Town Hall eval rejects accidental publication of the transition lead", 
   }
 });
 
+test("KC Town Hall Phase One retains role, construction, survey, and source-class boundaries", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-PHASE-ONE")?.score,
+    5
+  );
+});
+
+test("KC Town Hall Phase One rejects whole-project completion and sole-labor inflation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallPhaseOne.roleClaimId
+  );
+  assert.ok(claim);
+  const projection = claim.projections.find((item) => item.key === "case-study");
+  assert.ok(projection);
+  const originalText = projection.text;
+
+  try {
+    projection.text = "Jamie alone personally performed every trade and completed the entire KC Town Hall redevelopment in 2019.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-PHASE-ONE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
+test("KC Town Hall Phase One rejects loss of the proposal completion-certificate boundary", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KCTH-CCED-PROPOSAL-PACKET-2019"
+  );
+  assert.ok(source);
+  const original = [...source.doesNotEstablish];
+
+  try {
+    source.doesNotEstablish = source.doesNotEstablish.filter(
+      (boundary) => !/actual completion of Phase One/i.test(boundary)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-PHASE-ONE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    source.doesNotEstablish = original;
+  }
+});
+
+test("KC Town Hall Phase One rejects exposing the protected proposal carrier", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KCTH-CCED-PROPOSAL-PACKET-2019"
+  );
+  assert.ok(source);
+
+  try {
+    source.canonicalUrl = "https://example.com/private-proposal-packet.pdf";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-PHASE-ONE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    delete source.canonicalUrl;
+  }
+});
+
+test("KC Town Hall Phase One keeps local-workforce and exact sequencing claims held", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallPhaseOne.sequencingClaimId
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const original = { status: projection.status, surfaces: [...projection.surfaces] };
+
+  try {
+    projection.status = "active";
+    projection.surfaces = ["/work/kc-town-hall"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-PHASE-ONE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.status = original.status;
+    projection.surfaces = original.surfaces;
+  }
+});
+
+test("KC Town Hall Phase One rejects loss of the neighborhood survey observation", () => {
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-KCTH-PHASE-ONE-PROPOSAL-PACKET-2019"
+  );
+  assert.ok(intake);
+  const observationId = "OBS-KCTH-NEIGHBORHOOD-SURVEY-CARD";
+  const index = intake.observationIds.indexOf(observationId);
+  assert.notEqual(index, -1);
+
+  try {
+    intake.observationIds.splice(index, 1);
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-PHASE-ONE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    intake.observationIds.splice(index, 0, observationId);
+  }
+});
+
 test("Teams archive production retains the complete three-family evidence graph", () => {
   const pilot = suite.pilot.teamsArchiveProduction;
   const result = evaluateKnowledgeBank(suite);

@@ -152,6 +152,70 @@
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall"
     },
+    "kcTownHallPhaseOne": {
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 4,
+      "expectedObservationCount": 10,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "intakeIds": [
+        "INTAKE-KCTH-PHASE-ONE-PROPOSAL-PACKET-2019",
+        "INTAKE-KCTH-PHASE-ONE-JAMIE-ACCOUNT-2026"
+      ],
+      "sourceIds": [
+        "SRC-KCTH-CCED-PROPOSAL-PACKET-2019",
+        "SRC-KCTH-JULIA-COLE-SUPPORT-LETTER-2019",
+        "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29",
+        "SRC-KCTH-JAMIE-PHASE-ONE-ACCOUNT-2026"
+      ],
+      "protectedSourceIds": [
+        "SRC-KCTH-CCED-PROPOSAL-PACKET-2019",
+        "SRC-KCTH-JULIA-COLE-SUPPORT-LETTER-2019",
+        "SRC-KCTH-JAMIE-PHASE-ONE-ACCOUNT-2026"
+      ],
+      "observationIds": [
+        "OBS-KCTH-PROPOSAL-FOUNDER-PROJECT-MANAGER",
+        "OBS-KCTH-PHASE-ONE-MULTIDISCIPLINARY-SCOPE",
+        "OBS-KCTH-PHASE-ONE-2018-PROGRESS",
+        "OBS-KCTH-PHASE-ONE-BUDGET",
+        "OBS-KCTH-NEIGHBORHOOD-SURVEY-CARD",
+        "OBS-KCTH-LOCAL-HIRING-AND-MASONRY-TRAINING",
+        "OBS-KCTH-LISTENING-DRIVEN-SUPPORT-LETTER",
+        "OBS-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+        "OBS-KCTH-JAMIE-GENERAL-CONTRACTOR-ACCOUNT",
+        "OBS-KCTH-JAMIE-SURVEY-DATA-SYSTEM-ACCOUNT"
+      ],
+      "claimIds": [
+        "CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+        "CLM-KCTH-PHASE-ONE-ROLE-AND-CONSTRUCTION",
+        "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+        "CLM-KCTH-LOCAL-WORKFORCE-PRACTICE",
+        "CLM-KCTH-ONSITE-SEQUENCING-PRACTICE"
+      ],
+      "activeClaimIds": [
+        "CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+        "CLM-KCTH-PHASE-ONE-ROLE-AND-CONSTRUCTION",
+        "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM"
+      ],
+      "heldClaimIds": [
+        "CLM-KCTH-LOCAL-WORKFORCE-PRACTICE",
+        "CLM-KCTH-ONSITE-SEQUENCING-PRACTICE"
+      ],
+      "inquiryIds": [
+        "INQ-KCTH-PHASE-ONE-ROLE-AND-COMPLETION",
+        "INQ-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM"
+      ],
+      "officialSourceId": "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29",
+      "roleClaimId": "CLM-KCTH-PHASE-ONE-ROLE-AND-CONSTRUCTION",
+      "surveyClaimId": "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+      "workforceClaimId": "CLM-KCTH-LOCAL-WORKFORCE-PRACTICE",
+      "sequencingClaimId": "CLM-KCTH-ONSITE-SEQUENCING-PRACTICE",
+      "proofId": "kc-town-hall-public-benefit-documentation",
+      "pageId": "kc-town-hall",
+      "occurrenceId": "official-developer-presenter",
+      "documentationPath": "docs/knowledge-bank/projects/kc-town-hall-phase-one-2019.md",
+      "runPath": "evals/knowledge-bank/runs/2026-07-15-kc-town-hall-phase-one.md"
+    },
     "teamsArchiveProduction": {
       "expectedSourceCount": 12,
       "expectedIntakeCount": 12,
@@ -1008,6 +1072,13 @@
       "intent": "The bank and public projection preserve the full official sequence from CCED recommendation through Council acceptance and appropriation to zero disbursement, withdrawal, and return of the unused funds, without converting collective authorization into individual receipt or sole causation."
     },
     {
+      "id": "KB-EVAL-KCTH-PHASE-ONE",
+      "label": "KC Town Hall Phase One construction integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The bank makes Jamie's Phase One construction and neighborhood-process roles legible while keeping participant testimony, applicant-authored proposal evidence, official records, collective specialist labor, proposed budget, phase completion, full redevelopment, local-workforce self-report, survey participation, and protected attachments rigorously distinct."
+    },
+    {
       "id": "KB-EVAL-TEAMS-ARCHIVE-PRODUCTION",
       "label": "Teams archive production integrity",
       "weight": 0,
@@ -1120,6 +1191,11 @@
       "Never expose raw captions, comments, per-post private analytics, working documents, meeting credentials, financial routes, or participant relationship graphs.",
       "Never turn a first-person memory of predominant Page operation into verified sole authorship or administration.",
       "Never turn a tire-workflow record count into a completed-pickup, household, or resident-outcome count.",
+      "Never treat an applicant-authored grant proposal as an independent construction audit, final inspection, or completion certificate.",
+      "Never turn Jamie's first-person general-contractor account into independent corroboration or sole credit for specialist trade labor.",
+      "Never turn Phase One cold-shell completion into completion of the full KC Town Hall redevelopment.",
+      "Never turn the $189,629 Phase One proposal budget into an independently audited final cost.",
+      "Never turn a reproduced survey card into proof of representative participation, response count, or implementation of every preference.",
       "Never turn an unrecovered account or status into proof that it never existed."
     ],
     "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."

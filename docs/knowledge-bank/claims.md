@@ -233,16 +233,16 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building project that won City Council approval and appropriation of $490,539 in CCED funding; the funds were not ultimately disbursed.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Evidence class:** Approved first-person account / protected project archive / official public record / public-safe archive summary
+**Public wording:** Co-founded and project-managed a neighborhood-led adaptive reuse effort, serving as Phase One general contractor across a $189,629 cold-shell restoration; later City funding was appropriated but not disbursed.
+**Detailed public-safe wording:** Jamie coordinated specialist construction teams across roofing and TPO membrane work, historic masonry, floor framing, water service, access, and site safety, while building a four-by-six neighborhood survey and contact workflow that helped turn daily site conversations into a public-benefit proposal.
 **Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Distinguish the July 2019 CCED Board recommendation, September 2019 Council acceptance and appropriation, later funding-agreement status, zero disbursement, project withdrawal, and 2024 reappropriation. Preserve collective project credit.
-**Do not say:** KC Town Hall received or spent the $490,539; the development was completed; Jamie alone secured the Council action; the public record establishes why the project withdrew.
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
+**Why it matters:** Shows field-based project management, specialist-team coordination, preservation-sensitive sequencing, participatory research, public/private boundary judgment, and documentation for complex built-environment work.
+**Guardrail:** Attribute the general-contractor title and Phase One completion to Jamie's direct account; the proposal independently names him as founder and project manager and documents scope and budget. Treat $189,629 as the proposal budget, distinguish Phase One from the full redevelopment, preserve specialist and collective credit, and retain the complete City funding lifecycle.
+**Do not say:** KC Town Hall received or spent the $490,539; the full redevelopment was completed in 2019; the proposal independently names Jamie as general contractor; Jamie personally performed every trade task; $189,629 is an independently audited final cost; Jamie alone secured the Council action; the public record establishes why the project withdrew.
+**Protected boundaries:** The raw proposal packet, banking and personal attachments, respondent contacts and survey rows, private financial, legal, property, and stakeholder records stay offline.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-15
 
 ## kc-town-hall-public-service-interface - Recurring public service interface
 

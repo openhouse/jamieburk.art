@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowledge-bank/google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
+import { kcTownHallPhaseOne } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-phase-one.ts";
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import { nycacFacebookPostAudit, nycacFacebookPosts } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts";
@@ -26,7 +27,7 @@ const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank
 const nycacEventLedgerPublicContractSha256 = "79b8cb8b652b01a6e96d46aa51dd47b519efc03ac3bf8514eb6cbb5141ef09d7";
 const nycacLinkLedgerPublicContractSha256 = "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02";
 const nycacCanonicalGraphPublicContractSha256 = "c942679699704f89955c15c8d878bb3e9e1ff14db8abce0a68db2e3d4c51f06f";
-const nycacNarrativePublicContractSha256 = "1fdb2a93a6f3c6790acdb6e7b2cf6307315fa575b89800d78f2059274ec6a5eb";
+const nycacNarrativePublicContractSha256 = "e20cf77971f58772ad8fa3d4dd9b3b46d7eda995e73228481d639b9fada823d6";
 
 export function loadKnowledgeEvalSuite() {
   return JSON.parse(readFileSync(suitePath, "utf8"));
@@ -401,7 +402,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       kcFundingCorrection?.status === "active" &&
       kcFundingCorrection.replacementText.includes("not disbursed") &&
       kcFundingCoverage?.status === "source-backed" &&
-      kcFundingCoverage.sourceIds.length === kcFunding.expectedSourceCount &&
+      kcFunding.sourceIds.every((id) => kcFundingCoverage.sourceIds.includes(id)) &&
       kcFundingCoverage.researchInquiryIds.includes(kcFunding.inquiryId) &&
       kcFunding.claimIds.every((id) =>
         kcFundingPage?.occurrences.some((occurrence) => occurrence.claimId === id)
@@ -411,8 +412,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       [...kcFundingPublicSourceIds].every((id) => kcFundingPage?.sourceOrder.includes(id)) &&
       kcFunding.claimIds.every((id) => kcTownHallMdx.includes(id)) &&
       kcTownHallMdx.includes("do not establish that Jamie alone caused the Council action") &&
-      workData.includes("funds were not ultimately disbursed") &&
-      proofData.includes("funds were not ultimately disbursed") &&
+      /(?:funds were not ultimately disbursed|not disbursed|\$0 disbursed)/i.test(workData) &&
+      /(?:funds were not ultimately disbursed|not disbursed|\$0 disbursed)/i.test(proofData) &&
       !/KC Town Hall received (?:or spent )?(?:the )?\$490,539/i.test(kcProjectionText) &&
       !kcTownHallMdx.includes("recommendation unless final funding details") &&
       kcTransitionIntake?.kind === "memory-lead" &&
@@ -438,6 +439,171 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       kcTransitionInquiry.sourceIds.length === 0 &&
       kcTransitionInquiry.limitations.length >= 3 &&
       !publicRegistryText.includes(kcFunding.transitionClaimId)
+  );
+  const kcPhase = suite.pilot.kcTownHallPhaseOne;
+  const kcPhaseIntakes = kcPhase.intakeIds.map((id) => intakeById.get(id));
+  const kcPhaseSources = kcPhase.sourceIds.map((id) => sourceById.get(id));
+  const kcPhaseProtectedSources = kcPhase.protectedSourceIds.map((id) => sourceById.get(id));
+  const kcPhaseObservations = kcPhase.observationIds.map((id) => observationById.get(id));
+  const kcPhaseClaims = kcPhase.claimIds.map((id) => claimById.get(id));
+  const kcPhaseActiveClaims = kcPhase.activeClaimIds.map((id) => claimById.get(id));
+  const kcPhaseHeldClaims = kcPhase.heldClaimIds.map((id) => claimById.get(id));
+  const kcPhaseInquiries = kcPhase.inquiryIds.map((id) => inquiryById.get(id));
+  const kcPhaseOfficialSource = sourceById.get(kcPhase.officialSourceId);
+  const kcPhaseProposalSource = sourceById.get("SRC-KCTH-CCED-PROPOSAL-PACKET-2019");
+  const kcPhaseJamieSource = sourceById.get("SRC-KCTH-JAMIE-PHASE-ONE-ACCOUNT-2026");
+  const kcPhaseRoleClaim = claimById.get(kcPhase.roleClaimId);
+  const kcPhaseSurveyClaim = claimById.get(kcPhase.surveyClaimId);
+  const kcPhaseWorkforceClaim = claimById.get(kcPhase.workforceClaimId);
+  const kcPhaseSequencingClaim = claimById.get(kcPhase.sequencingClaimId);
+  const kcPhaseCoverage = knowledgeBank.proofCoverageTargets.find(
+    (item) => item.proofId === kcPhase.proofId
+  );
+  const kcPhasePage = knowledgeBank.pages.find((item) => item.id === kcPhase.pageId);
+  const kcPhaseOccurrence = kcPhasePage?.occurrences.find(
+    (item) => item.id === kcPhase.occurrenceId
+  );
+  const kcPhaseDocumentation = existsSync(path.join(repoRoot, kcPhase.documentationPath))
+    ? readFileSync(path.join(repoRoot, kcPhase.documentationPath), "utf8")
+    : "";
+  const kcPhaseRun = existsSync(path.join(repoRoot, kcPhase.runPath))
+    ? readFileSync(path.join(repoRoot, kcPhase.runPath), "utf8")
+    : "";
+  const kcPhaseProjectionText = kcPhaseClaims.flatMap(
+    (claim) => claim?.projections.map((projection) => projection.text) ?? []
+  ).join(" ");
+  const kcPhaseComplete = Boolean(
+    kcTownHallPhaseOne.intakeItems.length === kcPhase.expectedIntakeCount &&
+      kcTownHallPhaseOne.sources.length === kcPhase.expectedSourceCount &&
+      kcTownHallPhaseOne.observations.length === kcPhase.expectedObservationCount &&
+      kcTownHallPhaseOne.claims.length === kcPhase.expectedClaimCount &&
+      kcTownHallPhaseOne.researchInquiries.length === kcPhase.expectedInquiryCount &&
+      kcPhaseIntakes.every(
+        (intake) => intake?.disposition === "integrated" &&
+          intake.visibility === "public-safe" &&
+          intake.sourceIds.length &&
+          intake.observationIds.length &&
+          intake.researchInquiryIds.length &&
+          intake.boundaries.length >= 3
+      ) &&
+      kcPhase.sourceIds.every((id) => kcPhaseIntakes.some((intake) => intake?.sourceIds.includes(id))) &&
+      kcPhase.observationIds.every((id) => kcPhaseIntakes.some((intake) => intake?.observationIds.includes(id))) &&
+      kcPhase.inquiryIds.every((id) => kcPhaseIntakes.some((intake) => intake?.researchInquiryIds.includes(id))) &&
+      kcPhaseSources.every(
+        (source) => source?.supportsGenerally.length && source.doesNotEstablish.length >= 3
+      ) &&
+      kcPhaseProtectedSources.every(
+        (source) => source?.visibility === "protected" &&
+          source.preservationStatus === "private" &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl &&
+          !publicRegistryText.includes(source.id) &&
+          !publicRegistryText.includes(source.protectedLocatorId)
+      ) &&
+      kcPhaseOfficialSource?.kind === "government-record" &&
+      kcPhaseOfficialSource.visibility === "public" &&
+      kcPhaseOfficialSource.canonicalUrl === "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000" &&
+      kcPhaseOfficialSource.supportsGenerally.includes("Jamie listed as KC Town Hall developer/presenter") &&
+      kcPhaseOfficialSource.doesNotEstablish.includes("Jamie's general-contractor title") &&
+      kcPhaseProposalSource?.doesNotEstablish.some((boundary) => /independent verification/i.test(boundary)) &&
+      kcPhaseProposalSource.doesNotEstablish.some((boundary) => /general-contractor title/i.test(boundary)) &&
+      kcPhaseProposalSource.doesNotEstablish.some((boundary) => /actual completion of Phase One/i.test(boundary)) &&
+      kcPhaseProposalSource.doesNotEstablish.some((boundary) => /audited final construction cost/i.test(boundary)) &&
+      kcPhaseJamieSource?.doesNotEstablish.some((boundary) => /independent corroboration/i.test(boundary)) &&
+      kcPhaseJamieSource.doesNotEstablish.some((boundary) => /sole performance of specialist trade labor/i.test(boundary)) &&
+      kcPhaseObservations.every(
+        (observation) => observation?.publicSafe &&
+          observation.sourceId &&
+          observation.locator &&
+          observation.limitations.length &&
+          observation.claimIds.length &&
+          observation.researchInquiryIds.length
+      ) &&
+      kcPhaseObservations.filter((observation) => observation?.kind === "participant-memory")
+        .every((observation) => observation?.status === "captured") &&
+      kcPhaseClaims.every(
+        (claim) => claim?.evidence.length &&
+          claim.boundaries.length >= 2 &&
+          claim.antiClaims.length >= 3 &&
+          claim.reviewedBy.length >= 2
+      ) &&
+      kcPhaseActiveClaims.every(
+        (claim) => claim?.status === "confirmed-with-boundary" &&
+          claim.projections.some((projection) => projection.status === "active")
+      ) &&
+      kcPhaseHeldClaims.every(
+        (claim) => claim?.status === "use-with-care" &&
+          claim.projections.every(
+            (projection) => projection.status === "hold" && projection.surfaces.length === 0
+          )
+      ) &&
+      kcPhaseRoleClaim?.projections.some(
+        (projection) => projection.status === "active" &&
+          projection.surfaces.includes("/work/kc-town-hall") &&
+          /2018-2019 Phase One cold-shell restoration/i.test(projection.text) &&
+          /co-founder, project manager, and general contractor/i.test(projection.text) &&
+          /\$189,629 proposal budget/i.test(projection.text)
+      ) &&
+      kcPhaseRoleClaim.evidence.some(
+        (evidence) => evidence.sourceId === "SRC-KCTH-JAMIE-PHASE-ONE-ACCOUNT-2026" &&
+          evidence.relationship === "direct-support" &&
+          evidence.confidence === "moderate" &&
+          evidence.renderCitation === false
+      ) &&
+      kcPhaseRoleClaim.evidence.some(
+        (evidence) => evidence.sourceId === "SRC-KCTH-CCED-PROPOSAL-PACKET-2019" &&
+          evidence.relationship === "corroborating" &&
+          evidence.renderCitation === false
+      ) &&
+      kcPhaseRoleClaim.boundaries.some((boundary) => /first-person account/i.test(boundary)) &&
+      kcPhaseRoleClaim.boundaries.some((boundary) => /not completion of the full redevelopment/i.test(boundary)) &&
+      kcPhaseRoleClaim.boundaries.some((boundary) => /not an independently audited final cost/i.test(boundary)) &&
+      kcPhaseRoleClaim.antiClaims.includes("Jamie personally performed every trade task.") &&
+      kcPhaseSurveyClaim?.projections.some(
+        (projection) => projection.status === "active" &&
+          /four-by-six neighborhood survey handbill/i.test(projection.text) &&
+          /contact and data-collection workflow/i.test(projection.text)
+      ) &&
+      kcPhaseSurveyClaim.boundaries.some((boundary) => /respondent names, contact details, response rows/i.test(boundary)) &&
+      kcPhaseWorkforceClaim?.projections.every((projection) => projection.status === "hold") &&
+      kcPhaseSequencingClaim?.projections.every((projection) => projection.status === "hold") &&
+      kcPhaseInquiries.every(
+        (inquiry) => inquiry?.resultStatus === "partially-recovered" &&
+          inquiry.methods.length >= 3 &&
+          inquiry.findings.length >= 3 &&
+          inquiry.limitations.length >= 3 &&
+          inquiry.sourceIds.length >= 3 &&
+          inquiry.protectedLocatorId
+      ) &&
+      kcPhaseCoverage?.status === "source-backed" &&
+      kcPhase.sourceIds.every((id) => kcPhaseCoverage.sourceIds.includes(id)) &&
+      kcPhase.inquiryIds.every((id) => kcPhaseCoverage.researchInquiryIds.includes(id)) &&
+      kcPhaseOccurrence?.claimId === "CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER" &&
+      kcPhaseOccurrence.sourceIds.includes(kcPhase.officialSourceId) &&
+      kcPhasePage?.sourceOrder[0] === kcPhase.officialSourceId &&
+      kcTownHallMdx.includes("CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER") &&
+      kcTownHallMdx.includes("served as co-founder, project manager, and general contractor") &&
+      kcTownHallMdx.includes("four-by-six neighborhood survey handbill") &&
+      kcTownHallMdx.includes("proposal budget") &&
+      workData.includes("Co-Founder, Project Manager & Phase One General Contractor") &&
+      workData.includes("$189,629 cold-shell proposal scope") &&
+      workData.includes("Four-by-six neighborhood survey") &&
+      proofData.includes("serving as Phase One general contractor") &&
+      proofData.includes("$189,629 cold-shell restoration") &&
+      proofData.includes("The full redevelopment was completed in 2019") &&
+      publicRegistryText.includes("CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER") &&
+      !publicRegistryText.includes(kcPhase.roleClaimId) &&
+      !publicRegistryText.includes(kcPhase.surveyClaimId) &&
+      kcPhase.heldClaimIds.every((id) => !publicRegistryText.includes(id)) &&
+      kcPhaseDocumentation.includes("The proposal is a contemporaneous applicant-authored record") &&
+      /It is not an\s+independent construction audit/.test(kcPhaseDocumentation) &&
+      /Phase One (?:cold-shell )?completion(?: is not| from)\s+completion of\s+the full redevelopment/.test(kcPhaseDocumentation) &&
+      kcPhaseDocumentation.includes("The raw PDF is not committed") &&
+      kcPhaseRun.includes("proposal is not audit") &&
+      !/(?:completed the entire|completed the full) (?:KC Town Hall )?(?:project|development|redevelopment)/i.test(kcPhaseProjectionText) &&
+      !/(?:solely|alone|personally) (?:performed|completed|built) (?:all|every|the entire)/i.test(kcPhaseProjectionText)
   );
   const teamsArchive = suite.pilot.teamsArchiveProduction;
   const teamsIntakes = teamsArchive.intakeIds.map((id) => intakeById.get(id));
@@ -3657,9 +3823,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const nycacFacebookPostPopulationComplete = Object.values(
     nycacFacebookDiagnostics
   ).every(Boolean);
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries];
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...kcPhaseObservations, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...kcPhaseClaims, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...kcPhaseInquiries, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -3818,6 +3984,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [kcFundingComplete
         ? "Five official records preserve the CCED recommendation, Council acceptance and appropriation, zero disbursement, withdrawal, and 2024 return; Jamie's stewardship-transition account remains a separate held memory lead; four nonredundant notes support the two-claim public projection"
         : "KC Town Hall funding lifecycle, held stewardship-transition lead, source scope, observations, claims, boundaries, proof coverage, correction, or public citation plan is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-KCTH-PHASE-ONE",
+      score: score(kcPhaseComplete),
+      evidence: [kcPhaseComplete
+        ? "Two intakes preserve four bounded sources, ten observations, three selected claims, two held claims, and two open inquiries; the site now leads with Jamie's Phase One construction and neighborhood-process work while the proposal, testimony, budget, completion, collective labor, and protected packet remain correctly scoped"
+        : "KC Town Hall Phase One source classes, role boundary, construction scope, survey system, held depth, protected records, proof coverage, public projection, citation plan, or anti-overclaim contract is incomplete"]
     },
     {
       criterionId: "KB-EVAL-TEAMS-ARCHIVE-PRODUCTION",

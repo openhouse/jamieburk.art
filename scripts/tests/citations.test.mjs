@@ -29,21 +29,27 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
-test("KC Town Hall preserves four funding notes and adds five service-interface notes", () => {
-  assert.equal(knowledgeBank.sources.filter((source) => source.id.startsWith("SRC-KCTH-")).length, 5);
+test("KC Town Hall adds a role note while preserving funding and service-interface notes", () => {
+  const kcTownHallSources = knowledgeBank.sources.filter((source) => source.id.startsWith("SRC-KCTH-"));
+  assert.equal(kcTownHallSources.length, 9);
+  assert.equal(kcTownHallSources.filter((source) => source.visibility === "public").length, 6);
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "official-developer-presenter").sources.map((item) => item.number),
+    [1]
+  );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "council-approval-and-appropriation").sources.map((item) => item.number),
-    [1, 2]
+    [2, 3]
   );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "nondisbursement-and-reappropriation").sources.map((item) => item.number),
-    [3, 4]
+    [4, 5]
   );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "public-service-interface").sources.map((item) => item.number),
-    [5, 6, 7, 8, 9]
+    [6, 7, 8, 9, 10]
   );
-  assert.equal(resolveCitationReferences("kc-town-hall").length, 9);
+  assert.equal(resolveCitationReferences("kc-town-hall").length, 10);
 });
 
 test("Claim resolver returns only active approved projections", () => {

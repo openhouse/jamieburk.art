@@ -2,6 +2,7 @@ import { historicalKnowledge } from "./historical-knowledge.ts";
 import { callNycSocialCorpus } from "./callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "./google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "./kc-town-hall-funding.ts";
+import { kcTownHallPhaseOne } from "./kc-town-hall-phase-one.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { nycacFacebookEvents } from "./nycac-facebook-events.ts";
 import { nycacFacebookPosts } from "./nycac-facebook-posts.ts";
@@ -41,6 +42,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.intakeItems,
     ...googleDriveSharedDrivesProduction.intakeItems,
     ...teamsArchiveProduction.intakeItems,
+    ...kcTownHallPhaseOne.intakeItems,
     ...kcTownHallFunding.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
     ...nycacFacebookEvents.intakeItems,
@@ -77,6 +79,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.observations,
     ...googleDriveSharedDrivesProduction.observations,
     ...teamsArchiveProduction.observations,
+    ...kcTownHallPhaseOne.observations,
     ...kcTownHallFunding.observations,
     ...kcTownHallSocialCorpus.observations,
     ...nycacFacebookEvents.observations,
@@ -240,6 +243,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.sources,
     ...googleDriveSharedDrivesProduction.sources,
     ...teamsArchiveProduction.sources,
+    ...kcTownHallPhaseOne.sources,
     ...kcTownHallFunding.sources,
     ...kcTownHallSocialCorpus.sources,
     ...nycacFacebookEvents.sources,
@@ -356,6 +360,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.claims,
     ...googleDriveSharedDrivesProduction.claims,
     ...teamsArchiveProduction.claims,
+    ...kcTownHallPhaseOne.claims,
     ...kcTownHallFunding.claims,
     ...kcTownHallSocialCorpus.claims,
     ...nycacFacebookEvents.claims,
@@ -412,6 +417,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.researchInquiries,
     ...googleDriveSharedDrivesProduction.researchInquiries,
     ...teamsArchiveProduction.researchInquiries,
+    ...kcTownHallPhaseOne.researchInquiries,
     ...kcTownHallFunding.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycacFacebookEvents.researchInquiries,
@@ -516,6 +522,7 @@ const knowledgeBankInput = {
   }, {
     ...kcTownHallFunding.page,
     sourceOrder: [
+      ...kcTownHallPhaseOne.page.sourceOrder,
       ...kcTownHallFunding.page.sourceOrder,
       "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
       "SRC-X-KCTH-TIRES-LAUNCH-2019-05-03",
@@ -524,6 +531,7 @@ const knowledgeBankInput = {
       "SRC-X-KCTH-TIRES-2022-MAY"
     ],
     occurrences: [
+      ...kcTownHallPhaseOne.page.occurrences,
       ...kcTownHallFunding.page.occurrences,
       {
         id: "public-service-interface",

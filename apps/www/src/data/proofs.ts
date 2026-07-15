@@ -495,17 +495,20 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building project that won City Council approval and appropriation of $490,539 in CCED funding; the funds were not ultimately disbursed.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Co-founded and project-managed a neighborhood-led adaptive reuse effort, serving as Phase One general contractor across a $189,629 cold-shell restoration; later City funding was appropriated but not disbursed.",
+    shortWording: "Directed Phase One restoration and neighborhood-led planning",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "Jamie coordinated specialist construction teams across roofing and TPO membrane work, historic masonry, floor framing, water service, access, and site safety, while building a four-by-six neighborhood survey and contact workflow that helped turn daily site conversations into a public-benefit proposal.",
     sourceBasis:
-      "Approved resume language, official Kansas City Council and CCED records, and public-safe project context.",
+      "Jamie's approved first-person role account, the protected 2019 CCED proposal and support-letter packet, and official Kansas City Council and CCED records.",
     guardrail:
-      "Distinguish the CCED Board recommendation, Council acceptance and appropriation, funding-agreement execution, disbursement, withdrawal, and 2024 reappropriation. Preserve collective project credit.",
+      "Attribute the general-contractor title and Phase One completion to Jamie's direct account; the proposal independently names him as founder and project manager and documents scope and budget. Treat $189,629 as the proposal budget, distinguish Phase One from the full redevelopment, preserve specialist and collective credit, and retain the complete City funding lifecycle.",
     doNotSay: [
       "Treating the appropriation as money transferred to or spent by the project",
-      "The development was completed",
+      "The full redevelopment was completed in 2019",
+      "The proposal independently names Jamie as general contractor",
+      "Jamie personally performed every trade task",
+      "The $189,629 is an independently audited final construction cost",
       "Jamie alone secured the Council action",
       "Current property status",
       "Private financial details",
@@ -520,8 +523,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
-    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-13"
+    relatedCapabilities: ["construction-operations", "vendor-coordination", "participatory-research", "public-benefit-documentation", "stakeholder-context"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-town-hall-public-service-interface",

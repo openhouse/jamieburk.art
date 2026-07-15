@@ -206,6 +206,28 @@
       ]
     },
     {
+      "id": "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29",
+      "title": "Central City Economic Development Sales Tax Board public meeting packet",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Central City Economic Development Sales Tax Board public meeting packet, July 29, 2019.",
+      "publicNote": "The packet's June 12 minutes list Jamie Burkart as KC Town Hall's developer/presenter and record public testimony in support; its July 16 minutes record the Board's later recommendation.",
+      "doesNotEstablish": [
+        "Jamie's general-contractor title",
+        "Jamie's complete project responsibilities",
+        "the content of each supporter's remarks",
+        "Phase One completion",
+        "Council appropriation or disbursement",
+        "sole causation"
+      ]
+    },
+    {
       "id": "SRC-KCTH-RESOLUTION-190649",
       "title": "Kansas City Resolution 190649",
       "organization": "City Council of Kansas City, Missouri",
@@ -1020,6 +1042,36 @@
       ]
     },
     {
+      "id": "CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Official CCED Board minutes list Jamie as KC Town Hall's developer/presenter in the public funding process.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie listed as KC Town Hall developer/presenter"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Preserve the official record's developer/presenter wording.",
+        "Use separate evidence for the general-contractor title and detailed construction duties."
+      ]
+    },
+    {
       "id": "CLM-KCTH-COUNCIL-APPROVAL-AND-APPROPRIATION-2019",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1765,6 +1817,7 @@
       "id": "kc-town-hall",
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
+        "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29",
         "SRC-KCTH-RESOLUTION-190649",
         "SRC-KCTH-ORDINANCE-190642",
         "SRC-KCTH-CCED-PROJECT-UPDATE-2022-05-10",
@@ -1776,6 +1829,14 @@
         "SRC-X-KCTH-TIRES-2022-MAY"
       ],
       "occurrences": [
+        {
+          "id": "official-developer-presenter",
+          "claimId": "CLM-KCTH-OFFICIAL-DEVELOPER-PRESENTER",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-CCED-MEETING-PACKET-2019-07-29"
+          ]
+        },
         {
           "id": "council-approval-and-appropriation",
           "claimId": "CLM-KCTH-COUNCIL-APPROVAL-AND-APPROPRIATION-2019",

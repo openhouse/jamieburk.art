@@ -483,11 +483,11 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Construction coordination and neighborhood-led adaptive reuse",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building project that won City Council approval and appropriation of $490,539 in CCED funding; the funds were not ultimately disbursed.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+      "Co-founded and project-managed a neighborhood-led restoration, serving as Phase One general contractor across a $189,629 cold-shell scope.",
+    role: "Co-Founder, Project Manager & Phase One General Contractor",
+    years: "2018-2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -497,45 +497,53 @@ const workItemsInput = [
       "kc-town-hall-public-service-interface"
     ],
     whatWasUnclear:
-      "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
+      "A long-vacant historic building needed preservation-sensitive construction, coordinated specialist teams, and a way for emerging neighborhood knowledge to shape what the space could become.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A completed Phase One cold shell, a neighborhood survey and contact workflow, and public-benefit documentation that could carry the project into municipal review.",
+    artifactTypes: ["guide", "template", "source map"],
     artifacts: [
       {
-        title: "Public-benefit documentation set",
+        title: "Phase One scope and budget",
         description:
-          "Representative materials for describing intended public value, funding context, and stakeholder needs.",
+          "A public-safe account of the $189,629 cold-shell scope across roofing, masonry, floor framing, water service, access, safety, and construction logistics.",
         type: "guide"
+      },
+      {
+        title: "Neighborhood survey system",
+        description:
+          "A four-by-six handbill and backing contact workflow that turned daily site conversations into participatory planning input.",
+        type: "template"
       }
     ],
-    tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    tags: ["Implementation", "Built Environment", "Participatory Research", "Public-Facing Tools"],
+    capabilities: ["Construction Coordination", "Vendor Coordination", "Participatory Planning", "Public-Benefit Documentation"],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official Kansas City Council and CCED records, a complete public-safe account corpus, approved resume language, and public-safe project context.",
+      "A protected submitted CCED proposal and support-letter packet, Jamie's approved first-person role account, official Kansas City Council and CCED records, and a complete public-safe account corpus.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus:
       "The public funding record runs from a 2019 Council appropriation through return of the unused funds after the project withdrew in 2024.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Field-based project management, specialist-team coordination, preservation-sensitive sequencing, participatory research, and public-benefit documentation.",
     evidence: [
-      "Redevelopment planning",
-      "Public-benefit documentation",
-      "Historic preservation context",
+      "Phase One general contracting and project management",
+      "$189,629 cold-shell proposal scope",
+      "Historic masonry, roofing, floor framing, water, access, and safety coordination",
+      "Four-by-six neighborhood survey and backing contact workflow",
+      "Public-benefit proposal and municipal-review documentation",
       "Recurring public intake, service coordination, and result-reporting workflow",
       "2019 Council acceptance and $490,539 appropriation",
       "$0 disbursed before the unused funds were returned in 2024"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building. Official records establish the CCED funding lifecycle, while the complete surviving public-account corpus documents a collective resident intake, service, and follow-through workflow.",
+        "Jamie co-founded and project-managed KC Town Hall and directly confirms serving as Phase One general contractor. The proposal documents the multidisciplinary cold-shell scope, survey artifact, and $189,629 budget; official records establish Jamie's developer/presenter role and the later CCED funding lifecycle.",
       open:
-        "Jamie's complete role, named collaborators, the current property status, and the reasons for withdrawal are not established by the funding records.",
+        "Contracts, invoices, permits, measured drawings, construction photographs, and collaborator proof notes could independently corroborate the general-contractor title, final Phase One cost, exact technical sequence, local-workforce claims, and division of labor.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted."
+        "The raw proposal packet, banking and personal attachments, respondent contacts and survey rows, private legal and property records, and later family context remain outside the repository."
     }
   }
 ] satisfies WorkMeta[];
