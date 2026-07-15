@@ -105,13 +105,15 @@ export function reconcileCaptureRoutes(capture) {
     capture.excludedConversationContext,
     "excluded conversation context"
   );
-  const excludedSet = new Set(excludedIds);
+  const postsSet = new Set(postsIds);
   const repliesSet = new Set(repliesIds);
   const repliesPrimary = capture.repliesRoute.filter(
-    (record) => !excludedSet.has(record.statusId)
+    (record) =>
+      postsSet.has(record.statusId) || record.statusOwner === "@KCTownHall"
   );
-  const repliesContext = capture.repliesRoute.filter((record) =>
-    excludedSet.has(record.statusId)
+  const repliesContext = capture.repliesRoute.filter(
+    (record) =>
+      !postsSet.has(record.statusId) && record.statusOwner !== "@KCTownHall"
   );
   const repliesPrimaryIds = uniqueStatusIds(
     repliesPrimary,
@@ -127,6 +129,7 @@ export function reconcileCaptureRoutes(capture) {
   assert.deepEqual(repliesPrimaryIds, attributableIds);
   assert(postsIds.every((id) => repliesPrimaryIds.includes(id)));
   assert.equal(repliesPrimaryIds.length, capture.profileReportedCount);
+  assert.equal(repliesContextIds.length, 5);
 
   const attributableById = new Map(
     capture.attributablePopulation.map((record) => [record.statusId, record])

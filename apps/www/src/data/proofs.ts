@@ -457,9 +457,9 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for a project whose team completed a $189,629 Phase One cold-shell scope and used a collaborative neighborhood survey to shape the proposal. The project later advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539, then withdrew before disbursement.",
+      "Co-led redevelopment planning and public-benefit documentation for a project whose 2019 municipal packet labels a $189,629 Phase One cold-shell scope completed and says a collaborative neighborhood survey shaped the proposal. The project later advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539, then withdrew before disbursement.",
     shortWording:
-      "Co-led planning for a project with completed Phase One work and a later $490,539 city appropriation that was not disbursed",
+      "Co-led planning for a project with Phase One work labeled completed and a later $490,539 city appropriation that was not disbursed",
     detailedPublicWording:
       "Jamie co-led planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter, label a $189,629 Phase One cold-shell scope completed in 2019, and document a collaborative neighborhood survey whose results directly shaped the proposal. They also trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement. A complete profile-reported 183-record public-account archive separately documents recurring resident-input, household tire-pickup, civic-information, and stakeholder-dialogue operations.",
     sourceBasis:

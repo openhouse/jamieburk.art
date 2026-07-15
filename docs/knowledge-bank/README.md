@@ -145,6 +145,7 @@ redacted acquisition ledger preserves the authenticated route inventory, and a
 31-item URL disposition ledger routes every posted short URL to a promoted
 source, an operational link family, or a named research inquiry. See the
 [full-population research run](runs/2026-07-15-kctownhall-x-full-population.md).
-The case study now also projects the independently documented $189,629 Phase
-One completion and collaborative survey process while keeping Jamie's
-general-contractor title and individual survey authorship in research.
+The case study now also projects the municipal packet's statement that the
+$189,629 Phase One scope was completed and its collaborative survey account
+while keeping Jamie's general-contractor title and individual survey authorship
+in research.

@@ -539,6 +539,21 @@ test("KC Town Hall acquisition rejects Replies-route corruption", () => {
   assert.throws(() =>
     buildPublicAcquisitionLedger(`${JSON.stringify(corrupted)}\n`)
   );
+
+  const coordinatedSwap = structuredClone(capture);
+  const repliesOnlyPrimaryIndex = coordinatedSwap.attributablePopulation.findIndex(
+    (record) =>
+      record.statusOwner === "@KCTownHall" &&
+      !record.recoveredRoutes.includes("posts")
+  );
+  const primaryRecord =
+    coordinatedSwap.attributablePopulation[repliesOnlyPrimaryIndex];
+  const contextRecord = coordinatedSwap.excludedConversationContext[0];
+  coordinatedSwap.attributablePopulation[repliesOnlyPrimaryIndex] = contextRecord;
+  coordinatedSwap.excludedConversationContext[0] = primaryRecord;
+  assert.throws(() =>
+    buildPublicAcquisitionLedger(`${JSON.stringify(coordinatedSwap)}\n`)
+  );
 });
 
 test("NYC Artist Coalition count separates direct, mission-relevant, and thread-context records", () => {

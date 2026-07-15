@@ -117,7 +117,7 @@ export const kcTownHallPhaseOneNeighborhoodClaims = [
         citationRequired: true,
         surfaces: ["/work/kc-town-hall"],
         rationale:
-          "Lead with independently documented completed implementation while keeping Jamie's general-contractor title and individual trade responsibility behind the role-attribution inquiry."
+          "Lead with the municipal packet's completed-scope statement while keeping Jamie's general-contractor title and individual trade responsibility behind the role-attribution inquiry."
       }
     ],
     evidence: [

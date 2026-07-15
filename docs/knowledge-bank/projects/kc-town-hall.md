@@ -18,7 +18,8 @@ The 2019 municipal packet labels the $189,629 Phase One cold-shell work
 completed that year. Its scope includes roof-deck repair, insulation and TPO
 membrane, masonry restoration, floor framing, water connection, access,
 safety, transport, cleanup, and related work. This is completed implementation
-evidence for Phase One, not completion of the later redevelopment plan.
+evidence as stated in the municipal packet, not completion of the later
+redevelopment plan.
 
 Jamie reports serving as general contractor for this phase: hiring and
 coordinating specialized teams, managing sequencing from basement to roof, and

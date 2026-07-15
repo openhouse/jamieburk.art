@@ -320,16 +320,16 @@ bibliography claim:
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public source / public-safe archive summary
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for a project that advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539. The project later withdrew before disbursement.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter and trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement.
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for a project whose 2019 municipal packet labels a $189,629 Phase One cold-shell scope completed and says a collaborative neighborhood survey shaped the proposal. The project later advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539, then withdrew before disbursement.
+**Detailed public-safe wording:** Jamie co-led planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter, label a $189,629 Phase One cold-shell scope completed in 2019, document a collaborative neighborhood survey whose results directly shaped the proposal, and trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement.
 **Where to project:** Resume, Technical Operations, Work card, Case study.
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.
 **Guardrail:** Distinguish the unanimous CCED Board recommendation, Council adoption and appropriation, and the later withdrawal. Do not imply a unanimous Council vote, an executed funding agreement, receipt, disbursement, or completed redevelopment.
 **Do not say:** The City Council vote was unanimous; KC Town Hall received or spent $490,539; the funded redevelopment was completed; current property status; private financial details; official municipal endorsement beyond the public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
 **Review owner:** Jamie
-**Canonical claim:** `CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS`.
-**Last reviewed:** 2026-07-14
+**Canonical claims:** `CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS`, `CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION`, `CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY`, and `CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS`.
+**Last reviewed:** 2026-07-15
 
 ## kc-town-hall-social-public-operations - Public operations archive
 
