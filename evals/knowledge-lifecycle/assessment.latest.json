@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "b80711ed5ce268f00ab13f36409640785083b2483026b42e72a24c64064601e6",
+    "fingerprint": "f890d819cde20876112e59f6107b5a2dd42425eb9ac4d525b44689b49f224866",
     "counts": {
-      "entities": 27,
-      "intake": 125,
-      "sources": 248,
-      "sourceReadings": 248,
-      "claims": 106,
-      "researchTasks": 46,
-      "projectionDecisions": 86
+      "entities": 28,
+      "intake": 129,
+      "sources": 252,
+      "sourceReadings": 252,
+      "claims": 107,
+      "researchTasks": 47,
+      "projectionDecisions": 87
     }
   },
   "judge": {
@@ -25,11 +25,15 @@
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "COR-HJE-REVENUE-CORROBORATION-HOLD-2026"
+            "record": "COR-CALLNYC-SUPERLATIVE-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
@@ -42,16 +46,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "READ-KCUR-HJE-ONLINE-SALES-2016"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "atomicPropositionSchema"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-RIVER-PITCH-2007"
+            "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "READ-X-REVIEW-NYCARTC-2026"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "READ-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "READ-NERMAN-AMERICA-NOW-HERE-2011"
           }
         ]
       },
@@ -59,6 +67,10 @@
         "criterionId": "claim-defensibility",
         "score": 4,
         "evidence": [
+          {
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+          },
           {
             "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
             "record": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
@@ -68,16 +80,12 @@
             "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "CLM-NYCARTC-OFFICE-NIGHTLIFE-TOWN-HALL"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "CLM-HJE-ONLINE-SALES-SHARE-2016"
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "NTER CHNG exhibition inclusion uses the official program record without overstating venue"
           }
         ]
       },
@@ -86,12 +94,12 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "TASK-HJE-REVENUE-INDEPENDENT-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-OFFICE-NIGHTLIFE-ROLE"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "TASK-HJE-REVENUE-INDEPENDENT-CORROBORATION"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -108,16 +116,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-DEFER-HJE-GROWTH"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "DEC-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-DEFER"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "COR-HJE-REVENUE-CORROBORATION-HOLD-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
             "record": "DEC-PUBLISH-HJE-ONLINE-SALES-SHARE-2016"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
+            "file": "apps/www/src/data/knowledge-bank/public.ts",
+            "record": "getClaimProjection"
           }
         ]
       },
@@ -126,20 +138,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026"
+            "file": "apps/www/src/data/knowledge-bank/public.ts",
+            "record": "publicSourceSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
             "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "docs/knowledge-bank/sources.md",
-            "record": "Prohibited Source Material In This Repo"
-          },
-          {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "public-repo-boundary-is-enforced"
+            "file": "docs/knowledge-bank/public-safety.md",
+            "record": "Prohibited Materials"
           }
         ]
       },
@@ -148,20 +160,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
-            "record": "CLM-CROSS-PROJECT-ARCHIVE-PRACTICE-2026"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "claimRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
+            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
+            "record": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+          },
+          {
+            "file": "docs/knowledge-bank/projection-map.md",
+            "record": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
-          },
-          {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "future writers a deep palette"
           }
         ]
       }
@@ -184,5 +196,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh assessment score: 100/100. The deterministic evaluator reports 0 of 7 hard-gate failures and 0 of 4 quality-target gaps. All 102 knowledge-lifecycle tests and all 10 citation tests pass. The July 14 HJE work correctly separates the unsupported Jamie-linked 2x claim from KCUR's independently reported company context, preserves the former on a non-active corroboration hold with an executable two-part acceptance rule, records the correction and defer/publish decisions, updates public copy and citation planning, and adds regression coverage. The wider graph preserves every maturity level, collective credit, protected-source boundaries, social-account distinctions, photo-to-research routing, and proposition-level projection discipline. No new structural failure was found, so every critical floor and the release threshold pass; all human gates remain pending."
+  "summary": "Fresh independent review of the specified snapshot found all seven deterministic hard gates and all four quality targets passing, with all 103 lifecycle tests passing. Representative captured, researching, corroborated, public-ready, projected, rejected, and superseded claims were inspected. The NTER CHNG / America: Now and Here inclusion claim is directly supported by the official archived visual-artist page, keeps Drew Bolton, Jamie Burkart, and Garrett Fuselier in collective credit, preserves Mary Nichols, Megan Mantia, and Elisha Stetson through the linked project claim, excludes historical phone numbers and visitor responses, and uses the Nerman Museum record only as program and venue-boundary context. Its exact venue and dates remain an executable research task, while the public-ready claim remains explicitly deferred. No human approval, collaborator-permission, or media-rights gate is treated as confirmed."
 }

@@ -22,6 +22,12 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 
 ## Reserve Proofs
 
+- America: Now and Here included NTER CHNG in its 2011 Kansas City launch. The
+  program's own archived site lists Drew Bolton, Jamie Burkart, and Garrett
+  Fuselier as visual artists and publishes their artist statement for the
+  participatory texting installation. The Nerman Museum record supplies wider
+  program context but does not place NTER CHNG at the museum.
+
 - The HJE two-times revenue contribution claim remains preserved as a research
   record but is not projected. Independent 2016 KCUR reporting supplies a
   narrower company-level context: online sales accounted for half of the

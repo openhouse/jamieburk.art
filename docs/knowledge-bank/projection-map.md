@@ -60,3 +60,12 @@ the existing participation-infrastructure source basis, but the 502-record
 association graph is provenance rather than portfolio content. The 20 recovered
 hosted pages are available for future audience-specific compositions, and the
 WOW List zero display is a research control rather than an accomplishment.
+
+## NTER CHNG / America: Now and Here
+
+Keep `CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011` in reserve for future
+participatory-design, cultural-technology, exhibition-history, or early-career
+compositions. Do not automatically add it to a current page. If projected,
+credit all three makers, preserve the linked supporting credits, and do not
+place NTER CHNG at the Nerman Museum without a separate installation-specific
+source.

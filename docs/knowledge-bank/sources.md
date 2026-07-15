@@ -254,6 +254,23 @@ material.
 See
 `docs/knowledge-bank/research/teams-archive-deepening-2026-07-14.md`.
 
+## NTER CHNG / America: Now and Here
+
+Four public records now preserve the project's exhibition context: the
+archived NTER CHNG homepage, America: Now and Here's archived Kansas City about
+page, its dedicated visual-artist page for Drew Bolton, Jamie Burkart, and
+Garrett Fuselier, and the Nerman Museum's institutional record for its Barbara
+Kruger component.
+
+The official artist page supplies the direct evidence. It lists the three
+collaborators as visual artists and publishes their NTER CHNG artist statement.
+The Nerman record establishes wider May 2011 program context but does not name
+NTER CHNG or place it at the museum. Historical phone numbers and visitor
+responses visible in the Wayback capture are not reproduced in this repository.
+
+See
+`docs/knowledge-bank/research/nter-chng-america-now-and-here-2026-07-15.md`.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

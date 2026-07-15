@@ -457,6 +457,41 @@ test("NTER CHNG preserves participatory behavior and every recovered collaborato
   assert.ok(publicSources.every((source) => source.canonicalUrl));
 });
 
+test("NTER CHNG exhibition inclusion uses the official program record without overstating venue", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+  );
+  const officialArtistSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"
+  );
+  const nermanSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NERMAN-AMERICA-NOW-HERE-2011"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.equal(claim.projections.length, 0);
+  assert.match(claim.internalClaim, /included NTER CHNG.*2011 Kansas City launch/i);
+  assert.match(claim.composition.collectiveCredit, /Drew Bolton.*Jamie Burkart.*Garrett Fuselier.*Mary Nichols.*Megan Mantia.*Elisha Stetson/i);
+  assert.ok(claim.antiClaims.some((item) => /NTER CHNG was presented at the Nerman Museum/i.test(item)));
+  assert.equal(decision.decision, "defer");
+
+  assert.equal(officialArtistSource.visibility, "public");
+  assert.equal(officialArtistSource.preservationStatus, "archived");
+  assert.match(officialArtistSource.archiveUrl, /americanowandhere\.org\/the-visual-artists/);
+  assert.ok(officialArtistSource.supportsGenerally.some((item) => /inclusion.*artist roster/i.test(item)));
+  assert.ok(nermanSource.doesNotEstablish.some((item) => /NTER CHNG.*Nerman Museum/i.test(item)));
+  assert.doesNotMatch(JSON.stringify(officialArtistSource), /(?:816|501)-\d{3}-\d{4}/);
+
+  assert.equal(task.status, "open");
+  assert.ok(task.nextActions.some((item) => /checklist|catalog|program schedule/i.test(item)));
+});
+
 test("NYC Artist Coalition Wikipedia handoff separates drafting, editing, and publication", () => {
   const claim = knowledgeBank.claims.find(
     (item) => item.id === "CLM-NYCAC-WIKIPEDIA-SOURCE-HANDOFF-2025"

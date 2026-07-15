@@ -446,6 +446,21 @@ stay outside the repo.
 **Review owner:** Jamie / Codex
 **Last reviewed:** 2026-07-14
 
+## nter-chng-america-now-and-here-inclusion - 2011 program inclusion
+
+**Status:** Ready but deferred
+**Support level:** Strong with collective-credit and venue boundaries
+**Evidence class:** Official archived program page / archived project site / institutional context
+**Public wording:** America: Now and Here included NTER CHNG in its 2011 Kansas City launch; the program's own archived site listed Drew Bolton, Jamie Burkart, and Garrett Fuselier as visual artists and published their artist statement.
+**Detailed public-safe wording:** The official artist page describes the participatory texting installation as turning private one-to-one exchange into public many-to-many dialogue through a digital gallery wall. The project site independently preserves the three-maker credit.
+**Where to project:** Reserve depth for participatory-design, cultural-technology, exhibition-history, and early-career narratives.
+**Why it matters:** Adds independent program context to a collaborative project that made a technically mediated public interaction usable in a gallery.
+**Guardrail:** Credit all three makers and preserve Mary Nichols, Megan Mantia, and Elisha Stetson in the linked project record. The Nerman Museum page contextualizes the wider program but does not document NTER CHNG at the museum.
+**Do not say:** Jamie alone created NTER CHNG; Jamie organized or curated America: Now and Here; NTER CHNG was installed at the Nerman Museum; inclusion proves audience scale or civic impact.
+**Protected boundaries:** Do not republish historical phone numbers or visitor-response excerpts embedded in the archived artist page.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready

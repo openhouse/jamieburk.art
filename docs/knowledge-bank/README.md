@@ -93,6 +93,15 @@ three archive-derived claims remain deferred; the HJE case study receives only
 the separately reviewed independent-context correction.
 
 The
+[NTER CHNG / America: Now and Here follow-up](research/nter-chng-america-now-and-here-2026-07-15.md)
+recovers the project's archived homepage and the exhibition program's own
+visual-artist page. The latter directly establishes NTER CHNG's inclusion in
+the 2011 Kansas City launch and names Drew Bolton, Jamie Burkart, and Garrett
+Fuselier as visual artists. The claim remains deferred from website projection,
+and the Nerman Museum record is retained as program context rather than proof
+that NTER CHNG was installed at the museum.
+
+The
 [Google Drive Shared Drives production record](research/google-drive-shared-drives-production-2026-07-13.md)
 extends that method to collaborative cloud workspaces: central project records
 can strengthen authored and collective-role claims, while unread recordings and
