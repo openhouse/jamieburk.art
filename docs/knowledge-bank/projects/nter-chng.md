@@ -14,6 +14,11 @@ many-to-many spatial experience. That concept connects Jamie's early
 participatory art practice with later work building public-facing systems for
 collective use.
 
+A January 8, 2010 Facebook event independently preserves the public event date,
+the interactive-texting description, and Drew Bolton, Jamie Burkart, and Garrett
+Fuselier together as organizers. Its historical response label is retained only
+as platform metadata; it is not attendance or impact.
+
 The record is explicitly collective. The surviving project video credits Drew
 Bolton, Jamie Burkart, and Garrett Fuselier; it also credits Mary Nichols for
 help engineering and constructing the wall and Megan Mantia and Elisha Stetson
@@ -42,6 +47,7 @@ presentation on May 11 and 12, 2011. The museum page does not itself name
 - [NTER CHNG project video](https://vimeo.com/21395655)
 - [America: Now and Here Kansas City artist page, May 18, 2011 Wayback capture](https://web.archive.org/web/20110518071626/http://kansascity.americanowandhere.org/the-visual-artists/drew-bolton-jamie-burkart-and-garrett-fuselier/)
 - [Nerman Museum, America: Now and Here - Barbara Kruger](https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html)
+- [Public-safe personal Facebook event corpus](../corpora/jamie-wowlist-facebook-events-full-population-2026-07-15.json)
 
 ## Open Research
 

@@ -11,7 +11,8 @@ Public reporting currently supports three parts of a longer practice:
 - In 2007, *The Pitch* reported that Jamie originated the idea for a
   recycled-material Missouri River expedition connecting participatory art,
   Kansas City transportation history, and the city's relationship with the
-  river. The expedition was collective work.
+  river. Public Facebook event records add dated traces of a July 9 raft-design
+  discussion and a July 14 public sendoff. The expedition was collective work.
 - Charlotte Street's archive lists *Great Accommodations with Jamie Burkart -
   Imagining Lifestyles for Cities on the Water* for September 1 through October
   3, 2009.
@@ -26,6 +27,7 @@ outcome across the full body of water-based work.
 - [Good Times, Open House](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html)
 - [The Pitch, When Artists Turn Huck Finn](https://www.thepitchkc.com/when-artists-turn-huck-finn/)
 - [Charlotte Street, Great Accommodations](https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/)
+- [Public-safe personal Facebook event corpus](../corpora/jamie-wowlist-facebook-events-full-population-2026-07-15.json)
 
 ## Open Research
 
@@ -38,6 +40,7 @@ outcome across the full body of water-based work.
 
 - Jamie alone built or completed the raft expedition.
 - The reviewed article establishes a completed Kansas City-to-Gulf route.
+- The Facebook planning and sendoff records establish the completed route.
 - Jamie was the sole leader or author of the communal programs.
 
 ## Active Claim Projection

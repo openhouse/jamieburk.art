@@ -87,12 +87,27 @@ Hold:
 - claims based on the unrecovered *Zines 2.0* article body;
 - a same-account bridge between `@wowlistnyc` and `@wowlist` until a dated public source is recovered.
 
+## Facebook event surfaces
+
+An authenticated July 15, 2026 review found that the current WOW List Facebook
+Page exposes zero event records on both its Page events view and Page-hosted
+Past control. This is a dated interface observation, not evidence that WOW List
+never held, promoted, or supported events.
+
+A separate personal-account event titled *200th Sunday Dinner* links to a WOW
+List event page and identifies Julia Fredenburg and Jamie together. The record
+strengthens the Sunday Dinner-to-WOW List lineage while demonstrating why the
+project Page and personal event infrastructure must remain distinct archival
+surfaces.
+
 ## Next research
 
 1. Classify all 35 destinations as live, archived, redirected, dead, or not recovered.
 2. Recover *Zines 2.0* through alternate slugs, feeds, author archives, or bounded Wayback searches.
 3. Resolve or preserve uncertainty around the historical `@wowlistnyc` label.
 4. Seek public or collaborator evidence that can distinguish account creation, identity design, administration, posting strategy, and individual post authorship.
+5. Recover the linked 200th Sunday Dinner WOW List event page and reconcile it
+   with the current Facebook Page's empty event surfaces.
 
 ## Active Claim Projection
 
