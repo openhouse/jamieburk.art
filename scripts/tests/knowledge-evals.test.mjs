@@ -1758,6 +1758,59 @@ test("urbanhermit public-surface contract rejects summary, inventory, and docume
   }
 });
 
+test("urbanhermit cross-ledger contract rejects attribution and summary drift", () => {
+  const cases = [
+    {
+      fixture: "wowlistLedger",
+      ledger: wowlistLedger,
+      mutate(altered) {
+        const record = altered.records.find((item) => item.authorHandle?.toLowerCase() === "@urbanhermit");
+        record.contentSummary = "Jamie alone authored WOW List and caused every public outcome.";
+      }
+    },
+    {
+      fixture: "wowlistLedger",
+      ledger: wowlistLedger,
+      mutate(altered) {
+        altered.populationAudit.repostSourceHandles = altered.populationAudit.repostSourceHandles
+          .filter((handle) => handle.toLowerCase() !== "@urbanhermit");
+      }
+    },
+    {
+      fixture: "kcTownHallLedger",
+      ledger: kcTownHallLedger,
+      mutate(altered) {
+        const record = altered.records.find((item) =>
+          item.publicMentions?.some((handle) => handle.toLowerCase() === "@urbanhermit")
+        );
+        record.publicSummary = "Jamie alone delivered the resident service outcome.";
+      }
+    },
+    {
+      fixture: "nycacLedger",
+      ledger: nycacLedger,
+      mutate(altered) {
+        const record = altered.records.find((item) =>
+          item.publicMentions?.some((handle) => handle.toLowerCase() === "@urbanhermit")
+        );
+        record.publicSummary = "Jamie alone led the coalition and caused the policy outcome.";
+      }
+    }
+  ];
+
+  for (const { fixture, ledger, mutate } of cases) {
+    const altered = structuredClone(ledger);
+    mutate(altered);
+    const result = evaluateKnowledgeBank(suite, { [fixture]: altered });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1,
+      `expected ${fixture} cross-ledger drift to fail`
+    );
+    assert.equal(result.accepted, false);
+  }
+});
+
 test("urbanhermit personal and individual posts are not institutional metadata", () => {
   const personal = urbanhermitSocialCorpus.sources.find(
     (source) => source.id === "SRC-X-URBANHERMIT-RIVER-OFFICE-HOURS-2009"

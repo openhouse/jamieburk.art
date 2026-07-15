@@ -777,9 +777,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const wowDocumentation = existsSync(path.join(repoRoot, wowFull.documentationPath))
     ? readFileSync(path.join(repoRoot, wowFull.documentationPath), "utf8")
     : "";
-  const wowLedger = existsSync(wowLedgerPath)
+  const wowLedger = fixtures.wowlistLedger ?? (existsSync(wowLedgerPath)
     ? JSON.parse(readFileSync(wowLedgerPath, "utf8"))
-    : null;
+    : null);
   const wowRecords = wowLedger?.records ?? [];
   const wowRecordIds = wowRecords.map((record) => record.statusId);
   const wowRecordUrls = wowRecords.map((record) => record.statusUrl);
@@ -1499,6 +1499,21 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     (account) => account.handle === "@urbanhermit"
   );
   const urbanLedgerText = urbanLedger ? JSON.stringify(urbanLedger) : "";
+  const urbanhermitBearingLedgerSurface = (ledger) => {
+    const { records = [], ...metadata } = ledger ?? {};
+    const containsUrbanhermit = (value) => /urbanhermit/i.test(JSON.stringify(value));
+    return {
+      metadata: Object.fromEntries(
+        Object.entries(metadata).filter(([, value]) => containsUrbanhermit(value))
+      ),
+      records: records.filter((record) => containsUrbanhermit(record))
+    };
+  };
+  const urbanCrossLedgerContractHash = sha256(JSON.stringify({
+    wowlist: urbanhermitBearingLedgerSurface(wowLedger),
+    kcTownHall: urbanhermitBearingLedgerSurface(kcthLedger),
+    nycArtistCoalition: urbanhermitBearingLedgerSurface(nycacLedger)
+  }));
   const urbanLedgerContractHash = urbanLedger ? sha256(urbanLedgerText) : "";
   const urbanLedgerMetadataContract = urbanLedger ? structuredClone(urbanLedger) : null;
   if (urbanLedgerMetadataContract) urbanLedgerMetadataContract.records = [];
@@ -1863,6 +1878,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       urbanLedgerMetadataContractHash === urbanFull.expectedLedgerMetadataSha256 &&
       urbanKnowledgeGraphContractHash === urbanFull.expectedKnowledgeGraphSha256 &&
       urbanPublicSurfaceContractHash === urbanFull.expectedPublicSurfaceSha256 &&
+      urbanCrossLedgerContractHash === urbanFull.expectedCrossLedgerSha256 &&
       urbanSemanticContractHash === urbanFull.expectedSemanticContractSha256 &&
       urbanLedger.populationAudit.profileCountObserved === urbanFull.expectedProfileCount &&
       urbanLedger.populationAudit.profileAndBoundedSearchItemsRecovered === urbanFull.expectedUniqueItems &&
