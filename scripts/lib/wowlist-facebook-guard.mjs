@@ -1,5 +1,6 @@
 const allowedParticipationInvitations = [
-  /\b(?:the )?project\b.{0,60}\binvited\b.{0,180}\b(?:community )?members?\b.{0,180}\b(?:help )?shape\b.{0,80}\b(?:the )?(?:service|platform|product|design)\b/gis
+  /\binvited\b.{0,180}\b(?:community )?members?\b.{0,180}\b(?:help )?shape\b.{0,80}\b(?:the )?(?:service|platform|product|design)\b/gis,
+  /\binvitation\b.{0,100}\b(?:to )?(?:community )?members?\b.{0,180}\b(?:help )?(?:shape|improve)\b.{0,80}\b(?:the )?(?:service|platform|product|design|site)\b/gis
 ];
 
 const prohibitedPatterns = [
@@ -10,22 +11,27 @@ const prohibitedPatterns = [
   {
     label: "demonstrated member product influence",
     pattern:
-      /\bmembers?\b.{0,80}\b(?:provided?|gave|contributed|offered|submitted|shared|supplied)\b.{0,80}\b(?:input|feedback)\b.{0,120}\b(?:product|design|platform|service|roadmap)\b/is
+      /\bmembers?\b.{0,80}\b(?:provided?|gave|contributed|offered|submitted|shared|supplied)\b.{0,80}\b(?:input|feedback)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site)\b/is
   },
   {
     label: "demonstrated member product influence",
     pattern:
-      /\bmembers?\b.{0,80}\b(?:help(?:ed)?|shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,120}\b(?:product|design|platform|service|roadmap)\b/is
+      /\b(?:community )?members?\b.{0,80}\b(?:help(?:ed)?|shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined|co[- ]design(?:ed|ing)?)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site)\b/is
   },
   {
     label: "demonstrated community feedback",
     pattern:
-      /\bcommunity (?:input|feedback)\b.{0,100}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,120}\b(?:product|design|platform|service|roadmap)\b/is
+      /\b(?:community|member) (?:input|feedback)\b.{0,100}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined|reflected)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site|decisions?)\b/is
   },
   {
     label: "demonstrated member product influence",
     pattern:
-      /\b(?:product|design|platform|service|roadmap)\b.{0,100}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,100}\bby (?:community )?members?\b/is
+      /\b(?:incorporat(?:ed|ing)|integrat(?:ed|ing)|appl(?:ied|ying)|used|reflected)\b.{0,100}\b(?:community|member) (?:input|feedback)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site|decisions?)\b/is
+  },
+  {
+    label: "demonstrated member product influence",
+    pattern:
+      /\b(?:product|design|platform|service|roadmap|features?|site|decisions?)\b.{0,100}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined|reflected)\b.{0,100}\bby (?:community )?members?\b/is
   },
   {
     label: "named or authenticated account-control surface",
@@ -35,16 +41,17 @@ const prohibitedPatterns = [
   {
     label: "signed-in account-control disclosure",
     pattern:
-      /\b(?:signed[- ]in|logged[- ]in|authenticated|current)\b.{0,80}\b(?:profile|view|session|account)\b.{0,140}\b(?:administer|manage|edit|owner controls?|Page settings|Page manager|account manager)\b/is
+      /\b(?:signed[- ]in|logged[- ]in|authenticated|current)\b.{0,80}\b(?:profile|view|session|account)\b.{0,140}\b(?:administer|manage|edit|owner controls?|Page settings|Page manager|account manager|Page[- ]control tools?|admin rights?)\b/is
   },
   {
     label: "Jamie account-control disclosure",
-    pattern: /\bJamie\b.{0,80}\bcould\b.{0,80}\b(?:administer|manage|edit)\b.{0,80}\bPage\b/is
+    pattern:
+      /\bJamie\b.{0,80}\b(?:could|retained?|held|kept|had|maintained?)\b.{0,100}\b(?:administer|manage|edit|control|ownership|admin rights?|administrator access|management access|Page settings)\b.{0,80}\b(?:the )?(?:WOW List )?Page\b|\bJamie\b.{0,80}\b(?:could|retained?|held|kept|had|maintained?)\b.{0,80}\b(?:the )?(?:WOW List )?Page\b.{0,80}\b(?:administrator access|admin rights?|control|ownership|management access)\b/is
   },
   {
     label: "account-control disclosure",
     pattern:
-      /\b(?:account|profile|view|session)\b.{0,80}\b(?:showed|displayed|revealed|exposed|confirmed)\b.{0,120}\b(?:owner controls?|Page manager|account manager|admin(?:istrator)? role|management role|Page settings)\b/is
+      /\b(?:account|profile|view|session)\b.{0,80}\b(?:showed|displayed|revealed|exposed|confirmed)\b.{0,120}\b(?:owner controls?|Page manager|account manager|admin(?:istrator)? role|management role|Page settings|Page[- ]control tools?|admin rights?)\b/is
   },
   {
     label: "account-control disclosure",
