@@ -829,6 +829,110 @@ offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## nycac-facebook-event-population - Displayed-control accounting
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the displayed-control population
+**Evidence class:** Authenticated public surface / governed public-safe corpus
+**Public wording:** Facebook displayed 34 NYC Artist Coalition past-event slots;
+the knowledge bank recovered all 33 identities exposed by the live index and
+preserves one slot as unresolved.
+**Detailed public-safe wording:** Repeated authenticated scrolling reached a
+stable set of 33 event IDs, reproduced the same sorted-ID digest in a fresh
+same-day replay, and retained one unidentified slot from an earlier 34-item
+host control.
+**Where to project:** Knowledge-bank archive note.
+**Why it matters:** Gives future agents a reproducible denominator while
+preserving platform volatility and non-recovery honestly.
+**Guardrail:** This is 100 percent control-slot accounting, not a native Meta
+owner export or proof that every historical event remains visible.
+**Do not say:** All 34 event pages were recovered; the coalition created exactly
+34 events; the unresolved event never existed.
+**Protected boundaries:** Raw captures, authenticated state, attendee data,
+contacts, access details, and account-administration records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-participation-system - Recurring event operations
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the collective system; moderate-to-strong for
+Jamie's bounded role
+**Evidence class:** Governed public event corpus / independent reporting /
+Jamie's reviewed first-hand account
+**Public wording:** Beginning in 2017, Jamie helped establish and produce NYC
+Artist Coalition's recurring participation system: public event pages,
+meetings rotating through small cultural spaces, practical safety and legal
+sessions, town halls, hearings, campaign actions, and relief convenings that
+connected artists' lived experience with civic pathways.
+**Detailed public-safe wording:** The governed corpus preserves 33 recovered
+events, including 12 recurring meetings, ten different named physical meeting
+spaces, two virtual meetings, and repeated interfaces among artists, cultural
+spaces, practical support, advocacy, agencies, and elected officials.
+**Where to project:** NYC Artist Coalition / FairRentNYC case study and
+knowledge bank.
+**Why it matters:** Shows program operations, participatory research, event
+production, public communication, and civic translation as one sustained
+practice.
+**Guardrail:** Preserve coalition collaborators, hosts, partners, speakers,
+officials, and participants. Use helped establish and produce.
+**Do not say:** Jamie solely produced every event; every event used a different
+venue; the coalition met every calendar month; the program alone caused policy
+outcomes.
+**Protected boundaries:** Raw event descriptions, attendee and guest data,
+comments, contacts, meeting credentials, private documents, and account data
+stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-event-response-signals - Bounded interface labels
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for arithmetic; not evidence of attendance
+**Evidence class:** Governed public-safe event corpus
+**Public wording:** Thirty-two recovered event pages display Facebook response
+counts; 19 show at least 100 responses, seven at least 500, and three at least
+1,000.
+**Detailed public-safe wording:** The threshold arithmetic is retained at the
+event-page level; three source values are rounded in thousands and responders
+may recur across events.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Preserves a traction signal for future research without
+turning a volatile platform label into an accomplishment claim.
+**Guardrail:** Event-level response labels are not verified attendance, unique
+people, reach, participation, endorsement, conversion, mandate, or impact. Do
+not sum the values into a people-reached claim.
+**Do not say:** 9,989 unique people engaged; responses equal attendance; the
+counts prove policy impact.
+**Protected boundaries:** Attendee identities, invite context, reactions,
+comments, private analytics, and account-level insights stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-democratic-listening-practice - Jamie's interpretation
+
+**Status:** Use with care / held from public projection
+**Support level:** First-hand interpretive account with structural
+corroboration
+**Evidence class:** Jamie's reviewed account / governed public event corpus
+**Public wording:** Jamie describes the recurring event practice as a kind of
+democracy lab: listening in small cultural spaces, believing artists, and
+translating lived experience into collective civic pathways.
+**Detailed public-safe wording:** Jamie understands the recurring practice as a kind of
+democracy lab: believing artists, listening in small cultural spaces, and
+translating lived experience between cultural and civic codes.
+**Where to project:** Knowledge-bank depth; held from the current website.
+**Why it matters:** Preserves the values and design intention that explain the
+work without mislabeling an interpretation as measured impact.
+**Guardrail:** Always attribute the interpretation to Jamie. It is not a
+measured outcome, participant consensus, or external evaluation.
+**Do not say:** The events empirically proved a democracy-lab outcome; every
+participant shared the interpretation; the system represented all NYC artists.
+**Protected boundaries:** Participant identities, private reflections,
+unapproved testimony, and sensitive coalition deliberation stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  

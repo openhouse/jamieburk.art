@@ -266,6 +266,7 @@ const workItemsInput = [
       "nyc-artist-coalition-public-outcome-arc",
       "nyc-artist-coalition-campaign-press-corpus",
       "nyc-artist-coalition-founding-era-role",
+      "nyc-artist-coalition-participation-system",
       "nyc-artist-coalition-shared-public-identity",
       "nyc-artist-coalition-x-source-circulation"
     ],
@@ -290,7 +291,8 @@ const workItemsInput = [
         "fair-rent-campaign-memory",
         "fair-rent-source-map",
         "fair-rent-public-data-pilot",
-        "nyc-artist-coalition-public-web-infrastructure"
+        "nyc-artist-coalition-public-web-infrastructure",
+        "nyc-artist-coalition-participation-system"
       ],
       roleFit: [
         "nyc-artist-coalition-civic-systems",
@@ -320,6 +322,7 @@ const workItemsInput = [
         ["fair-rent-campaign-memory", "fair-rent-source-map"],
         ["fair-rent-public-data-pilot"],
         ["nyc-artist-coalition-public-web-infrastructure"],
+        ["nyc-artist-coalition-participation-system"],
         ["nyc-artist-coalition-shared-public-identity"],
         ["nyc-artist-coalition-x-source-circulation"],
         ["nyc-artist-coalition-campaign-press-corpus"],
@@ -331,6 +334,7 @@ const workItemsInput = [
         "nyc-artist-coalition-civic-systems",
         "nyc-artist-coalition-public-web-infrastructure",
         "nyc-artist-coalition-public-outcome-arc",
+        "nyc-artist-coalition-participation-system",
         "nyc-artist-coalition-shared-public-identity"
       ],
       open: [
@@ -433,7 +437,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, four structured campaign press indexes, a governed 3,367-item public account corpus with an explicit 1,757-item gap, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, four structured campaign press indexes, a governed 3,367-item public X account corpus with an explicit 1,757-item gap, a governed 33-event Facebook corpus with one unresolved host-control slot, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -452,6 +456,7 @@ const workItemsInput = [
       "Running minutes, decision records, action trackers, and source maps",
       "Privacy-preserving commercial-data pilot specification with schema, suppression, methods, and exclusions",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "Recurring participation system spanning cultural-space meetings, practical support sessions, town halls, hearings, campaigns, and relief convenings",
       "One shared public account identity carrying Fair Rent NYC, Save NYC Spaces, Let NYC Dance, and Talks Not Raids across the recovered 2017-2026 record",
       "446 of 696 recovered authored posts linking outward to campaign tools, public records, reporting, forms, events, and field resources",
       "45 campaign press-index entries representing 44 distinct article URLs",

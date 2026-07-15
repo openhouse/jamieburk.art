@@ -838,6 +838,54 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-15"
   },
   {
+    id: "nyc-artist-coalition-participation-system",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system across small cultural spaces, practical support sessions, town halls, hearings, campaigns, and relief convenings.",
+    shortWording: "Helped build NYC Artist Coalition's recurring participation system",
+    detailedPublicWording:
+      "Jamie connected event pages, rotating meetings in small cultural spaces, fire-safety and legal sessions, town halls, hearings, campaign actions, and relief convenings into a recurring collective practice that carried artists' lived experience toward civic pathways.",
+    sourceBasis:
+      "Jamie's reviewed first-hand account, a governed public-safe census of 33 recovered Facebook event records, contemporaneous Gothamist reporting on his fire-code study groups and City Hall advocacy, and a 2017 Greene Hill interview connecting him to coalition work and a nightlife town hall.",
+    whyItMatters:
+      "Shows program operations, participatory research, event production, public communication, stakeholder translation, and sustained civic implementation as one transferable operating practice.",
+    guardrail:
+      "Use helped establish and produce. Preserve coalition collaborators, event hosts, partners, speakers, officials, and participants; do not assign Jamie sole production of every event or turn platform responses into attendance or policy causation.",
+    doNotSay: [
+      "Jamie solely produced every NYC Artist Coalition event",
+      "Jamie alone led the coalition",
+      "Every meeting used a different venue",
+      "The coalition met every calendar month",
+      "Facebook responses equal attendance or unique reach",
+      "The event program alone caused policy outcomes"
+    ],
+    protectedBoundaries: [
+      "Raw event descriptions",
+      "Attendee and guest identities",
+      "Comments and reactions",
+      "Contact details",
+      "Meeting access credentials",
+      "Private working documents",
+      "Account-administration data"
+    ],
+    surfaces: ["work-card", "case-study", "technical-operations"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "program-operations",
+      "event-production",
+      "participatory-research",
+      "stakeholder-translation",
+      "civic-systems"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "nyc-artist-coalition-shared-public-identity",
     status: "careful",
     supportLevel: "strong",

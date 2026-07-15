@@ -1165,6 +1165,28 @@
         "endorsement of posted sources",
         "policy causation or sole campaign credit"
       ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "title": "NYC Artist Coalition Facebook event public-safe census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/c4bed01a8fd68144926f1d29e61f6644fd4dbcfd/docs/knowledge-bank/corpora/nycartc-facebook-events-full-population-2026-07-15.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
+      "publicNote": "The metadata-only corpus retains 33 recovered event identities and a disposition for all 34 displayed control slots while excluding raw descriptions and personal or authenticated-session data.",
+      "doesNotEstablish": [
+        "the unresolved event identity",
+        "every historical coalition event",
+        "individual event authorship or production",
+        "physical attendance or unique people",
+        "policy causality"
+      ]
     }
   ],
   "claims": [
@@ -2852,6 +2874,68 @@
         "Credit the neighborhood association, church, residents, Jamie, Julia, and other participants as a collective process.",
         "The proposal does not establish the survey response count, representativeness, individual authorship of the card or database, or completion of every proposed use."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie describes the recurring event and participation layer as a major part of his NYC Artist Coalition contribution. The surviving population corroborates the collective system's public form while leaving event-level authorship open.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "33-event collective participation system",
+            "12 recurring meetings across ten physical cultural spaces"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-GOTHAMIST-CABARET-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie organized fire-code study groups",
+            "Jamie participated in City Hall advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's NYC Artist Coalition participation",
+            "a nightlife town hall invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use helped establish and produce; do not assign Jamie authorship or sole production of every event.",
+        "Preserve partners, venue hosts, artists, advocates, officials, and coalition collaborators as part of the work.",
+        "The rotating pattern covers ten physical meeting spaces and two virtual meetings, not one meeting every calendar month.",
+        "The event sequence does not establish that any gathering caused a policy outcome."
+      ]
     }
   ],
   "pages": [
@@ -3044,7 +3128,8 @@
         "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020",
         "SRC-NAC-COUNCIL-LEVINE-2020",
         "SRC-NAC-COUNCIL-VANBRAMER-2020",
-        "SRC-NAC-X-CORPUS-2026-07-15"
+        "SRC-NAC-X-CORPUS-2026-07-15",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
       ],
       "occurrences": [
         {
@@ -3178,6 +3263,16 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NAC-X-CORPUS-2026-07-15"
+          ]
+        },
+        {
+          "id": "coalition-participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+            "SRC-NAC-GOTHAMIST-CABARET-2017",
+            "SRC-NAC-GREENE-HILL-NEWSLETTER-2017"
           ]
         }
       ]

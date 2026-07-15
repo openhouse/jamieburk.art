@@ -38,6 +38,8 @@ Approved public artifact examples for this launch pass include:
 - KC Town Hall and Jimmy Fitzner public records documenting shared tire-pickup
   participation.
 - Brooklyn Daily Eagle's 2017 Office of Nightlife report.
+- NYC Artist Coalition's public-safe 33-event Facebook corpus, with one
+  unresolved slot retained against the 34-slot host control.
 
 ### Public-Safe Archive Summary
 
@@ -81,6 +83,21 @@ private analytics, and non-mission personal context. The raw authenticated
 research run remains protected. The public corpus supports population and
 source-discovery claims; article-level claims require close reading of the
 destination or an independently authored attribution.
+
+### Public Event Population
+
+The July 15, 2026 authenticated NYC Artist Coalition Facebook pass preserves
+33 public event identities exposed by the Past Events index and one unresolved
+slot from an earlier 34-past-events host control. The corpus contains public
+metadata, organizer-display relationships, venues, overlapping mission topics,
+bounded historical response labels, and seven public article routes.
+
+The public corpus excludes raw descriptions, attendee and guest identities,
+comments and reactions, contact details, meeting credentials, private working
+links, account-administration data, and authenticated-session state. Event
+pages establish a recurring collective system and event-level interfaces; they
+do not establish individual production credit, attendance, endorsement, or
+policy causality.
 
 ### Firsthand / Collaborator Context
 

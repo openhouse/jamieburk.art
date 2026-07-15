@@ -115,6 +115,41 @@ Visible interaction labels were retained as a dated research observation and
 held from accomplishment messaging because platform metrics are volatile,
 incomplete, and not stakeholder-attributed.
 
+### Facebook event participation system
+
+An authenticated [full-population event pass](../runs/2026-07-15-nycac-facebook-events-full-population.md)
+recovered 33 event identities after terminal scrolling and reproduced the same
+sorted-ID digest in a fresh same-day replay. An earlier page-host control
+displayed 34 past-event slots, so the result is recorded as 33 recovered events
+plus one unresolved slot: 100 percent control-slot accounting, not 100 percent
+historical-content recovery.
+
+The sequence spans January 2017 through January 2021. It includes 24 cards that
+display NYC Artist Coalition as organizer and nine allied or cohosted listings.
+Twelve records are recurring coalition meetings: ten physical meetings at ten
+different named cultural spaces and two virtual meetings. The broader
+population contains 29 participatory convenings, 15 government-interface
+events, 15 cultural or community-space events, and nine government-venue
+events.
+
+Thirty-two pages display historical Facebook response counts; 19 show at least
+100 responses, seven at least 500, and three at least 1,000. These are volatile
+event-level interface labels, not attendance, unique people, reach,
+participation, endorsement, mandate, or impact, and they are not summed into a
+people-reached claim.
+
+Recovered descriptions routed participants to seven articles from New York
+Post, WNYC, Metro, The New Yorker, The Baffler, Curbed, and Gothamist. Thirteen
+additional protected-link occurrences are retained only as public-safe
+category counts. A posted route documents public information flow, not
+agreement with every statement in the destination.
+
+Jamie's reviewed first-hand account, the governed corpus, and independent
+Gothamist and Greene Hill records support the bounded wording that he **helped
+establish and produce** the recurring participation system. The event pages do
+not identify the author or producer of every event, and event chronology does
+not establish policy causality.
+
 Public projection: the lower-bound Council result is promoted to the NYC Artist Coalition / Fair Rent NYC case study. Collaborator adoption remains a deeper knowledge-bank claim.
 
 ## WOW List: @wowlist

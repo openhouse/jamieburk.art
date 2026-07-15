@@ -35,6 +35,18 @@ confidential tax, business, tenant, or lease records.
 Do not say Jamie alone relaunched FairRentNYC or authored every campaign asset.
 Do not present the private implementation record as public evidence.
 
+Do not say Jamie solely created or produced every NYC Artist Coalition event,
+that every event used a different venue, or that the coalition met every
+calendar month. The supported role is that he helped establish and produce the
+recurring participation system, with collective and host credit preserved.
+
+Do not say all 34 Facebook event pages were recovered or that Facebook exposes
+the coalition's complete history. The governed result is 33 recovered records
+plus one unresolved host-control slot.
+
+Do not sum Facebook event responses into a unique-people figure or equate them
+with attendance, reach, participation, endorsement, mandate, or impact.
+
 Do not say Jamie created HUD-USPS vacancy data, completed or validated every
 analysis, built a production pipeline, or secured agency adoption. The current
 claim is corpus assembly and organization.

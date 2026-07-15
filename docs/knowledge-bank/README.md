@@ -106,6 +106,15 @@ The full NYC Artist Coalition population-accounting pass is documented in
 with a public-safe raw extraction, deterministic derivation, and explicit
 1,757-item recovery gap.
 
+The authenticated [NYC Artist Coalition Facebook event pass](runs/2026-07-15-nycac-facebook-events-full-population.md)
+accounts for all 34 slots displayed by a same-day host control: 33 recovered
+event records and one unresolved slot. Its [public-safe corpus](corpora/nycartc-facebook-events-full-population-2026-07-15.json),
+manifest, deterministic checker, and [project note](projects/nyc-artist-coalition-facebook-events.md)
+preserve the recurring participation system, rotating cultural-space pattern,
+source routes, stakeholder interfaces, and bounded response labels without
+publishing raw descriptions, attendee data, access details, or authenticated
+state.
+
 The personal [@urbanhermit full-population pass](runs/2026-07-15-urbanhermit-x-full-population.md)
 reconciles all 434 records represented by the live profile counter. Its
 [public-safe corpus](corpora/urbanhermit-x-full-population-2026-07-15.json),
