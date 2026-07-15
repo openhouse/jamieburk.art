@@ -849,6 +849,83 @@
         "official Council API status",
         "complete API documentation"
       ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-CORPUS-2026-07-15",
+      "title": "Authenticated WOW List full profile-reported timeline corpus",
+      "author": "Codex authenticated browser review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/with_replies",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated item-level review of the replies-inclusive @wowlist timeline, July 15, 2026.",
+      "publicNote": "The profile reported 38 posts and the complete rendered timeline yielded 38 distinct canonical status IDs: 22 authored posts and 16 reposts. The repository preserves all 38 items, 35 posted short URLs with resolved destinations, and four inspected conversation contexts.",
+      "doesNotEstablish": [
+        "the individual author of every project-account post",
+        "deleted parent-post contents",
+        "private or historically hidden engagement",
+        "complete platform adoption or community outcomes",
+        "causation of civic or mutual-aid outcomes"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
+      "title": "WOW List answers a location-scope question",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List publicly answered Julia Fredenburg's question about viewing events beyond her location and said a local/everywhere toggle was coming.",
+      "publicNote": "A public project-account post establishes what the account published, not the individual author of every post.",
+      "doesNotEstablish": [
+        "that the proposed toggle shipped",
+        "the identity of the person who wrote the reply",
+        "a representative usability study"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
+      "title": "WOW List answers a list-discovery question",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591666366215811073",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List publicly answered Julia Fredenburg's question about finding her lists by explaining the profile-page and sidebar path.",
+      "publicNote": "A public project-account post establishes what the account published, not the individual author of every post.",
+      "doesNotEstablish": [
+        "the identity of the person who wrote the reply",
+        "that every user found the navigation understandable"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015",
+      "title": "WOW List answers an event-entry workflow complaint",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591668857670148096",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List publicly answered Julia Fredenburg after she said adding an event from the home screen required too many clicks, documenting both workflow friction and the account's support response.",
+      "publicNote": "A public project-account post establishes what the account published, not the individual author of every post.",
+      "doesNotEstablish": [
+        "that the click count was subsequently reduced",
+        "the identity of the person who wrote the reply",
+        "a representative usability study"
+      ]
     }
   ],
   "claims": [
@@ -2153,6 +2230,90 @@
         "The resident-preference evidence came from conversations with neighbors and friends, not a documented representative usability study.",
         "The API post establishes a public interface at the time, not current availability or complete documentation."
       ]
+    },
+    {
+      "id": "CLM-WOWLIST-PUBLIC-PRODUCT-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public support threads preserve real product questions about location scope, finding personal lists, and excessive clicks in the add-event workflow, along with the project account's responses.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "location-scope question",
+            "project-account response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "list-discovery question",
+            "project-account response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "click-friction report",
+            "event-entry support response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The threads document public questions and support responses, not a representative usability study.",
+        "The event-entry reply documents the reported friction and existing workflow, not a verified product change.",
+        "Credit belongs to the WOW List team; the account does not identify the person who wrote each reply."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-CIVIC-CARE-USE-PATTERN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public trace shows the calendar practice extending beyond event promotion into demonstrations, vigils, fundraisers, and mutual-aid circulation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "complete account population",
+            "eight-item civic and mutual-aid pattern",
+            "linked demonstrations, vigils, fundraisers, and relief resources"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Some pattern items are reposts and are attributed to their original authors.",
+        "The corpus establishes public communication and curation, not attendance, funds raised, policy outcomes, or Jamie's authorship of each post."
+      ]
     }
   ],
   "pages": [
@@ -2435,7 +2596,11 @@
       "sourceOrder": [
         "SRC-WOWLIST-ORIGIN-2014",
         "SRC-WOWLIST-NYCDIY-LINEAGE-2016",
-        "SRC-WOWLIST-ORGANIZER-USE-2015"
+        "SRC-WOWLIST-ORGANIZER-USE-2015",
+        "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
+        "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
+        "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015",
+        "SRC-WOWLIST-X-CORPUS-2026-07-15"
       ],
       "occurrences": [
         {
@@ -2446,6 +2611,24 @@
             "SRC-WOWLIST-ORIGIN-2014",
             "SRC-WOWLIST-NYCDIY-LINEAGE-2016",
             "SRC-WOWLIST-ORGANIZER-USE-2015"
+          ]
+        },
+        {
+          "id": "public-product-support",
+          "claimId": "CLM-WOWLIST-PUBLIC-PRODUCT-SUPPORT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
+            "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
+            "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015"
+          ]
+        },
+        {
+          "id": "civic-care-use-pattern",
+          "claimId": "CLM-WOWLIST-CIVIC-CARE-USE-PATTERN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-CORPUS-2026-07-15"
           ]
         }
       ]

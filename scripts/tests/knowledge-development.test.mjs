@@ -8,8 +8,11 @@ import {
   validateKnowledgeDevelopmentSuite
 } from "../check-knowledge-development.mjs";
 import {
-  validateCommittedCorpus
+  validateCommittedCorpus as validateCallNycCorpus
 } from "../derive-callnyc-x-corpus.mjs";
+import {
+  validateCommittedCorpus as validateWowListCorpus
+} from "../derive-wowlist-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 
 const suite = JSON.parse(
@@ -219,7 +222,7 @@ test("CallNYC corpus accounts for every recoverable timeline item and preserves 
     "docs/knowledge-bank/corpora/source-captures/callnyc-x-browser-extraction-2026-07-15-utc.json",
     "utf8"
   );
-  const derivedMetrics = validateCommittedCorpus(rawCaptureText, corpus);
+  const derivedMetrics = validateCallNycCorpus(rawCaptureText, corpus);
   const authored = corpus.items.filter((item) => item.type === "authored");
   const reposted = corpus.items.filter((item) => item.type === "reposted");
   const canonicalUrls = new Set(corpus.items.map((item) => item.canonicalUrl));
@@ -301,6 +304,104 @@ test("CallNYC corpus accounts for every recoverable timeline item and preserves 
     page.occurrences.find((item) => item.id === "social-translation-system").claimId,
     claim.id
   );
+});
+
+test("WOW List corpus accounts for the full profile-reported population and preserves product-support context", () => {
+  const corpus = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json",
+      "utf8"
+    )
+  );
+  const rawCaptureText = readFileSync(
+    "docs/knowledge-bank/corpora/source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json",
+    "utf8"
+  );
+  const metrics = validateWowListCorpus(rawCaptureText, corpus);
+  const canonicalUrls = new Set(corpus.items.map((item) => item.canonicalUrl));
+  const authored = corpus.items.filter((item) => item.type === "authored");
+  const reposted = corpus.items.filter((item) => item.type === "reposted");
+
+  assert.equal(corpus.population.profileReported, 38);
+  assert.equal(corpus.population.renderedDistinct, 38);
+  assert.equal(corpus.population.unresolvedCountDifference, 0);
+  assert.equal(corpus.items.length, 38);
+  assert.equal(canonicalUrls.size, 38);
+  assert.equal(authored.length, 22);
+  assert.equal(reposted.length, 16);
+  assert.deepEqual(
+    corpus.items.map((item) => item.index),
+    Array.from({ length: 38 }, (_, index) => index + 1)
+  );
+  assert.deepEqual(metrics, {
+    profileReported: 38,
+    renderedDistinct: 38,
+    authored: 22,
+    reposted: 16,
+    authoredReplies: 6,
+    unresolvedCountDifference: 0,
+    authoredPostsWithOutgoingLinks: 19,
+    allOutgoingLinkOccurrences: 35,
+    authoredOutgoingLinkOccurrences: 23,
+    authoredWowListLinkOccurrences: 12,
+    authoredNycDiyLinkOccurrences: 2,
+    authoredExternalLinkOccurrences: 9,
+    recoveredPublicSupportThreads: 3,
+    authoredPostsWithVisibleEngagement: 12,
+    authoredEngagementTotals: { replies: 2, reposts: 20, likes: 21 }
+  });
+  assert.equal(corpus.supplementalThreads.length, 4);
+  assert.equal(
+    corpus.supplementalThreads.filter((thread) => thread.parentCanonicalUrl).length,
+    3
+  );
+  assert.ok(
+    corpus.supplementalThreads.some((thread) =>
+      /too many clicks/i.test(thread.parentVisibleText)
+    )
+  );
+  assert.equal(corpus.missionPatterns.length, 5);
+  assert.equal(corpus.sourceLeads.length, 7);
+  assert.ok(
+    corpus.sourceLeads.some(
+      (lead) =>
+        lead.id === "good-times-zines-2" &&
+        lead.disposition === "posted-url-page-not-recovered"
+    )
+  );
+
+  const supportClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-PUBLIC-PRODUCT-SUPPORT"
+  );
+  const civicClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-CIVIC-CARE-USE-PATTERN"
+  );
+  const tractionClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-SOCIAL-TRACTION-OBSERVATION"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "wowlist");
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const socialBatch = readFileSync(
+    "apps/www/src/data/knowledge-bank/batches/social-account-production-2026-07-14.ts",
+    "utf8"
+  );
+
+  assert.equal(supportClaim.projectionEligibility, "eligible");
+  assert.equal(civicClaim.projectionEligibility, "eligible");
+  assert.equal(tractionClaim.projectionEligibility, "hold");
+  assert.ok(supportClaim.boundaries.some((item) => /representative usability study/i.test(item)));
+  assert.ok(civicClaim.antiClaims.some((item) => /caused/i.test(item)));
+  assert.equal(
+    page.occurrences.find((item) => item.id === "public-product-support").claimId,
+    supportClaim.id
+  );
+  assert.equal(
+    page.occurrences.find((item) => item.id === "civic-care-use-pattern").claimId,
+    civicClaim.id
+  );
+  assert.match(work, /location-scope, list-discovery, and event-entry workflow questions/);
+  assert.match(work, /demonstrations, vigils, fundraisers, and mutual-aid circulation/);
+  assert.doesNotMatch(socialBatch, /recovered 37 of 38 profile-reported posts/);
 });
 
 test("an intake-linked source without decomposition fails KB-003", () => {

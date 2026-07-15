@@ -82,11 +82,15 @@ Public projection: the lower-bound Council result is promoted to the NYC Artist 
 
 ## WOW List: @wowlist
 
-Profile snapshot: joined February 2014; 38 posts reported; 37 unique status URLs rendered.
+Profile snapshot: joined February 2014; 38 posts reported; all 38 distinct status URLs recovered through a replies-inclusive authenticated pass. The [item-level corpus](../corpora/wowlist-x-full-population-2026-07-15.json) contains 22 authored posts and 16 reposts.
 
 The earliest visible account post says Richard and Jamie were building a project based on calendars made at Sunday Dinner. A 2016 post describes NYCdiy as running on WOW List and calls WOW List a DIY community-calendar project from the Sunday Dinner potluck. A 2015 organizer post reports adding shows to WOW List.
 
-Public projection: promoted to both the WOW List and Sunday Dinner / 196 pages. The claim is about lineage, co-building, and observable organizer use, not sole authorship or complete adoption.
+Three recovered conversation parents make the product-operation record more concrete. Julia Fredenburg publicly asked how to see events beyond her location, how to find her lists, and how to add an event with fewer clicks; the project account answered each question. The full population also preserves an organizer posting shows, collaborators sharing event pages, a member-made tutorial, and recurring use of calendar infrastructure for demonstrations, vigils, fundraisers, and mutual-aid circulation.
+
+The 38 items contain 35 posted short URLs. Nineteen authored posts contain 23 link occurrences: 12 WOW List destinations, two NYCdiy destinations, and nine external destinations. Mission-relevant source leads include an archived grassroots venue manual review, Allied Media Conference, a member-made tutorial, Good Times reporting on DIY documentation, popular.vote, and peer DIY funding infrastructure.
+
+Public projection: the lineage, public product-support loop, and civic/care use pattern are promoted to the WOW List page. The engagement snapshot remains held. Claims are about collective product operation and observable use, not sole authorship, complete adoption, or caused outcomes.
 
 Open question: resolve the relationship between historical `@wowlistnyc` usage and current `@wowlist` only if a dated public bridge is recovered.
 

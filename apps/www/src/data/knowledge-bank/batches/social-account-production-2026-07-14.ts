@@ -193,16 +193,17 @@ export const socialAccountProductionBatch20260714: {
       kind: "research-run",
       visibility: "public",
       preservationStatus: "live",
-      capturedAt: "2026-07-14",
-      accessedAt: "2026-07-14",
+      capturedAt: "2026-07-15",
+      accessedAt: "2026-07-15",
       canonicalUrl: "https://x.com/wowlist",
       preferredPublicUrl: "canonical",
       publicCitation:
-        "Authenticated review of the public @wowlist profile and rendered timeline on July 14, 2026.",
+        "Authenticated review of the public @wowlist profile and replies-inclusive rendered timeline on July 15, 2026.",
       publicNote:
-        "The profile reported 38 posts; 37 unique status URLs rendered. Historical public code and a 2015 post use @wowlistnyc, but a same-account handle migration was not established.",
+        "The profile reported 38 posts and the complete replies-inclusive pass recovered 38 distinct canonical status IDs. Historical public code and a 2015 post use @wowlistnyc, but a same-account handle migration was not established.",
       supportsGenerally: [
         "the @wowlist project identity",
+        "the complete profile-reported post population on the capture date",
         "an explicit public lineage from Sunday Dinner calendars to WOW List",
         "organizer use and public support interactions"
       ],
@@ -738,7 +739,7 @@ export const socialAccountProductionBatch20260714: {
       sourceId: "SRC-SOCIAL-WOWLIST-AUTH-OBSERVATION-2026",
       project: "wowlist",
       assertion:
-        "The authenticated account observation recovered 37 of 38 profile-reported posts and preserved the unresolved historical @wowlistnyc label as a research question.",
+        "The authenticated replies-inclusive account observation recovered all 38 profile-reported posts and preserved the unresolved historical @wowlistnyc label as a separate research question.",
       relationship: "contextualizes",
       confidence: "high",
       candidateClaimIds: ["CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE"],
@@ -1137,13 +1138,37 @@ export const socialAccountProductionBatch20260714: {
     {
       id: "wowlist",
       surface: "/work/wowlist",
-      sourceOrder: ["SRC-WOWLIST-ORIGIN-2014", "SRC-WOWLIST-NYCDIY-LINEAGE-2016", "SRC-WOWLIST-ORGANIZER-USE-2015"],
+      sourceOrder: [
+        "SRC-WOWLIST-ORIGIN-2014",
+        "SRC-WOWLIST-NYCDIY-LINEAGE-2016",
+        "SRC-WOWLIST-ORGANIZER-USE-2015",
+        "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
+        "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
+        "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015",
+        "SRC-WOWLIST-X-CORPUS-2026-07-15"
+      ],
       occurrences: [
         {
           id: "sunday-dinner-lineage",
           claimId: "CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE",
           projection: "case-study",
           sourceIds: ["SRC-WOWLIST-ORIGIN-2014", "SRC-WOWLIST-NYCDIY-LINEAGE-2016", "SRC-WOWLIST-ORGANIZER-USE-2015"]
+        },
+        {
+          id: "public-product-support",
+          claimId: "CLM-WOWLIST-PUBLIC-PRODUCT-SUPPORT",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
+            "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
+            "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015"
+          ]
+        },
+        {
+          id: "civic-care-use-pattern",
+          claimId: "CLM-WOWLIST-CIVIC-CARE-USE-PATTERN",
+          projection: "case-study",
+          sourceIds: ["SRC-WOWLIST-X-CORPUS-2026-07-15"]
         }
       ]
     },

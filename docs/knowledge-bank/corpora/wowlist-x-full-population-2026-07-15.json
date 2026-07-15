@@ -1,0 +1,1067 @@
+{
+  "schemaVersion": 1,
+  "account": "@wowlist",
+  "capturedAt": "2026-07-15",
+  "capturedThrough": "Authenticated X replies-inclusive profile timeline",
+  "authenticatedSessionIdentity": "@urbanhermit",
+  "rawCaptureSha256": "f44675529711a5ca945cd0c821341ac1329a69e2c72266e1d23532c4f62847e1",
+  "rawCaptureArtifact": "source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json",
+  "derivationManifest": "wowlist-x-full-population-2026-07-15.manifest.json",
+  "derivationScript": "scripts/derive-wowlist-x-corpus.mjs",
+  "population": {
+    "profileReported": 38,
+    "renderedDistinct": 38,
+    "authored": 22,
+    "reposted": 16,
+    "unresolvedCountDifference": 0,
+    "range": [
+      "2014-02-12T15:48:48.000Z",
+      "2017-01-12T21:51:23.000Z"
+    ],
+    "byYear": {
+      "2014": 2,
+      "2015": 20,
+      "2016": 14,
+      "2017": 2
+    }
+  },
+  "boundaries": [
+    "The profile reported 38 posts and the replies-inclusive timeline rendered 38 distinct canonical status IDs after repeated bottom-of-timeline passes.",
+    "The corpus therefore accounts for 100% of the profile-reported population recoverable on the capture date; this does not recover deleted parent posts or non-public activity.",
+    "Authored posts and reposted material are separate. Repost engagement belongs to the original post and is not treated as WOW List traction.",
+    "Visible engagement labels are dated observations and may omit deleted, hidden, private, or platform-suppressed activity.",
+    "Project-account output does not by itself identify Jamie or any collaborator as author of every post."
+  ],
+  "missionPatterns": [
+    {
+      "id": "collective-origin-and-deployment-lineage",
+      "summary": "Posts connect WOW List to Sunday Dinner calendars, name Jamie and Richard as builders, and describe NYCdiy as a deployment of the shared platform.",
+      "statusIds": [
+        "433671630837919744",
+        "771457416298921985"
+      ]
+    },
+    {
+      "id": "product-support-and-workflow-feedback",
+      "summary": "Three public support threads preserve questions about location scope, finding personal lists, and reducing clicks in the add-event workflow.",
+      "statusIds": [
+        "591664757473673216",
+        "591666366215811073",
+        "591668857670148096"
+      ]
+    },
+    {
+      "id": "organizer-use-and-community-distribution",
+      "summary": "Organizer and collaborator posts show people publishing shows, linking WOW List event pages, and tagging the project account with local cultural activity.",
+      "statusIds": [
+        "604360847012413440",
+        "663732869357965313",
+        "749378122823245824"
+      ]
+    },
+    {
+      "id": "civic-and-mutual-aid-use",
+      "summary": "The account and its reposts used calendar infrastructure to circulate demonstrations, vigils, fundraisers, and mutual-aid resources.",
+      "statusIds": [
+        "592424659225845760",
+        "751150062458269696",
+        "796473557387575297",
+        "798274424763981824",
+        "801883926029447168",
+        "805210387004223488",
+        "806517013472485376",
+        "807395049814290433"
+      ]
+    },
+    {
+      "id": "field-learning-and-peer-infrastructure",
+      "summary": "Posts linked a grassroots venue manual, reporting on DIY documentation, a member-made tutorial, Allied Media Conference, and peer DIY funding infrastructure.",
+      "statusIds": [
+        "590942060829663232",
+        "592810776961916929",
+        "596691623993581568",
+        "632168285291835392",
+        "815697993709993984"
+      ]
+    }
+  ],
+  "sourceLeads": [
+    {
+      "id": "grasstronaut-manualfesto",
+      "postedByStatusId": "592810776961916929",
+      "title": "HOMEWORK: In Every Town - An All-Ages Music Manualfesto",
+      "canonicalUrl": "https://grasstronaut.com/2015/01/29/homework-in-every-town/",
+      "archiveUrl": "https://web.archive.org/web/20150406041311/http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+      "disposition": "archived-and-close-read",
+      "note": "Elise Granata's article reviews a practical guide to starting all-ages venues, including organization, promotion, production, space, fundraising, community building, and conflict resolution. It is field context, not evidence Jamie authored the guide or article."
+    },
+    {
+      "id": "good-times-zines-2",
+      "postedByStatusId": "596691623993581568",
+      "title": "Zines 2.0",
+      "canonicalUrl": "https://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+      "disposition": "posted-url-page-not-recovered",
+      "note": "The account described the article as being about documenting and connecting DIY. The page itself was not recovered in this pass, so that account description is not promoted into an independent-source claim."
+    },
+    {
+      "id": "shelby-wowlist-tutorial",
+      "postedByStatusId": "632168285291835392",
+      "title": "SHELBY'S WOWLIST TUTORIAL",
+      "canonicalUrl": "https://www.youtube.com/watch?v=nQg47LtixPI",
+      "disposition": "posted-url-live-metadata",
+      "note": "The public post presents this as a member-made tutorial and links the WOW List join flow. The video is contextual evidence of user-created onboarding, not a complete adoption measure."
+    },
+    {
+      "id": "allied-media-conference-2015",
+      "postedByStatusId": "590942060829663232",
+      "title": "Allied Media Conference",
+      "canonicalUrl": "https://alliedmedia.org/amc",
+      "archiveUrl": "https://web.archive.org/web/20150619210442/https://www.alliedmedia.org/amc",
+      "disposition": "archived-context",
+      "note": "The account announced that WOW List would be at the June 18-21, 2015 conference. The post supports public participation; it does not establish session title, presenter role, or attendance totals."
+    },
+    {
+      "id": "popular-vote",
+      "postedByStatusId": "798274424763981824",
+      "title": "popular.vote",
+      "canonicalUrl": "https://popular.vote/",
+      "archiveUrl": "https://web.archive.org/web/20161211233030/http://popular.vote/",
+      "disposition": "archived-context",
+      "note": "The account described the destination as a place to add and receive updates on marches, meetings, and local connection after the 2016 election. It documents a civic reuse pattern, not measured participation."
+    },
+    {
+      "id": "meow-wolf-diy-fund",
+      "postedByStatusId": "815697993709993984",
+      "title": "Meow Wolf DIY Fund",
+      "canonicalUrl": "https://www.meowwolf.com/diy",
+      "archiveUrl": "https://web.archive.org/web/20170312084829/https://meowwolf.com/DIY/",
+      "disposition": "archived-context",
+      "note": "The repost situated WOW List within a peer ecosystem supporting DIY arts and music spaces. It is not evidence Jamie created or administered the Meow Wolf fund."
+    },
+    {
+      "id": "kqed-ghost-ship-vigil",
+      "postedByStatusId": "806517013472485376",
+      "title": "Hundreds Mourn the Victims of the Ghost Ship Fire in Oakland",
+      "canonicalUrl": "https://www.youtube.com/watch?v=g7zIdDeRVjU",
+      "disposition": "posted-url-live-metadata",
+      "note": "The account paired the KQED video with vigil and relief links. This supports a care-and-mutual-aid use pattern, not authorship of the reporting or relief campaign."
+    }
+  ],
+  "supplementalThreads": [
+    {
+      "authoredStatusUrl": "/wowlist/status/591664757473673216",
+      "parentStatusUrl": "/juliafredenburg/status/591266765251878912",
+      "parentPublishedAt": "2015-04-23",
+      "parentAuthor": "Julia Fredenburg (@juliafredenburg)",
+      "parentVisibleText": "@wowlist How can I see all events regardless of my location?",
+      "relationship": "public product-support question answered by the project account",
+      "authoredCanonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "parentCanonicalUrl": "https://x.com/juliafredenburg/status/591266765251878912"
+    },
+    {
+      "authoredStatusUrl": "/wowlist/status/591666366215811073",
+      "parentStatusUrl": "/juliafredenburg/status/530907046963855360",
+      "parentPublishedAt": "2014-11-07",
+      "parentAuthor": "Julia Fredenburg (@juliafredenburg)",
+      "parentVisibleText": "How do I find my lists on wowlist? @wowlist",
+      "relationship": "public product-support question answered by the project account",
+      "authoredCanonicalUrl": "https://x.com/wowlist/status/591666366215811073",
+      "parentCanonicalUrl": "https://x.com/juliafredenburg/status/530907046963855360"
+    },
+    {
+      "authoredStatusUrl": "/wowlist/status/591668857670148096",
+      "parentStatusUrl": "/juliafredenburg/status/531892607199494144",
+      "parentPublishedAt": "2014-11-10",
+      "parentAuthor": "Julia Fredenburg (@juliafredenburg)",
+      "parentVisibleText": "@wowlist How do I add an event to a list from the home screen? too many clicks to get there other wise",
+      "relationship": "public workflow-friction report answered by the project account",
+      "authoredCanonicalUrl": "https://x.com/wowlist/status/591668857670148096",
+      "parentCanonicalUrl": "https://x.com/juliafredenburg/status/531892607199494144"
+    },
+    {
+      "authoredStatusUrl": "/wowlist/status/771455571501416448",
+      "parentStatusUrl": null,
+      "parentPublishedAt": null,
+      "parentAuthor": null,
+      "parentVisibleText": "This Post was deleted by the Post author.",
+      "relationship": "parent unavailable; participant or initiating text cannot be recovered from the live conversation",
+      "authoredCanonicalUrl": "https://x.com/wowlist/status/771455571501416448",
+      "parentCanonicalUrl": null
+    }
+  ],
+  "items": [
+    {
+      "index": 1,
+      "canonicalUrl": "https://x.com/all_ages/status/433628764493606913",
+      "publishedAt": "2014-02-12T15:48:48.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nall_ages\n@all_ages\n·\nFeb 12, 2014\nOne of the most powerful aspects of local scenes is how they orient our cultural thinking towards a more humane scale.\n1\n4\n6",
+      "engagement": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 6
+      },
+      "engagementLabel": "1 reply, 4 reposts, 6 likes",
+      "mentions": [
+        "@all_ages"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 2,
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "publishedAt": "2014-02-12T18:39:08.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nFeb 12, 2014\nRichard & Jamie (\n@urbanhermit\n) are doing a big project based on the wowlist calendars we make at #SundayDinner! \nhttp://\now.ly/tyMAa",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@urbanhermit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "http://t.co/GgppxNburh",
+          "displayedDestination": "http://\now.ly/tyMAa",
+          "resolvedDestination": "https://ow.ly/tyMAa"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 3,
+      "canonicalUrl": "https://x.com/wowlist/status/587713396486856704",
+      "publishedAt": "2015-04-13T20:26:07.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nApr 13, 2015\nThanks Michelle for adding the Organizing 2.0 conference! Helps us get the word out about everyone's events! \nhttp://\nwowlist.org/events/15529 #org20",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "http://t.co/e7KLKI81IM",
+          "displayedDestination": "http://\nwowlist.org/events/15529",
+          "resolvedDestination": "https://wowlist.org/events/15529"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 4,
+      "canonicalUrl": "https://x.com/wowlist/status/590942060829663232",
+      "publishedAt": "2015-04-22T18:15:41.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nApr 22, 2015\nhttp://\nwowlist.org will be at Allied Media Conference June 18-21 in Detroit! Join us! \nhttp://\nalliedmedia.org/amc\nQuote\nPM Press\n@PMPressOrg\n·\nApr 18, 2015\nGo register for Allied Media Conference! \nhttps://\nalliedmedia.org/amc @AlliedMediaConf @Allied_Media #amc2015",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "http://t.co/dASFox1C0C",
+          "displayedDestination": "http://\nwowlist.org",
+          "resolvedDestination": "https://wowlist.org/"
+        },
+        {
+          "shortUrl": "http://t.co/hWIGngWvC2",
+          "displayedDestination": "http://\nalliedmedia.org/amc",
+          "resolvedDestination": "https://alliedmedia.org/amc"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 5,
+      "canonicalUrl": "https://x.com/wowlist/status/590961074326917122",
+      "publishedAt": "2015-04-22T19:31:14.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nApr 22, 2015\nEvent: ROBBERS ROOST / MY PIZZA MY WORLD / @DSTRYNATEALLEN & Pac-Away Dots @ El Torreon KC tonight! \nhttps://\nwowlist.org/kcdiy/events/1\n5939\n… #folkPunk #KCDIY\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/mM9psewVlR",
+          "displayedDestination": "https://\nwowlist.org/kcdiy/events/1\n5939\n…",
+          "resolvedDestination": "https://wowlist.org/kcdiy/events/15939"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 6,
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "publishedAt": "2015-04-24T18:07:25.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nApr 24, 2015\nReplying to \n@juliafredenburg\nYour home calendar shows local events from WOW Lists you follow.  Coming soon: toggle ( local | everywhere ) \n@juliafredenburg\n \n@wowlist",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@juliafredenburg"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 7,
+      "canonicalUrl": "https://x.com/wowlist/status/591666366215811073",
+      "publishedAt": "2015-04-24T18:13:48.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nApr 24, 2015\nReplying to \n@juliafredenburg\nYour profile page shows all your WOW Lists.  Open the sidebar, then click your name! : ) \nhttps://\nwowlist.org/people/julia \n@juliafredenburg\n \n@wowlist",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@juliafredenburg"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/d0A6kYzDuc",
+          "displayedDestination": "https://\nwowlist.org/people/julia",
+          "resolvedDestination": "https://wowlist.org/people/julia"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 8,
+      "canonicalUrl": "https://x.com/wowlist/status/591668857670148096",
+      "publishedAt": "2015-04-24T18:23:43.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nApr 24, 2015\nReplying to \n@juliafredenburg\nTouch \"Add to the WOW List\" to add a new event. On the event touch \"add to\" and type the names of more WOW Lists! \n@juliafredenburg\n \n@wowlist",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@juliafredenburg"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 9,
+      "canonicalUrl": "https://x.com/urbanhermit/status/591944013768499200",
+      "publishedAt": "2015-04-25T12:37:05.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nApr 25, 2015\nArtist, architect + friend Jack Rees lecture 2:30pm today: In the surface of architecture. UMKC Atterbury Room 237 \nhttps://\nwowlist.org/kcdiy/events/1\n5928/in-the-surface-of-architecture-conversation-with-jack-rees\n…\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "engagementLabel": "1 repost",
+      "mentions": [
+        "@urbanhermit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/yPlmpXlshq",
+          "displayedDestination": "https://\nwowlist.org/kcdiy/events/1\n5928/in-the-surface-of-architecture-conversation-with-jack-rees\n…",
+          "resolvedDestination": "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 10,
+      "canonicalUrl": "https://x.com/TheSilentBarn/status/592424659225845760",
+      "publishedAt": "2015-04-26T20:27:00.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nThe Silent Barn\n@TheSilentBarn\n·\nApr 26, 2015\nReplying to \n@TheSilentBarn\ndonations for the family of akai gurley can be directed here: \nhttp://\ngofundme.com/sjdjkk\n\nsee you soon\n2\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "engagementLabel": "2 reposts, 3 likes",
+      "mentions": [
+        "@TheSilentBarn"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "http://t.co/03vayVcYxT",
+          "displayedDestination": "http://\ngofundme.com/sjdjkk",
+          "resolvedDestination": "https://www.gofundme.com/sjdjkk"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 11,
+      "canonicalUrl": "https://x.com/urbanhermit/status/592718356018556928",
+      "publishedAt": "2015-04-27T15:54:02.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nApr 27, 2015\nNYC: Doris Mirescu's live multimedia adaptation of Tarkovsky's SOLARIS shows what stage and cinema can be! Ends Sat  \nhttps://\nwowlist.org/sundaydinner/e\nvents/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl\n…\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "engagementLabel": "1 repost",
+      "mentions": [
+        "@urbanhermit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/jSkbutnuw3",
+          "displayedDestination": "https://\nwowlist.org/sundaydinner/e\nvents/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl\n…",
+          "resolvedDestination": "https://wowlist.org/sundaydinner/events/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 12,
+      "canonicalUrl": "https://x.com/zachfromiji/status/592787353925726208",
+      "publishedAt": "2015-04-27T20:28:13.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\niji\n@zachfromiji\n·\nApr 27, 2015\nI'm an idea list.\n2\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "engagementLabel": "2 reposts, 3 likes",
+      "mentions": [
+        "@zachfromiji"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 13,
+      "canonicalUrl": "https://x.com/wowlist/status/592810776961916929",
+      "publishedAt": "2015-04-27T22:01:17.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nApr 27, 2015\nGreat talking with \n@elisegranata\n last week! Her blog #grasstronaut is the DIY Guide to DIY Guides! Wonderful writing! \nhttp://\ngrasstronaut.com/2015/01/29/hom\nework-in-every-town/\n…\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [
+        "@elisegranata"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "http://t.co/IS8uGw6zxb",
+          "displayedDestination": "http://\ngrasstronaut.com/2015/01/29/hom\nework-in-every-town/\n…",
+          "resolvedDestination": "https://grasstronaut.com/2015/01/29/homework-in-every-town/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 14,
+      "canonicalUrl": "https://x.com/wowlist/status/596690796641923073",
+      "publishedAt": "2015-05-08T14:59:06.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nMay 8, 2015\n\"Isn’t it amazing that two similar alternative arts warehouses on opposite sides of the country had no clue about eachother?\" \n@elisegranata",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@elisegranata"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 15,
+      "canonicalUrl": "https://x.com/wowlist/status/596691623993581568",
+      "publishedAt": "2015-05-08T15:02:23.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nMay 8, 2015\nZines 2.0 - Great article about documenting + connecting DIY in Good Times by \n@elisegranata\n \nhttp://\ngrasstronaut.com \nhttp://\ngtweekly.com/index.php/sant\na-cruz-news/good-times-cover-stories/6548-zines-20.html\n…",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@elisegranata"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "http://t.co/S7hb8xKAJQ",
+          "displayedDestination": "http://\ngrasstronaut.com",
+          "resolvedDestination": "https://grasstronaut.com/"
+        },
+        {
+          "shortUrl": "http://t.co/cG6FgcGsgu",
+          "displayedDestination": "http://\ngtweekly.com/index.php/sant\na-cruz-news/good-times-cover-stories/6548-zines-20.html\n…",
+          "resolvedDestination": "https://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 16,
+      "canonicalUrl": "https://x.com/wowlist/status/598530404669358080",
+      "publishedAt": "2015-05-13T16:49:03.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nMay 13, 2015\niji #DesertDip tour: California, Washington, Arizona, and Nevada next month! \nhttps://\nwowlist.org/desertdip \n@zachfromiji\n2\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "engagementLabel": "2 reposts, 2 likes",
+      "mentions": [
+        "@zachfromiji"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/3rl1wMar2x",
+          "displayedDestination": "https://\nwowlist.org/desertdip",
+          "resolvedDestination": "https://wowlist.org/desertdip"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 17,
+      "canonicalUrl": "https://x.com/pluspoolny/status/603631189308604416",
+      "publishedAt": "2015-05-27T18:37:45.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\n+ POOL\n@pluspoolny\n·\nMay 27, 2015\nSUMMER\n1\n4\n3",
+      "engagement": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 3
+      },
+      "engagementLabel": "1 reply, 4 reposts, 3 likes",
+      "mentions": [
+        "@pluspoolny"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 18,
+      "canonicalUrl": "https://x.com/punkscriminals/status/604360847012413440",
+      "publishedAt": "2015-05-29T18:57:09.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nPunks & Criminals\n@punkscriminals\n·\nMay 29, 2015\nPutting shows up on @wowlistnyc now! \nhttps://\nwowlist.org/punksandcrimin\nals\n… \n@weareonthewater\n #livemusic #show #concert #event #music #calendar\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [
+        "@punkscriminals",
+        "@weareonthewater"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/wNFjbgp7a1",
+          "displayedDestination": "https://\nwowlist.org/punksandcrimin\nals\n…",
+          "resolvedDestination": "https://wowlist.org/punksandcriminals"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 19,
+      "canonicalUrl": "https://x.com/wowlist/status/606517628765650945",
+      "publishedAt": "2015-06-04T17:47:25.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nJun 4, 2015\nChicago: \n@RapidPulseFest\n Rapid Pulse International Performance Art Festival starts today! #RP15 \nhttps://\nwowlist.org/rapidpulse",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@RapidPulseFest"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/o65oORabb6",
+          "displayedDestination": "https://\nwowlist.org/rapidpulse",
+          "resolvedDestination": "https://wowlist.org/rapidpulse"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 20,
+      "canonicalUrl": "https://x.com/wowlist/status/632168285291835392",
+      "publishedAt": "2015-08-14T12:33:58.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nAug 14, 2015\nThank you Shelby! Great WOW List tutorial!! \"Let's do this everybody!\" \nhttps://\nyoutu.be/nQg47LtixPI \nhttps://\nwowlist.org/join\nyoutube.com\nSHELBY'S WOWLIST TUTORIAL ~ for my new fave events website\nhttp://wowlist.orghttp://wowlist.org/chidiy/joinWOWLIST is a sup...\n1\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      },
+      "engagementLabel": "1 repost, 3 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/KZ7x2zPgtB",
+          "displayedDestination": "https://\nyoutu.be/nQg47LtixPI",
+          "resolvedDestination": "https://youtu.be/nQg47LtixPI"
+        },
+        {
+          "shortUrl": "https://t.co/w5zPq7Z89p",
+          "displayedDestination": "https://\nwowlist.org/join",
+          "resolvedDestination": "https://wowlist.org/join"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 21,
+      "canonicalUrl": "https://x.com/cotfg/status/663732869357965313",
+      "publishedAt": "2015-11-09T15:00:22.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nCOTFG\n@cotfg\n·\nNov 9, 2015\nDrone Orchestra rehearsal was excellent. \nhttps://\nwowlist.org/events/19077/8\npm-sunday-november-22nd--drone-orchestra\n… Very excited to hear them and see you on Sunday - 11/22!\n1\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      },
+      "engagementLabel": "1 repost, 3 likes",
+      "mentions": [
+        "@cotfg"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/606xbcLhMq",
+          "displayedDestination": "https://\nwowlist.org/events/19077/8\npm-sunday-november-22nd--drone-orchestra\n…",
+          "resolvedDestination": "https://wowlist.org/events/19077/8pm-sunday-november-22nd--drone-orchestra"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 22,
+      "canonicalUrl": "https://x.com/wowlist/status/665520472461860864",
+      "publishedAt": "2015-11-14T13:23:40.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nNov 14, 2015\n@all_ages\n WOW! Members sharing all-ages shows! \nhttps://\nwowlist.org/AllAges So honored if you would join today's meeting? \nhttps://\nwowlist.org/events/18547/w\now-list-members-meeting\n…\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "1 reply",
+      "mentions": [
+        "@all_ages"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/JpK2QOam9r",
+          "displayedDestination": "https://\nwowlist.org/AllAges",
+          "resolvedDestination": "https://wowlist.org/AllAges"
+        },
+        {
+          "shortUrl": "https://t.co/YuCfobbQTB",
+          "displayedDestination": "https://\nwowlist.org/events/18547/w\now-list-members-meeting\n…",
+          "resolvedDestination": "https://wowlist.org/events/18547/wow-list-members-meeting"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 23,
+      "canonicalUrl": "https://x.com/rchrd2/status/749378122823245824",
+      "publishedAt": "2016-07-02T23:04:01.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nRichard\n@rchrd2\n·\nJul 2, 2016\n@wowlist\n Fillmore Jazz Festival in SF today and tomorrow \nhttp://\nsresproductions.com/events/fillmor\ne-jazz-festival/\n…\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "engagementLabel": "1 repost",
+      "mentions": [
+        "@rchrd2"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/DbCvjUQM1n",
+          "displayedDestination": "http://\nsresproductions.com/events/fillmor\ne-jazz-festival/\n…",
+          "resolvedDestination": "https://www.sresproductions.com/events/fillmore-jazz-festival/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 24,
+      "canonicalUrl": "https://x.com/wowlist/status/751150062458269696",
+      "publishedAt": "2016-07-07T20:25:05.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nJul 7, 2016\nNYC: Demonstration for #AltonSterling & #PhilandoCastile at 5PM today in Union Square #BlackLivesMatter \nhttps://\nwowlist.org/nycdiy/events/\n23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc\n…\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "engagementLabel": "1 repost",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/a39ETzpVWO",
+          "displayedDestination": "https://\nwowlist.org/nycdiy/events/\n23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc\n…",
+          "resolvedDestination": "https://wowlist.org/nycdiy/events/23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 25,
+      "canonicalUrl": "https://x.com/wowlist/status/771412862191407104",
+      "publishedAt": "2016-09-01T18:22:13.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nSep 1, 2016\nHi \nhttp://\nNYCDIY.org\nQuote\n285 KENT\n@285KENT\n·\nSep 1, 2016\nReplying to @lil_seltz\n.@lil_seltz \nHi Sunnyvale\nHi Trans-Pecos\nHi Gateway\nHi the Glove\nHi Tarot Society\nHi Footlight\nHi Sump at Poppers Locarno\nHi more places...",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/ixsJHQRdDK",
+          "displayedDestination": "http://\nNYCDIY.org",
+          "resolvedDestination": "https://nycdiy.org/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 26,
+      "canonicalUrl": "https://x.com/wowlist/status/771455571501416448",
+      "publishedAt": "2016-09-01T21:11:55.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nSep 1, 2016\nReplying to \n@selfdfens\n.\n@selfdfens\n \n@showpaper\n You can join \nhttp://\nNYCdiy.org to add shows and get the weekly email!\n1\n2\n2",
+      "engagement": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 2
+      },
+      "engagementLabel": "1 reply, 2 reposts, 2 likes",
+      "mentions": [
+        "@selfdfens",
+        "@showpaper"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/3an880EXo8",
+          "displayedDestination": "http://\nNYCdiy.org",
+          "resolvedDestination": "https://nycdiy.org/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 27,
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "publishedAt": "2016-09-01T21:19:15.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nSep 1, 2016\nReplying to \n@wowlist\n.\n@selfdfens\n \n@showpaper\n NYCdiy runs on \n@wowlist\n a diy community calendar project from the Sunday Dinner potluck  \nhttps://\nwowlist.org/sundaydinner/e\nvents/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs\n…\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [
+        "@selfdfens",
+        "@showpaper"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/7lKlHLEZf1",
+          "displayedDestination": "https://\nwowlist.org/sundaydinner/e\nvents/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs\n…",
+          "resolvedDestination": "https://wowlist.org/sundaydinner/events/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 28,
+      "canonicalUrl": "https://x.com/FOKLcenter/status/783312785702805504",
+      "publishedAt": "2016-10-04T14:28:16.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nFOKL\n@FOKLcenter\n·\nOct 4, 2016\nelectricity gets turned on at the new spot today. This is our FIRST show at the new location. same drive,...\nfacebook.com\nFOKL\nelectricity gets turned on at the new spot today. This is our FIRST show at the new location. same drive, different door.\n1\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "engagementLabel": "1 repost, 2 likes",
+      "mentions": [
+        "@FOKLcenter"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/t0grs2Do3H",
+          "displayedDestination": "",
+          "resolvedDestination": "https://fb.me/2TmsoJZSP"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 29,
+      "canonicalUrl": "https://x.com/wowlist/status/796473557387575297",
+      "publishedAt": "2016-11-09T22:04:28.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nNov 9, 2016\nMarches across the US tonight on the #DownWithTrump WOW List. Build a movement to fight sexism, racism, Islamophobia \nhttps://\nwowlist.org/DownWithTrump\n5\n6",
+      "engagement": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 6
+      },
+      "engagementLabel": "5 reposts, 6 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/D6udDGJ7Um",
+          "displayedDestination": "https://\nwowlist.org/DownWithTrump",
+          "resolvedDestination": "https://wowlist.org/DownWithTrump"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 30,
+      "canonicalUrl": "https://x.com/yokoono/status/797181275308257282",
+      "publishedAt": "2016-11-11T20:56:41.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nYoko Ono\n@yokoono\n·\nNov 11, 2016\nhttp://\nift.tt/2fjVs71\n2\n211\n467",
+      "engagement": {
+        "replies": 2,
+        "reposts": 211,
+        "likes": 467
+      },
+      "engagementLabel": "2 replies, 211 reposts, 467 likes",
+      "mentions": [
+        "@yokoono"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/ST6A7fMabN",
+          "displayedDestination": "http://\nift.tt/2fjVs71",
+          "resolvedDestination": "https://ift.tt/2fjVs71"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 31,
+      "canonicalUrl": "https://x.com/wowlist/status/798274424763981824",
+      "publishedAt": "2016-11-14T21:20:28.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nNov 14, 2016\nhttp://\npopular.vote add events, get updates on marches, meetings, friendship near you across the us #NotMyPresident #WeAreThePopularVote\n3\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "engagementLabel": "3 reposts, 3 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/O1euiAdPmX",
+          "displayedDestination": "http://\npopular.vote",
+          "resolvedDestination": "https://popular.vote/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 32,
+      "canonicalUrl": "https://x.com/5432fun/status/801883926029447168",
+      "publishedAt": "2016-11-24T20:23:20.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nhoshwa / 5432fun / cave babies\n@5432fun\n·\nNov 24, 2016\nHow to Give, and to Give Thanks, to Standing Rock \nhttp://\nfb.me/1TW9AQgwM\n2\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "engagementLabel": "2 reposts, 2 likes",
+      "mentions": [
+        "@5432fun"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/xBooqnpcBS",
+          "displayedDestination": "http://\nfb.me/1TW9AQgwM",
+          "resolvedDestination": "https://fb.me/1TW9AQgwM"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 33,
+      "canonicalUrl": "https://x.com/wowlist/status/805210387004223488",
+      "publishedAt": "2016-12-04T00:41:31.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nDec 3, 2016\nHug those that you love. \nhttps://\nyoucaring.com/firevictimsofo\naklandfiredec232016-706684\n…\n2\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "engagementLabel": "2 reposts, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/vWtAyQiwMl",
+          "displayedDestination": "https://\nyoucaring.com/firevictimsofo\naklandfiredec232016-706684\n…",
+          "resolvedDestination": "https://www.youcaring.com/firevictimsofoaklandfiredec232016-706684"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 34,
+      "canonicalUrl": "https://x.com/urbanhermit/status/805949658405175296",
+      "publishedAt": "2016-12-06T01:39:07.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nDec 5, 2016\nLight Vigil at Lake Merritt 8pm <3 \nhttps://\nwowlist.org/events/25653/l\night-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight\n…\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "engagementLabel": "1 repost",
+      "mentions": [
+        "@urbanhermit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/jhGFCwormV",
+          "displayedDestination": "https://\nwowlist.org/events/25653/l\night-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight\n…",
+          "resolvedDestination": "https://wowlist.org/events/25653/light-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 35,
+      "canonicalUrl": "https://x.com/wowlist/status/806517013472485376",
+      "publishedAt": "2016-12-07T15:13:35.000Z",
+      "type": "authored",
+      "visibleText": "WOW List!\n@wowlist\n·\nDec 7, 2016\nLet us lift our candles, our lights up high.\nHundreds Mourn the Victims of the Ghost Ship Fire in Oakland | KQED\nFrom youtube.com\n2\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "engagementLabel": "2 reposts, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/Q2vtL8JdOq",
+          "displayedDestination": "Hundreds Mourn the Victims of the Ghost Ship Fire in Oakland | KQED",
+          "resolvedDestination": "https://www.youtube.com/watch?v=g7zIdDeRVjU"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 36,
+      "canonicalUrl": "https://x.com/urbanhermit/status/807395049814290433",
+      "publishedAt": "2016-12-10T01:22:35.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nJamie Burkart\n@urbanhermit\n·\nDec 9, 2016\n Call your Mayor: #DIYsavesOurLife. Honor the lost by helping artists and spaces in our city thrive safely. Script: \nhttps://\ndocs.google.com/spreadsheets/d\n/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml\n…\n2\n8",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 8
+      },
+      "engagementLabel": "2 reposts, 8 likes",
+      "mentions": [
+        "@urbanhermit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/L0gAiWmIbX",
+          "displayedDestination": "https://\ndocs.google.com/spreadsheets/d\n/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml\n…",
+          "resolvedDestination": "https://docs.google.com/spreadsheets/d/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 37,
+      "canonicalUrl": "https://x.com/MeowWolf/status/815697993709993984",
+      "publishedAt": "2017-01-01T23:15:31.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\nMeow Wolf\n@MeowWolf\n·\nJan 1, 2017\nTo kick off the year right... We launch our DIY Fund, $100,000 for DIY Arts and Music spaces around the country.  \nhttp://\nmeowwolf.com/diy\n4\n13",
+      "engagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 13
+      },
+      "engagementLabel": "4 reposts, 13 likes",
+      "mentions": [
+        "@MeowWolf"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/0jKQMlauld",
+          "displayedDestination": "http://\nmeowwolf.com/diy",
+          "resolvedDestination": "https://www.meowwolf.com/diy"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 38,
+      "canonicalUrl": "https://x.com/goshwizard/status/819663088634851328",
+      "publishedAt": "2017-01-12T21:51:23.000Z",
+      "type": "reposted",
+      "visibleText": "WOW List! reposted\njake\n@goshwizard\n·\nJan 12, 2017\nPunk shows should be at 8am!\n1\n1\n5",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 5
+      },
+      "engagementLabel": "1 reply, 1 repost, 5 likes",
+      "mentions": [
+        "@goshwizard"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    }
+  ]
+}

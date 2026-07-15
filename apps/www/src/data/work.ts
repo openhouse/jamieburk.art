@@ -426,7 +426,7 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with event distribution workflows, organizer-facing publishing, and a public support loop for product questions and workflow friction.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -457,7 +457,8 @@ const workItemsInput = [
     evidence: [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
-      "Organizer-facing distribution workflows",
+      "Public support threads document location-scope, list-discovery, and event-entry workflow questions",
+      "The public trace extends from cultural events into demonstrations, vigils, fundraisers, and mutual-aid circulation",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],
