@@ -18,7 +18,8 @@ import {
   nycaCouncilSocialSourceIds,
   nycaOlympiaSocialSourceId,
   projectSocialSourceIds,
-  projectSocialSources
+  projectSocialSources,
+  wowListFullPopulationCensusSourceId
 } from "../../apps/www/src/data/knowledge-bank/projectSocial.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { intakeItemSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
@@ -452,8 +453,8 @@ test("Google Drive intake preserves attribution, data gaps, and projection bound
 });
 
 test("project social census preserves strict counts and source identity", () => {
-  assert.equal(projectSocialSources.length, 51);
-  assert.equal(new Set(projectSocialSourceIds).size, 51);
+  assert.equal(projectSocialSources.length, 58);
+  assert.equal(new Set(projectSocialSourceIds).size, 58);
   assert.equal(callNycCouncilSocialSourceIds.length, 8);
   assert.equal(callNycProjectSocialSourceIds.length, 4);
   assert.equal(nycaCouncilSocialSourceIds.length, 11);
@@ -617,6 +618,72 @@ test("project social intake protects shared authorship and transitions", () => {
       /post-transition posts or program outcomes/i.test(boundary)
     )
   );
+});
+
+test("WOW List full-population census reconciles every profile-counted object", () => {
+  const census = readFileSync(
+    "docs/knowledge-bank/research/data/wowlist-x-full-population-census-2026-07-15.csv",
+    "utf8"
+  );
+  const summary = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/research/data/wowlist-x-full-population-summary-2026-07-15.json",
+      "utf8"
+    )
+  );
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-WOWLIST-SOCIAL-RECORD-2026-07-14"
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === wowListFullPopulationCensusSourceId
+  );
+  const recoveredRows = census.match(/^RECOVERED-\d{3},/gm) ?? [];
+  const statusIds = [
+    ...census.matchAll(/https:\/\/x\.com\/[A-Za-z0-9_]+\/status\/(\d+)/g)
+  ].map((match) => match[1]);
+
+  assert.equal(recoveredRows.length, 38);
+  assert.equal(new Set(statusIds).size, 38);
+  assert.equal((census.match(/,project-post,/g) ?? []).length, 16);
+  assert.equal((census.match(/,project-reply,/g) ?? []).length, 6);
+  assert.equal((census.match(/,project-repost,/g) ?? []).length, 16);
+  assert.equal(summary.population.profileCount, 38);
+  assert.equal(summary.population.recoveredCount, 38);
+  assert.equal(summary.population.projectAuthoredTotal, 22);
+  assert.equal(summary.population.uniqueRepostSourceAccounts, 13);
+  assert.equal(summary.urlInventory.uniqueShortUrls, 35);
+  assert.equal(summary.urlInventory.items.length, 35);
+  assert.deepEqual(summary.accessTimeProjectAuthoredEngagement, {
+    observedAt: "2026-07-15",
+    statusesWithAnyObservedInteraction: 12,
+    replies: 2,
+    reposts: 20,
+    likes: 21,
+    boundary:
+      "These are mutable access-time labels on the 22 project-authored statuses. Metrics on the 16 reposted source statuses are excluded because they are not project-account traction."
+  });
+  assert.equal(
+    summary.externalMentionSearch.find(
+      (item) => item.statusId === "834145172128677888"
+    ).disposition,
+    "excluded-unrelated-handle-use"
+  );
+  assert.equal(source.visibility, "public");
+  assert.ok(source.doesNotEstablish.some((item) => /human author/i.test(item)));
+  assert.ok(intake.sourceIds.includes(wowListFullPopulationCensusSourceId));
+  assert.equal(
+    intake.propositions.find(
+      (item) => item.id === "PROP-WOWLIST-X-CORPUS-RECOVERY-2026"
+    ).status,
+    "direct-support"
+  );
+  assert.ok(
+    intake.boundaries.some((boundary) =>
+      /Do not aggregate engagement on reposted source statuses/i.test(boundary)
+    )
+  );
+  assert.doesNotMatch(census, /Punk shows should|Hug those that you love/);
+  assert.doesNotMatch(JSON.stringify(summary), /\/Users\/|\/Volumes\//);
 });
 
 test("social research locators stay private and research notes stay public-safe", () => {

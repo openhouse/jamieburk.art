@@ -18,7 +18,7 @@ The recovered project-account map is:
 | Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Campaign identity carried by the coalition account and #TalksNotRaids |
 | Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Campaign identity carried by the coalition account and #SaveNYCSpaces |
 | FairRentNYC | [@NYCArtC](https://x.com/NYCArtC) | Campaign identity carried by the coalition account and #FairRentNYC |
-| WOW List | [@wowlist](https://x.com/wowlist) | 38-post profile; 37 unique timeline status URLs recovered |
+| WOW List | [@wowlist](https://x.com/wowlist) | 38-post profile; all 38 profile-counted objects recovered in the July 15 full-population follow-up |
 | Sunday Dinner | [@sundaydinnernyc](https://x.com/sundaydinnernyc) | Dormant October 2013 shell with zero posts; not a useful public record |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183-post profile; 170 unique timeline status URLs recovered |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35-post profile; 34 unique timeline status URLs recovered |
@@ -163,19 +163,30 @@ account authorship still needs administrator records or collaborator evidence.
 
 ## WOW List
 
-The authenticated review recovered 37 unique status URLs from a profile
-displaying 38 posts: 21 WOW List-authored statuses and 16 reposts.
+The initial authenticated review recovered 37 unique status URLs from a profile
+displaying 38 posts. A dedicated July 15 Posts-and-Replies pass recovered the
+remaining object and classified the complete population as 16 project-account
+posts, six project-account replies, and 16 reposted external statuses.
 
-Two specimens materially strengthen the project record:
+The [full-population archival-production
+note](2026-07-15-wowlist-x-full-population-archival-production.md) preserves the
+38-row census, 35-link URL inventory, mission and stakeholder patterns,
+access-time interaction labels, and external-mention dispositions.
+
+The complete review materially strengthens the project record:
 
 - A 2016 project-account post described WOW List as a DIY community calendar
   project originating from the Sunday Dinner potluck and linked a Sunday
   Dinner event page: [source](https://x.com/wowlist/status/771457416298921985).
 - A 2017 public post used a WOW List event URL to circulate a benefit event at
   Silent Barn: [source](https://x.com/jackascak/status/845116237591920640).
+- A public organizer reported adding shows to WOW List, and a participant
+  published a product tutorial.
+- Project-account replies document practical onboarding for following lists,
+  profile use, event contribution, joining, and a weekly email.
 
-The first connects the recurring social form to the product. The second is a
-material usage scene. One external share is not a broad adoption metric.
+These connect the recurring social form to the product and supply material
+usage scenes. Three external-use specimens are not a broad adoption metric.
 
 ## KC Spaces Fund
 

@@ -88,6 +88,13 @@ and its public CSV ledger add an explicit population-disposition pattern: a
 profile-counted object may be `recovered` or `not-recovered`, and the total can
 still reconcile without inventing the unavailable content.
 
+The dedicated [WOW List full-population
+note](research/2026-07-15-wowlist-x-full-population-archival-production.md)
+applies the same reconciliation discipline to a fully recoverable 38-object
+population. Its public CSV and JSON separate project posts, project replies,
+reposted source statuses, posted URLs, access-time interaction labels, mission
+themes, stakeholder groups, and explicit mention-search exclusions.
+
 ### Creative Technology Exhibition Records
 
 The NTER CHNG record uses four public sources with deliberately different

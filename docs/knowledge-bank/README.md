@@ -117,6 +117,14 @@ URLs and stakeholder patterns, and supports one bounded website projection:
 71 issue-recognition posts linked 61 distinct CallNYC issue pages to 26
 Council-member accounts.
 
+The [WOW List full-population archival-production
+note](research/2026-07-15-wowlist-x-full-population-archival-production.md)
+demonstrates complete 38-of-38 profile reconciliation, public product-workflow
+analysis, a 35-link source inventory, and bounded stakeholder and engagement
+classification. It strengthens the existing proof page with public onboarding
+and use specimens while keeping mutable metrics and broader mission context in
+the knowledge bank.
+
 The [NTER CHNG archive expansion](intake/2026-07-15-nter-chng-archive-expansion.md)
 demonstrates a related source-chain pattern: an archived project site, an
 official exhibition artist page, a first-party account of visitor use, and an

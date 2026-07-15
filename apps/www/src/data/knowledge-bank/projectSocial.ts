@@ -157,6 +157,112 @@ const callNycFullPopulationCensusSource: SourceRecord = {
   doesNotEstablish: ["a platform account-data export", "the contents of the three unrecovered objects", "a complete deleted-post history", "the historical identity of every liker or reposter", "formal endorsement", "product adoption", "constituent outcomes", "current Council performance"]
 };
 
+const wowListFullPopulationCensusSource: SourceRecord = {
+  id: "SRC-WOWLIST-X-FULL-POPULATION-CENSUS-2026-07-15",
+  title: "WOW List X full-population census",
+  author: "Codex archival review",
+  organization: "WOW List",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  accessedAt: "2026-07-15",
+  assetUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/research/data/wowlist-x-full-population-census-2026-07-15.csv",
+  preferredPublicUrl: "asset",
+  publicCitation: "Full-population archival census of the 38 objects counted by the @wowlist profile, reviewed July 15, 2026.",
+  publicNote: "The census reconciles all 38 profile-counted objects: 16 WOW List-authored posts, six WOW List-authored replies, and 16 reposted external statuses. It also inventories 35 posted short URLs and preserves access-time interaction labels without assigning shared-account authorship.",
+  supportsGenerally: ["38-of-38 profile-population reconciliation", "16 project-authored posts", "six project-authored replies", "16 reposted external statuses", "13 distinct repost-source accounts", "35 posted short URLs", "public onboarding exchanges", "mission-theme classification", "stakeholder-group classification", "access-time interaction labels"],
+  doesNotEstablish: ["a platform account-data export", "a complete deleted-post history", "the human author of shared-account statuses", "endorsement or partnership from a repost", "broad adoption", "lifetime reach", "audience identity", "project causality for linked events or campaigns"]
+};
+
+const wowListContextSources: SourceRecord[] = [
+  {
+    id: "SRC-WOWLIST-YOUTUBE-SHELBY-TUTORIAL-2015",
+    title: "Shelby's WOWList tutorial",
+    author: "Shelby Turner",
+    organization: "YouTube",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.youtube.com/watch?v=nQg47LtixPI",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Shelby Turner, 'SHELBY'S WOWLIST TUTORIAL ~ for my new fave events website,' YouTube, reviewed July 15, 2026.",
+    publicNote: "YouTube's live oEmbed record preserves the participant-created tutorial title, creator name, and video identifier; the @wowlist account linked the tutorial alongside its join page in August 2015.",
+    supportsGenerally: ["an external participant-created WOW List tutorial", "public product-onboarding use", "a public join-page association"],
+    doesNotEstablish: ["broad organizer adoption", "the tutorial's audience size", "the identity of the account post author", "a formal partnership"]
+  },
+  {
+    id: "SRC-GRASSTRONAUT-HOMEWORK-EVERY-TOWN-2015-01-29",
+    title: "HOMEWORK: In Every Town - An All-Ages Music Manualfesto",
+    author: "Elise Granata",
+    organization: "Grasstronaut",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2015-01-29",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+    archiveUrl: "https://web.archive.org/web/20150201081214/http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+    preferredPublicUrl: "archive",
+    publicCitation: "Elise Granata, 'HOMEWORK: In Every Town - An All-Ages Music Manualfesto,' Grasstronaut, January 29, 2015; archived February 1, 2015.",
+    publicNote: "The article reviews an all-ages venue manual covering organizational structure, promotion, production, space, fundraising, community-building, conflict resolution, and the value of documenting defunct spaces. @wowlist linked it as a DIY guide to DIY guides.",
+    supportsGenerally: ["the account's public source trail around DIY operational knowledge", "peer-learning context", "documentation of cultural-space practice"],
+    doesNotEstablish: ["Jamie as article author", "WOW List adoption", "the success of any venue", "a direct project outcome"]
+  },
+  {
+    id: "SRC-GOOD-TIMES-ZINES-TWO-POINT-ZERO-2015-05-06",
+    title: "Zines 2.0",
+    author: "Elise Granata",
+    organization: "Good Times",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2015-05-06",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+    archiveUrl: "https://web.archive.org/web/20150907001335/http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+    preferredPublicUrl: "archive",
+    publicCitation: "Elise Granata, 'Zines 2.0,' Good Times, May 6, 2015; archived September 7, 2015.",
+    publicNote: "The article argues that underground cultural movements need self-authored records and cross-scene connections, describing Grasstronaut as a community-distributed archive for grassroots arts projects. @wowlist linked the article as writing about documenting and connecting DIY culture.",
+    supportsGenerally: ["the account's public source trail around DIY archives", "cross-scene knowledge exchange", "community-authored documentation context"],
+    doesNotEstablish: ["Jamie as article author", "WOW List adoption", "the completeness of any DIY archive", "a direct project outcome"]
+  },
+  {
+    id: "SRC-KQED-GHOST-SHIP-VIGIL-2016-12-06",
+    title: "VIDEO: Mourners Gather at Candlelight Vigil to Honor Victims of Oakland Fire",
+    author: "Brittany Hosea-Small and Adam Grossberg",
+    organization: "KQED",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2016-12-06",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.kqed.org/news/11207317/video-mourners-gather-at-candlelight-vigil-to-honor-victims-of-oakland-fire",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Brittany Hosea-Small and Adam Grossberg, 'VIDEO: Mourners Gather at Candlelight Vigil to Honor Victims of Oakland Fire,' KQED, December 6, 2016.",
+    publicNote: "KQED documented the Lake Merritt candlelight vigil for the 36 people killed in the Ghost Ship fire. @wowlist linked the report after circulating the vigil and mutual-aid resources.",
+    supportsGenerally: ["the public documentation linked by @wowlist", "Ghost Ship vigil context", "a care-and-solidarity pattern in the account record"],
+    doesNotEstablish: ["WOW List as vigil organizer", "Jamie as account post author", "event attendance caused by the post", "policy influence"]
+  },
+  {
+    id: "SRC-MEOW-WOLF-DIY-FUND-2017",
+    title: "Meow Wolf DIY Fund",
+    organization: "Meow Wolf",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "archived",
+    capturedAt: "2017-03-12",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://meowwolf.com/diy",
+    archiveUrl: "https://web.archive.org/web/20170312084829/https://meowwolf.com/DIY/",
+    preferredPublicUrl: "archive",
+    publicCitation: "Meow Wolf, 'Meow Wolf DIY Fund,' archived March 12, 2017.",
+    publicNote: "The archived page documents a $100,000 annual fund for DIY art and music spaces, including infrastructure improvements, rent, materials, equipment, and legal, building-code, and organizational consulting. @wowlist reposted the fund announcement.",
+    supportsGenerally: ["the cultural-space support context curated by @wowlist", "the stated $100,000 annual fund", "infrastructure and operational support categories"],
+    doesNotEstablish: ["WOW List as fund organizer", "Jamie as account post author", "reciprocal engagement by Meow Wolf", "any funding outcome for a WOW List organizer"]
+  }
+];
+
 const callNycProjectPostSeeds: SocialPostSeed[] = [
   {
     id: "SRC-CALLNYC-X-LAUNCH-706208629360304128",
@@ -506,6 +612,19 @@ const otherProjectPostSeeds: SocialPostSeed[] = [
     doesNotEstablish: ["broad adoption", "the organizer's account relationship to WOW List", "event attendance or outcome"]
   },
   {
+    id: "SRC-WOWLIST-X-PUNKS-CRIMINALS-604360847012413440",
+    title: "Organizer reports adding shows to WOW List",
+    organization: "Punks & Criminals",
+    kind: "institutional-social-post",
+    handle: "punkscriminals",
+    statusId: "604360847012413440",
+    publishedAt: "2015-05-29",
+    publicCitation: "Punks & Criminals post reporting active show entry on WOW List, May 29, 2015.",
+    publicNote: "The public post says the organizer was putting shows on WOW List and links the organizer's public WOW List page.",
+    supportsGenerally: ["a concrete external organizer-use specimen", "event-entry use", "a public organizer page"],
+    doesNotEstablish: ["broad adoption", "the number of events entered", "event attendance or outcome", "a formal partnership"]
+  },
+  {
     id: "SRC-KC-TOWN-HALL-X-LAUNCH-1013893135695601665",
     title: "KC Town Hall account launch statement",
     organization: "KC Town Hall",
@@ -629,6 +748,9 @@ export const callNycCouncilSocialSourceIds = callNycCouncilPostSeeds.map(
 export const callNycFullPopulationCensusSourceId =
   callNycFullPopulationCensusSource.id;
 
+export const wowListFullPopulationCensusSourceId =
+  wowListFullPopulationCensusSource.id;
+
 export const callNycProjectSocialSourceIds = callNycProjectPostSeeds.map(
   (seed) => seed.id
 );
@@ -648,6 +770,8 @@ export const projectSocialSources: KnowledgeBank["sources"] = [
   ...socialProfileSources,
   ...researchSources,
   callNycFullPopulationCensusSource,
+  wowListFullPopulationCensusSource,
+  ...wowListContextSources,
   ...callNycProjectPostSeeds.map(toSource),
   ...callNycCouncilPostSeeds.map(toSource),
   ...nycaCouncilPostSeeds.map(toSource),

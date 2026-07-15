@@ -390,6 +390,12 @@ const workItemsInput = [
         description:
           "A practical distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Contribution and circulation record",
+        description:
+          "The public account record shows people following community lists, adding events, using a weekly email, publishing a tutorial, and sharing public event pages.",
+        type: "workflow"
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
@@ -403,7 +409,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe aggregate records, surviving implementation history, and a 38-status public social census; screenshots remain pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -418,9 +424,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar platform organized around followable keyword communities. Its complete profile-counted social record preserves public contribution, onboarding, circulation, and external-use specimens.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots and stronger outcome-level adoption evidence remain open; usage specimens are not presented as an adoption total.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

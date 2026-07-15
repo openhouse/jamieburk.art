@@ -1755,9 +1755,9 @@ const knowledgeBankInput = {
       title: "WOW List social documentation record",
       project: "wowlist",
       kind: "source-link",
-      summary: "The authenticated @wowlist profile and timeline preserve a small public record connecting WOW List to Sunday Dinner and showing an external organizer using a WOW List event page to circulate a benefit event.",
+      summary: "A full-population archival pass reconciled all 38 objects counted by the authenticated @wowlist profile and associated them with a public URL inventory, mission themes, stakeholder groups, access-time engagement labels, and a bounded external-mention review.",
       status: "researching",
-      sourceIds: ["SRC-WOWLIST-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-WOWLIST-X-SUNDAY-DINNER-771457416298921985", "SRC-WOWLIST-X-EVENT-SHARE-845116237591920640"],
+      sourceIds: ["SRC-WOWLIST-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-WOWLIST-X-FULL-POPULATION-CENSUS-2026-07-15", "SRC-WOWLIST-X-SUNDAY-DINNER-771457416298921985", "SRC-WOWLIST-X-EVENT-SHARE-845116237591920640", "SRC-WOWLIST-X-PUNKS-CRIMINALS-604360847012413440", "SRC-WOWLIST-YOUTUBE-SHELBY-TUTORIAL-2015", "SRC-GRASSTRONAUT-HOMEWORK-EVERY-TOWN-2015-01-29", "SRC-GOOD-TIMES-ZINES-TWO-POINT-ZERO-2015-05-06", "SRC-KQED-GHOST-SHIP-VIGIL-2016-12-06", "SRC-MEOW-WOLF-DIY-FUND-2017"],
       relatedClaimIds: [],
       relatedProofIds: ["wowlist-community-platform", "sunday-dinner-196-participation-infrastructure"],
       candidateClaims: [],
@@ -1782,21 +1782,57 @@ const knowledgeBankInput = {
         },
         {
           id: "PROP-WOWLIST-X-CORPUS-RECOVERY-2026",
-          text: "The authenticated review recovered 37 unique status URLs from a @wowlist profile displaying 38 posts, including 21 project-authored statuses and 16 reposted statuses.",
+          text: "The authenticated Posts and Replies review recovered and classified all 38 objects counted by the @wowlist profile: 16 project-account posts, six project-account replies, and 16 reposted external statuses from 13 distinct source accounts.",
+          status: "direct-support",
+          sourceIds: ["SRC-WOWLIST-X-PROFILE-2026-07-14", "SRC-WOWLIST-X-FULL-POPULATION-CENSUS-2026-07-15"],
+          sourceSupport: ["profile post count", "38-row status census", "status-author classification", "Posts and Replies reconciliation"],
+          boundaries: ["Shared-account human authorship remains unknown.", "The census is not an account-data export and does not claim a complete deleted-post history."],
+          decisionUse: "Defines the complete profile-counted social corpus without overstating authorship, reach, or preservation completeness."
+        },
+        {
+          id: "PROP-WOWLIST-PARTICIPATORY-WORKFLOW-2026",
+          text: "The account record documents participatory product operation: replies taught a contributor how to follow lists, use a profile, and add an event to multiple lists; later posts directed people to join, add shows, and receive a weekly email.",
+          status: "direct-support",
+          sourceIds: ["SRC-WOWLIST-X-FULL-POPULATION-CENSUS-2026-07-15", "SRC-WOWLIST-YOUTUBE-SHELBY-TUTORIAL-2015"],
+          sourceSupport: ["three public onboarding replies", "public join and weekly-email instructions", "participant-created tutorial"],
+          boundaries: ["These are workflow specimens, not a complete support history or adoption total.", "The shared-account post author is not identified."],
+          decisionUse: "Strengthens the product-operations claim with visible, public examples of contribution and onboarding workflows."
+        },
+        {
+          id: "PROP-WOWLIST-EXTERNAL-USE-SPECIMENS-2026",
+          text: "Three public specimens show people using or explaining WOW List: an organizer reported adding shows, a participant published a tutorial, and an external event promoter shared a WOW List page for a Silent Barn benefit.",
+          status: "direct-support",
+          sourceIds: ["SRC-WOWLIST-X-PUNKS-CRIMINALS-604360847012413440", "SRC-WOWLIST-YOUTUBE-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-X-EVENT-SHARE-845116237591920640"],
+          sourceSupport: ["external organizer-authored status", "external participant-created video", "external event-share status"],
+          boundaries: ["Three usage specimens do not establish broad adoption, lifetime reach, attendance, or organizer outcomes."],
+          decisionUse: "Adds concrete external-use evidence while preserving the difference between a specimen and an aggregate adoption claim."
+        },
+        {
+          id: "PROP-WOWLIST-MISSION-SOURCE-TRAIL-2026",
+          text: "The posted source trail connects event circulation with DIY operational knowledge, community-authored archives, cross-scene learning, mutual aid, cultural-space safety, and support after the Ghost Ship fire.",
           status: "supported-with-boundary",
-          sourceIds: ["SRC-WOWLIST-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
-          sourceSupport: ["profile post count", "status-author classification", "deduplicated timeline URLs"],
-          boundaries: ["One profile-counted item was not recovered.", "Shared-account authorship remains unknown."],
-          decisionUse: "Defines the surviving social corpus without overstating reach."
+          sourceIds: ["SRC-WOWLIST-X-FULL-POPULATION-CENSUS-2026-07-15", "SRC-GRASSTRONAUT-HOMEWORK-EVERY-TOWN-2015-01-29", "SRC-GOOD-TIMES-ZINES-TWO-POINT-ZERO-2015-05-06", "SRC-KQED-GHOST-SHIP-VIGIL-2016-12-06", "SRC-MEOW-WOLF-DIY-FUND-2017"],
+          sourceSupport: ["35-link URL inventory", "two archived DIY documentation articles", "live public-media report", "archived cultural-space fund page"],
+          boundaries: ["Linked sources establish the account's public context and curation, not Jamie's authorship of those sources or causality for their outcomes.", "A repost is not evidence of reciprocal endorsement by the source account."],
+          decisionUse: "Preserves the mission-relevant intellectual and care context for future portfolio composition without forcing it onto the current proof page."
+        },
+        {
+          id: "PROP-WOWLIST-ACCESS-TIME-ENGAGEMENT-2026",
+          text: "At review time, the 22 project-account-authored statuses displayed two replies, 20 reposts, and 21 likes in aggregate; 12 of the 22 displayed at least one interaction.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-WOWLIST-X-FULL-POPULATION-CENSUS-2026-07-15"],
+          sourceSupport: ["access-time interaction labels", "project-authored versus reposted-status classification"],
+          boundaries: ["Interaction counts are mutable and were observed on July 15, 2026.", "Metrics on the 16 reposted source statuses are excluded because they are not project-account traction.", "Interactions do not establish endorsement, adoption, attendance, or outcome."],
+          decisionUse: "Preserves a modest, auditable traction baseline for research use without turning it into a public headline."
         }
       ],
       tensions: [],
-      researchQuestions: ["Can the missing profile-counted item be recovered from an account export or archive?", "Which linked event pages have stable Wayback captures suitable for a public material-scene projection?", "Can collaborators identify additional public organizer uses of WOW List without turning isolated specimens into an adoption metric?"],
-      boundaries: ["Do not publish private user, event-organizer, or follower data.", "Do not treat reposts or follower counts as adoption totals.", "Do not project this intake item directly to the website without editorial approval."],
+      researchQuestions: ["Which linked event pages have stable Wayback captures suitable for a public material-scene projection?", "Can collaborators document specific organizer outcomes without turning isolated specimens into a platform-wide adoption metric?", "Which of the 13 repost-source accounts were direct contributors, partners, or simply part of the account's public curation?"],
+      boundaries: ["Do not publish private user, event-organizer, audience, or follower data.", "Do not assign a shared-account status to Jamie without actor evidence.", "Do not treat reposts, likes, or follower counts as endorsement or adoption totals.", "Do not aggregate engagement on reposted source statuses as WOW List traction.", "Do not project this intake item directly to the website without editorial approval."],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
-      reviewedAt: "2026-07-14",
-      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population authenticated social-media review"]
     },
     {
       id: "INTAKE-KC-SPACES-FUND-SOCIAL-RECORD-2026-07-14",
