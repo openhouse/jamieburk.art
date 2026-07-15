@@ -88,6 +88,21 @@ The event pages establish a collective recurring-convening method; they do not
 identify Jamie as producer of every event. See
 `docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md`.
 
+### Jamie Burkart and WOW List Facebook events
+
+The July 15 authenticated pass reviewed all 21 records materialized by Jamie's
+personal hosted-past surface. Seventeen detail pages were recovered; four
+remain index-only. The public fixture preserves dates, normalized titles,
+displayed public host relations, generalized locations, bounded response
+totals, themes, and 16 outbound links while excluding raw descriptions,
+residential addresses, private identities, contacts, access details, and
+session state.
+
+The two current migrated WOW List Page event surfaces each materialized zero
+events. This is a current-interface finding, not a complete owner export or
+evidence that no historical WOW List event existed. See
+`docs/knowledge-bank/projects/jamie-wowlist-facebook-events.md`.
+
 ### KC Town Hall public record and first-hand clarification
 
 The July 14 funding-status pass recovered four official KCMO sources:

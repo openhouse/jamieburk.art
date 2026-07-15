@@ -79,6 +79,9 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`: selected for the 196 / Sunday Dinner
   case study as a specific operational handoff. Keep participant details
   private and do not use one template to prove project scale.
+- `CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY`: selected as dated continuity proof.
+  Preserve the six-record current-archive boundary, the 100th and 200th
+  milestones, Julia Fredenburg's cohost credit, and the direct WOW List link.
 
 ## Selected Social-Media Evidence
 
@@ -195,6 +198,15 @@ website selection. It is a recommendation, not publication approval.
   waves; not reviewed does not mean absent.
 
 ## Knowledge Depth, Not Current Projection
+
+- `CLM-JAMIE-RECURRING-HOSTED-EVENT-PRACTICE`: retain the reconciled 21-record
+  personal chronology as cross-project depth. Promote representative events
+  only after role and outcome corroboration appropriate to the claim.
+- `CLM-JAMIE-FACEBOOK-EVENT-RESPONSE-SNAPSHOT`: retain the 608 displayed
+  response actions as a bounded platform snapshot, not attendance or impact.
+- `CLM-WOWLIST-FACEBOOK-EVENT-LEGACY-GAP`: retain the two current-surface zero
+  as a research boundary. Recover a Page owner export or stable archive before
+  making any historical event-population claim.
 
 - `CLM-NYCAC-CAMPAIGN-PRESS-CORPUS`: retain the complete 45-placement,
   44-article bibliography in the bank. Promote only article-level propositions

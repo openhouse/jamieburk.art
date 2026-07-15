@@ -61,6 +61,19 @@ impact, or that Jamie authored every institutional-account post.
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 
+Do not treat the six surviving Facebook records as the complete Sunday Dinner
+population. Do not remove Julia Fredenburg's cohost credit from the 200th
+gathering, assign Jamie sole production of cohosted events, or convert Facebook
+response actions into attendance, reach, endorsement, or impact.
+
+## Personal and WOW List Facebook events
+
+Do not publish raw descriptions, residential street addresses, attendee or
+friend identities, contacts, credentials, private-group details, or
+authenticated-session state. Do not say the 21 hosted-index records represent
+every event Jamie ever produced. Do not say the two current WOW List surfaces
+prove that WOW List never created or cohosted a historical Facebook event.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

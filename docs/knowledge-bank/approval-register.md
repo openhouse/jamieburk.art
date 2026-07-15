@@ -33,7 +33,7 @@ The repo is public. Approval here means approved for public-safe repository and 
   complete 38-record account population and bounded 10-account third-party
   reception result may describe observable publishing and distribution
   patterns, but neither is a total-adoption or impact measure.
-- Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
+- Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording. Six surviving personal Facebook records, including the 100th and 200th milestones, are approved as bounded chronology evidence. The 200th may name Julia Fredenburg and Jamie as displayed cohosts and may note its direct WOW List event link. Do not treat six as the full project population.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall role and funding: the official developer/presenter designation,
   CCED Board recommendation, Council acceptance, and 2019 appropriation are
@@ -72,6 +72,9 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Attendance records.
 - Raw Facebook event descriptions, historical meeting credentials, and private
   event-planning links.
+- Residential event addresses, attendee and friend identities, contacts,
+  private-group details, authenticated Facebook session state, and unredacted
+  personal event captures.
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.

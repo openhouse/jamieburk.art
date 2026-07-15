@@ -261,6 +261,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## sunday-dinner-facebook-milestone-chronology - Facebook milestone chronology
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public Facebook event records / public-safe full-population fixture
+**Public wording:** Six surviving Facebook event records document Sunday Dinner across 2013-2017, including the 100th and 200th gatherings; the 200th linked directly to WOW List.
+**Detailed public-safe wording:** Jamie's current hosted-event archive preserves six explicitly titled Sunday Dinner records. The March 2014 record marks the 100th gathering. The June 2016 record marks the 200th, names Julia Fredenburg and Jamie as hosts, and links to a corresponding WOW List event record.
+**Where to project:** Sunday Dinner / 196 case study.
+**Why it matters:** Adds a dated, inspectable continuity proof and one concrete bridge between recurring event operations and the community-calendar product.
+**Guardrail:** The six records are the surviving events exposed by the current personal hosted archive, not the full Sunday Dinner population. Preserve Julia's cohost credit and private-address boundary.
+**Do not say:** Six events were the whole project; Jamie solely produced every gathering; Facebook responses equal attendance; WOW List owned Sunday Dinner.
+**Protected boundaries:** Residential addresses, guest identities, raw descriptions, contacts, and authenticated-session details stay offline.
+**Review owner:** Jamie / Codex archival review
+**Last reviewed:** 2026-07-15
+
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
 **Status:** Careful

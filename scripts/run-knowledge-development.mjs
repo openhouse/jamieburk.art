@@ -68,6 +68,15 @@ import {
   nycacFacebookEventResearchTasks,
   nycacFacebookEventSources,
 } from "../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
+import {
+  jamieWowListFacebookEventCaptures,
+  jamieWowListFacebookEventClaims,
+  jamieWowListFacebookEventInquiries,
+  jamieWowListFacebookEventObservations,
+  jamieWowListFacebookEventResearchTasks,
+  jamieWowListFacebookEventReviewSummary,
+  jamieWowListFacebookEventSources,
+} from "../apps/www/src/data/knowledge-bank/jamie-wowlist-facebook-events.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 import { nycacMissionSignalRules } from "./lib/nycac-mission-classifier.mjs";
 import { urbanhermitMissionSignalRules } from "./lib/urbanhermit-mission-classifier.mjs";
@@ -91,6 +100,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/nterchng-production.ts",
   "apps/www/src/data/knowledge-bank/urbanhermit-production.ts",
   "apps/www/src/data/knowledge-bank/nycac-facebook-events.ts",
+  "apps/www/src/data/knowledge-bank/jamie-wowlist-facebook-events.ts",
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
@@ -98,6 +108,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -120,6 +131,7 @@ const candidateFiles = [
   "docs/knowledge-bank/projects/nterchng.md",
   "docs/knowledge-bank/projects/urbanhermit.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
+  "docs/knowledge-bank/projects/jamie-wowlist-facebook-events.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
   "docs/knowledge-bank/projects/kc-town-hall-funding.md",
@@ -180,6 +192,12 @@ const urbanhermitPopulationInventory = JSON.parse(
 const nycacFacebookEventInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+    "utf8",
+  ),
+);
+const jamieWowListFacebookEventInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json",
     "utf8",
   ),
 );
@@ -2160,6 +2178,279 @@ function deterministicResults(judgments) {
     );
   }
 
+  const jamieWowListFacebookEventIntegrityViolations = [];
+  const jamieWowListFacebookEventSafetyViolations = [];
+  const jamieFacebookAccount =
+    jamieWowListFacebookEventInventory.accounts?.jamieBurkart;
+  const wowListFacebookAccount =
+    jamieWowListFacebookEventInventory.accounts?.wowList;
+  const jamieFacebookEvents = jamieFacebookAccount?.events ?? [];
+  const jamieFacebookResponseEvents = jamieFacebookEvents.filter(
+    (event) => Number.isInteger(event.displayedResponseCount),
+  );
+  const jamieFacebookResponseActions = jamieFacebookResponseEvents.reduce(
+    (sum, event) => sum + event.displayedResponseCount,
+    0,
+  );
+  const jamieFacebookExternalLinks = jamieFacebookEvents.flatMap(
+    (event) => event.sourceLinks ?? [],
+  );
+  const jamieWowListFacebookFixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json";
+  const jamieWowListFacebookFixtureSource = sourceById.get(
+    "SRC-JAMIE-WOWLIST-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+  );
+  const jamieFacebookPracticeClaim = claimById.get(
+    "CLM-JAMIE-RECURRING-HOSTED-EVENT-PRACTICE",
+  );
+  const sundayDinnerMilestoneClaim = claimById.get(
+    "CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY",
+  );
+  const jamieFacebookResponseClaim = claimById.get(
+    "CLM-JAMIE-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+  );
+  const wowListFacebookLegacyGapClaim = claimById.get(
+    "CLM-WOWLIST-FACEBOOK-EVENT-LEGACY-GAP",
+  );
+  const sundayDinnerPage = knowledgeBank.pages.find(
+    (page) => page.id === "196-sunday-dinner",
+  );
+
+  if (
+    jamieWowListFacebookEventCaptures.length !== 1 ||
+    jamieWowListFacebookEventSources.length !== 8 ||
+    jamieWowListFacebookEventObservations.length !== 15 ||
+    jamieWowListFacebookEventClaims.length !== 4 ||
+    jamieWowListFacebookEventResearchTasks.length !== 4 ||
+    jamieWowListFacebookEventInquiries.length !== 1
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "Jamie and WOW List Facebook event graph has an unexpected record count",
+    );
+  }
+  if (
+    jamieFacebookAccount?.displayedEventCount !== 21 ||
+    jamieFacebookAccount?.materializedEventCount !== 21 ||
+    jamieFacebookAccount?.detailRecoveredCount !== 17 ||
+    jamieFacebookAccount?.indexOnlyCount !== 4 ||
+    jamieFacebookAccount?.terminalNoGrowthPasses !== 6 ||
+    jamieFacebookAccount?.coverageState !== "complete-as-materialized" ||
+    jamieFacebookAccount?.dateRange?.start !== "2006-12-02" ||
+    jamieFacebookAccount?.dateRange?.end !== "2019-02-24"
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "Jamie's Facebook 21-record hosted-event population reconciliation drifted",
+    );
+  }
+  if (
+    jamieFacebookEvents.length !== 21 ||
+    new Set(jamieFacebookEvents.map((event) => event.eventId)).size !== 21 ||
+    new Set(jamieFacebookEvents.map((event) => event.canonicalUrl)).size !== 21 ||
+    jamieFacebookEvents.some(
+      (event) =>
+        event.canonicalUrl !==
+          `https://www.facebook.com/events/${event.eventId}/` ||
+        !["recovered", "index-only"].includes(event.detailState) ||
+        !Array.isArray(event.themes) ||
+        !event.themes.length,
+    ) ||
+    jamieFacebookEvents.filter((event) => event.detailState === "recovered")
+      .length !== 17 ||
+    jamieFacebookEvents.filter((event) => event.detailState === "index-only")
+      .length !== 4 ||
+    jamieFacebookEvents[0]?.date !== "2019-02-24" ||
+    jamieFacebookEvents.at(-1)?.date !== "2006-12-02"
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "Jamie's Facebook event identities, detail states, themes, or chronology drifted",
+    );
+  }
+  if (
+    jamieFacebookEvents.filter((event) => /Sunday Dinner/i.test(event.title))
+      .length !== 6 ||
+    !jamieFacebookEvents.some(
+      (event) => event.eventId === "702417306475691" && /100/.test(event.title),
+    ) ||
+    !jamieFacebookEvents.some(
+      (event) =>
+        event.eventId === "551536301637994" &&
+        /200/.test(event.title) &&
+        event.sourceLinks.some(
+          (link) =>
+            link.url ===
+            "https://wowlist.org/events/22791/sunday-dinner-200",
+        ),
+    ) ||
+    jamieFacebookResponseEvents.length !== 17 ||
+    jamieFacebookResponseActions !== 608 ||
+    jamieFacebookResponseEvents.filter(
+      (event) => event.displayedResponseCount >= 20,
+    ).length !== 8 ||
+    jamieFacebookResponseEvents.filter(
+      (event) => event.displayedResponseCount >= 100,
+    ).length !== 3 ||
+    jamieFacebookEvents.filter((event) => event.sourceLinks.length).length !==
+      7 ||
+    jamieFacebookExternalLinks.length !== 16
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "Jamie's Sunday Dinner, response, or event-linked source findings no longer reproduce from event rows",
+    );
+  }
+  if (
+    wowListFacebookAccount?.materializedEventCount !== 0 ||
+    wowListFacebookAccount?.coverageState !==
+      "complete-as-materialized-with-legacy-gap" ||
+    wowListFacebookAccount?.surfaceFindings?.length !== 2 ||
+    wowListFacebookAccount.surfaceFindings.some(
+      (surface) => surface.materializedEventCount !== 0,
+    ) ||
+    !/does not establish.*no historical/i.test(
+      wowListFacebookAccount?.boundary ?? "",
+    )
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "WOW List current-surface zero or legacy-recovery boundary drifted",
+    );
+  }
+  if (
+    !immutableGitHubFixtureMatches(
+      jamieWowListFacebookFixtureSource,
+      jamieWowListFacebookFixturePath,
+    )
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "Jamie and WOW List Facebook population source does not pin a byte-identical committed fixture",
+    );
+  }
+  const jamieWowListFacebookSourcePathIds = new Set([
+    ...jamieWowListFacebookEventObservations.map(
+      (observation) => observation.sourceId,
+    ),
+    ...jamieWowListFacebookEventClaims.flatMap((claim) =>
+      claim.evidence.map((evidence) => evidence.sourceId),
+    ),
+    ...jamieWowListFacebookEventInquiries.flatMap(
+      (inquiry) => inquiry.sourceIds,
+    ),
+  ]);
+  for (const source of jamieWowListFacebookEventSources) {
+    if (
+      !sourceById.has(source.id) ||
+      !jamieWowListFacebookSourcePathIds.has(source.id)
+    ) {
+      jamieWowListFacebookEventIntegrityViolations.push(
+        `Jamie and WOW List Facebook source lacks a normalized evidence path: ${source.id}`,
+      );
+    }
+  }
+  if (
+    jamieWowListFacebookEventReviewSummary.personalHostedEvents !== 21 ||
+    jamieWowListFacebookEventReviewSummary.personalDetailsRecovered !== 17 ||
+    jamieWowListFacebookEventReviewSummary.personalIndexOnly !== 4 ||
+    jamieWowListFacebookEventReviewSummary.sundayDinnerRecords !== 6 ||
+    jamieWowListFacebookEventReviewSummary.eventLinkedUrls !== 16 ||
+    jamieWowListFacebookEventReviewSummary.eventsWithResponseTotals !== 17 ||
+    jamieWowListFacebookEventReviewSummary.displayedResponseActions !== 608 ||
+    jamieWowListFacebookEventReviewSummary.wowListCurrentMaterializedEvents !== 0 ||
+    jamieFacebookPracticeClaim?.selectionState !== "candidate" ||
+    sundayDinnerMilestoneClaim?.selectionState !== "selected" ||
+    sundayDinnerMilestoneClaim.publicationState !== "approved" ||
+    jamieFacebookResponseClaim?.selectionState !== "dormant" ||
+    wowListFacebookLegacyGapClaim?.selectionState !== "dormant" ||
+    wowListFacebookLegacyGapClaim?.status !== "not-recovered"
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "Jamie and WOW List Facebook review summary or claim selection state is incomplete",
+    );
+  }
+  if (
+    !sundayDinnerPage?.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "facebook-milestone-chronology" &&
+        occurrence.claimId === "CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY",
+    ) ||
+    !/CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY/.test(
+      readFileSync("apps/www/src/content/work/196-sunday-dinner.mdx", "utf8"),
+    )
+  ) {
+    jamieWowListFacebookEventIntegrityViolations.push(
+      "The selected Sunday Dinner Facebook chronology is missing from the page plan or MDX",
+    );
+  }
+
+  const jamieWowListFacebookPayload = JSON.stringify({
+    captures: jamieWowListFacebookEventCaptures,
+    sources: jamieWowListFacebookEventSources,
+    observations: jamieWowListFacebookEventObservations,
+    claims: jamieWowListFacebookEventClaims,
+    tasks: jamieWowListFacebookEventResearchTasks,
+    inquiries: jamieWowListFacebookEventInquiries,
+  });
+  if (
+    /\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      jamieWowListFacebookPayload,
+    )
+  ) {
+    jamieWowListFacebookEventSafetyViolations.push(
+      "Jamie and WOW List Facebook knowledge graph exposes a local path, email address, or phone number",
+    );
+  }
+  const jamieWowListFacebookFixturePayload = JSON.stringify(
+    jamieWowListFacebookEventInventory,
+  );
+  if (
+    /"(?:description|attendees|friends|contact|cookie|cookies|session|sessionToken|credentials)"\s*:|\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      jamieWowListFacebookFixturePayload,
+    ) ||
+    !/excludes raw event descriptions.*residential street addresses.*authenticated-session state/i.test(
+      jamieWowListFacebookEventInventory.privacyBoundary ?? "",
+    )
+  ) {
+    jamieWowListFacebookEventSafetyViolations.push(
+      "Jamie and WOW List Facebook public fixture exposes raw text, private identity, address, contact, or authenticated state",
+    );
+  }
+  if (
+    !jamieFacebookPracticeClaim?.boundaries.some((boundary) =>
+      /not sole producer/i.test(boundary),
+    ) ||
+    !jamieFacebookResponseClaim?.antiClaims.some((antiClaim) =>
+      /608 people attended/i.test(antiClaim),
+    ) ||
+    !jamieFacebookResponseClaim?.boundaries.some((boundary) =>
+      /not unique people.*attendance.*impact/i.test(boundary),
+    ) ||
+    !sundayDinnerMilestoneClaim?.boundaries.some((boundary) =>
+      /not the full project population/i.test(boundary),
+    ) ||
+    !wowListFacebookLegacyGapClaim?.antiClaims.some((antiClaim) =>
+      /never created Facebook events/i.test(antiClaim),
+    )
+  ) {
+    jamieWowListFacebookEventSafetyViolations.push(
+      "Jamie and WOW List Facebook claims obscure role, denominator, response, or legacy-history boundaries",
+    );
+  }
+  const jamieWowListPublicText = [
+    readFileSync("apps/www/src/content/work/196-sunday-dinner.mdx", "utf8"),
+    ...sundayDinnerMilestoneClaim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text),
+  ].join("\n");
+  if (
+    /608 (?:people|attendees)|verified attendance|WOW List never (?:created|hosted)/i.test(
+      jamieWowListPublicText,
+    ) ||
+    !/six Sunday Dinner event records.*100th.*200th/i.test(
+      jamieWowListPublicText,
+    )
+  ) {
+    jamieWowListFacebookEventSafetyViolations.push(
+      "The Sunday Dinner public projection overstates response, history, or the selected chronology",
+    );
+  }
+
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
       (projection) =>
@@ -2411,7 +2702,8 @@ function deterministicResults(judgments) {
         googleSharedDriveIntegrityViolations.length ||
         socialMediaIntegrityViolations.length ||
         urbanhermitIntegrityViolations.length ||
-        nycacFacebookEventIntegrityViolations.length
+        nycacFacebookEventIntegrityViolations.length ||
+        jamieWowListFacebookEventIntegrityViolations.length
         ? 0
         : routedCaptures.length === knowledgeBank.captures.length
           ? 4
@@ -2428,6 +2720,7 @@ function deterministicResults(judgments) {
         `${socialMediaIntegrityViolations.length} social-media archive integrity violations`,
         `${urbanhermitIntegrityViolations.length} Urbanhermit archive integrity violations`,
         `${nycacFacebookEventIntegrityViolations.length} NYC Artist Coalition Facebook event integrity violations`,
+        `${jamieWowListFacebookEventIntegrityViolations.length} Jamie and WOW List Facebook event integrity violations`,
       ],
       [
         ...brokenCaptureRefs,
@@ -2441,6 +2734,7 @@ function deterministicResults(judgments) {
         ...socialMediaIntegrityViolations,
         ...urbanhermitIntegrityViolations,
         ...nycacFacebookEventIntegrityViolations,
+        ...jamieWowListFacebookEventIntegrityViolations,
       ],
       "Repair broken references and ensure each integrated capture has a traversable path.",
     ),
@@ -2458,7 +2752,8 @@ function deterministicResults(judgments) {
         googleSharedDriveSafetyViolations.length ||
         socialMediaSafetyViolations.length ||
         urbanhermitSafetyViolations.length ||
-        nycacFacebookEventSafetyViolations.length
+        nycacFacebookEventSafetyViolations.length ||
+        jamieWowListFacebookEventSafetyViolations.length
         ? 0
         : 4,
       [
@@ -2473,6 +2768,7 @@ function deterministicResults(judgments) {
         `${socialMediaSafetyViolations.length} social-media projection-safety violations`,
         `${urbanhermitSafetyViolations.length} Urbanhermit projection-safety violations`,
         `${nycacFacebookEventSafetyViolations.length} NYC Artist Coalition Facebook event safety violations`,
+        `${jamieWowListFacebookEventSafetyViolations.length} Jamie and WOW List Facebook event safety violations`,
       ],
       [
         ...validationErrors,
@@ -2486,6 +2782,7 @@ function deterministicResults(judgments) {
         ...socialMediaSafetyViolations,
         ...urbanhermitSafetyViolations,
         ...nycacFacebookEventSafetyViolations,
+        ...jamieWowListFacebookEventSafetyViolations,
       ],
       "Remove unsafe payloads and satisfy canonical citation validation.",
     ),
@@ -2963,6 +3260,8 @@ function deterministicResults(judgments) {
     ...urbanhermitSafetyViolations,
     ...nycacFacebookEventIntegrityViolations,
     ...nycacFacebookEventSafetyViolations,
+    ...jamieWowListFacebookEventIntegrityViolations,
+    ...jamieWowListFacebookEventSafetyViolations,
   ];
   results.set(
     "KD-013",
@@ -2984,6 +3283,9 @@ function deterministicResults(judgments) {
         `Urbanhermit: ${urbanhermitExternalLinks.length} posted-link occurrences / ${new Set(urbanhermitExternalLinks.map((link) => link.shortUrl)).size} distinct short URLs; ${urbanhermitMissionRelevantIncoming.length}/26 bounded incoming records mission-relevant across ${new Set(urbanhermitMissionRelevantIncoming.map((record) => record.authorHandle)).size} accounts`,
         `NYC Artist Coalition Facebook events: ${nycacFacebookEvents.length}/33 exposed event cards and details reviewed; 1 of the page's displayed 34 remains unmaterialized`,
         `NYC Artist Coalition Facebook events: ${nycacFacebookResponseEvents.length} response-counted records; 19 at or above 100, 7 at or above 500, 3 at or above 1,000; ${nycacFacebookEventInventory.postedSourceArticles.length} posted source articles`,
+        `Jamie Facebook hosted events: ${jamieFacebookEvents.length}/21 materialized records reviewed; 17 detail pages recovered and 4 retained as index-only`,
+        `Jamie Facebook hosted events: 6 Sunday Dinner records; ${jamieFacebookResponseEvents.length} response-counted records; ${jamieFacebookExternalLinks.length} event-linked public URLs`,
+        `WOW List Facebook events: ${wowListFacebookAccount.materializedEventCount} records exposed by 2 current surfaces; legacy owner history remains unresolved`,
       ],
       fullPopulationViolations,
       "Repair the denominator or classification before strengthening the public interpretation.",
@@ -3060,6 +3362,17 @@ function deterministicResults(judgments) {
       nycacFacebookEventsWithResponseCount: nycacFacebookResponseEvents.length,
       nycacFacebookEventPostedSourceArticles:
         nycacFacebookEventInventory.postedSourceArticles.length,
+      jamieFacebookHostedEventsRecovered: jamieFacebookEvents.length,
+      jamieFacebookEventDetailsRecovered:
+        jamieWowListFacebookEventReviewSummary.personalDetailsRecovered,
+      jamieFacebookEventIndexOnly:
+        jamieWowListFacebookEventReviewSummary.personalIndexOnly,
+      jamieFacebookSundayDinnerRecords:
+        jamieWowListFacebookEventReviewSummary.sundayDinnerRecords,
+      jamieFacebookEventLinkedUrls:
+        jamieWowListFacebookEventReviewSummary.eventLinkedUrls,
+      wowListFacebookCurrentMaterializedEvents:
+        jamieWowListFacebookEventReviewSummary.wowListCurrentMaterializedEvents,
       validationErrors: validationErrors.length,
     },
   };

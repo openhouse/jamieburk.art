@@ -85,6 +85,14 @@ import {
   nycacFacebookEventResearchTasks,
   nycacFacebookEventSources,
 } from "./nycac-facebook-events.ts";
+import {
+  jamieWowListFacebookEventCaptures,
+  jamieWowListFacebookEventClaims,
+  jamieWowListFacebookEventInquiries,
+  jamieWowListFacebookEventObservations,
+  jamieWowListFacebookEventResearchTasks,
+  jamieWowListFacebookEventSources,
+} from "./jamie-wowlist-facebook-events.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -99,6 +107,7 @@ const knowledgeBankInput = {
     ...nterchngCaptures,
     ...urbanhermitCaptures,
     ...nycacFacebookEventCaptures,
+    ...jamieWowListFacebookEventCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -112,6 +121,7 @@ const knowledgeBankInput = {
     ...nterchngSources,
     ...urbanhermitSources,
     ...nycacFacebookEventSources,
+    ...jamieWowListFacebookEventSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -320,6 +330,7 @@ const knowledgeBankInput = {
     ...nterchngObservations,
     ...urbanhermitObservations,
     ...nycacFacebookEventObservations,
+    ...jamieWowListFacebookEventObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -333,6 +344,7 @@ const knowledgeBankInput = {
     ...nterchngClaims,
     ...urbanhermitClaims,
     ...nycacFacebookEventClaims,
+    ...jamieWowListFacebookEventClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -656,6 +668,7 @@ const knowledgeBankInput = {
     ...nterchngResearchTasks,
     ...urbanhermitResearchTasks,
     ...nycacFacebookEventResearchTasks,
+    ...jamieWowListFacebookEventResearchTasks,
   ],
   researchInquiries: [
     {
@@ -698,6 +711,7 @@ const knowledgeBankInput = {
     ...nterchngInquiries,
     ...urbanhermitInquiries,
     ...nycacFacebookEventInquiries,
+    ...jamieWowListFacebookEventInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
@@ -1032,8 +1046,20 @@ const knowledgeBankInput = {
     {
       id: "196-sunday-dinner",
       surface: "/work/196-sunday-dinner",
-      sourceOrder: [],
+      sourceOrder: [
+        "SRC-JAMIE-WOWLIST-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "SRC-JAMIE-FB-EVENT-SUNDAY-DINNER-200-2016-06-26",
+      ],
       occurrences: [
+        {
+          id: "facebook-milestone-chronology",
+          claimId: "CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-JAMIE-WOWLIST-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+            "SRC-JAMIE-FB-EVENT-SUNDAY-DINNER-200-2016-06-26",
+          ],
+        },
         {
           id: "residency-onboarding-handoff",
           claimId: "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",

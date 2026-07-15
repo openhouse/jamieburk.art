@@ -95,6 +95,12 @@ snapshot, event-posted source articles, and the open individual-role and
 attendance research.
 
 See
+[projects/jamie-wowlist-facebook-events.md](projects/jamie-wowlist-facebook-events.md)
+for the reconciled 21-record personal hosted-event chronology, six Sunday
+Dinner records, source-link and response inventories, public-safety boundary,
+and the current-surface zero with legacy-recovery gap for WOW List.
+
+See
 [projects/kc-town-hall-phase-one.md](projects/kc-town-hall-phase-one.md) for the
 completed 2019 cold-shell scope, Jamie's bounded general-contractor role,
 survey-to-proposal input system, neighborhood-service operations, and the

@@ -83,6 +83,15 @@ import {
   nycacFacebookEventSources,
 } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import {
+  jamieWowListFacebookEventCaptures,
+  jamieWowListFacebookEventClaims,
+  jamieWowListFacebookEventInquiries,
+  jamieWowListFacebookEventObservations,
+  jamieWowListFacebookEventResearchTasks,
+  jamieWowListFacebookEventReviewSummary,
+  jamieWowListFacebookEventSources,
+} from "../../apps/www/src/data/knowledge-bank/jamie-wowlist-facebook-events.ts";
+import {
   classifyNycacMissionSignals,
   extractNycacSourcePostBody,
   normalizeNycacSourceRecordType,
@@ -141,6 +150,12 @@ const urbanhermitPopulationInventory = JSON.parse(
 const nycacFacebookEventInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+    "utf8",
+  ),
+);
+const jamieWowListFacebookEventInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json",
     "utf8",
   ),
 );
@@ -2303,6 +2318,201 @@ test("NYC Artist Coalition Facebook population source pins the committed public 
   const fixtureSource = nycacFacebookEventSources.find(
     (source) =>
       source.id === "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+  );
+  const match = fixtureSource.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/[a-z0-9-]+\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], fixturePath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`]),
+    readFileSync(fixturePath),
+  );
+});
+
+test("Jamie Facebook hosted-event population reconciles all 21 materialized records", () => {
+  const account = jamieWowListFacebookEventInventory.accounts.jamieBurkart;
+  const events = account.events;
+
+  assert.equal(account.displayedEventCount, 21);
+  assert.equal(account.materializedEventCount, 21);
+  assert.equal(account.detailRecoveredCount, 17);
+  assert.equal(account.indexOnlyCount, 4);
+  assert.equal(account.terminalNoGrowthPasses, 6);
+  assert.equal(account.coverageState, "complete-as-materialized");
+  assert.deepEqual(account.dateRange, {
+    start: "2006-12-02",
+    end: "2019-02-24",
+  });
+  assert.equal(events.length, 21);
+  assert.equal(new Set(events.map((event) => event.eventId)).size, 21);
+  assert.equal(new Set(events.map((event) => event.canonicalUrl)).size, 21);
+  assert.equal(
+    events.filter((event) => event.detailState === "recovered").length,
+    17,
+  );
+  assert.equal(
+    events.filter((event) => event.detailState === "index-only").length,
+    4,
+  );
+  assert.ok(
+    events.every(
+      (event) =>
+        event.canonicalUrl ===
+          `https://www.facebook.com/events/${event.eventId}/` &&
+        event.themes.length,
+    ),
+  );
+});
+
+test("Jamie event chronology reproduces Sunday Dinner, source-link, and response findings", () => {
+  const events =
+    jamieWowListFacebookEventInventory.accounts.jamieBurkart.events;
+  const sundayDinners = events.filter((event) =>
+    /Sunday Dinner/i.test(event.title),
+  );
+  const responseEvents = events.filter((event) =>
+    Number.isInteger(event.displayedResponseCount),
+  );
+  const linkedEvents = events.filter((event) => event.sourceLinks.length);
+  const links = events.flatMap((event) => event.sourceLinks);
+
+  assert.equal(sundayDinners.length, 6);
+  assert.ok(
+    sundayDinners.some(
+      (event) => event.eventId === "702417306475691" && /100/.test(event.title),
+    ),
+  );
+  assert.ok(
+    sundayDinners.some(
+      (event) =>
+        event.eventId === "551536301637994" &&
+        event.sourceLinks.some(
+          (link) =>
+            link.url ===
+            "https://wowlist.org/events/22791/sunday-dinner-200",
+        ),
+    ),
+  );
+  assert.equal(responseEvents.length, 17);
+  assert.equal(
+    responseEvents.reduce(
+      (sum, event) => sum + event.displayedResponseCount,
+      0,
+    ),
+    608,
+  );
+  assert.equal(
+    responseEvents.filter((event) => event.displayedResponseCount >= 20).length,
+    8,
+  );
+  assert.equal(
+    responseEvents.filter((event) => event.displayedResponseCount >= 100)
+      .length,
+    3,
+  );
+  assert.equal(linkedEvents.length, 7);
+  assert.equal(links.length, 16);
+  assert.match(
+    jamieWowListFacebookEventInventory.accounts.jamieBurkart.responseSnapshot
+      .boundary,
+    /not unique people.*attendance.*impact/i,
+  );
+});
+
+test("WOW List current event zero remains separate from unresolved legacy history", () => {
+  const account = jamieWowListFacebookEventInventory.accounts.wowList;
+  assert.equal(account.materializedEventCount, 0);
+  assert.equal(account.coverageState, "complete-as-materialized-with-legacy-gap");
+  assert.equal(account.surfaceFindings.length, 2);
+  assert.ok(
+    account.surfaceFindings.every(
+      (surface) => surface.materializedEventCount === 0,
+    ),
+  );
+  assert.match(account.boundary, /does not establish.*no historical/i);
+
+  const legacyClaim = jamieWowListFacebookEventClaims.find(
+    (claim) => claim.id === "CLM-WOWLIST-FACEBOOK-EVENT-LEGACY-GAP",
+  );
+  assert.equal(legacyClaim.selectionState, "dormant");
+  assert.equal(legacyClaim.status, "not-recovered");
+  assert.ok(
+    legacyClaim.antiClaims.some((antiClaim) =>
+      /never created Facebook events/i.test(antiClaim),
+    ),
+  );
+});
+
+test("Jamie and WOW List Facebook event graph is public-safe and purposefully projected", () => {
+  assert.equal(jamieWowListFacebookEventCaptures.length, 1);
+  assert.equal(jamieWowListFacebookEventSources.length, 8);
+  assert.equal(jamieWowListFacebookEventObservations.length, 15);
+  assert.equal(jamieWowListFacebookEventClaims.length, 4);
+  assert.equal(jamieWowListFacebookEventResearchTasks.length, 4);
+  assert.equal(jamieWowListFacebookEventInquiries.length, 1);
+  assert.deepEqual(jamieWowListFacebookEventReviewSummary, {
+    personalHostedEvents: 21,
+    personalDetailsRecovered: 17,
+    personalIndexOnly: 4,
+    sundayDinnerRecords: 6,
+    eventLinkedUrls: 16,
+    eventsWithResponseTotals: 17,
+    displayedResponseActions: 608,
+    wowListCurrentMaterializedEvents: 0,
+    criterion:
+      "The two materialized populations are fully reconciled, every personal record is represented, private details are excluded, response metrics remain bounded, and the WOW List historical gap is explicit.",
+  });
+
+  const fixturePayload = JSON.stringify(jamieWowListFacebookEventInventory);
+  assert.doesNotMatch(
+    fixturePayload,
+    /"(?:description|attendees|friends|contact|cookie|cookies|session|sessionToken|credentials)"\s*:/i,
+  );
+  assert.doesNotMatch(fixturePayload, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(fixturePayload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+  assert.doesNotMatch(fixturePayload, /\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/);
+
+  const milestoneClaim = jamieWowListFacebookEventClaims.find(
+    (claim) => claim.id === "CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY",
+  );
+  const responseClaim = jamieWowListFacebookEventClaims.find(
+    (claim) => claim.id === "CLM-JAMIE-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+  );
+  const page = knowledgeBank.pages.find(
+    (item) => item.id === "196-sunday-dinner",
+  );
+  const mdx = readFileSync(
+    "apps/www/src/content/work/196-sunday-dinner.mdx",
+    "utf8",
+  );
+
+  assert.equal(milestoneClaim.publicationState, "approved");
+  assert.equal(milestoneClaim.selectionState, "selected");
+  assert.equal(responseClaim.selectionState, "dormant");
+  assert.ok(
+    responseClaim.antiClaims.some((antiClaim) =>
+      /608 people attended/i.test(antiClaim),
+    ),
+  );
+  assert.ok(
+    page.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "facebook-milestone-chronology" &&
+        occurrence.claimId === "CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY",
+    ),
+  );
+  assert.match(mdx, /CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY/);
+  assert.doesNotMatch(mdx, /608 (?:people|attendees)|verified attendance/i);
+});
+
+test("Jamie and WOW List Facebook population source pins the committed public fixture", () => {
+  const fixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json";
+  const fixtureSource = jamieWowListFacebookEventSources.find(
+    (source) =>
+      source.id ===
+      "SRC-JAMIE-WOWLIST-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
   );
   const match = fixtureSource.canonicalUrl.match(
     /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/[a-z0-9-]+\.json)$/,
