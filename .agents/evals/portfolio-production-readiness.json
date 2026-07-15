@@ -23,7 +23,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015", "PR-016", "PR-017"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
@@ -56,6 +56,8 @@
     "Do not display Jamie's phone number in website HTML; it may remain in the approved resume PDF.",
     "Do not represent Source-Backed Team Memory as finished production SaaS or automated trust.",
     "Do not delete useful public content, routes, evidence, or accessibility affordances merely to improve a score.",
+    "Do not flatten artistic, relational, hospitable, embodied, or experimental practice into organizational utility merely because it is harder to quantify or hire from.",
+    "Do not turn historical coursework into claims that Jamie currently practices social-network research, invented structural equivalence, solely authored collaborative installations, or resolved an archival title conflict.",
     "Do not deploy to production or enable indexing without Jamie's explicit approval of the exact candidate."
   ],
   "evals": [
@@ -65,7 +67,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 10,
+      "weight": 9,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -110,7 +112,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 7,
+      "weight": 6,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -152,7 +154,7 @@
       "category": "trust",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 12,
+      "weight": 11,
       "inputs": ["public pages", "knowledge bank", "citation registry", "approval register"],
       "procedure": [
         "Run knowledge-bank, citation, and public-safety checks.",
@@ -174,7 +176,7 @@
       "category": "application",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 8,
+      "weight": 7,
       "inputs": ["resume PDF", "resume HTML page"],
       "procedure": [
         "Extract resume text and render every page.",
@@ -240,7 +242,7 @@
       "category": "engineering",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 6,
+      "weight": 5,
       "inputs": ["repository checks", "staging routes", "production Docker image"],
       "procedure": [
         "Run npm check, staging preflight, and production preflight serially.",
@@ -327,7 +329,7 @@
       "category": "future_direction",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["resume page", "AI Evals credential", "Source-Backed Team Memory lab"],
       "procedure": [
         "Verify the course-completion evidence and wording.",
@@ -369,7 +371,7 @@
       "category": "positioning",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 7,
+      "weight": 5,
       "inputs": ["homepage", "technical operations page", "featured work cards", "knowledge bank", "Chad lens guidance"],
       "procedure": [
         "Read the homepage and Technical Operations page once, without private archive context or optimization history.",
@@ -387,6 +389,56 @@
       ],
       "evidence_required": ["actor-action-end-output matrix", "knowledge-bank comparison", "public-page excerpts", "blind judge scorecard"],
       "remediation_hint": "Make Jamie and the useful end visible, replace vague nouns with named work and outputs, and strengthen only to the boundary already supported by the proof bank."
+    },
+    {
+      "id": "PR-016",
+      "title": "Embodied systems and media archaeology under Margaret Morse's lens",
+      "category": "practice-integrity",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 4,
+      "inputs": ["About page", "Technical Operations page", "creative-technology proof", "Margaret Morse evidence summary"],
+      "procedure": [
+        "Read the portfolio for the Jamie it rewards and identify whether useful operations work has displaced artistic investigation, hospitality, atmosphere, material attention, or relationships.",
+        "Find one restrained public threshold where Jamie's artistic, civic, technical, and social practices remain visibly connected.",
+        "Trace that connection through at least one concrete embodied or media-archaeological work and explain how it informs structures people can inhabit rather than merely procedures they must follow.",
+        "Verify the historical source, collaborator credit, archival uncertainty, and the distinction between supported accomplishment and present-day role positioning."
+      ],
+      "pass_criteria": [
+        "A secondary hiring surface preserves a visible connection among artistic, civic, technical, and social practice without displacing the first-viewport Technical Project Manager argument.",
+        "The connection names a concrete historical experiment, material, interface, or installation rather than relying on generic creativity language.",
+        "The copy makes participation, memory, place, attention, or inhabitation professionally legible without reducing their value to organizational efficiency.",
+        "Margaret Morse's contemporaneous assessment is represented as protected source support, not republished raw evaluation or private correspondence.",
+        "The site does not claim uninterrupted professional art practice, sole authorship, resolved title variants, or present-day media-production specialization.",
+        "A blind hiring reader can explain how the earlier embodied practice changes the quality of Jamie's current systems work and scores the criterion at least 3."
+      ],
+      "evidence_required": ["secondary-page excerpt", "governed proof ID", "public-safe source summary", "blind judge explanation", "privacy and title-variant boundary"],
+      "remediation_hint": "Add one concrete, source-backed threshold on About or Technical Operations that connects embodied artistic inquiry to participation, memory, place, and inhabitable systems; keep the homepage role signal unchanged."
+    },
+    {
+      "id": "PR-017",
+      "title": "Original social-software reasoning under Warren Sack's lens",
+      "category": "systems-thinking",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 4,
+      "inputs": ["About page", "Technical Operations page", "creative-technology proof", "Warren Sack evidence summary"],
+      "procedure": [
+        "Trace at least one source-backed sequence from a latent social pattern through analysis, prototype, interactive interface, explanation, and collaborative form.",
+        "Check whether the portfolio makes Jamie's original reasoning visible rather than presenting him only as the operator of requirements created by others.",
+        "Verify that technical and artistic complexity, evidence-supported analysis, classroom communication, and shared project credit remain distinct accomplishments.",
+        "Ask a blind hiring reader to explain the relevance of the historical prototype to current technical project management, product operations, or implementation work."
+      ],
+      "pass_criteria": [
+        "A public-safe surface names a specific early social-software or interactive prototype and the latent structure it made usable.",
+        "The reader can follow the movement from observation to computational model to interface or collaborative experience.",
+        "The portfolio presents Jamie as capable of originating a model, prototyping it, communicating it, and contributing it to shared work, not only administering delivery.",
+        "Warren Sack's contemporaneous assessment remains protected source support and is not stretched into current research authority or commercial deployment.",
+        "The copy does not say Jamie invented structural equivalence, solely designed the collaborative installation, or operates the historical prototypes today.",
+        "A blind hiring reader can connect this evidence to present-day systems judgment without losing the portfolio's primary role category and scores the criterion at least 3."
+      ],
+      "evidence_required": ["prototype reasoning chain", "governed proof ID", "public-safe source summary", "collective-credit boundary", "blind judge explanation"],
+      "remediation_hint": "Name one specific observation-model-interface sequence and connect it to current systems judgment, while retaining historical scope, collaborative credit, and anti-invention boundaries."
     }
   ],
   "grader_output_schema": {

@@ -15,6 +15,19 @@ strongest approved accomplishment must not be buried, and collective work must
 retain contribution or stewardship language. Courageous precision means
 neither understatement nor overclaiming.
 
+`PR-016` applies Professor Margaret Morse's lens. It protects one restrained
+threshold where Jamie's artistic, civic, technical, and social practices remain
+connected through embodied experimentation, media archaeology, participation,
+memory, place, and inhabitation. It does not require the homepage to become an
+artist statement or permit protected evaluations and correspondence to be
+published.
+
+`PR-017` applies Professor Warren Sack's lens. It requires a concrete trace of
+Jamie's ability to observe latent social structure, form an original model,
+prototype an interface, explain the idea, and contribute it to collaborative
+work. It does not turn historical coursework into current research authority,
+sole invention, or commercial-deployment claims.
+
 ## Objective
 
 Make the portfolio ready to:
@@ -24,6 +37,8 @@ Make the portfolio ready to:
 3. preserve collective credit, privacy, consent, and uncertainty;
 4. ship safely at `https://jamieburk.art` with consistent metadata, indexing,
    routing, and deployment behavior.
+5. preserve the embodied and original systems-thinking practices that make
+   Jamie's operating work distinctive without crowding the hiring path.
 
 ## Score Model
 

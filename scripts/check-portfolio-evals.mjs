@@ -102,6 +102,81 @@ export function validateChadLensContracts(sources = {}) {
   return errors;
 }
 
+export function validateMorseLensContracts(sources = {}) {
+  const errors = [];
+  const readSource = (key, relativePath) =>
+    sources[key] ?? readFileSync(relativePath, "utf8");
+  const about = readSource("about", "apps/www/src/app/about/page.tsx");
+  const proofs = readSource("proofs", "apps/www/src/data/proofs.ts");
+  const records = readSource(
+    "records",
+    "apps/www/src/data/knowledge-bank/records.ts"
+  );
+
+  for (const expected of [
+    "Structure grows from the material",
+    "artistic, civic, technical, and social",
+    "participation, memory, place, and how people inhabit structures"
+  ]) {
+    if (!about.includes(expected)) {
+      errors.push(`About page is missing Margaret Morse lens signal: ${expected}`);
+    }
+  }
+
+  for (const expected of [
+    'id: "creative-technology-embodied-systems"',
+    "media archaeology",
+    "Art is Long"
+  ]) {
+    if (!proofs.includes(expected) && !records.includes(expected)) {
+      errors.push(`Margaret Morse source contract is missing: ${expected}`);
+    }
+  }
+
+  if (!records.includes("SRC-UCSC-MARGARET-MORSE-NARRATIVE-EVALS-2006")) {
+    errors.push("Margaret Morse narrative evaluation is not registered as protected evidence");
+  }
+  if (!records.includes("Art is Long and Time Is Long may be title variants")) {
+    errors.push("Margaret Morse source contract does not preserve the installation-title uncertainty");
+  }
+
+  return errors;
+}
+
+export function validateSackLensContracts(sources = {}) {
+  const errors = [];
+  const readSource = (key, relativePath) =>
+    sources[key] ?? readFileSync(relativePath, "utf8");
+  const about = readSource("about", "apps/www/src/app/about/page.tsx");
+  const proofs = readSource("proofs", "apps/www/src/data/proofs.ts");
+  const records = readSource(
+    "records",
+    "apps/www/src/data/knowledge-bank/records.ts"
+  );
+
+  for (const expected of [
+    "recursively overlapping Flickr groups",
+    "Max/MSP and Jitter",
+    "social structure could become a usable interface"
+  ]) {
+    if (!about.includes(expected) && !proofs.includes(expected)) {
+      errors.push(`Warren Sack lens is missing public signal: ${expected}`);
+    }
+  }
+
+  for (const expected of [
+    "SRC-UCSC-WARREN-SACK-NARRATIVE-EVALS-2004-2006",
+    "PROP-UCSC-SACK-SOCIAL-SOFTWARE-PROTOTYPES-2004-2006",
+    "Jamie invented structural equivalence"
+  ]) {
+    if (!records.includes(expected) && !proofs.includes(expected)) {
+      errors.push(`Warren Sack source contract is missing: ${expected}`);
+    }
+  }
+
+  return errors;
+}
+
 export function validateSuite(suite) {
   const errors = [];
   const requireValue = (condition, message) => {
@@ -190,6 +265,17 @@ export function validateSuite(suite) {
     suite.application_share_thresholds?.required_eval_ids?.includes("PR-015"),
     "application sharing must require PR-015 Chad lens"
   );
+  for (const [id, label] of [
+    ["PR-016", "Margaret Morse"],
+    ["PR-017", "Warren Sack"]
+  ]) {
+    const lens = suite.evals?.find((entry) => entry.id === id);
+    requireValue(lens?.blocking === true, `${id} ${label} lens eval must be blocking`);
+    requireValue(
+      suite.application_share_thresholds?.required_eval_ids?.includes(id),
+      `application sharing must require ${id} ${label} lens`
+    );
+  }
 
   const validateThresholds = (name, thresholds, production = false) => {
     requireValue(typeof thresholds === "object" && thresholds !== null, `${name} is required`);
@@ -300,10 +386,24 @@ function run() {
   const result = validateSuite(suite);
   const sourceErrors = validatePublicSourceContracts();
   const chadLensErrors = validateChadLensContracts();
+  const morseLensErrors = validateMorseLensContracts();
+  const sackLensErrors = validateSackLensContracts();
 
-  if (result.errors.length || sourceErrors.length || chadLensErrors.length) {
+  if (
+    result.errors.length ||
+    sourceErrors.length ||
+    chadLensErrors.length ||
+    morseLensErrors.length ||
+    sackLensErrors.length
+  ) {
     console.error("Portfolio eval suite validation failed:");
-    for (const error of [...result.errors, ...sourceErrors, ...chadLensErrors]) {
+    for (const error of [
+      ...result.errors,
+      ...sourceErrors,
+      ...chadLensErrors,
+      ...morseLensErrors,
+      ...sackLensErrors
+    ]) {
       console.error(`- ${error}`);
     }
     process.exit(1);

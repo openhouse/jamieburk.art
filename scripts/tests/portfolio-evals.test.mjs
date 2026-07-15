@@ -3,7 +3,9 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   validateChadLensContracts,
+  validateMorseLensContracts,
   validatePublicSourceContracts,
+  validateSackLensContracts,
   validateSuite
 } from "../check-portfolio-evals.mjs";
 import { scoreRun } from "../score-portfolio-eval-run.mjs";
@@ -54,6 +56,49 @@ test("Chad lens source contract requires visible actors and CallNYC boundaries",
 
 test("canonical public source meets deterministic Chad lens contracts", () => {
   assert.deepEqual(validateChadLensContracts(), []);
+});
+
+test("Margaret Morse and Warren Sack lenses remain blocking application criteria", () => {
+  const candidate = cloneSuite();
+  for (const id of ["PR-016", "PR-017"]) {
+    candidate.evals.find((entry) => entry.id === id).blocking = false;
+    candidate.application_share_thresholds.required_eval_ids =
+      candidate.application_share_thresholds.required_eval_ids.filter(
+        (requiredId) => requiredId !== id
+      );
+  }
+  const errors = validateSuite(candidate).errors.join("\n");
+  assert.match(errors, /PR-016 Margaret Morse lens eval must be blocking/);
+  assert.match(errors, /application sharing must require PR-016 Margaret Morse lens/);
+  assert.match(errors, /PR-017 Warren Sack lens eval must be blocking/);
+  assert.match(errors, /application sharing must require PR-017 Warren Sack lens/);
+});
+
+test("Margaret Morse lens requires embodied practice and title uncertainty", () => {
+  const errors = validateMorseLensContracts({
+    about: "Technical Project Manager",
+    proofs: "",
+    records: ""
+  }).join("\n");
+  assert.match(errors, /Structure grows from the material/);
+  assert.match(errors, /protected evidence/);
+  assert.match(errors, /title uncertainty/);
+});
+
+test("Warren Sack lens requires a specific model-interface chain and anti-claim", () => {
+  const errors = validateSackLensContracts({
+    about: "Original systems thinker",
+    proofs: "",
+    records: ""
+  }).join("\n");
+  assert.match(errors, /recursively overlapping Flickr groups/);
+  assert.match(errors, /PROP-UCSC-SACK-SOCIAL-SOFTWARE-PROTOTYPES/);
+  assert.match(errors, /Jamie invented structural equivalence/);
+});
+
+test("canonical public source meets deterministic professor lens contracts", () => {
+  assert.deepEqual(validateMorseLensContracts(), []);
+  assert.deepEqual(validateSackLensContracts(), []);
 });
 
 test("optimizer cannot grade its own patch", () => {
