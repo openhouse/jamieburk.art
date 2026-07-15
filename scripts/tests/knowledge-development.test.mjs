@@ -222,8 +222,12 @@ test("the resume manifest is derived from every substantive HTML block", () => {
     ["Unsupported alt claim", "Unsupported ARIA claim"]
   );
   assert.deepEqual(
-    resumeVisibleAttributeText('<body><div hidden><img alt="Hidden alt claim"></div><details><div aria-label="Closed details claim"></div></details><img alt="Visible alt claim"></body>'),
-    ["Visible alt claim"]
+    resumeVisibleAttributeText('<body><div hidden><img alt="Hidden alt claim"></div><details><summary aria-label="Visible summary claim">Summary</summary><div aria-label="Closed details claim"></div></details><img alt="Visible alt claim"></body>'),
+    ["Visible summary claim", "Visible alt claim"]
+  );
+  assert.deepEqual(
+    resumeVisibleBlocks('<body><details><summary>Visible summary claim.</summary><p>Closed details claim.</p></details></body>'),
+    ["Visible summary claim."]
   );
   assert.deepEqual(
     resumeCssPublicTextRisks('<style>.x::after { content: attr(data-claim); } .y { background: url("data:image/svg+xml,text"); }</style>'),
@@ -245,6 +249,10 @@ test("the resume manifest is derived from every substantive HTML block", () => {
   assert.deepEqual(
     resumeMetadataText('<head><title>Resume title</title><meta name="description" content="Metadata claim"><meta name="viewport" content="not prose"></head>'),
     ["Resume title", "Metadata claim"]
+  );
+  assert.deepEqual(
+    resumeMetadataText('<head><script type="application/ld+json">{"@type":"Person","name":"Unsupported JSON-LD claim","jobTitle":"Lone architect"}</script></head>'),
+    ["Person", "Unsupported JSON-LD claim", "Lone architect"]
   );
   assert.deepEqual(
     resumeEmbeddedContentRisks('<body><iframe srcdoc="claim"></iframe><img src="data:image/svg+xml,text"><div style="background: image-set(data:image/png,x)"></div></body>'),
@@ -451,6 +459,14 @@ test("semantic proof checks reject paraphrased anti-claims", () => {
     ],
     [
       "The outcome followed directly from Jamie's intervention.",
+      "Jamie single-handedly caused policy outcomes"
+    ],
+    [
+      "Jamie was the lone architect of the campaign.",
+      "Jamie solely led NYC Artist Coalition"
+    ],
+    [
+      "Jamie was the decisive reason for the outcome.",
       "Jamie single-handedly caused policy outcomes"
     ]
   ]) {
@@ -2093,6 +2109,20 @@ test("document projections cannot be realized by commented-out text", () => {
   assert.equal(
     documentRealizesProjection(
       '<dialog>A source-backed claim must remain visible.</dialog>',
+      projection
+    ),
+    false
+  );
+  assert.equal(
+    documentRealizesProjection(
+      '<details><summary>A source-backed claim must remain visible.</summary><p>Held detail.</p></details>',
+      projection
+    ),
+    true
+  );
+  assert.equal(
+    documentRealizesProjection(
+      '<details><summary>Visible summary.</summary><p>A source-backed claim must remain visible.</p></details>',
       projection
     ),
     false

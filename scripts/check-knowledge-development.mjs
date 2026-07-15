@@ -450,7 +450,6 @@ function nonRenderingCssClasses(source) {
 function tagIsNonRendering(tagName, tag, cssClasses = new Set()) {
   if (["head", "script", "style", "template"].includes(tagName)) return true;
   if (tagName === "dialog" && !/\sopen(?:\s|=|>)/i.test(tag)) return true;
-  if (tagName === "details" && !/\sopen(?:\s|=|>)/i.test(tag)) return true;
   if (/\spopover(?:\s|=|>)/i.test(tag)) return true;
   if (/\s(?:hidden|inert)(?:\s|=|>)/i.test(tag)) return true;
   if (
@@ -513,6 +512,15 @@ function htmlNodeVisibleText(node, cssClasses, hidden = false) {
   const isHidden =
     hidden || tagIsNonRendering(node.tag, node.rawTag ?? "", cssClasses);
   if (isHidden) return "";
+  if (
+    node.tag === "details" &&
+    !/\sopen(?:\s|=|>)/i.test(node.rawTag ?? "")
+  ) {
+    return node.children
+      .filter((child) => child.tag === "summary")
+      .map((child) => htmlNodeVisibleText(child, cssClasses, false))
+      .join(" ");
+  }
   return node.children
     .map((child) => htmlNodeVisibleText(child, cssClasses, isHidden))
     .join(" ");
@@ -527,6 +535,15 @@ export function resumeVisibleBlocks(source) {
     const isHidden =
       hidden || tagIsNonRendering(node.tag, node.rawTag ?? "", cssClasses);
     if (isHidden) return;
+    if (
+      node.tag === "details" &&
+      !/\sopen(?:\s|=|>)/i.test(node.rawTag ?? "")
+    ) {
+      for (const child of node.children) {
+        if (child.tag === "summary") visit(child, false);
+      }
+      return;
+    }
     if (node.tag === "#text") {
       const text = decodedElementText(node.text);
       if (text) blocks.push(text);
@@ -578,6 +595,16 @@ export function resumeVisibleAttributeText(source) {
     if (node.tag === "#text") return;
     const isHidden =
       hidden || tagIsNonRendering(node.tag, node.rawTag ?? "", cssClasses);
+    if (
+      !isHidden &&
+      node.tag === "details" &&
+      !/\sopen(?:\s|=|>)/i.test(node.rawTag ?? "")
+    ) {
+      for (const child of node.children) {
+        if (child.tag === "summary") visit(child, false);
+      }
+      return;
+    }
     if (!isHidden && node.rawTag) {
       values.push(
         ...[...node.rawTag.matchAll(/\b(?:alt|alttext|aria-braillelabel|aria-description|aria-label|aria-roledescription|aria-valuetext|data|label|srcdoc|title|placeholder|value)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
@@ -602,10 +629,15 @@ export function resumeMetadataText(source) {
     const key = (name?.[1] ?? name?.[2] ?? name?.[3] ?? "").toLowerCase();
     if (![
       "description",
+      "keywords",
+      "author",
+      "application-name",
       "og:description",
       "og:title",
+      "og:site_name",
       "twitter:description",
-      "twitter:title"
+      "twitter:title",
+      "twitter:site"
     ].includes(key)) continue;
     const content = tag[0].match(
       /\bcontent\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i
@@ -614,6 +646,29 @@ export function resumeMetadataText(source) {
       content?.[1] ?? content?.[2] ?? content?.[3] ?? ""
     );
     if (value) values.push(value);
+  }
+  for (const script of source.matchAll(
+    /<script\b[^>]*\btype\s*=\s*(?:"application\/(?:ld\+json|json)"|'application\/(?:ld\+json|json)')[^>]*>([\s\S]*?)<\/script>/gi
+  )) {
+    const raw = script[1].trim();
+    if (!raw) continue;
+    try {
+      const data = JSON.parse(raw);
+      const collect = (value) => {
+        if (typeof value === "string") {
+          const text = decodedElementText(value);
+          if (text) values.push(text);
+        } else if (Array.isArray(value)) {
+          value.forEach(collect);
+        } else if (value && typeof value === "object") {
+          Object.values(value).forEach(collect);
+        }
+      };
+      collect(data);
+    } catch {
+      const text = decodedElementText(raw);
+      if (text) values.push(text);
+    }
   }
   return values;
 }
@@ -788,9 +843,9 @@ function unsupportedSemanticClauses(statement, basis) {
 }
 
 const semanticRiskFamilies = new Map([
-  ["sole-credit", /\b(?:alone|sole|solely|sole responsibility|single[ -]?handedly|exclusively|exclusive credit|final authority|ultimate authority|independently\s+(?:founded|created|built|established|directed|led|managed|operated|owned|delivered|completed|ran)|only founder|no one else|no (?:collaborator|co-creator|partner|other person) (?:contributed|participated|helped|was involved)|without (?:co-creators|collaborators|others|contributions from (?:partners|collaborators|others))|by (?:himself|herself|themselves)|on (?:his|her|their) own)\b/i],
+  ["sole-credit", /\b(?:alone|sole|solely|sole responsibility|single[ -]?handedly|exclusively|exclusive credit|final authority|ultimate authority|lone (?:architect|author|builder|creator|designer|founder|leader|operator|organizer)|independently\s+(?:founded|created|built|established|directed|led|managed|operated|owned|delivered|completed|ran)|only founder|no one else|no (?:collaborator|co-creator|partner|other person) (?:contributed|participated|helped|was involved)|without (?:co-creators|collaborators|others|contributions from (?:partners|collaborators|others))|by (?:himself|herself|themselves)|on (?:his|her|their) own)\b/i],
   ["total-ownership", /\b(?:owned|ownership|fully owned|complete control|unilateral control|exclusive control|final authority|ultimate authority|made all (?:decisions|calls)|end[ -]?to[ -]?end responsibility|responsible for (?:the )?(?:whole|entire|all))\b/i],
-  ["causal-certainty", /\b(?:brought about|caused|guaranteed|ensured|drove|made [^.?!;]{0,80} happen|responsible for (?:the )?(?:whole|entire|all)|single[ -]?handedly delivered|outcome (?:followed|resulted|came) directly from|directly resulted from|as a direct result of [^.?!;]{0,80}(?:intervention|work|action))\b/i],
+  ["causal-certainty", /\b(?:brought about|caused|guaranteed|ensured|drove|decisive reason|decisive cause|made [^.?!;]{0,80} happen|responsible for (?:the )?(?:whole|entire|all)|single[ -]?handedly delivered|outcome (?:followed|resulted|came) directly from|directly resulted from|as a direct result of [^.?!;]{0,80}(?:intervention|work|action))\b/i],
   ["official-status", /\b(?:official|officially|certified|endorsed)\b/i],
   ["current-status", /\b(?:current|currently|live|ongoing|remains? operational|still operating|operational today)\b/i],
   ["completeness", /\b(?:all|every|entire|complete|completely|full corpus|100\s*%)\b/i]
