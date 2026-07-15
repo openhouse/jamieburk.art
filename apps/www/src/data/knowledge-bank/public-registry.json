@@ -464,6 +464,309 @@
         "outlet endorsement",
         "Jamie's individual authorship or causation"
       ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-CHIN-2017",
+      "title": "Margaret Chin thanks CallNYC",
+      "organization": "New York City Council member account",
+      "author": "Margaret Chin (@CM_MargaretChin)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-07-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CM_MargaretChin/status/884863588317442049",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Margaret Chin publicly thanked @CallNYCapp for recognizing her constituent-services work on July 11, 2017.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-WILLS-2016",
+      "title": "Ruben Wills replies to CallNYC",
+      "organization": "New York City Council member account",
+      "author": "Ruben Wills (@CM_RubenWills)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CM_RubenWills/status/732717792097603584",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Ruben Wills publicly replied to @CallNYCapp and @NYCCouncil on May 17, 2016.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-MATTEO-2016",
+      "title": "Steven Matteo replies to CallNYC",
+      "organization": "New York City Council member account",
+      "author": "Steven Matteo (@StevenMatteo)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-03",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/StevenMatteo/status/727621921341358081",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Steven Matteo publicly replied to @CallNYCapp about pothole complaints on May 3, 2016.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-KOO-2016",
+      "title": "Peter Koo retransmits CallNYC recognition",
+      "organization": "New York City Council member account",
+      "author": "Peter Koo (@CMPeterKoo)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-04-27",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CMPeterKoo/status/725422741160079360",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Peter Koo publicly retransmitted a CallNYC recognition post on April 27, 2016.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-EUGENE-2016",
+      "title": "Mathieu Eugene quote-posts CallNYC recognition",
+      "organization": "New York City Council member account",
+      "author": "Mathieu Eugene (@CMMathieuEugene)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-10-04",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CMMathieuEugene/status/783305320508514304",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Mathieu Eugene publicly quote-posted a CallNYC recognition and described housing work on October 4, 2016.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
+      "title": "Helen Rosenthal links residents to CallNYC",
+      "organization": "New York City Council member account",
+      "author": "Helen Rosenthal (@HelenRosenthal)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-27",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/HelenRosenthal/status/780797474277511170",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Helen Rosenthal publicly linked to CallNYC.org and described Council offices as resident-help resources on September 27, 2016.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
+      "title": "Rosie Mendez quote-posts CallNYC recognition",
+      "organization": "New York City Council member account",
+      "author": "Rosie Mendez (@RosieMendez)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-19",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/RosieMendez/status/733410096915550208",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Rosie Mendez publicly quote-posted a CallNYC recognition on May 19, 2016.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016",
+      "title": "Ydanis Rodriguez quote-posts CallNYC recognition",
+      "organization": "New York City Council member account",
+      "author": "Ydanis Rodriguez (@ydanis)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-18",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/ydanis/status/733089563334299648",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Ydanis Rodriguez publicly quote-posted a CallNYC recognition on May 18, 2016.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-NAC-COUNCIL-ESPINAL-TOWN-HALL-2018",
+      "title": "Rafael Espinal describes NYC Artist Coalition nightlife town hall",
+      "organization": "New York City Council member account",
+      "author": "Rafael Espinal (@RLEspinal)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-03-27",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/RLEspinal/status/978604809493336065",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Rafael Espinal publicly described welcoming the Nightlife Mayor with @NYCArtC after a Bushwick venue tour and panel on March 27, 2018.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-NAC-COUNCIL-LEVIN-HEARING-2019",
+      "title": "Stephen Levin amplifies Talks Not Raids hearing",
+      "organization": "New York City Council member account",
+      "author": "Stephen Levin (@StephenLevin33)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-06",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/StephenLevin33/status/1093220593317629952",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Stephen Levin publicly quote-posted @NYCArtC's call for a Council hearing on MARCH accountability on February 6, 2019.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-NAC-COUNCIL-VANBRAMER-2020",
+      "title": "Jimmy Van Bramer includes NYC Artist Coalition in arts advocacy",
+      "organization": "New York City Council member account",
+      "author": "Jimmy Van Bramer (@JimmyVanBramer)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-10-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/JimmyVanBramer/status/1320792543773282304",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Jimmy Van Bramer publicly included @NYCArtC in a call to prioritize performing artists and culture on October 26, 2020.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-NAC-COUNCIL-LEVINE-2020",
+      "title": "Mark Levine replies to NYC Artist Coalition",
+      "organization": "New York City Council member account",
+      "author": "Mark Levine (@MarkLevineNYC)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-03-20",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/MarkLevineNYC/status/1241027587947876352",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Mark Levine publicly replied to @NYCArtC on March 20, 2020.",
+      "publicNote": "The post is treated as a dated public interaction by the historically attributable account, not as a current-office claim or endorsement of every project claim.",
+      "doesNotEstablish": [
+        "a complete interaction history",
+        "a current officeholder relationship",
+        "an endorsement of every project claim",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-ORIGIN-2014",
+      "title": "WOW List account names Sunday Dinner calendar origin",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "The earliest visible @wowlist post says Richard and Jamie were building a project based on calendars made at Sunday Dinner.",
+      "doesNotEstablish": [
+        "sole authorship",
+        "the complete product history"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-NYCDIY-LINEAGE-2016",
+      "title": "WOW List describes NYCdiy and Sunday Dinner lineage",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List publicly described NYCdiy as running on WOW List, a DIY community-calendar project from the Sunday Dinner potluck.",
+      "doesNotEstablish": [
+        "complete adoption across all communities",
+        "sole authorship"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-ORGANIZER-USE-2015",
+      "title": "Organizer publicly reports adding shows to WOW List",
+      "author": "Punks Criminals (@punkscriminals)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-05-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/punkscriminals/status/604360847012413440",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "A public organizer account reported adding shows to @wowlistnyc and linked to a WOW List page on May 29, 2015.",
+      "doesNotEstablish": [
+        "a proven handle migration",
+        "the complete organizer population"
+      ]
     }
   ],
   "claims": [
@@ -815,6 +1118,100 @@
       ],
       "boundaries": [
         "Describe Jamie's documented advocacy and invitation into public dialogue separately from event production roles, legislative authorship, bill sponsorship, and institutional implementation."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-COUNCIL-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The prototype reached the public officials whose constituent-service work it translated: at least eight sitting NYC Council member accounts visibly replied to, quote-posted, retransmitted, named, or linked CallNYC between April 2016 and July 2017.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-CHIN-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Margaret Chin interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-WILLS-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "Ruben Wills interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-MATTEO-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "Steven Matteo interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-KOO-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "Peter Koo interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-EUGENE-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "Mathieu Eugene interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "Helen Rosenthal interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "Rosie Mendez interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "Ydanis Rodriguez interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Count only visible, dated posts authored by accounts attributable to people serving on the Council at the interaction date: replies, quote posts, retransmissions, direct mentions, or direct CallNYC links.",
+        "Exclude likes, follows, private interactions, hidden replies, deleted posts, outbound CallNYC mentions, and people who became Council members later.",
+        "At least eight is a lower bound over an authenticated observation, not a complete platform export."
       ]
     },
     {
@@ -1466,6 +1863,117 @@
       "boundaries": [
         "HUD and USPS originated the government data. The archive establishes corpus assembly and organization, not data authorship, completed validation or analysis, a production pipeline, or agency adoption."
       ]
+    },
+    {
+      "id": "CLM-NAC-SOCIAL-COUNCIL-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The coalition identity became usable civic infrastructure: at least four sitting NYC Council member accounts visibly engaged with @NYCArtC from 2018 through 2020, including posts about the nightlife town hall, Talks Not Raids testimony, arts advocacy, and commercial-rent work.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-COUNCIL-ESPINAL-TOWN-HALL-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "Rafael Espinal engagement",
+            "nightlife town hall"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-COUNCIL-LEVIN-HEARING-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Stephen Levin engagement",
+            "Talks Not Raids hearing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-COUNCIL-LEVINE-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "Mark Levine engagement"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-COUNCIL-VANBRAMER-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "Jimmy Van Bramer engagement",
+            "arts advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is a lower bound over visible posts, not a complete engagement total.",
+        "Credit belongs to the coalition and account contributors; the result does not identify Jamie as author of the account's posts."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "WOW List grew from calendars made at Sunday Dinner. Contemporaneous posts name Jamie and Richard as builders, connect the platform to the potluck's community practice, and show organizers using it to publish events.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist",
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-ORIGIN-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "Sunday Dinner origin",
+            "Jamie and Richard as builders"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-NYCDIY-LINEAGE-2016",
+          "relationship": "corroborating",
+          "supports": [
+            "Sunday Dinner lineage",
+            "NYCdiy deployment"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-ORGANIZER-USE-2015",
+          "relationship": "corroborating",
+          "supports": [
+            "public organizer use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit Richard and other WOW List collaborators; the posts do not establish complete authorship or adoption totals.",
+        "Treat @wowlistnyc as a historical label until a handle-migration bridge is recovered."
+      ]
     }
   ],
   "pages": [
@@ -1477,7 +1985,15 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-COUNCIL-CHIN-2017",
+        "SRC-CALLNYC-COUNCIL-WILLS-2016",
+        "SRC-CALLNYC-COUNCIL-MATTEO-2016",
+        "SRC-CALLNYC-COUNCIL-KOO-2016",
+        "SRC-CALLNYC-COUNCIL-EUGENE-2016",
+        "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
+        "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
+        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"
       ],
       "occurrences": [
         {
@@ -1520,6 +2036,21 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        },
+        {
+          "id": "council-engagement",
+          "claimId": "CLM-CALLNYC-COUNCIL-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-COUNCIL-CHIN-2017",
+            "SRC-CALLNYC-COUNCIL-WILLS-2016",
+            "SRC-CALLNYC-COUNCIL-MATTEO-2016",
+            "SRC-CALLNYC-COUNCIL-KOO-2016",
+            "SRC-CALLNYC-COUNCIL-EUGENE-2016",
+            "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
+            "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
+            "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"
           ]
         },
         {
@@ -1572,7 +2103,11 @@
         "SRC-NAC-LET-NYC-DANCE-PRESS-INDEX",
         "SRC-NAC-SAVE-NYC-SPACES-PRESS-INDEX",
         "SRC-NAC-TALKS-NOT-RAIDS-PRESS-INDEX",
-        "SRC-NAC-FAIR-RENT-NYC-PRESS-INDEX-2021"
+        "SRC-NAC-FAIR-RENT-NYC-PRESS-INDEX-2021",
+        "SRC-NAC-COUNCIL-ESPINAL-TOWN-HALL-2018",
+        "SRC-NAC-COUNCIL-LEVIN-HEARING-2019",
+        "SRC-NAC-COUNCIL-LEVINE-2020",
+        "SRC-NAC-COUNCIL-VANBRAMER-2020"
       ],
       "occurrences": [
         {
@@ -1677,6 +2212,57 @@
             "SRC-NAC-SAVE-NYC-SPACES-PRESS-INDEX",
             "SRC-NAC-TALKS-NOT-RAIDS-PRESS-INDEX",
             "SRC-NAC-FAIR-RENT-NYC-PRESS-INDEX-2021"
+          ]
+        },
+        {
+          "id": "social-council-engagement",
+          "claimId": "CLM-NAC-SOCIAL-COUNCIL-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-COUNCIL-ESPINAL-TOWN-HALL-2018",
+            "SRC-NAC-COUNCIL-LEVIN-HEARING-2019",
+            "SRC-NAC-COUNCIL-LEVINE-2020",
+            "SRC-NAC-COUNCIL-VANBRAMER-2020"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-WOWLIST-ORIGIN-2014",
+        "SRC-WOWLIST-NYCDIY-LINEAGE-2016",
+        "SRC-WOWLIST-ORGANIZER-USE-2015"
+      ],
+      "occurrences": [
+        {
+          "id": "sunday-dinner-lineage",
+          "claimId": "CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-ORIGIN-2014",
+            "SRC-WOWLIST-NYCDIY-LINEAGE-2016",
+            "SRC-WOWLIST-ORGANIZER-USE-2015"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [
+        "SRC-WOWLIST-ORIGIN-2014",
+        "SRC-WOWLIST-NYCDIY-LINEAGE-2016"
+      ],
+      "occurrences": [
+        {
+          "id": "wowlist-lineage",
+          "claimId": "CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-ORIGIN-2014",
+            "SRC-WOWLIST-NYCDIY-LINEAGE-2016"
           ]
         }
       ]

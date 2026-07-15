@@ -34,6 +34,22 @@ requiring MARCH reporting and adding notice and response provisions. Gothamist
 reported that the City dismantled MARCH in December 2023 while other interagency
 inspections continued.
 
+## Shared public identity
+
+An authenticated July 2026 observation recovered visible direct engagement
+with `@NYCArtC` by at least four sitting Council member accounts from March 2018
+through October 2020. The posts connected the coalition identity to the
+nightlife town hall, MARCH accountability testimony, arts advocacy, and
+commercial-rent work. Olympia Kazi and partner organizations also used the
+identity for relief advocacy, public events, and professional resources.
+
+These are lower-bound findings from visible public posts, not a complete export.
+The account's output was collective. Jamie recalls establishing the project
+accounts and identity system, but account-creation or administrator evidence
+has not yet independently corroborated that role. See the
+[project social-account inventory](social-account-inventory.md) for the count
+rule, sources, and authorship boundary.
+
 A public-safe aggregate review of surviving project records supports describing
 Jamie as a founding-era organizer who built and stewarded coalition and campaign
 web infrastructure, campaign memory, coordination materials, source maps,

@@ -272,7 +272,8 @@ const workItemsInput = [
       { label: "2017 interview", url: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter" },
       { label: "Cabaret repeal record", url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6FDA3305-06B3-47B3-9DF6-21B605C5A8EE&ID=3086319&Options=ID%7CText%7C&Search=cabaret" },
       { label: "Office of Nightlife", url: "https://www.nyc.gov/site/mome/news/091917-nightlife-office.page" },
-      { label: "MARCH transparency law", url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156" }
+      { label: "MARCH transparency law", url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156" },
+      { label: "NYC Artist Coalition on X", url: "https://x.com/NYCArtC" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
@@ -370,7 +371,8 @@ const workItemsInput = [
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
       },
-      { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" }
+      { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" },
+      { label: "CallNYC on X", url: "https://x.com/CallNYCapp" }
     ],
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
@@ -434,6 +436,7 @@ const workItemsInput = [
       "Community Platform Design",
       "Event Workflows"
     ],
+    links: [{ label: "WOW List on X", url: "https://x.com/wowlist" }],
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
@@ -551,6 +554,7 @@ const workItemsInput = [
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [{ label: "KC Town Hall on X", url: "https://x.com/KCTownHall" }],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:

@@ -4,6 +4,7 @@ import { googleDriveProductionBatch20260714 } from "./batches/google-drive-produ
 import { nacCampaignPressBatch20260713 } from "./batches/nac-campaign-press-2026-07-13.ts";
 import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-07-13.ts";
 import { teamsArchiveProductionBatch20260714 } from "./batches/teams-archive-production-2026-07-14.ts";
+import { socialAccountProductionBatch20260714 } from "./batches/social-account-production-2026-07-14.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -174,14 +175,26 @@ const knowledgeBankInput = {
       capturedFrom: "Jamie Burkart portfolio working session",
       publicSafeSummary: "Quantify engagement with the CallNYC social account by verified or historically attributable New York City Council member accounts.",
       projects: ["callnyc"],
-      status: "decomposed",
-      disposition: "research-queued",
-      sourceIds: [],
+      status: "integrated",
+      disposition: "source-created",
+      sourceIds: [
+        "SRC-SOCIAL-CALLNYC-AUTH-OBSERVATION-2026",
+        "SRC-CALLNYC-COUNCIL-CHIN-2017",
+        "SRC-CALLNYC-COUNCIL-WILLS-2016",
+        "SRC-CALLNYC-COUNCIL-MATTEO-2016",
+        "SRC-CALLNYC-COUNCIL-KOO-2016",
+        "SRC-CALLNYC-COUNCIL-EUGENE-2016",
+        "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
+        "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
+        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"
+      ],
       claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT"],
       researchTaskIds: ["TASK-CALLNYC-COUNCIL-ENGAGEMENT"],
-      notes: ["Preserve account-attribution dates, engagement definitions, platform access limits, and deleted-post uncertainty."],
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Jamie Burkart", "Codex public-source review"]
+      notes: [
+        "The resulting count is a lower bound over visible direct interactions; it excludes likes, follows, private interactions, deleted or hidden posts, and later officeholders who were not Council members at the interaction date."
+      ],
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media archival review"]
     },
     {
       id: "INT-PHOTO-RESEARCH-FEEDBACK-LOOP",
@@ -203,7 +216,8 @@ const knowledgeBankInput = {
     ...nacPublicSourceBatch20260713.intake,
     ...nacCampaignPressBatch20260713.intake,
     ...teamsArchiveProductionBatch20260714.intake,
-    ...googleDriveProductionBatch20260714.intake
+    ...googleDriveProductionBatch20260714.intake,
+    ...socialAccountProductionBatch20260714.intake
   ],
   sources: [
     {
@@ -442,7 +456,8 @@ const knowledgeBankInput = {
     ...nacPublicSourceBatch20260713.sources,
     ...nacCampaignPressBatch20260713.sources,
     ...teamsArchiveProductionBatch20260714.sources,
-    ...googleDriveProductionBatch20260714.sources
+    ...googleDriveProductionBatch20260714.sources,
+    ...socialAccountProductionBatch20260714.sources
   ],
   sourceAssertions: [
     {
@@ -629,7 +644,8 @@ const knowledgeBankInput = {
     ...nacPublicSourceBatch20260713.sourceAssertions,
     ...nacCampaignPressBatch20260713.sourceAssertions,
     ...teamsArchiveProductionBatch20260714.sourceAssertions,
-    ...googleDriveProductionBatch20260714.sourceAssertions
+    ...googleDriveProductionBatch20260714.sourceAssertions,
+    ...socialAccountProductionBatch20260714.sourceAssertions
   ],
   claims: [
     {
@@ -959,24 +975,47 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-COUNCIL-ENGAGEMENT",
       project: "callnyc",
-      internalClaim: "Engagement with the CallNYC social account by New York City Council member accounts requires a reproducible account-attribution and interaction analysis before any statistic is published.",
-      status: "inference",
-      maturity: "research-needed",
-      projectionEligibility: "hold",
+      internalClaim: "An authenticated profile and direct-mention observation recovered visible engagement with @CallNYCapp by at least eight historically attributable sitting New York City Council member accounts between April 2016 and July 2017.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
       collectiveWork: false,
-      projections: [{ key: "archive-note", text: "Council-member engagement with CallNYC remains under documented analysis.", status: "hold", citationRequired: false, surfaces: [] }],
-      evidence: [],
-      boundaries: ["Define likes, reposts, replies, mentions, follows, quote posts, account identity, and observation window; preserve platform-access limitations."],
-      antiClaims: ["A partial visible timeline is a complete engagement dataset", "Current account identity proves historical officeholder identity", "Unobserved engagement did not occur"],
-      researchInquiryIds: [],
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Jamie Burkart", "Codex public-source review"]
+      projections: [
+        {
+          key: "case-study",
+          text: "The prototype reached the public officials whose constituent-service work it translated: at least eight sitting NYC Council member accounts visibly replied to, quote-posted, retransmitted, named, or linked CallNYC between April 2016 and July 2017.",
+          status: "active",
+          citationRequired: true,
+          surfaces: ["/work/callnyc"]
+        }
+      ],
+      evidence: [
+        { sourceId: "SRC-CALLNYC-COUNCIL-CHIN-2017", relationship: "direct-support", supports: ["Margaret Chin interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-COUNCIL-WILLS-2016", relationship: "direct-support", supports: ["Ruben Wills interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-COUNCIL-MATTEO-2016", relationship: "direct-support", supports: ["Steven Matteo interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-COUNCIL-KOO-2016", relationship: "direct-support", supports: ["Peter Koo interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-COUNCIL-EUGENE-2016", relationship: "direct-support", supports: ["Mathieu Eugene interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016", relationship: "direct-support", supports: ["Helen Rosenthal interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-COUNCIL-MENDEZ-2016", relationship: "direct-support", supports: ["Rosie Mendez interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016", relationship: "direct-support", supports: ["Ydanis Rodriguez interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-SOCIAL-CALLNYC-AUTH-OBSERVATION-2026", relationship: "supports-boundary", supports: ["authenticated observation method", "timeline and search missingness", "lower-bound definition"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: [
+        "Count only visible, dated posts authored by accounts attributable to people serving on the Council at the interaction date: replies, quote posts, retransmissions, direct mentions, or direct CallNYC links.",
+        "Exclude likes, follows, private interactions, hidden replies, deleted posts, outbound CallNYC mentions, and people who became Council members later.",
+        "At least eight is a lower bound over an authenticated observation, not a complete platform export."
+      ],
+      antiClaims: ["Eight is the complete engagement total", "Every current account identity proves historical officeholder identity", "Unobserved engagement did not occur", "Council engagement made CallNYC an official City service"],
+      researchInquiryIds: ["INQ-SOCIAL-PROJECT-ACCOUNT-PRODUCTION-2026"],
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media archival review"]
     },
     ...kcTownHallCouncilRecordBatch20260713.claims,
     ...nacPublicSourceBatch20260713.claims,
     ...nacCampaignPressBatch20260713.claims,
     ...teamsArchiveProductionBatch20260714.claims,
-    ...googleDriveProductionBatch20260714.claims
+    ...googleDriveProductionBatch20260714.claims,
+    ...socialAccountProductionBatch20260714.claims
   ],
   researchTasks: [
     {
@@ -1062,13 +1101,23 @@ const knowledgeBankInput = {
       project: "callnyc",
       question: "Which historically attributable New York City Council member accounts engaged with CallNYC, through which interaction types, and during what period?",
       priority: "medium",
-      status: "queued",
+      status: "completed",
       methodsPlanned: ["Acquire a complete lawful export or authenticated observation set", "Define interaction types and observation window", "Build a dated historical account-attribution table", "Reconcile deleted posts, handle changes, and platform visibility limits"],
       successCriteria: ["Publish a reproducible denominator and interaction definition", "Cite each counted interaction", "Report missingness and confidence", "Avoid treating a blocked or partial timeline as complete"],
-      sourceIds: [],
+      sourceIds: [
+        "SRC-SOCIAL-CALLNYC-AUTH-OBSERVATION-2026",
+        "SRC-CALLNYC-COUNCIL-CHIN-2017",
+        "SRC-CALLNYC-COUNCIL-WILLS-2016",
+        "SRC-CALLNYC-COUNCIL-MATTEO-2016",
+        "SRC-CALLNYC-COUNCIL-KOO-2016",
+        "SRC-CALLNYC-COUNCIL-EUGENE-2016",
+        "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
+        "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
+        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"
+      ],
       claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT"],
-      publicSummary: "Measure Council-member account engagement with CallNYC using reproducible definitions and dated account attribution.",
-      reviewedAt: "2026-07-12"
+      publicSummary: "An authenticated observation recovered visible direct engagement by at least eight sitting Council member accounts from April 2016 through July 2017, with every counted interaction cited and missingness preserved.",
+      reviewedAt: "2026-07-14"
     },
     {
       id: "TASK-PHOTO-EDITOR-DISCOVERY-PROTOCOL",
@@ -1085,7 +1134,8 @@ const knowledgeBankInput = {
     },
     ...nacCampaignPressBatch20260713.researchTasks,
     ...teamsArchiveProductionBatch20260714.researchTasks,
-    ...googleDriveProductionBatch20260714.researchTasks
+    ...googleDriveProductionBatch20260714.researchTasks,
+    ...socialAccountProductionBatch20260714.researchTasks
   ],
   researchInquiries: [
     {
@@ -1104,7 +1154,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilRecordBatch20260713.researchInquiries,
     ...nacPublicSourceBatch20260713.researchInquiries,
     ...nacCampaignPressBatch20260713.researchInquiries,
-    ...googleDriveProductionBatch20260714.researchInquiries
+    ...googleDriveProductionBatch20260714.researchInquiries,
+    ...socialAccountProductionBatch20260714.researchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -1120,7 +1171,15 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-COUNCIL-CHIN-2017",
+        "SRC-CALLNYC-COUNCIL-WILLS-2016",
+        "SRC-CALLNYC-COUNCIL-MATTEO-2016",
+        "SRC-CALLNYC-COUNCIL-KOO-2016",
+        "SRC-CALLNYC-COUNCIL-EUGENE-2016",
+        "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016",
+        "SRC-CALLNYC-COUNCIL-MENDEZ-2016",
+        "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"
       ],
       occurrences: [
         { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -1128,11 +1187,13 @@ const knowledgeBankInput = {
         { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
         { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
         { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "council-engagement", claimId: "CLM-CALLNYC-COUNCIL-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-CALLNYC-COUNCIL-CHIN-2017", "SRC-CALLNYC-COUNCIL-WILLS-2016", "SRC-CALLNYC-COUNCIL-MATTEO-2016", "SRC-CALLNYC-COUNCIL-KOO-2016", "SRC-CALLNYC-COUNCIL-EUGENE-2016", "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016", "SRC-CALLNYC-COUNCIL-MENDEZ-2016", "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"] },
         { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
       ]
     },
     ...kcTownHallCouncilRecordBatch20260713.pages,
-    ...nacPublicSourceBatch20260713.pages
+    ...nacPublicSourceBatch20260713.pages,
+    ...socialAccountProductionBatch20260714.pages
   ]
 } satisfies KnowledgeBank;
 
