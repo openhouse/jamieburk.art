@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "account": "@wowlist",
-  "capturedAt": "2026-07-15",
+  "capturedAt": "2026-07-15T00:56:07-04:00",
   "capturedThrough": "Authenticated X replies-inclusive profile timeline",
   "authenticatedSessionIdentity": "@urbanhermit",
-  "rawCaptureSha256": "f44675529711a5ca945cd0c821341ac1329a69e2c72266e1d23532c4f62847e1",
+  "rawCaptureSha256": "5cf56b26baa8a33c383b2ad6dcf00bc10600d2a315f25733f65b1ab9d0e71af9",
   "rawCaptureArtifact": "source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json",
   "derivationManifest": "wowlist-x-full-population-2026-07-15.manifest.json",
   "derivationScript": "scripts/derive-wowlist-x-corpus.mjs",

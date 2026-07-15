@@ -339,19 +339,16 @@ export function buildCorpus(rawCaptureText) {
   return corpus;
 }
 
-export function validateCommittedCorpus(rawCaptureText, corpus) {
-  assert.equal(sha256(rawCaptureText), corpus.rawCaptureSha256);
-  assert.deepEqual(buildCorpus(rawCaptureText), corpus);
-  return deriveWowListCorpusMetrics(corpus);
-}
-
-function writeArtifacts(rawPath, corpusPath, manifestPath) {
-  const rawCaptureText = readFileSync(rawPath, "utf8");
-  const corpus = buildCorpus(rawCaptureText);
-  const corpusText = `${JSON.stringify(corpus, null, 2)}\n`;
-  const manifest = {
+export function buildManifest(
+  rawPath,
+  rawCaptureText,
+  corpusPath,
+  corpusText,
+  corpus
+) {
+  return {
     schemaVersion: 1,
-    generatedAt: "2026-07-15",
+    generatedAt: "2026-07-15T00:58:32-04:00",
     generator: "scripts/derive-wowlist-x-corpus.mjs --write",
     sourceCapture: rawPath,
     sourceCaptureSha256: sha256(rawCaptureText),
@@ -361,6 +358,36 @@ function writeArtifacts(rawPath, corpusPath, manifestPath) {
     corpusItems: corpus.items.length,
     status: "complete-profile-reported-population"
   };
+}
+
+export function validateCommittedCorpus(
+  rawCaptureText,
+  corpus,
+  manifest,
+  rawPath = defaultRawPath,
+  corpusPath = defaultCorpusPath
+) {
+  assert.equal(sha256(rawCaptureText), corpus.rawCaptureSha256);
+  assert.deepEqual(buildCorpus(rawCaptureText), corpus);
+  const corpusText = `${JSON.stringify(corpus, null, 2)}\n`;
+  assert.deepEqual(
+    manifest,
+    buildManifest(rawPath, rawCaptureText, corpusPath, corpusText, corpus)
+  );
+  return deriveWowListCorpusMetrics(corpus);
+}
+
+function writeArtifacts(rawPath, corpusPath, manifestPath) {
+  const rawCaptureText = readFileSync(rawPath, "utf8");
+  const corpus = buildCorpus(rawCaptureText);
+  const corpusText = `${JSON.stringify(corpus, null, 2)}\n`;
+  const manifest = buildManifest(
+    rawPath,
+    rawCaptureText,
+    corpusPath,
+    corpusText,
+    corpus
+  );
 
   writeFileSync(corpusPath, corpusText);
   writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
@@ -378,7 +405,10 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     ? writeArtifacts(rawPath, corpusPath, manifestPath)
     : validateCommittedCorpus(
         readFileSync(rawPath, "utf8"),
-        JSON.parse(readFileSync(corpusPath, "utf8"))
+        JSON.parse(readFileSync(corpusPath, "utf8")),
+        JSON.parse(readFileSync(manifestPath, "utf8")),
+        rawPath,
+        corpusPath
       );
   process.stdout.write(`${JSON.stringify(metrics, null, 2)}\n`);
 }

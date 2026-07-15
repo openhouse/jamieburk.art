@@ -317,12 +317,25 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     "docs/knowledge-bank/corpora/source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json",
     "utf8"
   );
-  const metrics = validateWowListCorpus(rawCaptureText, corpus);
+  const manifest = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.manifest.json",
+      "utf8"
+    )
+  );
+  const metrics = validateWowListCorpus(rawCaptureText, corpus, manifest);
+  assert.throws(() =>
+    validateWowListCorpus(rawCaptureText, corpus, {
+      ...manifest,
+      corpusItems: 37
+    })
+  );
   const canonicalUrls = new Set(corpus.items.map((item) => item.canonicalUrl));
   const authored = corpus.items.filter((item) => item.type === "authored");
   const reposted = corpus.items.filter((item) => item.type === "reposted");
 
   assert.equal(corpus.population.profileReported, 38);
+  assert.equal(corpus.capturedAt, "2026-07-15T00:56:07-04:00");
   assert.equal(corpus.population.renderedDistinct, 38);
   assert.equal(corpus.population.unresolvedCountDifference, 0);
   assert.equal(corpus.items.length, 38);
