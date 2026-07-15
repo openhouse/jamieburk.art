@@ -12,14 +12,14 @@
     "artifactsReviewed": { "type": "array", "minItems": 6, "items": { "type": "string" } },
     "criteria": {
       "type": "array",
-      "minItems": 6,
-      "maxItems": 6,
+      "minItems": 7,
+      "maxItems": 7,
       "items": {
         "type": "object",
         "additionalProperties": false,
         "required": ["id", "score", "confidence", "evidence", "mostImportantFailure", "repair", "repairLayer", "antiGamingCheck"],
         "properties": {
-          "id": { "enum": ["intake-preservation", "source-decomposition", "research-posture", "promotion-governance", "editorial-composability", "media-feedback"] },
+          "id": { "enum": ["intake-preservation", "source-decomposition", "research-posture", "promotion-governance", "editorial-composability", "media-feedback", "social-archive-production"] },
           "score": { "type": "integer", "minimum": 1, "maximum": 5 },
           "confidence": { "enum": ["low", "medium", "high"] },
           "evidence": { "type": "array", "minItems": 3, "items": { "type": "string" } },

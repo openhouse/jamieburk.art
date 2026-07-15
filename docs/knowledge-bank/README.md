@@ -72,6 +72,17 @@ The [July 13 ten-source ingestion](research/2026-07-13-ten-source-ingestion.md)
 shows how new sources become observations, bounded claims, research questions,
 and selective exact-surface projections.
 
+The [July 15 project social-media archival production inventory](research/2026-07-15-project-social-media-archive-production.md)
+records the recovered account registry, authenticated collection methods,
+named public engagement ledgers, lower-bound counts, collective-authorship
+limits, held role claims, and selective portfolio projection. Its
+[redacted population fixture](fixtures/social-account-populations.json) lets CI
+recompute the CallNYC and NYC Artist Coalition Council-member floors and the
+CallNYC, WOW List, KC Town Hall, and KC Spaces Fund population findings without
+storing post text, private account data, or session material. The WOW List pass
+reconciles all 38 displayed records, 35 posted-link occurrences, and a bounded
+10-account stakeholder sample while retaining only public-safe counts and edges.
+
 Campaign press sections are preserved as typed source collections rather than
 treated as automatic claim support. The generated
 [NYC Artist Coalition campaign press corpus](campaign-press-corpus.md) records

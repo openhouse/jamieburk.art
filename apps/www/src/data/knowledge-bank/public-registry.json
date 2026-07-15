@@ -1,6 +1,250 @@
 {
   "sources": [
     {
+      "id": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+      "title": "Portfolio social-media archival production inventory",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-K/docs/knowledge-bank/research/2026-07-15-project-social-media-archive-production.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Portfolio social-media archival production inventory, July 15, 2026.",
+      "publicNote": "A bounded inventory of recovered public profiles, posts, repost lists, interaction edges, source articles, and explicit stopping conditions.",
+      "doesNotEstablish": [
+        "a complete lifetime archive",
+        "individual authorship of shared-account posts",
+        "unobserved likes",
+        "endorsement from every interaction",
+        "that an unrecovered account never existed"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+      "title": "Minutes of the New York City Council stated meeting, September 28, 2016",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-28",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, minutes of the stated meeting, September 28, 2016.",
+      "publicNote": "The official roster corroborates that the 19 named people in the CallNYC ledger were serving Council members in 2016.",
+      "doesNotEstablish": [
+        "control of social accounts",
+        "authorship of every post",
+        "endorsement of CallNYC",
+        "a complete engagement census"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-X-PROFILE",
+      "title": "NYC Artist Coalition public X profile",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://x.com/NYCArtC",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition (@NYCArtC), public X profile, accessed July 15, 2026.",
+      "publicNote": "The profile explicitly names Save NYC Spaces, Let NYC Dance, Talks Not Raids, and Fair Rent NYC.",
+      "doesNotEstablish": [
+        "individual post authorship",
+        "Jamie's sole control",
+        "Olympia Kazi's authorship",
+        "sole causation of campaign outcomes"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-X-PROFILE",
+      "title": "KC Town Hall public X profile",
+      "organization": "KC Town Hall",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://x.com/KCTownHall",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall (@KCTownHall), public X profile, accessed July 15, 2026.",
+      "publicNote": "The account documents redevelopment communication and neighborhood-stewardship activity.",
+      "doesNotEstablish": [
+        "individual post authorship",
+        "receipt of Council-appropriated funds",
+        "project completion",
+        "sole individual credit"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
+      "title": "Authenticated WOW List X full-population archival review",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-K/docs/knowledge-bank/research/2026-07-15-project-social-media-archive-production.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated full-population review of @wowlist, July 15, 2026.",
+      "publicNote": "All 38 profile-counted records were recovered; the minimized fixture reproduces record type and posted-link counts while significant sources and bounded external-use signals remain separately citable.",
+      "doesNotEstablish": [
+        "deleted or unindexed activity outside the displayed population",
+        "individual authorship of every account post",
+        "current product availability",
+        "complete adoption",
+        "attendance or endorsement"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15",
+      "title": "WOW List public-safe production archive summary",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "reviewStatus": "close-read",
+      "contentReviewedAt": "2026-07-15",
+      "contentReviewedBy": "Codex public-safety review",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-K/docs/knowledge-bank/research/2026-07-15-project-social-media-archive-production.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public-safe production archive summary, July 15, 2026.",
+      "publicNote": "The summary publishes only rounded historical aggregates and the conservative active-scene threshold; underlying production records remain protected.",
+      "doesNotEstablish": [
+        "current product availability",
+        "official city chapters",
+        "current activity",
+        "unique active people",
+        "Jamie's sole causation of adoption",
+        "permission to publish raw records"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+      "title": "WOW List first recovered authored post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List, first recovered authored post, February 12, 2014.",
+      "publicNote": "The post credits Richard and Jamie and connects the project to calendars made at Sunday Dinner.",
+      "doesNotEstablish": [
+        "sole authorship",
+        "complete collaborator roster",
+        "platform scale",
+        "current availability"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "title": "WOW List public product-support thread",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public product-support thread, September 1, 2016.",
+      "publicNote": "The thread describes the project as growing from Sunday Dinner and explains historical user workflows.",
+      "doesNotEstablish": [
+        "current service availability",
+        "complete feature history",
+        "individual authorship of every platform component"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+      "title": "SHELBY'S WOWLIST TUTORIAL - for my new fave events website",
+      "organization": "Shelby Turner / YouTube",
+      "author": "Shelby Turner",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-08-14",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://www.youtube.com/watch?v=nQg47LtixPI",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Shelby Turner, 'SHELBY'S WOWLIST TUTORIAL - for my new fave events website,' YouTube, 2015.",
+      "publicNote": "Public video metadata and the account post identify an independently published WOW List tutorial.",
+      "doesNotEstablish": [
+        "complete tutorial contents without transcript review",
+        "platform-wide adoption",
+        "formal partnership",
+        "Jamie's authorship",
+        "current product availability"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-SBDIY-ADOPTION",
+      "title": "Santa Barbara DIY resource page",
+      "organization": "Santa Barbara DIY",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://www.sbdiy.org/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Santa Barbara DIY resource page, accessed July 15, 2026.",
+      "publicNote": "The page directs visitors to add events to its WOW List calendar and links the corresponding WOW List community.",
+      "doesNotEstablish": [
+        "current WOW List availability",
+        "usage volume",
+        "formal partnership",
+        "Jamie's individual role",
+        "city-ecosystem scale"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
+      "title": "Taking back New York City's nightlife",
+      "organization": "Document Journal",
+      "author": "Daisy Prince",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-02-27",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://www.documentjournal.com/2018/02/taking-back-new-york-citys-nightlife/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Daisy Prince, 'Taking back New York City's nightlife,' Document Journal, February 27, 2018.",
+      "publicNote": "The article identifies Jamie and Olympia Kazi with NYC Artist Coalition and misspells Jamie's surname as Burkhart.",
+      "doesNotEstablish": [
+        "individual authorship of @NYCArtC posts",
+        "Jamie's sole founding role",
+        "Olympia Kazi's sole control of the account",
+        "sole causation of policy outcomes"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -381,6 +625,312 @@
   ],
   "claims": [
     {
+      "id": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public records show CallNYC was reposted or directly discussed by at least 19 serving Council member accounts, including six member-authored posts or replies. This is a recovered lower bound, not an endorsement or complete lifetime count.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "full-population disposition method",
+            "71 recognition posts",
+            "26 Council handles",
+            "61 issue pages",
+            "19 distinct member reposters",
+            "six member-authored interactions"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+          "relationship": "corroborating",
+          "supports": [
+            "2016 service status of the 19 named Council members"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Present 19 as a recovered lower bound, not a complete lifetime count.",
+        "Exclude likes and original-author metrics on external reposts; do not treat interaction as endorsement.",
+        "Keep CallNYC archived, unofficial, and independent."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The shared @NYCArtC identity carried Save NYC Spaces, Let NYC Dance, Talks Not Raids, and Fair Rent NYC across multiple policy cycles. At least six serving Council member accounts authored posts mentioning it; individual coalition-post authorship remains unattributed.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "shared campaign identity",
+            "bounded search method",
+            "six-member lower bound",
+            "collective authorship boundary"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-X-PROFILE",
+          "relationship": "direct-support",
+          "supports": [
+            "four campaigns named in the profile",
+            "account continuity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
+          "relationship": "context",
+          "supports": [
+            "Jamie and Olympia Kazi identified separately with the coalition",
+            "collective movement context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Do not assign individual authorship of coalition-account posts without post-level evidence.",
+        "Present six as a lower bound from bounded searches.",
+        "Keep campaign and policy outcomes collective."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-HISTORICAL-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Archived production records support 1,800+ users, 16,000+ posts/events, and 35+ historically active city scenes, using at least 50 geocoded posts/events as the conservative scene threshold. These are historical aggregate records, not official chapters, current activity, or a complete adoption census.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "homepage",
+          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ historically active city scenes under a conservative threshold.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ historically active city scenes under a conservative threshold.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ]
+        },
+        {
+          "key": "resume-pdf",
+          "text": "Jamie co-built WOWList with Richard Caceres; historical production records show use across 35+ active city scenes, each with at least 50 geocoded posts/events.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ historically active city scenes under a conservative threshold.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Jamie co-built WOWList, historically used across 35+ active city scenes under a conservative threshold.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15",
+          "relationship": "corroborating",
+          "supports": [
+            "rounded public aggregates",
+            "public threshold definition",
+            "public-use boundaries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat the figures as historical aggregate database records.",
+        "Define 35+ historically active city scenes by the documented 50-plus geocoded-post threshold.",
+        "Keep raw user, contact, geolocation, and community records protected.",
+        "Credit the platform and adoption as collective work."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The shared project's 38 records displayed by @wowlist at review time preserve its origin and show the account providing user support, onboarding, event distribution, and rapid civic coordination. A bounded incoming review found 10 mission-relevant outside accounts; nine independently shared a WOW List URL. That is evidence of public use and distribution, not total adoption, attendance, or impact.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "authenticated collection method",
+            "complete displayed-population reconciliation",
+            "bounded public stakeholder review",
+            "explicit stopping conditions and limitations"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "38-of-38 population recovery",
+            "record-type and posted-link inventory",
+            "bounded stakeholder sample",
+            "dated interaction snapshot"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "Richard and Jamie attribution",
+            "Sunday Dinner calendar provenance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "DIY community-calendar framing",
+            "historical organizer workflows"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "independent organizer-facing tutorial"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SBDIY-ADOPTION",
+          "relationship": "direct-support",
+          "supports": [
+            "external local-calendar use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Keep credit shared with Richard, Sunday Dinner participants, organizers, and other collaborators.",
+        "Describe historical workflows rather than current service availability.",
+        "Treat 10 third-party accounts as a bounded reception sample, not a complete adoption census.",
+        "Treat 12 records with displayed interactions and the 2 reply, 20 repost, and 21 like snapshot as mutable interface observations, not unique people, reach, conversion, attendance, endorsement, or impact."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "KC Town Hall used its shared public account as a request-to-action-and-reporting surface: 100 of 183 surviving records concern tire reports, pickups, or results from 2019 through 2022. Those records are not an audited service total and do not assign every post or pickup to Jamie.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "183-record profile review",
+            "100 tire-workflow records",
+            "request-to-action reporting pattern"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-X-PROFILE",
+          "relationship": "context",
+          "supports": [
+            "dedicated account identity",
+            "profile population"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat the account as a shared project identity rather than proof that Jamie authored every record.",
+        "Keep project-reported totals separate from independent audit.",
+        "Do not expose resident addresses, phone numbers, direct messages, or private service records."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -486,7 +1036,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.",
+          "text": "After the fuller CouncilStat dataset was released, Jamie independently developed CallNYC.org as an archived, unofficial public-facing interpretation of those constituent-services records.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -495,7 +1045,7 @@
         },
         {
           "key": "work-card",
-          "text": "Jamie independently built CallNYC, translating CouncilStat constituent-services records into issue pages and next-step guidance residents could navigate.",
+          "text": "Jamie independently built CallNYC as an archived, unofficial civic-tech prototype, translating CouncilStat constituent-services records into issue pages and next-step guidance residents could navigate.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -882,7 +1432,9 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
       ],
       "occurrences": [
         {
@@ -935,6 +1487,15 @@
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
           ]
+        },
+        {
+          "id": "council-social-engagement",
+          "claimId": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+            "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
+          ]
         }
       ]
     },
@@ -965,7 +1526,10 @@
       "sourceOrder": [
         "SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017",
         "SRC-NYCA-SAVE-NYC-SPACES",
-        "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018"
+        "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018",
+        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-NYCAC-X-PROFILE",
+        "SRC-NYCAC-DOCUMENT-JOURNAL-2018"
       ],
       "occurrences": [
         {
@@ -977,6 +1541,52 @@
           "id": "commercial-rent-testimony",
           "claimId": "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018",
           "projection": "case-study"
+        },
+        {
+          "id": "shared-social-identity",
+          "claimId": "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+            "SRC-NYCAC-X-PROFILE",
+            "SRC-NYCAC-DOCUMENT-JOURNAL-2018"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15",
+        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
+        "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+        "SRC-WOWLIST-SBDIY-ADOPTION"
+      ],
+      "occurrences": [
+        {
+          "id": "historical-scale",
+          "claimId": "CLM-WOWLIST-HISTORICAL-SCALE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15"
+          ]
+        },
+        {
+          "id": "social-provenance-support",
+          "claimId": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+            "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
+            "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+            "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+            "SRC-WOWLIST-SBDIY-ADOPTION"
+          ]
         }
       ]
     },
@@ -989,7 +1599,9 @@
         "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
         "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317",
-        "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"
+        "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026",
+        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-KCTH-X-PROFILE"
       ],
       "occurrences": [
         {
@@ -1010,6 +1622,15 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"
+          ]
+        },
+        {
+          "id": "social-service-reporting",
+          "claimId": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+            "SRC-KCTH-X-PROFILE"
           ]
         }
       ]

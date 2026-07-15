@@ -325,13 +325,13 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "Jamie co-built WOWList, adopted across roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform historically used by DIY arts and music organizers across 35+ active city scenes, each with at least 50 geocoded posts/events.",
+    shortWording: "Jamie co-built WOWList, historically used across 35+ active city scenes",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis: "Approved resume language and a protected production-database analysis with public-safe aggregate findings.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Use rounded historical aggregates; define 35+ historically active city scenes by the documented threshold of at least 50 geocoded posts/events, and do not describe city activity as official chapters or current service.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -345,9 +345,11 @@ export const proofClaims: ProofClaim[] = [
       "Unapproved community artifacts"
     ],
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
+    canonicalClaimIds: ["CLM-WOWLIST-HISTORICAL-SCALE"],
+    requiredCanonicalClaimIds: ["CLM-WOWLIST-HISTORICAL-SCALE"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",

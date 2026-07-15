@@ -27,7 +27,7 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
-- None
+- `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
 
@@ -39,6 +39,7 @@ composed public surface, not a claim database.
 
 - Keep collaborator credit and causal boundaries
 - Route detail to case studies
+- Keep WOW List scale historical and threshold-bound
 ## `/resume`
 
 **Surface:** `resume`
@@ -62,7 +63,7 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
-- None
+- `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
 
@@ -101,6 +102,7 @@ composed public surface, not a claim database.
 ### Required Canonical Claims
 
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
+- `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
 
@@ -115,6 +117,7 @@ composed public surface, not a claim database.
 - Keep no disbursement and reappropriation attached to the KC amount
 - Keep Sunday Dinner's 300-plus gatherings distinct from 196 Artists Residency's 20-plus resident artists
 - Keep the phone-bearing artifact available for applications
+- Keep WOW List scale historical and threshold-bound
 ## `/work/technical-operations`
 
 **Surface:** `technical-operations`
@@ -141,6 +144,7 @@ composed public surface, not a claim database.
 ### Required Canonical Claims
 
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
+- `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
 
@@ -152,6 +156,7 @@ composed public surface, not a claim database.
 
 - Name what became usable
 - Keep collective projects collective
+- Keep WOW List scale historical and threshold-bound
 ## `/work`
 
 **Surface:** `work-card`
@@ -175,6 +180,7 @@ composed public surface, not a claim database.
 ### Required Canonical Claims
 
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
+- `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
 
@@ -186,6 +192,7 @@ composed public surface, not a claim database.
 
 - Do not let compression erase collaborator credit
 - Use the case study for full boundaries
+- Keep WOW List scale historical and threshold-bound
 ## `/work/harry-j-epstein`
 
 **Surface:** `case-study`
@@ -275,17 +282,21 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
-- None
+- `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
 
 - Private user records
+- Official city chapters
 - Unsupported current-status claims
+- Complete adoption claims
 
 ### Guardrails
 
 - Protect user data
-- Bound historical scale claims
+- Define 35+ historically active city scenes by at least 50 geocoded posts/events
+- Keep social counters out of impact claims
+- Keep collective credit visible
 ## `/work/196-sunday-dinner`
 
 **Surface:** `case-study`

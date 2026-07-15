@@ -97,6 +97,7 @@ task, and run:
 
 ```bash
 npm run check:knowledge-lifecycle
+npm run check:social-archive
 npm run report:knowledge-lifecycle
 npm run query:knowledge-lifecycle -- --brief BRIEF-NIGHTLIFE-FUTURE
 npm run query:knowledge-lifecycle -- --entity ENT-JAMIE-BURKART --from-year 2006 --to-year 2009 --evidence-role direct-support
@@ -161,15 +162,26 @@ safety education, and Talks Not Raids advocacy and MARCH transparency work.
 
 It intentionally kept broader propositions in research: the raft's exact Gulf
 endpoint; Jamie's instrumental causal role in Cabaret Law repeal, creation of
-the Office of Nightlife, and the MARCH phaseout; the scale and influence of
-nightlife town halls; and comprehensive Council-member engagement metrics for
-CallNYC. Each has a defined evidence threshold and next action.
+the Office of Nightlife, and the MARCH phaseout; and the scale and influence of
+nightlife town halls. Each has a defined evidence threshold and next action.
 
 The same run completed two additional feedback cases. A protected CallNYC
 participant photograph produced a visible-text observation and a held candidate,
 while rights, consent, identity, event title, and event time remained explicitly
 unestablished. A separate correction replaced a photograph-time inference with
 the direct 1-3 p.m. Civic Hall announcement and retained the correction trail.
+
+The July 15 social-media archive run then resolved the bounded CallNYC metric
+question through authenticated public-web review. It recovered 107 of 110
+profile-counted content objects, recorded three explicit not-recovered slots,
+audited the visible repost lists on all 41 CallNYC-authored or reply posts with
+displayed repost activity, and established a lower bound of 19 distinct serving
+2016 Council-member accounts. The same run inventoried the shared @NYCArtC
+identity and dedicated WOW List, KC Town Hall, and KC Spaces Fund accounts.
+It promoted four narrow exact-route claims while holding Jamie's account-
+establishment memory and the KC Spaces Fund grantee-highlight count from the
+current public composition. See the
+[project social-media archival production inventory](research/2026-07-15-project-social-media-archive-production.md).
 
 ## Campaign press collections
 
@@ -202,4 +214,6 @@ the collection records and `npm run check:campaign-press` to reject drift.
 - Do not add an active canonical destination or proof surface without exact
   human approval and the corresponding manifest or promotion decision.
 - Keep citations quiet in the interface but complete in the bank.
+- Treat social interaction as a dated public edge, not endorsement, adoption,
+  individual authorship, or a complete lifetime census.
 - Never publish raw private locators, records, or media through this system.

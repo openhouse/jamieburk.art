@@ -3,6 +3,9 @@
 This suite evaluates the public-safe system that accepts fragments, decomposes
 sources, develops candidate claims through research, promotes defensible claims
 without automatically projecting them, and composes selective public arguments.
+The social-archive criterion additionally requires authenticated collection
+methods, deduplicated public interaction ledgers, lower-bound language,
+collective-authorship restraint, and held administrator-history claims.
 It also requires universal exact-surface authorization for active canonical
 projections and Jamie-approved manifests for every rendered route and
 downloadable proof destination. Consequential PDF wording must retain canonical

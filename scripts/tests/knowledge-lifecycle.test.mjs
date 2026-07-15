@@ -479,6 +479,47 @@ test("the downloadable resume is an exact governed destination", () => {
   assert.match(validateKnowledgeLifecycle(unauthorized).join("\n"), /Active canonical projection CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019 lacks current human approval/);
 });
 
+test("WOW List historical scale is governed from protected source through every public destination", () => {
+  const sourceId = "SRC-WOWLIST-PRODUCTION-ARCHIVE-ANALYSIS-2026-07-15";
+  const claimId = "CLM-WOWLIST-HISTORICAL-SCALE";
+  const candidateId = "CND-WOWLIST-HISTORICAL-SCALE";
+  const proof = proofClaims.find(({ id }) => id === "wowlist-community-platform");
+  const source = knowledgeBank.sources.find(({ id }) => id === sourceId);
+  const publicSummarySource = knowledgeBank.sources.find(({ id }) => id === "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15");
+  const observation = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-WOWLIST-HISTORICAL-SCALE");
+  const candidate = knowledgeLifecycle.candidateClaims.find(({ id }) => id === candidateId);
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-WOWLIST-PRODUCTION-ARCHIVE-SCALE");
+  const decision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-WOWLIST-HISTORICAL-SCALE-PROMOTE");
+  const manifests = knowledgeLifecycle.proofSurfaceManifests.filter(({ proofIds }) => proofIds.includes(proof.id));
+
+  assert.equal(source?.visibility, "protected");
+  assert.equal(source?.preservationStatus, "private");
+  assert.equal(source?.protectedLocatorId, "ARCHIVE-WOWLIST-PRODUCTION-DATABASE-ANALYSIS-2026-001");
+  assert.equal(source?.contentReviewedAt, "2026-07-15");
+  assert.equal(publicSummarySource?.visibility, "public");
+  assert.equal(publicSummarySource?.preservationStatus, "live");
+  assert.ok(!publicSummarySource?.protectedLocatorId);
+  assert.equal(observation?.sourceId, sourceId);
+  assert.equal(candidate?.maturity, "promoted");
+  assert.deepEqual(candidate?.observationIds, [observation.id]);
+  assert.equal(candidate?.targetCanonicalClaimId, claimId);
+  assert.equal(task?.status, "completed");
+  assert.equal(decision?.decision, "promote");
+  assert.equal(decision?.humanReviewStatus, "approved");
+  assert.ok(decision?.allowedSurfaces.includes("/work/wowlist"));
+  assert.deepEqual(proof?.requiredCanonicalClaimIds, [claimId]);
+  assert.ok(manifests.length >= 6);
+  assert.ok(manifests.every(({ canonicalClaimIds }) => canonicalClaimIds.includes(claimId)));
+
+  const caseStudy = readFileSync("apps/www/src/content/work/wowlist.mdx", "utf8");
+  assert.match(caseStudy, /claimId="CLM-WOWLIST-HISTORICAL-SCALE"/);
+
+  const omission = structuredClone(knowledgeLifecycle);
+  const firstManifest = omission.proofSurfaceManifests.find(({ proofIds }) => proofIds.includes(proof.id));
+  firstManifest.canonicalClaimIds = firstManifest.canonicalClaimIds.filter((id) => id !== claimId);
+  assert.match(validateKnowledgeLifecycle(omission).join("\n"), /Consequential proof wowlist-community-platform lacks canonical claim CLM-WOWLIST-HISTORICAL-SCALE/);
+});
+
 test("offline lifecycle records are not exported through the application barrel", () => {
   const barrel = readFileSync("apps/www/src/data/knowledge-bank/index.ts", "utf8");
   assert.doesNotMatch(barrel, /lifecycle-(?:records|schema)/);
@@ -637,7 +678,7 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.ok(nightlife.proofs.some(({ id }) => id === "nyc-artist-coalition-civic-systems"));
 
   const publicCallNyc = retrieveKnowledgePalette({ surface: "/work/callnyc", publicationSafe: true });
-  assert.equal(publicCallNyc.candidates.length, 5);
+  assert.equal(publicCallNyc.candidates.length, 6);
   assert.deepEqual(publicCallNyc.projects.map(({ id }) => id), ["PRJ-CALLNYC"]);
   assert.ok(publicCallNyc.publicationAuthorizations.every(({ authorized }) => authorized));
   assert.deepEqual(publicCallNyc.researchTasks, []);
@@ -649,8 +690,8 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
     homepageProofs.proofs.map(({ id }) => id),
     homepageProofs.proofSurfaceManifest?.proofIds
   );
-  assert.deepEqual(homepageProofs.canonicalClaims, []);
-  assert.deepEqual(homepageProofs.candidates, []);
+  assert.deepEqual(homepageProofs.canonicalClaims.map(({ id }) => id), ["CLM-WOWLIST-HISTORICAL-SCALE"]);
+  assert.deepEqual(homepageProofs.candidates.map(({ id }) => id), ["CND-WOWLIST-HISTORICAL-SCALE"]);
   assert.deepEqual(homepageProofs.researchTasks, []);
   assert.deepEqual(homepageProofs.mediaLeads, []);
 
@@ -667,8 +708,8 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
 
   const resumePdf = retrieveKnowledgePalette({ proofSurface: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", publicationSafe: true });
   assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL", "PRJ-FAIR-RENT-CRS", "PRJ-WOWLIST"]);
-  assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"]);
-  assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
+  assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-WOWLIST-HISTORICAL-SCALE"]);
+  assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-WOWLIST-HISTORICAL-SCALE", "CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
   assert.deepEqual(resumePdf.researchTasks, []);
   assert.deepEqual(resumePdf.mediaLeads, []);
 

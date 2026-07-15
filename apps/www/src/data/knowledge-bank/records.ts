@@ -4,11 +4,17 @@ import {
   campaignPressCollections,
   campaignPressIndexSources
 } from "./campaign-press.ts";
+import {
+  socialArchiveClaims,
+  socialArchiveResearchInquiries,
+  socialArchiveSources
+} from "./social-archive.ts";
 
 const knowledgeBankInput = {
   sources: [
     ...campaignPressIndexSources,
     ...campaignPressArticleSources,
+    ...socialArchiveSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1115,6 +1121,7 @@ const knowledgeBankInput = {
   ],
   sourceCollections: campaignPressCollections,
   claims: [
+    ...socialArchiveClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -1155,8 +1162,8 @@ const knowledgeBankInput = {
       internalClaim: "After the fuller CouncilStat dataset was released, Jamie independently built CallNYC as a public-facing interpretation of those constituent-services records.",
       status: "confirmed-with-boundary",
       projections: [
-        { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
-        { key: "work-card", text: "Jamie independently built CallNYC, translating CouncilStat constituent-services records into issue pages and next-step guidance residents could navigate.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
+        { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie independently developed CallNYC.org as an archived, unofficial public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
+        { key: "work-card", text: "Jamie independently built CallNYC as an archived, unofficial civic-tech prototype, translating CouncilStat constituent-services records into issue pages and next-step guidance residents could navigate.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
         { key: "resume-html", text: "Jamie built CallNYC.org as an archived, unofficial independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
       ],
       evidence: [
@@ -1443,7 +1450,7 @@ const knowledgeBankInput = {
       researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex Wayback review"]
     }
   ],
-  researchInquiries: [{
+  researchInquiries: [...socialArchiveResearchInquiries, {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
     question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
@@ -1474,7 +1481,9 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
       ],
       occurrences: [
         { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -1482,7 +1491,8 @@ const knowledgeBankInput = {
         { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
         { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
         { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-        { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
+        { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "council-social-engagement", claimId: "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"] }
       ]
     },
     {
@@ -1497,19 +1507,30 @@ const knowledgeBankInput = {
     {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
-      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018"],
+      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"],
       occurrences: [
         { id: "office-nightlife-town-hall", claimId: "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study" },
-        { id: "commercial-rent-testimony", claimId: "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018", projection: "case-study" }
+        { id: "commercial-rent-testimony", claimId: "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018", projection: "case-study" },
+        { id: "shared-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] }
+      ]
+    },
+    {
+      id: "wowlist",
+      surface: "/work/wowlist",
+      sourceOrder: ["SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-WOWLIST-FULL-POPULATION-2026-07-15", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"],
+      occurrences: [
+        { id: "historical-scale", claimId: "CLM-WOWLIST-HISTORICAL-SCALE", projection: "case-study", sourceIds: ["SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15"] },
+        { id: "social-provenance-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-WOWLIST-FULL-POPULATION-2026-07-15", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] }
       ]
     },
     {
       id: "kc-town-hall",
       surface: "/work/kc-town-hall",
-      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"],
+      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-KCTH-X-PROFILE"],
       occurrences: [
         { id: "public-record-2019", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"] },
-        { id: "mission-aligned-transition", claimId: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"] }
+        { id: "mission-aligned-transition", claimId: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"] },
+        { id: "social-service-reporting", claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-KCTH-X-PROFILE"] }
       ]
     }
   ]

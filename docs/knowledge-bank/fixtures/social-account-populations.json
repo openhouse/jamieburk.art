@@ -1,0 +1,2628 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "publicSafety": "Public status IDs, publication dates, public account handles, interaction classes, narrow research classifications, and a dated scalar WOW List public-counter snapshot only. Post text, raw external links, contact details, cookies, private account state, and session data are excluded.",
+  "callnyc": {
+    "account": "@CallNYCapp",
+    "profileReported": 110,
+    "unrecoveredSlots": 3,
+    "records": [
+      {
+        "statusId": "798274424763981824",
+        "publishedOn": "2016-11-14",
+        "type": "repost"
+      },
+      {
+        "statusId": "796473557387575297",
+        "publishedOn": "2016-11-09",
+        "type": "repost"
+      },
+      {
+        "statusId": "783410245632655364",
+        "publishedOn": "2016-10-04",
+        "type": "original",
+        "recognitionHandle": "@ChaimDeutsch",
+        "issuePaths": [
+          "environment/water-quality.html"
+        ]
+      },
+      {
+        "statusId": "783305320508514304",
+        "publishedOn": "2016-10-04",
+        "type": "repost"
+      },
+      {
+        "statusId": "783022174890229760",
+        "publishedOn": "2016-10-03",
+        "type": "original",
+        "recognitionHandle": "@CMMathieuEugene",
+        "issuePaths": [
+          "housing-and-buildings/hpd-housing-lottery.html"
+        ]
+      },
+      {
+        "statusId": "780797474277511170",
+        "publishedOn": "2016-09-27",
+        "type": "repost"
+      },
+      {
+        "statusId": "776509377897500672",
+        "publishedOn": "2016-09-15",
+        "type": "original",
+        "recognitionHandle": "@JulissaFerreras",
+        "issuePaths": [
+          "general-welfare/food-stamps.html"
+        ]
+      },
+      {
+        "statusId": "775370427644411904",
+        "publishedOn": "2016-09-12",
+        "type": "original",
+        "recognitionHandle": "@JimmyVanBramer",
+        "issuePaths": [
+          "housing-and-buildings/nycha-building-maintenance.html"
+        ]
+      },
+      {
+        "statusId": "773637656555163648",
+        "publishedOn": "2016-09-07",
+        "type": "original",
+        "recognitionHandle": "@JulissaFerreras",
+        "issuePaths": [
+          "housing-and-buildings/affordable-housing-apartment.html"
+        ]
+      },
+      {
+        "statusId": "753678962501390336",
+        "publishedOn": "2016-07-14",
+        "type": "original",
+        "recognitionHandle": "@MMViverito",
+        "issuePaths": [
+          "housing-and-buildings/nycha-building-maintenance.html"
+        ]
+      },
+      {
+        "statusId": "753631998221033472",
+        "publishedOn": "2016-07-14",
+        "type": "original",
+        "recognitionHandle": "@CMReynoso34",
+        "issuePaths": [
+          "finance/tax-preparation-assistance.html"
+        ]
+      },
+      {
+        "statusId": "748532929802997760",
+        "publishedOn": "2016-06-30",
+        "type": "original",
+        "recognitionHandle": "@StevenMatteo",
+        "issuePaths": [
+          "environment/street-flooding.html"
+        ]
+      },
+      {
+        "statusId": "738458056716091392",
+        "publishedOn": "2016-06-02",
+        "type": "original",
+        "recognitionHandle": "@HelenRosenthal",
+        "issuePaths": [
+          "housing-and-buildings/building-maintenance.html"
+        ]
+      },
+      {
+        "statusId": "738140834973900800",
+        "publishedOn": "2016-06-01",
+        "type": "original",
+        "recognitionHandle": "@ChaimDeutsch",
+        "issuePaths": [
+          "transportation/access-a-ride.html"
+        ]
+      },
+      {
+        "statusId": "738115545002807296",
+        "publishedOn": "2016-06-01",
+        "type": "original",
+        "recognitionHandle": "@RLEspinal",
+        "issuePaths": [
+          "immigration/green-card.html"
+        ]
+      },
+      {
+        "statusId": "736904163414675456",
+        "publishedOn": "2016-05-29",
+        "type": "original",
+        "recognitionHandle": "@MMViverito",
+        "issuePaths": [
+          "housing-and-buildings/nycha-misc.html"
+        ]
+      },
+      {
+        "statusId": "735914869782904832",
+        "publishedOn": "2016-05-26",
+        "type": "original",
+        "recognitionHandle": "@HelenRosenthal",
+        "issuePaths": [
+          "housing-and-buildings/senior-housing.html"
+        ]
+      },
+      {
+        "statusId": "735644754340401152",
+        "publishedOn": "2016-05-26",
+        "type": "original",
+        "recognitionHandle": "@StevenMatteo",
+        "issuePaths": [
+          "transportation/street-signs.html"
+        ]
+      },
+      {
+        "statusId": "735214806249144320",
+        "publishedOn": "2016-05-24",
+        "type": "original",
+        "recognitionHandle": "@JimmyVanBramer",
+        "issuePaths": [
+          "transportation/speed-bump-request.html"
+        ]
+      },
+      {
+        "statusId": "734897908353470464",
+        "publishedOn": "2016-05-24",
+        "type": "original",
+        "recognitionHandle": "@ChaimDeutsch",
+        "issuePaths": [
+          "transportation/parking-permits.html"
+        ]
+      },
+      {
+        "statusId": "734492930262585344",
+        "publishedOn": "2016-05-22",
+        "type": "original",
+        "recognitionHandle": "@RLEspinal",
+        "issuePaths": [
+          "legal-services/housing.html"
+        ]
+      },
+      {
+        "statusId": "733649303223336960",
+        "publishedOn": "2016-05-20",
+        "type": "original",
+        "recognitionHandle": "@NYCGreenfield",
+        "issuePaths": [
+          "transportation/sidewalks.html"
+        ]
+      },
+      {
+        "statusId": "733440491673489408",
+        "publishedOn": "2016-05-19",
+        "type": "repost"
+      },
+      {
+        "statusId": "733410096915550208",
+        "publishedOn": "2016-05-19",
+        "type": "repost"
+      },
+      {
+        "statusId": "733388862806982656",
+        "publishedOn": "2016-05-19",
+        "type": "reply"
+      },
+      {
+        "statusId": "733387247362379777",
+        "publishedOn": "2016-05-19",
+        "type": "original",
+        "recognitionHandle": "@HelenRosenthal",
+        "issuePaths": [
+          "finance/scrie.html"
+        ]
+      },
+      {
+        "statusId": "733089563334299648",
+        "publishedOn": "2016-05-19",
+        "type": "repost"
+      },
+      {
+        "statusId": "733063600152141825",
+        "publishedOn": "2016-05-18",
+        "type": "original",
+        "recognitionHandle": "@ydanis",
+        "issuePaths": [
+          "housing-and-buildings/rent-overcharges.html"
+        ]
+      },
+      {
+        "statusId": "733027856025047041",
+        "publishedOn": "2016-05-18",
+        "type": "original",
+        "recognitionHandle": "@RosieMendez",
+        "issuePaths": [
+          "housing-and-buildings/emergency-repairs.html"
+        ]
+      },
+      {
+        "statusId": "732959093225345024",
+        "publishedOn": "2016-05-18",
+        "type": "original"
+      },
+      {
+        "statusId": "732928060635373569",
+        "publishedOn": "2016-05-18",
+        "type": "original",
+        "recognitionHandle": "@MarkTreyger718",
+        "issuePaths": [
+          "health/hospital-facility-or-clinic.html"
+        ]
+      },
+      {
+        "statusId": "732752376709447680",
+        "publishedOn": "2016-05-18",
+        "type": "original",
+        "recognitionHandle": "@ElizCrowleyNYC",
+        "issuePaths": [
+          "sanitation/recycling.html"
+        ]
+      },
+      {
+        "statusId": "732687384597430273",
+        "publishedOn": "2016-05-17",
+        "type": "original",
+        "recognitionHandle": "@MMViverito",
+        "issuePaths": [
+          "governmental-operations/idnyc.html"
+        ]
+      },
+      {
+        "statusId": "732660179540578306",
+        "publishedOn": "2016-05-17",
+        "type": "original",
+        "recognitionHandle": "@StevenMatteo",
+        "issuePaths": [
+          "transportation/traffic-signals.html"
+        ]
+      },
+      {
+        "statusId": "732370968946065408",
+        "publishedOn": "2016-05-17",
+        "type": "original",
+        "recognitionHandle": "@ChaimDeutsch",
+        "issuePaths": [
+          "utilities/con-edison.html"
+        ]
+      },
+      {
+        "statusId": "731873940923109376",
+        "publishedOn": "2016-05-15",
+        "type": "original",
+        "recognitionHandle": "@CM_RubenWills",
+        "issuePaths": [
+          "housing-and-buildings/violation.html"
+        ]
+      },
+      {
+        "statusId": "731254021000986624",
+        "publishedOn": "2016-05-13",
+        "type": "original",
+        "recognitionHandle": "@BenKallos",
+        "issuePaths": [
+          "transportation/buses.html"
+        ]
+      },
+      {
+        "statusId": "731212042863005697",
+        "publishedOn": "2016-05-13",
+        "type": "original",
+        "recognitionHandle": "@CM_MargaretChin",
+        "issuePaths": [
+          "housing-and-buildings/heat-hot-water.html"
+        ]
+      },
+      {
+        "statusId": "731168037433450496",
+        "publishedOn": "2016-05-13",
+        "type": "original",
+        "recognitionHandle": "@RLEspinal",
+        "issuePaths": [
+          "general-welfare/medicaid.html"
+        ]
+      },
+      {
+        "statusId": "730862177037488128",
+        "publishedOn": "2016-05-12",
+        "type": "repost"
+      },
+      {
+        "statusId": "730856560071741440",
+        "publishedOn": "2016-05-12",
+        "type": "original",
+        "recognitionHandle": "@NYCGreenfield",
+        "issuePaths": [
+          "sanitation/dirty-sidewalk.html"
+        ]
+      },
+      {
+        "statusId": "730842213429710850",
+        "publishedOn": "2016-05-12",
+        "type": "original",
+        "recognitionHandle": "@JimmyVanBramer",
+        "issuePaths": [
+          "transportation/traffic-enforcement.html"
+        ]
+      },
+      {
+        "statusId": "730838778772893696",
+        "publishedOn": "2016-05-12",
+        "type": "original"
+      },
+      {
+        "statusId": "730739253358018561",
+        "publishedOn": "2016-05-12",
+        "type": "original",
+        "recognitionHandle": "@HelenRosenthal",
+        "issuePaths": [
+          "housing-and-buildings/nycha-building-maintenance.html"
+        ]
+      },
+      {
+        "statusId": "729835258808537088",
+        "publishedOn": "2016-05-10",
+        "type": "original",
+        "recognitionHandle": "@CMMathieuEugene",
+        "issuePaths": [
+          "immigration/visas.html"
+        ]
+      },
+      {
+        "statusId": "729832019304194052",
+        "publishedOn": "2016-05-10",
+        "type": "original",
+        "recognitionHandle": "@CMMathieuEugene",
+        "issuePaths": [
+          "immigration/visas.html"
+        ]
+      },
+      {
+        "statusId": "729830383689281537",
+        "publishedOn": "2016-05-10",
+        "type": "original",
+        "recognitionHandle": "@ChaimDeutsch",
+        "issuePaths": [
+          "parks/trees-and-sidewalks-program.html"
+        ]
+      },
+      {
+        "statusId": "729757799647981570",
+        "publishedOn": "2016-05-09",
+        "type": "original"
+      },
+      {
+        "statusId": "729741165273165824",
+        "publishedOn": "2016-05-09",
+        "type": "reply"
+      },
+      {
+        "statusId": "729737077340946432",
+        "publishedOn": "2016-05-09",
+        "type": "original"
+      },
+      {
+        "statusId": "729713874715455488",
+        "publishedOn": "2016-05-09",
+        "type": "original"
+      },
+      {
+        "statusId": "729676362634629120",
+        "publishedOn": "2016-05-09",
+        "type": "repost"
+      },
+      {
+        "statusId": "729673498608685058",
+        "publishedOn": "2016-05-09",
+        "type": "repost"
+      },
+      {
+        "statusId": "729670658406400001",
+        "publishedOn": "2016-05-09",
+        "type": "repost"
+      },
+      {
+        "statusId": "728692814079463429",
+        "publishedOn": "2016-05-06",
+        "type": "original"
+      },
+      {
+        "statusId": "728666490250113026",
+        "publishedOn": "2016-05-06",
+        "type": "original",
+        "recognitionHandle": "@RLEspinal",
+        "issuePaths": [
+          "housing-and-buildings/section-8.html"
+        ]
+      },
+      {
+        "statusId": "728333768226947077",
+        "publishedOn": "2016-05-05",
+        "type": "original",
+        "recognitionHandle": "@HelenRosenthal",
+        "issuePaths": [
+          "housing-and-buildings/eviction.html"
+        ]
+      },
+      {
+        "statusId": "728259132705353728",
+        "publishedOn": "2016-05-05",
+        "type": "repost"
+      },
+      {
+        "statusId": "728001482692399104",
+        "publishedOn": "2016-05-04",
+        "type": "original",
+        "recognitionHandle": "@bradlander",
+        "issuePaths": [
+          "transportation/pedestrian-safety.html"
+        ]
+      },
+      {
+        "statusId": "727919445763575809",
+        "publishedOn": "2016-05-04",
+        "type": "reply",
+        "issuePaths": [
+          "transportation/pot-holes.html"
+        ]
+      },
+      {
+        "statusId": "727880846271782913",
+        "publishedOn": "2016-05-04",
+        "type": "original"
+      },
+      {
+        "statusId": "727878157076959232",
+        "publishedOn": "2016-05-04",
+        "type": "original"
+      },
+      {
+        "statusId": "727689676115611650",
+        "publishedOn": "2016-05-04",
+        "type": "original",
+        "recognitionHandle": "@MarkTreyger718",
+        "issuePaths": [
+          "governmental-operations/voting-information.html"
+        ]
+      },
+      {
+        "statusId": "727619816081784832",
+        "publishedOn": "2016-05-03",
+        "type": "original",
+        "recognitionHandle": "@StevenMatteo",
+        "issuePaths": [
+          "transportation/pot-holes.html"
+        ]
+      },
+      {
+        "statusId": "727601279984381952",
+        "publishedOn": "2016-05-03",
+        "type": "original",
+        "recognitionHandle": "@MMViverito",
+        "issuePaths": [
+          "housing-and-buildings/heat-hot-water.html"
+        ]
+      },
+      {
+        "statusId": "727528637340241920",
+        "publishedOn": "2016-05-03",
+        "type": "original",
+        "recognitionHandle": "@IDaneekMiller",
+        "issuePaths": [
+          "sanitation/snow-removal.html"
+        ]
+      },
+      {
+        "statusId": "727251825414561792",
+        "publishedOn": "2016-05-02",
+        "type": "original",
+        "recognitionHandle": "@BenKallos",
+        "issuePaths": [
+          "transportation/bicycles.html"
+        ]
+      },
+      {
+        "statusId": "727218948127739905",
+        "publishedOn": "2016-05-02",
+        "type": "original"
+      },
+      {
+        "statusId": "727164122106847233",
+        "publishedOn": "2016-05-02",
+        "type": "original",
+        "recognitionHandle": "@ChaimDeutsch",
+        "issuePaths": [
+          "transportation/street-lights.html"
+        ]
+      },
+      {
+        "statusId": "726900698827358208",
+        "publishedOn": "2016-05-01",
+        "type": "original",
+        "recognitionHandle": "@FCabreraNY",
+        "issuePaths": [
+          "housing-and-buildings/rental-arrears.html"
+        ]
+      },
+      {
+        "statusId": "726819779953188865",
+        "publishedOn": "2016-05-01",
+        "type": "original",
+        "recognitionHandle": "@NYCGreenfield",
+        "issuePaths": [
+          "utilities/con-edison.html"
+        ]
+      },
+      {
+        "statusId": "726080902024040448",
+        "publishedOn": "2016-04-29",
+        "type": "original",
+        "recognitionHandle": "@CMMathieuEugene",
+        "issuePaths": [
+          "immigration/green-card.html"
+        ]
+      },
+      {
+        "statusId": "725813046631911424",
+        "publishedOn": "2016-04-28",
+        "type": "original",
+        "recognitionHandle": "@JimmyVanBramer",
+        "issuePaths": [
+          "land-use-and-zoning/land-use-application-process.html"
+        ]
+      },
+      {
+        "statusId": "725789777673465857",
+        "publishedOn": "2016-04-28",
+        "type": "original",
+        "recognitionHandle": "@HelenRosenthal",
+        "issuePaths": [
+          "housing-and-buildings/lease-issue.html"
+        ]
+      },
+      {
+        "statusId": "725788478676570113",
+        "publishedOn": "2016-04-28",
+        "type": "repost"
+      },
+      {
+        "statusId": "725783813880684544",
+        "publishedOn": "2016-04-28",
+        "type": "original",
+        "recognitionHandle": "@RLEspinal",
+        "issuePaths": [
+          "housing-and-buildings/affordable-housing-apartment.html"
+        ]
+      },
+      {
+        "statusId": "725462205173518338",
+        "publishedOn": "2016-04-27",
+        "type": "original",
+        "recognitionHandle": "@RosieMendez",
+        "issuePaths": [
+          "general-welfare/homeless-shelter-dhs.html"
+        ]
+      },
+      {
+        "statusId": "725447728503902211",
+        "publishedOn": "2016-04-27",
+        "type": "original",
+        "recognitionHandle": "@cmenchaca",
+        "issuePaths": [
+          "immigration/city-services-and-benefits.html"
+        ]
+      },
+      {
+        "statusId": "725445909241278468",
+        "publishedOn": "2016-04-27",
+        "type": "original",
+        "recognitionHandle": "@ElizCrowleyNYC",
+        "issuePaths": [
+          "health/animal-care-wild-animal.html"
+        ]
+      },
+      {
+        "statusId": "725403215282487296",
+        "publishedOn": "2016-04-27",
+        "type": "original",
+        "recognitionHandle": "@CMPeterKoo",
+        "issuePaths": [
+          "utilities/lifeline.html"
+        ]
+      },
+      {
+        "statusId": "725334082364821504",
+        "publishedOn": "2016-04-27",
+        "type": "original",
+        "recognitionHandle": "@Vanessalgibson",
+        "issuePaths": [
+          "cultural-affairs/community-based-organization.html"
+        ]
+      },
+      {
+        "statusId": "725084356432269313",
+        "publishedOn": "2016-04-26",
+        "type": "original",
+        "recognitionHandle": "@MarkTreyger718",
+        "issuePaths": [
+          "economy-jobs/seeking-employment.html"
+        ]
+      },
+      {
+        "statusId": "725052316978663426",
+        "publishedOn": "2016-04-26",
+        "type": "original",
+        "recognitionHandle": "@MMViverito",
+        "issuePaths": [
+          "housing-and-buildings/nycha-transfers.html"
+        ]
+      },
+      {
+        "statusId": "725048363528392704",
+        "publishedOn": "2016-04-26",
+        "type": "original",
+        "recognitionHandle": "@StevenMatteo",
+        "issuePaths": [
+          "transportation/street-resurfacing.html"
+        ]
+      },
+      {
+        "statusId": "724986599419875333",
+        "publishedOn": "2016-04-26",
+        "type": "original",
+        "recognitionHandle": "@RitchieTorres",
+        "issuePaths": [
+          "finance/tax-preparation-assistance.html"
+        ]
+      },
+      {
+        "statusId": "724767660353949697",
+        "publishedOn": "2016-04-26",
+        "type": "original",
+        "recognitionHandle": "@Dromm25",
+        "issuePaths": [
+          "quality-of-life/noise-other.html"
+        ]
+      },
+      {
+        "statusId": "724727480909705216",
+        "publishedOn": "2016-04-25",
+        "type": "original",
+        "recognitionHandle": "@ChaimDeutsch",
+        "issuePaths": [
+          "parks/park-maintenance.html"
+        ]
+      },
+      {
+        "statusId": "724723473852059649",
+        "publishedOn": "2016-04-25",
+        "type": "original",
+        "recognitionHandle": "@BenKallos",
+        "issuePaths": [
+          "housing-and-buildings/construction-general.html"
+        ]
+      },
+      {
+        "statusId": "723547805709676544",
+        "publishedOn": "2016-04-22",
+        "type": "original",
+        "recognitionHandle": "@NYCGreenfield",
+        "issuePaths": [
+          "parks/tree-planting-pruning.html"
+        ]
+      },
+      {
+        "statusId": "723546610576306176",
+        "publishedOn": "2016-04-22",
+        "type": "original",
+        "recognitionHandle": "@CMMathieuEugene",
+        "issuePaths": [
+          "legal-services/immigration.html"
+        ]
+      },
+      {
+        "statusId": "723313062950907905",
+        "publishedOn": "2016-04-22",
+        "type": "original",
+        "recognitionHandle": "@JimmyVanBramer",
+        "issuePaths": [
+          "housing-and-buildings/nycha-building-maintenance.html"
+        ]
+      },
+      {
+        "statusId": "723249608659443712",
+        "publishedOn": "2016-04-21",
+        "type": "original",
+        "recognitionHandle": "@ydanis",
+        "issuePaths": [
+          "housing-and-buildings/nycha-new-application.html"
+        ]
+      },
+      {
+        "statusId": "723153082096345092",
+        "publishedOn": "2016-04-21",
+        "type": "original",
+        "recognitionHandle": "@HelenRosenthal",
+        "issuePaths": [
+          "housing-and-buildings/landlord-managing-agent-issues.html"
+        ]
+      },
+      {
+        "statusId": "723132373114572801",
+        "publishedOn": "2016-04-21",
+        "type": "original",
+        "recognitionHandle": "@RLEspinal",
+        "issuePaths": [
+          "general-welfare/food-stamps.html"
+        ]
+      },
+      {
+        "statusId": "722928370237853696",
+        "publishedOn": "2016-04-20",
+        "type": "original",
+        "recognitionHandle": "@StephenLevin33",
+        "issuePaths": [
+          "cultural-affairs/libraries.html"
+        ]
+      },
+      {
+        "statusId": "722837868008177664",
+        "publishedOn": "2016-04-20",
+        "type": "original",
+        "recognitionHandle": "@RitchieTorres",
+        "issuePaths": [
+          "immigration/u-s-citizenship.html"
+        ]
+      },
+      {
+        "statusId": "722837286476390401",
+        "publishedOn": "2016-04-20",
+        "type": "reply",
+        "issuePaths": [
+          "api/"
+        ]
+      },
+      {
+        "statusId": "715139663384547328",
+        "publishedOn": "2016-03-30",
+        "type": "repost"
+      },
+      {
+        "statusId": "713537148000018432",
+        "publishedOn": "2016-03-26",
+        "type": "original",
+        "issuePaths": [
+          "api/"
+        ]
+      },
+      {
+        "statusId": "712349795403374592",
+        "publishedOn": "2016-03-22",
+        "type": "original"
+      },
+      {
+        "statusId": "710507767447031808",
+        "publishedOn": "2016-03-17",
+        "type": "original"
+      },
+      {
+        "statusId": "710498412349800450",
+        "publishedOn": "2016-03-17",
+        "type": "original"
+      },
+      {
+        "statusId": "710154803054301184",
+        "publishedOn": "2016-03-16",
+        "type": "reply",
+        "issuePaths": [
+          "finance/tax-preparation-assistance.html"
+        ]
+      },
+      {
+        "statusId": "710150246781882369",
+        "publishedOn": "2016-03-16",
+        "type": "reply"
+      },
+      {
+        "statusId": "707677287366467584",
+        "publishedOn": "2016-03-09",
+        "type": "original"
+      },
+      {
+        "statusId": "706208629360304128",
+        "publishedOn": "2016-03-05",
+        "type": "original"
+      },
+      {
+        "statusId": "706146203604492288",
+        "publishedOn": "2016-03-05",
+        "type": "repost"
+      }
+    ]
+  },
+  "kcTownHall": {
+    "account": "@KCTownHall",
+    "profileReported": 183,
+    "records": [
+      {
+        "statusId": "1573651421681139714",
+        "publishedOn": "2022-09-24",
+        "type": "repost"
+      },
+      {
+        "statusId": "1566197849297195009",
+        "publishedOn": "2022-09-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1555940701338206208",
+        "publishedOn": "2022-08-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1543272488318242817",
+        "publishedOn": "2022-07-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1542991559674716165",
+        "publishedOn": "2022-07-01",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1532864718490292226",
+        "publishedOn": "2022-06-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1525157225542651910",
+        "publishedOn": "2022-05-13",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1511091801087692813",
+        "publishedOn": "2022-04-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1510295173548367877",
+        "publishedOn": "2022-04-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1500289857750401026",
+        "publishedOn": "2022-03-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1457371688300056580",
+        "publishedOn": "2021-11-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1457046287753285637",
+        "publishedOn": "2021-11-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1457031966444896259",
+        "publishedOn": "2021-11-06",
+        "type": "reply"
+      },
+      {
+        "statusId": "1457012244588412935",
+        "publishedOn": "2021-11-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1444466053665509377",
+        "publishedOn": "2021-10-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1444329446287290382",
+        "publishedOn": "2021-10-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1434323234346967046",
+        "publishedOn": "2021-09-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1433862792990400527",
+        "publishedOn": "2021-09-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1424143001505386498",
+        "publishedOn": "2021-08-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1424106887482683397",
+        "publishedOn": "2021-08-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1424055770472198146",
+        "publishedOn": "2021-08-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1423795274879836160",
+        "publishedOn": "2021-08-06",
+        "type": "reply",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1423734504691314698",
+        "publishedOn": "2021-08-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1368365228765945858",
+        "publishedOn": "2021-03-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1368272511490744325",
+        "publishedOn": "2021-03-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1367878555556777989",
+        "publishedOn": "2021-03-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1367257547724509189",
+        "publishedOn": "2021-03-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1325099960933748744",
+        "publishedOn": "2020-11-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1324836875568320512",
+        "publishedOn": "2020-11-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1312649591469342722",
+        "publishedOn": "2020-10-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1312530339051393024",
+        "publishedOn": "2020-10-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1312482560316895232",
+        "publishedOn": "2020-10-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1312167901252608001",
+        "publishedOn": "2020-10-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1312091287273824265",
+        "publishedOn": "2020-10-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1311091878306213889",
+        "publishedOn": "2020-09-29",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1302391602812518401",
+        "publishedOn": "2020-09-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1302311398999982081",
+        "publishedOn": "2020-09-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1302281027960926210",
+        "publishedOn": "2020-09-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1302004390585421825",
+        "publishedOn": "2020-09-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1302003767831912448",
+        "publishedOn": "2020-09-04",
+        "type": "reply",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1302003448833953792",
+        "publishedOn": "2020-09-04",
+        "type": "reply",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1301997561356652546",
+        "publishedOn": "2020-09-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1301921883831570434",
+        "publishedOn": "2020-09-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1289714654579580928",
+        "publishedOn": "2020-08-02",
+        "type": "reply"
+      },
+      {
+        "statusId": "1289713591843565569",
+        "publishedOn": "2020-08-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1289634461638778880",
+        "publishedOn": "2020-08-01",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1289350962709065729",
+        "publishedOn": "2020-08-01",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1289350670730948608",
+        "publishedOn": "2020-08-01",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1289313255966617602",
+        "publishedOn": "2020-07-31",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1288952731982598144",
+        "publishedOn": "2020-07-30",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1288612274228396032",
+        "publishedOn": "2020-07-29",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1269123902070042624",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269123813171757059",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269123738911625217",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269123426414985216",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269123270391091200",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269123177885679618",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269122955965009921",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269122793544855552",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269122641086033920",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269122489461997568",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269122302970662912",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1269121890733473795",
+        "publishedOn": "2020-06-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1252345034038407168",
+        "publishedOn": "2020-04-20",
+        "type": "original"
+      },
+      {
+        "statusId": "1252344939867824132",
+        "publishedOn": "2020-04-20",
+        "type": "original"
+      },
+      {
+        "statusId": "1236689218174357504",
+        "publishedOn": "2020-03-08",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1236385304245927936",
+        "publishedOn": "2020-03-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1236102068680695808",
+        "publishedOn": "2020-03-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1209146457590247424",
+        "publishedOn": "2019-12-23",
+        "type": "repost"
+      },
+      {
+        "statusId": "1209146067817762816",
+        "publishedOn": "2019-12-23",
+        "type": "repost"
+      },
+      {
+        "statusId": "1191405830693904385",
+        "publishedOn": "2019-11-04",
+        "type": "repost"
+      },
+      {
+        "statusId": "1190995865814667266",
+        "publishedOn": "2019-11-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190710238212694016",
+        "publishedOn": "2019-11-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190709291289890823",
+        "publishedOn": "2019-11-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190708575510958080",
+        "publishedOn": "2019-11-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190707863292956672",
+        "publishedOn": "2019-11-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190705445008216064",
+        "publishedOn": "2019-11-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190704251263160322",
+        "publishedOn": "2019-11-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190703057161601024",
+        "publishedOn": "2019-11-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190688421276246016",
+        "publishedOn": "2019-11-02",
+        "type": "repost"
+      },
+      {
+        "statusId": "1190674584502177797",
+        "publishedOn": "2019-11-02",
+        "type": "repost"
+      },
+      {
+        "statusId": "1190393136054521856",
+        "publishedOn": "2019-11-01",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190367471129300992",
+        "publishedOn": "2019-11-01",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1190017854248239115",
+        "publishedOn": "2019-10-31",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1187199836682117126",
+        "publishedOn": "2019-10-24",
+        "type": "repost"
+      },
+      {
+        "statusId": "1185289925748580352",
+        "publishedOn": "2019-10-18",
+        "type": "repost"
+      },
+      {
+        "statusId": "1184421200400801792",
+        "publishedOn": "2019-10-16",
+        "type": "repost"
+      },
+      {
+        "statusId": "1183035237233823745",
+        "publishedOn": "2019-10-12",
+        "type": "original"
+      },
+      {
+        "statusId": "1182369340034707457",
+        "publishedOn": "2019-10-10",
+        "type": "repost"
+      },
+      {
+        "statusId": "1182349413722836992",
+        "publishedOn": "2019-10-10",
+        "type": "repost"
+      },
+      {
+        "statusId": "1182329689689473029",
+        "publishedOn": "2019-10-10",
+        "type": "original"
+      },
+      {
+        "statusId": "1180639237781250049",
+        "publishedOn": "2019-10-06",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180570492530577410",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180569809475588096",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180569203717353472",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180568634260897794",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180557262823264256",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180556215870541824",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180553578689236992",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180552910071095301",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180552140005298176",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180551346090577920",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180550513819095042",
+        "publishedOn": "2019-10-05",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1180178311848366083",
+        "publishedOn": "2019-10-04",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1180176299471638528",
+        "publishedOn": "2019-10-04",
+        "type": "repost"
+      },
+      {
+        "statusId": "1173037571162738689",
+        "publishedOn": "2019-09-15",
+        "type": "repost"
+      },
+      {
+        "statusId": "1170387736492224512",
+        "publishedOn": "2019-09-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1170387688496799744",
+        "publishedOn": "2019-09-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1170387602329034754",
+        "publishedOn": "2019-09-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1170072880090165249",
+        "publishedOn": "2019-09-06",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1159153322236026881",
+        "publishedOn": "2019-08-07",
+        "type": "original"
+      },
+      {
+        "statusId": "1157861700944703488",
+        "publishedOn": "2019-08-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1157483542529617926",
+        "publishedOn": "2019-08-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1157483198781087744",
+        "publishedOn": "2019-08-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1157482636463476736",
+        "publishedOn": "2019-08-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1157464628324110336",
+        "publishedOn": "2019-08-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1154888028889976834",
+        "publishedOn": "2019-07-26",
+        "type": "reply"
+      },
+      {
+        "statusId": "1154729332755050496",
+        "publishedOn": "2019-07-26",
+        "type": "repost"
+      },
+      {
+        "statusId": "1148277187583389703",
+        "publishedOn": "2019-07-08",
+        "type": "repost",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1147679988600254465",
+        "publishedOn": "2019-07-07",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1147602234127130624",
+        "publishedOn": "2019-07-06",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1147589894660907009",
+        "publishedOn": "2019-07-06",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1147586873423998976",
+        "publishedOn": "2019-07-06",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1135246124883861504",
+        "publishedOn": "2019-06-02",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1135225497384890368",
+        "publishedOn": "2019-06-02",
+        "type": "original"
+      },
+      {
+        "statusId": "1134608391614160896",
+        "publishedOn": "2019-05-31",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1134594449256984576",
+        "publishedOn": "2019-05-31",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1126284471894933504",
+        "publishedOn": "2019-05-09",
+        "type": "original",
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1124810411302359040",
+        "publishedOn": "2019-05-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1124795681389076481",
+        "publishedOn": "2019-05-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1124793002843615233",
+        "publishedOn": "2019-05-04",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1124792146064748550",
+        "publishedOn": "2019-05-04",
+        "type": "repost"
+      },
+      {
+        "statusId": "1124791429790879745",
+        "publishedOn": "2019-05-04",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1124789562293870592",
+        "publishedOn": "2019-05-04",
+        "type": "original",
+        "tireRelated": true,
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1124779534795071489",
+        "publishedOn": "2019-05-04",
+        "type": "reply"
+      },
+      {
+        "statusId": "1124760081596391424",
+        "publishedOn": "2019-05-04",
+        "type": "repost"
+      },
+      {
+        "statusId": "1124717766756503552",
+        "publishedOn": "2019-05-04",
+        "type": "original"
+      },
+      {
+        "statusId": "1124481129057333250",
+        "publishedOn": "2019-05-04",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1124448415293874176",
+        "publishedOn": "2019-05-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1124418375181058048",
+        "publishedOn": "2019-05-03",
+        "type": "original",
+        "surveyLinked": true
+      },
+      {
+        "statusId": "1124416898064580608",
+        "publishedOn": "2019-05-03",
+        "type": "original",
+        "tireRelated": true
+      },
+      {
+        "statusId": "1123264511698456577",
+        "publishedOn": "2019-04-30",
+        "type": "repost"
+      },
+      {
+        "statusId": "1122977313468157953",
+        "publishedOn": "2019-04-29",
+        "type": "reply"
+      },
+      {
+        "statusId": "1122905778464153602",
+        "publishedOn": "2019-04-29",
+        "type": "repost"
+      },
+      {
+        "statusId": "1122884316093210627",
+        "publishedOn": "2019-04-29",
+        "type": "reply"
+      },
+      {
+        "statusId": "1122883010582466560",
+        "publishedOn": "2019-04-29",
+        "type": "repost"
+      },
+      {
+        "statusId": "1122881981484797954",
+        "publishedOn": "2019-04-29",
+        "type": "repost"
+      },
+      {
+        "statusId": "1122867070729949184",
+        "publishedOn": "2019-04-29",
+        "type": "reply"
+      },
+      {
+        "statusId": "1122866432130334720",
+        "publishedOn": "2019-04-29",
+        "type": "repost"
+      },
+      {
+        "statusId": "1122859036163170304",
+        "publishedOn": "2019-04-29",
+        "type": "original"
+      },
+      {
+        "statusId": "1122854798884257797",
+        "publishedOn": "2019-04-29",
+        "type": "original"
+      },
+      {
+        "statusId": "1102627427992375296",
+        "publishedOn": "2019-03-04",
+        "type": "original"
+      },
+      {
+        "statusId": "1087695661020205056",
+        "publishedOn": "2019-01-22",
+        "type": "original"
+      },
+      {
+        "statusId": "1062377455338618880",
+        "publishedOn": "2018-11-13",
+        "type": "original"
+      },
+      {
+        "statusId": "1062375399429169152",
+        "publishedOn": "2018-11-13",
+        "type": "original"
+      },
+      {
+        "statusId": "1061347310758699008",
+        "publishedOn": "2018-11-10",
+        "type": "original"
+      },
+      {
+        "statusId": "1060936086648733702",
+        "publishedOn": "2018-11-09",
+        "type": "original"
+      },
+      {
+        "statusId": "1059533163519770624",
+        "publishedOn": "2018-11-05",
+        "type": "repost"
+      },
+      {
+        "statusId": "1044677436204560384",
+        "publishedOn": "2018-09-25",
+        "type": "repost"
+      },
+      {
+        "statusId": "1043549999550877697",
+        "publishedOn": "2018-09-22",
+        "type": "original"
+      },
+      {
+        "statusId": "1043539982676369408",
+        "publishedOn": "2018-09-22",
+        "type": "repost"
+      },
+      {
+        "statusId": "1038153710864670721",
+        "publishedOn": "2018-09-07",
+        "type": "original"
+      },
+      {
+        "statusId": "1037785619706068995",
+        "publishedOn": "2018-09-06",
+        "type": "original"
+      },
+      {
+        "statusId": "1035215055024009216",
+        "publishedOn": "2018-08-30",
+        "type": "original"
+      },
+      {
+        "statusId": "1034145416663769088",
+        "publishedOn": "2018-08-27",
+        "type": "reply"
+      },
+      {
+        "statusId": "1033505948533448705",
+        "publishedOn": "2018-08-26",
+        "type": "reply"
+      },
+      {
+        "statusId": "1033500102801993729",
+        "publishedOn": "2018-08-25",
+        "type": "reply"
+      },
+      {
+        "statusId": "1033485724899794944",
+        "publishedOn": "2018-08-25",
+        "type": "original"
+      },
+      {
+        "statusId": "1029067847740391426",
+        "publishedOn": "2018-08-13",
+        "type": "repost"
+      },
+      {
+        "statusId": "1026922856091987968",
+        "publishedOn": "2018-08-07",
+        "type": "original"
+      },
+      {
+        "statusId": "1024739337282441218",
+        "publishedOn": "2018-08-01",
+        "type": "original"
+      },
+      {
+        "statusId": "1023249193878597632",
+        "publishedOn": "2018-07-28",
+        "type": "original"
+      },
+      {
+        "statusId": "1022510145014824962",
+        "publishedOn": "2018-07-26",
+        "type": "repost"
+      },
+      {
+        "statusId": "1020798115367047171",
+        "publishedOn": "2018-07-21",
+        "type": "repost"
+      },
+      {
+        "statusId": "1016684231433564160",
+        "publishedOn": "2018-07-10",
+        "type": "original"
+      },
+      {
+        "statusId": "1014742105145692161",
+        "publishedOn": "2018-07-05",
+        "type": "original"
+      },
+      {
+        "statusId": "1013903289392517120",
+        "publishedOn": "2018-07-02",
+        "type": "original"
+      },
+      {
+        "statusId": "1013903134551347200",
+        "publishedOn": "2018-07-02",
+        "type": "original"
+      },
+      {
+        "statusId": "1013902884285681665",
+        "publishedOn": "2018-07-02",
+        "type": "original"
+      },
+      {
+        "statusId": "1013897573856370688",
+        "publishedOn": "2018-07-02",
+        "type": "original"
+      },
+      {
+        "statusId": "1013895905932726273",
+        "publishedOn": "2018-07-02",
+        "type": "original"
+      },
+      {
+        "statusId": "1013894923031113728",
+        "publishedOn": "2018-07-02",
+        "type": "original"
+      },
+      {
+        "statusId": "1013893135695601665",
+        "publishedOn": "2018-07-02",
+        "type": "original"
+      }
+    ]
+  },
+  "wowList": {
+    "account": "@wowlist",
+    "profileReported": 38,
+    "records": [
+      {
+        "statusId": "433628764493606913",
+        "publishedOn": "2014-02-12",
+        "type": "reposted",
+        "postedUrlCount": 0
+      },
+      {
+        "statusId": "433671630837919744",
+        "publishedOn": "2014-02-12",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "587713396486856704",
+        "publishedOn": "2015-04-13",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "590942060829663232",
+        "publishedOn": "2015-04-22",
+        "type": "authored",
+        "postedUrlCount": 2
+      },
+      {
+        "statusId": "590961074326917122",
+        "publishedOn": "2015-04-22",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "591664757473673216",
+        "publishedOn": "2015-04-24",
+        "type": "reply",
+        "postedUrlCount": 0
+      },
+      {
+        "statusId": "591666366215811073",
+        "publishedOn": "2015-04-24",
+        "type": "reply",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "591668857670148096",
+        "publishedOn": "2015-04-24",
+        "type": "reply",
+        "postedUrlCount": 0
+      },
+      {
+        "statusId": "591944013768499200",
+        "publishedOn": "2015-04-25",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "592424659225845760",
+        "publishedOn": "2015-04-26",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "592718356018556928",
+        "publishedOn": "2015-04-27",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "592787353925726208",
+        "publishedOn": "2015-04-27",
+        "type": "reposted",
+        "postedUrlCount": 0
+      },
+      {
+        "statusId": "592810776961916929",
+        "publishedOn": "2015-04-27",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "596690796641923073",
+        "publishedOn": "2015-05-08",
+        "type": "authored",
+        "postedUrlCount": 0
+      },
+      {
+        "statusId": "596691623993581568",
+        "publishedOn": "2015-05-08",
+        "type": "authored",
+        "postedUrlCount": 2
+      },
+      {
+        "statusId": "598530404669358080",
+        "publishedOn": "2015-05-13",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "603631189308604416",
+        "publishedOn": "2015-05-27",
+        "type": "reposted",
+        "postedUrlCount": 0
+      },
+      {
+        "statusId": "604360847012413440",
+        "publishedOn": "2015-05-29",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "606517628765650945",
+        "publishedOn": "2015-06-04",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "632168285291835392",
+        "publishedOn": "2015-08-14",
+        "type": "authored",
+        "postedUrlCount": 2
+      },
+      {
+        "statusId": "663732869357965313",
+        "publishedOn": "2015-11-09",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "665520472461860864",
+        "publishedOn": "2015-11-14",
+        "type": "authored",
+        "postedUrlCount": 2
+      },
+      {
+        "statusId": "749378122823245824",
+        "publishedOn": "2016-07-02",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "751150062458269696",
+        "publishedOn": "2016-07-07",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "771412862191407104",
+        "publishedOn": "2016-09-01",
+        "type": "reply",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "771455571501416448",
+        "publishedOn": "2016-09-01",
+        "type": "reply",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "771457416298921985",
+        "publishedOn": "2016-09-01",
+        "type": "reply",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "783312785702805504",
+        "publishedOn": "2016-10-04",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "796473557387575297",
+        "publishedOn": "2016-11-09",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "797181275308257282",
+        "publishedOn": "2016-11-11",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "798274424763981824",
+        "publishedOn": "2016-11-14",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "801883926029447168",
+        "publishedOn": "2016-11-24",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "805210387004223488",
+        "publishedOn": "2016-12-04",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "805949658405175296",
+        "publishedOn": "2016-12-06",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "806517013472485376",
+        "publishedOn": "2016-12-07",
+        "type": "authored",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "807395049814290433",
+        "publishedOn": "2016-12-10",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "815697993709993984",
+        "publishedOn": "2017-01-01",
+        "type": "reposted",
+        "postedUrlCount": 1
+      },
+      {
+        "statusId": "819663088634851328",
+        "publishedOn": "2017-01-12",
+        "type": "reposted",
+        "postedUrlCount": 0
+      }
+    ]
+  },
+  "kcSpacesFund": {
+    "account": "@KCSpacesFund",
+    "profileReported": 35,
+    "unrecoveredSlots": 1,
+    "records": [
+      {
+        "statusId": "1281300779266125826",
+        "publishedOn": "2020-07-09",
+        "type": "authored"
+      },
+      {
+        "statusId": "1278061185871552512",
+        "publishedOn": "2020-06-30",
+        "type": "authored"
+      },
+      {
+        "statusId": "1272260009695551489",
+        "publishedOn": "2020-06-14",
+        "type": "authored"
+      },
+      {
+        "statusId": "1271219713188810753",
+        "publishedOn": "2020-06-11",
+        "type": "authored"
+      },
+      {
+        "statusId": "1270549089076359174",
+        "publishedOn": "2020-06-10",
+        "type": "authored"
+      },
+      {
+        "statusId": "1266879084048650240",
+        "publishedOn": "2020-05-30",
+        "type": "authored"
+      },
+      {
+        "statusId": "1266021254751977472",
+        "publishedOn": "2020-05-28",
+        "type": "reposted"
+      },
+      {
+        "statusId": "1266139182403063809",
+        "publishedOn": "2020-05-28",
+        "type": "authored"
+      },
+      {
+        "statusId": "1265333881105838080",
+        "publishedOn": "2020-05-26",
+        "type": "authored"
+      },
+      {
+        "statusId": "1264719559480807425",
+        "publishedOn": "2020-05-25",
+        "type": "authored"
+      },
+      {
+        "statusId": "1264232160891936777",
+        "publishedOn": "2020-05-23",
+        "type": "reposted"
+      },
+      {
+        "statusId": "1263927272802746368",
+        "publishedOn": "2020-05-22",
+        "type": "authored"
+      },
+      {
+        "statusId": "1263599910781440000",
+        "publishedOn": "2020-05-21",
+        "type": "authored"
+      },
+      {
+        "statusId": "1262868770244177920",
+        "publishedOn": "2020-05-19",
+        "type": "authored"
+      },
+      {
+        "statusId": "1262524545275244545",
+        "publishedOn": "2020-05-18",
+        "type": "authored"
+      },
+      {
+        "statusId": "1260590429730414592",
+        "publishedOn": "2020-05-13",
+        "type": "authored"
+      },
+      {
+        "statusId": "1259909363302576129",
+        "publishedOn": "2020-05-11",
+        "type": "authored"
+      },
+      {
+        "statusId": "1257758233952993282",
+        "publishedOn": "2020-05-05",
+        "type": "authored"
+      },
+      {
+        "statusId": "1255975912191004675",
+        "publishedOn": "2020-04-30",
+        "type": "authored"
+      },
+      {
+        "statusId": "1255568262995283968",
+        "publishedOn": "2020-04-29",
+        "type": "authored"
+      },
+      {
+        "statusId": "1255251889677107212",
+        "publishedOn": "2020-04-28",
+        "type": "authored"
+      },
+      {
+        "statusId": "1254147190563504128",
+        "publishedOn": "2020-04-25",
+        "type": "authored"
+      },
+      {
+        "statusId": "1253445776224722945",
+        "publishedOn": "2020-04-23",
+        "type": "authored"
+      },
+      {
+        "statusId": "1252025495518142467",
+        "publishedOn": "2020-04-20",
+        "type": "reposted"
+      },
+      {
+        "statusId": "1252310163119276033",
+        "publishedOn": "2020-04-20",
+        "type": "reposted"
+      },
+      {
+        "statusId": "1252677916217036805",
+        "publishedOn": "2020-04-21",
+        "type": "reposted"
+      },
+      {
+        "statusId": "1252754459056320522",
+        "publishedOn": "2020-04-22",
+        "type": "authored"
+      },
+      {
+        "statusId": "1251584787267178499",
+        "publishedOn": "2020-04-18",
+        "type": "reposted"
+      },
+      {
+        "statusId": "1251553551454797830",
+        "publishedOn": "2020-04-18",
+        "type": "authored"
+      },
+      {
+        "statusId": "1251170892392157185",
+        "publishedOn": "2020-04-17",
+        "type": "reposted"
+      },
+      {
+        "statusId": "1250217081552986112",
+        "publishedOn": "2020-04-15",
+        "type": "authored"
+      },
+      {
+        "statusId": "1248356842075566086",
+        "publishedOn": "2020-04-09",
+        "type": "authored"
+      },
+      {
+        "statusId": "1247936081754042368",
+        "publishedOn": "2020-04-08",
+        "type": "authored"
+      },
+      {
+        "statusId": "1247641592510504961",
+        "publishedOn": "2020-04-07",
+        "type": "authored"
+      }
+    ]
+  },
+  "interactionEdges": {
+    "callnycCouncil": [
+      {
+        "sourceStatusId": "725334082364821504",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@BPGibson2025",
+        "personKey": "VANESSA-GIBSON",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "726080902024040448",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@CMMathieuEugene",
+        "personKey": "MATHIEU-EUGENE",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "725403215282487296",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@CMPeterKoo",
+        "personKey": "PETER-KOO",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "731212042863005697",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@CM_MargaretChin",
+        "personKey": "MARGARET-CHIN",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "731873940923109376",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@CM_RubenWills",
+        "personKey": "RUBEN-WILLS",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "738140834973900800",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@ChaimDeutsch",
+        "personKey": "CHAIM-DEUTSCH",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "732752376709447680",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@ElizCrowleyNYC",
+        "personKey": "ELIZABETH-CROWLEY",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "726900698827358208",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@FCabreraNY",
+        "personKey": "FERNANDO-CABRERA",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "727528637340241920",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@IDaneekMiller",
+        "personKey": "DANEEK-MILLER",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "775370427644411904",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@JimmyVanBramer",
+        "personKey": "JIMMY-VAN-BRAMER",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "727689676115611650",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@MarkTreyger718",
+        "personKey": "MARK-TREYGER",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "730856560071741440",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@NYCGreenfield",
+        "personKey": "DAVID-GREENFIELD",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "734492930262585344",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@RLEspinal",
+        "personKey": "RAFAEL-ESPINAL",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "753631998221033472",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@CMReynoso34",
+        "personKey": "ANTONIO-REYNOSO",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "724986599419875333",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@RitchieTorres",
+        "personKey": "RITCHIE-TORRES",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "733027856025047041",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@RosieMendez",
+        "personKey": "ROSIE-MENDEZ",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "748532929802997760",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@StevenMatteo",
+        "personKey": "STEVEN-MATTEO",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "724723473852059649",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@BenKallos",
+        "personKey": "BEN-KALLOS",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "723153082096345092",
+        "sourceAccount": "@CallNYCapp",
+        "publicHandle": "@HelenRosenthal",
+        "personKey": "HELEN-ROSENTHAL",
+        "interactionClass": "repost-list-presence",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "725422741160079360",
+        "sourceAccount": "@CMPeterKoo",
+        "publicHandle": "@CMPeterKoo",
+        "personKey": "PETER-KOO",
+        "interactionClass": "authored-wrapper-post",
+        "publishedOn": "2016-04-27",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "727621921341358081",
+        "sourceAccount": "@StevenMatteo",
+        "publicHandle": "@StevenMatteo",
+        "personKey": "STEVEN-MATTEO",
+        "interactionClass": "authored-reply",
+        "publishedOn": "2016-05-03",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "732717792097603584",
+        "sourceAccount": "@CM_RubenWills",
+        "publicHandle": "@CM_RubenWills",
+        "personKey": "RUBEN-WILLS",
+        "interactionClass": "authored-reply",
+        "publishedOn": "2016-05-17",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "780797474277511170",
+        "sourceAccount": "@HelenRosenthal",
+        "publicHandle": "@HelenRosenthal",
+        "personKey": "HELEN-ROSENTHAL",
+        "interactionClass": "authored-post",
+        "publishedOn": "2016-09-27",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "783305320508514304",
+        "sourceAccount": "@CMMathieuEugene",
+        "publicHandle": "@CMMathieuEugene",
+        "personKey": "MATHIEU-EUGENE",
+        "interactionClass": "authored-quote-post",
+        "publishedOn": "2016-10-04",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "884863588317442049",
+        "sourceAccount": "@CM_MargaretChin",
+        "publicHandle": "@CM_MargaretChin",
+        "personKey": "MARGARET-CHIN",
+        "interactionClass": "authored-reply",
+        "publishedOn": "2017-07-11",
+        "observedOn": "2026-07-15"
+      }
+    ],
+    "nycArtistCoalitionCouncil": [
+      {
+        "sourceStatusId": "1098626837821997056",
+        "sourceAccount": "@RLEspinal",
+        "publicHandle": "@RLEspinal",
+        "personKey": "RAFAEL-ESPINAL-2019",
+        "interactionClass": "authored-mention",
+        "publishedOn": "2019-02-21",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "1095020293112979457",
+        "sourceAccount": "@StephenLevin33",
+        "publicHandle": "@StephenLevin33",
+        "personKey": "STEPHEN-LEVIN-2019",
+        "interactionClass": "authored-mention",
+        "publishedOn": "2019-02-11",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "1053849469853274112",
+        "sourceAccount": "@CarlinaRivera",
+        "publicHandle": "@CarlinaRivera",
+        "personKey": "CARLINA-RIVERA-2018",
+        "interactionClass": "authored-mention",
+        "publishedOn": "2018-10-20",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "1167536258438115333",
+        "sourceAccount": "@JustinBrannan",
+        "publicHandle": "@JustinBrannan",
+        "personKey": "JUSTIN-BRANNAN-2019",
+        "interactionClass": "authored-mention",
+        "publishedOn": "2019-08-30",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "1354840336330330116",
+        "sourceAccount": "@bradlander",
+        "publicHandle": "@bradlander",
+        "personKey": "BRAD-LANDER-2021",
+        "interactionClass": "authored-mention",
+        "publishedOn": "2021-01-28",
+        "observedOn": "2026-07-15"
+      },
+      {
+        "sourceStatusId": "1320792543773282304",
+        "sourceAccount": "@JimmyVanBramer",
+        "publicHandle": "@JimmyVanBramer",
+        "personKey": "JIMMY-VAN-BRAMER-2020",
+        "interactionClass": "authored-mention",
+        "publishedOn": "2020-10-26",
+        "observedOn": "2026-07-15"
+      }
+    ],
+    "wowListStakeholders": [
+      { "sourceStatusId": "983076265187074048", "publicHandle": "@goodneighbr", "entityKey": "GOOD-NEIGHBR", "interactionClass": "authored-project-url", "stakeholderGroup": "diy-arts-music", "publishedOn": "2018-04-08", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "845116237591920640", "publicHandle": "@jackascak", "entityKey": "JACK-ASCAK", "interactionClass": "authored-project-url", "stakeholderGroup": "diy-arts-music", "publishedOn": "2017-03-23", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "826878408005029889", "publicHandle": "@SigeRecords", "entityKey": "SIGE-RECORDS", "interactionClass": "authored-project-url", "stakeholderGroup": "diy-arts-music", "publishedOn": "2017-02-01", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "729327970435862528", "publicHandle": "@juliafredenburg", "entityKey": "JULIA-FREDENBURG", "interactionClass": "authored-project-url", "stakeholderGroup": "neighborhood-civic", "publishedOn": "2016-05-08", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "711556107928412160", "publicHandle": "@ReverendWEB", "entityKey": "REVEREND-WEB", "interactionClass": "authored-project-url", "stakeholderGroup": "diy-arts-music", "publishedOn": "2016-03-20", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "665737833219538946", "publicHandle": "@all_ages", "entityKey": "ALL-AGES", "interactionClass": "authored-project-response", "stakeholderGroup": "calendar-community", "publishedOn": "2015-11-14", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "663732869357965313", "publicHandle": "@cotfg", "entityKey": "COTFG", "interactionClass": "authored-project-url", "stakeholderGroup": "diy-arts-music", "publishedOn": "2015-11-09", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "661635999714316288", "publicHandle": "@Dream_Version", "entityKey": "DREAM-VERSION", "interactionClass": "authored-project-url", "stakeholderGroup": "diy-arts-music", "publishedOn": "2015-11-03", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "604360847012413440", "publicHandle": "@punkscriminals", "entityKey": "PUNKS-CRIMINALS", "interactionClass": "authored-project-url", "stakeholderGroup": "diy-arts-music", "publishedOn": "2015-05-29", "observedOn": "2026-07-15" },
+      { "sourceStatusId": "579088937022406657", "publicHandle": "@musichackathon", "entityKey": "MUSIC-HACKATHON", "interactionClass": "authored-project-url", "stakeholderGroup": "creative-technology-peer", "publishedOn": "2015-03-20", "observedOn": "2026-07-15" }
+    ]
+  },
+  "wowListEvidence": {
+    "publicCounterSnapshot": [
+      { "sourceStatusId": "806517013472485376", "observedOn": "2026-07-15", "replies": 0, "reposts": 2, "likes": 1 },
+      { "sourceStatusId": "805210387004223488", "observedOn": "2026-07-15", "replies": 0, "reposts": 2, "likes": 1 },
+      { "sourceStatusId": "798274424763981824", "observedOn": "2026-07-15", "replies": 0, "reposts": 3, "likes": 3 },
+      { "sourceStatusId": "796473557387575297", "observedOn": "2026-07-15", "replies": 0, "reposts": 5, "likes": 6 },
+      { "sourceStatusId": "771457416298921985", "observedOn": "2026-07-15", "replies": 0, "reposts": 1, "likes": 1 },
+      { "sourceStatusId": "771455571501416448", "observedOn": "2026-07-15", "replies": 1, "reposts": 2, "likes": 2 },
+      { "sourceStatusId": "771412862191407104", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "751150062458269696", "observedOn": "2026-07-15", "replies": 0, "reposts": 1, "likes": 0 },
+      { "sourceStatusId": "665520472461860864", "observedOn": "2026-07-15", "replies": 1, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "632168285291835392", "observedOn": "2026-07-15", "replies": 0, "reposts": 1, "likes": 3 },
+      { "sourceStatusId": "606517628765650945", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "598530404669358080", "observedOn": "2026-07-15", "replies": 0, "reposts": 2, "likes": 2 },
+      { "sourceStatusId": "596691623993581568", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "596690796641923073", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "592810776961916929", "observedOn": "2026-07-15", "replies": 0, "reposts": 1, "likes": 1 },
+      { "sourceStatusId": "591668857670148096", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "591666366215811073", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "591664757473673216", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "590961074326917122", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 1 },
+      { "sourceStatusId": "590942060829663232", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "587713396486856704", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 },
+      { "sourceStatusId": "433671630837919744", "observedOn": "2026-07-15", "replies": 0, "reposts": 0, "likes": 0 }
+    ],
+    "postedLinkDispositions": [
+      { "sourceStatusId": "815697993709993984", "linkOrdinal": 1, "destinationSha256": "65572c07de33499ddde5f73fe503962978324b17d6797a78bfec7718dab16188", "category": "cultural-space-funding", "canonicalSourceId": "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2017" },
+      { "sourceStatusId": "807395049814290433", "linkOrdinal": 1, "destinationSha256": "f09d8f181e8a2526e2fc6b827b8ac4d1b09af9787bfb15b11a4a59fc50308277", "category": "cultural-space-care", "canonicalSourceId": null },
+      { "sourceStatusId": "806517013472485376", "linkOrdinal": 1, "destinationSha256": "cb69b05e1646aae49975a02c16822cfb2419fdd13b3292db606ce9bd72e26faa", "category": "cultural-space-care", "canonicalSourceId": "SRC-WOWLIST-KQED-GHOST-SHIP-2016" },
+      { "sourceStatusId": "805949658405175296", "linkOrdinal": 1, "destinationSha256": "3eede084f137f3f70aef4e504c0ec1c3bba6bda37766e8fb41ca403f51073bda", "category": "cultural-space-care", "canonicalSourceId": null },
+      { "sourceStatusId": "805210387004223488", "linkOrdinal": 1, "destinationSha256": "312f49dfdb90219695e3212ec6a8915b047a17d937ff1b392f7c941364f369a1", "category": "cultural-space-care", "canonicalSourceId": null },
+      { "sourceStatusId": "801883926029447168", "linkOrdinal": 1, "destinationSha256": "49797e9412103429f5f54e8ffc57a10c2df81ffc3c5e2d3ddcbd99739d32dfe4", "category": "external-event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "798274424763981824", "linkOrdinal": 1, "destinationSha256": "76ef9848fe97c9e3507293cd584362c16b4a91e732371a1d8bf88ba7f1e4babb", "category": "civic-coordination", "canonicalSourceId": "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016" },
+      { "sourceStatusId": "797181275308257282", "linkOrdinal": 1, "destinationSha256": "31763866e7976c18052b13b845dab518584488f5494193ebd1d99fe3adac55d4", "category": "mission-source-curation", "canonicalSourceId": null },
+      { "sourceStatusId": "796473557387575297", "linkOrdinal": 1, "destinationSha256": "0b340034775ba3c7c4577c25ed59cc131ff02768bfc21bae8d8d1ff883ac9e84", "category": "civic-coordination", "canonicalSourceId": null },
+      { "sourceStatusId": "783312785702805504", "linkOrdinal": 1, "destinationSha256": "29abce4d05be965b45f92aad2bb6ca7c6433029469404ba59de93cabc43d4d5c", "category": "external-event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "771457416298921985", "linkOrdinal": 1, "destinationSha256": "604b10f296278d85624a5f7d9e29ae93d961b5f42265cf49ae962bbdbd6f126e", "category": "event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "771455571501416448", "linkOrdinal": 1, "destinationSha256": "4e48be068aa027b03c7c92d29443346686b825048f2f9064781d636caa521489", "category": "organizer-resource", "canonicalSourceId": null },
+      { "sourceStatusId": "771412862191407104", "linkOrdinal": 1, "destinationSha256": "9f49b588f5ea5b36b1c9175cc88dc1ce7bbb85e8607eafb48ab343dfa8c2dc56", "category": "organizer-resource", "canonicalSourceId": null },
+      { "sourceStatusId": "751150062458269696", "linkOrdinal": 1, "destinationSha256": "873deec256f58016554509d11d5fb1cf9232fea9cd77f070413d63df93928463", "category": "civic-coordination", "canonicalSourceId": null },
+      { "sourceStatusId": "749378122823245824", "linkOrdinal": 1, "destinationSha256": "53a425327aba97f43663ed3e038e3785fd01c5986716267579a1f7c39e318478", "category": "external-event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "665520472461860864", "linkOrdinal": 1, "destinationSha256": "f30aefbfd2f1fcab7c6b28dca38f473932b86f32d9312ca734ad9d19774e4240", "category": "product-community-route", "canonicalSourceId": null },
+      { "sourceStatusId": "665520472461860864", "linkOrdinal": 2, "destinationSha256": "eb64de5ace55b67c997ebbafdd6d1a4f76b3850e4c6719856c367c6ce153eef9", "category": "organizer-convening", "canonicalSourceId": null },
+      { "sourceStatusId": "663732869357965313", "linkOrdinal": 1, "destinationSha256": "4ec2825f3b4c9bbb791e2746ef973a5f3b4ad4ca704fb47ebdb87fa51b19a66d", "category": "event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "632168285291835392", "linkOrdinal": 1, "destinationSha256": "2ddf01ee60c5ab904f9f2ce1ae25ae9a7d114f220824223172daf0038980c327", "category": "product-onboarding", "canonicalSourceId": "SRC-WOWLIST-SHELBY-TUTORIAL-2015" },
+      { "sourceStatusId": "632168285291835392", "linkOrdinal": 2, "destinationSha256": "82858f675dc63c378ef28f971dc9ce9533a217d6a1bbe7a0787f1e68f0f67f8a", "category": "product-onboarding", "canonicalSourceId": null },
+      { "sourceStatusId": "606517628765650945", "linkOrdinal": 1, "destinationSha256": "6a3b024be5d9775ab5f463f83e3fc4301ad315664193d10ec8be5439cbeb960b", "category": "product-community-route", "canonicalSourceId": null },
+      { "sourceStatusId": "604360847012413440", "linkOrdinal": 1, "destinationSha256": "cf6d9137ee5eb473e7e3f4bebc98ef6b340a1f03c6e2161e4dc75e367e9868d7", "category": "product-community-route", "canonicalSourceId": null },
+      { "sourceStatusId": "598530404669358080", "linkOrdinal": 1, "destinationSha256": "bded76f2ecf680c2278267df47b52df9680f9d66fffa99e3fe821572385a0c4d", "category": "event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "596691623993581568", "linkOrdinal": 1, "destinationSha256": "9990898a9099b89da251a8e769306a19ef51bcd9797c643c11b9c5462178ad93", "category": "organizer-resource", "canonicalSourceId": null },
+      { "sourceStatusId": "596691623993581568", "linkOrdinal": 2, "destinationSha256": "c36705901e79c38b8fd37ec1960b10b22bb625c81a84de1eb8ef17b15864abc5", "category": "mission-source-curation", "canonicalSourceId": "SRC-WOWLIST-GOOD-TIMES-ZINES-2015" },
+      { "sourceStatusId": "592810776961916929", "linkOrdinal": 1, "destinationSha256": "52c1ff0896817bde7c411c9adb94d82961b3e663272d35c547ce651fc93379d1", "category": "organizer-resource", "canonicalSourceId": "SRC-WOWLIST-GRASSTRONAUT-HOMEWORK-2015" },
+      { "sourceStatusId": "592718356018556928", "linkOrdinal": 1, "destinationSha256": "fe56f9e416a82521a5d8c2a34828008d0d663754ed136e6ad5aae9f5e52f8bc2", "category": "event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "592424659225845760", "linkOrdinal": 1, "destinationSha256": "6727e212f59d48f4cda359056ae3c82854bb2245db875fd7e96a351682a03268", "category": "cultural-space-funding", "canonicalSourceId": null },
+      { "sourceStatusId": "591944013768499200", "linkOrdinal": 1, "destinationSha256": "9797e2763e658ee36712c70635d134e7435e0b286ae3e17b6e6f611e56ffaf33", "category": "event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "591666366215811073", "linkOrdinal": 1, "destinationSha256": "f028bfcf4490535b2b26a029638850b9fb6e4677a781596dfc6d4480586cc324", "category": "product-community-route", "canonicalSourceId": null },
+      { "sourceStatusId": "590961074326917122", "linkOrdinal": 1, "destinationSha256": "577af2f0ce2f943dd48c28a9436276afb0395c5a527b79cbef59da140a3a73b6", "category": "event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "590942060829663232", "linkOrdinal": 1, "destinationSha256": "248d75a05f3408d843d46ef42a93f6531145aaa05569a21d576467191f8d8e0a", "category": "product-route", "canonicalSourceId": null },
+      { "sourceStatusId": "590942060829663232", "linkOrdinal": 2, "destinationSha256": "b4311be5fb2b758d18b7361b50533a15d6a08c850b0e4229744686121a157917", "category": "participatory-media-peer", "canonicalSourceId": "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015" },
+      { "sourceStatusId": "587713396486856704", "linkOrdinal": 1, "destinationSha256": "5f1ccf38050d6b1aec23a974043af74f0cbf5018b19f864b96c5b0e333d77449", "category": "event-distribution", "canonicalSourceId": null },
+      { "sourceStatusId": "433671630837919744", "linkOrdinal": 1, "destinationSha256": "d48f006029ccb448d1aefe2f4b4dfa4c6d8a4f9d3a26392ae46d9e8a40c117b1", "category": "product-origin", "canonicalSourceId": null }
+    ]
+  }
+}

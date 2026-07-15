@@ -297,7 +297,7 @@ const workItemsInput = [
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
-      "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+      "An archived, unofficial civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -360,7 +360,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived, unofficial prototype with 2016 Politico New York coverage.",
       open:
         "The page links to the public repository and archived press; additional archive imagery is not included.",
       protected:
@@ -373,7 +373,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, historically used by DIY arts and music organizers across 35+ active city scenes, each with at least 50 geocoded posts/events.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -403,10 +403,10 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Collective credit, present-day availability, and the documented active-scene threshold remain attached to the scale claim.",
     sourceLayer:
-      "Public-safe aggregate historical summary. Private rows and unreviewed screenshots are not included.",
-    credits: ["Jamie Burkart", "WOWList collaborators"],
+      "A protected production-database analysis supports the rounded historical aggregates. Private user, contact, geolocation, and community records remain offline.",
+    credits: ["Richard Caceres", "Jamie Burkart", "Sunday Dinner participants", "WOWList organizers and collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
     roleFit:
@@ -416,7 +416,7 @@ const workItemsInput = [
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "35+ historically active city scenes, each with at least 50 geocoded posts/events"
     ],
     knownOpenProtected: {
       known:

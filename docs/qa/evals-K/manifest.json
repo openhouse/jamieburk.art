@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "47fe597c678cfc14ea6af83d79769e83d32045f6b2023aa646d4217160f05189",
+  "sourceSha256": "55fa0c1d59269176e8a953c73c10455cb3822034a0c224bffb35ec134e3c8db7",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -103,13 +103,13 @@
       "route": "/work/callnyc",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/callnyc-desktop.png",
-      "artifactSha256": "88eaab1f7e281d773a87544593759532ec39e871a974f0a095a621f1203874fa"
+      "artifactSha256": "54cf89dafa9e1bbba04d245436049d5dac19039f18e0d29a05eecb72156fb256"
     },
     {
       "route": "/work/callnyc",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/callnyc-mobile-320.png",
-      "artifactSha256": "4933e32bfba1c94bfdad711837fd6c9b094742d4a636528394dbf77fd84b963f"
+      "artifactSha256": "7db39202c26b0638163d13071021e35ae51758835f0639e4ff0f0f062e07370c"
     },
     {
       "route": "/work/fair-rent-nyc",
@@ -124,6 +124,18 @@
       "artifactSha256": "e2aa54245b60e9e7c2b09c5b3b364f46791808b84bea78ddf106a64f032fe229"
     },
     {
+      "route": "/work/wowlist",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/wowlist-desktop.png",
+      "artifactSha256": "8ab6c11b05a1ab3250158d9849e83bd7340730df578b747f260c501263d74b14"
+    },
+    {
+      "route": "/work/wowlist",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
+      "artifactSha256": "e2fc33313c1a2a3e2a390854fdc0163d75ba3b307e7962efd236a664056768bd"
+    },
+    {
       "route": "/work/kc-town-hall",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
@@ -133,13 +145,13 @@
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "viewport": "PDF page 1 at 144 DPI",
       "artifactPath": "docs/qa/evals-K/resume-page-1.png",
-      "artifactSha256": "61f28c3298076d1b0154b77f6848e4a1ebcf910f16d9ac1f7fd8287569d96946"
+      "artifactSha256": "d1613f0cd3de68820512f9084334232259c5dd21dae29acea6266b8aabcab169"
     },
     {
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "viewport": "PDF page 2 at 144 DPI",
       "artifactPath": "docs/qa/evals-K/resume-page-2.png",
-      "artifactSha256": "7013015c02012dd3f812570956319084fd6268c21227bcd9851367791e645e95"
+      "artifactSha256": "e16d6ab0b3f3bff25291c6b85a5dc8bbab7ae383cd138e7620d104188a16571a"
     }
   ]
 }
