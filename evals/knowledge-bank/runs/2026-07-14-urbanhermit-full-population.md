@@ -117,6 +117,22 @@ sole-credit or causation language. Four verified short-link-to-source edges are
 also machine-readable, and personal or individual social posts no longer use
 institutional metadata.
 
+### Iteration 14: complete metadata and semantic review contracts
+
+Two fresh judges confirmed the Iteration 13 repairs and then found equivalent
+ways to move identifying text or an overclaim into fields that were not yet
+independently pinned. The evaluator now hashes a normalized projection of the
+entire permitted non-record ledger metadata and a separately normalized
+projection of every source, observation, claim, projection, and inquiry in the
+@urbanhermit graph. Any change to either public surface requires a deliberate
+contract update and review. These review digests supplement the arithmetic,
+identity, relationship, source-binding, scope, and privacy checks; they are not
+treated as evidence or as a substitute for those explanatory validations.
+
+Mutation tests cover nested identifying text in a metric boundary,
+contradictory recovery wording, identifying detail moved into the population
+definition, and a dual-sided paraphrased observation overclaim.
+
 ## Acceptance Contract
 
 `KB-EVAL-URBANHERMIT-FULL-POPULATION` fails if:
@@ -129,8 +145,12 @@ institutional metadata.
 - raw post text, private paths, contact details, credentials, or session data
   enter the ledger;
 - allowed arrays or unresolved reasons gain nested or identifying metadata;
+- any permitted non-record metadata changes without a deliberate contract
+  update;
 - fresh-verification values drift from the population control;
 - source, claim, and observation semantics violate independent contracts;
+- the normalized semantic surface changes without a deliberate contract
+  update;
 - a verified short-link-to-source edge is removed or altered;
 - source-status metrics enter Jamie's traction aggregate;
 - source, observation, claim, or inquiry counts drift;

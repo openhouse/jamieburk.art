@@ -1367,6 +1367,29 @@ test("urbanhermit eval rejects identifying detail appended to unresolved reasons
   assert.equal(result.accepted, false);
 });
 
+test("urbanhermit metadata contract rejects equivalent free-text privacy and truth attacks", () => {
+  const mutations = [
+    (ledger) => ledger.metricBoundary.doesNotEstablish.push(
+      "Protected Person at https://example.com/private-profile"
+    ),
+    (ledger) => { ledger.populationDefinition = "All 434 records were fully recovered."; },
+    (ledger) => {
+      ledger.populationDefinition += " Protected Person at https://example.com/private-profile";
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const alteredLedger = structuredClone(urbanhermitLedger);
+    mutate(alteredLedger);
+    const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  }
+});
+
 test("urbanhermit eval rejects an empty selected-source inventory", () => {
   const alteredLedger = structuredClone(urbanhermitLedger);
   alteredLedger.aggregateFindings.selectedMissionSourceStatusIds = [];
@@ -1553,6 +1576,32 @@ test("urbanhermit independent contracts reject dual-sided semantic overclaims", 
     bankSource.supportsGenerally = sourceOriginals[1];
     moduleClaim.internalClaim = claimOriginals[0];
     bankClaim.internalClaim = claimOriginals[1];
+  }
+});
+
+test("urbanhermit semantic digest rejects dual-sided paraphrased observation overclaims", () => {
+  const moduleObservation = urbanhermitSocialCorpus.observations.find(
+    (item) => item.id === "OBS-URBANHERMIT-WATER-PRACTICE"
+  );
+  const bankObservation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-URBANHERMIT-WATER-PRACTICE"
+  );
+  assert.ok(moduleObservation && bankObservation);
+  const originals = [moduleObservation.text, bankObservation.text];
+
+  try {
+    const overclaim = "Jamie was the decisive leader whose work guaranteed the river project's success.";
+    moduleObservation.text = overclaim;
+    bankObservation.text = overclaim;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    moduleObservation.text = originals[0];
+    bankObservation.text = originals[1];
   }
 });
 

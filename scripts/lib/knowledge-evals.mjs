@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -25,6 +26,10 @@ export function loadKnowledgeEvalSuite() {
 
 function score(passed, strong = true) {
   return passed ? (strong ? 5 : 4) : 1;
+}
+
+function sha256(value) {
+  return createHash("sha256").update(value).digest("hex");
 }
 
 export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures = {}) {
@@ -1482,6 +1487,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     (account) => account.handle === "@urbanhermit"
   );
   const urbanLedgerText = urbanLedger ? JSON.stringify(urbanLedger) : "";
+  const urbanLedgerMetadataContract = urbanLedger ? structuredClone(urbanLedger) : null;
+  if (urbanLedgerMetadataContract) urbanLedgerMetadataContract.records = [];
+  const urbanLedgerMetadataContractHash = urbanLedgerMetadataContract
+    ? sha256(JSON.stringify(urbanLedgerMetadataContract))
+    : "";
   const urbanForbiddenRecordFields = [
     "recordKey",
     "contentDigestSha256",
@@ -1703,6 +1713,58 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     !/(?:single-handedly|solely led|caused (?:the )?(?:policy|outcome)|proves? (?:all|every)|every coalition campaign|definitively delivered|all of Jamie's professional impact)/i.test(
       urbanPositiveSemanticText
     );
+  const urbanSemanticContractHash = sha256(JSON.stringify({
+    sources: urbanFullSources.map((source) => source && ({
+      id: source.id,
+      title: source.title,
+      organization: source.organization,
+      author: source.author,
+      kind: source.kind,
+      visibility: source.visibility,
+      preservationStatus: source.preservationStatus,
+      publishedAt: source.publishedAt,
+      canonicalUrl: source.canonicalUrl,
+      publicCitation: source.publicCitation,
+      publicNote: source.publicNote,
+      supportsGenerally: source.supportsGenerally,
+      doesNotEstablish: source.doesNotEstablish
+    })),
+    observations: urbanFullObservations.map((observation) => observation && ({
+      id: observation.id,
+      sourceId: observation.sourceId,
+      project: observation.project,
+      kind: observation.kind,
+      text: observation.text,
+      locator: observation.locator,
+      status: observation.status,
+      publicSafe: observation.publicSafe,
+      claimIds: observation.claimIds,
+      researchInquiryIds: observation.researchInquiryIds,
+      limitations: observation.limitations
+    })),
+    claims: urbanFullClaims.map((claim) => claim && ({
+      id: claim.id,
+      project: claim.project,
+      internalClaim: claim.internalClaim,
+      status: claim.status,
+      projections: claim.projections,
+      evidence: claim.evidence,
+      boundaries: claim.boundaries,
+      antiClaims: claim.antiClaims,
+      researchInquiryIds: claim.researchInquiryIds
+    })),
+    inquiries: urbanFullInquiries.map((inquiry) => inquiry && ({
+      id: inquiry.id,
+      project: inquiry.project,
+      question: inquiry.question,
+      methods: inquiry.methods,
+      resultStatus: inquiry.resultStatus,
+      findings: inquiry.findings,
+      limitations: inquiry.limitations,
+      sourceIds: inquiry.sourceIds,
+      publicSummary: inquiry.publicSummary
+    }))
+  }));
   const urbanMethodContractHolds = Boolean(
     urbanStringArray(urbanLedger?.method?.surfaces) &&
       JSON.stringify(urbanLedger.method.surfaces) === JSON.stringify(urbanFull.methodContract.surfaces) &&
@@ -1765,6 +1827,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       ) &&
       urbanLedger.sourceProfile === "https://x.com/urbanhermit" &&
       urbanLedger.reviewedAt === "2026-07-14" &&
+      urbanLedgerMetadataContractHash === urbanFull.expectedLedgerMetadataSha256 &&
+      urbanSemanticContractHash === urbanFull.expectedSemanticContractSha256 &&
       urbanLedger.populationAudit.profileCountObserved === urbanFull.expectedProfileCount &&
       urbanLedger.populationAudit.profileAndBoundedSearchItemsRecovered === urbanFull.expectedUniqueItems &&
       urbanLedger.populationAudit.unresolvedPopulationSlots === urbanFull.expectedUnresolvedSlots &&

@@ -580,6 +580,8 @@
       "expectedClaimCount": 8,
       "expectedInquiryCount": 3,
       "expectedLinkedSourceEdgeCount": 4,
+      "expectedLedgerMetadataSha256": "22fc6d051dd57a476015117ca5aa9e91d27db861faf4d57df86a9451edc1124d",
+      "expectedSemanticContractSha256": "5e735233a76fe98098c09bc9f6e8f4c170bd1bbfbd7e2e84104ba8ac0a8d34dd",
       "methodContract": {
         "surfaces": [
           "Posts tab",
