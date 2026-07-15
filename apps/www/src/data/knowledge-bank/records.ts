@@ -98,6 +98,13 @@ import {
   kcSpacesFundFacebookPostResearchInquiries,
   kcSpacesFundFacebookPostSources
 } from "./kcspacesfund-facebook-posts-2026-07.ts";
+import {
+  jamiePersonalFacebookPostClaims,
+  jamiePersonalFacebookPostIntakeItems,
+  jamiePersonalFacebookPostObservations,
+  jamiePersonalFacebookPostResearchInquiries,
+  jamiePersonalFacebookPostSources
+} from "./jamie-personal-facebook-posts-2026-07.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -115,6 +122,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostIntakeItems,
     ...nycacFacebookPostIntakeItems,
     ...kcSpacesFundFacebookPostIntakeItems,
+    ...jamiePersonalFacebookPostIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -413,6 +421,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostSources,
     ...nycacFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
+    ...jamiePersonalFacebookPostSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1442,6 +1451,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostObservations,
     ...nycacFacebookPostObservations,
     ...kcSpacesFundFacebookPostObservations,
+    ...jamiePersonalFacebookPostObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -2039,6 +2049,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostClaims,
     ...nycacFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
+    ...jamiePersonalFacebookPostClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -3104,6 +3115,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostResearchInquiries,
     ...nycacFacebookPostResearchInquiries,
     ...kcSpacesFundFacebookPostResearchInquiries,
+    ...jamiePersonalFacebookPostResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",

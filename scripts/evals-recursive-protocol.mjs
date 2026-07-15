@@ -69,6 +69,8 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-wowlist-facebook-posts-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-nycac-facebook-posts-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-kcspacesfund-facebook-posts-full-population.md",
+  "docs/knowledge-bank/intake/2026-07-15-jamie-personal-facebook-posts-full-population.md",
+  "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
   "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
@@ -83,6 +85,7 @@ const requiredFiles = [
   "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
   "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+  "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
   "docs/knowledge-bank/projects/kansas-city-neighborhood-programs.md",
   "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-events.md",
@@ -90,6 +93,7 @@ const requiredFiles = [
   "evals/knowledge-bank/runs/2026-07-15-wowlist-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-kcspacesfund-facebook-posts.md",
+  "evals/knowledge-bank/runs/2026-07-15-jamie-personal-facebook-posts.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
@@ -101,6 +105,7 @@ const requiredFiles = [
   "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/nycac-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07.ts",
+  "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
@@ -125,6 +130,9 @@ const requiredFiles = [
   "scripts/evals-wowlist-facebook-posts.mjs",
   "scripts/evals-nycac-facebook-posts.mjs",
   "scripts/evals-kcspacesfund-facebook-posts.mjs",
+  "scripts/evals-jamie-personal-facebook-posts.mjs",
+  "scripts/lib/personal-facebook-posts-guard.mjs",
+  "scripts/tests/personal-facebook-posts-guard.test.mjs",
   "scripts/lib/urbanhermit-mission-classifier.mjs",
   "scripts/evals-knowledge-lifecycle.mjs",
   "scripts/report-knowledge-lifecycle.mjs",
@@ -154,6 +162,8 @@ for (const script of [
   "evals:wowlist-facebook-posts",
   "evals:nycac-facebook-posts",
   "evals:kcspacesfund-facebook-posts",
+  "evals:jamie-personal-facebook-posts",
+  "test:personal-facebook-posts-guard",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -239,6 +249,24 @@ if (
 }
 
 if (
+  scripts.check &&
+  !scripts.check.includes("npm run evals:jamie-personal-facebook-posts")
+) {
+  fail(
+    "package.json check script must include npm run evals:jamie-personal-facebook-posts"
+  );
+}
+
+if (
+  scripts.check &&
+  !scripts.check.includes("npm run test:personal-facebook-posts-guard")
+) {
+  fail(
+    "package.json check script must include npm run test:personal-facebook-posts-guard"
+  );
+}
+
+if (
   scripts["evals:knowledge-lifecycle"] !==
   "node scripts/evals-knowledge-lifecycle.mjs"
 ) {
@@ -316,6 +344,24 @@ if (
   );
 }
 
+if (
+  scripts["evals:jamie-personal-facebook-posts"] !==
+  "node scripts/evals-jamie-personal-facebook-posts.mjs"
+) {
+  fail(
+    "package.json evals:jamie-personal-facebook-posts must run scripts/evals-jamie-personal-facebook-posts.mjs"
+  );
+}
+
+if (
+  scripts["test:personal-facebook-posts-guard"] !==
+  "node --test scripts/tests/personal-facebook-posts-guard.test.mjs"
+) {
+  fail(
+    "package.json test:personal-facebook-posts-guard must run the personal Facebook guard tests"
+  );
+}
+
 if (scripts["evals:recursive"] !== "node scripts/evals-recursive-protocol.mjs") {
   fail("package.json evals:recursive must run scripts/evals-recursive-protocol.mjs");
 }
@@ -384,6 +430,50 @@ const nycartcXModule = read(
   "apps/www/src/data/knowledge-bank/nycartc-x-corpus.ts"
 );
 const fairRentCaseStudy = read("apps/www/src/content/work/fair-rent-nyc.mdx");
+const personalFacebookControls = JSON.parse(
+  read("docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json")
+);
+const personalFacebookReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-jamie-personal-facebook-posts-full-population.md"
+);
+const personalFacebookReport = read(
+  "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md"
+);
+
+if (
+  personalFacebookControls.populationControl?.uniqueRecords !== 1243 ||
+  personalFacebookControls.populationControl?.cursorPages !== 621 ||
+  personalFacebookControls.populationControl?.terminalHasNextPage !== false ||
+  personalFacebookControls.missionRouting?.uniqueRecords !== 181 ||
+  personalFacebookControls.postedUrlInventory?.uniqueNormalizedExternalUrls !== 549
+) {
+  fail("personal Facebook public controls do not preserve the verified population");
+}
+
+for (const expected of [
+  "not actions by the named stakeholders",
+  "not evidence of engagement",
+  "not a native Meta export"
+]) {
+  requireIncludes(
+    JSON.stringify(personalFacebookControls),
+    expected,
+    "personal Facebook controls"
+  );
+}
+
+for (const expected of [
+  "record-level corpus therefore remains protected",
+  "No public website copy changes",
+  "not actions by those stakeholders",
+  "Not employment, title, contract, team membership, or hiring authority"
+]) {
+  requireIncludes(
+    `${personalFacebookReceipt}\n${personalFacebookReport}`.replace(/\s+/g, " "),
+    expected,
+    "personal Facebook research documentation"
+  );
+}
 
 for (const doc of [
   ["docs/production-readiness.md", productionReadiness],
