@@ -62,6 +62,28 @@ replacing the earlier salt-water-only boundary with independently reported Gulf
 terminus language while preserving the collaborative and incomplete-route
 limits.
 
+# 2026-07-15 KC Town Hall Phase One and neighborhood operations
+
+Three bounded claims preserve newly surfaced implementation depth without
+promoting it to the website or resume before role attribution is corroborated:
+
+- `CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION` - the municipal packet labels the
+  $189,629 Phase One cold-shell work completed in 2019 and itemizes roof/TPO,
+  masonry, floor framing, water, access, safety, transport, and cleanup. Jamie
+  reports serving as general contractor; that title remains a firsthand lead.
+- `CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY` - the packet reproduces the survey,
+  credits a process with Oak Park Neighborhood Association and New Horizon
+  Missionary Baptist Church, and says results directly shaped the proposal.
+  Jamie's handbill and data-system authorship remains under research.
+- `CLM-TIRED-OF-TIRES-NEIGHBORHOOD-OPERATIONS` - a protected public-site
+  archive documents monthly free tire pickup with Oak Park and a
+  project-reported $17,768 in avoided fees by 2020. Jamie's individual operating
+  role and Indian Mound expansion remain under research.
+
+Cleveland Avenue Unify to Beautify remains an intake and inquiry rather than an
+accomplishment claim. HENC's strategic plan supports the coalition context but
+not the specific program, Jamie's role, or a funding outcome.
+
 # 2026-07-13 NYC Artist Coalition campaign press corpus
 
 The four captured campaign Press sections directly support one held

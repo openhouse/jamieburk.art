@@ -75,6 +75,28 @@ research lead. Do not name the receiving organization or assert the timing,
 handoff mechanics, legal assignment, ownership transfer, or subsequent project
 disposition without public-safe corroboration and approval.
 
+Do not describe Phase One completion as completion of the later redevelopment
+plan. Do not say Jamie personally performed every construction trade, that the
+later appropriation funded Phase One, or that the municipal packet independently
+confirms Jamie's general-contractor title.
+
+Do not publish neighborhood survey responses or contact data, claim the survey
+statistically represented the whole neighborhood, or omit Oak Park Neighborhood
+Association and New Horizon Missionary Baptist Church from the documented
+process.
+
+## Kansas City Neighborhood Operations
+
+Do not convert the Tired of Tires page's project-published $17,768 estimate into
+an independently audited City figure or an unsupported tire count. Do not claim
+Jamie's individual operating role or the Indian Mound expansion as independently
+confirmed until another source is reviewed.
+
+Do not publish Cleveland Avenue Unify to Beautify as an accomplishment claim
+yet. HENC's strategic plan establishes coalition context, not the specific
+program, Jamie's role, Pastor Lee's authorship, elected-official participation,
+or a causal relationship to capital funding.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

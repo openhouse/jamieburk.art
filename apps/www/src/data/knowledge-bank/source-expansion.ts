@@ -149,15 +149,24 @@ export const sourceExpansionSources = [
     canonicalUrl: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
     preferredPublicUrl: "canonical",
     publicCitation: "Central City Economic Development Sales Tax Board public-meeting record, 2019.",
-    publicNote: "The municipal record identifies Jamie as KC Town-Hall's presenter, records a $490,539 request, describes four retail spaces and three apartments at 36th and Indiana, and records the later unanimous recommendation.",
+    publicNote: "The municipal record identifies Jamie as KC Town-Hall's presenter, labels the $189,629 Phase One cold-shell work completed in 2019, says a neighborhood survey directly shaped the proposal, records a $490,539 request, and records the later unanimous recommendation.",
     supportsGenerally: [
       "Jamie was identified as the KC Town-Hall presenter",
+      "Phase One cold-shell work was labeled completed in 2019",
+      "the Phase One value was listed as $189,629",
+      "Phase One included roof and TPO membrane work, masonry, floor framing, water connection, access, safety, transport, and cleanup",
+      "the proposal reproduced the neighborhood survey handbill",
+      "the survey was conducted with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church",
+      "the proposal states that survey results directly shaped the proposal",
       "the proposal requested $490,539",
       "the proposal described four retail spaces and three apartment units",
       "the board unanimously recommended $490,539 to the City Council"
     ],
     doesNotEstablish: [
       "that Jamie acted alone",
+      "Jamie's general-contractor title",
+      "Jamie's sole authorship of the neighborhood survey handbill or backing data system",
+      "completion of Phase Two or the later redevelopment plan",
       "final receipt or disbursement of funds",
       "current project or property status",
       "private financial or legal details"

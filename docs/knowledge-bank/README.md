@@ -88,4 +88,8 @@ one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+pilot. The Kansas City records are separated into
+[KC Town Hall](projects/kc-town-hall.md) and
+[neighborhood operations](projects/kansas-city-neighborhood-operations.md) so
+construction delivery, participatory listening, recurring service operations,
+and still-open role research do not blur into one claim.

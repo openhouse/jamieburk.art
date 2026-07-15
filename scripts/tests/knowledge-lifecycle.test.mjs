@@ -26,6 +26,12 @@ import {
   kcTownHallStewardshipTransitionIntake
 } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-stewardship-transition.ts";
 import {
+  kcTownHallPhaseOneNeighborhoodClaims,
+  kcTownHallPhaseOneNeighborhoodInquiries,
+  kcTownHallPhaseOneNeighborhoodIntake,
+  kcTownHallPhaseOneNeighborhoodSources
+} from "../../apps/www/src/data/knowledge-bank/kc-town-hall-phase-one-and-neighborhood-operations.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -185,6 +191,118 @@ test("KC Town Hall stewardship transition remains a separate research lead", () 
     /Historical project for Jamie; current property or redevelopment status is not asserted\./
   );
   assert.doesNotMatch(publicSurfaces, /mission-aligned organization/i);
+});
+
+test("KC Town Hall Phase One preserves completed scope without overpromoting Jamie's title", () => {
+  const claim = kcTownHallPhaseOneNeighborhoodClaims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION"
+  );
+  const inquiry = kcTownHallPhaseOneNeighborhoodInquiries.find(
+    (item) => item.id === "INQ-KC-TOWN-HALL-PHASE-ONE-ROLE"
+  );
+  const projection = claim.projections[0];
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"
+  );
+
+  assert.equal(claim.status, "use-with-care");
+  assert.equal(projection.status, "hold");
+  assert.deepEqual(projection.surfaces, []);
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.ok(source.supportsGenerally.includes("Phase One cold-shell work was labeled completed in 2019"));
+  assert.ok(source.supportsGenerally.includes("the Phase One value was listed as $189,629"));
+  assert.ok(source.doesNotEstablish.includes("Jamie's general-contractor title"));
+  assert.match(claim.internalClaim, /roof and TPO membrane work/);
+  assert.ok(claim.boundaries.some((item) => /firsthand account/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /every construction trade/i.test(item)));
+});
+
+test("KC Town Hall survey records listening evidence while protecting people and attribution", () => {
+  const claim = kcTownHallPhaseOneNeighborhoodClaims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY"
+  );
+  const intake = kcTownHallPhaseOneNeighborhoodIntake.find(
+    (item) => item.id === "INT-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY-2026-07-15"
+  );
+  const sourceIds = new Set(claim.evidence.map((item) => item.sourceId));
+
+  assert.deepEqual(
+    sourceIds,
+    new Set([
+      "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      "SRC-KC-TOWN-HALL-PUBLIC-SITE-ARCHIVE-2020"
+    ])
+  );
+  assert.equal(claim.projections[0].status, "hold");
+  assert.ok(claim.boundaries.some((item) => /response count/i.test(item)));
+  assert.ok(claim.boundaries.some((item) => /phone numbers/i.test(item)));
+  assert.ok(intake.boundaries.some((item) => /New Horizon Missionary Baptist Church/i.test(item)));
+});
+
+test("Tired of Tires remains a bounded project-level operating claim", () => {
+  const claim = kcTownHallPhaseOneNeighborhoodClaims.find(
+    (item) => item.id === "CLM-TIRED-OF-TIRES-NEIGHBORHOOD-OPERATIONS"
+  );
+  const archiveSource = kcTownHallPhaseOneNeighborhoodSources.find(
+    (item) => item.id === "SRC-KC-TOWN-HALL-PUBLIC-SITE-ARCHIVE-2020"
+  );
+  const inquiry = kcTownHallPhaseOneNeighborhoodInquiries.find(
+    (item) => item.id === "INQ-TIRED-OF-TIRES-JAMIE-ROLE"
+  );
+
+  assert.equal(claim.projections[0].status, "hold");
+  assert.match(claim.internalClaim, /reports \$17,768/);
+  assert.ok(claim.boundaries.some((item) => /project's published estimate/i.test(item)));
+  assert.ok(claim.boundaries.some((item) => /Indian Mound.*pending/i.test(item)));
+  assert.ok(archiveSource.doesNotEstablish.some((item) => /individual design/i.test(item)));
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.ok(inquiry.limitations.some((item) => /No reviewed public source establishes the Indian Mound expansion/i.test(item)));
+});
+
+test("Cleveland Avenue remains an inquiry, not an accomplishment claim", () => {
+  const intake = kcTownHallPhaseOneNeighborhoodIntake.find(
+    (item) => item.id === "INT-CLEVELAND-UNIFY-BEAUTIFY-MEMORY-2026-07-15"
+  );
+  const inquiry = kcTownHallPhaseOneNeighborhoodInquiries.find(
+    (item) => item.id === "INQ-CLEVELAND-UNIFY-BEAUTIFY-JAMIE-ROLE"
+  );
+  const source = kcTownHallPhaseOneNeighborhoodSources.find(
+    (item) => item.id === "SRC-HENC-STRATEGIC-PLAN-2024"
+  );
+
+  assert.deepEqual(intake.claimIds, []);
+  assert.deepEqual(intake.inquiryIds, [inquiry.id]);
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.ok(source.doesNotEstablish.includes("the Cleveland Avenue Unify to Beautify program"));
+  assert.ok(source.doesNotEstablish.includes("Jamie's role in HENC or the Cleveland Avenue program"));
+  assert.ok(
+    kcTownHallPhaseOneNeighborhoodClaims.every(
+      (claim) => !/CLEVELAND-UNIFY-BEAUTIFY/.test(claim.id)
+    )
+  );
+});
+
+test("new KC fieldwork records do not silently project onto public hiring surfaces", () => {
+  assert.equal(kcTownHallPhaseOneNeighborhoodSources.length, 3);
+  assert.equal(kcTownHallPhaseOneNeighborhoodClaims.length, 3);
+  assert.equal(kcTownHallPhaseOneNeighborhoodInquiries.length, 4);
+  assert.equal(kcTownHallPhaseOneNeighborhoodIntake.length, 4);
+
+  const publicSurfaces = [
+    readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8"),
+    readFileSync("apps/www/src/data/proofs.ts", "utf8"),
+    readFileSync("apps/www/src/data/work.ts", "utf8"),
+    readFileSync("apps/www/src/app/resume/page.tsx", "utf8")
+  ].join("\n");
+
+  assert.doesNotMatch(publicSurfaces, /general contractor/i);
+  assert.doesNotMatch(publicSurfaces, /Tired of Tires/i);
+  assert.doesNotMatch(publicSurfaces, /Unify to Beautify/i);
+  assert.doesNotMatch(publicSurfaces, /\$189,629/);
+  assert.doesNotMatch(
+    JSON.stringify(kcTownHallPhaseOneNeighborhoodIntake),
+    /\/Users\/|\/Volumes\/|supporting-materials|\.docx|\.xlsx/i
+  );
 });
 
 test("campaign press ingestion is complete, deduplicated, and archived", () => {

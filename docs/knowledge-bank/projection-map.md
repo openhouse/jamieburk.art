@@ -77,6 +77,12 @@ as source discipline rather than dumping the bank onto the page.
 | `CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL` | Hold pending role research | Coalition-level evidence is strong; Jamie's exact individual town-hall production contribution needs production records or collaborator testimony before stronger projection. |
 | `CLM-TALKS-NOT-RAIDS-ADVOCACY` | Hold for dedicated policy sequence | Jamie's testimony and campaign role are strong. A dedicated sequence is needed so readers do not confuse advocacy with legislative sponsorship. |
 | `CLM-MARCH-TRANSPARENCY-TO-CURE` | Hold for dedicated policy sequence | The long arc matters, but it must be shown as collective, multi-year change rather than linear causality from one person, campaign, or law. |
+| `CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION` | Hold pending role attribution | The completed Phase One scope is strong implementation evidence; corroborate Jamie's general-contractor title before composing it into hiring surfaces. |
+| `CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY` | Hold pending authorship and method review | The listening process demonstrably shaped the proposal; preserve partner credit and keep response/contact data private. |
+| `CLM-TIRED-OF-TIRES-NEIGHBORHOOD-OPERATIONS` | Hold pending role and metric review | The program and project-published savings figure are documented; Jamie's operating role, Indian Mound expansion, and any tire count need corroboration. |
+
+Cleveland Avenue Unify to Beautify is not yet a claim and has no projection.
+It remains a research inquiry with HENC context only.
 
 The generated `reports/generated/knowledge-lifecycle.md` lists every canonical
 projection decision and every mature claim currently held from website routes.
