@@ -167,11 +167,71 @@ at least one interaction, totaling 2 replies, 20 reposts, and 21 likes. These
 attendance, or impact. Interaction counts on the 16 redistributed source
 records are excluded from the project-account total.
 
+### KC Town Hall
+
+All 183 profile-counted records materialized and were reviewed: 142 originals,
+13 replies, and 28 reposts. Posts yielded 170 primary records. Replies rendered
+188 cards: the same 183 primary records plus five parent or conversation-context
+cards authored by other accounts. Keeping those contexts separate reconciles
+the account population exactly and prevents a platform presentation detail from
+becoming a false five-record surplus.
+
+The public-safe fixture preserves a row-level `tire-related` classification for
+all 100 relevant records and a mechanically derived `survey-linked`
+classification for 12 records. The former records a close-reading judgment
+against each inspectable public status URL; raw post text remains excluded.
+
+The 155 `@KCTownHall`-authored records show the account functioning as a public
+operating surface. It opened a neighborhood-process and survey loop around the
+36th-and-Indiana site, published project and building updates, coordinated
+recurring free household tire-pickup intake from 2019 through 2022, circulated
+cleanup and civic resources, and sustained stakeholder dialogue. One hundred
+records are tire-related; 12 contain a project survey link. These counts describe
+publishing and workflow patterns, not independently audited outcomes or survey
+participation.
+
+Across the full population, 118 records contained external links, producing 133
+occurrences and 31 distinct short URLs. Representative sources include Kansas
+City Star reporting on Leon's Thriftway, Northeast News affordable-housing
+coverage, KCUR election guidance, official Missouri voter information, RideKC
+transit planning, a KCATA ozone-alert resource, and KC Town Hall cleanup and
+COVID-resource videos. Sources circulated by the account are context, not
+coverage of KC Town Hall unless the source itself says so.
+
+Three sitting Kansas City Council Member accounts directly responded in
+mission-relevant contexts. Quinton Lucas quote-responded to a KC Town Hall
+alert about Leon's Thriftway and described contact with ownership. Jolie Justus
+replied with bounded EDC and community follow-up. Melissa Robinson thanked the
+account for work to improve community conditions. Official City records confirm
+that each was serving on the Council at the relevant date. These are direct
+public responses, not blanket endorsements or proof that KC Town Hall caused a
+government decision.
+
+A Bridging the Gap collaborator separately reported receiving a large KC Town
+Hall tire drop-off. Two community accounts quote-amplified an Oak Park cleanup
+notice, and KCMO 311 responded in a service-resolution thread. Tags and mentions
+without responses are not counted as engagement.
+
+As a dated interface snapshot, 77 of the 155 account-authored records showed at
+least one interaction, totaling 22 replies, 70 reposts, 174 likes, and one
+bookmark. These 267 displayed units are not unique people, reach, conversion,
+participation, endorsement, or impact. Counts attached to the 28 redistributed
+source posts are excluded from the account-authored total.
+
+The account published specific tire and resident-savings totals. Those figures
+remain attributed first-party evidence pending independently inspectable
+drop-off, disposal, or collaborator records. The institutional feed is likewise
+not assigned post by post to Jamie. The social archive does not establish the
+separate municipal funding chain, contract execution, funding receipt,
+expenditure, or completion of the building project.
+
 ## Lifecycle state
 
 The CallNYC public-guidance and Council-engagement claims, the mission-relevant
 NYC Artist Coalition engagement claim, and the complete-population WOW List
-product-surface claim are selected for their case studies. The NYC Artist
-Coalition account-establishment claim remains held. Open tasks cover the three
-unmaterialized CallNYC records, post-2020 coalition mentions, collaborator
-corroboration, and WOW List handle lineage.
+product-surface claim are selected for their case studies. The complete-
+population KC Town Hall operating-surface claim is also selected. The NYC
+Artist Coalition account-establishment claim remains held. Open tasks cover the
+three unmaterialized CallNYC records, post-2020 coalition mentions, collaborator
+corroboration, WOW List handle lineage, independent TiredOfTires outcome
+corroboration, and recovery of KC Town Hall site and survey decision records.

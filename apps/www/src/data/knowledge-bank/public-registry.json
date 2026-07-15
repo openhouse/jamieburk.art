@@ -360,6 +360,24 @@
       ]
     },
     {
+      "id": "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
+      "title": "KC Town Hall project account profile",
+      "organization": "KC Town Hall",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall project-account profile observed July 14, 2026: @KCTownHall, joined March 2018, 183 posts, and links to the project website and other public channels.",
+      "publicNote": "Counts are a point-in-time observation and may change.",
+      "doesNotEstablish": [
+        "authorship of every post",
+        "follower adoption",
+        "project completion"
+      ]
+    },
+    {
       "id": "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
       "title": "Authenticated @CallNYCApp full-population archival review",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -397,6 +415,27 @@
         "every deleted or unindexed historical interaction",
         "authorship of every institutional post",
         "reach, conversion, endorsement, attendance, or platform-wide adoption"
+      ]
+    },
+    {
+      "id": "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+      "title": "Authenticated @KCTownHall full-population archival review",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/303fcd47f6760d15822d793f1a744cfe17055ad8/apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated July 14, 2026 review of all 183 @KCTownHall records reported by the profile counter, with posted-link, conversation-context, and bounded stakeholder metadata preserved in the repository.",
+      "publicNote": "Posts yielded 170 primary records. Replies rendered 188 cards: the same 183 primary records plus five parent or conversation-context cards authored by other accounts. Excluding those contexts reconciles the union exactly to 183.",
+      "doesNotEstablish": [
+        "every deleted or unindexed historical interaction",
+        "authorship of every institutional post",
+        "independent verification of account-published program totals",
+        "reach, participation, endorsement, project completion, or causal impact"
       ]
     },
     {
@@ -879,6 +918,137 @@
         "meeting attendance",
         "formal partnership",
         "platform-wide participation"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-LAUNCH-2018-07-02",
+      "title": "KC Town Hall launch post",
+      "author": "KC Town Hall",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-07-02",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013893135695601665",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall's launch post invited people to help build a permanent neighborhood resource and cultural center on Indiana Avenue.",
+      "doesNotEstablish": [
+        "project completion",
+        "permanent operation",
+        "individual authorship"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+      "title": "KC Town Hall neighborhood-process invitation",
+      "author": "KC Town Hall",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-07-02",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013903289392517120",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall publicly described a neighborhood process and invited residents to say what they wanted in the 36th-and-Indiana site.",
+      "doesNotEstablish": [
+        "survey participation totals",
+        "adoption of every response",
+        "project completion"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+      "title": "KC Town Hall free tire-pickup workflow post",
+      "author": "KC Town Hall",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-11-06",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1457012244588412935",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall used the account to invite East Kansas City households into a free tire-pickup and recycling workflow and to publish before-and-after updates.",
+      "publicNote": "The linked public post contains a historical project contact number; the knowledge-bank fixture excludes contact details and raw post text.",
+      "doesNotEstablish": [
+        "independently verified tire totals",
+        "total participation",
+        "causal health impact"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-LUCAS-LEONS-RESPONSE-2019-04-29",
+      "title": "Quinton Lucas response to KC Town Hall's Leon's alert",
+      "organization": "Kansas City, Missouri City Council",
+      "author": "Quinton Lucas",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Then-Council Member Quinton Lucas quote-responded to KC Town Hall's Leon's Thriftway alert, saying he had spoken with ownership and was looking for a way to help keep the store operating.",
+      "doesNotEstablish": [
+        "KC Town Hall policy causality",
+        "store preservation",
+        "blanket endorsement"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-JUSTUS-LEONS-RESPONSE-2019-04-29",
+      "title": "Jolie Justus response to KC Town Hall about Leon's",
+      "organization": "Kansas City, Missouri City Council",
+      "author": "Jolie Justus",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Then-Council Member Jolie Justus replied to KC Town Hall that she had been working with the EDC on possible solutions, had visited for an update, and saw strong community commitment.",
+      "doesNotEstablish": [
+        "KC Town Hall policy causality",
+        "store preservation",
+        "blanket endorsement"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-ROBINSON-COMMUNITY-CONDITIONS-2020-08-01",
+      "title": "Melissa Robinson response to KC Town Hall",
+      "organization": "Kansas City, Missouri City Council",
+      "author": "Melissa Robinson",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-08-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Melissa Robinson directly thanked KC Town Hall for doing work to improve community conditions.",
+      "doesNotEstablish": [
+        "specific program totals",
+        "policy adoption",
+        "blanket endorsement"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
+      "title": "Bridging the Gap collaborator report of a KC Town Hall tire drop-off",
+      "organization": "Bridging the Gap",
+      "author": "Bridging the Gap collaborator account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-08",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/trutheresme/status/1148277187583389703",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "A Bridging the Gap collaborator publicly reported receiving a large tire drop-off from KC Town Hall and connected it to healthier, greener communities.",
+      "doesNotEstablish": [
+        "exact tire count",
+        "full program scale",
+        "causal health outcome"
       ]
     },
     {
@@ -2005,6 +2175,114 @@
       ]
     },
     {
+      "id": "CLM-KCTH-SOCIAL-OPERATING-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A full pass over all 183 profile-counted records shows @KCTownHall operating as a neighborhood implementation and information surface: it opened a resident-input loop, coordinated recurring free household tire-pickup cycles, circulated civic resources, and preserved direct mission-relevant responses from three sitting Kansas City Council Member accounts plus tire-dropoff corroboration from a Bridging the Gap collaborator. The account was institutional; this record does not assign every post to Jamie or prove project completion, total participation, independently verified program totals, endorsement, or causal government impact.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
+          "relationship": "context",
+          "supports": [
+            "historical project account",
+            "timeline scope"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+          "relationship": "direct-support",
+          "supports": [
+            "complete displayed population and reconciliation",
+            "posted-URL, publishing-pattern, and stakeholder-response inventories"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-LAUNCH-2018-07-02",
+          "relationship": "direct-support",
+          "supports": [
+            "observable operating practice or stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+          "relationship": "direct-support",
+          "supports": [
+            "observable operating practice or stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+          "relationship": "direct-support",
+          "supports": [
+            "observable operating practice or stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-LUCAS-LEONS-RESPONSE-2019-04-29",
+          "relationship": "direct-support",
+          "supports": [
+            "observable operating practice or stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-JUSTUS-LEONS-RESPONSE-2019-04-29",
+          "relationship": "direct-support",
+          "supports": [
+            "observable operating practice or stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-ROBINSON-COMMUNITY-CONDITIONS-2020-08-01",
+          "relationship": "direct-support",
+          "supports": [
+            "observable operating practice or stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
+          "relationship": "direct-support",
+          "supports": [
+            "observable operating practice or stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "All 183 records reported by the profile counter materialized after five non-primary conversation-context cards were excluded; this is a complete displayed account population, not a complete history of deleted, private, or unindexed activity.",
+        "The corpus contains 100 tire-related records and documents recurring pickup workflows from 2019 through 2022, but exact tire and savings totals published by the account remain held for independent corroboration.",
+        "Three sitting Council Member accounts directly responded in mission-relevant contexts; direct response is not blanket endorsement, policy adoption, or proof of causality.",
+        "The follower count and 267 displayed interaction units are volatile context and are not used as adoption, reach, participation, endorsement, or impact measures.",
+        "Institutional account records are not attributed post by post to Jamie without authorship evidence.",
+        "The social archive does not establish the separate municipal funding chain, contract execution, receipt, expenditure, or project completion."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -2503,6 +2781,15 @@
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
         "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
+        "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
+        "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+        "SRC-KCTH-LAUNCH-2018-07-02",
+        "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+        "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+        "SRC-KCTH-LUCAS-LEONS-RESPONSE-2019-04-29",
+        "SRC-KCTH-JUSTUS-LEONS-RESPONSE-2019-04-29",
+        "SRC-KCTH-ROBINSON-COMMUNITY-CONDITIONS-2020-08-01",
+        "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
         "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
         "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
         "SRC-KCTH-KCMO-ORDINANCE-240317-2024"
@@ -2515,6 +2802,11 @@
           "sourceIds": [
             "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019"
           ]
+        },
+        {
+          "id": "social-operating-surface",
+          "claimId": "CLM-KCTH-SOCIAL-OPERATING-SURFACE",
+          "projection": "case-study"
         },
         {
           "id": "funding-decision-chain",

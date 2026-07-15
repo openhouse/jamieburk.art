@@ -14,6 +14,7 @@ const callNycGuidanceClaimId = "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE";
 const nycacCouncilClaimId = "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT";
 const nycacIdentityClaimId = "CLM-NYCAC-SHARED-IDENTITY-STEWARDSHIP";
 const wowListSocialClaimId = "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE";
+const kcTownHallSocialClaimId = "CLM-KCTH-SOCIAL-OPERATING-SURFACE";
 
 export const projectSocialAccounts = [
   {
@@ -60,6 +61,18 @@ export const projectSocialAccounts = [
     historicalHandleNote:
       "Project templates and a 2015 external mention use @WOWListNYC; this pass did not establish the exact account-rename history.",
   },
+  {
+    projectIds: ["kc-town-hall"],
+    campaigns: ["KC Town Hall", "TiredOfTires"],
+    currentHandle: "@KCTownHall",
+    canonicalUrl: "https://x.com/KCTownHall",
+    joined: "March 2018",
+    observedPostCount: 183,
+    observedFollowerCount: 132,
+    observedFollowingCount: 225,
+    observedAt: reviewedAt,
+    status: "historical-project-account",
+  },
 ] as const;
 
 export const socialMediaReviewSummary = {
@@ -87,6 +100,14 @@ export const socialMediaReviewSummary = {
   wowListDistinctExternalShortUrlCount: 35,
   wowListIncomingSearchRecordCount: 16,
   wowListMissionRelevantThirdPartyAccountCount: 10,
+  kcTownHallProfilePostCount: 183,
+  kcTownHallRecoveredTimelineRecordCount: 183,
+  kcTownHallRecoveredOriginalPostCount: 142,
+  kcTownHallRecoveredReplyCount: 13,
+  kcTownHallRecoveredRepostCount: 28,
+  kcTownHallAuthoredRecordCount: 155,
+  kcTownHallDistinctExternalShortUrlCount: 31,
+  kcTownHallDirectCouncilMemberAccountCount: 3,
   observedAt: reviewedAt,
 } as const;
 
@@ -695,6 +716,148 @@ const socialPostDescriptors: SocialPostDescriptor[] = [
     limitations: ["The response does not establish attendance or a formal relationship."],
     supportsClaimIds: [wowListSocialClaimId],
   },
+  {
+    sourceId: "SRC-KCTH-LAUNCH-2018-07-02",
+    observationId: "OBS-KCTH-LAUNCH-NEIGHBORHOOD-RESOURCE",
+    project: "kc-town-hall",
+    title: "KC Town Hall launch post",
+    author: "KC Town Hall",
+    kind: "institutional-social-post",
+    publishedAt: "2018-07-02",
+    canonicalUrl: "https://x.com/KCTownHall/status/1013893135695601665",
+    publicCitation:
+      "KC Town Hall's launch post invited people to help build a permanent neighborhood resource and cultural center on Indiana Avenue.",
+    supportsGenerally: ["public project identity", "neighborhood-resource purpose"],
+    doesNotEstablish: ["project completion", "permanent operation", "individual authorship"],
+    statement:
+      "The account launched as a participation and documentation surface for a proposed permanent neighborhood resource and cultural center.",
+    locator: "Post text, project link, and timestamp",
+    limitations: ["The launch statement describes intent, not completed implementation."],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+  },
+  {
+    sourceId: "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+    observationId: "OBS-KCTH-NEIGHBORHOOD-PROCESS",
+    project: "kc-town-hall",
+    title: "KC Town Hall neighborhood-process invitation",
+    author: "KC Town Hall",
+    kind: "institutional-social-post",
+    publishedAt: "2018-07-02",
+    canonicalUrl: "https://x.com/KCTownHall/status/1013903289392517120",
+    publicCitation:
+      "KC Town Hall publicly described a neighborhood process and invited residents to say what they wanted in the 36th-and-Indiana site.",
+    supportsGenerally: ["resident input invitation", "neighborhood process"],
+    doesNotEstablish: ["survey participation totals", "adoption of every response", "project completion"],
+    statement:
+      "The account opened a resident-input loop around the desired uses of the building and neighborhood site.",
+    locator: "Post text, project link, and timestamp",
+    limitations: ["The post does not report response volume or resulting decisions."],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+  },
+  {
+    sourceId: "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+    observationId: "OBS-KCTH-TIRED-OF-TIRES-WORKFLOW",
+    project: "kc-town-hall",
+    title: "KC Town Hall free tire-pickup workflow post",
+    author: "KC Town Hall",
+    kind: "institutional-social-post",
+    publishedAt: "2021-11-06",
+    canonicalUrl: "https://x.com/KCTownHall/status/1457012244588412935",
+    publicCitation:
+      "KC Town Hall used the account to invite East Kansas City households into a free tire-pickup and recycling workflow and to publish before-and-after updates.",
+    publicNote:
+      "The linked public post contains a historical project contact number; the knowledge-bank fixture excludes contact details and raw post text.",
+    supportsGenerally: ["service intake workflow", "recurring neighborhood cleanup", "operational updates"],
+    doesNotEstablish: ["independently verified tire totals", "total participation", "causal health impact"],
+    statement:
+      "The account operated as an intake and update surface for recurring free household tire pickup in East Kansas City.",
+    locator: "Post text, project link, workflow description, and timestamp",
+    limitations: [
+      "The account's own outcome totals require independent corroboration before promotion.",
+      "The post contains historical contact information that is not reproduced in the knowledge bank.",
+    ],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+  },
+  {
+    sourceId: "SRC-KCTH-LUCAS-LEONS-RESPONSE-2019-04-29",
+    observationId: "OBS-KCTH-LUCAS-LEONS-RESPONSE",
+    project: "kc-town-hall",
+    title: "Quinton Lucas response to KC Town Hall's Leon's alert",
+    author: "Quinton Lucas",
+    organization: "Kansas City, Missouri City Council",
+    kind: "government-social-post",
+    publishedAt: "2019-04-29",
+    canonicalUrl: "https://x.com/QuintonLucasKC/status/1122866432130334720",
+    publicCitation:
+      "Then-Council Member Quinton Lucas quote-responded to KC Town Hall's Leon's Thriftway alert, saying he had spoken with ownership and was looking for a way to help keep the store operating.",
+    supportsGenerally: ["direct Council Member response", "neighborhood food-access issue"],
+    doesNotEstablish: ["KC Town Hall policy causality", "store preservation", "blanket endorsement"],
+    statement:
+      "A sitting Council Member directly quote-responded to a KC Town Hall neighborhood food-access alert and described follow-up with store ownership.",
+    locator: "Quote-post text, quoted KC Town Hall status, and timestamp",
+    limitations: ["The response does not establish that KC Town Hall caused later action or outcomes."],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+  },
+  {
+    sourceId: "SRC-KCTH-JUSTUS-LEONS-RESPONSE-2019-04-29",
+    observationId: "OBS-KCTH-JUSTUS-LEONS-RESPONSE",
+    project: "kc-town-hall",
+    title: "Jolie Justus response to KC Town Hall about Leon's",
+    author: "Jolie Justus",
+    organization: "Kansas City, Missouri City Council",
+    kind: "government-social-post",
+    publishedAt: "2019-04-29",
+    canonicalUrl: "https://x.com/joliejustus/status/1122883010582466560",
+    publicCitation:
+      "Then-Council Member Jolie Justus replied to KC Town Hall that she had been working with the EDC on possible solutions, had visited for an update, and saw strong community commitment.",
+    supportsGenerally: ["direct Council Member response", "economic-development follow-up"],
+    doesNotEstablish: ["KC Town Hall policy causality", "store preservation", "blanket endorsement"],
+    statement:
+      "A sitting Council Member directly replied to KC Town Hall with a bounded account of EDC and community follow-up around Leon's.",
+    locator: "Reply text, participant context, and timestamp",
+    limitations: ["The reply does not establish a completed intervention or causal outcome."],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+  },
+  {
+    sourceId: "SRC-KCTH-ROBINSON-COMMUNITY-CONDITIONS-2020-08-01",
+    observationId: "OBS-KCTH-ROBINSON-COMMUNITY-CONDITIONS",
+    project: "kc-town-hall",
+    title: "Melissa Robinson response to KC Town Hall",
+    author: "Melissa Robinson",
+    organization: "Kansas City, Missouri City Council",
+    kind: "government-social-post",
+    publishedAt: "2020-08-01",
+    canonicalUrl: "https://x.com/Robinson4kc/status/1289714535251742726",
+    publicCitation:
+      "Council Member Melissa Robinson directly thanked KC Town Hall for doing work to improve community conditions.",
+    supportsGenerally: ["direct Council Member response", "community-condition work"],
+    doesNotEstablish: ["specific program totals", "policy adoption", "blanket endorsement"],
+    statement:
+      "A sitting Council Member directly acknowledged KC Town Hall's community-condition work.",
+    locator: "Reply text, conversation context, and timestamp",
+    limitations: ["The reply does not identify every underlying activity or independently quantify results."],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+  },
+  {
+    sourceId: "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
+    observationId: "OBS-KCTH-BTG-TIRE-DROPOFF",
+    project: "kc-town-hall",
+    title: "Bridging the Gap collaborator report of a KC Town Hall tire drop-off",
+    author: "Bridging the Gap collaborator account",
+    organization: "Bridging the Gap",
+    kind: "institutional-social-post",
+    publishedAt: "2019-07-08",
+    canonicalUrl: "https://x.com/trutheresme/status/1148277187583389703",
+    publicCitation:
+      "A Bridging the Gap collaborator publicly reported receiving a large tire drop-off from KC Town Hall and connected it to healthier, greener communities.",
+    supportsGenerally: ["external program corroboration", "tire drop-off", "environmental collaboration"],
+    doesNotEstablish: ["exact tire count", "full program scale", "causal health outcome"],
+    statement:
+      "An external environmental-program collaborator publicly corroborated a KC Town Hall tire drop-off.",
+    locator: "Post text, organization reference, and timestamp",
+    limitations: ["The post uses a qualitative scale description rather than an independently audited count."],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+  },
 ];
 
 const profileSources = [
@@ -746,6 +909,22 @@ const profileSources = [
       "The profile is historical and inactive. Counts are point-in-time observations; the exact history of the @WOWListNYC alias remains open.",
     supportsGenerally: ["current historical handle", "account start", "profile post count", "project domain"],
     doesNotEstablish: ["exact account-rename history", "authorship of every post", "platform-wide adoption"],
+  },
+  {
+    id: "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
+    title: "KC Town Hall project account profile",
+    organization: "KC Town Hall",
+    kind: "institutional-social-post",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: reviewedAt,
+    canonicalUrl: "https://x.com/KCTownHall",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "KC Town Hall project-account profile observed July 14, 2026: @KCTownHall, joined March 2018, 183 posts, and links to the project website and other public channels.",
+    publicNote: "Counts are a point-in-time observation and may change.",
+    supportsGenerally: ["project handle", "account start", "profile post count", "project channels"],
+    doesNotEstablish: ["authorship of every post", "follower adoption", "project completion"],
   },
 ] satisfies SourceRecord[];
 
@@ -1011,6 +1190,215 @@ const wowListCuratedSources = [
   },
 ] satisfies SourceRecord[];
 
+const kcTownHallPopulationSource = {
+  id: "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+  title: "Authenticated @KCTownHall full-population archival review",
+  organization: "Jamie Burkart portfolio knowledge bank",
+  author: "Codex authenticated archival review",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  capturedAt: reviewedAt,
+  accessedAt: reviewedAt,
+  canonicalUrl:
+    "https://github.com/openhouse/jamieburk.art/blob/303fcd47f6760d15822d793f1a744cfe17055ad8/apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+  preferredPublicUrl: "canonical",
+  publicCitation:
+    "Authenticated July 14, 2026 review of all 183 @KCTownHall records reported by the profile counter, with posted-link, conversation-context, and bounded stakeholder metadata preserved in the repository.",
+  publicNote:
+    "Posts yielded 170 primary records. Replies rendered 188 cards: the same 183 primary records plus five parent or conversation-context cards authored by other accounts. Excluding those contexts reconciles the union exactly to 183.",
+  supportsGenerally: [
+    "complete displayed account population",
+    "record-type and posted-URL inventory",
+    "publishing-pattern analysis",
+    "bounded stakeholder-response inventory",
+  ],
+  doesNotEstablish: [
+    "every deleted or unindexed historical interaction",
+    "authorship of every institutional post",
+    "independent verification of account-published program totals",
+    "reach, participation, endorsement, project completion, or causal impact",
+  ],
+} satisfies SourceRecord;
+
+const kcTownHallCuratedSources = [
+  {
+    id: "SRC-KCTH-KCSTAR-LEONS-2016",
+    title:
+      "Leon's Thriftway may be the oldest black-owned grocery store in the country",
+    author: "Monty Davis",
+    organization: "The Kansas City Star",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2016-07-01",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://www.kansascity.com/news/business/article87241897.html",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "The Kansas City Star profiled Leon Stapleton and Leon's Thriftway as a long-running Black-owned Kansas City grocery store rooted in neighborhood service.",
+    publicNote:
+      "Mission-relevant reporting circulated by @KCTownHall; it is not coverage of KC Town Hall or proof that the account preserved the store.",
+    supportsGenerally: ["neighborhood food-access context", "Black-owned business history"],
+    doesNotEstablish: ["KC Town Hall coverage", "KC Town Hall causal impact", "store preservation"],
+  },
+  {
+    id: "SRC-KCTH-NORTHEAST-AFFORDABLE-HOUSING-2018-09-19",
+    title: "Affordable Housing Policy hits the docket in KCMO",
+    organization: "Northeast News",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2018-09-19",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "http://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/",
+    archiveUrl:
+      "https://web.archive.org/web/20180920120704/http://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "Northeast News reported on Kansas City affordable-housing policy proposals and Council discussion in September 2018.",
+    publicNote:
+      "Local policy reporting circulated by @KCTownHall; it is context for the account's civic-information practice, not coverage of the project.",
+    supportsGenerally: ["local affordable-housing policy context", "civic-information circulation"],
+    doesNotEstablish: ["KC Town Hall coverage", "policy causality", "project completion"],
+  },
+  {
+    id: "SRC-KCTH-CURBED-RENT-RELIEF-2018-07-20",
+    title: "Tax credit for renters proposed by U.S. Senator Kamala Harris",
+    author: "Alissa Walker",
+    organization: "Curbed",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2018-07-20",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://www.curbed.com/2018/7/20/17595698/rent-relief-act-tax-credit-kamala-harris",
+    archiveUrl:
+      "https://web.archive.org/web/20180720221744/https://www.curbed.com/2018/7/20/17595698/rent-relief-act-tax-credit-kamala-harris",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "Curbed reported on a federal renter tax-credit proposal intended to provide relief to rent-burdened households.",
+    publicNote:
+      "National housing-policy reporting present in the @KCTownHall timeline through a repost; it is not KC Town Hall coverage.",
+    supportsGenerally: ["housing-affordability policy context", "mission-relevant source curation"],
+    doesNotEstablish: ["KC Town Hall coverage", "formal policy partnership", "policy impact"],
+  },
+  {
+    id: "SRC-KCTH-KCUR-PRIMARY-GUIDE-2018-08-05",
+    title: "A Cheat Sheet For Tuesday's Primary Election In Missouri",
+    author: "Erica Hunzinger",
+    organization: "KCUR",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live-and-archived",
+    publishedAt: "2018-08-05",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri",
+    archiveUrl:
+      "https://web.archive.org/web/20180805134939/http://www.kcur.org/post/cheat-sheet-tuesdays-primary-election-missouri",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "KCUR published an August 2018 guide to Missouri primary races, ballot issues, voter identification, and polling-place information.",
+    publicNote:
+      "Election information circulated by @KCTownHall; it does not establish voter turnout or project influence.",
+    supportsGenerally: ["voter information", "civic-resource distribution"],
+    doesNotEstablish: ["voter turnout", "KC Town Hall electoral impact", "partisan endorsement"],
+  },
+  {
+    id: "SRC-KCTH-RIDEKC-NEXT-2019",
+    title: "RideKC Next System Redesign",
+    organization: "Kansas City Area Transportation Authority",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "archived",
+    accessedAt: reviewedAt,
+    canonicalUrl: "https://ridekc.org/planning/ridekc-next",
+    archiveUrl:
+      "https://web.archive.org/web/20190821135819/https://ridekc.org/planning/ridekc-next",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "RideKC described RideKC Next as a comprehensive review and redesign of transit service focused on Kansas City, Missouri.",
+    publicNote:
+      "Official transit-planning information reposted by @KCTownHall; the repost does not establish a formal project partnership.",
+    supportsGenerally: ["public transit planning", "resident survey distribution"],
+    doesNotEstablish: ["formal partnership", "survey participation", "transit-plan causality"],
+  },
+  {
+    id: "SRC-KCTH-MISSOURI-VOTER-LOOKUP-2018",
+    title: "Missouri voter outreach search",
+    organization: "Missouri Secretary of State",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "The Missouri Secretary of State provides an official voter lookup and polling-place resource.",
+    publicNote:
+      "Official voter information circulated by @KCTownHall; the post does not establish use or turnout.",
+    supportsGenerally: ["official voter resource", "civic-information distribution"],
+    doesNotEstablish: ["resource use", "voter turnout", "electoral impact"],
+  },
+  {
+    id: "SRC-KCTH-KCATA-OZONE-ALERT-2018",
+    title: "Ozone Alert",
+    organization: "Kansas City Area Transportation Authority",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "archived",
+    accessedAt: reviewedAt,
+    canonicalUrl: "http://kcata.org/about_kcata/entries/ozone_alert/",
+    archiveUrl:
+      "https://web.archive.org/web/20181005031942/http://www.kcata.org/about_kcata/entries/ozone_alert",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "KCATA's Ozone Alert resource described reduced bus fares on designated ozone-alert days.",
+    publicNote:
+      "Official transit and public-health information circulated by @KCTownHall; the post does not establish ridership or health outcomes.",
+    supportsGenerally: ["public-health information", "transit resource distribution"],
+    doesNotEstablish: ["ridership", "health outcomes", "formal partnership"],
+  },
+  {
+    id: "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+    title: "Bike KC Master Plan council roster",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-01-01",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://www.kcmo.gov/home/showpublisheddocument/6992/637684219737100000",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "The City's 2019 Bike KC Master Plan lists Quinton Lucas as Third District-at-Large and Jolie Justus as Fourth District members of the City Council.",
+    supportsGenerally: ["Quinton Lucas Council service", "Jolie Justus Council service"],
+    doesNotEstablish: ["endorsement of KC Town Hall", "policy causality"],
+  },
+  {
+    id: "SRC-KCTH-KCMO-ROBINSON-SERVICE-RECORD",
+    title: "Melissa Robinson person and Council service record",
+    organization: "City Clerk, Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://clerk.kcmo.gov/PersonDetail.aspx?GUID=1696D403-A114-4AB0-B632-A303AF8E3B3C&ID=240616",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "The City Clerk's record lists Melissa Robinson as a Councilmember beginning July 19, 2019.",
+    supportsGenerally: ["Melissa Robinson Council service date"],
+    doesNotEstablish: ["endorsement of KC Town Hall", "program totals", "policy causality"],
+  },
+] satisfies SourceRecord[];
+
 const firsthandSource = {
   id: "SRC-SOCIAL-JAMIE-ACCOUNT-STEWARDSHIP-2026",
   title: "Jamie Burkart statement about project-account establishment and shared use",
@@ -1034,6 +1422,8 @@ export const socialMediaSources = [
   ...callNycCuratedArticleSources,
   wowListPopulationSource,
   ...wowListCuratedSources,
+  kcTownHallPopulationSource,
+  ...kcTownHallCuratedSources,
   firsthandSource,
   ...socialPostDescriptors.map(
     (descriptor): SourceRecord => ({
@@ -1094,6 +1484,21 @@ const profileObservations = [
     confidence: "high",
     limitations: ["Profile counts are volatile; alias history is not established."],
     supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-SOCIAL-KCTH-PROFILE-SNAPSHOT",
+    sourceId: "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
+    project: "kc-town-hall",
+    statement:
+      "The authenticated public profile displayed @KCTownHall, a March 2018 join date, 183 posts, 132 followers, 225 following, and links to the project website and other public channels.",
+    observationType: "metadata",
+    locator: "Profile header and bio",
+    confidence: "high",
+    limitations: [
+      "Profile counts are volatile and do not identify individual authors or measure project adoption.",
+    ],
+    supportsClaimIds: [kcTownHallSocialClaimId],
     reviewedAt,
   },
   {
@@ -1301,10 +1706,64 @@ const wowListPopulationObservations = [
   },
 ] satisfies ObservationRecord[];
 
+const kcTownHallPopulationObservations = [
+  {
+    id: "OBS-SOCIAL-KCTH-FULL-POPULATION",
+    sourceId: "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+    project: "kc-town-hall",
+    statement:
+      "The authenticated Posts and Replies timelines yielded all 183 records reported by the profile counter: 142 originals, 13 replies, and 28 reposts. Posts materialized 170 primary records; Replies rendered the same 183 primary records plus five separately classified conversation-context cards.",
+    observationType: "metadata",
+    locator:
+      "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+    confidence: "high",
+    limitations: [
+      "The complete displayed profile population does not recover deleted or unindexed activity outside the counter.",
+      "The five conversation-context cards are not counted as @KCTownHall records.",
+      "Profile and interaction counts are point-in-time interface observations.",
+    ],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-SOCIAL-KCTH-STAKEHOLDER-PATTERN",
+    sourceId: "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+    project: "kc-town-hall",
+    statement:
+      "The full population and bounded incoming searches preserve direct mission-relevant responses from three sitting Kansas City Council Member accounts, external tire-dropoff corroboration from a Bridging the Gap collaborator, community amplification, and a KCMO 311 service response.",
+    observationType: "metadata",
+    locator:
+      "stakeholderResponseInventory in apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+    confidence: "high",
+    limitations: [
+      "Tags and mentions without a response are excluded from engagement counts.",
+      "The searches cannot recover every deleted, private, native-repost, liked, or unindexed interaction.",
+      "A direct response does not establish endorsement, adoption, project completion, or causal impact.",
+    ],
+    supportsClaimIds: [kcTownHallSocialClaimId],
+    reviewedAt,
+  },
+  ...kcTownHallCuratedSources.map(
+    (source): ObservationRecord => ({
+      id: source.id.replace(/^SRC-/, "OBS-"),
+      sourceId: source.id,
+      project: "kc-town-hall",
+      statement: source.publicCitation,
+      observationType: "explicit",
+      locator: "Title, publication metadata, and source content",
+      confidence: "high",
+      limitations: source.doesNotEstablish,
+      supportsClaimIds: [kcTownHallSocialClaimId],
+      reviewedAt,
+    }),
+  ),
+] satisfies ObservationRecord[];
+
 export const socialMediaObservations = [
   ...profileObservations,
   ...callNycPopulationObservations,
   ...wowListPopulationObservations,
+  ...kcTownHallPopulationObservations,
   ...socialPostDescriptors.map(
     (descriptor): ObservationRecord => ({
       id: descriptor.observationId,
@@ -1345,6 +1804,12 @@ const wowListSourceIds = [
   ...wowListSocialSourceIds,
   ...wowListCuratedSources.map((source) => source.id),
 ];
+const kcTownHallSocialSourceIds = sourceIdsForClaim(kcTownHallSocialClaimId);
+const kcTownHallSourceIds = [
+  kcTownHallPopulationSource.id,
+  ...kcTownHallSocialSourceIds,
+  ...kcTownHallCuratedSources.map((source) => source.id),
+];
 const nycacIncidentalCouncilSourceIds = [
   "SRC-NYCAC-LEVINE-INCIDENTAL-2020-03-20",
   "SRC-NYCAC-BRANNAN-INCIDENTAL-2019-08-30",
@@ -1361,13 +1826,13 @@ export const socialMediaCaptures = [
     submittedBy: "Jamie Burkart",
     kind: "metric",
     summary:
-      "Authenticated point-in-time inventory of the confirmed CallNYC, NYC Artist Coalition, and WOW List project accounts.",
+      "Authenticated point-in-time inventory of the confirmed CallNYC, NYC Artist Coalition, WOW List, and KC Town Hall project accounts.",
     status: "integrated",
     publicSafety: "public-safe",
-    potentialProjectIds: ["callnyc", "fair-rent-nyc", "wowlist"],
+    potentialProjectIds: ["callnyc", "fair-rent-nyc", "wowlist", "kc-town-hall"],
     potentialClaimFamilies: ["public project identity", "account continuity", "campaign scope"],
     sourceIds: profileSources.map((source) => source.id),
-    observationIds: profileObservations.slice(0, 3).map((observation) => observation.id),
+    observationIds: profileObservations.slice(0, 4).map((observation) => observation.id),
     researchTaskIds: ["RT-SOCIAL-WOWLIST-HANDLE-LINEAGE"],
     disposition:
       "Recorded public profile metadata as a dated snapshot; did not infer authorship, impact, or exact historical alias continuity.",
@@ -1483,6 +1948,32 @@ export const socialMediaCaptures = [
     researchTaskIds: ["RT-SOCIAL-WOWLIST-HANDLE-LINEAGE"],
     disposition:
       "Promoted the account as a product, curation, distribution, and coordination surface; preserved the complete displayed population and bounded third-party patterns without treating the account count as platform adoption.",
+  },
+  {
+    id: "CAP-SOCIAL-KCTH-TIMELINE-INVENTORY-2026",
+    receivedAt: reviewedAt,
+    submittedBy: "Codex authenticated archival review",
+    kind: "artifact",
+    summary:
+      "Full archival-production pass over all 183 records reported by the KC Town Hall profile, plus bounded incoming-search and conversation-context inventories.",
+    status: "integrated",
+    publicSafety: "public-safe",
+    potentialProjectIds: ["kc-town-hall"],
+    potentialClaimFamilies: [
+      "neighborhood input",
+      "operational service intake",
+      "civic-information distribution",
+      "stakeholder response",
+      "mission-relevant source curation",
+    ],
+    sourceIds: ["SRC-SOCIAL-KCTH-PROFILE-2026-07-14", ...kcTownHallSourceIds],
+    observationIds: observationIdsForClaim(kcTownHallSocialClaimId),
+    researchTaskIds: [
+      "RT-SOCIAL-KCTH-TIRE-OUTCOME-CORROBORATION",
+      "RT-SOCIAL-KCTH-SURVEY-AND-SITE-RECOVERY",
+    ],
+    disposition:
+      "Promoted the account's observable operating and stakeholder-response pattern; preserved the exact 183-record denominator, all posted-link metadata, and direct responses while holding self-published outcome totals, individual post authorship, and causal-impact claims.",
   },
 ] satisfies CaptureRecord[];
 
@@ -1793,6 +2284,84 @@ export const socialMediaClaims = [
     reviewedAt,
     reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"],
   },
+  {
+    id: kcTownHallSocialClaimId,
+    project: "kc-town-hall",
+    claimType: "method",
+    internalClaim:
+      "Across its complete 183-record displayed population, @KCTownHall operated as a neighborhood implementation and information surface for resident input, recurring free tire-pickup intake, civic-resource circulation, and public stakeholder dialogue.",
+    epistemicState: "corroborated",
+    publicationState: "approved",
+    selectionState: "selected",
+    status: "confirmed-with-boundary",
+    observationIds: observationIdsForClaim(kcTownHallSocialClaimId),
+    projections: [
+      {
+        key: "case-study",
+        text:
+          "A full pass over all 183 profile-counted records shows @KCTownHall operating as a neighborhood implementation and information surface: it opened a resident-input loop, coordinated recurring free household tire-pickup cycles, circulated civic resources, and preserved direct mission-relevant responses from three sitting Kansas City Council Member accounts plus tire-dropoff corroboration from a Bridging the Gap collaborator. The account was institutional; this record does not assign every post to Jamie or prove project completion, total participation, independently verified program totals, endorsement, or causal government impact.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/kc-town-hall"],
+      },
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
+        relationship: "context",
+        supports: ["historical project account", "timeline scope"],
+        confidence: "high",
+        renderCitation: true,
+      },
+      {
+        sourceId: kcTownHallPopulationSource.id,
+        relationship: "direct-support",
+        supports: [
+          "complete displayed population and reconciliation",
+          "posted-URL, publishing-pattern, and stakeholder-response inventories",
+        ],
+        confidence: "high",
+        renderCitation: true,
+      },
+      ...kcTownHallSocialSourceIds.map((sourceId) => ({
+        sourceId,
+        relationship: "direct-support" as const,
+        supports: ["observable operating practice or stakeholder response"],
+        confidence: "high" as const,
+        renderCitation: true,
+      })),
+      ...kcTownHallCuratedSources.map((source) => ({
+        sourceId: source.id,
+        relationship: "context" as const,
+        supports: ["mission-relevant source content or official service-date context"],
+        confidence: "high" as const,
+        renderCitation: false,
+      })),
+    ],
+    boundaries: [
+      "All 183 records reported by the profile counter materialized after five non-primary conversation-context cards were excluded; this is a complete displayed account population, not a complete history of deleted, private, or unindexed activity.",
+      "The corpus contains 100 tire-related records and documents recurring pickup workflows from 2019 through 2022, but exact tire and savings totals published by the account remain held for independent corroboration.",
+      "Three sitting Council Member accounts directly responded in mission-relevant contexts; direct response is not blanket endorsement, policy adoption, or proof of causality.",
+      "The follower count and 267 displayed interaction units are volatile context and are not used as adoption, reach, participation, endorsement, or impact measures.",
+      "Institutional account records are not attributed post by post to Jamie without authorship evidence.",
+      "The social archive does not establish the separate municipal funding chain, contract execution, receipt, expenditure, or project completion.",
+    ],
+    antiClaims: [
+      "The five parent or conversation-context cards are @KCTownHall posts.",
+      "Every account tagged by @KCTownHall engaged with the project.",
+      "The account's self-published tire totals and savings figures are independently verified.",
+      "Three Council Member responses establish endorsement or causal government impact.",
+      "Jamie personally authored every @KCTownHall post.",
+      "The social record proves funding receipt or completion of the building project.",
+    ],
+    researchTaskIds: [
+      "RT-SOCIAL-KCTH-TIRE-OUTCOME-CORROBORATION",
+      "RT-SOCIAL-KCTH-SURVEY-AND-SITE-RECOVERY",
+    ],
+    researchInquiryIds: ["INQ-SOCIAL-KCTH-TIMELINE-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"],
+  },
 ] satisfies ClaimRecord[];
 
 export const socialMediaResearchTasks = [
@@ -1897,6 +2466,61 @@ export const socialMediaResearchTasks = [
     owner: "Portfolio research",
     reviewedAt,
   },
+  {
+    id: "RT-SOCIAL-KCTH-TIRE-OUTCOME-CORROBORATION",
+    project: "kc-town-hall",
+    question:
+      "Which independently inspectable records can corroborate @KCTownHall's published TiredOfTires pickup, recycling, and resident-savings totals?",
+    priority: "high",
+    status: "open",
+    captureIds: ["CAP-SOCIAL-KCTH-TIMELINE-INVENTORY-2026"],
+    sourceIds: [
+      kcTownHallPopulationSource.id,
+      "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+      "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
+    ],
+    claimIds: [kcTownHallSocialClaimId],
+    successCriteria: [
+      "Recover public or permission-cleared drop-off receipts, collaborator records, disposal schedules, or program logs with dates and quantities.",
+      "Reconcile each promoted total to a documented time window and calculation method.",
+      "Keep account-published quantities attributed and non-headline until independent evidence supports them.",
+    ],
+    nextActions: [
+      "Ask Bridging the Gap and neighborhood collaborators for a bounded proof note or public-safe operating record.",
+      "Review project archives for public-safe receipts, dated route logs, and calculation worksheets without exposing household addresses or contact details.",
+    ],
+    publicNote:
+      "The recurring pickup workflow and an external tire drop-off are documented; exact aggregate quantities and savings remain explicitly unverified.",
+    owner: "Jamie Burkart",
+    reviewedAt,
+  },
+  {
+    id: "RT-SOCIAL-KCTH-SURVEY-AND-SITE-RECOVERY",
+    project: "kc-town-hall",
+    question:
+      "Can archived KC Town Hall site and survey materials connect the public resident-input invitation to a documented synthesis or decision trail?",
+    priority: "medium",
+    status: "open",
+    captureIds: ["CAP-SOCIAL-KCTH-TIMELINE-INVENTORY-2026"],
+    sourceIds: [
+      kcTownHallPopulationSource.id,
+      "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+    ],
+    claimIds: [kcTownHallSocialClaimId],
+    successCriteria: [
+      "Recover archived public pages for the project root, join, survey, tires, and COVID resource routes where available.",
+      "Locate a public-safe survey synthesis, decision record, or collaborator account linking resident input to project choices.",
+      "Do not publish raw responses, addresses, contact details, or sensitive stakeholder records.",
+    ],
+    nextActions: [
+      "Query Wayback and local project archives for dated public captures and survey summaries.",
+      "Treat an unrecovered response set as missing evidence, not as proof that no input was received.",
+    ],
+    publicNote:
+      "The account documents an input invitation and 12 survey-linked records; response volume and decision uptake remain open.",
+    owner: "Portfolio research",
+    reviewedAt,
+  },
 ] satisfies ResearchTask[];
 
 export const socialMediaInquiries = [
@@ -1915,6 +2539,7 @@ export const socialMediaInquiries = [
       "CallNYC uses @CallNYCApp.",
       "NYC Artist Coalition and its four named campaign lines use the shared @NYCArtC account.",
       "WOW List's currently visible historical account is @wowlist; @WOWListNYC remains an unresolved historical reference.",
+      "KC Town Hall's historical project account is @KCTownHall.",
       "No separate project Twitter account was confirmed for the other current portfolio projects in this pass.",
     ],
     limitations: [
@@ -1923,7 +2548,7 @@ export const socialMediaInquiries = [
     ],
     sourceIds: profileSources.map((source) => source.id),
     publicSummary:
-      "Three project-level accounts were confirmed: @CallNYCApp, the shared @NYCArtC coalition account, and @wowlist.",
+      "Four project-level accounts were confirmed: @CallNYCApp, the shared @NYCArtC coalition account, @wowlist, and @KCTownHall.",
   },
   {
     id: "INQ-SOCIAL-CALLNYC-FULL-POPULATION-2026",
@@ -2047,5 +2672,43 @@ export const socialMediaInquiries = [
     sourceIds: ["SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14", ...wowListSourceIds],
     publicSummary:
       "All 38 profile-counted records were reviewed. Together with a bounded third-party reception inventory, they show social media operating as product support, community publishing, source curation, event distribution, and rapid civic-coordination infrastructure.",
+  },
+  {
+    id: "INQ-SOCIAL-KCTH-TIMELINE-2026",
+    project: "kc-town-hall",
+    question:
+      "What mission-relevant operating, posted-source, and stakeholder-response patterns appear across the full displayed @KCTownHall population?",
+    methods: [
+      "Traversed the authenticated @KCTownHall Posts and Replies timelines through repeated no-growth states.",
+      "Deduplicated primary status URLs across both tabs and separated five parent or conversation-context cards from the account's primary records.",
+      "Reconciled the primary union against the 183-post profile counter and classified all 183 records as original, reply, or repost.",
+      "Inventoried all 31 distinct posted external short URLs without retaining post text, contact details, or authenticated session state.",
+      "Close-read the 155 @KCTownHall-authored records and 28 redistributed records for resident input, service intake, source curation, and stakeholder-response patterns.",
+      "Ran bounded incoming searches for handle, reply, project-domain, and project-name references; excluded broad town-hall false positives and tags without responses.",
+      "Verified Council service context for Quinton Lucas, Jolie Justus, and Melissa Robinson against official Kansas City records.",
+    ],
+    runAt: reviewedAt,
+    resultStatus: "recovered",
+    findings: [
+      "Posts yielded 170 primary records. Replies rendered 188 cards: 183 primary records and five separately classified conversation-context cards. The 183-record union exactly matches the profile counter.",
+      "The population comprises 142 original posts, 13 replies, and 28 reposts; 155 records were authored by @KCTownHall.",
+      "One hundred records are tire-related, documenting recurring free household pickup and recycling workflows from 2019 through 2022; exact aggregate quantities and savings published by the account remain attributed first-party claims pending corroboration.",
+      "The account opened a neighborhood-process and survey loop around desired uses at 36th and Indiana; 12 records contain a project survey link.",
+      "Across the full population, 118 records contain external links, producing 133 occurrences and 31 distinct short URLs. The source mix includes local food-access and housing reporting, election information, official voter and transit resources, public-health information, cleanup documentation, and project routes.",
+      "Three sitting Council Member accounts directly responded in mission-relevant contexts: Quinton Lucas and Jolie Justus around Leon's Thriftway, and Melissa Robinson around work to improve community conditions.",
+      "A Bridging the Gap collaborator independently reported receiving a large KC Town Hall tire drop-off; two community accounts amplified an Oak Park cleanup notice, and KCMO 311 responded in a service thread.",
+      "A dated interface snapshot across the 155 account-authored records showed 77 with at least one visible interaction and 267 displayed interaction units. These volatile totals remain context, not headline impact metrics.",
+    ],
+    limitations: [
+      "A complete displayed profile population is not a complete archive of deleted, private, withheld, or unindexed activity.",
+      "The five parent or conversation-context cards are useful reception evidence but are not @KCTownHall population records.",
+      "Tags, mentions, follower counts, and interactions attached to reposted source records are not counted as project engagement or reach.",
+      "Account-published program totals require independent corroboration before promotion as outcomes.",
+      "The account is institutional; this review does not assign every post to Jamie.",
+      "The social archive does not establish funding receipt, expenditure, building completion, endorsement, adoption, or causal government impact.",
+    ],
+    sourceIds: ["SRC-SOCIAL-KCTH-PROFILE-2026-07-14", ...kcTownHallSourceIds],
+    publicSummary:
+      "All 183 profile-counted records were reviewed. They show @KCTownHall functioning as a resident-input, recurring service-intake, civic-information, and public stakeholder-response surface, with exact outcome totals and individual authorship kept behind explicit evidence gates.",
   },
 ] satisfies ResearchInquiry[];

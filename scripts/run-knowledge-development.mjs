@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 import {
   campaignPressArchiveUrlFor,
@@ -61,6 +62,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -115,6 +117,12 @@ const wowListPopulationInventory = JSON.parse(
     "utf8",
   ),
 );
+const kcTownHallPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+    "utf8",
+  ),
+);
 
 function candidateFingerprint() {
   const hash = createHash("sha256");
@@ -139,6 +147,20 @@ function scoreRatio(numerator, denominator) {
   if (ratio >= 0.6) return 2;
   if (ratio > 0) return 1;
   return 0;
+}
+
+function immutableGitHubFixtureMatches(source, fixturePath) {
+  const match = source?.canonicalUrl?.match(
+    /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/[a-z0-9-]+\.json)$/,
+  );
+  if (!match || match[2] !== fixturePath) return false;
+  try {
+    return execFileSync("git", ["show", `${match[1]}:${fixturePath}`]).equals(
+      readFileSync(fixturePath),
+    );
+  } catch {
+    return false;
+  }
 }
 
 function result(
@@ -360,8 +382,11 @@ function deterministicResults(judgments) {
     ![...expectedKcTownHallOfficialSourceIds, transitionSourceId].every((id) =>
       sourceById.has(id),
     ) ||
-    JSON.stringify(kcTownHallPage?.sourceOrder) !==
-      JSON.stringify(expectedKcTownHallOfficialSourceIds)
+    JSON.stringify(
+      kcTownHallPage?.sourceOrder.filter((id) =>
+        expectedKcTownHallOfficialSourceIds.includes(id),
+      ),
+    ) !== JSON.stringify(expectedKcTownHallOfficialSourceIds)
   ) {
     kcTownHallIntegrityViolations.push(
       "KC Town Hall source set or citation order is incomplete",
@@ -858,6 +883,9 @@ function deterministicResults(judgments) {
   const wowListSocialClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
   );
+  const kcTownHallSocialClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-KCTH-SOCIAL-OPERATING-SURFACE",
+  );
   const laterNycacTask = socialMediaResearchTasks.find(
     (task) => task.id === "RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY",
   );
@@ -868,22 +896,30 @@ function deterministicResults(judgments) {
   const callNycMissingPostsTask = socialMediaResearchTasks.find(
     (task) => task.id === "RT-SOCIAL-CALLNYC-UNMATERIALIZED-POSTS",
   );
+  const kcTownHallTireTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-KCTH-TIRE-OUTCOME-CORROBORATION",
+  );
+  const kcTownHallSurveyTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-KCTH-SURVEY-AND-SITE-RECOVERY",
+  );
   const socialMediaPublicText = [
     "apps/www/src/content/work/callnyc.mdx",
     "apps/www/src/content/work/fair-rent-nyc.mdx",
     "apps/www/src/content/work/wowlist.mdx",
+    "apps/www/src/content/work/kc-town-hall.mdx",
     "apps/www/src/data/work.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
   ]
     .map((path) => readFileSync(path, "utf8"))
     .join("\n");
 
   if (
-    socialMediaCaptures.length !== 6 ||
-    socialMediaSources.length !== 45 ||
-    socialMediaObservations.length !== 46 ||
-    socialMediaClaims.length !== 5 ||
-    socialMediaResearchTasks.length !== 4 ||
-    socialMediaInquiries.length !== 5
+    socialMediaCaptures.length !== 7 ||
+    socialMediaSources.length !== 63 ||
+    socialMediaObservations.length !== 65 ||
+    socialMediaClaims.length !== 6 ||
+    socialMediaResearchTasks.length !== 6 ||
+    socialMediaInquiries.length !== 6
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media archival-production graph has an unexpected record count",
@@ -911,6 +947,15 @@ function deterministicResults(judgments) {
   const wowListRepliesTimelineRecords = wowListPopulationRecords.filter((record) =>
     record.recoveredFrom?.includes("replies"),
   );
+  const kcTownHallPopulationRecords = kcTownHallPopulationInventory.records;
+  const kcTownHallContextRecords =
+    kcTownHallPopulationInventory.conversationContextRecords;
+  const kcTownHallPostsTimelineRecords = kcTownHallPopulationRecords.filter(
+    (record) => record.recoveredFrom?.includes("posts"),
+  );
+  const kcTownHallRepliesTimelineRecords = kcTownHallPopulationRecords.filter(
+    (record) => record.recoveredFrom?.includes("replies"),
+  );
   if (
     nycacInventoryRecords.length !== 358 ||
     new Set(nycacInventoryRecords.map((record) => record.url)).size !== 358 ||
@@ -935,7 +980,16 @@ function deterministicResults(judgments) {
     wowListPostsTimelineRecords.length !== 37 ||
     wowListRepliesTimelineRecords.length !== 38 ||
     wowListIncomingRecords.length !== 16 ||
-    new Set(wowListIncomingRecords.map((record) => record.url)).size !== 16
+    new Set(wowListIncomingRecords.map((record) => record.url)).size !== 16 ||
+    kcTownHallPopulationRecords.length !== 183 ||
+    new Set(kcTownHallPopulationRecords.map((record) => record.url)).size !== 183 ||
+    kcTownHallPostsTimelineRecords.length !== 170 ||
+    kcTownHallRepliesTimelineRecords.length !== 183 ||
+    kcTownHallContextRecords.length !== 5 ||
+    new Set(kcTownHallContextRecords.map((record) => record.url)).size !== 5 ||
+    kcTownHallContextRecords.some((context) =>
+      kcTownHallPopulationRecords.some((record) => record.url === context.url),
+    )
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media capture inventory is incomplete or contains duplicate status URLs",
@@ -943,7 +997,7 @@ function deterministicResults(judgments) {
   }
   if (
     projectSocialAccounts.map((account) => account.currentHandle).join("|") !==
-      "@CallNYCApp|@NYCArtC|@wowlist" ||
+      "@CallNYCApp|@NYCArtC|@wowlist|@KCTownHall" ||
     socialMediaReviewSummary.callNycCouncilMemberAccountCount !== 8 ||
     socialMediaReviewSummary.callNycRecoveredTimelineRecordCount !== 107 ||
     socialMediaReviewSummary.callNycUnmaterializedProfileRecordCount !== 3 ||
@@ -964,7 +1018,14 @@ function deterministicResults(judgments) {
     socialMediaReviewSummary.wowListAuthoredRecordCount !== 22 ||
     socialMediaReviewSummary.wowListDistinctExternalShortUrlCount !== 35 ||
     socialMediaReviewSummary.wowListIncomingSearchRecordCount !== 16 ||
-    socialMediaReviewSummary.wowListMissionRelevantThirdPartyAccountCount !== 10
+    socialMediaReviewSummary.wowListMissionRelevantThirdPartyAccountCount !== 10 ||
+    socialMediaReviewSummary.kcTownHallRecoveredTimelineRecordCount !== 183 ||
+    socialMediaReviewSummary.kcTownHallRecoveredOriginalPostCount !== 142 ||
+    socialMediaReviewSummary.kcTownHallRecoveredReplyCount !== 13 ||
+    socialMediaReviewSummary.kcTownHallRecoveredRepostCount !== 28 ||
+    socialMediaReviewSummary.kcTownHallAuthoredRecordCount !== 155 ||
+    socialMediaReviewSummary.kcTownHallDistinctExternalShortUrlCount !== 31 ||
+    socialMediaReviewSummary.kcTownHallDirectCouncilMemberAccountCount !== 3
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media inventory no longer matches the bounded authenticated research record",
@@ -1016,6 +1077,35 @@ function deterministicResults(judgments) {
       "WOW List full-population reconciliation, source, or stakeholder counts drifted",
     );
   }
+  if (
+    kcTownHallPopulationInventory.populationReconciliation.profileReportedPostCount !==
+      183 ||
+    kcTownHallPopulationInventory.populationReconciliation.postsTimelineUniqueCount !==
+      170 ||
+    kcTownHallPopulationInventory.populationReconciliation
+      .repliesTimelineRenderedArticleCount !== 188 ||
+    kcTownHallPopulationInventory.populationReconciliation
+      .repliesTimelineConversationContextCount !== 5 ||
+    kcTownHallPopulationInventory.populationReconciliation
+      .repliesTimelinePrimaryRecordCount !== 183 ||
+    kcTownHallPopulationInventory.populationReconciliation.recoveredUnionRecordCount !==
+      183 ||
+    kcTownHallPopulationInventory.populationReconciliation.profileCountNotMaterialized !==
+      0 ||
+    kcTownHallPopulationInventory.recordTypeCounts.original !== 142 ||
+    kcTownHallPopulationInventory.recordTypeCounts.reply !== 13 ||
+    kcTownHallPopulationInventory.recordTypeCounts.repost !== 28 ||
+    kcTownHallPopulationInventory.publishingPattern.accountAuthoredRecordCount !== 155 ||
+    kcTownHallPopulationInventory.publishingPattern.tireRelatedRecordCount !== 100 ||
+    kcTownHallPopulationInventory.publishingPattern.surveyLinkedRecordCount !== 12 ||
+    kcTownHallPopulationInventory.postedUrlInventory.distinctExternalShortUrls !== 31 ||
+    kcTownHallPopulationInventory.stakeholderResponseInventory
+      .directCouncilMemberAccountCount !== 3
+  ) {
+    socialMediaIntegrityViolations.push(
+      "KC Town Hall full-population reconciliation, source, or stakeholder counts drifted",
+    );
+  }
   for (const sourceId of socialMediaSourceIds) {
     if (!sourceById.has(sourceId) || !socialMediaObservedSourceIds.has(sourceId)) {
       socialMediaIntegrityViolations.push(
@@ -1032,13 +1122,17 @@ function deterministicResults(judgments) {
     nycacSocialClaim?.publicationState !== "approved" ||
     wowListSocialClaim?.selectionState !== "selected" ||
     wowListSocialClaim?.publicationState !== "approved" ||
+    kcTownHallSocialClaim?.selectionState !== "selected" ||
+    kcTownHallSocialClaim?.publicationState !== "approved" ||
     nycacIdentityClaim?.selectionState !== "dormant" ||
     !nycacIdentityClaim?.projections.every(
       (projection) => projection.status === "hold" && !projection.surfaces.length,
     ) ||
     laterNycacTask?.status !== "open" ||
     accountCorroborationTask?.status !== "open" ||
-    callNycMissingPostsTask?.status !== "open"
+    callNycMissingPostsTask?.status !== "open" ||
+    kcTownHallTireTask?.status !== "open" ||
+    kcTownHallSurveyTask?.status !== "open"
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media promotion, hold, or open-research states are incomplete",
@@ -1049,6 +1143,7 @@ function deterministicResults(judgments) {
     callNycGuidanceClaim,
     nycacSocialClaim,
     wowListSocialClaim,
+    kcTownHallSocialClaim,
   ]) {
     if (
       !claim ||
@@ -1067,6 +1162,7 @@ function deterministicResults(judgments) {
     !/CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE/.test(socialMediaPublicText) ||
     !/CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT/.test(socialMediaPublicText) ||
     !/CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE/.test(socialMediaPublicText) ||
+    !/CLM-KCTH-SOCIAL-OPERATING-SURFACE/.test(socialMediaPublicText) ||
     !/at least eight distinct historical NYC Council Member accounts/i.test(
       socialMediaPublicText,
     ) ||
@@ -1076,6 +1172,10 @@ function deterministicResults(judgments) {
     !/at least four NYC Council Member accounts/i.test(socialMediaPublicText) ||
     !/all 38 profile-counted/i.test(socialMediaPublicText) ||
     !/10 mission-relevant third-party accounts/i.test(socialMediaPublicText) ||
+    !/all 183 profile-counted records/i.test(socialMediaPublicText) ||
+    !/three sitting Kansas City Council Member accounts/i.test(
+      socialMediaPublicText,
+    ) ||
     !/product support, community onboarding, source curation, event distribution, and rapid civic coordination/i.test(
       socialMediaPublicText,
     )
@@ -1151,6 +1251,21 @@ function deterministicResults(judgments) {
   ) {
     socialMediaSafetyViolations.push(
       "Public WOW List population fixture contains raw post/session data or obscures the complete displayed denominator",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\/|816-\d{3}-\d{4}/i.test(
+      JSON.stringify(kcTownHallPopulationInventory),
+    ) ||
+    !/Every one of the 183 records/i.test(
+      kcTownHallPopulationInventory.populationReconciliation.conclusion,
+    ) ||
+    !/Tags and mentions alone are not engagement/i.test(
+      kcTownHallPopulationInventory.stakeholderResponseInventory.boundary,
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Public KC Town Hall population fixture contains raw post/contact/session data or obscures population and engagement boundaries",
     );
   }
 
@@ -1614,9 +1729,113 @@ function deterministicResults(judgments) {
       "The WOW List fixture or promoted claim obscures public-safety, denominator, or authorship boundaries",
     );
   }
+  const kcTownHallPopulationViolations = [];
+  const kcTownHallReconciliation =
+    kcTownHallPopulationInventory.populationReconciliation;
+  const kcTownHallRecordTypeTotal = Object.values(
+    kcTownHallPopulationInventory.recordTypeCounts,
+  ).reduce((sum, count) => sum + count, 0);
+  const kcTownHallExternalLinks = kcTownHallPopulationRecords.flatMap(
+    (record) => record.externalLinks,
+  );
+  const kcTownHallTireRelatedRecords = kcTownHallPopulationRecords.filter(
+    (record) => record.classifications.includes("tire-related"),
+  );
+  const kcTownHallSurveyLinkedRecords = kcTownHallPopulationRecords.filter(
+    (record) => record.classifications.includes("survey-linked"),
+  );
+  const kcTownHallPopulationFixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json";
+  const kcTownHallPopulationSource = sourceById.get(
+    "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+  );
+  if (
+    kcTownHallPopulationRecords.length !== 183 ||
+    new Set(kcTownHallPopulationRecords.map((record) => record.url)).size !== 183 ||
+    kcTownHallRecordTypeTotal !== 183 ||
+    kcTownHallPostsTimelineRecords.length !==
+      kcTownHallReconciliation.postsTimelineUniqueCount ||
+    kcTownHallRepliesTimelineRecords.length !==
+      kcTownHallReconciliation.repliesTimelinePrimaryRecordCount ||
+    kcTownHallContextRecords.length !==
+      kcTownHallReconciliation.repliesTimelineConversationContextCount ||
+    kcTownHallContextRecords.some((context) =>
+      kcTownHallPopulationRecords.some((record) => record.url === context.url),
+    )
+  ) {
+    kcTownHallPopulationViolations.push(
+      "The recovered KC Town Hall population is incomplete, duplicated, or does not reconcile by record type, tab provenance, and conversation context",
+    );
+  }
+  if (
+    kcTownHallReconciliation.profileReportedPostCount !== 183 ||
+    kcTownHallReconciliation.repliesTimelineRenderedArticleCount !== 188 ||
+    kcTownHallReconciliation.recoveredUnionRecordCount !== 183 ||
+    kcTownHallReconciliation.recoveredPopulationReviewedPercent !== 100 ||
+    kcTownHallReconciliation.profileCountNotMaterialized !== 0
+  ) {
+    kcTownHallPopulationViolations.push(
+      "The 183-profile / 188-Replies-cards / 5-context / 183-primary reconciliation is not explicit",
+    );
+  }
+  if (
+    kcTownHallExternalLinks.length !== 133 ||
+    new Set(kcTownHallExternalLinks.map((link) => link.shortUrl)).size !== 31 ||
+    kcTownHallPopulationInventory.publishingPattern.accountAuthoredRecordCount !== 155 ||
+    kcTownHallTireRelatedRecords.length !== 100 ||
+    kcTownHallPopulationInventory.publishingPattern.tireRelatedRecordCount !==
+      kcTownHallTireRelatedRecords.length ||
+    kcTownHallSurveyLinkedRecords.length !== 12 ||
+    kcTownHallPopulationInventory.publishingPattern.surveyLinkedRecordCount !==
+      kcTownHallSurveyLinkedRecords.length ||
+    kcTownHallSurveyLinkedRecords.some((record) =>
+      record.externalLinks.every(
+        (link) => !/survey/i.test(link.displayedDestination),
+      ),
+    ) ||
+    !/close reading.*public post/i.test(
+      kcTownHallPopulationInventory.publishingPattern.classificationMethod
+        .tireRelated,
+    ) ||
+    kcTownHallPopulationInventory.stakeholderResponseInventory
+      .directCouncilMemberAccountCount !== 3
+  ) {
+    kcTownHallPopulationViolations.push(
+      "The KC Town Hall posted-URL, publishing, or stakeholder findings do not reproduce from the inventory",
+    );
+  }
+  if (
+    !immutableGitHubFixtureMatches(
+      kcTownHallPopulationSource,
+      kcTownHallPopulationFixturePath,
+    )
+  ) {
+    kcTownHallPopulationViolations.push(
+      "The KC Town Hall population source does not pin a byte-identical committed fixture",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\/|816-\d{3}-\d{4}/i.test(
+      JSON.stringify(kcTownHallPopulationInventory),
+    ) ||
+    !kcTownHallSocialClaim?.boundaries.some((boundary) =>
+      /All 183 records/i.test(boundary),
+    ) ||
+    !kcTownHallSocialClaim?.antiClaims.some((antiClaim) =>
+      /personally authored every/i.test(antiClaim),
+    ) ||
+    !kcTownHallSocialClaim?.boundaries.some((boundary) =>
+      /exact tire and savings totals.*corroboration/i.test(boundary),
+    )
+  ) {
+    kcTownHallPopulationViolations.push(
+      "The KC Town Hall fixture or promoted claim obscures public-safety, denominator, outcome, or authorship boundaries",
+    );
+  }
   const fullPopulationViolations = [
     ...callNycPopulationViolations,
     ...wowListPopulationViolations,
+    ...kcTownHallPopulationViolations,
   ];
   results.set(
     "KD-013",
@@ -1628,6 +1847,9 @@ function deterministicResults(judgments) {
         `WOW List: ${wowListPopulationRecords.length}/38 profile-counted records recovered; 0 unmaterialized`,
         `WOW List: ${wowListPostsTimelineRecords.length} Posts-tab / ${wowListRepliesTimelineRecords.length} Replies-tab records; ${wowListExternalLinks.length} distinct posted short URLs`,
         `WOW List: ${wowListMissionRelevantIncoming.length}/16 bounded incoming records classified as mission-relevant third-party responses across ${Object.keys(wowListPopulationInventory.stakeholderInventory.stakeholderGroupCounts).length} stakeholder groups`,
+        `KC Town Hall: ${kcTownHallPopulationRecords.length}/183 profile-counted records recovered; 0 unmaterialized`,
+        `KC Town Hall: ${kcTownHallPostsTimelineRecords.length} Posts-tab / ${kcTownHallRepliesTimelineRecords.length} Replies-primary records; ${kcTownHallContextRecords.length} conversation-context cards excluded`,
+        `KC Town Hall: ${kcTownHallExternalLinks.length} posted-link occurrences / ${new Set(kcTownHallExternalLinks.map((link) => link.shortUrl)).size} distinct short URLs; ${kcTownHallPopulationInventory.stakeholderResponseInventory.directCouncilMemberAccountCount} direct Council Member account responses`,
       ],
       fullPopulationViolations,
       "Repair the denominator or classification before strengthening the public interpretation.",
@@ -1678,6 +1900,12 @@ function deterministicResults(judgments) {
         socialMediaReviewSummary.wowListDistinctExternalShortUrlCount,
       wowListMissionRelevantThirdPartyAccounts:
         socialMediaReviewSummary.wowListMissionRelevantThirdPartyAccountCount,
+      kcTownHallRecoveredTimelineRecords:
+        socialMediaReviewSummary.kcTownHallRecoveredTimelineRecordCount,
+      kcTownHallDistinctPostedUrls:
+        socialMediaReviewSummary.kcTownHallDistinctExternalShortUrlCount,
+      kcTownHallDirectCouncilMemberAccounts:
+        socialMediaReviewSummary.kcTownHallDirectCouncilMemberAccountCount,
       validationErrors: validationErrors.length,
     },
   };

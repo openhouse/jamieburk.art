@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { validateKnowledgeDevelopmentSuite } from "../check-knowledge-development-evals.mjs";
@@ -74,6 +75,12 @@ const callNycPopulationInventory = JSON.parse(
 const wowListPopulationInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+    "utf8",
+  ),
+);
+const kcTownHallPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
     "utf8",
   ),
 );
@@ -445,14 +452,14 @@ test("Shared Drive outcome gaps remain explicit research tasks", () => {
 test("social-media production preserves account, engagement, and timeline inventories", () => {
   assert.deepEqual(
     projectSocialAccounts.map((account) => account.currentHandle),
-    ["@CallNYCApp", "@NYCArtC", "@wowlist"],
+    ["@CallNYCApp", "@NYCArtC", "@wowlist", "@KCTownHall"],
   );
-  assert.equal(socialMediaCaptures.length, 6);
-  assert.equal(socialMediaSources.length, 45);
-  assert.equal(socialMediaObservations.length, 46);
-  assert.equal(socialMediaClaims.length, 5);
-  assert.equal(socialMediaResearchTasks.length, 4);
-  assert.equal(socialMediaInquiries.length, 5);
+  assert.equal(socialMediaCaptures.length, 7);
+  assert.equal(socialMediaSources.length, 63);
+  assert.equal(socialMediaObservations.length, 65);
+  assert.equal(socialMediaClaims.length, 6);
+  assert.equal(socialMediaResearchTasks.length, 6);
+  assert.equal(socialMediaInquiries.length, 6);
 
   const callNycPopulationSource = socialMediaSources.find(
     (source) => source.id === "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
@@ -471,6 +478,15 @@ test("social-media production preserves account, engagement, and timeline invent
   assert.match(
     wowListPopulationSource.canonicalUrl,
     /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/apps\/www\/src\/data\/knowledge-bank\/fixtures\/wowlist-full-population\.json$/,
+  );
+  const kcTownHallPopulationSource = socialMediaSources.find(
+    (source) => source.id === "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+  );
+  assert.equal(kcTownHallPopulationSource.visibility, "public");
+  assert.equal(kcTownHallPopulationSource.preservationStatus, "live");
+  assert.match(
+    kcTownHallPopulationSource.canonicalUrl,
+    /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/apps\/www\/src\/data\/knowledge-bank\/fixtures\/kctownhall-full-population\.json$/,
   );
   assert.equal(socialMediaReviewSummary.callNycCouncilMemberAccountCount, 8);
   assert.equal(socialMediaReviewSummary.callNycRecoveredTimelineRecordCount, 107);
@@ -494,6 +510,13 @@ test("social-media production preserves account, engagement, and timeline invent
     socialMediaReviewSummary.wowListMissionRelevantThirdPartyAccountCount,
     10,
   );
+  assert.equal(socialMediaReviewSummary.kcTownHallRecoveredTimelineRecordCount, 183);
+  assert.equal(socialMediaReviewSummary.kcTownHallRecoveredOriginalPostCount, 142);
+  assert.equal(socialMediaReviewSummary.kcTownHallRecoveredReplyCount, 13);
+  assert.equal(socialMediaReviewSummary.kcTownHallRecoveredRepostCount, 28);
+  assert.equal(socialMediaReviewSummary.kcTownHallAuthoredRecordCount, 155);
+  assert.equal(socialMediaReviewSummary.kcTownHallDistinctExternalShortUrlCount, 31);
+  assert.equal(socialMediaReviewSummary.kcTownHallDirectCouncilMemberAccountCount, 3);
 
   const nycacRecords =
     socialMediaInventory.inventories.nycArtistCoalitionIncomingMentions2017To2020
@@ -693,6 +716,123 @@ test("WOW List full-population archive reconciles all 38 profile records", () =>
   );
 });
 
+test("KC Town Hall full-population archive reconciles all 183 profile records", () => {
+  const reconciliation = kcTownHallPopulationInventory.populationReconciliation;
+  const records = kcTownHallPopulationInventory.records;
+  const contexts = kcTownHallPopulationInventory.conversationContextRecords;
+
+  assert.equal(reconciliation.profileReportedPostCount, 183);
+  assert.equal(reconciliation.postsTimelineUniqueCount, 170);
+  assert.equal(reconciliation.repliesTimelineRenderedArticleCount, 188);
+  assert.equal(reconciliation.repliesTimelineConversationContextCount, 5);
+  assert.equal(reconciliation.repliesTimelinePrimaryRecordCount, 183);
+  assert.equal(reconciliation.recoveredUnionRecordCount, 183);
+  assert.equal(reconciliation.recoveredPopulationReviewedPercent, 100);
+  assert.equal(reconciliation.profileCountNotMaterialized, 0);
+  assert.match(reconciliation.conclusion, /Every one of the 183 records/i);
+
+  assert.equal(records.length, 183);
+  assert.equal(new Set(records.map((record) => record.url)).size, 183);
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("posts")).length,
+    170,
+  );
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("replies")).length,
+    183,
+  );
+  assert.equal(contexts.length, 5);
+  assert.equal(new Set(contexts.map((record) => record.url)).size, 5);
+  assert.ok(
+    contexts.every(
+      (context) => !records.some((record) => record.url === context.url),
+    ),
+  );
+  assert.deepEqual(kcTownHallPopulationInventory.recordTypeCounts, {
+    original: 142,
+    reply: 13,
+    repost: 28,
+  });
+  assert.equal(
+    kcTownHallPopulationInventory.publishingPattern.accountAuthoredRecordCount,
+    155,
+  );
+  assert.equal(
+    kcTownHallPopulationInventory.publishingPattern.tireRelatedRecordCount,
+    records.filter((record) =>
+      record.classifications.includes("tire-related"),
+    ).length,
+  );
+  assert.equal(
+    kcTownHallPopulationInventory.publishingPattern.surveyLinkedRecordCount,
+    records.filter((record) =>
+      record.classifications.includes("survey-linked"),
+    ).length,
+  );
+  assert.equal(
+    records.filter((record) =>
+      record.classifications.includes("tire-related"),
+    ).length,
+    100,
+  );
+  assert.equal(
+    records.filter((record) =>
+      record.classifications.includes("survey-linked"),
+    ).length,
+    12,
+  );
+  assert.ok(
+    records
+      .filter((record) => record.classifications.includes("survey-linked"))
+      .every((record) =>
+        record.externalLinks.some((link) =>
+          /survey/i.test(link.displayedDestination),
+        ),
+      ),
+  );
+  assert.match(
+    kcTownHallPopulationInventory.publishingPattern.classificationMethod
+      .tireRelated,
+    /close reading.*public post/i,
+  );
+  assert.equal(
+    kcTownHallPopulationInventory.postedUrlInventory.distinctExternalShortUrls,
+    31,
+  );
+  assert.equal(
+    kcTownHallPopulationInventory.stakeholderResponseInventory
+      .directCouncilMemberAccountCount,
+    3,
+  );
+  assert.deepEqual(
+    kcTownHallPopulationInventory.stakeholderResponseInventory.councilMemberAccounts.map(
+      (record) => record.handle,
+    ),
+    ["@QuintonLucasKC", "@joliejustus", "@Robinson4kc"],
+  );
+  assert.doesNotMatch(
+    JSON.stringify(kcTownHallPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\/|816-\d{3}-\d{4}/i,
+  );
+});
+
+test("KC Town Hall population source pins the exact classified fixture commit", () => {
+  const fixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json";
+  const source = socialMediaSources.find(
+    (record) => record.id === "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+  );
+  const match = source.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/kctownhall-full-population\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], fixturePath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`]),
+    readFileSync(fixturePath),
+  );
+});
+
 test("social-media claims use bounded counts and preserve shared-account authorship", () => {
   const callNycClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
@@ -708,6 +848,9 @@ test("social-media claims use bounded counts and preserve shared-account authors
   );
   const callNycGuidanceClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE",
+  );
+  const kcTownHallClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-KCTH-SOCIAL-OPERATING-SURFACE",
   );
 
   assert.equal(callNycClaim.selectionState, "selected");
@@ -755,6 +898,28 @@ test("social-media claims use bounded counts and preserve shared-account authors
   assert.match(wowListClaim.boundaries.join("\n"), /not used as.*adoption/i);
   assert.match(wowListClaim.boundaries.join("\n"), /All 38 records/i);
   assert.match(wowListClaim.antiClaims.join("\n"), /Only 37.*38/i);
+
+  assert.equal(kcTownHallClaim.selectionState, "selected");
+  assert.match(kcTownHallClaim.projections[0].text, /all 183 profile-counted records/i);
+  assert.match(
+    kcTownHallClaim.projections[0].text,
+    /three sitting Kansas City Council Member/i,
+  );
+  assert.match(kcTownHallClaim.boundaries.join("\n"), /100 tire-related records/i);
+  assert.match(
+    kcTownHallClaim.boundaries.join("\n"),
+    /267 displayed interaction units/i,
+  );
+  assert.match(
+    kcTownHallClaim.antiClaims.join("\n"),
+    /self-published tire totals/i,
+  );
+  assert.match(kcTownHallClaim.antiClaims.join("\n"), /personally authored every/i);
+  assert.ok(
+    kcTownHallClaim.researchTaskIds.includes(
+      "RT-SOCIAL-KCTH-TIRE-OUTCOME-CORROBORATION",
+    ),
+  );
 });
 
 test("social-media production exposes no authenticated-session secrets or private locators", () => {
@@ -786,6 +951,10 @@ test("social-media production exposes no authenticated-session secrets or privat
   assert.doesNotMatch(
     JSON.stringify(callNycPopulationInventory),
     /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
+  );
+  assert.doesNotMatch(
+    JSON.stringify(kcTownHallPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\/|816-\d{3}-\d{4}/i,
   );
 });
 
@@ -978,12 +1147,18 @@ test("KC Town Hall funding chain preserves proposal role, recommendation, approp
   assert.equal(transitionSource.visibility, "public-metadata-only");
   assert.equal(transitionSource.canonicalUrl, undefined);
 
-  assert.deepEqual(page.sourceOrder, [
+  const officialFundingSourceOrder = [
     "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
     "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
     "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
     "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
-  ]);
+  ];
+  assert.deepEqual(
+    page.sourceOrder.filter((sourceId) =>
+      officialFundingSourceOrder.includes(sourceId),
+    ),
+    officialFundingSourceOrder,
+  );
   assert.deepEqual(
     page.occurrences.find(
       (occurrence) => occurrence.id === "mission-aligned-transition",

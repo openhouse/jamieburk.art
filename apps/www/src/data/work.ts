@@ -583,7 +583,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant building involved public benefit, preservation, funding, stakeholder, and redevelopment questions, including distinctions among recommendation, Council authorization, appropriation, contract execution, and payment.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, municipal-review support, a source-backed chronology of the public funding decision, and, in Jamie's first-hand account, continuity through a mission-aligned transition.",
+      "Planning materials, public-benefit documentation, stakeholder context, a resident-input and recurring service-intake surface, municipal-review support, a source-backed chronology of the public funding decision, and, in Jamie's first-hand account, continuity through a mission-aligned transition.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -598,22 +598,31 @@ const workItemsInput = [
           "Official proposal, resolution, appropriation, and reappropriation records that distinguish authorization from receipt.",
         type: "source map",
       },
+      {
+        title: "Public operating and source archive",
+        description:
+          "A complete 183-record account corpus preserving resident-input, recurring tire-pickup, civic-resource, posted-link, and stakeholder-response patterns with explicit evidence boundaries.",
+        type: "source map",
+      },
     ],
     tags: [
       "Implementation",
       "Documentation",
       "Knowledge Systems",
       "Public-Facing Tools",
+      "Community Operations",
     ],
     capabilities: [
       "Stakeholder Documentation",
       "Funding Support",
       "Historic Preservation Context",
+      "Public Information Systems",
     ],
     careNote:
       "Official public records and Jamie's public-safe first-hand clarification are distinguished. Private reasons and financial, legal, property, and stakeholder details remain omitted.",
     sourceLayer:
-      "Official KCMO CCED proposal and Council records, Jamie's public-safe first-hand transition clarification, and a public-safe project summary.",
+      "Official KCMO CCED proposal and Council records, a complete public-safe 183-record @KCTownHall corpus with posted-source and stakeholder-response metadata, Jamie's public-safe first-hand transition clarification, and a public-safe project summary.",
+    links: [{ label: "KC Town Hall on X", url: "https://x.com/KCTownHall" }],
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus:
       "Historical project. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record states that KC Town Hall withdrew and the full 2019 appropriation remained unused and was reappropriated.",
@@ -627,11 +636,12 @@ const workItemsInput = [
       "CCED Board recommendation and Council acceptance",
       "$490,539 Council appropriation, later reappropriated unused",
       "Project transition to a mission-aligned organization (Jamie's first-hand account)",
+      "Institutional context from a complete 183-record @KCTownHall archival review: resident input, recurring service intake, civic information, and three direct Council Member account responses",
     ],
     knownOpenProtected: {
       known:
-        "The City listed Jamie as KC Town Hall's developer/presenter. The CCED Board recommended $490,539; the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded withdrawal and reappropriated the unused amount in 2024.",
-      open: "The official records do not establish sole authorship, individual causality for government decisions, an executed funding agreement, receipt, expenditure, completion, the receiving organization's identity, or the transition terms.",
+        "The City listed Jamie as KC Town Hall's developer/presenter. The CCED Board recommended $490,539; the Council accepted and appropriated the amount in 2019. A complete review of all 183 profile-counted @KCTownHall records documents resident-input, recurring service-intake, civic-information, and direct stakeholder-response patterns. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded withdrawal and reappropriated the unused amount in 2024.",
+      open: "The official records do not establish sole authorship, individual causality for government decisions, an executed funding agreement, receipt, expenditure, completion, the receiving organization's identity, or the transition terms. Exact tire and resident-savings totals published by the project account remain unverified, and the institutional feed is not assigned post by post to Jamie.",
       protected:
         "Private reasons and financial, legal, property, banking, and stakeholder details are omitted.",
     },

@@ -110,12 +110,43 @@ test("social-media case-study claims resolve through the generated registry", ()
       "social-product-surface",
       "/work/wowlist",
     ],
+    [
+      "CLM-KCTH-SOCIAL-OPERATING-SURFACE",
+      "kc-town-hall",
+      "social-operating-surface",
+      "/work/kc-town-hall",
+    ],
   ]) {
     assert.ok(getClaimProjection(claimId, "case-study", surface).text.length);
     const resolved = resolveCitationOccurrence(pageId, occurrenceId);
     assert.equal(resolved.claim.id, claimId);
     assert.ok(resolved.sources.length > 0);
   }
+});
+
+test("KC Town Hall numbering follows first visible claim appearance", () => {
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "developer-presenter-role").sources.map(
+      (item) => item.number,
+    ),
+    [1],
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "social-operating-surface").sources.map(
+      (item) => item.number,
+    ),
+    [2, 3, 4, 5, 6, 7, 8, 9, 10],
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "funding-decision-chain").sources.map(
+      (item) => item.number,
+    ),
+    [11, 12, 13],
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "mission-aligned-transition").sources,
+    [],
+  );
 });
 
 test("corrections retire old wording from public surfaces", () => {

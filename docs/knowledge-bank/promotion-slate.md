@@ -81,6 +81,14 @@ website selection. It is a recommendation, not publication approval.
   reconciled; the separate 10-account mission-relevant reception result is a
   bounded third-party signal. Treat neither the small historical account nor
   the search result as an adoption or impact metric.
+- `CLM-KCTH-SOCIAL-OPERATING-SURFACE`: selected as evidence that the project
+  account operated as a resident-input, recurring service-intake, civic-source,
+  and stakeholder-response surface. All 183 profile-counted records are
+  reconciled after five conversation-context cards are separated. Preserve the
+  institutional-account authorship boundary, keep account-published tire and
+  savings totals held for independent corroboration, and treat three direct
+  Council Member responses as observable engagement rather than endorsement or
+  causal government impact.
 
 ## Strong Future Feature Candidates
 

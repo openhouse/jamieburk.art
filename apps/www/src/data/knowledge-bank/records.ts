@@ -970,6 +970,15 @@ const knowledgeBankInput = {
       surface: "/work/kc-town-hall",
       sourceOrder: [
         "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
+        "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
+        "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
+        "SRC-KCTH-LAUNCH-2018-07-02",
+        "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+        "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+        "SRC-KCTH-LUCAS-LEONS-RESPONSE-2019-04-29",
+        "SRC-KCTH-JUSTUS-LEONS-RESPONSE-2019-04-29",
+        "SRC-KCTH-ROBINSON-COMMUNITY-CONDITIONS-2020-08-01",
+        "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
         "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
         "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
         "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
@@ -980,6 +989,11 @@ const knowledgeBankInput = {
           claimId: "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE",
           projection: "case-study",
           sourceIds: ["SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019"],
+        },
+        {
+          id: "social-operating-surface",
+          claimId: "CLM-KCTH-SOCIAL-OPERATING-SURFACE",
+          projection: "case-study",
         },
         {
           id: "funding-decision-chain",
