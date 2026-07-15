@@ -7,7 +7,7 @@ import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/ww
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
-import { urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
+import { urbanhermitCorpusFindings, urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
 import { wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
@@ -1682,6 +1682,67 @@ test("urbanhermit complete graph contract rejects provenance and review drift", 
       target[field] = original;
     }
   }
+});
+
+test("urbanhermit complete graph contract rejects citation-requirement drift", () => {
+  const moduleClaim = urbanhermitSocialCorpus.claims[0];
+  const bankClaim = knowledgeBank.claims.find((item) => item.id === moduleClaim.id);
+  assert.ok(bankClaim);
+  const moduleProjection = moduleClaim.projections[0];
+  const bankProjection = bankClaim.projections[0];
+  const originals = [moduleProjection.citationRequired, bankProjection.citationRequired];
+
+  try {
+    moduleProjection.citationRequired = !moduleProjection.citationRequired;
+    bankProjection.citationRequired = !bankProjection.citationRequired;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    moduleProjection.citationRequired = originals[0];
+    bankProjection.citationRequired = originals[1];
+  }
+});
+
+test("urbanhermit public-surface contract rejects summary, inventory, and documentation drift", () => {
+  const personalInventory = socialMediaArchiveProduction.inventory.personalAccounts.find(
+    (item) => item.handle === "@urbanhermit"
+  );
+  assert.ok(personalInventory);
+
+  for (const target of [urbanhermitPopulationAudit, urbanhermitCorpusFindings, personalInventory]) {
+    for (const key of Object.keys(target)) {
+      const original = target[key];
+      try {
+        target[key] = typeof original === "number" ? original + 1 : `${original} changed`;
+        const result = evaluateKnowledgeBank(suite);
+        assert.equal(
+          result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+          1,
+          `expected ${key} drift to fail`
+        );
+        assert.equal(result.accepted, false);
+      } finally {
+        target[key] = original;
+      }
+    }
+  }
+
+  const documentation = readFileSync(
+    new URL("../../docs/knowledge-bank/intake/2026-07-14-urbanhermit-full-population-social-corpus.md", import.meta.url),
+    "utf8"
+  );
+  const result = evaluateKnowledgeBank(suite, {
+    urbanhermitDocumentation: `${documentation}\nAll 434 records were fully recovered.`
+  });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
 });
 
 test("urbanhermit personal and individual posts are not institutional metadata", () => {

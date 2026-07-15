@@ -1421,9 +1421,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   );
   const urbanFull = suite.pilot.urbanhermitFullPopulation;
   const urbanLedgerPath = path.join(repoRoot, urbanFull.ledgerPath);
-  const urbanDocumentation = existsSync(path.join(repoRoot, urbanFull.documentationPath))
+  const urbanDocumentation = fixtures.urbanhermitDocumentation ?? (existsSync(path.join(repoRoot, urbanFull.documentationPath))
     ? readFileSync(path.join(repoRoot, urbanFull.documentationPath), "utf8")
-    : "";
+    : "");
   const urbanCanonicalLedger = existsSync(urbanLedgerPath)
     ? JSON.parse(readFileSync(urbanLedgerPath, "utf8"))
     : null;
@@ -1724,6 +1724,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       inquiries: urbanFullInquiries
     }
   }));
+  const urbanPublicSurfaceContractHash = sha256(JSON.stringify({
+    populationAudit: urbanhermitPopulationAudit,
+    corpusFindings: urbanhermitCorpusFindings,
+    personalInventory: urbanPersonalInventory,
+    documentation: urbanDocumentation
+  }));
   const urbanSemanticContractHash = sha256(JSON.stringify({
     sources: urbanFullSources.map((source) => source && ({
       id: source.id,
@@ -1841,6 +1847,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       urbanLedgerContractHash === urbanFull.expectedLedgerSha256 &&
       urbanLedgerMetadataContractHash === urbanFull.expectedLedgerMetadataSha256 &&
       urbanKnowledgeGraphContractHash === urbanFull.expectedKnowledgeGraphSha256 &&
+      urbanPublicSurfaceContractHash === urbanFull.expectedPublicSurfaceSha256 &&
       urbanSemanticContractHash === urbanFull.expectedSemanticContractSha256 &&
       urbanLedger.populationAudit.profileCountObserved === urbanFull.expectedProfileCount &&
       urbanLedger.populationAudit.profileAndBoundedSearchItemsRecovered === urbanFull.expectedUniqueItems &&

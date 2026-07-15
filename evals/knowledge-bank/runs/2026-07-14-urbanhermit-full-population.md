@@ -150,6 +150,17 @@ arithmetic, identity, authorship, metric-ownership, scope, link, and privacy
 checks. A digest makes an unreviewed change visible; it does not make the
 underlying claim true.
 
+### Iteration 16: public-summary and documentation closure
+
+A second fresh judge found three public mirrors outside the complete corpus
+contract: the exported population-audit constants, exported corpus findings,
+and the personal-account entry in the wider social inventory. The human-
+readable intake document was also checked only for selected phrases. A separate
+public-surface contract now binds all of those summaries and the full intake
+document. Tests mutate every field in both exported summaries and the inventory
+entry, alter the documentation, and explicitly cover coordinated changes to a
+projection's citation requirement.
+
 ## Acceptance Contract
 
 `KB-EVAL-URBANHERMIT-FULL-POPULATION` fails if:
@@ -172,6 +183,8 @@ underlying claim true.
 - any intake, source, observation, claim, projection, review field, or inquiry
   in the complete knowledge subgraph changes without a deliberate contract
   update;
+- any exported audit summary, corpus finding, personal-account inventory field,
+  or intake-document text changes without a deliberate contract update;
 - a verified short-link-to-source edge is removed or altered;
 - source-status metrics enter Jamie's traction aggregate;
 - source, observation, claim, or inquiry counts drift;
