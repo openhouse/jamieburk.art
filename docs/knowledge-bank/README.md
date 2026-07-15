@@ -162,6 +162,16 @@ credentials, and authenticated-session data. The hiring site receives only
 separately governed participation-system and response-signal claims; no event
 or knowledge-bank route is created.
 
+The [NYC Artist Coalition Facebook post archival-production
+report](projects/nyc-artist-coalition-facebook-posts.md) gives every record in
+the exact-matching 444-post surviving Page population a public-safe
+disposition, inventories 33 normalized posted routes, and preserves stakeholder
+routing and visible-response floors without turning them into inbound
+engagement or impact. Three protected first-party manager exports corroborate
+185 managed-content rows from 2019-2021 but do not supply the 2017-2018
+denominator or human publishers. Jamie's predominant-but-shared Page-use memory
+remains a research lead, and no website route is created.
+
 The [WOW List Facebook post archival-production
 report](projects/wowlist-facebook-posts.md) accounts for all 57 records in a
 terminal 19-page protected capture and gives each a public-safe content, live,

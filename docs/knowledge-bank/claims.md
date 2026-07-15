@@ -427,6 +427,97 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## nycac-facebook-surviving-post-population - Surviving Page population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the surviving current surface
+**Evidence class:** Two protected terminal traversals / public-safe 444-row ledger
+**Public wording:** Two independent terminal traversals recovered the same 444 surviving NYC Artist Coalition Facebook post identities from January 2017 through September 2021, and every recovered record received a public-safe disposition.
+**Detailed public-safe wording:** The traversals used distinct scroll cadences, matched exactly, and remained stable through 42 and 41 additional no-addition controls; the public disposition digest regenerates from all 444 anonymous record IDs.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Establishes an auditable denominator without erasing the platform-history gap.
+**Guardrail:** This is 100 percent of the surviving July 2026 surface, not a native Meta lifetime export or deletion history.
+**Do not say:** NYC Artist Coalition published exactly 444 posts; no historical post is missing.
+**Protected boundaries:** Raw post bodies, names, links, per-record metrics, media, and authenticated state stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-public-operating-surface - Collective civic publishing system
+
+**Status:** Confirmed with boundary
+**Support level:** Strong collective-system evidence
+**Evidence class:** Public-safe full-population census / posted-route inventory / independently documented Jamie role context
+**Public wording:** Across 444 surviving records, the coalition Page routed among meetings, hearings, Let NYC Dance, Save NYC Spaces, Talks Not Raids, FairRentNYC, press, public information, practical resources, and relief information.
+**Detailed public-safe wording:** The corpus contains 150 event routes, 138 standalone posts, 78 original-media posts, 52 reshared stories, and 26 source-or-resource routes across a 2017-2021 campaign chronology.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Makes a sustained public operating surface legible beyond generic social-media promotion.
+**Guardrail:** This is a collective Page-level pattern, not individual post authorship or policy causality.
+**Do not say:** Jamie authored every post; Facebook publishing caused the coalition's policy outcomes.
+**Protected boundaries:** Do not publish raw post text, comments, names, per-record metrics, post-to-route relationships, media, or account administration.
+**Review owner:** Jamie / collaborator review welcome for division of publishing labor
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-stakeholder-routing - Public addressing, not inbound engagement
+
+**Status:** Confirmed with boundary
+**Support level:** Strong classification evidence
+**Evidence class:** Public-safe 444-row stakeholder-routing census
+**Public wording:** Rule-matched routing appears on 88 records for NYC Council members or Council, 40 for cultural and nightlife agencies, 39 for cultural and advocacy partners, 13 for business and enforcement agencies, and 12 for press or public-information organizations.
+**Detailed public-safe wording:** The overlapping categories preserve how the Page publicly addressed institutions and movement actors without identifying ordinary individuals or converting references into inbound actions.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Shows stakeholder architecture and civic translation while preserving the difference between addressing and response.
+**Guardrail:** Categories overlap and count records. Tags, mentions, links, quotations, and reshares do not establish stakeholder response, endorsement, attendance, partnership, or action.
+**Do not say:** Eighty-eight Council members engaged; agency tags prove endorsement.
+**Protected boundaries:** Raw actor lists, individual-level relationship data, comments, and post-to-stakeholder joins stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-source-routing - Posted source and action routes
+
+**Status:** Confirmed with boundary
+**Support level:** Strong route-inventory evidence
+**Evidence class:** Public-safe 33-row normalized route ledger
+**Public wording:** The corpus contains 64 outbound-link occurrences consolidated into 33 normalized public-safe routes across campaigns, civic information, cultural programs, press, practical resources, fundraising, and relief information.
+**Detailed public-safe wording:** Thirty-one public routes are preserved with category and occurrence count; two historical meeting-access or form destinations are counted without publishing their URLs.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves the Page's source-discovery and action-routing architecture for future research and composition.
+**Guardrail:** A posted route is not automatic corroboration, authorship, readership, conversion, partnership, endorsement, or impact. Two historical action routes remain protected.
+**Do not say:** Every route corroborates a coalition claim; every linked organization partnered with the coalition; posted links prove action.
+**Protected boundaries:** Historical meeting links, forms, post-to-route joins, raw text, and authenticated context stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-visible-interaction-signals - Dated response floor
+
+**Status:** Confirmed with boundary
+**Support level:** Strong dated-interface evidence
+**Evidence class:** Unlinkable public counter frequencies / protected first-party 2019-2021 metric crosscheck
+**Public wording:** On July 14, 2026, 389 of 444 surviving records retained at least one visible response signal; current unlinkable counters sum to floors of 2,374 reactions, 212 comments, and 611 shares.
+**Detailed public-safe wording:** Aggregate value-frequency tables reproduce the dated floors without linking a count to a post or person; 185 manager-export rows independently preserve bounded 2019-2021 metric fields.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Retains mission-relevant traction evidence while preventing a mutable interface count from becoming an impact claim.
+**Guardrail:** These are mutable interface observations, not lifetime analytics, unique people, reach, attendance, conversion, endorsement, causality, or impact.
+**Do not say:** The coalition reached 2,374 people; 611 shares moved legislation.
+**Protected boundaries:** Per-post metrics, audience identities, comments, reach rows, raw exports, and source-to-metric joins stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-publishing-memory - Jamie's predominant-but-shared use memory
+
+**Status:** Research-stage / hold
+**Support level:** First-person memory lead; human publisher not recovered
+**Evidence class:** Jamie first-person recollection / protected manager-export field audit
+**Public wording:** Jamie remembers handling much of the coalition's Facebook publishing while also remembering that others used the Page.
+**Detailed public-safe wording:** The memory is accessioned as predominant but shared Page use; neither the surviving surface nor the recovered 2019-2021 CSV exports identifies the human publisher of each post.
+**Where to project:** No public projection pending corroboration.
+**Why it matters:** Preserves a potentially important operating-role claim without using shared-account custody as authorship proof.
+**Guardrail:** Neither the surviving Page nor the recovered 2019-2021 manager exports supplies record-level human publishers.
+**Do not say:** Jamie authored or published all 444 posts; Jamie was the sole administrator; the archive confirms he was the predominant publisher.
+**Protected boundaries:** Account administration, access state, raw exports, collaborator identities, and record-level attribution research stay protected.
+**Review owner:** Jamie / collaborator proof notes welcome
+**Next evidence:** Native administrator chronology, record-level publisher export, or collaborator proof notes.
+**Last reviewed:** 2026-07-15
+
 ## wowlist-facebook-event-cross-surface - Event routing through a shared project identity
 
 **Status:** Confirmed with boundary

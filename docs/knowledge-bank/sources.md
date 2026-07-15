@@ -186,6 +186,26 @@ Five additional event-posted article routes reuse existing WNYC, Metro, New
 Yorker, Baffler, and Curbed source records. A route in an event establishes
 circulation context, not adoption of every article statement.
 
+## NYC Artist Coalition Facebook Posts
+
+The [444-record post report](projects/nyc-artist-coalition-facebook-posts.md)
+keeps four evidence jobs distinct:
+
+- two protected terminal traversals establish the exact-matching surviving
+  Page population and raw source-to-disposition review;
+- the public-safe post ledger exposes anonymous form, theme, stakeholder-
+  routing, URL-count, and visible-signal dispositions;
+- the public-safe route ledger preserves 64 outbound occurrences as 33
+  normalized routes, including two protected historical action routes; and
+- three protected first-party manager exports independently preserve 185
+  unique 2019-2021 managed-content rows without supplying human publishers or
+  a 2017-2018 denominator.
+
+Selected public sources preserve Cabaret Law, Talks Not Raids, COVID resource,
+Agent of Change, and comparative arts-relief context. Raw post text, comments,
+names, per-record metrics, media, post-to-route relationships, administrator
+state, and authenticated-session material remain outside the repository.
+
 ## Personal and WOWList Facebook Events
 
 The [event archival-production report](projects/jamie-wowlist-facebook-events.md)

@@ -33,6 +33,12 @@ import {
   nycacFacebookEventSources
 } from "./nycacFacebookEvents.ts";
 import {
+  nycacFacebookPostClaims,
+  nycacFacebookPostIntakeItems,
+  nycacFacebookPostResearchInquiries,
+  nycacFacebookPostSources
+} from "./nycacFacebookPosts.ts";
+import {
   jamieWowlistFacebookEventClaims,
   jamieWowlistFacebookEventIntakeItems,
   jamieWowlistFacebookEventResearchInquiries,
@@ -813,6 +819,7 @@ const knowledgeBankInput = {
     ...projectSocialSources,
     ...urbanhermitSources,
     ...nycacFacebookEventSources,
+    ...nycacFacebookPostSources,
     ...jamieWowlistFacebookEventSources,
     ...wowlistFacebookPostSources,
     ...kcTownHallPhaseOneSources
@@ -1054,6 +1061,7 @@ const knowledgeBankInput = {
     },
     ...urbanhermitClaims,
     ...nycacFacebookEventClaims,
+    ...nycacFacebookPostClaims,
     ...jamieWowlistFacebookEventClaims,
     ...wowlistFacebookPostClaims,
     ...kcTownHallPhaseOneClaims
@@ -1139,6 +1147,7 @@ const knowledgeBankInput = {
     },
     ...urbanhermitResearchInquiries,
     ...nycacFacebookEventResearchInquiries,
+    ...nycacFacebookPostResearchInquiries,
     ...jamieWowlistFacebookEventResearchInquiries,
     ...wowlistFacebookPostResearchInquiries,
     ...kcTownHallPhaseOneResearchInquiries
@@ -2897,6 +2906,7 @@ const knowledgeBankInput = {
     },
     ...urbanhermitIntakeItems,
     ...nycacFacebookEventIntakeItems,
+    ...nycacFacebookPostIntakeItems,
     ...jamieWowlistFacebookEventIntakeItems,
     ...wowlistFacebookPostIntakeItems,
     ...kcTownHallPhaseOneIntakeItems

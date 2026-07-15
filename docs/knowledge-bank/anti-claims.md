@@ -64,6 +64,24 @@ or reposts as stable reach, adoption, or outcome metrics.
 
 Do not name collaborators unless approved.
 
+## NYC Artist Coalition Facebook Posts
+
+Do not call the 444-record surviving Page census a native Meta export, deletion
+history, lifetime total, or proof that no historical post is missing. Do not
+say Jamie authored or published all 444 records, was the sole Page
+administrator, or was the predominant publisher as an established fact.
+
+Do not turn 88 Council-related routing records into 88 Council members who
+engaged. Tags, mentions, links, quotations, and reshares do not prove response,
+endorsement, partnership, attendance, or action. Current reaction, comment, and
+share floors and post-level manager-export reach values do not establish unique
+people, lifetime analytics, reach, attendance, conversion, policy influence,
+causality, or impact.
+
+Do not publish raw post bodies, comments, names, per-record metrics, raw post
+URLs, media, post-to-route relationships, administrator state, authenticated
+session details, or protected historical action routes.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

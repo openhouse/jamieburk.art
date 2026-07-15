@@ -248,7 +248,7 @@
       "category": "press-or-public-knowledge",
       "occurrences": 2,
       "publicUrl": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html",
-      "sourceId": "SRC-PRESS-LND-NYT-2017-10-30",
+      "sourceId": "SRC-NYT-CABARET-REPEAL-2017-10-30",
       "disposition": "source-record",
       "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
     },
@@ -275,7 +275,7 @@
       "category": "press-or-public-knowledge",
       "occurrences": 1,
       "publicUrl": "https://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law/",
-      "sourceId": "SRC-PRESS-LND-WNYC-BUREAUCRATIC-DANCE",
+      "sourceId": "SRC-WNYC-CABARET-LAW-2017",
       "disposition": "source-record",
       "interpretationBoundary": "Posted route only; not automatic corroboration, authorship, endorsement, readership, conversion, partnership, or impact."
     },
