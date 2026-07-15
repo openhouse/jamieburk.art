@@ -1,19 +1,26 @@
 {
-  "judgeId": "codex-independent-hiring-manager-application-2026-07-15-r13",
+  "judgeId": "codex-independent-hiring-manager-application-2026-07-15-r14",
   "lens": "hiring-manager",
-  "candidate": "sha256:cd490f0b5001f13858eec10dff84ae76802f301ffb96d2f2e53e61cba4afc055",
-  "contract": "sha256:41e31f078e92b6a9b4dd802f62e60bc0a8ce02f174980a73dbda259d0d49c352",
+  "candidate": "sha256:75a2f3c64658f5b6fb831ec32b4402be033f77a76f7919b5907462497ea0eb8c",
+  "contract": "sha256:12df185b8c6f661d739802e0abf0554e6b984b9acd8ae6a2d1d04f35e56b95aa",
   "profile": "application_ready",
   "scores": { "role_clarity": 4, "role_fit": 4, "proof_defensibility": 4, "citational_care": 4, "reader_effort": 3, "chad_lens": 3, "visual_evidence": 1, "resume_alignment": 4, "responsive_quality": 3, "sharing_quality": 3, "operational_confidence": 3 },
   "evidence": [
-    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport immediately identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation and names concrete operating outputs." },
-    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "The page maps Jamie's record to delivery coordination, risk surfacing, decision clarity, operating documentation, launch, and adoption." },
-    { "rubric": "proof_defensibility", "route": "/work/callnyc", "observation": "The corrected chronology distinguishes the hackathon, the Council's attributed description, the later dataset release, and Jamie's independent development without presenting CallNYC as an official product." },
-    { "rubric": "resume_alignment", "route": "/resume", "observation": "The HTML impact statement and downloadable PDF use the same corrected CallNYC chronology and align on the broader role and project record." }
+    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, then names requirements, workflows, documentation, launch support, onboarding, and handoffs as his concrete outputs." },
+    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "The page directly maps Jamie's record to delivery coordination, risk surfacing, decision clarity, operating documentation, public-facing launches, and adoption." },
+    { "rubric": "proof_defensibility", "route": "/work/callnyc", "observation": "The chronology separates the Council event, the later data release, Jamie's independent prototype, and its archived unofficial status while preserving the limits of each supporting source." },
+    { "rubric": "citational_care", "route": "/work/fair-rent-nyc", "observation": "Claims connect to numbered references and backlinks, while source notes and collective-work boundaries state what the evidence supports and where individual attribution stops." },
+    { "rubric": "reader_effort", "route": "/work/fair-rent-nyc", "observation": "The role and work are understandable, but the long operating record plus repeated source, visibility, care, and Known / Open / Protected sections require more reading than the strongest hiring-manager scan." },
+    { "rubric": "chad_lens", "route": "/work/fair-rent-nyc", "observation": "Jamie is visibly credited for documentation architecture, campaign websites, coordination, and policy translation, but specialized phrases such as campaign memory and provenance redline make the useful outcome less immediate than it could be." },
+    { "rubric": "visual_evidence", "route": "/work/callnyc", "observation": "The artifact gallery describes the prototype, translation layer, and press record in text cards but does not show the actual interface; this remains an allowed application-profile deferral." },
+    { "rubric": "resume_alignment", "route": "/resume", "observation": "The deterministic resume-consistency gate passes and confirms that the public chronology and approved application document reinforce the same role and project history." },
+    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound evidence reports no overflow across ten desktop, mobile, and reflow checks, with visible focus on all 24 traversed controls; the zoom test used an equivalent viewport rather than browser-chrome zoom." },
+    { "rubric": "sharing_quality", "route": "/resume", "observation": "Canonical, Open Graph, Twitter-card, link, and download checks pass locally, but the captured metadata uses staging defaults rather than a verified production share." },
+    { "rubric": "operational_confidence", "route": "/", "observation": "The candidate is locally healthy and fingerprint-bound, but matching production deploy, smoke, rollback, indexing, and deployed-commit evidence remains deferred." }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface in a later visual-evidence pass.",
+  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface to its artifact gallery with concise alt text and the archived-unofficial boundary preserved.",
   "passes": true,
   "confidence": "high"
 }

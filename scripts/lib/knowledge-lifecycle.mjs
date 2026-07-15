@@ -2602,6 +2602,148 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredRelationalInfrastructureArchiveProduction) {
+    const required = suite.requiredRelationalInfrastructureArchiveProduction;
+    for (const intakeId of required.intakeIds) {
+      if (!bank.intakeItems.some((item) => item.id === intakeId)) {
+        add("capture_integrity", "missing-relational-infrastructure-intake", `Missing ${intakeId}`);
+      }
+    }
+    for (const sourceId of required.sourceIds) {
+      if (!sourceById.has(sourceId)) {
+        add("source_decomposition", "missing-relational-infrastructure-source", `Missing ${sourceId}`);
+      }
+    }
+    for (const claimId of required.claimIds) {
+      if (!bank.claims.some((item) => item.id === claimId)) {
+        add("provenance_closure", "missing-relational-infrastructure-claim", `Missing ${claimId}`);
+      }
+    }
+    for (const inquiryId of required.inquiryIds) {
+      if (!inquiryIds.has(inquiryId)) {
+        add("research_honesty", "missing-relational-infrastructure-inquiry", `Missing ${inquiryId}`);
+      }
+    }
+
+    const dbSource = sourceById.get(required.dbSourceId);
+    const workbookSource = sourceById.get(required.workbookSourceId);
+    const callScriptSource = sourceById.get(required.callScriptSourceId);
+    if (
+      !dbSource ||
+      dbSource.visibility !== "private" ||
+      dbSource.preservationStatus !== "private" ||
+      !dbSource.protectedLocatorId ||
+      dbSource.canonicalUrl ||
+      dbSource.archiveUrl ||
+      dbSource.assetUrl ||
+      !dbSource.doesNotEstablish.some((item) => /attendance, reach, impressions, conversion, or policy impact/i.test(item)) ||
+      !dbSource.doesNotEstablish.some((item) => /sole authorship|individual operator/i.test(item))
+    ) {
+      add("projection_restraint", "relational-db-private-boundary", `${required.dbSourceId} exposes rows or loses impact and authorship limits`);
+    }
+    if (
+      !workbookSource ||
+      workbookSource.visibility !== "protected" ||
+      workbookSource.preservationStatus !== "private" ||
+      !workbookSource.protectedLocatorId ||
+      workbookSource.canonicalUrl ||
+      workbookSource.archiveUrl ||
+      workbookSource.assetUrl ||
+      !workbookSource.doesNotEstablish.some((item) => /every Y mark means physical attendance/i.test(item)) ||
+      !workbookSource.doesNotEstablish.some((item) => /participant identities.*contact details/i.test(item))
+    ) {
+      add("projection_restraint", "relational-workbook-private-boundary", `${required.workbookSourceId} exposes participants or converts marks into attendance`);
+    }
+    if (
+      !callScriptSource ||
+      callScriptSource.visibility !== "public" ||
+      callScriptSource.canonicalUrl !== "https://www.facebook.com/callscript" ||
+      callScriptSource.reviewDepth !== "close-reading" ||
+      !callScriptSource.supportsGenerally.some((item) => /links to popular.vote/i.test(item)) ||
+      !callScriptSource.supportsGenerally.some((item) => /fire-guard training.*town-hall strategy.*survey design/i.test(item)) ||
+      !callScriptSource.doesNotEstablish.some((item) => /sole authorship|individual author/i.test(item))
+    ) {
+      add("source_decomposition", "relational-callscript-source-scope", `${required.callScriptSourceId} loses the public bridge or person-level boundary`);
+    }
+
+    const expected = required.expected;
+    const dbScale = bank.claims.find((item) => item.id === required.dbScaleClaimId);
+    const requiredDbCounts = [
+      expected.postRecords,
+      expected.postTagRelationships,
+      expected.tagRecords,
+      expected.followTagRecords,
+      expected.sourceRecords
+    ];
+    if (
+      !dbScale ||
+      dbScale.publicationStatus !== "internal-only" ||
+      !requiredDbCounts.every((count) => dbScale.internalClaim.includes(count.toLocaleString("en-US"))) ||
+      !dbScale.antiClaims.some((item) => /28,837 users or followers/i.test(item))
+    ) {
+      add("research_honesty", "relational-db-scale-boundary", `${required.dbScaleClaimId} loses exact database denominators or turns records into people`);
+    }
+
+    const tagOverlap = bank.claims.find((item) => item.id === required.tagOverlapClaimId);
+    if (
+      !tagOverlap ||
+      ![expected.popularVoteSundayDinner, expected.popularVoteNycArtc, expected.nycArtcSundayDinner, expected.allThree]
+        .every((count) => tagOverlap.internalClaim.includes(String(count))) ||
+      !tagOverlap.boundaries.some((item) => /cataloging and civic-cultural routing/i.test(item)) ||
+      !tagOverlap.antiClaims.some((item) => /count unique participants or attendees/i.test(item)) ||
+      !tagOverlap.antiClaims.some((item) => /authored or produced every intersecting record/i.test(item))
+    ) {
+      add("research_honesty", "relational-tag-overlap-boundary", `${required.tagOverlapClaimId} turns tag intersections into people, authorship, or impact`);
+    }
+
+    const workbookClaim = bank.claims.find((item) => item.id === required.workbookClaimId);
+    if (
+      !workbookClaim ||
+      workbookClaim.publicationStatus !== "internal-only" ||
+      ![expected.numberedColumns, expected.markedColumns, expected.yesMarks, expected.participantRows]
+        .every((count) => workbookClaim.internalClaim.includes(count.toLocaleString("en-US"))) ||
+      !workbookClaim.boundaries.some((item) => /Y-mark semantics.*physical attendance/i.test(item)) ||
+      !workbookClaim.boundaries.some((item) => /exact completed-event count/i.test(item)) ||
+      !workbookClaim.antiClaims.some((item) => /2,726 people attended/i.test(item))
+    ) {
+      add("research_honesty", "relational-workbook-aggregate-boundary", `${required.workbookClaimId} turns marks into audited attendance or exact completed events`);
+    }
+
+    const bridge = bank.claims.find((item) => item.id === required.bridgeClaimId);
+    const bridgeSourceIds = new Set(bridge?.evidence.map((item) => item.sourceId));
+    if (
+      !bridge ||
+      bridge.status !== "confirmed-with-boundary" ||
+      bridge.publicationStatus !== "qualified" ||
+      ![required.dbSourceId, required.callScriptSourceId, required.eventSourceId].every((id) => bridgeSourceIds.has(id)) ||
+      bridge.projections.some((projection) => projection.status === "active") ||
+      !bridge.boundaries.some((item) => /do not independently assign.*Jamie/i.test(item)) ||
+      !bridge.boundaries.some((item) => /collective or multi-operator/i.test(item)) ||
+      !bridge.antiClaims.some((item) => /alone created every project, account, post, event, or coalition practice/i.test(item))
+    ) {
+      add("research_honesty", "relational-bridge-role-boundary", `${required.bridgeClaimId} loses source triangulation, collective credit, or its hold`);
+    }
+
+    const workbookInquiry = bank.researchInquiries.find((item) => item.id === required.workbookInquiryId);
+    if (
+      !workbookInquiry ||
+      workbookInquiry.resultStatus !== "partially-recovered" ||
+      !workbookInquiry.limitations.some((item) => /cannot be equated with physical attendance/i.test(item)) ||
+      !workbookInquiry.limitations.some((item) => /Participant identities.*remain protected/i.test(item))
+    ) {
+      add("research_honesty", "relational-workbook-inquiry-boundary", `${required.workbookInquiryId} over-resolves attendance semantics or exposes participants`);
+    }
+    const roleInquiry = bank.researchInquiries.find((item) => item.id === required.roleInquiryId);
+    if (
+      !roleInquiry ||
+      roleInquiry.resultStatus !== "partially-recovered" ||
+      !roleInquiry.limitations.some((item) => /do not independently establish Jamie's exact facilitation share/i.test(item)) ||
+      !roleInquiry.limitations.some((item) => /Collaborator testimony.*still needed/i.test(item))
+    ) {
+      add("research_honesty", "relational-role-inquiry-boundary", `${required.roleInquiryId} over-resolves Jamie's individual role`);
+    }
+  }
+
   if (suite.requiredNycArtcInstitutionalValue) {
     const required = suite.requiredNycArtcInstitutionalValue;
     for (const entityId of required.entityIds) {

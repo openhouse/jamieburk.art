@@ -1509,6 +1509,52 @@ test("personal WOW List evidence supports community routing rather than the Page
   assert.equal(result.findings.some((item) => item.code === "personal-facebook-wowlist-evidence-edge"), true);
 });
 
+test("relational infrastructure keeps database rows and participant records private while preserving the public bridge", () => {
+  const required = suite.requiredRelationalInfrastructureArchiveProduction;
+  const dbSource = knowledgeBank.sources.find((item) => item.id === required.dbSourceId);
+  const workbookSource = knowledgeBank.sources.find((item) => item.id === required.workbookSourceId);
+  const callScriptSource = knowledgeBank.sources.find((item) => item.id === required.callScriptSourceId);
+  const tagOverlap = knowledgeBank.claims.find((item) => item.id === required.tagOverlapClaimId);
+  const workbookClaim = knowledgeBank.claims.find((item) => item.id === required.workbookClaimId);
+  const bridge = knowledgeBank.claims.find((item) => item.id === required.bridgeClaimId);
+
+  assert.equal(dbSource.visibility, "private");
+  assert.equal(dbSource.canonicalUrl, undefined);
+  assert.equal(workbookSource.visibility, "protected");
+  assert.equal(workbookSource.canonicalUrl, undefined);
+  assert.equal(callScriptSource.canonicalUrl, "https://www.facebook.com/callscript");
+  assert.match(tagOverlap.boundaries.join(" "), /cataloging and civic-cultural routing/);
+  assert.match(workbookClaim.boundaries.join(" "), /Y-mark semantics.*physical attendance/);
+  assert.deepEqual(
+    new Set(bridge.evidence.map((item) => item.sourceId)),
+    new Set([required.dbSourceId, required.callScriptSourceId, required.eventSourceId])
+  );
+  assert.equal(bridge.projections.every((projection) => projection.status !== "active"), true);
+});
+
+test("relational infrastructure eval rejects row exposure, attendance inflation, and sole-credit bridge language", () => {
+  const required = suite.requiredRelationalInfrastructureArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const dbSource = bank.sources.find((item) => item.id === required.dbSourceId);
+  const workbookClaim = bank.claims.find((item) => item.id === required.workbookClaimId);
+  const bridge = bank.claims.find((item) => item.id === required.bridgeClaimId);
+
+  dbSource.visibility = "public";
+  dbSource.canonicalUrl = "https://example.com/private-wowlist-rows";
+  dbSource.doesNotEstablish = [];
+  workbookClaim.internalClaim = "The workbook proves exactly 346 completed gatherings and 2,726 attendees.";
+  workbookClaim.boundaries = [];
+  workbookClaim.antiClaims = [];
+  bridge.boundaries = [];
+  bridge.antiClaims = [];
+  bridge.projections[0].status = "active";
+
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "relational-db-private-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "relational-workbook-aggregate-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "relational-bridge-role-boundary"), true);
+});
+
 test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {
   const required = suite.requiredGoogleDriveArchiveProduction;
   for (const sourceId of required.sourceIds) {

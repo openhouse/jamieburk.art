@@ -1,8 +1,8 @@
 {
-  "judgeId": "public-administration-2026-07-15-d",
-  "lens": "public-administration-democracy",
-  "candidate": "sha256:9cca2ed8c84ae35c7088b3d502dd57976de0e89a1a5b2541c27cd3358262d625",
-  "contract": "sha256:ae91dc206bdf80b22f8797acdfbc0db62b9b535995f14c9d6ba59a02d3ff9804",
+  "judgeId": "public-safety-composition-2026-07-15-e",
+  "lens": "public-safety-composition",
+  "candidate": "sha256:57eee80cb9ae4ece78acc19bb127b4cc0ec0d9f4535584b1941a580979c7ff51",
+  "contract": "sha256:79a912e38917fca1ceabecc00a786c10da42ee18680b88edc1b8fb294f8a2461",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,41 +17,41 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The CallNYC population, Council-account amplification, and institutional-value inputs retain stable intake identities, explicit dispositions, linked sources, claims, and inquiries. The deterministic evaluation reports 123 intake records and no findings."
+      "observation": "All three new fragments have stable intake IDs, explicit promoted dispositions, linked sources, claims, and inquiries. The database and workbook intakes remain local-private behind opaque protected locator IDs, while the Call Script intake contains only its public Facebook URL."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "Four individual CallNYC posts distinguish three quote-posts from Helen Rosenthal's direct share, while four official Council person records separately support then-serving officeholder context. DCLA and CreateNYC records separately state what they support and refuse private motive, individual-role, recommendation-adoption, dependency, and sole-causality claims."
+      "observation": "The database, workbook, and Call Script records each identify review depth, provenance, support, and non-support. The private sources explicitly refuse attendance, reach, conversion, impact, authorship, account-operation, and participant-publication inferences; the public Call Script source refuses sole authorship, individual post attribution, attendance, outcomes, and founding claims."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "The CallNYC finding states at least four then-serving Council-member accounts, names all four, and distinguishes three quote-posts from one direct project share. Espinal's formal sponsorship, single documented town-hall appearance, and limited relational interpretation remain three separate claims."
+      "observation": "System-scale counts, tag intersections, workbook aggregates, and the cross-project bridge remain four separately evaluable claims. Question 71's database counts and intersections are not combined with users or impact, and question 72's column, mark, and row counts remain distinct from completed-event and attendance conclusions."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The CallNYC amplification claim resolves through four direct post sources, four corroborating officeholder sources, the bounded Council-account inquiry, and the separate population-gap inquiry. The inquiry situates the finding within 107 recovered records from 110 profile-counted records and preserves all three unavailable records."
+      "observation": "The Call Script bridge resolves to three distinct evidence roles: direct public support for the popular.vote link and March meeting route, direct public support for the January DCLA event relationship, and non-renderable private support for the tag graph. The workbook and database claims resolve only to their respective private aggregate sources."
     },
     {
       "rubric": "status_separation",
-      "observation": "The CallNYC amplification projection remains on hold with no surface. All four DCLA, Council, Espinal, and Jamie institutional-value syntheses remain inference, internal-only, unused, and projection-free; directly documented testimony, sponsorship, and participation remain separately qualified."
+      "observation": "The database, tag-overlap, and workbook claims are confirmed-with-boundary but internal-only with no projections. The bridge is qualified and editorially candidate; its sole citation-required projection is held, has no surfaces, and has no active page occurrence."
     },
     {
       "rubric": "project_context",
-      "observation": "The CallNYC dossier preserves its independent and unofficial status, the 107-of-110 population context, officeholder verification, and historical-engagement limits. The coalition dossier keeps DCLA's agency role, the Council's legislative role, Espinal's sponsorship and one appearance, the coalition's convening role, and Jamie's component contributions institutionally distinct."
+      "observation": "The records situate WOW List, Sunday Dinner, Popular Vote, Call Script, and NYC Artist Coalition across the 2012-2021 workbook span and the January-March 2017 public sequence. The dossier preserves methods, anomalies, related projects, open collaborator research, and the hiring-relevant participation-infrastructure throughline without presenting a private archive."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The CallNYC records expressly refuse formal endorsement, Council adoption, offline use, constituent outcomes, approval of every ranking, hidden-like inference, and a complete historic engagement roster. The institutional inquiry remains partially recovered and refuses private motive, dependence, recurring Espinal responsiveness or accountability, universal representation, and sole coalition or individual causality."
+      "observation": "Question 72 is satisfied by preserving 346 numbered columns, 341 marked columns, 2,726 Y marks, and 411 participant rows while recording duplicate labels, missing numbers, zero-mark columns, unresolved Y semantics, and the absence of an independent audit. Question 73 is satisfied because Jamie's authorship, facilitation share, account operation, and founding share remain unresolved pending collaborator corroboration."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The private CallNYC corpus remains behind an opaque locator, and Jamie's bounded first-person event-practice evidence remains private-support with citation rendering disabled. No institutional-value synthesis has an active projection, and active public coalition claims remain separately sourced rather than borrowing these internal inferences."
+      "observation": "No row-level database or workbook material, participant identity, contact field, geolocation, post body, private path, raw record, or account-administration detail is exposed. The existing 300-plus-gatherings proof retains its careful status and now states explicitly that workbook marks are not audited attendance or an exact completed-event count; collective and multi-operator credit remains explicit throughout."
     },
     {
       "rubric": "research_honesty",
-      "observation": "Fresh verification reproduced the exact candidate and contract fingerprints, scored every deterministic rubric at 4 with zero findings, and passed all 84 knowledge-lifecycle tests, including negative tests for incomplete populations, endorsement inflation, institutional necessity, public projection, Espinal overreach, private-evidence exposure, and loss of collective credit."
+      "observation": "Fresh verification reproduced the exact candidate and contract fingerprints. Deterministic lifecycle validation scored 100 with zero findings, all 86 lifecycle tests passed, and the knowledge-bank and public-safety checks passed; the evaluator's remaining model-judgment gate awaits current candidate-bound judgments rather than a content correction."
     }
   ],
   "regressions": [],
-  "nextAction": "Accept this candidate-bound judgment and preserve the 107-of-110 population qualifier, three-record gap, non-endorsement limits, private-evidence controls, and inactive institutional syntheses in future projections."
+  "nextAction": "Accept this candidate-bound judgment and keep the Call Script bridge held until a specific hiring surface warrants it; any later projection should cite the public Page and event sources and preserve the existing participant-privacy, no-attendance, no-impact, and collective-credit boundaries."
 }

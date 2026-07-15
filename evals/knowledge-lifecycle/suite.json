@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 8,
   "profile": {
     "id": "knowledge_ready",
     "threshold": 95,
@@ -880,6 +880,53 @@
     "nterChngRestagingClaimId": "CLM-NTER-CHNG-ANH-RESTAGING-PLAN",
     "nterChngFramingClaimId": "CLM-NTER-CHNG-SOCIAL-INFORMATION-SPACE-FRAMING",
     "nterChngInquiryId": "INQ-GDRIVE-NTER-CHNG-WORKING-ARTIFACTS"
+  },
+  "requiredRelationalInfrastructureArchiveProduction": {
+    "intakeIds": [
+      "INT-2026-07-15-WOWLIST-DB-RELATIONAL-SNAPSHOT",
+      "INT-2026-07-15-SUNDAY-DINNER-ATTENDANCE-WORKBOOK",
+      "INT-2026-07-15-FB-CALLSCRIPT-PAGE"
+    ],
+    "sourceIds": [
+      "SRC-WOWLIST-DB-SNAPSHOT-2017-07",
+      "SRC-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2021",
+      "SRC-FB-CALLSCRIPT-PAGE-2017"
+    ],
+    "claimIds": [
+      "CLM-WOWLIST-DB-SNAPSHOT-SCALE-2017",
+      "CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017",
+      "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE",
+      "CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE"
+    ],
+    "inquiryIds": [
+      "INQ-SUNDAY-DINNER-WORKBOOK-MARK-SEMANTICS",
+      "INQ-WOWLIST-CALLSCRIPT-NYCARTC-ROLE-ATTRIBUTION"
+    ],
+    "dbSourceId": "SRC-WOWLIST-DB-SNAPSHOT-2017-07",
+    "workbookSourceId": "SRC-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2021",
+    "callScriptSourceId": "SRC-FB-CALLSCRIPT-PAGE-2017",
+    "eventSourceId": "SRC-FB-NYCARTC-EVENT-388137698233507",
+    "dbScaleClaimId": "CLM-WOWLIST-DB-SNAPSHOT-SCALE-2017",
+    "tagOverlapClaimId": "CLM-WOWLIST-RELATIONAL-TAG-OVERLAP-2017",
+    "workbookClaimId": "CLM-SUNDAY-DINNER-WORKBOOK-AGGREGATE",
+    "bridgeClaimId": "CLM-CALLSCRIPT-POPULAR-VOTE-NYCARTC-BRIDGE",
+    "workbookInquiryId": "INQ-SUNDAY-DINNER-WORKBOOK-MARK-SEMANTICS",
+    "roleInquiryId": "INQ-WOWLIST-CALLSCRIPT-NYCARTC-ROLE-ATTRIBUTION",
+    "expected": {
+      "postRecords": 16142,
+      "postTagRelationships": 45562,
+      "tagRecords": 23864,
+      "followTagRecords": 28837,
+      "sourceRecords": 35,
+      "popularVoteSundayDinner": 67,
+      "popularVoteNycArtc": 34,
+      "nycArtcSundayDinner": 33,
+      "allThree": 9,
+      "numberedColumns": 346,
+      "markedColumns": 341,
+      "yesMarks": 2726,
+      "participantRows": 411
+    }
   },
   "requiredCallNycAttributionBoundary": {
     "attributedClaimId": "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",

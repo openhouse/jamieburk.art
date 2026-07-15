@@ -1,15 +1,20 @@
 {
-  "judgeId": "codex-independent-public-safety-editorial-2026-07-15-r13",
+  "judgeId": "codex-independent-public-safety-editorial-2026-07-15-r14",
   "lens": "public-safety-editorial",
-  "candidate": "sha256:cd490f0b5001f13858eec10dff84ae76802f301ffb96d2f2e53e61cba4afc055",
-  "contract": "sha256:41e31f078e92b6a9b4dd802f62e60bc0a8ce02f174980a73dbda259d0d49c352",
+  "candidate": "sha256:75a2f3c64658f5b6fb831ec32b4402be033f77a76f7919b5907462497ea0eb8c",
+  "contract": "sha256:12df185b8c6f661d739802e0abf0554e6b984b9acd8ae6a2d1d04f35e56b95aa",
   "profile": "application_ready",
   "scores": { "role_clarity": 4, "role_fit": 4, "proof_defensibility": 4, "citational_care": 4, "reader_effort": 3, "chad_lens": 3, "visual_evidence": 1, "resume_alignment": 4, "responsive_quality": 3, "sharing_quality": 3, "operational_confidence": 3 },
   "evidence": [
-    { "rubric": "proof_defensibility", "route": "/resume", "observation": "The defective CallNYC superlative is removed from the active resume projection and approved PDF; both use the bounded constituent-services chronology." },
-    { "rubric": "citational_care", "route": "/work/callnyc", "observation": "The only active first-CouncilStat statement is a separately cited sentence explicitly attributed to NYC Council." },
-    { "rubric": "resume_alignment", "route": "/resume", "observation": "The rendered HTML and PDF agree on chronology, role, contribution language, and project history while the phone remains outside public HTML." },
-    { "rubric": "sharing_quality", "route": "/resume", "observation": "Staging metadata, noindex behavior, contact path, and the resume download are trustworthy for this profile." }
+    { "rubric": "proof_defensibility", "route": "/work/196-sunday-dinner", "observation": "The 300+ wording remains bounded by approved public history, while the workbook is explicitly treated as corroborative operational evidence rather than audited attendance or proof of an exact completed-event count." },
+    { "rubric": "citational_care", "route": "/work/callnyc", "observation": "Claims separate Jamie's independent follow-on work from the Council-attributed hackathon description, include local citation navigation, and preserve the archived-unofficial boundary." },
+    { "rubric": "reader_effort", "route": "/work/fair-rent-nyc", "observation": "The role and collective-work boundaries are clear, but the long, citation-dense case study requires sustained reading across several workstreams." },
+    { "rubric": "chad_lens", "route": "/work/technical-operations", "observation": "Jamie is visibly identified as the actor and the operating work is concrete, but the broad proof map requires case-study follow-through to understand several useful outcomes." },
+    { "rubric": "visual_evidence", "route": "/work", "observation": "The portfolio relies primarily on text and representative artifact cards, with little rendered project imagery; this remains an allowed application-profile deferral." },
+    { "rubric": "resume_alignment", "route": "/resume", "observation": "The deterministic resume-consistency gate passes for the exact candidate without exposing the protected resume contents or contact information." },
+    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound desktop, mobile, keyboard, focus, citation, and 200%-equivalent reflow checks pass without overflow, though broader assistive-technology testing is not supplied." },
+    { "rubric": "sharing_quality", "route": "/resume", "observation": "Canonical and social metadata checks pass, but the evidence uses staging defaults rather than verified production sharing behavior." },
+    { "rubric": "operational_confidence", "route": "/", "observation": "The exact candidate is bound to passing repository, route, and browser checks, while production smoke, deployed-commit, indexing, monitoring, and rollback verification remain deferred." }
   ],
   "regressions": [],
   "highestValueFailure": null,

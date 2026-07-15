@@ -355,7 +355,10 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public-safe project history, and a protected workbook aggregate whose 346 numbered columns include 341 with at least one recorded Y mark.",
+    sourceNote:
+      "The workbook strengthens the 300+ scale claim but does not convert Y marks into audited attendance or prove an exact completed-event count.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -374,7 +377,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

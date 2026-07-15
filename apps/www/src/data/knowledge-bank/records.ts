@@ -87,9 +87,16 @@ import {
   nycArtcInstitutionalValueResearchInquiries,
   nycArtcInstitutionalValueSources
 } from "./nycartc-institutional-value.ts";
+import {
+  relationalInfrastructureClaims,
+  relationalInfrastructureIntakes,
+  relationalInfrastructureResearchInquiries,
+  relationalInfrastructureSources
+} from "./relational-infrastructure-archive-production.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...relationalInfrastructureIntakes,
     ...nycArtcInstitutionalValueIntakes,
     ...personalFacebookPostIntakes,
     ...kcSpacesFundFacebookPostIntakes,
@@ -711,6 +718,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...relationalInfrastructureSources,
     ...nycArtcInstitutionalValueSources,
     ...personalFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
@@ -889,6 +897,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...relationalInfrastructureClaims,
     ...nycArtcInstitutionalValueClaims,
     ...personalFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
@@ -1010,6 +1019,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...relationalInfrastructureResearchInquiries,
     ...nycArtcInstitutionalValueResearchInquiries,
     ...personalFacebookPostResearchInquiries,
     ...kcSpacesFundFacebookPostResearchInquiries,

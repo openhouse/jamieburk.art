@@ -71,6 +71,13 @@ Council, town-hall, and Jamie-role records. It distinguishes public
 institutional rationale from private motive and keeps DCLA, Council, Espinal,
 coalition, Jamie, and collective policy causality separate.
 
+The [WOW List, Sunday Dinner, and Call Script relational-infrastructure pass](research/wowlist-sunday-dinner-callscript-archival-production-2012-2017.md)
+combines private database aggregates, protected workbook aggregates, and a
+public Call Script trace. It documents a functional bridge from WOW List's
+Popular Vote layer into early NYC Artist Coalition participation while keeping
+database tags, attendance semantics, account authorship, and individual
+facilitation credit separate.
+
 The [Jamie personal Facebook post pass](research/jamie-personal-facebook-posts-archival-production-2026-07.md)
 accounts for all 1,243 records currently returned by the authenticated
 owner-filtered Manage Posts control across 621 cursor pages. It keeps the raw

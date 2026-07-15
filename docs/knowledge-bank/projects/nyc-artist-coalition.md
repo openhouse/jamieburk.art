@@ -40,6 +40,8 @@ individual and collective causal claims separate.
 - Official CreateNYC records later credited the coalition with organizing, supplying recommendations, and driving dialogue about preserving safe artist-led spaces.
 - These records support an internal institutional-value synthesis: the coalition extended reciprocal engagement into informal cultural spaces and translated experience into recommendations, testimony, convenings, and implementation feedback. They do not establish private motives, dependency, universal representation, or sole causality.
 - Jamie's documented organizer, practical safety, testimony, recurring-participation, and civic-systems contributions support an internal inference that he helped build this translation capacity while collective credit remains intact.
+- Call Script's public Page links to popular.vote and preserves a March 2, 2017 post routing people into the coalition's March general meeting at The Floasis. The agenda joined fire-guard training, arts-space town-hall strategy, community-space survey design, and member-led groups.
+- A private July 2017 WOW List snapshot independently preserves the underlying routing pattern: the January 27 DCLA meeting is tagged Popular Vote, Sunday Dinner, NYC Artist Coalition, and WOW a Day. This establishes project linkage, not person-level authorship, attendance, conversion, or founding causality.
 
 ## Open Research
 
@@ -53,6 +55,7 @@ individual and collective causal claims separate.
 - A native Meta Page export, administrator chronology, and collaborator proof notes for the historical division of Facebook publishing labor.
 - Continued close reading of the 39 unique posted URL leads, with no promotion from route to source support until destination contents are verified.
 - Direct recollections from Finkelpearl, Espinal, Council or DCLA staff, and coalition collaborators about the value and limits of the relationship; current public records establish public framing and activity, not private motive.
+- Collaborator corroboration for Jamie's exact role in designing, publishing, and facilitating the Popular Vote / Call Script / NYC Artist Coalition handoff documented by the surviving project surfaces.
 
 ## Projection Decision
 
@@ -67,6 +70,11 @@ remain unused context or open inquiries.
 The [institutional-value synthesis](../research/nycartc-dcla-council-institutional-value-2017.md)
 adds three confirmed direct claims and four internal-only inferences. None is
 projected onto the website in this cycle.
+
+The relational-infrastructure pass adds one citation-ready but held Call Script
+claim and two internal aggregate claims. It strengthens the future account of
+how civic-action routing became coalition participation without changing the
+current public case-study copy in this cycle.
 
 ## Photo Research
 

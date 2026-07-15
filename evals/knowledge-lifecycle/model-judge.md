@@ -217,6 +217,17 @@ Ask:
 70. Does Jamie's bridge-value synthesis name his documented organizer, safety,
     testimony, participation-system, and civic-systems contributions while
     preserving collective production and refusing sole policy causality?
+71. Do the WOW List database counts and Sunday Dinner / Popular Vote / NYC
+    Artist Coalition tag intersections remain private aggregate records rather
+    than users, attendance, reach, conversion, authorship, or impact?
+72. Does the Sunday Dinner workbook preserve 346 numbered columns, 341 marked
+    columns, 2,726 Y marks, and 411 participant rows while refusing to treat Y
+    as audited physical attendance or the numbered sequence as an exact
+    completed-event count?
+73. Does the Call Script bridge retain the public popular.vote link, January
+    DCLA event relationship, and March coalition-meeting route while keeping
+    Jamie's exact authorship, facilitation, account operation, and founding
+    share open to collaborator corroboration?
 
 Return JSON with:
 

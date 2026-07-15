@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-2026-07-15-g",
+  "judgeId": "archival-editorial-2026-07-15-h",
   "lens": "archival-editorial",
-  "candidate": "sha256:9cca2ed8c84ae35c7088b3d502dd57976de0e89a1a5b2541c27cd3358262d625",
-  "contract": "sha256:ae91dc206bdf80b22f8797acdfbc0db62b9b535995f14c9d6ba59a02d3ff9804",
+  "candidate": "sha256:57eee80cb9ae4ece78acc19bb127b4cc0ec0d9f4535584b1941a580979c7ff51",
+  "contract": "sha256:79a912e38917fca1ceabecc00a786c10da42ee18680b88edc1b8fb294f8a2461",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,41 +17,53 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The CallNYC population, four-post amplification set, and originating memory retain stable intake identities and explicit dispositions; the bank contains 123 intake records with no unfinished deterministic finding."
+      "observation": "The database snapshot, Sunday Dinner workbook, and Call Script Page have three stable promoted intake IDs with explicit source, claim, inquiry, sensitivity, and availability dispositions. The canonical bank contains 126 intake records and produced no unfinished-intake or missing-intake finding."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "Four separately reviewed social-post sources establish three quote-posts and one direct share, four official Council person records establish contemporaneous officeholder context, and the private corpus explicitly does not establish the unavailable records, a complete engagement roster, or official Council ownership."
+      "observation": "The three new sources are separately reviewed at close-reading depth. The private database and protected workbook sources specify supported aggregates, opaque locators, preservation status, and non-support boundaries; the public Call Script source separately supports the popular.vote link and March meeting route while refusing person-level authorship and management conclusions."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "The amplification claim is limited to at least four named Council-member accounts and remains distinct from the 107-of-110 population finding, the three-record gap, endorsement, adoption, offline use, constituent outcomes, and broader engagement."
+      "observation": "Database scale, tag intersections, workbook aggregates, and the Call Script bridge remain four distinct claims. Record counts are not merged with user counts, workbook marks are not merged with attendance, and project linkage is not merged with Jamie's individual role or policy outcomes."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "Each named amplification resolves to its own direct-support post source and corroborating officeholder source; the recovered inquiry additionally resolves to the private corpus and preserves the separate population-gap inquiry."
+      "observation": "The database and tag claims resolve to the private snapshot, the workbook claim resolves to the protected workbook, and the bridge resolves to three differentiated evidence edges: the public Call Script Page, the January 27 DCLA event record, and the private WOW List tag graph. Both unresolved semantic and role questions resolve to dedicated partially recovered inquiries."
     },
     {
       "rubric": "status_separation",
-      "observation": "The amplification claim is confirmed-with-boundary, qualified, and editorially candidate with a held projection and no surface; the corpus remains private, while the incomplete population inquiry remains partially recovered."
+      "observation": "The database-scale, tag-overlap, and workbook claims are confirmed-with-boundary, internal-only candidates with no projections. The bridge is confirmed-with-boundary and qualified but remains an editorial candidate whose sole projection is citation-required, on hold, and assigned to no surface."
     },
     {
       "rubric": "project_context",
-      "observation": "The CallNYC records preserve project identity, 2016 chronology, named actors, retrieval methods, interaction types, source roles, limitations, and the open three-record recovery path needed by a future researcher."
+      "observation": "The records situate the work across WOW List, 196 Sunday Dinner, and NYC Artist Coalition, preserve the 2012-2021 workbook span and January-to-March 2017 bridge chronology, and provide methods, limitations, related source roles, open collaborator research, and future editorial context."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The inquiry states at least four rather than a complete roster, records 107 recovered of 110 profile-counted records, identifies three unavailable records, and expressly refuses formal endorsement, Council adoption, constituent outcomes, offline use, approval of every ranking, and complete-roster inference."
+      "observation": "Question 71 passes: 16,142 posts, 45,562 post-tag relationships, 23,864 tags, 28,837 follow-tag records, 35 sources, and the 67, 34, 33, and 9 tag intersections remain private aggregates explicitly bounded against users, attendance, reach, conversion, authorship, production, causality, and impact."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Question 72 passes: the source and claim preserve 346 numbered columns, 341 columns with at least one Y, 2,726 Y marks, and 411 participant rows. They also preserve duplicate labels, missing numbers, and zero-mark columns and explicitly reject audited physical-attendance, unique-person, and exact completed-event interpretations."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Question 73 passes: the bridge retains the public popular.vote link, the January DCLA event relationship, and the March coalition-meeting route and agenda. Its boundaries leave Jamie's design, authorship, publishing, facilitation, account operation, founding share, attendance, and policy causality open to collaborator corroboration."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The bounded amplification remains absent from active website composition and the public registry; its only projection is held, citation-required, and has no surfaces."
+      "observation": "No database rows, participant identities, contact fields, post bodies, workbook rows, private paths, asset URLs, or protected source locations are exposed. Private originals are represented by opaque locator IDs, those IDs are absent from the public registry, and the bridge has no active public projection."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The active Sunday Dinner proof remains the previously bounded 300+ wording supported by multiple source classes; its new source note explicitly says the workbook does not convert Y marks into audited attendance or prove an exact completed-event count."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The exact candidate and contract fingerprints reproduced successfully, deterministic validation scored 100 with zero findings, and all 84 knowledge-lifecycle tests passed, including the CallNYC amplification and incomplete-population safeguards."
+      "observation": "Fresh execution reproduced the exact requested candidate and contract fingerprints. Deterministic validation scored 100 with zero findings, every rubric scored 4, and all 86 lifecycle tests passed, including mutations for private-row exposure, attendance inflation, sole-credit bridge language, collective credit, and the earlier lifecycle boundaries."
     }
   ],
   "regressions": [],
-  "nextAction": "Accept the candidate; preserve the at-least-four wording, the three-record gap, and the no-endorsement, no-adoption, no-outcome, and no-complete-roster boundaries in any future projection."
+  "nextAction": "Obtain one dated collaborator statement confirming or declining Jamie's exact Call Script account-operation and March-meeting facilitation roles, attach it to the existing role-attribution inquiry, and keep the bridge projection held until that disposition is recorded."
 }
