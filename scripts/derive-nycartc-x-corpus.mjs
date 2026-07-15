@@ -9,6 +9,8 @@ const defaultCorpusPath =
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json";
 const defaultManifestPath =
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json";
+const expectedRawCaptureSha256 =
+  "f0fc03bbb761d078d07c0c8219deb5ab96a915e9afdc6cf3ddc4ed75bda4c616";
 
 const publicEmailPattern = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
 const publicPhonePattern =
@@ -413,7 +415,14 @@ export function sanitizeNycArtCRawCapture(rawCaptureText) {
       ? `${contextOnlyCount} context-only public conversation records are preserved outside the 5,124-post denominator; ${duplicateContextCount} duplicate rendered views of account items were removed.`
       : boundary
   );
+  const profileTimelineCutoff = sanitized.captureAudit.profileTimelineOldestVisible;
   for (const item of sanitized.items) {
+    item.recoveryPartition =
+      item.kind === "context"
+        ? "supplemental-context"
+        : item.postedAt >= profileTimelineCutoff
+          ? "profile-timeline"
+          : "historical-authored-search";
     if (typeof item.text === "string") item.textSha256 = sha256(item.text);
   }
   assertPublicSafeValue(sanitized);
@@ -421,10 +430,59 @@ export function sanitizeNycArtCRawCapture(rawCaptureText) {
 }
 
 export function buildNycArtCCorpus(rawCaptureText) {
+  assert.equal(sha256(rawCaptureText), expectedRawCaptureSha256);
   const raw = JSON.parse(rawCaptureText);
   assertPublicSafeValue(raw);
   assert.equal(raw.account, "@NYCArtC");
   assert.equal(raw.profileReportedPosts, 5_124);
+
+  const rawAccountItems = raw.items.filter((item) => item.kind !== "context");
+  const rawAuthoredItems = rawAccountItems.filter(
+    (item) => item.kind === "authored"
+  );
+  const rawRepostedItems = rawAccountItems.filter(
+    (item) => item.kind === "reposted"
+  );
+  const rawContextItems = raw.items.filter((item) => item.kind === "context");
+  const profileTimelineItems = rawAccountItems.filter(
+    (item) => item.recoveryPartition === "profile-timeline"
+  );
+  const historicalSearchItems = rawAccountItems.filter(
+    (item) => item.recoveryPartition === "historical-authored-search"
+  );
+  assert.equal(raw.captureAudit.renderedAccountItems, rawAccountItems.length);
+  assert.equal(raw.captureAudit.authoredItems, rawAuthoredItems.length);
+  assert.equal(raw.captureAudit.repostedItems, rawRepostedItems.length);
+  assert.equal(
+    raw.captureAudit.unrecoveredProfileCountDifference,
+    raw.profileReportedPosts - rawAccountItems.length
+  );
+  assert.equal(
+    raw.captureAudit.profileTimelineAccountItems,
+    profileTimelineItems.length
+  );
+  assert.equal(
+    raw.captureAudit.historicalAuthoredSearchAdditions,
+    historicalSearchItems.length
+  );
+  assert(historicalSearchItems.every((item) => item.kind === "authored"));
+  assert.equal(
+    profileTimelineItems
+      .map((item) => item.postedAt)
+      .sort()[0],
+    raw.captureAudit.profileTimelineOldestVisible
+  );
+  assert.equal(raw.captureAudit.supplementalPublicContexts, rawContextItems.length);
+  assert.equal(raw.captureAudit.renderedPublicContextRecords, 35);
+  assert.equal(raw.captureAudit.duplicateRenderedContextsRemoved, 16);
+  assert.equal(
+    raw.captureAudit.renderedPublicContextRecords,
+    rawContextItems.length + raw.captureAudit.duplicateRenderedContextsRemoved
+  );
+  assert.equal(
+    raw.captureAudit.authoredPartitionCrossCheck,
+    "All 2017 two-month authored-search windows were rerun as one-month windows without adding a status ID."
+  );
 
   for (const item of raw.items) {
     assert.match(item.statusId, /^\d+$/);
@@ -467,6 +525,7 @@ export function buildNycArtCCorpus(rawCaptureText) {
     statusId: item.statusId,
     canonicalUrl: item.statusUrl,
     publishedAt: item.postedAt,
+    recoveryPartition: item.recoveryPartition,
     kind: item.kind,
     sourceHandle: item.sourceHandle,
     visibleText: item.text,

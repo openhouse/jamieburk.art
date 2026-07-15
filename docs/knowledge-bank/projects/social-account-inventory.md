@@ -175,3 +175,11 @@ Knowledge-bank status: confirmed with boundaries. Eleven is a visible lower boun
 2. Resolve or preserve uncertainty around the historical `@wowlistnyc` label.
 3. Re-run targeted Council searches when a lawful complete export or stronger archive becomes available; do not silently replace the dated July 2026 observation.
 4. Keep discovered external articles and posts entering the normal source-assertion-claim-review lifecycle rather than projecting them directly to the site.
+
+## Active Claim Projections
+
+- KC Town Hall used its public account as a documentation and listening surface,
+  stating the neighborhood-resource purpose and inviting survey participation.
+- The KC Spaces Fund account publicly documented applications, recipient
+  acknowledgments, and at least eleven visible named grantee or funded-space
+  highlights.

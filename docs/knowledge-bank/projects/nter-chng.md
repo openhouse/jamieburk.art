@@ -62,3 +62,12 @@ presentation on May 11 and 12, 2011. The museum page does not itself name
 - Jamie organized or curated *America: Now and Here*.
 - The project appeared at every stop of the national tour.
 - The artist statement proves measured audience or social outcomes.
+
+## Active Claim Projections
+
+- Jamie co-created NTER CHNG with Drew Bolton and Garrett Fuselier, an
+  interactive texting installation presented in Kansas City in 2010.
+- NTER CHNG combined software and spatial installation to turn private texting
+  into a real-time, many-to-many public exchange across a digital gallery wall.
+- In 2011, America: Now and Here's Kansas City visual-artists program included
+  NTER CHNG and credited Drew Bolton, Jamie Burkart, and Garrett Fuselier.

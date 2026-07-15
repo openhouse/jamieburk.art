@@ -93,3 +93,9 @@ Hold:
 2. Recover *Zines 2.0* through alternate slugs, feeds, author archives, or bounded Wayback searches.
 3. Resolve or preserve uncertainty around the historical `@wowlistnyc` label.
 4. Seek public or collaborator evidence that can distinguish account creation, identity design, administration, posting strategy, and individual post authorship.
+
+## Active Claim Projection
+
+The project account paired product support with field learning: a member-made
+tutorial, grassroots venue guidance, Allied Media Conference, peer funding
+infrastructure, and a posted but unrecovered DIY-documentation article lead.

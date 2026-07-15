@@ -94,3 +94,9 @@ Keep these out of accomplishment messaging until stronger evidence arrives:
 2. Corroborate the tire-program outcome figures through public program, disposal, or fiscal records and bounded collaborator testimony.
 3. Establish Jamie's account-establishment and operating role through dated public-safe evidence while preserving the transition boundary.
 4. Continue public-archive recovery for the KC Star, GoFundMe, Facebook, and expired KC Town Hall site destinations.
+
+## Active Claim Projection
+
+The project account also served as a source-distribution surface for voting,
+affordable-housing, transit, grocery-access, neighborhood-condition, mutual-aid,
+and COVID-19 resources.

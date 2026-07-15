@@ -35,7 +35,9 @@ The recovered range is February 3, 2017 through May 18, 2026.
 1. Verified the signed-in `@urbanhermit` identity and opened the replies-inclusive profile.
 2. Traversed the rendered profile in overlapping increments, then repeated a denser overlapping pass. Both converged at 3,031 account-item IDs and a December 13, 2019 cutoff.
 3. Ran monthly historical authored-search partitions from January 2017 through the cutoff. A second month-by-month 2017 pass added no IDs.
-4. Classified authored posts, native reposts, and supplemental public contexts separately.
+4. Recorded per-item recovery partition membership, classified authored posts
+   and native reposts separately, retained 19 context-only records, and removed
+   16 duplicate rendered context views of account items.
 5. Resolved all distinct `t.co` URLs present in recovered account items.
 6. Omitted third-party repost text while preserving status identity, source handle, text hash, hashtags, mentions, links, date, and media metadata.
 7. Redacted public contact details and tracking values and excluded all private account surfaces.

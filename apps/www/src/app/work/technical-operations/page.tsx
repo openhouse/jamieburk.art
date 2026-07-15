@@ -1,5 +1,6 @@
 import type { Metadata, Route } from "next";
 import Link from "next/link";
+import { Claim } from "@/components/citations/Claim";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -12,6 +13,16 @@ const operationsMap = [
   "Coordinate dependencies across technical, legal, communications, contracts, and external-stakeholder work.",
   "Create decision records, runbooks, source maps, and onboarding materials people can use without replaying every meeting.",
   "Report what is working, what remains open, and what needs human judgment so teams can improve without overengineering."
+];
+
+const technicalOperationsClaimIds = [
+  "CLM-CRS-SHARED-MEMORY-SYSTEM",
+  "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+  "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
+  "CLM-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT",
+  "CLM-FAIRRENT-WEB-RELAUNCH-2023",
+  "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW",
+  "CLM-VACANCY-QUARTERLY-CORPUS"
 ];
 
 const proofMap = [
@@ -117,6 +128,23 @@ export default function TechnicalOperationsPage() {
             ))}
           </dl>
         </JBCard>
+      </section>
+      <section className="mt-10 border-y border-jb-ink/12 py-8">
+        <h2 className="text-2xl font-semibold text-jb-ink">
+          Source-backed operating proof
+        </h2>
+        <ul className="mt-5 grid gap-x-8 gap-y-4 text-jb-ink/76 md:grid-cols-2">
+          {technicalOperationsClaimIds.map((claimId) => (
+            <li className="flex gap-3" key={claimId}>
+              <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-green" />
+              <Claim
+                claimId={claimId}
+                projection="technical-operations"
+                surface="/work/technical-operations"
+              />
+            </li>
+          ))}
+        </ul>
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (

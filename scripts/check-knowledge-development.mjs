@@ -13,6 +13,22 @@ const publicProjectionKeys = new Set([
   "technical-operations",
   "homepage"
 ]);
+const knownRouteProjectionSurfaces = new Set([
+  "/",
+  "/about",
+  "/lab/source-backed-team-memory",
+  "/resume",
+  "/work",
+  "/work/196-sunday-dinner",
+  "/work/callnyc",
+  "/work/fair-rent-nyc",
+  "/work/kc-town-hall",
+  "/work/technical-operations",
+  "/work/wowlist"
+]);
+const technicalOperationsSurfacePath =
+  "apps/www/src/app/work/technical-operations/page.tsx";
+const alwaysCollectiveProjects = new Set(["nyc-artist-coalition"]);
 const hybridCandidatePaths = [
   ".agents/evals/knowledge-bank-development.json",
   "apps/www/src/content/work",
@@ -88,6 +104,57 @@ export function validateKnowledgeDevelopmentSuite(suite) {
   return { errors, totalWeight, evalCount: suite?.evals?.length ?? 0 };
 }
 
+function normalizedText(value) {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+function projectionRealizationFindings(claim, projection) {
+  const findings = [];
+  if (projection.status !== "active") return findings;
+  if (projection.surfaces.length === 0) {
+    return [`${claim.id}/${projection.key} is active without a surface`];
+  }
+
+  for (const surface of projection.surfaces) {
+    if (surface.startsWith("docs/knowledge-bank/")) {
+      const path = `${surface}.md`;
+      let content;
+      try {
+        content = readFileSync(path, "utf8");
+      } catch {
+        findings.push(`${claim.id}/${projection.key} targets missing ${path}`);
+        continue;
+      }
+      if (
+        projection.key === "archive-note" &&
+        !normalizedText(content).includes(normalizedText(projection.text))
+      ) {
+        findings.push(
+          `${claim.id}/${projection.key} is not realized on ${surface}`
+        );
+      }
+      continue;
+    }
+
+    if (!knownRouteProjectionSurfaces.has(surface)) {
+      findings.push(`${claim.id}/${projection.key} targets unknown ${surface}`);
+      continue;
+    }
+    if (projection.key === "technical-operations") {
+      const content = readFileSync(technicalOperationsSurfacePath, "utf8");
+      if (
+        !content.includes(`"${claim.id}"`) ||
+        !content.includes('projection="technical-operations"')
+      ) {
+        findings.push(
+          `${claim.id}/${projection.key} is not resolved on ${surface}`
+        );
+      }
+    }
+  }
+  return findings;
+}
+
 function makeResult(id, findings, evidence) {
   return {
     eval_id: id,
@@ -144,13 +211,22 @@ export function evaluateKnowledgeBank(
     if (confirmed && !directSupport) findings["KB-004"].push(`${claim.id} is confirmed without direct support`);
     if (claim.projectionEligibility === "eligible" && !confirmed) findings["KB-004"].push(`${claim.id} is eligible before confirmation`);
     if (claim.maturity === "research-needed" && claim.projectionEligibility !== "hold") findings["KB-004"].push(`${claim.id} is research-needed but not held`);
+    if (alwaysCollectiveProjects.has(claim.project) && !claim.collectiveWork) findings["KB-007"].push(`${claim.id} is coalition work but is not classified as collective`);
     if (claim.collectiveWork && (claim.boundaries.length === 0 || claim.antiClaims.length === 0)) findings["KB-007"].push(`${claim.id} lacks a collective-credit boundary or anti-claim`);
     for (const evidence of claim.evidence) if (!sourceIds.has(evidence.sourceId)) findings["KB-005"].push(`${claim.id} references missing source ${evidence.sourceId}`);
     for (const id of claim.researchInquiryIds) if (!inquiryIds.has(id)) findings["KB-005"].push(`${claim.id} references missing inquiry ${id}`);
 
     const publicActive = claim.projections.some((projection) => projection.status === "active" && publicProjectionKeys.has(projection.key));
     if (publicActive && claim.projectionEligibility !== "eligible") findings["KB-008"].push(`${claim.id} has an active public projection while held`);
-    if (claim.projectionEligibility === "eligible" && claim.projections.length === 0) findings["KB-009"].push(`${claim.id} has no use-now or hold disposition`);
+    const hasEditorialDisposition = claim.projections.some((projection) =>
+      ["active", "hold"].includes(projection.status)
+    );
+    if (claim.projectionEligibility === "eligible" && !hasEditorialDisposition) findings["KB-009"].push(`${claim.id} has no use-now or hold disposition`);
+    for (const projection of claim.projections) {
+      findings["KB-009"].push(
+        ...projectionRealizationFindings(claim, projection)
+      );
+    }
 
     if (claim.maturity === "research-needed") {
       const hasTask = bank.researchTasks.some((task) => task.claimIds.includes(claim.id));

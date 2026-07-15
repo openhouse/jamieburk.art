@@ -39,3 +39,8 @@ outcome across the full body of water-based work.
 - Jamie alone built or completed the raft expedition.
 - The reviewed article establishes a completed Kansas City-to-Gulf route.
 - Jamie was the sole leader or author of the communal programs.
+
+## Active Claim Projection
+
+Across several early projects, Jamie created participatory structures through
+which people could examine how they inhabit a place together.

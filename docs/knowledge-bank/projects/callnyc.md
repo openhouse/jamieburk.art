@@ -168,3 +168,10 @@ depicted.
 
 Rights require permission, consent requires review, and public display remains
 on hold. The photograph is not committed or rendered.
+
+## Active Claim Projections
+
+- No Civic Hall calendar listing or dedicated event-detail page has been
+  recovered in the documented Wayback/CDX review.
+- A launch-period post from the project account identifies Jamie by name and
+  describes CallNYC as his first civic-technology project.

@@ -1171,6 +1171,13 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   );
   assert.equal(pinnedCorpusText, corpusText);
   assert.equal(sha256(pinnedCorpusText), manifest.corpusSha256);
+  const pinnedRawCaptureText = execFileSync(
+    "git",
+    ["show", `${pinnedSha}:${manifest.sourceCapture}`],
+    { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 }
+  );
+  assert.equal(pinnedRawCaptureText, rawCaptureText);
+  assert.equal(sha256(pinnedRawCaptureText), manifest.sourceCaptureSha256);
   assert.equal(
     page.occurrences.find(
       (item) => item.id === "shared-public-operating-layer"
@@ -1226,6 +1233,40 @@ test("an intake-linked source without decomposition fails KB-003", () => {
   );
   assert.equal(sourceDecomposition.pass, false);
   assert.match(sourceDecomposition.findings.join("\n"), /no atomic assertion/);
+});
+
+test("coalition claims cannot opt out of collective-credit evaluation", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const claim = candidate.claims.find(
+    (item) => item.id === "CLM-NAC-CABARET-REPEAL-OUTCOME"
+  );
+  claim.collectiveWork = false;
+  claim.boundaries = [];
+  claim.antiClaims = [];
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const collectiveCredit = result.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(collectiveCredit.pass, false);
+  assert.match(collectiveCredit.findings.join("\n"), /not classified as collective/);
+});
+
+test("active projections require a known and realized surface", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const claim = candidate.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-MEMORY-SYSTEM"
+  );
+  claim.projections.find(
+    (item) => item.key === "technical-operations"
+  ).surfaces = ["/does-not-exist"];
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const projectionCoverage = result.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(projectionCoverage.pass, false);
+  assert.match(projectionCoverage.findings.join("\n"), /targets unknown/);
 });
 
 test("a research-stage claim cannot become projection-eligible", () => {
