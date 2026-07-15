@@ -82,7 +82,10 @@ const prohibited = [
   "The Council involvement explains why it appears throughout the routing ledger.",
   "Officials presence at coalition activities is established by the repeated Council references.",
   "The 611 reposts drove the Council decision.",
-  "Visible comment volume delivered the campaign result."
+  "Visible comment volume delivered the campaign result.",
+  "Jamie prepared the coalition Facebook copy.",
+  "Repeated mentions place Council officials in the room.",
+  "The share total moved the legislation forward."
 ];
 
 for (const statement of prohibited) {
@@ -108,7 +111,10 @@ const bounded = [
   "The response floor is preserved only as a mutable interface observation, not attention or traction.",
   "Routing references do not establish official presence or involvement.",
   "Current comments do not establish a Council decision or campaign result.",
-  "Jamie may have drafted Page copy, but authorship remains unresolved."
+  "Jamie may have drafted Page copy, but authorship remains unresolved.",
+  "Jamie prepared an archival note about Page copy; this does not establish authorship.",
+  "Mentions do not establish that officials were in the room.",
+  "Share totals do not establish that legislation moved."
 ];
 
 for (const statement of bounded) {

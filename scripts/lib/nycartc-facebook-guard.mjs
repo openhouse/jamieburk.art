@@ -51,7 +51,7 @@ const jamieSignal = /\bJamie(?:'s)?\b/i;
 const publishingContextSignal =
   /\b(?:NYCAC|NYC Artist Coalition|coalition(?:'s)?|Facebook|Page|account|social|publishing|posting|authorship|publisher|administrator|admin|operator|management|operations?)\b/i;
 const roleAssertionSignal =
-  /\b(?:authored|wrote|written|penned|drafted|composed|supplied (?:the )?copy|published|posted|created|ran|run|managed|managing|administered|administration|controlled|owned|handled|operated|led|operator|administrator|admin|author|publisher|authorship|responsibility|rested|Page use|publishing|posting)\b/i;
+  /\b(?:authored|wrote|written|penned|drafted|prepared|composed|supplied (?:the )?copy|published|posted|created|ran|run|managed|managing|administered|administration|controlled|owned|handled|operated|led|operator|administrator|admin|author|publisher|authorship|responsibility|rested|Page use|publishing|posting)\b/i;
 const exclusiveRoleSignal =
   /\b(?:sole|only|exclusive|exclusively|solely|alone|no one else|nobody else|entire|all|every|predominant|predominantly|primary|principally|mainly|most)\b/i;
 const sharedRoleSignal =
@@ -68,9 +68,9 @@ const routeSignal =
 const stakeholderActorSignal =
   /\b(?:Council|agenc(?:y|ies)|partners?|officials?|Council offices?|institutional)\b/i;
 const stakeholderResponseSignal =
-  /\b(?:engaged|engagement|interacted|interaction|involved|involvement|present|presence|endorsed|endorsement|responded|response|replied|partnered|participated|participation|took part|attended|attendance|acted|support(?:ed)?|collaborat(?:ed|ion))\b/i;
+  /\b(?:engaged|engagement|interacted|interaction|involved|involvement|present|presence|in the room|endorsed|endorsement|responded|response|replied|partnered|participated|participation|took part|attended|attendance|acted|support(?:ed)?|collaborat(?:ed|ion))\b/i;
 const inboundStakeholderActionSignal =
-  /\b(?:engaged|engagement|interacted|interaction|involved|involvement|present|presence|endorsed|endorsement|responded|replied|partnered|participated|participation|took part|attended|attendance|acted|support(?:ed)?|collaborat(?:ed|ion))\b/i;
+  /\b(?:engaged|engagement|interacted|interaction|involved|involvement|present|presence|in the room|endorsed|endorsement|responded|replied|partnered|participated|participation|took part|attended|attendance|acted|support(?:ed)?|collaborat(?:ed|ion))\b/i;
 const directStakeholderResponseSignal =
   /\bstakeholders?[- ](?:engagement|interaction|involvement|presence|endorsement|response|participation|attendance|support|collaboration)\b/i;
 const positiveInferenceSignal =
@@ -83,9 +83,9 @@ const contrastReassertionSignal =
 const metricSignal =
   /\b(?:reactions?|comments?|shares?|likes?|interactions?|engagements?|response (?:signals?|floor|counters?)|visible response|reposting|reposts?|volume of reposting|2,374|2374|611|212)\b/i;
 const impactSignal =
-  /\b(?:reach|reached|impact|attendance|attention|traction|conversion|adoption|influence|amplif(?:y|ied|ication)|unique people|constituents?|policy change|Council decision|campaign result|decisions?|results?|outcomes?|causality)\b/i;
+  /\b(?:reach|reached|impact|attendance|attention|traction|conversion|adoption|influence|amplif(?:y|ied|ication)|unique people|constituents?|policy change|legislation|Council decision|campaign result|decisions?|results?|outcomes?|causality)\b/i;
 const explicitImpactBoundary =
-  /(?:\b(?:does not|do not|did not|cannot|is not|are not|was not|were not)\b.{0,100}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\bnot\b.{0,40}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\b(?:out of impact claims|separat(?:e|ed|ing|ion).{0,100}from impact|without converting.{0,120}into impact)\b)/i;
+  /(?:\b(?:does not|do not|did not|cannot|is not|are not|was not|were not)\b.{0,100}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|legislation|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\bnot\b.{0,40}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|legislation|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\b(?:out of impact claims|separat(?:e|ed|ing|ion).{0,100}from impact|without converting.{0,120}into impact)\b)/i;
 
 const accountSurfaceSignal =
   /\b(?:authenticated|signed[- ]in|logged[- ]in|dashboard|Meta Business Suite|management (?:view|console)|content control|Page controls?|creator tools?|back office|account controls?|control surface)\b/i;
