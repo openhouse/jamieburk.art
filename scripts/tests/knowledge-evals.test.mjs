@@ -4004,6 +4004,17 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
   });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
 
+  const workText = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
+  result = evaluateKnowledgeBank(suite, {
+    nycacFacebookPostWorkText:
+      workText + "\nZero displayed shares means no one shared the posts.\n"
+  });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
+  assert.equal(result.contentApprovals.nycacFacebookPosts.unsafeEditorialSentences.length, 1);
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+  )?.score, 1);
+
   const injected = loadNycacFacebookPostPopulation();
   injected.rawBodies = ["private"];
   injected.commentIdentities = ["Named person"];

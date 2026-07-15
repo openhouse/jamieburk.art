@@ -4133,16 +4133,23 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     /current (?:authenticated )?(?:access|custody|management)[^.]{0,100}(?:proves?|establishes?|confirms?|demonstrates?)[^.]{0,80}historical authorship/i,
     /(?:reference|tag|route|account-reference)[^.]{0,100}(?:proves?|establishes?|confirms?|demonstrates?)[^.]{0,80}(?:incoming engagement|official engagement|endorsement|partnership)/i,
     /(?:reactions|comments|shares|interaction counts?)[^.]{0,100}(?:prove|demonstrate|equal|represent|measure)[^.]{0,100}(?:reach|attendance|conversion|endorsement|mandate|impact)/i,
-    /zero (?:displayed )?shares[^.]{0,80}(?:means|proves|shows)[^.]{0,50}no (?:one )?shared/i,
     /(?:Page|Facebook record|issue continuity)[^.]{0,100}(?:caused|secured|delivered|produced)[^.]{0,100}(?:repeal|Office of Nightlife|M\.A\.R\.C\.H\.|law|policy outcome)/i
   ];
+  const nycacFacebookPostNoSharingInflationPattern =
+    /zero (?:displayed )?shares[^.]{0,80}(?:means|proves|shows)[^.]{0,50}no (?:one )?shared/i;
+  const nycacFacebookPostEditorialClaimIsNegated = (sentence) =>
+    /\b(?:does|do|did|is|are|was|were|can|could|should|would|must|has|have|had) not\b|\bcannot\b|\bcan't\b|\bnot (?:a claim|evidence|proof)\b|\b(?:unresolved|research lead|rather than|remain(?:s)? open)\b/i.test(sentence) ||
+    /^no (?:reference|tag|route|account-reference|reaction|comment|share|interaction count)\b/i.test(sentence);
   const nycacFacebookPostUnsafeEditorialSentences = nycacFacebookPostEditorialText
     .split(/[.!?]+/)
     .map((sentence) => sentence.replace(/[*_]/g, "").trim())
     .filter(Boolean)
     .filter((sentence) =>
-      nycacFacebookPostEditorialInflationPatterns.some((pattern) => pattern.test(sentence)) &&
-      !/\b(?:not|no|cannot|can't|do not|does not|did not|never|unresolved|remain(?:s)? open|research lead|rather than)\b/i.test(sentence)
+      nycacFacebookPostNoSharingInflationPattern.test(sentence) ||
+      (
+        nycacFacebookPostEditorialInflationPatterns.some((pattern) => pattern.test(sentence)) &&
+        !nycacFacebookPostEditorialClaimIsNegated(sentence)
+      )
     );
   const nycacFacebookPostEditorialInflationFree =
     nycacFacebookPostUnsafeEditorialSentences.length === 0;

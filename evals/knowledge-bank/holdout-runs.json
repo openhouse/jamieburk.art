@@ -643,6 +643,38 @@
       "blockers": [
         "Two fresh independent judges must inspect the repaired frozen candidate and verify that row identity, withheld-route privacy, object structure, account-reference semantics, editorial boundaries, and mutation tests now resist count-preserving and checksum-refresh attacks."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-d",
+      "completedAt": "2026-07-15T15:35:42-04:00",
+      "lens": "Fresh independent skeptical hiring, public-interest portfolio, civic-policy, collective-credit, and adversarial evaluation review of frozen commit fff947fe08d9925d99ca3777fd3164dcd99f04c0",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T15:39:35-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, projection, and mutation-resistance review of frozen commit fff947fe08d9925d99ca3777fd3164dcd99f04c0",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "A checksum-independent work-page mutation claiming that zero displayed shares meant nobody shared the posts bypassed the editorial-inflation guard because its broad negation whitelist treated the word no as a safe boundary.",
+        "The committed mutation suite lacked a permanent regression for the unlocked work-page path."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-no-sharing-guard-2026-07-15",
+      "completedAt": "2026-07-15T15:43:54-04:00",
+      "lens": "Protocol reset after separating the dangerous no-sharing assertion from legitimate relationship-level negation and adding a permanent public-work-page regression",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that no displayed share label cannot become a claim of no sharing anywhere in claims, proofs, reports, or public work data while legitimate bounded negations remain accepted."
+      ]
     }
   ]
 }
