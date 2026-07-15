@@ -38,6 +38,14 @@ Approved public artifact examples for this launch pass include:
 - CallNYC archived Politico New York PDF.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- NPR's 2016 credit for the Horse Lords "Truthers" video.
+- Make Us Visible and XR Ensemble records for "Claudette's Theatre on Wheels."
+- Wave Farm's BAPLab 2006 program and Artforum's event account.
+- The archived NTER CHNG project homepage and The Pitch's contemporary event
+  listing.
+- America: Now and Here's archived NTER CHNG and Kansas City launch records.
+- The Nerman Museum's America: Now and Here exhibition-context page.
+- The public AI Evals for Engineers and PMs completion certificate.
 
 The complete public-safe inventory of NYC Artist Coalition campaign press
 indexes lives in
@@ -53,6 +61,20 @@ causation.
 Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
+
+Protected archive support is represented only by public-safe metadata and an
+opaque locator ID. A protected source has no repository path or public URL and
+cannot render as a public citation. The July 2026 archive-production pass uses
+this pattern for CRS operating-memory and legislative-provenance artifacts, an
+approved resume, and a bounded source-backed-memory proposal.
+
+The Google Drive Shared Drive production pass uses the same pattern for a 196
+Artists Residency acceptance workflow, a Sunday Dinner operating-sheet schema,
+three visual-documentation leads, and a WOW List meeting-video lead. The two
+workflow artifacts can support bounded public practice claims without exposing
+their underlying records. The media and meeting leads remain unquoted and off
+public surfaces until rights, consent, credit, context, and editorial review
+are complete.
 
 ### AI-Assisted Archival Review
 

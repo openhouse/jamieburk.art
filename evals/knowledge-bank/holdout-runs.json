@@ -76,6 +76,50 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-kc-town-hall-stewardship-transition",
+      "completedAt": "2026-07-14T22:57:21-04:00",
+      "lens": "Protocol reset because the prior holdouts predated Jamie's bounded stewardship-transition memory lead and its explicit non-projection and privacy controls",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 1, 1, 5, 1, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that the stewardship transition remains an uncorroborated held memory lead, that the receiving organization is not identified, that private personal context is absent, and that the public website and municipal lifecycle claims remain unchanged."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-icloud-working-archive-production",
+      "completedAt": "2026-07-14T23:45:00-04:00",
+      "lens": "Protocol reset because the prior holdouts predated the public-safe production of Jamie Projects History, CRS, and job-hunt working archives",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 1, 1, 1, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the nine intakes, eleven bounded sources, eighteen atomic observations, seven claims, four inquiries, private-source controls, protected website projections, held creative-technology claims, and adversarial regression tests."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-google-drive-shared-drive-production",
+      "completedAt": "2026-07-14T23:46:49-04:00",
+      "lens": "Protocol reset because the prior holdouts predated the public-safe production of Jamie's Google Drive Shared Drives",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 1, 1, 1, 1, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the six Shared Drive intakes, six bounded protected sources, nine atomic observations, two selected workflow claims, four held research inquiries, private-data controls, media authorship and rights boundaries, website projection, content hash, and adversarial regression tests."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nter-chng-archival-recovery",
+      "completedAt": "2026-07-15T00:01:11-04:00",
+      "lens": "Protocol reset because the prior holdout state predated recovery of NTER CHNG's collaborative credit and America: Now and Here exhibition record",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 1, 5, 1, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the archived shared creator credit, installation form and date triangulation, America: Now and Here inclusion, Nerman context boundary, held projection, component-labor anti-claims, updated content hash, and adversarial regression tests together with the cumulative Shared Drive production."
+      ]
     }
   ]
 }

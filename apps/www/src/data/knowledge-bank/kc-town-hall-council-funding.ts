@@ -51,6 +51,25 @@ export const kcTownHallCouncilFunding = {
         "The resume does not establish that Jamie caused the Board recommendation or Council actions.",
         "Co-led does not mean sole ownership of the project or every planning, legal, financial, design, or construction decision."
       ]
+    },
+    {
+      id: "INTAKE-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
+      kind: "memory-lead",
+      title: "KC Town Hall stewardship transition",
+      submittedAt: "2026-07-14",
+      submittedBy: "Jamie Burkart",
+      projectIds: ["kc-town-hall"],
+      reason: "Preserve Jamie's first-party account that he transitioned project stewardship to a mission-aligned organization without prematurely projecting an uncorroborated transition history.",
+      visibility: "public-safe",
+      disposition: "researching",
+      sourceIds: [],
+      observationIds: ["OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      boundaries: [
+        "Do not identify the receiving organization until Jamie approves the name and a public-safe source or collaborator note supports the transfer.",
+        "Do not treat a participant memory as proof of legal transfer, organizational succession, municipal approval, or the later withdrawal sequence.",
+        "Private reasons for the transition remain outside the public repository."
+      ]
     }
   ],
   observations: [
@@ -154,6 +173,23 @@ export const kcTownHallCouncilFunding = {
       limitations: [
         "This is a first-party professional account and should be attributed to the approved resume.",
         "It does not independently establish municipal causation, project completion, or sole authorship."
+      ]
+    },
+    {
+      id: "OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
+      intakeId: "INTAKE-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
+      project: "kc-town-hall",
+      kind: "participant-memory",
+      text: "Jamie recalls transitioning project stewardship to a mission-aligned organization during the conclusion of his role.",
+      locator: "Jamie-provided participant-memory lead; transfer documentation or collaborator corroboration not yet normalized",
+      status: "captured",
+      publicSafe: true,
+      claimIds: [],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      limitations: [
+        "The receiving organization is intentionally unnamed pending public-safe source and consent review.",
+        "The memory does not establish the legal form, effective date, scope, or acceptance of the transition.",
+        "It does not establish the relationship between Jamie's transition and the City's later record of project withdrawal."
       ]
     }
   ],
@@ -444,6 +480,28 @@ export const kcTownHallCouncilFunding = {
         "SRC-KC-TOWN-HALL-ORDINANCE-240317"
       ],
       publicSummary: "Official records establish Board recommendation, Council acceptance and appropriation, no reported disbursement in 2022, and return of the full unused amount after project withdrawal in 2024."
+    },
+    {
+      id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+      project: "kc-town-hall",
+      question: "What public-safe evidence can establish Jamie's transition of project stewardship to a mission-aligned organization, and how does that transition relate to the later municipal withdrawal record?",
+      methods: [
+        "Retain Jamie's account as a participant-memory lead rather than a projected claim.",
+        "Seek a public-safe transfer record or collaborator note before identifying the receiving organization or promoting the account.",
+        "Keep private personal context outside the research record."
+      ],
+      runAt: "2026-07-14",
+      resultStatus: "inconclusive",
+      findings: [
+        "Jamie reports that he transitioned project stewardship to a mission-aligned organization during the conclusion of his role."
+      ],
+      limitations: [
+        "No public-safe transfer document or collaborator corroboration has been normalized.",
+        "The receiving organization, effective date, transfer scope, and acceptance remain unverified in this bank.",
+        "The available evidence does not connect the transition causally or procedurally to the City's later withdrawal record."
+      ],
+      sourceIds: [],
+      publicSummary: "A first-party transition memory is retained for research, with no public projection until the receiving organization, transfer scope, timing, and relationship to later records are supported and approved."
     }
   ],
   entities: [

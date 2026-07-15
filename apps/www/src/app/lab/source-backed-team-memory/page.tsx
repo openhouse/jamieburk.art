@@ -1,8 +1,8 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
+import { Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
-import { requireReadyOrCarefulProof } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -14,9 +14,6 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function SourceBackedTeamMemoryPage() {
-  const methodProof = requireReadyOrCarefulProof("source-backed-team-memory-method");
-  const evalsProof = requireReadyOrCarefulProof("ai-evals-professional-development");
-
   const workedExample = [
     {
       label: "Known",
@@ -40,7 +37,11 @@ export default function SourceBackedTeamMemoryPage() {
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          {methodProof.publicWording}
+          <Claim
+            claimId="CLM-SOURCE-BACKED-MEMORY-METHOD-2026"
+            projection="case-study"
+            surface="/lab/source-backed-team-memory"
+          />
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
@@ -88,7 +89,7 @@ export default function SourceBackedTeamMemoryPage() {
               width={1024}
             />
             <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/68">
-              Public completion certificate, 2026. Professional development,
+              Public completion certificate. Professional development,
               not instructor affiliation or a claim that the lab is production SaaS.
             </figcaption>
           </figure>
@@ -100,13 +101,20 @@ export default function SourceBackedTeamMemoryPage() {
               Human review is part of the system
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              {evalsProof.publicWording}{" "}
+              <Claim
+                claimId="CLM-AI-EVALS-COURSE-COMPLETION-2026"
+                projection="case-study"
+                surface="/lab/source-backed-team-memory"
+                pageId="source-backed-team-memory"
+                occurrenceId="ai-evals-course-completion"
+              />{" "}
               The coursework supports this lab&apos;s
               emphasis on error analysis, annotation, traces, retrieval quality,
               and reviewable failure modes.
             </p>
           </div>
         </section>
+        <References pageId="source-backed-team-memory" />
         <div className="mt-10 flex flex-wrap gap-3">
           <JBButton href="/work" variant="secondary">
             View selected work

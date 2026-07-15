@@ -1,4 +1,6 @@
 import { agencyGraph } from "./agency-graph.ts";
+import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
+import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
@@ -29,6 +31,8 @@ const knowledgeBankInput = {
         "Publication requires separate photographer, rights, represented-people, crop, and editorial review."
       ]
     },
+    ...archiveProductionJuly2026.intakeItems,
+    ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
@@ -55,6 +59,8 @@ const knowledgeBankInput = {
         "The approximate timestamp is not used to establish event hours."
       ]
     },
+    ...archiveProductionJuly2026.observations,
+    ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
     ...kcTownHallCouncilFunding.observations,
     ...nycacImplementationEvidence.observations,
@@ -185,6 +191,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
     },
+    ...archiveProductionJuly2026.sources,
+    ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
     ...kcTownHallCouncilFunding.sources,
     ...nycacImplementationEvidence.sources,
@@ -284,6 +292,8 @@ const knowledgeBankInput = {
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
+    ...archiveProductionJuly2026.claims,
+    ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
     ...kcTownHallCouncilFunding.claims,
     ...nycacImplementationEvidence.claims,
@@ -330,6 +340,8 @@ const knowledgeBankInput = {
       publicSummary: "A protected participant photograph preserves the visible Digital District breakout wording; public display remains on hold pending rights, consent, and editorial review.",
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
+    ...archiveProductionJuly2026.researchInquiries,
+    ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
@@ -387,7 +399,9 @@ const knowledgeBankInput = {
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] },
       { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] },
-      { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] }
+      { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] },
+      { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
+      { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
     ]
   }, {
     id: "kc-town-hall",
@@ -417,6 +431,22 @@ const knowledgeBankInput = {
         projection: "case-study",
         sourceIds: ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
       }
+    ]
+  }, {
+    id: "196-sunday-dinner",
+    surface: "/work/196-sunday-dinner",
+    sourceOrder: [],
+    occurrences: [
+      { id: "residency-onboarding-workflow", claimId: "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023", projection: "case-study" },
+      { id: "sunday-dinner-invitation-operations", claimId: "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025", projection: "case-study" }
+    ]
+  }, {
+    id: "source-backed-team-memory",
+    surface: "/lab/source-backed-team-memory",
+    sourceOrder: ["SRC-AI-EVALS-CERTIFICATE-2026"],
+    occurrences: [
+      { id: "source-backed-memory-method", claimId: "CLM-SOURCE-BACKED-MEMORY-METHOD-2026", projection: "case-study" },
+      { id: "ai-evals-course-completion", claimId: "CLM-AI-EVALS-COURSE-COMPLETION-2026", projection: "case-study", sourceIds: ["SRC-AI-EVALS-CERTIFICATE-2026"] }
     ]
   }]
 };

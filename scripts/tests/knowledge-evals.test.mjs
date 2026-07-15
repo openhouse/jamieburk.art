@@ -18,8 +18,8 @@ test("knowledge-bank gate records two consecutive independent 5/5 holdouts", () 
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "kc-town-hall-holdout-municipal-archivist-2026-07-14",
-    "kc-town-hall-holdout-skeptical-editor-2026-07-14"
+    "kc-town-hall-transition-holdout-privacy-editor-2026-07-14",
+    "kc-town-hall-transition-holdout-evidence-editor-2026-07-14"
   ]);
 });
 
@@ -1083,6 +1083,45 @@ test("KC Town Hall source citation cannot recast appropriation as payment", () =
   }
 });
 
+test("KC Town Hall stewardship transition remains a held participant-memory lead", () => {
+  const pilot = suite.pilot.kcTownHallCouncilFunding;
+  const intake = knowledgeBank.intakeItems.find((item) => item.id === pilot.transitionIntakeId);
+  const observation = knowledgeBank.observations.find((item) => item.id === pilot.transitionObservationId);
+  const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === pilot.transitionInquiryId);
+
+  assert.equal(intake?.kind, "memory-lead");
+  assert.equal(intake?.disposition, "researching");
+  assert.deepEqual(intake?.sourceIds, []);
+  assert.equal(observation?.kind, "participant-memory");
+  assert.equal(observation?.status, "captured");
+  assert.deepEqual(observation?.claimIds, []);
+  assert.equal(inquiry?.resultStatus, "inconclusive");
+  assert.deepEqual(inquiry?.sourceIds, []);
+  assert.ok(knowledgeBank.claims.every((claim) =>
+    claim.researchInquiryIds.every((inquiryId) => inquiryId !== pilot.transitionInquiryId)
+  ));
+});
+
+test("KC Town Hall transition memory cannot be promoted without evidence review", () => {
+  const pilot = suite.pilot.kcTownHallCouncilFunding;
+  const observation = knowledgeBank.observations.find((item) => item.id === pilot.transitionObservationId);
+  assert.ok(observation);
+  const originalStatus = observation.status;
+  const originalClaimIds = observation.claimIds;
+
+  try {
+    observation.status = "verified";
+    observation.claimIds = [pilot.contributionClaimId];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    observation.status = originalStatus;
+    observation.claimIds = originalClaimIds;
+  }
+});
+
 test("KC Town Hall case-study projection must retain funding-agreement negotiation status", () => {
   const claim = knowledgeBank.claims.find(
     (item) => item.id === suite.pilot.kcTownHallCouncilFunding.claimId
@@ -1310,6 +1349,212 @@ test("KC Town Hall MDX approval hash rejects unforeseen causal paraphrases", () 
       regression
     );
     assert.equal(result.accepted, false, regression);
+  }
+});
+
+test("working-archive production passes every deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+
+  assert.equal(result.contentApprovals.archiveProduction.matches, true);
+  assert.deepEqual(result.errors, []);
+  assert.ok(result.criteria.every((criterion) => criterion.score === 5));
+});
+
+test("working-archive private sources cannot acquire public URLs", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.archiveProduction.privateSourceIds[0]
+  );
+  assert.ok(source);
+  const originalCanonicalUrl = source.canonicalUrl;
+
+  try {
+    source.canonicalUrl = "https://example.com/private-working-record";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.canonicalUrl = originalCanonicalUrl;
+  }
+});
+
+test("held working-archive claims cannot silently enter the website", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.archiveProduction.heldClaimIds[0]
+  );
+  assert.ok(claim?.projections[0]);
+  const originalProjection = { ...claim.projections[0], surfaces: [...claim.projections[0].surfaces] };
+
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-RECOMPOSITION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0] = originalProjection;
+  }
+});
+
+test("NTER CHNG recovers shared authorship and later exhibition inclusion", () => {
+  const archive = suite.pilot.archiveProduction;
+  const claim = knowledgeBank.claims.find((item) => item.id === archive.nterClaimId);
+  const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === archive.nterInquiryId);
+
+  assert.ok(claim);
+  assert.equal(inquiry?.resultStatus, "recovered");
+  assert.deepEqual(claim.evidence.map((evidence) => evidence.sourceId), archive.nterSourceIds);
+  assert.deepEqual(inquiry.sourceIds, archive.nterSourceIds);
+  assert.ok(claim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0));
+});
+
+test("NTER CHNG shared credit cannot become sole authorship or a Nerman display claim", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.archiveProduction.nterClaimId
+  );
+  assert.ok(claim?.projections[0]);
+  const originalText = claim.projections[0].text;
+
+  try {
+    claim.projections[0].text = "Jamie created NTER CHNG and displayed it at the Nerman Museum.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0].text = originalText;
+  }
+});
+
+test("a proposal cannot be rewritten as a completed client outcome", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-SOURCE-BACKED-MEMORY-METHOD-2026"
+  );
+  assert.ok(claim?.projections[0]);
+  const originalText = claim.projections[0].text;
+
+  try {
+    claim.projections[0].text = "Deployed a production team-memory platform for a client.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0].text = originalText;
+  }
+});
+
+test("certificate evidence is content-hash governed", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.archiveProduction.certificateSourceId
+  );
+  assert.ok(source);
+  const originalCitation = source.publicCitation;
+
+  try {
+    source.publicCitation = `${source.publicCitation} Certified evaluator.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.contentApprovals.archiveProduction.matches, false);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.publicCitation = originalCitation;
+  }
+});
+
+test("Shared Drive production passes every deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+
+  assert.equal(result.contentApprovals.googleDriveProduction.matches, true);
+  assert.deepEqual(result.errors, []);
+  assert.ok(result.criteria.every((criterion) => criterion.score === 5));
+});
+
+test("protected Shared Drive sources cannot acquire public URLs", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.googleDriveProduction.workflowSourceIds[0]
+  );
+  assert.ok(source);
+  const originalCanonicalUrl = source.canonicalUrl;
+
+  try {
+    source.canonicalUrl = "https://drive.google.com/private-record";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.canonicalUrl = originalCanonicalUrl;
+  }
+});
+
+test("Sunday Dinner participant data cannot enter the public-safe record", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-SUNDAY-DINNER-PARTICIPANT-DATA-BOUNDARY"
+  );
+  assert.ok(observation);
+  const originalText = observation.text;
+
+  try {
+    observation.text = `${observation.text} Participant email: person@example.com`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    observation.text = originalText;
+  }
+});
+
+test("Shared Drive visual custody cannot become a public authorship claim", () => {
+  const template = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.googleDriveProduction.claimIds[0]
+  );
+  const mediaSourceId = suite.pilot.googleDriveProduction.heldMediaSourceIds[0];
+  assert.ok(template);
+  const inventedClaim = {
+    ...template,
+    id: "CLM-NYCAC-UNSUPPORTED-PHOTOGRAPHER-CREDIT",
+    project: "nyc-artist-coalition",
+    internalClaim: "Jamie photographed and produced the campaign documentation.",
+    projections: [{
+      ...template.projections[0],
+      text: "Jamie photographed and produced the campaign documentation.",
+      surfaces: ["/work/fair-rent-nyc"]
+    }],
+    evidence: [{
+      ...template.evidence[0],
+      sourceId: mediaSourceId,
+      supports: ["existence of a protected documentation lead"]
+    }]
+  };
+
+  knowledgeBank.claims.push(inventedClaim);
+  try {
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    knowledgeBank.claims.pop();
+  }
+});
+
+test("one residency workflow cannot be promoted into scale or outcome evidence", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023"
+  );
+  assert.ok(claim?.projections[0]);
+  const originalText = claim.projections[0].text;
+
+  try {
+    claim.projections[0].text = "Jamie delivered successful outcomes for 20+ resident artists.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0].text = originalText;
   }
 });
 

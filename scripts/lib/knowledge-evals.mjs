@@ -50,17 +50,21 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
   const errors = validateKnowledgeBank();
+  const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
 
   const kcTownHall = suite.pilot.kcTownHallCouncilFunding;
   const kcTownHallIntake = intakeById.get(kcTownHall.intakeId);
   const kcTownHallContributionIntake = intakeById.get(kcTownHall.contributionIntakeId);
+  const kcTownHallTransitionIntake = intakeById.get(kcTownHall.transitionIntakeId);
   const kcTownHallSources = kcTownHall.sourceIds.map((id) => sourceById.get(id));
   const kcTownHallContributionSource = sourceById.get(kcTownHall.contributionSourceId);
   const kcTownHallObservations = kcTownHall.observationIds.map((id) => observationById.get(id));
   const kcTownHallContributionObservation = observationById.get(kcTownHall.contributionObservationId);
+  const kcTownHallTransitionObservation = observationById.get(kcTownHall.transitionObservationId);
   const kcTownHallClaim = claimById.get(kcTownHall.claimId);
   const kcTownHallContributionClaim = claimById.get(kcTownHall.contributionClaimId);
   const kcTownHallInquiry = inquiryById.get(kcTownHall.inquiryId);
+  const kcTownHallTransitionInquiry = inquiryById.get(kcTownHall.transitionInquiryId);
   const kcTownHallRelations = kcTownHall.relationIds.map((id) => relationById.get(id));
   const kcTownHallProofCoverage = knowledgeBank.proofCoverageTargets.find(
     (target) => target.proofId === kcTownHall.proofId
@@ -139,11 +143,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     (projection) => projection.key === "case-study"
   );
   const kcTownHallContentSha256 = createHash("sha256").update(JSON.stringify({
-    intakes: [kcTownHallIntake, kcTownHallContributionIntake],
+    intakes: [kcTownHallIntake, kcTownHallContributionIntake, kcTownHallTransitionIntake],
     sources: [...kcTownHallSources, kcTownHallContributionSource],
-    observations: [...kcTownHallObservations, kcTownHallContributionObservation],
+    observations: [...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation],
     claims: [kcTownHallClaim, kcTownHallContributionClaim],
-    inquiry: kcTownHallInquiry,
+    inquiries: [kcTownHallInquiry, kcTownHallTransitionInquiry],
     relations: kcTownHallRelations,
     proof: kcTownHallProof,
     proofCoverage: kcTownHallProofCoverage,
@@ -226,6 +230,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       sameOrderedValues(kcTownHallContributionIntake.sourceIds, [kcTownHall.contributionSourceId]) &&
       sameOrderedValues(kcTownHallContributionIntake.observationIds, [kcTownHall.contributionObservationId]) &&
       kcTownHallContributionIntake.boundaries.length >= 3 &&
+      kcTownHallTransitionIntake?.kind === "memory-lead" &&
+      kcTownHallTransitionIntake.visibility === "public-safe" &&
+      kcTownHallTransitionIntake.disposition === "researching" &&
+      sameOrderedValues(kcTownHallTransitionIntake.sourceIds, []) &&
+      sameOrderedValues(kcTownHallTransitionIntake.observationIds, [kcTownHall.transitionObservationId]) &&
+      sameOrderedValues(kcTownHallTransitionIntake.researchInquiryIds, [kcTownHall.transitionInquiryId]) &&
+      kcTownHallTransitionIntake.boundaries.length >= 3 &&
       kcTownHallSources.every((source) =>
         source?.kind === "government-record" &&
           source.visibility === "public" &&
@@ -253,6 +264,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       kcTownHallContributionObservation.locator &&
       kcTownHallContributionObservation.limitations.length >= 2 &&
       kcTownHallContributionObservation.claimIds.includes(kcTownHall.contributionClaimId) &&
+      kcTownHallTransitionObservation?.kind === "participant-memory" &&
+      kcTownHallTransitionObservation.status === "captured" &&
+      kcTownHallTransitionObservation.publicSafe === true &&
+      !kcTownHallTransitionObservation.sourceId &&
+      kcTownHallTransitionObservation.locator &&
+      kcTownHallTransitionObservation.limitations.length >= 3 &&
+      sameOrderedValues(kcTownHallTransitionObservation.claimIds, []) &&
+      sameOrderedValues(kcTownHallTransitionObservation.researchInquiryIds, [kcTownHall.transitionInquiryId]) &&
       kcTownHallClaim?.status === "confirmed-with-boundary" &&
       kcTownHallClaim.boundaries.length >= 3 &&
       kcTownHallClaim.antiClaims.length >= 6 &&
@@ -281,6 +300,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       sameOrderedValues(kcTownHallInquiry.sourceIds, kcTownHall.sourceIds) &&
       kcTownHallInquiry.findings.length >= 4 &&
       kcTownHallInquiry.limitations.length >= 3 &&
+      kcTownHallTransitionInquiry?.resultStatus === "inconclusive" &&
+      sameOrderedValues(kcTownHallTransitionInquiry.sourceIds, []) &&
+      kcTownHallTransitionInquiry.findings.length >= 1 &&
+      kcTownHallTransitionInquiry.limitations.length >= 3 &&
       kcTownHallProofCoverage?.status === "partially-source-backed" &&
       sameOrderedValues(kcTownHallProofCoverage.sourceIds, kcTownHallPageSourceIds) &&
       sameOrderedValues(kcTownHallProofCoverage.researchInquiryIds, [kcTownHall.inquiryId]) &&
@@ -688,9 +711,354 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       pressInquiry.resultStatus === "partially-recovered" &&
       pressInquiry.limitations.length >= 6
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry];
+  const archive = suite.pilot.archiveProduction;
+  const archiveIntakes = archive.intakeIds.map((id) => intakeById.get(id));
+  const archiveObservations = archive.observationIds.map((id) => observationById.get(id));
+  const archiveSources = archive.sourceIds.map((id) => sourceById.get(id));
+  const archivePublicSources = archive.publicSourceIds.map((id) => sourceById.get(id));
+  const archivePrivateSources = archive.privateSourceIds.map((id) => sourceById.get(id));
+  const archiveClaims = archive.claimIds.map((id) => claimById.get(id));
+  const archiveHeldClaims = archive.heldClaimIds.map((id) => claimById.get(id));
+  const archiveActiveClaims = archive.activeClaimIds.map((id) => claimById.get(id));
+  const archiveInquiries = archive.inquiryIds.map((id) => inquiryById.get(id));
+  const archiveFairRentPage = knowledgeBank.pages.find((page) => page.id === archive.fairRentPageId);
+  const archiveLabPage = knowledgeBank.pages.find((page) => page.id === archive.labPageId);
+  const archiveLabSource = readFileSync(
+    path.join(repoRoot, "apps/www/src/app/lab/source-backed-team-memory/page.tsx"),
+    "utf8"
+  );
+  const archiveProjectNote = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/projects/archive-production-2026-07-14.md"),
+    "utf8"
+  );
+  const archiveProofIds = [
+    "fair-rent-campaign-memory",
+    "fair-rent-source-map",
+    "source-backed-team-memory-method",
+    "ai-evals-professional-development"
+  ];
+  const archiveProofCoverage = archiveProofIds.map((proofId) =>
+    knowledgeBank.proofCoverageTargets.find((target) => target.proofId === proofId)
+  );
+  const archiveContentSha256 = createHash("sha256").update(JSON.stringify({
+    intakes: archiveIntakes,
+    observations: archiveObservations,
+    sources: archiveSources,
+    claims: archiveClaims,
+    inquiries: archiveInquiries,
+    fairRentPage: archiveFairRentPage,
+    labPage: archiveLabPage,
+    proofCoverage: archiveProofCoverage,
+    fairRentMdx,
+    labSource: archiveLabSource,
+    projectNote: archiveProjectNote
+  })).digest("hex");
+  const archivePublicUrlsAreHttps = archivePublicSources.every((source) => {
+    const url = source?.canonicalUrl ?? source?.archiveUrl ?? source?.assetUrl;
+    return Boolean(url && /^https:\/\//.test(url));
+  });
+  const archiveEvidenceClosed = archiveClaims.every((claim) =>
+    claim?.evidence.length && claim.evidence.every((evidence) =>
+      evidence.supports.length && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const archivePrivateIds = new Set([
+    ...archive.privateSourceIds,
+    ...archivePrivateSources.map((source) => source?.protectedLocatorId).filter(Boolean)
+  ]);
+  const archivePublicBundleSafe = [...archivePrivateIds].every(
+    (privateId) => !publicRegistryText.includes(privateId)
+  ) && ![
+    "/Users/",
+    "Mobile Documents",
+    "CloudDocs",
+    "Jonathan Marmor",
+    "$2,500"
+  ].some((privateText) => publicRegistryText.includes(privateText));
+  const archiveProofCoverageComplete = Boolean(
+    archiveProofCoverage.every(Boolean) &&
+      archiveProofCoverage[0].status === "protected-support" &&
+      sameOrderedValues(archiveProofCoverage[0].sourceIds, [
+        "SRC-CRS-RUNNING-MEMORY-2026",
+        "SRC-JAMIE-APPROVED-RESUME-2026-06-11"
+      ]) &&
+      archiveProofCoverage[0].researchInquiryIds.includes(archive.crsInquiryId) &&
+      archiveProofCoverage[1].status === "protected-support" &&
+      archiveProofCoverage[1].sourceIds.includes("SRC-CRS-PROVENANCE-REDLINE-2026") &&
+      archiveProofCoverage[1].sourceIds.includes("SRC-JAMIE-APPROVED-RESUME-2026-06-11") &&
+      archiveProofCoverage[1].researchInquiryIds.includes(archive.crsInquiryId) &&
+      archiveProofCoverage[2].status === "protected-support" &&
+      sameOrderedValues(archiveProofCoverage[2].sourceIds, ["SRC-SOURCE-BACKED-MEMORY-PROPOSAL-2026"]) &&
+      archiveProofCoverage[2].researchInquiryIds.includes(archive.methodInquiryId) &&
+      archiveProofCoverage[3].status === "source-backed" &&
+      sameOrderedValues(archiveProofCoverage[3].sourceIds, [archive.certificateSourceId]) &&
+      archiveProofCoverage[3].researchInquiryIds.length === 0
+  );
+  const sourceBackedMethodClaim = claimById.get("CLM-SOURCE-BACKED-MEMORY-METHOD-2026");
+  const sourceBackedMethodText = [
+    sourceBackedMethodClaim?.internalClaim,
+    ...(sourceBackedMethodClaim?.projections.map((projection) => projection.text) ?? [])
+  ].filter(Boolean).join("\n");
+  const sourceBackedMethodStatusBounded = !/(?:completed|deployed|launched|adopted)[^.]{0,80}(?:client|production|pilot|product|platform)|market validation/i.test(
+    sourceBackedMethodText
+  );
+  const nterClaim = claimById.get(archive.nterClaimId);
+  const nterClaimText = [
+    nterClaim?.internalClaim,
+    ...(nterClaim?.projections.map((projection) => projection.text) ?? [])
+  ].filter(Boolean).join("\n");
+  const nterAttributionSafe = ![
+    /Jamie(?: Burkart)? (?:alone )?(?:created|built|designed|programmed|developed) NTER CHNG/i,
+    /Jamie(?: Burkart)? (?:wrote|built|developed) the (?:NTER CHNG )?software/i,
+    /Jamie(?: Burkart)? designed the (?:installation )?architecture/i,
+    /NTER CHNG[^.]{0,100}(?:displayed|shown|installed)[^.]{0,60}Nerman/i,
+    /Nerman[^.]{0,100}NTER CHNG/i
+  ].some((pattern) => pattern.test(nterClaimText));
+  const archiveProductionComplete = Boolean(
+    archiveIntakes.length === archive.expectedIntakeCount &&
+      archiveObservations.length === archive.expectedObservationCount &&
+      archiveSources.length === archive.expectedSourceCount &&
+      archiveClaims.length === archive.expectedClaimCount &&
+      archiveInquiries.length === archive.expectedInquiryCount &&
+      archiveIntakes.every((intake) =>
+        intake?.boundaries.length >= 2 &&
+          intake.sourceIds.length &&
+          intake.observationIds.length &&
+          ["integrated", "protected", "researching"].includes(intake.disposition)
+      ) &&
+      archiveSources.every((source) =>
+        source?.supportsGenerally.length && source.doesNotEstablish.length >= 2
+      ) &&
+      archivePublicUrlsAreHttps &&
+      archivePrivateSources.every((source) =>
+        ["private", "protected"].includes(source?.visibility) &&
+          source.preservationStatus === "private" &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl
+      ) &&
+      archiveObservations.every((observation) =>
+        observation?.locator &&
+          observation.limitations.length >= 2 &&
+          (observation.claimIds.length || observation.researchInquiryIds.length)
+      ) &&
+      archiveEvidenceClosed &&
+      archiveClaims.every((claim) =>
+        claim?.boundaries.length >= 3 &&
+          claim.antiClaims.length >= 3 &&
+          claim.reviewedBy.length &&
+          claim.reviewedAt === archive.reviewedAt
+      ) &&
+      archiveHeldClaims.every((claim) =>
+        claim?.projections.length && claim.projections.every((projection) =>
+          projection.status === "hold" && projection.surfaces.length === 0
+        )
+      ) &&
+      archiveActiveClaims.every((claim) =>
+        claim?.projections.some((projection) =>
+          projection.status === "active" && projection.surfaces.length === 1
+        )
+      ) &&
+      archiveActiveClaims
+        .filter((claim) => claim?.id !== archive.certificateClaimId)
+        .every((claim) => claim?.evidence.every((evidence) => evidence.renderCitation === false)) &&
+      claimById.get(archive.certificateClaimId)?.evidence.every((evidence) =>
+        evidence.sourceId === archive.certificateSourceId && evidence.renderCitation === true
+      ) &&
+      archiveInquiries.every((inquiry) =>
+        (inquiry?.id === archive.nterInquiryId
+          ? inquiry.resultStatus === "recovered"
+          : inquiry?.resultStatus === "partially-recovered") &&
+          inquiry.findings.length >= 2 &&
+          inquiry.limitations.length >= 2 &&
+          inquiry.sourceIds.length
+      ) &&
+      inquiryById.get(archive.nterInquiryId)?.resultStatus === "recovered" &&
+      sameOrderedValues(
+        inquiryById.get(archive.nterInquiryId)?.sourceIds,
+        archive.nterSourceIds
+      ) &&
+      claimById.get(archive.nterClaimId)?.status === "confirmed-with-boundary" &&
+      claimById.get(archive.nterClaimId)?.projections.every((projection) =>
+        projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      sameOrderedValues(
+        claimById.get(archive.nterClaimId)?.evidence.map((evidence) => evidence.sourceId),
+        archive.nterSourceIds
+      ) &&
+      claimById.get(archive.nterClaimId)?.antiClaims.some((antiClaim) =>
+        /alone created|sole authorship/i.test(antiClaim)
+      ) &&
+      nterAttributionSafe &&
+      inquiryById.get(archive.baplabInquiryId)?.limitations.some((limitation) =>
+        /title|medium|collaborator/i.test(limitation)
+      ) &&
+      sameOrderedValues(
+        archiveFairRentPage?.occurrences
+          .filter((occurrence) => archive.fairRentOccurrenceIds.includes(occurrence.id))
+          .map((occurrence) => occurrence.id),
+        archive.fairRentOccurrenceIds
+      ) &&
+      archive.fairRentOccurrenceIds.every((occurrenceId) => {
+        const occurrence = archiveFairRentPage?.occurrences.find((item) => item.id === occurrenceId);
+        return occurrence && (occurrence.sourceIds ?? []).length === 0;
+      }) &&
+      sameOrderedValues(
+        archiveLabPage?.occurrences.map((occurrence) => occurrence.id),
+        archive.labOccurrenceIds
+      ) &&
+      archiveLabPage?.sourceOrder.length === 1 &&
+      archiveLabPage.sourceOrder[0] === archive.certificateSourceId &&
+      fairRentMdx.includes('claimId="CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026"') &&
+      fairRentMdx.includes('claimId="CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"') &&
+      archiveLabSource.includes('claimId="CLM-SOURCE-BACKED-MEMORY-METHOD-2026"') &&
+      archiveLabSource.includes(`claimId="${archive.certificateClaimId}"`) &&
+      archiveLabSource.includes('<References pageId="source-backed-team-memory" />') &&
+      archiveProjectNote.includes("Archive production is cumulative; site composition is selective.") &&
+      sourceBackedMethodStatusBounded &&
+      archiveProofCoverageComplete &&
+      archivePublicBundleSafe &&
+      archiveContentSha256 === archive.approvedContentSha256
+  );
+  const googleDrive = suite.pilot.googleDriveProduction;
+  const googleDriveIntakes = googleDrive.intakeIds.map((id) => intakeById.get(id));
+  const googleDriveObservations = googleDrive.observationIds.map((id) => observationById.get(id));
+  const googleDriveSources = googleDrive.sourceIds.map((id) => sourceById.get(id));
+  const googleDriveWorkflowSources = googleDrive.workflowSourceIds.map((id) => sourceById.get(id));
+  const googleDriveMediaSources = googleDrive.heldMediaSourceIds.map((id) => sourceById.get(id));
+  const googleDriveClaims = googleDrive.claimIds.map((id) => claimById.get(id));
+  const googleDriveInquiries = googleDrive.inquiryIds.map((id) => inquiryById.get(id));
+  const googleDrivePage = knowledgeBank.pages.find((page) => page.id === googleDrive.pageId);
+  const googleDriveProofCoverage = knowledgeBank.proofCoverageTargets.find(
+    (target) => target.proofId === googleDrive.proofId
+  );
+  const googleDriveMdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/196-sunday-dinner.mdx"),
+    "utf8"
+  );
+  const googleDriveProjectNote = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md"),
+    "utf8"
+  );
+  const googleDriveContentSha256 = createHash("sha256").update(JSON.stringify({
+    intakes: googleDriveIntakes,
+    observations: googleDriveObservations,
+    sources: googleDriveSources,
+    claims: googleDriveClaims,
+    inquiries: googleDriveInquiries,
+    page: googleDrivePage,
+    proofCoverage: googleDriveProofCoverage,
+    mdx: googleDriveMdx,
+    projectNote: googleDriveProjectNote
+  })).digest("hex");
+  const googleDriveEvidenceClosed = googleDriveClaims.every((claim) =>
+    claim?.evidence.length && claim.evidence.every((evidence) =>
+      evidence.supports.length && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const googleDrivePublicSafeText = JSON.stringify({
+    intakes: googleDriveIntakes,
+    observations: googleDriveObservations,
+    sources: googleDriveSources,
+    claims: googleDriveClaims,
+    inquiries: googleDriveInquiries,
+    mdx: googleDriveMdx,
+    projectNote: googleDriveProjectNote
+  });
+  const googleDrivePrivacySafe = ![
+    /drive\.google\.com/i,
+    /\/Users\//,
+    /CloudStorage|CloudDocs|Mobile Documents/,
+    /(?:phone|email|instagram)\s*[:=]\s*[^,}\]]+/i,
+    /@[a-z0-9._%+-]+\.[a-z]{2,}/i
+  ].some((pattern) => pattern.test(googleDrivePublicSafeText));
+  const googleDriveMetricAndOutcomeSafe = googleDriveClaims.every((claim) => {
+    const text = [claim?.internalClaim, ...(claim?.projections.map((projection) => projection.text) ?? [])].join("\n");
+    return !/300\+|20\+|300 or more|20 or more|artist outcome|participant satisfaction|community impact/i.test(text);
+  });
+  const googleDriveHeldMediaSourceIds = new Set(googleDrive.heldMediaSourceIds);
+  const googleDriveVisualAttributionSafe = !knowledgeBank.claims.some((claim) =>
+    claim.evidence.some((evidence) => googleDriveHeldMediaSourceIds.has(evidence.sourceId)) &&
+      claim.projections.some((projection) => projection.status === "active" || projection.surfaces.length > 0)
+  );
+  const googleDriveComplete = Boolean(
+    googleDriveIntakes.length === googleDrive.expectedIntakeCount &&
+      googleDriveObservations.length === googleDrive.expectedObservationCount &&
+      googleDriveSources.length === googleDrive.expectedSourceCount &&
+      googleDriveClaims.length === googleDrive.expectedClaimCount &&
+      googleDriveInquiries.length === googleDrive.expectedInquiryCount &&
+      googleDriveIntakes.every((intake) =>
+        intake?.visibility === "protected" &&
+          ["integrated", "researching"].includes(intake.disposition) &&
+          intake.sourceIds.length === 1 &&
+          intake.observationIds.length &&
+          intake.boundaries.length >= 3
+      ) &&
+      googleDriveSources.every((source) =>
+        source?.preservationStatus === "private" &&
+          ["protected", "public-metadata-only"].includes(source.visibility) &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl &&
+          source.supportsGenerally.length >= 2 &&
+          source.doesNotEstablish.length >= 4
+      ) &&
+      googleDriveWorkflowSources.every((source) => source?.visibility === "protected") &&
+      googleDriveMediaSources.every((source) =>
+        source?.kind === "photo-metadata" &&
+          source.media?.rightsStatus === "unknown" &&
+          source.media.consentStatus === "review-needed" &&
+          source.media.publicDisplayStatus === "hold"
+      ) &&
+      googleDriveObservations.every((observation) =>
+        observation?.locator &&
+          observation.limitations.length >= 2 &&
+          (observation.claimIds.length || observation.researchInquiryIds.length)
+      ) &&
+      googleDriveEvidenceClosed &&
+      googleDriveClaims.every((claim) =>
+        claim?.status === "confirmed-with-boundary" &&
+          claim.boundaries.length >= 3 &&
+          claim.antiClaims.length >= 4 &&
+          claim.reviewedAt === googleDrive.reviewedAt &&
+          claim.reviewedBy.length >= 2 &&
+          claim.projections.length === 1 &&
+          claim.projections[0].status === "active" &&
+          claim.projections[0].citationRequired === false &&
+          sameOrderedValues(claim.projections[0].surfaces, ["/work/196-sunday-dinner"]) &&
+          claim.evidence.every((evidence) => evidence.relationship === "private-support" && evidence.renderCitation === false)
+      ) &&
+      googleDriveInquiries.every((inquiry) =>
+        ["partially-recovered", "inconclusive"].includes(inquiry?.resultStatus) &&
+          inquiry.findings.length >= 2 &&
+          inquiry.limitations.length >= 2 &&
+          inquiry.sourceIds.length === 1
+      ) &&
+      googleDrivePage?.surface === "/work/196-sunday-dinner" &&
+      googleDrivePage.sourceOrder.length === 0 &&
+      sameOrderedValues(
+        googleDrivePage.occurrences.map((occurrence) => occurrence.claimId),
+        googleDrive.claimIds
+      ) &&
+      googleDrivePage.occurrences.every((occurrence) => !occurrence.sourceIds) &&
+      googleDrive.claimIds.every((claimId) => googleDriveMdx.includes(`claimId="${claimId}"`)) &&
+      !/300\+|20\+/.test(googleDriveMdx) &&
+      googleDriveProofCoverage?.status === "protected-support" &&
+      googleDrive.workflowSourceIds.every((sourceId) => googleDriveProofCoverage.sourceIds.includes(sourceId)) &&
+      googleDrivePrivacySafe &&
+      googleDriveMetricAndOutcomeSafe &&
+      googleDriveVisualAttributionSafe &&
+      googleDriveContentSha256 === googleDrive.approvedContentSha256
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -705,7 +1073,6 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const photoSource = sourceById.get(photoFeedback.sourceId);
   const photoClaim = claimById.get(photoFeedback.claimId);
   const photoInquiry = inquiryById.get(photoFeedback.inquiryId);
-  const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
   const privatePhotoEvidence = photoClaim?.evidence.find(
     (evidence) => evidence.sourceId === photoFeedback.sourceId
   );
@@ -890,14 +1257,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         secondExpansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
         institutionalCapacityComplete &&
         kcTownHallComplete &&
+        archiveProductionComplete &&
+        googleDriveComplete &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 3 && item.sourceIds.length > 1 && item.observationIds.length)
       ),
-      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, one institutional-capacity analysis, one bounded KC Town Hall funding lifecycle, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
+      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, one institutional-capacity analysis, one bounded KC Town Hall funding lifecycle, ${archiveIntakes.filter(Boolean).length}/${archive.expectedIntakeCount} working-archive intakes, ${googleDriveIntakes.filter(Boolean).length}/${googleDrive.expectedIntakeCount} Shared Drive intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
     },
     {
       criterionId: "KB-EVAL-ATOMICITY",
       score: score(
         allEvaluatedObservations.length >= 30 &&
+        archiveProductionComplete &&
+        googleDriveComplete &&
         allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
       ),
       evidence: [`${allEvaluatedObservations.filter(Boolean).length} proposition-level observations have locators, limitations, and claim or inquiry links`]
@@ -910,9 +1281,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         secondExpansionSources.length === secondExpansion.expectedSourceCount &&
         institutionalCapacityComplete &&
         kcTownHallComplete &&
+        archiveProductionComplete &&
+        googleDriveComplete &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
-      evidence: [`${expansionSources.filter(Boolean).length + secondExpansionSources.filter(Boolean).length}/${expansion.expectedSourceCount + secondExpansion.expectedSourceCount} source-expansion records, ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles, four KC Town Hall government records, and one separately bounded resume source have explicit support and doesNotEstablish boundaries`]
+      evidence: [`${expansionSources.filter(Boolean).length + secondExpansionSources.filter(Boolean).length}/${expansion.expectedSourceCount + secondExpansion.expectedSourceCount} source-expansion records, ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles, four KC Town Hall government records, ${archiveSources.filter(Boolean).length}/${archive.expectedSourceCount} working-archive sources, and ${googleDriveSources.filter(Boolean).length}/${googleDrive.expectedSourceCount} Shared Drive sources have explicit support and doesNotEstablish boundaries`]
     },
     {
       criterionId: "KB-EVAL-MATURATION",
@@ -922,7 +1295,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         expansionClaims.length === expansion.claimIds.length &&
         secondExpansionClaims.length === secondExpansion.claimIds.length &&
         institutionalCapacityComplete &&
-        kcTownHallComplete,
+        kcTownHallComplete &&
+        archiveProductionComplete &&
+        googleDriveComplete,
         triangulatedExpansionClaims.length >= 8
       ),
       evidence: [`${allExpansionClaims.filter(Boolean).length} source-expansion claims, one repository-backed implementation claim, and the KC Town Hall appropriation lifecycle matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
@@ -936,9 +1311,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         marchResearchAligned &&
         institutionalCapacityComplete &&
         kcTownHallComplete &&
+        archiveProductionComplete &&
+        googleDriveComplete &&
         Boolean(fairRentPage)
       ),
-      evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections; the KC Town Hall page retains the complete bounded funding lifecycle`]
+      evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections; the KC Town Hall page retains the complete bounded funding lifecycle; four mature creative-technology claims remain held while four archive-supported claims have selected projections`]
     },
     {
       criterionId: "KB-EVAL-COVERAGE",
@@ -950,13 +1327,15 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         secondExpansion.selectedClaimIds.every((id) => fairRentMdx.includes(id)) &&
         fairRentPage.occurrences.length >= 6 &&
         kcTownHallComplete &&
+        archiveProductionComplete &&
+        googleDriveComplete &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
-      evidence: [`Six hiring-relevant NYCAC assertions and one complete KC Town Hall funding lifecycle have canonical page citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
+      evidence: [`Hiring-relevant NYCAC assertions, one complete KC Town Hall funding lifecycle, two CRS records, two protected participation-workflow claims, one bounded method claim, and one certificate-backed completion claim have governed projections; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
     },
     {
       criterionId: "KB-EVAL-SAFETY",
-      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
+      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
       evidence: [errors.length ? `${errors.length} canonical validation errors` : "Canonical validation passes with no private-path or protected-locator leak"]
     },
     {
@@ -970,10 +1349,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         photoChainComplete &&
         institutionalClaim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0) &&
         pressClaim?.projections.every((projection) => projection.status === "hold") &&
-        pressInquiry?.resultStatus === "partially-recovered"
+        pressInquiry?.resultStatus === "partially-recovered" &&
+        archiveProductionComplete &&
+        googleDriveComplete
       ),
       evidence: [photoChainComplete
-        ? `${heldExpansionClaims.length} newly mature claims and the complete press-archive claim remain held beside open inquiries, memory leads, and the protected photo feedback chain`
+        ? `${heldExpansionClaims.length} newly mature claims, four working-archive claims, and the complete press-archive claim remain held beside open inquiries, memory leads, and the protected photo feedback chain`
         : "The canonical photo-feedback chain is incomplete"]
     },
     {
@@ -1020,6 +1401,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         actualSha256: kcTownHallContentSha256,
         approvedSha256: kcTownHall.approvedContentSha256,
         matches: kcTownHallContentSha256 === kcTownHall.approvedContentSha256
+      },
+      archiveProduction: {
+        actualSha256: archiveContentSha256,
+        approvedSha256: archive.approvedContentSha256,
+        matches: archiveContentSha256 === archive.approvedContentSha256
+      },
+      googleDriveProduction: {
+        actualSha256: googleDriveContentSha256,
+        approvedSha256: googleDrive.approvedContentSha256,
+        matches: googleDriveContentSha256 === googleDrive.approvedContentSha256
       }
     },
     accepted: errors.length === 0 &&

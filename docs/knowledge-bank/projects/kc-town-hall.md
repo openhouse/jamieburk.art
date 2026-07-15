@@ -41,6 +41,15 @@ Agency relations:
 - `REL-KC-TOWN-HALL-WITHDREW-CCED-PROJECT`
 - `REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION`
 
+## Stewardship Transition Lead
+
+Jamie has supplied a first-party memory that he transitioned project
+stewardship to a mission-aligned organization during the conclusion of his
+role. This remains a held research lead, not a public claim. The receiving
+organization, timing, transfer scope, acceptance, and relationship to the
+later municipal withdrawal record require public-safe evidence and approval.
+Private personal context is not recorded in this repository.
+
 ## Source Record
 
 - `SRC-KC-TOWN-HALL-RESOLUTION-190649`

@@ -153,6 +153,24 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+### Protected workflow support added 2026-07-14
+
+**Residency onboarding:** A protected 2023 acceptance workflow signed by Jamie
+supports a bounded public description of proposal review, video-call
+onboarding, space configuration, and independent artist/collaborator access.
+It does not establish artist outcome, program scale, public access, or consent.
+
+**Recurring gathering operations:** A protected 2025 operating-sheet schema
+supports a bounded public description of invitation, response, attendance, and
+follow-up coordination. Participant rows and contact values are excluded. The
+artifact does not independently support the 300-plus gathering or 20-plus
+resident-artist totals.
+
+**Projection decision:** Project these two workflow claims on
+`/work/196-sunday-dinner` without a public citation. Keep underlying records,
+participant data, access details, and unapproved media outside the public
+bundle.
+
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
 **Status:** Careful
@@ -202,6 +220,81 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## horse-lords-truthers-video-2016 - Shared video credit
+
+**Status:** Confirmed with boundary; held from current site projection
+**Support level:** Strong
+**Evidence class:** Contemporary public reporting
+**Public wording:** NPR credited M.C. Schmidt and Jamie Burkart with the 2016 video for Horse Lords' "Truthers."
+**Detailed public-safe wording:** NPR's 2016 account credits M.C. Schmidt and Jamie Burkart with the video; Horse Lords member Andrew Bernstein's description of its materials and repetition should remain attributed to him through the article.
+**Where to project:** Knowledge bank now; a future creative-technology chronology or tailored application after editorial selection.
+**Why it matters:** Recovers an independent, contemporary shared credit for Jamie's moving-image practice.
+**Guardrail:** Keep the credit shared and do not infer the collaborators' division of labor or music authorship.
+**Do not say:** Jamie solely created the video; Jamie made Horse Lords' music; NPR established the collaborators' division of labor.
+**Protected boundaries:** No private production correspondence or unsupported division-of-labor detail.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## claudette-ar-monument-2022 - Collaborative augmented-reality monument
+
+**Status:** Confirmed with boundary; held from current site projection
+**Support level:** Strong
+**Evidence class:** Public program and institutional social record
+**Public wording:** Jamie Burkart and Michael Rees co-created "Claudette's Theatre on Wheels," an augmented-reality monument presented in ARORA's 2022 Munich program.
+**Detailed public-safe wording:** Make Us Visible and XR Ensemble records identify Jamie Burkart and Michael Rees with the work and describe interactive performance clips honoring Claudette's artistic life.
+**Where to project:** Knowledge bank now; future creative-technology or public-art material after editorial selection.
+**Why it matters:** Documents collaborative augmented-reality and public-memory work without displacing the larger program or co-artist.
+**Guardrail:** Keep authorship shared; do not claim creation of ARORA, measured audience impact, or an unsupported technical division of labor.
+**Do not say:** Jamie solely created the work; Jamie founded ARORA; the sources establish measured public impact.
+**Protected boundaries:** Private collaborator records and unrecovered technical details remain outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## baplab-new-media-participation-2006 - New-media program participation
+
+**Status:** Confirmed with boundary; held pending work identification
+**Support level:** Moderate
+**Evidence class:** Public event program and contemporary event account
+**Public wording:** Wave Farm's program lists Jamie Burkart among the artists in BAPLab 2006's New Media Program at 3rd Ward in Brooklyn.
+**Detailed public-safe wording:** Wave Farm verifies Jamie's participation; Artforum describes the event's broader setting but does not name or review Jamie's individual work.
+**Where to project:** Knowledge bank; no current site projection.
+**Why it matters:** Preserves a verified early new-media milestone while making the missing work-level record actionable.
+**Guardrail:** The work's title, medium, and collaborators remain open. Do not convert participation into organizer, curator, or event-scale production credit.
+**Do not say:** Jamie organized or curated BAPLab; Artforum reviewed Jamie's work; Jamie produced an event with almost 100 artists.
+**Protected boundaries:** Unverified folder associations and unrecovered work details do not become public claims.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nter-chng-collaborative-installation-2010-2011 - Interactive texting installation
+
+**Status:** Confirmed with boundary; held from current site projection
+**Support level:** Strong
+**Evidence class:** Archived project homepage / contemporary event listing / archived exhibition records / institutional exhibition context
+**Public wording:** Drew Bolton, Jamie Burkart, and Garrett Fuselier co-created NTER CHNG, an interactive texting installation shown in Kansas City in 2010 and later included in America: Now and Here's 2011 Kansas City presentation.
+**Detailed public-safe wording:** The archived project homepage supplies the shared creator credit; The Pitch describes the software, architectural, and real-time texting form; America: Now and Here's archived site documents the later exhibition inclusion and observed public interaction.
+**Where to project:** Knowledge bank now; future creative-technology chronology or tailored application after editorial selection.
+**Why it matters:** Recovers a named collaborative interactive-media work and a later exhibition life without inventing component-level labor or impact.
+**Guardrail:** Keep all three collaborators in the credit. The sources do not divide software, architecture, interaction design, or exhibition production among them.
+**Do not say:** Jamie alone created NTER CHNG; Jamie alone wrote the software; America: Now and Here commissioned or awarded the work; NTER CHNG was displayed at the Nerman Museum; participant anecdotes prove representative impact.
+**Protected boundaries:** No private collaborator records or unsupported division-of-labor detail.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## ai-evals-course-completion - AI evaluation professional development
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Public certificate artifact
+**Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain through Maven.
+**Detailed public-safe wording:** A public certificate records James Burkart's course completion and identifies the course, instructors, and Maven platform.
+**Where to project:** Source-Backed Team Memory lab page.
+**Why it matters:** Grounds the lab's evaluation practice in relevant completed professional development.
+**Guardrail:** Course completion is not an evaluator license, instructor affiliation, employment, or endorsement.
+**Do not say:** Jamie is certified as an AI evaluator; Jamie teaches the course; the instructors endorse Jamie's method.
+**Protected boundaries:** Private course materials, cohort records, and correspondence remain outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## technical-operations-operating-backbone - Operating backbone
 

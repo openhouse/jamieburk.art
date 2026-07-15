@@ -96,3 +96,15 @@ See
 for the official sequence from CCED Board recommendation through Council
 acceptance, negotiation authority, and appropriation, followed by
 non-disbursement, withdrawal, and return of the full unused amount.
+
+See
+[projects/archive-production-2026-07-14.md](projects/archive-production-2026-07-14.md)
+for the public-safe production record from the Jamie Projects History, CRS,
+and job-hunt working archives, including held claims, protected support, open
+inquiries, and current projection decisions.
+
+See
+[projects/google-drive-production-2026-07-14.md](projects/google-drive-production-2026-07-14.md)
+for the public-safe Shared Drive review, two protected workflow claims promoted
+to the 196 Artists Residency / Sunday Dinner case study, and four media or
+meeting-record leads held for permission and corroboration.
