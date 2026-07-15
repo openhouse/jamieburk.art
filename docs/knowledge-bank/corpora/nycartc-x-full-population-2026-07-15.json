@@ -3,7 +3,7 @@
   "account": "@NYCArtC",
   "capturedAt": "2026-07-15T08:42:42.047Z",
   "capturedThrough": "Authenticated replies-inclusive profile traversal, an overlapping sub-viewport verification pass, and monthly authored-search partitions from January 2017 through the profile timeline cutoff",
-  "rawCaptureSha256": "38d26dbfdb4e5b4a5ed85e69c77349a11646d006f055c60d908c3a9ff56ceb18",
+  "rawCaptureSha256": "f5cbc38158ee188aeb274967ad86204e50319ca2de57a92fefb000b7044cc10a",
   "rawCaptureArtifact": "source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json",
   "derivationManifest": "nycartc-x-full-population-2026-07-15.manifest.json",
   "derivationScript": "scripts/derive-nycartc-x-corpus.mjs",
@@ -13,7 +13,7 @@
     "authored": 696,
     "reposted": 2671,
     "unrecoveredCountDifference": 1757,
-    "supplementalPublicContexts": 35,
+    "supplementalPublicContexts": 19,
     "range": [
       "2017-02-03T20:03:00.000Z",
       "2026-05-18T17:40:13.000Z"
@@ -75,7 +75,7 @@
     "The profile reported 5,124 posts. The pass recovered 3,367 distinct account items and preserves the 1,757-item difference explicitly.",
     "The profile timeline stopped at December 13, 2019 after 3,031 account items. Monthly historical searches recovered 336 additional authored posts but did not expose older native reposts.",
     "The unrecovered difference is not described as deleted content, and no content or account-item type is inferred for it.",
-    "Thirty-five public conversation records are preserved as context and excluded from the 5,124-post denominator.",
+    "19 context-only public conversation records are preserved outside the 5,124-post denominator; 16 duplicate rendered views of account items were removed.",
     "Authored posts and reposts are separate. Repost engagement belongs to the original post and is not treated as NYC Artist Coalition traction.",
     "Visible interaction labels are dated observations and may omit deleted, hidden, private, or platform-suppressed activity.",
     "Outbound mentions and reposts of officials are communication and source-circulation evidence, not incoming stakeholder engagement or policy causation.",
@@ -7326,44 +7326,6 @@
       }
     },
     {
-      "statusId": "1225883140931162117",
-      "canonicalUrl": "https://x.com/usb_nyc/status/1225883140931162117",
-      "publishedAt": "2020-02-07T20:44:51.000Z",
-      "kind": "context",
-      "sourceHandle": "usb_nyc",
-      "visibleText": "United for Small Business NYC\n@usb_nyc\n·\nFeb 7, 2020\nWe’ve built community power & passed concrete legislation to hold bad LLs accountable to protect NY’s beloved cultural & commercial spaces. 2020 is the year we will pass commercial rent stabilization! #NoSmallBizNoNYC #FairRentNYC\n2\n2\n4",
-      "textSha256": "eb4b0427d8d829ffdf7236b750881d8f93a836175c6b1b84920775da0e5a1937",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#nosmallbiznonyc",
-        "#fairrentnyc"
-      ],
-      "mentions": [
-        "@usb_nyc"
-      ],
-      "visibleHashtags": [
-        "#nosmallbiznonyc",
-        "#fairrentnyc"
-      ],
-      "visibleMentions": [
-        "@usb_nyc"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 2,
-        "altText": [
-          "Image"
-        ]
-      }
-    },
-    {
       "statusId": "1226855338382626818",
       "canonicalUrl": "https://x.com/THECITYNY/status/1226855338382626818",
       "publishedAt": "2020-02-10T13:08:01.000Z",
@@ -7757,92 +7719,6 @@
       }
     },
     {
-      "statusId": "1241744675209428994",
-      "canonicalUrl": "https://x.com/RLEspinal/status/1241744675209428994",
-      "publishedAt": "2020-03-22T15:12:55.000Z",
-      "kind": "context",
-      "sourceHandle": "RLEspinal",
-      "visibleText": "Rafael Espinal\n@RLEspinal\n·\nMar 22, 2020\nUPDATE: \n@SenSchumer\n’s office reached out to \n@freelancersu\n. He’s pushing for a package that increases and expands U.I. to cover #freelancers and #gigworkers. We need to keep the pressure & ensure everyone is properly covered.\nCoronavirus stimulus package to include expanded unemployment insurance\nFrom thehill.com\n6\n71\n113",
-      "textSha256": "6b2ca313cc55d4cadab5e026c1ed940122e5b972eb6e7ef5a82fabb00e8e48d4",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#freelancers",
-        "#gigworkers"
-      ],
-      "mentions": [
-        "@rlespinal",
-        "@senschumer",
-        "@freelancersu"
-      ],
-      "visibleHashtags": [
-        "#freelancers",
-        "#gigworkers"
-      ],
-      "visibleMentions": [
-        "@rlespinal",
-        "@senschumer",
-        "@freelancersu"
-      ],
-      "outgoingLinks": [
-        {
-          "shortUrl": "https://t.co/IqsblFU2pW",
-          "displayedText": [
-            "Coronavirus stimulus package to include expanded unemployment insurance",
-            "From thehill.com"
-          ],
-          "resolvedDestination": "https://thehill.com/homenews/senate/488826-coronavirus-stimulus-package-to-include-expanded-unemployment-insurance"
-        }
-      ],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 1,
-        "altText": []
-      }
-    },
-    {
-      "statusId": "1241798232868630530",
-      "canonicalUrl": "https://x.com/bradhoylman/status/1241798232868630530",
-      "publishedAt": "2020-03-22T18:45:44.000Z",
-      "kind": "context",
-      "sourceHandle": "bradhoylman",
-      "visibleText": "Brad Hoylman-Sigal \n@bradhoylman\n·\nMar 22, 2020\nMore New Yorkers than ever before in modern history are about to lose their jobs.\n\nLet's get real. We have to #CancelRent.\n9\n96\n375",
-      "textSha256": "afd05f3970a5d7e92a43e52376ac21f9c727a72f69550cbf238f61ba48149ca1",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#cancelrent"
-      ],
-      "mentions": [
-        "@bradhoylman"
-      ],
-      "visibleHashtags": [
-        "#cancelrent"
-      ],
-      "visibleMentions": [
-        "@bradhoylman"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 2,
-        "altText": [
-          "🌈",
-          "🥯"
-        ]
-      }
-    },
-    {
       "statusId": "1250114942134636544",
       "canonicalUrl": "https://x.com/malegazegraves/status/1250114942134636544",
       "publishedAt": "2020-04-14T17:33:22.000Z",
@@ -7858,242 +7734,6 @@
       "visibleHashtags": [],
       "visibleMentions": [
         "@malegazegraves"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 0,
-        "altText": []
-      }
-    },
-    {
-      "statusId": "1271180262064480259",
-      "canonicalUrl": "https://x.com/Bobby4Brooklyn/status/1271180262064480259",
-      "publishedAt": "2020-06-11T20:39:26.000Z",
-      "kind": "context",
-      "sourceHandle": "Bobby4Brooklyn",
-      "visibleText": "Assemblymember Robert Carroll\n@Bobby4Brooklyn\n·\nJun 11, 2020\nChump change! We need insurance companies to pay out Business Interruption claims! Maybe if \n@NYCMayor\n and @NYCFirstLady got behind that idea we could save most of the 26,000 bars and restaurants that face bankruptcy.\nQuote\nGloria Pazmino\n@GloriaPazmino\n·\nJun 11, 2020\nThe @NYCMayor and @NYCFirstLady announce a new program to help the city's small restaurants: The “Restaurant revitalization program” is a $3 Million dollar investment aimed at saving 100 restaurants. It will bring back 1,000 displaced restaurant workers, provide $3K grants.\n2\n4\n21",
-      "textSha256": "3606536ba5fcb626c49b6dee144dac766298e21d8d814c4c3de358cecad94e1c",
-      "publicTextOmitted": false,
-      "hashtags": [],
-      "mentions": [
-        "@bobby4brooklyn",
-        "@nycmayor",
-        "@nycfirstlady",
-        "@gloriapazmino"
-      ],
-      "visibleHashtags": [],
-      "visibleMentions": [
-        "@bobby4brooklyn",
-        "@nycmayor",
-        "@nycfirstlady",
-        "@gloriapazmino",
-        "@nycmayor",
-        "@nycfirstlady"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 0,
-        "altText": []
-      }
-    },
-    {
-      "statusId": "1280362466300637186",
-      "canonicalUrl": "https://x.com/olympiakazi/status/1280362466300637186",
-      "publishedAt": "2020-07-07T04:46:14.000Z",
-      "kind": "context",
-      "sourceHandle": "olympiakazi",
-      "visibleText": "Olympia Kazi\n@olympiakazi\n·\nJul 7, 2020\nT.Y. \n@THECITYNY\n for writing about one more way corporate America hurts those who serve & make our communities--our small businesses. How much more do small biz need to suffer for \n@NYGovCuomo\n to do the right thing? Pass bill A10226B & #CancelRent \n@NYCArtC\n \n@usb_nyc\n \n@ArtistStudioAP\nQuote\nThe City Reporter\n@THECITYNY\n·\nJul 6, 2020\nSome NYC businesses paid hundreds of thousands of dollars a year for business interruption insurance. But now that they need it due to the coronavirus crisis, insurers refuse to pay. \nhttps://\nbuff.ly/31LJJX4\n1\n6\n14",
-      "textSha256": "fc21e734e3e09077364058c23b651bb7fdf665c48541708abbcb98bf3cc867a2",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#cancelrent"
-      ],
-      "mentions": [
-        "@olympiakazi",
-        "@thecityny",
-        "@nygovcuomo",
-        "@nycartc",
-        "@usb_nyc",
-        "@artiststudioap"
-      ],
-      "visibleHashtags": [
-        "#cancelrent"
-      ],
-      "visibleMentions": [
-        "@olympiakazi",
-        "@thecityny",
-        "@nygovcuomo",
-        "@nycartc",
-        "@usb_nyc",
-        "@artiststudioap",
-        "@thecityny"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 0,
-        "altText": []
-      }
-    },
-    {
-      "statusId": "1297554610840678400",
-      "canonicalUrl": "https://x.com/wondervillenyc/status/1297554610840678400",
-      "publishedAt": "2020-08-23T15:21:41.000Z",
-      "kind": "context",
-      "sourceHandle": "wondervillenyc",
-      "visibleText": "Wonderville \n@wondervillenyc\n·\nAug 23, 2020\nLast night was by far the best sales we’ve had since March. We’re so thankful for everyone that came out and jammed w DJ Mojo. However it was still less than 50% of what a pre-COVID Saturday night would make. Bars and restaurants in NYC are facing unprecedented hardships...\n1/\n3\n6\n16",
-      "textSha256": "1a17d8b0022a258d5ae65f84633524ad7018bfbf2dd69f9ee4e63f75ea6f8d9f",
-      "publicTextOmitted": false,
-      "hashtags": [],
-      "mentions": [
-        "@wondervillenyc"
-      ],
-      "visibleHashtags": [],
-      "visibleMentions": [
-        "@wondervillenyc"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 2,
-        "altText": [
-          "🕹",
-          "Image"
-        ]
-      }
-    },
-    {
-      "statusId": "1297559457019420676",
-      "canonicalUrl": "https://x.com/wondervillenyc/status/1297559457019420676",
-      "publishedAt": "2020-08-23T15:40:56.000Z",
-      "kind": "context",
-      "sourceHandle": "wondervillenyc",
-      "visibleText": "Wonderville \n@wondervillenyc\n·\nAug 23, 2020\nThere are great organizations that are pushing our local and state officials for help like \n@NYCArtC\n \n@NYCNightlifeUtd\n and \n@nivassoc\n - if you are looking to get involved with them please DM us and we can connect you!\n5/\n2\n3\n8",
-      "textSha256": "35d9da4ae4c305f37124c4678cbc93e90465bd390aa855bbdd89e76deadc01f4",
-      "publicTextOmitted": false,
-      "hashtags": [],
-      "mentions": [
-        "@wondervillenyc",
-        "@nycartc",
-        "@nycnightlifeutd",
-        "@nivassoc"
-      ],
-      "visibleHashtags": [],
-      "visibleMentions": [
-        "@wondervillenyc",
-        "@nycartc",
-        "@nycnightlifeutd",
-        "@nivassoc"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 1,
-        "altText": [
-          "🕹"
-        ]
-      }
-    },
-    {
-      "statusId": "1439250182370115589",
-      "canonicalUrl": "https://x.com/usb_nyc/status/1439250182370115589",
-      "publishedAt": "2021-09-18T15:29:18.000Z",
-      "kind": "context",
-      "sourceHandle": "usb_nyc",
-      "visibleText": "United for Small Business NYC\n@usb_nyc\n·\nSep 18, 2021\nYesterday's #FairRentNYC hearing on Commercial Rent Stabilization was packed with small biz, nonprofits & orgs from all boroughs fighting for a chance to survive & for an equitable NYC\n\nHow many more rallies/hearings before action is taken? #NoSmallBizNoNYC #SaveSmallBizNYC\nQuote\nChhaya CDC\n@ChhayaCDC\n·\nJan 10, 2020\nWe need to preserve NYC landmarks, they're an integral part of our City, bringing a sense of identity & community to our neighborhoods! \n@BobHoldenNYC, we need your support for commercial rent stabilization! #SaveNYC #fairrentnyc #nosmallbiznonyc\nCome out: \nhttps://\nfacebook.com/events/8246364\n81335600/?active_tab=about\n…\n1\n8\n14",
-      "textSha256": "8c6c2d115bbe0b59b71d5aad98204eb7a54b1b9ae59baa96f0438700b67ec824",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#fairrentnyc",
-        "#nosmallbiznonyc",
-        "#savesmallbiznyc",
-        "#savenyc"
-      ],
-      "mentions": [
-        "@usb_nyc",
-        "@chhayacdc",
-        "@bobholdennyc"
-      ],
-      "visibleHashtags": [
-        "#fairrentnyc",
-        "#nosmallbiznonyc",
-        "#savesmallbiznyc",
-        "#savenyc",
-        "#fairrentnyc",
-        "#nosmallbiznonyc"
-      ],
-      "visibleMentions": [
-        "@usb_nyc",
-        "@chhayacdc",
-        "@bobholdennyc"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 1,
-        "altText": [
-          "Image"
-        ]
-      }
-    },
-    {
-      "statusId": "1461352782527561737",
-      "canonicalUrl": "https://x.com/lizkimtweets/status/1461352782527561737",
-      "publishedAt": "2021-11-18T15:17:08.000Z",
-      "kind": "context",
-      "sourceHandle": "lizkimtweets",
-      "visibleText": "Elizabeth Kim\n@lizkimtweets\n·\nNov 18, 2021\nOn \n@BrianLehrer\n, listeners responding to a complaint \n@ericadamsfornyc\n made on The Colbert Show. Is New York City really boring?\n2\n1\n4",
-      "textSha256": "5cb291bd51f12e3f8893fc4a53df22936b6ffd2bc56cf26837d6068dcc50515c",
-      "publicTextOmitted": false,
-      "hashtags": [],
-      "mentions": [
-        "@lizkimtweets",
-        "@brianlehrer",
-        "@ericadamsfornyc"
-      ],
-      "visibleHashtags": [],
-      "visibleMentions": [
-        "@lizkimtweets",
-        "@brianlehrer",
-        "@ericadamsfornyc"
       ],
       "outgoingLinks": [],
       "visibleInteractions": {
@@ -8142,235 +7782,6 @@
         "altText": [
           "👏",
           "📣"
-        ]
-      }
-    },
-    {
-      "statusId": "1501924266538852353",
-      "canonicalUrl": "https://x.com/djtara/status/1501924266538852353",
-      "publishedAt": "2022-03-10T14:13:44.000Z",
-      "kind": "context",
-      "sourceHandle": "djtara",
-      "visibleText": "jericho turnpike bandit\n@djtara\n·\nMar 10, 2022\nThere’s real elected official support on this! Reach out to your state reps and ask them to support! Musicians have lost so much income during the pandemic.\nQuote\nOlympia Kazi\n@olympiakazi\n·\nMar 10, 2022\nThe lack of a safety-net for arts' workers is tragically evident w Covid-19 \nhttps://\ntinyurl.com/2vnnea7f\n\nLeaders like @marcribotmusic are making a difference!\n\nBIG T.Y. to my reps @bradhoylman @HarveyforNY for asking relief for @MusicWorkers who fell through the cracks w 're-opening'\n1\n7\n9",
-      "textSha256": "cb09d35574cf8673e0a2281fa2f973f32a56cd9a956401a75d352bbfc191ae2b",
-      "publicTextOmitted": false,
-      "hashtags": [],
-      "mentions": [
-        "@djtara",
-        "@olympiakazi",
-        "@marcribotmusic",
-        "@bradhoylman",
-        "@harveyforny",
-        "@musicworkers"
-      ],
-      "visibleHashtags": [],
-      "visibleMentions": [
-        "@djtara",
-        "@olympiakazi",
-        "@marcribotmusic",
-        "@bradhoylman",
-        "@harveyforny",
-        "@musicworkers"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 0,
-        "altText": []
-      }
-    },
-    {
-      "statusId": "1507079643635007489",
-      "canonicalUrl": "https://x.com/DianaAyalaNYC/status/1507079643635007489",
-      "publishedAt": "2022-03-24T19:39:21.000Z",
-      "kind": "context",
-      "sourceHandle": "DianaAyalaNYC",
-      "visibleText": "Diana Ayala\n@DianaAyalaNYC\n·\nMar 24, 2022\nToday, council members \n@CarlinaRivera\n @crystalrhudson \n@tiffany_caban\n and I introduced legislation to amend the administrative code of the city of New York, in relation to the regulation of commercial rent. Our small businesses need help now! #intro93\n3\n13\n27",
-      "textSha256": "80d5104302bcddcfb71fa2c6e7c764e8643a91117acf35d78b49fc687c6c1346",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#intro93"
-      ],
-      "mentions": [
-        "@dianaayalanyc",
-        "@carlinarivera",
-        "@crystalrhudson",
-        "@tiffany_caban"
-      ],
-      "visibleHashtags": [
-        "#intro93"
-      ],
-      "visibleMentions": [
-        "@dianaayalanyc",
-        "@carlinarivera",
-        "@crystalrhudson",
-        "@tiffany_caban"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 1,
-        "altText": [
-          "Image"
-        ]
-      }
-    },
-    {
-      "statusId": "1509649228062146560",
-      "canonicalUrl": "https://x.com/MusicWorkers/status/1509649228062146560",
-      "publishedAt": "2022-03-31T21:49:58.000Z",
-      "kind": "context",
-      "sourceHandle": "MusicWorkers",
-      "visibleText": "Music Workers Alliance\n@MusicWorkers\n·\nMar 31, 2022\nWe're down to the wire \n@GovKathyHochul\n MusicWorkers cannot financially sustain the disruption of our gigs & tours. You need to follow the lead of the Legislature & include pandemic touring relief in this year’s budget \n@bradhoylman\n \n@SenGianaris\n \n@jessicaramos\n \n@HarveyforNY\n \n@StirpeAl\nQuote\nMusic Workers Alliance\n@MusicWorkers\n·\nMar 28, 2022\nWe're counting on @GovKathyHochul & @CarlHeastie  to follow the lead of the NYS Senate about this critical issue of pandemic music touring.\n\nT.Y. @AndreaSCousins @SenGianaris @bradhoylman @jessicaramos for adding music workers' access to relief grants in the One-House Budget Bill x.com/billboard/stat…\n2\n21\n24",
-      "textSha256": "23588bc22f7f689bfc343e328e9393cb75015a22c829f49c18c0adb2baf212e8",
-      "publicTextOmitted": false,
-      "hashtags": [],
-      "mentions": [
-        "@musicworkers",
-        "@govkathyhochul",
-        "@bradhoylman",
-        "@sengianaris",
-        "@jessicaramos",
-        "@harveyforny",
-        "@stirpeal",
-        "@carlheastie",
-        "@andreascousins"
-      ],
-      "visibleHashtags": [],
-      "visibleMentions": [
-        "@musicworkers",
-        "@govkathyhochul",
-        "@bradhoylman",
-        "@sengianaris",
-        "@jessicaramos",
-        "@harveyforny",
-        "@stirpeal",
-        "@musicworkers",
-        "@govkathyhochul",
-        "@carlheastie",
-        "@andreascousins",
-        "@sengianaris",
-        "@bradhoylman",
-        "@jessicaramos"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 0,
-        "altText": []
-      }
-    },
-    {
-      "statusId": "1534905562139344897",
-      "canonicalUrl": "https://x.com/olympiakazi/status/1534905562139344897",
-      "publishedAt": "2022-06-09T14:29:37.000Z",
-      "kind": "context",
-      "sourceHandle": "olympiakazi",
-      "visibleText": "Olympia Kazi\n@olympiakazi\n·\nJun 9, 2022\nThis morning I'm at an important \n@NYCCouncil\n   Commercial Vacancy Oversight Hearing\n\nhttps://\ncouncil.nyc.gov/livestream/\nT.Y. Chair \n@JulieMenin\n for hosting \nGreat to see fellow \n@usb_nyc\n community orgs fighting for smallbiz & #FairRentNYC \n@indietheaternyc\n \n@VendorPower\n \n@TakerootNYC\n \n@NYCArtC\n1\n5\n7",
-      "textSha256": "d9352a44f72ec217b85595dffc3d978409fcf8a4d08017affe9b3a1e64403578",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#fairrentnyc"
-      ],
-      "mentions": [
-        "@olympiakazi",
-        "@nyccouncil",
-        "@juliemenin",
-        "@usb_nyc",
-        "@indietheaternyc",
-        "@vendorpower",
-        "@takerootnyc",
-        "@nycartc"
-      ],
-      "visibleHashtags": [
-        "#fairrentnyc"
-      ],
-      "visibleMentions": [
-        "@olympiakazi",
-        "@nyccouncil",
-        "@juliemenin",
-        "@usb_nyc",
-        "@indietheaternyc",
-        "@vendorpower",
-        "@takerootnyc",
-        "@nycartc"
-      ],
-      "outgoingLinks": [
-        {
-          "shortUrl": "https://t.co/1SUftmDApy",
-          "displayedText": [
-            "https:// council.nyc.gov/livestream/"
-          ],
-          "resolvedDestination": "https://council.nyc.gov/livestream/"
-        }
-      ],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 0,
-        "altText": []
-      }
-    },
-    {
-      "statusId": "1534941398935519233",
-      "canonicalUrl": "https://x.com/olympiakazi/status/1534941398935519233",
-      "publishedAt": "2022-06-09T16:52:01.000Z",
-      "kind": "context",
-      "sourceHandle": "olympiakazi",
-      "visibleText": "Olympia Kazi\n@olympiakazi\n·\nJun 9, 2022\nLastly re: Legacy Business Registry it's obviously good intentioned but written in a VERY problematic way that weaponizes predatory landlords! I shared the \n@pearlriver_mart\n story that clearly demonstrates how 10yrs lease is no protection of 'legacy' at all\nQuote\nJoanne Kwong\n@jojokwong\n·\nJan 9, 2022\nThank you @usb_nyc for all the work you do to support small businesses like @pearlriver_mart  Moving each time is draining...those who keep at it like my in-laws are driven by a higher purpose b/c it is almost impossible now for small businesses to thrive in NYC  x.com/usb_nyc/status…\n1\n2\n4",
-      "textSha256": "8a8bd0da5ec9904bea366ceb446ae63080f73d7f8bd970440dcd82f68dacd53c",
-      "publicTextOmitted": false,
-      "hashtags": [],
-      "mentions": [
-        "@olympiakazi",
-        "@pearlriver_mart",
-        "@jojokwong",
-        "@usb_nyc"
-      ],
-      "visibleHashtags": [],
-      "visibleMentions": [
-        "@olympiakazi",
-        "@pearlriver_mart",
-        "@jojokwong",
-        "@usb_nyc",
-        "@pearlriver_mart"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 2,
-        "altText": [
-          "❤",
-          "😔"
         ]
       }
     },
@@ -8447,102 +7858,6 @@
       "media": {
         "count": 0,
         "altText": []
-      }
-    },
-    {
-      "statusId": "1655624554641862683",
-      "canonicalUrl": "https://x.com/wqclt/status/1655624554641862683",
-      "publishedAt": "2023-05-08T17:23:48.000Z",
-      "kind": "context",
-      "sourceHandle": "wqclt",
-      "visibleText": "Western Queens Community Land Trust\n@wqclt\n·\nMay 8, 2023\nBlack & immigrant-owned small biz displaced by high rent. WQCLT, \n@EastNewYorkCLT\n, @northwestbronx & \n@SouthBronxUnite\n are working on CLTs that could offer deep affordability, but we also need COMMERCIAL RENT REGULATION now! Pass #intro93. \n@NYCProgressives\n \nhttps://\nlegistar.council.nyc.gov/LegislationDet\nail.aspx?ID=5534186&GUID=0FA34310-33D2-4090-9A39-2396910C9EB5\n…\nQuote\nStefanos Chen\n@stefanoschen\n·\nMay 8, 2023\nSmall businesses, esp immigrant and POC stores in the outerboros, helped keep NYC alive throughout the pandemic. Now they're facing some of the biggest rent increases in the city, with little to no protection from eviction. A on what's changed \nhttps://\nnytimes.com/2023/05/08/nyr\negion/small-businesses-rent-hikes-nyc.html\n…\n1\n1\n1\n143",
-      "textSha256": "d0db09328fc772a1d31657dad93696a12d7a19aab271710045b9bb36fa92ec07",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#intro93"
-      ],
-      "mentions": [
-        "@wqclt",
-        "@eastnewyorkclt",
-        "@northwestbronx",
-        "@southbronxunite",
-        "@nycprogressives",
-        "@stefanoschen"
-      ],
-      "visibleHashtags": [
-        "#intro93"
-      ],
-      "visibleMentions": [
-        "@wqclt",
-        "@eastnewyorkclt",
-        "@northwestbronx",
-        "@southbronxunite",
-        "@nycprogressives",
-        "@stefanoschen"
-      ],
-      "outgoingLinks": [
-        {
-          "shortUrl": "https://t.co/YUZpb6b2Wm",
-          "displayedText": [
-            "https:// legistar.council.nyc.gov/LegislationDet ail.aspx?ID=5534186&GUID=0FA34310-33D2-4090-9A39-2396910C9EB5 …"
-          ],
-          "resolvedDestination": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=5534186&GUID=0FA34310-33D2-4090-9A39-2396910C9EB5"
-        }
-      ],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 1,
-        "altText": [
-          "🧵"
-        ]
-      }
-    },
-    {
-      "statusId": "1668997910975897603",
-      "canonicalUrl": "https://x.com/Loycent/status/1668997910975897603",
-      "publishedAt": "2023-06-14T15:04:45.000Z",
-      "kind": "context",
-      "sourceHandle": "Loycent",
-      "visibleText": "Loycent\n@Loycent\n·\nJun 14, 2023\nRent is the largest fix expense in a small restaurant. \n\nWe have SOME control how many staff we can hire, how much products we can afford, etc. \n\nBut ZERO control over rent. Often when a Lease expires, a community restaurant expires. \nStabilize rent you stabilize communities!\nQuote\nNYC Artist Coalition\n@NYCArtC\n·\nJun 12, 2023\nJoin Small Businesses & nonprofits fighting against exorbitant rent hikes #FairRentNYC\n\nWHEN: Wednesday June 14th - 12:30pm \nWHERE: Diversity Plaza Queens\n\nLet's say @NYCCouncil that it's time to Hear/ Strengthen & PASS Commercial Rent Stabilization #Intro93\n1\n6\n10\n4.6K",
-      "textSha256": "d3c224ec91009e653ea8e4c196f605f2d1c9aeb1e51842d47412da2665e238a4",
-      "publicTextOmitted": false,
-      "hashtags": [
-        "#fairrentnyc",
-        "#intro93"
-      ],
-      "mentions": [
-        "@loycent",
-        "@nycartc",
-        "@nyccouncil"
-      ],
-      "visibleHashtags": [
-        "#fairrentnyc",
-        "#intro93"
-      ],
-      "visibleMentions": [
-        "@loycent",
-        "@nycartc",
-        "@nyccouncil"
-      ],
-      "outgoingLinks": [],
-      "visibleInteractions": {
-        "replies": 0,
-        "reposts": 0,
-        "likes": 0,
-        "bookmarks": 0
-      },
-      "visibleInteractionLabel": null,
-      "media": {
-        "count": 1,
-        "altText": [
-          "Image"
-        ]
       }
     }
   ],
@@ -9156,7 +8471,7 @@
           "displayedText": [
             "https:// surveymonkey.com/r/VWVGXKW"
           ],
-          "resolvedDestination": "https://www.surveymonkey.com/survey-closed/?sm=oQ_2BxVjFRVlwtJ2wmmWcFxAszuz_2FhDEB_2B9Qqi_2F29A90AQuu7RIAPRs2kMuLGwvVfe_2Bl9ugm9NCzbwJTQpG9BIsptiZrBtcwKyhWG3umJTAAUQnwB7_2FobJlez2yfNLP48RcTY7OD_2BfNNd2PEGYtTGnwg_3D_3D"
+          "resolvedDestination": "https://www.surveymonkey.com/survey-closed/"
         }
       ],
       "visibleInteractions": {
@@ -14905,7 +14220,7 @@
           "displayedText": [
             "https:// nyti.ms/2iJWhK1"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html?smid=tw-share"
+          "resolvedDestination": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html"
         },
         {
           "shortUrl": "https://t.co/iEoKHdPTFB",
@@ -15145,7 +14460,7 @@
           "displayedText": [
             "http:// wapo.st/2zUanLZ?tid=ss _tw&utm_term=[tracking value redacted] …"
           ],
-          "resolvedDestination": "http://www.washingtonpost.com/news/morning-mix/wp/2017/10/31/nyc-bids-good-riddance-to-law-that-stifled-ray-charles-and-infuriated-frank-sinatra/?tid=ss_tw"
+          "resolvedDestination": "http://www.washingtonpost.com/news/morning-mix/wp/2017/10/31/nyc-bids-good-riddance-to-law-that-stifled-ray-charles-and-infuriated-frank-sinatra/"
         }
       ],
       "visibleInteractions": {
@@ -15942,7 +15257,7 @@
           "displayedText": [
             "https:// nyti.ms/2iJWhK1"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html?smid=tw-share"
+          "resolvedDestination": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html"
         }
       ],
       "visibleInteractions": {
@@ -16016,7 +15331,7 @@
           "displayedText": [
             "https:// youtu.be/0v5u23YSMqo"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo"
         }
       ],
       "visibleInteractions": {
@@ -16064,7 +15379,7 @@
           "displayedText": [
             "https:// youtu.be/0v5u23YSMqo"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo"
         }
       ],
       "visibleInteractions": {
@@ -16235,7 +15550,7 @@
           "displayedText": [
             "https:// youtu.be/0v5u23YSMqo"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo"
         }
       ],
       "visibleInteractions": {
@@ -16324,7 +15639,7 @@
           "displayedText": [
             "https:// youtu.be/0v5u23YSMqo"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo"
         }
       ],
       "visibleInteractions": {
@@ -16411,7 +15726,7 @@
           "displayedText": [
             "https:// youtu.be/0v5u23YSMqo"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo"
         }
       ],
       "visibleInteractions": {
@@ -16460,7 +15775,7 @@
           "displayedText": [
             "https:// youtu.be/0v5u23YSMqo"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=0v5u23YSMqo"
         }
       ],
       "visibleInteractions": {
@@ -22230,7 +21545,7 @@
           "displayedText": [
             "https:// facebook.com/events/2689687 20387261/?ti=ia …"
           ],
-          "resolvedDestination": "https://www.facebook.com/events/268968720387261/?ti=ia"
+          "resolvedDestination": "https://www.facebook.com/events/268968720387261/"
         }
       ],
       "visibleInteractions": {
@@ -24955,7 +24270,7 @@
           "displayedText": [
             "https:// facebook.com/events/8246364 81335600/?active_tab=about …"
           ],
-          "resolvedDestination": "https://www.facebook.com/events/824636481335600/?active_tab=about"
+          "resolvedDestination": "https://www.facebook.com/events/824636481335600/"
         }
       ],
       "visibleInteractions": {
@@ -25985,7 +25300,7 @@
           "displayedText": [
             "http:// bit.ly/mela-committee"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLSd5v9jgvssQJ89j6M1gSkOY4g_EDa_HYFHQnxhXu_Cx4jeApA/viewform?usp=sf_link"
+          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLSd5v9jgvssQJ89j6M1gSkOY4g_EDa_HYFHQnxhXu_Cx4jeApA/viewform"
         }
       ],
       "visibleInteractions": {
@@ -27091,7 +26406,7 @@
           "displayedText": [
             "https:// youtube.com/watch?v=XQw-95 azq18&feature=youtu.be&t=2307 …"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=XQw-95azq18&feature=youtu.be&t=2307"
+          "resolvedDestination": "https://www.youtube.com/watch?v=XQw-95azq18&t=2307"
         }
       ],
       "visibleInteractions": {
@@ -27149,7 +26464,7 @@
           "displayedText": [
             "https:// youtube.com/watch?v=XQw-95 azq18&feature=youtu.be&t=2307 …"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=XQw-95azq18&feature=youtu.be&t=2307"
+          "resolvedDestination": "https://www.youtube.com/watch?v=XQw-95azq18&t=2307"
         }
       ],
       "visibleInteractions": {
@@ -30011,7 +29326,7 @@
           "displayedText": [
             "https:// youtu.be/E6A5YcaO29I"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=E6A5YcaO29I&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=E6A5YcaO29I"
         },
         {
           "shortUrl": "https://t.co/OwN4wt7X6o",
@@ -31645,7 +30960,7 @@
           "displayedText": [
             "https:// youtu.be/JaVjQUIb8DE"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=JaVjQUIb8DE&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=JaVjQUIb8DE"
         }
       ],
       "visibleInteractions": {
@@ -32119,7 +31434,7 @@
           "displayedText": [
             "https:// youtu.be/V7z_R93kBhI"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI"
         }
       ],
       "visibleInteractions": {
@@ -32935,7 +32250,7 @@
           "displayedText": [
             "http:// bit.ly/covidnycbiz"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit"
         }
       ],
       "visibleInteractions": {
@@ -33311,7 +32626,7 @@
           "displayedText": [
             "http:// bit.ly/NYCDJCOVID19"
           ],
-          "resolvedDestination": "https://docs.google.com/spreadsheets/d/1940vGlONPkSznMxYgrZ-Xo3HPA1HkX5_iQeHDukia7A/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/spreadsheets/d/1940vGlONPkSznMxYgrZ-Xo3HPA1HkX5_iQeHDukia7A/edit"
         }
       ],
       "visibleInteractions": {
@@ -33573,7 +32888,7 @@
           "displayedText": [
             "https:// dccouncil.us11.list-manage.com/track/click?u= 920f4e1d24b721bbabee020e2&id=5e79162b5e&e=39bdb87edd …"
           ],
-          "resolvedDestination": "https://dccouncil.us11.list-manage.com/track/click?u=920f4e1d24b721bbabee020e2&id=5e79162b5e&e=39bdb87edd"
+          "resolvedDestination": "https://dccouncil.us11.list-manage.com/track/click"
         }
       ],
       "visibleInteractions": {
@@ -33819,7 +33134,7 @@
           "displayedText": [
             "https:// nytimes.com/2020/03/25/us/ politics/whats-in-coronavirus-stimulus-bill.html?0p19G=2870 …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2020/03/25/us/politics/whats-in-coronavirus-stimulus-bill.html?0p19G=2870"
+          "resolvedDestination": "https://www.nytimes.com/2020/03/25/us/politics/whats-in-coronavirus-stimulus-bill.html"
         }
       ],
       "visibleInteractions": {
@@ -34113,7 +33428,7 @@
           "displayedText": [
             "https:// nytimes.com/2020/03/25/us/ politics/whats-in-coronavirus-stimulus-bill.html?0p19G=2870 …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2020/03/25/us/politics/whats-in-coronavirus-stimulus-bill.html?0p19G=2870"
+          "resolvedDestination": "https://www.nytimes.com/2020/03/25/us/politics/whats-in-coronavirus-stimulus-bill.html"
         }
       ],
       "visibleInteractions": {
@@ -35330,7 +34645,7 @@
           "displayedText": [
             "https:// youtu.be/WLFzLs6HLu8"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8"
         },
         {
           "shortUrl": "https://t.co/OwN4wt7X6o",
@@ -35598,7 +34913,7 @@
           "displayedText": [
             "https:// youtu.be/WLFzLs6HLu8"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8"
         },
         {
           "shortUrl": "https://t.co/OwN4wtpxXW",
@@ -35892,7 +35207,7 @@
           "displayedText": [
             "https:// youtu.be/WLFzLs6HLu8"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8"
         },
         {
           "shortUrl": "https://t.co/OwN4wtpxXW",
@@ -36415,7 +35730,7 @@
           "displayedText": [
             "http:// bit.ly/covidnycbiz"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit"
         }
       ],
       "visibleInteractions": {
@@ -36558,7 +35873,7 @@
           "displayedText": [
             "http:// bit.ly/covidnycbiz"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit"
         }
       ],
       "visibleInteractions": {
@@ -36608,7 +35923,7 @@
           "displayedText": [
             "http:// youtu.be/WLFzLs6HLu8"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8"
         },
         {
           "shortUrl": "https://t.co/WFZBCozUVa",
@@ -36836,7 +36151,7 @@
           "displayedText": [
             "http:// youtu.be/WLFzLs6HLu8"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8"
         },
         {
           "shortUrl": "https://t.co/WFZBCoRwjK",
@@ -37048,7 +36363,7 @@
           "displayedText": [
             "http:// bit.ly/covidnycbiz"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit"
         }
       ],
       "visibleInteractions": {
@@ -37356,7 +36671,7 @@
           "displayedText": [
             "https:// youtube.com/watch?v=VR_r6C RINNs&feature=youtu.be …"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=VR_r6CRINNs&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=VR_r6CRINNs"
         }
       ],
       "visibleInteractions": {
@@ -37685,7 +37000,7 @@
           "displayedText": [
             "https:// youtube.com/watch?v=WLFzLs 6HLu8&feature=youtu.be …"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=WLFzLs6HLu8"
         }
       ],
       "visibleInteractions": {
@@ -38749,7 +38064,7 @@
           "displayedText": [
             "https:// youtu.be/V7z_R93kBhI"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI"
         }
       ],
       "visibleInteractions": {
@@ -39655,7 +38970,7 @@
           "displayedText": [
             "https:// youtu.be/V7z_R93kBhI"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI"
         }
       ],
       "visibleInteractions": {
@@ -40050,7 +39365,7 @@
           "displayedText": [
             "http:// bit.ly/covidnycbiz"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1eU2ei51gHxa-AtxGrTCV9HrFMmujR1HHq8T-2MIFOrk/edit"
         }
       ],
       "visibleInteractions": {
@@ -40277,7 +39592,7 @@
           "displayedText": [
             "https:// youtu.be/V7z_R93kBhI"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=V7z_R93kBhI"
         }
       ],
       "visibleInteractions": {
@@ -42160,7 +41475,7 @@
           "displayedText": [
             "https:// youtube.com/watch?v=5T-uzq speg8&feature=share&fbclid=[tracking value redacted] …"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=5T-uzqspeg8&feature=share"
+          "resolvedDestination": "https://www.youtube.com/watch?v=5T-uzqspeg8"
         }
       ],
       "visibleInteractions": {
@@ -43773,7 +43088,7 @@
           "displayedText": [
             "https:// npr.org/2020/04/21/838 864421/bipartisan-deal-reached-on-484-billion-more-coronavirus-aid?utm_source=[tracking value redacted]&utm_medium=[tracking value redacted]&utm_content=[tracking value redacted]&utm_term=[tracking value redacted]&utm_campaign=[tracking value redacted]&utm_id=[tracking value redacted]&orgid=554 …"
           ],
-          "resolvedDestination": "https://www.npr.org/2020/04/21/838864421/bipartisan-deal-reached-on-484-billion-more-coronavirus-aid?orgid=554"
+          "resolvedDestination": "https://www.npr.org/2020/04/21/838864421/bipartisan-deal-reached-on-484-billion-more-coronavirus-aid"
         }
       ],
       "visibleInteractions": {
@@ -48133,7 +47448,7 @@
           "displayedText": [
             "nytimes.com ‘Absolute Chaos’ in Minneapolis as Protests Grow Across U.S. (Published 2020) Minnesota’s governor said the police and National Guard had been overwhelmed by protests, which raged even after a former police officer was charged with murdering George Floyd."
           ],
-          "resolvedDestination": "https://www.nytimes.com/2020/05/29/us/george-floyd-minneapolis-protests.html?smtyp=cur&smid=tw-nytimes"
+          "resolvedDestination": "https://www.nytimes.com/2020/05/29/us/george-floyd-minneapolis-protests.html"
         }
       ],
       "visibleInteractions": {
@@ -51094,7 +50409,7 @@
           "displayedText": [
             "https:// docs.google.com/spreadsheets/u /4/d/1OIUBp4kFxmpWJihhq6WLwJQR1Am4DsD59bEYlJZxeGY/htmlview?usp=sharing&pru=AAABcqRQFJU*bRqSxO62y3r2jK-_cx7KQw …"
           ],
-          "resolvedDestination": "https://docs.google.com/spreadsheets/u/4/d/1OIUBp4kFxmpWJihhq6WLwJQR1Am4DsD59bEYlJZxeGY/htmlview?usp=sharing&pru=AAABcqRQFJU*bRqSxO62y3r2jK-_cx7KQw"
+          "resolvedDestination": "https://docs.google.com/spreadsheets/u/4/d/1OIUBp4kFxmpWJihhq6WLwJQR1Am4DsD59bEYlJZxeGY/htmlview"
         }
       ],
       "visibleInteractions": {
@@ -53974,7 +53289,7 @@
           "displayedText": [
             "https:// facebook.com/watch/live/?v= 312850843047237&ref=watch_permalink …"
           ],
-          "resolvedDestination": "https://www.facebook.com/watch/live/?v=312850843047237&ref=watch_permalink"
+          "resolvedDestination": "https://www.facebook.com/watch/live/"
         }
       ],
       "visibleInteractions": {
@@ -54122,7 +53437,7 @@
           "displayedText": [
             "https:// facebook.com/watch/live/?v= 312850843047237&ref=watch_permalink …"
           ],
-          "resolvedDestination": "https://www.facebook.com/watch/live/?v=312850843047237&ref=watch_permalink"
+          "resolvedDestination": "https://www.facebook.com/watch/live/"
         }
       ],
       "visibleInteractions": {
@@ -56334,7 +55649,7 @@
           "displayedText": [
             "https:// facebook.com/events/6110103 09796581/?active_tab=about …"
           ],
-          "resolvedDestination": "https://www.facebook.com/events/611010309796581/?active_tab=about"
+          "resolvedDestination": "https://www.facebook.com/events/611010309796581/"
         }
       ],
       "visibleInteractions": {
@@ -56715,7 +56030,7 @@
           "displayedText": [
             "https:// nytimes.com/2020/07/23/opi nion/coronavirus-small-business-bankrupt.html?action=click&module=Opinion&pgtype=Homepage …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2020/07/23/opinion/coronavirus-small-business-bankrupt.html?action=click&module=Opinion&pgtype=Homepage"
+          "resolvedDestination": "https://www.nytimes.com/2020/07/23/opinion/coronavirus-small-business-bankrupt.html"
         }
       ],
       "visibleInteractions": {
@@ -57070,7 +56385,7 @@
           "displayedText": [
             "https:// nyti.ms/3hG37t2"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2020/07/27/nyregion/coronavirus-small-business-nyc.html?nl=todaysheadlines"
+          "resolvedDestination": "https://www.nytimes.com/2020/07/27/nyregion/coronavirus-small-business-nyc.html"
         }
       ],
       "visibleInteractions": {
@@ -57871,7 +57186,7 @@
           "displayedText": [
             "https:// tfaforms.com/4842203?eType= EmailBlastContent&eId=23bdc41b-575b-4fc0-9503-91c4772a0367 …"
           ],
-          "resolvedDestination": "https://www.tfaforms.com/4842203?eType=EmailBlastContent&eId=23bdc41b-575b-4fc0-9503-91c4772a0367"
+          "resolvedDestination": "https://www.tfaforms.com/4842203"
         }
       ],
       "visibleInteractions": {
@@ -58275,7 +57590,7 @@
           "displayedText": [
             "https:// bit.ly/3ivmqpF"
           ],
-          "resolvedDestination": "https://www.tfaforms.com/4842203?eType=EmailBlastContent&eId=23bdc41b-575b-4fc0-9503-91c4772a0367"
+          "resolvedDestination": "https://www.tfaforms.com/4842203"
         }
       ],
       "visibleInteractions": {
@@ -60163,7 +59478,7 @@
           "displayedText": [
             "https:// facebook.com/watch/live/?v= 302616887676604&ref=notif&notif_id=1597959222112163&notif_t=live_video …"
           ],
-          "resolvedDestination": "https://www.facebook.com/watch/live/?v=302616887676604&ref=notif"
+          "resolvedDestination": "https://www.facebook.com/watch/live/"
         },
         {
           "shortUrl": "https://t.co/RFc8S2Skpt",
@@ -61433,7 +60748,7 @@
           "displayedText": [
             "https:// google.com/amp/s/www.wash ingtonpost.com/business/2020/08/27/expired-unemployment-benefits-congress/%3foutputType=amp …"
           ],
-          "resolvedDestination": "https://www.google.com/url?q=https://www.washingtonpost.com/business/2020/08/27/expired-unemployment-benefits-congress/?outputType%3Damp"
+          "resolvedDestination": "https://www.google.com/url?q=https%3A%2F%2Fwww.washingtonpost.com%2Fbusiness%2F2020%2F08%2F27%2Fexpired-unemployment-benefits-congress%2F"
         }
       ],
       "visibleInteractions": {
@@ -63084,7 +62399,7 @@
           "displayedText": [
             "https:// docs.google.com/document/d/1zW q3XhzQM6JCs1Cm3B_M2wM04V7G8BKArnmE7SuiDXU/edit?usp=sharing …"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1zWq3XhzQM6JCs1Cm3B_M2wM04V7G8BKArnmE7SuiDXU/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1zWq3XhzQM6JCs1Cm3B_M2wM04V7G8BKArnmE7SuiDXU/edit"
         }
       ],
       "visibleInteractions": {
@@ -63605,7 +62920,7 @@
           "displayedText": [
             "http:// tinyurl.com/mwa-march"
           ],
-          "resolvedDestination": "https://actionnetwork.org/events/8118e451ba36cc5cc8e40f95cf3f2bf97ee29309/?hash=89f7779053af13cebb93a0243a73ca6e"
+          "resolvedDestination": "https://actionnetwork.org/events/8118e451ba36cc5cc8e40f95cf3f2bf97ee29309/"
         }
       ],
       "visibleInteractions": {
@@ -63784,7 +63099,7 @@
           "displayedText": [
             "http:// tinyurl.com/mwa-march"
           ],
-          "resolvedDestination": "https://actionnetwork.org/events/8118e451ba36cc5cc8e40f95cf3f2bf97ee29309/?hash=89f7779053af13cebb93a0243a73ca6e"
+          "resolvedDestination": "https://actionnetwork.org/events/8118e451ba36cc5cc8e40f95cf3f2bf97ee29309/"
         }
       ],
       "visibleInteractions": {
@@ -64488,7 +63803,7 @@
         {
           "shortUrl": "https://t.co/QZBNBYFyJL",
           "displayedText": [
-            "… https://roc kland-pride-center.networkforgood.com/events/24933-l esbian-bar-project-roundtable-event …"
+            "… https://roc/ kland-pride-center.networkforgood.com/events/24933-l esbian-bar-project-roundtable-event …"
           ],
           "resolvedDestination": "https://rockland-pride-center.networkforgood.com/events/24933-lesbian-bar-project-roundtable-event"
         }
@@ -64529,7 +63844,7 @@
           "displayedText": [
             "https:// bit.ly/usbnycsos"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1xDW1Vpdzyj7IeGGFPxFOMB2e5xfZyO1j-7Cq7sdZjaA/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1xDW1Vpdzyj7IeGGFPxFOMB2e5xfZyO1j-7Cq7sdZjaA/edit"
         }
       ],
       "visibleInteractions": {
@@ -66015,7 +65330,7 @@
           "displayedText": [
             "http:// ow.ly/kL2250D5W03"
           ],
-          "resolvedDestination": "https://www.eventbrite.com/e/shuttered-venue-operators-grant-webinar-registration-136050549857?aff=oddtdtcreator"
+          "resolvedDestination": "https://www.eventbrite.com/e/shuttered-venue-operators-grant-webinar-registration-136050549857"
         }
       ],
       "visibleInteractions": {
@@ -73760,7 +73075,7 @@
           "displayedText": [
             "https:// ny1noticias.com/nyc/noticias/n oticias/2021/09/20/tripa-mishqui-sabor-andino-del-ecuador-en-la-roosevelt-ave?cid=undefined_NY1noticias …"
           ],
-          "resolvedDestination": "https://spectrumnoticias.com/ny/nyc/noticias/2021/09/20/tripa-mishqui-sabor-andino-del-ecuador-en-la-roosevelt-ave?cid=undefined_NY1noticias"
+          "resolvedDestination": "https://spectrumnoticias.com/ny/nyc/noticias/2021/09/20/tripa-mishqui-sabor-andino-del-ecuador-en-la-roosevelt-ave"
         }
       ],
       "visibleInteractions": {
@@ -74149,7 +73464,7 @@
           "displayedText": [
             "http:// bit.ly/chinatownart"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/1JcsyPZ4pO37S-yfUE6ruCn9UVbC4wnIvhH52IzSH3uA/viewform?edit_requested=true"
+          "resolvedDestination": "https://docs.google.com/forms/d/1JcsyPZ4pO37S-yfUE6ruCn9UVbC4wnIvhH52IzSH3uA/viewform"
         }
       ],
       "visibleInteractions": {
@@ -78143,7 +77458,7 @@
           "displayedText": [
             "https:// google.com/amp/s/www.nyti mes.com/2021/10/27/us/politics/paid-family-leave-manchin.amp.html …"
           ],
-          "resolvedDestination": "https://www.google.com/url?q=https://www.nytimes.com/2021/10/27/us/politics/paid-family-leave-manchin.amp.html"
+          "resolvedDestination": "https://www.google.com/url?q=https%3A%2F%2Fwww.nytimes.com%2F2021%2F10%2F27%2Fus%2Fpolitics%2Fpaid-family-leave-manchin.amp.html"
         }
       ],
       "visibleInteractions": {
@@ -79531,7 +78846,7 @@
           "displayedText": [
             "https:// bit.ly/3HufdDq"
           ],
-          "resolvedDestination": "https://x.com/usb_nyc/status/1459253117325881352?s=20"
+          "resolvedDestination": "https://x.com/usb_nyc/status/1459253117325881352"
         }
       ],
       "visibleInteractions": {
@@ -82244,7 +81559,7 @@
           "displayedText": [
             "https:// ny1noticias.com/nyc/noticias/n oticias/2021/12/11/casa-adela-adios-al-ultimo-enclave-boricua-del-loisaida?cid=share_twitter# …"
           ],
-          "resolvedDestination": "https://spectrumnoticias.com/ny/nyc/noticias/2021/12/11/casa-adela-adios-al-ultimo-enclave-boricua-del-loisaida?cid=share_twitter"
+          "resolvedDestination": "https://spectrumnoticias.com/ny/nyc/noticias/2021/12/11/casa-adela-adios-al-ultimo-enclave-boricua-del-loisaida"
         }
       ],
       "visibleInteractions": {
@@ -82907,7 +82222,7 @@
           "displayedText": [
             "https:// theshed.org/program/229-op en-call-2023-applications …"
           ],
-          "resolvedDestination": "https://theshed.queue-it.net/softblock/?c=theshed&e=shedsafetynet&t=https%3A%2F%2Fwww.theshed.org%2Fprogram%2F229-open-call-2023-applications&rticr=2"
+          "resolvedDestination": "https://theshed.queue-it.net/softblock/"
         }
       ],
       "visibleInteractions": {
@@ -84707,7 +84022,7 @@
           "displayedText": [
             "https:// bit.ly/HouseHearingTo olkit …"
           ],
-          "resolvedDestination": "https://drive.google.com/file/d/1Scg_QFfHDRffuMoZ3DDb5wjrCHWP9qQH/view?usp=sharing"
+          "resolvedDestination": "https://drive.google.com/file/d/1Scg_QFfHDRffuMoZ3DDb5wjrCHWP9qQH/view"
         }
       ],
       "visibleInteractions": {
@@ -84850,7 +84165,7 @@
           "displayedText": [
             "https:// bit.ly/MWA2022LostWag es …"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform?usp=send_form"
+          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform"
         }
       ],
       "visibleInteractions": {
@@ -85841,7 +85156,7 @@
           "displayedText": [
             "https:// wnyc.org/story/free-n95 -masks-are-arriving-at-pharmacies-and-grocery-stores-heres-how-to-get-yours/?j=67125&sfl=29_HTML&u=2333579&mid=526001388&jb=18004&sf …"
           ],
-          "resolvedDestination": "https://wnyc.org/story/free-n95-masks-are-arriving-at-pharmacies-and-grocery-stores-heres-how-to-get-yours/?j=67125&sfl=29_HTML&u=2333579&mid=526001388&jb=18004&sf"
+          "resolvedDestination": "https://wnyc.org/story/free-n95-masks-are-arriving-at-pharmacies-and-grocery-stores-heres-how-to-get-yours/"
         }
       ],
       "visibleInteractions": {
@@ -87232,7 +86547,7 @@
           "displayedText": [
             "https:// fb.me/e/1d0IY2CoA"
           ],
-          "resolvedDestination": "https://www.facebook.com/events/492597285792505/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22%5B%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A264162292514620%7D%7D%5D%22%7D"
+          "resolvedDestination": "https://www.facebook.com/events/492597285792505/"
         }
       ],
       "visibleInteractions": {
@@ -87270,7 +86585,7 @@
           "displayedText": [
             "http:// tinyurl.com/MWADues"
           ],
-          "resolvedDestination": "https://actionnetwork.org/fundraising/a4282ca78ded668f643e494a82c403c236bb663e/?hash=06007be5b47c413d8e9eb57ae3a5e022"
+          "resolvedDestination": "https://actionnetwork.org/fundraising/a4282ca78ded668f643e494a82c403c236bb663e/"
         }
       ],
       "visibleInteractions": {
@@ -88473,7 +87788,7 @@
           "displayedText": [
             "https:// bit.ly/MWA2022LostWag es …"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform?usp=send_form"
+          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform"
         }
       ],
       "visibleInteractions": {
@@ -88869,7 +88184,7 @@
           "displayedText": [
             "https:// surveymonkey.com/r/avebsurvey"
           ],
-          "resolvedDestination": "https://www.surveymonkey.com/survey-closed/?sm=h6PmT7kSfe_2BpUaRjzyXegJ2d5bnpMBSCdvFbCLHqL9AMv5hYkgoeEOpX1iYmgdfe5lEt_2BzTHndRiOTcuxgLr_2FVrPDt1OAr6IfN4LFeAW_2B3kQAUfOugHWsqWRwbP4nPcDBIENb0zT1UY7YADKHptVJw_3D_3D"
+          "resolvedDestination": "https://www.surveymonkey.com/survey-closed/"
         }
       ],
       "visibleInteractions": {
@@ -89023,7 +88338,7 @@
             "https:// forms.gle/oxp5dYKSUh95Am TM9 …",
             "docs.google.com Open Call for Musician’s Testimonials on Streaming Rates Music Workers Alliance (MWA) is an organization of working class musicians, DJs, and sound engineers. MWA's Streaming Justice campaign is collecting testimonials from music workers who have at least..."
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLSfT7nYjKlI_yggd91o8p2qhhBU3QTzk8CmDqUdRT5MlAN8F5A/viewform?usp=send_form"
+          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLSfT7nYjKlI_yggd91o8p2qhhBU3QTzk8CmDqUdRT5MlAN8F5A/viewform"
         },
         {
           "shortUrl": "https://t.co/rd4nKvBdsv",
@@ -89187,7 +88502,7 @@
           "displayedText": [
             "https:// bit.ly/MWA2022LostWag es …"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform?usp=send_form"
+          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform"
         }
       ],
       "visibleInteractions": {
@@ -89556,7 +88871,7 @@
           "displayedText": [
             "http:// tinyurl.com/MWADues"
           ],
-          "resolvedDestination": "https://actionnetwork.org/fundraising/a4282ca78ded668f643e494a82c403c236bb663e/?hash=06007be5b47c413d8e9eb57ae3a5e022"
+          "resolvedDestination": "https://actionnetwork.org/fundraising/a4282ca78ded668f643e494a82c403c236bb663e/"
         }
       ],
       "visibleInteractions": {
@@ -90062,7 +89377,7 @@
           "displayedText": [
             "https:// tinyurl.com/MWA-lost-wages"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/u/1/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform?usp=send_form"
+          "resolvedDestination": "https://docs.google.com/forms/u/1/d/e/1FAIpQLScbfcc5ktsMQDvPjlev1vdOMtheu-9GWovwzQ4RKxWBrQoFGg/viewform"
         }
       ],
       "visibleInteractions": {
@@ -91131,7 +90446,7 @@
           "displayedText": [
             "docs.google.com Music Workers 2021 Lost Wages Survey Thank you for taking the MWA 2021 Lost Wages Survey! If you have any questions regarding this survey feel free to reach out to us at [public email redacted]"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/1OajiIM2-g0-dPqI6sdQl0BVcKBNqLkMOH7wzJiDSz0o/viewform?ts=61f0b64e&edit_requested=true"
+          "resolvedDestination": "https://docs.google.com/forms/d/1OajiIM2-g0-dPqI6sdQl0BVcKBNqLkMOH7wzJiDSz0o/viewform"
         }
       ],
       "visibleInteractions": {
@@ -91495,7 +90810,7 @@
           "displayedText": [
             "https:// docs.google.com/forms/d/1OajiI M2-g0-dPqI6sdQl0BVcKBNqLkMOH7wzJiDSz0o/edit?ts=61f0b64e …"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/1OajiIM2-g0-dPqI6sdQl0BVcKBNqLkMOH7wzJiDSz0o/viewform?ts=61f0b64e&edit_requested=true"
+          "resolvedDestination": "https://docs.google.com/forms/d/1OajiIM2-g0-dPqI6sdQl0BVcKBNqLkMOH7wzJiDSz0o/viewform"
         },
         {
           "shortUrl": "https://t.co/LJiQbDCc7H",
@@ -92492,7 +91807,7 @@
           "displayedText": [
             "https:// nytimes.com/2022/03/11/nyr egion/rusty-mae-moore-dead.html?smid=tw-share …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2022/03/11/nyregion/rusty-mae-moore-dead.html?smid=tw-share"
+          "resolvedDestination": "https://www.nytimes.com/2022/03/11/nyregion/rusty-mae-moore-dead.html"
         }
       ],
       "visibleInteractions": {
@@ -97523,7 +96838,7 @@
           "displayedText": [
             "https:// facebook.com/events/3637800 72342443/?ref=newsfeed …"
           ],
-          "resolvedDestination": "https://www.facebook.com/events/363780072342443/?ref=newsfeed"
+          "resolvedDestination": "https://www.facebook.com/events/363780072342443/"
         }
       ],
       "visibleInteractions": {
@@ -103138,7 +102453,7 @@
             "Opinion | Taylor Swift’s Live Nation Debacle Is Just the Beginning (Published 2022)",
             "From nytimes.com"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2022/12/10/opinion/taylor-swift-live-nation-clyde-lawrence.html?smid=nytcore-ios-share"
+          "resolvedDestination": "https://www.nytimes.com/2022/12/10/opinion/taylor-swift-live-nation-clyde-lawrence.html"
         }
       ],
       "visibleInteractions": {
@@ -104369,7 +103684,7 @@
           "displayedText": [
             "https:// nytimes.com/2023/01/11/nyr egion/library-funding-cuts-eric-adams.html?smid=nytcore-ios-share&referringSource=articleShare …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/01/11/nyregion/library-funding-cuts-eric-adams.html?smid=nytcore-ios-share"
+          "resolvedDestination": "https://www.nytimes.com/2023/01/11/nyregion/library-funding-cuts-eric-adams.html"
         }
       ],
       "visibleInteractions": {
@@ -105586,7 +104901,7 @@
           "displayedText": [
             "https:// theguardian.com/music/2023/jan /30/tom-verlaine-a-guitar-antihero-whose-sensibility-was-more-classical-than-clapton?CMP=twt_a-culture_b-gdnculture …"
           ],
-          "resolvedDestination": "https://www.theguardian.com/music/2023/jan/30/tom-verlaine-a-guitar-antihero-whose-sensibility-was-more-classical-than-clapton?CMP=twt_a-culture_b-gdnculture"
+          "resolvedDestination": "https://www.theguardian.com/music/2023/jan/30/tom-verlaine-a-guitar-antihero-whose-sensibility-was-more-classical-than-clapton"
         }
       ],
       "visibleInteractions": {
@@ -108019,7 +107334,7 @@
           "displayedText": [
             "https:// docs.google.com/document/d/1-c yp7juNwjWgaDeBITdHgug5tQ3XVLpsw3DzlQ1Igys/edit?usp=sharing …"
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1-cyp7juNwjWgaDeBITdHgug5tQ3XVLpsw3DzlQ1Igys/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1-cyp7juNwjWgaDeBITdHgug5tQ3XVLpsw3DzlQ1Igys/edit"
         }
       ],
       "visibleInteractions": {
@@ -108272,7 +107587,7 @@
           "displayedText": [
             "https:// proxy.link.app/198886819888/f orms.gle/A3shUXPPd7a7E9869 …"
           ],
-          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLSccB8oD7DHaKW6MzewsI1tOODIz5XJMRPsRoZfbsZaw5YH2AA/viewform?usp=send_form"
+          "resolvedDestination": "https://docs.google.com/forms/d/e/1FAIpQLSccB8oD7DHaKW6MzewsI1tOODIz5XJMRPsRoZfbsZaw5YH2AA/viewform"
         }
       ],
       "visibleInteractions": {
@@ -108989,7 +108304,7 @@
           "displayedText": [
             "http:// bit.ly/sixfootplatfor m2023 …"
           ],
-          "resolvedDestination": "https://www.canva.com/login/?pageLinkPreviewVariant=presentation&redirect=%2Fdesign%2FDAFYm7ewCAM%2FPFtpzcQqYpr0ZvW1iU5qXg%2Fview%3Futm_content%3DDAFYm7ewCAM%26utm_campaign%3Ddesignshare%26utm_medium%3Dlink%26utm_source%3Dpublishsharelink"
+          "resolvedDestination": "https://www.canva.com/login/?redirect=%2Fdesign%2FDAFYm7ewCAM%2FPFtpzcQqYpr0ZvW1iU5qXg%2Fview%3Futm_content%3DDAFYm7ewCAM%26utm_campaign%3Ddesignshare%26utm_medium%3Dlink%26utm_source%3Dpublishsharelink"
         }
       ],
       "visibleInteractions": {
@@ -110043,7 +109358,7 @@
           "displayedText": [
             "docs.google.com DHS & Visa Fees The Dept of Homeland Security is proposing visa fee increases of over 250%! This impacts artists & worker visas - even the temporary ones. Fee increases like this make it harder for international..."
           ],
-          "resolvedDestination": "https://docs.google.com/document/d/1-cyp7juNwjWgaDeBITdHgug5tQ3XVLpsw3DzlQ1Igys/edit?usp=sharing"
+          "resolvedDestination": "https://docs.google.com/document/d/1-cyp7juNwjWgaDeBITdHgug5tQ3XVLpsw3DzlQ1Igys/edit"
         }
       ],
       "visibleInteractions": {
@@ -111018,7 +110333,7 @@
           "displayedText": [
             "https:// blogs.loc.gov/copyright/2023 /03/mechanical-unmatched-historical-what-are-the-differences-between-all-these-royalties/?loclr=eacop …"
           ],
-          "resolvedDestination": "https://blogs.loc.gov/copyright/2023/03/mechanical-unmatched-historical-what-are-the-differences-between-all-these-royalties/?loclr=eacop"
+          "resolvedDestination": "https://blogs.loc.gov/copyright/2023/03/mechanical-unmatched-historical-what-are-the-differences-between-all-these-royalties/"
         }
       ],
       "visibleInteractions": {
@@ -111487,7 +110802,7 @@
           "displayedText": [
             "https:// youtu.be/RLve_cRM4Mc"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?v=RLve_cRM4Mc&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=RLve_cRM4Mc"
         }
       ],
       "visibleInteractions": {
@@ -111884,7 +111199,7 @@
           "displayedText": [
             "https:// nytimes.com/2023/04/25/art s/music/harry-belafonte-dead.html?unlocked_article_code=KeZ2ZWjrtFSDEURoDfU7tVkGUm4Evg1Pb_ZqjAXasWzFWsnq9IRVwgQU2P3jU_zjpMtsvgvud1vBUf3AmfSt9K-ZPf2vEQ0XXswpOqpu_BZtxZPpGVR7WAbbia24q-X3GYPWU0i5ccRlDHkGiYePg0_6dpXmtHKeWNO2MkWU30qdejKluMGejlgQeV2x6vW0lZPnbQoSXuyGbSm5LHMrMgOx9oaF-blER7jTE3bgZ68TNpj5ZVH6XBJJqQxZLlMzdizDTfFO6v9SF0JAwDgkeQfHMpiN89yURPDtRNaWKtdr2G24TytbFNkUJVZu_L0uV9IpeccNtLJxVjxirCLoePyI&giftCopy=3_Independent&smid=url-share …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/04/25/arts/music/harry-belafonte-dead.html?smid=url-share"
+          "resolvedDestination": "https://www.nytimes.com/2023/04/25/arts/music/harry-belafonte-dead.html"
         }
       ],
       "visibleInteractions": {
@@ -112326,7 +111641,7 @@
           "displayedText": [
             "https:// p2a.co/twitterimage?i d=[public contact number redacted].3189qUbyeWdM32.png …"
           ],
-          "resolvedDestination": "https://p2a.co/twitterimage?id=1682432726.3189qUbyeWdM32.png"
+          "resolvedDestination": "https://p2a.co/twitterimage"
         }
       ],
       "visibleInteractions": {
@@ -112789,7 +112104,7 @@
           "displayedText": [
             "https:// nyti.ms/3M2ZW0G"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/05/06/nyregion/connie-converse-nyc.html?smtyp=cur&smid=tw-nytmetro"
+          "resolvedDestination": "https://www.nytimes.com/2023/05/06/nyregion/connie-converse-nyc.html"
         }
       ],
       "visibleInteractions": {
@@ -112992,7 +112307,7 @@
             "They Helped New York Bounce Back. Now Their Rents Are Surging. (Published 2023)",
             "From nytimes.com"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/05/08/nyregion/small-businesses-rent-hikes-nyc.html?smid=tw-share"
+          "resolvedDestination": "https://www.nytimes.com/2023/05/08/nyregion/small-businesses-rent-hikes-nyc.html"
         }
       ],
       "visibleInteractions": {
@@ -113513,7 +112828,7 @@
           "displayedText": [
             "https:// neweconomynyc.ourpowerbase.net/civicrm/petiti on/sign?sid=46&reset=1 …"
           ],
-          "resolvedDestination": "https://neweconomynyc.ourpowerbase.net/civicrm/petition/sign?reset=1"
+          "resolvedDestination": "https://neweconomynyc.ourpowerbase.net/civicrm/petition/sign"
         }
       ],
       "visibleInteractions": {
@@ -114280,7 +113595,7 @@
           "displayedText": [
             "https:// nytimes.com/2023/05/03/nyr egion/mental-health-intensive-mobile-treatment.html?smid=nytcore-ios-share&referringSource=articleShare …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/05/03/nyregion/mental-health-intensive-mobile-treatment.html?smid=nytcore-ios-share"
+          "resolvedDestination": "https://www.nytimes.com/2023/05/03/nyregion/mental-health-intensive-mobile-treatment.html"
         }
       ],
       "visibleInteractions": {
@@ -114755,7 +114070,7 @@
           "displayedText": [
             "https:// bit.ly/3MW1Bpi"
           ],
-          "resolvedDestination": "https://drive.google.com/file/d/15hyu-eW3npk6freTAnXSudF-VfZf-Pkd/view?usp=share_link"
+          "resolvedDestination": "https://drive.google.com/file/d/15hyu-eW3npk6freTAnXSudF-VfZf-Pkd/view"
         }
       ],
       "visibleInteractions": {
@@ -116899,7 +116214,7 @@
           "displayedText": [
             "http:// wgaea.st/Broadway"
           ],
-          "resolvedDestination": "https://airtable.com/appYoY1DUvAZnC0fh/shr86fQEfrBFsQPbB?prefill_fldMDVWJ4ArsCnFOv=recSs7a7PJTP74rpJ"
+          "resolvedDestination": "https://airtable.com/appYoY1DUvAZnC0fh/shr86fQEfrBFsQPbB"
         }
       ],
       "visibleInteractions": {
@@ -120133,7 +119448,7 @@
           "displayedText": [
             "https:// airtable.com/shr86fQEfrBFsQ PbB?prefill_fldMDVWJ4ArsCnFOv=recI3u4FCga06XCVx …"
           ],
-          "resolvedDestination": "https://airtable.com/appYoY1DUvAZnC0fh/shr86fQEfrBFsQPbB?prefill_fldMDVWJ4ArsCnFOv=recI3u4FCga06XCVx"
+          "resolvedDestination": "https://airtable.com/appYoY1DUvAZnC0fh/shr86fQEfrBFsQPbB"
         }
       ],
       "visibleInteractions": {
@@ -120243,7 +119558,7 @@
           "displayedText": [
             "https:// services.austintexas.gov/edims/document .cfm?id=405094 …"
           ],
-          "resolvedDestination": "https://services.austintexas.gov/edims/document.cfm?id=405094"
+          "resolvedDestination": "https://services.austintexas.gov/edims/document.cfm"
         }
       ],
       "visibleInteractions": {
@@ -120588,7 +119903,7 @@
             "Libraries Are for Everyone: Invest in Libraries",
             "From investinlibraries.org"
           ],
-          "resolvedDestination": "https://investinlibraries.org/?1"
+          "resolvedDestination": "https://investinlibraries.org/"
         }
       ],
       "visibleInteractions": {
@@ -122289,7 +121604,7 @@
             "Donate to Please Support the QPS Street Vendor Fund, organized by Daniela Jaramillo Cardona",
             "From gofundme.com"
           ],
-          "resolvedDestination": "https://www.gofundme.com/f/please-support-the-qps-street-vendor-fund?sharetype=teams"
+          "resolvedDestination": "https://www.gofundme.com/f/please-support-the-qps-street-vendor-fund"
         }
       ],
       "visibleInteractions": {
@@ -122325,7 +121640,7 @@
           "displayedText": [
             "https:// youtu.be/AKO6Gf_ARF4?si =KqvyHMaLWyqp_F0q …"
           ],
-          "resolvedDestination": "https://www.youtube.com/watch?si=KqvyHMaLWyqp_F0q&v=AKO6Gf_ARF4&feature=youtu.be"
+          "resolvedDestination": "https://www.youtube.com/watch?v=AKO6Gf_ARF4"
         }
       ],
       "visibleInteractions": {
@@ -128069,7 +127384,7 @@
             "Sign the Petition",
             "From change.org"
           ],
-          "resolvedDestination": "https://www.change.org/p/dcp-mayor-adams-we-support-the-queensboro-people-s-space-in-lic-queens?redirect_reason=deprecated-url"
+          "resolvedDestination": "https://www.change.org/p/dcp-mayor-adams-we-support-the-queensboro-people-s-space-in-lic-queens"
         }
       ],
       "visibleInteractions": {
@@ -130701,7 +130016,7 @@
           "displayedText": [
             "eventbrite.com Get Shameless Workshop #1: Art as a Business| Creatives Thrive NYC Managing your art as a business"
           ],
-          "resolvedDestination": "https://www.eventbrite.com/e/get-shameless-workshop-1-art-as-a-business-creatives-thrive-nyc-tickets-1478471531149?aff=oddtdtcreator"
+          "resolvedDestination": "https://www.eventbrite.com/e/get-shameless-workshop-1-art-as-a-business-creatives-thrive-nyc-tickets-1478471531149"
         }
       ],
       "visibleInteractions": {
@@ -131943,7 +131258,7 @@
           "displayedText": [
             "https:// buff.ly/ZgFXSOW"
           ],
-          "resolvedDestination": "https://www.eventbrite.com/e/future-positive-new-years-eve-bike-ride-and-after-party-tickets-1739878396119?aff=oddtdtcreator"
+          "resolvedDestination": "https://www.eventbrite.com/e/future-positive-new-years-eve-bike-ride-and-after-party-tickets-1739878396119"
         }
       ],
       "visibleInteractions": {
@@ -132159,7 +131474,7 @@
           "displayedText": [
             "https:// eventbrite.com/e/annual-holid ay-market-hand-stamps-zines-jewelry-prints-more-tickets-1978318262177?aff=oddtdtcreator …"
           ],
-          "resolvedDestination": "https://www.eventbrite.com/e/annual-holiday-market-hand-stamps-zines-jewelry-prints-more-tickets-1978318262177?aff=oddtdtcreator"
+          "resolvedDestination": "https://www.eventbrite.com/e/annual-holiday-market-hand-stamps-zines-jewelry-prints-more-tickets-1978318262177"
         }
       ],
       "visibleInteractions": {
@@ -133718,7 +133033,7 @@
           "displayedText": [
             "http:// theshed.org/program/485-op en-call-applications …"
           ],
-          "resolvedDestination": "https://theshed.queue-it.net/softblock/?c=theshed&e=shedsafetynet&t=https%3A%2F%2Fwww.theshed.org%2Fprogram%2F485-open-call-applications&rticr=2"
+          "resolvedDestination": "https://theshed.queue-it.net/softblock/"
         }
       ],
       "visibleInteractions": {
@@ -134558,7 +133873,7 @@
             "Mamdani Appoints New York’s Next Culture Czar (Gift Article)",
             "From nytimes.com"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2026/02/28/arts/design/mamdani-culture-czar-diya-vij.html?smid=nytcore-ios-share"
+          "resolvedDestination": "https://www.nytimes.com/2026/02/28/arts/design/mamdani-culture-czar-diya-vij.html"
         }
       ],
       "visibleInteractions": {

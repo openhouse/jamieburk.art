@@ -25,7 +25,8 @@ the difference as deleted content or infer item type.
 | Recovered authored posts | 696 |
 | Recovered reposts | 2,671 |
 | Explicit recovery gap | 1,757 |
-| Supplemental public contexts, outside denominator | 35 |
+| Context-only public records, outside denominator | 19 |
+| Duplicate rendered context views removed | 16 |
 
 The recovered range is February 3, 2017 through May 18, 2026.
 

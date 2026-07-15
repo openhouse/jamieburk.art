@@ -38,8 +38,9 @@ inspections continued.
 
 The [full population-accounted @NYCArtC pass](../runs/2026-07-15-nycartc-x-full-population.md)
 recovered 3,367 account items against a profile-reported 5,124 and preserved the
-1,757-item difference as an explicit recovery gap. Thirty-five public contexts
-sit outside the account denominator. The recovered account population contains
+1,757-item difference as an explicit recovery gap. Nineteen context-only public
+records sit outside the account denominator after sixteen duplicate rendered
+views of account items were removed. The recovered account population contains
 696 authored posts and 2,671 reposts spanning February 2017 through May 2026.
 
 One shared identity carried four public campaign systems over that period.
@@ -79,6 +80,22 @@ web infrastructure, campaign memory, coordination materials, source maps,
 public-data framing, policy communications, and follow-up systems. The formal
 co-founder title remains held for independent formation-record or collaborator
 corroboration.
+
+## Active Claim Projections
+
+These are the current use-now statements registered for this archive surface:
+
+- Jamie built and stewarded public web and civic-action infrastructure for the
+  collective Talks Not Raids campaign. Intro 1156 became Local Law 220 in 2019;
+  the City later dismantled MARCH in 2023.
+- The public identity remained useful in collaborators' hands: Olympia Kazi and
+  partner organizations used @NYCArtC to coordinate relief advocacy, public
+  events, and professional resources.
+- All 1,235 distinct t.co URLs in the recovered account items resolved; the
+  governed corpus retains their destinations and source boundaries.
+- The authored corpus mentions @NYCCouncil in 109 posts and repeatedly addresses
+  agencies, venues, artists, labor, tenant, vendor, and community groups. These
+  are outbound communication findings, kept separate from incoming engagement.
 
 ## Campaign Press Corpus
 

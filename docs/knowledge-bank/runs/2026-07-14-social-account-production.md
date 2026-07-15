@@ -27,7 +27,7 @@ The browser session displayed Jamie's signed-in `@urbanhermit` identity before r
 | Account | Profile-reported posts | Unique status URLs rendered | Notes |
 | --- | ---: | ---: | --- |
 | @CallNYCapp | 110 | 107 | Later replies-inclusive full-population sweep plus direct-mention search; three-count gap retained |
-| @NYCArtC | 5,124 | 3,367 recovered account items | Later population-accounting pass retains an explicit 1,757-item gap and 35 separate public contexts |
+| @NYCArtC | 5,124 | 3,367 recovered account items | Later population-accounting pass retains an explicit 1,757-item gap and 19 context-only public records after removing 16 duplicate rendered views |
 | @wowlist | 38 | 37 | Historical handle question retained |
 | @KCTownHall | 183 | 181 | Later full population-accounted pass; two-item gap retained and seven conversation contexts separated |
 | @KCSpacesFund | 35 | 34 | Application, recipient, and named highlight posts appraised |

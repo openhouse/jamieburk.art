@@ -23,6 +23,7 @@ import {
 } from "../derive-kctownhall-x-corpus.mjs";
 import {
   buildNycArtCCorpus,
+  sanitizeNycArtCRawCapture,
   sha256,
   validateNycArtCCorpus
 } from "../derive-nycartc-x-corpus.mjs";
@@ -943,6 +944,7 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
     corpusText,
     manifest
   );
+  assert.equal(sanitizeNycArtCRawCapture(rawCaptureText), rawCaptureText);
 
   assert.deepEqual(metrics, {
     profileReported: 5_124,
@@ -950,7 +952,7 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
     authored: 696,
     reposted: 2_671,
     unrecoveredCountDifference: 1_757,
-    supplementalPublicContexts: 35,
+    supplementalPublicContexts: 19,
     allDistinctShortUrlsResolved: 1_235,
     authoredPostsWithOutgoingLinks: 446,
     authoredOutgoingLinkOccurrences: 529,
@@ -984,7 +986,13 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   assert.equal(corpus.population.unrecoveredCountDifference, 1_757);
   assert.equal(corpus.items.length, 3_367);
   assert.equal(new Set(corpus.items.map((item) => item.statusId)).size, 3_367);
-  assert.equal(corpus.supplementalContexts.length, 35);
+  assert.equal(corpus.supplementalContexts.length, 19);
+  assert.equal(raw.captureAudit.renderedPublicContextRecords, 35);
+  assert.equal(raw.captureAudit.duplicateRenderedContextsRemoved, 16);
+  assert.equal(
+    new Set(raw.items.map((item) => item.statusId)).size,
+    raw.items.length
+  );
   assert.equal(corpus.sourceLeads.length, 12);
 
   const accountItems = raw.items.filter((item) => item.kind !== "context");
@@ -1057,6 +1065,41 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
     "https://example.org/action?can_id=private-value";
   assert.throws(() =>
     buildNycArtCCorpus(`${JSON.stringify(rawWithTrackingValue, null, 2)}\n`)
+  );
+  for (const privateField of [
+    "directMessages",
+    "privateMessages",
+    "sessionIdentifier",
+    "accountSettings",
+    "authenticationMaterial",
+    "privateAnalytics",
+    "browserStorage",
+    "accessToken"
+  ]) {
+    const rawWithPrivateField = JSON.parse(rawCaptureText);
+    rawWithPrivateField.items[0].media[privateField] = "must-not-publish";
+    assert.throws(() =>
+      buildNycArtCCorpus(`${JSON.stringify(rawWithPrivateField, null, 2)}\n`)
+    );
+  }
+  const rawWithWrongAuthoredHandle = JSON.parse(rawCaptureText);
+  rawWithWrongAuthoredHandle.items.find(
+    (item) => item.kind === "authored"
+  ).sourceHandle = "SomeoneElse";
+  assert.throws(() =>
+    buildNycArtCCorpus(`${JSON.stringify(rawWithWrongAuthoredHandle, null, 2)}\n`)
+  );
+  const rawWithWrongStatusUrl = JSON.parse(rawCaptureText);
+  rawWithWrongStatusUrl.items[0].statusUrl =
+    "https://x.com/NYCArtC/status/999999999999999999";
+  assert.throws(() =>
+    buildNycArtCCorpus(`${JSON.stringify(rawWithWrongStatusUrl, null, 2)}\n`)
+  );
+  const rawWithStaleTextHash = JSON.parse(rawCaptureText);
+  rawWithStaleTextHash.items.find((item) => item.kind === "authored").text +=
+    " altered";
+  assert.throws(() =>
+    buildNycArtCCorpus(`${JSON.stringify(rawWithStaleTextHash, null, 2)}\n`)
   );
 
   const sharedLayer = knowledgeBank.claims.find(
@@ -1152,6 +1195,21 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
     projectNote,
     /outbound\s+communication, not incoming Council engagement/
   );
+  const normalizedProjectNote = projectNote.replace(/\s+/g, " ");
+  for (const claim of knowledgeBank.claims.filter(
+    (item) => item.project === "nyc-artist-coalition"
+  )) {
+    for (const projection of claim.projections.filter(
+      (item) =>
+        item.status === "active" &&
+        item.surfaces.includes("docs/knowledge-bank/projects/nyc-artist-coalition")
+    )) {
+      assert.ok(
+        normalizedProjectNote.includes(projection.text.replace(/\s+/g, " ")),
+        `${claim.id} archive projection is missing from its declared surface`
+      );
+    }
+  }
   assert.match(runNote, /A posted destination proves source circulation only/);
 });
 

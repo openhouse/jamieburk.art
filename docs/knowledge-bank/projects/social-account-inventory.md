@@ -60,8 +60,8 @@ Public projection: promoted to the CallNYC case study as evidence that the resid
 Profile snapshot: joined January 2017; 5,124 posts reported. A
 [full population-accounted pass](../runs/2026-07-15-nycartc-x-full-population.md)
 recovered 3,367 distinct account items and retained the 1,757-item difference
-explicitly. Thirty-five public conversation records are context outside the
-profile-count denominator.
+explicitly. Nineteen context-only public conversation records remain outside the
+profile-count denominator after sixteen duplicate rendered views were removed.
 
 The account served as an umbrella identity across Let NYC Dance, Save NYC Spaces, Talks Not Raids, and Fair Rent NYC.
 

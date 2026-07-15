@@ -13,46 +13,25 @@ const defaultManifestPath =
 const publicEmailPattern = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
 const publicPhonePattern =
   /(?:\+?1[ .-]+)?(?:\(\d{3}\)[ .-]*|\d{3}[ .-]+)\d{3}[ .-]+\d{4}/g;
-const trackingParameterNames = new Set([
-  "__source",
-  "can_id",
-  "campaign_id",
-  "ceid",
-  "clear_id",
-  "email_referrer",
-  "email_subject",
-  "emc",
-  "emci",
-  "emdi",
-  "fbclid",
-  "gclid",
-  "giftcopy",
-  "igsh",
-  "instance_id",
-  "link_id",
-  "linkid",
-  "mc_cid",
-  "mc_eid",
-  "member",
-  "notif_id",
-  "notif_t",
-  "nypr_member",
-  "oref",
-  "promo_id",
-  "pwd",
-  "recruited_by_id",
-  "recruiter",
-  "referrer",
-  "referringsource",
-  "regi_id",
-  "segment_id",
-  "sid",
-  "source",
-  "sub_id",
-  "unlocked_article_code",
-  "user_id",
-  "userab"
-]);
+const prohibitedFieldFragments = [
+  "accountsettings",
+  "authenticatedsession",
+  "authenticationmaterial",
+  "authenticationsecret",
+  "browserstorage",
+  "cookie",
+  "credential",
+  "directmessage",
+  "followerexport",
+  "localstorage",
+  "password",
+  "privateanalytics",
+  "privatefollower",
+  "privatemessage",
+  "refreshtoken",
+  "sessionidentifier",
+  "sessionstorage"
+];
 
 const campaignMarkers = [
   {
@@ -259,40 +238,111 @@ export function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-function hasSensitiveTrackingParameter(value) {
-  if (!/^https?:\/\//i.test(value)) return false;
+function isProhibitedFieldName(value) {
+  const normalized = value.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return (
+    prohibitedFieldFragments.some((fragment) => normalized.includes(fragment)) ||
+    ["accesstoken", "bearertoken", "secret", "token", "tokens"].includes(
+      normalized
+    )
+  );
+}
+
+function isFunctionalQueryParameter(url, key) {
+  const hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+  const normalized = key.toLowerCase();
+  if (hostname === "legistar.council.nyc.gov") {
+    return ["guid", "id", "options", "search"].includes(normalized);
+  }
+  if (hostname === "youtube.com" || hostname === "youtu.be") {
+    return ["v", "t"].includes(normalized);
+  }
+  if (hostname === "google.com" && url.pathname === "/url") {
+    return normalized === "q";
+  }
+  if (hostname === "forms.office.com") {
+    return ["id", "route"].includes(normalized);
+  }
+  if (hostname === "facebook.com") {
+    return ["id", "story_fbid"].includes(normalized);
+  }
+  if (hostname === "councilnyc.viebit.com") return normalized === "hash";
+  if (hostname === "nyassembly.gov") return normalized === "bn";
+  if (hostname === "portal.311.nyc.gov") return normalized === "kanumber";
+  if (hostname === "artny.memberclicks.net") {
+    return ["option", "view"].includes(normalized);
+  }
+  if (hostname === "calendly.com") return normalized === "month";
+  if (hostname === "congress.gov") return ["r", "s"].includes(normalized);
+  if (hostname === "canva.com") return normalized === "redirect";
+  if (hostname === "a860-gpp.nyc.gov") return normalized === "locale";
+  if (hostname === "humandignitytrust.org") {
+    return ["type_filter[]", "type_filter_submitted"].includes(normalized);
+  }
+  if (hostname === "censushardtocountmaps2020.us") {
+    return [
+      "arp",
+      "baselayerstate",
+      "filterquery",
+      "infotab",
+      "latlng",
+      "promotedfeaturetype",
+      "query",
+      "rtryear",
+      "z"
+    ].includes(normalized);
+  }
+  return false;
+}
+
+function splitTrailingPunctuation(value) {
+  const suffix = value.match(/[),.;!?]+$/)?.[0] ?? "";
+  return [value.slice(0, value.length - suffix.length), suffix];
+}
+
+function sanitizeUrlToken(value) {
+  const [candidate, suffix] = splitTrailingPunctuation(value);
   let url;
   try {
-    url = new URL(value);
+    url = new URL(candidate);
   } catch {
-    return false;
+    return value;
   }
-  return [...url.searchParams.keys()].some((key) => {
-    const normalized = key.toLowerCase();
-    return normalized.startsWith("utm_") || trackingParameterNames.has(normalized);
+  for (const key of [...url.searchParams.keys()]) {
+    if (!isFunctionalQueryParameter(url, key)) {
+      url.searchParams.delete(key);
+      continue;
+    }
+    const nested = url.searchParams.get(key);
+    if (nested && /^https?:\/\//i.test(nested)) {
+      url.searchParams.set(key, sanitizeUrlToken(nested));
+    }
+  }
+  return `${url.toString()}${suffix}`;
+}
+
+function hasUnapprovedQueryParameter(value) {
+  const tokens = value.match(/https?:\/\/[^\s<>"']+/gi) ?? [];
+  return tokens.some((token) => {
+    const [candidate] = splitTrailingPunctuation(token);
+    let url;
+    try {
+      url = new URL(candidate);
+    } catch {
+      return false;
+    }
+    return [...url.searchParams.entries()].some(([key, nested]) => {
+      if (!isFunctionalQueryParameter(url, key)) return true;
+      return /^https?:\/\//i.test(nested) && hasUnapprovedQueryParameter(nested);
+    });
   });
 }
 
 function sanitizePublicString(value) {
-  let sanitized = value
+  return value
     .replace(publicEmailPattern, "[public email redacted]")
-    .replace(publicPhonePattern, "[public contact number redacted]");
-  if (!/^https?:\/\//i.test(sanitized)) return sanitized;
-
-  let url;
-  try {
-    url = new URL(sanitized);
-  } catch {
-    return sanitized;
-  }
-  for (const key of [...url.searchParams.keys()]) {
-    const normalized = key.toLowerCase();
-    if (normalized.startsWith("utm_") || trackingParameterNames.has(normalized)) {
-      url.searchParams.delete(key);
-    }
-  }
-  sanitized = url.toString();
-  return sanitized;
+    .replace(publicPhonePattern, "[public contact number redacted]")
+    .replace(/https?:\/\/[^\s<>"']+/gi, sanitizeUrlToken);
 }
 
 function sanitizePublicValue(value) {
@@ -300,7 +350,9 @@ function sanitizePublicValue(value) {
   if (Array.isArray(value)) return value.map(sanitizePublicValue);
   if (!value || typeof value !== "object") return value;
   return Object.fromEntries(
-    Object.entries(value).map(([key, nested]) => [key, sanitizePublicValue(nested)])
+    Object.entries(value)
+      .filter(([key]) => !isProhibitedFieldName(key))
+      .map(([key, nested]) => [key, sanitizePublicValue(nested)])
   );
 }
 
@@ -309,9 +361,9 @@ function assertPublicSafeValue(value, path = "$") {
     assert.doesNotMatch(value, publicEmailPattern, `${path} retains an email address`);
     assert.doesNotMatch(value, publicPhonePattern, `${path} retains a phone number`);
     assert.equal(
-      hasSensitiveTrackingParameter(value),
+      hasUnapprovedQueryParameter(value),
       false,
-      `${path} retains a tracking or personalization parameter`
+      `${path} retains a nonfunctional query, tracking, or personalization parameter`
     );
     return;
   }
@@ -321,12 +373,46 @@ function assertPublicSafeValue(value, path = "$") {
   }
   if (!value || typeof value !== "object") return;
   for (const [key, nested] of Object.entries(value)) {
+    assert.equal(
+      isProhibitedFieldName(key),
+      false,
+      `${path}.${key} is a prohibited private field`
+    );
     assertPublicSafeValue(nested, `${path}.${key}`);
   }
 }
 
 export function sanitizeNycArtCRawCapture(rawCaptureText) {
   const sanitized = sanitizePublicValue(JSON.parse(rawCaptureText));
+  const accountStatusIds = new Set(
+    sanitized.items
+      .filter((item) => item.kind !== "context")
+      .map((item) => item.statusId)
+  );
+  const renderedContexts = sanitized.items.filter(
+    (item) => item.kind === "context"
+  );
+  sanitized.items = sanitized.items.filter(
+    (item) => item.kind !== "context" || !accountStatusIds.has(item.statusId)
+  );
+  const contextOnlyCount = sanitized.items.filter(
+    (item) => item.kind === "context"
+  ).length;
+  const priorDuplicateContextCount =
+    sanitized.captureAudit.duplicateRenderedContextsRemoved ?? 0;
+  const duplicateContextCount =
+    priorDuplicateContextCount +
+    renderedContexts.length -
+    contextOnlyCount;
+  sanitized.captureAudit.renderedPublicContextRecords ??=
+    renderedContexts.length + priorDuplicateContextCount;
+  sanitized.captureAudit.supplementalPublicContexts = contextOnlyCount;
+  sanitized.captureAudit.duplicateRenderedContextsRemoved = duplicateContextCount;
+  sanitized.boundaries = sanitized.boundaries.map((boundary) =>
+    /public conversation records are preserved as context/.test(boundary)
+      ? `${contextOnlyCount} context-only public conversation records are preserved outside the 5,124-post denominator; ${duplicateContextCount} duplicate rendered views of account items were removed.`
+      : boundary
+  );
   for (const item of sanitized.items) {
     if (typeof item.text === "string") item.textSha256 = sha256(item.text);
   }
@@ -339,6 +425,25 @@ export function buildNycArtCCorpus(rawCaptureText) {
   assertPublicSafeValue(raw);
   assert.equal(raw.account, "@NYCArtC");
   assert.equal(raw.profileReportedPosts, 5_124);
+
+  for (const item of raw.items) {
+    assert.match(item.statusId, /^\d+$/);
+    assert(["authored", "reposted", "context"].includes(item.kind));
+    const statusUrl = new URL(item.statusUrl);
+    const statusPath = statusUrl.pathname.split("/").filter(Boolean);
+    assert.equal(statusPath[1], "status");
+    assert.equal(statusPath[2], item.statusId);
+    assert.equal(
+      statusPath[0].toLowerCase(),
+      item.sourceHandle.replace(/^@/, "").toLowerCase()
+    );
+    if (item.kind === "authored") {
+      assert.equal(item.sourceHandle.replace(/^@/, "").toLowerCase(), "nycartc");
+    }
+    if (typeof item.text === "string") {
+      assert.equal(item.textSha256, sha256(item.text));
+    }
+  }
 
   const resolutionEntries = raw.shortUrlResolutions;
   const resolutionMap = new Map(
@@ -395,6 +500,10 @@ export function buildNycArtCCorpus(rawCaptureText) {
   assert.equal(
     new Set(supplementalContexts.map((item) => item.statusId)).size,
     supplementalContexts.length
+  );
+  assert.equal(
+    new Set(normalized.map((item) => item.statusId)).size,
+    normalized.length
   );
   const authored = items.filter((item) => item.kind === "authored");
   const reposted = items.filter((item) => item.kind === "reposted");
@@ -533,7 +642,7 @@ export function buildNycArtCCorpus(rawCaptureText) {
     authored: 696,
     reposted: 2_671,
     unrecoveredCountDifference: 1_757,
-    supplementalPublicContexts: 35,
+    supplementalPublicContexts: 19,
     allDistinctShortUrlsResolved: 1_235,
     authoredPostsWithOutgoingLinks: 446,
     authoredOutgoingLinkOccurrences: 529,

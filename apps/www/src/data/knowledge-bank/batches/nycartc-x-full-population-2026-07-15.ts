@@ -28,7 +28,7 @@ export const nycArtCXFullPopulationBatch20260715: {
       capturedFrom:
         "Authenticated @NYCArtC timeline traversal and monthly historical authored-search partitions",
       publicSafeSummary:
-        "A governed population accounting for @NYCArtC: 3,367 recovered account items, an explicit 1,757-item gap against the 5,124-post profile count, 35 separate public contexts, resolved account-item links, campaign markers, source leads, stakeholder-communication patterns, and public-safety boundaries.",
+        "A governed population accounting for @NYCArtC: 3,367 recovered account items, an explicit 1,757-item gap against the 5,124-post profile count, 19 context-only public records after cross-partition deduplication, resolved account-item links, campaign markers, source leads, stakeholder-communication patterns, and public-safety boundaries.",
       projects: ["nyc-artist-coalition"],
       status: "integrated",
       disposition: "claim-created",
@@ -53,7 +53,7 @@ export const nycArtCXFullPopulationBatch20260715: {
         "TASK-NAC-X-ACCOUNT-AUTHORSHIP"
       ],
       notes: [
-        "The full reported population is accounted for as 3,367 recovered account items plus an explicit 1,757-item recovery gap. Thirty-five public contexts are outside the account denominator.",
+        "The full reported population is accounted for as 3,367 recovered account items plus an explicit 1,757-item recovery gap. Nineteen context-only public records are outside the account denominator; sixteen duplicate rendered views of account items were removed.",
         "All 1,235 distinct t.co URLs present in recovered account items resolved; four URLs found only in supplemental context remain unresolved and are not included in that count.",
         "Third-party repost text is omitted. Public contact details and tracking values are redacted. No private messages, settings, non-public analytics, authentication material, browser storage, follower exports, or session identifiers were committed.",
         "Visible interaction totals are retained as dated research observations and held from accomplishment messaging."
@@ -79,7 +79,7 @@ export const nycArtCXFullPopulationBatch20260715: {
       publicCitation:
         "Committed item-level corpus from an authenticated @NYCArtC archival-production pass, July 15, 2026.",
       publicNote:
-        "The profile reported 5,124 posts. The corpus preserves 3,367 distinct recovered account items, an explicit 1,757-item recovery gap, 35 separate public contexts, and redirect resolutions for all 1,235 distinct t.co URLs in the recovered account items.",
+        "The profile reported 5,124 posts. The corpus preserves 3,367 distinct recovered account items, an explicit 1,757-item recovery gap, 19 context-only public records after cross-partition deduplication, and redirect resolutions for all 1,235 distinct t.co URLs in the recovered account items.",
       supportsGenerally: [
         "a complete population accounting on the capture date",
         "696 recovered authored posts and 2,671 recovered reposts",
@@ -719,7 +719,7 @@ export const nycArtCXFullPopulationBatch20260715: {
       runAt: "2026-07-15",
       resultStatus: "partially-recovered",
       findings: [
-        "The full reported population is accounted for as 3,367 recovered account items plus an explicit 1,757-item gap against the 5,124-post profile count; 35 public contexts are separate.",
+        "The full reported population is accounted for as 3,367 recovered account items plus an explicit 1,757-item gap against the 5,124-post profile count; 19 context-only public records remain after removing 16 duplicate rendered views of account items.",
         "The recovered account population contains 696 authored posts and 2,671 reposts spanning February 3, 2017-May 18, 2026.",
         "Distinct authored posts carrying campaign markers total 195 for #FairRentNYC, 110 for #SaveNYCSpaces, 78 for #LetNYCDance, and 54 for #TalksNotRaids; categories overlap.",
         "All 1,235 distinct t.co URLs in recovered account items resolved. Four hundred forty-six authored posts contain 529 outgoing-link occurrences representing 287 distinct short URLs.",
