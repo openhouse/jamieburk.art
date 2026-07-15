@@ -81,6 +81,12 @@ const kcTownHallCouncilSourceIds = [
   "SRC-KCMO-CCED-CLAWBACK-240317-2024"
 ];
 
+const nterChngSourceIds = [
+  "SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011",
+  "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011",
+  "SRC-NERMAN-AMERICA-NOW-HERE-2011"
+];
+
 const archivalProductionSourceIds = [
   "SRC-RAFT-SOUNDINGS-2007",
   "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013",
@@ -2255,6 +2261,146 @@ const criteria = [
         /There is no public Facebook archive route, proofs route, knowledge-bank route/i.test(
           report
         )
+      );
+    })()
+  },
+  {
+    id: "nter-chng-source-and-lifecycle-lineage",
+    label: "NTER CHNG has a complete source-reading-promotion lineage with unresolved claims held",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-NTER-CHNG-AMERICA-NOW-HERE-2026"
+      );
+      const promotedPairs = [
+        [
+          "CND-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+          "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION"
+        ],
+        [
+          "CND-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
+          "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+        ],
+        [
+          "CND-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD",
+          "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD"
+        ]
+      ];
+      const heldCandidateIds = [
+        "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP",
+        "CND-NTER-CHNG-ORIGINAL-OPENING-DATE"
+      ];
+      return Boolean(
+        [
+          "INT-2026-07-14-NTER-CHNG-ARCHIVED-SITE",
+          "INT-2026-07-14-NERMAN-AMERICA-NOW-HERE"
+        ].every((id) => intakeItems.some((item) => item.id === id)) &&
+        nterChngSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "recovered" &&
+        promotedPairs.every(([candidateId, claimId]) => {
+          const candidate = candidateById.get(candidateId);
+          return candidate?.status === "promoted" && candidate.promotedClaimId === claimId;
+        }) &&
+        heldCandidateIds.every((candidateId) => {
+          const candidate = candidateById.get(candidateId);
+          return (
+            candidate?.status === "research-needed" &&
+            promotions.some(
+              (promotion) =>
+                promotion.candidateClaimId === candidateId &&
+                promotion.decision === "held"
+            )
+          );
+        })
+      );
+    })()
+  },
+  {
+    id: "nter-chng-collective-credit-and-evidence-boundaries",
+    label: "NTER CHNG preserves direct exhibition evidence, all creator credits, and explicit anti-claims",
+    pass: (() => {
+      const projectClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION"
+      );
+      const exhibitionClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/nter-chng-2026-07-14.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync(
+        "docs/knowledge-bank/anti-claims.md",
+        "utf8"
+      );
+      return Boolean(
+        projectClaim?.internalClaim.includes("Drew Bolton") &&
+        projectClaim.internalClaim.includes("Jamie Burkart") &&
+        projectClaim.internalClaim.includes("Garrett Fuselier") &&
+        projectClaim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011" &&
+            item.relationship === "direct-support"
+        ) &&
+        projectClaim.boundaries.some((item) => /division of .*labor|sole/i.test(item)) &&
+        exhibitionClaim?.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011" &&
+            item.relationship === "direct-support"
+        ) &&
+        /exhibition's own website/i.test(report) &&
+        /unrecovered press release|press release.*not recovered/i.test(report) &&
+        /NTER CHNG/i.test(antiClaims) &&
+        /solely created.*designed.*programmed|independently.*complete/i.test(
+          antiClaims
+        ) &&
+        /opening date|January 2011/i.test(antiClaims)
+      );
+    })()
+  },
+  {
+    id: "nter-chng-chad-editorial-restraint",
+    label: "Chad's lens preserves NTER CHNG as useful depth without adding an unneeded public route",
+    pass: (() => {
+      const brief = editorialBriefs.find(
+        (item) => item.id === "BRIEF-NTER-CHNG-EDITORIAL-2026"
+      );
+      const selectedClaims = [
+        "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011",
+        "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD"
+      ].map((id) => knowledgeBank.claims.find((claim) => claim.id === id));
+      const report = readFileSync(
+        "docs/knowledge-bank/nter-chng-2026-07-14.md",
+        "utf8"
+      );
+      return Boolean(
+        brief?.selectedClaimIds.length === 3 &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP"
+        ) &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-NTER-CHNG-ORIGINAL-OPENING-DATE"
+        ) &&
+        brief.rationale.some((item) => /no immediate website change/i.test(item)) &&
+        selectedClaims.every(
+          (claim) =>
+            claim &&
+            claim.projections.every(
+              (projection) =>
+                projection.key === "archive-note" &&
+                projection.surfaces.every((surface) => !surface.startsWith("/"))
+            )
+        ) &&
+        selectedClaims.every(
+          (claim) => claim && !renderedProjectionSources.includes(claim.id)
+        ) &&
+        /There is no public NTER CHNG route, proofs route, knowledge-bank route/i.test(
+          report
+        ) &&
+        !publicRegistryText.includes("RESEARCH-NTER-CHNG-WAYBACK-2026-001")
       );
     })()
   },

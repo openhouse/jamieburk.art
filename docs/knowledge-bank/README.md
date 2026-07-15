@@ -45,6 +45,12 @@ fragments, source readings, candidate claims, promotion decisions, editorial
 briefs, and photo/archive discovery notes before they reach the canonical claim
 and citation layers.
 
+The [NTER CHNG archival-production report](nter-chng-2026-07-14.md) preserves
+a recovered collaborative interactive-media project and its later inclusion in
+America: Now and Here. The record keeps all three creator credits, separates
+direct exhibition evidence from institutional context, and holds unresolved
+authorship and chronology claims from public use.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

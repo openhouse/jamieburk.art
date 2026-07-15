@@ -232,6 +232,22 @@ corroborates the totals and calculation method.
 Do not reproduce resident-submitted locations, phone numbers, or contact-form
 information from the social or website record.
 
+## NTER CHNG
+
+Do not say Jamie solely created, designed, or programmed NTER CHNG. The
+archived project page gives equal creator credit to Drew Bolton, Jamie Burkart,
+and Garrett Fuselier and does not document the division of labor.
+
+Do not infer that the installation opened in January 2011 from a January 28,
+2011 Wayback capture saying it was "open until Jan. 24th." The original press
+release and an exact opening date were not recovered.
+
+Do not say America: Now and Here commissioned NTER CHNG, made it the central or
+signature work of the exhibition, or produced a documented audience or impact
+total. The official exhibition site establishes inclusion and interaction; the
+Nerman Museum page establishes wider program context but does not name the
+installation.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

@@ -482,3 +482,48 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## nter-chng-collaborative-installation - Collaborative interactive installation
+
+**Status:** Ready in bank / Held from current site
+**Support level:** Strong
+**Evidence class:** Archived public project artifact
+**Public wording:** NTER CHNG was a collaborative interactive texting installation by Drew Bolton, Jamie Burkart, and Garrett Fuselier, presented at the Arts Incubator Cocoon Gallery in Kansas City.
+**Detailed public-safe wording:** The recovered project site names all three creators, describes the work as an interactive texting installation, and locates it at the Arts Incubator Cocoon Gallery.
+**Where to project:** Knowledge bank now; future participatory-systems or creative-technology composition only when it strengthens the audience argument.
+**Why it matters:** Preserves a concrete early example of Jamie working collaboratively across interaction design, public participation, and cultural production.
+**Guardrail:** Always keep all three creator credits. The surviving page does not document the division of labor.
+**Do not say:** Jamie created or programmed the complete installation independently.
+**Protected boundaries:** Private collaborator records, unrecovered project files, and unreviewed installation media remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nter-chng-america-now-and-here - America: Now and Here inclusion
+
+**Status:** Ready in bank / Held from current site
+**Support level:** Strong
+**Evidence class:** Archived official exhibition record / institutional context
+**Public wording:** NTER CHNG was included in the 2011 Kansas City presentation of America: Now and Here, where visitors could text a displayed number and see their messages projected as moving thought clouds on a floor-to-ceiling gauze screen.
+**Detailed public-safe wording:** America: Now and Here's own archived website documents the installation's SMS-to-projection pathway; the Nerman Museum's preserved page independently establishes the wider Kansas City exhibition program.
+**Where to project:** Knowledge bank now; future project chronology or creative-technology context only when useful.
+**Why it matters:** Reconnects the project to an official exhibition record and preserves how the audience interaction worked.
+**Guardrail:** Say "included in" or "presented in," not that NTER CHNG was the central, signature, or commissioned work of the national exhibition.
+**Do not say:** America: Now and Here commissioned NTER CHNG; the work was the exhibition's central installation; the sources establish reach or audience totals.
+**Protected boundaries:** Do not republish participant messages from the archived article as professional proof.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nter-chng-participatory-system-thread - Participatory-systems lineage
+
+**Status:** Inference ready in bank / Held from current site
+**Support level:** Careful
+**Evidence class:** Cross-source interpretation of public project and exhibition records
+**Public wording:** NTER CHNG is an early documented example of Jamie's collaborative participatory-systems practice: it used familiar personal technology to let visitors alter a shared public visual environment in real time.
+**Detailed public-safe wording:** A text message became an input into a shared moving projection, linking Jamie's cultural practice to the longer portfolio throughline of making participation legible and usable.
+**Where to project:** Knowledge bank and participatory-public-systems research note; no current website surface.
+**Why it matters:** Adds a specific, sourced interactive-media example to a throughline otherwise documented through civic, event, and public-space systems.
+**Guardrail:** Label this as a portfolio-level interpretation, not a phrase used by the 2011 creators or exhibition.
+**Do not say:** The installation proves Jamie independently built the technical system or produced measurable civic impact.
+**Protected boundaries:** Unrecovered code, technical specifications, role divisions, and audience data remain unresolved.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14

@@ -35,6 +35,14 @@ knowledge-bank registry. Sources used by a public projection appear in that
 page's redacted citation plan; contextual or unresolved sources remain in the
 bank without being forced onto the site.
 
+The July 14 NTER CHNG pass adds three public records: the archived project
+site, the archived America: Now and Here article "I Text, Therefore I Am," and
+the Nerman Museum's preserved Kansas City exhibition page. The project site
+directly establishes the title, three collaborators, medium, and Cocoon Gallery
+venue. The exhibition's own site directly establishes NTER CHNG's inclusion
+and SMS-to-projection interaction. The museum page supplies program context but
+does not itself name NTER CHNG.
+
 The July 12 portfolio-strengthening batch and follow-ups add fourteen sources
 across four project areas: two official City Council transcripts of Jamie's public testimony, VICE
 and Village Voice reporting on NYC Artist Coalition, a City announcement of the

@@ -16,6 +16,13 @@ together.
 The About page uses this pattern once as professional context. It does not turn
 the projects into formal employment history or claim solo authorship.
 
+NTER CHNG adds an interactive-media example to this lineage. The recovered
+project and exhibition records document a collaborative texting installation
+by Drew Bolton, Jamie Burkart, and Garrett Fuselier: visitors sent a text and
+saw their messages enter a shared moving projection. This is useful evidence of
+participatory-system practice, but the sources do not establish each creator's
+division of labor, the exact original opening date, or audience impact.
+
 ## Hosted-Event Record
 
 A July 2026 authenticated review adds a bounded longitudinal source surface:
@@ -43,6 +50,7 @@ claim under active research rather than a discarded memory or promoted fact.
 - Shared responsibility and documentation inside Open House.
 - Construction, navigation, hosting, and public encounters around the raft.
 - Great Accommodations as an inhabited exhibition and public program.
+- NTER CHNG's gauze projection, audience interaction, and collaborative making.
 - Evidence of participation, facilitation, handoff, and multiple authorship.
 
 Every image still requires identity, rights, consent, and public-display review.
