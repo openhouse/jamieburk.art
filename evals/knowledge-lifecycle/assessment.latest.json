@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "a133dfc773cd4002859093572f86f1f58ddeefa74ff68708842942ae5a5b5728",
+    "fingerprint": "7fff7c32a9108d64cd2ed68ce953985474689398132f0e9363ea11e22ac22a4f",
     "counts": {
-      "entities": 37,
-      "intake": 145,
-      "sources": 268,
-      "sourceReadings": 268,
-      "claims": 118,
-      "researchTasks": 53,
-      "projectionDecisions": 95
+      "entities": 38,
+      "intake": 151,
+      "sources": 274,
+      "sourceReadings": 274,
+      "claims": 121,
+      "researchTasks": 54,
+      "projectionDecisions": 97
     }
   },
   "judge": {
@@ -24,16 +24,20 @@
             "record": "intakeRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "INTAKE-KCTOWNHALL-PHASE-ONE-PROPOSAL-2019"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "INTAKE-KCTOWNHALL-PHASE-ONE-ROLE-MEMORY-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-NYCARTC-MARCH-TRANSPARENCY-SEED"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "CLM-KCTOWNHALL-NEIGHBORHOOD-DESIGN-AND-PRINT-PRACTICE-2018-2021"
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "INTAKE-CALLSCRIPT-PARTICIPATION-LINEAGE-MEMORY-2026"
           }
         ]
       },
@@ -42,20 +46,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "atomicPropositionSchema"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-RIVER-CHARLOTTE-STREET-2009"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "READ-KCTOWNHALL-PHASE-ONE-PROPOSAL-2019"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "READ-JAMIE-KCTOWNHALL-PHASE-ONE-ROLE-ACCOUNT-2026"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "READ-JAMIE-CALLSCRIPT-PARTICIPATION-LINEAGE-ACCOUNT-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "READ-FACEBOOK-CLEVELAND-AVE-UNIFY-EVENT-2019"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "READ-HELLGATE-CURE-MARCH-2025"
           }
         ]
       },
@@ -64,20 +68,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "CLM-WOWLIST-DATABASE-SCALE-2017"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "CLM-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS-2019-2021"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "CLM-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY-CONTRIBUTION-2019"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
           }
         ]
       },
@@ -86,20 +94,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "TASK-KCTOWNHALL-PHASE-ONE-COMPLETION-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-CREATION-ROLE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "TASK-KCTOWNHALL-SURVEY-ARTIFACT-RECOVERY"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-OFFICE-NIGHTLIFE-ROLE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "TASK-TIRED-OF-TIRES-ROLE-AND-EXPANSION-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "TASK-CLEVELAND-AVE-ROLE-AND-CIVIC-ROUTING-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "TASK-CALLSCRIPT-NYCARTC-ROLE-AND-CHRONOLOGY-CORROBORATION"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           }
         ]
       },
@@ -108,20 +120,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "DEC-DEFER-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "DEC-PUBLISH-WOWLIST-DATABASE-SCALE-2017"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "DEC-DEFER-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "DEC-PUBLISH-SUNDAY-DINNER-RECORDED-GATHERING-SCALE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "DEC-DEFER-CLEVELAND-AVE-CONTRIBUTION"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "DEC-DEFER-CALLSCRIPT-NYCARTC-PARTICIPATION-LINEAGE"
           },
           {
-            "file": "docs/knowledge-bank/projection-map.md",
-            "record": "KC Town Hall Phase One And Neighborhood Practice"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-RIVER-GREAT-ACCOMMODATIONS-DEFER"
           }
         ]
       },
@@ -130,20 +142,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "sourceRecordSchema"
+            "file": "apps/www/src/data/knowledge-bank/public.ts",
+            "record": "Metadata-only citation sources cannot expose an underlying URL"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "SRC-KCTOWNHALL-PHASE-ONE-PROPOSAL-2019"
+            "file": "apps/www/src/components/citations/SourceNote.tsx",
+            "record": "if (source.visibility !== \"public\") return undefined;"
           },
           {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "KC Town Hall Phase One accession remains public-safe"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22"
           },
           {
-            "file": "docs/knowledge-bank/approval-register.md",
-            "record": "KC Town Hall Phase One and neighborhood practice"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           }
         ]
       },
@@ -152,20 +168,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "claimRecordSchema"
+            "file": "docs/knowledge-bank/chad-lens.md",
+            "record": "Do not make the reader decode Jamie."
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
-            "record": "CLM-KCTOWNHALL-PARTICIPATORY-SITE-PRACTICE-2018-2019"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "CLM-WOWLIST-DATABASE-SCALE-2017"
           },
           {
-            "file": "docs/knowledge-bank/projection-map.md",
-            "record": "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "docs/knowledge-bank/research/kc-town-hall-phase-one-and-neighborhood-practice-2026-07-15.md",
-            "record": "## Research queue"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           }
         ]
       }
@@ -188,5 +208,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Independent review of the full canonical graph found no criterion defect below 4. Under Node 26.4.0, all seven deterministic hard gates and four quality targets passed, all 112 knowledge-lifecycle tests and 10 citation tests passed, and the knowledge-bank, public-safety, and citation checks passed; the knowledge-bank and public-safety checks retained nine careful-wording warnings and no failures. The March 2019 proposal supports work reported complete by 2018 and a forward plan, while later 2019 completion and Jamie's general-contractor function remain explicitly first-person and do not establish licensure. The unused City appropriation remains separate from Phase One funding. Claims and anti-claims preserve credit for Julia Fredenburg, Pastor Lee, contractors, tradespeople, neighborhood associations, residents, city staff, disposal partners, and other collaborators. Protected sources expose only opaque locators; raw financial, contact, resident, family, private material and local paths are absent. Cleveland Avenue records preserve priority routing without capital-allocation causation, and all four new open tasks identify concrete artifacts, collaborators, privacy boundaries, and promotion conditions. All five new claims remain deferred, and all human gates remain pending."
+  "summary": "Fresh read-only review of committed state 6f62e95097cc79c3b990a38bbfd4ad743f39afaa found the lifecycle exceptionally explicit, traversable, defensible, and public-safe. Deterministic evaluation passed all 7 hard gates and 4 quality targets, and all 115 lifecycle tests passed. The July 15 participation-lineage records project bounded WOWList and Sunday Dinner aggregates through public-metadata-only citations while keeping the Call Script to NYC Artist Coalition role and chronology claim corroborated, unprojected, and research-routed. River, Open House, social-account, authorship, administration, engagement, and outcome distinctions retain collective credit and recovered-minimum limits. All human gates remain pending."
 }
