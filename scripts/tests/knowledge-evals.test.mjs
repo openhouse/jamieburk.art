@@ -49,13 +49,13 @@ function refreshFieldPracticeApproval(targetSuite) {
     .digest("hex");
 }
 
-test("knowledge-bank gate records two fresh field-practice holdout passes", () => {
+test("knowledge-bank gate records two fresh NYCAC social-population holdout passes", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "kcth-field-holdout-municipal-archivist-final-2026-07-15",
-    "kcth-field-holdout-skeptical-hiring-editor-final-2026-07-15"
+    "nycac-social-holdout-data-integrity-final-2-2026-07-15",
+    "nycac-social-holdout-hiring-editor-final-2-2026-07-15"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);

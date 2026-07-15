@@ -137,6 +137,10 @@ for the complete review of the `@NYCArtC` retrievable public union, all 1,161
 distinct posted short URLs, mission and source-network classifications,
 bounded incoming response, X platform limits, and the 2,001-record owner-
 archive gap.
+The
+[recursive evaluation run](../../evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md)
+preserves the rejected holdouts, repairs, final independent acceptance, and
+stopping decision.
 
 See
 [projects/callnyc-social-population.md](projects/callnyc-social-population.md)

@@ -250,6 +250,24 @@
         "The institutional related-claims approval lock did not match the current governed claim set.",
         "The corrected lock changes the frozen revision and requires two fresh final holdouts."
       ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-data-integrity-final-2-2026-07-15",
+      "completedAt": "2026-07-15T09:04:00Z",
+      "lens": "Independent archival data-integrity engineer, platform provenance specialist, and adversarial evaluation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-social-holdout-hiring-editor-final-2-2026-07-15",
+      "completedAt": "2026-07-15T09:04:16Z",
+      "lens": "Independent skeptical public-interest hiring editor, civic-policy researcher, privacy and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }
