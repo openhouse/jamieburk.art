@@ -247,6 +247,57 @@ scanPattern(
   /\bmembers?\b.{0,80}\b(?:provided?|gave|contributed|offered|submitted|shared|supplied)\b.{0,80}\b(?:input|feedback)\b.{0,120}\b(?:product|design|platform|service)\b|\bmember (?:input|feedback)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,100}\b(?:product|design|platform|service)\b|\b(?:product|design|platform|service)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,80}\bby members?\b/is
 );
 
+const wowlistPinnedArtifacts = [
+  "docs/knowledge-bank/data/wowlist-public-facebook-post-ledger.json",
+  "docs/knowledge-bank/projects/wowlist-facebook-post-population-2026-07-14.md"
+];
+const wowlistBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-batch-2026-07-14.ts"
+);
+const wowlistPinnedRiskPatterns = [
+  /authenticated (?:Page )?access|current authenticated|current-session|comment as|Professional Dashboard|Meta Business Suite|asset-scoped/i,
+  /\bcurrent\b.{0,60}\b(?:Page )?(?:administrator|admin|manager|account-management|account management)\b.{0,80}\b(?:details?|roles?|state|status|access|control|identity)\b.{0,80}\b(?:visible|observed|available|shown|recovered|confirmed)\b/is,
+  /\bmembers?\b.{0,80}\b(?:provided?|gave|contributed|offered|submitted|shared|supplied)\b.{0,80}\b(?:input|feedback)\b.{0,120}\b(?:product|design|platform|service)\b/is,
+  /\bmember (?:input|feedback)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,100}\b(?:product|design|platform|service)\b/is
+];
+
+if (existsSync(wowlistBatchSourcePath)) {
+  const batchSource = readText(wowlistBatchSourcePath);
+  for (const artifactPath of wowlistPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(wowlistBatchSourcePath, `WOW List public artifact lacks an immutable Git citation: ${artifactPath}`);
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(currentPath, "WOW List immutable citation does not match the current public-safe artifact");
+      }
+      if (wowlistPinnedRiskPatterns.some((pattern) => pattern.test(pinnedText))) {
+        addFailure(currentPath, "WOW List immutable citation contains prohibited account-state or participation wording");
+      }
+    } catch {
+      addFailure(wowlistBatchSourcePath, `WOW List immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`);
+    }
+  }
+}
+
 scanPattern(
   nycartcFacebookEventLedgerFiles,
   "public Facebook event ledger contains an invalid aggregate response or attendance field",

@@ -140,7 +140,7 @@ export const wowlistFacebookPostSources = [
     publishedAt: "2026-07-14",
     accessedAt: "2026-07-14",
     canonicalUrl:
-      "https://github.com/openhouse/jamieburk.art/blob/feature/evals-B/docs/knowledge-bank/data/wowlist-public-facebook-post-ledger.json",
+      "https://github.com/openhouse/jamieburk.art/blob/98851dd8067bc89e09f687c52e58d6420511d6e2/docs/knowledge-bank/data/wowlist-public-facebook-post-ledger.json",
     preferredPublicUrl: "canonical",
     publicCitation:
       "Public-safe row-level disposition ledger for the current WOW List Facebook Page timeline, July 14, 2026.",
@@ -169,7 +169,7 @@ export const wowlistFacebookPostSources = [
     publishedAt: "2026-07-14",
     accessedAt: "2026-07-14",
     canonicalUrl:
-      "https://github.com/openhouse/jamieburk.art/blob/feature/evals-B/docs/knowledge-bank/projects/wowlist-facebook-post-population-2026-07-14.md",
+      "https://github.com/openhouse/jamieburk.art/blob/98851dd8067bc89e09f687c52e58d6420511d6e2/docs/knowledge-bank/projects/wowlist-facebook-post-population-2026-07-14.md",
     preferredPublicUrl: "canonical",
     publicCitation:
       "Jamie Burkart portfolio research, WOW List Facebook current-post archival production report, July 14, 2026.",
