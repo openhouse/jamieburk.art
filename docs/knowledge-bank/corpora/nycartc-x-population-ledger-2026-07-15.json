@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "account": "@NYCArtC",
+  "capturedAt": "2026-07-15T08:42:42.047Z",
+  "capturedThrough": "Authenticated replies-inclusive profile traversal, an overlapping sub-viewport verification pass, and monthly authored-search partitions from January 2017 through the profile timeline cutoff",
+  "protectedSource": {
+    "locatorId": "NYCAC-X-AUTHENTICATED-CAPTURE-2026-07-15",
+    "sha256": "3a7458edf231caf8e0ad0bae41a2e22bb9ea6e96ff923c7c9369698d2f935504",
+    "visibility": "protected",
+    "repositoryStatus": "excluded"
+  },
+  "population": {
+    "profileReported": 5124,
+    "recoveredAccountItems": 3367,
+    "authored": 696,
+    "reposted": 2671,
+    "unrecoveredCountDifference": 1757,
+    "supplementalPublicContexts": 19,
+    "range": [
+      "2017-02-03T20:03:00.000Z",
+      "2026-05-18T17:40:13.000Z"
+    ],
+    "byYear": {
+      "2017": {
+        "authored": 190,
+        "reposted": 0,
+        "total": 190
+      },
+      "2018": {
+        "authored": 74,
+        "reposted": 0,
+        "total": 74
+      },
+      "2019": {
+        "authored": 73,
+        "reposted": 7,
+        "total": 80
+      },
+      "2020": {
+        "authored": 105,
+        "reposted": 1039,
+        "total": 1144
+      },
+      "2021": {
+        "authored": 86,
+        "reposted": 326,
+        "total": 412
+      },
+      "2022": {
+        "authored": 66,
+        "reposted": 521,
+        "total": 587
+      },
+      "2023": {
+        "authored": 53,
+        "reposted": 476,
+        "total": 529
+      },
+      "2024": {
+        "authored": 24,
+        "reposted": 154,
+        "total": 178
+      },
+      "2025": {
+        "authored": 9,
+        "reposted": 65,
+        "total": 74
+      },
+      "2026": {
+        "authored": 16,
+        "reposted": 83,
+        "total": 99
+      }
+    },
+    "recoveredStatusIdDigest": "d4e2edca38acd22c675d3516c15b99d775abaa218205ab3eac131c9413e1214f",
+    "authoredStatusIdDigest": "a6062e2de67fcb4a94632b811d099449400b30e6ed8b7a089af8db4cc48da649",
+    "repostedStatusIdDigest": "6782d161f642120e251e64eca902b0afff876e3aec3500e53f77139904b33dee",
+    "supplementalContextDigest": "23d6fc0a59f4ceefeadf3ccb50a10fc7bc29e1f65bf53eb66728b40bd8d31888"
+  },
+  "campaignMarkers": [
+    {
+      "id": "fair-rent-nyc",
+      "hashtag": "#fairrentnyc",
+      "summary": "Commercial-rent-stabilization communication and public action under the Fair Rent NYC identity.",
+      "authoredPostCount": 186,
+      "visibleHashtagOccurrences": 195,
+      "statusIdDigest": "f48e6f64672bc30a5d96df2bfae7e2a0710907021d10115e00fdbeb8b92f9c0f"
+    },
+    {
+      "id": "save-nyc-spaces",
+      "hashtag": "#savenycspaces",
+      "summary": "Pandemic-era public communication supporting independent cultural spaces.",
+      "authoredPostCount": 106,
+      "visibleHashtagOccurrences": 113,
+      "statusIdDigest": "e9207d129860d68b43bf88acf067073d6a3e6560751c5f05129d5b5e089fda7c"
+    },
+    {
+      "id": "let-nyc-dance",
+      "hashtag": "#letnycdance",
+      "summary": "Cabaret Law repeal and legal-dance communication under the Let NYC Dance identity.",
+      "authoredPostCount": 76,
+      "visibleHashtagOccurrences": 76,
+      "statusIdDigest": "bcf82c9ee8c756ed92836b61633e54681fb0ea1fa98bfb27129461da85af4cb6"
+    },
+    {
+      "id": "talks-not-raids",
+      "hashtag": "#talksnotraids",
+      "summary": "Nightlife-enforcement transparency and venue-protection communication under the Talks Not Raids identity.",
+      "authoredPostCount": 54,
+      "visibleHashtagOccurrences": 60,
+      "statusIdDigest": "fb79504c6935309e5c2d6d57451b6fe3441d14e2762f949a8597f9399257b4f8"
+    }
+  ],
+  "sourceCirculation": {
+    "allDistinctShortUrlsResolved": 1235,
+    "authoredPostsWithOutgoingLinks": 446,
+    "authoredOutgoingLinkOccurrences": 529,
+    "distinctAuthoredShortUrls": 287,
+    "recoveredLinkPairDigest": "8d6681554a4d7c8a2d12e4a1c371fc6003ca9749e6b8f8947d3215f0ae9099a6",
+    "boundary": "A posted destination documents source circulation. It does not establish endorsement, page accuracy, audience reach, or authorship of the linked work."
+  },
+  "stakeholderCommunication": {
+    "nycCouncilOutboundMentionOccurrences": 104,
+    "nycCouncilOutboundPosts": 100,
+    "nycCouncilOutboundStatusIdDigest": "beb969c302566cfe2483de832a8d3f411452d6631315edf942ff91cdc293f86c",
+    "selectedRecoveredRepostSources": [
+      {
+        "handle": "olympiakazi",
+        "recoveredCount": 194
+      },
+      {
+        "handle": "usb_nyc",
+        "recoveredCount": 113
+      },
+      {
+        "handle": "future_of_music",
+        "recoveredCount": 110
+      },
+      {
+        "handle": "vendorpower",
+        "recoveredCount": 91
+      },
+      {
+        "handle": "musicworkers",
+        "recoveredCount": 89
+      },
+      {
+        "handle": "artiststudioap",
+        "recoveredCount": 78
+      },
+      {
+        "handle": "indietheaternyc",
+        "recoveredCount": 64
+      },
+      {
+        "handle": "rlespinal",
+        "recoveredCount": 47
+      }
+    ],
+    "boundary": "Outbound mentions and repost-source counts describe communication and source circulation. They do not establish incoming engagement, endorsement, reach, authorship by Jamie, or policy causation."
+  },
+  "sourceLeads": [
+    {
+      "id": "gothamist-cabaret-repeal-momentum",
+      "postedByStatusId": "847929146198155264",
+      "title": "Movement For Repealing NYC's Archaic 'No Dancing' Law Gains Momentum",
+      "canonicalUrl": "https://gothamist.com/arts-entertainment/movement-for-repealing-nycs-archaic-no-dancing-law-gains-momentum",
+      "disposition": "live-and-previously-close-read",
+      "note": "Contemporaneous reporting on Cabaret Law repeal organizing. The article supports campaign context, not sole causation or authorship of the coalition account."
+    },
+    {
+      "id": "amny-office-of-nightlife",
+      "postedByStatusId": "902986997001748480",
+      "title": "Nightlife bill creating advisory board to be passed by City Council",
+      "canonicalUrl": "https://www.amny.com/news/nightlife-bill-creating-advisory-board-to-be-passed-by-city-council-rafael-espinal-says-1.14085854/",
+      "disposition": "live-source-lead",
+      "note": "Contemporaneous Office of Nightlife policy context circulated by the account."
+    },
+    {
+      "id": "new-york-times-night-mayor",
+      "postedByStatusId": "903000239078084608",
+      "title": "New York Has a Nightlife Mayor. Other Cities Want One, Too.",
+      "canonicalUrl": "https://www.nytimes.com/2017/08/30/arts/new-york-night-mayor-europe.html",
+      "disposition": "live-source-lead",
+      "note": "National and comparative context for the Office of Nightlife discussion circulated by the account."
+    },
+    {
+      "id": "new-york-times-cabaret-repeal",
+      "postedByStatusId": "924953677173002241",
+      "title": "After 91 Years, New York Will Let Its People Boogie",
+      "canonicalUrl": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html",
+      "disposition": "live-source-lead",
+      "note": "Contemporaneous reporting on the Council's impending Cabaret Law repeal vote."
+    },
+    {
+      "id": "gothamist-march-transparency",
+      "postedByStatusId": "1095440554920427520",
+      "title": "Lawmakers Demand Transparency On Surprise Multi-Agency Raids On Local Bars And Clubs",
+      "canonicalUrl": "https://gothamist.com/arts-entertainment/lawmakers-demand-transparency-on-surprise-multi-agency-raids-on-local-bars-and-clubs",
+      "disposition": "live-and-previously-close-read",
+      "note": "Reporting on disparate impacts and Council transparency efforts associated with the Talks Not Raids campaign."
+    },
+    {
+      "id": "daily-news-nightlife-office-resourcing",
+      "postedByStatusId": "1167479169510494214",
+      "title": "Mayor's Office of Nightlife drastically underfunded and understaffed, pol says",
+      "canonicalUrl": "https://www.nydailynews.com/2019/08/28/mayors-office-of-nightlife-drastically-underfunded-and-understaffed-pol-says/",
+      "disposition": "live-metadata-body-blocked",
+      "note": "The destination and headline are preserved from the account and live search metadata. The article body was blocked in this pass, so its details are not promoted as independent assertions."
+    },
+    {
+      "id": "daily-news-fair-rent-rally",
+      "postedByStatusId": "1195736519950114816",
+      "title": "Pols, small biz owners rally for law limiting rent hikes on NYC's beleaguered mom-and-pop shops",
+      "canonicalUrl": "https://www.nydailynews.com/2019/11/14/pols-small-biz-owners-rally-for-law-limiting-rent-hikes-on-nycs-beleaguered-mom-and-pop-shops/",
+      "disposition": "live-metadata-body-blocked",
+      "note": "The destination and headline are preserved; article-body claims remain held pending a recoverable copy."
+    },
+    {
+      "id": "city-limits-commercial-rent-covid",
+      "postedByStatusId": "1247345933714677762",
+      "title": "City's Small Businesses Need Rent Stabilization to Survive COVID-19, Advocates Say",
+      "canonicalUrl": "https://citylimits.org/citys-small-businesses-need-rent-stabilization-to-survive-covid-19-advocates-say/",
+      "disposition": "live-and-close-read",
+      "note": "City Limits documents United for Small Business NYC's commercial-rent-stabilization argument during the first pandemic shutdown. It is coalition context, not proof of policy causation."
+    },
+    {
+      "id": "gothamist-repeal-50a",
+      "postedByStatusId": "1270521289409789952",
+      "title": "New York State Legislature Votes To Repeal Law That Shields Police From Scrutiny",
+      "canonicalUrl": "https://gothamist.com/news/new-york-state-legislature-votes-repeal-law-50-shields-police-scrunity",
+      "disposition": "live-and-close-read",
+      "note": "Reporting establishes the legislative action circulated by the account; the account's claimed relationship to MARCH transparency remains a project interpretation."
+    },
+    {
+      "id": "american-theatre-lark-closure",
+      "postedByStatusId": "1445735610807988224",
+      "title": "The Lark Is Grounded: New-Play Incubator to Fold After 27 Years",
+      "canonicalUrl": "https://www.americantheatre.org/2021/10/05/the-lark-is-grounded-new-play-incubator-to-fold-after-25-years/",
+      "disposition": "live-and-close-read",
+      "note": "American Theatre reported that a proposed rent increase was one factor in the Lark's closure. The account used the article to connect a concrete cultural loss to Fair Rent NYC advocacy."
+    },
+    {
+      "id": "hell-gate-recurring-nightlife-raids",
+      "postedByStatusId": "1667318348571463680",
+      "title": "Who Is Leading the Raids on NYC Nightclubs?",
+      "canonicalUrl": "https://hellgatenyc.com/who-is-leading-raids-on-nyc-nightclubs/",
+      "disposition": "live-source-lead",
+      "note": "Later reporting circulated by the account as continuity evidence for nightlife-enforcement concerns."
+    },
+    {
+      "id": "hell-gate-saint-vitus",
+      "postedByStatusId": "1761049558526706129",
+      "title": "Mayor Adams Said the Era of Nightlife Raids Was Over. So What Happened to Saint Vitus?",
+      "canonicalUrl": "https://hellgatenyc.com/saint-vitus-dob-nypd-nightlife-raid-shutdown/",
+      "disposition": "live-and-close-read-metadata",
+      "note": "The article documents continued public scrutiny of nightlife enforcement after the announced end of MARCH. It does not establish that the Saint Vitus action was a MARCH raid."
+    }
+  ],
+  "heldObservations": {
+    "visibleInteractionTotals": {
+      "replies": 112,
+      "reposts": 1527,
+      "likes": 2761,
+      "bookmarks": 64
+    },
+    "authoredPostsWithDisplayedReplyRepostOrLike": 628,
+    "status": "hold",
+    "reason": "Displayed reply, repost, and like labels are volatile, incomplete platform observations. Bookmarks and views are excluded from the qualifying-record count. All counters are retained for future comparison and are not projected as accomplishment metrics."
+  },
+  "boundaries": [
+    "The profile reported 5,124 posts. The pass recovered 3,367 distinct account items and preserves the 1,757-item difference explicitly.",
+    "The profile timeline stopped at December 13, 2019 after 3,031 account items. Monthly historical searches recovered 336 additional authored posts but did not expose older native reposts.",
+    "The unrecovered difference is not described as deleted content, and no content or account-item type is inferred for it.",
+    "19 context-only public conversation records are preserved outside the 5,124-post denominator; 16 duplicate rendered views of account items were removed.",
+    "Authored posts and reposts are separate. Repost engagement belongs to the original post and is not treated as NYC Artist Coalition traction.",
+    "Visible interaction labels are dated observations and may omit deleted, hidden, private, or platform-suppressed activity.",
+    "Outbound mentions and reposts of officials are communication and source-circulation evidence, not incoming stakeholder engagement or policy causation.",
+    "This is a shared coalition-account record. It does not identify Jamie or any collaborator as the author of every post or assign every campaign action to Jamie.",
+    "Public contact numbers and email addresses were redacted. No private messages, account settings, private analytics, authentication secrets, follower exports, browser storage, or session identifiers were captured.",
+    "Third-party repost text is omitted from the public capture. Canonical status identity, source handle, text hash, hashtags, mentions, posted links, date, and media metadata remain available for audit."
+  ],
+  "privacy": {
+    "status": "public-safe-minimized-ledger",
+    "omitted": [
+      "raw capture",
+      "post text",
+      "quoted-card text",
+      "per-item status IDs and URLs outside the selected source leads",
+      "per-item mentions and hashtags",
+      "per-item interaction counters",
+      "unselected person-level account handles",
+      "historical contact details",
+      "authentication and private account state"
+    ],
+    "rationale": "Publish aggregate evidence and cryptographic reconciliation controls without republishing a searchable bulk social record."
+  }
+}

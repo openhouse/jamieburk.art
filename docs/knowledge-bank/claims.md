@@ -3,6 +3,22 @@
 This is the human-readable claim register. Public pages should not strengthen a
 claim beyond the wording and guardrails here.
 
+**2026-07-15 NYC Artist Coalition X population pass**
+
+- `CLM-NYCAC-X-SHARED-PUBLIC-OPERATING-LAYER` preserves four overlapping
+  campaign traces across the recovered 2017-2026 account record.
+- `CLM-NYCAC-X-PUBLIC-SOURCE-CIRCULATION` preserves complete URL resolution for
+  recovered account items and a governed mission-source inventory.
+- `CLM-NYCAC-X-OUTBOUND-STAKEHOLDER-COMMUNICATION` records 100 authored posts
+  addressing `@NYCCouncil` while explicitly excluding incoming engagement.
+- `CLM-NYCAC-X-REPOST-SOURCE-PATTERN` preserves collective source circulation
+  without assigning shared-account authorship.
+- `CLM-NYCAC-X-DATED-TRACTION-SNAPSHOT` retains volatile interface counters as
+  a held observation, never as impact.
+
+All five projections remain held. The public website continues to use the
+clearer existing identity-system and direct Council-interaction claims.
+
 ## career-operating-structure-14-years - Operating structure over 14+ years
 
 **Status:** Ready

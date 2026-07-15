@@ -149,3 +149,13 @@ The case study now also projects the municipal packet's statement that the
 $189,629 Phase One scope was completed and its collaborative survey account
 while keeping Jamie's general-contractor title and individual survey authorship
 in research.
+
+The [NYC Artist Coalition project note](projects/nyc-artist-coalition.md) now
+links a population-accounted `@NYCArtC` archive. The profile's 5,124 reported
+slots are dispositioned as 3,367 recovered public items and an explicit
+1,757-item owner-archive gap. A minimized public ledger preserves aggregate
+classifications and cryptographic reconciliation controls; the authenticated
+capture, full item-level record, bulk post text, and per-item counters stay
+protected outside the repo. All new social metrics remain held from the public
+site. See the
+[research run](runs/2026-07-15-nycartc-x-full-population.md).

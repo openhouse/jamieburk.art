@@ -180,7 +180,7 @@ const workItemsInput = [
     summary:
       "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications",
-    years: "NYC Artist Coalition: 2017-Present; FairRentNYC: 2024-Present",
+    years: "NYC Artist Coalition: 2017-Present; FairRentNYC: 2018-Present",
     status: "Full case study",
     featured: true,
     priority: 2,

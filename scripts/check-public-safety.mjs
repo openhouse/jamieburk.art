@@ -149,6 +149,22 @@ const publicArchiveFiles = textFiles.filter((file) =>
   relative(file).startsWith("docs/knowledge-bank/corpora/")
 );
 
+const prohibitedTrackedSocialArtifacts = [
+  "docs/knowledge-bank/corpora/source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json",
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json"
+];
+const trackedProhibitedSocialArtifacts = execFileSync(
+  "git",
+  ["ls-files", "--", ...prohibitedTrackedSocialArtifacts],
+  { cwd: repoRoot, encoding: "utf8" }
+).trim();
+if (trackedProhibitedSocialArtifacts) {
+  failures.push(
+    `${trackedProhibitedSocialArtifacts.replaceAll("\n", ", ")} - protected bulk social artifacts must not be committed`
+  );
+}
+
 for (const file of allFiles) {
   const rel = relative(file);
   const base = path.basename(file);

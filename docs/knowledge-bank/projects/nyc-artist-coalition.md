@@ -46,3 +46,25 @@ for Save NYC Spaces, and 9 for Fair Rent NYC. They represent 44 unique
 articles, each with a Wayback snapshot. See
 `docs/knowledge-bank/projects/nyc-artist-coalition-press.md`. Article-level
 claim promotion remains an explicit close-reading inquiry.
+
+## Population-accounted social archive
+
+The July 15, 2026 authenticated pass accounts for the profile's 5,124 reported
+slots as 3,367 recovered public items and a named 1,757-item recovery gap. The
+recovered population contains 696 authored posts and 2,671 native reposts.
+Source-body-only classification preserves overlapping traces for Fair Rent
+NYC, Save NYC Spaces, Let NYC Dance, and Talks Not Raids without allowing
+quoted-card text to inflate the account's own campaign or stakeholder counts.
+
+All 1,235 distinct short URLs in recovered account items resolved. Twelve
+mission-relevant source leads now connect the public account record to reporting
+on Cabaret Law repeal, the Office of Nightlife, MARCH and venue enforcement,
+commercial rent, and cultural-space loss. One hundred recovered authored posts
+addressed `@NYCCouncil`; this is outbound communication, not incoming Council
+engagement. A separate strict ledger remains authoritative for direct
+Council-account interaction.
+
+The deeper metrics remain in held archive claims. The current case study keeps
+the clearer bounded claims about Jamie's identity-system contribution,
+attributable collaborator use, and directly recovered Council interactions.
+See `docs/knowledge-bank/runs/2026-07-15-nycartc-x-full-population.md`.

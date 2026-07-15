@@ -40,3 +40,8 @@ supporting-materials/
 *.woff
 *.woff2
 reports/generated/
+
+# Protected full-population social captures stay outside this public repository.
+docs/knowledge-bank/corpora/source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json
+docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json
+docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json
