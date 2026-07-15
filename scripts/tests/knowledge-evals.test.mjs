@@ -7,6 +7,7 @@ import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/da
 import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
+import { nterChngArchive } from "../../apps/www/src/data/knowledge-bank/nterchng-archive.ts";
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { urbanhermitCorpusFindings, urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
@@ -86,6 +87,69 @@ test("knowledge-bank pilot retains every supplied intake item", () => {
 test("mature but unselected claims remain held off public surfaces", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 5);
+});
+
+test("NTER CHNG archive production is integrated, bounded, and held for future composition", () => {
+  assert.deepEqual(
+    {
+      intakeItems: nterChngArchive.intakeItems.length,
+      observations: nterChngArchive.observations.length,
+      sources: nterChngArchive.sources.length,
+      claims: nterChngArchive.claims.length,
+      researchInquiries: nterChngArchive.researchInquiries.length
+    },
+    { intakeItems: 2, observations: 9, sources: 7, claims: 3, researchInquiries: 1 }
+  );
+
+  assert.ok(
+    nterChngArchive.intakeItems.every((item) =>
+      knowledgeBank.intakeItems.some(
+        (bankItem) => bankItem.id === item.id && bankItem.disposition === "integrated"
+      )
+    )
+  );
+  assert.ok(
+    nterChngArchive.sources.every(
+      (source) =>
+        source.doesNotEstablish.length > 0 &&
+        knowledgeBank.sources.some((bankSource) => bankSource.id === source.id)
+    )
+  );
+  assert.ok(
+    nterChngArchive.claims.every(
+      (claim) =>
+        claim.boundaries.length > 0 &&
+        claim.antiClaims.length > 0 &&
+        claim.projections.every(
+          (projection) => projection.status === "hold" && projection.surfaces.length === 0
+        ) &&
+        knowledgeBank.claims.some((bankClaim) => bankClaim.id === claim.id)
+    )
+  );
+});
+
+test("NTER CHNG evidence keeps exhibition inclusion distinct from wider context", () => {
+  const artistPage = nterChngArchive.sources.find(
+    (source) => source.id === "SRC-ANH-KC-NTERCHNG-ARTIST-PAGE-2011-05-18"
+  );
+  const nermanContext = nterChngArchive.sources.find(
+    (source) => source.id === "SRC-ANH-NERMAN-2011-04-30"
+  );
+  const inclusionClaim = nterChngArchive.claims.find(
+    (claim) => claim.id === "CLM-NTERCHNG-AMERICA-NOW-HERE-INCLUSION"
+  );
+  const inquiry = nterChngArchive.researchInquiries[0];
+
+  assert.ok(artistPage?.supportsGenerally.includes("NTER CHNG as their collaborative work"));
+  assert.ok(artistPage?.publicNote?.includes("phone numbers"));
+  assert.ok(nermanContext?.doesNotEstablish.includes("NTER CHNG's inclusion"));
+  assert.ok(inclusionClaim?.antiClaims.includes("NTER CHNG was displayed at the Nerman Museum"));
+  assert.ok(inclusionClaim?.evidence.some(
+    (evidence) =>
+      evidence.sourceId === artistPage?.id && evidence.relationship === "direct-support"
+  ));
+  assert.ok(inquiry.limitations.some((limitation) => limitation.includes("phone numbers")));
+  assert.ok(inquiry.findings.some((finding) => finding.includes("press release was not recovered")));
 });
 
 test("selected NYCAC claims improve existing-site citation coverage", () => {

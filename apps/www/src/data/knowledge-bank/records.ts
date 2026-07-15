@@ -7,6 +7,7 @@ import { nycacFacebookEvents } from "./nycac-facebook-events.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacSocialCorpus } from "./nycac-social-corpus.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
+import { nterChngArchive } from "./nterchng-archive.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaArchiveProduction } from "./social-media-archive-production.ts";
@@ -43,6 +44,7 @@ const knowledgeBankInput = {
     ...nycacSocialCorpus.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems,
+    ...nterChngArchive.intakeItems,
     ...callNycSocialCorpus.intakeItems,
     ...wowlistSocialCorpus.intakeItems,
     ...urbanhermitSocialCorpus.intakeItems,
@@ -75,6 +77,7 @@ const knowledgeBankInput = {
     ...nycacSocialCorpus.observations,
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations,
+    ...nterChngArchive.observations,
     ...callNycSocialCorpus.observations,
     ...wowlistSocialCorpus.observations,
     ...urbanhermitSocialCorpus.observations,
@@ -234,6 +237,7 @@ const knowledgeBankInput = {
     ...nycacSocialCorpus.sources,
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources,
+    ...nterChngArchive.sources,
     ...callNycSocialCorpus.sources,
     ...wowlistSocialCorpus.sources,
     ...urbanhermitSocialCorpus.sources,
@@ -346,6 +350,7 @@ const knowledgeBankInput = {
     ...nycacSocialCorpus.claims,
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims,
+    ...nterChngArchive.claims,
     ...callNycSocialCorpus.claims,
     ...wowlistSocialCorpus.claims,
     ...urbanhermitSocialCorpus.claims,
@@ -398,6 +403,7 @@ const knowledgeBankInput = {
     ...nycacSocialCorpus.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacPressArchive.researchInquiries,
+    ...nterChngArchive.researchInquiries,
     ...callNycSocialCorpus.researchInquiries,
     ...wowlistSocialCorpus.researchInquiries,
     ...urbanhermitSocialCorpus.researchInquiries,
