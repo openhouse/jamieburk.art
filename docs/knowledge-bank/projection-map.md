@@ -283,6 +283,7 @@ composed public surface, not a claim database.
 ### Required Canonical Claims
 
 - `CLM-WOWLIST-HISTORICAL-SCALE`
+- `CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT`
 
 ### Exclusions
 
@@ -294,7 +295,7 @@ composed public surface, not a claim database.
 ### Guardrails
 
 - Protect user data
-- Define 35+ historically active city scenes by at least 50 geocoded posts/events
+- Define the 35+ city-scene figure by at least 50 geocoded posts/events
 - Keep social counters out of impact claims
 - Keep collective credit visible
 ## `/work/196-sunday-dinner`

@@ -520,6 +520,24 @@ test("WOW List historical scale is governed from protected source through every 
   assert.match(validateKnowledgeLifecycle(omission).join("\n"), /Consequential proof wowlist-community-platform lacks canonical claim CLM-WOWLIST-HISTORICAL-SCALE/);
 });
 
+test("the WOW List exact-route manifest inventories every rendered canonical claim", () => {
+  const route = "/work/wowlist";
+  const page = knowledgeBank.pages.find((item) => item.surface === route);
+  const renderedClaimIds = [...new Set(page?.occurrences.map(({ claimId }) => claimId) ?? [])].sort();
+  const manifest = knowledgeLifecycle.proofSurfaceManifests.find((item) => item.route === route);
+
+  assert.deepEqual([...manifest.canonicalClaimIds].sort(), renderedClaimIds);
+
+  const omission = structuredClone(knowledgeLifecycle);
+  omission.proofSurfaceManifests.find((item) => item.route === route).canonicalClaimIds = [
+    "CLM-WOWLIST-HISTORICAL-SCALE"
+  ];
+  assert.match(
+    validateKnowledgeLifecycle(omission).join("\n"),
+    /Rendered canonical claim CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT is missing from exact manifest for \/work\/wowlist/
+  );
+});
+
 test("offline lifecycle records are not exported through the application barrel", () => {
   const barrel = readFileSync("apps/www/src/data/knowledge-bank/index.ts", "utf8");
   assert.doesNotMatch(barrel, /lifecycle-(?:records|schema)/);

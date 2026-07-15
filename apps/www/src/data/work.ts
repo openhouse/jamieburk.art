@@ -373,7 +373,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, historically used by DIY arts and music organizers across 35+ active city scenes, each with at least 50 geocoded posts/events.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, historically used by DIY arts and music organizers across 35+ city scenes, each with at least 50 geocoded posts/events.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -416,7 +416,7 @@ const workItemsInput = [
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "35+ historically active city scenes, each with at least 50 geocoded posts/events"
+      "35+ city scenes that each met the historical threshold of at least 50 geocoded posts/events"
     ],
     knownOpenProtected: {
       known:

@@ -174,7 +174,7 @@ Of 22 account-authored records, 12 displayed at least one interaction on July 15
 
 A separate close read of the protected WOW List production-database analysis supports a bounded historical scale claim. The latest analyzed snapshot contains 1,846 users and 16,142 posts/events. Thirty-five city/region entries meet the deliberately conservative active-scene threshold of at least 50 geocoded posts/events.
 
-The public projection rounds these figures to 1,800+ historical users, 16,000+ historical posts/events, and 35+ historically active city scenes, each meeting the threshold of at least 50 geocoded posts/events. This does not mean 35 official chapters, 35 currently active communities, or 1,846 unique active people. It does not establish current product availability or Jamie's sole causation of adoption. Raw user, contact, geolocation, media, and community records remain protected.
+The public projection rounds these figures to 1,800+ historical users, 16,000+ historical posts/events, and 35+ city scenes that each met the historical threshold of at least 50 geocoded posts/events. This does not mean 35 official chapters, 35 currently active communities, or 1,846 unique active people. It does not establish current product availability or Jamie's sole causation of adoption. Raw user, contact, geolocation, media, and community records remain protected.
 
 ### Defensible claim
 

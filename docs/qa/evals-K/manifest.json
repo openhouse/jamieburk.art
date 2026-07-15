@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "55fa0c1d59269176e8a953c73c10455cb3822034a0c224bffb35ec134e3c8db7",
+  "sourceSha256": "a2c52250b393efd67d0a499826c430e1c626e0958276f8522ce8eb0b1f2326bc",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -127,13 +127,13 @@
       "route": "/work/wowlist",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/wowlist-desktop.png",
-      "artifactSha256": "8ab6c11b05a1ab3250158d9849e83bd7340730df578b747f260c501263d74b14"
+      "artifactSha256": "12bd12101696a46d84271915169d755066b809ef85d7ff12ebe0a7522ec931d6"
     },
     {
       "route": "/work/wowlist",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
-      "artifactSha256": "e2fc33313c1a2a3e2a390854fdc0163d75ba3b307e7962efd236a664056768bd"
+      "artifactSha256": "bd4e4feef0643599000b3093246e4568280a765d7d627cfd63534559328245b9"
     },
     {
       "route": "/work/kc-town-hall",
@@ -145,13 +145,13 @@
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "viewport": "PDF page 1 at 144 DPI",
       "artifactPath": "docs/qa/evals-K/resume-page-1.png",
-      "artifactSha256": "d1613f0cd3de68820512f9084334232259c5dd21dae29acea6266b8aabcab169"
+      "artifactSha256": "9e4c0cf496aea5f58e8662f379e925aa1f9ac7e091148ed5533538f26373eff9"
     },
     {
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "viewport": "PDF page 2 at 144 DPI",
       "artifactPath": "docs/qa/evals-K/resume-page-2.png",
-      "artifactSha256": "e16d6ab0b3f3bff25291c6b85a5dc8bbab7ae383cd138e7620d104188a16571a"
+      "artifactSha256": "17986ef6489b97ef6a260e830bfa102ca379efd1456853d6a8fdf7776dd5669f"
     }
   ]
 }

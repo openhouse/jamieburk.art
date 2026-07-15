@@ -374,6 +374,17 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
       const extra = approved.filter((proofId) => !rendered.includes(proofId));
       errors.push(`Rendered proof inventory does not match exact manifest for ${route}; missing approvals: ${missing.join(", ") || "none"}; manifest-only proofs: ${extra.join(", ") || "none"}`);
     }
+    const page = knowledgeBank.pages.find((item) => item.surface === route);
+    const renderedClaimIds = new Set(page?.occurrences.map(({ claimId }) => claimId) ?? []);
+    const linkedRenderedClaimIds = unique(manifest.proofIds.flatMap((proofId) => [
+      ...(proofById.get(proofId)?.canonicalClaimIds ?? []),
+      ...(proofById.get(proofId)?.requiredCanonicalClaimIds ?? [])
+    ])).filter((claimId) => renderedClaimIds.has(claimId));
+    for (const claimId of linkedRenderedClaimIds) {
+      if (!manifest.canonicalClaimIds.includes(claimId)) {
+        errors.push(`Rendered canonical claim ${claimId} is missing from exact manifest for ${route}`);
+      }
+    }
   }
   for (const manifest of input.proofSurfaceManifests) {
     if (!renderedProofsByRoute.has(manifest.route)) errors.push(`Proof surface manifest ${manifest.id} does not govern an inventoried public destination`);

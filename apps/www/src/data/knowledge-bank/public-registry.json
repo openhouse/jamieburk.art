@@ -729,7 +729,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Archived production records support 1,800+ users, 16,000+ posts/events, and 35+ historically active city scenes, using at least 50 geocoded posts/events as the conservative scene threshold. These are historical aggregate records, not official chapters, current activity, or a complete adoption census.",
+          "text": "Archived production records support 1,800+ users, 16,000+ posts/events, and 35+ city scenes that each met a historical threshold of at least 50 geocoded posts/events. These are historical aggregate records, not official chapters, current activity, or a complete adoption census.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -738,7 +738,7 @@
         },
         {
           "key": "homepage",
-          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ historically active city scenes under a conservative threshold.",
+          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a conservative historical threshold.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -747,7 +747,7 @@
         },
         {
           "key": "resume-html",
-          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ historically active city scenes under a conservative threshold.",
+          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a conservative historical threshold.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -756,7 +756,7 @@
         },
         {
           "key": "resume-pdf",
-          "text": "Jamie co-built WOWList with Richard Caceres; historical production records show use across 35+ active city scenes, each with at least 50 geocoded posts/events.",
+          "text": "Jamie co-built WOWList with Richard Caceres; historical production records show use across 35+ city scenes, each with at least 50 geocoded posts/events.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -765,7 +765,7 @@
         },
         {
           "key": "technical-operations",
-          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ historically active city scenes under a conservative threshold.",
+          "text": "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a conservative historical threshold.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -774,7 +774,7 @@
         },
         {
           "key": "work-card",
-          "text": "Jamie co-built WOWList, historically used across 35+ active city scenes under a conservative threshold.",
+          "text": "Historical records show WOWList use across 35+ city scenes, each with 50+ geocoded posts/events.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -797,7 +797,7 @@
       ],
       "boundaries": [
         "Treat the figures as historical aggregate database records.",
-        "Define 35+ historically active city scenes by the documented 50-plus geocoded-post threshold.",
+        "Define the 35+ city-scene figure by the documented threshold of at least 50 geocoded posts/events.",
         "Keep raw user, contact, geolocation, and community records protected.",
         "Credit the platform and adoption as collective work."
       ]
