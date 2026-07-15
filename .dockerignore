@@ -11,6 +11,13 @@ npm-debug.log
 .env
 .env.*
 !.env.example
+private/
+archive-private/
+raw/
+transcripts-private/
+client-private/
+legal-review/
 .npm-cache
 README.local.md
 *.local
+*.private.*

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Route } from "next";
 import Link from "next/link";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
@@ -10,6 +11,37 @@ export const metadata: Metadata = createMetadata({
   path: "/contact"
 });
 
+const contactRows = [
+  {
+    label: "Public email",
+    value: site.emailLabel,
+    href: site.emailHref
+  },
+  {
+    label: "Location",
+    value: site.location
+  },
+  site.linkedinUrl
+    ? {
+        label: "LinkedIn",
+        value: "LinkedIn profile",
+        href: site.linkedinUrl
+      }
+    : null,
+  site.githubUrl
+    ? {
+        label: "GitHub",
+        value: "GitHub profile",
+        href: site.githubUrl
+      }
+    : null,
+  {
+    label: "Resume",
+    value: "View resume page",
+    href: "/resume"
+  }
+].filter(Boolean) as Array<{ label: string; value: string; href?: string }>;
+
 export default function ContactPage() {
   return (
     <div className="jb-frame py-12">
@@ -20,36 +52,24 @@ export default function ContactPage() {
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
-            <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">Location</dt>
-              <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">Resume</dt>
-              <dd className="mt-1">
-                <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
-                  View resume page
-                </Link>
-              </dd>
-            </div>
+            {contactRows.map((row) => (
+              <div key={row.label}>
+                <dt className="font-semibold text-jb-ink">{row.label}</dt>
+                <dd className="mt-1 text-jb-ink/74">
+                  {row.href?.startsWith("/") ? (
+                    <Link className="font-semibold text-jb-blue hover:text-jb-green" href={row.href as Route}>
+                      {row.value}
+                    </Link>
+                  ) : row.href ? (
+                    <a className="font-semibold text-jb-blue hover:text-jb-green" href={row.href}>
+                      {row.value}
+                    </a>
+                  ) : (
+                    row.value
+                  )}
+                </dd>
+              </div>
+            ))}
           </dl>
         </div>
       </div>
