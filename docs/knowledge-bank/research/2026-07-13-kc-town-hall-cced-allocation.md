@@ -1,8 +1,17 @@
 # KC Town Hall CCED Allocation Research
 
-Date: 2026-07-13  
-Status: Public-record sequence recovered; governed-proof reconciliation open  
-Projection: None
+Date: 2026-07-13
+
+Status: Historical research snapshot; reconciliation completed 2026-07-15
+
+Projection: Governed claims active on `/work/kc-town-hall` as of 2026-07-15
+
+> **Current-state update (2026-07-15):** A later governed review approved the
+> complete bounded sequence for public use: CCED Board recommendation, Council
+> acceptance and appropriation, then the later withdrawal and reappropriation
+> of unused funds. The active claim still withholds agreement execution,
+> receipt, spending, construction, completion, and Jamie-specific causality.
+> The discussion below is preserved as the pre-decision research record.
 
 ## Answer
 
@@ -23,9 +32,11 @@ The strongest bounded statement currently supported by the public record is:
 > or expenditure and later says the project withdrew and the unused allocation
 > was reappropriated.
 
-This statement is knowledge-bank material, not approved website copy. The
-official records establish institutional actions and outcomes; they do not
-establish Jamie's individual role.
+At the time of this July 13 snapshot, this statement was knowledge-bank
+material rather than approved website copy. The July 15 review later approved
+the bounded institutional sequence. The official records establish
+institutional actions and outcomes; they do not establish Jamie's individual
+role.
 
 Jamie's firsthand account adds a separate stewardship fact: when his
 involvement concluded, he transitioned project stewardship to a mission-aligned
@@ -64,12 +75,16 @@ included a `$490,539 public funding recommendation`. That wording is true but
 now incomplete: the public legislative record establishes Council acceptance
 and appropriation.
 
-The proof should not change automatically. A governed projection review must
-choose between:
+The proof did not change automatically. The subsequent governed projection
+review chose between:
 
 - retaining the conservative recommendation-only wording; or
 - replacing it with Council-acceptance and appropriation wording that also
   preserves non-receipt/non-expenditure and the 2024 withdrawal outcome.
+
+On July 15, the review selected the second option and recorded the replacement,
+sources, boundaries, affected surfaces, and correction history in the canonical
+knowledge-bank records.
 
 Any later website claim must keep Jamie's contribution separate from the
 Council's institutional action. Public records or collaborator evidence are

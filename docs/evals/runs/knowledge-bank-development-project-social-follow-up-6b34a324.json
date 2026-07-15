@@ -31,7 +31,7 @@
       "evidence": [
         "Fresh npm run check:citations, npm run test:citations, npm run knowledge-bank, and npm run public-safety all exited 0; citation tests passed 22/22 and reported the public registry current and redacted.",
         "A fresh runtime inventory imported records.ts and projectSocial.ts and found exactly 18 intake items, 128 unique intake-associated sources, 46 unique project-social sources, zero unresolved source IDs, zero source-boundary gaps, and zero intake, protected-locator, non-public-source, or project-social-source leaks in public-registry.json.",
-        "apps/www/src/data/knowledge-bank/projectSocial.ts:114-139 keeps the authenticated census and historical roster behind opaque protected locators; records.ts:1504-1508,1680-1681,1728-1729 states credential, authorship, consent, grant, transition, and private-crisis boundaries.",
+        "apps/www/src/data/knowledge-bank/projectSocial.ts:114-139 keeps the authenticated census and historical roster behind opaque protected locators; records.ts:1504-1508,1680-1681,1728-1729 states credential, authorship, consent, grant, transition, and protected transition detail boundaries.",
         "A fresh candidate-diff scan for private paths, signed URLs, credentials, keys, passwords, secrets, and tokens returned no matches; git status showed only the disclosed untracked eval baseline."
       ],
       "findings": [
