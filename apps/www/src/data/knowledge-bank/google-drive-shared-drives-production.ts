@@ -204,7 +204,8 @@ export const googleDriveSharedDrivesProduction = {
       claimIds: ["CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS"],
       researchInquiryIds: ["INQ-GDRIVE-SUNDAY-DINNER-AND-196-SCALE"],
       limitations: [
-        "The review did not reconstruct the workbook formula or independently recount participant-level cells.",
+        "A separate public-safe aggregate audit counted 2,769 numeric marks across 349 sequence columns, 14 fewer than the workbook summary; the reason was not recovered.",
+        "Use 2,783 only as the workbook's own summary, not as a reconstructed headcount.",
         "The aggregate does not establish unique participants, nutritional service units, cost, or Jamie's sole labor."
       ]
     },
@@ -344,11 +345,12 @@ export const googleDriveSharedDrivesProduction = {
       preservationStatus: "private",
       accessedAt: reviewedAt,
       publicCitation: "Public-safe aggregate review of a protected Sunday Dinner operations ledger.",
-      publicNote: "Only the numbered event sequence and meals-served aggregate are retained; participant-level data and the workbook remain protected.",
+      publicNote: "Only aggregate structure, the workbook's own meals-served summary, and a public-safe reconciliation result are retained; participant-level data and the workbook remain protected.",
       supportsGenerally: [
         "numbered gathering sequence through 345",
         "March 7, 2021 date for gathering 345",
-        "workbook aggregate of 2,783 meals served",
+        "workbook's own summary of 2,783 meals served",
+        "345 numbered and four additional sequence columns",
         "long-running event operations ledger"
       ],
       doesNotEstablish: [
@@ -357,6 +359,8 @@ export const googleDriveSharedDrivesProduction = {
         "Jamie's sole labor",
         "identical event format",
         "20-plus resident artists",
+        "reason for the 14-mark difference between the column audit and workbook summary",
+        "411 unique people",
         "permission to publish participant rows"
       ],
       protectedLocatorId: "ARCHIVE-SUNDAY-DINNER-OPERATING-LEDGER"
@@ -544,12 +548,12 @@ export const googleDriveSharedDrivesProduction = {
     {
       id: "CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS",
       project: "sunday-dinner",
-      internalClaim: "A protected Sunday Dinner operating ledger records a numbered sequence through gathering 345 and an aggregate of 2,783 meals served.",
+      internalClaim: "A protected Sunday Dinner operating ledger records a numbered sequence through gathering 345, and the workbook's own summary records 2,783 meals served.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "case-study",
-          text: "A protected operating ledger records 345 numbered gatherings and 2,783 meals served through March 2021.",
+          text: "A protected operating ledger records 345 numbered gatherings through March 2021; its own summary records 2,783 meals served.",
           status: "active",
           citationRequired: false,
           surfaces: ["/work/196-sunday-dinner"]
@@ -559,7 +563,7 @@ export const googleDriveSharedDrivesProduction = {
         {
           sourceId: "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER",
           relationship: "private-support",
-          supports: ["numbered gathering sequence through 345", "March 7, 2021 endpoint", "2,783 meals-served aggregate"],
+          supports: ["numbered gathering sequence through 345", "March 7, 2021 endpoint", "workbook's own 2,783 meals-served summary"],
           locator: "Event headers and workbook aggregate",
           confidence: "high",
           renderCitation: false
@@ -567,6 +571,7 @@ export const googleDriveSharedDrivesProduction = {
       ],
       boundaries: [
         "Keep the workbook and all participant-level records protected.",
+        "Attribute 2,783 to the workbook summary; an aggregate column audit found 2,769 marks and did not recover the reason for the difference.",
         "Retain the softer 300-plus public summary where brevity serves the composition.",
         "Do not combine gathering and residency metrics as though one source proves both."
       ],
@@ -785,27 +790,31 @@ export const googleDriveSharedDrivesProduction = {
       project: "sunday-dinner",
       question: "What separate source set can corroborate the 20-plus resident-artist count and clarify the division of labor across Sunday Dinner and 196 Artists Residency without exposing participants?",
       methods: [
-        "Close-read the protected Sunday Dinner workbook only for aggregate event and meal evidence.",
+        "Close-read the complete protected Sunday Dinner workbook only for aggregate event and meal evidence.",
+        "Audited all sequence columns and numeric marks without exporting participant rows.",
         "Reviewed one Jamie-authored 196 Artists acceptance workflow and its revision history.",
         "Kept gathering scale, meals, residency operations, and resident count as separate propositions."
       ],
       runAt: reviewedAt,
       resultStatus: "partially-recovered",
       findings: [
-        "The ledger supports 300-plus gatherings through a numbered sequence reaching 345 and records 2,783 meals served.",
+        "The ledger supports 300-plus gatherings through a numbered sequence reaching 345, while its own summary records 2,783 meals served.",
+        "The complete aggregate audit found 2,769 numeric marks across 349 sequence columns, 14 fewer than the workbook summary; the reason was not recovered.",
         "One 2023 workflow supports Jamie's role in acceptance, space configuration, arrival, and collaborator-access planning.",
         "The 20-plus resident-artist count remains approved public wording but was not independently established by this Shared Drive sample."
       ],
       limitations: [
         "Participant identities, contact information, attendance history, access details, and correspondence remain protected.",
-        "The ledger was not independently recalculated cell by cell.",
+        "The cause of the 14-mark difference remains unknown and is not inferred.",
+        "Rows and numeric marks do not establish unique participants or complete physical attendance.",
         "One residency workflow cannot establish the total resident count or all participant outcomes."
       ],
       sourceIds: [
         "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER",
+        "SRC-SUNDAY-DINNER-AGGREGATE-AUDIT-2026",
         "SRC-GDRIVE-196-ACCEPTANCE-WORKFLOW-2023"
       ],
-      publicSummary: "Protected aggregate records now support the 300-plus gathering claim and document a concrete residency-onboarding workflow; the separate 20-plus resident count still needs normalized source support.",
+      publicSummary: "Protected aggregate records support the 300-plus gathering claim; the workbook's 2,783 meals-served figure remains an attributed summary after an audit found a small unresolved difference, and the separate 20-plus resident count still needs normalized source support.",
       protectedLocatorId: "RESEARCH-SUNDAY-DINNER-196-SCALE-2026"
     },
     {

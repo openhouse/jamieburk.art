@@ -13,6 +13,7 @@ import { nycacSocialCorpus } from "./nycac-social-corpus.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { nterChngArchive } from "./nterchng-archive.ts";
 import { personalWowlistFacebookEvents } from "./personal-wowlist-facebook-events.ts";
+import { participationInfrastructureProduction } from "./participation-infrastructure-production.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaArchiveProduction } from "./social-media-archive-production.ts";
@@ -56,6 +57,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.intakeItems,
     ...nterChngArchive.intakeItems,
     ...personalWowlistFacebookEvents.intakeItems,
+    ...participationInfrastructureProduction.intakeItems,
     ...wowListFacebookPosts.intakeItems,
     ...callNycSocialCorpus.intakeItems,
     ...wowlistSocialCorpus.intakeItems,
@@ -95,6 +97,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.observations,
     ...nterChngArchive.observations,
     ...personalWowlistFacebookEvents.observations,
+    ...participationInfrastructureProduction.observations,
     ...wowListFacebookPosts.observations,
     ...callNycSocialCorpus.observations,
     ...wowlistSocialCorpus.observations,
@@ -261,6 +264,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.sources,
     ...nterChngArchive.sources,
     ...personalWowlistFacebookEvents.sources,
+    ...participationInfrastructureProduction.sources,
     ...wowListFacebookPosts.sources,
     ...callNycSocialCorpus.sources,
     ...wowlistSocialCorpus.sources,
@@ -380,6 +384,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.claims,
     ...nterChngArchive.claims,
     ...personalWowlistFacebookEvents.claims,
+    ...participationInfrastructureProduction.claims,
     ...wowListFacebookPosts.claims,
     ...callNycSocialCorpus.claims,
     ...wowlistSocialCorpus.claims,
@@ -439,6 +444,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.researchInquiries,
     ...nterChngArchive.researchInquiries,
     ...personalWowlistFacebookEvents.researchInquiries,
+    ...participationInfrastructureProduction.researchInquiries,
     ...wowListFacebookPosts.researchInquiries,
     ...callNycSocialCorpus.researchInquiries,
     ...wowlistSocialCorpus.researchInquiries,
@@ -484,6 +490,7 @@ const knowledgeBankInput = {
     id: "wowlist",
     surface: "/work/wowlist",
     sourceOrder: [
+      "SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026",
       "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
       "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
       "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
@@ -493,6 +500,11 @@ const knowledgeBankInput = {
       "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
     ],
     occurrences: [{
+      id: "historical-aggregate-scale",
+      claimId: "CLM-WOWLIST-HISTORICAL-AGGREGATE-SCALE",
+      projection: "case-study",
+      sourceIds: ["SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026"]
+    }, {
       id: "public-support-surface",
       claimId: "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
       projection: "case-study",
@@ -520,6 +532,8 @@ const knowledgeBankInput = {
       "SRC-NYCAC-SUPPORTERS-LIST",
       "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
       "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+      "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+      "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017",
       "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
       "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
       "SRC-NYC-SBJSA-HEARING-2018-10-22"
@@ -527,7 +541,7 @@ const knowledgeBankInput = {
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"] },
       { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
-      { id: "participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026", "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017", "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12"] },
+      { id: "participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026", "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017", "SRC-CALLSCRIPT-DCLA-EVENT-2017", "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017", "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12"] },
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] }
     ]

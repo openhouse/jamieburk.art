@@ -145,6 +145,8 @@ const eventObservationIds = selectedEvents.map((event) =>
 const participationSourceIds = [
   "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
   "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+  "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+  "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017",
   "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
   "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"
 ] as const;
@@ -363,12 +365,12 @@ export const nycacFacebookEvents = {
     },
     {
       id: "CLM-NYCAC-PARTICIPATION-SYSTEM", project: "nyc-artist-coalition", internalClaim: "Jamie describes his contribution as helping establish and produce NYC Artist Coalition's recurring participation system across public event pages, meetings rotated among cultural spaces, practical support sessions, public hearings, and campaign action.", status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "Jamie describes his contribution as helping establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+      projections: [{ key: "case-study", text: "Jamie describes his contribution as helping establish and produce the coalition's recurring participation system. In one early example, a Call Script discussion gathered compliance, grant, insurance, legal, and meeting-access needs before a Department of Cultural Affairs session; the wider system used public event pages, meetings rotated among cultural spaces, practical support sessions, hearings, and campaigns to keep carrying concerns into civic action.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
       evidence: [
         { sourceId: "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026", relationship: "private-support", supports: ["Jamie's first-person account of his event-system contribution and WOWList lineage"], confidence: "moderate", renderCitation: false },
         ...participationSourceIds.map((sourceId) => ({ sourceId, relationship: sourceId.includes("BEDFORD") || sourceId.includes("GOTHAMIST") ? "corroborating" as const : "direct-support" as const, supports: [sourceId === "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026" ? "the recurring event and venue pattern" : "one documented part of the participation system"], confidence: "high" as const, renderCitation: true }))
       ],
-      boundaries: ["Attribute the broad role to Jamie's first-person account; the event pages and outcomes are collective surfaces.", "The rotating-venue pattern does not establish an uninterrupted monthly schedule or a different venue for every coalition event.", "Independent reporting corroborates specific Jamie organizing and speaking roles, not production responsibility for the entire event population."],
+      boundaries: ["Attribute the broad role to Jamie's first-person account; the event pages, shared-account discussion, and outcomes are collective surfaces.", "The Call Script thread establishes pre-meeting listening, not individual post authorship, representative consensus, DCLA adoption, or policy impact.", "The rotating-venue pattern does not establish an uninterrupted monthly schedule or a different venue for every coalition event.", "Independent reporting corroborates specific Jamie organizing and speaking roles, not production responsibility for the entire event population."],
       antiClaims: ["Jamie alone organized every event.", "Jamie authored every event page.", "The event system alone caused legislative or agency outcomes."], researchInquiryIds: ["INQ-NYCAC-EVENT-PRODUCTION-CREDIT"], reviewedAt, reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {

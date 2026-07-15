@@ -119,3 +119,10 @@ surfaces and WOW List's Page event surface. It reconciles 502 profile IDs and
 21 hosted-tab IDs with 18 overlaps, preserves an anonymous 20-card
 displayed-host census and selected public event plot points, and keeps the
 wider personal association graph outside the repository.
+
+See
+[projects/participation-infrastructure-2026-07-15.md](projects/participation-infrastructure-2026-07-15.md)
+for the bounded aggregate audits of WOW List and Sunday Dinner plus the public
+Call Script evidence connecting a calendar surface, a calling tool, and an early
+NYC Artist Coalition listening workflow. The report preserves denominator,
+attendance, shared-account, and collective-credit boundaries.

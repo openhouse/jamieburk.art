@@ -354,7 +354,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, the archived public product surface, and a July 2026 public-safe aggregate audit of protected historical database snapshots.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -372,7 +373,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "wowlist-public-support-surface",
@@ -421,9 +422,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, public community context, public event pages documenting the 100th dinner, an eight-week New York City rotation, and a civic sign-making potluck, a protected event ledger recording 345 numbered gatherings and 2,783 meals served, and a Jamie-authored residency onboarding workflow.",
+      "Approved resume language, public community context, public event pages documenting the 100th dinner, an eight-week New York City rotation, and a civic sign-making potluck, a protected event ledger recording 345 numbered gatherings whose own summary records 2,783 meals served, a July 2026 aggregate audit that found a small unresolved difference, and a Jamie-authored residency onboarding workflow.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only, attribute 2,783 to the workbook's own summary, do not convert ledger rows or marks into unique attendees, and avoid turning community trust work into spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",

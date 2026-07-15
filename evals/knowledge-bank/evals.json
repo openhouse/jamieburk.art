@@ -647,7 +647,7 @@
       "expectedLedgerSha256": "c90245a454e7fdf1cf48f499a2abad7c717762da1e3b6135b8dc18c0062911fa",
       "expectedLedgerMetadataSha256": "22fc6d051dd57a476015117ca5aa9e91d27db861faf4d57df86a9451edc1124d",
       "expectedKnowledgeGraphSha256": "67de57f549c5145936116c50b3579a2c94d87e7cd41f28873154036818a4e4f0",
-      "expectedPublicSurfaceSha256": "c84a1c690b5e5c771c8e7b34f7241a8957329e43a16fae6279a687d343800134",
+      "expectedPublicSurfaceSha256": "958bf4e8d77d69e56dc099a8392dece270745efdc8ddb5bccdbfbbdd10ddd92e",
       "expectedCrossLedgerSha256": "44929bacce524518dbe8951f51318b35adfa1ce0861d7ab95584c16339d3c401",
       "expectedSemanticContractSha256": "5e735233a76fe98098c09bc9f6e8f4c170bd1bbfbd7e2e84104ba8ac0a8d34dd",
       "methodContract": {
@@ -1148,6 +1148,73 @@
         "INQ-FB-JAMIE-COUNCILSTAT-ROLE-2026"
       ],
       "heldClaimId": "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE"
+    },
+    "participationInfrastructureProduction": {
+      "reportPath": "docs/knowledge-bank/projects/participation-infrastructure-2026-07-15.md",
+      "expectedIntakeCount": 3,
+      "expectedObservationCount": 10,
+      "expectedSourceCount": 6,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 3,
+      "expectedAudit": {
+        "wowlistUsers2016": 995,
+        "wowlistUsers2017": 1846,
+        "wowlistPosts2016": 10136,
+        "wowlistPosts2017": 16142,
+        "geocodedPosts": 12433,
+        "qualifyingGeographies": 35,
+        "popularVoteEvents": 933,
+        "popularVoteFollowerAccounts": 196,
+        "sundayDinnerNumberedColumns": 345,
+        "sundayDinnerSequenceColumns": 349,
+        "sundayDinnerColumnMarks": 2769,
+        "sundayDinnerWorkbookSummary": 2783,
+        "sundayDinnerDifference": 14,
+        "callscriptRepositoryCommits": 24,
+        "callscriptEventResponseDisplay": 445
+      },
+      "intakeIds": [
+        "INTAKE-WOWLIST-DATABASE-SNAPSHOT-AUDIT-2026",
+        "INTAKE-SUNDAY-DINNER-ATTENDANCE-AUDIT-2026",
+        "INTAKE-CALLSCRIPT-PARTICIPATION-BRIDGE-2026"
+      ],
+      "sourceIds": [
+        "SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026",
+        "SRC-SUNDAY-DINNER-AGGREGATE-AUDIT-2026",
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+        "SRC-CALLSCRIPT-PUBLIC-REPOSITORY",
+        "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+        "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017"
+      ],
+      "claimIds": [
+        "CLM-WOWLIST-HISTORICAL-AGGREGATE-SCALE",
+        "CLM-WOWLIST-POPULAR-VOTE-TRACTION",
+        "CLM-SUNDAY-DINNER-LEDGER-AGGREGATE-AUDIT",
+        "CLM-CALLSCRIPT-DCLA-LISTENING-WORKFLOW",
+        "CLM-PARTICIPATION-INFRASTRUCTURE-CONTINUITY"
+      ],
+      "inquiryIds": [
+        "INQ-WOWLIST-POPULAR-VOTE-PARTICIPATION",
+        "INQ-SUNDAY-DINNER-LEDGER-RECONCILIATION",
+        "INQ-CALLSCRIPT-NYCAC-SEQUENCE-AND-CREDIT"
+      ],
+      "activeClaimId": "CLM-WOWLIST-HISTORICAL-AGGREGATE-SCALE",
+      "heldClaimIds": [
+        "CLM-WOWLIST-POPULAR-VOTE-TRACTION",
+        "CLM-SUNDAY-DINNER-LEDGER-AGGREGATE-AUDIT",
+        "CLM-CALLSCRIPT-DCLA-LISTENING-WORKFLOW",
+        "CLM-PARTICIPATION-INFRASTRUCTURE-CONTINUITY"
+      ],
+      "selectedNycacClaimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "requiredNycacSourceIds": [
+        "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+        "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017"
+      ],
+      "proofIds": [
+        "wowlist-community-platform",
+        "sunday-dinner-196-participation-infrastructure",
+        "nyc-artist-coalition-civic-systems"
+      ]
     }
   },
   "criteria": [
@@ -1325,6 +1392,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every record returned by the authenticated Posted by You surface receives a public-safe disposition; year, form, audience, mission, URL, and selected-source controls reconcile; unknown-audience and ordinary-life material remain protected; posted routes remain source leads; outbound stakeholder references remain distinct from inbound engagement; mutable counters remain distinct from people and impact; collective credit and unresolved CouncilStat role language stay bounded; and archive depth does not force a new site projection."
+    },
+    {
+      "id": "KB-EVAL-PARTICIPATION-INFRASTRUCTURE",
+      "label": "Participation-infrastructure archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Protected WOW List and Sunday Dinner records become bounded public-safe aggregates; the Call Script public record preserves a concrete listening workflow; database relationships, ledger marks, platform responses, attendance, authorship, and outcomes remain distinct; collective credit survives; and only audience-useful claims are composed into the site."
     }
   ],
   "hillClimb": {

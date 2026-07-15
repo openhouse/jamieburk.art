@@ -12,6 +12,7 @@ import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFac
 import { nycacFacebookPostAudit, nycacFacebookPosts } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts";
 import { nterChngArchive } from "../../apps/www/src/data/knowledge-bank/nterchng-archive.ts";
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
+import { participationInfrastructureAudit, participationInfrastructureProduction } from "../../apps/www/src/data/knowledge-bank/participation-infrastructure-production.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { urbanhermitCorpusFindings, urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
 import { wowListFacebookPosts } from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts";
@@ -100,6 +101,10 @@ const jamiePersonalFacebookPostReport = readFileSync(
   new URL("../../docs/knowledge-bank/projects/jamie-personal-facebook-posts.md", import.meta.url),
   "utf8"
 );
+const participationInfrastructureReport = readFileSync(
+  new URL("../../docs/knowledge-bank/projects/participation-infrastructure-2026-07-15.md", import.meta.url),
+  "utf8"
+);
 const fairRentMdx = readFileSync(
   new URL("../../apps/www/src/content/work/fair-rent-nyc.mdx", import.meta.url),
   "utf8"
@@ -130,6 +135,10 @@ const kcSpacesFundFacebookPostCriterionScore = (result) =>
 const jamiePersonalFacebookPostCriterionScore = (result) =>
   result.criteria.find(
     (item) => item.criterionId === "KB-EVAL-JAMIE-PERSONAL-FACEBOOK-POSTS"
+  )?.score;
+const participationInfrastructureCriterionScore = (result) =>
+  result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-PARTICIPATION-INFRASTRUCTURE"
   )?.score;
 
 function evaluateEventLedgerWithReboundDigest(altered) {
@@ -3963,6 +3972,136 @@ test("Jamie personal Facebook report preserves population, source, stakeholder, 
   assert.match(jamiePersonalFacebookPostReport, /outbound/);
   assert.match(jamiePersonalFacebookPostReport, /usable participation route/);
   assert.match(jamiePersonalFacebookPostReport, /does not mention Jamie/);
+});
+
+test("participation-infrastructure production preserves exact bounded aggregates", () => {
+  assert.deepEqual(
+    {
+      intakeItems: participationInfrastructureProduction.intakeItems.length,
+      observations: participationInfrastructureProduction.observations.length,
+      sources: participationInfrastructureProduction.sources.length,
+      claims: participationInfrastructureProduction.claims.length,
+      researchInquiries: participationInfrastructureProduction.researchInquiries.length
+    },
+    { intakeItems: 3, observations: 10, sources: 6, claims: 5, researchInquiries: 3 }
+  );
+  assert.deepEqual(
+    {
+      wowlistUsers: participationInfrastructureAudit.wowlist.laterUsers,
+      wowlistPosts: participationInfrastructureAudit.wowlist.laterPosts,
+      geographies: participationInfrastructureAudit.wowlist.qualifyingCityRegionCountryGroups,
+      popularVoteEvents: participationInfrastructureAudit.wowlist.popularVote.eventRecords,
+      popularVoteFollowerAccounts:
+        participationInfrastructureAudit.wowlist.popularVote.distinctFollowerAccounts,
+      sundayDinnerColumns: participationInfrastructureAudit.sundayDinner.sequenceColumns,
+      sundayDinnerMarks: participationInfrastructureAudit.sundayDinner.allSequenceColumnMarks,
+      sundayDinnerSummary:
+        participationInfrastructureAudit.sundayDinner.workbookMealsServedSummary,
+      sundayDinnerDifference:
+        participationInfrastructureAudit.sundayDinner.summaryReconciliationDifference,
+      callscriptCommits: participationInfrastructureAudit.callscript.repositoryCommits
+    },
+    {
+      wowlistUsers: 1846,
+      wowlistPosts: 16142,
+      geographies: 35,
+      popularVoteEvents: 933,
+      popularVoteFollowerAccounts: 196,
+      sundayDinnerColumns: 349,
+      sundayDinnerMarks: 2769,
+      sundayDinnerSummary: 2783,
+      sundayDinnerDifference: 14,
+      callscriptCommits: 24
+    }
+  );
+  assert.equal(
+    participationInfrastructureCriterionScore(evaluateKnowledgeBank(suite)),
+    5
+  );
+});
+
+test("participation-infrastructure production keeps protected rows and paths out of the repo", () => {
+  const protectedSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER"
+  );
+  const publicAuditSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-SUNDAY-DINNER-AGGREGATE-AUDIT-2026"
+  );
+  const publicText = `${JSON.stringify(participationInfrastructureProduction)}\n${participationInfrastructureReport}`;
+  assert.equal(protectedSource?.visibility, "private");
+  assert.equal(protectedSource?.canonicalUrl, undefined);
+  assert.equal(publicAuditSource?.visibility, "public");
+  assert.doesNotMatch(
+    publicText,
+    /(?:\/Users\/|\/Volumes\/|\/private\/|docs\.google\.com\/spreadsheets|participantProfiles|rawRows)/i
+  );
+});
+
+test("participation-infrastructure eval rejects activation of a held ledger claim", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-SUNDAY-DINNER-LEDGER-AGGREGATE-AUDIT"
+  );
+  assert.ok(claim);
+  const originalProjection = structuredClone(claim.projections[0]);
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/196-sunday-dinner"];
+    assert.equal(
+      participationInfrastructureCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.projections[0] = originalProjection;
+  }
+});
+
+test("participation-infrastructure eval requires the Call Script listening evidence", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-PARTICIPATION-SYSTEM"
+  );
+  assert.ok(claim);
+  const originalEvidence = [...claim.evidence];
+  try {
+    claim.evidence = claim.evidence.filter(
+      (item) => item.sourceId !== "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017"
+    );
+    assert.equal(
+      participationInfrastructureCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.evidence = originalEvidence;
+  }
+});
+
+test("participation-infrastructure eval rejects platform responses converted to attendance", () => {
+  const claim = participationInfrastructureProduction.claims.find(
+    (item) => item.id === "CLM-CALLSCRIPT-DCLA-LISTENING-WORKFLOW"
+  );
+  assert.ok(claim);
+  const originalText = claim.projections[0].text;
+  try {
+    claim.projections[0].text =
+      "Facebook response totals prove that 445 people attended.";
+    assert.equal(
+      participationInfrastructureCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.projections[0].text = originalText;
+  }
+});
+
+test("participation-infrastructure eval rejects public reports containing private paths", () => {
+  assert.equal(
+    participationInfrastructureCriterionScore(
+      evaluateKnowledgeBank(suite, {
+        participationInfrastructureReport:
+          `${participationInfrastructureReport}\n/Users/jburkart/private-ledger.xlsx`
+      })
+    ),
+    1
+  );
 });
 
 test("complete maturation pilot meets every floor", () => {

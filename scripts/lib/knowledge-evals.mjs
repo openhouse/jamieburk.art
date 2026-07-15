@@ -13,6 +13,7 @@ import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFac
 import { nycacFacebookPostAudit, nycacFacebookPosts } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts";
 import { nycacCorpusFindings, nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
+import { participationInfrastructureAudit, participationInfrastructureProduction } from "../../apps/www/src/data/knowledge-bank/participation-infrastructure-production.ts";
 import { personalWowlistFacebookEvents } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
@@ -28,8 +29,8 @@ const suitePath = path.join(repoRoot, "evals/knowledge-bank/evals.json");
 const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json");
 const nycacEventLedgerPublicContractSha256 = "79b8cb8b652b01a6e96d46aa51dd47b519efc03ac3bf8514eb6cbb5141ef09d7";
 const nycacLinkLedgerPublicContractSha256 = "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02";
-const nycacCanonicalGraphPublicContractSha256 = "c942679699704f89955c15c8d878bb3e9e1ff14db8abce0a68db2e3d4c51f06f";
-const nycacNarrativePublicContractSha256 = "e20cf77971f58772ad8fa3d4dd9b3b46d7eda995e73228481d639b9fada823d6";
+const nycacCanonicalGraphPublicContractSha256 = "c5d618f1d8e638354f869d0072fcb6d1820eb453463b824b6367168031f496bf";
+const nycacNarrativePublicContractSha256 = "925d39817101fb4a4bb98282cb6d88e64e3033abf13641f5c51e560c13f7b37e";
 
 export function loadKnowledgeEvalSuite() {
   return JSON.parse(readFileSync(suitePath, "utf8"));
@@ -1361,7 +1362,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       wowFullProof.sourceIds.includes(wowFull.auditSourceId) &&
       wowFullOccurrence?.claimId === wowFull.activeClaimId &&
       wowFullOccurrence.sourceIds.length === 7 &&
-      wowFullPage?.sourceOrder.length === 7 &&
+      wowFullPage?.sourceOrder.length === 8 &&
+      wowFullPage.sourceOrder.includes("SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026") &&
       wowlistMdx.includes(wowFull.activeClaimId) &&
       wowlistMdx.includes("public-support-surface") &&
       wowDocumentation.includes("all 38 unique items") &&
@@ -4504,9 +4506,172 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const jamiePersonalFacebookPostPopulationComplete = Object.values(
     personalFacebookDiagnostics
   ).every(Boolean);
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...kcPhaseObservations, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations, ...kcSpacesFacebookObservations, ...personalFacebookObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...kcPhaseClaims, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims, ...kcSpacesFacebookClaims, ...personalFacebookClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...kcPhaseInquiries, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries, ...kcSpacesFacebookInquiries, ...personalFacebookInquiries];
+  const participation = suite.pilot.participationInfrastructureProduction;
+  const participationIntakes = participation.intakeIds.map((id) => intakeById.get(id));
+  const participationSources = participation.sourceIds.map((id) => sourceById.get(id));
+  const participationClaims = participation.claimIds.map((id) => claimById.get(id));
+  const participationInquiries = participation.inquiryIds.map((id) => inquiryById.get(id));
+  const participationObservations = participationInfrastructureProduction.observations.map(
+    (observation) => observationById.get(observation.id)
+  );
+  const participationActiveClaim = claimById.get(participation.activeClaimId);
+  const participationHeldClaims = participation.heldClaimIds.map((id) => claimById.get(id));
+  const participationNycacClaim = claimById.get(participation.selectedNycacClaimId);
+  const participationWowlistPage = knowledgeBank.pages.find((page) => page.id === "wowlist");
+  const participationProofCoverage = participation.proofIds.map((id) =>
+    knowledgeBank.proofCoverageTargets.find((target) => target.proofId === id)
+  );
+  const participationReportPath = path.join(repoRoot, participation.reportPath);
+  const participationReport = fixtures.participationInfrastructureReport ??
+    (existsSync(participationReportPath) ? readFileSync(participationReportPath, "utf8") : "");
+  const participationInspectionText = JSON.stringify(
+    participationInfrastructureProduction
+  );
+  const participationAssertedText = JSON.stringify({
+    observations: participationInfrastructureProduction.observations.map((item) => item.text),
+    sourceNotes: participationInfrastructureProduction.sources.map((item) => item.publicNote),
+    claims: participationInfrastructureProduction.claims.map((item) => ({
+      internalClaim: item.internalClaim,
+      projections: item.projections.map((projection) => projection.text)
+    })),
+    inquiries: participationInfrastructureProduction.researchInquiries.map((item) => ({
+      findings: item.findings,
+      publicSummary: item.publicSummary
+    }))
+  });
+  const participationProjectionText = participationInfrastructureProduction.claims
+    .flatMap((item) => item.projections.map((projection) => projection.text))
+    .concat(
+      participationNycacClaim?.projections.map((projection) => projection.text) ?? []
+    )
+    .join("\n");
+  const participationAuditExpected = participation.expectedAudit;
+  const participationDiagnostics = {
+    recordCounts: Boolean(
+      participationInfrastructureProduction.intakeItems.length === participation.expectedIntakeCount &&
+      participationInfrastructureProduction.observations.length === participation.expectedObservationCount &&
+      participationInfrastructureProduction.sources.length === participation.expectedSourceCount &&
+      participationInfrastructureProduction.claims.length === participation.expectedClaimCount &&
+      participationInfrastructureProduction.researchInquiries.length === participation.expectedInquiryCount &&
+      participationIntakes.every(Boolean) &&
+      participationObservations.every(Boolean) &&
+      participationSources.every(Boolean) &&
+      participationClaims.every(Boolean) &&
+      participationInquiries.every(Boolean)
+    ),
+    exactAggregates: Boolean(
+      participationInfrastructureAudit.wowlist.earlierUsers === participationAuditExpected.wowlistUsers2016 &&
+      participationInfrastructureAudit.wowlist.laterUsers === participationAuditExpected.wowlistUsers2017 &&
+      participationInfrastructureAudit.wowlist.earlierPosts === participationAuditExpected.wowlistPosts2016 &&
+      participationInfrastructureAudit.wowlist.laterPosts === participationAuditExpected.wowlistPosts2017 &&
+      participationInfrastructureAudit.wowlist.geocodedPosts === participationAuditExpected.geocodedPosts &&
+      participationInfrastructureAudit.wowlist.qualifyingCityRegionCountryGroups === participationAuditExpected.qualifyingGeographies &&
+      participationInfrastructureAudit.wowlist.popularVote.eventRecords === participationAuditExpected.popularVoteEvents &&
+      participationInfrastructureAudit.wowlist.popularVote.distinctFollowerAccounts === participationAuditExpected.popularVoteFollowerAccounts &&
+      participationInfrastructureAudit.sundayDinner.numberedEventColumns === participationAuditExpected.sundayDinnerNumberedColumns &&
+      participationInfrastructureAudit.sundayDinner.sequenceColumns === participationAuditExpected.sundayDinnerSequenceColumns &&
+      participationInfrastructureAudit.sundayDinner.allSequenceColumnMarks === participationAuditExpected.sundayDinnerColumnMarks &&
+      participationInfrastructureAudit.sundayDinner.workbookMealsServedSummary === participationAuditExpected.sundayDinnerWorkbookSummary &&
+      participationInfrastructureAudit.sundayDinner.summaryReconciliationDifference === participationAuditExpected.sundayDinnerDifference &&
+      participationInfrastructureAudit.callscript.repositoryCommits === participationAuditExpected.callscriptRepositoryCommits &&
+      participationInfrastructureAudit.callscript.eventResponseDisplay === participationAuditExpected.callscriptEventResponseDisplay
+    ),
+    linkedGraph: Boolean(
+      participationIntakes.every(
+        (item) => item?.sourceIds.every((id) => sourceById.has(id)) &&
+          item.observationIds.every((id) => observationById.has(id)) &&
+          item.researchInquiryIds.every((id) => inquiryById.has(id))
+      ) &&
+      participationObservations.every(
+        (item) => item?.sourceId && sourceById.has(item.sourceId) &&
+          item.limitations.length >= 2 &&
+          item.claimIds.every((id) => claimById.has(id)) &&
+          item.researchInquiryIds.every((id) => inquiryById.has(id))
+      ) &&
+      participationClaims.every(
+        (item) => item?.evidence.every((evidence) => sourceById.has(evidence.sourceId)) &&
+          item.boundaries.length >= 2 &&
+          item.antiClaims.length >= 3
+      ) &&
+      participationInquiries.every(
+        (item) => item?.sourceIds.every((id) => sourceById.has(id)) &&
+          item.findings.length >= 2 &&
+          item.limitations.length >= 2
+      )
+    ),
+    sourceScope: Boolean(
+      participationSources.every(
+        (source) => source?.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      sourceById.get("SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER")?.visibility === "private" &&
+      !sourceById.get("SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER")?.canonicalUrl &&
+      sourceById.get("SRC-SUNDAY-DINNER-AGGREGATE-AUDIT-2026")?.visibility === "public"
+    ),
+    projectionDiscipline: Boolean(
+      participationActiveClaim?.projections.some(
+        (projection) => projection.status === "active" && projection.surfaces.includes("/work/wowlist")
+      ) &&
+      participationHeldClaims.every(
+        (claim) => claim?.projections.every(
+          (projection) => projection.status === "hold" && projection.surfaces.length === 0
+        )
+      ) &&
+      participationWowlistPage?.sourceOrder.includes("SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026") &&
+      participationWowlistPage?.occurrences.some(
+        (occurrence) => occurrence.claimId === participation.activeClaimId && occurrence.id === "historical-aggregate-scale"
+      ) &&
+      wowlistMdx.includes(participation.activeClaimId)
+    ),
+    listeningWorkflow: Boolean(
+      participation.requiredNycacSourceIds.every((id) =>
+        participationNycacClaim?.evidence.some((evidence) => evidence.sourceId === id)
+      ) &&
+      participation.requiredNycacSourceIds.every((id) =>
+        fairRentPage?.sourceOrder.includes(id)
+      ) &&
+      /compliance, grant, insurance, legal, and meeting-access needs/i.test(
+        participationNycacClaim?.projections.find((projection) => projection.status === "active")?.text ?? ""
+      ) &&
+      participationNycacClaim?.boundaries.some((boundary) => /shared[- ]account/i.test(boundary)) &&
+      participationNycacClaim?.antiClaims.some((claim) => /sole|alone/i.test(claim))
+    ),
+    proofCoverage: Boolean(
+      participationProofCoverage.every(Boolean) &&
+      participationProofCoverage.find((item) => item?.proofId === "wowlist-community-platform")?.status === "source-backed" &&
+      participationProofCoverage.find((item) => item?.proofId === "wowlist-community-platform")?.sourceIds.includes("SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026") &&
+      participationProofCoverage.find((item) => item?.proofId === "sunday-dinner-196-participation-infrastructure")?.sourceIds.includes("SRC-SUNDAY-DINNER-AGGREGATE-AUDIT-2026") &&
+      participation.requiredNycacSourceIds.every((id) =>
+        participationProofCoverage.find((item) => item?.proofId === "nyc-artist-coalition-civic-systems")?.sourceIds.includes(id)
+      )
+    ),
+    reportContract: Boolean(
+      participationReport.includes("1,846") &&
+      participationReport.includes("16,142 posts/events") &&
+      participationReport.includes("933") &&
+      participationReport.includes("196") &&
+      participationReport.includes("2,769") &&
+      participationReport.includes("2,783") &&
+      participationReport.includes("14") &&
+      participationReport.includes("445 people responded") &&
+      /not (?:physical )?attendance/i.test(participationReport) &&
+      /selective projection/i.test(participationReport)
+    ),
+    publicSafety: Boolean(
+      !/(?:\/Users\/|\/Volumes\/|\/private\/|Google Drive\/|docs\.google\.com\/spreadsheets)/i.test(
+        `${participationInspectionText}\n${participationReport}`
+      ) &&
+      !containsUnsafeAttendanceConversion(participationAssertedText) &&
+      !containsNycacSoleCreditClaim(participationProjectionText) &&
+      !participationInspectionText.includes("participantProfiles") &&
+      !participationInspectionText.includes("rawRows")
+    )
+  };
+  const participationInfrastructureComplete = Object.values(
+    participationDiagnostics
+  ).every(Boolean);
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...kcPhaseObservations, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations, ...kcSpacesFacebookObservations, ...personalFacebookObservations, ...participationObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...kcPhaseClaims, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims, ...kcSpacesFacebookClaims, ...personalFacebookClaims, ...participationClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...kcPhaseInquiries, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries, ...kcSpacesFacebookInquiries, ...personalFacebookInquiries, ...participationInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -4770,6 +4935,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [jamiePersonalFacebookPostPopulationComplete
         ? `All ${personalFacebook.expectedUniqueRecords} records returned by the authenticated owner-filtered surface are reconciled across ${personalFacebook.expectedCursorPages} cursor pages; year, form, audience, mission, URL, stakeholder, and selected-public-source controls remain bounded; raw and unknown-audience material stays protected; ${personalFacebook.expectedUniqueNormalizedExternalUrls} destinations remain a source queue; outbound stakeholder routes, mutable counters, collective credit, and unresolved CouncilStat role language remain distinct from engagement and impact; and no visible portfolio claim is forced`
         : `Jamie personal Facebook post criterion failed: ${Object.entries(personalFacebookDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
+    },
+    {
+      criterionId: "KB-EVAL-PARTICIPATION-INFRASTRUCTURE",
+      score: score(participationInfrastructureComplete),
+      evidence: [participationInfrastructureComplete
+        ? `WOW List's two-snapshot scale and Popular Vote relationships, Sunday Dinner's complete aggregate column audit, and Call Script's public participation workflow are integrated with denominator, attendance, shared-account, collective-credit, and selective-projection boundaries intact`
+        : `Participation-infrastructure criterion failed: ${Object.entries(participationDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
     }
   ];
 

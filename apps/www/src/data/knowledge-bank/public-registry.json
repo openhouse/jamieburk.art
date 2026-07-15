@@ -473,6 +473,73 @@
       ]
     },
     {
+      "id": "SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026",
+      "title": "Public-safe aggregate audit of historical WOW List database snapshots",
+      "organization": "WOW List archival production",
+      "author": "Codex with Jamie Burkart",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/participation-infrastructure-2026-07-15.md#wow-list-database-audit",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart and Codex, public-safe aggregate audit of historical WOW List database snapshots, July 15, 2026.",
+      "publicNote": "The report preserves aggregate counts, comparison dates, a reproducible geography rule, and limitations; protected database rows and archive locations are not published.",
+      "doesNotEstablish": [
+        "current platform status",
+        "active-user totals",
+        "physical attendance",
+        "official city chapters",
+        "movement membership or endorsement",
+        "individual authorship of every record",
+        "policy impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+      "title": "NYC DIY Spaces post Ghost Ship: Department of Cultural Affairs Meeting",
+      "organization": "NYC Artist Coalition, Call Script, and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-01-27",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/388137698233507/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, Call Script, and event partners, 'NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting,' Facebook event, January 27, 2017.",
+      "publicNote": "The public page names the host relationship, asks people to pack the room in support of DIY spaces and artists, and currently displays 445 people responded.",
+      "doesNotEstablish": [
+        "physical attendance",
+        "445 unique people",
+        "individual production roles",
+        "agreement among every host or respondent",
+        "agency adoption or policy impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017",
+      "title": "Call Script pre-meeting brainstorming thread for the DCLA DIY-spaces meeting",
+      "organization": "Call Script",
+      "kind": "public-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-01-25",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/388137698233507/?post_id=388162158231061&view=permalink",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Call Script, pre-meeting brainstorming thread in the January 27, 2017 DCLA DIY-spaces event discussion, January 25, 2017.",
+      "publicNote": "The thread asks what to request and records needs for safer compliance guidance, infrastructure and compliance grants, legal and insurance guidance, and a meeting time outside the workday.",
+      "doesNotEstablish": [
+        "individual authorship behind the shared account",
+        "representativeness of every comment",
+        "complete coalition priorities",
+        "DCLA adoption",
+        "grant delivery",
+        "policy impact"
+      ]
+    },
+    {
       "id": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
       "title": "Authenticated @CallNYCApp full-population recovery and public-post ledger",
       "organization": "CallNYC",
@@ -1157,7 +1224,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Jamie describes his contribution as helping establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.",
+          "text": "Jamie describes his contribution as helping establish and produce the coalition's recurring participation system. In one early example, a Call Script discussion gathered compliance, grant, insurance, legal, and meeting-access needs before a Department of Cultural Affairs session; the wider system used public event pages, meetings rotated among cultural spaces, practical support sessions, hearings, and campaigns to keep carrying concerns into civic action.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1185,6 +1252,24 @@
           "renderCitation": true
         },
         {
+          "sourceId": "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "one documented part of the participation system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "one documented part of the participation system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
           "sourceId": "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
           "relationship": "corroborating",
           "supports": [
@@ -1204,7 +1289,8 @@
         }
       ],
       "boundaries": [
-        "Attribute the broad role to Jamie's first-person account; the event pages and outcomes are collective surfaces.",
+        "Attribute the broad role to Jamie's first-person account; the event pages, shared-account discussion, and outcomes are collective surfaces.",
+        "The Call Script thread establishes pre-meeting listening, not individual post authorship, representative consensus, DCLA adoption, or policy impact.",
         "The rotating-venue pattern does not establish an uninterrupted monthly schedule or a different venue for every coalition event.",
         "Independent reporting corroborates specific Jamie organizing and speaking roles, not production responsibility for the entire event population."
       ]
@@ -1330,6 +1416,37 @@
       ],
       "boundaries": [
         "Testimony documents Jamie's role and position, not enactment or Council endorsement."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-HISTORICAL-AGGREGATE-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Aggregate historical records support 1,800+ users, 16,000+ posts/events, and activity across roughly 35 city ecosystems.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "two-snapshot user and post or event counts",
+            "the conservative 35-group geography threshold"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use approximate public scale language and retain the exact snapshot dates and threshold in the source note.",
+        "Describe city ecosystems or activity groups, not official chapters."
       ]
     },
     {
@@ -1720,6 +1837,7 @@
       "id": "wowlist",
       "surface": "/work/wowlist",
       "sourceOrder": [
+        "SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026",
         "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
         "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
         "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
@@ -1729,6 +1847,14 @@
         "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
       ],
       "occurrences": [
+        {
+          "id": "historical-aggregate-scale",
+          "claimId": "CLM-WOWLIST-HISTORICAL-AGGREGATE-SCALE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026"
+          ]
+        },
         {
           "id": "public-support-surface",
           "claimId": "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
@@ -1760,6 +1886,8 @@
         "SRC-NYCAC-SUPPORTERS-LIST",
         "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
         "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+        "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+        "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017",
         "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYC-SBJSA-HEARING-2018-10-22"
@@ -1791,6 +1919,8 @@
             "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
             "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
             "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+            "SRC-CALLSCRIPT-DCLA-EVENT-2017",
+            "SRC-CALLSCRIPT-DCLA-DISCUSSION-2017",
             "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12"
           ]
         },
