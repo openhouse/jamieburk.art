@@ -170,6 +170,11 @@ assert.ok(batch.includes("CLM-PERSONAL-FACEBOOK-EVENT-POPULATION"));
 assert.ok(batch.includes("CLM-SUNDAY-DINNER-FACEBOOK-MILESTONES"));
 assert.ok(batch.includes("CLM-WATER-FACEBOOK-PLANNING-SENDOFF"));
 assert.ok(batch.includes("CLM-NTER-CHNG-FACEBOOK-EVENT-TRACE"));
+assert.match(
+  batch,
+  /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/docs\/knowledge-bank\/corpora\/jamie-wowlist-facebook-events-full-population-2026-07-15\.json/
+);
+assert.ok(!batch.includes("blob/feature/evals-I/"));
 assert.ok(
   records.includes("personalWowListFacebookEventsFullPopulationBatch20260715")
 );

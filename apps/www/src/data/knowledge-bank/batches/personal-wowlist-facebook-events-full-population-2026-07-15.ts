@@ -130,7 +130,7 @@ export const personalWowListFacebookEventsFullPopulationBatch20260715: {
       capturedAt: reviewedAt,
       accessedAt: reviewedAt,
       assetUrl:
-        "https://github.com/openhouse/jamieburk.art/blob/feature/evals-I/docs/knowledge-bank/corpora/jamie-wowlist-facebook-events-full-population-2026-07-15.json",
+        "https://github.com/openhouse/jamieburk.art/blob/a23907741cf14f3bb1a34093aad5030c2a47211a/docs/knowledge-bank/corpora/jamie-wowlist-facebook-events-full-population-2026-07-15.json",
       preferredPublicUrl: "asset",
       publicCitation:
         "Public-safe census of Jamie Burkart's personal hosted Facebook events and the WOW List Page event surfaces exposed July 15, 2026.",
