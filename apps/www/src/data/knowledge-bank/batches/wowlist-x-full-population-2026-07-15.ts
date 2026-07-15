@@ -99,9 +99,11 @@ export const wowListXFullPopulationBatch20260715: {
       capturedAt: "2026-07-15",
       accessedAt: "2026-07-15",
       canonicalUrl: "https://x.com/wowlist/with_replies",
-      preferredPublicUrl: "canonical",
+      assetUrl:
+        "https://github.com/openhouse/jamieburk.art/blob/da03b440f240457ae251dbdeb0a9417830d2eef4/docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json",
+      preferredPublicUrl: "asset",
       publicCitation:
-        "Authenticated item-level review of the replies-inclusive @wowlist timeline, July 15, 2026.",
+        "Committed item-level corpus from the authenticated replies-inclusive @wowlist timeline review, July 15, 2026.",
       publicNote:
         "The profile reported 38 posts and the complete rendered timeline yielded 38 distinct canonical status IDs: 22 authored posts and 16 reposts. The repository preserves all 38 items, 35 posted short URLs with resolved destinations, and four inspected conversation contexts.",
       supportsGenerally: [

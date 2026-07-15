@@ -570,6 +570,11 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     Number(currentCorpusSource.publicNote.match(/yielded (\d+) distinct/)?.[1]),
     corpus.population.renderedDistinct
   );
+  assert.equal(currentCorpusSource.preferredPublicUrl, "asset");
+  assert.equal(
+    currentCorpusSource.assetUrl,
+    "https://github.com/openhouse/jamieburk.art/blob/da03b440f240457ae251dbdeb0a9417830d2eef4/docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json"
+  );
   assert.equal(
     Number(currentIntake.publicSafeSummary.match(/all (\d+) profile-reported/)?.[1]),
     corpus.population.profileReported
@@ -606,6 +611,9 @@ test("WOW List corpus accounts for the full profile-reported population and pres
       `Population: ${corpus.population.renderedDistinct} of ${corpus.population.profileReported} profile-reported items recovered`
     )
   );
+  assert.match(runNote, /capture surface and method, profile denominator/);
+  assert.match(runNote, /resolved short URLs, and four public conversation contexts/);
+  assert.match(runNote, /not private account or session credentials/);
   assert.match(
     socialInventory,
     /posted but unrecovered Good Times article the account described as concerning DIY documentation/

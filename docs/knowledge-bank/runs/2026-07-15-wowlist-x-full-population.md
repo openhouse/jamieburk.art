@@ -48,7 +48,7 @@ Attribute all account-level patterns to WOW List or the project team. Do not inf
 
 ## Public-safety boundary
 
-Only public profile, post, and conversation surfaces were inspected. No direct messages, account settings, follower export, private analytics, or session data were captured. The committed raw artifact contains public post text, URLs, dates, and visible interaction labels only.
+Only public profile, post, and conversation surfaces were inspected. No direct messages, account settings, follower export, private analytics, cookies, tokens, session identifiers, browser storage, or credentials were captured. The committed raw artifact records the verified public account label (`@urbanhermit`), capture surface and method, profile denominator, public post text and status URLs, dates, visible interaction labels, link nodes, media-presence flags, resolved short URLs, and four public conversation contexts with recoverable parent handles and visible text. These are governed public-source fields, not private account or session credentials.
 
 ## Artifacts
 
