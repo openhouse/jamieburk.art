@@ -14,9 +14,9 @@ const frozenCollectiveBaselinePath =
   ".agents/evals/baselines/collective-credit-v1.json";
 const workDataPath = "apps/www/src/data/work.ts";
 export const FROZEN_COLLECTIVE_BASELINE_TAG =
-  "refs/tags/knowledge-bank-policy-baseline-2026-07-15-v11";
+  "refs/tags/knowledge-bank-policy-baseline-2026-07-15-v12";
 export const FROZEN_COLLECTIVE_BASELINE_TAG_OBJECT =
-  "613ead8e562ca1e762a6a01879212be2fa59ccaf";
+  "aa92b114e25c93e7b6752aae85b54c8d1f322d16";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
 const publicProjectionKeys = new Set([
   "case-study",
