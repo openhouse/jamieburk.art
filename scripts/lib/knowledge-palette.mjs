@@ -117,6 +117,17 @@ export function retrieveKnowledgePalette(filters = {}) {
     ? manifestProofs
     : proofClaims.filter(({ id }) => selectedProofIds.has(id));
   const candidateIds = new Set(candidates.map(({ id }) => id));
+  const selectedObservations = filters.publicationSafe
+    ? []
+    : knowledgeLifecycle.observations.filter((observation) => candidates.some(({ observationIds }) => observationIds.includes(observation.id)));
+  const selectedSourceIds = new Set([
+    ...selectedObservations.map(({ sourceId }) => sourceId),
+    ...canonicalClaims.flatMap(({ evidence }) => evidence.map(({ sourceId }) => sourceId))
+  ]);
+  const selectedEntityIds = new Set([
+    ...projects.flatMap(({ entityIds }) => entityIds),
+    ...selectedObservations.flatMap(({ entityIds }) => entityIds)
+  ]);
   const mediaLeads = knowledgeLifecycle.mediaLeads.filter((item) =>
     (matchingBriefs.some(({ mediaLeadIds }) => mediaLeadIds.includes(item.id)) || (!matchingBriefs.length && item.projectIds.some((id) => projectIds.has(id)))) &&
     (!projectScopeRequested || item.projectIds.some((id) => projectIds.has(id))) &&
@@ -146,6 +157,9 @@ export function retrieveKnowledgePalette(filters = {}) {
         }))
       : [],
     canonicalClaims,
+    observations: selectedObservations,
+    sources: filters.publicationSafe ? [] : knowledgeBank.sources.filter(({ id }) => selectedSourceIds.has(id)),
+    entities: filters.publicationSafe ? [] : knowledgeLifecycle.entities.filter(({ id }) => selectedEntityIds.has(id)),
     proofs,
     researchTasks: filters.publicationSafe
       ? []

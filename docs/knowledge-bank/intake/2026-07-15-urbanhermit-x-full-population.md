@@ -44,6 +44,13 @@ archive.
 7. Reviewed year-bounded incoming searches from 2008 through 2026.
 8. Reduced non-mission personal or network context to aggregate dispositions.
 
+The protected-side derivation command now recomputes the population, type,
+year, link, mission-signal, stakeholder, and dated-counter aggregates from the
+authorized captures. A versioned manifest binds the three protected input
+digests, classifier rules, and public fixture digest. The public fixture is
+validated against an exact allowed-key schema, so an added row, identifier,
+handle, URL, timestamp, or equivalent nested field fails closed.
+
 ## Posted Sources And Mission Signals
 
 The population contains **349 external-link occurrences**, representing **321
@@ -112,6 +119,14 @@ contact details, private analytics, cookies, credentials, browser state,
 direct messages, private activity, or local paths. Item-level identifiers can
 reconstruct personal history, so the row-level capture remains protected.
 
+The [protected derivation manifest](../protected-verification/urbanhermit-2026-07-15.json)
+documents the reproducibility and custody contract without exposing a storage
+path or reconstructable timeline. Three discovered media families - the
+published Horse Lords video, tunnel-program source images, and tire-pickup
+participant photographs - now enter the lifecycle as held, rights-aware leads.
+
 The knowledge bank receives the aggregate census, source relationships,
-bounded claims, anti-claims, and open research. The current website receives
-no new route and no new copy. There is no `/proofs` or `/urbanhermit` page.
+bounded claims, anti-claims, media leads, and open research. Four bounded
+candidates are promoted for internal knowledge-bank composition; every public
+projection remains held. The current website receives no new route and no new
+copy. There is no `/proofs` or `/urbanhermit` page.

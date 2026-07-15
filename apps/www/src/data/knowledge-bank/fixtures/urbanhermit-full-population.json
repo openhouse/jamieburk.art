@@ -29,7 +29,7 @@
       "posts": 14,
       "replies": 16
     },
-    "protectedRecordSetSha256": "4a348d56fe961ea19767b2c7de48da3026cba5f274c027da11dcb2371672d277",
+    "protectedRecordSetSha256": "77fc6565525d03997c40ce0d9f75e979b7e8c72f1ee15aa5318d71a287015aad",
     "conclusion": "Every one of the 434 records reported by the @urbanhermit profile counter materialized and was reviewed. Posts yielded 421 primary records. Replies rendered 436 article cards: 434 primary profile-counted records plus two conversation-parent cards authored by another account. Excluding those two contexts produces a 434-record union that reconciles exactly to the profile counter.",
     "boundary": "This is a complete review of the live profile-counted population visible in the authenticated interface on July 15, 2026. It does not establish that no older post was deleted, withheld, or otherwise absent from the live profile before capture."
   },
@@ -98,7 +98,7 @@
     "missionRelevantThirdPartyAccountCount": 9,
     "missionRelevantConversationContextCount": 2,
     "contextLimitedRecordCount": 9,
-    "protectedIncomingRecordSetSha256": "700cd3f0412b872482ec7e01ee6627f2320cb19db4ac1822660273ed6282bda0",
+    "protectedIncomingRecordSetSha256": "f3d8ba46b56c3a933af71dadf289fc10c0a0f5492ef9bfff52a15084031c5c26",
     "stakeholderGroupCounts": {
       "civic-design-peer": 2,
       "coalition-project-account": 4,

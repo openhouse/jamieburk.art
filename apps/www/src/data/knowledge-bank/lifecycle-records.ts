@@ -2,11 +2,12 @@ import { knowledgeLifecycleSchema } from "./lifecycle-schema.ts";
 import { allCampaignPressItemSourceIds, campaignPressCollections } from "./campaign-press.ts";
 import { socialLifecycle } from "./social-lifecycle.ts";
 import { nycartcXLifecycle } from "./nycartc-x-lifecycle.ts";
-import { urbanhermitXLifecycle, urbanhermitXProject } from "./urbanhermit-x-lifecycle.ts";
+import { urbanhermitXEntities, urbanhermitXLifecycle, urbanhermitXProject } from "./urbanhermit-x-lifecycle.ts";
 
 const knowledgeLifecycleInput = {
   entities: [
     ...socialLifecycle.entities,
+    ...urbanhermitXEntities,
     { id: "ENT-JAMIE-BURKART", type: "person", name: "Jamie Burkart", aliases: ["James Burkart"], publicSummary: "Technical project manager, product operations and implementation lead, and civic-cultural practitioner.", sameAs: ["https://jamieburk.art/"] },
     { id: "ENT-NYC-ARTIST-COALITION", type: "organization", name: "NYC Artist Coalition", aliases: ["NYC Arts Coalition"], publicSummary: "A coalition associated with independent cultural-space safety, nightlife policy, and enforcement reform work in New York City.", sameAs: [] },
     { id: "ENT-NYC-COUNCIL", type: "organization", name: "New York City Council", aliases: ["NYC Council"], publicSummary: "The legislative body of New York City.", sameAs: ["https://council.nyc.gov/"] },

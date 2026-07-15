@@ -5,6 +5,7 @@ import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 import { knowledgeLifecycle } from "../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { urbanhermitClaimIds, urbanhermitSourceIds } from "../apps/www/src/data/knowledge-bank/urbanhermit-x-corpus.ts";
 import { urbanhermitMissionSignalManifest } from "./lib/urbanhermit-mission-classifier.mjs";
+import { collectUrbanhermitAggregateShapeFailures } from "./lib/urbanhermit-public-aggregate-schema.mjs";
 
 const fixtureText = readFileSync("apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json", "utf8");
 const fixture = JSON.parse(fixtureText);
@@ -86,24 +87,18 @@ check("Knowledge bank", "Selected sources and bounded claims are fully accession
 const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-URBANHERM-X-FULL-POPULATION-2026-07-15");
 const candidates = knowledgeLifecycle.candidateClaims.filter(({ id }) => id.startsWith("CND-URBANHERM-"));
 const decisions = knowledgeLifecycle.promotionDecisions.filter(({ id }) => id.startsWith("DEC-URBANHERM-"));
-check("Lifecycle", "The corpus reaches observations, candidates, tasks, holds, and an editorial brief", 12,
+check("Lifecycle", "The corpus reaches atomic observations, governed bank promotion, media feedback, and an editorial brief", 12,
   task?.status === "completed" &&
-  task.observationIds.length === 8 &&
-  candidates.length === 4 && candidates.every(({ maturity }) => maturity === "held") &&
-  decisions.length === 4 && decisions.every(({ decision }) => decision === "hold") &&
-  knowledgeLifecycle.editorialBriefs.some(({ id }) => id === "BRIEF-URBANHERM-RESERVE-PRACTICE"));
+  task.observationIds.length === 13 &&
+  candidates.length === 4 && candidates.every(({ maturity }) => maturity === "promoted") &&
+  decisions.length === 4 && decisions.every(({ decision, targetCanonicalClaimId, allowedSurfaces }) => decision === "promote" && targetCanonicalClaimId && allowedSurfaces.includes("research-brief")) &&
+  knowledgeLifecycle.editorialBriefs.some(({ id, mediaLeadIds }) => id === "BRIEF-URBANHERM-RESERVE-PRACTICE" && mediaLeadIds.length === 3) &&
+  knowledgeLifecycle.mediaLeads.filter(({ id }) => id.startsWith("MEDIA-URBANHERM-")).length === 3);
 
 const serialized = JSON.stringify(fixture);
-const objectKeys = [];
-const collectKeys = (value) => {
-  if (Array.isArray(value)) return value.forEach(collectKeys);
-  if (!value || typeof value !== "object") return;
-  for (const [key, child] of Object.entries(value)) { objectKeys.push(key); collectKeys(child); }
-};
-collectKeys(fixture);
 check("Privacy and composition", "The public artifact is aggregate-only and no website projection is created", 8,
   fixture.publicSafety.status === "public-safe-aggregate-only" &&
-  !objectKeys.some((key) => /^(records|url|statusId|publishedAt|authorHandle|text|body|content|cookie|session|email|phone|localPath)$/i.test(key)) &&
+  collectUrbanhermitAggregateShapeFailures(fixture).length === 0 &&
   !serialized.includes("/Users/") && !serialized.includes("/Volumes/") &&
   Object.values(urbanhermitClaimIds).every((id) => claims.get(id).projections.every(({ status, surfaces }) => status === "hold" && surfaces.length === 0)) &&
   knowledgeBank.pages.every(({ surface }) => !["/proofs", "/knowledge-bank", "/urbanhermit"].includes(surface)) &&

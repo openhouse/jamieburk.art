@@ -1,15 +1,20 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { urbanhermitClaimIds, urbanhermitSourceIds } from "../../apps/www/src/data/knowledge-bank/urbanhermit-x-corpus.ts";
+import { workItems } from "../../apps/www/src/data/work.ts";
 import { urbanhermitMissionSignalManifest } from "../lib/urbanhermit-mission-classifier.mjs";
+import { collectUrbanhermitAggregateShapeFailures } from "../lib/urbanhermit-public-aggregate-schema.mjs";
+import { retrieveKnowledgePalette } from "../lib/knowledge-palette.mjs";
 
 const fixturePath = "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json";
 const fixtureText = readFileSync(fixturePath, "utf8");
 const fixture = JSON.parse(fixtureText);
+const verificationManifest = JSON.parse(readFileSync("docs/knowledge-bank/protected-verification/urbanhermit-2026-07-15.json", "utf8"));
 
 test("Urbanhermit aggregate reconciles all 434 live profile-counted records", () => {
   const population = fixture.populationReconciliation;
@@ -62,29 +67,44 @@ test("Urbanhermit aggregate preserves link, mission, stakeholder, and counter ar
 });
 
 test("Urbanhermit public artifact cannot reconstruct the personal timeline", () => {
-  const forbiddenKeys = [];
-  const walk = (value, path = "fixture") => {
-    if (Array.isArray(value)) return value.forEach((item, index) => walk(item, `${path}[${index}]`));
-    if (!value || typeof value !== "object") return;
-    for (const [key, child] of Object.entries(value)) {
-      if (/^(records|url|statusId|publishedAt|authorHandle|text|body|content|cookie|session|email|phone|localPath)$/i.test(key)) forbiddenKeys.push(`${path}.${key}`);
-      walk(child, `${path}.${key}`);
-    }
-  };
-  walk(fixture);
-
-  assert.deepEqual(forbiddenKeys, []);
+  assert.deepEqual(collectUrbanhermitAggregateShapeFailures(fixture), []);
   assert.doesNotMatch(fixtureText, /https?:\/\/x\.com\/[^/\s]+\/status\//i);
   assert.doesNotMatch(fixtureText, /\/(?:Users|Volumes|private\/tmp)\//);
   assert.doesNotMatch(fixtureText, /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
   assert.equal(fixture.publicSafety.status, "public-safe-aggregate-only");
   assert.match(fixture.publicSafety.reason, /reconstruct personal history/i);
+
+  const mutations = [
+    ["plural status IDs", (copy) => { copy.statusIds = ["123"]; }],
+    ["nested timeline rows", (copy) => { copy.publishingPattern.timelineRows = [{ publishedAt: "2016-01-01" }]; }],
+    ["alternate link field", (copy) => { copy.stakeholderInventory.href = "https://x.com/example/status/1"; }],
+    ["nested handle", (copy) => { copy.visibleEngagementSnapshot.actor = { handle: "@someone" }; }],
+    ["rule-level raw message", (copy) => { copy.missionSignalClassification.rules[0].message = "raw text"; }]
+  ];
+  for (const [label, mutate] of mutations) {
+    const copy = structuredClone(fixture);
+    mutate(copy);
+    assert.ok(collectUrbanhermitAggregateShapeFailures(copy).length > 0, `Closed schema accepted ${label}`);
+  }
 });
 
-test("Urbanhermit sources, claims, and lifecycle decisions remain governed and held", () => {
+test("Urbanhermit protected derivation manifest binds the public aggregate", () => {
+  const sha256 = (value) => createHash("sha256").update(value).digest("hex");
+  assert.equal(verificationManifest.contractVersion, "urbanhermit-protected-derivation-v1");
+  assert.equal(verificationManifest.protectedInputs.populationIdSetSha256, fixture.populationReconciliation.protectedRecordSetSha256);
+  assert.equal(verificationManifest.protectedInputs.incomingIdSetSha256, fixture.stakeholderInventory.protectedIncomingRecordSetSha256);
+  assert.equal(verificationManifest.publicOutput.fixtureSha256, sha256(fixtureText));
+  assert.match(verificationManifest.verification.reproducibilityBoundary, /authorized reviewer/i);
+});
+
+test("Urbanhermit sources, claims, and lifecycle decisions remain governed while public projections stay held", () => {
   const sources = new Set(knowledgeBank.sources.map(({ id }) => id));
   const claims = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   for (const sourceId of Object.values(urbanhermitSourceIds)) assert.ok(sources.has(sourceId), sourceId);
+  for (const sourceId of [urbanhermitSourceIds.horseLordsJamie, urbanhermitSourceIds.horseLordsDrew, urbanhermitSourceIds.horseLordsJulia, urbanhermitSourceIds.tunnelJulia, urbanhermitSourceIds.tiresKcTownHall, urbanhermitSourceIds.tiresJimmy]) {
+    const source = knowledgeBank.sources.find(({ id }) => id === sourceId);
+    assert.ok(source.metadataVerifiedAt && source.metadataVerifiedBy, `${sourceId} needs verified metadata`);
+  }
   for (const claimId of Object.values(urbanhermitClaimIds)) {
     const claim = claims.get(claimId);
     assert.ok(claim, claimId);
@@ -98,12 +118,35 @@ test("Urbanhermit sources, claims, and lifecycle decisions remain governed and h
 
   const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-URBANHERM-X-FULL-POPULATION-2026-07-15");
   assert.equal(task?.status, "completed");
-  assert.equal(task?.observationIds.length, 8);
+  assert.equal(task?.observationIds.length, 13);
+  const observationById = new Map(knowledgeLifecycle.observations.map((observation) => [observation.id, observation]));
+  assert.ok(task.observationIds.every((id) => task.sourceIds.includes(observationById.get(id).sourceId)));
   const candidates = knowledgeLifecycle.candidateClaims.filter(({ id }) => id.startsWith("CND-URBANHERM-"));
   assert.equal(candidates.length, 4);
-  assert.ok(candidates.every(({ maturity }) => maturity === "held"));
+  assert.ok(candidates.every(({ maturity }) => maturity === "promoted"));
   const decisions = knowledgeLifecycle.promotionDecisions.filter(({ id }) => id.startsWith("DEC-URBANHERM-"));
   assert.equal(decisions.length, 4);
-  assert.ok(decisions.every(({ decision }) => decision === "hold"));
+  assert.ok(decisions.every(({ decision, targetCanonicalClaimId, allowedSurfaces, humanReviewStatus }) => decision === "promote" && targetCanonicalClaimId && allowedSurfaces.includes("research-brief") && humanReviewStatus === "not-required"));
+  const media = knowledgeLifecycle.mediaLeads.filter(({ id }) => id.startsWith("MEDIA-URBANHERM-"));
+  assert.equal(media.length, 3);
+  assert.ok(media.every(({ displayStatus, sourceIds, researchTaskIds }) => displayStatus === "hold" && sourceIds.length && researchTaskIds.length));
   assert.ok(knowledgeBank.pages.every(({ surface }) => !["/proofs", "/knowledge-bank", "/urbanhermit"].includes(surface)));
+  assert.equal(existsSync("apps/www/src/app/urbanhermit"), false);
+  assert.ok(workItems.every(({ slug }) => slug !== "urbanhermit"));
+  assert.doesNotMatch(readFileSync("apps/www/src/data/knowledge-bank/public-registry.json", "utf8"), /URBANHERM/i);
+});
+
+test("Urbanhermit reserve brief retrieves credit-aware sources, observations, entities, and media", () => {
+  const palette = retrieveKnowledgePalette({ briefId: "BRIEF-URBANHERM-RESERVE-PRACTICE" });
+  assert.deepEqual(palette.candidates.map(({ id }) => id).toSorted(), [
+    "CND-URBANHERM-EIGHTH-STREET-TUNNEL",
+    "CND-URBANHERM-HORSE-LORDS-VIDEO",
+    "CND-URBANHERM-TIRE-PICKUP-PARTICIPATION"
+  ]);
+  assert.equal(palette.observations.length, 8);
+  assert.equal(palette.sources.length, 8);
+  assert.ok(palette.entities.some(({ id }) => id === "ENT-MC-SCHMIDT"));
+  assert.ok(palette.entities.some(({ id }) => id === "ENT-HORSE-LORDS"));
+  assert.equal(palette.mediaLeads.length, 3);
+  assert.equal(palette.proofs.length, 0);
 });

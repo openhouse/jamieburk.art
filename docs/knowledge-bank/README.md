@@ -104,7 +104,10 @@ fixture retains exact population, link, mission-signal, stakeholder-group, and
 dated interaction accounting without publishing raw post text or a
 reconstructable item-level personal timeline. Selected NPR, KCUR, participant,
 project, and local-reporting sources matured into bounded reserve claims; all
-remain held from the current job-application website.
+are promoted for internal composition while every public projection remains
+held from the current job-application website. A closed aggregate schema and
+protected-side derivation manifest make the 434-of-434 result reproducible for
+authorized reviewers without publishing a row-level personal timeline.
 
 Campaign press sections are preserved as typed source collections rather than
 treated as automatic claim support. The generated

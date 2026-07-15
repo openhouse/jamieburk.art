@@ -216,6 +216,9 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     for (const id of task.candidateClaimIds) if (!candidates.get(id)?.researchTaskIds.includes(task.id)) errors.push(`Research task ${task.id} is not linked back from candidate ${id}`);
     for (const observationId of task.observationIds) {
       const observation = input.observations.find(({ id }) => id === observationId);
+      if (observation?.sourceId && !task.sourceIds.includes(observation.sourceId)) {
+        errors.push(`Research task ${task.id} omits source ${observation.sourceId} used by observation ${observationId}`);
+      }
       for (const candidateId of observation?.candidateClaimIds ?? []) if (!task.candidateClaimIds.includes(candidateId)) errors.push(`Research task ${task.id} observation ${observationId} implicates unlinked candidate ${candidateId}`);
     }
     if (task.status === "completed" && !task.completedAt) errors.push(`Completed research task ${task.id} has no completion date`);

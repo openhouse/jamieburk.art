@@ -66,8 +66,16 @@ and [KC Town Hall](https://x.com/KCTownHall/status/1135246124883861504).
 
 The Horse Lords and 8th Street Tunnel records are strong future feature
 candidates. The direct tire-pickup claim strengthens existing neighborhood
-field-operations research. None is selected for the current job-application
-website: composition should respond to audience and purpose, not archive size.
+field-operations research. Each source is decomposed into an atomic observation
+so NPR's independent credit, Jamie's contemporaneous account, collaborator
+corroboration, participant testimony, and project-account evidence remain
+distinct. The bounded candidates are promoted into the internal bank while all
+public projections remain held.
+
+None is selected for the current job-application website: composition should
+respond to audience and purpose, not archive size. The reserve brief now
+retrieves the relevant observations, sources, collaborator entities, and three
+rights-aware media leads without creating a public archive surface.
 
 Raw post text and protected personal or authenticated-session context remain
 outside the public repository. No `/proofs`, `/knowledge-bank`, `/urbanhermit`,
