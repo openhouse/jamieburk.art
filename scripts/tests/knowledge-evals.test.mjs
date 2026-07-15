@@ -74,8 +74,8 @@ test("knowledge-bank gate records two fresh NYCAC Facebook event holdout passes"
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
-    "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b"
+    "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-c",
+    "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-d"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -2762,6 +2762,7 @@ test("NYCAC Facebook report enumerates every recovered event and states the popu
   );
 
   assert.ok(population.events.every((event) => report.includes(event.url)));
+  assert.ok(population.events.every((event) => report.includes(`[${event.title}](${event.url})`)));
   assert.match(report, /100 percent control-slot accounting, not 100 percent historical content/i);
   assert.match(report, /Facebook response count[\s\S]{0,160}not verified attendance/i);
   assert.match(report, /helped establish and produce/i);
@@ -2772,8 +2773,21 @@ test("NYCAC Facebook event gate rejects attendance, sole-credit, causation, and 
   const mutations = [
     [nycacFacebookEventClaimIds.responseSignals, "The events drew 9,989 people."],
     [nycacFacebookEventClaimIds.responseSignals, "Facebook responses equal event attendance."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform labels measure attendance."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform counts establish turnout."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform counts establish audience size."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform counts quantify reach."],
+    [nycacFacebookEventClaimIds.responseSignals, "These figures represent unique people."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform counts prove endorsement."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform counts demonstrate conversion."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform counts establish a public mandate."],
+    [nycacFacebookEventClaimIds.responseSignals, "These platform counts prove policy impact."],
     [nycacFacebookEventClaimIds.participationSystem, "Jamie solely produced every NYC Artist Coalition event."],
+    [nycacFacebookEventClaimIds.participationSystem, "Jamie was the sole producer for the entire event program."],
+    [nycacFacebookEventClaimIds.participationSystem, "Jamie authored every event page."],
+    [nycacFacebookEventClaimIds.participationSystem, "Event hosts and speakers endorsed Jamie."],
     [nycacFacebookEventClaimIds.participationSystem, "The participation system caused the Cabaret Law repeal."],
+    [nycacFacebookEventClaimIds.participationSystem, "These convenings brought about the Cabaret Law repeal."],
     [nycacFacebookEventClaimIds.population, "All 34 event pages were recovered."]
   ];
 
@@ -2801,7 +2815,7 @@ test("NYCAC Facebook event review locks reject count and public-report mutations
   population.populationReconciliation.unmaterializedCount = 0;
   let result = evaluateKnowledgeBank(suite, { nycacFacebookEventPopulation: population });
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
-  assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, true);
+  assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
 
   const report = readFileSync(
     path.join(repoRoot, suite.pilot.nycacFacebookEvents.reportPath),
@@ -2812,6 +2826,98 @@ test("NYCAC Facebook event review locks reject count and public-report mutations
   });
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
   assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+});
+
+test("NYCAC Facebook structural lock rejects private-field and count-preserving population mutations", () => {
+  const mutations = [
+    ["raw description", (population) => { population.events[0].rawDescription = "Private raw description"; }],
+    ["attendee identities", (population) => { population.events[0].attendeeIdentities = ["Jane Example"]; }],
+    ["phone", (population) => { population.events[0].contactPhone = "+1 212 555 0199"; }],
+    ["meeting credentials", (population) => { population.events[0].meetingCredentials = { zoomUrl: "https://zoom.us/j/123", passcode: "secret" }; }],
+    ["private document", (population) => { population.events[0].privateWorkingDocument = "https://docs.google.com/document/d/private/edit"; }],
+    ["session state", (population) => { population.events[0].authenticatedSessionState = { cookie: "secret", sessionToken: "secret" }; }],
+    ["date", (population) => { population.events[0].date = "2017-01-28"; }],
+    ["relation swap", (population) => {
+      [population.events[0].relationToPage, population.events[1].relationToPage] =
+        [population.events[1].relationToPage, population.events[0].relationToPage];
+    }],
+    ["venue swap", (population) => {
+      [population.events[1].venue, population.events[2].venue] =
+        [population.events[2].venue, population.events[1].venue];
+    }],
+    ["identity swap", (population) => {
+      [population.events[3].id, population.events[4].id] = [population.events[4].id, population.events[3].id];
+      [population.events[3].url, population.events[4].url] = [population.events[4].url, population.events[3].url];
+    }],
+    ["unavailable ID replacement", (population) => {
+      population.populationReconciliation.detailAvailabilityRecheck.temporarilyUnavailableEventIds =
+        population.events.slice(0, 5).map((event) => event.id);
+    }],
+    ["nonexistence inversion", (population) => {
+      population.populationReconciliation.detailAvailabilityRecheck.interpretation =
+        "The five unavailable routes prove those events did not exist.";
+    }],
+    ["article reassignment", (population) => {
+      for (const article of population.postedSourceArticles) article.eventId = population.events[0].id;
+    }],
+    ["withheld-link redistribution", (population) => {
+      for (const event of population.events) {
+        event.withheldOutboundLinkCount = 0;
+        event.withheldOutboundLinkCategories = [];
+      }
+      population.events[0].withheldOutboundLinkCount = 13;
+      population.events[0].withheldOutboundLinkCategories = ["meeting-access-link"];
+    }]
+  ];
+
+  for (const [name, mutate] of mutations) {
+    const population = loadNycacFacebookEventPopulation();
+    mutate(population);
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookEventPopulation: population });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+      1,
+      `expected structural-lock rejection: ${name}`
+    );
+    assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+  }
+});
+
+test("NYCAC Facebook structural lock covers canonical sources, observations, and proof content", () => {
+  const targets = [
+    [
+      knowledgeBank.sources.find((source) => source.id === "SRC-NYCAC-NYPOST-FOOTLOOSE-2017-04-08"),
+      "publicNote",
+      "This article covered the event itself."
+    ],
+    [
+      knowledgeBank.observations.find((observation) => observation.id === "OBS-NYCAC-FACEBOOK-CIVIC-CULTURAL-INTERFACES"),
+      "text",
+      "Every displayed host and speaker endorsed Jamie."
+    ],
+    [
+      proofClaims.find((proof) => proof.id === "nyc-artist-coalition-participation-system"),
+      "publicWording",
+      "Jamie was sole producer of the entire event program."
+    ]
+  ];
+
+  for (const [target, property, mutation] of targets) {
+    assert.ok(target);
+    const original = target[property];
+    try {
+      target[property] = mutation;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+        1,
+        `expected canonical structural-lock rejection: ${mutation}`
+      );
+      assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+    } finally {
+      target[property] = original;
+    }
+  }
 });
 
 test("NYCAC Facebook participation claim preserves collective credit and attributed interpretation", () => {

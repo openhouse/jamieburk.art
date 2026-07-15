@@ -52,10 +52,13 @@ const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
 });
 const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "64af7b2f1804b3b319de2f5eef60bfb01371ce5209c8497473f800a334c66555",
+  manifestContentSha256: "d0b72b654e76e9149439d1f218c05e248134abbca4a8c3088696e2536fdd52f2",
   governedModuleSha256: "29e868734b83dc89609c47d3d8eff72939da617742bcb6db16c08e759ec70fb8",
-  publicReportSha256: "96d9a6e6f48e569ebe9061850d2829031001df3b398340b2908912123ff925d4",
+  canonicalKnowledgeSha256: "0e6eee166aebb097198db52bd8de0184a2cb0f6033f4cdcf020508c2fc48bd7a",
+  publicReportSha256: "ce9475a9aecda99f2d7c58c099d657a14e5512a557b58b25d3736803996e9769",
   caseStudyMdxSha256: "bb027dc5fdd7a0ce2f2602287ad3a7953af98855316efe5986aeafdae387ccfb",
-  proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c"
+  proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
+  proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
 
 export function loadKnowledgeEvalSuite() {
@@ -2587,8 +2590,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const nycacFacebookUnsafeAffirmativePatterns = [
     /9,?989 (?:people|attendees|participants|unique)/i,
     /Facebook responses? (?:equal|equaled|represented|proved|showed) (?:event )?attendance/i,
+    /(?:platform|Facebook|response|RSVP|these) (?:labels|counts|responses|figures)[^.]{0,80}(?:measure|establish|prove|show|represent|equal|quantify|demonstrate)[^.]{0,80}(?:attendance|turnout|audience|reach|unique people|endorsement|conversion|mandate|impact)/i,
     /Jamie (?:solely |single-handedly )?(?:created|produced|organized|ran) (?:all|every|the) NYC Artist Coalition events?/i,
-    /(?:the events?|the participation system) (?:caused|secured|delivered|won) (?:the )?(?:Cabaret Law repeal|Office of Nightlife|policy outcomes?)/i,
+    /Jamie[^.]{0,100}(?:sole|single-handed)[^.]{0,100}(?:producer|author|organizer|created|produced|organized|ran)/i,
+    /Jamie[^.]{0,80}authored every event page/i,
+    /(?:event hosts?|speakers?|venues?|officials?|agencies?)[^.]{0,100}endorsed Jamie/i,
+    /(?:the events?|the participation system|these convenings|the event practice)[^.]{0,100}(?:caused|brought about|secured|delivered|won|resulted in)[^.]{0,100}(?:Cabaret Law repeal|Office of Nightlife|policy outcomes?)/i,
     /all 34 event (?:pages|records) (?:were )?recovered/i,
     /complete (?:Facebook|Meta|historical) (?:owner )?(?:archive|history)/i
   ];
@@ -2607,9 +2614,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const nycacFacebookPrivateDataFree =
     !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(nycacFacebookPublicArtifactText) &&
     !/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(nycacFacebookPublicArtifactText) &&
-    !/zoom\.us|meet\.google|docs\.google|drive\.google|passcode|meeting id|cookie|session token/i.test(
-      JSON.stringify([...nycacFacebookEventUrls, ...nycacFacebookOutboundUrls])
-    );
+    !/https?:\/\/(?:[^\s"']+\.)?(?:zoom\.us|meet\.google\.com|docs\.google\.com|drive\.google\.com)/i.test(nycacFacebookPublicArtifactText) &&
+    !/"(?:rawDescription|rawBody|descriptionHtml|attendeeIdentities|attendees|guestList|contactPhone|phone|meetingCredentials|meetingId|passcode|privateWorkingDocument|authenticatedSessionState|cookie|sessionToken|capturePath)"\s*:/i.test(nycacFacebookPublicArtifactText);
   const nycacFacebookProofSourceText = readFileSync(
     path.join(repoRoot, "apps/www/src/data/proofs.ts"),
     "utf8"
@@ -2625,15 +2631,33 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     nycacFacebookProofStart,
     nycacFacebookProofEnd === -1 ? nycacFacebookProofSourceText.length : nycacFacebookProofEnd
   );
+  const nycacFacebookManifestContentSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacFacebookManifest))
+    .digest("hex");
+  const nycacFacebookCanonicalKnowledgeSha256 = createHash("sha256")
+    .update(JSON.stringify({
+      intakeItems: nycacFacebookIntakes,
+      observations: nycacFacebookObservations,
+      sources: nycacFacebookSources,
+      claims: nycacFacebookClaims,
+      researchInquiries: nycacFacebookInquiries
+    }))
+    .digest("hex");
+  const nycacFacebookProofContentSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacFacebookProof))
+    .digest("hex");
   const nycacFacebookReviewLocksMatch =
     createHash("sha256").update(nycacFacebookManifestText).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.manifestSha256 &&
+    nycacFacebookManifestContentSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.manifestContentSha256 &&
     createHash("sha256").update(readFileSync(
       path.join(repoRoot, "apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts"),
       "utf8"
     )).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.governedModuleSha256 &&
+    nycacFacebookCanonicalKnowledgeSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.canonicalKnowledgeSha256 &&
     createHash("sha256").update(nycacFacebookReport).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.publicReportSha256 &&
     createHash("sha256").update(nycacFacebookMdx).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.caseStudyMdxSha256 &&
-    createHash("sha256").update(nycacFacebookProofSnippet).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.proofSnippetSha256;
+    createHash("sha256").update(nycacFacebookProofSnippet).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.proofSnippetSha256 &&
+    nycacFacebookProofContentSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.proofContentSha256;
   const nycacFacebookEventsComplete = Boolean(
     existsSync(nycacFacebookManifestPath) &&
       existsSync(nycacFacebookReportPath) &&
@@ -2655,7 +2679,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       nycacFacebookRecheck.temporarilyUnavailableDetailCount === nycacFacebookEvents.expectedDetailRecheckUnavailable &&
       nycacFacebookRecheckUnavailableIds.size === nycacFacebookEvents.expectedDetailRecheckUnavailable &&
       [...nycacFacebookRecheckUnavailableIds].every((id) => nycacFacebookEventIds.has(id)) &&
-      /(?:does|did) not exist/i.test(nycacFacebookRecheck.interpretation) &&
+      /rather than evidence that those events did not exist/i.test(nycacFacebookRecheck.interpretation) &&
       nycacFacebookEventsRows.length === nycacFacebookEvents.expectedRecoveredEventCount &&
       nycacFacebookEventIds.size === nycacFacebookEvents.expectedRecoveredEventCount &&
       nycacFacebookEventUrls.size === nycacFacebookEvents.expectedRecoveredEventCount &&
@@ -3240,13 +3264,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       },
       nycacFacebookEvents: {
         manifestSha256: createHash("sha256").update(nycacFacebookManifestText).digest("hex"),
+        manifestContentSha256: nycacFacebookManifestContentSha256,
         governedModuleSha256: createHash("sha256").update(readFileSync(
           path.join(repoRoot, "apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts"),
           "utf8"
         )).digest("hex"),
+        canonicalKnowledgeSha256: nycacFacebookCanonicalKnowledgeSha256,
         publicReportSha256: createHash("sha256").update(nycacFacebookReport).digest("hex"),
         caseStudyMdxSha256: createHash("sha256").update(nycacFacebookMdx).digest("hex"),
         proofSnippetSha256: createHash("sha256").update(nycacFacebookProofSnippet).digest("hex"),
+        proofContentSha256: nycacFacebookProofContentSha256,
         reviewLocksMatch: nycacFacebookReviewLocksMatch
       }
     },

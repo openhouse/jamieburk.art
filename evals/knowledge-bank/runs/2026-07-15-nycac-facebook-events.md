@@ -128,9 +128,21 @@ deterministic suite then reached 5 / 5 on all 18 criteria with no canonical
 errors. The material-change reset deliberately leaves independent holdout
 acceptance at 0 / 2 until two fresh reviewers inspect a frozen revision.
 
-## Holdout status
+## Holdout repair
 
-Pending two predeclared independent reviews on a frozen candidate:
+The first frozen-candidate data-integrity reviewer rejected commit `9153142b`.
+The public content and all advertised counts were accurate, but the reviewer
+found that in-memory population overrides were outside the on-disk fixture
+hash. This allowed private-field injection and count-preserving date, relation,
+venue, identity, availability, article-route, and withheld-link mutations to
+retain an event score of 5. The reviewer also found that the nonexistence regex
+accepted an affirmative falsehood and that canonical proof, source, and
+observation mutations were outside the structural digest.
 
-- `nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a`
-- `nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b`
+The rejection remains in the holdout ledger. The repair adds structural hashes
+for the parsed population, canonical event knowledge, and proof object; narrows
+the route-volatility interpretation; and adds the reviewer's attacks as
+regressions. Two new reviewers are predeclared for the repaired frozen commit:
+
+- `nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-c`
+- `nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-d`

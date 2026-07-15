@@ -173,7 +173,7 @@ Response displays remain bounded platform signals.
 | 2017-03-24 | [Become a Fire Guard: Group Test & Study](https://www.facebook.com/events/330648000670969/) | Direct | FDNY Public Certification Unit | 17 |
 | 2017-03-30 | [Market Hotel - Show NYC We Support Spaces](https://www.facebook.com/events/1907948219437421/) | Direct | Market Hotel | 633 |
 | 2017-04-25 | [Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting](https://www.facebook.com/events/212427345900529/) | Direct | Muchmore's | 458 |
-| 2017-05-15 | [Cultural Plan VOTE + Cabaret Law Protest Prep - NAC May Meeting](https://www.facebook.com/events/835861356564686/) | Direct | The City Reliquary | 71 |
+| 2017-05-15 | [Cultural Plan VOTE + Cabaret Law Protest Prep ▨ NAC May Meeting](https://www.facebook.com/events/835861356564686/) | Direct | The City Reliquary | 71 |
 | 2017-05-19 | [LEGAL Q&A + Advocacy](https://www.facebook.com/events/173887729801951/) | Cohosted | St. Paul Church Williamsburg | 26 |
 | 2017-05-20 | [Protest the Cabaret Law w/ NAC + Dance Parade](https://www.facebook.com/events/1677962702508970/) | Direct | Broadway and East 22nd Street | 137 |
 | 2017-06-02 | [Architectural Q&A + Advocacy](https://www.facebook.com/events/1472395276154065/) | Cohosted | St. Paul Church Williamsburg | 9 |

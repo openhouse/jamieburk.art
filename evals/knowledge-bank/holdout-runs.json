@@ -339,6 +339,19 @@
       "blockers": [
         "Two fresh independent judges must inspect population reconciliation, authenticated-public provenance, later route volatility, response-versus-attendance semantics, private-link exclusions, role attribution, collective credit, selective projection, and count-preserving mutation resistance on a frozen revision."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T11:11:16Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history reviewer",
+      "weightedScore": 3.6,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "In-memory population overrides could add raw descriptions, attendee identities, contact data, meeting credentials, private documents, or session state while the event and safety criteria remained 5.",
+        "Count-preserving date, relation, venue, identity, availability, article-route, and withheld-link mutations could retain an event score of 5 because the review lock hashed only the on-disk fixture text.",
+        "The nonexistence check accepted an affirmative falsehood, and in-memory proof, source, and observation overclaims were outside the event review-lock digest."
+      ]
     }
   ]
 }
