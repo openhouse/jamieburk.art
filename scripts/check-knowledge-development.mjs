@@ -78,11 +78,21 @@ const requiredCaseStudySharedFiles = new Set([
 ]);
 const requiredCollectiveRuntimeFiles = new Set([
   "apps/www/mdx-components.tsx",
+  "apps/www/src/app/page.tsx",
+  "apps/www/src/app/resume/page.tsx",
   "apps/www/src/app/work/[slug]/page.tsx",
+  "apps/www/src/app/work/technical-operations/page.tsx",
   "apps/www/src/components/CaseStudyBlocks.tsx",
   "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/components/ProofStrip.tsx",
   "apps/www/src/components/WorkCard.tsx",
   "apps/www/src/components/citations/Claim.tsx",
+  "apps/www/src/content/work/196-sunday-dinner.mdx",
+  "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "apps/www/src/content/work/harry-j-epstein.mdx",
+  "apps/www/src/content/work/kc-town-hall.mdx",
+  "apps/www/src/content/work/wowlist.mdx",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -232,6 +242,52 @@ function decodedHtmlText(value) {
     .replace(/&gt;/g, ">");
 }
 
+function decodedElementText(value) {
+  return normalizedText(decodedHtmlText(value));
+}
+
+function elementTexts(content, pattern) {
+  return [...content.matchAll(pattern)]
+    .map((match) => decodedElementText(match[0]))
+    .filter(Boolean);
+}
+
+export function resumeSubstantiveStatements(source) {
+  const statements = [];
+  const sections = [
+    ...source.matchAll(/<section\s+class="section"[^>]*>([\s\S]*?)<\/section>/g)
+  ];
+  for (const section of sections) {
+    const body = section[1];
+    const heading = decodedElementText(body.match(/<h2\b[^>]*>[\s\S]*?<\/h2>/)?.[0] ?? "");
+    if (heading === "Profile") {
+      statements.push(...elementTexts(body, /<p\b[^>]*>[\s\S]*?<\/p>/g));
+    } else if (heading === "Core Capabilities") {
+      statements.push(
+        ...elementTexts(
+          body,
+          /<div\s+class="capability"[^>]*>[\s\S]*?<\/div>/g
+        )
+      );
+    } else if (heading === "Selected Impact") {
+      statements.push(...elementTexts(body, /<li\b[^>]*>[\s\S]*?<\/li>/g));
+    } else if (heading === "Experience") {
+      statements.push(
+        ...elementTexts(
+          body,
+          /<h3\b[^>]*>[\s\S]*?<\/h3>|<li\b[^>]*>[\s\S]*?<\/li>/g
+        )
+      );
+    } else if (
+      heading === "Education & Professional Development" ||
+      heading === "Additional"
+    ) {
+      statements.push(...elementTexts(body, /<p\b[^>]*>[\s\S]*?<\/p>/g));
+    }
+  }
+  return statements;
+}
+
 function normalizedIncludes(haystack, needle) {
   return normalizedText(haystack)
     .toLowerCase()
@@ -365,6 +421,29 @@ export function projectionDecisionFingerprint(bank) {
   });
 }
 
+export function statementSupportFingerprint(policy = projectionSurfaceBindings) {
+  return stableSha256({
+    resume: policy.resumeArtifact.statements
+      .map((statement) => ({
+        id: statement.id,
+        text: statement.text,
+        claims: statement.claims,
+        proofs: statement.proofs
+      }))
+      .sort((left, right) => left.id.localeCompare(right.id)),
+    public: policy.publicStatementManifest
+      .map((statement) => ({
+        id: statement.id,
+        path: statement.path,
+        surface: statement.surface,
+        text: statement.text,
+        claims: statement.claims,
+        proofs: statement.proofs
+      }))
+      .sort((left, right) => left.id.localeCompare(right.id))
+  });
+}
+
 function filesBelow(root, extensions) {
   const files = [];
   for (const entry of readdirSync(root, { withFileTypes: true })) {
@@ -460,7 +539,61 @@ function hasProcessEnv(node) {
   return Boolean(node) && /\bprocess\.env(?:\.|\[)/.test(node.getText());
 }
 
-function hasDisallowedRuntimeGate(node) {
+function identifierIsConstFalse(identifier, sourceFile) {
+  let found = false;
+  function visit(node) {
+    if (found) return;
+    if (
+      ts.isVariableDeclaration(node) &&
+      ts.isIdentifier(node.name) &&
+      node.name.text === identifier &&
+      node.initializer?.kind === ts.SyntaxKind.FalseKeyword &&
+      ts.isVariableDeclarationList(node.parent) &&
+      (node.parent.flags & ts.NodeFlags.Const) !== 0
+    ) {
+      found = true;
+      return;
+    }
+    ts.forEachChild(node, visit);
+  }
+  visit(sourceFile);
+  return found;
+}
+
+function expressionIsAlwaysFalse(expression, sourceFile) {
+  if (!expression) return false;
+  if (expression.kind === ts.SyntaxKind.FalseKeyword) return true;
+  if (ts.isParenthesizedExpression(expression)) {
+    return expressionIsAlwaysFalse(expression.expression, sourceFile);
+  }
+  return (
+    ts.isIdentifier(expression) &&
+    identifierIsConstFalse(expression.text, sourceFile)
+  );
+}
+
+function followsUnconditionalExit(node) {
+  for (let current = node; current.parent; current = current.parent) {
+    if (!ts.isBlock(current.parent)) continue;
+    const statements = current.parent.statements;
+    const index = statements.findIndex((statement) => statement === current);
+    if (
+      index > 0 &&
+      statements
+        .slice(0, index)
+        .some(
+          (statement) =>
+            ts.isReturnStatement(statement) || ts.isThrowStatement(statement)
+        )
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function hasDisallowedRuntimeGate(node, sourceFile) {
+  if (followsUnconditionalExit(node)) return true;
   for (let current = node.parent; current; current = current.parent) {
     const condition = ts.isConditionalExpression(current)
       ? current.condition
@@ -469,7 +602,7 @@ function hasDisallowedRuntimeGate(node) {
         : null;
     if (
       condition &&
-      (condition.kind === ts.SyntaxKind.FalseKeyword || hasProcessEnv(condition))
+      (expressionIsAlwaysFalse(condition, sourceFile) || hasProcessEnv(condition))
     ) {
       return true;
     }
@@ -483,8 +616,8 @@ function hasDisallowedRuntimeGate(node) {
         ts.SyntaxKind.ExclamationEqualsToken,
         ts.SyntaxKind.ExclamationEqualsEqualsToken
       ].includes(current.operatorToken.kind) &&
-      (current.left.kind === ts.SyntaxKind.FalseKeyword ||
-        current.right.kind === ts.SyntaxKind.FalseKeyword ||
+      (expressionIsAlwaysFalse(current.left, sourceFile) ||
+        expressionIsAlwaysFalse(current.right, sourceFile) ||
         hasProcessEnv(current))
     ) {
       return true;
@@ -510,6 +643,18 @@ function isReachableModuleNode(node, sourcePath) {
       ) {
         return true;
       }
+      return false;
+    }
+    if (ts.isArrowFunction(current) || ts.isFunctionExpression(current)) {
+      if (
+        ts.isCallExpression(current.parent) &&
+        current.parent.arguments.includes(current) &&
+        ts.isPropertyAccessExpression(current.parent.expression) &&
+        ["map", "flatMap"].includes(current.parent.expression.name.text)
+      ) {
+        continue;
+      }
+      return false;
     }
     if (ts.isVariableStatement(current)) {
       const exported = hasModifier(current, ts.SyntaxKind.ExportKeyword);
@@ -526,6 +671,19 @@ function isReachableModuleNode(node, sourcePath) {
         return true;
       }
     }
+  }
+  return false;
+}
+
+function isDirectWorkSummaryResolver(node) {
+  for (let current = node.parent; current; current = current.parent) {
+    if (ts.isArrowFunction(current) || ts.isFunctionExpression(current)) {
+      return false;
+    }
+    if (ts.isPropertyAssignment(current)) {
+      return current.name.getText().replace(/["']/g, "") === "summary";
+    }
+    if (ts.isSourceFile(current)) return false;
   }
   return false;
 }
@@ -552,7 +710,7 @@ function tsxRouteRealizesProjection(
     if (
       ts.isJsxSelfClosingElement(node) &&
       node.tagName.getText(sourceFile) === "Claim" &&
-      !hasDisallowedRuntimeGate(node) &&
+      !hasDisallowedRuntimeGate(node, sourceFile) &&
       isReachableModuleNode(node, sourcePath)
     ) {
       const tag = node.getText(sourceFile);
@@ -569,7 +727,8 @@ function tsxRouteRealizesProjection(
     if (
       ts.isCallExpression(node) &&
       node.expression.getText(sourceFile) === "getClaimProjection" &&
-      !hasDisallowedRuntimeGate(node) &&
+      !hasDisallowedRuntimeGate(node, sourceFile) &&
+      (!sourcePath.endsWith("/data/work.ts") || isDirectWorkSummaryResolver(node)) &&
       isReachableModuleNode(node, sourcePath)
     ) {
       const values = node.arguments.map((argument) =>
@@ -629,6 +788,32 @@ function matchingCitationOccurrence(bank, tag, claim, projection, surface) {
   );
 }
 
+function mdxClaimIsReachable(content, index) {
+  const before = content.slice(0, index);
+  const nearby = before.slice(-1200);
+  if (
+    /(?:\b[A-Za-z_$][\w$]*|\bfalse|process\.env[^\s]*)\s*(?:&&|\?)\s*\(?\s*$/.test(
+      nearby
+    )
+  ) {
+    return false;
+  }
+
+  const componentStart = Math.max(
+    before.lastIndexOf("export function"),
+    before.lastIndexOf("export default function"),
+    before.lastIndexOf("export const")
+  );
+  if (componentStart >= 0) {
+    const componentPrefix = before.slice(componentStart);
+    const braceBalance =
+      (componentPrefix.match(/\{/g) ?? []).length -
+      (componentPrefix.match(/\}/g) ?? []).length;
+    if (braceBalance > 0) return false;
+  }
+  return true;
+}
+
 export function routeRealizesProjection(
   content,
   claim,
@@ -648,14 +833,19 @@ export function routeRealizesProjection(
     );
   }
   const executable = executableSource(content);
-  const claimTags = executable.match(/<Claim\b[\s\S]*?\/>/g) ?? [];
+  const claimTags = [...executable.matchAll(/<Claim\b[\s\S]*?\/>/g)];
   if (
     claimTags.some(
-      (tag) =>
+      (match) => {
+        const tag = match[0];
+        return (
+          mdxClaimIsReachable(executable, match.index) &&
         literalAttribute(tag, "claimId") === claim.id &&
         literalAttribute(tag, "projection") === projection.key &&
         literalAttribute(tag, "surface") === surface &&
         matchingCitationOccurrence(bank, tag, claim, projection, surface)
+        );
+      }
     )
   ) {
     return true;
@@ -780,6 +970,14 @@ export function evaluateKnowledgeBank(
   ) {
     findings["KB-007"].push(
       "collective credit semantics differ from the frozen human-review baseline"
+    );
+  }
+  if (
+    frozenCollectiveCreditBaseline.statementSupportSha256 !==
+    statementSupportFingerprint()
+  ) {
+    findings["KB-009"].push(
+      "public statement text or support assignments differ from the frozen human-review baseline"
     );
   }
   for (const [id, project] of Object.entries(
@@ -940,6 +1138,42 @@ export function evaluateKnowledgeBank(
       }
     }
     const visibleSource = decodedHtmlText(source);
+    const derivedStatements = resumeSubstantiveStatements(source);
+    const manifestedStatements = resumeArtifact.statements.map((statement) =>
+      normalizedText(statement.text)
+    );
+    if (
+      derivedStatements.length !==
+      resumeArtifact.expectedSubstantiveStatementCount
+    ) {
+      findings["KB-009"].push(
+        `resume source contains ${derivedStatements.length} substantive statements; expected ${resumeArtifact.expectedSubstantiveStatementCount}`
+      );
+    }
+    for (const statement of derivedStatements) {
+      if (!manifestedStatements.includes(statement)) {
+        findings["KB-009"].push(
+          `resume source has unmanifested substantive statement: ${statement}`
+        );
+      }
+    }
+    for (const statement of manifestedStatements) {
+      if (!derivedStatements.includes(statement)) {
+        findings["KB-009"].push(
+          `resume manifest contains a statement not derived from source: ${statement}`
+        );
+      }
+    }
+    const regeneratedPdfText = execFileSync(
+      "pdftotext",
+      ["-layout", resumeArtifact.pdfPath, "-"],
+      { encoding: "utf8", maxBuffer: 2 * 1024 * 1024 }
+    );
+    if (normalizedText(regeneratedPdfText) !== normalizedText(extractedText)) {
+      findings["KB-009"].push(
+        "tracked resume text does not match text regenerated from the public PDF"
+      );
+    }
     const resumeStatementIds = new Set();
     if (
       resumeArtifact.statements.length !==

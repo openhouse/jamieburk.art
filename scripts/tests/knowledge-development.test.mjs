@@ -10,6 +10,7 @@ import {
   fileInventoryFingerprint,
   projectionDecisionFingerprint,
   publicSurfaceFingerprint,
+  resumeSubstantiveStatements,
   routeRealizesProjection,
   validateHybridReportCandidate,
   validateKnowledgeDevelopmentSuite
@@ -120,6 +121,24 @@ test("the governed resume artifact preserves contact and collective-credit bound
       new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
     );
   }
+});
+
+test("the resume manifest is derived from every substantive HTML block", () => {
+  const source = readFileSync(
+    projectionSurfaceBindings.resumeArtifact.sourcePath,
+    "utf8"
+  );
+  const derived = resumeSubstantiveStatements(source);
+  const manifested = projectionSurfaceBindings.resumeArtifact.statements.map(
+    (statement) => statement.text.replace(/\s+/g, " ").trim()
+  );
+
+  assert.equal(
+    derived.length,
+    projectionSurfaceBindings.resumeArtifact.expectedSubstantiveStatementCount
+  );
+  assert.deepEqual(new Set(derived), new Set(manifested));
+  assert.equal(new Set(derived).size, derived.length);
 });
 
 test("campaign press corpus preserves all memberships without duplicating articles", () => {
@@ -1908,6 +1927,12 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     false
   );
   assert.equal(
+    realizes(
+      `export default function TestPage() { function Hidden() { return (${literal}); } return null; }`
+    ),
+    false
+  );
+  assert.equal(
     realizes(`export const Hidden = () => { return (${literal}); };`),
     false
   );
@@ -1923,6 +1948,49 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     realizes(`export default function TestPage() { return process.env.NEXT_PUBLIC_SHOW === "yes" && (${literal}); }`),
     false
   );
+  assert.equal(
+    realizes(
+      `const showClaim = false; export default function TestPage() { return showClaim && (${literal}); }`
+    ),
+    false
+  );
+  assert.equal(
+    realizes(
+      `export default function TestPage() { return null; return (${literal}); }`
+    ),
+    false
+  );
+});
+
+test("MDX route reachability rejects conditional and unused component bindings", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-MEMORY-SYSTEM"
+  );
+  const projection = claim.projections.find(
+    (item) => item.key === "technical-operations"
+  );
+  const surface = "/work/technical-operations";
+  const literal = `<Claim claimId="${claim.id}" projection="${projection.key}" surface="${surface}" />`;
+  const realizes = (source) =>
+    routeRealizesProjection(
+      source,
+      claim,
+      projection,
+      surface,
+      knowledgeBank,
+      "apps/www/src/content/work/test.mdx"
+    );
+
+  assert.equal(realizes(literal), true);
+  assert.equal(realizes(`{false ? (${literal}) : null}`), false);
+  assert.equal(
+    realizes(`{process.env.NEXT_PUBLIC_SHOW && (${literal})}`),
+    false
+  );
+  assert.equal(
+    realizes(`export function Hidden() { return (${literal}); }`),
+    false
+  );
 });
 
 test("unused TypeScript projection resolvers do not satisfy route coverage", () => {
@@ -1935,6 +2003,28 @@ test("unused TypeScript projection resolvers do not satisfy route coverage", () 
   assert.equal(
     routeRealizesProjection(
       `const unused = ${call};`,
+      claim,
+      projection,
+      "/work",
+      knowledgeBank,
+      "apps/www/src/data/work.ts"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `export const workItems = [{ unused: ${call}.text }];`,
+      claim,
+      projection,
+      "/work",
+      knowledgeBank,
+      "apps/www/src/data/work.ts"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `export const workItems = [{ summary: () => ${call}.text }];`,
       claim,
       projection,
       "/work",
