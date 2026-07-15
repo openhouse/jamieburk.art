@@ -21,6 +21,10 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
       - name: Install dependencies
         run: npm ci
       - name: Run portfolio checks
