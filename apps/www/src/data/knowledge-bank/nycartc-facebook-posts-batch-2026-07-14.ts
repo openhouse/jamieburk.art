@@ -19,7 +19,7 @@ export const nycartcFacebookPostAudit = {
   scrollOperations: 824,
   terminalScrollsWithoutAddition: [42, 41],
   exactIdentitySetMatch: true,
-  sortedIdentitySetSha256:
+  protectedIdentitySetSha256:
     "f1f00d902415ebad0aa37043d7f64070d754c17449c396ac61aa34dec7733955",
   forms: {
     eventRoutes: 150,
@@ -38,6 +38,16 @@ export const nycartcFacebookPostAudit = {
     eventAndCulturalDistribution: 15,
     pressAndPublicKnowledge: 11,
     equitySolidarityAndMutualAid: 2
+  },
+  themeOccurrences: {
+    nightlifeEnforcementAndGovernance: 177,
+    publicMeetingsAndParticipation: 121,
+    culturalSpaceCare: 82,
+    commercialRentAndTenancy: 71,
+    eventAndCulturalDistribution: 63,
+    fundingAndOperationalResources: 44,
+    pressAndPublicKnowledge: 24,
+    equitySolidarityAndMutualAid: 17
   },
   stakeholderGroupOccurrences: {
     nycCouncilMembersAndCouncil: 88,
@@ -72,16 +82,15 @@ export const nycartcFacebookPostAudit = {
 
 const selectedPostSources = [
   {
-    id: "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
-    title: "Cabaret Law repeal event route",
-    publishedAt: "2017-10-30",
-    canonicalUrl: "https://www.facebook.com/events/133554860735306/",
+    id: "SRC-FB-NYCAC-CABARET-LAW-CULTURE-POST",
+    title: "Cabaret Law repeal, venue safety, and city trust post",
+    canonicalUrl:
+      "https://www.facebook.com/photo/?fbid=1945640715690307&set=a.544849644343446",
     publicCitation:
-      "NYC Artist Coalition, Cabaret Law repeal event route, Facebook, October 30, 2017.",
+      "NYC Artist Coalition, Cabaret Law repeal, venue safety, and city trust post, Facebook.",
     supportsGenerally: [
-      "the Page routed people to a public Cabaret Law repeal event",
-      "the post linked contemporaneous New York Times reporting",
-      "the current record retains visible response signals"
+      "the post tags Jamie Burkart and Council Member Rafael Espinal",
+      "the post connects Cabaret Law repeal with venue safety and trust between cultural spaces and city government"
     ],
     doesNotEstablish: [
       "unique people reached or historical peak engagement",
@@ -90,55 +99,34 @@ const selectedPostSources = [
     ]
   },
   {
-    id: "SRC-FB-NYCAC-NIGHT-MAYOR-ROUTE-2018",
-    title: "Meet NYC's first Night Mayor route",
-    publishedAt: "2018-03-26",
+    id: "SRC-FB-NYCAC-TALKS-NOT-RAIDS-POST",
+    title: "Talks Not Raids safety and transparency post",
     canonicalUrl:
-      "https://www.facebook.com/photo/?fbid=2017203981867313&set=a.544849644343446",
+      "https://www.facebook.com/photo/?fbid=2225985110989198&set=a.544849644343446",
     publicCitation:
-      "NYC Artist Coalition, 'Meet NYC's First Night Mayor: Save NYC Spaces,' Facebook post, March 2018.",
+      "NYC Artist Coalition, Talks Not Raids safety and transparency post, Facebook.",
     supportsGenerally: [
-      "the Page routed people into a coalition event with the Office of Nightlife",
-      "the shared identity connected cultural-space advocacy with public participation"
+      "the post preserves Olympia Kazi's attributed safety-and-transparency framing",
+      "the post routes readers to the Talks Not Raids campaign site"
     ],
     doesNotEstablish: [
-      "Jamie's individual production or publishing tasks",
-      "physical attendance, endorsement, or policy causality"
+      "Jamie's individual production, writing, or publishing tasks",
+      "MARCH disbandment, stakeholder response, or policy causality"
     ]
   },
   {
-    id: "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
-    title: "MARCH transparency report route",
-    publishedAt: "2020-07-23",
-    canonicalUrl:
-      "https://www.facebook.com/photo/?fbid=2686676394920065&set=a.544849644343446",
+    id: "SRC-FB-NYCAC-COVID-KNOW-YOUR-RIGHTS-VIDEO",
+    title: "COVID-19 know-your-rights video route",
+    canonicalUrl: "https://www.facebook.com/nycartc/videos/632085217644541/",
     publicCitation:
-      "NYC Artist Coalition, MARCH transparency report route, Facebook, July 2020.",
+      "NYC Artist Coalition, COVID-19 know-your-rights video route, Facebook.",
     supportsGenerally: [
-      "the Page carried MARCH accountability work into a public information route",
-      "the shared account connected records work with coalition campaigning"
+      "the Page routed cultural-space participants to practical rent, tenant, and small-business legal information",
+      "the shared identity connected cultural-space care with public resource distribution"
     ],
     doesNotEstablish: [
-      "Jamie's individual role in obtaining or analyzing the records",
-      "that MARCH was disbanded",
-      "sole coalition causality for legislation or agency change"
-    ]
-  },
-  {
-    id: "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021",
-    title: "FairRentNYC virtual-house action route",
-    publishedAt: "2021-09-15",
-    canonicalUrl:
-      "https://www.facebook.com/photo/?fbid=2960969320824103&set=a.544849644343446",
-    publicCitation:
-      "NYC Artist Coalition, FairRentNYC virtual-house action route, Facebook, September 15, 2021.",
-    supportsGenerally: [
-      "the latest surviving public timeline record routed people to a Commercial Rent Stabilization action",
-      "the shared identity continued across coalition campaigns through September 2021"
-    ],
-    doesNotEstablish: [
-      "individual publisher or drafter identity",
-      "bill passage, attendance, reach, endorsement, or policy causality"
+      "current legal guidance or service outcomes",
+      "individual publisher identity, audience use, conversion, or impact"
     ]
   }
 ] as const;
@@ -249,7 +237,7 @@ export const nycartcFacebookPostSources = [
     publicCitation:
       "Public-safe metadata for a July 2026 accounting of the surviving NYC Artist Coalition Facebook Page timeline.",
     publicNote:
-      "The public census preserves one aggregate-only disposition row per recovered record, including a stable public-safe identifier, sequence, form, primary theme, classification counts, and a visible-interaction boolean, without reproducing post text, post URLs, per-record metrics, or administrative data.",
+      "The public census preserves one aggregate-only disposition row per recovered record, including a stable public-safe identifier, sequence, form, anonymous theme and stakeholder classifications, classification counts, and a visible-interaction boolean. Unlinkable value-frequency tables reproduce aggregate interaction floors without exposing per-record metrics.",
     protectedLocatorId: "RESEARCH-NYCAC-FACEBOOK-POSTS-2026-001",
     supportsGenerally: [
       "444 unique surviving public Page timeline records",
@@ -353,7 +341,7 @@ export const nycartcFacebookPostSources = [
     publicCitation:
       "Public-safe disposition ledger for the currently recoverable NYC Artist Coalition Facebook Page timeline, July 14, 2026.",
     publicNote:
-      "Contains one aggregate-only disposition row for each of 444 recovered record identities, together with population controls and bounded aggregate classifications. It omits post text, post URLs, per-record metrics, comments, identities, account state, and private analytics.",
+      "Contains one aggregate-only disposition row for each of 444 recovered record identities, anonymous row-level classifications, unlinkable interaction-value frequencies, a reproducible public disposition-set digest, and bounded population controls. It omits post text, post URLs, per-record metrics, comments, identities, account state, and private analytics.",
     supportsGenerally: [
       "the exact-set-checked 444-record currently recoverable Page surface",
       "record-form, primary-theme, stakeholder-routing, and aggregate response accounting",
@@ -500,7 +488,7 @@ export const nycartcFacebookPostClaims = [
           "Two terminal traversals recovered the same 444 unique surviving public Page timeline records from January 2017 through September 2021.",
         status: "active",
         citationRequired: false,
-        surfaces: ["docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts"]
+        surfaces: ["docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md"]
       }
     ],
     evidence: [
@@ -552,7 +540,7 @@ export const nycartcFacebookPostClaims = [
           "The public timeline contains 150 event routes and 26 source-or-resource routes inside a broader 444-record civic publication system.",
         status: "active",
         citationRequired: false,
-        surfaces: ["docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts"]
+        surfaces: ["docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md"]
       }
     ],
     evidence: [
@@ -571,23 +559,23 @@ export const nycartcFacebookPostClaims = [
         renderCitation: false
       },
       {
-        sourceId: "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+        sourceId: "SRC-FB-NYCAC-CABARET-LAW-CULTURE-POST",
         relationship: "direct-support",
-        supports: ["Cabaret Law event and press routing"],
+        supports: ["Cabaret Law, venue-safety, and public-trust framing"],
         confidence: "high",
         renderCitation: true
       },
       {
-        sourceId: "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+        sourceId: "SRC-FB-NYCAC-TALKS-NOT-RAIDS-POST",
         relationship: "direct-support",
-        supports: ["MARCH public-information routing"],
+        supports: ["Talks Not Raids framing and campaign routing"],
         confidence: "high",
         renderCitation: true
       },
       {
-        sourceId: "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021",
+        sourceId: "SRC-FB-NYCAC-COVID-KNOW-YOUR-RIGHTS-VIDEO",
         relationship: "direct-support",
-        supports: ["FairRentNYC campaign continuity"],
+        supports: ["COVID-era legal-information and practical-resource routing"],
         confidence: "high",
         renderCitation: true
       }
@@ -620,7 +608,7 @@ export const nycartcFacebookPostClaims = [
           "Stakeholder routing recurs across the timeline: 88 records reference Council members or the Council, 40 reference cultural or nightlife agencies, and 39 reference cultural or advocacy partners.",
         status: "active",
         citationRequired: false,
-        surfaces: ["docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts"]
+        surfaces: ["docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md"]
       }
     ],
     evidence: [
@@ -666,7 +654,7 @@ export const nycartcFacebookPostClaims = [
           "Three hundred eighty-nine records retain at least one visible interaction; current record-level totals are 2,374 reactions, 212 comments, and 611 shares.",
         status: "active",
         citationRequired: false,
-        surfaces: ["docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts"]
+        surfaces: ["docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md"]
       }
     ],
     evidence: [

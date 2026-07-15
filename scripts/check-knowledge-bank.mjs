@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -690,7 +691,9 @@ if (!existsSync(nycartcFacebookPostLedgerPath)) {
       "recordId",
       "sequenceNewestToOldest",
       "stakeholderGroupCount",
-      "themeCount"
+      "stakeholderGroups",
+      "themeCount",
+      "themes"
     ];
     const expectedForms = {
       "event-route": nycartcFacebookPostAudit.forms.eventRoutes,
@@ -717,15 +720,25 @@ if (!existsSync(nycartcFacebookPostLedgerPath)) {
       "NYC business and enforcement agencies": nycartcFacebookPostAudit.stakeholderGroupOccurrences.nycBusinessAndEnforcementAgencies,
       "Press and public-information organizations": nycartcFacebookPostAudit.stakeholderGroupOccurrences.pressAndPublicInformationOrganizations
     };
-    assertEqual(ledger.schemaVersion, 2, "NYC Artist Coalition Facebook post ledger schema");
+    const expectedThemeOccurrences = {
+      "nightlife-enforcement-and-governance": nycartcFacebookPostAudit.themeOccurrences.nightlifeEnforcementAndGovernance,
+      "public-meetings-and-participation": nycartcFacebookPostAudit.themeOccurrences.publicMeetingsAndParticipation,
+      "cultural-space-care": nycartcFacebookPostAudit.themeOccurrences.culturalSpaceCare,
+      "commercial-rent-and-tenancy": nycartcFacebookPostAudit.themeOccurrences.commercialRentAndTenancy,
+      "event-and-cultural-distribution": nycartcFacebookPostAudit.themeOccurrences.eventAndCulturalDistribution,
+      "funding-and-operational-resources": nycartcFacebookPostAudit.themeOccurrences.fundingAndOperationalResources,
+      "press-and-public-knowledge": nycartcFacebookPostAudit.themeOccurrences.pressAndPublicKnowledge,
+      "equity-solidarity-and-mutual-aid": nycartcFacebookPostAudit.themeOccurrences.equitySolidarityAndMutualAid
+    };
+    assertEqual(ledger.schemaVersion, 3, "NYC Artist Coalition Facebook post ledger schema");
     assertEqual(
       ledger.population?.terminalTraversals,
       nycartcFacebookPostAudit.terminalTraversals,
       "NYC Artist Coalition Facebook terminal traversal count"
     );
     assertEqual(
-      ledger.population?.sortedIdentitySetSha256,
-      nycartcFacebookPostAudit.sortedIdentitySetSha256,
+      ledger.population?.protectedIdentitySetSha256,
+      nycartcFacebookPostAudit.protectedIdentitySetSha256,
       "NYC Artist Coalition Facebook protected identity-set digest"
     );
     assertEqual(
@@ -753,6 +766,17 @@ if (!existsSync(nycartcFacebookPostLedgerPath)) {
       if (record.publicDetailStatus !== "aggregate-only") {
         fail(`NYC Artist Coalition Facebook row ${index + 1} must remain aggregate-only`);
       }
+      if (!Array.isArray(record.themes) || !Array.isArray(record.stakeholderGroups)) {
+        fail(`NYC Artist Coalition Facebook row ${index + 1} must retain anonymous classification arrays`);
+      }
+      assertEqual(record.themes?.length, record.themeCount, `NYC Artist Coalition Facebook row ${index + 1} theme count`);
+      assertEqual(record.stakeholderGroups?.length, record.stakeholderGroupCount, `NYC Artist Coalition Facebook row ${index + 1} stakeholder count`);
+      if ((record.themes ?? []).some((theme) => !(theme in expectedThemeOccurrences))) {
+        fail(`NYC Artist Coalition Facebook row ${index + 1} has an unknown theme`);
+      }
+      if ((record.stakeholderGroups ?? []).some((group) => !(group in expectedStakeholderGroups))) {
+        fail(`NYC Artist Coalition Facebook row ${index + 1} has an unknown stakeholder group`);
+      }
       for (const field of ["themeCount", "stakeholderGroupCount", "outboundUrlCount"]) {
         if (!Number.isInteger(record[field]) || record[field] < 0) {
           fail(`NYC Artist Coalition Facebook row ${index + 1} has invalid ${field}`);
@@ -772,19 +796,14 @@ if (!existsSync(nycartcFacebookPostLedgerPath)) {
       assertEqual(ledger.primaryThemes?.[theme], expected, `NYC Artist Coalition Facebook declared ${theme} count`);
       assertEqual(records.filter((record) => record.primaryTheme === theme).length, expected, `NYC Artist Coalition Facebook row-derived ${theme} count`);
     }
-    assertEqual(
-      records.reduce((total, record) => total + record.themeCount, 0),
-      Object.values(ledger.themeOccurrences ?? {}).reduce((total, value) => total + value, 0),
-      "NYC Artist Coalition Facebook multi-theme occurrence accounting"
-    );
+    for (const [theme, expected] of Object.entries(expectedThemeOccurrences)) {
+      assertEqual(ledger.themeOccurrences?.[theme], expected, `NYC Artist Coalition Facebook declared ${theme} occurrence count`);
+      assertEqual(records.filter((record) => (record.themes ?? []).includes(theme)).length, expected, `NYC Artist Coalition Facebook row-derived ${theme} occurrence count`);
+    }
     for (const [group, expected] of Object.entries(expectedStakeholderGroups)) {
       assertEqual(ledger.stakeholderRouting?.recordOccurrences?.[group], expected, `NYC Artist Coalition Facebook declared ${group} count`);
+      assertEqual(records.filter((record) => (record.stakeholderGroups ?? []).includes(group)).length, expected, `NYC Artist Coalition Facebook row-derived ${group} count`);
     }
-    assertEqual(
-      records.reduce((total, record) => total + record.stakeholderGroupCount, 0),
-      Object.values(ledger.stakeholderRouting?.recordOccurrences ?? {}).reduce((total, value) => total + value, 0),
-      "NYC Artist Coalition Facebook stakeholder occurrence accounting"
-    );
     assertEqual(
       records.reduce((total, record) => total + record.outboundUrlCount, 0),
       nycartcFacebookPostAudit.outboundLinkOccurrences,
@@ -805,7 +824,44 @@ if (!existsSync(nycartcFacebookPostLedgerPath)) {
         expected,
         `NYC Artist Coalition Facebook visible ${field} floor`
       );
+      const frequencies = ledger.visibleInteractionSnapshot?.unlinkableValueFrequencies?.[field] ?? [];
+      if (
+        !Array.isArray(frequencies) ||
+        frequencies.some(
+          (entry) =>
+            !Number.isInteger(entry.value) ||
+            entry.value < 0 ||
+            !Number.isInteger(entry.recordCount) ||
+            entry.recordCount < 1
+        )
+      ) {
+        fail(`NYC Artist Coalition Facebook ${field} histogram is invalid`);
+      } else {
+        assertEqual(
+          frequencies.reduce((total, entry) => total + entry.recordCount, 0),
+          records.length,
+          `NYC Artist Coalition Facebook ${field} histogram population`
+        );
+        assertEqual(
+          frequencies.reduce((total, entry) => total + entry.value * entry.recordCount, 0),
+          expected,
+          `NYC Artist Coalition Facebook histogram-derived ${field} floor`
+        );
+      }
     }
+    const publicDispositionDigest = createHash("sha256")
+      .update(records.map((record) => record.recordId).sort().join("\n"))
+      .digest("hex");
+    assertEqual(
+      ledger.population?.publicDispositionSetSha256,
+      publicDispositionDigest,
+      "NYC Artist Coalition Facebook public disposition-set digest"
+    );
+    assertEqual(
+      ledger.population?.publicDispositionDigestMethod,
+      "SHA-256 of the 444 sorted public recordId values joined by a line feed, with no trailing line feed.",
+      "NYC Artist Coalition Facebook public disposition-set digest method"
+    );
     if (ledger.population?.exactIdentitySetMatch !== true) {
       fail("NYC Artist Coalition Facebook post traversals must retain an exact identity-set match");
     }
@@ -900,6 +956,29 @@ if (!existsSync(nycartcFacebookPostReportPath)) {
       fail(`NYC Artist Coalition Facebook report references missing artifact ${artifactPath}`);
     }
   }
+  const closeReadSourceIds = [
+    "SRC-FB-NYCAC-CABARET-LAW-CULTURE-POST",
+    "SRC-FB-NYCAC-TALKS-NOT-RAIDS-POST",
+    "SRC-FB-NYCAC-COVID-KNOW-YOUR-RIGHTS-VIDEO"
+  ];
+  const closeReadUrls = closeReadSourceIds.map((sourceId) => {
+    const source = sourcesById.get(sourceId);
+    if (!source?.canonicalUrl) {
+      fail(`NYC Artist Coalition Facebook report source ${sourceId} is missing a canonical URL`);
+      return null;
+    }
+    assertIncludes(report, source.canonicalUrl, "NYC Artist Coalition Facebook close-read source");
+    return normalizedUrl(source.canonicalUrl);
+  });
+  const reportPostUrls = [
+    ...report.matchAll(/https:\/\/www\.facebook\.com\/(?:photo\/\?fbid=\d+&set=a\.\d+|nycartc\/videos\/\d+\/)/g)
+  ].map((match) => normalizedUrl(match[0]));
+  assertEqual(reportPostUrls.length, 3, "NYC Artist Coalition Facebook close-read post-URL count");
+  assertEqual(
+    [...new Set(reportPostUrls)].sort().join("|"),
+    closeReadUrls.filter(Boolean).sort().join("|"),
+    "NYC Artist Coalition Facebook close-read source graph"
+  );
 }
 
 if (!existsSync(wowlistFacebookPostReportPath)) {

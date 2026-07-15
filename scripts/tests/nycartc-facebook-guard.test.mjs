@@ -36,7 +36,19 @@ const prohibited = [
   "The response floor demonstrates traction.",
   "The first-party management view showed who administered the Page.",
   "Signed-in controls confirmed Page access.",
-  "The Page dashboard exposed management permissions."
+  "The Page dashboard exposed management permissions.",
+  "The sole Page administrator was Jamie.",
+  "Facebook publishing belonged exclusively to Jamie.",
+  "Official engagement is proven by 88 Council references.",
+  "Council offices participated across 88 posts.",
+  "Broad public reach came from the 2,374 reactions.",
+  "The campaign reached 2,374 people, measured by reactions.",
+  "Jamie had access to the Page dashboard.",
+  "The dashboard was available to Jamie as administrator.",
+  "Although this is not a native Meta export, it is the complete Facebook archive.",
+  "The currently recoverable Page surface proves the complete Facebook history.",
+  "Jamie recalls being the sole administrator.",
+  "Jamie recalls being the sole administrator, and the record confirms it."
 ];
 
 for (const statement of prohibited) {

@@ -19,12 +19,20 @@ surviving Page-post identities**, spanning January 29, 2017, through September
 42 and 41 terminal scroll controls produced no additional records.
 
 Every recovered record received a public-safe disposition. The population
-ledger retains only a stable ID, sequence, form, primary theme, classification
-counts, and a visible-interaction boolean. Raw text, comments, names, the full
-post-URL set, per-record metrics, media, relationship data, account state,
-authentication material, and sensitive or stale action routes remain outside
-the repository. Only the three public records selected for close reading below
-are cited by URL.
+ledger retains only a stable ID, sequence, form, anonymous theme and
+stakeholder classifications, classification counts, and a visible-interaction
+boolean. Unlinkable value-frequency tables make the aggregate interaction
+floors reproducible without tying a count to a post. Raw text, comments, names,
+the full post-URL set, per-record metrics, media, relationship data, account
+state, authentication material, and sensitive or stale action routes remain
+outside the repository. Only the three public records selected for close
+reading below are cited by post URL.
+
+The ledger also publishes a disposition-set digest that can be regenerated as
+the SHA-256 of its 444 sorted public record IDs joined by line feeds. The
+separate protected identity-set digest records the exact-match browser control;
+the public digest verifies the committed disposition population without
+pretending to reproduce protected source identities.
 
 This is 100 percent disposition coverage of the surviving July 2026 Page
 surface. It is not a native Meta export, deletion history, or proof that no
@@ -49,8 +57,9 @@ created, published, or wrote a particular post.
 | **Total** | **444** |
 
 The distribution matters because the Page did more than broadcast statements.
-It repeatedly moved people among meetings, campaign sites, public hearings,
-press, practical resources, partner activity, and coalition-created media.
+It repeatedly published routes among meetings, campaign sites, public
+hearings, press, practical resources, partner activity, and coalition-created
+media.
 
 ## Primary Themes
 
@@ -184,8 +193,8 @@ historical analytics, reach, attendance, conversion, stakeholder endorsement,
 causality, or impact.
 
 The stronger mission-relevant finding is structural: over several years, the
-Page repeatedly connected people, meetings, campaigns, institutions, sources,
-and practical resources through a coherent collective identity.
+Page repeatedly connected meetings, campaigns, institutions, sources, and
+practical resources through a coherent collective publishing identity.
 
 ## Anti-Claims
 
