@@ -582,6 +582,14 @@ test("social research locators stay private and research notes stay public-safe"
   assert.doesNotMatch(researchNote, /\/Users\//);
   assert.doesNotMatch(researchNote, /\/Volumes\//);
   assert.doesNotMatch(researchNote, /\b\d{3}[-.)]\s?\d{3}[- ]\d{4}\b/);
+  assert.match(
+    researchNote,
+    /recovered social corpus does not\s+independently establish account creation/i
+  );
+  assert.doesNotMatch(
+    researchNote,
+    /interpretation:\s+Jamie established an\s+identity system/i
+  );
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

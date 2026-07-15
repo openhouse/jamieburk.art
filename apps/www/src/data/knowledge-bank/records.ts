@@ -1492,7 +1492,7 @@ const knowledgeBankInput = {
           sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", nycaOlympiaSocialSourceId],
           sourceSupport: ["four campaign identities in the profile bio", "multi-year mention corpus", "89 recovered Olympia Kazi posts mentioning @NYCArtC", "status-level FairRentNYC specimen"],
           boundaries: ["The account does not identify the human author of each shared-account post.", "Olympia Kazi's public use of @NYCArtC does not by itself prove that she authored posts from the coalition account.", "Durability and repeated use do not establish sole ownership or policy causality."],
-          decisionUse: "Makes Jamie's identity-system contribution legible while crediting later collaborator stewardship and preserving collective authorship."
+          decisionUse: "Makes durable shared identity stewardship legible while keeping Jamie's account-establishment statement in its separate memory-lead proposition and preserving collective authorship."
         }
       ],
       tensions: [],

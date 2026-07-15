@@ -145,9 +145,11 @@ mentioning `@NYCArtC`, the largest external-author count in the bounded corpus.
 One representative specimen uses the coalition identity in FairRentNYC
 advocacy: [January 28, 2021](https://x.com/olympiakazi/status/1354833789709643781).
 
-This supports a durable shared-identity interpretation: Jamie established an
-identity system that collaborators repeatedly used in public campaign work.
-It does not establish that Olympia authored posts from the shared `@NYCArtC`
+This supports a durable shared-stewardship interpretation: collaborators
+repeatedly used the coalition identity in public campaign work. Jamie says he
+established that identity system; the recovered social corpus does not
+independently establish account creation or initial administration. It also
+does not establish that Olympia authored posts from the shared `@NYCArtC`
 account, nor does it reduce her contribution to a post count. Post-level shared
 account authorship still needs administrator records or collaborator evidence.
 
@@ -235,7 +237,8 @@ campaign press census rather than being duplicated as new sources.
 
 The account system is itself professional evidence when stated carefully:
 
-- Jamie confirms that he established durable project identities.
+- Jamie confirms that he established durable project identities; that actor
+  claim remains a memory lead pending independent corroboration.
 - The identities carried usable issue explanations, calls to action, event
   links, public resources, and campaign continuity.
 - Shared teams and admired collaborators used those identities over years.
@@ -243,10 +246,11 @@ The account system is itself professional evidence when stated carefully:
   joint work through those surfaces.
 - The accounts preserve handoff and continuity patterns beyond a single person.
 
-The strongest future claim is not "Jamie wrote thousands of posts." It is that
-he helped create public-facing identity and information infrastructure sturdy
-enough for collective work to continue. That claim still needs account-
-creation or collaborator corroboration before website projection.
+The strongest future claim is not "Jamie wrote thousands of posts." If
+account-creation or collaborator evidence is recovered, it may become possible
+to say that he helped create public-facing identity and information
+infrastructure sturdy enough for collective work to continue. Until then, the
+bank keeps that contribution as a memory lead outside website projection.
 
 ## Boundaries And Next Research
 
