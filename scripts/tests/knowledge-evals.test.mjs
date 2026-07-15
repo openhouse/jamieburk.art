@@ -15,6 +15,11 @@ import {
   nycacFacebookEventReviewSummary
 } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts";
 import {
+  nycacFacebookPostClaimIds,
+  nycacFacebookPostKnowledge,
+  nycacFacebookPostReviewSummary
+} from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts-2026-07.ts";
+import {
   personalWowListFacebookEventClaimIds,
   personalWowListFacebookEventKnowledge,
   personalWowListFacebookEventReviewSummary
@@ -49,6 +54,10 @@ const wowListFacebookPostPopulationPath = path.join(
   repoRoot,
   suite.pilot.wowListFacebookPosts.manifestPath
 );
+const nycacFacebookPostPopulationPath = path.join(
+  repoRoot,
+  suite.pilot.nycacFacebookPosts.manifestPath
+);
 
 function loadCallNycPopulation() {
   return JSON.parse(readFileSync(callNycPopulationPath, "utf8"));
@@ -80,6 +89,10 @@ function loadPersonalWowListFacebookEventPopulation() {
 
 function loadWowListFacebookPostPopulation() {
   return JSON.parse(readFileSync(wowListFacebookPostPopulationPath, "utf8"));
+}
+
+function loadNycacFacebookPostPopulation() {
+  return JSON.parse(readFileSync(nycacFacebookPostPopulationPath, "utf8"));
 }
 
 function refreshFieldPracticeApproval(targetSuite) {
@@ -135,14 +148,11 @@ function refreshArchiveProductionApproval(targetSuite) {
   })).digest("hex");
 }
 
-test("knowledge-bank gate records two fresh WOW List Facebook post holdout passes", () => {
+test("knowledge-bank gate resets holdouts after NYC Artist Coalition Facebook production", () => {
   const result = evaluateKnowledgeBank(suite);
-  assert.equal(result.holdout.complete, true);
-  assert.equal(result.holdout.consecutivePassingRuns, 2);
-  assert.deepEqual(result.holdout.judgeIds, [
-    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g",
-    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h"
-  ]);
+  assert.equal(result.holdout.complete, false);
+  assert.equal(result.holdout.consecutivePassingRuns, 0);
+  assert.deepEqual(result.holdout.judgeIds, []);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
 });
@@ -3774,5 +3784,185 @@ test("WOW List Facebook report and review configuration are structurally locked"
     assert.equal(result.contentApprovals.wowListFacebookPosts.reviewLocksMatch, false);
   } finally {
     wowListFacebookPostReviewSummary.exposedDistinctPosts = original;
+  }
+});
+
+test("NYC Artist Coalition Facebook post production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  const population = loadNycacFacebookPostPopulation();
+
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+  )?.score, 5);
+  assert.equal(population.population.length, 445);
+  assert.equal(population.postedUrlInventory.length, 67);
+  assert.equal(population.postedUrlInventory.filter((row) =>
+    row.preservationDisposition === "governed-source-record"
+  ).length, 9);
+  assert.equal(population.postedUrlInventory.filter((row) => row.url === null).length, 2);
+  assert.equal(result.contentApprovals.nycacFacebookPosts.reviewLocksMatch, true);
+});
+
+test("NYC Artist Coalition Facebook census rejects row loss and identity inflation", () => {
+  const mutations = [
+    (copy) => copy.population.pop(),
+    (copy) => {
+      copy.population[0].ordinal = 2;
+    },
+    (copy) => {
+      copy.population[0].authorshipDisposition = "jamie-authored-post";
+    },
+    (copy) => {
+      copy.method.limitations = copy.method.limitations.map((item) =>
+        item.replace("not a native Meta owner export or proof of complete lifetime history", "the complete lifetime history")
+      );
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const copy = loadNycacFacebookPostPopulation();
+    mutate(copy);
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: copy });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 1);
+  }
+});
+
+test("NYC Artist Coalition Facebook census rejects raw and authenticated data", () => {
+  const mutations = [
+    ["body", "raw post body"],
+    ["commentText", "private commenter"],
+    ["reactionIdentities", ["Named person"]],
+    ["sessionToken", "secret"],
+    ["authenticatedUrl", "https://facebook.com/private?__cft__=secret"]
+  ];
+
+  for (const [key, value] of mutations) {
+    const copy = loadNycacFacebookPostPopulation();
+    copy.population[0][key] = value;
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: copy });
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.privacy, false, key);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 1, key);
+  }
+});
+
+test("NYC Artist Coalition Facebook routes reject semantic swaps and sensitive disclosure", () => {
+  const mutations = [
+    (copy) => {
+      const grubStreet = copy.postedUrlInventory.find((row) =>
+        row.sourceId === "SRC-NYCAC-FACEBOOK-GRUBSTREET-ODE-2019-05-22"
+      );
+      const fox = copy.postedUrlInventory.find((row) =>
+        row.sourceId === "SRC-NYCAC-FACEBOOK-FOX5-NIGHTLIFE-LISTENING-2018-03-26"
+      );
+      [grubStreet.missionContext, fox.missionContext] =
+        [fox.missionContext, grubStreet.missionContext];
+    },
+    (copy) => {
+      const governed = copy.postedUrlInventory.find((row) =>
+        row.preservationDisposition === "governed-source-record"
+      );
+      const inventory = copy.postedUrlInventory.find((row) =>
+        row.preservationDisposition === "route-inventory-only"
+      );
+      [governed.accessDisposition, inventory.accessDisposition] =
+        [inventory.accessDisposition, governed.accessDisposition];
+      [governed.preservationDisposition, inventory.preservationDisposition] =
+        [inventory.preservationDisposition, governed.preservationDisposition];
+      [governed.sourceId, inventory.sourceId] = [inventory.sourceId, governed.sourceId];
+    },
+    (copy) => {
+      const withheld = copy.postedUrlInventory.find((row) => row.url === null);
+      withheld.url = "https://zoom.us/j/123456789";
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const copy = loadNycacFacebookPostPopulation();
+    mutate(copy);
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: copy });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 1);
+  }
+});
+
+test("NYC Artist Coalition Facebook stakeholder and interaction boundaries cannot become impact claims", () => {
+  const mutations = [
+    (copy) => {
+      copy.stakeholderSummary.boundary =
+        "The referenced accounts engaged with and endorsed NYC Artist Coalition.";
+    },
+    (copy) => {
+      copy.displayedInteractionSummary.boundary =
+        "Reactions and comments prove reach, attendance, endorsement, and policy impact.";
+    },
+    (copy) => {
+      copy.displayedInteractionSummary.boundary =
+        "Zero displayed shares means no one shared the posts.";
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const copy = loadNycacFacebookPostPopulation();
+    mutate(copy);
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: copy });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 1);
+  }
+});
+
+test("NYC Artist Coalition Facebook projections reject sole credit and causal inflation", () => {
+  const mutations = [
+    [nycacFacebookPostClaimIds.operatingRecord, "Jamie authored every NYC Artist Coalition Facebook post."],
+    [nycacFacebookPostClaimIds.operatingRecord, "The 445 posts are the complete lifetime Facebook history."],
+    [nycacFacebookPostClaimIds.civicRelay, "References prove elected officials engaged with and endorsed NYC Artist Coalition."],
+    [nycacFacebookPostClaimIds.interactionSignals, "Facebook reactions and comments prove reach, attendance, mandate, and impact."],
+    [nycacFacebookPostClaimIds.interactionSignals, "Zero displayed shares means no one shared the posts."]
+  ];
+
+  for (const [claimId, text] of mutations) {
+    const claims = structuredClone(nycacFacebookPostKnowledge.claims);
+    const claim = claims.find((item) => item.id === claimId);
+    claim.projections[0].text = text;
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookPostClaims: claims });
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.projectionSemantics, false, text);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 1, text);
+  }
+});
+
+test("NYC Artist Coalition Facebook report, proof, and review summary are structurally locked", () => {
+  const report = readFileSync(suite.pilot.nycacFacebookPosts.reportPath, "utf8");
+  let result = evaluateKnowledgeBank(suite, {
+    nycacFacebookPostReport: report.replace(
+      "It does **not** mean a complete lifetime history",
+      "It means a complete lifetime history"
+    )
+  });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+  )?.score, 1);
+
+  const proof = structuredClone(proofClaims.find((item) =>
+    item.id === suite.pilot.nycacFacebookPosts.proofId
+  ));
+  proof.guardrail = "Jamie authored the entire Page.";
+  result = evaluateKnowledgeBank(suite, { nycacFacebookPostProof: proof });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.proofProjection, false);
+
+  const original = nycacFacebookPostReviewSummary.authorshipBoundary;
+  try {
+    nycacFacebookPostReviewSummary.authorshipBoundary = "jamie-authored";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.authorship, false);
+    assert.equal(result.contentApprovals.nycacFacebookPosts.reviewLocksMatch, false);
+  } finally {
+    nycacFacebookPostReviewSummary.authorshipBoundary = original;
   }
 });

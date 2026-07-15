@@ -69,6 +69,19 @@ establish formal endorsement, Council adoption, or official-service status.
 
 ## NYC Artist Coalition
 
+### Facebook post population
+
+The [NYC Artist Coalition Facebook post report](nyc-artist-coalition-facebook-posts.md)
+preserves all 445 distinct posts exposed by the authenticated Page feed on July
+15, 2026, spanning 2017–2021. It inventories 67 cleaned off-Facebook routes,
+governs nine recovered sources, and classifies mission continuity, civic
+interfaces, and displayed interaction signals while withholding raw post bodies,
+interaction identities, authenticated data, and two sensitive exact routes.
+
+The result is a capture-date population, not a lifetime Meta export. Shared Page
+authorship remains unresolved: Jamie's predominant-use memory is a research lead,
+and the repository does not assign him every post.
+
 The `@NYCArtC` profile names four coalition campaigns: Save NYC Spaces, Let NYC
 Dance, Talks Not Raids, and Fair Rent NYC. The shared identity remained active
 across years of cultural-space, nightlife, enforcement, and commercial-rent

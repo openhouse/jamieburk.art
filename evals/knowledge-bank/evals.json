@@ -152,7 +152,7 @@
       "correctedSourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "correctionId": "COR-NYCAC-CABARET-HEARING-DATE-2026",
       "approvedContentSha256": "06f499a9c10eee7afe2ee47227919a4994b868690093743a63113d3d161111f2",
-      "approvedRelatedClaimsSha256": "3b07bb17ff7d6dd7226202d51b897807337624a50a04f3f2349e649122fb81e8",
+      "approvedRelatedClaimsSha256": "2613a69a6c694d6134486dd9c6f2ea74cc60d85ed2407c9c342bd766c6e9d368",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-COUNCIL-EVIDENTIARY-USE",
@@ -939,6 +939,88 @@
       "sourcePreservationInquiryId": "INQ-WOWLIST-FACEBOOK-LINKED-SOURCE-PRESERVATION",
       "manifestSourceId": "SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026"
     },
+    "nycacFacebookPosts": {
+      "reviewedAt": "2026-07-15",
+      "manifestPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
+      "reportPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "expectedEncounteredRenderRows": 598,
+      "expectedDuplicateRenderVariants": 153,
+      "expectedPostCount": 445,
+      "expectedYearCounts": {
+        "2017": 186,
+        "2018": 74,
+        "2019": 111,
+        "2020": 69,
+        "2021": 5
+      },
+      "expectedDistinctExternalRoutes": 67,
+      "expectedPublishedExactRoutes": 65,
+      "expectedWithheldSensitiveRoutes": 2,
+      "expectedGovernedSourceRoutes": 9,
+      "expectedInventoryOnlyRoutes": 56,
+      "expectedEvidenceRoleCounts": {
+        "project-route": 18,
+        "event-or-program": 9,
+        "issue-context": 22,
+        "resource-or-intake": 6,
+        "external-context": 6,
+        "fundraising-or-petition": 3,
+        "government-or-civic-action": 3
+      },
+      "expectedMissionTagCounts": {
+        "commercial-rent-and-anti-displacement": 48,
+        "civic-solidarity-and-participation": 16,
+        "covid-and-space-relief": 30,
+        "cultural-space-survival-and-network": 191,
+        "coalition-public-communications": 104,
+        "nightlife-governance-and-listening": 29,
+        "march-transparency-and-accountability": 65,
+        "cabaret-law-and-dance-freedom": 76,
+        "cultural-policy-and-create-nyc": 18,
+        "cultural-space-safety-and-compliance": 8
+      },
+      "expectedStakeholderTagCounts": {
+        "general-public-and-followers": 105,
+        "artists-cultural-spaces-and-organizers": 256,
+        "enforcement-and-regulatory-agencies": 66,
+        "state-and-federal-government": 9,
+        "office-of-nightlife-and-nightlife-governance": 33,
+        "published-media": 35,
+        "coalition-and-advocacy-networks": 39,
+        "nyc-council-and-elected-officials": 66,
+        "cultural-affairs-and-city-agencies": 15
+      },
+      "expectedAccountReferenceRows": {
+        "rafaelEspinal": 23,
+        "nycCouncil": 25,
+        "stephenLevin": 8,
+        "antonioReynoso": 1,
+        "culturalAffairs": 4,
+        "officeOfNightlife": 4,
+        "mayor": 3
+      },
+      "expectedRowsWithReactions": 371,
+      "expectedDisplayedReactions": 2291,
+      "expectedMaxReactions": 95,
+      "expectedRowsWithComments": 128,
+      "expectedDisplayedComments": 212,
+      "expectedMaxComments": 7,
+      "expectedRowsWithShares": 0,
+      "expectedDisplayedShares": 0,
+      "expectedIntakeCount": 1,
+      "expectedObservationCount": 9,
+      "expectedSourceCount": 6,
+      "expectedClaimCount": 3,
+      "expectedInquiryCount": 3,
+      "operatingRecordClaimId": "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD",
+      "civicRelayClaimId": "CLM-NYCAC-FACEBOOK-CIVIC-RELAY",
+      "interactionSignalsClaimId": "CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS",
+      "ownerExportInquiryId": "INQ-NYCAC-FACEBOOK-POST-OWNER-EXPORT",
+      "authorshipInquiryId": "INQ-NYCAC-FACEBOOK-POST-AUTHORSHIP",
+      "sourcePreservationInquiryId": "INQ-NYCAC-FACEBOOK-POST-SOURCE-PRESERVATION",
+      "manifestSourceId": "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
+      "proofId": "nyc-artist-coalition-public-web-infrastructure"
+    },
     "agencyGraph": {
       "expectedEntityCount": 31,
       "expectedRelationCount": 31,
@@ -1126,6 +1208,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 57 posts exposed by the capture-date authenticated live feed, all 55 posted URLs, displayed source relationships, organizer workflows, care and civic routing, interaction semantics, collective credit, raw-data exclusions, native-export limits, and selective non-projection remain complete, auditable, public-safe, and non-inflationary."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-FACEBOOK-POSTS",
+      "label": "NYC Artist Coalition Facebook post full-population archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 445 posts exposed by the capture-date authenticated Page feed and all 67 cleaned off-Facebook routes remain reconciled, source-governed, mission-classified, privacy-preserving, and resistant to lifetime-history, individual-authorship, incoming-engagement, endorsement, traction, causation, and collective-credit inflation while the website receives only a selective aggregate projection."
     }
   ],
   "hillClimb": {

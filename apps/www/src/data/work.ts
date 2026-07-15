@@ -288,6 +288,7 @@ const workItemsInput = [
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Recurring participation system across cultural-space meetings, practical sessions, hearings, town halls, campaign actions, and relief convenings",
       "Public-safe census of 33 Facebook event records, with one additional platform control slot preserved as unresolved",
+      "Capture-date census of 445 distinct Facebook posts spanning 2017–2021, preserving 67 cleaned source routes and issue continuity with shared-account authorship boundaries",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",

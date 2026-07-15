@@ -16,6 +16,11 @@ import {
   nycacFacebookEventReviewSummary
 } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts";
 import {
+  nycacFacebookPostClaimIds,
+  nycacFacebookPostKnowledge,
+  nycacFacebookPostReviewSummary
+} from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts-2026-07.ts";
+import {
   personalWowListFacebookEventClaimIds,
   personalWowListFacebookEventKnowledge,
   personalWowListFacebookEventReviewSummary,
@@ -44,7 +49,7 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  sharedPublicSurfacesSha256: "87721e178ee2573418885aee43ffaae7cb60587b014989289bffa7b787828582",
+  sharedPublicSurfacesSha256: "b5d475682a27f7062b49c3140d23fae0e4070e0c529748ea84653489eae854eb",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 const NYCAC_SOCIAL_REVIEW_LOCKS = Object.freeze({
@@ -94,6 +99,34 @@ const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   reviewConfigurationSha256: "e5bfdb3bdd758be944abdafa8b737ae1b181dda92386805d481250332ac0351c",
   publicReportSha256: "5258d6c934cfdfacafa93cdda1513d067963922aa6d7fd457e3fd745a5088ea6"
 });
+const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
+  manifestSha256: "0fb7b2cc6a6da1facaf64ac4f55413ff488a59f6270c81979be892ad52c1851c",
+  manifestContentSha256: "fb0417a5bef0fc8c66bc79941d6d4e7ab2c8bb52e266e18ca6f3fb1a5a78fefb",
+  governedModuleSha256: "b3c8db44a9f68ce8019830961304000dcd1d184cdf92b5ade16991c898a66c9a",
+  canonicalKnowledgeSha256: "34d6a2107023f00f9d99ab0ede05306ae9a99cc9e83285d7cee0442e9a4707a5",
+  reviewConfigurationSha256: "36a7551344dfc7373f57837979564d40ca680181d21b10acb4975c586c47ab05",
+  publicReportSha256: "5201f2ea92048d899b2adcae52a4eb40d2517aa26e4e0eba663054ed217977d9",
+  proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e"
+});
+const NYCAC_FACEBOOK_POST_GOVERNED_ROUTE_SEMANTICS = Object.freeze([
+  ["https://grubstreet.com/2019/05/prospect-heights-ode-to-babel-gentrification.html", 127, "2019-05-23", "march-transparency-and-accountability", "issue-context", "SRC-NYCAC-FACEBOOK-GRUBSTREET-ODE-2019-05-22"],
+  ["https://gothamist.com/2019/02/12/march_nightlife_raids_city_council.php", 161, "2019-02-12", "march-transparency-and-accountability", "issue-context", "SRC-NYCAC-GOTHAMIST-MARCH-2019-02-12"],
+  ["https://bedfordandbowery.com/2019/02/disco-discord-nypd-and-nightlife-operators-clash-over-party-crashing-raids/", 163, "2019-02-12", "cultural-space-survival-and-network", "issue-context", "SRC-NYCAC-BEDFORD-MARCH-2019"],
+  ["https://www.fox5ny.com/news/new-yorks-nightlife-mayor-holds-first-event", 239, "2018-03-27", "cultural-space-survival-and-network", "issue-context", "SRC-NYCAC-FACEBOOK-FOX5-NIGHTLIFE-LISTENING-2018-03-26"],
+  ["https://nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html", 293, "2017-10-30", "cabaret-law-and-dance-freedom", "issue-context", "SRC-NYCAC-NYTIMES-CABARET-REPEAL-2017-10-30"],
+  ["https://npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife", 321, "2017-09-20", "cultural-space-survival-and-network", "issue-context", "SRC-NYCAC-NPR-CABARET-2017-09-20"],
+  ["https://newyorker.com/magazine/2017/07/10/dance-outlaws-fight-for-the-right-to-party", 353, "2017-07-18", "cabaret-law-and-dance-freedom", "issue-context", "SRC-NYCAC-NEW-YORKER-DANCE-OUTLAWS-2017-07-10"],
+  ["https://wnyc.org/story/news-analysis-chris-hayes-bureaucratic-dance-end-nyc-cabaret-law-one-familys-struggle-over-genetic-testing", 401, "2017-04-19", "cabaret-law-and-dance-freedom", "issue-context", "SRC-NYCAC-WNYC-CABARET-2017"],
+  ["https://timeout.com/newyork/blog/its-still-illegal-to-dance-in-some-parts-of-new-york-032217", 417, "2017-03-23", "coalition-public-communications", "issue-context", "SRC-NYCAC-FACEBOOK-TIMEOUT-CABARET-2017-03-22"]
+].map(([url, firstSeenOrdinal, firstSeenAt, missionContext, evidenceRole, sourceId]) => ({
+  url, firstSeenOrdinal, firstSeenAt, missionContext, evidenceRole, sourceId
+})));
+const NYCAC_FACEBOOK_POST_APPROVED_PROJECTION_SEMANTICS = Object.freeze([
+  ["CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD", "case-study", "A complete capture-date pass of the surviving NYC Artist Coalition Facebook feed preserves 445 dated posts from 2017-2021, with public-safe source routing and shared-account authorship boundaries.", "active", ["/work/technical-operations", "/work"]],
+  ["CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD", "archive-note", "The public-safe census reconciles 598 encountered render rows into 445 distinct dated posts spanning 2017-2021.", "active", ["docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts"]],
+  ["CLM-NYCAC-FACEBOOK-CIVIC-RELAY", "archive-note", "Across overlapping campaign arcs, the recovered Page repeatedly connected cultural-space concerns with public meetings, source articles, government interfaces, practical resources, and civic action routes.", "active", ["docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts"]],
+  ["CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS", "archive-note", "At capture time, Facebook displayed 2,291 reactions and 212 comments across the recovered population; these volatile labels are not unique reach, attendance, endorsement, conversion, mandate, or impact.", "active", ["docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts"]]
+].map(([claimId, key, text, status, surfaces]) => ({ claimId, key, text, status, surfaces })));
 const WOWLIST_FACEBOOK_GOVERNED_ROUTE_SEMANTICS = Object.freeze([
   {
     url: "http://www.westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
@@ -3848,6 +3881,267 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     .filter(([, passed]) => !passed)
     .map(([check]) => check);
   const wowListFacebookPostsComplete = Object.values(wowListFacebookDiagnosticChecks).every(Boolean);
+  const nycacFacebookPosts = suite.pilot.nycacFacebookPosts;
+  const nycacFacebookPostManifestPath = path.join(repoRoot, nycacFacebookPosts.manifestPath);
+  const nycacFacebookPostReportPath = path.join(repoRoot, nycacFacebookPosts.reportPath);
+  const nycacFacebookPostManifestText = readFileSync(nycacFacebookPostManifestPath, "utf8");
+  const nycacFacebookPostManifest = overrides.nycacFacebookPostPopulation ??
+    JSON.parse(nycacFacebookPostManifestText);
+  const nycacFacebookPostReport = overrides.nycacFacebookPostReport ??
+    readFileSync(nycacFacebookPostReportPath, "utf8");
+  const nycacFacebookPostRows = nycacFacebookPostManifest.population ?? [];
+  const nycacFacebookPostUrlRows = nycacFacebookPostManifest.postedUrlInventory ?? [];
+  const nycacFacebookPostIntakes = nycacFacebookPostKnowledge.intakeItems.map((item) => intakeById.get(item.id));
+  const nycacFacebookPostObservations = nycacFacebookPostKnowledge.observations.map((item) => observationById.get(item.id));
+  const nycacFacebookPostSources = nycacFacebookPostKnowledge.sources.map((item) => sourceById.get(item.id));
+  const nycacFacebookPostClaims = overrides.nycacFacebookPostClaims ??
+    nycacFacebookPostKnowledge.claims.map((item) => claimById.get(item.id));
+  const nycacFacebookPostInquiries = nycacFacebookPostKnowledge.researchInquiries.map((item) => inquiryById.get(item.id));
+  const nycacFacebookPostProof = overrides.nycacFacebookPostProof ??
+    proofClaims.find((proof) => proof.id === nycacFacebookPosts.proofId);
+  const nycacFacebookPostWorkText = overrides.nycacFacebookPostWorkText ??
+    readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
+  const nycacFacebookPostOrdinals = new Set(nycacFacebookPostRows.map((row) => row.ordinal));
+  const nycacFacebookPostFingerprints = new Set(nycacFacebookPostRows.map((row) => row.contentFingerprint));
+  const nycacFacebookPostBodyHashes = new Set(nycacFacebookPostRows.map((row) => row.bodySha256));
+  const nycacFacebookPostRouteKeys = new Set(nycacFacebookPostUrlRows.map((row) => row.routeKey));
+  const nycacFacebookPostYearCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(nycacFacebookPostRows, (row) => row.publishedAt?.slice(0, 4)))
+      .map(([year, rows]) => [year, rows.length])
+  );
+  const countNycacFacebookPostTag = (key, tag) => nycacFacebookPostRows.filter(
+    (row) => row[key]?.includes(tag)
+  ).length;
+  const countNycacFacebookPostRowsWith = (key) => nycacFacebookPostRows.filter(
+    (row) => (row.displayedInteractions?.[key] ?? 0) > 0
+  ).length;
+  const sumNycacFacebookPostInteractions = (key) => nycacFacebookPostRows.reduce(
+    (total, row) => total + (row.displayedInteractions?.[key] ?? 0),
+    0
+  );
+  const maxNycacFacebookPostInteraction = (key) => Math.max(
+    0,
+    ...nycacFacebookPostRows.map((row) => row.displayedInteractions?.[key] ?? 0)
+  );
+  const nycacFacebookPostEvidenceRoleCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(nycacFacebookPostUrlRows, (row) => row.evidenceRole))
+      .map(([role, rows]) => [role, rows.length])
+  );
+  const nycacFacebookPostGovernedRows = nycacFacebookPostUrlRows.filter(
+    (row) => row.preservationDisposition === "governed-source-record"
+  );
+  const nycacFacebookPostGovernedRouteSemanticsMatch =
+    nycacFacebookPostGovernedRows.length === NYCAC_FACEBOOK_POST_GOVERNED_ROUTE_SEMANTICS.length &&
+    NYCAC_FACEBOOK_POST_GOVERNED_ROUTE_SEMANTICS.every((expected) => {
+      const row = nycacFacebookPostUrlRows.find((item) => item.url === expected.url);
+      return row &&
+        Object.entries(expected).every(([key, value]) => row[key] === value) &&
+        row.accessDisposition === "governed-source-recovered" &&
+        row.preservationDisposition === "governed-source-record";
+    }) &&
+    nycacFacebookPostGovernedRows.every((row) =>
+      NYCAC_FACEBOOK_POST_GOVERNED_ROUTE_SEMANTICS.some((expected) => expected.url === row.url)
+    );
+  const nycacFacebookPostEvidenceClosed = nycacFacebookPostClaims.every((claim) =>
+    claim?.evidence.length > 0 && claim.evidence.every((evidence) =>
+      evidence.supports.length > 0 && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const nycacFacebookPostProjectionSemanticsMatch =
+    nycacFacebookPostClaims.flatMap((claim) => claim?.projections ?? []).length ===
+      NYCAC_FACEBOOK_POST_APPROVED_PROJECTION_SEMANTICS.length &&
+    NYCAC_FACEBOOK_POST_APPROVED_PROJECTION_SEMANTICS.every((expected) => {
+      const projection = nycacFacebookPostClaims.find((claim) =>
+        claim?.id === expected.claimId
+      )?.projections.find((item) => item.key === expected.key);
+      return projection?.text === expected.text &&
+        projection.status === expected.status &&
+        projection.citationRequired === true &&
+        sameOrderedValues(projection.surfaces, expected.surfaces);
+    });
+  const nycacFacebookPostCanonicalKnowledge = {
+    intakes: nycacFacebookPostIntakes,
+    observations: nycacFacebookPostObservations,
+    sources: nycacFacebookPostSources,
+    claims: nycacFacebookPostClaims,
+    inquiries: nycacFacebookPostInquiries
+  };
+  const nycacFacebookPostPublicText = JSON.stringify({
+    manifest: nycacFacebookPostManifest,
+    knowledge: nycacFacebookPostCanonicalKnowledge,
+    proof: nycacFacebookPostProof
+  }) + nycacFacebookPostReport + nycacFacebookPostWorkText;
+  const nycacFacebookPostPublicTextWithoutHashes = nycacFacebookPostPublicText.replace(
+    /\b[a-f0-9]{64}\b/gi,
+    ""
+  );
+  const nycacFacebookPostPrivateDataFree =
+    !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(nycacFacebookPostPublicText) &&
+    !/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(nycacFacebookPostPublicText) &&
+    !/(?:^|[^\d])(?:\+?1[\s.-]*)?\(?\d{3}\)?[\s.-]*\d{3}[\s.-]*\d{4}(?=$|[^\d])/.test(nycacFacebookPostPublicTextWithoutHashes) &&
+    !/"(?:rawBody|body|message|messages|commentText|commentsText|reactionIdentities|followerIdentities|authenticatedUrl|sessionToken|cookie|capturePath|__cft__|fbclid)"\s*:/i.test(nycacFacebookPostPublicText) &&
+    !/https?:\/\/(?:[^/]+\.)?zoom\.us\/j\//i.test(nycacFacebookPostPublicText) &&
+    !/https?:\/\/docs\.google\.com\/document\/d\//i.test(nycacFacebookPostPublicText);
+  const nycacFacebookPostAffirmativeSafe = [
+    /Jamie (?:authored|wrote|published) (?:all|every) (?:NYC Artist Coalition )?Facebook post/i,
+    /(?:445 posts|445-post population)[^.]{0,100}(?:complete|entire) lifetime/i,
+    /current (?:authenticated )?(?:access|management)[^.]{0,100}(?:proves?|establishes?)[^.]{0,80}historical authorship/i,
+    /(?:reference|tag|route)[^.]{0,100}(?:proves?|establishes?)[^.]{0,80}(?:engagement|endorsement|partnership)/i,
+    /(?:reactions|comments|shares)[^.]{0,100}(?:prove|demonstrate|equal|represent)[^.]{0,100}(?:reach|attendance|conversion|endorsement|mandate|impact)/i,
+    /zero (?:displayed )?shares[^.]{0,80}(?:means|proves)[^.]{0,50}no (?:one )?shared/i,
+    /NYC Artist Coalition Facebook Page caused (?:Cabaret Law repeal|Office of Nightlife|M\.A\.R\.C\.H\.|commercial-rent)/i
+  ].every((pattern) => !pattern.test(
+    nycacFacebookPostClaims.flatMap((claim) => claim?.projections.map((projection) => projection.text) ?? []).join("\n") +
+    [
+      nycacFacebookPostProof?.publicWording,
+      nycacFacebookPostProof?.shortWording,
+      nycacFacebookPostProof?.detailedPublicWording,
+      nycacFacebookPostProof?.whyItMatters,
+      nycacFacebookPostProof?.sourceBasis,
+      nycacFacebookPostProof?.guardrail
+    ].join("\n")
+  ));
+  const nycacFacebookPostManifestContentSha256 = createHash("sha256").update(JSON.stringify(
+    nycacFacebookPostManifest
+  )).digest("hex");
+  const nycacFacebookPostCanonicalKnowledgeSha256 = createHash("sha256").update(JSON.stringify(
+    nycacFacebookPostCanonicalKnowledge
+  )).digest("hex");
+  const nycacFacebookPostReviewConfigurationSha256 = createHash("sha256").update(JSON.stringify({
+    pilot: nycacFacebookPosts,
+    reviewSummary: nycacFacebookPostReviewSummary
+  })).digest("hex");
+  const nycacFacebookPostProofProjectionSha256 = createHash("sha256").update(JSON.stringify(
+    nycacFacebookPostProof
+  )).digest("hex");
+  const nycacFacebookPostReviewLocksMatch =
+    createHash("sha256").update(nycacFacebookPostManifestText).digest("hex") === NYCAC_FACEBOOK_POST_REVIEW_LOCKS.manifestSha256 &&
+    nycacFacebookPostManifestContentSha256 === NYCAC_FACEBOOK_POST_REVIEW_LOCKS.manifestContentSha256 &&
+    createHash("sha256").update(readFileSync(
+      path.join(repoRoot, "apps/www/src/data/knowledge-bank/nycac-facebook-posts-2026-07.ts"),
+      "utf8"
+    )).digest("hex") === NYCAC_FACEBOOK_POST_REVIEW_LOCKS.governedModuleSha256 &&
+    nycacFacebookPostCanonicalKnowledgeSha256 === NYCAC_FACEBOOK_POST_REVIEW_LOCKS.canonicalKnowledgeSha256 &&
+    nycacFacebookPostReviewConfigurationSha256 === NYCAC_FACEBOOK_POST_REVIEW_LOCKS.reviewConfigurationSha256 &&
+    createHash("sha256").update(nycacFacebookPostReport).digest("hex") === NYCAC_FACEBOOK_POST_REVIEW_LOCKS.publicReportSha256 &&
+    nycacFacebookPostProofProjectionSha256 === NYCAC_FACEBOOK_POST_REVIEW_LOCKS.proofProjectionSha256;
+  const nycacFacebookPostDiagnosticChecks = {
+    population: Boolean(
+      nycacFacebookPostManifest.reviewedAt === nycacFacebookPosts.reviewedAt &&
+      nycacFacebookPostManifest.method?.terminalControl?.consecutiveStableTerminalChecks === 7 &&
+      nycacFacebookPostManifest.populationReconciliation?.encounteredRenderRows === nycacFacebookPosts.expectedEncounteredRenderRows &&
+      nycacFacebookPostManifest.populationReconciliation?.deduplicatedRenderVariants === nycacFacebookPosts.expectedDuplicateRenderVariants &&
+      nycacFacebookPostRows.length === nycacFacebookPosts.expectedPostCount &&
+      nycacFacebookPostOrdinals.size === nycacFacebookPosts.expectedPostCount &&
+      nycacFacebookPostRows.every((row, index) =>
+        row.ordinal === index + 1 &&
+        /^\d{4}-\d{2}-\d{2}$/.test(row.publishedAt) &&
+        row.accountSurface === "nyc-artist-coalition-page" &&
+        row.authorshipDisposition === "shared-account-human-author-unresolved" &&
+        row.bodyStored === false &&
+        row.disposition === "recovered-public-metadata" &&
+        /^[a-f0-9]{64}$/.test(row.contentFingerprint) &&
+        /^[a-f0-9]{64}$/.test(row.bodySha256) &&
+        sameOrderedValues(Object.keys(row), ["ordinal", "publishedAt", "accountSurface", "authorshipDisposition", "postedRouteKeys", "facebookNativeRouteCount", "missionTags", "stakeholderGroups", "displayedInteractions", "contentFingerprint", "bodySha256", "bodyStored", "disposition"]) &&
+        row.postedRouteKeys.every((routeKey) => nycacFacebookPostRouteKeys.has(routeKey))
+      ) &&
+      JSON.stringify(nycacFacebookPostYearCounts) === JSON.stringify(nycacFacebookPosts.expectedYearCounts)
+    ),
+    urls: Boolean(
+      nycacFacebookPostUrlRows.length === nycacFacebookPosts.expectedDistinctExternalRoutes &&
+      nycacFacebookPostRouteKeys.size === nycacFacebookPosts.expectedDistinctExternalRoutes &&
+      nycacFacebookPostManifest.postedUrlSummary?.publishedExactRoutes === nycacFacebookPosts.expectedPublishedExactRoutes &&
+      nycacFacebookPostManifest.postedUrlSummary?.withheldSensitiveRoutes === nycacFacebookPosts.expectedWithheldSensitiveRoutes &&
+      nycacFacebookPostManifest.postedUrlSummary?.governedSourceRoutes === nycacFacebookPosts.expectedGovernedSourceRoutes &&
+      nycacFacebookPostManifest.postedUrlSummary?.inventoryOnlyRoutes === nycacFacebookPosts.expectedInventoryOnlyRoutes &&
+      nycacFacebookPostUrlRows.filter((row) => row.url === null).length === nycacFacebookPosts.expectedWithheldSensitiveRoutes &&
+      nycacFacebookPostUrlRows.filter((row) => row.url === null).every((row) =>
+        ["zoom.us", "docs.google.com"].includes(row.host) &&
+        row.accessDisposition === "withheld-public-route" &&
+        row.preservationDisposition === "withheld-sensitive-route"
+      ) &&
+      JSON.stringify(nycacFacebookPostEvidenceRoleCounts) === JSON.stringify(nycacFacebookPosts.expectedEvidenceRoleCounts)
+    ),
+    governedRoutes: nycacFacebookPostGovernedRouteSemanticsMatch,
+    missionTags: Object.entries(nycacFacebookPosts.expectedMissionTagCounts).every(
+      ([tag, count]) => countNycacFacebookPostTag("missionTags", tag) === count
+    ),
+    stakeholderTags: Boolean(
+      Object.entries(nycacFacebookPosts.expectedStakeholderTagCounts).every(
+        ([tag, count]) => countNycacFacebookPostTag("stakeholderGroups", tag) === count
+      ) &&
+      JSON.stringify(nycacFacebookPostManifest.stakeholderSummary?.accountReferenceRows) ===
+        JSON.stringify(nycacFacebookPosts.expectedAccountReferenceRows) &&
+      /do not establish that every named stakeholder engaged with, endorsed, or formally partnered/i.test(
+        nycacFacebookPostManifest.stakeholderSummary?.boundary ?? ""
+      )
+    ),
+    interactions: Boolean(
+      countNycacFacebookPostRowsWith("reactions") === nycacFacebookPosts.expectedRowsWithReactions &&
+      sumNycacFacebookPostInteractions("reactions") === nycacFacebookPosts.expectedDisplayedReactions &&
+      maxNycacFacebookPostInteraction("reactions") === nycacFacebookPosts.expectedMaxReactions &&
+      countNycacFacebookPostRowsWith("comments") === nycacFacebookPosts.expectedRowsWithComments &&
+      sumNycacFacebookPostInteractions("comments") === nycacFacebookPosts.expectedDisplayedComments &&
+      maxNycacFacebookPostInteraction("comments") === nycacFacebookPosts.expectedMaxComments &&
+      countNycacFacebookPostRowsWith("shares") === nycacFacebookPosts.expectedRowsWithShares &&
+      sumNycacFacebookPostInteractions("shares") === nycacFacebookPosts.expectedDisplayedShares &&
+      /Share counts were not displayed/i.test(nycacFacebookPostManifest.displayedInteractionSummary?.boundary ?? "") &&
+      /not a claim that no sharing occurred/i.test(nycacFacebookPostManifest.displayedInteractionSummary?.boundary ?? "")
+    ),
+    knowledge: Boolean(
+      nycacFacebookPostIntakes.length === nycacFacebookPosts.expectedIntakeCount &&
+      nycacFacebookPostObservations.length === nycacFacebookPosts.expectedObservationCount &&
+      nycacFacebookPostSources.length === nycacFacebookPosts.expectedSourceCount &&
+      nycacFacebookPostClaims.length === nycacFacebookPosts.expectedClaimCount &&
+      nycacFacebookPostInquiries.length === nycacFacebookPosts.expectedInquiryCount &&
+      nycacFacebookPostEvidenceClosed &&
+      Object.values(nycacFacebookPostClaimIds).every((id) => nycacFacebookPostClaims.some((claim) => claim?.id === id)) &&
+      nycacFacebookPostSources.some((source) => source?.id === nycacFacebookPosts.manifestSourceId)
+    ),
+    authorship: Boolean(
+      nycacFacebookPostReviewSummary.authorshipBoundary === "shared-account-human-author-unresolved" &&
+      nycacFacebookPostInquiries.some((inquiry) =>
+        inquiry?.id === nycacFacebookPosts.authorshipInquiryId &&
+        /research lead/i.test(inquiry.publicSummary) &&
+        /current access cannot assign complete historical authorship/i.test(inquiry.limitations.join(" "))
+      )
+    ),
+    projectionSemantics: nycacFacebookPostProjectionSemanticsMatch && nycacFacebookPostAffirmativeSafe,
+    proofProjection: Boolean(
+      /445 distinct Facebook posts/i.test(nycacFacebookPostProof?.detailedPublicWording ?? "") &&
+      /67 cleaned off-Facebook routes/i.test(nycacFacebookPostProof?.detailedPublicWording ?? "") &&
+      /post-level authorship remain collective or unresolved/i.test(nycacFacebookPostProof?.guardrail ?? "") &&
+      nycacFacebookPostProof?.doNotSay.includes("Jamie authored every NYC Artist Coalition Facebook post") &&
+      /Capture-date census of 445 distinct Facebook posts spanning 2017–2021/i.test(nycacFacebookPostWorkText)
+    ),
+    report: Boolean(
+      /445[\s\S]{0,400}Jan\. 29, 2017[\s\S]{0,80}Sept\. 15, 2021/i.test(nycacFacebookPostReport) &&
+      /100%[\s\S]{0,200}does \*\*not\*\* mean a complete lifetime/i.test(nycacFacebookPostReport) &&
+      /67 distinct cleaned off-Facebook routes/i.test(nycacFacebookPostReport) &&
+      /do \*\*not\*\*[\s\S]{0,100}engaged with, endorsed, or formally partnered/i.test(nycacFacebookPostReport) &&
+      /Reaction and comment identities were not captured/i.test(nycacFacebookPostReport) &&
+      /Zero displayed shares[\s\S]{0,50}does not mean no sharing occurred/i.test(nycacFacebookPostReport) &&
+      /does not\s+support saying\s+Jamie authored every post/i.test(nycacFacebookPostReport)
+    ),
+    privacy: Boolean(
+      nycacFacebookPostPrivateDataFree &&
+      nycacFacebookPostManifest.publicationBoundary?.rawBodiesStored === false &&
+      nycacFacebookPostManifest.publicationBoundary?.interactionIdentitiesStored === false &&
+      nycacFacebookPostManifest.publicationBoundary?.authenticatedUrlsStored === false &&
+      nycacFacebookPostManifest.publicationBoundary?.sensitiveExactRoutesStored === false
+    ),
+    registry: Boolean(
+      !publicRegistryText.includes("__cft__") &&
+      !publicRegistryText.includes("sessionToken")
+    ),
+    reviewLocks: nycacFacebookPostReviewLocksMatch
+  };
+  const nycacFacebookPostFailedChecks = Object.entries(nycacFacebookPostDiagnosticChecks)
+    .filter(([, passed]) => !passed)
+    .map(([check]) => check);
+  const nycacFacebookPostsComplete = Object.values(nycacFacebookPostDiagnosticChecks).every(Boolean);
   const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations, ...nycacFacebookObservations, ...personalFacebookObservations, ...wowListFacebookObservations];
   const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims, ...nycacFacebookClaims, ...personalFacebookClaims, ...wowListFacebookClaims];
   const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries, ...nycacFacebookInquiries, ...personalFacebookInquiries, ...wowListFacebookInquiries];
@@ -4269,6 +4563,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [wowListFacebookPostsComplete
         ? `All ${wowListFacebookRows.length} posts exposed by the authenticated capture-date feed are reconciled across ${wowListFacebookUrlRows.length} cleaned URL routes, ${wowListFacebookPosts.expectedSharedSourceCards} shared-source cards, organizer workflow, venue-safety, mutual-aid, stakeholder, and displayed-interaction classifications; lifetime-export, post-authorship, collective-credit, source-role, privacy, and non-projection boundaries remain explicit`
         : `WOW List Facebook post production failed: ${wowListFacebookFailedChecks.join(", ")}`]
+    },
+    {
+      criterionId: "KB-EVAL-NYCAC-FACEBOOK-POSTS",
+      score: score(nycacFacebookPostsComplete),
+      evidence: [nycacFacebookPostsComplete
+        ? `All ${nycacFacebookPostRows.length} distinct posts exposed by the authenticated capture-date Page feed are reconciled across ${nycacFacebookPostUrlRows.length} cleaned off-Facebook routes, nine governed sources, overlapping mission and stakeholder classifications, and bounded displayed interactions; lifetime-export, shared-account authorship, incoming-engagement, collective-credit, privacy, and selective-projection limits remain explicit`
+        : `NYC Artist Coalition Facebook post production failed: ${nycacFacebookPostFailedChecks.join(", ")}`]
     }
   ];
 
@@ -4306,7 +4607,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         urbanhermitFullPopulationComplete,
         fieldPracticeComplete,
         nycacFacebookEventsComplete,
-        personalFacebookEventsComplete
+        personalFacebookEventsComplete,
+        nycacFacebookPostsComplete
       },
       kcTownHall: {
         actualSha256: kcTownHallContentSha256,
@@ -4365,7 +4667,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         caseStudyMdxSha256: createHash("sha256").update(nycacFacebookMdx).digest("hex"),
         proofSnippetSha256: createHash("sha256").update(nycacFacebookProofSnippet).digest("hex"),
         proofContentSha256: nycacFacebookProofContentSha256,
-        reviewLocksMatch: nycacFacebookReviewLocksMatch
+        reviewLocksMatch: nycacFacebookReviewLocksMatch,
+        affirmativeSafe: nycacFacebookAffirmativeSafe,
+        privateDataFree: nycacFacebookPrivateDataFree
       },
       personalWowListFacebookEvents: {
         manifestSha256: createHash("sha256").update(personalWowListFacebookManifestText).digest("hex"),
@@ -4396,6 +4700,20 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         publicReportSha256: createHash("sha256").update(wowListFacebookReport).digest("hex"),
         reviewLocksMatch: wowListFacebookReviewLocksMatch,
         checks: wowListFacebookDiagnosticChecks
+      },
+      nycacFacebookPosts: {
+        manifestSha256: createHash("sha256").update(nycacFacebookPostManifestText).digest("hex"),
+        manifestContentSha256: nycacFacebookPostManifestContentSha256,
+        governedModuleSha256: createHash("sha256").update(readFileSync(
+          path.join(repoRoot, "apps/www/src/data/knowledge-bank/nycac-facebook-posts-2026-07.ts"),
+          "utf8"
+        )).digest("hex"),
+        canonicalKnowledgeSha256: nycacFacebookPostCanonicalKnowledgeSha256,
+        reviewConfigurationSha256: nycacFacebookPostReviewConfigurationSha256,
+        publicReportSha256: createHash("sha256").update(nycacFacebookPostReport).digest("hex"),
+        proofProjectionSha256: nycacFacebookPostProofProjectionSha256,
+        reviewLocksMatch: nycacFacebookPostReviewLocksMatch,
+        checks: nycacFacebookPostDiagnosticChecks
       }
     },
     accepted: errors.length === 0 &&

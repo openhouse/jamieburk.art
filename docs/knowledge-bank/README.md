@@ -182,3 +182,9 @@ for every distinct post exposed by the authenticated WOW List Facebook feed on
 the capture date, all 55 posted URLs, organizer-workflow and care-routing
 patterns, displayed-interaction boundaries, and the native-export and
 post-authorship gaps.
+The [NYC Artist Coalition Facebook post population](projects/nyc-artist-coalition-facebook-posts.md)
+records all 445 distinct posts exposed by the authenticated capture-date Page
+feed, 67 cleaned off-Facebook routes, issue and stakeholder classifications,
+displayed-interaction boundaries, shared-account authorship limits, and the
+selective website projection. The public-safe row ledger is preserved in
+[its fixture](../../apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json).

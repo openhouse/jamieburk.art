@@ -244,16 +244,17 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Jamie was a founding member and organizer who implemented and maintained campaign websites",
     detailedPublicWording:
-      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Contemporary reporting, Jamie confirmation, retained Git histories, and the public FairRentNYC repository.",
+      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy. A capture-date census preserves 445 distinct Facebook posts from 2017 through 2021 and 67 cleaned off-Facebook routes as evidence of the coalition's sustained public communications surface.",
+    sourceBasis: "Contemporary reporting, Jamie confirmation, retained Git histories, the public FairRentNYC repository, and a public-safe census of every distinct post exposed by the authenticated NYC Artist Coalition Facebook Page feed on July 15, 2026.",
     whyItMatters:
       "Makes Jamie's founding-member, organizer, and direct implementation role visible without overstating collective campaign accomplishments.",
     guardrail:
-      "Founding-member language follows contemporary reporting; repository history supports implementation and maintenance, while policy, copy, data, design, and campaign accomplishments remain collective.",
+      "Founding-member language follows contemporary reporting; repository history supports implementation and maintenance, while policy, copy, data, design, campaign accomplishments, and the shared Page's post-level authorship remain collective or unresolved. The 445-post census is complete only for the capture-date feed Facebook exposed, not the Page's lifetime history.",
     doNotSay: [
       "Jamie solely led NYC Artist Coalition",
       "Jamie owned every campaign",
       "Jamie authored every policy position",
+      "Jamie authored every NYC Artist Coalition Facebook post",
       "Jamie controlled partner decisions",
       "Jamie single-handedly caused policy outcomes"
     ],
@@ -263,12 +264,13 @@ export const proofClaims: ProofClaim[] = [
       "Strategy records",
       "Contact lists",
       "Private correspondence",
-      "Unapproved collaborator details"
+      "Unapproved collaborator details",
+      "Raw Facebook post bodies, comments, reaction or follower identities, authenticated URLs, session data, and sensitive meeting or working-document links"
     ],
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
