@@ -395,6 +395,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## technical-stack-operating-history - Technical stack working history
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / public-safe archive summary
+**Public wording:** Working technical history spanning JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, open-data workflows, APIs, and data-product requirements.
+**Detailed public-safe wording:** Jamie's public and public-safe project record documents implementation work across modern and legacy web stacks, deployment systems, open-data workflows, geographic tools, APIs, and data-product requirements.
+**Where to project:** Resume page.
+**Why it matters:** Supports the resume's technical inventory with a dedicated proof contract instead of borrowing incidental words from unrelated project proofs.
+**Guardrail:** This is a working-history inventory, not a claim of equal current mastery, certification, or sole authorship in every technology.
+**Do not say:** Expert certification in every listed technology; sole author of every listed system; equal current depth across every listed tool.
+**Protected boundaries:** Private repositories, credentials, client source code, and unpublished infrastructure details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  
