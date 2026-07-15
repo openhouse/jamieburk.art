@@ -92,11 +92,11 @@ const explicitImpactBoundary =
 const accountSurfaceSignal =
   /\b(?:authenticated|signed[- ]in|logged[- ]in|dashboard|Meta Business Suite|management (?:view|console)|content control|Page controls?|creator tools?|back office|account controls?|control surface)\b/i;
 const accountCapabilitySignal =
-  /\b(?:access|permissions?|administrator|administered|admin|manager|management permissions?|owner|Page role|could|can|enter|open|let|allowed|available|belonged|publish as|post as|control)\b/i;
+  /\b(?:access|permissions?|privileges?|administrator|administered|admin|manager|management permissions?|owner|Page role|could|can|able|retain(?:s|ed)?|enter|open|let|allowed|available|belonged|publish as|post(?: as)?|control)\b/i;
 const accountBoundarySignal =
   /\b(?:did not|does not|cannot|not exposed|not historical role proof|not establish|not used)\b/i;
 const accountAssertionSignal =
-  /\b(?:showed|exposed|confirmed|allowed|available|belonged|let|could|had|has|was|were|administered|published as|posted as)\b/i;
+  /\b(?:shows?|showed|exposes?|exposed|confirms?|confirmed|allows?|allowed|available|belonged|lets?|let|could|had|has|was|were|administered|published as|posted as)\b/i;
 
 export function findNycartcFacebookPublicArtifactRisk(text) {
   for (const sentence of semanticUnits(text)) {

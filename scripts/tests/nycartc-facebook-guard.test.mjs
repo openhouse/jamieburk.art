@@ -93,7 +93,8 @@ const prohibited = [
   "The shares helped secure the vote.",
   "Jamie was effectively the Page's principal voice.",
   "Jamie remained able to publish through Page controls.",
-  "The surviving archive is definitive for NYCAC's Facebook history."
+  "The surviving archive is definitive for NYCAC's Facebook history.",
+  "Page controls show Jamie is still able to post."
 ];
 
 for (const statement of prohibited) {
