@@ -114,6 +114,15 @@ website selection. It is a recommendation, not publication approval.
   held together with communal governance, adaptive response, and participant
   agency. Best use: an earlier-work lineage showing that Jamie's operating
   craft predates its contemporary technical vocabulary.
+- `CLM-NTERCHNG-COLLABORATIVE-INSTALLATION`: the archived project site,
+  contemporaneous reporting, and official exhibition record support a strong
+  early lineage of participatory system design across software, space, and
+  real-time public interaction. Best use: a future creative-technology or
+  experience-design case after visual-rights and division-of-work review.
+- `CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION`: the official archived exhibition
+  site lists Jamie, Drew Bolton, and Garrett Fuselier as visual artists and
+  presents NTER CHNG on their shared page. Preserve the group-exhibition and
+  equal-collaborator boundaries; do not place the work at the Nerman Museum.
 
 ## Strong Supporting Proof
 

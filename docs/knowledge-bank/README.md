@@ -76,3 +76,8 @@ See
 [projects/google-shared-drives-production.md](projects/google-shared-drives-production.md)
 for the privacy-first Shared Drive archival-production pass and its protected
 research queue.
+
+See [projects/nterchng.md](projects/nterchng.md) for a recovered early
+participatory-system project whose collaborative installation form and 2011
+America: Now and Here inclusion are source-backed but not selected for the
+current website.

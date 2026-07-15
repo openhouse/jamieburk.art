@@ -50,6 +50,14 @@ import {
   socialMediaSources,
 } from "../../apps/www/src/data/knowledge-bank/social-media-production.ts";
 import {
+  nterchngCaptures,
+  nterchngClaims,
+  nterchngInquiries,
+  nterchngObservations,
+  nterchngResearchTasks,
+  nterchngSources,
+} from "../../apps/www/src/data/knowledge-bank/nterchng-production.ts";
+import {
   classifyNycacMissionSignals,
   extractNycacSourcePostBody,
   normalizeNycacSourceRecordType,
@@ -389,6 +397,68 @@ test("Google Shared Drive sources expose no locators and never render citations"
     payload,
     /\/Users\/|\/Volumes\/|drive\.google\.com|docs\.google\.com|permissionId|fileId|[\w.+-]+@[\w.-]+/i,
   );
+});
+
+test("NTER CHNG archival production preserves collaboration and exhibition evidence", () => {
+  assert.equal(nterchngCaptures.length, 1);
+  assert.equal(nterchngSources.length, 7);
+  assert.equal(nterchngObservations.length, 8);
+  assert.equal(nterchngClaims.length, 2);
+  assert.equal(nterchngResearchTasks.length, 1);
+  assert.equal(nterchngInquiries.length, 1);
+
+  const installation = nterchngClaims.find(
+    (claim) => claim.id === "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION",
+  );
+  const exhibition = nterchngClaims.find(
+    (claim) => claim.id === "CLM-NTERCHNG-AMERICA-NOW-HERE-EXHIBITION",
+  );
+  assert.ok(installation);
+  assert.ok(exhibition);
+  assert.match(installation.internalClaim, /Drew Bolton/);
+  assert.match(installation.internalClaim, /Garrett Fuselier/);
+  assert.match(exhibition.internalClaim, /official archived/i);
+  assert.equal(installation.selectionState, "dormant");
+  assert.equal(exhibition.selectionState, "dormant");
+  assert.ok(
+    exhibition.boundaries.some((boundary) => /not a solo exhibition/i.test(boundary)),
+  );
+  assert.ok(
+    exhibition.antiClaims.includes("NTER CHNG was exhibited at the Nerman Museum"),
+  );
+});
+
+test("NTER CHNG metadata-only detail source cannot expose historical contact data", () => {
+  const detail = nterchngSources.find(
+    (source) =>
+      source.id === "SRC-NTERCHNG-ANH-ARTIST-DETAIL-2011-05-18",
+  );
+  assert.ok(detail);
+  assert.equal(detail.visibility, "public-metadata-only");
+  assert.equal(detail.canonicalUrl, undefined);
+  assert.equal(detail.archiveUrl, undefined);
+  assert.equal(detail.assetUrl, undefined);
+  assert.ok(detail.protectedLocatorId);
+
+  const serialized = JSON.stringify({
+    nterchngCaptures,
+    nterchngSources,
+    nterchngObservations,
+    nterchngClaims,
+    nterchngResearchTasks,
+    nterchngInquiries,
+  });
+  assert.doesNotMatch(
+    serialized,
+    /(?:\+?1[-.\s])?(?:\([2-9]\d{2}\)[-.\s]?|[2-9]\d{2}[-.\s])[2-9]\d{2}[-.\s]\d{4}|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/,
+  );
+
+  for (const claim of nterchngClaims) {
+    const relationship = claim.evidence.find(
+      (item) => item.sourceId === detail.id,
+    );
+    if (relationship) assert.equal(relationship.renderCitation, false);
+  }
 });
 
 test("Shared Drive claims distinguish selected proof from held research", () => {

@@ -5,7 +5,7 @@
 - Suite: `knowledge-development-lifecycle`, version 1
 - Decision: `stop_threshold_met`
 - Final candidate fingerprint:
-  `a0c4a30a8b73e365280be545169a64add0b463a07492222ab26026df2eb326a0`
+  `7c4f84ba56207c07c179c5c67748d559b7d3fcb6333c2eb353973c7341c7d6e3`
 
 ## Result
 
@@ -78,18 +78,28 @@ the hiring paragraph. Two final fresh holdouts on the unchanged candidate then
 scored `KD-006` and `KD-012` at `4/4`; both scorecards reached `1.0000` with all
 thirteen criteria met.
 
+The NTER CHNG pass recovered the project's archived homepage, the official
+America: Now and Here Kansas City artist index, and a shared artist-detail
+record. It preserves Jamie Burkart, Drew Bolton, and Garrett Fuselier as equal
+collaborators; records the 2011 exhibition inclusion without placing the work
+at the Nerman Museum; and keeps the contact-bearing artist-detail locator out
+of the public repository and citation layer. A first blind `4/4` review led to
+a broader contact-data regression test and therefore a new fingerprint. A
+fresh blind holdout on that final fingerprint scored both judged criteria
+`4/4`; the complete lifecycle scorecard reached `1.0000` with no failures.
+
 Passing this suite means the knowledge-development system and calibration
 corpus meet their criteria. It does not approve held claims for the website or
 authorize production deployment.
 
 ## Corpus Developed
 
-- 51 public-safe captures, all integrated or routed;
-- 154 normalized sources, including 41 new article records and 4
+- 52 public-safe captures, all integrated or routed;
+- 161 normalized sources, including 41 new article records and 4
   campaign Press indexes in the campaign-press expansion;
-- 194 located, limited atomic observations;
-- 36 developed claims, plus selected claims in the canonical registry;
-- 26 prioritized research tasks;
+- 202 located, limited atomic observations;
+- 38 developed claims, plus selected claims in the canonical registry;
+- 27 prioritized research tasks;
 - 0 canonical validation errors;
 - 45 ordered campaign-press placements representing 44 unique articles;
 - 4 official KC Town Hall funding sources, 1 metadata-only first-hand source,
@@ -144,6 +154,9 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 | NYCAC editorial holdout           |     `3/4`, `3/4` | Clarify metric; compress public projection   |
 | NYCAC final holdout H             |         `1.0000` | Pass                                         |
 | NYCAC final holdout I             |         `1.0000` | Pass; stop threshold met                     |
+| NTER CHNG deterministic pass      |         `0.8900` | Continue: independent judgments required     |
+| NTER CHNG holdout J               |     `4/4`, `4/4` | Harden contact-data regression test          |
+| NTER CHNG final holdout K         |         `1.0000` | Pass; maintained release gate                |
 
 ## Accepted Improvements
 
@@ -218,6 +231,10 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 30. Kept the hiring-facing social-infrastructure projection concise while
     retaining the complete taxonomy, platform limits, and owner-archive
     dependency in the cited knowledge record.
+31. Recovered NTER CHNG's collaborative installation and America: Now and Here
+    exhibition lineage; preserved equal credit, Nerman and Kruger anti-claims,
+    explicit research gaps, and a metadata-only boundary around the archived
+    artist page's historical contact data.
 
 ## Evidence
 
@@ -263,6 +280,14 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [NYC Artist Coalition final holdout H scorecard](./nycartc-final-holdout-H-run.json)
 - [NYC Artist Coalition final holdout I judgment](./nycartc-final-holdout-I-judge.json)
 - [NYC Artist Coalition final holdout I scorecard](./nycartc-final-holdout-I-run.json)
+
+## NTER CHNG Wayback Production
+
+- [Hill-climb record](./2026-07-15-nterchng-wayback-hill-climb.md)
+- [Deterministic pass after privacy hardening](./nterchng-remediation-deterministic.json)
+- [Superseded holdout J judgment](./nterchng-holdout-J-superseded-judge.json)
+- [Final holdout K judgment](./nterchng-final-holdout-K-judge.json)
+- [Final holdout K scorecard](./nterchng-final-holdout-K-run.json)
 
 ## Teams Archive Production
 

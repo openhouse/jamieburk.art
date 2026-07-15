@@ -53,6 +53,14 @@ import {
   socialMediaResearchTasks,
   socialMediaSources,
 } from "./social-media-production.ts";
+import {
+  nterchngCaptures,
+  nterchngClaims,
+  nterchngInquiries,
+  nterchngObservations,
+  nterchngResearchTasks,
+  nterchngSources,
+} from "./nterchng-production.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -63,6 +71,7 @@ const knowledgeBankInput = {
     ...teamsArchiveCaptures,
     ...googleSharedDriveCaptures,
     ...socialMediaCaptures,
+    ...nterchngCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -72,6 +81,7 @@ const knowledgeBankInput = {
     ...teamsArchiveSources,
     ...googleSharedDriveSources,
     ...socialMediaSources,
+    ...nterchngSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -276,6 +286,7 @@ const knowledgeBankInput = {
     ...teamsArchiveObservations,
     ...googleSharedDriveObservations,
     ...socialMediaObservations,
+    ...nterchngObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -285,6 +296,7 @@ const knowledgeBankInput = {
     ...teamsArchiveClaims,
     ...googleSharedDriveClaims,
     ...socialMediaClaims,
+    ...nterchngClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -604,6 +616,7 @@ const knowledgeBankInput = {
     ...teamsArchiveResearchTasks,
     ...googleSharedDriveResearchTasks,
     ...socialMediaResearchTasks,
+    ...nterchngResearchTasks,
   ],
   researchInquiries: [
     {
@@ -642,6 +655,7 @@ const knowledgeBankInput = {
     ...teamsArchiveInquiries,
     ...googleSharedDriveInquiries,
     ...socialMediaInquiries,
+    ...nterchngInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
