@@ -135,6 +135,12 @@ for the public-safe production record from the Jamie Projects History, CRS,
 and job-hunt working archives, including held claims, protected support, open
 inquiries, and current projection decisions.
 
+See the
+[July 15 iCloud Teams delta](projects/icloud-teams-archive-delta-2026-07-15.md)
+for the authenticated-folder reconciliation, strengthened raft field-operations
+evidence, protected early social-computing lead, CRS and job-hunt no-duplication
+decisions, and route, privacy, permission, and collective-credit boundaries.
+
 See
 [projects/google-drive-production-2026-07-14.md](projects/google-drive-production-2026-07-14.md)
 for the public-safe Shared Drive review, two protected workflow claims promoted
