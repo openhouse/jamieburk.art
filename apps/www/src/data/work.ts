@@ -517,9 +517,9 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund.",
     role: "Project Planning & Documentation Support",
-    years: "2020s",
+    years: "2019-2024 public record",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -541,25 +541,26 @@ const workItemsInput = [
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
     careNote:
-      "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
+      "Council appropriation did not become disbursement: the City reported no funds disbursed in 2022 and returned the full unused amount after project withdrawal in 2024. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Kansas City Resolution 190649, Ordinance 190642, the May 17, 2022 CCED project update, and Ordinance 240317.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+    currentStatus: "The project later withdrew; the full unused appropriation returned to the fund in 2024.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
-      "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "CCED Board recommendation",
+      "$490,539 Council appropriation",
+      "No reported disbursement; full unused amount returned"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-led adaptive reuse planning and public-benefit documentation. Official records establish Board recommendation, Council acceptance and appropriation, and the appropriation's later unused return.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "The legislative records do not establish Jamie's individual causal role in the Board or Council actions or explain why the project withdrew.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

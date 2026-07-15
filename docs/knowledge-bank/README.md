@@ -90,3 +90,9 @@ See
 for the bounded sequence from the coalition's 2017 transparency proposal,
 through Jamie's campaign-site implementation and Local Law 220, to the City's
 reported replacement of M.A.R.C.H. with CURE in December 2023.
+
+See
+[projects/kc-town-hall.md](projects/kc-town-hall.md)
+for the official sequence from CCED Board recommendation through Council
+acceptance, negotiation authority, and appropriation, followed by
+non-disbursement, withdrawal, and return of the full unused amount.

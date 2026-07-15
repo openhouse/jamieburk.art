@@ -173,15 +173,20 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Kansas City Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount in 2019. The City reported no disbursement in 2022; the project later withdrew, and the full unused appropriation returned to the fund in 2024.
+
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official records separately establish the Board recommendation, Council acceptance and negotiation authority, Council appropriation, the 2022 no-disbursement and still-negotiating status, and return of the unused amount after withdrawal in 2024.
+
+**Evidence division:** The approved resume supports Jamie's planning and documentation contribution. The four municipal records support the institutional funding lifecycle and do not establish Jamie's individual role in those decisions.
+
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
+**Guardrail:** Say accepted and appropriated, not received, disbursed, spent, or completed. Keep the later non-disbursement, withdrawal, and return with any account of the 2019 Council action. Do not attribute institutional decisions to Jamie.
+
+**Do not say:** KC Town Hall received or spent $490,539; a funding agreement was executed; the City funded construction or completion; Jamie secured or caused the Board recommendation or Council appropriation; the record establishes why the project withdrew.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
 
 ## source-backed-team-memory-method - Source-backed team memory
 

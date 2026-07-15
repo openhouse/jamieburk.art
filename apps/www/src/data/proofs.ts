@@ -436,19 +436,24 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Kansas City Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount in 2019. The City reported no disbursement in 2022; the project later withdrew, and the full unused appropriation returned to the fund in 2024.",
     shortWording:
-      "Jamie supported adaptive reuse planning and public-benefit documentation",
+      "Jamie co-led adaptive reuse planning; the City appropriated $490,539, but reported no disbursement before project withdrawal and return of the full unused amount",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Official records separately establish the CCED Board's recommendation, the Council's acceptance and authority to negotiate a funding agreement, the Council's appropriation, the absence of reported disbursement while the agreement remained under negotiation in 2022, and return of the full unused amount after withdrawal in 2024.",
+    sourceBasis:
+      "Approved resume language supports Jamie's planning and documentation contribution. Kansas City Resolution 190649, Ordinance 190642, the May 17, 2022 CCED project update, and Ordinance 240317 separately support the institutional funding lifecycle; those municipal records do not establish Jamie's individual role.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Say accepted and appropriated, not received, disbursed, spent, or completed. Keep the 2022 non-disbursement and 2024 withdrawal and return with any public account of the 2019 Council action. Do not attribute the institutional decisions to Jamie.",
     doNotSay: [
-      "Final funding received",
+      "KC Town Hall received or spent $490,539",
+      "A funding agreement was executed",
+      "The City funded construction or project completion",
+      "Jamie secured or caused the Board recommendation or Council appropriation",
+      "The public record establishes why the project withdrew",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded recommendation, acceptance, and appropriation"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -460,7 +465,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",

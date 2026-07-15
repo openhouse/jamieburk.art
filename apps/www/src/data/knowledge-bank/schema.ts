@@ -254,6 +254,7 @@ export const knowledgeEntitySchema = z.object({
     "event",
     "public-body",
     "public-institution",
+    "organization",
     "law",
     "policy"
   ]),
@@ -271,6 +272,7 @@ export const agencyRelationSchema = z.object({
     "initiated",
     "co-governed",
     "co-created",
+    "co-led",
     "founding-member-of",
     "implemented-and-maintained",
     "organized",
@@ -279,6 +281,11 @@ export const agencyRelationSchema = z.object({
     "spoke-at",
     "co-hosted",
     "convened",
+    "recommended-for-funding",
+    "accepted-recommendation",
+    "appropriated",
+    "withdrew-from",
+    "reclaimed-unused-appropriation",
     "cited-as-public-process-outcome",
     "chaired-hearing-for",
     "enacted"

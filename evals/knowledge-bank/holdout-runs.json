@@ -47,6 +47,35 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-kc-town-hall-council-funding",
+      "completedAt": "2026-07-14T22:05:00-04:00",
+      "lens": "Protocol reset because the prior holdouts predated ingestion of the KC Town Hall Board recommendation, Council acceptance and appropriation, and later non-disbursement and withdrawal record",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 1, 1, 1, 1, 5, 5, 1, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the four official records, actor-action separation, appropriation-versus-disbursement boundary, later withdrawal and return, public projection, and adversarial eval gates."
+      ]
+    },
+    {
+      "judgeId": "kc-town-hall-holdout-municipal-archivist-2026-07-14",
+      "completedAt": "2026-07-14T22:09:19-04:00",
+      "lens": "Independent municipal archivist and public-record integrity reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "kc-town-hall-holdout-skeptical-editor-2026-07-14",
+      "completedAt": "2026-07-14T22:49:23-04:00",
+      "lens": "Independent skeptical hiring editor, civic-policy researcher, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

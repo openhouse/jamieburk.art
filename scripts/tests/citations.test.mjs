@@ -28,6 +28,22 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
+test("KC Town Hall keeps contribution evidence separate from municipal lifecycle evidence", () => {
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "council-appropriation-lifecycle").sources.map((item) => item.source.id),
+    [
+      "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+      "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+      "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+      "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+    ]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "jamie-planning-contribution").sources.map((item) => item.source.id),
+    ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
+  );
+});
+
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
@@ -66,4 +82,5 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(references, /role="doc-endnotes"/);
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
+  assert.match(sourceNote, /Official document/);
 });

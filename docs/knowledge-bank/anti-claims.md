@@ -59,8 +59,12 @@ private Drive documents.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Use the approved resume for Jamie's co-leadership in planning and documentation.
+Use the municipal records only for the institutional funding lifecycle. Do not
+turn recommendation, acceptance, negotiation authority, or appropriation into
+receipt, expenditure, construction, completion, or Jamie's causal credit. Any
+account of the 2019 appropriation must retain the later non-disbursement,
+withdrawal, and return of the full unused amount.
 
 ## Source-Backed Team Memory
 

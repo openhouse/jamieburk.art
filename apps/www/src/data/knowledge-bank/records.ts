@@ -1,5 +1,6 @@
 import { agencyGraph } from "./agency-graph.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacInstitutionalCapacity } from "./nycac-institutional-capacity.ts";
@@ -29,6 +30,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.intakeItems,
+    ...kcTownHallCouncilFunding.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacInstitutionalCapacity.intakeItems,
     ...nycacSourceExpansion.intakeItems,
@@ -54,6 +56,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.observations,
+    ...kcTownHallCouncilFunding.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacInstitutionalCapacity.observations,
     ...nycacSourceExpansion.observations,
@@ -183,13 +186,17 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...historicalKnowledge.sources,
+    ...kcTownHallCouncilFunding.sources,
     ...nycacImplementationEvidence.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
     ...nycacPressArchive.sources
   ],
-  entities: [...agencyGraph.entities],
-  agencyRelations: [...agencyGraph.agencyRelations],
+  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities],
+  agencyRelations: [
+    ...agencyGraph.agencyRelations,
+    ...kcTownHallCouncilFunding.agencyRelations
+  ],
   claims: [
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
@@ -278,6 +285,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...historicalKnowledge.claims,
+    ...kcTownHallCouncilFunding.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacInstitutionalCapacity.claims,
     ...nycacSourceExpansion.claims,
@@ -323,6 +331,7 @@ const knowledgeBankInput = {
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
     ...historicalKnowledge.researchInquiries,
+    ...kcTownHallCouncilFunding.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,
@@ -379,6 +388,35 @@ const knowledgeBankInput = {
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] },
       { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] },
       { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] }
+    ]
+  }, {
+    id: "kc-town-hall",
+    surface: "/work/kc-town-hall",
+    sourceOrder: [
+      "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+      "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+      "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+      "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+      "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"
+    ],
+    occurrences: [
+      {
+        id: "council-appropriation-lifecycle",
+        claimId: "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+          "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+          "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+          "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+        ]
+      },
+      {
+        id: "jamie-planning-contribution",
+        claimId: "CLM-KC-TOWN-HALL-JAMIE-PLANNING-CONTRIBUTION",
+        projection: "case-study",
+        sourceIds: ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
+      }
     ]
   }]
 };

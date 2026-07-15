@@ -1,20 +1,25 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
 const suite = loadKnowledgeEvalSuite();
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
 test("knowledge-bank gate records two consecutive independent 5/5 holdouts", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nycac-press-holdout-policy-editor-final-2026-07-14",
-    "nycac-press-holdout-archivist-final-2026-07-14"
+    "kc-town-hall-holdout-municipal-archivist-2026-07-14",
+    "kc-town-hall-holdout-skeptical-editor-2026-07-14"
   ]);
 });
 
@@ -924,6 +929,387 @@ test("Talks Not Raids projection keeps the program definition and statutory exce
     assert.equal(result.accepted, false);
   } finally {
     projection.text = originalText;
+  }
+});
+
+test("KC Town Hall retains the complete Board-to-Council appropriation lifecycle", () => {
+  const result = evaluateKnowledgeBank(suite);
+  for (const criterionId of [
+    "KB-EVAL-INTAKE",
+    "KB-EVAL-SCOPE",
+    "KB-EVAL-MATURATION",
+    "KB-EVAL-PROJECTION",
+    "KB-EVAL-COVERAGE",
+    "KB-EVAL-SAFETY",
+    "KB-EVAL-AGENCY"
+  ]) {
+    assert.equal(result.criteria.find((item) => item.criterionId === criterionId)?.score, 5);
+  }
+});
+
+test("KC Town Hall appropriation cannot be projected as receipt or expenditure", () => {
+  const proof = proofClaims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.proofId
+  );
+  assert.ok(proof);
+  const originalWording = proof.publicWording;
+
+  try {
+    proof.publicWording = "KC Town Hall received $490,539 from the City.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    proof.publicWording = originalWording;
+  }
+});
+
+test("KC Town Hall public projection must retain non-disbursement and withdrawal", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.claimId
+  );
+  const projection = claim?.projections.find((item) => item.key === "case-study");
+  assert.ok(projection);
+  const originalText = projection.text;
+
+  try {
+    projection.text = "The CCED Board recommended $490,539, and the Council accepted the recommendation and appropriated the amount.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-COVERAGE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
+test("KC Town Hall structured contribution cannot invent municipal causation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.contributionClaimId
+  );
+  const projection = claim?.projections.find((item) => item.key === "case-study");
+  assert.ok(projection);
+  const originalText = projection.text;
+
+  try {
+    projection.text = "Jamie secured municipal backing for the project.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
+test("KC Town Hall structured lifecycle cannot turn appropriation into approximate receipt", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.claimId
+  );
+  const projection = claim?.projections.find((item) => item.key === "case-study");
+  assert.ok(projection);
+  const originalText = projection.text;
+
+  try {
+    projection.text = `${projection.text} KC Town Hall received nearly half a million dollars from the City.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
+test("KC Town Hall verified observation cannot reverse the no-disbursement record", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-KC-TOWN-HALL-NO-DISBURSEMENT-2022"
+  );
+  assert.ok(observation);
+  const originalText = observation.text;
+
+  try {
+    observation.text = "Kansas City disbursed the full award to KC Town Hall in 2022.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    observation.text = originalText;
+  }
+});
+
+test("KC Town Hall proof wording cannot imply approximate receipt or Jamie's causation", () => {
+  const proof = proofClaims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.proofId
+  );
+  assert.ok(proof);
+  const originalWording = proof.publicWording;
+  const regressions = [
+    "KC Town Hall received roughly half a million dollars in municipal backing.",
+    "Jamie's planning unlocked roughly half a million dollars in City support."
+  ];
+
+  try {
+    for (const regression of regressions) {
+      proof.publicWording = `${originalWording} ${regression}`;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1, regression);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1, regression);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1, regression);
+      assert.equal(result.accepted, false, regression);
+    }
+  } finally {
+    proof.publicWording = originalWording;
+  }
+});
+
+test("KC Town Hall source citation cannot recast appropriation as payment", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+  );
+  assert.ok(source);
+  const originalCitation = source.publicCitation;
+
+  try {
+    source.publicCitation = "Council of Kansas City, Missouri, payment of $490,539 to KC Town Hall, September 26, 2019.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.publicCitation = originalCitation;
+  }
+});
+
+test("KC Town Hall case-study projection must retain funding-agreement negotiation status", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.claimId
+  );
+  const projection = claim?.projections.find((item) => item.key === "case-study");
+  assert.ok(projection);
+  const originalText = projection.text;
+
+  try {
+    projection.text = "After the CCED Board recommended KC Town Hall's proposal, the Council accepted the recommendation and appropriated $490,539 in 2019. City records reported no disbursement in 2022; after the project withdrew, the Council returned the full unused appropriation in 2024.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
+test("KC Town Hall claim requires all four official lifecycle sources", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.claimId
+  );
+  assert.ok(claim);
+  const originalEvidence = claim.evidence;
+
+  try {
+    claim.evidence = claim.evidence.filter(
+      (evidence) => evidence.sourceId !== "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17"
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-COVERAGE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.evidence = originalEvidence;
+  }
+});
+
+test("KC Town Hall agency graph preserves Board recommendation and Council appropriation", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-KC-COUNCIL-APPROPRIATED-TOWN-HALL-FUNDS"
+  );
+  assert.ok(relation);
+  const originalActorIds = relation.actorIds;
+  const originalAction = relation.action;
+
+  try {
+    relation.actorIds = ["ENT-JAMIE-BURKART"];
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    relation.actorIds = originalActorIds;
+    relation.action = "accepted-recommendation";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.actorIds = originalActorIds;
+    relation.action = originalAction;
+  }
+});
+
+test("KC Town Hall agency graph keeps Jamie's planning contribution separate from Council action", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-JAMIE-COLED-KC-TOWN-HALL-PLANNING"
+  );
+  assert.ok(relation);
+  const originalAction = relation.action;
+  const originalClaimIds = relation.claimIds;
+
+  try {
+    relation.action = "appropriated";
+    relation.claimIds = [suite.pilot.kcTownHallCouncilFunding.claimId];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.action = originalAction;
+    relation.claimIds = originalClaimIds;
+  }
+});
+
+test("KC Town Hall technical-operations wording retains the unused-return boundary", () => {
+  const proof = proofClaims.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.proofId
+  );
+  assert.ok(proof?.shortWording);
+  const originalWording = proof.shortWording;
+
+  try {
+    proof.shortWording = "Jamie co-led adaptive reuse planning that advanced through Council appropriation.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    proof.shortWording = originalWording;
+  }
+});
+
+test("KC Town Hall source-backed proof coverage cannot regress to research-needed", () => {
+  const target = knowledgeBank.proofCoverageTargets.find(
+    (item) => item.proofId === suite.pilot.kcTownHallCouncilFunding.proofId
+  );
+  assert.ok(target);
+  const originalStatus = target.status;
+
+  try {
+    target.status = "research-needed";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-COVERAGE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    target.status = originalStatus;
+  }
+});
+
+test("KC Town Hall page citation retains the later disposition record", () => {
+  const page = knowledgeBank.pages.find(
+    (item) => item.id === suite.pilot.kcTownHallCouncilFunding.pageId
+  );
+  assert.ok(page?.occurrences.length);
+  const originalSourceIds = page.occurrences[0].sourceIds;
+
+  try {
+    page.occurrences[0].sourceIds = page.occurrences[0].sourceIds.filter(
+      (sourceId) => sourceId !== "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-COVERAGE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    page.occurrences[0].sourceIds = originalSourceIds;
+  }
+});
+
+test("KC Town Hall handwritten MDX cannot assign Jamie municipal causation", () => {
+  const mdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
+    "utf8"
+  );
+  const result = evaluateKnowledgeBank(suite, {
+    kcTownHallMdx: `${mdx}\nJamie secured the Council appropriation for KC Town Hall.\n`
+  });
+
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("KC Town Hall handwritten MDX cannot turn appropriation into receipt", () => {
+  const mdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
+    "utf8"
+  );
+  const result = evaluateKnowledgeBank(suite, {
+    kcTownHallMdx: `${mdx}\nKC Town Hall received $490,539 from the City.\n`
+  });
+
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("KC Town Hall handwritten MDX rejects funding-receipt euphemisms", () => {
+  const mdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
+    "utf8"
+  );
+  const regressions = [
+    "KC Town Hall secured $490,539 from the City.",
+    "The City granted KC Town Hall $490,539.",
+    "Jamie brought in $490,539 from the City.",
+    "Jamie's work earned KC Town Hall a $490,539 City award.",
+    "The Council funded KC Town Hall with $490,539."
+  ];
+
+  for (const regression of regressions) {
+    const result = evaluateKnowledgeBank(suite, {
+      kcTownHallMdx: `${mdx}\n${regression}\n`
+    });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score,
+      1,
+      regression
+    );
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score,
+      1,
+      regression
+    );
+    assert.equal(result.accepted, false, regression);
+  }
+});
+
+test("KC Town Hall MDX approval hash rejects unforeseen causal paraphrases", () => {
+  const mdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
+    "utf8"
+  );
+  const regressions = [
+    "KC Town Hall received nearly half a million dollars from the City.",
+    "Jamie secured municipal backing for the project.",
+    "Jamie got the City to award the project."
+  ];
+
+  for (const regression of regressions) {
+    const result = evaluateKnowledgeBank(suite, {
+      kcTownHallMdx: `${mdx}\n${regression}\n`
+    });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score,
+      1,
+      regression
+    );
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score,
+      1,
+      regression
+    );
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score,
+      1,
+      regression
+    );
+    assert.equal(result.accepted, false, regression);
   }
 });
 
