@@ -8,6 +8,7 @@ import {
   evaluateEvidenceExpansion,
   evaluateGoogleSharedDriveArchiveProduction,
   evaluateICloudArchiveProduction,
+  evaluateJamieFacebookPostArchive,
   evaluateKcSpacesFundFacebookPostArchive,
   evaluateKcTownHallCouncilAllocation,
   evaluateKcTownHallFullPopulationArchive,
@@ -1354,6 +1355,109 @@ test("KC Spaces Fund Facebook post archive rejects private material and people s
     failures.some((failure) =>
       failure.includes("must not convert reactions into people")
     )
+  );
+});
+
+const jamieFacebookPostFixture = {
+  census: readRepoFile(
+    "docs/knowledge-bank/data/jamie-facebook-post-census-2026-07-14.csv"
+  ),
+  corpusModel: readRepoFile(
+    "apps/www/src/data/knowledge-bank/jamie-facebook-posts-batch-2026-07-14.ts"
+  ),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  archiveDoc: readRepoFile(
+    "docs/knowledge-bank/intake/2026-07-14-jamie-facebook-posts.md"
+  ),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md"),
+  participatoryDoc: readRepoFile(
+    "docs/knowledge-bank/projects/participatory-public-programs.md"
+  )
+};
+
+test("Jamie Facebook post archive passes population, source, and privacy boundaries", () => {
+  assert.deepEqual(
+    evaluateJamieFacebookPostArchive(jamieFacebookPostFixture),
+    []
+  );
+});
+
+test("Jamie Facebook post archive rejects a silently dropped record", () => {
+  const lines = jamieFacebookPostFixture.census.trim().split("\n");
+  lines.pop();
+  const failures = evaluateJamieFacebookPostArchive({
+    ...jamieFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("1,243 unique record"))
+  );
+  assert.ok(
+    failures.some((failure) => failure.includes("terminate at recovered-1243"))
+  );
+});
+
+test("Jamie Facebook post archive rejects duplicate IDs and classification drift", () => {
+  const lines = jamieFacebookPostFixture.census.trim().split("\n");
+  const first = lines[1].split(",");
+  const second = lines[2].split(",");
+  second[0] = first[0];
+  second[2] = "text";
+  second[4] = "project-specific";
+  lines[2] = second.join(",");
+  const failures = evaluateJamieFacebookPostArchive({
+    ...jamieFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("IDs must remain unique")));
+  assert.ok(failures.some((failure) => failure.includes("form counts")));
+  assert.ok(failures.some((failure) => failure.includes("relevance counts")));
+});
+
+test("Jamie Facebook post archive rejects private record-level material", () => {
+  const census = jamieFacebookPostFixture.census
+    .replace("public_detail_status", "public_detail_status,post_text")
+    .replace(/$/gm, ",private post text");
+  const failures = evaluateJamieFacebookPostArchive({
+    ...jamieFacebookPostFixture,
+    census,
+    archiveDoc: `${jamieFacebookPostFixture.archiveDoc}\n__cft__=not-a-real-token\n/Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("seven aggregate-only columns")));
+  assert.ok(failures.some((failure) => failure.includes("must not expose identifiers")));
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("authentication, session, management-locator, or private-path")
+    )
+  );
+});
+
+test("Jamie Facebook post archive rejects zero-engagement and stakeholder inflation", () => {
+  const failures = evaluateJamieFacebookPostArchive({
+    ...jamieFacebookPostFixture,
+    corpusModel: jamieFacebookPostFixture.corpusModel
+      .replace('interactionMetrics: "not-recovered"', 'interactionMetrics: "zero"')
+      .replace(
+        'stakeholderIdentityCensus: "not-recovered"',
+        'stakeholderIdentityCensus: "all-referenced"'
+      ),
+    archiveDoc: `${jamieFacebookPostFixture.archiveDoc}\nThe population had zero engagement. Referenced stakeholders engaged and endorsed the work.`
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes('interactionMetrics: "not-recovered"'))
+  );
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes('stakeholderIdentityCensus: "not-recovered"')
+    )
+  );
+  assert.ok(failures.some((failure) => failure.includes("zero engagement")));
+  assert.ok(
+    failures.some((failure) => failure.includes("outgoing references into inbound"))
   );
 });
 

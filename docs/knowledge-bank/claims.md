@@ -243,6 +243,96 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## jamie-facebook-post-population-accounting - Personal authored-post population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated protected research run / aggregate-only census
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** A terminal-cursor census accounted for 1,243 unique records in Jamie's surviving Facebook `Posted by: You` population.
+**Detailed public-safe wording:** An authenticated owner-filtered run followed 621 cursor pages through `has_next_page: false`, retained 3,728 returned nodes, and deduplicated them into 1,243 stable story records after Facebook replayed nearly the full population three times.
+**Where to project:** Knowledge-bank provenance and future research briefs only.
+**Why it matters:** Establishes a testable denominator so later source and role findings cannot silently omit records or inflate repeated responses.
+**Guardrail:** Complete describes the surviving filtered surface exposed in one authenticated session, not lifetime history or public visibility.
+**Boundaries:** Complete describes the surviving filtered surface exposed in the July 2026 session. It is not an official export, deletion history, or every post Jamie ever created; privacy labels were unavailable for most records.
+**Do not say:** All 1,243 records were public; 3,728 nodes are 3,728 posts; absent years prove Jamie did not post.
+**Protected boundaries:** Raw responses, request state, story IDs, exact dates, post text, people, privacy context, interactions, destinations, and media stay offline.
+**Review owner:** Jamie / Codex authenticated archival review
+**Last reviewed:** 2026-07-14
+
+## jamie-facebook-external-destination-inventory - Protected source and project routing
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Protected full-population destination review / public-safe aggregate summary
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** A protected destination inventory traced project routes and source-discovery leads across every surviving authored record without publishing personal-post URLs or relationship context.
+**Detailed public-safe wording:** The population contains 718 external-destination occurrences resolving to 564 unique URLs across 195 domains; 139 professionally relevant records carry 176 unique destinations across 74 domains.
+**Where to project:** Knowledge-bank source discovery and future archive or photo-editor briefs.
+**Why it matters:** Preserves a route from personal documentation to independent public evidence without turning the personal link graph into a public product.
+**Guardrail:** Promote only independently public-safe sources after close reading; keep all other destination associations protected.
+**Boundaries:** The full URL inventory remains protected because a link can reveal personal subject, audience, or relationship context. A posted link is an outgoing route, not inbound engagement.
+**Do not say:** All 564 destinations are approved for public association; destination owners engaged with Jamie; link frequency measures reach, adoption, or impact.
+**Protected boundaries:** The complete destination graph, originating posts, audience and relationship context, exact dates, and unresolved redirects stay offline.
+**Review owner:** Jamie / Codex protected-source review
+**Last reviewed:** 2026-07-14
+
+## jamie-facebook-project-operations-thread - Developing implementation throughline
+
+**Status:** Confirmed with boundary
+**Support level:** Moderate
+**Evidence class:** Protected first-person contemporaneous record / close-reading synthesis
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** Jamie's personal Facebook record preserves a long implementation throughline: participation routes, usable instructions, recurring-program operations, public identity, documentation, and follow-through.
+**Detailed public-safe wording:** A protected close reading of 222 project-specific or practice-related records, including 47 WOW List, 43 Sunday Dinner, and 33 NYC Artist Coalition or campaign records, repeatedly surfaces participation routes, usable instructions, recurring programs, project identity, documentation, and follow-through.
+**Where to project:** Reserve career depth and future role-specific composition after corroboration.
+**Why it matters:** Makes Jamie's recurring implementation craft visible across domains without reducing the portfolio to individual social posts.
+**Guardrail:** Treat the pattern as first-person role evidence and use independent sources for outcomes, causality, audience, and contested credit.
+**Boundaries:** This is Jamie's contemporaneous first-person record, not independent validation of every role, result, or causal claim. Project work remains collective.
+**Do not say:** Every selected record is a separate outcome; posting frequency measures labor or impact; the archive proves sole leadership.
+**Protected boundaries:** Raw text, people, locations, private project context, personal history, social response, and media stay offline.
+**Review owner:** Jamie / Codex protected-source review
+**Last reviewed:** 2026-07-14
+
+## jamie-facebook-nycac-implementation-practice - Coalition implementation record
+
+**Status:** Confirmed with boundary
+**Support level:** Moderate
+**Evidence class:** Protected first-person contemporaneous record / independent public campaign sources
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** Jamie's contemporaneous authored record documents coalition implementation through meetings, hearings, action routes, safety training, public-input workflows, milestone communication, and collective credit.
+**Detailed public-safe wording:** Thirty-three protected NYC Artist Coalition or campaign-related authored records document recurring implementation work across meetings, hearings, call scripts, safety training, surveys, public input, milestone communication, and collective credit.
+**Where to project:** Reserve NYC Artist Coalition role evidence; public outcome claims continue to use independent reporting and government records.
+**Why it matters:** Clarifies what Jamie did between campaign idea and public action while preserving coalition ownership and policy-causality boundaries.
+**Guardrail:** Use this archive for role clarification, not as independent proof of attendance, government action, policy outcome, or Jamie's sole leadership.
+**Boundaries:** Use independent public sources for policy outcomes, government action, attendance, and causality. The record supports Jamie's implementation contribution, not sole coalition leadership.
+**Do not say:** Jamie alone created every campaign; 33 posts prove impact or policy causality; every named person or place is approved for publication.
+**Protected boundaries:** Post text, names, event and relationship context, locations, personal-account URLs, and unreviewed media stay offline.
+**Review owner:** Jamie / Codex protected-source review
+**Last reviewed:** 2026-07-14
+
+## jamie-facebook-engagement-not-recovered - Engagement evidence boundary
+
+**Status:** Not recovered
+**Support level:** Strong boundary
+**Evidence class:** Authenticated query data-quality review
+**Public safety:** Public with boundary
+**Editorial status:** Hold
+**Public wording:** Population-level traction and stakeholder engagement were not recovered from the owner-filtered query; absent metrics remain unknown rather than zero.
+**Detailed public-safe wording:** The recovered Manage Posts responses did not supply complete reaction, comment, or share data or a defensible stakeholder-identity census; outgoing references therefore remain analytically separate from inbound engagement.
+**Where to project:** Research-boundary documentation only.
+**Why it matters:** Prevents missing platform fields and public references from becoming fabricated reach, endorsement, or stakeholder claims.
+**Guardrail:** Preserve unknown as unknown; do not substitute spot checks, tags, or destination counts for population-level interaction evidence.
+**Boundaries:** Outgoing tags, actors, organizations, and posted destinations are references, not viewers, responders, endorsers, partners, or stakeholder engagement.
+**Do not say:** The population had zero engagement; every referenced stakeholder engaged; post or destination counts measure reach or impact.
+**Protected boundaries:** Commenters, reactors, friend relationships, audience state, private analytics, and social-graph data stay offline.
+**Review owner:** Jamie / Codex data-quality review
+**Last reviewed:** 2026-07-14
+
 ## nycac-facebook-publication-system - Shared civic publication infrastructure
 
 **Status:** Selected

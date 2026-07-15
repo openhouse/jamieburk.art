@@ -1864,6 +1864,226 @@ export function evaluateKcSpacesFundFacebookPostArchive({
   return missing;
 }
 
+export function evaluateJamieFacebookPostArchive({
+  census,
+  corpusModel,
+  framework,
+  archiveDoc,
+  antiClaims,
+  participatoryDoc
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  const lines = census.trim().split(/\r?\n/).filter(Boolean);
+  const headers = lines.shift()?.split(",") ?? [];
+  const rows = lines.map((line) => line.split(","));
+  const count = (index) => {
+    const values = new Map();
+    for (const row of rows) {
+      values.set(row[index], (values.get(row[index]) ?? 0) + 1);
+    }
+    return values;
+  };
+  const matches = (actual, expected) =>
+    actual.size === Object.keys(expected).length &&
+    Object.entries(expected).every(([key, value]) => actual.get(key) === value);
+
+  expect(
+    headers.join(",") ===
+      "ledger_id,year,record_type,primary_theme,professional_relevance,accounting_status,public_detail_status",
+    "Jamie Facebook post census must retain seven aggregate-only columns."
+  );
+  expect(
+    rows.length === 1243,
+    "Jamie Facebook post census must contain 1,243 unique record dispositions."
+  );
+  expect(
+    rows.every((row) => row.length === 7),
+    "Every Jamie Facebook post census row must retain exactly seven columns."
+  );
+  expect(
+    new Set(rows.map((row) => row[0])).size === rows.length,
+    "Jamie Facebook post census ledger IDs must remain unique."
+  );
+  expect(
+    rows.every(
+      (row, index) =>
+        row[0] === `recovered-${String(index + 1).padStart(4, "0")}` &&
+        row[5] === "recovered" &&
+        row[6] === "aggregate-only"
+    ),
+    "Jamie Facebook post census sequence and aggregate-only dispositions must remain complete."
+  );
+  expect(
+    rows.at(-1)?.[0] === "recovered-1243",
+    "Jamie Facebook post census sequence must terminate at recovered-1243."
+  );
+  expect(
+    matches(count(1), {
+      2006: 2,
+      2007: 5,
+      2008: 4,
+      2009: 218,
+      2010: 82,
+      2011: 88,
+      2012: 153,
+      2013: 184,
+      2014: 109,
+      2015: 68,
+      2016: 122,
+      2017: 118,
+      2018: 27,
+      2019: 42,
+      2020: 19,
+      2022: 2
+    }),
+    "Jamie Facebook post year counts must recompute across all 1,243 records."
+  );
+  expect(
+    matches(count(2), {
+      event: 58,
+      "external-link": 55,
+      "media-or-text-unavailable": 159,
+      photo: 221,
+      "photo-album": 135,
+      "shared-story": 244,
+      text: 335,
+      video: 36
+    }),
+    "Jamie Facebook post form counts must recompute across all 1,243 records."
+  );
+  expect(
+    matches(count(3), {
+      "care-memory-and-relationships": 45,
+      "civic-and-public-interest-work": 78,
+      "community-and-hospitality": 97,
+      "culture-art-and-performance": 134,
+      "everyday-life-and-observation": 620,
+      "media-only-or-text-unavailable": 235,
+      "small-business-and-commerce": 1,
+      "technical-and-digital-practice": 12,
+      "waterways-place-and-ecology": 21
+    }),
+    "Jamie Facebook post theme counts must recompute across all 1,243 records."
+  );
+  expect(
+    matches(count(4), {
+      contextual: 1021,
+      "practice-related": 64,
+      "project-specific": 158
+    }),
+    "Jamie Facebook post relevance counts must recompute across all 1,243 records."
+  );
+  expect(
+    !/story_id|post_id|status_id|source_url|facebook\.com|exact_date|post_text|full_text|privacy|interaction|comment|email|phone|address|protected_locator/i.test(
+      census
+    ),
+    "Jamie Facebook post census must not expose identifiers, URLs, text, privacy, interactions, contacts, or protected locators."
+  );
+
+  requireFragments("Jamie Facebook post corpus model", corpusModel, [
+    "cursorPages: 621",
+    "returnedNodes: 3728",
+    "uniqueRecords: 1243",
+    "recordsAppearingThreeTimes: 1242",
+    "readableMessages: 998",
+    "mediaLedOrUnavailable: 245",
+    "projectSpecific: 158",
+    "practiceRelated: 64",
+    "recordsWithExternalUrls: 430",
+    "urlOccurrences: 718",
+    "uniqueUrls: 564",
+    "uniqueDomains: 195",
+    "uniqueMissionRelevantUrls: 176",
+    'interactionMetrics: "not-recovered"',
+    'stakeholderIdentityCensus: "not-recovered"',
+    "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009",
+    "CLM-JAMIE-FACEBOOK-ENGAGEMENT-NOT-RECOVERED-2026",
+    'decision: "reserve"',
+    'decision: "hold"'
+  ]);
+  requireFragments("Jamie Facebook framework integration", framework, [
+    "jamieFacebookPostIntake",
+    "jamieFacebookPostSources",
+    "jamieFacebookPostClaims",
+    "jamieFacebookPostInquiries",
+    "jamieFacebookPostPublicationDecisions",
+    'id: "jamie-facebook-archive"',
+    "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009",
+    "independent exhibition review",
+    "Missouri and Mississippi journey"
+  ]);
+  requireFragments("Jamie Facebook archival documentation", archiveDoc, [
+    "100 percent of the surviving records",
+    "621 cursor pages",
+    "3,728 returned nodes",
+    "1,243 unique stable story records",
+    "1,242 unique records appeared three times",
+    "430 records carried at least one external URL",
+    "718 external-URL occurrences",
+    "564 unique URLs across 195 domains",
+    "176 unique URLs across 74 domains",
+    "Blair Schulman's 2009 ArtTattler review",
+    "outgoing references, not a census of inbound stakeholder engagement",
+    "absent metrics must not be described as zero",
+    "no public Facebook archive route"
+  ]);
+  requireFragments("Jamie Facebook anti-claims", antiClaims, [
+    "every Facebook post Jamie ever created",
+    "3,728 returned nodes into 3,728 unique posts",
+    "Do not describe absent reaction, comment, or share metrics as zero",
+    "posted links, tags, actor names, organizations, or stakeholder references",
+    "Frequency is an archive-navigation aid"
+  ]);
+  requireFragments("Participatory programs source integration", participatoryDoc, [
+    "Blair Schulman's independent ArtTattler review",
+    "river as connective social infrastructure",
+    "trust, mutual help, and public participation"
+  ]);
+
+  expect(
+    !/(?:zero|0) (?:reactions|comments|shares|engagement)/i.test(archiveDoc),
+    "Jamie Facebook archive must not convert omitted interaction fields into zero engagement."
+  );
+  expect(
+    !/(?:referenced|tagged|linked) stakeholders? (?:engaged|endorsed|partnered)/i.test(
+      archiveDoc
+    ),
+    "Jamie Facebook archive must not convert outgoing references into inbound stakeholder engagement."
+  );
+
+  const publicBundle = [census, corpusModel, framework, archiveDoc, antiClaims].join(
+    "\n"
+  );
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /__cft__/i,
+    /asset_id\s*[:=]/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push(
+      "Public Jamie Facebook archive bundle contains authentication, session, management-locator, or private-path material."
+    );
+  }
+
+  return missing;
+}
+
 export function evaluateKcTownHallFullPopulationArchive({
   ledger,
   corpusModel,
@@ -3280,6 +3500,14 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/kcspacesfund-facebook-post-census-2026-07-14.csv"
   );
+  const jamieFacebookPostCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/jamie-facebook-posts-batch-2026-07-14.ts"
+  );
+  const jamieFacebookPostCensus = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/jamie-facebook-post-census-2026-07-14.csv"
+  );
   const personalWowlistFacebookEventCorpus = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-batch-2026-07-14.ts"
@@ -3372,6 +3600,10 @@ export function runLaunchEvals(repoRoot) {
   const kcSpacesFundFacebookPostDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-kcspacesfund-facebook-posts.md"
+  );
+  const jamieFacebookPostDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-jamie-facebook-posts.md"
   );
   const personalWowlistFacebookEventDoc = readOptional(
     repoRoot,
@@ -3949,6 +4181,31 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies four record forms, 19 readable campaign messages, ten grantee-recognition records, route families, and the 119-reaction floor.",
         "The Page documents a campaign operating sequence and consistent public identity without converting outgoing references into stakeholder engagement.",
         "The selected site claim credits Jamie's website, digital-operations, and cross-channel naming support while preserving organizer, campaign-voice, and Page-publisher boundaries."
+      ]
+    })
+  );
+
+  const jamieFacebookPostMissing = evaluateJamieFacebookPostArchive({
+    census: jamieFacebookPostCensus,
+    corpusModel: jamieFacebookPostCorpus,
+    framework,
+    archiveDoc: jamieFacebookPostDoc,
+    antiClaims,
+    participatoryDoc: participatoryPublicProgramsDoc
+  });
+  results.push(
+    result({
+      id: "jamie-facebook-post-archive",
+      label:
+        "Jamie's personal Facebook posts reconcile the owner-filtered population and promote sources without publishing a personal dossier",
+      weight: 20,
+      hardGate: true,
+      missing: jamieFacebookPostMissing,
+      evidence: [
+        "All 1,243 unique records returned by the terminal Posted by: You cursor are dispositioned after reconciling 3,728 replayed nodes across 621 pages.",
+        "Item-level recomputation verifies every year, form, broad theme, and professional-relevance count in the aggregate-only census.",
+        "A full external-destination inventory traces source and project routes while keeping personal URLs and relationship context protected.",
+        "The pass promotes an independent ArtTattler review into Great Accommodations evidence and preserves missing interaction and stakeholder-engagement data as unknown rather than zero."
       ]
     })
   );

@@ -25,7 +25,13 @@ public participation, immersive installation, interactive video, software,
 community projects, facilitation, and public programs. Suzanne Hogan is named
 as a collaborator in the correspondence work.
 
-The source supports a strong public-engagement and program-design claim while
+Blair Schulman's independent ArtTattler review adds a close reading of the
+installation and its operating idea. It describes the river as connective
+social infrastructure, records the Missouri and Mississippi raft journey until
+the water tasted salt, and reads the exhibition's difficult floor and offered
+assistance as a structure for trust, mutual help, and public participation.
+
+The sources support a strong public-engagement and program-design claim while
 requiring collective credit and separate image-rights review.
 
 ## Raft expedition

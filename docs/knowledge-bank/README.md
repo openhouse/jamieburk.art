@@ -107,6 +107,15 @@ floor, and Jamie's non-posting role boundary;
 record a public-safe disposition. Raw post text, identities, comments, contact
 details, and administrator context remain protected.
 
+The personal Facebook post pass accounts for all 1,243 unique records returned
+by the authenticated `Posted by: You` control after reconciling 3,728 returned
+nodes across 621 cursor pages. `intake/2026-07-14-jamie-facebook-posts.md`
+interprets the population, professional-candidate, external-destination, source-
+discovery, and engagement-boundary findings;
+`data/jamie-facebook-post-census-2026-07-14.csv` gives every unique record an
+aggregate-only disposition. Raw posts, URLs, exact dates, identities, privacy
+context, interactions, and media remain protected.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

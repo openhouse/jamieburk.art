@@ -64,6 +64,14 @@ import {
   kcSpacesFundFacebookSources
 } from "./kcspacesfund-facebook-posts-batch-2026-07-14.ts";
 import {
+  jamieFacebookPostClaims,
+  jamieFacebookPostInquiries,
+  jamieFacebookPostIntake,
+  jamieFacebookPostProofCoverage,
+  jamieFacebookPostPublicationDecisions,
+  jamieFacebookPostSources
+} from "./jamie-facebook-posts-batch-2026-07-14.ts";
+import {
   personalWowlistFacebookEventClaims,
   personalWowlistFacebookEventInquiries,
   personalWowlistFacebookEventIntake,
@@ -582,6 +590,7 @@ export const frameworkIntake = [
   ...nycartcFacebookEventIntake,
   ...nycartcFacebookPostIntake,
   ...kcSpacesFundFacebookIntake,
+  ...jamieFacebookPostIntake,
   ...personalWowlistFacebookEventIntake,
   ...wowlistFacebookPostIntake,
   ...callNycSocialCorpusIntake,
@@ -731,7 +740,8 @@ export const frameworkProjects = [
       "CLM-NYCAC-FACEBOOK-SURVIVING-PUBLIC-TIMELINE",
       "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
       "CLM-NYCAC-FACEBOOK-STAKEHOLDER-ROUTING",
-      "CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS"
+      "CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS",
+      "CLM-JAMIE-FACEBOOK-NYCAC-IMPLEMENTATION-PRACTICE-2017-2019"
     ],
     inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026", "INQ-NYCAC-FACEBOOK-EVENTS-2026", "INQ-NYCAC-FACEBOOK-POSTS-2026"],
     photoBrief: {
@@ -858,7 +868,7 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "reserve",
     themes: ["waterways", "public engagement", "participatory programs"],
-    sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"],
+    sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"],
     claimIds: ["CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-PROGRAM", "CLM-RIVER-RAFT-EXPEDITION"],
     inquiryIds: ["INQ-RIVER-RAFT-EXACT-ROUTE", "INQ-WATERWAYS-PUBLIC-PROGRAMS"],
     photoBrief: {
@@ -886,6 +896,45 @@ export const frameworkProjects = [
       selectionQuestion: "Which cleared image or interface view shows the augmented-reality work while keeping Claudette's authorship and Jamie's collaboration legible?",
       evidenceNeeds: ["work view", "artist and collaborator credit", "display context", "media rights"],
       rightsNotes: "Do not republish video, portraits, screenshots, or private family photographs without rights and context review."
+    }
+  },
+  {
+    id: "jamie-facebook-archive",
+    title: "Jamie Burkart personal Facebook archive",
+    aliases: ["Facebook Posted by: You population"],
+    period: "2006-2022",
+    status: "researching",
+    summary:
+      "A protected authored-post population used for source discovery, role clarification, and longitudinal research without publishing a personal dossier.",
+    publicSafety: "protected",
+    editorialStatus: "hold",
+    themes: ["archival production", "source discovery", "role evidence"],
+    sourceIds: [
+      "SRC-JAMIE-FACEBOOK-MANAGE-POSTS-CONTROL-2026",
+      "SRC-JAMIE-FACEBOOK-FULL-POST-POPULATION-RUN-2026",
+      "SRC-JAMIE-FACEBOOK-PROFESSIONAL-CLOSE-READ-2026",
+      "SRC-JAMIE-FACEBOOK-EXTERNAL-DESTINATION-INVENTORY-2026",
+      "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"
+    ],
+    claimIds: [
+      "CLM-JAMIE-FACEBOOK-POST-POPULATION-ACCOUNTING-2026",
+      "CLM-JAMIE-FACEBOOK-EXTERNAL-DESTINATION-INVENTORY-2026",
+      "CLM-JAMIE-FACEBOOK-PROJECT-OPERATIONS-THREAD-2009-2020",
+      "CLM-JAMIE-FACEBOOK-ENGAGEMENT-NOT-RECOVERED-2026"
+    ],
+    inquiryIds: ["INQ-JAMIE-FACEBOOK-FULL-POST-POPULATION-2026"],
+    photoBrief: {
+      status: "research-needed",
+      selectionQuestion:
+        "Which independently reviewed images clarify a public project without exposing personal relationships or private audience context?",
+      evidenceNeeds: [
+        "project relevance",
+        "date and caption",
+        "rights and consent",
+        "independent corroboration"
+      ],
+      rightsNotes:
+        "No personal-post image, comment, audience, or social context is publication-ready without project-level rights, consent, and vulnerability review."
     }
   },
   {
@@ -962,7 +1011,7 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "hold",
     themes: ["participation", "public life", "documentation", "facilitation"],
-    sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-KCUR-8TH-STREET-TUNNEL-2016", "SRC-X-URBANHERMIT-COUNCIL-PUBLIC-ENGAGEMENT-2015", "SRC-X-URBANHERMIT-MEDIA-ARCHAEOLOGY-2020", "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026", "SRC-JAMIE-FACEBOOK-EVENT-SEMANTIC-WEB-2006", "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007", "SRC-JAMIE-FACEBOOK-EVENT-MICROPOP-2007", "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007", "SRC-JAMIE-FACEBOOK-EVENT-NIGHT-WALK-2010", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014", "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017", "SRC-JAMIE-FACEBOOK-EVENT-HYPERNORMALISATION-2017"],
+    sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009", "SRC-KCUR-8TH-STREET-TUNNEL-2016", "SRC-X-URBANHERMIT-COUNCIL-PUBLIC-ENGAGEMENT-2015", "SRC-X-URBANHERMIT-MEDIA-ARCHAEOLOGY-2020", "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026", "SRC-JAMIE-FACEBOOK-EVENT-SEMANTIC-WEB-2006", "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007", "SRC-JAMIE-FACEBOOK-EVENT-MICROPOP-2007", "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007", "SRC-JAMIE-FACEBOOK-EVENT-NIGHT-WALK-2010", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014", "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017", "SRC-JAMIE-FACEBOOK-EVENT-HYPERNORMALISATION-2017"],
     claimIds: ["CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL", "CLM-URBANHERMIT-PRACTICE-THREADS", "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION-2026", "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"],
     inquiryIds: ["INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL", "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026"],
     photoBrief: {
@@ -1458,6 +1507,7 @@ export const frameworkSources = [
   ...nycartcFacebookEventSources,
   ...nycartcFacebookPostSources,
   ...kcSpacesFundFacebookSources,
+  ...jamieFacebookPostSources,
   ...personalWowlistFacebookEventSources,
   ...wowlistFacebookPostSources,
   ...callNycSocialCorpusSources,
@@ -1672,7 +1722,10 @@ export const frameworkClaims = [
     publicSafety: "public-with-boundary",
     editorialStatus: "reserve",
     projections: [{ key: "archive-note", text: "In 2009, Jamie spearheaded Great Accommodations, a river-centered participatory project combining correspondence, immersive installation, software, community projects, facilitation, and public programs.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-programs"] }],
-    evidence: [{ sourceId: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", relationship: "direct-support", supports: ["Jamie's spearheading role", "river-centered public engagement", "participatory exhibition components", "public programs"], confidence: "high", renderCitation: true }],
+    evidence: [
+      { sourceId: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", relationship: "direct-support", supports: ["Jamie's spearheading role", "river-centered public engagement", "participatory exhibition components", "public programs"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009", relationship: "corroborating", supports: ["independent exhibition review", "river-as-social-network premise", "trust and mutual-help installation design"], confidence: "high", renderCitation: true }
+    ],
     boundaries: ["Use spearheaded for Jamie's role while preserving Suzanne Hogan's named collaboration and participant authorship.", "Image publication requires separate rights review."],
     antiClaims: ["Jamie alone authored every contribution", "The project represented every river city"],
     researchInquiryIds: ["INQ-WATERWAYS-PUBLIC-PROGRAMS"],
@@ -1689,7 +1742,8 @@ export const frameworkClaims = [
     projections: [{ key: "archive-note", text: "Jamie conceived and helped organize a recycled-material raft expedition that traveled down the Missouri and Mississippi Rivers for four months, until the water tasted salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-programs"] }],
     evidence: [
       { sourceId: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", relationship: "direct-support", supports: ["four-month journey", "Missouri and Mississippi Rivers", "reaching salt water", "Jamie's organizing role"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-RAFT-PITCH-2007", relationship: "corroborating", supports: ["Jamie conceived the expedition", "recycled-material raft", "Missouri River context"], confidence: "high", renderCitation: true }
+      { sourceId: "SRC-RAFT-PITCH-2007", relationship: "corroborating", supports: ["Jamie conceived the expedition", "recycled-material raft", "Missouri River context"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009", relationship: "corroborating", supports: ["Missouri and Mississippi journey", "reaching water that tasted salt", "collective trust and assistance"], confidence: "high", renderCitation: true }
     ],
     boundaries: ["Current sources do not establish an exact Gulf of Mexico endpoint.", "Describe the voyage as collective and do not erase the crew or host communities."],
     antiClaims: ["Jamie traveled alone", "The reviewed sources prove the exact final destination was the Gulf of Mexico"],
@@ -1819,6 +1873,7 @@ export const frameworkClaims = [
     evidence: [
       { sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006", relationship: "context", supports: ["participatory space", "distributed responsibility", "shared documentation"], confidence: "moderate", renderCitation: false },
       { sourceId: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", relationship: "context", supports: ["participatory river programs", "facilitation", "working documentation"], confidence: "moderate", renderCitation: false },
+      { sourceId: "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009", relationship: "context", supports: ["trust, mutual help, and the river as connective structure"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-RAFT-PITCH-2007", relationship: "context", supports: ["experiential public project", "river and city context"], confidence: "limited", renderCitation: false },
       { sourceId: "SRC-KCUR-8TH-STREET-TUNNEL-2016", relationship: "context", supports: ["participatory public-history route", "site-specific film program", "public-access rationale"], confidence: "high", renderCitation: false }
     ],
@@ -1833,6 +1888,7 @@ export const frameworkClaims = [
   ...nycartcFacebookEventClaims,
   ...nycartcFacebookPostClaims,
   ...kcSpacesFundFacebookClaims,
+  ...jamieFacebookPostClaims,
   ...personalWowlistFacebookEventClaims,
   ...wowlistFacebookPostClaims,
   ...callNycSocialCorpusClaims,
@@ -1860,9 +1916,9 @@ export const frameworkInquiries = [
   openInquiry("INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "nyc-artist-coalition", "What public records establish Jamie's and NYC Artist Coalition's roles in advocacy surrounding creation of the Office of Nightlife?", ["Review legislation, hearings, testimony, coalition pages, and contemporaneous press.", "Identify Jamie-authored or Jamie-produced public artifacts."], ["Reporting establishes coalition advocacy and Jamie's public participation, not sole causality or every production task."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018", "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021"]),
   openInquiry("INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "nyc-artist-coalition", "Which nightlife town halls did Jamie produce, what was his role, who participated, and what public outputs followed?", ["Recover event programs, recordings, photographs, and production records.", "Map production tasks, collaborators, attendance, and outputs."], ["One town hall is now externally documented; exact production ownership and attendance remain open."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"]),
   openInquiry("INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "nyc-artist-coalition", "What did Talks Not Raids do, what role did Jamie play, what transparency was achieved, and what public record establishes changes to MARCH?", ["Map Jamie's individual authorship and operational role.", "Review implementation reports and later agency structure.", "Define what disbanded means in the public record."], ["The campaign and legislative outcome are documented, but Jamie's individual role and any disbandment claim remain unverified."], ["SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"]),
-  openInquiry("INQ-RIVER-RAFT-EXACT-ROUTE", "great-accommodations", "What exact route, dates, crew, host communities, interruptions, and endpoint are documented for the raft expedition?", ["Recover route logs, contemporary press, photographs, correspondence, and collaborator accounts.", "Distinguish reaching salt water from a documented Gulf endpoint."], ["Current sources do not establish the exact final endpoint or complete crew."], ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"]),
-  openInquiry("INQ-WATERWAYS-PUBLIC-PROGRAMS", "great-accommodations", "What participatory programs did Jamie create to connect residents and river cities through shared waterways?", ["Inventory Great Accommodations programs, correspondence, software, walks, screenings, and community contributions.", "Recover dates, collaborators, attendance, artifacts, and public outcomes."], ["One institutional event record is not a complete program inventory."], ["SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"]),
-  openInquiry("INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL", "participatory-public-practice", "Does the wider record support a longitudinal professional claim connecting early participatory art, recurring cultural programs, civic systems, and source-backed team memory?", ["Build a dated cross-project source map.", "Test continuities and discontinuities in Jamie's role, methods, outputs, and participant agency.", "Seek counterexamples and collaborator perspectives."], ["A compelling pattern is not yet a confirmed public claim.", "Distinct communities must retain their own context."], ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"]),
+  openInquiry("INQ-RIVER-RAFT-EXACT-ROUTE", "great-accommodations", "What exact route, dates, crew, host communities, interruptions, and endpoint are documented for the raft expedition?", ["Recover route logs, contemporary press, photographs, correspondence, and collaborator accounts.", "Distinguish reaching salt water from a documented Gulf endpoint."], ["Current sources do not establish the exact final endpoint or complete crew."], ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"]),
+  openInquiry("INQ-WATERWAYS-PUBLIC-PROGRAMS", "great-accommodations", "What participatory programs did Jamie create to connect residents and river cities through shared waterways?", ["Inventory Great Accommodations programs, correspondence, software, walks, screenings, and community contributions.", "Recover dates, collaborators, attendance, artifacts, and public outcomes."], ["Two public records and one independent review still do not provide a complete program inventory."], ["SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"]),
+  openInquiry("INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL", "participatory-public-practice", "Does the wider record support a longitudinal professional claim connecting early participatory art, recurring cultural programs, civic systems, and source-backed team memory?", ["Build a dated cross-project source map.", "Test continuities and discontinuities in Jamie's role, methods, outputs, and participant agency.", "Seek counterexamples and collaborator perspectives."], ["A compelling pattern is not yet a confirmed public claim.", "Distinct communities must retain their own context."], ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"]),
   openInquiry("INQ-NPR-CABARET-SOURCE-CAPTURE", "nyc-artist-coalition", "What claims and context does the supplied NPR Cabaret Law article support after durable capture and close reading?", ["Recover the article through a stable public or archived copy.", "Record exact attribution, date, supported propositions, and limitations."], ["Canonical metadata and two campaign-index relationships are captured, but the article was not available for close reading in this run."], ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017"]),
   openInquiry("INQ-SUNDAY-DINNER-AGGREGATE-COUNTS", "sunday-dinner-196", "What public-safe records and calculations support the 300-plus gathering and 20-plus resident-artist totals?", ["Reconcile the private RSVP and attendance ledger with public-safe aggregate methods.", "Document the residency count methodology and date range.", "Keep identities and attendance rows protected."], ["The Greene Hill source confirms a weekly open practice, not the aggregate totals."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
   openInquiry("INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "wowlist", "Which public sources independently establish WOW List's product function, technical implementation, organizer adoption, and geographic reach?", ["Recover contemporary coverage, public repositories, and preserved interface pages.", "Associate verified archive counts without exposing user records."], ["The Greene Hill source confirms a community-events function but not the platform's architecture, counts, or 35-city reach."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
@@ -1875,6 +1931,7 @@ export const frameworkInquiries = [
   ...nycartcFacebookEventInquiries,
   ...nycartcFacebookPostInquiries,
   ...kcSpacesFundFacebookInquiries,
+  ...jamieFacebookPostInquiries,
   ...personalWowlistFacebookEventInquiries,
   ...wowlistFacebookPostInquiries,
   ...callNycSocialCorpusInquiries,
@@ -1935,6 +1992,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   nycartcFacebookEventPublicationDecisions,
   nycartcFacebookPostPublicationDecisions,
   kcSpacesFundFacebookPublicationDecisions,
+  jamieFacebookPostPublicationDecisions,
   personalWowlistFacebookEventPublicationDecisions,
   wowlistFacebookPostPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
@@ -1975,6 +2033,7 @@ export const frameworkProofCoverage = [
   ...nycartcFacebookEventProofCoverage,
   ...nycartcFacebookPostProofCoverage,
   ...kcSpacesFundFacebookProofCoverage,
+  ...jamieFacebookPostProofCoverage,
   ...personalWowlistFacebookEventProofCoverage,
   ...wowlistFacebookPostProofCoverage,
   ...callNycSocialCorpusProofCoverage,

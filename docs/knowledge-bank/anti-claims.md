@@ -169,6 +169,28 @@ Do not publish the record-level personal association graph, guest identities,
 friend or invite context, exact private locations, raw descriptions, comments,
 account administration, or authentication material.
 
+## Personal Facebook Posts
+
+Do not call the 1,243-record census every Facebook post Jamie ever created, an
+official Facebook export, a complete deletion history, or proof that missing
+years contain no posts. The authenticated `Posted by: You` cursor terminated,
+but it cannot reveal records deleted, hidden, removed, or omitted beforehand.
+
+Do not inflate 3,728 returned nodes into 3,728 unique posts. Facebook replayed
+1,242 records three times and one record twice; stable-story deduplication
+produced 1,243 unique records.
+
+Do not publish the raw personal-post population, full destination inventory,
+story IDs, exact dates, post text, names, locations, privacy labels, relationship
+context, comments, interactions, or media. The aggregate census does not
+reconstruct Jamie's personal timeline.
+
+Do not describe absent reaction, comment, or share metrics as zero. Do not turn
+posted links, tags, actor names, organizations, or stakeholder references into
+inbound engagement, endorsement, partnership, readership, conversion, reach,
+attendance, or impact. Frequency is an archive-navigation aid, not a measure of
+labor, priority, importance, or causality.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

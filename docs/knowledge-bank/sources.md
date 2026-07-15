@@ -73,6 +73,11 @@ Approved public artifact examples for this launch pass include:
 - Eric Barton's 2007 Pitch reporting on the recycled-material raft expedition.
 - Laura Mattingly's 2006 Good Times account of Open House.
 - Charlotte Street Foundation's 2009 Great Accommodations event record.
+- Blair Schulman's independent 2009 ArtTattler review of Great Accommodations,
+  recovered through a posted-source lead in Jamie's protected Facebook archive.
+- A protected full-population review of 1,243 unique records returned by
+  Facebook's authenticated `Posted by: You` control, including an aggregate
+  census and protected external-destination inventory.
 - Emma Whitford's 2017 Gothamist reporting on Cabaret Law repeal organizing.
 - Greene Hill Food Co-op's 2017 member interview connecting weekly Sunday
   dinners, WOW List, NYC Artist Coalition work, and an Office of Nightlife town
