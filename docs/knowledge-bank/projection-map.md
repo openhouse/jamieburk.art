@@ -69,12 +69,18 @@ The Fair Rent NYC case study additionally selects
 `CLM-CRS-COALITION-OPERATING-SYSTEM` and
 `CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN`, plus
 `CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`,
+`CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE`,
 `CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE`, and
 `CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT`. The Facebook response projection
 must say RSVP actions rather than attendance. The individual Jamie event-system
 role and democracy-lab interpretation remain held knowledge depth. The 196 / Sunday Dinner case study
 selects `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`. Their protected source records
 must not render as public citations.
+
+For `CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE`, retain the temporal distinction:
+February testimony described the DIY process without naming the coalition; May
+Council testimony named NYC Artist Coalition. Project reciprocal institutional
+usefulness, not private motive, dependency, endorsement, or sole causality.
 
 Technical Operations selects
 `CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE` and

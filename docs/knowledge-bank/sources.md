@@ -45,6 +45,17 @@ publishing or reception patterns; they do not establish endorsement, event
 attendance, platform-wide adoption, or individual authorship of every
 institutional post.
 
+### NYC Artist Coalition institutional records
+
+The public-record source cluster now includes two Finkelpearl Council
+testimonies, the final CreateNYC plan, the coalition's public letter to Rafael
+Espinal, and the June 2017 Cabaret Law hearing transcript. Together they
+distinguish the February DIY-process account from the May explicit naming of
+NYC Artist Coalition and show how recommendations, maps, convenings, and
+testimony entered agency and Council processes. These records support
+institutional usefulness and reciprocal civic value; they do not disclose
+private motive or prove dependency, endorsement, adoption, or sole causality.
+
 ### NYC Artist Coalition campaign press corpus
 
 The July 14 press-ingestion pass added 41 previously unrecorded article records

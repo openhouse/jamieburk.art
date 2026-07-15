@@ -1,10 +1,13 @@
 # NYC Artist Coalition Research
 
-Status: ten new public sources ingested on July 14, 2026. Founding-member,
+Status: ten public sources ingested on July 14, 2026, with five additional
+institutional-use sources integrated on July 15. Founding-member,
 Cabaret-campaign contribution, policy-communications, Office accountability,
 Talks Not Raids testimony, MARCH-transparency law, and later MARCH replacement
-claims are developed. Individual causality for Office creation, legislation, or
-MARCH replacement remains held.
+claims are developed. The new institutional-value claim distinguishes DCLA,
+Council, Espinal, and coalition capacities without inferring private motive or
+dependence. Individual causality for Office creation, legislation, or MARCH
+replacement remains held.
 
 The companion [campaign press corpus](./nyc-artist-coalition-press.md) now
 preserves all 45 placements from four recovered campaign Press sections as 44
@@ -63,6 +66,36 @@ authorship of every map, analysis, recommendation, event component, or line of
 copy. Jamie's separate approved web-infrastructure claim remains grounded in
 public project surfaces, public-safe project history, and Jamie confirmation.
 
+### Reciprocal institutional value
+
+The Council-side chronology now supports a stronger, bounded account of why the
+coalition mattered to government:
+
+1. On February 27, Finkelpearl described DIY participants developing formal
+   recommendations, continuing to organize independently, and giving DCLA a
+   community it wanted to keep learning from. He did not name NYC Artist
+   Coalition in that testimony.
+2. On May 19, while describing CreateNYC as building a close reciprocal
+   relationship with the public, Finkelpearl explicitly told the Council that
+   NYC Artist Coalition formed after DCLA's January DIY meeting.
+3. The final CreateNYC plan again named the coalition and carried related
+   concerns into strategies for community networks, safer DIY spaces, and a
+   Night Life Ambassador.
+4. The coalition's letter to Espinal supplied mapped policy constraints,
+   civil-rights and safety framing, stakeholder experience, and a request for a
+   legislative roadmap.
+5. The June Council transcript records Jamie offering coalition-affiliated
+   testimony and Espinal publicly acknowledging witnesses' stories and
+   testimony.
+
+Together these sources establish a reciprocal civic function. DCLA and elected
+officials held formal authority and access to planning, hearings, and
+legislation. The coalition organized situated cultural-space knowledge into
+recommendations, maps, convenings, and testimony those institutions could
+receive and use. This is evidence of institutional usefulness, not proof that
+Finkelpearl, the Council, or Espinal privately depended on Jamie or that the
+coalition alone caused any governmental outcome.
+
 ### Office of Nightlife accountability
 
 The Greene Hill Q&A records a planned public town hall with the new Office. A
@@ -107,7 +140,7 @@ nightlife enforcement ended.
   be corroborated.
 - CallNYC Council-account engagement remains a separate reproducibility task.
 
-## Ten New Sources
+## Public Source Cluster
 
 1. [Alexander Iadarola, "A Coalition of Advocacy Groups Are Meeting New York's
    Cultural Commissioner to Talk About DIY Venue Safety," VICE, March 21,
@@ -136,9 +169,23 @@ nightlife enforcement ended.
     Nightlife Safety and Strengthen Small Businesses, Phasing Out MARCH
     Enforcement," December 28,
     2023](https://www.nyc.gov/mayors-office/news/2023/12/mayor-adams-launches-effort-enhance-nightlife-safety-strengthen-small-businesses-phasing).
+11. [Tom Finkelpearl, testimony to the New York City Council, "Oversight -
+    Cultural Plan - Next Steps," February 27,
+    2017](https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect6_Commissioner-Tom-Finkelpearl_Testimony.pdf).
+12. [New York City Council, Fiscal Year 2018 Executive Budget hearing
+    transcript for the Department of Cultural Affairs, May 19, 2017, printed
+    page 92](https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F).
+13. [New York City Department of Cultural Affairs, "CreateNYC: A Cultural Plan
+    for All New Yorkers," July
+    2017](https://www.nyc.gov/assets/dcla/downloads/pdf/cultureplan/createnyc-finalplan.pdf).
+14. [NYC Artist Coalition, public letter to Council Member Rafael Espinal,
+    April 18, 2017](https://nycartc.com/letter-espinal/).
+15. [New York City Council, Committee on Consumer Affairs hearing transcript
+    on the Cabaret Law, June 19,
+    2017](https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F).
 
-The Greene Hill Food Co-op Q&A remains an existing eleventh source in the
-project graph and now participates in the selected Office-accountability claim.
+The Greene Hill Food Co-op Q&A remains an additional existing source in the
+project graph and participates in the selected Office-accountability claim.
 
 ## Public-Safety Boundary
 

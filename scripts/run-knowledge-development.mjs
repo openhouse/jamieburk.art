@@ -818,6 +818,86 @@ function deterministicResults(judgments) {
   ]
     .map((path) => readFileSync(path, "utf8"))
     .join("\n");
+  const nycacInstitutionalValueIntegrityViolations = [];
+  const nycacInstitutionalValueSafetyViolations = [];
+  const nycacInstitutionalSourceIds = [
+    "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
+    "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
+    "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
+    "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+    "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+  ];
+  const nycacInstitutionalClaim = claimById.get(
+    "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
+  );
+  const nycacInstitutionalTask = taskById.get(
+    "RT-NYCAC-INSTITUTIONAL-USE-CORROBORATION",
+  );
+  const nycacInstitutionalPublicText = [
+    fairRentPublicText,
+    ...(nycacInstitutionalClaim?.projections ?? [])
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text),
+  ].join("\n");
+
+  for (const sourceId of nycacInstitutionalSourceIds) {
+    const source = sourceById.get(sourceId);
+    if (
+      !source ||
+      source.visibility !== "public" ||
+      !knowledgeBank.observations.some(
+        (observation) => observation.sourceId === sourceId,
+      ) ||
+      !knowledgeBank.captures.some((capture) =>
+        capture.sourceIds.includes(sourceId),
+      )
+    ) {
+      nycacInstitutionalValueIntegrityViolations.push(
+        `NYC Artist Coalition institutional source lacks a public capture-observation path: ${sourceId}`,
+      );
+    }
+  }
+  if (
+    nycacInstitutionalClaim?.epistemicState !== "corroborated" ||
+    nycacInstitutionalClaim.publicationState !== "approved" ||
+    nycacInstitutionalClaim.selectionState !== "selected" ||
+    !nycacInstitutionalSourceIds.every((sourceId) =>
+      nycacInstitutionalClaim.evidence.some(
+        (evidence) => evidence.sourceId === sourceId,
+      ),
+    ) ||
+    !nycacInstitutionalClaim.boundaries.some((boundary) =>
+      /February 27.*does not name.*May 19/is.test(boundary),
+    ) ||
+    !nycacInstitutionalClaim.antiClaims.some((antiClaim) =>
+      /could not act without NYC Artist Coalition/i.test(antiClaim),
+    ) ||
+    nycacInstitutionalTask?.status !== "open" ||
+    !fairRentPage?.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "civic-intermediary-value" &&
+        occurrence.claimId === "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
+    )
+  ) {
+    nycacInstitutionalValueIntegrityViolations.push(
+      "NYC Artist Coalition institutional-value claim is missing source coverage, chronology, boundaries, open research, or page registration",
+    );
+  }
+  if (
+    !/CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE/.test(fairRentPublicText) ||
+    !/February 27[\s\S]*without naming NYC[\s\S]*May 19 Council budget testimony/i.test(
+      fairRentPublicText,
+    ) ||
+    !/institutional usefulness, not private motive/i.test(fairRentPublicText) ||
+    /(?:Finkelpearl|Council|Espinal)[^.]{0,80}(?:needed us|needed Jamie|could not act without)/i.test(
+      nycacInstitutionalPublicText,
+    ) ||
+    /NYC Artist Coalition alone caused/i.test(nycacInstitutionalPublicText)
+  ) {
+    nycacInstitutionalValueSafetyViolations.push(
+      "NYC Artist Coalition public projection obscures chronology or overstates motive, dependence, or causality",
+    );
+  }
 
   if (
     teamsArchiveCaptures.length !== 7 ||
@@ -3871,6 +3951,7 @@ function deterministicResults(judgments) {
         kcTownHallIntegrityViolations.length ||
         kcTownHallPhaseOneIntegrityViolations.length ||
         teamsArchiveIntegrityViolations.length ||
+        nycacInstitutionalValueIntegrityViolations.length ||
         googleSharedDriveIntegrityViolations.length ||
         socialMediaIntegrityViolations.length ||
         urbanhermitIntegrityViolations.length ||
@@ -3892,6 +3973,7 @@ function deterministicResults(judgments) {
         `${kcTownHallIntegrityViolations.length} KC Town Hall funding-chain integrity violations`,
         `${kcTownHallPhaseOneIntegrityViolations.length} KC Town Hall Phase One integrity violations`,
         `${teamsArchiveIntegrityViolations.length} Teams archive integrity violations`,
+        `${nycacInstitutionalValueIntegrityViolations.length} NYC Artist Coalition institutional-value integrity violations`,
         `${googleSharedDriveIntegrityViolations.length} Google Shared Drive integrity violations`,
         `${socialMediaIntegrityViolations.length} social-media archive integrity violations`,
         `${urbanhermitIntegrityViolations.length} Urbanhermit archive integrity violations`,
@@ -3910,6 +3992,7 @@ function deterministicResults(judgments) {
         ...kcTownHallIntegrityViolations,
         ...kcTownHallPhaseOneIntegrityViolations,
         ...teamsArchiveIntegrityViolations,
+        ...nycacInstitutionalValueIntegrityViolations,
         ...googleSharedDriveIntegrityViolations,
         ...socialMediaIntegrityViolations,
         ...urbanhermitIntegrityViolations,
@@ -3933,6 +4016,7 @@ function deterministicResults(judgments) {
         kcTownHallSafetyViolations.length ||
         kcTownHallPhaseOneSafetyViolations.length ||
         teamsArchiveSafetyViolations.length ||
+        nycacInstitutionalValueSafetyViolations.length ||
         googleSharedDriveSafetyViolations.length ||
         socialMediaSafetyViolations.length ||
         urbanhermitSafetyViolations.length ||
@@ -3952,6 +4036,7 @@ function deterministicResults(judgments) {
         `${kcTownHallSafetyViolations.length} KC Town Hall projection-safety violations`,
         `${kcTownHallPhaseOneSafetyViolations.length} KC Town Hall Phase One projection-safety violations`,
         `${teamsArchiveSafetyViolations.length} Teams archive projection-safety violations`,
+        `${nycacInstitutionalValueSafetyViolations.length} NYC Artist Coalition institutional-value safety violations`,
         `${googleSharedDriveSafetyViolations.length} Google Shared Drive safety violations`,
         `${socialMediaSafetyViolations.length} social-media projection-safety violations`,
         `${urbanhermitSafetyViolations.length} Urbanhermit projection-safety violations`,
@@ -3970,6 +4055,7 @@ function deterministicResults(judgments) {
         ...kcTownHallSafetyViolations,
         ...kcTownHallPhaseOneSafetyViolations,
         ...teamsArchiveSafetyViolations,
+        ...nycacInstitutionalValueSafetyViolations,
         ...googleSharedDriveSafetyViolations,
         ...socialMediaSafetyViolations,
         ...urbanhermitSafetyViolations,

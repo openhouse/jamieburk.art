@@ -84,6 +84,17 @@ claim beyond the wording and guardrails here.
 - `CLM-SBU-STYLE-GUIDE-HANDOFF-SEED`: held. The source supports a credited
   documentation seed, not a completed or adopted style guide.
 
+### CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE
+
+**Status:** Corroborated, approved, and selected with boundary
+**Public wording:** In May 2017 Council testimony about CreateNYC's close reciprocal relationship with the public, Cultural Affairs Commissioner Tom Finkelpearl said NYC Artist Coalition formed after DCLA's January DIY meeting. The coalition then brought formal recommendations, mapped policy constraints, town halls, and testimony into agency and Council processes.
+**Where to project:** Fair Rent NYC civic lineage.
+**Why it matters:** Establishes that the coalition made informal cultural-space knowledge more legible and usable for planning, oversight, and legislation.
+**Guardrail:** February testimony described the emerging DIY process without naming the coalition; the explicit Council-side naming came in May. Institutional usefulness does not establish private motive, personal dependence, endorsement of every proposal, or sole causality.
+**Do not say:** Finkelpearl privately needed Jamie; government could not act without the coalition; DCLA created or controlled the coalition; NYC Artist Coalition alone caused later policy outcomes.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## Teams Archive Development Claims
 
 ### CLM-CRS-COALITION-OPERATING-SYSTEM

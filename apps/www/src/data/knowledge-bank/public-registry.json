@@ -245,6 +245,107 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
+      "title": "Oversight - Cultural Plan - Next Steps: Testimony of Commissioner Tom Finkelpearl",
+      "organization": "New York City Department of Cultural Affairs / New York City Council",
+      "author": "Tom Finkelpearl",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-02-27",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect6_Commissioner-Tom-Finkelpearl_Testimony.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Tom Finkelpearl, testimony to the New York City Council Committee on Cultural Affairs, 'Oversight - Cultural Plan - Next Steps,' February 27, 2017.",
+      "publicNote": "The testimony describes the DIY community's formal recommendations and independent organizing but does not name NYC Artist Coalition.",
+      "doesNotEstablish": [
+        "that Finkelpearl named NYC Artist Coalition in this February testimony",
+        "private institutional motive",
+        "that DCLA created or controlled the coalition",
+        "Jamie's individual role"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
+      "title": "Fiscal Year 2018 Executive Budget Hearing Transcript - Department of Cultural Affairs",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-05-19",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Fiscal Year 2018 Executive Budget hearing transcript for the Department of Cultural Affairs, May 19, 2017, printed page 92.",
+      "publicNote": "Official Council transcript recording Finkelpearl's explicit reference to NYC Artist Coalition during his account of CreateNYC's reciprocal public-engagement value.",
+      "doesNotEstablish": [
+        "that Finkelpearl privately depended on Jamie or the coalition",
+        "that DCLA alone created the coalition",
+        "Jamie's individual contribution to every coalition action",
+        "causality for legislation"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
+      "title": "CreateNYC: A Cultural Plan for All New Yorkers",
+      "organization": "New York City Department of Cultural Affairs",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-07-19",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.nyc.gov/assets/dcla/downloads/pdf/cultureplan/createnyc-finalplan.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Department of Cultural Affairs, 'CreateNYC: A Cultural Plan for All New Yorkers,' July 2017.",
+      "publicNote": "The final plan names New York City Artist Coalition and carries related concerns into strategies for community networks, DIY spaces, and a Night Life Ambassador.",
+      "doesNotEstablish": [
+        "that every coalition recommendation was adopted",
+        "that NYC Artist Coalition alone created the Office of Nightlife",
+        "Jamie's individual authorship of plan language",
+        "private motive"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+      "title": "Letter to Council Member Rafael Espinal Regarding Cabaret Law Repeal",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-04-18",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://nycartc.com/letter-espinal/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, public letter to Council Member Rafael Espinal regarding Cabaret Law repeal, April 18, 2017.",
+      "publicNote": "Coalition-authored public record of the policy framing, mapped evidence, and legislative-roadmap request offered to Espinal.",
+      "doesNotEstablish": [
+        "Espinal's private motive",
+        "that Espinal could not act without the coalition",
+        "Jamie's individual authorship of the letter or map",
+        "that the letter alone caused repeal"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+      "title": "Committee on Consumer Affairs Hearing Transcript - Cabaret Law",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on Consumer Affairs hearing transcript on the Cabaret Law, June 19, 2017.",
+      "publicNote": "Official transcript records Jamie identifying himself as a coalition member, presenting safety and civil-rights arguments for repeal, and Espinal acknowledging witnesses' stories and testimony.",
+      "doesNotEstablish": [
+        "that Jamie spoke for every coalition participant",
+        "that Espinal adopted every argument",
+        "that testimony alone caused repeal",
+        "a private dependency relationship"
+      ]
+    },
+    {
       "id": "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
       "title": "Central City Economic Development Sales Tax Round Two proposals",
       "organization": "City of Kansas City, Missouri",
@@ -1684,6 +1785,104 @@
       ],
       "boundaries": [
         "This is the later institutional endpoint, not proof that Jamie or Talks Not Raids caused the 2023 replacement; the announcement does not say all multi-agency enforcement ended."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In May 2017 Council testimony about CreateNYC's close reciprocal relationship with the public, Cultural Affairs Commissioner Tom Finkelpearl said NYC Artist Coalition formed after DCLA's January DIY meeting. The coalition then brought formal recommendations, mapped policy constraints, town halls, and testimony into agency and Council processes, making informal cultural-space conditions more legible for planning, oversight, and legislation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
+          "relationship": "context",
+          "supports": [
+            "DIY-community recommendations",
+            "independent organizing",
+            "DCLA's stated desire to keep learning from the community"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
+          "relationship": "direct-support",
+          "supports": [
+            "reciprocal public-engagement framing",
+            "Finkelpearl's explicit identification of NYC Artist Coalition as an outcome of the January DIY meeting"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
+          "relationship": "corroborating",
+          "supports": [
+            "the plan's explicit naming of the coalition",
+            "continued direct public engagement",
+            "aligned network, DIY-space, and liaison strategies"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "coalition recommendations",
+            "co-hosted town hall",
+            "DCLA and Council participation",
+            "multi-part policy agenda"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "mapped policy constraints",
+            "public safety framing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+          "relationship": "direct-support",
+          "supports": [
+            "structured policy framing offered to Espinal",
+            "mapped evidence",
+            "legislative-roadmap request"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's coalition-affiliated public testimony",
+            "Council receipt of stories and testimony",
+            "Espinal's public acknowledgment"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The February 27 testimony describes the emerging DIY community but does not name NYC Artist Coalition; Finkelpearl explicitly names the coalition in the May 19 Council budget hearing.",
+        "The public record supports institutional usefulness and reciprocal civic value, not Finkelpearl's, the Council's, or Espinal's private motives or dependence on Jamie personally.",
+        "DCLA and elected officials retained formal authority; coalition members, partner groups, venue operators, witnesses, and other advocates retained their distinct knowledge, work, and credit."
       ]
     },
     {
@@ -3180,6 +3379,11 @@
         "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
         "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
         "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+        "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
+        "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
+        "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
+        "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+        "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
         "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
         "SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31",
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
@@ -3236,6 +3440,20 @@
             "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
             "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
             "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"
+          ]
+        },
+        {
+          "id": "civic-intermediary-value",
+          "claimId": "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
+            "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
+            "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
+            "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+            "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
+            "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+            "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19"
           ]
         },
         {

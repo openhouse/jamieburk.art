@@ -22,6 +22,11 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-NYCAC-POLICY-DATA-COMMUNICATIONS`: selected as collective context for
   the town halls, mapped explanations, recommendations, public-record research,
   and calls to action that formed the coalition's civic-systems layer.
+- `CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE`: selected as direct Council-side
+  evidence of reciprocal institutional value. Preserve the February-to-May
+  chronology and describe the coalition as making situated cultural-space
+  knowledge usable in government processes, not as privately indispensable or
+  solely causal.
 - `CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE`: selected as collective method
   evidence. Present cultural-space meetings, public-agency interfaces,
   hearings, and relief events as a recurring advocacy system; keep the

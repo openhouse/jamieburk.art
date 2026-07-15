@@ -16,6 +16,13 @@ The repo is public. Approval here means approved for public-safe repository and 
 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition institutional value: approved for the Fair Rent NYC case
+  study using the May 19, 2017, Council transcript and supporting public
+  records. State that the coalition made cultural-space knowledge usable in
+  agency and Council processes. Do not infer private motive, personal
+  dependence, adoption of every recommendation, or sole causality. Preserve
+  that the February testimony did not name the coalition and the May testimony
+  did.
 - NYC Artist Coalition recurring events: the collective cultural-space
   convening method and bounded 33-event Facebook snapshot are approved for the
   Fair Rent NYC case study. Keep Facebook's displayed count of 34, one

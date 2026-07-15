@@ -10,6 +10,12 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
+- In May 2017 Council testimony about CreateNYC's reciprocal public-engagement
+  value, Cultural Affairs Commissioner Tom Finkelpearl explicitly said NYC
+  Artist Coalition formed after DCLA's January DIY meeting. Coalition
+  recommendations, maps, town halls, and testimony then supplied usable public
+  knowledge to agency and Council processes. This establishes institutional
+  usefulness, not private dependence or sole causality.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Designed a six-part coalition operating system and maintained consent-aware running memory for the 2026 collaboration.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.

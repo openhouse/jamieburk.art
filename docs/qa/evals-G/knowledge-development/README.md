@@ -3,11 +3,28 @@
 - Date: 2026-07-13 to 2026-07-15
 - Branch: `feature/evals-G`
 - Suite: `knowledge-development-lifecycle`, version 1
-- Decision: `stop_threshold_met`
+- Decision: deterministic criteria met; fresh independent judgments pending
 - Final candidate fingerprint:
-  `7c4f84ba56207c07c179c5c67748d559b7d3fcb6333c2eb353973c7341c7d6e3`
+  `370218ee39146fe8111e3ed79d3a187629cc49fa44639e57b0d782b5690ae536`
 
 ## Result
+
+The latest institutional-value expansion recovered five public DCLA, Council,
+CreateNYC, and coalition records. It establishes the chronology between Tom
+Finkelpearl's February description of independently organizing DIY
+participants and his May Council testimony explicitly naming NYC Artist
+Coalition. The selected claim frames the coalition as a reciprocal civic
+intermediary that brought situated cultural-space knowledge, maps,
+recommendations, convenings, and testimony into formal planning, oversight,
+and legislative processes. It does not infer private motive, personal
+dependence, institutional endorsement, or sole causality.
+
+Two fresh deterministic runs on this candidate produced the same fingerprint
+and scored `0.89`, with all eleven executable criteria at `4/4`. `KD-006` and
+`KD-012` remain pending because fresh independent judgments require explicit
+authorization to export the candidate. The package-level maintained-holdout
+command also still references a missing judgment file from a preceding
+candidate.
 
 The intake-only baseline scored `0.3775` against a required `0.85`. The first
 research pass reached `0.89` before independent judgments were supplied. The
@@ -237,6 +254,10 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
     artist page's historical contact data.
 
 ## Evidence
+
+- [NYC Artist Coalition institutional-value hill-climb record](./2026-07-15-nycac-institutional-value-hill-climb.md)
+- [NYC Artist Coalition institutional-value deterministic run 1](./nycac-institutional-value-deterministic-1.json)
+- [NYC Artist Coalition institutional-value deterministic run 2](./nycac-institutional-value-deterministic-2.json)
 
 - [Baseline](./iteration-0-baseline.json)
 - [First deterministic research pass](./iteration-1-research-graph.json)

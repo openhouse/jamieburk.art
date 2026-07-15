@@ -25,6 +25,15 @@ Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement
 reporting legislation, Commercial Rent Stabilization progress, or storefront
 stability advocacy outcomes.
 
+Do not say Finkelpearl named NYC Artist Coalition in his February 27, 2017,
+testimony. He described the emerging DIY process in February and explicitly
+named the coalition in the May 19 Council budget hearing.
+
+Do not convert institutional usefulness into a claim that Finkelpearl, the
+Council, or Rafael Espinal privately needed Jamie, could not act without the
+coalition, endorsed every coalition proposal, or ceded governmental authority
+to advocates. Do not say DCLA created or controlled NYC Artist Coalition.
+
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 

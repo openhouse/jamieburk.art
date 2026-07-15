@@ -6,6 +6,13 @@ import test from "node:test";
 import { validateKnowledgeDevelopmentSuite } from "../check-knowledge-development-evals.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import {
+  nycacResearchCaptures,
+  nycacResearchClaims,
+  nycacResearchObservations,
+  nycacResearchSources,
+  nycacResearchTasks,
+} from "../../apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts";
+import {
   campaignPressArchiveUrlFor,
   campaignPressArticleSourceIds,
   campaignPressCaptures,
@@ -1978,6 +1985,76 @@ test("Fair Rent projects direct operating and data-design work with adoption bou
       (item) => item.claimId === "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN",
     ),
   );
+});
+
+test("NYC Artist Coalition institutional value preserves chronology, reciprocity, and causal boundaries", () => {
+  const sourceIds = [
+    "SRC-NYCAC-FINKELPEARL-CREATENYC-TESTIMONY-2017-02-27",
+    "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
+    "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07",
+    "SRC-NYCAC-ESPINAL-REPEAL-LETTER-2017-04-18",
+    "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+  ];
+  const claim = nycacResearchClaims.find(
+    (item) => item.id === "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
+  );
+  const task = nycacResearchTasks.find(
+    (item) => item.id === "RT-NYCAC-INSTITUTIONAL-USE-CORROBORATION",
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "fair-rent-nyc");
+  const mdx = readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8");
+
+  assert.ok(
+    sourceIds.every((sourceId) =>
+      nycacResearchSources.some((source) => source.id === sourceId),
+    ),
+  );
+  assert.ok(
+    sourceIds.every((sourceId) =>
+      nycacResearchObservations.some(
+        (observation) => observation.sourceId === sourceId,
+      ),
+    ),
+  );
+  assert.ok(
+    nycacResearchCaptures.some(
+      (capture) => capture.id === "CAP-NYCAC-FINKELPEARL-BUDGET-HEARING-2026",
+    ),
+  );
+  assert.equal(claim.epistemicState, "corroborated");
+  assert.equal(claim.publicationState, "approved");
+  assert.equal(claim.selectionState, "selected");
+  assert.ok(
+    claim.boundaries.some((boundary) =>
+      /February 27.*does not name.*May 19/is.test(boundary),
+    ),
+  );
+  assert.ok(
+    claim.boundaries.some((boundary) =>
+      /institutional usefulness.*not.*private motives.*dependence/is.test(boundary),
+    ),
+  );
+  assert.ok(
+    claim.antiClaims.some((antiClaim) =>
+      /could not act without NYC Artist Coalition/i.test(antiClaim),
+    ),
+  );
+  assert.equal(task.status, "open");
+  assert.ok(
+    task.successCriteria.some((criterion) =>
+      /private motive.*personal dependence.*but-for causality/i.test(criterion),
+    ),
+  );
+  assert.ok(
+    page.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "civic-intermediary-value" &&
+        occurrence.claimId === "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
+    ),
+  );
+  assert.match(mdx, /CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE/);
+  assert.match(mdx, /February 27[\s\S]*without naming NYC[\s\S]*May 19 Council budget testimony/i);
+  assert.match(mdx, /institutional usefulness, not private motive/i);
 });
 
 test("KC Town Hall funding chain preserves proposal role, recommendation, appropriation, and later disposition", () => {
