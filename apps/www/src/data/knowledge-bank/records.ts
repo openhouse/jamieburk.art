@@ -15,6 +15,11 @@ import {
   nycartcXCorpusResearchInquiries,
   nycartcXCorpusSources
 } from "./nycartc-x-corpus.ts";
+import {
+  urbanhermitXCorpusClaims,
+  urbanhermitXCorpusResearchInquiries,
+  urbanhermitXCorpusSources
+} from "./urbanhermit-x-corpus.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -23,6 +28,7 @@ const knowledgeBankInput = {
     ...socialArchiveSources,
     ...kcTownHallSocialCorpus.sources,
     ...nycartcXCorpusSources,
+    ...urbanhermitXCorpusSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1132,6 +1138,7 @@ const knowledgeBankInput = {
     ...socialArchiveClaims,
     ...kcTownHallSocialCorpus.claims,
     ...nycartcXCorpusClaims,
+    ...urbanhermitXCorpusClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -1464,6 +1471,7 @@ const knowledgeBankInput = {
     ...socialArchiveResearchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycartcXCorpusResearchInquiries,
+    ...urbanhermitXCorpusResearchInquiries,
     {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",

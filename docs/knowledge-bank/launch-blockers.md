@@ -16,6 +16,9 @@
   Coalition corpus and hashes.
 - [ ] `npm run evals:nycartc-x` passes population, source-positioning,
   shared-authorship, privacy, and projection-discipline checks.
+- [ ] `npm run check:urbanhermit-corpus` and `npm run evals:urbanhermit-x`
+  reproduce the 434-record census, aggregate-only privacy boundary, source
+  maturation, stakeholder limits, and no-route decision.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [x] Jamie approves resume PDF and phone-in-PDF behavior.

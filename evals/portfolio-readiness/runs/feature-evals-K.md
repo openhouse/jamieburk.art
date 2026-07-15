@@ -205,3 +205,21 @@ lifecycle tests, typecheck, lint, production builds, public safety, route
 checks, and compiled-locator checks. Exact-head independent portfolio scores
 are reported on the pull request. Production publication remains Jamie's
 explicit human decision.
+
+## Urbanhermit full-population release pass
+
+- Added a complete capture-date census for Jamie's 434-post personal public
+  account without adding a public personal-timeline route or exposing item-level
+  personal history.
+- Converted selected records into three source-backed reserve claims while
+  keeping all four associated canonical projections on hold.
+- Added deterministic tests for population arithmetic, source authorship,
+  posted links, classifier drift, stakeholder limits, mutable counters,
+  lifecycle completeness, privacy, and website non-projection.
+- Extended the release rubric and root check so future changes cannot silently
+  weaken the aggregate-only mutation or turn social activity into impact.
+
+The Urbanhermit eval reaches **100 / 100** and the full repository check passes,
+including typecheck, lint, production build, public safety, route checks, and
+the 42-observation visual-evidence matrix. Exact-head independent portfolio
+scores are reported on the pull request.

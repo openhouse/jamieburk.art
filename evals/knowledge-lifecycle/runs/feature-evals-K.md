@@ -367,3 +367,23 @@ The corpus eval reached **100 / 100**. The full repository check, 44 lifecycle
 tests, public-safety gate, production build, and refreshed 42-observation visual
 matrix passed. Exact-head independent semantic scores are reported on the pull
 request. Production publication remains Jamie's explicit decision.
+
+## Urbanhermit full-population and privacy pass
+
+- Reconciled all 434 records counted by the authenticated live profile: 340
+  originals, 13 replies, and 81 native reposts, with a zero-item capture-date
+  recovery gap and an explicit all-ever archive boundary.
+- Preserved exact population, 321-link, six-family mission-signal, bounded
+  stakeholder, and dated counter aggregates while keeping raw post text and
+  the reconstructable row-level personal timeline protected.
+- Matured independent and corroborating sources for the Horse Lords `Truthers`
+  video, the 8th Street Tunnel program, and direct TiredOfTires participation;
+  retained Brooklyn Eagle Office of Nightlife reporting as context without
+  assigning Jamie an individual role.
+- Added eight observations, four held candidates, two research tasks, four hold
+  decisions, and one internal editorial brief. No claim gained a public route
+  or active website projection.
+
+The dedicated Urbanhermit corpus eval reached **100 / 100** and the complete
+repository check passed. Exact-head independent lifecycle scores are reported
+on the pull request; production remains Jamie's explicit decision.

@@ -233,3 +233,20 @@ The deterministic Chad Lens contract, full repository check, production build,
 and refreshed 42-observation visual matrix pass. Exact-head independent scores
 are reported on the pull request. Production publication remains Jamie's
 explicit decision.
+
+## Urbanhermit selection pass
+
+- Kept the current hiring website unchanged: the archive discovered strong
+  reserve evidence, but no present page became clearer by adding it now.
+- Made Jamie legible inside the bank through three concrete actions and roles:
+  co-creating a credited music video, leading a participatory public-history
+  program, and directly joining neighborhood tire-pickup fieldwork.
+- Preserved collaborator credit, collective ownership, rights, access, and
+  impact boundaries at sentence level.
+- Added an editorial question that future agents must answer before projection:
+  does the selected record clarify Jamie's craft for this audience, or merely
+  expose more archive?
+
+The dedicated corpus score is **100 / 100** and the full deterministic suite
+passes. Exact-head independent Chad Lens scores are reported on the pull
+request.

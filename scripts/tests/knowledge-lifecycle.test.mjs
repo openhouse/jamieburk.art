@@ -751,6 +751,7 @@ test("retrieval composes cross-project palettes by time, entity, evidence, prior
     evidenceRole: "direct-support"
   });
   assert.deepEqual(earlyPractice.projects.map(({ id }) => id), [
+    "PRJ-URBANHERM-PUBLIC-RECORD",
     "PRJ-WATERWAYS-PARTICIPATORY-ART",
     "PRJ-GREAT-ACCOMMODATIONS",
     "PRJ-OPEN-HOUSE"

@@ -59,6 +59,13 @@
       "command": "npm run check:nycartc-corpus && npm run evals:nycartc-x"
     },
     {
+      "id": "urbanhermit-full-population-contract",
+      "description": "The Urbanhermit 434-record population reconciliation, aggregate-only privacy mutation, link and mission-signal accounting, stakeholder boundaries, selected source maturation, lifecycle holds, and no-route decision reproduce exactly.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:urbanhermit-corpus && npm run evals:urbanhermit-x"
+    },
+    {
       "id": "campaign-press-corpus-complete",
       "description": "Campaign press collections retain their declared article counts, canonical references, generated index, and provenance boundaries.",
       "profiles": ["fast", "release"],
@@ -182,7 +189,7 @@
       "stewards": ["Jamie Burkart", "Chad Berkowitz", "Ben Balter", "Cyd Harrell", "Helen Nissenbaum"],
       "question": "Can project social accounts be inventoried and interpreted as public operating and documentation surfaces without confusing interaction with endorsement, shared identity with individual authorship, or a bounded recovery floor with a complete lifetime census?",
       "passDefinition": "The account registry distinguishes dedicated, shared, adjacent, and not-recovered identities; authenticated collection methods and stopping conditions are documented; named interaction ledgers are deduplicated and reproducible; volatile metrics are dated; collective authorship and administrator-history limits are explicit; strong narrow findings enter exact public surfaces while role memories and reserve depth may remain held.",
-      "evidenceToInspect": ["project account registry", "authenticated collection method", "CallNYC Council-member ledger", "NYC Artist Coalition 5,124-item population accounting, 3,367-item recovered corpus, 1,757-item explicit gap, complete recovered short-link disposition, campaign markers, outbound-versus-incoming separation, repost-source lower bounds, held counters, and privacy tests", "NYC Artist Coalition authored-mention ledger", "WOW List provenance and support evidence", "KC Town Hall 183-item full-population ledger, 133-link inventory, public-reposter audit, direct-response floor, metric ownership, and privacy-mutation tests", "KC Spaces Fund held outcome inventory", "account-establishment research hold", "exact-route portfolio projections"],
+      "evidenceToInspect": ["project account registry", "authenticated collection method", "CallNYC Council-member ledger", "NYC Artist Coalition 5,124-item population accounting, 3,367-item recovered corpus, 1,757-item explicit gap, complete recovered short-link disposition, campaign markers, outbound-versus-incoming separation, repost-source lower bounds, held counters, and privacy tests", "NYC Artist Coalition authored-mention ledger", "Urbanhermit 434-of-434 live-profile reconciliation, aggregate-only public mutation, 321-link inventory, mission-signal manifest, bounded stakeholder sample, selected source maturation, held counters, and no-route decision", "WOW List provenance and support evidence", "KC Town Hall 183-item full-population ledger, 133-link inventory, public-reposter audit, direct-response floor, metric ownership, and privacy-mutation tests", "KC Spaces Fund held outcome inventory", "account-establishment research hold", "exact-route portfolio projections"],
       "repairPolicy": "Repair the ledger or lifecycle layer before changing public copy. Deduplicate people across interaction types, use lower-bound language, record missing-data limits, keep account establishment separate from post authorship, and project only the finding that reduces reader burden for the selected audience.",
       "antiGaming": "Do not pass through follower totals, search-result volume, or engagement language alone. Do not count outreach by the project as incoming engagement, add authored interactions twice, infer likes, treat a repost as endorsement, assign a shared post to Jamie, or turn not recovered into never existed."
     }

@@ -97,6 +97,15 @@ outbound-versus-incoming boundaries. These deeper findings remain held from
 the website unless a future editorial purpose makes them clearer than the
 current bounded coalition projection.
 
+The [Urbanhermit full-population receipt](intake/2026-07-15-urbanhermit-x-full-population.md)
+reconciles all 434 records counted by Jamie's live personal profile on July 15,
+2026: 340 originals, 13 replies, and 81 native reposts. Its aggregate-only
+fixture retains exact population, link, mission-signal, stakeholder-group, and
+dated interaction accounting without publishing raw post text or a
+reconstructable item-level personal timeline. Selected NPR, KCUR, participant,
+project, and local-reporting sources matured into bounded reserve claims; all
+remain held from the current job-application website.
+
 Campaign press sections are preserved as typed source collections rather than
 treated as automatic claim support. The generated
 [NYC Artist Coalition campaign press corpus](campaign-press-corpus.md) records
