@@ -300,7 +300,7 @@ export const socialMediaArchiveSources: SourceRecord[] = [
   ...callNycAuthoredSources,
   ...nycArtistCoalitionCouncilSources,
   ...olympiaKaziSources,
-  institutionalPost("SRC-WOWLIST-ORIGIN-2014", "WOW List account names the Sunday Dinner calendar origin", "WOW List (@wowlist)", "2014-02-12", "https://x.com/wowlist/status/433671630837919744", "WOW List public origin post, February 12, 2014.", ["Richard and Jamie attribution", "Sunday Dinner calendar provenance"], ["sole authorship", "complete collaborator history"]),
+  institutionalPost("SRC-WOWLIST-ORIGIN-2014", "WOW List account names the Sunday Dinner calendar origin", "WOW List (@wowlist)", "2014-02-12", "https://x.com/wowlist/status/433671630837919744", "WOW List public origin post, February 12, 2014.", ["Jamie and another named collaborator attribution", "Sunday Dinner calendar provenance"], ["sole authorship", "complete collaborator history"]),
   institutionalPost("SRC-WOWLIST-SUPPORT-2016", "WOW List describes the Sunday Dinner lineage and organizer workflow", "WOW List (@wowlist)", "2016-09-01", "https://x.com/wowlist/status/771457416298921985", "WOW List public product-support thread, September 1, 2016.", ["DIY community-calendar framing", "Sunday Dinner lineage", "organizer-facing workflow"], ["current service availability", "complete adoption"]),
   institutionalPost("SRC-WOWLIST-LOCATION-SUPPORT-2015", "WOW List answers a location-scope question", "WOW List (@wowlist)", "2015-04-24", "https://x.com/wowlist/status/591664757473673216", "WOW List public product-support reply, April 24, 2015.", ["public product support", "location-scope behavior"], ["that the proposed interface change shipped", "representative usability research"]),
   institutionalPost("SRC-WOWLIST-LISTS-SUPPORT-2015", "WOW List answers a list-discovery question", "WOW List (@wowlist)", "2015-04-24", "https://x.com/wowlist/status/591666366215811073", "WOW List public product-support reply, April 24, 2015.", ["public product support", "profile and list-discovery behavior"], ["representative usability research"]),
@@ -383,16 +383,16 @@ export const socialMediaArchiveClaims: ClaimRecord[] = [
   {
     id: "CLM-WOWLIST-SOCIAL-PROVENANCE-SUPPORT",
     project: "wowlist",
-    internalClaim: "The complete recovered @wowlist profile population preserves shared project provenance from Sunday Dinner and public product-support exchanges about location scope, list discovery, and event entry.",
+    internalClaim: "The complete recovered @wowlist profile population preserves shared project provenance from Sunday Dinner and a later public description of NYCdiy as running on the shared platform.",
     status: "confirmed-with-boundary",
-    projections: [{ key: "case-study", text: "WOW List's complete recovered public-account population preserves both origin and operating texture: the first post credits Richard and Jamie and connects the platform to Sunday Dinner calendars, while public support exchanges address location scope, list discovery, and event entry.", status: "active", citationRequired: true, surfaces: ["/work/wowlist"], rationale: "Use direct social evidence to make shared provenance and real organizer support concrete without overloading the page with the full 38-item archive." }],
+    projections: [{ key: "case-study", text: "WOW List's complete recovered public-account population preserves shared provenance: the first post credits Jamie and a collaborator and connects the project to Sunday Dinner calendars; a later post describes NYCdiy as running on the shared platform.", status: "active", citationRequired: true, surfaces: ["/work/wowlist"], rationale: "Use direct social evidence to make shared provenance concrete while leaving product-support behavior to its dedicated claim." }],
     evidence: [
       { sourceId: "SRC-WOWLIST-X-PROFILE-2026", relationship: "context", supports: ["complete 38-item profile-reported population on the capture date"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-WOWLIST-ORIGIN-2014", relationship: "direct-support", supports: ["Richard and Jamie attribution", "Sunday Dinner origin"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-WOWLIST-ORIGIN-2014", relationship: "direct-support", supports: ["Jamie and another named collaborator attribution", "Sunday Dinner origin"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-WOWLIST-SUPPORT-2016", relationship: "direct-support", supports: ["DIY calendar framing", "Sunday Dinner lineage"], confidence: "high", renderCitation: true },
       ...["SRC-WOWLIST-LOCATION-SUPPORT-2015", "SRC-WOWLIST-LISTS-SUPPORT-2015", "SRC-WOWLIST-EVENT-SUPPORT-2015"].map((sourceId) => ({ sourceId, relationship: "direct-support" as const, supports: ["one public product-support exchange"], confidence: "high" as const, renderCitation: false }))
     ],
-    boundaries: ["Keep credit shared with Richard, Sunday Dinner participants, organizers, and other collaborators.", "Describe historical workflows rather than current service availability.", "The profile population is not a complete product or adoption archive."],
+    boundaries: ["Keep credit shared with Sunday Dinner participants, organizers, and other collaborators.", "Describe historical workflows rather than current service availability.", "The profile population is not a complete product or adoption archive."],
     antiClaims: ["Jamie alone created WOW List", "Jamie authored every @wowlist post", "the platform is currently operating", "38 posts are the complete product history"],
     researchInquiryIds: ["INQ-WOWLIST-SOCIAL-ARCHIVE", "INQ-WOWLIST-HANDLE-HISTORY"],
     reviewedAt,
@@ -464,7 +464,7 @@ export const socialMediaArchiveInquiries: ResearchInquiry[] = [
     methods: ["Reconciled the authenticated Posts and Replies views into a 38-status population.", "Separated authored posts, reposts, support replies, and posted sources.", "Kept historical workflow evidence distinct from current product availability."],
     runAt: reviewedAt,
     resultStatus: "recovered",
-    findings: ["All 38 profile-reported items were recovered on the capture date.", "The first post credits Richard and Jamie and connects the project to Sunday Dinner calendars.", "Public threads document location, list-discovery, and event-entry support."],
+    findings: ["All 38 profile-reported items were recovered on the capture date.", "The first post credits Jamie and another named collaborator and connects the project to Sunday Dinner calendars.", "Public threads document location, list-discovery, and event-entry support."],
     limitations: ["The profile population is not a complete product or adoption history.", "The account does not identify the author of every post."],
     sourceIds: ["SRC-WOWLIST-X-PROFILE-2026", "SRC-WOWLIST-ORIGIN-2014", "SRC-WOWLIST-SUPPORT-2016", "SRC-WOWLIST-LOCATION-SUPPORT-2015", "SRC-WOWLIST-LISTS-SUPPORT-2015", "SRC-WOWLIST-EVENT-SUPPORT-2015"],
     publicSummary: "The complete recovered @wowlist profile population preserves shared Sunday Dinner provenance and public organizer-facing product support."

@@ -66,7 +66,9 @@ selected, or a winner without new evidence and review.
 
 ## WOWList
 
-Do not name collaborators unless approved.
+Do not add collaborator names to editorial portfolio prose unless approved.
+Direct quotations and source records may retain names already public in the
+underlying source when needed for provenance and collective credit.
 
 Do not treat 38 recovered profile-reported items as proof that the service is
 currently available or that every requested interface change shipped. Do not
@@ -92,6 +94,26 @@ private Drive documents.
 Do not turn 11 recovered `#FUNDED` account highlights into a complete audited
 grantee ledger or infer that Jamie selected grantees, made disbursements, or
 authored the campaign posts.
+
+## WOW List
+
+Do not say Jamie created WOW List alone or authored every `@wowlist` post.
+Attribute project-account patterns to WOW List or its team unless a post itself
+identifies an individual author.
+
+Do not convert a complete 38-of-38 profile-reported public corpus into complete
+product history: deleted, hidden, private, and platform-suppressed activity is
+outside the population contract. Do not use July 2026 likes, reposts, or replies
+as durable adoption or impact metrics.
+
+Do not collapse direct calendar use, authored external curation, reposted
+amplification, and engagement by another account into one interaction type. Do
+not claim WOW List organized every linked action or caused attendance,
+fundraising, policy, or service outcomes.
+
+Do not describe *Zines 2.0* as press coverage of WOW List. Do not infer
+authorship, partnership, confirmed conference attendance, a presenter role, or
+current guidance from a source merely because the project account linked it.
 
 ## KC Town Hall
 

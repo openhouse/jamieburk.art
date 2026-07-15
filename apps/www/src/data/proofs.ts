@@ -170,6 +170,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: [
       "approved-resume",
+      "public-source",
       "public-safe-archive-summary",
       "firsthand-collaborator-context"
     ],
@@ -332,11 +333,12 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform used by DIY arts and music organizers, with recorded activity across roughly 35 city ecosystems.",
     shortWording: "Jamie co-built WOWList across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate historical summary, public organizer integrations, and a deterministic 38-of-38 project-account corpus preserving product-support and civic-care patterns.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -354,7 +356,14 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    canonicalClaimIds: ["CLM-WOWLIST-SOCIAL-PROVENANCE-SUPPORT"],
+    canonicalClaimIds: [
+      "CLM-WOWLIST-ARCHIVE-SCALE",
+      "CLM-WOWLIST-TECHNICAL-CONTRIBUTION",
+      "CLM-WOWLIST-PUBLIC-COMMUNITY-USE",
+      "CLM-WOWLIST-SOCIAL-PROVENANCE-SUPPORT",
+      "CLM-WOWLIST-PRODUCT-SUPPORT-LOOP",
+      "CLM-WOWLIST-CIVIC-CARE-USE"
+    ],
     lastReviewed: "2026-07-15"
   },
   {

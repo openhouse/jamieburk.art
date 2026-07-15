@@ -639,13 +639,28 @@ export const sourceExpansionPages = [
     id: "wowlist",
     surface: "/work/wowlist",
     sourceOrder: [
+      "SRC-WOWLIST-DATABASE-AGGREGATES-2017",
       "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
       "SRC-WOWLIST-SBDIY",
       "SRC-WOWLIST-X-PROFILE-2026",
       "SRC-WOWLIST-ORIGIN-2014",
-      "SRC-WOWLIST-SUPPORT-2016"
+      "SRC-WOWLIST-SUPPORT-2016",
+      "SRC-WOWLIST-LOCATION-SUPPORT-2015",
+      "SRC-WOWLIST-LISTS-SUPPORT-2015",
+      "SRC-WOWLIST-EVENT-SUPPORT-2015",
+      "SRC-WOWLIST-MEMBER-TUTORIAL-2015",
+      "SRC-WOWLIST-X-CORPUS-2026-07-15",
+      "SRC-WOWLIST-POPULAR-VOTE-2016",
+      "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
+      "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
     ],
     occurrences: [
+      {
+        id: "archive-scale",
+        claimId: "CLM-WOWLIST-ARCHIVE-SCALE",
+        projection: "case-study",
+        sourceIds: ["SRC-WOWLIST-DATABASE-AGGREGATES-2017"]
+      },
       {
         id: "public-community-use",
         claimId: "CLM-WOWLIST-PUBLIC-COMMUNITY-USE",
@@ -664,6 +679,33 @@ export const sourceExpansionPages = [
           "SRC-WOWLIST-ORIGIN-2014",
           "SRC-WOWLIST-SUPPORT-2016"
         ]
+      },
+      {
+        id: "product-support-loop",
+        claimId: "CLM-WOWLIST-PRODUCT-SUPPORT-LOOP",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-WOWLIST-LOCATION-SUPPORT-2015",
+          "SRC-WOWLIST-LISTS-SUPPORT-2015",
+          "SRC-WOWLIST-EVENT-SUPPORT-2015",
+          "SRC-WOWLIST-MEMBER-TUTORIAL-2015"
+        ]
+      },
+      {
+        id: "civic-care-use",
+        claimId: "CLM-WOWLIST-CIVIC-CARE-USE",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-WOWLIST-X-CORPUS-2026-07-15",
+          "SRC-WOWLIST-POPULAR-VOTE-2016",
+          "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016"
+        ]
+      },
+      {
+        id: "technical-contribution",
+        claimId: "CLM-WOWLIST-TECHNICAL-CONTRIBUTION",
+        projection: "case-study",
+        sourceIds: ["SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"]
       }
     ]
   },

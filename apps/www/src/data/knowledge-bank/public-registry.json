@@ -452,6 +452,59 @@
       ]
     },
     {
+      "id": "SRC-WOWLIST-LOCATION-SUPPORT-2015",
+      "title": "WOW List answers a location-scope question",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public product-support reply, April 24, 2015.",
+      "publicNote": "A public post establishes what the named account published; shared-account posts remain collectively authored unless separately attributed.",
+      "doesNotEstablish": [
+        "that the proposed interface change shipped",
+        "representative usability research"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-LISTS-SUPPORT-2015",
+      "title": "WOW List answers a list-discovery question",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591666366215811073",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public product-support reply, April 24, 2015.",
+      "publicNote": "A public post establishes what the named account published; shared-account posts remain collectively authored unless separately attributed.",
+      "doesNotEstablish": [
+        "representative usability research"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-EVENT-SUPPORT-2015",
+      "title": "WOW List answers an event-entry workflow complaint",
+      "author": "WOW List (@wowlist)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591668857670148096",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public product-support reply, April 24, 2015.",
+      "publicNote": "A public post establishes what the named account published; shared-account posts remain collectively authored unless separately attributed.",
+      "doesNotEstablish": [
+        "that the workflow was subsequently changed",
+        "representative usability research"
+      ]
+    },
+    {
       "id": "SRC-KCTH-MISSION-2018",
       "title": "KC Town Hall states its neighborhood-resource mission",
       "author": "KC Town Hall (@KCTownHall)",
@@ -525,6 +578,121 @@
         "current API availability",
         "official Council API status",
         "complete API documentation"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-DATABASE-AGGREGATES-2017",
+      "title": "Public-safe WOW List database aggregate review",
+      "organization": "WOW List",
+      "author": "Codex archive review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "private",
+      "capturedAt": "2017-07-22",
+      "accessedAt": "2026-07-06",
+      "publicCitation": "Aggregate structural review of the WOW List production database snapshot dated July 22, 2017.",
+      "publicNote": "A read-only review counted 1,846 users and 16,142 post/event records; a conservative geography analysis supported 35 or more active city scenes. Person-level rows, contact information, follows, stars, geolocation rows, and raw records remain unpublished.",
+      "doesNotEstablish": [
+        "current platform activity",
+        "35 official chapters",
+        "one active organizer in every scene",
+        "that every post/event record represents a completed public event",
+        "Jamie's sole responsibility for adoption"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026",
+      "title": "Public-safe WOW List technical archive review",
+      "organization": "WOW List",
+      "author": "Codex archive review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "private",
+      "capturedAt": "2026-07-06",
+      "accessedAt": "2026-07-15",
+      "publicCitation": "Public-safe structural review of WOW List code, project documentation, and approved resume language, July 2026.",
+      "publicNote": "The review supports Jamie's co-builder and product-operator role and identifies Django, PostgreSQL/PostGIS, Ember, natural-language event entry, weekly email digests, embeddable calendars, and low-cost organizer deployment. Raw code archives and private operational records remain outside the public repository.",
+      "doesNotEstablish": [
+        "Jamie's authorship of every line or feature",
+        "sole product ownership",
+        "current platform availability",
+        "that every archived feature shipped unchanged or remained active"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-CORPUS-2026-07-15",
+      "title": "WOW List complete profile-reported public timeline corpus",
+      "author": "Codex authenticated browser review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15T00:56:07-04:00",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/with_replies",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated item-level review of the replies-inclusive @wowlist timeline, July 15, 2026.",
+      "publicNote": "Three overlapping complete passes reconciled all 38 profile-reported posts to 38 distinct canonical status IDs. The repository preserves the raw public capture, deterministic derivation, corpus, and manifest without authenticated-session identity.",
+      "doesNotEstablish": [
+        "deleted, hidden, private, or otherwise unavailable activity",
+        "the author of every project-account post",
+        "complete platform adoption or impact",
+        "current availability of historical destinations",
+        "attendance, fundraising results, or policy causation"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-MEMBER-TUTORIAL-2015",
+      "title": "SHELBY'S WOWLIST TUTORIAL",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.youtube.com/watch?v=nQg47LtixPI",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public member-made WOW List tutorial linked by the project account in August 2015.",
+      "publicNote": "The project account thanked a member for making the tutorial and linked its join flow. The video is contextual evidence of user-created onboarding, not a complete adoption measure.",
+      "doesNotEstablish": [
+        "platform-wide adoption",
+        "the number of users helped",
+        "Jamie's authorship of the tutorial"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-POPULAR-VOTE-2016",
+      "title": "popular.vote civic-calendar destination",
+      "organization": "popular.vote",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://popular.vote/",
+      "archiveUrl": "https://web.archive.org/web/20161211233030/http://popular.vote/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archived popular.vote civic-calendar destination linked by WOW List in November 2016.",
+      "publicNote": "The account described this as a place to add and receive updates on marches, meetings, and local connection after the 2016 election.",
+      "doesNotEstablish": [
+        "measured participation",
+        "Jamie's authorship of the destination",
+        "policy outcomes"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
+      "title": "Hundreds Mourn the Victims of the Ghost Ship Fire in Oakland",
+      "organization": "KQED",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-12-07",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.youtube.com/watch?v=g7zIdDeRVjU",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KQED video of an Oakland Ghost Ship vigil, linked by WOW List in December 2016.",
+      "publicNote": "The account paired the video with vigil and relief links. This supports a care-and-mutual-aid communication pattern, not authorship of the reporting or relief campaign.",
+      "doesNotEstablish": [
+        "Jamie's authorship of the report",
+        "fundraising totals",
+        "attendance caused by WOW List"
       ]
     }
   ],
@@ -1326,13 +1494,13 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "WOW List's complete recovered public-account population preserves both origin and operating texture: the first post credits Richard and Jamie and connects the platform to Sunday Dinner calendars, while public support exchanges address location scope, list discovery, and event entry.",
+          "text": "WOW List's complete recovered public-account population preserves shared provenance: the first post credits Jamie and a collaborator and connects the project to Sunday Dinner calendars; a later post describes NYCdiy as running on the shared platform.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
             "/work/wowlist"
           ],
-          "rationale": "Use direct social evidence to make shared provenance and real organizer support concrete without overloading the page with the full 38-item archive."
+          "rationale": "Use direct social evidence to make shared provenance concrete while leaving product-support behavior to its dedicated claim."
         }
       ],
       "evidence": [
@@ -1349,7 +1517,7 @@
           "sourceId": "SRC-WOWLIST-ORIGIN-2014",
           "relationship": "direct-support",
           "supports": [
-            "Richard and Jamie attribution",
+            "Jamie and another named collaborator attribution",
             "Sunday Dinner origin"
           ],
           "confidence": "high",
@@ -1367,7 +1535,7 @@
         }
       ],
       "boundaries": [
-        "Keep credit shared with Richard, Sunday Dinner participants, organizers, and other collaborators.",
+        "Keep credit shared with Sunday Dinner participants, organizers, and other collaborators.",
         "Describe historical workflows rather than current service availability.",
         "The profile population is not a complete product or adoption archive."
       ]
@@ -1467,6 +1635,184 @@
         "The communication-preference evidence came from conversations with neighbors and friends, not a representative usability study.",
         "The API post establishes a public interface at the time, not current availability or complete documentation."
       ]
+    },
+    {
+      "id": "CLM-WOWLIST-ARCHIVE-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A July 2017 production snapshot supports the bounded scale claim: 1,800+ users, 16,000+ post/event records, and activity across roughly 35 city ecosystems.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ],
+          "rationale": "Give hiring readers a legible scale signal while keeping the exact archive counts, interpretation method, and privacy boundaries in the source layer."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-DATABASE-AGGREGATES-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "1,846 user records",
+            "16,142 post/event records",
+            "conservative 35-plus active-city-scene interpretation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The counts describe one July 22, 2017 production snapshot, not current activity.",
+        "City ecosystems are a conservative activity grouping, not official chapters.",
+        "The repository and public site omit person-level and raw community records."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-TECHNICAL-CONTRIBUTION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie co-built the application and product model, working across Django, PostgreSQL/PostGIS, and Ember. His contribution connected Sunday Dinner's participatory calendar practice to followable keyword communities, natural-language event entry, digest and calendar distribution, embeddable calendars, and organizer-facing deployment.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ],
+          "rationale": "State Jamie's actor-action-artifact contribution concretely while separating his role from sole authorship of the codebase or shared account."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's co-builder and product-operator role",
+            "technical stack",
+            "event-entry and distribution features",
+            "organizer-facing deployment"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Co-builder and product operator does not mean sole author or owner.",
+        "The archive establishes historical implementation surfaces, not current service availability.",
+        "Shared-account product support remains attributed to the project team unless separately identified."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-PRODUCT-SUPPORT-LOOP",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public account did more than announce events: it answered questions about location scope and list discovery, responded to event-entry friction, and thanked a community member for making a product tutorial.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ],
+          "rationale": "Make organizer-facing product operations concrete without inflating three conversations into representative research."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-LOCATION-SUPPORT-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "location-scope question and workflow reply"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-LISTS-SUPPORT-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "personal-list discovery question and workflow reply"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-EVENT-SUPPORT-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "event-entry friction and stated interface direction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-MEMBER-TUTORIAL-2015",
+          "relationship": "corroborating",
+          "supports": [
+            "user-created onboarding artifact"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Three recovered threads do not constitute representative usability research.",
+        "A stated interface direction does not prove that a change shipped.",
+        "The project-account replies do not identify their individual author."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-CIVIC-CARE-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The calendar also became civic and care infrastructure: the account linked or amplified demonstrations, vigils, fundraisers, and mutual-aid resources, including post-election organizing and Ghost Ship mourning and relief.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ],
+          "rationale": "Show mission-relevant use while preserving the difference between direct calendar use, authored curation, and reposted amplification."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "nine-item civic-and-mutual-aid pattern and its composition"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-POPULAR-VOTE-2016",
+          "relationship": "context",
+          "supports": [
+            "post-election civic-calendar destination"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
+          "relationship": "context",
+          "supports": [
+            "Ghost Ship mourning and relief communication"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The nine items combine direct calendar links, authored external curation, reposted external amplification, and one reposted calendar link; those are not interchangeable forms of use.",
+        "The record does not establish attendance, money raised, service uptake, or policy outcomes.",
+        "Historical links are not current guidance."
+      ]
     }
   ],
   "pages": [
@@ -1561,13 +1907,30 @@
       "id": "wowlist",
       "surface": "/work/wowlist",
       "sourceOrder": [
+        "SRC-WOWLIST-DATABASE-AGGREGATES-2017",
         "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
         "SRC-WOWLIST-SBDIY",
         "SRC-WOWLIST-X-PROFILE-2026",
         "SRC-WOWLIST-ORIGIN-2014",
-        "SRC-WOWLIST-SUPPORT-2016"
+        "SRC-WOWLIST-SUPPORT-2016",
+        "SRC-WOWLIST-LOCATION-SUPPORT-2015",
+        "SRC-WOWLIST-LISTS-SUPPORT-2015",
+        "SRC-WOWLIST-EVENT-SUPPORT-2015",
+        "SRC-WOWLIST-MEMBER-TUTORIAL-2015",
+        "SRC-WOWLIST-X-CORPUS-2026-07-15",
+        "SRC-WOWLIST-POPULAR-VOTE-2016",
+        "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
+        "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
       ],
       "occurrences": [
+        {
+          "id": "archive-scale",
+          "claimId": "CLM-WOWLIST-ARCHIVE-SCALE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-DATABASE-AGGREGATES-2017"
+          ]
+        },
         {
           "id": "public-community-use",
           "claimId": "CLM-WOWLIST-PUBLIC-COMMUNITY-USE",
@@ -1585,6 +1948,35 @@
             "SRC-WOWLIST-X-PROFILE-2026",
             "SRC-WOWLIST-ORIGIN-2014",
             "SRC-WOWLIST-SUPPORT-2016"
+          ]
+        },
+        {
+          "id": "product-support-loop",
+          "claimId": "CLM-WOWLIST-PRODUCT-SUPPORT-LOOP",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-LOCATION-SUPPORT-2015",
+            "SRC-WOWLIST-LISTS-SUPPORT-2015",
+            "SRC-WOWLIST-EVENT-SUPPORT-2015",
+            "SRC-WOWLIST-MEMBER-TUTORIAL-2015"
+          ]
+        },
+        {
+          "id": "civic-care-use",
+          "claimId": "CLM-WOWLIST-CIVIC-CARE-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-CORPUS-2026-07-15",
+            "SRC-WOWLIST-POPULAR-VOTE-2016",
+            "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016"
+          ]
+        },
+        {
+          "id": "technical-contribution",
+          "claimId": "CLM-WOWLIST-TECHNICAL-CONTRIBUTION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
           ]
         }
       ]

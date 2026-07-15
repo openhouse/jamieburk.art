@@ -69,8 +69,17 @@ import {
   callNycFullPopulationSources
 } from "../../apps/www/src/data/knowledge-bank/callnyc-x-full-population.ts";
 import {
+  wowListFullPopulationClaims,
+  wowListFullPopulationInquiries,
+  wowListFullPopulationIntake,
+  wowListFullPopulationSources
+} from "../../apps/www/src/data/knowledge-bank/wowlist-x-full-population.ts";
+import {
   validateCommittedCorpus
 } from "../derive-callnyc-x-corpus.mjs";
+import {
+  validateCommittedCorpus as validateCommittedWowListCorpus
+} from "../derive-wowlist-x-corpus.mjs";
 import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
@@ -239,6 +248,129 @@ test("CallNYC full-population corpus is complete, reproducible, and honestly bou
   assert.ok(publicFeedbackClaim.boundaries.some((boundary) => /107 distinct items/.test(boundary)));
   assert.ok(publicFeedbackClaim.antiClaims.some((antiClaim) => /all 110/.test(antiClaim)));
   assert.ok(publicFeedbackClaim.boundaries.some((boundary) => /Twenty-six describes/.test(boundary)));
+});
+
+test("WOW List full-population corpus is complete, reproducible, and honestly bounded", () => {
+  const rawPath =
+    "docs/knowledge-bank/corpora/source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json";
+  const corpusPath =
+    "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json";
+  const manifestPath =
+    "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.manifest.json";
+  const rawText = readFileSync(rawPath, "utf8");
+  const corpusText = readFileSync(corpusPath, "utf8");
+  const manifestText = readFileSync(manifestPath, "utf8");
+  const corpus = JSON.parse(corpusText);
+  const manifest = JSON.parse(manifestText);
+  const metrics = validateCommittedWowListCorpus(
+    rawText,
+    corpusText,
+    manifest
+  );
+
+  for (const publicArtifact of [rawText, corpusText, manifestText]) {
+    assert.doesNotMatch(
+      publicArtifact,
+      /"(?:authenticatedAs|authenticatedSessionIdentity)"\s*:/i
+    );
+  }
+
+  assert.equal(
+    createHash("sha256").update(rawText).digest("hex"),
+    manifest.sourceCaptureSha256
+  );
+  assert.equal(new Set(corpus.items.map((item) => item.canonicalUrl)).size, 38);
+  assert.equal(corpus.acquisitionVerification.passes.length, 3);
+  assert.ok(
+    corpus.acquisitionVerification.passes.every(
+      (pass) =>
+        pass.distinctStatusIds === 38 &&
+        pass.matchedProfileBaseline &&
+        pass.matchedCanonicalStatusIdSet &&
+        pass.statusIds.length === 38 &&
+        new Set(pass.statusIds).size === 38
+    )
+  );
+  assert.equal(
+    wowListFullPopulationInquiries
+      .find((inquiry) => inquiry.id === "INQ-WOWLIST-X-FULL-POPULATION-2026")
+      .sourceIds.includes("SRC-WOWLIST-DATABASE-AGGREGATES-2017"),
+    false
+  );
+  assert.equal(corpus.sourceLeads.find((lead) => lead.id === "good-times-zines-2").disposition, "archived-and-close-read");
+  assert.doesNotMatch(
+    JSON.stringify(corpus.missionPatterns),
+    /unrecovered article/,
+  );
+  assert.deepEqual(
+    {
+      profileReported: metrics.profileReported,
+      renderedDistinct: metrics.renderedDistinct,
+      authored: metrics.authored,
+      reposted: metrics.reposted,
+      unresolvedCountDifference: metrics.unresolvedCountDifference,
+      authoredReplies: metrics.authoredReplies,
+      allOutgoingLinks: metrics.allOutgoingLinkOccurrences,
+      authoredOutgoingLinks: metrics.authoredOutgoingLinkOccurrences,
+      recoveredSupportThreads: metrics.recoveredPublicSupportThreads,
+      engagedAuthored: metrics.authoredPostsWithVisibleEngagement,
+      engagementTotals: metrics.authoredEngagementTotals
+    },
+    {
+      profileReported: 38,
+      renderedDistinct: 38,
+      authored: 22,
+      reposted: 16,
+      unresolvedCountDifference: 0,
+      authoredReplies: 5,
+      allOutgoingLinks: 35,
+      authoredOutgoingLinks: 23,
+      recoveredSupportThreads: 3,
+      engagedAuthored: 12,
+      engagementTotals: { replies: 2, reposts: 20, likes: 21 }
+    }
+  );
+
+  assert.equal(wowListFullPopulationSources.length, 10);
+  assert.equal(wowListFullPopulationClaims.length, 6);
+  assert.equal(wowListFullPopulationInquiries.length, 2);
+  assert.equal(wowListFullPopulationIntake.length, 2);
+  assert.ok(
+    wowListFullPopulationInquiries.every(
+      (inquiry) => inquiry.resultStatus === "recovered"
+    )
+  );
+  assert.ok(
+    wowListFullPopulationClaims
+      .find((claim) => claim.id === "CLM-WOWLIST-SOCIAL-TRACTION-OBSERVATION")
+      .projections.every((projection) => projection.status === "hold")
+  );
+  assert.ok(
+    wowListFullPopulationClaims
+      .find((claim) => claim.id === "CLM-WOWLIST-CIVIC-CARE-USE")
+      .boundaries.some((boundary) => /not interchangeable/.test(boundary))
+  );
+  const scaleClaim = wowListFullPopulationClaims.find(
+    (claim) => claim.id === "CLM-WOWLIST-ARCHIVE-SCALE"
+  );
+  assert.deepEqual(scaleClaim.evidence.map((item) => item.sourceId), [
+    "SRC-WOWLIST-DATABASE-AGGREGATES-2017"
+  ]);
+  assert.ok(scaleClaim.boundaries.some((boundary) => /July 22, 2017/.test(boundary)));
+  assert.deepEqual(scaleClaim.researchInquiryIds, [
+    "INQ-WOWLIST-ARCHIVE-IMPLEMENTATION-2026"
+  ]);
+  const technicalClaim = wowListFullPopulationClaims.find(
+    (claim) => claim.id === "CLM-WOWLIST-TECHNICAL-CONTRIBUTION"
+  );
+  assert.deepEqual(technicalClaim.evidence.map((item) => item.sourceId), [
+    "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
+  ]);
+  const socialIntake = wowListFullPopulationIntake.find(
+    (record) => record.id === "INT-WOWLIST-X-FULL-POPULATION-2026"
+  );
+  assert.ok(!socialIntake.claimIds.includes("CLM-WOWLIST-ARCHIVE-SCALE"));
+  assert.ok(!socialIntake.claimIds.includes("CLM-WOWLIST-TECHNICAL-CONTRIBUTION"));
 });
 
 test("NYC Artist Coalition count separates direct, mission-relevant, and thread-context records", () => {

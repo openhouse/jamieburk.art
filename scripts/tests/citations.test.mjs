@@ -40,10 +40,49 @@ test("multi-source occurrences preserve editorial order", () => {
 });
 
 test("new case-study citations expose only selected public sources", () => {
-  assert.equal(resolveCitationReferences("wowlist").length, 5);
+  assert.equal(resolveCitationReferences("wowlist").length, 14);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
   assert.equal(resolveCitationReferences("fair-rent-nyc").length, 8);
   assert.equal(resolveCitationReferences("kc-town-hall").length, 7);
+  assert.deepEqual(
+    resolveCitationOccurrence("wowlist", "archive-scale").sources.map(
+      (item) => item.source.id
+    ),
+    ["SRC-WOWLIST-DATABASE-AGGREGATES-2017"]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("wowlist", "technical-contribution").sources.map(
+      (item) => item.source.id
+    ),
+    ["SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("wowlist", "product-support-loop").sources.map(
+      (item) => item.source.id
+    ),
+    [
+      "SRC-WOWLIST-LOCATION-SUPPORT-2015",
+      "SRC-WOWLIST-LISTS-SUPPORT-2015",
+      "SRC-WOWLIST-EVENT-SUPPORT-2015",
+      "SRC-WOWLIST-MEMBER-TUTORIAL-2015"
+    ]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("wowlist", "civic-care-use").sources.map(
+      (item) => item.source.id
+    ),
+    [
+      "SRC-WOWLIST-X-CORPUS-2026-07-15",
+      "SRC-WOWLIST-POPULAR-VOTE-2016",
+      "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016"
+    ]
+  );
+  assert.ok(
+    resolveCitationReferences("wowlist").every(
+      (item) => item.source.id !== "SRC-WOWLIST-GOOD-TIMES-ZINES-2-2015"
+    ),
+    "Field context should remain in the bank instead of the hiring-facing page"
+  );
   assert.deepEqual(
     resolveCitationOccurrence("callnyc", "social-public-feedback-loop").sources.map(
       (item) => item.source.id

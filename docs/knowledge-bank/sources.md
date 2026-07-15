@@ -118,6 +118,28 @@ manifest, and derivation script make the transformation and aggregate findings
 reproducible. The three-count difference is unresolved and must not be silently
 converted into completeness.
 
+### WOW List authenticated social corpus
+
+The July 15 archival-production pass preserves all 38 profile-reported items
+rendered by the authenticated replies-inclusive `@wowlist` timeline: 22
+authored posts and 16 reposts. The raw public capture, SHA-256 manifest, and
+deterministic derivation script preserve 35 posted short-URL occurrences,
+three recovered support conversations, and bounded organizer-use, civic-care,
+field-learning, and visible-engagement patterns.
+
+Close-read source records include Elise Granata's archived Grasstronaut venue
+manual review and *Good Times* article *Zines 2.0*, a member-made WOW List
+tutorial, Allied Media Conference context, popular.vote, Meow Wolf's DIY Fund,
+and KQED's Ghost Ship vigil report. Posted sources are field context unless a
+separate relationship is established; sharing does not imply authorship,
+partnership, attendance, adoption, or outcomes.
+
+A separate public-safe archive review carries the platform-scale and technical
+implementation claims. It records aggregate findings from the July 22, 2017
+production database snapshot and structural findings from code, project
+documentation, and approved resume language while withholding person-level
+rows, raw code archives, and private operational records.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing
@@ -150,7 +172,7 @@ collaborators approve.
 - private correspondence;
 - legal-review materials;
 - private coalition notes;
-- raw community records;
+- raw private or unpublished community records;
 - guest lists;
 - resident records;
 - client-private documents;
@@ -161,3 +183,12 @@ collaborators approve.
 - unapproved photos;
 - private financial records;
 - private personal records.
+
+Governed public-source corpora are allowed when every retained item was already
+public, the research question requires population accounting, and the artifact
+excludes private surfaces, session identity, media binaries, follower exports,
+private analytics, and authenticated account data. Public status IDs, URLs,
+visible text, public conversation context, and dated visible interaction labels
+may be retained for reproducibility with explicit attribution and uncertainty
+boundaries. This exception does not permit private or unpublished community
+records.

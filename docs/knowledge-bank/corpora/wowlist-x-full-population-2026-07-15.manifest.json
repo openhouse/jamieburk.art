@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T00:58:32-04:00",
+  "generator": "scripts/derive-wowlist-x-corpus.mjs --write",
+  "sourceCapture": "docs/knowledge-bank/corpora/source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json",
+  "sourceCaptureSha256": "51170409962c96f2b642b726786b69ac07181266f5f80906a56c04624e2312b5",
+  "corpus": "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json",
+  "corpusSha256": "1e5547924f41370580b93b00bb098f9cef8dc1eb1f6eb254555d6f43a1be2377",
+  "profileReportedPosts": 38,
+  "corpusItems": 38,
+  "status": "complete-profile-reported-population"
+}

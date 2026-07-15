@@ -121,3 +121,15 @@ timeline items recovered against a 110-post profile baseline, with the raw
 authenticated capture, transformation manifest, derivation script, posted URL
 inventory, and unresolved three-count difference kept together. See the
 [full-population research run](runs/2026-07-15-callnyc-x-full-population.md).
+
+The [WOW List full-population pass](projects/wowlist.md) reconciles all 38
+profile-reported posts to 38 distinct canonical status IDs. Its reproducible
+corpus separates 22 authored posts from 16 reposts, resolves all 35 posted
+short-URL occurrences, recovers three public product-support conversations,
+and preserves organizer-use, civic-care, and field-learning patterns without
+assigning every project-account post to Jamie. See the
+[research run](runs/2026-07-15-wowlist-x-full-population.md).
+
+Historical scale and Jamie's technical contribution have a separate archive
+inquiry and intake, so the social corpus is not asked to prove implementation
+or adoption.

@@ -388,7 +388,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform used by DIY arts and music organizers, with recorded activity across roughly 35 city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -399,7 +399,7 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with natural-language event entry, email and calendar distribution, embeddable calendars, and organizer-facing publishing workflows.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -420,7 +420,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Greene Hill Food Co-op's 2017 profile, an independent sbdiy calendar integration, public-safe aggregate history, and screenshots pending Jamie approval.",
+      "A protected aggregate review of the July 2017 production database snapshot, Greene Hill Food Co-op's 2017 profile, an independent sbdiy calendar integration, and a reproducible 38-of-38 public-account corpus with 35 posted short URLs resolved and account authorship boundaries retained.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -430,6 +430,8 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
+      "Three recovered public product-support conversations and community-made onboarding",
+      "Complete 38-item public social corpus",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],
