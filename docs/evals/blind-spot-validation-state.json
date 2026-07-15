@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "releaseReady": false,
+  "developmentState": "deterministic-contracts-in-progress",
+  "externalTransferApproval": false,
+  "independentHoldout": {
+    "status": "blocked",
+    "owner": "Jamie and Codex",
+    "blockedReason": "An external blind judge would receive public-repository knowledge-bank contents and eval prompts. The external service safeguard requires Jamie's explicit approval after this transfer is described.",
+    "nextAction": "Jamie may explicitly approve sending the public repository's knowledge-bank contents, blind-spot registers, and eval prompt to an external Codex service for two independent read-only evaluation passes."
+  },
+  "coldReader": {
+    "status": "pending",
+    "owner": "Jamie",
+    "nextAction": "Recruit three to five cold readers who resemble hiring managers or referrers; record their thirty-second category, evidence, risk, and next-action answers against one fixed candidate SHA."
+  },
+  "liveUse": {
+    "status": "pending",
+    "owner": "Jamie and Codex",
+    "nextAction": "Against one staging candidate SHA, verify mobile layout, keyboard and skip-link behavior, reduced motion, contrast, resume and contact paths, indexing headers and metadata, downloads, links, health checks, and rollback documentation."
+  },
+  "releaseRule": "Do not set releaseReady true until independent holdout, cold-reader, and live-use validation are complete for the same candidate SHA and Jamie grants human approval for that SHA."
+}

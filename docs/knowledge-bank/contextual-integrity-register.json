@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "purpose": "Keep public-safe evidence from becoming extractive, falsely complete, or misleading about shared work.",
+  "risks": [
+    {
+      "id": "public-is-not-consent",
+      "risk": "A publicly accessible artifact may still contain people, contexts, or uses that were never consented to as portfolio evidence.",
+      "controls": [
+        "Treat public availability as source accessibility, not blanket permission for republication or emphasis.",
+        "Prefer paraphrase, aggregate description, and omission when reuse could create new exposure.",
+        "Require explicit approval before featuring identifiable private people, sensitive images, or testimony-like recollections."
+      ],
+      "reviewTrigger": "Any proposed publication that newly centers an identifiable collaborator, participant, image, quotation, or sensitive event."
+    },
+    {
+      "id": "shared-authorship",
+      "risk": "Collective projects and shared accounts can be misread as sole authorship or ownership.",
+      "controls": [
+        "Separate project outcome, collective contribution, and Jamie's evidenced role.",
+        "Use authored only for records with attributable authorship; otherwise use the narrower verb supported by evidence.",
+        "Maintain collaborator corroboration and role-narrowing paths."
+      ],
+      "reviewTrigger": "Any claim using founded, led, created, authored, produced, managed, or won in a collective context."
+    },
+    {
+      "id": "vulnerable-community-context",
+      "risk": "Community, legal, financial, enforcement, housing, and mutual-aid records may expose people or turn vulnerability into professional proof.",
+      "controls": [
+        "Publish the operating contribution without publishing participant-level records.",
+        "Keep private correspondence, applicant records, donor data, legal-review material, addresses, and attendance records outside the public repository.",
+        "Name omission as an ethical boundary when it is material to understanding the work."
+      ],
+      "reviewTrigger": "Any artifact involving enforcement, legal strategy, financial hardship, residence, attendance, community conflict, or mutual aid."
+    },
+    {
+      "id": "digital-trace-bias",
+      "risk": "Code commits, posts, and database rows can make digitally legible work appear more important than facilitation, hosting, repair, field coordination, print production, listening, and handoff.",
+      "controls": [
+        "Pair digital evidence with an offline-evidence question in every project review.",
+        "Do not use corpus volume as a proxy for contribution value.",
+        "Seek collaborator and material-process evidence for work that left fewer machine-readable traces."
+      ],
+      "reviewTrigger": "Any claim strengthened primarily by record count, commit count, social-account volume, or database recoverability."
+    },
+    {
+      "id": "current-status-drift",
+      "risk": "Archived services, organizations, offices, domains, programs, and relationships may be described as current after their status changes.",
+      "controls": [
+        "Date status claims and use archived, former, historical, or current only when verified.",
+        "Separate historical accomplishment from present availability.",
+        "Recheck current contact, domain, service, and institutional status before production release."
+      ],
+      "reviewTrigger": "Any present-tense claim or link about a service, organization, office, program, venue, domain, or collaborator role."
+    },
+    {
+      "id": "ai-synthesis",
+      "risk": "AI-assisted archival synthesis can be mistaken for eyewitness testimony, independent corroboration, or a source that witnessed the original work.",
+      "controls": [
+        "Label AI-assisted review as synthesis and cite the underlying evidence class.",
+        "Never attribute an AI-generated proof note to a human collaborator.",
+        "Keep interpretation distinct from recovered fact and preserve unresolved questions."
+      ],
+      "reviewTrigger": "Any public wording derived substantially from an AI archive review without direct public or collaborator corroboration."
+    }
+  ],
+  "offlineEvidenceCommitments": [
+    {
+      "id": "OFFLINE-HOSTING-FACILITATION",
+      "commitment": "Actively seek evidence of hosting, facilitation, invitation, trust-building, and follow-through rather than reducing participation work to event or post counts."
+    },
+    {
+      "id": "OFFLINE-FIELD-COORDINATION",
+      "commitment": "Document material sequencing, on-site coordination, repair, safety, and trade relationships when assessing built-environment work."
+    },
+    {
+      "id": "OFFLINE-PRINT-DISTRIBUTION",
+      "commitment": "Treat handbills, packets, maps, print production, door-to-door circulation, and neighborhood intake as operating infrastructure."
+    },
+    {
+      "id": "OFFLINE-LISTENING-TRANSLATION",
+      "commitment": "Preserve how listening, belief, interpretation, and translation carried lived experience into civic or organizational decision surfaces."
+    },
+    {
+      "id": "OFFLINE-HANDOFF-CARE",
+      "commitment": "Record repair, stewardship, transition, and mission-aligned handoff as outcomes, including when a project appropriately leaves Jamie's custody."
+    }
+  ]
+}

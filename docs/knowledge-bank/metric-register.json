@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "purpose": "Define consequential portfolio numbers, their methods, and what readers must not infer.",
+  "items": [
+    {
+      "id": "METRIC-CAREER-14-YEARS",
+      "proofId": "career-operating-structure-14-years",
+      "displayValue": "14+ years",
+      "definition": "A conservative lower-bound description of Jamie's work creating operating structure across civic, cultural, small-business, and technical environments.",
+      "unit": "years of relevant project and professional practice",
+      "timeWindow": "Career history represented in the approved resume through 2026",
+      "method": "Derived from approved resume chronology and intentionally rounded down to a durable lower bound.",
+      "supportStatus": "approved and public-ready",
+      "uncertainty": "The category spans different roles and settings; it is not one continuous job title or employer tenure.",
+      "projectionStatus": "Published on approved portfolio surfaces.",
+      "nextStep": "Recalculate only when resume chronology materially changes.",
+      "doNotInfer": [
+        "Fourteen years in one formal Technical Project Manager role.",
+        "Government employment or a professional certification."
+      ]
+    },
+    {
+      "id": "METRIC-HJE-AGE-80-PLUS",
+      "proofId": "hje-modernization-stewardship",
+      "displayValue": "80+ year-old business",
+      "definition": "A description of Harry J. Epstein Co.'s organizational age during Jamie's modernization work.",
+      "unit": "years since company founding",
+      "timeWindow": "Company history through the portfolio publication period",
+      "method": "Uses approved resume language and public company context; rounded to a stable lower bound.",
+      "supportStatus": "approved and public-ready",
+      "uncertainty": "The number describes the business, not Jamie's tenure or the age of any specific software system.",
+      "projectionStatus": "Published as context for legacy modernization.",
+      "nextStep": "Retain the lower-bound form unless a public company-history citation warrants a more exact statement.",
+      "doNotInfer": [
+        "Jamie worked at the company for 80 years.",
+        "All legacy processes or products were 80 years old."
+      ]
+    },
+    {
+      "id": "METRIC-HJE-REVENUE-2X",
+      "proofId": "hje-revenue-growth-contribution",
+      "displayValue": "2x revenue growth",
+      "definition": "Aggregate comparison between revenue at the beginning and end of a business period during which Jamie contributed web, e-commerce, analytics, marketing, content, and workflow improvements.",
+      "unit": "revenue ratio",
+      "timeWindow": "The approved-resume comparison period; exact dates and financial values remain protected.",
+      "method": "Approved resume language supported by firsthand operational context; public presentation preserves only the aggregate ratio.",
+      "supportStatus": "careful contribution claim",
+      "uncertainty": "Many business, market, team, and operational factors contributed; public evidence does not isolate Jamie's causal share.",
+      "projectionStatus": "Published only with contributed-to wording.",
+      "nextStep": "Seek a bounded collaborator confirmation of the period and contribution framing without exposing private financial data.",
+      "doNotInfer": [
+        "Jamie caused or single-handedly produced the increase.",
+        "The underlying revenue values, margin, or profit."
+      ]
+    },
+    {
+      "id": "METRIC-FAIR-RENT-30-PAGES",
+      "proofId": "fair-rent-campaign-memory",
+      "displayValue": "30+ pages",
+      "definition": "A lower-bound count of shared pages used for Commercial Rent Stabilization campaign memory and coordination.",
+      "unit": "shared working pages",
+      "timeWindow": "The collaboration period represented in the approved resume and public-safe archive summary",
+      "method": "Approved resume count supported by public-safe collaboration context; raw private coalition records remain excluded.",
+      "supportStatus": "careful pending reproducible public-safe inventory",
+      "uncertainty": "Page boundaries and versions may vary across tools; the claim is a conservative threshold, not a content-completeness measure.",
+      "projectionStatus": "Published with collective-work and privacy guardrails.",
+      "nextStep": "Create a private itemized count and retain only an aggregate method note in the public repository.",
+      "doNotInfer": [
+        "Thirty published public webpages.",
+        "Sole authorship or ownership of coalition strategy."
+      ]
+    },
+    {
+      "id": "METRIC-WOWLIST-35-ECOSYSTEMS",
+      "proofId": "wowlist-community-platform",
+      "displayValue": "roughly 35 city ecosystems",
+      "definition": "Approximate count of city-level organizer ecosystems with meaningful platform activity in the surviving WOWList production data.",
+      "unit": "city ecosystems",
+      "timeWindow": "Surviving production records through the historical platform period",
+      "method": "Database analysis applies a documented minimum-activity threshold to city-linked records and rounds the result for public presentation.",
+      "supportStatus": "reproducible archive-derived approximation",
+      "uncertainty": "Location normalization, incomplete records, and different definitions of adoption can change the count.",
+      "projectionStatus": "Published as roughly 35, never as an exact chapter count.",
+      "nextStep": "Preserve the query and threshold beside future data-audit outputs when the backup is reprocessed.",
+      "doNotInfer": [
+        "Thirty-five official chapters.",
+        "Equal activity, governance, or adoption in every city."
+      ]
+    },
+    {
+      "id": "METRIC-SUNDAY-DINNER-300-GATHERINGS",
+      "proofId": "sunday-dinner-196-participation-infrastructure",
+      "displayValue": "300+ gatherings",
+      "definition": "A conservative aggregate of recurring Sunday Dinner gatherings across the project's operating history.",
+      "unit": "gatherings",
+      "timeWindow": "Project history represented in the approved resume through 2026",
+      "method": "Approved resume aggregate supported by Jamie's project history; a privacy-preserving reconciliation method remains to be documented.",
+      "supportStatus": "careful pending method note",
+      "uncertainty": "Public sources corroborate recurring hosting but do not independently establish the full aggregate.",
+      "projectionStatus": "Published as a lower-bound aggregate without attendance data.",
+      "nextStep": "Reconcile dates privately from non-sensitive scheduling records and publish only count rules and exclusions.",
+      "doNotInfer": [
+        "Three hundred unique people.",
+        "A public attendance database or complete event archive."
+      ]
+    },
+    {
+      "id": "METRIC-SUNDAY-DINNER-20-ARTISTS",
+      "proofId": "sunday-dinner-196-participation-infrastructure",
+      "displayValue": "20+ resident artists",
+      "definition": "A conservative count of artists supported through resident-artist participation connected with 196 and Sunday Dinner.",
+      "unit": "resident artists",
+      "timeWindow": "Project history represented in the approved resume through 2026",
+      "method": "Approved resume aggregate supported by public-safe project history; individual names remain unpublished unless separately approved.",
+      "supportStatus": "careful pending method note and bounded corroboration",
+      "uncertainty": "Residency definitions and overlapping participation require reconciliation; public sources do not independently establish the aggregate.",
+      "projectionStatus": "Published only as 20+ with community privacy boundaries.",
+      "nextStep": "Document inclusion criteria privately and seek role-level corroboration without publishing participant records.",
+      "doNotInfer": [
+        "Ownership of artists' work or comprehensive documentation of their participation.",
+        "Twenty simultaneous residents or twenty public testimonials."
+      ]
+    },
+    {
+      "id": "METRIC-KCTH-APPROPRIATION",
+      "proofId": "kc-town-hall-public-benefit-documentation",
+      "displayValue": "$490,539",
+      "definition": "The amount the Kansas City Council accepted and appropriated following the CCED recommendation for the KC Town Hall project.",
+      "unit": "US dollars appropriated",
+      "timeWindow": "Council action documented in the official project record",
+      "method": "Read from official municipal legislation and appropriation records, with later withdrawal and reappropriation records retained as part of the same evidence chain.",
+      "supportStatus": "exact official-record amount with outcome boundary",
+      "uncertainty": "Appropriation is not evidence that an agreement was executed, funds were received, funds were spent, or the full project was completed.",
+      "projectionStatus": "Published only with the later withdrawal and unused-funds boundary.",
+      "nextStep": "Keep the official ordinance and later disposition records linked whenever the amount is used.",
+      "doNotInfer": [
+        "KC Town Hall received or spent $490,539.",
+        "The full adaptive reuse was completed."
+      ]
+    },
+    {
+      "id": "METRIC-CALLNYC-COUNCIL-ENGAGEMENT",
+      "proofId": "callnyc-civic-data-guidance",
+      "displayValue": "71 issue-recognition posts, 61 issue pages, 26 Council-member accounts",
+      "definition": "Counts within a 110-slot archival census of the @CallNYCapp account: issue-recognition posts linked distinct resident-facing issue pages to Council-member accounts.",
+      "unit": "posts, distinct issue-page URLs, and distinct Council-member accounts",
+      "timeWindow": "The archived @CallNYCapp profile population recovered in 2026",
+      "method": "A full profile-count census recovered 107 of 110 objects and classified the recovered population; three profile-counted objects remain unrecovered.",
+      "supportStatus": "bounded reproducible census",
+      "uncertainty": "The figures describe CallNYC's outgoing public-information practice, not necessarily replies, endorsements, or actions by every mentioned account.",
+      "projectionStatus": "Published with the census denominator and three-object recovery boundary.",
+      "nextStep": "Preserve source identifiers and rerun only if the three missing objects are recovered or the classification method changes.",
+      "doNotInfer": [
+        "Twenty-six Council members endorsed CallNYC.",
+        "Every mention produced constituent-service action or reciprocal engagement."
+      ]
+    }
+  ]
+}

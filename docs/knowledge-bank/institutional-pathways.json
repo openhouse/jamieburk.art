@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "purpose": "Separate observed institutional pathways from interpretations and missing causal links.",
+  "items": [
+    {
+      "id": "PATH-NYCA-DCLA-CULTURAL-PLAN",
+      "title": "Coalition participation to DCLA cultural-plan record",
+      "sourceIds": [
+        "SRC-NYCA-DCLA-MEETING-RECORD-2017-02-03",
+        "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
+        "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
+        "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+        "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19"
+      ],
+      "stages": [
+        {
+          "stage": "need",
+          "status": "observed",
+          "observation": "Artists and small cultural-space operators needed routes into a citywide cultural-planning process."
+        },
+        {
+          "stage": "coalition input",
+          "status": "observed",
+          "observation": "NYC Artist Coalition convened participants, developed priorities, and transmitted recommendations."
+        },
+        {
+          "stage": "agency use",
+          "status": "observed",
+          "observation": "CreateNYC records identify the coalition among contributors, and DCLA testimony described work with the coalition."
+        },
+        {
+          "stage": "decision effect",
+          "status": "partially-observed",
+          "observation": "The official plan records overlapping recommendations; the exact effect of any one coalition contribution on final language remains unresolved."
+        }
+      ],
+      "firstMissingLink": "A source showing which specific coalition recommendation changed, entered, or strengthened which final plan provision.",
+      "nextSources": [
+        "DCLA drafting or disposition records that map public recommendations to final plan language.",
+        "Role-specific accounts from agency and coalition participants."
+      ],
+      "antiClaims": [
+        "Do not say the coalition authored CreateNYC.",
+        "Do not infer that official inclusion proves every recommendation was adopted."
+      ]
+    },
+    {
+      "id": "PATH-NYCA-CABARET-REPEAL",
+      "title": "Artist experience to Cabaret Law repeal record",
+      "sourceIds": [
+        "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19",
+        "SRC-NYC-COUNCIL-INT-1652-2017"
+      ],
+      "stages": [
+        {
+          "stage": "need",
+          "status": "observed",
+          "observation": "Artists and venue operators described the Cabaret Law as discriminatory, burdensome, and disconnected from practical safety."
+        },
+        {
+          "stage": "translation",
+          "status": "observed",
+          "observation": "Jamie and coalition collaborators carried artist experience into public testimony, campaign materials, and safety-policy discussion."
+        },
+        {
+          "stage": "Council use",
+          "status": "observed",
+          "observation": "The Council hearing record includes Jamie's testimony and Council engagement with the coalition's perspective."
+        },
+        {
+          "stage": "institutional outcome",
+          "status": "observed",
+          "observation": "The Council passed legislation repealing the Cabaret Law."
+        }
+      ],
+      "firstMissingLink": "A legislative or collaborator record specifying which parts of coalition research or testimony materially shaped bill language, sponsorship, or votes.",
+      "nextSources": [
+        "Council-member and staff accounts of the evidence they found useful.",
+        "Bill-drafting history and committee materials connecting issue evidence to legislative choices."
+      ],
+      "antiClaims": [
+        "Do not say Jamie or NYC Artist Coalition single-handedly repealed the law.",
+        "Do not convert participation in a successful coalition campaign into sole causation."
+      ]
+    },
+    {
+      "id": "PATH-NYCA-OFFICE-OF-NIGHTLIFE",
+      "title": "Nightlife constituency building to Office of Nightlife",
+      "sourceIds": [
+        "SRC-NYCA-BEDFORD-BOWERY-OFFICE-NIGHTLIFE-2017-08-24",
+        "SRC-NYCA-NIGHTLIFE-TOWN-HALL-2017-10-13"
+      ],
+      "stages": [
+        {
+          "stage": "need",
+          "status": "observed",
+          "observation": "Small venues, artists, and nightlife workers needed a civic interface able to understand cultural and regulatory conditions."
+        },
+        {
+          "stage": "constituency and forum",
+          "status": "observed",
+          "observation": "Coalition advocacy and public events helped make small-space and artist concerns visible to officials and the press."
+        },
+        {
+          "stage": "government response",
+          "status": "observed",
+          "observation": "The city created an Office of Nightlife, and coalition town-hall work created an early public feedback surface for its mandate."
+        },
+        {
+          "stage": "implementation influence",
+          "status": "unresolved",
+          "observation": "The archive does not yet establish which coalition recommendations were adopted in the office's operating model."
+        }
+      ],
+      "firstMissingLink": "Official formation and implementation records connecting coalition input to the office's mandate, staffing, or early priorities.",
+      "nextSources": [
+        "Council bill, hearing, and sponsor records for the office's creation.",
+        "Accounts from Rafael Espinal, Council staff, and early Office of Nightlife personnel."
+      ],
+      "antiClaims": [
+        "Do not say Jamie created the Office of Nightlife alone.",
+        "Do not imply every town-hall recommendation became agency policy."
+      ]
+    },
+    {
+      "id": "PATH-NYCA-MARCH-OVERSIGHT",
+      "title": "Artist reports to MARCH transparency and oversight",
+      "sourceIds": [
+        "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11",
+        "SRC-NYCA-TALKS-NOT-RAIDS-MARCH-2019-02-12",
+        "SRC-NYC-COUNCIL-INT-1156-2018"
+      ],
+      "stages": [
+        {
+          "stage": "need",
+          "status": "observed",
+          "observation": "Artists and cultural-space operators reported harmful multi-agency enforcement experiences and insufficient transparency."
+        },
+        {
+          "stage": "collective evidence",
+          "status": "observed",
+          "observation": "The coalition gathered, organized, and amplified reports through public campaign and hearing work."
+        },
+        {
+          "stage": "Council use",
+          "status": "observed",
+          "observation": "A Council hearing record identifies coalition research and testimony as part of the oversight record."
+        },
+        {
+          "stage": "institutional outcome",
+          "status": "observed-with-boundary",
+          "observation": "The Council enacted reporting requirements; later disbandment of MARCH requires separate official evidence and should not be collapsed into this reporting outcome."
+        }
+      ],
+      "firstMissingLink": "A complete official chain from coalition findings to reporting requirements and, separately, from oversight to any later operational disbandment.",
+      "nextSources": [
+        "Council committee reports and agency reporting produced under the legislation.",
+        "Official records establishing the timing, authority, and rationale of any MARCH disbandment."
+      ],
+      "antiClaims": [
+        "Do not say the coalition alone ended MARCH raids.",
+        "Do not treat reporting legislation and operational disbandment as the same event."
+      ]
+    }
+  ]
+}
