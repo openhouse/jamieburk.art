@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie turns under-structured work into
+usable systems.
 
 ## Stack
 
@@ -29,6 +29,13 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:public-safety
+```
+
+Production promotion must also pass the production gate:
+
+```bash
+npm run check:production
 ```
 
 ## Environment
@@ -80,8 +87,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose text and League Spartan for display headings through
+`next/font/google`. Do not collapse the site back to one typeface, and do not
+commit or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -96,11 +104,13 @@ or serve private, proprietary, or unlicensed font files.
 ## Launch Blockers
 
 - Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm public email and mailto target.
+- Confirm LinkedIn URL.
+- Confirm whether a GitHub URL is public-ready.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run check:production` passes before production promotion.

@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Colophon - Jamie Burkart",
   description:
-    "Colophon for Jamie Burkart's public-safe portfolio and future living notebook.",
+    "Colophon for Jamie Burkart's public-safe, referral-ready proof site.",
   path: "/colophon"
 });
 
@@ -26,13 +26,13 @@ export default function ColophonPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Colophon</h1>
         <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-          This site is built as a small public proof surface and future living
-          notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
-          oil-pastel palette, and a quiet proportional grid derived from his
-          print-layout sketchpad. Staging is reviewable but not indexable, and
-          production should only become indexable after content and metadata
-          review.
+          A small public proof surface built with local MDX content,
+          public-safe artifacts, readable type, accessibility-minded structure,
+          staging-first review, and intentionally limited tracking. The design
+          uses Broadway blue, Jamie&apos;s oil-pastel palette, and a quiet
+          proportional grid derived from his print-layout sketchpad. Staging is
+          reviewable but not indexable, and production should only become
+          indexable after content and metadata review.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">

@@ -11,6 +11,8 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function ContactPage() {
+  const hasApprovedEmail = site.emailHref.startsWith("mailto:");
+
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
@@ -23,7 +25,16 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {hasApprovedEmail ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.emailHref}
+                  >
+                    {site.emailLabel}
+                  </a>
+                ) : (
+                  site.emailLabel
+                )}
               </dd>
             </div>
             <div>
@@ -33,13 +44,35 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {site.linkedinUrl ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.linkedinUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    LinkedIn profile
+                  </a>
+                ) : (
+                  site.linkedinLabel
+                )}
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+                {site.githubUrl ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.githubUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    GitHub profile
+                  </a>
+                ) : (
+                  site.githubLabel
+                )}
               </dd>
             </div>
             <div>
