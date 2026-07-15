@@ -152,7 +152,7 @@
       "correctedSourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "correctionId": "COR-NYCAC-CABARET-HEARING-DATE-2026",
       "approvedContentSha256": "06f499a9c10eee7afe2ee47227919a4994b868690093743a63113d3d161111f2",
-      "approvedRelatedClaimsSha256": "fba235dae9121ebfae5b2bf728a8f6b08b7539bee728eb59d79989468f00a9f3",
+      "approvedRelatedClaimsSha256": "daa163f4a390c5732e755c7b65d16ac42c951ca1d5c011e4ec0f01651a71420c",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-COUNCIL-EVIDENTIARY-USE",
@@ -216,8 +216,8 @@
       "inquiryId": "INQ-KC-TOWN-HALL-COUNCIL-FUNDING-2026",
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall",
-      "approvedMdxSha256": "d074d97da1f62d0b28713a8ce37a904ee9529924f1b875998f8853c1478810c4",
-      "approvedContentSha256": "ea4616c0286ea20369347f2fdc93877a47739cd2cf8adf23cfb99bb08417a94a",
+      "approvedMdxSha256": "7e30fad345948a716c52a5032acfbbd2f2f83f590c7b75a5a71229f267b58f0a",
+      "approvedContentSha256": "ec8c67a2650e7719a09408dbc14652163dc20cce44d681fc37c668e08256d693",
       "contributionSourceId": "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
       "contributionObservationId": "OBS-KC-TOWN-HALL-JAMIE-PLANNING-RESUME",
       "transitionObservationId": "OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
@@ -251,7 +251,7 @@
       "expectedSourceCount": 15,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "fa9e6fc893424cffd7f597a5296acfeed40574e1316dd81c4a4ca132d56ba7a4",
+      "approvedContentSha256": "a66a99b17fbf07c9eca5846a9d1f4cfaba6fd1ce7951b5e4b4c48534795eef6e",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -438,6 +438,40 @@
       "pageId": "196-sunday-dinner",
       "proofId": "sunday-dinner-196-participation-infrastructure"
     },
+    "socialMediaProduction": {
+      "reviewedAt": "2026-07-15",
+      "expectedAccountCount": 14,
+      "expectedNotRecoveredCount": 5,
+      "expectedEngagementEventCount": 29,
+      "expectedIntakeCount": 5,
+      "expectedObservationCount": 11,
+      "expectedSourceCount": 53,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 5,
+      "callNycDistinctCouncilMemberLowerBound": 18,
+      "nycacDistinctCouncilMemberLowerBound": 6,
+      "callNycInquiryId": "INQ-CALLNYC-COUNCIL-ENGAGEMENT",
+      "activeClaimIds": [
+        "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+        "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
+        "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+        "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP"
+      ],
+      "heldClaimId": "CLM-KCSF-SOCIAL-GRANTEE-HIGHLIGHTS",
+      "requiredAccountHandles": [
+        "@CallNYCapp",
+        "@NYCArtC",
+        "@wowlist",
+        "@KCTownHall",
+        "@KCSpacesFund"
+      ],
+      "pageClaimPairs": [
+        ["callnyc", "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT"],
+        ["fair-rent-nyc", "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY"],
+        ["wowlist", "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"],
+        ["kc-town-hall", "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP"]
+      ]
+    },
     "agencyGraph": {
       "expectedEntityCount": 31,
       "expectedRelationCount": 31,
@@ -481,7 +515,7 @@
         "REL-COUNCIL-MARCH-TRANSPARENCY-LAW"
       ],
       "openInquiryIds": [
-        "INQ-CALLNYC-COUNCIL-ENGAGEMENT"
+        "INQ-SOCIAL-ACCOUNT-AUTHORSHIP"
       ]
     }
   },
@@ -555,6 +589,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every press-list appearance across the four campaign sites is preserved with campaign provenance, deduplicated article identity, availability context, scope boundaries, and a maturation disposition."
+    },
+    {
+      "id": "KB-EVAL-SOCIAL-ARCHIVE",
+      "label": "Project social archive and attributable engagement",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every recovered project account has a governed relationship; promoted engagement counts resolve to named public evidence, official-role checks, bounded methods, collective-credit limits, and explicit stopping conditions."
     }
   ],
   "hillClimb": {

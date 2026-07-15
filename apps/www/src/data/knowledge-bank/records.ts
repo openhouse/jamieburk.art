@@ -10,6 +10,7 @@ import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { nycacSourceExpansionII } from "./nycac-source-expansion-ii.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
+import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -34,6 +35,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.intakeItems,
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
+    ...socialMediaProductionJuly2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacInstitutionalCapacity.intakeItems,
@@ -62,6 +64,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.observations,
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
+    ...socialMediaProductionJuly2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacInstitutionalCapacity.observations,
@@ -194,6 +197,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.sources,
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
+    ...socialMediaProductionJuly2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...nycacImplementationEvidence.sources,
     ...nycacSourceExpansion.sources,
@@ -295,6 +299,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
+    ...socialMediaProductionJuly2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacInstitutionalCapacity.claims,
@@ -343,6 +348,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
+    ...socialMediaProductionJuly2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
@@ -364,7 +370,9 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+      "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -372,6 +380,7 @@ const knowledgeBankInput = {
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+      { id: "council-social-engagement", claimId: "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }, {
@@ -391,7 +400,10 @@ const knowledgeBankInput = {
       "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
       "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
       "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
-      "SRC-NYC-ONL-REPORT-2023-24"
+      "SRC-NYC-ONL-REPORT-2023-24",
+      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+      "SRC-NYCAC-X-PROFILE",
+      "SRC-NYCAC-DOCUMENT-JOURNAL-2018"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
@@ -400,6 +412,7 @@ const knowledgeBankInput = {
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] },
       { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] },
       { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] },
+      { id: "coalition-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] },
       { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
       { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
     ]
@@ -411,7 +424,11 @@ const knowledgeBankInput = {
       "SRC-KC-TOWN-HALL-ORDINANCE-190642",
       "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
       "SRC-KC-TOWN-HALL-ORDINANCE-240317",
-      "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"
+      "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
+      "SRC-KCTH-PINNED-2018",
+      "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+      "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
+      "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
     ],
     occurrences: [
       {
@@ -430,7 +447,23 @@ const knowledgeBankInput = {
         claimId: "CLM-KC-TOWN-HALL-JAMIE-PLANNING-CONTRIBUTION",
         projection: "case-study",
         sourceIds: ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
+      },
+      {
+        id: "social-neighborhood-stewardship",
+        claimId: "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP",
+        projection: "case-study",
+        sourceIds: ["SRC-KCTH-PINNED-2018", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020", "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019", "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"]
       }
+    ]
+  }, {
+    id: "wowlist",
+    surface: "/work/wowlist",
+    sourceOrder: [
+      "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+    ],
+    occurrences: [
+      { id: "social-provenance-and-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"] }
     ]
   }, {
     id: "196-sunday-dinner",

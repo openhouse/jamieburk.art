@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
 
@@ -71,7 +72,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   );
   const kcTownHallProof = proofClaims.find((proof) => proof.id === kcTownHall.proofId);
   const kcTownHallPage = knowledgeBank.pages.find((page) => page.id === kcTownHall.pageId);
-  const kcTownHallPageSourceIds = [...kcTownHall.sourceIds, kcTownHall.contributionSourceId];
+  const kcTownHallProofSourceIds = [...kcTownHall.sourceIds, kcTownHall.contributionSourceId];
+  const kcTownHallSocialSourceIds = [
+    "SRC-KCTH-PINNED-2018",
+    "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+    "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
+    "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
+  ];
+  const kcTownHallPageSourceIds = [...kcTownHallProofSourceIds, ...kcTownHallSocialSourceIds];
   const kcTownHallMdx = overrides.kcTownHallMdx ?? readFileSync(
     path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
     "utf8"
@@ -305,7 +313,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       kcTownHallTransitionInquiry.findings.length >= 1 &&
       kcTownHallTransitionInquiry.limitations.length >= 3 &&
       kcTownHallProofCoverage?.status === "partially-source-backed" &&
-      sameOrderedValues(kcTownHallProofCoverage.sourceIds, kcTownHallPageSourceIds) &&
+      sameOrderedValues(kcTownHallProofCoverage.sourceIds, kcTownHallProofSourceIds) &&
       sameOrderedValues(kcTownHallProofCoverage.researchInquiryIds, [kcTownHall.inquiryId]) &&
       /Resolution 190649/.test(kcTownHallProof?.sourceBasis ?? "") &&
       /Ordinance 190642/.test(kcTownHallProof?.sourceBasis ?? "") &&
@@ -314,7 +322,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       /approved resume/i.test(kcTownHallProof?.sourceBasis ?? "") &&
       /municipal records[^.]*do not establish Jamie/i.test(kcTownHallProof?.sourceBasis ?? "") &&
       sameOrderedValues(kcTownHallPage?.sourceOrder, kcTownHallPageSourceIds) &&
-      kcTownHallPage?.occurrences.length === 2 &&
+      kcTownHallPage?.occurrences.length === 3 &&
       kcTownHallPage.occurrences.some((occurrence) =>
         occurrence.id === "council-appropriation-lifecycle" &&
           occurrence.claimId === kcTownHall.claimId &&
@@ -326,6 +334,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           occurrence.claimId === kcTownHall.contributionClaimId &&
           occurrence.projection === "case-study" &&
           sameOrderedValues(occurrence.sourceIds, [kcTownHall.contributionSourceId])
+      ) &&
+      kcTownHallPage.occurrences.some((occurrence) =>
+        occurrence.id === "social-neighborhood-stewardship" &&
+          occurrence.claimId === "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP" &&
+          occurrence.projection === "case-study" &&
+          sameOrderedValues(occurrence.sourceIds, kcTownHallSocialSourceIds)
       ) &&
       kcTownHallRelations.length === expectedKcTownHallRelations.size &&
       kcTownHallRelations.every((relation) => {
@@ -1056,9 +1070,100 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       googleDriveVisualAttributionSafe &&
       googleDriveContentSha256 === googleDrive.approvedContentSha256
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries];
+  const social = suite.pilot.socialMediaProduction;
+  const socialIntakes = socialMediaProductionJuly2026.intakeItems.map((item) => intakeById.get(item.id));
+  const socialObservations = socialMediaProductionJuly2026.observations.map((item) => observationById.get(item.id));
+  const socialSources = socialMediaProductionJuly2026.sources.map((item) => sourceById.get(item.id));
+  const socialClaims = socialMediaProductionJuly2026.claims.map((item) => claimById.get(item.id));
+  const socialInquiries = socialMediaProductionJuly2026.researchInquiries.map((item) => inquiryById.get(item.id));
+  const socialActiveClaims = social.activeClaimIds.map((id) => claimById.get(id));
+  const socialHeldClaim = claimById.get(social.heldClaimId);
+  const socialCallNycInquiry = inquiryById.get(social.callNycInquiryId);
+  const callNycCouncilActors = new Set(
+    socialEngagementEvents
+      .filter((event) => event.projectId === "callnyc" && event.servingPublicOfficial)
+      .map((event) => event.actor)
+  );
+  const nycacCouncilActors = new Set(
+    socialEngagementEvents
+      .filter((event) => event.projectId === "nyc-artist-coalition" && event.servingPublicOfficial)
+      .map((event) => event.actor)
+  );
+  const socialProjectNotePath = path.join(repoRoot, "docs/knowledge-bank/projects/social-media-archive-production.md");
+  const socialProjectNote = readFileSync(socialProjectNotePath, "utf8");
+  const antiClaimsText = readFileSync(path.join(repoRoot, "docs/knowledge-bank/anti-claims.md"), "utf8");
+  const socialMdxByPage = new Map([
+    ["callnyc", readFileSync(path.join(repoRoot, "apps/www/src/content/work/callnyc.mdx"), "utf8")],
+    ["fair-rent-nyc", fairRentMdx],
+    ["wowlist", readFileSync(path.join(repoRoot, "apps/www/src/content/work/wowlist.mdx"), "utf8")],
+    ["kc-town-hall", kcTownHallMdx]
+  ]);
+  const socialPageProjectionComplete = social.pageClaimPairs.every(([pageId, claimId]) => {
+    const page = knowledgeBank.pages.find((item) => item.id === pageId);
+    return page?.occurrences.some((occurrence) => occurrence.claimId === claimId) &&
+      socialMdxByPage.get(pageId)?.includes(`claimId="${claimId}"`);
+  });
+  const socialArchiveText = JSON.stringify({
+    accounts: projectSocialAccounts,
+    events: socialEngagementEvents,
+    intakes: socialIntakes,
+    observations: socialObservations,
+    sources: socialSources,
+    claims: socialClaims,
+    inquiries: socialInquiries
+  });
+  const socialMediaComplete = Boolean(
+    projectSocialAccounts.length === social.expectedAccountCount &&
+      projectSocialAccounts.filter((account) => account.status === "open-inquiry").length === social.expectedNotRecoveredCount &&
+      socialEngagementEvents.length === social.expectedEngagementEventCount &&
+      socialIntakes.length === social.expectedIntakeCount &&
+      socialObservations.length === social.expectedObservationCount &&
+      socialSources.length === social.expectedSourceCount &&
+      socialClaims.length === social.expectedClaimCount &&
+      socialInquiries.length === social.expectedInquiryCount &&
+      social.requiredAccountHandles.every((handle) =>
+        projectSocialAccounts.some((account) => account.handle === handle && account.status === "recovered" && account.accountUrl?.startsWith("https://x.com/"))
+      ) &&
+      projectSocialAccounts.every((account) =>
+        account.status === "recovered" ? account.accountUrl?.startsWith("https://x.com/") : account.relationship === "not-recovered"
+      ) &&
+      socialIntakes.every((intake) =>
+        intake?.disposition === "integrated" && intake.visibility === "public-safe" && intake.sourceIds.length && intake.observationIds.length && intake.boundaries.length >= 2
+      ) &&
+      socialObservations.every((observation) =>
+        observation?.locator && observation.limitations.length && (observation.claimIds.length || observation.researchInquiryIds.length)
+      ) &&
+      socialSources.every((source) =>
+        source?.visibility === "public" && source.canonicalUrl?.startsWith("https://") && source.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      socialClaims.every((claim) =>
+        claim?.evidence.length && claim.boundaries.length >= 2 && claim.antiClaims.length >= 4 && claim.reviewedAt === social.reviewedAt && claim.reviewedBy.length >= 2
+      ) &&
+      socialActiveClaims.every((claim) =>
+        claim?.projections.some((projection) => projection.status === "active" && projection.citationRequired === true && projection.surfaces.length === 1)
+      ) &&
+      socialHeldClaim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0) &&
+      socialInquiries.every((inquiry) =>
+        ["partially-recovered", "inconclusive"].includes(inquiry?.resultStatus) && inquiry.findings.length >= 2 && inquiry.limitations.length >= 2 && inquiry.sourceIds.length
+      ) &&
+      socialEngagementEvents.every((event) =>
+        event.publicUrl.startsWith("https://x.com/") && sourceById.has(event.sourceId)
+      ) &&
+      callNycCouncilActors.size === social.callNycDistinctCouncilMemberLowerBound &&
+      nycacCouncilActors.size === social.nycacDistinctCouncilMemberLowerBound &&
+      socialCallNycInquiry?.resultStatus === "partially-recovered" &&
+      socialCallNycInquiry.publicSummary?.includes("at least 18") &&
+      socialPageProjectionComplete &&
+      existsSync(socialProjectNotePath) &&
+      socialProjectNote.includes("not a complete lifetime corpus") &&
+      socialProjectNote.includes("individual `@NYCArtC` posts") &&
+      antiClaimsText.includes("Account identity") &&
+      antiClaimsText.includes("Do not convert “account not recovered” into “no account existed.”") &&
+      !/\/Users\/|\/Volumes\/|\/private\/tmp|cookie|auth token|session token/i.test(socialArchiveText)
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -1259,6 +1364,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         kcTownHallComplete &&
         archiveProductionComplete &&
         googleDriveComplete &&
+        socialMediaComplete &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 3 && item.sourceIds.length > 1 && item.observationIds.length)
       ),
       evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, one institutional-capacity analysis, one bounded KC Town Hall funding lifecycle, ${archiveIntakes.filter(Boolean).length}/${archive.expectedIntakeCount} working-archive intakes, ${googleDriveIntakes.filter(Boolean).length}/${googleDrive.expectedIntakeCount} Shared Drive intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
@@ -1269,6 +1375,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         allEvaluatedObservations.length >= 30 &&
         archiveProductionComplete &&
         googleDriveComplete &&
+        socialMediaComplete &&
         allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
       ),
       evidence: [`${allEvaluatedObservations.filter(Boolean).length} proposition-level observations have locators, limitations, and claim or inquiry links`]
@@ -1283,6 +1390,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         kcTownHallComplete &&
         archiveProductionComplete &&
         googleDriveComplete &&
+        socialMediaComplete &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
       evidence: [`${expansionSources.filter(Boolean).length + secondExpansionSources.filter(Boolean).length}/${expansion.expectedSourceCount + secondExpansion.expectedSourceCount} source-expansion records, ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles, four KC Town Hall government records, ${archiveSources.filter(Boolean).length}/${archive.expectedSourceCount} working-archive sources, and ${googleDriveSources.filter(Boolean).length}/${googleDrive.expectedSourceCount} Shared Drive sources have explicit support and doesNotEstablish boundaries`]
@@ -1297,7 +1405,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         institutionalCapacityComplete &&
         kcTownHallComplete &&
         archiveProductionComplete &&
-        googleDriveComplete,
+        googleDriveComplete &&
+        socialMediaComplete,
         triangulatedExpansionClaims.length >= 8
       ),
       evidence: [`${allExpansionClaims.filter(Boolean).length} source-expansion claims, one repository-backed implementation claim, and the KC Town Hall appropriation lifecycle matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
@@ -1313,6 +1422,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         kcTownHallComplete &&
         archiveProductionComplete &&
         googleDriveComplete &&
+        socialMediaComplete &&
         Boolean(fairRentPage)
       ),
       evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections; the KC Town Hall page retains the complete bounded funding lifecycle; four mature creative-technology claims remain held while four archive-supported claims have selected projections`]
@@ -1329,13 +1439,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         kcTownHallComplete &&
         archiveProductionComplete &&
         googleDriveComplete &&
+        socialMediaComplete &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
       evidence: [`Hiring-relevant NYCAC assertions, one complete KC Town Hall funding lifecycle, two CRS records, two protected participation-workflow claims, one bounded method claim, and one certificate-backed completion claim have governed projections; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
     },
     {
       criterionId: "KB-EVAL-SAFETY",
-      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
+      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
       evidence: [errors.length ? `${errors.length} canonical validation errors` : "Canonical validation passes with no private-path or protected-locator leak"]
     },
     {
@@ -1351,7 +1462,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         pressClaim?.projections.every((projection) => projection.status === "hold") &&
         pressInquiry?.resultStatus === "partially-recovered" &&
         archiveProductionComplete &&
-        googleDriveComplete
+        googleDriveComplete &&
+        socialMediaComplete
       ),
       evidence: [photoChainComplete
         ? `${heldExpansionClaims.length} newly mature claims, four working-archive claims, and the complete press-archive claim remain held beside open inquiries, memory leads, and the protected photo feedback chain`
@@ -1370,6 +1482,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [pressArchiveComplete
         ? `${pressEntries.length} appearances across ${campaignPressInventory.length} campaign indexes resolve to ${uniquePressArticleSourceIds.length} distinct source-specific readings, including ${pressReadingObservations.length} bounded summaries and ${pressAttributionObservations.length} direct-attribution observations; duplicate campaign selection is preserved`
         : "Campaign press inventory is missing an appearance, source, close reading, attribution, boundary, disposition, redirect defense, or exact count"]
+    },
+    {
+      criterionId: "KB-EVAL-SOCIAL-ARCHIVE",
+      score: score(socialMediaComplete),
+      evidence: [socialMediaComplete
+        ? `${projectSocialAccounts.length} project-account relationships, ${socialEngagementEvents.length} named public interaction edges, a CallNYC lower bound of ${callNycCouncilActors.size} serving Council members, and an NYC Artist Coalition lower bound of ${nycacCouncilActors.size} pass account, source, role, authorship, safety, and projection checks`
+        : "Social archive is missing an account disposition, named public edge, role check, lower-bound method, collective-authorship boundary, source scope, or governed projection"]
     }
   ];
 

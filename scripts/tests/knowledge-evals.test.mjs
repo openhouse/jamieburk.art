@@ -7,20 +7,18 @@ import test from "node:test";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
 const suite = loadKnowledgeEvalSuite();
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-test("knowledge-bank gate records two consecutive independent 5/5 holdouts", () => {
+test("knowledge-bank gate invalidates stale holdouts after the eval suite changes", () => {
   const result = evaluateKnowledgeBank(suite);
-  assert.equal(result.holdout.complete, true);
-  assert.equal(result.holdout.consecutivePassingRuns, 2);
-  assert.deepEqual(result.holdout.judgeIds, [
-    "kc-town-hall-transition-holdout-privacy-editor-2026-07-14",
-    "kc-town-hall-transition-holdout-evidence-editor-2026-07-14"
-  ]);
+  assert.equal(result.holdout.complete, false);
+  assert.equal(result.holdout.consecutivePassingRuns, 0);
+  assert.deepEqual(result.holdout.judgeIds, []);
 });
 
 test("knowledge-bank pilot retains every supplied intake item", () => {
@@ -1562,5 +1560,46 @@ test("complete maturation pilot meets every floor", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.belowMinimum, []);
-  assert.equal(result.accepted, true);
+  assert.equal(result.weightedScore, 5);
+  assert.equal(result.accepted, false);
+});
+
+test("social archive passes its deterministic account and engagement criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SOCIAL-ARCHIVE")?.score, 5);
+  assert.equal(projectSocialAccounts.length, suite.pilot.socialMediaProduction.expectedAccountCount);
+  assert.equal(socialEngagementEvents.length, suite.pilot.socialMediaProduction.expectedEngagementEventCount);
+});
+
+test("CallNYC Council lower bound deduplicates people across interaction types", () => {
+  const actors = new Set(
+    socialEngagementEvents
+      .filter((event) => event.projectId === "callnyc" && event.servingPublicOfficial)
+      .map((event) => event.actor)
+  );
+  assert.equal(actors.size, suite.pilot.socialMediaProduction.callNycDistinctCouncilMemberLowerBound);
+  assert.equal(socialEngagementEvents.filter((event) => event.projectId === "callnyc").length, 20);
+});
+
+test("shared-account authorship remains an open inquiry and KC Spaces stays held", () => {
+  const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === "INQ-SOCIAL-ACCOUNT-AUTHORSHIP");
+  const claim = knowledgeBank.claims.find((item) => item.id === suite.pilot.socialMediaProduction.heldClaimId);
+  assert.equal(inquiry?.resultStatus, "inconclusive");
+  assert.ok(inquiry?.limitations.some((item) => /post authors/i.test(item)));
+  assert.ok(claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0));
+});
+
+test("social archive rejects removal of collective-authorship boundaries", () => {
+  const claim = knowledgeBank.claims.find((item) => item.id === "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY");
+  assert.ok(claim);
+  const originalAntiClaims = claim.antiClaims;
+
+  try {
+    claim.antiClaims = [];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SOCIAL-ARCHIVE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.antiClaims = originalAntiClaims;
+  }
 });

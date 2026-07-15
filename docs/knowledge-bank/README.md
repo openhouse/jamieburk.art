@@ -108,3 +108,9 @@ See
 for the public-safe Shared Drive review, two protected workflow claims promoted
 to the 196 Artists Residency / Sunday Dinner case study, and four media or
 meeting-record leads held for permission and corroboration.
+
+See
+[projects/social-media-archive-production.md](projects/social-media-archive-production.md)
+for the project-account registry, bounded public-timeline inventories,
+attributable civic-engagement evidence, collective-credit boundaries, and
+selective website projections from the July 2026 authenticated X review.

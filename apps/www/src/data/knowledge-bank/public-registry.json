@@ -184,6 +184,205 @@
       ]
     },
     {
+      "id": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+      "title": "Portfolio social-media archival production inventory",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/social-media-archive-production.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Portfolio social-media archival production inventory, July 15, 2026.",
+      "publicNote": "A bounded, reproducible inventory of recovered public account profiles, posts, repost lists, interaction edges, source articles, and explicit stopping conditions.",
+      "doesNotEstablish": [
+        "a complete lifetime archive",
+        "individual authorship of shared-account posts",
+        "unobserved likes",
+        "endorsement from every interaction",
+        "that an unrecovered account never existed"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+      "title": "Minutes of the New York City Council stated meeting, September 28, 2016",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-28",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, minutes of the stated meeting, September 28, 2016.",
+      "publicNote": "The official roster corroborates that the 18 named people in the bounded CallNYC ledger were serving Council members in 2016.",
+      "doesNotEstablish": [
+        "control of social accounts",
+        "authorship of every post",
+        "endorsement of CallNYC",
+        "a complete engagement census"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-X-PROFILE",
+      "title": "NYC Artist Coalition public X profile",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/NYCArtC",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition (@NYCArtC), public X profile, accessed July 15, 2026.",
+      "publicNote": "The profile explicitly names Save NYC Spaces, Let NYC Dance, Talks Not Raids, and Fair Rent NYC as coalition campaigns.",
+      "doesNotEstablish": [
+        "individual post authorship",
+        "Jamie's sole control",
+        "Olympia Kazi's authorship",
+        "sole causation of campaign outcomes"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+      "title": "WOW List first recovered authored post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List, first recovered authored post, February 12, 2014.",
+      "publicNote": "The post credits Richard and Jamie and connects the project to calendars made at Sunday Dinner.",
+      "doesNotEstablish": [
+        "sole authorship",
+        "complete collaborator roster",
+        "platform scale",
+        "current availability"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "title": "WOW List public product-support thread",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public product-support thread, September 1, 2016.",
+      "publicNote": "The thread describes the project as growing from Sunday Dinner and explains historical user workflows.",
+      "doesNotEstablish": [
+        "current service availability",
+        "complete feature history",
+        "individual authorship of every platform component"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-PINNED-2018",
+      "title": "KC Town Hall pinned project-framing post",
+      "organization": "KC Town Hall",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-07-02",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013796430103785472",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall pinned project-framing post, July 2, 2018.",
+      "publicNote": "The post frames the project as participatory restoration of a neighborhood resource and cultural center.",
+      "doesNotEstablish": [
+        "project completion",
+        "funding receipt",
+        "individual authorship",
+        "sole credit"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+      "title": "Melissa Robinson public reply involving KC Town Hall",
+      "organization": "Public-official account",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-08-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Melissa Robinson, public reply involving KC Town Hall, 2020-08-01.",
+      "publicNote": "The post concerns neighborhood conditions.",
+      "doesNotEstablish": [
+        "individual authorship of KC Town Hall posts",
+        "project completion",
+        "receipt of appropriated funds",
+        "sole individual credit"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
+      "title": "Bridging The Gap partner account public authored-mention involving KC Town Hall",
+      "organization": "Community partner public account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-08",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/trutheresme/status/1148277187583389703",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Bridging The Gap partner account, public authored-mention involving KC Town Hall, 2019-07-08.",
+      "publicNote": "The post concerns tire collection and environmental stewardship.",
+      "doesNotEstablish": [
+        "individual authorship of KC Town Hall posts",
+        "project completion",
+        "receipt of appropriated funds",
+        "sole individual credit"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019",
+      "title": "Jolie Justus public reply involving KC Town Hall",
+      "organization": "Public-official account",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jolie Justus, public reply involving KC Town Hall, 2019-04-29.",
+      "publicNote": "The post concerns redevelopment progress and community participation.",
+      "doesNotEstablish": [
+        "individual authorship of KC Town Hall posts",
+        "project completion",
+        "receipt of appropriated funds",
+        "sole individual credit"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
+      "title": "Taking back New York City's nightlife",
+      "organization": "Document Journal",
+      "author": "Daisy Prince",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-02-27",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.documentjournal.com/2018/02/taking-back-new-york-citys-nightlife/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Daisy Prince, 'Taking back New York City's nightlife,' Document Journal, February 27, 2018.",
+      "publicNote": "The article identifies Jamie and Olympia Kazi with NYC Artist Coalition, documents the coalition's public context, and preserves separate participant voices; it misspells Jamie's surname as Burkhart.",
+      "doesNotEstablish": [
+        "individual authorship of @NYCArtC posts",
+        "Jamie's sole founding role",
+        "Olympia Kazi's sole control of the account",
+        "sole causation of policy outcomes"
+      ]
+    },
+    {
       "id": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
       "title": "Second Committee Substitute for Resolution No. 190649",
       "organization": "Council of Kansas City, Missouri",
@@ -892,6 +1091,202 @@
       ]
     },
     {
+      "id": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public uptake was unusually concrete for an independent civic prototype: a bounded review recovered attributable CallNYC interactions from at least 18 serving City Council member accounts, including 17 public reposts and separate member-authored posts.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "bounded method",
+            "17 distinct member reposters",
+            "18-member lower bound",
+            "three member-authored interactions"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
+          "relationship": "corroborating",
+          "supports": [
+            "2016 service status of the 18 named Council members"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Present 18 as a recovered lower bound, not a complete lifetime count.",
+        "Exclude likes and do not treat interaction as endorsement.",
+        "Keep CallNYC archived, unofficial, and independent."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The coalition's shared public identity carried four campaigns across multiple policy cycles. A bounded review recovered posts by at least six serving Council member accounts that directly mentioned @NYCArtC, while individual coalition-post authorship remains deliberately unattributed.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "shared campaign identity",
+            "bounded search method",
+            "six-member lower bound",
+            "collective authorship boundary"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-X-PROFILE",
+          "relationship": "direct-support",
+          "supports": [
+            "four campaigns named in the account profile",
+            "account continuity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
+          "relationship": "context",
+          "supports": [
+            "Jamie and Olympia Kazi identified separately with the coalition",
+            "collective movement context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Do not assign individual authorship of coalition-account posts without post-level evidence.",
+        "Present six as a lower bound from bounded searches.",
+        "Keep campaign and policy outcomes collective."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "WOW List's public account preserves the project's social origin and operating texture: its first recovered post credits Richard and Jamie and connects the platform to Sunday Dinner calendars, while a later support thread explains how organizers joined, published events, and followed community calendars.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "Richard and Jamie attribution",
+            "Sunday Dinner calendar provenance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "DIY community-calendar framing",
+            "historical organizer workflows"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Keep credit shared with Richard, Sunday Dinner participants, organizers, and other collaborators.",
+        "Describe historical workflows rather than current service availability."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The project's public account also documented a wider stewardship arc: participatory restoration communication alongside neighborhood tire-removal work that drew public acknowledgment from civic and environmental partners.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-PINNED-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "participatory restoration framing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+          "relationship": "corroborating",
+          "supports": [
+            "external public acknowledgment of neighborhood stewardship or redevelopment communication"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "external public acknowledgment of neighborhood stewardship or redevelopment communication"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "external public acknowledgment of neighborhood stewardship or redevelopment communication"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Do not publish historical phone numbers or addresses.",
+        "Keep account authorship and operational credit collective unless separately established.",
+        "Do not confuse social acknowledgment with the municipal funding record."
+      ]
+    },
+    {
       "id": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1233,7 +1628,9 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
       ],
       "occurrences": [
         {
@@ -1279,6 +1676,15 @@
           ]
         },
         {
+          "id": "council-social-engagement",
+          "claimId": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+            "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
+          ]
+        },
+        {
           "id": "archived-status",
           "claimId": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
           "projection": "case-study",
@@ -1306,7 +1712,10 @@
         "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
         "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
         "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
-        "SRC-NYC-ONL-REPORT-2023-24"
+        "SRC-NYC-ONL-REPORT-2023-24",
+        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-NYCAC-X-PROFILE",
+        "SRC-NYCAC-DOCUMENT-JOURNAL-2018"
       ],
       "occurrences": [
         {
@@ -1367,6 +1776,16 @@
           ]
         },
         {
+          "id": "coalition-social-identity",
+          "claimId": "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+            "SRC-NYCAC-X-PROFILE",
+            "SRC-NYCAC-DOCUMENT-JOURNAL-2018"
+          ]
+        },
+        {
           "id": "crs-campaign-memory-system",
           "claimId": "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026",
           "projection": "case-study"
@@ -1386,7 +1805,11 @@
         "SRC-KC-TOWN-HALL-ORDINANCE-190642",
         "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
         "SRC-KC-TOWN-HALL-ORDINANCE-240317",
-        "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"
+        "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
+        "SRC-KCTH-PINNED-2018",
+        "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+        "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
+        "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
       ],
       "occurrences": [
         {
@@ -1406,6 +1829,36 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"
+          ]
+        },
+        {
+          "id": "social-neighborhood-stewardship",
+          "claimId": "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-PINNED-2018",
+            "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+            "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
+            "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+      ],
+      "occurrences": [
+        {
+          "id": "social-provenance-and-support",
+          "claimId": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
           ]
         }
       ]

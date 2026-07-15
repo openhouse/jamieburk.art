@@ -32,6 +32,11 @@ lists, or source documents that were not approved for public use.
 
 Do not imply CallNYC is an official or current City service.
 
+Do not turn the recovered lower bound of 18 serving Council member accounts into
+an exact lifetime census, formal endorsement, Council adoption, or proof that
+likes were audited. Do not count an account twice because it both reposted and
+authored another interaction.
+
 Do not broaden “first CouncilStat hackathon” into a claim about the Council's
 first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,
@@ -40,6 +45,24 @@ selected, or a winner without new evidence and review.
 ## WOWList
 
 Do not name collaborators unless approved.
+
+Do not use the public account as proof that Jamie alone created WOW List, that
+the surviving timeline is complete, or that the historical product is still
+operating.
+
+## Social account authorship
+
+Do not attribute a shared project-account post to Jamie, Olympia Kazi, or
+another collaborator without post-level evidence. Account identity,
+account-establishment memory, account administration, and post authorship are
+separate claims.
+
+Do not treat a follow, repost, reply, quote, mention, or like as endorsement of
+every project position. Do not use likes when liker identities are not publicly
+recoverable. Treat engagement counts as bounded, dated lower bounds unless a
+complete platform export establishes otherwise.
+
+Do not convert “account not recovered” into “no account existed.”
 
 ## 196 / Sunday Dinner
 
@@ -53,6 +76,9 @@ decisions, acted as fiscal sponsor, or was one of the campaign's public
 organizers unless the named organizers confirm that framing.
 
 Do not present AI-assisted archival review as a human collaborator testimonial.
+Do not present the 11 recovered public grantee highlights as a complete grantee
+ledger or evidence that Jamie selected grantees, ran the fundraiser, or authored
+the campaign's social posts.
 Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or
 private Drive documents.
@@ -65,6 +91,10 @@ turn recommendation, acceptance, negotiation authority, or appropriation into
 receipt, expenditure, construction, completion, or Jamie's causal credit. Any
 account of the 2019 appropriation must retain the later non-disbursement,
 withdrawal, and return of the full unused amount.
+
+Do not publish historical phone numbers or addresses from social posts. Do not
+use account activity or external replies as proof of funding receipt, project
+completion, individual post authorship, or every reported operating metric.
 
 ## Source-Backed Team Memory
 
