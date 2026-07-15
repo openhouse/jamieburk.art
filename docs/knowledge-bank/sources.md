@@ -326,3 +326,18 @@ The protected census has no public URL. Raw post text, audience-unknown rows,
 comments, responder identities, media, authentication state, and record-level
 metrics remain outside Git. See
 `docs/knowledge-bank/projects/jamie-personal-facebook-posts.md`.
+
+## WOW List, Sunday Dinner, and Call Script Archival Production
+
+The July 15 pass normalizes two protected project archives, two public
+Facebook surfaces, one attributed first-hand statement, and one public
+aggregate audit. The protected WOW List snapshot and Sunday Dinner workbook
+have no public URL. Their public source record contains only source digests,
+aggregate measures, methods, and limitations.
+
+The Call Script Page and January 2017 event discussion are public sources. They
+support the direct `popular.vote` link, public naming poll, collaborative
+Commissioner-letter invitation, and shared-note workflow. They do not support
+historical account permissions, a poll denominator, complete coalition
+formation, sole authorship, or policy causality. See
+`docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript.md`.

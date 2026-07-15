@@ -139,6 +139,15 @@ import {
   jamiePersonalFacebookPostSources,
 } from "../../apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts.ts";
 import {
+  wowListSundayDinnerCallScriptAggregateAudit,
+  wowListSundayDinnerCallScriptCaptures,
+  wowListSundayDinnerCallScriptClaims,
+  wowListSundayDinnerCallScriptInquiries,
+  wowListSundayDinnerCallScriptObservations,
+  wowListSundayDinnerCallScriptResearchTasks,
+  wowListSundayDinnerCallScriptSources,
+} from "../../apps/www/src/data/knowledge-bank/wowlist-sunday-dinner-callscript.ts";
+import {
   classifyNycacMissionSignals,
   extractNycacSourcePostBody,
   normalizeNycacSourceRecordType,
@@ -284,6 +293,109 @@ test("holdout judgments and repeat runs are required", () => {
   const errors = validateKnowledgeDevelopmentSuite(candidate).errors.join("\n");
   assert.match(errors, /holdout judgments/);
   assert.match(errors, /two consecutive passing runs/);
+});
+
+test("WOW List, Sunday Dinner, and Call Script audit is aggregate-only and promotion-safe", () => {
+  assert.equal(wowListSundayDinnerCallScriptCaptures.length, 3);
+  assert.equal(wowListSundayDinnerCallScriptSources.length, 6);
+  assert.equal(wowListSundayDinnerCallScriptObservations.length, 9);
+  assert.equal(wowListSundayDinnerCallScriptClaims.length, 4);
+  assert.equal(wowListSundayDinnerCallScriptResearchTasks.length, 2);
+  assert.equal(wowListSundayDinnerCallScriptInquiries.length, 1);
+
+  assert.equal(wowListSundayDinnerCallScriptAggregateAudit.wowList.counts.users, 1846);
+  assert.equal(
+    wowListSundayDinnerCallScriptAggregateAudit.wowList.counts.postsOrEvents,
+    16142,
+  );
+  assert.equal(
+    wowListSundayDinnerCallScriptAggregateAudit.wowList.counts.tagsOrLists,
+    23864,
+  );
+  assert.equal(
+    wowListSundayDinnerCallScriptAggregateAudit.wowList.activeCityScenes.minimum,
+    35,
+  );
+  assert.equal(
+    wowListSundayDinnerCallScriptAggregateAudit.sundayDinner.numberedEntries,
+    345,
+  );
+  assert.equal(
+    wowListSundayDinnerCallScriptAggregateAudit.sundayDinner.formulaBackedMealsServed,
+    2783,
+  );
+  assert.equal(
+    wowListSundayDinnerCallScriptAggregateAudit.callScript.displayedNamingPoll[0]
+      .sharePercent,
+    57,
+  );
+
+  const selectedClaimIds = wowListSundayDinnerCallScriptClaims
+    .filter((claim) => claim.selectionState === "selected")
+    .map((claim) => claim.id)
+    .sort();
+  assert.deepEqual(selectedClaimIds, [
+    "CLM-196-ATTENDANCE-WORKBOOK-SCALE",
+    "CLM-CALLSCRIPT-CIVIC-FACILITATION-BRIDGE",
+    "CLM-WOWLIST-DATABASE-SNAPSHOT-SCALE",
+  ]);
+
+  const jamieRoleClaim = wowListSundayDinnerCallScriptClaims.find(
+    (claim) => claim.id === "CLM-CALLSCRIPT-JAMIE-ESTABLISHMENT-ROLE",
+  );
+  assert.equal(jamieRoleClaim?.selectionState, "candidate");
+  assert.equal(jamieRoleClaim?.publicationState, "public-safe");
+  assert.ok(
+    jamieRoleClaim?.projections.every(
+      (projection) => projection.status === "hold" && !projection.surfaces.length,
+    ),
+  );
+
+  const protectedSources = wowListSundayDinnerCallScriptSources.filter(
+    (source) => source.visibility !== "public",
+  );
+  assert.equal(protectedSources.length, 3);
+  assert.ok(
+    protectedSources.every(
+      (source) =>
+        !source.canonicalUrl && !source.archiveUrl && !source.assetUrl,
+    ),
+  );
+
+  const publicPayload = JSON.stringify({
+    audit: wowListSundayDinnerCallScriptAggregateAudit,
+    records: {
+      captures: wowListSundayDinnerCallScriptCaptures,
+      sources: wowListSundayDinnerCallScriptSources,
+      observations: wowListSundayDinnerCallScriptObservations,
+      claims: wowListSundayDinnerCallScriptClaims,
+      tasks: wowListSundayDinnerCallScriptResearchTasks,
+      inquiries: wowListSundayDinnerCallScriptInquiries,
+    },
+  });
+  assert.doesNotMatch(publicPayload, /\/Users\/|\/Volumes\/|Mobile Documents/);
+  assert.doesNotMatch(publicPayload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+  assert.doesNotMatch(publicPayload, /\b\d{3}[-.)\s]\d{3}[-\s]\d{4}\b/);
+  assert.match(publicPayload, /no vote denominator/i);
+  assert.match(publicPayload, /not (?:a )?unique-person|not unique people/i);
+  assert.match(publicPayload, /not unique active users/i);
+
+  const wowListPage = readFileSync(
+    "apps/www/src/content/work/wowlist.mdx",
+    "utf8",
+  );
+  const sundayDinnerPage = readFileSync(
+    "apps/www/src/content/work/196-sunday-dinner.mdx",
+    "utf8",
+  );
+  const fairRentPage = readFileSync(
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "utf8",
+  );
+  assert.match(wowListPage, /CLM-WOWLIST-DATABASE-SNAPSHOT-SCALE/);
+  assert.match(sundayDinnerPage, /CLM-196-ATTENDANCE-WORKBOOK-SCALE/);
+  assert.match(fairRentPage, /CLM-CALLSCRIPT-CIVIC-FACILITATION-BRIDGE/);
+  assert.doesNotMatch(fairRentPage, /CLM-CALLSCRIPT-JAMIE-ESTABLISHMENT-ROLE/);
 });
 
 test("campaign press corpus is complete, ordered, deduplicated, and archived", () => {

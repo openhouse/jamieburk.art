@@ -254,3 +254,19 @@ outcomes.
 Do not publish raw records, ordinary-life material, comments, responder names,
 media, audience-unknown text, private interaction state, or authentication
 context.
+
+## WOW List, Sunday Dinner, and Call Script aggregates
+
+Do not convert WOW List database rows into unique active users, attended
+events, current adoption, revenue, or causal impact. Do not say the 35-plus
+city-scene threshold proves citywide adoption.
+
+Do not convert Sunday Dinner's 2,783 formula-backed meals-served total into
+unique people, complete attendance, or an independently audited measure. Do
+not call every numbered workbook entry an in-person dinner.
+
+Do not say `popular.vote` alone created NYC Artist Coalition, infer a poll vote
+count from displayed percentages, or treat the current Facebook response
+counter as historical attendance. Do not say Jamie alone named, founded, or
+authored the coalition. Jamie's Call Script role remains attributed and held
+pending corroboration.

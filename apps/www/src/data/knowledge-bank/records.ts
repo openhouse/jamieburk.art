@@ -125,6 +125,14 @@ import {
   jamiePersonalFacebookPostResearchTasks,
   jamiePersonalFacebookPostSources,
 } from "./jamie-personal-facebook-posts.ts";
+import {
+  wowListSundayDinnerCallScriptCaptures,
+  wowListSundayDinnerCallScriptClaims,
+  wowListSundayDinnerCallScriptInquiries,
+  wowListSundayDinnerCallScriptObservations,
+  wowListSundayDinnerCallScriptResearchTasks,
+  wowListSundayDinnerCallScriptSources,
+} from "./wowlist-sunday-dinner-callscript.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -144,6 +152,7 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostCaptures,
     ...kcSpacesFundFacebookPostCaptures,
     ...jamiePersonalFacebookPostCaptures,
+    ...wowListSundayDinnerCallScriptCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -162,6 +171,7 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
     ...jamiePersonalFacebookPostSources,
+    ...wowListSundayDinnerCallScriptSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -375,6 +385,7 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostObservations,
     ...kcSpacesFundFacebookPostObservations,
     ...jamiePersonalFacebookPostObservations,
+    ...wowListSundayDinnerCallScriptObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -393,6 +404,7 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
     ...jamiePersonalFacebookPostClaims,
+    ...wowListSundayDinnerCallScriptClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -721,6 +733,7 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostResearchTasks,
     ...kcSpacesFundFacebookPostResearchTasks,
     ...jamiePersonalFacebookPostResearchTasks,
+    ...wowListSundayDinnerCallScriptResearchTasks,
   ],
   researchInquiries: [
     {
@@ -768,6 +781,7 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostInquiries,
     ...kcSpacesFundFacebookPostInquiries,
     ...jamiePersonalFacebookPostInquiries,
+    ...wowListSundayDinnerCallScriptInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
@@ -908,6 +922,9 @@ const knowledgeBankInput = {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
       sourceOrder: [
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-15",
+        "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016-12-11",
+        "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
         "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
         "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21",
         "SRC-NYCAC-CREATENYC-APPENDIX-2017",
@@ -941,6 +958,16 @@ const knowledgeBankInput = {
         "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01",
       ],
       occurrences: [
+        {
+          id: "callscript-civic-facilitation-bridge",
+          claimId: "CLM-CALLSCRIPT-CIVIC-FACILITATION-BRIDGE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-15",
+            "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016-12-11",
+            "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+          ],
+        },
         {
           id: "crs-operating-system",
           claimId: "CLM-CRS-COALITION-OPERATING-SYSTEM",
@@ -1085,6 +1112,7 @@ const knowledgeBankInput = {
       id: "wowlist",
       surface: "/work/wowlist",
       sourceOrder: [
+        "SRC-WOWLIST-SUNDAY-CALLSCRIPT-AGGREGATE-AUDIT-2026-07-15",
         "SRC-WOWLIST-FACEBOOK-POSTS-FULL-POPULATION-2026-07-15",
         "SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14",
         "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
@@ -1099,6 +1127,14 @@ const knowledgeBankInput = {
         "SRC-WOWLIST-POPULAR-VOTE-2016-11-14",
       ],
       occurrences: [
+        {
+          id: "database-snapshot-scale",
+          claimId: "CLM-WOWLIST-DATABASE-SNAPSHOT-SCALE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-WOWLIST-SUNDAY-CALLSCRIPT-AGGREGATE-AUDIT-2026-07-15",
+          ],
+        },
         {
           id: "facebook-publishing-stewardship",
           claimId: "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
@@ -1131,10 +1167,19 @@ const knowledgeBankInput = {
       id: "196-sunday-dinner",
       surface: "/work/196-sunday-dinner",
       sourceOrder: [
+        "SRC-WOWLIST-SUNDAY-CALLSCRIPT-AGGREGATE-AUDIT-2026-07-15",
         "SRC-JAMIE-WOWLIST-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
         "SRC-JAMIE-FB-EVENT-SUNDAY-DINNER-200-2016-06-26",
       ],
       occurrences: [
+        {
+          id: "attendance-workbook-scale",
+          claimId: "CLM-196-ATTENDANCE-WORKBOOK-SCALE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-WOWLIST-SUNDAY-CALLSCRIPT-AGGREGATE-AUDIT-2026-07-15",
+          ],
+        },
         {
           id: "facebook-milestone-chronology",
           claimId: "CLM-196-FACEBOOK-MILESTONE-CHRONOLOGY",

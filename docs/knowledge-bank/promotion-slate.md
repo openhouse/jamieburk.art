@@ -191,6 +191,12 @@ website selection. It is a recommendation, not publication approval.
 
 ## Research Before Promotion
 
+- `CLM-CALLSCRIPT-JAMIE-ESTABLISHMENT-ROLE`: preserve Jamie's first-hand
+  account that he established Call Script and facilitated the participatory
+  process around NYC Artist Coalition's naming. Recover dated Page, design,
+  domain, source-code, event-production, or collaborator evidence before
+  selecting the individual role claim.
+
 - `CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS`: useful product-discovery
   lineage. Keep it anonymous and distinct from the later proposal; neither
   stage establishes market validation, purchase, or implementation.

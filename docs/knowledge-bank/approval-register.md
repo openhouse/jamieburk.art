@@ -48,6 +48,11 @@ The repo is public. Approval here means approved for public-safe repository and 
   complete 38-record account population and bounded 10-account third-party
   reception result may describe observable publishing and distribution
   patterns, but neither is a total-adoption or impact measure.
+- WOW List database scale: the July 22, 2017 aggregate snapshot counts are
+  approved for the case study. Call them historical database rows, define the
+  35-plus active-city threshold as at least 50 geocoded posts or events, and do
+  not convert rows into active users, attended events, current use, revenue, or
+  impact. Raw database records remain outside Git.
 - WOW List Facebook publishing: Jamie's 2015-2018 Page-publishing stewardship
   is approved. State that Facebook attributes all 50 recovered details to
   Jamie as publisher and that four additional records remain table-only. Keep
@@ -55,6 +60,17 @@ The repo is public. Approval here means approved for public-safe repository and 
   limits, and the distinction between Page publishing and exclusive social-
   platform management attached.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording. Six surviving personal Facebook records, including the 100th and 200th milestones, are approved as bounded chronology evidence. The 200th may name Julia Fredenburg and Jamie as displayed cohosts and may note its direct WOW List event link. Do not treat six as the full project population.
+- Sunday Dinner workbook scale: 345 numbered entries from January 2012 through
+  March 2021 and the formula-backed project total of 2,783 meals served are
+  approved with attribution to the protected workbook. Numbered entries are
+  not a complete event census; meals served are not unique people or an
+  independently audited attendance measure. Person-level rows remain private.
+- Call Script civic-facilitation bridge: the direct `popular.vote` link, public
+  NYC Artist Coalition naming poll, collaborative Commissioner-letter
+  invitation, and meeting-note offer are approved for the Fair Rent NYC case
+  study. The displayed 57% share has no visible vote denominator. Jamie's
+  individual establishment and facilitation role remains a public-safe
+  candidate pending dated or collaborator corroboration.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Spaces Fund Facebook posts: the bounded 40-card surviving-public census,
   collective relief-cycle interpretation, ten named Page spotlights, public

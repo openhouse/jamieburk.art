@@ -41,14 +41,26 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Maintained a mixed-format archive overview workflow with extraction, sampling,
   skip rules, and explicit sensitive-output warnings.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- A July 2017 WOW List database snapshot records 1,846 users, 16,142 posts or
+  events, 23,864 tags or lists, 28,837 list follows, 20,927 saves, and 15,915
+  calendar events across at least 35 active city scenes under a defined
+  geocoded-activity threshold.
 - Stewarded WOW List's Facebook publishing across its surviving 2015-2018 Page
   record: Facebook attributes all 50 recovered post details to Jamie as
   publisher; four additional records remain table-only. WOW List was co-built
   with Richard Album, and quoted or shared voices retain their own authorship.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+- A longitudinal Sunday Dinner workbook records 345 numbered entries from
+  January 2012 through March 2021 and a formula-backed project total of 2,783
+  meals served. This is not a unique-person or complete-attendance measure.
 - Six surviving Facebook event records document Sunday Dinner from 2013-2017,
   including the 100th and 200th gatherings; the 200th names Julia Fredenburg
   and Jamie as hosts and links to a corresponding WOW List event record.
+- Call Script linked directly to WOW List's `popular.vote` event-sharing
+  surface. Its January 2017 DCLA event discussion preserved a public NYC
+  Artist Coalition naming poll, collaborative letter drafting, and shared
+  meeting documentation. Collective formation credit and the missing poll
+  denominator remain explicit.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Served as the City-listed developer/presenter for KC Town Hall's adaptive-reuse proposal; the CCED Board recommended $490,539 and the Council appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded withdrawal and reappropriated the unused funds in 2024.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.

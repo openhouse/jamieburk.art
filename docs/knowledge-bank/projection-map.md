@@ -69,13 +69,21 @@ The Fair Rent NYC case study additionally selects
 `CLM-CRS-COALITION-OPERATING-SYSTEM` and
 `CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN`, plus
 `CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`,
+`CLM-CALLSCRIPT-CIVIC-FACILITATION-BRIDGE`,
 `CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE`,
 `CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE`, and
 `CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT`. The Facebook response projection
 must say RSVP actions rather than attendance. The individual Jamie event-system
 role and democracy-lab interpretation remain held knowledge depth. The 196 / Sunday Dinner case study
-selects `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`. Their protected source records
+selects `CLM-196-RESIDENCY-ONBOARDING-HANDOFF` and
+`CLM-196-ATTENDANCE-WORKBOOK-SCALE`. The WOW List case study selects
+`CLM-WOWLIST-DATABASE-SNAPSHOT-SCALE`. Their protected source records
 must not render as public citations.
+
+`CLM-CALLSCRIPT-JAMIE-ESTABLISHMENT-ROLE` remains held until dated records or
+collaborator proof notes corroborate Jamie's individual role. The public site
+may project the observable Call Script workflow without assigning every action
+or the coalition's formation to one person.
 
 For `CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE`, retain the temporal distinction:
 February testimony described the DIY process without naming the coalition; May

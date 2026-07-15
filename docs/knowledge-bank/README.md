@@ -125,6 +125,13 @@ rechecked public project posts, bounded stakeholder and interaction treatment,
 and strict separation of professional archive production from private life.
 
 See
+[projects/wowlist-sunday-dinner-callscript.md](projects/wowlist-sunday-dinner-callscript.md)
+for the aggregate-only WOW List database and Sunday Dinner workbook audits,
+plus the public-source bridge from `popular.vote` event sharing to Call
+Script's participatory naming, letter-drafting, and meeting-documentation
+workflow around NYC Artist Coalition's formation.
+
+See
 [projects/jamie-wowlist-facebook-events.md](projects/jamie-wowlist-facebook-events.md)
 for the reconciled 21-record personal hosted-event chronology, six Sunday
 Dinner records, source-link and response inventories, public-safety boundary,
