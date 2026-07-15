@@ -17,8 +17,8 @@ status.
 
 ## Public-Safe Claim
 
-When Jamie's stewardship of KC Town Hall concluded, he transitioned the project
-to a mission-aligned organization.
+Jamie reports that, when his stewardship of KC Town Hall concluded, he
+transitioned the project to a mission-aligned organization.
 
 ## Boundary
 

@@ -8,11 +8,11 @@
     "two independent evaluator passes required"
   ],
   "minimumCollectiveClaimCount": 60,
-  "collectiveClaimsSha256": "253e168d297d8bfc2674c8058d8cfd96d3078976d31ca9c28af45781b81645c8",
-  "collectiveRuntimeSha256": "b0fa70da471d67f867f974048b62f659bdab2ee2b9c5b29b0e7dab2c30cffbd5",
+  "collectiveClaimsSha256": "dc5a59c5a0ae588423ccdd899c201a083d28f5c099eb4f0db5ab7921d27dd9a1",
+  "collectiveRuntimeSha256": "ecd46cf55a9a5a82632f0762908a13696532800b9ee23496f284478750f6da1d",
   "statementSupportSha256": "18efa21217bc26a4a91777d4597bc06140aca1fcd871811ce230c1953b2aed8b",
   "projectionRouteBindingsSha256": "66fb867401e7d1e631b5ffb58197a1a6bc9523a5b9926471f7a0d56d40fd4283",
-  "publicSurfaceSha256": "602c4148f9ddb08ed21f8fa0d9e1493b466796aa2bd05a9d0069557989c21590",
+  "publicSurfaceSha256": "1187ad54d54ae127f1b4ce9a889dad26ca94691324adfb914568a15f422951d9",
   "requiredClaimProjects": {
     "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW": "196-sunday-dinner",
     "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE": "fair-rent-nyc",

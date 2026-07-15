@@ -47,7 +47,7 @@ export const kcTownHallCouncilRecordBatch20260713: {
       capturedAt: "2026-07-14",
       capturedFrom: "Jamie Burkart portfolio working session",
       publicSafeSummary:
-        "Jamie transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded.",
+        "Jamie reports that he transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded.",
       projects: ["kc-town-hall"],
       status: "integrated",
       disposition: "claim-created",
@@ -161,7 +161,7 @@ export const kcTownHallCouncilRecordBatch20260713: {
       publicCitation:
         "Jamie Burkart, first-person confirmation of the KC Town Hall project handoff, July 14, 2026. Underlying context not published.",
       supportsGenerally: [
-        "Jamie transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded"
+        "Jamie's first-person report that he transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded"
       ],
       doesNotEstablish: [
         "the recipient organization's identity",
@@ -352,7 +352,7 @@ export const kcTownHallCouncilRecordBatch20260713: {
         {
           key: "case-study",
           text:
-            "When Jamie's stewardship of KC Town Hall concluded, he transitioned the project to a mission-aligned organization.",
+            "Jamie reports that, when his stewardship of KC Town Hall concluded, he transitioned the project to a mission-aligned organization.",
           status: "active",
           citationRequired: false,
           surfaces: ["/work/kc-town-hall"]
