@@ -72,3 +72,7 @@ See [citational-care.md](citational-care.md) for the authoring and validation
 workflow, [development-loop.md](development-loop.md) for the recursive
 knowledge-development protocol, and [projects/callnyc.md](projects/callnyc.md)
 for the first complete citation pilot.
+
+Archive-production run records live in [runs](runs). The Google Drive pass is
+documented in
+[2026-07-14-google-drive-archive-production.md](runs/2026-07-14-google-drive-archive-production.md).

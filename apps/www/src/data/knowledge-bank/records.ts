@@ -1,5 +1,6 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
 import { kcTownHallCouncilRecordBatch20260713 } from "./batches/kc-town-hall-council-record-2026-07-13.ts";
+import { googleDriveProductionBatch20260714 } from "./batches/google-drive-production-2026-07-14.ts";
 import { nacCampaignPressBatch20260713 } from "./batches/nac-campaign-press-2026-07-13.ts";
 import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-07-13.ts";
 import { teamsArchiveProductionBatch20260714 } from "./batches/teams-archive-production-2026-07-14.ts";
@@ -201,7 +202,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilRecordBatch20260713.intake,
     ...nacPublicSourceBatch20260713.intake,
     ...nacCampaignPressBatch20260713.intake,
-    ...teamsArchiveProductionBatch20260714.intake
+    ...teamsArchiveProductionBatch20260714.intake,
+    ...googleDriveProductionBatch20260714.intake
   ],
   sources: [
     {
@@ -439,7 +441,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilRecordBatch20260713.sources,
     ...nacPublicSourceBatch20260713.sources,
     ...nacCampaignPressBatch20260713.sources,
-    ...teamsArchiveProductionBatch20260714.sources
+    ...teamsArchiveProductionBatch20260714.sources,
+    ...googleDriveProductionBatch20260714.sources
   ],
   sourceAssertions: [
     {
@@ -625,7 +628,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilRecordBatch20260713.sourceAssertions,
     ...nacPublicSourceBatch20260713.sourceAssertions,
     ...nacCampaignPressBatch20260713.sourceAssertions,
-    ...teamsArchiveProductionBatch20260714.sourceAssertions
+    ...teamsArchiveProductionBatch20260714.sourceAssertions,
+    ...googleDriveProductionBatch20260714.sourceAssertions
   ],
   claims: [
     {
@@ -971,7 +975,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilRecordBatch20260713.claims,
     ...nacPublicSourceBatch20260713.claims,
     ...nacCampaignPressBatch20260713.claims,
-    ...teamsArchiveProductionBatch20260714.claims
+    ...teamsArchiveProductionBatch20260714.claims,
+    ...googleDriveProductionBatch20260714.claims
   ],
   researchTasks: [
     {
@@ -1079,7 +1084,8 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12"
     },
     ...nacCampaignPressBatch20260713.researchTasks,
-    ...teamsArchiveProductionBatch20260714.researchTasks
+    ...teamsArchiveProductionBatch20260714.researchTasks,
+    ...googleDriveProductionBatch20260714.researchTasks
   ],
   researchInquiries: [
     {
@@ -1097,7 +1103,8 @@ const knowledgeBankInput = {
     },
     ...kcTownHallCouncilRecordBatch20260713.researchInquiries,
     ...nacPublicSourceBatch20260713.researchInquiries,
-    ...nacCampaignPressBatch20260713.researchInquiries
+    ...nacCampaignPressBatch20260713.researchInquiries,
+    ...googleDriveProductionBatch20260714.researchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },

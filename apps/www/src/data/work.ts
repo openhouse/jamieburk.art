@@ -189,6 +189,8 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "fair-rent-public-data-pilot",
+      "fair-rent-2023-web-relaunch",
+      "commercial-vacancy-quarterly-corpus",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
       "nyc-artist-coalition-public-outcome-arc",
@@ -222,6 +224,18 @@ const workItemsInput = [
         title: "Privacy-preserving data pilot",
         description:
           "A smallest-serious-v1 for aggregate commercial vacancy and lease-cost indicators, with schema, coverage, suppression, methods, and explicit confidential-data exclusions.",
+        type: "source map"
+      },
+      {
+        title: "2023 website relaunch",
+        description:
+          "A versioned shared implementation checklist connected web updates, public action tools, campaign calls, press materials, forms, documents, and follow-through.",
+        type: "website"
+      },
+      {
+        title: "20-year vacancy-data corpus",
+        description:
+          "A structured working corpus of 81 quarterly HUD-USPS business-vacancy snapshots spanning Q4 2005 through Q4 2025.",
         type: "source map"
       },
       {
@@ -458,11 +472,14 @@ const workItemsInput = [
     featured: true,
     priority: 5,
     visibility: "summary-only",
-    proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
+    proofBankIds: [
+      "sunday-dinner-196-participation-infrastructure",
+      "196-residency-onboarding-workflow"
+    ],
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "Repeatable participation infrastructure for gatherings and resident artists, including a documented acceptance and onboarding workflow plus dedicated collaboration workspaces for project and media handoffs.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -470,6 +487,12 @@ const workItemsInput = [
         description:
           "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
         type: "workflow"
+      },
+      {
+        title: "Residency acceptance and onboarding",
+        description:
+          "A reusable workflow for proposal review, orientation, space configuration, independent access, and dedicated collaborator handoffs.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
@@ -486,7 +509,8 @@ const workItemsInput = [
     evidence: [
       "300+ hosted gatherings",
       "20+ resident artists supported",
-      "Onboarding and participation systems",
+      "Documented residency acceptance and onboarding workflow",
+      "Dedicated collaboration workspaces for project and media handoffs",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {

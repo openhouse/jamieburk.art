@@ -1382,6 +1382,90 @@
       "boundaries": [
         "The source establishes a designed method and consulting offer, not a completed engagement, accepted proposal, or production deployment."
       ]
+    },
+    {
+      "id": "CLM-FAIRRENT-WEB-RELAUNCH-2023",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie helped coordinate and implement FairRentNYC's February 2023 website relaunch through a versioned shared checklist connecting web updates, public action tools, campaign calls, press materials, forms, and follow-through.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Coordinated a campaign-site relaunch through a versioned implementation checklist spanning web, calls, forms, press materials, public documents, and follow-through.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The record documents shared implementation with a campaign collaborator and does not establish sole authorship, the full contributor roster, or ownership of campaign strategy."
+      ]
+    },
+    {
+      "id": "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie made artist-residency handoffs repeatable through a documented acceptance and onboarding workflow for proposal review, orientation, space configuration, independent access, and dedicated collaboration workspaces.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Built a repeatable residency acceptance and onboarding workflow, with dedicated collaboration workspaces supporting project and media handoffs.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Resident names, proposals, images, access details, and private communications remain protected; the workflow does not make Jamie the author or owner of resident work."
+      ]
+    },
+    {
+      "id": "CLM-VACANCY-QUARTERLY-CORPUS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie assembled a 20-year working corpus of 81 quarterly HUD-USPS business-vacancy snapshots, organized from Q4 2005 through Q4 2025 for longitudinal research.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Assembled and organized 81 quarterly HUD-USPS business-vacancy snapshots into a 20-year longitudinal research corpus.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "HUD and USPS originated the government data. The archive establishes corpus assembly and organization, not data authorship, completed validation or analysis, a production pipeline, or agency adoption."
+      ]
     }
   ],
   "pages": [

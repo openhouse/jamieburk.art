@@ -14,8 +14,11 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Designed a privacy-preserving pilot data product for geography-aggregated commercial vacancy and lease-cost indicators, with schema, coverage and suppression, methods, and explicit confidential-data exclusions.
+- Helped coordinate and implement FairRentNYC's February 2023 website relaunch through a versioned shared checklist connecting web updates, public action tools, campaign calls, press materials, forms, and follow-through.
+- Assembled a 20-year working corpus of 81 quarterly HUD-USPS business-vacancy snapshots spanning Q4 2005 through Q4 2025.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+- Built a repeatable artist-residency acceptance and onboarding workflow covering proposal review, orientation, space configuration, independent access, and dedicated collaboration workspaces.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation; Kansas City Council Resolution 190649 accepted the CCED Board's $490,539 recommendation and authorized funding-agreement negotiations.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.

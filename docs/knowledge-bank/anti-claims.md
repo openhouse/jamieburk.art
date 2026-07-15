@@ -32,6 +32,13 @@ Do not say the City adopted or implemented Jamie's commercial-data proposal,
 that the proposed indicators were published, or that Jamie accessed
 confidential tax, business, tenant, or lease records.
 
+Do not say Jamie alone relaunched FairRentNYC or authored every campaign asset.
+Do not present the private implementation record as public evidence.
+
+Do not say Jamie created HUD-USPS vacancy data, completed or validated every
+analysis, built a production pipeline, or secured agency adoption. The current
+claim is corpus assembly and organization.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -49,6 +56,16 @@ Do not name collaborators unless approved.
 
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+Do not identify residents, publish proposals or access instructions, expose
+collaborator workspaces, or imply that Jamie owns participant work. A reusable
+onboarding process does not mean every residency followed an identical path.
+
+## Open Data Week
+
+Do not claim a formal NYC Open Data Week presentation, organizer-confirmed
+event role, audience, or institutional endorsement until an authoritative
+listing or attributable confirmation is recovered.
 
 ## KC Spaces Fund
 

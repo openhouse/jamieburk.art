@@ -27,9 +27,9 @@ const proofMap = [
     project: "FairRentNYC / Commercial Rent Stabilization",
     href: "/work/fair-rent-nyc",
     action:
-      "I built and stewarded shared campaign memory, decision records, legislative provenance, action trackers, and a privacy-preserving commercial-data pilot specification for collective civic work.",
+      "I built and stewarded shared campaign memory, coordinated a versioned website relaunch, organized a 20-year vacancy-data corpus, and scoped a privacy-preserving commercial-data pilot for collective civic work.",
     result:
-      "Collaborators could trace decisions and source lineage, act on next steps, and evaluate a smallest-serious data-product scope while protected strategy, legal-review context, and confidential records stayed private."
+      "Collaborators could trace decisions and source lineage, launch public action tools, and evaluate a smallest-serious data-product scope while protected strategy, legal-review context, and confidential records stayed private."
   },
   {
     project: "CallNYC.org",
@@ -43,9 +43,9 @@ const proofMap = [
     project: "196 Artists Residency / Sunday Dinner",
     href: "/work/196-sunday-dinner",
     action:
-      "I created repeatable hosting, onboarding, facilitation, documentation, and continuity practices for recurring cultural work.",
+      "I created repeatable hosting practices and a documented residency acceptance and onboarding workflow, supported by dedicated collaboration workspaces.",
     result:
-      "The participation structure supported 300+ gatherings and 20+ resident artists without publishing private community records."
+      "The participation structure supported 300+ gatherings, 20+ resident artists, and reusable project and media handoffs without publishing private community records."
   }
 ];
 

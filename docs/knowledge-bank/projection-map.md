@@ -36,12 +36,15 @@ Use claims that directly support operating-backbone fit:
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `fair-rent-public-data-pilot`
+- `fair-rent-2023-web-relaunch`
+- `commercial-vacancy-quarterly-corpus`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
+- `196-residency-onboarding-workflow`
 - `kc-town-hall-public-benefit-documentation`
 
 ## Lab / Source-Backed Team Memory

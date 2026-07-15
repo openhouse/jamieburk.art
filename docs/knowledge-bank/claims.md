@@ -245,6 +245,51 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-14
 
+## fair-rent-2023-web-relaunch - Versioned campaign-site relaunch
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary
+**Public wording:** Helped coordinate and implement FairRentNYC's February 2023 website relaunch through a versioned shared checklist connecting web updates, public action tools, campaign calls, press materials, forms, and follow-through.
+**Detailed public-safe wording:** Jamie used a shared implementation record to connect website delivery with campaign calls, join and action forms, press materials, public documents, and relaunch follow-through.
+**Where to project:** Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Shows cross-channel implementation coordination and sustained follow-through across a collective public campaign.
+**Guardrail:** Preserve collaborator credit and describe Jamie as helping coordinate and implement the relaunch, not as sole campaign or website owner.
+**Do not say:** Jamie alone relaunched FairRentNYC; Jamie authored every campaign asset; the private implementation record is public; the relaunch caused a policy outcome.
+**Protected boundaries:** Credentials, meeting access, contact details, private campaign operations, and raw revision contents stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## commercial-vacancy-quarterly-corpus - Twenty-year vacancy-data corpus
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary
+**Public wording:** Assembled a 20-year working corpus of 81 quarterly HUD-USPS business-vacancy snapshots, organized from Q4 2005 through Q4 2025 for longitudinal research.
+**Detailed public-safe wording:** Jamie organized 81 unique quarterly HUD-USPS business-vacancy snapshots into a longitudinal research corpus spanning Q4 2005 through Q4 2025.
+**Where to project:** Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Shows longitudinal source acquisition, corpus organization, provenance discipline, and groundwork for public-interest data analysis.
+**Guardrail:** Credit HUD and USPS as the government data originators and describe only corpus assembly and organization.
+**Do not say:** Jamie created the HUD-USPS data; the corpus is a validated production dataset; the archive proves completed analysis; the City adopted or published Jamie's corpus.
+**Protected boundaries:** Underlying working files, unvalidated transformations, unpublished analysis, and private research notes stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## 196-residency-onboarding-workflow - Residency acceptance and onboarding
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary / Jamie review confirmation
+**Public wording:** Built a repeatable artist-residency acceptance and onboarding workflow covering proposal review, orientation, space configuration, independent access, and dedicated collaboration workspaces.
+**Detailed public-safe wording:** Jamie made residency handoffs usable through a documented acceptance and onboarding process, then supported project and media continuity through dedicated collaborator workspaces.
+**Where to project:** Technical Operations, Work card, 196 / Sunday Dinner case study.
+**Why it matters:** Shows proposal review, onboarding design, access planning, collaborator handoffs, and reusable operating structure in a trust-intensive setting.
+**Guardrail:** Keep resident identities, proposals, access details, private communications, and media protected unless each collaborator explicitly approves publication.
+**Do not say:** Jamie owns resident work; the collaborator archive is public; every residency followed an identical process; participant names or media are approved for publication.
+**Protected boundaries:** Resident names, proposals, contact information, access instructions, scans, images, and videos stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  

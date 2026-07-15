@@ -269,6 +269,83 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "fair-rent-2023-web-relaunch",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary"],
+    publicWording:
+      "Helped coordinate and implement FairRentNYC's February 2023 website relaunch through a versioned shared checklist connecting web updates, public action tools, campaign calls, press materials, forms, and follow-through.",
+    shortWording: "Coordinated a versioned FairRentNYC website relaunch",
+    detailedPublicWording:
+      "Jamie used a shared implementation record to connect website delivery with campaign calls, join and action forms, press materials, public documents, and relaunch follow-through.",
+    sourceBasis:
+      "Public-safe aggregate review of a 16-revision FairRentNYC implementation record from January-February 2023.",
+    whyItMatters:
+      "Shows cross-channel implementation coordination and sustained follow-through across a collective public campaign.",
+    guardrail:
+      "Preserve collaborator credit and describe Jamie as helping coordinate and implement the relaunch, not as sole campaign or website owner.",
+    doNotSay: [
+      "Jamie alone relaunched FairRentNYC",
+      "Jamie authored every campaign asset",
+      "The private implementation record is public",
+      "The relaunch caused a policy outcome"
+    ],
+    protectedBoundaries: [
+      "Credentials",
+      "Meeting access",
+      "Contact details",
+      "Private campaign operations",
+      "Raw revision contents"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "delivery-coordination",
+      "campaign-websites",
+      "action-tracking",
+      "handoffs"
+    ],
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "commercial-vacancy-quarterly-corpus",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary"],
+    publicWording:
+      "Assembled a 20-year working corpus of 81 quarterly HUD-USPS business-vacancy snapshots, organized from Q4 2005 through Q4 2025 for longitudinal research.",
+    shortWording: "Assembled 81 quarterly vacancy snapshots across 20 years",
+    detailedPublicWording:
+      "Jamie organized 81 unique quarterly HUD-USPS business-vacancy snapshots into a longitudinal research corpus spanning Q4 2005 through Q4 2025.",
+    sourceBasis:
+      "Public-safe inventory of Jamie's structured vacancy-data working archive, with the overlapping 2012 quarters deduplicated.",
+    whyItMatters:
+      "Shows longitudinal source acquisition, corpus organization, provenance discipline, and groundwork for public-interest data analysis.",
+    guardrail:
+      "Credit HUD and USPS as the government data originators and describe only corpus assembly and organization.",
+    doNotSay: [
+      "Jamie created the HUD-USPS data",
+      "The corpus is a validated production dataset",
+      "The archive proves completed analysis",
+      "The City adopted or published Jamie's corpus"
+    ],
+    protectedBoundaries: [
+      "Underlying working files",
+      "Unvalidated transformations",
+      "Unpublished analysis",
+      "Private research notes"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "data-operations",
+      "source-acquisition",
+      "corpus-organization",
+      "provenance"
+    ],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
     supportLevel: "careful",
@@ -479,6 +556,42 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "196-residency-onboarding-workflow",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Built a repeatable artist-residency acceptance and onboarding workflow covering proposal review, orientation, space configuration, independent access, and dedicated collaboration workspaces.",
+    shortWording: "Built a repeatable artist-residency onboarding workflow",
+    detailedPublicWording:
+      "Jamie made residency handoffs usable through a documented acceptance and onboarding process, then supported project and media continuity through dedicated collaborator workspaces.",
+    sourceBasis:
+      "Public-safe aggregate review of a Jamie-authored acceptance record and at least eight dedicated 196 collaboration workspaces spanning 2023-2025.",
+    whyItMatters:
+      "Shows proposal review, onboarding design, access planning, collaborator handoffs, and reusable operating structure in a trust-intensive setting.",
+    guardrail:
+      "Keep resident identities, proposals, access details, private communications, and media protected unless each collaborator explicitly approves publication.",
+    doNotSay: [
+      "Jamie owns resident work",
+      "The collaborator archive is public",
+      "Every residency followed an identical process",
+      "Participant names or media are approved for publication"
+    ],
+    protectedBoundaries: [
+      "Resident names",
+      "Proposals",
+      "Contact information",
+      "Access instructions",
+      "Scans",
+      "Images",
+      "Videos"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["196-sunday-dinner"],
+    relatedCapabilities: ["onboarding", "access-planning", "handoffs", "collaboration-systems"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -724,6 +837,7 @@ export const technicalOperationsProofRows = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "fair-rent-public-data-pilot",
+      "commercial-vacancy-quarterly-corpus",
       "kc-town-hall-public-benefit-documentation"
     ]
   },
@@ -733,6 +847,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "fair-rent-campaign-memory",
       "sunday-dinner-196-participation-infrastructure",
+      "196-residency-onboarding-workflow",
       "source-backed-team-memory-method"
     ]
   },
@@ -742,6 +857,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
+      "fair-rent-2023-web-relaunch",
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
