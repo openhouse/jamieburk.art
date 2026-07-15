@@ -481,10 +481,37 @@ export function resumeVisibleAttributeText(source) {
   const body = source.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
   return [...body.matchAll(/<(?!style\b|script\b)[A-Za-z][^>]*>/g)]
     .flatMap((tag) =>
-      [...tag[0].matchAll(/\b(?:alt|aria-description|aria-label|aria-roledescription|aria-valuetext|data|srcdoc|title|placeholder|value)\s*=\s*(["'])(.*?)\1/gi)]
-        .map((match) => decodedElementText(match[2]))
+      [...tag[0].matchAll(/\b(?:alt|alttext|aria-braillelabel|aria-description|aria-label|aria-roledescription|aria-valuetext|data|label|srcdoc|title|placeholder|value)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
+        .map((match) => decodedElementText(match[1] ?? match[2] ?? match[3]))
         .filter(Boolean)
     );
+}
+
+export function resumeMetadataText(source) {
+  const values = [];
+  const title = source.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1];
+  if (title) values.push(decodedElementText(title));
+  for (const tag of source.matchAll(/<meta\b[^>]*>/gi)) {
+    const name = tag[0].match(
+      /\b(?:name|property)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i
+    );
+    const key = (name?.[1] ?? name?.[2] ?? name?.[3] ?? "").toLowerCase();
+    if (![
+      "description",
+      "og:description",
+      "og:title",
+      "twitter:description",
+      "twitter:title"
+    ].includes(key)) continue;
+    const content = tag[0].match(
+      /\bcontent\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i
+    );
+    const value = decodedElementText(
+      content?.[1] ?? content?.[2] ?? content?.[3] ?? ""
+    );
+    if (value) values.push(value);
+  }
+  return values;
 }
 
 export function resumeCssPublicTextRisks(source) {
@@ -499,9 +526,9 @@ export function resumeCssPublicTextRisks(source) {
   }
   if (/\burl\s*\(/i.test(css)) risks.push("CSS url() content");
   if (/\bimage-set\s*\(/i.test(css)) risks.push("CSS image-set() content");
-  if (/\\[0-9a-f]{1,6}\s?/i.test(css)) risks.push("CSS escaped declaration");
+  if (/\\/.test(css)) risks.push("CSS escaped declaration");
   if (
-    /(?:^|[;{])\s*(?:list-style(?:-type)?|symbols|prefix|suffix)\s*:\s*[^;}]*["'][^"']+["']/gim.test(
+    /(?:^|[;{])\s*(?:additive-symbols|list-style(?:-type)?|quotes|symbols|prefix|suffix)\s*:\s*(?!none\b|normal\b)[^;}]+/gim.test(
       css
     )
   ) {
@@ -511,19 +538,32 @@ export function resumeCssPublicTextRisks(source) {
 }
 
 export function resumeEmbeddedContentRisks(source) {
-  const body = source.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
   const risks = [];
-  for (const tag of body.matchAll(/<(iframe|object|embed)\b[^>]*>/gi)) {
+  for (const tag of source.matchAll(/<(iframe|object|embed)\b[^>]*>/gi)) {
     risks.push(`${tag[1].toLowerCase()} embedded content`);
   }
-  for (const tag of body.matchAll(/<[A-Za-z][^>]*>/g)) {
+  for (const tag of source.matchAll(/<[A-Za-z][^>]*>/g)) {
+    const decodedTag = tag[0]
+      .replace(/&#x([0-9a-f]+);?/gi, (_, value) =>
+        String.fromCodePoint(Number.parseInt(value, 16))
+      )
+      .replace(/&#([0-9]+);?/g, (_, value) =>
+        String.fromCodePoint(Number.parseInt(value, 10))
+      )
+      .replace(/&colon;/gi, ":")
+      .replace(/&amp;/gi, "&");
     if (
-      /\b(?:src|srcset|data|style)\s*=\s*(["'])[^"']*(?:data:|image-set\s*\()[^"']*\1/i.test(
-        tag[0]
+      /\b(?:data|href|poster|src|srcset|style|xlink:href)\s*=\s*(?:["'][^"']*(?:data:|image-set\s*\()[^"']*["']|[^\s>]*(?:data:|image-set\s*\()[^\s>]*)/i.test(
+        decodedTag
       )
     ) {
       risks.push("inline embedded data content");
     }
+    if (
+      /\bstyle\s*=\s*(?:["'][^"']*(?:content\s*:|list-style|quotes\s*:|symbols\s*:)[^"']*["']|[^\s>]*(?:content\s*:|list-style|quotes\s*:|symbols\s*:)[^\s>]*)/i.test(
+        decodedTag
+      )
+    ) risks.push("inline style text channel");
   }
   return [...new Set(risks)];
 }
@@ -627,23 +667,26 @@ export function governedStatementUnsupportedClauses(statement, bank) {
     ...claims.map(claimSemanticBasis),
     ...proofs.map(proofSemanticBasis)
   ].join(" ");
-  return statement.text
-    .split(/[.;]|,\s+(?=(?:and|but)\b)/i)
+  return unsupportedSemanticClauses(statement.text, basis);
+}
+
+function unsupportedSemanticClauses(statement, basis) {
+  return statement
+    .split(/[.;]|\s+\b(?:and|but|while)\b\s+|,\s+(?=(?:and|but)\b)/i)
     .map((clause) => ({
       clause: normalizedText(clause),
       coverage: statementSemanticCoverage(clause, basis)
     }))
     .filter(
       ({ coverage }) =>
-        coverage.statementTokens.length >= 3 &&
-        (coverage.matched.length === 0 || coverage.score < 0.2)
+        coverage.statementTokens.length >= 2 && coverage.score < 0.2
     );
 }
 
 const semanticRiskFamilies = new Map([
-  ["sole-credit", /\b(?:alone|sole|solely|single[ -]?handedly|exclusively|independently|by (?:himself|herself|themselves)|on (?:his|her|their) own)\b/i],
-  ["total-ownership", /\b(?:owned|ownership|fully owned|complete control|end[ -]?to[ -]?end responsibility)\b/i],
-  ["causal-certainty", /\b(?:caused|guaranteed|ensured|drove|made [^.?!;]{0,80} happen|single[ -]?handedly delivered)\b/i],
+  ["sole-credit", /\b(?:alone|sole|solely|sole responsibility|single[ -]?handedly|exclusively|exclusive credit|independently|only founder|no one else|without (?:co-creators|collaborators|others)|by (?:himself|herself|themselves)|on (?:his|her|their) own)\b/i],
+  ["total-ownership", /\b(?:owned|ownership|fully owned|complete control|unilateral control|end[ -]?to[ -]?end responsibility|responsible for (?:the )?(?:whole|entire|all))\b/i],
+  ["causal-certainty", /\b(?:brought about|caused|guaranteed|ensured|drove|made [^.?!;]{0,80} happen|responsible for (?:the )?(?:whole|entire|all)|single[ -]?handedly delivered)\b/i],
   ["official-status", /\b(?:official|officially|certified|endorsed)\b/i],
   ["current-status", /\b(?:current|currently|live|ongoing|remains? operational|still operating|operational today)\b/i],
   ["completeness", /\b(?:all|every|entire|complete|completely|full corpus|100\s*%)\b/i]
@@ -652,16 +695,15 @@ const semanticRiskFamilies = new Map([
 function riskFamilies(value) {
   return new Set(
     [...semanticRiskFamilies]
-      .filter(([, pattern]) => {
+      .filter(([family, pattern]) => {
         const match = String(value).match(pattern);
         if (!match || match.index === undefined) return false;
-        const sentencePrefix = String(value)
-          .slice(0, match.index)
-          .split(/[.!?;]/)
-          .at(-1);
-        return !/\b(?:avoid|avoids|avoided|does\s+not|do\s+not|no|not|never|omit|omits|omitted|without)\b/i.test(
-          sentencePrefix
-        );
+        const prefix = String(value).slice(0, match.index).split(/[.!?;]/).at(-1);
+        const localNegation = /\b(?:avoid|avoids|avoided|does\s+not|do\s+not|not|never|omit|omits|omitted)(?:\W+\w+){0,3}\W*$|\bno\s*$/i.test(prefix);
+        const broadBoundaryNegation =
+          family !== "sole-credit" &&
+          /\b(?:avoid|avoids|avoided|does\s+not|do\s+not|no|not|never|omit|omits|omitted|without)\b/i.test(prefix);
+        return !localNegation && !broadBoundaryNegation;
       })
       .map(([family]) => family)
   );
@@ -678,7 +720,10 @@ export function proofSemanticBoundaryFindings(statement, proof) {
     if (sharedRisk.length === 0) continue;
     const prohibitedTokens = [...semanticTokens(prohibited)];
     const matched = prohibitedTokens.filter((token) => statementTokens.has(token));
-    if (matched.length >= 1) {
+    const attributionRisk = sharedRisk.some((family) =>
+      ["sole-credit", "total-ownership", "causal-certainty"].includes(family)
+    );
+    if (matched.length >= 1 || attributionRisk) {
       findings.push(
         `semantic boundary ${sharedRisk.join("/")} overlaps prohibited wording: ${prohibited}`
       );
@@ -856,7 +901,8 @@ export function statementSupportFingerprint(policy = projectionSurfaceBindings) 
         policy.resumeArtifact.expectedVisibleAttributeCount,
       visibleAttributeText: policy.resumeArtifact.visibleAttributeText,
       expectedEmbeddedContentRiskCount:
-        policy.resumeArtifact.expectedEmbeddedContentRiskCount
+        policy.resumeArtifact.expectedEmbeddedContentRiskCount,
+      metadataText: policy.resumeArtifact.metadataText
     },
     resume: policy.resumeArtifact.statements
       .map((statement) => ({
@@ -1218,6 +1264,12 @@ export function workStatementSemanticFindings(
           `work statement ${statement.id} has insufficient semantic support from ${statement.proofs.join(", ")} (${coverage.matched.length}/${coverage.statementTokens.length} substantive tokens)`
         );
       }
+      const basis = statementProofs.map(proofSemanticBasis).join(" ");
+      for (const unsupported of unsupportedSemanticClauses(statement.text, basis)) {
+        findings.push(
+          `work statement ${statement.id} contains an unsupported clause (${unsupported.coverage.matched.length}/${unsupported.coverage.statementTokens.length} substantive tokens): ${unsupported.clause}`
+        );
+      }
     }
     for (const proofId of statement.proofs) {
       const proof = proofById.get(proofId);
@@ -1252,7 +1304,10 @@ function filesBelow(root, extensions) {
   for (const entry of readdirSync(root, { withFileTypes: true })) {
     const path = join(root, entry.name);
     if (entry.isDirectory()) files.push(...filesBelow(path, extensions));
-    else if (extensions.some((extension) => path.endsWith(extension))) files.push(path);
+    else if (
+      extensions.includes("*") ||
+      extensions.some((extension) => path.endsWith(extension))
+    ) files.push(path);
   }
   return files;
 }
@@ -1537,18 +1592,42 @@ function followsUnconditionalExit(node, sourceFile) {
   return false;
 }
 
-function hasDisallowedRuntimeGate(node, sourceFile) {
+function conditionMatchesRenderedSlug(expression, surface) {
+  if (!ts.isBinaryExpression(expression)) return false;
+  if (
+    ![
+      ts.SyntaxKind.EqualsEqualsEqualsToken,
+      ts.SyntaxKind.EqualsEqualsToken
+    ].includes(expression.operatorToken.kind)
+  ) {
+    return false;
+  }
+  const sides = [expression.left, expression.right];
+  const slugSide = sides.find(
+    (side) =>
+      ts.isPropertyAccessExpression(side) && side.name.text === "slug"
+  );
+  const literalSide = sides.find((side) => ts.isStringLiteral(side));
+  if (!slugSide || !literalSide) return false;
+  return surface === "/work" || surface === `/work/${literalSide.text}`;
+}
+
+function hasDisallowedRuntimeGate(node, sourceFile, surface) {
   if (followsUnconditionalExit(node, sourceFile)) return true;
   for (let current = node.parent; current; current = current.parent) {
     if (ts.isConditionalExpression(current)) {
+      const inTrue =
+        node.pos >= current.whenTrue.pos && node.end <= current.whenTrue.end;
+      const inFalse =
+        node.pos >= current.whenFalse.pos && node.end <= current.whenFalse.end;
       if (
         hasProcessEnv(current.condition) ||
-        (node.pos >= current.whenTrue.pos &&
-          node.end <= current.whenTrue.end &&
-          expressionIsAlwaysFalse(current.condition, sourceFile)) ||
-        (node.pos >= current.whenFalse.pos &&
-          node.end <= current.whenFalse.end &&
-          expressionIsAlwaysTrue(current.condition, sourceFile))
+        (inTrue && expressionIsAlwaysFalse(current.condition, sourceFile)) ||
+        (inFalse && expressionIsAlwaysTrue(current.condition, sourceFile)) ||
+        (inTrue &&
+          !expressionIsAlwaysTrue(current.condition, sourceFile) &&
+          !conditionMatchesRenderedSlug(current.condition, surface)) ||
+        (inFalse && !expressionIsAlwaysFalse(current.condition, sourceFile))
       ) {
         return true;
       }
@@ -1564,39 +1643,30 @@ function hasDisallowedRuntimeGate(node, sourceFile) {
       if (
         hasProcessEnv(current.expression) ||
         (inThen && expressionIsAlwaysFalse(current.expression, sourceFile)) ||
-        (inElse && expressionIsAlwaysTrue(current.expression, sourceFile))
+        (inElse && expressionIsAlwaysTrue(current.expression, sourceFile)) ||
+        (inThen && !expressionIsAlwaysTrue(current.expression, sourceFile)) ||
+        (inElse && !expressionIsAlwaysFalse(current.expression, sourceFile))
       ) {
         return true;
       }
     }
     if (
-      (ts.isWhileStatement(current) || ts.isDoStatement(current)) &&
-      expressionIsAlwaysFalse(current.expression, sourceFile)
-    ) {
-      return true;
-    }
-    if (
-      ts.isForStatement(current) &&
-      current.condition &&
-      expressionIsAlwaysFalse(current.condition, sourceFile)
-    ) {
-      return true;
-    }
-    if (
-      ts.isForOfStatement(current) &&
-      expressionIsStaticallyEmptyArray(current.expression, sourceFile)
-    ) {
-      return true;
-    }
+      ts.isWhileStatement(current) ||
+      ts.isDoStatement(current) ||
+      ts.isForStatement(current) ||
+      ts.isForOfStatement(current) ||
+      ts.isForInStatement(current)
+    ) return true;
     if (
       ts.isBinaryExpression(current) &&
       node.pos >= current.right.pos &&
       node.end <= current.right.end &&
       (hasProcessEnv(current.left) ||
         (current.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken &&
-          expressionIsAlwaysFalse(current.left, sourceFile)) ||
+          !expressionIsAlwaysTrue(current.left, sourceFile)) ||
         (current.operatorToken.kind === ts.SyntaxKind.BarBarToken &&
-          expressionIsAlwaysTrue(current.left, sourceFile)))
+          !expressionIsAlwaysFalse(current.left, sourceFile)) ||
+        current.operatorToken.kind === ts.SyntaxKind.QuestionQuestionToken)
     ) {
       return true;
     }
@@ -1681,14 +1751,19 @@ function jsxAncestorIsHidden(node, sourceFile) {
     const opening = current.openingElement;
     const tagName = opening.tagName.getText(sourceFile).toLowerCase();
     const tag = opening.getText(sourceFile);
-    if (tagName === "template") return true;
+    if (["template", "style", "script"].includes(tagName)) return true;
+    if (tagName === "dialog" && !/\sopen(?:\s|=|>)/i.test(tag)) return true;
+    if (/\spopover(?:\s|=|>)/i.test(tag)) return true;
     if (/\s(?:hidden|inert)(?:\s|=|>)/i.test(tag)) return true;
-    if (/aria-hidden\s*=\s*(?:\{\s*true\s*\}|["']true["'])/i.test(tag)) {
+    if (
+      /aria-hidden\s*=/i.test(tag) &&
+      !/aria-hidden\s*=\s*(?:\{\s*false\s*\}|["']false["'])/i.test(tag)
+    ) {
       return true;
     }
-    if (/\b(?:display\s*:\s*["']none["']|visibility\s*:\s*["']hidden["'])/i.test(tag)) {
-      return true;
-    }
+    if (/\sstyle\s*=/i.test(tag)) return true;
+    if (/\sdisplay\s*=\s*["']none["']/i.test(tag)) return true;
+    if (/\svisibility\s*=\s*["'](?:hidden|collapse)["']/i.test(tag)) return true;
   }
   return false;
 }
@@ -1809,17 +1884,7 @@ function jsxHasRenderableReturnPath(node, sourceFile) {
       return false;
     }
     if (ts.isCallExpression(current)) {
-      const isRenderableMap =
-        ts.isPropertyAccessExpression(current.expression) &&
-        ["map", "flatMap"].includes(current.expression.name.text) &&
-        current.arguments.some(
-          (argument) => node.pos >= argument.pos && node.end <= argument.end
-        );
-      if (!isRenderableMap) return false;
-      const receiver = current.expression.expression;
-      if (expressionIsStaticallyEmptyArray(receiver, sourceFile)) {
-        return false;
-      }
+      return false;
     }
     if (
       ts.isFunctionDeclaration(current) ||
@@ -1860,7 +1925,7 @@ function tsxRouteRealizesProjection(
     if (
       ts.isJsxSelfClosingElement(node) &&
       node.tagName.getText(sourceFile) === "Claim" &&
-      !hasDisallowedRuntimeGate(node, sourceFile) &&
+      !hasDisallowedRuntimeGate(node, sourceFile, surface) &&
       !jsxAncestorIsHidden(node, sourceFile) &&
       jsxHasRenderableReturnPath(node, sourceFile) &&
       isReachableModuleNode(node, sourcePath, surface)
@@ -1879,7 +1944,7 @@ function tsxRouteRealizesProjection(
     if (
       ts.isCallExpression(node) &&
       node.expression.getText(sourceFile) === "getClaimProjection" &&
-      !hasDisallowedRuntimeGate(node, sourceFile) &&
+      !hasDisallowedRuntimeGate(node, sourceFile, surface) &&
       !jsxAncestorIsHidden(node, sourceFile) &&
       (!sourcePath.endsWith("/data/work.ts") || isDirectWorkSummaryResolver(node)) &&
       isReachableModuleNode(node, sourcePath, surface)
@@ -1954,12 +2019,15 @@ function mdxHasHiddenAncestor(content) {
     if (/\/\s*>$/.test(match[0])) continue;
     const tag = match[0];
     const hidden =
-      name === "template" ||
+      ["template", "style", "script"].includes(name) ||
+      (name === "dialog" && !/\sopen(?:\s|=|>)/i.test(tag)) ||
+      /\spopover(?:\s|=|>)/i.test(tag) ||
       /\s(?:hidden|inert)(?:\s|=|>)/i.test(tag) ||
-      /aria-hidden\s*=\s*(?:\{\s*true\s*\}|["']true["'])/i.test(tag) ||
-      /\b(?:display\s*:\s*["']none["']|visibility\s*:\s*["']hidden["'])/i.test(
-        tag
-      );
+      (/aria-hidden\s*=/i.test(tag) &&
+        !/aria-hidden\s*=\s*(?:\{\s*false\s*\}|["']false["'])/i.test(tag)) ||
+      /\sstyle\s*=/i.test(tag) ||
+      /\sdisplay\s*=\s*["']none["']/i.test(tag) ||
+      /\svisibility\s*=\s*["'](?:hidden|collapse)["']/i.test(tag);
     stack.push({ name, hidden });
   }
   return stack.some((entry) => entry.hidden);
@@ -2335,7 +2403,10 @@ export function evaluateKnowledgeBank(
   );
   for (const [path, extensions] of requiredPublicSurfaceRoots) {
     const configuredExtensions = configuredRoots.get(path) ?? [];
-    if (extensions.some((extension) => !configuredExtensions.includes(extension))) {
+    if (
+      !configuredExtensions.includes("*") &&
+      extensions.some((extension) => !configuredExtensions.includes(extension))
+    ) {
       findings["KB-009"].push(
         `public-surface policy does not govern all ${path} ${extensions.join(", ")} files`
       );
@@ -2485,6 +2556,7 @@ export function evaluateKnowledgeBank(
     const visibleAttributeText = resumeVisibleAttributeText(source);
     const cssPublicTextRisks = resumeCssPublicTextRisks(source);
     const embeddedContentRisks = resumeEmbeddedContentRisks(source);
+    const metadataText = resumeMetadataText(source);
     const manifestedStatements = resumeArtifact.statements.map((statement) =>
       normalizedText(statement.text)
     );
@@ -2555,6 +2627,14 @@ export function evaluateKnowledgeBank(
     ) {
       findings["KB-009"].push(
         `resume contains embedded public-content bypass channels: ${embeddedContentRisks.join(", ")}`
+      );
+    }
+    if (
+      JSON.stringify(metadataText) !==
+      JSON.stringify(resumeArtifact.metadataText ?? [])
+    ) {
+      findings["KB-009"].push(
+        "resume browser metadata differs from the governed metadata manifest"
       );
     }
     const regeneratedPdfText = execFileSync(

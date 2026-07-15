@@ -18,6 +18,7 @@ import {
   resumeCssGeneratedText,
   resumeCssPublicTextRisks,
   resumeEmbeddedContentRisks,
+  resumeMetadataText,
   resumeVisibleAttributeText,
   resumeVisibleBlocks,
   resumeSubstantiveStatements,
@@ -228,12 +229,28 @@ test("the resume manifest is derived from every substantive HTML block", () => {
     ]
   );
   assert.deepEqual(
+    resumeVisibleAttributeText('<body><img alt=Unquoted><option label="Option claim"></option><math alttext="Math claim"></math><div aria-braillelabel="Braille claim"></div></body>'),
+    ["Unquoted", "Option claim", "Math claim", "Braille claim"]
+  );
+  assert.deepEqual(
+    resumeMetadataText('<head><title>Resume title</title><meta name="description" content="Metadata claim"><meta name="viewport" content="not prose"></head>'),
+    ["Resume title", "Metadata claim"]
+  );
+  assert.deepEqual(
     resumeEmbeddedContentRisks('<body><iframe srcdoc="claim"></iframe><img src="data:image/svg+xml,text"><div style="background: image-set(data:image/png,x)"></div></body>'),
     ["iframe embedded content", "inline embedded data content"]
   );
   assert.deepEqual(
+    resumeEmbeddedContentRisks('<head><link rel=stylesheet href=d&#97;ta:text/css,x></head><body><svg><image href=data:image/svg+xml,x></image></svg><video poster=data:image/png,x></video><div style="list-style: Claim"></div></body>'),
+    ["inline embedded data content", "inline style text channel"]
+  );
+  assert.deepEqual(
     resumeCssPublicTextRisks('<style>.x { l\\69st-style-type: "Claim"; } @counter-style x { symbols: "Claim"; } .y { background: image-set("data:image/png,x"); }</style>'),
     ["CSS image-set() content", "CSS escaped declaration", "CSS list or counter text"]
+  );
+  assert.deepEqual(
+    resumeCssPublicTextRisks('<style>.x { quotes: Claim; } @counter-style x { additive-symbols: 1 Claim; } .y { c\\ontent: "Claim"; }</style>'),
+    ["CSS escaped declaration", "CSS list or counter text"]
   );
 });
 
@@ -394,6 +411,18 @@ test("semantic proof checks reject paraphrased anti-claims", () => {
     [
       "Jamie independently founded and directed NYC Artist Coalition without co-creators.",
       "Jamie solely founded or led NYC Artist Coalition"
+    ],
+    [
+      "Jamie was the only founder of NYC Artist Coalition, with no one else involved.",
+      "Jamie solely founded or led NYC Artist Coalition"
+    ],
+    [
+      "Jamie brought about the repeal and was responsible for the whole repeal.",
+      "Jamie single-handedly caused policy outcomes"
+    ],
+    [
+      "Jamie exercised unilateral control and took exclusive credit for the campaign.",
+      "Jamie solely led NYC Artist Coalition"
     ]
   ]) {
     assert.match(
@@ -436,6 +465,17 @@ test("public and resume statements require proposition-level semantic support", 
       knowledgeBank
     ).map((item) => item.clause).join("\n"),
     /nuclear reactors/
+  );
+
+  assert.match(
+    governedStatementUnsupportedClauses(
+      {
+        ...statement,
+        text: `${statement.text} and designed nuclear reactors.`
+      },
+      knowledgeBank
+    ).map((item) => item.clause).join("\n"),
+    /designed nuclear reactors/
   );
 });
 
@@ -2305,6 +2345,18 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     false
   );
   assert.equal(
+    realizes(`export default function TestPage() { return [1].map(() => (${literal})); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return undefined ?? (${literal}); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return void 0 ? (${literal}) : null; }`),
+    false
+  );
+  assert.equal(
     realizes(`export default function TestPage() { for (const item of []) { return (${literal}); } return null; }`),
     false
   );
@@ -2334,6 +2386,22 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
   );
   assert.equal(
     realizes(`export default function TestPage() { return <template>${literal}</template>; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <dialog>${literal}</dialog>; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <div aria-hidden={Boolean(true)}>${literal}</div>; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <svg display="none">${literal}</svg>; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <style>${literal}</style>; }`),
     false
   );
   assert.equal(
@@ -2470,6 +2538,10 @@ test("MDX route reachability rejects conditional and unused component bindings",
     false
   );
   assert.equal(realizes(`<template>${literal}</template>`), false);
+  assert.equal(realizes(`<dialog>${literal}</dialog>`), false);
+  assert.equal(realizes(`<div aria-hidden={Boolean(true)}>${literal}</div>`), false);
+  assert.equal(realizes(`<svg display="none">${literal}</svg>`), false);
+  assert.equal(realizes(`<script>${literal}</script>`), false);
 });
 
 test("unused TypeScript projection resolvers do not satisfy route coverage", () => {

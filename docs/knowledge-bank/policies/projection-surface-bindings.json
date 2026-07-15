@@ -2,7 +2,7 @@
   "version": 3,
   "expectedWorkStatementCount": 275,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "b27dffc52234036f5dad7e16fecf5941a808fe64bf36a4b8927ad911d0c4421b",
+  "publicSurfaceSha256": "0efdba9283c1530ad998aee116dcc7c5e81947400114cb6a8171263252c14be9",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -36,10 +36,10 @@
     "apps/www/src/data/work.ts"
   ],
   "publicSurfaceRoots": [
-    { "path": "apps/www/src/app", "extensions": [".avif", ".ico", ".jpeg", ".jpg", ".js", ".jsx", ".md", ".mdx", ".png", ".svg", ".ts", ".tsx", ".webp"] },
-    { "path": "apps/www/src/components", "extensions": [".js", ".jsx", ".ts", ".tsx"] },
-    { "path": "apps/www/src/content", "extensions": [".md", ".mdx"] },
-    { "path": "apps/www/public", "extensions": [".avif", ".html", ".htm", ".ico", ".jpeg", ".jpg", ".json", ".md", ".mdx", ".pdf", ".png", ".svg", ".txt", ".webp", ".xml"] }
+    { "path": "apps/www/src/app", "extensions": ["*"] },
+    { "path": "apps/www/src/components", "extensions": ["*"] },
+    { "path": "apps/www/src/content", "extensions": ["*"] },
+    { "path": "apps/www/public", "extensions": ["*"] }
   ],
   "publicSurfaceFiles": [
     "apps/www/mdx-components.tsx",
@@ -86,6 +86,9 @@
     "expectedVisibleAttributeCount": 0,
     "visibleAttributeText": [],
     "expectedEmbeddedContentRiskCount": 0,
+    "metadataText": [
+      "Jamie Burkart - Resume - Technical Project Manager"
+    ],
     "presentationText": [
       "Jamie Burkart | Technical Project Manager | July 2026",
       "Jamie Burkart",

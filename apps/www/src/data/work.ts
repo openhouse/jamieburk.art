@@ -335,6 +335,7 @@ const workItemsInput = [
       ],
       open: [
         "fair-rent-campaign-memory",
+        "fair-rent-source-map",
         "nyc-artist-coalition-shared-public-identity",
         "nyc-artist-coalition-x-source-circulation"
       ],
@@ -343,6 +344,7 @@ const workItemsInput = [
       currentStatus: ["fair-rent-campaign-memory"],
       publicSafetyNote: ["fair-rent-campaign-memory"],
       sourceLayer: [
+        "fair-rent-source-map",
         "nyc-artist-coalition-campaign-press-corpus",
         "nyc-artist-coalition-x-source-circulation"
       ],

@@ -51,7 +51,7 @@ export const proofClaims: ProofClaim[] = [
       "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
     shortWording: "14+ years creating operating structure",
     detailedPublicWording:
-      "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
+      "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear, including human-stakes civic and cultural contexts and source-backed knowledge systems.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
     whyItMatters:
       "Establishes the throughline across projects without forcing one job title onto every period of work.",
@@ -78,7 +78,7 @@ export const proofClaims: ProofClaim[] = [
       "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
     shortWording: "Modernized legacy e-commerce and operations workflows",
     detailedPublicWording:
-      "Jamie helped translate legacy operating knowledge across technical and nontechnical stakeholder contexts into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice. The resulting product-discovery and ordering paths were clearer for customers, while internal digital workflows became more repeatable.",
+      "Jamie helped translate legacy operating knowledge across technical and nontechnical stakeholder contexts into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice. The resulting product-discovery and ordering paths were clearer for customers, while internal digital workflows and product, marketing, and support surfaces became more repeatable.",
     sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
     guardrail: "Use stewardship and contribution language.",
     doNotSay: [
@@ -174,7 +174,7 @@ export const proofClaims: ProofClaim[] = [
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
     shortWording: "30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
+      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder and partner-network next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
@@ -214,8 +214,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
-    guardrail: "Do not imply legal authority or official bill ownership.",
+    sourceBasis: "Approved resume language and public-safe source-map summary; named materials and screenshots remain subject to collaborator review before publication.",
+    guardrail:
+      "Do not imply legal authority or official bill ownership. Screenshots, named materials, and collaborator-visible artifacts require review and approval before publication.",
     doNotSay: [
       "Jamie authored the legislation",
       "Jamie provided legal advice",
@@ -362,7 +363,7 @@ export const proofClaims: ProofClaim[] = [
     whyItMatters:
       "Makes Jamie's founding-era organizing, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
-      "Founding-era organizing and website authorship are supported; the formal co-founder title remains held for corroboration, and campaign accomplishments remain collective.",
+      "Founding-era organizing and website authorship are supported; the formal co-founder title remains held for corroboration, campaign accomplishments remain collective, and coalition and institutional credit must be preserved.",
     doNotSay: [
       "Jamie solely led NYC Artist Coalition",
       "Jamie owned every campaign",
@@ -507,7 +508,7 @@ export const proofClaims: ProofClaim[] = [
       "As co-builder and product operator, Jamie helped WOWList support 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Use approximate adoption language and do not describe city activity as official chapters. Screenshots, archive links, and collaborator-visible artifacts remain pending approval before publication.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -538,7 +539,7 @@ export const proofClaims: ProofClaim[] = [
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "Jamie built a care-forward residency and recurring community practice, making cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
     guardrail:
       "Keep the page summary-only; named participants, photos, and artifacts require consent and approval, and community trust work should not become spectacle.",
@@ -659,7 +660,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.",
     sourceBasis:
-      "Approved resume language, public-safe project context, Kansas City Legistar history, authenticated Resolution 190649, and Jamie's July 14, 2026 handoff confirmation.",
+      "Approved resume language, public-safe project context, Kansas City Legistar history, authenticated Resolution 190649, the governed project-account corpus, and Jamie's July 14, 2026 handoff confirmation. The account corpus preserves a two-item recovery gap, does not assign every post or later operation to Jamie, and does not independently verify self-reported outcome figures; recipient identity, handoff terms, and current project status remain unestablished for public use.",
     guardrail:
       "Distinguish the CCED Board recommendation, Council acceptance, and negotiation authority from an executed agreement, disbursement, receipt, or project completion. Present the handoff as Jamie's first-person account without identifying the recipient or publishing private transition context.",
     doNotSay: [
@@ -724,7 +725,7 @@ export const proofClaims: ProofClaim[] = [
       "Uses requirements, workflow mapping, user stories, acceptance criteria, decision logs, action tracking, rollout planning, QA, user-acceptance testing, stakeholder updates, adoption support, and handoffs to coordinate delivery.",
     shortWording: "Requirements-to-handoff product operations practice",
     detailedPublicWording:
-      "Jamie translates emerging needs into bounded delivery artifacts and review loops, including requirements, acceptance criteria, implementation plans, quality assurance, user-acceptance testing, rollout support, adoption materials, and durable handoffs.",
+      "Jamie translates emerging needs into bounded delivery artifacts, operating memory, and review loops, including requirements, acceptance criteria, implementation plans, quality assurance, user-acceptance testing, rollout support, adoption materials, and durable handoffs.",
     sourceBasis:
       "Approved public resume and public-safe aggregate project, launch, workflow, testing, documentation, and handoff history.",
     whyItMatters:
