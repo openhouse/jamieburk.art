@@ -1,3 +1,4 @@
+import { contactConfig, contactLinks } from "@/lib/contact";
 import { SITE_URL } from "@/lib/site-url";
 
 export const site = {
@@ -7,8 +8,8 @@ export const site = {
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
     "Brooklyn-based technical project manager creating operating structure across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
-  emailLabel: "Public email pending confirmation",
-  emailHref: "/contact",
+  emailLabel: contactConfig.email ?? "Public email pending confirmation",
+  emailHref: contactLinks.emailHref ?? "/contact",
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
   location: "Brooklyn, NY"
 } as const;
