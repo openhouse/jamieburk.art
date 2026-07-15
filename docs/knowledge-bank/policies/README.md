@@ -6,7 +6,9 @@ and enforceable by agents.
 - `collective-credit-policy.json` classifies every known project as collective,
   individual, or mixed. Every claim in a mixed project is explicitly classified
   too. Unknown projects, unclassified mixed-project claims, and classification
-  mismatches fail closed under `KB-007`.
+  mismatches fail closed under `KB-007`. Claim project IDs are cross-checked
+  against their atomic source assertions; a small named list preserves older
+  individual CallNYC facts that predate that assertion layer.
 - `projection-surface-bindings.json` maps each approved public route to the
   source files that can render knowledge-bank projections there. An active
   route projection must use a literal `Claim` component or

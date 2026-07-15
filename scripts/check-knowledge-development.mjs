@@ -30,6 +30,9 @@ const individualProjects = new Set(collectiveCreditPolicy.individualProjects);
 const mixedProjects = new Map(
   Object.entries(collectiveCreditPolicy.mixedProjects)
 );
+const unassertedIndividualClaims = new Set(
+  collectiveCreditPolicy.unassertedIndividualClaims
+);
 const knownRouteProjectionSurfaces = new Set(
   Object.keys(projectionSurfaceBindings.routes)
 );
@@ -241,8 +244,8 @@ export function evaluateKnowledgeBank(
   const assertionSourceIds = new Set(bank.sourceAssertions.map((item) => item.sourceId));
   const findings = Object.fromEntries(suite.evals.map((entry) => [entry.id, []]));
 
-  if (collectiveCreditPolicy.version !== 2) {
-    findings["KB-007"].push("collective-credit policy version must be 2");
+  if (collectiveCreditPolicy.version !== 3) {
+    findings["KB-007"].push("collective-credit policy version must be 3");
   }
   if (projectionSurfaceBindings.version !== 1) {
     findings["KB-009"].push("projection-surface policy version must be 1");
@@ -316,6 +319,18 @@ export function evaluateKnowledgeBank(
     if (policyRequiresCollective === true && !claim.collectiveWork) findings["KB-007"].push(`${claim.id} is policy-scoped collective work but is not classified as collective`);
     if (policyRequiresCollective === false && claim.collectiveWork) findings["KB-007"].push(`${claim.id} is policy-scoped individual work but is classified as collective`);
     if (claim.collectiveWork && (claim.boundaries.some((item) => item.trim().length === 0) || claim.antiClaims.some((item) => item.trim().length === 0) || claim.boundaries.length === 0 || claim.antiClaims.length === 0)) findings["KB-007"].push(`${claim.id} lacks a substantive collective-credit boundary or anti-claim`);
+    const assertionProjects = [
+      ...new Set(bank.sourceAssertions
+        .filter((assertion) => assertion.candidateClaimIds.includes(claim.id))
+        .map((assertion) => assertion.project)
+      )
+    ];
+    if (assertionProjects.length === 0) {
+      if (!unassertedIndividualClaims.has(claim.id)) findings["KB-007"].push(`${claim.id} lacks a project-classification source assertion`);
+    } else {
+      if (!assertionProjects.includes(claim.project)) findings["KB-007"].push(`${claim.id} project ${claim.project} conflicts with its source assertions`);
+      if (unassertedIndividualClaims.has(claim.id)) findings["KB-007"].push(`${claim.id} has a stale unasserted-claim exception`);
+    }
     for (const evidence of claim.evidence) if (!sourceIds.has(evidence.sourceId)) findings["KB-005"].push(`${claim.id} references missing source ${evidence.sourceId}`);
     for (const id of claim.researchInquiryIds) if (!inquiryIds.has(id)) findings["KB-005"].push(`${claim.id} references missing inquiry ${id}`);
 
@@ -363,6 +378,25 @@ export function evaluateKnowledgeBank(
         findings["KB-007"].push(`collective-credit policy references missing claim ${id}`);
       }
     }
+  }
+
+  if (
+    [...unassertedIndividualClaims].some(
+      (id) => typeof id !== "string" || id.trim().length === 0
+    )
+  ) {
+    findings["KB-007"].push("unasserted individual-claim policy has a blank claim ID");
+  }
+  if (
+    unassertedIndividualClaims.size !==
+    collectiveCreditPolicy.unassertedIndividualClaims.length
+  ) {
+    findings["KB-007"].push("unasserted individual-claim policy has duplicate IDs");
+  }
+  for (const id of unassertedIndividualClaims) {
+    const claim = bank.claims.find((item) => item.id === id);
+    if (!claim) findings["KB-007"].push(`unasserted individual-claim policy references missing claim ${id}`);
+    else if (claim.collectiveWork || !individualProjects.has(claim.project)) findings["KB-007"].push(`${id} is not an individual-project exception`);
   }
 
   const pageIds = new Set();

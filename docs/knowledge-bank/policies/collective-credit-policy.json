@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "collectiveProjects": [
     "196-sunday-dinner",
     "commercial-rent-data",
@@ -28,5 +28,13 @@
         "CLM-WATER-GREAT-ACCOMMODATIONS"
       ]
     }
-  }
+  },
+  "unassertedIndividualClaims": [
+    "CLM-CALLNYC-HACKATHON-DATE-TIME",
+    "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
+    "CLM-CALLNYC-EVENT-BRANDING",
+    "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+    "CLM-CALLNYC-DIGITAL-DISTRICT",
+    "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED"
+  ]
 }

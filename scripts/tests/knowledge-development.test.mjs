@@ -1342,6 +1342,29 @@ test("unknown projects and unclassified mixed-project claims fail closed", () =>
     /belongs to unclassified project new-unclassified-project/
   );
 
+  const knownIndividualCandidate = structuredClone(knowledgeBank);
+  const reassignedClaim = knownIndividualCandidate.claims.find(
+    (item) => item.id === "CLM-KCTH-X-PUBLIC-OPERATIONS"
+  );
+  reassignedClaim.project = "callnyc";
+  reassignedClaim.collectiveWork = false;
+  reassignedClaim.boundaries = [];
+  reassignedClaim.antiClaims = [];
+  const knownIndividualResult = evaluateKnowledgeBank(
+    suite,
+    knownIndividualCandidate,
+    2,
+    hybridPass
+  );
+  const knownIndividualCredit = knownIndividualResult.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(knownIndividualCredit.pass, false);
+  assert.match(
+    knownIndividualCredit.findings.join("\n"),
+    /project callnyc conflicts with its source assertions/
+  );
+
   const mixedProjectCandidate = structuredClone(knowledgeBank);
   const unclassifiedClaim = structuredClone(
     mixedProjectCandidate.claims.find(
