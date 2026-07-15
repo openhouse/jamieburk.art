@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "capturedAt": "2026-07-14",
+  "capturedAt": "2026-07-15",
   "sourceInputs": [
     "apps/www/src",
     "apps/www/next.config.ts",
@@ -10,7 +10,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "4e8e8a9e08b06de674290527f8600f015663229f94096ff8dd29be1af588112c",
+  "sourceSha256": "9bf8a4b69b105da2a9cc141909a46d52c9c8ebe3fe63c2974e568c43343a8e1a",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -38,7 +38,7 @@
       "route": "/work/kc-town-hall",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
-      "artifactSha256": "8d212ff40c9a7e0cd2630d68cf805d3ff62c4b5a685c641e7a68134d03fb5d38"
+      "artifactSha256": "91a3d89c94382e40086fee17eccfb77f1d5b0c18a4a869c845a6de60e5a935ed"
     }
   ]
 }

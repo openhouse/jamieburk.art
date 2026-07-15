@@ -45,21 +45,32 @@ test("the founding-member proof resolves through a canonical corrected claim", (
 
 test("the KC Town Hall projection pairs Council appropriation with the documented non-disbursement endpoint", () => {
   const claim = knowledgeBank.claims.find(({ id }) => id === "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019");
+  const transition = knowledgeBank.claims.find(({ id }) => id === "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026");
   const correction = knowledgeBank.corrections.find(({ id }) => id === "COR-KC-TOWN-HALL-COUNCIL-LIFECYCLE-2026");
+  const endpointCorrection = knowledgeBank.corrections.find(({ id }) => id === "COR-KC-TOWN-HALL-PUBLIC-ENDPOINT-2026");
   const proof = proofClaims.find(({ id }) => id === "kc-town-hall-public-benefit-documentation");
   const workSource = readFileSync("apps/www/src/data/work.ts", "utf8");
   const work = workSource.match(/title: "KC Town Hall LLC"[\s\S]*?knownOpenProtected:[\s\S]*?\n    }\n  }/)?.[0] ?? "";
   const projection = getClaimProjection(claim.id, "case-study", "/work/kc-town-hall");
+  const transitionProjection = getClaimProjection(transition.id, "case-study", "/work/kc-town-hall");
   const sources = resolveCitationOccurrence("kc-town-hall", "public-record-2019").sources;
+  const transitionSources = resolveCitationOccurrence("kc-town-hall", "mission-aligned-transition").sources;
 
   assert.match(projection.text, /Council accepted the recommendation and appropriated \$490,539/);
   assert.match(projection.text, /no funds were disbursed/);
   assert.match(projection.text, /reappropriated the unused award/);
+  assert.doesNotMatch(projection.text, /after project withdrawal/i);
+  assert.match(transitionProjection.text, /Jamie reports later transitioning the project to a mission-aligned organization/);
   assert.equal(sources.length, 5);
+  assert.equal(transitionSources.length, 1);
+  assert.equal(transitionSources[0]?.source.id, "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026");
   assert.deepEqual(correction?.approvedBy, ["Jamie Burkart"]);
+  assert.deepEqual(endpointCorrection?.approvedBy, ["Jamie Burkart"]);
   assert.match(proof.guardrail, /Appropriation must never be compressed into receipt/);
   assert.match(work, /no funds were disbursed/);
   assert.match(work, /reappropriated the unused award/);
+  assert.match(work, /mission-aligned organization/);
+  assert.doesNotMatch(work, /private circumstances/i);
   assert.doesNotMatch(`${projection.text}\n${proof.publicWording}`, /received or spent \$490,539/i);
 });
 
@@ -93,7 +104,7 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 5);
+  assert.equal(knowledgeBank.corrections.length, 6);
 });
 
 test("negative research preserves scope and limitations", () => {

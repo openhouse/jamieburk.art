@@ -43,20 +43,33 @@ test("the July 13 ten-source ingestion remains complete and decomposed", () => {
 
 test("the KC Town Hall Council lifecycle rejects appropriation-as-receipt", () => {
   const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-KC-TOWN-HALL-COUNCIL-LIFECYCLE");
+  const transitionTask = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-KC-TOWN-HALL-TRANSITION-POSITIONING");
   const publicRecord = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KC-TOWN-HALL-PUBLIC-RECORD");
+  const transition = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION");
   const receiptClaim = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KC-TOWN-HALL-FUNDING-RECEIVED");
   const correction = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT");
+  const transitionDecision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-TRANSITION-PROMOTE");
   const rejection = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-FUNDING-RECEIVED-REJECT");
   const manifest = knowledgeLifecycle.proofSurfaceManifests.find(({ id }) => id === "MANIFEST-PROOFS-KC-TOWN-HALL-CASE-STUDY");
 
   assert.equal(task?.status, "completed");
   assert.equal(task?.sourceIds.length, 5);
   assert.equal(publicRecord?.maturity, "promoted");
+  assert.equal(transition?.maturity, "promoted");
+  assert.equal(transition?.publicEvidenceQualifier?.kind, "self-reported");
+  assert.ok(transition?.antiClaims.some((item) => /abandoned/i.test(item)));
+  assert.ok(transition?.boundaries.some((item) => /private circumstances/i.test(item)));
   assert.equal(receiptClaim?.maturity, "disallowed");
   assert.equal(correction?.decision, "correct");
   assert.equal(correction?.humanReviewStatus, "approved");
+  assert.equal(transitionTask?.status, "completed");
+  assert.equal(transitionDecision?.decision, "promote");
+  assert.equal(transitionDecision?.humanReviewStatus, "approved");
+  assert.deepEqual(transitionDecision?.allowedSurfaces, ["knowledge-bank", "/work/kc-town-hall"]);
   assert.equal(rejection?.decision, "reject");
   assert.ok(manifest?.guardrails.some((item) => /Appropriation is not receipt/i.test(item)));
+  assert.ok(manifest?.canonicalClaimIds.includes("CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026"));
+  assert.ok(manifest?.exclusions.some((item) => /Private personal circumstances/i.test(item)));
 
   const publicObservationRoles = publicRecord?.observationIds.map((id) =>
     relationshipRole(knowledgeLifecycle.observations.find((item) => item.id === id), publicRecord.id)
@@ -525,8 +538,8 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
 
   const kcProofs = retrieveKnowledgePalette({ proofSurface: "/work/kc-town-hall", publicationSafe: true });
   assert.deepEqual(kcProofs.projects.map(({ id }) => id), ["PRJ-KC-TOWN-HALL"]);
-  assert.deepEqual(kcProofs.candidates.map(({ id }) => id), ["CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
-  assert.deepEqual(kcProofs.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"]);
+  assert.deepEqual(kcProofs.candidates.map(({ id }) => id), ["CND-KC-TOWN-HALL-PUBLIC-RECORD", "CND-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION"]);
+  assert.deepEqual(kcProofs.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026"]);
   assert.deepEqual(kcProofs.researchTasks, []);
   assert.deepEqual(kcProofs.mediaLeads, []);
 

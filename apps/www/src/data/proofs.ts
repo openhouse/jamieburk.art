@@ -435,18 +435,19 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, carrying a $490,539 proposal through Board recommendation and City Council appropriation. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, carrying a $490,539 proposal through Board recommendation and City Council appropriation. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Public records identify him as the proposal's presenter; the Council accepted the Board recommendation and appropriated $490,539 to the project account in 2019. A 2022 update listed no funds disbursed, and a 2024 ordinance reappropriated the unused award after KC Town Hall withdrew.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Public records identify him as the proposal's presenter; the Council accepted the Board recommendation and appropriated $490,539 to the project account in 2019. A 2022 update listed no funds disbursed, and a 2024 ordinance reappropriated the unused award.",
     sourceBasis:
-      "Approved resume language, public-safe project context, CCED Board minutes naming Jamie as presenter, 2019 Council appropriation and resolution records, the 2022 project-status table, and the 2024 withdrawal and reappropriation ordinance.",
+      "Approved resume language, public-safe project context, CCED Board minutes naming Jamie as presenter, 2019 Council appropriation and resolution records, the 2022 project-status table, and the 2024 reappropriation ordinance.",
     guardrail:
       "Appropriation must never be compressed into receipt: keep the no-disbursement and reappropriation endpoint attached to any public funding language.",
     doNotSay: [
       "KC Town Hall received or spent $490,539",
       "The project was completed",
-      "Why the project withdrew",
+      "Withdrawal from the funding process means Jamie abandoned the project",
+      "Why the project's stewardship changed",
       "Private financial details",
       "Official municipal endorsement beyond the recorded Council actions"
     ],
@@ -455,14 +456,15 @@ export const proofClaims: ProofClaim[] = [
       "Legal details",
       "Property details",
       "Banking details",
-      "Stakeholder details"
+      "Stakeholder details",
+      "Private personal circumstances"
     ],
     surfaces: ["resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    canonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"],
+    canonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026"],
     requiredCanonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"],
-    lastReviewed: "2026-07-14"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "source-backed-team-memory-method",

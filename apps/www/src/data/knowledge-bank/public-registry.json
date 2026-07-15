@@ -271,6 +271,30 @@
       ]
     },
     {
+      "id": "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026",
+      "title": "Jamie Burkart public-safe KC Town Hall transition statement",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex public-safe statement review",
+      "reviewStatus": "close-read",
+      "contentReviewedAt": "2026-07-15",
+      "contentReviewedBy": "Codex public-safe statement review",
+      "publicCitation": "Jamie Burkart, public-safe KC Town Hall project-transition statement, July 15, 2026.",
+      "publicNote": "Jamie reports transitioning the KC Town Hall project to a mission-aligned organization. No private circumstances or receiving-organization details are included.",
+      "doesNotEstablish": [
+        "independent corroboration",
+        "the receiving organization's identity",
+        "a sale or legal transfer of property or ownership",
+        "the project's current operating status",
+        "private circumstances surrounding the transition"
+      ]
+    },
+    {
       "id": "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
       "title": "Committee Substitute for Ordinance 190642",
       "organization": "Council of Kansas City, Missouri",
@@ -721,7 +745,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal. After the CCED Board recommended it, the City Council accepted the recommendation and appropriated $490,539 to the project account on September 26, 2019. The funding agreement was not completed, no funds were disbursed, and the Council reappropriated the unused award after KC Town Hall withdrew the project in 2024.",
+          "text": "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal. After the CCED Board recommended it, the City Council accepted the recommendation and appropriated $490,539 to the project account on September 26, 2019. The funding agreement was not completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -730,7 +754,7 @@
         },
         {
           "key": "work-card",
-          "text": "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.",
+          "text": "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -739,7 +763,7 @@
         },
         {
           "key": "technical-operations",
-          "text": "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.",
+          "text": "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -748,7 +772,7 @@
         },
         {
           "key": "resume-pdf",
-          "text": "On September 26, 2019, the City Council accepted the Board's recommendation and appropriated $490,539 to the project account; the agreement was not completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award after project withdrawal.",
+          "text": "On September 26, 2019, the City Council accepted the Board's recommendation and appropriated $490,539 to the project account; the agreement was not completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -813,8 +837,39 @@
       ],
       "boundaries": [
         "A Council appropriation and authorization to negotiate are not evidence of an executed agreement, receipt, or expenditure.",
-        "The public record establishes that the project withdrew and the unused award was reappropriated; it does not establish why.",
-        "Do not publish private property, legal, financial, or stakeholder details."
+        "The public record establishes withdrawal of the funding request and reappropriation of the unused award; it does not establish the project's stewardship transition or why it occurred.",
+        "Do not publish private property, legal, financial, stakeholder, or personal details."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie reports later transitioning the project to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's account of transitioning the project to a mission-aligned organization"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is Jamie-approved first-person evidence, not independent corroboration.",
+        "The claim does not identify the receiving organization or establish a sale, deed transfer, ownership transfer, or current operating status.",
+        "Private circumstances surrounding the transition remain outside the repository and public portfolio."
       ]
     }
   ],
@@ -933,7 +988,8 @@
         "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
         "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
-        "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"
+        "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317",
+        "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"
       ],
       "occurrences": [
         {
@@ -946,6 +1002,14 @@
             "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
             "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
             "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"
+          ]
+        },
+        {
+          "id": "mission-aligned-transition",
+          "claimId": "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"
           ]
         }
       ]

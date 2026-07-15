@@ -549,6 +549,25 @@ const knowledgeBankInput = {
       doesNotEstablish: ["independent confirmation of Jamie's title or scope", "licensed-contractor status", "independent validation of project metrics", "sole credit for collective neighborhood work", "causal responsibility for public funding decisions"]
     },
     {
+      id: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026",
+      title: "Jamie Burkart public-safe KC Town Hall transition statement",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2026-07-15",
+      accessedAt: "2026-07-15",
+      metadataVerifiedAt: "2026-07-15",
+      metadataVerifiedBy: "Codex public-safe statement review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-15",
+      contentReviewedBy: "Codex public-safe statement review",
+      publicCitation: "Jamie Burkart, public-safe KC Town Hall project-transition statement, July 15, 2026.",
+      publicNote: "Jamie reports transitioning the KC Town Hall project to a mission-aligned organization. No private circumstances or receiving-organization details are included.",
+      supportsGenerally: ["Jamie's account of transitioning KC Town Hall to a mission-aligned organization"],
+      doesNotEstablish: ["independent corroboration", "the receiving organization's identity", "a sale or legal transfer of property or ownership", "the project's current operating status", "private circumstances surrounding the transition"]
+    },
+    {
       id: "SRC-TIRED-OF-TIRES-PICKUP-LEDGER-2019-2022",
       title: "KC Town Hall TiredOfTires pickup ledger",
       organization: "KC Town Hall LLC",
@@ -1033,13 +1052,13 @@ const knowledgeBankInput = {
     {
       id: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019",
       project: "kc-town-hall",
-      internalClaim: "Kansas City public records identify Jamie as presenter of KC Town-Hall's $490,539 adaptive-reuse request. After the CCED Board recommended it, the City Council accepted the recommendation and appropriated $490,539 to the project account on September 26, 2019. The funding agreement was not completed, no funds were disbursed, and the Council reappropriated the unused award after KC Town Hall withdrew the project in 2024.",
+      internalClaim: "Kansas City public records identify Jamie as presenter of KC Town-Hall's $490,539 adaptive-reuse request. After the CCED Board recommended it, the City Council accepted the recommendation and appropriated $490,539 to the project account on September 26, 2019. The funding agreement was not completed, no funds were disbursed, and the Council reappropriated the unused award after KC Town Hall withdrew the funding request in 2024.",
       status: "confirmed-with-boundary",
       projections: [
-        { key: "case-study", text: "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal. After the CCED Board recommended it, the City Council accepted the recommendation and appropriated $490,539 to the project account on September 26, 2019. The funding agreement was not completed, no funds were disbursed, and the Council reappropriated the unused award after KC Town Hall withdrew the project in 2024.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] },
-        { key: "work-card", text: "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.", status: "active", citationRequired: true, surfaces: ["/work"] },
-        { key: "technical-operations", text: "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.", status: "active", citationRequired: true, surfaces: ["/work/technical-operations"] },
-        { key: "resume-pdf", text: "On September 26, 2019, the City Council accepted the Board's recommendation and appropriated $490,539 to the project account; the agreement was not completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award after project withdrawal.", status: "active", citationRequired: true, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] }
+        { key: "case-study", text: "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal. After the CCED Board recommended it, the City Council accepted the recommendation and appropriated $490,539 to the project account on September 26, 2019. The funding agreement was not completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] },
+        { key: "work-card", text: "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated.", status: "active", citationRequired: true, surfaces: ["/work"] },
+        { key: "technical-operations", text: "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated.", status: "active", citationRequired: true, surfaces: ["/work/technical-operations"] },
+        { key: "resume-pdf", text: "On September 26, 2019, the City Council accepted the Board's recommendation and appropriated $490,539 to the project account; the agreement was not completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award.", status: "active", citationRequired: true, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] }
       ],
       evidence: [
         { sourceId: "SRC-KC-TOWN-HALL-CCED-2019", relationship: "direct-support", supports: ["Jamie as project presenter", "the $490,539 request", "the adaptive-reuse program", "the Board's recommendation"], locator: "June 12 minutes pages 2-7 and June 13 minutes page 12", confidence: "high", renderCitation: true },
@@ -1049,9 +1068,24 @@ const knowledgeBankInput = {
         { sourceId: "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", relationship: "supports-boundary", supports: ["project withdrawal", "unused award", "reappropriation of $490,539"], locator: "Recitals and Sections 1-2", confidence: "high", renderCitation: true },
         { sourceId: "SRC-KC-TOWN-HALL-CCED-2021", relationship: "context", supports: ["bounded later presence of Jamie and KC Town Hall in a public meeting record"], locator: "September 14, 2021 minutes, community members present section", confidence: "moderate", renderCitation: false }
       ],
-      boundaries: ["A Council appropriation and authorization to negotiate are not evidence of an executed agreement, receipt, or expenditure.", "The public record establishes that the project withdrew and the unused award was reappropriated; it does not establish why.", "Do not publish private property, legal, financial, or stakeholder details."],
-      antiClaims: ["KC Town-Hall received or spent $490,539", "The project was completed", "The Council vote caused the project to be built", "The public record establishes why the project withdrew"],
-      researchInquiryIds: [], reviewedAt: "2026-07-14", reviewedBy: ["Jamie Burkart", "Codex public-record review"]
+      boundaries: ["A Council appropriation and authorization to negotiate are not evidence of an executed agreement, receipt, or expenditure.", "The public record establishes withdrawal of the funding request and reappropriation of the unused award; it does not establish the project's stewardship transition or why it occurred.", "Do not publish private property, legal, financial, stakeholder, or personal details."],
+      antiClaims: ["KC Town-Hall received or spent $490,539", "The project was completed", "The Council vote caused the project to be built", "The public record establishes why the funding request was withdrawn", "Withdrawal of the funding request means Jamie abandoned the project"],
+      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex public-record review"]
+    },
+    {
+      id: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
+      project: "kc-town-hall",
+      internalClaim: "Jamie reports transitioning the KC Town Hall project to a mission-aligned organization. The receiving organization, legal form, timing, and private circumstances are intentionally outside the public claim.",
+      status: "confirmed-with-boundary",
+      projections: [
+        { key: "case-study", text: "Jamie reports later transitioning the project to a mission-aligned organization.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] }
+      ],
+      evidence: [
+        { sourceId: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026", relationship: "direct-support", supports: ["Jamie's account of transitioning the project to a mission-aligned organization"], locator: "Dated July 15, 2026 public-safe first-person statement", confidence: "moderate", renderCitation: true }
+      ],
+      boundaries: ["This is Jamie-approved first-person evidence, not independent corroboration.", "The claim does not identify the receiving organization or establish a sale, deed transfer, ownership transfer, or current operating status.", "Private circumstances surrounding the transition remain outside the repository and public portfolio."],
+      antiClaims: ["The mission-aligned organization purchased the property", "Legal ownership transferred", "The receiving organization currently operates KC Town Hall", "The public record establishes why Jamie transitioned the project"],
+      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex protected-archive review"]
     },
     {
       id: "CLM-CLAUDETTE-AR-COLLABORATION-2017",
@@ -1101,7 +1135,8 @@ const knowledgeBankInput = {
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"], decidedAt: "2026-07-11", decisionId: "DEC-CALLNYC-FIRST-COUNCILSTAT-PROMOTE", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"], decidedAt: "2026-07-11", decisionId: "DEC-CALLNYC-EVENT-TIME-CORRECT", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
     { id: "COR-NYCA-NPR-FOUNDING-MEMBER-2026", claimId: "CLM-NYCA-CABARET-REPEAL-ADVOCACY-2017", previousText: "NPR used only as broader Cabaret Law repeal and Let NYC Dance context.", replacementText: "NPR independently identifies Jamie as a founding member of NYC Artist Coalition and quotes his repeal advocacy.", reason: "Close reading of the public-radio transcript recovered explicit role and advocacy language while retaining sole-founder and causality boundaries.", sourceIds: ["SRC-NYCA-NPR-CABARET-CONTEXT-2017"], decidedAt: "2026-07-14", approvedAt: "2026-07-14", approvedBy: ["Jamie Burkart"], decisionId: "DEC-NYCA-CABARET-ADVOCACY-CORRECT-2026-07-14", affectedSurfaces: ["knowledge-bank", "/resume", "/work", "/work/technical-operations", "/work/fair-rent-nyc"], status: "active" },
-    { id: "COR-KC-TOWN-HALL-COUNCIL-LIFECYCLE-2026", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", previousText: "The reviewed public record stopped at the CCED Board's $490,539 recommendation; final Council action, disbursement, and project outcome remained open.", replacementText: "The Council accepted the Board recommendation and appropriated $490,539 to the project account on September 26, 2019; the agreement was not completed, no funds were disbursed, and the Council reappropriated the unused award after project withdrawal in 2024.", reason: "Close reading of Council Ordinance 190642, Resolution 190649, the 2022 project update, and Ordinance 240317 recovered the complete public funding lifecycle.", sourceIds: ["SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"], decidedAt: "2026-07-14", approvedAt: "2026-07-14", approvedBy: ["Jamie Burkart"], decisionId: "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT", affectedSurfaces: ["knowledge-bank", "/work", "/work/technical-operations", "/work/kc-town-hall", "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"], status: "active" }
+    { id: "COR-KC-TOWN-HALL-COUNCIL-LIFECYCLE-2026", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", previousText: "The reviewed public record stopped at the CCED Board's $490,539 recommendation; final Council action, disbursement, and project outcome remained open.", replacementText: "The Council accepted the Board recommendation and appropriated $490,539 to the project account on September 26, 2019; the agreement was not completed, no funds were disbursed, and the Council reappropriated the unused award after project withdrawal in 2024.", reason: "Close reading of Council Ordinance 190642, Resolution 190649, the 2022 project update, and Ordinance 240317 recovered the complete public funding lifecycle.", sourceIds: ["SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"], decidedAt: "2026-07-14", approvedAt: "2026-07-14", approvedBy: ["Jamie Burkart"], decisionId: "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT", affectedSurfaces: ["knowledge-bank", "/work", "/work/technical-operations", "/work/kc-town-hall", "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"], status: "active" },
+    { id: "COR-KC-TOWN-HALL-PUBLIC-ENDPOINT-2026", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", previousText: "The unused award was later reappropriated after project withdrawal.", replacementText: "The unused award was later reappropriated. Jamie's separately sourced account says he transitioned the project to a mission-aligned organization.", reason: "Jamie clarified that the professional project endpoint was a mission-aligned transition. Public composition now keeps the City's administrative funding endpoint distinct from Jamie's authorized first-person transition account and excludes private circumstances.", sourceIds: ["SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"], decidedAt: "2026-07-15", approvedAt: "2026-07-15", approvedBy: ["Jamie Burkart"], affectedSurfaces: ["knowledge-bank", "/work", "/work/technical-operations", "/work/kc-town-hall", "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"], status: "active" }
   ],
   pages: [
     {
@@ -1144,8 +1179,11 @@ const knowledgeBankInput = {
     {
       id: "kc-town-hall",
       surface: "/work/kc-town-hall",
-      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"],
-      occurrences: [{ id: "public-record-2019", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"] }]
+      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"],
+      occurrences: [
+        { id: "public-record-2019", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"] },
+        { id: "mission-aligned-transition", claimId: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"] }
+      ]
     }
   ]
 } satisfies KnowledgeBank;

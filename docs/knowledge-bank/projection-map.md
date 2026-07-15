@@ -315,7 +315,7 @@ composed public surface, not a claim database.
 **Surface:** `case-study`
 **Destination type:** `route`
 **Audience:** Readers evaluating long-horizon public implementation work
-**Purpose:** Show Jamie's documented proposal and public-review role through the complete municipal funding lifecycle.
+**Purpose:** Show Jamie's documented proposal and public-review role, the bounded municipal funding lifecycle, and his self-reported mission-aligned project transition.
 
 ### Approved Proofs
 
@@ -324,18 +324,23 @@ composed public surface, not a claim database.
 ### Required Canonical Claims
 
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
+- `CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026`
 
 ### Exclusions
 
 - Funding receipt or expenditure
 - Project completion
-- Reasons for withdrawal
+- Receiving-organization identity
+- Legal or property-transfer claims
+- Current operating status
+- Private personal circumstances
 
 ### Guardrails
 
 - Appropriation is not receipt
 - The award remained unused and was reappropriated
-- Do not infer private causes
+- Do not present funding withdrawal as project abandonment
+- Do not infer private causes or a legal transfer
 ## `/lab/source-backed-team-memory`
 
 **Surface:** `lab`

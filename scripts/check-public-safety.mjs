@@ -263,7 +263,7 @@ if (!existsSync(resumePath)) {
       resumeText
     ) ||
     !/the\s+agreement\s+was\s+not\s+completed,\s+no\s+funds\s+were\s+disbursed/i.test(resumeText) ||
-    !/in\s+2024\s+the\s+Council\s+reappropriated\s+the\s+unused\s+award\s+after\s+project\s+withdrawal/i.test(resumeText)
+    !/in\s+2024\s+the\s+Council\s+reappropriated\s+the\s+unused\s+award/i.test(resumeText)
   ) {
     addFailure(resumePath, "resume PDF is missing the approved bounded KC Town Hall Council lifecycle");
   }
