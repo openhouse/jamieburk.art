@@ -75,11 +75,20 @@ import {
   wowListFullPopulationSources
 } from "../../apps/www/src/data/knowledge-bank/wowlist-x-full-population.ts";
 import {
+  kcTownHallFullPopulationClaims,
+  kcTownHallFullPopulationInquiries,
+  kcTownHallFullPopulationIntake,
+  kcTownHallFullPopulationSources
+} from "../../apps/www/src/data/knowledge-bank/kctownhall-x-full-population.ts";
+import {
   validateCommittedCorpus
 } from "../derive-callnyc-x-corpus.mjs";
 import {
   validateCommittedCorpus as validateCommittedWowListCorpus
 } from "../derive-wowlist-x-corpus.mjs";
+import {
+  validateCommittedFixture as validateCommittedKcTownHallFixture
+} from "../derive-kctownhall-x-corpus.mjs";
 import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
@@ -373,6 +382,104 @@ test("WOW List full-population corpus is complete, reproducible, and honestly bo
   assert.ok(!socialIntake.claimIds.includes("CLM-WOWLIST-TECHNICAL-CONTRIBUTION"));
 });
 
+test("KC Town Hall full-population corpus is complete, reproducible, and safely bounded", () => {
+  const fixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json";
+  const manifestPath =
+    "docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.manifest.json";
+  const fixtureText = readFileSync(fixturePath, "utf8");
+  const manifestText = readFileSync(manifestPath, "utf8");
+  const fixture = JSON.parse(fixtureText);
+  const manifest = JSON.parse(manifestText);
+  const metrics = validateCommittedKcTownHallFixture(
+    fixturePath,
+    fixtureText,
+    manifest
+  );
+
+  assert.equal(
+    createHash("sha256").update(fixtureText).digest("hex"),
+    manifest.corpusSha256
+  );
+  assert.equal(new Set(fixture.records.map((record) => record.url)).size, 183);
+  assert.equal(fixture.conversationContextRecords.length, 5);
+  assert.doesNotMatch(fixtureText, /"(?:authenticatedAs|sessionData|rawText|text|phone|address)"\s*:/i);
+  assert.doesNotMatch(fixtureText, /\b\d{3}[-.) ]\s*\d{3}[- ]\d{4}\b/);
+  assert.deepEqual(metrics, {
+    profileReported: 183,
+    postsTimelinePrimaryRecords: 170,
+    repliesTimelineRenderedCards: 188,
+    conversationContextCards: 5,
+    renderedPrimaryRecords: 183,
+    unresolvedCountDifference: 0,
+    recordTypes: { original: 142, reply: 13, repost: 28 },
+    accountAuthoredRecords: 155,
+    recordsByYear: {
+      "2018": 30,
+      "2019": 85,
+      "2020": 41,
+      "2021": 17,
+      "2022": 10
+    },
+    tireRelatedRecords: 100,
+    surveyLinkedRecords: 12,
+    recordsWithExternalLinks: 118,
+    externalLinkOccurrences: 133,
+    distinctExternalShortUrls: 31,
+    accountAuthoredRecordsWithExternalLinks: 115,
+    accountAuthoredExternalLinkOccurrences: 130,
+    accountAuthoredDistinctExternalShortUrls: 28,
+    curatedMissionRelevantSources: 9,
+    directCouncilMemberAccounts: 3,
+    otherMissionRelevantStakeholderRecords: 4,
+    accountAuthoredRecordsWithVisibleInteraction: 77,
+    accountAuthoredVisibleEngagement: {
+      replies: 22,
+      reposts: 70,
+      likes: 174,
+      bookmarks: 1
+    }
+  });
+
+  assert.equal(kcTownHallFullPopulationSources.length, 13);
+  assert.equal(kcTownHallFullPopulationClaims.length, 2);
+  assert.equal(kcTownHallFullPopulationInquiries.length, 2);
+  assert.equal(kcTownHallFullPopulationIntake.length, 1);
+  assert.ok(
+    kcTownHallFullPopulationClaims.every((claim) =>
+      claim.projections.every((projection) => projection.status === "hold")
+    )
+  );
+  assert.ok(
+    kcTownHallFullPopulationClaims
+      .find((claim) => claim.id === "CLM-KCTH-X-DATED-VISIBLE-ENGAGEMENT")
+      .antiClaims.some((antiClaim) => /267 people engaged/.test(antiClaim))
+  );
+  assert.ok(
+    kcTownHallFullPopulationInquiries
+      .find((inquiry) => inquiry.id === "INQ-KCTH-X-TIRE-TOTALS-CORROBORATION")
+      .limitations.some((limitation) => /one drop-off/.test(limitation))
+  );
+
+  const operatingClaim = socialMediaArchiveClaims.find(
+    (claim) => claim.id === "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS"
+  );
+  assert.deepEqual(
+    operatingClaim.evidence.filter((item) => item.renderCitation).map((item) => item.sourceId),
+    ["SRC-KCTH-X-CORPUS-2026-07-15"]
+  );
+  assert.ok(operatingClaim.boundaries.some((boundary) => /publishing and operating continuity/.test(boundary)));
+  assert.ok(operatingClaim.antiClaims.some((antiClaim) => /267 people engaged/.test(antiClaim)));
+
+  const run = readFileSync(
+    "docs/knowledge-bank/runs/2026-07-15-kctownhall-x-full-population.md",
+    "utf8"
+  );
+  assert.match(run, /183 unique canonical status IDs/);
+  assert.match(run, /do not\s+independently verify tire quantities/i);
+  assert.match(run, /Tags and mentions alone do not/);
+});
+
 test("NYC Artist Coalition count separates direct, mission-relevant, and thread-context records", () => {
   const directPeople = new Set(
     nycArtistCoalitionCouncilInteractions.map((event) => event.name)
@@ -426,7 +533,9 @@ test("other project social archives retain population and role boundaries", () =
     (item) => item.id === "CLM-KCSPACES-SOCIAL-GRANTEE-DOCUMENTATION"
   );
   assert.match(wowClaim.internalClaim, /complete recovered @wowlist profile population/);
-  assert.match(kcTownHallClaim.internalClaim, /at least three then-sitting Council-member accounts/);
+  assert.match(kcTownHallClaim.internalClaim, /complete 183-record/);
+  assert.match(kcTownHallClaim.internalClaim, /three sitting Council-member accounts/);
+  assert.match(kcTownHallClaim.internalClaim, /Bridging the Gap collaborator/);
   assert.equal(kcSpacesFundHighlights.length, 11);
   assert.equal(kcSpacesClaim.projections[0].status, "hold");
   assert.deepEqual(kcSpacesClaim.projections[0].surfaces, []);

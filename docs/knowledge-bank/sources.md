@@ -140,6 +140,31 @@ production database snapshot and structural findings from code, project
 documentation, and approved resume language while withholding person-level
 rows, raw code archives, and private operational records.
 
+### KC Town Hall authenticated social corpus
+
+The July 15 archival-production pass reconciles all 183 profile-reported
+`@KCTownHall` records across the authenticated Posts and Replies routes. The
+public-safe fixture preserves status URLs, dates, author handles, record types,
+timeline membership, posted-link metadata, row-level classifications, and
+dated visible-interaction counts. It excludes post text, historical phone
+numbers, pickup addresses, authentication identity, cookies, private-account
+state, and session data. A SHA-256 manifest and deterministic validation script
+make the population and aggregate findings reproducible.
+
+The corpus distinguishes 142 original posts, 13 replies, 28 reposts, and five
+other-account conversation-context cards. It records 100 tire-related records,
+12 survey-linked records, and 133 external-link occurrences across 118 records.
+These are publishing and operating-pattern observations, not independently
+audited service, participation, savings, reach, or impact totals.
+
+Close-read posted sources cover neighborhood food access, affordable housing,
+renter policy, elections, transit planning, official voter information, public
+health, emergency resources, and practical cleanup documentation. Circulation
+does not mean a source covered, partnered with, or endorsed KC Town Hall.
+Direct replies and quote responses from three sitting Council-member accounts,
+one KCMO 311 service response, community amplification, and one external
+tire-dropoff report remain distinct stakeholder-response types.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

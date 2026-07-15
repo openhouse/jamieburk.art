@@ -148,6 +148,23 @@ posts. Do not say Jamie authored every project-account post or that public
 dialogue with Council members and KCMO 311 proves endorsement, service totals,
 or completion of the redevelopment proposal.
 
+Do not say the account archive is incomplete. The July 2026 Posts-and-Replies
+reconciliation recovered all 183 profile-reported records: 142 original posts,
+13 replies, and 28 reposts. Five other-account conversation cards are context,
+not KC Town Hall population records.
+
+Do not convert 100 tire-related records into a tire count, household count,
+participation total, independently audited savings figure, or health outcome.
+Do not convert 12 survey-linked records into a response count or proof of
+representativeness. One Bridging the Gap collaborator report corroborates one
+substantial tire drop-off, not the program's complete scale.
+
+Do not describe three direct Council-member-account responses, KCMO 311's
+service response, two community amplifications, or dated visible interactions
+as blanket endorsement, adoption, reach, conversion, or causal government
+impact. A source circulated by the account remains the work of its named author
+and publisher; circulation is not coverage of or partnership with KC Town Hall.
+
 ## Kansas City Neighborhood Operations
 
 Do not convert the Tired of Tires page's project-published $17,768 estimate into

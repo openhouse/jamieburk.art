@@ -509,9 +509,9 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Adaptive reuse, neighborhood operations, and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building. The project advanced from a unanimous $490,539 CCED Board recommendation to City Council approval and appropriation. The project later withdrew before disbursement.",
+      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building. A complete public-account archive also documents resident-input, recurring neighborhood-service, and civic-information operations. The project advanced from a unanimous $490,539 CCED Board recommendation to City Council approval and appropriation, then later withdrew before disbursement.",
     role: "Co-Lead, Redevelopment Planning & Public-Benefit Documentation",
     years: "2020s",
     status: "Short proof page",
@@ -537,17 +537,18 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official KCMO proposal, Council, appropriation, and project-status records, approved resume language, and a public-safe project summary.",
+      "Official KCMO proposal, Council, appropriation, and project-status records; approved resume language; and a public-safe 183-record project-account corpus.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus:
       "Historical project for Jamie; current property or redevelopment status is not asserted.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Long-horizon project management, public-benefit documentation, public-service operations, stakeholder coordination, and implementation support.",
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
+      "Complete 183-record public-operations archive",
       "$490,539 City Council-approved appropriation (not disbursed)"
     ],
     knownOpenProtected: {

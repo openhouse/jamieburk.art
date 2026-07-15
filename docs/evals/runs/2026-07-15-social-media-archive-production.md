@@ -48,6 +48,11 @@ These figures are discovery metadata, not accomplishment or impact claims.
 - KC Spaces Fund preserves at least 11 named public `#FUNDED` highlights while
   keeping organizer, selection, disbursement, and authorship boundaries intact.
 
+The KC Town Hall finding above records this candidate's preliminary state. A
+later item-level reconciliation recovered the two missing primary records and
+supersedes it with a complete 183-of-183 corpus; see
+`docs/evals/runs/2026-07-15-kctownhall-full-population.md`.
+
 ## Recursive Corrections
 
 The archival pass corrected the CallNYC working count from 19 to 20 distinct

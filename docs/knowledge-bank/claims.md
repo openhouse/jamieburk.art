@@ -327,6 +327,54 @@ bibliography claim:
 **Canonical claim:** `CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS`.
 **Last reviewed:** 2026-07-14
 
+## kc-town-hall-social-public-operations - Public operations archive
+
+**Status:** Ready with boundary
+**Support level:** Strong
+**Evidence class:** Complete public social-account corpus / public stakeholder records
+**Public wording:** A complete 183-record archive shows KC Town Hall's public account operating as project infrastructure for resident input, recurring household tire-pickup work, civic information, and stakeholder dialogue.
+**Detailed public-safe wording:** The complete profile-reported population contains 100 tire-related records and 12 survey-linked records. Direct responses came from three sitting Council-member accounts and KCMO 311; a Bridging the Gap collaborator independently reported receiving one substantial KC Town Hall tire drop-off, and two community accounts amplified an Oak Park cleanup notice.
+**Where to project:** KC Town Hall case study and Work card.
+**Why it matters:** Shows sustained public operations and service coordination rather than treating social media as promotional output.
+**Guardrail:** The corpus measures publishing and observable public interaction. It does not independently audit tires collected, households served, savings, participation, reach, endorsement, causality, individual authorship, project completion, or current property status.
+**Do not say:** Jamie authored every post; 267 people engaged; three Council members endorsed KC Town Hall; every tagged official engaged; the account proves redevelopment completion or government causation.
+**Protected boundaries:** Historical phone numbers, pickup addresses, post text, private messages, authentication state, private-account material, and resident response data stay outside the public repository.
+**Review owner:** Jamie
+**Canonical claim:** `CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS`.
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-civic-source-circulation - Civic-source circulation
+
+**Status:** Held
+**Support level:** Strong for circulation; not evidence of outcome
+**Evidence class:** Complete public social-account corpus / linked public sources
+**Public wording:** The account circulated resident-facing sources on food access, housing, elections, transit, public health, emergency resources, and practical cleanup work.
+**Detailed public-safe wording:** The complete archive links nine curated mission-relevant public sources spanning neighborhood food access, housing and renter policy, elections, transit planning, ozone information, COVID-19 relief, and practical cleanup documentation.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Preserves the account's civic-information role and the source trail future research can close-read without crowding the current case study.
+**Guardrail:** A circulated source remains the work of its named author and publisher. Circulation is not coverage, partnership, endorsement, use, or impact.
+**Do not say:** These sources covered KC Town Hall; the named publishers or institutions partnered with or endorsed the project; circulation proves resident or policy impact.
+**Protected boundaries:** Preserve only public source metadata and bounded notes; do not publish private analytics, authentication state, or historical contact details from surrounding posts.
+**Review owner:** Jamie
+**Canonical claim:** `CLM-KCTH-X-CIVIC-SOURCE-CIRCULATION`.
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-dated-visible-engagement - Dated visible engagement
+
+**Status:** Held
+**Support level:** Strong as a dated interface observation
+**Evidence class:** Complete public social-account corpus
+**Public wording:** On the July 2026 capture date, 77 of 155 account-authored records showed at least one visible interaction.
+**Detailed public-safe wording:** The dated interface snapshot recorded 22 replies, 70 reposts, 174 likes, and one bookmark across account-authored records; these are 267 displayed interaction units, not people or stable analytics.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Retains a reproducible baseline for future comparative research without converting volatile platform counters into an accomplishment claim.
+**Guardrail:** The 267 displayed reply, repost, like, and bookmark units are volatile interface counts, not unique people, reach, participation, conversion, endorsement, or complete lifetime analytics.
+**Do not say:** 267 people engaged; the figures measure reach, adoption, conversion, participation, endorsement, or impact; the figures are complete lifetime analytics.
+**Protected boundaries:** Retain only public status metadata and dated visible counts; do not publish account analytics, viewer identities, private-account material, or authentication state.
+**Review owner:** Jamie
+**Canonical claim:** `CLM-KCTH-X-DATED-VISIBLE-ENGAGEMENT`.
+**Last reviewed:** 2026-07-15
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful

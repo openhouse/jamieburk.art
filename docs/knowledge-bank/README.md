@@ -133,3 +133,12 @@ assigning every project-account post to Jamie. See the
 Historical scale and Jamie's technical contribution have a separate archive
 inquiry and intake, so the social corpus is not asked to prove implementation
 or adoption.
+
+The [KC Town Hall project note](projects/kc-town-hall.md) now links a complete
+183-record public-account fixture to the existing municipal, Phase One,
+neighborhood-listening, and stewardship records. The population separates 142
+originals, 13 replies, 28 reposts, and five conversation-context cards; retains
+posted-source and stakeholder-response inventories; and keeps historical
+contact details, raw post text, individual authorship, self-published program
+totals, endorsement, and causal impact behind explicit boundaries. See the
+[full-population research run](runs/2026-07-15-kctownhall-x-full-population.md).

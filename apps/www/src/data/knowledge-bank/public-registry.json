@@ -505,42 +505,6 @@
       ]
     },
     {
-      "id": "SRC-KCTH-MISSION-2018",
-      "title": "KC Town Hall states its neighborhood-resource mission",
-      "author": "KC Town Hall (@KCTownHall)",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2018-07-02",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/KCTownHall/status/1013893135695601665",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "KC Town Hall public project-purpose post, July 2, 2018.",
-      "publicNote": "A public post establishes what the named account published; shared-account posts remain collectively authored unless separately attributed.",
-      "doesNotEstablish": [
-        "project completion",
-        "current property status"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-SURVEY-2018",
-      "title": "KC Town Hall invites neighborhood survey participation",
-      "author": "KC Town Hall (@KCTownHall)",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2018-07-02",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/KCTownHall/status/1013903289392517120",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "KC Town Hall public survey invitation, July 2, 2018.",
-      "publicNote": "A public post establishes what the named account published; shared-account posts remain collectively authored unless separately attributed.",
-      "doesNotEstablish": [
-        "survey response count",
-        "representativeness"
-      ]
-    },
-    {
       "id": "SRC-CALLNYC-X-CORPUS-2026-07-14",
       "title": "Authenticated CallNYC full recoverable timeline corpus",
       "author": "Codex authenticated browser review",
@@ -693,6 +657,27 @@
         "Jamie's authorship of the report",
         "fundraising totals",
         "attendance caused by WOW List"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-X-CORPUS-2026-07-15",
+      "title": "KC Town Hall complete profile-reported public timeline corpus",
+      "author": "Codex authenticated browser review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/KCTownHall/with_replies",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated item-level review of the Posts and Replies timelines for @KCTownHall, July 2026.",
+      "publicNote": "The Posts route yielded 170 primary records. The Replies route rendered 188 cards: 183 primary account records and five conversation-context cards by other accounts. The deduplicated primary union reconciles all 183 profile-reported records. The public fixture retains status metadata, classifications, posted-link metadata, and dated interaction counts while excluding post text, phone numbers, authentication identity, and private account state.",
+      "doesNotEstablish": [
+        "individual authorship of every account post",
+        "independently audited tire, savings, or participation totals",
+        "reach, adoption, conversion, endorsement, or causal impact",
+        "project completion or current property status",
+        "deleted, private, liked, or platform-suppressed activity"
       ]
     }
   ],
@@ -1546,50 +1531,35 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "The public account made the neighborhood process operational: it invited resident input, documented recurring Tired of Tires service, and carried two-way civic dialogue with at least three then-sitting Council member accounts and KCMO 311.",
+          "text": "A complete 183-record archive shows the public account operating as project infrastructure: 100 records documented recurring household tire-pickup work and 12 linked the neighborhood survey. Direct responses came from three sitting Council-member accounts and KCMO 311; a Bridging the Gap collaborator independently reported receiving a substantial KC Town Hall tire drop-off.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
             "/work/kc-town-hall"
           ],
-          "rationale": "Use the public listening and civic-dialogue pattern to make Jamie's broader project operations legible while keeping account authorship and later project stewardship collective."
+          "rationale": "Use exact population, operating-pattern, and bounded stakeholder evidence to make the project's public operations legible without assigning every account post or program outcome to Jamie."
         }
       ],
       "evidence": [
         {
-          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
+          "sourceId": "SRC-KCTH-X-CORPUS-2026-07-15",
           "relationship": "direct-support",
           "supports": [
-            "population-accounting summary",
-            "strict incoming-interaction rule",
+            "complete 183-record population",
+            "100 tire-related records",
+            "12 survey-linked records",
+            "strict stakeholder-response inventory",
             "public-safety method"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-MISSION-2018",
-          "relationship": "direct-support",
-          "supports": [
-            "neighborhood resource and cultural-center purpose"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-SURVEY-2018",
-          "relationship": "direct-support",
-          "supports": [
-            "public resident-input invitation"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "Do not publish historical phone numbers or addresses from posts.",
+        "Do not publish historical phone numbers, pickup addresses, or raw post text.",
         "Do not assign every account post or later operation to Jamie.",
-        "Public dialogue does not establish project completion, policy causation, or independent verification of service totals."
+        "One hundred tire-related records measure publishing and operating continuity, not tire quantities, households served, or independently audited savings.",
+        "Public dialogue does not establish project completion, policy causation, blanket endorsement, or independently verified program totals."
       ]
     },
     {
@@ -2058,9 +2028,7 @@
         "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-ORDINANCE-240317",
         "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
-        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
-        "SRC-KCTH-MISSION-2018",
-        "SRC-KCTH-SURVEY-2018"
+        "SRC-KCTH-X-CORPUS-2026-07-15"
       ],
       "occurrences": [
         {
@@ -2079,9 +2047,7 @@
           "claimId": "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
-            "SRC-KCTH-MISSION-2018",
-            "SRC-KCTH-SURVEY-2018"
+            "SRC-KCTH-X-CORPUS-2026-07-15"
           ]
         }
       ]

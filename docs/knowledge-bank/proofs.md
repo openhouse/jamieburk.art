@@ -22,6 +22,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Preserved 345 numbered Sunday Dinner event records and a reusable residency onboarding sequence; the reviewed records do not independently establish the 20+ resident-artist aggregate.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation for a project that advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539. The project later withdrew before disbursement.
+- A complete 183-record KC Town Hall public-account archive documents recurring neighborhood operations: 100 tire-related records, 12 survey-linked records, direct responses from three sitting Council-member accounts and KCMO 311, and one independently reported tire drop-off to a mission-aligned collaborator.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 
 ## Projection Rule

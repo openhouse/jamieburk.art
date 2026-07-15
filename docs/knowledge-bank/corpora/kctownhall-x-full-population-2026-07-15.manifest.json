@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T16:30:00-04:00",
+  "generator": "scripts/derive-kctownhall-x-corpus.mjs --write",
+  "corpus": "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+  "corpusSha256": "367e8a51f9b483d7962e99da8e345916bff874b91f8be74a801e1ec8379fc6aa",
+  "canonicalStatusIdSetSha256": "7fd0e4df9e021ee6ea7e34ba31ed7eef88f5c2ecd1d3b8495d657406d5633ab0",
+  "profileReportedPosts": 183,
+  "corpusItems": 183,
+  "profileCountNotMaterialized": 0,
+  "status": "complete-profile-reported-population"
+}

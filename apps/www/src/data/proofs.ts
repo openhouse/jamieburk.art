@@ -461,18 +461,20 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Jamie co-led adaptive reuse planning for a project approved for a $490,539 city appropriation; it later withdrew before disbursement",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter and trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter and trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement. A complete 183-record public-account archive separately documents recurring resident-input, household tire-pickup, civic-information, and stakeholder-dialogue operations.",
     sourceBasis:
-      "Approved resume language and official KCMO proposal, Council, appropriation, and project-status records.",
+      "Approved resume language; official KCMO proposal, Council, appropriation, and project-status records; and the public-safe 183-record KC Town Hall account corpus.",
     guardrail:
-      "Distinguish the unanimous CCED Board recommendation, Council adoption and appropriation, and the later withdrawal. Never imply a unanimous Council vote, an executed funding agreement, receipt, disbursement, or completed redevelopment.",
+      "Distinguish the unanimous CCED Board recommendation, Council adoption and appropriation, and the later withdrawal. Treat the institutional account as project context rather than proof Jamie authored every post. Never imply a unanimous Council vote, an executed funding agreement, receipt, disbursement, independently audited service totals, endorsement, causal government impact, or completed redevelopment.",
     doNotSay: [
       "The City Council vote was unanimous",
       "KC Town Hall received or spent $490,539",
       "The funded redevelopment was completed",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the public record",
+      "Jamie authored every KC Town Hall post",
+      "The account's tire, savings, participation, or engagement totals are independently audited"
     ],
     protectedBoundaries: [
       "Private financial details",

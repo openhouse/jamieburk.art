@@ -178,22 +178,35 @@ historical service remains available.
 
 ## KC Town Hall
 
-A population-accounted pass recovered 181 of 183 profile-reported items and
-retains the two-item gap rather than declaring the archive complete. The account
-documented the project's [neighborhood-resource purpose](https://x.com/KCTownHall/status/1013893135695601665),
+A Posts-and-Replies reconciliation recovered all 183 profile-reported records:
+142 original posts, 13 replies, and 28 reposts. The Replies route also rendered
+five other-account conversation cards, which remain context rather than KC Town
+Hall population records. The account documented the project's
+[neighborhood-resource purpose](https://x.com/KCTownHall/status/1013893135695601665),
 a [resident survey invitation](https://x.com/KCTownHall/status/1013903289392517120),
-and recurring neighborhood-service communication. It also supported direct
-public dialogue with at least three then-serving Council-member accounts:
+and recurring neighborhood-service communication. One hundred records are
+tire-related and 12 link the survey; these are publishing and operating-pattern
+counts, not audited service or participation totals. The corpus also preserves
+direct public dialogue with three then-serving Council-member accounts:
 [Melissa Robinson](https://x.com/Robinson4kc/status/1289714535251742726),
 [Jolie Justus](https://x.com/joliejustus/status/1122883010582466560), and
 [Quinton Lucas](https://x.com/QuintonLucasKC/status/1122866432130334720), plus
-[KCMO 311](https://x.com/KCMO311/status/1034093516073459712).
+[KCMO 311](https://x.com/KCMO311/status/1034093516073459712). A Bridging the Gap
+collaborator separately reported receiving a substantial KC Town Hall tire
+drop-off; two community accounts amplified an Oak Park cleanup notice.
 
-This supports a public-operations claim: the account carried neighborhood
-listening, project purpose, service coordination, and civic dialogue. Historical
-phone numbers and addresses are excluded. The posts do not by themselves prove
-Jamie authored every message, personally completed every service action, or
-completed the later redevelopment proposal.
+Across 118 records, 133 external-link occurrences circulated resident-facing
+sources on food access, housing, elections, transit, voter information, public
+health, emergency resources, and cleanup practice. Circulation is not press
+coverage, partnership, endorsement, current guidance, or causal impact.
+
+This supports a public-operations claim: the institutional account carried
+neighborhood listening, project purpose, recurring service intake, civic
+information, and stakeholder dialogue. Post text, historical phone numbers,
+pickup addresses, and authenticated-session state are excluded. The archive
+does not prove Jamie authored every message, personally completed every service
+action, achieved the account's self-published aggregate totals, caused public
+official action, or completed the later redevelopment proposal.
 
 ## KC Spaces Fund
 
@@ -218,8 +231,10 @@ named organizers.
   interaction-time identity.
 - Obtain collaborator or platform-administrator corroboration for account
   establishment if a stronger public claim becomes useful.
-- Complete the KC Town Hall two-item gap and distinguish authored posts,
-  replies, quote posts, and reposts across the full population.
+- Corroborate the KC Town Hall account's aggregate tire and savings totals with
+  City, recycler, route, receipt, or partner records.
+- Recover a public-safe KC Town Hall survey response count, synthesis, and
+  decision trail without publishing respondent or contact data.
 - Recover any public migration record connecting `@wowlistnyc` and `@wowlist`.
 - Continue account discovery for projects currently marked "not recovered";
   that label means the bounded search did not recover an account, not that none
