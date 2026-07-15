@@ -33,6 +33,8 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run evals:chad`
 - [ ] `npm run evals:callnyc-x`
 - [ ] `npm run evals:wowlist-x`
+- [ ] `npm run check:nycartc-corpus`
+- [ ] `npm run evals:nycartc-x`
 - [ ] `npm run evals:recursive`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`

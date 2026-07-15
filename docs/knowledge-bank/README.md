@@ -112,3 +112,11 @@ and [project note](projects/wowlist.md) reconcile all 38 records represented by
 the surviving profile count, disposition every posted URL, preserve support,
 scene-knowledge, and civic-care findings, and select one bounded product-support
 claim for the public case study.
+
+The [NYC Artist Coalition X full-population receipt](intake/2026-07-15-nycartc-x-full-population.md)
+accounts for the complete 5,124-post profile control while keeping the 1,757
+unrecovered slots explicit. Its governed corpus separates authored posts from
+reposts, resolves every recovered-item short URL, preserves four overlapping
+campaign traces, distinguishes outbound stakeholder communication from incoming
+engagement, and holds volatile interaction counters outside accomplishment
+messaging.

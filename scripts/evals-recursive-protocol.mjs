@@ -62,8 +62,11 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-project-social-account-archive.md",
   "docs/knowledge-bank/intake/2026-07-15-callnyc-x-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-wowlist-x-full-population.md",
+  "docs/knowledge-bank/intake/2026-07-15-nycartc-x-full-population.md",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
   "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json",
   "docs/knowledge-bank/projects/callnyc.md",
   "docs/knowledge-bank/projects/wowlist.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
@@ -74,6 +77,7 @@ const requiredFiles = [
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
   "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts",
+  "apps/www/src/data/knowledge-bank/nycartc-x-corpus.ts",
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
@@ -84,6 +88,8 @@ const requiredFiles = [
   "scripts/evals-chad-lens.mjs",
   "scripts/evals-callnyc-x-corpus.mjs",
   "scripts/evals-wowlist-x-corpus.mjs",
+  "scripts/derive-nycartc-x-corpus.mjs",
+  "scripts/evals-nycartc-x-corpus.mjs",
   "scripts/evals-knowledge-lifecycle.mjs",
   "scripts/report-knowledge-lifecycle.mjs",
   "scripts/tests/knowledge-lifecycle.test.mjs",
@@ -104,6 +110,8 @@ for (const script of [
   "evals:chad",
   "evals:callnyc-x",
   "evals:wowlist-x",
+  "check:nycartc-corpus",
+  "evals:nycartc-x",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -131,6 +139,14 @@ if (scripts.check && !scripts.check.includes("npm run evals:wowlist-x")) {
   fail("package.json check script must include npm run evals:wowlist-x");
 }
 
+if (scripts.check && !scripts.check.includes("npm run check:nycartc-corpus")) {
+  fail("package.json check script must include npm run check:nycartc-corpus");
+}
+
+if (scripts.check && !scripts.check.includes("npm run evals:nycartc-x")) {
+  fail("package.json check script must include npm run evals:nycartc-x");
+}
+
 if (
   scripts["evals:knowledge-lifecycle"] !==
   "node scripts/evals-knowledge-lifecycle.mjs"
@@ -150,6 +166,14 @@ if (scripts["evals:callnyc-x"] !== "node scripts/evals-callnyc-x-corpus.mjs") {
 
 if (scripts["evals:wowlist-x"] !== "node scripts/evals-wowlist-x-corpus.mjs") {
   fail("package.json evals:wowlist-x must run scripts/evals-wowlist-x-corpus.mjs");
+}
+
+if (scripts["check:nycartc-corpus"] !== "node scripts/derive-nycartc-x-corpus.mjs") {
+  fail("package.json check:nycartc-corpus must run scripts/derive-nycartc-x-corpus.mjs");
+}
+
+if (scripts["evals:nycartc-x"] !== "node scripts/evals-nycartc-x-corpus.mjs") {
+  fail("package.json evals:nycartc-x must run scripts/evals-nycartc-x-corpus.mjs");
 }
 
 if (scripts["evals:recursive"] !== "node scripts/evals-recursive-protocol.mjs") {
@@ -210,6 +234,16 @@ const wowlistXModule = read(
   "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts"
 );
 const wowlistCaseStudy = read("apps/www/src/content/work/wowlist.mdx");
+const nycartcXReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-nycartc-x-full-population.md"
+);
+const nycartcXCorpus = read(
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json"
+);
+const nycartcXModule = read(
+  "apps/www/src/data/knowledge-bank/nycartc-x-corpus.ts"
+);
+const fairRentCaseStudy = read("apps/www/src/content/work/fair-rent-nyc.mdx");
 
 for (const doc of [
   ["docs/production-readiness.md", productionReadiness],
@@ -254,6 +288,16 @@ for (const doc of [
   ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
 ]) {
   requireIncludes(doc[1], "npm run evals:wowlist-x", doc[0]);
+}
+
+for (const doc of [
+  ["docs/production-readiness.md", productionReadiness],
+  ["docs/knowledge-bank/review-checklist.md", reviewChecklist],
+  ["docs/knowledge-bank/launch-blockers.md", launchBlockers],
+  ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
+]) {
+  requireIncludes(doc[1], "npm run check:nycartc-corpus", doc[0]);
+  requireIncludes(doc[1], "npm run evals:nycartc-x", doc[0]);
 }
 
 for (const phrase of [
@@ -482,6 +526,52 @@ for (const expected of [
   "not a platform export or deletion history"
 ]) {
   requireIncludes(wowlistCaseStudy, expected, "WOW List case study projection");
+}
+
+for (const expected of [
+  "100% population accounting, not 100% item recovery",
+  "3,367 distinct account items",
+  "1,757",
+  "696 recovered authored posts",
+  "2,671 reposts",
+  "1,235 distinct short URLs",
+  "outbound communication findings",
+  "held from accomplishment messaging"
+]) {
+  requireIncludes(nycartcXReceipt, expected, "NYC Artist Coalition X receipt");
+}
+
+for (const expected of [
+  "INTAKE-2026-07-15-NYCARTC-X-FULL-POPULATION",
+  "SRC-NAC-X-CORPUS-2026-07-15",
+  "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+  "INQ-NAC-X-FULL-POPULATION-2026",
+  "All 5,124 profile-reported items were recovered",
+  "109 Council members engaged with the coalition",
+  "Visible engagement proves policy impact"
+]) {
+  requireIncludes(nycartcXModule, expected, "NYC Artist Coalition X module");
+}
+
+for (const expected of [
+  '"profileReported": 5124',
+  '"recoveredAccountItems": 3367',
+  '"authored": 696',
+  '"reposted": 2671',
+  '"unrecoveredCountDifference": 1757',
+  '"allDistinctShortUrlsResolved": 1235'
+]) {
+  requireIncludes(nycartcXCorpus, expected, "NYC Artist Coalition X corpus");
+}
+
+for (const expected of [
+  'claimId="CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER"',
+  'occurrenceId="shared-public-operating-layer"',
+  "3,367 of 5,124 reported items",
+  "does not assign every shared-account post to Jamie",
+  "treat posting volume as policy impact"
+]) {
+  requireIncludes(fairRentCaseStudy, expected, "Fair Rent NYC corpus projection");
 }
 
 for (const forbidden of [

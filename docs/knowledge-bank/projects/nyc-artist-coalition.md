@@ -109,6 +109,50 @@ Entertainment documented the first Nightlife Town Hall. These sources establish
 public institutional engagement, not adoption of every coalition recommendation
 or Jamie's complete individual role.
 
+### Full Account Population Pass
+
+A second, account-centered pass treats the profile's **5,124 reported posts** as
+the population control. It recovered **3,367 distinct account items** and keeps
+the remaining **1,757** as an explicit retrieval gap. The recovered items are
+**696 authored posts** and **2,671 reposts**, spanning February 2017 through May
+2026. Nineteen context-only public records sit outside the account denominator,
+and 16 duplicate rendered views were removed.
+
+This is 100% population accounting, not 100% item recovery. The unrecovered
+slots are not described as deleted and no content type is inferred for them.
+
+The authored corpus shows one shared identity carrying four overlapping public
+campaign lines:
+
+| Campaign marker | Distinct authored posts |
+| --- | ---: |
+| `#FairRentNYC` | 195 |
+| `#SaveNYCSpaces` | 110 |
+| `#LetNYCDance` | 78 |
+| `#TalksNotRaids` | 54 |
+
+The same corpus operated as a source-and-action layer. All **1,235 distinct
+`t.co` URLs** in recovered account items resolved; 446 authored posts contain
+529 outgoing-link occurrences representing 287 distinct short URLs. Posted
+destinations span campaign tools, government records, reporting, forms, event
+pages, and field resources. A posted destination proves circulation, not
+endorsement, article accuracy, audience reach, or policy effect.
+
+The authored corpus contains 115 visible `@NYCCouncil` mention occurrences
+across 109 posts and repeatedly addresses agencies, venues, artists, labor,
+tenant, vendor, and community groups. These are outbound communication
+findings. They remain separate from the incoming-engagement corpus above,
+which counts posts authored by Council and agency accounts.
+
+Visible interaction labels are preserved only as a dated, held observation.
+They are volatile, incomplete, and not attributable to stakeholder classes;
+they are not projected as accomplishment or impact metrics.
+
+The complete public-safe record is in the
+[NYC Artist Coalition X full-population receipt](../intake/2026-07-15-nycartc-x-full-population.md),
+with a governed item-level corpus, sanitized source capture, transformation
+manifest, and reproducible derivation script.
+
 Jamie reports that he established the account and identity system while
 multiple collaborators contributed public communication over time. That role
 is retained as a use-with-care first-person claim pending independent

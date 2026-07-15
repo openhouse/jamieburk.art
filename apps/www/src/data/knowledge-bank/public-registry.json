@@ -174,6 +174,28 @@
       ]
     },
     {
+      "id": "SRC-NAC-X-CORPUS-2026-07-15",
+      "title": "Authenticated NYC Artist Coalition population-accounted X corpus",
+      "organization": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "Authenticated replies-inclusive traversal and monthly historical-search partitions completed July 15, 2026",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/NYCArtC/with_replies",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated population-accounted review of the public @NYCArtC account, July 15, 2026.",
+      "publicNote": "The profile reported 5,124 posts. The governed corpus preserves 3,367 recovered account items, an explicit 1,757-item recovery gap, 19 context-only public records, and redirect dispositions for every distinct t.co URL in recovered account items.",
+      "doesNotEstablish": [
+        "the contents or item types of 1,757 unrecovered profile-count items",
+        "Jamie's authorship of the account's posts",
+        "the individual author of every shared-account post",
+        "complete incoming engagement or lifetime reach",
+        "endorsement of posted sources",
+        "policy causation or sole campaign credit"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -401,6 +423,40 @@
         "The displayed population is accounted for as 107 recovered records plus three unavailable residual posts; do not call 107 a complete export.",
         "Recognition posts identify data patterns and addressed accounts, not endorsement or adoption.",
         "The social record is historical and not current constituent-service guidance."
+      ]
+    },
+    {
+      "id": "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "One shared coalition identity carried four public campaign systems across nine years. Among 696 recovered authored posts, 195 used #FairRentNYC, 110 used #SaveNYCSpaces, 78 used #LetNYCDance, and 54 used #TalksNotRaids; categories overlap.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "authored-post denominator",
+            "distinct campaign-marker post counts",
+            "2017-2026 recovered range",
+            "population and authorship boundaries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The profile control is accounted for as 3,367 recovered account items plus an explicit 1,757-item gap; this is not a claim that all 5,124 items were recovered.",
+        "Campaign categories overlap and measure public communication, not unique initiatives, audience reach, or policy outcomes.",
+        "The account was shared. The corpus does not identify Jamie or any collaborator as author of every post, and it does not independently prove Jamie created the account."
       ]
     },
     {
@@ -735,6 +791,23 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NAC-X-CORPUS-2026-07-15"
+      ],
+      "occurrences": [
+        {
+          "id": "shared-public-operating-layer",
+          "claimId": "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-X-CORPUS-2026-07-15"
           ]
         }
       ]

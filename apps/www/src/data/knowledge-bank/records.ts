@@ -49,6 +49,13 @@ import {
   wowlistXCorpusResearchInquiries,
   wowlistXCorpusSources
 } from "./wowlist-x-corpus.ts";
+import {
+  nycartcXCorpusClaims,
+  nycartcXCorpusIntakeItems,
+  nycartcXCorpusObservations,
+  nycartcXCorpusResearchInquiries,
+  nycartcXCorpusSources
+} from "./nycartc-x-corpus.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -59,6 +66,7 @@ const knowledgeBankInput = {
     ...socialAccountArchiveIntakeItems,
     ...callnycXCorpusIntakeItems,
     ...wowlistXCorpusIntakeItems,
+    ...nycartcXCorpusIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -350,6 +358,7 @@ const knowledgeBankInput = {
     ...nterChngArchiveSources,
     ...socialAccountArchiveSources,
     ...callnycXCorpusSources,
+    ...nycartcXCorpusSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1372,6 +1381,7 @@ const knowledgeBankInput = {
     ...nterChngArchiveObservations,
     ...socialAccountArchiveObservations,
     ...callnycXCorpusObservations,
+    ...nycartcXCorpusObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1962,6 +1972,7 @@ const knowledgeBankInput = {
     ...nterChngArchiveClaims,
     ...socialAccountArchiveClaims,
     ...callnycXCorpusClaims,
+    ...nycartcXCorpusClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -3004,6 +3015,7 @@ const knowledgeBankInput = {
     ...nterChngArchiveResearchInquiries,
     ...socialAccountArchiveResearchInquiries,
     ...callnycXCorpusResearchInquiries,
+    ...nycartcXCorpusResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -3310,6 +3322,16 @@ const knowledgeBankInput = {
       { id: "council-engagement", claimId: "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
+  }, {
+    id: "fair-rent-nyc",
+    surface: "/work/fair-rent-nyc",
+    sourceOrder: ["SRC-NAC-X-CORPUS-2026-07-15"],
+    occurrences: [{
+      id: "shared-public-operating-layer",
+      claimId: "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+      projection: "case-study",
+      sourceIds: ["SRC-NAC-X-CORPUS-2026-07-15"]
+    }]
   }, {
     id: "wowlist",
     surface: "/work/wowlist",

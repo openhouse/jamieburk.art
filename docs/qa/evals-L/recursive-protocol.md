@@ -14,6 +14,8 @@ npm run evals:knowledge-lifecycle
 npm run evals:chad
 npm run evals:callnyc-x
 npm run evals:wowlist-x
+npm run check:nycartc-corpus
+npm run evals:nycartc-x
 npm run evals:recursive
 ```
 
@@ -71,6 +73,15 @@ hard failure.
 relationship and theme counts, all posted URLs, account-authored public
 counters, lifecycle wiring, source positioning, and projection boundaries.
 Passing requires 100/100 and no hard failure.
+
+### NYC Artist Coalition X Corpus Criterion
+
+`npm run check:nycartc-corpus` reproduces the sanitized corpus from its source
+capture and verifies both artifact hashes. `npm run evals:nycartc-x` then
+hard-gates population accounting, authored/repost separation, campaign-marker
+and link inventories, stakeholder directionality, source positioning, privacy,
+held traction, and selective projection. Passing requires 100/100 and no hard
+failure.
 
 ## Loop 2: Claim Projection
 

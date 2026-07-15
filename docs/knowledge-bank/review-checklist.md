@@ -35,6 +35,8 @@ changes public claims.
 - [ ] `npm run evals:chad` scores at least 90/100 with no hard failures.
 - [ ] `npm run evals:callnyc-x` scores 100/100 with no hard failures.
 - [ ] `npm run evals:wowlist-x` scores 100/100 with no hard failures.
+- [ ] `npm run check:nycartc-corpus` reproduces the governed corpus and hashes.
+- [ ] `npm run evals:nycartc-x` scores 100/100 with no hard failures.
 - [ ] `npm run evals:recursive` passes.
 - [ ] `npm run preflight:staging` passes.
 - [ ] `npm run preflight:production` passes only with explicit production
