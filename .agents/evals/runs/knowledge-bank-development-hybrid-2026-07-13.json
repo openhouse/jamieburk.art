@@ -1,35 +1,37 @@
 {
-  "candidate_sha": "3f2646e9a249e807c6bf4d2ad731d587d539f862",
+  "candidate_sha": "478c4613a9af4bd75216eefaa7ac9ac2c54e62d5",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 3f2646e9a249e807c6bf4d2ad731d587d539f862 and scored collective-credit integrity at 4/4 with high confidence and no findings.",
-        "CLM-KCTH-X-PUBLIC-OPERATIONS names Julia, Jamie, KC Town Hall, and Oak Park Neighborhood Association while prohibiting sole authorship, sole operation, outcome attribution, and attribution of all 155 authored account posts to Jamie.",
-        "CLM-KCTH-X-CIVIC-ENGAGEMENT counts only visible incoming interactions and rejects endorsement, policy causation, complete participation, service resolution, and individual post authorship.",
-        "The social-traction and self-reported tire-outcome claims remain held with explicit shared-account, volatility, attribution, and independent-corroboration boundaries.",
-        "System-wide inspection found 43 collective-work claims, all with nonempty boundaries and anti-claims; the website preserves the archived-byline, partner, shared-account, outcome, endorsement, and causation boundaries."
+        "Two fresh independent graders audited exact candidate 478c4613a9af4bd75216eefaa7ac9ac2c54e62d5 and scored collective-credit integrity at 4/4 with no material findings.",
+        "Both verified origin's annotated v5 baseline tag object f9f3a2ecbacb8591f87e1115cfd094b1926e8071, peeled commit 3e56aa7daf5aff084333f40d365e09b7d37e884c, and the matching anchored baseline blob.",
+        "All 54 collective-work claims retain governed project assignments, contribution language, collaborator and institutional boundaries, anti-claims, projection relationships, and frozen runtime coverage.",
+        "Adversarial review rejected policy opt-outs, vague credit rewrites, coordinated project moves, silent knowledge removal, unsupported causal language, and paraphrased sole-credit claims including no-collaborator, final-authority, lone-architect, and decisive-reason variants.",
+        "NYC Artist Coalition records preserve shared-account authorship, overlapping campaign categories, collaborator and institutional credit, the explicit recovery gap, outbound-versus-incoming stakeholder distinctions, and non-causal outcome framing.",
+        "Both Next.js App Router and Pages Router roots, including currently absent Pages Router roots, are governed by externally anchored public-surface fingerprints."
       ],
       "findings": [],
-      "confidence": 0.99
+      "confidence": 0.96
     },
     {
       "eval_id": "KB-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 3f2646e9a249e807c6bf4d2ad731d587d539f862 and scored public-claim coverage and underclaiming at 4/4 with high confidence and no findings.",
-        "The manifest and deterministic deriver reproduce 181 recovered account items, the explicit two-item profile-count gap, and seven separately classified public conversation records.",
-        "CLM-KCTH-X-PUBLIC-OPERATIONS and CLM-KCTH-X-CIVIC-ENGAGEMENT have active citation-required case-study projections and governed page occurrences; the public-source-circulation claim has an explicit deeper knowledge-bank use decision.",
-        "The social-traction and self-reported tire-outcome claims have explicit hold dispositions rather than being discarded or promoted.",
-        "Across 64 claims, all 53 eligible claims have explicit projection dispositions; the KC Town Hall project note separately records Use now, Hold, and open-research decisions.",
-        "The checked-in corpus, immutable public asset, transformation manifest, deterministic derivation, citation registry, and mutation tests preserve an inspectable path from capture through selective website projection."
+        "Two fresh independent graders audited exact candidate 478c4613a9af4bd75216eefaa7ac9ac2c54e62d5 and scored public projection coverage at 4/4 with no material findings.",
+        "Projection decisions, statement support, route bindings, public surfaces, work-field proof identities, citation occurrences, and explicit use-now or hold dispositions match the externally anchored reviewed baseline.",
+        "Adversarial route and document tests reject unrelated routes, comments, unused exports, runtime gates, empty iterations, hidden containers and classes, closed disclosure bodies, and disconnected citation occurrences.",
+        "Resume governance covers visible prose, hidden-container and hidden-attribute boundaries, metadata and JSON-LD, CSS-generated and counter text, inline and embedded channels, and HTML, text, and PDF artifact parity.",
+        "The governed NYC Artist Coalition corpus accounts for 5,124 profile-reported posts as 3,367 recovered account items plus an explicit 1,757-item gap, with 19 context-only records outside the denominator.",
+        "The corpus preserves 696 authored posts, 2,671 reposts, complete resolution of all 1,235 distinct recovered-account short URLs, four overlapping campaign-marker populations, bounded Council engagement, and held volatile traction totals.",
+        "No material bypass survived the exact-candidate, immutable-tag, statement-support, route-binding, runtime, or recursive public-surface fingerprints."
       ],
       "findings": [],
-      "confidence": 0.99
+      "confidence": 0.95
     }
   ],
-  "overall_finding": "Exact content commit 3f2646e9a249e807c6bf4d2ad731d587d539f862 passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with high confidence and no findings. The full-population-accounted corpus, explicit two-item gap, immutable provenance, collective credit, selective projection, held observations, and recursive tests meet the frozen criteria without material overclaiming or underclaiming."
+  "overall_finding": "Exact candidate 478c4613a9af4bd75216eefaa7ac9ac2c54e62d5 passed two fresh independent reviews for KB-007 and KB-009 at 4/4 with no material findings. The NYC Artist Coalition population-accounted corpus, selective projections, collective-credit boundaries, visibility checks, and externally anchored all-route public-surface baseline meet the frozen criteria."
 }
