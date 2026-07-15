@@ -176,6 +176,44 @@ test("KC Town Hall Phase One separates protected document facts from first-perso
   assert.ok(contractor?.projections.every((projection) => projection.status !== "active"));
 });
 
+test("KC Town Hall stewardship transition stays distinct from municipal withdrawal", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const observationById = new Map(
+    knowledgeBank.observations.map((observation) => [observation.id, observation])
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026"
+  );
+  const caseStudy = readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8");
+
+  assert.equal(
+    sourceById.get("SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15")
+      ?.visibility,
+    "protected"
+  );
+  assert.equal(
+    observationById.get("OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-ACCOUNT")
+      ?.status,
+    "provisional"
+  );
+  assert.equal(claim?.status, "confirmed-with-boundary");
+  assert.ok(claim?.boundaries.some((value) => /does not establish how.*relates/i.test(value)));
+  assert.ok(claim?.antiClaims.some((value) => /caused, constituted, or completed/i.test(value)));
+  assert.ok(
+    claim?.projections.some(
+      (projection) =>
+        projection.status === "active" &&
+        projection.surfaces.includes("/work/kc-town-hall")
+    )
+  );
+  assert.equal(inquiry?.resultStatus, "queued");
+  assert.match(caseStudy, /transitioned project stewardship.*mission-aligned organization/);
+  assert.match(caseStudy, /Separately, the municipal funding project later withdrew/);
+});
+
 test("KC neighborhood memories remain specific, collective, and queued for corroboration", () => {
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   const tired = claimById.get("CLM-KC-TIRED-OF-TIRES-OPERATIONS");

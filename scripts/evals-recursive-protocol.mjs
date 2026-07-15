@@ -58,6 +58,7 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-12-waterways-nightlife.md",
   "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md",
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md",
+  "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-stewardship-transition.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
@@ -151,6 +152,9 @@ const kcTownHallReceipt = read(
 );
 const kcTownHallPhaseOneReceipt = read(
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md"
+);
+const kcTownHallTransitionReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-stewardship-transition.md"
 );
 
 for (const doc of [
@@ -289,6 +293,17 @@ for (const expected of [
   "INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"
 ]) {
   requireIncludes(kcTownHallPhaseOneReceipt, expected, "KC Town Hall Phase One receipt");
+}
+
+for (const expected of [
+  "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15",
+  "OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-ACCOUNT",
+  "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+  "mission-aligned",
+  "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
+  "distinct from the later municipal funding withdrawal"
+]) {
+  requireIncludes(kcTownHallTransitionReceipt, expected, "KC Town Hall transition receipt");
 }
 
 for (const forbidden of [

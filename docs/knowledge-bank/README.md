@@ -80,3 +80,6 @@ The [KC Town Hall Phase One and neighborhood-work receipt](intake/2026-07-15-kc-
 shows how a protected proposal and first-person account can confirm completed
 work, preserve richer operating detail, and open bounded research queues without
 publishing private source material or promoting every memory directly to the site.
+The [KC Town Hall stewardship-transition receipt](intake/2026-07-15-kc-town-hall-stewardship-transition.md)
+keeps Jamie's professional handoff distinct from the later municipal funding
+withdrawal while limiting follow-up research to public-safe transition evidence.

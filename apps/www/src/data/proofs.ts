@@ -434,14 +434,14 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Co-founded KC Town Hall and served as project manager for a multi-trade Phase One cold-shell restoration recorded as completed in 2019; developed a neighborhood-informed Phase Two proposal that advanced to City Council acceptance and appropriation.",
+      "Co-founded KC Town Hall and served as project manager for a multi-trade Phase One cold-shell restoration recorded as completed in 2019; developed a neighborhood-informed Phase Two proposal that advanced to City Council acceptance and appropriation; and later transitioned project stewardship to a mission-aligned organization.",
     shortWording: "Co-founded and project-managed a multi-trade adaptive-reuse effort",
     detailedPublicWording:
-      "A 2019 CCED proposal identifies Jamie Burkart and Julia Fredenburg as KC Town Hall's founders and project managers and records Phase One cold-shell work as completed, including roof, historic masonry, structural framing, water, access, safety, and site operations. The proposal also documents a neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church whose results directly shaped the next phase. The CCED Board unanimously recommended $490,539 for Phase Two, and the Kansas City Council later accepted the recommendation and appropriated that amount. The project ultimately withdrew, and the City reclaimed the full unused appropriation in 2024.",
+      "A 2019 CCED proposal identifies Jamie Burkart and Julia Fredenburg as KC Town Hall's founders and project managers and records Phase One cold-shell work as completed, including roof, historic masonry, structural framing, water, access, safety, and site operations. The proposal also documents a neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church whose results directly shaped the next phase. The CCED Board unanimously recommended $490,539 for Phase Two, and the Kansas City Council later accepted the recommendation and appropriated that amount. Jamie reports that when he concluded his active role, he transitioned project stewardship to an organization he regarded as mission-aligned. Separately, the municipal funding project ultimately withdrew, and the City reclaimed the full unused appropriation in 2024.",
     sourceBasis:
-      "Protected 2019 CCED proposal and first-person project account; official Kansas City CCED Board minutes; Council Resolution 190649; Ordinance 190642; the May 2022 project update; Ordinance 240317; and public-safe project context.",
+      "Protected 2019 CCED proposal and first-person construction and stewardship-transition accounts; official Kansas City CCED Board minutes; Council Resolution 190649; Ordinance 190642; the May 2022 project update; Ordinance 240317; and public-safe project context.",
     guardrail:
-      "Credit Julia Fredenburg, trade teams, neighborhood partners, and residents. Phase One completion is not complete redevelopment. Treat Jamie's exact general-contractor title as first-person evidence pending corroboration, and say the Council appropriated funds rather than implying receipt or expenditure.",
+      "Credit Julia Fredenburg, trade teams, neighborhood partners, and residents. Phase One completion is not complete redevelopment. Treat Jamie's exact general-contractor title and stewardship transition as first-person evidence pending corroboration. Keep the handoff distinct from the later municipal withdrawal, and say the Council appropriated funds rather than implying receipt or expenditure.",
     doNotSay: [
       "Jamie was KC Town Hall's sole founder or project manager",
       "Jamie was independently verified as a licensed general contractor",
@@ -450,6 +450,8 @@ export const proofClaims: ProofClaim[] = [
       "KC Town Hall received or spent $490,539",
       "Council appropriation means the project was completed",
       "Jamie personally secured or controlled the Council vote",
+      "The stewardship transition was a verified legal succession or ownership transfer",
+      "The stewardship transition caused or constituted the later municipal funding withdrawal",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"

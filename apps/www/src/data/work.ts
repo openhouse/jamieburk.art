@@ -494,7 +494,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse, construction coordination, and neighborhood process",
     summary:
-      "Co-founded KC Town Hall and served as project manager for a multi-trade Phase One cold-shell restoration recorded as completed in 2019; developed a neighborhood-informed Phase Two proposal that advanced to City Council acceptance and appropriation.",
+      "Co-founded KC Town Hall and served as project manager for a multi-trade Phase One cold-shell restoration recorded as completed in 2019; advanced a neighborhood-informed Phase Two proposal through City Council appropriation; and later transitioned project stewardship to a mission-aligned organization.",
     role: "Co-Founder, Project Manager & Construction Coordinator",
     years: "2018-2024",
     status: "Short proof page",
@@ -542,31 +542,32 @@ const workItemsInput = [
       }
     ],
     careNote:
-      "Public-safe short proof page. The protected proposal supports founder, project-manager, Phase One, team, and survey facts. Jamie's exact general-contractor title remains held for independent corroboration.",
+      "Public-safe short proof page. The protected proposal supports founder, project-manager, Phase One, team, and survey facts. Jamie's exact general-contractor title and later stewardship transition remain first-person claims pending independent corroboration.",
     sourceLayer:
-      "Protected 2019 CCED proposal and first-person account; official Kansas City board minutes, Council resolution and appropriation ordinance, later project-status and clawback records; and public-safe project summaries.",
+      "Protected 2019 CCED proposal and first-person construction and stewardship-transition accounts; official Kansas City board minutes, Council resolution and appropriation ordinance, later project-status and clawback records; and public-safe project summaries.",
     credits: [
       "Jamie Burkart",
       "Julia Fredenburg",
       "KC Town Hall trade, professional, neighborhood, and municipal partners"
     ],
-    currentStatus: "Phase One recorded as completed in 2019; Phase Two later withdrew before public funds were disbursed.",
+    currentStatus: "Phase One was recorded as completed in 2019. Jamie later transitioned project stewardship to a mission-aligned organization; the separate municipal funding project later withdrew before disbursement.",
     group: "Operating systems for teams",
     roleFit:
-      "Multi-trade project management, implementation sequencing, participatory discovery, public-benefit documentation, and municipal coordination.",
+      "Multi-trade project management, implementation sequencing, participatory discovery, public-benefit documentation, municipal coordination, and responsible stewardship transition.",
     evidence: [
       "Jamie Burkart and Julia Fredenburg identified as founders and project managers in the 2019 proposal",
       "Phase One cold-shell work recorded as completed in 2019 across roof, masonry, structural framing, water, access, safety, and site operations",
       "Neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church directly shaped the proposal",
       "Jamie identified as proposal presenter in official board minutes",
       "$490,539 board recommendation followed by City Council acceptance and appropriation",
+      "Jamie's first-person account that he transitioned project stewardship to a mission-aligned organization when he concluded his active role",
       "Official record that the project later withdrew and the full unused appropriation was reclaimed"
     ],
     knownOpenProtected: {
       known:
-        "Jamie and Julia co-founded KC Town Hall and were named project managers. The proposal records Phase One cold-shell work as completed in 2019 and says a neighborhood survey shaped Phase Two. The board later recommended $490,539; the City Council accepted the recommendation and appropriated the amount. The project withdrew before disbursement, and the unused appropriation was reclaimed.",
+        "Jamie and Julia co-founded KC Town Hall and were named project managers. The proposal records Phase One cold-shell work as completed in 2019 and says a neighborhood survey shaped Phase Two. The board later recommended $490,539, and the City Council accepted the recommendation and appropriated the amount. Jamie reports transitioning project stewardship to a mission-aligned organization when he concluded his active role. The separate municipal funding project later withdrew before disbursement, and the unused appropriation was reclaimed.",
       open:
-        "Jamie's exact day-to-day general-contractor role, survey-system authorship, and responsibilities during the Council and funding-agreement phases remain queued for additional corroboration.",
+        "Jamie's exact day-to-day general-contractor role, survey-system authorship, stewardship-transition timing and terms, receiving organization, continuity outcomes, and responsibilities during the Council and funding-agreement phases remain queued for additional corroboration.",
       protected:
         "Private financial, legal, property, banking, contact, support-letter, resident, and stakeholder details are omitted."
     }

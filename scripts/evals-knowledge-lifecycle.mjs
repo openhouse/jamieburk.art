@@ -88,6 +88,9 @@ const kcTownHallPhaseOneSourceIds = [
   "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15"
 ];
 
+const kcTownHallTransitionSourceId =
+  "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15";
+
 check(
   "Source quality",
   "Every supplied and portfolio-expansion URL has a canonical source record",
@@ -361,6 +364,29 @@ check(
     ),
   true
 );
+check(
+  "Claim maturity",
+  "KC Town Hall stewardship transition is projected without collapsing it into municipal withdrawal",
+  6,
+  sourceById.get(kcTownHallTransitionSourceId)?.visibility === "protected" &&
+    observationById.get("OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-ACCOUNT")
+      ?.status === "provisional" &&
+    claimById.get("CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION")
+      ?.projections.some(
+        (projection) =>
+          projection.status === "active" &&
+          projection.surfaces.includes("/work/kc-town-hall")
+      ) &&
+    claimById
+      .get("CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION")
+      ?.boundaries.some((value) => /does not establish how.*relates/i.test(value)) &&
+    inquiryById.get("INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026")
+      ?.resultStatus === "queued",
+  true
+);
 
 check(
   "Research recursion",
@@ -403,11 +429,32 @@ const newSourceIds = new Set(
 
 check(
   "Projection discipline",
-  "New depth can remain knowledge-bank-only",
+  "New depth remains selective, and projected intake clears claim-maturity gates",
   5,
   knowledgeBank.intakeItems
     .filter((item) => item.sourceIds.some((id) => newSourceIds.has(id)))
-    .every((item) => item.publicationStatus !== "projected")
+    .some((item) => item.publicationStatus === "knowledge-bank-only") &&
+    knowledgeBank.intakeItems
+      .filter(
+        (item) =>
+          item.publicationStatus === "projected" &&
+          item.sourceIds.some((id) => newSourceIds.has(id))
+      )
+      .every(
+        (item) =>
+          item.claimIds.length > 0 &&
+          item.claimIds.every((claimId) => {
+            const claim = claimById.get(claimId);
+            return (
+              ["confirmed", "confirmed-with-boundary"].includes(claim?.status ?? "") &&
+              claim?.projections.some(
+                (projection) =>
+                  projection.status === "active" &&
+                  projection.surfaces.some((surface) => surface.startsWith("/"))
+              )
+            );
+          })
+      )
 );
 check(
   "Projection discipline",

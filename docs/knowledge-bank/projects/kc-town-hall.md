@@ -44,6 +44,23 @@ The project-level survey and its influence are confirmed. Jamie's individual
 design and systems authorship remain first-person evidence pending further
 corroboration. Resident identities, contacts, and responses remain protected.
 
+## Stewardship Transition
+
+Jamie reports that when he concluded his active KC Town Hall role, he
+transitioned project stewardship to an organization he regarded as
+mission-aligned. Because Jamie directly confirms his own action, the narrow
+handoff claim is `confirmed-with-boundary`; the receiving
+organization, timing, terms, transferred responsibilities, and continuity
+outcomes remain queued for public-safe corroboration.
+
+Source posture:
+`SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15`. Research:
+`INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026`.
+
+The later municipal record that the funded project withdrew does not establish
+how that funding disposition relates to the stewardship transition. The two
+events remain distinct unless professional records establish their connection.
+
 ## Official Record
 
 Kansas City's Central City Economic Development Sales Tax Board minutes identify
@@ -84,7 +101,8 @@ Phase One cold-shell restoration recorded as completed in 2019. The project
 used a neighborhood survey to shape the next-phase proposal. Jamie later
 presented that adaptive-reuse proposal; the board unanimously recommended
 $490,539, and the Council accepted the recommendation and appropriated that
-amount.
+amount. Jamie reports that when he concluded his active role, he transitioned
+project stewardship to an organization he regarded as mission-aligned.
 
 ## Boundary
 
@@ -94,6 +112,11 @@ Jamie's individual role in securing the Council actions. The later withdrawal
 and reclamation must accompany any account of the funding outcome. Current
 property status and private financial, legal, property, and stakeholder details
 remain outside the public repository.
+
+Do not treat the municipal withdrawal as a complete account of the project's
+conclusion. Do not name the receiving organization or infer legal succession,
+ownership transfer, current operations, or a causal relationship to the funding
+withdrawal without additional public-safe evidence.
 
 Do not translate Jamie's first-person general-contractor account into an
 independently verified license or legal designation. Do not collapse Julia

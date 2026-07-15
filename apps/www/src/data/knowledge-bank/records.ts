@@ -12,6 +12,24 @@ const knowledgeBankInput = {
   intakeItems: [
     ...nycaPressIntakeItems,
     {
+      id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+      receivedAt: "2026-07-15",
+      inputKind: "memory",
+      summary: "Jamie's first-person clarification that he concluded his KC Town Hall role by transitioning project stewardship to an organization he regarded as mission-aligned.",
+      projectIds: ["kc-town-hall"],
+      researchStatus: "needs-more-research",
+      publicationStatus: "projected",
+      sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15"],
+      observationIds: ["OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-ACCOUNT"],
+      claimIds: ["CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026"],
+      nextActions: [
+        "Seek public-safe handoff records or collaborator confirmation for the receiving organization, timing, scope, and continuity outcomes.",
+        "Limit research and publication to the professional stewardship transition.",
+        "Keep the stewardship handoff distinct from the later municipal funding withdrawal unless evidence establishes their relationship."
+      ]
+    },
+    {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-PHASE-ONE-NEIGHBORHOOD-WORK",
       receivedAt: "2026-07-15",
       inputKind: "document",
@@ -994,6 +1012,29 @@ const knowledgeBankInput = {
       ]
     },
     {
+      id: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15",
+      title: "Jamie Burkart first-person clarification of KC Town Hall stewardship transition",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-07-15",
+      accessedAt: "2026-07-15",
+      publicCitation: "Jamie Burkart, first-person clarification of KC Town Hall stewardship transition, July 15, 2026 (protected source).",
+      publicNote: "First-person account that Jamie concluded his active KC Town Hall role by transitioning project stewardship to an organization he regarded as mission-aligned.",
+      supportsGenerally: [
+        "Jamie's reported transition of KC Town Hall project stewardship",
+        "Jamie's reported intent to place the project with a mission-aligned organization rather than leave it without a handoff"
+      ],
+      doesNotEstablish: [
+        "independent corroboration of the transition",
+        "the receiving organization's identity, consent to be named, legal role, or current status",
+        "the date, terms, assets, responsibilities, or outcomes of the transition",
+        "a causal or organizational relationship between the stewardship transition and the later municipal funding withdrawal"
+      ],
+      protectedLocatorId: "LOC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15"
+    },
+    {
       id: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
       title: "KC Town Hall Central City Economic Development grant proposal and support letters",
       organization: "KC Town Hall",
@@ -1617,6 +1658,19 @@ const knowledgeBankInput = {
       researchInquiryIds: [],
       reviewedAt: "2026-07-12",
       reviewedBy: ["Codex source review"]
+    },
+    {
+      id: "OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-ACCOUNT",
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15",
+      project: "kc-town-hall",
+      text: "Jamie reports that when he concluded his active KC Town Hall role, he transitioned project stewardship to an organization he regarded as mission-aligned.",
+      locator: "First-person clarification, stewardship-transition statement",
+      status: "provisional",
+      confidence: "moderate",
+      claimIds: ["CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
     },
     {
       id: "OBS-KC-TOWN-HALL-PROPOSER-TEAM-2019",
@@ -2338,6 +2392,40 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
+      id: "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+      project: "kc-town-hall",
+      internalClaim: "Jamie reports that when he concluded his active KC Town Hall role, he transitioned project stewardship to an organization he regarded as mission-aligned.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "case-study",
+        text: "When Jamie concluded his active role, he transitioned project stewardship to an organization he regarded as mission-aligned.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/work/kc-town-hall"]
+      }],
+      evidence: [{
+        sourceId: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15",
+        relationship: "direct-support",
+        supports: ["first-person stewardship transition", "mission-aligned handoff intent"],
+        confidence: "moderate",
+        renderCitation: false
+      }],
+      boundaries: [
+        "This bounded claim is confirmed by Jamie's direct first-person account of his own professional handoff; independent corroboration remains open.",
+        "Do not name the receiving organization or assert legal succession, ownership transfer, current operations, or continuity outcomes without public-safe evidence and permission.",
+        "Kansas City's later withdrawal record does not establish how the municipal funding disposition relates to Jamie's earlier stewardship transition."
+      ],
+      antiClaims: [
+        "Jamie left KC Town Hall without arranging a handoff.",
+        "The receiving organization became KC Town Hall's verified legal successor or owner.",
+        "The stewardship transition caused, constituted, or completed the later municipal funding withdrawal.",
+        "The project remains active under the receiving organization today."
+      ],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
       id: "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
       project: "kc-town-hall",
       internalClaim: "Jamie Burkart and Julia Fredenburg co-founded KC Town Hall and were named project managers in its 2019 CCED proposal, which records completion of a multi-trade Phase One cold-shell restoration including roof, masonry, structural framing, water, access, safety, and site work.",
@@ -2772,6 +2860,25 @@ const knowledgeBankInput = {
   ],
   researchInquiries: [
   ...nycaPressResearchInquiries,
+  {
+    id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
+    project: "kc-town-hall",
+    question: "Which public-safe professional records or collaborator accounts can corroborate Jamie's transition of KC Town Hall stewardship to a mission-aligned organization?",
+    methods: [
+      "Seek handoff correspondence, agreements, meeting records, organizational records, or collaborator confirmation limited to the professional transition.",
+      "Establish the receiving organization, approximate date, transferred responsibilities, and continuity outcomes only where publication is permitted.",
+      "Keep the stewardship handoff analytically separate from the later municipal funding withdrawal unless a source establishes the relationship."
+    ],
+    resultStatus: "queued",
+    findings: [],
+    limitations: [
+      "The current record is Jamie's first-person account and does not independently establish the receiving organization, timing, terms, or outcomes.",
+      "The official municipal records establish a later funding withdrawal but do not establish its relationship to the stewardship transition.",
+      "Current ownership, operations, property status, and the receiving organization's permission to be named are not established."
+    ],
+    sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-ACCOUNT-2026-07-15"],
+    publicSummary: "Jamie reports transitioning KC Town Hall project stewardship to a mission-aligned organization when he concluded his active role; professional handoff records and collaborator confirmation remain to be recovered."
+  },
   {
     id: "INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026",
     project: "kc-town-hall",

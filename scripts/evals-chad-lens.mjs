@@ -193,6 +193,8 @@ check(
     "multi-trade Phase One cold-shell restoration recorded as completed in 2019",
     "neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church",
     "City Council acceptance and appropriation",
+    "transitioned project stewardship to an organization he regarded as mission-aligned",
+    "Separately, the municipal funding project ultimately withdrew",
     "project ultimately withdrew",
     "independently verified as a licensed general contractor",
     "KC Town Hall received or spent $490,539",
@@ -202,14 +204,18 @@ check(
       "Co-Founder, Project Manager & Construction Coordinator",
       "multi-trade Phase One cold-shell restoration recorded as completed in 2019",
       "Neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church directly shaped the proposal",
+      "transitioned project stewardship to a mission-aligned organization",
+      "separate municipal funding project later withdrew",
       "the full unused appropriation was reclaimed"
     ]) &&
     includesAll(sources.kcTownHall, [
       "Jamie Burkart and Julia Fredenburg co-founded KC Town Hall",
       "records the multi-trade Phase One cold-shell scope as completed",
       "Council accepted the recommendation and appropriated the amount",
+      "transitioned project stewardship to an organization he regarded as mission-aligned",
+      "Separately, the municipal funding project later withdrew",
       "withdrew before disbursement",
-      "exact role details remain held for additional corroboration"
+      "those exact role details remain bounded rather than being presented as independently verified"
     ]) &&
     !sources.kcTownHall.includes("stay tied to a $490,539 public funding recommendation") &&
     !sources.workData.includes("licensed general contractor"),
