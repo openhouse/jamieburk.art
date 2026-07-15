@@ -65,6 +65,12 @@ const socialMediaInventory = JSON.parse(
     "utf8",
   ),
 );
+const callNycPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+    "utf8",
+  ),
+);
 
 const normalizeSourceUrl = (value) =>
   value
@@ -435,13 +441,21 @@ test("social-media production preserves account, engagement, and timeline invent
     projectSocialAccounts.map((account) => account.currentHandle),
     ["@CallNYCApp", "@NYCArtC", "@wowlist"],
   );
-  assert.equal(socialMediaCaptures.length, 5);
-  assert.equal(socialMediaSources.length, 24);
-  assert.equal(socialMediaObservations.length, 24);
-  assert.equal(socialMediaClaims.length, 4);
-  assert.equal(socialMediaResearchTasks.length, 3);
-  assert.equal(socialMediaInquiries.length, 4);
-  assert.equal(socialMediaReviewSummary.callNycCouncilMemberAccountCount, 6);
+  assert.equal(socialMediaCaptures.length, 6);
+  assert.equal(socialMediaSources.length, 34);
+  assert.equal(socialMediaObservations.length, 34);
+  assert.equal(socialMediaClaims.length, 5);
+  assert.equal(socialMediaResearchTasks.length, 4);
+  assert.equal(socialMediaInquiries.length, 5);
+
+  const callNycPopulationSource = socialMediaSources.find(
+    (source) => source.id === "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
+  );
+  assert.equal(callNycPopulationSource.visibility, "public");
+  assert.equal(callNycPopulationSource.preservationStatus, "live");
+  assert.equal(socialMediaReviewSummary.callNycCouncilMemberAccountCount, 8);
+  assert.equal(socialMediaReviewSummary.callNycRecoveredTimelineRecordCount, 107);
+  assert.equal(socialMediaReviewSummary.callNycUnmaterializedProfileRecordCount, 3);
   assert.equal(
     socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020,
     4,
@@ -470,6 +484,113 @@ test("social-media production preserves account, engagement, and timeline invent
   }
 });
 
+test("CallNYC full-population archive reconciles every retrievable record", () => {
+  const reconciliation = callNycPopulationInventory.populationReconciliation;
+  assert.equal(reconciliation.profileReportedPostCount, 110);
+  assert.equal(reconciliation.postsTimelineUniqueCount, 106);
+  assert.equal(reconciliation.repliesTimelineUniqueCount, 107);
+  assert.equal(reconciliation.recoveredUnionRecordCount, 107);
+  assert.equal(reconciliation.recoveredPopulationReviewedPercent, 100);
+  assert.equal(reconciliation.profileCountNotMaterialized, 3);
+  assert.match(reconciliation.conclusion, /107 of 110/i);
+
+  const records = callNycPopulationInventory.records;
+  assert.equal(records.length, 107);
+  assert.equal(new Set(records.map((record) => record.url)).size, 107);
+  assert.ok(
+    records.every(
+      (record) =>
+        Array.isArray(record.recoveredFrom) &&
+        record.recoveredFrom.length > 0 &&
+        record.recoveredFrom.every((timeline) =>
+          ["posts", "replies"].includes(timeline),
+        ),
+    ),
+  );
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("posts")).length,
+    reconciliation.postsTimelineUniqueCount,
+  );
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("replies")).length,
+    reconciliation.repliesTimelineUniqueCount,
+  );
+  assert.deepEqual(
+    records
+      .filter((record) => !record.recoveredFrom.includes("posts"))
+      .map((record) => record.url),
+    ["https://x.com/CallNYCapp/status/722837286476390401"],
+  );
+  assert.deepEqual(callNycPopulationInventory.recordTypeCounts, {
+    original: 86,
+    reply: 6,
+    repost: 15,
+  });
+  assert.equal(
+    Object.values(callNycPopulationInventory.recordTypeCounts).reduce(
+      (sum, value) => sum + value,
+      0,
+    ),
+    records.length,
+  );
+
+  const pattern = callNycPopulationInventory.publishingPattern;
+  assert.equal(pattern.callNycAuthoredRecordCount, 92);
+  assert.equal(pattern.councilRecognitionPatternRecordCount, 71);
+  assert.equal(pattern.distinctCouncilMemberHandlesCredited, 26);
+  assert.equal(pattern.callNycDeepLinkOccurrences, 75);
+  assert.equal(pattern.distinctCallNycIssueOrApiPaths, 62);
+  assert.equal(pattern.distinctServiceDomains, 16);
+  assert.equal(pattern.apiPathCount, 1);
+  const recognitionRecords = records.filter(
+    (record) => record.publishingClassification?.kind === "council-recognition",
+  );
+  assert.equal(recognitionRecords.length, 71);
+  assert.equal(
+    new Set(
+      recognitionRecords.map((record) =>
+        record.publishingClassification.creditedHandle.toLowerCase(),
+      ),
+    ).size,
+    26,
+  );
+  const callNycPaths = records.flatMap((record) => record.callNycPaths || []);
+  assert.equal(callNycPaths.length, 75);
+  assert.equal(new Set(callNycPaths).size, 62);
+  assert.equal(
+    callNycPopulationInventory.postedUrlInventory.distinctExternalShortUrls,
+    84,
+  );
+
+  const incoming = callNycPopulationInventory.incomingMentionSearch.records;
+  assert.equal(incoming.length, 11);
+  assert.equal(new Set(incoming.map((record) => record.url)).size, 11);
+  assert.deepEqual(
+    incoming.reduce((counts, record) => {
+      counts[record.stakeholderGroup] =
+        (counts[record.stakeholderGroup] || 0) + 1;
+      return counts;
+    }, {}),
+    {
+      "council-office": 4,
+      "incidental-network": 1,
+      "legal-services": 2,
+      resident: 2,
+      "civic-technology": 2,
+    },
+  );
+
+  const missingPostsTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-CALLNYC-UNMATERIALIZED-POSTS",
+  );
+  assert.equal(missingPostsTask.status, "open");
+  assert.match(missingPostsTask.publicNote, /three.*unrecovered/i);
+  assert.doesNotMatch(
+    JSON.stringify(callNycPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
+  );
+});
+
 test("social-media claims use bounded counts and preserve shared-account authorship", () => {
   const callNycClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
@@ -483,11 +604,19 @@ test("social-media claims use bounded counts and preserve shared-account authors
   const wowListClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
   );
+  const callNycGuidanceClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE",
+  );
 
   assert.equal(callNycClaim.selectionState, "selected");
-  assert.match(callNycClaim.projections[0].text, /at least six distinct/i);
+  assert.match(callNycClaim.projections[0].text, /at least eight distinct/i);
   assert.match(callNycClaim.boundaries.join("\n"), /deleted post|native repost/i);
   assert.match(callNycClaim.antiClaims.join("\n"), /official Council service/i);
+
+  assert.equal(callNycGuidanceClaim.selectionState, "selected");
+  assert.match(callNycGuidanceClaim.projections[0].text, /62 distinct service or API pathways/i);
+  assert.match(callNycGuidanceClaim.boundaries.join("\n"), /107 unique records/i);
+  assert.match(callNycGuidanceClaim.antiClaims.join("\n"), /All 110.*recovered/i);
 
   assert.equal(nycacClaim.selectionState, "selected");
   assert.match(nycacClaim.projections[0].text, /at least four Council Member/i);
@@ -547,6 +676,10 @@ test("social-media production exposes no authenticated-session secrets or privat
   assert.match(payload, /Counts are a point-in-time observation/i);
   assert.doesNotMatch(
     JSON.stringify(socialMediaInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
+  );
+  assert.doesNotMatch(
+    JSON.stringify(callNycPopulationInventory),
     /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
   );
 });

@@ -54,7 +54,7 @@
       "category": "intake",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 8,
+      "weight": 5,
       "inputs": ["capture registry"],
       "procedure": ["Inventory submitted URLs, memories, metrics, artifacts, corrections, and photo leads.", "Verify every capture has a public-safe summary, disposition, project family, and a source or research-task route."],
       "pass_criteria": ["Every submitted item has a stable capture record.", "Every capture is integrated or routed to an open research task.", "No private payload or local archive path is copied into the public repository."],
@@ -132,7 +132,7 @@
       "category": "research",
       "grader": "deterministic",
       "blocking": false,
-      "weight": 8,
+      "weight": 6,
       "inputs": ["captures", "candidate claims", "current public proof records", "research tasks"],
       "procedure": ["Find valuable captures without sources, inference claims without corroboration, and strong public proof wording without a citation-registry path.", "Verify each gap has a prioritized task and success criterion."],
       "pass_criteria": ["Every unresolved capture and candidate claim has a task.", "Tasks distinguish source discovery, collaborator confirmation, metric reconstruction, and public-record research.", "The queue includes current-site citation gaps, not only newly submitted material."],
@@ -203,6 +203,19 @@
       "pass_criteria": ["Direct action is specific and courageous.", "The material states toward what end and what became possible or usable, including stewardship through transition where supported.", "Unresolved high-value claims remain visible as prioritized research rather than being weakened into vagueness or promoted prematurely.", "A difficult project ending is framed candidly without importing private circumstances or treating transition as failure."],
       "evidence_required": ["blind judge scorecard", "promotion recommendations", "held-claim rationale"],
       "remediation_hint": "Strengthen the direct action, end, and evidence relationship while holding unearned causality."
+    },
+    {
+      "id": "KD-013",
+      "title": "Full-population social archive is reconciled before interpretation",
+      "category": "archival-production",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 5,
+      "inputs": ["account profile counter", "deduplicated timeline inventory", "posted URLs", "stakeholder classifications", "claims and projections"],
+      "procedure": ["Reconcile the profile counter against every unique status record materialized by all relevant authenticated timeline tabs.", "Verify complete metadata coverage of the retrievable population and explicit treatment of unavailable records.", "Recompute publishing, source, and stakeholder patterns from the inventory and compare them with promoted wording."],
+      "pass_criteria": ["Every retrievable public record is represented exactly once by stable metadata.", "The difference between the profile counter and recovered population is explicit and routed to research.", "Posted URLs and stakeholder responses are classified without converting tags, likes, or volatile interaction units into endorsement or impact.", "Public projections use only reproducible counts and retain institutional-account authorship boundaries."],
+      "evidence_required": ["population reconciliation", "deduplicated record inventory", "posted-URL inventory", "stakeholder-group findings", "claim boundary checks"],
+      "remediation_hint": "Repair the denominator or classification before strengthening the public interpretation."
     }
   ],
   "judge_output_schema": {

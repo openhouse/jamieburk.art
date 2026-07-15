@@ -63,7 +63,11 @@ website selection. It is a recommendation, not publication approval.
 
 ## Selected Social-Media Evidence
 
-- `CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT`: the bounded six-account historical
+- `CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE`: selected as evidence that the project
+  account extended CallNYC's information architecture into a repeatable public-
+  guidance practice. State the 107-of-110 reconciliation and keep handles
+  credited, visible engagement, and service impact as separate measures.
+- `CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT`: the bounded eight-account historical
   result is selected for the CallNYC case study. Keep it framed as observable
   public engagement, not endorsement, adoption, impact, or a complete account-
   universe metric.

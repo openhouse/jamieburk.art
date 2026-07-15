@@ -360,6 +360,26 @@
       ]
     },
     {
+      "id": "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
+      "title": "Authenticated @CallNYCApp full-population archival review",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated July 14, 2026 review of every @CallNYCApp record materialized by the Posts and Replies timelines, with public-safe metadata preserved in the repository.",
+      "publicNote": "The profile reported 110 posts; 107 unique records materialized and were reviewed. Three remain unrecovered and are not treated as reviewed.",
+      "doesNotEstablish": [
+        "content of three unmaterialized profile-counted records",
+        "authorship of every institutional post",
+        "reach, conversion, endorsement, or service impact"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CHIN-ENGAGEMENT-2017-07-11",
       "title": "Margaret Chin response to CallNYC recognition",
       "organization": "New York City Council",
@@ -466,6 +486,114 @@
       "doesNotEstablish": [
         "official Council adoption",
         "current guidance accuracy"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-MENDEZ-ENGAGEMENT-2016-05-19",
+      "title": "Rosie Mendez response to CallNYC emergency-repairs recognition",
+      "organization": "New York City Council",
+      "author": "Rosie Mendez",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-19",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/RosieMendez/status/733410096915550208",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Rosie Mendez quote-posted CallNYC recognition of her office's emergency-repairs work and thanked her team.",
+      "doesNotEstablish": [
+        "project endorsement",
+        "causal impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-RODRIGUEZ-ENGAGEMENT-2016-05-18",
+      "title": "Ydanis Rodriguez response to CallNYC rent-overcharges recognition",
+      "organization": "New York City Council",
+      "author": "Ydanis Rodriguez",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-18",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/ydanis/status/733089563334299648",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council Member Ydanis Rodriguez quote-posted CallNYC recognition and connected it to tenant rights in Northern Manhattan and citywide.",
+      "doesNotEstablish": [
+        "project endorsement",
+        "causal impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-MSLLEGAL-RECOMMENDATION-2016-05-09",
+      "title": "Legal-services account recommendation of CallNYC",
+      "organization": "The Law Offices of Michael S. Lamonsoff",
+      "author": "The Law Offices of Michael S. Lamonsoff",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-09",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/msllegal/status/729774142908563456",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "A legal-services account recommended following CallNYC for its New York City information and data.",
+      "doesNotEstablish": [
+        "legal advice",
+        "service conversion",
+        "project-wide endorsement"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-PPOLITICS-DIALOGUE-2016-03-16",
+      "title": "Participatory Politics dialogue with CallNYC",
+      "organization": "Participatory Politics Foundation",
+      "author": "David Moore",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-03-16",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/ppolitics/status/710187056463552512",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Participatory Politics discussed Council-office issue intake and its Councilmatic public-comment pathway in a public thread with CallNYC.",
+      "doesNotEstablish": [
+        "formal partnership",
+        "shared product ownership"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-GIZMODO-CURATION-2016-03-17",
+      "title": "CallNYC post sharing a 311 open-data tool article",
+      "author": "CallNYC",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-03-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/710498412349800450",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "CallNYC shared Gizmodo coverage of a civic tool that made address-level 311 complaint history usable for renters.",
+      "doesNotEstablish": [
+        "CallNYC authorship of the linked tool",
+        "formal partnership"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-GOTHAMIST-CURATION-2016-04-28",
+      "title": "CallNYC timeline repost of Pulaski Bridge issue reporting",
+      "organization": "Gothamist",
+      "author": "Gothamist",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-04-28",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/Gothamist/status/725788478676570113",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "The recovered CallNYC timeline included a repost of Gothamist reporting on the Pulaski Bridge bike path opening.",
+      "doesNotEstablish": [
+        "CallNYC authorship of the reporting",
+        "campaign causality"
       ]
     },
     {
@@ -1417,7 +1545,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Public posts from 2016-2018 show at least six distinct NYC Council Member accounts engaging with CallNYC through replies, independent sharing, quoted district figures, or acknowledgment: Margaret Chin, Ruben Wills, Steven Matteo, Peter Koo, Mathieu Eugene, and Helen Rosenthal. This is a bounded public-engagement count, not an endorsement or impact measure.",
+          "text": "Public posts from 2016-2018 show at least eight distinct historical NYC Council Member accounts engaging with CallNYC through replies, sharing, quote-posts, quoted district figures, or acknowledgment: Margaret Chin, Ruben Wills, Steven Matteo, Peter Koo, Mathieu Eugene, Helen Rosenthal, Rosie Mendez, and Ydanis Rodriguez. This is a bounded public-engagement count, not an endorsement or impact measure.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1485,12 +1613,101 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-MENDEZ-ENGAGEMENT-2016-05-19",
+          "relationship": "direct-support",
+          "supports": [
+            "named Council Member account",
+            "observable public engagement"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-RODRIGUEZ-ENGAGEMENT-2016-05-18",
+          "relationship": "direct-support",
+          "supports": [
+            "named Council Member account",
+            "observable public engagement"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
         "Count only posts authored by Council Member accounts, not posts that merely tag an official.",
         "Historical X search cannot recover every deleted post, native repost, private interaction, or like.",
         "Engagement does not mean endorsement, adoption, service impact, or current officeholder status."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A full pass over every retrievable @CallNYCApp record found a repeatable public-guidance pattern. Across its authored posts, the account repeatedly paired a constituent issue and Council office with one of 62 distinct service or API pathways spanning 16 service domains. It also circulated official resources, civic-technology work, and issue reporting. The profile reported 110 posts; 107 materialized and were reviewed, so three remain an explicit gap.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
+          "relationship": "direct-support",
+          "supports": [
+            "complete retrievable population and reconciliation",
+            "publishing-pattern and posted-URL inventory"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-MSLLEGAL-RECOMMENDATION-2016-05-09",
+          "relationship": "direct-support",
+          "supports": [
+            "observable guidance, curation, or stakeholder-response example"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-PPOLITICS-DIALOGUE-2016-03-16",
+          "relationship": "direct-support",
+          "supports": [
+            "observable guidance, curation, or stakeholder-response example"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-GIZMODO-CURATION-2016-03-17",
+          "relationship": "direct-support",
+          "supports": [
+            "observable guidance, curation, or stakeholder-response example"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-GOTHAMIST-CURATION-2016-04-28",
+          "relationship": "direct-support",
+          "supports": [
+            "observable guidance, curation, or stakeholder-response example"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The profile reported 110 posts, but only 107 unique records materialized; 100% review applies to the retrievable population, not the profile counter.",
+        "Council-member handles credited in CallNYC posts are a publishing-pattern measure, not an engagement count.",
+        "Visible interaction totals are volatile interface observations and are not used as reach, conversion, endorsement, or impact metrics.",
+        "Institutional account records are not attributed post by post to Jamie without authorship evidence."
       ]
     },
     {
@@ -1886,7 +2103,14 @@
         "SRC-CALLNYC-MATTEO-FIGURES-2018-01-23",
         "SRC-CALLNYC-KOO-ENGAGEMENT-2016-04-27",
         "SRC-CALLNYC-EUGENE-ENGAGEMENT-2016-10-04",
-        "SRC-CALLNYC-ROSENTHAL-SHARE-2016-09-27"
+        "SRC-CALLNYC-ROSENTHAL-SHARE-2016-09-27",
+        "SRC-CALLNYC-MENDEZ-ENGAGEMENT-2016-05-19",
+        "SRC-CALLNYC-RODRIGUEZ-ENGAGEMENT-2016-05-18",
+        "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
+        "SRC-CALLNYC-MSLLEGAL-RECOMMENDATION-2016-05-09",
+        "SRC-CALLNYC-PPOLITICS-DIALOGUE-2016-03-16",
+        "SRC-CALLNYC-GIZMODO-CURATION-2016-03-17",
+        "SRC-CALLNYC-GOTHAMIST-CURATION-2016-04-28"
       ],
       "occurrences": [
         {
@@ -1950,7 +2174,21 @@
             "SRC-CALLNYC-MATTEO-FIGURES-2018-01-23",
             "SRC-CALLNYC-KOO-ENGAGEMENT-2016-04-27",
             "SRC-CALLNYC-EUGENE-ENGAGEMENT-2016-10-04",
-            "SRC-CALLNYC-ROSENTHAL-SHARE-2016-09-27"
+            "SRC-CALLNYC-ROSENTHAL-SHARE-2016-09-27",
+            "SRC-CALLNYC-MENDEZ-ENGAGEMENT-2016-05-19",
+            "SRC-CALLNYC-RODRIGUEZ-ENGAGEMENT-2016-05-18"
+          ]
+        },
+        {
+          "id": "social-public-guidance",
+          "claimId": "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
+            "SRC-CALLNYC-MSLLEGAL-RECOMMENDATION-2016-05-09",
+            "SRC-CALLNYC-PPOLITICS-DIALOGUE-2016-03-16",
+            "SRC-CALLNYC-GIZMODO-CURATION-2016-03-17",
+            "SRC-CALLNYC-GOTHAMIST-CURATION-2016-04-28"
           ]
         }
       ]

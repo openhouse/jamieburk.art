@@ -59,6 +59,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/google-shared-drives.ts",
   "apps/www/src/data/knowledge-bank/social-media-production.ts",
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
+  "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -98,6 +99,12 @@ const campaignPressInventory = JSON.parse(
 const socialMediaInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
+    "utf8",
+  ),
+);
+const callNycPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
     "utf8",
   ),
 );
@@ -832,6 +839,9 @@ function deterministicResults(judgments) {
   const callNycSocialClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
   );
+  const callNycGuidanceClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE",
+  );
   const nycacSocialClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT",
   );
@@ -848,6 +858,9 @@ function deterministicResults(judgments) {
     (task) =>
       task.id === "RT-SOCIAL-NYCAC-ACCOUNT-ESTABLISHMENT-CORROBORATION",
   );
+  const callNycMissingPostsTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-CALLNYC-UNMATERIALIZED-POSTS",
+  );
   const socialMediaPublicText = [
     "apps/www/src/content/work/callnyc.mdx",
     "apps/www/src/content/work/fair-rent-nyc.mdx",
@@ -858,12 +871,12 @@ function deterministicResults(judgments) {
     .join("\n");
 
   if (
-    socialMediaCaptures.length !== 5 ||
-    socialMediaSources.length !== 24 ||
-    socialMediaObservations.length !== 24 ||
-    socialMediaClaims.length !== 4 ||
-    socialMediaResearchTasks.length !== 3 ||
-    socialMediaInquiries.length !== 4
+    socialMediaCaptures.length !== 6 ||
+    socialMediaSources.length !== 34 ||
+    socialMediaObservations.length !== 34 ||
+    socialMediaClaims.length !== 5 ||
+    socialMediaResearchTasks.length !== 4 ||
+    socialMediaInquiries.length !== 5
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media archival-production graph has an unexpected record count",
@@ -874,11 +887,34 @@ function deterministicResults(judgments) {
       .records;
   const wowListInventoryRecords =
     socialMediaInventory.inventories.wowListProfileTimeline.records;
+  const callNycPopulationRecords = callNycPopulationInventory.records;
+  const callNycIncomingRecords =
+    callNycPopulationInventory.incomingMentionSearch.records;
+  const callNycPostsTimelineRecords = callNycPopulationRecords.filter((record) =>
+    record.recoveredFrom?.includes("posts"),
+  );
+  const callNycRepliesTimelineRecords = callNycPopulationRecords.filter((record) =>
+    record.recoveredFrom?.includes("replies"),
+  );
   if (
     nycacInventoryRecords.length !== 358 ||
     new Set(nycacInventoryRecords.map((record) => record.url)).size !== 358 ||
     wowListInventoryRecords.length !== 37 ||
-    new Set(wowListInventoryRecords.map((record) => record.url)).size !== 37
+    new Set(wowListInventoryRecords.map((record) => record.url)).size !== 37 ||
+    callNycPopulationRecords.length !== 107 ||
+    new Set(callNycPopulationRecords.map((record) => record.url)).size !== 107 ||
+    callNycPostsTimelineRecords.length !== 106 ||
+    callNycRepliesTimelineRecords.length !== 107 ||
+    callNycPopulationRecords.some(
+      (record) =>
+        !Array.isArray(record.recoveredFrom) ||
+        !record.recoveredFrom.length ||
+        record.recoveredFrom.some(
+          (timeline) => !["posts", "replies"].includes(timeline),
+        ),
+    ) ||
+    callNycIncomingRecords.length !== 11 ||
+    new Set(callNycIncomingRecords.map((record) => record.url)).size !== 11
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media capture inventory is incomplete or contains duplicate status URLs",
@@ -887,7 +923,14 @@ function deterministicResults(judgments) {
   if (
     projectSocialAccounts.map((account) => account.currentHandle).join("|") !==
       "@CallNYCApp|@NYCArtC|@wowlist" ||
-    socialMediaReviewSummary.callNycCouncilMemberAccountCount !== 6 ||
+    socialMediaReviewSummary.callNycCouncilMemberAccountCount !== 8 ||
+    socialMediaReviewSummary.callNycRecoveredTimelineRecordCount !== 107 ||
+    socialMediaReviewSummary.callNycUnmaterializedProfileRecordCount !== 3 ||
+    socialMediaReviewSummary.callNycCouncilRecognitionRecordCount !== 71 ||
+    socialMediaReviewSummary.callNycCouncilHandlesCreditedCount !== 26 ||
+    socialMediaReviewSummary.callNycDistinctIssueOrApiPathCount !== 62 ||
+    socialMediaReviewSummary.callNycDistinctServiceDomainCount !== 16 ||
+    socialMediaReviewSummary.callNycIncomingMentionRecordCount !== 11 ||
     socialMediaReviewSummary.nycacCouncilMemberAuthorCount2017To2020 !== 6 ||
     socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020 !==
       4 ||
@@ -897,6 +940,35 @@ function deterministicResults(judgments) {
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media inventory no longer matches the bounded authenticated research record",
+    );
+  }
+  if (
+    callNycPopulationInventory.populationReconciliation.profileReportedPostCount !==
+      110 ||
+    callNycPopulationInventory.populationReconciliation.postsTimelineUniqueCount !==
+      106 ||
+    callNycPopulationInventory.populationReconciliation.repliesTimelineUniqueCount !==
+      107 ||
+    callNycPopulationInventory.populationReconciliation.recoveredUnionRecordCount !==
+      107 ||
+    callNycPopulationInventory.populationReconciliation.profileCountNotMaterialized !==
+      3 ||
+    callNycPopulationInventory.recordTypeCounts.original !== 86 ||
+    callNycPopulationInventory.recordTypeCounts.reply !== 6 ||
+    callNycPopulationInventory.recordTypeCounts.repost !== 15 ||
+    callNycPopulationInventory.publishingPattern.callNycAuthoredRecordCount !== 92 ||
+    callNycPopulationInventory.publishingPattern.councilRecognitionPatternRecordCount !==
+      71 ||
+    callNycPopulationInventory.publishingPattern.distinctCouncilMemberHandlesCredited !==
+      26 ||
+    callNycPopulationInventory.publishingPattern.callNycDeepLinkOccurrences !== 75 ||
+    callNycPopulationInventory.publishingPattern.distinctCallNycIssueOrApiPaths !==
+      62 ||
+    callNycPopulationInventory.publishingPattern.distinctServiceDomains !== 16 ||
+    callNycPopulationInventory.postedUrlInventory.distinctExternalShortUrls !== 84
+  ) {
+    socialMediaIntegrityViolations.push(
+      "CallNYC full-population reconciliation or publishing-pattern counts drifted",
     );
   }
   for (const sourceId of socialMediaSourceIds) {
@@ -909,6 +981,8 @@ function deterministicResults(judgments) {
   if (
     callNycSocialClaim?.selectionState !== "selected" ||
     callNycSocialClaim?.publicationState !== "approved" ||
+    callNycGuidanceClaim?.selectionState !== "selected" ||
+    callNycGuidanceClaim?.publicationState !== "approved" ||
     nycacSocialClaim?.selectionState !== "selected" ||
     nycacSocialClaim?.publicationState !== "approved" ||
     wowListSocialClaim?.selectionState !== "selected" ||
@@ -918,13 +992,19 @@ function deterministicResults(judgments) {
       (projection) => projection.status === "hold" && !projection.surfaces.length,
     ) ||
     laterNycacTask?.status !== "open" ||
-    accountCorroborationTask?.status !== "open"
+    accountCorroborationTask?.status !== "open" ||
+    callNycMissingPostsTask?.status !== "open"
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media promotion, hold, or open-research states are incomplete",
     );
   }
-  for (const claim of [callNycSocialClaim, nycacSocialClaim, wowListSocialClaim]) {
+  for (const claim of [
+    callNycSocialClaim,
+    callNycGuidanceClaim,
+    nycacSocialClaim,
+    wowListSocialClaim,
+  ]) {
     if (
       !claim ||
       !claim.observationIds.length ||
@@ -939,9 +1019,13 @@ function deterministicResults(judgments) {
   }
   if (
     !/CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT/.test(socialMediaPublicText) ||
+    !/CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE/.test(socialMediaPublicText) ||
     !/CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT/.test(socialMediaPublicText) ||
     !/CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE/.test(socialMediaPublicText) ||
-    !/at least six distinct historical NYC Council Member accounts/i.test(
+    !/at least eight distinct historical NYC Council Member accounts/i.test(
+      socialMediaPublicText,
+    ) ||
+    !/62 distinct service or API pathways spanning 16 service domains/i.test(
       socialMediaPublicText,
     ) ||
     !/at least four NYC Council Member accounts/i.test(socialMediaPublicText) ||
@@ -996,6 +1080,18 @@ function deterministicResults(judgments) {
   ) {
     socialMediaSafetyViolations.push(
       "Public social-media inventory contains post text, session state, or a private path",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i.test(
+      JSON.stringify(callNycPopulationInventory),
+    ) ||
+    !/107 of 110/i.test(
+      callNycPopulationInventory.populationReconciliation.conclusion,
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Public CallNYC population fixture contains raw post/session data or obscures the unrecovered-record boundary",
     );
   }
 
@@ -1333,6 +1429,76 @@ function deterministicResults(judgments) {
       "Document the claim-to-brief and discovery-to-research loop with rights and corroboration gates.",
     ),
   );
+  const callNycPopulationViolations = [];
+  const populationReconciliation =
+    callNycPopulationInventory.populationReconciliation;
+  const populationRecordTypeTotal = Object.values(
+    callNycPopulationInventory.recordTypeCounts,
+  ).reduce((sum, count) => sum + count, 0);
+  if (
+    callNycPopulationRecords.length !== 107 ||
+    new Set(callNycPopulationRecords.map((record) => record.url)).size !== 107 ||
+    populationRecordTypeTotal !== 107 ||
+    callNycPostsTimelineRecords.length !==
+      populationReconciliation.postsTimelineUniqueCount ||
+    callNycRepliesTimelineRecords.length !==
+      populationReconciliation.repliesTimelineUniqueCount
+  ) {
+    callNycPopulationViolations.push(
+      "The recovered CallNYC population is incomplete, duplicated, or does not reconcile by record type",
+    );
+  }
+  if (
+    populationReconciliation.profileReportedPostCount !== 110 ||
+    populationReconciliation.recoveredUnionRecordCount !== 107 ||
+    populationReconciliation.profileCountNotMaterialized !== 3 ||
+    callNycMissingPostsTask?.status !== "open"
+  ) {
+    callNycPopulationViolations.push(
+      "The 110-profile / 107-recovered / 3-unmaterialized boundary is not explicit and tasked",
+    );
+  }
+  if (
+    callNycPopulationInventory.postedUrlInventory.distinctExternalShortUrls !==
+      84 ||
+    callNycIncomingRecords.length !== 11 ||
+    callNycPopulationInventory.publishingPattern.councilRecognitionPatternRecordCount !==
+      71 ||
+    callNycPopulationInventory.publishingPattern.distinctCouncilMemberHandlesCredited !==
+      26 ||
+    callNycPopulationInventory.publishingPattern.distinctCallNycIssueOrApiPaths !==
+      62
+  ) {
+    callNycPopulationViolations.push(
+      "The posted-URL, stakeholder, or publishing-pattern findings do not reproduce from the bounded inventory",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i.test(
+      JSON.stringify(callNycPopulationInventory),
+    ) ||
+    !callNycGuidanceClaim?.boundaries.some((boundary) => /107 unique records/i.test(boundary)) ||
+    !callNycGuidanceClaim?.antiClaims.some((antiClaim) => /All 110.*recovered/i.test(antiClaim))
+  ) {
+    callNycPopulationViolations.push(
+      "The public-safe fixture or promoted claim obscures raw-data, denominator, or authorship boundaries",
+    );
+  }
+  results.set(
+    "KD-013",
+    result(
+      callNycPopulationViolations.length ? 0 : 4,
+      [
+        `${callNycPopulationRecords.length}/110 profile-counted records recovered; 3 explicitly unmaterialized`,
+        `${new Set(callNycPopulationRecords.map((record) => record.url)).size} unique status URLs`,
+        `${callNycPostsTimelineRecords.length} Posts-tab / ${callNycRepliesTimelineRecords.length} Replies-tab records recomputed from row provenance`,
+        `${callNycPopulationInventory.postedUrlInventory.distinctExternalShortUrls} distinct posted short URLs`,
+        `${callNycIncomingRecords.length} classified incoming-mention records`,
+      ],
+      callNycPopulationViolations,
+      "Repair the denominator or classification before strengthening the public interpretation.",
+    ),
+  );
 
   return {
     results,
@@ -1362,6 +1528,14 @@ function deterministicResults(judgments) {
       socialMediaClaims: socialMediaClaims.length,
       callNycCouncilAccounts:
         socialMediaReviewSummary.callNycCouncilMemberAccountCount,
+      callNycRecoveredTimelineRecords:
+        socialMediaReviewSummary.callNycRecoveredTimelineRecordCount,
+      callNycUnmaterializedProfileRecords:
+        socialMediaReviewSummary.callNycUnmaterializedProfileRecordCount,
+      callNycCouncilRecognitionPosts:
+        socialMediaReviewSummary.callNycCouncilRecognitionRecordCount,
+      callNycIssueOrApiPaths:
+        socialMediaReviewSummary.callNycDistinctIssueOrApiPathCount,
       nycacMissionRelevantCouncilAccounts:
         socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020,
       validationErrors: validationErrors.length,

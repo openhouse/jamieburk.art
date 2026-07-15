@@ -27,22 +27,77 @@ include only posts authored by Council Member accounts; posts that merely tag
 an official, resident comments, likes, deleted posts, private activity, and
 unrecoverable native reposts are excluded.
 
+For `@CallNYCApp`, both the Posts and Replies tabs were traversed to the March
+2016 beginning and through repeated no-growth passes. The Posts tab yielded 106
+unique status records; the Replies tab yielded 107; their union was 107. The
+profile reported 110 posts. The review therefore covers 100% of the retrievable
+public population, not 100% of the profile counter: three profile-counted
+records did not materialize and remain an open recovery task. Each fixture row
+records whether it materialized in Posts, Replies, or both. Three status links
+nested inside quoted-post cards were excluded from the primary-record
+population.
+
 The public metadata-only capture inventory is stored at
 `apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json`.
 It preserves status URLs, dates, author handles, and original/repost
 classification where applicable. Post text and authenticated-session state are
 not stored in the fixture.
 
+The dedicated CallNYC population fixture is stored at
+`apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json`. It
+preserves metadata for all 107 retrievable records and every posted external
+URL while excluding post text, cookies, private account state, and session
+data.
+
 ## Findings
 
 ### CallNYC
 
-At least six distinct historical NYC Council Member accounts publicly engaged
-with CallNYC between 2016 and 2018: Margaret Chin, Ruben Wills, Steven Matteo,
-Peter Koo, Mathieu Eugene, and Helen Rosenthal. Observable engagement included
-replies, independent sharing, quoted district figures, and acknowledgment of
-CallNYC recognition. This is not a claim of endorsement, official adoption, or
-causal constituent-service impact.
+The 107 recovered records span March 5-November 14, 2016: 86 originals, 6
+replies, and 15 reposts. Ninety-two were authored by `@CallNYCApp`.
+
+Across those authored posts, 71 issue-specific recognition posts credited 26
+distinct Council-member handles. The account posted 75 CallNYC deep-link
+occurrences representing 62 distinct issue or API paths across 16 service
+domains plus the API. This recurring structure connected an issue, a Council
+office, recognition, and a usable service pathway. The handle count describes
+what CallNYC published; it is not a count of officials who engaged.
+
+Across the full recovered population, 94 records contained external links and
+84 distinct short URLs were inventoried. Mission-relevant sources included:
+
+- direct CallNYC coverage in Politico;
+- official service guidance including NYC's Rent Freeze program;
+- civic-technology peers including Councilmatic, the New York Tech Working
+  Group, Council Labs, and BetaNYC;
+- open-data work such as the renter-facing 311 tool covered by Gizmodo; and
+- issue reporting such as Gothamist's Pulaski Bridge bike-path coverage.
+
+The bounded incoming-mention search yielded 11 public records: four Council-
+office posts, two legal-services posts, two resident posts, two civic-
+technology posts, and one incidental network mention. Separately, the account
+timeline preserved five Council-authored engagement records as reposts. Peter
+Koo appears in both sets; the other four timeline records add Mathieu Eugene,
+Helen Rosenthal, Rosie Mendez, and Ydanis Rodriguez, producing the eight-
+account union below.
+
+The timeline also preserved a May 2016 repost authored by `@CarlinaRivera`.
+It is not counted as Council-member engagement because Rivera was not serving
+as a Council Member at the time of that record.
+
+At least eight distinct historical NYC Council Member accounts publicly
+engaged with CallNYC between 2016 and 2018: Margaret Chin, Ruben Wills, Steven
+Matteo, Peter Koo, Mathieu Eugene, Helen Rosenthal, Rosie Mendez, and Ydanis
+Rodriguez. Observable engagement included replies, independent sharing,
+quote-posts, quoted district figures, and acknowledgment of CallNYC
+recognition. This is not a claim of endorsement, official adoption, or causal
+constituent-service impact.
+
+As a dated interface snapshot, 59 of the 92 CallNYC-authored posts displayed at
+least one interaction, totaling 8 replies, 74 reposts, and 111 likes. These 193
+interaction units are not unique people, reach, conversion, endorsement, or
+service impact. They remain knowledge-bank context rather than headline site
+copy.
 
 ### NYC Artist Coalition
 
@@ -78,8 +133,9 @@ scale remains supported by its separate aggregate product records.
 
 ## Lifecycle state
 
-The CallNYC and mission-relevant NYC Artist Coalition engagement claims, plus
-the WOW List product-surface claim, are selected for their case studies. The
-NYC Artist Coalition account-establishment claim remains held. Open tasks cover
-post-2020 coalition mentions, collaborator corroboration, and WOW List handle
-lineage.
+The CallNYC public-guidance and Council-engagement claims, the mission-relevant
+NYC Artist Coalition engagement claim, and the WOW List product-surface claim
+are selected for their case studies. The NYC Artist Coalition account-
+establishment claim remains held. Open tasks cover the three unmaterialized
+CallNYC records, post-2020 coalition mentions, collaborator corroboration, and
+WOW List handle lineage.

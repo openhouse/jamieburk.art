@@ -2027,7 +2027,7 @@
       ]
     },
     "callNycCouncilMemberEngagement": {
-      "distinctAccountCount": 6,
+      "distinctAccountCount": 8,
       "records": [
         {
           "authorHandle": "@CM_MargaretChin",
@@ -2052,6 +2052,14 @@
         {
           "authorHandle": "@HelenRosenthal",
           "url": "https://x.com/HelenRosenthal/status/780797474277511170"
+        },
+        {
+          "authorHandle": "@RosieMendez",
+          "url": "https://x.com/RosieMendez/status/733410096915550208"
+        },
+        {
+          "authorHandle": "@ydanis",
+          "url": "https://x.com/ydanis/status/733089563334299648"
         }
       ]
     }
@@ -2059,6 +2067,7 @@
   "limitations": [
     "X search cannot recover every deleted post, private interaction, native repost, or like.",
     "The NYC Artist Coalition incoming-mention inventory is bounded to 2017-2020.",
-    "One of the 38 posts reported on the WOW List profile did not materialize in the recovered timeline."
+    "One of the 38 posts reported on the WOW List profile did not materialize in the recovered timeline.",
+    "The full @CallNYCApp population review recovered 107 of the profile's reported 110 posts; three records did not materialize."
   ]
 }

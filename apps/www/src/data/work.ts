@@ -401,7 +401,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and a metadata-only full-population review of the historical project account.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized.",
@@ -415,7 +415,8 @@ const workItemsInput = [
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
       "Covered by Politico New York in 2016",
-      "At least six distinct historical NYC Council Member accounts publicly replied to, shared, quoted, or acknowledged CallNYC",
+      "At least eight distinct historical NYC Council Member accounts publicly replied to, shared, quote-posted, quoted, or acknowledged CallNYC",
+      "Across the retrievable account population, issue-specific posts repeatedly paired a Council office with one of 62 distinct service or API pathways spanning 16 service domains",
     ],
     knownOpenProtected: {
       known:

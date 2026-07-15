@@ -10,6 +10,7 @@ import type {
 const reviewedAt = "2026-07-14";
 
 const callNycCouncilClaimId = "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT";
+const callNycGuidanceClaimId = "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE";
 const nycacCouncilClaimId = "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT";
 const nycacIdentityClaimId = "CLM-NYCAC-SHARED-IDENTITY-STEWARDSHIP";
 const wowListSocialClaimId = "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE";
@@ -64,7 +65,16 @@ export const projectSocialAccounts = [
 export const socialMediaReviewSummary = {
   authenticatedSessionConfirmed: true,
   accountCount: projectSocialAccounts.length,
-  callNycCouncilMemberAccountCount: 6,
+  callNycCouncilMemberAccountCount: 8,
+  callNycProfilePostCount: 110,
+  callNycRecoveredTimelineRecordCount: 107,
+  callNycUnmaterializedProfileRecordCount: 3,
+  callNycAuthoredRecordCount: 92,
+  callNycCouncilRecognitionRecordCount: 71,
+  callNycCouncilHandlesCreditedCount: 26,
+  callNycDistinctIssueOrApiPathCount: 62,
+  callNycDistinctServiceDomainCount: 16,
+  callNycIncomingMentionRecordCount: 11,
   nycacCouncilMemberAuthorCount2017To2020: 6,
   nycacMissionRelevantCouncilMemberAccountCount2017To2020: 4,
   nycacHistoricalMentionRecordCount2017To2020: 358,
@@ -217,6 +227,125 @@ const socialPostDescriptors: SocialPostDescriptor[] = [
     locator: "Post text, domain link, and timestamp",
     limitations: ["The historical share does not make CallNYC a current or official City service."],
     supportsClaimIds: [callNycCouncilClaimId],
+  },
+  {
+    sourceId: "SRC-CALLNYC-MENDEZ-ENGAGEMENT-2016-05-19",
+    observationId: "OBS-CALLNYC-MENDEZ-QUOTE-RESPONSE",
+    project: "callnyc",
+    title: "Rosie Mendez response to CallNYC emergency-repairs recognition",
+    author: "Rosie Mendez",
+    organization: "New York City Council",
+    kind: "government-social-post",
+    publishedAt: "2016-05-19",
+    canonicalUrl: "https://x.com/RosieMendez/status/733410096915550208",
+    publicCitation:
+      "Council Member Rosie Mendez quote-posted CallNYC recognition of her office's emergency-repairs work and thanked her team.",
+    supportsGenerally: ["Council Member quote-post", "constituent-service recognition"],
+    doesNotEstablish: ["project endorsement", "causal impact"],
+    statement:
+      "Rosie Mendez publicly quote-posted CallNYC recognition of her office's emergency-repairs work and credited her team.",
+    locator: "Post text, quoted post, and timestamp",
+    limitations: ["The response acknowledges one recognition post, not the full project."],
+    supportsClaimIds: [callNycCouncilClaimId],
+  },
+  {
+    sourceId: "SRC-CALLNYC-RODRIGUEZ-ENGAGEMENT-2016-05-18",
+    observationId: "OBS-CALLNYC-RODRIGUEZ-QUOTE-RESPONSE",
+    project: "callnyc",
+    title: "Ydanis Rodriguez response to CallNYC rent-overcharges recognition",
+    author: "Ydanis Rodriguez",
+    organization: "New York City Council",
+    kind: "government-social-post",
+    publishedAt: "2016-05-18",
+    canonicalUrl: "https://x.com/ydanis/status/733089563334299648",
+    publicCitation:
+      "Council Member Ydanis Rodriguez quote-posted CallNYC recognition and connected it to tenant rights in Northern Manhattan and citywide.",
+    supportsGenerally: ["Council Member quote-post", "tenant-rights recognition"],
+    doesNotEstablish: ["project endorsement", "causal impact"],
+    statement:
+      "Ydanis Rodriguez publicly quote-posted CallNYC recognition of his office's rent-overcharges work and connected it to tenant rights.",
+    locator: "Post text, quoted post, and timestamp",
+    limitations: ["The response acknowledges one recognition post, not the full project."],
+    supportsClaimIds: [callNycCouncilClaimId],
+  },
+  {
+    sourceId: "SRC-CALLNYC-MSLLEGAL-RECOMMENDATION-2016-05-09",
+    observationId: "OBS-CALLNYC-LEGAL-SERVICES-RECOMMENDATION",
+    project: "callnyc",
+    title: "Legal-services account recommendation of CallNYC",
+    author: "The Law Offices of Michael S. Lamonsoff",
+    organization: "The Law Offices of Michael S. Lamonsoff",
+    kind: "institutional-social-post",
+    publishedAt: "2016-05-09",
+    canonicalUrl: "https://x.com/msllegal/status/729774142908563456",
+    publicCitation:
+      "A legal-services account recommended following CallNYC for its New York City information and data.",
+    supportsGenerally: ["legal-services stakeholder response", "information usefulness"],
+    doesNotEstablish: ["legal advice", "service conversion", "project-wide endorsement"],
+    statement:
+      "A legal-services account publicly recommended CallNYC as a source of New York City information and data.",
+    locator: "Post text and timestamp",
+    limitations: ["The recommendation does not measure use, reach, or legal-service outcomes."],
+    supportsClaimIds: [callNycGuidanceClaimId],
+  },
+  {
+    sourceId: "SRC-CALLNYC-PPOLITICS-DIALOGUE-2016-03-16",
+    observationId: "OBS-CALLNYC-CIVIC-TECH-DIALOGUE",
+    project: "callnyc",
+    title: "Participatory Politics dialogue with CallNYC",
+    author: "David Moore",
+    organization: "Participatory Politics Foundation",
+    kind: "institutional-social-post",
+    publishedAt: "2016-03-16",
+    canonicalUrl: "https://x.com/ppolitics/status/710187056463552512",
+    publicCitation:
+      "Participatory Politics discussed Council-office issue intake and its Councilmatic public-comment pathway in a public thread with CallNYC.",
+    supportsGenerally: ["civic-technology peer dialogue", "public feedback pathways"],
+    doesNotEstablish: ["formal partnership", "shared product ownership"],
+    statement:
+      "A civic-technology peer publicly discussed Council-office issue intake and resident feedback pathways in a thread with CallNYC.",
+    locator: "Reply context, linked Councilmatic article, and timestamp",
+    limitations: ["The exchange does not establish a formal partnership."],
+    supportsClaimIds: [callNycGuidanceClaimId],
+  },
+  {
+    sourceId: "SRC-CALLNYC-GIZMODO-CURATION-2016-03-17",
+    observationId: "OBS-CALLNYC-GIZMODO-311-CURATION",
+    project: "callnyc",
+    title: "CallNYC post sharing a 311 open-data tool article",
+    author: "CallNYC",
+    kind: "institutional-social-post",
+    publishedAt: "2016-03-17",
+    canonicalUrl: "https://x.com/CallNYCapp/status/710498412349800450",
+    publicCitation:
+      "CallNYC shared Gizmodo coverage of a civic tool that made address-level 311 complaint history usable for renters.",
+    supportsGenerally: ["mission-relevant source curation", "open-data translation"],
+    doesNotEstablish: ["CallNYC authorship of the linked tool", "formal partnership"],
+    statement:
+      "CallNYC used the account to circulate another civic designer's resident-facing translation of 311 data.",
+    locator: "Post text, linked article, and timestamp",
+    limitations: ["Sharing the article does not establish authorship of the linked tool."],
+    supportsClaimIds: [callNycGuidanceClaimId],
+  },
+  {
+    sourceId: "SRC-CALLNYC-GOTHAMIST-CURATION-2016-04-28",
+    observationId: "OBS-CALLNYC-GOTHAMIST-ISSUE-CURATION",
+    project: "callnyc",
+    title: "CallNYC timeline repost of Pulaski Bridge issue reporting",
+    author: "Gothamist",
+    organization: "Gothamist",
+    kind: "institutional-social-post",
+    publishedAt: "2016-04-28",
+    canonicalUrl: "https://x.com/Gothamist/status/725788478676570113",
+    publicCitation:
+      "The recovered CallNYC timeline included a repost of Gothamist reporting on the Pulaski Bridge bike path opening.",
+    supportsGenerally: ["mission-relevant issue curation", "transportation context"],
+    doesNotEstablish: ["CallNYC authorship of the reporting", "campaign causality"],
+    statement:
+      "The CallNYC timeline circulated issue reporting connected to the service categories the product organized.",
+    locator: "Recovered repost record, linked article, and timestamp",
+    limitations: ["A repost does not establish authorship or causal influence on the project reported."],
+    supportsClaimIds: [callNycGuidanceClaimId],
   },
   {
     sourceId: "SRC-NYCAC-ESPINAL-CABARET-2017-10-30",
@@ -558,6 +687,99 @@ const profileSources = [
   },
 ] satisfies SourceRecord[];
 
+const callNycPopulationSource = {
+  id: "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
+  title: "Authenticated @CallNYCApp full-population archival review",
+  organization: "Jamie Burkart portfolio knowledge bank",
+  author: "Codex authenticated archival review",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  capturedAt: reviewedAt,
+  accessedAt: reviewedAt,
+  canonicalUrl:
+    "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+  preferredPublicUrl: "canonical",
+  publicCitation:
+    "Authenticated July 14, 2026 review of every @CallNYCApp record materialized by the Posts and Replies timelines, with public-safe metadata preserved in the repository.",
+  publicNote:
+    "The profile reported 110 posts; 107 unique records materialized and were reviewed. Three remain unrecovered and are not treated as reviewed.",
+  supportsGenerally: [
+    "retrievable public timeline population",
+    "record-type and posted-URL inventory",
+    "publishing-pattern analysis",
+    "dated visible-engagement snapshot",
+  ],
+  doesNotEstablish: [
+    "content of three unmaterialized profile-counted records",
+    "authorship of every institutional post",
+    "reach, conversion, endorsement, or service impact",
+  ],
+} satisfies SourceRecord;
+
+const callNycCuratedArticleSources = [
+  {
+    id: "SRC-CALLNYC-GIZMODO-311-ARTICLE-2016-03-10",
+    title: "Check the History of Any NYC Address Through Its 311 Complaint Record",
+    author: "Alissa Walker",
+    organization: "Gizmodo",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2016-03-10",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Gizmodo reported on a renter-facing browser extension that translated NYC 311 complaint data into address-level property context.",
+    publicNote:
+      "Mission-adjacent source circulated by @CallNYCApp; it is not coverage of CallNYC.",
+    supportsGenerally: ["open-data translation", "resident-facing civic technology"],
+    doesNotEstablish: ["CallNYC coverage", "CallNYC authorship of the linked tool"],
+  },
+  {
+    id: "SRC-CALLNYC-GOTHAMIST-PULASKI-ARTICLE-2016-04-28",
+    title: "Long-Overdue Pulaski Bridge Bike Path Will Officially Open Friday",
+    author: "Miranda Katz",
+    organization: "Gothamist",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2016-04-28",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Gothamist reported on the opening of the Pulaski Bridge bike path, a transportation issue circulated by the CallNYC timeline.",
+    publicNote:
+      "Mission-relevant issue reporting circulated by the account; it is not coverage of CallNYC.",
+    supportsGenerally: ["transportation issue context", "mission-relevant public reporting"],
+    doesNotEstablish: ["CallNYC coverage", "CallNYC influence on the bike path"],
+  },
+  {
+    id: "SRC-CALLNYC-COUNCILMATIC-VERIFIED-ARTICLE-2015-11-09",
+    title: "Become Verified on NYC Councilmatic",
+    author: "Participatory Politics Foundation",
+    organization: "Participatory Politics Foundation",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2015-11-09",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://participatorypolitics.org/become-verified-on-nyc-councilmatic/",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Participatory Politics described a Councilmatic public-comment program intended to connect resident and community-group comments with Council-office responses.",
+    publicNote:
+      "Civic-technology ecosystem source linked in a public thread with @CallNYCApp; it does not establish a formal partnership.",
+    supportsGenerally: ["resident feedback pathway", "Council-office public response"],
+    doesNotEstablish: ["formal CallNYC partnership", "CallNYC product adoption"],
+  },
+] satisfies SourceRecord[];
+
 const firsthandSource = {
   id: "SRC-SOCIAL-JAMIE-ACCOUNT-STEWARDSHIP-2026",
   title: "Jamie Burkart statement about project-account establishment and shared use",
@@ -577,6 +799,8 @@ const firsthandSource = {
 
 export const socialMediaSources = [
   ...profileSources,
+  callNycPopulationSource,
+  ...callNycCuratedArticleSources,
   firsthandSource,
   ...socialPostDescriptors.map(
     (descriptor): SourceRecord => ({
@@ -657,8 +881,68 @@ const profileObservations = [
   },
 ] satisfies ObservationRecord[];
 
+const callNycPopulationObservations = [
+  {
+    id: "OBS-SOCIAL-CALLNYC-FULL-POPULATION",
+    sourceId: "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
+    project: "callnyc",
+    statement:
+      "The authenticated Posts and Replies timelines yielded 107 unique public records from a profile reporting 110 posts: 86 originals, 6 replies, and 15 reposts. All 107 materialized records were reviewed; three profile-counted records did not materialize.",
+    observationType: "metadata",
+    locator:
+      "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+    confidence: "high",
+    limitations: [
+      "The three profile-counted records that did not materialize remain unrecovered.",
+      "Profile and interaction counts are point-in-time interface observations.",
+    ],
+    supportsClaimIds: [callNycGuidanceClaimId, callNycCouncilClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-CALLNYC-GIZMODO-311-ARTICLE",
+    sourceId: "SRC-CALLNYC-GIZMODO-311-ARTICLE-2016-03-10",
+    project: "callnyc",
+    statement:
+      "The linked Gizmodo article describes translating public 311 complaint data into address-level context for apartment seekers.",
+    observationType: "explicit",
+    locator: "Headline, publication date, and article body",
+    confidence: "high",
+    limitations: ["The article covers another civic tool, not CallNYC."],
+    supportsClaimIds: [callNycGuidanceClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-CALLNYC-GOTHAMIST-PULASKI-ARTICLE",
+    sourceId: "SRC-CALLNYC-GOTHAMIST-PULASKI-ARTICLE-2016-04-28",
+    project: "callnyc",
+    statement:
+      "The linked Gothamist article reports the opening of the Pulaski Bridge bike path, supplying issue context for a transportation item circulated by the account.",
+    observationType: "explicit",
+    locator: "Headline, publication date, and article body",
+    confidence: "high",
+    limitations: ["The article does not cover CallNYC or establish project influence."],
+    supportsClaimIds: [callNycGuidanceClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-CALLNYC-COUNCILMATIC-VERIFIED-ARTICLE",
+    sourceId: "SRC-CALLNYC-COUNCILMATIC-VERIFIED-ARTICLE-2015-11-09",
+    project: "callnyc",
+    statement:
+      "The linked Councilmatic page describes a moderated public-comment pathway connecting residents, community groups, and Council-office responses.",
+    observationType: "explicit",
+    locator: "Program description and Council-office participation section",
+    confidence: "high",
+    limitations: ["The public thread does not establish a formal partnership with CallNYC."],
+    supportsClaimIds: [callNycGuidanceClaimId],
+    reviewedAt,
+  },
+] satisfies ObservationRecord[];
+
 export const socialMediaObservations = [
   ...profileObservations,
+  ...callNycPopulationObservations,
   ...socialPostDescriptors.map(
     (descriptor): ObservationRecord => ({
       id: descriptor.observationId,
@@ -686,6 +970,12 @@ const observationIdsForClaim = (claimId: string) =>
     .map((observation) => observation.id);
 
 const callNycCouncilSourceIds = sourceIdsForClaim(callNycCouncilClaimId);
+const callNycGuidanceSocialSourceIds = sourceIdsForClaim(callNycGuidanceClaimId);
+const callNycGuidanceSourceIds = [
+  callNycPopulationSource.id,
+  ...callNycGuidanceSocialSourceIds,
+  ...callNycCuratedArticleSources.map((source) => source.id),
+];
 const nycacCouncilSourceIds = sourceIdsForClaim(nycacCouncilClaimId);
 const wowListSocialSourceIds = sourceIdsForClaim(wowListSocialClaimId);
 const nycacIncidentalCouncilSourceIds = [
@@ -721,7 +1011,7 @@ export const socialMediaCaptures = [
     submittedBy: "Codex authenticated archival review",
     kind: "metric",
     summary:
-      "Six distinct historical NYC Council Member accounts recovered as public CallNYC respondents, sharers, or quoters.",
+      "Eight distinct historical NYC Council Member accounts recovered as public CallNYC respondents, sharers, or quoters.",
     status: "integrated",
     publicSafety: "public-safe",
     potentialProjectIds: ["callnyc"],
@@ -733,6 +1023,28 @@ export const socialMediaCaptures = [
     researchTaskIds: [],
     disposition:
       "Promoted a bounded named-account count; excluded tags without response, resident comments, likes, deleted content, and claims of endorsement or impact.",
+  },
+  {
+    id: "CAP-SOCIAL-CALLNYC-FULL-POPULATION-2026",
+    receivedAt: reviewedAt,
+    submittedBy: "Codex authenticated archival review",
+    kind: "artifact",
+    summary:
+      "Full archival-production pass over all 107 unique @CallNYCApp records materialized by the authenticated Posts and Replies timelines, reconciled against a 110-post profile counter.",
+    status: "integrated",
+    publicSafety: "public-safe",
+    potentialProjectIds: ["callnyc"],
+    potentialClaimFamilies: [
+      "public guidance surface",
+      "information architecture",
+      "stakeholder traction",
+      "mission-relevant source curation",
+    ],
+    sourceIds: callNycGuidanceSourceIds,
+    observationIds: observationIdsForClaim(callNycGuidanceClaimId),
+    researchTaskIds: ["RT-SOCIAL-CALLNYC-UNMATERIALIZED-POSTS"],
+    disposition:
+      "Promoted the recurring public-guidance and stakeholder-response pattern; preserved all retrievable status and posted-URL metadata, kept three unmaterialized records explicit, and retained volatile interaction counts as non-headline context.",
   },
   {
     id: "CAP-SOCIAL-NYCAC-COUNCIL-ENGAGEMENT-2026",
@@ -807,7 +1119,7 @@ export const socialMediaClaims = [
     project: "callnyc",
     claimType: "outcome",
     internalClaim:
-      "Between 2016 and 2018, at least six distinct NYC Council Member accounts publicly engaged with CallNYC through replies, independent sharing, quoted figures, or acknowledgment.",
+      "Between 2016 and 2018, at least eight distinct NYC Council Member accounts publicly engaged with CallNYC through replies, independent sharing, quote-posts, quoted figures, or acknowledgment.",
     epistemicState: "corroborated",
     publicationState: "approved",
     selectionState: "selected",
@@ -817,7 +1129,7 @@ export const socialMediaClaims = [
       {
         key: "case-study",
         text:
-          "Public posts from 2016-2018 show at least six distinct NYC Council Member accounts engaging with CallNYC through replies, independent sharing, quoted district figures, or acknowledgment: Margaret Chin, Ruben Wills, Steven Matteo, Peter Koo, Mathieu Eugene, and Helen Rosenthal. This is a bounded public-engagement count, not an endorsement or impact measure.",
+          "Public posts from 2016-2018 show at least eight distinct historical NYC Council Member accounts engaging with CallNYC through replies, sharing, quote-posts, quoted district figures, or acknowledgment: Margaret Chin, Ruben Wills, Steven Matteo, Peter Koo, Mathieu Eugene, Helen Rosenthal, Rosie Mendez, and Ydanis Rodriguez. This is a bounded public-engagement count, not an endorsement or impact measure.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/callnyc"],
@@ -828,6 +1140,13 @@ export const socialMediaClaims = [
         sourceId: "SRC-SOCIAL-CALLNYC-PROFILE-2026-07-14",
         relationship: "context",
         supports: ["historical project account", "public project identity"],
+        confidence: "high",
+        renderCitation: false,
+      },
+      {
+        sourceId: callNycPopulationSource.id,
+        relationship: "context",
+        supports: ["complete retrievable timeline population and reconciliation"],
         confidence: "high",
         renderCitation: false,
       },
@@ -853,6 +1172,70 @@ export const socialMediaClaims = [
       "The posts prove that CallNYC caused constituent-service outcomes.",
     ],
     researchInquiryIds: ["INQ-SOCIAL-CALLNYC-COUNCIL-ENGAGEMENT-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"],
+  },
+  {
+    id: callNycGuidanceClaimId,
+    project: "callnyc",
+    claimType: "method",
+    internalClaim:
+      "CallNYC's retrievable account population shows a recurring public-guidance system: issue-specific recognition, deep links into service pathways, mission-relevant source curation, and visible response from multiple stakeholder groups.",
+    epistemicState: "corroborated",
+    publicationState: "approved",
+    selectionState: "selected",
+    status: "confirmed-with-boundary",
+    observationIds: observationIdsForClaim(callNycGuidanceClaimId),
+    projections: [
+      {
+        key: "case-study",
+        text:
+          "A full pass over every retrievable @CallNYCApp record found a repeatable public-guidance pattern. Across its authored posts, the account repeatedly paired a constituent issue and Council office with one of 62 distinct service or API pathways spanning 16 service domains. It also circulated official resources, civic-technology work, and issue reporting. The profile reported 110 posts; 107 materialized and were reviewed, so three remain an explicit gap.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/callnyc"],
+      },
+    ],
+    evidence: [
+      {
+        sourceId: callNycPopulationSource.id,
+        relationship: "direct-support",
+        supports: [
+          "complete retrievable population and reconciliation",
+          "publishing-pattern and posted-URL inventory",
+        ],
+        confidence: "high",
+        renderCitation: true,
+      },
+      ...callNycGuidanceSocialSourceIds.map((sourceId) => ({
+        sourceId,
+        relationship: "direct-support" as const,
+        supports: ["observable guidance, curation, or stakeholder-response example"],
+        confidence: "high" as const,
+        renderCitation: true,
+      })),
+      ...callNycCuratedArticleSources.map((source) => ({
+        sourceId: source.id,
+        relationship: "context" as const,
+        supports: ["mission-relevant content of a source circulated by the account"],
+        confidence: "high" as const,
+        renderCitation: false,
+      })),
+    ],
+    boundaries: [
+      "The profile reported 110 posts, but only 107 unique records materialized; 100% review applies to the retrievable population, not the profile counter.",
+      "Council-member handles credited in CallNYC posts are a publishing-pattern measure, not an engagement count.",
+      "Visible interaction totals are volatile interface observations and are not used as reach, conversion, endorsement, or impact metrics.",
+      "Institutional account records are not attributed post by post to Jamie without authorship evidence.",
+    ],
+    antiClaims: [
+      "All 110 profile-counted posts were recovered.",
+      "Every Council member named by CallNYC engaged with the account.",
+      "Posted links prove service use or constituent outcomes.",
+      "Jamie personally authored every @CallNYCApp post.",
+    ],
+    researchTaskIds: ["RT-SOCIAL-CALLNYC-UNMATERIALIZED-POSTS"],
+    researchInquiryIds: ["INQ-SOCIAL-CALLNYC-FULL-POPULATION-2026"],
     reviewedAt,
     reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"],
   },
@@ -1019,6 +1402,30 @@ export const socialMediaClaims = [
 
 export const socialMediaResearchTasks = [
   {
+    id: "RT-SOCIAL-CALLNYC-UNMATERIALIZED-POSTS",
+    project: "callnyc",
+    question:
+      "Can the three @CallNYCApp records implied by the 110-post profile counter but absent from the exhausted public timelines be recovered?",
+    priority: "low",
+    status: "open",
+    captureIds: ["CAP-SOCIAL-CALLNYC-FULL-POPULATION-2026"],
+    sourceIds: [callNycPopulationSource.id],
+    claimIds: [callNycGuidanceClaimId],
+    successCriteria: [
+      "Recover stable status URLs or archived captures for the three missing records.",
+      "Reconcile whether the profile counter includes deleted, withheld, or otherwise nonmaterialized records.",
+      "Preserve the current 107-of-110 boundary until direct evidence closes the gap.",
+    ],
+    nextActions: [
+      "Query archival indexes for @CallNYCApp status URLs outside the recovered set.",
+      "Compare historical profile captures and platform exports if available.",
+    ],
+    publicNote:
+      "All 107 retrievable records were reviewed; three profile-counted records remain explicitly unrecovered.",
+    owner: "Portfolio research",
+    reviewedAt,
+  },
+  {
     id: "RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY",
     project: "fair-rent-nyc",
     question:
@@ -1124,18 +1531,52 @@ export const socialMediaInquiries = [
       "Three project-level accounts were confirmed: @CallNYCApp, the shared @NYCArtC coalition account, and @wowlist.",
   },
   {
+    id: "INQ-SOCIAL-CALLNYC-FULL-POPULATION-2026",
+    project: "callnyc",
+    question:
+      "What mission-relevant publishing, posted-source, and stakeholder-response patterns appear across the full retrievable @CallNYCApp population?",
+    methods: [
+      "Traversed the authenticated Posts and Replies timelines to the March 2016 beginning and repeated no-growth state.",
+      "Deduplicated status URLs across both tabs and reconciled the union against the profile post counter.",
+      "Classified all materialized records as original, reply, or repost and inventoried every posted external URL without storing post text or session state.",
+      "Close-read the 92 CallNYC-authored records for recurring issue-recognition and service-pathway patterns.",
+      "Traversed the bounded incoming-mention search to exhaustion and classified visible authors by stakeholder group.",
+    ],
+    runAt: reviewedAt,
+    resultStatus: "partially-recovered",
+    findings: [
+      "The profile reported 110 posts; the Posts tab yielded 106 unique records and the Replies tab yielded 107. Their union was 107, all of which were reviewed; three profile-counted records did not materialize.",
+      "The 107 recovered records comprise 86 originals, 6 replies, and 15 reposts; 92 were authored by @CallNYCApp.",
+      "Seventy-one issue-specific recognition posts credited 26 distinct Council-member handles. This is a publishing-pattern count, not an engagement count.",
+      "The authored posts contained 75 CallNYC deep-link occurrences representing 62 distinct issue or API paths across 16 service domains plus the API.",
+      "Across the full recovered population, 94 records contained external links and 84 distinct short URLs were inventoried. Mission-relevant sources included direct coverage, official service resources, civic-technology peers, open-data tools, and issue reporting.",
+      "The exhausted incoming-mention search recovered 11 records: four Council-office posts, two legal-services posts, two resident posts, two civic-technology posts, and one incidental network mention.",
+      "A dated interface snapshot across the 92 CallNYC-authored posts showed 59 with at least one visible interaction and 193 displayed interaction units: 8 replies, 74 reposts, and 111 likes. These volatile totals remain context, not headline impact metrics.",
+    ],
+    limitations: [
+      "Three profile-counted records did not materialize and remain unrecovered.",
+      "Deleted posts, private interactions, and native reposts absent from the timeline cannot be reconstructed from this pass.",
+      "Displayed interaction units are not unique people, reach, conversion, endorsement, or service outcomes.",
+      "The account is institutional; this review does not assign every post to Jamie.",
+    ],
+    sourceIds: callNycGuidanceSourceIds,
+    publicSummary:
+      "Every retrievable @CallNYCApp record was reviewed: 107 of 110 profile-counted posts materialized. The corpus shows a repeatable public-guidance system connecting issue recognition to 62 distinct service or API paths, alongside mission-relevant source curation and multi-stakeholder response.",
+  },
+  {
     id: "INQ-SOCIAL-CALLNYC-COUNCIL-ENGAGEMENT-2026",
     project: "callnyc",
     question: "How many NYC Council Member accounts visibly engaged with CallNYC?",
     methods: [
       "Ran authenticated Latest searches for incoming @CallNYCApp mentions, CallNYC references, and callnyc.org links while excluding posts from the project account.",
+      "Reviewed every record in the exhausted @CallNYCApp Posts and Replies timelines for quote-posts and manual reshares by Council Member accounts.",
       "Counted only posts authored by historical Council Member accounts.",
       "Deduplicated by account and classified replies, reshares, independent shares, quoted figures, and acknowledgments.",
     ],
     runAt: reviewedAt,
     resultStatus: "recovered",
     findings: [
-      "At least six distinct Council Member accounts were recovered: Margaret Chin, Ruben Wills, Steven Matteo, Peter Koo, Mathieu Eugene, and Helen Rosenthal.",
+      "At least eight distinct Council Member accounts were recovered: Margaret Chin, Ruben Wills, Steven Matteo, Peter Koo, Mathieu Eugene, Helen Rosenthal, Rosie Mendez, and Ydanis Rodriguez.",
       "The strongest use case was Steven Matteo quoting CallNYC's district figures in a constituent-service post.",
       "Helen Rosenthal independently shared CallNYC as a pathway to Council offices.",
     ],
@@ -1144,9 +1585,9 @@ export const socialMediaInquiries = [
       "Tags without a response were excluded.",
       "The count is historical engagement, not endorsement, adoption, or impact.",
     ],
-    sourceIds: callNycCouncilSourceIds,
+    sourceIds: [callNycPopulationSource.id, ...callNycCouncilSourceIds],
     publicSummary:
-      "At least six distinct historical Council Member accounts publicly replied to, shared, quoted, or acknowledged CallNYC between 2016 and 2018.",
+      "At least eight distinct historical Council Member accounts publicly replied to, shared, quote-posted, quoted, or acknowledged CallNYC between 2016 and 2018.",
   },
   {
     id: "INQ-SOCIAL-NYCAC-COUNCIL-ENGAGEMENT-2026",
