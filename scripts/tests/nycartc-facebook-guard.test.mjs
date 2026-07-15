@@ -48,7 +48,19 @@ const prohibited = [
   "Although this is not a native Meta export, it is the complete Facebook archive.",
   "The currently recoverable Page surface proves the complete Facebook history.",
   "Jamie recalls being the sole administrator.",
-  "Jamie recalls being the sole administrator, and the record confirms it."
+  "Jamie recalls being the sole administrator, and the record confirms it.",
+  "Facebook publishing for the coalition was handled by Jamie.",
+  "The coalition's Facebook operations were led by Jamie.",
+  "While no evidence identifies each publisher, Jamie was the only Page administrator.",
+  "Jamie remembers managing the Page, and the archive verifies that no one else did.",
+  "Page administration was Jamie's responsibility alone.",
+  "The Council took part in the campaign, as documented by its 88 mentions.",
+  "Agency endorsement is demonstrated by the tags.",
+  "Policy change resulted from the 611 shares.",
+  "While reactions do not establish reach, the 611 shares prove impact.",
+  "Jamie could open the Page management console and publish as the coalition.",
+  "Control of the Page dashboard belonged to Jamie.",
+  "Official participation was established by the 88 Council references."
 ];
 
 for (const statement of prohibited) {

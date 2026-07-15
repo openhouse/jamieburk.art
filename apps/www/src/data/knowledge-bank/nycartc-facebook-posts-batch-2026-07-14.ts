@@ -702,7 +702,7 @@ export const nycartcFacebookPostClaims = [
         status: "active",
         citationRequired: false,
         surfaces: [
-          "docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14"
+          "docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md"
         ]
       }
     ],
