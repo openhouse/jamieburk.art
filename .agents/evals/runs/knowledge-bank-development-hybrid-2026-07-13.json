@@ -1,18 +1,19 @@
 {
-  "candidate_sha": "4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c",
+  "candidate_sha": "19b47aaea79878a4c15b8c468989bfb3d21848f5",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two independent graders reviewed exact published candidate 4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c; the KB-007 reviewer returned 4/4 with no actionable semantic finding.",
-        "Origin advertises the exact candidate, and external annotated tag knowledge-bank-policy-baseline-2026-07-15-v14 anchors the reviewed policy state.",
-        "The missing live-Facebook-surface assertion is present, and all three active archive-note projections are realized exactly on the governed project note.",
-        "The active role statement is attributed as Jamie's first-person account while the recovered event population corroborates the collective participation system's public form.",
-        "The claim preserves collaborators, hosts, partners, artists, officials, participants, event-level authorship, attendance, and policy-causation boundaries.",
-        "The frozen deterministic KB-007 pass inspected 69 collective claims with no underlying finding.",
-        "The dedicated NYC Artist Coalition Facebook events evaluation passed 100/100."
+        "An independent grader reviewed exact published candidate 19b47aaea79878a4c15b8c468989bfb3d21848f5 and returned 4/4 with no material collective-credit or claim-strength finding.",
+        "Origin advertises the exact candidate, and external annotated tag knowledge-bank-policy-baseline-2026-07-15-v16 anchors the reviewed policy state.",
+        "All seven new claims remain collective and held, with substantive boundaries and anti-claims; the practice claim uses creating-or-co-creating language while event-level production and authorship remain open.",
+        "NTER CHNG preserves Drew Bolton, Jamie Burkart, and Garrett Fuselier together, and the Sunday Dinner milestone claim remains use-with-care because the chronology conflict is unresolved.",
+        "The Sunday Dinner source conflict and index/detail response conflicts remain explicit rather than being selectively harmonized.",
+        "The 21-slot population is represented as 20 public event records plus one identity-free private-withheld disposition; addresses, phone numbers, guest identities, comments, raw descriptions, and authenticated state remain excluded.",
+        "The immutable corpus citation resolves to the governed corpus blob and the focused evaluation passed 100/100.",
+        "The deterministic KB-007 pass inspected 76 collective claims with no underlying finding."
       ],
       "findings": [],
       "confidence": 0.99
@@ -22,17 +23,18 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two independent graders reviewed exact published candidate 4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c; the KB-009 reviewer returned 4/4 with no material projection, privacy, or audience-fit defect.",
-        "The corpus reconciles all 34 displayed host-control slots as 33 recovered event records plus one unresolved slot without claiming a complete native owner archive.",
-        "The public case study renders one attributed participation-system claim with a plain-language source boundary and proposition-level citations.",
-        "Response labels remain event-level platform signals rather than attendance, unique people, reach, endorsement, conversion, mandate, or impact.",
-        "Democracy-lab interpretation, response metrics, raw descriptions, personal data, meeting access details, and authenticated-session material remain off the public site.",
-        "All three active archive-note projections are exactly realized, while held interpretations remain unrendered.",
-        "The dedicated corpus, citation, Chad-lens, public-safety, route, typecheck, lint, and production-build checks passed."
+        "An independent grader reviewed exact published candidate 19b47aaea79878a4c15b8c468989bfb3d21848f5 and returned 4/4 with no material projection, privacy, denominator, or coverage finding.",
+        "The prior mutable-link defect is fixed: the corpus source uses immutable commit a23907741cf14f3bb1a34093aad5030c2a47211a, and the checker requires a 40-character GitHub blob commit while rejecting the feature-branch URL.",
+        "The population accounting is explicit: 21 personal slots equal 20 public records plus one private-withheld disposition; 19 details materialized, one remained unavailable, two traversals converged, and eight no-growth rounds were recorded.",
+        "WOW List's zero count remains a current-interface observation rather than a historical-absence or project-performance claim.",
+        "Response labels remain historical platform signals and are never converted or summed into attendance, unique people, reach, endorsement, mandate, or impact.",
+        "All 16 posted public resource routes remain distribution or context paths rather than independent proof; no independent article is claimed from this population.",
+        "All seven new claims have held archive-note projections and remain absent from the public registry and rendered website.",
+        "The dedicated corpus and projection evaluation passed 100/100, and citation, privacy, route, Chad-lens, production-build, and governed public-surface checks passed."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact published candidate 4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c passed independent KB-007 and KB-009 review at 4/4 with no material findings. The 34-slot reconciliation, atomic source graph, collective-credit boundaries, attributed role statement, privacy protections, exact projection realization, and externally anchored v14 baseline meet the frozen criteria."
+  "overall_finding": "Exact published candidate 19b47aaea79878a4c15b8c468989bfb3d21848f5 passed independent KB-007 and KB-009 review at 4/4 with no material findings. The complete current-interface accounting, collective-credit boundaries, privacy protections, source-conflict handling, response-label discipline, selective held projection, immutable corpus citation, and externally anchored v16 baseline meet the frozen criteria."
 }
