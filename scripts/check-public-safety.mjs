@@ -12,7 +12,12 @@ import {
   findNycartcFacebookPublicArtifactRisk,
   hasNycartcFacebookPublicArtifactRisk
 } from "./lib/nycartc-facebook-guard.mjs";
+import {
+  findKcSpacesFundFacebookPublicArtifactRisk,
+  hasKcSpacesFundFacebookPublicArtifactRisk
+} from "./lib/kcspacesfund-facebook-guard.mjs";
 import { nycartcFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts";
+import { kcSpacesFundFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -188,6 +193,16 @@ const nycartcFacebookPostLedgerFiles = textFiles.filter((file) =>
     relative(file)
   )
 );
+const kcSpacesFundFacebookArtifactFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/kcspacesfund-facebook-posts-batch-2026-07-14\.ts|docs\/knowledge-bank\/(?:data\/kcspacesfund-facebook-post(?:-route)?-ledger\.json|research\/kcspacesfund-facebook-posts-2026-07-14\.md))$/i.test(
+    relative(file)
+  )
+);
+const kcSpacesFundFacebookLedgerFiles = textFiles.filter((file) =>
+  /docs\/knowledge-bank\/data\/kcspacesfund-facebook-post-ledger\.json$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -269,6 +284,17 @@ for (const file of nycartcFacebookPostArtifactFiles) {
   if (risk) addFailure(file, `NYC Artist Coalition Facebook public artifact contains ${risk}`);
 }
 
+for (const file of kcSpacesFundFacebookArtifactFiles) {
+  const risk = findKcSpacesFundFacebookPublicArtifactRisk(readText(file));
+  if (risk) addFailure(file, `KC Spaces Fund Facebook public artifact contains ${risk}`);
+}
+
+scanPattern(
+  kcSpacesFundFacebookLedgerFiles,
+  "KC Spaces Fund Facebook ledger exposes raw text, identity, URL, per-record metric, or account-state fields",
+  /"(?:rawText|fullText|message|commentText|commenterIdentity|actorIdentity|publisherIdentity|publicLocator|postUrl|statusUrl|reactionCount|commentCount|shareCount|accountState|authenticatedAccount|privateAnalytics)"\s*:/i
+);
+
 const nycartcTypedSemanticStatements = [
   ...nycartcFacebookPostsBatch.intakeRecords.flatMap((record) => [
     record.publicSummary
@@ -299,6 +325,43 @@ for (const statement of nycartcTypedSemanticStatements) {
         "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts"
       ),
       `NYC Artist Coalition Facebook typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
+    );
+  }
+}
+
+const kcSpacesFundFacebookTypedSemanticStatements = [
+  ...kcSpacesFundFacebookPostsBatch.intakeRecords.flatMap((record) => [
+    record.publicSummary,
+    ...record.nextActions
+  ]),
+  ...kcSpacesFundFacebookPostsBatch.sources.flatMap((source) => [
+    source.publicCitation,
+    source.publicNote,
+    ...source.supportsGenerally,
+    ...source.doesNotEstablish
+  ]),
+  ...kcSpacesFundFacebookPostsBatch.claims.flatMap((claim) => [
+    claim.internalClaim,
+    ...claim.projections.map((projection) => projection.text),
+    ...claim.evidence.flatMap((evidence) => evidence.supports),
+    ...claim.boundaries
+  ]),
+  ...kcSpacesFundFacebookPostsBatch.researchInquiries.flatMap((inquiry) => [
+    inquiry.publicSummary,
+    ...inquiry.findings,
+    ...inquiry.limitations
+  ])
+].filter(Boolean);
+
+for (const statement of kcSpacesFundFacebookTypedSemanticStatements) {
+  const risk = findKcSpacesFundFacebookPublicArtifactRisk(statement);
+  if (risk) {
+    addFailure(
+      path.join(
+        repoRoot,
+        "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts"
+      ),
+      `KC Spaces Fund Facebook typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
     );
   }
 }

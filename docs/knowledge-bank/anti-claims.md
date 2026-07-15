@@ -90,6 +90,16 @@ decisions, acted as fiscal sponsor, or was one of the campaign's public
 organizers unless the named organizers confirm that framing.
 
 Do not present AI-assisted archival review as a human collaborator testimonial.
+
+Do not say Jamie alone named KC Spaces Fund, owned or administered its Facebook
+Page, authored its posts, represented its stakeholder voice, or controlled its
+fundraising or grant decisions. Jamie's supported role is website creation,
+behind-the-scenes digital operations, and bounded cross-channel naming support.
+
+Do not call the 38-row Facebook census a Meta export, deletion history, or
+lifetime denominator. Do not convert outgoing tags into inbound engagement or
+the July 2026 reaction, comment, and share floors into unique people, reach,
+endorsement, conversion, causality, or impact.
 Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or
 private Drive documents.

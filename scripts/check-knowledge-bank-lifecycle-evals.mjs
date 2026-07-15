@@ -52,7 +52,8 @@ for (const required of [
   "mature-bank-only-claim",
   "existing-site-claim-needs-sources",
   "photo-discovers-research-lead",
-  "chronology-without-causality"
+  "chronology-without-causality",
+  "shared-account-population-and-role-memory"
 ]) {
   if (!fixtureIds.has(required)) fail(`Lifecycle eval is missing fixture ${required}`);
 }

@@ -765,23 +765,25 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["public-source", "public-safe-archive-summary", "ai-assisted-archive-review"],
     publicWording:
-      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
-    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+      "Built KC Spaces Fund's campaign website and supported a project name that worked consistently across web and social channels for the collaborator-led 2020 mutual-aid campaign.",
+    shortWording: "Website and cross-channel identity support for KC Spaces Fund",
     detailedPublicWording:
-      "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.",
+      "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, supported donation, application, sign-up, and fundraising-display affordances, and helped select a project name available across web and social channels. The collaborator-led Facebook Page used that shared identity while public organizer credit remains with the campaign's named organizers.",
     sourceBasis:
-      "Public GoFundMe page, public campaign domain, and AI-assisted archival review of Jamie-provided project records summarized without exposing private source material.",
+      "Jamie's first-person role clarification, public GoFundMe and campaign routes, the authenticated Facebook census, and AI-assisted archival review of Jamie-provided project records summarized without exposing private source material.",
     sourceNote:
       "Use as an evidence-based archival proof note, not a human collaborator testimonial.",
     whyItMatters:
       "Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.",
     guardrail:
-      "Behind-the-scenes technical and operational support only. Do not frame Jamie as the public organizer, grant decision-maker, fiscal sponsor, or sole campaign owner.",
+      "Website, digital-operations, and bounded naming support only. Do not frame Jamie as sole naming author, Page owner, post author, public organizer, grant decision-maker, fiscal sponsor, or campaign owner.",
     doNotSay: [
       "Jamie organized KC Spaces Fund",
       "Jamie ran the fundraiser",
       "Jamie made grant decisions",
       "Jamie was the fiscal sponsor",
+      "Jamie managed or posted from the Facebook Page",
+      "Jamie alone named KC Spaces Fund",
       "A human collaborator provided this testimonial"
     ],
     protectedBoundaries: [
@@ -804,7 +806,8 @@ export const proofClaims: ProofClaim[] = [
       "implementation",
       "technical-operations"
     ],
-    lastReviewed: "2026-07-14"
+    structuredClaimIds: ["CLM-KCSPACES-DIGITAL-IDENTITY-SUPPORT"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-public-operations-timeline",
@@ -840,8 +843,11 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["internal-only"],
     relatedProjects: ["kc-spaces-fund"],
     relatedCapabilities: ["public-communications", "campaign-operations", "source-mapping"],
-    structuredClaimIds: ["CLM-KCSPACES-PUBLIC-OPERATIONS-TIMELINE"],
-    lastReviewed: "2026-07-14"
+    structuredClaimIds: [
+      "CLM-KCSPACES-PUBLIC-OPERATIONS-TIMELINE",
+      "CLM-KCSPACES-FACEBOOK-CAMPAIGN-ROUTING"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-town-hall-public-operations-channel",

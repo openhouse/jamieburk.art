@@ -50,6 +50,8 @@ Approved public artifact examples for this launch pass include:
   close-read before promotion.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- KC Spaces Fund public Facebook Page, public-safe 38-row post census, and public posted-route ledger.
+- Oddities Prints' archived Mutual Aid Print Editions fundraiser and Dan Kelly's April 2020 Kansas City Star COVID-19 resource guide.
 - Good Times Santa Cruz's 2006 Open House profile.
 - The Pitch's 2007 raft-expedition reporting.
 - Charlotte Street's 2009 Great Accommodations event record.

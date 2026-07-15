@@ -135,6 +135,12 @@
       "task": "A campaign precedes later legislation and administrative change.",
       "mustDo": ["store each event", "state causal uncertainty", "research contribution pathway"],
       "mustNotDo": ["convert sequence into sole causality", "erase the campaign from the record"]
+    },
+    {
+      "id": "shared-account-population-and-role-memory",
+      "task": "A complete surviving social surface and Jamie's bounded role memory arrive together for a collaborator-led project.",
+      "mustDo": ["disposition every surfaced row", "scope completeness to the observed surface", "separate Page identity from human authorship", "preserve Jamie's supported direct role", "keep mutable counters and outgoing tags within their evidence limits"],
+      "mustNotDo": ["claim a lifetime export", "assign shared-account posts to Jamie", "turn outgoing references into stakeholder engagement", "turn counters into reach or impact", "inflate naming support into sole authorship or ownership"]
     }
   ],
   "judgeProtocol": {

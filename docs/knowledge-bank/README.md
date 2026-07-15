@@ -123,3 +123,13 @@ and route ledgers under `data/` omit raw text, comments, identities, per-record
 metrics, account state, private analytics, and protected historical action
 routes. Page identity, stakeholder routing, and mutable interactions remain
 separate from human authorship, inbound engagement, and impact.
+
+The KC Spaces Fund Facebook production is documented in
+[research/kcspacesfund-facebook-posts-2026-07-14.md](research/kcspacesfund-facebook-posts-2026-07-14.md).
+Its public ledgers under `data/` disposition all 38 post or remnant rows exposed
+by the surviving observed Page surface and normalize three posted destination
+families. The control is not a native export, deletion history, or lifetime
+denominator. Raw text, identities, per-record mutable metrics, authentication,
+administrator context, and private campaign records remain outside the repo.
+The campaign-level record stays separate from Jamie's bounded website,
+digital-operations, and cross-channel naming support.

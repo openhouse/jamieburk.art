@@ -14,6 +14,7 @@ import { nycartcFacebookEventsBatchRecords } from "./nycartc-facebook-events-bat
 import { personalWowlistFacebookEventsBatch } from "./personal-wowlist-facebook-events-batch-2026-07-14.ts";
 import { wowlistFacebookPostsBatch } from "./wowlist-facebook-posts-batch-2026-07-14.ts";
 import { nycartcFacebookPostsBatch } from "./nycartc-facebook-posts-batch-2026-07-14.ts";
+import { kcSpacesFundFacebookPostsBatch } from "./kcspacesfund-facebook-posts-batch-2026-07-14.ts";
 import { nterchngBatchRecords } from "./nterchng-batch-2026-07-15.ts";
 import { kcTownHallPhaseOneBatchRecords } from "./kc-town-hall-phase-one-batch-2026-07-15.ts";
 
@@ -594,6 +595,7 @@ const knowledgeBankInput = {
     ...personalWowlistFacebookEventsBatch.intakeRecords,
     ...wowlistFacebookPostsBatch.intakeRecords,
     ...nycartcFacebookPostsBatch.intakeRecords,
+    ...kcSpacesFundFacebookPostsBatch.intakeRecords,
     ...nterchngBatchRecords.intakeRecords,
     ...kcTownHallPhaseOneBatchRecords.intakeRecords
   ],
@@ -1674,6 +1676,7 @@ const knowledgeBankInput = {
     ...personalWowlistFacebookEventsBatch.sources,
     ...wowlistFacebookPostsBatch.sources,
     ...nycartcFacebookPostsBatch.sources,
+    ...kcSpacesFundFacebookPostsBatch.sources,
     ...nterchngBatchRecords.sources,
     ...kcTownHallPhaseOneBatchRecords.sources
   ],
@@ -2277,6 +2280,7 @@ const knowledgeBankInput = {
     ...personalWowlistFacebookEventsBatch.claims,
     ...wowlistFacebookPostsBatch.claims,
     ...nycartcFacebookPostsBatch.claims,
+    ...kcSpacesFundFacebookPostsBatch.claims,
     ...nterchngBatchRecords.claims,
     ...kcTownHallPhaseOneBatchRecords.claims
   ],
@@ -2286,6 +2290,7 @@ const knowledgeBankInput = {
     ...personalWowlistFacebookEventsBatch.researchInquiries,
     ...wowlistFacebookPostsBatch.researchInquiries,
     ...nycartcFacebookPostsBatch.researchInquiries,
+    ...kcSpacesFundFacebookPostsBatch.researchInquiries,
     ...nterchngBatchRecords.researchInquiries,
     ...kcTownHallPhaseOneBatchRecords.researchInquiries,
     {

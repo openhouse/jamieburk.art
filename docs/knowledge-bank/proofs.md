@@ -22,7 +22,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - A protected 2023 acceptance workflow signed by Jamie documents one 196 Artists Residency process for proposal review, pre-arrival planning, space configuration, and independent 24-hour access.
 - Developed a privacy-preserving open-data pilot brief for geography-aggregated commercial vacancy and lease-cost indicators, with minimum fields, coverage and suppression reporting, methods, and confidentiality limits.
 - Developed a bounded source-backed team-memory method and system specification with explicit provenance, uncertainty, privacy, bot attribution, human review, and evals.
-- Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
+- Built KC Spaces Fund's campaign website and supported a project name that worked consistently across web and social channels for the collaborator-led 2020 mutual-aid campaign.
 - Co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation.
 - Established KC Town Hall's public account; its surviving timeline later functioned as a resident-facing neighborhood information and `#TiredOfTires` channel.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
@@ -52,6 +52,7 @@ Public pages may simplify this language, but they must not strengthen ownership,
   event-sharing service. Both claims remain available for future composition
   without displacing collaborators or expanding into unsupported scale claims.
 - A bounded KC Spaces Fund account review recovered application guidance, fundraising and partner communication, and 11 account-authored `#FUNDED` grantee highlights. This campaign-level finding remains separate from Jamie's technical-infrastructure proof.
+- A terminal authenticated Facebook pass dispositioned all 38 post or remnant records exposed by the surviving Page surface. Nineteen readable messages document application, fundraising, and ten grantee-recognition communications; 19 remnants remain unreconstructed. These campaign-level findings do not assign post authorship or grant authority to Jamie.
 - A complete disposition ledger for the 5,124 slots reported by `@NYCArtC`
   recovered 3,367 public items, including 715 account-authored statuses and
   2,652 reposts, while preserving 1,757 slots as unresolved. The recovered

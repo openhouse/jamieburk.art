@@ -43,6 +43,7 @@ Use claims that directly support operating-backbone fit:
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
+- `kc-spaces-fund-digital-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
 - `kc-town-hall-public-operations-channel`
 - `nyca-commercial-rent-testimony-2018`
@@ -88,6 +89,10 @@ current site:
 - `claudette-ar-collaboration`
 - `talks-not-raids-transparency-to-phaseout`
 - `kc-spaces-fund-public-operations-timeline`
+- `CLM-KCSPACES-FACEBOOK-SURVIVING-PUBLIC-POPULATION`
+- `CLM-KCSPACES-FACEBOOK-CAMPAIGN-ROUTING`
+- `CLM-KCSPACES-FACEBOOK-VISIBLE-INTERACTION-FLOOR`
+- `CLM-KCSPACES-INDEPENDENT-RESOURCE-VISIBILITY`
 - `nyca-shared-publishing-system-range`
 - `horse-lords-truthers-video`
 - `music-hackathon-wowlist-role`
