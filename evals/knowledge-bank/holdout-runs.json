@@ -352,6 +352,20 @@
         "Count-preserving date, relation, venue, identity, availability, article-route, and withheld-link mutations could retain an event score of 5 because the review lock hashed only the on-disk fixture text.",
         "The nonexistence check accepted an affirmative falsehood, and in-memory proof, source, and observation overclaims were outside the event review-lock digest."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T07:25:58-04:00",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history reviewer",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 5, 1, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The structural digest omitted the Facebook event review summary and article-source ID configuration.",
+        "Five reused press sources were omitted from the event digest and privacy scan, allowing source-level overclaim mutations to pass.",
+        "A reused article source could receive private contact, meeting, session, or local-path data while the event safety criterion remained 5.",
+        "The participation proof-coverage record and Fair Rent NYC page bindings were outside the event dependency digest."
+      ]
     }
   ]
 }

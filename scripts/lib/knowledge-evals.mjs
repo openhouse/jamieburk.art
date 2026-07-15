@@ -55,6 +55,9 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestContentSha256: "d0b72b654e76e9149439d1f218c05e248134abbca4a8c3088696e2536fdd52f2",
   governedModuleSha256: "29e868734b83dc89609c47d3d8eff72939da617742bcb6db16c08e759ec70fb8",
   canonicalKnowledgeSha256: "0e6eee166aebb097198db52bd8de0184a2cb0f6033f4cdcf020508c2fc48bd7a",
+  reviewConfigurationSha256: "e456b7cdc66033c60d0d526d2794aec91be7470c35834ae776db9cc44b3dea9b",
+  articleSourcesSha256: "a9ecb8c4724f7b6cf9b25cc806effe587694071a41fd2a8bb638402be009d7e7",
+  governanceBindingsSha256: "f2f7e2cfdd14aeb14c9da9cf4567a48493330ef96156e628254d8d659cdaed78",
   publicReportSha256: "ce9475a9aecda99f2d7c58c099d657a14e5512a557b58b25d3736803996e9769",
   caseStudyMdxSha256: "bb027dc5fdd7a0ce2f2602287ad3a7953af98855316efe5986aeafdae387ccfb",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
@@ -2568,6 +2571,19 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     (coverage) => coverage.proofId === nycacFacebookEvents.proofId
   );
   const nycacFacebookArticleSources = nycacFacebookEventArticleSourceIds.map((id) => sourceById.get(id));
+  const nycacFacebookClaimIdSet = new Set(Object.values(nycacFacebookEventClaimIds));
+  const nycacFacebookPageOccurrences = fairRentPage?.occurrences.filter(
+    (occurrence) => nycacFacebookClaimIdSet.has(occurrence.claimId)
+  ) ?? [];
+  const nycacFacebookReviewConfiguration = {
+    reviewSummary: nycacFacebookEventReviewSummary,
+    articleSourceIds: nycacFacebookEventArticleSourceIds
+  };
+  const nycacFacebookGovernanceBindings = {
+    proofCoverage: nycacFacebookProofCoverage,
+    pageSourceOrder: fairRentPage?.sourceOrder,
+    pageOccurrences: nycacFacebookPageOccurrences
+  };
   const nycacFacebookSourceById = new Map(nycacFacebookSources.map((source) => [source?.id, source]));
   const nycacFacebookEvidenceClosed = nycacFacebookClaims.every((claim) =>
     claim?.evidence.every((evidence) =>
@@ -2607,9 +2623,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     intakes: nycacFacebookIntakes,
     observations: nycacFacebookObservations,
     sources: nycacFacebookSources,
+    articleSources: nycacFacebookArticleSources,
     claims: nycacFacebookClaims,
     inquiries: nycacFacebookInquiries,
-    proof: nycacFacebookProof
+    proof: nycacFacebookProof,
+    proofCoverage: nycacFacebookProofCoverage,
+    pageOccurrences: nycacFacebookPageOccurrences
   }) + nycacFacebookReport;
   const nycacFacebookPrivateDataFree =
     !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(nycacFacebookPublicArtifactText) &&
@@ -2646,6 +2665,15 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const nycacFacebookProofContentSha256 = createHash("sha256")
     .update(JSON.stringify(nycacFacebookProof))
     .digest("hex");
+  const nycacFacebookReviewConfigurationSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacFacebookReviewConfiguration))
+    .digest("hex");
+  const nycacFacebookArticleSourcesSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacFacebookArticleSources))
+    .digest("hex");
+  const nycacFacebookGovernanceBindingsSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacFacebookGovernanceBindings))
+    .digest("hex");
   const nycacFacebookReviewLocksMatch =
     createHash("sha256").update(nycacFacebookManifestText).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.manifestSha256 &&
     nycacFacebookManifestContentSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.manifestContentSha256 &&
@@ -2654,6 +2682,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       "utf8"
     )).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.governedModuleSha256 &&
     nycacFacebookCanonicalKnowledgeSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.canonicalKnowledgeSha256 &&
+    nycacFacebookReviewConfigurationSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.reviewConfigurationSha256 &&
+    nycacFacebookArticleSourcesSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.articleSourcesSha256 &&
+    nycacFacebookGovernanceBindingsSha256 === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.governanceBindingsSha256 &&
     createHash("sha256").update(nycacFacebookReport).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.publicReportSha256 &&
     createHash("sha256").update(nycacFacebookMdx).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.caseStudyMdxSha256 &&
     createHash("sha256").update(nycacFacebookProofSnippet).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.proofSnippetSha256 &&
@@ -3270,6 +3301,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           "utf8"
         )).digest("hex"),
         canonicalKnowledgeSha256: nycacFacebookCanonicalKnowledgeSha256,
+        reviewConfigurationSha256: nycacFacebookReviewConfigurationSha256,
+        articleSourcesSha256: nycacFacebookArticleSourcesSha256,
+        governanceBindingsSha256: nycacFacebookGovernanceBindingsSha256,
         publicReportSha256: createHash("sha256").update(nycacFacebookReport).digest("hex"),
         caseStudyMdxSha256: createHash("sha256").update(nycacFacebookMdx).digest("hex"),
         proofSnippetSha256: createHash("sha256").update(nycacFacebookProofSnippet).digest("hex"),

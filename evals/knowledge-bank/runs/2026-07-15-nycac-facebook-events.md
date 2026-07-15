@@ -139,10 +139,24 @@ retain an event score of 5. The reviewer also found that the nonexistence regex
 accepted an affirmative falsehood and that canonical proof, source, and
 observation mutations were outside the structural digest.
 
-The rejection remains in the holdout ledger. The repair adds structural hashes
-for the parsed population, canonical event knowledge, and proof object; narrows
-the route-volatility interpretation; and adds the reviewer's attacks as
-regressions. Two new reviewers are predeclared for the repaired frozen commit:
+The rejection remains in the holdout ledger. The first repair added structural
+hashes for the parsed population, canonical event knowledge, and proof object;
+narrowed the route-volatility interpretation; and added the reviewer's attacks
+as regressions.
 
-- `nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-c`
-- `nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-d`
+A second data-integrity reviewer rejected repaired commit `bdd0d8f7`. The
+reviewer confirmed the population counts and public framing, then found that
+the dependency lock still omitted the event review summary, article-source ID
+configuration, five reused press-source records, proof coverage, page source
+order, and event-related page occurrences. Those omissions could preserve the
+headline counts while changing recurring-meeting membership, article identity,
+source privacy, proof governance, or the website citation binding.
+
+That second rejection also remains in the holdout ledger. The next repair
+extends the structural dependency graph across the review configuration, all
+seven routed article-source records, proof coverage, Fair Rent NYC source order,
+and event-related page occurrences. The newly exposed attacks are permanent
+regressions. Two fresh reviewers are predeclared for the next frozen commit:
+
+- `nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-e`
+- `nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-f`

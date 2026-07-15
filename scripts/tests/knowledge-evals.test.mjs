@@ -74,8 +74,8 @@ test("knowledge-bank gate records two fresh NYCAC Facebook event holdout passes"
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-c",
-    "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-d"
+    "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-e",
+    "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-f"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -2917,6 +2917,90 @@ test("NYCAC Facebook structural lock covers canonical sources, observations, and
     } finally {
       target[property] = original;
     }
+  }
+});
+
+test("NYCAC Facebook structural lock covers review configuration", () => {
+  const replacementEventId = loadNycacFacebookEventPopulation().events.find(
+    (event) =>
+      event.venueCategory === "cultural-or-community-space" &&
+      !nycacFacebookEventReviewSummary.recurringMeetingEventIds.includes(event.id)
+  )?.id;
+  assert.ok(replacementEventId);
+
+  const originalRecurringId = nycacFacebookEventReviewSummary.recurringMeetingEventIds[0];
+  try {
+    nycacFacebookEventReviewSummary.recurringMeetingEventIds[0] = replacementEventId;
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+    assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+  } finally {
+    nycacFacebookEventReviewSummary.recurringMeetingEventIds[0] = originalRecurringId;
+  }
+
+  const originalArticleSourceId = nycacFacebookEventArticleSourceIds[1];
+  try {
+    nycacFacebookEventArticleSourceIds[1] = "SRC-NYCAC-NYTIMES-CABARET-REPEAL-2017-10-30";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+    assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+  } finally {
+    nycacFacebookEventArticleSourceIds[1] = originalArticleSourceId;
+  }
+});
+
+test("NYCAC Facebook structural lock covers every routed article source and its privacy posture", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYCAC-WNYC-CABARET-2017"
+  );
+  assert.ok(source);
+  const originalPublicNote = source.publicNote;
+
+  try {
+    source.publicNote = "This article covered the Facebook event and endorsed Jamie.";
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+    assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+
+    source.publicNote = "Contact editor@example.org at https://zoom.us/j/123?sessionToken=secret; source: /Users/example/private.txt";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+  } finally {
+    source.publicNote = originalPublicNote;
+  }
+});
+
+test("NYCAC Facebook structural lock covers proof governance and page bindings", () => {
+  const proofCoverage = knowledgeBank.proofCoverageTargets.find(
+    (item) => item.proofId === "nyc-artist-coalition-participation-system"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "fair-rent-nyc");
+  const occurrence = page?.occurrences.find(
+    (item) => item.claimId === nycacFacebookEventClaimIds.participationSystem
+  );
+  assert.ok(proofCoverage && occurrence);
+  const originalCoverage = structuredClone(proofCoverage);
+  const originalOccurrence = structuredClone(occurrence);
+
+  try {
+    proofCoverage.sourceIds = ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"];
+    proofCoverage.nextAction = "Treat Facebook responses as attendance and endorsements.";
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+    assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+
+    Object.assign(proofCoverage, originalCoverage);
+    occurrence.sourceIds = ["SRC-NYCAC-WNYC-CABARET-2017"];
+    occurrence.publicNote = "The event hosts endorsed Jamie.";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+    assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+  } finally {
+    Object.assign(proofCoverage, originalCoverage);
+    for (const key of Object.keys(occurrence)) delete occurrence[key];
+    Object.assign(occurrence, originalOccurrence);
   }
 });
 
