@@ -28,6 +28,10 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say the City adopted or implemented Jamie's commercial-data proposal,
+that the proposed indicators were published, or that Jamie accessed
+confidential tax, business, tenant, or lease records.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

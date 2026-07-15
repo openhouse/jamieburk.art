@@ -27,9 +27,9 @@ const proofMap = [
     project: "FairRentNYC / Commercial Rent Stabilization",
     href: "/work/fair-rent-nyc",
     action:
-      "I built and stewarded shared campaign memory, decision records, source maps, action trackers, and stakeholder follow-up for collective civic work.",
+      "I built and stewarded shared campaign memory, decision records, legislative provenance, action trackers, and a privacy-preserving commercial-data pilot specification for collective civic work.",
     result:
-      "Collaborators could trace decisions, sources, open questions, and next steps while protected strategy and legal-review context stayed private."
+      "Collaborators could trace decisions and source lineage, act on next steps, and evaluate a smallest-serious data-product scope while protected strategy, legal-review context, and confidential records stayed private."
   },
   {
     project: "CallNYC.org",

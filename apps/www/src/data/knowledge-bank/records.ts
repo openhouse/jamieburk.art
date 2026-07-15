@@ -2,6 +2,7 @@ import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
 import { kcTownHallCouncilRecordBatch20260713 } from "./batches/kc-town-hall-council-record-2026-07-13.ts";
 import { nacCampaignPressBatch20260713 } from "./batches/nac-campaign-press-2026-07-13.ts";
 import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-07-13.ts";
+import { teamsArchiveProductionBatch20260714 } from "./batches/teams-archive-production-2026-07-14.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -199,7 +200,8 @@ const knowledgeBankInput = {
     },
     ...kcTownHallCouncilRecordBatch20260713.intake,
     ...nacPublicSourceBatch20260713.intake,
-    ...nacCampaignPressBatch20260713.intake
+    ...nacCampaignPressBatch20260713.intake,
+    ...teamsArchiveProductionBatch20260714.intake
   ],
   sources: [
     {
@@ -436,7 +438,8 @@ const knowledgeBankInput = {
     },
     ...kcTownHallCouncilRecordBatch20260713.sources,
     ...nacPublicSourceBatch20260713.sources,
-    ...nacCampaignPressBatch20260713.sources
+    ...nacCampaignPressBatch20260713.sources,
+    ...teamsArchiveProductionBatch20260714.sources
   ],
   sourceAssertions: [
     {
@@ -621,7 +624,8 @@ const knowledgeBankInput = {
     },
     ...kcTownHallCouncilRecordBatch20260713.sourceAssertions,
     ...nacPublicSourceBatch20260713.sourceAssertions,
-    ...nacCampaignPressBatch20260713.sourceAssertions
+    ...nacCampaignPressBatch20260713.sourceAssertions,
+    ...teamsArchiveProductionBatch20260714.sourceAssertions
   ],
   claims: [
     {
@@ -966,7 +970,8 @@ const knowledgeBankInput = {
     },
     ...kcTownHallCouncilRecordBatch20260713.claims,
     ...nacPublicSourceBatch20260713.claims,
-    ...nacCampaignPressBatch20260713.claims
+    ...nacCampaignPressBatch20260713.claims,
+    ...teamsArchiveProductionBatch20260714.claims
   ],
   researchTasks: [
     {
@@ -1073,7 +1078,8 @@ const knowledgeBankInput = {
       publicSummary: "Photo discoveries enter as metadata-only leads, then pass through research and rights review before supporting a public claim.",
       reviewedAt: "2026-07-12"
     },
-    ...nacCampaignPressBatch20260713.researchTasks
+    ...nacCampaignPressBatch20260713.researchTasks,
+    ...teamsArchiveProductionBatch20260714.researchTasks
   ],
   researchInquiries: [
     {

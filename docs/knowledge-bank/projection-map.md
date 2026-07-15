@@ -35,6 +35,7 @@ Use claims that directly support operating-backbone fit:
 - `technical-operations-operating-backbone`
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
+- `fair-rent-public-data-pilot`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`

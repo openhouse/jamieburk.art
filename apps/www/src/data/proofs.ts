@@ -227,7 +227,46 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "fair-rent-public-data-pilot",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["approved-resume", "public-safe-archive-summary"],
+    publicWording:
+      "Designed a privacy-preserving pilot data product for geography-aggregated commercial vacancy and lease-cost indicators, with a minimum schema, coverage and suppression table, methods note, and confidential-data exclusions.",
+    shortWording: "Scoped a privacy-preserving commercial-data pilot",
+    detailedPublicWording:
+      "Jamie translated a fragmented public-data opportunity into a smallest-serious-v1: an aggregate indicators table, a coverage and suppression table, a plain-language methods note, minimum useful fields, and explicit exclusions for raw confidential filings and identifying records.",
+    sourceBasis:
+      "Approved resume language and a public-safe archival review of Jamie-authored 2025-2026 commercial-data briefs.",
+    whyItMatters:
+      "Shows data-product scoping, privacy-by-design requirements, source synthesis, and the ability to define an implementable first release for public-interest stakeholders.",
+    guardrail:
+      "Describe this as a proposal and product specification, not an implemented or City-approved data release.",
+    doNotSay: [
+      "The City adopted or implemented Jamie's proposal",
+      "Jamie published the proposed indicators",
+      "Jamie accessed confidential tax or lease records",
+      "Jamie alone created the public data systems on which the proposal builds"
+    ],
+    protectedBoundaries: [
+      "Private stakeholder context",
+      "Unpublished correspondence",
+      "Confidential filings",
+      "Identifying business or tenant records",
+      "Unapproved strategy"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "data-product-scoping",
+      "privacy-by-design",
+      "requirements",
+      "public-data-framing"
+    ],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -539,8 +578,9 @@ export const proofClaims: ProofClaim[] = [
       "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+      "The method separates Known, Open, and Protected material and begins with one bounded use case and one approved non-sensitive or synthetic source bundle, so teams can test reviewable memory without broad system ingestion.",
+    sourceBasis:
+      "Public-safe lab materials and a public-safe archival review of Jamie's June 2026 bounded-sprint proposal.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -557,7 +597,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -683,6 +723,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "kc-town-hall-public-benefit-documentation"
     ]
   },

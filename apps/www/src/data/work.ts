@@ -188,6 +188,7 @@ const workItemsInput = [
     proofBankIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
       "nyc-artist-coalition-public-outcome-arc",
@@ -196,7 +197,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, policy question logs, public-data framing, stakeholder follow-up, public campaign websites, and resident-facing action tools that connected legislation to calls, district contacts, evidence, events, and coalition participation.",
+      "Running minutes, action trackers, source maps, policy question logs, a privacy-preserving commercial-data pilot specification, stakeholder follow-up, public campaign websites, and resident-facing action tools that connected legislation to calls, district contacts, evidence, events, and coalition participation.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -218,6 +219,12 @@ const workItemsInput = [
         type: "decision record"
       },
       {
+        title: "Privacy-preserving data pilot",
+        description:
+          "A smallest-serious-v1 for aggregate commercial vacancy and lease-cost indicators, with schema, coverage, suppression, methods, and explicit confidential-data exclusions.",
+        type: "source map"
+      },
+      {
         title: "Public campaign web surfaces",
         description:
           "Documented public-safe website infrastructure for Let NYC Dance, Talks Not Raids, and FairRentNYC. Four campaign press indexes, including Save NYC Spaces, are preserved separately as collective campaign context.",
@@ -235,6 +242,7 @@ const workItemsInput = [
     capabilities: [
       "Meeting Synthesis",
       "Source Mapping",
+      "Data Product Scoping",
       "Action Tracking",
       "Campaign Websites",
       "Public Guidance",
@@ -272,6 +280,7 @@ const workItemsInput = [
       "Collective outcome record: Cabaret licensing repealed in 2017; MARCH reporting and notice requirements enacted in 2019; MARCH dismantled in 2023",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
+      "Privacy-preserving commercial-data pilot specification with schema, suppression, methods, and exclusions",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "45 campaign press-index entries representing 44 distinct article URLs",
       "Legal/policy questions organized for collaborators",
@@ -279,7 +288,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie served as a founding-era NYC Artist Coalition organizer and built public web and civic-action infrastructure. Public sources document his Cabaret Law advocacy and Office of Nightlife public-engagement work; official records establish the related City outcomes while preserving collective and institutional credit.",
+        "Jamie served as a founding-era NYC Artist Coalition organizer and built public web, civic-action, campaign-memory, legislative-provenance, and commercial-data product-scoping infrastructure. Public sources document his Cabaret Law advocacy and Office of Nightlife public-engagement work; official records establish the related City outcomes while preserving collective and institutional credit.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

@@ -91,7 +91,22 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
 **Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
 **Review owner:** Jamie / Collaborator approval needed  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
+
+## fair-rent-public-data-pilot - Privacy-preserving commercial-data pilot
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Approved resume / public-safe archive summary
+**Public wording:** Designed a privacy-preserving pilot data product for geography-aggregated commercial vacancy and lease-cost indicators, with a minimum schema, coverage and suppression table, methods note, and confidential-data exclusions.
+**Detailed public-safe wording:** Jamie translated a fragmented public-data opportunity into a smallest-serious-v1: an aggregate indicators table, a coverage and suppression table, a plain-language methods note, minimum useful fields, and explicit exclusions for raw confidential filings and identifying records.
+**Where to project:** Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Shows data-product scoping, privacy-by-design requirements, source synthesis, and the ability to define an implementable first release for public-interest stakeholders.
+**Guardrail:** Describe this as a proposal and product specification, not an implemented or City-approved data release.
+**Do not say:** The City adopted or implemented Jamie's proposal; Jamie published the proposed indicators; Jamie accessed confidential tax or lease records; Jamie alone created the public data systems on which the proposal builds.
+**Protected boundaries:** Private stakeholder context, unpublished correspondence, confidential filings, identifying business or tenant records, and unapproved strategy stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
@@ -219,16 +234,16 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Moderate  
-**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
+**Evidence class:** Public-safe lab materials / public-safe archival method summary
 **Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
-**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
+**Detailed public-safe wording:** The method separates Known, Open, and Protected material and begins with one bounded use case and one approved non-sensitive or synthetic source bundle, so teams can test reviewable memory without broad system ingestion.
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
 **Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
 **Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
 
 ## technical-operations-operating-backbone - Operating backbone
 

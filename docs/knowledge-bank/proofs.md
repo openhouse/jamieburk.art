@@ -13,6 +13,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Public records document Jamie's Cabaret Law repeal advocacy, Office of Nightlife public-engagement work, and web and civic-action infrastructure for Talks Not Raids; related policy outcomes remain explicitly collective and institutionally credited.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
+- Designed a privacy-preserving pilot data product for geography-aggregated commercial vacancy and lease-cost indicators, with schema, coverage and suppression, methods, and explicit confidential-data exclusions.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.

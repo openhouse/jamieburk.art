@@ -1270,6 +1270,118 @@
         "Describe these as campaign press-index entries, not forty-five endorsements or forty-five articles primarily about Jamie.",
         "Credit each outlet and author; promote article-specific claims only after article-level close reading."
       ]
+    },
+    {
+      "id": "CLM-CRS-SHARED-MEMORY-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie built and stewarded a shared Commercial Rent Stabilization memory system for decisions, action items, open questions, city and state lanes, data stewardship, and consent boundaries.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Built shared operating memory that separated decisions, actions, open questions, aligned workstreams, and protected context.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The system supported a collaboration among Action Lab, Small Business United, Fair Rent NYC, NYC Artist Coalition, and other partners; it did not make Jamie the sole coalition leader."
+      ]
+    },
+    {
+      "id": "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie prepared a tracked-change legislative provenance redline that made source lineage visible across NYC Council Intro 93, Fair Rent NYC recommendations, Small Business Survival Act-derived language, and 2025 Albany revisions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Created a legislative provenance redline so collaborators could distinguish inherited source layers from questions requiring fresh legal review.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The redline preserves work by Council sponsors and staff, Fair Rent NYC counsel, prior legislative advocates, and Albany staff; reviewer labels denote source layers rather than personal drafting credit."
+      ]
+    },
+    {
+      "id": "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie designed a privacy-preserving pilot data product for geography-aggregated commercial vacancy and lease-cost indicators, specifying a minimum schema, coverage and suppression table, methods note, and confidential-data exclusions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Scoped a smallest-serious-v1 for a privacy-preserving commercial vacancy and lease-cost data product, including schema, coverage, suppression, methods, and explicit exclusions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The proposal builds on City data systems and analytical precedents and was developed in coalition and public-interest contexts; it is a product specification, not an implemented or City-approved data release."
+      ]
+    },
+    {
+      "id": "CLM-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The method starts with one bounded use case and one approved non-sensitive or synthetic source bundle, then produces a reviewable prototype and a continue, revise, or stop recommendation.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/lab/source-backed-team-memory"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Designed a bounded source-to-memory sprint with human review, explicit privacy controls, and a continue-revise-stop decision.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The source establishes a designed method and consulting offer, not a completed engagement, accepted proposal, or production deployment."
+      ]
     }
   ],
   "pages": [

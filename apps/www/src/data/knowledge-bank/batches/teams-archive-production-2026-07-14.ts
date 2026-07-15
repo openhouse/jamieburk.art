@@ -1,0 +1,808 @@
+import type {
+  ClaimRecord,
+  IntakeItem,
+  ResearchTask,
+  SourceAssertion,
+  SourceRecord
+} from "../schema.ts";
+
+const reviewedBy = ["Jamie Burkart", "Codex archival review"];
+
+export const teamsArchiveProductionBatch20260714: {
+  intake: IntakeItem[];
+  sources: SourceRecord[];
+  sourceAssertions: SourceAssertion[];
+  claims: ClaimRecord[];
+  researchTasks: ResearchTask[];
+} = {
+  intake: [
+    {
+      id: "INT-TEAMS-PROJECT-HISTORY-APPRAISAL-2026",
+      kind: "artifact-lead",
+      capturedAt: "2026-07-14",
+      capturedFrom: "Jamie Projects History archival production pass",
+      publicSafeSummary:
+        "Appraise a retrospective project-history collection for public traces, defensible project claims, and role-credit gaps.",
+      projects: ["portfolio-archive", "sunday-dinner", "ntr-chng"],
+      status: "integrated",
+      disposition: "source-created",
+      sourceIds: [
+        "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
+        "SRC-TEAMS-SUNDAY-DINNER-ARCHIVE-2016",
+        "SRC-NTR-CHNG-PITCH-2010"
+      ],
+      claimIds: [
+        "CLM-SUNDAY-DINNER-100TH-PUBLIC-TRACE",
+        "CLM-NTR-CHNG-PUBLIC-INSTALLATION",
+        "CLM-NTR-CHNG-JAMIE-ROLE"
+      ],
+      researchTaskIds: ["TASK-NTR-CHNG-ROLE-CREDITS"],
+      notes: [
+        "Existing bank coverage was retained for already integrated projects; newly surfaced traces were promoted only to the maturity supported by the reviewed source."
+      ],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "INT-TEAMS-CLAUDETTES-PLACEHOLDER-2026",
+      kind: "artifact-lead",
+      capturedAt: "2026-07-14",
+      capturedFrom: "Jamie Projects History archival production pass",
+      publicSafeSummary:
+        "Recover public project credits for Claudette's Theater on Wheels without treating an unavailable cloud placeholder as a missing historical record.",
+      projects: ["claudettes-theater-on-wheels"],
+      status: "decomposed",
+      disposition: "research-queued",
+      sourceIds: [],
+      claimIds: [],
+      researchTaskIds: ["TASK-CLAUDETTES-ROLE-SOURCE-RECOVERY"],
+      notes: [
+        "A selected public-page capture remained a dataless cloud placeholder after a targeted materialization request; no role claim was created from adjacent pages that omitted Jamie."
+      ],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "INT-TEAMS-CRS-ARCHIVAL-PRODUCTION-2026",
+      kind: "artifact-lead",
+      capturedAt: "2026-07-14",
+      capturedFrom: "Commercial Rent Stabilization working-archive appraisal",
+      publicSafeSummary:
+        "Develop source-backed claims from shared campaign memory, legislative provenance, and privacy-preserving commercial-data product briefs.",
+      projects: ["fair-rent-nyc", "commercial-rent-data"],
+      status: "integrated",
+      disposition: "claim-created",
+      sourceIds: [
+        "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
+        "SRC-TEAMS-CRS-PROVENANCE-REDLINE-2026",
+        "SRC-TEAMS-CRS-PUBLIC-DATA-BRIEFS-2025-2026"
+      ],
+      claimIds: [
+        "CLM-CRS-SHARED-MEMORY-SYSTEM",
+        "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+        "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT"
+      ],
+      researchTaskIds: [],
+      notes: [
+        "Private strategy, legal-review context, stakeholder details, and vulnerable business information remain outside the repository."
+      ],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "INT-TEAMS-JOB-HUNT-APPRAISAL-2026",
+      kind: "artifact-lead",
+      capturedAt: "2026-07-14",
+      capturedFrom: "Job-hunt dossier archival production pass",
+      publicSafeSummary:
+        "Reconcile current role positioning with the bounded source-backed team-memory method and its public-safe operating constraints.",
+      projects: ["career-positioning", "source-backed-team-memory"],
+      status: "integrated",
+      disposition: "claim-created",
+      sourceIds: [
+        "SRC-TEAMS-JOB-HUNT-CONTEXT-2026",
+        "SRC-TEAMS-SOURCE-BACKED-MEMORY-SPRINT-2026"
+      ],
+      claimIds: ["CLM-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT"],
+      researchTaskIds: [],
+      notes: [
+        "The public record preserves the reusable method, not collaborator identity, pricing, private company context, or unaccepted commercial outcomes."
+      ],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    }
+  ],
+  sources: [
+    {
+      id: "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
+      title: "Jamie Projects History collection overview",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-02-01",
+      publicCitation:
+        "Public-safe appraisal of Jamie Burkart's retrospective project-history collection, reviewed July 14, 2026; underlying archive not published.",
+      publicNote:
+        "The collection is an evidence map, not automatic proof of Jamie's role in every contained project or artifact.",
+      supportsGenerally: [
+        "fifteen named project-family collections",
+        "surviving public web captures and project traces",
+        "a research path for underrepresented cultural and technical work"
+      ],
+      doesNotEstablish: [
+        "Jamie's authorship of every contained artifact",
+        "complete collaborator rosters",
+        "public-display permission for private or participant material"
+      ]
+    },
+    {
+      id: "SRC-TEAMS-SUNDAY-DINNER-ARCHIVE-2016",
+      title: "Sunday Dinner public archive capture",
+      kind: "archived-web-capture",
+      visibility: "public-metadata-only",
+      preservationStatus: "archived",
+      capturedAt: "2026-02-01",
+      publicCitation:
+        "Archived public Sunday Dinner index preserving March 14, 2016, posts labeled 'Sunday Dinner 100'; underlying local capture not published.",
+      publicNote:
+        "This is a lower-bound public trace. It corroborates a hundredth-gathering milestone but does not independently establish the later 300-plus total or residency scale.",
+      supportsGenerally: [
+        "a public Sunday Dinner archive",
+        "March 14, 2016, posts labeled Sunday Dinner 100",
+        "recurring documentation of the gathering practice"
+      ],
+      doesNotEstablish: [
+        "the current 300-plus gathering total",
+        "the 20-plus resident-artist total",
+        "attendance or comprehensive participant records"
+      ]
+    },
+    {
+      id: "SRC-NTR-CHNG-PITCH-2010",
+      title: "NTR CHNG",
+      organization: "The Pitch",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2010-01-07",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://www.thepitchkc.com/ntr-chng/",
+      preferredPublicUrl: "canonical",
+      publicCitation:
+        "The Pitch, 'NTR CHNG,' January 7, 2010.",
+      publicNote:
+        "The notice describes the installation and its public interaction, but does not name creators or establish Jamie's role.",
+      supportsGenerally: [
+        "a January 2010 NTER CHNG installation",
+        "a combined software and architectural installation",
+        "real-time participant messaging through a digital wall"
+      ],
+      doesNotEstablish: [
+        "Jamie's role",
+        "the creator roster",
+        "technical authorship",
+        "project outcomes beyond the described installation"
+      ]
+    },
+    {
+      id: "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
+      title: "Commercial Rent Stabilization collaboration running minutes",
+      author: "Jamie Burkart and collaborators",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-05-13",
+      publicCitation:
+        "Public-safe aggregate review of Commercial Rent Stabilization collaboration running minutes, reviewed July 14, 2026; private working record not published.",
+      publicNote:
+        "The review preserves system design and Jamie's documented stewardship while withholding strategy, contact, legal-review, and vulnerable-business context.",
+      supportsGenerally: [
+        "a shared memory system for meetings, decisions, open questions, actions, and campaign history",
+        "Jamie as the named steward of the running record",
+        "city and state lanes tracked as aligned but distinct",
+        "consent and privacy controls for business stories and contact data"
+      ],
+      doesNotEstablish: [
+        "Jamie's sole leadership of the coalition",
+        "official legal advice",
+        "ownership of partner relationships",
+        "policy outcomes caused by one person"
+      ]
+    },
+    {
+      id: "SRC-TEAMS-CRS-PROVENANCE-REDLINE-2026",
+      title: "Commercial Rent Stabilization legislative provenance redline, 2019-2025",
+      author: "Jamie Burkart, NYC Artist Coalition",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-05-16",
+      publicCitation:
+        "Jamie Burkart, NYC Artist Coalition, public-safe summary of a Commercial Rent Stabilization legislative provenance redline, updated May 16, 2026; working artifact not published.",
+      publicNote:
+        "Tracked-change reviewer labels identify source layers, not individual drafting authorship or legal approval.",
+      supportsGenerally: [
+        "Jamie prepared the provenance artifact",
+        "the redline begins with NYC Council Intro 93",
+        "successive layers include Fair Rent NYC legal-counsel recommendations, Small Business Survival Act-derived language, and 2025 Albany revisions",
+        "the artifact distinguishes policy lineage from individual authorship"
+      ],
+      doesNotEstablish: [
+        "Jamie authored the legislation",
+        "the artifact is official legal analysis",
+        "every inherited provision remains legally sufficient",
+        "reviewer labels are individual drafting credits"
+      ]
+    },
+    {
+      id: "SRC-TEAMS-CRS-PUBLIC-DATA-BRIEFS-2025-2026",
+      title: "Commercial vacancy and lease-cost open-data pilot briefs",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-03-27",
+      publicCitation:
+        "Jamie Burkart, public-safe aggregate review of 2025-2026 commercial vacancy and lease-cost open-data pilot briefs; working artifacts reviewed July 14, 2026 and not published in full.",
+      publicNote:
+        "The briefs are proposals and product specifications. They do not establish agency adoption, data publication, or an implemented City product.",
+      supportsGenerally: [
+        "Jamie authored privacy-preserving commercial-data proposals",
+        "a smallest-serious pilot comprising an indicators table, coverage and suppression table, and methods note",
+        "minimum fields for geography-aggregated vacancy and lease-cost indicators",
+        "explicit exclusion of raw confidential filings and identifying records"
+      ],
+      doesNotEstablish: [
+        "City adoption or implementation",
+        "publication of the proposed indicators",
+        "agency approval",
+        "access to confidential tax or lease records"
+      ]
+    },
+    {
+      id: "SRC-TEAMS-JOB-HUNT-CONTEXT-2026",
+      title: "Job-hunt context and evidence map",
+      author: "Jamie Burkart with AI-assisted archival synthesis",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-07-03",
+      publicCitation:
+        "Public-safe appraisal of Jamie Burkart's 2026 job-hunt context and evidence map; underlying dossier not published.",
+      publicNote:
+        "The map routes research toward primary artifacts and approved resume language; it is not independent proof of each summarized accomplishment.",
+      supportsGenerally: [
+        "technical project management, product operations, implementation, and knowledge systems as the current role frame",
+        "source-backed team memory as a current practice direction",
+        "a distinction between public-facing tools and backstage operating systems"
+      ],
+      doesNotEstablish: [
+        "independent verification of every resume metric",
+        "acceptance of any proposal",
+        "permission to publish private job-search conversations"
+      ]
+    },
+    {
+      id: "SRC-TEAMS-SOURCE-BACKED-MEMORY-SPRINT-2026",
+      title: "Source-Backed Team Memory Sprint proposal",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-06-26",
+      publicCitation:
+        "Jamie Burkart, public-safe method summary derived from a June 2026 Source-Backed Team Memory Sprint proposal; recipient and commercial terms omitted.",
+      publicNote:
+        "The source establishes a designed method and offer, not a completed client engagement or production software deployment.",
+      supportsGenerally: [
+        "one bounded source-to-memory loop",
+        "one approved non-sensitive or synthetic source bundle",
+        "human review of AI-drafted organizational memory",
+        "a friction map, small prototype, privacy notes, and continue-revise-stop recommendation"
+      ],
+      doesNotEstablish: [
+        "a completed client engagement",
+        "a production SaaS platform",
+        "broad access to company systems",
+        "acceptance of the proposed commercial terms"
+      ]
+    }
+  ],
+  sourceAssertions: [
+    {
+      id: "AST-TEAMS-PROJECT-HISTORY-FIFTEEN-FAMILIES",
+      sourceId: "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
+      project: "portfolio-archive",
+      assertion:
+        "The appraised collection contains fifteen named project-family directories spanning cultural programs, civic tools, public campaigns, community platforms, and built-environment work.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: [],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-SUNDAY-DINNER-100TH-PUBLIC-TRACE",
+      sourceId: "SRC-TEAMS-SUNDAY-DINNER-ARCHIVE-2016",
+      project: "sunday-dinner",
+      assertion:
+        "The archived public index includes March 14, 2016, posts labeled 'Sunday Dinner 100,' providing a public lower-bound trace for the recurring practice.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-SUNDAY-DINNER-100TH-PUBLIC-TRACE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-NTR-CHNG-PUBLIC-INSTALLATION",
+      sourceId: "SRC-NTR-CHNG-PITCH-2010",
+      project: "ntr-chng",
+      assertion:
+        "The Pitch describes NTER CHNG as a January 2010 software and architectural installation where participants exchanged real-time messages through a digital wall.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-NTR-CHNG-PUBLIC-INSTALLATION"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-NTR-CHNG-CREATOR-CREDIT-ABSENT",
+      sourceId: "SRC-NTR-CHNG-PITCH-2010",
+      project: "ntr-chng",
+      assertion:
+        "The reviewed public notice does not name creators and therefore cannot establish Jamie's role or technical authorship.",
+      relationship: "bounds",
+      confidence: "high",
+      candidateClaimIds: ["CLM-NTR-CHNG-JAMIE-ROLE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-CRS-RUNNING-MEMORY-SYSTEM",
+      sourceId: "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
+      project: "fair-rent-nyc",
+      assertion:
+        "The running record identifies Jamie as its steward and structures decisions, actions, open questions, city and state lanes, consent levels, and data-follow-up responsibilities as shared campaign memory.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-CRS-SHARED-MEMORY-SYSTEM"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-CRS-PROVENANCE-REDLINE-SOURCE-LAYERS",
+      sourceId: "SRC-TEAMS-CRS-PROVENANCE-REDLINE-2026",
+      project: "fair-rent-nyc",
+      assertion:
+        "Jamie's tracked-change redline makes successive policy source layers visible while explicitly separating reviewer labels from individual legislative drafting credit.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-CRS-DATA-PILOT-SMALLEST-SERIOUS-V1",
+      sourceId: "SRC-TEAMS-CRS-PUBLIC-DATA-BRIEFS-2025-2026",
+      project: "commercial-rent-data",
+      assertion:
+        "Jamie's public-data brief specifies a smallest-serious pilot with an aggregate indicators table, coverage and suppression table, methods note, minimum useful fields, and explicit confidential-data exclusions.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-JOB-HUNT-CURRENT-ROLE-FRAME",
+      sourceId: "SRC-TEAMS-JOB-HUNT-CONTEXT-2026",
+      project: "career-positioning",
+      assertion:
+        "The current evidence map frames Jamie's work around technical project management, product operations, implementation, documentation architecture, public-interest technology, and source-backed memory.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: ["CLM-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT",
+      sourceId: "SRC-TEAMS-SOURCE-BACKED-MEMORY-SPRINT-2026",
+      project: "source-backed-team-memory",
+      assertion:
+        "Jamie designed a bounded source-backed memory sprint around one approved source bundle, human review, a small prototype, explicit privacy controls, and a continue-revise-stop decision.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    }
+  ],
+  claims: [
+    {
+      id: "CLM-SUNDAY-DINNER-100TH-PUBLIC-TRACE",
+      project: "sunday-dinner",
+      internalClaim:
+        "A surviving public archive labels multiple March 14, 2016, posts 'Sunday Dinner 100,' corroborating that the recurring practice had reached a hundredth-gathering milestone by then.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "hold",
+      collectiveWork: true,
+      projections: [
+        {
+          key: "archive-note",
+          text:
+            "A surviving public archive preserves a 'Sunday Dinner 100' milestone from March 2016.",
+          status: "hold",
+          citationRequired: false,
+          surfaces: []
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-TEAMS-SUNDAY-DINNER-ARCHIVE-2016",
+          relationship: "direct-support",
+          supports: ["the public archive label", "the March 2016 date", "a hundredth-gathering lower bound"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The source corroborates a hundredth-gathering milestone; the approved 300-plus and 20-plus totals retain their separate aggregate source basis."
+      ],
+      antiClaims: [
+        "The archive independently proves 300-plus gatherings",
+        "Every participant or gathering is publicly documented",
+        "Jamie owns the community's stories or images"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "CLM-NTR-CHNG-PUBLIC-INSTALLATION",
+      project: "ntr-chng",
+      internalClaim:
+        "The Pitch documented NTER CHNG as a January 2010 installation combining software and architecture so visitors could exchange real-time messages through a digital wall.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "hold",
+      collectiveWork: true,
+      projections: [
+        {
+          key: "archive-note",
+          text:
+            "A January 2010 public notice describes NTER CHNG as a participatory software and architectural installation built around real-time messaging.",
+          status: "hold",
+          citationRequired: true,
+          surfaces: []
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-NTR-CHNG-PITCH-2010",
+          relationship: "direct-support",
+          supports: ["date", "installation format", "participant interaction"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The source establishes the public installation description, not creator identity or Jamie's role."
+      ],
+      antiClaims: [
+        "The Pitch credits Jamie as creator",
+        "The notice proves Jamie wrote the software",
+        "The notice establishes the complete collaborator roster"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "CLM-NTR-CHNG-JAMIE-ROLE",
+      project: "ntr-chng",
+      internalClaim:
+        "The project-history collection associates NTR CHNG with Jamie, but the reviewed public notice does not establish his role, authorship, or collaborator credit.",
+      status: "inference",
+      maturity: "research-needed",
+      projectionEligibility: "hold",
+      collectiveWork: true,
+      projections: [
+        {
+          key: "archive-note",
+          text: "Jamie's role in NTR CHNG remains a research question.",
+          status: "hold",
+          citationRequired: false,
+          surfaces: []
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
+          relationship: "context",
+          supports: ["the archive's association of NTR CHNG with Jamie's project history"],
+          confidence: "moderate",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-NTR-CHNG-PITCH-2010",
+          relationship: "supports-boundary",
+          supports: ["the absence of creator and role credit in the reviewed notice"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "A folder association is a lead, not independent role confirmation."
+      ],
+      antiClaims: [
+        "Jamie created NTR CHNG alone",
+        "Jamie authored the software",
+        "The public notice identifies Jamie"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "CLM-CRS-SHARED-MEMORY-SYSTEM",
+      project: "fair-rent-nyc",
+      internalClaim:
+        "Jamie built and stewarded a shared Commercial Rent Stabilization memory system that organized decisions, actions, open questions, city and state lanes, data stewardship, and consent boundaries for collective work.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
+      collectiveWork: true,
+      projections: [
+        {
+          key: "case-study",
+          text:
+            "Jamie built and stewarded a shared Commercial Rent Stabilization memory system for decisions, action items, open questions, city and state lanes, data stewardship, and consent boundaries.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/fair-rent-nyc"]
+        },
+        {
+          key: "technical-operations",
+          text:
+            "Built shared operating memory that separated decisions, actions, open questions, aligned workstreams, and protected context.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
+          relationship: "direct-support",
+          supports: ["Jamie's stewardship", "document architecture", "decision and action tracking", "consent and privacy boundaries"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The system supported a collaboration among Action Lab, Small Business United, Fair Rent NYC, NYC Artist Coalition, and other partners; it did not make Jamie the sole coalition leader."
+      ],
+      antiClaims: [
+        "Jamie owned the coalition",
+        "Jamie controlled partner data",
+        "The running record was official legal advice",
+        "The documentation alone caused policy outcomes"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+      project: "fair-rent-nyc",
+      internalClaim:
+        "Jamie prepared a tracked-change legislative provenance redline that made successive source layers visible from NYC Council Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act-derived language, and 2025 Albany revisions.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
+      collectiveWork: true,
+      projections: [
+        {
+          key: "case-study",
+          text:
+            "Jamie prepared a tracked-change legislative provenance redline that made source lineage visible across NYC Council Intro 93, Fair Rent NYC recommendations, Small Business Survival Act-derived language, and 2025 Albany revisions.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/fair-rent-nyc"]
+        },
+        {
+          key: "technical-operations",
+          text:
+            "Created a legislative provenance redline so collaborators could distinguish inherited source layers from questions requiring fresh legal review.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-TEAMS-CRS-PROVENANCE-REDLINE-2026",
+          relationship: "direct-support",
+          supports: ["Jamie as preparer", "tracked-change method", "named source layers", "source-credit boundary"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The redline preserves work by Council sponsors and staff, Fair Rent NYC counsel, prior legislative advocates, and Albany staff; reviewer labels denote source layers rather than personal drafting credit."
+      ],
+      antiClaims: [
+        "Jamie authored the legislation",
+        "Jamie provided official legal analysis",
+        "The redline resolves every legal question",
+        "Earlier advocates or legislative staff are erased from the lineage"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
+      project: "commercial-rent-data",
+      internalClaim:
+        "Jamie authored a privacy-preserving pilot specification for geography-aggregated commercial vacancy and lease-cost indicators, including a minimum data schema, coverage and suppression table, methods note, and explicit confidential-data exclusions.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
+      collectiveWork: true,
+      projections: [
+        {
+          key: "case-study",
+          text:
+            "Jamie designed a privacy-preserving pilot data product for geography-aggregated commercial vacancy and lease-cost indicators, specifying a minimum schema, coverage and suppression table, methods note, and confidential-data exclusions.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/fair-rent-nyc"]
+        },
+        {
+          key: "technical-operations",
+          text:
+            "Scoped a smallest-serious-v1 for a privacy-preserving commercial vacancy and lease-cost data product, including schema, coverage, suppression, methods, and explicit exclusions.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-TEAMS-CRS-PUBLIC-DATA-BRIEFS-2025-2026",
+          relationship: "direct-support",
+          supports: ["Jamie's authorship", "pilot scope", "minimum fields", "suppression and coverage controls", "confidential-data exclusions"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The proposal builds on City data systems and analytical precedents and was developed in coalition and public-interest contexts; it is a product specification, not an implemented or City-approved data release."
+      ],
+      antiClaims: [
+        "The City adopted or implemented Jamie's proposal",
+        "Jamie published the underlying indicators",
+        "Jamie accessed confidential tax or lease records",
+        "Jamie alone created the public data systems on which the proposal builds"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "CLM-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT",
+      project: "source-backed-team-memory",
+      internalClaim:
+        "Jamie designed a bounded discovery and prototype sprint that tests one approved source-to-memory loop with human review, explicit privacy controls, a small prototype, and a continue-revise-stop recommendation.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
+      collectiveWork: false,
+      projections: [
+        {
+          key: "case-study",
+          text:
+            "The method starts with one bounded use case and one approved non-sensitive or synthetic source bundle, then produces a reviewable prototype and a continue, revise, or stop recommendation.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/lab/source-backed-team-memory"]
+        },
+        {
+          key: "technical-operations",
+          text:
+            "Designed a bounded source-to-memory sprint with human review, explicit privacy controls, and a continue-revise-stop decision.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-TEAMS-SOURCE-BACKED-MEMORY-SPRINT-2026",
+          relationship: "direct-support",
+          supports: ["bounded use case", "approved source bundle", "human review", "prototype deliverables", "decision recommendation"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The source establishes a designed method and consulting offer, not a completed engagement, accepted proposal, or production deployment."
+      ],
+      antiClaims: [
+        "Jamie delivered this sprint for a client",
+        "Noting.us is production software",
+        "The method requires broad system access",
+        "AI replaces human review"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    }
+  ],
+  researchTasks: [
+    {
+      id: "TASK-NTR-CHNG-ROLE-CREDITS",
+      project: "ntr-chng",
+      question:
+        "What do contemporaneous credits establish about Jamie's role, collaborators, software contribution, and installation responsibilities for NTR CHNG?",
+      priority: "medium",
+      status: "queued",
+      methodsPlanned: [
+        "Recover exhibition catalogs, venue listings, and contemporary announcements",
+        "Inspect surviving video metadata and credit screens",
+        "Search collaborator and institutional archives",
+        "Request collaborator confirmation if public records remain incomplete"
+      ],
+      successCriteria: [
+        "Recover a contemporaneous source naming Jamie and his role",
+        "Identify collaborators and separate software, installation, and program credit",
+        "Keep the role claim held if creator credit remains unrecovered"
+      ],
+      sourceIds: [
+        "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
+        "SRC-NTR-CHNG-PITCH-2010"
+      ],
+      claimIds: ["CLM-NTR-CHNG-JAMIE-ROLE"],
+      publicSummary:
+        "Recover contemporaneous NTR CHNG credits before making any public claim about Jamie's role.",
+      reviewedAt: "2026-07-14"
+    },
+    {
+      id: "TASK-CLAUDETTES-ROLE-SOURCE-RECOVERY",
+      project: "claudettes-theater-on-wheels",
+      question:
+        "Which materialized public or collaborator-approved sources establish Jamie's contribution to Claudette's Theater on Wheels?",
+      priority: "low",
+      status: "queued",
+      methodsPlanned: [
+        "Retry targeted cloud materialization without downloading the entire private collection",
+        "Recover public event and project credits",
+        "Inspect public audio metadata and collaborator pages",
+        "Request collaborator confirmation if role language remains unclear"
+      ],
+      successCriteria: [
+        "Distinguish unavailable cloud material from a source that did not exist",
+        "Recover Jamie's specific role from a public or approved source",
+        "Preserve collaborator and project credit"
+      ],
+      sourceIds: [],
+      claimIds: [],
+      publicSummary:
+        "Continue source recovery for Claudette's Theater on Wheels; no role claim is public until a materialized source establishes it.",
+      reviewedAt: "2026-07-14"
+    }
+  ]
+};
