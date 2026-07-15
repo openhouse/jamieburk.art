@@ -28,7 +28,10 @@ export const requiredSeedIntakeIds = [
   "INTAKE-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022-2026",
   "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",
   "INTAKE-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
-  "INTAKE-CLAUDETTE-AR-COLLABORATION-2026"
+  "INTAKE-CLAUDETTE-AR-COLLABORATION-2026",
+  "INTAKE-NTERCHNG-PROJECT-SITE-2026",
+  "INTAKE-NTERCHNG-ANH-INCLUSION-2026",
+  "INTAKE-ANH-NERMAN-CONTEXT-2026"
 ];
 
 export const requiredResearchSourceIds = [
@@ -44,7 +47,11 @@ export const requiredResearchSourceIds = [
   "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
   "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
   "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
-  "SRC-CLAUDETTE-MICHAEL-REES-AR-COLLABORATION"
+  "SRC-CLAUDETTE-MICHAEL-REES-AR-COLLABORATION",
+  "SRC-NTERCHNG-PROJECT-SITE-2011",
+  "SRC-NTERCHNG-ANH-ARTIST-PAGE-2011",
+  "SRC-NTERCHNG-ANH-VISUAL-ARTISTS-INDEX-2011",
+  "SRC-ANH-NERMAN-MUSEUM-2011"
 ];
 
 export const requiredArchiveSourceIds = [
@@ -520,6 +527,64 @@ export function validateKnowledgeIntake() {
     if (!linkedIntakes.length || !linkedClaims.length) {
       researchErrors.push(`${sourceId} needs at least one intake and one atomic claim edge`);
     }
+  }
+
+  const nterChngClaimIds = [
+    "CLM-NTERCHNG-COLLECTIVE-INSTALLATION-2011",
+    "CLM-NTERCHNG-PARTICIPATORY-SYSTEM-2011",
+    "CLM-NTERCHNG-ANH-KC-INCLUSION-2011"
+  ];
+  for (const claimId of nterChngClaimIds) {
+    const claim = claimById.get(claimId);
+    if (!claim) {
+      researchErrors.push(`Missing required NTER CHNG claim: ${claimId}`);
+      continue;
+    }
+    if (claim.projections.some((projection) => projection.status === "active")) {
+      researchErrors.push(`${claimId} must remain held pending a separate editorial-selection pass`);
+    }
+  }
+
+  const nterChngCollectiveClaim = claimById.get(
+    "CLM-NTERCHNG-COLLECTIVE-INSTALLATION-2011"
+  );
+  const nterChngCollectiveText = JSON.stringify([
+    nterChngCollectiveClaim?.internalClaim,
+    nterChngCollectiveClaim?.projections,
+    nterChngCollectiveClaim?.boundaries,
+    nterChngCollectiveClaim?.antiClaims
+  ]).toLowerCase();
+  for (const requiredCredit of ["drew bolton", "garrett fuselier", "alone"]) {
+    if (!nterChngCollectiveText.includes(requiredCredit)) {
+      researchErrors.push(`NTER CHNG collective authorship is missing the ${requiredCredit} boundary`);
+    }
+  }
+
+  const nterChngInclusionClaim = claimById.get(
+    "CLM-NTERCHNG-ANH-KC-INCLUSION-2011"
+  );
+  const nterChngInclusionText = JSON.stringify([
+    nterChngInclusionClaim?.boundaries,
+    nterChngInclusionClaim?.antiClaims
+  ]).toLowerCase();
+  for (const requiredBoundary of ["nerman museum", "exact physical", "toured nationally"]) {
+    if (!nterChngInclusionText.includes(requiredBoundary)) {
+      researchErrors.push(`NTER CHNG exhibition inclusion is missing the ${requiredBoundary} boundary`);
+    }
+  }
+
+  const nterChngInquiry = inquiryById.get("INQ-NTERCHNG-ANH-ARCHIVE-2026");
+  const nterChngInquiryText = JSON.stringify([
+    nterChngInquiry?.findings,
+    nterChngInquiry?.limitations
+  ]).toLowerCase();
+  if (
+    nterChngInquiry?.resultStatus !== "recovered" ||
+    !nterChngInquiryText.includes("press release") ||
+    !nterChngInquiryText.includes("not recovered") ||
+    !nterChngInquiryText.includes("exact physical")
+  ) {
+    researchErrors.push("NTER CHNG archive recovery must preserve its recovered finding and unresolved physical-display and press-release boundaries");
   }
 
   for (const intake of knowledgeBank.intakes) {

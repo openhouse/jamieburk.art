@@ -73,6 +73,20 @@ record, name the organization, infer a transfer of public funds, property, or
 assets, claim current operation, or publish the circumstances of the
 transition without separate evidence and approval.
 
+## NTER CHNG
+
+Do not say Jamie created NTER CHNG alone or assign him sole responsibility for
+the concept, software, physical installation, or production. Credit Drew
+Bolton and Garrett Fuselier.
+
+Do not claim visitor counts, measured impact, a specific America: Now and Here
+installation venue or configuration, a Nerman Museum display, or a national
+tour from the recovered pages. The linked first-party press release is not
+recovered; do not convert that status into proof that it never existed.
+
+Do not reproduce the personal phone numbers visible in the archived America:
+Now and Here artist interview.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

@@ -228,6 +228,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## nter-chng-participatory-installation - Participatory software and spatial installation
+
+**Status:** Ready in knowledge bank; held from public projection
+**Support level:** Strong with collective-credit boundary
+**Evidence class:** Archived first-party project site / archived official exhibition site / institutional exhibition context
+**Public wording:** Co-created NTER CHNG with Drew Bolton and Garrett Fuselier, an interactive texting installation that joined software and spatial design so gallery visitors could contribute to a shared real-time dialogue.
+**Detailed public-safe wording:** The original project site documents NTER CHNG at Arts Incubator Cocoon Gallery in Kansas City. America: Now and Here's archived Kansas City site later lists all three collaborators as Kansas City visual artists and carries a dedicated NTER CHNG artist statement.
+**Where to project:** Knowledge bank only in this pass. Consider About, Technical Operations, or a future participatory-systems project history only when it strengthens a specific reader's understanding.
+**Why it matters:** Adds an early, independently inspectable example of Jamie working where software, physical production, participation, and public experience meet.
+**Guardrail:** Credit Drew Bolton and Garrett Fuselier. Do not infer the individual task split, audience scale, measured impact, exact America: Now and Here display details, or a Nerman Museum presentation.
+**Do not say:** Jamie created NTER CHNG alone; Jamie alone wrote the software; NTER CHNG was displayed at the Nerman Museum; the original installation toured nationally.
+**Protected boundaries:** Do not reproduce personal phone numbers visible in the archived artist interview. Do not publish unreviewed collaborator records or installation photographs.
+**Review owner:** Jamie / collaborator review needed for individual task attribution
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  
