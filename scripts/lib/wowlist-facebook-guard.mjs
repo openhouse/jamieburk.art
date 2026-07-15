@@ -21,22 +21,17 @@ export const directRiskPatterns = [
   {
     label: "embedded member product-influence claim",
     pattern:
+      /\b(?:their|member|community) (?:input|feedback|suggestions?|comments?|ideas?)\b.{0,100}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|drove|implemented|incorporated|changed?|guided?|determined)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site|decisions?|changes?)\b/is
+  },
+  {
+    label: "embedded member product-influence claim",
+    pattern:
+      /\bwhere\b.{0,60}\b(?:they|members?)\b.{0,100}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|drove|implemented|incorporated|changed?|guided?|determined|co[- ]design(?:ed|ing)?)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site|decisions?|changes?)\b/is
+  },
+  {
+    label: "embedded member product-influence claim",
+    pattern:
       /\b(?:product|design|platform|service|roadmap|features?|site|decisions?|changes?)\b.{0,120}\b(?:incorporat(?:ed|ing)|implement(?:ed|ing)|based\b.{0,40}\bon|changed\b.{0,40}\bafter|shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|drove|reflected)\b.{0,140}\b(?:members?|community|suggestions?|comments?|feedback|input|ideas?)\b/is
-  },
-  {
-    label: "positive Jamie account-control claim",
-    pattern:
-      /\bJamie\b(?![^.!?]{0,260}\b(?:does not|did not|cannot|not)\b.{0,80}\b(?:expose|establish|identify|prove|show)\b)[^.!?]{0,100}\b(?:remained?|still|was listed as|could|retained?|held|kept|had|maintained?|controls?|managed?|edited?|published?)\b[^.!?]{0,120}\b(?:administrator|admin|editor|manager|control|ownership|admin rights?|administrator access|management access|Page settings|publish(?:ing)?|post(?:ing)? as)\b/i
-  },
-  {
-    label: "positive Jamie account-control claim",
-    pattern:
-      /\bJamie\b(?![^.!?]{0,260}\b(?:does not|did not|cannot|not)\b.{0,80}\b(?:expose|establish|identify|prove|show)\b)[^.!?]{0,80}\b(?:still )?(?:controls?|manages?|administers?|edits?)\b[^.!?]{0,80}\b(?:the )?(?:WOW List )?Page\b/i
-  },
-  {
-    label: "positive Jamie account-control claim",
-    pattern:
-      /\b(?:Page settings|administrator access|admin rights?|owner controls?|Page editor|Page manager)\b.{0,100}\b(?:available to|visible to|assigned to|held by|listed for)\b.{0,80}\bJamie\b/is
   },
   {
     label: "signed-in account-control disclosure",
@@ -68,6 +63,12 @@ const influenceSignal =
   /\b(?:provided?|gave|contributed|offered|submitted|shared|supplied|sent)\b.{0,50}\b(?:input|feedback|suggestions?|comments?|ideas?)\b|\b(?:help(?:ed)? shap(?:e|ed|ing)|shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined|co[- ]design(?:ed|ing)?|incorporat(?:ed|ing)|integrat(?:ed|ing)|implement(?:ed|ing)|reflected|based\b.{0,40}\bon)\b/i;
 const invitationSignal =
   /\b(?:invite(?:d|s|ing)?|invitation|asked|welcomed|encouraged)\b.{0,180}\b(?:community )?members?\b|\b(?:community )?members?\b.{0,100}\bwere invited\b/i;
+const accountDenialSignal =
+  /\b(?:does not|did not|cannot|could not|not recovered|no evidence)\b.{0,140}\b(?:establish|show|prove|confirm|expose|identify|indicate|support)\b/i;
+const positiveJamieAccountSignal =
+  /\bJamie\b.{0,100}\b(?:is|was|has|had|owns?|remained?|still controls?|was listed as|could|retained?|held|kept|maintained?|managed?|edited?|published?)\b.{0,140}\b(?:Page administrator|administrator|admin|Page editor|editor|Page manager|manager|control|ownership|admin rights?|administrator access|management access|Page settings|publish(?:ing)?|post(?:ing)? as|WOW List Page)\b/i;
+const reverseJamieAccountSignal =
+  /\b(?:Page settings|administrator access|admin rights?|owner controls?|Page editor|Page manager)\b.{0,100}\b(?:available to|visible to|assigned to|held by|listed for)\b.{0,80}\bJamie\b/i;
 
 function fragments(text) {
   return text
@@ -82,6 +83,12 @@ export function findWowlistFacebookPublicArtifactRisk(text) {
   }
 
   for (const fragment of fragments(text)) {
+    if (
+      (positiveJamieAccountSignal.test(fragment) || reverseJamieAccountSignal.test(fragment)) &&
+      !accountDenialSignal.test(fragment)
+    ) {
+      return "positive Jamie account-control claim";
+    }
     if (
       communitySignal.test(fragment) &&
       productSignal.test(fragment) &&

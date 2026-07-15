@@ -30,7 +30,13 @@ const prohibitedMutations = [
   "Jamie still controls the WOW List Page.",
   "The signed-in account allowed Jamie to post as the Page.",
   "The product incorporated ideas from members.",
-  "Member suggestions were implemented in the site."
+  "Member suggestions were implemented in the site.",
+  "Members were invited to offer feedback, and their feedback shaped the product.",
+  "The project invited community members to a design session where they shaped the roadmap.",
+  "Jamie is the WOW List Page administrator.",
+  "Jamie has admin rights for the WOW List Page.",
+  "During review, Jamie was the Page manager.",
+  "Jamie owns the WOW List Page."
 ];
 
 for (const mutation of prohibitedMutations) {
@@ -48,7 +54,8 @@ const boundedStatements = [
   "WOW List invited members to help shape the site.",
   "Members were invited to provide feedback on product design.",
   "Additional protected controls did not establish a lifetime denominator.",
-  "The post does not identify the human author or administrator."
+  "The post does not identify the human author or administrator.",
+  "The archive does not establish that Jamie had Page administrator access."
 ];
 
 for (const statement of boundedStatements) {
