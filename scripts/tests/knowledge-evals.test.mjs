@@ -11,6 +11,7 @@ import { nterChngArchive } from "../../apps/www/src/data/knowledge-bank/nterchng
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { urbanhermitCorpusFindings, urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
+import { wowListFacebookPosts } from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts";
 import { wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
@@ -60,6 +61,14 @@ const personalWowlistFacebookEventReport = readFileSync(
   new URL("../../docs/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.md", import.meta.url),
   "utf8"
 );
+const wowlistFacebookPostLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/wowlist-facebook-post-ledger.json", import.meta.url),
+  "utf8"
+));
+const wowlistFacebookPostReport = readFileSync(
+  new URL("../../docs/knowledge-bank/wowlist-facebook-posts-2015-2018.md", import.meta.url),
+  "utf8"
+);
 const fairRentMdx = readFileSync(
   new URL("../../apps/www/src/content/work/fair-rent-nyc.mdx", import.meta.url),
   "utf8"
@@ -74,6 +83,10 @@ const knowledgeCriterionScore = (result) =>
 const personalWowlistEventCriterionScore = (result) =>
   result.criteria.find(
     (item) => item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score;
+const wowlistFacebookPostCriterionScore = (result) =>
+  result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
   )?.score;
 
 function evaluateEventLedgerWithReboundDigest(altered) {
@@ -3074,6 +3087,122 @@ test("personal event eval preserves non-recovery language", () => {
     })),
     1
   );
+});
+
+test("WOW List Facebook post population meets its complete surviving-surface control", () => {
+  assert.equal(wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 5);
+  assert.equal(wowListFacebookPosts.intakeItems.length, 2);
+  assert.equal(wowListFacebookPosts.sources.length, 8);
+});
+
+test("WOW List Facebook post eval rejects population drift", () => {
+  const altered = structuredClone(wowlistFacebookPostLedger);
+  altered.population.distinctSurvivingPosts = 54;
+  assert.equal(
+    wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      wowlistFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("WOW List Facebook post eval rejects a broken reverse-traversal reconciliation", () => {
+  const altered = structuredClone(wowlistFacebookPostLedger);
+  altered.freshBidirectionalControl.exactMessageAgreement = 52;
+  assert.equal(
+    wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      wowlistFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("WOW List Facebook post eval rejects raw record fields", () => {
+  const altered = structuredClone(wowlistFacebookPostLedger);
+  altered.records[0].rawText = "raw post content must stay protected";
+  assert.equal(
+    wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      wowlistFacebookPostLedger: altered,
+      wowlistFacebookPostLedgerText: JSON.stringify(altered)
+    })),
+    1
+  );
+});
+
+test("WOW List Facebook post eval rejects reaction inflation", () => {
+  const altered = structuredClone(wowlistFacebookPostLedger);
+  altered.visibleReactionSnapshot.totalVisibleReactions = 89;
+  assert.equal(
+    wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      wowlistFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("WOW List Facebook post eval requires the participant-graph privacy boundary", () => {
+  const altered = structuredClone(wowlistFacebookPostLedger);
+  altered.destinationInventory.widerLinkBoundary =
+    "Every rendered profile route is published in full.";
+  assert.equal(
+    wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      wowlistFacebookPostLedger: altered
+    })),
+    1
+  );
+});
+
+test("WOW List Facebook post eval preserves Richard and collective credit", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE"
+  );
+  assert.ok(claim);
+  const originalBoundaries = claim.boundaries;
+  try {
+    claim.boundaries = claim.boundaries.filter(
+      (boundary) => !boundary.includes("Richard Album")
+    );
+    assert.equal(wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    claim.boundaries = originalBoundaries;
+  }
+});
+
+test("WOW List Facebook post eval keeps sole-management memory held", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-FACEBOOK-SOLE-SOCIAL-MANAGEMENT-MEMORY"
+  );
+  assert.ok(claim);
+  const originalProjection = structuredClone(claim.projections[0]);
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/wowlist"];
+    assert.equal(wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    claim.projections[0] = originalProjection;
+  }
+});
+
+test("WOW List Facebook post eval prevents the protected census from becoming a public citation", () => {
+  const page = knowledgeBank.pages.find((item) => item.id === "wowlist");
+  const occurrence = page?.occurrences.find(
+    (item) => item.id === "facebook-publishing-practice"
+  );
+  assert.ok(occurrence);
+  const originalSourceIds = occurrence.sourceIds;
+  try {
+    occurrence.sourceIds = ["SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026"];
+    assert.equal(wowlistFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    if (originalSourceIds === undefined) delete occurrence.sourceIds;
+    else occurrence.sourceIds = originalSourceIds;
+  }
+});
+
+test("WOW List Facebook post report states the bounded management and stakeholder findings", () => {
+  assert.match(wowlistFacebookPostReport, /Jamie operated WOW List's Facebook publishing surface/);
+  assert.match(wowlistFacebookPostReport, /did not recover a defensible count of stakeholder-group reactions/);
+  assert.match(wowlistFacebookPostReport, /not a native Meta export/);
 });
 
 test("complete maturation pilot meets every floor", () => {

@@ -809,6 +809,58 @@
         "INQ-WOWLIST-FACEBOOK-EVENTS-2026"
       ],
       "proofId": "sunday-dinner-196-participation-infrastructure"
+    },
+    "wowlistFacebookPosts": {
+      "ledgerPath": "docs/knowledge-bank/data/wowlist-facebook-post-ledger.json",
+      "reportPath": "docs/knowledge-bank/wowlist-facebook-posts-2015-2018.md",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 8,
+      "expectedObservationCount": 13,
+      "expectedClaimCount": 7,
+      "expectedInquiryCount": 2,
+      "expectedDistinctPosts": 53,
+      "expectedPriorRenderedRecords": 54,
+      "expectedFreshForwardRecords": 53,
+      "expectedFreshReverseRecords": 53,
+      "expectedFreshExactAgreement": 53,
+      "expectedThemeCounts": {
+        "product-onboarding-and-community-governance": 13,
+        "event-and-participant-amplification": 12,
+        "cultural-space-care-and-safety": 18,
+        "civic-mobilization-and-public-care": 7,
+        "adjacent-cultural-knowledge-and-opportunity": 3
+      },
+      "expectedExplicitDestinationOccurrences": 29,
+      "expectedUniqueExplicitDestinations": 27,
+      "expectedWowlistDestinations": 19,
+      "expectedExternalDestinations": 8,
+      "expectedWiderLinkOccurrences": 80,
+      "expectedWiderDistinctDestinations": 71,
+      "expectedPostsWithVisibleReactions": 39,
+      "expectedTotalVisibleReactions": 88,
+      "expectedContentLibraryRows": 5,
+      "activeClaimId": "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE",
+      "heldMemoryClaimId": "CLM-WOWLIST-FACEBOOK-SOLE-SOCIAL-MANAGEMENT-MEMORY",
+      "claimIds": [
+        "CLM-WOWLIST-FACEBOOK-SURVIVING-POST-POPULATION",
+        "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE",
+        "CLM-WOWLIST-FACEBOOK-MISSION-PRACTICE",
+        "CLM-WOWLIST-FACEBOOK-STAKEHOLDER-PARTICIPATION",
+        "CLM-WOWLIST-FACEBOOK-DESTINATION-NETWORK",
+        "CLM-WOWLIST-FACEBOOK-VISIBLE-TRACTION-SNAPSHOT",
+        "CLM-WOWLIST-FACEBOOK-SOLE-SOCIAL-MANAGEMENT-MEMORY"
+      ],
+      "inquiryIds": [
+        "INQ-WOWLIST-FACEBOOK-POST-POPULATION-2026",
+        "INQ-WOWLIST-FACEBOOK-SOCIAL-MANAGEMENT-2026"
+      ],
+      "selectedPublicSourceIds": [
+        "SRC-WOWLIST-FACEBOOK-COMMUNITY-PHILOSOPHY-2016",
+        "SRC-WOWLIST-FACEBOOK-WOMENS-MARCH-2017",
+        "SRC-WOWLIST-FACEBOOK-LET-NYC-DANCE-2017",
+        "SRC-WESTWORD-DENVER-DIY-SPACES-FUND-2017",
+        "SRC-WILLAMETTE-WEEK-THE-KNOW-CLOSING-2016"
+      ]
     }
   },
   "criteria": [
@@ -951,6 +1003,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All current personal event controls are population-reconciled; the complete displayed-Jamie subset becomes bounded historical plot points; source routes and independent reporting are retained; personal relationship data stays protected; mutable platform displays never become attendance or impact; and WOW List's current zero and historical non-recovery remain distinct."
+    },
+    {
+      "id": "KB-EVAL-WOWLIST-FACEBOOK-POSTS",
+      "label": "WOW List Facebook post population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every surviving WOW List Facebook post receives a public-safe disposition; independent traversals reconcile; explicit routes and selected source articles remain inspectable; wider participant relationships stay aggregate-only; publisher action, shared authorship, sole management, mutable reactions, stakeholder response, and impact remain distinct; and only the bounded Page-publishing claim enters the portfolio."
     }
   ],
   "hillClimb": {

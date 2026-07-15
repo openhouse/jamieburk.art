@@ -14,6 +14,7 @@ import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaArchiveProduction } from "./social-media-archive-production.ts";
 import { teamsArchiveProduction } from "./teams-archive-production.ts";
 import { urbanhermitSocialCorpus } from "./urbanhermit-social-corpus.ts";
+import { wowListFacebookPosts } from "./wowlist-facebook-posts.ts";
 import { wowlistSocialCorpus } from "./wowlist-social-corpus.ts";
 
 const knowledgeBankInput = {
@@ -47,6 +48,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.intakeItems,
     ...nterChngArchive.intakeItems,
     ...personalWowlistFacebookEvents.intakeItems,
+    ...wowListFacebookPosts.intakeItems,
     ...callNycSocialCorpus.intakeItems,
     ...wowlistSocialCorpus.intakeItems,
     ...urbanhermitSocialCorpus.intakeItems,
@@ -81,6 +83,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.observations,
     ...nterChngArchive.observations,
     ...personalWowlistFacebookEvents.observations,
+    ...wowListFacebookPosts.observations,
     ...callNycSocialCorpus.observations,
     ...wowlistSocialCorpus.observations,
     ...urbanhermitSocialCorpus.observations,
@@ -242,6 +245,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.sources,
     ...nterChngArchive.sources,
     ...personalWowlistFacebookEvents.sources,
+    ...wowListFacebookPosts.sources,
     ...callNycSocialCorpus.sources,
     ...wowlistSocialCorpus.sources,
     ...urbanhermitSocialCorpus.sources,
@@ -356,6 +360,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.claims,
     ...nterChngArchive.claims,
     ...personalWowlistFacebookEvents.claims,
+    ...wowListFacebookPosts.claims,
     ...callNycSocialCorpus.claims,
     ...wowlistSocialCorpus.claims,
     ...urbanhermitSocialCorpus.claims,
@@ -410,6 +415,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.researchInquiries,
     ...nterChngArchive.researchInquiries,
     ...personalWowlistFacebookEvents.researchInquiries,
+    ...wowListFacebookPosts.researchInquiries,
     ...callNycSocialCorpus.researchInquiries,
     ...wowlistSocialCorpus.researchInquiries,
     ...urbanhermitSocialCorpus.researchInquiries,
@@ -475,6 +481,10 @@ const knowledgeBankInput = {
         "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
         "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
       ]
+    }, {
+      id: "facebook-publishing-practice",
+      claimId: "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE",
+      projection: "case-study"
     }]
   }, {
     id: "fair-rent-nyc",

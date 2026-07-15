@@ -1281,6 +1281,28 @@
       ]
     },
     {
+      "id": "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Beyond co-building the platform, Jamie operated WOW List's Facebook publishing surface across the surviving 2015-2018 record, connecting product guidance, member contributions, threatened cultural spaces, civic gathering routes, and project updates under one public identity.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Use 'published' or 'operated the Page publishing surface,' not 'personally authored every post.'",
+        "WOW List was Jamie and Richard Album's project and depended on members, organizers, artists, venues, and local scene maintainers.",
+        "Shared sources, statements, events, campaigns, images, and participant work retain their original authorship and collective credit.",
+        "The record does not establish sole lifetime administration, all-project social management, platform adoption, or impact."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1668,6 +1690,11 @@
             "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
             "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
           ]
+        },
+        {
+          "id": "facebook-publishing-practice",
+          "claimId": "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE",
+          "projection": "case-study"
         }
       ]
     },
