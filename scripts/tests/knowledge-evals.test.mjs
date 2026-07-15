@@ -3905,6 +3905,12 @@ test("NYC Artist Coalition Facebook routes reject semantic swaps and sensitive d
       inventory.url = null;
       inventory.accessDisposition = "withheld-public-route";
       inventory.preservationDisposition = "withheld-sensitive-route";
+    },
+    (copy) => {
+      const inventory = copy.postedUrlInventory.find((row) =>
+        row.preservationDisposition === "route-inventory-only"
+      );
+      inventory.host = "Raw private body or commenter identity";
     }
   ];
 
@@ -3999,19 +4005,45 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
     item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
   )?.score, 1);
 
-  const workText = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
+  const workEvidence = [
+    "Founding-member and organizer role in NYC Artist Coalition",
+    "Civic systems, coalition operations, and policy-communications infrastructure",
+    "Recurring participation system across cultural-space meetings, practical sessions, hearings, town halls, campaign actions, and relief convenings",
+    "Public-safe census of 33 Facebook event records, with one additional platform control slot preserved as unresolved",
+    "Capture-date census of 445 distinct Facebook posts spanning 2017–2021, preserving 67 cleaned source routes and issue continuity with shared-account authorship boundaries",
+    "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
+    "30+ pages of shared campaign-memory infrastructure",
+    "Running minutes, decision records, action trackers, and source maps",
+    "Public campaign websites for NYC Artist Coalition advocacy",
+    "Legal/policy questions organized for collaborators",
+    "Public-data framing and stakeholder next steps"
+  ];
   const adjacentInflations = [
     "Zero displayed shares meant nobody shared the posts.",
     "All 445 posts were authored by Jamie.",
     "Source distribution documents agreement with every linked statement.",
     "Every linked article is coverage of NYC Artist Coalition.",
-    "The 2,291 reactions represent 2,291 unique people."
+    "The 2,291 reactions represent 2,291 unique people.",
+    "This census contains the full Facebook history of the Page.",
+    "All 445 posts were his work.",
+    "Page management today confirms that he was the writer of the historical feed.",
+    "Every named official interacted with and backed the coalition.",
+    "Each shared source reflected coalition agreement.",
+    "Every link was coverage of NYC Artist Coalition.",
+    "The reactions came from 2,291 different people.",
+    "The capture has zero displayed shares, so nobody shared the posts.",
+    "Jamie was the sole author of the entire Page feed.",
+    "Current management access confirms Jamie wrote the Page feed.",
+    "Named-account references signal endorsement and partnership.",
+    "Issue continuity led to Cabaret Law repeal.",
+    "Each reaction came from a different person.",
+    "Sharing these links signaled institutional adoption."
   ];
   for (const text of adjacentInflations) {
     result = evaluateKnowledgeBank(suite, {
-      nycacFacebookPostWorkText: workText + `\n${text}\n`
+      nycacFacebookPostWorkEvidence: [...workEvidence, text]
     });
-    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false, text);
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.proofProjection, false, text);
     assert.equal(result.criteria.find((item) =>
       item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
     )?.score, 1, text);
@@ -4021,7 +4053,7 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
     ));
     mutatedProof.whyItMatters = text;
     result = evaluateKnowledgeBank(suite, { nycacFacebookPostProof: mutatedProof });
-    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false, text);
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.proofProjection, false, text);
   }
 
   const legitimateBoundaries = [
@@ -4032,7 +4064,7 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
   ];
   for (const text of legitimateBoundaries) {
     result = evaluateKnowledgeBank(suite, {
-      nycacFacebookPostWorkText: workText + `\n${text}\n`
+      nycacFacebookPostEditorialAdditions: [text]
     });
     assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, true, text);
     assert.equal(result.criteria.find((item) =>
@@ -4044,10 +4076,18 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
     nycacFacebookPostReport: report + "\nThe 445 posts are the complete lifetime Facebook history.\n"
   });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.report, false);
 
   result = evaluateKnowledgeBank(suite, {
-    nycacFacebookPostWorkText:
-      workText + "\nZero displayed shares means no one shared the posts.\n"
+    nycacFacebookPostReport:
+      report + "\n\nEach reaction came from a different person, and every link covered NYC Artist Coalition.\n"
+  });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.report, false);
+
+  result = evaluateKnowledgeBank(suite, {
+    nycacFacebookPostEditorialAdditions: [
+      "The record does not include raw bodies, but all 445 posts were authored by Jamie."
+    ]
   });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
   assert.equal(result.contentApprovals.nycacFacebookPosts.unsafeEditorialSentences.length, 1);
@@ -4061,6 +4101,17 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
   injected.authenticatedUrls = ["https://facebook.com/private?__cft__=secret"];
   result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: injected });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.privacy, false);
+
+  for (const mutate of [
+    (copy) => { copy.project = "raw private body"; },
+    (copy) => { copy.method.reconciliation = "Named commenter identity"; },
+    (copy) => { copy.method.surface = "https://facebook.com/private?access_token=secret"; }
+  ]) {
+    const copy = loadNycacFacebookPostPopulation();
+    mutate(copy);
+    result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: copy });
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.population, false);
+  }
 
   const proof = structuredClone(proofClaims.find((item) =>
     item.id === suite.pilot.nycacFacebookPosts.proofId
@@ -4085,13 +4136,9 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
   result = evaluateKnowledgeBank(suite, { nycacFacebookPostProof: endorsementProof });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
 
-  const original = nycacFacebookPostReviewSummary.authorshipBoundary;
-  try {
-    nycacFacebookPostReviewSummary.authorshipBoundary = "jamie-authored";
-    result = evaluateKnowledgeBank(suite);
-    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.authorship, false);
-    assert.equal(result.contentApprovals.nycacFacebookPosts.reviewLocksMatch, false);
-  } finally {
-    nycacFacebookPostReviewSummary.authorshipBoundary = original;
-  }
+  const reviewSummary = structuredClone(nycacFacebookPostReviewSummary);
+  reviewSummary.exposedDistinctPosts = 999;
+  result = evaluateKnowledgeBank(suite, { nycacFacebookPostReviewSummary: reviewSummary });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.authorship, false);
+  assert.equal(result.contentApprovals.nycacFacebookPosts.reviewLocksMatch, false);
 });

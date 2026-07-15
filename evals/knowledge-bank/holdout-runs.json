@@ -708,6 +708,39 @@
       "blockers": [
         "Two fresh independent judges must invent adjacent public-work and proof wording and verify that sole credit, agreement or coverage, interaction-as-people, and no-sharing assertions fail independently of ordinary review checksums while their explicit negations remain valid."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h",
+      "completedAt": "2026-07-15T16:13:14-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and checksum-independent adversarial evaluation reviewer",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Fresh adjacent formulations still bypassed the deny-list in unlocked work and checksum-refreshed proof fields, including sole authorship, current-custody authorship, source agreement, article coverage, stakeholder endorsement, policy causation, interactions as people, no-sharing inferences, and raw private prose."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g",
+      "completedAt": "2026-07-15T16:16:05-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, projection, and checksum-refresh-resistant mutation review of frozen commit 037b7bcfb1d49e8757d709bec161e3751191419a",
+      "weightedScore": 3.2,
+      "criterionScores": [5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Fresh prose variants and a sentence-wide negation bypass remained possible in work, proof, and report fields; review-summary metrics and private content inserted into allowed manifest metadata fields depended only on refreshable locks."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-structured-public-contracts-2026-07-15",
+      "completedAt": "2026-07-15T16:18:54-04:00",
+      "lens": "Protocol reset after replacing deny-list dependence with structured allowlisted contracts for work evidence, every public proof field, report blocks, manifest metadata, and review-summary values, plus clause-level negation handling",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must mutate the actual structured work-evidence array, proof fields, report block inventory, manifest metadata, and review-summary object and verify that unapproved assertions or private content fail by construction even when ordinary review checksums are refreshed."
+      ]
     }
   ]
 }
