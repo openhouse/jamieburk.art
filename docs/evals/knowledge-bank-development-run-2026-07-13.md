@@ -139,3 +139,34 @@ Two fresh independent graders evaluated immutable content commit
 at `4/4` with no deficiencies. Runtime checks confirmed that the protected
 attestation and its evidence are absent from the public registry while the
 bounded projection resolves only on the KC Town Hall case study.
+
+## Project Social-Account Pass - 2026-07-14
+
+This pass used Jamie's authenticated browser session to inventory five recovered
+project account identities and develop bounded evidence of public use. CallNYC
+recovered a lower bound of eight sitting Council member accounts with visible
+direct engagement. NYC Artist Coalition recovered at least four sitting Council
+member accounts with visible direct engagement from March 2018 through December
+2020. WOW List posts established a Sunday Dinner lineage and organizer use. KC
+Town Hall and KC Spaces Fund added deeper public-listening and outcome-documentation
+evidence without crowding the portfolio.
+
+The first independent review found that the inquiry called every identity a
+dedicated account even though `@NYCArtC` is an umbrella identity. It also found
+that the coalition projection named testimony and commercial-rent work without
+citing the corresponding posts. A second review caught categorical
+`does not exist` wording for an unresolved WOW List handle, an unitemized
+eleven-highlight KC Spaces lower bound, and office-at-date attribution without
+an independently inspectable government source.
+
+The repair corrected the account taxonomy and negative-search wording, extended
+the coalition window through December 2020, cited all six coalition posts,
+committed all eleven KC Spaces highlights as sources and assertions, and added
+official Council records supporting historical office attribution. Jamie's
+recollection that he established the accounts remains held for corroboration;
+later account output remains collective.
+
+Two fresh independent graders then evaluated immutable content commit
+`5689822d3c5b085fb06eca879330b1ad58f9327a`. Both scored `KB-007` and `KB-009`
+at `4/4` with no deficiencies. The deterministic suite reached weighted score
+`1.0000` and `threshold_met` after two consecutive passing runs.
