@@ -107,6 +107,13 @@ git remote add dokku-production dokku@<droplet-host-or-ip>:jamieburk-art
 git push dokku-production HEAD:main
 ```
 
+Canonical production behavior:
+
+- `https://jamieburk.art` is canonical.
+- `www.jamieburk.art` should redirect to `https://jamieburk.art`.
+- If the redirect is not configured before production launch, keep it as a
+  launch checklist blocker.
+
 ## Local Docker Verification
 
 ```bash
