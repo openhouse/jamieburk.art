@@ -23,7 +23,9 @@ deployment, or long-term adoption.
 
 The Pitch described NTER CHNG as a 2010 installation combining software and
 architecture: visitors sent cellphone messages through both faces of a digital
-wall, where the messages accumulated into a public virtual dialogue.
+wall, where the messages accumulated into a public virtual dialogue. A recovered
+first-party project site independently calls it an interactive texting
+installation and names Drew Bolton, Jamie Burkart, and Garrett Fuselier.
 
 The project video credits Drew Bolton, Jamie Burkart, and Garrett Fuselier as
 designers, Garrett as programmer, and Mary Nichols as helping engineer and
@@ -33,6 +35,24 @@ Claim: `CLM-NTER-CHNG-INTERACTIVE-INSTALLATION` - confirmed with boundary.
 
 Preserve every collaborator's credit. Do not assign Garrett's programmer credit
 to Jamie or imply recovered attendance, message volume, or long-term deployment.
+
+### America: Now and Here Research Lead
+
+Jamie recalls that NTER CHNG was later included in America: Now and Here's 2011
+Kansas City program. Nerman Museum and Smithsonian Archives of American Art
+records confirm the program's Kansas City timing and multidisciplinary scope,
+but neither names NTER CHNG. A review of 205 recoverable 2011 HTML pages from the
+official exhibition domain recovered no exact project or collaborator-name
+reference.
+
+Claim: `CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION` - use with care.
+
+Inquiry: `INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026` - partially recovered.
+
+Keep this connection in the research layer until a project-specific program,
+installation, press, organizer, or collaborator record is recovered. “Not
+recovered” does not mean “did not exist.” Do not infer that NTER CHNG was shown
+at the Nerman Museum from its page about Barbara Kruger's project.
 
 ## Horse Lords - Truthers
 

@@ -92,3 +92,7 @@ The [Google Drive Shared Drives receipt](intake/2026-07-15-google-drive-shared-d
 applies the same method to collaborative workspaces: the public bank retains
 bounded handoff, implementation, and onboarding claims while Drive names, file
 metadata, collaborators, private structures, and raw materials remain protected.
+The [NTER CHNG archive and exhibition receipt](intake/2026-07-15-nter-chng-archive-and-exhibition.md)
+shows how a recovered first-party project surface can strengthen a collective
+credit while a remembered exhibition connection remains a bounded inquiry after
+an official-site search returns no project-specific record.

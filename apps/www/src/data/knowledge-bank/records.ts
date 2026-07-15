@@ -21,12 +21,20 @@ import {
   googleDriveResearchInquiries,
   googleDriveSources
 } from "./google-drive-shared-drives.ts";
+import {
+  nterChngArchiveClaims,
+  nterChngArchiveIntakeItems,
+  nterChngArchiveObservations,
+  nterChngArchiveResearchInquiries,
+  nterChngArchiveSources
+} from "./nter-chng-archive.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
     ...nycaPressIntakeItems,
     ...icloudTeamsIntakeItems,
     ...googleDriveIntakeItems,
+    ...nterChngArchiveIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -304,6 +312,7 @@ const knowledgeBankInput = {
     ...nycaPressSources,
     ...icloudTeamsSources,
     ...googleDriveSources,
+    ...nterChngArchiveSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1322,6 +1331,7 @@ const knowledgeBankInput = {
     ...nycaPressObservations,
     ...icloudTeamsObservations,
     ...googleDriveObservations,
+    ...nterChngArchiveObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1908,6 +1918,7 @@ const knowledgeBankInput = {
     ...nycaPressClaims,
     ...icloudTeamsClaims,
     ...googleDriveClaims,
+    ...nterChngArchiveClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -2894,6 +2905,7 @@ const knowledgeBankInput = {
     ...nycaPressResearchInquiries,
     ...icloudTeamsResearchInquiries,
     ...googleDriveResearchInquiries,
+    ...nterChngArchiveResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",

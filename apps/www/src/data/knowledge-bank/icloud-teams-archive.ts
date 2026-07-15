@@ -664,6 +664,15 @@ export const icloudTeamsClaims: KnowledgeBank["claims"] = [
         supports: ["collective designer credits", "Garrett's programmer credit", "Mary's engineering and construction credit"],
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011",
+        relationship: "corroborating",
+        supports: ["first-party project description", "Drew Bolton, Jamie Burkart, and Garrett Fuselier as the three named creators"],
+        locator: "Project description and creator-credit line",
+        publicNote: "Recovered first-party project surface.",
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [

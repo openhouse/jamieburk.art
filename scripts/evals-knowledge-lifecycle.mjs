@@ -103,6 +103,14 @@ const googleDrivePromotedClaimIds = [
   "CLM-196-ARTIST-RESIDENCY-ONBOARDING-2023"
 ];
 
+const nterChngArchiveSourceIds = [
+  "SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011",
+  "SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15",
+  "SRC-AMERICA-NOW-HERE-NERMAN-2011",
+  "SRC-AMERICA-NOW-HERE-SMITHSONIAN-RECORDS",
+  "SRC-AMERICA-NOW-HERE-WAYBACK-RESEARCH-2026"
+];
+
 check(
   "Source quality",
   "Every supplied and portfolio-expansion URL has a canonical source record",
@@ -203,6 +211,24 @@ check(
 );
 
 check(
+  "Source quality",
+  "NTER CHNG recovery separates first-party proof, protected memory, institutional context, and bounded negative search",
+  7,
+  nterChngArchiveSourceIds.every((id) => sourceById.has(id)) &&
+    sourceById.get("SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011")?.kind ===
+      "archived-web-capture" &&
+    sourceById.get("SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011")
+      ?.preferredPublicUrl === "archive" &&
+    sourceById.get("SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15")
+      ?.visibility === "protected" &&
+    !sourceById.get("SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15")
+      ?.canonicalUrl &&
+    sourceById.get("SRC-AMERICA-NOW-HERE-WAYBACK-RESEARCH-2026")
+      ?.doesNotEstablish.some((value) => /absent/i.test(value)),
+  true
+);
+
+check(
   "Atomic observations",
   "Every researched intake links atomic observations",
   5,
@@ -246,6 +272,19 @@ check(
 );
 
 check(
+  "Atomic observations",
+  "NTER CHNG observations distinguish recovered facts from Jamie's provisional exhibition account",
+  6,
+  observationById.get("OBS-NTER-CHNG-OFFICIAL-SITE-DESCRIPTION-CREDITS")
+    ?.status === "verified" &&
+    observationById.get("OBS-NTER-CHNG-AMERICA-NOW-HERE-ACCOUNT")?.status ===
+      "provisional" &&
+    observationById.get("OBS-AMERICA-NOW-HERE-WAYBACK-NO-REFERENCE-RECOVERED")
+      ?.status === "verified",
+  true
+);
+
+check(
   "Claim maturity",
   "Shared Drive projections retain explicit scope and anti-claim boundaries",
   6,
@@ -270,6 +309,30 @@ check(
   ].every((id) =>
     ["confirmed", "confirmed-with-boundary"].includes(claimById.get(id)?.status)
   )
+);
+check(
+  "Claim maturity",
+  "NTER CHNG project credit is strengthened while the exhibition connection stays held and bounded",
+  8,
+  claimById.get("CLM-NTER-CHNG-INTERACTIVE-INSTALLATION")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-NTER-CHNG-INTERACTIVE-INSTALLATION")
+      ?.evidence.some(
+        (item) => item.sourceId === "SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011"
+      ) &&
+    claimById.get("CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION")?.status ===
+      "use-with-care" &&
+    claimById
+      .get("CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION")
+      ?.projections.every((projection) => projection.status !== "active") &&
+    claimById
+      .get("CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION")
+      ?.antiClaims.some((value) => /Nerman Museum/i.test(value)) &&
+    claimById
+      .get("CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION")
+      ?.antiClaims.some((value) => /Wayback review proves/i.test(value)),
+  true
 );
 check(
   "Atomic observations",
@@ -474,6 +537,25 @@ check(
         inquiry.runAt && inquiry.findings.length > 0 && inquiry.limitations.length > 0
     )
 );
+check(
+  "Research recursion",
+  "NTER CHNG exhibition inquiry preserves the 205-page search result without converting non-recovery into absence",
+  7,
+  inquiryById.get("INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026")
+    ?.resultStatus === "partially-recovered" &&
+    inquiryById
+      .get("INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026")
+      ?.findings.some((value) => /205 replayable/i.test(value)) &&
+    inquiryById
+      .get("INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026")
+      ?.limitations.some((value) => /Wayback capture.*incomplete/i.test(value)) &&
+    nterChngArchiveSourceIds.every((sourceId) =>
+      inquiryById
+        .get("INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026")
+        ?.sourceIds.includes(sourceId)
+    ),
+  true
+);
 
 const newSourceIds = new Set(
   knowledgeBank.sources
@@ -535,6 +617,9 @@ const kcTownHallReceipt = read(
 const kcTownHallPhaseOneReceipt = read(
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md"
 );
+const nterChngReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-nter-chng-archive-and-exhibition.md"
+);
 
 check(
   "Capture integrity",
@@ -577,6 +662,20 @@ check(
     ].every((phrase) =>
       kcTownHallPhaseOneReceipt.toLowerCase().includes(phrase.toLowerCase())
     ),
+  true
+);
+check(
+  "Capture integrity",
+  "The NTER CHNG receipt preserves recovered proof, the official-site search, and publication restraint",
+  7,
+  nterChngArchiveSourceIds.every((sourceId) => nterChngReceipt.includes(sourceId)) &&
+    [
+      "205 recoverable pages",
+      "not mean the project was absent",
+      "INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026"
+    ].every((phrase) =>
+      nterChngReceipt.toLowerCase().includes(phrase.toLowerCase())
+    ) && /held from\s+the\s+public website/i.test(nterChngReceipt),
   true
 );
 
