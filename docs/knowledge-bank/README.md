@@ -153,3 +153,12 @@ existing digital-infrastructure proof without assigning Jamie organizer,
 fundraiser, grant-decision, or individual post-authorship credit. Jamie's
 memory of helping select a uniformly available project name remains a separate
 research-stage claim.
+
+The
+[personal Facebook post archival-production pass](research/jamie-facebook-posts-2026-07-14.md)
+accounts for all 1,243 unique records exposed by the authenticated `Posted by:
+You` control after reconciling 3,728 returned nodes across 621 cursor pages. An
+aggregate-only ledger and protected close reading preserve source-discovery and
+operating-practice depth without publishing personal post text, people, URLs,
+media, relationships, privacy context, or interaction rows. Population-level
+engagement remains explicitly not recovered rather than zero.

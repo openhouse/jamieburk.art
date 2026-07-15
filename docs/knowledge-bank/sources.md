@@ -214,6 +214,24 @@ Cabaret Law repeal and KC Town Hall tire operations.
 See
 `docs/knowledge-bank/research/urbanhermit-full-population-social-census-2026-07-14.md`.
 
+## Personal Facebook Post Archive
+
+The July 2026 authenticated `Manage Posts > Posted by: You` run reached its
+terminal server flag after 621 pages and 3,728 returned nodes. Stable-story
+deduplication produced 1,243 unique records, each represented by one
+aggregate-only public ledger row. Protected close reading selected 222
+professional candidates and inventoried 564 unique external destinations while
+keeping exact posts, dates, IDs, URLs, people, privacy context, comments,
+interactions, and media outside the repository.
+
+The pass recovered Blair Schulman's archived 2009 ArtTattler review of *Great
+Accommodations* as one new independent source. Complete interaction totals and
+stakeholder-identity engagement were not recovered; outgoing tags, actors, and
+destinations are not treated as inbound engagement.
+
+See
+`docs/knowledge-bank/research/jamie-facebook-posts-2026-07-14.md`.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

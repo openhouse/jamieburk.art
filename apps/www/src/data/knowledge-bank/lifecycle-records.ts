@@ -635,7 +635,7 @@ export const lifecycleClaims = [
     internalClaim: "Jamie spearheaded Great Accommodations, a participatory and documentary project that invited river-city residents to contribute histories and imagine urban life around connected waterways; documented outreach was conducted with Suzanne Hogan.",
     status: "confirmed-with-boundary",
     maturity: "public-ready",
-    intakeIds: ["INTAKE-RIVER-CHARLOTTE-STREET-2009"],
+    intakeIds: ["INTAKE-RIVER-CHARLOTTE-STREET-2009", "INTAKE-JAMIE-FACEBOOK-ARTTATTLER-2009"],
     requiredSupportTags: ["great-accommodations-leadership", "river-city-collective-outreach", "participatory-exhibition-form"],
     composition: {
       action: "Spearheaded a participatory exhibition and conducted river-city outreach with Suzanne Hogan.",
@@ -646,7 +646,10 @@ export const lifecycleClaims = [
       causalBoundary: "The source documents program form and outreach, not measured civic outcomes."
     },
     projections: [],
-    evidence: [{ sourceId: "SRC-RIVER-CHARLOTTE-STREET-2009", relationship: "direct-support", supports: ["Jamie's spearheading role", "participatory and documentary program forms", "collective outreach with Suzanne Hogan"], propositionIds: ["PROP-RIVER-CSF-SPEARHEADED", "PROP-RIVER-CSF-OUTREACH", "PROP-RIVER-CSF-PROGRAM"], confidence: "high", renderCitation: false }],
+    evidence: [
+      { sourceId: "SRC-RIVER-CHARLOTTE-STREET-2009", relationship: "direct-support", supports: ["Jamie's spearheading role", "participatory and documentary program forms", "collective outreach with Suzanne Hogan"], propositionIds: ["PROP-RIVER-CSF-SPEARHEADED", "PROP-RIVER-CSF-OUTREACH", "PROP-RIVER-CSF-PROGRAM"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009", relationship: "corroborating", supports: ["independent review of the participatory exhibition", "trust and mutual-help premise", "river as connective social infrastructure"], propositionIds: ["PROP-ARTTATTLER-GREAT-ACCOMMODATIONS-PARTICIPATORY", "PROP-ARTTATTLER-GREAT-ACCOMMODATIONS-TRUST"], confidence: "high", renderCitation: false }
+    ],
     boundaries: ["Preserve Suzanne Hogan's credit for the documented outreach.", "Do not imply measured civic outcomes not reported by the source."],
     antiClaims: ["Jamie solely authored every contribution or community project."],
     researchInquiryIds: [],

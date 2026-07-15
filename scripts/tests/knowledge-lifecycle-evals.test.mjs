@@ -1971,6 +1971,179 @@ test("KC Spaces Fund operations claim preserves organizers, authorship, and trac
   assert.equal(decision.decision, "defer");
 });
 
+test("Jamie Facebook authored-post census accounts for every unique returned record without personal detail", () => {
+  const csv = readFileSync(
+    "docs/knowledge-bank/data/jamie-facebook-post-census-2026-07-14.csv",
+    "utf8"
+  ).trim();
+  const [header, ...lines] = csv.split(/\r?\n/);
+
+  assert.equal(
+    header,
+    "ledger_id,year,record_type,primary_theme,professional_relevance,accounting_status,public_detail_status"
+  );
+  assert.equal(lines.length, 1243);
+
+  const rows = lines.map((line, index) => {
+    const cells = line.split(",");
+    assert.equal(cells.length, 7);
+    assert.equal(cells[0], `recovered-${String(index + 1).padStart(4, "0")}`);
+    assert.equal(cells[5], "recovered");
+    assert.equal(cells[6], "aggregate-only");
+    return cells;
+  });
+
+  const countBy = (column) =>
+    Object.fromEntries(
+      Object.entries(
+        rows.reduce((counts, row) => {
+          counts[row[column]] = (counts[row[column]] ?? 0) + 1;
+          return counts;
+        }, {})
+      ).sort(([left], [right]) => left.localeCompare(right))
+    );
+
+  assert.deepEqual(countBy(1), {
+    2006: 2,
+    2007: 5,
+    2008: 4,
+    2009: 218,
+    2010: 82,
+    2011: 88,
+    2012: 153,
+    2013: 184,
+    2014: 109,
+    2015: 68,
+    2016: 122,
+    2017: 118,
+    2018: 27,
+    2019: 42,
+    2020: 19,
+    2022: 2
+  });
+  assert.deepEqual(countBy(4), {
+    contextual: 1021,
+    "practice-related": 64,
+    "project-specific": 158
+  });
+
+  assert.doesNotMatch(
+    csv,
+    /facebook\.com|https?:\/\/|\/Users\/|\/private\/|\/tmp\/|@[A-Za-z0-9]|\b\d{4}-\d{2}-\d{2}\b/i
+  );
+});
+
+test("Jamie Facebook archive claims preserve authorship, collective credit, and traction limits", () => {
+  const population = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-POST-POPULATION-ACCOUNTING-2026"
+  );
+  const destination = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-EXTERNAL-DESTINATION-INVENTORY-2026"
+  );
+  const practice = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-PROJECT-OPERATIONS-THREAD-2009-2020"
+  );
+  const nycArtC = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-NYCAC-IMPLEMENTATION-PRACTICE-2017-2019"
+  );
+  const engagement = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-ENGAGEMENT-NOT-RECOVERED-2026"
+  );
+
+  assert.match(population.internalClaim, /3,728 nodes across 621 pages/i);
+  assert.match(population.internalClaim, /1,243 unique/i);
+  assert.ok(population.boundaries.some((item) => /not an official Meta export/i.test(item)));
+  assert.ok(population.antiClaims.some((item) => /every Facebook post/i.test(item)));
+  assert.equal(population.projections.length, 0);
+
+  assert.match(destination.internalClaim, /564 unique URLs across 195 domains/i);
+  assert.ok(destination.boundaries.some((item) => /outgoing source or action route/i.test(item)));
+  assert.ok(destination.antiClaims.some((item) => /named stakeholders engaged/i.test(item)));
+
+  assert.equal(practice.maturity, "public-ready");
+  assert.match(practice.composition.action, /participation routes.*usable instructions/i);
+  assert.match(practice.composition.intendedEnd, /join, contribute, respond, or carry work forward/i);
+  assert.match(practice.composition.collectiveCredit, /collaborators.*participants.*institutions.*communities/i);
+  assert.match(practice.composition.causalBoundary, /does not independently prove/i);
+  assert.equal(practice.projections.length, 0);
+
+  assert.equal(nycArtC.maturity, "public-ready");
+  assert.match(nycArtC.composition.action, /meetings.*hearings.*call scripts.*action routes/i);
+  assert.match(nycArtC.composition.intendedEnd, /artists.*organizers.*venue operators/i);
+  assert.match(nycArtC.composition.collectiveCredit, /co-founders.*venue hosts.*artists.*organizers/i);
+  assert.ok(nycArtC.antiClaims.some((item) => /Jamie alone/i.test(item)));
+  assert.equal(nycArtC.projections.length, 0);
+
+  assert.equal(engagement.status, "not-recovered");
+  assert.match(engagement.internalClaim, /did not provide complete reaction, comment, or share metrics/i);
+  assert.ok(engagement.boundaries.some((item) => /absent interaction values as zero/i.test(item)));
+  assert.ok(engagement.antiClaims.some((item) => /zero engagement/i.test(item)));
+  const engagementDecision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === engagement.id
+  );
+  assert.equal(engagementDecision.decision, "disallow");
+});
+
+test("Jamie Facebook source discovery promotes ArtTattler while retaining protected provenance", () => {
+  const sourceIds = [
+    "SRC-JAMIE-FACEBOOK-MANAGE-POSTS-CONTROL-2026",
+    "SRC-JAMIE-FACEBOOK-FULL-POST-POPULATION-RUN-2026",
+    "SRC-JAMIE-FACEBOOK-PROFESSIONAL-CLOSE-READ-2026",
+    "SRC-JAMIE-FACEBOOK-EXTERNAL-DESTINATION-INVENTORY-2026"
+  ];
+
+  for (const sourceId of sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.equal(source.visibility, "protected");
+    assert.equal(source.preservationStatus, "private");
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.ok(source.protectedLocatorId);
+    assert.equal(reading.status, "closely-read");
+  }
+
+  const article = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"
+  );
+  const articleReading = knowledgeBank.sourceReadings.find(
+    (item) => item.sourceId === article.id
+  );
+  const greatAccommodations = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-RIVER-GREAT-ACCOMMODATIONS"
+  );
+
+  assert.equal(article.visibility, "public");
+  assert.equal(article.preservationStatus, "archived");
+  assert.match(article.archiveUrl, /web\.archive\.org/);
+  assert.equal(article.preferredPublicUrl, "archive");
+  assert.ok(article.doesNotEstablish.some((item) => /exact Gulf of Mexico endpoint/i.test(item)));
+  assert.equal(articleReading.status, "closely-read");
+  assert.ok(
+    articleReading.propositions.some((item) => /trust, accepting help/i.test(item.text))
+  );
+  assert.ok(
+    greatAccommodations.evidence.some((item) => item.sourceId === article.id)
+  );
+
+  const sourceTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-JAMIE-FACEBOOK-SOURCE-LEADS-2026"
+  );
+  const engagementTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-JAMIE-FACEBOOK-ENGAGEMENT-RECOVERY-2026"
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-JAMIE-FACEBOOK-FULL-POST-POPULATION-2026"
+  );
+
+  assert.equal(sourceTask.status, "in-progress");
+  assert.ok(sourceTask.sourceIds.includes(article.id));
+  assert.equal(engagementTask.status, "open");
+  assert.ok(engagementTask.nextActions.some((item) => /privacy-safe/i.test(item)));
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.ok(inquiry.findings.some((item) => /not recovered/i.test(item)));
+});
+
 test("KC Spaces Fund uniform identity is mature while Jamie's naming memory remains research-stage", () => {
   const identityClaim = knowledgeBank.claims.find(
     (item) => item.id === "CLM-KCSPACES-UNIFORM-PUBLIC-IDENTITY"
