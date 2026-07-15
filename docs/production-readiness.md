@@ -18,6 +18,8 @@ It includes:
 - Seven blind-spot registers and independently runnable evals covering outcomes
   and adoption, role corroboration, hiring comprehension, the present-tense
   offer, visual proof, archival survivorship, and release governance.
+- Margaret Morse and Warren Sack lenses grounded in protected UCSC narrative
+  evaluations and public Open House reporting.
 
 Do not merge donor branches wholesale. This branch hand-composes the strongest
 ideas from the production-readiness-composite family.
@@ -41,6 +43,8 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run evals:urbanhermit-x`
 - [ ] `npm run evals:nycac-facebook-events`
 - [ ] `npm run evals:blind-spots`
+- [ ] `npm run evals:margaret-morse`
+- [ ] `npm run evals:warren-sack`
 - [ ] `npm run evals:recursive`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`

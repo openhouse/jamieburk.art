@@ -20,6 +20,8 @@ npm run evals:urbanhermit-x
 npm run evals:nycac-facebook-events
 npm run evals:nycac-institutional-interface
 npm run evals:blind-spots
+npm run evals:margaret-morse
+npm run evals:warren-sack
 npm run evals:recursive
 ```
 
@@ -89,6 +91,20 @@ For criteria requiring evidence from people, a green deterministic gate means
 `governed-open`: the absence, boundary, protocol, and next action are truthful.
 It does not mean a collaborator has corroborated a role, an external hiring
 reader has completed a session, or a visual has been approved.
+
+### Margaret Morse Lens
+
+`npm run evals:margaret-morse` tests source integrity, embodied intelligence,
+experiment as practice, the connected artistic/civic/technical/social
+threshold, and bounded praise. Passing requires 100/100. It is not a claim that
+Margaret Morse reviewed the current portfolio.
+
+### Warren Sack Lens
+
+`npm run evals:warren-sack` tests source integrity, recursive relational
+thinking, prototype range, collective and causal discipline, and present
+continuity. Passing requires 100/100. It is not a claim that Warren Sack reviewed
+the current portfolio.
 
 ### NYC Artist Coalition X Corpus Criterion
 

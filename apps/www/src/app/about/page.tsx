@@ -38,6 +38,31 @@ export default function AboutPage() {
             delivery, and source-backed knowledge systems.
           </p>
         </div>
+        <section
+          aria-labelledby="throughline"
+          className="mt-12 border-t border-jb-ink/15 pt-8"
+        >
+          <h2 className="text-3xl font-semibold text-jb-ink" id="throughline">
+            A throughline
+          </h2>
+          <div className="mt-5 space-y-5 text-xl leading-9 text-jb-ink/78">
+            <p>
+              Before I had the language of product operations, I approached
+              software, installations, gatherings, and public projects as social
+              environments. I am still interested in how people see themselves
+              in relation, how a structure changes when people inhabit it, and
+              how documentation becomes part of the experience.
+            </p>
+            <p>
+              That is why I do not treat systems as administration alone. I care
+              about participation, attention, atmosphere, place, and memory
+              alongside requirements and delivery. The artistic, civic,
+              technical, and social parts of my practice belong to the same
+              throughline: designing structures people can understand, enter,
+              reshape, and carry forward.
+            </p>
+          </div>
+        </section>
         <section className="mt-12 border-t border-jb-ink/15 pt-8" aria-labelledby="looking-for-now">
           <h2 className="text-3xl font-semibold text-jb-ink" id="looking-for-now">
             What I am looking for now

@@ -1,11 +1,12 @@
 {
   "version": 1,
   "updated": "2026-07-15",
-  "candidate": "feature/evals-L working tree",
+  "candidate": "feature/evals-L candidate",
   "automatedVerification": {
     "state": "passed-2026-07-15",
     "commands": ["npm run check", "npm run preflight:staging", "npm run preflight:production"],
-    "result": "All commands passed on the current working-tree candidate; all seven blind-spot criteria scored 100/100 under their declared state semantics."
+    "additionalCriteria": ["npm run evals:margaret-morse", "npm run evals:warren-sack"],
+    "result": "The full check, staging preflight, and production preflight pass for the revised candidate; the Margaret Morse and Warren Sack lenses each score 100/100."
   },
   "humanGates": [
     {"gate": "External five-minute hiring comprehension", "state": "open"},

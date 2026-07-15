@@ -47,6 +47,10 @@ changes public claims.
 - [ ] `npm run evals:nycac-facebook-events` scores 100/100 with no hard failures.
 - [ ] `npm run evals:blind-spots` gives each of the seven criteria 100/100 with
   truthful state semantics.
+- [ ] `npm run evals:margaret-morse` scores 100/100 without reducing artistic,
+  embodied, participatory, or media-archaeological work to utility.
+- [ ] `npm run evals:warren-sack` scores 100/100 while preserving recursive
+  relational thinking, prototype range, and collective authorship.
 - [ ] `npm run evals:recursive` passes.
 - [ ] `npm run preflight:staging` passes.
 - [ ] `npm run preflight:production` passes only with explicit production

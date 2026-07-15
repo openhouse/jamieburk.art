@@ -24,6 +24,8 @@ production.
 - [x] `npm run evals:nycac-facebook-events`
 - [x] `npm run evals:nycac-institutional-interface`
 - [x] `npm run evals:blind-spots`
+- [x] `npm run evals:margaret-morse`
+- [x] `npm run evals:warren-sack`
 - [x] `npm run evals:recursive`
 
 The aggregate blind-spot command independently hard-gates:

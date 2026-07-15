@@ -119,6 +119,13 @@ import {
   nycacInstitutionalInterfaceResearchInquiries,
   nycacInstitutionalInterfaceSources
 } from "./nycac-institutional-interface.ts";
+import {
+  ucscNarrativeEvaluationClaims,
+  ucscNarrativeEvaluationIntakeItems,
+  ucscNarrativeEvaluationObservations,
+  ucscNarrativeEvaluationResearchInquiries,
+  ucscNarrativeEvaluationSources
+} from "./ucsc-narrative-evaluations.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -139,6 +146,7 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostIntakeItems,
     ...jamiePersonalFacebookPostIntakeItems,
     ...nycacInstitutionalInterfaceIntakeItems,
+    ...ucscNarrativeEvaluationIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -440,6 +448,7 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostSources,
     ...jamiePersonalFacebookPostSources,
     ...nycacInstitutionalInterfaceSources,
+    ...ucscNarrativeEvaluationSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1472,6 +1481,7 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostObservations,
     ...jamiePersonalFacebookPostObservations,
     ...nycacInstitutionalInterfaceObservations,
+    ...ucscNarrativeEvaluationObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -2072,6 +2082,7 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostClaims,
     ...jamiePersonalFacebookPostClaims,
     ...nycacInstitutionalInterfaceClaims,
+    ...ucscNarrativeEvaluationClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -3140,6 +3151,7 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostResearchInquiries,
     ...jamiePersonalFacebookPostResearchInquiries,
     ...nycacInstitutionalInterfaceResearchInquiries,
+    ...ucscNarrativeEvaluationResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",

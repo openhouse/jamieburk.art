@@ -47,6 +47,8 @@ function sectionForHeading(source, heading) {
 
 const requiredFiles = [
   "docs/qa/evals-L/recursive-protocol.md",
+  "docs/qa/evals-L/margaret-morse-lens.md",
+  "docs/qa/evals-L/warren-sack-lens.md",
   "docs/qa/blind-spots/README.md",
   "docs/qa/blind-spots/registry.json",
   "docs/qa/hiring-review/README.md",
@@ -83,6 +85,8 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-jamie-personal-facebook-posts-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-icloud-teams-archive-expansion.md",
   "docs/knowledge-bank/intake/2026-07-15-nycac-institutional-interface.md",
+  "docs/knowledge-bank/intake/2026-07-15-ucsc-morse-sack-evaluations.md",
+  "docs/knowledge-bank/research/ucsc-morse-sack-evaluations.md",
   "docs/knowledge-bank/research/nyc-council-finkelpearl-transcript-census.json",
   "docs/knowledge-bank/research/nyc-council-finkelpearl-transcript-census.md",
   "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
@@ -115,6 +119,7 @@ const requiredFiles = [
   "evals/knowledge-bank/runs/2026-07-15-icloud-teams-expansion.md",
   "evals/knowledge-bank/runs/2026-07-15-nycac-institutional-interface.md",
   "evals/knowledge-bank/runs/2026-07-15-blind-spots.md",
+  "evals/knowledge-bank/runs/2026-07-15-morse-sack-lenses.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
@@ -129,6 +134,7 @@ const requiredFiles = [
   "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/icloud-teams-expansion.ts",
   "apps/www/src/data/knowledge-bank/nycac-institutional-interface.ts",
+  "apps/www/src/data/knowledge-bank/ucsc-narrative-evaluations.ts",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
@@ -165,6 +171,9 @@ const requiredFiles = [
   "scripts/evals-archival-survivorship.mjs",
   "scripts/evals-release-governance.mjs",
   "scripts/evals-blind-spots.mjs",
+  "scripts/lib/instructor-lens-evals.mjs",
+  "scripts/evals-margaret-morse-lens.mjs",
+  "scripts/evals-warren-sack-lens.mjs",
   "scripts/lib/personal-facebook-posts-guard.mjs",
   "scripts/tests/personal-facebook-posts-guard.test.mjs",
   "scripts/lib/urbanhermit-mission-classifier.mjs",
@@ -207,6 +216,8 @@ for (const script of [
   "evals:archival-survivorship",
   "evals:release-governance",
   "evals:blind-spots",
+  "evals:margaret-morse",
+  "evals:warren-sack",
   "test:personal-facebook-posts-guard",
   "evals:recursive",
   "preflight:staging",
@@ -223,6 +234,14 @@ if (scripts.check && !scripts.check.includes("npm run evals:blind-spots")) {
   fail("package.json check script must include npm run evals:blind-spots");
 }
 
+if (scripts.check && !scripts.check.includes("npm run evals:margaret-morse")) {
+  fail("package.json check script must include npm run evals:margaret-morse");
+}
+
+if (scripts.check && !scripts.check.includes("npm run evals:warren-sack")) {
+  fail("package.json check script must include npm run evals:warren-sack");
+}
+
 const blindSpotScripts = {
   "evals:outcomes-adoption": "node scripts/evals-outcomes-adoption.mjs",
   "evals:role-corroboration": "node scripts/evals-role-corroboration.mjs",
@@ -233,6 +252,17 @@ const blindSpotScripts = {
   "evals:release-governance": "node scripts/evals-release-governance.mjs",
   "evals:blind-spots": "node scripts/evals-blind-spots.mjs"
 };
+
+const instructorLensScripts = {
+  "evals:margaret-morse": "node scripts/evals-margaret-morse-lens.mjs",
+  "evals:warren-sack": "node scripts/evals-warren-sack-lens.mjs"
+};
+
+for (const [name, command] of Object.entries(instructorLensScripts)) {
+  if (scripts[name] !== command) {
+    fail(`package.json ${name} must run ${command}`);
+  }
+}
 
 for (const [name, command] of Object.entries(blindSpotScripts)) {
   if (scripts[name] !== command) {
