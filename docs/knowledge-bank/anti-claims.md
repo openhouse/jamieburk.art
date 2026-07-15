@@ -39,6 +39,12 @@ Do not silently normalize the Matmos credit from Jamie Burkhardt to Jamie
 Burkart. Do not collapse collaborator, programmer, construction, platform, or
 source-composition credits into sole authorship by Jamie.
 
+For NTER CHNG, do not say the Nerman Museum page names the project; its role is
+exhibition context only. Do not convert a first-party account of visitor use
+into attendance, reach, endorsement, adoption, reception, or impact. Do not
+reproduce archived phone numbers, participant messages, or media without
+separate permission and review.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

@@ -229,3 +229,18 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## nter-chng-america-now-here - NTER CHNG exhibition provenance
+
+**Status:** Careful
+**Support level:** Strong with boundaries
+**Evidence class:** Archived project site / official archived exhibition pages / institutional context
+**Public wording:** America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists.
+**Detailed public-safe wording:** The archived artist page describes the work as a participatory software-and-architectural installation; a separate first-party article documents visitors sending text messages and seeing them projected on a large gauze display.
+**Where to project:** Knowledge-bank project note only. Reserve for a future creative-technology or interaction-design context after editorial review.
+**Why it matters:** Adds direct institutional evidence for a long-running practice of translating participant input, software, and spatial form into shared public interaction.
+**Guardrail:** Preserve shared authorship and the distinction between exhibition inclusion, observed use, and impact. The Nerman Museum page supplies exhibition context but does not name NTER CHNG.
+**Do not say:** Jamie solely created NTER CHNG; the sources establish Jamie's detailed technical scope; the Nerman Museum page names the project; the installation reached a quantified audience or produced a measured impact.
+**Protected boundaries:** Do not reproduce archived phone numbers, participant messages, or media without separate permission and review.
+**Review owner:** Jamie / collaborator confirmation needed for a detailed division of labor
+**Last reviewed:** 2026-07-15

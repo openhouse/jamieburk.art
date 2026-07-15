@@ -41,6 +41,10 @@ Every new intake remains `no-public-projection`.
 | --- | --- | --- | --- | --- |
 | The Pitch, NTR CHNG | Public article | 2010 installation form and visitor-text interaction | Jamie's role or technical scope | Project context |
 | NTER CHNG Vimeo metadata | Public project metadata | Jamie, Drew Bolton, and Garrett Fuselier designer credits; Mary Nichols construction contribution | Sole authorship, exact technical division, visitor scale | Candidate claim |
+| NTER CHNG archived project site | Archived project page | Shared maker credit and earlier Arts Incubator / Cocoon Gallery presentation | America: Now and Here inclusion, task division, audience, impact | Candidate claim context |
+| America: Now and Here Kansas City artist page | Official archived exhibition page | 2011 inclusion, shared visual-artist credit, participatory software-and-architecture form | Individual task division, audience, endorsement, impact | Governed reserve claim |
+| America: Now and Here visitor-use article | Official archived exhibition article | Observed visitor text input and projected output | Attendance, reach, adoption, reception, or impact | Corroboration |
+| Nerman Museum America: Now and Here page | Institutional page | Kansas City launch and multi-venue exhibition context | NTER CHNG inclusion or maker credit | Context only |
 | Monthly Music Hackathon NYC | Public institutional page | Jamie made a Max/MSP audio-segmentation and pitch-sorting program in February 2013 | Production deployment or broad engineering mastery | Candidate claim |
 | Matmos / Vague Terrain | Public institutional page | Specially prepared 2016 tour video with a collaborator printed as Jamie Burkhardt | Identity as Jamie Burkart or exact role | Research only |
 | XR Ensemble | Public institutional social post | Jamie Burkart and Michael Rees artist credit; app-accessed clips and public-memory purpose | Sole authorship or authorship of the AR platform | Candidate claim |
@@ -59,7 +63,10 @@ Every new intake remains `no-public-projection`.
 The public record supports three portable actor-action-output claims:
 
 - Jamie co-designed NTER CHNG with Drew Bolton and Garrett Fuselier; Mary
-  Nichols helped engineer and construct the wall.
+  Nichols helped engineer and construct the wall. America: Now and Here's
+  official archived site independently documents the three collaborators as
+  visual artists in the 2011 Kansas City exhibition and records the
+  installation's participatory form.
 - Jamie built a Max/MSP hackathon program that segmented audio and reordered
   clips by pitch.
 - Jamie and Michael Rees created Claudette's Theatre On Wheels as an
@@ -101,9 +108,9 @@ AI-generated synthesis becomes evidence for its own summaries.
 
 ## Data-Quality Findings
 
-- **High confidence:** NTER CHNG collaborator credits, the Max/MSP project,
-  Claudette's Theatre artist credits, protected artifact authorship, and course
-  completion.
+- **High confidence:** NTER CHNG collaborator and exhibition credits, observed
+  public use of the installation, the Max/MSP project, Claudette's Theatre
+  artist credits, protected artifact authorship, and course completion.
 - **Moderate confidence:** CRS running-minutes use beyond the document itself;
   the source records started and open work, not universal adoption.
 - **Held:** the Matmos identity link because of the surname mismatch.
@@ -133,8 +140,9 @@ propositions, correction triggers, and research questions.
 
 1. Resolve the Matmos surname conflict with an unambiguous credit or
    collaborator confirmation.
-2. Recover rights-cleared project images or stills for the three interactive
-   media claims.
+2. Recover the NTER CHNG press release, collaborator accounts, and
+   rights-cleared project images or stills for the three interactive media
+   claims.
 3. Build a reproducible public-safe inventory for the CRS 30+ page aggregate.
 4. Seek public or permissioned evidence of adoption or use for the CRS
    operating artifacts and data proposals.

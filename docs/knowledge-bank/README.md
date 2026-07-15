@@ -116,3 +116,10 @@ recovered timeline objects from three unresolved slots, inventories posted
 URLs and stakeholder patterns, and supports one bounded website projection:
 71 issue-recognition posts linked 61 distinct CallNYC issue pages to 26
 Council-member accounts.
+
+The [NTER CHNG archive expansion](intake/2026-07-15-nter-chng-archive-expansion.md)
+demonstrates a related source-chain pattern: an archived project site, an
+official exhibition artist page, a first-party account of visitor use, and an
+institutional context page support different parts of the record. The resulting
+[creative-technology practice note](projects/creative-technology-practice.md)
+is reserve knowledge, not an automatic website projection.

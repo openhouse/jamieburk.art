@@ -20,6 +20,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
+- NTER CHNG: shared Drew Bolton / Jamie Burkart / Garrett Fuselier visual-artist credit, 2011 America: Now and Here inclusion, and observed visitor use are approved for the public knowledge-bank reserve only. Do not infer individual technical scope, quantified reach, endorsement, or impact, and do not republish archived phone numbers, participant messages, or media.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

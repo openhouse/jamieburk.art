@@ -150,8 +150,9 @@ July 12-14, 2026:
   appropriation, and 2024 reappropriation of the unused allocation.
 - Jamie's firsthand account of transitioning KC Town Hall stewardship to a
   mission-aligned organization when his involvement concluded.
-- interactive media, sound, and public-memory practice across NTER CHNG, a
-  Max/MSP audio experiment, Matmos research, and Claudette's Theatre On Wheels;
+- interactive media, sound, and public-memory practice across NTER CHNG,
+  including its America: Now and Here exhibition record, a Max/MSP audio
+  experiment, Matmos research, and Claudette's Theatre On Wheels;
 - Commercial Rent Stabilization operating plans, shared minutes, and
   privacy-preserving public-data proposals; and
 - AI evals completion, bounded source-backed sprint design, and a context-only
@@ -181,8 +182,11 @@ and reappropriation, while agreement execution, any disbursement, and Jamie's
 specific contribution remain separate questions. The stewardship transition is
 `captured` as a distinct memory lead pending a public-safe handoff record or
 receiving-organization confirmation. None of those items is approved for
-direct website projection. The three July 14 archive-production threads have reached
-`claim-candidate` for their supported propositions while retaining protected
-source locators and explicit non-claims. The Google Drive pass adds two more
+direct website projection. The three July 14 archive-production threads have
+reached `claim-candidate` for their supported propositions while retaining
+protected source locators and explicit non-claims. The interactive-media
+thread now links one governed reserve claim for NTER CHNG's 2011 America: Now
+and Here inclusion; that claim remains outside the current website and public
+citation registry. The Google Drive pass adds two more
 `claim-candidate` threads and one `researching` thread; all three remain outside
 the website and generated public registry.

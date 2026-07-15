@@ -88,6 +88,23 @@ and its public CSV ledger add an explicit population-disposition pattern: a
 profile-counted object may be `recovered` or `not-recovered`, and the total can
 still reconcile without inventing the unavailable content.
 
+### Creative Technology Exhibition Records
+
+The NTER CHNG record uses four public sources with deliberately different
+jobs:
+
+- the archived project site establishes the installation's description, shared
+  maker credit, and earlier Kansas City presentation;
+- America: Now and Here's archived Kansas City artist page directly establishes
+  exhibition inclusion, shared visual-artist credit, and the work's documented
+  form;
+- the exhibition's first-party article establishes observed visitor use, not
+  attendance, reach, endorsement, adoption, reception, or impact; and
+- the Nerman Museum page establishes the wider Kansas City launch and
+  multi-venue context, but does not name NTER CHNG.
+
+See the [dated intake note](intake/2026-07-15-nter-chng-archive-expansion.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

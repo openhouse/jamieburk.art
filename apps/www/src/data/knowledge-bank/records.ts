@@ -466,6 +466,73 @@ const knowledgeBankInput = {
       doesNotEstablish: ["sole authorship", "Jamie's exact technical implementation scope", "visitor count", "commercial deployment", "current installation status"]
     },
     {
+      id: "SRC-NTER-CHNG-PROJECT-SITE-2011",
+      title: "NTER CHNG project site",
+      organization: "NTER CHNG",
+      kind: "archived-web-capture",
+      visibility: "public",
+      preservationStatus: "archived",
+      capturedAt: "2011-01-28T19:33:50Z",
+      accessedAt: "2026-07-15",
+      archiveUrl: "https://web.archive.org/web/20110128193350/http://nterchng.com/",
+      preferredPublicUrl: "archive",
+      publicCitation: "NTER CHNG project site, archived January 28, 2011.",
+      publicNote: "The archived project site describes an interactive texting installation by Drew Bolton, Jamie Burkart, and Garrett Fuselier and preserves its earlier Arts Incubator / Cocoon Gallery presentation.",
+      supportsGenerally: ["NTER CHNG as an interactive texting installation", "shared credit for Drew Bolton, Jamie Burkart, and Garrett Fuselier", "an earlier Arts Incubator / Cocoon Gallery presentation in Kansas City"],
+      doesNotEstablish: ["the detailed division of software, design, fabrication, or production labor", "inclusion in America: Now and Here", "audience size, reception, adoption, or impact", "rights to republish archived media"]
+    },
+    {
+      id: "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
+      title: "Drew Bolton, Jamie Burkart, and Garrett Fuselier",
+      organization: "America: Now and Here Kansas City",
+      kind: "archived-web-capture",
+      visibility: "public",
+      preservationStatus: "archived",
+      capturedAt: "2011-05-18T07:16:26Z",
+      accessedAt: "2026-07-15",
+      archiveUrl: "https://web.archive.org/web/20110518071626/http://kansascity.americanowandhere.org/the-visual-artists/drew-bolton-jamie-burkart-and-garrett-fuselier/",
+      preferredPublicUrl: "archive",
+      publicCitation: "America: Now and Here Kansas City, 'Drew Bolton, Jamie Burkart, and Garrett Fuselier,' archived May 18, 2011.",
+      publicNote: "The exhibition's official Kansas City site lists the three collaborators as visual artists and describes NTER CHNG as a software-and-architectural installation for real-time many-to-many public text exchange. Contact details and participant submissions on the archived page are intentionally excluded.",
+      supportsGenerally: ["NTER CHNG inclusion in America: Now and Here in Kansas City", "shared visual-artist credit for Drew Bolton, Jamie Burkart, and Garrett Fuselier", "the work's software, architectural, real-time, and participatory form", "the collaborators' combined backgrounds in scenic design, computer programming, motion graphics, and experiential production"],
+      doesNotEstablish: ["solo authorship or the detailed division of labor", "audience size, reception, later adoption, or causal impact", "institutional endorsement of an individual collaborator", "permission to republish contact details, participant messages, or media"]
+    },
+    {
+      id: "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
+      title: "I Text, Therefore I Am",
+      organization: "America: Now and Here",
+      author: "BProffer",
+      kind: "archived-web-capture",
+      visibility: "public",
+      preservationStatus: "archived",
+      publishedAt: "2011-06-22",
+      capturedAt: "2012-10-17T09:05:12Z",
+      accessedAt: "2026-07-15",
+      archiveUrl: "https://web.archive.org/web/20121017090512/http://americanowandhere.org/2011/06/i-text-therefore-i-am/",
+      preferredPublicUrl: "archive",
+      publicCitation: "America: Now and Here, 'I Text, Therefore I Am,' June 22, 2011, archived October 17, 2012.",
+      publicNote: "A first-party exhibition account describes visitors using NTER CHNG by sending text messages and seeing them projected on a floor-to-ceiling gauze display. Participant messages are not reproduced in the knowledge bank.",
+      supportsGenerally: ["visitor use of NTER CHNG during America: Now and Here", "text-message input and projected visual output", "public interaction as an observed feature of the installation"],
+      doesNotEstablish: ["the makers' individual responsibilities", "total attendance, unique participants, endorsement, or impact", "permission to republish participant messages or exhibition media"]
+    },
+    {
+      id: "SRC-NERMAN-AMERICA-NOW-HERE-2011",
+      title: "America: Now and Here - Barbara Kruger",
+      organization: "Nerman Museum of Contemporary Art",
+      author: "Alice Thorson",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2011-04-30",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Alice Thorson, 'America: Now and Here - Barbara Kruger,' Nerman Museum of Contemporary Art, April 30, 2011.",
+      publicNote: "The institutional page situates America: Now and Here's 2011 Kansas City launch and its multi-venue visual, literary, musical, and performance program.",
+      supportsGenerally: ["Kansas City as the 2011 launch context for America: Now and Here", "the exhibition's multi-venue and multidisciplinary scope", "Nerman Museum participation in the Kansas City program"],
+      doesNotEstablish: ["NTER CHNG inclusion in the exhibition", "the NTER CHNG maker credits or division of labor", "Jamie's attendance, institutional endorsement, audience reach, or impact"]
+    },
+    {
       id: "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
       title: "A Sorted Audio File",
       organization: "Monthly Music Hackathon NYC",
@@ -792,6 +859,35 @@ const knowledgeBankInput = {
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "CLM-NTER-CHNG-AMERICA-NOW-HERE-2011",
+      project: "creative-technology-practice",
+      internalClaim: "America: Now and Here's official Kansas City site listed Drew Bolton, Jamie Burkart, and Garrett Fuselier as visual artists and documented NTER CHNG in the 2011 exhibition; the exhibition's main site later described visitors using the installation.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "archive-note",
+        text: "America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["docs/knowledge-bank/projects/creative-technology-practice"]
+      }],
+      evidence: [
+        { sourceId: "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", relationship: "direct-support", supports: ["exhibition inclusion", "three-person visual-artist credit", "installation form and interaction"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", relationship: "corroborating", supports: ["observed visitor use", "text input and projected output"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NTER-CHNG-PROJECT-SITE-2011", relationship: "context", supports: ["project description", "shared maker credit", "earlier Kansas City presentation"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NERMAN-AMERICA-NOW-HERE-2011", relationship: "context", supports: ["institutional launch and exhibition context"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: [
+        "Credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together; the records do not establish solo authorship or a detailed task split.",
+        "The official America: Now and Here pages establish exhibition inclusion and observed use; the Nerman Museum page supplies context but does not itself name NTER CHNG.",
+        "No attendance, unique-participant, reception, adoption, endorsement, or impact claim is attached.",
+        "Do not republish archived phone numbers, participant messages, or media without separate permission and review."
+      ],
+      antiClaims: ["Jamie solely created NTER CHNG", "The Nerman Museum page names NTER CHNG", "The sources establish a quantified audience or exhibition impact", "Archived access grants rights to participant messages or media"],
+      researchInquiryIds: ["INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex Wayback review"]
     }
   ],
   researchInquiries: [
@@ -819,6 +915,30 @@ const knowledgeBankInput = {
       limitations: ["Three profile-counted objects remain unavailable after authenticated Posts, Replies, chronological search, and Internet Archive status-URL checks.", "The census is not a platform account-data export and cannot recover deleted, restricted, deindexed, or otherwise unavailable content.", "Access-time likes, reposts, and replies are mutable and do not expose complete historical actor identity.", "A named Council account in a project post is not the same as engagement by that office; interaction claims use separately inspected member-authored statuses.", "The account corpus does not identify a different human author for every post, although a contemporaneous first-person reply identifies Jamie's relationship to the project."],
       sourceIds: ["SRC-CALLNYC-X-PROFILE-2026-07-14", callNycFullPopulationCensusSourceId, ...callNycProjectSocialSourceIds, ...callNycCouncilSocialSourceIds],
       publicSummary: "A 110-slot full-population census recovered 107 timeline objects. The recovered record includes 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts, while preserving a three-item recovery remainder and separating account mentions from verified office-account interactions."
+    },
+    {
+      id: "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
+      project: "creative-technology-practice",
+      question: "What original code, diagrams, cleared installation media, collaborator accounts, and press materials would clarify the NTER CHNG division of labor and support a future visual projection?",
+      methods: [
+        "Recovered and closely read the archived project site, America: Now and Here's official Kansas City artist page, the exhibition's first-party visitor-use article, and the current Nerman Museum exhibition-context page.",
+        "Queried the Internet Archive CDX index for NTER CHNG captures and the project site's linked press-release PDF.",
+        "Separated direct exhibition and collaborator evidence from institutional context and rights-sensitive participant material."
+      ],
+      runAt: "2026-07-15",
+      resultStatus: "partially-recovered",
+      findings: [
+        "Official archived exhibition pages establish NTER CHNG's inclusion, shared visual-artist credit, installation form, and observed visitor use.",
+        "The archived project site preserves shared maker credit and the earlier Arts Incubator / Cocoon Gallery presentation.",
+        "The Nerman Museum page supplies Kansas City launch context but does not name NTER CHNG."
+      ],
+      limitations: [
+        "The linked project-site press-release PDF was not recovered in the exact-URL or site-wide CDX review; this is not evidence that it never existed.",
+        "Current public records do not decompose individual responsibilities or grant media and participant-text republication rights.",
+        "Observed visitor use does not establish attendance, unique participants, reception, adoption, endorsement, or impact."
+      ],
+      sourceIds: ["SRC-NTER-CHNG-PROJECT-SITE-2011", "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", "SRC-NERMAN-AMERICA-NOW-HERE-2011"],
+      publicSummary: "America: Now and Here's archived official pages establish NTER CHNG's 2011 Kansas City exhibition inclusion, shared Drew Bolton / Jamie Burkart / Garrett Fuselier visual-artist credit, and observed visitor use; the Nerman Museum page supplies context rather than project-specific proof."
     }
   ],
   corrections: [
@@ -1949,19 +2069,24 @@ const knowledgeBankInput = {
       id: "INTAKE-INTERACTIVE-MEDIA-PRACTICE-2026-07-14",
       title: "Interactive media, sound, and public-memory practice",
       kind: "claim-candidate",
-      summary: "Public project records recover three concrete interaction-design works by Jamie across 2010-2022: a texting installation built as a shared gallery dialogue, a Max/MSP audio-sorting experiment, and an app-accessed public-memory work created with Michael Rees. A fourth Matmos video credit remains a research lead because the source spells the collaborator's surname differently.",
+      summary: "Public project records recover three concrete interaction-design works by Jamie across 2010-2022: a texting installation built as a shared gallery dialogue and included in America: Now and Here, a Max/MSP audio-sorting experiment, and an app-accessed public-memory work created with Michael Rees. A fourth Matmos video credit remains a research lead because the source spells the collaborator's surname differently.",
       status: "claim-candidate",
       sourceIds: [
         "SRC-NTER-CHNG-PITCH-2010-01-07",
         "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23",
+        "SRC-NTER-CHNG-PROJECT-SITE-2011",
+        "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
+        "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
+        "SRC-NERMAN-AMERICA-NOW-HERE-2011",
         "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
         "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
         "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29"
       ],
-      relatedClaimIds: [],
+      relatedClaimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-2011"],
       relatedProofIds: [],
       candidateClaims: [
         "In 2010, Jamie co-designed NTER CHNG with Drew Bolton and Garrett Fuselier, an interactive installation that used a two-sided digital wall and visitor text messages to form an evolving gallery dialogue; Mary Nichols helped engineer and construct the wall.",
+        "America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists; a separate first-party article documents visitors using the text-message input and projected display.",
         "At a February 2013 Monthly Music Hackathon NYC, Jamie built a Max/MSP program that segmented an audio file and reordered the clips by pitch.",
         "In 2022, Jamie Burkart and Michael Rees created Claudette's Theatre On Wheels, an interactive work honoring Claudette's women-centered theater through short app-accessed performance clips."
       ],
@@ -1972,11 +2097,22 @@ const knowledgeBankInput = {
           status: "synthesis-with-boundary",
           sourceIds: [
             "SRC-NTER-CHNG-PITCH-2010-01-07",
-            "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23"
+            "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23",
+            "SRC-NTER-CHNG-PROJECT-SITE-2011",
+            "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011"
           ],
-          sourceSupport: ["January 2010 project context and interaction model", "Jamie, Drew, and Garrett designer credits", "Garrett programmer credit", "Mary Nichols engineering and construction contribution"],
+          sourceSupport: ["January 2010 project context and interaction model", "Jamie, Drew, and Garrett designer and visual-artist credits", "Garrett programmer credit", "Mary Nichols engineering and construction contribution", "official description of the software, architecture, and many-to-many interaction"],
           boundaries: ["Preserve every named collaborator's credit.", "Do not assign Jamie an undocumented programming or wall-engineering role.", "Do not infer visitor scale or lasting audience outcome."],
           decisionUse: "Supports interaction design, collaborative prototyping, and the translation of participant input into a shared public interface."
+        },
+        {
+          id: "PROP-NTER-CHNG-AMERICA-NOW-HERE-2011",
+          text: "America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists; a separate first-party article documents visitors using the text-message input and projected display.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", "SRC-NTER-CHNG-PROJECT-SITE-2011", "SRC-NERMAN-AMERICA-NOW-HERE-2011"],
+          sourceSupport: ["official 2011 Kansas City visual-artist listing", "shared Drew Bolton, Jamie Burkart, and Garrett Fuselier credit", "NTER CHNG installation description", "first-party account of visitor text input and projected output", "institutional Kansas City launch context"],
+          boundaries: ["Preserve all three visual-artist credits and do not infer a detailed task split.", "The Nerman Museum page supplies exhibition context but does not itself name NTER CHNG.", "Observed use is not attendance, reach, endorsement, adoption, or impact.", "Do not reproduce archived phone numbers, participant messages, or media without separate review."],
+          decisionUse: "Adds direct first-party institutional evidence for exhibition inclusion and public operation while keeping the current hiring-site composition unchanged."
         },
         {
           id: "PROP-SORTED-AUDIO-MAX-MSP-2013",
@@ -2010,7 +2146,8 @@ const knowledgeBankInput = {
       tensions: [],
       researchQuestions: [
         "Can an unambiguous source resolve the Burkhardt/Burkart Matmos credit and identify Jamie's exact contribution?",
-        "Which public project files or collaborator accounts identify Jamie's specific design decisions in NTER CHNG and Claudette's Theatre On Wheels?",
+        "Which original project files or collaborator accounts identify Jamie's specific design decisions in NTER CHNG and Claudette's Theatre On Wheels?",
+        "Can the NTER CHNG press-release PDF linked by the archived project site be recovered from another archive or collaborator copy?",
         "Do public-safe images or video stills survive with publication rights and collaborator consent?",
         "Which additional experimental media projects add a distinct action, output, or consequence rather than duplicating this thread?"
       ],
@@ -2018,12 +2155,14 @@ const knowledgeBankInput = {
         "Do not use a project page that omits Jamie as person-specific role evidence.",
         "Preserve collaborator, programmer, construction, platform, and source-composition credit.",
         "Treat the Matmos item as unresolved research until the surname conflict is corroborated.",
+        "Do not publish archived phone numbers, participant-submitted messages, or media without privacy and rights review.",
+        "Not recovering the linked NTER CHNG press release is not evidence that it never existed.",
         "Do not project this intake item directly to the website; create and approve a governed claim first."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
-      reviewedAt: "2026-07-14",
-      reviewedBy: ["Jamie Burkart", "Codex iCloud archive review"]
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex iCloud and Wayback archive review"]
     },
     {
       id: "INTAKE-CRS-OPERATING-AND-DATA-INFRASTRUCTURE-2026-07-14",
