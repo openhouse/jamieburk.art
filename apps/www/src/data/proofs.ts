@@ -723,6 +723,8 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Builds knowledge systems and documentation through source maps, meeting synthesis, public guidance, resource libraries, templates, and reusable reference systems.",
     shortWording: "Knowledge systems and reusable documentation",
+    detailedPublicWording:
+      "Jamie turns source material, meetings, public guidance, working resources, and recurring formats into reference systems that collaborators can review, reuse, and hand off.",
     sourceBasis:
       "Approved public positioning and public-safe aggregate review of Jamie's source maps, campaign memory, guidance, resource, template, and handoff work.",
     whyItMatters:
@@ -757,6 +759,8 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Currently focused on technical project management, product operations, implementation, business analysis, civic and government technology delivery, and source-backed knowledge systems.",
     shortWording: "Current technical operations and civic technology focus",
+    detailedPublicWording:
+      "Jamie's current public positioning brings demonstrated implementation and documentation practice toward technical project management, product operations, business analysis, civic technology delivery, and bounded source-backed knowledge systems.",
     sourceBasis:
       "Jamie's approved public positioning and reviewed current professional focus.",
     whyItMatters:

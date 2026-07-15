@@ -311,6 +311,7 @@ claim beyond the wording and guardrails here.
 **Support level:** Moderate
 **Evidence class:** Approved resume / public-safe archive summary
 **Public wording:** Builds knowledge systems and documentation through source maps, meeting synthesis, public guidance, resource libraries, templates, and reusable reference systems.
+**Detailed public-safe wording:** Jamie turns source material, meetings, public guidance, working resources, and recurring formats into reference systems that collaborators can review, reuse, and hand off.
 **Where to project:** Homepage, Resume, Technical Operations, About.
 **Why it matters:** Supports the portfolio's knowledge-systems capability as a complete proposition rather than through an incidental shared word.
 **Guardrail:** Describe a cross-project working practice; do not imply every private source system or collaborator record is public.
@@ -325,6 +326,7 @@ claim beyond the wording and guardrails here.
 **Support level:** Moderate
 **Evidence class:** Approved resume / Jamie review confirmation
 **Public wording:** Currently focused on technical project management, product operations, implementation, business analysis, civic and government technology delivery, and source-backed knowledge systems.
+**Detailed public-safe wording:** Jamie's current public positioning brings demonstrated implementation and documentation practice toward technical project management, product operations, business analysis, civic technology delivery, and bounded source-backed knowledge systems.
 **Where to project:** Homepage, About, Resume.
 **Why it matters:** Distinguishes the roles Jamie is seeking now from historical project outcomes.
 **Guardrail:** Frame this as current professional direction and demonstrated practice, not a claim of formal certification or government employment.

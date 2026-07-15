@@ -1,7 +1,7 @@
 {
   "version": 3,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "ec3cec35d9f868def9dbfac7f757c95c2f3b9db09e4a57a38753353709db238b",
+  "publicSurfaceSha256": "38ed08446e5418f25fb875edeeec17f4e3c8faac578b6788016a56b37e8a4912",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
