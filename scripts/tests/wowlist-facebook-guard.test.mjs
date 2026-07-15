@@ -18,7 +18,19 @@ const prohibitedMutations = [
   "Member feedback drove feature decisions for the site.",
   "The authenticated view exposed Page-control tools.",
   "Jamie retained control of the WOW List Page.",
-  "Jamie had Page administrator access during review."
+  "Jamie had Page administrator access during review.",
+  "The roadmap changed after members sent suggestions.",
+  "We based product changes on comments from community members.",
+  "Jamie remained an administrator of the WOW List Page.",
+  "Jamie was listed as a Page editor.",
+  "The signed-in Page let Jamie publish posts.",
+  "Page settings were available to Jamie during review.",
+  "The dashboard allowed posting as WOW List.",
+  "WOW List invited members whose feedback shaped the product to help shape the service.",
+  "Jamie still controls the WOW List Page.",
+  "The signed-in account allowed Jamie to post as the Page.",
+  "The product incorporated ideas from members.",
+  "Member suggestions were implemented in the site."
 ];
 
 for (const mutation of prohibitedMutations) {
@@ -33,6 +45,8 @@ const boundedStatements = [
   "We invited community members to help shape the service.",
   "WOW List invited members to help shape the platform.",
   "A separate invitation asked members to help improve the site through a video conversation.",
+  "WOW List invited members to help shape the site.",
+  "Members were invited to provide feedback on product design.",
   "Additional protected controls did not establish a lifetime denominator.",
   "The post does not identify the human author or administrator."
 ];
