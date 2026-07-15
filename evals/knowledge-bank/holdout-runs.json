@@ -463,6 +463,24 @@
       "blockers": [
         "Two fresh independent judges must verify that the repaired protected-intake, privacy, prospective-plan, collective-credit, individual-role, audience-impact, exhibition-status, and selective-projection controls reject their full attack matrices after ordinary approval hashes are refreshed."
       ]
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-c",
+      "completedAt": "2026-07-15T15:18:03Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-d",
+      "completedAt": "2026-07-15T11:18:09-04:00",
+      "lens": "Independent archival interpretation, collective-credit, public-safety, hiring-portfolio, and approval-hash-resistant mutation review of the frozen repaired candidate",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

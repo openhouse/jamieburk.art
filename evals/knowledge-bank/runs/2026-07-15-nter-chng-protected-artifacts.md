@@ -77,3 +77,24 @@ preserved in the ledger and followed by a fresh protocol reset. Two new
 independent reviewers must accept the repaired frozen revision at 5 / 5 across
 all 19 criteria with no blockers: one focused on data integrity and privacy, and
 one focused on archival interpretation, collective credit, and portfolio use.
+
+## Final holdouts
+
+Both independent reviewers accepted frozen commit `1054603f` with all 19
+criteria at 5 and no blockers.
+
+- The data-integrity and privacy reviewer ran 48 fresh in-memory attacks. Every
+  attack refreshed and matched the ordinary archive approval hash before
+  evaluation; all 48 failed relevant criteria. The immutable locks rejected 46
+  governed-record attacks, semantic controls independently rejected 25, and the
+  website-projection rule rejected all three projection-bypass attacks.
+- The archival-credit and hiring editor ran 36 fresh paraphrased attacks. Every
+  relevant criterion fell to 1 under attack, while the restored baseline
+  returned to 5 across all criteria with the review locks, attribution safety,
+  and website-projection boundary intact.
+
+The completed cycle preserves the useful archival result: NTER CHNG is now
+legible as a collaborative hybrid technical and spatial production system, with
+Jamie-attributed interaction intent and no invented component ownership. The
+current hiring-facing website remains unchanged; the claim stays held for
+future composition.
