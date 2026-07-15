@@ -166,6 +166,33 @@ collaborator proof notes.
 See
 `docs/knowledge-bank/research/nycartc-facebook-posts-2026-07-14.md`.
 
+## KC Spaces Fund Facebook Page Posts
+
+The July 14 authenticated terminal traversal assigns a public-safe disposition
+to all 38 post or remnant records surfaced by the surviving KC Spaces Fund
+Facebook Page chronology. Nineteen records retain readable campaign messages,
+including ten named grantee-recognition records; nineteen survive only as
+interface or unavailable-content remnants. The redacted ledger stores forms,
+themes, stakeholder-group counts, destination-family counts, and visible-
+reaction booleans without raw post text, comments, names, post URLs, or
+per-record metrics.
+
+A separate route ledger preserves the campaign site, public GoFundMe, and an
+archived Oddities Prints mutual-aid fundraiser. The source layer also records
+independent Kansas City Star resource-guide visibility. The GoFundMe preserves
+named-organizer and fiscal-sponsor credit; the Oddities archive preserves
+partner and artist credit. None of these records identifies Jamie as the
+Facebook publisher, organizer, fundraiser owner, grant decision-maker, or
+author of individual posts.
+
+The resulting KC Spaces Fund identity is directly observable across the
+campaign domain and its linked Facebook, X, and Instagram routes. Jamie's
+memory that he supported choosing a uniformly available project name remains
+research-stage pending creation records and collaborator proof notes.
+
+See
+`docs/knowledge-bank/research/kcspacesfund-facebook-posts-2026-07-14.md`.
+
 ## Personal Public Social Sources
 
 Personal social records may enter the source bank after individual close

@@ -186,6 +186,24 @@ rolling-grant, and announcement workflows visible.
 Jamie organized the fund, authored every post, raised the funds, or made grant
 decisions. Named public-organizer credit remains unchanged.
 
+The subsequent
+[Facebook Page-post census](kcspacesfund-facebook-posts-2026-07-14.md)
+dispositions all 38 records or remnants surfaced by the surviving Page
+chronology after 40 terminal scrolls without additions. Nineteen records retain
+readable campaign messages, including ten named grantee recognitions; nineteen
+remain interface or unavailable-content remnants. Three normalized public
+route families connect the campaign site, GoFundMe, and an archived Oddities
+Prints mutual-aid fundraiser. A Kansas City Star COVID-19 help guide provides
+independent resource-listing context.
+
+The strengthened operations claim joins those public surfaces to Jamie's
+separately supported behind-the-scenes digital-infrastructure role. It does not
+identify him as the stakeholder or owner posting, shift named-organizer or
+grant-making credit, or infer human authorship from Page identity. The uniform
+public identity is public-ready reserve knowledge; Jamie's memory of helping
+select a uniformly available project name remains research-stage pending
+creation records and collaborator corroboration.
+
 ## KC Town Hall
 
 The subsequent
@@ -360,8 +378,11 @@ equivalent.
   administrator chronology, and collaborator proof notes.
 - KC Town Hall aggregate service metrics remain queued for reconciliation even
   though the workflow and collective-role evidence are now public-ready.
-- KC Spaces Fund social records remain bounded by named-organizer and
-  grant-decision credit.
+- KC Spaces Fund's X and Facebook records now support a strengthened, deferred
+  digital-operations claim and a separate deferred uniform-identity result.
+  Named-organizer, fundraiser, grant-decision, partner, grantee, and social-
+  authorship credit remains bounded; Jamie's naming-role memory remains
+  research-stage.
 
 ## Governing Anti-Claims
 

@@ -15,6 +15,7 @@ import { nycArtCFacebookEventCensus } from "../../apps/www/src/data/knowledge-ba
 import { personalWowListFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts";
 import { wowListFacebookPostCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts";
 import { nycArtCFacebookPostCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts";
+import { kcSpacesFundFacebookPostCensus } from "../../apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts";
 import { urbanHermitSocialCensus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
@@ -1503,7 +1504,14 @@ test("operational social claims retain metric and role boundaries", () => {
     (item) => item.id === "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
   );
 
-  assert.match(kcSpaces.internalClaim, /at least 11/i);
+  assert.match(kcSpaces.internalClaim, /complete surviving observed Facebook Page surface/i);
+  assert.ok(
+    kcSpaces.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-X-REVIEW-KCSPACES-2026" &&
+        item.supports.some((support) => /at least 11/i.test(support))
+    )
+  );
   assert.ok(kcSpaces.antiClaims.some((item) => /grant decisions/i.test(item)));
   assert.ok(kcTownHall.boundaries.some((item) => /self-reports/i.test(item)));
   assert.ok(kcTownHall.antiClaims.some((item) => /audited/i.test(item)));
@@ -1854,6 +1862,143 @@ test("NYC Artist Coalition Facebook census and mature claims remain deferred", (
     assert.equal(claim.projections.length, 0);
     assert.equal(decision.decision, "defer");
   }
+});
+
+test("KC Spaces Fund Facebook ledger dispositions the complete surviving surface", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json", "utf8")
+  );
+
+  assert.equal(ledger.records.length, 38);
+  assert.equal(new Set(ledger.records.map((item) => item.recordId)).size, 38);
+  assert.equal(ledger.population.surfacedPostAndRemnantRecords, 38);
+  assert.equal(ledger.population.readableCampaignMessages, 19);
+  assert.equal(ledger.population.interfaceOrUnavailableRemnants, 19);
+  assert.equal(ledger.population.terminalScrollsWithoutAddition, 40);
+  assert.equal(ledger.population.humanPublisherAttribution, "not-exposed");
+  assert.equal(kcSpacesFundFacebookPostCensus.traversal.surfacedPostAndRemnantRecords, 38);
+  assert.equal(Object.values(ledger.forms).reduce((sum, count) => sum + count, 0), 38);
+  assert.equal(Object.values(ledger.primaryThemes).reduce((sum, count) => sum + count, 0), 38);
+});
+
+test("KC Spaces Fund Facebook public ledger is aggregate-only and public-safe", () => {
+  const ledgerText = readFileSync(
+    "docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json",
+    "utf8"
+  );
+  const ledger = JSON.parse(ledgerText);
+  const forbiddenFields = [
+    "text",
+    "message",
+    "raw",
+    "postUrl",
+    "canonicalUrl",
+    "person",
+    "reactions",
+    "comments",
+    "shares",
+    "publisher"
+  ];
+
+  for (const item of ledger.records) {
+    for (const field of forbiddenFields) {
+      assert.equal(field in item, false, `${field} must remain protected`);
+    }
+    assert.equal(item.publicDetailStatus, "aggregate-only");
+  }
+  assert.equal(ledger.namedGranteeRecognitionRecords, 10);
+  assert.deepEqual(ledger.visibleInteractionSnapshot.datedAggregateFloor, {
+    reactions: 119,
+    comments: 4,
+    shares: 50
+  });
+  assert.match(ledger.visibleInteractionSnapshot.boundary, /not historical analytics.*unique people/i);
+  assert.doesNotMatch(ledgerText, /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+});
+
+test("KC Spaces Fund Facebook route ledger preserves all recovered destination families", () => {
+  const ledger = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/data/kcspacesfund-facebook-post-route-ledger.json",
+      "utf8"
+    )
+  );
+
+  assert.equal(ledger.routes.length, 3);
+  assert.deepEqual(
+    ledger.routes.map((item) => [item.routeType, item.occurrenceFloor]),
+    [
+      ["campaign-site", 17],
+      ["partner-fundraiser", 4],
+      ["fundraiser", 1]
+    ]
+  );
+  assert.deepEqual(
+    new Set(ledger.routes.map((item) => item.sourceId)),
+    new Set([
+      "SRC-KCSPACES-CAMPAIGN-SITE-2026",
+      "SRC-KCSPACES-ODDITIES-PRINT-FUNDRAISER-2020",
+      "SRC-KCSPACES-GOFUNDME-2020"
+    ])
+  );
+  assert.match(ledger.postedRouteBoundary, /not automatic corroboration.*conversion/i);
+});
+
+test("KC Spaces Fund operations claim preserves organizers, authorship, and traction boundaries", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCSPACES-PUBLIC-GRANT-DOCUMENTATION"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+  const requiredSources = [
+    "SRC-FACEBOOK-KCSPACES-POST-CENSUS-RUN-2026",
+    "SRC-KCSPACES-GOFUNDME-2020",
+    "SRC-KCSPACES-ODDITIES-PRINT-FUNDRAISER-2020",
+    "SRC-KANSAS-CITY-STAR-KCSPACES-2020",
+    "SRC-KCSPACES-DIGITAL-INFRASTRUCTURE-ARCHIVAL-REVIEW-2026"
+  ];
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.composition.action, /behind-the-scenes web infrastructure/i);
+  assert.match(claim.composition.usableResult, /38 records or remnants.*10 named grantee/i);
+  assert.match(claim.composition.collectiveCredit, /named organizers.*fiscal sponsor.*partners/i);
+  assert.match(claim.composition.causalBoundary, /does not show.*authored campaign posts/i);
+  assert.ok(requiredSources.every((sourceId) => claim.evidence.some((item) => item.sourceId === sourceId)));
+  assert.ok(claim.antiClaims.some((item) => /administered every account/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /reach.*adoption.*impact/i.test(item)));
+  assert.equal(claim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
+});
+
+test("KC Spaces Fund uniform identity is mature while Jamie's naming memory remains research-stage", () => {
+  const identityClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCSPACES-UNIFORM-PUBLIC-IDENTITY"
+  );
+  const namingSeed = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCSPACES-NAMING-AND-IDENTITY-ROLE-SEED"
+  );
+  const namingTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-KCSPACES-NAMING-AND-IDENTITY-ROLE"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === identityClaim.id
+  );
+
+  assert.equal(identityClaim.maturity, "public-ready");
+  assert.match(identityClaim.composition.usableResult, /kcspacesfund\.com.*Facebook, X, and Instagram/i);
+  assert.match(identityClaim.composition.collectiveCredit, /does not assign naming.*credit/i);
+  assert.ok(identityClaim.antiClaims.some((item) => /Jamie alone named/i.test(item)));
+  assert.equal(identityClaim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
+
+  assert.equal(namingSeed.status, "researching");
+  assert.equal(namingSeed.maturity, "researching");
+  assert.equal(namingSeed.evidence.length, 0);
+  assert.equal(namingSeed.projections.length, 0);
+  assert.ok(namingSeed.antiClaims.some((item) => /stakeholder or owner posting/i.test(item)));
+  assert.equal(namingTask.status, "open");
+  assert.ok(namingTask.nextActions.some((item) => /named organizers/i.test(item)));
 });
 
 test("judge evidence and floors are enforced", () => {

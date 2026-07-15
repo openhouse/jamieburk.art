@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "c47640b1986a180a8b2a39aebdbb8de2e320577c37e0baa101112f42efa64add",
+    "fingerprint": "742eb0676f8db143be3f7cfc9436a14fd111c7bcd6f6bb10a8009ea9067a2ee3",
     "counts": {
       "entities": 25,
-      "intake": 109,
-      "sources": 226,
-      "sourceReadings": 226,
-      "claims": 95,
-      "researchTasks": 39,
-      "projectionDecisions": 76
+      "intake": 115,
+      "sources": 235,
+      "sourceReadings": 235,
+      "claims": 97,
+      "researchTasks": 41,
+      "projectionDecisions": 77
     }
   },
   "judge": {
@@ -28,16 +28,16 @@
             "record": "A photo editor may submit an observation"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+            "file": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts",
+            "record": "INTAKE-KCSPACES-NAMING-ROLE-MEMORY-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
             "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "CLM-NYCARTC-FACEBOOK-JAMIE-PUBLISHER-SEED"
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "orphaned intake fails"
           }
         ]
       },
@@ -50,16 +50,20 @@
             "record": "relationToJamie"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "READ-FACEBOOK-NYCARTC-POST-CENSUS-RUN-2026"
+            "file": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts",
+            "record": "READ-FACEBOOK-KCSPACES-POST-CENSUS-RUN-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-NYC-OFFICE-NIGHTLIFE-LAW-2017"
+            "file": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts",
+            "record": "PROP-KCSPACES-GOFUNDME-ORGANIZER-BOUNDARY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "READ-SEATTLE-TIMES-ARTS-RELIEF-2020"
+            "file": "docs/knowledge-bank/research/kcspacesfund-facebook-posts-2026-07-14.md",
+            "record": "These are public Page recognitions, not a complete grant or payment ledger."
+          },
+          {
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "context-only evidence cannot promote a lifecycle claim"
           }
         ]
       },
@@ -68,24 +72,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "CLM-NYCARTC-FACEBOOK-JAMIE-NAMED-PRACTICE"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-KCSPACES-PUBLIC-GRANT-DOCUMENTATION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
+            "file": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts",
+            "record": "CLM-KCSPACES-UNIFORM-PUBLIC-IDENTITY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+            "file": "docs/knowledge-bank/research/kcspacesfund-facebook-posts-2026-07-14.md",
+            "record": "The result and the role are separate claims."
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-NYCARTC-CABARET-REPEAL-OUTCOME"
+            "file": "docs/knowledge-bank/approval-register.md",
+            "record": "KC Spaces Fund: behind-the-scenes digital infrastructure language only."
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED"
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "KC Spaces Fund operations claim preserves organizers, authorship, and traction boundaries"
           }
         ]
       },
@@ -94,24 +98,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "TASK-NYCARTC-FACEBOOK-NATIVE-EXPORT-AND-PUBLISHER-CREDIT"
+            "file": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts",
+            "record": "TASK-KCSPACES-NAMING-AND-IDENTITY-ROLE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-OFFICE-NIGHTLIFE-ROLE"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "TASK-KCSPACES-SOCIAL-ROLE-INTEGRATION"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "TASK-NYCARTC-FACEBOOK-POSTED-SOURCE-RECOVERY"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "A research task should let another person or agent begin cold."
           }
         ]
       },
@@ -124,20 +124,20 @@
             "record": "Publication is compositional."
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "future-portfolio-composition"
+            "file": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07-14.ts",
+            "record": "DEC-DEFER-KCSPACES-UNIFORM-PUBLIC-IDENTITY-FACEBOOK-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "CLM-CALLNYC-HACKATHON-DATE-TIME"
+            "file": "docs/knowledge-bank/research/kcspacesfund-facebook-posts-2026-07-14.md",
+            "record": "All mature additions remain deferred pending audience-specific composition"
           },
           {
             "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
             "record": "defer decisions block active projections"
+          },
+          {
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "publication-is-an-independent-decision"
           }
         ]
       },
@@ -146,20 +146,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/data/nycartc-facebook-post-ledger.json",
-            "record": "nycartc-fb-3ff7f29f2e6416bc"
+            "file": "docs/knowledge-bank/data/kcspacesfund-facebook-post-ledger.json",
+            "record": "kcspaces-fb-ff96d2a8a61ea71b"
           },
           {
-            "file": "docs/knowledge-bank/data/nycartc-facebook-post-route-ledger.json",
-            "record": "nycartc-fb-route-24"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "SRC-FACEBOOK-NYCARTC-POST-CENSUS-RUN-2026"
+            "file": "docs/knowledge-bank/data/kcspacesfund-facebook-post-route-ledger.json",
+            "record": "kcspaces-fb-route-mutual-aid-prints"
           },
           {
             "file": "docs/knowledge-bank/approval-register.md",
-            "record": "NYC Artist Coalition Facebook Page posts"
+            "record": "KC Spaces Fund Facebook Page posts"
+          },
+          {
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "KC Spaces Fund Facebook public ledger is aggregate-only and public-safe"
           },
           {
             "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
@@ -176,24 +176,20 @@
             "record": "composition"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
-            "record": "CLM-NYCARTC-FACEBOOK-JAMIE-NAMED-PRACTICE"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-KCSPACES-PUBLIC-GRANT-DOCUMENTATION"
           },
           {
-            "file": "docs/knowledge-bank/data/nycartc-facebook-post-route-ledger.json",
-            "record": "nycartc-fb-route-26"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-OPEN-HOUSE-PARTICIPANT-RECORD"
+            "file": "docs/knowledge-bank/data/kcspacesfund-facebook-post-route-ledger.json",
+            "record": "kcspaces-fb-route-campaign-site"
           },
           {
             "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "Public-ready claims also store the"
+            "record": "Use Chad's lens when composing a projection:"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "nycArtCFacebookPostClaims"
+            "record": "kcSpacesFundFacebookPostClaims"
           }
         ]
       }
@@ -216,5 +212,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh independent review of snapshot c47640b1986a180a8b2a39aebdbb8de2e320577c37e0baa101112f42efa64add found an explicit, traversable, bounded, and public-safe lifecycle. The deterministic evaluator reports 0 hard-gate failures and 0 quality-target gaps, and all 88 knowledge-lifecycle tests pass. The 441-item Page ledger and 33-route ledger preserve aggregate evidence without exposing protected detail; authorship, administration, continuity, engagement, and outcomes remain distinct. All human gates remain pending."
+  "summary": "Fresh independent review of snapshot 742eb0676f8db143be3f7cfc9436a14fd111c7bcd6f6bb10a8009ea9067a2ee3 found the lifecycle exceptionally explicit, traversable, defensible, and safe under recursive agent use. The deterministic evaluator reports 0 hard-gate failures and 0 quality-target gaps; all 93 lifecycle tests pass, and the public-safety gate passes with 10 guardrail warnings for careful claims. KC Spaces Fund is honestly bounded to the complete surviving observed 38-record Page surface after 40 terminal scrolls, not a native Meta export, deletion history, or lifetime-completeness claim. The ledgers and typed records reconcile 19 readable messages, 19 remnants, 10 grantee-recognition records, three route families, and July 14 response floors while withholding raw text and per-record metrics. Jamie's behind-the-scenes technical role is separated from organizer, fundraiser, grant-decision, fiscal-sponsor, partner, artist, donor, grantee, administrator, and individual post-authorship credit. The uniform public identity is mature, the naming memory remains research-stage, and both mature KC claims remain deferred. All human gates remain pending."
 }

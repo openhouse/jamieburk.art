@@ -142,3 +142,14 @@ human publisher attribution, mutable response signals, and policy impact
 separate. A second ledger normalizes the corpus's 39 unique URLs into 33
 public-safe source and action routes while protecting historical meeting-access
 and form destinations.
+
+The
+[KC Spaces Fund Facebook Page-post census](research/kcspacesfund-facebook-posts-2026-07-14.md)
+dispositions all 38 post or remnant records surfaced by the surviving 2020
+Page timeline. Nineteen retain readable campaign messages, including ten named
+grantee recognitions, while nineteen remain interface or unavailable-content
+remnants. The pass joins three public action-route families to the campaign's
+existing digital-infrastructure proof without assigning Jamie organizer,
+fundraiser, grant-decision, or individual post-authorship credit. Jamie's
+memory of helping select a uniformly available project name remains a separate
+research-stage claim.
