@@ -140,8 +140,8 @@ test("knowledge-bank gate records two fresh WOW List Facebook post holdout passe
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-a",
-    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-b"
+    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-c",
+    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-d"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -3571,15 +3571,15 @@ test("WOW List Facebook public census rejects raw content and session fields", (
   }
 });
 
-test("WOW List Facebook eval rejects authorship, relationship, and source-role inflation", () => {
+test("WOW List Facebook eval rejects authorship, relationship, and evidence-role inflation", () => {
   const mutations = [
     (population) => {
       population.population[0].relationship = "jamie-authored-page-post";
     },
     (population) => {
       population.postedUrlInventory.find((row) =>
-        row.sourceRole === "venue-safety-and-survival"
-      ).sourceRole = "independent-wowlist-coverage";
+        row.evidenceRole === "issue-context"
+      ).evidenceRole = "independent-wowlist-coverage";
     },
     (population) => {
       population.method.limitations = population.method.limitations.filter((item) =>
@@ -3597,6 +3597,56 @@ test("WOW List Facebook eval rejects authorship, relationship, and source-role i
     const population = loadWowListFacebookPostPopulation();
     mutate(population);
     const result = evaluateKnowledgeBank(suite, { wowListFacebookPostPopulation: population });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+    )?.score, 1);
+    assert.equal(result.accepted, false);
+  }
+});
+
+test("WOW List Facebook URL inventory preserves source-specific evidence and recovery state", () => {
+  const population = loadWowListFacebookPostPopulation();
+  const shelby = population.postedUrlInventory.find((row) =>
+    row.url === suite.pilot.wowListFacebookPosts.shelbyTutorialUrl
+  );
+
+  assert.deepEqual(shelby, {
+    url: "https://youtu.be/nQg47LtixPI",
+    firstSeenOrdinal: 49,
+    firstSeenAt: "2015-08-14",
+    missionContext: "organizer-infrastructure",
+    evidenceRole: "independent-product-use",
+    accessDisposition: "canonical-source-recovered",
+    preservationDisposition: "governed-source-record",
+    sourceId: "SRC-WOWLIST-SHELBY-TUTORIAL-2015"
+  });
+  assert.equal(population.postedUrlInventory.filter((row) =>
+    row.preservationDisposition === "governed-source-record"
+  ).length, 7);
+  assert.equal(population.postedUrlInventory.filter((row) =>
+    row.preservationDisposition === "route-inventory-only"
+  ).length, 48);
+
+  const mutations = [
+    (copy) => {
+      copy.postedUrlInventory.find((row) =>
+        row.url === suite.pilot.wowListFacebookPosts.shelbyTutorialUrl
+      ).evidenceRole = "mutual-aid-and-civic-mobilization";
+    },
+    (copy) => {
+      copy.postedUrlInventory.find((row) => row.sourceId === null).accessDisposition = "verified-live";
+    },
+    (copy) => {
+      const row = copy.postedUrlInventory.find((item) => item.sourceId === null);
+      row.preservationDisposition = "governed-source-record";
+      row.sourceId = "SRC-WOWLIST-SHELBY-TUTORIAL-2015";
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const copy = loadWowListFacebookPostPopulation();
+    mutate(copy);
+    const result = evaluateKnowledgeBank(suite, { wowListFacebookPostPopulation: copy });
     assert.equal(result.criteria.find((item) =>
       item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
     )?.score, 1);

@@ -87,12 +87,12 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
-  manifestSha256: "9569a89fe16bafdbe5dc17468ac35d305bb9ca277b972d79b1d93c191dbf3017",
-  manifestContentSha256: "f0f4378b74587c801113aed310dfa8c3db4d17817e77613d475f670a1094a7b3",
-  governedModuleSha256: "8ee512cb02f3ad86ccfcdf84b00808d59ac1e67d014bcbc7d4e3b4e2db9cdcff",
-  canonicalKnowledgeSha256: "8273ededf586c5ae6e9599ab5304b41ccbc38d438dfa9ffb2379d7e6a07068a4",
-  reviewConfigurationSha256: "14ba1afbff59198d503b082c7676d511b8f0029cd11c872fc219cdfe57ba8d1b",
-  publicReportSha256: "4cea76ae0abcb95c3d898f27e55e92380cdd6947800ebeaaea57188ca0002685"
+  manifestSha256: "5755dfbbb6388ca369b90337e210502dd264bb22d554cf8f0294027de08ffc72",
+  manifestContentSha256: "d113edbf5011529e247a6a735c1e032075e8b2e054c97dbe552259bffbeba926",
+  governedModuleSha256: "3c004b0c0eeb41cac65d097738d9654daff0676780b88c1188beb9b23c439980",
+  canonicalKnowledgeSha256: "83e0f4e0a4443204453892e3888ace2383df7524e6c96ab796d13f734507449f",
+  reviewConfigurationSha256: "e5bfdb3bdd758be944abdafa8b737ae1b181dda92386805d481250332ac0351c",
+  publicReportSha256: "5258d6c934cfdfacafa93cdda1513d067963922aa6d7fd457e3fd745a5088ea6"
 });
 const NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS = Object.freeze({
   protectedIntakesSha256: "2479ac40c9228ec2b24fa7b1e9ce13c1cabcf0dead7e27878098ce4319d1a763",
@@ -3455,9 +3455,24 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     Object.entries(Object.groupBy(wowListFacebookRows, (row) => row.relationship))
       .map(([relationship, rows]) => [relationship, rows.length])
   );
-  const wowListFacebookSourceRoleCounts = Object.fromEntries(
-    Object.entries(Object.groupBy(wowListFacebookUrlRows, (row) => row.sourceRole))
+  const wowListFacebookMissionContextCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(wowListFacebookUrlRows, (row) => row.missionContext))
       .map(([role, rows]) => [role, rows.length])
+  );
+  const wowListFacebookEvidenceRoleCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(wowListFacebookUrlRows, (row) => row.evidenceRole))
+      .map(([role, rows]) => [role, rows.length])
+  );
+  const wowListFacebookAccessDispositionCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(wowListFacebookUrlRows, (row) => row.accessDisposition))
+      .map(([disposition, rows]) => [disposition, rows.length])
+  );
+  const wowListFacebookPreservationDispositionCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(wowListFacebookUrlRows, (row) => row.preservationDisposition))
+      .map(([disposition, rows]) => [disposition, rows.length])
+  );
+  const wowListFacebookShelbyTutorialRoute = wowListFacebookUrlRows.find(
+    (row) => row.url === wowListFacebookPosts.shelbyTutorialUrl
   );
   const countWowListFacebookTag = (key, tag) => wowListFacebookRows.filter(
     (row) => row[key]?.includes(tag)
@@ -3541,7 +3556,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     createHash("sha256").update(wowListFacebookReport).digest("hex") === WOWLIST_FACEBOOK_POST_REVIEW_LOCKS.publicReportSha256;
   const wowListFacebookDiagnosticChecks = {
     population: Boolean(
-      wowListFacebookManifest.schemaVersion === 1 &&
+      wowListFacebookManifest.schemaVersion === 2 &&
       wowListFacebookManifest.reviewedAt === wowListFacebookPosts.reviewedAt &&
       wowListFacebookManifest.project === "wowlist" &&
       wowListFacebookManifest.platform === "facebook" &&
@@ -3594,17 +3609,45 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       wowListFacebookUrlSet.size === wowListFacebookPosts.expectedDistinctPostedUrls &&
       wowListFacebookManifest.urlInventorySummary?.wowListUrls === wowListFacebookPosts.expectedWowListUrls &&
       wowListFacebookManifest.urlInventorySummary.externalUrls === wowListFacebookPosts.expectedExternalUrls &&
-      wowListFacebookSourceRoleCounts["wowlist-route"] === 30 &&
-      wowListFacebookSourceRoleCounts["organizer-infrastructure"] === 5 &&
-      wowListFacebookSourceRoleCounts["venue-safety-and-survival"] === 13 &&
-      wowListFacebookSourceRoleCounts["mutual-aid-and-civic-mobilization"] === 4 &&
-      wowListFacebookSourceRoleCounts["cultural-and-civic-network"] === 3 &&
+      wowListFacebookMissionContextCounts["wowlist-route"] === 30 &&
+      wowListFacebookMissionContextCounts["organizer-infrastructure"] === 6 &&
+      wowListFacebookMissionContextCounts["venue-safety-and-survival"] === 13 &&
+      wowListFacebookMissionContextCounts["mutual-aid-and-civic-mobilization"] === 3 &&
+      wowListFacebookMissionContextCounts["cultural-and-civic-network"] === 3 &&
+      Object.entries(wowListFacebookPosts.expectedEvidenceRoleCounts).every(
+        ([role, count]) => wowListFacebookEvidenceRoleCounts[role] === count &&
+          wowListFacebookManifest.urlInventorySummary?.evidenceRoleCounts?.[role] === count
+      ) &&
+      wowListFacebookAccessDispositionCounts["canonical-source-recovered"] === wowListFacebookPosts.expectedGovernedSourceRoutes &&
+      wowListFacebookAccessDispositionCounts["not-rechecked-in-this-pass"] === wowListFacebookPosts.expectedInventoryOnlyRoutes &&
+      wowListFacebookPreservationDispositionCounts["governed-source-record"] === wowListFacebookPosts.expectedGovernedSourceRoutes &&
+      wowListFacebookPreservationDispositionCounts["route-inventory-only"] === wowListFacebookPosts.expectedInventoryOnlyRoutes &&
+      wowListFacebookManifest.urlInventorySummary?.governedSourceRoutes === wowListFacebookPosts.expectedGovernedSourceRoutes &&
       wowListFacebookUrlRows.every((urlRow) => {
         const firstRow = wowListFacebookRows.find((row) => row.postedUrls.includes(urlRow.url));
         return /^https?:\/\//.test(urlRow.url) &&
           firstRow?.ordinal === urlRow.firstSeenOrdinal &&
-          firstRow.publishedAt === urlRow.firstSeenAt;
+          firstRow.publishedAt === urlRow.firstSeenAt &&
+          Object.keys(urlRow).sort().join(",") === [
+            "accessDisposition", "evidenceRole", "firstSeenAt", "firstSeenOrdinal",
+            "missionContext", "preservationDisposition", "sourceId", "url"
+          ].sort().join(",") &&
+          (urlRow.preservationDisposition === "governed-source-record"
+            ? urlRow.accessDisposition === "canonical-source-recovered" &&
+              typeof urlRow.sourceId === "string" && Boolean(sourceById.get(urlRow.sourceId))
+            : urlRow.preservationDisposition === "route-inventory-only" &&
+              urlRow.accessDisposition === "not-rechecked-in-this-pass" &&
+              urlRow.sourceId === null);
       })
+    ),
+    urlEvidenceRoles: Boolean(
+      wowListFacebookShelbyTutorialRoute?.missionContext === "organizer-infrastructure" &&
+      wowListFacebookShelbyTutorialRoute.evidenceRole === "independent-product-use" &&
+      wowListFacebookShelbyTutorialRoute.accessDisposition === "canonical-source-recovered" &&
+      wowListFacebookShelbyTutorialRoute.preservationDisposition === "governed-source-record" &&
+      wowListFacebookShelbyTutorialRoute.sourceId === wowListFacebookPosts.shelbyTutorialSourceId &&
+      wowListFacebookSourceInquiry?.findings.some((item) => /48 of all 55 routes remain inventory-only/i.test(item)) &&
+      wowListFacebookSourceInquiry.limitations.some((item) => /Not rechecked is distinct from dead, live, or historically nonexistent/i.test(item))
     ),
     missionAndStakeholders: Boolean(
       countWowListFacebookTag("missionTags", "product-onboarding-and-use") === wowListFacebookPosts.expectedProductOnboardingRows &&
@@ -3679,6 +3722,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       /not a native Meta export or proof of complete lifetime history/i.test(wowListFacebookReport) &&
       /57 dated posts/i.test(wowListFacebookReport) &&
       /55 distinct cleaned URL routes/i.test(wowListFacebookReport) &&
+      /Seven routes resolve to governed source records/i.test(wowListFacebookReport) &&
+      /other 48 are explicitly[\s\S]{0,100}not-rechecked-in-this-pass/i.test(wowListFacebookReport) &&
+      /Shelby Turner's tutorial is classified as[\s\S]{0,80}independent product-use evidence/i.test(wowListFacebookReport) &&
+      /not rechecked is distinct from dead, live, or historically[\s\S]{0,30}nonexistent/i.test(wowListFacebookReport) &&
       /not reach, attendance,[\s\S]{0,80}conversion, endorsement, unique people, mandate, or impact/i.test(wowListFacebookReport) &&
       /leaving post-level authorship unassigned/i.test(wowListFacebookReport) &&
       /not coverage of WOW List/i.test(wowListFacebookReport)

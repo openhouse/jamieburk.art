@@ -492,6 +492,39 @@
       "blockers": [
         "Two fresh independent judges must inspect the frozen 57-row population reconciliation, raw-body and social-graph exclusions, URL source roles, shared-source and post-authorship semantics, collective credit, displayed-interaction limits, Business Suite versus live-feed boundary, native-export gap, held website projection, and count-preserving mutation resistance."
       ]
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T16:20:42Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-b",
+      "completedAt": "2026-07-15T16:31:29Z",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, and archival interpretation reviewer",
+      "weightedScore": 4.6,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The Shelby Turner tutorial route was misclassified as mutual-aid-and-civic-mobilization rather than independent product-use evidence.",
+        "The URL inventory lacked separate evidentiary role, access, and preservation dispositions for future recovery work.",
+        "The evaluator froze the faulty route classification instead of asserting the source-specific truth."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-wowlist-facebook-route-semantics-2026-07-15",
+      "completedAt": "2026-07-15T16:35:00Z",
+      "lens": "Protocol reset after repairing the Shelby tutorial classification and expanding every posted URL into separate mission-context, evidentiary-role, access, preservation, and governed-source fields",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify the repaired 55-route semantic inventory, the seven governed-source and 48 inventory-only dispositions, source-specific truth assertions, recovery-state boundaries, and the original population, privacy, credit, traction, and selective-projection controls."
+      ]
     }
   ]
 }

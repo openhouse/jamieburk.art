@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "reviewedAt": "2026-07-15",
   "project": "wowlist",
   "platform": "facebook",
@@ -46,7 +46,33 @@
   "urlInventorySummary": {
     "distinctPostedUrls": 55,
     "wowListUrls": 30,
-    "externalUrls": 25
+    "externalUrls": 25,
+    "missionContextCounts": {
+      "cultural-and-civic-network": 3,
+      "mutual-aid-and-civic-mobilization": 3,
+      "organizer-infrastructure": 6,
+      "venue-safety-and-survival": 13,
+      "wowlist-route": 30
+    },
+    "evidenceRoleCounts": {
+      "civic-mobilization-resource": 1,
+      "cultural-network-resource": 1,
+      "event-information": 3,
+      "fundraising": 9,
+      "independent-product-use": 1,
+      "issue-context": 5,
+      "organizer-resource": 5,
+      "project-route": 30
+    },
+    "accessDispositionCounts": {
+      "canonical-source-recovered": 7,
+      "not-rechecked-in-this-pass": 48
+    },
+    "preservationDispositionCounts": {
+      "governed-source-record": 7,
+      "route-inventory-only": 48
+    },
+    "governedSourceRoutes": 7
   },
   "displayedInteractionSummary": {
     "rowsWithLikes": 41,
@@ -66,331 +92,551 @@
       "url": "http://phxdiy.com",
       "firstSeenOrdinal": 1,
       "firstSeenAt": "2018-03-22",
-      "sourceRole": "organizer-infrastructure"
+      "missionContext": "organizer-infrastructure",
+      "evidenceRole": "organizer-resource",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.wowlist.org/richardkatyspringtour",
       "firstSeenOrdinal": 3,
       "firstSeenAt": "2017-04-14",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.kickstarter.com/projects/sheastadiumbk/bring-back-shea-stadium",
       "firstSeenOrdinal": 4,
       "firstSeenAt": "2017-03-22",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://meowwolf.com/diy",
       "firstSeenOrdinal": 5,
       "firstSeenAt": "2017-03-15",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://www.westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
       "firstSeenOrdinal": 6,
       "firstSeenAt": "2017-03-09",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "issue-context",
+      "accessDisposition": "canonical-source-recovered",
+      "preservationDisposition": "governed-source-record",
+      "sourceId": "SRC-WOWLIST-FACEBOOK-WESTWORD-DIY-FUND-2017"
     },
     {
       "url": "https://wowlist.org/womensmarch",
       "firstSeenOrdinal": 8,
       "firstSeenAt": "2017-01-13",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/popularvote/events/25863/art-hero-email-template",
       "firstSeenOrdinal": 9,
       "firstSeenAt": "2016-12-15",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://meowwolf.com/2016/12/meow-wolfs-diy-fund",
       "firstSeenOrdinal": 10,
       "firstSeenAt": "2016-12-15",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "canonical-source-recovered",
+      "preservationDisposition": "governed-source-record",
+      "sourceId": "SRC-WOWLIST-FACEBOOK-MEOW-WOLF-DIY-FUND-2016"
     },
     {
       "url": "http://thisusedtobe.us/2016/12/12/essay-by-luke-leavitt",
       "firstSeenOrdinal": 11,
       "firstSeenAt": "2016-12-13",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "issue-context",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://docs.google.com/document/d/1lk7Sxk47ReY1us9L_6GhrdwNpxIjTWZUtfCtRGu466M/edit",
       "firstSeenOrdinal": 12,
       "firstSeenAt": "2016-12-13",
-      "sourceRole": "cultural-and-civic-network"
+      "missionContext": "cultural-and-civic-network",
+      "evidenceRole": "event-information",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.youtube.com/watch?v=g7zIdDeRVjU",
       "firstSeenOrdinal": 13,
       "firstSeenAt": "2016-12-07",
-      "sourceRole": "mutual-aid-and-civic-mobilization"
+      "missionContext": "mutual-aid-and-civic-mobilization",
+      "evidenceRole": "event-information",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://saferspac.es",
       "firstSeenOrdinal": 14,
       "firstSeenAt": "2016-12-06",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "issue-context",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://m.eastbayexpress.com/SevenDays/archives/2016/12/03/artists-at-last-nights-oakland-warehouse-fire-discuss-the-tragedy-those-missing-need-for-safe-underground-spaces",
       "firstSeenOrdinal": 15,
       "firstSeenAt": "2016-12-04",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "issue-context",
+      "accessDisposition": "canonical-source-recovered",
+      "preservationDisposition": "governed-source-record",
+      "sourceId": "SRC-WOWLIST-FACEBOOK-EAST-BAY-SAFE-SPACES-2016"
     },
     {
       "url": "https://www.youcaring.com/firevictimsofoaklandfiredec232016-706684",
       "firstSeenOrdinal": 17,
       "firstSeenAt": "2016-12-03",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://ijiiji.bandcamp.com",
       "firstSeenOrdinal": 18,
       "firstSeenAt": "2016-11-21",
-      "sourceRole": "mutual-aid-and-civic-mobilization"
+      "missionContext": "mutual-aid-and-civic-mobilization",
+      "evidenceRole": "event-information",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/waterislife",
       "firstSeenOrdinal": 20,
       "firstSeenAt": "2016-11-15",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://popular.vote",
       "firstSeenOrdinal": 21,
       "firstSeenAt": "2016-11-14",
-      "sourceRole": "mutual-aid-and-civic-mobilization"
+      "missionContext": "mutual-aid-and-civic-mobilization",
+      "evidenceRole": "civic-mobilization-resource",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/downwithtrump",
       "firstSeenOrdinal": 22,
       "firstSeenAt": "2016-11-09",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/SeattleDIY/events/23270/6th-annual-short-run-comix-festival",
       "firstSeenOrdinal": 23,
       "firstSeenAt": "2016-11-05",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.razoo.com/us/story/Trunk-Space-Opening",
       "firstSeenOrdinal": 24,
       "firstSeenAt": "2016-10-19",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/TorreyPines",
       "firstSeenOrdinal": 25,
       "firstSeenAt": "2016-10-15",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/RichardAlbum/events/24160/basement-family--ohtis--richard-album--anna-burch",
       "firstSeenOrdinal": 26,
       "firstSeenAt": "2016-10-11",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://www.wweek.com/bars/2016/07/01/the-know-is-closing",
       "firstSeenOrdinal": 27,
       "firstSeenAt": "2016-07-03",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "issue-context",
+      "accessDisposition": "canonical-source-recovered",
+      "preservationDisposition": "governed-source-record",
+      "sourceId": "SRC-WOWLIST-FACEBOOK-KNOW-CLOSING-2016"
     },
     {
       "url": "https://wowlist.org/pacificnature",
       "firstSeenOrdinal": 28,
       "firstSeenAt": "2016-06-29",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.alliedmedia.org/news/2016/06/28/amp-hiring-development-associate",
       "firstSeenOrdinal": 29,
       "firstSeenAt": "2016-06-29",
-      "sourceRole": "cultural-and-civic-network"
+      "missionContext": "cultural-and-civic-network",
+      "evidenceRole": "cultural-network-resource",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/sbdiy",
       "firstSeenOrdinal": 30,
       "firstSeenAt": "2016-06-28",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://www.sbdiy.org",
       "firstSeenOrdinal": 30,
       "firstSeenAt": "2016-06-28",
-      "sourceRole": "organizer-infrastructure"
+      "missionContext": "organizer-infrastructure",
+      "evidenceRole": "organizer-resource",
+      "accessDisposition": "canonical-source-recovered",
+      "preservationDisposition": "governed-source-record",
+      "sourceId": "SRC-WOWLIST-SBDIY-ADOPTION"
     },
     {
       "url": "https://wowlist.org/ladiy/events/22855/margot-pauline--pamela_-and-her-sons--sofia-reta--kevin-greenspon",
       "firstSeenOrdinal": 31,
       "firstSeenAt": "2016-06-28",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.gofundme.com/pehrspace",
       "firstSeenOrdinal": 32,
       "firstSeenAt": "2016-06-10",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/PhxDIY/join",
       "firstSeenOrdinal": 34,
       "firstSeenAt": "2016-05-23",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/join",
       "firstSeenOrdinal": 35,
       "firstSeenAt": "2016-05-23",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/ladiy/join",
       "firstSeenOrdinal": 36,
       "firstSeenAt": "2015-11-16",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/theyellowdress/join",
       "firstSeenOrdinal": 39,
       "firstSeenAt": "2015-11-04",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/theyellowdress",
       "firstSeenOrdinal": 39,
       "firstSeenAt": "2015-11-04",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/events/18549/wow-list-site-design",
       "firstSeenOrdinal": 40,
       "firstSeenAt": "2015-10-17",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.indiegogo.com/projects/get-orange-county-diy-a-permanent-home",
       "firstSeenOrdinal": 41,
       "firstSeenAt": "2015-10-08",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://silentbarn.org/donate",
       "firstSeenOrdinal": 43,
       "firstSeenAt": "2015-09-30",
-      "sourceRole": "venue-safety-and-survival"
+      "missionContext": "venue-safety-and-survival",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/events/18489/help-silent-barn-recover-from-their-recent-fire-donate-httpsilentbarnorgdonate",
       "firstSeenOrdinal": 43,
       "firstSeenAt": "2015-09-30",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/chicagoart/join",
       "firstSeenOrdinal": 44,
       "firstSeenAt": "2015-09-18",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/chicagoart",
       "firstSeenOrdinal": 44,
       "firstSeenAt": "2015-09-18",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://www.seattlediy.org",
       "firstSeenOrdinal": 45,
       "firstSeenAt": "2015-09-14",
-      "sourceRole": "organizer-infrastructure"
+      "missionContext": "organizer-infrastructure",
+      "evidenceRole": "organizer-resource",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/seattlediy/join",
       "firstSeenOrdinal": 45,
       "firstSeenAt": "2015-09-14",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://grasstronaut.com/2015/09/03/the-baltimore-who-do-it-list",
       "firstSeenOrdinal": 46,
       "firstSeenAt": "2015-09-03",
-      "sourceRole": "organizer-infrastructure"
+      "missionContext": "organizer-infrastructure",
+      "evidenceRole": "organizer-resource",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/sylvanannex/join",
       "firstSeenOrdinal": 47,
       "firstSeenAt": "2015-08-22",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/sylvanannex",
       "firstSeenOrdinal": 47,
       "firstSeenAt": "2015-08-22",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/iowacitydiy",
       "firstSeenOrdinal": 48,
       "firstSeenAt": "2015-08-14",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://youtu.be/nQg47LtixPI",
       "firstSeenOrdinal": 49,
       "firstSeenAt": "2015-08-14",
-      "sourceRole": "mutual-aid-and-civic-mobilization"
+      "missionContext": "organizer-infrastructure",
+      "evidenceRole": "independent-product-use",
+      "accessDisposition": "canonical-source-recovered",
+      "preservationDisposition": "governed-source-record",
+      "sourceId": "SRC-WOWLIST-SHELBY-TUTORIAL-2015"
     },
     {
       "url": "https://wowlist.org/dozerdances",
       "firstSeenOrdinal": 51,
       "firstSeenAt": "2015-06-25",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://www.patreon.com/neilcampau",
       "firstSeenOrdinal": 52,
       "firstSeenAt": "2015-06-24",
-      "sourceRole": "cultural-and-civic-network"
+      "missionContext": "cultural-and-civic-network",
+      "evidenceRole": "fundraising",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/rapidpulse",
       "firstSeenOrdinal": 53,
       "firstSeenAt": "2015-06-04",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "http://dodiy.org",
       "firstSeenOrdinal": 54,
       "firstSeenAt": "2015-05-29",
-      "sourceRole": "organizer-infrastructure"
+      "missionContext": "organizer-infrastructure",
+      "evidenceRole": "organizer-resource",
+      "accessDisposition": "canonical-source-recovered",
+      "preservationDisposition": "governed-source-record",
+      "sourceId": "SRC-WOWLIST-FACEBOOK-DODIY-RESOURCE"
     },
     {
       "url": "https://wowlist.org/punksandcriminals",
       "firstSeenOrdinal": 54,
       "firstSeenAt": "2015-05-29",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/desertdip",
       "firstSeenOrdinal": 55,
       "firstSeenAt": "2015-05-13",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/chidiy",
       "firstSeenOrdinal": 56,
       "firstSeenAt": "2015-05-11",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     },
     {
       "url": "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees",
       "firstSeenOrdinal": 57,
       "firstSeenAt": "2015-04-25",
-      "sourceRole": "wowlist-route"
+      "missionContext": "wowlist-route",
+      "evidenceRole": "project-route",
+      "accessDisposition": "not-rechecked-in-this-pass",
+      "preservationDisposition": "route-inventory-only",
+      "sourceId": null
     }
   ],
   "population": [

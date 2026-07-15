@@ -26,6 +26,18 @@ export const wowListFacebookPostReviewSummary = {
   distinctPostedUrls: 55,
   wowListUrls: 30,
   externalUrls: 25,
+  governedSourceRoutes: 7,
+  inventoryOnlyRoutes: 48,
+  evidenceRoleCounts: {
+    projectRoute: 30,
+    organizerResource: 5,
+    fundraising: 9,
+    issueContext: 5,
+    eventInformation: 3,
+    civicMobilizationResource: 1,
+    culturalNetworkResource: 1,
+    independentProductUse: 1
+  },
   productOnboardingRows: 17,
   crossCityOrganizerRows: 16,
   participatoryGovernanceRows: 3,
@@ -48,7 +60,7 @@ export const wowListFacebookPostKnowledge = {
       submittedAt: reviewedAt,
       submittedBy: "Jamie Burkart and Codex authenticated archival review",
       projectIds: ["wowlist"],
-      reason: "Account for every distinct post exposed by the authenticated WOW List Facebook feed, preserve public-safe dates, source labels, URL routes, mission tags, and displayed interaction counts, and mature bounded claims without publishing raw post bodies or social-graph data.",
+      reason: "Account for every distinct post exposed by the authenticated WOW List Facebook feed, preserve public-safe dates, source labels, URL routes, mission tags, evidence roles, access and preservation dispositions, and displayed interaction counts, and mature bounded claims without publishing raw post bodies or social-graph data.",
       visibility: "public-safe",
       disposition: "integrated",
       sourceIds: Object.values(sourceIds),
@@ -102,7 +114,7 @@ export const wowListFacebookPostKnowledge = {
       sourceId: sourceIds.census,
       project: "wowlist",
       kind: "source-fact",
-      text: "The 57 posts contain 55 distinct cleaned URL routes: 30 to WOW List and 25 to external sources. The external inventory includes organizer infrastructure, venue-safety reporting and funds, mutual-aid routes, and cultural-network resources.",
+      text: "The 57 posts contain 55 distinct cleaned URL routes: 30 to WOW List and 25 to external sources. Every route has separate mission-context, evidentiary-role, access, and preservation dispositions. Seven routes resolve to governed source records; the other 48 remain route-inventory-only records not rechecked for current access in this pass.",
       locator: "urlInventorySummary and postedUrlInventory",
       status: "verified",
       publicSafe: true,
@@ -110,7 +122,8 @@ export const wowListFacebookPostKnowledge = {
       researchInquiryIds: ["INQ-WOWLIST-FACEBOOK-LINKED-SOURCE-PRESERVATION"],
       limitations: [
         "A posted URL documents distribution through the account, not agreement with every linked statement.",
-        "A linked source is not coverage of WOW List unless the source itself discusses WOW List."
+        "A linked source is not coverage of WOW List unless the source itself discusses WOW List.",
+        "Not rechecked is distinct from dead, live, or historically nonexistent."
       ]
     },
     {
@@ -264,8 +277,8 @@ export const wowListFacebookPostKnowledge = {
       canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       preferredPublicUrl: "canonical",
       publicCitation: "WOW List Facebook post full-population public-safe census, July 15, 2026.",
-      publicNote: "A 57-row ledger of dates, source-card labels, cleaned URL routes, bounded mission and stakeholder tags, content hashes, and displayed interaction counts; raw bodies and social-graph identities are excluded.",
-      supportsGenerally: ["57-row population", "date and year reconciliation", "source-card relationships", "posted URLs", "displayed interaction counts", "17 onboarding or use rows", "16 cross-city organizer rows", "three participatory-governance rows", "local-scene and touring routes", "12 venue-safety or survival rows", "six mutual-aid or civic-mobilization rows", "posted URL roles"],
+      publicNote: "A 57-row ledger of dates, source-card labels, cleaned URL routes, bounded mission and stakeholder tags, evidence roles, access and preservation dispositions, content hashes, and displayed interaction counts; raw bodies and social-graph identities are excluded.",
+      supportsGenerally: ["57-row population", "date and year reconciliation", "source-card relationships", "posted URLs", "displayed interaction counts", "17 onboarding or use rows", "16 cross-city organizer rows", "three participatory-governance rows", "local-scene and touring routes", "12 venue-safety or survival rows", "six mutual-aid or civic-mobilization rows", "posted URL roles", "seven governed source routes", "48 route-inventory-only records"],
       doesNotEstablish: ["complete lifetime account history", "post-level human authorship", "reach", "attendance", "conversion", "formal partnership", "impact"]
     },
     {
@@ -280,7 +293,7 @@ export const wowListFacebookPostKnowledge = {
       preferredPublicUrl: "canonical",
       publicCitation: "WOW List Facebook post archival-production report, July 15, 2026.",
       publicNote: "Documents method, population reconciliation, mission-relevant sources, traction limits, collective credit, and projection decisions.",
-      supportsGenerally: ["capture method", "population boundary", "privacy and credit limits", "research method", "source roles", "collective-credit boundary", "projection decision"],
+      supportsGenerally: ["capture method", "population boundary", "privacy and credit limits", "research method", "source roles", "access and preservation dispositions", "collective-credit boundary", "projection decision"],
       doesNotEstablish: ["a native Meta export", "individual authorship", "complete deleted-post recovery", "current product availability"]
     },
     {
@@ -510,10 +523,10 @@ export const wowListFacebookPostKnowledge = {
       ],
       runAt: reviewedAt,
       resultStatus: "partially-recovered",
-      findings: ["The pass preserves all 25 external routes.", "Westword, East Bay Express, Willamette Week, Meow Wolf, DoDIY, the Shelby tutorial, and Santa Barbara DIY now have explicit source roles."],
-      limitations: ["Some historical fundraisers and sites are dead, moved, or require Wayback recovery.", "A posted link is not automatically coverage, adoption, endorsement, or outcome evidence."],
+      findings: ["The pass preserves all 25 external routes and assigns every one a distinct evidentiary role.", "Westword, East Bay Express, Willamette Week, Meow Wolf, DoDIY, the Shelby tutorial, and Santa Barbara DIY resolve to governed source records; 48 of all 55 routes remain inventory-only and were not rechecked for current access."],
+      limitations: ["Not rechecked is distinct from dead, live, or historically nonexistent; route-inventory-only records still require access and preservation review.", "A posted link is not automatically coverage, adoption, endorsement, or outcome evidence."],
       sourceIds: [sourceIds.census, sourceIds.westword, sourceIds.eastBayExpress, sourceIds.willametteWeek, sourceIds.meowWolf, sourceIds.doDiy, "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"],
-      publicSummary: "All external routes are inventoried; seven high-signal sources have explicit roles and the remaining routes stay available for preservation work."
+      publicSummary: "All routes have explicit evidence, access, and preservation dispositions; seven resolve to governed sources and 48 remain an honest recovery queue."
     }
   ]
 };

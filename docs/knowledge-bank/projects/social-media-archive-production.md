@@ -211,6 +211,11 @@ classifies 17 product-onboarding or use records, 16 cross-city organizer
 records, 12 venue-safety or survival records, six mutual-aid or civic records,
 and three participatory product-governance records.
 
+The URL layer separately classifies mission context, evidentiary role, access,
+and preservation. Seven routes resolve to governed sources, including Shelby
+Turner's independent product tutorial; 48 remain inventory-only and not
+rechecked, which is distinct from dead, live, or historically nonexistent.
+
 Twenty-four posts display shared-source cards spanning artists, local
 organizers, advocacy groups, cultural spaces, and published media. These are
 source relationships, not unique stakeholder counts, formal partnerships, or

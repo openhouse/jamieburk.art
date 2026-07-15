@@ -69,7 +69,27 @@ platform-wide adoption census.
 ## Source and URL inventory
 
 The 57 posts contain 55 distinct cleaned URL routes: 30 to WOW List and 25 to
-external sources. The external inventory includes:
+external sources. Each inventory row separately records mission context,
+evidentiary role, access disposition, preservation disposition, and a governed
+source ID where one exists. The evidentiary-role population is:
+
+| Evidentiary role | Routes |
+| --- | ---: |
+| WOW List project route | 30 |
+| Fundraising | 9 |
+| Issue context | 5 |
+| Organizer resource | 5 |
+| Event information | 3 |
+| Independent product use | 1 |
+| Civic-mobilization resource | 1 |
+| Cultural-network resource | 1 |
+
+Seven routes resolve to governed source records. The other 48 are explicitly
+`not-rechecked-in-this-pass` and `route-inventory-only`. This is an honest
+research queue: not rechecked is distinct from dead, live, or historically
+nonexistent.
+
+The external inventory includes:
 
 - organizer infrastructure such as Phoenix DIY, Santa Barbara DIY, Seattle
   DIY, DoDIY, and Grasstronaut;
@@ -81,7 +101,9 @@ external sources. The external inventory includes:
 - cultural-network resources from Allied Media Projects, artists, touring
   projects, and supporter platforms.
 
-The source role is essential. Westword's Denver DIY Fund reporting, East Bay
+The source role is essential. Shelby Turner's tutorial is classified as
+independent product-use evidence and resolves to its governed source record.
+Westword's Denver DIY Fund reporting, East Bay
 Express's Ghost Ship reporting, Willamette Week's account of the Know's closure,
 and Meow Wolf's fund announcement establish the issue context WOW List
 distributed. They are not coverage of WOW List and do not establish that WOW
@@ -145,7 +167,8 @@ native account audit data.
 ## Knowledge-bank and website decision
 
 The pass adds one intake, ten observations, eight sources, three claims, three
-research inquiries, a 57-row public-safe census, and a 55-route URL inventory.
+research inquiries, a 57-row public-safe census, and a 55-route URL inventory
+with explicit evidentiary, access, and preservation dispositions.
 All three new claim projections remain held in the archive layer.
 
 The public case study already has stronger, more legible proof of shared
@@ -162,6 +185,6 @@ personal authorship.
    visibility states, and publishing metadata against the 57-row live ledger.
 2. Ask Richard and other collaborators to distinguish account creation,
    identity stewardship, publishing, moderation, and campaign-specific posting.
-3. Preserve or recover the remaining historical external routes, distinguishing
-   independent WOW List use from issue context, fundraising, and dead-link
-   research leads.
+3. Recheck the 48 inventory-only routes, recording live, redirected, archived,
+   unavailable, or not-recovered status without converting absence into
+   historical nonexistence.

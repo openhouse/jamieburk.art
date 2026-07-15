@@ -113,9 +113,25 @@ All 20 deterministic criteria score 5 / 5 with no canonical validation errors.
 The material-change reset deliberately leaves independent holdout acceptance at
 0 / 2 until two fresh reviewers inspect a frozen candidate.
 
-## Independent holdouts
+## Recursive holdout repair
 
-Pending frozen-candidate review by:
+The first data-integrity reviewer accepted the frozen candidate after
+independently reconciling the population and rejecting 37 fresh mutations. The
+first skeptical hiring editor correctly rejected it: the posted Shelby Turner
+tutorial route was labeled as mutual aid even though the existing governed
+source identifies it as independent product-use and onboarding evidence. The
+reviewer also found that one broad URL role could not distinguish evidence
+type, access state, or preservation state.
 
-- `wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-a`
-- `wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-b`
+The repair replaces that overloaded field with separate mission-context,
+evidentiary-role, access-disposition, preservation-disposition, and governed
+source-ID fields. All 55 routes now have an evidence role. Seven resolve to
+governed source records; 48 remain explicitly not rechecked and inventory-only.
+The Shelby route is structurally required to remain independent product-use
+evidence linked to `SRC-WOWLIST-SHELBY-TUTORIAL-2015`.
+
+The material change resets acceptance. Fresh frozen-candidate review is pending
+from:
+
+- `wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-c`
+- `wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-d`
