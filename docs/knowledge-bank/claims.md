@@ -185,6 +185,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-14
 
+## kc-town-hall-social-operating-surface - Public neighborhood operations
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Complete surviving public-account population / public posts / official officeholder records
+**Public wording:** KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, or program continuity from 2019 through 2022. A bounded incoming review recovered direct public responses from three then-sitting Council-member accounts.
+**Detailed public-safe wording:** The complete surviving profile population contains 142 account posts, 13 account replies, and 28 reposts. It joins recurring resident service to civic information, neighborhood participation, source routing, cultural memory, racial-justice documentation, and pandemic resources.
+**Where to project:** KC Town Hall case study; retain the complete ledger, source inventory, theme counts, and mutable counters in the knowledge bank.
+**Why it matters:** Shows a sustained public operating loop that made requests, action, reporting, civic information, and dialogue legible across multiple years.
+**Guardrail:** The 183-item ledger is complete for the surviving July 2026 profile control, not a lifetime export or deletion history. One hundred records are not one hundred completed pickups or households. Direct response is not endorsement, partnership, adoption, or impact. Treat the account as shared and exclude source-post metrics from KC Town Hall traction.
+**Do not say:** Jamie authored every post; Jamie alone performed every pickup; three Council members endorsed KC Town Hall; visible counters measure historical reach; the timeline proves funding receipt or project completion.
+**Protected boundaries:** Raw post text, phone numbers, resident addresses, direct messages, credentials, private analytics, and private service records stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

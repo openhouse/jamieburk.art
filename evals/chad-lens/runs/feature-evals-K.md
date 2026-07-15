@@ -130,6 +130,24 @@ addressed and all production preflight gates passing.
 The Chad Lens criterion is met for application use. Production publication
 still requires Jamie's explicit approval.
 
+## KC Town Hall full-population pass
+
+- Reframed the social record as a public operating surface rather than an
+  engagement-statistics appendix: resident requests, pickup coordination,
+  result reporting, civic information, and bounded public dialogue became
+  usable through one shared project identity.
+- Kept Jamie's role legible through the surrounding case study without
+  assigning him every shared-account post or every field action.
+- Added the strongest narrow traction fact, direct responses from three
+  then-sitting Council-member accounts, while stating that response is not
+  endorsement, partnership, adoption, or outcome.
+- Left the 183-row census, theme taxonomy, link inventory, and current counters
+  in the knowledge bank so the case study remains readable in one pass.
+
+The deterministic Chad Lens contract and complete application preflight remain
+the stop-condition gates; exact-head independent scores are reported on the
+pull request.
+
 ## Google Shared Drive and exact-final pass
 
 - Kept the archive as source material rather than a public interface: the

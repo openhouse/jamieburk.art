@@ -9,12 +9,14 @@ import {
   socialArchiveResearchInquiries,
   socialArchiveSources
 } from "./social-archive.ts";
+import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 
 const knowledgeBankInput = {
   sources: [
     ...campaignPressIndexSources,
     ...campaignPressArticleSources,
     ...socialArchiveSources,
+    ...kcTownHallSocialCorpus.sources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1122,6 +1124,9 @@ const knowledgeBankInput = {
   sourceCollections: campaignPressCollections,
   claims: [
     ...socialArchiveClaims,
+    ...kcTownHallSocialCorpus.claims.filter(
+      ({ id }) => id !== "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
+    ),
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -1450,7 +1455,10 @@ const knowledgeBankInput = {
       researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex Wayback review"]
     }
   ],
-  researchInquiries: [...socialArchiveResearchInquiries, {
+  researchInquiries: [
+    ...socialArchiveResearchInquiries,
+    ...kcTownHallSocialCorpus.researchInquiries,
+    {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
     question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
@@ -1462,7 +1470,8 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }],
+    }
+  ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"], decidedAt: "2026-07-11", decisionId: "DEC-CALLNYC-INDEPENDENT-FOLLOW-ON-PROMOTE", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"], decidedAt: "2026-07-11", decisionId: "DEC-CALLNYC-FIRST-COUNCILSTAT-PROMOTE", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -1526,11 +1535,11 @@ const knowledgeBankInput = {
     {
       id: "kc-town-hall",
       surface: "/work/kc-town-hall",
-      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-KCTH-X-PROFILE"],
+      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026", "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"],
       occurrences: [
         { id: "public-record-2019", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"] },
         { id: "mission-aligned-transition", claimId: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"] },
-        { id: "social-service-reporting", claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-KCTH-X-PROFILE"] }
+        { id: "social-service-reporting", claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING", projection: "case-study", sourceIds: ["SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"] }
       ]
     }
   ]

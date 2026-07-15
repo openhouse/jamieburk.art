@@ -25,6 +25,9 @@ Approved public artifact examples for this launch pass include:
 - CallNYC archived Politico New York PDF.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- KC Town Hall's complete surviving 183-record public social ledger, which
+  stores public metadata, bounded summaries, classifications, and content
+  digests without raw post text or resident contact details.
 
 ### Public-Safe Archive Summary
 

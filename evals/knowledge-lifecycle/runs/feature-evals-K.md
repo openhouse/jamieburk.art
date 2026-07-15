@@ -290,3 +290,29 @@ endorsement, or impact. Collective authorship, privacy, lifetime-population,
 and current-status boundaries remain explicit. There is no public `/proofs`,
 `/knowledge-bank`, or `/public-claims` route, and production remains Jamie's
 explicit decision.
+
+## KC Town Hall full-population pass
+
+- Reconciled all 183 records in the surviving `@KCTownHall` profile control:
+  142 account posts, 13 account replies, and 28 reposts, with no unresolved
+  profile slots.
+- Preserved a public-safe item ledger and a complete dated public-reposter
+  audit without raw post text, resident contact details, private messages,
+  credentials, session material, or private analytics.
+- Recomputed the 100-record resident tire workflow, five additional mission
+  themes, 133 posted-link occurrences, 31 unique short URLs, 20 resolved public
+  destinations, and all account-owned visible counters.
+- Separated outbound mentions, project-selected reposts, public-reposter
+  appearances, direct outside-authored responses, and source-post counters.
+  The combined incoming review supports a three-account Council-response floor;
+  it does not establish endorsement, partnership, adoption, or impact.
+- Added closed-schema and privacy-mutation failures so later agents cannot add
+  raw text, addresses, sessions, analytics payloads, or opaque source data.
+- Projected only the operating-loop and bounded dialogue result onto the KC
+  Town Hall case study; the source ecology and mutable traction snapshot remain
+  knowledge-bank depth.
+
+The deterministic lifecycle contract, 44 lifecycle tests, social-archive gate,
+knowledge-bank validation, public-safety gate, and typecheck pass. Exact-head
+semantic release evaluation is recorded in the pull request rather than
+committed back into the revision it evaluates.

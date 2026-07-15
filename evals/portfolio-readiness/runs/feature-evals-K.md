@@ -125,6 +125,23 @@ The exact-final portfolio pair scored **98 / 100**, stable pair `yes`, with both
 judges recommending `application-ready`. All deterministic fast gates passed.
 Production publication remains Jamie's explicit human decision.
 
+## KC Town Hall full-population release pass
+
+- Added a 183-item public-safe social ledger, typed source and claim records,
+  lifecycle observations, a readable archival-production note, and recursive
+  validation without adding a public archive route.
+- Strengthened the KC Town Hall case study with one selective operating-system
+  proof: 100 records in a recurring resident-service workflow and a bounded
+  three-account Council-response floor.
+- Kept mutable reaction counters, source-post metrics, full source ecology, and
+  held mission-breadth claims out of the first-pass hiring argument.
+- Preserved the municipal funding boundary: social activity does not establish
+  receipt, expenditure, implementation, or project completion.
+
+Exact-head independent portfolio scores and release-gate results are reported
+on the pull request. Production publication remains Jamie's explicit human
+decision.
+
 ## WOW List full-population release pass
 
 - Ingested the complete 38-record profile-displayed `@wowlist` population,

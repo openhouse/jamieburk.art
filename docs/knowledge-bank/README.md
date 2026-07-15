@@ -82,6 +82,10 @@ CallNYC, WOW List, KC Town Hall, and KC Spaces Fund population findings without
 storing post text, private account data, or session material. The WOW List pass
 reconciles all 38 displayed records, 35 posted-link occurrences, and a bounded
 10-account stakeholder sample while retaining only public-safe counts and edges.
+The KC Town Hall pass adds a [full-population production note](intake/2026-07-14-kctownhall-full-population-social-corpus.md)
+and [183-item public-safe ledger](data/kctownhall-public-post-ledger.json), with
+exact profile reconciliation, record-level themes and links, metric ownership,
+and a fail-closed privacy boundary.
 
 Campaign press sections are preserved as typed source collections rather than
 treated as automatic claim support. The generated

@@ -182,15 +182,21 @@ The public projection rounds these figures to 1,800+ historical users, 16,000+ h
 
 ## KC Town Hall
 
-The surviving @KCTownHall population contains 183 public records. One hundred concern resident tire intake, pickup operations, or result reporting from 2019 through 2022. The pattern is mission-relevant because the account repeatedly functioned as a public request-to-action-and-reporting surface rather than merely a broadcast channel.
+The [full-population production note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md) and [183-item public-safe ledger](../data/kctownhall-public-post-ledger.json) reconcile the authenticated profile exactly: 142 account posts, 13 account replies, and 28 reposts from 16 public source accounts, with no unresolved profile slots. This is complete recovery of the surviving July 2026 profile population, not a platform export or deletion history.
 
-The [pinned project-framing post](https://x.com/KCTownHall/status/1013796430103785472) describes participatory restoration of a neighborhood resource and cultural center. Recovered external interactions include public records involving [Melissa Robinson](https://x.com/Robinson4kc/status/1289714535251742726), [a community partner](https://x.com/trutheresme/status/1148277187583389703), and [Jolie Justus](https://x.com/joliejustus/status/1122883010582466560).
+One hundred records concern resident tire intake, pickup coordination, result reporting, or program continuity. The remaining 83 records comprise 27 neighborhood-culture and community records, 26 civic-information and service-routing records, 16 Town Hall development and participation records, 12 racial-justice documentation records, and two pandemic-resource records. The pattern is mission-relevant because the account functioned as a public operating surface rather than merely a broadcast channel.
+
+The corpus preserves 133 posted short-link occurrences, 31 unique short URLs, and 20 resolved public destinations. Mission-relevant routing includes [KCUR election guidance](https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri), Missouri voter registration, [Northeast News housing-policy reporting](https://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/), RideKC transit planning, neighborhood-business reporting, project participation pages, and pandemic resources. These establish what the account circulated, not coverage, endorsement, reader action, or resulting impact.
+
+Stakeholder relationships remain separated by class. The account mentioned or reposted public officials as outreach and project-selected amplification. All 40 account-authored records displaying reposts were audited; the dated public lists expose seven appearances by three then-sitting Council-member accounts. A stricter incoming review recovered direct public responses from [Quinton Lucas](https://x.com/QuintonLucasKC/status/1122866432130334720), [Jolie Justus](https://x.com/joliejustus/status/1122883010582466560), and [Melissa Robinson](https://x.com/Robinson4kc/status/1289714535251742726). This three-account floor establishes public interaction, not endorsement, partnership, adoption, or policy outcome.
+
+At the July 2026 snapshot, 77 of 155 account-authored records displayed at least one reaction, totaling 22 replies, 70 reposts, and 174 likes. Those are mutable interface counters, not unique people, historical reach, conversion, completed services, or impact. Metrics on the 28 reposted source statuses belong to the original source posts and are excluded from KC Town Hall traction.
 
 One hundred records are not one hundred completed pickups, households, or service units. The public timeline is not an audited service ledger, does not assign every post or field action to Jamie, and does not establish project completion or receipt of the Council-appropriated award.
 
 ### Defensible claim
 
-> KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickups, and result reporting from 2019 through 2022.
+> KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, or program continuity from 2019 through 2022. A bounded incoming review also recovered direct public responses from three then-sitting Council-member accounts.
 
 ## KC Spaces Fund
 

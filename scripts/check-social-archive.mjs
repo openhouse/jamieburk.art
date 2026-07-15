@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import {
   callNycCouncilReposts,
@@ -17,6 +18,11 @@ const failures = [];
 let recomputedPopulationRecords = 0;
 let recomputedInteractionEdges = 0;
 let privacySchemaMutationCases = 0;
+let kcTownHallFullPopulationRecords = 0;
+let kcTownHallTireWorkflowRecords = 0;
+let kcTownHallPostedLinkOccurrences = 0;
+let kcTownHallDirectCouncilResponseAccounts = 0;
+let kcTownHallCouncilReposterAppearances = 0;
 const expect = (condition, message) => {
   if (!condition) failures.push(message);
 };
@@ -292,6 +298,114 @@ if (existsSync(populationFixturePath)) {
   recomputedInteractionEdges = interactionRecords.length;
 }
 
+const kcTownHallLedgerPath = "docs/knowledge-bank/data/kctownhall-public-post-ledger.json";
+expect(existsSync(kcTownHallLedgerPath), "KC Town Hall full-population ledger is missing");
+if (existsSync(kcTownHallLedgerPath)) {
+  const rawLedger = readFileSync(kcTownHallLedgerPath, "utf8");
+  const ledger = JSON.parse(rawLedger);
+  const records = ledger.records ?? [];
+  const allowedTopKeys = ["schemaVersion", "account", "observedAt", "population", "method", "aggregateFindings", "records", "publicReposterAudit", "councilMemberPublicReposterAppearances"];
+  const allowedRecordKeys = ["statusId", "statusUrl", "publishedAt", "relationship", "statusOwner", "recoveredRoutes", "primaryTheme", "publicSummary", "publicMentions", "hashtags", "postedUrls", "currentVisibleMetrics", "metricOwner", "mediaSignals", "normalizedContentCharacterCount", "contentDigestSha256", "outsideAuthoredInteraction"];
+  const exactKeySet = (value, allowed) => value && typeof value === "object" && !Array.isArray(value) && Object.keys(value).every((key) => allowed.includes(key));
+  const relationshipCounts = Object.groupBy(records, ({ relationship }) => relationship);
+  const themeCounts = Object.fromEntries(Object.entries(Object.groupBy(records, ({ primaryTheme }) => primaryTheme)).map(([theme, items]) => [theme, items.length]));
+  const authored = records.filter(({ relationship }) => relationship !== "repost");
+  const reposts = records.filter(({ relationship }) => relationship === "repost");
+  const links = records.flatMap(({ postedUrls }) => postedUrls);
+  const sumMetrics = (items) => items.reduce((totals, { currentVisibleMetrics }) => ({
+    statuses: totals.statuses + 1,
+    statusesWithVisibleReaction: totals.statusesWithVisibleReaction + (currentVisibleMetrics.replies + currentVisibleMetrics.reposts + currentVisibleMetrics.likes > 0 ? 1 : 0),
+    replies: totals.replies + currentVisibleMetrics.replies,
+    reposts: totals.reposts + currentVisibleMetrics.reposts,
+    likes: totals.likes + currentVisibleMetrics.likes
+  }), { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 });
+  const expectedThemes = {
+    "resident-tire-intake-and-operations": 100,
+    "neighborhood-culture-and-community": 27,
+    "civic-information-and-service-routing": 26,
+    "town-hall-development-and-participation": 16,
+    "racial-justice-documentation": 12,
+    "pandemic-resource-routing": 2
+  };
+
+  expect(createHash("sha256").update(rawLedger).digest("hex") === "bd25d9c2101d44f0a736a754450d69fb1ac47ee4c017eeff91bb92c6cf6d199f", "KC Town Hall ledger changed without explicit audit review");
+  expect(exactKeySet(ledger, allowedTopKeys), "KC Town Hall ledger contains an unreviewed top-level field");
+  expect(ledger.account === "@KCTownHall" && ledger.observedAt === "2026-07-14", "KC Town Hall ledger control metadata changed");
+  expect(ledger.population?.displayedProfileCount === 183 && ledger.population?.attributableRecords === 183 && ledger.population?.unresolvedProfileCountSlots === 0, "KC Town Hall ledger no longer closes the 183-item profile control");
+  expect(ledger.population?.postsRouteUnique === 170 && ledger.population?.repliesRouteArticles === 188 && ledger.population?.excludedConversationContextArticles === 5, "KC Town Hall route reconciliation changed");
+  expect(records.length === 183 && uniqueCount(records.map(({ statusId }) => statusId)) === 183, "KC Town Hall ledger must contain 183 unique records");
+  expect(records.every((record) => exactKeySet(record, allowedRecordKeys)), "KC Town Hall ledger contains an unreviewed record field");
+  expect(records.every(({ statusId, statusUrl, publishedAt, relationship, statusOwner, recoveredRoutes, publicSummary, publicMentions, hashtags, postedUrls, currentVisibleMetrics, metricOwner, mediaSignals, normalizedContentCharacterCount, contentDigestSha256, outsideAuthoredInteraction }) =>
+    /^\d+$/.test(statusId) &&
+    statusUrl === `https://x.com/${statusOwner.slice(1)}/status/${statusId}` &&
+    !Number.isNaN(Date.parse(publishedAt)) &&
+    ["account-post", "account-reply", "repost"].includes(relationship) &&
+    /^@[A-Za-z0-9_]{1,20}$/.test(statusOwner) &&
+    Array.isArray(recoveredRoutes) && recoveredRoutes.length > 0 && recoveredRoutes.every((route) => ["posts", "replies"].includes(route)) &&
+    typeof publicSummary === "string" && publicSummary.length > 0 &&
+    Array.isArray(publicMentions) && publicMentions.every((handle) => /^@[A-Za-z0-9_]{1,20}$/.test(handle)) &&
+    Array.isArray(hashtags) && hashtags.every((tag) => /^#[A-Za-z0-9_]+$/.test(tag)) &&
+    Array.isArray(postedUrls) && postedUrls.every((link) => exactKeySet(link, ["shortUrl", "resolvedUrl", "currentStatus"]) && /^https:\/\/t\.co\//.test(link.shortUrl) && (link.resolvedUrl === null || /^https?:\/\//.test(link.resolvedUrl))) &&
+    ["replies", "reposts", "likes"].every((field) => Number.isInteger(currentVisibleMetrics?.[field]) && currentVisibleMetrics[field] >= 0) &&
+    metricOwner === (relationship === "repost" ? "source-status-not-kctownhall-repost-action" : "account-authored-status") &&
+    Number.isInteger(mediaSignals?.photoCount) && mediaSignals.photoCount >= 0 && typeof mediaSignals?.hasVideoOrGif === "boolean" &&
+    Number.isInteger(normalizedContentCharacterCount) && normalizedContentCharacterCount >= 0 &&
+    /^[a-f0-9]{64}$/.test(contentDigestSha256) &&
+    (!outsideAuthoredInteraction || (exactKeySet(outsideAuthoredInteraction, ["targetAccount", "interactionType", "stakeholderRole", "roleSourceId"]) && relationship === "repost" && outsideAuthoredInteraction.targetAccount === "@KCTownHall"))
+  ), "KC Town Hall ledger contains an invalid public-safe record");
+  expect(records.every((record) => populationFixture.kcTownHall.records.some(({ statusId, publishedOn, type, tireRelated }) =>
+    statusId === record.statusId && publishedOn === record.publishedAt.slice(0, 10) && ({ original: "account-post", reply: "account-reply", repost: "repost" })[type] === record.relationship && Boolean(tireRelated) === (record.primaryTheme === "resident-tire-intake-and-operations")
+  )), "KC Town Hall public ledger diverged from the minimized population fixture");
+  expect(relationshipCounts["account-post"]?.length === 142 && relationshipCounts["account-reply"]?.length === 13 && relationshipCounts.repost?.length === 28, "KC Town Hall relationship counts changed");
+  expect(Object.entries(expectedThemes).every(([theme, count]) => themeCounts[theme] === count) && Object.keys(themeCounts).length === Object.keys(expectedThemes).length, "KC Town Hall primary-theme counts changed");
+  expect(links.length === 133 && uniqueCount(links.map(({ shortUrl }) => shortUrl)) === 31 && uniqueCount(links.map(({ resolvedUrl }) => resolvedUrl).filter(Boolean)) === 20, "KC Town Hall posted-link inventory changed");
+  expect(JSON.stringify(sumMetrics(authored)) === JSON.stringify(ledger.aggregateFindings?.accountAuthoredVisibleReactionSnapshot), "KC Town Hall account-authored reaction snapshot does not recompute");
+  expect(JSON.stringify(sumMetrics(reposts)) === JSON.stringify(ledger.aggregateFindings?.repostSourceVisibleReactionSnapshot), "KC Town Hall repost-source reaction snapshot does not recompute");
+  expect(/belong to their source statuses/i.test(ledger.aggregateFindings?.metricBoundary ?? ""), "KC Town Hall ledger lost its source-status metric boundary");
+  const directResponses = records.filter(({ outsideAuthoredInteraction }) => outsideAuthoredInteraction?.targetAccount === "@KCTownHall");
+  expect(directResponses.length === 2 && new Set(directResponses.map(({ statusOwner }) => statusOwner)).size === 2, "KC Town Hall in-population direct-response floor changed");
+  const reposterAudit = ledger.aggregateFindings?.publicReposterAudit;
+  expect(reposterAudit?.auditedAccountAuthoredStatuses === 40 && reposterAudit?.displayedReposts === 70 && reposterAudit?.publicIdentityAppearances === 45 && reposterAudit?.unassignedDisplayedReposts === 25, "KC Town Hall public-reposter census changed");
+  expect(reposterAudit?.distinctCouncilMemberAccounts === 3 && reposterAudit?.councilMemberPublicAppearances === 7 && ["@QuintonLucasKC", "@joliejustus", "@Robinson4kc"].every((handle) => reposterAudit.councilMemberAccounts.includes(handle)), "KC Town Hall Council-member reposter floor changed");
+  expect(Array.isArray(ledger.publicReposterAudit) && ledger.publicReposterAudit.length === 40 && ledger.publicReposterAudit.every((row) =>
+    exactKeySet(row, ["statusId", "statusUrl", "publishedAt", "displayedReposts", "publicReposterHandles", "unassignedDisplayedReposts"]) &&
+    records.some(({ statusId, relationship }) => statusId === row.statusId && relationship !== "repost") &&
+    row.statusUrl === `https://x.com/KCTownHall/status/${row.statusId}` &&
+    row.publicReposterHandles.every((handle) => /^@[A-Za-z0-9_]{1,20}$/.test(handle)) &&
+    row.publicReposterHandles.length + row.unassignedDisplayedReposts === row.displayedReposts
+  ), "KC Town Hall item-level public-reposter audit is incomplete or invalid");
+  expect(ledger.publicReposterAudit.reduce((total, { displayedReposts }) => total + displayedReposts, 0) === 70 && ledger.publicReposterAudit.reduce((total, { publicReposterHandles }) => total + publicReposterHandles.length, 0) === 45, "KC Town Hall item-level public-reposter totals do not reconcile");
+  expect(Array.isArray(ledger.councilMemberPublicReposterAppearances) && ledger.councilMemberPublicReposterAppearances.length === 7 && ledger.councilMemberPublicReposterAppearances.every((row) =>
+    exactKeySet(row, ["handle", "statusId", "statusUrl", "publishedAt", "roleSourceId"]) &&
+    ledger.publicReposterAudit.some(({ statusId, publicReposterHandles }) => statusId === row.statusId && publicReposterHandles.includes(row.handle)) &&
+    ["SRC-KCMO-COUNCIL-ROSTER-2018", "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"].includes(row.roleSourceId)
+  ), "KC Town Hall Council-member public-reposter appearances do not reconcile");
+  const collectKeys = (value, keys = []) => {
+    if (!value || typeof value !== "object") return keys;
+    if (Array.isArray(value)) return value.reduce((all, item) => collectKeys(item, all), keys);
+    for (const [key, child] of Object.entries(value)) {
+      keys.push(key);
+      collectKeys(child, keys);
+    }
+    return keys;
+  };
+  const prohibitedKeys = new Set(["posttext", "rawtext", "streetaddress", "phonenumber", "emailaddress", "directmessage", "cookie", "session", "credential", "privateanalytics", "engagementpayload", "rawpayload"]);
+  expect(!collectKeys(ledger).some((key) => prohibitedKeys.has(key.toLowerCase())), "KC Town Hall ledger contains a prohibited public-repo field");
+
+  kcTownHallFullPopulationRecords = records.length;
+  kcTownHallTireWorkflowRecords = themeCounts["resident-tire-intake-and-operations"];
+  kcTownHallPostedLinkOccurrences = links.length;
+  kcTownHallDirectCouncilResponseAccounts = 3;
+  kcTownHallCouncilReposterAppearances = ledger.councilMemberPublicReposterAppearances.length;
+
+  for (const forbiddenField of ["postText", "streetAddress", "session", "privateAnalytics", "rawPayload"]) {
+    const mutation = structuredClone(ledger);
+    mutation.records[0][forbiddenField] = "not permitted";
+    expect(!exactKeySet(mutation.records[0], allowedRecordKeys), `KC Town Hall ledger schema accepted forbidden ${forbiddenField}`);
+    privacySchemaMutationCases += 1;
+  }
+}
+
 const expectedRegistry = new Map([
   ["callnyc", "@CallNYCapp"],
   ["nyc-artist-coalition", "@NYCArtC"],
@@ -369,12 +483,15 @@ const callNycText = JSON.stringify(callNycClaim);
 expect(callNycText.includes("at least 19"), "CallNYC claim lost lower-bound wording");
 expect(callNycText.includes("not a complete lifetime count"), "CallNYC claim lost its incomplete-census boundary");
 expect(callNycText.includes("formally endorsed") || callNycText.includes("formal Council adoption"), "CallNYC claim lost its endorsement or adoption anti-claim");
+const kcTownHallClaimText = JSON.stringify(claimById.get("CLM-KCTH-SOCIAL-SERVICE-REPORTING"));
+expect(kcTownHallClaimText.includes("100 of 183") && kcTownHallClaimText.includes("three then-sitting Council member accounts"), "KC Town Hall public projection lost its operating pattern or bounded Council-response floor");
+expect(["SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"].every((sourceId) => kcTownHallClaimText.includes(sourceId)), "KC Town Hall public projection lost a direct-response source");
 
 const reportPath = "docs/knowledge-bank/research/2026-07-15-project-social-media-archive-production.md";
 expect(existsSync(reportPath), "Social-media archival production report is missing");
 if (existsSync(reportPath)) {
   const report = readFileSync(reportPath, "utf8");
-  for (const phrase of ["at least **19 distinct serving 2016 nyc council member accounts**", "at least **six serving council member accounts**", "not recovered does not mean", "individual coalition-post authorship remains deliberately unattributed", "one hundred records are not one hundred completed pickups", "all 38 records displayed by @wowlist at review time", "35 posted-link occurrences", "1,846 users and 16,142 posts/events", "at least 50 geocoded posts/events"]) {
+  for (const phrase of ["at least **19 distinct serving 2016 nyc council member accounts**", "at least **six serving council member accounts**", "not recovered does not mean", "individual coalition-post authorship remains deliberately unattributed", "one hundred records are not one hundred completed pickups", "183-item public-safe ledger", "133 posted short-link occurrences", "direct public responses from three then-sitting council-member accounts", "all 38 records displayed by @wowlist at review time", "35 posted-link occurrences", "1,846 users and 16,142 posts/events", "at least 50 geocoded posts/events"]) {
     expect(report.toLowerCase().includes(phrase), `Social-media report lost required boundary: ${phrase}`);
   }
 }
@@ -404,6 +521,11 @@ console.log(JSON.stringify({
   wowListDisplayedLikes: wowListArchiveSummary.displayedLikes,
   wowListStakeholderSignals: wowListArchiveSummary.missionRelevantThirdPartyAccounts,
   wowListIndependentUrlSignals: wowListArchiveSummary.thirdPartyAccountsPostingWowListUrls,
+  kcTownHallFullPopulationRecords,
+  kcTownHallTireWorkflowRecords,
+  kcTownHallPostedLinkOccurrences,
+  kcTownHallDirectCouncilResponseAccounts,
+  kcTownHallCouncilReposterAppearances,
   privacySchemaMutationCases,
   activePortfolioClaims: activeClaims.length,
   heldRoleOrReserveClaims: 2

@@ -66,27 +66,6 @@
       ]
     },
     {
-      "id": "SRC-KCTH-X-PROFILE",
-      "title": "KC Town Hall public X profile",
-      "organization": "KC Town Hall",
-      "kind": "institutional-web-page",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-15",
-      "metadataVerifiedAt": "2026-07-15",
-      "metadataVerifiedBy": "Codex authenticated public-web review",
-      "canonicalUrl": "https://x.com/KCTownHall",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "KC Town Hall (@KCTownHall), public X profile, accessed July 15, 2026.",
-      "publicNote": "The account documents redevelopment communication and neighborhood-stewardship activity.",
-      "doesNotEstablish": [
-        "individual post authorship",
-        "receipt of Council-appropriated funds",
-        "project completion",
-        "sole individual credit"
-      ]
-    },
-    {
       "id": "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
       "title": "Authenticated WOW List X full-population archival review",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -222,6 +201,28 @@
       ]
     },
     {
+      "id": "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+      "title": "Melissa Robinson public reply involving KC Town Hall",
+      "organization": "Public-official account",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-08-01",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Melissa Robinson, public reply involving KC Town Hall, 2020-08-01.",
+      "publicNote": "The post concerns neighborhood conditions.",
+      "doesNotEstablish": [
+        "individual authorship of KC Town Hall posts",
+        "project completion",
+        "receipt of appropriated funds",
+        "sole individual credit"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
       "title": "Taking back New York City's nightlife",
       "organization": "Document Journal",
@@ -242,6 +243,69 @@
         "Jamie's sole founding role",
         "Olympia Kazi's sole control of the account",
         "sole causation of policy outcomes"
+      ]
+    },
+    {
+      "id": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "title": "Authenticated @KCTownHall full-population recovery and public-post ledger",
+      "organization": "KC Town Hall",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-web review",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-K/docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only review of the public @KCTownHall Posts, Replies, and repost-list surfaces, with a 183-record public-safe ledger, July 14-15, 2026.",
+      "publicNote": "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, bounded classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
+      "doesNotEstablish": [
+        "a platform export, deletion history, or proof that no earlier item was removed",
+        "the individual teammate who authored each shared-account record",
+        "private messages, historical analytics, unique people reached, clickthrough, adoption, or service outcomes",
+        "independent verification of project-reported tire or avoided-fee figures",
+        "partnership, endorsement, or sole credit from mentions, replies, reposts, or linked sources"
+      ]
+    },
+    {
+      "id": "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+      "title": "Quinton Lucas quote-post responding to KC Town Hall",
+      "author": "Quinton Lucas",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Then-Councilmember Quinton Lucas quote-post responding to @KCTownHall about Leon's Thriftway, April 29, 2019.",
+      "publicNote": "Lucas said he had spoken with ownership and was exploring whether the store could remain open.",
+      "doesNotEstablish": [
+        "formal partnership",
+        "project adoption",
+        "the outcome of preservation efforts",
+        "endorsement of every KC Town Hall activity"
+      ]
+    },
+    {
+      "id": "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+      "title": "Jolie Justus reply to KC Town Hall",
+      "author": "Jolie Justus",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Then-Councilmember Jolie Justus reply to @KCTownHall about Leon's Thriftway, April 29, 2019.",
+      "publicNote": "Justus said work with the Economic Development Corporation and community was underway on possible solutions.",
+      "doesNotEstablish": [
+        "formal partnership",
+        "project adoption",
+        "the outcome of preservation efforts",
+        "endorsement of every KC Town Hall activity"
       ]
     },
     {
@@ -893,7 +957,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "KC Town Hall used its shared public account as a request-to-action-and-reporting surface: 100 of 183 surviving records concern tire reports, pickups, or results from 2019 through 2022. Those records are not an audited service total and do not assign every post or pickup to Jamie.",
+          "text": "KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, or program continuity from 2019 through 2022. A bounded incoming review also recovered direct public responses from three then-sitting Council member accounts. These records establish a public operating and dialogue pattern, not an audited service total, endorsement, or sole authorship by Jamie.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -903,22 +967,40 @@
       ],
       "evidence": [
         {
-          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "sourceId": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
           "relationship": "direct-support",
           "supports": [
-            "183-record profile review",
+            "all 183 surviving profile records",
             "100 tire-workflow records",
-            "request-to-action reporting pattern"
+            "request-to-action reporting pattern",
+            "dated public-reposter audit"
           ],
           "confidence": "high",
           "renderCitation": true
         },
         {
-          "sourceId": "SRC-KCTH-X-PROFILE",
-          "relationship": "context",
+          "sourceId": "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+          "relationship": "direct-support",
           "supports": [
-            "dedicated account identity",
-            "profile population"
+            "direct quote-post response to @KCTownHall"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+          "relationship": "direct-support",
+          "supports": [
+            "direct public reply to @KCTownHall"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "direct public reply recognizing neighborhood work"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -926,8 +1008,10 @@
       ],
       "boundaries": [
         "Treat the account as a shared project identity rather than proof that Jamie authored every record.",
-        "Keep project-reported totals separate from independent audit.",
-        "Do not expose resident addresses, phone numbers, direct messages, or private service records."
+        "One hundred records describe a recurring public workflow, not one hundred completed pickups, households, or audited service units.",
+        "Keep outbound mentions, project-selected reposts, public-reposter appearances, direct outside-authored responses, and mutable reaction counters as separate relationship classes.",
+        "Direct responses establish public interaction, not endorsement, partnership, adoption, or resulting action.",
+        "Do not expose resident addresses, phone numbers, direct messages, private analytics, or private service records."
       ]
     },
     {
@@ -1600,8 +1684,10 @@
         "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
         "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317",
         "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026",
-        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
-        "SRC-KCTH-X-PROFILE"
+        "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+        "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+        "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+        "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"
       ],
       "occurrences": [
         {
@@ -1629,8 +1715,10 @@
           "claimId": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
-            "SRC-KCTH-X-PROFILE"
+            "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+            "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+            "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+            "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"
           ]
         }
       ]
