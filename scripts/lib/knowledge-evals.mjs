@@ -902,6 +902,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     sourceBackedMethodText
   );
   const nterClaim = claimById.get(archive.nterClaimId);
+  const nterInquiry = inquiryById.get(archive.nterInquiryId);
+  const nterProtectedSources = archive.nterProtectedSourceIds.map((id) => sourceById.get(id));
+  const nterProtectedObservations = archive.nterProtectedObservationIds.map((id) => observationById.get(id));
   const nterClaimText = [
     nterClaim?.internalClaim,
     ...(nterClaim?.projections.map((projection) => projection.text) ?? [])
@@ -910,9 +913,39 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     /Jamie(?: Burkart)? (?:alone )?(?:created|built|designed|programmed|developed) NTER CHNG/i,
     /Jamie(?: Burkart)? (?:wrote|built|developed) the (?:NTER CHNG )?software/i,
     /Jamie(?: Burkart)? designed the (?:installation )?architecture/i,
+    /Jamie(?: Burkart)? (?:led|owned|implemented|maintained|installed|fabricated|executed)[^.]{0,80}(?:NTER CHNG|software|server|wall|restaging|installation)/i,
     /NTER CHNG[^.]{0,100}(?:displayed|shown|installed)[^.]{0,60}Nerman/i,
-    /Nerman[^.]{0,100}NTER CHNG/i
+    /Nerman[^.]{0,100}NTER CHNG/i,
+    /(?:participant phone numbers?|message transcripts?)[^.]{0,80}(?:prove|show|demonstrate|establish)[^.]{0,60}(?:impact|engagement|reach|success)/i
   ].some((pattern) => pattern.test(nterClaimText));
+  const nterProtectedBundleText = JSON.stringify({
+    sources: nterProtectedSources,
+    observations: nterProtectedObservations,
+    claim: nterClaim,
+    inquiry: nterInquiry
+  });
+  const nterProtectedArtifactsBounded = Boolean(
+    nterProtectedSources.length === 2 &&
+      nterProtectedSources.every((source) =>
+        source?.visibility === "private" &&
+          source.preservationStatus === "private" &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl
+      ) &&
+      nterProtectedObservations.length === 4 &&
+      nterProtectedObservations.every((observation) =>
+        observation?.publicSafe === true &&
+          observation.limitations.length >= 2 &&
+          observation.claimIds.includes(archive.nterClaimId) &&
+          observation.researchInquiryIds.includes(archive.nterInquiryId)
+      ) &&
+      nterClaim?.evidence.filter((evidence) => archive.nterProtectedSourceIds.includes(evidence.sourceId))
+        .every((evidence) => evidence.relationship === "private-support" && evidence.renderCitation === false) &&
+      !/docs\.google\.com\/document\/d\//i.test(nterProtectedBundleText) &&
+      !/\b(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}\b/.test(nterProtectedBundleText)
+  );
   const archiveProductionComplete = Boolean(
     archiveIntakes.length === archive.expectedIntakeCount &&
       archiveObservations.length === archive.expectedObservationCount &&
@@ -1016,6 +1049,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       archiveLabSource.includes('<References pageId="source-backed-team-memory" />') &&
       archiveProjectNote.includes("Archive production is cumulative; site composition is selective.") &&
       sourceBackedMethodStatusBounded &&
+      nterProtectedArtifactsBounded &&
       archiveProofCoverageComplete &&
       archivePublicBundleSafe &&
       archiveContentSha256 === archive.approvedContentSha256

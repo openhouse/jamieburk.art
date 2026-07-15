@@ -86,7 +86,10 @@ Protected archive support is represented only by public-safe metadata and an
 opaque locator ID. A protected source has no repository path or public URL and
 cannot render as a public citation. The July 2026 archive-production pass uses
 this pattern for CRS operating-memory and legislative-provenance artifacts, an
-approved resume, and a bounded source-backed-memory proposal.
+approved resume, a bounded source-backed-memory proposal, and two NTER CHNG
+working artifacts. The NTER CHNG records preserve bounded installation-system,
+shared-credit, and attributed-intent observations while withholding participant
+phone numbers, message transcripts, family logistics, and raw working text.
 
 The Google Drive Shared Drive production pass uses the same pattern for a 196
 Artists Residency acceptance workflow, a Sunday Dinner operating-sheet schema,

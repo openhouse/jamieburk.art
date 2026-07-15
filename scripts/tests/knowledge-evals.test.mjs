@@ -82,13 +82,54 @@ function refreshFieldPracticeApproval(targetSuite) {
     .digest("hex");
 }
 
-test("knowledge-bank gate records two fresh personal and WOW List Facebook event holdout passes", () => {
+function refreshArchiveProductionApproval(targetSuite) {
+  const archive = targetSuite.pilot.archiveProduction;
+  const byId = (rows, ids) => ids.map((id) => rows.find((row) => row.id === id));
+  const proofIds = [
+    "fair-rent-campaign-memory",
+    "fair-rent-source-map",
+    "source-backed-team-memory-method",
+    "ai-evals-professional-development"
+  ];
+  const archiveFairRentPage = knowledgeBank.pages.find((page) => page.id === archive.fairRentPageId);
+  const archiveLabPage = knowledgeBank.pages.find((page) => page.id === archive.labPageId);
+  const fairRentMdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"),
+    "utf8"
+  );
+  const archiveLabSource = readFileSync(
+    path.join(repoRoot, "apps/www/src/app/lab/source-backed-team-memory/page.tsx"),
+    "utf8"
+  );
+  const archiveProjectNote = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/projects/archive-production-2026-07-14.md"),
+    "utf8"
+  );
+
+  archive.approvedContentSha256 = createHash("sha256").update(JSON.stringify({
+    intakes: byId(knowledgeBank.intakeItems, archive.intakeIds),
+    observations: byId(knowledgeBank.observations, archive.observationIds),
+    sources: byId(knowledgeBank.sources, archive.sourceIds),
+    claims: byId(knowledgeBank.claims, archive.claimIds),
+    inquiries: byId(knowledgeBank.researchInquiries, archive.inquiryIds),
+    fairRentPage: archiveFairRentPage,
+    labPage: archiveLabPage,
+    proofCoverage: proofIds.map((proofId) =>
+      knowledgeBank.proofCoverageTargets.find((target) => target.proofId === proofId)
+    ),
+    fairRentMdx,
+    labSource: archiveLabSource,
+    projectNote: archiveProjectNote
+  })).digest("hex");
+}
+
+test("knowledge-bank gate records two fresh NTER CHNG protected-artifact holdout passes", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "personal-wowlist-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
-    "personal-wowlist-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b"
+    "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-a",
+    "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -1478,6 +1519,86 @@ test("NTER CHNG recovers shared authorship and later exhibition inclusion", () =
   assert.deepEqual(claim.evidence.map((evidence) => evidence.sourceId), archive.nterSourceIds);
   assert.deepEqual(inquiry.sourceIds, archive.nterSourceIds);
   assert.ok(claim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0));
+});
+
+test("NTER CHNG protected artifacts preserve hybrid-production evidence without exposing participant data", () => {
+  const archive = suite.pilot.archiveProduction;
+  const protectedSources = archive.nterProtectedSourceIds.map((id) =>
+    knowledgeBank.sources.find((source) => source.id === id)
+  );
+  const protectedObservations = archive.nterProtectedObservationIds.map((id) =>
+    knowledgeBank.observations.find((observation) => observation.id === id)
+  );
+  const claim = knowledgeBank.claims.find((item) => item.id === archive.nterClaimId);
+  const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === archive.nterInquiryId);
+  const protectedEvidence = claim?.evidence.filter((evidence) =>
+    archive.nterProtectedSourceIds.includes(evidence.sourceId)
+  );
+  const bundleText = JSON.stringify({ protectedSources, protectedObservations, claim, inquiry });
+
+  assert.equal(protectedSources.length, 2);
+  assert.ok(protectedSources.every((source) =>
+    source?.visibility === "private" &&
+      source.preservationStatus === "private" &&
+      source.protectedLocatorId &&
+      !source.canonicalUrl &&
+      !source.archiveUrl &&
+      !source.assetUrl
+  ));
+  assert.equal(protectedObservations.length, 4);
+  assert.ok(protectedObservations.every((observation) =>
+    observation?.claimIds.includes(archive.nterClaimId) &&
+      observation.researchInquiryIds.includes(archive.nterInquiryId) &&
+      observation.limitations.length >= 2
+  ));
+  assert.equal(protectedEvidence?.length, 2);
+  assert.ok(protectedEvidence?.every((evidence) =>
+    evidence.relationship === "private-support" && evidence.renderCitation === false
+  ));
+  assert.match(inquiry?.publicSummary ?? "", /hybrid production system/i);
+  assert.doesNotMatch(bundleText, /docs\.google\.com\/document\/d\//i);
+  assert.doesNotMatch(bundleText, /\b(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}\b/);
+});
+
+test("NTER CHNG protected-artifact semantics survive an approval-hash refresh", () => {
+  const archive = suite.pilot.archiveProduction;
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === archive.nterProtectedSourceIds[1]
+  );
+  const claim = knowledgeBank.claims.find((item) => item.id === archive.nterClaimId);
+  assert.ok(source);
+  assert.ok(claim);
+
+  const originalApprovedHash = archive.approvedContentSha256;
+  const originalPublicNote = source.publicNote;
+  const originalInternalClaim = claim.internalClaim;
+
+  try {
+    source.publicNote = `${originalPublicNote} Contact ${["212", "555", "0199"].join("-")}.`;
+    refreshArchiveProductionApproval(suite);
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    source.publicNote = originalPublicNote;
+    claim.internalClaim = "Jamie led the NTER CHNG server software and America: Now and Here installation.";
+    refreshArchiveProductionApproval(suite);
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    claim.internalClaim = originalInternalClaim;
+    source.canonicalUrl = ["https://docs.google.com", "document", "d", "private-artifact"].join("/");
+    refreshArchiveProductionApproval(suite);
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.publicNote = originalPublicNote;
+    delete source.canonicalUrl;
+    claim.internalClaim = originalInternalClaim;
+    archive.approvedContentSha256 = originalApprovedHash;
+  }
 });
 
 test("NTER CHNG shared credit cannot become sole authorship or a Nerman display claim", () => {

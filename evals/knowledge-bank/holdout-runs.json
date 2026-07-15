@@ -413,6 +413,17 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-nter-chng-protected-artifacts-2026-07-15",
+      "completedAt": "2026-07-15T14:38:22Z",
+      "lens": "Protocol reset because the prior holdout state predates two protected NTER CHNG working artifacts, four bounded observations, revised shared-credit and hybrid-production evidence, participant-data exclusions, and approval-hash-resistant privacy and role tests",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect protected-source privacy, participant-data exclusion, public-safe paraphrase, prospective-plan boundaries, collective credit, component-labor non-attribution, held website status, and approval-hash-resistant mutation defenses on a frozen revision."
+      ]
     }
   ]
 }

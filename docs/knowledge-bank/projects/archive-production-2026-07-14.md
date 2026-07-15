@@ -37,7 +37,20 @@ Four earlier creative-technology records matured into defensible claims:
   anchors its January 2010 Kansas City presentation, while America: Now and
   Here's archived site documents the work in the project's May 2011 Kansas
   City presentation and describes the public texting interaction. Component
-  responsibilities remain undivided.
+  responsibilities remain undivided. Two newly surfaced protected 2011
+  artifacts add the installation's production texture: a plan coordinating
+  server-side and wall-side software revision, projection, display computers,
+  fabrication, wiring, and gallery installation; and first-party exhibit
+  information that reiterates the three-person collective credit and
+  attributes to Jamie an intention to invite communication beyond visitors'
+  existing contact lists. The plan is prospective, not a completion report,
+  and neither artifact assigns component-level labor.
+
+The two raw NTER CHNG working documents remain outside the repository. One
+contains participant phone numbers and message transcripts; the other contains
+private family and travel logistics. Only public-safe observations and opaque
+protected-source locators enter the bank. Participant material is not quoted,
+identified, or used as evidence of attendance, reception, or impact.
 
 These claims are mature enough for the bank and deliberately held from the
 current website. The present portfolio is composed for technical project

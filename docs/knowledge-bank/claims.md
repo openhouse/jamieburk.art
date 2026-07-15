@@ -332,16 +332,16 @@ bundle.
 
 **Status:** Confirmed with boundary; held from current site projection
 **Support level:** Strong
-**Evidence class:** Archived project homepage / contemporary event listing / archived exhibition records / institutional exhibition context
+**Evidence class:** Archived project homepage / contemporary event listing / archived exhibition records / institutional exhibition context / protected project artifacts
 **Public wording:** Drew Bolton, Jamie Burkart, and Garrett Fuselier co-created NTER CHNG, an interactive texting installation shown in Kansas City in 2010 and later included in America: Now and Here's 2011 Kansas City presentation.
-**Detailed public-safe wording:** The archived project homepage supplies the shared creator credit; The Pitch describes the software, architectural, and real-time texting form; America: Now and Here's archived site documents the later exhibition inclusion and observed public interaction.
+**Detailed public-safe wording:** The archived project homepage supplies the shared creator credit; The Pitch describes the software, architectural, and real-time texting form; America: Now and Here's archived site documents the later exhibition inclusion and observed public interaction. Protected 2011 project artifacts corroborate the hybrid software, hardware, fabrication, and gallery-installation system and preserve Jamie's stated intention to invite communication beyond existing contact lists.
 **Where to project:** Knowledge bank now; future creative-technology chronology or tailored application after editorial selection.
 **Why it matters:** Recovers a named collaborative interactive-media work and a later exhibition life without inventing component-level labor or impact.
-**Guardrail:** Keep all three collaborators in the credit. The sources do not divide software, architecture, interaction design, or exhibition production among them.
-**Do not say:** Jamie alone created NTER CHNG; Jamie alone wrote the software; America: Now and Here commissioned or awarded the work; NTER CHNG was displayed at the Nerman Museum; participant anecdotes prove representative impact.
-**Protected boundaries:** No private collaborator records or unsupported division-of-labor detail.
+**Guardrail:** Keep all three collaborators in the credit. The sources do not divide software, architecture, interaction design, or exhibition production among them. Treat the installation plan as prospective rather than completed-work proof.
+**Do not say:** Jamie alone created NTER CHNG; Jamie alone wrote the software; Jamie led or solely executed the America: Now and Here restaging; America: Now and Here commissioned or awarded the work; NTER CHNG was displayed at the Nerman Museum; participant anecdotes prove representative impact.
+**Protected boundaries:** No raw working documents, participant phone numbers or messages, family logistics, private collaborator records, or unsupported division-of-labor detail.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-15
 
 ## ai-evals-course-completion - AI evaluation professional development
 
