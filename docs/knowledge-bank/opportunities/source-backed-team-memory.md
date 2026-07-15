@@ -34,7 +34,7 @@ intelligently.
 
 ## Boundaries
 
-Do not name Jonathan Marmor.
+Do not name the private collaborator.
 Do not publish pricing.
 Do not publish private transcript excerpts.
 Do not publish private company context.

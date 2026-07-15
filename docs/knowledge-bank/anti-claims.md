@@ -95,5 +95,5 @@ without separate evidence and authorization.
 
 ## Source-Backed Team Memory
 
-Do not name Jonathan Marmor, publish pricing, publish private transcript
-context, or imply deployment inside his company.
+Do not name the private collaborator, publish pricing, publish private
+transcript context, or imply deployment inside the collaborator's company.

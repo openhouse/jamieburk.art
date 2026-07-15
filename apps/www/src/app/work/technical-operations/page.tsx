@@ -27,7 +27,7 @@ const proofMap = [
     project: "FairRentNYC / Commercial Rent Stabilization",
     href: "/work/fair-rent-nyc",
     action:
-      "I built and stewarded shared campaign memory, coordinated a versioned website relaunch, organized a 20-year vacancy-data corpus, and scoped a privacy-preserving commercial-data pilot for collective civic work.",
+      "I built and stewarded shared campaign memory, helped coordinate and implement a versioned website relaunch, organized a 20-year HUD-USPS vacancy-data corpus, and scoped a privacy-preserving commercial-data pilot for collective civic work.",
     result:
       "Collaborators could trace decisions and source lineage, launch public action tools, and evaluate a smallest-serious data-product scope while protected strategy, legal-review context, and confidential records stayed private."
   },

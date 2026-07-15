@@ -442,7 +442,7 @@ export const googleDriveProductionBatch20260714: {
         {
           key: "technical-operations",
           text:
-            "Coordinated a campaign-site relaunch through a versioned implementation checklist spanning web, calls, forms, press materials, public documents, and follow-through.",
+            "Helped coordinate and implement a campaign-site relaunch through a versioned checklist spanning web, calls, forms, press materials, public documents, and follow-through.",
           status: "active",
           citationRequired: false,
           surfaces: ["/work/technical-operations"]

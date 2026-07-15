@@ -275,7 +275,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["public-safe-archive-summary"],
     publicWording:
       "Helped coordinate and implement FairRentNYC's February 2023 website relaunch through a versioned shared checklist connecting web updates, public action tools, campaign calls, press materials, forms, and follow-through.",
-    shortWording: "Coordinated a versioned FairRentNYC website relaunch",
+    shortWording: "Helped coordinate and implement a versioned FairRentNYC website relaunch",
     detailedPublicWording:
       "Jamie used a shared implementation record to connect website delivery with campaign calls, join and action forms, press materials, public documents, and relaunch follow-through.",
     sourceBasis:
@@ -314,7 +314,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["public-safe-archive-summary"],
     publicWording:
       "Assembled a 20-year working corpus of 81 quarterly HUD-USPS business-vacancy snapshots, organized from Q4 2005 through Q4 2025 for longitudinal research.",
-    shortWording: "Assembled 81 quarterly vacancy snapshots across 20 years",
+    shortWording: "Assembled 81 quarterly HUD-USPS vacancy snapshots across 20 years",
     detailedPublicWording:
       "Jamie organized 81 unique quarterly HUD-USPS business-vacancy snapshots into a longitudinal research corpus spanning Q4 2005 through Q4 2025.",
     sourceBasis:
