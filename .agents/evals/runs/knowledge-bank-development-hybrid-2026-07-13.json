@@ -1,18 +1,18 @@
 {
-  "candidate_sha": "d3b04787d7dd00f733e4b491b55a9bb90d31a5d1",
+  "candidate_sha": "4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two independent graders reviewed exact candidate d3b04787d7dd00f733e4b491b55a9bb90d31a5d1; the KB-007 reviewer returned 4/4 with no actionable semantic finding.",
-        "The frozen 65-claim collective-work inventory and policy version 7 classify all five new collective Urbanhermit-derived project claims and explicitly classify urbanhermit-public-record as individual work.",
-        "The WOW List attribution retains Richard Kim, other builders, and community organizers; the Horse Lords video retains M.C. Schmidt and Horse Lords credit; the tunnel program retains participant and filmmaker authorship.",
-        "The NYC Artist Coalition claim credits Julia Fredenburg, coalition collaborators, partners, artists, venue workers, Rafael Espinal, Council colleagues, and other participants while rejecting legislative authorship and sole causation.",
-        "The Tired of Tires claim credits KC Town Hall, Oak Park Neighborhood Association, Julia Fredenburg, Pat Clarke, Forest Tyson Jr., Jimmy Fitzner, neighbors, and City staff while limiting Jamie's claim to attributable direct participation.",
-        "The three individual public-record claims distinguish Jamie-authored records from external native reposts and preserve non-endorsement, volatility, and incomplete-history boundaries.",
-        "The dedicated Urbanhermit corpus eval passed 100/100, including full source-positioning and collective-credit points."
+        "Two independent graders reviewed exact published candidate 4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c; the KB-007 reviewer returned 4/4 with no actionable semantic finding.",
+        "Origin advertises the exact candidate, and external annotated tag knowledge-bank-policy-baseline-2026-07-15-v14 anchors the reviewed policy state.",
+        "The missing live-Facebook-surface assertion is present, and all three active archive-note projections are realized exactly on the governed project note.",
+        "The active role statement is attributed as Jamie's first-person account while the recovered event population corroborates the collective participation system's public form.",
+        "The claim preserves collaborators, hosts, partners, artists, officials, participants, event-level authorship, attendance, and policy-causation boundaries.",
+        "The frozen deterministic KB-007 pass inspected 69 collective claims with no underlying finding.",
+        "The dedicated NYC Artist Coalition Facebook events evaluation passed 100/100."
       ],
       "findings": [],
       "confidence": 0.99
@@ -22,18 +22,17 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two independent graders reviewed exact candidate d3b04787d7dd00f733e4b491b55a9bb90d31a5d1; the KB-009 reviewer returned 4/4 with no material projection, privacy, or audience-fit defect.",
-        "All eight new claims have projectionEligibility hold, only held projections, empty surface arrays, and no citation-page or public-registry occurrence; the public-surface fingerprint is unchanged.",
-        "The hash-locked 434-record corpus contains public-safe metadata rather than raw post bodies and excludes profile biography, contact details, private analytics, credentials, authentication state, direct messages, and local paths.",
-        "Nine non-mission personal or network records retain only identity-free redaction dispositions, while the authenticated raw capture remains protected.",
-        "The run record limits completeness to 434 of 434 live profile-counted records on the capture date and separates 340 originals, 13 replies, 81 external-source native reposts, and 353 account-authored records.",
-        "Visible counters are bounded as 243 interaction units rather than people, reach, endorsement, conversion, attendance, or impact; external repost counters are excluded.",
-        "The knowledge-bank documentation preserves future hiring value across product, creative-media, participatory-program, civic-advocacy, and neighborhood-fieldwork evidence without adding a route or cluttering the current site.",
-        "Chad-lens, citation, knowledge-bank, public-safety, route, portfolio, typecheck, lint, production-build, and dedicated Urbanhermit checks passed."
+        "Two independent graders reviewed exact published candidate 4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c; the KB-009 reviewer returned 4/4 with no material projection, privacy, or audience-fit defect.",
+        "The corpus reconciles all 34 displayed host-control slots as 33 recovered event records plus one unresolved slot without claiming a complete native owner archive.",
+        "The public case study renders one attributed participation-system claim with a plain-language source boundary and proposition-level citations.",
+        "Response labels remain event-level platform signals rather than attendance, unique people, reach, endorsement, conversion, mandate, or impact.",
+        "Democracy-lab interpretation, response metrics, raw descriptions, personal data, meeting access details, and authenticated-session material remain off the public site.",
+        "All three active archive-note projections are exactly realized, while held interpretations remain unrendered.",
+        "The dedicated corpus, citation, Chad-lens, public-safety, route, typecheck, lint, and production-build checks passed."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact candidate d3b04787d7dd00f733e4b491b55a9bb90d31a5d1 passed independent KB-007 and KB-009 review at 4/4 with no material findings. The complete live-profile corpus, source maturation, atomic claim graph, collective-credit boundaries, privacy protections, explicit held projections, and externally anchored policy baseline meet the frozen criteria."
+  "overall_finding": "Exact published candidate 4ad3ebb8b118849fbb0b70a1fecdd5868d089a8c passed independent KB-007 and KB-009 review at 4/4 with no material findings. The 34-slot reconciliation, atomic source graph, collective-credit boundaries, attributed role statement, privacy protections, exact projection realization, and externally anchored v14 baseline meet the frozen criteria."
 }
