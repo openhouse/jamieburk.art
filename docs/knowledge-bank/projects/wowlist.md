@@ -95,10 +95,11 @@ Past control. This is a dated interface observation, not evidence that WOW List
 never held, promoted, or supported events.
 
 A separate personal-account event titled *200th Sunday Dinner* links to a WOW
-List event page and identifies Julia Fredenburg and Jamie together. The record
-strengthens the Sunday Dinner-to-WOW List lineage while demonstrating why the
-project Page and personal event infrastructure must remain distinct archival
-surfaces.
+List event page and identifies Jamie with another Sunday Dinner collaborator.
+The record strengthens the Sunday Dinner-to-WOW List lineage while
+demonstrating why the project Page and personal event infrastructure must
+remain distinct archival surfaces. Collaborator names remain held from this
+project note pending approval.
 
 ## Next research
 

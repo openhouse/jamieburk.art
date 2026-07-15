@@ -179,6 +179,19 @@ export const personalWowListFacebookEventsFullPopulationBatch20260715: {
   ],
   sourceAssertions: [
     {
+      id: "AST-JAMIE-FACEBOOK-HOSTED-SURFACE-2026",
+      sourceId: "SRC-JAMIE-FACEBOOK-EVENT-SURFACE-2026",
+      project: "participatory-programs",
+      assertion:
+        "Repeated authenticated traversal exposed 21 personal hosted-event slots, and a public event host panel independently displayed a 21-past-events count.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-PERSONAL-FACEBOOK-EVENT-POPULATION"],
+      publicSafe: true,
+      reviewedAt,
+      reviewedBy
+    },
+    {
       id: "AST-PERSONAL-FACEBOOK-EVENT-POPULATION-2026",
       sourceId: "SRC-PERSONAL-WOWLIST-FACEBOOK-EVENT-CENSUS-2026",
       project: "participatory-programs",
@@ -281,7 +294,7 @@ export const personalWowListFacebookEventsFullPopulationBatch20260715: {
       project: "nter-chng",
       assertion:
         "The January 8, 2010 NTER CHNG Facebook event identifies Drew Bolton, Jamie Burkart, and Garrett Fuselier together and describes the project as a public interactive texting installation.",
-      relationship: "corroborates",
+      relationship: "supports",
       confidence: "high",
       candidateClaimIds: [
         "CLM-NTER-CHNG-FACEBOOK-EVENT-TRACE",
@@ -300,6 +313,22 @@ export const personalWowListFacebookEventsFullPopulationBatch20260715: {
       relationship: "contextualizes",
       confidence: "high",
       candidateClaimIds: ["CLM-PERSONAL-FACEBOOK-EVENT-PRACTICE"],
+      publicSafe: true,
+      reviewedAt,
+      reviewedBy
+    },
+    {
+      id: "AST-PERSONAL-WOWLIST-FACEBOOK-PROTECTED-RUN-2026",
+      sourceId: "SRC-PERSONAL-WOWLIST-FACEBOOK-EVENT-PROTECTED-RUN-2026",
+      project: "participatory-programs",
+      assertion:
+        "Protected research captures preserve terminal-scroll reconciliation, detail-page review, the WOW List Page empty-state review, and the privacy disposition without publishing raw or authenticated data.",
+      relationship: "bounds",
+      confidence: "high",
+      candidateClaimIds: [
+        "CLM-PERSONAL-FACEBOOK-EVENT-POPULATION",
+        "CLM-WOWLIST-FACEBOOK-EVENT-SURFACE"
+      ],
       publicSafe: true,
       reviewedAt,
       reviewedBy
@@ -611,7 +640,7 @@ export const personalWowListFacebookEventsFullPopulationBatch20260715: {
       evidence: [
         {
           sourceId: "SRC-PERSONAL-WOWLIST-FACEBOOK-EVENT-CENSUS-2026",
-          relationship: "corroborating",
+          relationship: "direct-support",
           supports: ["public event date", "three named collaborators", "interactive texting format"],
           locator: "event 10153298280050561",
           confidence: "high",
