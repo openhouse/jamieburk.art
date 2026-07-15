@@ -443,6 +443,17 @@ export const wowListXFullPopulationBatch20260715: {
           supports: ["click-friction report", "event-entry support response"],
           confidence: "high",
           renderCitation: true
+        },
+        {
+          sourceId: "SRC-WOWLIST-X-CORPUS-2026-07-15",
+          relationship: "corroborating",
+          supports: [
+            "immutable support-reply records",
+            "recovered parent-question context",
+            "deleted-parent boundary"
+          ],
+          confidence: "high",
+          renderCitation: true
         }
       ],
       boundaries: [

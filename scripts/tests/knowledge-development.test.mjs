@@ -535,6 +535,19 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     page.occurrences.find((item) => item.id === "public-product-support").claimId,
     supportClaim.id
   );
+  assert.ok(
+    supportClaim.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-WOWLIST-X-CORPUS-2026-07-15" &&
+        item.relationship === "corroborating" &&
+        item.renderCitation
+    )
+  );
+  assert.ok(
+    page.occurrences
+      .find((item) => item.id === "public-product-support")
+      .sourceIds.includes("SRC-WOWLIST-X-CORPUS-2026-07-15")
+  );
   assert.equal(
     page.occurrences.find((item) => item.id === "civic-care-use-pattern").claimId,
     civicClaim.id
@@ -611,9 +624,36 @@ test("WOW List corpus accounts for the full profile-reported population and pres
       `Population: ${corpus.population.renderedDistinct} of ${corpus.population.profileReported} profile-reported items recovered`
     )
   );
-  assert.match(runNote, /capture surface and method, profile denominator/);
-  assert.match(runNote, /resolved short URLs, and four public conversation contexts/);
-  assert.match(runNote, /not private account or session credentials/);
+  for (const field of [
+    "capturedAt",
+    "profileReportedPosts",
+    "authenticatedAs",
+    "surface",
+    "captureMethod",
+    "boundaries",
+    "items",
+    "shortUrlResolutions",
+    "supplementalThreads",
+    "statusUrl",
+    "datetime",
+    "engagementLabel",
+    "links",
+    "hasVisibleMedia",
+    "text",
+    "href",
+    "shortUrl",
+    "resolvedUrl",
+    "method",
+    "authoredStatusUrl",
+    "parentStatusUrl",
+    "parentPublishedAt",
+    "parentAuthor",
+    "parentVisibleText",
+    "relationship"
+  ]) {
+    assert.match(runNote, new RegExp(`\\b${field}\\b`));
+  }
+  assert.match(runNote, /not private account data or session credentials/);
   assert.match(
     socialInventory,
     /posted but unrecovered Good Times article the account described as concerning DIY documentation/

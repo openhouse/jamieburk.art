@@ -1161,7 +1161,8 @@ export const socialAccountProductionBatch20260714: {
           sourceIds: [
             "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
             "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
-            "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015"
+            "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015",
+            "SRC-WOWLIST-X-CORPUS-2026-07-15"
           ]
         },
         {

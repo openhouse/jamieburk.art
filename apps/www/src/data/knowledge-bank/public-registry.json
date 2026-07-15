@@ -2276,6 +2276,17 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-CORPUS-2026-07-15",
+          "relationship": "corroborating",
+          "supports": [
+            "immutable support-reply records",
+            "recovered parent-question context",
+            "deleted-parent boundary"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
@@ -2621,7 +2632,8 @@
           "sourceIds": [
             "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
             "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
-            "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015"
+            "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015",
+            "SRC-WOWLIST-X-CORPUS-2026-07-15"
           ]
         },
         {
