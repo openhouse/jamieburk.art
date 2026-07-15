@@ -87,6 +87,38 @@ test("negative research preserves scope and limitations", () => {
   assert.doesNotMatch(inquiry.publicSummary, /did not exist/i);
 });
 
+test("NTER CHNG preserves collective credit and exhibition-source boundaries", () => {
+  const claims = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const sources = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const installation = claims.get("CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011");
+  const exhibition = claims.get("CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011");
+  const exhibitionSource = sources.get("SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011");
+  const nermanSource = sources.get("SRC-NERMAN-AMERICA-NOW-AND-HERE-2011");
+
+  assert.ok(installation);
+  assert.ok(exhibition);
+  assert.ok(exhibitionSource);
+  assert.ok(nermanSource);
+  assert.match(installation.internalClaim, /Drew Bolton.*Garrett Fuselier/i);
+  assert.ok(installation.antiClaims.some((item) => /solely created.*programmed.*designed.*produced/i.test(item)));
+  assert.ok(
+    exhibition.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011" &&
+        item.relationship === "direct-support"
+    )
+  );
+  assert.ok(
+    exhibition.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-NERMAN-AMERICA-NOW-AND-HERE-2011" &&
+        item.relationship === "context"
+    )
+  );
+  assert.ok(exhibitionSource.doesNotEstablish.some((item) => /Nerman Museum/i.test(item)));
+  assert.ok(nermanSource.doesNotEstablish.some((item) => /NTER CHNG.*inclusion/i.test(item)));
+});
+
 test("member engagement remains account-level and institutionally bounded", () => {
   const claim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT");
   assert.ok(claim);

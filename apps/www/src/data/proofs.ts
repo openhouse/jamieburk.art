@@ -313,17 +313,19 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-source"],
     publicWording:
-      "In 2006 Jamie exhibited Time is Long, an interactive VHS installation with about a 20-minute delay. In 2013 he built a Max/MSP experiment that reordered audio clips by pitch. A community-maintained Discogs release record lists him as a participant on a 99-person Matmos album from 2020; his specific contribution is not identified.",
-    shortWording: "Three documented creative-technical works across video, software, and sound",
+      "In 2011 Jamie collaborated with Drew Bolton and Garrett Fuselier on NTER CHNG, an interactive text-messaging installation presented through America: Now and Here Kansas City's visual-artists program. Other records document Jamie's interactive video, audio-software, and collaborative music work.",
+    shortWording: "Documented creative-technical work across installation, software, video, and sound",
     detailedPublicWording:
-      "Dated public records document Jamie's 20-minute VHS delay installation Time is Long and a Max/MSP experiment that reordered audio segments by pitch. A community-maintained Discogs release record lists him among the participants on Matmos's 99-contributor album The Consuming Flame; the official label page establishes the collaborative album context but does not individually name Jamie.",
+      "Archived project and exhibition records document Jamie's collaboration with Drew Bolton and Garrett Fuselier on NTER CHNG, which joined software, gallery architecture, and audience text messages in a public group exchange. Additional dated records document Jamie's 20-minute VHS delay installation Time is Long and a Max/MSP experiment that reordered audio segments by pitch. A community-maintained Discogs release record lists him among the participants on Matmos's 99-contributor album The Consuming Flame; the official label page establishes the collaborative album context but does not individually name Jamie.",
     sourceBasis:
-      "Cool Hunting's 2006 BAP Lab coverage, Monthly Music Hackathon NYC's 2013 project post, Thrill Jockey's album page, and the Discogs release record.",
+      "The archived NTER CHNG project site, America: Now and Here Kansas City's archived artist page, Cool Hunting's 2006 BAP Lab coverage, Monthly Music Hackathon NYC's 2013 project post, Thrill Jockey's album page, and the Discogs release record.",
     whyItMatters:
-      "Preserves three precise specimens showing how Jamie has joined technical mechanisms, human participation, and cultural experience without implying a continuous formal practice.",
+      "Preserves precise specimens showing how Jamie has joined technical mechanisms, human participation, and cultural experience without implying a continuous formal practice.",
     guardrail:
-      "Keep each contribution at the precision of its source and do not convert participation into event organization, production credit, or sole authorship.",
+      "Keep each contribution at the precision of its source, preserve NTER CHNG's three-person credit, and do not convert participation into event organization, unspecified production credit, or sole authorship.",
     doNotSay: [
+      "Jamie solely created, programmed, designed, or produced NTER CHNG",
+      "NTER CHNG was presented at the Nerman Museum",
       "Jamie organized BAP Lab",
       "The Max/MSP experiment was a production product",
       "Jamie produced or composed the Matmos album",
@@ -331,15 +333,16 @@ export const proofClaims: ProofClaim[] = [
     ],
     protectedBoundaries: [
       "Unapproved historical participants",
+      "Participant messages or telephone numbers from archived exhibition pages",
       "Uncleared event photographs or video",
       "Unrecovered source code",
       "Unverified track-level credits"
     ],
     surfaces: ["lab", "about", "internal-only"],
-    relatedProjects: ["time-is-long", "monthly-music-hackathon", "matmos-collaboration"],
-    relatedCapabilities: ["interactive-media", "creative-coding", "audio-software", "collaboration"],
-    structuredClaimIds: ["CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006", "CLM-SORTED-AUDIO-MAX-MSP-2013", "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020"],
-    lastReviewed: "2026-07-13"
+    relatedProjects: ["nterchng", "time-is-long", "monthly-music-hackathon", "matmos-collaboration"],
+    relatedCapabilities: ["interactive-media", "participatory-systems", "creative-coding", "audio-software", "collaboration"],
+    structuredClaimIds: ["CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011", "CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011", "CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006", "CLM-SORTED-AUDIO-MAX-MSP-2013", "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",

@@ -377,16 +377,16 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Moderate
 **Evidence class:** Public source
-**Structured claim IDs:** `CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006`, `CLM-SORTED-AUDIO-MAX-MSP-2013`, `CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020`
-**Public wording:** In 2006 Jamie exhibited Time is Long, an interactive VHS installation with about a 20-minute delay. In 2013 he built a Max/MSP experiment that reordered audio clips by pitch. A community-maintained Discogs release record lists him as a participant on a 99-person Matmos album from 2020; his specific contribution is not identified.
-**Detailed public-safe wording:** Dated public records document Jamie's 20-minute VHS delay installation Time is Long and a Max/MSP experiment that reordered audio segments by pitch. A community-maintained Discogs release record lists him among the participants on Matmos's 99-contributor album The Consuming Flame; the official label page establishes the collaborative album context but does not individually name Jamie.
+**Structured claim IDs:** `CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011`, `CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011`, `CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006`, `CLM-SORTED-AUDIO-MAX-MSP-2013`, `CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020`
+**Public wording:** In 2011 Jamie collaborated with Drew Bolton and Garrett Fuselier on NTER CHNG, an interactive text-messaging installation presented through America: Now and Here Kansas City's visual-artists program. Other records document Jamie's interactive video, audio-software, and collaborative music work.
+**Detailed public-safe wording:** Archived project and exhibition records document Jamie's collaboration with Drew Bolton and Garrett Fuselier on NTER CHNG, which joined software, gallery architecture, and audience text messages in a public group exchange. Additional dated records document Jamie's 20-minute VHS delay installation Time is Long and a Max/MSP experiment that reordered audio segments by pitch. A community-maintained Discogs release record lists him among the participants on Matmos's 99-contributor album The Consuming Flame; the official label page establishes the collaborative album context but does not individually name Jamie.
 **Where to project:** Knowledge Bank now; Lab or About only when the public composition benefits from the longer creative-technical throughline.
-**Why it matters:** Preserves three precise specimens showing how Jamie has joined technical mechanisms, human participation, and cultural experience without implying a continuous formal practice.
-**Guardrail:** Keep each contribution at the precision of its source and do not convert participation into event organization, production credit, or sole authorship.
-**Do not say:** Jamie organized BAP Lab; the Max/MSP experiment was a production product; Jamie produced or composed the Matmos album; the reviewed records identify Jamie's specific Matmos contribution.
-**Protected boundaries:** Unapproved historical participants, uncleared event photographs or video, unrecovered source code, and unverified track-level credits stay offline.
+**Why it matters:** Preserves precise specimens showing how Jamie has joined technical mechanisms, human participation, and cultural experience without implying a continuous formal practice.
+**Guardrail:** Keep each contribution at the precision of its source, preserve NTER CHNG's three-person credit, and do not convert participation into event organization, unspecified production credit, or sole authorship.
+**Do not say:** Jamie solely created, programmed, designed, or produced NTER CHNG; NTER CHNG was presented at the Nerman Museum; Jamie organized BAP Lab; the Max/MSP experiment was a production product; Jamie produced or composed the Matmos album; the reviewed records identify Jamie's specific Matmos contribution.
+**Protected boundaries:** Unapproved historical participants, participant messages or telephone numbers from archived exhibition pages, uncleared event photographs or video, unrecovered source code, and unverified track-level credits stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-15
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 

@@ -78,6 +78,10 @@ Approved public artifact examples for this launch pass include:
   Fredenburg's work on the collective Cabaret Law repeal effort.
 - The Pitch's 2009 Great Accommodations and Gulf endpoint follow-up.
 - Michael Rees's Claudette's Theatre on Wheels project page.
+- The archived NTER CHNG project site and America: Now and Here Kansas City's
+  archived artist page for Drew Bolton, Jamie Burkart, and Garrett Fuselier.
+- The Nerman Museum's America: Now and Here page, used only for broader
+  exhibition context and not as evidence that NTER CHNG appeared at the museum.
 - The complete 45-article NYC Artist Coalition campaign press corpus, preserving 46 placements across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.
 - NYC Artist Coalition's authenticated Facebook past-events surface, a public-safe 34-slot event disposition ledger, and a routed outbound-link ledger.
 - NYC Artist Coalition's authenticated Facebook Page-post surface, a 444-row public-safe disposition ledger, a 33-route public-safe destination inventory, selected close-read posts, and separately bounded source leads.
