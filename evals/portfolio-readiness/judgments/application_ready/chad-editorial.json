@@ -1,28 +1,109 @@
 {
-  "judgeId": "codex-independent-chad-editor-application-2026-07-15-r14",
+  "judgeId": "codex-independent-chad-editor-application-2026-07-15-r15",
   "lens": "chad-editorial",
-  "candidate": "sha256:75a2f3c64658f5b6fb831ec32b4402be033f77a76f7919b5907462497ea0eb8c",
-  "contract": "sha256:12df185b8c6f661d739802e0abf0554e6b984b9acd8ae6a2d1d04f35e56b95aa",
+  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
+  "contract": "sha256:d5e153eef79f0a60202346aff198951b30da337d1aee13f6f7ea4381f1043e7a",
   "profile": "application_ready",
-  "scores": { "role_clarity": 4, "role_fit": 4, "proof_defensibility": 4, "citational_care": 4, "reader_effort": 3, "chad_lens": 3, "visual_evidence": 1, "resume_alignment": 4, "responsive_quality": 3, "sharing_quality": 3, "operational_confidence": 3 },
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
   "evidence": [
-    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport names Jamie, the target technical-project and product-operations work, and the concrete operating structures he creates." },
-    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "The page maps delivery coordination, risk surfacing, documentation, launch support, and handoffs to named project evidence." },
-    { "rubric": "proof_defensibility", "route": "/work/kc-town-hall", "observation": "Jamie's attributed planning and presenter roles remain distinct from the Board recommendation and Council actions, and the page explicitly distinguishes appropriation from receipt or expenditure." },
-    { "rubric": "citational_care", "route": "/work/callnyc", "observation": "The event, Council attribution, independent follow-on, press coverage, and archived status resolve to bounded public claims with local references and backlinks." },
-    { "rubric": "reader_effort", "route": "/work", "observation": "The index is orderly but long: each card repeats summary, unclear-to-usable framing, role fit, tags, and status before the reader reaches the case study." },
-    { "rubric": "chad_lens", "route": "/work/kc-town-hall", "observation": "Jamie is visible as co-founder, project manager, co-lead, and presenter, while the $490,539 Council appropriation is stated directly and right-sized; the unexplained CCED acronym keeps the page from exceptional one-pass clarity." },
-    { "rubric": "chad_lens", "route": "/work/callnyc", "observation": "The page directly says Jamie built the independent prototype and translated constituent-services data into issue pathways and resident-facing guidance without claiming official Council ownership." },
-    { "rubric": "chad_lens", "route": "/work/fair-rent-nyc", "observation": "Jamie's documentation, web-infrastructure, organizing, and policy-translation contributions are visible while coalition and legislative outcomes retain collective and institutional credit." },
-    { "rubric": "visual_evidence", "route": "/work/harry-j-epstein", "observation": "The artifact gallery consists of descriptive text surfaces rather than approved screenshots or project imagery; this remains an allowed application-profile deferral." },
-    { "rubric": "resume_alignment", "route": "/resume", "observation": "The deterministic resume-consistency gate passes, including chronology and agreement between the approved resume and public site." },
-    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound evidence reports no overflow, working citation navigation, and visible focus for all traversed controls, but the 200 percent check used an equivalent reflow viewport rather than browser-chrome zoom." },
-    { "rubric": "sharing_quality", "route": "/resume", "observation": "Canonical, Open Graph, and Twitter metadata are present, but the inspected candidate still uses staging metadata defaults rather than verified production sharing behavior." },
-    { "rubric": "operational_confidence", "route": "/api/health", "observation": "The repository defines standalone and Docker operation plus a health route, while matching deployed-SHA, production smoke, indexing, and rollback evidence remain deferred for this profile." }
+    {
+      "rubric": "role_clarity",
+      "route": "/",
+      "observation": "The first viewport names Jamie, the target role family, the value proposition, and direct paths to work, resume, and contact."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The page maps delivery coordination, risk surfacing, documentation, launch support, and handoffs to named projects and specific proof points."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/harry-j-epstein",
+      "observation": "The business result remains contribution language, while private dashboards, customer data, and unsupported causal ownership remain outside the claim."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/kc-town-hall",
+      "observation": "Jamie's attributed planning and presenter roles are separated from Board and Council decisions, and appropriation is explicitly distinguished from receipt, expenditure, or completion."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/callnyc",
+      "observation": "Event chronology, Council attribution, Jamie's independent follow-on, press coverage, and archived status resolve to local references with accessible backlinks and bounded support."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/fair-rent-nyc",
+      "observation": "The citation system exposes source-specific support for founding affiliation, organizing, testimony, campaign interfaces, press records, and legislative outcomes without assigning collective results to Jamie alone."
+    },
+    {
+      "rubric": "reader_effort",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Clear headings and direct contribution language keep the long case study usable, but repeated boundary explanations and the stacked evidence sections add scanning cost."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/callnyc",
+      "observation": "Jamie is plainly the builder of the independent prototype, the resident-facing result is understandable in one pass, and the page rejects official-service or hackathon-winner inflation."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/kc-town-hall",
+      "observation": "The page states the Council appropriation directly while preserving the distinction between Jamie's contribution, municipal decisions, and unproven downstream funding stages; source-attributed framing keeps it just short of exceptional editorial ease."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/about",
+      "observation": "Experimental media, prototypes, installations, gatherings, participation, memory, and place are explicitly connected to Jamie's current systems practice, though the application offers few material or visual specimens."
+    },
+    {
+      "rubric": "sack_lens",
+      "route": "/work/callnyc",
+      "observation": "The case shows a clear movement from civic records to an issue model, interface, and social pathway, while the broader recursive method remains more often stated than demonstrated visually."
+    },
+    {
+      "rubric": "visual_evidence",
+      "route": "/work/callnyc",
+      "observation": "The artifact gallery describes a prototype, translation layer, and press record through text-only cards; no approved project image or inspectable visual artifact is rendered."
+    },
+    {
+      "rubric": "resume_alignment",
+      "route": "/resume",
+      "observation": "The public role title, operating-structure proposition, selected impact, and CallNYC chronology align with the homepage and the passing deterministic resume gate."
+    },
+    {
+      "rubric": "responsive_quality",
+      "route": "/work/callnyc",
+      "observation": "Candidate-bound evidence reports visible focus for all 24 traversed controls, including citations, and no overflow across all declared mobile and reflow checks; the zoom test used an equivalent viewport rather than browser chrome."
+    },
+    {
+      "rubric": "sharing_quality",
+      "route": "/resume",
+      "observation": "Canonical, Open Graph, Twitter-card, download, and contact paths are present and coherent, but the inspected candidate still uses staging metadata defaults."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "/",
+      "observation": "Local route, accessibility, metadata, and resume checks support an application release, while matching production deploy SHAs, smoke evidence, indexing verification, and rollback proof remain an allowed application-profile deferral."
+    }
   ],
   "regressions": [],
-  "highestValueFailure": null,
-  "smallestDefensiblePatch": null,
+  "highestValueFailure": "visual_evidence",
+  "smallestDefensiblePatch": "Replace one text-only CallNYC artifact card with one approved public-safe image of the surviving issue-pathway interface, accompanied by concise alt text and a caption stating exactly what the image proves while retaining the archived and unofficial boundary.",
   "passes": true,
   "confidence": "high"
 }

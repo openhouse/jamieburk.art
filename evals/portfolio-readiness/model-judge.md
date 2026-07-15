@@ -25,9 +25,15 @@ not a prose description of it. Do not inspect private archives.
 6. Score `chad_lens` separately: Jamie must be visible as the actor, the actual
    work and useful outcome must be legible in one pass, specialized language
    must be translated, and collective credit must remain right-sized.
-7. Identify one highest-value failing criterion and one smallest defensible
+7. Score `morse_lens` separately using `margaret-morse-lens-judge.md`: embodied,
+   artistic, material, social, and place-based inquiry must remain connected to
+   professional practice without exposing private educational records.
+8. Score `sack_lens` separately using `warren-sack-lens-judge.md`: recursive
+   relational thinking must become legible across sources, prototypes,
+   interfaces, physical-digital situations, and collaborative systems.
+9. Identify one highest-value failing criterion and one smallest defensible
    patch. Do not propose a redesign unless the evidence requires it.
-8. Compare the candidate with the preceding accepted run without being told
+10. Compare the candidate with the preceding accepted run without being told
    which version is newer. Reject a candidate that improves one score by
    causing a public-safety, claim-integrity, accessibility, or reader-effort
    regression.
@@ -48,6 +54,8 @@ Return JSON:
     "citational_care": 0,
     "reader_effort": 0,
     "chad_lens": 0,
+    "morse_lens": 0,
+    "sack_lens": 0,
     "visual_evidence": 0,
     "resume_alignment": 0,
     "responsive_quality": 0,

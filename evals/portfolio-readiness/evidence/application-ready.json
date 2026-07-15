@@ -1,5 +1,5 @@
 {
-  "candidate": "sha256:75a2f3c64658f5b6fb831ec32b4402be033f77a76f7919b5907462497ea0eb8c",
+  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
   "profile": "application_ready",
   "performedAt": "2026-07-15",
   "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
@@ -9,6 +9,7 @@
     { "route": "/work/technical-operations", "desktop": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" }, "mobile": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" } },
     { "route": "/resume", "desktop": { "status": 200, "overflow": false, "h1": "Resume" }, "mobile": { "status": 200, "overflow": false, "h1": "Resume" } },
     { "route": "/contact", "desktop": { "status": 200, "overflow": false, "h1": "Contact" }, "mobile": { "status": 200, "overflow": false, "h1": "Contact" } },
+    { "route": "/about", "desktop": { "status": 200, "overflow": false, "h1": "About" }, "mobile": { "status": 200, "overflow": false, "h1": "About" } },
     { "route": "/work/harry-j-epstein", "desktop": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" }, "mobile": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" } },
     { "route": "/work/fair-rent-nyc", "desktop": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" }, "mobile": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" } },
     { "route": "/work/callnyc", "desktop": { "status": 200, "overflow": false, "h1": "CallNYC.org" }, "mobile": { "status": 200, "overflow": false, "h1": "CallNYC.org" } },
@@ -39,7 +40,7 @@
   "zoom200": {
     "passed": true,
     "method": "Rendered each route at a 640x450 CSS-pixel viewport, the reflow equivalent of 200% browser zoom on a 1280x900 display.",
-    "routeCount": 10,
+    "routeCount": 11,
     "overflowCount": 0
   },
   "keyboard": {

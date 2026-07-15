@@ -1,0 +1,32 @@
+{
+  "id": "feature-evals-C-7d9e0fcd-morse-sack-baseline",
+  "commit": "7d9e0fcd866755662399db1705665534e2f27816",
+  "fingerprint": "sha256:75a2f3c64658f5b6fb831ec32b4402be033f77a76f7919b5907462497ea0eb8c",
+  "profiles": [
+    "application_ready",
+    "production_ready"
+  ],
+  "evaluatedAt": "2026-07-15",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 3,
+    "morse_lens": 2,
+    "sack_lens": 2,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
+  "weightedScore": 85,
+  "passed": false,
+  "highestValueFailure": "morse_lens and sack_lens",
+  "evidence": [
+    "The application narrative made Jamie's operating value clear but did not explicitly preserve the embodied artistic and social-practice throughline.",
+    "Relational thinking was visible within individual projects but not named as a recurring method connecting computational, social, physical, and collaborative systems."
+  ]
+}

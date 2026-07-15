@@ -29,11 +29,12 @@ The production profile fails closed unless deployment and approval evidence are
 provided through the variables named by the runner.
 
 Application-ready also fails closed unless the candidate content fingerprint
-matches browser evidence and at least three passing judgments from unique judge
-IDs using distinct review lenses. One must use the dedicated `chad-editorial`
-lens and score the Chad criterion at least 3. Each judgment binds both the candidate
-fingerprint and the evaluation-contract fingerprint, so changing either the
-public surface or the rules invalidates prior approvals. Judgment files live under
+matches browser evidence and at least five passing judgments from unique judge
+IDs using distinct review lenses. Three are dedicated: `chad-editorial`,
+`margaret-morse`, and `warren-sack`. Each dedicated judgment must score its own
+criterion at least 3. Every judgment binds both the candidate fingerprint and
+the evaluation-contract fingerprint, so changing either the public surface or
+the rules invalidates prior approvals. Judgment files live under
 `evals/portfolio-readiness/judgments/<profile>/`; changing an evaluated public
 surface invalidates them automatically.
 
@@ -57,7 +58,7 @@ the underlying smoke, indexing, and rollback evidence.
 ## Recursive Protocol
 
 1. Freeze the suite and baseline candidate.
-2. Run deterministic gates and two independent model judges.
+2. Run deterministic gates and the required independent model judges.
 3. Select the highest-weight failing criterion.
 4. Make one bounded change and name the quality it must preserve.
 5. Build and evaluate from a fresh environment.
@@ -76,6 +77,25 @@ specialized language is translated, collective credit is preserved, and strong
 defensible results are neither apologized for nor inflated. Deterministic checks
 locate known meta-narration and unexplained terminology. The dedicated judge
 applies the broader editorial standard in `chad-lens-judge.md`.
+
+## Margaret Morse Lens
+
+The Morse criterion protects the continuity among Jamie's artistic, civic,
+technical, and social practices. It recognizes embodied and performative
+inquiry, material and spatial experimentation, participation, memory, place,
+and the ways people inhabit structures. The public composition must make this
+depth accessible without reducing it to organizational utility or disclosing
+private educational records. The dedicated standard lives in
+`margaret-morse-lens-judge.md`.
+
+## Warren Sack Lens
+
+The Sack criterion asks whether Jamie's recursive relational method is
+legible: relationships become models; models become prototypes, interfaces, or
+operating structures; and digital information reconnects with physical and
+social situations. It also protects source rigor, collaborative architecture,
+multimodal evidence, and right-sized individual credit. The dedicated standard
+lives in `warren-sack-lens-judge.md`.
 
 ## Editorial Review
 

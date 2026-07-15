@@ -8,7 +8,9 @@ import {
   browserEvidenceMatches,
   findChadLensFriction,
   findGovernanceNarration,
+  morseLensTracePass,
   profileStatus,
+  sackLensTracePass,
   validateSuite,
   validModelJudgments,
   weightedScore
@@ -30,6 +32,8 @@ const baselineScores = {
   citational_care: 4,
   reader_effort: 3,
   chad_lens: 2,
+  morse_lens: 2,
+  sack_lens: 2,
   visual_evidence: 1,
   resume_alignment: 4,
   responsive_quality: 3,
@@ -39,7 +43,7 @@ const baselineScores = {
 
 test("suite IDs, references, and weights are valid", () => {
   assert.deepEqual(validateSuite(suite), []);
-  assert.equal(weightedScore(suite.rubrics, baselineScores), 83.5);
+  assert.equal(weightedScore(suite.rubrics, baselineScores), 83);
 });
 
 test("reader-irrelevant governance narration is located with evidence", () => {
@@ -65,7 +69,7 @@ test("Chad-lens friction is located with evidence", () => {
   assert.equal(findings[0].file, "home.tsx");
 });
 
-test("baseline misses the application-ready Chad-lens criterion", () => {
+test("baseline misses the application-ready editorial lenses", () => {
   const result = profileStatus({
     suite,
     profileId: "application_ready",
@@ -74,11 +78,16 @@ test("baseline misses the application-ready Chad-lens criterion", () => {
   });
 
   assert.equal(result.passed, false);
-  assert.deepEqual(result.failedRubrics, ["chad_lens"]);
+  assert.deepEqual(result.failedRubrics, ["chad_lens", "morse_lens", "sack_lens"]);
 });
 
-test("one bounded Chad-lens improvement reaches application-ready", () => {
-  const candidateScores = { ...baselineScores, chad_lens: 3 };
+test("bounded Chad, Morse, and Sack improvements reach application-ready", () => {
+  const candidateScores = {
+    ...baselineScores,
+    chad_lens: 3,
+    morse_lens: 3,
+    sack_lens: 3
+  };
   const result = profileStatus({
     suite,
     profileId: "application_ready",
@@ -96,7 +105,12 @@ test("application-ready does not falsely imply production-ready", () => {
     production_operations: { status: "blocked" },
     human_approval: { status: "blocked" }
   };
-  const candidateScores = { ...baselineScores, chad_lens: 3 };
+  const candidateScores = {
+    ...baselineScores,
+    chad_lens: 3,
+    morse_lens: 3,
+    sack_lens: 3
+  };
   const result = profileStatus({
     suite,
     profileId: "production_ready",
@@ -123,7 +137,7 @@ test("baseline comparison rejects fingerprint drift and rubric regression", () =
       commit: "base-sha",
       fingerprint: "sha256:base",
       profileId: "application_ready",
-      scores: { ...baselineScores, chad_lens: 3 }
+      scores: { ...baselineScores, chad_lens: 3, morse_lens: 3, sack_lens: 3 }
     }),
     true
   );
@@ -184,6 +198,26 @@ test("browser evidence is candidate-bound and covers every required route", () =
   );
 });
 
+test("Morse and Sack traces require embodied and relational public throughlines", () => {
+  const aboutSource = [
+    "experimental media and social practice",
+    "prototype, installation, gathering, or public situation",
+    "technical, civic, artistic, and social",
+    "participation, memory, and place",
+    "relationships across social and technical systems",
+    "patterns into interfaces and shared structures"
+  ].join(" ");
+  const caseStudySources = [[
+    "work.mdx",
+    "Communities were often organized by interest, place, and venue. Public-facing guidance followed."
+  ]];
+
+  assert.equal(morseLensTracePass({ aboutSource }), true);
+  assert.equal(sackLensTracePass({ aboutSource, caseStudySources }), true);
+  assert.equal(morseLensTracePass({ aboutSource: "systems and workflows" }), false);
+  assert.equal(sackLensTracePass({ aboutSource, caseStudySources: [] }), false);
+});
+
 test("model judgments require matching candidates, passing scores, and no regressions", () => {
   const judgment = {
     judgeId: "judge-a",
@@ -194,7 +228,7 @@ test("model judgments require matching candidates, passing scores, and no regres
     passes: true,
     evidence: [{ rubric: "reader_effort", observation: "Concise" }],
     regressions: [],
-    scores: { role_clarity: 3, reader_effort: 3, chad_lens: 3 }
+    scores: { role_clarity: 3, reader_effort: 3, chad_lens: 3, morse_lens: 3, sack_lens: 3 }
   };
 
   assert.equal(
@@ -203,7 +237,7 @@ test("model judgments require matching candidates, passing scores, and no regres
       candidate: "sha256:candidate",
       contract: "sha256:contract",
       profileId: "application_ready",
-      requiredRubrics: ["role_clarity", "reader_effort", "chad_lens"],
+      requiredRubrics: ["role_clarity", "reader_effort", "chad_lens", "morse_lens", "sack_lens"],
       minimumScore: 3
     }).length,
     1
@@ -214,7 +248,7 @@ test("model judgments require matching candidates, passing scores, and no regres
       candidate: "sha256:candidate",
       contract: "sha256:contract",
       profileId: "application_ready",
-      requiredRubrics: ["role_clarity", "reader_effort", "chad_lens"],
+      requiredRubrics: ["role_clarity", "reader_effort", "chad_lens", "morse_lens", "sack_lens"],
       minimumScore: 3
     }).length,
     0

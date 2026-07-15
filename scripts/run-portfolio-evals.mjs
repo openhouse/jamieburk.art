@@ -17,7 +17,9 @@ import {
   browserEvidenceMatches,
   findChadLensFriction,
   findGovernanceNarration,
+  morseLensTracePass,
   profileStatus,
+  sackLensTracePass,
   validateSuite,
   validModelJudgments
 } from "./lib/portfolio-evals.mjs";
@@ -28,9 +30,9 @@ const profileArg = args.indexOf("--profile");
 const profileId = profileArg >= 0 ? args[profileArg + 1] : "application_ready";
 const writeReports = !args.includes("--no-report");
 const jsonOnly = args.includes("--json");
-const baselineCommit = "93c49ff8f943c7497dbf51c117b3403543ad2bf4";
+const baselineCommit = "7d9e0fcd866755662399db1705665534e2f27816";
 const baselineRecordPath =
-  "evals/portfolio-readiness/baselines/feature-evals-C-93c49ff8.json";
+  "evals/portfolio-readiness/baselines/feature-evals-C-7d9e0fcd.json";
 
 const suitePath = path.join(repoRoot, "evals/portfolio-readiness/suite.json");
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
@@ -116,6 +118,8 @@ const requiredFiles = [
   "docs/knowledge-bank/launch-blockers.md",
   "evals/portfolio-readiness/suite.json",
   baselineRecordPath,
+  "evals/portfolio-readiness/margaret-morse-lens-judge.md",
+  "evals/portfolio-readiness/warren-sack-lens-judge.md",
   "evals/portfolio-readiness/evidence/application-ready.json"
 ];
 
@@ -162,6 +166,8 @@ const evaluatedContractPaths = [
   "evals/portfolio-readiness/suite.json",
   "evals/portfolio-readiness/model-judge.md",
   "evals/portfolio-readiness/chad-lens-judge.md",
+  "evals/portfolio-readiness/margaret-morse-lens-judge.md",
+  "evals/portfolio-readiness/warren-sack-lens-judge.md",
   baselineRecordPath,
   "evals/portfolio-readiness/evidence/application-ready.json",
   "scripts/lib/portfolio-evals.mjs",
@@ -182,6 +188,7 @@ const mergeMarkerFiles = textFiles.filter((file) =>
 const homeSource = read("apps/www/src/app/page.tsx");
 const heroSource = read("apps/www/src/components/Hero.tsx");
 const operationsSource = read("apps/www/src/app/work/technical-operations/page.tsx");
+const aboutSource = read("apps/www/src/app/about/page.tsx");
 const resumeSource = read("apps/www/src/app/resume/page.tsx");
 const contactSource = read("apps/www/src/app/contact/page.tsx");
 const layoutSource = read("apps/www/src/app/layout.tsx");
@@ -203,6 +210,7 @@ const publicSources = [
   ["apps/www/src/app/page.tsx", homeSource],
   ["apps/www/src/components/Hero.tsx", heroSource],
   ["apps/www/src/app/work/technical-operations/page.tsx", operationsSource],
+  ["apps/www/src/app/about/page.tsx", aboutSource],
   ["apps/www/src/app/resume/page.tsx", resumeSource],
   ["apps/www/src/app/contact/page.tsx", contactSource],
   ["apps/www/src/data/work.ts", workSource],
@@ -210,6 +218,8 @@ const publicSources = [
 ];
 const governanceFindings = findGovernanceNarration(publicSources);
 const chadLensFindings = findChadLensFriction(publicSources);
+const morseTracePass = morseLensTracePass({ aboutSource });
+const sackTracePass = sackLensTracePass({ aboutSource, caseStudySources });
 
 const resumePath = path.join(
   repoRoot,
@@ -257,6 +267,7 @@ const requiredBrowserRoutes = [
   "/work/technical-operations",
   "/resume",
   "/contact",
+  "/about",
   "/work/harry-j-epstein",
   "/work/fair-rent-nyc",
   "/work/callnyc"
@@ -302,6 +313,14 @@ const hardGates = {
   chad_lens_review: {
     status: "pending",
     evidence: "Validated after deterministic Chad-lens review and dedicated model judgment."
+  },
+  morse_lens_review: {
+    status: "pending",
+    evidence: "Validated after the embodied-practice trace and dedicated Margaret Morse judgment."
+  },
+  sack_lens_review: {
+    status: "pending",
+    evidence: "Validated after the relational-systems trace and dedicated Warren Sack judgment."
   },
   public_safety: publicSafetyCheck,
   claim_integrity: {
@@ -387,6 +406,8 @@ const scores = {
   citational_care: citationCarePass ? 4 : 2,
   reader_effort: governanceFindings.length === 0 ? 3 : 2,
   chad_lens: chadLensFindings.length === 0 ? 3 : 2,
+  morse_lens: morseTracePass ? 3 : 2,
+  sack_lens: sackTracePass ? 3 : 2,
   visual_evidence: visualAssetCount >= 12 ? 2 : 1,
   resume_alignment: hardGates.resume_consistency.status === "pass" ? 4 : 1,
   responsive_quality: hardGates.responsive_accessibility.status === "pass" ? 3 : 1,
@@ -413,7 +434,7 @@ const judgments = existsSync(judgmentDir)
       .filter((file) => file.endsWith(".json"))
       .map((file) => JSON.parse(readFileSync(path.join(judgmentDir, file), "utf8")))
   : [];
-const requiredModelJudgments = 3;
+const requiredModelJudgments = 5;
 const validJudgments = validModelJudgments({
   judgments,
   candidate: candidateFingerprint,
@@ -426,6 +447,12 @@ const validJudgeIds = new Set(validJudgments.map((judgment) => judgment.judgeId)
 const validJudgeLenses = new Set(validJudgments.map((judgment) => judgment.lens));
 const validChadJudgments = validJudgments.filter(
   (judgment) => judgment.lens === "chad-editorial" && judgment.scores?.chad_lens >= 3
+);
+const validMorseJudgments = validJudgments.filter(
+  (judgment) => judgment.lens === "margaret-morse" && judgment.scores?.morse_lens >= 3
+);
+const validSackJudgments = validJudgments.filter(
+  (judgment) => judgment.lens === "warren-sack" && judgment.scores?.sack_lens >= 3
 );
 
 hardGates.baseline_improvement = {
@@ -453,6 +480,20 @@ hardGates.chad_lens_review = {
       ? "Deterministic Chad-lens scan and dedicated candidate-bound editorial judgment pass."
       : `${chadLensFindings.length} deterministic Chad-lens finding(s); ${validChadJudgments.length} valid dedicated judgment(s).`
 };
+hardGates.morse_lens_review = {
+  status: morseTracePass && validMorseJudgments.length >= 1 ? "pass" : "fail",
+  evidence:
+    morseTracePass && validMorseJudgments.length >= 1
+      ? "Embodied-practice trace and dedicated candidate-bound Margaret Morse judgment pass."
+      : `${morseTracePass ? 1 : 0} deterministic trace(s); ${validMorseJudgments.length} valid dedicated judgment(s).`
+};
+hardGates.sack_lens_review = {
+  status: sackTracePass && validSackJudgments.length >= 1 ? "pass" : "fail",
+  evidence:
+    sackTracePass && validSackJudgments.length >= 1
+      ? "Relational-systems trace and dedicated candidate-bound Warren Sack judgment pass."
+      : `${sackTracePass ? 1 : 0} deterministic trace(s); ${validSackJudgments.length} valid dedicated judgment(s).`
+};
 
 const profile = profileStatus({ suite, profileId, hardGates, scores });
 const result = {
@@ -472,6 +513,8 @@ const result = {
     baselineFingerprint,
     governanceNarration: governanceFindings,
     chadLensFriction: chadLensFindings,
+    morseLensTrace: morseTracePass,
+    sackLensTrace: sackTracePass,
     citationScope: {
       requiredProjections: citationRequiredProjections.length,
       plannedPages: publicCitationRegistry.pages.length,

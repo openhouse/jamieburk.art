@@ -63,6 +63,37 @@ The next optimization cycle remains visual evidence: one rights-reviewed,
 public-safe screenshot of actual project work, beginning with CallNYC if its
 archived and unofficial status can remain adjacent to the image.
 
+## Morse And Sack Lens Cycle
+
+On July 15, 2026, the evaluation contract added two dedicated lenses derived
+from public-safe editorial distillations of Jamie's supplied UCSC narrative
+evaluations. The underlying educational records and correspondence remain
+outside the repository.
+
+The Margaret Morse lens tests whether embodied, artistic, material, social,
+and place-based inquiry remains connected to the professional story. The
+Warren Sack lens tests whether recursive relational thinking becomes legible
+across sources, prototypes, interfaces, physical-digital situations, and
+collaborative systems.
+
+The pre-cycle head `7d9e0fcd` becomes the immutable baseline. It scored 85
+under the expanded contract: the dimensions were implicit but did not cross
+the release threshold. The bounded hill climb adds two paragraphs to About,
+preserving experimental media and social practice as the origin of Jamie's
+relational systems method without altering the hiring-facing homepage or
+publishing private source material.
+
+The final candidate is
+`sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6`
+under evaluation contract
+`sha256:d5e153eef79f0a60202346aff198951b30da337d1aee13f6f7ea4381f1043e7a`.
+It scored 86.5 against the application-ready threshold of 86 and passed twice
+consecutively. Five candidate-bound judgments passed through five distinct
+lenses: hiring manager, public-safety editorial, Chad editorial, Margaret
+Morse, and Warren Sack. The three dedicated editorial gates and their
+deterministic traces all passed. Visual evidence remains the highest-value
+declared deferral rather than being hidden by the expanded scorecard.
+
 ## Research-Round Revalidation
 
 The ten-source NYC Artist Coalition research pass changed the FairRentNYC public

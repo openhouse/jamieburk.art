@@ -18,6 +18,8 @@
         "baseline_improvement",
         "model_judgment",
         "chad_lens_review",
+        "morse_lens_review",
+        "sack_lens_review",
         "public_safety",
         "claim_integrity",
         "resume_consistency",
@@ -32,6 +34,8 @@
         "citational_care",
         "reader_effort",
         "chad_lens",
+        "morse_lens",
+        "sack_lens",
         "resume_alignment",
         "responsive_quality",
         "sharing_quality"
@@ -51,6 +55,8 @@
         "baseline_improvement",
         "model_judgment",
         "chad_lens_review",
+        "morse_lens_review",
+        "sack_lens_review",
         "public_safety",
         "claim_integrity",
         "resume_consistency",
@@ -67,6 +73,8 @@
         "citational_care",
         "reader_effort",
         "chad_lens",
+        "morse_lens",
+        "sack_lens",
         "visual_evidence",
         "resume_alignment",
         "responsive_quality",
@@ -88,11 +96,19 @@
     },
     {
       "id": "model_judgment",
-      "description": "At least three candidate-bound independent model judgments pass with distinct lenses and no reported regression."
+      "description": "At least five candidate-bound independent model judgments pass with distinct lenses and no reported regression."
     },
     {
       "id": "chad_lens_review",
       "description": "A dedicated Chad-editorial judgment confirms courageous precision, legibility, visible agency, useful outcomes, and right-sized claims."
+    },
+    {
+      "id": "morse_lens_review",
+      "description": "A dedicated Margaret Morse judgment confirms that embodied, artistic, material, social, and place-based inquiry remains legible rather than being reduced to organizational utility."
+    },
+    {
+      "id": "sack_lens_review",
+      "description": "A dedicated Warren Sack judgment confirms recursive relational thinking, computational prototyping, physical-digital translation, source rigor, and collaborative architecture."
     },
     {
       "id": "public_safety",
@@ -150,13 +166,23 @@
     },
     {
       "id": "reader_effort",
-      "weight": 8,
+      "weight": 6,
       "question": "Is the path concise, scannable, and free of internal governance narration?"
     },
     {
       "id": "chad_lens",
-      "weight": 12,
+      "weight": 8,
       "question": "Does the site make Jamie visible, name the actual work and useful outcome in one pass, translate specialized language, and preserve collective credit without understating or inflating the record?"
+    },
+    {
+      "id": "morse_lens",
+      "weight": 3,
+      "question": "Does the portfolio preserve the connection among embodied inquiry, artistic experimentation, material and spatial practice, participation, memory, and place without obscuring professional legibility?"
+    },
+    {
+      "id": "sack_lens",
+      "weight": 3,
+      "question": "Does the portfolio show Jamie tracing relationships recursively, turning them into source-backed prototypes and interfaces, and connecting computational, social, physical, and collaborative systems?"
     },
     {
       "id": "visual_evidence",

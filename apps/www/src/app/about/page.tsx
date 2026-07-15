@@ -33,6 +33,21 @@ export default function AboutPage() {
             people can use after the meeting or launch is over.
           </p>
           <p>
+            My approach began in experimental media and social practice, where
+            I learned to treat a prototype, installation, gathering, or public
+            situation as a way of thinking. That work taught me to trace
+            relationships across social and technical systems, turn patterns
+            into interfaces and shared structures, and pay attention to how
+            people inhabit them.
+          </p>
+          <p>
+            That throughline still connects my technical, civic, artistic, and
+            social work. The systems I build are concerned not only with
+            efficiency but with participation, memory, and place: what a
+            structure lets people notice, contribute, understand, and carry
+            forward.
+          </p>
+          <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.

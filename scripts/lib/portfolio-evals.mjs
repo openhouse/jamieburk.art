@@ -59,6 +59,34 @@ export function findChadLensFriction(publicSources) {
   return findings;
 }
 
+export function morseLensTracePass({ aboutSource }) {
+  const text = aboutSource.toLowerCase().replace(/\s+/g, " ");
+  const requiredGroups = [
+    ["experimental media", "social practice"],
+    ["prototype", "installation", "gathering", "public situation"],
+    ["technical", "civic", "artistic", "social"],
+    ["participation", "memory", "place"]
+  ];
+
+  return requiredGroups.every((group) => group.every((term) => text.includes(term)));
+}
+
+export function sackLensTracePass({ aboutSource, caseStudySources }) {
+  const about = aboutSource.toLowerCase().replace(/\s+/g, " ");
+  const cases = caseStudySources
+    .map(([, content]) => content)
+    .join("\n")
+    .toLowerCase()
+    .replace(/\s+/g, " ");
+
+  return (
+    about.includes("relationships across social and technical systems") &&
+    about.includes("patterns into interfaces and shared structures") &&
+    cases.includes("communities were often organized by interest, place") &&
+    cases.includes("public-facing guidance")
+  );
+}
+
 export function validateSuite(suite) {
   const failures = [];
   const rubricIds = suite.rubrics.map((rubric) => rubric.id);

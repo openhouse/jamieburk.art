@@ -1,0 +1,114 @@
+{
+  "judgeId": "codex-independent-margaret-morse-application-2026-07-15-r1",
+  "lens": "margaret-morse",
+  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
+  "contract": "sha256:d5e153eef79f0a60202346aff198951b30da337d1aee13f6f7ea4381f1043e7a",
+  "profile": "application_ready",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
+  "evidence": [
+    {
+      "rubric": "role_clarity",
+      "route": "/",
+      "observation": "The first viewport names Jamie, identifies the target role, states the operating value he provides, and offers direct paths to work, resume, and contact."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The page maps planning, risk, coordination, documentation, launch support, and handoffs to concrete projects across business, civic, and community settings."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/kc-town-hall",
+      "observation": "The case study separates Jamie's attributed planning and presentation work from Board and Council decisions and explicitly distinguishes appropriation from receipt or completed construction."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Candidate-bound evidence confirms 21 references, matching backlinks, source notes, accessible labels, and working local citation navigation on this source-dense case study."
+    },
+    {
+      "rubric": "reader_effort",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Clear headings and summaries keep the case usable, but the wider operating record, numerous claims, and repeated boundary sections require more sustained reading than an exceptional one-pass case study."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/callnyc",
+      "observation": "Jamie is plainly the builder, the resident-facing result is understandable without repository terminology, and the archived unofficial status is prominent; similarly careful collective credit appears on FairRentNYC."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/about",
+      "observation": "The page explicitly connects experimental media and social practice to prototypes, installations, gatherings, public situations, participation, memory, place, and present-day systems work."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/work/196-sunday-dinner",
+      "observation": "Hospitality, trust, artist support, recurring gatherings, onboarding, and continuity are treated as rigorous participation infrastructure rather than decorative biography."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/work/harry-j-epstein",
+      "observation": "The account preserves customer trust, humor, product judgment, institutional memory, and the material knowledge of a legacy business while explaining their operational translation."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/work",
+      "observation": "The artistic and embodied throughline is release-capable but not unusually vivid because it remains distributed across prose and descriptive artifact cards rather than inspectable approved project artifacts."
+    },
+    {
+      "rubric": "sack_lens",
+      "route": "/work/callnyc",
+      "observation": "The route shows a concrete movement from public records to an information model, issue pathways, interface behavior, and bounded civic action."
+    },
+    {
+      "rubric": "sack_lens",
+      "route": "/work/wowlist",
+      "observation": "Community vocabulary, place, informal scenes, event workflows, and technical platform logic are presented as one relational system, though the surviving public proof is concise."
+    },
+    {
+      "rubric": "visual_evidence",
+      "route": "/work/196-sunday-dinner",
+      "observation": "The declared photo sequence is represented by a descriptive artifact card rather than approved imagery; the same text-only artifact treatment limits the other case studies."
+    },
+    {
+      "rubric": "resume_alignment",
+      "route": "/resume",
+      "observation": "The deterministic resume gate passes, the public role framing matches the homepage and technical-operations page, and the corrected public chronology is consistent."
+    },
+    {
+      "rubric": "responsive_quality",
+      "route": "site-wide",
+      "observation": "Candidate-bound desktop, mobile, keyboard, and reflow evidence reports no overflow, visible focus on all 24 traversed controls, and successful citation traversal; production-device breadth remains unverified."
+    },
+    {
+      "rubric": "sharing_quality",
+      "route": "/resume",
+      "observation": "Canonical metadata, route-specific title, social image, Twitter card, working resume path, and contact navigation are present, but the browser evidence used staging metadata defaults."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "site-wide",
+      "observation": "Repository integrity, route checks, candidate binding, and local browser verification support application use; production smoke, deployed-commit, indexing, and rollback evidence remain explicit application-profile deferrals."
+    }
+  ],
+  "regressions": [],
+  "highestValueFailure": null,
+  "smallestDefensiblePatch": null,
+  "passes": true,
+  "confidence": "high"
+}

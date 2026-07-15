@@ -1,26 +1,94 @@
 {
-  "judgeId": "codex-independent-hiring-manager-application-2026-07-15-r14",
+  "judgeId": "codex-independent-hiring-manager-application-2026-07-15-r15",
   "lens": "hiring-manager",
-  "candidate": "sha256:75a2f3c64658f5b6fb831ec32b4402be033f77a76f7919b5907462497ea0eb8c",
-  "contract": "sha256:12df185b8c6f661d739802e0abf0554e6b984b9acd8ae6a2d1d04f35e56b95aa",
+  "candidate": "sha256:424e301130138f652374d22f0049fba58448961d62b8d65c33034a1f93569db6",
+  "contract": "sha256:d5e153eef79f0a60202346aff198951b30da337d1aee13f6f7ea4381f1043e7a",
   "profile": "application_ready",
-  "scores": { "role_clarity": 4, "role_fit": 4, "proof_defensibility": 4, "citational_care": 4, "reader_effort": 3, "chad_lens": 3, "visual_evidence": 1, "resume_alignment": 4, "responsive_quality": 3, "sharing_quality": 3, "operational_confidence": 3 },
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 3,
+    "morse_lens": 3,
+    "sack_lens": 3,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
   "evidence": [
-    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, then names requirements, workflows, documentation, launch support, onboarding, and handoffs as his concrete outputs." },
-    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "The page directly maps Jamie's record to delivery coordination, risk surfacing, decision clarity, operating documentation, public-facing launches, and adoption." },
-    { "rubric": "proof_defensibility", "route": "/work/callnyc", "observation": "The chronology separates the Council event, the later data release, Jamie's independent prototype, and its archived unofficial status while preserving the limits of each supporting source." },
-    { "rubric": "citational_care", "route": "/work/fair-rent-nyc", "observation": "Claims connect to numbered references and backlinks, while source notes and collective-work boundaries state what the evidence supports and where individual attribution stops." },
-    { "rubric": "reader_effort", "route": "/work/fair-rent-nyc", "observation": "The role and work are understandable, but the long operating record plus repeated source, visibility, care, and Known / Open / Protected sections require more reading than the strongest hiring-manager scan." },
-    { "rubric": "chad_lens", "route": "/work/fair-rent-nyc", "observation": "Jamie is visibly credited for documentation architecture, campaign websites, coordination, and policy translation, but specialized phrases such as campaign memory and provenance redline make the useful outcome less immediate than it could be." },
-    { "rubric": "visual_evidence", "route": "/work/callnyc", "observation": "The artifact gallery describes the prototype, translation layer, and press record in text cards but does not show the actual interface; this remains an allowed application-profile deferral." },
-    { "rubric": "resume_alignment", "route": "/resume", "observation": "The deterministic resume-consistency gate passes and confirms that the public chronology and approved application document reinforce the same role and project history." },
-    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound evidence reports no overflow across ten desktop, mobile, and reflow checks, with visible focus on all 24 traversed controls; the zoom test used an equivalent viewport rather than browser-chrome zoom." },
-    { "rubric": "sharing_quality", "route": "/resume", "observation": "Canonical, Open Graph, Twitter-card, link, and download checks pass locally, but the captured metadata uses staging defaults rather than a verified production share." },
-    { "rubric": "operational_confidence", "route": "/", "observation": "The candidate is locally healthy and fingerprint-bound, but matching production deploy, smoke, rollback, indexing, and deployed-commit evidence remains deferred." }
+    {
+      "rubric": "role_clarity",
+      "route": "/",
+      "observation": "The first viewport names Jamie, the target role family, the operating value he provides, and direct paths to work, resume, and contact."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The page maps delivery coordination, risk surfacing, operating documentation, launch support, and handoffs to named project evidence."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/kc-town-hall",
+      "observation": "Jamie's attributed planning role is separated from Board and Council actions, and the page explicitly distinguishes appropriation from receipt, expenditure, or completion."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/callnyc",
+      "observation": "Important chronology and status claims have local citation links, inspectable notes, backlinks, and explicit limits on official affiliation and present-day use."
+    },
+    {
+      "rubric": "reader_effort",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Clear headings and direct role language keep the case usable, but the long operating record and twenty-one references require more reading than the primary application path."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/harry-j-epstein",
+      "observation": "Jamie is visible as the contributor, the modernization work and business outcome are legible, and causality remains right-sized; repeated evidence-boundary panels keep it from exceptional one-pass economy."
+    },
+    {
+      "rubric": "morse_lens",
+      "route": "/about",
+      "observation": "The page directly connects experimental media, installations, gatherings, participation, memory, and place to present systems practice, though most project pages express that throughline less vividly."
+    },
+    {
+      "rubric": "sack_lens",
+      "route": "/work/callnyc",
+      "observation": "The case visibly moves from civic sources to a model of resident decisions and then to an interface, while the broader recursive method still depends on the About page to connect projects."
+    },
+    {
+      "rubric": "visual_evidence",
+      "route": "/work/wowlist",
+      "observation": "The artifact gallery is composed of descriptive text cards rather than inspectable project imagery; this remains the declared application-profile visual deferral."
+    },
+    {
+      "rubric": "resume_alignment",
+      "route": "/resume",
+      "observation": "The HTML role framing and selected impact reinforce the site narrative, and the deterministic resume gate confirms the approved download and chronology without requiring protected-document inspection."
+    },
+    {
+      "rubric": "responsive_quality",
+      "route": "/work/callnyc",
+      "observation": "Candidate-bound evidence shows desktop, mobile, and 200%-equivalent reflow without overflow, plus visible focus for all twenty-four traversed controls; the zoom method remains a documented viewport equivalent."
+    },
+    {
+      "rubric": "sharing_quality",
+      "route": "/resume",
+      "observation": "Canonical, Open Graph, Twitter-card, download, and contact paths are present and trustworthy, while the inspected candidate still uses staging metadata defaults."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "/",
+      "observation": "Local route and health evidence pass and the production prerequisites are explicit, but matching deploy SHA, production smoke, rollback, and indexing verification remain declared production-only deferrals."
+    }
   ],
   "regressions": [],
-  "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface to its artifact gallery with concise alt text and the archived-unofficial boundary preserved.",
+  "highestValueFailure": null,
+  "smallestDefensiblePatch": null,
   "passes": true,
   "confidence": "high"
 }
