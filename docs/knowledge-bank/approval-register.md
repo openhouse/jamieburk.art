@@ -34,6 +34,9 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Stakeholder lists.
 - Guest lists.
 - Attendance records.
-- Unapproved names, photos, quotes, screenshots, or internal dashboards.
+- Unapproved names in portfolio prose or rendered citations, plus unapproved
+  photos, quotes, screenshots, or internal dashboards. Governed raw public-source
+  captures may retain factual source text, but those names must not flow into
+  active projection without approval.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.

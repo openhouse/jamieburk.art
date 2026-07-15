@@ -511,6 +511,10 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     "apps/www/src/data/knowledge-bank/public-registry.json",
     "utf8"
   );
+  const wowListMdx = readFileSync(
+    "apps/www/src/content/work/wowlist.mdx",
+    "utf8"
+  );
   const runNote = readFileSync(
     "docs/knowledge-bank/runs/2026-07-15-wowlist-x-full-population.md",
     "utf8"
@@ -612,7 +616,17 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   );
   assert.match(socialInventory, /Reviewed: July 15, 2026/);
   assert.doesNotMatch(socialInventory, /Good Times reporting on DIY documentation/);
-  assert.doesNotMatch(publicRegistry, /Richard/);
+  const projectedWowListText = [
+    publicRegistry,
+    work,
+    wowListMdx,
+    projectNote,
+    socialInventory,
+    runNote
+  ].join("\n");
+  for (const heldName of ["Richard", "Julia Fredenburg", "juliafredenburg"]) {
+    assert.doesNotMatch(projectedWowListText, new RegExp(heldName, "i"));
+  }
   assert.ok(intakeSourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
   assert.match(
     socialBatch,

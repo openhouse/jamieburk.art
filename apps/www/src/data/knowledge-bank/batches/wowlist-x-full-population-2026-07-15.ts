@@ -122,7 +122,7 @@ export const wowListXFullPopulationBatch20260715: {
       "WOW List answers a location-scope question",
       "2015-04-24",
       "https://x.com/wowlist/status/591664757473673216",
-      "WOW List publicly answered Julia Fredenburg's question about viewing events beyond her location and said a local/everywhere toggle was coming.",
+      "WOW List publicly answered a user's question about viewing events beyond her location and said a local/everywhere toggle was coming.",
       [
         "public product support",
         "location-scope behavior",
@@ -139,7 +139,7 @@ export const wowListXFullPopulationBatch20260715: {
       "WOW List answers a list-discovery question",
       "2015-04-24",
       "https://x.com/wowlist/status/591666366215811073",
-      "WOW List publicly answered Julia Fredenburg's question about finding her lists by explaining the profile-page and sidebar path.",
+      "WOW List publicly answered a user's question about finding her lists by explaining the profile-page and sidebar path.",
       ["public product support", "profile and list-discovery behavior"],
       [
         "the identity of the person who wrote the reply",
@@ -151,7 +151,7 @@ export const wowListXFullPopulationBatch20260715: {
       "WOW List answers an event-entry workflow complaint",
       "2015-04-24",
       "https://x.com/wowlist/status/591668857670148096",
-      "WOW List publicly answered Julia Fredenburg after she said adding an event from the home screen required too many clicks, documenting both workflow friction and the account's support response.",
+      "WOW List publicly answered a user who said adding an event from the home screen required too many clicks, documenting both workflow friction and the account's support response.",
       [
         "public workflow feedback",
         "event-entry support",
