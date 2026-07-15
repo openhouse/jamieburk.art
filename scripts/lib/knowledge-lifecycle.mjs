@@ -718,6 +718,145 @@ export function validateKnowledgeLifecycle(bank, suite) {
     ) {
       add("research_honesty", "icloud-job-hunt-orientation", `${required.verificationInquiryId} does not keep the job-hunt outline in its research-orientation role`);
     }
+
+    const timeIsLongClaim = bank.claims.find((item) => item.id === required.timeIsLongClaimId);
+    if (
+      !timeIsLongClaim ||
+      !/VHS/i.test(timeIsLongClaim.internalClaim) ||
+      !/twenty minutes|20 minutes/i.test(timeIsLongClaim.internalClaim) ||
+      !timeIsLongClaim.evidence.some((edge) => edge.sourceId === "SRC-COOL-HUNTING-TIME-IS-LONG-2006" && edge.relationship === "direct-support") ||
+      !timeIsLongClaim.antiClaims.some((item) => /engaged all|attendance|commission|acquisition/i.test(item))
+    ) {
+      add("research_honesty", "time-is-long-boundary", `${required.timeIsLongClaimId} loses the VHS behavior, approximate delay, or audience and commissioning limits`);
+    }
+
+    const claudetteClaim = bank.claims.find((item) => item.id === required.claudetteClaimId);
+    if (
+      !claudetteClaim ||
+      !/Michael Rees/.test(claudetteClaim.internalClaim) ||
+      !/Anne Dufy Burkart/.test(claudetteClaim.internalClaim) ||
+      !/Julia Fredenburg/.test(claudetteClaim.internalClaim) ||
+      !/with Claudette/.test(claudetteClaim.internalClaim) ||
+      !claudetteClaim.evidence.some((edge) => edge.sourceId === required.claudettePublicSourceId && edge.relationship === "direct-support") ||
+      !claudetteClaim.evidence.some((edge) => edge.sourceId === required.claudettePrivateSourceId && edge.relationship === "private-support" && !edge.renderCitation) ||
+      !claudetteClaim.antiClaims.some((item) => /solely|sole/i.test(item))
+    ) {
+      add("research_honesty", "claudette-collective-credit", `${required.claudetteClaimId} loses collaborator credit or the public-private evidence boundary`);
+    }
+
+    const wikipediaClaim = bank.claims.find((item) => item.id === required.wikipediaClaimId);
+    const wikipediaInquiry = bank.researchInquiries.find((item) => item.id === required.wikipediaInquiryId);
+    if (
+      !wikipediaClaim ||
+      !/Hexatekin/.test(wikipediaClaim.internalClaim) ||
+      !wikipediaClaim.antiClaims.some((item) => /alone|sole/i.test(item)) ||
+      !wikipediaClaim.antiClaims.some((item) => /endorsed|validate/i.test(item)) ||
+      !wikipediaInquiry ||
+      wikipediaInquiry.resultStatus !== "recovered" ||
+      !wikipediaInquiry.limitations.some((item) => /does not support sole authorship/i.test(item)) ||
+      !wikipediaInquiry.limitations.some((item) => /does not independently validate/i.test(item))
+    ) {
+      add("research_honesty", "wikipedia-collaboration-boundary", `${required.wikipediaClaimId} turns a collaborative revision history into sole authorship or independent validation`);
+    }
+
+    const crsDeliveryClaim = bank.claims.find((item) => item.id === required.crsDeliveryClaimId);
+    if (
+      !crsDeliveryClaim ||
+      !crsDeliveryClaim.evidence.some((edge) => edge.sourceId === required.crsEventSourceId && edge.relationship === "context") ||
+      crsDeliveryClaim.evidence.some((edge) => edge.sourceId === required.crsEventSourceId && edge.relationship === "direct-support") ||
+      !crsDeliveryClaim.evidence.some((edge) => edge.sourceId === required.crsDeliverySourceId && edge.relationship === "private-support") ||
+      !crsDeliveryClaim.boundaries.some((item) => /not.*endorsement|not.*adoption/i.test(item)) ||
+      !crsDeliveryClaim.antiClaims.some((item) => /adopted|endorsed|commissioned|implemented/i.test(item))
+    ) {
+      add("research_honesty", "crs-delivery-not-adoption", `${required.crsDeliveryClaimId} turns event context and a handoff into Council adoption`);
+    }
+
+    const chadClaim = bank.claims.find((item) => item.id === required.chadClaimId);
+    if (
+      !chadClaim ||
+      chadClaim.publicationStatus !== "internal-only" ||
+      chadClaim.projections.length !== 0 ||
+      !/agency verbs/i.test(chadClaim.internalClaim) ||
+      !/acronyms/i.test(chadClaim.internalClaim) ||
+      !/tailored framing/i.test(chadClaim.internalClaim) ||
+      !chadClaim.evidence.some((edge) => edge.sourceId === required.chadSourceId && edge.relationship === "private-support" && !edge.renderCitation) ||
+      !chadClaim.boundaries.some((item) => /not independent verification/i.test(item))
+    ) {
+      add("research_honesty", "chad-guidance-attribution", `${required.chadClaimId} loses its attributed editorial role or becomes factual verification`);
+    }
+
+    const courseCompletionClaim = bank.claims.find((item) => item.id === required.courseCompletionClaimId);
+    const courseSource = sourceById.get(required.courseSourceId);
+    const certificateSource = sourceById.get(required.certificateSourceId);
+    const aiEvalsInquiry = bank.researchInquiries.find((item) => item.id === required.aiEvalsInquiryId);
+    if (
+      !courseCompletionClaim ||
+      !courseCompletionClaim.evidence.some((edge) => edge.sourceId === required.certificateSourceId && edge.relationship === "private-support" && edge.supports.includes("completion")) ||
+      !courseCompletionClaim.evidence.some((edge) => edge.sourceId === required.courseSourceId && edge.relationship === "private-support" && edge.supports.includes("enrollment")) ||
+      !courseSource?.doesNotEstablish.some((item) => /course completion/i.test(item)) ||
+      !certificateSource?.supportsGenerally.some((item) => /completion/i.test(item)) ||
+      !courseCompletionClaim.boundaries.some((item) => /does not state a date|does not.*date/i.test(item)) ||
+      !courseCompletionClaim.antiClaims.some((item) => /course page alone proves completion/i.test(item)) ||
+      !aiEvalsInquiry ||
+      aiEvalsInquiry.resultStatus !== "recovered"
+    ) {
+      add("provenance_closure", "course-enrollment-vs-completion", `${required.courseCompletionClaimId} does not separate course access from certificate-backed completion`);
+    }
+  }
+
+  if (suite.requiredCallNycAttributionBoundary) {
+    const required = suite.requiredCallNycAttributionBoundary;
+    const attributedClaim = bank.claims.find(
+      (item) => item.id === required.attributedClaimId
+    );
+    const independentClaim = bank.claims.find(
+      (item) => item.id === required.independentClaimId
+    );
+    const councilSource = sourceById.get(required.councilSourceId);
+    const attributedProjectionText = attributedClaim?.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text)
+      .join(" ") ?? "";
+    const independentProjectionText = independentClaim?.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text)
+      .join(" ") ?? "";
+
+    if (
+      !attributedClaim ||
+      attributedClaim.publicationStatus !== "qualified" ||
+      !/Council described/i.test(attributedProjectionText) ||
+      !/first CouncilStat hackathon/i.test(attributedProjectionText) ||
+      !attributedClaim.projections.every(
+        (projection) => projection.status !== "active" || projection.citationRequired
+      ) ||
+      !attributedClaim.evidence.some(
+        (edge) =>
+          edge.sourceId === required.councilSourceId &&
+          edge.relationship === "direct-support" &&
+          edge.renderCitation
+      ) ||
+      !councilSource
+    ) {
+      add(
+        "provenance_closure",
+        "callnyc-attributed-superlative",
+        `${required.attributedClaimId} must preserve Council attribution and direct cited support`
+      );
+    }
+
+    if (
+      !independentClaim ||
+      /(?:New York City )?Council['’]s first CouncilStat hackathon/i.test(
+        independentProjectionText
+      )
+    ) {
+      add(
+        "projection_restraint",
+        "callnyc-attribution-leak",
+        `${required.independentClaimId} borrows the Council's attributed superlative`
+      );
+    }
   }
 
   if (suite.requiredSocialArchiveProduction) {

@@ -1,7 +1,7 @@
 {
-  "candidate": "sha256:ebf906802434ab11b1a7db7190f7349a5cbdb7b987a6c9738dc8613f9662d234",
+  "candidate": "sha256:cd490f0b5001f13858eec10dff84ae76802f301ffb96d2f2e53e61cba4afc055",
   "profile": "application_ready",
-  "performedAt": "2026-07-14",
+  "performedAt": "2026-07-15",
   "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
   "routes": [
     { "route": "/", "desktop": { "status": 200, "overflow": false, "h1": "Jamie Burkart" }, "mobile": { "status": 200, "overflow": false, "h1": "Jamie Burkart" } },

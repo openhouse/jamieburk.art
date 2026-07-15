@@ -55,18 +55,22 @@ registration contents, and a complete participant list were not recovered.
 
 ## Corrections
 
-The correction registry preserves three active decisions:
+The correction registry preserves four active decisions:
 
 - project chronology: `2014-2015` to `2016`;
 - event superlative: `first civic-data hackathon` to
-  `first CouncilStat hackathon`;
+  the attributed sentence `The Council described the gathering as its first
+  CouncilStat hackathon.`;
+- resume projection: the unqualified first-CouncilStat formulation to Jamie's
+  participation in a January 2016 constituent-services hackathon at Civic Hall;
 - event hours: a limited participant-photo timestamp inference to the direct
   Civic Hall announcement of `1-3 p.m.`
 
-The approved resume wording is:
+The approved resume wording is deliberately separate from the Council's
+attributed first-CouncilStat description:
 
-> Built CallNYC.org as an independent follow-on to the New York City Council's
-> first CouncilStat hackathon, translating constituent-services data into
+> Built CallNYC.org after participating in a January 2016 New York City Council
+> constituent-services hackathon at Civic Hall, translating public data into
 > resident-facing issue pages and next-step guidance; covered in Politico New
 > York.
 

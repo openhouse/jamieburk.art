@@ -36,13 +36,13 @@ The typed lifecycle record is
 
 ## Result
 
-The pass now contains:
+The two passes now contain:
 
-- 15 dispositioned intake records;
-- 15 close-read source records;
-- 10 atomic claim records;
-- 3 project dossiers;
-- 2 verification inquiries.
+- 25 dispositioned intake records;
+- 25 close-read source records;
+- 16 atomic claim records;
+- 4 project dossiers;
+- 4 verification inquiries.
 
 ### Public sources
 
@@ -55,6 +55,37 @@ The pass now contains:
 - [America: Now and Here: launch summary](https://web.archive.org/web/20121017085303/http://americanowandhere.org/2011/06/america-now-and-here-launch-installations-and-next-steps/) dates the Kansas City installation to May 5-30, 2011.
 - [Nerman Museum: America: Now and Here](https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html) republishes Alice Thorson's Kansas City Star preview and supplies wider launch context; it does not name NTER CHNG.
 - [CreateNYC appendix: NYC Artist Coalition](https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf) preserves collective 2017 recommendations for community-driven spaces and does not allocate individual authorship.
+- [Cool Hunting: BAP Lab Part 1](https://coolhunting.com/culture/bap-lab-part-1/) documents Jamie's 2006 participatory VHS installation *Time is Long* and its approximately twenty-minute delayed playback.
+- [Michael Rees: Claudette's Theatre on Wheels](https://michaelrees.org/claudette) preserves joint augmented-reality credit for Jamie and Michael Rees and source-video credit for Jamie, Anne Dufy Burkart, and Julia Fredenburg with Claudette.
+- [Wikipedia: NYC Artist Coalition revision history](https://en.wikipedia.org/w/index.php?title=NYC_Artist_Coalition&action=history) records Jamie initiating the draft and editor Hexatekin subsequently editing and moving it into article space.
+- [NYC Open Data Week: From Data to Policy](https://opendataweek.nyc/event/from-data-to-policy-how-the-nyc-council-turns-city-data-into-action__trashed/) supplies the official March 26, 2026 NYC Council Data Team event context; it does not establish Jamie's attendance or contribution.
+
+### July 15 close-reading pass
+
+The second pass used the authenticated iCloud Drive interface to confirm the
+three required folders and rescue two small Claudette production records that
+had not materialized locally. Local hydrated files remained the close-reading
+surface wherever available. The pass added four public sources and six
+protected records without committing a private path, account route, transcript,
+message, draft, contact detail, or source image.
+
+The new records separate several adjacent facts:
+
+- *Time is Long* is supported as a 2006 VHS installation with delayed playback,
+  not as a measured audience outcome or wider-event authorship claim.
+- Claudette's Theatre on Wheels preserves complete augmented-reality and video
+  credit; private correspondence adds technical context but remains
+  non-renderable.
+- the NYC Artist Coalition Wikipedia history is a collaborative archival and
+  editorial record, not sole authorship or independent validation of every
+  article claim;
+- Jamie delivered and discussed an RPIE open-data proposal and HUD-USPS map at
+  a Council Data Team session; the record does not establish formal submission,
+  endorsement, adoption, commissioning, partnership, or follow-up;
+- Chad's resume review is an attributed editorial source for the Chad lens, not
+  factual verification;
+- the Maven course page establishes enrollment and access, while the separate
+  certificate establishes completion.
 
 ### NTER CHNG / America: Now and Here recovery
 
@@ -85,6 +116,12 @@ Museum's Barbara Kruger truck stop, or that the Nerman article names the work.
 - a June 2026 Source-Backed Team Memory discovery and prototype proposal;
 - a job-search context outline retained as research orientation rather than
   factual evidence.
+- Claudette's Theatre on Wheels production correspondence;
+- NYC Artist Coalition Wikipedia research and editing records;
+- the March 2026 RPIE proposal delivery and discussion record;
+- the March 2026 resume review underlying the Chad lens;
+- an authenticated Maven course-home capture;
+- the Maven completion certificate supplied by Jamie.
 
 No private file path, raw transcript, private correspondence, live campaign
 strategy, pricing, participant list, or collaborator-specific proposal context
@@ -103,6 +140,15 @@ Mature but editorially unused:
   Here, whose archived blog documents visitors using the installation.
 - NYC Artist Coalition collectively submitted CreateNYC recommendations on
   criminalization, support, and affordability for community-driven spaces.
+- Jamie created *Time is Long*, a participatory VHS installation that returned
+  recorded visitor images about twenty minutes later.
+- Jamie and Michael Rees co-created an augmented-reality experience for
+  Claudette's Theatre on Wheels; preserve Anne Dufy Burkart and Julia
+  Fredenburg's source-video credit.
+- Jamie initiated a sourced NYC Artist Coalition Wikipedia draft that editor
+  Hexatekin subsequently edited and moved into article space.
+- Jamie completed Maven's AI Evals For Engineers & PMs, taught by Hamel Husain
+  and Shreya Shankar.
 
 Candidate, with private evidence withheld:
 
@@ -113,6 +159,9 @@ Candidate, with private evidence withheld:
   administrative filings as the proposed source.
 - Jamie translated Source-Backed Team Memory into a bounded discovery and
   prototype engagement design.
+- Jamie brought and discussed a HUD-USPS business-vacancy map and
+  privacy-preserving RPIE open-data proposal at a March 2026 NYC Council Data
+  Team session.
 
 Internal-only pending stronger role verification:
 
@@ -129,11 +178,17 @@ Internal-only pending stronger role verification:
 - A private synthesis document is a research map, not independent proof.
 - A file that has not materialized locally is unresolved, not absent.
 - Mature knowledge does not require immediate public-site projection.
+- A public event listing establishes event context, not an attendee's actions.
+- Course access establishes enrollment, not completion; a separate certificate
+  must close the completion claim.
+- Editorial advice is attributed guidance, not factual corroboration.
 
 ## Eval Contract
 
 The knowledge-lifecycle eval now fails if this corpus loses required archive
 coverage, close-reading fields, opaque private locators, collective credit,
-proposal-versus-outcome boundaries, or editorial restraint. Fixture tests also
-mutate the records to confirm that private leaks and premature projections fail
-closed.
+proposal-versus-outcome boundaries, editorial restraint, the distinction
+between enrollment and completion, the distinction between event context and
+institutional adoption, or the attributed status of Chad's guidance. Fixture
+tests mutate the records to confirm that private leaks, sole-credit drift,
+institutional inflation, and premature projections fail closed.

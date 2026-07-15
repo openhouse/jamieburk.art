@@ -118,8 +118,9 @@ test("mature unused claims remain out of public composition", () => {
       "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
     ]
   );
-  assert.equal(unused.length, 17);
+  assert.equal(unused.length, 18);
   assert.equal(unused.some((claim) => claim.id === "CLM-WATER-RAFT-GULF-COMPLETION"), true);
+  assert.equal(unused.some((claim) => claim.id === "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION"), true);
   assert.equal(unused.every((claim) => claim.projections.every((item) => item.status !== "active")), true);
 });
 
@@ -480,9 +481,9 @@ test("TiredOfTires Indian Mound expansion remains an internal research lead", ()
 test("iCloud Teams archival production covers all required archives and records", () => {
   const required = suite.requiredIcloudArchiveProduction;
   assert.deepEqual(required.archiveNames, ["Jamie Projects History", "CRS", "job-hunt"]);
-  assert.equal(required.intakeIds.length, 15);
-  assert.equal(required.sourceIds.length, 15);
-  assert.equal(required.claimIds.length, 10);
+  assert.equal(required.intakeIds.length, 25);
+  assert.equal(required.sourceIds.length, 25);
+  assert.equal(required.claimIds.length, 16);
   for (const id of required.projectIds) {
     assert.equal(knowledgeBank.projects.some((item) => item.id === id), true, id);
   }
@@ -618,6 +619,104 @@ test("iCloud archive eval rejects private leaks and premature projection", () =>
   const result = validateKnowledgeLifecycle(bank, suite);
   assert.equal(result.findings.some((item) => item.code === "icloud-private-intake-boundary"), true);
   assert.equal(result.findings.some((item) => item.code === "icloud-premature-projection"), true);
+});
+
+test("second iCloud pass preserves creative collaborator credit and institutional limits", () => {
+  const required = suite.requiredIcloudArchiveProduction;
+  const timeIsLong = knowledgeBank.claims.find((item) => item.id === required.timeIsLongClaimId);
+  assert.match(timeIsLong.internalClaim, /VHS/i);
+  assert.match(timeIsLong.internalClaim, /twenty minutes/i);
+
+  const claudette = knowledgeBank.claims.find((item) => item.id === required.claudetteClaimId);
+  assert.match(claudette.internalClaim, /Michael Rees/);
+  assert.match(claudette.internalClaim, /Anne Dufy Burkart/);
+  assert.match(claudette.internalClaim, /Julia Fredenburg/);
+  assert.equal(
+    claudette.evidence.find((edge) => edge.sourceId === required.claudettePrivateSourceId).relationship,
+    "private-support"
+  );
+
+  const delivery = knowledgeBank.claims.find((item) => item.id === required.crsDeliveryClaimId);
+  assert.equal(
+    delivery.evidence.find((edge) => edge.sourceId === required.crsEventSourceId).relationship,
+    "context"
+  );
+  assert.equal(delivery.antiClaims.some((item) => /adopted|endorsed/i.test(item)), true);
+
+  const bank = structuredClone(knowledgeBank);
+  const mutatedClaudette = bank.claims.find((item) => item.id === required.claudetteClaimId);
+  mutatedClaudette.internalClaim = "Jamie solely created the augmented-reality work and video.";
+  mutatedClaudette.antiClaims = [];
+  const mutatedDelivery = bank.claims.find((item) => item.id === required.crsDeliveryClaimId);
+  mutatedDelivery.evidence.find((edge) => edge.sourceId === required.crsEventSourceId).relationship = "direct-support";
+  mutatedDelivery.boundaries = [];
+  mutatedDelivery.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "claudette-collective-credit"), true);
+  assert.equal(result.findings.some((item) => item.code === "crs-delivery-not-adoption"), true);
+});
+
+test("second iCloud pass keeps Wikipedia, Chad, and course provenance in role", () => {
+  const required = suite.requiredIcloudArchiveProduction;
+  const wikipedia = knowledgeBank.claims.find((item) => item.id === required.wikipediaClaimId);
+  assert.match(wikipedia.internalClaim, /Hexatekin/);
+  assert.equal(wikipedia.antiClaims.some((item) => /alone/i.test(item)), true);
+
+  const chad = knowledgeBank.claims.find((item) => item.id === required.chadClaimId);
+  assert.equal(chad.publicationStatus, "internal-only");
+  assert.deepEqual(chad.projections, []);
+  assert.match(chad.internalClaim, /agency verbs/i);
+
+  const completion = knowledgeBank.claims.find((item) => item.id === required.courseCompletionClaimId);
+  assert.equal(
+    completion.evidence.find((edge) => edge.sourceId === required.certificateSourceId).supports.includes("completion"),
+    true
+  );
+  const course = knowledgeBank.sources.find((item) => item.id === required.courseSourceId);
+  assert.equal(course.doesNotEstablish.some((item) => /course completion/i.test(item)), true);
+
+  const bank = structuredClone(knowledgeBank);
+  const mutatedWikipedia = bank.claims.find((item) => item.id === required.wikipediaClaimId);
+  mutatedWikipedia.internalClaim = "Jamie alone wrote and published the final article.";
+  mutatedWikipedia.antiClaims = [];
+  const mutatedChad = bank.claims.find((item) => item.id === required.chadClaimId);
+  mutatedChad.publicationStatus = "public";
+  mutatedChad.internalClaim = "Chad verified every claim.";
+  const mutatedCompletion = bank.claims.find((item) => item.id === required.courseCompletionClaimId);
+  mutatedCompletion.evidence.find((edge) => edge.sourceId === required.certificateSourceId).supports = ["course context"];
+  mutatedCompletion.boundaries = [];
+  mutatedCompletion.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "wikipedia-collaboration-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "chad-guidance-attribution"), true);
+  assert.equal(result.findings.some((item) => item.code === "course-enrollment-vs-completion"), true);
+});
+
+test("CallNYC keeps the Council's attributed superlative out of independent projections", () => {
+  const required = suite.requiredCallNycAttributionBoundary;
+  const attributed = knowledgeBank.claims.find(
+    (item) => item.id === required.attributedClaimId
+  );
+  const independent = knowledgeBank.claims.find(
+    (item) => item.id === required.independentClaimId
+  );
+
+  assert.match(attributed.projections[0].text, /Council described/);
+  assert.equal(attributed.projections[0].citationRequired, true);
+  assert.doesNotMatch(
+    independent.projections.map((projection) => projection.text).join(" "),
+    /Council['’]s first CouncilStat hackathon/i
+  );
+
+  const bank = structuredClone(knowledgeBank);
+  const mutated = bank.claims.find((item) => item.id === required.independentClaimId);
+  mutated.projections.find((projection) => projection.key === "resume-html").text =
+    "Built CallNYC.org after the New York City Council's first CouncilStat hackathon.";
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(
+    result.findings.some((item) => item.code === "callnyc-attribution-leak"),
+    true
+  );
 });
 
 test("social archival production reconciles complete populations and preserves explicit gaps", () => {

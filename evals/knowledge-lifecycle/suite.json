@@ -177,7 +177,8 @@
     "projectIds": [
       "creative-technical-systems",
       "commercial-rent-stabilization-operations",
-      "source-backed-team-memory"
+      "source-backed-team-memory",
+      "professional-positioning-and-evaluation"
     ],
     "intakeIds": [
       "INT-2026-07-14-ICLOUD-MONTHLY-MUSIC-HACKATHON",
@@ -194,7 +195,17 @@
       "INT-2026-07-14-ICLOUD-CRS-PROVENANCE-REDLINE",
       "INT-2026-07-14-ICLOUD-CRS-RPIE-BASELINE",
       "INT-2026-07-14-ICLOUD-SOURCE-MEMORY-SPRINT",
-      "INT-2026-07-14-ICLOUD-JOB-HUNT-CONTEXT-OUTLINE"
+      "INT-2026-07-14-ICLOUD-JOB-HUNT-CONTEXT-OUTLINE",
+      "INT-2026-07-15-ICLOUD-TIME-IS-LONG",
+      "INT-2026-07-15-ICLOUD-CLAUDETTE-AR-PUBLIC",
+      "INT-2026-07-15-ICLOUD-CLAUDETTE-CORRESPONDENCE",
+      "INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-HISTORY",
+      "INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE",
+      "INT-2026-07-15-ICLOUD-CRS-OPEN-DATA-WEEK-EVENT",
+      "INT-2026-07-15-ICLOUD-CRS-RPIE-DELIVERY-RECORD",
+      "INT-2026-07-15-ICLOUD-JOB-HUNT-CHAD-REVIEW",
+      "INT-2026-07-15-ICLOUD-JOB-HUNT-MAVEN-COURSE",
+      "INT-2026-07-15-AI-EVALS-CERTIFICATE"
     ],
     "sourceIds": [
       "SRC-MONTHLY-MUSIC-SORTED-AUDIO-2013",
@@ -211,7 +222,17 @@
       "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
       "SRC-CRS-RPIE-PUBLIC-BASELINE-BRIEF-2026",
       "SRC-SOURCE-BACKED-TEAM-MEMORY-SPRINT-2026",
-      "SRC-JOB-HUNT-CONTEXT-OUTLINE-2026"
+      "SRC-JOB-HUNT-CONTEXT-OUTLINE-2026",
+      "SRC-COOL-HUNTING-TIME-IS-LONG-2006",
+      "SRC-MICHAEL-REES-CLAUDETTE-AR-2022",
+      "SRC-ICLOUD-CLAUDETTE-IMPLEMENTATION-CORRESPONDENCE-2022",
+      "SRC-WIKIPEDIA-NYCARTC-REVISION-HISTORY-2025",
+      "SRC-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE-2025",
+      "SRC-OPEN-DATA-WEEK-NYC-COUNCIL-DATA-SESSION-2026",
+      "SRC-CRS-RPIE-DELIVERY-CONVERSATION-2026",
+      "SRC-JOB-HUNT-CHAD-EDITORIAL-REVIEW-2026",
+      "SRC-JOB-HUNT-MAVEN-AI-EVALS-COURSE-2026",
+      "SRC-MAVEN-AI-EVALS-CERTIFICATE-2026"
     ],
     "claimIds": [
       "CLM-MONTHLY-MUSIC-AUDIO-SORTING-PROTOTYPE",
@@ -223,7 +244,13 @@
       "CLM-CRS-PRIVACY-AWARE-RUNNING-MINUTES",
       "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
       "CLM-CRS-RPIE-PUBLIC-BASELINE-PROPOSAL",
-      "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT"
+      "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+      "CLM-TIME-IS-LONG-VHS-INSTALLATION",
+      "CLM-CLAUDETTE-AR-COLLABORATION",
+      "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION",
+      "CLM-CRS-RPIE-PROPOSAL-DELIVERY-2026",
+      "CLM-CHAD-LENS-EDITORIAL-GUIDANCE",
+      "CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026"
     ],
     "publicIntakeUrls": [
       "https://monthlymusichackathon.org/post/44177616179/sortedaudio",
@@ -234,7 +261,11 @@
       "https://web.archive.org/web/20121017090512/http://americanowandhere.org/2011/06/i-text-therefore-i-am/",
       "https://web.archive.org/web/20121017085303/http://americanowandhere.org/2011/06/america-now-and-here-launch-installations-and-next-steps/",
       "https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html",
-      "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf"
+      "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf",
+      "https://coolhunting.com/culture/bap-lab-part-1/",
+      "https://michaelrees.org/claudette",
+      "https://en.wikipedia.org/w/index.php?title=NYC_Artist_Coalition&action=history",
+      "https://opendataweek.nyc/event/from-data-to-policy-how-the-nyc-council-turns-city-data-into-action__trashed/"
     ],
     "privateIntakeIds": [
       "INT-2026-07-14-ICLOUD-CRS-90-DAY-PLAN",
@@ -242,18 +273,40 @@
       "INT-2026-07-14-ICLOUD-CRS-PROVENANCE-REDLINE",
       "INT-2026-07-14-ICLOUD-CRS-RPIE-BASELINE",
       "INT-2026-07-14-ICLOUD-SOURCE-MEMORY-SPRINT",
-      "INT-2026-07-14-ICLOUD-JOB-HUNT-CONTEXT-OUTLINE"
+      "INT-2026-07-14-ICLOUD-JOB-HUNT-CONTEXT-OUTLINE",
+      "INT-2026-07-15-ICLOUD-CLAUDETTE-CORRESPONDENCE",
+      "INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE",
+      "INT-2026-07-15-ICLOUD-CRS-RPIE-DELIVERY-RECORD",
+      "INT-2026-07-15-ICLOUD-JOB-HUNT-CHAD-REVIEW",
+      "INT-2026-07-15-ICLOUD-JOB-HUNT-MAVEN-COURSE",
+      "INT-2026-07-15-AI-EVALS-CERTIFICATE"
     ],
     "internalOnlyClaimIds": [
       "CLM-CRS-90-DAY-OPERATING-PLAN",
-      "CLM-CRS-PRIVACY-AWARE-RUNNING-MINUTES"
+      "CLM-CRS-PRIVACY-AWARE-RUNNING-MINUTES",
+      "CLM-CHAD-LENS-EDITORIAL-GUIDANCE"
     ],
     "verificationInquiryId": "INQ-JOB-HUNT-OUTLINE-CLAIM-VERIFICATION",
     "collectiveCreditClaimId": "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
     "nterChngExhibitionClaimId": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
     "nterChngWaybackInquiryId": "INQ-NTER-CHNG-AMERICA-NOW-HERE-WAYBACK",
     "collectivePolicyClaimId": "CLM-NYCARTC-CREATENYC-COLLECTIVE-RECOMMENDATIONS",
-    "proposalClaimId": "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT"
+    "proposalClaimId": "CLM-SOURCE-BACKED-TEAM-MEMORY-BOUNDED-SPRINT",
+    "timeIsLongClaimId": "CLM-TIME-IS-LONG-VHS-INSTALLATION",
+    "claudetteClaimId": "CLM-CLAUDETTE-AR-COLLABORATION",
+    "claudettePublicSourceId": "SRC-MICHAEL-REES-CLAUDETTE-AR-2022",
+    "claudettePrivateSourceId": "SRC-ICLOUD-CLAUDETTE-IMPLEMENTATION-CORRESPONDENCE-2022",
+    "wikipediaClaimId": "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION",
+    "wikipediaInquiryId": "INQ-NYCARTC-WIKIPEDIA-PROVENANCE",
+    "crsDeliveryClaimId": "CLM-CRS-RPIE-PROPOSAL-DELIVERY-2026",
+    "crsEventSourceId": "SRC-OPEN-DATA-WEEK-NYC-COUNCIL-DATA-SESSION-2026",
+    "crsDeliverySourceId": "SRC-CRS-RPIE-DELIVERY-CONVERSATION-2026",
+    "chadClaimId": "CLM-CHAD-LENS-EDITORIAL-GUIDANCE",
+    "chadSourceId": "SRC-JOB-HUNT-CHAD-EDITORIAL-REVIEW-2026",
+    "courseCompletionClaimId": "CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026",
+    "courseSourceId": "SRC-JOB-HUNT-MAVEN-AI-EVALS-COURSE-2026",
+    "certificateSourceId": "SRC-MAVEN-AI-EVALS-CERTIFICATE-2026",
+    "aiEvalsInquiryId": "INQ-AI-EVALS-COMPLETION-PROVENANCE"
   },
   "requiredSocialArchiveProduction": {
     "projectIds": [
@@ -823,6 +876,11 @@
     "nterChngRestagingClaimId": "CLM-NTER-CHNG-ANH-RESTAGING-PLAN",
     "nterChngFramingClaimId": "CLM-NTER-CHNG-SOCIAL-INFORMATION-SPACE-FRAMING",
     "nterChngInquiryId": "INQ-GDRIVE-NTER-CHNG-WORKING-ARTIFACTS"
+  },
+  "requiredCallNycAttributionBoundary": {
+    "attributedClaimId": "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
+    "independentClaimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+    "councilSourceId": "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"
   },
   "rubrics": [
     {

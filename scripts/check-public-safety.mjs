@@ -146,6 +146,13 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const callNycProjectionFiles = shippedContentFiles.filter((file) =>
+  [
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json"
+  ].includes(relative(file))
+);
 const personalFacebookEventDataFiles = textFiles.filter((file) =>
   /^docs\/knowledge-bank\/data\/(?:personal-wowlist-facebook-event-controls\.json|jamie-facebook-displayed-host-event-census-2026-07-14\.csv)$/i.test(
     relative(file)
@@ -196,6 +203,12 @@ scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
   /\b(?:PRIVATE|CONFIDENTIAL)\b/
+);
+
+scanPattern(
+  callNycProjectionFiles,
+  "CallNYC projection drops attribution from the Council's first-CouncilStat description",
+  /New York City Council['’]s first CouncilStat hackathon/i
 );
 
 scanPattern(
@@ -269,11 +282,15 @@ if (!existsSync(resumePath)) {
   }
 
   if (
-    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
+    !/CallNYC\.org after participating in a January 2016 New\s+York\s+City\s+Council\s+constituent-services\s+hackathon\s+at\s+Civic\s+Hall/i.test(
       resumeText
     )
   ) {
     addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+  }
+
+  if (/New York City\s+Council['’]s first CouncilStat hackathon/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF drops attribution from the Council's first-CouncilStat description");
   }
 
   if (

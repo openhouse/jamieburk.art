@@ -351,7 +351,7 @@ const workItemsInput = [
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Independent follow-on to the New York City Council's first CouncilStat hackathon",
+      "Independent follow-on to a January 2016 New York City Council constituent-services hackathon at Civic Hall",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
       "Covered by Politico New York in 2016"

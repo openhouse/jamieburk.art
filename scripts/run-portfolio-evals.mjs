@@ -239,7 +239,8 @@ const resumeConsistencyPass =
   statSync(resumePath).size > 10_000 &&
   phonePattern.test(resumeText) &&
   !phoneInPublicSource &&
-  /first CouncilStat hackathon/i.test(resumeText) &&
+  /after participating in a January 2016 New\s+York\s+City\s+Council\s+constituent-services\s+hackathon\s+at\s+Civic\s+Hall/i.test(resumeText) &&
+  !/New York City\s+Council['’]s first CouncilStat hackathon/i.test(resumeText) &&
   resumeSource.includes("site.resumePath");
 
 const baselineRecord = readJsonIfPresent(baselineRecordPath);

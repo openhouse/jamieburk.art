@@ -41,6 +41,7 @@ const candidatePaths = [
   "docs/knowledge-bank/README.md",
   "docs/knowledge-bank/anti-claims.md",
   "docs/knowledge-bank/approval-register.md",
+  "docs/knowledge-bank/chad-lens.md",
   "docs/knowledge-bank/claims.md",
   "docs/knowledge-bank/lifecycle.md",
   "docs/knowledge-bank/proofs.md",

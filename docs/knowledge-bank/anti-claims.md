@@ -281,3 +281,30 @@ context, or imply deployment inside his company.
 
 Do not convert a discovery and prototype proposal into a completed engagement,
 client adoption, measured outcome, or production AI platform.
+
+## iCloud Creative And Editorial Records
+
+Do not convert *Time is Long* coverage into BAP Lab authorship, a commission,
+an acquisition, or measured audience engagement.
+
+Do not erase Michael Rees, Anne Dufy Burkart, Julia Fredenburg, or Claudette
+from the Claudette's Theatre on Wheels credit. Do not expose private
+implementation correspondence, prototype routes, contact details, or footage,
+and do not infer audience or exhibition outcomes.
+
+Do not describe Jamie as the sole author or publisher of the NYC Artist
+Coalition Wikipedia article. The public history records a collaborative
+revision sequence. Wikipedia publication does not independently validate every
+claim in the article or imply Wikimedia Foundation endorsement.
+
+Do not convert Jamie's discussion and handoff of RPIE and HUD-USPS materials at
+a NYC Council Data Team session into formal submission, endorsement, adoption,
+commissioning, partnership, implementation, or follow-up.
+
+Do not present Chad's resume feedback as factual verification, approval of
+every portfolio sentence, or a universal hiring standard.
+
+Do not use the Maven course-home capture as proof of completion. The separate
+certificate closes the completion claim, but it does not establish a completion
+date, grade, professional license, comparative performance, or exhaustive
+mastery.

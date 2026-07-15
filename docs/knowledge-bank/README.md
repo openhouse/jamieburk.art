@@ -17,10 +17,13 @@ Submitted fragments enter through the intake lifecycle before they become
 sources or claims. See [lifecycle.md](lifecycle.md) for capture, review,
 promotion, projection, maintenance, and photo-feedback rules.
 
-The July 2026 [iCloud Teams archival-production pass](research/icloud-teams-archival-production-2026-07.md)
-shows how working archives become public sources, private metadata records,
+The July 2026 [iCloud Teams archival-production passes](research/icloud-teams-archival-production-2026-07.md)
+show how working archives become public sources, private metadata records,
 atomic claims, anti-claims, and verification inquiries without exposing the
-underlying private files.
+underlying private files. The second pass adds public creative-technical
+records, collaborative Wikipedia provenance, a bounded Council-event handoff,
+Chad-lens provenance, and separate evidence for course enrollment and
+completion.
 
 The [social-media archival-production pass](research/social-media-archival-production-2026-07.md)
 adds complete-population reconciliation, explicit retrieval gaps, project-link

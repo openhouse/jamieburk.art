@@ -10,14 +10,16 @@ export const icloudArchiveProjects = [
   {
     id: "creative-technical-systems",
     title: "Creative Technical Systems",
-    summary: "Early software, installation, sound, and moving-image collaborations that joined technical implementation with public or artistic experience.",
+    summary: "Software, installation, sound, moving-image, and augmented-reality collaborations that joined technical implementation with public or artistic experience.",
     status: "historical",
-    period: { start: "2010", end: "2016" },
+    period: { start: "2006", end: "2022" },
     entityIds: [],
     publicSurfaceCandidates: [],
     photoResearchPrompts: [
       "Interfaces, installation views, working sessions, projection tests, and credited public artifacts for NTER CHNG, the Monthly Music Hackathon prototype, and the Horse Lords video, with collaborator and participant rights reviewed.",
-      "NTER CHNG's 2011 restaging process: software and display tests, wall reconstruction, projection setup, floor markings, wiring, collaborator work sessions, gallery installation, and teardown, with private communications and complete labor credit protected."
+      "NTER CHNG's 2011 restaging process: software and display tests, wall reconstruction, projection setup, floor markings, wiring, collaborator work sessions, gallery installation, and teardown, with private communications and complete labor credit protected.",
+      "Time is Long installation views showing the extended VHS loop, paired monitors, gallery path, and visitor interaction, with image rights and participant consent reviewed.",
+      "Claudette's Theatre on Wheels production and augmented-reality views: clickable tondos, source-video sessions, app tests, and credited collaborators, with Claudette's dignity and the footage rights protected."
     ]
   },
   {
@@ -42,6 +44,18 @@ export const icloudArchiveProjects = [
     publicSurfaceCandidates: ["/lab/source-backed-team-memory", "/work/technical-operations"],
     photoResearchPrompts: [
       "Reviewable source maps, decision-memory templates, annotated prototypes, and facilitation moments that show human correction and privacy boundaries without displaying private source contents."
+    ]
+  },
+  {
+    id: "professional-positioning-and-evaluation",
+    title: "Professional Positioning and Evaluation",
+    summary: "Editorial review, role framing, and evaluation practice used to make Jamie's experience clear, concrete, and supportable for hiring audiences.",
+    status: "active",
+    period: { start: "2026" },
+    entityIds: [],
+    publicSurfaceCandidates: ["/resume", "/work/technical-operations"],
+    photoResearchPrompts: [
+      "Approved course and certificate artifacts, evaluation diagrams, and resume-review working sessions that show iterative professional development without exposing private correspondence or unapproved drafts."
     ]
   }
 ] satisfies ProjectRecord[];
@@ -301,6 +315,176 @@ export const icloudArchiveIntakes = [
     claimIds: [],
     inquiryIds: ["INQ-JOB-HUNT-OUTLINE-CLAIM-VERIFICATION"],
     protectedLocatorId: "ARCHIVE-JOB-HUNT-CONTEXT-OUTLINE-2026-001"
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-TIME-IS-LONG",
+    kind: "url",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "Cool Hunting's 2006 description of Jamie's participatory VHS installation Time is Long.",
+    submittedUrl: "https://coolhunting.com/culture/bap-lab-part-1/",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2006-07-22", "2006-08-01"],
+    sensitivity: "public-safe",
+    availability: "live",
+    status: "promoted",
+    sourceIds: ["SRC-COOL-HUNTING-TIME-IS-LONG-2006"],
+    claimIds: ["CLM-TIME-IS-LONG-VHS-INSTALLATION"],
+    inquiryIds: []
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-CLAUDETTE-AR-PUBLIC",
+    kind: "url",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "Michael Rees's public project page crediting Jamie and collaborators for Claudette's Theatre on Wheels augmented-reality work and source video.",
+    submittedUrl: "https://michaelrees.org/claudette",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2017", "2022"],
+    sensitivity: "public-safe",
+    availability: "live",
+    status: "promoted",
+    sourceIds: ["SRC-MICHAEL-REES-CLAUDETTE-AR-2022"],
+    claimIds: ["CLM-CLAUDETTE-AR-COLLABORATION"],
+    inquiryIds: []
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-CLAUDETTE-CORRESPONDENCE",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "Protected 2022 production correspondence about the Claudette's Theatre on Wheels augmented-reality implementation.",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2022-07-29", "2022-08-22"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-ICLOUD-CLAUDETTE-IMPLEMENTATION-CORRESPONDENCE-2022"],
+    claimIds: ["CLM-CLAUDETTE-AR-COLLABORATION"],
+    inquiryIds: [],
+    protectedLocatorId: "ARCHIVE-JPH-CLAUDETTE-CORRESPONDENCE-2022-001"
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-HISTORY",
+    kind: "url",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "The public revision history recording creation, editing, and mainspace publication of the NYC Artist Coalition Wikipedia article.",
+    submittedUrl: "https://en.wikipedia.org/w/index.php?title=NYC_Artist_Coalition&action=history",
+    projectIds: ["nyc-artist-coalition"],
+    entityIds: ["nyc-artist-coalition"],
+    dateHints: ["2025-12-20", "2025-12-27"],
+    sensitivity: "public-safe",
+    availability: "live",
+    status: "promoted",
+    sourceIds: ["SRC-WIKIPEDIA-NYCARTC-REVISION-HISTORY-2025"],
+    claimIds: ["CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION"],
+    inquiryIds: ["INQ-NYCARTC-WIKIPEDIA-PROVENANCE"]
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "Protected December 2025 working records for source compilation and collaborative editing of the NYC Artist Coalition Wikipedia draft.",
+    projectIds: ["nyc-artist-coalition"],
+    entityIds: ["nyc-artist-coalition"],
+    dateHints: ["2025-12-20", "2025-12-21", "2025-12-27"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE-2025"],
+    claimIds: ["CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION"],
+    inquiryIds: ["INQ-NYCARTC-WIKIPEDIA-PROVENANCE"],
+    protectedLocatorId: "ARCHIVE-JPH-NYCARTC-WIKIPEDIA-COLLABORATION-2025-001"
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-CRS-OPEN-DATA-WEEK-EVENT",
+    kind: "url",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "The official Open Data Week listing for the March 26, 2026 NYC Council Data Team session Jamie attended.",
+    submittedUrl: "https://opendataweek.nyc/event/from-data-to-policy-how-the-nyc-council-turns-city-data-into-action__trashed/",
+    projectIds: ["commercial-rent-stabilization-operations"],
+    entityIds: ["fair-rent-nyc-campaign"],
+    dateHints: ["2026-03-26"],
+    sensitivity: "public-safe",
+    availability: "live",
+    status: "promoted",
+    sourceIds: ["SRC-OPEN-DATA-WEEK-NYC-COUNCIL-DATA-SESSION-2026"],
+    claimIds: ["CLM-CRS-RPIE-PROPOSAL-DELIVERY-2026"],
+    inquiryIds: []
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-CRS-RPIE-DELIVERY-RECORD",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "Protected event transcript and print-preparation record documenting Jamie's delivery and discussion of commercial-vacancy and RPIE open-data materials.",
+    projectIds: ["commercial-rent-stabilization-operations"],
+    entityIds: ["fair-rent-nyc-campaign"],
+    dateHints: ["2026-03-26"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-CRS-RPIE-DELIVERY-CONVERSATION-2026"],
+    claimIds: ["CLM-CRS-RPIE-PROPOSAL-DELIVERY-2026"],
+    inquiryIds: [],
+    protectedLocatorId: "ARCHIVE-CRS-RPIE-DELIVERY-2026-001"
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-JOB-HUNT-CHAD-REVIEW",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "Protected March 2026 resume review underlying the portfolio's Chad-lens editorial criteria.",
+    projectIds: ["professional-positioning-and-evaluation"],
+    entityIds: [],
+    dateHints: ["2026-03-01"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-JOB-HUNT-CHAD-EDITORIAL-REVIEW-2026"],
+    claimIds: ["CLM-CHAD-LENS-EDITORIAL-GUIDANCE"],
+    inquiryIds: [],
+    protectedLocatorId: "ARCHIVE-JOB-HUNT-CHAD-REVIEW-2026-001"
+  },
+  {
+    id: "INT-2026-07-15-ICLOUD-JOB-HUNT-MAVEN-COURSE",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Codex archival production",
+    publicSafeDescription: "Protected March 2026 Maven course-home capture documenting Jamie's enrollment and active course access.",
+    projectIds: ["professional-positioning-and-evaluation"],
+    entityIds: [],
+    dateHints: ["2026-03-17"],
+    sensitivity: "protected-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-JOB-HUNT-MAVEN-AI-EVALS-COURSE-2026"],
+    claimIds: ["CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026"],
+    inquiryIds: ["INQ-AI-EVALS-COMPLETION-PROVENANCE"],
+    protectedLocatorId: "ARCHIVE-JOB-HUNT-MAVEN-COURSE-2026-001"
+  },
+  {
+    id: "INT-2026-07-15-AI-EVALS-CERTIFICATE",
+    kind: "artifact",
+    capturedAt: "2026-07-15",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "Maven certificate documenting James Burkart's completion of AI Evals For Engineers & PMs.",
+    projectIds: ["professional-positioning-and-evaluation"],
+    entityIds: [],
+    dateHints: ["2026"],
+    sensitivity: "private-reference",
+    availability: "local-private",
+    status: "promoted",
+    sourceIds: ["SRC-MAVEN-AI-EVALS-CERTIFICATE-2026"],
+    claimIds: ["CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026"],
+    inquiryIds: ["INQ-AI-EVALS-COMPLETION-PROVENANCE"],
+    protectedLocatorId: "ARCHIVE-AI-EVALS-CERTIFICATE-2026-001"
   }
 ] satisfies IntakeItem[];
 
@@ -785,6 +969,324 @@ export const icloudArchiveSources = [
       "a substitute for close reading of underlying records"
     ],
     protectedLocatorId: "ARCHIVE-JOB-HUNT-CONTEXT-OUTLINE-2026-001"
+  },
+  {
+    id: "SRC-COOL-HUNTING-TIME-IS-LONG-2006",
+    title: "Cool Hunting Video Presents: BAP Lab Part 1: New Media Artists",
+    organization: "Cool Hunting",
+    author: "Cool Hunting Video",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2006-08-01",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://coolhunting.com/culture/bap-lab-part-1/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Cool Hunting Video, 'BAP Lab Part 1: New Media Artists,' August 1, 2006.",
+    publicNote: "The article names Jamie's Time is Long and describes its extended VHS loop and approximately twenty-minute delayed playback.",
+    locator: "Article lines naming Time is Long and describing recording, tape path, paired monitor, and delayed playback.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-TIME-IS-LONG"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public-source close reading"],
+    supportsGenerally: [
+      "Jamie Burkart's creator credit for Time is Long",
+      "use of an extended VHS tape path through the gallery",
+      "recording viewers and playing the image on another monitor about twenty minutes later",
+      "presentation at the July 22, 2006 BAP Lab"
+    ],
+    doesNotEstablish: [
+      "attendance or engagement specific to Jamie's installation",
+      "commissioning, acquisition, or ownership",
+      "sole authorship of the wider BAP Lab event",
+      "technical specifications beyond the published description"
+    ]
+  },
+  {
+    id: "SRC-MICHAEL-REES-CLAUDETTE-AR-2022",
+    title: "Claudette's Theatre on Wheels",
+    organization: "Michael Rees / ad hoc",
+    author: "Michael Rees",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://michaelrees.org/claudette",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Michael Rees, 'Claudette's Theatre on Wheels,' ad hoc.",
+    publicNote: "The project page credits Jamie Burkart and Michael Rees with the augmented-reality experience and credits Jamie, Anne Dufy Burkart, and Julia Fredenburg with the source video made with Claudette.",
+    locator: "Project description of clickable tondos, MakeUsVisible Munich credit, video-production credit, and 2017 filming context.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-CLAUDETTE-AR-PUBLIC"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public-source close reading"],
+    supportsGenerally: [
+      "joint augmented-reality credit for Jamie Burkart and Michael Rees",
+      "presentation for MakeUsVisible Munich",
+      "clickable tondos revealing short video clips",
+      "video-production credit for Jamie Burkart, Anne Dufy Burkart, and Julia Fredenburg with Claudette",
+      "2017 filming at John and Melody Walker's home"
+    ],
+    doesNotEstablish: [
+      "sole authorship by Jamie",
+      "the number of video clips or the implementation platform",
+      "attendance, reception, or measured audience outcome",
+      "public reuse rights for the source video"
+    ]
+  },
+  {
+    id: "SRC-ICLOUD-CLAUDETTE-IMPLEMENTATION-CORRESPONDENCE-2022",
+    title: "Claudette's Theatre on Wheels implementation correspondence",
+    organization: "Private project archive",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2022-08-22",
+    publicCitation: "Protected 2022 implementation correspondence; underlying messages withheld.",
+    publicNote: "Only public-safe implementation metadata is represented; contact details, private messages, and live prototype routes remain protected.",
+    locator: "Correspondence describing a GLB asset, clickable video elements, implementation support, and a live augmented-reality prototype.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-CLAUDETTE-CORRESPONDENCE"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-source close reading"],
+    supportsGenerally: [
+      "Jamie's close technical collaboration on the augmented-reality implementation",
+      "a 3D asset connected to clickable video elements",
+      "a working prototype during the August 2022 production window"
+    ],
+    doesNotEstablish: [
+      "sole authorship",
+      "public permission to expose correspondence, contacts, or prototype routes",
+      "final production behavior or long-term availability",
+      "audience or exhibition outcomes"
+    ],
+    protectedLocatorId: "ARCHIVE-JPH-CLAUDETTE-CORRESPONDENCE-2022-001"
+  },
+  {
+    id: "SRC-WIKIPEDIA-NYCARTC-REVISION-HISTORY-2025",
+    title: "NYC Artist Coalition revision history",
+    organization: "Wikipedia",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2025-12-27",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://en.wikipedia.org/w/index.php?title=NYC_Artist_Coalition&action=history",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Wikipedia, 'NYC Artist Coalition: Revision history,' December 2025 onward.",
+    publicNote: "The public history records James Bernard Burkart creating the draft and editor Hexatekin subsequently editing and moving it into article space.",
+    locator: "December 20-27, 2025 revisions, including the initial draft and the move from user sandbox to NYC Artist Coalition.",
+    projectIds: ["nyc-artist-coalition"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-HISTORY"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public revision-history review"],
+    supportsGenerally: [
+      "James Bernard Burkart's initial draft creation",
+      "subsequent editing by Hexatekin",
+      "Hexatekin's December 27, 2025 move of the draft into article space",
+      "a visible collaborative revision sequence"
+    ],
+    doesNotEstablish: [
+      "Jamie's sole authorship of the published article",
+      "independent verification of every statement in the article",
+      "the private editorial process behind each revision",
+      "permanence or endorsement by the Wikimedia Foundation"
+    ]
+  },
+  {
+    id: "SRC-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE-2025",
+    title: "NYC Artist Coalition Wikipedia working archive",
+    organization: "Private archival-collaboration record",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2025-12-27",
+    publicCitation: "Protected December 2025 archival and editorial working record; underlying materials withheld.",
+    publicNote: "The source is represented by public-safe process metadata only; correspondence, call transcript, drafts, and raw source compilation remain protected.",
+    locator: "Working correspondence, December 20 editing transcript, collaboratively edited draft, Legistar bibliography, and December 27 article capture.",
+    projectIds: ["nyc-artist-coalition"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-source close reading"],
+    supportsGenerally: [
+      "Jamie's source compilation and initial drafting",
+      "collaborative review of encyclopedic voice and source use",
+      "a Legistar bibliography assembled as part of the research process",
+      "a transition from unsuccessful draft to published article"
+    ],
+    doesNotEstablish: [
+      "Jamie's sole authorship of the published article",
+      "that Wikipedia independently validates every coalition claim",
+      "permission to publish correspondence, transcript, or drafts",
+      "the accuracy of every automatically transcribed passage"
+    ],
+    protectedLocatorId: "ARCHIVE-JPH-NYCARTC-WIKIPEDIA-COLLABORATION-2025-001"
+  },
+  {
+    id: "SRC-OPEN-DATA-WEEK-NYC-COUNCIL-DATA-SESSION-2026",
+    title: "From Data to Policy: How the NYC Council Turns City Data Into Action",
+    organization: "NYC Open Data Week / New York City Council Data Team",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2026-03-26",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://opendataweek.nyc/event/from-data-to-policy-how-the-nyc-council-turns-city-data-into-action__trashed/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "NYC Open Data Week, 'From Data to Policy: How the NYC Council Turns City Data Into Action,' March 26, 2026.",
+    publicNote: "The official listing records a free March 26 session at 250 Broadway organized by the New York City Council Data Team.",
+    locator: "Event title, March 26 date and 3-4 p.m. window, venue, organizer, and interactive-session description.",
+    projectIds: ["commercial-rent-stabilization-operations"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-CRS-OPEN-DATA-WEEK-EVENT"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public-source close reading"],
+    supportsGenerally: [
+      "March 26, 2026 event date and 3-4 p.m. window",
+      "New York City Council Data Team organizer",
+      "250 Broadway venue",
+      "an interactive presentation about open and administrative data in Council policymaking"
+    ],
+    doesNotEstablish: [
+      "Jamie's attendance or contribution",
+      "Council review, endorsement, or adoption of Jamie's proposal",
+      "a follow-up commitment",
+      "the content of attendee conversations"
+    ]
+  },
+  {
+    id: "SRC-CRS-RPIE-DELIVERY-CONVERSATION-2026",
+    title: "RPIE proposal delivery and discussion record",
+    organization: "Jamie Burkart working archive",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2026-03-26",
+    publicCitation: "Protected March 2026 event and delivery record; underlying transcript and prints withheld.",
+    publicNote: "The record supports delivery and discussion only; it does not support endorsement, adoption, or follow-up.",
+    locator: "Transcript around 22:55-32:28 and associated print-preparation folder for the HUD-USPS map and RPIE open-data proposal.",
+    projectIds: ["commercial-rent-stabilization-operations"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-CRS-RPIE-DELIVERY-RECORD"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-source close reading"],
+    supportsGenerally: [
+      "Jamie's attendance and direct discussion with Council Data Team members",
+      "delivery of printed HUD-USPS business-vacancy and RPIE open-data materials",
+      "Jamie's explanation of a privacy-preserving geographically aggregated dataset",
+      "a staff response offering to pass materials to a supervisor and colleague"
+    ],
+    doesNotEstablish: [
+      "Council endorsement or adoption",
+      "formal submission, commissioning, or agency partnership",
+      "follow-up after the event",
+      "accuracy of every spontaneous statement in the transcript"
+    ],
+    protectedLocatorId: "ARCHIVE-CRS-RPIE-DELIVERY-2026-001"
+  },
+  {
+    id: "SRC-JOB-HUNT-CHAD-EDITORIAL-REVIEW-2026",
+    title: "Chad resume editorial review",
+    organization: "Private job-search archive",
+    author: "Chad",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2026-03-01",
+    publicCitation: "Protected March 2026 resume editorial review; underlying transcript withheld.",
+    publicNote: "Only the resulting editorial criteria are represented; personal conversation and unrelated context remain protected.",
+    locator: "Opening resume-review exchange, especially the discussion of agency verbs, acronym restraint, tailored framing, concrete examples, and portfolio links.",
+    projectIds: ["professional-positioning-and-evaluation"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-JOB-HUNT-CHAD-REVIEW"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-source close reading"],
+    supportsGenerally: [
+      "Chad's positive assessment of concise language, agency verbs, concrete examples, clarity, and portfolio links",
+      "advice to remove unfamiliar acronyms",
+      "advice to lead with a concise role-specific frame",
+      "the public-safe editorial criteria summarized as the Chad lens"
+    ],
+    doesNotEstablish: [
+      "independent verification of resume claims",
+      "a universal hiring standard",
+      "endorsement of every current portfolio sentence",
+      "permission to publish the full conversation"
+    ],
+    protectedLocatorId: "ARCHIVE-JOB-HUNT-CHAD-REVIEW-2026-001"
+  },
+  {
+    id: "SRC-JOB-HUNT-MAVEN-AI-EVALS-COURSE-2026",
+    title: "AI Evals For Engineers & PMs course-home capture",
+    organization: "Maven",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2026-03-17",
+    publicCitation: "Protected March 2026 Maven course-home capture; underlying account page withheld.",
+    publicNote: "The capture documents enrollment and course access, not completion.",
+    locator: "Course title, 'Welcome back, Jamie,' March 17, 2026 date, Day 2 of 26, and visible syllabus modules.",
+    projectIds: ["professional-positioning-and-evaluation"],
+    intakeIds: ["INT-2026-07-15-ICLOUD-JOB-HUNT-MAVEN-COURSE"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-source close reading"],
+    supportsGenerally: [
+      "Jamie's enrollment and authenticated course access",
+      "the AI Evals For Engineers & PMs course title",
+      "participation during the March 2026 course window"
+    ],
+    doesNotEstablish: [
+      "course completion",
+      "a certificate or grade",
+      "mastery of every course topic",
+      "permission to expose account or cohort data"
+    ],
+    protectedLocatorId: "ARCHIVE-JOB-HUNT-MAVEN-COURSE-2026-001"
+  },
+  {
+    id: "SRC-MAVEN-AI-EVALS-CERTIFICATE-2026",
+    title: "AI Evals For Engineers & PMs certificate of completion",
+    organization: "Maven",
+    kind: "project-archive",
+    visibility: "private",
+    preservationStatus: "private",
+    publicCitation: "Maven certificate of completion for AI Evals For Engineers & PMs; underlying image withheld.",
+    publicNote: "The certificate names James Burkart and the instructors Hamel Husain and Shreya Shankar.",
+    locator: "Certificate title, recipient name, completed-course title, instructor line, and Maven mark.",
+    projectIds: ["professional-positioning-and-evaluation"],
+    intakeIds: ["INT-2026-07-15-AI-EVALS-CERTIFICATE"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex visual inspection"],
+    supportsGenerally: [
+      "James Burkart's completion of AI Evals For Engineers & PMs",
+      "course instruction by Hamel Husain and Shreya Shankar",
+      "Maven as the certificate issuer"
+    ],
+    doesNotEstablish: [
+      "a completion date",
+      "a grade or comparative performance",
+      "mastery of every course topic",
+      "credential expiration or professional licensure"
+    ],
+    protectedLocatorId: "ARCHIVE-AI-EVALS-CERTIFICATE-2026-001"
   }
 ] satisfies SourceRecord[];
 
@@ -1130,6 +1632,226 @@ export const icloudArchiveClaims = [
     researchInquiryIds: [],
     reviewedAt: "2026-07-14",
     reviewedBy: ["Codex private archival close reading"]
+  },
+  {
+    id: "CLM-TIME-IS-LONG-VHS-INSTALLATION",
+    project: "creative-technical-systems",
+    claimType: "activity",
+    internalClaim: "Cool Hunting documented Jamie's 2006 installation Time is Long, which recorded viewers on an extended VHS loop and played their images on another monitor about twenty minutes later.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "public",
+    editorialStatus: "unused",
+    projections: [{
+      key: "archive-note",
+      text: "In 2006, Jamie created Time is Long, a participatory VHS installation that returned visitors' recorded images on another monitor about twenty minutes later.",
+      status: "hold",
+      citationRequired: true,
+      surfaces: []
+    }],
+    evidence: [{
+      sourceId: "SRC-COOL-HUNTING-TIME-IS-LONG-2006",
+      relationship: "direct-support",
+      supports: ["Jamie creator credit", "installation behavior", "VHS implementation", "approximately twenty-minute delay"],
+      locator: "Published description of Time is Long in the BAP Lab coverage.",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The source describes the work and its behavior but does not measure participation or allocate credit for the wider event."],
+    antiClaims: ["Jamie organized BAP Lab, engaged all event attendees, or received a commission or acquisition for Time is Long."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-CLAUDETTE-AR-COLLABORATION",
+    project: "creative-technical-systems",
+    claimType: "activity",
+    internalClaim: "Jamie Burkart and Michael Rees collaborated on an augmented-reality experience for Claudette's Theatre on Wheels for MakeUsVisible Munich; Jamie, Anne Dufy Burkart, and Julia Fredenburg produced the source video with Claudette.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [{
+      key: "archive-note",
+      text: "Jamie co-created a Claudette's Theatre on Wheels augmented-reality experience with Michael Rees for MakeUsVisible Munich; Jamie, Anne Dufy Burkart, and Julia Fredenburg produced its source video with Claudette.",
+      status: "hold",
+      citationRequired: true,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-MICHAEL-REES-CLAUDETTE-AR-2022",
+        relationship: "direct-support",
+        supports: ["joint AR credit", "MakeUsVisible Munich context", "clickable tondos", "video-production credits"],
+        locator: "Public project description and credit lines.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-ICLOUD-CLAUDETTE-IMPLEMENTATION-CORRESPONDENCE-2022",
+        relationship: "private-support",
+        supports: ["close technical collaboration", "3D and video implementation", "working prototype"],
+        locator: "Protected July-August 2022 production correspondence.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "Preserve Michael Rees's joint AR credit and Anne Dufy Burkart and Julia Fredenburg's video-production credit.",
+      "Implementation specifics from private correspondence remain protected and do not establish final exhibition outcomes or footage rights."
+    ],
+    antiClaims: [
+      "Jamie solely created the augmented-reality work or source video.",
+      "The project page establishes attendance, reception, or public reuse rights for the footage."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public and protected-source close reading"]
+  },
+  {
+    id: "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION",
+    project: "nyc-artist-coalition",
+    claimType: "activity",
+    internalClaim: "In December 2025, Jamie assembled sources and created an NYC Artist Coalition Wikipedia draft; the public revision history records editor Hexatekin's subsequent edits and move of the draft into article space.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [{
+      key: "archive-note",
+      text: "In December 2025, Jamie assembled sources and initiated an NYC Artist Coalition Wikipedia draft that editor Hexatekin subsequently edited and moved into article space.",
+      status: "hold",
+      citationRequired: true,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-WIKIPEDIA-NYCARTC-REVISION-HISTORY-2025",
+        relationship: "direct-support",
+        supports: ["initial draft creation", "subsequent editing", "move into article space", "revision chronology"],
+        locator: "December 20-27, 2025 revision entries.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE-2025",
+        relationship: "private-support",
+        supports: ["source compilation", "collaborative editorial process", "Legistar bibliography", "draft development"],
+        locator: "Protected December 2025 working archive.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The revision sequence is collaborative and does not support sole authorship by Jamie.",
+      "A Wikipedia article is a public secondary reference surface, not independent validation of every claim it contains."
+    ],
+    antiClaims: [
+      "Jamie alone wrote or published the final Wikipedia article.",
+      "Wikipedia or the Wikimedia Foundation endorsed every NYC Artist Coalition claim."
+    ],
+    researchInquiryIds: ["INQ-NYCARTC-WIKIPEDIA-PROVENANCE"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public history and protected-archive close reading"]
+  },
+  {
+    id: "CLM-CRS-RPIE-PROPOSAL-DELIVERY-2026",
+    project: "commercial-rent-stabilization-operations",
+    claimType: "activity",
+    internalClaim: "At a March 26, 2026 NYC Council Data Team Open Data Week session, Jamie delivered and discussed printed HUD-USPS business-vacancy and privacy-preserving RPIE open-data materials with team members.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "candidate",
+    projections: [{
+      key: "technical-operations",
+      text: "Brought a HUD-USPS business-vacancy map and privacy-preserving RPIE open-data proposal to a March 2026 NYC Council Data Team session for direct discussion and handoff.",
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-OPEN-DATA-WEEK-NYC-COUNCIL-DATA-SESSION-2026",
+        relationship: "context",
+        supports: ["official event title", "date", "venue", "Council Data Team organizer"],
+        locator: "Open Data Week event listing.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-CRS-RPIE-DELIVERY-CONVERSATION-2026",
+        relationship: "private-support",
+        supports: ["Jamie's attendance", "direct discussion", "printed-material handoff", "proposal framing"],
+        locator: "Protected transcript and print-preparation record.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: ["The record establishes delivery and discussion, not formal submission, endorsement, adoption, commissioning, partnership, or follow-up."],
+    antiClaims: ["The New York City Council adopted, endorsed, commissioned, or implemented Jamie's RPIE proposal."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex public and protected-source close reading"]
+  },
+  {
+    id: "CLM-CHAD-LENS-EDITORIAL-GUIDANCE",
+    project: "professional-positioning-and-evaluation",
+    claimType: "attributed-description",
+    internalClaim: "In a March 2026 resume review, Chad praised Jamie's use of agency verbs, concrete examples, clarity, and linked work, and advised stronger tailored framing and restraint with unfamiliar acronyms.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "internal-only",
+    editorialStatus: "candidate",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-JOB-HUNT-CHAD-EDITORIAL-REVIEW-2026",
+      relationship: "private-support",
+      supports: ["attributed assessment", "agency-verb criterion", "tailored framing criterion", "acronym-restraint criterion", "concrete-work criterion"],
+      locator: "Protected opening resume-review exchange.",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["This is attributed editorial guidance, not independent verification of the portfolio's factual claims or a universal hiring standard."],
+    antiClaims: ["Chad verified every portfolio claim, approved every current sentence, or established a universal hiring rubric."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-source close reading"]
+  },
+  {
+    id: "CLM-AI-EVALS-CERTIFICATE-COMPLETION-2026",
+    project: "professional-positioning-and-evaluation",
+    claimType: "activity",
+    internalClaim: "A Maven certificate records James Burkart's completion of AI Evals For Engineers & PMs, taught by Hamel Husain and Shreya Shankar; a protected March 2026 course capture separately documents enrollment and active access.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "candidate",
+    projections: [{
+      key: "resume-html",
+      text: "Completed Maven's AI Evals For Engineers & PMs, taught by Hamel Husain and Shreya Shankar.",
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-MAVEN-AI-EVALS-CERTIFICATE-2026",
+        relationship: "private-support",
+        supports: ["completion", "recipient identity", "course title", "instructor names", "Maven issuer"],
+        locator: "Certificate title, recipient, completion line, instructors, and issuer mark.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-JOB-HUNT-MAVEN-AI-EVALS-COURSE-2026",
+        relationship: "private-support",
+        supports: ["enrollment", "course access", "March 2026 participation window"],
+        locator: "Protected course-home capture.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: ["The certificate establishes completion but does not state a date, grade, comparative performance, licensure, or mastery of every course topic."],
+    antiClaims: ["The March 17 course page alone proves completion, or the certificate establishes a grade, professional license, or exhaustive AI-evaluation mastery."],
+    researchInquiryIds: ["INQ-AI-EVALS-COMPLETION-PROVENANCE"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex visual and protected-source close reading"]
   }
 ] satisfies ClaimRecord[];
 
@@ -1195,5 +1917,68 @@ export const icloudArchiveResearchInquiries = [
     sourceIds: ["SRC-JOB-HUNT-CONTEXT-OUTLINE-2026"],
     publicSummary: "The job-hunt outline remains a research map; only claims verified against underlying records are eligible for promotion.",
     protectedLocatorId: "ARCHIVE-JOB-HUNT-CONTEXT-OUTLINE-2026-001"
+  },
+  {
+    id: "INQ-NYCARTC-WIKIPEDIA-PROVENANCE",
+    project: "nyc-artist-coalition",
+    intakeIds: [
+      "INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-HISTORY",
+      "INT-2026-07-15-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE"
+    ],
+    question: "What can the public revision history and protected working archive establish about Jamie's role in developing the NYC Artist Coalition Wikipedia article?",
+    methods: [
+      "Closely read the public article and revision history for the December 20-27, 2025 sequence.",
+      "Compared the public revisions with protected correspondence, an editing-call transcript, the working draft, and the Legistar bibliography.",
+      "Separated initial drafting and source assembly from subsequent editing and mainspace publication."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "recovered",
+    findings: [
+      "The public history records James Bernard Burkart creating the initial draft on December 20, 2025.",
+      "Editor Hexatekin made subsequent revisions and moved the draft into article space on December 27, 2025.",
+      "The protected archive documents source compilation, collaborative editorial review, and a Legistar bibliography behind the public revision sequence."
+    ],
+    limitations: [
+      "The public revision history does not expose the full private editorial process.",
+      "The record does not support sole authorship by Jamie.",
+      "Wikipedia's publication of the article does not independently validate every historical or causal claim it contains."
+    ],
+    sourceIds: [
+      "SRC-WIKIPEDIA-NYCARTC-REVISION-HISTORY-2025",
+      "SRC-ICLOUD-NYCARTC-WIKIPEDIA-WORKING-ARCHIVE-2025"
+    ],
+    publicSummary: "The public revision history records Jamie initiating the draft and Hexatekin subsequently editing and moving it into article space; protected working records preserve the collaborative research process.",
+    protectedLocatorId: "ARCHIVE-JPH-NYCARTC-WIKIPEDIA-COLLABORATION-2025-001"
+  },
+  {
+    id: "INQ-AI-EVALS-COMPLETION-PROVENANCE",
+    project: "professional-positioning-and-evaluation",
+    intakeIds: [
+      "INT-2026-07-15-ICLOUD-JOB-HUNT-MAVEN-COURSE",
+      "INT-2026-07-15-AI-EVALS-CERTIFICATE"
+    ],
+    question: "Which source establishes Jamie's enrollment in AI Evals For Engineers & PMs, and which source establishes completion?",
+    methods: [
+      "Closely read the protected March 17, 2026 Maven course-home capture.",
+      "Visually inspected the Maven certificate supplied by Jamie.",
+      "Separated enrollment and active access from completion."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "recovered",
+    findings: [
+      "The course-home capture establishes Jamie's enrollment and authenticated access during the March 2026 course window.",
+      "The certificate separately establishes James Burkart's completion and names Hamel Husain and Shreya Shankar as instructors."
+    ],
+    limitations: [
+      "The certificate does not display a completion date or grade.",
+      "Neither source establishes comparative performance, licensure, or mastery of every course topic.",
+      "The private course page and certificate image remain outside the public repository."
+    ],
+    sourceIds: [
+      "SRC-JOB-HUNT-MAVEN-AI-EVALS-COURSE-2026",
+      "SRC-MAVEN-AI-EVALS-CERTIFICATE-2026"
+    ],
+    publicSummary: "The course capture establishes enrollment and active access; the separate Maven certificate establishes completion.",
+    protectedLocatorId: "ARCHIVE-AI-EVALS-CERTIFICATE-2026-001"
   }
 ] satisfies ResearchInquiry[];

@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-personal-facebook-v4",
+  "judgeId": "archival-editorial-2026-07-15-c",
   "lens": "archival-editorial",
-  "candidate": "sha256:c07fbbe1d3af8e463d006df32299059017e55b615d75ad390cfc41a290d13822",
-  "contract": "sha256:d5cef0be94881674b77d77a98adaa9ec598a1ae0006f8c63d9b86613160cde43",
+  "candidate": "sha256:dcb11b498860961a0eab40bad500faffd10a580585056dc87c3cd36f68396cc2",
+  "contract": "sha256:c738f84053b2409c8dc8ef2e1b40b5252cbed2b4d509f27f0c047ba01997d7c5",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,41 +17,21 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The census preserves 1,243 unique owner-filtered records from 3,728 returned nodes across 621 cursor pages, terminal has-next-page false, zero missing dates, zero owner-absent records, and explicit current-surface limits."
-    },
-    {
-      "rubric": "source_decomposition",
-      "observation": "Private census and URL-inventory sources retain opaque protected locators and non-support boundaries; promoted public posts were individually audience-rechecked, and The Pitch article remains independently decomposed."
-    },
-    {
-      "rubric": "claim_atomicity",
-      "observation": "Population, mission routing, URL routing, stakeholder mentions, mutable counters, campaign routing, CouncilStat wording, and collective raft completion remain separate claims with claim-specific evidence and anti-claims."
+      "observation": "The candidate accounts for 119 intake records, including 25 iCloud Teams records across Jamie Projects History, CRS, and job-hunt; private artifacts use opaque locator IDs without exposing filesystem paths or source contents."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The repaired WOW List corroborating edge remains on CLM-FB-WOWLIST-COMMUNITY-ROUTING and absent from the Page-population denominator; its mutation test relocates the edge and triggers personal-facebook-wowlist-evidence-edge."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "Personal Facebook census and routing claims remain internal-only without active projections, while the independently supported raft-completion claim remains qualified and editorially unused."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "personal-public-record now begins in 2006, matching the recovered Facebook chronology. The suite binds recoveredStartYear to 2006, the canonical test requires exact equality, and a mutation to 2008 triggers personal-facebook-project-period."
+      "observation": "The first-CouncilStat claim retains explicit Council attribution, direct support from the Council event-day post, and a citation-required active projection; the independent follow-on and resume projections no longer borrow the superlative."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The 181 mission records remain overlapping research routes, 549 external destinations remain source leads, stakeholder counts remain outgoing mentions, CouncilStat remains inconclusive, and raft completion retains collective credit."
+      "observation": "The records preserve collective credit, retrieval gaps, mutable-platform limits, proposal-versus-adoption boundaries, and distinct enrollment and certificate-completion evidence."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The raw corpus remains private because 973 records lacked exposed audience labels; selected counters remain dated mutable observations barred from reach, engagement, attendance, endorsement, conversion, causality, or impact claims."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "The deterministic lifecycle evaluation scores 100 with zero findings. All 69 lifecycle tests, knowledge-bank checks, public-safety checks, TypeScript validation, and diff integrity checks pass."
+      "observation": "The corrected CallNYC resume, proof, work, and PDF language states participation in a January 2016 constituent-services hackathon without the attributed superlative; new iCloud findings remain unused or internal as appropriate."
     }
   ],
   "regressions": [],
-  "nextAction": "No corrective action is required; preserve the recovered-start-year and WOW List evidence-edge mutation tests."
+  "nextAction": "Freeze this candidate; no further archival correction is required by this review."
 }

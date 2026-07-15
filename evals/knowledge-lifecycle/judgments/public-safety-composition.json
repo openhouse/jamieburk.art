@@ -1,8 +1,8 @@
 {
-  "judgeId": "public-safety-personal-facebook-v4",
-  "lens": "public-safety-composition",
-  "candidate": "sha256:c07fbbe1d3af8e463d006df32299059017e55b615d75ad390cfc41a290d13822",
-  "contract": "sha256:d5cef0be94881674b77d77a98adaa9ec598a1ae0006f8c63d9b86613160cde43",
+  "judgeId": "implementation-hiring-2026-07-15-c",
+  "lens": "public-interest-implementation",
+  "candidate": "sha256:dcb11b498860961a0eab40bad500faffd10a580585056dc87c3cd36f68396cc2",
+  "contract": "sha256:c738f84053b2409c8dc8ef2e1b40b5252cbed2b4d509f27f0c047ba01997d7c5",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -16,38 +16,22 @@
   },
   "evidence": [
     {
-      "rubric": "capture_integrity",
-      "observation": "The 1,243-record owner-filtered census remains bounded to 621 cursor pages with terminal has-next-page false, a recovered chronology beginning December 19, 2006, and 973 records whose audience labels were not exposed."
-    },
-    {
       "rubric": "source_decomposition",
-      "observation": "Private census and URL-inventory sources retain explicit non-support boundaries, while only individually reopened public posts and the independently reviewed Pitch article support promoted source relationships."
-    },
-    {
-      "rubric": "claim_atomicity",
-      "observation": "Population, chronology, mission routing, URL inventory, stakeholder mentions, mutable counters, CouncilStat language, and collective raft completion remain separate evaluable claims."
-    },
-    {
-      "rubric": "provenance_closure",
-      "observation": "All lifecycle references resolve, and the repaired WOW List source still supports community routing rather than the Page-population denominator; its dedicated evidence-edge mutation test continues to pass."
+      "observation": "Public listings establish context, protected records establish bounded participant actions, the course page establishes enrollment and access, and the separate Maven certificate establishes completion."
     },
     {
       "rubric": "status_separation",
-      "observation": "Personal-census findings remain internal-only, CouncilStat remains use-with-care and inconclusive, and the independently supported raft claim remains qualified, unused, and held from public composition."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "The personal-public-record project now starts in 2006, matching recoveredStartYear 2006 and the corpus chronology. The validator emits personal-facebook-project-period when the start is moved to 2008, and the canonical test requires the exact suite year."
+      "observation": "Confirmed knowledge remains independently classified as public, qualified, internal-only, candidate, active, or unused rather than being automatically promoted onto public surfaces."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The candidate continues to reject lifetime-count, universal-public-audience, reach, impact, stakeholder-engagement, sole-authorship, and sole-ownership interpretations while preserving CouncilStat uncertainty and collective raft credit."
+      "observation": "The CRS record limits the official event listing to context and the protected record to Jamie's discussion and handoff, explicitly rejecting endorsement, adoption, commissioning, implementation, partnership, and follow-up."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "Raw personal material, audience-unknown records, responder identities, and record-level data remain outside public composition. The deterministic evaluation scores 100 with no findings, public-safety and knowledge-bank checks pass, and all 69 lifecycle tests pass."
+      "observation": "The repaired CallNYC structure confines first CouncilStat hackathon to a separately cited sentence attributed to NYC Council while independent and resume projections use the bounded constituent-services chronology."
     }
   ],
   "regressions": [],
-  "nextAction": "Register this candidate-bound judgment and preserve the project-period, WOW List evidence-edge, and personal-privacy mutation tests in future changes."
+  "nextAction": "No content correction is required by this review."
 }

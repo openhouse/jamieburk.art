@@ -119,9 +119,9 @@ check and the recovered 2021 archive are separate intake records.
 
 ## iCloud Teams Archival Production
 
-The July 14, 2026 pass closely reviewed Jamie Projects History, CRS, and
-job-hunt. It promoted five public sources and represented six private artifacts
-only through public-safe metadata and opaque protected locators. See the
+The July 14-15, 2026 passes closely reviewed Jamie Projects History, CRS, and
+job-hunt. They promoted thirteen public sources and represented twelve private
+artifacts only through public-safe metadata and opaque protected locators. See the
 [research note](research/icloud-teams-archival-production-2026-07.md) for the
 source list, claim palette, method, and limits.
 
@@ -129,6 +129,10 @@ Public creative records can directly support bounded claims. Private working
 plans, collaboration records, research briefs, and proposals can support
 internal or qualified claims, but their paths and contents remain outside the
 repository. A job-search synthesis remains a research map rather than evidence.
+The second pass also preserves three distinctions that future agents must not
+erase: a public event listing is context rather than proof of an attendee's
+actions; a course page proves enrollment rather than completion; and attributed
+resume feedback is editorial guidance rather than factual corroboration.
 
 ## Social Media Archival Production
 

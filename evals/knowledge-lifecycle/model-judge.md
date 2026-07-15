@@ -181,6 +181,29 @@ Ask:
 59. Are phone numbers, message text, contributor identities, Drive identifiers,
     sharing URLs, and raw working documents excluded from the public repository,
     with the new claims kept internal or protected and editorially unselected?
+60. Does *Time is Long* remain a bounded 2006 participatory VHS-installation
+    claim with an approximately twenty-minute delay, without BAP Lab authorship,
+    audience, commissioning, or acquisition inflation?
+61. Does the Claudette's Theatre on Wheels record preserve Michael Rees's joint
+    augmented-reality credit and Anne Dufy Burkart and Julia Fredenburg's
+    source-video credit, while keeping private implementation details and
+    footage rights protected?
+62. Does the NYC Artist Coalition Wikipedia record preserve Jamie's initial
+    drafting and source work, Hexatekin's subsequent editing and publication,
+    and the difference between article publication and independent validation?
+63. Is the official Open Data Week listing used only for event context while
+    the protected transcript supports Jamie's discussion and handoff, with no
+    drift into Council endorsement, adoption, commissioning, implementation,
+    partnership, or follow-up?
+64. Does the Chad-lens source remain attributed editorial guidance rather than
+    factual verification, and do its criteria retain agency verbs, concise
+    tailored framing, acronym restraint, concrete examples, and visible work?
+65. Does the course-home capture establish enrollment and access only, while
+    the separate Maven certificate establishes completion without inventing a
+    date, grade, license, comparative performance, or exhaustive mastery?
+66. Is “first CouncilStat hackathon” kept only in the separately cited claim
+    that attributes the description to NYC Council, while the independent
+    CallNYC follow-on and resume projections avoid borrowing that superlative?
 
 Return JSON with:
 

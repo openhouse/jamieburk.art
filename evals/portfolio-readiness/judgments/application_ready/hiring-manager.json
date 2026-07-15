@@ -1,30 +1,19 @@
 {
-  "judgeId": "codex-independent-hiring-manager-application-2026-07-14-r12",
+  "judgeId": "codex-independent-hiring-manager-application-2026-07-15-r13",
   "lens": "hiring-manager",
-  "candidate": "sha256:ebf906802434ab11b1a7db7190f7349a5cbdb7b987a6c9738dc8613f9662d234",
-  "contract": "sha256:d420a32e4d5d284ac4fe002868f20ad5063b68774f0418fd84290d485ee8bfac",
+  "candidate": "sha256:cd490f0b5001f13858eec10dff84ae76802f301ffb96d2f2e53e61cba4afc055",
+  "contract": "sha256:41e31f078e92b6a9b4dd802f62e60bc0a8ce02f174980a73dbda259d0d49c352",
   "profile": "application_ready",
   "scores": { "role_clarity": 4, "role_fit": 4, "proof_defensibility": 4, "citational_care": 4, "reader_effort": 3, "chad_lens": 3, "visual_evidence": 1, "resume_alignment": 4, "responsive_quality": 3, "sharing_quality": 3, "operational_confidence": 3 },
   "evidence": [
-    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation and immediately explains his value: turning ambiguous, stakeholder-heavy work into usable operating systems and handoffs." },
-    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "Delivery coordination, risk surfacing, decision clarity, operating documentation, launch, and adoption are mapped directly to named project proofs." },
-    { "rubric": "proof_defensibility", "route": "/work/kc-town-hall", "observation": "The page distinguishes Jamie's resume-attributed role from Board and Council actions, states the $490,539 Council appropriation, and explicitly separates appropriation from agreement execution, receipt, expenditure, construction, or completion." },
-    { "rubric": "proof_defensibility", "route": "/work/harry-j-epstein", "observation": "The expanded case now gives enough implementation context to make Jamie's work and its operational use concrete while retaining contribution language for the 2x growth claim and withholding private dashboards, customer data, and revenue detail." },
-    { "rubric": "citational_care", "route": "/work/callnyc", "observation": "The reduced set of eight references and eight backlinks preserves the sources needed for the event chronology, independent-project framing, press coverage, repository, and archived-unofficial boundary; removal of the branding detour does not suppress material evidence." },
-    { "rubric": "citational_care", "route": "/work/fair-rent-nyc", "observation": "The final 21 references, 21 backlinks, and 15 source notes retain claim-level support and explicit limits while removing redundant citation load; browser evidence confirms working targets, backlinks, labels, and the references heading." },
-    { "rubric": "reader_effort", "route": "/work/harry-j-epstein", "observation": "The prior expansion concern is resolved: the longer account is organized around what was unclear, what became usable, Jamie's actions, user value, and outcomes rather than proof-process narration. Some repetition of the growth claim keeps the route at strong rather than exceptional." },
-    { "rubric": "reader_effort", "route": "/work/callnyc", "observation": "The prior proof-process regression is resolved: event-branding commentary, defensive submission-status narration, and portfolio self-description were removed while the necessary archived and unofficial warning remains adjacent to the case." },
-    { "rubric": "chad_lens", "route": "/work/fair-rent-nyc", "observation": "The participation account is now a concise, reader-facing statement that Jamie helped establish and produce a recurring coalition practice toward public action while explicitly preserving shared coalition credit. The wider policy record and terms such as M.A.R.C.H. still prevent unusually effortless one-pass reading, but no material decoding failure remains." },
-    { "rubric": "chad_lens", "route": "/work/kc-town-hall", "observation": "Jamie remains visible as co-founder, project manager, documentation co-lead, and presenter; the Board recommendation and Council appropriation retain institutional attribution and the page does not convert appropriation into money received." },
-    { "rubric": "visual_evidence", "route": "/work/callnyc", "observation": "The artifact gallery remains descriptive text rather than an approved screenshot or other inspectable artifact, so readers still cannot see the actual interface work." },
-    { "rubric": "resume_alignment", "route": "/resume", "observation": "The role, chronology, CallNYC framing, HJE contribution language, coalition work, WOWList scale, and KC Town Hall history agree with the approved PDF; the phone remains outside public HTML." },
-    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound evidence records desktop and mobile success without overflow, eight keyboard-reachable citation targets, visible focus on all 24 traversed controls, and successful 200%-equivalent reflow; the zoom test remains a viewport equivalent rather than browser-chrome zoom." },
-    { "rubric": "sharing_quality", "route": "/resume", "observation": "The route has a trustworthy title, description, staging canonical, Open Graph image, Twitter card, working contact path, and a resume download returning 200; production metadata verification remains deferred." },
-    { "rubric": "operational_confidence", "route": "/api/health", "observation": "The health route exposes environment, site URL, production state, and robots state, and the repository provides Docker and staging-first deployment checks; matching production SHA, smoke, indexing, and rollback evidence remain outside the application-ready profile." }
+    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport immediately identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation and names concrete operating outputs." },
+    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "The page maps Jamie's record to delivery coordination, risk surfacing, decision clarity, operating documentation, launch, and adoption." },
+    { "rubric": "proof_defensibility", "route": "/work/callnyc", "observation": "The corrected chronology distinguishes the hackathon, the Council's attributed description, the later dataset release, and Jamie's independent development without presenting CallNYC as an official product." },
+    { "rubric": "resume_alignment", "route": "/resume", "observation": "The HTML impact statement and downloadable PDF use the same corrected CallNYC chronology and align on the broader role and project record." }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface to /work/callnyc with descriptive alt text, a source and rights caption, and the archived-unofficial warning adjacent to it; keep protected and unverified material omitted.",
+  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface in a later visual-evidence pass.",
   "passes": true,
   "confidence": "high"
 }
