@@ -84,3 +84,8 @@ with a committed public browser extraction, transformation manifest, and
 `scripts/derive-callnyc-x-corpus.mjs` check that reproduces the 107 item records
 and their aggregate metrics. The governed account map and per-project findings are in
 [projects/social-account-inventory.md](projects/social-account-inventory.md).
+
+The recovered record for the collaborative interactive installation
+*NTER CHNG* is in [projects/nter-chng.md](projects/nter-chng.md), with the
+Wayback research and explicit not-recovered boundaries documented in
+[2026-07-15-nter-chng-archive-production.md](runs/2026-07-15-nter-chng-archive-production.md).

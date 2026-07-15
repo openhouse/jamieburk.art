@@ -26,6 +26,8 @@ Approved public artifact examples for this launch pass include:
 - CallNYC authenticated 107-item complete recoverable project-account corpus.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- NTER CHNG archived project site and surviving Vimeo project video.
+- America: Now and Here Kansas City archived visual-artists page.
 
 ### Public-Safe Archive Summary
 

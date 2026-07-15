@@ -153,6 +153,43 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
   assert.deepEqual(publicHandoffClaim.evidence, []);
 });
 
+test("NTER CHNG preserves co-creator credit and the official exhibition connection", () => {
+  const claimIds = [
+    "CLM-NTER-CHNG-CO-CREATION",
+    "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM",
+    "CLM-NTER-CHNG-AMERICA-NOW-HERE"
+  ];
+  const claims = claimIds.map((id) =>
+    knowledgeBank.claims.find((claim) => claim.id === id)
+  );
+  const projectSource = knowledgeBank.sources.find(
+    (source) => source.id === "SRC-NTER-CHNG-PROJECT-SITE-2011"
+  );
+  const exhibitionSource = knowledgeBank.sources.find(
+    (source) => source.id === "SRC-NTER-CHNG-ANH-KC-2011"
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-NTER-CHNG-WAYBACK-2026"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NTER-CHNG-ROLE-AND-TECHNICAL-DETAIL"
+  );
+
+  assert.ok(claims.every(Boolean));
+  assert.ok(claims.every((claim) => claim.collectiveWork));
+  assert.ok(claims.every((claim) => claim.maturity === "confirmed-with-boundary"));
+  assert.ok(claims.every((claim) => claim.boundaries.length > 0));
+  assert.ok(claims.every((claim) => claim.antiClaims.length > 0));
+  assert.match(projectSource.publicNote, /credits the three collaborators/i);
+  assert.match(exhibitionSource.publicNote, /lists the collaborators as visual artists/i);
+  assert.match(exhibitionSource.archiveUrl, /americanowandhere\.org\/the-visual-artists/);
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.ok(inquiry.findings.some((item) => /press-release PDF was not recovered/i.test(item)));
+  assert.ok(inquiry.limitations.some((item) => /not evidence that no copy survives/i.test(item)));
+  assert.equal(task.status, "queued");
+  assert.ok(task.successCriteria.some((item) => /Assign no role without/i.test(item)));
+});
+
 test("CallNYC corpus accounts for every recoverable timeline item and preserves the profile-count gap", () => {
   const corpus = JSON.parse(
     readFileSync(

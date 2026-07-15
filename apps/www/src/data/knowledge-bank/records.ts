@@ -6,6 +6,7 @@ import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-
 import { teamsArchiveProductionBatch20260714 } from "./batches/teams-archive-production-2026-07-14.ts";
 import { socialAccountProductionBatch20260714 } from "./batches/social-account-production-2026-07-14.ts";
 import { callNycXFullPopulationBatch20260714 } from "./batches/callnyc-x-full-population-2026-07-14.ts";
+import { nterChngArchiveBatch20260715 } from "./batches/nter-chng-archive-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -220,7 +221,8 @@ const knowledgeBankInput = {
     ...teamsArchiveProductionBatch20260714.intake,
     ...googleDriveProductionBatch20260714.intake,
     ...socialAccountProductionBatch20260714.intake,
-    ...callNycXFullPopulationBatch20260714.intake
+    ...callNycXFullPopulationBatch20260714.intake,
+    ...nterChngArchiveBatch20260715.intake
   ],
   sources: [
     {
@@ -461,7 +463,8 @@ const knowledgeBankInput = {
     ...teamsArchiveProductionBatch20260714.sources,
     ...googleDriveProductionBatch20260714.sources,
     ...socialAccountProductionBatch20260714.sources,
-    ...callNycXFullPopulationBatch20260714.sources
+    ...callNycXFullPopulationBatch20260714.sources,
+    ...nterChngArchiveBatch20260715.sources
   ],
   sourceAssertions: [
     {
@@ -650,7 +653,8 @@ const knowledgeBankInput = {
     ...teamsArchiveProductionBatch20260714.sourceAssertions,
     ...googleDriveProductionBatch20260714.sourceAssertions,
     ...socialAccountProductionBatch20260714.sourceAssertions,
-    ...callNycXFullPopulationBatch20260714.sourceAssertions
+    ...callNycXFullPopulationBatch20260714.sourceAssertions,
+    ...nterChngArchiveBatch20260715.sourceAssertions
   ],
   claims: [
     {
@@ -1023,7 +1027,8 @@ const knowledgeBankInput = {
     ...teamsArchiveProductionBatch20260714.claims,
     ...googleDriveProductionBatch20260714.claims,
     ...socialAccountProductionBatch20260714.claims,
-    ...callNycXFullPopulationBatch20260714.claims
+    ...callNycXFullPopulationBatch20260714.claims,
+    ...nterChngArchiveBatch20260715.claims
   ],
   researchTasks: [
     {
@@ -1145,7 +1150,8 @@ const knowledgeBankInput = {
     ...teamsArchiveProductionBatch20260714.researchTasks,
     ...googleDriveProductionBatch20260714.researchTasks,
     ...socialAccountProductionBatch20260714.researchTasks,
-    ...callNycXFullPopulationBatch20260714.researchTasks
+    ...callNycXFullPopulationBatch20260714.researchTasks,
+    ...nterChngArchiveBatch20260715.researchTasks
   ],
   researchInquiries: [
     {
@@ -1166,7 +1172,8 @@ const knowledgeBankInput = {
     ...nacCampaignPressBatch20260713.researchInquiries,
     ...googleDriveProductionBatch20260714.researchInquiries,
     ...socialAccountProductionBatch20260714.researchInquiries,
-    ...callNycXFullPopulationBatch20260714.researchInquiries
+    ...callNycXFullPopulationBatch20260714.researchInquiries,
+    ...nterChngArchiveBatch20260715.researchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -1208,7 +1215,8 @@ const knowledgeBankInput = {
     },
     ...kcTownHallCouncilRecordBatch20260713.pages,
     ...nacPublicSourceBatch20260713.pages,
-    ...socialAccountProductionBatch20260714.pages
+    ...socialAccountProductionBatch20260714.pages,
+    ...nterChngArchiveBatch20260715.pages
   ]
 } satisfies KnowledgeBank;
 

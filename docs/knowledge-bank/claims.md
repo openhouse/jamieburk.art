@@ -3,6 +3,21 @@
 This is the human-readable claim register. Public pages should not strengthen a
 claim beyond the wording and guardrails here.
 
+## nter-chng-co-creation - Interactive installation and exhibition record
+
+**Status:** Ready with collective-credit boundary
+**Support level:** Strong
+**Evidence class:** Archived project artifact / contemporaneous public listing / archived exhibition record
+**Public wording:** Jamie co-created *NTER CHNG* with Drew Bolton and Garrett Fuselier, an interactive texting installation presented in Kansas City in 2010 and later included in *America: Now and Here*'s 2011 Kansas City visual-artists program.
+**Detailed public-safe wording:** The installation combined software and spatial design so visitor text messages became a real-time, many-to-many public exchange across a digital gallery wall.
+**Where to project:** Knowledge-bank project note. Hold from the portfolio website until its fit in the current hiring argument is assessed.
+**Why it matters:** Establishes an early, source-backed example of Jamie co-creating a technical participatory system that gave collective exchange a public spatial form.
+**Guardrail:** Always name Drew Bolton and Garrett Fuselier in the project credit. Credit Mary Nichols's documented wall-engineering and construction help when discussing fabrication in detail. Do not assign role-specific technical ownership without further evidence.
+**Do not say:** Jamie created, designed, or programmed *NTER CHNG* alone; Jamie curated *America: Now and Here*; the project toured nationally; the artist statement proves measured public impact.
+**Protected boundaries:** Private collaborator records, private contact information, uncleared installation media, and unrecovered technical artifacts stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## career-operating-structure-14-years - Operating structure over 14+ years
 
 **Status:** Ready  
