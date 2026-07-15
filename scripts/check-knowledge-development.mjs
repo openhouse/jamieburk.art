@@ -398,6 +398,81 @@ const htmlVoidTags = new Set([
   "wbr"
 ]);
 
+function literalClassTokens(tag) {
+  const attribute = tag.match(
+    /\bclass(?:Name)?\s*=\s*(?:"([^"]*)"|'([^']*)'|\{\s*"([^"]*)"\s*\}|\{\s*'([^']*)'\s*\}|([^\s>]+))/i
+  );
+  if (!attribute) return { present: false, known: true, tokens: [] };
+  const value = attribute.slice(1).find((candidate) => candidate !== undefined);
+  const known = Boolean(value) && !/[{}$`]/.test(value);
+  return {
+    present: true,
+    known,
+    tokens: known ? value.split(/\s+/).filter(Boolean) : []
+  };
+}
+
+function classTokenIsNonRendering(token) {
+  return /(?:^|:|!)(?:hidden|invisible|collapse|sr-only|opacity-0|scale-0)$|\[(?:display\s*:\s*none|visibility\s*:\s*(?:hidden|collapse)|opacity\s*:\s*0)\]/i.test(
+    token
+  );
+}
+
+function styleTextIsNonRendering(style) {
+  return (
+    /\bdisplay\s*:\s*none\b/i.test(style) ||
+    /\bvisibility\s*:\s*(?:hidden|collapse)\b/i.test(style) ||
+    /\bcontent-visibility\s*:\s*hidden\b/i.test(style) ||
+    /\bopacity\s*:\s*0(?:\.0+)?(?:\s*[;}]|\s*$)/i.test(style) ||
+    /\bfont-size\s*:\s*0(?:px|rem|em|%)?(?:\s*[;}]|\s*$)/i.test(style) ||
+    /\btransform\s*:[^;}]*(?:scale\(\s*0\s*\)|scale3d\(\s*0\s*,\s*0\s*,)/i.test(style) ||
+    /\bclip-path\s*:\s*inset\(\s*(?:50|100)%/i.test(style) ||
+    (/\bwidth\s*:\s*0(?:px)?\b/i.test(style) &&
+      /\bheight\s*:\s*0(?:px)?\b/i.test(style) &&
+      /\boverflow\s*:\s*hidden\b/i.test(style))
+  );
+}
+
+function nonRenderingCssClasses(source) {
+  const classes = new Set();
+  const css = [...source.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)]
+    .map((match) => match[1])
+    .join("\n");
+  for (const rule of css.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    if (!styleTextIsNonRendering(rule[2])) continue;
+    for (const selector of rule[1].matchAll(/\.([A-Za-z_-][\w-]*)/g)) {
+      classes.add(selector[1]);
+    }
+  }
+  return classes;
+}
+
+function tagIsNonRendering(tagName, tag, cssClasses = new Set()) {
+  if (["head", "script", "style", "template"].includes(tagName)) return true;
+  if (tagName === "dialog" && !/\sopen(?:\s|=|>)/i.test(tag)) return true;
+  if (/\spopover(?:\s|=|>)/i.test(tag)) return true;
+  if (/\s(?:hidden|inert)(?:\s|=|>)/i.test(tag)) return true;
+  if (
+    /aria-hidden\s*=/i.test(tag) &&
+    !/aria-hidden\s*=\s*(?:\{\s*false\s*\}|["']false["'])/i.test(tag)
+  ) {
+    return true;
+  }
+  const style = tag.match(
+    /\bstyle\s*=\s*(?:"([^"]*)"|'([^']*)'|\{\{([\s\S]*?)\}\})/i
+  );
+  if (style && styleTextIsNonRendering(style[1] ?? style[2] ?? style[3] ?? "")) {
+    return true;
+  }
+  if (/\sdisplay\s*=\s*["']none["']/i.test(tag)) return true;
+  if (/\svisibility\s*=\s*["'](?:hidden|collapse)["']/i.test(tag)) return true;
+  const classes = literalClassTokens(tag);
+  if (classes.present && !classes.known) return true;
+  return classes.tokens.some(
+    (token) => classTokenIsNonRendering(token) || cssClasses.has(token)
+  );
+}
+
 function parsedHtmlTree(source) {
   const root = { tag: "#root", children: [] };
   const stack = [root];
@@ -417,7 +492,7 @@ function parsedHtmlTree(source) {
     if (token.startsWith("<")) {
       const tag = token.match(/^<\s*([A-Za-z0-9-]+)/)?.[1]?.toLowerCase();
       if (!tag) continue;
-      const node = { tag, children: [] };
+      const node = { tag, rawTag: token, children: [] };
       stack.at(-1).children.push(node);
       if (!token.endsWith("/>") && !htmlVoidTags.has(tag)) stack.push(node);
       continue;
@@ -432,12 +507,24 @@ function htmlNodeText(node) {
   return node.children.map(htmlNodeText).join(" ");
 }
 
+function htmlNodeVisibleText(node, cssClasses, hidden = false) {
+  if (node.tag === "#text") return hidden ? "" : node.text;
+  const isHidden =
+    hidden || tagIsNonRendering(node.tag, node.rawTag ?? "", cssClasses);
+  if (isHidden) return "";
+  return node.children
+    .map((child) => htmlNodeVisibleText(child, cssClasses, isHidden))
+    .join(" ");
+}
+
 export function resumeVisibleBlocks(source) {
   const tree = parsedHtmlTree(source);
+  const cssClasses = nonRenderingCssClasses(source);
   const blocks = [];
 
   function visit(node, hidden = false) {
-    const isHidden = hidden || ["head", "script", "style", "template"].includes(node.tag);
+    const isHidden =
+      hidden || tagIsNonRendering(node.tag, node.rawTag ?? "", cssClasses);
     if (isHidden) return;
     if (node.tag === "#text") {
       const text = decodedElementText(node.text);
@@ -445,7 +532,9 @@ export function resumeVisibleBlocks(source) {
       return;
     }
     if (resumeAtomicBlockTags.has(node.tag)) {
-      const text = decodedElementText(htmlNodeText(node));
+      const text = decodedElementText(
+        htmlNodeVisibleText(node, cssClasses, hidden)
+      );
       if (text) blocks.push(text);
       return;
     }
@@ -456,7 +545,9 @@ export function resumeVisibleBlocks(source) {
           resumeContainerBlockTags.has(child.tag)
       );
       if (!hasBlockChild) {
-        const text = decodedElementText(htmlNodeText(node));
+        const text = decodedElementText(
+          htmlNodeVisibleText(node, cssClasses, hidden)
+        );
         if (text) blocks.push(text);
         return;
       }
@@ -684,9 +775,9 @@ function unsupportedSemanticClauses(statement, basis) {
 }
 
 const semanticRiskFamilies = new Map([
-  ["sole-credit", /\b(?:alone|sole|solely|sole responsibility|single[ -]?handedly|exclusively|exclusive credit|independently|only founder|no one else|without (?:co-creators|collaborators|others)|by (?:himself|herself|themselves)|on (?:his|her|their) own)\b/i],
-  ["total-ownership", /\b(?:owned|ownership|fully owned|complete control|unilateral control|end[ -]?to[ -]?end responsibility|responsible for (?:the )?(?:whole|entire|all))\b/i],
-  ["causal-certainty", /\b(?:brought about|caused|guaranteed|ensured|drove|made [^.?!;]{0,80} happen|responsible for (?:the )?(?:whole|entire|all)|single[ -]?handedly delivered)\b/i],
+  ["sole-credit", /\b(?:alone|sole|solely|sole responsibility|single[ -]?handedly|exclusively|exclusive credit|final authority|ultimate authority|independently\s+(?:founded|created|built|established|directed|led|managed|operated|owned|delivered|completed|ran)|only founder|no one else|no (?:collaborator|co-creator|partner|other person) (?:contributed|participated|helped|was involved)|without (?:co-creators|collaborators|others|contributions from (?:partners|collaborators|others))|by (?:himself|herself|themselves)|on (?:his|her|their) own)\b/i],
+  ["total-ownership", /\b(?:owned|ownership|fully owned|complete control|unilateral control|exclusive control|final authority|ultimate authority|made all (?:decisions|calls)|end[ -]?to[ -]?end responsibility|responsible for (?:the )?(?:whole|entire|all))\b/i],
+  ["causal-certainty", /\b(?:brought about|caused|guaranteed|ensured|drove|made [^.?!;]{0,80} happen|responsible for (?:the )?(?:whole|entire|all)|single[ -]?handedly delivered|outcome (?:followed|resulted|came) directly from|directly resulted from|as a direct result of [^.?!;]{0,80}(?:intervention|work|action))\b/i],
   ["official-status", /\b(?:official|officially|certified|endorsed)\b/i],
   ["current-status", /\b(?:current|currently|live|ongoing|remains? operational|still operating|operational today)\b/i],
   ["completeness", /\b(?:all|every|entire|complete|completely|full corpus|100\s*%)\b/i]
@@ -1764,6 +1855,9 @@ function jsxAncestorIsHidden(node, sourceFile) {
     if (/\sstyle\s*=/i.test(tag)) return true;
     if (/\sdisplay\s*=\s*["']none["']/i.test(tag)) return true;
     if (/\svisibility\s*=\s*["'](?:hidden|collapse)["']/i.test(tag)) return true;
+    const classes = literalClassTokens(tag);
+    if (classes.present && !classes.known) return true;
+    if (classes.tokens.some(classTokenIsNonRendering)) return true;
   }
   return false;
 }
@@ -1970,9 +2064,13 @@ function tsxRouteRealizesProjection(
 }
 
 export function documentRealizesProjection(content, projection) {
-  return normalizedText(executableSource(content)).includes(
-    normalizedText(projection.text)
+  const executable = executableSource(content);
+  const tree = parsedHtmlTree(executable);
+  const visible = htmlNodeVisibleText(
+    tree,
+    nonRenderingCssClasses(executable)
   );
+  return normalizedText(visible).includes(normalizedText(projection.text));
 }
 
 function matchingCitationOccurrence(bank, tag, claim, projection, surface) {
@@ -2027,7 +2125,14 @@ function mdxHasHiddenAncestor(content) {
         !/aria-hidden\s*=\s*(?:\{\s*false\s*\}|["']false["'])/i.test(tag)) ||
       /\sstyle\s*=/i.test(tag) ||
       /\sdisplay\s*=\s*["']none["']/i.test(tag) ||
-      /\svisibility\s*=\s*["'](?:hidden|collapse)["']/i.test(tag);
+      /\svisibility\s*=\s*["'](?:hidden|collapse)["']/i.test(tag) ||
+      (() => {
+        const classes = literalClassTokens(tag);
+        return (
+          (classes.present && !classes.known) ||
+          classes.tokens.some(classTokenIsNonRendering)
+        );
+      })();
     stack.push({ name, hidden });
   }
   return stack.some((entry) => entry.hidden);

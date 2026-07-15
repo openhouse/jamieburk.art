@@ -208,6 +208,12 @@ test("the resume manifest is derived from every substantive HTML block", () => {
   assert.ok(injectedVisible.includes("Unsupported link claim."));
   assert.equal(injectedVisible.length, visible.length + 5);
   assert.deepEqual(
+    resumeVisibleBlocks(
+      '<style>.css-hidden { display: none; }</style><body><p hidden>Hidden attribute claim.</p><p aria-hidden="true">Hidden ARIA claim.</p><dialog>Closed dialog claim.</dialog><p style="opacity: 0">Transparent claim.</p><p class="hidden">Utility-hidden claim.</p><p class="css-hidden">CSS-hidden claim.</p><p>Visible claim.</p></body>'
+    ),
+    ["Visible claim."]
+  );
+  assert.deepEqual(
     resumeCssGeneratedText('<style>.hidden::after { content: "Unsupported CSS claim."; }</style>'),
     ["Unsupported CSS claim."]
   );
@@ -391,6 +397,13 @@ test("semantic proof checks reject paraphrased anti-claims", () => {
     ),
     []
   );
+  assert.deepEqual(
+    proofSemanticBoundaryFindings(
+      "The account corpus does not independently verify its outcome figures.",
+      { ...proof, doNotSay: ["Jamie alone secured the Council action"] }
+    ),
+    []
+  );
   for (const [statement, prohibited] of [
     [
       "Jamie made the Cabaret Law repeal happen by himself.",
@@ -423,6 +436,18 @@ test("semantic proof checks reject paraphrased anti-claims", () => {
     [
       "Jamie exercised unilateral control and took exclusive credit for the campaign.",
       "Jamie solely led NYC Artist Coalition"
+    ],
+    [
+      "No collaborator contributed to the campaign.",
+      "Jamie solely led NYC Artist Coalition"
+    ],
+    [
+      "Jamie held final authority for the campaign.",
+      "Jamie solely led NYC Artist Coalition"
+    ],
+    [
+      "The outcome followed directly from Jamie's intervention.",
+      "Jamie single-handedly caused policy outcomes"
     ]
   ]) {
     assert.match(
@@ -2047,6 +2072,27 @@ test("document projections cannot be realized by commented-out text", () => {
     ),
     false
   );
+  assert.equal(
+    documentRealizesProjection(
+      '<div className="hidden">A source-backed claim must remain visible.</div>',
+      projection
+    ),
+    false
+  );
+  assert.equal(
+    documentRealizesProjection(
+      '<style>.held { visibility: hidden; }</style><div class="held">A source-backed claim must remain visible.</div>',
+      projection
+    ),
+    false
+  );
+  assert.equal(
+    documentRealizesProjection(
+      '<dialog>A source-backed claim must remain visible.</dialog>',
+      projection
+    ),
+    false
+  );
 });
 
 test("citation-required route bindings stay connected to their page occurrence", () => {
@@ -2405,6 +2451,14 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     false
   );
   assert.equal(
+    realizes(`export default function TestPage() { return <div className="hidden">${literal}</div>; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { const classes = "block"; return <div className={classes}>${literal}</div>; }`),
+    false
+  );
+  assert.equal(
     realizes(`export default function TestPage() { switch (1) { case 2: return (${literal}); default: return null; } }`),
     false
   );
@@ -2542,6 +2596,8 @@ test("MDX route reachability rejects conditional and unused component bindings",
   assert.equal(realizes(`<div aria-hidden={Boolean(true)}>${literal}</div>`), false);
   assert.equal(realizes(`<svg display="none">${literal}</svg>`), false);
   assert.equal(realizes(`<script>${literal}</script>`), false);
+  assert.equal(realizes(`<div className="invisible">${literal}</div>`), false);
+  assert.equal(realizes(`<div className={dynamicClass}>${literal}</div>`), false);
 });
 
 test("unused TypeScript projection resolvers do not satisfy route coverage", () => {
