@@ -1390,6 +1390,44 @@ test("urbanhermit metadata contract rejects equivalent free-text privacy and tru
   }
 });
 
+test("urbanhermit complete ledger contract rejects unlisted item drift", () => {
+  const mutations = [
+    (ledger) => {
+      ledger.records[0].contentSummary =
+        "Protected Person lives at 123 Main Street; Jamie alone guaranteed every outcome.";
+    },
+    (ledger) => {
+      const record = ledger.records.find(
+        (item) => item.relationship === "native-repost-source-status"
+      );
+      record.authorHandle = "@unrelatedsource";
+      record.statusUrl = `https://x.com/unrelatedsource/status/${record.statusId}`;
+    },
+    (ledger) => {
+      const record = ledger.records.find((item) => BigInt(item.statusId) < 100000000000000000n);
+      record.publishedAt = "not-a-date";
+    },
+    (ledger) => {
+      const edgeIds = new Set(ledger.linkedSourceEdges.map((edge) => edge.statusId));
+      const record = ledger.records.find(
+        (item) => item.postedUrls.length === 1 && !edgeIds.has(item.statusId)
+      );
+      record.postedUrls[0] = "https://t.co/N0VELBYPASS";
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const alteredLedger = structuredClone(urbanhermitLedger);
+    mutate(alteredLedger);
+    const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  }
+});
+
 test("urbanhermit eval rejects an empty selected-source inventory", () => {
   const alteredLedger = structuredClone(urbanhermitLedger);
   alteredLedger.aggregateFindings.selectedMissionSourceStatusIds = [];
@@ -1602,6 +1640,47 @@ test("urbanhermit semantic digest rejects dual-sided paraphrased observation ove
   } finally {
     moduleObservation.text = originals[0];
     bankObservation.text = originals[1];
+  }
+});
+
+test("urbanhermit complete graph contract rejects provenance and review drift", () => {
+  const intake = urbanhermitSocialCorpus.intakeItems[0];
+  const source = urbanhermitSocialCorpus.sources.find(
+    (item) => item.id === "SRC-OBSERVER-MARKET-HOTEL-2016"
+  );
+  const observation = urbanhermitSocialCorpus.observations.find(
+    (item) => item.id === "OBS-URBANHERMIT-PRACTICE-CONTINUITY"
+  );
+  const claim = urbanhermitSocialCorpus.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION"
+  );
+  const inquiry = urbanhermitSocialCorpus.researchInquiries.find(
+    (item) => item.id === "INQ-URBANHERMIT-LINKED-SOURCE-MATURATION"
+  );
+  assert.ok(intake && source && observation && claim && inquiry);
+
+  const mutations = [
+    [source, "accessedAt", "2099-01-01"],
+    [observation, "intakeId", knowledgeBank.intakeItems.find((item) => item.id !== intake.id)?.id],
+    [claim, "reviewedAt", "2099-01-01"],
+    [claim, "reviewedBy", ["Unreviewed Placeholder"]],
+    [inquiry, "runAt", "2099-01-01"],
+    [intake, "reason", "Protected Person lives at 123 Main Street; Jamie alone caused every outcome."]
+  ];
+
+  for (const [target, field, replacement] of mutations) {
+    const original = target[field];
+    try {
+      target[field] = replacement;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+        1
+      );
+      assert.equal(result.accepted, false);
+    } finally {
+      target[field] = original;
+    }
   }
 });
 

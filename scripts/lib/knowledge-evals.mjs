@@ -1487,6 +1487,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     (account) => account.handle === "@urbanhermit"
   );
   const urbanLedgerText = urbanLedger ? JSON.stringify(urbanLedger) : "";
+  const urbanLedgerContractHash = urbanLedger ? sha256(urbanLedgerText) : "";
   const urbanLedgerMetadataContract = urbanLedger ? structuredClone(urbanLedger) : null;
   if (urbanLedgerMetadataContract) urbanLedgerMetadataContract.records = [];
   const urbanLedgerMetadataContractHash = urbanLedgerMetadataContract
@@ -1713,6 +1714,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     !/(?:single-handedly|solely led|caused (?:the )?(?:policy|outcome)|proves? (?:all|every)|every coalition campaign|definitively delivered|all of Jamie's professional impact)/i.test(
       urbanPositiveSemanticText
     );
+  const urbanKnowledgeGraphContractHash = sha256(JSON.stringify({
+    corpus: urbanhermitSocialCorpus,
+    canonical: {
+      intake: urbanFullIntake,
+      sources: urbanLinkedSources,
+      observations: urbanFullObservations,
+      claims: urbanFullClaims,
+      inquiries: urbanFullInquiries
+    }
+  }));
   const urbanSemanticContractHash = sha256(JSON.stringify({
     sources: urbanFullSources.map((source) => source && ({
       id: source.id,
@@ -1827,7 +1838,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       ) &&
       urbanLedger.sourceProfile === "https://x.com/urbanhermit" &&
       urbanLedger.reviewedAt === "2026-07-14" &&
+      urbanLedgerContractHash === urbanFull.expectedLedgerSha256 &&
       urbanLedgerMetadataContractHash === urbanFull.expectedLedgerMetadataSha256 &&
+      urbanKnowledgeGraphContractHash === urbanFull.expectedKnowledgeGraphSha256 &&
       urbanSemanticContractHash === urbanFull.expectedSemanticContractSha256 &&
       urbanLedger.populationAudit.profileCountObserved === urbanFull.expectedProfileCount &&
       urbanLedger.populationAudit.profileAndBoundedSearchItemsRecovered === urbanFull.expectedUniqueItems &&

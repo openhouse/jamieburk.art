@@ -133,6 +133,23 @@ Mutation tests cover nested identifying text in a metric boundary,
 contradictory recovery wording, identifying detail moved into the population
 definition, and a dual-sided paraphrased observation overclaim.
 
+### Iteration 15: complete ledger and knowledge-subgraph contracts
+
+A fresh judge exhausted 89 non-record string leaves without finding a bypass,
+then found that item summaries, coordinated source URL and author changes,
+legacy-status dates, unlinked posted URLs, intake rationale, source access time,
+observation intake linkage, claim review metadata, and inquiry run time still
+sat outside one or both partial projections. The evaluator now binds the entire
+public ledger and the entire @urbanhermit knowledge subgraph in addition to its
+normalized metadata and semantic projections. The subgraph contract includes
+the corpus module and canonical intake, all 16 linked sources, all 19
+observations, all eight claims and their projections, and all three inquiries.
+
+This complete-change detection remains paired with proposition-level,
+arithmetic, identity, authorship, metric-ownership, scope, link, and privacy
+checks. A digest makes an unreviewed change visible; it does not make the
+underlying claim true.
+
 ## Acceptance Contract
 
 `KB-EVAL-URBANHERMIT-FULL-POPULATION` fails if:
@@ -147,9 +164,13 @@ definition, and a dual-sided paraphrased observation overclaim.
 - allowed arrays or unresolved reasons gain nested or identifying metadata;
 - any permitted non-record metadata changes without a deliberate contract
   update;
+- any public evidence record changes without a deliberate contract update;
 - fresh-verification values drift from the population control;
 - source, claim, and observation semantics violate independent contracts;
 - the normalized semantic surface changes without a deliberate contract
+  update;
+- any intake, source, observation, claim, projection, review field, or inquiry
+  in the complete knowledge subgraph changes without a deliberate contract
   update;
 - a verified short-link-to-source edge is removed or altered;
 - source-status metrics enter Jamie's traction aggregate;
