@@ -103,6 +103,23 @@ participant readership, endorsement, attendance, or impact.
 Do not turn the current zero-record WOW List event display or bounded historical
 non-recovery into a claim that WOW List never had a Facebook event.
 
+## WOW List Facebook Posts
+
+Do not describe the 54 currently recoverable public-timeline posts as the total
+number of posts WOW List ever created. Deleted, unpublished, migration-omitted,
+and otherwise unavailable records are outside the observable population. Do not
+use Meta's five-row Lifetime Content Library as the historical population.
+
+Do not convert Facebook's 54-of-54 `Published by Jamie Burkart` metadata into a
+claim of sole administration, sole strategy, sole project ownership, or
+authorship of quoted and shared sources. WOW List remains jointly credited to
+Jamie Burkart and Richard Album; Jamie's broader social-management memory
+remains attributed pending account or collaborator evidence.
+
+Do not treat posted URLs, tags, shares, Featured placement, follower counts,
+reactions, comments, views, or event-interest displays as endorsement,
+attendance, reach at publication, conversion, causality, or impact.
+
 ## NYC Artist Coalition Facebook Events
 
 Do not describe 33 recovered records as 34 recovered records or invent the

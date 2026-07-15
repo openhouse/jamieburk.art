@@ -42,6 +42,13 @@ personal controls, reconciles them to 505 distinct IDs, close-reads the complete
 non-recovery. It keeps association, displayed host labels, authorship,
 attendance, response displays, and professional significance separate.
 
+The [WOW List Facebook post pass](research/wowlist-facebook-posts-archival-production-2026-07.md)
+reconciles all 54 unique posts currently recoverable from the public Page
+timeline, close-reads the full population, records Jamie's 54-of-54 publisher
+metadata, and develops source-routing and mission-pattern depth without turning
+mutable engagement displays into impact or publisher metadata into sole
+administration.
+
 ## Purpose
 
 The knowledge bank exists to:

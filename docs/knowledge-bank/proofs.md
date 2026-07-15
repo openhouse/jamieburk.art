@@ -30,3 +30,8 @@ Public pages may simplify this language, but they must not strengthen ownership,
   culture, and civic learning. This remains bank-only reserve depth: displayed
   host attribution is not author metadata, sole production, attendance, or
   impact.
+- Two exact traversals of WOW List's current public Facebook timeline recovered
+  54 unique posts; every retained record displays Jamie in Facebook's
+  Page-manager publisher field. This is strong bank-only evidence of sustained
+  publishing and identity stewardship, not sole administration or sole project
+  ownership. Jamie's broader management recollection remains attributed.

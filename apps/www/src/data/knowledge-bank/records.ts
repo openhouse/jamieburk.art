@@ -38,6 +38,12 @@ import {
   personalWowlistFacebookEventSources
 } from "./personal-wowlist-facebook-events-archive-production.ts";
 import {
+  wowlistFacebookPostClaims,
+  wowlistFacebookPostIntakes,
+  wowlistFacebookPostResearchInquiries,
+  wowlistFacebookPostSources
+} from "./wowlist-facebook-posts-archive-production.ts";
+import {
   campaignPressCollections,
   campaignPressIntakes,
   campaignPressSources
@@ -55,6 +61,7 @@ import {
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...wowlistFacebookPostIntakes,
     ...googleDriveArchiveIntakes,
     ...socialArchiveIntakes,
     ...personalWowlistFacebookEventIntakes,
@@ -654,6 +661,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...wowlistFacebookPostSources,
     ...googleDriveArchiveSources,
     ...socialArchiveSources,
     ...personalWowlistFacebookEventSources,
@@ -827,6 +835,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...wowlistFacebookPostClaims,
     ...nycArtcFacebookEventClaims,
     ...googleDriveArchiveClaims,
     ...socialArchiveClaims,
@@ -943,6 +952,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...wowlistFacebookPostResearchInquiries,
     ...googleDriveArchiveResearchInquiries,
     ...socialArchiveResearchInquiries,
     ...personalWowlistFacebookEventResearchInquiries,

@@ -801,6 +801,152 @@ test("personal Facebook event eval keeps posted URLs as routing and WOW List as 
   assert.equal(result.findings.some((item) => item.code === "wowlist-facebook-nonrecovery-boundary"), true);
 });
 
+test("WOW List Facebook post production reconciles the full current public population", () => {
+  const required = suite.requiredWowlistFacebookPosts;
+  const controls = JSON.parse(readFileSync(required.controlPath, "utf8"));
+  assert.equal(controls.publicTimeline.terminalTraversalPasses, 2);
+  assert.equal(controls.publicTimeline.exactFingerprintMatchAcrossPasses, true);
+  assert.equal(controls.publicTimeline.postLikeVariants, required.renderVariantCount);
+  assert.equal(controls.publicTimeline.excludedRenderArtifacts, 2);
+  assert.equal(controls.publicTimeline.retainedUniquePosts, required.currentPostCount);
+  assert.deepEqual(controls.publicTimeline.publisherMetadata, {
+    "Jamie Burkart": required.publisherCount
+  });
+  assert.equal(
+    controls.surfaceReconciliation.lifetimeContentLibraryRows,
+    required.contentLibraryCount
+  );
+  assert.equal(
+    controls.surfaceReconciliation.contentLibraryIsHistoricalPopulationControl,
+    false
+  );
+  assert.equal(
+    controls.currentEngagementDisplay.postsWithVisibleReactions,
+    required.postsWithVisibleReactions
+  );
+  assert.equal(
+    controls.currentEngagementDisplay.visibleReactions,
+    required.visibleReactionCount
+  );
+  assert.equal(
+    controls.postedUrlInventory.resolvedOccurrences,
+    required.resolvedUrlOccurrences
+  );
+  assert.equal(
+    controls.postedUrlInventory.distinctResolvedDestinations,
+    required.distinctResolvedUrls
+  );
+  assert.equal(
+    controls.postedUrlInventory.wowlistOrgOccurrences,
+    required.wowlistOrgOccurrences
+  );
+  assert.equal(controls.privateArtifactId, "wowlist-facebook-public-post-census-2026-07-14");
+});
+
+test("WOW List Facebook sources and claims preserve publisher and collective-credit boundaries", () => {
+  const required = suite.requiredWowlistFacebookPosts;
+  for (const sourceId of required.sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    assert.ok(source, sourceId);
+  }
+  for (const claimId of required.claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    assert.ok(claim, claimId);
+    assert.equal(claim.publicationStatus, "internal-only");
+    assert.equal(claim.projections.some((projection) => projection.status === "active"), false);
+  }
+
+  const publisher = knowledgeBank.claims.find(
+    (item) => item.id === required.publisherClaimId
+  );
+  assert.match(publisher.internalClaim, /all 54 unique posts/);
+  assert.match(publisher.boundaries.join(" "), /not sole Page administration/i);
+  assert.match(publisher.boundaries.join(" "), /Richard Album/);
+
+  const management = knowledgeBank.claims.find(
+    (item) => item.id === required.managementClaimId
+  );
+  assert.equal(management.status, "use-with-care");
+  assert.match(management.internalClaim, /recalls managing/i);
+  assert.deepEqual(
+    management.evidence.map((item) => item.sourceId),
+    [required.memorySourceId, required.corpusSourceId]
+  );
+});
+
+test("WOW List Facebook eval rejects historical-population and sole-management inflation", () => {
+  const required = suite.requiredWowlistFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const population = bank.claims.find(
+    (item) => item.id === required.populationClaimId
+  );
+  const publisher = bank.claims.find(
+    (item) => item.id === required.publisherClaimId
+  );
+  const management = bank.claims.find(
+    (item) => item.id === required.managementClaimId
+  );
+  population.internalClaim = "WOW List published exactly 54 Facebook posts in its history.";
+  population.boundaries = [];
+  population.antiClaims = [];
+  publisher.internalClaim = "Jamie was the sole administrator and author of every WOW List post.";
+  publisher.boundaries = [];
+  publisher.antiClaims = [];
+  management.internalClaim = "Jamie definitively and exclusively controlled every WOW List social account.";
+  management.status = "confirmed";
+  management.boundaries = [];
+  management.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(
+    result.findings.some((item) => item.code === "wowlist-facebook-post-population-claim"),
+    true
+  );
+  assert.equal(
+    result.findings.some((item) => item.code === "wowlist-facebook-publisher-boundary"),
+    true
+  );
+  assert.equal(
+    result.findings.some((item) => item.code === "wowlist-facebook-management-role-boundary"),
+    true
+  );
+});
+
+test("WOW List Facebook eval keeps engagement and posted URLs out of impact claims", () => {
+  const required = suite.requiredWowlistFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const engagement = bank.claims.find(
+    (item) => item.id === required.engagementClaimId
+  );
+  const routing = bank.claims.find((item) => item.id === required.urlClaimId);
+  engagement.publicationStatus = "public";
+  engagement.editorialStatus = "active";
+  engagement.projections = [{
+    key: "case-study",
+    text: "303 people attended a WOW List event and the current reaction sum proves impact.",
+    status: "active",
+    citationRequired: true,
+    surfaces: ["/work/wowlist"]
+  }];
+  engagement.boundaries = [];
+  engagement.antiClaims = [];
+  routing.internalClaim = "Every linked organization endorsed WOW List and every link produced outcomes.";
+  routing.boundaries = [];
+  routing.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(
+    result.findings.some((item) => item.code === "wowlist-facebook-post-projection-boundary"),
+    true
+  );
+  assert.equal(
+    result.findings.some((item) => item.code === "wowlist-facebook-engagement-boundary"),
+    true
+  );
+  assert.equal(
+    result.findings.some((item) => item.code === "wowlist-facebook-posted-url-boundary"),
+    true
+  );
+});
+
 test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {
   const required = suite.requiredGoogleDriveArchiveProduction;
   for (const sourceId of required.sourceIds) {

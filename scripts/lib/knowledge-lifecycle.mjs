@@ -1092,6 +1092,312 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredWowlistFacebookPosts) {
+    const required = suite.requiredWowlistFacebookPosts;
+    for (const intakeId of required.intakeIds) {
+      if (!intakeIds.has(intakeId)) {
+        add("capture_integrity", "missing-wowlist-facebook-post-intake", `Missing ${intakeId}`);
+      }
+    }
+    for (const sourceId of required.sourceIds) {
+      if (!sourceIds.has(sourceId)) {
+        add("source_decomposition", "missing-wowlist-facebook-post-source", `Missing ${sourceId}`);
+      }
+    }
+    for (const claimId of required.claimIds) {
+      if (!claimIds.has(claimId)) {
+        add("provenance_closure", "missing-wowlist-facebook-post-claim", `Missing ${claimId}`);
+      }
+    }
+    for (const inquiryId of required.inquiryIds) {
+      if (!inquiryIds.has(inquiryId)) {
+        add("research_honesty", "missing-wowlist-facebook-post-inquiry", `Missing ${inquiryId}`);
+      }
+    }
+
+    const corpusIntake = bank.intakeItems.find(
+      (item) => item.id === required.corpusIntakeId
+    );
+    const memoryIntake = bank.intakeItems.find(
+      (item) => item.id === required.memoryIntakeId
+    );
+    if (
+      !corpusIntake ||
+      corpusIntake.sensitivity === "public-safe" ||
+      corpusIntake.availability !== "local-private" ||
+      !corpusIntake.protectedLocatorId ||
+      corpusIntake.submittedUrl
+    ) {
+      add(
+        "projection_restraint",
+        "wowlist-facebook-post-intake-boundary",
+        `${required.corpusIntakeId} exposes the record-level post census`
+      );
+    }
+    if (
+      !memoryIntake ||
+      memoryIntake.status !== "promoted" ||
+      !memoryIntake.sourceIds.includes(required.memorySourceId) ||
+      !memoryIntake.claimIds.includes(required.managementClaimId) ||
+      !memoryIntake.inquiryIds.includes(required.managementInquiryId)
+    ) {
+      add(
+        "provenance_closure",
+        "wowlist-facebook-management-memory-intake",
+        `${required.memoryIntakeId} is not linked to its attributed source, claim, and inquiry`
+      );
+    }
+
+    const corpusSource = sourceById.get(required.corpusSourceId);
+    const contentLibrarySource = sourceById.get(required.contentLibrarySourceId);
+    const urlInventorySource = sourceById.get(required.urlInventorySourceId);
+    const memorySource = sourceById.get(required.memorySourceId);
+    const nineCitiesSource = sourceById.get(required.nineCitiesSourceId);
+    const corpusText = JSON.stringify(corpusSource ?? {});
+    if (
+      !corpusSource ||
+      corpusSource.visibility !== "private" ||
+      corpusSource.preservationStatus !== "private" ||
+      !corpusSource.protectedLocatorId ||
+      ![required.currentPostCount, required.renderVariantCount, required.publisherCount].every(
+        (count) => corpusText.includes(String(count))
+      ) ||
+      !corpusSource.locator?.match(/two exact terminal-scroll traversals/i) ||
+      !corpusSource.doesNotEstablish.some((item) => /deleted before capture/i.test(item)) ||
+      !corpusSource.doesNotEstablish.some((item) => /sole account administration/i.test(item))
+    ) {
+      add(
+        "capture_integrity",
+        "wowlist-facebook-post-population-source",
+        `${required.corpusSourceId} loses its exact population, rerun control, or historical boundary`
+      );
+    }
+    if (
+      !contentLibrarySource ||
+      contentLibrarySource.visibility !== "protected" ||
+      !contentLibrarySource.protectedLocatorId ||
+      !JSON.stringify(contentLibrarySource).includes(String(required.contentLibraryCount)) ||
+      !contentLibrarySource.doesNotEstablish.some((item) => /five-post historical Page population/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-content-library-boundary",
+        "The five-row Meta Content Library is being treated as the historical Page population"
+      );
+    }
+    if (
+      !urlInventorySource ||
+      urlInventorySource.visibility !== "private" ||
+      !urlInventorySource.protectedLocatorId ||
+      ![required.resolvedUrlOccurrences, required.distinctResolvedUrls, required.wowlistOrgOccurrences].every(
+        (count) => JSON.stringify(urlInventorySource).includes(String(count))
+      ) ||
+      !urlInventorySource.doesNotEstablish.some((item) => /truth of linked content/i.test(item)) ||
+      !urlInventorySource.doesNotEstablish.some((item) => /endorsement/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-posted-url-source",
+        "The posted-URL inventory loses its exact counts or source-routing boundary"
+      );
+    }
+    if (
+      !memorySource ||
+      memorySource.visibility !== "private" ||
+      !memorySource.protectedLocatorId ||
+      !memorySource.publicNote?.match(/recalls|believes/i) ||
+      !memorySource.doesNotEstablish.some((item) => /sole account administration/i.test(item)) ||
+      !memorySource.doesNotEstablish.some((item) => /Richard Album/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-management-memory-source",
+        "The first-person social-management source loses attribution or collective-credit boundaries"
+      );
+    }
+    if (
+      !nineCitiesSource ||
+      nineCitiesSource.reviewDepth !== "close-reading" ||
+      !nineCitiesSource.supportsGenerally.some((item) => /attributed nine-city/i.test(item)) ||
+      !nineCitiesSource.doesNotEstablish.some((item) => /independently verified/i.test(item))
+    ) {
+      add(
+        "source_decomposition",
+        "wowlist-facebook-selected-post-source",
+        "The selected nine-city post loses attribution or independent-verification limits"
+      );
+    }
+
+    const populationClaim = bank.claims.find(
+      (claim) => claim.id === required.populationClaimId
+    );
+    const publisherClaim = bank.claims.find(
+      (claim) => claim.id === required.publisherClaimId
+    );
+    const managementClaim = bank.claims.find(
+      (claim) => claim.id === required.managementClaimId
+    );
+    const communityClaim = bank.claims.find(
+      (claim) => claim.id === required.communityClaimId
+    );
+    const civicClaim = bank.claims.find(
+      (claim) => claim.id === required.civicClaimId
+    );
+    const engagementClaim = bank.claims.find(
+      (claim) => claim.id === required.engagementClaimId
+    );
+    const urlClaim = bank.claims.find(
+      (claim) => claim.id === required.urlClaimId
+    );
+    const postClaims = [
+      populationClaim,
+      publisherClaim,
+      managementClaim,
+      communityClaim,
+      civicClaim,
+      engagementClaim,
+      urlClaim
+    ];
+    if (
+      postClaims.some(
+        (claim) =>
+          !claim ||
+          claim.publicationStatus !== "internal-only" ||
+          claim.projections.some((projection) => projection.status === "active")
+      )
+    ) {
+      add(
+        "projection_restraint",
+        "wowlist-facebook-post-projection-boundary",
+        "WOW List Facebook post research is projected publicly instead of retained as reserve depth"
+      );
+    }
+    if (
+      !populationClaim ||
+      !populationClaim.internalClaim.includes(String(required.currentPostCount)) ||
+      !populationClaim.internalClaim.includes(String(required.renderVariantCount)) ||
+      !populationClaim.evidence.some((item) => item.sourceId === required.corpusSourceId) ||
+      !populationClaim.evidence.some((item) => item.sourceId === required.contentLibrarySourceId) ||
+      !populationClaim.boundaries.some((item) => /Deleted, unpublished, pre-migration-omitted/i.test(item)) ||
+      !populationClaim.antiClaims.some((item) => /exactly 54.*history/i.test(item)) ||
+      !populationClaim.antiClaims.some((item) => /only five posts/i.test(item))
+    ) {
+      add(
+        "capture_integrity",
+        "wowlist-facebook-post-population-claim",
+        `${required.populationClaimId} overstates the current observable population`
+      );
+    }
+    if (
+      !publisherClaim ||
+      !publisherClaim.internalClaim.includes(String(required.publisherCount)) ||
+      !publisherClaim.boundaries.some((item) => /not sole Page administration|not sole.*administration/i.test(item)) ||
+      !publisherClaim.boundaries.some((item) => /original authorship|Quoted, shared, and linked material/i.test(item)) ||
+      !publisherClaim.boundaries.some((item) => /Richard Album/i.test(item)) ||
+      !publisherClaim.antiClaims.some((item) => /sole WOW List administrator/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-publisher-boundary",
+        `${required.publisherClaimId} converts publisher metadata into sole administration or authorship`
+      );
+    }
+    if (
+      !managementClaim ||
+      managementClaim.status !== "use-with-care" ||
+      !managementClaim.internalClaim.match(/recalls/i) ||
+      !managementClaim.evidence.some((item) => item.sourceId === required.memorySourceId) ||
+      !managementClaim.evidence.some((item) => item.sourceId === required.corpusSourceId) ||
+      !managementClaim.boundaries.some((item) => /first-person attribution/i.test(item)) ||
+      !managementClaim.boundaries.some((item) => /Richard Album/i.test(item)) ||
+      !managementClaim.antiClaims.some((item) => /definitively and exclusively/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-management-role-boundary",
+        `${required.managementClaimId} loses attribution, evidence separation, or joint-project credit`
+      );
+    }
+    if (
+      !communityClaim ||
+      !communityClaim.boundaries.some((item) => /do not independently establish site-wide adoption/i.test(item)) ||
+      !communityClaim.antiClaims.some((item) => /replaced Facebook for all/i.test(item)) ||
+      !civicClaim ||
+      !civicClaim.boundaries.some((item) => /does not establish authorship, partnership, endorsement, attendance, or causality/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-routing-boundary",
+        "Community or civic routing is being strengthened into adoption, partnership, or impact"
+      );
+    }
+    if (
+      !engagementClaim ||
+      ![required.postsWithVisibleReactions, required.visibleReactionCount].every((count) =>
+        engagementClaim.internalClaim.includes(String(count))
+      ) ||
+      !engagementClaim.boundaries.some((item) => /mutable.*platform displays.*not historic/i.test(item)) ||
+      !engagementClaim.boundaries.some((item) => /not attendance or impact/i.test(item)) ||
+      !engagementClaim.antiClaims.some((item) => /303 people attended/i.test(item))
+    ) {
+      add(
+        "projection_restraint",
+        "wowlist-facebook-engagement-boundary",
+        `${required.engagementClaimId} converts mutable engagement into reach, attendance, or impact`
+      );
+    }
+    if (
+      !urlClaim ||
+      ![required.resolvedUrlOccurrences, required.distinctResolvedUrls, required.wowlistOrgOccurrences].every(
+        (count) => urlClaim.internalClaim.includes(String(count))
+      ) ||
+      !urlClaim.boundaries.some((item) => /research route, not evidence/i.test(item)) ||
+      !urlClaim.antiClaims.some((item) => /linked organization endorsed/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-posted-url-boundary",
+        `${required.urlClaimId} converts posted routes into proof, endorsement, or outcomes`
+      );
+    }
+
+    const populationInquiry = bank.researchInquiries.find(
+      (inquiry) => inquiry.id === required.populationInquiryId
+    );
+    const managementInquiry = bank.researchInquiries.find(
+      (inquiry) => inquiry.id === required.managementInquiryId
+    );
+    const inquiryText = JSON.stringify(populationInquiry ?? {});
+    if (
+      !populationInquiry ||
+      populationInquiry.resultStatus !== "partially-recovered" ||
+      ![required.currentPostCount, required.renderVariantCount, required.contentLibraryCount].every(
+        (count) => inquiryText.includes(String(count))
+      ) ||
+      !populationInquiry.limitations.some((item) => /not an official Meta export/i.test(item)) ||
+      !populationInquiry.limitations.some((item) => /Deleted, unpublished, pre-migration-omitted/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-post-population-inquiry",
+        `${required.populationInquiryId} loses the current-population or unavailable-history boundary`
+      );
+    }
+    if (
+      !managementInquiry ||
+      managementInquiry.resultStatus !== "partially-recovered" ||
+      !managementInquiry.findings.some((item) => /All 54.*publisher field/i.test(item)) ||
+      !managementInquiry.limitations.some((item) => /not a complete account-administration log/i.test(item)) ||
+      !managementInquiry.limitations.some((item) => /Richard Album/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "wowlist-facebook-management-inquiry",
+        `${required.managementInquiryId} loses its partial result or collective-credit boundary`
+      );
+    }
+  }
+
   if (suite.requiredGoogleDriveArchiveProduction) {
     const required = suite.requiredGoogleDriveArchiveProduction;
     for (const intakeId of required.intakeIds) {

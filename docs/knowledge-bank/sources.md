@@ -158,6 +158,21 @@ displayed zero records. A bounded Facebook and Wayback search recovered none.
 The finding is **not recovered**, never **did not exist**. See the [public-safe
 research note](research/personal-wowlist-facebook-events-archival-production-2026-07.md).
 
+## WOW List Facebook Posts
+
+The July 14, 2026 authenticated pass traversed the WOW List public Page timeline
+to terminal scroll twice and recovered the same 54 unique posts after removing
+two documented Facebook render artifacts from 56 post-like variants. Both
+Featured records occur within the timeline population. Meta's five-row Lifetime
+Content Library is a current administrative subset, not a historical control.
+
+All 54 retained posts display Jamie Burkart in Facebook's admin-only publisher
+field. That supports sustained publishing activity, not sole account
+administration, ownership of shared sources, or exclusive project credit. The
+record-level corpus and URL inventory stay private; selected public posts and
+close-read destination articles are source nodes. See the [research
+note](research/wowlist-facebook-posts-archival-production-2026-07.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

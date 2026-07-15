@@ -70,6 +70,21 @@ Ask:
     corroboration, participant readership, endorsement, attendance, or impact?
 25. Does the WOW List result remain a bounded current zero display and
     historical non-recovery, never a claim that no Facebook event existed?
+26. Do two exact terminal-scroll traversals reconcile 54 unique currently
+    recoverable WOW List Facebook posts from 56 post-like render variants,
+    while the five-row Content Library remains an explicitly incomplete subset?
+27. Does the 54-of-54 `Published by Jamie Burkart` finding support sustained
+    publishing without becoming sole administration, shared-source authorship,
+    exclusive project ownership, or erasure of Richard Album's joint credit?
+28. Does Jamie's broader social-management recollection remain attributed and
+    paired with an open inquiry for account or collaborator evidence?
+29. Are current followers, reactions, comments, views, and event-interest
+    displays retained as mutable snapshots rather than reach, attendance, or
+    impact, and are posted URLs treated as research routes rather than truth,
+    endorsement, clicks, or outcomes?
+30. Does the full-corpus close reading preserve useful community-calendar,
+    cultural-space, mutual-aid, movement, and civic-routing patterns as internal
+    reserve depth while selected destination sources receive their own review?
 
 Return JSON with:
 

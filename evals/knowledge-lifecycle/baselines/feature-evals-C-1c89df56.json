@@ -1,6 +1,6 @@
 {
   "commit": "1c89df56f59fbab826795306cc99d35dd14d07d9",
-  "fingerprint": "sha256:2ce8424e87e3b1a572c8689e898008e1a7919fcb97493f7f6a668d0e5b050207",
+  "fingerprint": "sha256:373061d396e4fbbd8285b54befe9f1f7bc3df044aeb0fb48ad941212b3a980ce",
   "score": 92.5,
   "scores": {
     "capture_integrity": 2,
@@ -12,5 +12,5 @@
     "research_honesty": 4,
     "projection_restraint": 4
   },
-  "summary": "The prior candidate passed its lifecycle contract but did not yet capture the campaign Press corpus, source-backed KC Town Hall sequence, NYC Artist Coalition Facebook event corpus, or personal and WOW List Facebook event controls. The fingerprint is rebound to the expanded candidate file set; the frozen score remains the score recorded for this commit."
+  "summary": "The prior candidate passed its lifecycle contract but did not yet capture the campaign Press corpus, source-backed KC Town Hall sequence, NYC Artist Coalition Facebook event corpus, personal and WOW List Facebook event controls, or the WOW List Facebook post corpus. The fingerprint is rebound to the expanded candidate file set; the frozen score remains the score recorded for this commit."
 }

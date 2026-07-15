@@ -153,6 +153,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## wowlist-facebook-publishing-role - Social publishing and public identity
+
+**Status:** Research reserve
+**Support level:** Confirmed with boundaries / attributed first-person extension
+**Evidence class:** Authenticated full current-population review / admin-only publisher metadata / selected public posts / first-person recollection
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** Two exact terminal-scroll passes recovered 54 unique current public-timeline posts, and every retained card names Jamie in Facebook's Page-manager publisher field. Jamie separately recalls managing WOW List's social presence.
+**Where to project:** Bank only until the role language is composed for a specific hiring need and the broader management claim receives account or collaborator support.
+**Why it matters:** It documents sustained publishing, identity stewardship, local-organizer routing, and the bridge from community calendars into cultural-space and civic advocacy.
+**Guardrail:** Publisher metadata is not a sole-administration audit. Preserve the joint-project credit with Richard Album and the original authorship of quoted or shared material.
+**Do not say:** Jamie was the sole account administrator; Jamie authored every shared source; WOW List published only 54 posts in its history; current reactions, followers, or views measure historic impact.
+**Protected boundaries:** Record-level text and link inventory, platform management state, credentials, comments, mutable metrics, and unavailable/deleted records remain outside the repo.
+**Review owner:** Jamie / collaborator or account-record confirmation for broader management language
+**Last reviewed:** 2026-07-14
+
 ## personal-facebook-displayed-host-event-practice - Event-making research reserve
 
 **Status:** Research reserve

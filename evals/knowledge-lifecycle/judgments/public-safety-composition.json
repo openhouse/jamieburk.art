@@ -1,11 +1,11 @@
 {
-  "judgeId": "knowledge-systems-personal-fb-20260714",
+  "judgeId": "knowledge-systems-wowlist-fb-20260714",
   "lens": "knowledge-systems-data-quality",
-  "candidate": "sha256:4fff9074e7326f21d485d36c9652a0e43bc25be6c65cb338b64f861336d6687d",
-  "contract": "sha256:9658240a1c58b5e94769df8a249c0890651c5decb0cca47cedc02196d113a7fd",
+  "candidate": "sha256:0f43ed820d703d5c6dccb0dd8dadda2b34b9bb87d4c0f0bc3ade39fcbd012c10",
+  "contract": "sha256:3dcf5f4a99ed9b5377b5d4f246a9e5212a809c8b661843c35cb2b2c727dff5a7",
   "passes": true,
   "scores": {
-    "capture_integrity": 4,
+    "capture_integrity": 3,
     "source_decomposition": 4,
     "claim_atomicity": 4,
     "provenance_closure": 4,
@@ -15,15 +15,39 @@
     "projection_restraint": 4
   },
   "evidence": [
-    { "rubric": "capture_integrity", "observation": "The 100 percent statement is correctly bounded to currently displayed controls: two terminal Past traversals produced the same 502 IDs; 20 cards displayed Jamie as host and 482 another host; all 21 Hosted-tab records were recovered; 18 overlap the Past set, yielding 505 distinct current IDs. The aggregate year totals and anonymous 20-row census reconcile exactly." },
-    { "rubric": "source_decomposition", "observation": "Current interface controls, protected record-level runs, the displayed-host practice run, nine selected public event pages, three posted destinations, and the two WOW List controls are separate source nodes with review depth, preservation state, support, non-support, and protected-locator fields." },
-    { "rubric": "claim_atomicity", "observation": "Past-surface accounting, Hosted-tab accounting, displayed-host practice, current WOW List zero display, and historical WOW List non-recovery are five distinct claims. None collapses platform association, displayed hosting, authorship, sole production, attendance, endorsement, causality, or impact." },
-    { "rubric": "provenance_closure", "observation": "Both intake records resolve to the required source, claim, project, and inquiry identifiers. The practice claim cites the protected complete-subset run plus each selected public plot-point source; posted destinations are absent from claim evidence and remain inquiry-level research routes." },
-    { "rubric": "status_separation", "observation": "All five claims are internal-only, editorially unused, and limited to held archive-note projections. The current WOW List zero-display claim is confirmed with boundaries, while the historical result remains explicitly not-recovered." },
-    { "rubric": "project_context", "observation": "The records situate the material across personal-public-record, WOW List, Sunday Dinner, and Water Publics dossiers. The research note, five-form census, chronology, selected public plot points, and photo-research prompts give future researchers useful orientation without publishing the personal association graph." },
-    { "rubric": "research_honesty", "observation": "The research is explicit that the controls are not an official Meta export and cannot reveal deleted or hidden history. Mutable numeric displays are retained only as a data-quality finding; posted URLs are discovery routes rather than corroboration; and WOW List non-recovery is never converted into nonexistence." },
-    { "rubric": "projection_restraint", "observation": "The hiring site and public citation registry contain no active projection of the personal or WOW List Facebook claims. The anonymous census omits event IDs, titles, URLs, locations, guests, relationship context, comments, authentication data, and mutable metrics; record-level runs remain behind opaque protected locators." }
+    {
+      "rubric": "capture_integrity",
+      "observation": "The control reconciles 56 post-like variants minus two explicitly described render artifacts to 54 retained posts, records two terminal traversals with an exact fingerprint match, and reconciles all 54 publisher rows; the absence of non-identifying traversal digests limits independent recomputation and keeps this at 3."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "The corpus, five-row Content Library, URL inventory, attributed memory, selected posts, and destination sources each identify review depth, support, and non-support; the Content Library is explicitly an incomplete subset rather than a historical control."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Seven separate claims distinguish population size, publisher metadata, attributed management, community routing, civic routing, engagement snapshots, and posted-URL routing instead of combining them into a single role or impact claim."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "Every WOW List Facebook claim resolves to declared source IDs: population uses the private corpus plus Content Library boundary, management uses memory plus publisher metadata, and thematic claims use the corpus with selected close-read public posts."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "All seven claims remain internal-only with no active projection; population and metrics are unused, publisher and thematic claims are candidates, and the broader management claim remains use-with-care."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The dossier situates the corpus within WOW List's community-calendar, cultural-space, mutual-aid, movement, and civic-routing work while treating selected posts as examples and destination records as separately reviewed research nodes."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The population inquiry is partially recovered and excludes deleted, unpublished, migration-omitted, and unavailable history; Jamie's management recollection remains attributed pending account or collaborator evidence, and mutable metrics and URLs are not promoted into attendance, endorsement, or impact."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The record-level corpus and URL inventory remain private behind protected opaque locator IDs with no filesystem, canonical, archive, or asset URL, while only aggregates and selected public sources enter the repository."
+    }
   ],
   "regressions": [],
-  "nextAction": "Preserve this material as internal reserve depth, retain the protected record-level controls, and regenerate the deterministic report after storing candidate-bound judgments; do not add a hiring-site projection in this cycle."
+  "nextAction": "Add non-identifying SHA-256 digests for each traversal's retained fingerprint set and reason-coded exclusion fingerprints to the aggregate control so exact rerun and deduplication equality can be independently checked without exposing record-level material."
 }

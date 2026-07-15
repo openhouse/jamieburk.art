@@ -1,13 +1,13 @@
 {
-  "judgeId": "archival-editorial-personal-fb-20260714",
+  "judgeId": "archival-editorial-wowlist-fb-20260714",
   "lens": "archival-editorial",
-  "candidate": "sha256:4fff9074e7326f21d485d36c9652a0e43bc25be6c65cb338b64f861336d6687d",
-  "contract": "sha256:9658240a1c58b5e94769df8a249c0890651c5decb0cca47cedc02196d113a7fd",
+  "candidate": "sha256:0f43ed820d703d5c6dccb0dd8dadda2b34b9bb87d4c0f0bc3ade39fcbd012c10",
+  "contract": "sha256:3dcf5f4a99ed9b5377b5d4f246a9e5212a809c8b661843c35cb2b2c727dff5a7",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
     "source_decomposition": 4,
-    "claim_atomicity": 3,
+    "claim_atomicity": 4,
     "provenance_closure": 4,
     "status_separation": 4,
     "project_context": 4,
@@ -15,15 +15,39 @@
     "projection_restraint": 4
   },
   "evidence": [
-    { "rubric": "capture_integrity", "observation": "The requested hashes match. Two terminal Past traversals produced the same 502-ID set; 20 displayed Jamie as host and 482 another host. The separate 21-record Hosted control reconciles through 18 overlaps to 505 distinct IDs, and the anonymous census accounts for all 20 displayed-Jamie-host cards." },
-    { "rubric": "source_decomposition", "observation": "Protected population runs preserve record-level accounting behind opaque locators, nine selected public event pages are close-read with literal displayed-host boundaries, and the three posted destinations are metadata-reviewed routes whose contents are not used as claim evidence." },
-    { "rubric": "claim_atomicity", "observation": "Past association population, Hosted-tab population, displayed-host practice, current WOW List zero display, and historical WOW List non-recovery are separate claims. The five-form practice claim is synthetic but remains explicitly interpretive and bounded rather than becoming authorship, attendance, or impact." },
-    { "rubric": "provenance_closure", "observation": "Every new mature or negative claim resolves to its control source, protected research run, selected event sources, and inquiry. The complete 20-card classification has protected aggregate support, while selected public pages support only individual plot points and never sole production." },
-    { "rubric": "status_separation", "observation": "All five personal and WOW List Facebook claims are internal-only, editorially unused, and limited to held archive-note projections. No related claim appears in a public citation page or the public registry." },
-    { "rubric": "project_context", "observation": "The research note supplies reproducible controls, year and practice-form accounting, nine bounded historical plot points, cross-project links to Sunday Dinner and water work, privacy rules, data-quality limits, and an explicit reserve-depth editorial decision suitable for future researchers." },
-    { "rubric": "research_honesty", "observation": "The candidate repeatedly separates association, Hosted classification, displayed host labels, authorship, production, attendance, endorsement, response displays, causality, and impact. It records WOW List as a current zero display plus bounded historical non-recovery, explicitly not proof that no event existed." },
-    { "rubric": "projection_restraint", "observation": "The aggregate controls and anonymous census omit the relational ledger, nonselected event IDs and titles, URLs, guests, relationship context, exact private locations, comments, authentication material, and event-level mutable metrics. Human claims and anti-claims registers now explicitly bar public inflation, posted-URL corroboration, personal-data publication, WOW List nonexistence claims, and hiring-site projection of the research reserve. The evaluator reports zero findings, all 50 lifecycle tests pass, and the public-safety check passes." }
+    {
+      "rubric": "capture_integrity",
+      "observation": "Two exact terminal-scroll traversals reconcile 56 post-like render variants through two documented artifact exclusions to 54 unique currently recoverable public-timeline posts; all five Content Library rows occur within those 54, while the aggregate control and opaque private artifact ID keep the record-level census outside the repository."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "The timeline corpus, five-row Content Library, posted-URL inventory, first-person management memory, selected public posts, and destination sources each have explicit review depth, support, non-support, preservation, and locator fields; metadata-only destination material is not treated as close-read evidence."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Current-population reconciliation, 54-of-54 publisher metadata, attributed social-management memory, community routing, cultural and civic routing, mutable engagement, and posted-URL routing are seven separate claims with independently testable evidence and anti-claims."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "Every new claim resolves to named source records and the WOW List project; the broader management claim specifically separates Jamie's first-person source as direct support from the 54-post corpus as corroboration and remains linked to a partially recovered inquiry."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "All seven claims remain internal-only with no active projection: population, engagement, and URL totals are editorially unused, while publisher, management, and routing findings remain candidates or held reserve depth rather than public portfolio copy."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The WOW List dossier situates the pass within the 2014-2017 project, records the approximately April 2015 through March 2018 Facebook span, identifies local-organizer, cultural-space, mutual-aid, movement, and civic-routing patterns, and retains a photo-research prompt centered on member meetings, interfaces, workflows, and community authorship."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The records repeatedly define 54 as the complete currently recoverable public-timeline population rather than lifetime history, identify the five-row Content Library as incomplete, retain Jamie's broader management account as attributed memory, and preserve Richard Album's joint project credit while rejecting sole administration and shared-source authorship."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "Posted URLs remain research routes rather than corroboration or endorsement, and followers, reactions, comments, views, and event-interest displays remain dated mutable observations rather than reach, attendance, or impact; the deterministic evaluator reports zero findings, all 54 lifecycle tests pass, and public-safety, citation, lint, typecheck, and knowledge-bank checks pass."
+    }
   ],
   "regressions": [],
-  "nextAction": "Stop this lifecycle cycle and retain the personal event practice as bank-only reserve depth unless a future role-specific composition receives a fresh source, privacy, and collective-credit review."
+  "nextAction": "Retain this pass as internal reserve depth and require an account-administration record or Richard Album collaborator confirmation before strengthening Jamie's attributed broader social-management claim."
 }
