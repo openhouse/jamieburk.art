@@ -12,6 +12,8 @@ const crsDataClaimId = "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN";
 const raftClaimId = "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE";
 const wikipediaClaimId = "CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW";
 const discoveryClaimId = "CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS";
+const pilotDesignClaimId = "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN";
+const iCloudHandoffClaimId = "CLM-ICLOUD-WORKING-FOLDER-HANDOFF-PRACTICE";
 
 export const teamsArchiveCaptures = [
   {
@@ -166,7 +168,7 @@ export const teamsArchiveCaptures = [
     submittedBy: "Jamie Burkart",
     kind: "artifact",
     summary:
-      "High-value June 2026 job-hunt and source-backed-memory packet directories awaiting complete iCloud materialization.",
+      "High-value June 2026 job-hunt and source-backed-memory packet directories reconciled through authenticated iCloud inventory, with one proposal recovered and a follow-up body still pending.",
     status: "researching",
     publicSafety: "protected-pointer",
     potentialProjectIds: ["source-backed-team-memory", "portfolio-system"],
@@ -175,11 +177,46 @@ export const teamsArchiveCaptures = [
       "offer evolution",
       "collaborator validation",
     ],
-    sourceIds: [],
-    observationIds: [],
+    sourceIds: ["SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26"],
+    observationIds: [
+      "OBS-JOBHUNT-SPRINT-OPERATING-MEMORY-FRAME",
+      "OBS-JOBHUNT-SPRINT-BOUNDED-SOURCE-LOOP",
+      "OBS-JOBHUNT-SPRINT-DELIVERABLE-DECISION-GATE",
+      "OBS-JOBHUNT-SPRINT-PROTOTYPE-BOUNDARY",
+    ],
     researchTaskIds: ["RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION"],
     disposition:
-      "Requested iCloud materialization and preserved the unread packet as a retrieval task; no source content was inferred from filenames or prior copies.",
+      "Normalized the recovered June 26 proposal into bounded method observations while keeping recipient, pricing, contact details, transcript language, and private company context outside the repository; retained the June 30 body as open retrieval state.",
+  },
+  {
+    id: "CAP-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+    receivedAt: "2026-07-15",
+    submittedBy: "Jamie Burkart",
+    kind: "artifact",
+    summary:
+      "A public-safe reconciliation of Jamie's cross-device iCloud working-folder practice and three professionally relevant Teams corpora.",
+    status: "integrated",
+    publicSafety: "protected-pointer",
+    potentialProjectIds: ["portfolio-system", "source-backed-team-memory"],
+    potentialClaimFamilies: [
+      "cross-device handoff",
+      "portable working memory",
+      "archive coverage research",
+    ],
+    sourceIds: [
+      "SRC-TEAMS-ICLOUD-HANDOFF-STATEMENT-2026-07-15",
+      "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+    ],
+    observationIds: [
+      "OBS-TEAMS-ICLOUD-HANDOFF-STATEMENT",
+      "OBS-TEAMS-ICLOUD-THREE-CORPUS-INVENTORY",
+      "OBS-JPH-ICLOUD-FIFTEEN-PROJECT-FOLDERS",
+      "OBS-CRS-ICLOUD-DATED-WORKING-CORPUS",
+      "OBS-JOBHUNT-ICLOUD-JUNE-PACKET-INVENTORY",
+    ],
+    researchTaskIds: ["RT-TEAMS-JPH-COVERAGE-GAPS"],
+    disposition:
+      "Recorded the portable-handoff method and bounded corpus metadata; excluded raw file bodies, private identities, local paths, credentials, and sensitive project contents.",
   },
 ] satisfies CaptureRecord[];
 
@@ -451,6 +488,85 @@ export const teamsArchiveSources = [
       "a public testimonial",
       "the later pilot's exact scope or completion",
       "permission to publish the private conversations",
+    ],
+  },
+  {
+    id: "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+    title: "Source-Backed Team Memory Sprint proposal",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    publishedAt: "2026-06-26",
+    publicCitation:
+      "Jamie Burkart, public-safe method summary of a Source-Backed Team Memory Sprint proposal, June 26, 2026.",
+    publicNote:
+      "The proposal recipient, pricing, contact details, transcript context, and private company information remain excluded.",
+    protectedLocatorId: "ARCHIVE-JOBHUNT-SBTM-SPRINT-2026-001",
+    supportsGenerally: [
+      "Jamie specified a bounded source-to-memory pilot",
+      "the pilot begins with one approved non-sensitive or synthetic source bundle",
+      "AI drafts while humans review an inspectable and correctable shared record",
+      "the proposed deliverables end in a continue, revise, or stop recommendation",
+      "the underlying prototype was explicitly described as early and not production software",
+    ],
+    doesNotEstablish: [
+      "proposal acceptance",
+      "deployment inside a collaborator's company",
+      "a paid engagement",
+      "product-market fit",
+      "production software",
+      "permission to publish the underlying proposal",
+    ],
+  },
+  {
+    id: "SRC-TEAMS-ICLOUD-HANDOFF-STATEMENT-2026-07-15",
+    title: "Jamie Burkart statement on cross-device working folders",
+    author: "Jamie Burkart",
+    kind: "firsthand-statement",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    publishedAt: "2026-07-15",
+    publicCitation:
+      "Jamie Burkart, public-safe statement on maintaining cross-device project working folders, July 15, 2026.",
+    publicNote:
+      "The source records the professional method only; private folder contents, device details, and unrelated personal material remain excluded.",
+    protectedLocatorId: "STATEMENT-TEAMS-ICLOUD-HANDOFF-2026-001",
+    supportsGenerally: [
+      "Jamie maintains project working folders so workflows can move between his phone and laptop",
+      "the folders are intended to make ongoing work easier to resume and hand off",
+    ],
+    doesNotEstablish: [
+      "authorship of every file in the folders",
+      "collaborator adoption of every workflow",
+      "the quality or completeness of every archive",
+      "permission to expose private folder contents",
+    ],
+  },
+  {
+    id: "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+    title: "Authenticated iCloud Teams inventory",
+    author: "Codex archival review",
+    kind: "research-run",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    capturedAt: "2026-07-15T02:30:00-04:00",
+    publicCitation:
+      "Public-safe summary of an authenticated iCloud Teams inventory conducted July 15, 2026.",
+    publicNote:
+      "Only bounded folder architecture and recovery state are represented; raw names outside the professional scope, file bodies, account state, and local paths remain excluded.",
+    protectedLocatorId: "RESEARCH-TEAMS-ICLOUD-WEB-INVENTORY-2026-001",
+    supportsGenerally: [
+      "Jamie Projects History, CRS, and job-hunt were enumerable in the authenticated web interface",
+      "the three corpora use project folders, dated working packets, overview documents, and current deliverables",
+      "the June 18, June 26, and June 30 job-hunt packet directories were present and enumerable",
+    ],
+    doesNotEstablish: [
+      "authorship or ownership of every accessible file",
+      "that every file was close-read",
+      "project impact or collaborator endorsement",
+      "that a web-visible file body was locally materialized",
+      "permission to publish authenticated account details",
     ],
   },
 ] satisfies SourceRecord[];
@@ -800,6 +916,141 @@ export const teamsArchiveObservations = [
     ],
     supportsClaimIds: [discoveryClaimId],
     reviewedAt: "2026-07-14",
+  },
+  {
+    id: "OBS-JOBHUNT-SPRINT-OPERATING-MEMORY-FRAME",
+    sourceId: "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+    project: "source-backed-team-memory",
+    statement:
+      "Jamie's proposal frames the need as operating memory: a lightweight way to preserve decisions, source support, open questions, held context, and onboarding knowledge rather than simply accumulating more notes.",
+    observationType: "explicit",
+    locator: "Opening problem statement and 'What I am proposing.'",
+    confidence: "high",
+    limitations: [
+      "This is Jamie's proposed framing and does not establish that a collaborator adopted it.",
+    ],
+    supportsClaimIds: [pilotDesignClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-JOBHUNT-SPRINT-BOUNDED-SOURCE-LOOP",
+    sourceId: "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+    project: "source-backed-team-memory",
+    statement:
+      "The proposed sprint starts with one narrowly defined use case and one approved non-sensitive or synthetic source bundle; AI drafts and humans review an inspectable, correctable shared record.",
+    observationType: "explicit",
+    locator: "Bounded source-to-memory loop and proposed first engagement.",
+    confidence: "high",
+    limitations: [
+      "The source specifies a proposed method, not a completed client implementation.",
+    ],
+    supportsClaimIds: [pilotDesignClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-JOBHUNT-SPRINT-DELIVERABLE-DECISION-GATE",
+    sourceId: "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+    project: "source-backed-team-memory",
+    statement:
+      "The proposal specifies a knowledge-friction map, source and workflow inventory, reusable memory templates, an onboarding starter page, one prototype, privacy and retention notes, and a 30-day continue, revise, or stop recommendation.",
+    observationType: "explicit",
+    locator: "Likely deliverables and recommendation memo sections.",
+    confidence: "high",
+    limitations: [
+      "The deliverables are scoped promises in a proposal and are not evidence that they were delivered.",
+    ],
+    supportsClaimIds: [pilotDesignClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-JOBHUNT-SPRINT-PROTOTYPE-BOUNDARY",
+    sourceId: "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+    project: "source-backed-team-memory",
+    statement:
+      "Jamie explicitly describes the working prototype as early and local-first rather than production software, and proposes testing the underlying practice rather than asking a team to adopt the prototype as-is.",
+    observationType: "explicit",
+    locator: "Prototype description and first-engagement boundary.",
+    confidence: "high",
+    limitations: [
+      "This source does not provide a technical validation or production-readiness assessment.",
+    ],
+    supportsClaimIds: [pilotDesignClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-TEAMS-ICLOUD-HANDOFF-STATEMENT",
+    sourceId: "SRC-TEAMS-ICLOUD-HANDOFF-STATEMENT-2026-07-15",
+    project: "portfolio-system",
+    statement:
+      "Jamie states that he maintains project working folders in iCloud so he can resume and hand off workflows while moving between his phone and laptop.",
+    observationType: "attributed",
+    locator: "July 15 first-hand statement.",
+    confidence: "high",
+    limitations: [
+      "This is Jamie's first-hand account of his method, not an independent assessment of every folder or handoff.",
+    ],
+    supportsClaimIds: [iCloudHandoffClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-TEAMS-ICLOUD-THREE-CORPUS-INVENTORY",
+    sourceId: "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+    project: "portfolio-system",
+    statement:
+      "The authenticated Teams interface exposed Jamie Projects History, CRS, and job-hunt as distinct working corpora organized through project folders, dated packets, overview documents, and current deliverables.",
+    observationType: "metadata",
+    locator: "Authenticated Teams and required-corpus inventories.",
+    confidence: "high",
+    limitations: [
+      "Folder architecture is evidence of an operating practice, not proof of file authorship, project outcome, or collaborator adoption.",
+    ],
+    supportsClaimIds: [iCloudHandoffClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-JPH-ICLOUD-FIFTEEN-PROJECT-FOLDERS",
+    sourceId: "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+    project: "portfolio-system",
+    statement:
+      "Jamie Projects History contained a 15-folder professional project index alongside a project overview and a separate archival-collaboration record.",
+    observationType: "metadata",
+    locator: "Jamie Projects History and jamie-projects folder inventories.",
+    confidence: "high",
+    limitations: [
+      "The count is a time-bounded interface inventory and not an accomplishment, completeness, or impact metric.",
+    ],
+    supportsClaimIds: [iCloudHandoffClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-CRS-ICLOUD-DATED-WORKING-CORPUS",
+    sourceId: "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+    project: "fair-rent-nyc",
+    statement:
+      "The CRS corpus exposed a large dated working chronology through June 2026, plus project-overview and current-document anchors used to route selective close reading.",
+    observationType: "metadata",
+    locator: "Authenticated CRS top-level inventory.",
+    confidence: "high",
+    limitations: [
+      "The chronology includes protected correspondence, recordings, and working material and does not establish authorship or completion of every listed action.",
+    ],
+    supportsClaimIds: [iCloudHandoffClaimId],
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "OBS-JOBHUNT-ICLOUD-JUNE-PACKET-INVENTORY",
+    sourceId: "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+    project: "source-backed-team-memory",
+    statement:
+      "The authenticated job-hunt corpus enumerated June 18 call materials, a June 26 proposal packet, and a June 30 follow-up packet; the proposal body was recovered for close reading while the follow-up body remained unavailable.",
+    observationType: "metadata",
+    locator: "Job-hunt June 18, June 26, and June 30 folder inventories.",
+    confidence: "high",
+    limitations: [
+      "Presence and filename metadata do not establish the contents of the unrecovered follow-up packet.",
+    ],
+    supportsClaimIds: [pilotDesignClaimId],
+    reviewedAt: "2026-07-15",
   },
 ] satisfies ObservationRecord[];
 
@@ -1153,7 +1404,7 @@ export const teamsArchiveClaims = [
     boundaries: [
       "Do not identify the collaborator or expose private company, personal, pricing, or third-party details without explicit approval.",
       "Do not treat exploratory feedback as market validation, a purchase commitment, or a public testimonial.",
-      "Do not claim a direct lineage into the June 2026 pilot packet until that packet is materialized and compared.",
+      "Treat the December discovery conversations and June 2026 pilot proposal as distinct stages; do not claim that one wholly determined the other.",
     ],
     antiClaims: [
       "The conversations proved product-market fit",
@@ -1161,8 +1412,154 @@ export const teamsArchiveClaims = [
       "The December concept and June pilot are identical",
       "The private transcripts may be published",
     ],
-    researchInquiryIds: ["INQ-TEAMS-JOBHUNT-ICLOUD-HYDRATION-2026"],
-    reviewedAt: "2026-07-14",
+    researchInquiryIds: [
+      "INQ-TEAMS-JOBHUNT-ICLOUD-HYDRATION-2026",
+      "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+    ],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"],
+  },
+  {
+    id: pilotDesignClaimId,
+    project: "source-backed-team-memory",
+    claimType: "method",
+    internalClaim:
+      "By June 2026 Jamie had specified a bounded source-backed-memory pilot with safe source selection, human review, concrete handoff artifacts, privacy notes, and a continue, revise, or stop decision gate.",
+    epistemicState: "sourced",
+    publicationState: "public-safe",
+    selectionState: "candidate",
+    status: "confirmed-with-boundary",
+    observationIds: [
+      "OBS-JOBHUNT-SPRINT-OPERATING-MEMORY-FRAME",
+      "OBS-JOBHUNT-SPRINT-BOUNDED-SOURCE-LOOP",
+      "OBS-JOBHUNT-SPRINT-DELIVERABLE-DECISION-GATE",
+      "OBS-JOBHUNT-SPRINT-PROTOTYPE-BOUNDARY",
+      "OBS-JOBHUNT-ICLOUD-JUNE-PACKET-INVENTORY",
+    ],
+    projections: [
+      {
+        key: "archive-note",
+        text: "Jamie specified a bounded source-backed-memory pilot around one approved non-sensitive or synthetic source bundle, AI drafting with human review, inspectable records, concrete onboarding and decision-memory artifacts, privacy and retention notes, and a 30-day continue, revise, or stop recommendation.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/teams-archive-production"],
+      },
+      {
+        key: "technical-operations",
+        text: "Specified a bounded source-backed-memory pilot with safe source selection, human review, inspectable outputs, and an explicit continue, revise, or stop decision gate.",
+        status: "hold",
+        citationRequired: false,
+        surfaces: [],
+      },
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+        relationship: "direct-support",
+        supports: [
+          "the bounded source-to-memory loop",
+          "safe source selection and human review",
+          "the deliverable set and decision gate",
+          "the early, non-production boundary",
+        ],
+        locator: "Method, proposed engagement, deliverables, and boundaries.",
+        confidence: "high",
+        renderCitation: false,
+      },
+      {
+        sourceId: "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+        relationship: "context",
+        supports: ["the dated proposal packet's recovery state"],
+        locator: "June 26 job-hunt packet inventory.",
+        confidence: "high",
+        renderCitation: false,
+      },
+    ],
+    boundaries: [
+      "Describe the work as a proposed pilot design and consulting method, not a completed engagement or deployed system.",
+      "Do not identify the private recipient or publish pricing, contact details, transcript language, or company context.",
+      "The source is Jamie's proposal and does not independently establish customer demand, acceptance, delivery, or impact.",
+      "Keep the early, local-first, non-production software boundary attached.",
+    ],
+    antiClaims: [
+      "A client adopted or paid for the sprint",
+      "Jamie deployed a production AI memory platform",
+      "The proposal proved product-market fit",
+      "The method automates trust or replaces human judgment",
+    ],
+    researchTaskIds: ["RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION"],
+    researchInquiryIds: ["INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"],
+  },
+  {
+    id: iCloudHandoffClaimId,
+    project: "portfolio-system",
+    claimType: "method",
+    internalClaim:
+      "Jamie maintains project-specific iCloud working folders as portable operating memory so workflows can be resumed and handed off across his phone and laptop.",
+    epistemicState: "sourced",
+    publicationState: "public-safe",
+    selectionState: "candidate",
+    status: "confirmed-with-boundary",
+    observationIds: [
+      "OBS-TEAMS-ICLOUD-HANDOFF-STATEMENT",
+      "OBS-TEAMS-ICLOUD-THREE-CORPUS-INVENTORY",
+      "OBS-JPH-ICLOUD-FIFTEEN-PROJECT-FOLDERS",
+      "OBS-CRS-ICLOUD-DATED-WORKING-CORPUS",
+    ],
+    projections: [
+      {
+        key: "archive-note",
+        text: "Jamie maintains project-specific iCloud working folders as portable operating memory across his phone and laptop. The reviewed corpora pair project indexes, dated packets, overview documents, source bundles, and current deliverables so work can be resumed, researched, and handed off without publishing the protected archive.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/teams-archive-production"],
+      },
+      {
+        key: "technical-operations",
+        text: "Maintains cross-device working folders with project indexes, dated packets, source bundles, and current deliverables for resumable handoffs.",
+        status: "hold",
+        citationRequired: false,
+        surfaces: [],
+      },
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-TEAMS-ICLOUD-HANDOFF-STATEMENT-2026-07-15",
+        relationship: "direct-support",
+        supports: ["Jamie's cross-device working-folder purpose"],
+        locator: "July 15 first-hand statement.",
+        confidence: "high",
+        renderCitation: false,
+      },
+      {
+        sourceId: "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+        relationship: "corroborating",
+        supports: [
+          "the use of project indexes, dated packets, overview documents, and current deliverables",
+          "the presence of the three reviewed professional corpora",
+        ],
+        locator: "Authenticated Teams inventory.",
+        confidence: "high",
+        renderCitation: false,
+      },
+    ],
+    boundaries: [
+      "Attribute the cross-device purpose to Jamie and treat the inventory as corroborating architecture, not independent proof of every handoff.",
+      "Do not treat folder or file counts as accomplishment, impact, completeness, or collaborator-adoption metrics.",
+      "Do not expose private files, identities, account state, or local paths.",
+      "This candidate adds knowledge-bank depth and does not displace the selected Shared Drive collaboration claim on the current website.",
+    ],
+    antiClaims: [
+      "Jamie authored every file in the archive",
+      "Every collaborator used or adopted the folder system",
+      "The archive is complete",
+      "Folder volume proves professional impact",
+    ],
+    researchTaskIds: ["RT-TEAMS-JPH-COVERAGE-GAPS"],
+    researchInquiryIds: ["INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026"],
+    reviewedAt: "2026-07-15",
     reviewedBy: ["Jamie Burkart", "Codex archival review"],
   },
 ] satisfies ClaimRecord[];
@@ -1203,23 +1600,48 @@ export const teamsArchiveResearchTasks = [
     priority: "high",
     status: "in-progress",
     captureIds: ["CAP-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION-2026"],
-    sourceIds: [],
-    claimIds: [discoveryClaimId],
+    sourceIds: ["SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26"],
+    claimIds: [discoveryClaimId, pilotDesignClaimId],
     successCriteria: [
-      "Materialize and close-read the June 18, June 26, and June 30 packet directories.",
+      "Close-read the recovered June 18 and June 26 materials and recover the June 30 follow-up body.",
       "Normalize only recovered source metadata and decompose each selected source into bounded observations.",
       "Compare the June offer with the December discovery questions without assuming direct lineage.",
       "Keep collaborator identity, pricing, transcripts, and private business context outside public Git unless separately approved.",
     ],
     nextActions: [
-      "Retry bounded directory enumeration after iCloud reports local availability.",
-      "Prefer current proposal, brief, and handoff artifacts over verbatim conversation records when both are available.",
+      "Recover the June 30 follow-up body through a successful local materialization or a publication-safe export.",
+      "Compare the follow-up against the recovered proposal without inferring acceptance, delivery, or impact.",
       "Record not-yet-materialized files as retrieval state, not absence.",
     ],
     publicNote:
-      "Later June 2026 packet directories were requested from iCloud but had not materialized during this archival pass.",
+      "The authenticated web inventory enumerated all three June packet directories and the June 26 proposal was recovered; the June 30 follow-up body remains retrieval state.",
     owner: "Jamie Burkart / archival review",
-    reviewedAt: "2026-07-14",
+    reviewedAt: "2026-07-15",
+  },
+  {
+    id: "RT-TEAMS-JPH-COVERAGE-GAPS",
+    project: "portfolio-system",
+    question:
+      "Which Jamie Projects History folders contain public-safe role and outcome evidence not yet represented in the knowledge bank?",
+    priority: "medium",
+    status: "open",
+    captureIds: ["CAP-TEAMS-ICLOUD-WEB-RECONCILIATION-2026"],
+    sourceIds: ["SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15"],
+    claimIds: [iCloudHandoffClaimId],
+    successCriteria: [
+      "Map all 15 project folders to an existing claim, source record, or explicit research lead.",
+      "Prioritize underrepresented creative-technology and participatory-program folders for source recovery.",
+      "Require an independent public source or bounded first-hand source before promoting a new role or outcome claim.",
+    ],
+    nextActions: [
+      "Compare the folder index against the canonical claim registry.",
+      "Begin with Claudette's Theater on Wheels, the Matmos collaboration, Monthly Music Hackathon, and Time Is Long because their public source trails appear underdeveloped in the current bank.",
+      "Keep private correspondence and protected media outside Git while recording public-safe source leads.",
+    ],
+    publicNote:
+      "The 15-folder index is a research queue, not a count of completed or successful projects.",
+    owner: "Jamie Burkart / archival review",
+    reviewedAt: "2026-07-15",
   },
 ] satisfies ResearchTask[];
 
@@ -1250,5 +1672,40 @@ export const teamsArchiveInquiries = [
     publicSummary:
       "A bounded iCloud pass recovered materialized job-hunt anchors and routed the still-cloud-only June packet to a retryable research task.",
     protectedLocatorId: "RESEARCH-JOBHUNT-ICLOUD-HYDRATION-2026-001",
+  },
+  {
+    id: "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+    project: "portfolio-system",
+    question:
+      "What professionally relevant archive structure and recovery state can be established through authenticated iCloud Drive for Jamie Projects History, CRS, and job-hunt?",
+    methods: [
+      "Used the authenticated iCloud Drive web interface to enumerate each required Teams corpus without exposing account credentials or session state.",
+      "Opened the Jamie Projects History project index, the CRS dated working chronology, and the June 18, June 26, and June 30 job-hunt packet directories.",
+      "Reconciled web-visible metadata against materialized overview documents and a separately recovered June 26 proposal body.",
+      "Normalized only public-safe architecture, source metadata, bounded observations, and retrieval state.",
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "Jamie Projects History exposed a project overview, a separate archival-collaboration record, and a 15-folder professional project index.",
+      "CRS exposed a large dated working chronology through June 2026; the interface count is time-bounded metadata rather than an accomplishment metric.",
+      "Job-hunt exposed dated June 18 call materials, a June 26 proposal packet, and a June 30 follow-up packet.",
+      "The recovered June 26 proposal specifies one bounded source-to-memory loop, approved safe source selection, human review, concrete deliverables, and a continue, revise, or stop decision gate.",
+      "The June 30 follow-up filename and file metadata were recovered, but its body was not; no claim is inferred from it.",
+    ],
+    limitations: [
+      "Authenticated interface counts can change and do not represent impact, completeness, or authorship.",
+      "Web visibility does not guarantee local materialization or permission to publish a file body.",
+      "The pass was purposefully selective and did not close-read every file in the three corpora.",
+      "Private correspondence, transcripts, account state, sensitive collaborator material, and local paths remain excluded.",
+    ],
+    sourceIds: [
+      "SRC-TEAMS-ICLOUD-HANDOFF-STATEMENT-2026-07-15",
+      "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026-07-15",
+      "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+    ],
+    publicSummary:
+      "An authenticated reconciliation confirmed a portable three-corpus working-folder practice, recovered one June pilot proposal for close reading, and retained the unread follow-up as explicit retrieval state.",
+    protectedLocatorId: "RESEARCH-TEAMS-ICLOUD-WEB-RECONCILIATION-2026-001",
   },
 ] satisfies ResearchInquiry[];

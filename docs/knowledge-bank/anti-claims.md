@@ -171,7 +171,9 @@ context, or imply deployment inside his company.
 
 Do not treat private discovery feedback as product-market validation, a
 purchase commitment, or a public testimonial. Do not infer product lineage
-from job-hunt packet directories that have not yet materialized.
+from folder names. The recovered June proposal supports a pilot-design claim;
+it does not establish acceptance, payment, delivery, deployment, or the content
+of the still-unread June 30 follow-up.
 
 ## Teams Archive Boundaries
 
@@ -187,6 +189,11 @@ the Gulf of Mexico.
 Do not say Jamie independently authored the final NYC Artist Coalition
 Wikipedia article, that Dorothy Howard's edit constituted Wikimedia
 endorsement, or that revision history proves every proposition in the article.
+
+Do not turn iCloud folder or file counts into accomplishment, impact,
+completeness, authorship, or collaborator-adoption claims. Authenticated web
+visibility is not permission to publish file bodies or evidence that a file was
+locally materialized.
 
 ## Google Drive Shared Drives
 

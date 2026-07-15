@@ -175,12 +175,20 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-NYCAC-CABARET-REPEAL-ADVOCACY`: strong public advocacy and coalition
   participation; useful in a bounded cultural-policy chronology without an
   individual repeal-causality claim.
+- `CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN`: the recovered proposal supports a
+  concrete bounded-pilot design, safe-source rule, human-review loop,
+  deliverables, and continue/revise/stop gate. Keep it framed as designed work,
+  not accepted, delivered, deployed, or market-validated work.
+- `CLM-ICLOUD-WORKING-FOLDER-HANDOFF-PRACTICE`: useful evidence of Jamie's
+  portable operating-memory practice across devices. Keep it bank-only while
+  the selected Shared Drive claim carries the stronger collaborator-facing
+  website argument.
 
 ## Research Before Promotion
 
 - `CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS`: useful product-discovery
-  lineage, but keep it anonymous and held until the June 2026 job-hunt packet
-  materializes and can be compared without inference.
+  lineage. Keep it anonymous and distinct from the later proposal; neither
+  stage establishes market validation, purchase, or implementation.
 
 - `CLM-KCTH-CLEVELAND-UNIFY-DESIGN-STUDIO-SEED`: preserve Jamie's first-hand
   co-founding and pro bono design/print account, credit Pastor Lee's corridor

@@ -418,12 +418,12 @@ test("campaign press duplicate is explicit and limited to the shared NPR article
 });
 
 test("Teams archival production covers all required corpora with a traversable graph", () => {
-  assert.equal(teamsArchiveCaptures.length, 6);
-  assert.equal(teamsArchiveSources.length, 10);
-  assert.equal(teamsArchiveObservations.length, 23);
-  assert.equal(teamsArchiveClaims.length, 5);
-  assert.equal(teamsArchiveResearchTasks.length, 2);
-  assert.equal(teamsArchiveInquiries.length, 1);
+  assert.equal(teamsArchiveCaptures.length, 7);
+  assert.equal(teamsArchiveSources.length, 13);
+  assert.equal(teamsArchiveObservations.length, 32);
+  assert.equal(teamsArchiveClaims.length, 7);
+  assert.equal(teamsArchiveResearchTasks.length, 3);
+  assert.equal(teamsArchiveInquiries.length, 2);
 
   for (const prefix of [
     "CAP-TEAMS-CRS",
@@ -1924,7 +1924,7 @@ test("raft scale remains collective and does not promote the unrecovered Gulf en
   );
 });
 
-test("unmaterialized job-hunt packets remain research state, not inferred evidence", () => {
+test("June job-hunt packets preserve recovered proposal evidence and the follow-up gap", () => {
   const capture = teamsArchiveCaptures.find(
     (item) =>
       item.id === "CAP-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION-2026",
@@ -1932,15 +1932,27 @@ test("unmaterialized job-hunt packets remain research state, not inferred eviden
   const task = teamsArchiveResearchTasks.find(
     (item) => item.id === "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
   );
-  const inquiry = teamsArchiveInquiries[0];
+  const inquiry = teamsArchiveInquiries.find(
+    (item) => item.id === "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+  );
+  const claim = teamsArchiveClaims.find(
+    (item) => item.id === "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+  );
 
   assert.equal(capture.status, "researching");
-  assert.deepEqual(capture.sourceIds, []);
-  assert.deepEqual(capture.observationIds, []);
+  assert.deepEqual(capture.sourceIds, [
+    "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+  ]);
+  assert.equal(capture.observationIds.length, 4);
   assert.deepEqual(capture.researchTaskIds, [task.id]);
   assert.equal(task.status, "in-progress");
+  assert.ok(
+    task.nextActions.some((item) => /June 30 follow-up body/i.test(item)),
+  );
   assert.equal(inquiry.resultStatus, "partially-recovered");
-  assert.match(inquiry.limitations.join("\n"), /not evidence.*absent/i);
+  assert.match(inquiry.findings.join("\n"), /body was not.*no claim is inferred/i);
+  assert.equal(claim.selectionState, "candidate");
+  assert.ok(claim.antiClaims.some((item) => /production AI memory platform/i.test(item)));
 });
 
 test("Fair Rent projects direct operating and data-design work with adoption boundaries", () => {

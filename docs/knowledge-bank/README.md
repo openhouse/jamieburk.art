@@ -77,6 +77,12 @@ See
 for the privacy-first Shared Drive archival-production pass and its protected
 research queue.
 
+See
+[projects/teams-archive-production.md](projects/teams-archive-production.md)
+for the reconciled iCloud Teams pass across Jamie Projects History, CRS, and
+job-hunt; the bounded pilot-design evidence; the cross-device handoff practice;
+and the explicit remaining recovery gaps.
+
 See [projects/nterchng.md](projects/nterchng.md) for a recovered early
 participatory-system project whose collaborative installation form and 2011
 America: Now and Here inclusion are source-backed. Protected 2011 working

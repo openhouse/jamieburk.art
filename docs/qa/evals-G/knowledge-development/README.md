@@ -292,6 +292,9 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 ## Teams Archive Production
 
 - [Hill-climb record](./2026-07-14-teams-archive-hill-climb.md)
+- [Authenticated iCloud reconciliation](./2026-07-15-icloud-teams-hill-climb.md)
+- [iCloud reconciliation deterministic run 1](./teams-icloud-deterministic-1.json)
+- [iCloud reconciliation deterministic run 2](./teams-icloud-deterministic-2.json)
 - [Deterministic pass before vocabulary remediation](./teams-archive-deterministic.json)
 - [Deterministic pass after remediation](./teams-archive-deterministic-2.json)
 - [Holdout 1 judgment](./teams-archive-holdout-1-judge.json)

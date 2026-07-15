@@ -84,7 +84,9 @@ remain protected.
 
 `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`,
 `CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW`, and
-`CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS` remain knowledge-bank depth with
+`CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS`,
+`CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN`, and
+`CLM-ICLOUD-WORKING-FOLDER-HANDOFF-PRACTICE` remain knowledge-bank depth with
 no current public website surface.
 
 `CLM-SBU-STYLE-GUIDE-HANDOFF-SEED` remains dormant until completion or adoption

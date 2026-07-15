@@ -637,7 +637,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis:
-      "Public-safe lab materials and proposal-derived method summary.",
+      "Public-safe lab materials and a June 2026 pilot-design source record.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -658,7 +658,7 @@ export const proofClaims: ProofClaim[] = [
       "documentation-architecture",
       "human-review",
     ],
-    lastReviewed: "2026-07-07",
+    lastReviewed: "2026-07-15",
   },
   {
     id: "technical-operations-operating-backbone",

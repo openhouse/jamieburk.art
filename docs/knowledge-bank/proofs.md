@@ -17,6 +17,14 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Maintains project-specific Shared Drives as portable handoff surfaces across
   devices and collaborators, using structured templates, source-backed running
   memory, action-oriented guidance, and privacy-aware archive tooling.
+- Maintains project-specific iCloud working folders as portable operating
+  memory across phone and laptop, pairing project indexes, dated packets,
+  overview documents, source bundles, and current deliverables. This remains
+  bank-only and does not turn folder volume into impact.
+- Specified a bounded source-backed-memory pilot around one approved safe source
+  bundle, AI drafting with human review, inspectable outputs, concrete handoff
+  artifacts, privacy notes, and a continue/revise/stop decision gate. The
+  recovered proposal does not establish acceptance, delivery, or deployment.
 - Created a template-based 2023 Artists Residency handoff covering schedule,
   pre-arrival orientation, space configuration, and independent collaborator
   access. This one recovered template does not establish the separate

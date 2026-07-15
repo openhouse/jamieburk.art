@@ -799,6 +799,15 @@ function deterministicResults(judgments) {
     (inquiry) =>
       inquiry.id === "INQ-TEAMS-JOBHUNT-ICLOUD-HYDRATION-2026",
   );
+  const reconciliationInquiry = teamsArchiveInquiries.find(
+    (inquiry) => inquiry.id === "INQ-TEAMS-ICLOUD-WEB-RECONCILIATION-2026",
+  );
+  const pilotDesignClaim = teamsArchiveClaims.find(
+    (claim) => claim.id === "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN",
+  );
+  const iCloudHandoffClaim = teamsArchiveClaims.find(
+    (claim) => claim.id === "CLM-ICLOUD-WORKING-FOLDER-HANDOFF-PRACTICE",
+  );
   const fairRentPage = knowledgeBank.pages.find(
     (page) => page.id === "fair-rent-nyc",
   );
@@ -811,12 +820,12 @@ function deterministicResults(judgments) {
     .join("\n");
 
   if (
-    teamsArchiveCaptures.length !== 6 ||
-    teamsArchiveSources.length !== 10 ||
-    teamsArchiveObservations.length !== 23 ||
-    teamsArchiveClaims.length !== 5 ||
-    teamsArchiveResearchTasks.length !== 2 ||
-    teamsArchiveInquiries.length !== 1
+    teamsArchiveCaptures.length !== 7 ||
+    teamsArchiveSources.length !== 13 ||
+    teamsArchiveObservations.length !== 32 ||
+    teamsArchiveClaims.length !== 7 ||
+    teamsArchiveResearchTasks.length !== 3 ||
+    teamsArchiveInquiries.length !== 2
   ) {
     teamsArchiveIntegrityViolations.push(
       "Teams archival-production graph has an unexpected record count",
@@ -840,14 +849,34 @@ function deterministicResults(judgments) {
   }
   if (
     hydrationCapture?.status !== "researching" ||
-    hydrationCapture.sourceIds.length ||
-    hydrationCapture.observationIds.length ||
+    !hydrationCapture.sourceIds.includes(
+      "SRC-JOBHUNT-SOURCE-BACKED-MEMORY-SPRINT-2026-06-26",
+    ) ||
+    hydrationCapture.observationIds.length !== 4 ||
     !hydrationTask ||
     hydrationTask.status !== "in-progress" ||
-    hydrationInquiry?.resultStatus !== "partially-recovered"
+    hydrationInquiry?.resultStatus !== "partially-recovered" ||
+    reconciliationInquiry?.resultStatus !== "partially-recovered" ||
+    !reconciliationInquiry.findings.some((item) =>
+      /body was not.*no claim is inferred/i.test(item),
+    )
   ) {
     teamsArchiveIntegrityViolations.push(
-      "Cloud-only job-hunt packet is not preserved as partially recovered research state",
+      "Job-hunt packet recovery does not preserve proposal evidence and the unresolved follow-up body",
+    );
+  }
+  if (
+    pilotDesignClaim?.selectionState !== "candidate" ||
+    !pilotDesignClaim.antiClaims.some((item) =>
+      /production AI memory platform/i.test(item),
+    ) ||
+    iCloudHandoffClaim?.selectionState !== "candidate" ||
+    !iCloudHandoffClaim.boundaries.some((item) =>
+      /counts as accomplishment/i.test(item),
+    )
+  ) {
+    teamsArchiveIntegrityViolations.push(
+      "Recovered pilot or iCloud handoff claim is missing its selection or public-safety boundary",
     );
   }
   if (

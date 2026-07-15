@@ -118,6 +118,16 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Product-discovery conversations: the anonymous, public-safe method summary is
   approved for the knowledge bank only; collaborator identity, transcript
   content, endorsement, and market-validation claims are not approved.
+- Source-backed-memory pilot design: the bounded use case, approved safe-source
+  bundle, human-review loop, proposed deliverable set, and continue/revise/stop
+  gate are approved for the knowledge bank. Proposal acceptance, payment,
+  delivery, deployment, production readiness, recipient, pricing, contact
+  details, transcript language, and private company context are not approved.
+- iCloud working-folder practice: Jamie's cross-device handoff purpose and the
+  public-safe architecture of project indexes, dated packets, source bundles,
+  overview documents, and current deliverables are approved for the knowledge
+  bank. Raw contents, private identities, account state, local paths, and count-
+  as-impact framing are not approved.
 
 ## Shared Drive Decisions
 

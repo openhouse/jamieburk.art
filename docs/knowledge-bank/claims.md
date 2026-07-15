@@ -116,7 +116,21 @@ claim beyond the wording and guardrails here.
 
 **Status:** Public-safe candidate, held from current site
 **Public wording:** Jamie used product-discovery conversations to pressure-test a knowledge-system concept against specific users, valuable problems, inspectable context, user control, and privacy.
-**Guardrail:** Do not name the private collaborator or claim market validation, purchase, testimonial, or direct lineage into unread later materials.
+**Guardrail:** Do not name the private collaborator or claim market validation, purchase, testimonial, or that the December conversations wholly determined the later pilot proposal.
+
+### CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN
+
+**Status:** Public-safe candidate, held from new site projection
+**Public wording:** By June 2026 Jamie had specified a bounded source-backed-memory pilot with safe source selection, human review, inspectable outputs, concrete handoff artifacts, privacy notes, and a continue, revise, or stop decision gate.
+**Where to project:** Knowledge bank; the existing lab page already expresses the recovered method.
+**Guardrail:** This is a proposal-derived method claim, not evidence of acceptance, payment, delivery, deployment, production software, or market validation. Keep recipient, pricing, contact, transcript, and private company context protected.
+
+### CLM-ICLOUD-WORKING-FOLDER-HANDOFF-PRACTICE
+
+**Status:** Public-safe candidate, bank-only
+**Public wording:** Jamie maintains project-specific iCloud working folders as portable operating memory so workflows can be resumed and handed off across his phone and laptop.
+**Where to project:** Knowledge bank; possible future Technical Operations support if it adds something distinct from the selected Shared Drive claim.
+**Guardrail:** Attribute the purpose to Jamie. Folder architecture corroborates the practice, but folder and file counts are not accomplishment, impact, completeness, authorship, or collaborator-adoption metrics.
 
 ## NTER CHNG Development Claim
 
