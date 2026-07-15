@@ -12,6 +12,7 @@ import {
   findNycartcFacebookPublicArtifactRisk,
   hasNycartcFacebookPublicArtifactRisk
 } from "./lib/nycartc-facebook-guard.mjs";
+import { nycartcFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -266,6 +267,40 @@ for (const file of wowlistFacebookArtifactFiles) {
 for (const file of nycartcFacebookPostArtifactFiles) {
   const risk = findNycartcFacebookPublicArtifactRisk(readText(file));
   if (risk) addFailure(file, `NYC Artist Coalition Facebook public artifact contains ${risk}`);
+}
+
+const nycartcTypedSemanticStatements = [
+  ...nycartcFacebookPostsBatch.intakeRecords.flatMap((record) => [
+    record.publicSummary
+  ]),
+  ...nycartcFacebookPostsBatch.sources.flatMap((source) => [
+    source.publicCitation,
+    source.publicNote,
+    ...source.supportsGenerally
+  ]),
+  ...nycartcFacebookPostsBatch.claims.flatMap((claim) => [
+    claim.internalClaim,
+    ...claim.projections.map((projection) => projection.text),
+    ...claim.evidence.flatMap((evidence) => evidence.supports),
+    ...claim.boundaries
+  ]),
+  ...nycartcFacebookPostsBatch.researchInquiries.flatMap((inquiry) => [
+    inquiry.publicSummary,
+    ...inquiry.findings
+  ])
+].filter(Boolean);
+
+for (const statement of nycartcTypedSemanticStatements) {
+  const risk = findNycartcFacebookPublicArtifactRisk(statement);
+  if (risk) {
+    addFailure(
+      path.join(
+        repoRoot,
+        "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts"
+      ),
+      `NYC Artist Coalition Facebook typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
+    );
+  }
 }
 
 scanPattern(

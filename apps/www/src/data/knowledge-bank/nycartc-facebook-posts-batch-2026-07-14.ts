@@ -61,7 +61,7 @@ export const nycartcFacebookPostAudit = {
   comments: 212,
   shares: 611,
   outboundLinkOccurrences: 64,
-  uniqueDirectOutboundUrls: 39,
+  normalizedPublicSafeRoutes: 33,
   ownerPhotoRecords: 84,
   eventLinkedRecords: 165,
   publisherAttribution: {
@@ -289,11 +289,11 @@ export const nycartcFacebookPostSources = [
     publicCitation:
       "Public-safe routing metadata derived from the NYC Artist Coalition Facebook Page-post census, July 2026.",
     publicNote:
-      "The rendered corpus exposed 64 outbound-link occurrences resolving to 39 unique URLs and 33 normalized public-safe routes across campaign, Council, public-information, press, cultural, event, fundraising, and resource destinations.",
+      "The rendered corpus exposed 64 outbound-link occurrences consolidated into 33 normalized public-safe routes across campaign, Council, public-information, press, cultural, event, fundraising, and resource destinations.",
     protectedLocatorId: "RESEARCH-NYCAC-FACEBOOK-POSTED-URLS-2026-001",
     supportsGenerally: [
       "64 current outbound-link occurrences",
-      "39 unique current URLs and 33 normalized public-safe routes",
+      "33 normalized public-safe routes",
       "campaign, government, public-information, press, event, cultural, fundraising, and practical-resource routing"
     ],
     doesNotEstablish: [
@@ -317,7 +317,7 @@ export const nycartcFacebookPostSources = [
       "Jamie remembers being predominantly the person who used the Page while also remembering that other coalition collaborators used it.",
     protectedLocatorId: "RESEARCH-NYCAC-FACEBOOK-PUBLISHING-ROLE-2026-001",
     supportsGenerally: [
-      "Jamie's attributed recollection of predominant Page use",
+      "Jamie's attributed recollection of predominant but shared Page use",
       "Jamie's explicit shared-use boundary"
     ],
     doesNotEstablish: [
@@ -368,7 +368,7 @@ export const nycartcFacebookPostSources = [
     publicCitation:
       "Public-safe route ledger for destinations exposed by the currently recoverable NYC Artist Coalition Facebook Page corpus, July 14, 2026.",
     publicNote:
-      "Accounts for 64 outbound-link occurrences, 39 unique rendered URLs, and 33 normalized public-safe routes. Two historical meeting-access or form routes remain represented without a public URL.",
+      "Accounts for 64 outbound-link occurrences consolidated into 33 normalized public-safe routes. Two historical meeting-access or form routes remain represented without a public URL.",
     supportsGenerally: [
       "the 33-route public-safe destination inventory",
       "campaign, civic-information, press, cultural, event, fundraising, and practical-resource routing",
@@ -395,7 +395,7 @@ export const nycartcFacebookPostSources = [
     publicCitation:
       "Jamie Burkart portfolio research, NYC Artist Coalition Facebook post archival-production report, July 14, 2026.",
     publicNote:
-      "Documents population controls, campaign and participation patterns, source routing, stakeholder-reference limits, mutable response boundaries, role uncertainty, lifecycle decisions, and next research actions.",
+      "Documents population controls, campaign-theme classifications, source routes, stakeholder-reference limits, mutable response boundaries, role uncertainty, lifecycle decisions, and next research actions.",
     supportsGenerally: [
       "the public-safe method and aggregate findings for the 444-record currently recoverable Page surface",
       "the decision to retain these findings as bank-only reserve depth",
@@ -692,7 +692,7 @@ export const nycartcFacebookPostClaims = [
     id: "CLM-NYCAC-FACEBOOK-POSTED-URL-ROUTING",
     project: "nyc-artist-coalition",
     internalClaim:
-      "The current rendered corpus exposed 64 outbound-link occurrences resolving to 39 unique URLs and 33 normalized public-safe routes across coalition campaign, government, public-information, press, cultural, event, fundraising, and resource destinations.",
+      "The current rendered corpus exposed 64 outbound-link occurrences consolidated into 33 normalized public-safe routes across coalition campaign, government, public-information, press, cultural, event, fundraising, and resource destinations.",
     status: "confirmed-with-boundary",
     projections: [
       {
@@ -710,7 +710,7 @@ export const nycartcFacebookPostClaims = [
       {
         sourceId: "SRC-FB-NYCAC-POSTED-URL-INVENTORY-2026",
         relationship: "direct-support",
-        supports: ["route occurrence, unique URL, and normalized route accounting"],
+        supports: ["route-occurrence and normalized-route accounting"],
         confidence: "high",
         renderCitation: false
       },
@@ -855,7 +855,7 @@ export const nycartcFacebookPostInquiries = [
     question:
       "Which destinations posted by NYC Artist Coalition can be normalized, close-read, and promoted from routing leads into independent knowledge-bank sources?",
     methods: [
-      "Normalized 64 current outbound-link occurrences into 39 unique URLs and 33 public-safe routes.",
+      "Consolidated 64 current outbound-link occurrences into 33 normalized public-safe routes.",
       "Protected two historical meeting-access or form destinations without publishing their URLs.",
       "Reused existing campaign and press sources where the destination already existed in the bank.",
       "Close-read the City & State destination and retained the inaccessible Seattle Times destination at metadata depth."
@@ -880,7 +880,7 @@ export const nycartcFacebookPostInquiries = [
       "SRC-SEATTLE-TIMES-ARTS-RELIEF-2020"
     ],
     publicSummary:
-      "The current Page exposed 39 unique posted URL leads and 33 normalized public-safe routes; selected destinations were close-read or retained at explicitly bounded metadata depth.",
+      "The current Page exposed 33 normalized public-safe routes; selected destinations were close-read or retained at explicitly bounded metadata depth.",
     protectedLocatorId: "RESEARCH-NYCAC-FACEBOOK-POSTED-URLS-2026-001"
   },
   {

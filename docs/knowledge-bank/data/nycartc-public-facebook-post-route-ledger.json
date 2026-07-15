@@ -1,10 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "observedAt": "2026-07-14",
   "account": "NYC Artist Coalition Facebook Page",
   "accounting": {
     "rawOutboundLinkOccurrences": 64,
-    "rawUniqueUrls": 39,
     "normalizedRoutes": 33,
     "protectedRoutes": 2,
     "sourceRecords": 4

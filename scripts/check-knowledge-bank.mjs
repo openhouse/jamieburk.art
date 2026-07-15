@@ -810,9 +810,14 @@ if (!existsSync(nycartcFacebookPostLedgerPath)) {
       "NYC Artist Coalition Facebook row-derived outbound-link count"
     );
     assertEqual(
-      ledger.destinationInventory?.uniqueOutboundUrls,
-      nycartcFacebookPostAudit.uniqueDirectOutboundUrls,
-      "NYC Artist Coalition Facebook unique outbound-URL count"
+      ledger.destinationInventory?.normalizedPublicSafeRoutes,
+      nycartcFacebookPostAudit.normalizedPublicSafeRoutes,
+      "NYC Artist Coalition Facebook normalized public-safe route count"
+    );
+    assertEqual(
+      ledger.destinationInventory?.protectedRoutes,
+      2,
+      "NYC Artist Coalition Facebook protected route count"
     );
     for (const [field, expected] of Object.entries({
       reactions: nycartcFacebookPostAudit.reactions,
@@ -892,7 +897,8 @@ if (!existsSync(nycartcFacebookPostRouteLedgerPath)) {
       "routeId",
       "sourceId"
     ];
-    assertEqual(rows.length, 33, "NYC Artist Coalition Facebook normalized posted-route count");
+    assertEqual(ledger.schemaVersion, 2, "NYC Artist Coalition Facebook route-ledger schema");
+    assertEqual(rows.length, nycartcFacebookPostAudit.normalizedPublicSafeRoutes, "NYC Artist Coalition Facebook normalized posted-route count");
     assertEqual(new Set(rows.map((row) => row.routeId)).size, rows.length, "NYC Artist Coalition Facebook unique posted-route IDs");
     assertEqual(
       rows.reduce((total, row) => total + row.occurrences, 0),

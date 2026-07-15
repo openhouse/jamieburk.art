@@ -331,7 +331,8 @@
   },
   "destinationInventory": {
     "outboundLinkOccurrences": 64,
-    "uniqueOutboundUrls": 39,
+    "normalizedPublicSafeRoutes": 33,
+    "protectedRoutes": 2,
     "boundary": "Posted URLs are source-discovery and action-routing leads. They do not automatically corroborate linked claims or establish authorship, readership, conversion, partnership, or impact."
   },
   "records": [

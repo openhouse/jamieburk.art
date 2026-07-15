@@ -60,7 +60,24 @@ const prohibited = [
   "While reactions do not establish reach, the 611 shares prove impact.",
   "Jamie could open the Page management console and publish as the coalition.",
   "Control of the Page dashboard belonged to Jamie.",
-  "Official participation was established by the 88 Council references."
+  "Official participation was established by the 88 Council references.",
+  "NYCAC Page authorship was Jamie's alone.",
+  "Official attendance is indicated by the repeated Council mentions.",
+  "Granted that the capture is not a platform export, it nevertheless represents the entire historical Facebook record.",
+  "Jamie remembers handling most Page publishing; the surviving record bears that recollection out.",
+  "Page administration rested with Jamie and no one else.",
+  "Repeated Council references document institutional attendance.",
+  "Policy influence follows from the volume of reposting.",
+  "The creator tools let Jamie post as NYC Artist Coalition.",
+  "All 444 Page posts were written under Jamie's exclusive direction.",
+  "The coalition's entire Facebook output was produced by Jamie.",
+  "The evidence is consistent with Jamie's memory that he was the principal Facebook publisher.",
+  "No teammate besides Jamie held the publishing role.",
+  "The agency citations amount to official participation in the campaign.",
+  "Campaign impact is evidenced by the visible response counters.",
+  "Jamie could enter the Page back office and publish on behalf of the coalition.",
+  "It is not disputed that Jamie authored every Facebook post.",
+  "There is no doubt that the reactions establish public reach."
 ];
 
 for (const statement of prohibited) {

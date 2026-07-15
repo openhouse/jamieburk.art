@@ -54,7 +54,7 @@ created, published, or wrote a particular post.
 | Original-media post | 78 |
 | Reshared story | 52 |
 | Source-or-resource route | 26 |
-| **Total** | **444** |
+| **Total current-surface records** | **444** |
 
 The distribution matters because the Page did more than broadcast statements.
 It repeatedly published routes among meetings, campaign sites, public
@@ -76,7 +76,7 @@ Each record received one primary classification:
 | Event and cultural distribution | 15 |
 | Press and public knowledge | 11 |
 | Equity, solidarity, and mutual aid | 2 |
-| **Total** | **444** |
+| **Total current-surface records** | **444** |
 
 The one-theme rule is an accounting device. Multi-label review also finds 121
 public-meeting and participation occurrences, 82 cultural-space-care
@@ -149,8 +149,8 @@ Council members engaged.
 
 ## Posted Sources And Routes
 
-The rendered corpus exposes 64 outbound-link occurrences resolving to 39 raw
-unique URLs and 33 normalized public-safe routes. The routes include coalition
+The rendered corpus exposes 64 outbound-link occurrences consolidated into 33
+normalized public-safe routes. The routes include coalition
 campaign sites, Council hearing and livestream pages, public-information tools,
 event and cultural organizations, press, practical resources, fundraising
 pages, and relief information. Two historical meeting-access or form
