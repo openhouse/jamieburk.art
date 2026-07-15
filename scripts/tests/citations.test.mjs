@@ -27,6 +27,10 @@ import {
 } from "../../apps/www/src/data/knowledge-bank/projectSocial.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { intakeItemSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
+import {
+  kcTownHallPhaseOneClaimIds,
+  kcTownHallPhaseOneSourceIds
+} from "../../apps/www/src/data/knowledge-bank/kcTownHallPhaseOne.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
 
 test("canonical registry passes deterministic validation", () => assert.deepEqual(validateKnowledgeBank(), []));
@@ -287,6 +291,108 @@ test("KC Town Hall stewardship transition remains a bounded memory lead", () => 
     JSON.stringify(publicCitationRegistry),
     /KC-TOWN-HALL-STEWARDSHIP-TRANSITION/
   );
+});
+
+test("KC Town Hall Phase One claims separate first-person role from proposal corroboration", () => {
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  const claimById = new Map(
+    knowledgeBank.claims.map((claim) => [claim.id, claim])
+  );
+  const proposal = sourceById.get(kcTownHallPhaseOneSourceIds.proposal);
+  const firsthand = sourceById.get(
+    kcTownHallPhaseOneSourceIds.firsthandAccount
+  );
+  const fieldClaim = claimById.get(
+    kcTownHallPhaseOneClaimIds.fieldCoordination
+  );
+  const surveyClaim = claimById.get(
+    kcTownHallPhaseOneClaimIds.neighborhoodSurvey
+  );
+
+  assert.ok(proposal);
+  assert.ok(firsthand);
+  assert.ok(fieldClaim);
+  assert.ok(surveyClaim);
+  assert.equal(proposal.visibility, "protected");
+  assert.equal(firsthand.visibility, "protected");
+  assert.ok(
+    proposal.doesNotEstablish.some((boundary) =>
+      /arithmetically reconciled/i.test(boundary)
+    )
+  );
+  assert.ok(
+    fieldClaim.boundaries.some((boundary) =>
+      /first-person evidence/i.test(boundary)
+    )
+  );
+  assert.ok(
+    fieldClaim.boundaries.some((boundary) =>
+      /do not reconcile/i.test(boundary)
+    )
+  );
+  assert.ok(
+    surveyClaim.boundaries.some((boundary) =>
+      /does not identify the card's individual designer/i.test(boundary)
+    )
+  );
+  assert.ok(
+    [fieldClaim, surveyClaim].every((claim) =>
+      claim.projections.every((projection) =>
+        projection.surfaces.every((surface) => !surface.startsWith("/"))
+      )
+    )
+  );
+});
+
+test("KC Town Hall neighborhood practice promotes bounded operations and retains research leads", () => {
+  const intake = knowledgeBank.intakeItems.find(
+    (item) =>
+      item.id ===
+      "INTAKE-KCTH-PHASE-ONE-NEIGHBORHOOD-PRACTICE-2026-07-15"
+  );
+  const tiresClaim = knowledgeBank.claims.find(
+    (claim) => claim.id === kcTownHallPhaseOneClaimIds.tiredOfTires
+  );
+  const report = readFileSync(
+    "docs/knowledge-bank/projects/kc-town-hall-phase-one-and-neighborhood-practice.md",
+    "utf8"
+  );
+
+  assert.ok(intake);
+  assert.ok(tiresClaim);
+  assert.equal(intake.status, "integrated");
+  assert.equal(intake.projectionStatus, "no-public-projection");
+  assert.deepEqual(
+    new Set(intake.relatedClaimIds),
+    new Set(Object.values(kcTownHallPhaseOneClaimIds))
+  );
+  const cleveland = intake.propositions.find(
+    (proposition) =>
+      proposition.id ===
+      "PROP-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-MEMORY-2026"
+  );
+  assert.ok(cleveland);
+  assert.equal(cleveland.status, "memory-lead");
+  assert.match(cleveland.nextStep, /flyers|logo files|maps/i);
+  assert.ok(
+    tiresClaim.boundaries.some((boundary) =>
+      /first-person account supplies the deeper design/i.test(boundary)
+    )
+  );
+  assert.ok(
+    tiresClaim.antiClaims.some((antiClaim) =>
+      /Indian Mound expansion is independently corroborated/i.test(antiClaim)
+    )
+  );
+  assert.doesNotMatch(
+    JSON.stringify(publicCitationRegistry),
+    /KCTH-PHASE-ONE|KCTH-TIRED-OF-TIRES-PROGRAM/
+  );
+  assert.doesNotMatch(report, /\/Users\/|\/Volumes\//);
+  assert.match(report, /No `\/proofs`, `\/knowledge-bank`/);
+  assert.match(report, /visible 2018 and 2019 column totals add to \$191,895/);
 });
 
 test("iCloud Teams sources preserve public and protected evidence boundaries", () => {

@@ -44,6 +44,12 @@ import {
   wowlistFacebookPostResearchInquiries,
   wowlistFacebookPostSources
 } from "./wowlistFacebookPosts.ts";
+import {
+  kcTownHallPhaseOneClaims,
+  kcTownHallPhaseOneIntakeItems,
+  kcTownHallPhaseOneResearchInquiries,
+  kcTownHallPhaseOneSources
+} from "./kcTownHallPhaseOne.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -780,7 +786,8 @@ const knowledgeBankInput = {
     ...urbanhermitSources,
     ...nycacFacebookEventSources,
     ...jamieWowlistFacebookEventSources,
-    ...wowlistFacebookPostSources
+    ...wowlistFacebookPostSources,
+    ...kcTownHallPhaseOneSources
   ],
   claims: [
     {
@@ -1020,7 +1027,8 @@ const knowledgeBankInput = {
     ...urbanhermitClaims,
     ...nycacFacebookEventClaims,
     ...jamieWowlistFacebookEventClaims,
-    ...wowlistFacebookPostClaims
+    ...wowlistFacebookPostClaims,
+    ...kcTownHallPhaseOneClaims
   ],
   researchInquiries: [
     {
@@ -1099,7 +1107,8 @@ const knowledgeBankInput = {
     ...urbanhermitResearchInquiries,
     ...nycacFacebookEventResearchInquiries,
     ...jamieWowlistFacebookEventResearchInquiries,
-    ...wowlistFacebookPostResearchInquiries
+    ...wowlistFacebookPostResearchInquiries,
+    ...kcTownHallPhaseOneResearchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -2832,7 +2841,8 @@ const knowledgeBankInput = {
     ...urbanhermitIntakeItems,
     ...nycacFacebookEventIntakeItems,
     ...jamieWowlistFacebookEventIntakeItems,
-    ...wowlistFacebookPostIntakeItems
+    ...wowlistFacebookPostIntakeItems,
+    ...kcTownHallPhaseOneIntakeItems
   ],
   pages: [
     {

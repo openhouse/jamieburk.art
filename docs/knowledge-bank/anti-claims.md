@@ -103,6 +103,26 @@ account as government-record evidence, identify the receiving organization, or
 assert transfer mechanics, timing, continuity, or later status without
 appropriate corroboration and review.
 
+Do not turn the 2019 application package into an independent audit. Its visible
+2018 and 2019 Phase One column totals and at least one row subtotal do not
+reconcile to the displayed $189,629 total. Say the proposal displays that total;
+do not call it verified cost, audited expenditure, or money Jamie personally
+spent or controlled.
+
+Do not present the proposal as independently assigning Jamie the
+general-contractor title, every field-coordination duty, survey-card authorship,
+or the complete TiredOfTires role. Those details come from Jamie's attributed
+first-person account and should stay paired with the narrower corroboration.
+Do not imply that he personally performed licensed trade work, erase Julia or
+named contractors and neighborhood partners, claim sole TiredOfTires operation,
+or quantify tires, savings, handbills, survey responses, participants, or
+neighborhoods without reconciled evidence.
+
+Cleveland Avenue Unify to Beautify, Indian Mound expansion, and the pro bono
+neighborhood print-production scale remain research leads. Preserve Pastor
+Lee's origin credit and do not claim a particular capital-allocation outcome
+until program, city, or collaborator records support it.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

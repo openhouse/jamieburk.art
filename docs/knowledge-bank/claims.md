@@ -501,3 +501,48 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not republish raw crisis posts, comments, contacts, or individual source-account data.
 **Review owner:** Jamie / collaborator context welcome
 **Last reviewed:** 2026-07-15
+
+## kcth-phase-one-field-coordination - Multidisciplinary restoration operations
+
+**Status:** Confirmed with boundary
+**Support level:** Strong first-person role evidence with contemporaneous project corroboration
+**Evidence class:** Protected first-person account / protected 2019 application package
+**Public wording:** Jamie served as KC Town Hall's Phase One general contractor and daily field coordinator. A contemporaneous project package independently documents his founder/project-manager role, a named multidisciplinary local team, and a displayed $189,629 cold-shell total; Jamie's exact title and complete duty list are first-person evidence, and the source arithmetic remains unreconciled.
+**Detailed public-safe wording:** The documented scope spans roofing, masonry, structural framing, water service, access, safety, materials, and related field dependencies; Jamie's account adds carpentry, welding, engineering, architecture, and plumbing coordination.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Shows technical project management through daily field coordination, contractor alignment, dependency sequencing, and public-interest implementation.
+**Guardrail:** Keep proposal corroboration separate from first-person role attribution. Treat $189,629 only as the proposal's displayed total because the visible budget arithmetic does not fully reconcile.
+**Do not say:** Jamie single-handedly restored KC Town Hall; Jamie personally performed every trade; $189,629 is audited expenditure; Phase One proves full adaptive-reuse completion; the later CCED appropriation paid for Phase One.
+**Protected boundaries:** Raw PDF, finances, contacts, addresses, signatures, and unapproved photographs stay outside the repo.
+**Review owner:** Jamie / Julia and contractor review welcome
+**Last reviewed:** 2026-07-15
+
+## kcth-neighborhood-survey-system - Resident input translated into project structure
+
+**Status:** Confirmed with boundary
+**Support level:** Strong artifact and process corroboration; individual attribution is first-person
+**Evidence class:** Protected first-person account / reproduced survey artifact / project statement / third-party support letter
+**Public wording:** Jamie designed a compact neighborhood survey handbill and backing data workflow. The 2019 application reproduces the card, names Oak Park Neighborhood Association and New Horizon Missionary Baptist Church, and says the ongoing survey directly shaped the proposal; the individual design attribution remains first-person evidence.
+**Detailed public-safe wording:** The card combined selectable neighborhood uses, open response, contact fields, and a contribution pathway; Jamie describes carrying it during daily site work as neighborhood histories and future-use ideas accumulated around the restoration.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Connects field presence, participatory research, information design, and implementation rather than treating listening as a separate consultation phase.
+**Guardrail:** The source does not establish representativeness, response count, complete implementation, or measured impact.
+**Do not say:** Jamie alone determined the neighborhood vision; the survey was statistically representative; every response was implemented.
+**Protected boundaries:** Respondent identities, raw responses, addresses, phone numbers, and email addresses stay private.
+**Review owner:** Jamie / neighborhood collaborator review welcome
+**Last reviewed:** 2026-07-15
+
+## kcth-tired-of-tires-program-operations - Recurring neighborhood service system
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for direct participation; individual design and city-coordination detail is first-person
+**Evidence class:** Protected first-person account / jointly authored project archive / two public participation records
+**Public wording:** Jamie reports designing and city-coordinating the Oak Park TiredOfTires service and conducting recurring field operations. A shared project archive documents the monthly resident-intake and volunteer system, while two public records independently corroborate his direct participation.
+**Detailed public-safe wording:** The operating pattern joined resident requests, volunteer intake, routing, pickup, city recycling, tracking, and cross-promotion of neighborhood services.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Shows service design as a complete implementation loop rather than a campaign message.
+**Guardrail:** Direct participation is public-source supported; program design, city coordination, recurring operation, and Indian Mound expansion remain first-person details pending further corroboration.
+**Do not say:** Jamie alone ran the program; Jamie collected every tire; quantities or savings are independently audited; every later service date was Jamie-operated.
+**Protected boundaries:** Resident requests, volunteer records, contact data, routes, and raw project exports stay protected.
+**Review owner:** Jamie / Oak Park and city collaborator review welcome
+**Last reviewed:** 2026-07-15

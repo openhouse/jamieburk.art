@@ -171,3 +171,13 @@ unresolved. Its public fixture inventories operating patterns and 65 distinct
 public posted URLs without republishing raw messages, contacts, ordinary
 individual source accounts, comments, or account administration. The resulting
 claims remain reserve knowledge rather than automatic website copy.
+
+The [KC Town Hall Phase One and neighborhood-practice
+note](projects/kc-town-hall-phase-one-and-neighborhood-practice.md) demonstrates
+how a sensitive project package and first-person operational account can be
+decomposed without publishing the source file. It develops bounded claims about
+multidisciplinary field coordination, a resident survey system, and recurring
+neighborhood service operations; records a budget-table reconciliation issue;
+and keeps Cleveland Avenue and pro bono design-and-print details as active
+research leads. The claims remain reserve knowledge rather than automatic
+website copy.

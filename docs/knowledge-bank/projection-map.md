@@ -96,3 +96,13 @@ specific audience-and-purpose decision. Any projection must preserve six
 unresolved records, attached-source authorship, Richard Caceres's shared
 project credit, the Facebook-only scope, and the absence of a stable
 full-population engagement dataset.
+
+`CLM-KCTH-PHASE-ONE-FIELD-COORDINATION`,
+`CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM`, and
+`CLM-KCTH-TIRED-OF-TIRES-PROGRAM-OPERATIONS` are public knowledge-bank reserve
+claims. Their active projections resolve only to
+`docs/knowledge-bank/projects/kc-town-hall-phase-one-and-neighborhood-practice.md`.
+They do not change `/work/kc-town-hall`, `/resume`, Technical Operations, or any
+other hiring surface. Future website use must preserve first-person attribution,
+collective credit, the unreconciled budget boundary, participant privacy, and
+the distinction between direct participation and complete program ownership.

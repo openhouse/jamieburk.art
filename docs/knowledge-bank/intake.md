@@ -127,7 +127,7 @@ any governed claim or public surface changed.
 
 ## Current Intake Threads
 
-The structured intake records currently preserve nineteen threads surfaced on
+The structured intake records currently preserve twenty-four threads surfaced on
 July 12-15, 2026:
 
 - waterways, communal space, and participatory cultural practice;
@@ -152,6 +152,9 @@ July 12-15, 2026:
   member account responses, and post-transition identity continuity;
 - the KC Town Hall CCED recommendation, 2019 Council acceptance and
   appropriation, and 2024 reappropriation of the unused allocation.
+- KC Town Hall Phase One field coordination, the neighborhood survey system,
+  TiredOfTires operations, and Cleveland Avenue / pro bono design research
+  leads;
 - Jamie's firsthand account of transitioning KC Town Hall stewardship to a
   mission-aligned organization when his involvement concluded.
 - interactive media, sound, and public-memory practice across NTER CHNG,
@@ -234,3 +237,15 @@ The intake does not assign attached-source authorship, erase Richard Caceres's
 shared project credit, infer cross-platform control, or publish an engagement
 total. It remains non-projecting until a separate hiring-site composition
 decision calls for one of its governed claims.
+
+The KC Town Hall Phase One pass is now `integrated` as
+`INTAKE-KCTH-PHASE-ONE-NEIGHBORHOOD-PRACTICE-2026-07-15`. It promotes three
+governed reserve claims: bounded Phase One field coordination, a neighborhood
+survey system, and TiredOfTires program operations. The 2019 proposal
+corroborates Jamie's founder/project-manager context, named team, scope, survey
+artifact, and displayed total; his general-contractor, individual design, and
+deeper program-operation details remain explicitly first-person where the
+proposal and public sources are silent. Cleveland Avenue Unify to Beautify and
+pro bono neighborhood print production remain memory leads pending artifact,
+city, neighborhood, or collaborator evidence. No website route or hiring-site
+copy is created.

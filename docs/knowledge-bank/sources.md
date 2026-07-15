@@ -234,3 +234,26 @@ relocation fundraiser, Denver Westword on DIY-space funding, and the existing
 Meow Wolf and participant-tutorial records. These establish the account's
 source trail and context, not reciprocal endorsement or outcomes caused by a
 WOW List post.
+
+## KC Town Hall Phase One and Neighborhood Practice
+
+The [Phase One and neighborhood-practice note](projects/kc-town-hall-phase-one-and-neighborhood-practice.md)
+keeps three source functions distinct:
+
+- `SRC-KCTH-CCED-PROPOSAL-PHASE-ONE-2019-03-25` is a protected
+  project-authored application package with selected third-party support
+  letters. It supports role context, named team, scope, survey mechanics, and
+  the proposal's displayed total; it is not an independent audit.
+- `SRC-KCTH-PHASE-ONE-NEIGHBORHOOD-PRACTICE-MEMORY-2026-07-15` is Jamie's
+  attributed first-person account. It supplies the general-contractor,
+  survey-design, TiredOfTires, Cleveland Avenue, and print-production role
+  details while remaining explicitly separate from independent corroboration.
+- `SRC-KCTH-TIRED-OF-TIRES-GHOST-EXPORT-2020-12-11` is a protected structured
+  project archive. It documents a monthly Oak Park service and its intake and
+  volunteer workflow under a shared "Julia and Jamie" author identity.
+
+The application PDF is not committed because its appendices contain personal
+financial records, contact details, addresses, signatures, and unapproved
+photographs. The project note publishes only source-safe findings and page-level
+locators. Its budget-quality note records that the visible year columns and at
+least one row subtotal do not reconcile to the displayed $189,629 total.
