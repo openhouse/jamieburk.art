@@ -39,10 +39,94 @@ const intakeRecords = [
     ],
     reviewedAt: "2026-07-15",
     reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
+    id: "INTAKE-2026-07-15-NTERCHNG-PRODUCTION-ARTIFACTS",
+    receivedAt: "2026-07-15",
+    kind: "artifact",
+    project: "nterchng",
+    publicSummary:
+      "Two protected records created in April 2011 add a collaborative installation plan, production-system detail, original exhibition copy, and participant-response material to the NTER CHNG record without exposing personal identifiers or participant messages.",
+    privacy: "public-safe-summary",
+    status: "claim-linked",
+    sourceIds: [
+      "SRC-NTERCHNG-INSTALLER-PLAN-2011",
+      "SRC-NTERCHNG-EXHIBITION-PARTICIPANT-NOTES-2011"
+    ],
+    claimIds: [
+      "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011",
+      "CLM-NTERCHNG-REINSTALLATION-OPERATIONS-2011"
+    ],
+    researchInquiryIds: ["INQ-NTERCHNG-PRODUCTION-AND-EXHIBITION-2011"],
+    projectionIntent: "bank-only",
+    nextActions: [
+      "Seek collaborator confirmation or task-level records before assigning any software, fabrication, installation, hosting, hardware, or production workstream to one collaborator.",
+      "Reconcile the protected record's January 8-29, 2010 exhibition window with the archived project's undated 'Open until Jan. 24th' language before publishing an exact closing date.",
+      "Keep participant messages, telephone numbers, personal scheduling and location details, source-document links, and private collaborator context outside the public repository."
+    ],
+    protectedLocatorId: "NTERCHNG-PRODUCTION-ARTIFACTS-2011-001",
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart", "Codex Google Drive archival review"]
   }
 ] satisfies IntakeRecord[];
 
 const sources = [
+  {
+    id: "SRC-NTERCHNG-INSTALLER-PLAN-2011",
+    title: "Protected NTER CHNG America: Now and Here installation plan",
+    organization: "NTER CHNG collaborative production archive",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2011-04-13T18:25:12Z",
+    accessedAt: "2026-07-15",
+    publicCitation:
+      "Protected collaborative NTER CHNG installation plan created April 13, 2011.",
+    publicNote:
+      "The plan documents preparation and installation for an America: Now and Here staging. It names Jamie in the production schedule and spans software revision, hosting, display hardware, networking, architectural fabrication, gallery tuning, and teardown without assigning those workstreams to one collaborator.",
+    protectedLocatorId: "NTERCHNG-INSTALLER-PLAN-2011-001",
+    supportsGenerally: [
+      "Jamie's documented participation in the collaborative 2011 preparation schedule",
+      "planned revision of server-side and wall-side software, including message-queue behavior",
+      "planned hosting, display computers, projectors, network wiring, wall fabrication and installation, gallery tuning, and teardown",
+      "the installation's character as a maintained technical and architectural system rather than a static object"
+    ],
+    doesNotEstablish: [
+      "authorship of the plan or individual responsibility for any listed workstream",
+      "that every planned task was completed exactly as written",
+      "Jamie's sole technical, production, fabrication, installation, or project-management role",
+      "the installation's exact America: Now and Here venue, audience, reception, or impact"
+    ]
+  },
+  {
+    id: "SRC-NTERCHNG-EXHIBITION-PARTICIPANT-NOTES-2011",
+    title: "Protected NTER CHNG exhibition and participant-response record",
+    organization: "NTER CHNG collaborative production archive",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2011-04-06T19:49:17Z",
+    accessedAt: "2026-07-15",
+    publicCitation:
+      "Protected NTER CHNG exhibition and participant-response record created April 6, 2011.",
+    publicNote:
+      "The record preserves January 2010 exhibition copy and April 2011 participant-response material. Personal identifiers and participant messages are intentionally excluded from the repository.",
+    protectedLocatorId: "NTERCHNG-EXHIBITION-NOTES-2011-001",
+    supportsGenerally: [
+      "collective credit to Drew Bolton, Jamie Burkart, and Garrett Fuselier",
+      "a stated January 8-29, 2010 exhibition window requiring reconciliation with the archived project's January 24 language",
+      "the description of NTER CHNG as equal parts software application and architectural installation",
+      "the public many-to-many interaction concept and the collaborators' combined creative-technical disciplines",
+      "a 2011 iteration that gathered text responses around America: Now and Here prompts"
+    ],
+    doesNotEstablish: [
+      "a reconciled original closing date",
+      "which collaborator supplied each discipline or performed each task",
+      "permission to publish participant messages, telephone numbers, or other personal identifiers",
+      "representative audience response, attendance, critical reception, or measured impact",
+      "independent verification of self-authored artist biography statements"
+    ]
+  },
   {
     id: "SRC-NTERCHNG-ARCHIVED-PROJECT-SITE-2011",
     title: "NTER CHNG archived project site",
@@ -169,6 +253,15 @@ const claims = [
         ],
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTERCHNG-EXHIBITION-PARTICIPANT-NOTES-2011",
+        relationship: "corroborating",
+        supports: [
+          "the three-person collaboration and the software, architecture, and public group-exchange concept"
+        ],
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [
@@ -185,6 +278,54 @@ const claims = [
     researchInquiryIds: ["INQ-NTERCHNG-PRODUCTION-AND-EXHIBITION-2011"],
     reviewedAt: "2026-07-15",
     reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
+    id: "CLM-NTERCHNG-REINSTALLATION-OPERATIONS-2011",
+    project: "nterchng",
+    internalClaim:
+      "A protected 2011 production plan names Jamie in NTER CHNG's America: Now and Here installation schedule and documents a collaborative reinstallation spanning server- and wall-side software revision, hosting, display computers, projectors, networking, architectural fabrication, gallery tuning, and teardown.",
+    status: "confirmed-with-boundary",
+    projections: [
+      {
+        key: "archive-note",
+        text: "Jamie participated in preparing NTER CHNG's 2011 reinstallation, a collaborative production spanning software, hosted infrastructure, display hardware, networking, architectural installation, gallery tuning, and teardown.",
+        status: "hold",
+        citationRequired: true,
+        surfaces: ["knowledge-bank"]
+      }
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-NTERCHNG-INSTALLER-PLAN-2011",
+        relationship: "private-support",
+        supports: [
+          "Jamie's presence in the production schedule and the breadth of planned software, infrastructure, hardware, fabrication, installation, tuning, and teardown work"
+        ],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011",
+        relationship: "context",
+        supports: ["the public exhibition context and collaborative project identity"],
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The source is a collaborative plan and establishes intended workstreams, not completion of every listed task.",
+      "Naming Jamie in the schedule supports participation but does not assign him sole or individual responsibility for the workstreams.",
+      "Preserve equal project credit to Drew Bolton and Garrett Fuselier."
+    ],
+    antiClaims: [
+      "Jamie individually performed every software, infrastructure, fabrication, installation, and production task",
+      "Every task in the installation plan was completed exactly as written",
+      "Jamie was NTER CHNG's sole technical lead, producer, fabricator, or project manager"
+    ],
+    proofClaimIds: ["experimental-media-systems-practice"],
+    researchInquiryIds: ["INQ-NTERCHNG-PRODUCTION-AND-EXHIBITION-2011"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart", "Codex Google Drive archival review"]
   },
   {
     id: "CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011",
@@ -249,7 +390,8 @@ const researchInquiries = [
       "Close-read the January 28, 2011 Wayback capture of nterchng.com and enumerated the captured site files.",
       "Searched the America: Now and Here Kansas City Wayback corpus and recovered the exhibition's dedicated artist page for Drew Bolton, Jamie Burkart, and Garrett Fuselier.",
       "Compared the project and exhibition archives with the Nerman Museum's live America: Now and Here context page.",
-      "Kept participant messages and telephone numbers from the archived exhibition page outside the public repository."
+      "Close-read two protected project records created in April 2011 and extracted only public-safe source propositions.",
+      "Kept participant messages, telephone numbers, personal scheduling and location details, and source-document links outside the public repository."
     ],
     runAt: "2026-07-15",
     resultStatus: "partially-recovered",
@@ -257,21 +399,26 @@ const researchInquiries = [
       "The original project archive identifies NTER CHNG as an interactive texting installation by Drew Bolton, Jamie Burkart, and Garrett Fuselier at the Arts Incubator Cocoon Gallery.",
       "The official America: Now and Here Kansas City archive lists the trio among its visual artists and publishes their NTER CHNG statement.",
       "The statement describes software and architectural installation working together to convert private one-to-one texting into a public many-to-many gallery exchange.",
-      "The Nerman Museum page establishes broader exhibition context but does not mention or locate NTER CHNG."
+      "The Nerman Museum page establishes broader exhibition context but does not mention or locate NTER CHNG.",
+      "The protected installer plan names Jamie in the collaborative preparation schedule and documents planned software, hosting, display, networking, fabrication, installation, tuning, and teardown workstreams.",
+      "A second protected record states a January 8-29, 2010 exhibition window and preserves 2011 participant-response material; its closing date conflicts with the archived project's undated January 24 language and remains unresolved."
     ],
     limitations: [
       "The reviewed sources do not assign individual production roles among the three collaborators.",
+      "The installation plan records intended work and does not establish that every task was completed exactly as written.",
       "The original press release linked by nterchng.com was not recovered in this pass.",
-      "The project's opening date, exact exhibition placement, attendance, reception, and measured impact remain unresolved.",
+      "The exact original closing date, America: Now and Here placement, attendance, reception, and measured impact remain unresolved.",
       "No installation photograph or participant message has been cleared for public reuse."
     ],
     sourceIds: [
       "SRC-NTERCHNG-ARCHIVED-PROJECT-SITE-2011",
       "SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011",
-      "SRC-NERMAN-AMERICA-NOW-AND-HERE-2011"
+      "SRC-NERMAN-AMERICA-NOW-AND-HERE-2011",
+      "SRC-NTERCHNG-INSTALLER-PLAN-2011",
+      "SRC-NTERCHNG-EXHIBITION-PARTICIPANT-NOTES-2011"
     ],
     publicSummary:
-      "Archived project and official exhibition pages establish NTER CHNG's three collaborators, participatory software-and-installation concept, Cocoon Gallery presentation, and inclusion among America: Now and Here Kansas City's visual artists; individual roles and fuller production history remain open."
+      "Archived project, official exhibition, and protected production records establish NTER CHNG's three collaborators, participatory software-and-installation concept, Cocoon Gallery presentation, America: Now and Here inclusion, and collaborative 2011 reinstallation workstreams; individual task ownership and conflicting original closing dates remain open."
   }
 ] satisfies ResearchInquiry[];
 

@@ -341,7 +341,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["lab", "about", "internal-only"],
     relatedProjects: ["nterchng", "time-is-long", "monthly-music-hackathon", "matmos-collaboration"],
     relatedCapabilities: ["interactive-media", "participatory-systems", "creative-coding", "audio-software", "collaboration"],
-    structuredClaimIds: ["CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011", "CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011", "CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006", "CLM-SORTED-AUDIO-MAX-MSP-2013", "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020"],
+    structuredClaimIds: ["CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011", "CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011", "CLM-NTERCHNG-REINSTALLATION-OPERATIONS-2011", "CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006", "CLM-SORTED-AUDIO-MAX-MSP-2013", "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020"],
     lastReviewed: "2026-07-15"
   },
   {

@@ -54,7 +54,8 @@ for (const required of [
   "photo-discovers-research-lead",
   "chronology-without-causality",
   "shared-account-population-and-role-memory",
-  "private-owner-post-population-and-public-source-selection"
+  "private-owner-post-population-and-public-source-selection",
+  "private-collaborative-production-record"
 ]) {
   if (!fixtureIds.has(required)) fail(`Lifecycle eval is missing fixture ${required}`);
 }

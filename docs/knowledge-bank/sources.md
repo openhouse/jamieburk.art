@@ -82,6 +82,10 @@ Approved public artifact examples for this launch pass include:
 - Michael Rees's Claudette's Theatre on Wheels project page.
 - The archived NTER CHNG project site and America: Now and Here Kansas City's
   archived artist page for Drew Bolton, Jamie Burkart, and Garrett Fuselier.
+- Public-safe summaries of two protected April 2011 NTER CHNG records: a
+  collaborative installer plan and an exhibition/participant-response record.
+  Their source-document links, participant messages, personal identifiers,
+  scheduling details, and location details remain outside the repository.
 - The Nerman Museum's America: Now and Here page, used only for broader
   exhibition context and not as evidence that NTER CHNG appeared at the museum.
 - The complete 45-article NYC Artist Coalition campaign press corpus, preserving 46 placements across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.

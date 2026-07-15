@@ -137,6 +137,23 @@ Do not attribute every `@KCTownHall` post, `#TiredOfTires` pickup, or later
 program action to Jamie. Keep the public account record separate from the CCED
 award lifecycle and the stewardship transition.
 
+## NTER CHNG
+
+Do not describe Jamie as NTER CHNG's sole creator, programmer, technical lead,
+producer, fabricator, installer, host, or project manager. Preserve equal
+project credit to Drew Bolton and Garrett Fuselier.
+
+The protected installer plan names Jamie in the preparation schedule and
+records intended collaborative workstreams. It does not assign each workstream
+to an individual or prove that every planned task was completed exactly as
+written.
+
+Do not resolve the original closing date from one source alone. A protected
+record states January 8-29, 2010, while the archived project page displays
+"Open until Jan. 24th" without a year. Do not expose the protected source links,
+participant messages, telephone numbers, personal identifiers, schedules, or
+location details.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

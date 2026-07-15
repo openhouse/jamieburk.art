@@ -50,6 +50,13 @@ The repo is public. Approval here means approved for public-safe repository and 
 - KC Town Hall public account: Jamie's establishment claim and the account's later resident-facing information function are approved with the explicit boundary that individual posts, pickups, program stewardship, and current status are not assigned to Jamie.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Open House / Shop Shows: source-backed and safe for the bank; preserve housemate and participant credit.
+- NTER CHNG: the three-person collaboration, software-and-architectural concept,
+  America: Now and Here inclusion, and Jamie's documented participation in the
+  2011 preparation schedule are approved for bank-only use. Preserve Drew
+  Bolton and Garrett Fuselier's equal credit; treat installer workstreams as a
+  collaborative plan rather than individual assignments or proof of completion.
+  Keep protected source links, participant messages and identifiers, personal
+  schedules and locations, and the conflicting original closing dates offline.
 - Waterways work: source-backed and safe for the bank with collaborative language; the Gulf of Mexico endpoint is recovered, while the exact landing place remains open.
 - Cabaret Law organizing: Jamie's fire-code study groups, City Hall rallying, and Council testimony are source-backed; repeal remains collective.
 - Office of Nightlife: Jamie's public invitation and speaking participation are source-backed; complete production responsibilities and policy causality remain open.

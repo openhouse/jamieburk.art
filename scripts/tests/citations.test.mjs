@@ -92,13 +92,19 @@ test("NTER CHNG preserves collective credit and exhibition-source boundaries", (
   const sources = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   const installation = claims.get("CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011");
   const exhibition = claims.get("CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011");
+  const operations = claims.get("CLM-NTERCHNG-REINSTALLATION-OPERATIONS-2011");
   const exhibitionSource = sources.get("SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011");
   const nermanSource = sources.get("SRC-NERMAN-AMERICA-NOW-AND-HERE-2011");
+  const installerSource = sources.get("SRC-NTERCHNG-INSTALLER-PLAN-2011");
+  const participantSource = sources.get("SRC-NTERCHNG-EXHIBITION-PARTICIPANT-NOTES-2011");
 
   assert.ok(installation);
   assert.ok(exhibition);
+  assert.ok(operations);
   assert.ok(exhibitionSource);
   assert.ok(nermanSource);
+  assert.ok(installerSource);
+  assert.ok(participantSource);
   assert.match(installation.internalClaim, /Drew Bolton.*Garrett Fuselier/i);
   assert.ok(installation.antiClaims.some((item) => /solely created.*programmed.*designed.*produced/i.test(item)));
   assert.ok(
@@ -117,6 +123,13 @@ test("NTER CHNG preserves collective credit and exhibition-source boundaries", (
   );
   assert.ok(exhibitionSource.doesNotEstablish.some((item) => /Nerman Museum/i.test(item)));
   assert.ok(nermanSource.doesNotEstablish.some((item) => /NTER CHNG.*inclusion/i.test(item)));
+  assert.equal(installerSource.visibility, "protected");
+  assert.equal(installerSource.canonicalUrl, undefined);
+  assert.equal(installerSource.archiveUrl, undefined);
+  assert.equal(participantSource.visibility, "protected");
+  assert.ok(participantSource.doesNotEstablish.some((item) => /permission to publish participant messages/i.test(item)));
+  assert.ok(operations.boundaries.some((item) => /intended workstreams.*not completion/i.test(item)));
+  assert.ok(operations.antiClaims.some((item) => /individually performed every software/i.test(item)));
 });
 
 test("KC Town Hall Phase One separates completion, role, survey, and full redevelopment", () => {
