@@ -259,6 +259,16 @@ if (!existsSync(resumePath)) {
   }
 
   if (
+    !/On\s+September\s+26,\s+2019,\s+the\s+City\s+Council\s+accepted\s+the\s+Board['’]s\s+recommendation\s+and\s+appropriated\s+\$490,539\s+to\s+the\s+project\s+account/i.test(
+      resumeText
+    ) ||
+    !/the\s+agreement\s+was\s+not\s+completed,\s+no\s+funds\s+were\s+disbursed/i.test(resumeText) ||
+    !/in\s+2024\s+the\s+Council\s+reappropriated\s+the\s+unused\s+award\s+after\s+project\s+withdrawal/i.test(resumeText)
+  ) {
+    addFailure(resumePath, "resume PDF is missing the approved bounded KC Town Hall Council lifecycle");
+  }
+
+  if (
     isProduction &&
     !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&
     !siteHasDefaultContactEmail &&

@@ -1,6 +1,6 @@
 # feature/evals-K run record
 
-Date: 2026-07-12
+Date: 2026-07-14
 
 Base: `origin/develop` at `2ec37fe6e47d11e600ede204d19a98f7d3cff139`
 
@@ -16,6 +16,7 @@ explicit approval.
 | Second revision | 81 / 81 | Iterate | The application foundations held; Technical Operations, CallNYC, and the HTML resume still asked too much of a first-pass reader. Development screenshots also introduced a Next.js indicator that was not production UI. |
 | Final production revision | 90 / 92 | Application-ready | Both fresh judges scored every criterion at least 4 and returned the same recommendation. The pair is within the rubric's two-point stability tolerance. |
 | Campaign-press integration | 90 / 90 | Application-ready | The complete campaign press corpus remained off the public site; mobile source notes became collapsible while desktop and print retained the full evidence layer. Both fresh judges again scored every criterion at least 4. |
+| KC Council lifecycle and final interface pass | 96 / 94 | Application-ready | The portfolio now states the complete public-record lifecycle without confusing appropriation with receipt, and the application path passed a broader production browser matrix. Every criterion remained at least 4. |
 
 The final scorecards were produced independently from the current working tree,
 the canonical claim layer, the rendered resume, and production-mode browser
@@ -43,21 +44,29 @@ evidence. Prior scores were withheld from the final judges.
   a final judge identified the source-level accessibility risk.
 - Kept all 45 NYC Artist Coalition campaign press listings in the knowledge
   bank rather than projecting an exhaustive press archive onto the portfolio.
-- Collapsed source notes behind a native disclosure on mobile while keeping
-  them expanded on desktop and in print.
+- Corrected the KC Town Hall case study and resume to distinguish the Board
+  recommendation, Council acceptance and appropriation, an unclosed funding
+  agreement, no disbursement, and the later withdrawal and reappropriation.
+- Made source notes and supplemental evidence deliberate native disclosures at
+  every viewport, with hash-target opening for direct evidence links.
+- Consolidated case-study credits, actions, and source access so evidence stays
+  available without dominating the first reading path.
+- Tightened the work index, corrected the Colophon, and preserved direct resume
+  download actions and the phone-bearing two-page resume artifact.
 
 ## Verification evidence
 
 - Fast deterministic eval: all 10 gates passed.
-- Staging preflight: citation registry, 12 citation tests, typecheck, lint, build,
+- Staging preflight: citation registry, 13 citation tests, 35 lifecycle tests, typecheck, lint, build,
   knowledge bank, public safety, and route checks passed.
 - Production preflight: the same complete gate set passed with production URL
   and indexing configuration.
-- Production browser matrix: 30 observations across 10 routes at desktop, 390px,
+- Production browser matrix: 42 observations across 14 routes at desktop, 390px,
   and 320px; all returned 200 with one H1, no empty links, no horizontal
   overflow, no duplicate IDs, no console errors, and no page errors. The skip
-  link was the first tab stop. Desktop notes remained visible and mobile notes
-  were available through their disclosure summaries.
+  link was the first tab stop, keyboard traversal completed, reduced-motion
+  behavior held, and source notes remained available through their disclosure
+  summaries.
 - Resume PDF: two substantive rendered pages, current contact artifact, no
   clipping, overlap, broken glyphs, JavaScript, or encryption.
 - `--skip-commands` was tested to fail closed; skipped gates cannot satisfy the
@@ -70,17 +79,15 @@ next improvements:
 
 - Replace selected text-only output abstractions with approved, redacted visual
   specimens when rights and contextual use are settled.
-- Rebalance the resume PDF so the THICK ARTS role does not continue with one
-  bullet at the top of page two.
 - Continue consolidating repeated public-safety vocabulary where a single
   project boundary can carry the same meaning.
-- Correct the Colophon's stale font description and consider a roomier 320px
-  navigation treatment in a later interface pass.
+- Replace additional text-only output abstractions with approved, redacted
+  visual specimens when rights and contextual use are settled.
 
 ## Decision
 
 The recursive stop condition for **application-ready** is reached: deterministic
-evidence passed, the latest two fresh scores were 90 / 90, every criterion
+evidence passed, the latest two fresh scores were 96 / 94, every criterion
 reached at least 4, and both judges returned `application-ready`. This run does
 not grant production approval. Publishing to production remains Jamie's
 explicit human decision.

@@ -174,15 +174,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Kansas City public minutes identify Jamie as presenter of KC Town-Hall's $490,539 adaptive-reuse proposal and record the Board's recommendation to City Council at that amount. Jamie also helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support.
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, carrying a $490,539 proposal through Board recommendation and City Council appropriation. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.
+**Detailed public-safe wording:** Kansas City public records identify Jamie as presenter of KC Town-Hall's $490,539 adaptive-reuse proposal. The Council accepted the Board recommendation and appropriated that amount to the project account in 2019. A 2022 update listed no funds disbursed, and a 2024 ordinance reappropriated the unused award after KC Town Hall withdrew. Jamie also helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
+**Guardrail:** Appropriation must never be compressed into receipt: keep the no-disbursement and reappropriation endpoint attached to any public funding language.
+**Do not say:** KC Town Hall received or spent $490,539; the project was completed; why the project withdrew; private financial details; official municipal endorsement beyond the recorded Council actions.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-14
 
 ## source-backed-team-memory-method - Source-backed team memory
 

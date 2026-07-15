@@ -1,6 +1,6 @@
 # feature/evals-K Chad Lens run
 
-Date: 2026-07-12
+Date: 2026-07-14
 
 Decision sought: whether the core application path meets Chad's standard of
 courageous precision. This decision does not authorize production publication.
@@ -68,9 +68,27 @@ was strengthened.
 - All six required dimensions were addressed by both judges: actor legibility,
   toward what end, usable result, one-pass translation, reader burden, and
   collective precision.
-- Production browser matrix: 30 observations across 10 routes at desktop, 390px,
+- Production browser matrix: 42 observations across 14 routes at desktop, 390px,
   and 320px, with no route, H1, empty-link, overflow, duplicate-ID, console, or
-  page-error failures.
+  page-error failures, plus complete keyboard traversal and reduced-motion
+  checks.
+
+## KC Town Hall lifecycle
+
+- Replaced the stale Board-recommendation endpoint with the complete bounded
+  public record: Council accepted the recommendation and appropriated $490,539
+  on September 26, 2019; the funding agreement did not close; no funds were
+  disbursed; and Council reappropriated the unused award in 2024 after the
+  project withdrew.
+- Kept Jamie visible as the person who co-led planning, assembled the public
+  benefit and stakeholder record, presented the proposal, and supported its
+  movement through public review.
+- Kept the legal and operational boundary equally visible: appropriation was
+  not receipt, expenditure, implementation, or completion, and the record does
+  not establish why the project withdrew.
+- Corrected the case study, work index, canonical claim, proof layer, and
+  phone-bearing resume together so no prominent surface silently strengthens or
+  truncates the lifecycle.
 
 The runner now requires a passing recommendation, all six dimension findings,
 and six evidence observations. Three regression tests confirm that

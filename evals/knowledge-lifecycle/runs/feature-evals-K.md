@@ -19,12 +19,35 @@ does not authorize production publication.
 | Final judge B | 4 / 4 / 5 / 5 / 5 / 4 | 91 | Framework-ready. |
 | Campaign-press judge A | 5 / 4 / 5 / 5 / 5 / 4 | 94 | Framework-ready. |
 | Campaign-press judge B | 4 / 4 / 5 / 5 / 5 / 5 | 93 | Framework-ready. |
+| Council-lifecycle final judge A | 5 / 5 / 5 / 5 / 5 / 5 | 100 | Framework-ready. |
+| Council-lifecycle final judge B | 5 / 5 / 5 / 5 / 5 / 5 | 100 | Framework-ready. |
 
-The latest final pair is stable with a one-point weighted-score difference.
-Both fresh judges scored every criterion at least 4 and returned
-`framework-ready`. A separate fresh judge scored the same revision 100; it was
-not used as the confirming pair because the protocol requires stable scores,
-not the highest available score.
+The final Council-lifecycle pair supersedes the earlier campaign-press pair for
+the current working tree. Both fresh judges independently scored every
+criterion 5 and returned `framework-ready`.
+
+## KC Town Hall Council lifecycle
+
+The July 14 pass located five linked Kansas City legislative records and
+ingested them as immutable receipts, canonical sources, atomic observations,
+candidate relationships, research decisions, and exact-surface projections:
+
+- the September 26, 2019 Council meeting record;
+- Ordinance 190642, which appropriated $490,539 to the KC Town Hall project
+  account;
+- Resolution 190649, which accepted the Board recommendation and authorized
+  negotiation of a funding agreement;
+- the May 17, 2022 status report, which recorded no disbursement and an
+  agreement still under negotiation; and
+- Ordinance 240317, which recorded the project's withdrawal and reappropriated
+  the unused $490,539 award in 2024.
+
+The promoted claim therefore records recommendation, Council authorization and
+appropriation, unclosed agreement, no disbursement, withdrawal, and
+reappropriation as one bounded lifecycle. A competing candidate that Jamie or
+the project received the funds is explicitly disallowed. The public wording
+does not infer the reason for withdrawal or claim expenditure, implementation,
+completion, or present project status.
 
 ## NYC Artist Coalition campaign press ingestion
 
@@ -63,8 +86,8 @@ The new material supports bounded public claims about:
 - Jamie and Julia Fredenberg's weekly Sunday Dinner co-hosting;
 - NYC Artist Coalition campaign architecture, Jamie's public speaking and
   Council testimony, and coalition-spearheaded nightlife advocacy;
-- Jamie's documented KC Town Hall presenter role and a Board recommendation,
-  explicitly not final approval, receipt, expenditure, or completion;
+- Jamie's documented KC Town Hall presenter role and the Board-recommendation
+  stage later completed by the Council-lifecycle research described above;
 - Jamie's augmented-reality and collective video-production collaboration on
   Claudette's Theatre on Wheels.
 
@@ -76,18 +99,46 @@ aggregates; neither figure is presented as independently corroborated.
 
 - Added append-only intake receipts, duplicate disposition, bare-URL capture,
   private-reference locators, stable IDs, and actionable next steps.
+- Added an explicit unassigned-project intake state and retained Jamie's
+  "Structure grows out of the material" fragment as the first real append-only
+  specimen awaiting honest project triage.
 - Added atomic observations with locators, evidence roles, certainty, source
   limits, and reciprocal candidate links.
 - Added candidate maturity, counterevidence posture, research tasks, promotion
   decisions, corrections, supersession, and append-only histories.
 - Required current human approval for every active canonical projection and
   every reusable proof relationship.
-- Replaced category-only proof permissions with 12 Jamie-approved exact-route
-  manifests containing audience, purpose, exclusions, and guardrails.
+- Replaced category-only proof permissions with 15 Jamie-approved
+  exact-destination manifests containing audience, purpose, exclusions, and
+  guardrails.
 - Generated `projection-map.md` from those manifests and made drift a failing
   deterministic check.
 - Scoped route retrieval to the relevant editorial brief and project rather
   than returning unrelated project context.
+- Made observation roles candidate-relative where one source can support the
+  boundary of a true lifecycle claim while contradicting a false funding-receipt
+  claim.
+- Added candidate-specific relationship records for every observation shared
+  across propositions, including the supported fragment, evidence role, and
+  limitations for each candidate.
+- Made publication-safe retrieval fail closed across projects, canonical
+  claims, proofs, tasks, and media when no exact human-approved route manifest
+  authorizes the requested surface.
+- Made exact proof-destination retrieval return only manifest-selected
+  canonical claims and currently authorized candidates; research tasks and
+  media stay out of public palettes without a separate explicit selection path.
+- Replaced page-category proof fallback with a complete inventory of 14
+  rendered routes and the downloadable resume; every destination's full proof
+  set must equal its Jamie-approved manifest.
+- Made the resume PDF a first-class download destination with an artifact path,
+  canonical KC claim linkage, an active PDF projection, exact human approval,
+  and deterministic parsing of the shipped lifecycle wording.
+- Bound the checked-in KC case-study screenshot to both its artifact hash and a
+  digest of the application source that produced it, so stale visual evidence
+  fails the release gate.
+- Persisted all 42 production browser observations as a compact route-by-
+  viewport matrix; the validator now requires one passing result for every one
+  of 14 governed routes at all three declared viewports.
 - Added a first-class self-reported evidence qualifier and a regression test
   that rejects active canonical or proof wording if the 20+ residency metric
   loses its attribution to Jamie.
@@ -104,14 +155,14 @@ aggregates; neither figure is presented as independently corroborated.
 
 ## Verification evidence
 
-- Knowledge lifecycle validation and all 31 regression tests passed.
-- The corpus contains 26 leads and append-only receipts, 47 observations, 25
-  candidate claims, 17 research tasks, 28 decisions, 8 editorial briefs, 12
-  exact-route proof manifests, 7 bounded media leads, and 4 source collections
+- Knowledge lifecycle validation and all 35 regression tests passed.
+- The corpus contains 31 leads and append-only receipts, 53 observations, 25
+  candidate claims, 18 research tasks, 30 decisions, 8 editorial briefs, 15
+  exact-destination proof manifests, 7 bounded media leads, and 4 source collections
   containing 45 campaign press listings.
 - Citation, knowledge-bank, public-safety, route, and compiled-locator checks
   passed in the release profile.
-- Final independent lifecycle scorecards were 94 / 93, stable pair `yes`, with
+- Final independent lifecycle scorecards were 100 / 100, stable pair `yes`, with
   all criteria at least 4 and both recommendations `framework-ready`.
 
 ## Boundaries and next research
@@ -119,8 +170,9 @@ aggregates; neither figure is presented as independently corroborated.
 - Instrumental causality for Cabaret Law repeal, the Office of Nightlife,
   MARCH phaseout, town-hall production and influence, and authenticated CallNYC
   Council-member engagement metrics remain research-only.
-- The KC public record currently stops at a Board recommendation; final
-  approval, disbursement, completion, and current status remain open.
+- KC Town Hall's Council record is now bounded through the 2024 withdrawal and
+  reappropriation; the private reason for withdrawal and any work outside that
+  legislative record remain out of scope.
 - The 20+ residency aggregate remains Jamie-reported until an independent
   collaborator or institutional source is recovered.
 - Additional visual review cycles can deepen the media-feedback evidence while

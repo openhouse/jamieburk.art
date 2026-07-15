@@ -22,12 +22,15 @@ export function Hero() {
             use to continue the work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <JBButton href="/work">View selected work</JBButton>
+            <JBButton href="/work/technical-operations">See technical operations</JBButton>
             <JBButton href={site.resumePath} variant="secondary" download>
               Download resume PDF
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
+            </JBButton>
+            <JBButton href="/work" variant="ghost">
+              View all work
             </JBButton>
           </div>
           <p className="mt-6 text-sm font-medium text-jb-ink/64">

@@ -2,6 +2,13 @@ import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifec
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
+const proofById = new Map(proofClaims.map((proof) => [proof.id, proof]));
+
+function evidenceRoleForCandidate(observation, candidateId) {
+  return observation?.candidateRelationships?.find((item) => item.candidateClaimId === candidateId)?.evidenceRole
+    ?? observation?.evidenceRole;
+}
+
 export function retrieveKnowledgePalette(filters = {}) {
   if (filters.publicationSafe && !filters.surface && !filters.proofSurface) {
     throw new Error("Publication-safe retrieval requires an exact surface");
@@ -59,7 +66,7 @@ export function retrieveKnowledgePalette(filters = {}) {
     (!projectScopeRequested || candidate.projectIds.some((id) => projectIds.has(id))) &&
     (!filters.maturity || candidate.maturity === filters.maturity) &&
     (!filters.confidence || candidate.confidence === filters.confidence) &&
-    (!filters.evidenceRole || candidate.observationIds.some((id) => observationById.get(id)?.evidenceRole === filters.evidenceRole)) &&
+    (!filters.evidenceRole || candidate.observationIds.some((id) => evidenceRoleForCandidate(observationById.get(id), candidate.id) === filters.evidenceRole)) &&
     (!filters.sourceKind || candidate.observationIds.some((id) => sourceById.get(observationById.get(id)?.sourceId)?.kind === filters.sourceKind)) &&
     (!filters.researchPriority || candidate.researchTaskIds.some((id) => taskById.get(id)?.priority === filters.researchPriority)) &&
     (!matchingBriefs.length || matchingBriefs.some((brief) => brief.candidateClaimIds.includes(candidate.id) || (candidate.targetCanonicalClaimId && brief.canonicalClaimIds.includes(candidate.targetCanonicalClaimId))))
@@ -71,20 +78,55 @@ export function retrieveKnowledgePalette(filters = {}) {
         : decision.allowedSurfaces.includes(filters.surface)
     )
   );
+  if (filters.publicationSafe && filters.proofSurface) candidates = candidates.filter((candidate) =>
+    candidate.targetCanonicalClaimId &&
+    proofSurfaceManifest.canonicalClaimIds.includes(candidate.targetCanonicalClaimId) &&
+    activeDecisionsFor(candidate).some((decision) => authorizesSurface(decision, filters.proofSurface))
+  );
 
+  if (filters.publicationSafe && filters.surface) {
+    const authorizedProjectIds = new Set(candidates.flatMap(({ projectIds }) => projectIds));
+    projects = projects.filter(({ id }) => authorizedProjectIds.has(id));
+  }
+
+  const manifestProofs = proofSurfaceManifest
+    ? proofSurfaceManifest.proofIds.map((id) => proofById.get(id)).filter(Boolean)
+    : [];
   const canonicalIds = new Set([
-    ...matchingBriefs.flatMap(({ canonicalClaimIds }) => canonicalClaimIds),
-    ...candidates.map(({ targetCanonicalClaimId }) => targetCanonicalClaimId).filter(Boolean)
+    ...(!filters.publicationSafe ? matchingBriefs.flatMap(({ canonicalClaimIds }) => canonicalClaimIds) : []),
+    ...candidates.map(({ targetCanonicalClaimId }) => targetCanonicalClaimId).filter(Boolean),
+    ...(filters.publicationSafe && proofSurfaceManifest
+      ? proofSurfaceManifest.canonicalClaimIds
+      : [])
   ]);
-  const claimFiltersApplied = Boolean(filters.maturity || filters.confidence || filters.evidenceRole || filters.sourceKind || filters.researchPriority || filters.surface);
-  const canonicalClaims = knowledgeBank.claims.filter((claim) =>
-    (canonicalIds.has(claim.id) || (!matchingBriefs.length && !claimFiltersApplied && projects.some(({ canonicalProjectKeys }) => canonicalProjectKeys.includes(claim.project)))) &&
-    (!projectScopeRequested || projects.some(({ canonicalProjectKeys }) => canonicalProjectKeys.includes(claim.project)))
+  const claimFiltersApplied = Boolean(filters.maturity || filters.confidence || filters.evidenceRole || filters.sourceKind || filters.researchPriority || filters.surface || filters.proofSurface);
+  const canonicalClaims = filters.publicationSafe && proofSurfaceManifest
+    ? proofSurfaceManifest.canonicalClaimIds.map((id) => knowledgeBank.claims.find((claim) => claim.id === id)).filter(Boolean)
+    : knowledgeBank.claims.filter((claim) =>
+      (canonicalIds.has(claim.id) || (!matchingBriefs.length && !claimFiltersApplied && projects.some(({ canonicalProjectKeys }) => canonicalProjectKeys.includes(claim.project)))) &&
+      (!projectScopeRequested || projects.some(({ canonicalProjectKeys }) => canonicalProjectKeys.includes(claim.project)))
+    );
+  const selectedProofIds = new Set(proofSurfaceManifest?.proofIds ?? (
+    filters.publicationSafe && filters.surface
+      ? proofClaims
+        .filter(({ canonicalClaimIds = [] }) => canonicalClaimIds.some((id) => canonicalIds.has(id)))
+        .map(({ id }) => id)
+      : projects.flatMap(({ proofIds }) => proofIds)
+  ));
+  const proofs = proofSurfaceManifest
+    ? manifestProofs
+    : proofClaims.filter(({ id }) => selectedProofIds.has(id));
+  const candidateIds = new Set(candidates.map(({ id }) => id));
+  const mediaLeads = knowledgeLifecycle.mediaLeads.filter((item) =>
+    (matchingBriefs.some(({ mediaLeadIds }) => mediaLeadIds.includes(item.id)) || (!matchingBriefs.length && item.projectIds.some((id) => projectIds.has(id)))) &&
+    (!projectScopeRequested || item.projectIds.some((id) => projectIds.has(id))) &&
+    (!filters.publicationSafe || (
+      item.candidateClaimIds.some((id) => candidateIds.has(id)) &&
+      item.rightsStatus === "cleared" &&
+      ["cleared", "not-applicable"].includes(item.consentStatus) &&
+      item.displayStatus === "candidate"
+    ))
   );
-  const selectedProofIds = new Set(
-    proofSurfaceManifest?.proofIds ?? projects.flatMap(({ proofIds }) => proofIds)
-  );
-  const proofs = proofClaims.filter(({ id }) => selectedProofIds.has(id));
 
   return {
     filters,
@@ -105,10 +147,9 @@ export function retrieveKnowledgePalette(filters = {}) {
       : [],
     canonicalClaims,
     proofs,
-    researchTasks: knowledgeLifecycle.researchTasks.filter((task) => task.candidateClaimIds.some((id) => candidates.some((candidate) => candidate.id === id))),
-    mediaLeads: knowledgeLifecycle.mediaLeads.filter((item) =>
-      (matchingBriefs.some(({ mediaLeadIds }) => mediaLeadIds.includes(item.id)) || (!matchingBriefs.length && item.projectIds.some((id) => projectIds.has(id)))) &&
-      (!projectScopeRequested || item.projectIds.some((id) => projectIds.has(id)))
-    )
+    researchTasks: filters.publicationSafe
+      ? []
+      : knowledgeLifecycle.researchTasks.filter((task) => task.candidateClaimIds.some((id) => candidateIds.has(id))),
+    mediaLeads: filters.publicationSafe ? [] : mediaLeads
   };
 }

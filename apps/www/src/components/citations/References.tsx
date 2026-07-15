@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { resolveCitationReferences } from "@/data/knowledge-bank";
+import { ResponsiveDisclosure } from "./ResponsiveDisclosure";
 import { SourceNote } from "./SourceNote";
 
 type ReferencesProps = { pageId: string };
@@ -20,16 +21,15 @@ export function References({ pageId }: ReferencesProps) {
         These notes preserve what each source supports and where its limits
         remain. See something that needs correction? <Link href="/contact">Contact Jamie</Link>.
       </p>
-      <details className="jb-endnotes-disclosure">
-        <summary>
-          Read {references.length} source {references.length === 1 ? "note" : "notes"}
-        </summary>
+      <ResponsiveDisclosure
+        summary={`Read ${references.length} source ${references.length === 1 ? "note" : "notes"}`}
+      >
         <ol>
           {references.map((reference) => (
             <SourceNote key={reference.source.id} {...reference} />
           ))}
         </ol>
-      </details>
+      </ResponsiveDisclosure>
     </section>
   );
 }

@@ -39,6 +39,7 @@ export const leadSchema = z.object({
   visibility: z.enum(["public", "public-safe", "private-reference"]),
   publicSummary: z.string().min(1),
   publicUrl: publicUrlSchema.optional(),
+  projectAssociationStatus: z.enum(["assigned", "unassigned"]).default("assigned"),
   projectIds: idList,
   entityIds: idList,
   sourceIds: idList,
@@ -58,6 +59,7 @@ export const intakeReceiptSchema = z.object({
   capturedBy: z.string().min(1),
   visibility: leadSchema.shape.visibility,
   publicSummary: z.string().min(1),
+  initialProjectAssociationStatus: leadSchema.shape.projectAssociationStatus,
   initialProjectIds: idList,
   initialEntityIds: idList,
   initialSourceIds: idList,
@@ -79,6 +81,8 @@ export const intakeAmendmentSchema = z.object({
   sourceIds: idList
 });
 
+const evidenceRoleSchema = z.enum(["direct-support", "corroborating", "context", "contradicts", "supports-boundary"]);
+
 export const observationSchema = z.object({
   id: stableIdSchema,
   sourceId: stableIdSchema,
@@ -86,10 +90,16 @@ export const observationSchema = z.object({
   entityIds: idList,
   statement: z.string().min(1),
   locator: z.string().min(1),
-  evidenceRole: z.enum(["direct-support", "corroborating", "context", "contradicts", "supports-boundary"]),
+  evidenceRole: evidenceRoleSchema,
   certainty: z.enum(["high", "moderate", "limited"]),
   doesNotEstablish: z.array(z.string().min(1)).min(1),
   candidateClaimIds: idList,
+  candidateRelationships: z.array(z.object({
+    candidateClaimId: stableIdSchema,
+    evidenceRole: evidenceRoleSchema,
+    supports: z.string().min(1),
+    limitations: z.array(z.string().min(1)).min(1)
+  })).default([]),
   reviewedAt: dated
 });
 
@@ -190,19 +200,32 @@ export const proofSurfaceManifestSchema = z.object({
     "work-card",
     "case-study",
     "lab",
-    "about"
+    "about",
+    "contact",
+    "colophon",
+    "resume-pdf"
   ]),
-  route: z.string().regex(/^\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/, "Use an exact public route"),
+  route: z.string().regex(/^\/(?:[A-Za-z0-9._-]+(?:\/[A-Za-z0-9._-]+)*)?$/, "Use an exact public destination"),
+  destinationType: z.enum(["route", "download"]).default("route"),
+  artifactPath: z.string().regex(/^apps\/www\/public\/[A-Za-z0-9._/-]+$/).optional(),
   audience: z.string().min(1),
   purpose: z.string().min(1),
   selectionCriteria: z.array(z.string().min(1)).min(1),
   proofIds: idList,
+  canonicalClaimIds: idList,
   exclusions: z.array(z.string().min(1)).min(1),
   reviewAuthority: z.literal("jamie-approved"),
   humanReviewStatus: z.literal("approved"),
   humanReviewer: z.string().min(1),
   reviewedAt: dated,
   guardrails: z.array(z.string().min(1)).min(1)
+}).superRefine((manifest, context) => {
+  if (manifest.destinationType === "download" && !manifest.artifactPath) {
+    context.addIssue({ code: "custom", path: ["artifactPath"], message: "Downloads require a public artifact path" });
+  }
+  if (manifest.destinationType === "route" && manifest.artifactPath) {
+    context.addIssue({ code: "custom", path: ["artifactPath"], message: "Routes cannot declare a download artifact path" });
+  }
 });
 
 export const mediaLeadSchema = z.object({

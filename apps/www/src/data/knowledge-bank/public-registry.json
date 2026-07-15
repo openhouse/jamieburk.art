@@ -265,10 +265,93 @@
       "publicCitation": "Kansas City Central City Economic Development Sales Tax Board, June 12-13, 2019 meeting minutes in the July 29, 2019 public packet.",
       "publicNote": "The minutes list Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse request and record the Board's later vote to recommend the project to City Council for approval and funding at that amount.",
       "doesNotEstablish": [
-        "final City Council approval",
         "funds received or disbursed",
         "project completion",
         "current property status"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+      "title": "Committee Substitute for Ordinance 190642",
+      "organization": "Council of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "metadataVerifiedAt": "2026-07-14",
+      "metadataVerifiedBy": "Codex public-record review",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council of Kansas City, Missouri, Committee Substitute for Ordinance 190642, passed September 26, 2019.",
+      "publicNote": "The authenticated ordinance appropriates Central City Sales Tax funds to Round Two project accounts and lists a $490,539 award for KC Town Hall; the Council history records it as passed as substituted on September 26, 2019.",
+      "doesNotEstablish": [
+        "an executed funding agreement",
+        "funds received or disbursed",
+        "project completion"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+      "title": "Resolution 190649",
+      "organization": "Council of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "metadataVerifiedAt": "2026-07-14",
+      "metadataVerifiedBy": "Codex public-record review",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council of Kansas City, Missouri, Resolution 190649, adopted as substituted September 26, 2019.",
+      "publicNote": "The Council accepted the CCED Board recommendation to fund KC Town Hall at $490,539 and authorized the City Manager to negotiate a funding agreement.",
+      "doesNotEstablish": [
+        "an executed funding agreement",
+        "funds received or disbursed",
+        "project completion"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
+      "title": "Central City Sales Tax Project Updates - May 17, 2022",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2022-05-17",
+      "accessedAt": "2026-07-14",
+      "metadataVerifiedAt": "2026-07-14",
+      "metadataVerifiedBy": "Codex public-record review",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?GUID=C851CE5D-2041-4E27-9967-26DB1BFD1D4F&ID=10918035&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, 'Central City Sales Tax Project Updates - May 17, 2022.'",
+      "publicNote": "The project table lists KC Town Hall's $490,539 CCED budget, no funds disbursed, and a funding agreement still under negotiation.",
+      "doesNotEstablish": [
+        "why the agreement remained incomplete",
+        "any later disbursement without additional records",
+        "project completion"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317",
+      "title": "Ordinance 240317",
+      "organization": "Council of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-03-28",
+      "accessedAt": "2026-07-14",
+      "metadataVerifiedAt": "2026-07-14",
+      "metadataVerifiedBy": "Codex public-record review",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?ID=6586846&GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      "publicNote": "The ordinance identifies KC Town Hall as a withdrawn project, characterizes its $490,539 award as unused, reduces the project account by that amount, and reappropriates the funds.",
+      "doesNotEstablish": [
+        "why KC Town Hall withdrew",
+        "private project circumstances",
+        "that any award funds had previously been received or spent"
       ]
     }
   ],
@@ -638,11 +721,38 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal; the CCED Board later voted to recommend the project to City Council for approval and funding at that amount.",
+          "text": "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal. After the CCED Board recommended it, the City Council accepted the recommendation and appropriated $490,539 to the project account on September 26, 2019. The funding agreement was not completed, no funds were disbursed, and the Council reappropriated the unused award after KC Town Hall withdrew the project in 2024.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
             "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "After Jamie presented KC Town-Hall's $490,539 adaptive-reuse proposal, the Board recommended it and the City Council appropriated the amount to the project account. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "resume-pdf",
+          "text": "On September 26, 2019, the City Council accepted the Board's recommendation and appropriated $490,539 to the project account; the agreement was not completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award after project withdrawal.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
           ]
         }
       ],
@@ -658,11 +768,53 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+          "relationship": "direct-support",
+          "supports": [
+            "Council passage",
+            "the $490,539 appropriation to the KC Town Hall project account"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+          "relationship": "direct-support",
+          "supports": [
+            "Council acceptance of the Board recommendation",
+            "authorization to negotiate a funding agreement"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
+          "relationship": "supports-boundary",
+          "supports": [
+            "no funds disbursed as of May 17, 2022",
+            "funding agreement still under negotiation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317",
+          "relationship": "supports-boundary",
+          "supports": [
+            "project withdrawal",
+            "unused award",
+            "reappropriation of $490,539"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
-        "A Board recommendation is not evidence of final City Council approval, disbursement, or project completion.",
-        "Do not publish current property, legal, financial, or stakeholder details."
+        "A Council appropriation and authorization to negotiate are not evidence of an executed agreement, receipt, or expenditure.",
+        "The public record establishes that the project withdrew and the unused award was reappropriated; it does not establish why.",
+        "Do not publish private property, legal, financial, or stakeholder details."
       ]
     }
   ],
@@ -777,13 +929,24 @@
       "id": "kc-town-hall",
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
-        "SRC-KC-TOWN-HALL-CCED-2019"
+        "SRC-KC-TOWN-HALL-CCED-2019",
+        "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+        "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+        "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
+        "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"
       ],
       "occurrences": [
         {
           "id": "public-record-2019",
           "claimId": "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019",
-          "projection": "case-study"
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-2019",
+            "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+            "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+            "SRC-KC-TOWN-HALL-CCED-UPDATE-2022",
+            "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"
+          ]
         }
       ]
     }

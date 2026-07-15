@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { getClaimProjection } from "@/data/knowledge-bank";
-import type { WorkMeta } from "@/types/work";
+import { getClaimProjection } from "./knowledge-bank/index.ts";
+import type { WorkMeta } from "../types/work.ts";
 
 const visibilitySchema = z.enum([
   "public",
@@ -486,9 +486,9 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. On September 26, 2019, the City Council accepted the Board's recommendation and appropriated $490,539 to the project account; the funding agreement did not close, no funds were disbursed, and in 2024 the Council reappropriated the unused award after project withdrawal.",
     role: "Co-Lead, Project Planning & Public-Benefit Documentation",
-    years: "2015-2024 (public records: 2019-2021)",
+    years: "2015-2024 (public records: 2019-2024)",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -512,7 +512,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Kansas City public minutes identify Jamie as presenter, describe the adaptive-reuse proposal, and record the Board's $490,539 recommendation. Private property and financial materials remain offline.",
+      "Official Board, Council, and project-status records support the cited funding lifecycle. Private property and financial materials remain offline.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -522,13 +522,13 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "$490,539 Board recommendation and City Council appropriation"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led adaptive reuse planning and documentation, presented KC Town-Hall's proposal in a public review process, and is named in the Board record supporting its $490,539 recommendation.",
+        "Jamie co-led adaptive reuse planning and documentation and presented KC Town-Hall's proposal in public review. The cited claim above records the proposal's complete public funding lifecycle.",
       open:
-        "Final approval, funding receipt, project completion, named-partner details, and current property status are not established by the reviewed public records.",
+        "The public records do not establish why the agreement remained incomplete or why the project withdrew. Named-partner details and current property status remain outside this proof.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

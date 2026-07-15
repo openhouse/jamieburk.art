@@ -1,11 +1,16 @@
+import { existsSync } from "node:fs";
 import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import {
+  aboutProofs,
   homepageProofs,
+  labProofs,
   proofClaims,
+  resumePdfProofs,
   resumeProofHighlights,
   technicalOperationsProofRows
 } from "../../apps/www/src/data/proofs.ts";
+import { featuredWork, workItems } from "../../apps/www/src/data/work.ts";
 
 const forbiddenPrivatePatterns = [
   /\/Users\//i,
@@ -83,7 +88,8 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
   }
 
   for (const lead of input.leads) {
-    if (!lead.projectIds.length) errors.push(`Lead ${lead.id} has no project association`);
+    if (lead.projectAssociationStatus === "assigned" && !lead.projectIds.length) errors.push(`Assigned lead ${lead.id} has no project association`);
+    if (lead.projectAssociationStatus === "unassigned" && lead.projectIds.length) errors.push(`Unassigned lead ${lead.id} already has project associations`);
     if (lead.kind === "source-url" && !lead.sourceIds.length && !lead.publicUrl) errors.push(`Source URL lead ${lead.id} has neither a public URL nor canonical source`);
     if (lead.visibility === "private-reference" && !lead.protectedLocatorId) errors.push(`Private-reference lead ${lead.id} has no opaque locator`);
     if (lead.visibility === "private-reference" && lead.publicUrl) errors.push(`Private-reference lead ${lead.id} exposes a public URL`);
@@ -107,6 +113,23 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     checkRefs(errors, `Observation ${observation.id}`, observation.projectIds, projects, "project");
     checkRefs(errors, `Observation ${observation.id}`, observation.entityIds, entities, "entity");
     checkRefs(errors, `Observation ${observation.id}`, observation.candidateClaimIds, candidates, "candidate claim");
+    checkRefs(errors, `Observation ${observation.id} relationship`, observation.candidateRelationships.map(({ candidateClaimId }) => candidateClaimId), candidates, "candidate claim");
+    const relationshipIds = observation.candidateRelationships.map(({ candidateClaimId }) => candidateClaimId);
+    for (const id of duplicateIds(observation.candidateRelationships.map((item) => ({ id: item.candidateClaimId })))) {
+      errors.push(`Observation ${observation.id} repeats candidate relationship ${id}`);
+    }
+    if (observation.candidateClaimIds.length > 1) {
+      const linked = [...observation.candidateClaimIds].sort();
+      const related = [...relationshipIds].sort();
+      if (JSON.stringify(linked) !== JSON.stringify(related)) {
+        errors.push(`Observation ${observation.id} must define a candidate-specific evidence relationship for every linked candidate`);
+      }
+    }
+    for (const candidateClaimId of relationshipIds) {
+      if (!observation.candidateClaimIds.includes(candidateClaimId)) {
+        errors.push(`Observation ${observation.id} relationship references unlinked candidate ${candidateClaimId}`);
+      }
+    }
     for (const id of observation.candidateClaimIds) {
       const candidate = candidates.get(id);
       if (candidate && !candidate.observationIds.includes(observation.id)) errors.push(`Observation ${observation.id} is not linked back from candidate ${id}`);
@@ -302,17 +325,41 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
       errors.push(`Proof surface manifest ${manifest.id} lacks active human approval`);
     }
     checkRefs(errors, `Proof surface manifest ${manifest.id}`, manifest.proofIds, proofIds, "proof");
+    checkRefs(errors, `Proof surface manifest ${manifest.id}`, manifest.canonicalClaimIds, canonicalClaims, "canonical claim");
     for (const proofId of manifest.proofIds) {
       if (!proofById.get(proofId)?.surfaces.includes(manifest.surface)) {
         errors.push(`Proof surface manifest ${manifest.id} selects ${proofId} outside ${manifest.surface}`);
       }
     }
+    for (const claimId of manifest.canonicalClaimIds) {
+      const claim = canonicalClaimById.get(claimId);
+      const linked = manifest.proofIds.some((proofId) => proofById.get(proofId)?.canonicalClaimIds?.includes(claimId));
+      if (!linked) errors.push(`Proof surface manifest ${manifest.id} canonical claim ${claimId} is not linked by a selected proof`);
+      if (!claim?.projections.some((projection) => projection.status === "active" && projection.surfaces.includes(manifest.route))) {
+        errors.push(`Proof surface manifest ${manifest.id} canonical claim ${claimId} has no active projection for ${manifest.route}`);
+      }
+    }
+    if (manifest.destinationType === "download" && !existsSync(manifest.artifactPath)) {
+      errors.push(`Proof surface manifest ${manifest.id} download artifact is missing: ${manifest.artifactPath}`);
+    }
   }
 
+  const unique = (values) => [...new Set(values)];
   const renderedProofsByRoute = new Map([
-    ["/", homepageProofs.map(({ id }) => id)],
+    ["/", unique([
+      ...homepageProofs.map(({ id }) => id),
+      ...featuredWork.flatMap(({ proofBankIds }) => proofBankIds),
+      "technical-operations-operating-backbone"
+    ])],
     ["/resume", resumeProofHighlights.map(({ id }) => id)],
-    ["/work/technical-operations", [...new Set(technicalOperationsProofRows.flatMap(({ proofIds }) => proofIds))]]
+    ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", resumePdfProofs.map(({ id }) => id)],
+    ["/work", unique(workItems.flatMap(({ proofBankIds }) => proofBankIds))],
+    ["/work/technical-operations", unique(technicalOperationsProofRows.flatMap(({ proofIds }) => proofIds))],
+    ...workItems.map((item) => [`/work/${item.slug}`, item.proofBankIds]),
+    ["/lab/source-backed-team-memory", labProofs.map(({ id }) => id)],
+    ["/about", aboutProofs.map(({ id }) => id)],
+    ["/contact", []],
+    ["/colophon", []]
   ]);
   for (const [route, renderedProofIds] of renderedProofsByRoute) {
     const manifest = manifestsByRoute.get(route);
@@ -320,16 +367,30 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
       errors.push(`Rendered proof route ${route} has no exact-route manifest`);
       continue;
     }
-    for (const proofId of renderedProofIds) {
-      if (!manifest.proofIds.includes(proofId)) errors.push(`Rendered proof ${proofId} is not human-approved for ${route}`);
+    const rendered = [...new Set(renderedProofIds)].sort();
+    const approved = [...new Set(manifest.proofIds)].sort();
+    if (JSON.stringify(rendered) !== JSON.stringify(approved)) {
+      const missing = rendered.filter((proofId) => !approved.includes(proofId));
+      const extra = approved.filter((proofId) => !rendered.includes(proofId));
+      errors.push(`Rendered proof inventory does not match exact manifest for ${route}; missing approvals: ${missing.join(", ") || "none"}; manifest-only proofs: ${extra.join(", ") || "none"}`);
     }
+  }
+  for (const manifest of input.proofSurfaceManifests) {
+    if (!renderedProofsByRoute.has(manifest.route)) errors.push(`Proof surface manifest ${manifest.id} does not govern an inventoried public destination`);
   }
 
   for (const proof of proofClaims.filter(({ status }) => ["ready", "careful"].includes(status))) {
-    for (const surface of proof.surfaces.filter((value) => value !== "internal-only")) {
-      const manifest = input.proofSurfaceManifests.find((item) => item.surface === surface && item.proofIds.includes(proof.id));
-      if (!manifest) {
-        errors.push(`Public proof ${proof.id} lacks exact-surface human approval for ${surface}`);
+    if (proof.surfaces.some((value) => value !== "internal-only") && !input.proofSurfaceManifests.some((manifest) => manifest.proofIds.includes(proof.id))) {
+      errors.push(`Public proof ${proof.id} is not selected by any exact-destination manifest`);
+    }
+    for (const claimId of proof.canonicalClaimIds ?? []) {
+      if (!canonicalClaims.has(claimId)) errors.push(`Public proof ${proof.id} references unknown canonical claim ${claimId}`);
+    }
+    for (const claimId of proof.requiredCanonicalClaimIds ?? []) {
+      for (const manifest of input.proofSurfaceManifests.filter((item) => item.proofIds.includes(proof.id))) {
+        if (!manifest.canonicalClaimIds.includes(claimId)) {
+          errors.push(`Consequential proof ${proof.id} lacks canonical claim ${claimId} on exact destination ${manifest.route}`);
+        }
       }
     }
   }
@@ -359,6 +420,8 @@ export function validateIntakeReceipts(receipts, input = knowledgeLifecycle, ame
   for (const id of duplicateIds(receipts)) errors.push(`Duplicate intake receipt ID: ${id}`);
   for (const id of duplicateIds(amendments)) errors.push(`Duplicate intake amendment ID: ${id}`);
   for (const receipt of receipts) {
+    if (receipt.initialProjectAssociationStatus === "assigned" && !receipt.initialProjectIds.length) errors.push(`Assigned receipt ${receipt.id} has no project association`);
+    if (receipt.initialProjectAssociationStatus === "unassigned" && receipt.initialProjectIds.length) errors.push(`Unassigned receipt ${receipt.id} already has project associations`);
     checkRefs(errors, `Receipt ${receipt.id}`, receipt.initialProjectIds, projects, "project");
     checkRefs(errors, `Receipt ${receipt.id}`, receipt.initialEntityIds, entities, "entity");
     checkRefs(errors, `Receipt ${receipt.id}`, receipt.initialSourceIds, sources, "source");

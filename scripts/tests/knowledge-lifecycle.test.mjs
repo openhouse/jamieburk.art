@@ -8,6 +8,11 @@ import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts
 import { validateIntakeReceipts, validateKnowledgeLifecycle } from "../lib/knowledge-lifecycle-validation.mjs";
 import { retrieveKnowledgePalette } from "../lib/knowledge-palette.mjs";
 
+function relationshipRole(observation, candidateClaimId) {
+  return observation?.candidateRelationships.find((item) => item.candidateClaimId === candidateClaimId)?.evidenceRole
+    ?? observation?.evidenceRole;
+}
+
 test("the canonical lifecycle corpus is internally consistent", () => {
   assert.deepEqual(validateKnowledgeLifecycle(), []);
 });
@@ -34,6 +39,49 @@ test("the July 13 ten-source ingestion remains complete and decomposed", () => {
   assert.ok(sourceIds.every((id) => observedSources.has(id)));
   assert.deepEqual(task?.sourceIds, sourceIds);
   assert.equal(task?.status, "completed");
+});
+
+test("the KC Town Hall Council lifecycle rejects appropriation-as-receipt", () => {
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-KC-TOWN-HALL-COUNCIL-LIFECYCLE");
+  const publicRecord = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KC-TOWN-HALL-PUBLIC-RECORD");
+  const receiptClaim = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KC-TOWN-HALL-FUNDING-RECEIVED");
+  const correction = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT");
+  const rejection = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-FUNDING-RECEIVED-REJECT");
+  const manifest = knowledgeLifecycle.proofSurfaceManifests.find(({ id }) => id === "MANIFEST-PROOFS-KC-TOWN-HALL-CASE-STUDY");
+
+  assert.equal(task?.status, "completed");
+  assert.equal(task?.sourceIds.length, 5);
+  assert.equal(publicRecord?.maturity, "promoted");
+  assert.equal(receiptClaim?.maturity, "disallowed");
+  assert.equal(correction?.decision, "correct");
+  assert.equal(correction?.humanReviewStatus, "approved");
+  assert.equal(rejection?.decision, "reject");
+  assert.ok(manifest?.guardrails.some((item) => /Appropriation is not receipt/i.test(item)));
+
+  const publicObservationRoles = publicRecord?.observationIds.map((id) =>
+    relationshipRole(knowledgeLifecycle.observations.find((item) => item.id === id), publicRecord.id)
+  );
+  const receiptObservationRoles = receiptClaim?.observationIds.map((id) =>
+    relationshipRole(knowledgeLifecycle.observations.find((item) => item.id === id), receiptClaim.id)
+  );
+  assert.ok(publicObservationRoles?.includes("supports-boundary"));
+  assert.ok(publicObservationRoles?.includes("direct-support"));
+  assert.ok(!publicObservationRoles?.includes("contradicts"));
+  assert.ok(receiptObservationRoles?.includes("contradicts"));
+});
+
+test("shared observations carry candidate-specific evidence roles and limits", () => {
+  const broken = structuredClone(knowledgeLifecycle);
+  const observation = broken.observations.find(({ id }) => id === "OBS-KC-TOWN-HALL-COUNCIL-APPROPRIATION");
+  observation.candidateRelationships = observation.candidateRelationships.filter(({ candidateClaimId }) => candidateClaimId !== "CND-KC-TOWN-HALL-FUNDING-RECEIVED");
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /must define a candidate-specific evidence relationship for every linked candidate/);
+
+  const directSupport = retrieveKnowledgePalette({
+    projectId: "PRJ-NYC-ARTIST-COALITION",
+    evidenceRole: "direct-support"
+  });
+  assert.ok(directSupport.candidates.some(({ id }) => id === "CND-NYCA-CABARET-ADVOCACY"));
+  assert.ok(!directSupport.candidates.some(({ id }) => id === "CND-NYCA-CABARET-INSTRUMENTAL"));
 });
 
 test("the July 14 campaign press corpus remains complete, deduplicated, and queued for bounded close reading", () => {
@@ -112,7 +160,7 @@ test("rendered proof selections cannot outrun exact-route approval", () => {
   const broken = structuredClone(knowledgeLifecycle);
   const resume = broken.proofSurfaceManifests.find(({ route }) => route === "/resume");
   resume.proofIds = resume.proofIds.filter((id) => id !== "callnyc-civic-data-guidance");
-  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /Rendered proof callnyc-civic-data-guidance is not human-approved for \/resume/);
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /Rendered proof inventory does not match exact manifest for \/resume; missing approvals: callnyc-civic-data-guidance/);
 });
 
 test("canonical corrections resolve to current human approval", () => {
@@ -185,7 +233,7 @@ test("proof surface manifests prevent publication outside exact human-approved s
   const missing = structuredClone(knowledgeLifecycle);
   const homepage = missing.proofSurfaceManifests.find(({ route }) => route === "/");
   homepage.proofIds = homepage.proofIds.filter((id) => id !== "hje-revenue-growth-contribution");
-  assert.match(validateKnowledgeLifecycle(missing).join("\n"), /Public proof hje-revenue-growth-contribution lacks exact-surface human approval for homepage/);
+  assert.match(validateKnowledgeLifecycle(missing).join("\n"), /Rendered proof inventory does not match exact manifest for \/; missing approvals: hje-revenue-growth-contribution/);
 
   const wrongSurface = structuredClone(knowledgeLifecycle);
   wrongSurface.proofSurfaceManifests.find(({ route }) => route === "/lab/source-backed-team-memory").proofIds.push("hje-revenue-growth-contribution");
@@ -198,6 +246,22 @@ test("proof surface manifests prevent publication outside exact human-approved s
   const duplicateRoute = structuredClone(knowledgeLifecycle);
   duplicateRoute.proofSurfaceManifests[1].route = "/";
   assert.match(validateKnowledgeLifecycle(duplicateRoute).join("\n"), /Multiple proof surface manifests govern \//);
+});
+
+test("the downloadable resume is an exact governed destination", () => {
+  const route = "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf";
+
+  const missingManifest = structuredClone(knowledgeLifecycle);
+  missingManifest.proofSurfaceManifests = missingManifest.proofSurfaceManifests.filter((item) => item.route !== route);
+  assert.match(validateKnowledgeLifecycle(missingManifest).join("\n"), /Rendered proof route \/resume\/Jamie-Burkart-Resume-Technical-Project-Manager\.pdf has no exact-route manifest/);
+
+  const missingCanonicalLink = structuredClone(knowledgeLifecycle);
+  missingCanonicalLink.proofSurfaceManifests.find((item) => item.route === route).canonicalClaimIds = [];
+  assert.match(validateKnowledgeLifecycle(missingCanonicalLink).join("\n"), /Consequential proof kc-town-hall-public-benefit-documentation lacks canonical claim CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019 on exact destination/);
+
+  const unauthorized = structuredClone(knowledgeLifecycle);
+  unauthorized.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT").allowedSurfaces = unauthorized.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT").allowedSurfaces.filter((surface) => surface !== route);
+  assert.match(validateKnowledgeLifecycle(unauthorized).join("\n"), /Active canonical projection CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019 lacks current human approval/);
 });
 
 test("offline lifecycle records are not exported through the application barrel", () => {
@@ -217,7 +281,22 @@ test("the intake command emits a validated capture receipt", () => {
   const receipt = JSON.parse(output);
   assert.equal(receipt.state, "captured");
   assert.equal(receipt.visibility, "public-safe");
+  assert.equal(receipt.projectAssociationStatus, "assigned");
   assert.deepEqual(receipt.projectIds, ["PRJ-CALLNYC"]);
+});
+
+test("intake preserves a lead before its project is known", () => {
+  const output = execFileSync(process.execPath, [
+    "scripts/intake-knowledge-lead.mjs",
+    "--title", "An uncategorized archival fragment",
+    "--kind", "memory",
+    "--summary", "A public-safe fragment awaiting project triage.",
+    "--date", "2026-07-15"
+  ], { encoding: "utf8" });
+  const lead = JSON.parse(output);
+  assert.equal(lead.projectAssociationStatus, "unassigned");
+  assert.deepEqual(lead.projectIds, []);
+  assert.match(lead.nextAction, /Assign the lead to a project or create a project stub/);
 });
 
 test("the tracked append-only intake receipts remain valid", () => {
@@ -226,6 +305,9 @@ test("the tracked append-only intake receipts remain valid", () => {
   const amendments = readFileSync("docs/knowledge-bank/intake/amendments.jsonl", "utf8")
     .split("\n").filter(Boolean).map((line) => intakeAmendmentSchema.parse(JSON.parse(line)));
   assert.deepEqual(validateIntakeReceipts(receipts, undefined, amendments), []);
+  const unassigned = receipts.find(({ id }) => id === "LEAD-STRUCTURE-GROWS-FROM-MATERIAL");
+  assert.equal(unassigned?.initialProjectAssociationStatus, "unassigned");
+  assert.deepEqual(unassigned?.initialProjectIds, []);
   const amendment = amendments.find(({ receiptId }) => receiptId === "LEAD-NYCA-LET-NYC-DANCE-PRESS-CORPUS");
   assert.match(amendment?.previousValue ?? "", /20-article/);
   assert.match(amendment?.replacementValue ?? "", /21-article/);
@@ -343,6 +425,8 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.equal(publicCallNyc.candidates.length, 5);
   assert.deepEqual(publicCallNyc.projects.map(({ id }) => id), ["PRJ-CALLNYC"]);
   assert.ok(publicCallNyc.publicationAuthorizations.every(({ authorized }) => authorized));
+  assert.deepEqual(publicCallNyc.researchTasks, []);
+  assert.deepEqual(publicCallNyc.mediaLeads, []);
 
   const homepageProofs = retrieveKnowledgePalette({ proofSurface: "/", publicationSafe: true });
   assert.equal(homepageProofs.proofSurfaceManifest?.id, "MANIFEST-PROOFS-HOMEPAGE");
@@ -350,15 +434,38 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
     homepageProofs.proofs.map(({ id }) => id),
     homepageProofs.proofSurfaceManifest?.proofIds
   );
+  assert.deepEqual(homepageProofs.canonicalClaims, []);
+  assert.deepEqual(homepageProofs.candidates, []);
+  assert.deepEqual(homepageProofs.researchTasks, []);
+  assert.deepEqual(homepageProofs.mediaLeads, []);
 
   const sundayDinnerProofs = retrieveKnowledgePalette({ proofSurface: "/work/196-sunday-dinner", publicationSafe: true });
   assert.deepEqual(sundayDinnerProofs.projects.map(({ id }) => id), ["PRJ-SUNDAY-DINNER-196"]);
   assert.deepEqual(sundayDinnerProofs.proofs.map(({ id }) => id), ["sunday-dinner-196-participation-infrastructure"]);
 
+  const kcProofs = retrieveKnowledgePalette({ proofSurface: "/work/kc-town-hall", publicationSafe: true });
+  assert.deepEqual(kcProofs.projects.map(({ id }) => id), ["PRJ-KC-TOWN-HALL"]);
+  assert.deepEqual(kcProofs.candidates.map(({ id }) => id), ["CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
+  assert.deepEqual(kcProofs.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"]);
+  assert.deepEqual(kcProofs.researchTasks, []);
+  assert.deepEqual(kcProofs.mediaLeads, []);
+
+  const resumePdf = retrieveKnowledgePalette({ proofSurface: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", publicationSafe: true });
+  assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL"]);
+  assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"]);
+  assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
+  assert.deepEqual(resumePdf.researchTasks, []);
+  assert.deepEqual(resumePdf.mediaLeads, []);
+
   const plannedNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study" });
   const publicNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study", publicationSafe: true });
   assert.ok(plannedNightlife.candidates.length > 0);
   assert.deepEqual(publicNightlife.candidates, []);
+  assert.deepEqual(publicNightlife.projects, []);
+  assert.deepEqual(publicNightlife.canonicalClaims, []);
+  assert.deepEqual(publicNightlife.proofs, []);
+  assert.deepEqual(publicNightlife.researchTasks, []);
+  assert.deepEqual(publicNightlife.mediaLeads, []);
   assert.throws(() => retrieveKnowledgePalette({ publicationSafe: true }), /requires an exact surface/);
 });
 
@@ -374,7 +481,7 @@ test("retrieval composes cross-project palettes by time, entity, evidence, prior
     "PRJ-GREAT-ACCOMMODATIONS",
     "PRJ-OPEN-HOUSE"
   ]);
-  assert.ok(earlyPractice.candidates.every(({ observationIds }) => observationIds.some((id) => knowledgeLifecycle.observations.find((item) => item.id === id)?.evidenceRole === "direct-support")));
+  assert.ok(earlyPractice.candidates.every((candidate) => candidate.observationIds.some((id) => relationshipRole(knowledgeLifecycle.observations.find((item) => item.id === id), candidate.id) === "direct-support")));
 
   const policy = retrieveKnowledgePalette({
     sourceKind: "government-record",

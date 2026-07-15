@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "capturedAt": "2026-07-14",
+  "sourceInputs": [
+    "apps/www/src",
+    "apps/www/next.config.ts",
+    "apps/www/package.json"
+  ],
+  "sourceExcludes": [
+    "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+    "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
+  ],
+  "sourceSha256": "dba66126a7f76d905ea5f9e0fff3378906ddcd97e58daa63a39ca363a60afb5a",
+  "qaMatrix": {
+    "resultsPath": "docs/qa/evals-K/route-matrix.json",
+    "routes": 14,
+    "viewports": ["1440x1000", "390x844", "320x740"],
+    "observations": 42,
+    "failures": 0,
+    "checks": [
+      "status",
+      "expected copy",
+      "one H1",
+      "horizontal overflow",
+      "broken images",
+      "duplicate IDs",
+      "empty links",
+      "contrast",
+      "source disclosure",
+      "keyboard traversal",
+      "reduced motion",
+      "console errors",
+      "page errors"
+    ]
+  },
+  "captures": [
+    {
+      "route": "/work/kc-town-hall",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
+      "artifactSha256": "8d212ff40c9a7e0cd2630d68cf805d3ff62c4b5a685c641e7a68134d03fb5d38"
+    }
+  ]
+}

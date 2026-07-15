@@ -20,6 +20,7 @@ export type ProofSurface =
   | "case-study"
   | "lab"
   | "about"
+  | "resume-pdf"
   | "internal-only";
 
 export type ProofClaim = {
@@ -40,6 +41,7 @@ export type ProofClaim = {
   relatedProjects: string[];
   relatedCapabilities: string[];
   canonicalClaimIds?: string[];
+  requiredCanonicalClaimIds?: string[];
   lastReviewed: string;
 };
 
@@ -66,7 +68,7 @@ export const proofClaims: ProofClaim[] = [
       "Raw community materials",
       "Internal operating details"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "about"],
     relatedProjects: [],
     relatedCapabilities: ["technical-project-management", "product-operations", "implementation"],
     lastReviewed: "2026-07-07"
@@ -96,7 +98,7 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Sensitive operating practices"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
     lastReviewed: "2026-07-07"
@@ -129,7 +131,7 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Internal analytics"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "implementation"],
     lastReviewed: "2026-07-07"
@@ -156,7 +158,7 @@ export const proofClaims: ProofClaim[] = [
       "Legal guidance"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
     lastReviewed: "2026-07-11"
@@ -195,7 +197,7 @@ export const proofClaims: ProofClaim[] = [
       "Raw strategy context",
       "Unapproved quotes"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
     lastReviewed: "2026-07-07"
@@ -227,7 +229,7 @@ export const proofClaims: ProofClaim[] = [
       "Private correspondence",
       "Unapproved collaborator notes"
     ],
-    surfaces: ["resume", "technical-operations", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
     lastReviewed: "2026-07-07"
@@ -262,7 +264,7 @@ export const proofClaims: ProofClaim[] = [
       "Private correspondence",
       "Unapproved collaborator details"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
     canonicalClaimIds: ["CLM-NYCA-CABARET-REPEAL-ADVOCACY-2017"],
@@ -298,7 +300,7 @@ export const proofClaims: ProofClaim[] = [
       "Unapproved collaborator names",
       "Legal-review materials"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study", "about"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study", "about"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: [
       "coalition-operations",
@@ -337,7 +339,7 @@ export const proofClaims: ProofClaim[] = [
       "Geolocation rows",
       "Unapproved community artifacts"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
     lastReviewed: "2026-07-07"
@@ -375,7 +377,7 @@ export const proofClaims: ProofClaim[] = [
       "Raw community records",
       "Unapproved photos"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
     lastReviewed: "2026-07-13"
@@ -433,19 +435,20 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, carrying a $490,539 proposal through Board recommendation and City Council appropriation. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated after project withdrawal.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Public records identify him as the proposal's presenter; the Council accepted the Board recommendation and appropriated $490,539 to the project account in 2019. A 2022 update listed no funds disbursed, and a 2024 ordinance reappropriated the unused award after KC Town Hall withdrew.",
     sourceBasis:
-      "Approved resume language, public-safe project context, and Kansas City CCED Board minutes naming Jamie as presenter and recording the $490,539 recommendation.",
+      "Approved resume language, public-safe project context, CCED Board minutes naming Jamie as presenter, 2019 Council appropriation and resolution records, the 2022 project-status table, and the 2024 withdrawal and reappropriation ordinance.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Appropriation must never be compressed into receipt: keep the no-disbursement and reappropriation endpoint attached to any public funding language.",
     doNotSay: [
-      "Final funding received",
-      "Current property status",
+      "KC Town Hall received or spent $490,539",
+      "The project was completed",
+      "Why the project withdrew",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded Council actions"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -454,10 +457,12 @@ export const proofClaims: ProofClaim[] = [
       "Banking details",
       "Stakeholder details"
     ],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-13"
+    canonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"],
+    requiredCanonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",
@@ -513,7 +518,7 @@ export const proofClaims: ProofClaim[] = [
       "HR context",
       "Confidential team information"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "about"],
     relatedProjects: [],
     relatedCapabilities: ["delivery-coordination", "risk-surfacing", "handoffs"],
     lastReviewed: "2026-07-07"
@@ -540,7 +545,7 @@ export const proofClaims: ProofClaim[] = [
       "Private cohort materials",
       "Unapproved evaluations"
     ],
-    surfaces: ["resume", "lab", "about"],
+    surfaces: ["resume", "resume-pdf", "lab", "about"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
     lastReviewed: "2026-07-07"
@@ -593,6 +598,23 @@ export const resumeProofHighlights = [
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "ai-evals-professional-development"
+].map(requireReadyOrCarefulProof);
+
+export const resumePdfProofs = [
+  ...resumeProofHighlights,
+  requireReadyOrCarefulProof("technical-operations-operating-backbone"),
+  requireReadyOrCarefulProof("kc-town-hall-public-benefit-documentation")
+];
+
+export const aboutProofs = [
+  "career-operating-structure-14-years",
+  "nyc-artist-coalition-civic-systems",
+  "technical-operations-operating-backbone",
+  "ai-evals-professional-development"
+].map(requireReadyOrCarefulProof);
+
+export const labProofs = [
+  "source-backed-team-memory-method"
 ].map(requireReadyOrCarefulProof);
 
 export const technicalOperationsProofRows = [

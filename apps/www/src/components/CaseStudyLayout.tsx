@@ -72,8 +72,8 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <References pageId={item.slug} />
         </div>
       </div>
-      <div className="mt-12 lg:hidden">
-        <CreditsList idPrefix="mobile-primary-" item={item} />
+      <div className="mt-12">
+        <CreditsList idPrefix="primary-" item={item} />
         <div className="mt-8 flex flex-wrap gap-3">
           <JBButton href={site.resumePath} variant="secondary" download>
             Download resume PDF
@@ -88,23 +88,12 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           </summary>
           <div className="mt-8">
             <SupplementalEvidence
-              idPrefix="mobile-supplemental-"
+              idPrefix="supplemental-"
               includeCredits={false}
               item={item}
             />
           </div>
         </details>
-      </div>
-      <div className="mt-14 hidden lg:block">
-        <SupplementalEvidence idPrefix="desktop-" item={item} />
-        <div className="mt-10 flex flex-wrap gap-3">
-          <JBButton href={site.resumePath} variant="secondary" download>
-            Download resume PDF
-          </JBButton>
-          <JBButton href="/contact" variant="ghost">
-            Contact Jamie
-          </JBButton>
-        </div>
       </div>
     </article>
   );

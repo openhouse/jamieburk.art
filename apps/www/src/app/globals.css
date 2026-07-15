@@ -274,20 +274,6 @@ h2 {
   font-weight: 700;
 }
 
-@media (min-width: 48rem) {
-  .jb-endnotes-disclosure {
-    margin-top: 0;
-  }
-
-  .jb-endnotes-disclosure > summary {
-    display: none;
-  }
-
-  .jb-endnotes-disclosure:not([open]) > ol {
-    display: grid;
-  }
-}
-
 @media print {
   .jb-citation a {
     color: inherit;

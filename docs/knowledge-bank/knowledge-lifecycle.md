@@ -18,8 +18,10 @@ lead -> source -> atomic observation -> candidate claim -> research task
 ```
 
 1. **Capture generously.** A URL, memory, metric, document, collaborator note,
-   or visual artifact becomes a stable lead with public-safe provenance, project
-   and entity associations, a visibility boundary, and a next action.
+   or visual artifact becomes a stable lead with public-safe provenance, a
+   visibility boundary, and a next action. A lead may enter an explicit
+   `unassigned` inbox before its project is known; assignment or project-stub
+   creation then becomes its first triage action.
    The append-only receipt preserves only immutable capture facts; triage state,
    source associations, candidate links, and research tasks may mature later.
 2. **Preserve privately held material by reference.** Raw archives, private
@@ -29,7 +31,9 @@ lead -> source -> atomic observation -> candidate claim -> research task
    A source describes what it generally supports and what it does not establish.
 4. **Decompose before claiming.** Each atomic observation records one useful
    proposition or boundary, its source locator, certainty, evidence role, and
-   candidate-claim relationships.
+   candidate-claim relationships. When an observation serves multiple
+   candidates, each relationship separately states what it supports, its role,
+   and its limitations for that proposition.
 5. **Research uncertainty.** Memories and ambitious causal claims are valuable
    leads. Research tasks state the decisive question, methods, sources,
    findings, limitations, and next actions. `Not recovered` never means
@@ -73,6 +77,14 @@ npm run knowledge:intake -- \
   --write true
 ```
 
+An uncategorized fragment can be preserved before its project is known by
+omitting `--project`; the receipt records an `unassigned` project state and the
+default next action requires assignment or project-stub creation.
+The first retained example is Jamie's public-safe method fragment, "Structure
+grows out of the material," which remains unassigned until review determines
+whether it belongs to professional method, writer's voice, or a future
+cross-project principle.
+
 When the item duplicates an existing lead, repeat the command with
 `--duplicate-of LEAD-ID`; the intake command rejects likely duplicates that do
 not declare that relationship.
@@ -99,6 +111,8 @@ active decisions that name the surface even when human review is pending. The
 publication-safe mode requires an exact surface and returns only candidates with
 an active, human-approved `promote` or `correct` decision for that surface. Its
 `publicationAuthorizations` result makes the governing decision IDs explicit.
+All publication-safe query modes omit research tasks and media; those records
+remain available only to internal planning queries.
 For the parallel proof layer, `--proof-surface` accepts an exact public route
 and returns only the records selected by that route's Jamie-approved manifest.
 
@@ -121,11 +135,22 @@ approved for that exact surface; every claim already on the target page must be
 selected or explicitly excluded with a reason. Independently of briefs, every
 active canonical projection is rejected unless it resolves to current human
 approval for every destination. Excluding a claim from a brief cannot bypass
-that requirement. Every Ready or Careful proof-to-surface relationship must
-also appear in at least one approved exact-route manifest.
+that requirement. Every Ready or Careful proof used publicly must appear in an
+approved exact-destination manifest. The validator inventories all rendered
+routes and the downloadable resume, compares complete proof sets rather than
+accepting a page-category fallback, and requires any consequential canonical
+link named by a proof record on every destination that selects it.
 
 `docs/knowledge-bank/projection-map.md` is generated from those manifests. The
 lifecycle check fails if the readable map drifts from the governed records.
+The public-safety gate parses the shipped resume PDF, and the visual-evidence
+gate binds checked-in screenshots to the application-source digest that
+produced them.
+
+Publication-safe proof-destination retrieval is fail-closed: canonical claims
+come only from the exact manifest, candidates must both target a selected claim
+and hold current approval for that destination, and research tasks or media do
+not enter the public palette without their own future explicit selection path.
 
 ## Current research run
 

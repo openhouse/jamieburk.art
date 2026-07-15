@@ -4,8 +4,9 @@ This suite evaluates the public-safe system that accepts fragments, decomposes
 sources, develops candidate claims through research, promotes defensible claims
 without automatically projecting them, and composes selective public arguments.
 It also requires universal exact-surface authorization for active canonical
-projections and Jamie-approved manifests for every Ready or Careful proof
-surface.
+projections and Jamie-approved manifests for every rendered route and
+downloadable proof destination. Consequential PDF wording must retain canonical
+claim linkage, exact-destination approval, and deterministic artifact checks.
 
 Run the deterministic loop:
 

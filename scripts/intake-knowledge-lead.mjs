@@ -35,8 +35,9 @@ function readQueue(queuePath) {
 
 try {
   const args = argsToObject(process.argv.slice(2));
-  for (const required of ["title", "kind", "summary", "project"]) if (!args[required]) throw new Error(`Missing --${required}`);
+  for (const required of ["title", "kind", "summary"]) if (!args[required]) throw new Error(`Missing --${required}`);
   const capturedAt = args.date ?? new Date().toISOString().slice(0, 10);
+  const projectIds = list(args.project);
   const lead = leadSchema.parse({
     id: args.id ?? `LEAD-${capturedAt.replaceAll("-", "")}-${randomUUID().slice(0, 8).toUpperCase()}-${slug(args.title)}`,
     title: args.title,
@@ -47,14 +48,17 @@ try {
     visibility: args.visibility ?? "public-safe",
     publicSummary: args.summary,
     publicUrl: args.url,
-    projectIds: list(args.project),
+    projectAssociationStatus: projectIds.length ? "assigned" : "unassigned",
+    projectIds,
     entityIds: list(args.entities),
     sourceIds: list(args.sources),
     candidateClaimIds: [],
     researchTaskIds: [],
     protectedLocatorId: args.locator,
     duplicateOfLeadId: args["duplicate-of"],
-    nextAction: args.next ?? "Triage the lead, associate canonical sources, and create the smallest useful research task."
+    nextAction: args.next ?? (projectIds.length
+      ? "Triage the lead, associate canonical sources, and create the smallest useful research task."
+      : "Assign the lead to a project or create a project stub, then associate sources and the smallest useful research task.")
   });
   if (lead.visibility === "private-reference" && !lead.protectedLocatorId) throw new Error("Private-reference intake requires an opaque --locator ID");
   if (lead.visibility === "private-reference" && lead.publicUrl) throw new Error("Private-reference intake cannot expose a public URL");
@@ -80,6 +84,7 @@ try {
     capturedBy: lead.capturedBy,
     visibility: lead.visibility,
     publicSummary: lead.publicSummary,
+    initialProjectAssociationStatus: lead.projectAssociationStatus,
     initialProjectIds: lead.projectIds,
     initialEntityIds: lead.entityIds,
     initialSourceIds: lead.sourceIds,

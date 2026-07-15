@@ -43,6 +43,26 @@ test("the founding-member proof resolves through a canonical corrected claim", (
   assert.deepEqual(correction?.approvedBy, ["Jamie Burkart"]);
 });
 
+test("the KC Town Hall projection pairs Council appropriation with the documented non-disbursement endpoint", () => {
+  const claim = knowledgeBank.claims.find(({ id }) => id === "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019");
+  const correction = knowledgeBank.corrections.find(({ id }) => id === "COR-KC-TOWN-HALL-COUNCIL-LIFECYCLE-2026");
+  const proof = proofClaims.find(({ id }) => id === "kc-town-hall-public-benefit-documentation");
+  const workSource = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const work = workSource.match(/title: "KC Town Hall LLC"[\s\S]*?knownOpenProtected:[\s\S]*?\n    }\n  }/)?.[0] ?? "";
+  const projection = getClaimProjection(claim.id, "case-study", "/work/kc-town-hall");
+  const sources = resolveCitationOccurrence("kc-town-hall", "public-record-2019").sources;
+
+  assert.match(projection.text, /Council accepted the recommendation and appropriated \$490,539/);
+  assert.match(projection.text, /no funds were disbursed/);
+  assert.match(projection.text, /reappropriated the unused award/);
+  assert.equal(sources.length, 5);
+  assert.deepEqual(correction?.approvedBy, ["Jamie Burkart"]);
+  assert.match(proof.guardrail, /Appropriation must never be compressed into receipt/);
+  assert.match(work, /no funds were disbursed/);
+  assert.match(work, /reappropriated the unused award/);
+  assert.doesNotMatch(`${projection.text}\n${proof.publicWording}`, /received or spent \$490,539/i);
+});
+
 test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-date-time").sources.map((item) => item.number), [1, 2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
@@ -73,7 +93,7 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  assert.equal(knowledgeBank.corrections.length, 5);
 });
 
 test("negative research preserves scope and limitations", () => {
