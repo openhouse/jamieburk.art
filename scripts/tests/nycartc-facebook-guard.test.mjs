@@ -77,7 +77,12 @@ const prohibited = [
   "Campaign impact is evidenced by the visible response counters.",
   "Jamie could enter the Page back office and publish on behalf of the coalition.",
   "It is not disputed that Jamie authored every Facebook post.",
-  "There is no doubt that the reactions establish public reach."
+  "There is no doubt that the reactions establish public reach.",
+  "The coalition Page copy was penned by Jamie.",
+  "The Council involvement explains why it appears throughout the routing ledger.",
+  "Officials presence at coalition activities is established by the repeated Council references.",
+  "The 611 reposts drove the Council decision.",
+  "Visible comment volume delivered the campaign result."
 ];
 
 for (const statement of prohibited) {
@@ -100,7 +105,10 @@ const bounded = [
   "The whole currently recoverable timeline received a disposition; historical posts may still be missing.",
   "Jamie recalls handling much of the Page publishing, but no record-level attribution was recovered.",
   "Council offices appear in the routing classification; this does not establish interaction or support.",
-  "The response floor is preserved only as a mutable interface observation, not attention or traction."
+  "The response floor is preserved only as a mutable interface observation, not attention or traction.",
+  "Routing references do not establish official presence or involvement.",
+  "Current comments do not establish a Council decision or campaign result.",
+  "Jamie may have drafted Page copy, but authorship remains unresolved."
 ];
 
 for (const statement of bounded) {

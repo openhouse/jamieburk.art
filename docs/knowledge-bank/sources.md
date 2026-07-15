@@ -109,9 +109,9 @@ The governed Facebook post inventory is documented in
 `docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md`.
 Two terminal traversals recovered the same 444 currently available post
 identities from January 2017 through September 2021. The source model keeps
-the Page identity, 64 outbound-link occurrences, 39 unique URLs, 33 normalized
-public-safe routes, stakeholder references, and mutable interaction displays
-distinct. A posted destination is a source-discovery lead until close-read;
+the Page identity, 64 outbound-link occurrences, 33 normalized public-safe
+routes, stakeholder references, and mutable interaction displays distinct. A
+posted destination is a source-discovery lead until close-read;
 Page identity does not identify a human author, and current counters do not
 measure historical reach or impact.
 
