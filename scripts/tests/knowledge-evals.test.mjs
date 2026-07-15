@@ -19,6 +19,10 @@ import {
   personalWowListFacebookEventKnowledge,
   personalWowListFacebookEventReviewSummary
 } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07.ts";
+import {
+  wowListFacebookPostClaimIds,
+  wowListFacebookPostReviewSummary
+} from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
@@ -40,6 +44,10 @@ const nycacFacebookEventPopulationPath = path.join(
 const personalWowListFacebookEventPopulationPath = path.join(
   repoRoot,
   suite.pilot.personalWowListFacebookEvents.manifestPath
+);
+const wowListFacebookPostPopulationPath = path.join(
+  repoRoot,
+  suite.pilot.wowListFacebookPosts.manifestPath
 );
 
 function loadCallNycPopulation() {
@@ -68,6 +76,10 @@ function loadNycacFacebookEventPopulation() {
 
 function loadPersonalWowListFacebookEventPopulation() {
   return JSON.parse(readFileSync(personalWowListFacebookEventPopulationPath, "utf8"));
+}
+
+function loadWowListFacebookPostPopulation() {
+  return JSON.parse(readFileSync(wowListFacebookPostPopulationPath, "utf8"));
 }
 
 function refreshFieldPracticeApproval(targetSuite) {
@@ -123,13 +135,13 @@ function refreshArchiveProductionApproval(targetSuite) {
   })).digest("hex");
 }
 
-test("knowledge-bank gate records two fresh NTER CHNG protected-artifact holdout passes", () => {
+test("knowledge-bank gate records two fresh WOW List Facebook post holdout passes", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-c",
-    "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-d"
+    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-a",
+    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -3494,5 +3506,177 @@ test("personal Facebook review configuration is structurally locked", () => {
     assert.equal(result.contentApprovals.personalWowListFacebookEvents.reviewLocksMatch, false);
   } finally {
     personalWowListFacebookEventReviewSummary.personalDisplayedInstances = original;
+  }
+});
+
+test("WOW List Facebook post production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  const population = loadWowListFacebookPostPopulation();
+
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+  )?.score, 5);
+  assert.equal(population.population.length, 57);
+  assert.equal(population.postedUrlInventory.length, 55);
+  assert.equal(population.population.filter((row) =>
+    row.relationship === "shared-source-card"
+  ).length, 24);
+  assert.equal(result.contentApprovals.wowListFacebookPosts.reviewLocksMatch, true);
+});
+
+test("WOW List Facebook post eval rejects missing and count-preserving row mutations", () => {
+  const mutations = [
+    (population) => population.population.pop(),
+    (population) => {
+      [population.population[0].publishedAt, population.population[1].publishedAt] =
+        [population.population[1].publishedAt, population.population[0].publishedAt];
+    },
+    (population) => {
+      population.population[0].contentFingerprint = "a".repeat(64);
+    },
+    (population) => {
+      [population.population[0].sharedSourceLabels, population.population[1].sharedSourceLabels] =
+        [population.population[1].sharedSourceLabels, population.population[0].sharedSourceLabels];
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const population = loadWowListFacebookPostPopulation();
+    mutate(population);
+    const result = evaluateKnowledgeBank(suite, { wowListFacebookPostPopulation: population });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+    )?.score, 1);
+    assert.equal(result.accepted, false);
+  }
+});
+
+test("WOW List Facebook public census rejects raw content and session fields", () => {
+  const forbiddenMutations = [
+    ["body", "raw post body"],
+    ["message", "raw post message"],
+    ["commentText", "private comment"],
+    ["reactionIdentities", ["Person Name"]],
+    ["sessionToken", "secret"]
+  ];
+
+  for (const [key, value] of forbiddenMutations) {
+    const population = loadWowListFacebookPostPopulation();
+    population.population[0][key] = value;
+    const result = evaluateKnowledgeBank(suite, { wowListFacebookPostPopulation: population });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+    )?.score, 1, key);
+    assert.equal(result.accepted, false);
+  }
+});
+
+test("WOW List Facebook eval rejects authorship, relationship, and source-role inflation", () => {
+  const mutations = [
+    (population) => {
+      population.population[0].relationship = "jamie-authored-page-post";
+    },
+    (population) => {
+      population.postedUrlInventory.find((row) =>
+        row.sourceRole === "venue-safety-and-survival"
+      ).sourceRole = "independent-wowlist-coverage";
+    },
+    (population) => {
+      population.method.limitations = population.method.limitations.filter((item) =>
+        !/does not identify the human author/i.test(item)
+      );
+    },
+    (population) => {
+      population.method.limitations = population.method.limitations.filter((item) =>
+        !/Business Suite's displayed Lifetime filter/i.test(item)
+      );
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const population = loadWowListFacebookPostPopulation();
+    mutate(population);
+    const result = evaluateKnowledgeBank(suite, { wowListFacebookPostPopulation: population });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+    )?.score, 1);
+    assert.equal(result.accepted, false);
+  }
+});
+
+test("WOW List Facebook eval rejects interaction-count inflation and semantic relabeling", () => {
+  const mutations = [
+    (population) => {
+      population.population[41].displayedInteractions.shares = 2900;
+      population.displayedInteractionSummary.displayedShares = 2920;
+      population.displayedInteractionSummary.maxSharesOnOneRow = 2900;
+    },
+    (population) => {
+      population.displayedInteractionSummary.boundary =
+        "Displayed shares prove reach, attendance, endorsement, and impact.";
+    },
+    (population) => {
+      population.population[0].missionTags = ["formal-partnership-and-impact"];
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const population = loadWowListFacebookPostPopulation();
+    mutate(population);
+    const result = evaluateKnowledgeBank(suite, { wowListFacebookPostPopulation: population });
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+    )?.score, 1);
+    assert.equal(result.accepted, false);
+  }
+});
+
+test("WOW List Facebook held projections reject sole credit and impact claims", () => {
+  const mutations = [
+    [wowListFacebookPostClaimIds.operatingRecord, "Jamie authored every WOW List Facebook post."],
+    [wowListFacebookPostClaimIds.organizerWorkflows, "Jamie alone created and managed WOW List."],
+    [wowListFacebookPostClaimIds.careAndMobilization, "Facebook shares prove public impact and venue recovery."]
+  ];
+
+  for (const [claimId, text] of mutations) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const projection = claim?.projections[0];
+    assert.ok(projection);
+    const original = projection.text;
+    try {
+      projection.text = text;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(result.criteria.find((item) =>
+        item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+      )?.score, 1, text);
+      assert.equal(result.contentApprovals.wowListFacebookPosts.reviewLocksMatch, false);
+    } finally {
+      projection.text = original;
+    }
+  }
+});
+
+test("WOW List Facebook report and review configuration are structurally locked", () => {
+  const report = readFileSync(suite.pilot.wowListFacebookPosts.reportPath, "utf8");
+  let result = evaluateKnowledgeBank(suite, {
+    wowListFacebookPostReport: report.replace(
+      /It\s+is not a native Meta export or proof of complete lifetime history\./,
+      "It is the complete lifetime history."
+    )
+  });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+  )?.score, 1);
+
+  const original = wowListFacebookPostReviewSummary.exposedDistinctPosts;
+  try {
+    wowListFacebookPostReviewSummary.exposedDistinctPosts = 58;
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+    )?.score, 1);
+    assert.equal(result.contentApprovals.wowListFacebookPosts.reviewLocksMatch, false);
+  } finally {
+    wowListFacebookPostReviewSummary.exposedDistinctPosts = original;
   }
 });

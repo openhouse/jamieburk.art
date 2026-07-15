@@ -481,6 +481,17 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-wowlist-facebook-posts-2026-07-15",
+      "completedAt": "2026-07-15T16:05:40Z",
+      "lens": "Protocol reset because the prior holdout state predates the 57-post WOW List Facebook live-feed census, 55-route URL inventory, organizer-workflow and care-routing analysis, displayed-interaction boundaries, native-export gap, held projection decision, and twentieth adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the frozen 57-row population reconciliation, raw-body and social-graph exclusions, URL source roles, shared-source and post-authorship semantics, collective credit, displayed-interaction limits, Business Suite versus live-feed boundary, native-export gap, held website projection, and count-preserving mutation resistance."
+      ]
     }
   ]
 }

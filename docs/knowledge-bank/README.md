@@ -173,3 +173,12 @@ and its
 for the complete recovered `@wowlist` profile population, all 35 posted URLs,
 historical product-workflow findings, bounded external-adoption evidence, and
 the account-owned engagement audit.
+
+See
+[projects/wowlist-facebook-posts.md](projects/wowlist-facebook-posts.md)
+and its
+[57-row public-safe census](../../apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json)
+for every distinct post exposed by the authenticated WOW List Facebook feed on
+the capture date, all 55 posted URLs, organizer-workflow and care-routing
+patterns, displayed-interaction boundaries, and the native-export and
+post-authorship gaps.

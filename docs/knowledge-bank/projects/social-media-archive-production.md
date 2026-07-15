@@ -201,6 +201,33 @@ The complete method, URL inventory, source-role table, adoption ledger, and
 anti-inflation boundaries are in the
 [WOW List full social-population report](wowlist-social-population.md).
 
+### Facebook post population
+
+An authenticated page-owner pass separately recovered every distinct post
+exposed by the WOW List Facebook feed on July 15, 2026: 57 dated posts spanning
+April 2015 through March 2018. The public-safe ledger preserves 55 distinct
+posted URLs, including 30 WOW List routes and 25 external source routes. It
+classifies 17 product-onboarding or use records, 16 cross-city organizer
+records, 12 venue-safety or survival records, six mutual-aid or civic records,
+and three participatory product-governance records.
+
+Twenty-four posts display shared-source cards spanning artists, local
+organizers, advocacy groups, cultural spaces, and published media. These are
+source relationships, not unique stakeholder counts, formal partnerships, or
+post-level human authorship. At capture time, Facebook displayed likes on 41
+posts, comments on 12, and shares on ten. Those volatile counts are not reach,
+attendance, conversion, endorsement, mandate, or impact.
+
+Meta Business Suite's displayed `Lifetime` content window began in March 2019,
+after the recovered feed ended, and returned no activity. It could not serve as
+the historical population source. The stable terminal live-feed crawl and
+57-row reconciliation define completeness for this pass; a native owner export
+is still required for lifetime and publishing-identity claims.
+
+The complete method, 55-route inventory, source roles, privacy exclusions, and
+collective-credit boundary are in the
+[WOW List Facebook post report](wowlist-facebook-posts.md).
+
 ## KC Town Hall
 
 Authenticated Posts and Replies passes recovered all 183 items displayed by the

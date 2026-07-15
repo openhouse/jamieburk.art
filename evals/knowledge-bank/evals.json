@@ -891,6 +891,40 @@
       "sundayDinnerProofId": "sunday-dinner-196-participation-infrastructure",
       "wowListProofId": "wowlist-community-platform"
     },
+    "wowListFacebookPosts": {
+      "reviewedAt": "2026-07-15",
+      "manifestPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+      "reportPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "expectedPostCount": 57,
+      "expectedSharedSourceCards": 24,
+      "expectedPagePosts": 33,
+      "expectedDistinctPostedUrls": 55,
+      "expectedWowListUrls": 30,
+      "expectedExternalUrls": 25,
+      "expectedProductOnboardingRows": 17,
+      "expectedCrossCityOrganizerRows": 16,
+      "expectedParticipatoryGovernanceRows": 3,
+      "expectedVenueSafetyRows": 12,
+      "expectedMutualAidAndCivicRows": 6,
+      "expectedRowsWithLikes": 41,
+      "expectedDisplayedLikes": 87,
+      "expectedRowsWithComments": 12,
+      "expectedDisplayedComments": 16,
+      "expectedRowsWithShares": 10,
+      "expectedDisplayedShares": 49,
+      "expectedIntakeCount": 1,
+      "expectedObservationCount": 10,
+      "expectedSourceCount": 8,
+      "expectedClaimCount": 3,
+      "expectedInquiryCount": 3,
+      "operatingRecordClaimId": "CLM-WOWLIST-FACEBOOK-PUBLIC-OPERATING-RECORD",
+      "organizerWorkflowClaimId": "CLM-WOWLIST-FACEBOOK-ORGANIZER-WORKFLOWS",
+      "careAndMobilizationClaimId": "CLM-WOWLIST-FACEBOOK-CARE-AND-MOBILIZATION",
+      "nativeExportInquiryId": "INQ-WOWLIST-FACEBOOK-NATIVE-EXPORT",
+      "socialStewardshipInquiryId": "INQ-WOWLIST-FACEBOOK-SOCIAL-STEWARDSHIP",
+      "sourcePreservationInquiryId": "INQ-WOWLIST-FACEBOOK-LINKED-SOURCE-PRESERVATION",
+      "manifestSourceId": "SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026"
+    },
     "agencyGraph": {
       "expectedEntityCount": 31,
       "expectedRelationCount": 31,
@@ -1071,6 +1105,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 511 personal-profile event-card instances and the zero-card current WOW List owner surface have explicit public-safe dispositions; selected Jamie-attributed records, source routes, Sunday Dinner milestones, early participatory-practice leads, response semantics, profile-association limits, private-data exclusions, and historical-zero boundaries remain complete, auditable, and non-inflationary."
+    },
+    {
+      "id": "KB-EVAL-WOWLIST-FACEBOOK-POSTS",
+      "label": "WOW List Facebook post full-population archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 57 posts exposed by the capture-date authenticated live feed, all 55 posted URLs, displayed source relationships, organizer workflows, care and civic routing, interaction semantics, collective credit, raw-data exclusions, native-export limits, and selective non-projection remain complete, auditable, public-safe, and non-inflationary."
     }
   ],
   "hillClimb": {

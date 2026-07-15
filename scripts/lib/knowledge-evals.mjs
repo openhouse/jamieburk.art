@@ -23,6 +23,11 @@ import {
 } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { urbanhermitSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-population-2026-07.ts";
+import {
+  wowListFacebookPostClaimIds,
+  wowListFacebookPostKnowledge,
+  wowListFacebookPostReviewSummary
+} from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/wowlist-social-population-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
@@ -80,6 +85,14 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   wowListMdxSha256: "21106a4e2e5427f40eab679c5ae87838e29205e93e26e751960de588e5889429",
   sundayDinnerMdxSha256: "b2889ec0ccaac06e4e7e86b14ee9643d0d7cd0e02b727928b7270a776e31fa10",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
+});
+const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
+  manifestSha256: "9569a89fe16bafdbe5dc17468ac35d305bb9ca277b972d79b1d93c191dbf3017",
+  manifestContentSha256: "f0f4378b74587c801113aed310dfa8c3db4d17817e77613d475f670a1094a7b3",
+  governedModuleSha256: "8ee512cb02f3ad86ccfcdf84b00808d59ac1e67d014bcbc7d4e3b4e2db9cdcff",
+  canonicalKnowledgeSha256: "8273ededf586c5ae6e9599ab5304b41ccbc38d438dfa9ffb2379d7e6a07068a4",
+  reviewConfigurationSha256: "14ba1afbff59198d503b082c7676d511b8f0029cd11c872fc219cdfe57ba8d1b",
+  publicReportSha256: "4cea76ae0abcb95c3d898f27e55e92380cdd6947800ebeaaea57188ca0002685"
 });
 const NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS = Object.freeze({
   protectedIntakesSha256: "2479ac40c9228ec2b24fa7b1e9ce13c1cabcf0dead7e27878098ce4319d1a763",
@@ -3394,9 +3407,295 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       personalFacebookPrivateDataFree &&
       personalFacebookReviewLocksMatch
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations, ...nycacFacebookObservations, ...personalFacebookObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims, ...nycacFacebookClaims, ...personalFacebookClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries, ...nycacFacebookInquiries, ...personalFacebookInquiries];
+  const wowListFacebookPosts = suite.pilot.wowListFacebookPosts;
+  const wowListFacebookManifestPath = path.join(repoRoot, wowListFacebookPosts.manifestPath);
+  const wowListFacebookReportPath = path.join(repoRoot, wowListFacebookPosts.reportPath);
+  const wowListFacebookManifestText = readFileSync(wowListFacebookManifestPath, "utf8");
+  const wowListFacebookManifest = overrides.wowListFacebookPostPopulation ??
+    JSON.parse(wowListFacebookManifestText);
+  const wowListFacebookReport = overrides.wowListFacebookPostReport ??
+    readFileSync(wowListFacebookReportPath, "utf8");
+  const wowListFacebookRows = wowListFacebookManifest.population ?? [];
+  const wowListFacebookUrlRows = wowListFacebookManifest.postedUrlInventory ?? [];
+  const wowListFacebookIntakes = wowListFacebookPostKnowledge.intakeItems.map(
+    (item) => intakeById.get(item.id)
+  );
+  const wowListFacebookObservations = wowListFacebookPostKnowledge.observations.map(
+    (item) => observationById.get(item.id)
+  );
+  const wowListFacebookSources = wowListFacebookPostKnowledge.sources.map(
+    (item) => sourceById.get(item.id)
+  );
+  const wowListFacebookClaims = wowListFacebookPostKnowledge.claims.map(
+    (item) => claimById.get(item.id)
+  );
+  const wowListFacebookInquiries = wowListFacebookPostKnowledge.researchInquiries.map(
+    (item) => inquiryById.get(item.id)
+  );
+  const wowListFacebookOperatingClaim = claimById.get(wowListFacebookPosts.operatingRecordClaimId);
+  const wowListFacebookWorkflowClaim = claimById.get(wowListFacebookPosts.organizerWorkflowClaimId);
+  const wowListFacebookCareClaim = claimById.get(wowListFacebookPosts.careAndMobilizationClaimId);
+  const wowListFacebookNativeExportInquiry = inquiryById.get(wowListFacebookPosts.nativeExportInquiryId);
+  const wowListFacebookStewardshipInquiry = inquiryById.get(wowListFacebookPosts.socialStewardshipInquiryId);
+  const wowListFacebookSourceInquiry = inquiryById.get(wowListFacebookPosts.sourcePreservationInquiryId);
+  const wowListFacebookClaimIdSet = new Set(Object.values(wowListFacebookPostClaimIds));
+  const wowListFacebookPageOccurrences = knowledgeBank.pages.flatMap((page) =>
+    page.occurrences.filter((occurrence) => wowListFacebookClaimIdSet.has(occurrence.claimId))
+  );
+  const wowListFacebookOrdinals = new Set(wowListFacebookRows.map((row) => row.ordinal));
+  const wowListFacebookFingerprints = new Set(
+    wowListFacebookRows.map((row) => row.contentFingerprint)
+  );
+  const wowListFacebookUrlSet = new Set(wowListFacebookUrlRows.map((row) => row.url));
+  const wowListFacebookYearCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(wowListFacebookRows, (row) => row.publishedAt?.slice(0, 4)))
+      .map(([year, rows]) => [year, rows.length])
+  );
+  const wowListFacebookRelationshipCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(wowListFacebookRows, (row) => row.relationship))
+      .map(([relationship, rows]) => [relationship, rows.length])
+  );
+  const wowListFacebookSourceRoleCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(wowListFacebookUrlRows, (row) => row.sourceRole))
+      .map(([role, rows]) => [role, rows.length])
+  );
+  const countWowListFacebookTag = (key, tag) => wowListFacebookRows.filter(
+    (row) => row[key]?.includes(tag)
+  ).length;
+  const sumWowListFacebookInteraction = (key) => wowListFacebookRows.reduce(
+    (total, row) => total + (row.displayedInteractions?.[key] ?? 0),
+    0
+  );
+  const maxWowListFacebookInteraction = (key) => Math.max(
+    0,
+    ...wowListFacebookRows.map((row) => row.displayedInteractions?.[key] ?? 0)
+  );
+  const rowsWithWowListFacebookInteraction = (key) => wowListFacebookRows.filter(
+    (row) => (row.displayedInteractions?.[key] ?? 0) > 0
+  ).length;
+  const wowListFacebookEvidenceClosed = wowListFacebookClaims.every((claim) =>
+    claim?.evidence.length > 0 && claim.evidence.every((evidence) =>
+      evidence.supports.length > 0 && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const wowListFacebookPublicText = JSON.stringify({
+    manifest: wowListFacebookManifest,
+    intakes: wowListFacebookIntakes,
+    observations: wowListFacebookObservations,
+    sources: wowListFacebookSources,
+    claims: wowListFacebookClaims,
+    inquiries: wowListFacebookInquiries
+  }) + wowListFacebookReport;
+  const wowListFacebookPublicTextWithoutHashes = wowListFacebookPublicText.replace(
+    /\b[a-f0-9]{64}\b/gi,
+    ""
+  );
+  const wowListFacebookProjectionText = wowListFacebookClaims.flatMap((claim) =>
+    claim?.projections.map((projection) => projection.text) ?? []
+  ).join("\n");
+  const wowListFacebookPrivateDataFree =
+    !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(wowListFacebookPublicText) &&
+    !/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(wowListFacebookPublicText) &&
+    !/(?:^|[^\d])(?:\+?1[\s.-]*)?\(?\d{3}\)?[\s.-]*\d{3}[\s.-]*\d{4}(?=$|[^\d])/.test(wowListFacebookPublicTextWithoutHashes) &&
+    !/"(?:rawBody|body|message|messages|commentText|commentsText|reactionIdentities|followerIdentities|authenticatedUrl|sessionToken|cookie|capturePath)"\s*:/i.test(wowListFacebookPublicText);
+  const wowListFacebookAffirmativeSafe = [
+    /Jamie (?:authored|wrote|published) (?:all|every) (?:WOW List )?Facebook post/i,
+    /Jamie (?:alone|single-handedly|solely) (?:created|built|ran|managed) WOW List/i,
+    /(?:57 posts|57-post population)[^.]{0,100}(?:complete|entire) lifetime/i,
+    /(?:likes|comments|shares|reactions)[^.]{0,100}(?:prove|demonstrate|equal|represent)[^.]{0,100}(?:reach|attendance|conversion|endorsement|mandate|impact)/i,
+    /(?:source cards|shared sources)[^.]{0,100}(?:prove|establish|are) (?:formal )?partners/i,
+    /WOW List caused (?:the )?(?:funding|venue recovery|policy change|safety improvements)/i,
+    /Business Suite[^.]{0,120}proves? (?:that )?(?:no|zero) historical posts/i
+  ].every((pattern) => !pattern.test(wowListFacebookProjectionText));
+  const wowListFacebookReviewConfiguration = {
+    suite: wowListFacebookPosts,
+    reviewSummary: wowListFacebookPostReviewSummary,
+    claimIds: wowListFacebookPostClaimIds
+  };
+  const wowListFacebookManifestContentSha256 = createHash("sha256")
+    .update(JSON.stringify(wowListFacebookManifest))
+    .digest("hex");
+  const wowListFacebookCanonicalKnowledgeSha256 = createHash("sha256")
+    .update(JSON.stringify({
+      intakeItems: wowListFacebookIntakes,
+      observations: wowListFacebookObservations,
+      sources: wowListFacebookSources,
+      claims: wowListFacebookClaims,
+      researchInquiries: wowListFacebookInquiries
+    }))
+    .digest("hex");
+  const wowListFacebookReviewConfigurationSha256 = createHash("sha256")
+    .update(JSON.stringify(wowListFacebookReviewConfiguration))
+    .digest("hex");
+  const wowListFacebookReviewLocksMatch =
+    createHash("sha256").update(wowListFacebookManifestText).digest("hex") === WOWLIST_FACEBOOK_POST_REVIEW_LOCKS.manifestSha256 &&
+    wowListFacebookManifestContentSha256 === WOWLIST_FACEBOOK_POST_REVIEW_LOCKS.manifestContentSha256 &&
+    createHash("sha256").update(readFileSync(
+      path.join(repoRoot, "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07.ts"),
+      "utf8"
+    )).digest("hex") === WOWLIST_FACEBOOK_POST_REVIEW_LOCKS.governedModuleSha256 &&
+    wowListFacebookCanonicalKnowledgeSha256 === WOWLIST_FACEBOOK_POST_REVIEW_LOCKS.canonicalKnowledgeSha256 &&
+    wowListFacebookReviewConfigurationSha256 === WOWLIST_FACEBOOK_POST_REVIEW_LOCKS.reviewConfigurationSha256 &&
+    createHash("sha256").update(wowListFacebookReport).digest("hex") === WOWLIST_FACEBOOK_POST_REVIEW_LOCKS.publicReportSha256;
+  const wowListFacebookDiagnosticChecks = {
+    population: Boolean(
+      wowListFacebookManifest.schemaVersion === 1 &&
+      wowListFacebookManifest.reviewedAt === wowListFacebookPosts.reviewedAt &&
+      wowListFacebookManifest.project === "wowlist" &&
+      wowListFacebookManifest.platform === "facebook" &&
+      wowListFacebookManifest.populationReconciliation?.exposedDistinctPosts === wowListFacebookPosts.expectedPostCount &&
+      wowListFacebookManifest.populationReconciliation.ledgerRows === wowListFacebookPosts.expectedPostCount &&
+      wowListFacebookManifest.populationReconciliation.recoveredPublicMetadata === wowListFacebookPosts.expectedPostCount &&
+      wowListFacebookManifest.populationReconciliation.notRecovered === 0 &&
+      wowListFacebookRows.length === wowListFacebookPosts.expectedPostCount &&
+      wowListFacebookOrdinals.size === wowListFacebookPosts.expectedPostCount &&
+      wowListFacebookFingerprints.size === wowListFacebookPosts.expectedPostCount &&
+      wowListFacebookRows.every((row, index) =>
+        row.ordinal === index + 1 &&
+        /^201[5-8]-\d{2}-\d{2}$/.test(row.publishedAt) &&
+        /^[a-f0-9]{64}$/.test(row.contentFingerprint) &&
+        /^[a-f0-9]{64}$/.test(row.bodySha256) &&
+        row.bodyStored === false &&
+        row.disposition === "recovered-public-metadata" &&
+        ["shared-source-card", "wow-list-page-post"].includes(row.relationship) &&
+        row.missionTags?.length > 0 &&
+        row.stakeholderGroups?.length > 0 &&
+        Object.keys(row.displayedInteractions ?? {}).sort().join(",") === "comments,likes,shares" &&
+        Object.values(row.displayedInteractions ?? {}).every((value) => Number.isInteger(value) && value >= 0) &&
+        Object.keys(row).every((key) => [
+          "ordinal", "publishedAt", "relationship", "sharedSourceLabels", "postedUrls",
+          "missionTags", "stakeholderGroups", "displayedInteractions", "contentFingerprint",
+          "bodySha256", "bodyStored", "disposition"
+        ].includes(key))
+      )
+    ),
+    chronologyAndRelationships: Boolean(
+      wowListFacebookManifest.populationReconciliation.dateRange?.earliest === "2015-04-25" &&
+      wowListFacebookManifest.populationReconciliation.dateRange.latest === "2018-03-22" &&
+      Object.entries(wowListFacebookManifest.populationReconciliation.yearCounts ?? {}).every(
+        ([year, count]) => wowListFacebookYearCounts[year] === count
+      ) &&
+      wowListFacebookYearCounts[2015] === 22 &&
+      wowListFacebookYearCounts[2016] === 27 &&
+      wowListFacebookYearCounts[2017] === 7 &&
+      wowListFacebookYearCounts[2018] === 1 &&
+      wowListFacebookRelationshipCounts["shared-source-card"] === wowListFacebookPosts.expectedSharedSourceCards &&
+      wowListFacebookRelationshipCounts["wow-list-page-post"] === wowListFacebookPosts.expectedPagePosts &&
+      wowListFacebookRows.every((row) =>
+        row.relationship === "shared-source-card"
+          ? row.sharedSourceLabels.length > 0
+          : row.sharedSourceLabels.length === 0
+      )
+    ),
+    urls: Boolean(
+      wowListFacebookUrlRows.length === wowListFacebookPosts.expectedDistinctPostedUrls &&
+      wowListFacebookUrlSet.size === wowListFacebookPosts.expectedDistinctPostedUrls &&
+      wowListFacebookManifest.urlInventorySummary?.wowListUrls === wowListFacebookPosts.expectedWowListUrls &&
+      wowListFacebookManifest.urlInventorySummary.externalUrls === wowListFacebookPosts.expectedExternalUrls &&
+      wowListFacebookSourceRoleCounts["wowlist-route"] === 30 &&
+      wowListFacebookSourceRoleCounts["organizer-infrastructure"] === 5 &&
+      wowListFacebookSourceRoleCounts["venue-safety-and-survival"] === 13 &&
+      wowListFacebookSourceRoleCounts["mutual-aid-and-civic-mobilization"] === 4 &&
+      wowListFacebookSourceRoleCounts["cultural-and-civic-network"] === 3 &&
+      wowListFacebookUrlRows.every((urlRow) => {
+        const firstRow = wowListFacebookRows.find((row) => row.postedUrls.includes(urlRow.url));
+        return /^https?:\/\//.test(urlRow.url) &&
+          firstRow?.ordinal === urlRow.firstSeenOrdinal &&
+          firstRow.publishedAt === urlRow.firstSeenAt;
+      })
+    ),
+    missionAndStakeholders: Boolean(
+      countWowListFacebookTag("missionTags", "product-onboarding-and-use") === wowListFacebookPosts.expectedProductOnboardingRows &&
+      countWowListFacebookTag("missionTags", "cross-city-organizer-infrastructure") === wowListFacebookPosts.expectedCrossCityOrganizerRows &&
+      countWowListFacebookTag("missionTags", "participatory-product-governance") === wowListFacebookPosts.expectedParticipatoryGovernanceRows &&
+      countWowListFacebookTag("missionTags", "venue-safety-and-survival") === wowListFacebookPosts.expectedVenueSafetyRows &&
+      countWowListFacebookTag("missionTags", "mutual-aid-and-civic-mobilization") === wowListFacebookPosts.expectedMutualAidAndCivicRows &&
+      countWowListFacebookTag("stakeholderGroups", "artist-or-community-source") === 12 &&
+      countWowListFacebookTag("stakeholderGroups", "local-organizer-or-resource-network") === 8 &&
+      countWowListFacebookTag("stakeholderGroups", "arts-and-civic-advocacy") === 5 &&
+      countWowListFacebookTag("stakeholderGroups", "cultural-space") === 5 &&
+      countWowListFacebookTag("stakeholderGroups", "published-media") === 4
+    ),
+    interactions: Boolean(
+      rowsWithWowListFacebookInteraction("likes") === wowListFacebookPosts.expectedRowsWithLikes &&
+      sumWowListFacebookInteraction("likes") === wowListFacebookPosts.expectedDisplayedLikes &&
+      maxWowListFacebookInteraction("likes") === 13 &&
+      rowsWithWowListFacebookInteraction("comments") === wowListFacebookPosts.expectedRowsWithComments &&
+      sumWowListFacebookInteraction("comments") === wowListFacebookPosts.expectedDisplayedComments &&
+      maxWowListFacebookInteraction("comments") === 3 &&
+      rowsWithWowListFacebookInteraction("shares") === wowListFacebookPosts.expectedRowsWithShares &&
+      sumWowListFacebookInteraction("shares") === wowListFacebookPosts.expectedDisplayedShares &&
+      maxWowListFacebookInteraction("shares") === 29 &&
+      wowListFacebookManifest.displayedInteractionSummary?.highestDisplayedInteractionOrdinal === 42 &&
+      wowListFacebookRows[41]?.displayedInteractions.likes === 13 &&
+      wowListFacebookRows[41]?.displayedInteractions.comments === 3 &&
+      wowListFacebookRows[41]?.displayedInteractions.shares === 29 &&
+      /not reach, attendance, conversion, endorsement, unique people, mandate, or impact/i.test(
+        wowListFacebookManifest.displayedInteractionSummary.boundary
+      )
+    ),
+    methodAndSafety: Boolean(
+      wowListFacebookManifest.method?.terminalControl?.consecutiveStableTerminalChecks >= 7 &&
+      /not a native Meta export/i.test(wowListFacebookManifest.method.limitations.join("\n")) &&
+      /deleted, hidden, private, unpublished/i.test(wowListFacebookManifest.method.limitations.join("\n")) &&
+      /Business Suite's displayed Lifetime filter covered only March 31, 2019 through July 14, 2026/i.test(
+        wowListFacebookManifest.method.limitations.join("\n")
+      ) &&
+      /does not identify the human author/i.test(wowListFacebookManifest.method.limitations.join("\n")) &&
+      /Richard Caceres/i.test(wowListFacebookPublicText) &&
+      wowListFacebookPrivateDataFree &&
+      wowListFacebookAffirmativeSafe
+    ),
+    governedKnowledge: Boolean(
+      wowListFacebookPostKnowledge.intakeItems.length === wowListFacebookPosts.expectedIntakeCount &&
+      wowListFacebookPostKnowledge.observations.length === wowListFacebookPosts.expectedObservationCount &&
+      wowListFacebookPostKnowledge.sources.length === wowListFacebookPosts.expectedSourceCount &&
+      wowListFacebookPostKnowledge.claims.length === wowListFacebookPosts.expectedClaimCount &&
+      wowListFacebookPostKnowledge.researchInquiries.length === wowListFacebookPosts.expectedInquiryCount &&
+      wowListFacebookIntakes.every((item) => item?.visibility === "public-safe" && item.disposition === "integrated" && item.boundaries.length >= 4) &&
+      wowListFacebookObservations.every((item) => item?.publicSafe === true && item.locator && item.limitations.length >= 2 && (item.claimIds.length > 0 || item.researchInquiryIds.length > 0)) &&
+      wowListFacebookSources.every((item) => item?.visibility === "public" && item.supportsGenerally.length > 0 && item.doesNotEstablish.length >= 4) &&
+      wowListFacebookClaims.every((item) => item?.status === "confirmed-with-boundary" && item.boundaries.length >= 3 && item.antiClaims.length >= 4) &&
+      wowListFacebookEvidenceClosed &&
+      wowListFacebookOperatingClaim?.antiClaims.some((item) => /complete lifetime Facebook history/i.test(item)) &&
+      wowListFacebookOperatingClaim.antiClaims.some((item) => /authored every/i.test(item)) &&
+      wowListFacebookWorkflowClaim?.antiClaims.some((item) => /complete adoption census/i.test(item)) &&
+      wowListFacebookCareClaim?.antiClaims.some((item) => /coverage of WOW List/i.test(item)) &&
+      wowListFacebookNativeExportInquiry?.resultStatus === "inconclusive" &&
+      wowListFacebookStewardshipInquiry?.resultStatus === "inconclusive" &&
+      wowListFacebookSourceInquiry?.resultStatus === "partially-recovered"
+    ),
+    projection: Boolean(
+      wowListFacebookClaims.every((claim) => claim?.projections.every((projection) =>
+        projection.status === "hold" && projection.surfaces.length === 0
+      )) &&
+      wowListFacebookPageOccurrences.length === 0 &&
+      /No website copy changes in this pass/i.test(wowListFacebookReport)
+    ),
+    report: Boolean(
+      /100 percent of the capture-date authenticated live-feed population/i.test(wowListFacebookReport) &&
+      /not a native Meta export or proof of complete lifetime history/i.test(wowListFacebookReport) &&
+      /57 dated posts/i.test(wowListFacebookReport) &&
+      /55 distinct cleaned URL routes/i.test(wowListFacebookReport) &&
+      /not reach, attendance,[\s\S]{0,80}conversion, endorsement, unique people, mandate, or impact/i.test(wowListFacebookReport) &&
+      /leaving post-level authorship unassigned/i.test(wowListFacebookReport) &&
+      /not coverage of WOW List/i.test(wowListFacebookReport)
+    ),
+    registry: Boolean(
+      !publicRegistryText.includes("wowlist-facebook-raw-private") &&
+      !publicRegistryText.includes("sessionToken")
+    ),
+    reviewLocks: wowListFacebookReviewLocksMatch
+  };
+  const wowListFacebookFailedChecks = Object.entries(wowListFacebookDiagnosticChecks)
+    .filter(([, passed]) => !passed)
+    .map(([check]) => check);
+  const wowListFacebookPostsComplete = Object.values(wowListFacebookDiagnosticChecks).every(Boolean);
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations, ...nycacFacebookObservations, ...personalFacebookObservations, ...wowListFacebookObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims, ...nycacFacebookClaims, ...personalFacebookClaims, ...wowListFacebookClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries, ...nycacFacebookInquiries, ...personalFacebookInquiries, ...wowListFacebookInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -3808,6 +4107,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [personalFacebookEventsComplete
         ? `All ${personalFacebookLedgerRows.length} personal-profile Facebook event-card instances have anonymous public-safe dispositions across ${personalWowListFacebookManifest.surfaces.personal.uniqueParentEvents} unique parent events; ${personalFacebookSelectedEvents.length} public organizer-attributed records and ${personalFacebookMissionRoutes.length} mission-relevant routes preserve a bounded 2006-2019 chronology, while the zero-card current WOW List owner surface, response semantics, NYCAC overlap, private-data exclusions, collective credit, and Sunday Dinner milestone limits remain explicit`
         : "Personal and WOW List Facebook event production is missing a capture-date row disposition, count reconciliation, anonymous-ledger privacy boundary, selected public organizer attribution, source-route relationship, response-label limit, NYCAC overlap reference, WOW List historical-zero boundary, collective-credit rule, milestone limit, governed projection, proof-coverage link, or review lock"]
+    },
+    {
+      criterionId: "KB-EVAL-WOWLIST-FACEBOOK-POSTS",
+      score: score(wowListFacebookPostsComplete),
+      evidence: [wowListFacebookPostsComplete
+        ? `All ${wowListFacebookRows.length} posts exposed by the authenticated capture-date feed are reconciled across ${wowListFacebookUrlRows.length} cleaned URL routes, ${wowListFacebookPosts.expectedSharedSourceCards} shared-source cards, organizer workflow, venue-safety, mutual-aid, stakeholder, and displayed-interaction classifications; lifetime-export, post-authorship, collective-credit, source-role, privacy, and non-projection boundaries remain explicit`
+        : `WOW List Facebook post production failed: ${wowListFacebookFailedChecks.join(", ")}`]
     }
   ];
 
@@ -3922,6 +4228,19 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         proofContentSha256: personalFacebookProofContentSha256,
         reviewLocksMatch: personalFacebookReviewLocksMatch,
         checks: personalFacebookDiagnosticChecks
+      },
+      wowListFacebookPosts: {
+        manifestSha256: createHash("sha256").update(wowListFacebookManifestText).digest("hex"),
+        manifestContentSha256: wowListFacebookManifestContentSha256,
+        governedModuleSha256: createHash("sha256").update(readFileSync(
+          path.join(repoRoot, "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07.ts"),
+          "utf8"
+        )).digest("hex"),
+        canonicalKnowledgeSha256: wowListFacebookCanonicalKnowledgeSha256,
+        reviewConfigurationSha256: wowListFacebookReviewConfigurationSha256,
+        publicReportSha256: createHash("sha256").update(wowListFacebookReport).digest("hex"),
+        reviewLocksMatch: wowListFacebookReviewLocksMatch,
+        checks: wowListFacebookDiagnosticChecks
       }
     },
     accepted: errors.length === 0 &&
