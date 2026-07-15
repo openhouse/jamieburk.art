@@ -246,6 +246,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## wowlist-facebook-publishing-stewardship - Facebook publishing stewardship
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Authenticated Page-management record / immutable public-safe full-population fixture
+**Public wording:** Jamie stewarded WOW List's Facebook publishing from 2015 to 2018; Facebook attributes all 50 surviving post details it still renders to him as publisher, while four additional records remain table-only.
+**Detailed public-safe wording:** The complete-as-materialized Lifetime inventory contains 54 records from April 2015 through March 2018. Fifty detail pages render and all 50 display Facebook's admin-only `Published by Jamie Burkart` attribution. Four posts remain visible only in the management table.
+**Where to project:** WOW List case study only.
+**Why it matters:** Adds inspectable evidence of sustained editorial and operational stewardship around a co-built public product.
+**Guardrail:** WOW List was co-built by Jamie Burkart and Richard Album. Page publishing is not sole authorship of quoted or shared voices, sole project ownership, or exclusive management of every platform. The surviving surface is not a Meta owner export.
+**Do not say:** Jamie solely created or owned WOW List; Jamie authored every post or linked source; all 54 posts display his byline; the record proves historical reach or impact.
+**Protected boundaries:** Full post text, commenter identities, private profile links, raw authenticated captures, and session state stay offline.
+**Review owner:** Jamie / Codex authenticated archival review
+**Last reviewed:** 2026-07-15
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  

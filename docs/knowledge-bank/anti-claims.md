@@ -74,6 +74,16 @@ authenticated-session state. Do not say the 21 hosted-index records represent
 every event Jamie ever produced. Do not say the two current WOW List surfaces
 prove that WOW List never created or cohosted a historical Facebook event.
 
+## WOW List Facebook posts
+
+Do not say Jamie solely created or owned WOW List, authored every word or
+shared source on the Page, or exclusively managed every project account. Do not
+say all 54 records display Jamie's publisher byline; 50 details render and four
+remain table-only. Do not convert current legacy dashboard values into
+historical reach, unique people, attendance, conversion, endorsement, impact,
+or stakeholder-group engagement. Do not treat the 54 surviving records as a
+Meta owner export or deleted-post history.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

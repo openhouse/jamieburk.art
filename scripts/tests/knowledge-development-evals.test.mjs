@@ -92,6 +92,15 @@ import {
   jamieWowListFacebookEventSources,
 } from "../../apps/www/src/data/knowledge-bank/jamie-wowlist-facebook-events.ts";
 import {
+  wowListFacebookPostCaptures,
+  wowListFacebookPostClaims,
+  wowListFacebookPostInquiries,
+  wowListFacebookPostObservations,
+  wowListFacebookPostResearchTasks,
+  wowListFacebookPostReviewSummary,
+  wowListFacebookPostSources,
+} from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts";
+import {
   classifyNycacMissionSignals,
   extractNycacSourcePostBody,
   normalizeNycacSourceRecordType,
@@ -156,6 +165,12 @@ const nycacFacebookEventInventory = JSON.parse(
 const jamieWowListFacebookEventInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json",
+    "utf8",
+  ),
+);
+const wowListFacebookPostInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
     "utf8",
   ),
 );
@@ -2513,6 +2528,183 @@ test("Jamie and WOW List Facebook population source pins the committed public fi
     (source) =>
       source.id ===
       "SRC-JAMIE-WOWLIST-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+  );
+  const match = fixtureSource.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/[a-z0-9-]+\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], fixturePath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`]),
+    readFileSync(fixturePath),
+  );
+});
+
+test("WOW List Facebook post population preserves all 54 surviving records and dispositions", () => {
+  const records = wowListFacebookPostInventory.records;
+  assert.equal(records.length, 54);
+  assert.equal(new Set(records.map((record) => record.postId)).size, 54);
+  assert.deepEqual(
+    records.map((record) => record.ordinal),
+    Array.from({ length: 54 }, (_, index) => index + 1),
+  );
+  assert.equal(records[0].publishedOn, "2018-03-22");
+  assert.equal(records.at(-1).publishedOn, "2015-04-25");
+  assert.equal(
+    records.filter((record) => record.detailRecovery === "recovered").length,
+    50,
+  );
+  assert.equal(
+    records.filter((record) => record.detailRecovery === "table-only").length,
+    4,
+  );
+  assert.equal(
+    records.filter(
+      (record) => record.publisherAttribution === "Jamie Burkart",
+    ).length,
+    50,
+  );
+  assert.equal(
+    records.filter(
+      (record) => record.publisherAttribution === "not-recovered",
+    ).length,
+    4,
+  );
+  assert.ok(records.every((record) => record.themes.length));
+  assert.equal(
+    wowListFacebookPostInventory.populationReconciliation.coverageState,
+    "complete-as-materialized",
+  );
+  assert.match(
+    wowListFacebookPostInventory.populationReconciliation.boundary,
+    /not a Meta owner export.*deleted.*unexposed/i,
+  );
+});
+
+test("WOW List Facebook post source, mission, metric, and migration findings remain reproducible and bounded", () => {
+  const records = wowListFacebookPostInventory.records;
+  const normalizedLinks = new Set(
+    records.flatMap((record) => record.sourceLinks),
+  );
+  assert.equal(normalizedLinks.size, 42);
+  assert.equal(
+    wowListFacebookPostInventory.linkInventory.normalizedDistinctUrlCount,
+    42,
+  );
+  assert.equal(
+    wowListFacebookPostInventory.linkInventory.detailRawDistinctUrlCount,
+    48,
+  );
+  assert.deepEqual(
+    wowListFacebookPostInventory.missionPatterns.recordCounts,
+    {
+      "community-calendar-onboarding": 18,
+      "event-and-artist-distribution": 17,
+      "cultural-space-support-and-mutual-aid": 19,
+      "civic-mobilization": 12,
+      "community-governance-and-product-feedback": 13,
+      "community-care-and-remembrance": 9,
+      "cultural-space-funding": 9,
+    },
+  );
+  assert.deepEqual(wowListFacebookPostInventory.adminMetricSnapshot, {
+    observedOn: "2026-07-15",
+    interactions: 108,
+    netFollows: 0,
+    impressions: 512,
+    comments: 11,
+    boundary:
+      "These are the values Facebook currently displays beside legacy rows. They may be incomplete or non-comparable across migrated records and must not be represented as historical lifetime reach, unique people, attendance, or policy impact.",
+  });
+  assert.match(
+    wowListFacebookPostInventory.missionPatterns
+      .stakeholderEngagementBoundary,
+    /does not claim stakeholder-group engagement counts/i,
+  );
+  assert.match(
+    wowListFacebookPostInventory.migrationBoundary.boundary,
+    /migration boundary, not evidence.*no historical publishing/i,
+  );
+});
+
+test("WOW List Facebook post graph is public-safe and projects only the publishing role", () => {
+  assert.equal(wowListFacebookPostCaptures.length, 1);
+  assert.equal(wowListFacebookPostSources.length, 4);
+  assert.equal(wowListFacebookPostObservations.length, 9);
+  assert.equal(wowListFacebookPostClaims.length, 4);
+  assert.equal(wowListFacebookPostResearchTasks.length, 4);
+  assert.equal(wowListFacebookPostInquiries.length, 1);
+  assert.deepEqual(wowListFacebookPostReviewSummary, {
+    records: 54,
+    detailsRecovered: 50,
+    tableOnly: 4,
+    dateStart: "2015-04-25",
+    dateEnd: "2018-03-22",
+    detailsAttributedToJamie: 50,
+    normalizedDestinations: 42,
+    dashboardInteractions: 108,
+    dashboardImpressions: 512,
+    dashboardComments: 11,
+    currentFollowers: 185,
+    criterion:
+      "Every materialized post has an identity and disposition, every recovered publisher byline is preserved, private social data is excluded, metrics and migration are bounded, and only the role claim is selected for the website.",
+  });
+
+  const fixturePayload = JSON.stringify(wowListFacebookPostInventory);
+  assert.doesNotMatch(
+    fixturePayload,
+    /"(?:content|text|description|commenters|reactors|friends|privateProfile|cookie|cookies|session|sessionToken|credentials)"\s*:/i,
+  );
+  assert.doesNotMatch(fixturePayload, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(fixturePayload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+  assert.doesNotMatch(fixturePayload, /\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/);
+
+  const stewardshipClaim = wowListFacebookPostClaims.find(
+    (claim) => claim.id === "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
+  );
+  const metricClaim = wowListFacebookPostClaims.find(
+    (claim) => claim.id === "CLM-WOWLIST-FACEBOOK-DASHBOARD-SNAPSHOT",
+  );
+  const migrationClaim = wowListFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-WOWLIST-FACEBOOK-MANAGEMENT-MIGRATION-GAP",
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "wowlist");
+  const mdx = readFileSync("apps/www/src/content/work/wowlist.mdx", "utf8");
+
+  assert.equal(stewardshipClaim.publicationState, "approved");
+  assert.equal(stewardshipClaim.selectionState, "selected");
+  assert.ok(
+    stewardshipClaim.boundaries.some((boundary) =>
+      /co-built.*Richard Album/i.test(boundary),
+    ),
+  );
+  assert.equal(metricClaim.selectionState, "dormant");
+  assert.equal(migrationClaim.status, "not-recovered");
+  assert.ok(
+    page.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "facebook-publishing-stewardship" &&
+        occurrence.claimId ===
+          "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
+    ),
+  );
+  assert.equal(
+    (
+      mdx.match(/CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP/g) ?? []
+    ).length,
+    1,
+  );
+  assert.doesNotMatch(mdx, /512 (?:people|users)|108 historical/i);
+});
+
+test("WOW List Facebook post population source pins the committed public fixture", () => {
+  const fixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json";
+  const fixtureSource = wowListFacebookPostSources.find(
+    (source) =>
+      source.id ===
+      "SRC-WOWLIST-FACEBOOK-POSTS-FULL-POPULATION-2026-07-15",
   );
   const match = fixtureSource.canonicalUrl.match(
     /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/[a-z0-9-]+\.json)$/,

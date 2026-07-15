@@ -101,6 +101,13 @@ Dinner records, source-link and response inventories, public-safety boundary,
 and the current-surface zero with legacy-recovery gap for WOW List.
 
 See
+[projects/wowlist-facebook-posts.md](projects/wowlist-facebook-posts.md) for the
+54-record complete-as-materialized WOW List Page post census, Jamie's bounded
+publishing-stewardship proof, 42-destination source inventory, mission-pattern
+classification, and explicit metric, migration, and stakeholder-engagement
+limits.
+
+See
 [projects/kc-town-hall-phase-one.md](projects/kc-town-hall-phase-one.md) for the
 completed 2019 cold-shell scope, Jamie's bounded general-contractor role,
 survey-to-proposal input system, neighborhood-service operations, and the

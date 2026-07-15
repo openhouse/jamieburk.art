@@ -93,6 +93,14 @@ import {
   jamieWowListFacebookEventResearchTasks,
   jamieWowListFacebookEventSources,
 } from "./jamie-wowlist-facebook-events.ts";
+import {
+  wowListFacebookPostCaptures,
+  wowListFacebookPostClaims,
+  wowListFacebookPostInquiries,
+  wowListFacebookPostObservations,
+  wowListFacebookPostResearchTasks,
+  wowListFacebookPostSources,
+} from "./wowlist-facebook-posts.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -108,6 +116,7 @@ const knowledgeBankInput = {
     ...urbanhermitCaptures,
     ...nycacFacebookEventCaptures,
     ...jamieWowListFacebookEventCaptures,
+    ...wowListFacebookPostCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -122,6 +131,7 @@ const knowledgeBankInput = {
     ...urbanhermitSources,
     ...nycacFacebookEventSources,
     ...jamieWowListFacebookEventSources,
+    ...wowListFacebookPostSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -331,6 +341,7 @@ const knowledgeBankInput = {
     ...urbanhermitObservations,
     ...nycacFacebookEventObservations,
     ...jamieWowListFacebookEventObservations,
+    ...wowListFacebookPostObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -345,6 +356,7 @@ const knowledgeBankInput = {
     ...urbanhermitClaims,
     ...nycacFacebookEventClaims,
     ...jamieWowListFacebookEventClaims,
+    ...wowListFacebookPostClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -669,6 +681,7 @@ const knowledgeBankInput = {
     ...urbanhermitResearchTasks,
     ...nycacFacebookEventResearchTasks,
     ...jamieWowListFacebookEventResearchTasks,
+    ...wowListFacebookPostResearchTasks,
   ],
   researchInquiries: [
     {
@@ -712,6 +725,7 @@ const knowledgeBankInput = {
     ...urbanhermitInquiries,
     ...nycacFacebookEventInquiries,
     ...jamieWowListFacebookEventInquiries,
+    ...wowListFacebookPostInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
@@ -1010,6 +1024,7 @@ const knowledgeBankInput = {
       id: "wowlist",
       surface: "/work/wowlist",
       sourceOrder: [
+        "SRC-WOWLIST-FACEBOOK-POSTS-FULL-POPULATION-2026-07-15",
         "SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14",
         "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
         "SRC-WOWLIST-ORIGIN-2014-02-12",
@@ -1023,6 +1038,14 @@ const knowledgeBankInput = {
         "SRC-WOWLIST-POPULAR-VOTE-2016-11-14",
       ],
       occurrences: [
+        {
+          id: "facebook-publishing-stewardship",
+          claimId: "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-WOWLIST-FACEBOOK-POSTS-FULL-POPULATION-2026-07-15",
+          ],
+        },
         {
           id: "social-product-surface",
           claimId: "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",

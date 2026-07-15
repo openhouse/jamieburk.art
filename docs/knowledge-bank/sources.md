@@ -103,6 +103,24 @@ events. This is a current-interface finding, not a complete owner export or
 evidence that no historical WOW List event existed. See
 `docs/knowledge-bank/projects/jamie-wowlist-facebook-events.md`.
 
+### WOW List Facebook posts
+
+The July 15 authenticated Page-management pass preserved all 54 records
+materialized by Facebook's Lifetime published-content library. Fifty detail
+pages rendered; four remain table-only. All 50 rendered details display
+Facebook's `Published by Jamie Burkart` admin attribution. The immutable public
+fixture preserves IDs, dates, recovery and publisher states, mission themes,
+42 normalized public destinations, and bounded current dashboard values while
+excluding full post text, personal engagement identities, private profile
+links, and session state.
+
+The source inventory includes city calendars, event and artist pages,
+cultural-space recovery and funding destinations, civic-action calendars, and
+published reporting. Patricia Calhoun's March 9, 2017, *Denver Westword*
+article about a $20,000 Denver DIY Spaces Fund was close-read; the remaining
+destinations stay in the research lifecycle. See
+`docs/knowledge-bank/projects/wowlist-facebook-posts.md`.
+
 ### KC Town Hall public record and first-hand clarification
 
 The July 14 funding-status pass recovered four official KCMO sources:

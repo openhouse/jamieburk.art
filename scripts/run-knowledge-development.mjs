@@ -77,6 +77,15 @@ import {
   jamieWowListFacebookEventReviewSummary,
   jamieWowListFacebookEventSources,
 } from "../apps/www/src/data/knowledge-bank/jamie-wowlist-facebook-events.ts";
+import {
+  wowListFacebookPostCaptures,
+  wowListFacebookPostClaims,
+  wowListFacebookPostInquiries,
+  wowListFacebookPostObservations,
+  wowListFacebookPostResearchTasks,
+  wowListFacebookPostReviewSummary,
+  wowListFacebookPostSources,
+} from "../apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 import { nycacMissionSignalRules } from "./lib/nycac-mission-classifier.mjs";
 import { urbanhermitMissionSignalRules } from "./lib/urbanhermit-mission-classifier.mjs";
@@ -101,6 +110,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/urbanhermit-production.ts",
   "apps/www/src/data/knowledge-bank/nycac-facebook-events.ts",
   "apps/www/src/data/knowledge-bank/jamie-wowlist-facebook-events.ts",
+  "apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts",
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
@@ -109,6 +119,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -132,6 +143,7 @@ const candidateFiles = [
   "docs/knowledge-bank/projects/urbanhermit.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
   "docs/knowledge-bank/projects/jamie-wowlist-facebook-events.md",
+  "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
   "docs/knowledge-bank/projects/kc-town-hall-funding.md",
@@ -198,6 +210,12 @@ const nycacFacebookEventInventory = JSON.parse(
 const jamieWowListFacebookEventInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/jamie-wowlist-facebook-events-full-population.json",
+    "utf8",
+  ),
+);
+const wowListFacebookPostInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
     "utf8",
   ),
 );
@@ -2451,6 +2469,264 @@ function deterministicResults(judgments) {
     );
   }
 
+  const wowListFacebookPostIntegrityViolations = [];
+  const wowListFacebookPostSafetyViolations = [];
+  const wowListFacebookPosts = wowListFacebookPostInventory.records ?? [];
+  const wowListFacebookPostFixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json";
+  const wowListFacebookPostFixtureSource = sourceById.get(
+    "SRC-WOWLIST-FACEBOOK-POSTS-FULL-POPULATION-2026-07-15",
+  );
+  const wowListFacebookStewardshipClaim = claimById.get(
+    "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
+  );
+  const wowListFacebookDistributionClaim = claimById.get(
+    "CLM-WOWLIST-FACEBOOK-MISSION-DISTRIBUTION",
+  );
+  const wowListFacebookMetricClaim = claimById.get(
+    "CLM-WOWLIST-FACEBOOK-DASHBOARD-SNAPSHOT",
+  );
+  const wowListFacebookMigrationClaim = claimById.get(
+    "CLM-WOWLIST-FACEBOOK-MANAGEMENT-MIGRATION-GAP",
+  );
+  const wowListPage = knowledgeBank.pages.find((page) => page.id === "wowlist");
+
+  if (
+    wowListFacebookPostCaptures.length !== 1 ||
+    wowListFacebookPostSources.length !== 4 ||
+    wowListFacebookPostObservations.length !== 9 ||
+    wowListFacebookPostClaims.length !== 4 ||
+    wowListFacebookPostResearchTasks.length !== 4 ||
+    wowListFacebookPostInquiries.length !== 1
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "WOW List Facebook post graph has an unexpected record count",
+    );
+  }
+  if (
+    wowListFacebookPosts.length !== 54 ||
+    new Set(wowListFacebookPosts.map((post) => post.postId)).size !== 54 ||
+    new Set(wowListFacebookPosts.map((post) => post.canonicalUrl)).size !== 54 ||
+    wowListFacebookPosts.some(
+      (post, index) =>
+        post.ordinal !== index + 1 ||
+        post.canonicalUrl !==
+          `https://www.facebook.com/wowlist/posts/${post.postId}` ||
+        !["recovered", "table-only"].includes(post.detailRecovery) ||
+        !Array.isArray(post.themes) ||
+        !post.themes.length,
+    ) ||
+    wowListFacebookPosts[0]?.publishedOn !== "2018-03-22" ||
+    wowListFacebookPosts.at(-1)?.publishedOn !== "2015-04-25"
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "WOW List Facebook post identities, dispositions, themes, or chronology drifted",
+    );
+  }
+  if (
+    wowListFacebookPostInventory.populationReconciliation
+      ?.coverageState !== "complete-as-materialized" ||
+    wowListFacebookPostInventory.populationReconciliation
+      ?.materializedRecordCount !== 54 ||
+    wowListFacebookPostInventory.populationReconciliation
+      ?.detailRecoveredCount !== 50 ||
+    wowListFacebookPostInventory.populationReconciliation?.tableOnlyCount !==
+      4 ||
+    wowListFacebookPosts.filter(
+      (post) => post.publisherAttribution === "Jamie Burkart",
+    ).length !== 50 ||
+    wowListFacebookPosts.filter(
+      (post) => post.publisherAttribution === "not-recovered",
+    ).length !== 4 ||
+    wowListFacebookPostInventory.publishingAttribution
+      ?.recoveredDetailsAttributedToJamieBurkart !== 50
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "WOW List Facebook post denominator or publisher-attribution reconciliation drifted",
+    );
+  }
+  const wowListFacebookNormalizedLinks = new Set(
+    wowListFacebookPosts.flatMap((post) => post.sourceLinks ?? []),
+  );
+  if (
+    wowListFacebookPostInventory.linkInventory?.normalizedDistinctUrlCount !==
+      42 ||
+    wowListFacebookNormalizedLinks.size !== 42 ||
+    wowListFacebookPostInventory.linkInventory?.detailRawDistinctUrlCount !==
+      48 ||
+    wowListFacebookPostInventory.missionPatterns?.recordCounts?.[
+      "community-calendar-onboarding"
+    ] !== 18 ||
+    wowListFacebookPostInventory.missionPatterns?.recordCounts?.[
+      "event-and-artist-distribution"
+    ] !== 17 ||
+    wowListFacebookPostInventory.missionPatterns?.recordCounts?.[
+      "cultural-space-support-and-mutual-aid"
+    ] !== 19 ||
+    wowListFacebookPostInventory.missionPatterns?.recordCounts?.[
+      "civic-mobilization"
+    ] !== 12 ||
+    wowListFacebookPostInventory.missionPatterns?.recordCounts?.[
+      "community-governance-and-product-feedback"
+    ] !== 13
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "WOW List Facebook link inventory or mission-pattern counts drifted",
+    );
+  }
+  if (
+    wowListFacebookPostInventory.adminMetricSnapshot?.interactions !== 108 ||
+    wowListFacebookPostInventory.adminMetricSnapshot?.impressions !== 512 ||
+    wowListFacebookPostInventory.adminMetricSnapshot?.comments !== 11 ||
+    wowListFacebookPostInventory.currentPageSnapshot?.followers !== 185 ||
+    wowListFacebookPostInventory.unresolvedRecords?.length !== 4
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "WOW List Facebook metric snapshot or unresolved-record inventory drifted",
+    );
+  }
+  if (
+    !immutableGitHubFixtureMatches(
+      wowListFacebookPostFixtureSource,
+      wowListFacebookPostFixturePath,
+    )
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "WOW List Facebook post source does not pin a byte-identical committed fixture",
+    );
+  }
+  const wowListFacebookPostSourcePathIds = new Set([
+    ...wowListFacebookPostObservations.map((observation) => observation.sourceId),
+    ...wowListFacebookPostClaims.flatMap((claim) =>
+      claim.evidence.map((evidence) => evidence.sourceId),
+    ),
+    ...wowListFacebookPostInquiries.flatMap((inquiry) => inquiry.sourceIds),
+  ]);
+  for (const source of wowListFacebookPostSources) {
+    if (
+      !sourceById.has(source.id) ||
+      !wowListFacebookPostSourcePathIds.has(source.id)
+    ) {
+      wowListFacebookPostIntegrityViolations.push(
+        `WOW List Facebook post source lacks a normalized evidence path: ${source.id}`,
+      );
+    }
+  }
+  if (
+    wowListFacebookPostReviewSummary.records !== 54 ||
+    wowListFacebookPostReviewSummary.detailsRecovered !== 50 ||
+    wowListFacebookPostReviewSummary.tableOnly !== 4 ||
+    wowListFacebookPostReviewSummary.detailsAttributedToJamie !== 50 ||
+    wowListFacebookPostReviewSummary.normalizedDestinations !== 42 ||
+    wowListFacebookStewardshipClaim?.publicationState !== "approved" ||
+    wowListFacebookStewardshipClaim?.selectionState !== "selected" ||
+    wowListFacebookDistributionClaim?.selectionState !== "candidate" ||
+    wowListFacebookMetricClaim?.selectionState !== "dormant" ||
+    wowListFacebookMigrationClaim?.selectionState !== "dormant" ||
+    wowListFacebookMigrationClaim?.status !== "not-recovered"
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "WOW List Facebook review summary or claim selection state is incomplete",
+    );
+  }
+  const wowListMdx = readFileSync(
+    "apps/www/src/content/work/wowlist.mdx",
+    "utf8",
+  );
+  const stewardshipMdxOccurrences = (
+    wowListMdx.match(/CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP/g) ?? []
+  ).length;
+  if (
+    stewardshipMdxOccurrences !== 1 ||
+    !wowListPage?.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "facebook-publishing-stewardship" &&
+        occurrence.claimId ===
+          "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
+    )
+  ) {
+    wowListFacebookPostIntegrityViolations.push(
+      "The selected WOW List Facebook stewardship proof is not projected exactly once",
+    );
+  }
+
+  const wowListFacebookPostPayload = JSON.stringify({
+    captures: wowListFacebookPostCaptures,
+    sources: wowListFacebookPostSources,
+    observations: wowListFacebookPostObservations,
+    claims: wowListFacebookPostClaims,
+    tasks: wowListFacebookPostResearchTasks,
+    inquiries: wowListFacebookPostInquiries,
+  });
+  const wowListFacebookPostFixturePayload = JSON.stringify(
+    wowListFacebookPostInventory,
+  );
+  if (
+    /\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      wowListFacebookPostPayload,
+    ) ||
+    /"(?:content|text|description|commenters|reactors|friends|privateProfile|cookie|cookies|session|sessionToken|credentials)"\s*:/i.test(
+      wowListFacebookPostFixturePayload,
+    ) ||
+    /\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      wowListFacebookPostFixturePayload,
+    ) ||
+    wowListFacebookPostInventory.publicSafety?.rawPostTextPublished !== false ||
+    wowListFacebookPostInventory.publicSafety?.commenterIdentitiesPublished !==
+      false ||
+    wowListFacebookPostInventory.publicSafety
+      ?.authenticatedSessionDataPublished !== false
+  ) {
+    wowListFacebookPostSafetyViolations.push(
+      "WOW List Facebook public graph or fixture exposes raw text, private identity, contact, local path, or authenticated state",
+    );
+  }
+  if (
+    !wowListFacebookStewardshipClaim?.boundaries.some((boundary) =>
+      /co-built.*Richard Album/i.test(boundary),
+    ) ||
+    !wowListFacebookStewardshipClaim?.boundaries.some((boundary) =>
+      /not sole authorship/i.test(boundary),
+    ) ||
+    !wowListFacebookStewardshipClaim?.antiClaims.some((antiClaim) =>
+      /all 54.*byline/i.test(antiClaim),
+    ) ||
+    !wowListFacebookMetricClaim?.boundaries.some((boundary) =>
+      /not historical lifetime reach.*unique people.*attendance.*impact/i.test(
+        boundary,
+      ),
+    ) ||
+    !wowListFacebookMetricClaim?.antiClaims.some((antiClaim) =>
+      /stakeholder groups/i.test(antiClaim),
+    ) ||
+    !wowListFacebookMigrationClaim?.antiClaims.some((antiClaim) =>
+      /migrated-interface zero/i.test(antiClaim),
+    )
+  ) {
+    wowListFacebookPostSafetyViolations.push(
+      "WOW List Facebook claims obscure co-builder, authorship, metric, stakeholder, or migration boundaries",
+    );
+  }
+  const wowListPublicText = [
+    wowListMdx,
+    ...wowListFacebookStewardshipClaim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text),
+  ].join("\n");
+  if (
+    /54 (?:posts|records).*Published by Jamie|512 (?:people|users)|108 historical|sole (?:creator|owner|author)/i.test(
+      wowListPublicText,
+    ) ||
+    !/50 of 50.*four additional records remain table-only/i.test(
+      wowListPublicText,
+    ) ||
+    !/co-built with Richard Album/i.test(wowListPublicText)
+  ) {
+    wowListFacebookPostSafetyViolations.push(
+      "The WOW List public projection overstates attribution, metrics, ownership, or denominator completeness",
+    );
+  }
+
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
       (projection) =>
@@ -2703,7 +2979,8 @@ function deterministicResults(judgments) {
         socialMediaIntegrityViolations.length ||
         urbanhermitIntegrityViolations.length ||
         nycacFacebookEventIntegrityViolations.length ||
-        jamieWowListFacebookEventIntegrityViolations.length
+        jamieWowListFacebookEventIntegrityViolations.length ||
+        wowListFacebookPostIntegrityViolations.length
         ? 0
         : routedCaptures.length === knowledgeBank.captures.length
           ? 4
@@ -2721,6 +2998,7 @@ function deterministicResults(judgments) {
         `${urbanhermitIntegrityViolations.length} Urbanhermit archive integrity violations`,
         `${nycacFacebookEventIntegrityViolations.length} NYC Artist Coalition Facebook event integrity violations`,
         `${jamieWowListFacebookEventIntegrityViolations.length} Jamie and WOW List Facebook event integrity violations`,
+        `${wowListFacebookPostIntegrityViolations.length} WOW List Facebook post integrity violations`,
       ],
       [
         ...brokenCaptureRefs,
@@ -2735,6 +3013,7 @@ function deterministicResults(judgments) {
         ...urbanhermitIntegrityViolations,
         ...nycacFacebookEventIntegrityViolations,
         ...jamieWowListFacebookEventIntegrityViolations,
+        ...wowListFacebookPostIntegrityViolations,
       ],
       "Repair broken references and ensure each integrated capture has a traversable path.",
     ),
@@ -2753,7 +3032,8 @@ function deterministicResults(judgments) {
         socialMediaSafetyViolations.length ||
         urbanhermitSafetyViolations.length ||
         nycacFacebookEventSafetyViolations.length ||
-        jamieWowListFacebookEventSafetyViolations.length
+        jamieWowListFacebookEventSafetyViolations.length ||
+        wowListFacebookPostSafetyViolations.length
         ? 0
         : 4,
       [
@@ -2769,6 +3049,7 @@ function deterministicResults(judgments) {
         `${urbanhermitSafetyViolations.length} Urbanhermit projection-safety violations`,
         `${nycacFacebookEventSafetyViolations.length} NYC Artist Coalition Facebook event safety violations`,
         `${jamieWowListFacebookEventSafetyViolations.length} Jamie and WOW List Facebook event safety violations`,
+        `${wowListFacebookPostSafetyViolations.length} WOW List Facebook post safety violations`,
       ],
       [
         ...validationErrors,
@@ -2783,6 +3064,7 @@ function deterministicResults(judgments) {
         ...urbanhermitSafetyViolations,
         ...nycacFacebookEventSafetyViolations,
         ...jamieWowListFacebookEventSafetyViolations,
+        ...wowListFacebookPostSafetyViolations,
       ],
       "Remove unsafe payloads and satisfy canonical citation validation.",
     ),
@@ -3262,6 +3544,8 @@ function deterministicResults(judgments) {
     ...nycacFacebookEventSafetyViolations,
     ...jamieWowListFacebookEventIntegrityViolations,
     ...jamieWowListFacebookEventSafetyViolations,
+    ...wowListFacebookPostIntegrityViolations,
+    ...wowListFacebookPostSafetyViolations,
   ];
   results.set(
     "KD-013",
@@ -3286,6 +3570,8 @@ function deterministicResults(judgments) {
         `Jamie Facebook hosted events: ${jamieFacebookEvents.length}/21 materialized records reviewed; 17 detail pages recovered and 4 retained as index-only`,
         `Jamie Facebook hosted events: 6 Sunday Dinner records; ${jamieFacebookResponseEvents.length} response-counted records; ${jamieFacebookExternalLinks.length} event-linked public URLs`,
         `WOW List Facebook events: ${wowListFacebookAccount.materializedEventCount} records exposed by 2 current surfaces; legacy owner history remains unresolved`,
+        `WOW List Facebook posts: ${wowListFacebookPosts.length}/54 surviving Lifetime-library records reviewed; 50 detail pages recovered and 4 retained as table-only`,
+        `WOW List Facebook posts: 50/50 recovered details attributed to Jamie as publisher; ${wowListFacebookNormalizedLinks.size} normalized public destinations; stakeholder-group engagement remains unclaimed without an identity-complete denominator`,
       ],
       fullPopulationViolations,
       "Repair the denominator or classification before strengthening the public interpretation.",
@@ -3373,6 +3659,14 @@ function deterministicResults(judgments) {
         jamieWowListFacebookEventReviewSummary.eventLinkedUrls,
       wowListFacebookCurrentMaterializedEvents:
         jamieWowListFacebookEventReviewSummary.wowListCurrentMaterializedEvents,
+      wowListFacebookPostsRecovered: wowListFacebookPostReviewSummary.records,
+      wowListFacebookPostDetailsRecovered:
+        wowListFacebookPostReviewSummary.detailsRecovered,
+      wowListFacebookPostTableOnly: wowListFacebookPostReviewSummary.tableOnly,
+      wowListFacebookPostPublisherAttributions:
+        wowListFacebookPostReviewSummary.detailsAttributedToJamie,
+      wowListFacebookPostNormalizedDestinations:
+        wowListFacebookPostReviewSummary.normalizedDestinations,
       validationErrors: validationErrors.length,
     },
   };

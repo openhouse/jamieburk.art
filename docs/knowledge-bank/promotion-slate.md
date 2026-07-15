@@ -108,6 +108,11 @@ website selection. It is a recommendation, not publication approval.
   reconciled; the separate 10-account mission-relevant reception result is a
   bounded third-party signal. Treat neither the small historical account nor
   the search result as an adoption or impact metric.
+- `CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP`: selected as inspectable role
+  evidence. Facebook attributes all 50 recovered post details to Jamie as Page
+  publisher; four additional records remain table-only. Keep Richard Album's
+  co-builder credit and distinguish publishing stewardship from sole
+  authorship, sole ownership, and exclusive management of every platform.
 - `CLM-KCTH-SOCIAL-OPERATING-SURFACE`: selected as evidence that the project
   account operated as a resident-input, recurring service-intake, civic-source,
   and stakeholder-response surface. All 183 profile-counted records are
@@ -207,6 +212,15 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-WOWLIST-FACEBOOK-EVENT-LEGACY-GAP`: retain the two current-surface zero
   as a research boundary. Recover a Page owner export or stable archive before
   making any historical event-population claim.
+- `CLM-WOWLIST-FACEBOOK-MISSION-DISTRIBUTION`: retain the 54-record thematic
+  inventory and 42 normalized destinations as research depth. Promote
+  destination-level propositions only after close reading and preservation.
+- `CLM-WOWLIST-FACEBOOK-DASHBOARD-SNAPSHOT`: retain the dated current display
+  as a migration-sensitive metric snapshot, not historical reach, unique
+  people, attendance, conversion, endorsement, or impact.
+- `CLM-WOWLIST-FACEBOOK-MANAGEMENT-MIGRATION-GAP`: retain the modern-empty and
+  legacy-54 interface contrast as a research boundary, not evidence of
+  historical inactivity.
 
 - `CLM-NYCAC-CAMPAIGN-PRESS-CORPUS`: retain the complete 45-placement,
   44-article bibliography in the bank. Promote only article-level propositions

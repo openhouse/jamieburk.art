@@ -33,6 +33,12 @@ The repo is public. Approval here means approved for public-safe repository and 
   complete 38-record account population and bounded 10-account third-party
   reception result may describe observable publishing and distribution
   patterns, but neither is a total-adoption or impact measure.
+- WOW List Facebook publishing: Jamie's 2015-2018 Page-publishing stewardship
+  is approved. State that Facebook attributes all 50 recovered details to
+  Jamie as publisher and that four additional records remain table-only. Keep
+  Richard Album's co-builder credit, quoted and shared authorship, owner-export
+  limits, and the distinction between Page publishing and exclusive social-
+  platform management attached.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording. Six surviving personal Facebook records, including the 100th and 200th milestones, are approved as bounded chronology evidence. The 200th may name Julia Fredenburg and Jamie as displayed cohosts and may note its direct WOW List event link. Do not treat six as the full project population.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall role and funding: the official developer/presenter designation,

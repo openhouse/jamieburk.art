@@ -27,6 +27,10 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Maintained a mixed-format archive overview workflow with extraction, sampling,
   skip rules, and explicit sensitive-output warnings.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- Stewarded WOW List's Facebook publishing across its surviving 2015-2018 Page
+  record: Facebook attributes all 50 recovered post details to Jamie as
+  publisher; four additional records remain table-only. WOW List was co-built
+  with Richard Album, and quoted or shared voices retain their own authorship.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Six surviving Facebook event records document Sunday Dinner from 2013-2017,
   including the 100th and 200th gatherings; the 200th names Julia Fredenburg
