@@ -20,6 +20,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall funding: the public record supports a unanimous CCED Board recommendation followed by City Council adoption and appropriation of $490,539. The downloadable resume uses the same sequence. Always retain the later withdrawal and no-disbursement boundary; do not imply a unanimous Council vote, executed agreement, received funds, or completed redevelopment.
+- KC Town Hall stewardship: Jamie's account that he transitioned the project to a mission-aligned organization may remain in the research layer. It is not approved for website or resume projection, and the receiving organization and handoff details remain unnamed pending public-safe corroboration and approval.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

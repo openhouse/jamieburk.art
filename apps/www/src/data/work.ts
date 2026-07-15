@@ -512,7 +512,8 @@ const workItemsInput = [
     sourceLayer:
       "Official KCMO proposal, Council, appropriation, and project-status records, approved resume language, and a public-safe project summary.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+    currentStatus:
+      "Historical project for Jamie; current property or redevelopment status is not asserted.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",

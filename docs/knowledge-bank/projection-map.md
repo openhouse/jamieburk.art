@@ -34,6 +34,11 @@ understatement. It must keep the project as the explicit subject of advancement
 and withdrawal, distinguish the unanimous Board recommendation from the Council
 appropriation, and state that withdrawal occurred before disbursement.
 
+Jamie's account that he transitioned KC Town Hall stewardship to a
+mission-aligned organization remains a source-free research lead. It is not a
+website or resume projection and must remain separate from the later municipal
+withdrawal record unless public-safe corroboration supports a future claim.
+
 ## Technical Operations
 
 Use claims that directly support operating-backbone fit:

@@ -22,6 +22,10 @@ import {
   kcTownHallCouncilActionSources
 } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-council-action.ts";
 import {
+  kcTownHallStewardshipTransitionInquiries,
+  kcTownHallStewardshipTransitionIntake
+} from "../../apps/www/src/data/knowledge-bank/kc-town-hall-stewardship-transition.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -140,6 +144,47 @@ test("KC Town Hall public surfaces preserve the no-disbursement boundary", () =>
     publicText,
     /(?:received|was paid|spent) (?:the )?\$490,539|\$490,539 (?:received|paid|spent)/i
   );
+});
+
+test("KC Town Hall stewardship transition remains a separate research lead", () => {
+  assert.equal(kcTownHallStewardshipTransitionIntake.length, 1);
+  assert.equal(kcTownHallStewardshipTransitionInquiries.length, 1);
+
+  const intake = kcTownHallStewardshipTransitionIntake[0];
+  const inquiry = kcTownHallStewardshipTransitionInquiries[0];
+  const municipalClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS"
+  );
+
+  assert.equal(intake.status, "researching");
+  assert.equal(intake.disposition, "inquiry-opened");
+  assert.deepEqual(intake.sourceIds, []);
+  assert.deepEqual(intake.claimIds, []);
+  assert.deepEqual(intake.inquiryIds, [inquiry.id]);
+  assert.equal(inquiry.resultStatus, "open");
+  assert.deepEqual(inquiry.sourceIds, []);
+  assert.match(intake.description, /mission-aligned organization/);
+  assert.ok(
+    inquiry.limitations.some((item) =>
+      /do not establish or explain the earlier stewardship transition/i.test(item)
+    )
+  );
+  assert.ok(
+    municipalClaim.researchInquiryIds.every((id) => id !== inquiry.id),
+    "The source-backed municipal claim must not absorb the source-free handoff lead"
+  );
+
+  const publicSurfaces = [
+    readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8"),
+    readFileSync("apps/www/src/data/proofs.ts", "utf8"),
+    readFileSync("apps/www/src/data/work.ts", "utf8"),
+    readFileSync("apps/www/src/app/resume/page.tsx", "utf8")
+  ].join("\n");
+  assert.match(
+    publicSurfaces,
+    /Historical project for Jamie; current property or redevelopment status is not asserted\./
+  );
+  assert.doesNotMatch(publicSurfaces, /mission-aligned organization/i);
 });
 
 test("campaign press ingestion is complete, deduplicated, and archived", () => {

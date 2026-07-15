@@ -69,6 +69,12 @@ received or spent the $490,539, completed the funded redevelopment, or retained
 the allocation: later KCMO records show no disbursement, project withdrawal,
 and reappropriation of the unused amount.
 
+Do not collapse Jamie's earlier stewardship transition into the later municipal
+withdrawal. The transition currently exists only as a source-free firsthand
+research lead. Do not name the receiving organization or assert the timing,
+handoff mechanics, legal assignment, ownership transfer, or subsequent project
+disposition without public-safe corroboration and approval.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
