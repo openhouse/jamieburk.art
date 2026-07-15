@@ -19,6 +19,26 @@ claim beyond the wording and guardrails here.
 All five projections remain held. The public website continues to use the
 clearer existing identity-system and direct Council-interaction claims.
 
+**2026-07-15 Urbanhermit X population pass**
+
+- `CLM-URBANHERM-X-PERSONAL-PUBLIC-WORKING-SURFACE` accounts for all 434
+  records represented by the live profile counter while keeping the item-level
+  personal archive protected.
+- `CLM-URBANHERM-X-BOUNDED-STAKEHOLDER-RESPONSE` preserves 15
+  mission-relevant third-party records from nine accounts plus two conversation
+  contexts without presenting them as endorsements or complete engagement.
+- `CLM-URBANHERM-X-VISIBLE-TRACTION-SNAPSHOT` holds 243 volatile displayed
+  interaction units outside accomplishment messaging.
+- `CLM-URBANHERM-WOWLIST-PEER-ATTRIBUTION` records external attribution of
+  Jamie as a Music Hackathon co-organizer and WOW List maker while retaining
+  Richard Caceres's and collaborators' credit.
+- `CLM-URBANHERM-NYCAC-PUBLIC-SPEAKER-ATTRIBUTION` records coalition and peer
+  attribution of Jamie's cultural-space and trust-and-safety advocacy while
+  explicitly rejecting sole policy causation.
+
+The pass also adds social corroboration to the existing Horse Lords, 8th Street
+Tunnel, and Tired of Tires claims. All new projections remain held.
+
 ## career-operating-structure-14-years - Operating structure over 14+ years
 
 **Status:** Ready
@@ -97,8 +117,10 @@ corroboration:
   part of the active projection.
 - `CLM-TIRED-OF-TIRES-NEIGHBORHOOD-OPERATIONS` - a protected public-site
   archive documents monthly free tire pickup with Oak Park and a
-  project-reported $17,768 in avoided fees by 2020. Jamie's individual operating
-  role and Indian Mound expansion remain under research.
+  project-reported $17,768 in avoided fees by 2020. Public project and
+  participant records now corroborate Jamie's direct pickup participation;
+  his complete design and coordination role and the Indian Mound expansion
+  remain under research.
 
 Cleveland Avenue Unify to Beautify remains an intake and inquiry rather than an
 accomplishment claim. HENC's strategic plan supports the coalition context but

@@ -148,11 +148,22 @@ const publicContentFiles = shippedContentFiles.filter((file) => {
 const publicArchiveFiles = textFiles.filter((file) =>
   relative(file).startsWith("docs/knowledge-bank/corpora/")
 );
+const urbanhermitPublicArtifacts = textFiles.filter((file) => {
+  const rel = relative(file);
+  return (
+    rel === "apps/www/src/data/knowledge-bank/urbanhermit-x-full-population.ts" ||
+    rel === "scripts/build-urbanhermit-x-public-ledger.mjs" ||
+    (rel.startsWith("docs/knowledge-bank/") && rel.includes("urbanhermit"))
+  );
+});
 
 const prohibitedTrackedSocialArtifacts = [
   "docs/knowledge-bank/corpora/source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json",
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
-  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json"
+  "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json",
+  "docs/knowledge-bank/corpora/source-captures/urbanhermit-x-browser-extraction-2026-07-15-utc.json",
+  "docs/knowledge-bank/corpora/urbanhermit-x-full-population-2026-07-15.json",
+  "docs/knowledge-bank/corpora/urbanhermit-x-full-population-2026-07-15.manifest.json"
 ];
 const trackedProhibitedSocialArtifacts = execFileSync(
   "git",
@@ -215,6 +226,12 @@ scanPattern(
   publicArchiveFiles,
   "authenticated-session identity must not be published in a public corpus artifact",
   /"(?:authenticatedAs|authenticatedSessionIdentity)"\s*:/i
+);
+
+scanPattern(
+  urbanhermitPublicArtifacts,
+  "Urbanhermit public artifacts must not publish private locators or machine-local archive paths",
+  /(?:protectedLocatorId|protectedSourceLocatorId|source-captures\/urbanhermit|\/(?:Volumes|Users|private\/tmp)\/)/i
 );
 
 const credentialPatterns = [

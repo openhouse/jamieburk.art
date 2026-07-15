@@ -1539,6 +1539,92 @@ test("intake cannot reference unknown sources", () => {
   );
 });
 
+test("claims cannot reference unknown evidence sources or inquiries", () => {
+  const missingSource = cloneBank();
+  missingSource.claims[0].evidence[0].sourceId = "SRC-UNKNOWN";
+  assert.match(
+    validateKnowledgeLifecycle(missingSource, proofClaims).join("\n"),
+    /Claim .* references unknown evidence source SRC-UNKNOWN/
+  );
+
+  const missingInquiry = cloneBank();
+  missingInquiry.claims[0].researchInquiryIds.push("INQ-UNKNOWN");
+  assert.match(
+    validateKnowledgeLifecycle(missingInquiry, proofClaims).join("\n"),
+    /Claim .* references unknown inquiry INQ-UNKNOWN/
+  );
+});
+
+test("inquiries and corrections cannot reference unknown graph records", () => {
+  const missingSource = cloneBank();
+  missingSource.researchInquiries[0].sourceIds.push("SRC-UNKNOWN");
+  assert.match(
+    validateKnowledgeLifecycle(missingSource, proofClaims).join("\n"),
+    /Inquiry .* references unknown source SRC-UNKNOWN/
+  );
+
+  const missingClaim = cloneBank();
+  missingClaim.corrections[0].claimId = "CLM-UNKNOWN";
+  assert.match(
+    validateKnowledgeLifecycle(missingClaim, proofClaims).join("\n"),
+    /Correction .* references unknown claim CLM-UNKNOWN/
+  );
+});
+
+test("claims and inquiries cannot exist without an intake disposition", () => {
+  const orphanClaim = cloneBank();
+  const claimId = orphanClaim.claims[0].id;
+  orphanClaim.intake.forEach((item) => {
+    item.claimIds = item.claimIds.filter((id) => id !== claimId);
+  });
+  assert.match(
+    validateKnowledgeLifecycle(orphanClaim, proofClaims).join("\n"),
+    new RegExp(`Claim ${claimId} has no intake disposition`)
+  );
+
+  const orphanInquiry = cloneBank();
+  const inquiryId = orphanInquiry.researchInquiries[0].id;
+  orphanInquiry.intake.forEach((item) => {
+    item.inquiryIds = item.inquiryIds.filter((id) => id !== inquiryId);
+  });
+  assert.match(
+    validateKnowledgeLifecycle(orphanInquiry, proofClaims).join("\n"),
+    new RegExp(`Inquiry ${inquiryId} has no intake disposition`)
+  );
+});
+
+test("citation pages cannot contain broken or out-of-order graph references", () => {
+  const missingPageSource = cloneBank();
+  missingPageSource.pages[0].sourceOrder.push("SRC-UNKNOWN");
+  assert.match(
+    validateKnowledgeLifecycle(missingPageSource, proofClaims).join("\n"),
+    /Citation page .* references unknown source SRC-UNKNOWN/
+  );
+
+  const missingOccurrenceClaim = cloneBank();
+  missingOccurrenceClaim.pages[0].occurrences[0].claimId = "CLM-UNKNOWN";
+  assert.match(
+    validateKnowledgeLifecycle(missingOccurrenceClaim, proofClaims).join("\n"),
+    /Citation occurrence .* references unknown claim CLM-UNKNOWN/
+  );
+
+  const missingOccurrenceSource = cloneBank();
+  missingOccurrenceSource.pages[0].occurrences[0].sourceIds = ["SRC-UNKNOWN"];
+  assert.match(
+    validateKnowledgeLifecycle(missingOccurrenceSource, proofClaims).join("\n"),
+    /Citation occurrence .* references unknown source SRC-UNKNOWN/
+  );
+
+  const outsideSourceOrder = cloneBank();
+  const page = outsideSourceOrder.pages[0];
+  const sourceId = page.occurrences[0].sourceIds[0];
+  page.sourceOrder = page.sourceOrder.filter((id) => id !== sourceId);
+  assert.match(
+    validateKnowledgeLifecycle(outsideSourceOrder, proofClaims).join("\n"),
+    /Citation occurrence .* uses source .* outside the page source order/
+  );
+});
+
 test("corrections cannot exist without an intake disposition", () => {
   const candidate = cloneBank();
   candidate.intake.forEach((item) => {

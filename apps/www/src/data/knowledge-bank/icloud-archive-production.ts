@@ -375,6 +375,30 @@ export const icloudArchiveClaims = [
         ],
         confidence: "high",
         renderCitation: true
+      },
+      {
+        sourceId: "SRC-URBANHERM-X-HORSE-LORDS-POST-2016",
+        relationship: "corroborating",
+        supports: [
+          "Jamie's contemporaneous naming of M.C. Schmidt as collaborator",
+          "the NPR publication destination"
+        ],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-URBANHERM-X-DREW-HORSE-LORDS-2016",
+        relationship: "corroborating",
+        supports: ["independent public attribution to Jamie and M.C. Schmidt"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-URBANHERM-X-JULIA-HORSE-LORDS-2016",
+        relationship: "corroborating",
+        supports: ["a second public attribution to both video collaborators", "analog-media context"],
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [
@@ -392,7 +416,7 @@ export const icloudArchiveClaims = [
     ],
     researchInquiryIds: ["INQ-HORSE-LORDS-TRUTHERS-PRODUCTION-RIGHTS"],
     reviewedAt: "2026-07-15",
-    reviewedBy: ["Jamie Burkart", "Codex iCloud and public-source review"]
+    reviewedBy: ["Jamie Burkart", "Codex iCloud, public-source, and social-archive review"]
   },
   {
     id: "CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE",

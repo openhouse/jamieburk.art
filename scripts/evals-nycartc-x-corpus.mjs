@@ -79,8 +79,8 @@ check("Public safety", "Public artifacts are minimized and protected item-level 
   !Object.hasOwn(ledger, "items") &&
   !/("visibleText"|"resolvedDestination"|"visibleInteractions")/.test(ledgerText) &&
   includesAll(gitignore, [
-    "nycartc-x-browser-extraction-2026-07-15-utc.json",
-    "nycartc-x-full-population-2026-07-15.json"
+    "docs/knowledge-bank/corpora/source-captures/*-x-browser-extraction-*.json",
+    "docs/knowledge-bank/corpora/*-x-full-population-*.json"
   ]) && manifest.publicLedgerSha256 === sha256(ledgerText));
 
 check("Projection discipline", "Deeper metrics remain held while public chronology and claims stay clear", 10,

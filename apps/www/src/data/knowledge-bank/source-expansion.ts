@@ -348,13 +348,14 @@ export const sourceExpansionClaims = [
       }
     ],
     evidence: [
-      { sourceId: "SRC-KC-TUNNEL-KCUR-2016-09-15", relationship: "direct-support", supports: ["Jamie hosted a 2006 film screening in the 8th Street Tunnel", "Jamie led participants through downtown Kansas City before the screening", "the screening included three films", "Jamie advocated public and school access to the tunnel"], confidence: "high", renderCitation: true }
+      { sourceId: "SRC-KC-TUNNEL-KCUR-2016-09-15", relationship: "direct-support", supports: ["Jamie hosted a 2006 film screening in the 8th Street Tunnel", "Jamie led participants through downtown Kansas City before the screening", "the screening included three films", "Jamie advocated public and school access to the tunnel"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-URBANHERM-X-JULIA-EIGHTH-STREET-TUNNEL-2016", relationship: "corroborating", supports: ["public collaborator attribution connecting Jamie to the historical interpretation and KCUR interview"], confidence: "high", renderCitation: false }
     ],
     boundaries: ["Do not imply official permission, present-day access, or present-day safety.", "The article does not provide a complete participant roster."],
     antiClaims: ["Jamie controlled the 8th Street Tunnel.", "The screening was an official City program."],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-12",
-    reviewedBy: ["Codex public-source review"]
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Jamie Burkart", "Codex public-source and social-archive review"]
   },
   {
     id: "CLM-NYCAC-SAVE-NYC-SPACES-PUBLIC-VOICE",

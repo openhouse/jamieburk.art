@@ -165,7 +165,12 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  assert.equal(knowledgeBank.corrections.length, 5);
+  const wowlistCorrection = knowledgeBank.corrections.find(
+    (correction) => correction.id === "COR-WOWLIST-RESUME-ADOPTION-2026"
+  );
+  assert.match(wowlistCorrection.previousText, /secured adoption/);
+  assert.match(wowlistCorrection.replacementText, /recorded activity/);
 });
 
 test("negative research preserves scope and limitations", () => {

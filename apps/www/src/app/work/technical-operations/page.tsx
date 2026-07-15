@@ -59,7 +59,7 @@ const proofMap = [
   {
     project: "WOWList",
     proof:
-      "Jamie co-built a community-calendar platform using Python / Django, PostgreSQL / PostGIS, and Ember.js across roughly 35 city ecosystems."
+      "Jamie co-built a community-calendar platform using Python / Django, PostgreSQL / PostGIS, and Ember.js, with recorded activity across roughly 35 city ecosystems."
   },
   {
     project: "196 / Sunday Dinner",

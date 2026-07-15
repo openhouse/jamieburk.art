@@ -255,10 +255,24 @@ export const kcTownHallPhaseOneNeighborhoodClaims = [
         ],
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-URBANHERM-X-KCTH-TIRES-2019",
+        relationship: "corroborating",
+        supports: ["Jamie's named participation in the shared pickup and free-disposal workflow"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+        relationship: "direct-support",
+        supports: ["a first-person shared pickup shift", "dump-truck use", "Northeast Kansas City geography"],
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [
-      "Jamie's individual design, coordination, hauling, recordkeeping, and print-production role remains a firsthand account pending corroboration.",
+      "Public social records now corroborate Jamie's direct participation in the pickup workflow, but his complete design, coordination, recordkeeping, and print-production role remains a firsthand account pending further corroboration.",
       "Expansion to Indian Mound remains a firsthand account pending a dated program record or collaborator confirmation.",
       "The $17,768 figure is the project's published estimate and has not been independently audited.",
       "Do not infer an exact tire count from the savings estimate or from the current City program page.",
@@ -272,7 +286,7 @@ export const kcTownHallPhaseOneNeighborhoodClaims = [
     ],
     researchInquiryIds: ["INQ-TIRED-OF-TIRES-JAMIE-ROLE"],
     reviewedAt: "2026-07-15",
-    reviewedBy: ["Jamie Burkart", "Codex archive and public-source review"]
+    reviewedBy: ["Jamie Burkart", "Codex archive, public-source, and social-archive review"]
   }
 ] satisfies ClaimRecord[];
 

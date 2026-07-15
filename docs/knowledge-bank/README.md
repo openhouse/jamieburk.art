@@ -159,3 +159,13 @@ capture, full item-level record, bulk post text, and per-item counters stay
 protected outside the repo. All new social metrics remain held from the public
 site. See the
 [research run](runs/2026-07-15-nycartc-x-full-population.md).
+
+The personal [@urbanhermit project note](projects/urbanhermit.md) records a
+complete capture-date live-profile pass: three independent traversals recovered
+the same 434-status population. The public repo retains a minimized aggregate,
+digest, and selected-source ledger; the item-level capture, raw post text,
+ordinary-life context, and other people's unnecessary traces stay in Jamie's
+protected archive. Selected public attributions deepen WOW List, Horse Lords,
+8th Street Tunnel, NYC Artist Coalition, and Tired of Tires records without
+adding a new website projection. See the
+[research run](runs/2026-07-15-urbanhermit-x-full-population.md).

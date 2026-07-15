@@ -49,7 +49,9 @@ export function validateKnowledgeLifecycle(
     ["intake", bank.intake],
     ["source", bank.sources],
     ["claim", bank.claims],
-    ["inquiry", bank.researchInquiries]
+    ["inquiry", bank.researchInquiries],
+    ["correction", bank.corrections],
+    ["citation page", bank.pages]
   ]) {
     for (const id of duplicateIds(items)) errors.push(`Duplicate ${label} ID: ${id}`);
   }
@@ -135,6 +137,20 @@ export function validateKnowledgeLifecycle(
     }
   }
 
+  const intakeClaimIds = new Set(bank.intake.flatMap((item) => item.claimIds));
+  for (const claim of bank.claims) {
+    if (!intakeClaimIds.has(claim.id)) {
+      errors.push(`Claim ${claim.id} has no intake disposition`);
+    }
+  }
+
+  const intakeInquiryIds = new Set(bank.intake.flatMap((item) => item.inquiryIds));
+  for (const inquiry of bank.researchInquiries) {
+    if (!intakeInquiryIds.has(inquiry.id)) {
+      errors.push(`Inquiry ${inquiry.id} has no intake disposition`);
+    }
+  }
+
   const graphSourceIds = new Set([
     ...bank.claims.flatMap((claim) => claim.evidence.map((item) => item.sourceId)),
     ...bank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds)
@@ -146,6 +162,18 @@ export function validateKnowledgeLifecycle(
   }
 
   for (const claim of bank.claims) {
+    for (const inquiryId of claim.researchInquiryIds) {
+      if (!inquiryById.has(inquiryId)) {
+        errors.push(`Claim ${claim.id} references unknown inquiry ${inquiryId}`);
+      }
+    }
+    for (const relationship of claim.evidence) {
+      if (!sourceById.has(relationship.sourceId)) {
+        errors.push(
+          `Claim ${claim.id} references unknown evidence source ${relationship.sourceId}`
+        );
+      }
+    }
     for (const projection of claim.projections) {
       if (!projection.rationale) {
         errors.push(`Projection ${claim.id}/${projection.key} has no rationale`);
@@ -170,6 +198,51 @@ export function validateKnowledgeLifecycle(
         if (excluded.has(normalizeProposition(support))) {
           errors.push(
             `Claim ${claim.id} uses ${source.id} to support a proposition the source does not establish: ${support}`
+          );
+        }
+      }
+    }
+  }
+
+  for (const inquiry of bank.researchInquiries) {
+    for (const sourceId of inquiry.sourceIds) {
+      if (!sourceById.has(sourceId)) {
+        errors.push(`Inquiry ${inquiry.id} references unknown source ${sourceId}`);
+      }
+    }
+  }
+
+  for (const correction of bank.corrections) {
+    if (!claimById.has(correction.claimId)) {
+      errors.push(`Correction ${correction.id} references unknown claim ${correction.claimId}`);
+    }
+  }
+
+  for (const page of bank.pages) {
+    const sourceOrder = new Set(page.sourceOrder);
+    for (const sourceId of page.sourceOrder) {
+      if (!sourceById.has(sourceId)) {
+        errors.push(`Citation page ${page.id} references unknown source ${sourceId}`);
+      }
+    }
+    for (const occurrenceId of duplicateIds(page.occurrences)) {
+      errors.push(`Duplicate citation occurrence ID on ${page.id}: ${occurrenceId}`);
+    }
+    for (const occurrence of page.occurrences) {
+      if (!claimById.has(occurrence.claimId)) {
+        errors.push(
+          `Citation occurrence ${page.id}/${occurrence.id} references unknown claim ${occurrence.claimId}`
+        );
+      }
+      for (const sourceId of occurrence.sourceIds ?? []) {
+        if (!sourceById.has(sourceId)) {
+          errors.push(
+            `Citation occurrence ${page.id}/${occurrence.id} references unknown source ${sourceId}`
+          );
+        }
+        if (!sourceOrder.has(sourceId)) {
+          errors.push(
+            `Citation occurrence ${page.id}/${occurrence.id} uses source ${sourceId} outside the page source order`
           );
         }
       }
