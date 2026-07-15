@@ -3,11 +3,13 @@
 ## Source Posture
 
 This dossier preserves two related first-person project memories supplied by
-Jamie on July 15, 2026. The memories are public-safe, specific, and useful for
-research, but they do not yet have independent archival or collaborator
-corroboration. Their public-site projections remain on hold.
+Jamie on July 15, 2026, plus a protected project spreadsheet that materially
+corroborates sustained tire-pickup recordkeeping. The spreadsheet does not
+independently establish Jamie's exact role, every program detail, or the
+Cleveland Avenue work. Public-site projections remain on hold.
 
-Source: `SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15`.
+Sources: `SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15` and
+`SRC-KC-TIRE-PICKUP-LEDGER-2019-2022`.
 
 ## TiredOfTires
 
@@ -23,8 +25,14 @@ Center.
 
 Claim: `CLM-KC-TIRED-OF-TIRES-OPERATIONS` - use with care.
 
-Do not publish aggregate tire counts, participant addresses, routes, contact
-lists, or a complete chronology until they are recovered and reconciled.
+The protected project ledger records 1,970 tires across 25 nonzero monthly
+entries from May 2019 through September 2022 and models $44,890 in disposal
+costs. This supports `CLM-KC-TIRE-PICKUP-LEDGER` as confirmed with boundary.
+The ledger is project-maintained rather than independently audited, and its
+dollar figure is modeled rather than verified realized savings.
+
+Do not publish participant addresses, routes, contact lists, or a complete
+chronology. Do not imply Jamie personally collected every recorded tire.
 Preserve Oak Park Neighborhood Association, Indian Mound neighbors, Chestnut
 Street Resource Center, Kansas City staff, and participating residents as
 collective actors.
@@ -61,6 +69,7 @@ until the underlying artifact set is recovered.
 
 ## Research Queue
 
-`INQ-KC-NEIGHBORHOOD-PROGRAMS-2026` seeks association, coalition, church, city,
-social-media, handbill, map, meeting, recycling, and capital-improvement records
-plus collaborator confirmation.
+`INQ-KC-NEIGHBORHOOD-PROGRAMS-2026` is now partially recovered through the tire
+ledger and continues to seek association, coalition, church, city, social-media,
+handbill, map, meeting, recycling, and capital-improvement records plus
+collaborator confirmation.

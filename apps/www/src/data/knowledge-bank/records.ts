@@ -7,10 +7,18 @@ import {
   nycaPressResearchInquiries,
   nycaPressSources
 } from "./nyca-press-corpus.ts";
+import {
+  icloudTeamsClaims,
+  icloudTeamsIntakeItems,
+  icloudTeamsObservations,
+  icloudTeamsResearchInquiries,
+  icloudTeamsSources
+} from "./icloud-teams-archive.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
     ...nycaPressIntakeItems,
+    ...icloudTeamsIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -286,6 +294,7 @@ const knowledgeBankInput = {
   ],
   sources: [
     ...nycaPressSources,
+    ...icloudTeamsSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1302,6 +1311,7 @@ const knowledgeBankInput = {
   ],
   observations: [
     ...nycaPressObservations,
+    ...icloudTeamsObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1886,6 +1896,7 @@ const knowledgeBankInput = {
   ],
   claims: [
     ...nycaPressClaims,
+    ...icloudTeamsClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -2557,16 +2568,26 @@ const knowledgeBankInput = {
         citationRequired: false,
         surfaces: ["docs/knowledge-bank/projects/kansas-city-neighborhood-programs"]
       }],
-      evidence: [{
-        sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
-        relationship: "direct-support",
-        supports: ["program identity and communication design", "city coordination", "monthly pickup and recycling operations", "reported Indian Mound expansion"],
-        confidence: "moderate",
-        renderCitation: false
-      }],
+      evidence: [
+        {
+          sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+          relationship: "direct-support",
+          supports: ["program identity and communication design", "city coordination", "monthly pickup and recycling operations", "reported Indian Mound expansion"],
+          confidence: "moderate",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-KC-TIRE-PICKUP-LEDGER-2019-2022",
+          relationship: "corroborating",
+          supports: ["multi-year monthly operating ledger", "structured tire-count tracking", "modeled disposal-cost calculation"],
+          publicNote: "The spreadsheet corroborates sustained recordkeeping and aggregate activity, not Jamie's sole role or every program detail.",
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
       boundaries: [
-        "This role and the Indian Mound expansion currently rest on Jamie's first-person account and remain queued for association, city, collaborator, or archival corroboration.",
-        "Do not publish participant addresses, contact lists, route details, or unsupported aggregate tire counts.",
+        "The ledger corroborates structured monthly operations and a project-recorded aggregate, but Jamie's exact role and the Indian Mound expansion still rest on his first-person account.",
+        "Do not publish participant addresses, contact lists, route details, or represent the project-maintained aggregate as an independent audit.",
         "Preserve Oak Park Neighborhood Association, Indian Mound neighbors, the Chestnut Street Resource Center, city staff, and participating residents as collective actors."
       ],
       antiClaims: [
@@ -2576,7 +2597,7 @@ const knowledgeBankInput = {
       ],
       researchInquiryIds: ["INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"],
       reviewedAt: "2026-07-15",
-      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+      reviewedBy: ["Jamie Burkart", "Codex intake and structured spreadsheet review"]
     },
     {
       id: "CLM-KC-CLEVELAND-UNIFY-TO-BEAUTIFY",
@@ -2860,6 +2881,7 @@ const knowledgeBankInput = {
   ],
   researchInquiries: [
   ...nycaPressResearchInquiries,
+  ...icloudTeamsResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -2917,15 +2939,24 @@ const knowledgeBankInput = {
       "Search handbills, logos, maps, photographs, social posts, meeting materials, email, pickup logs, recycling receipts, and public funding or capital-improvement records.",
       "Request collaborator confirmation while preserving Pastor Lee's authorship and collective neighborhood credit."
     ],
-    resultStatus: "queued",
-    findings: [],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "A protected KC Town Hall project spreadsheet records 1,970 tires across 25 nonzero monthly entries from May 2019 through September 2022.",
+      "The spreadsheet models $44,890 in disposal costs from per-tire assumptions.",
+      "The ledger materially corroborates sustained monthly recordkeeping but does not independently establish Jamie's sole operating role, every pickup location, or Indian Mound expansion."
+    ],
     limitations: [
-      "The current record is Jamie's first-person account and does not independently establish dates, totals, expansion, co-founding status, elected-official participation, or funding influence.",
+      "Jamie's exact role, the Indian Mound expansion, Cleveland Avenue co-founding status, elected-official participation, and funding influence still rely on first-person memory or remain unrecovered.",
+      "The spreadsheet is a project-maintained ledger rather than an independent audit, and its dollar figure is modeled rather than verified realized savings.",
       "Participant addresses, contact lists, private messages, and route-level data remain protected.",
       "Pastor Lee's corridor concept and all collective neighborhood labor must retain their own attribution."
     ],
-    sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15"],
-    publicSummary: "Jamie's TiredOfTires and Cleveland Avenue contributions are preserved as first-person claims and queued for public-safe archival and collaborator corroboration."
+    sourceIds: [
+      "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+      "SRC-KC-TIRE-PICKUP-LEDGER-2019-2022"
+    ],
+    publicSummary: "A protected project ledger corroborates sustained monthly tire-count tracking and records 1,970 tires from May 2019 through September 2022. Jamie's exact role, expansion history, and Cleveland Avenue contributions remain queued for public-safe collaborator and institutional corroboration."
   },
   {
     id: "INQ-KC-TOWN-HALL-COUNCIL-FUNDING-2026",
@@ -3121,6 +3152,7 @@ const knowledgeBankInput = {
     publicSummary: "A preserved timeline slice documents at least two then-Council-member accounts amplifying CallNYC in 2016; comprehensive engagement measurement remains open."
   }],
   corrections: [
+    { id: "COR-FAIR-RENT-MEMORY-PAGE-COUNT-2026", claimId: "CLM-CRS-SHARED-MEMORY-SYSTEM", previousText: "30+ pages of shared campaign-memory infrastructure", replacementText: "a shared campaign-memory system organizing decisions, owners, open questions, city/state lanes, consent levels, and next steps", reason: "The recovered records support the system's structure and Jamie's stewardship more directly than an unnecessary page-count shorthand.", decidedAt: "2026-07-15", affectedSurfaces: ["/work", "/work/fair-rent-nyc", "knowledge-bank"], status: "active" },
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }

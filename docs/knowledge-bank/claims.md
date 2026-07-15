@@ -67,22 +67,22 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful
 **Support level:** Careful
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
-**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.
+**Evidence class:** Protected operating plan / protected running minutes / private corroborating transcript / public-safe archive summary
+**Public wording:** Created and stewarded a shared Commercial Rent Stabilization campaign-memory system for decisions, owners, open questions, city/state lanes, consent levels, and next steps.
+**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action ownership, legal and policy questions, consent levels, stakeholder next steps, and aligned city/state strategy lanes into shared memory and actionable workstreams.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.
 **Guardrail:** Use collective-work language and do not publish raw or private coalition context.
 **Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.
 **Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
 **Review owner:** Jamie / Collaborator approval needed for named materials  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
 
 ## fair-rent-source-map - Legislative source map and provenance redline
 
 **Status:** Careful
 **Support level:** Careful
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Evidence class:** Protected Jamie-prepared working document / public-safe archive summary
 **Public wording:** Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.
 **Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.
 **Where to project:** Resume page, Technical Operations, Case study.
@@ -91,7 +91,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
 **Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
 **Review owner:** Jamie / Collaborator approval needed  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
@@ -187,7 +187,7 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Moderate  
-**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
+**Evidence class:** Public-safe lab materials / protected two-page proposal
 **Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
 **Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
@@ -196,7 +196,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
 
 ## technical-operations-operating-backbone - Operating backbone
 

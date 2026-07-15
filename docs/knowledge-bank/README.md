@@ -83,3 +83,8 @@ publishing private source material or promoting every memory directly to the sit
 The [KC Town Hall stewardship-transition receipt](intake/2026-07-15-kc-town-hall-stewardship-transition.md)
 keeps Jamie's professional handoff distinct from the later municipal funding
 withdrawal while limiting follow-up research to public-safe transition evidence.
+The [iCloud Teams archive-production receipt](intake/2026-07-15-icloud-teams-archive-production.md)
+shows an anchor-first pass through Jamie Projects History, CRS, and job-hunt:
+project ledgers and public captures become bounded claims, protected operating
+records strengthen selected website language, and unselected creative and civic
+depth remains available for future composition.

@@ -194,7 +194,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "A shared campaign-memory system for decisions, owners, action items, open questions, city/state lanes, consent levels, source lineage, public-data framing, public campaign websites, and public-safe continuity.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -248,7 +248,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, a recovered 44-article campaign press corpus, meeting-memory summaries, and protected coalition context.",
+      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, a recovered 44-article campaign press corpus, and protected operating-plan, running-minutes, public-data, and legislative-provenance artifacts.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -262,12 +262,12 @@ const workItemsInput = [
       "Independent 2017 organizer attribution and 100+ mutual-aid network sign-ups at that time",
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
-      "30+ pages of shared campaign-memory infrastructure",
-      "Running minutes, decision records, action trackers, and source maps",
+      "Shared campaign-memory architecture for decisions, ownership, open questions, city/state lanes, consent levels, and next steps",
+      "Running minutes, decision records, action trackers, and an unofficial legislative provenance redline",
       "Jamie-built campaign websites for Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC",
       "Recovered campaign press corpus: 45 placements and 44 distinct articles across four campaign sites",
       "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
+      "An authored open-data proposal for aggregate rent and vacancy indicators with privacy and licensing safeguards"
     ],
     knownOpenProtected: {
       known:

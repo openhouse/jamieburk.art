@@ -168,11 +168,12 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Created and stewarded a shared Commercial Rent Stabilization campaign-memory system for decisions, owners, open questions, city/state lanes, consent levels, and next steps.",
+    shortWording: "Shared civic campaign-memory architecture",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+      "Jamie synthesized meetings, decision records, action ownership, legal and policy questions, consent levels, stakeholder next steps, and aligned city/state strategy lanes into shared memory and actionable workstreams.",
+    sourceBasis:
+      "Protected 90-day operating plan, running minutes through April 2026, and private corroborating collaboration transcript; represented here only through a public-safe aggregate summary.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -195,7 +196,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "fair-rent-source-map",
@@ -211,7 +212,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Protected Jamie-prepared legislative provenance redline updated May 16, 2026, plus public-safe archive summary; the document labels itself unofficial and not legal advice.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -227,7 +229,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -472,13 +474,14 @@ export const proofClaims: ProofClaim[] = [
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
-    evidenceClass: ["public-safe-archive-summary"],
+    evidenceClass: ["public-safe-archive-summary", "firsthand-collaborator-context"],
     publicWording:
       "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceBasis:
+      "Protected two-page proposal authored June 26, 2026, defining the bounded source-to-memory loop, human correction, trust and privacy checks, narrow scope, and sprint deliverables.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -495,7 +498,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "technical-operations-operating-backbone",

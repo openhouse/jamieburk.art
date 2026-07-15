@@ -214,9 +214,10 @@ test("KC Town Hall stewardship transition stays distinct from municipal withdraw
   assert.match(caseStudy, /Separately, the municipal funding project later withdrew/);
 });
 
-test("KC neighborhood memories remain specific, collective, and queued for corroboration", () => {
+test("KC neighborhood archive recovery strengthens the ledger without overstating Jamie's role", () => {
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   const tired = claimById.get("CLM-KC-TIRED-OF-TIRES-OPERATIONS");
+  const ledger = claimById.get("CLM-KC-TIRE-PICKUP-LEDGER");
   const cleveland = claimById.get("CLM-KC-CLEVELAND-UNIFY-TO-BEAUTIFY");
   const inquiry = knowledgeBank.researchInquiries.find(
     (item) => item.id === "INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"
@@ -224,11 +225,15 @@ test("KC neighborhood memories remain specific, collective, and queued for corro
 
   assert.equal(tired?.status, "use-with-care");
   assert.ok(tired?.boundaries.some((value) => /Oak Park Neighborhood Association/i.test(value)));
+  assert.ok(tired?.evidence.some((item) => item.sourceId === "SRC-KC-TIRE-PICKUP-LEDGER-2019-2022"));
+  assert.equal(ledger?.status, "confirmed-with-boundary");
+  assert.ok(ledger?.boundaries.some((value) => /not an independent audit/i.test(value)));
   assert.equal(cleveland?.status, "use-with-care");
   assert.ok(cleveland?.boundaries.some((value) => /Pastor Lee originated/i.test(value)));
   assert.ok(cleveland?.antiClaims.some((value) => /alone founded|alone.*operated/i.test(value)));
-  assert.equal(inquiry?.resultStatus, "queued");
-  assert.deepEqual(inquiry?.findings, []);
+  assert.equal(inquiry?.resultStatus, "partially-recovered");
+  assert.ok(inquiry?.findings.some((value) => /1,970 tires/i.test(value)));
+  assert.ok(inquiry?.limitations.some((value) => /project-maintained ledger/i.test(value)));
 });
 
 test("claim maturity matches recovered evidence", () => {
