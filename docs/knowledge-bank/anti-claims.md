@@ -28,6 +28,26 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not describe the `@NYCArtC` retrievable-population corpus as a complete X
+account export. The July 2026 public-surface census recovered 3,123 distinct
+statuses against a 5,124-item profile counter; 2,001 profile-counted records
+remain unmaterialized. Only an owner-requested X Archive can reconcile that
+gap.
+
+Do not turn the 2,438 externally authored source statuses surfaced through
+native repost appearances into 2,438 accounts that engaged with, endorsed, or
+were reached by NYC Artist Coalition. Those appearances document what the
+coalition account selected for circulation. Their timestamps are source-post
+dates, not established coalition repost dates, and their displayed metrics
+belong to the source statuses.
+
+Do not turn 4,306 displayed reply, repost, and like interaction units on 685
+account-authored statuses into 4,306 people, unique viewers, supporters,
+endorsements, or policy outcomes. Keep those volatile access-time counters
+separate from the bounded post-2020 incoming-response ledger, and do not assign
+shared-account authorship to Jamie or any collaborator without post-level
+evidence.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

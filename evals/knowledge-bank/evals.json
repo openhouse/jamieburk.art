@@ -152,7 +152,7 @@
       "correctedSourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "correctionId": "COR-NYCAC-CABARET-HEARING-DATE-2026",
       "approvedContentSha256": "06f499a9c10eee7afe2ee47227919a4994b868690093743a63113d3d161111f2",
-      "approvedRelatedClaimsSha256": "daa163f4a390c5732e755c7b65d16ac42c951ca1d5c011e4ec0f01651a71420c",
+      "approvedRelatedClaimsSha256": "08541eb614dd459135813d00f5a2817b26ffa46be55c0c85b4d244d32f89953a",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-COUNCIL-EVIDENTIARY-USE",
@@ -251,7 +251,7 @@
       "expectedSourceCount": 15,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "a66a99b17fbf07c9eca5846a9d1f4cfaba6fd1ce7951b5e4b4c48534795eef6e",
+      "approvedContentSha256": "ae25ffb2d86f1ec4d262860757f62aa4f242f960c5a13c53ab18f06190d3ba1a",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -554,6 +554,64 @@
       "conveningContextSourceId": "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015",
       "historicalProductScopeSourceId": "SRC-WOWLIST-TRADEMARK-RECORD"
     },
+    "nycacRetrievablePopulation": {
+      "reviewedAt": "2026-07-15",
+      "manifestPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+      "reportPath": "docs/knowledge-bank/projects/nycac-social-population.md",
+      "expectedProfileCount": 5124,
+      "expectedPostsTimelineCount": 764,
+      "expectedPostsAndRepliesCount": 2698,
+      "expectedYearlyAuthoredSearchCount": 554,
+      "expectedRecoveredCount": 3123,
+      "expectedCounterRemainder": 2001,
+      "expectedCounterCoveragePercent": 60.9,
+      "expectedRecordTypeCounts": {
+        "original": 608,
+        "reply": 77,
+        "repost": 2438
+      },
+      "expectedAuthoredCount": 685,
+      "expectedTimelineNativeRepostAppearances": 2440,
+      "expectedSelfRepostAppearances": 2,
+      "expectedQuotePostCorrections": 15,
+      "expectedDistinctSourceAuthors": 623,
+      "expectedExternalLinkOccurrences": 1451,
+      "expectedDistinctShortUrls": 1161,
+      "expectedRecordsWithExternalLinks": 1339,
+      "expectedRepresentativeSourceCount": 8,
+      "expectedMissionSignalCounts": {
+        "fair-rent-nyc": 477,
+        "save-nyc-spaces": 192,
+        "let-nyc-dance": 97,
+        "talks-not-raids": 62,
+        "nightlife-governance": 57,
+        "artist-labor": 98
+      },
+      "expectedIncomingRecordCount": 98,
+      "expectedIncomingAuthorCount": 43,
+      "expectedDirectIncomingRecordCount": 75,
+      "expectedDirectIncomingAuthorCount": 34,
+      "expectedContextRecordCount": 23,
+      "expectedContextAuthorCount": 15,
+      "expectedAuthoredRecordsWithDisplayedInteraction": 618,
+      "expectedDisplayedReplies": 118,
+      "expectedDisplayedReposts": 1490,
+      "expectedDisplayedLikes": 2698,
+      "expectedDisplayedInteractionUnits": 4306,
+      "expectedIntakeCount": 2,
+      "expectedObservationCount": 8,
+      "expectedSourceCount": 4,
+      "expectedClaimCount": 3,
+      "expectedInquiryCount": 2,
+      "activeClaimId": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
+      "heldClaimIds": [
+        "CLM-NYCAC-X-POST-2020-PUBLIC-RESPONSE",
+        "CLM-NYCAC-X-VISIBLE-ENGAGEMENT-SNAPSHOT"
+      ],
+      "ownerArchiveInquiryId": "INQ-NYCAC-X-OWNER-ARCHIVE-RECONCILIATION",
+      "postedSourceInquiryId": "INQ-NYCAC-X-POSTED-SOURCE-MATURATION",
+      "manifestSourceId": "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026"
+    },
     "kcTownHallFullPopulation": {
       "reviewedAt": "2026-07-15",
       "ledgerPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
@@ -804,6 +862,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 38 profile-reported objects, 35 posted URLs, historical workflows, source roles, account-owned engagement, bounded external adoption, authorship limits, and selective projection remain complete, reproducible, and non-inflationary."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION",
+      "label": "NYC Artist Coalition retrievable-population archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every record in the 3,123-record retrievable public union, all posted URLs, mission classifications, source-network appearances, bounded incoming response, access-time engagement, platform limits, shared authorship, and the 2,001-record owner-archive gap remain complete, replayable, public-safe, and non-inflationary."
     },
     {
       "id": "KB-EVAL-KCTH-FULL-POPULATION",

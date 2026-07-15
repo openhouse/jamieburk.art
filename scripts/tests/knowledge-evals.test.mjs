@@ -12,11 +12,13 @@ import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts
 import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
+import { nycacMissionSignalRules } from "../lib/nycac-mission-classifier.mjs";
 
 const suite = loadKnowledgeEvalSuite();
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const callNycPopulationPath = path.join(repoRoot, suite.pilot.callNycFullPopulation.manifestPath);
 const wowListPopulationPath = path.join(repoRoot, suite.pilot.wowListFullPopulation.manifestPath);
+const nycacPopulationPath = path.join(repoRoot, suite.pilot.nycacRetrievablePopulation.manifestPath);
 const kcTownHallLedgerPath = path.join(repoRoot, suite.pilot.kcTownHallFullPopulation.ledgerPath);
 
 function loadCallNycPopulation() {
@@ -25,6 +27,10 @@ function loadCallNycPopulation() {
 
 function loadWowListPopulation() {
   return JSON.parse(readFileSync(wowListPopulationPath, "utf8"));
+}
+
+function loadNycacPopulation() {
+  return JSON.parse(readFileSync(nycacPopulationPath, "utf8"));
 }
 
 function loadKcTownHallLedger() {
@@ -1729,6 +1735,177 @@ test("WOW List public manifest rejects raw post-body leakage", () => {
   const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
   assert.equal(result.accepted, false);
+});
+
+test("NYC Artist Coalition retrievable-population production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score,
+    5
+  );
+  assert.equal(result.contentApprovals.nycacSocialPopulation.reviewLocksMatch, true);
+});
+
+test("NYC Artist Coalition eval preserves retrievable-union and profile-counter boundaries", () => {
+  const population = loadNycacPopulation();
+  population.populationReconciliation.profileCountNotMaterialized = 0;
+  population.populationReconciliation.profileCounterCoveragePercent = 100;
+  population.populationReconciliation.conclusion = "All 5,124 profile-counted posts were recovered.";
+  const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
+test("NYC Artist Coalition eval rejects a dropped or duplicated source status", () => {
+  const dropped = loadNycacPopulation();
+  dropped.records.pop();
+  let result = evaluateKnowledgeBank(suite, { nycacPopulation: dropped });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+
+  const duplicated = loadNycacPopulation();
+  duplicated.records[1].url = duplicated.records[0].url;
+  result = evaluateKnowledgeBank(suite, { nycacPopulation: duplicated });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+});
+
+test("NYC Artist Coalition row locks reject count-preserving identity mutations", () => {
+  const mutations = [
+    (population) => {
+      const other = population.records.find((record) => record.authorHandle !== population.records[0].authorHandle);
+      [population.records[0].authorHandle, other.authorHandle] =
+        [other.authorHandle, population.records[0].authorHandle];
+    },
+    (population) => {
+      const other = population.records.find((record) => record.sourcePublishedAt !== population.records[0].sourcePublishedAt);
+      [population.records[0].sourcePublishedAt, other.sourcePublishedAt] =
+        [other.sourcePublishedAt, population.records[0].sourcePublishedAt];
+    },
+    (population) => {
+      const linked = population.records.filter((record) => record.externalLinks.length > 0);
+      [linked[0].externalLinks[0].displayedDestination, linked[1].externalLinks[0].displayedDestination] =
+        [linked[1].externalLinks[0].displayedDestination, linked[0].externalLinks[0].displayedDestination];
+    },
+    (population) => {
+      population.records[0].classificationInputDigest = "a".repeat(64);
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const population = loadNycacPopulation();
+    mutate(population);
+    const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+    assert.equal(result.accepted, false);
+  }
+});
+
+test("NYC Artist Coalition eval rejects mission-classification drift", () => {
+  const population = loadNycacPopulation();
+  population.missionSignalClassification.rules[0].pattern = "anything";
+  const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+  assert.deepEqual(
+    population.missionSignalClassification.rules.map((rule) => rule.signalId),
+    nycacMissionSignalRules.map((rule) => rule.id)
+  );
+});
+
+test("NYC Artist Coalition eval rejects source-network appearance as incoming engagement", () => {
+  const population = loadNycacPopulation();
+  population.sourceAuthorNetwork.boundary = "Every source account engaged with and endorsed NYC Artist Coalition.";
+  const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("NYC Artist Coalition eval rejects direct-mention and conversation-context conflation", () => {
+  const population = loadNycacPopulation();
+  const contextRecord = population.post2020IncomingMentionInventory.records.find(
+    (record) => !record.mentionHandles.some((handle) => handle.toLowerCase() === "@nycartc")
+  );
+  assert.ok(contextRecord);
+  contextRecord.mentionHandles.push("@NYCArtC");
+  const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+});
+
+test("NYC Artist Coalition eval rejects visible-interaction inflation", () => {
+  const population = loadNycacPopulation();
+  const authoredRecord = population.records.find((record) => record.recordType === "original");
+  assert.ok(authoredRecord);
+  authoredRecord.visibleEngagement.likes += 1;
+  const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+});
+
+test("NYC Artist Coalition eval rejects source-post dates as coalition activity dates", () => {
+  const population = loadNycacPopulation();
+  population.populationReconciliation.dateBoundary = "Native repost timestamps are @NYCArtC activity dates.";
+  const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("NYC Artist Coalition public manifest rejects raw post-body leakage", () => {
+  const population = loadNycacPopulation();
+  population.records[0].text = "Synthetic raw post body that must never enter the public fixture.";
+  const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("NYC Artist Coalition selected projection rejects individual shared-account authorship", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.nycacRetrievablePopulation.activeClaimId
+  );
+  assert.ok(claim?.projections[0]);
+  const original = claim.projections[0].text;
+
+  try {
+    claim.projections[0].text = `${original} Jamie established and ran the @NYCArtC coalition account.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0].text = original;
+  }
+});
+
+test("NYC Artist Coalition selected projection rejects source-network engagement inflation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.nycacRetrievablePopulation.activeClaimId
+  );
+  assert.ok(claim?.projections[0]);
+  const original = claim.projections[0].text;
+
+  try {
+    claim.projections[0].text = `${original} 2,438 source accounts engaged with and endorsed the coalition.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0].text = original;
+  }
+});
+
+test("NYC Artist Coalition selected projection rejects interaction units as people", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.nycacRetrievablePopulation.activeClaimId
+  );
+  assert.ok(claim?.projections[0]);
+  const original = claim.projections[0].text;
+
+  try {
+    claim.projections[0].text = `${original} 4,306 people engaged with the coalition.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0].text = original;
+  }
 });
 
 test("KC Town Hall full-population production passes its deterministic criterion", () => {

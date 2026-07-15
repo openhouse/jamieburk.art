@@ -626,6 +626,59 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
+      "title": "NYC Artist Coalition X retrievable-population manifest",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition X retrievable-population manifest, July 15, 2026.",
+      "publicNote": "A public-safe 3,123-row manifest preserving source-status URLs, source-post dates, author handles, record types, link metadata, mention handles, hashtags, classification digests and first matches, bounded incoming mentions, and dated aggregate counts. Raw post text, credentials, cookies, private account state, and session data are excluded.",
+      "doesNotEstablish": [
+        "the content of 2,001 profile-counted records outside the recovered public union",
+        "individual authorship of the shared account",
+        "engagement by every reposted source account",
+        "reach, endorsement, participation, policy causality, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-HELP-MISSING-POSTS",
+      "title": "Help with missing Posts",
+      "organization": "X Help Center",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://help.x.com/en/using-x/missing-posts",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "X Help Center, 'Help with missing Posts,' accessed July 15, 2026.",
+      "publicNote": "X documents that Posts displays the latest 800 records, Posts & replies displays the latest 3,200, and older posts may fail to appear because of indexing restrictions.",
+      "doesNotEstablish": [
+        "which @NYCArtC records fall outside the limits",
+        "that an unmaterialized record was deleted"
+      ]
+    },
+    {
+      "id": "SRC-X-HELP-ACCOUNT-ARCHIVE",
+      "title": "New user FAQ",
+      "organization": "X Help Center",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://help.x.com/en/resources/new-user-faq",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "X Help Center, 'New user FAQ,' accessed July 15, 2026.",
+      "publicNote": "X directs account owners beyond the recent profile timeline to download an X Archive and browse account information beginning with the first post.",
+      "doesNotEstablish": [
+        "the contents of the @NYCArtC owner archive",
+        "exact reconciliation to the current profile counter"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
       "title": "6 Things to Know About Making DIY Spaces Work",
       "organization": "Bedford + Bowery",
@@ -1577,6 +1630,61 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A July 2026 archival pass reviewed every one of the 3,123 unique public records X made retrievable from the coalition account: 685 coalition-account-authored originals or replies and 2,438 external-source posts surfaced through native reposts. The corpus preserves four campaign lines and a broad arts, labor, small-business, tenant, legal, public-sector, and journalism source network. X's timeline limits leave 2,001 profile-counted records outside the public capture, so this is a complete review of the retrievable union, not a complete account export.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "3,123-record retrievable union",
+            "record-type partition",
+            "mission, source-author, posted-link, and stakeholder inventories"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-HELP-MISSING-POSTS",
+          "relationship": "supports-boundary",
+          "supports": [
+            "800 and 3,200 profile display limits",
+            "older-post indexing restrictions"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-HELP-ACCOUNT-ARCHIVE",
+          "relationship": "supports-boundary",
+          "supports": [
+            "owner-archive route beginning with the first post"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The recovered union covers 60.9 percent of the 5,124-post profile counter; literal full-account recovery requires the owner archive.",
+        "The 2,001-record remainder is not described as absent, deleted, empty, or reviewed.",
+        "The shared account does not identify the human author of each coalition-account post.",
+        "External-source reposts document what the coalition account circulated, not incoming engagement, endorsement, collaboration, or source permission.",
+        "Mission signals, source counts, links, and visible interactions describe the recovered corpus; they do not measure reach, participation, policy causality, or impact.",
+        "Native repost timestamps are source-post dates, not @NYCArtC activity dates."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1862,7 +1970,10 @@
         "SRC-NYC-ONL-REPORT-2023-24",
         "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
         "SRC-NYCAC-X-PROFILE",
-        "SRC-NYCAC-DOCUMENT-JOURNAL-2018"
+        "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
+        "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
+        "SRC-X-HELP-MISSING-POSTS",
+        "SRC-X-HELP-ACCOUNT-ARCHIVE"
       ],
       "occurrences": [
         {
@@ -1930,6 +2041,16 @@
             "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
             "SRC-NYCAC-X-PROFILE",
             "SRC-NYCAC-DOCUMENT-JOURNAL-2018"
+          ]
+        },
+        {
+          "id": "coalition-social-population",
+          "claimId": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
+            "SRC-X-HELP-MISSING-POSTS",
+            "SRC-X-HELP-ACCOUNT-ARCHIVE"
           ]
         },
         {

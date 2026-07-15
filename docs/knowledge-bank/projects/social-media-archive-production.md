@@ -86,6 +86,36 @@ are bounded search results, not a complete lifetime corpus; search caps,
 ranking, deleted posts, private accounts, suspensions, and renames remain
 material limitations.
 
+### Complete retrievable-population review
+
+A later full-population pass exhausted the authenticated Posts and Posts &
+replies routes and reconciled them with exact yearly `from:NYCArtC` searches.
+The union yielded 3,123 unique source-status URLs: 608 coalition-account
+originals, 77 coalition-account replies, and 2,438 external-source statuses
+surfaced through native reposts. Every record in that retrievable union was
+reviewed.
+
+The profile reported 5,124 posts. X's documented display and indexing limits
+left 2,001 profile-counted records outside the recovered public union, so this
+is 100 percent review of the retrievable union and 60.9 percent coverage of the
+profile counter. Literal full-account recovery requires an account-owner X
+Archive; the remainder is not represented as absent or deleted.
+
+The corpus preserves 1,161 distinct posted short URLs and 623 visible source
+authors. Replayable overlapping subject rules identify 477 Fair Rent NYC, 192
+Save NYC Spaces, 97 Let NYC Dance, 62 Talks Not Raids, 57 nightlife-governance,
+and 98 artist-labor records. These are publishing-pattern counts, not measures
+of authorship, endorsement, reach, participation, causality, or impact.
+
+A separate bounded 2021-2026 incoming search rendered 98 records from 43
+authors; 75 records from 34 authors directly matched `@NYCArtC`, while 23 were
+surrounding conversation context. Source-network appearance through coalition
+reposting remains separate from this incoming-response evidence.
+
+The complete method, posted-source inventory, stakeholder relationship classes,
+platform boundary, and selective projection are in the
+[NYC Artist Coalition social-population report](nycac-social-population.md).
+
 ### Serving Council-member authored mentions
 
 At least six serving Council member accounts authored public posts mentioning
@@ -229,7 +259,7 @@ Promoted to a public case-study projection:
 - CallNYC's 61-issue-page distribution system and 19-member
   Council-engagement lower bound;
 - NYC Artist Coalition's four-campaign identity and six-member authored-mention
-  lower bound;
+  lower bound, plus its complete 3,123-record retrievable-union review;
 - WOW List's shared Sunday Dinner provenance and historical product-support
   workflow;
 - KC Town Hall's broader public-stewardship arc.
@@ -238,6 +268,7 @@ Retained in the knowledge bank but held from the site:
 
 - KC Spaces Fund's 11 recovered public grantee highlights;
 - profile follower counts and engagement totals;
+- NYC Artist Coalition's dated 4,306-unit visible-interaction snapshot;
 - individual authorship and account-establishment claims;
 - incomplete account searches and not-recovered projects.
 
@@ -248,3 +279,7 @@ relationship has a disposition; every promoted count has named public evidence,
 a collection method, and a lower-bound label; shared-account authorship remains
 unassigned; public-office status is cross-checked; and all private session,
 message, contact, and collaborator material remains outside the repository.
+
+For `@NYCArtC`, that stopping condition applies to the 3,123-record retrievable
+public union. The 2,001-record profile-counter remainder stays open until an
+owner archive can be transformed and reconciled in a private workspace.

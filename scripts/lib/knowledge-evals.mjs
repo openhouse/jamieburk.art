@@ -8,10 +8,12 @@ import { callNycSocialPopulationJuly2026 } from "../../apps/www/src/data/knowled
 import { kcTownHallFieldPractice } from "../../apps/www/src/data/knowledge-bank/kctownhall-field-practice.ts";
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { nycacSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/nycac-social-population-2026-07.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/wowlist-social-population-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
+import { nycacMissionSignalRules, nycacSelfRepostAppearanceUrls } from "./nycac-mission-classifier.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const suitePath = path.join(repoRoot, "evals/knowledge-bank/evals.json");
@@ -25,6 +27,13 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
   sharedPublicSurfacesSha256: "07b3176335c16ebfe407fcf6f20180d9831169f4256a79e7ccc7aa0b8977f783",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
+});
+const NYCAC_SOCIAL_REVIEW_LOCKS = Object.freeze({
+  manifestSha256: "74725b915bee88b6d29fa484a2f9ecb0dd9fe2cdaaca75b4dc7c7e9b54107d46",
+  recordsSha256: "71955963e22dc99454615aea10c56cf7749e1bdb3aabc26bcedad885013249a1",
+  incomingRecordsSha256: "d190361370c1ce18723fc472d0b2fce6c9f520797c9fca32ae80c3912dc83a09",
+  governedModuleSha256: "727178b4389b1def93fb99ea7a402b9fb70d48412ed05cb04745d6305910c55d",
+  publicReportSha256: "6a09c5f2fd3520b8238f5f54c2c4ceb3a2222fb72a6c09b64591ac3b4d6782cf"
 });
 
 export function loadKnowledgeEvalSuite() {
@@ -1189,6 +1198,237 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       antiClaimsText.includes("Do not convert “account not recovered” into “no account existed.”") &&
       !/\/Users\/|\/Volumes\/|\/private\/tmp|cookie|auth token|session token/i.test(socialArchiveText)
   );
+  const nycacFull = suite.pilot.nycacRetrievablePopulation;
+  const nycacManifestPath = path.join(repoRoot, nycacFull.manifestPath);
+  const nycacReportPath = path.join(repoRoot, nycacFull.reportPath);
+  const nycacManifestText = readFileSync(nycacManifestPath, "utf8");
+  const nycacManifest = overrides.nycacPopulation ?? JSON.parse(nycacManifestText);
+  const nycacReport = overrides.nycacPopulationReport ?? readFileSync(nycacReportPath, "utf8");
+  const nycacManifestSha256 = createHash("sha256").update(nycacManifestText).digest("hex");
+  const nycacRecordsSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacManifest.records ?? []))
+    .digest("hex");
+  const nycacIncomingRecordsSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacManifest.post2020IncomingMentionInventory?.records ?? []))
+    .digest("hex");
+  const nycacGovernedModuleSha256 = createHash("sha256")
+    .update(readFileSync(path.join(repoRoot, "apps/www/src/data/knowledge-bank/nycac-social-population-2026-07.ts"), "utf8"))
+    .digest("hex");
+  const nycacPublicReportSha256 = createHash("sha256")
+    .update(readFileSync(nycacReportPath, "utf8"))
+    .digest("hex");
+  const nycacReviewLocksMatch =
+    nycacManifestSha256 === NYCAC_SOCIAL_REVIEW_LOCKS.manifestSha256 &&
+    nycacRecordsSha256 === NYCAC_SOCIAL_REVIEW_LOCKS.recordsSha256 &&
+    nycacIncomingRecordsSha256 === NYCAC_SOCIAL_REVIEW_LOCKS.incomingRecordsSha256 &&
+    nycacGovernedModuleSha256 === NYCAC_SOCIAL_REVIEW_LOCKS.governedModuleSha256 &&
+    nycacPublicReportSha256 === NYCAC_SOCIAL_REVIEW_LOCKS.publicReportSha256;
+  const nycacRecords = nycacManifest.records ?? [];
+  const nycacUrls = new Set(nycacRecords.map((record) => record.url));
+  const nycacRecordTypeCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(nycacRecords, (record) => record.recordType))
+      .map(([recordType, records]) => [recordType, records.length])
+  );
+  const nycacAuthoredRecords = nycacRecords.filter((record) => ["original", "reply"].includes(record.recordType));
+  const nycacExternalRepostRecords = nycacRecords.filter((record) => record.recordType === "repost");
+  const nycacSourceAuthors = new Set(nycacRecords.map((record) => record.authorHandle.toLowerCase()));
+  const nycacLinks = nycacRecords.flatMap((record) => record.externalLinks ?? []);
+  const nycacShortUrls = new Set(nycacLinks.map((link) => link.shortUrl));
+  const nycacMissionSignalCounts = Object.fromEntries(
+    nycacMissionSignalRules.map((rule) => [
+      rule.id,
+      nycacRecords.filter((record) => record.missionSignals?.includes(rule.id)).length
+    ])
+  );
+  const nycacIncoming = nycacManifest.post2020IncomingMentionInventory;
+  const nycacIncomingRecords = nycacIncoming.records ?? [];
+  const nycacIncomingUrls = new Set(nycacIncomingRecords.map((record) => record.url));
+  const nycacIncomingAuthors = new Set(nycacIncomingRecords.map((record) => record.authorHandle.toLowerCase()));
+  const nycacDirectIncomingRecords = nycacIncomingRecords.filter((record) =>
+    record.mentionHandles?.some((handle) => handle.toLowerCase() === "@nycartc")
+  );
+  const nycacDirectIncomingAuthors = new Set(nycacDirectIncomingRecords.map((record) => record.authorHandle.toLowerCase()));
+  const nycacContextIncomingRecords = nycacIncomingRecords.filter((record) =>
+    !record.mentionHandles?.some((handle) => handle.toLowerCase() === "@nycartc")
+  );
+  const nycacContextIncomingAuthors = new Set(nycacContextIncomingRecords.map((record) => record.authorHandle.toLowerCase()));
+  const nycacRecordsWithDisplayedInteraction = nycacAuthoredRecords.filter((record) =>
+    record.visibleEngagement.replies > 0 || record.visibleEngagement.reposts > 0 || record.visibleEngagement.likes > 0
+  );
+  const nycacDisplayedReplies = nycacAuthoredRecords.reduce((sum, record) => sum + record.visibleEngagement.replies, 0);
+  const nycacDisplayedReposts = nycacAuthoredRecords.reduce((sum, record) => sum + record.visibleEngagement.reposts, 0);
+  const nycacDisplayedLikes = nycacAuthoredRecords.reduce((sum, record) => sum + record.visibleEngagement.likes, 0);
+  const nycacSelfRepostRecords = nycacRecords.filter((record) =>
+    record.accountTimelineAppearances?.includes("native-self-repost-card")
+  );
+  const nycacRuleManifestMatches = sameOrderedValues(
+    nycacManifest.missionSignalClassification.rules.map((rule) => `${rule.signalId}:${rule.pattern}:${rule.flags}`),
+    nycacMissionSignalRules.map((rule) => `${rule.id}:${rule.pattern.source}:${rule.pattern.flags}`)
+  );
+  const nycacClassificationEvidenceValid = [...nycacRecords, ...nycacIncomingRecords].every((record) =>
+    /^[a-f0-9]{64}$/.test(record.classificationInputDigest) &&
+    sameOrderedValues(
+      record.missionSignalEvidence.map((evidence) => evidence.signalId),
+      record.missionSignals
+    ) &&
+    record.missionSignalEvidence.every((evidence) => {
+      const rule = nycacManifest.missionSignalClassification.rules.find((candidate) => candidate.signalId === evidence.signalId);
+      return rule &&
+        nycacManifest.missionSignalClassification.inputFields.includes(evidence.inputField) &&
+        new RegExp(rule.pattern, rule.flags).test(evidence.matchedValue);
+    })
+  );
+  const nycacFullIntakes = nycacSocialPopulationJuly2026.intakeItems.map((item) => intakeById.get(item.id));
+  const nycacFullObservations = nycacSocialPopulationJuly2026.observations.map((item) => observationById.get(item.id));
+  const nycacFullSources = nycacSocialPopulationJuly2026.sources.map((item) => sourceById.get(item.id));
+  const nycacFullClaims = nycacSocialPopulationJuly2026.claims.map((item) => claimById.get(item.id));
+  const nycacFullInquiries = nycacSocialPopulationJuly2026.researchInquiries.map((item) => inquiryById.get(item.id));
+  const nycacActiveClaim = claimById.get(nycacFull.activeClaimId);
+  const nycacActiveProjectionText = nycacActiveClaim?.projections
+    .filter((projection) => projection.status === "active")
+    .map((projection) => projection.text)
+    .join("\n") ?? "";
+  const nycacHeldClaims = nycacFull.heldClaimIds.map((id) => claimById.get(id));
+  const nycacOwnerArchiveInquiry = inquiryById.get(nycacFull.ownerArchiveInquiryId);
+  const nycacPostedSourceInquiry = inquiryById.get(nycacFull.postedSourceInquiryId);
+  const nycacPageOccurrence = fairRentPage?.occurrences.find((occurrence) => occurrence.claimId === nycacFull.activeClaimId);
+  const nycacArchiveText = JSON.stringify({
+    intakes: nycacFullIntakes,
+    observations: nycacFullObservations,
+    sources: nycacFullSources,
+    claims: nycacFullClaims,
+    inquiries: nycacFullInquiries,
+    manifest: nycacManifest
+  });
+  const nycacRetrievablePopulationChecks = {
+    filesAndReconciliation: Boolean(
+    existsSync(nycacManifestPath) &&
+      existsSync(nycacReportPath) &&
+      nycacManifest.account === "@NYCArtC" &&
+      nycacManifest.generatedAt === "2026-07-14" &&
+      nycacManifest.populationReconciliation.profileReportedPostCount === nycacFull.expectedProfileCount &&
+      nycacManifest.populationReconciliation.postsTimelineUniqueCount === nycacFull.expectedPostsTimelineCount &&
+      nycacManifest.populationReconciliation.postsAndRepliesTimelinePrimaryCount === nycacFull.expectedPostsAndRepliesCount &&
+      nycacManifest.populationReconciliation.yearlyAuthoredSearchUnionCount === nycacFull.expectedYearlyAuthoredSearchCount &&
+      nycacManifest.populationReconciliation.recoveredUnionRecordCount === nycacFull.expectedRecoveredCount &&
+      nycacManifest.populationReconciliation.recoveredPopulationReviewedPercent === 100 &&
+      nycacManifest.populationReconciliation.profileCountNotMaterialized === nycacFull.expectedCounterRemainder &&
+      nycacManifest.populationReconciliation.profileCounterCoveragePercent === nycacFull.expectedCounterCoveragePercent &&
+      /owner archive/i.test(nycacManifest.populationReconciliation.conclusion) &&
+      /not represented as absent or deleted/i.test(nycacManifest.populationReconciliation.conclusion) &&
+      /source-post years must not be presented as account-activity years/i.test(nycacManifest.populationReconciliation.dateBoundary)
+    ),
+    recordIdentityAndAppearance: Boolean(
+      nycacRecords.length === nycacFull.expectedRecoveredCount &&
+      nycacUrls.size === nycacFull.expectedRecoveredCount &&
+      Object.entries(nycacFull.expectedRecordTypeCounts).every(([recordType, count]) =>
+        nycacRecordTypeCounts[recordType] === count && nycacManifest.recordTypeCounts[recordType] === count
+      ) &&
+      nycacAuthoredRecords.length === nycacFull.expectedAuthoredCount &&
+      nycacAuthoredRecords.every((record) => record.authorHandle.toLowerCase() === "@nycartc") &&
+      nycacExternalRepostRecords.length === nycacFull.expectedRecordTypeCounts.repost &&
+      nycacExternalRepostRecords.every((record) => record.authorHandle.toLowerCase() !== "@nycartc") &&
+      nycacManifest.publishingPattern.timelineNativeRepostAppearanceCount === nycacFull.expectedTimelineNativeRepostAppearances &&
+      nycacManifest.publishingPattern.accountAuthoredStatusAlsoSeenAsSelfRepostCount === nycacFull.expectedSelfRepostAppearances &&
+      nycacSelfRepostRecords.length === nycacFull.expectedSelfRepostAppearances &&
+      sameOrderedValues(
+        nycacSelfRepostRecords.map((record) => record.url).sort(),
+        nycacSelfRepostAppearanceUrls.slice().sort()
+      ) &&
+      nycacManifest.publishingPattern.accountQuotePostReplyInheritanceCorrectionCount === nycacFull.expectedQuotePostCorrections &&
+      nycacManifest.publishingPattern.accountQuotePostReplyInheritanceCorrectionUrls.every((url) =>
+        nycacRecords.find((record) => record.url === url)?.recordType === "original"
+      ) &&
+      nycacSourceAuthors.size === nycacFull.expectedDistinctSourceAuthors &&
+      nycacManifest.publishingPattern.distinctSourceAuthorCount === nycacFull.expectedDistinctSourceAuthors
+    ),
+    linksAndMissionClassification: Boolean(
+      nycacLinks.length === nycacFull.expectedExternalLinkOccurrences &&
+      nycacShortUrls.size === nycacFull.expectedDistinctShortUrls &&
+      nycacManifest.postedUrlInventory.recordsWithExternalLinks === nycacFull.expectedRecordsWithExternalLinks &&
+      nycacManifest.postedUrlInventory.externalLinkOccurrences === nycacFull.expectedExternalLinkOccurrences &&
+      nycacManifest.postedUrlInventory.distinctExternalShortUrls === nycacFull.expectedDistinctShortUrls &&
+      nycacManifest.postedUrlInventory.representativeMissionRelevantSources.length === nycacFull.expectedRepresentativeSourceCount &&
+      Object.entries(nycacFull.expectedMissionSignalCounts).every(([signal, count]) =>
+        nycacMissionSignalCounts[signal] === count && nycacManifest.publishingPattern.missionSignalRecordCounts[signal] === count
+      ) &&
+      nycacRuleManifestMatches &&
+      nycacClassificationEvidenceValid
+    ),
+    incomingResponse: Boolean(
+      nycacIncomingRecords.length === nycacFull.expectedIncomingRecordCount &&
+      nycacIncomingUrls.size === nycacFull.expectedIncomingRecordCount &&
+      nycacIncomingAuthors.size === nycacFull.expectedIncomingAuthorCount &&
+      nycacDirectIncomingRecords.length === nycacFull.expectedDirectIncomingRecordCount &&
+      nycacDirectIncomingAuthors.size === nycacFull.expectedDirectIncomingAuthorCount &&
+      nycacContextIncomingRecords.length === nycacFull.expectedContextRecordCount &&
+      nycacContextIncomingAuthors.size === nycacFull.expectedContextAuthorCount &&
+      nycacIncoming.renderedRecordCount === nycacFull.expectedIncomingRecordCount &&
+      nycacIncoming.directlyMatchingRecordCount === nycacFull.expectedDirectIncomingRecordCount &&
+      nycacIncoming.conversationContextRecordCount === nycacFull.expectedContextRecordCount
+    ),
+    visibleEngagementAndNetworkBoundary: Boolean(
+      nycacRecordsWithDisplayedInteraction.length === nycacFull.expectedAuthoredRecordsWithDisplayedInteraction &&
+      nycacDisplayedReplies === nycacFull.expectedDisplayedReplies &&
+      nycacDisplayedReposts === nycacFull.expectedDisplayedReposts &&
+      nycacDisplayedLikes === nycacFull.expectedDisplayedLikes &&
+      nycacDisplayedReplies + nycacDisplayedReposts + nycacDisplayedLikes === nycacFull.expectedDisplayedInteractionUnits &&
+      nycacManifest.visibleEngagementSnapshot.originalAndReplyDisplayedInteractionUnits === nycacFull.expectedDisplayedInteractionUnits &&
+      /not unique people, reach, conversion, endorsement, participation, or impact/i.test(nycacManifest.visibleEngagementSnapshot.boundary) &&
+      /does not by itself establish that the source account engaged/i.test(nycacManifest.sourceAuthorNetwork.boundary)
+    ),
+    governedLifecycle: Boolean(
+      nycacFullIntakes.length === nycacFull.expectedIntakeCount &&
+      nycacFullObservations.length === nycacFull.expectedObservationCount &&
+      nycacFullSources.length === nycacFull.expectedSourceCount &&
+      nycacFullClaims.length === nycacFull.expectedClaimCount &&
+      nycacFullInquiries.length === nycacFull.expectedInquiryCount &&
+      nycacFullIntakes.every((intake) => intake?.disposition === "integrated" && intake.visibility === "public-safe" && intake.boundaries.length >= 3) &&
+      nycacFullObservations.every((observation) => observation?.locator && observation.publicSafe === true && observation.limitations.length >= 2) &&
+      nycacFullSources.every((source) => source?.visibility === "public" && source.canonicalUrl.startsWith("https://") && source.doesNotEstablish.length >= 2)
+    ),
+    claimsAndInquiries: Boolean(
+      nycacActiveClaim?.status === "confirmed-with-boundary" &&
+      nycacActiveClaim.projections.some((projection) =>
+        projection.status === "active" &&
+        projection.citationRequired === true &&
+        sameOrderedValues(projection.surfaces, ["/work/fair-rent-nyc"]) &&
+        /3,123 unique public records/.test(projection.text) &&
+        /not a complete account export/.test(projection.text)
+      ) &&
+      nycacActiveClaim.boundaries.length >= 6 &&
+      nycacActiveClaim.antiClaims.includes("All 5,124 profile-counted posts were recovered") &&
+      nycacActiveClaim.antiClaims.includes("Jamie authored every @NYCArtC post") &&
+      nycacHeldClaims.every((claim) => claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)) &&
+      nycacOwnerArchiveInquiry?.resultStatus === "partially-recovered" &&
+      /literal full-account recovery remains blocked/i.test(nycacOwnerArchiveInquiry.publicSummary) &&
+      nycacPostedSourceInquiry?.resultStatus === "partially-recovered" &&
+      /Every recovered posted link has an inventory disposition/.test(nycacPostedSourceInquiry.findings.join(" "))
+    ),
+    projectionAndPublicDocumentation: Boolean(
+      nycacReviewLocksMatch &&
+      nycacPageOccurrence?.id === "coalition-social-population" &&
+      fairRentMdx.includes(`claimId="${nycacFull.activeClaimId}"`) &&
+      !/(?:Jamie|Burkart)[^.]{0,100}(?:authored|ran|controlled|established)[^.]{0,100}(?:@NYCArtC|coalition account)/i.test(nycacActiveProjectionText) &&
+      !/(?:2,438|623)[^.]{0,80}(?:accounts?|sources?)[^.]{0,80}(?:engaged|endorsed|partnered|collaborated)/i.test(nycacActiveProjectionText) &&
+      !/4,306[^.]{0,60}(?:people|supporters|participants|stakeholders)/i.test(nycacActiveProjectionText) &&
+      /complete review of the retrievable public union/i.test(nycacReport) &&
+      /1,161 distinct short URLs/i.test(nycacReport) &&
+      /does not establish that every source account engaged/i.test(nycacReport) &&
+      /not unique people, reach, conversion/i.test(nycacReport) &&
+      /owner archive/i.test(nycacReport) &&
+      antiClaimsText.includes("3,123 distinct") &&
+      antiClaimsText.includes("2,001 profile-counted records") &&
+      antiClaimsText.includes("2,438 externally authored source statuses") &&
+      antiClaimsText.includes("4,306 displayed reply, repost, and like interaction units") &&
+      !/"(?:text|cookie|cookies|session|sessionToken)"\s*:/.test(JSON.stringify(nycacManifest)) &&
+      !/\/Users\/|\/Volumes\/|\/private\/tmp/i.test(nycacArchiveText)
+    )
+  };
+  const nycacFailedChecks = Object.entries(nycacRetrievablePopulationChecks)
+    .filter(([, passed]) => !passed)
+    .map(([name]) => name);
+  const nycacRetrievablePopulationComplete = nycacFailedChecks.length === 0;
   const callNycFull = suite.pilot.callNycFullPopulation;
   const callNycFullIntakes = callNycSocialPopulationJuly2026.intakeItems.map((item) => intakeById.get(item.id));
   const callNycFullObservations = callNycSocialPopulationJuly2026.observations.map((item) => observationById.get(item.id));
@@ -1931,9 +2171,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       fieldPractice.claimIds.every((id) => !publicRegistryText.includes(id)) &&
       !/general contractor|Phase One was completed in 2019/i.test(kcTownHallMdx)
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...kcthFullClaims, ...fieldPracticeClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries];
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -2135,6 +2375,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        nycacRetrievablePopulationComplete &&
         fieldPracticeComplete &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 3 && item.sourceIds.length > 1 && item.observationIds.length)
       ),
@@ -2147,6 +2388,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        nycacRetrievablePopulationComplete &&
         fieldPracticeComplete &&
         allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
       ),
@@ -2163,6 +2405,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        nycacRetrievablePopulationComplete &&
         fieldPracticeComplete &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
@@ -2180,6 +2423,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        nycacRetrievablePopulationComplete &&
         fieldPracticeComplete,
         triangulatedExpansionClaims.length >= 8
       ),
@@ -2197,6 +2441,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        nycacRetrievablePopulationComplete &&
         fieldPracticeComplete &&
         Boolean(fairRentPage)
       ),
@@ -2215,6 +2460,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        nycacRetrievablePopulationComplete &&
         fieldPracticeComplete &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
@@ -2222,7 +2468,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     },
     {
       criterionId: "KB-EVAL-SAFETY",
-      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && fieldPracticeComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
+      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && nycacRetrievablePopulationComplete && fieldPracticeComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
       evidence: [errors.length ? `${errors.length} canonical validation errors` : "Canonical validation passes with no private-path or protected-locator leak"]
     },
     {
@@ -2240,6 +2486,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        nycacRetrievablePopulationComplete &&
         fieldPracticeComplete
       ),
       evidence: [photoChainComplete
@@ -2280,6 +2527,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [wowListFullPopulationComplete
         ? `${wowListManifest.population.length} recovered profile objects, ${wowListManifest.postedUrlInventory.length} resolved posted URLs, ${wowListManifest.publicReposterAudit.length} account-owned repost audits, ${wowListDistinctPublicReposters.size} named public reposter accounts, and ${wowListExternalAdoptionIds.size} bounded external-use examples pass completeness, source-role, authorship, traction, and projection checks`
         : "WOW List full-population production is missing a profile object, resolved URL, workflow classification, source role, account-owned engagement boundary, external-use example, governed lifecycle record, or selective projection"]
+    },
+    {
+      criterionId: "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION",
+      score: score(nycacRetrievablePopulationComplete),
+      evidence: [nycacRetrievablePopulationComplete
+        ? `Every one of the ${nycacRecords.length} records in the retrievable @NYCArtC union is classified across ${nycacShortUrls.size} distinct posted short URLs, ${nycacSourceAuthors.size} source authors, six replayable mission signals, and ${nycacIncomingRecords.length} bounded later incoming records; the ${nycacFull.expectedCounterRemainder}-record owner-archive gap, shared authorship, repost-source, timestamp, and mutable-engagement boundaries remain explicit`
+        : `NYC Artist Coalition production failed: ${nycacFailedChecks.join(", ")}`]
     },
     {
       criterionId: "KB-EVAL-KCTH-FULL-POPULATION",
@@ -2341,6 +2595,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         actualSha256: googleDriveContentSha256,
         approvedSha256: googleDrive.approvedContentSha256,
         matches: googleDriveContentSha256 === googleDrive.approvedContentSha256
+      },
+      nycacSocialPopulation: {
+        manifestSha256: nycacManifestSha256,
+        recordsSha256: nycacRecordsSha256,
+        incomingRecordsSha256: nycacIncomingRecordsSha256,
+        governedModuleSha256: nycacGovernedModuleSha256,
+        publicReportSha256: nycacPublicReportSha256,
+        reviewLocksMatch: nycacReviewLocksMatch
       }
     },
     accepted: errors.length === 0 &&

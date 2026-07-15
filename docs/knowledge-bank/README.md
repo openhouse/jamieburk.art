@@ -130,6 +130,15 @@ attributable civic-engagement evidence, collective-credit boundaries, and
 selective website projections from the July 2026 authenticated X review.
 
 See
+[projects/nycac-social-population.md](projects/nycac-social-population.md)
+and its
+[3,123-row public-safe manifest](../../apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json)
+for the complete review of the `@NYCArtC` retrievable public union, all 1,161
+distinct posted short URLs, mission and source-network classifications,
+bounded incoming response, X platform limits, and the 2,001-record owner-
+archive gap.
+
+See
 [projects/callnyc-social-population.md](projects/callnyc-social-population.md)
 and its
 [110-row machine-readable manifest](data/callnyc-x-population-2026-07-15.json)

@@ -193,6 +193,39 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-nycac-social-population-2026-07-15",
+      "completedAt": "2026-07-15T08:35:00Z",
+      "lens": "Protocol reset because the prior holdout state predated the 3,123-record NYC Artist Coalition retrievable-population production and selective website projection",
+      "weightedScore": 3.9,
+      "criterionScores": [5, 5, 5, 5, 1, 4, 5, 5, 5, 5, 5, 5, 5, 3, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect population reconciliation, row identity, repost-source and incoming-engagement separation, source-post date boundaries, displayed-interaction semantics, collective authorship, public-safety controls, the generated citation registry, and count-preserving mutation resistance."
+      ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-archivist-preliminary-2026-07-15",
+      "completedAt": "2026-07-15T08:42:00Z",
+      "lens": "Independent social-movement archivist, public-record integrity reviewer, and platform-data provenance specialist",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-social-holdout-skeptical-editor-rejected-2026-07-15",
+      "completedAt": "2026-07-15T08:44:00Z",
+      "lens": "Independent skeptical hiring editor, civic-policy researcher, data-quality red-team reviewer, privacy and collective-credit editor",
+      "weightedScore": 4.5,
+      "criterionScores": [5, 5, 5, 5, 1, 4, 5, 5, 5, 5, 5, 5, 5, 3, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The selected NYCAC claim was absent from the generated public citation registry.",
+        "Count-preserving author, source-date, displayed-destination, and classification-digest row mutations could bypass aggregate checks.",
+        "A passing review must inspect a frozen repaired revision."
+      ]
     }
   ]
 }
