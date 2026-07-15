@@ -774,6 +774,24 @@
       "blockers": [
         "Two fresh independent judges must verify that the cited 445-post and 67-route claim is visibly rendered on the FairRentNYC case study and that every aggregate summary value rejects type, count, prose, and private-identity mutations independently of editable configuration and review checksums."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-k",
+      "completedAt": "2026-07-15T17:02:45-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, and mutation-resistance review of frozen commit 6f2b16cf148deaa53cdff04f9318205f5435c206",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-l",
+      "completedAt": "2026-07-15T17:03:43-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and checksum-refresh-resistant adversarial evaluation reviewer of frozen commit 6f2b16cf148deaa53cdff04f9318205f5435c206",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

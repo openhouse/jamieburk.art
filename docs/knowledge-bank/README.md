@@ -188,3 +188,6 @@ feed, 67 cleaned off-Facebook routes, issue and stakeholder classifications,
 displayed-interaction boundaries, shared-account authorship limits, and the
 selective website projection. The public-safe row ledger is preserved in
 [its fixture](../../apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json).
+The [recursive evaluation run](../../evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md)
+records the rejected holdouts, structural repairs, final rendered projection,
+and two accepted independent reviews.

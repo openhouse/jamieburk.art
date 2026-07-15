@@ -148,11 +148,14 @@ function refreshArchiveProductionApproval(targetSuite) {
   })).digest("hex");
 }
 
-test("knowledge-bank gate resets holdouts after NYC Artist Coalition Facebook production", () => {
+test("knowledge-bank gate accepts two fresh NYC Artist Coalition Facebook holdouts", () => {
   const result = evaluateKnowledgeBank(suite);
-  assert.equal(result.holdout.complete, false);
-  assert.equal(result.holdout.consecutivePassingRuns, 0);
-  assert.deepEqual(result.holdout.judgeIds, []);
+  assert.equal(result.holdout.complete, true);
+  assert.equal(result.holdout.consecutivePassingRuns, 2);
+  assert.deepEqual(result.holdout.judgeIds, [
+    "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-k",
+    "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-l"
+  ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
 });
@@ -1937,8 +1940,8 @@ test("complete maturation pilot meets every floor", () => {
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.belowMinimum, []);
   assert.equal(result.weightedScore, 5);
-  assert.equal(result.holdout.complete, false);
-  assert.equal(result.accepted, false);
+  assert.equal(result.holdout.complete, true);
+  assert.equal(result.accepted, true);
 });
 
 test("social archive passes its deterministic account and engagement criterion", () => {
