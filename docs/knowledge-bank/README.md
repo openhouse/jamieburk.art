@@ -73,7 +73,7 @@ one pass.
 Deterministic checks govern the collective-credit inventory, runtime renderers,
 projection routes, public surfaces, and every visible resume block. The frozen
 policy baseline is pinned to the annotated Git tag
-`knowledge-bank-policy-baseline-2026-07-15-v1`; ordinary branch commits cannot
+`knowledge-bank-policy-baseline-2026-07-15-v2`; ordinary branch commits cannot
 silently rewrite that tagged object. The evaluator also pins the annotated tag
 object ID, and the tag is published to `origin` so a clean clone or CI checkout
 can reproduce the same baseline without local state.
