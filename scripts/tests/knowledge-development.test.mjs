@@ -1102,7 +1102,7 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   assert.equal(corpusSource.preferredPublicUrl, "asset");
   assert.match(
     corpusSource.assetUrl,
-    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/(?:feature\/evals-I|[0-9a-f]{40})\//
+    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\//
   );
   assert.equal(
     page.occurrences.find(
