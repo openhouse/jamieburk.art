@@ -1,17 +1,17 @@
 {
-  "candidate_sha": "e26b86d4b1bdeed799ddb3633cbc857d573cf64a",
+  "candidate_sha": "2700369fd9cd6d44952f5d88d41f2e1008815572",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders verified exact candidate e26b86d4b1bdeed799ddb3633cbc857d573cf64a and scored collective-credit integrity at 4/4 with no deficiencies.",
-        "The CRS records name Jamie's bounded actions as building and stewarding shared memory, preparing a legislative-provenance redline, and specifying a privacy-preserving commercial-data pilot.",
-        "Boundaries preserve Action Lab, Small Business United, Fair Rent NYC, NYC Artist Coalition, Council and Albany staff, legal counsel, prior advocates, City data systems, and broader public-interest context.",
-        "Anti-claims prohibit sole coalition or policy causation, legislative authorship, legal-authority claims, agency adoption or implementation, publication of proposed indicators, and access to confidential records.",
-        "Sunday Dinner's hundredth-gathering trace and the NTR CHNG and Claudette's Theater on Wheels leads remain held or research-queued; the candidate does not infer Jamie's role where contemporaneous credit is unresolved.",
-        "The source-backed sprint is framed as Jamie's designed method and proposal, with explicit boundaries against completed-client, accepted-proposal, production-software, broad-access, or human-replacement implications."
+        "Two fresh independent graders verified exact candidate 2700369fd9cd6d44952f5d88d41f2e1008815572 and scored collective-credit integrity at 4/4 with no deficiencies.",
+        "All 27 collective-work claims retain explicit boundaries and anti-claims; the Google Drive pass names Jamie's actions without converting collective work into sole ownership or causation.",
+        "FairRentNYC consistently describes Jamie as helping coordinate and implement a shared relaunch while preserving collaborator credit and withholding private operations.",
+        "The 196 records distinguish Jamie's acceptance and onboarding workflow from participating artists' work and protect identities, proposals, access details, contacts, and media.",
+        "The vacancy claim credits HUD and USPS as data originators while limiting Jamie's role to assembling and organizing the 81-quarter corpus and rejecting unsupported cleaning, validation, analysis, pipeline, publication, and adoption claims.",
+        "Sunday Dinner guest operations, the CallNYC self-authored draft, protected media, and Open Data Week context each receive explicit bounded dispositions rather than becoming unsupported public evidence."
       ],
       "findings": [],
       "confidence": 0.99
@@ -21,16 +21,16 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Both independent graders scored selective public projection at 4/4 after inspecting source, claim, proof, metadata, documentation, registry, and website paths.",
-        "The strongest newly differentiated hiring proof, Jamie's privacy-preserving commercial-data product specification, is selectively projected through an approved proof record, FairRentNYC metadata and case study, and Technical Operations, with proposal and non-adoption boundaries intact.",
-        "FairRentNYC and Source-Backed Team Memory render active canonical Claim projections; consequential static summaries map to registered canonical claims or approved proof IDs.",
-        "The production record makes an explicit editorial split: use the CRS memory, provenance, data specification, and bounded memory-sprint evidence now; hold the cultural leads until role and source recovery is adequate.",
-        "Held leads remain in the knowledge bank as sources, claims, boundaries, and research tasks instead of being discarded or crowded onto the public site.",
-        "The public registry is current and redacted; deterministic knowledge-bank, citation, public-safety, Chad-lens, route, and citation-test checks passed."
+        "Two fresh independent graders scored selective public projection at 4/4 after inspecting canonical records, proofs, work metadata, MDX, Technical Operations, the public registry, and governance documents.",
+        "The FairRentNYC relaunch, 196 onboarding workflow, and vacancy corpus are confirmed with boundaries, eligible, linked through strong proof records, and actively assigned to case-study and Technical Operations surfaces.",
+        "The public pages preserve the hiring-relevant distinctions and credit language while the deeper 110-drive appraisal remains in the knowledge bank rather than being dumped into the site.",
+        "The redacted public registry includes the three promoted claims and their boundaries but excludes every protected Google Drive source, locator, and evidence payload.",
+        "The Open Data Week claim remains research-needed and held; Sunday Dinner contact and attendance records remain excluded; the CallNYC self-authored draft remains duplicate editorial context rather than canonical evidence.",
+        "Both graders verified the 81-quarter calculation, explicit use-now or hold dispositions, and complete public-surface coverage without material inflation or underclaiming."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact commit e26b86d4b1bdeed799ddb3633cbc857d573cf64a passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The Teams archive production adds strong bounded operational and product-specification evidence, preserves collective credit, and selectively projects only mature hiring-relevant claims while retaining unresolved cultural leads for research."
+  "overall_finding": "Exact commit 2700369fd9cd6d44952f5d88d41f2e1008815572 passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The Google Drive archival-production pass promotes three bounded, employer-readable claims; preserves collaborator, participant, and HUD-USPS credit; protects sensitive records; and holds unrecovered event context for further research."
 }
