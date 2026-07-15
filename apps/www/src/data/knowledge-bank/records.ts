@@ -1,7 +1,14 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import {
+  campaignPressArticleSources,
+  campaignPressCollections,
+  campaignPressIndexSources
+} from "./campaign-press.ts";
 
 const knowledgeBankInput = {
   sources: [
+    ...campaignPressIndexSources,
+    ...campaignPressArticleSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -144,6 +151,9 @@ const knowledgeBankInput = {
       accessedAt: "2026-07-12",
       metadataVerifiedAt: "2026-07-12",
       metadataVerifiedBy: "Codex live-source review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-12",
+      contentReviewedBy: "Codex public-source review",
       canonicalUrl: "https://www.thepitchkc.com/when-artists-turn-huck-finn/",
       preferredPublicUrl: "canonical",
       publicCitation: "Eric Barton, 'When Artists Turn Huck Finn,' The Pitch, August 9, 2007.",
@@ -198,6 +208,9 @@ const knowledgeBankInput = {
       accessedAt: "2026-07-12",
       metadataVerifiedAt: "2026-07-12",
       metadataVerifiedBy: "Codex live-source review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-12",
+      contentReviewedBy: "Codex public-source review",
       canonicalUrl: "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
       preferredPublicUrl: "canonical",
       publicCitation: "Gothamist, 'DIY Venues Demand Repeal of Widely Reviled Cabaret Law,' June 19, 2017.",
@@ -214,14 +227,17 @@ const knowledgeBankInput = {
       preservationStatus: "live",
       publishedAt: "2017-09-20",
       accessedAt: "2026-07-12",
-      metadataVerifiedAt: "2026-07-12",
-      metadataVerifiedBy: "Codex live-source review",
+      metadataVerifiedAt: "2026-07-14",
+      metadataVerifiedBy: "Codex live-source and public-radio transcript review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-14",
+      contentReviewedBy: "Codex public-source review",
       canonicalUrl: "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
       preferredPublicUrl: "canonical",
       publicCitation: "NPR, 'With Its No Dancing Law Verging on Repeal, New York Legitimizes Its Nightlife,' September 20, 2017.",
-      publicNote: "Independent reporting on the broader repeal movement and legislative context; it does not attribute an individual causal role to Jamie.",
-      supportsGenerally: ["broader Cabaret Law repeal context", "nightlife-policy movement context"],
-      doesNotEstablish: ["Jamie's individual role", "NYC Artist Coalition's precise contribution", "individual causation of repeal"]
+      publicNote: "Independent reporting identifies Jamie as a founding member of NYC Artist Coalition, quotes his repeal advocacy, and situates that work within the broader Let NYC Dance movement.",
+      supportsGenerally: ["Jamie as a founding member of NYC Artist Coalition", "Jamie's public Cabaret Law repeal advocacy", "broader Cabaret Law repeal context", "Let NYC Dance coalition context"],
+      doesNotEstablish: ["Jamie as the coalition's sole founder", "Jamie's degree of causal responsibility for repeal", "NYC Artist Coalition's precise share of the outcome"]
     },
     {
       id: "SRC-NYCA-COUNCIL-CABARET-TESTIMONY-2017",
@@ -340,6 +356,9 @@ const knowledgeBankInput = {
       accessedAt: "2026-07-13",
       metadataVerifiedAt: "2026-07-13",
       metadataVerifiedBy: "Codex live-source review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-13",
+      contentReviewedBy: "Codex public-source review",
       canonicalUrl: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
       preferredPublicUrl: "canonical",
       publicCitation: "Greene Hill Food Co-op Outreach Committee, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
@@ -448,6 +467,9 @@ const knowledgeBankInput = {
       accessedAt: "2026-07-13",
       metadataVerifiedAt: "2026-07-13",
       metadataVerifiedBy: "Codex live-source review",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-13",
+      contentReviewedBy: "Codex public-source review",
       canonicalUrl: "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
       preferredPublicUrl: "canonical",
       publicCitation: "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
@@ -526,6 +548,7 @@ const knowledgeBankInput = {
       doesNotEstablish: ["Jamie's sole authorship", "the complete exhibition history", "audience or impact totals", "permission to republish the source video"]
     }
   ],
+  sourceCollections: campaignPressCollections,
   claims: [
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
@@ -659,13 +682,14 @@ const knowledgeBankInput = {
         { sourceId: "SRC-NYCA-COUNCIL-CABARET-TESTIMONY-2017", relationship: "direct-support", supports: ["Jamie's coalition affiliation", "his direct repeal request", "his safety and equity framing"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NYCA-GOTHAMIST-CABARET-2017", relationship: "corroborating", supports: ["Jamie's public advocacy", "coalition fire-code study groups"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NYCA-MIXMAG-CABARET-2017", relationship: "corroborating", supports: ["Jamie's public testimony", "his cultural-space safety and discrimination framing"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NYCA-NPR-CABARET-CONTEXT-2017", relationship: "corroborating", supports: ["Jamie as a founding member of NYC Artist Coalition", "his public repeal advocacy", "the broader Let NYC Dance coalition context"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", relationship: "corroborating", supports: ["Jamie's public coalition participation", "his public explanation of the repeal campaign"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NYCA-CABARET-CAMPAIGN-2017", relationship: "context", supports: ["the coalition's public issue explanation", "the campaign's Council contact and action pathways"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NYCA-COUNCIL-CABARET-REPEAL-2017", relationship: "context", supports: ["the Council's later repeal vote"], confidence: "high", renderCitation: true }
       ],
       boundaries: ["Keep the outcome collective and distinguish documented advocacy from sole causation.", "Do not collapse the coalition's work into Jamie's individual credit."],
       antiClaims: ["Jamie single-handedly repealed the Cabaret Law", "NYC Artist Coalition alone caused repeal"],
-      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Codex public-source review"]
+      researchInquiryIds: [], reviewedAt: "2026-07-14", reviewedBy: ["Codex public-source review"]
     },
     {
       id: "CLM-NYCA-TALKS-NOT-RAIDS-ADVOCACY",
@@ -739,7 +763,10 @@ const knowledgeBankInput = {
       internalClaim: "Kansas City public records identify Jamie as presenter of KC Town-Hall's $490,539 adaptive-reuse request for four retail spaces and three apartments; the CCED Board later voted to recommend the project to City Council for approval and funding at that amount.",
       status: "confirmed-with-boundary",
       projections: [{ key: "case-study", text: "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal; the CCED Board later voted to recommend the project to City Council for approval and funding at that amount.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] }],
-      evidence: [{ sourceId: "SRC-KC-TOWN-HALL-CCED-2019", relationship: "direct-support", supports: ["Jamie as project presenter", "the $490,539 request", "the adaptive-reuse program", "the Board's recommendation"], locator: "June 12 minutes pages 2-7 and June 13 minutes page 12", confidence: "high", renderCitation: true }],
+      evidence: [
+        { sourceId: "SRC-KC-TOWN-HALL-CCED-2019", relationship: "direct-support", supports: ["Jamie as project presenter", "the $490,539 request", "the adaptive-reuse program", "the Board's recommendation"], locator: "June 12 minutes pages 2-7 and June 13 minutes page 12", confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KC-TOWN-HALL-CCED-2021", relationship: "context", supports: ["bounded later presence of Jamie and KC Town Hall in a public meeting record"], locator: "September 14, 2021 minutes, community members present section", confidence: "moderate", renderCitation: false }
+      ],
       boundaries: ["A Board recommendation is not evidence of final City Council approval, disbursement, or project completion.", "Do not publish current property, legal, financial, or stakeholder details."],
       antiClaims: ["KC Town-Hall received or spent $490,539", "The project was completed", "The record establishes current property status"],
       researchInquiryIds: [], reviewedAt: "2026-07-13", reviewedBy: ["Jamie Burkart", "Codex public-record review"]
@@ -770,9 +797,10 @@ const knowledgeBankInput = {
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
   }],
   corrections: [
-    { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
-    { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
-    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
+    { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"], decidedAt: "2026-07-11", decisionId: "DEC-CALLNYC-INDEPENDENT-FOLLOW-ON-PROMOTE", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
+    { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"], decidedAt: "2026-07-11", decisionId: "DEC-CALLNYC-FIRST-COUNCILSTAT-PROMOTE", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
+    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"], decidedAt: "2026-07-11", decisionId: "DEC-CALLNYC-EVENT-TIME-CORRECT", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
+    { id: "COR-NYCA-NPR-FOUNDING-MEMBER-2026", claimId: "CLM-NYCA-CABARET-REPEAL-ADVOCACY-2017", previousText: "NPR used only as broader Cabaret Law repeal and Let NYC Dance context.", replacementText: "NPR independently identifies Jamie as a founding member of NYC Artist Coalition and quotes his repeal advocacy.", reason: "Close reading of the public-radio transcript recovered explicit role and advocacy language while retaining sole-founder and causality boundaries.", sourceIds: ["SRC-NYCA-NPR-CABARET-CONTEXT-2017"], decidedAt: "2026-07-14", approvedAt: "2026-07-14", approvedBy: ["Jamie Burkart"], decisionId: "DEC-NYCA-CABARET-ADVOCACY-CORRECT-2026-07-14", affectedSurfaces: ["knowledge-bank", "/resume", "/work", "/work/technical-operations", "/work/fair-rent-nyc"], status: "active" }
   ],
   pages: [
     {

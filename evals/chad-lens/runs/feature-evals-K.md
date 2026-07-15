@@ -44,6 +44,21 @@ was clarity and sequence, not stronger ownership or causality.
 No evidence class, metric, ownership boundary, or collective campaign outcome
 was strengthened.
 
+## Campaign press integration
+
+- Aggregated 45 article listings from four NYC Artist Coalition campaign press
+  sections into 44 canonical article records, preserving the campaign and list
+  position for every occurrence.
+- Kept the press corpus in the knowledge bank. The public portfolio remains a
+  selective argument rather than an exhaustive press index.
+- Close-read only the sources needed for current claims; metadata-reviewed
+  listings cannot silently become article-content evidence.
+- Added independent NPR support for Jamie's founding-member role while keeping
+  coalition accomplishments collective and sole-founder or sole-causality
+  claims out of bounds.
+- Reduced mobile citation burden with native disclosure while preserving
+  desktop and print access to the complete source notes.
+
 ## Final evaluation
 
 - Deterministic fast gates: all passed.

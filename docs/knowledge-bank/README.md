@@ -71,3 +71,10 @@ Research runs may also leave a human-readable public-safe map under `research/`.
 The [July 13 ten-source ingestion](research/2026-07-13-ten-source-ingestion.md)
 shows how new sources become observations, bounded claims, research questions,
 and selective exact-surface projections.
+
+Campaign press sections are preserved as typed source collections rather than
+treated as automatic claim support. The generated
+[NYC Artist Coalition campaign press corpus](campaign-press-corpus.md) records
+all 45 listings across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and the
+December 2021 Fair Rent NYC capture, with 44 unique canonical article records.
+The frozen extraction fixture makes collection membership reproducible.

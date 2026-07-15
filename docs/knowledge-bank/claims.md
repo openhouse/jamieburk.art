@@ -55,7 +55,7 @@ claim beyond the wording and guardrails here.
 **Evidence class:** Approved resume / public project artifact / public source
 **Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
 **Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
-**Where to project:** Technical Operations, Work card, Case study.
+**Where to project:** Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
 **Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation.
 **Do not say:** Broader historical hackathon superlatives; official submission or winner; current city service; official city guidance; emergency guidance; legal guidance.
@@ -96,17 +96,18 @@ claim beyond the wording and guardrails here.
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
 **Status:** Careful
-**Support level:** Careful
-**Evidence class:** Approved resume / public project artifact / Jamie review confirmation
+**Support level:** Moderate
+**Evidence class:** Independent press / approved resume / public project artifact / Jamie review confirmation
 **Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
 **Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
 **Why it matters:** Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.
 **Guardrail:** Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.
+**Source basis:** Independent NPR reporting identifies Jamie as a founding member; the approved resume, Jamie's confirmation, and the public campaign sites support his web-infrastructure role.
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions; Jamie single-handedly caused policy outcomes.
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
 
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 

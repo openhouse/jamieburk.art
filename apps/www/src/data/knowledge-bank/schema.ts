@@ -31,6 +31,7 @@ export const sourceKindSchema = z.enum([
 ]);
 
 export const preservationStatusSchema = z.enum([
+  "unknown",
   "live",
   "archived",
   "live-and-archived",
@@ -79,6 +80,9 @@ export const sourceRecordSchema = z
     accessedAt: z.iso.date().optional(),
     metadataVerifiedAt: z.iso.date().optional(),
     metadataVerifiedBy: z.string().min(1).optional(),
+    reviewStatus: z.enum(["metadata-reviewed", "close-read"]).optional(),
+    contentReviewedAt: z.iso.date().optional(),
+    contentReviewedBy: z.string().min(1).optional(),
     canonicalUrl: publicUrlSchema.optional(),
     archiveUrl: publicUrlSchema.optional(),
     assetUrl: publicUrlSchema.optional(),
@@ -119,7 +123,32 @@ export const sourceRecordSchema = z
     if (source.preferredPublicUrl === "asset" && !source.assetUrl) {
       context.addIssue({ code: "custom", message: "Preferred asset URL is missing" });
     }
+    if (
+      source.reviewStatus === "close-read" &&
+      (!source.contentReviewedAt || !source.contentReviewedBy)
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "Close-read sources require content review date and reviewer"
+      });
+    }
   });
+
+export const sourceCollectionSchema = z.object({
+  id: stableIdSchema,
+  title: z.string().min(1),
+  projectIds: z.array(stableIdSchema).min(1),
+  indexSourceId: stableIdSchema,
+  itemSourceIds: z.array(stableIdSchema).min(1),
+  listedItemCount: z.number().int().positive(),
+  capturedAt: z.iso.date(),
+  capturedBy: z.string().min(1),
+  captureMethod: z.enum(["live-page", "wayback-snapshot"]),
+  captureFixture: z.string().regex(/^docs\/knowledge-bank\/source-captures\/[a-z0-9-]+\.json$/),
+  completeness: z.enum(["complete-as-listed", "partial"]),
+  scopeNote: z.string().min(1),
+  interpretationBoundary: z.string().min(1)
+});
 
 export const evidenceRelationshipSchema = z.object({
   sourceId: stableIdSchema,
@@ -201,7 +230,11 @@ export const correctionRecordSchema = z.object({
   previousText: z.string().min(1),
   replacementText: z.string().min(1),
   reason: z.string().min(1),
+  sourceIds: z.array(stableIdSchema).optional(),
   decidedAt: z.iso.date(),
+  approvedAt: z.iso.date().optional(),
+  approvedBy: z.array(z.string().min(1)).optional(),
+  decisionId: stableIdSchema.optional(),
   affectedSurfaces: z.array(z.string().min(1)).min(1),
   status: z.enum(["active", "superseded"])
 });
@@ -222,6 +255,7 @@ export const citationPageSchema = z.object({
 
 export const knowledgeBankSchema = z.object({
   sources: z.array(sourceRecordSchema),
+  sourceCollections: z.array(sourceCollectionSchema),
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
@@ -229,6 +263,7 @@ export const knowledgeBankSchema = z.object({
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
+export type SourceCollection = z.infer<typeof sourceCollectionSchema>;
 export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;

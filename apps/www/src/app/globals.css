@@ -210,6 +210,34 @@ h2 {
   padding: 0;
 }
 
+.jb-endnotes-disclosure {
+  margin-top: 1.5rem;
+}
+
+.jb-endnotes-disclosure > summary {
+  color: var(--jb-broadway-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.jb-endnotes-disclosure > summary:hover {
+  color: var(--jb-moss-green);
+}
+
+.jb-endnotes-disclosure > summary:focus-visible {
+  border-radius: 0.15rem;
+  outline: 3px solid var(--jb-yellow-ochre);
+  outline-offset: 4px;
+}
+
+.jb-endnotes-disclosure:not([open]) > ol {
+  display: none;
+}
+
+.jb-endnotes-disclosure:has(li:target) > ol {
+  display: grid;
+}
+
 .jb-endnotes li {
   max-width: 78ch;
   overflow-wrap: anywhere;
@@ -246,6 +274,20 @@ h2 {
   font-weight: 700;
 }
 
+@media (min-width: 48rem) {
+  .jb-endnotes-disclosure {
+    margin-top: 0;
+  }
+
+  .jb-endnotes-disclosure > summary {
+    display: none;
+  }
+
+  .jb-endnotes-disclosure:not([open]) > ol {
+    display: grid;
+  }
+}
+
 @media print {
   .jb-citation a {
     color: inherit;
@@ -258,8 +300,13 @@ h2 {
   }
 
   .jb-endnote-backlinks,
-  .jb-endnotes-intro {
+  .jb-endnotes-intro,
+  .jb-endnotes-disclosure > summary {
     display: none;
+  }
+
+  .jb-endnotes-disclosure:not([open]) > ol {
+    display: grid;
   }
 
   .jb-endnotes a[href^="http"]::after {

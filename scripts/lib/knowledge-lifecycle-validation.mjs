@@ -1,6 +1,11 @@
 import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
-import { proofClaims } from "../../apps/www/src/data/proofs.ts";
+import {
+  homepageProofs,
+  proofClaims,
+  resumeProofHighlights,
+  technicalOperationsProofRows
+} from "../../apps/www/src/data/proofs.ts";
 
 const forbiddenPrivatePatterns = [
   /\/Users\//i,
@@ -48,6 +53,10 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
   const decisions = new Map(input.promotionDecisions.map((item) => [item.id, item]));
   const media = new Set(input.mediaLeads.map(({ id }) => id));
   const sources = new Set(knowledgeBank.sources.map(({ id }) => id));
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const campaignPressArticleIds = new Set(
+    knowledgeBank.sourceCollections.flatMap(({ itemSourceIds }) => itemSourceIds)
+  );
   const canonicalClaims = new Set(knowledgeBank.claims.map(({ id }) => id));
   const canonicalClaimById = new Map(knowledgeBank.claims.map((item) => [item.id, item]));
   const proofIds = new Set(proofClaims.map(({ id }) => id));
@@ -69,6 +78,10 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     checkRefs(errors, `Project ${project.id}`, project.proofIds, proofIds, "proof");
   }
 
+  for (const collection of knowledgeBank.sourceCollections) {
+    checkRefs(errors, `Source collection ${collection.id}`, collection.projectIds, projects, "project");
+  }
+
   for (const lead of input.leads) {
     if (!lead.projectIds.length) errors.push(`Lead ${lead.id} has no project association`);
     if (lead.kind === "source-url" && !lead.sourceIds.length && !lead.publicUrl) errors.push(`Source URL lead ${lead.id} has neither a public URL nor canonical source`);
@@ -86,8 +99,9 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
 
   for (const observation of input.observations) {
     if (!sources.has(observation.sourceId)) errors.push(`Observation ${observation.id} references unknown source ${observation.sourceId}`);
-    const source = knowledgeBank.sources.find(({ id }) => id === observation.sourceId);
+    const source = sourceById.get(observation.sourceId);
     if (source?.visibility === "public" && (!source.metadataVerifiedAt || !source.metadataVerifiedBy)) errors.push(`Observation ${observation.id} uses public source ${source.id} without metadata verification`);
+    if (campaignPressArticleIds.has(observation.sourceId) && source?.reviewStatus !== "close-read") errors.push(`Observation ${observation.id} uses campaign-listed source ${observation.sourceId} before close reading`);
     if (!/(page|paragraph|section|opening|dated|caption|visible|metadata|passage|announcement|repository)/i.test(observation.locator)) errors.push(`Observation ${observation.id} has a non-reproducible locator: ${observation.locator}`);
     if (!observation.projectIds.length) errors.push(`Observation ${observation.id} has no project association`);
     checkRefs(errors, `Observation ${observation.id}`, observation.projectIds, projects, "project");
@@ -121,6 +135,16 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
       if (!candidate.targetCanonicalClaimId) errors.push(`Promoted candidate ${candidate.id} has no canonical target`);
       const promoted = candidate.promotionDecisionIds.some((id) => decisions.get(id)?.decision === "promote");
       if (!promoted) errors.push(`Promoted candidate ${candidate.id} has no promote decision`);
+      const canonicalSourceIds = new Set([
+        ...(canonicalClaimById.get(candidate.targetCanonicalClaimId)?.evidence.map(({ sourceId }) => sourceId) ?? []),
+        ...knowledgeBank.corrections
+          .filter(({ claimId }) => claimId === candidate.targetCanonicalClaimId)
+          .flatMap(({ sourceIds }) => sourceIds ?? [])
+      ]);
+      for (const observationId of candidate.observationIds) {
+        const sourceId = input.observations.find(({ id }) => id === observationId)?.sourceId;
+        if (sourceId && !canonicalSourceIds.has(sourceId)) errors.push(`Promoted candidate ${candidate.id} observation ${observationId} is not reconciled with canonical evidence or correction provenance`);
+      }
     }
     if (candidate.publicEvidenceQualifier && candidate.targetCanonicalClaimId) {
       const qualifier = candidate.publicEvidenceQualifier;
@@ -224,6 +248,18 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     }
   }
 
+  for (const correction of knowledgeBank.corrections) {
+    const decision = correction.decisionId ? decisions.get(correction.decisionId) : undefined;
+    const directlyApproved = Boolean(correction.approvedAt && correction.approvedBy?.length);
+    const decisionApproved = Boolean(
+      decision &&
+      decision.humanReviewStatus === "approved" &&
+      decision.humanReviewer &&
+      decision.targetCanonicalClaimId === correction.claimId
+    );
+    if (!directlyApproved && !decisionApproved) errors.push(`Correction ${correction.id} lacks direct human approval or an approved linked decision`);
+  }
+
   for (const brief of input.editorialBriefs) {
     checkRefs(errors, `Editorial brief ${brief.id}`, brief.projectIds, projects, "project");
     checkRefs(errors, `Editorial brief ${brief.id}`, brief.canonicalClaimIds, canonicalClaims, "canonical claim");
@@ -273,6 +309,22 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     }
   }
 
+  const renderedProofsByRoute = new Map([
+    ["/", homepageProofs.map(({ id }) => id)],
+    ["/resume", resumeProofHighlights.map(({ id }) => id)],
+    ["/work/technical-operations", [...new Set(technicalOperationsProofRows.flatMap(({ proofIds }) => proofIds))]]
+  ]);
+  for (const [route, renderedProofIds] of renderedProofsByRoute) {
+    const manifest = manifestsByRoute.get(route);
+    if (!manifest) {
+      errors.push(`Rendered proof route ${route} has no exact-route manifest`);
+      continue;
+    }
+    for (const proofId of renderedProofIds) {
+      if (!manifest.proofIds.includes(proofId)) errors.push(`Rendered proof ${proofId} is not human-approved for ${route}`);
+    }
+  }
+
   for (const proof of proofClaims.filter(({ status }) => ["ready", "careful"].includes(status))) {
     for (const surface of proof.surfaces.filter((value) => value !== "internal-only")) {
       const manifest = input.proofSurfaceManifests.find((item) => item.surface === surface && item.proofIds.includes(proof.id));
@@ -295,23 +347,46 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
   return errors;
 }
 
-export function validateIntakeReceipts(receipts, input = knowledgeLifecycle) {
+export function validateIntakeReceipts(receipts, input = knowledgeLifecycle, amendments = []) {
   const errors = [];
   const projects = new Set(input.projects.map(({ id }) => id));
   const entities = new Set(input.entities.map(({ id }) => id));
+  const sources = new Set(knowledgeBank.sources.map(({ id }) => id));
+  const receiptById = new Map(receipts.map((receipt) => [receipt.id, receipt]));
+  const amendmentByReceiptField = new Map(
+    amendments.map((amendment) => [`${amendment.receiptId}:${amendment.field}`, amendment])
+  );
   for (const id of duplicateIds(receipts)) errors.push(`Duplicate intake receipt ID: ${id}`);
+  for (const id of duplicateIds(amendments)) errors.push(`Duplicate intake amendment ID: ${id}`);
   for (const receipt of receipts) {
     checkRefs(errors, `Receipt ${receipt.id}`, receipt.initialProjectIds, projects, "project");
     checkRefs(errors, `Receipt ${receipt.id}`, receipt.initialEntityIds, entities, "entity");
-    checkRefs(errors, `Receipt ${receipt.id}`, receipt.initialSourceIds, new Set(knowledgeBank.sources.map(({ id }) => id)), "source");
+    checkRefs(errors, `Receipt ${receipt.id}`, receipt.initialSourceIds, sources, "source");
     const incorporated = input.leads.find(({ id }) => id === receipt.id);
     if (incorporated) {
-      for (const key of ["title", "kind", "capturedAt", "capturedBy", "visibility", "publicSummary", "publicUrl", "protectedLocatorId", "duplicateOfLeadId"]) if (incorporated[key] !== receipt[key]) errors.push(`Receipt ${receipt.id} immutable field ${key} differs from incorporated lead`);
+      for (const key of ["title", "kind", "capturedAt", "capturedBy", "visibility", "publicSummary", "publicUrl", "protectedLocatorId", "duplicateOfLeadId"]) {
+        if (incorporated[key] === receipt[key]) continue;
+        const amendment = amendmentByReceiptField.get(`${receipt.id}:${key}`);
+        if (!amendment) {
+          errors.push(`Receipt ${receipt.id} immutable field ${key} differs from incorporated lead without an amendment`);
+          continue;
+        }
+        if (amendment.previousValue !== receipt[key]) errors.push(`Amendment ${amendment.id} previous value differs from receipt ${receipt.id}/${key}`);
+        if (amendment.replacementValue !== incorporated[key]) errors.push(`Amendment ${amendment.id} replacement value differs from lead ${receipt.id}/${key}`);
+      }
     }
+  }
+  for (const amendment of amendments) {
+    if (!receiptById.has(amendment.receiptId)) errors.push(`Amendment ${amendment.id} references unknown receipt ${amendment.receiptId}`);
+    checkRefs(errors, `Amendment ${amendment.id}`, amendment.sourceIds, sources, "source");
+    const lead = input.leads.find(({ id }) => id === amendment.receiptId);
+    if (!lead) errors.push(`Amendment ${amendment.id} references a receipt with no incorporated lead`);
+    if (lead && lead[amendment.field] !== amendment.replacementValue) errors.push(`Amendment ${amendment.id} is not the effective current ${amendment.field}`);
   }
   const receiptIds = new Set(receipts.map(({ id }) => id));
   for (const lead of input.leads) if (!receiptIds.has(lead.id)) errors.push(`Lead ${lead.id} has no append-only intake receipt`);
   for (const value of allStrings(receipts)) for (const pattern of forbiddenPrivatePatterns) if (pattern.test(value)) errors.push(`Intake receipt contains a private filesystem locator: ${value}`);
+  for (const value of allStrings(amendments)) for (const pattern of forbiddenPrivatePatterns) if (pattern.test(value)) errors.push(`Intake amendment contains a private filesystem locator: ${value}`);
   return errors;
 }
 
@@ -334,6 +409,8 @@ export function knowledgeLifecycleReport(input = knowledgeLifecycle) {
     decisionTypes: by(input.promotionDecisions, "decision"),
     editorialBriefs: input.editorialBriefs.length,
     proofSurfaceManifests: input.proofSurfaceManifests.length,
-    mediaLeads: input.mediaLeads.length
+    mediaLeads: input.mediaLeads.length,
+    sourceCollections: knowledgeBank.sourceCollections.length,
+    campaignPressListings: knowledgeBank.sourceCollections.reduce((total, collection) => total + collection.itemSourceIds.length, 0)
   };
 }

@@ -146,6 +146,25 @@ while rights, consent, identity, event title, and event time remained explicitly
 unestablished. A separate correction replaced a photograph-time inference with
 the direct 1-3 p.m. Civic Hall announcement and retained the correction trail.
 
+## Campaign press collections
+
+The July 14, 2026 press-corpus run treats each campaign Press section as a
+source collection with its own index source, capture method, displayed order,
+expected count, completeness status, and interpretation boundary. It recovered
+21 Let NYC Dance listings, seven Talks Not Raids listings, eight Save NYC
+Spaces listings, and nine listings from the specified December 1, 2021 Fair
+Rent NYC Wayback capture. These 45 listings resolve to 44 unique article
+records because one NPR article appears in two collections. A frozen public-
+safe extraction fixture preserves the captured order and is checked against
+the typed collections during citation validation.
+
+Collection provenance and article support remain distinct. A campaign's choice
+to list an article does not establish Jamie's role, the article's accuracy,
+source independence, or causation. Unreviewed articles remain available as
+source depth; only close-read articles may produce atomic observations or
+change a candidate claim. Run `npm run generate:campaign-press` after changing
+the collection records and `npm run check:campaign-press` to reject drift.
+
 ## Agent contract
 
 - Preserve the fragment before judging its homepage value.

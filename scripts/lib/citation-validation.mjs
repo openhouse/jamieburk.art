@@ -2,6 +2,10 @@ import { readFileSync } from "node:fs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
 
+const campaignPressCapture = JSON.parse(
+  readFileSync("docs/knowledge-bank/source-captures/nyca-campaign-press-2026-07-14.json", "utf8")
+);
+
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
@@ -39,9 +43,12 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry]));
+  const campaignPressSourceIds = new Set(knowledgeBank.sourceCollections.flatMap(({ itemSourceIds }) => itemSourceIds));
+  const campaignPressFixtures = new Map(campaignPressCapture.collections.map((collection) => [collection.id, collection]));
 
   for (const [label, items] of [
     ["source", knowledgeBank.sources],
+    ["source collection", knowledgeBank.sourceCollections],
     ["claim", knowledgeBank.claims],
     ["research inquiry", knowledgeBank.researchInquiries],
     ["correction", knowledgeBank.corrections],
@@ -56,12 +63,34 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     if (source.visibility === "public" && ["archived", "live-and-archived"].includes(source.preservationStatus) && !source.archiveUrl) errors.push(`Archived public source ${source.id} has no archive URL`);
   }
 
+  for (const collection of knowledgeBank.sourceCollections) {
+    if (!sourceById.has(collection.indexSourceId)) errors.push(`Source collection ${collection.id} references unknown index source ${collection.indexSourceId}`);
+    if (new Set(collection.itemSourceIds).size !== collection.itemSourceIds.length) errors.push(`Source collection ${collection.id} contains duplicate item sources`);
+    if (collection.itemSourceIds.length !== collection.listedItemCount) errors.push(`Source collection ${collection.id} expected ${collection.listedItemCount} items but contains ${collection.itemSourceIds.length}`);
+    if (collection.itemSourceIds.includes(collection.indexSourceId)) errors.push(`Source collection ${collection.id} includes its index source as an article`);
+    for (const sourceId of collection.itemSourceIds) if (!sourceById.has(sourceId)) errors.push(`Source collection ${collection.id} references unknown item source ${sourceId}`);
+    const fixture = campaignPressFixtures.get(collection.id);
+    if (!fixture) {
+      errors.push(`Source collection ${collection.id} has no captured extraction fixture`);
+    } else {
+      if (collection.captureFixture !== "docs/knowledge-bank/source-captures/nyca-campaign-press-2026-07-14.json") errors.push(`Source collection ${collection.id} references an unexpected capture fixture`);
+      if (JSON.stringify(collection.itemSourceIds) !== JSON.stringify(fixture.itemSourceIds)) errors.push(`Source collection ${collection.id} differs from its captured extraction fixture`);
+      const indexSource = sourceById.get(collection.indexSourceId);
+      const indexUrl = indexSource?.archiveUrl ?? indexSource?.canonicalUrl;
+      if (indexUrl !== fixture.indexUrl) errors.push(`Source collection ${collection.id} index URL differs from its captured extraction fixture`);
+      if (collection.captureMethod !== fixture.captureMethod) errors.push(`Source collection ${collection.id} method differs from its captured extraction fixture`);
+    }
+  }
+
   for (const claim of knowledgeBank.claims) {
     for (const evidence of claim.evidence) {
       const source = sourceById.get(evidence.sourceId);
       if (!source) {
         errors.push(`Claim ${claim.id} references unknown source ${evidence.sourceId}`);
         continue;
+      }
+      if (campaignPressSourceIds.has(source.id) && source.reviewStatus !== "close-read") {
+        errors.push(`Claim ${claim.id} uses campaign-listed source ${source.id} before close reading`);
       }
       for (const supported of evidence.supports) {
         const support = normalize(supported);
@@ -97,6 +126,8 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
 
   for (const correction of knowledgeBank.corrections) {
     if (!claimById.has(correction.claimId)) errors.push(`Correction ${correction.id} references unknown claim ${correction.claimId}`);
+    for (const sourceId of correction.sourceIds ?? []) if (!sourceById.has(sourceId)) errors.push(`Correction ${correction.id} references unknown source ${sourceId}`);
+    if (correction.approvedBy?.length && !correction.approvedAt) errors.push(`Correction ${correction.id} records approvers without an approval date`);
   }
 
   for (const page of knowledgeBank.pages) {
@@ -153,7 +184,8 @@ export function citationReport() {
   const citedClaimIds = new Set(knowledgeBank.pages.flatMap((page) => page.occurrences.map((item) => item.claimId)));
   const referencedSourceIds = new Set([
     ...knowledgeBank.claims.flatMap((claim) => claim.evidence.map((item) => item.sourceId)),
-    ...knowledgeBank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds)
+    ...knowledgeBank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds),
+    ...knowledgeBank.sourceCollections.flatMap((collection) => [collection.indexSourceId, ...collection.itemSourceIds])
   ]);
   const activeProjections = knowledgeBank.claims.flatMap((claim) => claim.projections.filter((item) => item.status === "active"));
   return {
@@ -164,6 +196,11 @@ export function citationReport() {
     projectionSurfaces: [...new Set(activeProjections.flatMap((item) => item.surfaces))].sort(),
     corrections: knowledgeBank.corrections.length,
     inquiries: knowledgeBank.researchInquiries.length,
+    sourceCollections: knowledgeBank.sourceCollections.map((collection) => ({
+      id: collection.id,
+      items: collection.itemSourceIds.length,
+      completeness: collection.completeness
+    })),
     citedClaims: citedClaimIds.size,
     uncitedPublicClaims: knowledgeBank.claims.filter((claim) => claim.projections.some((item) => item.status === "active" && item.surfaces.some((surface) => surface.startsWith("/"))) && !citedClaimIds.has(claim.id)).map((claim) => claim.id),
     orphanSources: knowledgeBank.sources.filter((source) => !referencedSourceIds.has(source.id)).map((source) => source.id),

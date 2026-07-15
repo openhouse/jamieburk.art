@@ -66,6 +66,19 @@ export const intakeReceiptSchema = z.object({
   duplicateOfLeadId: stableIdSchema.optional()
 });
 
+export const intakeAmendmentSchema = z.object({
+  amendmentVersion: z.literal(1),
+  id: stableIdSchema,
+  receiptId: stableIdSchema,
+  field: z.enum(["title", "publicSummary", "publicUrl", "protectedLocatorId"]),
+  previousValue: z.string().min(1),
+  replacementValue: z.string().min(1),
+  reason: z.string().min(1),
+  amendedAt: dated,
+  amendedBy: z.string().min(1),
+  sourceIds: idList
+});
+
 export const observationSchema = z.object({
   id: stableIdSchema,
   sourceId: stableIdSchema,

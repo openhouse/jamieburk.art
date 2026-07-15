@@ -3,7 +3,7 @@ import test from "node:test";
 import { execFileSync, spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
-import { intakeReceiptSchema } from "../../apps/www/src/data/knowledge-bank/lifecycle-schema.ts";
+import { intakeAmendmentSchema, intakeReceiptSchema } from "../../apps/www/src/data/knowledge-bank/lifecycle-schema.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { validateIntakeReceipts, validateKnowledgeLifecycle } from "../lib/knowledge-lifecycle-validation.mjs";
 import { retrieveKnowledgePalette } from "../lib/knowledge-palette.mjs";
@@ -34,6 +34,18 @@ test("the July 13 ten-source ingestion remains complete and decomposed", () => {
   assert.ok(sourceIds.every((id) => observedSources.has(id)));
   assert.deepEqual(task?.sourceIds, sourceIds);
   assert.equal(task?.status, "completed");
+});
+
+test("the July 14 campaign press corpus remains complete, deduplicated, and queued for bounded close reading", () => {
+  const collections = knowledgeBank.sourceCollections;
+  assert.equal(collections.length, 4);
+  assert.equal(collections.reduce((total, collection) => total + collection.itemSourceIds.length, 0), 45);
+  assert.equal(new Set(collections.flatMap(({ itemSourceIds }) => itemSourceIds)).size, 44);
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-NYCA-PRESS-CORPUS-CLOSE-READ");
+  assert.equal(task?.status, "in-progress");
+  assert.equal(task?.sourceIds.length, 48);
+  assert.ok(task?.limitations.some((item) => /not yet been close-read/i.test(item)));
+  assert.ok(task?.limitations.some((item) => /cannot create independent corroboration/i.test(item)));
 });
 
 test("new public projections preserve exact-surface human approval", () => {
@@ -79,6 +91,36 @@ test("semantic cross-links cannot be replaced with unrelated valid IDs", () => {
   const broken = structuredClone(knowledgeLifecycle);
   broken.candidateClaims[0].observationIds = ["OBS-COUNCIL-CABARET-OUTCOME"];
   assert.match(validateKnowledgeLifecycle(broken).join("\n"), /not linked back|no project overlap/);
+});
+
+test("campaign press observations require close reading before decomposition", () => {
+  const broken = structuredClone(knowledgeLifecycle);
+  broken.observations.find(({ id }) => id === "OBS-NYCA-VICE-FORMATION-PURPOSE-2017").sourceId = "SRC-PRESS-LND-SFGATE-NO-DANCING-2017";
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /before close reading/);
+});
+
+test("promoted observations reconcile with canonical evidence or correction provenance", () => {
+  const broken = structuredClone(knowledgeLifecycle);
+  const candidate = broken.candidateClaims.find(({ id }) => id === "CND-NYCA-CABARET-ADVOCACY");
+  const observation = broken.observations.find(({ id }) => id === "OBS-FAIR-RENT-ATLANTIC-VACANCY-CONTEXT-2018");
+  candidate.observationIds.push(observation.id);
+  observation.candidateClaimIds.push(candidate.id);
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /not reconciled with canonical evidence or correction provenance/);
+});
+
+test("rendered proof selections cannot outrun exact-route approval", () => {
+  const broken = structuredClone(knowledgeLifecycle);
+  const resume = broken.proofSurfaceManifests.find(({ route }) => route === "/resume");
+  resume.proofIds = resume.proofIds.filter((id) => id !== "callnyc-civic-data-guidance");
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /Rendered proof callnyc-civic-data-guidance is not human-approved for \/resume/);
+});
+
+test("canonical corrections resolve to current human approval", () => {
+  const broken = structuredClone(knowledgeLifecycle);
+  const decision = broken.promotionDecisions.find(({ id }) => id === "DEC-CALLNYC-EVENT-TIME-CORRECT");
+  decision.humanReviewStatus = "pending";
+  decision.humanReviewer = undefined;
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /Correction COR-CALLNYC-EVENT-TIME-2026 lacks direct human approval or an approved linked decision/);
 });
 
 test("live-source publication dates and locator verification remain pinned", () => {
@@ -181,23 +223,32 @@ test("the intake command emits a validated capture receipt", () => {
 test("the tracked append-only intake receipts remain valid", () => {
   const receipts = readFileSync("docs/knowledge-bank/intake/receipts.jsonl", "utf8")
     .split("\n").filter(Boolean).map((line) => intakeReceiptSchema.parse(JSON.parse(line)));
-  assert.deepEqual(validateIntakeReceipts(receipts), []);
+  const amendments = readFileSync("docs/knowledge-bank/intake/amendments.jsonl", "utf8")
+    .split("\n").filter(Boolean).map((line) => intakeAmendmentSchema.parse(JSON.parse(line)));
+  assert.deepEqual(validateIntakeReceipts(receipts, undefined, amendments), []);
+  const amendment = amendments.find(({ receiptId }) => receiptId === "LEAD-NYCA-LET-NYC-DANCE-PRESS-CORPUS");
+  assert.match(amendment?.previousValue ?? "", /20-article/);
+  assert.match(amendment?.replacementValue ?? "", /21-article/);
 });
 
 test("every incorporated lead retains its append-only capture receipt", () => {
   const receipts = readFileSync("docs/knowledge-bank/intake/receipts.jsonl", "utf8")
     .split("\n").filter(Boolean).map((line) => intakeReceiptSchema.parse(JSON.parse(line)));
+  const amendments = readFileSync("docs/knowledge-bank/intake/amendments.jsonl", "utf8")
+    .split("\n").filter(Boolean).map((line) => intakeAmendmentSchema.parse(JSON.parse(line)));
   const broken = receipts.filter(({ id }) => id !== knowledgeLifecycle.leads[0].id);
-  assert.match(validateIntakeReceipts(broken).join("\n"), /has no append-only intake receipt/);
+  assert.match(validateIntakeReceipts(broken, undefined, amendments).join("\n"), /has no append-only intake receipt/);
 });
 
 test("immutable receipts permit later lead triage and research associations", () => {
   const receipts = readFileSync("docs/knowledge-bank/intake/receipts.jsonl", "utf8")
     .split("\n").filter(Boolean).map((line) => intakeReceiptSchema.parse(JSON.parse(line)));
+  const amendments = readFileSync("docs/knowledge-bank/intake/amendments.jsonl", "utf8")
+    .split("\n").filter(Boolean).map((line) => intakeAmendmentSchema.parse(JSON.parse(line)));
   const evolved = structuredClone(knowledgeLifecycle);
   evolved.leads[0].state = "held";
   evolved.leads[0].researchTaskIds = ["TASK-WATERWAYS-RAFT-ENDPOINT", "TASK-WATERWAYS-PROGRAM-RANGE"];
-  assert.deepEqual(validateIntakeReceipts(receipts, evolved), []);
+  assert.deepEqual(validateIntakeReceipts(receipts, evolved, amendments), []);
 });
 
 test("candidate maturity and research-run implication histories cannot drift", () => {

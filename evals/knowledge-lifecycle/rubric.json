@@ -45,6 +45,13 @@
       "command": "npm run check:citations"
     },
     {
+      "id": "campaign-press-corpus-complete",
+      "description": "Campaign press collections retain their declared article counts, canonical references, generated index, and provenance boundaries.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:campaign-press"
+    },
+    {
       "id": "knowledge-bank-valid",
       "description": "Structured public claims and their guardrails remain valid.",
       "profiles": ["fast", "release"],

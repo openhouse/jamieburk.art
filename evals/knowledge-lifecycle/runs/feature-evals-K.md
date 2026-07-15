@@ -17,12 +17,38 @@ does not authorize production publication.
 | Route-governance review | 5 / 4 / 5 / 3 / 3 / 5 | 79 | Iterate: the residency's self-reported 20+ figure lost its qualifier in public composition. |
 | Final judge A | 4 / 5 / 5 / 4 / 5 / 4 | 91 | Framework-ready. |
 | Final judge B | 4 / 4 / 5 / 5 / 5 / 4 | 91 | Framework-ready. |
+| Campaign-press judge A | 5 / 4 / 5 / 5 / 5 / 4 | 94 | Framework-ready. |
+| Campaign-press judge B | 4 / 4 / 5 / 5 / 5 / 5 | 93 | Framework-ready. |
 
-The final pair is stable with no weighted-score difference. Both fresh judges
-scored every criterion at least 4 and returned `framework-ready`. A separate
-fresh judge scored the same revision 100; it was not used as the confirming
-pair because the protocol requires stable scores, not the highest available
-score.
+The latest final pair is stable with a one-point weighted-score difference.
+Both fresh judges scored every criterion at least 4 and returned
+`framework-ready`. A separate fresh judge scored the same revision 100; it was
+not used as the confirming pair because the protocol requires stable scores,
+not the highest available score.
+
+## NYC Artist Coalition campaign press ingestion
+
+The July 14 run captured all press-section listings from Let NYC Dance, Talks
+Not Raids, Save NYC Spaces, and the supplied December 1, 2021 FairRentNYC
+Wayback snapshot. The frozen extraction fixture and generated corpus preserve:
+
+- 21 Let NYC Dance listings;
+- 7 Talks Not Raids listings;
+- 8 Save NYC Spaces listings;
+- 9 FairRentNYC listings;
+- 45 campaign occurrences resolving to 44 unique article records because the
+  NPR Cabaret Law article appears in two campaign collections.
+
+Every collection records its source page, capture method, completeness posture,
+ordered membership, and interpretation boundary. Metadata-only article records
+remain research leads. They cannot support article-content claims until a
+documented close read produces bounded observations and survives promotion.
+
+The ingestion also corrected the existing NPR interpretation: independent NPR
+reporting identifies Jamie as a founding member of NYC Artist Coalition and
+quotes his Cabaret Law repeal advocacy. The correction is source-linked,
+human-approved, and bounded against sole-founder and individual-causality
+claims.
 
 ## Ten-source ingestion
 
@@ -65,19 +91,27 @@ aggregates; neither figure is presented as independently corroborated.
 - Added a first-class self-reported evidence qualifier and a regression test
   that rejects active canonical or proof wording if the 20+ residency metric
   loses its attribution to Jamie.
+- Added source-collection records, a frozen campaign extraction fixture, and a
+  generated human-readable press corpus with drift checks.
+- Added append-only intake amendments so later source discovery can correct a
+  mutable lead without rewriting its original capture receipt.
+- Prohibited campaign listing observations before article close reading and
+  reconciled promoted observations against canonical evidence or correction
+  provenance.
 - Kept lifecycle records out of the application barrel and deployable output.
 - Preserved visual rights, consent, display, and factual-promotion boundaries;
   images remain research leads unless each evidentiary question is resolved.
 
 ## Verification evidence
 
-- Knowledge lifecycle validation and all 26 regression tests passed.
-- The corpus contains 22 receipts and leads, 39 observations, 25 candidate
-  claims, 16 research tasks, 27 decisions, 8 editorial briefs, 12 exact-route
-  proof manifests, and 7 bounded media leads.
+- Knowledge lifecycle validation and all 31 regression tests passed.
+- The corpus contains 26 leads and append-only receipts, 47 observations, 25
+  candidate claims, 17 research tasks, 28 decisions, 8 editorial briefs, 12
+  exact-route proof manifests, 7 bounded media leads, and 4 source collections
+  containing 45 campaign press listings.
 - Citation, knowledge-bank, public-safety, route, and compiled-locator checks
   passed in the release profile.
-- Final independent lifecycle scorecards were 91 / 91, stable pair `yes`, with
+- Final independent lifecycle scorecards were 94 / 93, stable pair `yes`, with
   all criteria at least 4 and both recommendations `framework-ready`.
 
 ## Boundaries and next research

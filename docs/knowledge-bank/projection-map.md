@@ -42,6 +42,7 @@ composed public surface, not a claim database.
 - `hje-revenue-growth-contribution`
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
+- `callnyc-civic-data-guidance`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `nyc-artist-coalition-civic-systems`
 - `wowlist-community-platform`

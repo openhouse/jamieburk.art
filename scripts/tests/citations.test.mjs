@@ -2,10 +2,46 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
 
 test("canonical registry passes deterministic validation", () => assert.deepEqual(validateKnowledgeBank(), []));
+
+test("campaign press collections preserve every listed article and deduplicate shared sources", () => {
+  const counts = Object.fromEntries(knowledgeBank.sourceCollections.map(({ id, itemSourceIds }) => [id, itemSourceIds.length]));
+  assert.deepEqual(counts, {
+    "COL-NYCA-LET-NYC-DANCE-PRESS": 21,
+    "COL-NYCA-TALKS-NOT-RAIDS-PRESS": 7,
+    "COL-NYCA-SAVE-NYC-SPACES-PRESS": 8,
+    "COL-NYCA-FAIR-RENT-NYC-PRESS-2021": 9
+  });
+  const listed = knowledgeBank.sourceCollections.flatMap(({ itemSourceIds }) => itemSourceIds);
+  assert.equal(listed.length, 45);
+  assert.equal(new Set(listed).size, 44);
+  assert.equal(listed.filter((id) => id === "SRC-NYCA-NPR-CABARET-CONTEXT-2017").length, 2);
+  assert.ok(knowledgeBank.sourceCollections.every(({ completeness }) => completeness === "complete-as-listed"));
+  assert.ok(listed.includes("SRC-PRESS-LND-SFGATE-NO-DANCING-2017"));
+});
+
+test("campaign-listed claim evidence requires a close read", () => {
+  const listed = new Set(knowledgeBank.sourceCollections.flatMap(({ itemSourceIds }) => itemSourceIds));
+  const sources = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const used = knowledgeBank.claims.flatMap(({ evidence }) => evidence).filter(({ sourceId }) => listed.has(sourceId));
+  assert.ok(used.length > 0);
+  assert.ok(used.every(({ sourceId }) => sources.get(sourceId)?.reviewStatus === "close-read"));
+});
+
+test("the founding-member proof resolves through a canonical corrected claim", () => {
+  const proof = proofClaims.find(({ id }) => id === "nyc-artist-coalition-public-web-infrastructure");
+  const correction = knowledgeBank.corrections.find(({ id }) => id === "COR-NYCA-NPR-FOUNDING-MEMBER-2026");
+  const claim = knowledgeBank.claims.find(({ id }) => id === proof?.canonicalClaimIds?.[0]);
+  const evidence = claim?.evidence.find(({ sourceId }) => sourceId === "SRC-NYCA-NPR-CABARET-CONTEXT-2017");
+  assert.deepEqual(proof?.canonicalClaimIds, ["CLM-NYCA-CABARET-REPEAL-ADVOCACY-2017"]);
+  assert.ok(evidence?.supports.includes("Jamie as a founding member of NYC Artist Coalition"));
+  assert.deepEqual(correction?.sourceIds, ["SRC-NYCA-NPR-CABARET-CONTEXT-2017"]);
+  assert.deepEqual(correction?.approvedBy, ["Jamie Burkart"]);
+});
 
 test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-date-time").sources.map((item) => item.number), [1, 2]);
@@ -37,7 +73,7 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  assert.equal(knowledgeBank.corrections.length, 4);
 });
 
 test("negative research preserves scope and limitations", () => {

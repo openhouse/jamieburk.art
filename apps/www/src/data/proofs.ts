@@ -4,6 +4,7 @@ export type SupportLevel = "strong" | "moderate" | "careful" | "pending";
 
 export type EvidenceClass =
   | "approved-resume"
+  | "independent-press"
   | "public-source"
   | "public-safe-archive-summary"
   | "ai-assisted-archive-review"
@@ -38,6 +39,7 @@ export type ProofClaim = {
   surfaces: ProofSurface[];
   relatedProjects: string[];
   relatedCapabilities: string[];
+  canonicalClaimIds?: string[];
   lastReviewed: string;
 };
 
@@ -154,7 +156,7 @@ export const proofClaims: ProofClaim[] = [
       "Legal guidance"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
     lastReviewed: "2026-07-11"
@@ -233,14 +235,14 @@ export const proofClaims: ProofClaim[] = [
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
-    supportLevel: "careful",
-    evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "independent-press", "public-source", "jamie-review-confirmation"],
     publicWording:
       "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis: "Independent NPR reporting identifies Jamie as a founding member; approved resume language, Jamie confirmation, and the public campaign sites support his web-infrastructure role.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -263,7 +265,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-NYCA-CABARET-REPEAL-ADVOCACY-2017"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
