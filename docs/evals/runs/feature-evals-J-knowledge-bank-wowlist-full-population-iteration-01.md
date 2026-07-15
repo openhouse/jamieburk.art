@@ -49,6 +49,11 @@ registry, test, or rubric file changes in this iteration.
   next step are now durable.
 - Earlier certifications for other content candidates are not reused.
 - The content candidate remains unchanged.
+- Independent follow-up judge session
+  `019f644b-8114-7bd3-9837-3f24aa408c0d` scored the unchanged candidate
+  `0.835` weighted and moved `KB-010` from `1` to `2`. The result remains
+  ineligible because this iteration had not yet persisted that numeric after
+  score and no passing certification existed.
 
 The judge also recorded two nonblocking future improvements: preserve a
 public-safe redacted replay manifest for the generator, and tighten the
