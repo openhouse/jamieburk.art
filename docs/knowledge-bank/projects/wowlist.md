@@ -38,7 +38,8 @@ claims for:
 - Sunday Dinner lineage;
 - rapid civic-distribution adaptation;
 - independent organizer use;
-- peer attribution of Jamie's maker role; and
+- peer attribution of Jamie's maker role;
+- calendar-community dialogue; and
 - mission-relevant source curation.
 
 Only the organizer-use and peer-attribution claims are selected for the public

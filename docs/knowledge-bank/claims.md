@@ -273,6 +273,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## wowlist-calendar-community-dialogue - Calendar-community response
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Independent public status record
+**Public wording:** Another calendar-community account publicly responded to a WOW List members-meeting invitation.
+**Detailed public-safe wording:** The All Ages account publicly responded to one WOW List members-meeting invitation in November 2015.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Preserves one bounded sign of calendar-community dialogue without inflating it into participation or partnership.
+**Guardrail:** The response does not establish meeting attendance, formal partnership, or wider calendar-community participation.
+**Do not say:** All Ages attended the meeting; the response establishes a formal partnership.
+**Protected boundaries:** No private meeting or participant records are needed for this claim.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  
