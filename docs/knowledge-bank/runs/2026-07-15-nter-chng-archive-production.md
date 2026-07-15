@@ -56,4 +56,6 @@ elsewhere.
 - One role-and-technical-detail research task queued.
 - One partially recovered research inquiry recorded.
 - Three archive-note projections selected for the readable project record.
+- The earlier `ntr-chng` lead, duplicate Pitch source, held role claim, and
+  superseded role-recovery task were consolidated into this canonical record.
 - No public website projection added in this pass.

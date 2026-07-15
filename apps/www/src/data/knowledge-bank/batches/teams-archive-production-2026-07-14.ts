@@ -23,24 +23,28 @@ export const teamsArchiveProductionBatch20260714: {
       capturedFrom: "Jamie Projects History archival production pass",
       publicSafeSummary:
         "Appraise a retrospective project-history collection for public traces, defensible project claims, and role-credit gaps.",
-      projects: ["portfolio-archive", "sunday-dinner", "ntr-chng"],
+      projects: ["portfolio-archive", "sunday-dinner", "nter-chng"],
       status: "integrated",
       disposition: "source-created",
       sourceIds: [
         "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
         "SRC-TEAMS-SUNDAY-DINNER-ARCHIVE-2016",
-        "SRC-NTR-CHNG-PITCH-2010"
+        "SRC-NTER-CHNG-PROJECT-SITE-2011",
+        "SRC-NTER-CHNG-PITCH-2010",
+        "SRC-NTER-CHNG-ANH-KC-2011"
       ],
       claimIds: [
         "CLM-SUNDAY-DINNER-100TH-PUBLIC-TRACE",
-        "CLM-NTR-CHNG-PUBLIC-INSTALLATION",
-        "CLM-NTR-CHNG-JAMIE-ROLE"
+        "CLM-NTER-CHNG-CO-CREATION",
+        "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM",
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE"
       ],
-      researchTaskIds: ["TASK-NTR-CHNG-ROLE-CREDITS"],
+      researchTaskIds: ["TASK-NTER-CHNG-ROLE-AND-TECHNICAL-DETAIL"],
       notes: [
-        "Existing bank coverage was retained for already integrated projects; newly surfaced traces were promoted only to the maturity supported by the reviewed source."
+        "Existing bank coverage was retained for already integrated projects; newly surfaced traces were promoted only to the maturity supported by the reviewed source.",
+        "The July 15 public-source pass resolved the NTER CHNG co-creator question and consolidated the earlier NTR CHNG lead into the canonical project record."
       ],
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {
@@ -156,33 +160,6 @@ export const teamsArchiveProductionBatch20260714: {
         "the current 300-plus gathering total",
         "the 20-plus resident-artist total",
         "attendance or comprehensive participant records"
-      ]
-    },
-    {
-      id: "SRC-NTR-CHNG-PITCH-2010",
-      title: "NTR CHNG",
-      organization: "The Pitch",
-      kind: "published-article",
-      visibility: "public",
-      preservationStatus: "live",
-      publishedAt: "2010-01-07",
-      accessedAt: "2026-07-14",
-      canonicalUrl: "https://www.thepitchkc.com/ntr-chng/",
-      preferredPublicUrl: "canonical",
-      publicCitation:
-        "The Pitch, 'NTR CHNG,' January 7, 2010.",
-      publicNote:
-        "The notice describes the installation and its public interaction, but does not name creators or establish Jamie's role.",
-      supportsGenerally: [
-        "a January 2010 NTER CHNG installation",
-        "a combined software and architectural installation",
-        "real-time participant messaging through a digital wall"
-      ],
-      doesNotEstablish: [
-        "Jamie's role",
-        "the creator roster",
-        "technical authorship",
-        "project outcomes beyond the described installation"
       ]
     },
     {
@@ -337,32 +314,6 @@ export const teamsArchiveProductionBatch20260714: {
       reviewedBy
     },
     {
-      id: "AST-NTR-CHNG-PUBLIC-INSTALLATION",
-      sourceId: "SRC-NTR-CHNG-PITCH-2010",
-      project: "ntr-chng",
-      assertion:
-        "The Pitch describes NTER CHNG as a January 2010 software and architectural installation where participants exchanged real-time messages through a digital wall.",
-      relationship: "supports",
-      confidence: "high",
-      candidateClaimIds: ["CLM-NTR-CHNG-PUBLIC-INSTALLATION"],
-      publicSafe: true,
-      reviewedAt: "2026-07-14",
-      reviewedBy
-    },
-    {
-      id: "AST-NTR-CHNG-CREATOR-CREDIT-ABSENT",
-      sourceId: "SRC-NTR-CHNG-PITCH-2010",
-      project: "ntr-chng",
-      assertion:
-        "The reviewed public notice does not name creators and therefore cannot establish Jamie's role or technical authorship.",
-      relationship: "bounds",
-      confidence: "high",
-      candidateClaimIds: ["CLM-NTR-CHNG-JAMIE-ROLE"],
-      publicSafe: true,
-      reviewedAt: "2026-07-14",
-      reviewedBy
-    },
-    {
       id: "AST-CRS-RUNNING-MEMORY-SYSTEM",
       sourceId: "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
       project: "fair-rent-nyc",
@@ -464,92 +415,6 @@ export const teamsArchiveProductionBatch20260714: {
         "The archive independently proves 300-plus gatherings",
         "Every participant or gathering is publicly documented",
         "Jamie owns the community's stories or images"
-      ],
-      researchInquiryIds: [],
-      reviewedAt: "2026-07-14",
-      reviewedBy
-    },
-    {
-      id: "CLM-NTR-CHNG-PUBLIC-INSTALLATION",
-      project: "ntr-chng",
-      internalClaim:
-        "The Pitch documented NTER CHNG as a January 2010 installation combining software and architecture so visitors could exchange real-time messages through a digital wall.",
-      status: "confirmed-with-boundary",
-      maturity: "confirmed-with-boundary",
-      projectionEligibility: "hold",
-      collectiveWork: true,
-      projections: [
-        {
-          key: "archive-note",
-          text:
-            "A January 2010 public notice describes NTER CHNG as a participatory software and architectural installation built around real-time messaging.",
-          status: "hold",
-          citationRequired: true,
-          surfaces: []
-        }
-      ],
-      evidence: [
-        {
-          sourceId: "SRC-NTR-CHNG-PITCH-2010",
-          relationship: "direct-support",
-          supports: ["date", "installation format", "participant interaction"],
-          confidence: "high",
-          renderCitation: false
-        }
-      ],
-      boundaries: [
-        "The source establishes the public installation description, not creator identity or Jamie's role."
-      ],
-      antiClaims: [
-        "The Pitch credits Jamie as creator",
-        "The notice proves Jamie wrote the software",
-        "The notice establishes the complete collaborator roster"
-      ],
-      researchInquiryIds: [],
-      reviewedAt: "2026-07-14",
-      reviewedBy
-    },
-    {
-      id: "CLM-NTR-CHNG-JAMIE-ROLE",
-      project: "ntr-chng",
-      internalClaim:
-        "The project-history collection associates NTR CHNG with Jamie, but the reviewed public notice does not establish his role, authorship, or collaborator credit.",
-      status: "inference",
-      maturity: "research-needed",
-      projectionEligibility: "hold",
-      collectiveWork: true,
-      projections: [
-        {
-          key: "archive-note",
-          text: "Jamie's role in NTR CHNG remains a research question.",
-          status: "hold",
-          citationRequired: false,
-          surfaces: []
-        }
-      ],
-      evidence: [
-        {
-          sourceId: "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
-          relationship: "context",
-          supports: ["the archive's association of NTR CHNG with Jamie's project history"],
-          confidence: "moderate",
-          renderCitation: false
-        },
-        {
-          sourceId: "SRC-NTR-CHNG-PITCH-2010",
-          relationship: "supports-boundary",
-          supports: ["the absence of creator and role credit in the reviewed notice"],
-          confidence: "high",
-          renderCitation: false
-        }
-      ],
-      boundaries: [
-        "A folder association is a lead, not independent role confirmation."
-      ],
-      antiClaims: [
-        "Jamie created NTR CHNG alone",
-        "Jamie authored the software",
-        "The public notice identifies Jamie"
       ],
       researchInquiryIds: [],
       reviewedAt: "2026-07-14",
@@ -753,33 +618,6 @@ export const teamsArchiveProductionBatch20260714: {
     }
   ],
   researchTasks: [
-    {
-      id: "TASK-NTR-CHNG-ROLE-CREDITS",
-      project: "ntr-chng",
-      question:
-        "What do contemporaneous credits establish about Jamie's role, collaborators, software contribution, and installation responsibilities for NTR CHNG?",
-      priority: "medium",
-      status: "queued",
-      methodsPlanned: [
-        "Recover exhibition catalogs, venue listings, and contemporary announcements",
-        "Inspect surviving video metadata and credit screens",
-        "Search collaborator and institutional archives",
-        "Request collaborator confirmation if public records remain incomplete"
-      ],
-      successCriteria: [
-        "Recover a contemporaneous source naming Jamie and his role",
-        "Identify collaborators and separate software, installation, and program credit",
-        "Keep the role claim held if creator credit remains unrecovered"
-      ],
-      sourceIds: [
-        "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
-        "SRC-NTR-CHNG-PITCH-2010"
-      ],
-      claimIds: ["CLM-NTR-CHNG-JAMIE-ROLE"],
-      publicSummary:
-        "Recover contemporaneous NTR CHNG credits before making any public claim about Jamie's role.",
-      reviewedAt: "2026-07-14"
-    },
     {
       id: "TASK-CLAUDETTES-ROLE-SOURCE-RECOVERY",
       project: "claudettes-theater-on-wheels",

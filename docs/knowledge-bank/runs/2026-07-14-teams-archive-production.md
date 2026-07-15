@@ -31,7 +31,7 @@ claim, or identify a concrete research path.
 | --- | --- | --- |
 | Jamie Projects History | The overview maps fifteen named project families. Existing bank coverage already represented the strongest public traces for Open House, waterway participation, NYC Artist Coalition, CallNYC, WOW List, KC Spaces Fund, KC Town Hall, and Sunday Dinner / 196. | Added an aggregate protected source record; avoided duplicate claims. |
 | Sunday Dinner public archive | A surviving public index preserves March 2016 posts labeled "Sunday Dinner 100." | Added a confirmed, held lower-bound claim. It corroborates a hundredth-gathering milestone but does not independently prove the approved 300-plus or 20-plus totals. |
-| NTR CHNG | [The Pitch](https://www.thepitchkc.com/ntr-chng/) describes a January 2010 software and architectural installation built around real-time participant messaging. The notice does not name creators. | Added the public source, a held installation claim, and a research-needed claim for Jamie's role. |
+| NTER CHNG | [The Pitch](https://www.thepitchkc.com/ntr-chng/) describes a January 2010 software and architectural installation built around real-time participant messaging. The notice does not name creators. | Initially added a held role-credit lead. A July 15 follow-up recovered the project site and America: Now and Here artist page, confirmed the three co-creators, and consolidated this lead into the canonical NTER CHNG record. |
 | Claudette's Theater on Wheels | A selected public-page capture remained a dataless cloud placeholder after a targeted materialization request. Adjacent public material did not establish Jamie's role. | Added a bounded source-recovery task. The source is not treated as nonexistent. No role claim was created. |
 | Commercial Rent Stabilization running memory | The reviewed record is explicitly designed as a shared memory system for decisions, actions, open questions, city and state lanes, data stewardship, and consent boundaries. Jamie is named as its steward. | Added a protected source, atomic assertion, and eligible contribution claim with collective-credit boundaries. |
 | Legislative provenance redline | The artifact names Jamie as preparer and uses tracked changes to distinguish source layers across city, coalition, prior legislative, and Albany revisions. It explicitly avoids converting reviewer labels into drafting credit. | Added a protected source, atomic assertion, and eligible provenance claim. |
@@ -60,7 +60,8 @@ provenance without exposing locators.
 
 - Sunday Dinner's hundredth-gathering public trace; useful corroboration, not a
   replacement for aggregate scale evidence.
-- NTR CHNG's public installation description until role credits are recovered.
+- NTER CHNG was initially held pending role credits; those credits were
+  recovered and integrated into the canonical project record on July 15, 2026.
 - Claudette's Theater on Wheels until the relevant source materializes and role
   credit is established.
 

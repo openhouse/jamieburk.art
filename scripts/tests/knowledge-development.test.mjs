@@ -188,6 +188,24 @@ test("NTER CHNG preserves co-creator credit and the official exhibition connecti
   assert.ok(inquiry.limitations.some((item) => /not evidence that no copy survives/i.test(item)));
   assert.equal(task.status, "queued");
   assert.ok(task.successCriteria.some((item) => /Assign no role without/i.test(item)));
+  assert.equal(
+    knowledgeBank.claims.some((claim) => claim.id.startsWith("CLM-NTR-CHNG")),
+    false
+  );
+  assert.equal(
+    knowledgeBank.sources.some((source) => source.id === "SRC-NTR-CHNG-PITCH-2010"),
+    false
+  );
+  assert.equal(
+    knowledgeBank.researchTasks.some((item) => item.id === "TASK-NTR-CHNG-ROLE-CREDITS"),
+    false
+  );
+  assert.equal(
+    [...knowledgeBank.claims, ...knowledgeBank.sourceAssertions].some(
+      (item) => item.project === "ntr-chng"
+    ),
+    false
+  );
 });
 
 test("CallNYC corpus accounts for every recoverable timeline item and preserves the profile-count gap", () => {
