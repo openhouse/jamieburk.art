@@ -43,6 +43,13 @@ venue. The exhibition's own site directly establishes NTER CHNG's inclusion
 and SMS-to-projection interaction. The museum page supplies program context but
 does not itself name NTER CHNG.
 
+The July 15 NTER CHNG artifact increment adds two protected project records: a
+May 2011 America: Now and Here installation runbook and a working document with
+2010 exhibit information and 2011 prompts. The records establish a January 2010
+original presentation and an integrated software, hardware, fabrication, and
+gallery-production workflow. Their Drive locators remain protected, and raw
+participant phone numbers and message text are excluded from the repository.
+
 The July 15 KC Town Hall Phase One pass adds two deliberately separate source
 records. Jamie's public review confirmation supplies firsthand role evidence.
 A public-metadata-only record preserves bounded page-level findings from the

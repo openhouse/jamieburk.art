@@ -87,6 +87,11 @@ const nterChngSourceIds = [
   "SRC-NERMAN-AMERICA-NOW-HERE-2011"
 ];
 
+const nterChngArtifactSourceIds = [
+  "SRC-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+  "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011"
+];
+
 const kcTownHallPhaseOneSourceIds = [
   "SRC-KCTH-PHASE-ONE-CCED-PROPOSAL-2019",
   "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"
@@ -2276,6 +2281,9 @@ const criteria = [
       const inquiry = knowledgeBank.researchInquiries.find(
         (item) => item.id === "INQ-NTER-CHNG-AMERICA-NOW-HERE-2026"
       );
+      const artifactInquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-NTER-CHNG-PROJECT-ARTIFACTS-2026"
+      );
       const promotedPairs = [
         [
           "CND-NTER-CHNG-COLLABORATIVE-INSTALLATION",
@@ -2288,22 +2296,36 @@ const criteria = [
         [
           "CND-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD",
           "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD"
+        ],
+        [
+          "CND-NTER-CHNG-ORIGINAL-EXHIBITION-CHRONOLOGY",
+          "CLM-NTER-CHNG-ORIGINAL-EXHIBITION-2010"
+        ],
+        [
+          "CND-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+          "CLM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011"
         ]
       ];
       const heldCandidateIds = [
         "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP",
-        "CND-NTER-CHNG-ORIGINAL-OPENING-DATE"
+        "CND-NTER-CHNG-EXACT-CLOSING-DATE"
       ];
+      const contradictedOpening = candidateById.get(
+        "CND-NTER-CHNG-ORIGINAL-OPENING-DATE"
+      );
       return Boolean(
         [
           "INT-2026-07-14-NTER-CHNG-ARCHIVED-SITE",
-          "INT-2026-07-14-NERMAN-AMERICA-NOW-HERE"
+          "INT-2026-07-14-NERMAN-AMERICA-NOW-HERE",
+          "INT-2026-07-15-NTER-CHNG-INSTALLER-RUNBOOK",
+          "INT-2026-07-15-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT"
         ].every((id) => intakeItems.some((item) => item.id === id)) &&
-        nterChngSourceIds.every((id) => {
+        [...nterChngSourceIds, ...nterChngArtifactSourceIds].every((id) => {
           const reading = readingBySourceId.get(id);
           return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
         }) &&
         inquiry?.resultStatus === "recovered" &&
+        artifactInquiry?.resultStatus === "partially-recovered" &&
         promotedPairs.every(([candidateId, claimId]) => {
           const candidate = candidateById.get(candidateId);
           return candidate?.status === "promoted" && candidate.promotedClaimId === claimId;
@@ -2318,7 +2340,13 @@ const criteria = [
                 promotion.decision === "held"
             )
           );
-        })
+        }) &&
+        contradictedOpening?.status === "contradicted" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === contradictedOpening.id &&
+            promotion.decision === "held"
+        )
       );
     })()
   },
@@ -2366,6 +2394,97 @@ const criteria = [
     })()
   },
   {
+    id: "nter-chng-protected-artifact-lineage",
+    label: "NTER CHNG working artifacts have protected intake, source, reading, and inquiry lineage",
+    pass: (() => {
+      const artifactInquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-NTER-CHNG-PROJECT-ARTIFACTS-2026"
+      );
+      const protectedIntakes = [
+        "INT-2026-07-15-NTER-CHNG-INSTALLER-RUNBOOK",
+        "INT-2026-07-15-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT"
+      ].map((id) => intakeItems.find((item) => item.id === id));
+      return Boolean(
+        protectedIntakes.every(
+          (item) => item?.visibility === "protected" && !item.sourceUrl && item.protectedLocatorId
+        ) &&
+        nterChngArtifactSourceIds.every((id) => {
+          const source = knowledgeBank.sources.find((item) => item.id === id);
+          const reading = readingBySourceId.get(id);
+          return (
+            source?.visibility === "protected" &&
+            source.preservationStatus === "private" &&
+            source.protectedLocatorId &&
+            !source.canonicalUrl &&
+            !source.archiveUrl &&
+            !source.assetUrl &&
+            reading?.assertions.length &&
+            reading.limitations.length
+          );
+        }) &&
+        artifactInquiry?.sourceIds.every((id) => sourceIds.has(id)) &&
+        artifactInquiry.limitations.some((item) => /phone numbers.*message text/i.test(item))
+      );
+    })()
+  },
+  {
+    id: "nter-chng-chronology-correction-and-conflict",
+    label: "NTER CHNG corrects the original chronology while preserving the closing-date conflict",
+    pass: (() => {
+      const chronologyClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NTER-CHNG-ORIGINAL-EXHIBITION-2010"
+      );
+      const closingCandidate = candidateById.get("CND-NTER-CHNG-EXACT-CLOSING-DATE");
+      const report = readFileSync("docs/knowledge-bank/nter-chng-2026-07-14.md", "utf8");
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      return Boolean(
+        chronologyClaim?.internalClaim.includes("January 2010") &&
+        chronologyClaim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011" &&
+            item.relationship === "private-support"
+        ) &&
+        chronologyClaim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011" &&
+            item.relationship === "supports-boundary"
+        ) &&
+        closingCandidate?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === closingCandidate.id &&
+            promotion.decision === "held"
+        ) &&
+        /January 29[\s\S]{0,180}January 24/i.test(report) &&
+        /Do not say the original Cocoon Gallery presentation opened in January 2011/i.test(
+          antiClaims
+        )
+      );
+    })()
+  },
+  {
+    id: "nter-chng-integrated-system-and-privacy-boundaries",
+    label: "NTER CHNG preserves implementation depth without solo attribution or participant exposure",
+    pass: (() => {
+      const systemClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011"
+      );
+      const report = readFileSync("docs/knowledge-bank/nter-chng-2026-07-14.md", "utf8");
+      return Boolean(
+        systemClaim?.internalClaim.includes("software refinement") &&
+        systemClaim.internalClaim.includes("wall fabrication") &&
+        systemClaim.boundaries.some((item) => /three-person collaboration|individual tasks/i.test(item)) &&
+        systemClaim.antiClaims.some((item) => /independently built every part/i.test(item)) &&
+        /software, hardware,[\s\S]{0,80}fabrication, and gallery-production workflow/i.test(
+          report
+        ) &&
+        !publicRegistryText.includes("ARCHIVE-NTER-CHNG-INSTALLER-RUNBOOK") &&
+        !publicRegistryText.includes("ARCHIVE-NTER-CHNG-EXHIBIT-WORKING-DOC") &&
+        !publicRegistryText.includes("docs.google.com/document/d/")
+      );
+    })()
+  },
+  {
     id: "nter-chng-chad-editorial-restraint",
     label: "Chad's lens preserves NTER CHNG as useful depth without adding an unneeded public route",
     pass: (() => {
@@ -2375,19 +2494,21 @@ const criteria = [
       const selectedClaims = [
         "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
         "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011",
-        "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD"
+        "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD",
+        "CLM-NTER-CHNG-ORIGINAL-EXHIBITION-2010",
+        "CLM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011"
       ].map((id) => knowledgeBank.claims.find((claim) => claim.id === id));
       const report = readFileSync(
         "docs/knowledge-bank/nter-chng-2026-07-14.md",
         "utf8"
       );
       return Boolean(
-        brief?.selectedClaimIds.length === 3 &&
+        brief?.selectedClaimIds.length === 5 &&
         brief.heldCandidateClaimIds.includes(
           "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP"
         ) &&
         brief.heldCandidateClaimIds.includes(
-          "CND-NTER-CHNG-ORIGINAL-OPENING-DATE"
+          "CND-NTER-CHNG-EXACT-CLOSING-DATE"
         ) &&
         brief.rationale.some((item) => /no immediate website change/i.test(item)) &&
         selectedClaims.every(
@@ -2405,7 +2526,8 @@ const criteria = [
         /There is no public NTER CHNG route, proofs route, knowledge-bank route/i.test(
           report
         ) &&
-        !publicRegistryText.includes("RESEARCH-NTER-CHNG-WAYBACK-2026-001")
+        !publicRegistryText.includes("RESEARCH-NTER-CHNG-WAYBACK-2026-001") &&
+        !publicRegistryText.includes("RESEARCH-NTER-CHNG-PROJECT-ARTIFACTS-2026-001")
       );
     })()
   },

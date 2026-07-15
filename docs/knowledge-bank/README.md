@@ -49,7 +49,9 @@ The [NTER CHNG archival-production report](nter-chng-2026-07-14.md) preserves
 a recovered collaborative interactive-media project and its later inclusion in
 America: Now and Here. The record keeps all three creator credits, separates
 direct exhibition evidence from institutional context, and holds unresolved
-authorship and chronology claims from public use.
+authorship and exact-closing-date claims from public use. Two protected working
+artifacts add the January 2010 original-presentation chronology and the May 2011
+integrated installation workflow without exposing participant records.
 
 The [KC Town Hall Phase One report](kc-town-hall-phase-one-2026-07-15.md)
 corrects an earlier understatement of Jamie's role. It preserves his daily

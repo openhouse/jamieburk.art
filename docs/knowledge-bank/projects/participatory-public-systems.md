@@ -21,7 +21,16 @@ project and exhibition records document a collaborative texting installation
 by Drew Bolton, Jamie Burkart, and Garrett Fuselier: visitors sent a text and
 saw their messages enter a shared moving projection. This is useful evidence of
 participatory-system practice, but the sources do not establish each creator's
-division of labor, the exact original opening date, or audience impact.
+division of labor or audience impact.
+
+Two protected working artifacts add chronology and implementation depth. A
+project-authored exhibit document dates the original Cocoon Gallery
+presentation to January 2010, although the surviving records conflict on the
+exact closing date. A May 2011 installer runbook shows the America: Now and Here
+restaging being planned across software, hosting, display hardware, networking,
+wiring, fabrication, installation testing, gallery fine-tuning, and teardown.
+The records establish collaborative system scope, not individual task
+attribution.
 
 ## Hosted-Event Record
 

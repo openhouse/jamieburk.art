@@ -56,6 +56,49 @@ export const nterChngDevelopmentRecords: NterChngDevelopment = {
         "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011",
         "INQ-NTER-CHNG-AMERICA-NOW-HERE-2026"
       ]
+    },
+    {
+      id: "INT-2026-07-15-NTER-CHNG-INSTALLER-RUNBOOK",
+      receivedAt: "2026-07-15",
+      submittedBy: "Jamie Burkart",
+      kind: "artifact",
+      visibility: "protected",
+      summary:
+        "Ingest a newly surfaced NTER CHNG installation runbook while keeping its Google Drive locator and working details outside the public registry.",
+      projectHints: ["nter-chng", "participatory-public-systems"],
+      status: "processed",
+      disposition:
+        "Close-read the full runbook, promoted a bounded integrated-installation-system claim, and retained individual task attribution as unresolved.",
+      linkedRecordIds: [
+        "SRC-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+        "READ-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+        "INQ-NTER-CHNG-PROJECT-ARTIFACTS-2026",
+        "CND-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+        "CLM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011"
+      ],
+      protectedLocatorId: "ARCHIVE-NTER-CHNG-INSTALLER-RUNBOOK-INTAKE-2026-001"
+    },
+    {
+      id: "INT-2026-07-15-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT",
+      receivedAt: "2026-07-15",
+      submittedBy: "Jamie Burkart",
+      kind: "artifact",
+      visibility: "protected",
+      summary:
+        "Ingest a newly surfaced NTER CHNG working document containing 2010 exhibit information and 2011 prompts without publishing participant records.",
+      projectHints: ["nter-chng", "participatory-public-systems"],
+      status: "processed",
+      disposition:
+        "Recovered the original-presentation chronology and creators' conceptual framing, contradicted the prior January 2011 opening hypothesis, and excluded all phone numbers and message text.",
+      linkedRecordIds: [
+        "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011",
+        "READ-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011",
+        "INQ-NTER-CHNG-PROJECT-ARTIFACTS-2026",
+        "CND-NTER-CHNG-ORIGINAL-EXHIBITION-CHRONOLOGY",
+        "CLM-NTER-CHNG-ORIGINAL-EXHIBITION-2010",
+        "CND-NTER-CHNG-EXACT-CLOSING-DATE"
+      ],
+      protectedLocatorId: "ARCHIVE-NTER-CHNG-EXHIBIT-WORKING-DOC-INTAKE-2026-001"
     }
   ],
   sourceReadings: [
@@ -166,6 +209,101 @@ export const nterChngDevelopmentRecords: NterChngDevelopment = {
       entityIds: ["AmericaNowAndHere", "NermanMuseum"],
       themeIds: ["exhibition-context", "public-dialogue", "national-local-program"],
       candidateClaimIds: ["CND-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"]
+    },
+    {
+      id: "READ-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+      sourceId: "SRC-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+      readAt: "2026-07-15",
+      reader: "Codex authenticated Google Docs archival review",
+      assertions: [
+        {
+          id: "ASSERT-NTER-CHNG-MAY-2011-RESTAGING",
+          statement:
+            "The runbook identifies its purpose as staging NTER CHNG for America: Now and Here in May 2011.",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "ASSERT-NTER-CHNG-SOFTWARE-REFINEMENT",
+          statement:
+            "The plan includes server-side and wall-side software concerns and a refinement intended to prevent rapid incoming messages from back-queuing.",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "ASSERT-NTER-CHNG-INTEGRATED-INSTALLATION-SCOPE",
+          statement:
+            "The runbook coordinates hosting, display computers, projectors, networking, wiring, wall fabrication, floor anchoring, testing, installation, gallery fine-tuning, documentation planning, and teardown.",
+          confidence: "high",
+          publicSafe: true
+        }
+      ],
+      limitations: [
+        "The connector exposed no revision history or usable author metadata.",
+        "The task plan does not assign individual responsibilities among the three credited creators.",
+        "A runbook establishes intended implementation scope but does not independently prove every listed task was completed as written."
+      ],
+      entityIds: ["JamieBurkart", "DrewBolton", "GarrettFuselier", "AmericaNowAndHere"],
+      themeIds: [
+        "interactive-media",
+        "technical-production",
+        "installation-delivery",
+        "collaborative-authorship"
+      ],
+      candidateClaimIds: [
+        "CND-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+        "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP"
+      ]
+    },
+    {
+      id: "READ-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011",
+      sourceId: "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011",
+      readAt: "2026-07-15",
+      reader: "Codex authenticated Google Docs archival review",
+      assertions: [
+        {
+          id: "ASSERT-NTER-CHNG-JANUARY-2010-PRESENTATION",
+          statement:
+            "A project-authored exhibit-information section dates the original NTER CHNG presentation to January 2010 and lists January 8 as its opening date.",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "ASSERT-NTER-CHNG-SOFTWARE-ARCHITECTURAL-FORM",
+          statement:
+            "The exhibit description characterizes NTER CHNG as equal parts software application and architectural installation.",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "ASSERT-NTER-CHNG-MANY-TO-MANY-FRAMING",
+          statement:
+            "The exhibit description frames the installation as turning private one-to-one text exchange into a shared many-to-many spatial experience.",
+          confidence: "high",
+          publicSafe: true
+        }
+      ],
+      limitations: [
+        "The document contains participant phone numbers and message text that are excluded from the public repository.",
+        "The exhibit-information section is project-authored and is not an independent venue record.",
+        "The listed January 29 closing date conflicts with the archived project site's January 24 language.",
+        "The document does not assign individual technical, artistic, production, or documentation responsibilities."
+      ],
+      entityIds: ["JamieBurkart", "DrewBolton", "GarrettFuselier"],
+      themeIds: [
+        "interactive-media",
+        "collaborative-authorship",
+        "public-participation",
+        "exhibition-chronology"
+      ],
+      candidateClaimIds: [
+        "CND-NTER-CHNG-ORIGINAL-OPENING-DATE",
+        "CND-NTER-CHNG-ORIGINAL-EXHIBITION-CHRONOLOGY",
+        "CND-NTER-CHNG-EXACT-CLOSING-DATE",
+        "CND-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD",
+        "CND-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+        "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP"
+      ]
     }
   ],
   candidateClaims: [
@@ -215,11 +353,12 @@ export const nterChngDevelopmentRecords: NterChngDevelopment = {
       status: "promoted",
       sourceIds: [
         "SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011",
-        "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011"
+        "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011",
+        "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011"
       ],
       researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-2026"],
       supportSummary:
-        "The sources document a familiar individual action, texting, changing a shared public visual display in real time, with Jamie named among three collaborators.",
+        "The public sources document a familiar individual action changing a shared display in real time; the protected project document explicitly frames the shift from private one-to-one texting to a shared many-to-many exchange, with Jamie named among three collaborators.",
       missingEvidence: [],
       boundaries: [
         "Treat the participatory-systems framing as editorial synthesis and retain collective credit."
@@ -233,35 +372,106 @@ export const nterChngDevelopmentRecords: NterChngDevelopment = {
       text:
         "Jamie independently designed and programmed the complete NTER CHNG installation.",
       status: "research-needed",
-      sourceIds: ["SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011"],
+      sourceIds: [
+        "SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011",
+        "SRC-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+        "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011"
+      ],
       researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-2026"],
       supportSummary:
-        "The project source names Jamie as one of three creators but supplies no division of artistic, technical, production, or documentation labor.",
+        "The new working documents establish a substantial integrated technical and production system, but they still name or imply collective work and do not assign individual responsibilities among the three creators.",
       missingEvidence: [
         "Collaborator confirmation or contemporaneous technical records assigning individual responsibilities"
       ],
       boundaries: [
         "Use collaborative creator credit until direct role evidence supports a more specific contribution."
       ],
-      reviewedAt: "2026-07-14"
+      reviewedAt: "2026-07-15"
     },
     {
       id: "CND-NTER-CHNG-ORIGINAL-OPENING-DATE",
       project: "nter-chng",
       text:
         "NTER CHNG opened at Cocoon Gallery in January 2011.",
-      status: "research-needed",
-      sourceIds: ["SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011"],
+      status: "contradicted",
+      sourceIds: [
+        "SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011",
+        "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011"
+      ],
       researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-2026"],
       supportSummary:
-        "The January 28, 2011 capture says the installation was open until January 24, but the page does not print an opening date or year and may preserve stale copy.",
+        "The earlier inference conflated the January 2011 Wayback capture date with the exhibition date. A surviving project-authored exhibit-information section explicitly dates the original presentation to January 2010.",
       missingEvidence: [
-        "The unrecovered press release, event listing, collaborator record, or contemporaneous venue calendar"
+        "An independent venue or press record confirming the exact January 2010 run"
       ],
       boundaries: [
-        "State only that the January 2011 archive records the earlier Cocoon Gallery presentation until a dated source is recovered."
+        "Do not describe the original Cocoon Gallery presentation as opening in January 2011."
       ],
-      reviewedAt: "2026-07-14"
+      reviewedAt: "2026-07-15"
+    },
+    {
+      id: "CND-NTER-CHNG-ORIGINAL-EXHIBITION-CHRONOLOGY",
+      project: "nter-chng",
+      text:
+        "A project-authored exhibit-information document dates NTER CHNG's original Cocoon Gallery presentation to January 2010, before its May 2011 America: Now and Here restaging.",
+      status: "promoted",
+      sourceIds: [
+        "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011",
+        "SRC-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+        "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011"
+      ],
+      researchInquiryIds: ["INQ-NTER-CHNG-PROJECT-ARTIFACTS-2026"],
+      supportSummary:
+        "The protected exhibit-information section dates the original presentation to January 2010, while the installer runbook and official exhibition article establish the May 2011 restaging context.",
+      missingEvidence: [],
+      boundaries: [
+        "Attribute the 2010 chronology to a project-authored working document, not independent reporting.",
+        "Keep the exact closing date unresolved because two surviving project sources conflict."
+      ],
+      promotedClaimId: "CLM-NTER-CHNG-ORIGINAL-EXHIBITION-2010",
+      reviewedAt: "2026-07-15"
+    },
+    {
+      id: "CND-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+      project: "nter-chng",
+      text:
+        "The May 2011 restaging required an integrated implementation across software, hosting, display hardware, networking, wiring, fabrication, installation testing, gallery fine-tuning, and teardown.",
+      status: "promoted",
+      sourceIds: [
+        "SRC-NTER-CHNG-INSTALLER-RUNBOOK-2011",
+        "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011"
+      ],
+      researchInquiryIds: ["INQ-NTER-CHNG-PROJECT-ARTIFACTS-2026"],
+      supportSummary:
+        "The installer runbook enumerates the technical and physical workflow, while the exhibit document describes the work as equal parts software application and architectural installation.",
+      missingEvidence: [],
+      boundaries: [
+        "Describe project scope rather than assigning individual tasks.",
+        "Do not treat the runbook as independent proof that every task was completed exactly as planned."
+      ],
+      promotedClaimId: "CLM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+      reviewedAt: "2026-07-15"
+    },
+    {
+      id: "CND-NTER-CHNG-EXACT-CLOSING-DATE",
+      project: "nter-chng",
+      text:
+        "NTER CHNG's original Cocoon Gallery presentation closed on January 29, 2010.",
+      status: "research-needed",
+      sourceIds: [
+        "SRC-NTER-CHNG-EXHIBIT-WORKING-DOCUMENT-2010-2011",
+        "SRC-NTER-CHNG-ARCHIVED-PROJECT-SITE-2011"
+      ],
+      researchInquiryIds: ["INQ-NTER-CHNG-PROJECT-ARTIFACTS-2026"],
+      supportSummary:
+        "The protected exhibit document lists January 29, while the archived project page says the installation was open until January 24.",
+      missingEvidence: [
+        "A contemporaneous venue calendar, preserved press release, event listing, or collaborator confirmation resolving the conflict"
+      ],
+      boundaries: [
+        "State January 2010 without an exact closing date until the conflict is resolved."
+      ],
+      reviewedAt: "2026-07-15"
     }
   ],
   promotions: [
@@ -300,18 +510,47 @@ export const nterChngDevelopmentRecords: NterChngDevelopment = {
       candidateClaimId: "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP",
       decision: "held",
       reason:
-        "The source credits three collaborators and does not assign technical, artistic, production, or documentation responsibilities.",
-      decidedAt: "2026-07-14",
-      decidedBy: ["Jamie Burkart", "Codex source review"]
+        "The newly recovered runbook demonstrates a complex technical and production system but still does not assign individual responsibilities among the three collaborators.",
+      decidedAt: "2026-07-15",
+      decidedBy: ["Jamie Burkart", "Codex Google Docs archival review"]
     },
     {
       id: "PROM-NTER-CHNG-ORIGINAL-OPENING-DATE-2026",
       candidateClaimId: "CND-NTER-CHNG-ORIGINAL-OPENING-DATE",
       decision: "held",
       reason:
-        "The recovered project page does not print the original opening date or year, and the linked press release was not captured.",
-      decidedAt: "2026-07-14",
-      decidedBy: ["Jamie Burkart", "Codex archival review"]
+        "The January 2011 opening hypothesis is contradicted by a project-authored exhibit-information section dating the original presentation to January 2010.",
+      decidedAt: "2026-07-15",
+      decidedBy: ["Jamie Burkart", "Codex Google Docs archival review"]
+    },
+    {
+      id: "PROM-NTER-CHNG-ORIGINAL-EXHIBITION-CHRONOLOGY-2026",
+      candidateClaimId: "CND-NTER-CHNG-ORIGINAL-EXHIBITION-CHRONOLOGY",
+      claimId: "CLM-NTER-CHNG-ORIGINAL-EXHIBITION-2010",
+      decision: "promoted",
+      reason:
+        "The protected project document directly supplies January 2010 chronology, while separate 2011 sources establish the later restaging.",
+      decidedAt: "2026-07-15",
+      decidedBy: ["Jamie Burkart", "Codex Google Docs archival review"]
+    },
+    {
+      id: "PROM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2026",
+      candidateClaimId: "CND-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+      claimId: "CLM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011",
+      decision: "promoted",
+      reason:
+        "The installer runbook directly enumerates an integrated software, hardware, fabrication, and gallery-production workflow without assigning individual tasks.",
+      decidedAt: "2026-07-15",
+      decidedBy: ["Jamie Burkart", "Codex Google Docs archival review"]
+    },
+    {
+      id: "PROM-NTER-CHNG-EXACT-CLOSING-DATE-2026",
+      candidateClaimId: "CND-NTER-CHNG-EXACT-CLOSING-DATE",
+      decision: "held",
+      reason:
+        "The protected working document and archived project page preserve conflicting January closing dates.",
+      decidedAt: "2026-07-15",
+      decidedBy: ["Jamie Burkart", "Codex source comparison"]
     }
   ],
   editorialBriefs: [
@@ -326,15 +565,18 @@ export const nterChngDevelopmentRecords: NterChngDevelopment = {
       selectedClaimIds: [
         "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION",
         "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011",
-        "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD"
+        "CLM-NTER-CHNG-PARTICIPATORY-SYSTEM-THREAD",
+        "CLM-NTER-CHNG-ORIGINAL-EXHIBITION-2010",
+        "CLM-NTER-CHNG-INTEGRATED-INSTALLATION-SYSTEM-2011"
       ],
       heldCandidateClaimIds: [
         "CND-NTER-CHNG-SOLE-TECHNICAL-AUTHORSHIP",
-        "CND-NTER-CHNG-ORIGINAL-OPENING-DATE"
+        "CND-NTER-CHNG-EXACT-CLOSING-DATE"
       ],
       rationale: [
         "Make no immediate website change; preserve the project as source-backed depth for future opportunity-specific compositions.",
         "Keep all three collaborators visible and avoid inventing a division of labor.",
+        "Use the protected artifacts to preserve chronology and implementation depth without exposing their Drive locators or participant records.",
         "Use the official exhibition article for inclusion and mechanism, the project page for creators and venue, and the museum page only for wider program context.",
         "Do not add a public archive, proofs, knowledge-bank, or project route in this pass."
       ],

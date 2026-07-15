@@ -256,15 +256,28 @@ Do not say Jamie solely created, designed, or programmed NTER CHNG. The
 archived project page gives equal creator credit to Drew Bolton, Jamie Burkart,
 and Garrett Fuselier and does not document the division of labor.
 
-Do not infer that the installation opened in January 2011 from a January 28,
-2011 Wayback capture saying it was "open until Jan. 24th." The original press
-release and an exact opening date were not recovered.
+Do not say the original Cocoon Gallery presentation opened in January 2011.
+The January 2011 date is the Wayback capture, while a protected project-authored
+exhibit document dates the original presentation to January 2010 and lists a
+January 8 opening.
+
+Do not publish an exact closing date yet. The protected exhibit document lists
+January 29, while the archived project page says the installation was open
+until January 24.
 
 Do not say America: Now and Here commissioned NTER CHNG, made it the central or
 signature work of the exhibition, or produced a documented audience or impact
 total. The official exhibition site establishes inclusion and interaction; the
 Nerman Museum page establishes wider program context but does not name the
 installation.
+
+Do not expose the protected Google Docs links, Drive IDs, participant phone
+numbers, participant message text, or raw working documents.
+
+Do not convert the installation runbook into individual task attribution. It
+establishes an integrated software, hardware, fabrication, and gallery-
+production system, but it does not identify which collaborator completed each
+task or prove that every plan item was executed exactly as written.
 
 ## Source-Backed Team Memory
 

@@ -543,6 +543,36 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## nter-chng-original-exhibition-2010 - Original Cocoon Gallery chronology
+
+**Status:** Confirmed with boundary
+**Support level:** Careful
+**Evidence class:** Protected project-authored exhibit document, bounded by the archived public project page
+**Public wording:** A surviving project-authored exhibit document dates NTER CHNG's original Cocoon Gallery presentation to January 2010; the recovered sources conflict on the exact closing date.
+**Detailed public-safe wording:** The protected exhibit-information section lists a January 8 opening in 2010. The archived project page separately says the installation was open until January 24, while the protected document lists January 29; no exact closing date is promoted.
+**Where to project:** Knowledge bank now; future chronology, creative-technology, or participatory-systems composition only when useful.
+**Why it matters:** Separates the original Cocoon Gallery presentation from the May 2011 America: Now and Here restaging and corrects an earlier capture-date inference.
+**Guardrail:** January 2010 and the listed January 8 opening are supported by the protected document. Attribute the chronology to a project-authored source and keep the closing date unresolved.
+**Do not say:** The original presentation opened in January 2011; every source agrees on the closing date; the protected document is an independent venue record.
+**Protected boundaries:** The underlying Google Drive locator and raw document remain protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nter-chng-integrated-installation-system-2011 - Integrated installation delivery
+
+**Status:** Confirmed with boundary
+**Support level:** Careful
+**Evidence class:** Protected May 2011 installation runbook and project working document
+**Public wording:** The May 2011 installer runbook shows NTER CHNG being delivered as an integrated software, hardware, fabrication, and gallery-production system.
+**Detailed public-safe wording:** The runbook coordinates software behavior, server-side and wall-side components, hosting, display computers, projectors, networking, wiring, wall fabrication, floor anchoring, installation testing, gallery fine-tuning, documentation planning, and teardown.
+**Where to project:** Knowledge bank now; future technical implementation or creative-technology composition only when it materially strengthens the audience argument.
+**Why it matters:** Makes the project's implementation complexity legible across digital, physical, spatial, and production layers without inventing a division of labor.
+**Guardrail:** Use this for project scope and implementation complexity while retaining collective credit. The runbook does not assign individual tasks or prove that every planned item was completed exactly as written.
+**Do not say:** Jamie independently built every component; the runbook proves the final installation matched every planning detail; the artifacts establish audience reach or impact.
+**Protected boundaries:** Do not expose Drive locators, participant phone numbers, participant message text, or raw working documents.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## nter-chng-america-now-and-here - America: Now and Here inclusion
 
 **Status:** Ready in bank / Held from current site
