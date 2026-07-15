@@ -1802,6 +1802,37 @@ test("NYC Artist Coalition row locks reject count-preserving identity mutations"
   }
 });
 
+test("NYC Artist Coalition incoming-ledger locks reject count-preserving mutations", () => {
+  const mutations = [
+    (population) => {
+      const records = population.post2020IncomingMentionInventory.records;
+      const other = records.find((record) => record.authorHandle !== records[0].authorHandle);
+      [records[0].authorHandle, other.authorHandle] = [other.authorHandle, records[0].authorHandle];
+    },
+    (population) => {
+      const records = population.post2020IncomingMentionInventory.records;
+      const other = records.find((record) => record.publishedAt !== records[0].publishedAt);
+      [records[0].publishedAt, other.publishedAt] = [other.publishedAt, records[0].publishedAt];
+    },
+    (population) => {
+      const records = population.post2020IncomingMentionInventory.records;
+      const direct = records.filter((record) => record.mentionHandles.some((handle) => handle.toLowerCase() === "@nycartc"));
+      [direct[0].mentionHandles, direct[1].mentionHandles] = [direct[1].mentionHandles, direct[0].mentionHandles];
+    },
+    (population) => {
+      population.post2020IncomingMentionInventory.records[0].classificationInputDigest = "b".repeat(64);
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const population = loadNycacPopulation();
+    mutate(population);
+    const result = evaluateKnowledgeBank(suite, { nycacPopulation: population });
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION")?.score, 1);
+    assert.equal(result.accepted, false);
+  }
+});
+
 test("NYC Artist Coalition eval rejects mission-classification drift", () => {
   const population = loadNycacPopulation();
   population.missionSignalClassification.rules[0].pattern = "anything";

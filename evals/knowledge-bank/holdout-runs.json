@@ -226,6 +226,30 @@
         "Count-preserving author, source-date, displayed-destination, and classification-digest row mutations could bypass aggregate checks.",
         "A passing review must inspect a frozen repaired revision."
       ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-data-integrity-stale-lock-rejected-2026-07-15",
+      "completedAt": "2026-07-15T09:02:00Z",
+      "lens": "Independent archival data-integrity engineer, platform provenance specialist, and adversarial evaluation reviewer",
+      "weightedScore": 2.2,
+      "criterionScores": [1, 5, 1, 1, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The institutional related-claims approval lock was stale after the new NYC Artist Coalition claim entered the governed claim set.",
+        "The full knowledge-eval suite could not pass until the cumulative lock matched the independently recomputed claim-set digest."
+      ]
+    },
+    {
+      "judgeId": "nycac-social-holdout-hiring-editor-stale-lock-rejected-2026-07-15",
+      "completedAt": "2026-07-15T09:03:00Z",
+      "lens": "Independent skeptical public-interest hiring editor, civic-policy researcher, privacy and collective-credit reviewer",
+      "weightedScore": 2.2,
+      "criterionScores": [1, 5, 1, 1, 1, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The institutional related-claims approval lock did not match the current governed claim set.",
+        "The corrected lock changes the frozen revision and requires two fresh final holdouts."
+      ]
     }
   ]
 }
