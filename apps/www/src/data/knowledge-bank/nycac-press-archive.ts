@@ -1,4 +1,6 @@
-const reviewedAt = "2026-07-13";
+import { nycacPressReadings } from "./nycac-press-readings.ts";
+
+const reviewedAt = "2026-07-14";
 const inquiryId = "INQ-NYCAC-CAMPAIGN-PRESS-ARCHIVE";
 const claimId = "CLM-NYCAC-CAMPAIGN-PRESS-ARCHIVE";
 
@@ -142,6 +144,24 @@ export const campaignPressInventory: CampaignPressIndex[] = [
   }
 ];
 
+const readingBySourceId = new Map(
+  nycacPressReadings.map((reading) => [reading.sourceId, reading])
+);
+
+const campaignByEntryId = new Map(
+  campaignPressInventory.flatMap((campaign) =>
+    campaign.entries.map((entry) => [entry.id, campaign] as const)
+  )
+);
+
+function articleReadingObservationId(sourceId: string) {
+  return `OBS-NYCAC-PRESS-READING-${sourceId.replace(/^SRC-NYCAC-/, "")}`;
+}
+
+function articleAttributionObservationId(sourceId: string, index: number) {
+  return `OBS-NYCAC-PRESS-ATTRIBUTION-${sourceId.replace(/^SRC-NYCAC-/, "")}-${index + 1}`;
+}
+
 const indexSources = campaignPressInventory
   .filter((campaign) => !campaign.existingIndexSource)
   .map((campaign) => ({
@@ -173,32 +193,33 @@ const articleSources = campaignPressInventory
   .flatMap((campaign) => campaign.entries.map((entry) => ({ campaign, entry })))
   .filter(({ entry }) => !entry.existingSource)
   .filter(({ entry }, index, entries) => entries.findIndex((candidate) => candidate.entry.sourceId === entry.sourceId) === index)
-  .map(({ campaign, entry }) => ({
-    id: entry.sourceId,
-    title: entry.title,
-    organization: entry.publisher,
-    kind: "published-article",
-    visibility: "public",
-    preservationStatus: entry.preservationStatus,
-    ...(entry.publishedAt ? { publishedAt: entry.publishedAt } : {}),
-    accessedAt: reviewedAt,
-    canonicalUrl: entry.canonicalUrl,
-    ...(entry.archiveUrl ? { archiveUrl: entry.archiveUrl } : {}),
-    preferredPublicUrl: entry.preservationStatus === "archived" ? "archive" : "canonical",
-    publicCitation: `${entry.publisher}, '${entry.title}'${entry.publishedAt ? `, ${entry.publishedAt}` : ""}.`,
-    publicNote: `Listed in the ${campaign.name} Press section. Retained as a source lead until proposition-level close reading connects it to a bounded claim.`,
-    supportsGenerally: [
-      "the article's publication metadata and issue context represented by its title"
-    ],
-    doesNotEstablish: [
-      "Jamie's individual role",
-      "campaign-site authorship",
-      "sole causation of a policy or institutional outcome",
-      "the accuracy of every reported proposition without proposition-level close reading"
-    ]
-  }));
+  .map(({ campaign, entry }) => {
+    const reading = readingBySourceId.get(entry.sourceId);
+    if (!reading) throw new Error(`Missing close reading for ${entry.sourceId}`);
 
-const observations = campaignPressInventory.flatMap((campaign) =>
+    return {
+      id: entry.sourceId,
+      title: entry.title,
+      organization: entry.publisher,
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: entry.preservationStatus,
+      ...(entry.publishedAt ? { publishedAt: entry.publishedAt } : {}),
+      accessedAt: reviewedAt,
+      canonicalUrl: entry.canonicalUrl,
+      ...(entry.archiveUrl ? { archiveUrl: entry.archiveUrl } : {}),
+      preferredPublicUrl: entry.preservationStatus === "archived" ? "archive" : "canonical",
+      publicCitation: `${entry.publisher}, '${entry.title}'${entry.publishedAt ? `, ${entry.publishedAt}` : ""}.`,
+      publicNote: `Listed in the ${campaign.name} Press section and reviewed from a ${reading.recoveryMode === "wayback-body" ? "Wayback capture" : "publisher page"}. The bank retains a bounded paraphrase and content fingerprint, not copyrighted article text.`,
+      supportsGenerally: [
+        ...reading.supportsGenerally,
+        ...reading.directAttributions
+      ],
+      doesNotEstablish: reading.doesNotEstablish
+    };
+  });
+
+const placementObservations = campaignPressInventory.flatMap((campaign) =>
   campaign.entries.map((entry, index) => ({
     id: `OBS-NYCAC-PRESS-${entry.id}`,
     intakeId: `INTAKE-NYCAC-PRESS-INDEX-${campaign.id}`,
@@ -217,31 +238,95 @@ const observations = campaignPressInventory.flatMap((campaign) =>
   }))
 );
 
+const articleReadingObservations = nycacPressReadings.map((reading) => {
+  const campaign = campaignByEntryId.get(reading.campaignEntryId);
+  if (!campaign) throw new Error(`Missing campaign for ${reading.campaignEntryId}`);
+
+  return {
+    id: articleReadingObservationId(reading.sourceId),
+    intakeId: `INTAKE-NYCAC-PRESS-INDEX-${campaign.id}`,
+    sourceId: reading.sourceId,
+    project: campaign.project,
+    kind: "source-fact",
+    text: reading.summary,
+    locator: `${reading.locator} Review fingerprint ${reading.contentSha256.slice(0, 12)}; ${reading.reviewedCharacterCount} recovered characters inspected.`,
+    status: "verified",
+    publicSafe: true,
+    claimIds: [],
+    researchInquiryIds: [inquiryId],
+    limitations: reading.doesNotEstablish
+  };
+});
+
+const articleAttributionObservations = nycacPressReadings.flatMap((reading) => {
+  const campaign = campaignByEntryId.get(reading.campaignEntryId);
+  if (!campaign) throw new Error(`Missing campaign for ${reading.campaignEntryId}`);
+
+  return reading.directAttributions.map((attribution, index) => ({
+    id: articleAttributionObservationId(reading.sourceId, index),
+    intakeId: `INTAKE-NYCAC-PRESS-INDEX-${campaign.id}`,
+    sourceId: reading.sourceId,
+    project: campaign.project,
+    kind: "source-fact",
+    text: attribution,
+    locator: reading.locator,
+    status: "verified",
+    publicSafe: true,
+    claimIds: [],
+    researchInquiryIds: [inquiryId],
+    limitations: reading.doesNotEstablish
+  }));
+});
+
+const observations = [
+  ...placementObservations,
+  ...articleReadingObservations,
+  ...articleAttributionObservations
+];
+
 const uniqueArticleSourceIds = [
   ...new Set(campaignPressInventory.flatMap((campaign) => campaign.entries.map((entry) => entry.sourceId)))
 ];
 const indexSourceIds = campaignPressInventory.map((campaign) => campaign.indexSourceId);
 
 export const nycacPressArchive = {
-  intakeItems: campaignPressInventory.map((campaign) => ({
-    id: `INTAKE-NYCAC-PRESS-INDEX-${campaign.id}`,
-    kind: "public-url",
-    title: `${campaign.name} campaign press index`,
-    submittedAt: reviewedAt,
-    submittedBy: "Jamie Burkart and Codex public-source review",
-    projectIds: campaign.projectIds,
-    reason: `Preserve every article appearance in the ${campaign.name} Press section as a dispositioned source lead without treating press selection as proof of article contents or individual credit.`,
-    sourceUrl: campaign.indexUrl,
-    visibility: "public-safe",
-    disposition: "integrated",
-    sourceIds: [campaign.indexSourceId],
-    observationIds: campaign.entries.map((entry) => `OBS-NYCAC-PRESS-${entry.id}`),
-    researchInquiryIds: [inquiryId],
-    boundaries: [
-      "Campaign curation establishes that an article was selected for the press section; article-level claims require separate close reading.",
-      "Press coverage does not by itself establish Jamie's individual role, website authorship, or causal responsibility for collective outcomes."
-    ]
-  })),
+  intakeItems: campaignPressInventory.map((campaign) => {
+    const assignedReadings = nycacPressReadings.filter(
+      (reading) => campaignByEntryId.get(reading.campaignEntryId)?.id === campaign.id
+    );
+
+    return {
+      id: `INTAKE-NYCAC-PRESS-INDEX-${campaign.id}`,
+      kind: "public-url",
+      title: `${campaign.name} campaign press index`,
+      submittedAt: reviewedAt,
+      submittedBy: "Jamie Burkart and Codex public-source review",
+      projectIds: campaign.projectIds,
+      reason: `Preserve every article appearance in the ${campaign.name} Press section, recover the linked reporting where possible, and retain bounded article-level readings without treating press selection as proof of individual credit.`,
+      sourceUrl: campaign.indexUrl,
+      visibility: "public-safe",
+      disposition: "integrated",
+      sourceIds: [
+        campaign.indexSourceId,
+        ...new Set(campaign.entries.map((entry) => entry.sourceId))
+      ],
+      observationIds: [
+        ...campaign.entries.map((entry) => `OBS-NYCAC-PRESS-${entry.id}`),
+        ...assignedReadings.flatMap((reading) => [
+          articleReadingObservationId(reading.sourceId),
+          ...reading.directAttributions.map((_, index) =>
+            articleAttributionObservationId(reading.sourceId, index)
+          )
+        ])
+      ],
+      researchInquiryIds: [inquiryId],
+      boundaries: [
+        "Campaign curation establishes that an article was selected for the press section; the separate reading record establishes only the bounded propositions recovered from that article.",
+        "Press coverage does not by itself establish Jamie's individual role, website authorship, or causal responsibility for collective outcomes.",
+        "A mature source record can remain knowledge-bank depth without becoming public-site copy."
+      ]
+    };
+  }),
   observations,
   sources: [...indexSources, ...articleSources],
   claims: [
@@ -286,12 +371,15 @@ export const nycacPressArchive = {
     {
       id: inquiryId,
       project: "nyc-artist-coalition",
-      question: "What press sources were selected by the four campaign sites, which links remain available or archived, and which articles warrant proposition-level close reading for future claims?",
+      question: "What press sources were selected by the four campaign sites, what does each recovered article safely support, and which propositions should remain contextual rather than becoming portfolio claims?",
       methods: [
         "Parsed the Press section of the three live campaign sites and the supplied December 1, 2021 Fair Rent NYC Wayback capture.",
         "Preserved campaign, order, publisher label, article title, canonical URL, and available Wayback URL for every listed appearance.",
         "Checked the 45 linked URLs for current response or redirect behavior and queried Wayback availability where access was blocked or stale.",
-        "Reused existing canonical source IDs for previously ingested Gothamist, NPR, and Bedford + Bowery articles instead of duplicating records."
+        "Recovered publisher or Wayback page text for each distinct article, rejected a misleading CityLab landing-page redirect in favor of the archived article, and retained a SHA-256 fingerprint of the reviewed text.",
+        "Close-read each recovered page into a bounded paraphrase, article-specific locator, supported propositions, direct attributions, and explicit non-claims.",
+        "Reused existing canonical source IDs for previously ingested Gothamist, NPR, and Bedford + Bowery articles instead of duplicating records.",
+        "Kept copyrighted article bodies outside the public repository."
       ],
       runAt: reviewedAt,
       resultStatus: "partially-recovered",
@@ -299,16 +387,21 @@ export const nycacPressArchive = {
         "Let NYC Dance lists 21 article appearances; Talks Not Raids lists 7; Save NYC Spaces lists 8; and the supplied Fair Rent NYC capture lists 9.",
         "The 45 appearances resolve to 44 distinct articles because the September 20, 2017 NPR article appears in both Let NYC Dance and Save NYC Spaces.",
         "Forty-one distinct article sources were newly normalized and three previously canonical article sources were reused.",
+        "Thirty-two readings used publisher pages and twelve used Wayback captures; every distinct article retains a Wayback route.",
+        "Forty-three records contain recovered article or program-page text. The Crain's record is explicitly limited to its archived headline and deck because the article body remained behind a continuation prompt.",
+        "Three reviewed sources explicitly name Jamie: Gothamist reports his fire-code study groups and repeal advocacy; Bedford + Bowery identifies him among coalition town-hall speakers; and NPR identifies him as a founding member of the organization it calls 'NYC Arts Coalition.'",
         "Dead, redirected, paywalled, or bot-blocked links retain an available archive path when one was recovered."
       ],
       limitations: [
         "A blocked automated response does not prove that a page is unavailable to a person using a browser.",
         "Wayback availability confirms a capture path, not that every interactive asset or full article body renders perfectly.",
-        "Most newly captured article records remain metadata-level source leads until close reading decomposes them into proposition-level observations.",
-        "A campaign press section is evidence of campaign curation, not independent proof of Jamie's authorship or the truth of every linked report."
+        "Some recovery payloads were capped at 12,000 characters; fingerprints and locators describe the reviewed payload, not an assertion that every publisher asset was preserved.",
+        "The Crain's record supports only its recovered headline, deck, byline, and date until a full body is lawfully recovered.",
+        "Article observations preserve what a source reports or argues; they do not independently prove every reported proposition.",
+        "A campaign press section is evidence of campaign curation, not independent proof of Jamie's website authorship or causal responsibility for the reported outcome."
       ],
       sourceIds: [...indexSourceIds, ...uniqueArticleSourceIds],
-      publicSummary: "The four campaign press sections preserve 45 article appearances representing 44 distinct sources; the source records remain available for selective future close reading and claim maturation."
+      publicSummary: "Four campaign press sections preserve 45 appearances representing 44 distinct articles. Every article has a dispositioned, source-specific reading record; 43 include recovered page text and one is explicitly limited to its headline and deck."
     }
   ]
 };

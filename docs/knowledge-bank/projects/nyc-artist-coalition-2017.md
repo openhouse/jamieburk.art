@@ -58,15 +58,19 @@ Raids, Save NYC Spaces, and Fair Rent NYC. One NPR article appears in two
 campaign indexes and retains both memberships while resolving to one canonical
 source record.
 
-These entries are normalized as bounded source leads rather than treated as
-proof of their full contents. Each appearance retains its campaign position,
-link-availability context, limits, and route into proposition-level close
-reading. The aggregate claim remains held off public pages so the portfolio can
-draw selectively from the deeper record without becoming a bibliography.
+Every distinct article now has a source-specific reading record with recovery
+route, content fingerprint, bounded paraphrase, supported propositions, direct
+attributions, and non-claims. Forty-three include recovered article or
+program-page text; the Crain's record is explicitly limited to its headline and
+deck. These readings establish what a source reports or argues, not the
+independent truth of every proposition. The aggregate claim remains held off
+public pages so the portfolio can draw selectively from the deeper record
+without becoming a bibliography.
 
 See
-[nycac-campaign-press-archive.md](nycac-campaign-press-archive.md)
-for the complete ledger and maturation rules.
+[nycac-campaign-press-archive.md](nycac-campaign-press-archive.md) and
+[nycac-campaign-press-readings.md](nycac-campaign-press-readings.md) for the
+complete indexes, reading ledger, and maturation rules.
 
 ## Defensible claims
 
@@ -178,5 +182,9 @@ improving the current page enough to justify the added reader burden:
 - the complete coalition formation and division-of-labor chronology;
 - direct legislative drafting, negotiation, and lobbying contributions;
 - town-hall production responsibilities and resulting agency commitments;
-- proposition-level close reading of the 44 distinct campaign press articles,
-  with article-specific claims promoted only when the text supports them.
+- lawful recovery of the full Crain's article body, which remains limited to
+  its archived headline and deck;
+- triangulation of promising article-level observations before promoting any
+  new Jamie-specific, coalition, policy, or causal claim;
+- collaborator review of article attributions that may clarify division of
+  labor without transferring collective credit to one person.

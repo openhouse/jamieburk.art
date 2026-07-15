@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import test from "node:test";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
+import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
@@ -156,14 +157,66 @@ test("campaign press archive completeness is a hard evaluation gate", () => {
   }
 });
 
-test("campaign press articles remain bounded source leads until close reading", () => {
+test("campaign press articles retain one bounded close reading per source", () => {
   const press = suite.pilot.pressArchive;
   const sourceIds = new Set(campaignPressInventory.flatMap((campaign) => campaign.entries.map((entry) => entry.sourceId)));
   const sources = [...sourceIds].map((id) => knowledgeBank.sources.find((source) => source.id === id));
   const claim = knowledgeBank.claims.find((item) => item.id === press.claimId);
 
+  assert.equal(nycacPressReadings.length, press.expectedReadingCount);
+  assert.equal(new Set(nycacPressReadings.map((reading) => reading.sourceId)).size, press.expectedUniqueArticleCount);
+  assert.ok(nycacPressReadings.every((reading) =>
+    /^[a-f0-9]{64}$/.test(reading.contentSha256) &&
+    reading.summary.length >= 40 &&
+    reading.locator.length >= 20 &&
+    reading.supportsGenerally.length &&
+    reading.doesNotEstablish.length >= 2
+  ));
   assert.ok(sources.every((source) => source?.doesNotEstablish.length));
   assert.ok(claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0));
+});
+
+test("campaign press recovery rejects a generic redirect as an article body", () => {
+  const reading = nycacPressReadings.find((item) => item.sourceId === suite.pilot.pressArchive.redirectTrapSourceId);
+  assert.ok(reading);
+  const original = { recoveryMode: reading.recoveryMode, retrievalUrl: reading.retrievalUrl };
+
+  try {
+    reading.recoveryMode = "publisher-body";
+    reading.retrievalUrl = "https://www.bloomberg.com/citylab";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PRESS-ARCHIVE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    reading.recoveryMode = original.recoveryMode;
+    reading.retrievalUrl = original.retrievalUrl;
+  }
+});
+
+test("campaign press recovery preserves the one partial article boundary", () => {
+  const press = suite.pilot.pressArchive;
+  const partial = nycacPressReadings.filter((reading) => reading.reviewExtent === "headline-and-deck");
+
+  assert.equal(partial.length, press.expectedPartialReadingCount);
+  assert.equal(partial[0]?.sourceId, press.partialSourceId);
+  assert.equal(
+    nycacPressReadings.filter((reading) => reading.reviewExtent === "recovered-body").length,
+    press.expectedRecoveredBodyCount
+  );
+});
+
+test("campaign press direct attributions are separately inspectable observations", () => {
+  const press = suite.pilot.pressArchive;
+  const attributionCount = nycacPressReadings.reduce(
+    (total, reading) => total + reading.directAttributions.length,
+    0
+  );
+  const attributionObservations = nycacPressArchive.observations.filter((observation) =>
+    observation.id.startsWith("OBS-NYCAC-PRESS-ATTRIBUTION-")
+  );
+
+  assert.equal(attributionCount, press.expectedDirectAttributionCount);
+  assert.equal(attributionObservations.length, press.expectedDirectAttributionCount);
 });
 
 test("photo feedback is instantiated as a protected research chain", () => {

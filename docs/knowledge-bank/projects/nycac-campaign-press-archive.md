@@ -1,9 +1,13 @@
 # NYC Artist Coalition campaign press archive
 
-**Reviewed:** 2026-07-13
+**Reviewed:** 2026-07-14
 
-**Machine-readable source:**
-`apps/www/src/data/knowledge-bank/nycac-press-archive.ts`
+**Machine-readable sources:**
+`apps/www/src/data/knowledge-bank/nycac-press-archive.ts` and
+`apps/www/src/data/knowledge-bank/nycac-press-readings.ts`
+
+**Reading ledger:**
+`docs/knowledge-bank/projects/nycac-campaign-press-readings.md`
 
 ## Result
 
@@ -23,7 +27,10 @@ campaign appearances.
 
 This pass added 41 distinct article sources, reused three articles already in
 the bank, and added three new campaign-index sources. The existing Save NYC
-Spaces source also serves as that campaign's index record.
+Spaces source also serves as that campaign's index record. A second pass then
+dispositioned all 44 distinct articles with source-specific readings,
+provenance, content fingerprints, supported propositions, direct
+attributions, and explicit non-claims.
 
 ## Let NYC Dance
 
@@ -84,21 +91,31 @@ This list comes from the supplied [December 1, 2021 Wayback capture](https://web
 8. Sunnyside Post, [Van Bramer Calls for Commercial Rent Control Bill, Aims to Protect Small Businesses From Rent Hikes](https://qns.com/2019/12/van-bramer-calls-for-commercial-rent-control-bill-aims-to-protect-small-businesses-from-rent-hikes/)
 9. The Jewish Voice, [Bklyn Councilman Aims to Save Mom & Pop Retail Outlets](https://thejewishvoice.com/2019/11/11/bklyn-councilman-aims-to-save-mom-pop-retail-outlets/)
 
-## Availability and maturation
+## Recovery and maturation
 
-The machine-readable records retain an archive URL where the link audit
-recovered one. `archived` means the archive is the preferred public path;
-`live-and-archived` means both a current publisher URL and an archive path were
-recovered; `live` means the publisher URL responded but no archive path was
-recorded in this pass.
+All 44 distinct article identities have a recovered Wayback route. The reading
+pass used 32 publisher pages and 12 Wayback captures. The CityLab canonical
+route had become a generic Bloomberg landing page, so the archived 2017 article
+was used instead. Forty-three records include recovered article or program-page
+text. The Crain's record is explicitly limited to its archived headline and
+deck because the body remained behind a continuation prompt.
 
-These records are deliberately **not** forty-four fully matured claims. Each
-article begins as a bounded source lead. A future pass can close-read a source,
-split its useful propositions into atomic observations, triangulate them, and
-promote only the resulting defensible claim. Campaign selection alone does not
-prove article accuracy, Jamie's role, website authorship, or policy causation.
+The public repository does not reproduce copyrighted article bodies. It keeps
+the publisher or archive route, reviewed-content fingerprint, article-specific
+locator, bounded paraphrase, supported propositions, direct attributions, and
+limitations. Some recovery payloads were capped at 12,000 characters, so the
+fingerprint describes the reviewed payload rather than asserting that every
+publisher asset was preserved.
+
+These records are deliberately **not** forty-four automatically promoted
+claims. A reading establishes what a source reports or argues. Later research
+must still triangulate a proposition, distinguish direct attribution from
+context, and preserve collective and institutional credit before promoting a
+claim. Campaign selection alone does not prove article accuracy, Jamie's role,
+website authorship, or policy causation.
 
 The resulting aggregate claim remains held from the public site. The current
 portfolio already presents a selective, role-focused NYC Artist Coalition
 account; publishing the entire press bibliography would increase reader burden
-without improving the present hiring argument.
+without improving the present hiring argument. The deeper bank is available
+for future application-specific composition.

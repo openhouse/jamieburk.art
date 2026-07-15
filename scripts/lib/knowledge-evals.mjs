@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
+import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
@@ -293,8 +294,27 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const pressEntries = campaignPressInventory.flatMap((campaign) => campaign.entries);
   const uniquePressArticleSourceIds = [...new Set(pressEntries.map((entry) => entry.sourceId))];
   const pressArticleSources = uniquePressArticleSourceIds.map((id) => sourceById.get(id));
-  const pressObservations = pressIntakes.flatMap((item) =>
-    item?.observationIds.map((id) => observationById.get(id)) ?? []
+  const pressObservations = nycacPressArchive.observations;
+  const placementObservationIds = new Set(
+    pressEntries.map((entry) => `OBS-NYCAC-PRESS-${entry.id}`)
+  );
+  const pressPlacementObservations = pressObservations.filter((observation) =>
+    placementObservationIds.has(observation.id)
+  );
+  const pressReadingObservations = pressObservations.filter((observation) =>
+    observation.id.startsWith("OBS-NYCAC-PRESS-READING-")
+  );
+  const pressAttributionObservations = pressObservations.filter((observation) =>
+    observation.id.startsWith("OBS-NYCAC-PRESS-ATTRIBUTION-")
+  );
+  const pressObservationIds = new Set(pressObservations.map((observation) => observation.id));
+  const referencedPressObservationIds = new Set(
+    pressIntakes.flatMap((intake) => intake?.observationIds ?? [])
+  );
+  const pressReadingSourceIds = new Set(nycacPressReadings.map((reading) => reading.sourceId));
+  const partialReadings = nycacPressReadings.filter((reading) => reading.reviewExtent === "headline-and-deck");
+  const cityLabReading = nycacPressReadings.find(
+    (reading) => reading.sourceId === pressArchive.redirectTrapSourceId
   );
   const pressCounts = Object.fromEntries(
     campaignPressInventory.map((campaign) => [campaign.id, campaign.entries.length])
@@ -308,26 +328,60 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       uniquePressArticleSourceIds.length === pressArchive.expectedUniqueArticleCount &&
       nycacPressArchive.sources.length === pressArchive.expectedNewSourceCount &&
       nycacPressArchive.sources.filter((source) => source.kind === "published-article").length === pressArchive.expectedNewArticleSourceCount &&
+      nycacPressReadings.length === pressArchive.expectedReadingCount &&
+      pressReadingSourceIds.size === pressArchive.expectedUniqueArticleCount &&
+      uniquePressArticleSourceIds.every((sourceId) => pressReadingSourceIds.has(sourceId)) &&
+      nycacPressReadings.filter((reading) => reading.reviewExtent === "recovered-body").length === pressArchive.expectedRecoveredBodyCount &&
+      partialReadings.length === pressArchive.expectedPartialReadingCount &&
+      partialReadings[0]?.sourceId === pressArchive.partialSourceId &&
+      nycacPressReadings.filter((reading) => reading.recoveryMode === "publisher-body").length === pressArchive.expectedPublisherReadingCount &&
+      nycacPressReadings.filter((reading) => reading.recoveryMode === "wayback-body").length === pressArchive.expectedWaybackReadingCount &&
+      nycacPressReadings.filter((reading) => reading.mentionsJamie).length === pressArchive.expectedJamieNamedCount &&
+      nycacPressReadings.filter((reading) => reading.mentionsCoalition).length === pressArchive.expectedCoalitionNamedCount &&
+      nycacPressReadings.reduce((total, reading) => total + reading.directAttributions.length, 0) === pressArchive.expectedDirectAttributionCount &&
+      nycacPressReadings.every((reading) =>
+        /^[a-f0-9]{64}$/.test(reading.contentSha256) &&
+        reading.reviewedCharacterCount >= 2000 &&
+        reading.summary.length >= 40 &&
+        reading.locator.length >= 20 &&
+        reading.supportsGenerally.length >= 1 &&
+        reading.doesNotEstablish.length >= 2 &&
+        reading.reviewedAt === "2026-07-14"
+      ) &&
+      cityLabReading?.recoveryMode === "wayback-body" &&
+      cityLabReading.retrievalUrl.includes("web.archive.org/web/") &&
+      !cityLabReading.retrievalUrl.endsWith("/citylab") &&
       Object.entries(pressArchive.campaignEntryCounts).every(
         ([campaignId, expected]) => pressCounts[campaignId] === expected
       ) &&
       duplicateAppearanceCount === 2 &&
       pressIntakes.length === pressArchive.expectedIndexCount &&
       pressIntakes.every(
-        (intake) => intake?.disposition === "integrated" && intake.sourceIds.length === 1 && intake.boundaries.length >= 2
+        (intake) => intake?.disposition === "integrated" && intake.sourceIds.length > 1 && intake.boundaries.length >= 3 && intake.observationIds.length
       ) &&
+      referencedPressObservationIds.size === pressObservationIds.size &&
+      [...pressObservationIds].every((observationId) => referencedPressObservationIds.has(observationId)) &&
       pressIndexSources.every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
       pressArticleSources.every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
-      pressObservations.length === pressArchive.expectedAppearanceCount &&
-      pressObservations.every(
+      pressPlacementObservations.length === pressArchive.expectedAppearanceCount &&
+      pressPlacementObservations.every(
         (observation) => observation?.locator && observation.limitations.length && observation.claimIds.includes(pressArchive.claimId) && observation.researchInquiryIds.includes(pressArchive.inquiryId)
+      ) &&
+      pressReadingObservations.length === pressArchive.expectedReadingCount &&
+      pressReadingObservations.every(
+        (observation) => observation?.sourceId && pressReadingSourceIds.has(observation.sourceId) && observation.locator && observation.limitations.length >= 2 && observation.researchInquiryIds.includes(pressArchive.inquiryId)
+      ) &&
+      pressAttributionObservations.length === pressArchive.expectedDirectAttributionCount &&
+      pressAttributionObservations.every(
+        (observation) => observation?.sourceId && pressReadingSourceIds.has(observation.sourceId) && observation.locator && observation.limitations.length >= 2 && observation.researchInquiryIds.includes(pressArchive.inquiryId)
       ) &&
       pressClaim?.projections.every(
         (projection) => projection.status === "hold" && projection.surfaces.length === 0
       ) &&
       pressClaim.evidence.length === pressArchive.expectedIndexCount &&
       pressInquiry?.sourceIds.length === pressArchive.expectedIndexCount + pressArchive.expectedUniqueArticleCount &&
-      pressInquiry.limitations.length >= 4
+      pressInquiry.resultStatus === "partially-recovered" &&
+      pressInquiry.limitations.length >= 6
   );
   const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations];
   const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim];
@@ -529,7 +583,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         secondExpansionIntakes.length === secondExpansion.expectedSourceCount &&
         secondExpansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
         institutionalCapacityComplete &&
-        pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 2 && item.sourceIds.length === 1 && item.observationIds.length)
+        pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 3 && item.sourceIds.length > 1 && item.observationIds.length)
       ),
       evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, one institutional-capacity analysis, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
     },
@@ -622,8 +676,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       criterionId: "KB-EVAL-PRESS-ARCHIVE",
       score: score(pressArchiveComplete),
       evidence: [pressArchiveComplete
-        ? `${pressEntries.length} appearances across ${campaignPressInventory.length} campaign indexes resolve to ${uniquePressArticleSourceIds.length} distinct bounded article records; duplicate campaign selection is preserved`
-        : "Campaign press inventory is missing an appearance, source, boundary, disposition, or exact count"]
+        ? `${pressEntries.length} appearances across ${campaignPressInventory.length} campaign indexes resolve to ${uniquePressArticleSourceIds.length} distinct source-specific readings, including ${pressReadingObservations.length} bounded summaries and ${pressAttributionObservations.length} direct-attribution observations; duplicate campaign selection is preserved`
+        : "Campaign press inventory is missing an appearance, source, close reading, attribution, boundary, disposition, redirect defense, or exact count"]
     }
   ];
 

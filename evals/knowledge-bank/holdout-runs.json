@@ -18,6 +18,17 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-press-readings",
+      "completedAt": "2026-07-14T20:45:00-04:00",
+      "lens": "Protocol reset because the prior holdouts predated article-level maturation of the campaign press corpus",
+      "weightedScore": 1,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the 44 reading records, partial-source boundary, redirect defense, direct-attribution observations, and decision to keep the corpus off the public site."
+      ]
     }
   ]
 }

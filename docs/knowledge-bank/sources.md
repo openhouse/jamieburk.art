@@ -42,9 +42,11 @@ Approved public artifact examples for this launch pass include:
 The complete public-safe inventory of NYC Artist Coalition campaign press
 indexes lives in
 [projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md).
-Its article records are source-discovery leads until close reading establishes
-specific propositions; campaign selection alone does not establish article
-content, Jamie's individual role, or policy causation.
+Its 44 source-specific dispositions and bounded paraphrases live in
+[projects/nycac-campaign-press-readings.md](projects/nycac-campaign-press-readings.md).
+The readings preserve what an article reports or argues; campaign selection
+alone does not establish article accuracy, Jamie's individual role, or policy
+causation.
 
 ### Public-Safe Archive Summary
 
