@@ -70,6 +70,13 @@ import {
   nycacFacebookEventResearchInquiries,
   nycacFacebookEventSources
 } from "./nycac-facebook-events.ts";
+import {
+  personalWowListFacebookEventClaims,
+  personalWowListFacebookEventIntakeItems,
+  personalWowListFacebookEventObservations,
+  personalWowListFacebookEventResearchInquiries,
+  personalWowListFacebookEventSources
+} from "./personal-wowlist-facebook-events-2026-07.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -83,6 +90,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusIntakeItems,
     ...urbanhermitXCorpusIntakeItems,
     ...nycacFacebookEventIntakeItems,
+    ...personalWowListFacebookEventIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -377,6 +385,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusSources,
     ...urbanhermitXCorpusSources,
     ...nycacFacebookEventSources,
+    ...personalWowListFacebookEventSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1402,6 +1411,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusObservations,
     ...urbanhermitXCorpusObservations,
     ...nycacFacebookEventObservations,
+    ...personalWowListFacebookEventObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1995,6 +2005,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusClaims,
     ...urbanhermitXCorpusClaims,
     ...nycacFacebookEventClaims,
+    ...personalWowListFacebookEventClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -3056,6 +3067,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusResearchInquiries,
     ...urbanhermitXCorpusResearchInquiries,
     ...nycacFacebookEventResearchInquiries,
+    ...personalWowListFacebookEventResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -3403,19 +3415,48 @@ const knowledgeBankInput = {
       "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
       "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
       "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
-      "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01"
+      "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01",
+      "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+      "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
+    ],
+    occurrences: [
+      {
+        id: "public-support-surface",
+        claimId: "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+          "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+          "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+          "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+          "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+          "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01"
+        ]
+      },
+      {
+        id: "facebook-event-route",
+        claimId: "CLM-FACEBOOK-WOWLIST-IN-PRACTICE",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+          "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
+        ]
+      }
+    ]
+  }, {
+    id: "196-sunday-dinner",
+    surface: "/work/196-sunday-dinner",
+    sourceOrder: [
+      "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+      "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
     ],
     occurrences: [{
-      id: "public-support-surface",
-      claimId: "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE",
+      id: "facebook-milestones",
+      claimId: "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES",
       projection: "case-study",
       sourceIds: [
-        "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
-        "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
-        "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
-        "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
-        "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
-        "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01"
+        "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+        "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
       ]
     }]
   }]

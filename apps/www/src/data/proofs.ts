@@ -369,9 +369,10 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate historical summary, complete recovered public-account census, and a public 2016 Sunday Dinner event linking directly into WOW List.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Use approximate adoption language, do not describe city activity as official chapters, and treat the Sunday Dinner link as one concrete route rather than a complete adoption or traffic census.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -387,7 +388,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -405,9 +406,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie and Julie Fredenberg co-hosted an open community dinner every Sunday. Jamie made the longer-running cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Greene Hill Food Co-op's 2017 community profile, approved resume language, and public-safe aggregate project history.",
+      "Greene Hill Food Co-op's 2017 community profile, approved resume language, public-safe aggregate project history, and public Facebook event pages preserving 100th and 200th Sunday Dinner milestones.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only, avoid turning community trust work into spectacle, and treat numbered Facebook event titles as contemporaneous milestones rather than an independent audit of the 300-plus aggregate.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
@@ -424,7 +425,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
