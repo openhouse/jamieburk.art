@@ -159,12 +159,14 @@ July 12-15, 2026:
   leads;
 - Jamie's firsthand account of transitioning KC Town Hall stewardship to a
   mission-aligned organization when his involvement concluded.
-- interactive media, sound, and public-memory practice across NTER CHNG,
-  including its America: Now and Here exhibition record, protected production
-  and interaction working records, a Max/MSP audio experiment, Matmos research,
-  and Claudette's Theatre On Wheels;
-- Commercial Rent Stabilization operating plans, shared minutes, and
-  privacy-preserving public-data proposals; and
+- interactive media, sound, and public-memory practice across a 2006 BAPLab
+  New Media Program credit, a held Time Is Long identity lead, NTER CHNG and its
+  America: Now and Here exhibition record, protected production and interaction
+  working records, a Max/MSP audio experiment, Matmos research, and Claudette's
+  Theatre On Wheels;
+- Commercial Rent Stabilization operating plans, shared minutes,
+  privacy-preserving public-data proposals, and a legislative-provenance
+  redline; and
 - AI evals completion, bounded source-backed sprint design, and a context-only
   cross-archive job-hunt map;
 - 196 Artists Residency selection, onboarding, space configuration, access,
@@ -214,6 +216,18 @@ the website and generated public registry. The personal-account pass is
 `integrated` into four governed reserve claims, but raw historical post text
 remains protected and no `/proofs`, `/urbanhermit`, or other public route is
 created.
+
+The July 15 iCloud reconciliation strengthens those same non-projecting
+threads. Two institutional program records now support Jamie's 2006 BAPLab New
+Media Program credit, while the Time Is Long description remains
+`research-only` because its source prints `Jamie Burkhart`. The CRS thread adds
+Jamie's discussion-only legislative-provenance redline as direct evidence of
+policy version traceability, not legal advice or adoption. The NYC Artist
+Coalition thread now connects DCLA listening, a coalition priority vote, the
+collective recommendation set, its preservation in the official CreateNYC
+appendix, and DCLA's final-plan recognition. That sequence establishes
+collective institutional value but does not assign Jamie's role or policy
+causality.
 
 The NYC Artist Coalition Facebook event thread is now `integrated` as
 `INTAKE-NYCAC-FACEBOOK-EVENT-POPULATION-2026-07-15`. It accounts for all 34

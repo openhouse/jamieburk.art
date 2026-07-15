@@ -91,6 +91,15 @@ It develops interactive-media, coalition-operations, public-data, evals, and
 service-design knowledge without committing local paths, correspondence,
 contacts, private strategy, or other underlying archive material.
 
+The [iCloud Teams archival reconciliation
+note](research/2026-07-15-icloud-teams-reconciliation.md) returns to those three
+collections as additional files materialize. It reconstructs NYC Artist
+Coalition's listening, priority-vote, recommendation, appendix, and official
+CreateNYC recognition sequence; adds Jamie's protected legislative-provenance
+redline as policy requirements-traceability evidence; and preserves a 2006
+BAPLab credit while holding an unresolved surname conflict. None of these
+reserve records creates a public knowledge-bank route.
+
 The [Google Drive Shared Drives archival-production
 note](research/2026-07-14-google-drive-shared-drives-archival-production.md)
 demonstrates account-wide triage, bounded close reading, revision-level

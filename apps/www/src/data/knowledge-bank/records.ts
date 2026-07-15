@@ -372,6 +372,70 @@ const knowledgeBankInput = {
       doesNotEstablish: ["the page's publication date", "Jamie authored the recommendations", "Jamie produced or hosted the town hall", "attendance or audience scale", "adoption of the recommendations by the city"]
     },
     {
+      id: "SRC-NYCA-DCLA-MEETING-RECORD-2017-02-03",
+      title: "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-02-03",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://nycartc.com/dcla-meeting/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting,' February 3, 2017.",
+      publicNote: "The coalition page records that DCLA asked meeting participants to contribute final recommendations, lists attendee-generated issues, and invites a follow-up general meeting. Its body prints January 27, 2016 for an event otherwise situated in January 2017; the date conflict is retained rather than silently corrected.",
+      supportsGenerally: ["DCLA request for final recommendations", "attendee-generated policy and support issues", "follow-up coalition meeting", "pathway from public meeting to recommendation development", "January 2017 context with an internal date typo"],
+      doesNotEstablish: ["Jamie's individual role", "an independently verified attendance count", "authorship of every listed recommendation", "DCLA adoption of the recommendations", "that the printed 2016 event year is correct"]
+    },
+    {
+      id: "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
+      title: "Vote on Recommendations for Dept. of Cultural Affairs Commissioner",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-02-07",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://nycartc.com/vote-recs/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'Vote on Recommendations for Dept. of Cultural Affairs Commissioner,' February 7, 2017.",
+      publicNote: "The coalition page publishes ranked member-vote results for recommendations intended for the DCLA Commissioner and CreateNYC. It preserves the public decision record but not the denominator, voting method, or individual voter identities.",
+      supportsGenerally: ["February 6, 2017 coalition priority vote", "ranked recommendation results", "Cabaret Law repeal as the top recorded priority", "MARCH, cultural liaison, legal support, affordability, safety, and data proposals", "CreateNYC recommendation workflow"],
+      doesNotEstablish: ["Jamie's individual role", "the number of voters", "the voting method", "authorship of each proposal", "DCLA or City adoption", "policy outcome causality"]
+    },
+    {
+      id: "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
+      title: "CreateNYC Appendix Section 5: NYC Artist Coalition DIY Community",
+      organization: "New York City Department of Cultural Affairs",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-07-19",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Department of Cultural Affairs, CreateNYC Appendix Section 5, NYC Artist Coalition DIY Community, July 2017.",
+      publicNote: "The official CreateNYC appendix preserves the coalition's recommendation letter to Commissioner Tom Finkelpearl and notes from the March 30 Market Hotel town hall. It is institutional evidence that the submission entered the cultural-plan record, not proof that every recommendation was adopted.",
+      supportsGenerally: ["official inclusion of the NYC Artist Coalition submission", "recommendations addressed to Commissioner Tom Finkelpearl", "March 30, 2017 Market Hotel town hall notes", "criminalization, support, and affordability framework", "Cabaret Law, MARCH, repairs, liaisons, permits, Loft Law, and city-space proposals"],
+      doesNotEstablish: ["Jamie's individual role", "individual authorship of the collective letter", "adoption of every recommendation", "causality for later legislation or agency action", "a complete town-hall participant record"]
+    },
+    {
+      id: "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+      title: "CreateNYC: A Cultural Plan for All New Yorkers",
+      organization: "New York City Department of Cultural Affairs",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-07-19",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://www.nyc.gov/assets/dcla/downloads/pdf/cultureplan/createnyc-finalplan.pdf",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Department of Cultural Affairs, CreateNYC: A Cultural Plan for All New Yorkers, July 19, 2017, pp. 145-146.",
+      publicNote: "The City's final cultural plan says wide artist participation helped the City understand artists' complex needs; says DCLA's January DIY-spaces meeting spurred NYC Artist Coalition's establishment; and credits the coalition with recommendations and thoughtful dialogue about preserving safe, sustainable artist-led spaces.",
+      supportsGenerally: ["CreateNYC public-engagement purpose", "DCLA recognition of NYC Artist Coalition's formation context", "coalition recommendations", "coalition dialogue on safe and sustainable artist-led spaces", "strategy for safe and open DIY spaces", "cross-agency and City Council partnership context"],
+      doesNotEstablish: ["Jamie's individual role", "that DCLA or Commissioner Finkelpearl personally needed Jamie", "individual authorship of coalition recommendations", "adoption of every coalition proposal", "sole coalition causality for any strategy, law, office, or budget"]
+    },
+    {
       id: "SRC-NYCA-SAFETY-RESOURCES-2017-02-09",
       title: "Venue Safety Resources",
       organization: "NYC Artist Coalition",
@@ -614,6 +678,52 @@ const knowledgeBankInput = {
       protectedLocatorId: "GDRIVE-NTER-CHNG-EXHIBIT-INTERACTION-2011"
     },
     {
+      id: "SRC-WAVE-FARM-BAPLAB-PROGRAM-2006-07-22",
+      title: "free103point9 at Bushwick Art Project's BAPLab 2006",
+      organization: "Wave Farm",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2006-07-22",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://wavefarm.org/wf/calendar/bnavcx",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Wave Farm, 'free103point9 at Bushwick Art Project's BAPLab 2006,' July 22-23, 2006.",
+      publicNote: "The institutional event record lists Jamie Burkart in BAPLab's New Media Program at 3rd Ward. It does not identify the title or form of Jamie's work.",
+      supportsGenerally: ["Jamie Burkart program credit", "BAPLab 2006 New Media Program", "July 22-23, 2006", "3rd Ward", "Bushwick Art Project context"],
+      doesNotEstablish: ["the title of Jamie's work", "the installation's form", "Jamie's sole authorship", "audience or reception", "a continuing role in BAPLab"]
+    },
+    {
+      id: "SRC-BAPLAB-ARCHIVED-NEW-MEDIA-PROGRAM-2006-07-22",
+      title: "BAPLab 2006 New Media Program",
+      organization: "Bushwick Art Project",
+      kind: "archived-web-capture",
+      visibility: "public",
+      preservationStatus: "archived",
+      publishedAt: "2006-07-22",
+      accessedAt: "2026-07-15",
+      archiveUrl: "https://web.archive.org/web/20130905013518/http://bushwickartproject.org/index.php?option=com_wrapper&Itemid=49",
+      preferredPublicUrl: "archive",
+      publicCitation: "Bushwick Art Project, archived BAPLab 2006 New Media Program, Internet Archive capture from September 5, 2013.",
+      publicNote: "The archived program independently lists Jamie Burkart among the New Media Program artists. The recovered wrapper incorrectly displays another artist's detail below the roster, so only the roster entry is used.",
+      supportsGenerally: ["Jamie Burkart program listing", "BAPLab 2006 New Media Program", "public artist roster"],
+      doesNotEstablish: ["the title or description of Jamie's work", "the unrelated artist detail displayed by the archived wrapper", "individual task scope", "audience or reception"]
+    },
+    {
+      id: "SRC-BAPLAB-TIME-IS-LONG-ARTICLE-2006",
+      title: "Bap: a new digital art community",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://www.academia.edu/8918163/Bap_a_new_digital_art_community",
+      preferredPublicUrl: "canonical",
+      publicCitation: "'Bap: a new digital art community,' undated article preserved through Academia.edu, accessed July 15, 2026.",
+      publicNote: "The article describes an analog video installation titled Time Is Long and credits it to 'Jamie Burkhart.' The surname mismatch remains visible; the source is not silently normalized to Jamie Burkart despite the matching BAPLab context.",
+      supportsGenerally: ["BAPLab context", "Time Is Long title", "analog video installation", "two-monitor, camera, recorder, tape, and delayed-self-image interaction", "credit printed as Jamie Burkhart"],
+      doesNotEstablish: ["that Jamie Burkhart is Jamie Burkart", "the exact exhibition date", "sole authorship", "audience scale", "technical performance over the full event"]
+    },
+    {
       id: "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
       title: "A Sorted Audio File",
       organization: "Monthly Music Hackathon NYC",
@@ -723,6 +833,22 @@ const knowledgeBankInput = {
       supportsGenerally: ["Jamie authored the handout", "School of Data sharing context", "privacy-preserving RPIE pilot", "three-part release design", "minimum useful fields", "explicit confidential-data exclusions", "public-interest use cases"],
       doesNotEstablish: ["agency adoption", "a completed data release", "new empirical findings", "access to confidential filings", "policy enactment"],
       protectedLocatorId: "LOC-CRS-FULLER-BASELINE-HANDOUT-2026"
+    },
+    {
+      id: "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-17",
+      title: "Commercial Rent Stabilization: Legislative Provenance Redline, 2019-2025",
+      organization: "NYC Artist Coalition",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-05-17",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected public-safe summary of Jamie Burkart's May 2026 Commercial Rent Stabilization legislative provenance redline.",
+      publicNote: "The tracked document begins with NYC Council Intro 93 and preserves source layers from Fair Rent NYC's 2022 recommendations, the Small Business Survival Act lineage, and Albany revisions leading to Senate Bill S8319. It explicitly labels itself unofficial, for discussion only, and not legal advice.",
+      supportsGenerally: ["Jamie prepared the provenance redline", "tracked legislative source layers", "NYC Council Intro 93 baseline", "Fair Rent NYC 2022 recommendation layer", "Small Business Survival Act lineage", "Albany S8319 revision layer", "explicit authorship and legal-use boundaries"],
+      doesNotEstablish: ["legal advice", "independent validation of every legal interpretation", "individual authorship of every source-layer change", "coalition or legislative-office adoption", "bill passage", "policy outcome causality"],
+      protectedLocatorId: "LOC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"
     },
     {
       id: "SRC-JOB-HUNT-CROSS-ARCHIVE-EVIDENCE-MAP-2026-07-03",
@@ -1350,6 +1476,10 @@ const knowledgeBankInput = {
         "SRC-NYCA-BEDFORD-BOWERY-OFFICE-NIGHTLIFE-2017-08-24",
         "SRC-NYCA-NIGHTLIFE-TOWN-HALL-2017-10-13",
         "SRC-NYCA-CREATENYC-RECOMMENDATIONS-2017",
+        "SRC-NYCA-DCLA-MEETING-RECORD-2017-02-03",
+        "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
+        "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
+        "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
         "SRC-NYCA-SAFETY-RESOURCES-2017-02-09",
         "SRC-NYCA-TALKS-NOT-RAIDS-MARCH-2019-02-12",
         "SRC-NYC-COUNCIL-INT-1652-2017",
@@ -1442,6 +1572,40 @@ const knowledgeBankInput = {
           boundaries: ["No publication year is visible on the recovered page.", "The page does not establish Jamie's authorship, production role, or the city's adoption of any recommendation."],
           decisionUse: "Preserves a policy-communication artifact and collective authorship that can be mapped to individual implementation records later.",
           nextStep: "Recover page metadata, event records, drafting history, and collaborator accounts to establish date, contributors, and Jamie's role."
+        },
+        {
+          id: "PROP-NYCA-DCLA-PARTICIPATORY-RECOMMENDATION-WORKFLOW-2017",
+          text: "In early 2017, NYC Artist Coalition publicly documented a sequence from DCLA listening, to a coalition general meeting and ranked member vote, to a recommendation set for the DCLA Commissioner and CreateNYC.",
+          status: "direct-support",
+          sourceIds: [
+            "SRC-NYCA-DCLA-MEETING-RECORD-2017-02-03",
+            "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
+            "SRC-NYCA-CREATENYC-RECOMMENDATIONS-2017"
+          ],
+          sourceSupport: ["DCLA request for final recommendations", "follow-up coalition meeting", "ranked member-vote record", "published recommendation set", "CreateNYC destination"],
+          boundaries: ["This establishes a collective public workflow, not Jamie's individual authorship or production role.", "The vote record does not publish a denominator or voting method.", "Do not treat the coalition's attendance assertion as an independently verified count."],
+          decisionUse: "Shows why the coalition was useful as civic infrastructure: it converted dispersed lived experience into a reviewable, prioritized public record for agency and Council consideration."
+        },
+        {
+          id: "PROP-NYCA-CREATENYC-OFFICIAL-INSTITUTIONAL-RECORD-2017",
+          text: "New York City's final CreateNYC plan says DCLA's January 2017 DIY-spaces meeting spurred NYC Artist Coalition's establishment and credits the coalition with organizing, providing recommendations, and driving thoughtful dialogue about preserving artist-led spaces.",
+          status: "direct-support",
+          sourceIds: ["SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19"],
+          sourceSupport: ["official DCLA plan", "formation context", "coalition organizing", "recommendation contribution", "dialogue on safe and sustainable artist-led spaces"],
+          boundaries: ["The official plan does not identify Jamie individually.", "Institutional recognition of the coalition does not prove that any one person caused its formation or that every recommendation was adopted."],
+          decisionUse: "Supplies institutional corroboration that the coalition's listening, synthesis, and public-policy translation mattered to the City's cultural-planning process."
+        },
+        {
+          id: "PROP-NYCA-CREATENYC-BRIDGE-INTERPRETATION-2017",
+          text: "Read together, the final plan and its appendix show NYC Artist Coalition functioning as a bridge between informal artist-led spaces and formal city planning by turning safety, enforcement, support, and affordability concerns into a preserved public recommendation set.",
+          status: "synthesis-with-boundary",
+          sourceIds: [
+            "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
+            "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19"
+          ],
+          sourceSupport: ["official preservation of the full coalition submission", "official recognition of coalition dialogue", "artist-participation rationale", "cross-agency DIY-space strategy context"],
+          boundaries: ["This is an evidence-based institutional interpretation, not a quotation or proof that Commissioner Finkelpearl, Council Member Espinal, or the Council personally 'needed Jamie.'", "Do not assign Jamie's individual role without role-specific records.", "Do not claim coalition causality for the Office of Nightlife, Cabaret Law repeal, or any later budget or implementation action from these sources alone."],
+          decisionUse: "Answers the institutional-value question without heroizing: DCLA and Council needed legible constituent knowledge from communities that ordinary cultural-policy channels did not reliably represent; the coalition supplied a structured way to hear, prioritize, and retain it."
         },
         {
           id: "PROP-NYCA-SAFETY-RESOURCE-SURFACE-2017",
@@ -1607,6 +1771,7 @@ const knowledgeBankInput = {
       ],
       researchQuestions: [
         "Which formation records and collaborator accounts establish Jamie's role in creating NYC Artist Coalition?",
+        "Which event-production, drafting, CMS, or collaborator records identify Jamie's contribution to the DCLA listening-to-vote-to-recommendation workflow now established at the collective level?",
         "Which public repository commits, CMS records, deployment history, or collaborator accounts associate Jamie with implementation or stewardship of the Cabaret, town-hall, safety, CreateNYC, or Talks Not Raids web surfaces?",
         "Which hearing testimony, sponsor statements, committee reports, and collaborator accounts connect Jamie's documented advocacy actions to a specific institutional decision without overstating causality?",
         "Which agency reports, operational directives, or official statements establish whether MARCH continued, changed form, or ended after Local Law 220?",
@@ -1617,6 +1782,7 @@ const knowledgeBankInput = {
         "Use collective-credit language and distinguish instrumental contribution from sole causation.",
         "The Gothamist source directly supports fire-code study groups, City Hall advocacy, coalition affiliation, and Jamie's safety analysis; it does not establish the full campaign history.",
         "The NPR source is context only until it is closely read for person- and organization-specific evidence.",
+        "DCLA's final plan and appendix establish institutional recognition and preservation of the coalition's contribution, not Jamie's individual role or sole causality for later policy outcomes.",
         "Coalition campaign pages establish public artifacts and collective positions, not individual authorship or causality unless Jamie is named.",
         "The Council records establish enactment and statutory scope, not which advocates caused passage or whether MARCH was later disbanded.",
         "Do not project this intake item directly to the website; strengthen or create governed claims first."
@@ -2442,7 +2608,7 @@ const knowledgeBankInput = {
       id: "INTAKE-INTERACTIVE-MEDIA-PRACTICE-2026-07-14",
       title: "Interactive media, sound, and public-memory practice",
       kind: "claim-candidate",
-      summary: "Public project records recover three concrete interaction-design works by Jamie across 2010-2022: a texting installation built as a shared gallery dialogue and included in America: Now and Here, a Max/MSP audio-sorting experiment, and an app-accessed public-memory work created with Michael Rees. A fourth Matmos video credit remains a research lead because the source spells the collaborator's surname differently.",
+      summary: "Public project records recover a 2006 BAPLab New Media Program credit and three concrete interaction-design works by Jamie across 2010-2022: a texting installation built as a shared gallery dialogue and included in America: Now and Here, a Max/MSP audio-sorting experiment, and an app-accessed public-memory work created with Michael Rees. Time Is Long and a later Matmos video remain research leads because their sources print surname variants rather than Jamie Burkart.",
       status: "claim-candidate",
       sourceIds: [
         "SRC-NTER-CHNG-PITCH-2010-01-07",
@@ -2453,6 +2619,9 @@ const knowledgeBankInput = {
         "SRC-NERMAN-AMERICA-NOW-HERE-2011",
         "SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011",
         "SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011",
+        "SRC-WAVE-FARM-BAPLAB-PROGRAM-2006-07-22",
+        "SRC-BAPLAB-ARCHIVED-NEW-MEDIA-PROGRAM-2006-07-22",
+        "SRC-BAPLAB-TIME-IS-LONG-ARTICLE-2006",
         "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
         "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
         "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29"
@@ -2464,6 +2633,7 @@ const knowledgeBankInput = {
         "America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists; a separate first-party article documents visitors using the text-message input and projected display.",
         "A protected 2011 production plan documents NTER CHNG's America: Now and Here restaging as a combined software, server, display-computer, projection, wall-fabrication, wiring, gallery-calibration, transport, and deinstallation effort; it places Jamie in the preparation and installation window without assigning that full scope to him.",
         "A protected working record preserves Jamie's shared NTER CHNG maker credit with Drew Bolton and Garrett Fuselier, the prompt-and-response model, and the work's intended transformation of private one-to-one texting into a public many-to-many exchange.",
+        "In July 2006, Wave Farm and Bushwick Art Project both listed Jamie Burkart in BAPLab's New Media Program at 3rd Ward.",
         "At a February 2013 Monthly Music Hackathon NYC, Jamie built a Max/MSP program that segmented an audio file and reordered the clips by pitch.",
         "In 2022, Jamie Burkart and Michael Rees created Claudette's Theatre On Wheels, an interactive work honoring Claudette's women-centered theater through short app-accessed performance clips."
       ],
@@ -2510,6 +2680,28 @@ const knowledgeBankInput = {
           decisionUse: "Adds first-party conceptual and interaction-design evidence while preserving participant privacy and document-version uncertainty."
         },
         {
+          id: "PROP-BAPLAB-NEW-MEDIA-PROGRAM-2006",
+          text: "In July 2006, Wave Farm and Bushwick Art Project both listed Jamie Burkart in BAPLab's New Media Program at 3rd Ward.",
+          status: "direct-support",
+          sourceIds: [
+            "SRC-WAVE-FARM-BAPLAB-PROGRAM-2006-07-22",
+            "SRC-BAPLAB-ARCHIVED-NEW-MEDIA-PROGRAM-2006-07-22"
+          ],
+          sourceSupport: ["Jamie Burkart program credit", "July 22-23, 2006 event", "BAPLab New Media Program", "3rd Ward", "two institutional program records"],
+          boundaries: ["Do not infer the title, form, authorship, or reception of Jamie's work from the program listings.", "The archived program wrapper displays another artist's detail below the roster; do not associate that content with Jamie."],
+          decisionUse: "Adds a dated early new-media program credit to Jamie's longer creative-technology chronology without inventing the missing project detail."
+        },
+        {
+          id: "PROP-BAPLAB-TIME-IS-LONG-NAME-CONFLICT-2006",
+          text: "An article about BAPLab describes an analog video installation titled Time Is Long and credits it to a person printed as Jamie Burkhart.",
+          status: "research-only",
+          sourceIds: ["SRC-BAPLAB-TIME-IS-LONG-ARTICLE-2006"],
+          sourceSupport: ["Time Is Long title", "analog video installation", "delayed self-image interaction", "BAPLab context", "Jamie Burkhart credit as printed"],
+          boundaries: ["Do not silently normalize Burkhart to Burkart.", "Do not join this project description to Jamie Burkart's program credit without an unambiguous source or collaborator confirmation.", "Do not infer sole authorship, audience scale, or reception."],
+          decisionUse: "Preserves a likely project-description lead while making the identity conflict a visible part of the research record.",
+          nextStep: "Recover an unambiguous program entry, artist statement, project image caption, course or exhibition record, or collaborator account connecting Jamie Burkart to Time Is Long."
+        },
+        {
           id: "PROP-SORTED-AUDIO-MAX-MSP-2013",
           text: "At a February 2013 Monthly Music Hackathon NYC, Jamie built a Max/MSP program that segmented an audio file and reordered the clips by pitch.",
           status: "direct-support",
@@ -2541,6 +2733,7 @@ const knowledgeBankInput = {
       tensions: [],
       researchQuestions: [
         "Can an unambiguous source resolve the Burkhardt/Burkart Matmos credit and identify Jamie's exact contribution?",
+        "Can an unambiguous source resolve the Burkhart/Burkart Time Is Long credit and connect the installation description to Jamie's BAPLab program entry?",
         "Which original code, diagrams, change history, or collaborator accounts identify Jamie's specific design and implementation decisions in NTER CHNG and Claudette's Theatre On Wheels?",
         "Can the protected NTER CHNG exhibit-information copy be matched to the unrecovered press-release PDF linked by the archived project site or to another public release?",
         "Which collaborators can assign the 2011 installation-plan tasks and confirm which planned configurations were completed?",
@@ -2550,6 +2743,7 @@ const knowledgeBankInput = {
       boundaries: [
         "Do not use a project page that omits Jamie as person-specific role evidence.",
         "Preserve collaborator, programmer, construction, platform, and source-composition credit.",
+        "Treat the Time Is Long project description as unresolved research until the Burkhart/Burkart identity conflict is corroborated.",
         "Treat the Matmos item as unresolved research until the surname conflict is corroborated.",
         "Do not publish archived phone numbers, participant-submitted messages, or media without privacy and rights review.",
         "Do not publish the protected Google Drive links, raw interaction records, or private installation logistics.",
@@ -2566,13 +2760,14 @@ const knowledgeBankInput = {
       title: "Commercial Rent Stabilization operating and public-data infrastructure",
       project: "fair-rent-nyc",
       kind: "claim-candidate",
-      summary: "Protected working artifacts show Jamie designing both coalition operating infrastructure and privacy-preserving public-data proposals for Commercial Rent Stabilization. The sources support authorship of plans, minutes, a policy memo, and a public handout; they do not establish completion of every planned deliverable, coalition adoption, agency adoption, or policy outcomes.",
+      summary: "Protected working artifacts show Jamie designing coalition operating infrastructure, privacy-preserving public-data proposals, and policy-version traceability for Commercial Rent Stabilization. The sources support authorship of plans, minutes, a policy memo, a public handout, and an unofficial legislative provenance redline; they do not establish completion of every planned deliverable, coalition adoption, agency adoption, legal authority, or policy outcomes.",
       status: "claim-candidate",
       sourceIds: [
         "SRC-CRS-NINETY-DAY-OPERATING-PLAN-2026-04-06",
         "SRC-CRS-COLLABORATION-RUNNING-MINUTES-2026-04-29",
         "SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26",
-        "SRC-CRS-FULLER-PUBLIC-BASELINE-HANDOUT-2026-03-27"
+        "SRC-CRS-FULLER-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+        "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-17"
       ],
       relatedClaimIds: [],
       relatedProofIds: ["fair-rent-campaign-memory"],
@@ -2580,7 +2775,8 @@ const knowledgeBankInput = {
         "In April 2026, Jamie authored a 90-day operating plan for Fair Rent NYC and Commercial Rent Stabilization that defined six shared public goods: a front door, recurring room, shared public line, story bank, implementation-readiness packet, and movement memory.",
         "In April 2026, Jamie created a running-minutes system that turned Commercial Rent Stabilization meetings into decisions, owners, open questions, and consent-aware story tracking across aligned city and state work.",
         "In November 2025, Jamie authored an NYC Artist Coalition memo proposing open aggregated indicator tables and a minimum public data suite for a future Commercial Rent Guidelines Board.",
-        "In March 2026, Jamie designed a two-page School of Data handout specifying a privacy-preserving RPIE pilot with indicator, coverage and suppression, and methods tables."
+        "In March 2026, Jamie designed a two-page School of Data handout specifying a privacy-preserving RPIE pilot with indicator, coverage and suppression, and methods tables.",
+        "In May 2026, Jamie prepared an unofficial legislative provenance redline tracing source layers from NYC Council Intro 93 through Fair Rent NYC's 2022 recommendations, the Small Business Survival Act lineage, and Albany Senate Bill S8319."
       ],
       propositions: [
         {
@@ -2618,6 +2814,15 @@ const knowledgeBankInput = {
           sourceSupport: ["Jamie authorship", "March 2026 date", "School of Data context", "two-page handout", "three-part pilot", "minimum fields", "explicit confidential-data exclusions"],
           boundaries: ["The handout specifies a pilot; it does not report a completed release or new empirical findings.", "Do not imply agency adoption or policy enactment."],
           decisionUse: "Shows Jamie converting a policy-neutral data opportunity into a small publishable v1 with fields, privacy controls, documentation, and user value."
+        },
+        {
+          id: "PROP-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
+          text: "In May 2026, Jamie prepared an unofficial legislative provenance redline tracing source layers from NYC Council Intro 93 through Fair Rent NYC's 2022 recommendations, the Small Business Survival Act lineage, and Albany Senate Bill S8319.",
+          status: "direct-support",
+          sourceIds: ["SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-17"],
+          sourceSupport: ["Jamie authorship", "May 17, 2026 update", "tracked source layers", "Intro 93 baseline", "Fair Rent NYC 2022 recommendations", "Small Business Survival Act lineage", "S8319 revision layer", "explicit discussion-only and not-legal-advice labels"],
+          boundaries: ["Describe this as an authored analytical comparison, not legal advice or an authoritative legislative history.", "Reviewer names identify source layers rather than individual drafting authorship.", "Do not imply coalition, counsel, legislative-office, or sponsor adoption.", "Do not infer enactment or policy causality."],
+          decisionUse: "Demonstrates requirements traceability across policy versions: making inherited language, jurisdictional substitutions, additions, deletions, and unresolved questions inspectable for collaborators."
         }
       ],
       tensions: [
@@ -2656,11 +2861,13 @@ const knowledgeBankInput = {
         "Which six shared goods were completed, adopted, or used, and what public-safe artifacts or collaborator accounts establish that status?",
         "What reproducible inclusion rule and date range support the existing 30+ page aggregate?",
         "Is there a stable public URL for the School of Data handout or a public event record documenting its presentation?",
-        "Did any agency, Council, research, or coalition partner respond to or use either public-data proposal, and what public source can establish the result?"
+        "Did any agency, Council, research, or coalition partner respond to or use either public-data proposal, and what public source can establish the result?",
+        "Who reviewed or used the legislative provenance redline, what questions did it resolve, and which public-safe artifact or collaborator account can establish adoption or decision use?"
       ],
       boundaries: [
         "Keep the underlying working documents, contact details, stakeholder lists, private stories, transcripts, and internal strategy outside the repository.",
         "Distinguish authored plans and specifications from completed implementation, coalition adoption, agency adoption, and policy outcomes.",
+        "Treat the provenance redline as an unofficial discussion artifact and not as legal advice or proof of individual authorship for source-layer changes.",
         "Do not use this source set to independently confirm the 30+ page aggregate.",
         "Do not project this intake item directly to the website; reconcile or create a governed claim and make a separate editorial decision first."
       ],

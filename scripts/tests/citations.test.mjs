@@ -408,6 +408,9 @@ test("iCloud Teams sources preserve public and protected evidence boundaries", (
     "SRC-NERMAN-AMERICA-NOW-HERE-2011",
     "SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011",
     "SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011",
+    "SRC-WAVE-FARM-BAPLAB-PROGRAM-2006-07-22",
+    "SRC-BAPLAB-ARCHIVED-NEW-MEDIA-PROGRAM-2006-07-22",
+    "SRC-BAPLAB-TIME-IS-LONG-ARTICLE-2006",
     "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
     "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
     "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29",
@@ -415,16 +418,21 @@ test("iCloud Teams sources preserve public and protected evidence boundaries", (
     "SRC-CRS-COLLABORATION-RUNNING-MINUTES-2026-04-29",
     "SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26",
     "SRC-CRS-FULLER-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+    "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-17",
     "SRC-JOB-HUNT-CROSS-ARCHIVE-EVIDENCE-MAP-2026-07-03",
     "SRC-MAVEN-AI-EVALS-COMPLETION-2026",
-    "SRC-SOURCE-BACKED-SPRINT-PREP-2026-06-30"
+    "SRC-SOURCE-BACKED-SPRINT-PREP-2026-06-30",
+    "SRC-NYCA-DCLA-MEETING-RECORD-2017-02-03",
+    "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
+    "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
+    "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19"
   ];
 
   assert.ok(selectedSourceIds.every((sourceId) => sourceById.has(sourceId)));
   const protectedSources = selectedSourceIds
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source.visibility === "protected");
-  assert.equal(protectedSources.length, 9);
+  assert.equal(protectedSources.length, 10);
   assert.ok(protectedSources.every((source) => source.protectedLocatorId));
   assert.ok(
     protectedSources.every(
@@ -471,6 +479,21 @@ test("iCloud Teams sources preserve public and protected evidence boundaries", (
       .get("SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26")
       .doesNotEstablish.some((boundary) => /Jamie Burkhardt is Jamie Burkart/i.test(boundary))
   );
+  assert.ok(
+    sourceById
+      .get("SRC-BAPLAB-TIME-IS-LONG-ARTICLE-2006")
+      .doesNotEstablish.some((boundary) => /Jamie Burkhart is Jamie Burkart/i.test(boundary))
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19")
+      .doesNotEstablish.some((boundary) => /individual role/i.test(boundary))
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-17")
+      .doesNotEstablish.some((boundary) => /legal advice/i.test(boundary))
+  );
 });
 
 test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
@@ -486,12 +509,16 @@ test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
   const evals = intakeById.get(
     "INTAKE-EVALS-AND-SOURCE-BACKED-SPRINT-2026-07-14"
   );
+  const nyca = intakeById.get(
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12"
+  );
 
   assert.equal(interactive.status, "claim-candidate");
   assert.equal(crs.status, "claim-candidate");
   assert.equal(evals.status, "claim-candidate");
-  assert.equal(interactive.candidateClaims.length, 6);
-  assert.equal(crs.candidateClaims.length, 4);
+  assert.equal(nyca.status, "researching");
+  assert.equal(interactive.candidateClaims.length, 7);
+  assert.equal(crs.candidateClaims.length, 5);
   assert.equal(evals.candidateClaims.length, 2);
   assert.ok([interactive, crs, evals].every((item) => item.projectionStatus === "no-public-projection"));
   assert.equal(
@@ -522,6 +549,31 @@ test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
     "research-only"
   );
   assert.equal(
+    interactive.propositions.find(
+      (proposition) => proposition.id === "PROP-BAPLAB-TIME-IS-LONG-NAME-CONFLICT-2006"
+    ).status,
+    "research-only"
+  );
+  assert.equal(
+    crs.propositions.find(
+      (proposition) => proposition.id === "PROP-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"
+    ).status,
+    "direct-support"
+  );
+  assert.equal(
+    nyca.propositions.find(
+      (proposition) =>
+        proposition.id === "PROP-NYCA-CREATENYC-OFFICIAL-INSTITUTIONAL-RECORD-2017"
+    ).status,
+    "direct-support"
+  );
+  assert.equal(
+    nyca.propositions.find(
+      (proposition) => proposition.id === "PROP-NYCA-CREATENYC-BRIDGE-INTERPRETATION-2017"
+    ).status,
+    "synthesis-with-boundary"
+  );
+  assert.equal(
     evals.propositions.find(
       (proposition) => proposition.id === "PROP-JOB-HUNT-EVIDENCE-MAP-CONTEXT-2026"
     ).status,
@@ -540,6 +592,8 @@ test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
   assert.doesNotMatch(publicRegistryText, /SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011/);
   assert.doesNotMatch(publicRegistryText, /SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011/);
   assert.doesNotMatch(publicRegistryText, /SRC-CRS-NINETY-DAY-OPERATING-PLAN/);
+  assert.doesNotMatch(publicRegistryText, /SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE/);
+  assert.doesNotMatch(publicRegistryText, /SRC-CREATENYC-FINAL-PLAN-NYCAC/);
   assert.doesNotMatch(publicRegistryText, /SRC-SOURCE-BACKED-SPRINT-PREP/);
 });
 
