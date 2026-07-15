@@ -145,8 +145,8 @@ category counts. A posted route documents public information flow, not
 agreement with every statement in the destination.
 
 Jamie's reviewed first-hand account, the governed corpus, and independent
-Gothamist and Greene Hill records support the bounded wording that he **helped
-establish and produce** the recurring participation system. The event pages do
+Gothamist and Greene Hill records support the bounded wording that **Jamie
+reports he helped establish and produce** the recurring participation system. The event pages do
 not identify the author or producer of every event, and event chronology does
 not establish policy causality.
 

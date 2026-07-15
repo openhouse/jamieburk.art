@@ -37,8 +37,9 @@ Do not present the private implementation record as public evidence.
 
 Do not say Jamie solely created or produced every NYC Artist Coalition event,
 that every event used a different venue, or that the coalition met every
-calendar month. The supported role is that he helped establish and produce the
-recurring participation system, with collective and host credit preserved.
+calendar month. The supported attributed role is that Jamie reports he helped
+establish and produce the recurring participation system, with collective and
+host credit preserved.
 
 Do not say all 34 Facebook event pages were recovered or that Facebook exposes
 the coalition's complete history. The governed result is 33 recovered records

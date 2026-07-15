@@ -860,7 +860,7 @@ contacts, access details, and account-administration records stay offline.
 Jamie's bounded role
 **Evidence class:** Governed public event corpus / independent reporting /
 Jamie's reviewed first-hand account
-**Public wording:** Beginning in 2017, Jamie helped establish and produce NYC
+**Public wording:** Jamie reports that, beginning in 2017, he helped establish and produce NYC
 Artist Coalition's recurring participation system: public event pages,
 meetings rotating through small cultural spaces, practical safety and legal
 sessions, town halls, hearings, campaign actions, and relief convenings that

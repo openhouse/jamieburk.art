@@ -470,7 +470,7 @@ export const nycacFacebookEventsFullPopulationBatch20260715: {
       id: "CLM-NYCAC-PARTICIPATION-SYSTEM",
       project: "nyc-artist-coalition",
       internalClaim:
-        "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, rotating meetings in small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings connecting artists' lived experience with civic pathways.",
+        "Jamie reports that, beginning in 2017, he helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, rotating meetings in small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings connecting artists' lived experience with civic pathways.",
       status: "confirmed-with-boundary",
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
@@ -478,7 +478,7 @@ export const nycacFacebookEventsFullPopulationBatch20260715: {
       projections: [
         {
           key: "case-study",
-          text: "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          text: "Jamie reports that, beginning in 2017, he helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/fair-rent-nyc"]

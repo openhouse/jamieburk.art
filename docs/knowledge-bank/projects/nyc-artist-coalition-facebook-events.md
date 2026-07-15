@@ -17,8 +17,8 @@ part of his contribution. The public record independently connects him to the
 coalition, fire-code study groups, City Hall advocacy, and cultural-space work.
 The event pages prove that the collective system existed and was used; they do
 not identify the individual author or producer of every page or program. The
-approved wording is therefore **helped establish and produce**, with collective
-and cohost credit preserved.
+approved wording is therefore **Jamie reports that he helped establish and
+produce**, with collective and cohost credit preserved.
 
 ## Population Accounting
 
@@ -68,7 +68,7 @@ translate lived cultural experience into shared civic paths.
 
 The defensible public claim is:
 
-> Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's
+> Jamie reports that, beginning in 2017, he helped establish and produce NYC Artist Coalition's
 > recurring participation system: public event pages, meetings rotating through
 > small cultural spaces, practical safety and legal sessions, town halls,
 > hearings, campaign actions, and relief convenings that connected artists'

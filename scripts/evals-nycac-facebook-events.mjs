@@ -332,9 +332,10 @@ check(
       "Facebook responses into attendance"
     ]) &&
     participationClaim.projections.some((projection) =>
-      projection.text.includes("helped establish and produce")
+      includesAll(projection.text, ["Jamie reports that", "helped establish and produce"])
     ) &&
     includesAll(proofBlock, [
+      "Jamie reports that",
       "helped establish and produce",
       "Jamie solely produced every NYC Artist Coalition event",
       "Facebook responses equal attendance or unique reach"

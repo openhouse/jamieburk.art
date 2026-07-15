@@ -847,10 +847,10 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system across small cultural spaces, practical support sessions, town halls, hearings, campaigns, and relief convenings.",
+      "Jamie reports that, beginning in 2017, he helped establish and produce NYC Artist Coalition's recurring participation system across small cultural spaces, practical support sessions, town halls, hearings, campaigns, and relief convenings.",
     shortWording: "Helped build NYC Artist Coalition's recurring participation system",
     detailedPublicWording:
-      "Jamie connected event pages, rotating meetings in small cultural spaces, fire-safety and legal sessions, town halls, hearings, campaign actions, and relief convenings into a recurring collective practice that carried artists' lived experience toward civic pathways.",
+      "Jamie reports connecting event pages, rotating meetings in small cultural spaces, fire-safety and legal sessions, town halls, hearings, campaign actions, and relief convenings into a recurring collective practice that carried artists' lived experience toward civic pathways.",
     sourceBasis:
       "Jamie's reviewed first-hand account, a governed public-safe census of 33 recovered Facebook event records, contemporaneous Gothamist reporting on his fire-code study groups and City Hall advocacy, and a 2017 Greene Hill interview connecting him to coalition work and a nightlife town hall.",
     whyItMatters:

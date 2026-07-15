@@ -36,7 +36,7 @@ Facebook response labels are not attendance, unique people, reach, participation
 
 ## Projection Decision
 
-The FairRentNYC case study receives the bounded claim that Jamie **helped establish and produce** the recurring participation system. The deeper archive names the 33 recovered event records, ten physical meeting spaces, two virtual meetings, and one unresolved control slot as the source boundary without loading those metrics into the public case-study paragraph.
+The FairRentNYC case study receives the bounded, attributed claim that **Jamie reports he helped establish and produce** the recurring participation system. The deeper archive names the 33 recovered event records, ten physical meeting spaces, two virtual meetings, and one unresolved control slot as the source boundary without loading those metrics into the public case-study paragraph.
 
 The response thresholds and democracy-lab interpretation remain in the knowledge bank. They add depth without improving the job-application page enough to justify additional visual or interpretive weight.
 
