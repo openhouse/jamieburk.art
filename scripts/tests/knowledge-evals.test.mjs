@@ -142,6 +142,23 @@ test("campaign press archive retains every appearance and distinct article ident
   );
 });
 
+test("campaign press archive retains a verified Wayback route for every distinct article", () => {
+  const press = suite.pilot.pressArchive;
+  const entries = campaignPressInventory.flatMap((campaign) => campaign.entries);
+  const sourceIdsWithRoutes = new Set(
+    entries
+      .filter((entry) => entry.archiveUrl?.includes("web.archive.org/web/"))
+      .map((entry) => entry.sourceId)
+  );
+
+  assert.equal(sourceIdsWithRoutes.size, press.expectedWaybackRouteCount);
+  assert.ok(
+    [...new Set(entries.map((entry) => entry.sourceId))].every((sourceId) =>
+      sourceIdsWithRoutes.has(sourceId)
+    )
+  );
+});
+
 test("campaign press archive completeness is a hard evaluation gate", () => {
   const press = suite.pilot.pressArchive;
   const intake = knowledgeBank.intakeItems.find((item) => item.id === press.intakeIds[0]);

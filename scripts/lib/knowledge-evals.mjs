@@ -312,6 +312,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     pressIntakes.flatMap((intake) => intake?.observationIds ?? [])
   );
   const pressReadingSourceIds = new Set(nycacPressReadings.map((reading) => reading.sourceId));
+  const pressWaybackRouteSourceIds = new Set(
+    pressEntries.filter((entry) => entry.archiveUrl?.includes("web.archive.org/web/")).map((entry) => entry.sourceId)
+  );
   const partialReadings = nycacPressReadings.filter((reading) => reading.reviewExtent === "headline-and-deck");
   const cityLabReading = nycacPressReadings.find(
     (reading) => reading.sourceId === pressArchive.redirectTrapSourceId
@@ -336,6 +339,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       partialReadings[0]?.sourceId === pressArchive.partialSourceId &&
       nycacPressReadings.filter((reading) => reading.recoveryMode === "publisher-body").length === pressArchive.expectedPublisherReadingCount &&
       nycacPressReadings.filter((reading) => reading.recoveryMode === "wayback-body").length === pressArchive.expectedWaybackReadingCount &&
+      pressWaybackRouteSourceIds.size === pressArchive.expectedWaybackRouteCount &&
+      uniquePressArticleSourceIds.every((sourceId) => pressWaybackRouteSourceIds.has(sourceId)) &&
       nycacPressReadings.filter((reading) => reading.mentionsJamie).length === pressArchive.expectedJamieNamedCount &&
       nycacPressReadings.filter((reading) => reading.mentionsCoalition).length === pressArchive.expectedCoalitionNamedCount &&
       nycacPressReadings.reduce((total, reading) => total + reading.directAttributions.length, 0) === pressArchive.expectedDirectAttributionCount &&

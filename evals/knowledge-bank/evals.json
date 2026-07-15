@@ -179,6 +179,7 @@
       "expectedPartialReadingCount": 1,
       "expectedPublisherReadingCount": 32,
       "expectedWaybackReadingCount": 12,
+      "expectedWaybackRouteCount": 44,
       "expectedJamieNamedCount": 3,
       "expectedCoalitionNamedCount": 19,
       "expectedDirectAttributionCount": 30,
