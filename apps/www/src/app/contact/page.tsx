@@ -16,14 +16,22 @@ export default function ContactPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Contact</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          For roles, referrals, consulting, or collaboration:
+          For roles, referrals, consulting conversations, or collaborations,
+          email Jamie.
+        </p>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          Best-fit conversations: technical project management, product
+          operations, implementation, documentation systems, civic technology,
+          govtech, knowledge systems, and public-facing tools.
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
             <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+              <dt className="font-semibold text-jb-ink">Email</dt>
+              <dd className="mt-1">
+                <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.emailHref}>
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -32,14 +40,28 @@ export default function ContactPage() {
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+              <dd className="mt-1">
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.linkedInHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {site.linkedInLabel}
+                </a>
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+              <dd className="mt-1">
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {site.githubLabel}
+                </a>
               </dd>
             </div>
             <div>

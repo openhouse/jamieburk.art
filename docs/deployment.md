@@ -137,6 +137,7 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+npm run public-safety
 ```
 
 Expected staging behavior:
@@ -145,3 +146,6 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- `npm run public-safety` catches visible placeholders, private source paths,
+  private font references, raw transcript markers, and credential-looking strings
+  before launch.

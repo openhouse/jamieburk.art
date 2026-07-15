@@ -29,6 +29,8 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight
 ```
 
 ## Environment
@@ -93,14 +95,14 @@ or serve private, proprietary, or unlicensed font files.
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
-## Launch Blockers
+## Production Review
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Verify the approved resume PDF remains current.
+- Confirm contact links still match the approved resume.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Run `npm run public-safety` before production promotion.

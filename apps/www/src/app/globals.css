@@ -115,11 +115,12 @@ h2 {
   top: 1rem;
   z-index: 50;
   transform: translateY(-150%);
-  transition: transform 160ms ease;
+  transition: none;
 }
 
-.skip-link:focus {
-  transform: translateY(0);
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0) !important;
 }
 
 .jb-rule {
