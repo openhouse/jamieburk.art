@@ -101,6 +101,23 @@ demonstrating why the project Page and personal event infrastructure must
 remain distinct archival surfaces. Collaborator names remain held from this
 project note pending approval.
 
+## Facebook publishing surface
+
+The authenticated [Facebook post pass](wowlist-facebook-posts.md) accounts for
+all 54 records materialized by the Page's surviving Lifetime table. Fifty post
+details still render, and all 50 display Facebook's admin-only **Published by
+Jamie Burkart** attribution; four more records remain table-only. This supports
+Jamie's publishing stewardship across the surviving 2015-2018 record while
+preserving WOW List as shared work and distinguishing Page publishing from sole
+authorship, sole ownership, or exclusive management of every platform.
+
+The 54 records preserve 42 normalized public destinations and overlapping
+patterns across calendar onboarding, event distribution, cultural-space
+support, mutual aid, civic action, community care, funding, and participatory
+product feedback. Dated dashboard values and stakeholder identities remain
+outside accomplishment messaging because the surviving interface does not
+provide a reliable historical reach or identity-complete engagement measure.
+
 ## Next research
 
 1. Classify all 35 destinations as live, archived, redirected, dead, or not recovered.
@@ -109,6 +126,8 @@ project note pending approval.
 4. Seek public or collaborator evidence that can distinguish account creation, identity design, administration, posting strategy, and individual post authorship.
 5. Recover the linked 200th Sunday Dinner WOW List event page and reconcile it
    with the current Facebook Page's empty event surfaces.
+6. Reconcile the 54-record Facebook surface with an owner-authorized export,
+   recover four table-only details, and close-read the remaining posted routes.
 
 ## Active Claim Projection
 

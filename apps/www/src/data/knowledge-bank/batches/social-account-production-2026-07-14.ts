@@ -1148,7 +1148,8 @@ export const socialAccountProductionBatch20260714: {
         "SRC-WOWLIST-X-SUPPORT-LOCATION-2015",
         "SRC-WOWLIST-X-SUPPORT-LISTS-2015",
         "SRC-WOWLIST-X-SUPPORT-EVENT-ENTRY-2015",
-        "SRC-WOWLIST-X-CORPUS-2026-07-15"
+        "SRC-WOWLIST-X-CORPUS-2026-07-15",
+        "SRC-WOWLIST-FACEBOOK-POST-CORPUS-2026-07-15"
       ],
       occurrences: [
         {
@@ -1173,6 +1174,12 @@ export const socialAccountProductionBatch20260714: {
           claimId: "CLM-WOWLIST-CIVIC-CARE-USE-PATTERN",
           projection: "case-study",
           sourceIds: ["SRC-WOWLIST-X-CORPUS-2026-07-15"]
+        },
+        {
+          id: "facebook-publishing-stewardship",
+          claimId: "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
+          projection: "case-study",
+          sourceIds: ["SRC-WOWLIST-FACEBOOK-POST-CORPUS-2026-07-15"]
         }
       ]
     },

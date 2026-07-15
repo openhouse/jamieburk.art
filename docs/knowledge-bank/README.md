@@ -115,6 +115,16 @@ source routes, stakeholder interfaces, and bounded response labels without
 publishing raw descriptions, attendee data, access details, or authenticated
 state.
 
+The authenticated [WOW List Facebook post pass](runs/2026-07-15-wowlist-facebook-posts-full-population.md)
+accounts for all 54 records materialized by the Page's surviving Lifetime
+table: 50 recovered details attributed by Facebook to Jamie as publisher and
+four table-only records. Its [public-safe corpus](corpora/wowlist-facebook-posts-full-population.json),
+manifest, deterministic checker, and [project note](projects/wowlist-facebook-posts.md)
+preserve the publishing-role boundary, 42 normalized destinations, overlapping
+mission patterns, bounded dashboard signals, and open stakeholder-engagement
+question without publishing raw post bodies, personal engagement data, or
+authenticated state.
+
 The personal [@urbanhermit full-population pass](runs/2026-07-15-urbanhermit-x-full-population.md)
 reconciles all 434 records represented by the live profile counter. Its
 [public-safe corpus](corpora/urbanhermit-x-full-population-2026-07-15.json),

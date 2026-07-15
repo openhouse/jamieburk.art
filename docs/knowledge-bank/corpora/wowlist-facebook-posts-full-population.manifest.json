@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T18:10:00-04:00",
+  "generator": "Authenticated archival review with public-safe derivation",
+  "sourceCapture": "protected and not committed",
+  "sourceCapturePublished": false,
+  "corpus": "docs/knowledge-bank/corpora/wowlist-facebook-posts-full-population.json",
+  "corpusSha256": "c464757f5927b3406f88b3417e7647ccf4d8530e7e45c82d75c8f59325ffe0fa",
+  "corpusBytes": 37829,
+  "population": {
+    "materializedRecords": 54,
+    "recoveredDetails": 50,
+    "tableOnlyRecords": 4,
+    "start": "2015-04-25",
+    "end": "2018-03-22",
+    "status": "complete-as-materialized"
+  },
+  "publicPostIdSet": {
+    "count": 54,
+    "sha256": "7dc9f9f50b466f613b060d9b054eaae0c541bf7fce404fd602f7ecffac37791e"
+  },
+  "privacy": {
+    "rawPostTextPublished": false,
+    "engagerIdentitiesPublished": false,
+    "authenticatedSessionDataPublished": false,
+    "privatePathsPublished": false
+  }
+}

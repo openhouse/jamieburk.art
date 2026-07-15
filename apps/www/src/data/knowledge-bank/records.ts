@@ -14,6 +14,7 @@ import { kcTownHallPhaseOneBatch20260715 } from "./batches/kc-town-hall-phase-on
 import { urbanhermitXFullPopulationBatch20260715 } from "./batches/urbanhermit-x-full-population-2026-07-15.ts";
 import { nycacFacebookEventsFullPopulationBatch20260715 } from "./batches/nycac-facebook-events-full-population-2026-07-15.ts";
 import { personalWowListFacebookEventsFullPopulationBatch20260715 } from "./batches/personal-wowlist-facebook-events-full-population-2026-07-15.ts";
+import { wowListFacebookPostsFullPopulationBatch20260715 } from "./batches/wowlist-facebook-posts-full-population-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -236,6 +237,7 @@ const knowledgeBankInput = {
     ...urbanhermitXFullPopulationBatch20260715.intake,
     ...nycacFacebookEventsFullPopulationBatch20260715.intake,
     ...personalWowListFacebookEventsFullPopulationBatch20260715.intake,
+    ...wowListFacebookPostsFullPopulationBatch20260715.intake,
     ...nterChngArchiveBatch20260715.intake
   ],
   sources: [
@@ -485,6 +487,7 @@ const knowledgeBankInput = {
     ...urbanhermitXFullPopulationBatch20260715.sources,
     ...nycacFacebookEventsFullPopulationBatch20260715.sources,
     ...personalWowListFacebookEventsFullPopulationBatch20260715.sources,
+    ...wowListFacebookPostsFullPopulationBatch20260715.sources,
     ...nterChngArchiveBatch20260715.sources
   ],
   sourceAssertions: [
@@ -682,6 +685,7 @@ const knowledgeBankInput = {
     ...urbanhermitXFullPopulationBatch20260715.sourceAssertions,
     ...nycacFacebookEventsFullPopulationBatch20260715.sourceAssertions,
     ...personalWowListFacebookEventsFullPopulationBatch20260715.sourceAssertions,
+    ...wowListFacebookPostsFullPopulationBatch20260715.sourceAssertions,
     ...nterChngArchiveBatch20260715.sourceAssertions
   ],
   claims: [
@@ -1064,6 +1068,7 @@ const knowledgeBankInput = {
     ...urbanhermitXFullPopulationBatch20260715.claims,
     ...nycacFacebookEventsFullPopulationBatch20260715.claims,
     ...personalWowListFacebookEventsFullPopulationBatch20260715.claims,
+    ...wowListFacebookPostsFullPopulationBatch20260715.claims,
     ...nterChngArchiveBatch20260715.claims
   ],
   researchTasks: [
@@ -1194,6 +1199,7 @@ const knowledgeBankInput = {
     ...urbanhermitXFullPopulationBatch20260715.researchTasks,
     ...nycacFacebookEventsFullPopulationBatch20260715.researchTasks,
     ...personalWowListFacebookEventsFullPopulationBatch20260715.researchTasks,
+    ...wowListFacebookPostsFullPopulationBatch20260715.researchTasks,
     ...nterChngArchiveBatch20260715.researchTasks
   ],
   researchInquiries: [
@@ -1223,6 +1229,7 @@ const knowledgeBankInput = {
     ...urbanhermitXFullPopulationBatch20260715.researchInquiries,
     ...nycacFacebookEventsFullPopulationBatch20260715.researchInquiries,
     ...personalWowListFacebookEventsFullPopulationBatch20260715.researchInquiries,
+    ...wowListFacebookPostsFullPopulationBatch20260715.researchInquiries,
     ...nterChngArchiveBatch20260715.researchInquiries
   ],
   corrections: [
