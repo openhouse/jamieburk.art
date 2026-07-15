@@ -39,6 +39,28 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Served as the City-listed developer/presenter for KC Town Hall's adaptive-reuse proposal; the CCED Board recommended $490,539 and the Council appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded withdrawal and reappropriated the unused funds in 2024.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 
+## Bank-Only Supporting Evidence
+
+- Two exact-set-checked traversals preserve 444 surviving NYC Artist Coalition
+  Facebook Page records spanning 2017-2021. The collective record documents a
+  recurring civic publication system across meetings, campaign calls,
+  cultural-space care, nightlife governance, Commercial Rent Stabilization,
+  press, and practical resources.
+- The corpus preserves 33 normalized public-safe routes and bounded
+  stakeholder-addressing patterns. It does not expose historic human-level
+  publisher attribution or an identity-complete engagement population.
+- Jamie recalls predominant but shared use of the Page. That role statement is
+  restricted research evidence, not approved public proof of post-level
+  authorship or sole account management.
+- Three terminal traversals preserve 40 surviving KC Spaces Fund Facebook Page
+  cards. The collective record documents applications, fundraising,
+  funded-space spotlights, resources, and partner amplification; ten records
+  publicly name funded-space spotlights.
+- KC Spaces Fund used a consistent public identity across its domain,
+  Facebook, X, Instagram, and GoFundMe route. This result does not by itself
+  establish who chose or registered the name. Jamie's naming-support memory is
+  restricted pending corroboration, and no Page post is assigned to him.
+
 ## Projection Rule
 
 Public pages may simplify this language, but they must not strengthen ownership, causality, authority, or current-status claims beyond the guardrails in `claims.md`.

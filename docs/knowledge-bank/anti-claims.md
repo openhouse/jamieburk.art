@@ -37,6 +37,22 @@ past events but materialized 33; retain the unresolved remainder.
 Do not publish raw historical event descriptions, attendee identities,
 contacts, dial-ins, meeting IDs, passcodes, or private planning-document links.
 
+Do not say the 444-record Facebook Page census is a native Meta export,
+deletion history, complete managed-content population, or every post the
+coalition ever published. Do not assign the Page corpus, any specific record,
+or the coalition's shared voice to Jamie without publisher-level evidence.
+
+Do not convert 88 records referencing Council members or the Council into 88
+Council Members engaging. A mention, tag, link, quotation, or reshare does not
+establish that a stakeholder saw, authored, endorsed, replied to, partnered
+with, or acted on a post. Do not convert 2,374 reactions, 212 comments, and 611
+shares into unique people, historical reach, attendance, conversion, policy
+influence, or impact.
+
+Do not publish raw post bodies, comments, actor identities, per-record
+interaction values, private profile links, stale meeting or form routes,
+administrative locators, or authenticated-session state.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -110,6 +126,21 @@ Do not present AI-assisted archival review as a human collaborator testimonial.
 Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or
 private Drive documents.
+
+Do not call the 40 surviving public Page cards a complete Meta export, deletion
+history, or lifetime population. Do not say the project published only 40
+posts. Do not convert the mutable 119 visible reaction-signal floor into people,
+reach, endorsement, conversion, attendance, or impact.
+
+Do not say Jamie posted to, owned, or administered the Facebook Page. The
+uniform project identity across domain and platform routes does not prove that
+Jamie alone named, registered, or operated those surfaces. Keep his
+naming-support account as first-person memory until corroborated.
+
+Do not convert ten funded-space spotlight records into a complete grantee
+population, ten verified awards, exact grant amounts, or a complete
+disbursement total. The public fundraiser's $9,590 result belongs to the
+collective campaign, not to Jamie individually.
 
 ## KC Town Hall
 

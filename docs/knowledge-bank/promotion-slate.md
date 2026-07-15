@@ -195,6 +195,9 @@ website selection. It is a recommendation, not publication approval.
   recurring events as a major contribution and a bridge from WOW List into
   advocacy. Recover collaborator or task-level artifact corroboration before
   activating individual event-system credit on the site.
+- `CLM-JAMIE-NYCAC-FACEBOOK-PUBLISHING-MEMORY`: Jamie recalls predominant but
+  shared Page use. Recover a native publisher history or collaborator proof
+  notes before activating individual publishing or administration credit.
 - `CLM-SBU-STYLE-GUIDE-HANDOFF-SEED`: recover a completed guide, implementation
   record, or collaborator confirmation before promotion.
 - `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`: recover a second dated use or
@@ -226,6 +229,33 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-WOWLIST-FACEBOOK-MANAGEMENT-MIGRATION-GAP`: retain the modern-empty and
   legacy-54 interface contrast as a research boundary, not evidence of
   historical inactivity.
+- `CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM`: retain the exact-set-checked
+  444-record collective civic publication pattern as future composition depth;
+  no current website claim is selected.
+- `CLM-NYCAC-FACEBOOK-STAKEHOLDER-ROUTING`: retain Council, agency, partner,
+  and press references as outbound addressing evidence, not inbound
+  stakeholder engagement or endorsement.
+- `CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS`: retain the July 2026 aggregate
+  floors as mutable interface observations, not unique people, historical
+  reach, attendance, conversion, causality, or impact.
+- `CLM-NYCAC-FACEBOOK-POSTED-URL-ROUTING`: use the 33-route inventory to drive
+  close reading and source association; a posted URL is not automatic
+  corroboration.
+- `CLM-KCSPACESFUND-FACEBOOK-RELIEF-CYCLE`: retain the collective application,
+  fundraising, spotlight, resource, and amplification pattern as KC Spaces
+  Fund depth. The current site already carries the right individual role claim.
+- `CLM-KCSPACESFUND-FUNDRAISING-AND-SPOTLIGHTS`: retain the public fundraiser
+  result and ten Page spotlight records as bounded collective outcomes. Do not
+  convert the spotlights into a complete grantee or disbursement population.
+- `CLM-KCSPACESFUND-UNIFORM-PUBLIC-IDENTITY`: retain the consistent domain and
+  platform identity as a project-system result, not automatic evidence of
+  individual naming authorship or account administration.
+- `CLM-KCSPACESFUND-FACEBOOK-INTERACTION-SNAPSHOT`: retain the July 2026
+  visible-signal floor as mutable interface context, not unique people,
+  stakeholder endorsement, reach, conversion, or impact.
+- `CLM-JAMIE-KCSPACESFUND-NAMING-MEMORY`: retain Jamie's naming-support account
+  as restricted research evidence until a collaborator or contemporaneous
+  record corroborates the division of labor.
 
 - `CLM-NYCAC-CAMPAIGN-PRESS-CORPUS`: retain the complete 45-placement,
   44-article bibliography in the bank. Promote only article-level propositions

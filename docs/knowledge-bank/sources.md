@@ -121,6 +121,43 @@ article about a $20,000 Denver DIY Spaces Fund was close-read; the remaining
 destinations stay in the research lifecycle. See
 `docs/knowledge-bank/projects/wowlist-facebook-posts.md`.
 
+### NYC Artist Coalition Facebook posts
+
+Two authenticated terminal traversals with distinct scroll cadences recovered
+the same 444 surviving Page-record identities from January 29, 2017, through
+September 15, 2021. The public disposition ledger preserves one anonymous,
+public-safe row for every recovered identity plus reproducible form, theme,
+stakeholder-routing, and aggregate interaction controls. A separate route
+ledger accounts for 64 outbound-link occurrences consolidated into 33
+public-safe routes; two historical action routes remain protected.
+
+The records document recurring publication across Cabaret Law repeal, Office
+of Nightlife accountability, M.A.R.C.H. transparency, cultural-space care,
+Commercial Rent Stabilization, public meetings, relief, and practical
+resources. Stakeholder counts describe posts that reference or link Council,
+agencies, partners, and press. They do not identify inbound stakeholder
+engagement. The inspected surfaces also do not expose historic human-level
+publisher fields. See
+`docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md`.
+
+### KC Spaces Fund Facebook posts
+
+Three terminal traversals of the current public Page materialized 40, 38, and
+40 deduplicated cards. The final slower traversal reproduced 40, and all 21
+stable media identities matched across all three passes. The public ledger
+preserves one bounded disposition for each surviving card while excluding full
+transcripts, personal engagement identities, contact details, and
+authenticated-session state.
+
+The Page census routes into the public campaign site and application guidance,
+GoFundMe, an April 2020 Kansas City Star guide, and an Oddities Prints
+fundraising page. These sources support the collective relief-cycle,
+fundraising, funded-space spotlight, and uniform-identity claims. Protected
+local Git review supports Jamie's technical implementation. Jamie's naming
+support remains first-person research evidence, and no reviewed source assigns
+him the Facebook posts or account ownership. See
+`docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md`.
+
 ### NTER CHNG protected working artifacts
 
 Two native 2011 Google Docs are represented as protected project-archive

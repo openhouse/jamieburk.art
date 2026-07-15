@@ -247,6 +247,37 @@ claim beyond the wording and guardrails here.
   as archive depth, not an empirical outcome or a claim assigned to every
   coalition member.
 
+## nyc-artist-coalition-facebook-publication-system - Facebook civic publication system
+
+**Status:** Confirmed with boundary; bank-only candidate
+**Support level:** Strong for the surviving Page population and collective method
+**Evidence class:** Two exact-set terminal traversals / public-safe disposition and route ledgers / selected public posts
+**Public wording:** NYC Artist Coalition's surviving Facebook Page record documents a durable civic publication system across meetings, campaign calls, cultural-space care, nightlife governance, Commercial Rent Stabilization, press, and practical resources.
+**Detailed public-safe wording:** Two terminal traversals recovered the same 444 surviving Page records from January 2017 through September 2021, including 150 event routes and 26 source-or-resource routes. Sixty-four outbound-link occurrences consolidate into 33 public-safe routes.
+**Where to project:** Knowledge bank only. No new website copy selected in this pass.
+**Why it matters:** Preserves evidence that the coalition's public identity connected cultural and civic work through repeatable publishing, routing, and participation infrastructure.
+**Guardrail:** The Page is a shared coalition surface. The archive does not expose a historic human publisher for individual posts. Stakeholder references are outbound addressing, not inbound engagement. Current counters are not historical reach or impact.
+**Do not say:** Jamie authored or published all 444 records; 88 Council members engaged; the Council endorsed the Page; visible interactions prove attendance, conversion, policy influence, or impact; 444 is a native Meta export or lifetime total.
+**Protected boundaries:** Raw post bodies, comments, actor identities, per-record engagement counts, private profiles, stale access routes, authenticated-session state, and administrative locators remain outside the public repo.
+**Review owner:** Jamie / collaborator and native-export corroboration needed for individual publishing role
+**Last reviewed:** 2026-07-15
+
+### Canonical post-archive claims
+
+- `CLM-NYCAC-FACEBOOK-SURVIVING-PUBLIC-TIMELINE`: 444-record exact-set
+  control, bounded to the surviving July 2026 Page surface.
+- `CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM`: collective civic publication method
+  retained as a bank-only future composition candidate.
+- `CLM-NYCAC-FACEBOOK-STAKEHOLDER-ROUTING`: 88 Council/member, 40
+  cultural/nightlife-agency, and 39 partner-reference records; not inbound
+  stakeholder engagement.
+- `CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS`: dated aggregate floors retained as
+  mutable interface observations, not people, reach, attendance, or impact.
+- `CLM-NYCAC-FACEBOOK-POSTED-URL-ROUTING`: 33 public-safe routes retained for
+  future source close reading.
+- `CLM-JAMIE-NYCAC-FACEBOOK-PUBLISHING-MEMORY`: Jamie's predominant-but-shared
+  use recollection remains restricted and dormant pending corroboration.
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful
@@ -320,7 +351,52 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
 **Protected boundaries:** Applicant or grantee materials, donor/list exports, subscriber data, payment-request files, credentials/login sheets, billing/payment details, raw email archives, raw text-message archives, private Drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
 **Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-15
+
+## kc-spaces-fund-facebook-relief-cycle - Collective relief-cycle documentation
+
+**Status:** Strong with boundary
+**Support level:** Strong for the surviving public Page surface
+**Evidence class:** Public Facebook ledger / campaign site / public fundraiser / published article
+**Public wording:** KC Spaces Fund's surviving Facebook Page record documents a public relief cycle spanning applications, fundraising, funded-space spotlights, resources, and partner amplification.
+**Detailed public-safe wording:** Three terminal traversals materialized 40, 38, and 40 cards; the final slower pass reproduced 40, and all 21 stable media identities matched across passes. The 40-card ledger includes eight application-routing records, 13 fundraising records, and ten funded-space spotlights.
+**Where to project:** Knowledge bank only. No current website update.
+**Why it matters:** Shows how the collective translated a mutual-aid purpose into a usable public operating sequence.
+**Guardrail:** The count describes the surviving public surface, not a Meta export or deleted history. Preserve named organizer and fiscal-sponsor credit. Do not assign Page publishing to Jamie.
+**Do not say:** The project published only 40 posts; Jamie posted the Page record; Facebook activity proves applications, awards, reach, endorsement, or impact.
+**Protected boundaries:** Full transcripts, personal engagement identities, contacts, authenticated state, applicant/grantee files, donor data, and payment records stay offline.
+**Review owner:** Jamie / Codex archival review
+**Last reviewed:** 2026-07-15
+
+## kc-spaces-fund-public-outcome-snapshot - Fundraising and funded-space spotlights
+
+**Status:** Strong with boundary
+**Support level:** Strong for the public fundraiser and Page-record count
+**Evidence class:** Public GoFundMe / public Facebook ledger
+**Public wording:** The public fundraiser currently displays $9,590 raised against a $9,500 goal from 107 donations; ten surviving Page records separately name funded-space spotlights.
+**Detailed public-safe wording:** Public campaign materials name Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as organizers and Allied Media Projects as fiscal sponsor. The ten Page spotlights are public records, not a verified complete grantee population.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Preserves two concrete collective outcomes without transferring credit or overstating grant accounting.
+**Guardrail:** Do not attribute the fundraising result to Jamie or treat ten spotlight records as ten verified awards, the complete grantee population, or complete disbursement.
+**Do not say:** Jamie raised $9,590; KC Spaces Fund awarded exactly ten grants; the Page proves award amounts.
+**Protected boundaries:** Applicant, grantee, donor, subscriber, and payment records stay offline.
+**Review owner:** Jamie / Codex archival review
+**Last reviewed:** 2026-07-15
+
+## kc-spaces-fund-uniform-public-identity - Uniform domain and platform identity
+
+**Status:** Strong result / role held
+**Support level:** Strong for the public result; restricted for Jamie's naming contribution
+**Evidence class:** Public campaign and platform routes / Jamie first-person memory
+**Public wording:** KC Spaces Fund used a consistent identity across its domain, Facebook, X, Instagram, and GoFundMe route.
+**Detailed public-safe wording:** Jamie recalls supporting the search for a uniformly available project name. Keep that individual contribution restricted until a collaborator or contemporaneous record corroborates it.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Preserves a useful identity-system result while separating observable public structure from unresolved individual attribution.
+**Guardrail:** Uniform handles do not establish who proposed, approved, registered, administered, or posted through the accounts. Jamie states he was not the stakeholder or owner posting on Facebook.
+**Do not say:** Jamie alone named KC Spaces Fund; Jamie owned or administered every account; Jamie posted the Facebook record.
+**Protected boundaries:** Account-opening records, authentication state, credentials, and private collaborator discussions stay offline.
+**Review owner:** Jamie / collaborator confirmation needed for naming role
+**Last reviewed:** 2026-07-15
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 

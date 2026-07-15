@@ -97,6 +97,21 @@ snapshot, event-posted source articles, and the open individual-role and
 attendance research.
 
 See
+[projects/nycartc-facebook-post-population-2026-07-14.md](projects/nycartc-facebook-post-population-2026-07-14.md)
+for the exact-set-checked 444-record NYC Artist Coalition Facebook Page-post
+census, 33-route source inventory, campaign and stakeholder-addressing
+patterns, bounded interaction floor, and unresolved individual publisher and
+stakeholder-engagement questions.
+
+See
+[projects/kc-spaces-fund-facebook-posts.md](projects/kc-spaces-fund-facebook-posts.md)
+for the three-pass, 40-card surviving-public census of KC Spaces Fund's
+Facebook Page, its application/fundraising/spotlight relief cycle, ten named
+funded-space spotlights, public source routes, bounded interaction snapshot,
+and the strict distinction between collective Page evidence and Jamie's
+behind-the-scenes digital-infrastructure role.
+
+See
 [projects/jamie-wowlist-facebook-events.md](projects/jamie-wowlist-facebook-events.md)
 for the reconciled 21-record personal hosted-event chronology, six Sunday
 Dinner records, source-link and response inventories, public-safety boundary,

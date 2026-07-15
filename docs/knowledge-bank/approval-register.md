@@ -22,6 +22,14 @@ The repo is public. Approval here means approved for public-safe repository and 
   unmaterialized event, cohost credit, and RSVP-not-attendance language
   attached. Jamie's individual event-system role remains held for collaborator
   or task-level artifact corroboration.
+- NYC Artist Coalition Facebook posts: the exact-set-checked 444-record
+  surviving Page census, collective publication patterns, 33-route inventory,
+  and bounded aggregate interaction floor are approved for the public
+  knowledge bank. No new website projection is approved in this pass. Jamie's
+  predominant-but-shared use recollection remains restricted pending a native
+  export or collaborator proof notes. Do not turn stakeholder references into
+  inbound engagement, current counters into impact, or Page identity into
+  individual authorship.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - CallNYC Council-branded event graphic: may appear as a source artifact when
@@ -41,6 +49,13 @@ The repo is public. Approval here means approved for public-safe repository and 
   platform management attached.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording. Six surviving personal Facebook records, including the 100th and 200th milestones, are approved as bounded chronology evidence. The 200th may name Julia Fredenburg and Jamie as displayed cohosts and may note its direct WOW List event link. Do not treat six as the full project population.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
+- KC Spaces Fund Facebook posts: the bounded 40-card surviving-public census,
+  collective relief-cycle interpretation, ten named Page spotlights, public
+  fundraiser figures, and uniform project-identity result are approved for the
+  public knowledge bank. No new website projection is approved in this pass.
+  Do not assign Page publishing, account ownership, fundraising, organizing,
+  grant decisions, or naming authorship to Jamie. His naming-support memory
+  remains restricted pending collaborator or contemporaneous corroboration.
 - KC Town Hall role and funding: the official developer/presenter designation,
   CCED Board recommendation, Council acceptance, and 2019 appropriation are
   approved when the later withdrawal and 2024 reappropriation of the unused

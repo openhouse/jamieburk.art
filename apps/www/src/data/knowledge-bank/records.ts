@@ -101,6 +101,22 @@ import {
   wowListFacebookPostResearchTasks,
   wowListFacebookPostSources,
 } from "./wowlist-facebook-posts.ts";
+import {
+  nycartcFacebookPostCaptures,
+  nycartcFacebookPostClaims,
+  nycartcFacebookPostInquiries,
+  nycartcFacebookPostObservations,
+  nycartcFacebookPostResearchTasks,
+  nycartcFacebookPostSources,
+} from "./nycartc-facebook-posts-batch-2026-07-14.ts";
+import {
+  kcSpacesFundFacebookPostCaptures,
+  kcSpacesFundFacebookPostClaims,
+  kcSpacesFundFacebookPostInquiries,
+  kcSpacesFundFacebookPostObservations,
+  kcSpacesFundFacebookPostResearchTasks,
+  kcSpacesFundFacebookPostSources,
+} from "./kc-spaces-fund-facebook-posts.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -117,6 +133,8 @@ const knowledgeBankInput = {
     ...nycacFacebookEventCaptures,
     ...jamieWowListFacebookEventCaptures,
     ...wowListFacebookPostCaptures,
+    ...nycartcFacebookPostCaptures,
+    ...kcSpacesFundFacebookPostCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -132,6 +150,8 @@ const knowledgeBankInput = {
     ...nycacFacebookEventSources,
     ...jamieWowListFacebookEventSources,
     ...wowListFacebookPostSources,
+    ...nycartcFacebookPostSources,
+    ...kcSpacesFundFacebookPostSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -342,6 +362,8 @@ const knowledgeBankInput = {
     ...nycacFacebookEventObservations,
     ...jamieWowListFacebookEventObservations,
     ...wowListFacebookPostObservations,
+    ...nycartcFacebookPostObservations,
+    ...kcSpacesFundFacebookPostObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -357,6 +379,8 @@ const knowledgeBankInput = {
     ...nycacFacebookEventClaims,
     ...jamieWowListFacebookEventClaims,
     ...wowListFacebookPostClaims,
+    ...nycartcFacebookPostClaims,
+    ...kcSpacesFundFacebookPostClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -682,6 +706,8 @@ const knowledgeBankInput = {
     ...nycacFacebookEventResearchTasks,
     ...jamieWowListFacebookEventResearchTasks,
     ...wowListFacebookPostResearchTasks,
+    ...nycartcFacebookPostResearchTasks,
+    ...kcSpacesFundFacebookPostResearchTasks,
   ],
   researchInquiries: [
     {
@@ -726,6 +752,8 @@ const knowledgeBankInput = {
     ...nycacFacebookEventInquiries,
     ...jamieWowListFacebookEventInquiries,
     ...wowListFacebookPostInquiries,
+    ...nycartcFacebookPostInquiries,
+    ...kcSpacesFundFacebookPostInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,

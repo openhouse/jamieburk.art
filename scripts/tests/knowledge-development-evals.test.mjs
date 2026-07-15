@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { validateKnowledgeDevelopmentSuite } from "../check-knowledge-development-evals.mjs";
@@ -101,6 +102,26 @@ import {
   wowListFacebookPostSources,
 } from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts";
 import {
+  nycartcFacebookPostAudit,
+  nycartcFacebookPostCaptures,
+  nycartcFacebookPostClaims,
+  nycartcFacebookPostInquiries,
+  nycartcFacebookPostObservations,
+  nycartcFacebookPostResearchTasks,
+  nycartcFacebookPostReviewSummary,
+  nycartcFacebookPostSources,
+} from "../../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts";
+import {
+  kcSpacesFundFacebookPostAudit,
+  kcSpacesFundFacebookPostCaptures,
+  kcSpacesFundFacebookPostClaims,
+  kcSpacesFundFacebookPostInquiries,
+  kcSpacesFundFacebookPostObservations,
+  kcSpacesFundFacebookPostResearchTasks,
+  kcSpacesFundFacebookPostReviewSummary,
+  kcSpacesFundFacebookPostSources,
+} from "../../apps/www/src/data/knowledge-bank/kc-spaces-fund-facebook-posts.ts";
+import {
   classifyNycacMissionSignals,
   extractNycacSourcePostBody,
   normalizeNycacSourceRecordType,
@@ -171,6 +192,24 @@ const jamieWowListFacebookEventInventory = JSON.parse(
 const wowListFacebookPostInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+    "utf8",
+  ),
+);
+const nycartcFacebookPostInventory = JSON.parse(
+  readFileSync(
+    "docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
+    "utf8",
+  ),
+);
+const kcSpacesFundFacebookPostInventory = JSON.parse(
+  readFileSync(
+    "docs/knowledge-bank/data/kcspacesfund-public-facebook-post-ledger.json",
+    "utf8",
+  ),
+);
+const nycartcFacebookPostRouteInventory = JSON.parse(
+  readFileSync(
+    "docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
     "utf8",
   ),
 );
@@ -2760,5 +2799,323 @@ test("WOW List Facebook post population source pins the committed public fixture
   assert.deepEqual(
     execFileSync("git", ["show", `${match[1]}:${fixturePath}`]),
     readFileSync(fixturePath),
+  );
+});
+
+test("NYC Artist Coalition Facebook post population preserves and reconciles all 444 dispositions", () => {
+  const records = nycartcFacebookPostInventory.records;
+  assert.equal(records.length, 444);
+  assert.equal(new Set(records.map((record) => record.recordId)).size, 444);
+  assert.deepEqual(
+    records.map((record) => record.sequenceNewestToOldest),
+    Array.from({ length: 444 }, (_, index) => index + 1),
+  );
+  assert.ok(
+    records.every(
+      (record) =>
+        record.publicDetailStatus === "aggregate-only" &&
+        record.themeCount === record.themes.length &&
+        record.stakeholderGroupCount === record.stakeholderGroups.length,
+    ),
+  );
+  assert.equal(
+    Object.values(nycartcFacebookPostInventory.forms).reduce(
+      (sum, count) => sum + count,
+      0,
+    ),
+    444,
+  );
+  assert.equal(
+    Object.values(nycartcFacebookPostInventory.primaryThemes).reduce(
+      (sum, count) => sum + count,
+      0,
+    ),
+    444,
+  );
+  const digest = createHash("sha256")
+    .update(
+      records
+        .map((record) => record.recordId)
+        .sort()
+        .join("\n"),
+    )
+    .digest("hex");
+  assert.equal(
+    digest,
+    nycartcFacebookPostInventory.population.publicDispositionSetSha256,
+  );
+  assert.equal(
+    nycartcFacebookPostInventory.population.exactIdentitySetMatch,
+    true,
+  );
+  assert.match(
+    nycartcFacebookPostInventory.population.completenessBoundary,
+    /not a native Meta export.*deletion history.*lifetime total/i,
+  );
+});
+
+test("NYC Artist Coalition Facebook classifications, interactions, and routes remain reproducible", () => {
+  assert.deepEqual(nycartcFacebookPostInventory.forms, {
+    "event-route": 150,
+    "standalone-post": 138,
+    "original-media-post": 78,
+    "reshared-story": 52,
+    "source-or-resource-route": 26,
+  });
+  assert.deepEqual(nycartcFacebookPostInventory.primaryThemes, {
+    "nightlife-enforcement-and-governance": 157,
+    "general-coalition-communication": 95,
+    "commercial-rent-and-tenancy": 71,
+    "cultural-space-care": 47,
+    "public-meetings-and-participation": 25,
+    "funding-and-operational-resources": 21,
+    "event-and-cultural-distribution": 15,
+    "press-and-public-knowledge": 11,
+    "equity-solidarity-and-mutual-aid": 2,
+  });
+  assert.deepEqual(
+    nycartcFacebookPostInventory.stakeholderRouting.recordOccurrences,
+    {
+      "NYC Council members and Council": 88,
+      "NYC cultural and nightlife agencies": 40,
+      "Cultural and advocacy partners": 39,
+      "NYC business and enforcement agencies": 13,
+      "Press and public-information organizations": 12,
+    },
+  );
+  assert.match(
+    nycartcFacebookPostInventory.stakeholderRouting.boundary,
+    /do not establish that a stakeholder saw, authored, endorsed, replied to, or acted/i,
+  );
+
+  const frequencies =
+    nycartcFacebookPostInventory.visibleInteractionSnapshot
+      .unlinkableValueFrequencies;
+  const recordTotal = (rows) =>
+    rows.reduce((sum, row) => sum + row.recordCount, 0);
+  const valueTotal = (rows) =>
+    rows.reduce((sum, row) => sum + row.value * row.recordCount, 0);
+  for (const rows of Object.values(frequencies)) assert.equal(recordTotal(rows), 444);
+  assert.equal(valueTotal(frequencies.reactions), 2374);
+  assert.equal(valueTotal(frequencies.comments), 212);
+  assert.equal(valueTotal(frequencies.shares), 611);
+
+  const routes = nycartcFacebookPostRouteInventory.rows;
+  assert.equal(routes.length, 33);
+  assert.equal(new Set(routes.map((route) => route.routeId)).size, 33);
+  assert.equal(
+    routes.reduce((sum, route) => sum + route.occurrences, 0),
+    64,
+  );
+  assert.equal(
+    routes.filter((route) => route.disposition === "protected").length,
+    2,
+  );
+  assert.ok(
+    routes
+      .filter((route) => route.disposition === "protected")
+      .every((route) => route.publicUrl === null),
+  );
+});
+
+test("NYC Artist Coalition Facebook graph preserves collective credit and bank-only selection", () => {
+  assert.equal(nycartcFacebookPostCaptures.length, 2);
+  assert.equal(nycartcFacebookPostSources.length, 12);
+  assert.equal(nycartcFacebookPostObservations.length, 12);
+  assert.equal(nycartcFacebookPostClaims.length, 6);
+  assert.equal(nycartcFacebookPostResearchTasks.length, 3);
+  assert.equal(nycartcFacebookPostInquiries.length, 3);
+  assert.equal(nycartcFacebookPostAudit.ownerTimelineRecords, 444);
+  assert.equal(nycartcFacebookPostReviewSummary.records, 444);
+  assert.equal(nycartcFacebookPostReviewSummary.publisherAttribution, "unresolved");
+
+  const stakeholderClaim = nycartcFacebookPostClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-FACEBOOK-STAKEHOLDER-ROUTING",
+  );
+  const interactionClaim = nycartcFacebookPostClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS",
+  );
+  const roleClaim = nycartcFacebookPostClaims.find(
+    (claim) => claim.id === "CLM-JAMIE-NYCAC-FACEBOOK-PUBLISHING-MEMORY",
+  );
+  assert.match(stakeholderClaim.boundaries.join("\n"), /not inbound actions/i);
+  assert.match(
+    stakeholderClaim.antiClaims.join("\n"),
+    /Eighty-eight Council members engaged/i,
+  );
+  assert.match(interactionClaim.boundaries.join("\n"), /not historical peaks/i);
+  assert.equal(roleClaim.publicationState, "restricted");
+  assert.equal(roleClaim.selectionState, "dormant");
+  assert.match(roleClaim.boundaries.join("\n"), /Do not assign any specific post/i);
+  assert.ok(
+    nycartcFacebookPostClaims.every((claim) =>
+      claim.projections.every(
+        (projection) =>
+          projection.status !== "active" ||
+          projection.surfaces.every((surface) => !surface.startsWith("/")),
+      ),
+    ),
+  );
+
+  const ledgerPayload = JSON.stringify(nycartcFacebookPostInventory);
+  assert.doesNotMatch(
+    ledgerPayload,
+    /"(?:message|postText|commenters|reactors|friends|privateProfile|cookie|cookies|session|sessionToken|credentials|canonicalUrl)"\s*:/i,
+  );
+  assert.doesNotMatch(ledgerPayload, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(ledgerPayload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+});
+
+test("NYC Artist Coalition Facebook sources pin the committed public ledgers", () => {
+  for (const [sourceId, ledgerPath] of [
+    [
+      "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+      "docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
+    ],
+    [
+      "SRC-FB-NYCAC-PUBLIC-ROUTE-LEDGER-2026",
+      "docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
+    ],
+  ]) {
+    const source = nycartcFacebookPostSources.find((item) => item.id === sourceId);
+    const match = source.canonicalUrl.match(
+      /\/blob\/([0-9a-f]{40})\/((?:apps\/www\/src\/data\/knowledge-bank\/fixtures|docs\/knowledge-bank\/data)\/[a-z0-9-]+\.json)$/,
+    );
+    assert.ok(match);
+    assert.equal(match[2], ledgerPath);
+    assert.deepEqual(
+      execFileSync("git", ["show", `${match[1]}:${ledgerPath}`]),
+      readFileSync(ledgerPath),
+    );
+  }
+});
+
+test("KC Spaces Fund Facebook population preserves all 40 surviving public dispositions", () => {
+  const records = kcSpacesFundFacebookPostInventory.records;
+  assert.equal(records.length, 40);
+  assert.equal(new Set(records.map((record) => record.id)).size, 40);
+  assert.deepEqual(
+    kcSpacesFundFacebookPostInventory.completeness.terminalTraversalCounts,
+    [40, 38, 40],
+  );
+  assert.equal(
+    kcSpacesFundFacebookPostInventory.completeness
+      .stableMediaSetMatchedAcrossAllTraversals,
+    true,
+  );
+  assert.equal(
+    new Set(records.flatMap((record) => record.mediaIds ?? [])).size,
+    21,
+  );
+  assert.equal(
+    records.filter((record) => record.recordForm === "media-backed").length,
+    20,
+  );
+  assert.equal(
+    records.filter((record) => record.recordForm === "non-media").length,
+    20,
+  );
+  assert.equal(
+    records.filter((record) =>
+      record.missionModes.includes("funded-space-spotlight"),
+    ).length,
+    10,
+  );
+  assert.equal(
+    records.filter((record) =>
+      record.missionModes.includes("application-routing"),
+    ).length,
+    8,
+  );
+  assert.equal(
+    records.filter((record) => record.missionModes.includes("fundraising"))
+      .length,
+    13,
+  );
+  assert.equal(
+    records.reduce(
+      (sum, record) => sum + (record.visibleReactionSignals ?? 0),
+      0,
+    ),
+    119,
+  );
+});
+
+test("KC Spaces Fund Facebook graph preserves role, metric, and bank-only boundaries", () => {
+  assert.equal(kcSpacesFundFacebookPostCaptures.length, 1);
+  assert.equal(kcSpacesFundFacebookPostSources.length, 10);
+  assert.equal(kcSpacesFundFacebookPostObservations.length, 8);
+  assert.equal(kcSpacesFundFacebookPostClaims.length, 7);
+  assert.equal(kcSpacesFundFacebookPostResearchTasks.length, 3);
+  assert.equal(kcSpacesFundFacebookPostInquiries.length, 3);
+  assert.equal(kcSpacesFundFacebookPostAudit.survivingPublicRecords, 40);
+  assert.equal(kcSpacesFundFacebookPostReviewSummary.records, 40);
+  assert.equal(
+    kcSpacesFundFacebookPostReviewSummary.publisherAttribution,
+    "unresolved",
+  );
+  assert.equal(kcSpacesFundFacebookPostReviewSummary.websiteUpdate, "not-required");
+
+  const interactionClaim = kcSpacesFundFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-KCSPACESFUND-FACEBOOK-INTERACTION-SNAPSHOT",
+  );
+  const infrastructureClaim = kcSpacesFundFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-JAMIE-KCSPACESFUND-DIGITAL-INFRASTRUCTURE",
+  );
+  const namingClaim = kcSpacesFundFacebookPostClaims.find(
+    (claim) => claim.id === "CLM-JAMIE-KCSPACESFUND-NAMING-MEMORY",
+  );
+  const outcomeClaim = kcSpacesFundFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-KCSPACESFUND-FUNDRAISING-AND-SPOTLIGHTS",
+  );
+  assert.match(
+    interactionClaim.boundaries.join("\n"),
+    /not unique people or historical peak/i,
+  );
+  assert.match(interactionClaim.antiClaims.join("\n"), /reached 119 people/i);
+  assert.match(
+    infrastructureClaim.boundaries.join("\n"),
+    /Do not assign Jamie Facebook posting/i,
+  );
+  assert.equal(namingClaim.publicationState, "restricted");
+  assert.equal(namingClaim.selectionState, "dormant");
+  assert.match(namingClaim.boundaries.join("\n"), /not automatic corroboration/i);
+  assert.match(outcomeClaim.antiClaims.join("\n"), /Jamie raised \$9,590/i);
+  assert.ok(
+    kcSpacesFundFacebookPostClaims.every((claim) =>
+      claim.projections.every(
+        (projection) =>
+          projection.status !== "active" ||
+          projection.surfaces.every((surface) => !surface.startsWith("/")),
+      ),
+    ),
+  );
+
+  const ledgerPayload = JSON.stringify(kcSpacesFundFacebookPostInventory);
+  assert.doesNotMatch(
+    ledgerPayload,
+    /"(?:message|postText|fullTranscript|commenterName|reactorName|cookie|cookies|session|sessionToken|credentials|contactDetails)"\s*:/i,
+  );
+  assert.doesNotMatch(ledgerPayload, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(ledgerPayload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+});
+
+test("KC Spaces Fund Facebook source pins the committed public ledger", () => {
+  const ledgerPath =
+    "docs/knowledge-bank/data/kcspacesfund-public-facebook-post-ledger.json";
+  const source = kcSpacesFundFacebookPostSources.find(
+    (item) => item.id === "SRC-FB-KCSPACESFUND-PUBLIC-LEDGER-2026",
+  );
+  const match = source.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/((?:apps\/www\/src\/data\/knowledge-bank\/fixtures|docs\/knowledge-bank\/data)\/[a-z0-9-]+\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], ledgerPath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${ledgerPath}`]),
+    readFileSync(ledgerPath),
   );
 });
