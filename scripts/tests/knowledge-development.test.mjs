@@ -653,6 +653,16 @@ test("NTER CHNG preserves co-creator credit and the official exhibition connecti
   const task = knowledgeBank.researchTasks.find(
     (item) => item.id === "TASK-NTER-CHNG-ROLE-AND-TECHNICAL-DETAIL"
   );
+  const installerSource = knowledgeBank.sources.find(
+    (source) => source.id === "SRC-NTER-CHNG-INSTALLER-PLAN-2011"
+  );
+  const participantSource = knowledgeBank.sources.find(
+    (source) =>
+      source.id === "SRC-NTER-CHNG-PROMPTS-AND-EXHIBIT-NOTES-2011"
+  );
+  const artifactInquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-NTER-CHNG-GDRIVE-ARTIFACTS-2026"
+  );
 
   assert.ok(claims.every(Boolean));
   assert.ok(claims.every((claim) => claim.collectiveWork));
@@ -667,6 +677,27 @@ test("NTER CHNG preserves co-creator credit and the official exhibition connecti
   assert.ok(inquiry.limitations.some((item) => /not evidence that no copy survives/i.test(item)));
   assert.equal(task.status, "queued");
   assert.ok(task.successCriteria.some((item) => /Assign no role without/i.test(item)));
+  assert.equal(installerSource.visibility, "protected");
+  assert.equal(installerSource.canonicalUrl, undefined);
+  assert.equal(installerSource.archiveUrl, undefined);
+  assert.equal(installerSource.assetUrl, undefined);
+  assert.ok(
+    installerSource.supportsGenerally.some((item) =>
+      /software behavior, hosting, display systems, physical fabrication/i.test(item)
+    )
+  );
+  assert.equal(participantSource.visibility, "protected");
+  assert.ok(
+    participantSource.doesNotEstablish.some((item) =>
+      /permission to publish participant phone numbers or messages/i.test(item)
+    )
+  );
+  assert.equal(artifactInquiry.resultStatus, "partially-recovered");
+  assert.ok(
+    artifactInquiry.limitations.some((item) =>
+      /No participant message, phone number, attendance total, or impact metric/i.test(item)
+    )
+  );
   assert.equal(
     knowledgeBank.claims.some((claim) => claim.id.startsWith("CLM-NTR-CHNG")),
     false

@@ -19,6 +19,8 @@ form, and its later inclusion in *America: Now and Here*?
    collaborators, and Cocoon Gallery.
 6. Cross-checked the resulting record against The Pitch, Vimeo metadata, and
    the Nerman Museum exhibition page.
+7. Closely read two contemporaneous Google Docs supplied by Jamie, separating
+   public-safe production evidence from participant identifiers and messages.
 
 ## Recovered
 
@@ -34,6 +36,13 @@ form, and its later inclusion in *America: Now and Here*?
   artist statement.
 - The Nerman Museum record confirms the exhibition's Kansas City launch and
   local-plus-national artist structure.
+- An April 2011 installation plan ties the project to *America: Now and Here*
+  and coordinates software, hosting, display systems, projection, wiring,
+  fabrication, transport, installation, and gallery tuning.
+- The plan names Jamie in preparation logistics without allocating every task
+  among the three co-creators.
+- A second working document records a January 8-29, 2010 exhibition date range
+  and repeats the collective credit.
 
 ## Not Recovered
 
@@ -41,6 +50,8 @@ form, and its later inclusion in *America: Now and Here*?
   in the reviewed `nterchng.com` Wayback capture inventory.
 - No complete technical architecture, source-code record, audience count,
   message corpus, or role-specific production breakdown was recovered.
+- Participant phone numbers and message text in the protected working document
+  were deliberately excluded from the public knowledge bank.
 - No evidence was recovered that *NTER CHNG* appeared at every national-tour
   stop.
 
@@ -49,12 +60,13 @@ elsewhere.
 
 ## Lifecycle Result
 
-- One intake item integrated.
-- Five public sources created.
-- Eight atomic source assertions created.
+- Two intake items integrated.
+- Five public and two protected sources created.
+- Fourteen atomic source assertions created.
 - Three collective claims confirmed with boundaries.
 - One role-and-technical-detail research task queued.
 - One partially recovered research inquiry recorded.
+- One additional protected-artifact inquiry recorded as partially recovered.
 - Three archive-note projections selected for the readable project record.
 - The earlier `ntr-chng` lead, duplicate Pitch source, held role claim, and
   superseded role-recovery task were consolidated into this canonical record.

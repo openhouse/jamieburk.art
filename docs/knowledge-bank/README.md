@@ -138,3 +138,5 @@ The recovered record for the collaborative interactive installation
 *NTER CHNG* is in [projects/nter-chng.md](projects/nter-chng.md), with the
 Wayback research and explicit not-recovered boundaries documented in
 [2026-07-15-nter-chng-archive-production.md](runs/2026-07-15-nter-chng-archive-production.md).
+That record now also includes a privacy-bounded close read of two
+contemporaneous installation and exhibit working documents.

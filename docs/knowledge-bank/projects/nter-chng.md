@@ -26,6 +26,23 @@ as actors. The current sources do not assign software, scenic-design,
 motion-graphics, fabrication, or production responsibilities to a particular
 co-creator.
 
+## Installation Production
+
+A contemporaneous April 2011 working plan stages *NTER CHNG* for *America: Now
+and Here* in May. It treats the installation as one coordinated production
+surface spanning software behavior, server hosting, display computers,
+projectors, wiring, floor graphics, wall fabrication, transport, on-site
+assembly, and gallery-experience tuning. Jamie is named in preparation timing
+and workspace logistics, which supports his participation in the installation
+process; the plan does not assign every task to a particular collaborator or
+prove sole ownership of any discipline.
+
+A second working document preserves a January 8-29, 2010 exhibition date range
+and repeats the three-person project credit. Because it also contains
+participant phone numbers and message text, the knowledge bank retains only a
+public-safe aggregate record. No participant identifiers, messages, attendance
+totals, or impact claims are published or inferred.
+
 ## America: Now and Here
 
 The Wayback Machine preserves the exhibition's own Kansas City website. Its
@@ -48,6 +65,9 @@ presentation on May 11 and 12, 2011. The museum page does not itself name
 - [America: Now and Here Kansas City artist page, May 18, 2011 Wayback capture](https://web.archive.org/web/20110518071626/http://kansascity.americanowandhere.org/the-visual-artists/drew-bolton-jamie-burkart-and-garrett-fuselier/)
 - [Nerman Museum, America: Now and Here - Barbara Kruger](https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html)
 - [Public-safe personal Facebook event corpus](../corpora/jamie-wowlist-facebook-events-full-population-2026-07-15.json)
+- Protected April 2011 installation plan; locator withheld from the public repo.
+- Protected April 2011 prompt, response, and exhibit-information document;
+  participant identifiers, messages, and locator withheld.
 
 ## Open Research
 
@@ -55,6 +75,8 @@ presentation on May 11 and 12, 2011. The museum page does not itself name
   recovered in the reviewed Wayback inventory.
 - Establish the collaborators' role-specific technical and production credits
   through dated artifacts or bounded collaborator confirmation.
+- Corroborate the January 8-29, 2010 date range with an exhibition program or
+  institutional record.
 - Recover the original exhibition program, technical diagrams, source code,
   installation photographs, and complete date range where public-safe and
   rights-cleared.
