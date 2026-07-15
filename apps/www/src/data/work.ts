@@ -517,6 +517,7 @@ const workItemsInput = [
     visibility: "public-safe",
     proofBankIds: [
       "kc-town-hall-phase-one-delivery",
+      "kc-town-hall-neighborhood-service-operations",
       "kc-town-hall-public-benefit-documentation"
     ],
     whatWasUnclear:
@@ -563,12 +564,13 @@ const workItemsInput = [
       "Phase One cold-shell restoration completed in 2019",
       "Historic masonry, roofing, carpentry, welding, engineering, architecture, and plumbing coordination",
       "Neighborhood survey and contact-intake system",
+      "Monthly resident-service operations from request routing through recycling delivery and count tracking",
       "Public-benefit documentation",
       "$490,539 Council authorization and appropriation"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded and project-managed the effort, served as Phase One's daily on-site construction lead through cold-shell completion in 2019, and created a neighborhood survey and contact workflow; official records separately show board recommendation followed by Council authorization and appropriation.",
+        "Jamie co-founded and project-managed the effort, served as Phase One's daily on-site construction lead through cold-shell completion in 2019, created a neighborhood survey and contact workflow, and designed and ran the initial Tired of Tires field operation; official records separately show board recommendation followed by Council authorization and appropriation.",
       open:
         "Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation and the unused funds were reappropriated. The receiving organization's identity, transition terms, and reasons remain outside the public claim.",
       protected:

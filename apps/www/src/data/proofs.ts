@@ -592,6 +592,47 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-15"
   },
   {
+    id: "kc-town-hall-neighborhood-service-operations",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Designed and ran the initial monthly Tired of Tires field operation through Oak Park Neighborhood Association, connecting resident requests, city coordination, pickup routing, recycling delivery, neighborhood information, and count tracking.",
+    shortWording: "Ran an end-to-end neighborhood service workflow",
+    detailedPublicWording:
+      "Jamie designed and ran the initial monthly Tired of Tires field operation through Oak Park Neighborhood Association. He coordinated with city services, routed requests, collected and delivered tires to the city recycling center, recorded monthly counts, and paired pickup routes with neighborhood information distribution. Jamie and Julia co-authored the public workflow; KC Town Hall, Oak Park, later partners, and later operators retain collective credit for the service.",
+    sourceBasis:
+      "Jamie's public review confirmation; the archived Julia-and-Jamie service page; the Cleveland Ave KC public service post; and the complete 183-record census of the surviving KC Town Hall account.",
+    whyItMatters:
+      "Shows service design and implementation as one operating loop: intake, routing, partner coordination, field execution, handoff, measurement, and public follow-through.",
+    guardrail:
+      "Describe Jamie's initial field role as a firsthand confirmation. Credit Julia and Jamie for the public workflow and KC Town Hall with Oak Park Neighborhood Association and later partners for the collective service. Do not assign every later pickup or shared-account post to Jamie, imply municipal ownership, or use unaudited totals.",
+    doNotSay: [
+      "Jamie alone created and operated Tired of Tires through 2022",
+      "Tired of Tires was a City of Kansas City program",
+      "Every public post was written by Jamie",
+      "Tire or avoided-fee totals were independently audited",
+      "The Indian Mound expansion is independently confirmed"
+    ],
+    protectedBoundaries: [
+      "Resident addresses and contact records",
+      "Raw route logs and operational spreadsheets",
+      "Private city or partner correspondence",
+      "Unapproved participant photographs",
+      "Private handoff details"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: [
+      "service-design",
+      "field-operations",
+      "partner-coordination",
+      "intake-and-routing",
+      "operational-recordkeeping"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",

@@ -60,6 +60,13 @@ completed 2019 cold-shell scope, neighborhood survey system, and the boundary
 between a functional general-contractor role and an unverified formal license
 or permit classification.
 
+The [KC Town Hall and East Kansas City neighborhood-practice report](kc-town-hall-neighborhood-practice-2026-07-15.md)
+makes Jamie's initial Tired of Tires operations legible from intake through
+recycling delivery and public follow-through. It keeps related field
+communications and Cleveland Avenue civic-design work as reserve depth while
+holding Indian Mound expansion and capital-allocation influence for further
+research.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

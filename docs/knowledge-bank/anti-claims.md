@@ -234,6 +234,23 @@ remained responsible for every post through 2022. The archived Tired of Tires
 page identifies Julia and Jamie as authors; it credits KC Town Hall and Oak
 Park Neighborhood Association with the program.
 
+Jamie's public review confirmation supports his design, city-coordination, and
+field-operation role in the initial Tired of Tires service. Do not convert that
+bounded role into sole ownership or operation through 2022, erase Julia's
+workflow authorship or later operators and partners, or describe the service as
+a City-owned, City-funded, or City-endorsed program.
+
+Do not state the remembered Indian Mound expansion as independently confirmed
+until a dated neighborhood, city, operational, public-post, or collaborator
+record is linked.
+
+Jamie's Cleveland Ave Unify to Beautify role is a bounded firsthand reserve
+claim. Credit Pastor Lee with the corridor concept and preserve HENC,
+neighborhood-association, resident, official, and collaborator credit. Do not
+claim Jamie solely founded the program or that listening sessions and maps
+caused a particular capital allocation without proposition-level public
+records.
+
 Do not present project-account tire counts or avoided-disposal figures as
 independently audited outcomes. Preserve them as project-reported evidence
 until partner, recycling, disposal, municipal, or contemporaneous reporting
@@ -249,6 +266,11 @@ property, contact, and correspondence appendices remain protected.
 Do not describe the neighborhood survey as statistically representative or
 publish responses and contacts. Do not convert Jamie's memory of appreciation
 into a broad neighborhood-support or measured-impact claim.
+
+Do not publish resident addresses, phone numbers, route logs, raw service
+spreadsheets, survey responses, contact records, private city or partner
+correspondence, or unapproved participant photographs. Use "large print runs"
+rather than an exact handbill total until production records are reconciled.
 
 ## NTER CHNG
 

@@ -71,6 +71,20 @@ The NYC Artist Coalition / FairRentNYC case study may project:
 It must not project the held Office-of-Nightlife individual-causality or
 MARCH-disbanding causality candidates as settled claims.
 
+The KC Town Hall case study may project:
+
+- `CLM-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY`
+- `CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM`
+- `CLM-KCTH-PARTICIPATORY-CONSTRUCTION-PRACTICE`
+- `CLM-KC-TOWN-HALL-MUNICIPAL-RECORD`
+- `CLM-KCTH-RESIDENT-SERVICE-WORKFLOW`
+- `CLM-EAST-KC-TIRED-OF-TIRES-OPERATIONS`
+
+Keep `CLM-EAST-KC-FIELD-COMMUNICATIONS-PRACTICE` and
+`CLM-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE` as reserve depth. Do not project the
+held Indian Mound expansion or capital-allocation influence candidates as
+settled claims.
+
 The About page may use Soundings to make the existing river-expedition
 throughline concrete at more than 1,000 miles. It must continue to hold the exact
 Gulf landing candidate until a final landing record is recovered.

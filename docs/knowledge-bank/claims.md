@@ -483,6 +483,51 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## kc-town-hall-neighborhood-service-operations - Initial Tired of Tires operations
+
+**Status:** Ready with boundaries
+**Support level:** Strong firsthand role / strong public program record
+**Evidence class:** Jamie review confirmation / archived public service page / public social record
+**Public wording:** Designed and ran the initial monthly Tired of Tires field operation through Oak Park Neighborhood Association, connecting city coordination, resident requests, pickup routing, recycling delivery, neighborhood information, and count tracking.
+**Detailed public-safe wording:** Jamie coordinated with city services, routed resident requests, collected and delivered tires to the city recycling center, recorded monthly counts, and used pickup routes to distribute neighborhood information. Jamie and Julia co-authored the public workflow; KC Town Hall, Oak Park, Chestnut, city staff, residents, volunteers, other partners, and later operators retain collective credit for the service.
+**Where to project:** KC Town Hall case study and Work metadata.
+**Why it matters:** Shows an end-to-end service-design and field-implementation loop rather than generic community engagement.
+**Guardrail:** Jamie's initial operating role is a firsthand confirmation. Public sources independently establish the collective monthly workflow, not the operator responsible for every pickup or post. City coordination is not municipal ownership, funding, or endorsement.
+**Do not say:** Jamie alone operated Tired of Tires through 2022; every post was written by Jamie; Tired of Tires was a City program; tire or avoided-fee totals were independently audited; the Indian Mound expansion is independently confirmed.
+**Protected boundaries:** Resident addresses, contact records, route logs, raw spreadsheets, private city or partner correspondence, and unapproved photographs remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## east-kc-field-communications-practice - Service as an information surface
+
+**Status:** Firsthand reserve with boundaries
+**Support level:** Careful
+**Evidence class:** Jamie review confirmation / public program context
+**Public wording:** Jamie paired direct neighborhood service with pro bono design and print production, survey intake, neighborhood-information distribution, and operational recordkeeping across related East Kansas City efforts.
+**Detailed public-safe wording:** Pickup routes also carried KC Town Hall survey cards, Oak Park cleanup information, Cleveland Avenue listening materials, and Chestnut service information, making field delivery a recurring surface for participation and follow-through.
+**Where to project:** Knowledge-bank reserve; future civic-operations or field-implementation composition after audience review.
+**Why it matters:** Makes Jamie's integrated implementation practice legible across service delivery, communications, data capture, and public participation.
+**Guardrail:** The integrated role is Jamie's firsthand account. Public posts establish related cleanup, information, and partner-collection surfaces but do not identify Jamie as author of each artifact or post. Use "large print runs" rather than an exact count until records are reconciled.
+**Do not say:** Jamie alone operated every neighborhood program; every handbill or public post was authored by Jamie; the work represented every resident; service activity proves a funding outcome.
+**Protected boundaries:** Resident identities and locations, survey responses, contact data, route records, private correspondence, and unapproved participant photographs remain protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## east-kc-cleveland-ave-design-practice - Cleveland Avenue civic design
+
+**Status:** Firsthand reserve with boundaries
+**Support level:** Careful
+**Evidence class:** Jamie review confirmation / public HENC organizational context
+**Public wording:** Jamie was a co-founding contributor to HENC's Cleveland Ave Unify to Beautify program, contributing identity, mapping, photography, social, listening-session, resident-reporting, and print systems while crediting Pastor Lee with the corridor concept.
+**Detailed public-safe wording:** Jamie helped give Pastor Lee's insight that Cleveland Avenue connected multiple neighborhood-association areas usable public form through a logo and identity, photography and social communication, corridor maps, listening-session materials, resident-reporting surfaces, and large print runs.
+**Where to project:** Knowledge-bank reserve; future participatory-design or neighborhood-operations composition after public program records and collaborator review are expanded.
+**Why it matters:** Shows Jamie translating a place-based civic idea into artifacts and participation systems through which residents and officials could perceive and discuss a shared corridor.
+**Guardrail:** Pastor Lee retains originating credit. HENC, neighborhood associations, residents, elected officials, and other contributors retain collective credit. The HENC plan supplies organizational context but does not independently describe the program or Jamie's role.
+**Do not say:** Jamie originated the corridor concept; Jamie alone founded or operated Unify to Beautify; every mapped priority was representative or implemented; the program caused a specific capital allocation.
+**Protected boundaries:** Private meeting records, participant identities, raw reported locations, private strategy, unapproved maps or photographs, and unsupported capital-decision inferences remain outside public use.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

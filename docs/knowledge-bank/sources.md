@@ -61,6 +61,18 @@ scope completed in 2019. It does not establish contractor licensure, permit
 status, every trade's contractual scope, or completion of the full
 redevelopment.
 
+The July 15 East Kansas City neighborhood-practice pass adds five bounded
+sources: Jamie's public review confirmation of his initial Tired of Tires and
+Cleveland Avenue roles; a Cleveland Ave KC post documenting the monthly service
+and collective program credit; HENC's January 2024 strategic plan for coalition
+context; an Oak Park cleanup post; and a Chestnut partner-collection post. The
+new sources establish Jamie's firsthand role and the surrounding public
+program, information, and partner surfaces without assigning him every later
+pickup or post. They do not independently establish the Indian Mound expansion,
+exact handbill or tire totals, Cleveland Ave Unify to Beautify's complete team,
+or capital-allocation influence. See
+[kc-town-hall-neighborhood-practice-2026-07-15.md](kc-town-hall-neighborhood-practice-2026-07-15.md).
+
 The July 12 portfolio-strengthening batch and follow-ups add fourteen sources
 across four project areas: two official City Council transcripts of Jamie's public testimony, VICE
 and Village Voice reporting on NYC Artist Coalition, a City announcement of the

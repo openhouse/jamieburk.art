@@ -97,6 +97,14 @@ const kcTownHallPhaseOneSourceIds = [
   "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"
 ];
 
+const eastKcNeighborhoodPracticeSourceIds = [
+  "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026",
+  "SRC-CLEVELAND-AVE-KC-TIRED-OF-TIRES-2020",
+  "SRC-HENC-STRATEGIC-PLAN-2024",
+  "SRC-KCTH-OAK-PARK-DUMPSTER-DAY-2019",
+  "SRC-KCTH-CHESTNUT-TIRE-COLLECTION-2021"
+];
+
 const archivalProductionSourceIds = [
   "SRC-RAFT-SOUNDINGS-2007",
   "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013",
@@ -2663,6 +2671,172 @@ const criteria = [
         /functional general-contractor role/.test(proofData) &&
         /completion of Phase Two.*completion of the full redevelopment/i.test(caseStudy) &&
         !/It does not claim[^.]*completed construction/i.test(caseStudy)
+      );
+    })()
+  },
+  {
+    id: "east-kc-neighborhood-practice-lifecycle-lineage",
+    label: "East Kansas City neighborhood practice has source readings, promoted reserve depth, and explicit research holds",
+    pass: (() => {
+      const intake = intakeItems.find(
+        (item) => item.id === "INT-2026-07-15-EAST-KC-NEIGHBORHOOD-PRACTICE"
+      );
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-EAST-KC-NEIGHBORHOOD-PRACTICE-2026"
+      );
+      const promotedPairs = [
+        [
+          "CND-EAST-KC-TIRED-OF-TIRES-OPERATIONS",
+          "CLM-EAST-KC-TIRED-OF-TIRES-OPERATIONS"
+        ],
+        [
+          "CND-EAST-KC-FIELD-COMMUNICATIONS-PRACTICE",
+          "CLM-EAST-KC-FIELD-COMMUNICATIONS-PRACTICE"
+        ],
+        [
+          "CND-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE",
+          "CLM-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE"
+        ]
+      ];
+      const heldCandidateIds = [
+        "CND-EAST-KC-INDIAN-MOUND-EXPANSION",
+        "CND-EAST-KC-CLEVELAND-AVE-CAPITAL-INFLUENCE"
+      ];
+      return Boolean(
+        intake?.status === "processed" &&
+        intake.visibility === "public-safe" &&
+        eastKcNeighborhoodPracticeSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "partially-recovered" &&
+        promotedPairs.every(([candidateId, claimId]) => {
+          const candidate = candidateById.get(candidateId);
+          return (
+            candidate?.status === "promoted" &&
+            candidate.promotedClaimId === claimId &&
+            promotions.some(
+              (promotion) =>
+                promotion.candidateClaimId === candidateId &&
+                promotion.claimId === claimId &&
+                promotion.decision === "promoted"
+            )
+          );
+        }) &&
+        heldCandidateIds.every((candidateId) => {
+          const candidate = candidateById.get(candidateId);
+          return (
+            candidate?.status === "research-needed" &&
+            !candidate.promotedClaimId &&
+            promotions.some(
+              (promotion) =>
+                promotion.candidateClaimId === candidateId &&
+                promotion.decision === "held"
+            )
+          );
+        })
+      );
+    })()
+  },
+  {
+    id: "east-kc-tired-of-tires-role-and-collective-credit",
+    label: "Tired of Tires makes Jamie's initial operating role visible while preserving collective credit and later-operator boundaries",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-EAST-KC-TIRED-OF-TIRES-OPERATIONS"
+      );
+      const page = knowledgeBank.pages.find((item) => item.id === "kc-town-hall");
+      const occurrence = page?.occurrences.find(
+        (item) => item.id === "tired-of-tires-operations"
+      );
+      const caseStudy = readFileSync(
+        "apps/www/src/content/work/kc-town-hall.mdx",
+        "utf8"
+      );
+      const workData = readFileSync("apps/www/src/data/work.ts", "utf8");
+      const proofData = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+      return Boolean(
+        claim?.status === "confirmed-with-boundary" &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId ===
+              "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026" &&
+            item.relationship === "direct-support"
+        ) &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021" &&
+            item.relationship === "corroborating"
+        ) &&
+        claim.boundaries.some((item) => /Julia and Jamie|collective/i.test(item)) &&
+        claim.boundaries.some((item) => /through 2022|every operation|later/i.test(item)) &&
+        claim.boundaries.some((item) => /municipal ownership|City coordination/i.test(item)) &&
+        occurrence?.claimId === claim.id &&
+        occurrence.sourceIds?.includes(
+          "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026"
+        ) &&
+        occurrence.sourceIds?.includes("SRC-KCTH-TIRES-ARCHIVED-PAGE-2021") &&
+        /CLM-EAST-KC-TIRED-OF-TIRES-OPERATIONS/.test(caseStudy) &&
+        /kc-town-hall-neighborhood-service-operations/.test(workData) &&
+        /intake.*routing.*partner coordination.*field execution.*handoff.*measurement.*public follow-through/i.test(
+          proofData
+        )
+      );
+    })()
+  },
+  {
+    id: "east-kc-cleveland-indian-mound-and-capital-boundaries",
+    label: "Cleveland Avenue credit, Indian Mound status, and capital causality remain proposition-specific",
+    pass: (() => {
+      const clevelandClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE"
+      );
+      const indianMound = candidateById.get("CND-EAST-KC-INDIAN-MOUND-EXPANSION");
+      const capital = candidateById.get(
+        "CND-EAST-KC-CLEVELAND-AVE-CAPITAL-INFLUENCE"
+      );
+      const henc = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-HENC-STRATEGIC-PLAN-2024"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/kc-town-hall-neighborhood-practice-2026-07-15.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      return Boolean(
+        clevelandClaim?.status === "use-with-care" &&
+        clevelandClaim.projections.every((item) =>
+          item.surfaces.every((surface) => !surface.startsWith("/"))
+        ) &&
+        clevelandClaim.boundaries.some((item) => /Pastor Lee/i.test(item)) &&
+        clevelandClaim.antiClaims.some((item) => /capital allocation/i.test(item)) &&
+        indianMound?.status === "research-needed" &&
+        capital?.status === "research-needed" &&
+        henc?.doesNotEstablish.some((item) => /Jamie's individual|specific capital/i.test(item)) &&
+        /Indian Mound.*No dated.*recovered/is.test(report) &&
+        /No proposition-level record was recovered/is.test(report) &&
+        /Credit Pastor Lee.*corridor concept/is.test(antiClaims)
+      );
+    })()
+  },
+  {
+    id: "east-kc-neighborhood-practice-public-safety",
+    label: "Neighborhood practice preserves resident, operational, and protected-source boundaries",
+    pass: (() => {
+      const report = readFileSync(
+        "docs/knowledge-bank/kc-town-hall-neighborhood-practice-2026-07-15.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      return Boolean(
+        /resident addresses, phone numbers, contact forms, or route details/i.test(report) &&
+        /raw survey responses or contact records/i.test(report) &&
+        /raw operational spreadsheets/i.test(report) &&
+        /unapproved photographs/i.test(report) &&
+        /large print runs.*exact handbill total/is.test(antiClaims) &&
+        !publicRegistryText.includes("RESEARCH-EAST-KC-NEIGHBORHOOD-PRACTICE-2026-001") &&
+        !publicRegistryText.includes("CND-EAST-KC-INDIAN-MOUND-EXPANSION") &&
+        !publicRegistryText.includes("CND-EAST-KC-CLEVELAND-AVE-CAPITAL-INFLUENCE")
       );
     })()
   },

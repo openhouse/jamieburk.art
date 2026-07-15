@@ -984,6 +984,47 @@
         "independently measured neighborhood sentiment or impact",
         "completion of the full redevelopment or Phase Two"
       ]
+    },
+    {
+      "id": "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026",
+      "title": "Jamie Burkart public review confirmation of East Kansas City neighborhood practice",
+      "organization": "Jamie Burkart",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "publicCitation": "Jamie Burkart, public portfolio review confirmation of his East Kansas City neighborhood service and civic-design work, July 15, 2026.",
+      "publicNote": "Jamie confirms his initial Tired of Tires field-operations role, pro bono neighborhood design and print work, and co-founding contribution to Cleveland Ave Unify to Beautify while crediting Pastor Lee with the corridor concept.",
+      "doesNotEstablish": [
+        "independent corroboration of every remembered task, date, count, or handoff",
+        "Jamie's sole ownership or operation of collective neighborhood programs",
+        "municipal ownership, funding, endorsement, or independent validation of Tired of Tires",
+        "the date, scope, or duration of the remembered Indian Mound expansion",
+        "that Cleveland Ave Unify to Beautify caused a specific capital allocation",
+        "implementation of every resident priority"
+      ]
+    },
+    {
+      "id": "SRC-CLEVELAND-AVE-KC-TIRED-OF-TIRES-2020",
+      "title": "Cleveland Ave KC post about monthly free tire pickup",
+      "organization": "Cleveland Ave KC",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "Public post published in September 2020",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/ClevelandAveKC/posts/1633775000115273",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cleveland Ave KC, public Facebook post about monthly free residential tire pickup, 2020.",
+      "publicNote": "The post credits KC Town Hall and Oak Park Neighborhood Association with a monthly free residential tire-pickup service in historic East Kansas City and routes people to request pickup or volunteer.",
+      "doesNotEstablish": [
+        "Jamie's individual operating role",
+        "independently audited tire or savings totals",
+        "the complete service timeline or operator roster",
+        "the Indian Mound expansion"
+      ]
     }
   ],
   "claims": [
@@ -2095,6 +2136,71 @@
         "Do not convert observed appreciation or recurring conversation into a measured community-impact claim.",
         "Preserve the collective nature of the neighborhood-led vision."
       ]
+    },
+    {
+      "id": "CLM-EAST-KC-TIRED-OF-TIRES-OPERATIONS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie designed and ran the initial monthly Tired of Tires field operation through Oak Park Neighborhood Association: coordinating with city services, routing requests, collecting and delivering tires to the city recycling center, recording monthly counts, and using pickup routes to distribute neighborhood information. Jamie and Julia co-authored the public workflow; the service itself was collective and continued beyond Jamie's individually documented role.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie confirms that he designed, coordinated, and ran the initial Tired of Tires field operation through Oak Park Neighborhood Association; public sources independently establish the collective monthly service and its recurring public workflow.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/kc-town-hall-neighborhood-practice-2026-07-15"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's initial program design and city coordination",
+            "pickup routing, collection, recycling delivery, print distribution, and count tracking"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+          "relationship": "corroborating",
+          "supports": [
+            "Julia and Jamie's public workflow authorship",
+            "KC Town Hall and Oak Park Neighborhood Association program credit",
+            "request, volunteer, eligibility, schedule, and contact pathways"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CLEVELAND-AVE-KC-TIRED-OF-TIRES-2020",
+          "relationship": "corroborating",
+          "supports": [
+            "monthly free residential service",
+            "collective program credit",
+            "resident-request and volunteer pathways"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Jamie's individual operating role is a firsthand confirmation; public program sources do not independently identify the operator for each pickup.",
+        "Credit Julia and Jamie for the public workflow and KC Town Hall with Oak Park Neighborhood Association and later partners for the service.",
+        "Do not assign every operation or shared-account post through 2022 to Jamie.",
+        "City coordination does not establish municipal ownership, funding, endorsement, or independent validation.",
+        "Project-reported tire and avoided-fee totals remain unaudited and outside the active projection."
+      ]
     }
   ],
   "pages": [
@@ -2355,7 +2461,9 @@
         "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
         "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
         "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
-        "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
+        "SRC-KCTH-SOCIAL-TIRES-2021-RECAP",
+        "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026",
+        "SRC-CLEVELAND-AVE-KC-TIRED-OF-TIRES-2020"
       ],
       "occurrences": [
         {
@@ -2405,6 +2513,16 @@
             "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
             "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
             "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
+          ]
+        },
+        {
+          "id": "tired-of-tires-operations",
+          "claimId": "CLM-EAST-KC-TIRED-OF-TIRES-OPERATIONS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026",
+            "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+            "SRC-CLEVELAND-AVE-KC-TIRED-OF-TIRES-2020"
           ]
         }
       ]

@@ -466,7 +466,9 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
         "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
         "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
         "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
-        "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
+        "SRC-KCTH-SOCIAL-TIRES-2021-RECAP",
+        "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026",
+        "SRC-CLEVELAND-AVE-KC-TIRED-OF-TIRES-2020"
       ],
       occurrences: [
         {
@@ -510,6 +512,16 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
             "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
             "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
             "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
+          ]
+        },
+        {
+          id: "tired-of-tires-operations",
+          claimId: "CLM-EAST-KC-TIRED-OF-TIRES-OPERATIONS",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-JAMIE-EAST-KC-NEIGHBORHOOD-PRACTICE-CONFIRMATION-2026",
+            "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+            "SRC-CLEVELAND-AVE-KC-TIRED-OF-TIRES-2020"
           ]
         }
       ]
