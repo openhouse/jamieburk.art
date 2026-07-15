@@ -42,7 +42,13 @@ const prohibitedMutations = [
   "The WOW List Page was administered by Jamie.",
   "Member feedback improved the site.",
   "The team adopted member suggestions.",
-  "Jamie manages the WOW List Page."
+  "Jamie manages the WOW List Page.",
+  "Member feedback shapes the product.",
+  "Community members were invited to a workshop and shaped the platform.",
+  "Jamie controls the WOW List Page.",
+  "No evidence shows member input informed the roadmap, but members shaped the product.",
+  "Jamie managed the WOW List social presence.",
+  "Jamie managed the WOW List Facebook account."
 ];
 
 for (const mutation of prohibitedMutations) {
@@ -66,7 +72,12 @@ const boundedStatements = [
   "Jamie was not the Page manager.",
   "No evidence shows member input informed the roadmap.",
   "Member feedback did not improve the site.",
-  "The project was not community-governed."
+  "The project was not community-governed.",
+  "The product was not shaped by member input.",
+  "Member feedback never shaped the product.",
+  "The project was not member-led.",
+  "Jamie recalls managing the WOW List social presence.",
+  "Jamie believes he managed the WOW List Facebook account; corroboration is still needed."
 ];
 
 for (const statement of boundedStatements) {
