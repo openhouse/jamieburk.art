@@ -37,12 +37,43 @@ The Nerman Museum page supplies institutional context for America: Now and
 Here's 2011 Kansas City launch and multi-venue program. It does not name NTER
 CHNG and is not used as the direct source for the project's inclusion.
 
+## Additional Protected Artifacts
+
+On July 15, Jamie supplied two Google Docs for protected archival review. Drive
+metadata dates their creation to April 2011 and records July 2026
+modifications. The current text is therefore treated as contemporaneous-origin
+project material, not as a frozen or immutable 2011 revision. The underlying
+links are withheld because access status has not been verified and the records
+contain private material.
+
+The first document is an America: Now and Here installer plan. It records a
+staged production workflow spanning organizer permissions, server-side and
+wall-side software, rapid-message queue behavior, hosting, display computers,
+projectors, architectural wall fabrication, floor instructions, wiring,
+networking, and gallery-experience tuning. It is a plan and task inventory,
+not completion evidence or an individual role assignment.
+
+The second preserves January 2010 exhibit language describing NTER CHNG as a
+shared work by Drew Bolton, Jamie Burkart, and Garrett Fuselier. It frames the
+work as both software application and architectural installation, transforming
+private one-to-one texting into a public many-to-many social information
+space. The document also contains phone numbers and participant messages, so
+the raw text remains protected. Its project language may derive from press
+materials, but it does not prove recovery of the final linked press-release
+PDF.
+
 ## Matured Claim
 
 America: Now and Here's official archived sites document NTER CHNG in its 2011
 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett
 Fuselier together as visual artists. A separate official article documents
 visitor use of the text-message and projected-display interaction.
+
+The protected project records add a bounded production-system claim: software,
+hosting, display hardware, architectural fabrication, wiring, networking, and
+gallery tuning were planned as one coordinated installation workflow. The
+records preserve the work's many-to-many interaction rationale and collective
+maker credit but do not decompose individual responsibilities.
 
 ## Boundaries
 
@@ -55,6 +86,12 @@ visitor use of the text-message and projected-display interaction.
   name NTER CHNG.
 - Archived phone numbers and participant-submitted messages are intentionally
   excluded from the public repository.
+- The protected Google Drive links, private worksite and hosting details, and
+  full document text are excluded from the public repository.
+- The installer records planned work, not proof that every task was completed
+  exactly as written.
+- Drive creation dates support contemporaneous origin; July 2026 modifications
+  prevent treating the current documents as untouched 2011 snapshots.
 - Public archive access does not grant image, video, participant-text, or other
   republication rights.
 - A press-release PDF linked from the archived project site was not recovered
@@ -62,10 +99,11 @@ visitor use of the text-message and projected-display interaction.
 
 ## Next Research
 
-Recover the original code, technical diagrams, installation checklist, press
-materials, and cleared media. Ask Drew Bolton and Garrett Fuselier to confirm
-role language and complete credit before a future visual or hiring-site
-projection.
+The installer plan and project-text artifact are now partially recovered.
+Continue by recovering original code, technical diagrams, a final press
+release, cleared media, and completion evidence. Ask Drew Bolton and Garrett
+Fuselier to confirm role language and complete credit before a future visual
+or hiring-site projection.
 
 ## Publication Decision
 

@@ -66,6 +66,15 @@ Approved public artifact examples for this launch pass include:
   NTER CHNG's text-message input and projected display.
 - Nerman Museum's institutional page for the 2011 Kansas City launch context;
   it does not itself name NTER CHNG.
+- A protected April 2011 NTER CHNG installer plan documenting the intended
+  America: Now and Here production workflow across software, hosting, display
+  hardware, architectural fabrication, wiring, networking, and gallery tuning.
+  It is a plan, not completion evidence, and its Google Drive link and private
+  production details are withheld.
+- A protected NTER CHNG project-text document preserving shared Drew Bolton,
+  Jamie Burkart, and Garrett Fuselier credit and the one-to-one to many-to-many
+  interaction rationale. Participant messages, phone numbers, the underlying
+  Drive link, and the full first-party document remain protected.
 - KCUR's 2016 reporting on Jamie's participatory public-history program around
   Kansas City's 8th Street Tunnel.
 - Daisy Prince's 2018 Document Journal account of the Cabaret Law repeal and

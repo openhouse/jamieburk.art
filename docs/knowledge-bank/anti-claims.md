@@ -108,6 +108,13 @@ account of visitors using the installation into attendance, unique-participant,
 reach, endorsement, adoption, or impact claims. Do not reproduce archived
 phone numbers or participant-submitted messages.
 
+Do not publish the protected Google Drive links, participant text, phone
+numbers, or private worksite, family, server, and hosting details. Do not treat
+the installer plan as proof that every task was completed, assign its tasks to
+Jamie alone, or describe the current Google Docs as untouched 2011 snapshots.
+The protected project-text artifact does not establish recovery of the final
+linked press-release PDF.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

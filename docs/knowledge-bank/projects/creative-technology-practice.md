@@ -44,15 +44,29 @@ page](https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america
 supplies institutional context for the Kansas City launch. It does not itself
 name NTER CHNG, so it is not used as the direct inclusion source.
 
+Two protected, contemporaneous-origin project documents add operational and
+conceptual depth. An April 2011 installer plan records a coordinated workflow
+across permissions, software queue behavior, hosting, display hardware,
+architectural fabrication, wiring, networking, and gallery tuning. A second
+project-text document preserves the shared three-person credit and describes
+the interaction as turning private one-to-one text exchange into a public
+many-to-many social information space. Their links and raw contents remain
+protected.
+
 **Supported:** collaborative maker credit, the software-and-architecture form,
-real-time text participation, America: Now and Here exhibition inclusion, and
-observed visitor use.
+real-time text participation, America: Now and Here exhibition inclusion,
+observed visitor use, and a planned production system spanning software,
+hosting, display hardware, fabrication, wiring, networking, and gallery tuning.
 
 **Boundary:** the public records do not establish the detailed division of
 software, design, construction, or production labor. This is not a solo-credit
 claim. Observed use is not a quantified audience or impact claim. Archived
 phone numbers and participant-submitted messages are excluded, and archive
-access does not grant media republication rights.
+access does not grant media republication rights. The installer is a plan, not
+proof that every task was completed or that any one collaborator performed it.
+The protected documents were modified in 2026 and are not treated as frozen
+2011 revisions; their Drive links, private production details, and full text
+are withheld.
 
 ## 2013: A Sorted Audio File
 
@@ -91,8 +105,10 @@ useful than the site's current composition.
 
 ## Open Research
 
-Recover code, technical diagrams, the linked press release, original assets,
-collaborator confirmation, and project-level rights records. Any future visual
-projection must make the interaction legible while preserving complete credit,
-participant privacy, and permission. The linked press-release PDF was not
-recovered in this pass; this does not establish that it did not exist.
+The installer plan and project-text artifact are partially recovered. Continue
+by recovering code, technical diagrams, the final linked press release,
+completion records, original assets, collaborator confirmation, and
+project-level rights records. Any future visual projection must make the
+interaction legible while preserving complete credit, participant privacy, and
+permission. The final linked press-release PDF was not recovered in this pass;
+this does not establish that it did not exist.

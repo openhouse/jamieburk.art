@@ -821,14 +821,25 @@ export function evaluateNterChngArchiveExpansion({
     "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
     "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
     "SRC-NERMAN-AMERICA-NOW-HERE-2011",
+    "LEAD-NTER-CHNG-GDRIVE-ARTIFACTS-2026",
+    "SRC-GDRIVE-NTER-CHNG-INSTALLER-2011",
+    "SRC-GDRIVE-NTER-CHNG-PROJECT-TEXT-2011",
     "CLM-NTER-CHNG-AMERICA-NOW-HERE-2011",
+    "CLM-NTER-CHNG-PRODUCTION-SYSTEM-2011",
     "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
     "PUB-NTER-CHNG-AMERICA-NOW-HERE-2011",
+    "PUB-NTER-CHNG-PRODUCTION-SYSTEM-2011",
     "Drew Bolton",
     "Jamie Burkart",
     "Garrett Fuselier",
     "The Nerman Museum page establishes institutional and launch context but does not itself name NTER CHNG",
     "Archived phone numbers and participant-submitted messages are excluded",
+    "plan and task inventory, not proof that every task was completed",
+    "contemporaneous-origin project material rather than a frozen 2011 revision",
+    "neither the raw text nor either Google Drive link enters the public repository",
+    'visibility: "protected"',
+    'preservationStatus: "private"',
+    "protectedLocatorId",
     "not recovered is not evidence that it did not exist",
     'decision: "reserve"'
   ]);
@@ -838,6 +849,11 @@ export function evaluateNterChngArchiveExpansion({
     "observed use",
     "does not name NTER CHNG",
     "Archived phone numbers and participant-submitted messages are intentionally excluded",
+    "Additional Protected Artifacts",
+    "not as a frozen or immutable 2011 revision",
+    "plan and task inventory",
+    "underlying links are withheld",
+    "does not prove recovery of the final linked press-release PDF",
     "Not recovered is not evidence that it did not exist",
     "does not automatically enter the current hiring site"
   ]);
@@ -847,18 +863,33 @@ export function evaluateNterChngArchiveExpansion({
     "lists the collaborators as visual artists",
     "observed visitor use",
     "It does not itself name NTER CHNG",
-    "participant-submitted messages are excluded"
+    "participant-submitted messages are excluded",
+    "planned production system spanning software",
+    "installer is a plan",
+    "not treated as frozen 2011 revisions",
+    "links, private production details, and full text are withheld"
   ]);
   requireFragments("Source-coverage ledger", sourceCoverage, [
     "nine public records spanning 2006-2016",
+    "plus two protected NTER CHNG project records",
     "official Kansas City artist page",
     "direct exhibition evidence from contextual institutional evidence"
   ]);
   requireFragments("Creative-technology anti-claims", antiClaims, [
     "Do not say the Nerman Museum page names NTER CHNG",
     "Do not convert an official account of visitors using the installation",
-    "Do not reproduce archived phone numbers or participant-submitted messages"
+    "Do not reproduce archived phone numbers or participant-submitted messages",
+    "Do not publish the protected Google Drive links",
+    "Do not treat the installer plan as proof that every task was completed",
+    "untouched 2011 snapshots",
+    "does not establish recovery of the final linked press-release PDF"
   ]);
+
+  const protectedRecordCount = (expansionBatch.match(/visibility:\s*"protected"/g) ?? []).length;
+  const protectedLocatorCount = (expansionBatch.match(/protectedLocatorId/g) ?? []).length;
+  if (protectedRecordCount < 2 || protectedLocatorCount < 2) {
+    missing.push("Both NTER CHNG Google Drive records must remain protected and use protected locators.");
+  }
 
   const publicBundle = [
     framework,
@@ -873,20 +904,29 @@ export function evaluateNterChngArchiveExpansion({
     /\/Volumes\//,
     /Mobile Documents/,
     /com~apple~CloudDocs/,
+    /docs\.google\.com\/document\/d\//,
     /(?:\+?1[\s.-]?)?\(?[2-9]\d{2}\)?[\s.-]\d{3}[\s.-]\d{4}/
   ];
   if (forbiddenPrivateMarkers.some((pattern) => pattern.test(publicBundle))) {
-    missing.push("Public NTER CHNG expansion contains a local filesystem path or phone number.");
+    missing.push("Public NTER CHNG expansion contains a local filesystem path, raw Drive link, or phone number.");
   }
 
   if (
     publicSite.includes("CLM-NTER-CHNG-AMERICA-NOW-HERE-2011") ||
-    publicSite.includes("America: Now and Here's official sites document NTER CHNG")
+    publicSite.includes("CLM-NTER-CHNG-PRODUCTION-SYSTEM-2011") ||
+    publicSite.includes("America: Now and Here's official sites document NTER CHNG") ||
+    publicSite.includes("Protected project records show the operational depth behind NTER CHNG")
   ) {
     missing.push("Reserve NTER CHNG exhibition claim must not silently appear on the public site.");
   }
-  if (/Jamie (?:solely|alone) (?:created|built|made) NTER CHNG/i.test(publicSite)) {
+  if (/Jamie (?:solely|alone) (?:created|built|made|implemented|designed|produced) NTER CHNG/i.test(publicSite)) {
     missing.push("Public site assigns sole NTER CHNG credit where shared maker credit is required.");
+  }
+  if (/every installer task was completed|installer (?:proves|establishes) (?:the )?(?:work|tasks?) (?:was|were) completed/i.test(publicSite)) {
+    missing.push("Public site converts the NTER CHNG installer plan into completion evidence.");
+  }
+  if (/Google Docs? (?:are|is) (?:an? )?(?:untouched|immutable|frozen) 2011/i.test(publicSite)) {
+    missing.push("Public site treats modified NTER CHNG Google Docs as immutable 2011 snapshots.");
   }
 
   return missing;

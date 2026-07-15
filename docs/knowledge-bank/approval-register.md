@@ -42,6 +42,13 @@ The repo is public. Approval here means approved for public-safe repository and 
   contextual; exclude archived contact details and participant messages; do
   not infer individual task division, attendance, reach, endorsement, impact,
   or media rights.
+- NTER CHNG production system: two protected, contemporaneous-origin project
+  documents are approved as reserve evidence for the planned software,
+  hardware, architectural, network, and gallery-tuning workflow and for the
+  many-to-many interaction rationale. Keep shared maker credit; do not publish
+  the Drive links or raw records, convert plans into completion claims, treat
+  modified documents as frozen 2011 revisions, or infer individual task
+  ownership.
 - KC Town Hall funding: the public record supports the board's unanimous recommendation, the Council's $490,539 allocation, and authorization of funding-agreement negotiations. Do not imply agreement execution, receipt, disbursement, project completion, later property or operating status, or Jamie's sole causality for the vote.
 - KC Town Hall lifecycle: treat Jamie's involvement as historical. Retain the mission-aligned stewardship transition as firsthand research context; do not publish personal circumstances or name the receiving organization without permission and corroboration.
 - KC Town Hall Phase One: reserve wording may say Jamie served in the day-to-day field-delivery and project-management function and that the packet names him founder and project manager. Treat “general contractor” as a firsthand functional description, not proof of licensure or a formal contractual title. The packet supports planned, not independently verified actual, 2019 completion.

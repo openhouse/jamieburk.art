@@ -397,3 +397,30 @@ fails on private-path or contact leakage, licensure inflation, sole credit,
 capital causality, 99-pickup inflation, or silent site projection. Four new
 negative tests bring the deterministic eval suite to **100 passing tests**; the
 launch evaluator remains **100/100** with all automated hard gates passing.
+
+## NTER CHNG Protected Artifact Pass
+
+The July 15 pass close-read two contemporaneous-origin Google Docs supplied by
+Jamie. An April 2011 America: Now and Here installer plan adds protected
+evidence of the intended production system across permissions, software queue
+behavior, hosting, display hardware, architectural fabrication, wiring,
+networking, and gallery tuning. A second project-text document preserves
+shared Drew Bolton, Jamie Burkart, and Garrett Fuselier credit and describes
+the interaction as transforming private one-to-one texting into public
+many-to-many exchange.
+
+The underlying links and raw documents remain outside the public repository.
+One contains phone numbers and participant messages; both were modified in
+July 2026, so Drive creation dates establish contemporaneous origin without
+making the current text an immutable 2011 snapshot. The installer is a plan and
+task inventory, not proof of completion or individual task ownership. The
+project text may preserve press language but does not establish recovery of the
+final linked press-release PDF.
+
+The hill climb added two protected sources, one bounded reserve claim, one
+reserve publication decision, updated project and intake records, and two
+negative evals. The hard gate now rejects raw Drive links, public promotion of
+protected sources, plan-to-completion inflation, immutable-document inflation,
+sole credit, and silent site projection. The deterministic suite passes all
+**102 tests**; schema, citation, and public-safety checks pass; and the launch
+evaluator remains **100/100** with every automated hard gate passing.

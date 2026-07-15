@@ -143,6 +143,13 @@ Claudette's Theatre on Wheels is also held in reserve: a public-source-backed
 augmented-reality collaboration that may become useful for cultural,
 public-memory, or creative-technology contexts after media-rights review.
 
+NTER CHNG's protected installer and project-text records are reserve depth.
+They strengthen the operational account of a software-and-architectural
+installation without adding visible site copy. Future projection requires
+audience need, collaborator-safe role language, completion evidence where
+relevant, and continued exclusion of raw participant and private production
+material.
+
 The participatory-systems longitudinal frame remains on hold pending broader
 cross-project corroboration.
 

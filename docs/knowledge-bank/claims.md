@@ -359,9 +359,24 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Converts Jamie's exhibition memory into a direct first-party institutional record while preserving the collaboration and interaction.
 **Guardrail:** The Nerman Museum page is context and does not itself name NTER CHNG. Observed use is not a quantified audience, endorsement, or impact measure.
 **Do not say:** Jamie solely created NTER CHNG; the Nerman Museum page names the project; the sources establish attendance, unique participants, adoption, or impact.
-**Protected boundaries:** Do not reproduce archived phone numbers, participant messages, or media without separate rights and privacy review.
+**Protected boundaries:** Do not reproduce archived phone numbers, participant messages, private production details, Google Drive links, or media without separate rights and privacy review.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-15
+
+## nter-chng-production-system - Software, physical systems, and participation
+
+**Status:** Reserve
+**Support level:** Bounded
+**Evidence class:** Protected contemporaneous-origin project records / corroborating official exhibition sources
+**Public wording:** Protected project records show the operational depth behind NTER CHNG: software behavior, hosting, display hardware, architectural fabrication, wiring, networking, and gallery tuning were planned as one installation system.
+**Detailed public-safe wording:** An April 2011 installer plan maps the intended America: Now and Here workflow, while a second project-text document preserves shared maker credit and the transformation of private one-to-one texting into public many-to-many exchange.
+**Where to project:** Knowledge-bank creative-technology project note only.
+**Why it matters:** Shows an early instance of integrating software, physical production, participation, and implementation as one coordinated system.
+**Guardrail:** The installer is a plan, not proof that every task was completed. Credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together; individual software, fabrication, design, and production roles remain unresolved. Drive creation dates support contemporaneous origin, but July 2026 modifications prevent treating the current documents as immutable 2011 snapshots.
+**Do not say:** Every installer task was completed; Jamie alone implemented the work; the Google Docs are untouched 2011 snapshots; the project-text document is the recovered final press-release PDF.
+**Protected boundaries:** Do not publish the underlying Google Drive links, phone numbers, participant messages, private worksite or hosting details, or full document text.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
 
 ## jamie-facebook-post-population-accounting - Personal authored-post population
 

@@ -137,13 +137,16 @@ not lifetime totals. A file not materialized locally is not absent.
   30-plus-page aggregate. An earlier 12-page April 29 snapshot remains
   separately recorded so the two artifacts cannot be substituted.
 - `creative-technology-practice` enters as source-backed reserve depth through
-  nine public records spanning 2006-2016. Four NTER CHNG records now include
-  the archived project site, America: Now and Here's official Kansas City
-  artist page, an official account of visitor use, and Nerman Museum launch
-  context. The claims preserve collaborator credit and distinguish direct
-  exhibition evidence from contextual institutional evidence. They do not
-  imply uninterrupted full-time practice, complete role decomposition,
-  audience reach, commercial impact, or media rights.
+  nine public records spanning 2006-2016, plus two protected NTER CHNG project
+  records. Four public NTER CHNG records include the archived project site,
+  America: Now and Here's official Kansas City artist page, an official account
+  of visitor use, and Nerman Museum launch context. A protected installer plan
+  and project-text document add production-system and interaction-rationale
+  depth. The claims preserve collaborator credit and distinguish direct
+  exhibition evidence from contextual institutional evidence and protected
+  first-party records. They do not imply completed installer tasks,
+  uninterrupted full-time practice, complete role decomposition, audience
+  reach, commercial impact, or media rights.
 - The July 11 approved-resume close read removes the CRS page count from the
   open proof queue. WOW List reach, Sunday Dinner and 196 aggregates, the HJE
   growth-contribution relationship, exact NYC Artist Coalition co-founder
