@@ -52,7 +52,7 @@ const proofMap = [
     project: "KC Spaces Fund",
     href: "/work/technical-operations#public-facing-launch-and-adoption",
     proof:
-      "Jamie built behind-the-scenes web infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+      "Jamie built campaign web infrastructure and supported an available cross-channel identity for a collaborator-led mutual-aid campaign."
   },
   {
     project: "KC Town Hall",

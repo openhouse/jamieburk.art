@@ -92,6 +92,14 @@ through Jamie's campaign-site implementation and Local Law 220, to the City's
 reported replacement of M.A.R.C.H. with CURE in December 2023.
 
 See
+[projects/kc-spaces-fund-facebook-posts.md](projects/kc-spaces-fund-facebook-posts.md)
+and its
+[40-row public-safe census](../../apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json)
+for the complete capture-date KC Spaces Fund Facebook population, mission and
+fundraising routes, funded-space spotlights, bounded interaction signals,
+collective credit, and Jamie's documented digital-infrastructure boundary.
+
+See
 [projects/kc-town-hall.md](projects/kc-town-hall.md)
 for the official sequence from CCED Board recommendation through Council
 acceptance, negotiation authority, and appropriation, followed by
