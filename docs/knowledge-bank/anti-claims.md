@@ -43,6 +43,12 @@ Do not name collaborators unless approved.
 
 ## 196 / Sunday Dinner
 
+Do not present Jamie as Sunday Dinner's sole host or sole creator. Distinguish
+Jamie's 196 Artists Residency founder role from the separate Sunday Dinner
+co-host role, and credit Julia Fredenberg wherever Sunday Dinner hosting is
+named. Do not collapse the two date ranges or leave the 300+ gathering and 20+
+resident-artist figures unallocated between the two practices.
+
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 

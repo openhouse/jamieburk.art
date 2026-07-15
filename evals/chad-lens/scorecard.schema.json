@@ -13,7 +13,7 @@
     "releaseRecommendation"
   ],
   "properties": {
-    "evalId": { "const": "chad-lens-v1" },
+    "evalId": { "type": "string", "const": "chad-lens-v1" },
     "evaluatedAt": { "type": "string" },
     "evaluator": { "type": "string", "minLength": 1 },
     "revision": { "type": "string", "minLength": 1 },
@@ -41,7 +41,7 @@
           "antiGamingCheck"
         ],
         "properties": {
-          "id": { "const": "chad-lens" },
+          "id": { "type": "string", "const": "chad-lens" },
           "score": { "type": "integer", "minimum": 1, "maximum": 5 },
           "confidence": { "enum": ["low", "medium", "high"] },
           "dimensionFindings": {

@@ -12,6 +12,51 @@ test("the canonical lifecycle corpus is internally consistent", () => {
   assert.deepEqual(validateKnowledgeLifecycle(), []);
 });
 
+test("the July 13 ten-source ingestion remains complete and decomposed", () => {
+  const sourceIds = [
+    "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",
+    "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE",
+    "SRC-NYCA-CABARET-CAMPAIGN-2017",
+    "SRC-NYCA-SAVE-NYC-SPACES",
+    "SRC-NYCA-MIXMAG-CABARET-2017",
+    "SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017",
+    "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018",
+    "SRC-KC-TOWN-HALL-CCED-2019",
+    "SRC-KC-TOWN-HALL-CCED-2021",
+    "SRC-CLAUDETTE-MICHAEL-REES"
+  ];
+  const canonicalSources = new Set(knowledgeBank.sources.map(({ id }) => id));
+  const observedSources = new Set(knowledgeLifecycle.observations.map(({ sourceId }) => sourceId));
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-INGESTION-2026-07-13");
+
+  assert.equal(sourceIds.length, 10);
+  assert.ok(sourceIds.every((id) => canonicalSources.has(id)));
+  assert.ok(sourceIds.every((id) => observedSources.has(id)));
+  assert.deepEqual(task?.sourceIds, sourceIds);
+  assert.equal(task?.status, "completed");
+});
+
+test("new public projections preserve exact-surface human approval", () => {
+  const expected = new Map([
+    ["CND-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING", "/work/196-sunday-dinner"],
+    ["CND-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL", "/work/fair-rent-nyc"],
+    ["CND-NYCA-COMMERCIAL-RENT-ADVOCACY", "/work/fair-rent-nyc"],
+    ["CND-KC-TOWN-HALL-PUBLIC-RECORD", "/work/kc-town-hall"]
+  ]);
+  const superseded = new Set(
+    knowledgeLifecycle.promotionDecisions.map(({ supersedesDecisionId }) => supersedesDecisionId).filter(Boolean)
+  );
+
+  for (const [candidateId, surface] of expected) {
+    const candidate = knowledgeLifecycle.candidateClaims.find(({ id }) => id === candidateId);
+    const decision = knowledgeLifecycle.promotionDecisions.find(({ id }) => candidate?.promotionDecisionIds.includes(id) && !superseded.has(id));
+    assert.equal(candidate?.maturity, "promoted");
+    assert.equal(decision?.reviewAuthority, "jamie-approved");
+    assert.equal(decision?.humanReviewStatus, "approved");
+    assert.ok(decision?.allowedSurfaces.includes(surface));
+  }
+});
+
 test("promoted candidates require canonical claims", () => {
   const broken = structuredClone(knowledgeLifecycle);
   broken.candidateClaims.find(({ maturity }) => maturity === "promoted").targetCanonicalClaimId = undefined;
@@ -81,8 +126,36 @@ test("public briefs cannot bypass lifecycle approval or silently omit page claim
   bypass.editorialBriefs[0].candidateClaimIds = bypass.editorialBriefs[0].candidateClaimIds.filter((id) => id !== "CND-CALLNYC-INDEPENDENT-FOLLOW-ON");
   assert.match(validateKnowledgeLifecycle(bypass).join("\n"), /bypasses lifecycle promotion/);
   const omission = structuredClone(knowledgeLifecycle);
-  omission.editorialBriefs[0].pageClaimExclusions = [];
+  omission.editorialBriefs[0].canonicalClaimIds = omission.editorialBriefs[0].canonicalClaimIds.filter((id) => id !== "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON");
   assert.match(validateKnowledgeLifecycle(omission).join("\n"), /neither selects nor explicitly excludes/);
+});
+
+test("every active canonical projection requires current exact-surface human approval", () => {
+  const broken = structuredClone(knowledgeLifecycle);
+  const decision = broken.promotionDecisions.find(({ id }) => id === "DEC-CALLNYC-FIRST-COUNCILSTAT-PROMOTE");
+  decision.humanReviewStatus = "pending";
+  decision.reviewAuthority = "research-review";
+  decision.humanReviewer = undefined;
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /Active canonical projection .* lacks current human approval/);
+});
+
+test("proof surface manifests prevent publication outside exact human-approved selections", () => {
+  const missing = structuredClone(knowledgeLifecycle);
+  const homepage = missing.proofSurfaceManifests.find(({ route }) => route === "/");
+  homepage.proofIds = homepage.proofIds.filter((id) => id !== "hje-revenue-growth-contribution");
+  assert.match(validateKnowledgeLifecycle(missing).join("\n"), /Public proof hje-revenue-growth-contribution lacks exact-surface human approval for homepage/);
+
+  const wrongSurface = structuredClone(knowledgeLifecycle);
+  wrongSurface.proofSurfaceManifests.find(({ route }) => route === "/lab/source-backed-team-memory").proofIds.push("hje-revenue-growth-contribution");
+  assert.match(validateKnowledgeLifecycle(wrongSurface).join("\n"), /selects hje-revenue-growth-contribution outside lab/);
+
+  const pending = structuredClone(knowledgeLifecycle);
+  pending.proofSurfaceManifests.find(({ route }) => route === "/resume").humanReviewStatus = "pending";
+  assert.match(validateKnowledgeLifecycle(pending).join("\n"), /lacks active human approval/);
+
+  const duplicateRoute = structuredClone(knowledgeLifecycle);
+  duplicateRoute.proofSurfaceManifests[1].route = "/";
+  assert.match(validateKnowledgeLifecycle(duplicateRoute).join("\n"), /Multiple proof surface manifests govern \//);
 });
 
 test("offline lifecycle records are not exported through the application barrel", () => {
@@ -135,6 +208,18 @@ test("candidate maturity and research-run implication histories cannot drift", (
   const ingestion = brokenTask.researchTasks.find(({ id }) => id === "TASK-INGESTION-2026-07-12");
   ingestion.candidateClaimIds = ingestion.candidateClaimIds.filter((id) => id !== "CND-NYCA-MARCH-DISBANDMENT");
   assert.match(validateKnowledgeLifecycle(brokenTask).join("\n"), /implicates unlinked candidate/);
+});
+
+test("self-reported aggregates retain their qualifier through public composition", () => {
+  const broken = structuredClone(knowledgeLifecycle);
+  const residency = broken.candidateClaims.find(({ id }) => id === "CND-196-ARTISTS-RESIDENCY-FOUNDER-SCALE");
+  residency.publicEvidenceQualifier.acceptedPhrases = ["independently verified"];
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /drops the self-reported evidence qualifier/);
+
+  const proof = knowledgeLifecycle.proofSurfaceManifests.find(({ route }) => route === "/work/196-sunday-dinner");
+  assert.deepEqual(proof?.proofIds, ["sunday-dinner-196-participation-infrastructure"]);
+  assert.match(readFileSync("apps/www/src/data/work.ts", "utf8"), /reports supporting 20\+ resident artists/);
+  assert.match(readFileSync("apps/www/src/app/work/technical-operations/page.tsx", "utf8"), /report building repeatable support systems for 20\+ resident artists/);
 });
 
 test("intake rejects unknown graph associations", () => {
@@ -204,8 +289,20 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.ok(nightlife.proofs.some(({ id }) => id === "nyc-artist-coalition-civic-systems"));
 
   const publicCallNyc = retrieveKnowledgePalette({ surface: "/work/callnyc", publicationSafe: true });
-  assert.equal(publicCallNyc.candidates.length, 3);
+  assert.equal(publicCallNyc.candidates.length, 5);
+  assert.deepEqual(publicCallNyc.projects.map(({ id }) => id), ["PRJ-CALLNYC"]);
   assert.ok(publicCallNyc.publicationAuthorizations.every(({ authorized }) => authorized));
+
+  const homepageProofs = retrieveKnowledgePalette({ proofSurface: "/", publicationSafe: true });
+  assert.equal(homepageProofs.proofSurfaceManifest?.id, "MANIFEST-PROOFS-HOMEPAGE");
+  assert.deepEqual(
+    homepageProofs.proofs.map(({ id }) => id),
+    homepageProofs.proofSurfaceManifest?.proofIds
+  );
+
+  const sundayDinnerProofs = retrieveKnowledgePalette({ proofSurface: "/work/196-sunday-dinner", publicationSafe: true });
+  assert.deepEqual(sundayDinnerProofs.projects.map(({ id }) => id), ["PRJ-SUNDAY-DINNER-196"]);
+  assert.deepEqual(sundayDinnerProofs.proofs.map(({ id }) => id), ["sunday-dinner-196-participation-infrastructure"]);
 
   const plannedNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study" });
   const publicNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study", publicationSafe: true });

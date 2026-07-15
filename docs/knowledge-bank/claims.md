@@ -38,7 +38,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / firsthand operational context  
-**Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.  
+**Public wording:** Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.
 **Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
 **Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
 **Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
@@ -143,15 +143,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Public wording:** Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ gatherings. Jamie founded 196 Artists Residency; Jamie reports supporting 20+ resident artists through repeatable participation systems.
+**Detailed public-safe wording:** By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering. Jamie's approved public resume separately identifies him as the founder of 196 Artists Residency, dates Sunday Dinner to 2012-present and the residency to 2020-present, and attributes 300+ gatherings to Sunday Dinner and support for 20+ resident artists to the residency. The independent public sources support Sunday Dinner cadence and co-hosting; the aggregate figures remain Jamie-approved, self-reported claims.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
-**Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
-**Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
+**Guardrail:** Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attribute both aggregates to Jamie's approved resume and use "Jamie reports" for the 20+ residency scale; keep each role and date range distinct.
+**Do not say:** Jamie was Sunday Dinner's sole host or sole creator; institutional ownership of participants' work; comprehensive public archive; attendance database.
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
@@ -174,14 +174,14 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
 **Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Detailed public-safe wording:** Kansas City public minutes identify Jamie as presenter of KC Town-Hall's $490,539 adaptive-reuse proposal and record the Board's recommendation to City Council at that amount. Jamie also helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
 **Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
 **Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## source-backed-team-memory-method - Source-backed team memory
 

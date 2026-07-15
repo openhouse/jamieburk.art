@@ -30,7 +30,9 @@ for (const [relativePath, expected, label] of [
   ["apps/www/src/components/Hero.tsx", "support launch", "the homepage toward-what-end statement"],
   ["apps/www/src/app/page.tsx", "Quick path through the portfolio", "the first-pass reader path"],
   ["apps/www/src/app/work/technical-operations/page.tsx", "Strongest role-fit proof", "proof prioritization"],
-  ["apps/www/src/app/resume/page.tsx", "Recommended application path", "the application sequence"]
+  ["apps/www/src/app/resume/page.tsx", "Recommended application path", "the application sequence"],
+  ["apps/www/src/data/proofs.ts", "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows", "Jamie as the actor in the lead HJE proof"],
+  ["apps/www/src/data/proofs.ts", "Co-hosted Sunday Dinner with Julia Fredenberg (Jamie reports 300+ gatherings); founded 196 Artists Residency and reports supporting 20+ resident artists", "Julia Fredenberg's credit, distinct residency role, and self-reported aggregate boundaries in compressed proof wording"]
 ]) {
   requireText(relativePath, expected, label);
 }

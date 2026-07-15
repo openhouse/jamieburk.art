@@ -180,7 +180,7 @@ const workItemsInput = [
     summary:
       "Jamie co-founded NYC Artist Coalition and helped collaborators turn meetings, sources, policy questions, and next steps into shared records and public campaign sites they could use to coordinate cultural-space advocacy and continue work between meetings.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -260,6 +260,8 @@ const workItemsInput = [
       "Co-founder role in NYC Artist Coalition",
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
+      "Named NYC Artist Coalition speaker at a 2017 Office of Nightlife town hall",
+      "2018 City Council testimony connecting commercial affordability to cultural-space safety",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
@@ -431,9 +433,9 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    role: "Host, Organizer & Systems Steward",
-    years: "2010s",
+      "Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ gatherings. Jamie founded 196 Artists Residency; Jamie reports supporting 20+ resident artists through repeatable participation systems.",
+    role: "Sunday Dinner: Co-Host & Systems Steward; 196 Artists Residency: Founder & Systems Steward",
+    years: "Sunday Dinner: 2012-Present; Residency: 2020-Present",
     status: "Short proof page",
     featured: true,
     priority: 5,
@@ -442,7 +444,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "A repeatable hosting and documentation rhythm for Sunday Dinner, plus distinct intake, onboarding, artist-support, and continuity systems for 196 Artists Residency.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -457,21 +459,21 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe aggregate project history. Private community records and unapproved images remain offline.",
-    credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
+      "A Greene Hill Food Co-op Q&A and the surviving Sunday Dinner homepage support weekly open co-hosting and the participatory archive. Jamie's approved public resume separately reports the two role/date ranges, 300+ Sunday Dinner gatherings, and support for 20+ resident artists through 196 Artists Residency.",
+    credits: ["Jamie Burkart", "Julia Fredenberg", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "300+ hosted gatherings",
-      "20+ resident artists supported",
+      "Jamie's approved resume reports 300+ Sunday Dinner gatherings",
+      "Jamie reports supporting 20+ resident artists through 196 Artists Residency",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering. Jamie's approved resume separately reports 300+ Sunday Dinner gatherings, identifies him as the founder of 196 Artists Residency, and reports support for 20+ resident artists through the residency.",
       open:
         "Named participants, photographs, and community artifacts remain offline unless their public use is separately consented to.",
       protected:
@@ -485,8 +487,8 @@ const workItemsInput = [
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+    role: "Co-Lead, Project Planning & Public-Benefit Documentation",
+    years: "2015-2024 (public records: 2019-2021)",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -510,7 +512,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and public-record context. Private property and financial materials remain offline.",
+      "Kansas City public minutes identify Jamie as presenter, describe the adaptive-reuse proposal, and record the Board's $490,539 recommendation. Private property and financial materials remain offline.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -524,9 +526,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-led adaptive reuse planning and documentation, presented KC Town-Hall's proposal in a public review process, and is named in the Board record supporting its $490,539 recommendation.",
       open:
-        "Specific funding materials, named partners, and current property-status details are not included.",
+        "Final approval, funding receipt, project completion, named-partner details, and current property status are not established by the reviewed public records.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

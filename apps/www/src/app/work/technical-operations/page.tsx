@@ -82,6 +82,11 @@ const strongestProofs = [
     href: "/work/fair-rent-nyc",
     label: "Coalition operations",
     proof: "I helped coalition collaborators turn meetings, sources, policy questions, and next steps into 30+ shared pages they could use between meetings while keeping private context protected."
+  },
+  {
+    href: "/work/196-sunday-dinner",
+    label: "Participation infrastructure",
+    proof: "With Julia Fredenberg, I co-hosted Sunday Dinner; my approved resume reports 300+ gatherings. Separately, I founded 196 Artists Residency and report building repeatable support systems for 20+ resident artists."
   }
 ];
 
@@ -150,7 +155,7 @@ export default function TechnicalOperationsPage() {
         <h2 className="text-2xl font-semibold text-jb-ink" id="strongest-proof-heading">
           Strongest role-fit proof
         </h2>
-        <div className="mt-5 grid gap-4 md:grid-cols-3">
+        <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {strongestProofs.map((item) => (
             <Link
               className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5 hover:border-jb-blue/40"

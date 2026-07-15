@@ -35,6 +35,9 @@ was clarity and sequence, not stronger ownership or causality.
   bounded actor wherever those claims appear.
 - Replaced `lightweight` with the actual WOWList need: a practical, low-cost,
   bounded distribution pattern for organizers.
+- Kept Sunday Dinner and 196 Artists Residency distinct, credited Julia
+  Fredenberg, and required Jamie-reported attribution for the 300+ and 20+
+  aggregates wherever compressed proof wording uses them.
 - Reduced repeated status language at case-study openings while retaining
   visibility and boundary context in At a Glance and supplemental evidence.
 
@@ -50,7 +53,7 @@ was strengthened.
 - All six required dimensions were addressed by both judges: actor legibility,
   toward what end, usable result, one-pass translation, reader burden, and
   collective precision.
-- Production browser matrix: 27 observations across 9 routes at desktop, 390px,
+- Production browser matrix: 30 observations across 10 routes at desktop, 390px,
   and 320px, with no route, H1, empty-link, overflow, duplicate-ID, console, or
   page-error failures.
 

@@ -11,10 +11,24 @@ bank.
 2. Jamie or reviewer creates a public-safe summary.
 3. Summary is added to the knowledge bank with source-basis class and boundary.
 4. Status is set to Ready, Careful, Pending, or Private.
-5. Website projection uses only Ready or Careful claims.
-6. If a page needs stronger wording, update the bank first.
-7. Public-safety check fails production if pending/private/approval-marker
+5. Website projection uses only Ready or Careful claims selected by the
+   Jamie-approved manifest for that exact public route.
+6. Every active canonical projection resolves to a current, human-approved
+   `promote` or `correct` decision for every exact destination.
+7. Excluding a page claim from an editorial brief never bypasses exact-surface
+   authorization.
+8. If a page needs stronger wording, update the bank first.
+9. Public-safety check fails production if pending/private/approval-marker
    material is projected.
+
+The validator treats canonical citations and the broader proof layer as two
+public projection paths governed by the same principle. Editorial briefs select
+canonical page arguments. Each proof surface manifest selects the compact proof
+set for one exact route and records its page category, audience, purpose,
+exclusions, and guardrails. Neither path may rely on general defensibility or a
+broad page category as a substitute for destination-specific human review. The
+readable projection map is generated from these manifests and validated against
+them.
 
 ## Status Meanings
 

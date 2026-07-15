@@ -95,6 +95,11 @@ export const candidateClaimSchema = z.object({
   researchTaskIds: idList,
   promotionDecisionIds: idList,
   targetCanonicalClaimId: stableIdSchema.optional(),
+  publicEvidenceQualifier: z.object({
+    kind: z.literal("self-reported"),
+    appliesTo: z.array(z.string().min(1)).min(1),
+    acceptedPhrases: z.array(z.string().min(1)).min(1)
+  }).optional(),
   updatedAt: dated
 });
 
@@ -163,6 +168,30 @@ export const editorialBriefSchema = z.object({
   pageClaimExclusions: z.array(z.object({ claimId: stableIdSchema, reason: z.string().min(1) })).default([])
 });
 
+export const proofSurfaceManifestSchema = z.object({
+  id: stableIdSchema,
+  surface: z.enum([
+    "homepage",
+    "resume",
+    "technical-operations",
+    "work-card",
+    "case-study",
+    "lab",
+    "about"
+  ]),
+  route: z.string().regex(/^\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/, "Use an exact public route"),
+  audience: z.string().min(1),
+  purpose: z.string().min(1),
+  selectionCriteria: z.array(z.string().min(1)).min(1),
+  proofIds: idList,
+  exclusions: z.array(z.string().min(1)).min(1),
+  reviewAuthority: z.literal("jamie-approved"),
+  humanReviewStatus: z.literal("approved"),
+  humanReviewer: z.string().min(1),
+  reviewedAt: dated,
+  guardrails: z.array(z.string().min(1)).min(1)
+});
+
 export const mediaLeadSchema = z.object({
   id: stableIdSchema,
   title: z.string().min(1),
@@ -190,6 +219,7 @@ export const knowledgeLifecycleSchema = z.object({
   researchTasks: z.array(researchTaskSchema),
   promotionDecisions: z.array(promotionDecisionSchema),
   editorialBriefs: z.array(editorialBriefSchema),
+  proofSurfaceManifests: z.array(proofSurfaceManifestSchema),
   mediaLeads: z.array(mediaLeadSchema)
 });
 

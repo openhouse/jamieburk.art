@@ -35,6 +35,8 @@ The knowledge bank exists to:
   `apps/www/src/data/knowledge-bank/records.ts`.
 - **Structured proof data:** broader professional claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Proof surface manifests:** Jamie-approved, audience-specific selections for
+  each public proof destination in `lifecycle-records.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
@@ -64,3 +66,8 @@ See [knowledge-lifecycle.md](knowledge-lifecycle.md) for intake, research,
 promotion, retrieval, and visual-feedback operations;
 [citational-care.md](citational-care.md) for public citation authoring; and
 [projects/callnyc.md](projects/callnyc.md) for the first complete citation pilot.
+
+Research runs may also leave a human-readable public-safe map under `research/`.
+The [July 13 ten-source ingestion](research/2026-07-13-ten-source-ingestion.md)
+shows how new sources become observations, bounded claims, research questions,
+and selective exact-surface projections.

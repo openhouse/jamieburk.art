@@ -33,6 +33,8 @@
       "preservationStatus": "live-and-archived",
       "publishedAt": "2016-01-30",
       "accessedAt": "2026-07-11",
+      "metadataVerifiedAt": "2026-07-14",
+      "metadataVerifiedBy": "Codex live and archived source review",
       "canonicalUrl": "https://x.com/NYCCouncil/status/693509031768506368",
       "archiveUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
       "preferredPublicUrl": "archive",
@@ -107,6 +109,160 @@
         "official Council ownership",
         "formal hackathon submission status",
         "current resident-service guidance"
+      ]
+    },
+    {
+      "id": "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "author": "Outreach Committee",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-13",
+      "metadataVerifiedAt": "2026-07-13",
+      "metadataVerifiedBy": "Codex live-source review",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op Outreach Committee, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "The page identifies Jamie and Julia Fredenberg as weekly Sunday Dinner co-hosts and as participants in NYC Artist Coalition work. The title uses Julie while the interview body uses Julia.",
+      "doesNotEstablish": [
+        "the 300-plus gathering count",
+        "the 20-plus resident-artist count",
+        "Jamie's sole authorship of Sunday Dinner",
+        "Jamie's sole causation of any policy outcome",
+        "current event or contact information"
+      ]
+    },
+    {
+      "id": "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE",
+      "title": "Sunday Dinner public project archive",
+      "organization": "Sunday Dinner",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "metadataVerifiedAt": "2026-07-13",
+      "metadataVerifiedBy": "Codex live-source review",
+      "canonicalUrl": "https://sundaydinnernyc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Sunday Dinner public project archive.",
+      "publicNote": "The homepage preserves a participatory media archive and navigation to submission, recipe, video, drawing, and WOW List surfaces. Old RSVP and contact details are intentionally excluded from the citation layer.",
+      "doesNotEstablish": [
+        "the 300-plus gathering count",
+        "the 20-plus resident-artist count",
+        "permission to republish participant media",
+        "current event status",
+        "current address or contact details"
+      ]
+    },
+    {
+      "id": "SRC-JAMIE-APPROVED-RESUME-2026-07-13",
+      "title": "Jamie Burkart - Technical Project Manager resume",
+      "organization": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-13",
+      "accessedAt": "2026-07-13",
+      "metadataVerifiedAt": "2026-07-13",
+      "metadataVerifiedBy": "Jamie Burkart approval and Codex artifact review",
+      "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart, Technical Project Manager resume, July 13, 2026.",
+      "publicNote": "Jamie-approved public artifact supporting his distinct Sunday Dinner co-host and 196 Artists Residency founder roles and the separately attributed aggregate scale figures.",
+      "doesNotEstablish": [
+        "independent corroboration of the aggregate figures",
+        "sole creation or sole hosting of Sunday Dinner",
+        "ownership of participant work",
+        "permission to republish community records or images"
+      ]
+    },
+    {
+      "id": "SRC-NYCA-SAVE-NYC-SPACES",
+      "title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures",
+      "organization": "NYC Artist Coalition and campaign partners",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "metadataVerifiedAt": "2026-07-13",
+      "metadataVerifiedBy": "Codex live-source review",
+      "canonicalUrl": "https://savenycspaces.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition and campaign partners, 'Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures.'",
+      "publicNote": "First-party campaign surface connecting transparency, confidential support, legal pathways, anti-displacement, commercial-rent policy, and cultural-space trust; it also identifies Jamie publicly with NYC Artist Coalition.",
+      "doesNotEstablish": [
+        "Jamie's authorship of the complete platform",
+        "partner endorsement of every later coalition position",
+        "Jamie's sole role in the Office of Nightlife",
+        "individual causation of policy outcomes"
+      ]
+    },
+    {
+      "id": "SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017",
+      "title": "What Can the Night Mayor Do? The DIY Scene Discusses",
+      "organization": "Bedford + Bowery",
+      "author": "Cassidy Dawn Graves",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-12",
+      "accessedAt": "2026-07-13",
+      "metadataVerifiedAt": "2026-07-13",
+      "metadataVerifiedBy": "Codex live-source review",
+      "canonicalUrl": "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
+      "publicNote": "Contemporary reporting says NYC Artist Coalition spearheaded the Market Hotel town hall and names Jamie Burkart and Olympia Kazi among coalition speakers.",
+      "doesNotEstablish": [
+        "that Jamie individually produced the event",
+        "an exact attendance count",
+        "Jamie's sole causation of the Office of Nightlife",
+        "endorsement by every participant"
+      ]
+    },
+    {
+      "id": "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018",
+      "title": "New York City Council Committee on Small Business hearing transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-10-22",
+      "accessedAt": "2026-07-13",
+      "metadataVerifiedAt": "2026-07-13",
+      "metadataVerifiedBy": "Codex public-record review",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council Committee on Small Business hearing transcript, testimony of Jamie Burkart for NYC Artist Coalition, October 22, 2018.",
+      "publicNote": "Official transcript records Jamie connecting commercial affordability to cultural-space safety and asking the Council to pass Intro 737, the Small Business Jobs Survival Act.",
+      "doesNotEstablish": [
+        "authorship of Intro 737",
+        "the bill's later outcome",
+        "Jamie's sole leadership of commercial-rent advocacy"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-2019",
+      "title": "Central City Economic Development Sales Tax Board meeting records",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "metadataVerifiedAt": "2026-07-13",
+      "metadataVerifiedBy": "Codex public-record review",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Kansas City Central City Economic Development Sales Tax Board, June 12-13, 2019 meeting minutes in the July 29, 2019 public packet.",
+      "publicNote": "The minutes list Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse request and record the Board's later vote to recommend the project to City Council for approval and funding at that amount.",
+      "doesNotEstablish": [
+        "final City Council approval",
+        "funds received or disbursed",
+        "project completion",
+        "current property status"
       ]
     }
   ],
@@ -307,6 +463,201 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering; Jamie's approved resume reports 300+ documented gatherings across the practice.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie and Julia as weekly co-hosts",
+            "the gathering's open-community posture"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE",
+          "relationship": "corroborating",
+          "supports": [
+            "the surviving project archive",
+            "participatory media pathways around the gatherings"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-JAMIE-APPROVED-RESUME-2026-07-13",
+          "relationship": "direct-support",
+          "supports": [
+            "the 300-plus documented-gathering figure",
+            "the 2012-present date range",
+            "Jamie's co-host and systems-steward framing"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The independent public sources establish weekly co-hosting and the archive, not the 300-plus figure; that aggregate is Jamie-approved and self-reported through the public resume.",
+        "This claim concerns Sunday Dinner, not the separately named 196 Artists Residency.",
+        "Do not reproduce old RSVP details, identify participants, or republish participant media without contextual rights and consent review.",
+        "Do not present the archive as a current event listing."
+      ]
+    },
+    {
+      "id": "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie founded 196 Artists Residency in 2020; Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-JAMIE-APPROVED-RESUME-2026-07-13",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's founder role",
+            "the 2020-present date range",
+            "the 20-plus resident-artist figure",
+            "the operating practices used"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The founder role and 20-plus figure are Jamie-approved, self-reported resume claims rather than independent corroboration.",
+        "This claim concerns 196 Artists Residency, not authorship or sole hosting of Sunday Dinner.",
+        "Do not identify residents or publish their records, work, or images without separate contextual review and permission."
+      ]
+    },
+    {
+      "id": "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2017, NYC Artist Coalition spearheaded a Market Hotel town hall about the new Office of Nightlife; contemporary reporting names Jamie and Olympia Kazi among the coalition speakers.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "the coalition spearheaded the town hall",
+            "Jamie and Olympia Kazi were coalition speakers",
+            "participation by cultural organizations and public officials"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCA-SAVE-NYC-SPACES",
+          "relationship": "context",
+          "supports": [
+            "the coalition's public Office of Nightlife agenda",
+            "the campaign's town-hall and cultural-space framing"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The sources support a coalition-spearheaded event and Jamie's participation as a speaker, not Jamie's individual production of the event.",
+        "Do not infer an exact attendance count or individual causation of the Office's creation."
+      ]
+    },
+    {
+      "id": "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2018, Jamie testified to the City Council as an NYC Artist Coalition member, connecting commercial affordability to cultural-space safety and asking the Council to pass Intro 737.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's coalition affiliation",
+            "his cultural-space safety and affordability framing",
+            "his request to pass Intro 737"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The testimony establishes Jamie's public advocacy, not authorship of Intro 737 or the bill's later outcome.",
+        "Keep the broader commercial-rent movement collective."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Kansas City public records identify Jamie as the presenter of KC Town-Hall's $490,539 adaptive-reuse proposal; the CCED Board later voted to recommend the project to City Council for approval and funding at that amount.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie as project presenter",
+            "the $490,539 request",
+            "the adaptive-reuse program",
+            "the Board's recommendation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "A Board recommendation is not evidence of final City Council approval, disbursement, or project completion.",
+        "Do not publish current property, legal, financial, or stakeholder details."
+      ]
     }
   ],
   "pages": [
@@ -371,6 +722,62 @@
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
           ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [
+        "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",
+        "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE",
+        "SRC-JAMIE-APPROVED-RESUME-2026-07-13"
+      ],
+      "occurrences": [
+        {
+          "id": "weekly-open-hosting",
+          "claimId": "CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017",
+          "projection": "case-study"
+        },
+        {
+          "id": "residency-founder-scale",
+          "claimId": "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017",
+        "SRC-NYCA-SAVE-NYC-SPACES",
+        "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018"
+      ],
+      "occurrences": [
+        {
+          "id": "office-nightlife-town-hall",
+          "claimId": "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL-2017",
+          "projection": "case-study"
+        },
+        {
+          "id": "commercial-rent-testimony",
+          "claimId": "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KC-TOWN-HALL-CCED-2019"
+      ],
+      "occurrences": [
+        {
+          "id": "public-record-2019",
+          "claimId": "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019",
+          "projection": "case-study"
         }
       ]
     }

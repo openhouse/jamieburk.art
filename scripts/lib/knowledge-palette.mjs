@@ -3,7 +3,13 @@ import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
 export function retrieveKnowledgePalette(filters = {}) {
-  if (filters.publicationSafe && !filters.surface) throw new Error("Publication-safe retrieval requires an exact surface");
+  if (filters.publicationSafe && !filters.surface && !filters.proofSurface) {
+    throw new Error("Publication-safe retrieval requires an exact surface");
+  }
+  const proofSurfaceManifest = filters.proofSurface
+    ? knowledgeLifecycle.proofSurfaceManifests.find(({ route }) => route === filters.proofSurface)
+    : undefined;
+  if (filters.proofSurface && !proofSurfaceManifest) throw new Error(`Unknown proof route ${filters.proofSurface}`);
   const exactBrief = filters.briefId
     ? knowledgeLifecycle.editorialBriefs.find(({ id }) => id === filters.briefId)
     : undefined;
@@ -11,13 +17,18 @@ export function retrieveKnowledgePalette(filters = {}) {
   const matchingBriefs = exactBrief
     ? [exactBrief]
     : knowledgeLifecycle.editorialBriefs.filter((brief) =>
-      (!filters.audienceTag || brief.audienceTags.includes(filters.audienceTag)) &&
-      (!filters.purposeTag || brief.purposeTags.includes(filters.purposeTag)) &&
-      Boolean(filters.audienceTag || filters.purposeTag)
+      filters.surface
+        ? brief.targetSurfaces.includes(filters.surface)
+        : (!filters.audienceTag || brief.audienceTags.includes(filters.audienceTag)) &&
+          (!filters.purposeTag || brief.purposeTags.includes(filters.purposeTag)) &&
+          Boolean(filters.audienceTag || filters.purposeTag)
     );
 
   const selectedProjectIds = new Set([
     ...matchingBriefs.flatMap(({ projectIds }) => projectIds),
+    ...knowledgeLifecycle.projects
+      .filter(({ proofIds }) => proofSurfaceManifest?.proofIds.some((id) => proofIds.includes(id)))
+      .map(({ id }) => id),
     ...(filters.projectId ? [filters.projectId] : [])
   ]);
   if (filters.projectId && !knowledgeLifecycle.projects.some(({ id }) => id === filters.projectId)) throw new Error(`Unknown project ${filters.projectId}`);
@@ -70,12 +81,15 @@ export function retrieveKnowledgePalette(filters = {}) {
     (canonicalIds.has(claim.id) || (!matchingBriefs.length && !claimFiltersApplied && projects.some(({ canonicalProjectKeys }) => canonicalProjectKeys.includes(claim.project)))) &&
     (!projectScopeRequested || projects.some(({ canonicalProjectKeys }) => canonicalProjectKeys.includes(claim.project)))
   );
-  const selectedProofIds = new Set(projects.flatMap(({ proofIds }) => proofIds));
+  const selectedProofIds = new Set(
+    proofSurfaceManifest?.proofIds ?? projects.flatMap(({ proofIds }) => proofIds)
+  );
   const proofs = proofClaims.filter(({ id }) => selectedProofIds.has(id));
 
   return {
     filters,
     brief: exactBrief ?? null,
+    proofSurfaceManifest: proofSurfaceManifest ?? null,
     briefs: matchingBriefs,
     projects,
     candidates,

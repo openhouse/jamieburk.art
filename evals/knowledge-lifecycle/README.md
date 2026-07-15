@@ -3,6 +3,9 @@
 This suite evaluates the public-safe system that accepts fragments, decomposes
 sources, develops candidate claims through research, promotes defensible claims
 without automatically projecting them, and composes selective public arguments.
+It also requires universal exact-surface authorization for active canonical
+projections and Jamie-approved manifests for every Ready or Careful proof
+surface.
 
 Run the deterministic loop:
 

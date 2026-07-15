@@ -12,6 +12,7 @@ There is no public `/proofs`, `/knowledge-bank`, or `/public-claims` route.
 ```text
 lead -> source -> atomic observation -> candidate claim -> research task
      -> promotion decision -> canonical claim -> editorial brief -> page
+     -> proof record -> approved surface manifest -> composed proof surface
                                       ^                 |
                                       |---- media lead -|
 ```
@@ -39,8 +40,10 @@ lead -> source -> atomic observation -> candidate claim -> research task
    outcomes when the evidence requires them.
 7. **Compose for purpose.** Editorial briefs select claims for an audience and
    argument. They identify exclusions, citation posture, media needs, and the
-   Chad Lens question. The portfolio remains an edited public argument, not a
-   database dump.
+   Chad Lens question. Human-approved proof surface manifests separately select
+   the structured proof records allowed on each exact public route, including
+   its audience, purpose, exclusions, and guardrails. The portfolio remains an
+   edited public argument, not a database dump.
 8. **Return visual discoveries to research.** Photo editors receive bounded
    prompts. A visual discovery becomes a lead or observation only after date,
    place, identity, role, rights, consent, and meaning are separately reviewed.
@@ -87,6 +90,7 @@ npm run query:knowledge-lifecycle -- --brief BRIEF-NIGHTLIFE-FUTURE
 npm run query:knowledge-lifecycle -- --entity ENT-JAMIE-BURKART --from-year 2006 --to-year 2009 --evidence-role direct-support
 npm run query:knowledge-lifecycle -- --audience public-interest-operations --purpose cultural-infrastructure --source-kind government-record --research-priority high
 npm run query:knowledge-lifecycle -- --surface /work/callnyc --publication-safe
+npm run query:knowledge-lifecycle -- --proof-surface / --publication-safe
 npm run eval:knowledge-lifecycle -- --profile fast
 ```
 
@@ -95,6 +99,8 @@ active decisions that name the surface even when human review is pending. The
 publication-safe mode requires an exact surface and returns only candidates with
 an active, human-approved `promote` or `correct` decision for that surface. Its
 `publicationAuthorizations` result makes the governing decision IDs explicit.
+For the parallel proof layer, `--proof-surface` accepts an exact public route
+and returns only the records selected by that route's Jamie-approved manifest.
 
 ## Promotion thresholds
 
@@ -112,7 +118,14 @@ an active, human-approved `promote` or `correct` decision for that surface. Its
 Candidate maturity changes are recorded separately as append-only events. A
 public-composition brief may use only a claim whose latest decision is human
 approved for that exact surface; every claim already on the target page must be
-selected or explicitly excluded with a reason.
+selected or explicitly excluded with a reason. Independently of briefs, every
+active canonical projection is rejected unless it resolves to current human
+approval for every destination. Excluding a claim from a brief cannot bypass
+that requirement. Every Ready or Careful proof-to-surface relationship must
+also appear in at least one approved exact-route manifest.
+
+`docs/knowledge-bank/projection-map.md` is generated from those manifests. The
+lifecycle check fails if the readable map drifts from the governed records.
 
 ## Current research run
 
@@ -142,5 +155,7 @@ the direct 1-3 p.m. Civic Hall announcement and retained the correction trail.
 - Seek contradiction and alternative causation for consequential claims.
 - Promote the strongest narrow claim the evidence supports.
 - Do not project an unresolved candidate into a public-composition brief.
+- Do not add an active canonical destination or proof surface without exact
+  human approval and the corresponding manifest or promotion decision.
 - Keep citations quiet in the interface but complete in the bank.
 - Never publish raw private locators, records, or media through this system.

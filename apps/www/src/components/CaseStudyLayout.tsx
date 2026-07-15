@@ -20,7 +20,15 @@ type CaseStudyLayoutProps = {
   children: ReactNode;
 };
 
-function SupplementalEvidence({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
+function SupplementalEvidence({
+  item,
+  idPrefix = "",
+  includeCredits = true
+}: {
+  item: WorkMeta;
+  idPrefix?: string;
+  includeCredits?: boolean;
+}) {
   return (
     <div className="space-y-12">
       <ArtifactList idPrefix={idPrefix} item={item} />
@@ -31,7 +39,7 @@ function SupplementalEvidence({ item, idPrefix = "" }: { item: WorkMeta; idPrefi
         <SourceLayer item={item} />
       </div>
       <LinksList idPrefix={idPrefix} item={item} />
-      <CreditsList idPrefix={idPrefix} item={item} />
+      {includeCredits ? <CreditsList idPrefix={idPrefix} item={item} /> : null}
     </div>
   );
 }
@@ -64,29 +72,40 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <References pageId={item.slug} />
         </div>
       </div>
-      {item.slug === "callnyc" ? (
-        <>
-          <details className="mt-12 lg:hidden">
-            <summary className="cursor-pointer text-lg font-semibold text-jb-blue hover:text-jb-green">
-              Supplemental evidence, boundaries, sources, and credits
-            </summary>
-            <div className="mt-8"><SupplementalEvidence idPrefix="mobile-" item={item} /></div>
-          </details>
-          <div className="mt-14 hidden lg:block">
-            <SupplementalEvidence idPrefix="desktop-" item={item} />
+      <div className="mt-12 lg:hidden">
+        <CreditsList idPrefix="mobile-primary-" item={item} />
+        <div className="mt-8 flex flex-wrap gap-3">
+          <JBButton href={site.resumePath} variant="secondary" download>
+            Download resume PDF
+          </JBButton>
+          <JBButton href="/contact" variant="ghost">
+            Contact Jamie
+          </JBButton>
+        </div>
+        <details className="mt-10">
+          <summary className="cursor-pointer text-lg font-semibold text-jb-blue hover:text-jb-green">
+            Supporting evidence, boundaries, artifacts, and public links
+          </summary>
+          <div className="mt-8">
+            <SupplementalEvidence
+              idPrefix="mobile-supplemental-"
+              includeCredits={false}
+              item={item}
+            />
           </div>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <JBButton href={site.resumePath} variant="secondary" download>
-              Download resume PDF
-            </JBButton>
-            <JBButton href="/contact" variant="ghost">
-              Contact Jamie
-            </JBButton>
-          </div>
-        </>
-      ) : (
-        <div className="mt-14"><SupplementalEvidence item={item} /></div>
-      )}
+        </details>
+      </div>
+      <div className="mt-14 hidden lg:block">
+        <SupplementalEvidence idPrefix="desktop-" item={item} />
+        <div className="mt-10 flex flex-wrap gap-3">
+          <JBButton href={site.resumePath} variant="secondary" download>
+            Download resume PDF
+          </JBButton>
+          <JBButton href="/contact" variant="ghost">
+            Contact Jamie
+          </JBButton>
+        </div>
+      </div>
     </article>
   );
 }

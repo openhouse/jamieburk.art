@@ -105,8 +105,9 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
+      "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.",
+    shortWording:
+      "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -348,14 +349,17 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "Jamie created repeatable support for 300+ gatherings and 20+ resident artists",
+      "Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ gatherings. Jamie founded 196 Artists Residency; Jamie reports supporting 20+ resident artists through repeatable participation systems.",
+    shortWording:
+      "Co-hosted Sunday Dinner with Julia Fredenberg (Jamie reports 300+ gatherings); founded 196 Artists Residency and reports supporting 20+ resident artists",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+      "For Sunday Dinner, Jamie worked with Julia Fredenberg on invitation, hosting, documentation, and continuity; his approved resume reports 300+ gatherings. For 196 Artists Residency, Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, and artist-support practices.",
+    sourceBasis:
+      "Approved resume language and public-safe aggregate project history support the scale claim; a Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attribute both aggregates to Jamie's approved resume and use 'Jamie reports' for the 20+ residency scale; keep the two role and date ranges distinct.",
     doNotSay: [
+      "Jamie was Sunday Dinner's sole host or sole creator",
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
       "Attendance database"
@@ -371,7 +375,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -430,7 +434,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+    sourceBasis:
+      "Approved resume language, public-safe project context, and Kansas City CCED Board minutes naming Jamie as presenter and recording the $490,539 recommendation.",
     guardrail:
       "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
     doNotSay: [
@@ -449,7 +454,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "source-backed-team-memory-method",

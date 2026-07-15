@@ -34,7 +34,8 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     ["observation", input.observations], ["candidate claim", input.candidateClaims],
     ["candidate event", input.candidateEvents],
     ["research task", input.researchTasks], ["promotion decision", input.promotionDecisions],
-    ["editorial brief", input.editorialBriefs], ["media lead", input.mediaLeads]
+    ["editorial brief", input.editorialBriefs], ["proof surface manifest", input.proofSurfaceManifests],
+    ["media lead", input.mediaLeads]
   ];
   for (const [label, items] of collections) for (const id of duplicateIds(items)) errors.push(`Duplicate ${label} ID: ${id}`);
 
@@ -50,6 +51,17 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
   const canonicalClaims = new Set(knowledgeBank.claims.map(({ id }) => id));
   const canonicalClaimById = new Map(knowledgeBank.claims.map((item) => [item.id, item]));
   const proofIds = new Set(proofClaims.map(({ id }) => id));
+  const proofById = new Map(proofClaims.map((item) => [item.id, item]));
+  const supersededDecisionIds = new Set(
+    input.promotionDecisions.map(({ supersedesDecisionId }) => supersedesDecisionId).filter(Boolean)
+  );
+  const activeDecisionsFor = (candidate) => candidate.promotionDecisionIds
+    .map((id) => decisions.get(id))
+    .filter((decision) => decision && !supersededDecisionIds.has(decision.id));
+  const authorizesSurface = (decision, surface) =>
+    ["promote", "correct"].includes(decision.decision) &&
+    decision.humanReviewStatus === "approved" &&
+    decision.allowedSurfaces.includes(surface);
 
   for (const project of input.projects) {
     if (project.startYear > project.endYear) errors.push(`Project ${project.id} starts after it ends`);
@@ -109,6 +121,26 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
       if (!candidate.targetCanonicalClaimId) errors.push(`Promoted candidate ${candidate.id} has no canonical target`);
       const promoted = candidate.promotionDecisionIds.some((id) => decisions.get(id)?.decision === "promote");
       if (!promoted) errors.push(`Promoted candidate ${candidate.id} has no promote decision`);
+    }
+    if (candidate.publicEvidenceQualifier && candidate.targetCanonicalClaimId) {
+      const qualifier = candidate.publicEvidenceQualifier;
+      const isQualified = (text) => {
+        const value = text.toLowerCase();
+        const carriesMetric = qualifier.appliesTo.some((phrase) => value.includes(phrase.toLowerCase()));
+        return !carriesMetric || qualifier.acceptedPhrases.some((phrase) => value.includes(phrase.toLowerCase()));
+      };
+      const claim = canonicalClaimById.get(candidate.targetCanonicalClaimId);
+      for (const projection of claim?.projections.filter(({ status }) => status === "active") ?? []) {
+        if (!isQualified(projection.text)) errors.push(`Active projection ${claim.id}/${projection.key} drops the ${qualifier.kind} evidence qualifier`);
+      }
+      const projectKeys = input.projects
+        .filter(({ id }) => candidate.projectIds.includes(id))
+        .flatMap(({ canonicalProjectKeys }) => canonicalProjectKeys);
+      for (const proof of proofClaims.filter(({ relatedProjects }) => relatedProjects.some((key) => projectKeys.includes(key)))) {
+        for (const field of ["publicWording", "shortWording", "detailedPublicWording", "guardrail"]) {
+          if (!isQualified(proof[field])) errors.push(`Proof ${proof.id} ${field} drops the ${qualifier.kind} evidence qualifier`);
+        }
+      }
     }
     const history = input.candidateEvents.filter(({ candidateClaimId }) => candidateClaimId === candidate.id);
     if (!history.length) errors.push(`Candidate ${candidate.id} has no append-only maturity event`);
@@ -177,6 +209,21 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     }
   }
 
+  for (const claim of knowledgeBank.claims) {
+    const lifecycleCandidates = input.candidateClaims.filter(
+      (candidate) => candidate.targetCanonicalClaimId === claim.id
+    );
+    for (const projection of claim.projections.filter(({ status }) => status === "active")) {
+      for (const surface of projection.surfaces) {
+        const authorized = lifecycleCandidates.some((candidate) =>
+          candidate.maturity === "promoted" &&
+          activeDecisionsFor(candidate).some((decision) => authorizesSurface(decision, surface))
+        );
+        if (!authorized) errors.push(`Active canonical projection ${claim.id} lacks current human approval for ${surface}`);
+      }
+    }
+  }
+
   for (const brief of input.editorialBriefs) {
     checkRefs(errors, `Editorial brief ${brief.id}`, brief.projectIds, projects, "project");
     checkRefs(errors, `Editorial brief ${brief.id}`, brief.canonicalClaimIds, canonicalClaims, "canonical claim");
@@ -184,11 +231,10 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     checkRefs(errors, `Editorial brief ${brief.id}`, brief.mediaLeadIds, media, "media lead");
     if (brief.publicationIntent === "public-composition") {
       if (!brief.targetSurfaces.length) errors.push(`Public brief ${brief.id} has no target surface`);
-      const superseded = new Set(input.promotionDecisions.map(({ supersedesDecisionId }) => supersedesDecisionId).filter(Boolean));
       for (const id of brief.candidateClaimIds) {
         const candidate = candidates.get(id);
         if (candidate?.maturity !== "promoted") errors.push(`Public brief ${brief.id} requires unpromoted candidate ${id}`);
-        const activeDecisions = candidate?.promotionDecisionIds.map((decisionId) => decisions.get(decisionId)).filter((decision) => decision && !superseded.has(decision.id)) ?? [];
+        const activeDecisions = candidate ? activeDecisionsFor(candidate) : [];
         for (const surface of brief.targetSurfaces) {
           const authorized = activeDecisions.some((decision) =>
             ["promote", "correct"].includes(decision.decision) &&
@@ -208,6 +254,30 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
         const page = knowledgeBank.pages.find((item) => item.surface === surface);
         const excluded = new Set(brief.pageClaimExclusions.map(({ claimId }) => claimId));
         for (const claimId of new Set(page?.occurrences.map(({ claimId }) => claimId) ?? [])) if (!brief.canonicalClaimIds.includes(claimId) && !excluded.has(claimId)) errors.push(`Public brief ${brief.id} neither selects nor explicitly excludes page claim ${claimId}`);
+      }
+    }
+  }
+
+  const manifestsByRoute = new Map();
+  for (const manifest of input.proofSurfaceManifests) {
+    if (manifestsByRoute.has(manifest.route)) errors.push(`Multiple proof surface manifests govern ${manifest.route}`);
+    manifestsByRoute.set(manifest.route, manifest);
+    if (manifest.reviewAuthority !== "jamie-approved" || manifest.humanReviewStatus !== "approved" || !manifest.humanReviewer) {
+      errors.push(`Proof surface manifest ${manifest.id} lacks active human approval`);
+    }
+    checkRefs(errors, `Proof surface manifest ${manifest.id}`, manifest.proofIds, proofIds, "proof");
+    for (const proofId of manifest.proofIds) {
+      if (!proofById.get(proofId)?.surfaces.includes(manifest.surface)) {
+        errors.push(`Proof surface manifest ${manifest.id} selects ${proofId} outside ${manifest.surface}`);
+      }
+    }
+  }
+
+  for (const proof of proofClaims.filter(({ status }) => ["ready", "careful"].includes(status))) {
+    for (const surface of proof.surfaces.filter((value) => value !== "internal-only")) {
+      const manifest = input.proofSurfaceManifests.find((item) => item.surface === surface && item.proofIds.includes(proof.id));
+      if (!manifest) {
+        errors.push(`Public proof ${proof.id} lacks exact-surface human approval for ${surface}`);
       }
     }
   }
@@ -263,6 +333,7 @@ export function knowledgeLifecycleReport(input = knowledgeLifecycle) {
     decisions: input.promotionDecisions.length,
     decisionTypes: by(input.promotionDecisions, "decision"),
     editorialBriefs: input.editorialBriefs.length,
+    proofSurfaceManifests: input.proofSurfaceManifests.length,
     mediaLeads: input.mediaLeads.length
   };
 }

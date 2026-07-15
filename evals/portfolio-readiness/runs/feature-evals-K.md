@@ -48,7 +48,7 @@ evidence. Prior scores were withheld from the final judges.
   knowledge bank, public safety, and route checks passed.
 - Production preflight: the same complete gate set passed with production URL
   and indexing configuration.
-- Production browser matrix: 27 observations across 9 routes at desktop, 390px,
+- Production browser matrix: 30 observations across 10 routes at desktop, 390px,
   and 320px; all returned 200 with one H1, no empty links, no horizontal
   overflow, no duplicate IDs, no console errors, and no page errors. The skip
   link was the first tab stop.
