@@ -157,6 +157,13 @@ test("campaign press archive retains a verified Wayback route for every distinct
       sourceIdsWithRoutes.has(sourceId)
     )
   );
+  assert.ok(
+    [...new Set(entries.map((entry) => entry.sourceId))].every((sourceId) => {
+      const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+      return source?.archiveUrl?.includes("web.archive.org/web/") &&
+        source.preservationStatus !== "live";
+    })
+  );
 });
 
 test("campaign press archive completeness is a hard evaluation gate", () => {

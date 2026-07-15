@@ -341,6 +341,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       nycacPressReadings.filter((reading) => reading.recoveryMode === "wayback-body").length === pressArchive.expectedWaybackReadingCount &&
       pressWaybackRouteSourceIds.size === pressArchive.expectedWaybackRouteCount &&
       uniquePressArticleSourceIds.every((sourceId) => pressWaybackRouteSourceIds.has(sourceId)) &&
+      pressArticleSources.every((source) =>
+        source?.archiveUrl?.includes("web.archive.org/web/") &&
+        source.preservationStatus !== "live"
+      ) &&
       nycacPressReadings.filter((reading) => reading.mentionsJamie).length === pressArchive.expectedJamieNamedCount &&
       nycacPressReadings.filter((reading) => reading.mentionsCoalition).length === pressArchive.expectedCoalitionNamedCount &&
       nycacPressReadings.reduce((total, reading) => total + reading.directAttributions.length, 0) === pressArchive.expectedDirectAttributionCount &&
