@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date()
     })),
     ...workItems.map((item) => ({
-      url: new URL(`/work/${item.slug}`, SITE_URL).toString(),
+      url: new URL(item.href ?? `/work/${item.slug}`, SITE_URL).toString(),
       lastModified: new Date()
     }))
   ];

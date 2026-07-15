@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
+import { IS_PRODUCTION } from "@/lib/site-url";
 
 export const metadata: Metadata = createMetadata({
   title: "Contact - Jamie Burkart",
@@ -11,6 +12,19 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function ContactPage() {
+  const unapprovedPublicRows = IS_PRODUCTION
+    ? []
+    : [
+        {
+          label: "LinkedIn",
+          value: "TODO: Jamie approval required before launch."
+        },
+        {
+          label: "GitHub",
+          value: "TODO: Jamie approval required if public-ready."
+        }
+      ];
+
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
@@ -23,25 +37,21 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {IS_PRODUCTION
+                  ? "Contact available on request."
+                  : "TODO: Jamie approval required before launch."}
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">Location</dt>
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
             </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
-              </dd>
-            </div>
+            {unapprovedPublicRows.map((row) => (
+              <div key={row.label}>
+                <dt className="font-semibold text-jb-ink">{row.label}</dt>
+                <dd className="mt-1 text-jb-ink/74">{row.value}</dd>
+              </div>
+            ))}
             <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">

@@ -3,6 +3,7 @@ import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
+import { StartHere } from "@/components/StartHere";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
 
@@ -17,6 +18,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <StartHere />
       <ProofStrip />
       <CapabilityGrid />
       <section className="jb-frame py-16">

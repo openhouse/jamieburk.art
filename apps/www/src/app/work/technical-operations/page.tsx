@@ -52,6 +52,15 @@ const sections = [
   }
 ];
 
+const teamOperationsItems = [
+  "Track delivery and surface risks early.",
+  "Build planning rhythms, decision frameworks, and retros.",
+  "Coordinate dependencies across technical and nontechnical teams.",
+  "Write handbooks, runbooks, onboarding guides, and operating documentation people actually use.",
+  "Report status, team health, and operational metrics honestly.",
+  "Improve working systems quarter over quarter without overengineering."
+];
+
 export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
@@ -81,6 +90,28 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-12 border-t border-jb-ink/12 pt-10">
+        <div className="grid gap-6 lg:grid-cols-[0.38fr_0.62fr]">
+          <div>
+            <h2 className="text-3xl font-semibold text-jb-ink">
+              How this maps to team operations
+            </h2>
+            <p className="mt-4 leading-7 text-jb-ink/72">
+              The same public-safe proof also maps to the operating work teams
+              need when delivery, documentation, implementation, and stakeholder
+              trust all have to move together.
+            </p>
+          </div>
+          <ul className="grid gap-3 text-jb-ink/76 sm:grid-cols-2">
+            {teamOperationsItems.map((item) => (
+              <li className="flex gap-3" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
