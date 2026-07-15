@@ -358,6 +358,58 @@ test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
   assert.doesNotMatch(publicRegistryText, /SRC-SOURCE-BACKED-SPRINT-PREP/);
 });
 
+test("Google Drive intake preserves attribution, data gaps, and projection boundaries", () => {
+  const intakeById = new Map(
+    knowledgeBank.intakeItems.map((item) => [item.id, item])
+  );
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  const residency = intakeById.get(
+    "INTAKE-GDRIVE-196-RESIDENCY-OPERATIONS-2026-07-14"
+  );
+  const archive = intakeById.get(
+    "INTAKE-GDRIVE-VACANCY-ARCHIVE-AND-OVERVIEW-AUTOMATION-2026-07-14"
+  );
+  const workspace = intakeById.get(
+    "INTAKE-GDRIVE-SHARED-WORKSPACE-PRACTICE-2026-07-14"
+  );
+
+  assert.equal(residency.status, "claim-candidate");
+  assert.equal(archive.status, "claim-candidate");
+  assert.equal(workspace.status, "researching");
+  assert.equal(residency.candidateClaims.length, 1);
+  assert.equal(archive.candidateClaims.length, 2);
+  assert.equal(workspace.candidateClaims.length, 0);
+  assert.ok(
+    [residency, archive, workspace].every(
+      (item) => item.projectionStatus === "no-public-projection"
+    )
+  );
+  assert.equal(
+    workspace.propositions.find(
+      (proposition) =>
+        proposition.id === "PROP-GDRIVE-MEDIA-DELIVERABLES-ROLE-GAP-2026"
+    ).status,
+    "research-only"
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-GDRIVE-VACANCY-ARCHIVE-INVENTORY-2026-03-04")
+      .supportsGenerally.some((support) => /visible March 2019 gap/i.test(support))
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026-03-04")
+      .doesNotEstablish.some((boundary) => /without review/i.test(boundary))
+  );
+
+  const publicRegistryText = JSON.stringify(publicCitationRegistry);
+  assert.doesNotMatch(publicRegistryText, /INTAKE-GDRIVE/);
+  assert.doesNotMatch(publicRegistryText, /SRC-GDRIVE/);
+  assert.doesNotMatch(publicRegistryText, /LOC-GDRIVE/);
+});
+
 test("rendering primitives preserve no-JavaScript document semantics", () => {
   const cite = readFileSync("apps/www/src/components/citations/Cite.tsx", "utf8");
   const references = readFileSync("apps/www/src/components/citations/References.tsx", "utf8");

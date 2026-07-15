@@ -127,7 +127,7 @@ any governed claim or public surface changed.
 
 ## Current Intake Threads
 
-The structured intake records currently preserve ten threads surfaced on
+The structured intake records currently preserve thirteen threads surfaced on
 July 12-14, 2026:
 
 - waterways, communal space, and participatory cultural practice;
@@ -145,7 +145,13 @@ July 12-14, 2026:
 - Commercial Rent Stabilization operating plans, shared minutes, and
   privacy-preserving public-data proposals; and
 - AI evals completion, bounded source-backed sprint design, and a context-only
-  cross-archive job-hunt map.
+  cross-archive job-hunt map;
+- 196 Artists Residency selection, onboarding, space configuration, access,
+  and reusable handoff operations;
+- longitudinal HUD-USPS vacancy-source stewardship and mixed-format archive
+  automation; and
+- Google Drive project-workspace topology as a bounded research map for future
+  handoff and collaborator evidence.
 
 The waterways and Sunday Dinner threads have reached `claim-candidate`. The NYC
 Artist Coalition and campaign-press threads remain `researching`; the press
@@ -160,4 +166,6 @@ specific contribution remain separate questions. The stewardship transition is
 receiving-organization confirmation. None is approved for direct website
 projection. The three July 14 archive-production threads have reached
 `claim-candidate` for their supported propositions while retaining protected
-source locators and explicit non-claims.
+source locators and explicit non-claims. The Google Drive pass adds two more
+`claim-candidate` threads and one `researching` thread; all three remain outside
+the website and generated public registry.

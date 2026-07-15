@@ -610,6 +610,66 @@ const knowledgeBankInput = {
       doesNotEstablish: ["client acceptance", "paid engagement", "deployment inside an organization", "production software", "measured client outcome"],
       protectedLocatorId: "LOC-SOURCE-BACKED-SPRINT-PREP-2026"
     },
+    {
+      id: "SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14",
+      title: "Google Drive Shared Drives archival review",
+      kind: "research-run",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-07-14",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of a July 2026 archival review of Jamie Burkart's Google Drive Shared Drives.",
+      publicNote: "The review inventoried 110 Shared Drives, mapped 24 professional project roots, and closely read a bounded set of high-value artifacts. Drive names, file IDs, links, collaborator-only material, and excluded personal or sensitive folders remain outside the repository.",
+      supportsGenerally: ["110-drive inventory", "24 mapped professional project roots", "project-scoped and collaborator-specific workspace patterns", "dated handoff packages", "bounded source triage", "cross-archive duplicate detection"],
+      doesNotEstablish: ["Jamie's authorship of every stored artifact", "collaborator approval for public use", "adoption of every shared workflow", "completeness of every project archive", "professional relevance of every drive", "project outcomes"],
+      protectedLocatorId: "LOC-GDRIVE-SHARED-DRIVE-REVIEW-2026"
+    },
+    {
+      id: "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023-07-19",
+      title: "196 Artists Residency acceptance and arrival workflow",
+      organization: "196 Artists Residency",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2023-07-19",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of a July 2023 residency acceptance and arrival document authored by Jamie Burkart.",
+      publicNote: "The underlying document remains outside the repository. The summary omits the resident's name, dates, contact request, address, and access instructions while preserving Jamie's operational contribution.",
+      supportsGenerally: ["Jamie authored the acceptance document", "proposal review and resident selection", "pre-arrival video onboarding", "space configuration around the selected project", "independent access planning", "warm direct communication"],
+      doesNotEstablish: ["the resident's completed stay or exhibition", "the quality or outcome of the residency", "the total number of residents", "Jamie as sole residency operator", "permission to publish resident identity or logistics", "use of the same workflow for every resident"],
+      protectedLocatorId: "LOC-GDRIVE-196-ACCEPTANCE-2023"
+    },
+    {
+      id: "SRC-GDRIVE-VACANCY-ARCHIVE-INVENTORY-2026-03-04",
+      title: "HUD-USPS vacancy source archive inventory",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-03-04",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe inventory of Jamie Burkart's March 2026 HUD-USPS vacancy source archive.",
+      publicNote: "The archive holds 84 source packages representing 80 distinct quarterly snapshots from December 2005 through December 2025, plus 2010 and 2020 Census geography materials. The inventory preserves a missing March 2019 quarter and a four-quarter 2012 format overlap instead of silently presenting a complete uniform series.",
+      supportsGenerally: ["Jamie-attributed archive assembly", "80 distinct quarterly snapshots", "December 2005 through December 2025 span", "2010 and 2020 Census geography materials", "visible March 2019 gap", "visible 2012 source-format overlap", "representative revision attribution to Jamie across 2005, 2019, and 2025 files"],
+      doesNotEstablish: ["validation of every source file", "a gap-free quarterly series", "analysis results", "a published dataset", "a production data pipeline", "policy adoption", "original creation of the HUD-USPS source data"],
+      protectedLocatorId: "LOC-GDRIVE-VACANCY-ARCHIVE-2026"
+    },
+    {
+      id: "SRC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026-03-04",
+      title: "Mixed-format project overview generator",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-03-04",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of Jamie Burkart's mixed-format project overview generator.",
+      publicNote: "Revision metadata identifies Jamie as the author of the Bash script. The source remains outside the repository because the tool is designed to inspect private working folders and explicitly warns that its generated overview may expose sensitive data.",
+      supportsGenerally: ["Jamie authored the Bash script", "directory inventory", "PDF text extraction with OCR fallback", "DOCX conversion with tracked changes and comments when available", "bounded CSV and JSON sampling", "dependency and generated-file exclusions", "output line controls", "explicit sensitive-output warning"],
+      doesNotEstablish: ["safe publication of generated overviews without review", "use across every project", "perfect extraction of every file format", "production deployment", "cross-platform behavior in every environment", "independent security review"],
+      protectedLocatorId: "LOC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026"
+    },
     ...campaignPressSources
   ],
   claims: [
@@ -1777,6 +1837,190 @@ const knowledgeBankInput = {
       receivedAt: "2026-07-14",
       reviewedAt: "2026-07-14",
       reviewedBy: ["Jamie Burkart", "Codex protected-source review"]
+    },
+    {
+      id: "INTAKE-GDRIVE-196-RESIDENCY-OPERATIONS-2026-07-14",
+      title: "196 Artists Residency selection, onboarding, and access operations",
+      project: "196-sunday-dinner",
+      kind: "claim-candidate",
+      summary: "A Jamie-authored acceptance document and the surrounding Shared Drive structure recover a concrete residency workflow: review and select a proposal, welcome the resident, plan a setup conversation, configure the space around the work, arrange independent access, and retain reusable messaging and resident-specific workspaces. The evidence is one recovered workflow instance, not a complete account of every residency.",
+      status: "claim-candidate",
+      sourceIds: [
+        "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023-07-19",
+        "SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14"
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: ["sunday-dinner-196-participation-infrastructure"],
+      candidateClaims: [
+        "For 196 Artists Residency, Jamie paired proposal review and resident selection with pre-arrival onboarding, project-specific space configuration, independent access planning, reusable acceptance messaging, and resident-specific shared workspaces."
+      ],
+      propositions: [
+        {
+          id: "PROP-GDRIVE-196-RESIDENCY-WORKFLOW-2023",
+          text: "For 196 Artists Residency, Jamie paired proposal review and resident selection with pre-arrival onboarding, project-specific space configuration, independent access planning, reusable acceptance messaging, and resident-specific shared workspaces.",
+          status: "synthesis-with-boundary",
+          sourceIds: [
+            "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023-07-19",
+            "SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14"
+          ],
+          sourceSupport: ["Jamie-authored acceptance document", "proposal review and selection", "planned video onboarding", "space configuration", "independent access planning", "message-template folder", "umbrella and resident-specific workspace structure"],
+          boundaries: ["This is one recovered workflow instance and does not establish identical use for every resident.", "Do not publish the resident's identity, dates, contact request, address, access instructions, or private media.", "Do not infer the residency outcome, total resident count, or Jamie's sole operation of the program from this source set."],
+          decisionUse: "Turns an abstract claim about hosting into a legible operating sequence spanning selection, onboarding, environment setup, access, and reusable handoff infrastructure."
+        },
+        {
+          id: "PROP-GDRIVE-196-COLLABORATOR-WORKSPACE-PATTERN",
+          text: "The surviving 196 Artists Residency archive includes an umbrella drive, reusable message templates, and collaborator-specific workspaces.",
+          status: "context-only",
+          sourceIds: ["SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14"],
+          sourceSupport: ["umbrella residency workspace", "message-template folder", "collaborator-specific drive and folder structure"],
+          boundaries: ["Folder structure alone does not establish who created every workspace, who used it, or whether collaborators approved public description.", "Do not treat private workspace access as evidence of endorsement, publication permission, or program outcome."],
+          decisionUse: "Preserves a research lead for the residency's repeatable handoff architecture without asking folder names to prove adoption.",
+          nextStep: "Recover a public-safe program guide, collaborator confirmation, or multiple dated workflow artifacts showing how the shared-workspace pattern was used across residents."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Which public-safe program documents establish the full selection, onboarding, residency, exhibition, and handoff lifecycle?",
+        "Which residents or collaborators can confirm Jamie's operating role and the usefulness of the shared-workspace pattern?",
+        "Which aggregate counts and date ranges can be reproduced without exposing participant records?",
+        "Which rights-cleared images can show the configured space or public exhibition without revealing private access details?"
+      ],
+      boundaries: [
+        "Keep resident identity, contact information, addresses, access instructions, correspondence, and unapproved media outside the repository.",
+        "Describe the recovered workflow, not every residency or the complete program history.",
+        "Preserve collaborator and resident agency; a Shared Drive is not publication consent.",
+        "Do not project this intake item directly to the website; reconcile or strengthen the governed proof and make a separate editorial decision first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
+    },
+    {
+      id: "INTAKE-GDRIVE-VACANCY-ARCHIVE-AND-OVERVIEW-AUTOMATION-2026-07-14",
+      title: "Longitudinal vacancy-source stewardship and mixed-format archive automation",
+      kind: "claim-candidate",
+      summary: "A structured vacancy-data archive and Jamie-authored overview generator recover a concrete archival-production practice. Jamie assembled a two-decade source collection with visible gaps and format transitions, then built a reusable tool for turning mixed folders into bounded review artifacts with extraction fallbacks, sampling controls, exclusions, line limits, and an explicit sensitive-output warning.",
+      status: "claim-candidate",
+      sourceIds: [
+        "SRC-GDRIVE-VACANCY-ARCHIVE-INVENTORY-2026-03-04",
+        "SRC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026-03-04"
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: ["technical-operations-operating-backbone"],
+      candidateClaims: [
+        "In March 2026, Jamie assembled a structured working archive of 80 distinct quarterly HUD-USPS vacancy snapshots spanning December 2005 through December 2025, plus 2010 and 2020 Census geography materials, while preserving a missing March 2019 quarter and a duplicated 2012 format transition as visible data-quality conditions.",
+        "Jamie authored a reusable Bash tool that turns mixed-format project folders into bounded text overviews using PDF extraction and OCR fallback, DOCX conversion, controlled CSV and JSON sampling, dependency exclusions, output limits, and an explicit warning that generated overviews may expose sensitive data."
+      ],
+      propositions: [
+        {
+          id: "PROP-GDRIVE-VACANCY-ARCHIVE-TWO-DECADES-2026",
+          text: "In March 2026, Jamie assembled a structured working archive of 80 distinct quarterly HUD-USPS vacancy snapshots spanning December 2005 through December 2025, plus 2010 and 2020 Census geography materials, while preserving a missing March 2019 quarter and a duplicated 2012 format transition as visible data-quality conditions.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-GDRIVE-VACANCY-ARCHIVE-INVENTORY-2026-03-04"],
+          sourceSupport: ["84 source packages representing 80 distinct quarters", "December 2005 through December 2025 range", "2010 and 2020 Census geography materials", "visible March 2019 gap", "visible 2012 overlap", "representative Jamie revision attribution across the archive's early, middle, and late periods"],
+          boundaries: ["The inventory establishes source stewardship, not validation of every file or a gap-free series.", "Credit HUD-USPS and Census sources; do not imply Jamie created the underlying public data.", "Do not infer analysis findings, publication, pipeline automation, or policy use."],
+          decisionUse: "Provides a specific data-operations example: longitudinal source acquisition, chronology, quality-gap visibility, geography support, and honest archive boundaries."
+        },
+        {
+          id: "PROP-GDRIVE-PROJECT-OVERVIEW-GENERATOR-2026",
+          text: "Jamie authored a reusable Bash tool that turns mixed-format project folders into bounded text overviews using PDF extraction and OCR fallback, DOCX conversion, controlled CSV and JSON sampling, dependency exclusions, output limits, and an explicit warning that generated overviews may expose sensitive data.",
+          status: "direct-support",
+          sourceIds: ["SRC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026-03-04"],
+          sourceSupport: ["Jamie revision attribution", "Bash implementation", "directory inventory", "PDF and OCR path", "DOCX conversion path", "CSV and JSON controls", "skip rules", "line limits", "sensitive-output warning"],
+          boundaries: ["The script requires human review before any generated overview is shared.", "Do not claim use across every project, complete extraction fidelity, independent security review, or production deployment."],
+          decisionUse: "Shows Jamie converting archive orientation and handoff into a repeatable technical workflow while treating privacy as an operating constraint."
+        },
+        {
+          id: "PROP-GDRIVE-ARCHIVAL-PRODUCTION-SYNTHESIS-2026",
+          text: "Together, the source archive and overview generator show an archival-production practice that keeps source gaps visible and makes heterogeneous working material easier to review and hand off.",
+          status: "synthesis-with-boundary",
+          sourceIds: [
+            "SRC-GDRIVE-VACANCY-ARCHIVE-INVENTORY-2026-03-04",
+            "SRC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026-03-04"
+          ],
+          sourceSupport: ["longitudinal source organization", "visible gap and overlap handling", "mixed-format extraction", "bounded summaries", "privacy warning"],
+          boundaries: ["This synthesis describes the demonstrated artifacts, not every archive Jamie maintains.", "Usability for a recipient and adoption by a team remain unmeasured."],
+          decisionUse: "Connects data stewardship, technical operations, documentation, privacy, and handoff as one inspectable working method."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Which public-safe output demonstrates how the vacancy archive informed a reproducible analysis or decision?",
+        "Can a checksum, manifest, or validation run establish file integrity and exact coverage across all 80 quarters?",
+        "Which project teams have used the overview generator, and what public-safe collaborator account establishes reduced orientation or handoff effort?",
+        "Which parts of the overview workflow should be extracted into a rights-cleared public utility or technical case study?"
+      ],
+      boundaries: [
+        "Keep source files, generated private overviews, filesystem paths, contact data, and sensitive project contents outside the repository.",
+        "Distinguish source acquisition and archive structure from validated analysis, publication, production deployment, and policy use.",
+        "Preserve missing and duplicated periods as data-quality facts rather than smoothing them into a false complete series.",
+        "Do not project this intake item directly to the website; create or strengthen a governed claim and make a separate editorial decision first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
+    },
+    {
+      id: "INTAKE-GDRIVE-SHARED-WORKSPACE-PRACTICE-2026-07-14",
+      title: "Google Drive project workspace and handoff practice",
+      kind: "project-lead",
+      summary: "A comprehensive inventory of 110 Shared Drives and a bounded map of 24 professional project roots show a recurring archive topology: project-specific drives, collaborator-specific workspaces, dated delivery folders, reusable templates, and overlapping preservation across cloud systems. The topology is useful context for Jamie's handoff practice but does not by itself prove authorship, adoption, approval, or outcomes.",
+      status: "researching",
+      sourceIds: ["SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14"],
+      relatedClaimIds: [],
+      relatedProofIds: [],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-GDRIVE-SHARED-WORKSPACE-TOPOLOGY-2026",
+          text: "The Shared Drive inventory shows recurring project-specific, collaborator-specific, dated-delivery, and reusable-template workspace patterns across Jamie's professional archive.",
+          status: "context-only",
+          sourceIds: ["SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14"],
+          sourceSupport: ["110-drive inventory", "24 mapped professional roots", "project and collaborator workspace patterns", "dated handoff folders", "reusable template folders"],
+          boundaries: ["Archive topology does not establish Jamie's authorship of each artifact or collaborators' adoption of each workflow.", "Do not publish private drive names, IDs, links, participant information, or sensitive folder contents."],
+          decisionUse: "Supplies an archive-level research map for locating future handoff, operations, and collaboration evidence without treating the map as an accomplishment claim.",
+          nextStep: "For each high-value project, associate a public artifact, Jamie-authored work product, revision history, or collaborator account with one bounded actor-action-output proposition."
+        },
+        {
+          id: "PROP-GDRIVE-MEDIA-DELIVERABLES-ROLE-GAP-2026",
+          text: "Several cultural-project drives preserve dated photographs, animations, and video deliverables, but the present review does not establish Jamie's exact role, the recipient's use, or publication rights.",
+          status: "research-only",
+          sourceIds: ["SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14"],
+          sourceSupport: ["dated media-delivery folders", "photograph, animation, and video file presence", "institutional and collaborator workspace context"],
+          boundaries: ["File presence is not authorship, delivery acceptance, public credit, or consent to publish.", "Do not name a project or institution as a Jamie accomplishment until role evidence is recovered."],
+          decisionUse: "Preserves a high-potential technical and creative production queue without laundering folder adjacency into credit.",
+          nextStep: "Review revision attribution and public project credits, then seek collaborator confirmation or a public-safe handoff record for each media project considered for claim development."
+        },
+        {
+          id: "PROP-GDRIVE-CROSS-ARCHIVE-DUPLICATION-2026",
+          text: "The Google Drive review found intentional and accidental overlap with iCloud and local project archives, including duplicate public-facing artifacts and repeated generated project overviews.",
+          status: "context-only",
+          sourceIds: ["SRC-GDRIVE-SHARED-DRIVE-REVIEW-2026-07-14"],
+          sourceSupport: ["duplicate artifact detection", "repeated overview files", "cross-cloud project preservation"],
+          boundaries: ["Duplication does not establish which copy is canonical or current.", "Do not create duplicate knowledge-bank sources when an already registered artifact is substantively identical."],
+          decisionUse: "Improves source governance by treating cross-cloud redundancy as a reconciliation problem rather than inflating the evidence count.",
+          nextStep: "Create project-level canonical-source maps only where duplicate versions materially affect claim wording, chronology, or correction readiness."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Which project workspaces contain authored handoff documents rather than media-only or archive-only traces?",
+        "Which collaborator confirmations can establish adoption, usefulness, or outcome without exposing private correspondence?",
+        "Which duplicate artifacts differ materially enough to require version reconciliation?",
+        "Which media deliverables have public credits and publication rights suitable for a future portfolio projection?"
+      ],
+      boundaries: [
+        "Do not publish Drive IDs, links, private names, sensitive folder titles, participant data, correspondence, legal or financial files, or unapproved media.",
+        "Do not treat shared access as authorship, endorsement, adoption, acceptance, or consent.",
+        "Keep personal, legal, relationship, financial, and synchronization-repair drives outside professional knowledge production.",
+        "Do not project this intake item directly to the website; develop source-associated project claims first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
     }
   ],
   pages: [{

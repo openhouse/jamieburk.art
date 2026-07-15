@@ -90,3 +90,11 @@ protected-source summarization across Jamie Projects History, CRS, and job-hunt.
 It develops interactive-media, coalition-operations, public-data, evals, and
 service-design knowledge without committing local paths, correspondence,
 contacts, private strategy, or other underlying archive material.
+
+The [Google Drive Shared Drives archival-production
+note](research/2026-07-14-google-drive-shared-drives-archival-production.md)
+demonstrates account-wide triage, bounded close reading, revision-level
+attribution, duplicate-source reconciliation, and consent-aware handling of
+collaborative workspaces. It develops residency-operations, longitudinal data
+stewardship, and archive-automation knowledge without exposing Drive IDs,
+participant logistics, private media, or sensitive project folders.
