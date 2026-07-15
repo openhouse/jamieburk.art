@@ -82,8 +82,9 @@ passes stopped producing new records:
 - 92 authored posts and 15 reposts;
 - 71 service-recognition posts naming 26 Council members;
 - 87 authored posts with outgoing links;
-- 85 internal link occurrences representing 65 distinct displayed CallNYC
-  destinations;
+- 85 internal link occurrences containing 65 distinct displayed strings,
+  resolving to 63 normalized CallNYC destinations and 61 issue pages after
+  excluding the site root and API;
 - 75 authored posts with visible media;
 - 59 authored posts retaining at least one visible reply, repost, or like.
 
@@ -94,7 +95,9 @@ links, and media presence for all 107 recoverable items.
 
 ### Population boundary
 
-The corpus accounts for 100% of the 107 distinct items X rendered. It does not
+The corpus accounts for 100% of the 107 distinct items X rendered. The committed
+raw browser extraction, SHA-256 digest, transformation manifest, and derivation
+script make the item transformation and aggregate metrics reproducible. It does not
 pretend that 107 equals the profile's reported 110. X's `from:` search returned
 only a 47-post subset, the media surface added no new status URLs, and a bounded
 Wayback query recovered only already-known records. The three-count difference

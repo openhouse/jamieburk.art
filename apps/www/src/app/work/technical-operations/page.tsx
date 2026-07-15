@@ -37,7 +37,7 @@ const proofMap = [
     action:
       "I built an independent prototype that translated constituent-services records into issue-oriented public guidance.",
     result:
-      "Residents gained issue pathways, district context, and possible next steps without first decoding the complete dataset."
+      "The public interface made issue pathways, district context, and possible next steps legible without requiring people to decode the complete dataset first."
   },
   {
     project: "196 Artists Residency / Sunday Dinner",

@@ -397,7 +397,7 @@ const workItemsInput = [
       "Independent follow-on to the New York City Council's first CouncilStat hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Ran a repeatable public recognition and issue-linking system across 26 Council members and 65 CallNYC destinations",
+      "Ran a repeatable public recognition and issue-linking system across 26 Council members and 61 normalized CallNYC issue pages",
       "Covered by Politico New York in 2016"
     ],
     knownOpenProtected: {

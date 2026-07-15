@@ -5,6 +5,9 @@
   "capturedThrough": "Authenticated X replies-inclusive profile timeline",
   "authenticatedSessionIdentity": "@urbanhermit",
   "rawCaptureSha256": "b6b6eaa9d1947655a6c18dd96c9eba96c2752943c3f31f6f06f08faeaee123d7",
+  "rawCaptureArtifact": "source-captures/callnyc-x-browser-extraction-2026-07-15-utc.json",
+  "derivationManifest": "callnyc-x-full-population-2026-07-14.manifest.json",
+  "derivationScript": "scripts/derive-callnyc-x-corpus.mjs",
   "population": {
     "profileReported": 110,
     "renderedDistinct": 107,

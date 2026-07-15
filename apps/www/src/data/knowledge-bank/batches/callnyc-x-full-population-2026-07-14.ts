@@ -127,7 +127,7 @@ export const callNycXFullPopulationBatch20260714: {
       supportsGenerally: [
         "the complete recoverable public timeline population on the capture date",
         "seventy-one service-recognition posts naming twenty-six Council members",
-        "sixty-five distinct linked CallNYC service destinations",
+        "sixty-one distinct normalized CallNYC issue-page destinations",
         "dated visible engagement and outgoing-link patterns",
         "public account stewardship and civic-resource curation"
       ],
@@ -318,7 +318,7 @@ export const callNycXFullPopulationBatch20260714: {
       sourceId: "SRC-CALLNYC-X-CORPUS-2026-07-14",
       project: "callnyc",
       assertion:
-        "Eighty-seven of ninety-two authored posts carried outgoing links; eighty-five link occurrences pointed to sixty-five distinct displayed CallNYC destinations.",
+        "Eighty-seven of ninety-two authored posts carried outgoing links; eighty-five internal link occurrences contained sixty-five distinct displayed strings, resolving to sixty-three normalized CallNYC destinations and sixty-one issue pages after excluding the site root and API.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: ["CLM-CALLNYC-SOCIAL-TRANSLATION-SYSTEM"],
@@ -449,7 +449,7 @@ export const callNycXFullPopulationBatch20260714: {
       id: "CLM-CALLNYC-SOCIAL-TRANSLATION-SYSTEM",
       project: "callnyc",
       internalClaim:
-        "CallNYC operationalized constituent-services data through a repeatable public communication system: seventy-one service-recognition posts named twenty-six Council members, and outgoing links reached sixty-five distinct displayed CallNYC issue destinations.",
+        "CallNYC operationalized constituent-services data through a repeatable public communication system: seventy-one service-recognition posts named twenty-six Council members, and outgoing links reached sixty-one distinct normalized CallNYC issue pages.",
       status: "confirmed-with-boundary",
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
@@ -458,7 +458,7 @@ export const callNycXFullPopulationBatch20260714: {
         {
           key: "case-study",
           text:
-            "The public account turned the prototype into a repeatable engagement system: the recoverable corpus contains 71 service-recognition posts naming 26 Council members and links to 65 distinct CallNYC issue destinations.",
+            "The public account turned the prototype into a repeatable engagement system: the recoverable corpus contains 71 service-recognition posts naming 26 Council members and links to 61 distinct normalized CallNYC issue pages.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/callnyc"]
@@ -468,7 +468,7 @@ export const callNycXFullPopulationBatch20260714: {
         {
           sourceId: "SRC-CALLNYC-X-CORPUS-2026-07-14",
           relationship: "direct-support",
-          supports: ["complete recoverable item inventory", "service-recognition count", "Council-member count", "linked issue-destination count"],
+          supports: ["complete recoverable item inventory", "service-recognition count", "Council-member count", "normalized linked issue-page count"],
           confidence: "high",
           renderCitation: true
         },
@@ -706,7 +706,7 @@ export const callNycXFullPopulationBatch20260714: {
       findings: [
         "All 107 distinct items recoverable from the authenticated timeline were inventoried: 92 authored posts and 15 reposts spanning March 5-November 14, 2016.",
         "Seventy-one authored posts used a service-recognition pattern naming twenty-six Council members; eighty-two authored posts mentioned @NYCCouncil.",
-        "Eighty-seven authored posts carried outgoing links; eighty-five internal link occurrences represented sixty-five distinct displayed CallNYC destinations, and seventy-five authored posts used visible media.",
+        "Eighty-seven authored posts carried outgoing links; eighty-five internal link occurrences contained sixty-five distinct displayed strings, resolving to sixty-three normalized CallNYC destinations and sixty-one issue pages; seventy-five authored posts used visible media.",
         "Fifty-nine authored posts retained at least one visible interaction; dated totals were eight replies, seventy-four reposts, and 111 likes.",
         "Thirteen external link occurrences connected CallNYC to official benefits and legal-services resources, peer civic-technology projects, open-data infrastructure, transportation reporting, and the project's Politico coverage.",
         "A launch-period post identifies Jamie by name and calls CallNYC his first civic-technology project; the post supports account stewardship at launch without proving authorship of every post.",

@@ -80,5 +80,7 @@ The authenticated project-account pass is documented in
 [2026-07-14-social-account-production.md](runs/2026-07-14-social-account-production.md),
 and the complete CallNYC population pass is documented in
 [2026-07-14-callnyc-x-full-population.md](runs/2026-07-14-callnyc-x-full-population.md),
-with the governed account map and per-project findings in
+with a committed public browser extraction, transformation manifest, and
+`scripts/derive-callnyc-x-corpus.mjs` check that reproduces the 107 item records
+and their aggregate metrics. The governed account map and per-project findings are in
 [projects/social-account-inventory.md](projects/social-account-inventory.md).

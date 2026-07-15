@@ -34,9 +34,9 @@ Profile snapshot: joined March 2016; 110 posts reported; 107 distinct items reco
 
 The complete recoverable account population contains 92 authored posts and 15
 reposts. Seventy-one authored posts used a repeated service-recognition pattern
-that named 26 Council members and linked residents across 65 distinct displayed
-CallNYC destinations. This is project output, not a claim that all 26 members
-engaged back.
+that named 26 Council members and linked the project account to 61 distinct
+normalized CallNYC issue pages. This is project output, not a claim that all 26
+members engaged back.
 
 At least eight people serving on the New York City Council visibly engaged with CallNYC between April 2016 and July 2017:
 

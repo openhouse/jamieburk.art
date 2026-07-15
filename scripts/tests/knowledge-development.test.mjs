@@ -7,6 +7,9 @@ import {
   validateHybridReportCandidate,
   validateKnowledgeDevelopmentSuite
 } from "../check-knowledge-development.mjs";
+import {
+  validateCommittedCorpus
+} from "../derive-callnyc-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 
 const suite = JSON.parse(
@@ -157,6 +160,11 @@ test("CallNYC corpus accounts for every recoverable timeline item and preserves 
       "utf8"
     )
   );
+  const rawCaptureText = readFileSync(
+    "docs/knowledge-bank/corpora/source-captures/callnyc-x-browser-extraction-2026-07-15-utc.json",
+    "utf8"
+  );
+  const derivedMetrics = validateCommittedCorpus(rawCaptureText, corpus);
   const authored = corpus.items.filter((item) => item.type === "authored");
   const reposted = corpus.items.filter((item) => item.type === "reposted");
   const canonicalUrls = new Set(corpus.items.map((item) => item.canonicalUrl));
@@ -186,18 +194,6 @@ test("CallNYC corpus accounts for every recoverable timeline item and preserves 
         .find((handle) => !ignoredHandles.has(handle))
     )
     .filter(Boolean);
-  const internalDestinations = new Set(
-    authored.flatMap((item) =>
-      item.outgoingLinks
-        .map((link) =>
-          link.displayedDestination
-            .replace(/^https?:\/\//i, "")
-            .replace(/\s+/g, "")
-            .replace(/…$/, "")
-        )
-        .filter((destination) => /^callnyc\.org(?:\/|$)/i.test(destination))
-    )
-  );
   const postsWithVisibleEngagement = authored.filter(
     (item) =>
       item.engagement.replies + item.engagement.reposts + item.engagement.likes > 0
@@ -221,10 +217,21 @@ test("CallNYC corpus accounts for every recoverable timeline item and preserves 
     authored.filter((item) => item.outgoingLinks.length > 0).length,
     87
   );
-  assert.equal(internalDestinations.size, 65);
+  assert.equal(derivedMetrics.recognitionPosts, 71);
+  assert.equal(derivedMetrics.recognitionRecipients.length, 26);
+  assert.equal(derivedMetrics.internalLinkOccurrences, 85);
+  assert.equal(derivedMetrics.externalLinkOccurrences, 13);
+  assert.equal(derivedMetrics.distinctDisplayedInternalDestinations, 65);
+  assert.equal(derivedMetrics.distinctNormalizedInternalDestinations, 63);
+  assert.equal(derivedMetrics.distinctNormalizedIssuePageDestinations, 61);
   assert.equal(authored.filter((item) => item.hasVisibleMedia).length, 75);
   assert.equal(postsWithVisibleEngagement.length, 59);
   assert.deepEqual(engagementTotals, { replies: 8, reposts: 74, likes: 111 });
+  assert.equal(corpus.derivationScript, "scripts/derive-callnyc-x-corpus.mjs");
+  assert.equal(
+    corpus.derivationManifest,
+    "callnyc-x-full-population-2026-07-14.manifest.json"
+  );
 
   const claim = knowledgeBank.claims.find(
     (item) => item.id === "CLM-CALLNYC-SOCIAL-TRANSLATION-SYSTEM"

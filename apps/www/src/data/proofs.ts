@@ -140,7 +140,7 @@ export const proofClaims: ProofClaim[] = [
       "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
     shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance. Its complete recoverable project-account corpus documents a repeatable recognition and issue-linking system across 26 Council members and 65 CallNYC destinations; Politico New York covered the project in 2016.",
+      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance. Its complete recoverable project-account corpus documents a repeatable recognition and issue-linking system across 26 Council members and 61 normalized CallNYC issue pages; Politico New York covered the project in 2016.",
     sourceBasis:
       "Approved resume language, archived prototype context, complete recoverable 107-item project-account corpus, public open-data context, public GitHub repository, and verified Politico New York coverage.",
     guardrail:

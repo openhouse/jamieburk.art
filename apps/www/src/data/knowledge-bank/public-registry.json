@@ -2083,7 +2083,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "The public account turned the prototype into a repeatable engagement system: the recoverable corpus contains 71 service-recognition posts naming 26 Council members and links to 65 distinct CallNYC issue destinations.",
+          "text": "The public account turned the prototype into a repeatable engagement system: the recoverable corpus contains 71 service-recognition posts naming 26 Council members and links to 61 distinct normalized CallNYC issue pages.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -2099,7 +2099,7 @@
             "complete recoverable item inventory",
             "service-recognition count",
             "Council-member count",
-            "linked issue-destination count"
+            "normalized linked issue-page count"
           ],
           "confidence": "high",
           "renderCitation": true

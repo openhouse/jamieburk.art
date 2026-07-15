@@ -56,8 +56,12 @@ preserves, for every recoverable item:
 - visible media presence.
 
 The file includes the SHA-256 digest of the raw authenticated capture used to
-produce it. No messages, settings, follower exports, credentials, private
-analytics, or non-public account data entered the corpus.
+produce it. The committed raw browser extraction, transformation manifest, and
+derivation script preserve the rest of the provenance chain. Run
+`node scripts/derive-callnyc-x-corpus.mjs` from the repository root to verify
+the raw-to-derived item transformation and recompute every aggregate. No
+messages, settings, follower exports, credentials, private analytics, or
+non-public account data entered the corpus.
 
 ## Product and publication pattern
 
@@ -71,6 +75,8 @@ The account was not merely a launch announcement:
 | Authored posts carrying outgoing links | 87 of 92 |
 | Internal CallNYC link occurrences | 85 |
 | Distinct displayed CallNYC destinations | 65 |
+| Distinct normalized CallNYC destinations | 63 |
+| Distinct normalized issue pages | 61 |
 | Authored posts with visible media | 75 |
 
 The recurring unit connected a resident issue, a named Council member, a visual
@@ -204,7 +210,7 @@ all later posts.
 
 Promoted to the CallNYC case study:
 
-- the 71-post / 26-member / 65-destination public communication system;
+- the 71-post / 26-member / 61-normalized-issue-page public communication system;
 - Politico-backed filtering, communication-channel, sharing, and discovery
   decisions;
 - the existing lower bound of eight Council members who visibly engaged back.
@@ -221,4 +227,3 @@ Research-queued:
 
 - the three-item profile-count discrepancy;
 - archived replacements for dead or unstable linked resources.
-
