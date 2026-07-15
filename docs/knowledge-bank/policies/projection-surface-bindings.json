@@ -1,7 +1,7 @@
 {
   "version": 3,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "2df5499fd525e34deac94c641f9b9d86175fef54a41c4d019ebf87a676b386f5",
+  "publicSurfaceSha256": "88a4f6dca1157426ed62f858101ed0408ff3ec9a7b6b9c82e7a013d663108b23",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -73,103 +73,322 @@
       "secured a $490,539 public funding recommendation",
       "Richard Caceres"
     ],
+    "expectedSubstantiveStatementCount": 28,
     "statements": [
       {
         "id": "profile-operating-structure",
-        "text": "Implementation lead who builds operating structure for emerging public-facing technical work.",
-        "claimIds": [],
-        "proofIds": ["career-operating-structure-14-years"]
+        "text": "Implementation lead who builds operating structure for emerging public-facing technical work. Fourteen-plus years translating between stakeholders, product, documentation, implementation, and public systems. Strong in complex, resource-constrained civic, cultural, small-business, and public-interest environments where teams need clear requirements, coordinated decisions, usable workflows, adoption support, reliable handoffs, and durable documentation.",
+        "pdfAnchor": "Implementation lead who builds operating structure for emerging public-facing technical work.",
+        "claims": [],
+        "proofs": [{ "id": "career-operating-structure-14-years", "anchor": "operating structure" }]
       },
       {
-        "id": "hje-growth",
-        "text": "contributing to 2x revenue growth",
-        "claimIds": [],
-        "proofIds": ["hje-revenue-growth-contribution"]
+        "id": "capability-product-operations",
+        "text": "Product operations & implementation Requirements, workflow mapping, user stories, acceptance criteria, decision logs, action tracking, rollout planning, UAT / QA, stakeholder updates, adoption, and handoffs.",
+        "pdfAnchor": "Product operations & implementation",
+        "claims": [],
+        "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "requirements" }]
       },
       {
-        "id": "callnyc-guidance",
-        "text": "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon",
-        "claimIds": ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"],
-        "proofIds": ["callnyc-civic-data-guidance"]
+        "id": "capability-knowledge-systems",
+        "text": "Knowledge systems & documentation Documentation architecture, meeting synthesis, source maps, shared drives, public guidance, resource libraries, reusable templates, and searchable reference systems.",
+        "pdfAnchor": "Knowledge systems & documentation",
+        "claims": [],
+        "proofs": [{ "id": "career-operating-structure-14-years", "anchor": "documentation" }]
       },
       {
-        "id": "crs-memory",
-        "text": "Built and stewarded 30-plus pages of shared campaign memory and coordination infrastructure",
-        "claimIds": [],
-        "proofIds": ["fair-rent-campaign-memory"]
+        "id": "capability-web-open-data",
+        "text": "Web, open data & civic technology JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, open-data workflows, APIs, and data-product requirements.",
+        "pdfAnchor": "Web, open data & civic technology",
+        "claims": [],
+        "proofs": [
+          { "id": "hje-modernization-stewardship", "anchor": "web" },
+          { "id": "callnyc-civic-data-guidance", "anchor": "open-data" }
+        ]
       },
       {
-        "id": "nycac-public-systems",
-        "text": "Built and maintained public web and knowledge infrastructure across NYC Artist Coalition campaigns",
-        "claimIds": ["CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE"],
-        "proofIds": ["nyc-artist-coalition-public-web-infrastructure"]
+        "id": "impact-hje-growth",
+        "text": "Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80-plus-year-old industrial business adapt to e-commerce.",
+        "claims": [],
+        "proofs": [
+          { "id": "hje-modernization-stewardship", "anchor": "e-commerce" },
+          { "id": "hje-revenue-growth-contribution", "anchor": "2x revenue growth" }
+        ]
       },
       {
-        "id": "wowlist-platform",
-        "text": "Co-built WOWList.org, a Python / Django and Ember.js community-calendar platform",
-        "claimIds": [],
-        "proofIds": ["wowlist-community-platform"]
+        "id": "impact-callnyc-guidance",
+        "text": "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+        "claims": [{ "id": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "anchor": "independent follow-on" }],
+        "proofs": [{ "id": "callnyc-civic-data-guidance", "anchor": "independent follow-on" }]
       },
       {
-        "id": "sunday-dinner-participation",
-        "text": "Created Sunday Dinner / 196 Artists Residency as a repeatable trust-building and participation structure",
-        "claimIds": [],
-        "proofIds": ["sunday-dinner-196-participation-infrastructure"]
+        "id": "impact-crs-memory",
+        "text": "Built and stewarded 30-plus pages of shared campaign memory and coordination infrastructure for a 2026 Commercial Rent Stabilization collaboration spanning Action Lab / Small Business United, Fair Rent NYC, NYC Artist Coalition, and partner networks.",
+        "claims": [],
+        "proofs": [{ "id": "fair-rent-campaign-memory", "anchor": "shared" }]
       },
       {
-        "id": "thick-arts-role",
-        "text": "THICK ARTS - Founder, Technical Project Manager",
-        "claimIds": [],
-        "proofIds": ["thick-arts-founder-role-history"]
+        "id": "impact-nycac-public-systems",
+        "text": "Built and maintained public web and knowledge infrastructure across NYC Artist Coalition campaigns for nightlife policy, cultural-space advocacy, storefront stability, and commercial rent stabilization, while preserving coalition and institutional credit.",
+        "claims": [],
+        "proofs": [{ "id": "nyc-artist-coalition-public-web-infrastructure", "anchor": "public web" }]
       },
       {
-        "id": "nycac-role",
-        "text": "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations",
-        "claimIds": [],
-        "proofIds": ["nyc-artist-coalition-civic-systems"]
+        "id": "impact-wowlist-platform",
+        "text": "Co-built WOWList.org, a Python / Django and Ember.js community-calendar platform used by arts and music organizers across 35-plus active city-scene tags, with natural-language event entry, weekly digests, embeddable calendars, and low-cost deployment.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "natural-language" }]
       },
       {
-        "id": "wowlist-role",
-        "text": "WOWList.org - Co-Founder, Product",
-        "claimIds": [],
-        "proofIds": ["wowlist-cofounder-role-history"]
+        "id": "impact-sunday-dinner-participation",
+        "text": "Created Sunday Dinner / 196 Artists Residency as a repeatable trust-building and participation structure, documenting 300-plus gatherings and supporting 20-plus resident artists through invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+        "claims": [],
+        "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "onboarding" }]
       },
       {
-        "id": "sunday-dinner-role",
-        "text": "196 Artists Residency / Sunday Dinner - Founder",
-        "claimIds": [],
-        "proofIds": ["sunday-dinner-founder-role-history"]
+        "id": "experience-thick-arts-role",
+        "text": "THICK ARTS - Founder, Technical Project Manager & Web Systems Lead",
+        "claims": [],
+        "proofs": [{ "id": "thick-arts-founder-role-history", "anchor": "Founder" }]
       },
       {
-        "id": "kc-town-hall-role",
-        "text": "KC Town Hall LLC - Co-Founder",
-        "claimIds": [],
-        "proofIds": ["kc-town-hall-cofounder-role-history"]
+        "id": "experience-thick-arts-services",
+        "text": "Lead an independent web strategy, design, and engineering studio delivering maintainable publishing systems, campaign hubs, e-commerce workflows, documentation infrastructure, resource libraries, and post-launch maintenance.",
+        "pdfAnchor": "Lead an independent web strategy, design, and engineering studio delivering maintainable publishing systems",
+        "claims": [],
+        "proofs": [{ "id": "career-operating-structure-14-years", "anchor": "documentation" }]
       },
       {
-        "id": "kc-town-hall-council-sequence",
-        "text": "The CCED Board recommended up to $490,539 for eligible project costs; the Kansas City Council later accepted that recommendation and authorized funding-agreement negotiations.",
-        "claimIds": ["CLM-KCTH-COUNCIL-APPROVAL-190649"],
-        "proofIds": ["kc-town-hall-public-benefit-documentation"]
+        "id": "experience-thick-arts-translation",
+        "text": "Translate stakeholder needs into requirements, information architecture, content models, technical scopes, implementation plans, public interfaces, launch plans, maintenance workflows, adoption materials, and handoff documentation.",
+        "claims": [],
+        "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "requirements" }]
       },
       {
-        "id": "ai-evals-course",
-        "text": "AI Evals for Engineers",
-        "claimIds": [],
-        "proofIds": ["ai-evals-professional-development"]
+        "id": "experience-thick-arts-hje",
+        "text": "Led digital transformation work for Harry J. Epstein Company across e-commerce, analytics, content, marketing, and operational workflows while preserving the company's distinctive institutional voice.",
+        "claims": [],
+        "proofs": [{ "id": "hje-modernization-stewardship", "anchor": "analytics" }]
       },
       {
-        "id": "ucsc-degree",
-        "text": "University of California, Santa Cruz",
-        "claimIds": [],
-        "proofIds": ["ucsc-degree-honors"]
+        "id": "experience-nycac-role",
+        "text": "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy Communications Lead",
+        "pdfAnchor": "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy",
+        "claims": [],
+        "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "Civic Systems" }]
       },
       {
-        "id": "work-authorization",
-        "text": "Authorized to work in the U.S.; no U.S. sponsorship required.",
-        "claimIds": [],
-        "proofIds": ["work-authorization-driver-license"]
+        "id": "experience-nycac-infrastructure",
+        "text": "Build and steward campaign and knowledge infrastructure for commercial rent stabilization, storefront stability, cultural-space advocacy, public-data framing, and civic action.",
+        "claims": [],
+        "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "public-data" }]
+      },
+      {
+        "id": "experience-nycac-coordination",
+        "text": "Create shared documentation and coordination systems including running minutes, action trackers, source maps, call scripts, QR pathways, public handouts, stakeholder follow-up systems, and report-back materials.",
+        "claims": [],
+        "proofs": [{ "id": "fair-rent-campaign-memory", "anchor": "shared" }]
+      },
+      {
+        "id": "experience-nycac-policy-translation",
+        "text": "Translate policy, public-data, and coalition needs into practical materials for work around Cabaret Law repeal, the Office of Nightlife, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+        "claims": [],
+        "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "Cabaret Law" }]
+      },
+      {
+        "id": "experience-nycac-public-data",
+        "text": "Developed policy-neutral public-data framing around commercial vacancy, occupancy, lease-cost indicators, storefront data, Local Law 157, and RPIE-derived aggregate reporting.",
+        "claims": [],
+        "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "public-data" }]
+      },
+      {
+        "id": "experience-wowlist-role",
+        "text": "WOWList.org - Co-Founder, Product & Community Systems",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-cofounder-role-history", "anchor": "Co-Founder" }]
+      },
+      {
+        "id": "experience-wowlist-platform",
+        "text": "Co-built a community event-calendar and distribution platform organized around user-followed keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment.",
+        "claims": [],
+        "proofs": [{ "id": "wowlist-community-platform", "anchor": "community" }]
+      },
+      {
+        "id": "experience-sunday-dinner-role",
+        "text": "196 Artists Residency / Sunday Dinner - Founder & Systems Steward",
+        "claims": [],
+        "proofs": [{ "id": "sunday-dinner-founder-role-history", "anchor": "Founder" }]
+      },
+      {
+        "id": "experience-sunday-dinner-practice",
+        "text": "Built a care-forward residency and recurring community practice; supported 20-plus resident artists and documented 300-plus gatherings through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.",
+        "claims": [],
+        "proofs": [{ "id": "sunday-dinner-196-participation-infrastructure", "anchor": "onboarding" }]
+      },
+      {
+        "id": "experience-kc-town-hall-role",
+        "text": "KC Town Hall LLC - Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development",
+        "claims": [],
+        "proofs": [{ "id": "kc-town-hall-cofounder-role-history", "anchor": "Co-Founder" }]
+      },
+      {
+        "id": "experience-kc-town-hall-council-sequence",
+        "text": "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The CCED Board recommended up to $490,539 for eligible project costs; the Kansas City Council later accepted that recommendation and authorized funding-agreement negotiations. The public resolution does not establish that an agreement was executed or funds were received.",
+        "claims": [],
+        "proofs": [{ "id": "kc-town-hall-public-benefit-documentation", "anchor": "funding-agreement negotiations" }]
+      },
+      {
+        "id": "education-ai-evals",
+        "text": "AI Evals for Engineers & PMs - Shreya Shankar & Hamel Husain / Maven, 2026. Application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.",
+        "claims": [],
+        "proofs": [{ "id": "ai-evals-professional-development", "anchor": "AI Evals for Engineers & PMs" }]
+      },
+      {
+        "id": "education-ucsc",
+        "text": "University of California, Santa Cruz - B.A., Film & Digital Media, Honors.",
+        "claims": [],
+        "proofs": [{ "id": "ucsc-degree-honors", "anchor": "University of California, Santa Cruz" }]
+      },
+      {
+        "id": "additional-work-authorization",
+        "text": "Valid New York State driver's license. Authorized to work in the U.S.; no U.S. sponsorship required.",
+        "claims": [],
+        "proofs": [{ "id": "work-authorization-driver-license", "anchor": "driver's license" }]
       }
     ]
-  }
+  },
+  "publicStatementManifest": [
+    {
+      "id": "resume-page-operating-structure",
+      "path": "apps/www/src/app/resume/page.tsx",
+      "surface": "/resume",
+      "text": "I create operating structure for complex public-facing teams, turning ambiguous work into requirements, workflows, documentation, decision trails, launch support, onboarding materials, and durable handoffs.",
+      "claims": [],
+      "proofs": [{ "id": "career-operating-structure-14-years", "anchor": "operating structure" }]
+    },
+    {
+      "id": "technical-operations-intro",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Across civic, cultural, small-business, and public-facing technical environments, I clarify requirements, coordinate delivery, and build decision, onboarding, and handoff materials so teams can make decisions, launch public work, and transfer ownership without losing context.",
+      "claims": [],
+      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "requirements" }]
+    },
+    {
+      "id": "technical-operations-requirements",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Turn emerging requirements into bounded plans, owners, milestones, releases, and handoffs.",
+      "claims": [],
+      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "requirements" }]
+    },
+    {
+      "id": "technical-operations-risks",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Make status, risks, decisions, and recurring blockers visible before teams lose time or context.",
+      "claims": [],
+      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "risk" }]
+    },
+    {
+      "id": "technical-operations-dependencies",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Coordinate dependencies across technical, legal, communications, contracts, and external-stakeholder work.",
+      "claims": [],
+      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "technical" }]
+    },
+    {
+      "id": "technical-operations-records",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Create decision records, runbooks, source maps, and onboarding materials people can use without replaying every meeting.",
+      "claims": [],
+      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "decision records" }]
+    },
+    {
+      "id": "technical-operations-reporting",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Report what is working, what remains open, and what needs human judgment so teams can improve without overengineering.",
+      "claims": [],
+      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "teams" }]
+    },
+    {
+      "id": "technical-operations-hje-action",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "I helped translate legacy operating knowledge into web, e-commerce, analytics, marketing, content, and workflow improvements.",
+      "claims": [],
+      "proofs": [{ "id": "hje-modernization-stewardship", "anchor": "legacy operating knowledge" }]
+    },
+    {
+      "id": "technical-operations-hje-result",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Customers gained a clearer way to find and order products, while internal stakeholders gained more repeatable digital workflows.",
+      "claims": [],
+      "proofs": [{ "id": "hje-modernization-stewardship", "anchor": "workflows" }]
+    },
+    {
+      "id": "technical-operations-fair-rent-action",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "I built and stewarded shared campaign memory, helped coordinate and implement a versioned website relaunch, organized a 20-year HUD-USPS vacancy-data corpus, and scoped a privacy-preserving commercial-data pilot for collective civic work.",
+      "claims": [],
+      "proofs": [
+        { "id": "fair-rent-campaign-memory", "anchor": "shared" },
+        { "id": "fair-rent-2023-web-relaunch", "anchor": "website relaunch" },
+        { "id": "commercial-vacancy-quarterly-corpus", "anchor": "20-year" },
+        { "id": "fair-rent-public-data-pilot", "anchor": "privacy-preserving" }
+      ]
+    },
+    {
+      "id": "technical-operations-fair-rent-result",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "Collaborators could trace decisions and source lineage, launch public action tools, and evaluate a smallest-serious data-product scope while protected strategy, legal-review context, and confidential records stayed private.",
+      "claims": [],
+      "proofs": [
+        { "id": "fair-rent-source-map", "anchor": "source lineage" },
+        { "id": "fair-rent-2023-web-relaunch", "anchor": "public action" },
+        { "id": "fair-rent-public-data-pilot", "anchor": "data-product" }
+      ]
+    },
+    {
+      "id": "technical-operations-callnyc-action",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "I built an independent prototype that translated constituent-services records into issue-oriented public guidance.",
+      "claims": [],
+      "proofs": [{ "id": "callnyc-civic-data-guidance", "anchor": "independent" }]
+    },
+    {
+      "id": "technical-operations-callnyc-result",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "The public interface made issue pathways, district context, and possible next steps legible without requiring people to decode the complete dataset first.",
+      "claims": [],
+      "proofs": [{ "id": "callnyc-civic-data-guidance", "anchor": "issue pathways" }]
+    },
+    {
+      "id": "technical-operations-sunday-dinner-action",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "I created repeatable hosting practices and a documented residency acceptance and onboarding workflow, supported by dedicated collaboration workspaces.",
+      "claims": [],
+      "proofs": [{ "id": "196-residency-onboarding-workflow", "anchor": "onboarding" }]
+    },
+    {
+      "id": "technical-operations-sunday-dinner-result",
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "surface": "/work/technical-operations",
+      "text": "The participation structure supported 300+ gatherings, 20+ resident artists, and reusable project and media handoffs without publishing private community records.",
+      "claims": [],
+      "proofs": [
+        { "id": "sunday-dinner-196-participation-infrastructure", "anchor": "300+" },
+        { "id": "196-residency-onboarding-workflow", "anchor": "handoffs" }
+      ]
+    }
+  ]
 }

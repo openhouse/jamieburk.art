@@ -3,8 +3,11 @@
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readFileSync, readdirSync } from "node:fs";
-import { join } from "node:path";
+import { basename, join } from "node:path";
 import { pathToFileURL } from "node:url";
+import ts from "typescript";
+
+import { proofClaims } from "../apps/www/src/data/proofs.ts";
 
 const suitePath = ".agents/evals/knowledge-bank-development.json";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
@@ -27,6 +30,13 @@ const projectionSurfaceBindings = JSON.parse(
     "utf8"
   )
 );
+const frozenCollectiveCreditBaseline = JSON.parse(
+  readFileSync(
+    ".agents/evals/baselines/collective-credit-v1.json",
+    "utf8"
+  )
+);
+const proofById = new Map(proofClaims.map((proof) => [proof.id, proof]));
 const collectiveProjectEntries = collectiveCreditPolicy.collectiveProjects;
 const individualProjectEntries = collectiveCreditPolicy.individualProjects;
 const collectiveProjects = new Set(collectiveProjectEntries);
@@ -69,29 +79,62 @@ const requiredCaseStudySharedFiles = new Set([
 const requiredCollectiveRuntimeFiles = new Set([
   "apps/www/mdx-components.tsx",
   "apps/www/src/app/work/[slug]/page.tsx",
+  "apps/www/src/components/CaseStudyBlocks.tsx",
   "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/components/WorkCard.tsx",
   "apps/www/src/components/citations/Claim.tsx",
+  "apps/www/src/data/proofs.ts",
+  "apps/www/src/data/work.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/knowledge-bank/public.ts",
   "apps/www/src/lib/work.ts"
 ]);
 const requiredResumeStatementIds = new Set([
   "profile-operating-structure",
-  "hje-growth",
-  "callnyc-guidance",
-  "crs-memory",
-  "nycac-public-systems",
-  "wowlist-platform",
-  "sunday-dinner-participation",
-  "thick-arts-role",
-  "nycac-role",
-  "wowlist-role",
-  "sunday-dinner-role",
-  "kc-town-hall-role",
-  "kc-town-hall-council-sequence",
-  "ai-evals-course",
-  "ucsc-degree",
-  "work-authorization"
+  "capability-product-operations",
+  "capability-knowledge-systems",
+  "capability-web-open-data",
+  "impact-hje-growth",
+  "impact-callnyc-guidance",
+  "impact-crs-memory",
+  "impact-nycac-public-systems",
+  "impact-wowlist-platform",
+  "impact-sunday-dinner-participation",
+  "experience-thick-arts-role",
+  "experience-thick-arts-services",
+  "experience-thick-arts-translation",
+  "experience-thick-arts-hje",
+  "experience-nycac-role",
+  "experience-nycac-infrastructure",
+  "experience-nycac-coordination",
+  "experience-nycac-policy-translation",
+  "experience-nycac-public-data",
+  "experience-wowlist-role",
+  "experience-wowlist-platform",
+  "experience-sunday-dinner-role",
+  "experience-sunday-dinner-practice",
+  "experience-kc-town-hall-role",
+  "experience-kc-town-hall-council-sequence",
+  "education-ai-evals",
+  "education-ucsc",
+  "additional-work-authorization"
+]);
+const requiredPublicStatementIds = new Set([
+  "resume-page-operating-structure",
+  "technical-operations-intro",
+  "technical-operations-requirements",
+  "technical-operations-risks",
+  "technical-operations-dependencies",
+  "technical-operations-records",
+  "technical-operations-reporting",
+  "technical-operations-hje-action",
+  "technical-operations-hje-result",
+  "technical-operations-fair-rent-action",
+  "technical-operations-fair-rent-result",
+  "technical-operations-callnyc-action",
+  "technical-operations-callnyc-result",
+  "technical-operations-sunday-dinner-action",
+  "technical-operations-sunday-dinner-result"
 ]);
 const hybridCandidatePaths = [
   ".agents/evals/knowledge-bank-development.json",
@@ -103,6 +146,7 @@ const hybridCandidatePaths = [
   "apps/www/mdx-components.tsx",
   "apps/www/next.config.ts",
   "apps/www/public/resume",
+  ".agents/evals/baselines/collective-credit-v1.json",
   "docs/knowledge-bank",
   "scripts/check-knowledge-development.mjs",
   "scripts/lib/citation-validation.mjs",
@@ -174,6 +218,99 @@ export function validateKnowledgeDevelopmentSuite(suite) {
 
 function normalizedText(value) {
   return value.replace(/\s+/g, " ").trim();
+}
+
+function decodedHtmlText(value) {
+  return value
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function normalizedIncludes(haystack, needle) {
+  return normalizedText(haystack)
+    .toLowerCase()
+    .includes(normalizedText(needle).toLowerCase());
+}
+
+function proofSurfaceForRoute(surface) {
+  if (surface === "/resume") return "resume";
+  if (surface === "/work/technical-operations") return "technical-operations";
+  return null;
+}
+
+function governedStatementFindings(statement, bank, source, label) {
+  const findings = [];
+  const claims = statement.claims ?? [];
+  const proofs = statement.proofs ?? [];
+  if (!statement.id || !statement.text || !statement.surface) {
+    return [`${label} is missing an ID, text, or surface`];
+  }
+  if (!normalizedIncludes(source, statement.text)) {
+    findings.push(`${label} is absent from ${statement.path ?? statement.surface}`);
+  }
+  if (claims.length + proofs.length === 0) {
+    findings.push(`${label} has no claim or proof identity`);
+  }
+
+  for (const support of claims) {
+    const claim = bank.claims.find((item) => item.id === support.id);
+    if (!claim) {
+      findings.push(`${label} references missing claim ${support.id}`);
+      continue;
+    }
+    if (claim.projectionEligibility !== "eligible") {
+      findings.push(`${label} references held claim ${support.id}`);
+    }
+    if (
+      !claim.projections.some(
+        (projection) =>
+          projection.status === "active" &&
+          projection.surfaces.includes(statement.surface)
+      )
+    ) {
+      findings.push(
+        `${label} claim ${support.id} has no active projection on ${statement.surface}`
+      );
+    }
+    if (
+      !support.anchor ||
+      !normalizedIncludes(statement.text, support.anchor) ||
+      !normalizedIncludes(JSON.stringify(claim), support.anchor)
+    ) {
+      findings.push(`${label} claim ${support.id} lacks shared semantic anchor`);
+    }
+  }
+
+  const expectedProofSurface = proofSurfaceForRoute(statement.surface);
+  for (const support of proofs) {
+    const proof = proofById.get(support.id);
+    if (!proof) {
+      findings.push(`${label} references missing proof ${support.id}`);
+      continue;
+    }
+    if (!["ready", "careful"].includes(proof.status)) {
+      findings.push(`${label} references non-public proof ${support.id}`);
+    }
+    if (expectedProofSurface && !proof.surfaces.includes(expectedProofSurface)) {
+      findings.push(
+        `${label} proof ${support.id} is not approved for ${expectedProofSurface}`
+      );
+    }
+    if (
+      !support.anchor ||
+      !normalizedIncludes(statement.text, support.anchor) ||
+      !normalizedIncludes(JSON.stringify(proof), support.anchor)
+    ) {
+      findings.push(`${label} proof ${support.id} lacks shared semantic anchor`);
+    }
+  }
+  return findings;
 }
 
 function sha256(value) {
@@ -260,9 +397,36 @@ function literalAttribute(tag, attribute) {
   return tag.match(new RegExp(`${attribute}=["']([^"']+)["']`))?.[1];
 }
 
+function stripIndentedMarkdownCode(content) {
+  const output = [];
+  let claimTagMode = null;
+  for (const line of content.split("\n")) {
+    if (claimTagMode === "live") {
+      output.push(line);
+      if (/\/>/.test(line)) claimTagMode = null;
+      continue;
+    }
+    if (claimTagMode === "code") {
+      if (/\/>/.test(line)) claimTagMode = null;
+      continue;
+    }
+    if (/^[ \t]*<Claim\b/.test(line)) {
+      const indentation = line.match(/^[ \t]*/)?.[0].replace(/\t/g, "    ").length ?? 0;
+      claimTagMode = indentation >= 4 ? "code" : "live";
+      if (claimTagMode === "live") output.push(line);
+      if (/\/>/.test(line)) claimTagMode = null;
+      continue;
+    }
+    if (/^(?: {4}|\t)/.test(line)) continue;
+    output.push(line);
+  }
+  return output.join("\n");
+}
+
 function executableSource(content) {
-  return content
+  return stripIndentedMarkdownCode(content)
     .replace(/^```[^\n]*\n[\s\S]*?^```[ \t]*$/gm, "")
+    .replace(/^~~~[^\n]*\n[\s\S]*?^~~~[ \t]*$/gm, "")
     .replace(/`(?:\\[\s\S]|[^`])*`/g, "")
     .replace(/<!--[\s\S]*?-->/g, "")
     .replace(/\{\/\*[\s\S]*?\*\/\}/g, "")
@@ -286,6 +450,146 @@ function executableSource(content) {
     )
     .replace(/\bfalse\s*&&\s*\([\s\S]*?\)\s*;?/g, "")
     .replace(/\bif\s*\(\s*false\s*\)\s*\{[\s\S]*?\}/g, "");
+}
+
+function hasModifier(node, kind) {
+  return node.modifiers?.some((modifier) => modifier.kind === kind) ?? false;
+}
+
+function hasProcessEnv(node) {
+  return Boolean(node) && /\bprocess\.env(?:\.|\[)/.test(node.getText());
+}
+
+function hasDisallowedRuntimeGate(node) {
+  for (let current = node.parent; current; current = current.parent) {
+    const condition = ts.isConditionalExpression(current)
+      ? current.condition
+      : ts.isIfStatement(current)
+        ? current.expression
+        : null;
+    if (
+      condition &&
+      (condition.kind === ts.SyntaxKind.FalseKeyword || hasProcessEnv(condition))
+    ) {
+      return true;
+    }
+    if (
+      ts.isBinaryExpression(current) &&
+      [
+        ts.SyntaxKind.AmpersandAmpersandToken,
+        ts.SyntaxKind.BarBarToken,
+        ts.SyntaxKind.EqualsEqualsToken,
+        ts.SyntaxKind.EqualsEqualsEqualsToken,
+        ts.SyntaxKind.ExclamationEqualsToken,
+        ts.SyntaxKind.ExclamationEqualsEqualsToken
+      ].includes(current.operatorToken.kind) &&
+      (current.left.kind === ts.SyntaxKind.FalseKeyword ||
+        current.right.kind === ts.SyntaxKind.FalseKeyword ||
+        hasProcessEnv(current))
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isReachableModuleNode(node, sourcePath) {
+  const expectedExportName = basename(sourcePath).replace(/\.[^.]+$/, "");
+  for (let current = node.parent; current; current = current.parent) {
+    if (ts.isFunctionDeclaration(current)) {
+      if (
+        hasModifier(current, ts.SyntaxKind.DefaultKeyword) &&
+        sourcePath.includes("/app/") &&
+        basename(sourcePath).startsWith("page.")
+      ) {
+        return true;
+      }
+      if (
+        hasModifier(current, ts.SyntaxKind.ExportKeyword) &&
+        current.name?.text === expectedExportName
+      ) {
+        return true;
+      }
+    }
+    if (ts.isVariableStatement(current)) {
+      const exported = hasModifier(current, ts.SyntaxKind.ExportKeyword);
+      const names = current.declarationList.declarations
+        .map((declaration) =>
+          ts.isIdentifier(declaration.name) ? declaration.name.text : null
+        )
+        .filter(Boolean);
+      if (
+        exported &&
+        (names.includes(expectedExportName) ||
+          (sourcePath.endsWith("/data/work.ts") && names.includes("workItems")))
+      ) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function tsxRouteRealizesProjection(
+  content,
+  claim,
+  projection,
+  surface,
+  bank,
+  sourcePath
+) {
+  const sourceFile = ts.createSourceFile(
+    sourcePath,
+    content,
+    ts.ScriptTarget.Latest,
+    true,
+    sourcePath.endsWith("x") ? ts.ScriptKind.TSX : ts.ScriptKind.TS
+  );
+  let realized = false;
+
+  function visit(node) {
+    if (realized) return;
+    if (
+      ts.isJsxSelfClosingElement(node) &&
+      node.tagName.getText(sourceFile) === "Claim" &&
+      !hasDisallowedRuntimeGate(node) &&
+      isReachableModuleNode(node, sourcePath)
+    ) {
+      const tag = node.getText(sourceFile);
+      if (
+        literalAttribute(tag, "claimId") === claim.id &&
+        literalAttribute(tag, "projection") === projection.key &&
+        literalAttribute(tag, "surface") === surface &&
+        matchingCitationOccurrence(bank, tag, claim, projection, surface)
+      ) {
+        realized = true;
+        return;
+      }
+    }
+    if (
+      ts.isCallExpression(node) &&
+      node.expression.getText(sourceFile) === "getClaimProjection" &&
+      !hasDisallowedRuntimeGate(node) &&
+      isReachableModuleNode(node, sourcePath)
+    ) {
+      const values = node.arguments.map((argument) =>
+        ts.isStringLiteral(argument) ? argument.text : null
+      );
+      if (
+        values[0] === claim.id &&
+        values[1] === projection.key &&
+        values[2] === surface &&
+        !projection.citationRequired
+      ) {
+        realized = true;
+        return;
+      }
+    }
+    ts.forEachChild(node, visit);
+  }
+
+  visit(sourceFile);
+  return realized;
 }
 
 export function documentRealizesProjection(content, projection) {
@@ -330,13 +634,21 @@ export function routeRealizesProjection(
   claim,
   projection,
   surface,
-  bank = { pages: [] }
+  bank = { pages: [], sources: [] },
+  sourcePath = "virtual.mdx"
 ) {
+  if (/\.[cm]?[jt]sx?$/.test(sourcePath)) {
+    return tsxRouteRealizesProjection(
+      content,
+      claim,
+      projection,
+      surface,
+      bank,
+      sourcePath
+    );
+  }
   const executable = executableSource(content);
-  const claimTags =
-    executable.match(
-      /^[ \t]*<Claim\b[\s\S]*?\/>(?:[ \t]*\{\s*["']\s*["']\s*\})?[ \t]*$/gm
-    ) ?? [];
+  const claimTags = executable.match(/<Claim\b[\s\S]*?\/>/g) ?? [];
   if (
     claimTags.some(
       (tag) =>
@@ -390,15 +702,15 @@ function projectionRealizationFindings(bank, claim, projection) {
     const routeContents = [];
     for (const path of routeFiles) {
       try {
-        routeContents.push(readFileSync(path, "utf8"));
+        routeContents.push({ path, content: readFileSync(path, "utf8") });
       } catch {
         findings.push(`${claim.id}/${projection.key} targets missing ${path}`);
       }
     }
     if (
       routeContents.length === routeFiles.length &&
-      !routeContents.some((content) =>
-        routeRealizesProjection(content, claim, projection, surface, bank)
+      !routeContents.some(({ path, content }) =>
+        routeRealizesProjection(content, claim, projection, surface, bank, path)
       )
     ) {
       findings.push(`${claim.id}/${projection.key} is not realized on ${surface}`);
@@ -445,6 +757,41 @@ export function evaluateKnowledgeBank(
       "collective claim inventory, project ownership, or credit language changed without policy review"
     );
   }
+  if (
+    frozenCollectiveCreditBaseline.version !== 1 ||
+    frozenCollectiveCreditBaseline.status !== "frozen-during-run"
+  ) {
+    findings["KB-007"].push("collective-credit baseline is not frozen for this run");
+  }
+  const collectiveClaimCount = bank.claims.filter(
+    (claim) => claim.collectiveWork
+  ).length;
+  if (
+    collectiveClaimCount <
+    frozenCollectiveCreditBaseline.minimumCollectiveClaimCount
+  ) {
+    findings["KB-007"].push(
+      `collective claim count fell below frozen baseline ${frozenCollectiveCreditBaseline.minimumCollectiveClaimCount}`
+    );
+  }
+  if (
+    frozenCollectiveCreditBaseline.collectiveClaimsSha256 !==
+    collectiveCreditFingerprint(bank)
+  ) {
+    findings["KB-007"].push(
+      "collective credit semantics differ from the frozen human-review baseline"
+    );
+  }
+  for (const [id, project] of Object.entries(
+    frozenCollectiveCreditBaseline.requiredClaimProjects
+  )) {
+    const claim = bank.claims.find((item) => item.id === id);
+    if (!claim || !claim.collectiveWork || claim.project !== project) {
+      findings["KB-007"].push(
+        `frozen collective claim ${id} must remain collective in ${project}`
+      );
+    }
+  }
   for (const path of requiredCollectiveRuntimeFiles) {
     if (!collectiveCreditPolicy.collectiveRuntimeFiles.includes(path)) {
       findings["KB-007"].push(
@@ -464,6 +811,20 @@ export function evaluateKnowledgeBank(
   } catch (error) {
     findings["KB-007"].push(
       `collective-claim runtime inventory cannot be read: ${error.message}`
+    );
+  }
+  try {
+    if (
+      frozenCollectiveCreditBaseline.collectiveRuntimeSha256 !==
+      fileInventoryFingerprint(collectiveCreditPolicy.collectiveRuntimeFiles)
+    ) {
+      findings["KB-007"].push(
+        "collective runtime differs from the frozen human-review baseline"
+      );
+    }
+  } catch (error) {
+    findings["KB-007"].push(
+      `frozen collective runtime inventory cannot be read: ${error.message}`
     );
   }
   if (
@@ -518,6 +879,36 @@ export function evaluateKnowledgeBank(
     );
   }
 
+  const publicStatementIds = new Set();
+  for (const statement of projectionSurfaceBindings.publicStatementManifest ?? []) {
+    if (publicStatementIds.has(statement.id)) {
+      findings["KB-009"].push(`public manifest duplicates statement ${statement.id}`);
+    }
+    publicStatementIds.add(statement.id);
+    let source = "";
+    try {
+      source = readFileSync(statement.path, "utf8");
+    } catch (error) {
+      findings["KB-009"].push(
+        `public statement ${statement.id} cannot read ${statement.path}: ${error.message}`
+      );
+      continue;
+    }
+    findings["KB-009"].push(
+      ...governedStatementFindings(
+        statement,
+        bank,
+        source,
+        `public statement ${statement.id}`
+      )
+    );
+  }
+  for (const id of requiredPublicStatementIds) {
+    if (!publicStatementIds.has(id)) {
+      findings["KB-009"].push(`public manifest omits consequential statement ${id}`);
+    }
+  }
+
   const resumeArtifact = projectionSurfaceBindings.resumeArtifact;
   try {
     const source = readFileSync(resumeArtifact.sourcePath, "utf8");
@@ -548,33 +939,36 @@ export function evaluateKnowledgeBank(
         findings["KB-009"].push(`resume PDF text contains held wording: ${phrase}`);
       }
     }
-    const proofSource = readFileSync("apps/www/src/data/proofs.ts", "utf8");
-    const proofIds = new Set(
-      [...proofSource.matchAll(/\bid:\s*"([^"]+)"/g)].map((match) => match[1])
-    );
+    const visibleSource = decodedHtmlText(source);
     const resumeStatementIds = new Set();
+    if (
+      resumeArtifact.statements.length !==
+      resumeArtifact.expectedSubstantiveStatementCount
+    ) {
+      findings["KB-009"].push(
+        `resume manifest must contain ${resumeArtifact.expectedSubstantiveStatementCount} substantive statements`
+      );
+    }
     for (const statement of resumeArtifact.statements) {
       if (resumeStatementIds.has(statement.id)) {
         findings["KB-009"].push(`resume manifest duplicates statement ${statement.id}`);
       }
       resumeStatementIds.add(statement.id);
-      if (!normalizedText(source).includes(normalizedText(statement.text))) {
-        findings["KB-009"].push(`resume source omits manifested statement ${statement.id}`);
-      }
-      if (!normalizedText(extractedText).includes(normalizedText(statement.text))) {
+      const governedStatement = {
+        ...statement,
+        path: resumeArtifact.sourcePath,
+        surface: "/resume"
+      };
+      findings["KB-009"].push(
+        ...governedStatementFindings(
+          governedStatement,
+          bank,
+          visibleSource,
+          `resume statement ${statement.id}`
+        )
+      );
+      if (!normalizedIncludes(extractedText, statement.pdfAnchor ?? statement.text)) {
         findings["KB-009"].push(`resume PDF text omits manifested statement ${statement.id}`);
-      }
-      const linkedIds = [...statement.claimIds, ...statement.proofIds];
-      if (linkedIds.length === 0) {
-        findings["KB-009"].push(`resume statement ${statement.id} has no claim or proof identity`);
-      }
-      for (const id of statement.claimIds) {
-        const claim = bank.claims.find((item) => item.id === id);
-        if (!claim) findings["KB-009"].push(`resume statement ${statement.id} references missing claim ${id}`);
-        else if (claim.projectionEligibility !== "eligible") findings["KB-009"].push(`resume statement ${statement.id} references held claim ${id}`);
-      }
-      for (const id of statement.proofIds) {
-        if (!proofIds.has(id)) findings["KB-009"].push(`resume statement ${statement.id} references missing proof ${id}`);
       }
     }
     for (const id of requiredResumeStatementIds) {

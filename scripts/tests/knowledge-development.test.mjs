@@ -1676,6 +1676,20 @@ test("document projections cannot be realized by commented-out text", () => {
     ),
     true
   );
+  assert.equal(
+    documentRealizesProjection(
+      "~~~md\nA source-backed claim must remain visible.\n~~~",
+      projection
+    ),
+    false
+  );
+  assert.equal(
+    documentRealizesProjection(
+      "    A source-backed claim must remain visible.",
+      projection
+    ),
+    false
+  );
 });
 
 test("citation-required route bindings stay connected to their page occurrence", () => {
@@ -1858,6 +1872,87 @@ test("commented claim bindings do not count as route realization", () => {
       "/work/technical-operations"
     ),
     false
+  );
+});
+
+test("TypeScript route reachability rejects unused exports and runtime gates", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-MEMORY-SYSTEM"
+  );
+  const projection = claim.projections.find(
+    (item) => item.key === "technical-operations"
+  );
+  const surface = "/work/technical-operations";
+  const literal = `<Claim claimId="${claim.id}" projection="${projection.key}" surface="${surface}" />`;
+  const sourcePath = "apps/www/src/app/test/page.tsx";
+  const realizes = (source) =>
+    routeRealizesProjection(
+      source,
+      claim,
+      projection,
+      surface,
+      knowledgeBank,
+      sourcePath
+    );
+
+  assert.equal(
+    realizes(`export default function TestPage() { return (${literal}); }`),
+    true
+  );
+  assert.equal(
+    realizes(`function NeverRendered() { return (${literal}); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export function Hidden() { return (${literal}); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export const Hidden = () => { return (${literal}); };`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return false ? (${literal}) : null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return process.env.NEXT_PUBLIC_SHOW ? (${literal}) : null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return process.env.NEXT_PUBLIC_SHOW === "yes" && (${literal}); }`),
+    false
+  );
+});
+
+test("unused TypeScript projection resolvers do not satisfy route coverage", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+  );
+  const projection = claim.projections.find((item) => item.key === "work-card");
+  const call = `getClaimProjection("${claim.id}", "${projection.key}", "/work")`;
+
+  assert.equal(
+    routeRealizesProjection(
+      `const unused = ${call};`,
+      claim,
+      projection,
+      "/work",
+      knowledgeBank,
+      "apps/www/src/data/work.ts"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `export const workItems = [{ summary: ${call}.text }];`,
+      claim,
+      projection,
+      "/work",
+      knowledgeBank,
+      "apps/www/src/data/work.ts"
+    ),
+    true
   );
 });
 

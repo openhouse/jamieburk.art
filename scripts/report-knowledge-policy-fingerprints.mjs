@@ -4,19 +4,10 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 import {
-  collectiveCreditFingerprint,
-  fileInventoryFingerprint,
   projectionDecisionFingerprint,
   publicSurfaceFingerprint
 } from "./check-knowledge-development.mjs";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
-
-const collectiveCreditPolicy = JSON.parse(
-  readFileSync(
-    "docs/knowledge-bank/policies/collective-credit-policy.json",
-    "utf8"
-  )
-);
 
 function sha256(path) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
@@ -32,10 +23,6 @@ const resumePdf =
 console.log(
   JSON.stringify(
     {
-      collectiveClaimsSha256: collectiveCreditFingerprint(knowledgeBank),
-      collectiveRuntimeSha256: fileInventoryFingerprint(
-        collectiveCreditPolicy.collectiveRuntimeFiles
-      ),
       projectionDecisionSha256: projectionDecisionFingerprint(knowledgeBank),
       publicSurfaceSha256: publicSurfaceFingerprint(),
       resumeArtifact: {

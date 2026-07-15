@@ -156,7 +156,7 @@ export const proofClaims: ProofClaim[] = [
       "All 110 profile-reported posts were recovered"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture", "stakeholder-engagement"],
     lastReviewed: "2026-07-14"
@@ -680,7 +680,7 @@ export const proofClaims: ProofClaim[] = [
       "Stakeholder details",
       "Private transition context"
     ],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
     lastReviewed: "2026-07-14"

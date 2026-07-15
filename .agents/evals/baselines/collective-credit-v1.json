@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "status": "frozen-during-run",
+  "reviewedAt": "2026-07-15",
+  "reviewedBy": [
+    "Jamie Burkart",
+    "Codex archival review",
+    "two independent evaluator passes required"
+  ],
+  "minimumCollectiveClaimCount": 54,
+  "collectiveClaimsSha256": "d941af8a2c8b309e020cc07b86512748897486985a238cbfe5092ff48242c556",
+  "collectiveRuntimeSha256": "16efc27c13c5cade8e8e96cab16e152c183bd81d752500489b9976b9272fb0f6",
+  "requiredClaimProjects": {
+    "CLM-KCTH-COUNCIL-APPROVAL-190649": "kc-town-hall",
+    "CLM-KCTH-MISSION-ALIGNED-HANDOFF": "kc-town-hall",
+    "CLM-KCTH-X-PUBLIC-OPERATIONS": "kc-town-hall",
+    "CLM-NAC-CABARET-REPEAL-OUTCOME": "nyc-artist-coalition",
+    "CLM-NAC-CIVIC-SYSTEMS": "nyc-artist-coalition",
+    "CLM-NAC-CREATION-ROLE": "nyc-artist-coalition",
+    "CLM-NAC-MARCH-DISBANDMENT-OUTCOME": "nyc-artist-coalition",
+    "CLM-NAC-OFFICE-NIGHTLIFE-OUTCOME": "nyc-artist-coalition",
+    "CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE": "nyc-artist-coalition",
+    "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER": "nyc-artist-coalition"
+  }
+}
