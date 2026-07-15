@@ -204,6 +204,19 @@ Ask:
 66. Is “first CouncilStat hackathon” kept only in the separately cited claim
     that attributes the description to NYC Council, while the independent
     CallNYC follow-on and resume projections avoid borrowing that superlative?
+67. Does the Finkelpearl record distinguish his documented public rationale -
+    reciprocal engagement, direct feedback, common-cause convening, and the
+    named coalition example - from any inference about private motive?
+68. Do the DCLA, Council, Espinal, coalition, and Jamie records preserve their
+    distinct institutional capacities without turning reciprocity into need,
+    dependency, endorsement, recommendation adoption, or universal
+    representation?
+69. Do all four institutional-value syntheses remain `inference`,
+    `internal-only`, `unused`, and absent from public projections while the
+    directly attributed May 2017 testimony claim remains separately bounded?
+70. Does Jamie's bridge-value synthesis name his documented organizer, safety,
+    testimony, participation-system, and civic-systems contributions while
+    preserving collective production and refusing sole policy causality?
 
 Return JSON with:
 

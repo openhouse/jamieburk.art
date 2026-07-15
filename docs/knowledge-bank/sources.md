@@ -92,6 +92,20 @@ interface facts; they are not independent proof of impact or Jamie's individual
 authorship. Official records establish hearings and enacted provisions; they do
 not allocate causal credit among advocates, legislators, agencies, or partners.
 
+## NYC Artist Coalition Institutional Relationship
+
+The July 15, 2026 pass added four closely read official sources:
+
+- [Finkelpearl's February 2017 CreateNYC testimony](https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect6_Commissioner-Tom-Finkelpearl_Testimony.pdf), supporting the public record of DIY-community recommendations, continued independent organizing, and DCLA's stated intention to keep learning from and working with that community.
+- [The May 19, 2017 Council budget-hearing transcript](https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F), supporting Finkelpearl's public framing of reciprocal engagement, direct feedback, common-cause convening, and NYC Artist Coalition as an example.
+- [The CreateNYC foreword](https://createnyc.cityofnewyork.us/the-cultural-plan/forward/), connecting continuing direct dialogue with the launch of NYC Artist Coalition.
+- [CreateNYC's NYC Artists issue area](https://createnyc.cityofnewyork.us/the-cultural-plan/issue-areas/nyc-artsts/), crediting the coalition with organizing, recommendations, and thoughtful dialogue concerning safe artist-led spaces.
+
+These sources establish public statements and institutional chronology. They do
+not establish anyone's private motive, institutional dependence, Jamie's exact
+share of every activity, universal representation, recommendation adoption, or
+sole causality for legislation and policy outcomes.
+
 ## NYC Artist Coalition Campaign Press Corpus
 
 The July 13, 2026 press-corpus pass recovered every placement in four campaign

@@ -80,9 +80,17 @@ import {
   kcTownHallSources,
   tiredOfTiresProject
 } from "./kc-town-hall-council-action.ts";
+import {
+  nycArtcInstitutionalValueClaims,
+  nycArtcInstitutionalValueEntities,
+  nycArtcInstitutionalValueIntakes,
+  nycArtcInstitutionalValueResearchInquiries,
+  nycArtcInstitutionalValueSources
+} from "./nycartc-institutional-value.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...nycArtcInstitutionalValueIntakes,
     ...personalFacebookPostIntakes,
     ...kcSpacesFundFacebookPostIntakes,
     ...nycArtcFacebookPostIntakes,
@@ -223,7 +231,10 @@ const knowledgeBankInput = {
       availability: "live",
       status: "promoted",
       sourceIds: ["SRC-NYC-COUNCIL-OFFICE-NIGHTLIFE-2017"],
-      claimIds: ["CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHMENT"],
+      claimIds: [
+        "CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHMENT",
+        "CLM-ESPINAL-NYCARTC-SPONSORED-MEASURES"
+      ],
       inquiryIds: ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"]
     },
     {
@@ -240,7 +251,10 @@ const knowledgeBankInput = {
       availability: "live",
       status: "promoted",
       sourceIds: ["SRC-NYC-COUNCIL-CABARET-VOTE-2017"],
-      claimIds: ["CLM-NYC-CABARET-LAW-COUNCIL-VOTE"],
+      claimIds: [
+        "CLM-NYC-CABARET-LAW-COUNCIL-VOTE",
+        "CLM-ESPINAL-NYCARTC-SPONSORED-MEASURES"
+      ],
       inquiryIds: ["INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"]
     },
     {
@@ -350,7 +364,10 @@ const knowledgeBankInput = {
       availability: "live",
       status: "promoted",
       sourceIds: ["SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017"],
-      claimIds: ["CLM-NYCARTC-OCTOBER-TOWN-HALL"],
+      claimIds: [
+        "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+        "CLM-ESPINAL-NYCARTC-TOWN-HALL-PARTICIPATION"
+      ],
       inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"]
     },
     {
@@ -511,6 +528,7 @@ const knowledgeBankInput = {
     }
   ],
   entities: [
+    ...nycArtcInstitutionalValueEntities,
     ...nycArtcFacebookEventEntities,
     {
       id: "charlotte-street-foundation",
@@ -645,6 +663,10 @@ const knowledgeBankInput = {
       period: { start: "2017" },
       entityIds: [
         "nyc-artist-coalition",
+        "nyc-department-cultural-affairs",
+        "create-nyc",
+        "tom-finkelpearl",
+        "rafael-espinal",
         "let-nyc-dance",
         "fair-rent-nyc-campaign",
         "nyc-cabaret-law",
@@ -689,6 +711,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...nycArtcInstitutionalValueSources,
     ...personalFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
     ...nycArtcFacebookPostSources,
@@ -866,6 +889,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...nycArtcInstitutionalValueClaims,
     ...personalFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
     ...nycArtcFacebookPostClaims,
@@ -986,6 +1010,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...nycArtcInstitutionalValueResearchInquiries,
     ...personalFacebookPostResearchInquiries,
     ...kcSpacesFundFacebookPostResearchInquiries,
     ...nycArtcFacebookPostResearchInquiries,

@@ -258,6 +258,36 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-13
 
+## nycartc-finkelpearl-council-testimony - Public institutional framing
+
+**Status:** Confirmed with boundary; editorially unused
+**Support level:** Official Council transcript
+**Evidence class:** Official New York City Council hearing transcript
+**Public wording:** In May 2017 Council budget testimony, DCLA Commissioner Tom Finkelpearl named NYC Artist Coalition while describing reciprocal public engagement, expanded direct feedback, and common-cause convening.
+**Detailed public-safe wording:** Finkelpearl presented the coalition as an example within DCLA's public account of CreateNYC engagement; this establishes his public institutional framing, not his private motive.
+**Where to project:** Knowledge-bank research note; hold for future editorial selection.
+**Why it matters:** Establishes in Finkelpearl's own public institutional framing why the coalition was relevant to DCLA's account of CreateNYC engagement.
+**Guardrail:** This is public framing, not proof of private motive or dependence.
+**Do not say:** Finkelpearl said DCLA needed NYC Artist Coalition; DCLA adopted every coalition recommendation; the testimony allocates Jamie's individual contribution.
+**Protected boundaries:** Private motives, private correspondence, and unapproved recollections remain outside the public claim.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycartc-institutional-bridge-value - Civic translation capacity
+
+**Status:** Inference; internal-only; editorially unused
+**Support level:** Multiple official records, independent reporting, and bounded first-person role evidence
+**Evidence class:** Official DCLA and Council records / independent reporting / bounded first-person role evidence
+**Public wording:** No public projection approved in this cycle.
+**Detailed public-safe wording:** NYC Artist Coalition extended reciprocal public engagement into informal cultural spaces and translated situated experience into recommendations, testimony, convenings, and implementation feedback for agency and legislative processes. Jamie's documented organizer, practical safety, testimony, recurring-participation, and civic-systems contributions helped build that capacity within collective work.
+**Where to project:** No public surface in this cycle.
+**Why it matters:** Explains the professional and institutional value of Jamie's work without reducing it to a campaign output or overstating policy causality.
+**Guardrail:** Preserve the difference between documented events, institutional interpretation, individual contribution, private motive, representation, adoption, and causal credit.
+**Do not say:** DCLA, the Council, Finkelpearl, or Espinal could not act without the coalition; the coalition represented everyone; Jamie alone created this capacity or caused later laws and offices.
+**Protected boundaries:** Private correspondence, private motives, unapproved collaborator recollections, and protected first-person source material remain offline.
+**Review owner:** Jamie / collaborator or official corroboration welcomed
+**Last reviewed:** 2026-07-15
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful

@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "profile": {
     "id": "knowledge_ready",
     "threshold": 95,
@@ -46,7 +46,11 @@
     "https://kansascity.legistar.com/View.ashx?M=F&ID=10628240&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
     "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
     "https://www.facebook.com/ClevelandAveKC/posts/1633775000115273",
-    "https://extension.missouri.edu/media/wysiwyg/News/TheNetwork/March2024/HENC%20Strategic%20Plan%203.0%20%28PDF%29.pdf"
+    "https://extension.missouri.edu/media/wysiwyg/News/TheNetwork/March2024/HENC%20Strategic%20Plan%203.0%20%28PDF%29.pdf",
+    "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect6_Commissioner-Tom-Finkelpearl_Testimony.pdf",
+    "https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F",
+    "https://createnyc.cityofnewyork.us/the-cultural-plan/forward/",
+    "https://createnyc.cityofnewyork.us/the-cultural-plan/issue-areas/nyc-artsts/"
   ],
   "requiredResearchUrls": [
     "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
@@ -881,6 +885,51 @@
     "attributedClaimId": "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
     "independentClaimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
     "councilSourceId": "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"
+  },
+  "requiredNycArtcInstitutionalValue": {
+    "entityIds": [
+      "nyc-department-cultural-affairs",
+      "create-nyc",
+      "tom-finkelpearl",
+      "rafael-espinal"
+    ],
+    "intakeIds": [
+      "INT-2026-07-15-DCLA-FINKELPEARL-CREATENYC-TESTIMONY",
+      "INT-2026-07-15-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT",
+      "INT-2026-07-15-CREATENYC-FORWARD-NYCARTC",
+      "INT-2026-07-15-CREATENYC-NYC-ARTISTS-NYCARTC"
+    ],
+    "sourceIds": [
+      "SRC-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2017",
+      "SRC-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017",
+      "SRC-CREATENYC-FORWARD-NYCARTC-2017",
+      "SRC-CREATENYC-NYC-ARTISTS-NYCARTC-2017"
+    ],
+    "claimIds": [
+      "CLM-FINKELPEARL-NYCARTC-COUNCIL-TESTIMONY-2017",
+      "CLM-DCLA-NYCARTC-RECIPROCAL-PUBLIC-ENGAGEMENT",
+      "CLM-NYC-COUNCIL-NYCARTC-CIVIC-VALUE",
+      "CLM-ESPINAL-NYCARTC-SPONSORED-MEASURES",
+      "CLM-ESPINAL-NYCARTC-TOWN-HALL-PARTICIPATION",
+      "CLM-ESPINAL-NYCARTC-RELATIONAL-VALUE",
+      "CLM-JAMIE-NYCARTC-INSTITUTIONAL-BRIDGE-VALUE"
+    ],
+    "inferenceClaimIds": [
+      "CLM-DCLA-NYCARTC-RECIPROCAL-PUBLIC-ENGAGEMENT",
+      "CLM-NYC-COUNCIL-NYCARTC-CIVIC-VALUE",
+      "CLM-ESPINAL-NYCARTC-RELATIONAL-VALUE",
+      "CLM-JAMIE-NYCARTC-INSTITUTIONAL-BRIDGE-VALUE"
+    ],
+    "testimonyClaimId": "CLM-FINKELPEARL-NYCARTC-COUNCIL-TESTIMONY-2017",
+    "budgetTranscriptSourceId": "SRC-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017",
+    "februaryTestimonySourceId": "SRC-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2017",
+    "dclaClaimId": "CLM-DCLA-NYCARTC-RECIPROCAL-PUBLIC-ENGAGEMENT",
+    "councilClaimId": "CLM-NYC-COUNCIL-NYCARTC-CIVIC-VALUE",
+    "espinalSponsorshipClaimId": "CLM-ESPINAL-NYCARTC-SPONSORED-MEASURES",
+    "espinalTownHallClaimId": "CLM-ESPINAL-NYCARTC-TOWN-HALL-PARTICIPATION",
+    "espinalClaimId": "CLM-ESPINAL-NYCARTC-RELATIONAL-VALUE",
+    "jamieClaimId": "CLM-JAMIE-NYCARTC-INSTITUTIONAL-BRIDGE-VALUE",
+    "inquiryId": "INQ-NYCARTC-INSTITUTIONAL-RELATIONAL-VALUE"
   },
   "rubrics": [
     {

@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-2026-07-15-c",
+  "judgeId": "archival-editorial-2026-07-15-e",
   "lens": "archival-editorial",
-  "candidate": "sha256:dcb11b498860961a0eab40bad500faffd10a580585056dc87c3cd36f68396cc2",
-  "contract": "sha256:c738f84053b2409c8dc8ef2e1b40b5252cbed2b4d509f27f0c047ba01997d7c5",
+  "candidate": "sha256:ac618735f8e0d6829fc42ab0d674f9c87ce9f8cdbc1c45c5f5a36f98e832dd84",
+  "contract": "sha256:ae91dc206bdf80b22f8797acdfbc0db62b9b535995f14c9d6ba59a02d3ff9804",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,21 +17,41 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The candidate accounts for 119 intake records, including 25 iCloud Teams records across Jamie Projects History, CRS, and job-hunt; private artifacts use opaque locator IDs without exposing filesystem paths or source contents."
+      "observation": "All four institutional-source intakes retain stable identities, public-safe live dispositions, source relationships, and the partially recovered inquiry; the deterministic evaluation reports 123 intake records and no findings."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "The Finkelpearl, Council, and CreateNYC sources preserve close-reading locators, support and non-support fields, and explicit boundaries against private motive, necessity, recommendation adoption, individual-role attribution, and sole causality."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Espinal's two directly documented facts are now separate confirmed-with-boundary claims: official sponsorship is supported by two Council records, while one October 2017 town-hall appearance is supported by one contemporaneous report. The relational interpretation remains a distinct inference."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The first-CouncilStat claim retains explicit Council attribution, direct support from the Council event-day post, and a citation-required active projection; the independent follow-on and resume projections no longer borrow the superlative."
+      "observation": "The May testimony claim resolves only to the Council transcript as direct support; Espinal sponsorship and participation resolve to their respective records; institutional syntheses use context relationships without promoting contextual evidence into direct proof."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "All four institutional-value syntheses remain inference, internal-only, unused, and projection-free. The three direct claims are confirmed-with-boundary, qualified, editorially unused, and absent from active public composition."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The project dossier and inquiry situate DCLA, Council, Espinal, coalition, and Jamie in distinct capacities while preserving chronology, methods, limitations, open corroboration needs, and future photo research."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The records preserve collective credit, retrieval gaps, mutable-platform limits, proposal-versus-adoption boundaries, and distinct enrollment and certificate-completion evidence."
+      "observation": "The repaired note discusses documented usefulness and complementary capacity while explicitly refusing institutional necessity and private motive. It limits Espinal to sponsorship and one appearance and rejects recurring relationship, responsiveness, accountability, endorsement, cultural-sector legitimacy, recommendation adoption, and causal allocation."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The corrected CallNYC resume, proof, work, and PDF language states participation in a January 2016 constituent-services hackathon without the attributed superlative; new iCloud findings remain unused or internal as appropriate."
+      "observation": "No institutional-value inference appears on a website surface, the attributed testimony projection remains on hold with no surfaces, and Jamie's bridge-value inference preserves protected first-person provenance, collective production, and explicit refusal of sole policy causality."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "All 84 knowledge-lifecycle tests pass, including new negative checks for necessity, Espinal overreach, endorsement, legitimacy, recurring relationship, public projection, and loss of collective credit; the candidate and contract fingerprints match the submitted values."
     }
   ],
   "regressions": [],
-  "nextAction": "Freeze this candidate; no further archival correction is required by this review."
+  "nextAction": "Accept the repaired candidate; no further archival-editorial correction is required by this review."
 }

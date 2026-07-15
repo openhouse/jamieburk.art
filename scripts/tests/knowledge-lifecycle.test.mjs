@@ -118,9 +118,10 @@ test("mature unused claims remain out of public composition", () => {
       "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
     ]
   );
-  assert.equal(unused.length, 18);
+  assert.equal(unused.length, 25);
   assert.equal(unused.some((claim) => claim.id === "CLM-WATER-RAFT-GULF-COMPLETION"), true);
   assert.equal(unused.some((claim) => claim.id === "CLM-NYCARTC-WIKIPEDIA-ARCHIVAL-COLLABORATION"), true);
+  assert.equal(unused.some((claim) => claim.id === "CLM-JAMIE-NYCARTC-INSTITUTIONAL-BRIDGE-VALUE"), true);
   assert.equal(unused.every((claim) => claim.projections.every((item) => item.status !== "active")), true);
 });
 
@@ -1619,4 +1620,85 @@ test("candidate-bound judgments reject stale evidence", () => {
   };
   assert.equal(validLifecycleJudgments({ judgments: [judgment], candidate: "sha256:candidate", contract: "sha256:contract", suite }).length, 1);
   assert.equal(validLifecycleJudgments({ judgments: [judgment], candidate: "sha256:new", contract: "sha256:contract", suite }).length, 0);
+});
+
+test("NYC Artist Coalition institutional-value graph is complete and non-public", () => {
+  const required = suite.requiredNycArtcInstitutionalValue;
+  for (const id of required.entityIds) assert.ok(knowledgeBank.entities.some((item) => item.id === id));
+  for (const id of required.intakeIds) assert.ok(knowledgeBank.intakeItems.some((item) => item.id === id));
+  for (const id of required.sourceIds) assert.ok(knowledgeBank.sources.some((item) => item.id === id));
+  for (const id of required.claimIds) assert.ok(knowledgeBank.claims.some((item) => item.id === id));
+  assert.ok(knowledgeBank.researchInquiries.some((item) => item.id === required.inquiryId));
+  for (const id of required.inferenceClaimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === id);
+    assert.equal(claim.status, "inference");
+    assert.equal(claim.publicationStatus, "internal-only");
+    assert.equal(claim.editorialStatus, "unused");
+    assert.deepEqual(claim.projections, []);
+  }
+});
+
+test("Finkelpearl testimony keeps public rationale separate from private motive", () => {
+  const required = suite.requiredNycArtcInstitutionalValue;
+  const source = knowledgeBank.sources.find((item) => item.id === required.budgetTranscriptSourceId);
+  const claim = knowledgeBank.claims.find((item) => item.id === required.testimonyClaimId);
+  assert.ok(source.supportsGenerally.some((item) => /close reciprocal relationship/i.test(item)));
+  assert.ok(source.supportsGenerally.some((item) => /direct public feedback/i.test(item)));
+  assert.ok(source.supportsGenerally.some((item) => /common cause/i.test(item)));
+  assert.ok(source.doesNotEstablish.some((item) => /private motive/i.test(item)));
+  assert.equal(claim.evidence[0].relationship, "direct-support");
+  assert.ok(claim.boundaries.some((item) => /private motive|personal dependence/i.test(item)));
+});
+
+test("Espinal sponsorship, one town hall, and relational inference stay atomic", () => {
+  const required = suite.requiredNycArtcInstitutionalValue;
+  const sponsorship = knowledgeBank.claims.find((item) => item.id === required.espinalSponsorshipClaimId);
+  const townHall = knowledgeBank.claims.find((item) => item.id === required.espinalTownHallClaimId);
+  const inference = knowledgeBank.claims.find((item) => item.id === required.espinalClaimId);
+  assert.equal(sponsorship.evidence.length, 2);
+  assert.ok(sponsorship.evidence.every((item) => item.relationship === "direct-support"));
+  assert.equal(townHall.evidence.length, 1);
+  assert.equal(townHall.evidence[0].relationship, "direct-support");
+  assert.ok(townHall.boundaries.some((item) => /one documented appearance.*not establish.*recurring relationship/i.test(item)));
+  assert.doesNotMatch(inference.internalClaim, /recurring constituency|public accountability relationship|cultural-sector legitimacy/i);
+  assert.ok(inference.boundaries.some((item) => /recurring.*responsiveness.*accountability.*endorsement.*cultural-sector legitimacy/i.test(item)));
+});
+
+test("institutional-value eval rejects motive, necessity, public projection, and sole credit", () => {
+  const required = suite.requiredNycArtcInstitutionalValue;
+  const bank = structuredClone(knowledgeBank);
+  const source = bank.sources.find((item) => item.id === required.budgetTranscriptSourceId);
+  const dcla = bank.claims.find((item) => item.id === required.dclaClaimId);
+  const council = bank.claims.find((item) => item.id === required.councilClaimId);
+  const espinal = bank.claims.find((item) => item.id === required.espinalClaimId);
+  const townHall = bank.claims.find((item) => item.id === required.espinalTownHallClaimId);
+  const jamie = bank.claims.find((item) => item.id === required.jamieClaimId);
+  source.doesNotEstablish = [];
+  dcla.status = "confirmed";
+  dcla.publicationStatus = "public";
+  dcla.editorialStatus = "active";
+  dcla.projections = [{ key: "homepage", text: "DCLA needed the coalition.", status: "active", citationRequired: false, surfaces: ["/"] }];
+  council.boundaries = [];
+  council.antiClaims = [];
+  espinal.boundaries = [];
+  espinal.antiClaims = [];
+  townHall.boundaries = [];
+  townHall.antiClaims = [];
+  jamie.boundaries = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.ok(result.findings.some((item) => item.code === "nycartc-institutional-source-boundary"));
+  assert.ok(result.findings.some((item) => item.code === "nycartc-institutional-inference-boundary"));
+  assert.ok(result.findings.some((item) => item.code === "nycartc-jamie-role-boundary"));
+  assert.ok(result.findings.some((item) => item.code === "espinal-town-hall-atomicity"));
+  assert.ok(result.findings.some((item) => item.code === "espinal-relational-overreach"));
+});
+
+test("institutional-value inquiry remains partially recovered", () => {
+  const required = suite.requiredNycArtcInstitutionalValue;
+  const bank = structuredClone(knowledgeBank);
+  const inquiry = bank.researchInquiries.find((item) => item.id === required.inquiryId);
+  inquiry.resultStatus = "recovered";
+  inquiry.limitations = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.ok(result.findings.some((item) => item.code === "nycartc-institutional-inquiry-boundary"));
 });

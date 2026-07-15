@@ -251,6 +251,49 @@ is promoted into direct NTER CHNG evidence or those anti-claims disappear.
 - Lifecycle regression tests: `63/63`
 - Independent lenses: archival editorial and public-safety composition
 
+## DCLA / Council Institutional-Value Cycle
+
+The July 15 pass asked why NYC Artist Coalition's work mattered to DCLA, the
+New York City Council, Commissioner Tom Finkelpearl, and Council Member Rafael
+Espinal. Four public official records were ingested and close-read: Finkelpearl's
+February 2017 testimony, his May 2017 Council budget testimony, the CreateNYC
+foreword, and the plan's NYC Artists issue page.
+
+The source-backed record can describe complementary institutional capacity, but
+not private motive or necessity. DCLA documented the coalition as an example of
+direct dialogue developing into independent organizing, recommendations, and
+continued feedback. Finkelpearl used that example while explaining reciprocal
+public engagement to the Council. The Council record shows a bounded civic
+translation function: participants brought situated experience into testimony,
+recommendations, convenings, and implementation feedback.
+
+Espinal's record is deliberately atomic. Two official Council records establish
+his sponsorship of the Office of Nightlife and Cabaret Law repeal measures. One
+contemporaneous report establishes one town-hall appearance. A separate internal
+inference says only that the coalition supplied a constituency-facing forum and
+practical feedback in policy areas connected to measures he sponsored. It does
+not establish a recurring relationship, responsiveness, accountability,
+endorsement, cultural-sector legitimacy, private motive, or dependence.
+
+Jamie's bridge-value synthesis remains internal and unused. It connects his
+documented organizer role, practical fire-safety work, testimony, participation
+systems, and civic-systems contribution while preserving collective production
+and refusing sole policy causality.
+
+The first two independent reviews rejected necessity and legitimacy language
+and found the initial Espinal synthesis too compound. The hill climb removed
+those assertions, separated sponsorship and one documented appearance into
+direct claims, narrowed the relational inference, and added deterministic
+mutation tests for each boundary. Fresh archival-editorial and
+public-administration reviews then passed the exact candidate.
+
+- Candidate: `sha256:ac618735f8e0d6829fc42ab0d674f9c87ce9f8cdbc1c45c5f5a36f98e832dd84`
+- Contract: `sha256:ae91dc206bdf80b22f8797acdfbc0db62b9b535995f14c9d6ba59a02d3ff9804`
+- Deterministic score: `100`
+- Lifecycle regression tests: `84/84`
+- Independent lenses: archival editorial and public administration / democracy
+- Public-surface change: none; the new interpretations remain internal and unused
+
 ## Next Cycle
 
 Add durable archived captures for live sources, migrate the remaining high-value

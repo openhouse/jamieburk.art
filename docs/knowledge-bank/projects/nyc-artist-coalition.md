@@ -35,6 +35,11 @@ individual and collective causal claims separate.
 - The Page corpus documents a sustained collective publishing and participation system across coalition events, campaign sites, hearings, public information, press, cultural partners, and practical resources. It does not assign every post, event, quotation, or design decision to Jamie.
 - Rule-matched stakeholder references include 88 Council-related record occurrences. These are outgoing addressing or routing traces, not 88 Council members, inbound engagement, endorsement, or policy response.
 - Facebook currently documents Jamie's Page-management relationship and task access. Jamie remembers predominant but shared historic Page use. The human publisher of individual historic posts remains unresolved.
+- Finkelpearl's February 2017 DCLA testimony described DIY-community recommendations, continued independent organizing, and the agency's intention to keep learning from and working with that community.
+- In May 2017 Council budget testimony, Finkelpearl named NYC Artist Coalition while describing reciprocal public engagement, expanded direct feedback, and common-cause convening.
+- Official CreateNYC records later credited the coalition with organizing, supplying recommendations, and driving dialogue about preserving safe artist-led spaces.
+- These records support an internal institutional-value synthesis: the coalition extended reciprocal engagement into informal cultural spaces and translated experience into recommendations, testimony, convenings, and implementation feedback. They do not establish private motives, dependency, universal representation, or sole causality.
+- Jamie's documented organizer, practical safety, testimony, recurring-participation, and civic-systems contributions support an internal inference that he helped build this translation capacity while collective credit remains intact.
 
 ## Open Research
 
@@ -47,6 +52,7 @@ individual and collective causal claims separate.
 - Article-level close reading for the 41 newly catalogued press sources, with claim promotion only where the article body and locator support it.
 - A native Meta Page export, administrator chronology, and collaborator proof notes for the historical division of Facebook publishing labor.
 - Continued close reading of the 39 unique posted URL leads, with no promotion from route to source support until destination contents are verified.
+- Direct recollections from Finkelpearl, Espinal, Council or DCLA staff, and coalition collaborators about the value and limits of the relationship; current public records establish public framing and activity, not private motive.
 
 ## Projection Decision
 
@@ -57,6 +63,10 @@ four-campaign press inventory, the October town hall, affordability testimony,
 the Talks Not Raids campaign surface, and the bounded Local Law 220 outcome. Office-creation causality,
 March 2018 individual-role claims, Save NYC Spaces, and M.A.R.C.H. disbandment
 remain unused context or open inquiries.
+
+The [institutional-value synthesis](../research/nycartc-dcla-council-institutional-value-2017.md)
+adds three confirmed direct claims and four internal-only inferences. None is
+projected onto the website in this cycle.
 
 ## Photo Research
 

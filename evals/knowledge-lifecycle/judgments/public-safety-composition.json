@@ -1,8 +1,8 @@
 {
-  "judgeId": "implementation-hiring-2026-07-15-c",
-  "lens": "public-interest-implementation",
-  "candidate": "sha256:dcb11b498860961a0eab40bad500faffd10a580585056dc87c3cd36f68396cc2",
-  "contract": "sha256:c738f84053b2409c8dc8ef2e1b40b5252cbed2b4d509f27f0c047ba01997d7c5",
+  "judgeId": "public-administration-2026-07-15-b",
+  "lens": "public-administration-democracy",
+  "candidate": "sha256:ac618735f8e0d6829fc42ab0d674f9c87ce9f8cdbc1c45c5f5a36f98e832dd84",
+  "contract": "sha256:ae91dc206bdf80b22f8797acdfbc0db62b9b535995f14c9d6ba59a02d3ff9804",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -16,22 +16,42 @@
   },
   "evidence": [
     {
+      "rubric": "capture_integrity",
+      "observation": "All four institutional-value inputs retain stable promoted intake records, public-safe dispositions, source links, entity context, and the partially recovered inquiry."
+    },
+    {
       "rubric": "source_decomposition",
-      "observation": "Public listings establish context, protected records establish bounded participant actions, the course page establishes enrollment and access, and the separate Maven certificate establishes completion."
+      "observation": "The Finkelpearl records preserve the documented public rationale of reciprocal engagement, direct feedback, common-cause convening, and the coalition example while explicitly refusing private motive, dependency, recommendation adoption, and individual-role inferences."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Espinal's sponsorship and his single October 11, 2017 town-hall appearance are now separate confirmed-with-boundary claims with direct support; the relational interpretation is separately classified as inference and does not claim recurring engagement."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "The sponsorship claim resolves only to the two official Council records, the town-hall claim resolves only to contemporaneous reporting, and the limited relational inference uses those records as context without upgrading participation into responsiveness, accountability, endorsement, or legitimacy."
     },
     {
       "rubric": "status_separation",
-      "observation": "Confirmed knowledge remains independently classified as public, qualified, internal-only, candidate, active, or unused rather than being automatically promoted onto public surfaces."
+      "observation": "All four institutional-value syntheses remain inference, internal-only, unused, and projection-free; the attributed Finkelpearl claim and two atomic Espinal claims remain separately qualified and editorially unused."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "DCLA's engagement capacity, the Council's legislative and oversight capacity, Espinal's sponsorship and one documented appearance, the coalition's convening and feedback capacity, and Jamie's individual contribution remain distinct across entities, claims, sources, inquiry findings, and project documentation."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The CRS record limits the official event listing to context and the protected record to Jamie's discussion and handoff, explicitly rejecting endorsement, adoption, commissioning, implementation, partnership, and follow-up."
+      "observation": "The repaired record expressly rejects a recurring Espinal-coalition relationship, responsiveness, an accountability arrangement, endorsement, cultural-sector legitimacy, universal representation, private motive, dependency, recommendation adoption, and causal allocation."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The repaired CallNYC structure confines first CouncilStat hackathon to a separately cited sentence attributed to NYC Council while independent and resume projections use the bounded constituent-services chronology."
+      "observation": "Jamie's bridge-value synthesis remains internal and preserves collective production, other participants' work, and policy-causality limits while naming the supported organizer, practical-safety, testimony, participation-system, and civic-systems contributions."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "The deterministic lifecycle evaluation reproduced the exact candidate and contract fingerprints, scored every rubric at 4 with zero findings, and all 84 knowledge-lifecycle tests passed; the only unsatisfied hard gate before this judgment was the absence of a current candidate-bound model judgment."
     }
   ],
   "regressions": [],
-  "nextAction": "No content correction is required by this review."
+  "nextAction": "Accept the repaired candidate and preserve the atomic sponsorship, single-appearance, relational-inference, and collective-credit boundaries in future projections."
 }

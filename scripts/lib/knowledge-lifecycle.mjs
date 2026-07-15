@@ -2602,6 +2602,151 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredNycArtcInstitutionalValue) {
+    const required = suite.requiredNycArtcInstitutionalValue;
+    for (const entityId of required.entityIds) {
+      if (!entityIds.has(entityId)) {
+        add("project_context", "missing-nycartc-institutional-entity", `Missing ${entityId}`);
+      }
+    }
+    for (const intakeId of required.intakeIds) {
+      const intake = bank.intakeItems.find((item) => item.id === intakeId);
+      if (!intake) {
+        add("capture_integrity", "missing-nycartc-institutional-intake", `Missing ${intakeId}`);
+      } else if (
+        intake.status !== "promoted" ||
+        intake.sensitivity !== "public-safe" ||
+        intake.availability !== "live" ||
+        !intake.sourceIds.length ||
+        !intake.inquiryIds.includes(required.inquiryId)
+      ) {
+        add("capture_integrity", "nycartc-institutional-intake-disposition", `${intakeId} is not fully dispositioned`);
+      }
+    }
+    for (const sourceId of required.sourceIds) {
+      const source = sourceById.get(sourceId);
+      if (!source) {
+        add("source_decomposition", "missing-nycartc-institutional-source", `Missing ${sourceId}`);
+      } else if (
+        source.kind !== "government-record" ||
+        source.visibility !== "public" ||
+        source.reviewStatus !== "reviewed" ||
+        source.reviewDepth !== "close-reading" ||
+        !source.locator ||
+        !source.supportsGenerally.length ||
+        !source.doesNotEstablish.some((item) => /private motive|private reasons/i.test(item)) ||
+        !source.doesNotEstablish.some((item) => /Jamie|individual role/i.test(item))
+      ) {
+        add("source_decomposition", "nycartc-institutional-source-boundary", `${sourceId} loses close-reading scope or motive and role boundaries`);
+      }
+    }
+
+    const transcript = sourceById.get(required.budgetTranscriptSourceId);
+    if (
+      !transcript ||
+      !transcript.supportsGenerally.some((item) => /close reciprocal relationship/i.test(item)) ||
+      !transcript.supportsGenerally.some((item) => /direct public feedback/i.test(item)) ||
+      !transcript.supportsGenerally.some((item) => /common cause/i.test(item)) ||
+      !transcript.supportsGenerally.some((item) => /NYC Artist Coalition/i.test(item)) ||
+      !transcript.doesNotEstablish.some((item) => /could not act without/i.test(item))
+    ) {
+      add("source_decomposition", "finkelpearl-testimony-scope", `${required.budgetTranscriptSourceId} loses the exact public rationale or necessity boundary`);
+    }
+
+    const testimonyClaim = bank.claims.find((item) => item.id === required.testimonyClaimId);
+    if (
+      !testimonyClaim ||
+      testimonyClaim.status !== "confirmed-with-boundary" ||
+      testimonyClaim.publicationStatus !== "qualified" ||
+      testimonyClaim.editorialStatus !== "unused" ||
+      testimonyClaim.projections.some((projection) => projection.status === "active") ||
+      testimonyClaim.evidence.length !== 1 ||
+      testimonyClaim.evidence[0].sourceId !== required.budgetTranscriptSourceId ||
+      testimonyClaim.evidence[0].relationship !== "direct-support" ||
+      !testimonyClaim.boundaries.some((item) => /private motive|personal dependence/i.test(item))
+    ) {
+      add("provenance_closure", "finkelpearl-testimony-attribution", `${required.testimonyClaimId} loses direct attribution or its motive boundary`);
+    }
+
+    const espinalSponsorship = bank.claims.find((item) => item.id === required.espinalSponsorshipClaimId);
+    if (
+      !espinalSponsorship ||
+      espinalSponsorship.status !== "confirmed-with-boundary" ||
+      espinalSponsorship.publicationStatus !== "qualified" ||
+      espinalSponsorship.editorialStatus !== "unused" ||
+      espinalSponsorship.projections.length > 0 ||
+      espinalSponsorship.evidence.length !== 2 ||
+      espinalSponsorship.evidence.some((item) => item.relationship !== "direct-support") ||
+      !espinalSponsorship.boundaries.some((item) => /formal legislative role.*not.*private motive|not.*coalition authorship/i.test(item))
+    ) {
+      add("provenance_closure", "espinal-sponsorship-atomicity", `${required.espinalSponsorshipClaimId} loses its direct sponsorship scope`);
+    }
+
+    const espinalTownHall = bank.claims.find((item) => item.id === required.espinalTownHallClaimId);
+    if (
+      !espinalTownHall ||
+      espinalTownHall.status !== "confirmed-with-boundary" ||
+      espinalTownHall.publicationStatus !== "qualified" ||
+      espinalTownHall.editorialStatus !== "unused" ||
+      espinalTownHall.projections.length > 0 ||
+      espinalTownHall.evidence.length !== 1 ||
+      espinalTownHall.evidence[0].relationship !== "direct-support" ||
+      !espinalTownHall.boundaries.some((item) => /one documented appearance.*not establish.*recurring relationship/i.test(item)) ||
+      !espinalTownHall.antiClaims.some((item) => /endorsement.*cultural-sector legitimacy/i.test(item))
+    ) {
+      add("provenance_closure", "espinal-town-hall-atomicity", `${required.espinalTownHallClaimId} becomes recurring engagement, endorsement, or legitimacy`);
+    }
+
+    for (const claimId of required.inferenceClaimIds) {
+      const claim = bank.claims.find((item) => item.id === claimId);
+      if (!claim) {
+        add("provenance_closure", "missing-nycartc-institutional-claim", `Missing ${claimId}`);
+      } else if (
+        claim.status !== "inference" ||
+        claim.publicationStatus !== "internal-only" ||
+        claim.editorialStatus !== "unused" ||
+        claim.projections.length > 0 ||
+        claim.evidence.length < 2 ||
+        !claim.boundaries.some((item) => /interpretation|inference|supported civic function|reciprocal-capacity/i.test(item)) ||
+        !claim.boundaries.some((item) => /private motive|depend|individual|collective/i.test(item)) ||
+        !claim.antiClaims.some((item) => /could not act without|needed .* in order|alone created|solely caused/i.test(item))
+      ) {
+        add("projection_restraint", "nycartc-institutional-inference-boundary", `${claimId} becomes motive, necessity, sole credit, or public composition`);
+      }
+    }
+
+    const jamieClaim = bank.claims.find((item) => item.id === required.jamieClaimId);
+    if (
+      !jamieClaim ||
+      !jamieClaim.evidence.some((item) => item.relationship === "private-support") ||
+      !jamieClaim.evidence.some((item) => item.relationship === "context" && item.confidence === "high") ||
+      !jamieClaim.boundaries.some((item) => /sole designer|sole.*producer|collective/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-jamie-role-boundary", `${required.jamieClaimId} loses mixed provenance or collective credit`);
+    }
+
+    const espinalInference = bank.claims.find((item) => item.id === required.espinalClaimId);
+    if (
+      !espinalInference ||
+      /recurring constituency|public accountability relationship|cultural-sector legitimacy/i.test(espinalInference.internalClaim) ||
+      !espinalInference.boundaries.some((item) => /does not establish.*recurring.*responsiveness.*accountability.*endorsement.*cultural-sector legitimacy/i.test(item))
+    ) {
+      add("research_honesty", "espinal-relational-overreach", `${required.espinalClaimId} overstates one forum as recurring accountability, endorsement, or legitimacy`);
+    }
+
+    const inquiry = bank.researchInquiries.find((item) => item.id === required.inquiryId);
+    if (
+      !inquiry ||
+      inquiry.resultStatus !== "partially-recovered" ||
+      !required.sourceIds.every((id) => inquiry.sourceIds.includes(id)) ||
+      !inquiry.limitations.some((item) => /private motives|personal dependence/i.test(item)) ||
+      !inquiry.limitations.some((item) => /Jamie's individual share/i.test(item)) ||
+      !inquiry.limitations.some((item) => /sole coalition or individual causality/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-institutional-inquiry-boundary", `${required.inquiryId} over-resolves motive, role, or causality`);
+    }
+  }
+
   for (const claim of bank.claims) {
     if (!projectIds.has(claim.project)) add("project_context", "unknown-project", `${claim.id} references ${claim.project}`);
     if (!claim.evidence.length && !["not-recovered", "disallowed"].includes(claim.status)) {

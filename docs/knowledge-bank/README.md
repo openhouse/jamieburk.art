@@ -65,6 +65,12 @@ traversals, classifies every currently recoverable record, and preserves
 collective participation, source-routing, stakeholder-addressing, and role
 boundaries without converting Page identity into individual authorship.
 
+The [NYC Artist Coalition institutional-value synthesis](research/nycartc-dcla-council-institutional-value-2017.md)
+closely reads Finkelpearl's 2017 DCLA and Council testimony with CreateNYC,
+Council, town-hall, and Jamie-role records. It distinguishes public
+institutional rationale from private motive and keeps DCLA, Council, Espinal,
+coalition, Jamie, and collective policy causality separate.
+
 The [Jamie personal Facebook post pass](research/jamie-personal-facebook-posts-archival-production-2026-07.md)
 accounts for all 1,243 records currently returned by the authenticated
 owner-filtered Manage Posts control across 621 cursor pages. It keeps the raw

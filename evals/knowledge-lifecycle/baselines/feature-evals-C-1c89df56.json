@@ -1,6 +1,6 @@
 {
   "commit": "1c89df56f59fbab826795306cc99d35dd14d07d9",
-  "fingerprint": "sha256:e44bc8034c8a35b5dccdfbc25b7fac5723200b2d172da35912c2dc51ec3d759b",
+  "fingerprint": "sha256:b328652771cd2515462ce4ef68d4eb3c7ec80b7b6b3e21df2e286bc62908e8d7",
   "score": 92.5,
   "scores": {
     "capture_integrity": 2,
@@ -12,5 +12,5 @@
     "research_honesty": 4,
     "projection_restraint": 4
   },
-  "summary": "The prior candidate passed its lifecycle contract but did not yet capture the campaign Press corpus, source-backed KC Town Hall sequence, neighborhood-restoration and stewardship records, NTER CHNG working artifacts, social and Facebook corpora, Jamie's personal Facebook owner-post census, or Chad-lens provenance. The fingerprint is rebound to the expanded candidate file set; the frozen score remains the score recorded for this commit."
+  "summary": "The prior candidate passed its lifecycle contract but did not yet capture the campaign Press corpus, source-backed KC Town Hall sequence, neighborhood-restoration and stewardship records, NTER CHNG working artifacts, social and Facebook corpora, Jamie's personal Facebook owner-post census, Chad-lens provenance, or the DCLA-Council-NYC Artist Coalition institutional-value synthesis. The fingerprint is rebound to the expanded candidate file set; the frozen score remains the score recorded for this commit."
 }
