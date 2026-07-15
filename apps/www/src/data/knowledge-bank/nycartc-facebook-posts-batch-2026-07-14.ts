@@ -853,10 +853,9 @@ export const nycartcFacebookPostInquiries = [
       "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
       "SRC-FB-NYCAC-POST-REPORT-2026",
       ...selectedPostSourceIds,
-      "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
-      "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
-      "SRC-PRESS-TNR-GOTHAMIST-MARCH-RAIDS-2019",
-      "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017"
+      "SRC-GOTHAMIST-CABARET-LAW-2017-06-19",
+      "SRC-GOTHAMIST-MARCH-TRANSPARENCY-2019",
+      "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20"
     ],
     publicSummary:
       "Two exact-set-checked terminal traversals recovered 444 surviving public Page timeline records and identified a durable cross-campaign publication system. Individual publisher attribution and first-party managed-content reconciliation remain open.",
