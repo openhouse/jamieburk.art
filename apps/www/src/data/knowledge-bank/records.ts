@@ -56,6 +56,13 @@ import {
   nycartcXCorpusResearchInquiries,
   nycartcXCorpusSources
 } from "./nycartc-x-corpus.ts";
+import {
+  urbanhermitXCorpusClaims,
+  urbanhermitXCorpusIntakeItems,
+  urbanhermitXCorpusObservations,
+  urbanhermitXCorpusResearchInquiries,
+  urbanhermitXCorpusSources
+} from "./urbanhermit-x-corpus.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -67,6 +74,7 @@ const knowledgeBankInput = {
     ...callnycXCorpusIntakeItems,
     ...wowlistXCorpusIntakeItems,
     ...nycartcXCorpusIntakeItems,
+    ...urbanhermitXCorpusIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -359,6 +367,7 @@ const knowledgeBankInput = {
     ...socialAccountArchiveSources,
     ...callnycXCorpusSources,
     ...nycartcXCorpusSources,
+    ...urbanhermitXCorpusSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1382,6 +1391,7 @@ const knowledgeBankInput = {
     ...socialAccountArchiveObservations,
     ...callnycXCorpusObservations,
     ...nycartcXCorpusObservations,
+    ...urbanhermitXCorpusObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1973,6 +1983,7 @@ const knowledgeBankInput = {
     ...socialAccountArchiveClaims,
     ...callnycXCorpusClaims,
     ...nycartcXCorpusClaims,
+    ...urbanhermitXCorpusClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -2317,6 +2328,13 @@ const knowledgeBankInput = {
           supports: ["Jamie's coalition participation", "town-hall invitation", "Office of Nightlife equity goals"],
           confidence: "high",
           renderCitation: true
+        },
+        {
+          sourceId: "SRC-URBANHERM-BROOKLYN-EAGLE-NIGHTLIFE-2017",
+          relationship: "context",
+          supports: ["direct NYC Artist Coalition quotation", "Council committee and public-feedback sequence around the proposed Office of Nightlife"],
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
@@ -2816,13 +2834,22 @@ const knowledgeBankInput = {
         citationRequired: true,
         surfaces: ["docs/knowledge-bank/projects/kansas-city-public-programs"]
       }],
-      evidence: [{
-        sourceId: "SRC-KC-EIGHTH-STREET-TUNNEL-KCUR-2016-09-15",
-        relationship: "direct-support",
-        supports: ["2006 date", "participant route", "three-film screening", "Jamie programming and projection", "public-history rationale"],
-        confidence: "high",
-        renderCitation: true
-      }],
+      evidence: [
+        {
+          sourceId: "SRC-KC-EIGHTH-STREET-TUNNEL-KCUR-2016-09-15",
+          relationship: "direct-support",
+          supports: ["2006 date", "participant route", "three-film screening", "Jamie programming and projection", "public-history rationale"],
+          confidence: "high",
+          renderCitation: true
+        },
+        {
+          sourceId: "SRC-URBANHERM-X-JULIA-EIGHTH-STREET-TUNNEL-2016",
+          relationship: "corroborating",
+          supports: ["attributable collaborator response connecting Jamie to the KCUR historical account"],
+          confidence: "moderate",
+          renderCitation: false
+        }
+      ],
       boundaries: [
         "Describe the event historically; do not imply current access, safety, or permission.",
         "Do not infer a participant count."
@@ -3016,6 +3043,7 @@ const knowledgeBankInput = {
     ...socialAccountArchiveResearchInquiries,
     ...callnycXCorpusResearchInquiries,
     ...nycartcXCorpusResearchInquiries,
+    ...urbanhermitXCorpusResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -3078,19 +3106,24 @@ const knowledgeBankInput = {
     findings: [
       "A protected KC Town Hall project spreadsheet records 1,970 tires across 25 nonzero monthly entries from May 2019 through September 2022.",
       "The spreadsheet models $44,890 in disposal costs from per-tire assumptions.",
-      "The ledger materially corroborates sustained monthly recordkeeping but does not independently establish Jamie's sole operating role, every pickup location, or Indian Mound expansion."
+      "The ledger materially corroborates sustained monthly recordkeeping but does not independently establish Jamie's sole operating role, every pickup location, or Indian Mound expansion.",
+      "A 2019 KC Town Hall public update names Jamie among participants in recurring free tire disposal and curbside pickup.",
+      "Jimmy Fitzner's 2022 first-hand public account documents riding with Jamie in a dump truck to collect tires around Northeast Kansas City."
     ],
     limitations: [
-      "Jamie's exact role, the Indian Mound expansion, Cleveland Avenue co-founding status, elected-official participation, and funding influence still rely on first-person memory or remain unrecovered.",
+      "The public posts corroborate Jamie's direct participation in tire pickup, but not sole program ownership, complete coordination, design authorship, every shift, or the Indian Mound expansion.",
+      "Cleveland Avenue co-founding status, elected-official participation, and funding influence still rely on first-person memory or remain unrecovered.",
       "The spreadsheet is a project-maintained ledger rather than an independent audit, and its dollar figure is modeled rather than verified realized savings.",
       "Participant addresses, contact lists, private messages, and route-level data remain protected.",
       "Pastor Lee's corridor concept and all collective neighborhood labor must retain their own attribution."
     ],
     sourceIds: [
       "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
-      "SRC-KC-TIRE-PICKUP-LEDGER-2019-2022"
+      "SRC-KC-TIRE-PICKUP-LEDGER-2019-2022",
+      "SRC-URBANHERM-X-KCTH-TIRES-2019",
+      "SRC-URBANHERM-X-JIMMY-TIRES-2022"
     ],
-    publicSummary: "A protected project ledger corroborates sustained monthly tire-count tracking and records 1,970 tires from May 2019 through September 2022. Jamie's exact role, expansion history, and Cleveland Avenue contributions remain queued for public-safe collaborator and institutional corroboration."
+    publicSummary: "A protected project ledger corroborates sustained monthly tire-count tracking, while public project and participant records confirm Jamie's direct participation in tire pickup. Sole ownership, complete role scope, expansion history, and Cleveland Avenue contributions remain bounded or open."
   },
   {
     id: "INQ-KC-TOWN-HALL-COUNCIL-FUNDING-2026",

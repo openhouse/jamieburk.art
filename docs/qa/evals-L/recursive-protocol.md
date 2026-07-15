@@ -16,6 +16,7 @@ npm run evals:callnyc-x
 npm run evals:wowlist-x
 npm run check:nycartc-corpus
 npm run evals:nycartc-x
+npm run evals:urbanhermit-x
 npm run evals:recursive
 ```
 
@@ -82,6 +83,16 @@ hard-gates population accounting, authored/repost separation, campaign-marker
 and link inventories, stakeholder directionality, source positioning, privacy,
 held traction, and selective projection. Passing requires 100/100 and no hard
 failure.
+
+### Urbanhermit X Corpus Criterion
+
+`npm run evals:urbanhermit-x` recomputes the complete 434-record live-profile
+census, account-authorship split, posted-link inventory, mission-signal counts,
+bounded incoming-response sample, and account-authored visible counters. It
+also hard-gates raw-text exclusion, identity-free redaction of irrelevant
+personal context, collaborator attribution, source positioning, hash integrity,
+and the deliberate decision not to project the personal corpus onto the current
+website. Passing requires 100/100 and no hard failure.
 
 ## Loop 2: Claim Projection
 

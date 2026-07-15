@@ -63,12 +63,14 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-callnyc-x-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-wowlist-x-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-nycartc-x-full-population.md",
+  "docs/knowledge-bank/intake/2026-07-15-urbanhermit-x-full-population.md",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
   "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json",
   "docs/knowledge-bank/projects/callnyc.md",
   "docs/knowledge-bank/projects/wowlist.md",
+  "docs/knowledge-bank/projects/urbanhermit-public-record.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
@@ -78,6 +80,8 @@ const requiredFiles = [
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
   "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts",
   "apps/www/src/data/knowledge-bank/nycartc-x-corpus.ts",
+  "apps/www/src/data/knowledge-bank/urbanhermit-x-corpus.ts",
+  "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
@@ -90,6 +94,8 @@ const requiredFiles = [
   "scripts/evals-wowlist-x-corpus.mjs",
   "scripts/derive-nycartc-x-corpus.mjs",
   "scripts/evals-nycartc-x-corpus.mjs",
+  "scripts/evals-urbanhermit-x-corpus.mjs",
+  "scripts/lib/urbanhermit-mission-classifier.mjs",
   "scripts/evals-knowledge-lifecycle.mjs",
   "scripts/report-knowledge-lifecycle.mjs",
   "scripts/tests/knowledge-lifecycle.test.mjs",
@@ -112,6 +118,7 @@ for (const script of [
   "evals:wowlist-x",
   "check:nycartc-corpus",
   "evals:nycartc-x",
+  "evals:urbanhermit-x",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -147,6 +154,10 @@ if (scripts.check && !scripts.check.includes("npm run evals:nycartc-x")) {
   fail("package.json check script must include npm run evals:nycartc-x");
 }
 
+if (scripts.check && !scripts.check.includes("npm run evals:urbanhermit-x")) {
+  fail("package.json check script must include npm run evals:urbanhermit-x");
+}
+
 if (
   scripts["evals:knowledge-lifecycle"] !==
   "node scripts/evals-knowledge-lifecycle.mjs"
@@ -174,6 +185,10 @@ if (scripts["check:nycartc-corpus"] !== "node scripts/derive-nycartc-x-corpus.mj
 
 if (scripts["evals:nycartc-x"] !== "node scripts/evals-nycartc-x-corpus.mjs") {
   fail("package.json evals:nycartc-x must run scripts/evals-nycartc-x-corpus.mjs");
+}
+
+if (scripts["evals:urbanhermit-x"] !== "node scripts/evals-urbanhermit-x-corpus.mjs") {
+  fail("package.json evals:urbanhermit-x must run scripts/evals-urbanhermit-x-corpus.mjs");
 }
 
 if (scripts["evals:recursive"] !== "node scripts/evals-recursive-protocol.mjs") {
@@ -298,6 +313,15 @@ for (const doc of [
 ]) {
   requireIncludes(doc[1], "npm run check:nycartc-corpus", doc[0]);
   requireIncludes(doc[1], "npm run evals:nycartc-x", doc[0]);
+}
+
+for (const doc of [
+  ["docs/production-readiness.md", productionReadiness],
+  ["docs/knowledge-bank/review-checklist.md", reviewChecklist],
+  ["docs/knowledge-bank/launch-blockers.md", launchBlockers],
+  ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
+]) {
+  requireIncludes(doc[1], "npm run evals:urbanhermit-x", doc[0]);
 }
 
 for (const phrase of [

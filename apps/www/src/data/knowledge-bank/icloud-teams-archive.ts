@@ -711,6 +711,13 @@ export const icloudTeamsClaims: KnowledgeBank["claims"] = [
         supports: ["independent shared attribution", "editorial context linking visual form and musical structure"],
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-URBANHERM-X-HORSE-LORDS-POST-2016",
+        relationship: "corroborating",
+        supports: ["Jamie's contemporaneous public association with the NPR publication", "explicit connection to M.C. Schmidt and Horse Lords"],
+        confidence: "moderate",
+        renderCitation: false
       }
     ],
     boundaries: [

@@ -120,3 +120,11 @@ reposts, resolves every recovered-item short URL, preserves four overlapping
 campaign traces, distinguishes outbound stakeholder communication from incoming
 engagement, and holds volatile interaction counters outside accomplishment
 messaging.
+
+The [Urbanhermit X full-population receipt](intake/2026-07-15-urbanhermit-x-full-population.md)
+and [project note](projects/urbanhermit-public-record.md) reconcile all 434
+records represented by Jamie's live personal profile, preserve the complete
+posted-link inventory and bounded incoming-response sample, mature selected
+cross-project evidence, redact irrelevant personal context, and deliberately
+hold the result as knowledge-bank depth rather than forcing a new website
+projection.

@@ -35,6 +35,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run evals:wowlist-x`
 - [ ] `npm run check:nycartc-corpus`
 - [ ] `npm run evals:nycartc-x`
+- [ ] `npm run evals:urbanhermit-x`
 - [ ] `npm run evals:recursive`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
@@ -63,6 +64,7 @@ ideas from the production-readiness-composite family.
 - [ ] Knowledge-lifecycle eval scores at least 95/100 with no hard failures.
 - [ ] CallNYC X corpus eval scores 100/100 with no hard failures.
 - [ ] WOW List X corpus eval scores 100/100 with no hard failures.
+- [ ] Urbanhermit X corpus eval scores 100/100 with no hard failures.
 - [ ] Recursive eval protocol passes.
 - [ ] Chad-lens eval scores at least 90/100 with no hard failures.
 - [ ] Human Chad-lens review passes; the automated score is a regression gate,

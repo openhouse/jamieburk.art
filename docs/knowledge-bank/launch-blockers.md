@@ -20,6 +20,7 @@
 - [ ] WOW List X corpus criterion passes with `npm run evals:wowlist-x`.
 - [ ] NYC Artist Coalition corpus hashes reproduce with `npm run check:nycartc-corpus`.
 - [ ] NYC Artist Coalition X corpus criterion passes with `npm run evals:nycartc-x`.
+- [ ] Urbanhermit X corpus criterion passes with `npm run evals:urbanhermit-x`.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
