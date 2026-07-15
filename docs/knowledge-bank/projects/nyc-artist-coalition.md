@@ -196,6 +196,46 @@ The group-level event role and Jamie's participation are documented. Jamie's
 complete individual production, drafting, facilitation, and follow-through
 responsibilities require more evidence before stronger public wording.
 
+## DCLA and Council Institutional Interface
+
+The clearest direct government record appears in Tom Finkelpearl's prepared
+testimony at the May 19, 2017, City Council Executive Budget hearing. While
+explaining CreateNYC, DCLA's relationship with roughly 1,000 funded nonprofit
+cultural organizations, and the agency's desire for more direct public
+feedback, Finkelpearl named NYC Artist Coalition's formation as an example of
+the power of bringing people together around a common cause.
+
+A bounded census of 74 official Cultural Affairs meeting records from 2014
+through 2019 recovered 132 searchable transcript attachments. Two contained an
+Artist Coalition phrase. Finkelpearl supplied the direct May 2017 reference;
+in the other, Jamie testified at a March 2018 budget hearing as a coalition
+member and described CreateNYC office hours as trust, connection, and safety
+infrastructure.
+
+Read with the official CreateNYC appendices and the June 2017 Consumer Affairs
+hearing chaired by Rafael Espinal, the record supports an institutional
+interpretation:
+
+- DCLA benefited from organized direct feedback and continuing relationships
+  with informal cultural communities outside its ordinary funded-institution
+  channels.
+- The Council benefited from affected-community testimony, issue definition,
+  implementation detail, participation, and public accountability.
+- Espinal brought legislative authority and a committee forum; coalition
+  participants brought witnesses, community legitimacy, event and
+  communications infrastructure, and continued feedback.
+
+This is an evidence-backed interpretation, not wording attributed directly to
+Finkelpearl, the Council, or Espinal. Finkelpearl did not name Jamie in the May
+testimony. DCLA's January convening does not give the agency sole credit for
+creating or governing the coalition. The records do not establish endorsement
+of every coalition position or sole coalition causation for any policy
+outcome.
+
+See the complete
+[institutional-interface intake receipt](../intake/2026-07-15-nycac-institutional-interface.md)
+and [bounded transcript census](../research/nyc-council-finkelpearl-transcript-census.md).
+
 ## Talks Not Raids and MARCH
 
 The Talks Not Raids campaign publicly advocated transparency, trust,

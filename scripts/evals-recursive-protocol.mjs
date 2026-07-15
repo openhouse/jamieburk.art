@@ -71,6 +71,9 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-kcspacesfund-facebook-posts-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-jamie-personal-facebook-posts-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-icloud-teams-archive-expansion.md",
+  "docs/knowledge-bank/intake/2026-07-15-nycac-institutional-interface.md",
+  "docs/knowledge-bank/research/nyc-council-finkelpearl-transcript-census.json",
+  "docs/knowledge-bank/research/nyc-council-finkelpearl-transcript-census.md",
   "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
   "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
@@ -99,6 +102,7 @@ const requiredFiles = [
   "evals/knowledge-bank/runs/2026-07-15-kcspacesfund-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-jamie-personal-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-icloud-teams-expansion.md",
+  "evals/knowledge-bank/runs/2026-07-15-nycac-institutional-interface.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
@@ -112,6 +116,7 @@ const requiredFiles = [
   "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/icloud-teams-expansion.ts",
+  "apps/www/src/data/knowledge-bank/nycac-institutional-interface.ts",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
@@ -138,6 +143,7 @@ const requiredFiles = [
   "scripts/evals-kcspacesfund-facebook-posts.mjs",
   "scripts/evals-jamie-personal-facebook-posts.mjs",
   "scripts/evals-icloud-teams-expansion.mjs",
+  "scripts/evals-nycac-institutional-interface.mjs",
   "scripts/lib/personal-facebook-posts-guard.mjs",
   "scripts/tests/personal-facebook-posts-guard.test.mjs",
   "scripts/lib/urbanhermit-mission-classifier.mjs",
@@ -171,6 +177,7 @@ for (const script of [
   "evals:kcspacesfund-facebook-posts",
   "evals:jamie-personal-facebook-posts",
   "evals:icloud-teams-expansion",
+  "evals:nycac-institutional-interface",
   "test:personal-facebook-posts-guard",
   "evals:recursive",
   "preflight:staging",
@@ -197,6 +204,15 @@ if (
 ) {
   fail(
     "package.json check script must include npm run evals:icloud-teams-expansion"
+  );
+}
+
+if (
+  scripts.check &&
+  !scripts.check.includes("npm run evals:nycac-institutional-interface")
+) {
+  fail(
+    "package.json check script must include npm run evals:nycac-institutional-interface"
   );
 }
 
@@ -367,6 +383,15 @@ if (
 ) {
   fail(
     "package.json evals:jamie-personal-facebook-posts must run scripts/evals-jamie-personal-facebook-posts.mjs"
+  );
+}
+
+if (
+  scripts["evals:nycac-institutional-interface"] !==
+  "node scripts/evals-nycac-institutional-interface.mjs"
+) {
+  fail(
+    "package.json evals:nycac-institutional-interface must run scripts/evals-nycac-institutional-interface.mjs"
   );
 }
 

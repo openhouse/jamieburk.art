@@ -18,6 +18,7 @@ npm run check:nycartc-corpus
 npm run evals:nycartc-x
 npm run evals:urbanhermit-x
 npm run evals:nycac-facebook-events
+npm run evals:nycac-institutional-interface
 npm run evals:recursive
 ```
 
@@ -103,6 +104,14 @@ event-ID digest and metadata-only fixture, and reproduces chronology, organizer
 and cohost relationships, recurring cultural-space meetings, topic and response
 thresholds, source routes, public-safety exclusions, lifecycle integration,
 and the bounded participation-system projection selected for the website.
+Passing requires 100/100 and no hard failure.
+
+### NYC Artist Coalition Institutional Interface Criterion
+
+`npm run evals:nycac-institutional-interface` hard-gates the bounded Council
+transcript denominator, the May 2017 Finkelpearl reference, direct-source and
+inference separation, DCLA/Council/Espinal institutional analysis, collective
+credit and causality boundaries, and the selective case-study projection.
 Passing requires 100/100 and no hard failure.
 
 ## Loop 2: Claim Projection

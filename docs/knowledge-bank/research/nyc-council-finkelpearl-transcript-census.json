@@ -1,0 +1,1599 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15",
+  "scope": {
+    "meetingInventoryCount": 74,
+    "committee": "NYC Council Committee on Cultural Affairs, Libraries and International Intergroup Relations",
+    "dateBoundary": "2014 through 2019, covering Tom Finkelpearl's DCLA commissioner tenure within this committee's official calendar",
+    "searchTerms": [
+      "NYC Artist Coalition",
+      "New York City Artist Coalition",
+      "Artist Coalition",
+      "Finkelpearl",
+      "Finklepearl"
+    ]
+  },
+  "method": [
+    "Enumerated official Cultural Affairs committee calendar records for 2014 through 2019.",
+    "Traversed each recovered meeting page to its distinct legislative items and Hearing Transcript attachments.",
+    "Converted recovered PDFs to searchable text and searched Artist Coalition plus Finkelpearl spelling variants.",
+    "Close-read every Artist Coalition match."
+  ],
+  "counts": {
+    "meetingRecords": 74,
+    "meetingPagesRecovered": 74,
+    "distinctLegislationItems": 77,
+    "searchableTranscriptAttachments": 132,
+    "transcriptsWithArtistCoalitionMatch": 2,
+    "directFinkelpearlReferencesToCoalition": 1
+  },
+  "meetings": [
+    {
+      "meetingId": 1398471,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/18/2017 1:00 PM Council Chambers - City Hall Jointly with the Subcommittee on Libraries Oversight - Library Construction Projects Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398471&GUID=CF9C423D-6BB1-4158-A613-666916E5D678&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3285783&GUID=9F2667D2-3D4E-4F0C-BD23-027D02989F0A&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398470,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/18/2017 12:45 PM Council Chambers - City Hall Establishing January 30 annually as Fred T. Korematsu Day of Civil Liberties and the Constitution. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398470&GUID=9796B358-2A4F-4021-B15B-8DADF7E2DC92&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386576&GUID=B6706EBB-16CB-4562-8024-340D2E21264D&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398469,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/25/2017 1:00 PM Council Chambers - City Hall Establishing January 30 annually as Fred T. Korematsu Day of Civil Liberties and the Constitution. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398469&GUID=1622C71A-6E86-43F0-98F0-664A8C563DBE&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386576&GUID=B6706EBB-16CB-4562-8024-340D2E21264D&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398467,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/20/2017 1:00 PM Council Chambers - City Hall Oversight - Comprehensive Cultural Plan Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398467&GUID=DE2CD90A-3C0C-4777-9FAC-9409E203DBE1&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3130674&GUID=BAE0E7F1-F1E2-4A98-AD36-4C52693E4B72&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398468,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 8/23/2017 11:00 AM Committee Room - City Hall Condemning the Charlottesville Neo-Nazi Rally, and calling upon President Trump to swiftly, unequivocally and consistently denounce such actions and ideologies, and direct funding to organizations working to counter far-right extremism. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398468&GUID=187CEF3A-D280-4A55-80BC-C2D4F397978C&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3136170&GUID=9CC0B3A9-540E-47F0-8757-3487F275C453&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398466,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 5/19/2017 11:00 AM Council Chambers - City Hall Jointly with the Committee on Finance and the Subcommittee on Libraries Executive Budget Hearings - Cultural Affairs, Libraries & International Intergroup Relations Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398466&GUID=ACA2E347-0B95-443A-8307-2E4E247839C3&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3028986&GUID=DC99383D-8767-45D7-ADCF-6E0561D67767&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398465,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 4/3/2017 1:00 PM Council Chambers - City Hall Calling upon President Trump to fully fund the Corporation for Public Broadcasting, the Institute of Museum and Library Services, the National Endowment for the Arts & the National Endowment for the Humanities. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398465&GUID=A885EC05-9471-4DD6-9734-F0D24DE81AF6&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2972263&GUID=DBC13881-9E97-40B2-86F9-EB07C496A3E0&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398464,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 3/15/2017 Deferred 250 Broadway - Committee Rm, 16th Fl. Calling upon President Trump to fully fund the Corporation for Public Broadcasting, the Institute of Museum and Library Services, the National Endowment for the Arts & the National Endowment for the Humanities. Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398464&GUID=399A942B-97F3-4C56-817F-827DFE0E15F8&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2972263&GUID=DBC13881-9E97-40B2-86F9-EB07C496A3E0&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398463,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 3/8/2017 10:00 AM Council Chambers - City Hall Jointly with the Subcommittee on Libraries Preliminary Budget Hearing - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398463&GUID=1EF588F1-5C29-454A-A060-568F694B984C&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2955219&GUID=05B0DA71-E15D-4B9D-A5A3-97D59E7DBB2E&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398462,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 2/27/2017 1:00 PM Council Chambers - City Hall Oversight - Cultural Plan - Next Steps Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398462&GUID=0CE3088B-390C-40A2-A9C9-22833EC43A1F&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2942459&GUID=802EAA8B-9A67-4A0A-BDAB-E59D04C3E012&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398461,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 1/17/2017 1:00 PM Committee Room - City Hall Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398461&GUID=FC336564-385C-4D2C-A0B2-4A64D345F021&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386634&GUID=F4FA740F-8031-4A1A-8A10-B5B14C2B7AAB&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2834729&GUID=E0929D21-C591-40EF-85D5-C383A86D0E38&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845907&GUID=9309BFC8-E008-4711-B28D-C2E4DD72A915&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845908&GUID=75EE1672-2DAE-4D2C-A615-023CB1B7AB6E&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2855583&GUID=96282ED6-C159-4CB5-87D1-763FE95B2526&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2856605&GUID=034D3EF8-65CB-403C-B315-0459DD603437&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2911450&GUID=CC7E7010-6A19-43AA-9258-01F2F7698523&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398460,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/14/2016 1:00 PM 250 Broadway - Committee Rm, 14th Fl. Jointly with the Subcommittee on Libraries Oversight - NYPL Schwarzman Building and Midtown Campus Plans Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398460&GUID=C08B319B-6E60-467F-98F1-DBCD6ADB065E&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2897258&GUID=886C5BF3-498A-4CC6-93A3-54E4E700A6D3&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398459,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 11/28/2016 Deferred Council Chambers - City Hall Jointly with the Subcommittee on Libraries Oversight - NYPL Schwarzman Building and Midtown Campus Plans. Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398459&GUID=766DA7E4-889D-41BA-AD67-D2E0E86C2701&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2873483&GUID=3B5968BD-DADA-46F4-B42C-7CF7E39209B7&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398457,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/20/2016 10:00 AM 250 Broadway - Committee Rm, 16th Fl. Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398457&GUID=1009E38B-66CB-4868-BDA5-0449C6D378FE&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845907&GUID=9309BFC8-E008-4711-B28D-C2E4DD72A915&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845908&GUID=75EE1672-2DAE-4D2C-A615-023CB1B7AB6E&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845912&GUID=738B1D9D-9927-4B28-9E50-11713047680E&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2855583&GUID=96282ED6-C159-4CB5-87D1-763FE95B2526&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2856605&GUID=034D3EF8-65CB-403C-B315-0459DD603437&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398458,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/11/2016 10:00 AM Committee Room - City Hall Declaring support for Muslim communities. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398458&GUID=784CBE98-D771-45B3-B5ED-97FA3B2C7BF0&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2846619&GUID=0170CB46-9498-4EDD-A4A1-B618657C00F2&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398456,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/20/2016 1:00 PM Committee Room - City Hall Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398456&GUID=BD770982-7CE3-4735-A2FF-8152E46FEC11&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2824869&GUID=16638191-CC53-417D-A55C-9E47A202D188&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2834729&GUID=E0929D21-C591-40EF-85D5-C383A86D0E38&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398455,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 6/21/2016 10:00 AM Committee Room - City Hall Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398455&GUID=28040DCC-3DF9-4C22-A664-5EEAADB4A1FC&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2271078&GUID=868450C5-F2D5-46FD-907C-9DCE4F46FC6B&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2286852&GUID=B74A4CF4-01DB-4F73-AA5A-912EE8CC5C81&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398454,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 5/19/2016 11:00 AM Council Chambers - City Hall Jointly with the Committee on Finance and the Subcommittee on Libraries Executive Budget Hearings - Cultural Affairs, Libraries & International Intergroup Relations Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398454&GUID=047C1A17-0F2D-46E7-971F-E0D36DCB1B22&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2702832&GUID=840514E8-FD57-41D6-B011-FB65E92BE866&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398453,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 5/4/2016 1:00 PM Brooklyn Museum Iris and B. Gerald Cantor Auditorium Third Floor 200 Eastern Parkway Brooklyn, New York 11238 Oversight - Art and Culture as a Catalyst for Political and Social Change Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398453&GUID=2BD9844D-B571-4CEB-AD65-43E30F80CBE5&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2688461&GUID=268A097B-1F12-4601-B34C-579B305ABEA7&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398451,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 3/23/2016 10:00 AM Council Chambers - City Hall Jointly with the Subcommittee on Libraries Preliminary Budget Hearing - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398451&GUID=E4219D53-EE11-44B3-9167-5627EC056B3C&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2569007&GUID=49584876-D2A9-4D92-9215-C4B6E261243F&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398452,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 2/25/2016 10:00 AM Council Chambers - City Hall Oversight - NYC Department of Cultural Affairs Diversity Survey Results Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398452&GUID=1BD34ACE-E84F-49D0-A252-C7CAB50DA6F7&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2565818&GUID=F2602F14-0429-4285-8058-1744636039CB&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398450,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 1/29/2016 10:00 AM 250 Broadway - Committee Rm, 14th Fl. Jointly with the Committee on Juvenile Justice Oversight - Examining Cultural Non-Profits in the New York City Juvenile Justice System. Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398450&GUID=E796FB32-7207-4AE3-9FF4-483CB7FCA494&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2546188&GUID=3D69267C-6A52-46A0-A6CD-4741576E996E&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398449,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 1/22/2016 Deferred Committee Room - City Hall Jointly with the Committee on Juvenile Justice Oversight - Examining Cultural Non-Profits in the New York City Juvenile Justice System. Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398449&GUID=A9FE507E-E6FC-4DA6-BC99-2325C5DDD06A&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2546188&GUID=3D69267C-6A52-46A0-A6CD-4741576E996E&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398448,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/15/2015 10:45 AM Council Chambers - City Hall Jointly with the Committee on Immigration Oversight - IDNYC and the Cultural Institutions Group Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398448&GUID=8D5FE160-C787-4643-A046-7614C0D9899C&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2526322&GUID=23E99676-5195-4F5B-A2BF-7555436AD3D0&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398447,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 11/30/2015 10:00 AM Committee Room - City Hall Jointly with the Subcommittee on Libraries Oversight - Six Day Service at Public Libraries Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398447&GUID=9C3FF941-92CD-409B-9849-A444021F0B8F&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2475486&GUID=77D27419-508C-4736-8246-354B09923B51&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398446,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 11/17/2015 Deferred Council Chambers - City Hall AGENDA TO BE ANNOUNCED Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398446&GUID=E189258B-0E26-4FEB-B153-EF8431BF03A7&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3642986&GUID=46E2B082-CC87-4186-99C4-0EC9C5C310D1&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398445,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/30/2015 12:00 PM Committee Room - City Hall Reporting certain data regarding institutions in the Cultural Institutions Group. Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398445&GUID=38AA9414-A457-4740-A757-EE97491C0AA1&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386634&GUID=F4FA740F-8031-4A1A-8A10-B5B14C2B7AAB&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398444,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/20/2015 Deferred Council Chambers - City Hall Jointly with the Subcommittee on Libraries Oversight - Six Day Service at Public Libraries Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398444&GUID=0AB1FC97-BD0B-4F71-93B0-50AA7ADB3757&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2475486&GUID=77D27419-508C-4736-8246-354B09923B51&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398443,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/16/2015 1:00 PM 250 Broadway - Committee Rm, 14th Fl. Praising Pope Francis for his lifelong pursuit of peace among all peoples and commends him on his upcoming historic visit to NYC. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398443&GUID=3F5ADDE3-D448-4681-91DB-EAFC4F091A2D&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386633&GUID=F4D9AEE6-E105-47A8-835D-966C7C0E6848&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398442,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/8/2015 Deferred 250 Broadway - Committee Rm, 14th Fl. AGENDA TO BE ANNOUNCED Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398442&GUID=6D26E775-5299-45D6-AFEB-E90EBBD7A517&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3642986&GUID=46E2B082-CC87-4186-99C4-0EC9C5C310D1&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398440,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 6/8/2015 10:00 AM Council Chambers - City Hall Executive Budget Hearing Executive Budget Hearings - Cultural Affairs, Libraries & International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398440&GUID=D433C49B-5749-49A0-B5F5-0355E700FC47&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2280287&GUID=E2B2DD9E-B9F3-449F-8DA1-7A95E8C4E5C1&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398441,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 5/13/2015 11:00 AM 250 Broadway - Committee Rm, 16th Fl. Community engagement process in the percent for art law. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398441&GUID=0F27C882-19FB-48C8-A8E7-F60B9FFAB1DC&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2253271&GUID=20101A0A-8A7F-414E-BC26-8344091CD92E&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398439,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 4/27/2015 1:00 PM 250 Broadway - Committee Rm, 14th Fl. Comprehensive cultural plan. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398439&GUID=375FBEF3-679F-44D0-92D7-150BC6930AC2&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853941&GUID=15689E9B-3860-4882-B9D3-F67A4C896AAC&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398438,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 4/20/2015 10:00 AM Council Chambers - City Hall Community engagement process in the percent for art law. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398438&GUID=E079A6DD-4D46-4B30-A214-62BF8125655B&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2253271&GUID=20101A0A-8A7F-414E-BC26-8344091CD92E&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398437,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 3/20/2015 10:00 AM Council Chambers - City Hall Jointly with the Subcommittee on Libraries Preliminary Budget Hearing - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398437&GUID=FBE47C97-5038-4ADB-B61A-703EFC55E23D&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2201463&GUID=38A827A2-92C7-41B8-A710-1746BC6C967A&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398436,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 2/24/2015 10:00 AM Council Chambers - City Hall Jointly with the Committee on Finance and the Subcommittee on Libraries Oversight \u2013 Supporting Public Libraries in the City's Ten-Year Capital Plan Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398436&GUID=F3DFFC5D-5182-465D-A6E4-CBEDC5D99818&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2170593&GUID=6D076EB6-3234-45E7-A219-C4A69381F5AC&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398434,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 1/29/2015 Deferred Committee Room - City Hall Cultural liaisons. Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398434&GUID=94BCF7BE-D956-4B56-9423-80667C1338AD&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2015577&GUID=0696F8A6-F4B6-49DE-87E9-2E1968BB12A8&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398435,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 1/21/2015 10:00 AM Council Chambers - City Hall Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398435&GUID=D0903DA9-6B60-4853-B489-FCC134972348&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2080728&GUID=0E665A9B-40DE-449C-BF1D-12F1C83D1BB1&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2123266&GUID=144BFB31-0DAD-4A71-8A72-1851A3347A75&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398433,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 1/14/2015 Deferred Council Chambers - City Hall AGENDA TO BE ANNOUNCED Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398433&GUID=EA45FDCA-D834-4F3F-974B-F6BEA284CE52&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3642986&GUID=46E2B082-CC87-4186-99C4-0EC9C5C310D1&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398432,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/16/2014 12:45 PM Committee Room - City Hall Recognizing and commemorating January 13th as Korean American Day in NYC. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398432&GUID=495DC99C-48AB-450C-8FC5-62139A9E83F2&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1912146&GUID=547B2F3E-F0C5-44BD-8579-E1BA41E50A52&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398431,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/10/2014 1:00 PM Council Chambers - City Hall Jointly with the Subcommittee on Libraries Oversight - New York City Public Library Systems\u2019 Capital Needs & Planning. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398431&GUID=888EAFDE-3EB8-4701-A7D2-C9CF3C8C2E5D&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2074202&GUID=4C85D0A3-6DC9-4D69-BF2E-14A9045AE25A&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398430,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 11/24/2014 1:00 PM Committee Room - City Hall Recognizing and commemorating January 13th as Korean American Day in NYC. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398430&GUID=7C8FBB98-3263-45CC-99DD-2A798FC95E36&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1912146&GUID=547B2F3E-F0C5-44BD-8579-E1BA41E50A52&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398429,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/21/2014 10:00 AM 250 Broadway - Committee Rm, 16th Fl. Establish the Smithsonian American Latino Museum and designate the Arts and Industries Building as its future location in Washington, D.C. (H.R.1217/S.568) Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398429&GUID=AF108CAD-E5BF-47AC-B765-A01C7881FDE7&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1903331&GUID=4D3BEDF3-7DE9-4A6A-8A76-BA95B198B2FC&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398427,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/14/2014 1:00 PM Committee Room - City Hall Establish the Smithsonian American Latino Museum and designate the Arts and Industries Building as its future location in Washington, D.C. (H.R.1217/S.568) Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398427&GUID=2D314C95-05E4-4A96-8050-82207E01B001&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1903331&GUID=4D3BEDF3-7DE9-4A6A-8A76-BA95B198B2FC&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398428,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/6/2014 10:00 AM Council Chambers - City Hall Supporting the Justice for Jazz Artists Campaign. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398428&GUID=77759C95-9F4F-4843-8C76-0818A718698C&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1739322&GUID=18CA4845-CBA5-459E-A4A4-D6E835B837BE&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398426,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/29/2014 10:00 AM Council Chambers - City Hall Comprehensive cultural plan. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398426&GUID=D077741C-F3C8-4BC6-91C4-53D5319E6EDE&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853941&GUID=15689E9B-3860-4882-B9D3-F67A4C896AAC&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398425,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/17/2014 10:00 AM Committee Room - City Hall Jointly with the Committee on Civil Service and Labor Supporting the Justice for Jazz Artists Campaign. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398425&GUID=13F2B090-BE23-444B-8026-B685F65D1697&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1739322&GUID=18CA4845-CBA5-459E-A4A4-D6E835B837BE&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398424,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/8/2014 Deferred 250 Broadway - Committee Rm, 14th Fl. Jointly with the Committee on Women's Issues Creation of a National Women\u2019s History Museum. (H.R. 863) Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398424&GUID=96AFD890-5006-4AF2-B521-30DFEC5573CB&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853955&GUID=112210B6-F538-4C64-BE66-6DC9F2C7029D&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398423,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 6/3/2014 10:00 AM Council Chambers - City Hall Jointly with the Committee on Finance and the Subcommittee on Libraries Executive Budget Hearings - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398423&GUID=A3B1A666-FD74-4F89-9A05-0D3FFF712426&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1744144&GUID=5B50AA8D-5054-4A7F-BAD5-28331CC66053&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398422,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 4/28/2014 1:00 PM 250 Broadway - Committee Rm, 16th Fl. Jointly with the Subcommittee on Libraries Oversight: Tracking How the Department of Design & Construction Spends, Monitors and Discloses Capital Funding for Library and Cultural Projects. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398422&GUID=B9EDF229-C626-46F5-ADC6-21AF70CF17B7&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1732631&GUID=B384EC49-D2F2-4273-AC37-5FA8EFC78425&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398420,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 3/11/2014 1:00 PM Council Chambers - City Hall Preliminary Budget Hearing - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398420&GUID=0FB2E37A-8650-4E57-B615-D9ADF8A3F9BF&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1665442&GUID=CB720941-C228-474B-AA50-CAC4711C6EE6&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398421,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 2/28/2014 10:00 AM Council Chambers - City Hall Requiring the placement of an informational sign near the intersection of Wall and Water Streets in Manhattan to mark the site of New York\u2019s first slave market. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398421&GUID=550D0C75-A6C8-4650-966C-D5CA6BC660B7&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1655736&GUID=026FF6F8-D7A2-432C-A805-8B4BCCDE7E76&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398419,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 2/5/2014 10:00 AM Council Chambers - City Hall Jointly with the Committee on Finance and the Subcommittee on Libraries Oversight \u2013 Queens Library Operations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398419&GUID=7131283E-5A4A-4D2E-9D69-F9EEB858AE22&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1654863&GUID=E0949A3D-5914-4EF9-9EEE-8D93E41A61CF&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398492,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/17/2019 10:00 AM Council Chambers - City Hall Oversight - Percent for Art and Public Art in NY Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398492&GUID=23AC9C3F-E07B-42B2-9C06-5CCDBD637A82&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4248329&GUID=A2A6EB0E-0AB9-4E19-AAD9-CAE09A727F8C&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398491,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 11/19/2019 10:00 AM Council Chambers - City Hall Jointly with the Committee on Immigration Oversight - The Role of Public Libraries in Support of Immigrant New Yorkers. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398491&GUID=28687AAB-BAAB-496D-ADD1-BD1876FE5993&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4218698&GUID=3C99DB2F-DC3C-48DC-919D-69F62BAF2ABF&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398490,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/31/2019 10:00 AM Committee Room - City Hall Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398490&GUID=7EE86621-F417-49CF-96E6-F54200A58353&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3872957&GUID=2EFAE005-CEF5-42D4-8915-A0EDCF76357C&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4168310&GUID=90FC9DB9-2AE0-4E82-A16A-30AC21A8DA48&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4196243&GUID=971B7821-223C-480D-AE73-BB33C11088F2&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398489,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/17/2019 1:00 PM Committee Room - City Hall Oversight - Diversity in Cultural Institutions and The New York City Department of Cultural Affairs (DCLA) Workforce Demographics Pilot Study: Findings, Results, and Next Steps. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398489&GUID=A426305D-BEF4-45D7-BC0D-811B86C80A0D&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4082005&GUID=C2BEFD69-8872-4C04-8767-461B5F71F2D9&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398487,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 6/27/2019 Deferred Committee Room - City Hall Oversight \u2013 New York City's LGBTQ+ Community and the Arts: Resources, Opportunities and Support. Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398487&GUID=89E12C65-9BAE-4A99-A597-CE3903A7EC57&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3963689&GUID=8406D56E-C514-4E8D-8BE3-63E9DDF736D5&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398488,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 6/13/2019 10:30 AM Committee Room - City Hall Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398488&GUID=C5540EAA-A288-4C99-A3D0-037CFB914011&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3686666&GUID=B81ECD81-07A6-4C88-93FA-83CDFF737501&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3860383&GUID=99F6FBCA-E4F8-473B-9B20-D8F5EEED0DAF&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398486,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 5/21/2019 10:00 AM Council Chambers - City Hall Jointly with the Committee Finance Executive Budget Hearings - Cultural Affairs, Libraries & International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398486&GUID=C8C805E1-09A7-49FF-A7F0-08DEDE584B5D&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3924575&GUID=390129E1-4524-4CDD-95F1-FED54F9377F5&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398485,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 4/29/2019 10:00 AM Council Chambers - City Hall Oversight - The Cultural After School Adventures (CASA) Initiative: Bringing Arts & Culture To New York City Public School and Enriching The Lives Of Students. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398485&GUID=245A8301-E65B-4BEB-A427-23014116F845&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3906969&GUID=48A19CBC-44B0-4A2C-AEB1-55D5D0D752B9&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398484,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 3/11/2019 10:00 AM Council Chambers - City Hall Preliminary Budget Hearing - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398484&GUID=93468CBD-F82C-42C0-BAB7-AFAB642A9DA7&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3855431&GUID=37222433-970E-4BA2-87C9-1347E8E57D58&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398483,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 2/25/2019 10:00 AM Council Chambers - City Hall Jointly with the Committee on Parks and Recreation and the Committee on Women Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398483&GUID=EF0AA02A-6D53-4177-B5D1-B1E197F8FECE&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3686666&GUID=B81ECD81-07A6-4C88-93FA-83CDFF737501&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3848321&GUID=05078456-F8FB-4D87-B35D-10077A679D47&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3860383&GUID=99F6FBCA-E4F8-473B-9B20-D8F5EEED0DAF&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398482,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 1/22/2019 1:00 PM Council Chambers - City Hall Oversight - Arts, Culture, and Stonewall 50 Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398482&GUID=B090B3D2-DF16-4D42-B2D7-4C029CE49FF8&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3826332&GUID=8CC597B8-1AE3-4278-9152-7E18D2334755&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398479,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 12/18/2018 1:00 PM Committee Room - City Hall Jointly with the Committee on Criminal Justice Oversight - Department of Probation Arts Programming. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398479&GUID=8862AB9B-327B-49B3-8811-D0A30DB3DBE3&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3761129&GUID=8B63E008-E9E3-4653-9806-1CA32A838FE1&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398481,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 11/29/2018 1:00 PM TWA Lounge One World Trade Center 86th Floor New York, NY PLEASE BE ADVISED: For security purposes, we require RSVPs no later than November 27, 2018 at 5:00PM to attend the hearing. Room capacity is limited and admission is not guaranteed. RSVPs will be approved on a first-in-time basis. Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398481&GUID=AC57150D-B225-4D15-AA58-2A961745556C&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3725156&GUID=9D4EAB12-9190-4FBD-AC3C-E5BC7E94756E&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3763668&GUID=F95CEA53-F549-4A33-BF2F-790EA109B1B9&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398480,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/29/2018 10:00 AM 250 Broadway - Committee Rm, 16th Fl. Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398480&GUID=91279324-61F8-45CF-B09E-31B7C47E9D0B&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3371465&GUID=66A56170-07FF-40E5-8418-48B89B68C817&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3474249&GUID=27198C81-C58B-4684-917C-AB8B5B7F01E3&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541088&GUID=74870ABB-8D32-467A-AF7D-56A866EE3A5F&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541089&GUID=9B9372FF-38EF-43DC-88B1-12EC8BB88C45&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541090&GUID=16547039-2AA1-41CD-9D0C-8BFA102D11CE&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398478,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 10/16/2018 1:00 PM Committee Room - City Hall Multiple meeting items, please see Meeting Details for more information Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398478&GUID=85260FCF-BF42-462E-A0D0-8F47CC9F8964&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3371465&GUID=66A56170-07FF-40E5-8418-48B89B68C817&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3474249&GUID=27198C81-C58B-4684-917C-AB8B5B7F01E3&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541088&GUID=74870ABB-8D32-467A-AF7D-56A866EE3A5F&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541089&GUID=9B9372FF-38EF-43DC-88B1-12EC8BB88C45&Options=&Search=",
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541090&GUID=16547039-2AA1-41CD-9D0C-8BFA102D11CE&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398477,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 9/27/2018 1:00 PM 250 Broadway - Committee Rm, 16th Fl. Oversight - Culture Pass and Other Partnerships between New York City\u2019s Cultural Organizations and Public Libraries. Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398477&GUID=161187E3-4268-4D96-A66F-D152E8769809&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3648891&GUID=FC1FC903-4577-42CC-923E-22CEA8E0ADA3&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398476,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 6/26/2018 Deferred Committee Room - City Hall Jointly with the Committee on Criminal Justice Oversight - Library Services at Rikers Island Meeting details Agenda Not available Not available",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398476&GUID=93ACDAB8-28A4-4CDB-A742-573FCF0F6A6A&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3508792&GUID=4EFC78AC-2D92-4F36-8BB2-C85757A2608C&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398475,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 5/18/2018 12:00 PM Council Chambers - City Hall Jointly with the Committee on Finance Executive Budget Hearings - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398475&GUID=5D87EA4A-F971-4F0F-856E-1D038F249202&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3490509&GUID=57BAC2BA-15C7-4F64-9736-55F8A1B6386C&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398474,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 4/17/2018 1:00 PM Council Chambers - City Hall Oversight - #MeToo and Culture & the Arts Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398474&GUID=F008E38B-D7EA-44E4-A54B-1A353BA57D9B&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3378160&GUID=6F901F9A-6B22-4CD9-8755-C86C16BD0F1A&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398473,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 3/16/2018 10:00 AM Council Chambers - City Hall Preliminary Budget Hearing - Cultural Affairs, Libraries and International Intergroup Relations Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398473&GUID=8CE00A3F-BA88-4C6D-B34E-313F3EFCD2D2&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3345079&GUID=46B15ACF-A1B1-44C7-B2BE-B6C22C771167&Options=&Search="
+      ]
+    },
+    {
+      "meetingId": 1398472,
+      "calendarRow": "Committee on Cultural Affairs, Libraries and International Intergroup Relations 2/28/2018 10:00 AM Committee Room - City Hall Oversight - Art as Resistance State in Trump\u2019s America Meeting details Agenda Minutes Video",
+      "meetingUrl": "https://legistar.council.nyc.gov/MeetingDetail.aspx?ID=1398472&GUID=94261C6B-BFB4-47F5-A17A-CFD6993A57AD&Options=info|&Search=",
+      "legislationUrls": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3343042&GUID=CE2EBAD7-BC09-4994-8417-99583E152B4D&Options=&Search="
+      ]
+    }
+  ],
+  "transcriptAttachments": [
+    {
+      "meetingId": 1398419,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1654863&GUID=E0949A3D-5914-4EF9-9EEE-8D93E41A61CF&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=2906772&GUID=B5F57180-91C3-4D1C-9E1D-460FE2886D91",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398421,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1655736&GUID=026FF6F8-D7A2-432C-A805-8B4BCCDE7E76&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=2931682&GUID=5E432CB6-C49F-446B-A1AC-1BCC0111A1B4",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398420,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1665442&GUID=CB720941-C228-474B-AA50-CAC4711C6EE6&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=2963409&GUID=DF0A09B6-75D3-45E6-B30D-8345F7C0DDF4",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398422,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1732631&GUID=B384EC49-D2F2-4273-AC37-5FA8EFC78425&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3066796&GUID=D1CF9644-E4A5-4CCD-9790-6C7B115538F2",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398425,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1739322&GUID=18CA4845-CBA5-459E-A4A4-D6E835B837BE&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3266025&GUID=E838EDC1-C310-4602-A099-80E5821B99E3",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398425,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1739322&GUID=18CA4845-CBA5-459E-A4A4-D6E835B837BE&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3287921&GUID=EBE4E392-8ABA-4F46-BBFE-C045DC926003",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398425,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1739322&GUID=18CA4845-CBA5-459E-A4A4-D6E835B837BE&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3296093&GUID=A2834EED-F0DB-4169-9DB9-7C23C73845B5",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398423,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1744144&GUID=5B50AA8D-5054-4A7F-BAD5-28331CC66053&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3126067&GUID=F5EFB17B-ED6E-4960-AF61-236BC1B8B00D",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398426,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853941&GUID=15689E9B-3860-4882-B9D3-F67A4C896AAC&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3279350&GUID=D676B6F6-B7DB-4A93-A3E8-CE7B3859572E",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398426,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853941&GUID=15689E9B-3860-4882-B9D3-F67A4C896AAC&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3732968&GUID=C4D6A5C0-5DF4-46B4-B997-D072F27E058F",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398426,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853941&GUID=15689E9B-3860-4882-B9D3-F67A4C896AAC&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3734495&GUID=2B1CE826-B9F2-4E58-9DEE-6B85DF01FAE8",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398424,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853955&GUID=112210B6-F538-4C64-BE66-6DC9F2C7029D&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3249354&GUID=118CABEE-E99C-4945-B015-D6B726A3607E",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398424,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853955&GUID=112210B6-F538-4C64-BE66-6DC9F2C7029D&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3257538&GUID=142C17C6-BED0-491B-AED5-12BC5D90C29F",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398424,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1853955&GUID=112210B6-F538-4C64-BE66-6DC9F2C7029D&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3257588&GUID=0C5F8A7C-E819-4924-AC82-3E0801018C75",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398427,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1903331&GUID=4D3BEDF3-7DE9-4A6A-8A76-BA95B198B2FC&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3296069&GUID=C88B625C-5AC5-41E5-99FE-9A8AA0BC5C13",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398427,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1903331&GUID=4D3BEDF3-7DE9-4A6A-8A76-BA95B198B2FC&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3301795&GUID=8184F054-2A6E-47F6-BEB2-8E882742EA42",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398427,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1903331&GUID=4D3BEDF3-7DE9-4A6A-8A76-BA95B198B2FC&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3313646&GUID=F42F1BAD-985F-4351-B4D6-6AE387548713",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398430,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1912146&GUID=547B2F3E-F0C5-44BD-8579-E1BA41E50A52&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3392247&GUID=82720FFE-FB60-4667-ADF5-9FF512EED46F",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398430,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1912146&GUID=547B2F3E-F0C5-44BD-8579-E1BA41E50A52&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3429119&GUID=EBD31F8E-169B-434F-AB65-1BD8205A9A78",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398430,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=1912146&GUID=547B2F3E-F0C5-44BD-8579-E1BA41E50A52&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3429154&GUID=0B45B291-F952-4C7C-9396-93AEAA7BBDE2",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398431,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2074202&GUID=4C85D0A3-6DC9-4D69-BF2E-14A9045AE25A&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3429278&GUID=71858D76-CF29-444A-9CCE-E84A09411B29",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398435,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2080728&GUID=0E665A9B-40DE-449C-BF1D-12F1C83D1BB1&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3461945&GUID=12FF0479-7A13-4190-AF14-3924E024947F",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398435,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2080728&GUID=0E665A9B-40DE-449C-BF1D-12F1C83D1BB1&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3463008&GUID=7377ABCD-ABCF-4746-8913-914778B40023",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398435,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2123266&GUID=144BFB31-0DAD-4A71-8A72-1851A3347A75&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3461949&GUID=9D2E991A-2535-4A96-9B5A-A3447A7AF344",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398435,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2123266&GUID=144BFB31-0DAD-4A71-8A72-1851A3347A75&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3463007&GUID=A21DAC99-8F3E-4957-A612-9F20769C5038",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398436,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2170593&GUID=6D076EB6-3234-45E7-A219-C4A69381F5AC&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3644026&GUID=BB0EDE06-6E83-4EBC-B8A4-809A749881AE",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398437,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2201463&GUID=38A827A2-92C7-41B8-A710-1746BC6C967A&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3689549&GUID=AA752E66-9C5B-405B-91E5-DD55C6F7B315",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398438,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2253271&GUID=20101A0A-8A7F-414E-BC26-8344091CD92E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3726564&GUID=C106ED06-DE25-45AD-BC39-629D07DBD1D1",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398438,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2253271&GUID=20101A0A-8A7F-414E-BC26-8344091CD92E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3749193&GUID=82B44A53-6F18-41D2-8918-E7EEF81F5457",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398438,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2253271&GUID=20101A0A-8A7F-414E-BC26-8344091CD92E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3753940&GUID=AE6902A2-CD04-4618-BA8B-C45A8E785CBC",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398455,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2271078&GUID=868450C5-F2D5-46FD-907C-9DCE4F46FC6B&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4557149&GUID=F0446E12-3A54-4275-BC30-E3F7CB5980E8",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398455,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2271078&GUID=868450C5-F2D5-46FD-907C-9DCE4F46FC6B&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4566105&GUID=EB2C3B92-E713-4290-9D6C-ED4FFB3FF6B2",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398440,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2280287&GUID=E2B2DD9E-B9F3-449F-8DA1-7A95E8C4E5C1&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=3826603&GUID=6E2A0C48-DC95-4AB3-B063-7E59936572EF",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398455,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2286852&GUID=B74A4CF4-01DB-4F73-AA5A-912EE8CC5C81&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4557151&GUID=DA1027DA-ABBF-4AB3-AEA6-F74ED541B22A",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398455,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2286852&GUID=B74A4CF4-01DB-4F73-AA5A-912EE8CC5C81&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4566106&GUID=4D39CF47-B0EA-474D-B6F2-E2367CC16DF2",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398469,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386576&GUID=B6706EBB-16CB-4562-8024-340D2E21264D&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5527636&GUID=69073661-A132-4F70-95A0-C9C9CED34664",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398469,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386576&GUID=B6706EBB-16CB-4562-8024-340D2E21264D&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5722510&GUID=BAE10A53-B033-4DD4-8E51-F79C5C75CFDD",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398469,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386576&GUID=B6706EBB-16CB-4562-8024-340D2E21264D&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5733681&GUID=C0F831EC-700D-4755-853E-6EC9D08D1701",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398443,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386633&GUID=F4D9AEE6-E105-47A8-835D-966C7C0E6848&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4038249&GUID=AE944C31-9F0C-4717-87BD-2A875D452154",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398443,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386633&GUID=F4D9AEE6-E105-47A8-835D-966C7C0E6848&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4038349&GUID=7423D540-19F9-48D1-A97E-042E7AC44C13",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398445,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386634&GUID=F4FA740F-8031-4A1A-8A10-B5B14C2B7AAB&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4117347&GUID=AF6E6346-FDA8-46CA-8FD8-AC3A7F6FDAB7",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398445,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386634&GUID=F4FA740F-8031-4A1A-8A10-B5B14C2B7AAB&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932804&GUID=A6393D99-31BF-41A1-ACFC-4FD1D267BA46",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398445,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2386634&GUID=F4FA740F-8031-4A1A-8A10-B5B14C2B7AAB&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932818&GUID=FDFA1B64-FDA5-49E0-A91F-D8391134332B",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398444,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2475486&GUID=77D27419-508C-4736-8246-354B09923B51&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4164360&GUID=E51DB242-2C93-4362-8330-A7AD9DC5B325",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398448,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2526322&GUID=23E99676-5195-4F5B-A2BF-7555436AD3D0&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4191103&GUID=E3EF19D2-8019-4D4F-BC22-64D19539EE62",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398449,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2546188&GUID=3D69267C-6A52-46A0-A6CD-4741576E996E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4244609&GUID=45FEF6BD-2FCF-4B04-964F-0AFAA0A40A45",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398452,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2565818&GUID=F2602F14-0429-4285-8058-1744636039CB&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4290612&GUID=333BE6B9-CCE5-44E1-BC4C-CF5E773610B4",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398451,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2569007&GUID=49584876-D2A9-4D92-9215-C4B6E261243F&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4407402&GUID=33E9909D-9B00-4F97-BF79-ED9D2285FD30",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398453,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2688461&GUID=268A097B-1F12-4601-B34C-579B305ABEA7&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4461446&GUID=7FAE2715-D989-40D6-B8E4-955BE633E249",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398454,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2702832&GUID=840514E8-FD57-41D6-B011-FB65E92BE866&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4526027&GUID=BB2AF8B8-1903-4D95-8A9C-AE90A85C20FE",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398456,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2824869&GUID=16638191-CC53-417D-A55C-9E47A202D188&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4707094&GUID=D6F73441-3482-49D2-87B4-DFEAEFFB3F5A",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398456,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2834729&GUID=E0929D21-C591-40EF-85D5-C383A86D0E38&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4707095&GUID=C14D79C5-A6BC-4B9D-9206-3C0F6BF70385",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398456,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2834729&GUID=E0929D21-C591-40EF-85D5-C383A86D0E38&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932805&GUID=44D0C145-1257-43C2-B1BA-5E796568F33F",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398456,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2834729&GUID=E0929D21-C591-40EF-85D5-C383A86D0E38&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932819&GUID=B4803245-2077-4A7B-9EED-A5628D19D34E",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845907&GUID=9309BFC8-E008-4711-B28D-C2E4DD72A915&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4754052&GUID=626A6E3B-3D6D-4C95-AD10-2B3981D24F7F",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845907&GUID=9309BFC8-E008-4711-B28D-C2E4DD72A915&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932808&GUID=0A8911A4-CC36-472B-B323-1C81C8401342",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845907&GUID=9309BFC8-E008-4711-B28D-C2E4DD72A915&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932822&GUID=9750D38A-2C45-4E82-BF04-2276FA04179C",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845908&GUID=75EE1672-2DAE-4D2C-A615-023CB1B7AB6E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4754050&GUID=EAA04F36-8366-43DA-920B-412D63076546",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845908&GUID=75EE1672-2DAE-4D2C-A615-023CB1B7AB6E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932806&GUID=7D57F957-5771-4DE4-8DC9-193993DF7242",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845908&GUID=75EE1672-2DAE-4D2C-A615-023CB1B7AB6E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932820&GUID=463F02B5-3EE5-4CD4-842F-7466EA9C1096",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2845912&GUID=738B1D9D-9927-4B28-9E50-11713047680E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4754049&GUID=B54A4A54-A36D-48DF-B939-BB3A52CF41A6",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398458,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2846619&GUID=0170CB46-9498-4EDD-A4A1-B618657C00F2&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4741445&GUID=D6C21C8A-C0B5-4301-A763-FC98DBBA56C6",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398458,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2846619&GUID=0170CB46-9498-4EDD-A4A1-B618657C00F2&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4755613&GUID=83C855DF-9773-461B-B1BA-8A32F9FE36A0",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2855583&GUID=96282ED6-C159-4CB5-87D1-763FE95B2526&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4754053&GUID=266C7EC6-0DE2-483D-AAB7-61AB0876963C",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2855583&GUID=96282ED6-C159-4CB5-87D1-763FE95B2526&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932809&GUID=0702C356-A5B1-40A9-9A21-0AA82C4F5563",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2855583&GUID=96282ED6-C159-4CB5-87D1-763FE95B2526&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932823&GUID=19286ADC-6438-410A-B96A-4FE901231ECE",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2856605&GUID=034D3EF8-65CB-403C-B315-0459DD603437&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4754051&GUID=DAB66D1E-D475-4C20-BD99-0EE45B4F7107",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2856605&GUID=034D3EF8-65CB-403C-B315-0459DD603437&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932807&GUID=C425168F-29BD-41CB-87E8-DC41E85E9EE2",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398457,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2856605&GUID=034D3EF8-65CB-403C-B315-0459DD603437&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932821&GUID=CDD63B8B-B49E-40B0-9DF7-6AF7F1D7545C",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398460,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2897258&GUID=886C5BF3-498A-4CC6-93A3-54E4E700A6D3&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4889792&GUID=135D5536-C41E-407D-8378-AFDC3F3B0D12",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398461,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2911450&GUID=CC7E7010-6A19-43AA-9258-01F2F7698523&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=4932803&GUID=6A30754B-5CB8-4B75-B4C2-51B872F0F07A",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398462,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2942459&GUID=802EAA8B-9A67-4A0A-BDAB-E59D04C3E012&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5010771&GUID=AF871425-F776-4CD2-89EC-201202A95D97",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398463,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2955219&GUID=05B0DA71-E15D-4B9D-A5A3-97D59E7DBB2E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5101992&GUID=A3AAA527-C165-42B6-88CB-27F102B9ED62",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398464,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2972263&GUID=DBC13881-9E97-40B2-86F9-EB07C496A3E0&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5115856&GUID=76DAFA97-67BB-4E71-B819-D8C1492A2135",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398464,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=2972263&GUID=DBC13881-9E97-40B2-86F9-EB07C496A3E0&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5139406&GUID=45BCC297-EFC2-4196-9FCA-0E5C8558184C",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398466,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3028986&GUID=DC99383D-8767-45D7-ADCF-6E0561D67767&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5271559&GUID=68A2E207-53EA-43CA-A03E-F879A113464E",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 1
+    },
+    {
+      "meetingId": 1398467,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3130674&GUID=BAE0E7F1-F1E2-4A98-AD36-4C52693E4B72&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5479046&GUID=E9387EDE-DCBA-455B-B3A0-71F30D23DF3E",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398468,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3136170&GUID=9CC0B3A9-540E-47F0-8757-3487F275C453&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5401950&GUID=041623F1-D5B6-4C2C-84D5-95A8305FBADD",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398468,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3136170&GUID=9CC0B3A9-540E-47F0-8757-3487F275C453&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5405654&GUID=B4B61B38-1CD1-44A8-BC4A-45F98F918B43",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398471,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3285783&GUID=9F2667D2-3D4E-4F0C-BD23-027D02989F0A&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=5733502&GUID=3D49E84F-7240-49D8-A197-E791C32D54D1",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398472,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3343042&GUID=CE2EBAD7-BC09-4994-8417-99583E152B4D&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6026996&GUID=6E214B9B-9CFD-434B-89D0-7998E823D5E3",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398473,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3345079&GUID=46B15ACF-A1B1-44C7-B2BE-B6C22C771167&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6195706&GUID=7514BB5D-51E7-4B77-92D8-A3919828DBEB",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 3
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3371465&GUID=66A56170-07FF-40E5-8418-48B89B68C817&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=10364838&GUID=B4589C07-AE15-4DDE-8CE7-8E9B10185C00",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3371465&GUID=66A56170-07FF-40E5-8418-48B89B68C817&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6709976&GUID=2BFC31E2-9A51-4BEB-8F88-6EC68C4FEF98",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3371465&GUID=66A56170-07FF-40E5-8418-48B89B68C817&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6785755&GUID=E4A5363B-FE5A-4E02-93F2-D0E6070F790B",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3371465&GUID=66A56170-07FF-40E5-8418-48B89B68C817&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6802647&GUID=95FD4174-3B3C-4D42-A300-0D6791EE09E3",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398474,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3378160&GUID=6F901F9A-6B22-4CD9-8755-C86C16BD0F1A&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6236273&GUID=AB1131D8-902E-4433-8596-A26F1F35728D",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3474249&GUID=27198C81-C58B-4684-917C-AB8B5B7F01E3&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6234487&GUID=97EB8D0F-FAAD-4A54-B46A-1AED5CF62EAF",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3474249&GUID=27198C81-C58B-4684-917C-AB8B5B7F01E3&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6709977&GUID=B78BC321-6DDD-41E8-AE38-C0592A6DE0B1",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3474249&GUID=27198C81-C58B-4684-917C-AB8B5B7F01E3&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6785756&GUID=256886B3-8E58-494B-B0BC-FE9296828043",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3474249&GUID=27198C81-C58B-4684-917C-AB8B5B7F01E3&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6802648&GUID=FEFD9ECF-DC3D-4BB4-A108-FFCC11D3D249",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398475,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3490509&GUID=57BAC2BA-15C7-4F64-9736-55F8A1B6386C&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6302741&GUID=572B07C6-6788-47F6-BDC0-59184E11E338",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541088&GUID=74870ABB-8D32-467A-AF7D-56A866EE3A5F&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6391475&GUID=2CF10267-27F6-4121-9D0D-20A3E0D6ABE8",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541088&GUID=74870ABB-8D32-467A-AF7D-56A866EE3A5F&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6709979&GUID=6EDB79E6-5C8D-435F-AFE8-AF88DC995593",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541088&GUID=74870ABB-8D32-467A-AF7D-56A866EE3A5F&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6785758&GUID=4BF1140E-635A-42E4-9306-B20164061A0D",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541088&GUID=74870ABB-8D32-467A-AF7D-56A866EE3A5F&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6802651&GUID=5D24697D-AFB8-45BC-B28E-F1519B11B397",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541089&GUID=9B9372FF-38EF-43DC-88B1-12EC8BB88C45&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6391476&GUID=508960F8-1A5F-469F-9A4E-AFBAE17723B0",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541089&GUID=9B9372FF-38EF-43DC-88B1-12EC8BB88C45&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6709980&GUID=F07F3642-006E-4D2A-9BA3-406FEC1775F9",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541089&GUID=9B9372FF-38EF-43DC-88B1-12EC8BB88C45&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6785759&GUID=4385EC9C-DC10-432E-A67E-EF6CC54D78BC",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541089&GUID=9B9372FF-38EF-43DC-88B1-12EC8BB88C45&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6802652&GUID=3D955481-ABFA-45BE-8D5E-50DC0739C453",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541090&GUID=16547039-2AA1-41CD-9D0C-8BFA102D11CE&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6391474&GUID=C3D2D7FC-262B-4670-9D5A-859CD51D92EA",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541090&GUID=16547039-2AA1-41CD-9D0C-8BFA102D11CE&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6709978&GUID=E0345A7A-EC66-4D46-8BBE-6DE9FF3B8EE0",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541090&GUID=16547039-2AA1-41CD-9D0C-8BFA102D11CE&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6785757&GUID=BF9520B9-3D65-489D-81CE-7152FA97FBDA",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398478,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3541090&GUID=16547039-2AA1-41CD-9D0C-8BFA102D11CE&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6802650&GUID=6DA7A00A-440D-45E0-BAE4-8EB8FD150A82",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398477,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3648891&GUID=FC1FC903-4577-42CC-923E-22CEA8E0ADA3&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6664528&GUID=F8BA6C2C-1990-40FB-9DE2-5185184A886B",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3686666&GUID=B81ECD81-07A6-4C88-93FA-83CDFF737501&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=10367664&GUID=B1026F4E-EA2C-46EC-9F2B-1521E24B2BAC",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3686666&GUID=B81ECD81-07A6-4C88-93FA-83CDFF737501&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7135244&GUID=1CB187BA-8651-4F4E-BFB2-D222DB511214",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3686666&GUID=B81ECD81-07A6-4C88-93FA-83CDFF737501&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7340568&GUID=BE22F0C3-7199-4373-9BC2-B1554CFF264E",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3686666&GUID=B81ECD81-07A6-4C88-93FA-83CDFF737501&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7511848&GUID=16BC21C8-4E9C-4A85-8C76-9BFC46DBBDAA",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398481,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3725156&GUID=9D4EAB12-9190-4FBD-AC3C-E5BC7E94756E&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6956480&GUID=6D386245-EBB3-4E8F-91A5-AC2A5EEC6047",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398479,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3761129&GUID=8B63E008-E9E3-4653-9806-1CA32A838FE1&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6990340&GUID=8524C20B-A8F8-4FDA-AFED-BBDFB71A8E51",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398481,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3763668&GUID=F95CEA53-F549-4A33-BF2F-790EA109B1B9&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=10368132&GUID=AEFF6A14-0E2F-4950-8204-C3201E2D7650",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398481,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3763668&GUID=F95CEA53-F549-4A33-BF2F-790EA109B1B9&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6956479&GUID=7809A4DB-8AD3-48C6-8A91-C126E35C26C9",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398482,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3826332&GUID=8CC597B8-1AE3-4278-9152-7E18D2334755&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7041302&GUID=E7A2A41A-26FB-40AE-B25C-92C56D79D182",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3848321&GUID=05078456-F8FB-4D87-B35D-10077A679D47&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7135288&GUID=90C52181-08BE-4F26-AED9-DC1E80717424",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398484,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3855431&GUID=37222433-970E-4BA2-87C9-1347E8E57D58&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7168082&GUID=2335BD11-199C-4716-B1B7-97AB1724CF91",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3860383&GUID=99F6FBCA-E4F8-473B-9B20-D8F5EEED0DAF&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7110799&GUID=FFD2F852-8315-45E1-AA7C-71B254B81B57",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3860383&GUID=99F6FBCA-E4F8-473B-9B20-D8F5EEED0DAF&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7135245&GUID=547767D0-53F9-4740-98E7-948C63CE593F",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3860383&GUID=99F6FBCA-E4F8-473B-9B20-D8F5EEED0DAF&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7340569&GUID=845F4CAC-DD7B-4C1E-8411-7A72EF59473C",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398483,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3860383&GUID=99F6FBCA-E4F8-473B-9B20-D8F5EEED0DAF&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7511849&GUID=514CC8F2-2F2F-4E27-8BC1-6281077272DA",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398490,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3872957&GUID=2EFAE005-CEF5-42D4-8915-A0EDCF76357C&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7853987&GUID=EF340837-4306-4903-9F16-EB7935641A4E",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398490,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3872957&GUID=2EFAE005-CEF5-42D4-8915-A0EDCF76357C&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=8082774&GUID=4289233E-D530-472E-93C6-E167421C384E",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398490,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3872957&GUID=2EFAE005-CEF5-42D4-8915-A0EDCF76357C&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=8197196&GUID=093903B7-F084-4EF4-A116-F9514E5CEAFC",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398490,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3872957&GUID=2EFAE005-CEF5-42D4-8915-A0EDCF76357C&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=8206685&GUID=909C6615-F0BA-4BD9-AB15-B4E7AA178EC2",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398485,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3906969&GUID=48A19CBC-44B0-4A2C-AEB1-55D5D0D752B9&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7267306&GUID=FA9F9AFA-0EFC-48D1-9337-62B783635D8A",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398486,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=3924575&GUID=390129E1-4524-4CDD-95F1-FED54F9377F5&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7336177&GUID=89281F6C-046D-4E02-BCED-3E303F49E572",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398489,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4082005&GUID=C2BEFD69-8872-4C04-8767-461B5F71F2D9&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7727956&GUID=D937BDEE-BAC5-4478-B57E-D8AEC3DC9909",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398490,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4168310&GUID=90FC9DB9-2AE0-4E82-A16A-30AC21A8DA48&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7853986&GUID=866C83D2-7383-4673-9C28-EE1A7C424883",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398490,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4196243&GUID=971B7821-223C-480D-AE73-BB33C11088F2&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7853988&GUID=004DD5E0-E7D7-474C-8E16-4EA6E649BAD8",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398490,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4196243&GUID=971B7821-223C-480D-AE73-BB33C11088F2&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7906496&GUID=99DD0745-A728-420A-BE17-822DFF71A5F8",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398491,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4218698&GUID=3C99DB2F-DC3C-48DC-919D-69F62BAF2ABF&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7931329&GUID=34A1DE75-804D-4D71-9105-215E440B7661",
+      "mentionsFinkelpearl": false,
+      "artistCoalitionMatchCount": 0
+    },
+    {
+      "meetingId": 1398492,
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4248329&GUID=A2A6EB0E-0AB9-4E19-AAD9-CAE09A727F8C&Options=&Search=",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7990308&GUID=B3BB53F9-12E8-4452-91B4-B5678B7FA94D",
+      "mentionsFinkelpearl": true,
+      "artistCoalitionMatchCount": 0
+    }
+  ],
+  "matchingTranscripts": [
+    {
+      "meetingId": 1398466,
+      "hearingDate": "2017-05-19",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F",
+      "speakerRelationship": "Tom Finkelpearl directly names NYC Artist Coalition in prepared testimony",
+      "locator": "transcript pages 91-93"
+    },
+    {
+      "meetingId": 1398473,
+      "hearingDate": "2018-03-16",
+      "transcriptUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=7514BB5D-51E7-4B77-92D8-A3919828DBEB&ID=6195706&M=F",
+      "speakerRelationship": "Jamie Burkart names NYC Artist Coalition and Tom Finkelpearl in public testimony",
+      "locator": "transcript pages 165-168"
+    }
+  ],
+  "boundaries": [
+    "This is a bounded census of Cultural Affairs committee calendar records, not every New York City Council committee.",
+    "The result does not establish that no other Council transcript refers to NYC Artist Coalition.",
+    "Search and OCR can miss spelling variants or image-only material.",
+    "The ledger preserves URLs, counts, and match disposition, not transcript bodies or private material."
+  ]
+}

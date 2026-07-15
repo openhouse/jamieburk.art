@@ -112,6 +112,13 @@ import {
   jamiePersonalFacebookPostResearchInquiries,
   jamiePersonalFacebookPostSources
 } from "./jamie-personal-facebook-posts-2026-07.ts";
+import {
+  nycacInstitutionalInterfaceClaims,
+  nycacInstitutionalInterfaceIntakeItems,
+  nycacInstitutionalInterfaceObservations,
+  nycacInstitutionalInterfaceResearchInquiries,
+  nycacInstitutionalInterfaceSources
+} from "./nycac-institutional-interface.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -131,6 +138,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostIntakeItems,
     ...kcSpacesFundFacebookPostIntakeItems,
     ...jamiePersonalFacebookPostIntakeItems,
+    ...nycacInstitutionalInterfaceIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -431,6 +439,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
     ...jamiePersonalFacebookPostSources,
+    ...nycacInstitutionalInterfaceSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1462,6 +1471,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostObservations,
     ...kcSpacesFundFacebookPostObservations,
     ...jamiePersonalFacebookPostObservations,
+    ...nycacInstitutionalInterfaceObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -2061,6 +2071,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
     ...jamiePersonalFacebookPostClaims,
+    ...nycacInstitutionalInterfaceClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -3128,6 +3139,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostResearchInquiries,
     ...kcSpacesFundFacebookPostResearchInquiries,
     ...jamiePersonalFacebookPostResearchInquiries,
+    ...nycacInstitutionalInterfaceResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -3443,12 +3455,21 @@ const knowledgeBankInput = {
     id: "fair-rent-nyc",
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
+      "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19",
       "SRC-NAC-X-CORPUS-2026-07-15",
       "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
       "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
       "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
     ],
     occurrences: [
+      {
+        id: "finkelpearl-council-reference",
+        claimId: "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19"
+        ]
+      },
       {
         id: "shared-public-operating-layer",
         claimId: "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",

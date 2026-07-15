@@ -280,6 +280,26 @@
       ]
     },
     {
+      "id": "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19",
+      "title": "Executive Budget hearing transcript for Cultural Affairs and Libraries",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-05-19",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, joint Finance, Cultural Affairs, and Libraries Executive Budget hearing transcript, May 19, 2017.",
+      "publicNote": "In prepared testimony, DCLA Commissioner Tom Finkelpearl placed NYC Artist Coalition within an account of CreateNYC, direct public feedback, and reciprocal agency-public relationships.",
+      "doesNotEstablish": [
+        "that DCLA solely created or governed NYC Artist Coalition",
+        "that Finkelpearl named Jamie or assigned his individual role",
+        "that DCLA endorsed every coalition position",
+        "that the coalition alone caused a legislative or agency outcome"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -734,6 +754,49 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "At a May 2017 City Council budget hearing, DCLA Commissioner Tom Finkelpearl cited NYC Artist Coalition's formation as evidence that bringing people together could create a closer, reciprocal relationship between the agency and the public.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Finkelpearl named NYC Artist Coalition in prepared Council testimony while explaining DCLA's effort to expand direct public feedback through CreateNYC.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Finkelpearl's Council testimony",
+            "the NYC Artist Coalition reference",
+            "direct-public-feedback and reciprocal-relationship context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Finkelpearl referred to the coalition, not to Jamie individually.",
+        "DCLA's January convening does not establish that DCLA solely created, owned, or governed the coalition.",
+        "The bounded census covers Cultural Affairs meeting records, not every Council committee or every possible transcript.",
+        "Institutional citation does not establish endorsement of every coalition position or causation of later policy outcomes."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -1073,12 +1136,21 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
+        "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19",
         "SRC-NAC-X-CORPUS-2026-07-15",
         "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
         "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
         "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
       ],
       "occurrences": [
+        {
+          "id": "finkelpearl-council-reference",
+          "claimId": "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19"
+          ]
+        },
         {
           "id": "shared-public-operating-layer",
           "claimId": "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
