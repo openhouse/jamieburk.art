@@ -50,7 +50,9 @@ selected, or a winner without new evidence and review.
 
 ## WOWList
 
-Do not name collaborators unless approved.
+Do not name collaborators in portfolio prose unless approved. Raw public source
+captures may retain factual source attribution, but active projection must use
+collective wording until approval is recorded.
 
 ## 196 / Sunday Dinner
 

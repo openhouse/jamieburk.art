@@ -462,6 +462,9 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   const tractionClaim = knowledgeBank.claims.find(
     (item) => item.id === "CLM-WOWLIST-SOCIAL-TRACTION-OBSERVATION"
   );
+  const lineageClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE"
+  );
   const page = knowledgeBank.pages.find((item) => item.id === "wowlist");
   const work = readFileSync("apps/www/src/data/work.ts", "utf8");
   const socialBatch = readFileSync(
@@ -504,6 +507,10 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     "docs/knowledge-bank/projects/social-account-inventory.md",
     "utf8"
   );
+  const publicRegistry = readFileSync(
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "utf8"
+  );
   const runNote = readFileSync(
     "docs/knowledge-bank/runs/2026-07-15-wowlist-x-full-population.md",
     "utf8"
@@ -512,6 +519,12 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   assert.equal(supportClaim.projectionEligibility, "eligible");
   assert.equal(civicClaim.projectionEligibility, "eligible");
   assert.equal(tractionClaim.projectionEligibility, "hold");
+  assert.ok(lineageClaim.projections.every((projection) => !/Richard/.test(projection.text)));
+  assert.ok(
+    lineageClaim.boundaries.some((boundary) =>
+      /names remain held from portfolio projection pending approval/i.test(boundary)
+    )
+  );
   assert.ok(supportClaim.boundaries.some((item) => /representative usability study/i.test(item)));
   assert.ok(civicClaim.antiClaims.some((item) => /caused/i.test(item)));
   assert.equal(
@@ -599,6 +612,7 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   );
   assert.match(socialInventory, /Reviewed: July 15, 2026/);
   assert.doesNotMatch(socialInventory, /Good Times reporting on DIY documentation/);
+  assert.doesNotMatch(publicRegistry, /Richard/);
   assert.ok(intakeSourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
   assert.match(
     socialBatch,

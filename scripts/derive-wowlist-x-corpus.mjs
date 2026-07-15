@@ -14,7 +14,7 @@ const missionPatterns = [
   {
     id: "collective-origin-and-deployment-lineage",
     summary:
-      "Posts connect WOW List to Sunday Dinner calendars, name Jamie and Richard as builders, and describe NYCdiy as a deployment of the shared platform.",
+      "Posts connect WOW List to Sunday Dinner calendars, identify Jamie as one of multiple builders, and describe NYCdiy as a deployment of the shared platform.",
     statusIds: ["433671630837919744", "771457416298921985"]
   },
   {

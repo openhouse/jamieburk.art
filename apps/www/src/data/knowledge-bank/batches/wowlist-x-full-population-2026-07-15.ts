@@ -679,7 +679,7 @@ export const wowListXFullPopulationBatch20260715: {
         "The profile-reported and rendered populations reconcile exactly at 38 items: 22 authored posts and 16 reposts spanning February 12, 2014-January 12, 2017.",
         "Nineteen authored posts contain 23 outgoing-link occurrences: twelve WOW List destinations, two NYCdiy destinations, and nine external destinations; the full population contains 35 short URLs.",
         "Three public support threads preserve user questions about location scope, finding personal lists, and excessive clicks in the add-event workflow, together with project-account responses.",
-        "Organizer and collaborator posts include Punks & Criminals reporting that shows were being added, Richard tagging @wowlist with a San Francisco event, and COTFG linking a WOW List event page.",
+        "Organizer and collaborator posts include Punks & Criminals reporting that shows were being added, a collaborator tagging @wowlist with a San Francisco event, and COTFG linking a WOW List event page.",
         "Nine items document a civic and care pattern spanning demonstrations, vigils, fundraisers, and mutual-aid circulation.",
         "The source ecosystem includes a member-made tutorial, a grassroots venue manual review, Allied Media Conference, peer DIY funding infrastructure, and an unrecovered article the account described as concerning DIY documentation.",
         "Twelve authored posts retained visible interaction on July 15, 2026; the dated totals are held from public accomplishment messaging."

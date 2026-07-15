@@ -84,7 +84,7 @@ Public projection: the lower-bound Council result is promoted to the NYC Artist 
 
 Profile snapshot: joined February 2014; 38 posts reported; all 38 distinct status URLs recovered through a replies-inclusive authenticated pass. The [item-level corpus](../corpora/wowlist-x-full-population-2026-07-15.json) contains 22 authored posts and 16 reposts.
 
-The earliest visible account post says Richard and Jamie were building a project based on calendars made at Sunday Dinner. A 2016 post describes NYCdiy as running on WOW List and calls WOW List a DIY community-calendar project from the Sunday Dinner potluck. A 2015 organizer post reports adding shows to WOW List.
+The earliest visible account post identifies Jamie as one of multiple people building a project based on calendars made at Sunday Dinner. A 2016 post describes NYCdiy as running on WOW List and calls WOW List a DIY community-calendar project from the Sunday Dinner potluck. A 2015 organizer post reports adding shows to WOW List. Collaborator names remain held from portfolio prose pending approval.
 
 Three recovered conversation parents make the product-operation record more concrete. Julia Fredenburg publicly asked how to see events beyond her location, how to find her lists, and how to add an event with fewer clicks; the project account answered each question. The full population also preserves an organizer posting shows, collaborators sharing event pages, a member-made tutorial, and both direct calendar links and project-account curation around demonstrations, vigils, fundraisers, and mutual-aid resources.
 

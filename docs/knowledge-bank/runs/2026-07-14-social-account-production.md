@@ -61,7 +61,7 @@ Olympia Kazi and partner organizations also used the identity for relief advocac
 
 ### WOW List
 
-Contemporaneous posts explicitly connect WOW List to Sunday Dinner calendars, name Jamie and Richard as builders, and show public organizer use. The lineage is now eligible on both project pages.
+Contemporaneous posts explicitly connect WOW List to Sunday Dinner calendars, identify Jamie as one of multiple builders, and show public organizer use. The lineage is now eligible on both project pages; collaborator names remain held from portfolio prose pending approval.
 
 ### KC Town Hall and KC Spaces Fund
 

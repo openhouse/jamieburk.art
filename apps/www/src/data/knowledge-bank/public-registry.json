@@ -770,7 +770,7 @@
       "accessedAt": "2026-07-14",
       "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
       "preferredPublicUrl": "canonical",
-      "publicCitation": "The earliest visible @wowlist post says Richard and Jamie were building a project based on calendars made at Sunday Dinner.",
+      "publicCitation": "The earliest visible @wowlist post identifies Jamie as one of multiple people building a project based on calendars made at Sunday Dinner.",
       "doesNotEstablish": [
         "sole authorship",
         "the complete product history"
@@ -2109,7 +2109,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "WOW List grew from calendars made at Sunday Dinner. Contemporaneous posts name Jamie and Richard as builders, connect the platform to the potluck's community practice, and show organizers using it to publish events.",
+          "text": "WOW List grew from calendars made at Sunday Dinner. Contemporaneous posts identify Jamie as one of multiple builders, connect the platform to the potluck's community practice, and show organizers using it to publish events.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -2124,7 +2124,7 @@
           "relationship": "direct-support",
           "supports": [
             "Sunday Dinner origin",
-            "Jamie and Richard as builders"
+            "Jamie as one of multiple builders"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -2150,7 +2150,7 @@
         }
       ],
       "boundaries": [
-        "Credit Richard and other WOW List collaborators; the posts do not establish complete authorship or adoption totals.",
+        "Credit other WOW List collaborators; their names remain held from portfolio projection pending approval, and the posts do not establish complete authorship or adoption totals.",
         "Treat @wowlistnyc as a historical label until a handle-migration bridge is recovered."
       ]
     },

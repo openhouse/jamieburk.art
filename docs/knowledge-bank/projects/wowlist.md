@@ -2,9 +2,9 @@
 
 ## Public-safe position
 
-WOW List was a co-built community-calendar platform organized around followable keyword communities. Public and archival evidence supports Jamie's role as a co-builder and product operator alongside Richard and other collaborators. The account record should be attributed to the project team unless a specific post identifies its author.
+WOW List was a co-built community-calendar platform organized around followable keyword communities. Public and archival evidence supports Jamie's role as a co-builder and product operator alongside other collaborators. The account record should be attributed to the project team unless a specific post identifies its author; collaborator names remain held from portfolio prose pending approval.
 
-The account's earliest recovered authored post says Richard and Jamie were developing a project based on calendars made at Sunday Dinner. A later post describes NYCdiy as running on WOW List and identifies the platform as a DIY community-calendar project from the Sunday Dinner potluck.
+The account's earliest recovered authored post identifies Jamie as one of multiple people developing a project based on calendars made at Sunday Dinner. A later post describes NYCdiy as running on WOW List and identifies the platform as a DIY community-calendar project from the Sunday Dinner potluck.
 
 ## Complete account population
 
@@ -37,7 +37,7 @@ The complete population preserves several distinct forms of engagement:
 
 - A user asked direct product questions and reported event-entry friction.
 - Punks & Criminals publicly reported adding shows and linked its WOW List page.
-- Richard tagged the project account with a San Francisco event.
+- A collaborator tagged the project account with a San Francisco event.
 - COTFG linked a WOW List event page for a Drone Orchestra performance.
 - The project account addressed all-ages, performance-art, and local-scene accounts while promoting community calendars and meetings.
 

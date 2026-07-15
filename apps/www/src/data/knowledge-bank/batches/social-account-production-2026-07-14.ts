@@ -515,8 +515,8 @@ export const socialAccountProductionBatch20260714: {
       "WOW List (@wowlist)",
       "2014-02-12",
       "https://x.com/wowlist/status/433671630837919744",
-      "The earliest visible @wowlist post says Richard and Jamie were building a project based on calendars made at Sunday Dinner.",
-      ["a public Sunday Dinner-to-WOW List lineage", "Jamie and Richard as builders"],
+      "The earliest visible @wowlist post identifies Jamie as one of multiple people building a project based on calendars made at Sunday Dinner.",
+      ["a public Sunday Dinner-to-WOW List lineage", "Jamie as one of multiple builders"],
       ["sole authorship", "the complete product history"]
     ),
     institutionalPost(
@@ -726,7 +726,7 @@ export const socialAccountProductionBatch20260714: {
       sourceId: "SRC-WOWLIST-ORIGIN-2014",
       project: "wowlist",
       assertion:
-        "A contemporaneous project post explicitly describes WOW List as growing from calendars made at Sunday Dinner and names Jamie and Richard as builders.",
+        "A contemporaneous project post explicitly describes WOW List as growing from calendars made at Sunday Dinner and identifies Jamie as one of multiple builders.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: ["CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE"],
@@ -925,7 +925,7 @@ export const socialAccountProductionBatch20260714: {
       id: "CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE",
       project: "wowlist",
       internalClaim:
-        "Contemporaneous posts identify WOW List as a project built by Jamie and Richard from calendars made at Sunday Dinner and document public organizer use.",
+        "Contemporaneous posts identify WOW List as a project built by Jamie with other collaborators from calendars made at Sunday Dinner and document public organizer use.",
       status: "confirmed-with-boundary",
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
@@ -934,19 +934,19 @@ export const socialAccountProductionBatch20260714: {
         {
           key: "case-study",
           text:
-            "WOW List grew from calendars made at Sunday Dinner. Contemporaneous posts name Jamie and Richard as builders, connect the platform to the potluck's community practice, and show organizers using it to publish events.",
+            "WOW List grew from calendars made at Sunday Dinner. Contemporaneous posts identify Jamie as one of multiple builders, connect the platform to the potluck's community practice, and show organizers using it to publish events.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/wowlist", "/work/196-sunday-dinner"]
         }
       ],
       evidence: [
-        { sourceId: "SRC-WOWLIST-ORIGIN-2014", relationship: "direct-support", supports: ["Sunday Dinner origin", "Jamie and Richard as builders"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-WOWLIST-ORIGIN-2014", relationship: "direct-support", supports: ["Sunday Dinner origin", "Jamie as one of multiple builders"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-WOWLIST-NYCDIY-LINEAGE-2016", relationship: "corroborating", supports: ["Sunday Dinner lineage", "NYCdiy deployment"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-WOWLIST-ORGANIZER-USE-2015", relationship: "corroborating", supports: ["public organizer use"], confidence: "high", renderCitation: true }
       ],
       boundaries: [
-        "Credit Richard and other WOW List collaborators; the posts do not establish complete authorship or adoption totals.",
+        "Credit other WOW List collaborators; their names remain held from portfolio projection pending approval, and the posts do not establish complete authorship or adoption totals.",
         "Treat @wowlistnyc as a historical label until a handle-migration bridge is recovered."
       ],
       antiClaims: ["Jamie built WOW List alone", "Every Sunday Dinner participant used WOW List", "@wowlistnyc is proven to be the same account as @wowlist"],

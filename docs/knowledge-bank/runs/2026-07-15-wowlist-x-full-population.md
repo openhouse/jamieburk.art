@@ -31,7 +31,7 @@ What does the complete profile-reported `@wowlist` post population establish abo
 - Links: 35 short-URL occurrences in the full population.
 - Authored links: 23 occurrences across 19 posts, comprising 12 WOW List destinations, two NYCdiy destinations, and nine external destinations.
 - Public support: three recovered threads concern location scope, finding personal lists, and excessive clicks in the add-event workflow.
-- Organizer/collaborator use: Punks & Criminals reported adding shows; Richard tagged the account with an event; COTFG linked a WOW List event page.
+- Organizer/collaborator use: Punks & Criminals reported adding shows; a collaborator tagged the account with an event; COTFG linked a WOW List event page.
 - Civic/care pattern: nine items linked or amplified demonstrations, vigils, fundraisers, or mutual-aid resources, including one reposted WOW List vigil page.
 - Field-learning pattern: a member-made tutorial, grassroots venue guidance, Allied Media Conference, peer DIY funding infrastructure, and a posted but unrecovered article lead the account described as concerning DIY documentation.
 - Dated visible engagement: 12 of 22 authored posts showed interaction; totals were two replies, 20 reposts, and 21 likes.

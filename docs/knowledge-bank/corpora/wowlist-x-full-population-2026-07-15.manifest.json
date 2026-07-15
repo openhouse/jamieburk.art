@@ -5,7 +5,7 @@
   "sourceCapture": "docs/knowledge-bank/corpora/source-captures/wowlist-x-browser-extraction-2026-07-15-utc.json",
   "sourceCaptureSha256": "5cf56b26baa8a33c383b2ad6dcf00bc10600d2a315f25733f65b1ab9d0e71af9",
   "corpus": "docs/knowledge-bank/corpora/wowlist-x-full-population-2026-07-15.json",
-  "corpusSha256": "2a1a589acdf3dc4c751ae15049c6cfe837e1013054407f84cdf62b097ec0e0b6",
+  "corpusSha256": "79a85b9e53cb2e652b32701d692624dc5a2391a2cf54748e431cd239eae97fb6",
   "profileReportedPosts": 38,
   "corpusItems": 38,
   "status": "complete-profile-reported-population"
