@@ -2,7 +2,7 @@
 
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { basename, join } from "node:path";
 import { pathToFileURL } from "node:url";
 import ts from "typescript";
@@ -72,6 +72,14 @@ const requiredPublicSurfaceRoots = new Map([
       ".tsx",
       ".webp"
     ]
+  ],
+  [
+    "apps/www/src/pages",
+    [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+  ],
+  [
+    "apps/www/pages",
+    [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
   ],
   ["apps/www/src/components", [".js", ".jsx", ".ts", ".tsx"]],
   ["apps/www/src/content", [".md", ".mdx"]],
@@ -221,6 +229,8 @@ const requiredPublicStatementIds = new Set([
 const hybridCandidatePaths = [
   ".agents/evals/knowledge-bank-development.json",
   "apps/www/src/content/work",
+  "apps/www/src/pages",
+  "apps/www/pages",
   "apps/www/src/data/knowledge-bank",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
@@ -1460,6 +1470,7 @@ export function projectionRouteBindingFingerprint(
 
 function filesBelow(root, extensions) {
   const files = [];
+  if (!existsSync(root)) return files;
   for (const entry of readdirSync(root, { withFileTypes: true })) {
     const path = join(root, entry.name);
     if (entry.isDirectory()) files.push(...filesBelow(path, extensions));

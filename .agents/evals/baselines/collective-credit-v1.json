@@ -11,7 +11,7 @@
   "collectiveClaimsSha256": "d941af8a2c8b309e020cc07b86512748897486985a238cbfe5092ff48242c556",
   "collectiveRuntimeSha256": "154fb65249296595bac360d79552097c80028fba2877cef2f71783c91d1d08d3",
   "statementSupportSha256": "cce2934a8323050fcd01749de4b921652a3b7f018d9b5df0c7816affd9493bf6",
-  "projectionRouteBindingsSha256": "11cf93415dc266985cb3a6aab96f9dc1a7fa0568980862c8ab36a1e666c2533a",
+  "projectionRouteBindingsSha256": "66fb867401e7d1e631b5ffb58197a1a6bc9523a5b9926471f7a0d56d40fd4283",
   "publicSurfaceSha256": "0efdba9283c1530ad998aee116dcc7c5e81947400114cb6a8171263252c14be9",
   "requiredClaimProjects": {
     "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW": "196-sunday-dinner",

@@ -37,6 +37,8 @@
   ],
   "publicSurfaceRoots": [
     { "path": "apps/www/src/app", "extensions": ["*"] },
+    { "path": "apps/www/src/pages", "extensions": ["*"] },
+    { "path": "apps/www/pages", "extensions": ["*"] },
     { "path": "apps/www/src/components", "extensions": ["*"] },
     { "path": "apps/www/src/content", "extensions": ["*"] },
     { "path": "apps/www/public", "extensions": ["*"] }
