@@ -188,3 +188,17 @@ Two fresh independent judges scored Chad's criterion **4 / 4**. The release
 runner reported **80 / 80**, stable pair `yes`, recommendation
 `criterion-met`, with every deterministic gate passing. Production publication
 still requires Jamie's explicit approval.
+
+## KC Town Hall compositional hill climb
+
+- The first exact-head KC Town Hall pair split **4 / 3**: the archive and
+  boundaries held, but one judge found that the public projection led with
+  corpus metrics and left Jamie's relevance implicit.
+- Reordered the case study so Jamie's documented role precedes a clearly
+  labeled shared-project-operations section.
+- Rewrote the social projection to lead with what residents and collaborators
+  could do, keep Council interaction counts subordinate, and state directly
+  that the corpus does not establish Jamie's individual authorship or field
+  work.
+- A fresh exact-head independent pair is required before the criterion can be
+  treated as stable.

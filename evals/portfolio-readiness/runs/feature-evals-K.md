@@ -162,3 +162,12 @@ release gate passed, including 14 citation tests, 6 eval-runner tests, 44
 lifecycle tests, typecheck, lint, production builds, public safety, route
 checks, and compiled-locator checks. Production publication remains Jamie's
 explicit human decision.
+
+## KC Town Hall compositional hill climb
+
+- Moved the social-corpus projection out of the general outcome sequence and
+  into a shared-project-operations section after Jamie's role.
+- Led with the resident and collaborator workflow, then used the 100-of-183
+  corpus finding and bounded Council responses as supporting evidence.
+- Added an explicit boundary between project operations and Jamie's individual
+  authorship or field work. A fresh exact-head portfolio pair is required.

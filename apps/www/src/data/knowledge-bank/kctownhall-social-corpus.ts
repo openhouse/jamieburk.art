@@ -516,11 +516,11 @@ export const kcTownHallSocialCorpus = {
     {
       id: "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
       project: "kc-town-hall",
-      internalClaim: "KC Town Hall's shared public account functioned as an operating interface for recurring resident tire intake, pickup coordination, result reporting, and program continuity. The full surviving corpus also preserves a bounded civic-engagement pattern: seven public-reposter appearances from three then-sitting Council-member accounts and two direct responses authored by sitting Council members.",
+      internalClaim: "KC Town Hall's shared public account functioned as a resident-reporting and collaborator-coordination channel for recurring tire intake, pickup coordination, result reporting, and program continuity. The full surviving corpus also preserves a bounded civic-engagement pattern: seven public-reposter appearances from three then-sitting Council-member accounts and two direct responses authored by sitting Council members.",
       status: "confirmed-with-boundary",
       projections: [{
         key: "case-study",
-        text: "KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, and program continuity from 2019 through 2022. Public repost lists show seven appearances by three then-sitting Council-member accounts, and two sitting members authored direct responses in a 2019 neighborhood-business exchange.",
+        text: "The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. Public repost lists show seven appearances by three then-sitting Council-member accounts, and two sitting members authored direct responses in a 2019 neighborhood-business exchange. These records establish shared project operations, not individual authorship or field work by Jamie.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/kc-town-hall"]

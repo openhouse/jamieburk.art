@@ -316,3 +316,12 @@ The deterministic lifecycle contract, 44 lifecycle tests, social-archive gate,
 knowledge-bank validation, public-safety gate, and typecheck pass. Exact-head
 semantic release evaluation is recorded in the pull request rather than
 committed back into the revision it evaluates.
+
+## KC Town Hall compositional hill climb
+
+- Preserved the full-population ledger, evidence graph, and all claim
+  boundaries while changing only the public composition.
+- Reframed the promoted claim as a resident-reporting and
+  collaborator-coordination channel and made its project-level scope explicit.
+- The first exact-head lifecycle pair remained framework-ready; a new
+  exact-head pair is required after this composition revision.

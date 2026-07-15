@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "b96ff5f81cde2707c8af7b3b2f56f12403681fd8f2158aac8fd9219ed4eb0e88",
+  "sourceSha256": "652fb1567a2e9193b2b9ed79fa87995574ac94c4c015f2cd65f02c507a1fda8a",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -140,6 +140,12 @@
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
       "artifactSha256": "3209931bb980a48acb25a76603ea4907cc1b2756668d53cf9d2d7077647de75f"
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/kc-town-hall-mobile-320.png",
+      "artifactSha256": "87ea09e41785ab648e872ff709b0a1084676bfca96ff6b267e34c99e16183918"
     },
     {
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",

@@ -184,7 +184,7 @@ The public projection rounds these figures to 1,800+ historical users, 16,000+ h
 
 The [full-population production note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md) and [183-item public-safe ledger](../data/kctownhall-public-post-ledger.json) reconcile the authenticated profile exactly: 142 account posts, 13 account replies, and 28 reposts from 16 public source accounts, with no unresolved profile slots. This is complete recovery of the surviving July 2026 profile population, not a platform export or deletion history.
 
-One hundred records concern resident tire intake, pickup coordination, result reporting, or program continuity. The remaining 83 records comprise 27 neighborhood-culture and community records, 26 civic-information and service-routing records, 16 Town Hall development and participation records, 12 racial-justice documentation records, and two pandemic-resource records. The pattern is mission-relevant because the account functioned as a public operating surface rather than merely a broadcast channel.
+One hundred records concern resident tire intake, pickup coordination, result reporting, or program continuity. The remaining 83 records comprise 27 neighborhood-culture and community records, 26 civic-information and service-routing records, 16 Town Hall development and participation records, 12 racial-justice documentation records, and two pandemic-resource records. The pattern is mission-relevant because the account functioned as a public resident-reporting and collaborator-coordination channel rather than merely a broadcast channel.
 
 The corpus preserves 133 posted short-link occurrences, 31 unique short URLs, and 20 resolved public destinations. Mission-relevant routing includes [KCUR election guidance](https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri), Missouri voter registration, [Northeast News housing-policy reporting](https://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/), RideKC transit planning, neighborhood-business reporting, project participation pages, and pandemic resources. These establish what the account circulated, not coverage, endorsement, reader action, or resulting impact.
 
@@ -196,7 +196,7 @@ One hundred records are not one hundred completed pickups, households, or servic
 
 ### Defensible claim
 
-> KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, or program continuity from 2019 through 2022. A bounded incoming review also recovered direct public responses from three then-sitting Council-member accounts.
+> The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. A bounded incoming review also recovered direct public responses from three then-sitting Council-member accounts. These records establish shared project operations, not individual authorship or field work by Jamie.
 
 ## KC Spaces Fund
 

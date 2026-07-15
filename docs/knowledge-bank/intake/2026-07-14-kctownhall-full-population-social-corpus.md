@@ -189,12 +189,14 @@ adoption, causality, or impact.
 
 ### Selected for the portfolio
 
-> KC Town Hall used its shared public account as an operating surface: 100 of
-> 183 surviving records concern resident tire reports, pickup coordination,
-> result reporting, and program continuity from 2019 through 2022. Public repost
-> lists show seven appearances by three then-sitting Council-member accounts,
-> and a bounded incoming review recovered direct public responses from three
-> then-sitting Council-member accounts.
+> The shared KC Town Hall account gave residents a public channel for reporting
+> discarded tires and gave project collaborators a place to coordinate pickups,
+> report results, and continue the program. In the complete surviving profile
+> population, 100 of 183 records document that workflow from 2019 through 2022.
+> Public repost lists show seven appearances by three then-sitting Council-member
+> accounts, and a bounded incoming review recovered direct public responses from
+> three then-sitting Council-member accounts. These records establish shared
+> project operations, not individual authorship or field work by Jamie.
 
 ### Retained in reserve
 

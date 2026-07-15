@@ -190,7 +190,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready with boundaries
 **Support level:** Strong
 **Evidence class:** Complete surviving public-account population / public posts / official officeholder records
-**Public wording:** KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, or program continuity from 2019 through 2022. A bounded incoming review recovered direct public responses from three then-sitting Council-member accounts.
+**Public wording:** The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. A bounded incoming review recovered direct public responses from three then-sitting Council-member accounts. These records establish shared project operations, not individual authorship or field work by Jamie.
 **Detailed public-safe wording:** The complete surviving profile population contains 142 account posts, 13 account replies, and 28 reposts. It joins recurring resident service to civic information, neighborhood participation, source routing, cultural memory, racial-justice documentation, and pandemic resources.
 **Where to project:** KC Town Hall case study; retain the complete ledger, source inventory, theme counts, and mutable counters in the knowledge bank.
 **Why it matters:** Shows a sustained public operating loop that made requests, action, reporting, civic information, and dialogue legible across multiple years.
