@@ -67,6 +67,7 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-nycac-facebook-events-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-personal-wowlist-facebook-events-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-wowlist-facebook-posts-full-population.md",
+  "docs/knowledge-bank/intake/2026-07-15-nycac-facebook-posts-full-population.md",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
   "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
@@ -79,11 +80,13 @@ const requiredFiles = [
   "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
   "docs/knowledge-bank/projects/personal-wowlist-facebook-events.md",
   "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+  "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
   "docs/knowledge-bank/projects/kansas-city-neighborhood-programs.md",
   "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-events.md",
   "evals/knowledge-bank/runs/2026-07-15-personal-wowlist-facebook-events.md",
   "evals/knowledge-bank/runs/2026-07-15-wowlist-facebook-posts.md",
+  "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
@@ -93,9 +96,11 @@ const requiredFiles = [
   "apps/www/src/data/knowledge-bank/nycac-facebook-events.ts",
   "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07.ts",
   "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07.ts",
+  "apps/www/src/data/knowledge-bank/nycac-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
@@ -113,6 +118,7 @@ const requiredFiles = [
   "scripts/evals-nycac-facebook-events.mjs",
   "scripts/evals-personal-wowlist-facebook-events.mjs",
   "scripts/evals-wowlist-facebook-posts.mjs",
+  "scripts/evals-nycac-facebook-posts.mjs",
   "scripts/lib/urbanhermit-mission-classifier.mjs",
   "scripts/evals-knowledge-lifecycle.mjs",
   "scripts/report-knowledge-lifecycle.mjs",
@@ -140,6 +146,7 @@ for (const script of [
   "evals:nycac-facebook-events",
   "evals:personal-wowlist-facebook-events",
   "evals:wowlist-facebook-posts",
+  "evals:nycac-facebook-posts",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -207,6 +214,15 @@ if (
 }
 
 if (
+  scripts.check &&
+  !scripts.check.includes("npm run evals:nycac-facebook-posts")
+) {
+  fail(
+    "package.json check script must include npm run evals:nycac-facebook-posts"
+  );
+}
+
+if (
   scripts["evals:knowledge-lifecycle"] !==
   "node scripts/evals-knowledge-lifecycle.mjs"
 ) {
@@ -263,6 +279,15 @@ if (
 ) {
   fail(
     "package.json evals:wowlist-facebook-posts must run scripts/evals-wowlist-facebook-posts.mjs"
+  );
+}
+
+if (
+  scripts["evals:nycac-facebook-posts"] !==
+  "node scripts/evals-nycac-facebook-posts.mjs"
+) {
+  fail(
+    "package.json evals:nycac-facebook-posts must run scripts/evals-nycac-facebook-posts.mjs"
   );
 }
 

@@ -153,6 +153,24 @@ The complete public-safe record is in the
 with a governed item-level corpus, sanitized source capture, transformation
 manifest, and reproducible derivation script.
 
+## Facebook public operating record
+
+An authenticated capture-date pass of the NYC Artist Coalition Facebook Page
+reconciles 598 encountered render rows into **445 distinct dated posts** from
+January 2017 through September 2021. The record preserves 67 cleaned
+off-Facebook routes and repeated public communication across cultural-space
+survival, Cabaret Law repeal, M.A.R.C.H. accountability, nightlife governance,
+commercial rent, COVID-era relief, public meetings, and cultural policy.
+
+References to Council members, agencies, cultural spaces, and other stakeholders
+are Page-authored tags, routes, or issue interfaces. They do not establish that
+the named accounts engaged with or endorsed the coalition. Displayed reactions
+and comments are volatile labels, not reach or impact. Jamie remembers
+predominantly using the Page while believing collaborators used it as well;
+post-level human authorship remains unresolved. See the
+[full-population receipt](../intake/2026-07-15-nycac-facebook-posts-full-population.md)
+and [archival-production report](nyc-artist-coalition-facebook-posts.md).
+
 Jamie reports that he established the account and identity system while
 multiple collaborators contributed public communication over time. That role
 is retained as a use-with-care first-person claim pending independent

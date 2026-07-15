@@ -120,6 +120,15 @@ document organizer workflows and care-oriented distribution, and hold all new
 claims in the bank where shared-account evidence cannot establish individual
 post authorship.
 
+The [NYC Artist Coalition Facebook-post receipt](intake/2026-07-15-nycac-facebook-posts-full-population.md)
+and [project report](projects/nyc-artist-coalition-facebook-posts.md) reconcile
+598 encountered render rows into all 445 distinct dated posts exposed by the
+capture-date Page feed. They preserve a 67-route source inventory, overlapping
+campaign and civic-interface patterns, bounded interaction labels, and an
+explicit distinction between Page-authored references and incoming stakeholder
+engagement. All new claims remain held because the shared Page does not identify
+historical post-level authorship.
+
 The [NYC Artist Coalition X full-population receipt](intake/2026-07-15-nycartc-x-full-population.md)
 accounts for the complete 5,124-post profile control while keeping the 1,757
 unrecovered slots explicit. Its governed corpus separates authored posts from

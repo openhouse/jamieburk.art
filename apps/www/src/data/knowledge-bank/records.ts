@@ -84,6 +84,13 @@ import {
   wowListFacebookPostResearchInquiries,
   wowListFacebookPostSources
 } from "./wowlist-facebook-posts-2026-07.ts";
+import {
+  nycacFacebookPostClaims,
+  nycacFacebookPostIntakeItems,
+  nycacFacebookPostObservations,
+  nycacFacebookPostResearchInquiries,
+  nycacFacebookPostSources
+} from "./nycac-facebook-posts-2026-07.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -99,6 +106,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventIntakeItems,
     ...personalWowListFacebookEventIntakeItems,
     ...wowListFacebookPostIntakeItems,
+    ...nycacFacebookPostIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -395,6 +403,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventSources,
     ...personalWowListFacebookEventSources,
     ...wowListFacebookPostSources,
+    ...nycacFacebookPostSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1422,6 +1431,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventObservations,
     ...personalWowListFacebookEventObservations,
     ...wowListFacebookPostObservations,
+    ...nycacFacebookPostObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -2017,6 +2027,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventClaims,
     ...personalWowListFacebookEventClaims,
     ...wowListFacebookPostClaims,
+    ...nycacFacebookPostClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -3080,6 +3091,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventResearchInquiries,
     ...personalWowListFacebookEventResearchInquiries,
     ...wowListFacebookPostResearchInquiries,
+    ...nycacFacebookPostResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
