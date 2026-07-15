@@ -791,7 +791,7 @@ export const proofClaims: ProofClaim[] = [
       "Private cohort materials",
       "Unapproved evaluations"
     ],
-    surfaces: ["resume", "lab", "about"],
+    surfaces: ["resume", "technical-operations", "lab", "about"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
     lastReviewed: "2026-07-07"
@@ -845,6 +845,27 @@ export const resumeProofHighlights = [
   "sunday-dinner-196-participation-infrastructure",
   "ai-evals-professional-development"
 ].map(requireReadyOrCarefulProof);
+
+export const currentPracticeProofs = [
+  {
+    period: "2026",
+    context: "Coalition operations",
+    proofId: "fair-rent-90-day-operating-plan"
+  },
+  {
+    period: "Current lab practice",
+    context: "Human-reviewed knowledge systems",
+    proofId: "source-backed-team-memory-method"
+  },
+  {
+    period: "2026",
+    context: "Professional development",
+    proofId: "ai-evals-professional-development"
+  }
+].map((item) => ({
+  ...item,
+  proof: requireReadyOrCarefulProof(item.proofId)
+}));
 
 export const technicalOperationsProofRows = [
   {

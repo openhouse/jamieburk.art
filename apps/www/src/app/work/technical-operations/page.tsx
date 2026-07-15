@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
+import { currentPracticeProofs, technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
@@ -105,6 +105,29 @@ export default function TechnicalOperationsPage() {
             ))}
           </dl>
         </JBCard>
+      </section>
+      <section aria-labelledby="recent-practice" className="mt-10">
+        <div className="jb-reading">
+          <h2 className="text-3xl font-semibold text-jb-ink" id="recent-practice">
+            Recent practice
+          </h2>
+          <p className="mt-3 leading-7 text-jb-ink/72">
+            Current work extends the same operating discipline into coalition
+            planning, source-backed team memory, and human-reviewed AI evaluation.
+          </p>
+        </div>
+        <div className="mt-5 grid gap-5 md:grid-cols-3">
+          {currentPracticeProofs.map((item) => (
+            <JBCard key={item.proofId}>
+              <p className="text-xs font-semibold uppercase text-jb-blue">
+                {item.period} / {item.context}
+              </p>
+              <p className="mt-4 leading-7 text-jb-ink/76">
+                {item.proof.shortWording ?? item.proof.publicWording}
+              </p>
+            </JBCard>
+          ))}
+        </div>
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (

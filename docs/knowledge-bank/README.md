@@ -75,6 +75,13 @@ Claudette's Theatre on Wheels augmented-reality project as reserve depth, and
 verifies that the approved July 11 resume in the job-hunt archive is
 byte-identical to the PDF served by the site.
 
+Portfolio projection is checked separately from archival maturity. The
+[Portfolio Readiness Evals M](../qa/portfolio-readiness-M.md) operationalize
+external validation, outcome proof, reader compression, visual proof,
+leadership scale, currentness, audience conversion, collective accountability,
+release enforcement, and an application-ready stopping rule. The controls do
+not convert an unperformed human review or uncleared visual into evidence.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

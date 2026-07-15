@@ -26,26 +26,30 @@ public-safe, and ready to act from.
 4. **Hiring pass:** confirm the homepage, Technical Operations page, resume, and
    contact path make Jamie easy to refer, interview, and hire.
 5. **Chad-lens pass:** run `npm run check:chad-lens`. Revise failing public
-   surfaces until the deterministic criterion reaches 10/10.
+   surfaces until every runtime criterion passes.
 6. **Knowledge-lifecycle pass:** run `npm run check:knowledge-lifecycle`.
    Continue intake, reading, research, promotion, and editorial selection until
-   every criterion passes without promoting unresolved claims. The current
-   suite contains 55 deterministic lifecycle criteria, including bounded Teams,
-   Shared Drive, project-social, authenticated-search, collaborator-credit,
-   city-dialogue, and full-population CallNYC, NYC Artist Coalition, WOWList, and KC Town Hall
-   archival-production gates.
-7. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
+   every runtime criterion passes without promoting unresolved claims. The suite
+   includes bounded Teams, Shared Drive, project-social, authenticated-search,
+   collaborator-credit, city-dialogue, and full-population CallNYC, NYC Artist
+   Coalition, WOWList, and KC Town Hall archival-production gates.
+7. **Portfolio-readiness pass:** run `npm run check:portfolio-readiness`. Confirm
+   that external review, outcome proof, compression, visual proof, leadership
+   scale, currentness, audience conversion, collective accountability, release
+   enforcement, and the application-ready stopping rule are truthfully
+   controlled. An open human review or rights review must stay open.
+8. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
    layout, keyboard navigation, focus states, and key links.
-8. **Automation pass:** run `npm run check`, `npm run check:evals`,
+9. **Automation pass:** run `npm run check`, `npm run check:evals`,
    `npm run preflight:staging`, and `npm run preflight:production` when the
    environment is available.
-9. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
+10. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
    only for unresolved P0/P1 blockers.
 
 ## Chad-Lens Criterion
 
 `npm run check:chad-lens` is a deterministic copy regression eval. It requires
-all 10 criteria to pass:
+every runtime criterion to pass:
 
 - Jamie is the visible actor on the homepage, Technical Operations page, resume
   page, work index, and work cards.
@@ -57,8 +61,27 @@ all 10 criteria to pass:
 
 The eval reduces review drift; it does not establish factual truth. Claim
 accuracy still belongs to the knowledge-bank, provenance, and boundary passes.
-The initial branch baseline was 5/10. The copy hill climb added explicit team
-agency to four introductions and made Jamie's role visible on work cards.
+The initial branch baseline was 5/10. Subsequent copy hill climbs added explicit
+team agency to role-focused introductions, made Jamie's role visible on work
+cards, and connected current civic-planning work to usable operating outputs.
+
+## Portfolio-Readiness Criterion
+
+`npm run check:portfolio-readiness` is a ten-dimension control eval documented
+in [portfolio-readiness-M.md](portfolio-readiness-M.md). It closes gaps that a
+claim-lifecycle score cannot close by itself while preserving the difference
+between an automated control and a completed human judgment.
+
+The machine-readable registers are:
+
+- `portfolio-readiness-M.json` for scope, mode, state, and blocking level;
+- `visual-proof-register-M.json` for rights-aware visual candidates;
+- `delivery-dimensions-M.json` for coordination, constraints, continuity, and
+  unsupported-scale boundaries.
+
+A passing score does not claim that external review or image clearance has
+happened. Those dimensions pass only when the work is honestly represented as
+open and the bounded protocol is present.
 
 ## P0: Blocks Job-Application Sharing
 
@@ -71,7 +94,8 @@ agency to four introductions and made Jamie's role visible on work cards.
 - Private material, raw transcripts, private local paths, credentials, private
   screenshots, private fonts, or unapproved personal/community records appear in
   the repo or public surface.
-- `npm run check`, `npm run check:chad-lens`, or `npm run public-safety` fails.
+- `npm run check`, `npm run check:chad-lens`,
+  `npm run check:portfolio-readiness`, or `npm run public-safety` fails.
 
 ## P1: Blocks Production Cutover
 
