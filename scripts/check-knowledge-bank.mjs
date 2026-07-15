@@ -9,6 +9,7 @@ import {
   campaignPressPlacementCount,
   campaignPressSourceIds
 } from "../apps/www/src/data/knowledge-bank/campaignPress.ts";
+import { hasWowlistFacebookPublicArtifactRisk } from "./lib/wowlist-facebook-guard.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -675,16 +676,7 @@ if (existsSync(wowlistFacebookPostBatchPath) && existsSync(wowlistFacebookPostLe
     read(wowlistFacebookPostLedgerPath),
     read(wowlistFacebookPostReportPath)
   ].join("\n");
-  const semanticOverclaimPatterns = [
-    /community[- ]govern(?:ed|ance)|member[- ]led/i,
-    /\bmembers?\b.{0,80}\b(?:provided?|gave|contributed|offered|submitted|shared|supplied)\b.{0,80}\b(?:input|feedback)\b.{0,120}\b(?:product|design|platform|service)\b/is,
-    /\bmember (?:input|feedback)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,100}\b(?:product|design|platform|service)\b/is,
-    /\b(?:product|design|platform|service)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,80}\bby members?\b/is,
-    /\bauthenticated (?:Page )?access|current authenticated|current-session|comment as|Professional Dashboard|Meta Business Suite|asset-scoped\b/i,
-    /\bcurrent\b.{0,60}\b(?:Page )?(?:administrator|admin|manager|account-management|account management)\b.{0,80}\b(?:details?|roles?|state|status|access|control|identity)\b.{0,80}\b(?:visible|observed|available|shown|recovered|confirmed)\b/is,
-    /\b(?:current session|account|Page)\b.{0,80}\b(?:showed|displayed|revealed|confirmed)\b.{0,100}\b(?:admin(?:istrator|ister)?|manage(?:ment|r)?|comment as|Page role|account role)\b/is
-  ];
-  if (semanticOverclaimPatterns.some((pattern) => pattern.test(publicArtifactText))) {
+  if (hasWowlistFacebookPublicArtifactRisk(publicArtifactText)) {
     fail("WOW List Facebook public artifacts contain overbroad governance, participation, or account-state wording");
   }
 }
