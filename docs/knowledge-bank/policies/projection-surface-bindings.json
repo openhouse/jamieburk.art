@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "expectedWorkStatementCount": 95,
+  "expectedWorkStatementCount": 257,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "2628b30a93ea8cbaeda765c6c3b7d52a0035a7990bce8db46f91cd29accd20b6",
+  "publicSurfaceSha256": "7112e46991357c9c54002db11cd09aae65d0ca237c702155585ae6b919689726",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -39,12 +39,14 @@
     { "path": "apps/www/src/app", "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"] },
     { "path": "apps/www/src/components", "extensions": [".js", ".jsx", ".ts", ".tsx"] },
     { "path": "apps/www/src/content", "extensions": [".md", ".mdx"] },
-    { "path": "apps/www/public", "extensions": [".html", ".htm", ".md", ".mdx", ".pdf", ".txt"] }
+    { "path": "apps/www/public", "extensions": [".avif", ".html", ".htm", ".ico", ".jpeg", ".jpg", ".json", ".md", ".mdx", ".pdf", ".png", ".svg", ".txt", ".webp", ".xml"] }
   ],
   "publicSurfaceFiles": [
     "apps/www/mdx-components.tsx",
     "apps/www/next.config.ts",
     "apps/www/src/app/globals.css",
+    "apps/www/src/styles/phi-grid.css",
+    "apps/www/src/styles/tokens.css",
     "apps/www/src/data/proofs.ts",
     "apps/www/src/data/knowledge-bank/public-registry.json",
     "apps/www/src/data/knowledge-bank/public.ts",
@@ -81,6 +83,8 @@
     ],
     "expectedSubstantiveStatementCount": 28,
     "expectedVisibleBlockCount": 48,
+    "expectedVisibleAttributeCount": 0,
+    "visibleAttributeText": [],
     "presentationText": [
       "Jamie Burkart | Technical Project Manager | July 2026",
       "Jamie Burkart",

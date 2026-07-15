@@ -11,13 +11,18 @@ import {
   evaluateKnowledgeBank,
   fileInventoryFingerprint,
   projectionDecisionFingerprint,
+  proofSemanticBoundaryFindings,
   publicSurfaceFingerprint,
   resumeCssGeneratedText,
+  resumeCssPublicTextRisks,
+  resumeVisibleAttributeText,
   resumeVisibleBlocks,
   resumeSubstantiveStatements,
   routeRealizesProjection,
+  statementProofSemanticCoverage,
   validateHybridReportCandidate,
   validateKnowledgeDevelopmentSuite,
+  workStatementSemanticFindings,
   workStatementSupportRecords
 } from "../check-knowledge-development.mjs";
 import {
@@ -202,6 +207,14 @@ test("the resume manifest is derived from every substantive HTML block", () => {
     resumeCssGeneratedText('<style>.hidden::after { content: "Unsupported CSS claim."; }</style>'),
     ["Unsupported CSS claim."]
   );
+  assert.deepEqual(
+    resumeVisibleAttributeText('<body><img alt="Unsupported alt claim"><div aria-label="Unsupported ARIA claim"></div></body>'),
+    ["Unsupported alt claim", "Unsupported ARIA claim"]
+  );
+  assert.deepEqual(
+    resumeCssPublicTextRisks('<style>.x::after { content: attr(data-claim); } .y { background: url("data:image/svg+xml,text"); }</style>'),
+    ["content: attr(data-claim)", "CSS url() content"]
+  );
 });
 
 test("every consequential work-data statement has field-level proof identity", () => {
@@ -210,6 +223,56 @@ test("every consequential work-data statement has field-level proof identity", (
   assert.equal(records.length, projectionSurfaceBindings.expectedWorkStatementCount);
   assert.equal(new Set(records.map((record) => record.id)).size, records.length);
   assert.ok(records.every((record) => record.proofs.length > 0));
+  assert.ok(records.every((record) => record.surfaces.length > 0));
+  assert.equal(records.some((record) => record.id.includes(".evidence.")), false);
+  for (const project of [
+    "harry-j-epstein",
+    "fair-rent-nyc",
+    "callnyc",
+    "wowlist",
+    "196-sunday-dinner",
+    "kc-town-hall"
+  ]) {
+    for (const field of [
+      "title",
+      "subtitle",
+      "role",
+      "summary",
+      "years",
+      "series",
+      "status",
+      "visibility",
+      "roleFit",
+      "known",
+      "open",
+      "protected",
+      "careNote",
+      "currentStatus",
+      "sourceLayer"
+    ]) {
+      assert.ok(
+        records.some((record) => record.id === `${project}.${field}`),
+        `${project}.${field} is absent from the rendered-work manifest`
+      );
+    }
+    assert.ok(records.some((record) => record.id.startsWith(`${project}.tags.`)));
+    assert.ok(
+      records.some((record) => record.id.startsWith(`${project}.artifactTypes.`))
+    );
+    assert.ok(
+      records.some(
+        (record) =>
+          record.id.startsWith(`${project}.artifacts.`) &&
+          record.id.endsWith(".title")
+      )
+    );
+    assert.ok(
+      records.some(
+        (record) =>
+          record.id.startsWith(`${project}.artifacts.`) && record.id.endsWith(".type")
+      )
+    );
+  }
 
   const missingMapping = source.replace(
     'role: ["hje-modernization-stewardship"],',
@@ -218,6 +281,66 @@ test("every consequential work-data statement has field-level proof identity", (
   assert.throws(
     () => workStatementSupportRecords(missingMapping),
     /lacks text or statement-level proof IDs/
+  );
+
+  const unrelatedProjectProof = source
+    .replace(
+      '      "hje-revenue-growth-contribution"\n    ],',
+      '      "hje-revenue-growth-contribution",\n      "sunday-dinner-196-participation-infrastructure"\n    ],'
+    )
+    .replace(
+      'role: ["hje-modernization-stewardship"],',
+      'role: ["sunday-dinner-196-participation-infrastructure"],'
+    );
+  assert.match(
+    workStatementSemanticFindings(unrelatedProjectProof).join("\n"),
+    /harry-j-epstein\.role uses proof sunday-dinner-196-participation-infrastructure from an unrelated project/
+  );
+
+  const unrelatedProposition = source.replace(
+    'role: ["wowlist-community-platform"],',
+    'role: ["wowlist-civic-care-circulation"],'
+  );
+  assert.match(
+    workStatementSemanticFindings(unrelatedProposition).join("\n"),
+    /wowlist\.role has insufficient semantic support/
+  );
+});
+
+test("semantic proof checks reject paraphrased anti-claims", () => {
+  const proof = {
+    publicWording: "Co-built a community calendar used by local organizers.",
+    shortWording: "Co-built a community calendar",
+    detailedPublicWording: "Shared product and community operations.",
+    sourceBasis: "Public-safe archive summary.",
+    evidenceClass: ["public-safe-archive-summary"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["community-platforms"],
+    doNotSay: ["Full ownership of all organizer adoption"]
+  };
+  assert.ok(
+    statementProofSemanticCoverage("Co-built a community calendar", proof).score >= 0.5
+  );
+  assert.match(
+    proofSemanticBoundaryFindings(
+      "Jamie alone owned every organizer adoption.",
+      proof
+    ).join("\n"),
+    /semantic boundary/
+  );
+  assert.deepEqual(
+    proofSemanticBoundaryFindings(
+      "The record does not establish current property status.",
+      { ...proof, doNotSay: ["Current property status"] }
+    ),
+    []
+  );
+  assert.deepEqual(
+    proofSemanticBoundaryFindings(
+      "The platform used 35-plus active city-scene tags.",
+      { ...proof, doNotSay: ["Current active platform unless confirmed"] }
+    ),
+    []
   );
 });
 
@@ -2067,6 +2190,26 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     false
   );
   assert.equal(
+    realizes(`const none = []; export default function TestPage() { return none.map(() => (${literal})); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { for (const item of []) { return (${literal}); } return null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { switch (1) { case 2: return (${literal}); default: return null; } }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { try { return null; } catch { return (${literal}); } }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return JSON.stringify(${literal}); }`),
+    false
+  );
+  assert.equal(
     routeRealizesProjection(
       `export function Hidden() { return (${literal}); }`,
       claim,
@@ -2166,6 +2309,20 @@ test("MDX route reachability rejects conditional and unused component bindings",
   );
   assert.equal(
     realizes(`const unused = { render() { return (${literal}); } };`),
+    false
+  );
+  assert.equal(
+    realizes(`export function Hidden() { const value = true; switch (1) { case 2: return (${literal}); } }`),
+    false
+  );
+  assert.equal(realizes(`{[].map(() => (${literal}))}`), false);
+  assert.equal(realizes(`{[].forEach(() => (${literal}))}`), false);
+  assert.equal(
+    realizes(`{(() => { for (const item of []) { return (${literal}); } return null; })()}`),
+    false
+  );
+  assert.equal(
+    realizes(`{(() => { while (false) { return (${literal}); } return null; })()}`),
     false
   );
 });

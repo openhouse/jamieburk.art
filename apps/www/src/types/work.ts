@@ -45,14 +45,30 @@ export type Artifact = {
 };
 
 export type WorkStatementProofs = {
+  title: string[];
+  subtitle: string[];
   role: string[];
   summary: string[];
+  years: string[];
+  series: string[];
+  status: string[];
+  visibility: string[];
   whatWasUnclear: string[];
   whatBecameUsable: string[];
   roleFit: string[];
+  tags: string[];
+  artifactTypes: string[];
   artifacts: string[][];
   evidence: string[][];
   known: string[];
+  open: string[];
+  protected: string[];
+  careNote: string[];
+  currentStatus: string[];
+  publicSafetyNote: string[];
+  sourceLayer: string[];
+  credits: string[];
+  links: string[];
 };
 
 export type WorkMeta = {

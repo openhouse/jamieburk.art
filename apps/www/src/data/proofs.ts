@@ -78,7 +78,7 @@ export const proofClaims: ProofClaim[] = [
       "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
     shortWording: "Modernized legacy e-commerce and operations workflows",
     detailedPublicWording:
-      "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
+      "Jamie helped translate legacy operating knowledge across technical and nontechnical stakeholder contexts into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
     sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
     guardrail: "Use stewardship and contribution language.",
     doNotSay: [
@@ -504,7 +504,7 @@ export const proofClaims: ProofClaim[] = [
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "As co-builder and product operator, Jamie helped WOWList support 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
@@ -541,7 +541,7 @@ export const proofClaims: ProofClaim[] = [
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only; named participants, photos, and artifacts require consent and approval, and community trust work should not become spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
@@ -857,6 +857,8 @@ export const proofClaims: ProofClaim[] = [
       "The governed corpus contains 529 outgoing-link occurrences representing 287 distinct authored short URLs; every one of the 1,235 distinct account-item short URLs resolved in the population-accounted pass.",
     sourceBasis:
       "Governed public @NYCArtC corpus, URL-resolution inventory, manifest, and deterministic derivation.",
+    sourceNote:
+      "The profile-reported 5,124-post population is explicitly accounted for as 3,367 recovered account items plus a 1,757-item recovery gap; Jamie's account-establishment role remains open research.",
     guardrail:
       "Posted destinations prove circulation only, not endorsement, article accuracy, audience reach, authorship, or causation.",
     doNotSay: ["Every link was endorsed", "Link posting proves audience reach", "Links caused policy outcomes"],

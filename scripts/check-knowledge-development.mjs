@@ -58,12 +58,33 @@ const requiredPublicSurfaceRoots = new Map([
   ["apps/www/src/app", [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]],
   ["apps/www/src/components", [".js", ".jsx", ".ts", ".tsx"]],
   ["apps/www/src/content", [".md", ".mdx"]],
-  ["apps/www/public", [".html", ".htm", ".md", ".mdx", ".pdf", ".txt"]]
+  [
+    "apps/www/public",
+    [
+      ".avif",
+      ".html",
+      ".htm",
+      ".ico",
+      ".jpeg",
+      ".jpg",
+      ".json",
+      ".md",
+      ".mdx",
+      ".pdf",
+      ".png",
+      ".svg",
+      ".txt",
+      ".webp",
+      ".xml"
+    ]
+  ]
 ]);
 const requiredPublicSurfaceFiles = new Set([
   "apps/www/mdx-components.tsx",
   "apps/www/next.config.ts",
   "apps/www/src/app/globals.css",
+  "apps/www/src/styles/phi-grid.css",
+  "apps/www/src/styles/tokens.css",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/knowledge-bank/public.ts",
@@ -439,10 +460,138 @@ export function resumeCssGeneratedText(source) {
     );
 }
 
+export function resumeVisibleAttributeText(source) {
+  const body = source.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
+  return [...body.matchAll(/<(?!style\b|script\b)[A-Za-z][^>]*>/g)]
+    .flatMap((tag) =>
+      [...tag[0].matchAll(/\b(?:alt|aria-label|title|placeholder|value)\s*=\s*(["'])(.*?)\1/gi)]
+        .map((match) => decodedElementText(match[2]))
+        .filter(Boolean)
+    );
+}
+
+export function resumeCssPublicTextRisks(source) {
+  const css = [...source.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)]
+    .map((match) => match[1])
+    .join("\n");
+  const risks = [];
+  for (const match of css.matchAll(/(?:^|[;{])\s*content\s*:\s*([^;}]+)/gim)) {
+    if (!/^\s*(?:none|normal)\s*$/i.test(match[1])) {
+      risks.push(`content: ${normalizedText(match[1])}`);
+    }
+  }
+  if (/\burl\s*\(/i.test(css)) risks.push("CSS url() content");
+  return risks;
+}
+
 function normalizedIncludes(haystack, needle) {
   return normalizedText(haystack)
     .toLowerCase()
     .includes(normalizedText(needle).toLowerCase());
+}
+
+const semanticStopwords = new Set(
+  "a an and are as at be became been being but by can did do does for from had has have he her here his how i in into is it its jamie more not of on or our project role so than that the their them there these they this through to together under us was we were what when where which while who why will with work working"
+    .split(" ")
+);
+
+function semanticStem(token) {
+  if (token.length > 5 && token.endsWith("ies")) return `${token.slice(0, -3)}y`;
+  if (token.length > 6 && token.endsWith("ing")) return token.slice(0, -3);
+  if (token.length > 5 && token.endsWith("ed")) return token.slice(0, -2);
+  if (token.length > 4 && token.endsWith("s")) return token.slice(0, -1);
+  return token;
+}
+
+function semanticTokens(value) {
+  return new Set(
+    (String(value).toLowerCase().match(/[a-z0-9]+/g) ?? [])
+      .map(semanticStem)
+      .filter((token) => token.length > 2 && !semanticStopwords.has(token))
+  );
+}
+
+function proofSemanticBasis(proof) {
+  return JSON.stringify({
+    publicWording: proof.publicWording,
+    shortWording: proof.shortWording,
+    detailedPublicWording: proof.detailedPublicWording,
+    sourceBasis: proof.sourceBasis,
+    sourceNote: proof.sourceNote,
+    whyItMatters: proof.whyItMatters,
+    guardrail: proof.guardrail,
+    protectedBoundaries: proof.protectedBoundaries,
+    evidenceClass: proof.evidenceClass,
+    relatedProjects: proof.relatedProjects,
+    relatedCapabilities: proof.relatedCapabilities
+  });
+}
+
+export function statementProofSemanticCoverage(statement, proofInput) {
+  const statementTokens = [...semanticTokens(statement)];
+  const proofs = Array.isArray(proofInput) ? proofInput : [proofInput];
+  const proofTokens = semanticTokens(proofs.map(proofSemanticBasis).join(" "));
+  const matched = statementTokens.filter((token) => proofTokens.has(token));
+  return {
+    score: statementTokens.length === 0 ? 1 : matched.length / statementTokens.length,
+    matched,
+    statementTokens
+  };
+}
+
+const semanticRiskFamilies = new Map([
+  ["sole-credit", /\b(?:alone|sole|solely|single[ -]?handedly|exclusively|entirely)\b/i],
+  ["total-ownership", /\b(?:owned|ownership|fully owned|complete control)\b/i],
+  ["causal-certainty", /\b(?:caused|guaranteed|ensured|drove|single[ -]?handedly delivered)\b/i],
+  ["official-status", /\b(?:official|officially|certified|endorsed)\b/i],
+  ["current-status", /\b(?:current|currently|live|ongoing)\b/i],
+  ["completeness", /\b(?:all|every|complete|completely|100\s*%)\b/i]
+]);
+
+function riskFamilies(value) {
+  return new Set(
+    [...semanticRiskFamilies]
+      .filter(([, pattern]) => {
+        const match = String(value).match(pattern);
+        if (!match || match.index === undefined) return false;
+        const sentencePrefix = String(value)
+          .slice(0, match.index)
+          .split(/[.!?;]/)
+          .at(-1);
+        return !/\b(?:avoid|avoids|avoided|does\s+not|do\s+not|no|not|never|omit|omits|omitted|without)\b/i.test(
+          sentencePrefix
+        );
+      })
+      .map(([family]) => family)
+  );
+}
+
+export function proofSemanticBoundaryFindings(statement, proof) {
+  const findings = [];
+  const statementFamilies = riskFamilies(statement);
+  const statementTokens = semanticTokens(statement);
+  for (const prohibited of proof.doNotSay ?? []) {
+    const sharedRisk = [...riskFamilies(prohibited)].filter((family) =>
+      statementFamilies.has(family)
+    );
+    if (sharedRisk.length === 0) continue;
+    const prohibitedTokens = [...semanticTokens(prohibited)];
+    const matched = prohibitedTokens.filter((token) => statementTokens.has(token));
+    if (matched.length >= 2 || matched.length / Math.max(prohibitedTokens.length, 1) >= 0.5) {
+      findings.push(
+        `semantic boundary ${sharedRisk.join("/")} overlaps prohibited wording: ${prohibited}`
+      );
+    }
+  }
+  return findings;
+}
+
+function repeatsProhibitedWording(statement, prohibited) {
+  if (!normalizedIncludes(statement, prohibited)) return false;
+  const prohibitedRisks = riskFamilies(prohibited);
+  if (prohibitedRisks.size === 0) return true;
+  const statementRisks = riskFamilies(statement);
+  return [...prohibitedRisks].some((risk) => statementRisks.has(risk));
 }
 
 function proofSurfaceForRoute(surface) {
@@ -519,11 +668,14 @@ function governedStatementFindings(statement, bank, source, label) {
       findings.push(`${label} proof ${support.id} lacks shared semantic anchor`);
     }
     for (const prohibited of proof.doNotSay ?? []) {
-      if (normalizedIncludes(statement.text, prohibited)) {
+      if (repeatsProhibitedWording(statement.text, prohibited)) {
         findings.push(
           `${label} repeats prohibited wording from proof ${support.id}: ${prohibited}`
         );
       }
+    }
+    for (const boundary of proofSemanticBoundaryFindings(statement.text, proof)) {
+      findings.push(`${label} proof ${support.id} crosses ${boundary}`);
     }
   }
   return findings;
@@ -586,7 +738,10 @@ export function statementSupportFingerprint(policy = projectionSurfaceBindings) 
     resumePresentation: {
       expectedVisibleBlockCount:
         policy.resumeArtifact.expectedVisibleBlockCount,
-      presentationText: policy.resumeArtifact.presentationText
+      presentationText: policy.resumeArtifact.presentationText,
+      expectedVisibleAttributeCount:
+        policy.resumeArtifact.expectedVisibleAttributeCount,
+      visibleAttributeText: policy.resumeArtifact.visibleAttributeText
     },
     resume: policy.resumeArtifact.statements
       .map((statement) => ({
@@ -612,7 +767,8 @@ export function statementSupportFingerprint(policy = projectionSurfaceBindings) 
         id: statement.id,
         text: statement.text,
         proofs: statement.proofs,
-        surfaces: statement.surfaces
+        surfaces: statement.surfaces,
+        semanticCoverageRequired: statement.semanticCoverageRequired
       }))
     }
   });
@@ -706,7 +862,14 @@ export function workStatementSupportRecords(
 
     const caseStudySurface = `/work/${slug}`;
     const sharedSurfaces = ["/work", caseStudySurface];
-    const add = (key, textNode, proofs, surfaces) => {
+    const add = (
+      key,
+      textNode,
+      proofs,
+      surfaces,
+      semanticCoverageRequired = true
+    ) => {
+      if (!textNode) return;
       const text =
         literalStringValue(textNode) ??
         unwrappedTsExpression(textNode).getText(sourceFile);
@@ -718,8 +881,44 @@ export function workStatementSupportRecords(
           throw new Error(`${slug}.${key} uses ${proofId} outside proofBankIds`);
         }
       }
-      records.push({ id: `${slug}.${key}`, text, proofs, surfaces });
+      records.push({
+        id: `${slug}.${key}`,
+        text,
+        proofs,
+        surfaces,
+        semanticCoverageRequired
+      });
     };
+
+    const proofIds = (key) =>
+      stringArrayValue(objectProperty(proofMap, key, sourceFile));
+    const addStringArray = (key, valueNode, proofs, surfaces) => {
+      if (!valueNode) return;
+      const value = unwrappedTsExpression(valueNode);
+      if (!ts.isArrayLiteralExpression(value)) return;
+      value.elements.forEach((entry, index) =>
+        add(`${key}.${index}`, entry, proofs, surfaces, false)
+      );
+    };
+
+    for (const key of ["title", "subtitle", "status", "visibility"]) {
+      add(
+        key,
+        objectProperty(item, key, sourceFile),
+        proofIds(key),
+        sharedSurfaces,
+        false
+      );
+    }
+    for (const key of ["years", "series"]) {
+      add(
+        key,
+        objectProperty(item, key, sourceFile),
+        proofIds(key),
+        [caseStudySurface],
+        false
+      );
+    }
 
     for (const key of [
       "role",
@@ -731,10 +930,25 @@ export function workStatementSupportRecords(
       add(
         key,
         objectProperty(item, key, sourceFile),
-        stringArrayValue(objectProperty(proofMap, key, sourceFile)),
-        sharedSurfaces
+        proofIds(key),
+        key === "whatWasUnclear" || key === "whatBecameUsable"
+          ? ["/work"]
+          : sharedSurfaces
       );
     }
+
+    addStringArray(
+      "tags",
+      objectProperty(item, "tags", sourceFile),
+      proofIds("tags"),
+      sharedSurfaces
+    );
+    addStringArray(
+      "artifactTypes",
+      objectProperty(item, "artifactTypes", sourceFile),
+      proofIds("artifactTypes"),
+      [caseStudySurface]
+    );
 
     const artifacts = unwrappedTsExpression(objectProperty(item, "artifacts", sourceFile));
     const artifactProofs = nestedStringArraysValue(
@@ -746,10 +960,24 @@ export function workStatementSupportRecords(
     artifacts.elements.forEach((rawArtifact, index) => {
       const artifact = unwrappedTsExpression(rawArtifact);
       add(
-        `artifacts.${index}`,
+        `artifacts.${index}.title`,
+        objectProperty(artifact, "title", sourceFile),
+        artifactProofs[index],
+        [caseStudySurface],
+        false
+      );
+      add(
+        `artifacts.${index}.description`,
         objectProperty(artifact, "description", sourceFile),
         artifactProofs[index],
         [caseStudySurface]
+      );
+      add(
+        `artifacts.${index}.type`,
+        objectProperty(artifact, "type", sourceFile),
+        artifactProofs[index],
+        [caseStudySurface],
+        false
       );
     });
 
@@ -760,9 +988,9 @@ export function workStatementSupportRecords(
     if (!ts.isArrayLiteralExpression(evidence) || evidenceProofs?.length !== evidence.elements.length) {
       throw new Error(`${slug}.evidence statement-proof count is not complete`);
     }
-    evidence.elements.forEach((statement, index) => {
-      add(`evidence.${index}`, statement, evidenceProofs[index], []);
-    });
+    if (evidence.elements.length !== evidenceProofs.length) {
+      throw new Error(`${slug}.evidence statement-proof count is not complete`);
+    }
 
     const knownOpenProtected = unwrappedTsExpression(
       objectProperty(item, "knownOpenProtected", sourceFile)
@@ -773,8 +1001,101 @@ export function workStatementSupportRecords(
       stringArrayValue(objectProperty(proofMap, "known", sourceFile)),
       [caseStudySurface]
     );
+    for (const key of ["open", "protected"]) {
+      add(
+        key,
+        objectProperty(knownOpenProtected, key, sourceFile),
+        proofIds(key),
+        [caseStudySurface]
+      );
+    }
+
+    for (const key of ["careNote", "currentStatus", "sourceLayer"]) {
+      add(
+        key,
+        objectProperty(item, key, sourceFile),
+        proofIds(key),
+        [caseStudySurface]
+      );
+    }
+    const publicSafetyNode = objectProperty(item, "publicSafety", sourceFile);
+    const publicSafety = publicSafetyNode
+      ? unwrappedTsExpression(publicSafetyNode)
+      : null;
+    if (publicSafety && ts.isObjectLiteralExpression(publicSafety)) {
+      add(
+        "publicSafety.note",
+        objectProperty(publicSafety, "note", sourceFile),
+        proofIds("publicSafetyNote"),
+        [caseStudySurface]
+      );
+    }
+    addStringArray(
+      "credits",
+      objectProperty(item, "credits", sourceFile),
+      proofIds("credits"),
+      [caseStudySurface]
+    );
+    const linksNode = objectProperty(item, "links", sourceFile);
+    const links = linksNode ? unwrappedTsExpression(linksNode) : null;
+    if (links && ts.isArrayLiteralExpression(links)) {
+      links.elements.forEach((rawLink, index) => {
+        const link = unwrappedTsExpression(rawLink);
+        if (!ts.isObjectLiteralExpression(link)) return;
+        for (const key of ["label", "url"]) {
+          add(
+            `links.${index}.${key}`,
+            objectProperty(link, key, sourceFile),
+            proofIds("links"),
+            [caseStudySurface],
+            false
+          );
+        }
+      });
+    }
   }
   return records;
+}
+
+export function workStatementSemanticFindings(
+  source = readFileSync(workDataPath, "utf8")
+) {
+  const findings = [];
+  for (const statement of workStatementSupportRecords(source)) {
+    const project = statement.id.split(".")[0];
+    const isResolvedExpression = statement.text.startsWith("getClaimProjection(");
+    const statementProofs = statement.proofs
+      .map((proofId) => proofById.get(proofId))
+      .filter(Boolean);
+    if (
+      statement.semanticCoverageRequired &&
+      !isResolvedExpression &&
+      statementProofs.length > 0
+    ) {
+      const coverage = statementProofSemanticCoverage(
+        statement.text,
+        statementProofs
+      );
+      if (coverage.statementTokens.length > 0 && coverage.score < 0.2) {
+        findings.push(
+          `work statement ${statement.id} has insufficient semantic support from ${statement.proofs.join(", ")} (${coverage.matched.length}/${coverage.statementTokens.length} substantive tokens)`
+        );
+      }
+    }
+    for (const proofId of statement.proofs) {
+      const proof = proofById.get(proofId);
+      if (!proof) continue;
+      if (!proof.relatedProjects.includes(project)) {
+        findings.push(
+          `work statement ${statement.id} uses proof ${proofId} from an unrelated project`
+        );
+      }
+      for (const boundary of proofSemanticBoundaryFindings(statement.text, proof)) {
+        findings.push(`work statement ${statement.id} proof ${proofId} crosses ${boundary}`);
+      }
+    }
+  }
+  return findings;
 }
 
 export function projectionRouteBindingFingerprint(
@@ -1079,6 +1400,12 @@ function hasDisallowedRuntimeGate(node, sourceFile) {
       return true;
     }
     if (
+      ts.isForOfStatement(current) &&
+      expressionIsStaticallyEmptyArray(current.expression, sourceFile)
+    ) {
+      return true;
+    }
+    if (
       ts.isBinaryExpression(current) &&
       node.pos >= current.right.pos &&
       node.end <= current.right.end &&
@@ -1092,6 +1419,33 @@ function hasDisallowedRuntimeGate(node, sourceFile) {
     }
   }
   return false;
+}
+
+function expressionIsStaticallyEmptyArray(node, sourceFile, seen = new Set()) {
+  const expression = unwrappedTsExpression(node);
+  if (ts.isArrayLiteralExpression(expression)) {
+    return expression.elements.length === 0;
+  }
+  if (!ts.isIdentifier(expression) || seen.has(expression.text)) return false;
+  seen.add(expression.text);
+  let initializer = null;
+  function visit(current) {
+    if (initializer) return;
+    if (
+      ts.isVariableDeclaration(current) &&
+      ts.isIdentifier(current.name) &&
+      current.name.text === expression.text &&
+      current.initializer
+    ) {
+      initializer = current.initializer;
+      return;
+    }
+    ts.forEachChild(current, visit);
+  }
+  visit(sourceFile);
+  return initializer
+    ? expressionIsStaticallyEmptyArray(initializer, sourceFile, seen)
+    : false;
 }
 
 function exportedComponentHasRenderer(sourcePath, exportName, surface) {
@@ -1144,7 +1498,7 @@ function isReachableModuleNode(node, sourcePath, surface) {
         ["map", "flatMap"].includes(current.parent.expression.name.text)
       ) {
         const receiver = current.parent.expression.expression;
-        if (ts.isArrayLiteralExpression(receiver) && receiver.elements.length === 0) {
+        if (expressionIsStaticallyEmptyArray(receiver, current.getSourceFile())) {
           return false;
         }
         continue;
@@ -1191,6 +1545,54 @@ function isDirectWorkSummaryResolver(node) {
   return false;
 }
 
+function jsxHasRenderableReturnPath(node, sourceFile) {
+  let foundReturn = false;
+  for (let current = node.parent; current; current = current.parent) {
+    if (ts.isReturnStatement(current)) {
+      foundReturn = true;
+      continue;
+    }
+    if (
+      ts.isCaseClause(current) ||
+      ts.isDefaultClause(current) ||
+      ts.isSwitchStatement(current) ||
+      ts.isCatchClause(current) ||
+      ts.isMethodDeclaration(current) ||
+      ts.isVariableDeclaration(current) ||
+      ts.isPropertyAssignment(current)
+    ) {
+      return false;
+    }
+    if (ts.isCallExpression(current)) {
+      const isRenderableMap =
+        ts.isPropertyAccessExpression(current.expression) &&
+        ["map", "flatMap"].includes(current.expression.name.text) &&
+        current.arguments.some(
+          (argument) => node.pos >= argument.pos && node.end <= argument.end
+        );
+      if (!isRenderableMap) return false;
+      const receiver = current.expression.expression;
+      if (expressionIsStaticallyEmptyArray(receiver, sourceFile)) {
+        return false;
+      }
+    }
+    if (
+      ts.isFunctionDeclaration(current) ||
+      ts.isFunctionExpression(current) ||
+      ts.isArrowFunction(current)
+    ) {
+      const isMapCallback =
+        ts.isCallExpression(current.parent) &&
+        current.parent.arguments.includes(current) &&
+        ts.isPropertyAccessExpression(current.parent.expression) &&
+        ["map", "flatMap"].includes(current.parent.expression.name.text);
+      if (!isMapCallback) return foundReturn;
+    }
+    if (ts.isSourceFile(current)) return foundReturn;
+  }
+  return foundReturn;
+}
+
 function tsxRouteRealizesProjection(
   content,
   claim,
@@ -1214,6 +1616,7 @@ function tsxRouteRealizesProjection(
       ts.isJsxSelfClosingElement(node) &&
       node.tagName.getText(sourceFile) === "Claim" &&
       !hasDisallowedRuntimeGate(node, sourceFile) &&
+      jsxHasRenderableReturnPath(node, sourceFile) &&
       isReachableModuleNode(node, sourcePath, surface)
     ) {
       const tag = node.getText(sourceFile);
@@ -1294,6 +1697,22 @@ function matchingCitationOccurrence(bank, tag, claim, projection, surface) {
 function mdxClaimIsReachable(content, index) {
   const before = content.slice(0, index);
   const nearby = before.slice(-1200);
+  const braceBalance =
+    (before.match(/\{/g) ?? []).length - (before.match(/\}/g) ?? []).length;
+  const parenthesisBalance =
+    (before.match(/\(/g) ?? []).length - (before.match(/\)/g) ?? []).length;
+  if (braceBalance > 0 || parenthesisBalance > 0) return false;
+  if (
+    /(?:\[\s*\]|\b(?:const|let)\s+[A-Za-z_$][\w$]*\s*=\s*\[\s*\])\s*\.(?:map|flatMap|forEach)\s*\([^)]*$/s.test(
+      nearby
+    ) ||
+    /for\s*\([^)]*\bof\s*\[\s*\]\s*\)[^{]*\{[^}]*$/s.test(nearby) ||
+    /(?:while\s*\(\s*(?:false|0|null)\s*\)|for\s*\([^;]*;\s*(?:false|0|null)\s*;[^)]*\))\s*\{[^}]*$/s.test(
+      nearby
+    )
+  ) {
+    return false;
+  }
   if (
     /(?:Boolean\s*\(\s*(?:false|null|0)\s*\)|\b[A-Za-z_$][\w$]*|\b(?:false|null)\b|(?:^|\W)0|process\.env[^\s]*)\s*(?:&&|\?)\s*\(?\s*$/.test(
       nearby
@@ -1712,7 +2131,7 @@ export function evaluateKnowledgeBank(
           }
         }
         for (const prohibited of proof.doNotSay ?? []) {
-          if (normalizedIncludes(statement.text, prohibited)) {
+          if (repeatsProhibitedWording(statement.text, prohibited)) {
             findings["KB-009"].push(
               `work statement ${statement.id} repeats prohibited wording from proof ${proofId}: ${prohibited}`
             );
@@ -1720,6 +2139,7 @@ export function evaluateKnowledgeBank(
         }
       }
     }
+    findings["KB-009"].push(...workStatementSemanticFindings());
   } catch (error) {
     findings["KB-009"].push(
       `work statement-level proof manifest is invalid: ${error.message}`
@@ -1790,6 +2210,8 @@ export function evaluateKnowledgeBank(
     const derivedStatements = resumeSubstantiveStatements(source);
     const visibleBlocks = resumeVisibleBlocks(source);
     const generatedCssText = resumeCssGeneratedText(source);
+    const visibleAttributeText = resumeVisibleAttributeText(source);
+    const cssPublicTextRisks = resumeCssPublicTextRisks(source);
     const manifestedStatements = resumeArtifact.statements.map((statement) =>
       normalizedText(statement.text)
     );
@@ -1835,6 +2257,23 @@ export function evaluateKnowledgeBank(
     if (generatedCssText.length > 0) {
       findings["KB-009"].push(
         "resume CSS-generated text is prohibited because it bypasses the visible-block manifest"
+      );
+    }
+    const governedAttributeText = (resumeArtifact.visibleAttributeText ?? [])
+      .map(normalizedText)
+      .sort();
+    if (
+      visibleAttributeText.length !== resumeArtifact.expectedVisibleAttributeCount ||
+      JSON.stringify([...visibleAttributeText].sort()) !==
+        JSON.stringify(governedAttributeText)
+    ) {
+      findings["KB-009"].push(
+        "resume visible attributes differ from the governed attribute manifest"
+      );
+    }
+    if (cssPublicTextRisks.length > 0) {
+      findings["KB-009"].push(
+        `resume CSS contains public-text bypass channels: ${cssPublicTextRisks.join(", ")}`
       );
     }
     const regeneratedPdfText = execFileSync(

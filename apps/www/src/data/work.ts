@@ -41,14 +41,30 @@ const artifactTypeSchema = z.enum([
 
 const proofIdsSchema = z.array(z.string()).min(1);
 const workStatementProofsSchema = z.object({
+  title: proofIdsSchema,
+  subtitle: proofIdsSchema,
   role: proofIdsSchema,
   summary: proofIdsSchema,
+  years: proofIdsSchema,
+  series: proofIdsSchema,
+  status: proofIdsSchema,
+  visibility: proofIdsSchema,
   whatWasUnclear: proofIdsSchema,
   whatBecameUsable: proofIdsSchema,
   roleFit: proofIdsSchema,
+  tags: proofIdsSchema,
+  artifactTypes: proofIdsSchema,
   artifacts: z.array(proofIdsSchema),
   evidence: z.array(proofIdsSchema),
-  known: proofIdsSchema
+  known: proofIdsSchema,
+  open: proofIdsSchema,
+  protected: proofIdsSchema,
+  careNote: proofIdsSchema,
+  currentStatus: proofIdsSchema,
+  publicSafetyNote: proofIdsSchema,
+  sourceLayer: proofIdsSchema,
+  credits: proofIdsSchema,
+  links: proofIdsSchema
 });
 
 const workMetaSchema = z.object({
@@ -118,11 +134,19 @@ const workItemsInput = [
       "hje-revenue-growth-contribution"
     ],
     statementProofs: {
+      title: ["hje-modernization-stewardship"],
+      subtitle: ["hje-modernization-stewardship"],
       role: ["hje-modernization-stewardship"],
       summary: ["hje-modernization-stewardship"],
+      years: ["hje-modernization-stewardship"],
+      series: ["hje-modernization-stewardship"],
+      status: ["hje-modernization-stewardship"],
+      visibility: ["hje-modernization-stewardship"],
       whatWasUnclear: ["hje-modernization-stewardship"],
       whatBecameUsable: ["hje-modernization-stewardship"],
       roleFit: ["hje-modernization-stewardship"],
+      tags: ["hje-modernization-stewardship"],
+      artifactTypes: ["hje-modernization-stewardship"],
       artifacts: [
         ["hje-modernization-stewardship"],
         ["hje-revenue-growth-contribution"],
@@ -134,7 +158,15 @@ const workItemsInput = [
         ["hje-revenue-growth-contribution"],
         ["hje-modernization-stewardship"]
       ],
-      known: ["hje-modernization-stewardship"]
+      known: ["hje-modernization-stewardship"],
+      open: ["hje-modernization-stewardship"],
+      protected: ["hje-modernization-stewardship"],
+      careNote: ["hje-modernization-stewardship"],
+      currentStatus: ["hje-modernization-stewardship"],
+      publicSafetyNote: ["hje-modernization-stewardship"],
+      sourceLayer: ["hje-modernization-stewardship"],
+      credits: ["hje-modernization-stewardship"],
+      links: ["hje-modernization-stewardship"]
     },
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
@@ -232,12 +264,18 @@ const workItemsInput = [
       "nyc-artist-coalition-x-source-circulation"
     ],
     statementProofs: {
+      title: ["nyc-artist-coalition-founding-era-role"],
+      subtitle: ["nyc-artist-coalition-civic-systems"],
       role: ["nyc-artist-coalition-founding-era-role"],
       summary: [
         "nyc-artist-coalition-founding-era-role",
         "nyc-artist-coalition-civic-systems",
         "nyc-artist-coalition-public-web-infrastructure"
       ],
+      years: ["nyc-artist-coalition-founding-era-role"],
+      series: ["nyc-artist-coalition-civic-systems"],
+      status: ["nyc-artist-coalition-civic-systems"],
+      visibility: ["fair-rent-campaign-memory"],
       whatWasUnclear: ["fair-rent-campaign-memory"],
       whatBecameUsable: [
         "fair-rent-campaign-memory",
@@ -249,6 +287,8 @@ const workItemsInput = [
         "nyc-artist-coalition-civic-systems",
         "fair-rent-campaign-memory"
       ],
+      tags: ["nyc-artist-coalition-civic-systems"],
+      artifactTypes: ["fair-rent-campaign-memory", "fair-rent-source-map"],
       artifacts: [
         ["fair-rent-campaign-memory"],
         ["fair-rent-source-map"],
@@ -283,7 +323,22 @@ const workItemsInput = [
         "nyc-artist-coalition-public-web-infrastructure",
         "nyc-artist-coalition-public-outcome-arc",
         "nyc-artist-coalition-shared-public-identity"
-      ]
+      ],
+      open: [
+        "fair-rent-campaign-memory",
+        "nyc-artist-coalition-shared-public-identity",
+        "nyc-artist-coalition-x-source-circulation"
+      ],
+      protected: ["fair-rent-campaign-memory"],
+      careNote: ["fair-rent-campaign-memory"],
+      currentStatus: ["fair-rent-campaign-memory"],
+      publicSafetyNote: ["fair-rent-campaign-memory"],
+      sourceLayer: [
+        "nyc-artist-coalition-campaign-press-corpus",
+        "nyc-artist-coalition-x-source-circulation"
+      ],
+      credits: ["nyc-artist-coalition-civic-systems"],
+      links: ["nyc-artist-coalition-public-web-infrastructure"]
     },
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
@@ -419,11 +474,19 @@ const workItemsInput = [
     visibility: "public-safe",
     proofBankIds: ["callnyc-civic-data-guidance"],
     statementProofs: {
+      title: ["callnyc-civic-data-guidance"],
+      subtitle: ["callnyc-civic-data-guidance"],
       role: ["callnyc-civic-data-guidance"],
       summary: ["callnyc-civic-data-guidance"],
+      years: ["callnyc-civic-data-guidance"],
+      series: ["callnyc-civic-data-guidance"],
+      status: ["callnyc-civic-data-guidance"],
+      visibility: ["callnyc-civic-data-guidance"],
       whatWasUnclear: ["callnyc-civic-data-guidance"],
       whatBecameUsable: ["callnyc-civic-data-guidance"],
       roleFit: ["callnyc-civic-data-guidance"],
+      tags: ["callnyc-civic-data-guidance"],
+      artifactTypes: ["callnyc-civic-data-guidance"],
       artifacts: [
         ["callnyc-civic-data-guidance"],
         ["callnyc-civic-data-guidance"],
@@ -437,7 +500,15 @@ const workItemsInput = [
         ["callnyc-civic-data-guidance"],
         ["callnyc-civic-data-guidance"]
       ],
-      known: ["callnyc-civic-data-guidance"]
+      known: ["callnyc-civic-data-guidance"],
+      open: ["callnyc-civic-data-guidance"],
+      protected: ["callnyc-civic-data-guidance"],
+      careNote: ["callnyc-civic-data-guidance"],
+      currentStatus: ["callnyc-civic-data-guidance"],
+      publicSafetyNote: ["callnyc-civic-data-guidance"],
+      sourceLayer: ["callnyc-civic-data-guidance"],
+      credits: ["callnyc-civic-data-guidance"],
+      links: ["callnyc-civic-data-guidance"]
     },
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
@@ -540,14 +611,22 @@ const workItemsInput = [
       "wowlist-civic-care-circulation"
     ],
     statementProofs: {
+      title: ["wowlist-community-platform"],
+      subtitle: ["wowlist-community-platform"],
       role: ["wowlist-community-platform"],
       summary: ["wowlist-community-platform"],
+      years: ["wowlist-community-platform"],
+      series: ["wowlist-community-platform"],
+      status: ["wowlist-community-platform"],
+      visibility: ["wowlist-community-platform"],
       whatWasUnclear: ["wowlist-community-platform"],
       whatBecameUsable: [
         "wowlist-community-platform",
         "wowlist-public-support-practice"
       ],
       roleFit: ["wowlist-community-platform"],
+      tags: ["wowlist-community-platform"],
+      artifactTypes: ["wowlist-community-platform"],
       artifacts: [["wowlist-community-platform"]],
       evidence: [
         ["wowlist-community-platform"],
@@ -557,7 +636,19 @@ const workItemsInput = [
         ["wowlist-community-platform"],
         ["wowlist-community-platform"]
       ],
-      known: ["wowlist-community-platform"]
+      known: ["wowlist-community-platform"],
+      open: ["wowlist-community-platform"],
+      protected: ["wowlist-community-platform"],
+      careNote: ["wowlist-community-platform"],
+      currentStatus: ["wowlist-community-platform"],
+      publicSafetyNote: ["wowlist-community-platform"],
+      sourceLayer: [
+        "wowlist-community-platform",
+        "wowlist-public-support-practice",
+        "wowlist-civic-care-circulation"
+      ],
+      credits: ["wowlist-community-platform"],
+      links: ["wowlist-community-platform"]
     },
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
@@ -625,14 +716,22 @@ const workItemsInput = [
       "196-residency-onboarding-workflow"
     ],
     statementProofs: {
+      title: ["sunday-dinner-196-participation-infrastructure"],
+      subtitle: ["sunday-dinner-196-participation-infrastructure"],
       role: ["sunday-dinner-196-participation-infrastructure"],
       summary: ["sunday-dinner-196-participation-infrastructure"],
+      years: ["sunday-dinner-196-participation-infrastructure"],
+      series: ["sunday-dinner-196-participation-infrastructure"],
+      status: ["sunday-dinner-196-participation-infrastructure"],
+      visibility: ["sunday-dinner-196-participation-infrastructure"],
       whatWasUnclear: ["sunday-dinner-196-participation-infrastructure"],
       whatBecameUsable: [
         "sunday-dinner-196-participation-infrastructure",
         "196-residency-onboarding-workflow"
       ],
       roleFit: ["sunday-dinner-196-participation-infrastructure"],
+      tags: ["sunday-dinner-196-participation-infrastructure"],
+      artifactTypes: ["sunday-dinner-196-participation-infrastructure"],
       artifacts: [
         ["sunday-dinner-196-participation-infrastructure"],
         ["196-residency-onboarding-workflow"]
@@ -644,7 +743,15 @@ const workItemsInput = [
         ["196-residency-onboarding-workflow"],
         ["sunday-dinner-196-participation-infrastructure"]
       ],
-      known: ["sunday-dinner-196-participation-infrastructure"]
+      known: ["sunday-dinner-196-participation-infrastructure"],
+      open: ["sunday-dinner-196-participation-infrastructure"],
+      protected: ["sunday-dinner-196-participation-infrastructure"],
+      careNote: ["sunday-dinner-196-participation-infrastructure"],
+      currentStatus: ["sunday-dinner-196-participation-infrastructure"],
+      publicSafetyNote: ["sunday-dinner-196-participation-infrastructure"],
+      sourceLayer: ["sunday-dinner-196-participation-infrastructure"],
+      credits: ["sunday-dinner-196-participation-infrastructure"],
+      links: ["sunday-dinner-196-participation-infrastructure"]
     },
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
@@ -710,14 +817,22 @@ const workItemsInput = [
       "kc-town-hall-neighborhood-operations"
     ],
     statementProofs: {
+      title: ["kc-town-hall-public-benefit-documentation"],
+      subtitle: ["kc-town-hall-public-benefit-documentation"],
       role: ["kc-town-hall-public-benefit-documentation"],
       summary: [
         "kc-town-hall-public-benefit-documentation",
         "kc-town-hall-neighborhood-operations"
       ],
+      years: ["kc-town-hall-public-benefit-documentation"],
+      series: ["kc-town-hall-public-benefit-documentation"],
+      status: ["kc-town-hall-public-benefit-documentation"],
+      visibility: ["kc-town-hall-public-benefit-documentation"],
       whatWasUnclear: ["kc-town-hall-public-benefit-documentation"],
       whatBecameUsable: ["kc-town-hall-public-benefit-documentation"],
       roleFit: ["kc-town-hall-public-benefit-documentation"],
+      tags: ["kc-town-hall-public-benefit-documentation"],
+      artifactTypes: ["kc-town-hall-public-benefit-documentation"],
       artifacts: [["kc-town-hall-public-benefit-documentation"]],
       evidence: [
         ["kc-town-hall-public-benefit-documentation"],
@@ -731,7 +846,18 @@ const workItemsInput = [
       known: [
         "kc-town-hall-public-benefit-documentation",
         "kc-town-hall-neighborhood-operations"
-      ]
+      ],
+      open: ["kc-town-hall-public-benefit-documentation"],
+      protected: ["kc-town-hall-public-benefit-documentation"],
+      careNote: ["kc-town-hall-public-benefit-documentation"],
+      currentStatus: ["kc-town-hall-public-benefit-documentation"],
+      publicSafetyNote: ["kc-town-hall-public-benefit-documentation"],
+      sourceLayer: [
+        "kc-town-hall-public-benefit-documentation",
+        "kc-town-hall-neighborhood-operations"
+      ],
+      credits: ["kc-town-hall-public-benefit-documentation"],
+      links: ["kc-town-hall-neighborhood-operations"]
     },
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
