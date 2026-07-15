@@ -598,6 +598,61 @@ if (existsSync(kcSpacesFundFacebookBatchSourcePath)) {
   }
 }
 
+const personalFacebookPostsPinnedArtifacts = [
+  "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json"
+];
+const personalFacebookPostsBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-batch-2026-07-15.ts"
+);
+if (existsSync(personalFacebookPostsBatchSourcePath)) {
+  const batchSource = readText(personalFacebookPostsBatchSourcePath);
+  for (const artifactPath of personalFacebookPostsPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(
+        personalFacebookPostsBatchSourcePath,
+        `Personal Facebook posts public artifact lacks an immutable Git citation: ${artifactPath}`
+      );
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(
+          currentPath,
+          "Personal Facebook posts immutable citation does not match the current public-safe artifact"
+        );
+      }
+      if (hasPersonalFacebookPostsPublicArtifactRisk(pinnedText)) {
+        addFailure(
+          currentPath,
+          "Personal Facebook posts immutable citation contains prohibited population, audience, engagement, impact, or role wording"
+        );
+      }
+    } catch {
+      addFailure(
+        personalFacebookPostsBatchSourcePath,
+        `Personal Facebook posts immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`
+      );
+    }
+  }
+}
+
 scanPattern(
   nycartcFacebookEventLedgerFiles,
   "public Facebook event ledger contains an invalid aggregate response or attendance field",

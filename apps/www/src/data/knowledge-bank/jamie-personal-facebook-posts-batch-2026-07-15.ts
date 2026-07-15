@@ -188,7 +188,7 @@ export const jamiePersonalFacebookPostsBatch = {
       publishedAt: "2026-07-15",
       accessedAt: "2026-07-15",
       canonicalUrl:
-        "https://github.com/openhouse/jamieburk.art/blob/feature/evals-B/docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
+        "https://github.com/openhouse/jamieburk.art/blob/2ce9b407cc6c8409befab3cfcb7fcfeb44575a91/docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       preferredPublicUrl: "canonical",
       publicCitation:
         "Public-safe aggregate controls for Jamie Burkart's owner-filtered Facebook post census, July 2026.",
