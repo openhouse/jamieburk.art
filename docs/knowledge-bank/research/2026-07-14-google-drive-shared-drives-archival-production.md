@@ -1,7 +1,9 @@
 # Google Drive Shared Drives Archival Production
 
-**Review date:** 2026-07-14  
-**Collection:** Jamie Burkart's Google Drive Shared Drives  
+**Review date:** 2026-07-14
+
+**Collection:** Jamie Burkart's Google Drive Shared Drives
+
 **Projection decision:** Knowledge-bank intake only. No website change.
 
 ## Purpose
@@ -169,4 +171,3 @@ propositions, non-claims, and research questions.
    credit, recipient use, and publication rights before claim development.
 6. Create canonical-source maps only where duplicate cloud copies materially
    affect chronology, attribution, or correction readiness.
-
