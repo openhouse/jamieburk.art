@@ -13,6 +13,11 @@ import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-
 
 const suite = loadKnowledgeEvalSuite();
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const callNycPopulationPath = path.join(repoRoot, suite.pilot.callNycFullPopulation.manifestPath);
+
+function loadCallNycPopulation() {
+  return JSON.parse(readFileSync(callNycPopulationPath, "utf8"));
+}
 
 test("knowledge-bank gate invalidates stale holdouts after the eval suite changes", () => {
   const result = evaluateKnowledgeBank(suite);
@@ -1578,7 +1583,61 @@ test("CallNYC Council lower bound deduplicates people across interaction types",
       .map((event) => event.actor)
   );
   assert.equal(actors.size, suite.pilot.socialMediaProduction.callNycDistinctCouncilMemberLowerBound);
-  assert.equal(socialEngagementEvents.filter((event) => event.projectId === "callnyc").length, 20);
+  assert.equal(socialEngagementEvents.filter((event) => event.projectId === "callnyc").length, 25);
+});
+
+test("CallNYC full-population production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score, 5);
+
+  const manifest = loadCallNycPopulation();
+  assert.equal(manifest.population.length, 110);
+  assert.equal(manifest.population.filter((row) => row.populationDisposition === "recovered").length, 107);
+  assert.equal(manifest.population.filter((row) => row.populationDisposition === "not-recovered").length, 3);
+});
+
+test("CallNYC full-population eval rejects a dropped population disposition", () => {
+  const manifest = loadCallNycPopulation();
+  manifest.population.pop();
+  const result = evaluateKnowledgeBank(suite, { callNycPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("CallNYC full-population eval preserves not-recovered as a distinct state", () => {
+  const manifest = loadCallNycPopulation();
+  manifest.population.at(-1).populationDisposition = "recovered";
+  const result = evaluateKnowledgeBank(suite, { callNycPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("CallNYC full-population eval rejects a duplicated Council identity", () => {
+  const manifest = loadCallNycPopulation();
+  manifest.councilMemberReposters[1].name = manifest.councilMemberReposters[0].name;
+  manifest.councilMemberReposters[1].handle = manifest.councilMemberReposters[0].handle;
+  const result = evaluateKnowledgeBank(suite, { callNycPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("CallNYC full-population eval rejects original-author metrics as project traction", () => {
+  const manifest = loadCallNycPopulation();
+  manifest.engagementSummary.boundaries = manifest.engagementSummary.boundaries.filter(
+    (boundary) => !/external posts.*original authors/i.test(boundary)
+  );
+  const result = evaluateKnowledgeBank(suite, { callNycPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("CallNYC full-population eval rejects contextual reporting as direct coverage", () => {
+  const manifest = loadCallNycPopulation();
+  const gizmodo = manifest.sourceReadings.find((item) => item.sourceId === "SRC-CALLNYC-GIZMODO-311-EXTENSION");
+  gizmodo.role = "direct-project-coverage";
+  const result = evaluateKnowledgeBank(suite, { callNycPopulation: manifest });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
 });
 
 test("shared-account authorship remains an open inquiry and KC Spaces stays held", () => {

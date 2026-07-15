@@ -442,13 +442,13 @@
       "reviewedAt": "2026-07-15",
       "expectedAccountCount": 14,
       "expectedNotRecoveredCount": 5,
-      "expectedEngagementEventCount": 29,
+      "expectedEngagementEventCount": 34,
       "expectedIntakeCount": 5,
       "expectedObservationCount": 11,
-      "expectedSourceCount": 53,
+      "expectedSourceCount": 58,
       "expectedClaimCount": 5,
       "expectedInquiryCount": 5,
-      "callNycDistinctCouncilMemberLowerBound": 18,
+      "callNycDistinctCouncilMemberLowerBound": 19,
       "nycacDistinctCouncilMemberLowerBound": 6,
       "callNycInquiryId": "INQ-CALLNYC-COUNCIL-ENGAGEMENT",
       "activeClaimIds": [
@@ -470,6 +470,47 @@
         ["fair-rent-nyc", "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY"],
         ["wowlist", "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"],
         ["kc-town-hall", "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP"]
+      ]
+    },
+    "callNycFullPopulation": {
+      "reviewedAt": "2026-07-15",
+      "manifestPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
+      "reportPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
+      "expectedPopulationCount": 110,
+      "expectedRecoveredCount": 107,
+      "expectedNotRecoveredCount": 3,
+      "expectedRelationshipCounts": {
+        "project-post": 86,
+        "project-reply": 6,
+        "project-repost": 15
+      },
+      "expectedRecognitionPostCount": 71,
+      "expectedRecognitionTargetHandleCount": 26,
+      "expectedRecognitionIssuePageCount": 61,
+      "expectedPostedUrlCount": 84,
+      "expectedRepostBearingPostCount": 41,
+      "expectedDisplayedRepostCount": 74,
+      "expectedPublicReposterAppearanceCount": 63,
+      "expectedDistinctPublicReposterCount": 46,
+      "expectedUnassignedRepostCount": 11,
+      "expectedCouncilMemberReposterCount": 19,
+      "expectedCouncilMemberAuthoredInteractionCount": 6,
+      "expectedIntakeCount": 3,
+      "expectedObservationCount": 8,
+      "expectedSourceCount": 8,
+      "expectedClaimCount": 1,
+      "expectedInquiryCount": 1,
+      "claimId": "CLM-CALLNYC-SOCIAL-POPULATION-ARCHIVE",
+      "inquiryId": "INQ-CALLNYC-X-UNRECOVERED-REMAINDER",
+      "publicClaimId": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "directCoverageSourceId": "SRC-CALLNYC-POLITICO-2016-03-14",
+      "contextualSourceIds": [
+        "SRC-CALLNYC-PPF-COUNCILMATIC-VERIFIED",
+        "SRC-CALLNYC-GIZMODO-311-EXTENSION",
+        "SRC-CALLNYC-GOTHAMIST-PULASKI",
+        "SRC-CALLNYC-HRA-HOMELESSNESS-PREVENTION",
+        "SRC-CALLNYC-NYC-RENT-FREEZE",
+        "SRC-CALLNYC-311-BUDDY"
       ]
     },
     "agencyGraph": {
@@ -596,6 +637,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every recovered project account has a governed relationship; promoted engagement counts resolve to named public evidence, official-role checks, bounded methods, collective-credit limits, and explicit stopping conditions."
+    },
+    {
+      "id": "KB-EVAL-CALLNYC-FULL-POPULATION",
+      "label": "CallNYC full-population archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 110 profile-reported population slots have explicit dispositions; recovered content, posted URLs, issue distribution, engagement identities, source roles, unresolved records, and projection boundaries remain complete, reproducible, and non-inflationary."
     }
   ],
   "hillClimb": {

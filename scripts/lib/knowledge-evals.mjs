@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
+import { callNycSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/callnyc-social-population-2026-07.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
@@ -1152,7 +1153,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       callNycCouncilActors.size === social.callNycDistinctCouncilMemberLowerBound &&
       nycacCouncilActors.size === social.nycacDistinctCouncilMemberLowerBound &&
       socialCallNycInquiry?.resultStatus === "partially-recovered" &&
-      socialCallNycInquiry.publicSummary?.includes("at least 18") &&
+      socialCallNycInquiry.publicSummary?.includes("at least 19") &&
       socialPageProjectionComplete &&
       existsSync(socialProjectNotePath) &&
       socialProjectNote.includes("not a complete lifetime corpus") &&
@@ -1161,9 +1162,119 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       antiClaimsText.includes("Do not convert “account not recovered” into “no account existed.”") &&
       !/\/Users\/|\/Volumes\/|\/private\/tmp|cookie|auth token|session token/i.test(socialArchiveText)
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries];
+  const callNycFull = suite.pilot.callNycFullPopulation;
+  const callNycFullIntakes = callNycSocialPopulationJuly2026.intakeItems.map((item) => intakeById.get(item.id));
+  const callNycFullObservations = callNycSocialPopulationJuly2026.observations.map((item) => observationById.get(item.id));
+  const callNycFullSources = callNycSocialPopulationJuly2026.sources.map((item) => sourceById.get(item.id));
+  const callNycFullClaims = callNycSocialPopulationJuly2026.claims.map((item) => claimById.get(item.id));
+  const callNycFullInquiries = callNycSocialPopulationJuly2026.researchInquiries.map((item) => inquiryById.get(item.id));
+  const callNycManifestPath = path.join(repoRoot, callNycFull.manifestPath);
+  const callNycReportPath = path.join(repoRoot, callNycFull.reportPath);
+  const callNycManifestText = readFileSync(callNycManifestPath, "utf8");
+  const callNycManifest = overrides.callNycPopulation ?? JSON.parse(callNycManifestText);
+  const callNycReport = overrides.callNycPopulationReport ?? readFileSync(callNycReportPath, "utf8");
+  const callNycRecoveredRows = callNycManifest.population.filter((row) => row.populationDisposition === "recovered");
+  const callNycNotRecoveredRows = callNycManifest.population.filter((row) => row.populationDisposition === "not-recovered");
+  const callNycRecoveredIds = new Set(callNycRecoveredRows.map((row) => row.statusId));
+  const callNycRelationshipCounts = callNycRecoveredRows.reduce((counts, row) => {
+    counts[row.relationship] = (counts[row.relationship] ?? 0) + 1;
+    return counts;
+  }, {});
+  const callNycShortUrls = new Set(callNycManifest.postedUrlInventory.map((item) => item.shortUrl));
+  const callNycCouncilNames = new Set(callNycManifest.councilMemberReposters.map((item) => item.name));
+  const callNycCouncilHandles = new Set(callNycManifest.councilMemberReposters.map((item) => item.handle.toLowerCase()));
+  const callNycAuthoredIds = new Set(callNycManifest.councilMemberAuthoredInteractions.map((item) => item.statusId));
+  const callNycSourceRoles = new Map(callNycManifest.sourceReadings.map((item) => [item.sourceId, item.role]));
+  const callNycPopulationClaim = claimById.get(callNycFull.claimId);
+  const callNycPopulationInquiry = inquiryById.get(callNycFull.inquiryId);
+  const callNycPublicClaim = claimById.get(callNycFull.publicClaimId);
+  const callNycFullArchiveText = JSON.stringify({
+    intakes: callNycFullIntakes,
+    observations: callNycFullObservations,
+    sources: callNycFullSources,
+    claims: callNycFullClaims,
+    inquiries: callNycFullInquiries,
+    manifest: callNycManifest
+  });
+  const callNycFullPopulationComplete = Boolean(
+    existsSync(callNycManifestPath) &&
+      existsSync(callNycReportPath) &&
+      callNycManifest.reviewedAt === callNycFull.reviewedAt &&
+      callNycManifest.account === "@CallNYCapp" &&
+      callNycManifest.population.length === callNycFull.expectedPopulationCount &&
+      callNycManifest.populationSummary.profileDisplayedPostCount === callNycFull.expectedPopulationCount &&
+      callNycManifest.populationSummary.populationDispositionCount === callNycFull.expectedPopulationCount &&
+      callNycRecoveredRows.length === callNycFull.expectedRecoveredCount &&
+      callNycNotRecoveredRows.length === callNycFull.expectedNotRecoveredCount &&
+      callNycRecoveredIds.size === callNycFull.expectedRecoveredCount &&
+      callNycNotRecoveredRows.every((row) =>
+        /^UNRECOVERED-0[1-3]$/.test(row.populationSlot) && !row.statusId && !row.statusUrl && /not exposed|not recovered/i.test(row.reason)
+      ) &&
+      Object.entries(callNycFull.expectedRelationshipCounts).every(([relationship, count]) =>
+        callNycRelationshipCounts[relationship] === count && callNycManifest.populationSummary.relationshipCounts[relationship] === count
+      ) &&
+      callNycManifest.populationSummary.boundary.includes("by disposition, not by recovered content") &&
+      callNycManifest.contentSystemSummary.recognitionPostCount === callNycFull.expectedRecognitionPostCount &&
+      callNycManifest.contentSystemSummary.recognitionTargetHandleCount === callNycFull.expectedRecognitionTargetHandleCount &&
+      callNycManifest.contentSystemSummary.recognitionDistinctIssuePageCount === callNycFull.expectedRecognitionIssuePageCount &&
+      callNycManifest.contentSystemSummary.uniquePostedShortUrlCount === callNycFull.expectedPostedUrlCount &&
+      callNycManifest.postedUrlInventory.length === callNycFull.expectedPostedUrlCount &&
+      callNycShortUrls.size === callNycFull.expectedPostedUrlCount &&
+      callNycManifest.postedUrlInventory.every((item) =>
+        item.shortUrl.startsWith("https://t.co/") && callNycRecoveredIds.has(item.statusUrl.split("/").at(-1))
+      ) &&
+      callNycManifest.engagementSummary.callNycAuthoredOrReplyPostsWithDisplayedReposts === callNycFull.expectedRepostBearingPostCount &&
+      callNycManifest.engagementSummary.displayedReposts === callNycFull.expectedDisplayedRepostCount &&
+      callNycManifest.engagementSummary.currentlyPublicReposterAppearances === callNycFull.expectedPublicReposterAppearanceCount &&
+      callNycManifest.engagementSummary.distinctCurrentlyPublicReposterAccounts === callNycFull.expectedDistinctPublicReposterCount &&
+      callNycManifest.engagementSummary.displayedRepostsWithoutPublicAccountIdentity === callNycFull.expectedUnassignedRepostCount &&
+      callNycManifest.engagementSummary.boundaries.some((boundary) => /external posts.*original authors/i.test(boundary)) &&
+      callNycManifest.councilMemberReposters.length === callNycFull.expectedCouncilMemberReposterCount &&
+      callNycCouncilNames.size === callNycFull.expectedCouncilMemberReposterCount &&
+      callNycCouncilHandles.size === callNycFull.expectedCouncilMemberReposterCount &&
+      callNycManifest.councilMemberReposters.every((item) =>
+        item.sourceStatusIds.length > 0 && item.sourceStatusIds.every((statusId) => callNycRecoveredIds.has(statusId))
+      ) &&
+      callNycManifest.councilMemberAuthoredInteractions.length === callNycFull.expectedCouncilMemberAuthoredInteractionCount &&
+      callNycAuthoredIds.size === callNycFull.expectedCouncilMemberAuthoredInteractionCount &&
+      callNycManifest.councilMemberAuthoredInteractions.every((item) =>
+        callNycCouncilNames.has(item.name) && item.statusUrl === `https://x.com/${item.handle.slice(1)}/status/${item.statusId}`
+      ) &&
+      callNycSourceRoles.get(callNycFull.directCoverageSourceId) === "direct-project-coverage" &&
+      callNycFull.contextualSourceIds.every((sourceId) =>
+        callNycSourceRoles.has(sourceId) && callNycSourceRoles.get(sourceId) !== "direct-project-coverage"
+      ) &&
+      callNycFullIntakes.length === callNycFull.expectedIntakeCount &&
+      callNycFullObservations.length === callNycFull.expectedObservationCount &&
+      callNycFullSources.length === callNycFull.expectedSourceCount &&
+      callNycFullClaims.length === callNycFull.expectedClaimCount &&
+      callNycFullInquiries.length === callNycFull.expectedInquiryCount &&
+      callNycFullIntakes.every((intake) => intake?.disposition === "integrated" && intake.visibility === "public-safe" && intake.boundaries.length >= 2) &&
+      callNycFullObservations.every((observation) => observation?.locator && observation.limitations.length >= 2 && observation.publicSafe === true) &&
+      callNycFullSources.every((source) => source?.visibility === "public" && source.canonicalUrl.startsWith("https://") && source.doesNotEstablish.length >= 4) &&
+      callNycPopulationClaim?.status === "confirmed-with-boundary" &&
+      callNycPopulationClaim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0) &&
+      callNycPopulationClaim.boundaries.length >= 4 &&
+      callNycPopulationClaim.antiClaims.length >= 6 &&
+      callNycPopulationInquiry?.resultStatus === "not-recovered" &&
+      callNycPopulationInquiry.findings.length >= 3 &&
+      callNycPopulationInquiry.limitations.length >= 2 &&
+      callNycPublicClaim?.projections.some((projection) =>
+        projection.status === "active" && /61 resident-facing issue pages/.test(projection.text) && /26 Council accounts/.test(projection.text) && /at least 19/.test(projection.text) && /six member-authored/.test(projection.text)
+      ) &&
+      /100 percent population disposition coverage/.test(callNycReport) &&
+      /107-of-110 content recovery/.test(callNycReport) &&
+      /Original-author metrics on reposted external posts are not CallNYC traction/.test(callNycReport) &&
+      antiClaimsText.includes("107 content objects") &&
+      antiClaimsText.includes("external posts reposted by") &&
+      antiClaimsText.includes("contextual source articles") &&
+      callNycManifest.publicSafety.containsRawTweetBodies === false &&
+      callNycManifest.publicSafety.containsPrivateSessionData === false &&
+      !/\/Users\/|\/Volumes\/|\/private\/tmp|cookie|auth token|session token/i.test(callNycFullArchiveText)
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -1489,6 +1600,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [socialMediaComplete
         ? `${projectSocialAccounts.length} project-account relationships, ${socialEngagementEvents.length} named public interaction edges, a CallNYC lower bound of ${callNycCouncilActors.size} serving Council members, and an NYC Artist Coalition lower bound of ${nycacCouncilActors.size} pass account, source, role, authorship, safety, and projection checks`
         : "Social archive is missing an account disposition, named public edge, role check, lower-bound method, collective-authorship boundary, source scope, or governed projection"]
+    },
+    {
+      criterionId: "KB-EVAL-CALLNYC-FULL-POPULATION",
+      score: score(callNycFullPopulationComplete),
+      evidence: [callNycFullPopulationComplete
+        ? `${callNycManifest.population.length} population dispositions preserve ${callNycRecoveredRows.length} recovered objects and ${callNycNotRecoveredRows.length} unresolved records; ${callNycManifest.postedUrlInventory.length} posted URLs, ${callNycManifest.contentSystemSummary.recognitionPostCount} recognition posts, ${callNycManifest.contentSystemSummary.recognitionDistinctIssuePageCount} issue pages, ${callNycCouncilNames.size} Council-member reposters, and ${callNycAuthoredIds.size} member-authored interactions pass completeness, role, attribution, and projection checks`
+        : "CallNYC full-population production is missing a disposition, recovered-object boundary, URL, source role, repost attribution limit, Council identity, governed lifecycle record, or selective projection"]
     }
   ];
 

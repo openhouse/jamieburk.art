@@ -32,10 +32,24 @@ lists, or source documents that were not approved for public use.
 
 Do not imply CallNYC is an official or current City service.
 
-Do not turn the recovered lower bound of 18 serving Council member accounts into
+Do not turn the recovered lower bound of 19 serving Council member accounts into
 an exact lifetime census, formal endorsement, Council adoption, or proof that
 likes were audited. Do not count an account twice because it both reposted and
 authored another interaction.
+
+Do not describe the full-population pass as 110-of-110 content recovery. It
+accounts for all 110 profile-reported slots by disposition: 107 content objects
+were recovered and three remain not recovered. Do not convert `not recovered`
+into deleted, private, nonexistent, or any other unobserved cause.
+
+Do not count reply, repost, or like metrics on the 15 external posts reposted by
+CallNYC as CallNYC traction. Those metrics belong to the original authors.
+
+Do not present contextual source articles or every service page in the
+posted-URL inventory as CallNYC coverage. Politico directly covered CallNYC;
+the Gizmodo and Gothamist
+articles, 311 Buddy, Participatory Politics, and City service pages have narrower
+context, peer, issue, or guidance roles.
 
 Do not broaden “first CouncilStat hackathon” into a claim about the Council's
 first hackathon, first civic-data hackathon, or first civic-technology

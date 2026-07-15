@@ -5,6 +5,11 @@
 **Scope:** public project accounts, attributable public engagement, source
 discovery, claim maturation, selective site projection, and eval integration.
 
+**Status note:** the preliminary CallNYC count in the original run was
+superseded later the same day by the
+[full-population pass](2026-07-15-callnyc-full-social-population.md). Current
+CallNYC claims use that later record.
+
 ## Objective
 
 Treat public social accounts as project-documentation surfaces without turning
@@ -47,10 +52,10 @@ evidence but is not relabeled as the Sunday Dinner account.
 
 ## Findings matured
 
-- **CallNYC:** public repost lists for 47 recovered 2016 authored posts contain
-  17 distinct serving Council-member accounts. Three member-authored
-  interactions add one non-overlapping member, yielding a defensible lower
-  bound of at least 18 distinct serving Council-member accounts.
+- **CallNYC:** the later full-population pass accounts for all 110
+  profile-reported slots by disposition, recovers 107 content objects, and
+  establishes a lower bound of at least 19 serving Council-member accounts.
+  Six Council-member-authored posts or replies explicitly involved CallNYC.
 - **NYC Artist Coalition:** bounded searches recovered authored `@NYCArtC`
   mentions from at least six serving Council-member accounts and 295
   campaign-tagged posts across the two reviewed date windows. The four-campaign

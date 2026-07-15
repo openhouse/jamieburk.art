@@ -38,61 +38,25 @@ claims.
 
 ### Recovery method
 
-The review recovered 47 authored `@CallNYCapp` posts from 2016. Public repost
-lists were opened for all 47:
+The profile reported 110 posts. A full-population disposition pass recovered
+107 distinct content objects and retained three explicit `not-recovered`
+population slots. This accounts for 100 percent of the reported population by
+disposition, not by recovered content.
 
-- 31 posts had recoverable public reposters;
-- 57 reposter-account appearances were recorded;
-- 17 distinct accounts belonging to serving 2016 Council members appeared in
-  those repost lists;
-- three additional Council-member-authored interactions were recovered;
-- Helen Rosenthal was not among the 17 reposters, producing a lower bound of
-  **at least 18 distinct serving Council member accounts** with attributable
-  public interactions.
+The recovered set contains 86 ordinary CallNYC-authored posts, six CallNYC
+replies, and 15 reposted external posts. All 41 CallNYC-authored or reply posts
+with displayed reposts were audited. They showed 74 reposts; current public
+lists exposed 63 account appearances from 46 distinct accounts, while 11
+displayed reposts had no currently public identity.
 
-The profile displayed 110 total posts at review time. The 47-post authored
-search therefore is not described as the complete account archive. Likes are
-excluded because the interface did not expose reliable liker identities.
+The review established a lower bound of **at least 19 distinct serving Council
+member accounts** in public repost lists and recovered six Council-member-
+authored posts or replies explicitly involving CallNYC. Seventy-one recognition
+posts connected 26 Council handles to 61 distinct resident-facing issue pages.
 
-### Named repost evidence
-
-The 17 recovered member-account reposters were:
-
-| Serving Council member | Public evidence |
-| --- | --- |
-| Vanessa Gibson | [CallNYC repost list](https://x.com/CallNYCapp/status/725334082364821504/retweets) |
-| Mathieu Eugene | [CallNYC repost list](https://x.com/CallNYCapp/status/726080902024040448/retweets) |
-| Peter Koo | [CallNYC repost list](https://x.com/CallNYCapp/status/725403215282487296/retweets) |
-| Margaret Chin | [CallNYC repost list](https://x.com/CallNYCapp/status/731212042863005697/retweets) |
-| Ruben Wills | [CallNYC repost list](https://x.com/CallNYCapp/status/731873940923109376/retweets) |
-| Chaim Deutsch | [CallNYC repost list](https://x.com/CallNYCapp/status/738140834973900800/retweets) |
-| Elizabeth Crowley | [CallNYC repost list](https://x.com/CallNYCapp/status/732752376709447680/retweets) |
-| Fernando Cabrera | [CallNYC repost list](https://x.com/CallNYCapp/status/726900698827358208/retweets) |
-| I. Daneek Miller | [CallNYC repost list](https://x.com/CallNYCapp/status/727528637340241920/retweets) |
-| Jimmy Van Bramer | [CallNYC repost list](https://x.com/CallNYCapp/status/775370427644411904/retweets) |
-| Mark Treyger | [CallNYC repost list](https://x.com/CallNYCapp/status/727689676115611650/retweets) |
-| David Greenfield | [CallNYC repost list](https://x.com/CallNYCapp/status/730856560071741440/retweets) |
-| Rafael Espinal | [CallNYC repost list](https://x.com/CallNYCapp/status/734492930262585344/retweets) |
-| Antonio Reynoso | [CallNYC repost list](https://x.com/CallNYCapp/status/753631998221033472/retweets) |
-| Ritchie Torres | [CallNYC repost list](https://x.com/CallNYCapp/status/724986599419875333/retweets) |
-| Rosie Mendez | [CallNYC repost list](https://x.com/CallNYCapp/status/733027856025047041/retweets) |
-| Steven Matteo | [CallNYC repost list](https://x.com/CallNYCapp/status/748532929802997760/retweets) |
-
-The member identities were cross-checked against the official
-[September 28, 2016 Council stated-meeting roster](https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D).
-Some account handles have since been renamed; the machine-readable ledger
-retains the handle visible at review and, where recovered, the handle used in
-the original post.
-
-### Member-authored interactions
-
-- [Mathieu Eugene quote post](https://x.com/CMMathieuEugene/status/783305320508514304)
-- [Helen Rosenthal post](https://x.com/HelenRosenthal/status/780797474277511170)
-- [Ruben Wills reply](https://x.com/CM_RubenWills/status/732717792097603584)
-
-Mathieu Eugene and Ruben Wills are already in the 17-account repost set. Helen
-Rosenthal is the eighteenth distinct serving-member account in the recovered
-lower bound.
+The complete method, 19-member evidence ledger, six authored interactions,
+84-URL inventory, stakeholder findings, and source-role boundaries are in the
+[CallNYC full social-population report](callnyc-social-population.md).
 
 ### Engagement pattern
 
@@ -230,7 +194,8 @@ grantees, ran the fundraiser, or authored each post.
 
 Promoted to a public case-study projection:
 
-- CallNYC's 18-member Council-engagement lower bound;
+- CallNYC's 61-issue-page distribution system and 19-member
+  Council-engagement lower bound;
 - NYC Artist Coalition's four-campaign identity and six-member authored-mention
   lower bound;
 - WOW List's shared Sunday Dinner provenance and historical product-support

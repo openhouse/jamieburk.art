@@ -120,6 +120,26 @@
       ]
     },
     {
+      "id": "SRC-CALLNYC-X-POPULATION-MANIFEST",
+      "title": "CallNYC X population disposition and URL manifest",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "CallNYC X population disposition and URL manifest, July 15, 2026.",
+      "publicNote": "A public-safe machine-readable manifest of 110 population dispositions, 84 posted URLs, engagement summaries, and named public-official interaction ledgers; raw post bodies and session data are excluded.",
+      "doesNotEstablish": [
+        "110 recovered post bodies",
+        "individual account authorship",
+        "permanent platform metrics",
+        "formal endorsement",
+        "reasons the three records were not recovered"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
       "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
       "organization": "Gothamist",
@@ -215,7 +235,7 @@
       "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York City Council, minutes of the stated meeting, September 28, 2016.",
-      "publicNote": "The official roster corroborates that the 18 named people in the bounded CallNYC ledger were serving Council members in 2016.",
+      "publicNote": "The official roster corroborates that the 19 named people in the bounded CallNYC ledger were serving Council members in 2016.",
       "doesNotEstablish": [
         "control of social accounts",
         "authorship of every post",
@@ -1096,7 +1116,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Public uptake was unusually concrete for an independent civic prototype: a bounded review recovered attributable CallNYC interactions from at least 18 serving City Council member accounts, including 17 public reposts and separate member-authored posts.",
+          "text": "CallNYC paired 61 resident-facing issue pages with recognition posts directed to 26 Council accounts. A full-population disposition pass recovered attributable interactions from at least 19 serving Council member accounts, including public reposts and six member-authored posts or replies.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1106,13 +1126,15 @@
       ],
       "evidence": [
         {
-          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+          "sourceId": "SRC-CALLNYC-X-POPULATION-MANIFEST",
           "relationship": "direct-support",
           "supports": [
-            "bounded method",
-            "17 distinct member reposters",
-            "18-member lower bound",
-            "three member-authored interactions"
+            "full-population disposition method",
+            "71 recognition posts",
+            "26 Council handles",
+            "61 issue pages",
+            "19 distinct member reposters",
+            "six member-authored interactions"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -1121,15 +1143,15 @@
           "sourceId": "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28",
           "relationship": "corroborating",
           "supports": [
-            "2016 service status of the 18 named Council members"
+            "2016 service status of the 19 named Council members"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "Present 18 as a recovered lower bound, not a complete lifetime count.",
-        "Exclude likes and do not treat interaction as endorsement.",
+        "Present 19 as a recovered lower bound, not a complete lifetime count.",
+        "Exclude likes and original-author metrics on external reposts; do not treat interaction as endorsement.",
         "Keep CallNYC archived, unofficial, and independent."
       ]
     },
@@ -1629,7 +1651,7 @@
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
         "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+        "SRC-CALLNYC-X-POPULATION-MANIFEST",
         "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
       ],
       "occurrences": [
@@ -1680,7 +1702,7 @@
           "claimId": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+            "SRC-CALLNYC-X-POPULATION-MANIFEST",
             "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
           ]
         },

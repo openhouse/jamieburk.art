@@ -114,3 +114,10 @@ See
 for the project-account registry, bounded public-timeline inventories,
 attributable civic-engagement evidence, collective-credit boundaries, and
 selective website projections from the July 2026 authenticated X review.
+
+See
+[projects/callnyc-social-population.md](projects/callnyc-social-population.md)
+and its
+[110-row machine-readable manifest](data/callnyc-x-population-2026-07-15.json)
+for the full-population disposition pass on `@CallNYCapp`, the posted-URL
+inventory, issue-distribution analysis, and complete public-repost audit.

@@ -1,5 +1,6 @@
 import { agencyGraph } from "./agency-graph.ts";
 import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
+import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
@@ -33,6 +34,7 @@ const knowledgeBankInput = {
       ]
     },
     ...archiveProductionJuly2026.intakeItems,
+    ...callNycSocialPopulationJuly2026.intakeItems,
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
@@ -62,6 +64,7 @@ const knowledgeBankInput = {
       ]
     },
     ...archiveProductionJuly2026.observations,
+    ...callNycSocialPopulationJuly2026.observations,
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
     ...socialMediaProductionJuly2026.observations,
@@ -195,6 +198,7 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...archiveProductionJuly2026.sources,
+    ...callNycSocialPopulationJuly2026.sources,
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
     ...socialMediaProductionJuly2026.sources,
@@ -297,6 +301,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...archiveProductionJuly2026.claims,
+    ...callNycSocialPopulationJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
     ...socialMediaProductionJuly2026.claims,
@@ -346,6 +351,7 @@ const knowledgeBankInput = {
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
     ...archiveProductionJuly2026.researchInquiries,
+    ...callNycSocialPopulationJuly2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
@@ -371,7 +377,7 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
       "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
+      "SRC-CALLNYC-X-POPULATION-MANIFEST",
       "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"
     ],
     occurrences: [
@@ -380,7 +386,7 @@ const knowledgeBankInput = {
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-      { id: "council-social-engagement", claimId: "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"] },
+      { id: "council-social-engagement", claimId: "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-POPULATION-MANIFEST", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }, {
