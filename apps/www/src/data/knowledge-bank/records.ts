@@ -352,12 +352,10 @@ const knowledgeBankInput = {
       id: "wowlist",
       surface: "/work/wowlist",
       sourceOrder: [
-        "SRC-COMMUNITY-GREENE-HILL-QA-2017",
         "SRC-X-WOWLIST-PUNKS-USE-2015",
         "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
       ],
       occurrences: [
-        { id: "community-event-sharing", claimId: "CLM-WOWLIST-COMMUNITY-EVENTS-2017", projection: "case-study" },
         {
           id: "organizer-product-use",
           claimId: "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",

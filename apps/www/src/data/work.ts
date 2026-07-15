@@ -498,7 +498,7 @@ const workItemsInput = [
       open:
         "The @WOWListNYC to @wowlist handle lineage remains unresolved, and broader adoption estimates remain separately governed.",
       protected:
-        "Private user data, organizer contact lists, and unapproved community records are not published."
+        "Private community records are not published."
     }
   },
   {

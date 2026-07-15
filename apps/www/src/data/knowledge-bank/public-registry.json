@@ -751,36 +751,6 @@
       ]
     },
     {
-      "id": "CLM-WOWLIST-COMMUNITY-EVENTS-2017",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "A 2017 Greene Hill Food Co-op profile described WOW List as a place where Jamie and Julie shared community events.",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/wowlist"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-COMMUNITY-GREENE-HILL-QA-2017",
-          "relationship": "direct-support",
-          "supports": [
-            "community-event sharing through WOW List",
-            "Jamie and Julie's public association with the project"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "The profile does not establish user, event, or city-scale metrics."
-      ]
-    },
-    {
       "id": "CLM-NYCAC-SBJSA-TESTIMONY-2018",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1611,16 +1581,10 @@
       "id": "wowlist",
       "surface": "/work/wowlist",
       "sourceOrder": [
-        "SRC-COMMUNITY-GREENE-HILL-QA-2017",
         "SRC-X-WOWLIST-PUNKS-USE-2015",
         "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
       ],
       "occurrences": [
-        {
-          "id": "community-event-sharing",
-          "claimId": "CLM-WOWLIST-COMMUNITY-EVENTS-2017",
-          "projection": "case-study"
-        },
         {
           "id": "organizer-product-use",
           "claimId": "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",

@@ -425,9 +425,9 @@ export const researchedClaimRecords20260713 = [
     projections: [{
       key: "case-study",
       text: "A 2017 Greene Hill Food Co-op profile described WOW List as a place where Jamie and Julie shared community events.",
-      status: "active",
-      citationRequired: true,
-      surfaces: ["/work/wowlist"]
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
     }],
     evidence: [{
       sourceId: "SRC-COMMUNITY-GREENE-HILL-QA-2017",
@@ -991,7 +991,7 @@ export const researchedIntakeRecords20260713 = [
     claimIds: ["CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-2017", "CLM-WOWLIST-COMMUNITY-EVENTS-2017", "CLM-NYCAC-GREENE-HILL-TOWN-HALL-INVITATION-2017"],
     inquiryIds: ["INQ-NYCAC-TOWN-HALLS-ROLE-2026"],
     limitations: ["The page is a co-op profile, not an independent audit of project scale or policy causality."],
-    nextActions: ["Use the two selected project descriptions; retain the town-hall detail as research depth until event-level role evidence is complete."]
+    nextActions: ["Use the selected Sunday Dinner description; retain the WOW List and town-hall details as research depth until their public composition calls for them."]
   },
   {
     id: "INTAKE-WATERWAYS-WLBT-VICKSBURG-2026",
