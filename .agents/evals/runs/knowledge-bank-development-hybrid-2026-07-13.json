@@ -1,16 +1,17 @@
 {
-  "candidate_sha": "a96134ab5b784da298af4269eb8b50e4723d49d3",
+  "candidate_sha": "e26b86d4b1bdeed799ddb3633cbc857d573cf64a",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders verified the exact clean candidate and scored collective-credit integrity at 4/4 with no deficiencies.",
-        "The canonical handoff claim credits Jamie's specific action as a protected first-person confirmation and includes boundaries and anti-claims against inventing recipient identity, handoff date or terms, present operations, or private transition context.",
-        "KC Town Hall collaborators, the CCED Board recommendation, the Kansas City Council action, Jamie's planning and documentation role, and Jamie's handoff remain distinct across the bank and public presentation.",
-        "The work period now says Beginning in 2017, and the bounded handoff wording avoids implying either abandonment or ongoing stewardship.",
-        "Repository review found no private cause, invented recipient, or unsupported relative handoff chronology in the candidate."
+        "Two fresh independent graders verified exact candidate e26b86d4b1bdeed799ddb3633cbc857d573cf64a and scored collective-credit integrity at 4/4 with no deficiencies.",
+        "The CRS records name Jamie's bounded actions as building and stewarding shared memory, preparing a legislative-provenance redline, and specifying a privacy-preserving commercial-data pilot.",
+        "Boundaries preserve Action Lab, Small Business United, Fair Rent NYC, NYC Artist Coalition, Council and Albany staff, legal counsel, prior advocates, City data systems, and broader public-interest context.",
+        "Anti-claims prohibit sole coalition or policy causation, legislative authorship, legal-authority claims, agency adoption or implementation, publication of proposed indicators, and access to confidential records.",
+        "Sunday Dinner's hundredth-gathering trace and the NTR CHNG and Claudette's Theater on Wheels leads remain held or research-queued; the candidate does not infer Jamie's role where contemporaneous credit is unresolved.",
+        "The source-backed sprint is framed as Jamie's designed method and proposal, with explicit boundaries against completed-client, accepted-proposal, production-software, broad-access, or human-replacement implications."
       ],
       "findings": [],
       "confidence": 0.99
@@ -20,15 +21,16 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Both independent graders scored selective public projection at 4/4 after inspecting source, claim, proof, metadata, documentation, registry, and rendered-page paths.",
-        "The active handoff projection is approved only for /work/kc-town-hall and appears once under Continuity; the work card and Technical Operations retain their existing concise proof wording.",
-        "Runtime checks confirmed that the protected attestation source is absent from the public registry, the public claim exposes zero evidence records, and the bounded projection remains resolvable only on its approved surface.",
-        "The Continuity statement adds a useful professional conclusion without crowding the separately cited municipal proof or exposing protected context.",
-        "The generated registry is current and redacted, the focused KC Town Hall regression passes, and the stale-report rejection was correctly limited to the expected pre-score state."
+        "Both independent graders scored selective public projection at 4/4 after inspecting source, claim, proof, metadata, documentation, registry, and website paths.",
+        "The strongest newly differentiated hiring proof, Jamie's privacy-preserving commercial-data product specification, is selectively projected through an approved proof record, FairRentNYC metadata and case study, and Technical Operations, with proposal and non-adoption boundaries intact.",
+        "FairRentNYC and Source-Backed Team Memory render active canonical Claim projections; consequential static summaries map to registered canonical claims or approved proof IDs.",
+        "The production record makes an explicit editorial split: use the CRS memory, provenance, data specification, and bounded memory-sprint evidence now; hold the cultural leads until role and source recovery is adequate.",
+        "Held leads remain in the knowledge bank as sources, claims, boundaries, and research tasks instead of being discarded or crowded onto the public site.",
+        "The public registry is current and redacted; deterministic knowledge-bank, citation, public-safety, Chad-lens, route, and citation-test checks passed."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact commit a96134ab5b784da298af4269eb8b50e4723d49d3 passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The KC Town Hall handoff is credited to Jamie, selectively projected, and bounded against organizational, governmental, chronological, current-status, and protected-context overclaiming."
+  "overall_finding": "Exact commit e26b86d4b1bdeed799ddb3633cbc857d573cf64a passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The Teams archive production adds strong bounded operational and product-specification evidence, preserves collective credit, and selectively projects only mature hiring-relevant claims while retaining unresolved cultural leads for research."
 }
