@@ -63,6 +63,13 @@ import {
   urbanhermitXCorpusResearchInquiries,
   urbanhermitXCorpusSources
 } from "./urbanhermit-x-corpus.ts";
+import {
+  nycacFacebookEventClaims,
+  nycacFacebookEventIntakeItems,
+  nycacFacebookEventObservations,
+  nycacFacebookEventResearchInquiries,
+  nycacFacebookEventSources
+} from "./nycac-facebook-events.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -75,6 +82,7 @@ const knowledgeBankInput = {
     ...wowlistXCorpusIntakeItems,
     ...nycartcXCorpusIntakeItems,
     ...urbanhermitXCorpusIntakeItems,
+    ...nycacFacebookEventIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -368,6 +376,7 @@ const knowledgeBankInput = {
     ...callnycXCorpusSources,
     ...nycartcXCorpusSources,
     ...urbanhermitXCorpusSources,
+    ...nycacFacebookEventSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1392,6 +1401,7 @@ const knowledgeBankInput = {
     ...callnycXCorpusObservations,
     ...nycartcXCorpusObservations,
     ...urbanhermitXCorpusObservations,
+    ...nycacFacebookEventObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1984,6 +1994,7 @@ const knowledgeBankInput = {
     ...callnycXCorpusClaims,
     ...nycartcXCorpusClaims,
     ...urbanhermitXCorpusClaims,
+    ...nycacFacebookEventClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -3044,6 +3055,7 @@ const knowledgeBankInput = {
     ...callnycXCorpusResearchInquiries,
     ...nycartcXCorpusResearchInquiries,
     ...urbanhermitXCorpusResearchInquiries,
+    ...nycacFacebookEventResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -3358,13 +3370,30 @@ const knowledgeBankInput = {
   }, {
     id: "fair-rent-nyc",
     surface: "/work/fair-rent-nyc",
-    sourceOrder: ["SRC-NAC-X-CORPUS-2026-07-15"],
-    occurrences: [{
-      id: "shared-public-operating-layer",
-      claimId: "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
-      projection: "case-study",
-      sourceIds: ["SRC-NAC-X-CORPUS-2026-07-15"]
-    }]
+    sourceOrder: [
+      "SRC-NAC-X-CORPUS-2026-07-15",
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+      "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
+    ],
+    occurrences: [
+      {
+        id: "shared-public-operating-layer",
+        claimId: "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+        projection: "case-study",
+        sourceIds: ["SRC-NAC-X-CORPUS-2026-07-15"]
+      },
+      {
+        id: "coalition-participation-system",
+        claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+          "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
+        ]
+      }
+    ]
   }, {
     id: "wowlist",
     surface: "/work/wowlist",

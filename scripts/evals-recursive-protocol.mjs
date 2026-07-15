@@ -64,6 +64,7 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-wowlist-x-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-nycartc-x-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-urbanhermit-x-full-population.md",
+  "docs/knowledge-bank/intake/2026-07-15-nycac-facebook-events-full-population.md",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
   "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
@@ -73,14 +74,18 @@ const requiredFiles = [
   "docs/knowledge-bank/projects/urbanhermit-public-record.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+  "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
   "docs/knowledge-bank/projects/kansas-city-neighborhood-programs.md",
+  "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-events.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
   "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts",
   "apps/www/src/data/knowledge-bank/nycartc-x-corpus.ts",
   "apps/www/src/data/knowledge-bank/urbanhermit-x-corpus.ts",
+  "apps/www/src/data/knowledge-bank/nycac-facebook-events.ts",
+  "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
@@ -95,6 +100,7 @@ const requiredFiles = [
   "scripts/derive-nycartc-x-corpus.mjs",
   "scripts/evals-nycartc-x-corpus.mjs",
   "scripts/evals-urbanhermit-x-corpus.mjs",
+  "scripts/evals-nycac-facebook-events.mjs",
   "scripts/lib/urbanhermit-mission-classifier.mjs",
   "scripts/evals-knowledge-lifecycle.mjs",
   "scripts/report-knowledge-lifecycle.mjs",
@@ -119,6 +125,7 @@ for (const script of [
   "check:nycartc-corpus",
   "evals:nycartc-x",
   "evals:urbanhermit-x",
+  "evals:nycac-facebook-events",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -159,6 +166,15 @@ if (scripts.check && !scripts.check.includes("npm run evals:urbanhermit-x")) {
 }
 
 if (
+  scripts.check &&
+  !scripts.check.includes("npm run evals:nycac-facebook-events")
+) {
+  fail(
+    "package.json check script must include npm run evals:nycac-facebook-events"
+  );
+}
+
+if (
   scripts["evals:knowledge-lifecycle"] !==
   "node scripts/evals-knowledge-lifecycle.mjs"
 ) {
@@ -189,6 +205,15 @@ if (scripts["evals:nycartc-x"] !== "node scripts/evals-nycartc-x-corpus.mjs") {
 
 if (scripts["evals:urbanhermit-x"] !== "node scripts/evals-urbanhermit-x-corpus.mjs") {
   fail("package.json evals:urbanhermit-x must run scripts/evals-urbanhermit-x-corpus.mjs");
+}
+
+if (
+  scripts["evals:nycac-facebook-events"] !==
+  "node scripts/evals-nycac-facebook-events.mjs"
+) {
+  fail(
+    "package.json evals:nycac-facebook-events must run scripts/evals-nycac-facebook-events.mjs"
+  );
 }
 
 if (scripts["evals:recursive"] !== "node scripts/evals-recursive-protocol.mjs") {
@@ -322,6 +347,15 @@ for (const doc of [
   ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
 ]) {
   requireIncludes(doc[1], "npm run evals:urbanhermit-x", doc[0]);
+}
+
+for (const doc of [
+  ["docs/production-readiness.md", productionReadiness],
+  ["docs/knowledge-bank/review-checklist.md", reviewChecklist],
+  ["docs/knowledge-bank/launch-blockers.md", launchBlockers],
+  ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
+]) {
+  requireIncludes(doc[1], "npm run evals:nycac-facebook-events", doc[0]);
 }
 
 for (const phrase of [

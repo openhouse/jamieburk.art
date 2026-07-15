@@ -196,6 +196,28 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "title": "NYC Artist Coalition Facebook event full-population public-safe census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
+      "publicNote": "The metadata-only fixture retains 33 recovered event identities and a disposition for all 34 displayed control slots while excluding raw descriptions and personal or authenticated-session data.",
+      "doesNotEstablish": [
+        "the unresolved event identity",
+        "every historical coalition event",
+        "individual event authorship or production",
+        "physical attendance or unique people",
+        "policy causality"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -294,6 +316,49 @@
         "official Council ownership",
         "formal hackathon submission status",
         "current resident-service guidance"
+      ]
+    },
+    {
+      "id": "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live-and-archived",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "archiveUrl": "https://web.archive.org/web/20190507132352/http://gothamist.com:80/2017/06/19/cabaret_law_nyc.php",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "Independent reporting directly identifies Jamie's fire-code study groups, City Hall rally, NYC Artist Coalition affiliation, and safety framing.",
+      "doesNotEstablish": [
+        "that Jamie solely led the repeal campaign",
+        "that NYC Artist Coalition alone caused repeal",
+        "that every venue agreed with the coalition",
+        "the later legislative outcome by itself"
+      ]
+    },
+    {
+      "id": "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "author": "Outreach Committee",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op Outreach Committee, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "Contemporaneous community profile documenting weekly open Sunday dinners, WOW List, coalition participation, Cabaret Law advocacy, and an invitation to public dialogue with the new Office of Nightlife.",
+      "doesNotEstablish": [
+        "the lifetime number of dinners",
+        "the number of resident artists",
+        "sole ownership of Sunday Dinner or WOW List",
+        "sole causality for Cabaret Law repeal"
       ]
     }
   ],
@@ -457,6 +522,68 @@
         "The profile control is accounted for as 3,367 recovered account items plus an explicit 1,757-item gap; this is not a claim that all 5,124 items were recovered.",
         "Campaign categories overlap and measure public communication, not unique initiatives, audience reach, or policy outcomes.",
         "The account was shared. The corpus does not identify Jamie or any collaborator as author of every post, and it does not independently prove Jamie created the account."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie describes the recurring event and participation layer as a major part of his NYC Artist Coalition contribution. The surviving population corroborates the collective system's public form while leaving event-level authorship open.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "33-event collective participation system",
+            "12 recurring meetings across ten physical cultural spaces"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie organized fire-code study groups",
+            "Jamie participated in City Hall advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's NYC Artist Coalition participation",
+            "a nightlife town hall invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use helped establish and produce; do not assign Jamie authorship or sole production of every event.",
+        "Preserve partners, venue hosts, artists, advocates, officials, and coalition collaborators as part of the work.",
+        "The rotating pattern covers ten physical meeting spaces and two virtual meetings, not one meeting every calendar month.",
+        "The event sequence does not establish that any gathering caused a policy outcome."
       ]
     },
     {
@@ -799,7 +926,10 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
-        "SRC-NAC-X-CORPUS-2026-07-15"
+        "SRC-NAC-X-CORPUS-2026-07-15",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+        "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+        "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
       ],
       "occurrences": [
         {
@@ -808,6 +938,16 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NAC-X-CORPUS-2026-07-15"
+          ]
+        },
+        {
+          "id": "coalition-participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+            "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+            "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
           ]
         }
       ]

@@ -17,6 +17,7 @@ npm run evals:wowlist-x
 npm run check:nycartc-corpus
 npm run evals:nycartc-x
 npm run evals:urbanhermit-x
+npm run evals:nycac-facebook-events
 npm run evals:recursive
 ```
 
@@ -93,6 +94,16 @@ also hard-gates raw-text exclusion, identity-free redaction of irrelevant
 personal context, collaborator attribution, source positioning, hash integrity,
 and the deliberate decision not to project the personal corpus onto the current
 website. Passing requires 100/100 and no hard failure.
+
+### NYC Artist Coalition Facebook Events Criterion
+
+`npm run evals:nycac-facebook-events` reconciles the 34-slot Facebook Past
+Events control as 33 recovered records plus one unresolved slot, locks the
+event-ID digest and metadata-only fixture, and reproduces chronology, organizer
+and cohost relationships, recurring cultural-space meetings, topic and response
+thresholds, source routes, public-safety exclusions, lifecycle integration,
+and the bounded participation-system projection selected for the website.
+Passing requires 100/100 and no hard failure.
 
 ## Loop 2: Claim Projection
 

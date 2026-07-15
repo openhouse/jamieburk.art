@@ -21,6 +21,7 @@
 - [ ] NYC Artist Coalition corpus hashes reproduce with `npm run check:nycartc-corpus`.
 - [ ] NYC Artist Coalition X corpus criterion passes with `npm run evals:nycartc-x`.
 - [ ] Urbanhermit X corpus criterion passes with `npm run evals:urbanhermit-x`.
+- [ ] NYC Artist Coalition Facebook event population criterion passes with `npm run evals:nycac-facebook-events`.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.

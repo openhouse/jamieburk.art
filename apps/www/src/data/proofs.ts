@@ -308,6 +308,54 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-12"
   },
   {
+    id: "nyc-artist-coalition-participation-system",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system across cultural spaces, practical support sessions, public hearings, town halls, campaign actions, and relief convenings.",
+    shortWording:
+      "Helped establish NYC Artist Coalition's recurring participation system",
+    detailedPublicWording:
+      "Jamie connected lessons from WOW List with coalition advocacy through public event pages, meetings rotating among small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+    sourceBasis:
+      "Jamie's first-hand role account, a public-safe census of 33 recovered Facebook event records, contemporaneous Gothamist reporting on his fire-safety and City Hall organizing, and a community profile connecting him to coalition work and a nightlife town hall invitation.",
+    whyItMatters:
+      "Shows event production and recurring participation as civic operating infrastructure, while preserving the coalition, hosts, partners, and participants as co-authors of the work.",
+    guardrail:
+      "Use helped establish and produce. Do not assign Jamie sole authorship of every event, treat Facebook response labels as attendance, or claim that the event system alone caused a policy outcome.",
+    doNotSay: [
+      "Jamie solely produced every NYC Artist Coalition event",
+      "9,989 people attended",
+      "Facebook responses equal attendance or unique reach",
+      "Every event used a different venue",
+      "The event program alone repealed the Cabaret Law"
+    ],
+    protectedBoundaries: [
+      "Raw event descriptions",
+      "Attendee identities",
+      "Comments and reactions",
+      "Contact details",
+      "Meeting credentials",
+      "Private working links",
+      "Authenticated-session data"
+    ],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "participation-systems",
+      "coalition-operations",
+      "event-production",
+      "civic-engagement",
+      "public-communications"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
