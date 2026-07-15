@@ -120,7 +120,7 @@ export const kcTownHallXFullPopulationBatch20260715: {
       notes: [
         "The full reported population is accounted for as 181 recovered items plus an explicit two-item recovery gap; seven conversation records are context, not account posts.",
         "Visible interaction totals and account self-reported tire outcomes are retained as research observations and held from public accomplishment messaging.",
-        "No private messages, account settings, non-public analytics, credentials, follower exports, or session data were inspected or committed."
+        "No private messages, account settings, non-public analytics, authentication secrets, follower exports, or session data were inspected or committed."
       ],
       reviewedAt: "2026-07-15",
       reviewedBy
@@ -977,7 +977,7 @@ export const kcTownHallXFullPopulationBatch20260715: {
         "resolved every recovered t.co destination and separated authored posts, reposts, and public conversation context",
         "classified mission patterns, incoming stakeholder interactions, media, URLs, and dated visible engagement",
         "close-read recoverable mission-relevant external sources and queued dead or inaccessible pages as leads",
-        "excluded private account surfaces, contact numbers, analytics, personal interaction state, credentials, and session data"
+        "excluded private account surfaces, contact numbers, analytics, personal interaction state, authentication secrets, and session data"
       ],
       runAt: "2026-07-15",
       resultStatus: "partially-recovered",
