@@ -152,7 +152,7 @@
       "correctedSourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "correctionId": "COR-NYCAC-CABARET-HEARING-DATE-2026",
       "approvedContentSha256": "06f499a9c10eee7afe2ee47227919a4994b868690093743a63113d3d161111f2",
-      "approvedRelatedClaimsSha256": "2613a69a6c694d6134486dd9c6f2ea74cc60d85ed2407c9c342bd766c6e9d368",
+      "approvedRelatedClaimsSha256": "0c5e0f7926ddcf0913674dc672f9100bfe25f1ea7ce921b762399356e5a31186",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-COUNCIL-EVIDENTIARY-USE",
@@ -251,7 +251,7 @@
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "6256482b178d532941126a250700a65ddd05bc74cff4afc1cc961baf95c8987d",
+      "approvedContentSha256": "666ef96a12f88bfc7af8d08ecc7d86f17ef91afb57dd7e99df3f2cdbe8d3694a",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",

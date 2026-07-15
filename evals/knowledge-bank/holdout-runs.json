@@ -741,6 +741,39 @@
       "blockers": [
         "Two fresh independent judges must mutate the actual structured work-evidence array, proof fields, report block inventory, manifest metadata, and review-summary object and verify that unapproved assertions or private content fail by construction even when ordinary review checksums are refreshed."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-j",
+      "completedAt": "2026-07-15T16:38:44-04:00",
+      "lens": "Fresh independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, collective-credit reviewer, and adversarial evaluation reviewer of frozen commit 0c9102943a7920f589a6dcdd6a8bb9ac8dc717e1",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 5, 5, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "The 445-post and 67-route aggregate existed only in unused data and was not reachable by a hiring reader on a rendered website surface."
+      ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-i",
+      "completedAt": "2026-07-15T16:39:20-04:00",
+      "lens": "Fresh independent read-only archival data-integrity, privacy, provenance, source-closure, structured-contract, and mutation-resistance review of frozen commit 0c9102943a7920f589a6dcdd6a8bb9ac8dc717e1",
+      "weightedScore": 4.2,
+      "criterionScores": [5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Population, mission, stakeholder, route, and interaction aggregate summary values remained lock-only, allowing false metrics or private prose in approved structured fields after checksum refresh."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-rendered-proof-and-aggregate-contracts-2026-07-15",
+      "completedAt": "2026-07-15T16:42:23-04:00",
+      "lens": "Protocol reset after projecting the governed aggregate directly into the FairRentNYC case study and adding exact typed contracts for every manifest aggregate summary",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that the cited 445-post and 67-route claim is visibly rendered on the FairRentNYC case study and that every aggregate summary value rejects type, count, prose, and private-identity mutations independently of editable configuration and review checksums."
+      ]
     }
   ]
 }

@@ -409,7 +409,7 @@ export const nycacFacebookPostKnowledge = {
       internalClaim: "The complete capture-date Facebook Page feed is a 445-post public operating record of NYC Artist Coalition's campaign continuity, source routing, and bounded displayed interactions from 2017 through 2021.",
       status: "confirmed-with-boundary",
       projections: [
-        { key: "case-study", text: "A complete capture-date pass of the surviving NYC Artist Coalition Facebook feed preserves 445 dated posts from 2017-2021, with public-safe source routing and shared-account authorship boundaries.", status: "active", citationRequired: true, surfaces: ["/work/technical-operations", "/work"] },
+        { key: "case-study", text: "A complete capture-date pass of the surviving NYC Artist Coalition Facebook feed preserves 445 dated posts from 2017-2021, with public-safe source routing and shared-account authorship boundaries.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] },
         { key: "archive-note", text: "The public-safe census reconciles 598 encountered render rows into 445 distinct dated posts spanning 2017-2021.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts"] }
       ],
       evidence: [

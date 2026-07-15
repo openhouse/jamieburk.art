@@ -4105,7 +4105,13 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
   for (const mutate of [
     (copy) => { copy.project = "raw private body"; },
     (copy) => { copy.method.reconciliation = "Named commenter identity"; },
-    (copy) => { copy.method.surface = "https://facebook.com/private?access_token=secret"; }
+    (copy) => { copy.method.surface = "https://facebook.com/private?access_token=secret"; },
+    (copy) => { copy.populationReconciliation.encounteredRenderRows = 999; },
+    (copy) => { copy.populationReconciliation.exposedDistinctPosts = 999; },
+    (copy) => { copy.missionSummary.tagCounts["cabaret-law-and-dance-freedom"] = "Private person"; },
+    (copy) => { copy.stakeholderSummary.tagCounts["nyc-council-and-elected-officials"] = "Private person"; },
+    (copy) => { copy.postedUrlSummary.distinctExternalRoutes = "Private working note"; },
+    (copy) => { copy.displayedInteractionSummary.displayedReactions = "Reactors Jane Doe and John Roe"; }
   ]) {
     const copy = loadNycacFacebookPostPopulation();
     mutate(copy);
@@ -4141,4 +4147,16 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
   result = evaluateKnowledgeBank(suite, { nycacFacebookPostReviewSummary: reviewSummary });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.authorship, false);
   assert.equal(result.contentApprovals.nycacFacebookPosts.reviewLocksMatch, false);
+
+  const caseStudyMdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"),
+    "utf8"
+  );
+  result = evaluateKnowledgeBank(suite, {
+    nycacFacebookPostCaseStudyMdx: caseStudyMdx.replace(
+      'claimId="CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD"',
+      'claimId="CLM-NYCAC-FACEBOOK-REMOVED"'
+    )
+  });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.proofProjection, false);
 });

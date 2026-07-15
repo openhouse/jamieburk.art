@@ -649,6 +649,49 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
+      "title": "NYC Artist Coalition Facebook post full-population public-safe census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition Facebook post full-population public-safe census, July 15, 2026.",
+      "publicNote": "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, bounded mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
+      "doesNotEstablish": [
+        "complete lifetime account history",
+        "post-level human authorship",
+        "incoming engagement by named stakeholder groups",
+        "reach",
+        "attendance",
+        "conversion",
+        "endorsement",
+        "mandate",
+        "policy impact"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
+      "title": "NYC Artist Coalition Facebook post archival-production report",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition Facebook post archival-production report, July 15, 2026.",
+      "publicNote": "Documents method, population reconciliation, source routing, stakeholder and interaction semantics, shared-account credit, privacy controls, and projection decisions.",
+      "doesNotEstablish": [
+        "a native Meta export",
+        "individual post authorship",
+        "complete deleted-post recovery",
+        "causal impact"
+      ]
+    },
+    {
       "id": "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026",
       "title": "Personal and WOW List Facebook event full-population public-safe census",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -1818,6 +1861,63 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A complete capture-date pass of the surviving NYC Artist Coalition Facebook feed preserves 445 dated posts from 2017-2021, with public-safe source routing and shared-account authorship boundaries.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The public-safe census reconciles 598 encountered render rows into 445 distinct dated posts spanning 2017-2021.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "598 encountered render rows",
+            "153 deduplicated render variants",
+            "445 distinct dated posts",
+            "445 unique one-way reconciliation hashes",
+            "2017-2021 date and year reconciliation",
+            "67 distinct off-Facebook routes"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "capture method",
+            "population boundary",
+            "privacy controls",
+            "shared-account authorship boundary"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe the complete capture-date exposed population, not complete lifetime history.",
+        "Do not attribute every historical post to Jamie or another individual.",
+        "Keep raw bodies, identities, authenticated URLs, and sensitive exact routes outside the public repository."
+      ]
+    },
+    {
       "id": "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -2247,7 +2347,9 @@
         "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
         "SRC-X-HELP-MISSING-POSTS",
         "SRC-X-HELP-ACCOUNT-ARCHIVE",
-        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+        "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
+        "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"
       ],
       "occurrences": [
         {
@@ -2343,6 +2445,15 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
+          ]
+        },
+        {
+          "id": "coalition-facebook-public-operating-record",
+          "claimId": "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
+            "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"
           ]
         },
         {

@@ -467,7 +467,9 @@ const knowledgeBankInput = {
       "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
       "SRC-X-HELP-MISSING-POSTS",
       "SRC-X-HELP-ACCOUNT-ARCHIVE",
-      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
+      "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
@@ -480,6 +482,7 @@ const knowledgeBankInput = {
       { id: "coalition-social-population", claimId: "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE", projection: "case-study", sourceIds: ["SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026", "SRC-X-HELP-MISSING-POSTS", "SRC-X-HELP-ACCOUNT-ARCHIVE"] },
       { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "coalition-event-response-signals", claimId: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"] },
+      { id: "coalition-facebook-public-operating-record", claimId: "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-POST-CENSUS-2026", "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"] },
       { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
       { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
     ]
