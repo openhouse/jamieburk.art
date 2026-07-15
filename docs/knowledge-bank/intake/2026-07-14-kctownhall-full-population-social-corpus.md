@@ -193,10 +193,8 @@ adoption, causality, or impact.
 > discarded tires and gave project collaborators a place to coordinate pickups,
 > report results, and continue the program. In the complete surviving profile
 > population, 100 of 183 records document that workflow from 2019 through 2022.
-> Public repost lists show seven appearances by three then-sitting Council-member
-> accounts, and a bounded incoming review recovered direct public responses from
-> three then-sitting Council-member accounts. These records establish shared
-> project operations, not individual authorship or field work by Jamie.
+> These records establish shared project operations, not individual authorship
+> or field work by Jamie, an audited service total, or impact.
 
 ### Retained in reserve
 
@@ -206,6 +204,8 @@ adoption, causality, or impact.
 - The complete profile corpus contains two direct responses in one April 2019
   exchange; the bounded incoming review raises the direct-response floor to
   three Council-member accounts.
+- The complete repost-list audit records seven appearances from three
+  then-sitting Council-member accounts as a distinct relationship class.
 - The complete repost-list audit preserves 45 public appearances from 33
   accounts while leaving 25 displayed identities unresolved.
 - Independent reporting preserves the project's 2021 public framing and

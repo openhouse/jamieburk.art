@@ -171,3 +171,16 @@ explicit human decision.
   corpus finding and bounded Council responses as supporting evidence.
 - Added an explicit boundary between project operations and Jamie's individual
   authorship or field work. A fresh exact-head portfolio pair is required.
+
+## KC Town Hall atomic-claim repair
+
+- Reduced the public addition to the clearest hiring signal: a recurring
+  resident-reporting and collaborator-coordination workflow evidenced by 100
+  of 183 surviving profile records.
+- Kept the two-response profile floor, three-response incoming floor, seven
+  Council-reposter appearances, and dated interaction counters in the governed
+  bank rather than adding them to the application reading path.
+- Preserved the complete source and relationship inventory for future briefs
+  without turning the case study into a social-media analytics report.
+
+A fresh exact-head application-readiness pair is required after this repair.

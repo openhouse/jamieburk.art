@@ -600,20 +600,34 @@ export const socialArchiveClaims: ClaimRecord[] = [
   {
     id: "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
     project: "kc-town-hall",
-    internalClaim: "The complete surviving KC Town Hall profile population documents a shared public resident-reporting and collaborator-coordination channel: 100 of 183 records concern resident tire intake, pickup coordination, result reporting, or program continuity. A bounded incoming review separately recovers direct public responses from three then-sitting Kansas City Council member accounts.",
+    internalClaim: "The complete surviving KC Town Hall profile population documents a shared public resident-reporting and collaborator-coordination channel: 100 of 183 records concern resident tire intake, pickup coordination, result reporting, or program continuity.",
     status: "confirmed-with-boundary",
-    projections: [{ key: "case-study", text: "The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. A bounded incoming review also recovered direct public responses from three then-sitting Council member accounts. These records establish shared project operations and public dialogue, not individual authorship or field work by Jamie, an audited service total, endorsement, or impact.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] }],
+    projections: [{ key: "case-study", text: "The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. These records establish shared project operations, not individual authorship or field work by Jamie, an audited service total, or impact.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] }],
     evidence: [
-      { sourceId: "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", relationship: "direct-support", supports: ["all 183 surviving profile records", "100 tire-workflow records", "request-to-action reporting pattern", "dated public-reposter audit"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", relationship: "direct-support", supports: ["direct quote-post response to @KCTownHall"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", relationship: "direct-support", supports: ["direct public reply to @KCTownHall"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020", relationship: "direct-support", supports: ["direct public reply recognizing neighborhood work"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", relationship: "direct-support", supports: ["all 183 surviving profile records", "100 tire-workflow records", "resident-reporting and collaborator-coordination pattern"], confidence: "high", renderCitation: true }
+    ],
+    boundaries: ["Treat the account as a shared project identity rather than proof that Jamie authored every record.", "One hundred records describe a recurring public workflow, not one hundred completed pickups, households, or audited service units.", "Keep stakeholder responses, public-reposter appearances, and mutable reaction counters in their own claims.", "Do not expose resident addresses, phone numbers, direct messages, private analytics, or private service records."],
+    antiClaims: ["Jamie alone authored the account or delivered every pickup", "The social timeline is an audited service ledger", "One hundred records equal one hundred completed pickups or households", "The operations pattern proves impact", "Social activity proves project completion or funding receipt"],
+    researchInquiryIds: ["INQ-SOCIAL-KCTH-ARCHIVE", "INQ-KCTH-FULL-POPULATION-2026", "INQ-KCTH-HISTORICAL-TRACTION-AND-SERVICE-OUTCOMES", "INQ-KCTH-SHARED-ACCOUNT-AUTHORSHIP", "INQ-SOCIAL-ACCOUNT-AUTHORSHIP"],
+    reviewedAt: socialArchiveReviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated public-web review"]
+  },
+  {
+    id: "CLM-KCTH-INCOMING-COUNCIL-RESPONSE-FLOOR",
+    project: "kc-town-hall",
+    internalClaim: "A bounded incoming review recovered direct public responses to @KCTownHall from three then-sitting Kansas City Council member accounts: Quinton Lucas, Jolie Justus, and Melissa Robinson.",
+    status: "confirmed-with-boundary",
+    projections: [{ key: "archive-note", text: "A bounded incoming review recovered direct public responses from three then-sitting Kansas City Council member accounts.", status: "hold", citationRequired: false, surfaces: [] }],
+    evidence: [
+      { sourceId: "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", relationship: "direct-support", supports: ["Quinton Lucas quote-post response to @KCTownHall"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", relationship: "direct-support", supports: ["Jolie Justus direct reply to @KCTownHall"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020", relationship: "direct-support", supports: ["Melissa Robinson direct reply to @KCTownHall"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-KCMO-COUNCIL-ROSTER-2018", relationship: "corroborating", supports: ["Quinton Lucas and Jolie Justus serving as Council members in the applicable term"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS", relationship: "corroborating", supports: ["Melissa Robinson's Council service in August 2020"], confidence: "high", renderCitation: false }
     ],
-    boundaries: ["Treat the account as a shared project identity rather than proof that Jamie authored every record.", "One hundred records describe a recurring public workflow, not one hundred completed pickups, households, or audited service units.", "Keep outbound mentions, project-selected reposts, public-reposter appearances, direct outside-authored responses, and mutable reaction counters as separate relationship classes.", "Direct responses establish public interaction, not endorsement, partnership, adoption, or resulting action.", "Do not expose resident addresses, phone numbers, direct messages, private analytics, or private service records."],
-    antiClaims: ["Jamie alone authored the account or delivered every pickup", "The social timeline is an audited service ledger", "One hundred records equal one hundred completed pickups or households", "Three Council members endorsed KC Town Hall", "Seven Council-member account appearances prove partnership or adoption", "Social activity proves project completion or funding receipt"],
-    researchInquiryIds: ["INQ-SOCIAL-KCTH-ARCHIVE", "INQ-KCTH-FULL-POPULATION-2026", "INQ-KCTH-HISTORICAL-TRACTION-AND-SERVICE-OUTCOMES", "INQ-KCTH-SHARED-ACCOUNT-AUTHORSHIP", "INQ-SOCIAL-ACCOUNT-AUTHORSHIP"],
+    boundaries: ["Treat three as a bounded incoming-response floor, not a complete lifetime total.", "The Melissa Robinson response sits outside the 183 profile-attributable records.", "Keep direct responses separate from project outreach, selected reposts, and public-reposter appearances."],
+    antiClaims: ["Exactly three Council members ever responded", "Three Council members endorsed KC Town Hall", "The responses prove partnership, adoption, policy action, or impact"],
+    researchInquiryIds: ["INQ-KCTH-HISTORICAL-TRACTION-AND-SERVICE-OUTCOMES"],
     reviewedAt: socialArchiveReviewedAt,
     reviewedBy: ["Jamie Burkart", "Codex authenticated public-web review"]
   },

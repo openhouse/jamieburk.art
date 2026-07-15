@@ -1124,9 +1124,7 @@ const knowledgeBankInput = {
   sourceCollections: campaignPressCollections,
   claims: [
     ...socialArchiveClaims,
-    ...kcTownHallSocialCorpus.claims.filter(
-      ({ id }) => id !== "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
-    ),
+    ...kcTownHallSocialCorpus.claims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -1535,11 +1533,11 @@ const knowledgeBankInput = {
     {
       id: "kc-town-hall",
       surface: "/work/kc-town-hall",
-      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026", "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"],
+      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026", "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026"],
       occurrences: [
         { id: "public-record-2019", claimId: "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-CCED-2019", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317"] },
         { id: "mission-aligned-transition", claimId: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026", projection: "case-study", sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-STATEMENT-2026"] },
-        { id: "social-service-reporting", claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING", projection: "case-study", sourceIds: ["SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"] }
+        { id: "social-service-reporting", claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING", projection: "case-study", sourceIds: ["SRC-X-KCTH-FULL-POPULATION-AUDIT-2026"] }
       ]
     }
   ]

@@ -325,3 +325,22 @@ committed back into the revision it evaluates.
   collaborator-coordination channel and made its project-level scope explicit.
 - The first exact-head lifecycle pair remained framework-ready; a new
   exact-head pair is required after this composition revision.
+
+## KC Town Hall atomic-claim repair
+
+- The next exact-head lifecycle pair split **5 / 3**. The dissenting judge
+  identified one duplicated canonical claim ID and a compound observation that
+  mixed resident operations, direct Council responses, public-reposter
+  appearances, and mutable interaction counters.
+- Kept the promoted public claim strictly about the 100-of-183 resident-intake
+  and collaborator-coordination workflow.
+- Split the remaining evidence into independently governed reserve claims: a
+  two-account response floor inside the 183-record profile population, a
+  three-account bounded incoming-response floor, and seven public-reposter
+  appearances from three then-sitting Council-member accounts.
+- Retained the 22-reply, 70-repost, and 174-like snapshot as mutable held
+  context, not as a public claim of people, reach, endorsement, or impact.
+- Removed hidden module precedence and made the validator fail if any of those
+  relationship classes are absorbed into the operations claim again.
+
+A fresh exact-head independent pair is required after this structural repair.

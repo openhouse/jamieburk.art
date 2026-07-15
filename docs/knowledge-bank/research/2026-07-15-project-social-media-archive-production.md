@@ -196,7 +196,7 @@ One hundred records are not one hundred completed pickups, households, or servic
 
 ### Defensible claim
 
-> The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. A bounded incoming review also recovered direct public responses from three then-sitting Council-member accounts. These records establish shared project operations, not individual authorship or field work by Jamie.
+> The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. These records establish shared project operations, not individual authorship or field work by Jamie, an audited service total, or impact.
 
 ## KC Spaces Fund
 

@@ -174,7 +174,7 @@ export const kcTownHallSocialCorpus = {
       locator: "aggregateFindings.repostNetwork and records[].publicMentions",
       status: "verified",
       publicSafe: true,
-      claimIds: ["CLM-KCTH-PUBLIC-IDENTITY-MISSION-BREADTH", "CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR"],
+      claimIds: ["CLM-KCTH-PUBLIC-IDENTITY-MISSION-BREADTH"],
       researchInquiryIds: ["INQ-KCTH-HISTORICAL-TRACTION-AND-SERVICE-OUTCOMES"],
       limitations: [
         "Most of these records are project outreach or project-selected amplification, not engagement authored by an outside stakeholder.",
@@ -191,7 +191,7 @@ export const kcTownHallSocialCorpus = {
       locator: "aggregateFindings.publicReposterAudit and councilMemberPublicReposterAppearances",
       status: "verified",
       publicSafe: true,
-      claimIds: ["CLM-KCTH-SOCIAL-SERVICE-REPORTING"],
+      claimIds: ["CLM-KCTH-SOCIAL-PUBLIC-REPOSTER-FLOOR"],
       researchInquiryIds: ["INQ-KCTH-HISTORICAL-TRACTION-AND-SERVICE-OUTCOMES"],
       limitations: [
         "Public repost lists are a dated lower-bound identity surface; unexposed identities remain unresolved.",
@@ -362,6 +362,8 @@ export const kcTownHallSocialCorpus = {
       preservationStatus: "live",
       publishedAt: "2019-04-29",
       accessedAt: reviewedAt,
+      metadataVerifiedAt: reviewedAt,
+      metadataVerifiedBy: "Codex authenticated public-web review",
       canonicalUrl: "https://x.com/QuintonLucasKC/status/1122866432130334720",
       preferredPublicUrl: "canonical",
       publicCitation: "Then-Councilmember Quinton Lucas quote-post responding to @KCTownHall about Leon's Thriftway, April 29, 2019.",
@@ -378,6 +380,8 @@ export const kcTownHallSocialCorpus = {
       preservationStatus: "live",
       publishedAt: "2019-04-29",
       accessedAt: reviewedAt,
+      metadataVerifiedAt: reviewedAt,
+      metadataVerifiedBy: "Codex authenticated public-web review",
       canonicalUrl: "https://x.com/joliejustus/status/1122883010582466560",
       preferredPublicUrl: "canonical",
       publicCitation: "Then-Councilmember Jolie Justus reply to @KCTownHall about Leon's Thriftway, April 29, 2019.",
@@ -514,39 +518,31 @@ export const kcTownHallSocialCorpus = {
       reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
     },
     {
-      id: "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+      id: "CLM-KCTH-SOCIAL-PUBLIC-REPOSTER-FLOOR",
       project: "kc-town-hall",
-      internalClaim: "KC Town Hall's shared public account functioned as a resident-reporting and collaborator-coordination channel for recurring tire intake, pickup coordination, result reporting, and program continuity. The full surviving corpus also preserves a bounded civic-engagement pattern: seven public-reposter appearances from three then-sitting Council-member accounts and two direct responses authored by sitting Council members.",
+      internalClaim: "The dated public repost-list audit recovered seven appearances from three then-sitting Kansas City Council member accounts across KC Town Hall-authored statuses.",
       status: "confirmed-with-boundary",
       projections: [{
-        key: "case-study",
-        text: "The shared KC Town Hall account gave residents a public channel for reporting discarded tires and gave project collaborators a place to coordinate pickups, report results, and continue the program. In the complete surviving profile population, 100 of 183 records document that workflow from 2019 through 2022. Public repost lists show seven appearances by three then-sitting Council-member accounts, and two sitting members authored direct responses in a 2019 neighborhood-business exchange. These records establish shared project operations, not individual authorship or field work by Jamie.",
-        status: "active",
-        citationRequired: true,
-        surfaces: ["/work/kc-town-hall"]
+        key: "archive-note",
+        text: "A dated public repost-list audit recovered seven appearances from three then-sitting Kansas City Council member accounts.",
+        status: "hold",
+        citationRequired: false,
+        surfaces: []
       }],
       evidence: [
-        { sourceId: "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", relationship: "direct-support", supports: ["100 records in the recurring tire-service workflow", "seven public-reposter appearances from three then-sitting Council-member accounts", "two direct responses authored by sitting Kansas City Council members"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", relationship: "direct-support", supports: ["direct quote-post response to @KCTownHall"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", relationship: "direct-support", supports: ["direct public reply to @KCTownHall"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-KCMO-COUNCIL-ROSTER-2018", relationship: "corroborating", supports: ["Quinton Lucas as Third District At-Large Councilmember", "Jolie Justus as Fourth District Councilmember"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS", relationship: "corroborating", supports: ["Melissa Robinson's Council service from July 19, 2019, through July 31, 2023"], confidence: "high", renderCitation: true }
+        { sourceId: "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026", relationship: "direct-support", supports: ["seven public-reposter appearances from three then-sitting Council-member accounts"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCMO-COUNCIL-ROSTER-2018", relationship: "corroborating", supports: ["Quinton Lucas and Jolie Justus serving as Council members for the applicable appearances"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS", relationship: "corroborating", supports: ["Melissa Robinson serving as a Council member for the applicable appearances"], confidence: "high", renderCitation: false }
       ],
       boundaries: [
-        "The account is a shared project identity; it does not assign individual authorship or field work to Jamie.",
-        "One hundred records describe a recurring public workflow, not 100 completed pickups, households, or independently audited service units.",
         "Public repost lists are a dated lower bound and leave 25 displayed repost identities unresolved.",
-        "Council-member repost-list appearance and direct response establish public interaction, not endorsement, partnership, adoption, policy action, or impact.",
-        "The social record is separate from the municipal funding lifecycle and does not establish receipt, expenditure, construction, or completion."
+        "A public-reposter appearance is distinct from a direct response.",
+        "Council-member account appearance does not establish endorsement, partnership, adoption, policy action, or impact."
       ],
       antiClaims: [
-        "Jamie authored every @KCTownHall record.",
-        "Jamie alone delivered every tire pickup.",
-        "One hundred records equal 100 completed pickups or 100 households served.",
         "Three Council members endorsed KC Town Hall.",
         "Seven Council-member account appearances prove formal partnership or adoption.",
-        "The social corpus proves receipt of City funding, project completion, or causal impact.",
-        "Visible July 2026 reactions measure historical reach."
+        "Seven appearances equal seven unique people or seven direct responses."
       ],
       researchInquiryIds: [
         "INQ-KCTH-FULL-POPULATION-2026",

@@ -483,15 +483,30 @@ const callNycText = JSON.stringify(callNycClaim);
 expect(callNycText.includes("at least 19"), "CallNYC claim lost lower-bound wording");
 expect(callNycText.includes("not a complete lifetime count"), "CallNYC claim lost its incomplete-census boundary");
 expect(callNycText.includes("formally endorsed") || callNycText.includes("formal Council adoption"), "CallNYC claim lost its endorsement or adoption anti-claim");
-const kcTownHallClaimText = JSON.stringify(claimById.get("CLM-KCTH-SOCIAL-SERVICE-REPORTING"));
-expect(kcTownHallClaimText.includes("100 of 183") && kcTownHallClaimText.includes("three then-sitting Council member accounts"), "KC Town Hall public projection lost its operating pattern or bounded Council-response floor");
-expect(["SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"].every((sourceId) => kcTownHallClaimText.includes(sourceId)), "KC Town Hall public projection lost a direct-response source");
+const kcTownHallOperationsText = JSON.stringify(claimById.get("CLM-KCTH-SOCIAL-SERVICE-REPORTING"));
+expect(kcTownHallOperationsText.includes("100 of 183"), "KC Town Hall public projection lost its operating-pattern evidence");
+expect(!kcTownHallOperationsText.includes("three then-sitting Council member accounts"), "KC Town Hall operations claim absorbed the incoming-response floor");
+expect(!kcTownHallOperationsText.includes("seven appearances"), "KC Town Hall operations claim absorbed the public-reposter floor");
+expect(!kcTownHallOperationsText.includes("174 likes"), "KC Town Hall operations claim absorbed the mutable metric snapshot");
+
+const kcTownHallProfileResponseText = JSON.stringify(claimById.get("CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR"));
+expect(kcTownHallProfileResponseText.includes("two then-sitting Kansas City Council members"), "KC Town Hall profile-response claim lost its two-account floor");
+expect(["SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29"].every((sourceId) => kcTownHallProfileResponseText.includes(sourceId)), "KC Town Hall profile-response claim lost a direct-response source");
+
+const kcTownHallIncomingResponseText = JSON.stringify(claimById.get("CLM-KCTH-INCOMING-COUNCIL-RESPONSE-FLOOR"));
+expect(kcTownHallIncomingResponseText.includes("three then-sitting Kansas City Council member accounts"), "KC Town Hall incoming-response claim lost its three-account floor");
+expect(kcTownHallIncomingResponseText.includes("outside the 183"), "KC Town Hall incoming-response claim lost the profile-population boundary");
+expect(["SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29", "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020"].every((sourceId) => kcTownHallIncomingResponseText.includes(sourceId)), "KC Town Hall incoming-response claim lost a direct-response source");
+
+const kcTownHallReposterText = JSON.stringify(claimById.get("CLM-KCTH-SOCIAL-PUBLIC-REPOSTER-FLOOR"));
+expect(kcTownHallReposterText.includes("seven appearances") && kcTownHallReposterText.includes("three then-sitting Kansas City Council member accounts"), "KC Town Hall public-reposter claim lost its bounded floor");
+expect(!kcTownHallReposterText.includes("direct public responses"), "KC Town Hall public-reposter claim absorbed the direct-response floor");
 
 const reportPath = "docs/knowledge-bank/research/2026-07-15-project-social-media-archive-production.md";
 expect(existsSync(reportPath), "Social-media archival production report is missing");
 if (existsSync(reportPath)) {
   const report = readFileSync(reportPath, "utf8");
-  for (const phrase of ["at least **19 distinct serving 2016 nyc council member accounts**", "at least **six serving council member accounts**", "not recovered does not mean", "individual coalition-post authorship remains deliberately unattributed", "one hundred records are not one hundred completed pickups", "183-item public-safe ledger", "133 posted short-link occurrences", "direct public responses from three then-sitting council-member accounts", "all 38 records displayed by @wowlist at review time", "35 posted-link occurrences", "1,846 users and 16,142 posts/events", "at least 50 geocoded posts/events"]) {
+  for (const phrase of ["at least **19 distinct serving 2016 nyc council member accounts**", "at least **six serving council member accounts**", "not recovered does not mean", "individual coalition-post authorship remains deliberately unattributed", "one hundred records are not one hundred completed pickups", "183-item public-safe ledger", "133 posted short-link occurrences", "dated public lists expose seven appearances by three then-sitting council-member accounts", "a stricter incoming review recovered direct public responses", "all 38 records displayed by @wowlist at review time", "35 posted-link occurrences", "1,846 users and 16,142 posts/events", "at least 50 geocoded posts/events"]) {
     expect(report.toLowerCase().includes(phrase), `Social-media report lost required boundary: ${phrase}`);
   }
 }

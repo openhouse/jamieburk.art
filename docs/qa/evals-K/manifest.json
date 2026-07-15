@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "652fb1567a2e9193b2b9ed79fa87995574ac94c4c015f2cd65f02c507a1fda8a",
+  "sourceSha256": "b71db738afc8bfb79e8647d585bb34c09e7abd8e79796ee8fbe40c601aac67a7",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,

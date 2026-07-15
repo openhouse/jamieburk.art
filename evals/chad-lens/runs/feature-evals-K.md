@@ -202,3 +202,15 @@ still requires Jamie's explicit approval.
   work.
 - A fresh exact-head independent pair is required before the criterion can be
   treated as stable.
+
+## KC Town Hall atomic-claim repair
+
+- Removed Council-response and reposter counts from the public case-study
+  projection so the first-pass reader sees one thing: what residents and
+  collaborators could do through the shared project account.
+- Kept Jamie visible through the immediately preceding role section while
+  explicitly declining to assign every post or field action to him.
+- Preserved Council dialogue, repost-list appearances, and mutable counters as
+  distinct knowledge-bank depth available for later compositions.
+
+A fresh exact-head Chad Lens pair is required after this change.
