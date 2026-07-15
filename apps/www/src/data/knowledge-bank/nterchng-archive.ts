@@ -64,6 +64,54 @@ export const nterChngArchive = {
         "Do not describe the Kansas City inclusion as participation in every stop of the proposed national tour.",
         "Do not reproduce the historical phone numbers printed in the archived artist page."
       ]
+    },
+    {
+      id: "INTAKE-NTERCHNG-INSTALLER-WORKING-DOC-2026",
+      kind: "public-artifact",
+      title: "NTER CHNG Installer working document",
+      submittedAt: reviewedAt,
+      submittedBy: "Jamie Burkart",
+      projectIds: ["nterchng", "america-now-and-here"],
+      reason:
+        "Preserve contemporaneous evidence of the installation-production system required to restage NTER CHNG for America: Now and Here in May 2011.",
+      visibility: "protected",
+      disposition: "integrated",
+      sourceIds: ["SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011"],
+      observationIds: [
+        "OBS-NTERCHNG-ANH-INSTALL-PRODUCTION-SYSTEM",
+        "OBS-NTERCHNG-ANH-SOFTWARE-RELIABILITY-WORK",
+        "OBS-NTERCHNG-ANH-RESTAGING-PLAN"
+      ],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      boundaries: [
+        "The working document is a production plan, not proof that every listed task was completed exactly as written.",
+        "The checklist is collective and does not assign individual responsibility for software, fabrication, transport, installation, or teardown.",
+        "Do not expose the shared-document URL, private staging location, travel details, server custody, or entry phone numbers."
+      ]
+    },
+    {
+      id: "INTAKE-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2026",
+      kind: "public-artifact",
+      title: "NTER CHNG 2011 prompt transcript and exhibit-information working document",
+      submittedAt: reviewedAt,
+      submittedBy: "Jamie Burkart",
+      projectIds: ["nterchng", "america-now-and-here"],
+      reason:
+        "Retain the installation's prompt framework, a bounded sample of the exchange form, the 2010 exhibit description, collective credit, and research leads without republishing phone numbers or message text.",
+      visibility: "protected",
+      disposition: "integrated",
+      sourceIds: ["SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011"],
+      observationIds: [
+        "OBS-NTERCHNG-ANH-PROMPT-FRAMEWORK",
+        "OBS-NTERCHNG-PROTECTED-MESSAGE-SAMPLE",
+        "OBS-NTERCHNG-JAMIE-PRIOR-PRACTICE-LEADS"
+      ],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      boundaries: [
+        "Do not reproduce historical phone numbers, message text, or a sender-to-message crosswalk.",
+        "Do not convert numbered sender lines into verified unique-person or participation counts.",
+        "Treat the embedded artist biography as a project-authored research lead requiring independent source verification."
+      ]
     }
   ],
   observations: [
@@ -223,9 +271,171 @@ export const nterChngArchive = {
       limitations: [
         "The statement attributes this combined practice to the trio and does not assign each discipline to a named collaborator."
       ]
+    },
+    {
+      id: "OBS-NTERCHNG-ANH-INSTALL-PRODUCTION-SYSTEM",
+      intakeId: "INTAKE-NTERCHNG-INSTALLER-WORKING-DOC-2026",
+      sourceId: "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+      project: "nterchng",
+      kind: "source-fact",
+      text:
+        "A contemporaneous installation checklist treats the America: Now and Here restaging as an integrated production system spanning organizer coordination, venue permissions, material testing, wall fabrication, projectors, display computers, transport, network wiring, gallery tuning, and teardown.",
+      locator: "Installation plan sections from pre-prep through teardown",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-NTERCHNG-ANH-INSTALL-PRODUCTION-SYSTEM"],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      limitations: [
+        "The checklist documents planned production work, not completion of every task or the person responsible for each task."
+      ]
+    },
+    {
+      id: "OBS-NTERCHNG-ANH-SOFTWARE-RELIABILITY-WORK",
+      intakeId: "INTAKE-NTERCHNG-INSTALLER-WORKING-DOC-2026",
+      sourceId: "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+      project: "nterchng",
+      kind: "source-fact",
+      text:
+        "The checklist calls for revisiting server-side and wall-side software, addressing rapid-message back-queuing, arranging hosting, and connecting computers through the installation network.",
+      locator: "Pre-prep software and remaining-installation tasks",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-NTERCHNG-ANH-INSTALL-PRODUCTION-SYSTEM"],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      limitations: [
+        "The document does not preserve source code, a complete architecture, executed test results, or individual software authorship."
+      ]
+    },
+    {
+      id: "OBS-NTERCHNG-ANH-RESTAGING-PLAN",
+      intakeId: "INTAKE-NTERCHNG-INSTALLER-WORKING-DOC-2026",
+      sourceId: "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+      project: "america-now-and-here",
+      kind: "source-fact",
+      text:
+        "The document is titled NTER CHNG Installer, identifies itself as staging the installation for America: Now and Here in May 2011, and plans installation work at Leedy-Voulkos.",
+      locator: "Document title, subtitle, and install heading",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-NTERCHNG-AMERICA-NOW-HERE-INCLUSION"],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      limitations: [
+        "A working plan corroborates intended restaging and venue preparation; it is not an independent completion record or proof of display dates."
+      ]
+    },
+    {
+      id: "OBS-NTERCHNG-ANH-PROMPT-FRAMEWORK",
+      intakeId: "INTAKE-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2026",
+      sourceId: "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011",
+      project: "nterchng",
+      kind: "source-fact",
+      text:
+        "A contemporaneous working document preserves three prompt themes for the installation: the meaning of a great American journey, first encounters with art, and the moment or relationship through which a person defined themself as an artist.",
+      locator: "Prompt headings preceding the protected response samples",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-NTERCHNG-PROMPTED-PARTICIPATION"],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      limitations: [
+        "The document does not establish who authored each prompt, how consistently prompts were used in the gallery, or how participants interpreted them."
+      ]
+    },
+    {
+      id: "OBS-NTERCHNG-PROTECTED-MESSAGE-SAMPLE",
+      intakeId: "INTAKE-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2026",
+      sourceId: "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011",
+      project: "nterchng",
+      kind: "limitation",
+      text:
+        "The working document contains a small April 2011 prompt-and-response sample associated with historical phone numbers; the knowledge bank retains only its existence and structure, not the numbers or message text.",
+      locator: "Protected April 5-6, 2011 transcript section",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-NTERCHNG-PROMPTED-PARTICIPATION"],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      limitations: [
+        "Numbered sender lines do not establish unique people, public participants, consent to republish, a complete message corpus, or installation-wide participation."
+      ]
+    },
+    {
+      id: "OBS-NTERCHNG-JAMIE-PRIOR-PRACTICE-LEADS",
+      intakeId: "INTAKE-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2026",
+      sourceId: "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011",
+      project: "nterchng",
+      kind: "research-lead",
+      text:
+        "The embedded project-authored biography points toward earlier interactive-video exhibitions and a Charlotte Street Urban Culture Project installation addressing the Missouri River as a social network.",
+      locator: "About the Artists, Jamie Burkart biography",
+      status: "extracted",
+      publicSafe: true,
+      claimIds: [],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      limitations: [
+        "The biography is a project-authored lead, not independent proof of the named exhibitions, dates, venues, titles, or Jamie's exact role."
+      ]
     }
   ],
   sources: [
+    {
+      id: "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+      title: "NTER CHNG Installer working document",
+      organization: "NTER CHNG",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "Google Drive metadata dates the document to April 13, 2011",
+      accessedAt: reviewedAt,
+      publicCitation:
+        "Public-safe close reading of a contemporaneous NTER CHNG installation-planning document for America: Now and Here, April 2011.",
+      publicNote:
+        "The record retains production-system findings while withholding the shared-document URL, private staging and travel details, server custody, and telephone-entry information.",
+      supportsGenerally: [
+        "May 2011 America: Now and Here restaging plan",
+        "Leedy-Voulkos installation planning",
+        "organizer and venue coordination",
+        "software reliability and hosting work",
+        "wall fabrication, projectors, display computers, wiring, transport, tuning, and teardown"
+      ],
+      doesNotEstablish: [
+        "completion of every planned task",
+        "individual division of labor",
+        "source-code authorship or ownership",
+        "complete technical architecture",
+        "actual exhibition dates or attendance",
+        "permission to publish the underlying working document"
+      ],
+      protectedLocatorId: "DRIVE-NTERCHNG-INSTALLER-2011"
+    },
+    {
+      id: "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011",
+      title: "NTER CHNG 2011 prompt transcript and exhibit-information working document",
+      organization: "NTER CHNG",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "Google Drive metadata dates the document to April 6, 2011",
+      accessedAt: reviewedAt,
+      publicCitation:
+        "Public-safe close reading of a contemporaneous NTER CHNG prompt, response-sample, and exhibit-information working document, April 2011.",
+      publicNote:
+        "The record retains prompt themes, collective project description, and research leads without reproducing historical phone numbers, message text, or the shared-document URL.",
+      supportsGenerally: [
+        "three installation prompt themes",
+        "existence and structure of a small April 2011 response sample",
+        "three-person collaborative credit",
+        "2010 exhibit-information language",
+        "research leads concerning Jamie's earlier interactive-media practice"
+      ],
+      doesNotEstablish: [
+        "unique people or participation totals",
+        "consent to republish phone numbers or message text",
+        "complete message corpus",
+        "individual prompt or message authorship",
+        "independent verification of the embedded artist biographies",
+        "permission to publish the underlying working document"
+      ],
+      protectedLocatorId: "DRIVE-NTERCHNG-PROMPT-TRANSCRIPT-2011"
+    },
     {
       id: "SRC-NTERCHNG-PROJECT-SITE-WAYBACK-2011-01-28",
       title: "NTER CHNG project site",
@@ -463,6 +673,20 @@ export const nterChngArchive = {
           supports: ["software-and-architectural form", "two-sided digital wall", "public many-to-many exchange", "collaborative authorship"],
           confidence: "high",
           renderCitation: false
+        },
+        {
+          sourceId: "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+          relationship: "private-support",
+          supports: ["installation-production system", "software and physical components", "collective restaging plan"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011",
+          relationship: "private-support",
+          supports: ["three-person collaborative credit", "exhibit-information description", "prompted exchange form"],
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
@@ -514,6 +738,13 @@ export const nterChngArchive = {
           sourceId: "SRC-ANH-KC-KCSTUDIO-2011-05-06",
           relationship: "context",
           supports: ["May 2011 Kansas City launch", "local-national exhibition structure", "official Kansas City site domain"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+          relationship: "private-support",
+          supports: ["contemporaneous May 2011 ANH restaging plan", "Leedy-Voulkos installation planning"],
           confidence: "high",
           renderCitation: false
         }
@@ -569,6 +800,86 @@ export const nterChngArchive = {
       researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
       reviewedAt,
       reviewedBy: ["Jamie Burkart", "Codex editorial inference review"]
+    },
+    {
+      id: "CLM-NTERCHNG-ANH-INSTALL-PRODUCTION-SYSTEM",
+      project: "nterchng",
+      internalClaim:
+        "A contemporaneous working plan shows that restaging NTER CHNG for America: Now and Here required an integrated production system spanning organizer coordination, permissions, software reliability, hosting, physical fabrication, display hardware, transport, networking, gallery tuning, and teardown.",
+      status: "confirmed-with-boundary",
+      projections: [
+        {
+          key: "archive-note",
+          text:
+            "A 2011 installation plan preserves the operational depth behind the collaborative work, from software reliability and hosting through fabrication, hardware, networking, installation, and teardown.",
+          status: "hold",
+          citationRequired: false,
+          surfaces: []
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+          relationship: "private-support",
+          supports: ["integrated installation plan", "software and hosting tasks", "fabrication and hardware tasks", "venue and teardown tasks"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "Describe this as a contemporaneous working plan, not proof that every checklist item was completed exactly as written.",
+        "Credit the installation system collectively unless contracts, commits, correspondence, or collaborator notes establish individual responsibilities.",
+        "Keep private staging, travel, server, and telephone-entry details out of public projections."
+      ],
+      antiClaims: [
+        "Jamie alone performed every software, fabrication, installation, and production task",
+        "the checklist is an as-built technical specification",
+        "every listed task was completed",
+        "the underlying shared document is safe to publish"
+      ],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      reviewedAt,
+      reviewedBy: ["Jamie Burkart", "Codex protected-artifact review"]
+    },
+    {
+      id: "CLM-NTERCHNG-PROMPTED-PARTICIPATION",
+      project: "nterchng",
+      internalClaim:
+        "A contemporaneous protected working document preserves NTER CHNG prompts about journey, encounters with art, and artistic identity, together with a small response sample that cannot be republished or treated as a participation census.",
+      status: "confirmed-with-boundary",
+      projections: [
+        {
+          key: "archive-note",
+          text:
+            "The installation used open-ended prompts about journey, encounters with art, and artistic identity to structure a public text exchange.",
+          status: "hold",
+          citationRequired: false,
+          surfaces: []
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011",
+          relationship: "private-support",
+          supports: ["three prompt themes", "existence and structure of a bounded response sample"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "Do not publish or paraphrase individual response text without separate consent and review.",
+        "Do not reproduce phone numbers or a sender-to-message crosswalk.",
+        "Do not treat numbered sender lines as verified unique people, public participants, or a complete corpus."
+      ],
+      antiClaims: [
+        "the working sample establishes installation attendance or participation totals",
+        "every sender was a public gallery visitor",
+        "the surviving sample is the complete message corpus",
+        "historical phone numbers or message text are cleared for publication"
+      ],
+      researchInquiryIds: ["INQ-NTERCHNG-ARCHIVE-RECOVERY-2026"],
+      reviewedAt,
+      reviewedBy: ["Jamie Burkart", "Codex protected-artifact review"]
     }
   ],
   researchInquiries: [
@@ -581,7 +892,8 @@ export const nterChngArchive = {
         "Close-read the supplied January 28, 2011 Wayback capture of nterchng.com and enumerate the bounded 2009-2012 successful-capture corpus for the domain.",
         "Search the live web for contemporaneous project and exhibition records.",
         "Enumerate the bounded 2011 Wayback corpus for kansascity.americanowandhere.org and inspect the recovered visual-artist index and dedicated trio page.",
-        "Separate sources that establish NTER CHNG's inclusion from institutional pages that establish only the wider exhibition context."
+        "Separate sources that establish NTER CHNG's inclusion from institutional pages that establish only the wider exhibition context.",
+        "Close-read two contemporaneous Google Docs while retaining only public-safe findings and withholding their shared links, phone numbers, message text, and private operational details."
       ],
       runAt: reviewedAt,
       resultStatus: "recovered",
@@ -589,15 +901,21 @@ export const nterChngArchive = {
         "The archived project site and a contemporaneous Pitch listing establish the three-person collaboration, 2010 Cocoon Gallery opening, and interactive texting-installation form.",
         "The official America: Now and Here Kansas City archive preserves both a visual-artist index naming all three collaborators and a dedicated page presenting NTER CHNG as their work.",
         "The Nerman Museum, KC Studio, and Smithsonian records establish the wider May 2011 Kansas City exhibition context but do not independently name NTER CHNG or Jamie.",
-        "The bounded nterchng.com corpus recovered one HTML page and four supporting assets; the linked press release was not recovered."
+        "The bounded nterchng.com corpus recovered one HTML page and four supporting assets; the linked press release was not recovered.",
+        "An April 2011 installation plan adds protected evidence of a May America: Now and Here restaging and an integrated software, hosting, fabrication, hardware, networking, venue, and teardown workflow.",
+        "A second April 2011 working document preserves three prompt themes, a small protected response sample, collective exhibit-information language, and research leads concerning Jamie's earlier interactive-media practice."
       ],
       limitations: [
-        "No source code, system diagram, message corpus, attendance count, participant-outcome study, or complete installation documentation was recovered.",
+        "No source code, complete system diagram, complete message corpus, attendance count, participant-outcome study, or as-built installation record was recovered.",
         "The public records do not assign individual coding, scenic, motion-graphics, or production responsibilities among the three collaborators.",
-        "The official artist page contains historical participant phone numbers; they were not copied into the knowledge bank.",
+        "The official artist page and protected working transcript contain historical phone numbers; the numbers and associated message text were not copied into the knowledge bank.",
+        "The installation checklist is a plan and cannot prove completion of every listed task.",
+        "The embedded artist biography is a project-authored research lead requiring independent verification.",
         "The evidence establishes Kansas City inclusion, not participation at every planned national-tour stop."
       ],
       sourceIds: [
+        "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+        "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011",
         "SRC-NTERCHNG-PROJECT-SITE-WAYBACK-2011-01-28",
         "SRC-NTERCHNG-PITCH-EVENT-2010-01-07",
         "SRC-ANH-KC-NTERCHNG-ARTIST-PAGE-2011-05-18",
@@ -607,7 +925,7 @@ export const nterChngArchive = {
         "SRC-ANH-SMITHSONIAN-COCOON-POSTER-2011"
       ],
       publicSummary:
-        "Public archives establish NTER CHNG as a collaborative 2010 software-and-space texting installation and preserve its later inclusion in the 2011 Kansas City launch of America: Now and Here; individual responsibilities, participation totals, and national-tour reach remain open."
+        "Public archives establish NTER CHNG as a collaborative 2010 software-and-space texting installation and preserve its later inclusion in the 2011 Kansas City launch of America: Now and Here. Protected contemporaneous working documents add the installation-production system and prompt framework while individual responsibilities, completion of every planned task, participation totals, and national-tour reach remain open."
     }
   ]
 };

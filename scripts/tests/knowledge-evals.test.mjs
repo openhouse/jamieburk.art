@@ -150,7 +150,7 @@ test("NTER CHNG archive production is integrated, bounded, and held for future c
       claims: nterChngArchive.claims.length,
       researchInquiries: nterChngArchive.researchInquiries.length
     },
-    { intakeItems: 2, observations: 9, sources: 7, claims: 3, researchInquiries: 1 }
+    { intakeItems: 4, observations: 15, sources: 9, claims: 5, researchInquiries: 1 }
   );
 
   assert.ok(
@@ -202,6 +202,68 @@ test("NTER CHNG evidence keeps exhibition inclusion distinct from wider context"
   ));
   assert.ok(inquiry.limitations.some((limitation) => limitation.includes("phone numbers")));
   assert.ok(inquiry.findings.some((finding) => finding.includes("press release was not recovered")));
+});
+
+test("NTER CHNG working documents remain protected and absent from the public registry", () => {
+  const protectedSources = nterChngArchive.sources.filter((source) =>
+    [
+      "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011",
+      "SRC-NTERCHNG-PROMPT-TRANSCRIPT-WORKING-DOC-2011"
+    ].includes(source.id)
+  );
+  const moduleText = JSON.stringify(nterChngArchive);
+  const registryText = readFileSync(
+    new URL("../../apps/www/src/data/knowledge-bank/public-registry.json", import.meta.url),
+    "utf8"
+  );
+
+  assert.equal(protectedSources.length, 2);
+  assert.ok(protectedSources.every((source) =>
+    source.visibility === "protected" &&
+    source.preservationStatus === "private" &&
+    source.protectedLocatorId &&
+    !source.canonicalUrl &&
+    !source.archiveUrl &&
+    !source.assetUrl
+  ));
+  assert.doesNotMatch(moduleText, /1XycsdrA6r5uxsHz4LvOQXXwYaic1ZyhIuyhygs4YZ4c|1mmtKqHAk9OEFHcqHE0GjQdgwFiJyBCFKJrkk7S4eDmE/);
+  assert.doesNotMatch(moduleText, /\b\d{3}[-.]\d{3}[-.]\d{4}\b/);
+  assert.doesNotMatch(registryText, /SRC-NTERCHNG-(?:INSTALLER|PROMPT-TRANSCRIPT)-WORKING-DOC-2011/);
+});
+
+test("NTER CHNG installation plan matures operational depth without sole-credit or completion inflation", () => {
+  const claim = nterChngArchive.claims.find(
+    (item) => item.id === "CLM-NTERCHNG-ANH-INSTALL-PRODUCTION-SYSTEM"
+  );
+  const source = nterChngArchive.sources.find(
+    (item) => item.id === "SRC-NTERCHNG-INSTALLER-WORKING-DOC-2011"
+  );
+
+  assert.equal(claim?.status, "confirmed-with-boundary");
+  assert.ok(claim?.projections.every(
+    (projection) => projection.status === "hold" && projection.surfaces.length === 0
+  ));
+  assert.ok(claim?.boundaries.some((boundary) => /working plan/i.test(boundary)));
+  assert.ok(claim?.boundaries.some((boundary) => /collectively/i.test(boundary)));
+  assert.ok(claim?.antiClaims.some((antiClaim) => /Jamie alone/i.test(antiClaim)));
+  assert.ok(source?.doesNotEstablish.includes("completion of every planned task"));
+  assert.ok(source?.doesNotEstablish.includes("individual division of labor"));
+});
+
+test("NTER CHNG prompt evidence preserves participation design without exposing people or messages", () => {
+  const claim = nterChngArchive.claims.find(
+    (item) => item.id === "CLM-NTERCHNG-PROMPTED-PARTICIPATION"
+  );
+  const observation = nterChngArchive.observations.find(
+    (item) => item.id === "OBS-NTERCHNG-PROTECTED-MESSAGE-SAMPLE"
+  );
+  const inquiry = nterChngArchive.researchInquiries[0];
+
+  assert.ok(claim?.boundaries.some((boundary) => /phone numbers/i.test(boundary)));
+  assert.ok(claim?.antiClaims.some((antiClaim) => /unique people|participation totals/i.test(antiClaim)));
+  assert.ok(observation?.limitations.some((limitation) => /complete message corpus/i.test(limitation)));
+  assert.ok(inquiry.limitations.some((limitation) => /associated message text were not copied/i.test(limitation)));
+  assert.ok(inquiry.findings.some((finding) => /three prompt themes/i.test(finding)));
 });
 
 test("selected NYCAC claims improve existing-site citation coverage", () => {

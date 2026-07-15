@@ -51,11 +51,12 @@ record, while the claim remains held from the current site.
 
 ## What remains open
 
-The pass did not recover source code, a system diagram, the linked project
-press release, a message corpus, participation totals, a complete installation
-record, or evidence dividing coding, scenic design, motion graphics, and
-production responsibilities among the three collaborators. It also does not
-establish participation at every proposed national-tour stop.
+The pass did not recover source code, a complete system diagram, the linked
+project press release, a complete message corpus, participation totals, an
+as-built installation record, or evidence dividing coding, scenic design,
+motion graphics, and production responsibilities among the three
+collaborators. It also does not establish participation at every proposed
+national-tour stop.
 
 ## Disposition
 
@@ -69,3 +70,11 @@ The bank now retains three useful levels of knowledge:
 No public-site copy changes are made in this pass. That is projection
 discipline, not omission: the material is now available for a future argument,
 application, timeline, case-study expansion, or photo-editor brief.
+
+## Subsequent artifact pass
+
+Two contemporaneous protected working documents later added an installation
+checklist, software and production details, three prompt themes, and a small
+response sample. Their public-safe findings and limits are documented in
+`2026-07-15-nterchng-working-documents.md`; shared links, phone numbers, and
+message text remain outside the repository.

@@ -31,13 +31,21 @@ retained as bounded context sources. They establish the wider Kansas City
 launch and exhibition setting; they do not independently establish Jamie's or
 `NTER CHNG`'s inclusion.
 
+An additional artifact pass close-read two contemporaneous shared Google Docs.
+One preserves the May 2011 installation plan across software, hosting,
+fabrication, hardware, transport, network, venue, tuning, and teardown work.
+The other preserves three prompt themes, a small protected response sample,
+earlier exhibit information, and research leads from Jamie's embedded bio.
+Their URLs, phone numbers, message text, and private operational details remain
+outside the repository.
+
 ## Knowledge result
 
-Two public-safe intakes matured into:
+Four public-safe intakes matured into:
 
-- 7 bounded sources;
-- 9 proposition-level observations;
-- 2 confirmed-with-boundary claims;
+- 9 bounded sources, including 2 protected working documents;
+- 15 proposition-level observations;
+- 4 confirmed-with-boundary claims;
 - 1 held professional-throughline inference; and
 - 1 recovered research inquiry documenting both findings and gaps.
 
@@ -49,6 +57,10 @@ The strongest retained claims are:
 2. The official `America: Now and Here Kansas City` site listed the trio as
    visual artists and presented `NTER CHNG` as their work during the 2011
    Kansas City launch.
+3. A contemporaneous working plan shows that the collaborative restaging
+   required an integrated software, spatial, hardware, and production system.
+4. A protected working document preserves three open-ended participation
+   prompts and a small response sample whose identifying content is withheld.
 
 ## Boundaries
 
@@ -60,8 +72,10 @@ The bank explicitly rejects:
 - participation or impact totals;
 - a claim that the work appeared at the Nerman Museum stop;
 - a claim that the work traveled to every planned national-tour venue; and
-- republication of historical participant phone numbers printed on the
-  archived official artist page.
+- conversion of a working checklist into proof that every task was completed;
+- conversion of numbered sender lines into people or participation totals; and
+- republication of historical phone numbers, message text, shared-document
+  links, private staging details, travel details, or server custody.
 
 ## Hill-climb decision
 
@@ -78,9 +92,9 @@ fact at once.
 ## Verification
 
 - Node `v26.5.0`.
-- Knowledge-bank evaluation: 5/5 across all 19 criteria.
-- Knowledge-bank tests: 147/147 passed, including two NTER CHNG archive and
-  source-scope regression tests.
+- Knowledge-bank evaluation: 5/5 across all 23 criteria.
+- Knowledge-bank tests: 188/188 passed, including five NTER CHNG archive,
+  source-scope, protection, operational-depth, and participation-boundary tests.
 - Citation tests: 10/10 passed.
 - Launch-evaluation tests: 6/6 passed.
 - TypeScript, ESLint, Next.js production build, standalone-asset assembly,

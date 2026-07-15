@@ -41,6 +41,34 @@ interaction design, and public participation. The source itself describes the
 trio as combining scenic design, computer programming, motion graphics, and
 experiential production; it does not assign those disciplines individually.
 
+## Protected working documents
+
+Two contemporaneous Google Docs now deepen the production record without being
+published as source links.
+
+The April 2011 `NTER CHNG Installer` document identifies itself as staging the
+installation for `America: Now and Here` in May. It treats the restaging as an
+integrated production system spanning organizer communication, venue
+permissions, software reliability, hosting, wall fabrication, projectors,
+display computers, transport, networking, gallery tuning, and teardown.
+
+This is stronger evidence of operational depth, but it remains a working plan.
+It does not prove that every checklist item was completed or identify which
+collaborator performed each task.
+
+The second April 2011 working document preserves three prompt themes:
+
+- the meaning of a great American journey;
+- first encounters with art; and
+- when or through whom a person first defined themself as an artist.
+
+It also contains a small prompt-and-response sample, the earlier exhibit
+description, and an embedded artist biography. Historical phone numbers and
+message text are not retained in the public repository. Numbered sender lines
+are not treated as unique people, public participants, or a participation
+count. The biography is retained only as a lead for independent research into
+Jamie's earlier interactive-media work.
+
 ## Sources
 
 - [Archived NTER CHNG project site](https://web.archive.org/web/20110128193350/http://nterchng.com/)
@@ -54,12 +82,17 @@ experiential production; it does not assign those disciplines individually.
 ## Known / Open / Protected
 
 **Known:** collaboration, installation form, 2010 Cocoon Gallery opening, 2011
-Kansas City exhibition inclusion, and the official artist-statement framing.
+Kansas City exhibition inclusion, the official artist-statement framing, a
+contemporaneous installation-production plan, and three documented prompt
+themes.
 
-**Open:** technical architecture, individual responsibilities, complete
-installation record, participation totals, participant experience, and the
-scope of any later presentation.
+**Open:** source code, complete technical architecture, individual
+responsibilities, completion of every planned checklist task, as-built
+installation record, participation totals, participant experience, independent
+support for the embedded biography, and the scope of any later presentation.
 
 **Protected:** historical participant phone numbers printed on the archived
-artist page are not reproduced. No message corpus or participant record is
-present in the repository.
+artist page and working transcript are not reproduced. The shared-document
+links, message text, sender-to-message relationship, private staging and travel
+details, server custody, and entry phone-number details stay outside the public
+repository.
