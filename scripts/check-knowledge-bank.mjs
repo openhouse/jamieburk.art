@@ -94,6 +94,18 @@ const personalFacebookDisplayedHostCensusPath = path.join(
   docsRoot,
   "jamie-facebook-displayed-host-event-census-2026-07-14.csv"
 );
+const wowlistFacebookPostReportPath = path.join(
+  docsRoot,
+  "projects/wowlist-facebook-post-population-2026-07-14.md"
+);
+const wowlistFacebookPostLedgerPath = path.join(
+  docsRoot,
+  "data/wowlist-public-facebook-post-ledger.json"
+);
+const wowlistFacebookPostBatchPath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-batch-2026-07-14.ts"
+);
 let personalWowlistControls;
 const structuredClaimsById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
 const sourcesById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -536,6 +548,144 @@ if (!existsSync(personalWowlistFacebookEventReportPath)) {
     "Do not add a new visible portfolio claim"
   ]) {
     assertIncludes(report, phrase, "Personal and WOW List Facebook event report");
+  }
+}
+
+if (!existsSync(wowlistFacebookPostLedgerPath)) {
+  fail("WOW List Facebook post ledger is missing");
+} else {
+  const ledger = readJson(wowlistFacebookPostLedgerPath, "WOW List Facebook post ledger");
+  if (ledger) {
+    const records = Array.isArray(ledger.records) ? ledger.records : [];
+    const slotIds = records.map((record) => record.slotId);
+    const digests = records.map((record) => record.evidenceDigest);
+    const destinationUrls = [...new Set(records.flatMap((record) => record.postedDestinationUrls ?? []))];
+    const normalizedHosts = new Set(
+      destinationUrls.map((url) => new URL(url).hostname.toLowerCase().replace(/^www\./, ""))
+    );
+    const wowlistUrls = destinationUrls.filter(
+      (url) => new URL(url).hostname.toLowerCase().replace(/^www\./, "") === "wowlist.org"
+    );
+
+    assertEqual(records.length, 53, "WOW List Facebook current-post row count");
+    assertEqual(new Set(slotIds).size, 53, "WOW List Facebook unique slot-ID count");
+    assertEqual(new Set(digests).size, 53, "WOW List Facebook unique evidence-digest count");
+    assertEqual(destinationUrls.length, 30, "WOW List Facebook distinct destination-URL count");
+    assertEqual(normalizedHosts.size, 10, "WOW List Facebook normalized destination-host count");
+    assertEqual(wowlistUrls.length, 20, "WOW List Facebook WOW List destination-URL count");
+
+    for (const [index, record] of records.entries()) {
+      const expectedSlotId = `current-${String(index + 1).padStart(3, "0")}`;
+      assertEqual(record.slotId, expectedSlotId, `WOW List Facebook row ${index + 1} slot ID`);
+      if (!/^[a-f0-9]{64}$/.test(record.evidenceDigest ?? "")) {
+        fail(`WOW List Facebook ${record.slotId} lacks a valid SHA-256 evidence digest`);
+      }
+      assertEqual(
+        record.sourcePreservation,
+        "protected-capture",
+        `WOW List Facebook ${record.slotId} source preservation`
+      );
+      if (!record.publicSummary || !record.primaryTheme || !(record.stakeholderGroups?.length >= 1)) {
+        fail(`WOW List Facebook ${record.slotId} lacks a public summary, theme, or stakeholder group`);
+      }
+      for (const field of ["messages", "profiles", "labels", "buttons", "comments", "commenterIdentity", "rawText"]) {
+        if (Object.hasOwn(record, field)) {
+          fail(`WOW List Facebook ${record.slotId} exposes protected raw field ${field}`);
+        }
+      }
+    }
+
+    for (const [field, expected] of Object.entries({
+      forwardTraversalRecords: 53,
+      reverseTraversalRecords: 53,
+      forwardOnlyRecords: 0,
+      reverseOnlyRecords: 0,
+      exactSetMatch: true,
+      missionRelevantDestinationUrls: 30,
+      normalizedDestinationHostnames: 10,
+      wowlistDestinationUrls: 20,
+      currentFollowerDisplay: 185,
+      postsWithDisplayedLikes: 37,
+      currentDisplayedLikeFloor: 81,
+      largestSinglePostLikeDisplay: 13
+    })) {
+      assertEqual(ledger.accounting?.[field], expected, `WOW List Facebook accounting ${field}`);
+    }
+    if (!/not historical analytics[\s\S]*must not be used as a performance total/i.test(
+      ledger.accounting?.engagementBoundary ?? ""
+    )) {
+      fail("WOW List Facebook engagement boundary must reject historical-analytics and performance-total interpretations");
+    }
+    if (!/SHA-256[\s\S]*protected canonical record/i.test(ledger.evidenceKeyMethod ?? "")) {
+      fail("WOW List Facebook evidence-key method is missing or incomplete");
+    }
+    assertEqual(
+      ledger.hostnameNormalization,
+      "Lowercase each URL hostname and remove one leading www. before counting distinct hostnames.",
+      "WOW List Facebook hostname-normalization rule"
+    );
+    assertIncludes(
+      ledger.additionalControlBoundary ?? "",
+      "Additional protected controls did not establish a lifetime denominator",
+      "WOW List Facebook additional-control boundary"
+    );
+
+    const slotIdSet = new Set(slotIds);
+    const corpusClaims = knowledgeBank.claims.filter(
+      (claim) =>
+        claim.id.startsWith("CLM-WOWLIST-FACEBOOK-") ||
+        claim.id === "CLM-JAMIE-WOWLIST-SOCIAL-MANAGEMENT-MEMORY"
+    );
+    for (const claim of corpusClaims) {
+      for (const evidence of claim.evidence) {
+        for (const locator of evidence.locator?.match(/current-\d{3}/g) ?? []) {
+          if (!slotIdSet.has(locator)) {
+            fail(`${claim.id} references unknown WOW List Facebook locator ${locator}`);
+          }
+        }
+      }
+    }
+  }
+}
+
+if (!existsSync(wowlistFacebookPostReportPath)) {
+  fail("WOW List Facebook post archival-production report is missing");
+} else {
+  const report = read(wowlistFacebookPostReportPath);
+  for (const phrase of [
+    "Complete current-surface accounting; partial historical recovery",
+    "SHA-256 evidence digest",
+    "not a native Meta export",
+    "outbound civic routing",
+    "retrieval-state snapshot",
+    "Jamie recalls managing WOW List's social presence",
+    "retrieval hypotheses, not identity",
+    "Do not add a new visible portfolio claim"
+  ]) {
+    assertIncludes(report, phrase, "WOW List Facebook post report");
+  }
+  if (/Jamie retains authenticated Page access|community-governed event/i.test(report)) {
+    fail("WOW List Facebook post report exposes account access or overstates community governance");
+  }
+}
+
+if (existsSync(wowlistFacebookPostBatchPath) && existsSync(wowlistFacebookPostLedgerPath) && existsSync(wowlistFacebookPostReportPath)) {
+  const publicArtifactText = [
+    read(wowlistFacebookPostBatchPath),
+    read(wowlistFacebookPostLedgerPath),
+    read(wowlistFacebookPostReportPath)
+  ].join("\n");
+  const semanticOverclaimPatterns = [
+    /community[- ]govern(?:ed|ance)|member[- ]led/i,
+    /\bmembers?\b.{0,80}\b(?:provided?|gave|contributed|offered|submitted|shared|supplied)\b.{0,80}\b(?:input|feedback)\b.{0,120}\b(?:product|design|platform|service)\b/is,
+    /\bmember (?:input|feedback)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,100}\b(?:product|design|platform|service)\b/is,
+    /\b(?:product|design|platform|service)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,80}\bby members?\b/is,
+    /\bauthenticated (?:Page )?access|current authenticated|current-session|comment as|Professional Dashboard|Meta Business Suite|asset-scoped\b/i,
+    /\bcurrent\b.{0,60}\b(?:Page )?(?:administrator|admin|manager|account-management|account management)\b.{0,80}\b(?:details?|roles?|state|status|access|control|identity)\b.{0,80}\b(?:visible|observed|available|shown|recovered|confirmed)\b/is,
+    /\b(?:current session|account|Page)\b.{0,80}\b(?:showed|displayed|revealed|confirmed)\b.{0,100}\b(?:admin(?:istrator|ister)?|manage(?:ment|r)?|comment as|Page role|account role)\b/is
+  ];
+  if (semanticOverclaimPatterns.some((pattern) => pattern.test(publicArtifactText))) {
+    fail("WOW List Facebook public artifacts contain overbroad governance, participation, or account-state wording");
   }
 }
 

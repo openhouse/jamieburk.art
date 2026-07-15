@@ -156,6 +156,14 @@ const urbanHermitPublicLedgerFiles = publicSocialLedgerFiles.filter((file) =>
 const nycartcFacebookEventLedgerFiles = publicSocialLedgerFiles.filter((file) =>
   /nycartc-public-facebook-event.*\.json$/i.test(relative(file))
 );
+const wowlistFacebookPostLedgerFiles = publicSocialLedgerFiles.filter((file) =>
+  /wowlist-public-facebook-post-ledger\.json$/i.test(relative(file))
+);
+const wowlistFacebookArtifactFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/wowlist-facebook-posts-batch-2026-07-14\.ts|docs\/knowledge-bank\/(?:data\/wowlist-public-facebook-post-ledger\.json|projects\/wowlist-facebook-post-population-2026-07-14\.md))$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -219,6 +227,24 @@ scanPattern(
   nycartcFacebookEventLedgerFiles,
   "public Facebook event ledger exposes raw participant, description, private-metric, meeting-access, or account-admin fields",
   /"(?:detailsText|fullText|guestIdentities|attendeeIdentities|friendContext|inviteContext|comments|reactions|profileUrl|email|phone|meetingUrl|zoomUrl|passcode|dialIn|accountAdmin|workingDocumentUrl|privateAnalytics)"\s*:/i
+);
+
+scanPattern(
+  wowlistFacebookPostLedgerFiles,
+  "public WOW List Facebook post ledger exposes raw capture, comment, private-metric, or account-admin fields",
+  /"(?:messages|profiles|labels|buttons|comments|commentText|commenterIdentity|fullText|rawText|privateAnalytics|accountAdmin|authenticatedAccount)"\s*:/i
+);
+
+scanPattern(
+  wowlistFacebookArtifactFiles,
+  "WOW List Facebook public artifact exposes current account-state detail",
+  /authenticated (?:Page )?access|current authenticated|current-session|comment as|Professional Dashboard|Meta Business Suite|asset-scoped|\bcurrent\b.{0,60}\b(?:Page )?(?:administrator|admin|manager|account-management|account management)\b.{0,80}\b(?:details?|roles?|state|status|access|control|identity)\b.{0,80}\b(?:visible|observed|available|shown|recovered|confirmed)|\b(?:current session|account|Page)\b.{0,80}\b(?:showed|displayed|revealed|confirmed)\b.{0,100}\b(?:admin(?:istrator|ister)?|manage(?:ment|r)?|comment as|Page role|account role)/is
+);
+
+scanPattern(
+  wowlistFacebookArtifactFiles,
+  "WOW List Facebook public artifact turns a participation invitation into demonstrated member input",
+  /\bmembers?\b.{0,80}\b(?:provided?|gave|contributed|offered|submitted|shared|supplied)\b.{0,80}\b(?:input|feedback)\b.{0,120}\b(?:product|design|platform|service)\b|\bmember (?:input|feedback)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,100}\b(?:product|design|platform|service)\b|\b(?:product|design|platform|service)\b.{0,80}\b(?:shap(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined)\b.{0,80}\bby members?\b/is
 );
 
 scanPattern(

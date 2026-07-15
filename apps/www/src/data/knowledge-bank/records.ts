@@ -12,6 +12,7 @@ import {
 } from "./urbanhermitSocial.ts";
 import { nycartcFacebookEventsBatchRecords } from "./nycartc-facebook-events-batch-2026-07-13.ts";
 import { personalWowlistFacebookEventsBatch } from "./personal-wowlist-facebook-events-batch-2026-07-14.ts";
+import { wowlistFacebookPostsBatch } from "./wowlist-facebook-posts-batch-2026-07-14.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -587,7 +588,8 @@ const knowledgeBankInput = {
     ...campaignPressIntakeRecords,
     ...urbanHermitSocialCorpusIntake,
     ...nycartcFacebookEventsBatchRecords.intakeRecords,
-    ...personalWowlistFacebookEventsBatch.intakeRecords
+    ...personalWowlistFacebookEventsBatch.intakeRecords,
+    ...wowlistFacebookPostsBatch.intakeRecords
   ],
   sources: [
     {
@@ -1663,7 +1665,8 @@ const knowledgeBankInput = {
     ...campaignPressSources,
     ...urbanHermitSocialCorpusSources,
     ...nycartcFacebookEventsBatchRecords.sources,
-    ...personalWowlistFacebookEventsBatch.sources
+    ...personalWowlistFacebookEventsBatch.sources,
+    ...wowlistFacebookPostsBatch.sources
   ],
   claims: [
     {
@@ -2262,12 +2265,14 @@ const knowledgeBankInput = {
     ...campaignPressClaims,
     ...urbanHermitSocialCorpusClaims,
     ...nycartcFacebookEventsBatchRecords.claims,
-    ...personalWowlistFacebookEventsBatch.claims
+    ...personalWowlistFacebookEventsBatch.claims,
+    ...wowlistFacebookPostsBatch.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
     ...nycartcFacebookEventsBatchRecords.researchInquiries,
     ...personalWowlistFacebookEventsBatch.researchInquiries,
+    ...wowlistFacebookPostsBatch.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",
