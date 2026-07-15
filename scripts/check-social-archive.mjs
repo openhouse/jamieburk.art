@@ -345,6 +345,18 @@ for (const [claimId, surface] of activeClaims) {
   expect(page?.occurrences.some((occurrence) => occurrence.claimId === claimId), `${claimId} is not registered on ${surface}`);
 }
 
+const wowListScaleClaim = claimById.get("CLM-WOWLIST-HISTORICAL-SCALE");
+const wowListPublicThresholdTexts = [
+  ...wowListScaleClaim.projections.map(({ text }) => text),
+  ...knowledgeBank.researchInquiries
+    .filter(({ project }) => project === "wowlist")
+    .map(({ publicSummary }) => publicSummary)
+].filter((text) => text?.includes("35+"));
+expect(wowListPublicThresholdTexts.length >= 7, "WOW List public threshold contract lost expected projections or summaries");
+for (const text of wowListPublicThresholdTexts) {
+  expect(/(?:at least 50|50\+) geocoded posts\/events/i.test(text), `WOW List public 35+ wording lost its numeric threshold: ${text}`);
+}
+
 const establishment = claimById.get("CLM-PROJECT-SOCIAL-IDENTITY-ESTABLISHMENT");
 expect(establishment?.projections.every(({ status, surfaces }) => status === "hold" && surfaces.length === 0), "Account-establishment memory escaped its hold");
 const establishmentCandidate = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-PROJECT-SOCIAL-IDENTITY-ESTABLISHMENT");

@@ -554,10 +554,10 @@ export const socialArchiveClaims: ClaimRecord[] = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "case-study", text: "Archived production records support 1,800+ users, 16,000+ posts/events, and 35+ city scenes that each met a historical threshold of at least 50 geocoded posts/events. These are historical aggregate records, not official chapters, current activity, or a complete adoption census.", status: "active", citationRequired: true, surfaces: ["/work/wowlist"] },
-      { key: "homepage", text: "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a conservative historical threshold.", status: "active", citationRequired: false, surfaces: ["/"] },
-      { key: "resume-html", text: "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a conservative historical threshold.", status: "active", citationRequired: false, surfaces: ["/resume"] },
+      { key: "homepage", text: "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a historical threshold of at least 50 geocoded posts/events.", status: "active", citationRequired: false, surfaces: ["/"] },
+      { key: "resume-html", text: "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a historical threshold of at least 50 geocoded posts/events.", status: "active", citationRequired: false, surfaces: ["/resume"] },
       { key: "resume-pdf", text: "Jamie co-built WOWList with Richard Caceres; historical production records show use across 35+ city scenes, each with at least 50 geocoded posts/events.", status: "active", citationRequired: false, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] },
-      { key: "technical-operations", text: "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a conservative historical threshold.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
+      { key: "technical-operations", text: "WOWList supported 1,800+ historical users, 16,000+ historical posts/events, and use across 35+ city scenes that each met a historical threshold of at least 50 geocoded posts/events.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
       { key: "work-card", text: "Historical records show WOWList use across 35+ city scenes, each with 50+ geocoded posts/events.", status: "active", citationRequired: false, surfaces: ["/work"] }
     ],
     evidence: [
@@ -660,7 +660,7 @@ export const socialArchiveResearchInquiries: ResearchInquiry[] = [
     findings: ["The latest analyzed snapshot contains 1,846 users and 16,142 posts/events.", "Thirty-five city/region entries contained at least 50 geocoded posts/events, the selected conservative active-scene threshold.", "Broader geographic coverage exists but is deliberately excluded from the public scale claim."],
     limitations: ["The analysis does not establish current availability, official chapters, unique active humans, or Jamie's sole causation of adoption.", "The underlying database contains protected user, contact, geolocation, and community records that must not enter the public repository."],
     sourceIds: ["SRC-WOWLIST-PRODUCTION-ARCHIVE-ANALYSIS-2026-07-15"],
-    publicSummary: "A protected production-database analysis supports a bounded historical scale claim: 1,800+ historical users, 16,000+ historical posts/events, and 35+ city scenes that each met a documented conservative historical threshold."
+    publicSummary: "A protected production-database analysis supports a bounded historical scale claim: 1,800+ historical users, 16,000+ historical posts/events, and 35+ city scenes that each met a documented historical threshold of at least 50 geocoded posts/events."
   },
   {
     id: "INQ-SOCIAL-WOWLIST-ARCHIVE",
