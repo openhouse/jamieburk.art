@@ -5,6 +5,7 @@ import test from "node:test";
 
 import {
   FROZEN_COLLECTIVE_BASELINE_TAG,
+  FROZEN_COLLECTIVE_BASELINE_TAG_OBJECT,
   collectiveCreditFingerprint,
   documentRealizesProjection,
   evaluateKnowledgeBank,
@@ -112,6 +113,11 @@ test("reviewed credit, projection, and public-surface inventories are current", 
 
 test("the frozen collective-credit baseline is pinned by an external annotated tag", () => {
   const path = ".agents/evals/baselines/collective-credit-v1.json";
+  const tagObject = execFileSync(
+    "git",
+    ["rev-parse", FROZEN_COLLECTIVE_BASELINE_TAG],
+    { encoding: "utf8" }
+  ).trim();
   const tagType = execFileSync(
     "git",
     ["cat-file", "-t", FROZEN_COLLECTIVE_BASELINE_TAG],
@@ -132,6 +138,7 @@ test("the frozen collective-credit baseline is pinned by an external annotated t
   }).trim();
 
   assert.equal(tagType, "tag");
+  assert.equal(tagObject, FROZEN_COLLECTIVE_BASELINE_TAG_OBJECT);
   assert.equal(currentBlob, anchoredBlob);
 });
 

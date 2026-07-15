@@ -15,6 +15,8 @@ const frozenCollectiveBaselinePath =
 const workDataPath = "apps/www/src/data/work.ts";
 export const FROZEN_COLLECTIVE_BASELINE_TAG =
   "refs/tags/knowledge-bank-policy-baseline-2026-07-15-v1";
+export const FROZEN_COLLECTIVE_BASELINE_TAG_OBJECT =
+  "ea89976bf5a30da9efa20f45bb112392cf5a4522";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
 const publicProjectionKeys = new Set([
   "case-study",
@@ -204,6 +206,11 @@ export function validateHybridReportCandidate(report) {
   }
 
   try {
+    const tagObject = execFileSync(
+      "git",
+      ["rev-parse", FROZEN_COLLECTIVE_BASELINE_TAG],
+      { encoding: "utf8" }
+    ).trim();
     execFileSync("git", ["cat-file", "-e", `${report.candidate_sha}^{commit}`], {
       stdio: "ignore"
     });
@@ -1487,7 +1494,11 @@ export function evaluateKnowledgeBank(
       ["hash-object", frozenCollectiveBaselinePath],
       { encoding: "utf8" }
     ).trim();
-    if (tagType !== "tag" || anchoredBlob !== currentBlob) {
+    if (
+      tagType !== "tag" ||
+      tagObject !== FROZEN_COLLECTIVE_BASELINE_TAG_OBJECT ||
+      anchoredBlob !== currentBlob
+    ) {
       findings["KB-007"].push(
         "collective-credit baseline differs from its externally tagged Git anchor"
       );

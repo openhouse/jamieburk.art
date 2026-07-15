@@ -74,7 +74,9 @@ Deterministic checks govern the collective-credit inventory, runtime renderers,
 projection routes, public surfaces, and every visible resume block. The frozen
 policy baseline is pinned to the annotated Git tag
 `knowledge-bank-policy-baseline-2026-07-15-v1`; ordinary branch commits cannot
-silently rewrite that tagged object.
+silently rewrite that tagged object. The evaluator also pins the annotated tag
+object ID, and the tag is published to `origin` so a clean clone or CI checkout
+can reproduce the same baseline without local state.
 
 This is a drift detector, not a substitute for judgment. A candidate patch
 cannot grade its own semantics, so `KB-007` and `KB-009` also require two
