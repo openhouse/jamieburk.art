@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "collectiveClaimsSha256": "6124c5dc3724444922e72ca608c0e9af2ca1ad4ca13b877e2cc31ec901235050",
+  "collectiveClaimsSha256": "9dc133285ce87f2b0c89414597a33a17687bfc8a6deb04c37d30fd181d761635",
   "collectiveRuntimeSha256": "11002467b28224658561af6b7365170b5aec4f4f3b2895b78551f4bc73e60fba",
   "collectiveRuntimeFiles": [
     "apps/www/mdx-components.tsx",
@@ -51,7 +51,8 @@
       "collectiveClaims": [
         "CLM-WATER-RAFT-CONCEPT",
         "CLM-WATER-GULF-ROUTE",
-        "CLM-WATER-PARTICIPATORY-THROUGHLINE"
+        "CLM-WATER-PARTICIPATORY-THROUGHLINE",
+        "CLM-WATER-FACEBOOK-PLANNING-SENDOFF"
       ],
       "individualClaims": [
         "CLM-WATER-GREAT-ACCOMMODATIONS"
