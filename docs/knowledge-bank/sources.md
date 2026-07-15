@@ -204,3 +204,33 @@ routes. Protected research records retain traversal provenance. Exact home
 addresses, phone numbers, guests, comments, invite context, raw event bodies,
 account administration, local archive paths, and session state remain outside
 the repository.
+
+## WOW List Facebook Posts
+
+The [full-population report](projects/wowlist-facebook-posts.md) and
+[57-row public-safe fixture](../../apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json)
+keep three evidence jobs distinct:
+
+- a protected terminal 19-page capture establishes the recovered 57-record
+  population, chronology, source relationships, and posted-URL inputs;
+- an authenticated manager-only audit gives all 57 identities a live and
+  publisher-attribution disposition; and
+- the public-safe fixture exposes population arithmetic, classifications,
+  public routes, selected organization source names, and protected-input
+  digests without publishing raw messages, comments, contacts, ordinary
+  individual source-account names, administration state, or local paths.
+
+`SRC-WOWLIST-FACEBOOK-PUBLISHER-AUDIT-2026-07-15` supports a 51-record Jamie
+publisher-attribution result. It does not resolve the remaining six records or
+establish sole ownership, attached-source authorship, or cross-platform social
+management. `SRC-WOWLIST-META-CONTENT-LIBRARY-GAP-2026-07-15` preserves the
+separate fact that Meta's displayed Lifetime management range begins in 2019,
+after the recovered 2015-2018 population; its zero-state is not a historical
+negative.
+
+Selected close-read sources include East Bay Express on Ghost Ship and safe
+underground spaces, Willamette Week on The Know's closure, pehrspace's public
+relocation fundraiser, Denver Westword on DIY-space funding, and the existing
+Meow Wolf and participant-tutorial records. These establish the account's
+source trail and context, not reciprocal endorsement or outcomes caused by a
+WOW List post.

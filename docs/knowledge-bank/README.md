@@ -161,3 +161,13 @@ routes while excluding participant identities, raw descriptions, contacts,
 credentials, and authenticated-session data. The hiring site receives only
 separately governed participation-system and response-signal claims; no event
 or knowledge-bank route is created.
+
+The [WOW List Facebook post archival-production
+report](projects/wowlist-facebook-posts.md) accounts for all 57 records in a
+terminal 19-page protected capture and gives each a public-safe content, live,
+and publisher-attribution disposition. The manager-only audit attributes 51
+records to Jamie, attributes none to another publisher, and leaves six
+unresolved. Its public fixture inventories operating patterns and 65 distinct
+public posted URLs without republishing raw messages, contacts, ordinary
+individual source accounts, comments, or account administration. The resulting
+claims remain reserve knowledge rather than automatic website copy.

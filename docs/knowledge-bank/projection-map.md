@@ -87,3 +87,12 @@ copy to the hiring website and do not authorize `/proofs`, `/events`,
 `/knowledge-bank`, or another public archive route. Future website use must
 select a governed claim for a specific audience and preserve cohost,
 response-label, shared-account, and current-zero-state boundaries.
+
+The WOW List Facebook post ledger is also reserve material. Its active
+projections resolve only to
+`docs/knowledge-bank/projects/wowlist-facebook-posts.md`. The 51-of-57 Jamie
+publisher-attribution result may support a future role sentence only after a
+specific audience-and-purpose decision. Any projection must preserve six
+unresolved records, attached-source authorship, Richard Caceres's shared
+project credit, the Facebook-only scope, and the absence of a stable
+full-population engagement dataset.

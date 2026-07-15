@@ -223,3 +223,14 @@ WOWList zero-state separately from two externally hosted event routes in the
 preserved page-post corpus. Neither intake creates a public archive route, and
 residential, contact, participant, comment, administration, and session data
 remain protected.
+
+The WOW List Facebook post pass is now `integrated` as
+`INTAKE-WOWLIST-FACEBOOK-POSTS-2026-07-15`. It gives all 57 records in the
+terminal 19-page protected capture a public-safe census and live disposition,
+associates 51 manager-only Jamie publisher labels with the recovered corpus,
+keeps six publisher attributions unresolved, inventories 65 distinct public
+URLs, and develops bounded operating-practice and care-infrastructure claims.
+The intake does not assign attached-source authorship, erase Richard Caceres's
+shared project credit, infer cross-platform control, or publish an engagement
+total. It remains non-projecting until a separate hiring-site composition
+decision calls for one of its governed claims.
