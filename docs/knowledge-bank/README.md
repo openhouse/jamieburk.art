@@ -105,3 +105,18 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+## KC Spaces Fund Facebook Posts
+
+The July 14, 2026 authenticated pass reconciled the same 37 Page-level records
+across two independently paced traversals of KC Spaces Fund's currently
+recoverable 2020 Facebook timeline. The Page corpus is campaign voice, not
+evidence that Jamie authored its posts. It preserves 12 named support
+announcements, mission and action routes, a dated mutable reaction snapshot,
+and one bounded grantee-response specimen.
+
+Separate implementation evidence supports Jamie's behind-the-scenes digital
+role across the campaign site, theme, fundraising widget, deployment, and web
+affordances. His naming contribution remains an attributed memory: the public
+identity is uniform, but uniformity alone does not identify the decision-maker.
+See the [research note](research/kcspacesfund-facebook-posts-archival-production-2026-07.md).

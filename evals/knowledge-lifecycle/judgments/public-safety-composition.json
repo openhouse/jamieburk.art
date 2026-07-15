@@ -1,8 +1,8 @@
 {
-  "judgeId": "public-safety-nycartc-facebook",
+  "judgeId": "public-safety-kcspaces-facebook",
   "lens": "public-safety-composition",
-  "candidate": "sha256:4eb42a1218455d63327fe7a63bc42dd25a41e256b3c51f198fe77783e3820178",
-  "contract": "sha256:ac0e0ed8780b46455b8a42f1dffea3376f04544eb69d373824bfdb5052e21715",
+  "candidate": "sha256:ca1aa2dabcd4105242d82d63e47a04655204fbc7c7404626312b3eae1045dc43",
+  "contract": "sha256:ec04b9aae2b34ba6cbbb4f9c8de937b4e70bd8ec19c86b834f01075f38b81b52",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,37 +17,41 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The candidate now defines a reproducible fingerprint preimage: each exact unnormalized UTF-8 records[].key value, one per line, ascending bytewise order under LC_ALL=C, LF delimiters, final LF, and one occurrence for each of 444 unique retained keys. Both traversal controls retain the same SHA-256 digest, distinct terminal counts, and exact-set-match status."
+      "observation": "Two independently paced traversals reconcile the same 37 currently recoverable Page-level records, with explicit denominator, terminal controls, full disposition, and lifetime-population exclusions."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The reproducibility metadata strengthens only the private corpus source. Corpus evidence, Page-management evidence, content-control evidence, first-person memory, posted-URL leads, public posts, and destination sources remain separately modeled with explicit support and non-support boundaries."
+      "observation": "The corpus, route inventory, campaign pages, fundraiser, press, print artifact, response specimen, implementation archive, naming recollection, and non-poster statement are distinct sources with explicit support and non-support boundaries."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Population reconciliation, participation routing, stakeholder routing, mutable interaction totals, URL routing, and Jamie's attributed publishing-role recollection remain atomic claims with targeted anti-claims."
+      "observation": "Population, campaign practice, announcement count, mutable reactions, bounded stakeholder response, route inventory, fundraising outcome, digital operations, and naming support remain separate claims."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The source record, public-safe control file, contract digest, research note, lifecycle validator, and tests now agree on the fingerprint and its canonical construction. Tests enforce both traversal digests and the complete preimage specification."
+      "observation": "Jamie's implementation role is supported by site, theme, widget, deployment, and launch records. His non-poster statement now has a dedicated first-party intake and source linked to the role claim and inquiry."
     },
     {
       "rubric": "status_separation",
-      "observation": "All Facebook-post claims remain internal-only without active projections. Current management access, Jamie's use-with-care recollection, shared coalition use, and unresolved individual post authorship remain distinct."
+      "observation": "The ProjectRecord and dossier distinguish documented implementation work from Jamie's attributed naming recollection. Uniform public identifiers corroborate only the identity outcome."
     },
     {
       "rubric": "project_context",
-      "observation": "The reproducibility control is integrated into a dossier that preserves the Page's collective participation, campaign, civic-routing, source-discovery, and cultural-infrastructure context."
+      "observation": "The dossier preserves campaign purpose, named organizers, fiscal sponsorship, operating system, Jamie's bounded role, corpus findings, research queue, and protected-material boundaries."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The matching digest establishes equality of the two captured identity sets under a documented procedure. It is not presented as proof of a lifetime population, native export, deletion history, human authorship, stakeholder engagement, reach, endorsement, causality, or impact."
+      "observation": "The candidate distinguishes current recoverability from historical completeness, announcements from payment proof, reactions from impact, routes from endorsement, and first-person statements from publisher ledgers."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The repository contains only a non-identifying digest, its reproducible construction, aggregate controls, and selected public sources. Raw keys, record-level metrics, comments, authenticated artifacts, and relationship data remain outside the repository behind opaque locators."
+      "observation": "All new claims remain internal-only with no active projections; mutable metrics, relational evidence, unresolved leads, and private artifacts remain outside public composition."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "All 62 lifecycle tests pass, including adversarial checks for population inflation, role inflation, Page-author attribution, engagement-to-impact conversion, URL-to-endorsement conversion, and sole naming credit."
     }
   ],
   "regressions": [],
-  "nextAction": "On any future archive refresh, independently recompute both private-artifact fingerprints using this canonical preimage and record a new observation date rather than carrying the current digest forward."
+  "nextAction": "Seek a collaborator proof note or contemporaneous naming record while retaining first-person attribution for the naming contribution."
 }

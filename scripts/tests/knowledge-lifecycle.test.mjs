@@ -1053,6 +1053,108 @@ test("NYC Artist Coalition Facebook eval keeps counters and posted URLs out of i
   assert.equal(result.findings.some((item) => item.code === "nycartc-facebook-posted-url-boundary"), true);
 });
 
+test("KC Spaces Fund Facebook production reconciles the complete current Page-level surface", () => {
+  const required = suite.requiredKcSpacesFundFacebookPosts;
+  const controls = JSON.parse(readFileSync(required.controlPath, "utf8"));
+  assert.equal(controls.publicTimeline.traversalPasses, 2);
+  assert.equal(controls.publicTimeline.distinctScrollCadences, true);
+  assert.equal(controls.publicTimeline.exactClassificationSetMatchAcrossPasses, true);
+  assert.equal(controls.publicTimeline.retainedPagePosts, required.currentPostCount);
+  assert.equal(controls.publicTimeline.textBearingPosts, required.textBearingPostCount);
+  assert.equal(controls.publicTimeline.noMessageAttachmentShells, required.attachmentShellCount);
+  assert.equal(controls.publicTimeline.photoBearingPosts, required.photoBearingPostCount);
+  assert.equal(controls.namedGranteeOrDisbursementAnnouncements.count, required.granteeAnnouncementCount);
+  assert.equal(controls.currentVisibleReactionSnapshot.postsWithVisibleReactions, required.postsWithVisibleReactions);
+  assert.equal(controls.currentVisibleReactionSnapshot.reactions, required.visibleReactions);
+  assert.equal(controls.currentVisibleReactionSnapshot.like, required.visibleLikes);
+  assert.equal(controls.currentVisibleReactionSnapshot.love, required.visibleLoves);
+  assert.equal(controls.currentProfileDisplay.followers, required.followerDisplay);
+  assert.equal(controls.postedUrlInventory.uniqueNormalizedRouteStrings, required.uniqueRouteStrings);
+  assert.equal(controls.postedUrlInventory.domainCount, required.routeDomainCount);
+  assert.equal(controls.roleControls.digitalOperationsArchive.siteCommitsAuthoredByJamie, 73);
+  assert.equal(controls.roleControls.digitalOperationsArchive.fundraisingWidgetCommitsAuthoredByJamie, 10);
+  assert.equal(controls.roleControls.digitalOperationsArchive.campaignThemeCommitsAuthoredByJamie, 34);
+  assert.equal(controls.roleControls.nonPosterRoleMemory.status, "attributed-first-party");
+  assert.equal(controls.roleControls.nonPosterRoleMemory.sourceId, required.nonPosterMemorySourceId);
+  assert.equal(controls.privateArtifactId, "kcspacesfund-facebook-public-post-census-2026-07-14");
+});
+
+test("KC Spaces Fund records preserve campaign voice, organizer credit, and distinct Jamie role evidence", () => {
+  const required = suite.requiredKcSpacesFundFacebookPosts;
+  assert.ok(knowledgeBank.projects.find((item) => item.id === required.projectId));
+  for (const id of required.sourceIds) assert.ok(knowledgeBank.sources.find((item) => item.id === id), id);
+  for (const id of required.claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === id);
+    assert.ok(claim, id);
+    assert.equal(claim.publicationStatus, "internal-only");
+    assert.equal(claim.projections.some((projection) => projection.status === "active"), false);
+  }
+  const operations = knowledgeBank.claims.find((item) => item.id === required.digitalOperationsClaimId);
+  const naming = knowledgeBank.claims.find((item) => item.id === required.namingClaimId);
+  assert.match(operations.internalClaim, /behind-the-scenes digital infrastructure/i);
+  assert.match(operations.boundaries.join(" "), /Public organizer credit remains/i);
+  assert.match(operations.antiClaims.join(" "), /Facebook posts/i);
+  assert.equal(operations.evidence.some((item) => item.sourceId === required.nonPosterMemorySourceId), true);
+  assert.equal(naming.status, "use-with-care");
+  assert.match(naming.internalClaim, /recalls supporting selection/i);
+  assert.match(naming.internalClaim, /not the decision-maker/i);
+  assert.deepEqual(naming.evidence.map((item) => item.sourceId), [
+    required.namingMemorySourceId,
+    required.siteSourceId
+  ]);
+});
+
+test("KC Spaces Fund eval rejects population, engagement, stakeholder, and role inflation", () => {
+  const required = suite.requiredKcSpacesFundFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const population = bank.claims.find((item) => item.id === required.populationClaimId);
+  const engagement = bank.claims.find((item) => item.id === required.engagementClaimId);
+  const stakeholder = bank.claims.find((item) => item.id === required.stakeholderClaimId);
+  const operations = bank.claims.find((item) => item.id === required.digitalOperationsClaimId);
+  population.internalClaim = "KC Spaces Fund published exactly 37 Facebook posts in its history.";
+  population.boundaries = [];
+  population.antiClaims = [];
+  engagement.publicationStatus = "public";
+  engagement.editorialStatus = "active";
+  engagement.projections = [{
+    key: "technical-operations",
+    text: "The campaign reached 117 people and proved public impact.",
+    status: "active",
+    citationRequired: true,
+    surfaces: ["/work/technical-operations"]
+  }];
+  engagement.boundaries = [];
+  stakeholder.internalClaim = "Kansas City's arts institutions endorsed the campaign.";
+  stakeholder.boundaries = [];
+  stakeholder.antiClaims = [];
+  operations.internalClaim = "Jamie organized KC Spaces Fund, authored its Facebook voice, and ran the fundraiser.";
+  operations.boundaries = [];
+  operations.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kcspaces-facebook-population-claim"), true);
+  assert.equal(result.findings.some((item) => item.code === "kcspaces-facebook-projection-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "kcspaces-facebook-engagement-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "kcspaces-facebook-stakeholder-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "kcspaces-digital-role-boundary"), true);
+});
+
+test("KC Spaces Fund eval keeps posted URLs and naming uniformity out of proof and sole-credit claims", () => {
+  const required = suite.requiredKcSpacesFundFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const routing = bank.claims.find((item) => item.id === required.urlClaimId);
+  const naming = bank.claims.find((item) => item.id === required.namingClaimId);
+  routing.internalClaim = "Every linked source was true and every linked organization endorsed the campaign.";
+  routing.boundaries = [];
+  routing.antiClaims = [];
+  naming.status = "confirmed";
+  naming.internalClaim = "Jamie alone named KC Spaces Fund because the handles and domain match.";
+  naming.boundaries = [];
+  naming.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kcspaces-facebook-posted-url-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "kcspaces-naming-role-boundary"), true);
+});
+
 test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {
   const required = suite.requiredGoogleDriveArchiveProduction;
   for (const sourceId of required.sourceIds) {

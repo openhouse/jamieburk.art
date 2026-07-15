@@ -235,13 +235,14 @@ claim beyond the wording and guardrails here.
 **Evidence class:** Public source / public-safe archive summary / AI-assisted archival review
 **Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 **Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.
+**Archival depth:** A July 14, 2026 authenticated pass reconciled 37 currently recoverable Page-level Facebook posts and separately reviewed the surviving site, theme, widget, deployment, and launch-operation archive. The Facebook Page is campaign voice, not Jamie authorship evidence. Jamie's naming-support recollection remains attributed pending collaborator or contemporaneous-record corroboration.
 **Where to project:** Technical Operations. Future resume or case-study use requires Jamie review and, if public organizer framing changes, collaborator confirmation.
 **Why it matters:** Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.
 **Guardrail:** Treat the source as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical and operational support language only.
 **Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
 **Protected boundaries:** Applicant or grantee materials, donor/list exports, subscriber data, payment-request files, credentials/login sheets, billing/payment details, raw email archives, raw text-message archives, private Drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
 **Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-14
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 

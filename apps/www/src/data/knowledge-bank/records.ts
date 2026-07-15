@@ -50,6 +50,13 @@ import {
   nycArtcFacebookPostSources
 } from "./nycartc-facebook-posts-archive-production.ts";
 import {
+  kcSpacesFundFacebookPostClaims,
+  kcSpacesFundFacebookPostIntakes,
+  kcSpacesFundFacebookPostResearchInquiries,
+  kcSpacesFundFacebookPostSources,
+  kcSpacesFundProject
+} from "./kcspacesfund-facebook-posts-archive-production.ts";
+import {
   campaignPressCollections,
   campaignPressIntakes,
   campaignPressSources
@@ -67,6 +74,7 @@ import {
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...kcSpacesFundFacebookPostIntakes,
     ...nycArtcFacebookPostIntakes,
     ...wowlistFacebookPostIntakes,
     ...googleDriveArchiveIntakes,
@@ -601,6 +609,7 @@ const knowledgeBankInput = {
     }
   ],
   projects: [
+    kcSpacesFundProject,
     ...socialArchiveProjects,
     ...icloudArchiveProjects,
     kcTownHallProject,
@@ -668,6 +677,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...kcSpacesFundFacebookPostSources,
     ...nycArtcFacebookPostSources,
     ...wowlistFacebookPostSources,
     ...googleDriveArchiveSources,
@@ -843,6 +853,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...kcSpacesFundFacebookPostClaims,
     ...nycArtcFacebookPostClaims,
     ...wowlistFacebookPostClaims,
     ...nycArtcFacebookEventClaims,
@@ -961,6 +972,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...kcSpacesFundFacebookPostResearchInquiries,
     ...nycArtcFacebookPostResearchInquiries,
     ...wowlistFacebookPostResearchInquiries,
     ...googleDriveArchiveResearchInquiries,

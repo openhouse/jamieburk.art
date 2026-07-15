@@ -1583,6 +1583,215 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredKcSpacesFundFacebookPosts) {
+    const required = suite.requiredKcSpacesFundFacebookPosts;
+    if (!projectIds.has(required.projectId)) {
+      add("project_context", "missing-kcspaces-project", `Missing ${required.projectId}`);
+    }
+    for (const id of required.intakeIds) {
+      if (!intakeIds.has(id)) add("capture_integrity", "missing-kcspaces-facebook-intake", `Missing ${id}`);
+    }
+    for (const id of required.sourceIds) {
+      if (!sourceIds.has(id)) add("source_decomposition", "missing-kcspaces-facebook-source", `Missing ${id}`);
+    }
+    for (const id of required.claimIds) {
+      if (!claimIds.has(id)) add("provenance_closure", "missing-kcspaces-facebook-claim", `Missing ${id}`);
+    }
+    for (const id of required.inquiryIds) {
+      if (!inquiryIds.has(id)) add("research_honesty", "missing-kcspaces-facebook-inquiry", `Missing ${id}`);
+    }
+
+    const corpusIntake = bank.intakeItems.find((item) => item.id === required.corpusIntakeId);
+    const operationsIntake = bank.intakeItems.find((item) => item.id === required.digitalOperationsIntakeId);
+    const memoryIntake = bank.intakeItems.find((item) => item.id === required.namingMemoryIntakeId);
+    const nonPosterMemoryIntake = bank.intakeItems.find((item) => item.id === required.nonPosterMemoryIntakeId);
+    for (const intake of [corpusIntake, operationsIntake, memoryIntake, nonPosterMemoryIntake]) {
+      if (
+        !intake ||
+        intake.sensitivity === "public-safe" ||
+        intake.availability !== "local-private" ||
+        !intake.protectedLocatorId ||
+        intake.submittedUrl
+      ) {
+        add("projection_restraint", "kcspaces-private-intake-boundary", `${intake?.id ?? "missing intake"} exposes protected role or corpus evidence`);
+      }
+    }
+
+    const corpusSource = sourceById.get(required.corpusSourceId);
+    const urlInventory = sourceById.get(required.urlInventorySourceId);
+    const operationsSource = sourceById.get(required.digitalOperationsSourceId);
+    const namingSource = sourceById.get(required.namingMemorySourceId);
+    const nonPosterSource = sourceById.get(required.nonPosterMemorySourceId);
+    if (
+      !corpusSource ||
+      corpusSource.visibility !== "private" ||
+      !corpusSource.protectedLocatorId ||
+      !corpusSource.locator?.match(/two exact 37-record classification-set matches/i) ||
+      !corpusSource.locator?.match(/22 and 20 terminal no-addition/i) ||
+      !corpusSource.doesNotEstablish.some((item) => /deleted before capture.*lifetime historical population/i.test(item)) ||
+      !corpusSource.doesNotEstablish.some((item) => /human publisher or author/i.test(item))
+    ) {
+      add("capture_integrity", "kcspaces-facebook-population-source", `${required.corpusSourceId} loses its rerun, current-population, or authorship boundary`);
+    }
+    if (
+      !urlInventory ||
+      urlInventory.visibility !== "private" ||
+      ![required.uniqueRouteStrings, required.routeDomainCount].every((count) => JSON.stringify(urlInventory).includes(String(count))) ||
+      !urlInventory.doesNotEstablish.some((item) => /truth of linked content/i.test(item)) ||
+      !urlInventory.doesNotEstablish.some((item) => /endorsement, clicks, donation conversion/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-facebook-posted-url-source", `${required.urlInventorySourceId} loses exact counts or routing limits`);
+    }
+    if (
+      !operationsSource ||
+      operationsSource.visibility !== "private" ||
+      !operationsSource.protectedLocatorId ||
+      !operationsSource.locator?.match(/73 Jamie-authored commits.*10 Jamie-authored commits.*34 Jamie-authored/i) ||
+      !operationsSource.doesNotEstablish.some((item) => /public organizer status/i.test(item)) ||
+      !operationsSource.doesNotEstablish.some((item) => /sole authorship of campaign strategy.*public voice/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-digital-operations-source-boundary", `${required.digitalOperationsSourceId} loses implementation proof or collective-credit limits`);
+    }
+    if (
+      !namingSource ||
+      namingSource.visibility !== "private" ||
+      !namingSource.protectedLocatorId ||
+      !namingSource.publicNote?.match(/remembers supporting selection/i) ||
+      !namingSource.doesNotEstablish.some((item) => /Jamie alone selected or approved/i.test(item)) ||
+      !namingSource.doesNotEstablish.some((item) => /uniform public identifiers prove/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-naming-memory-boundary", `${required.namingMemorySourceId} loses attribution or decision limits`);
+    }
+    if (
+      !nonPosterSource ||
+      nonPosterSource.visibility !== "private" ||
+      !nonPosterSource.protectedLocatorId ||
+      !nonPosterSource.publicNote?.match(/Jamie states.*not the stakeholder or owner posting/i) ||
+      !nonPosterSource.doesNotEstablish.some((item) => /identity of every human publisher/i.test(item)) ||
+      !nonPosterSource.doesNotEstablish.some((item) => /complete account-administration chronology/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-non-poster-memory-boundary", `${required.nonPosterMemorySourceId} loses first-person attribution or publisher-ledger limits`);
+    }
+
+    const population = bank.claims.find((item) => item.id === required.populationClaimId);
+    const practice = bank.claims.find((item) => item.id === required.practiceClaimId);
+    const grantee = bank.claims.find((item) => item.id === required.granteeClaimId);
+    const engagement = bank.claims.find((item) => item.id === required.engagementClaimId);
+    const stakeholder = bank.claims.find((item) => item.id === required.stakeholderClaimId);
+    const urlClaim = bank.claims.find((item) => item.id === required.urlClaimId);
+    const fundraiser = bank.claims.find((item) => item.id === required.fundraiserClaimId);
+    const operationsRole = bank.claims.find((item) => item.id === required.digitalOperationsClaimId);
+    const naming = bank.claims.find((item) => item.id === required.namingClaimId);
+    const allClaims = [population, practice, grantee, engagement, stakeholder, urlClaim, fundraiser, operationsRole, naming];
+    if (allClaims.some((claim) => !claim || claim.publicationStatus !== "internal-only" || claim.projections.some((projection) => projection.status === "active"))) {
+      add("projection_restraint", "kcspaces-facebook-projection-boundary", "KC Spaces Fund Facebook and naming research is projected publicly instead of retained as reserve depth");
+    }
+    if (
+      !population ||
+      !population.internalClaim.includes(String(required.currentPostCount)) ||
+      !population.internalClaim.match(/Two independently paced authenticated traversals/i) ||
+      !population.boundaries.some((item) => /Deleted, unpublished, pre-migration-omitted/i.test(item)) ||
+      !population.antiClaims.some((item) => /exactly 37.*history/i.test(item))
+    ) {
+      add("capture_integrity", "kcspaces-facebook-population-claim", `${required.populationClaimId} overstates the currently observable population`);
+    }
+    if (
+      !practice ||
+      !practice.internalClaim.match(/collective mutual-aid operating practice/i) ||
+      !practice.boundaries.some((item) => /not an assignment of Page authorship.*to Jamie/i.test(item)) ||
+      !practice.boundaries.some((item) => /not readership, donations, conversion, partnership, or impact/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-facebook-practice-boundary", `${required.practiceClaimId} loses collective credit or routing limits`);
+    }
+    if (
+      !grantee ||
+      !grantee.internalClaim.includes(String(required.granteeAnnouncementCount)) ||
+      !grantee.boundaries.some((item) => /not a complete grant ledger/i.test(item)) ||
+      !grantee.antiClaims.some((item) => /Jamie selected or paid/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-facebook-grantee-boundary", `${required.granteeClaimId} converts announcements into a grantmaking or Jamie-role claim`);
+    }
+    if (
+      !engagement ||
+      ![required.postsWithVisibleReactions, required.visibleReactions, required.visibleLikes, required.visibleLoves].every((count) => engagement.internalClaim.includes(String(count))) ||
+      !engagement.boundaries.some((item) => /not unique people, reach, donor conversion, endorsement, causality, or impact/i.test(item))
+    ) {
+      add("projection_restraint", "kcspaces-facebook-engagement-boundary", `${required.engagementClaimId} converts mutable counters into reach or impact`);
+    }
+    if (
+      !stakeholder ||
+      !stakeholder.internalClaim.match(/one direct public grantee thank-you comment/i) ||
+      !stakeholder.boundaries.some((item) => /limited to one currently visible post/i.test(item)) ||
+      !stakeholder.antiClaims.some((item) => /campaign-wide stakeholder engagement/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-facebook-stakeholder-boundary", `${required.stakeholderClaimId} converts a one-post response into campaign-wide endorsement`);
+    }
+    if (
+      !urlClaim ||
+      ![required.uniqueRouteStrings, required.routeDomainCount].every((count) => urlClaim.internalClaim.includes(String(count))) ||
+      !urlClaim.boundaries.some((item) => /source-discovery and action-routing leads/i.test(item)) ||
+      !urlClaim.antiClaims.some((item) => /Every linked organization endorsed/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-facebook-posted-url-boundary", `${required.urlClaimId} converts routes into proof, endorsement, or outcomes`);
+    }
+    if (
+      !fundraiser ||
+      !fundraiser.internalClaim.match(/\$9,590.*\$9,500.*107 donations/i) ||
+      !fundraiser.boundaries.some((item) => /Do not attribute fundraising ownership.*to Jamie/i.test(item)) ||
+      !fundraiser.antiClaims.some((item) => /Facebook activity caused 107 donations/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-fundraiser-boundary", `${required.fundraiserClaimId} converts a campaign result into Jamie ownership or Facebook causality`);
+    }
+    if (
+      !operationsRole ||
+      !operationsRole.internalClaim.match(/behind-the-scenes digital infrastructure/i) ||
+      !operationsRole.evidence.some((item) => item.sourceId === required.digitalOperationsSourceId) ||
+      !operationsRole.evidence.some((item) => item.sourceId === required.nonPosterMemorySourceId) ||
+      !operationsRole.boundaries.some((item) => /Public organizer credit remains/i.test(item)) ||
+      !operationsRole.antiClaims.some((item) => /Jamie authored.*Facebook posts/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-digital-role-boundary", `${required.digitalOperationsClaimId} loses technical scope or organizer and Page-voice limits`);
+    }
+    if (
+      !naming ||
+      naming.status !== "use-with-care" ||
+      !naming.internalClaim.match(/recalls supporting selection/i) ||
+      !naming.internalClaim.match(/corroborates the uniform identity outcome, not the decision-maker/i) ||
+      !naming.evidence.some((item) => item.sourceId === required.namingMemorySourceId) ||
+      !naming.evidence.some((item) => item.sourceId === required.siteSourceId) ||
+      !naming.boundaries.some((item) => /Preserve first-person attribution/i.test(item)) ||
+      !naming.antiClaims.some((item) => /Jamie alone named/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-naming-role-boundary", `${required.namingClaimId} converts attributed support into sole naming authority`);
+    }
+
+    const populationInquiry = bank.researchInquiries.find((item) => item.id === required.populationInquiryId);
+    const sourceInquiry = bank.researchInquiries.find((item) => item.id === required.sourceInquiryId);
+    const roleInquiry = bank.researchInquiries.find((item) => item.id === required.roleInquiryId);
+    if (
+      !populationInquiry ||
+      !populationInquiry.findings.some((item) => /same 37 Page-level records.*22 and 20/i.test(item)) ||
+      !populationInquiry.limitations.some((item) => /100 percent coverage.*not a native export/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-facebook-population-inquiry", `${required.populationInquiryId} loses rerun or current-surface boundaries`);
+    }
+    if (
+      !sourceInquiry ||
+      !sourceInquiry.limitations.some((item) => /not automatic corroboration/i.test(item)) ||
+      !sourceInquiry.findings.some((item) => /Do816.*unresolved destination lead/i.test(item))
+    ) {
+      add("source_decomposition", "kcspaces-facebook-source-inquiry", `${required.sourceInquiryId} promotes routes without source review`);
+    }
+    if (
+      !roleInquiry ||
+      !roleInquiry.findings.some((item) => /strongly supports Jamie's behind-the-scenes/i.test(item)) ||
+      !roleInquiry.findings.some((item) => /naming contribution remains an attributed recollection/i.test(item)) ||
+      !roleInquiry.limitations.some((item) => /do(?:es)? not make Jamie a public organizer.*author of the campaign's Facebook voice/i.test(item))
+    ) {
+      add("research_honesty", "kcspaces-role-inquiry", `${required.roleInquiryId} loses implementation strength or naming and public-voice limits`);
+    }
+  }
+
   if (suite.requiredGoogleDriveArchiveProduction) {
     const required = suite.requiredGoogleDriveArchiveProduction;
     for (const intakeId of required.intakeIds) {

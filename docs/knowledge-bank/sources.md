@@ -25,6 +25,11 @@ Approved public artifact examples for this launch pass include:
 - CallNYC archived Politico New York PDF.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- KC Spaces Fund public application and eligibility page.
+- KC Spaces Fund public Facebook Page and selected Blackbox on Troost announcement.
+- Kansas City Star COVID-era public-service listing of KC Spaces Fund.
+- Oddities Prints Mutual Aid Print Exchange product page benefiting KC Spaces Fund and KC Tenants.
+- Private public-safe metadata from the KC Spaces Fund site, campaign-theme, fundraising-widget, deployment, and launch-operation archive.
 
 ## First Lifecycle Corpus
 

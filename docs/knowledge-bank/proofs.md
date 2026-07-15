@@ -41,3 +41,9 @@ Public pages may simplify this language, but they must not strengthen ownership,
   press, partner, and practical-resource routing. Jamie's predominant Page-use
   memory remains attributed and explicitly shared; current management access
   does not establish historic exclusivity or record-level authorship.
+- Two independently paced traversals of KC Spaces Fund's current 2020 Facebook
+  surface reconciled 37 Page-level records, including 12 named support
+  announcements. That campaign corpus remains collective voice and bank-only
+  reserve. Separate implementation records support Jamie's site, theme,
+  fundraising-widget, deployment, and web-affordance work; his naming-support
+  memory remains attributed.

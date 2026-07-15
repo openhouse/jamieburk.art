@@ -104,6 +104,22 @@ Ask:
 36. Are 64 outbound-link occurrences and 39 unique URLs treated as source and
     action-routing leads, with destination claims promoted only after close
     reading and original authorship, including Olympia Kazi's words, preserved?
+37. Do two independently paced traversals reconcile the same 37 currently
+    recoverable KC Spaces Fund Page-level posts, with 100 percent coverage
+    limited to the July 2026 observable surface rather than a lifetime total,
+    native Meta export, or deletion history?
+38. Does the complete-corpus interpretation preserve the campaign's collective
+    public voice, 12 named support announcements, mutual-aid routes, and public
+    organizer credit without assigning Page-post authorship, grant decisions,
+    fundraising ownership, or fiscal sponsorship to Jamie?
+39. Are 117 current reactions, one bounded grantee-response specimen, 11 route
+    strings, and four domains treated as mutable observations and research
+    routes rather than unique people, reach, endorsement, donation conversion,
+    partnership, causality, or impact?
+40. Does Jamie's digital-operations claim remain anchored to separate site,
+    theme, widget, deployment, and launch records, while his naming support
+    remains an attributed memory and uniform identifiers remain evidence of the
+    outcome rather than the sole decision-maker?
 
 Return JSON with:
 

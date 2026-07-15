@@ -165,6 +165,17 @@ Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or
 private Drive documents.
 
+Do not describe the 37 currently recoverable Facebook records as the Page's
+lifetime post total or a native Meta export. Do not assign the institutional
+Page voice or any individual post to Jamie. Do not convert 12 announcements
+into a complete grant ledger, or mutable reactions and one post's stakeholder
+response into reach, donor conversion, campaign-wide endorsement, causality, or
+impact.
+
+Do not say Jamie alone named KC Spaces Fund. The current uniform domain and
+social identity corroborates the outcome, not who proposed, selected, approved,
+registered, or administered the name.
+
 ## KC Town Hall
 
 The public record supports Jamie's presenter role, four affirmative CCED Board

@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-nycartc-facebook",
+  "judgeId": "archival-editorial-kcspaces-facebook",
   "lens": "archival-editorial",
-  "candidate": "sha256:4eb42a1218455d63327fe7a63bc42dd25a41e256b3c51f198fe77783e3820178",
-  "contract": "sha256:ac0e0ed8780b46455b8a42f1dffea3376f04544eb69d373824bfdb5052e21715",
+  "candidate": "sha256:ca1aa2dabcd4105242d82d63e47a04655204fbc7c7404626312b3eae1045dc43",
+  "contract": "sha256:ec04b9aae2b34ba6cbbb4f9c8de937b4e70bd8ec19c86b834f01075f38b81b52",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,37 +17,37 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "Two authenticated terminal traversals with distinct scroll cadences recovered the same 444 stable post identities, with 42 and 41 no-addition terminal controls. Both sets retain the matching SHA-256 digest f1f00d902415ebad0aa37043d7f64070d754c17449c396ac61aa34dec7733955. The documented preimage now specifies exact unnormalized UTF-8 records[].key values, LC_ALL=C bytewise sorting, LF delimiters, a final LF, and one line per 444 unique key, making the non-identifying control reproducible."
+      "observation": "The candidate gives every submitted KC Spaces Fund fragment a durable disposition, including a dedicated private intake and first-party source for Jamie's non-poster and non-owner statement. Two differently paced traversals still reconcile the same 37 currently recoverable Page-level records."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The Page timeline, private census, Meta content control, management control, first-person memory, URL inventory, selected posts, and destination articles remain distinct source records with explicit review depth, support, non-support, preservation, and visibility."
+      "observation": "The Facebook corpus, posted-URL inventory, implementation archive, naming recollection, non-poster statement, campaign pages, fundraiser, press listing, print artifact, and bounded stakeholder specimen remain separate sources with explicit support and non-support fields."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Population, collective participation routing, stakeholder routing, mutable counters, posted URLs, and Jamie's publishing-role recollection remain six independently evaluable claims rather than a combined authorship, engagement, or impact narrative."
+      "observation": "Population, campaign practice, announcement count, mutable engagement, bounded stakeholder response, routing, fundraising outcome, digital operations, and naming support remain atomic claims with targeted boundaries and anti-claims."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "Every NYC Artist Coalition Facebook claim resolves to declared intakes, sources, inquiries, and project context. Jamie's role claim separately relates attributed memory, current management evidence, and the absence of historic human-level publisher attribution."
+      "observation": "The new first-party source resolves through its intake, digital-role claim, role inquiry, control record, suite contract, validator, and tests. All 62 lifecycle tests pass, and deterministic evaluation reports zero findings."
     },
     {
       "rubric": "status_separation",
-      "observation": "All six claims remain internal-only candidates without active projections. Confirmed current-surface findings, mutable observations, use-with-care memory, and partially recovered inquiries retain separate knowledge, publication, and editorial statuses."
+      "observation": "The revised ProjectRecord now distinguishes implementation evidence from Jamie's attributed naming recollection. The non-poster statement is also identified as limited first-party role evidence rather than a native publisher ledger."
     },
     {
       "rubric": "project_context",
-      "observation": "The project dossier situates the corpus within coalition events, campaigns, hearings, cultural-space advocacy, public information, legislative research, and future collaborator, source, native-export, and photo-research work."
+      "observation": "The project summary and dossier consistently preserve organizer and fiscal-sponsor credit, describe Jamie's substantial technical contribution, qualify both first-party memories, and give future researchers a concrete continuation queue."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The candidate limits 444 to complete disposition of the currently recoverable July 2026 Page surface, not lifetime history or a native export. Stakeholder references remain outgoing routes, mutable counters remain interface observations, Olympia Kazi's authorship is preserved, and Jamie's predominant-use memory remains attributed and explicitly shared."
+      "observation": "The candidate continues to reject lifetime-population, authorship, grant-ledger, reach, endorsement, conversion, partnership, causality, and sole-naming inferences. The prior two editorial regressions are fully addressed."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "Record-level data, comments, per-post metrics, management controls, and authentication state remain outside the public repository. No social metric or posted URL is converted into reach, endorsement, attendance, conversion, causality, or impact. The deterministic evaluator reports zero findings and all 58 lifecycle tests pass."
+      "observation": "All new claims remain internal-only with no active projection. Private evidence uses opaque locators, mutable Facebook observations remain reserve depth, and unresolved or protected material is not exposed."
     }
   ],
   "regressions": [],
-  "nextAction": "Stop this lifecycle cycle and retain the mature findings as internal reserve depth until native account records or collaborator proof notes can strengthen the unresolved historical publishing-role inquiry."
+  "nextAction": "Proceed to the independent public-safety and composition judgment; collaborator corroboration for naming and publisher chronology remains useful future research but is not required for this internal reserve."
 }

@@ -29,6 +29,7 @@ const candidatePaths = [
   "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-archive-production.ts",
   "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-archive-production.ts",
   "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-archive-production.ts",
+  "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-archive-production.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
   "apps/www/src/data/knowledge-bank/press-catalog.ts",
@@ -50,12 +51,15 @@ const candidatePaths = [
   "docs/knowledge-bank/research/personal-wowlist-facebook-events-archival-production-2026-07.md",
   "docs/knowledge-bank/research/wowlist-facebook-posts-archival-production-2026-07.md",
   "docs/knowledge-bank/research/nycartc-facebook-posts-archival-production-2026-07.md",
+  "docs/knowledge-bank/research/kcspacesfund-facebook-posts-archival-production-2026-07.md",
   "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json",
   "docs/knowledge-bank/data/jamie-facebook-displayed-host-event-census-2026-07-14.csv",
   "docs/knowledge-bank/data/wowlist-facebook-post-controls.json",
   "docs/knowledge-bank/data/nycartc-facebook-post-controls.json",
+  "docs/knowledge-bank/data/kcspacesfund-facebook-post-controls.json",
   "docs/knowledge-bank/sources.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+  "docs/knowledge-bank/projects/kc-spaces-fund.md",
   "docs/knowledge-bank/projects/open-house.md",
   "docs/knowledge-bank/projects/water-publics.md"
 ];
