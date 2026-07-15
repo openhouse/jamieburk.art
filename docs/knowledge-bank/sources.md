@@ -158,6 +158,16 @@ contract-delay state, Jamie's first-person stewardship transition, City
 withdrawal, and reappropriation remain separate events with separate evidence
 states and claim boundaries.
 
+The earlier Phase One construction and neighborhood-process record is
+documented separately in
+`docs/knowledge-bank/projects/kc-town-hall-phase-one-restoration-2019.md`.
+The underlying 2019 proposal packet remains protected because it includes
+contact, financing, signature, property, participant, and photographic
+material. Its public-safe extraction supports the project-prepared Phase One
+completion statement and survey process; Jamie's general-contractor title,
+daily field method, and handbill/data-system authorship remain first-person
+claims pending independent role corroboration.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

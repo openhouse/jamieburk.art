@@ -119,6 +119,51 @@ test("NTER CHNG preserves collective credit and exhibition-source boundaries", (
   assert.ok(nermanSource.doesNotEstablish.some((item) => /NTER CHNG.*inclusion/i.test(item)));
 });
 
+test("KC Town Hall Phase One separates completion, role, survey, and full redevelopment", () => {
+  const claims = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const sources = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const completion = claims.get("CLM-KCTOWNHALL-PHASE-ONE-COLD-SHELL-COMPLETION-2019");
+  const role = claims.get("CLM-KCTOWNHALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE");
+  const survey = claims.get("CLM-KCTOWNHALL-PARTICIPATORY-SURVEY-SYSTEM-2019");
+  const award = claims.get("CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE");
+  const proposal = sources.get("SRC-KCTOWNHALL-CCED-PROPOSAL-2019");
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-KCTOWNHALL-PHASE-ONE-ROLE-AND-COMPLETION-2019"
+  );
+
+  assert.ok(completion);
+  assert.ok(role);
+  assert.ok(survey);
+  assert.ok(award);
+  assert.ok(proposal);
+  assert.ok(inquiry);
+  assert.equal(completion.status, "confirmed-with-boundary");
+  assert.ok(completion.boundaries.some((item) => /project-prepared.*independent/i.test(item)));
+  assert.ok(completion.antiClaims.some((item) => /full KC Town Hall redevelopment/i.test(item)));
+  assert.equal(role.status, "use-with-care");
+  assert.ok(
+    role.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-JAMIE-KCTOWNHALL-PHASE-ONE-ACCOUNT-2026" &&
+        item.relationship === "direct-support"
+    )
+  );
+  assert.ok(
+    role.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-KCTOWNHALL-CCED-PROPOSAL-2019" &&
+        item.relationship === "corroborating"
+    )
+  );
+  assert.ok(survey.boundaries.some((item) => /Oak Park.*New Horizon/i.test(item)));
+  assert.ok(survey.boundaries.some((item) => /participant responses.*contact information/i.test(item)));
+  assert.equal(proposal.visibility, "protected");
+  assert.equal(proposal.canonicalUrl, undefined);
+  assert.equal(proposal.archiveUrl, undefined);
+  assert.ok(award.antiClaims.some((item) => /full redevelopment was completed/i.test(item)));
+  assert.ok(inquiry.limitations.some((item) => /\$189,629.*\$180,629/i.test(item)));
+});
+
 test("member engagement remains account-level and institutionally bounded", () => {
   const claim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT");
   assert.ok(claim);

@@ -96,8 +96,22 @@ private Drive documents.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Jamie states that he served as general contractor for Phase One. Preserve this
+as a first-person role claim until a contract, permit, collaborator statement,
+or equivalent independent record is recovered. Do not infer a contractor
+license or legal classification, and do not imply that Jamie personally
+performed each trade.
+
+The project-prepared 2019 packet records Phase One cold-shell work as completed.
+Do not broaden that bounded construction claim into completion of the full KC
+Town Hall redevelopment or the later CCED-funded proposal. Do not publish a
+Phase One total until the packet's conflicting totals are reconciled.
+
+Jamie states that he designed the neighborhood survey handbill and backing data
+system. Credit Oak Park Neighborhood Association and New Horizon Missionary
+Baptist Church as named process partners. Do not publish participant responses
+or contact data, and do not describe the survey as representative or proof of
+community consensus.
 
 Do not say Jamie abandoned KC Town Hall. Jamie's first-person account is that he
 transitioned stewardship to a mission-aligned organization. Keep that account

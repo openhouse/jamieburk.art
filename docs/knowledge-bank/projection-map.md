@@ -91,6 +91,7 @@ current site:
 - `nyca-shared-publishing-system-range`
 - `horse-lords-truthers-video`
 - `music-hackathon-wowlist-role`
+- `kc-town-hall-phase-one-restoration-operations`
 
 The personal-account population accounting, inbound-search floor, and thematic
 retrieval aids remain Knowledge Bank method records rather than website copy.

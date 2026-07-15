@@ -15,6 +15,7 @@ import { personalWowlistFacebookEventsBatch } from "./personal-wowlist-facebook-
 import { wowlistFacebookPostsBatch } from "./wowlist-facebook-posts-batch-2026-07-14.ts";
 import { nycartcFacebookPostsBatch } from "./nycartc-facebook-posts-batch-2026-07-14.ts";
 import { nterchngBatchRecords } from "./nterchng-batch-2026-07-15.ts";
+import { kcTownHallPhaseOneBatchRecords } from "./kc-town-hall-phase-one-batch-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -593,7 +594,8 @@ const knowledgeBankInput = {
     ...personalWowlistFacebookEventsBatch.intakeRecords,
     ...wowlistFacebookPostsBatch.intakeRecords,
     ...nycartcFacebookPostsBatch.intakeRecords,
-    ...nterchngBatchRecords.intakeRecords
+    ...nterchngBatchRecords.intakeRecords,
+    ...kcTownHallPhaseOneBatchRecords.intakeRecords
   ],
   sources: [
     {
@@ -1672,7 +1674,8 @@ const knowledgeBankInput = {
     ...personalWowlistFacebookEventsBatch.sources,
     ...wowlistFacebookPostsBatch.sources,
     ...nycartcFacebookPostsBatch.sources,
-    ...nterchngBatchRecords.sources
+    ...nterchngBatchRecords.sources,
+    ...kcTownHallPhaseOneBatchRecords.sources
   ],
   claims: [
     {
@@ -2204,8 +2207,8 @@ const knowledgeBankInput = {
         { sourceId: "SRC-KC-STAR-KC-TOWN-HALL-DELAYS-2021-12-27", relationship: "direct-support", supports: ["December 2021 project purpose and public-benefit framing", "absence of a final City contract more than two years after the Board recommendation"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28", relationship: "direct-support", supports: ["later project withdrawal", "reappropriation of unused funds in 2024"], confidence: "high", renderCitation: false }
       ],
-      boundaries: ["Keep the Board recommendation, Council acceptance, Council appropriation, contract-delay state, City withdrawal record, and reappropriation distinct.", "State both the favorable funding actions and later City withdrawal wherever the funding outcome is material.", "Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, or construction was completed.", "Do not equate the City's withdrawal record with project abandonment or treat it as the complete account of stewardship.", "Do not speculate about circumstances or responsibility for withdrawal.", "Keep collaborative project credit visible."],
-      antiClaims: ["The City Council unanimously approved KC Town Hall", "KC Town Hall received and spent $490,539", "A funding agreement was executed", "The redevelopment was completed", "Jamie abandoned the project", "Jamie alone developed the proposal", "The City record explains why the project withdrew"],
+      boundaries: ["Keep the Board recommendation, Council acceptance, Council appropriation, contract-delay state, City withdrawal record, and reappropriation distinct.", "State both the favorable funding actions and later City withdrawal wherever the funding outcome is material.", "Do not use the award records to imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, or the full redevelopment was completed; Phase One cold-shell completion is a separate project-record claim.", "Do not equate the City's withdrawal record with project abandonment or treat it as the complete account of stewardship.", "Do not speculate about circumstances or responsibility for withdrawal.", "Keep collaborative project credit visible."],
+      antiClaims: ["The City Council unanimously approved KC Town Hall", "KC Town Hall received and spent $490,539", "A funding agreement was executed", "The full redevelopment was completed", "The later CCED award funded Phase One", "Jamie abandoned the project", "Jamie alone developed the proposal", "The City record explains why the project withdrew"],
       proofClaimIds: ["kc-town-hall-public-benefit-documentation"],
       researchInquiryIds: [],
       reviewedAt: "2026-07-13",
@@ -2274,7 +2277,8 @@ const knowledgeBankInput = {
     ...personalWowlistFacebookEventsBatch.claims,
     ...wowlistFacebookPostsBatch.claims,
     ...nycartcFacebookPostsBatch.claims,
-    ...nterchngBatchRecords.claims
+    ...nterchngBatchRecords.claims,
+    ...kcTownHallPhaseOneBatchRecords.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
@@ -2283,6 +2287,7 @@ const knowledgeBankInput = {
     ...wowlistFacebookPostsBatch.researchInquiries,
     ...nycartcFacebookPostsBatch.researchInquiries,
     ...nterchngBatchRecords.researchInquiries,
+    ...kcTownHallPhaseOneBatchRecords.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",

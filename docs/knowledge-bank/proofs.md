@@ -34,6 +34,12 @@ Public pages may simplify this language, but they must not strengthen ownership,
 
 ## Bank-Only Depth
 
+- A protected 2019 KC Town Hall proposal packet records Phase One cold-shell
+  work as completed and documents roof, masonry, framing, water, egress, local
+  contracting, and neighborhood-survey work. Jamie states that he served as
+  Phase One general contractor and designed the survey handbill and backing
+  response system. The role claims remain first-person, the full redevelopment
+  was not completed, and the packet's two Phase One totals remain unreconciled.
 - The current `@urbanhermit` profile control contains 434 publicly dispositioned
   records: 431 directly reverified in the July 14 pass and three repost-source
   records retained from an immediately prior authenticated capture. This is

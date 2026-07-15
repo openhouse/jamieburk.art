@@ -419,6 +419,22 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## kc-town-hall-phase-one-restoration-operations - Phase One restoration operations
+
+**Structured claim IDs:** `CLM-KCTOWNHALL-PHASE-ONE-COLD-SHELL-COMPLETION-2019`, `CLM-KCTOWNHALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE`, `CLM-KCTOWNHALL-PARTICIPATORY-SURVEY-SYSTEM-2019`, `CLM-KCTOWNHALL-SITE-BASED-NEIGHBORHOOD-LISTENING`
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public-safe archive summary / Jamie review confirmation
+**Public wording:** Project records describe KC Town Hall's Phase One cold-shell work as completed in 2019. Jamie states that he served as general contractor, coordinating multiple trades and daily field sequencing, and designed a neighborhood survey handbill and response workflow used with local partners to shape proposed uses.
+**Detailed public-safe wording:** A protected 2019 proposal packet records completed Phase One roof, masonry, framing, water, egress, safety, and related work. Jamie states that he served as Phase One's general contractor, coordinating historic masonry, roofing, carpentry, welding, engineering, architecture, plumbing, and related teams from daily work on site. He also states that he designed a four-by-six-inch neighborhood survey handbill and backing data system; the packet reproduces the survey, names Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as process partners, and says the results shaped the proposal.
+**Where to project:** Knowledge Bank now. Candidate for Technical Operations and the KC Town Hall case study after surface review or further role corroboration.
+**Why it matters:** Shows hands-on implementation leadership across historic-building systems, professional and trade coordination, sequencing, field operations, participatory research, and public-purpose documentation.
+**Guardrail:** Keep the project-prepared Phase One completion statement distinct from independent inspection; keep Jamie's role account labeled as first-person; preserve collaborator and neighborhood-partner credit; and never broaden Phase One completion into completion of the full redevelopment.
+**Do not say:** The full KC Town Hall redevelopment was completed; the proposal independently identifies Jamie as general contractor; Jamie personally performed every trade; the record establishes Jamie's contractor-license classification; Jamie alone conducted the neighborhood process; the survey was representative or proved consensus; the packet contains one reconciled Phase One total.
+**Protected boundaries:** Survey responses and participant contact information; contractor invoices, contracts, and private responsibility records; financing, banking, legal, signature, and private property details; unapproved photographs; and unreviewed drawings, permits, schedules, and inspection records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
 **Structured claim IDs:** `CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE`, `CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION`
@@ -429,7 +445,7 @@ claim beyond the wording and guardrails here.
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Independent reporting documents the prolonged City-contract process. Jamie confirms that he later transitioned stewardship to a mission-aligned organization; City records separately preserve the administrative withdrawal and reappropriation.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Keep the July 2019 Board recommendation, September 2019 Council acceptance and appropriation, December 2021 contract-delay state, Jamie's first-person stewardship transition, and March 2024 City withdrawal and reappropriation distinct. Do not infer a unanimous Council vote, an executed funding agreement, disbursement, City transfer of the award, successor identity, transition terms, or completion.
+**Guardrail:** Keep the July 2019 Board recommendation, September 2019 Council acceptance and appropriation, December 2021 contract-delay state, Jamie's first-person stewardship transition, and March 2024 City withdrawal and reappropriation distinct. Do not infer a unanimous Council vote, an executed funding agreement, disbursement, City transfer of the award, successor identity, transition terms, or completion of the full redevelopment. Phase One cold-shell completion is separately supported by the project-prepared 2019 proposal packet.
 **Do not say:** Jamie abandoned KC Town Hall; the City Council voted unanimously; final funding received; funding agreement executed; the City transferred the award to the successor; reason for transition or withdrawal; current property status; private financial details; official municipal endorsement beyond the recorded Council actions.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline. Do not store or project a reason for the transition.
 **Review owner:** Jamie  

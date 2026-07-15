@@ -881,6 +881,58 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "kc-town-hall-phase-one-restoration-operations",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Project records describe KC Town Hall's Phase One cold-shell work as completed in 2019. Jamie states that he served as general contractor, coordinating multiple trades and daily field sequencing, and designed a neighborhood survey handbill and response workflow used with local partners to shape proposed uses.",
+    shortWording: "Coordinated Phase One restoration and a participatory neighborhood requirements process",
+    detailedPublicWording:
+      "A protected 2019 proposal packet records completed Phase One roof, masonry, framing, water, egress, safety, and related work. Jamie states that he served as Phase One's general contractor, coordinating historic masonry, roofing, carpentry, welding, engineering, architecture, plumbing, and related teams from daily work on site. He also states that he designed a four-by-six-inch neighborhood survey handbill and backing data system; the packet reproduces the survey, names Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as process partners, and says the results shaped the proposal.",
+    sourceBasis:
+      "Public-safe extraction from the protected 2019 KC Town Hall CCED proposal and support-letter packet, Jamie's July 2026 first-person account, and the public CCED municipal-review record.",
+    sourceNote:
+      "The packet directly supports Phase One scope, completion, local-trade context, and survey function. Jamie's general-contractor title, daily field method, trade-responsibility map, and handbill/data-system authorship remain first-person unless independently corroborated.",
+    whyItMatters:
+      "Shows hands-on implementation leadership across historic-building systems, professional and trade coordination, sequencing, field operations, participatory research, and public-purpose documentation.",
+    guardrail:
+      "Keep the project-prepared Phase One completion statement distinct from independent inspection; keep Jamie's role account labeled as first-person; preserve collaborator and neighborhood-partner credit; and never broaden Phase One completion into completion of the full redevelopment.",
+    doNotSay: [
+      "The full KC Town Hall redevelopment was completed",
+      "The proposal independently identifies Jamie as general contractor",
+      "Jamie personally performed every trade",
+      "The record establishes Jamie's contractor-license classification",
+      "Jamie alone conducted the neighborhood process",
+      "The survey was representative or proved consensus",
+      "The packet contains one reconciled Phase One total"
+    ],
+    protectedBoundaries: [
+      "Survey responses and participant contact information",
+      "Contractor invoices, contracts, and private responsibility records",
+      "Financing, banking, legal, signature, and private property details",
+      "Unapproved construction and participant photographs",
+      "Unreviewed measured drawings, permits, schedules, and inspection records"
+    ],
+    surfaces: ["technical-operations", "case-study", "internal-only"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: [
+      "construction-project-management",
+      "vendor-coordination",
+      "field-operations",
+      "sequencing",
+      "participatory-research",
+      "stakeholder-engagement"
+    ],
+    structuredClaimIds: [
+      "CLM-KCTOWNHALL-PHASE-ONE-COLD-SHELL-COMPLETION-2019",
+      "CLM-KCTOWNHALL-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+      "CLM-KCTOWNHALL-PARTICIPATORY-SURVEY-SYSTEM-2019",
+      "CLM-KCTOWNHALL-SITE-BASED-NEIGHBORHOOD-LISTENING"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
@@ -894,7 +946,7 @@ export const proofClaims: ProofClaim[] = [
     sourceNote:
       "All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The project still lacked a final City contract in December 2021. Jamie confirms a later stewardship transition; the public record independently establishes only the surrounding timeline and the City's 2024 withdrawal and reappropriation actions.",
     guardrail:
-      "Keep the Board recommendation, Council acceptance, appropriation, contract-delay state, Jamie's first-person stewardship transition, City withdrawal record, and reappropriation distinct. Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, the City transferred the award, construction was completed, or public sources establish the successor organization or transition terms.",
+      "Keep the Board recommendation, Council acceptance, appropriation, contract-delay state, Jamie's first-person stewardship transition, City withdrawal record, and reappropriation distinct. Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, the City transferred the award, the full redevelopment was completed, or public sources establish the successor organization or transition terms. Phase One cold-shell completion is a separate project-record claim.",
     doNotSay: [
       "The City Council unanimously approved KC Town Hall",
       "KC Town Hall received and spent $490,539",
