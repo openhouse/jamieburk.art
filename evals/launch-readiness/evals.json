@@ -9,6 +9,74 @@
     "maximumCriterionRegression": 0.25,
     "consecutivePassingRuns": 2
   },
+  "lensPolicy": {
+    "attributionBoundary": "The named lenses are editorial evaluation heuristics synthesized from user-supplied context. Their rubric language is not a quotation, current endorsement, or professor-authored review, and no private source material is committed to support them.",
+    "morse": {
+      "publicThresholdRoute": "/about",
+      "dimensions": [
+        "artistic investigation",
+        "civic practice",
+        "technical practice",
+        "social and participatory practice",
+        "memory and place",
+        "how people inhabit structures"
+      ],
+      "boundary": "Do not reduce the lens to generic creativity, displace the hiring argument, or expose protected educational and correspondence records."
+    },
+    "sack": {
+      "decisionVector": [
+        "role fit",
+        "demonstrated action",
+        "usable result",
+        "domain experience",
+        "management authority",
+        "evidentiary confidence",
+        "unresolved risk"
+      ],
+      "authorities": [
+        {
+          "action": "promote-public-claim",
+          "authority": "Jamie Burkart after source, consent, and public-safety review",
+          "modelHasFinalAuthority": false
+        },
+        {
+          "action": "dispute-attribution",
+          "authority": "An affected collaborator may trigger a publication hold and human review",
+          "modelHasFinalAuthority": false
+        },
+        {
+          "action": "override-model-judgment",
+          "authority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+          "modelHasFinalAuthority": false
+        },
+        {
+          "action": "reopen-decision",
+          "authority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+          "modelHasFinalAuthority": false
+        }
+      ],
+      "reopenTriggers": [
+        "new or contradictory evidence",
+        "changed consent or rights",
+        "a substantiated attribution dispute",
+        "source decay or corrected provenance",
+        "a changed target role or public surface"
+      ],
+      "runRecordRequirements": {
+        "dimensionEvidenceRequired": true,
+        "dimensionRiskArrayRequired": true,
+        "authorityLogRequired": true,
+        "reopenReviewRequired": true,
+        "disagreementReviewRequired": true,
+        "completeTriggerReviewRequired": true,
+        "nonemptyEvidenceRequired": true,
+        "structuredOverridesRequired": true,
+        "recordOverridesWhenInvoked": true
+      },
+      "preserveDisagreement": true,
+      "acceptedBooleanIsNotCompletion": true
+    }
+  },
   "hardGates": [
     {
       "id": "LR-HG-REPO",
@@ -262,13 +330,64 @@
           ]
         }
       ]
+    },
+    {
+      "id": "LR-SOURCE-MORSE-LENS",
+      "description": "The About page preserves a visible threshold between Jamie's artistic, civic, technical, and social practice without quoting protected source material or weakening role clarity.",
+      "checks": [
+        {
+          "file": "apps/www/src/app/about/page.tsx",
+          "mustInclude": [
+            "My operating practice grew from an artistic and participatory one.",
+            "software, events, rooms, records, and public",
+            "systems as environments people inhabit",
+            "The artistic, civic, technical, and social parts remain",
+            "participation, memory, place, and relationships shape"
+          ],
+          "mustNotInclude": [
+            "Margaret Morse",
+            "exceptionally bright and creative student",
+            "narrative evaluation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LR-SOURCE-SACK-LENS",
+      "description": "Evaluation preserves a multidimensional decision record, explicit human authority, disagreement, and reopen paths instead of hiding governance behind an aggregate pass.",
+      "checks": [
+        {
+          "file": "evals/launch-readiness/judge.md",
+          "mustInclude": [
+            "Evaluation allocates professional identity and therefore acts as governance.",
+            "A passing boolean cannot erase",
+            "Jamie retains final authority over public truth, consent, and public projection.",
+            "An affected collaborator may trigger an attribution hold.",
+            "A model has no final authority"
+          ],
+          "mustNotInclude": [
+            "passed: true makes disagreement unnecessary",
+            "the model has final authority"
+          ]
+        },
+        {
+          "file": "scripts/report-launch-evals.mjs",
+          "mustInclude": [
+            "## Decision vector",
+            "## Decision authority and reopen paths",
+            "suite.lensPolicy.sack.decisionVector",
+            "suite.lensPolicy.sack.authorities"
+          ],
+          "mustNotInclude": []
+        }
+      ]
     }
   ],
   "judgeCriteria": [
     {
       "id": "LR-JUDGE-ROLE",
       "label": "Role legibility",
-      "weight": 0.15,
+      "weight": 0.12,
       "minimumScore": 4,
       "intent": "Within one viewport and three minutes, a hiring reader can name Jamie's target role, operating contribution, and relevant proof path.",
       "anchors": {
@@ -280,7 +399,7 @@
     {
       "id": "LR-JUDGE-EVIDENCE",
       "label": "Evidence and epistemic care",
-      "weight": 0.15,
+      "weight": 0.12,
       "minimumScore": 4,
       "intent": "Claims are concrete, source-backed where verification matters, bounded by what evidence establishes, and free of inflation.",
       "anchors": {
@@ -292,7 +411,7 @@
     {
       "id": "LR-JUDGE-EMERGING",
       "label": "Emerging-work framing",
-      "weight": 0.15,
+      "weight": 0.12,
       "minimumScore": 4,
       "intent": "The portfolio presents transition and under-formed structure without shaming teams, while remaining concrete enough for hiring readers.",
       "anchors": {
@@ -304,7 +423,7 @@
     {
       "id": "LR-JUDGE-BURDEN",
       "label": "Reader burden and hierarchy",
-      "weight": 0.1,
+      "weight": 0.08,
       "minimumScore": 3,
       "intent": "A time-limited reader can choose a clear path, scan the evidence, and act without carrying the archive's complexity.",
       "anchors": {
@@ -316,7 +435,7 @@
     {
       "id": "LR-JUDGE-CHAD",
       "label": "Chad lens",
-      "weight": 0.15,
+      "weight": 0.12,
       "minimumScore": 4,
       "intent": "A hiring reader sees Jamie as the actor, understands what his work made usable and why it fits the target role, without carrying specialized archival or governance complexity; collective credit and evidence boundaries remain intact.",
       "anchors": {
@@ -328,7 +447,7 @@
     {
       "id": "LR-JUDGE-COLLECTIVE",
       "label": "Collective credit and protected boundaries",
-      "weight": 0.1,
+      "weight": 0.08,
       "minimumScore": 4,
       "intent": "Jamie's contribution is visible without appropriating collective outcomes or exposing people and records that should remain protected.",
       "anchors": {
@@ -340,7 +459,7 @@
     {
       "id": "LR-JUDGE-VISUAL",
       "label": "Visual proof and credibility",
-      "weight": 0.1,
+      "weight": 0.08,
       "minimumScore": 3,
       "intent": "The visual system and approved evidence help readers inspect real work rather than merely accept descriptive copy.",
       "anchors": {
@@ -352,13 +471,37 @@
     {
       "id": "LR-JUDGE-OPERATIONS",
       "label": "Operational credibility",
-      "weight": 0.1,
+      "weight": 0.08,
       "minimumScore": 4,
       "intent": "The site demonstrates that Jamie can coordinate implementation, create durable operating structure, and leave work maintainable after launch.",
       "anchors": {
         "1": "The portfolio describes values without showing operational practice or outcomes.",
         "3": "Operational skills are named and partly evidenced, but examples remain generic.",
         "5": "Requirements, workflows, decisions, launch support, adoption, and handoffs are connected to specific outcomes across contexts."
+      }
+    },
+    {
+      "id": "LR-JUDGE-MORSE",
+      "label": "Prof. Margaret Morse lens",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "The portfolio preserves a visible threshold where artistic investigation, civic practice, technical systems, participation, hospitality, memory, and place remain connected rather than reducing Jamie to organizational utility or generic creativity.",
+      "anchors": {
+        "1": "The hiring identity erases embodied, artistic, spatial, relational, or participatory practice, or treats it as irrelevant decoration.",
+        "3": "Multiple dimensions are present in project history, but the reader must reconstruct their connection or the language remains vague creativity branding.",
+        "5": "A clear, restrained public threshold shows how Jamie's artistic and participatory method changes the systems he builds, and decisive projects let a reader inspect that continuity without displacing role clarity."
+      }
+    },
+    {
+      "id": "LR-JUDGE-SACK",
+      "label": "Prof. Warren Sack lens",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "Evaluation is treated as governance: multidimensional judgments remain visible, human authority and dispute paths are explicit, and code supports deliberation without making disagreement disappear behind an aggregate score or passing boolean.",
+      "anchors": {
+        "1": "One score or model decision allocates Jamie's professional identity without visible dimensions, authority, dispute, or reopen paths.",
+        "3": "The score vector is visible, but authority, disagreement, override, or reopen policy remains incomplete or merely aspirational.",
+        "5": "Every run preserves the full decision vector, evidence and unresolved risk, named human authority, attribution holds, recorded overrides, reopen triggers, and any live disagreement alongside the aggregate result."
       }
     }
   ],
@@ -465,6 +608,49 @@
         "expanded project records retain Known / Open / Protected, care, public-safety, and source boundaries"
       ],
       "success": "The hiring argument is accurate and complete before expansion; the expanded record preserves every unique public-safety and collective-work boundary."
+    },
+    {
+      "id": "LR-RUNTIME-MORSE-LENS",
+      "persona": "Hiring reader assessing what makes Jamie's operating practice distinct from conventional administration",
+      "routes": [
+        "/about",
+        "/work/technical-operations",
+        "/work/wowlist",
+        "/work/196-sunday-dinner"
+      ],
+      "viewports": [
+        [375, 812],
+        [1440, 1000]
+      ],
+      "task": "Explain how artistic, civic, technical, and social practice connect in Jamie's work, and name one concrete consequence for how he designs operating structure.",
+      "assertions": [
+        "the About page names the cross-practice connection in plain professional language",
+        "the connection is grounded in participation, memory, place, relationships, and inhabited systems rather than generic creativity",
+        "technical role clarity remains prominent",
+        "WOW List and Sunday Dinner provide concrete public examples of technical and social participation systems",
+        "no protected educational record, correspondence, or professor quotation is exposed"
+      ],
+      "success": "The reader can state why Jamie's systems differ from conventional administration without losing the target role or inferring private evidence."
+    },
+    {
+      "id": "LR-RUNTIME-SACK-LENS",
+      "persona": "Human reviewer auditing how the evaluation system allocates professional identity",
+      "inputs": [
+        "complete criterion scorecard",
+        "hard-gate results",
+        "evidence and unresolved risks",
+        "decision authority and reopen policy"
+      ],
+      "task": "Identify the separate dimensions behind the decision, who may promote or dispute a claim, who may override a model judgment, and what can reopen the result.",
+      "assertions": [
+        "the complete criterion vector remains visible beside the weighted result",
+        "unresolved risk and live disagreement are not suppressed by acceptance",
+        "Jamie retains public-truth and consent authority",
+        "an affected collaborator can trigger an attribution hold",
+        "model overrides require a human, rationale, and evidence",
+        "new evidence, changed consent, attribution disputes, source decay, or changed target role can reopen a decision"
+      ],
+      "success": "Code supports a reviewable human decision and cannot convert passed: true into final authority or the disappearance of disagreement."
     }
   ],
   "hillClimb": {
@@ -487,6 +673,8 @@
     "antiGaming": [
       "Never improve a score by deleting guardrails, qualifications, sources, collective credit, or protected boundaries.",
       "Never improve the Chad lens by hiding Jamie's role, deleting unique evidence, or making publication boundaries unavailable.",
+      "Never improve the Morse lens through generic creativity language, by displacing the hiring argument, or by exposing protected educational or correspondence records.",
+      "Never improve the Sack lens by collapsing the decision vector, suppressing disagreement, or granting a model final authority over truth, consent, attribution, or publication.",
       "Never expose private evidence to make a public claim easier to judge.",
       "Never tune only one viewport, route, persona, or judge phrasing.",
       "Never replace an approved resume, contact fact, or metric without Jamie's explicit review.",

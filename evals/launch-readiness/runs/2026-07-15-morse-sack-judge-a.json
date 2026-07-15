@@ -1,0 +1,191 @@
+{
+  "id": "2026-07-15-morse-sack-judge-a",
+  "recordedAt": "2026-07-15",
+  "candidate": {
+    "branch": "feature/evals-A",
+    "baseCommit": "5ec758b82fc7f84348f5a8565e521eb06c80017f",
+    "releaseApproved": false
+  },
+  "judge": {
+    "label": "Fresh judge A",
+    "model": "gpt-5.4",
+    "criterionMinimumsPass": true,
+    "lowestCriterionId": "LR-JUDGE-VISUAL",
+    "nextAction": "Add one approved, inspectable artifact to either WOWList or 196 / Sunday Dinner so a hiring reader can verify the operational and participatory continuity without relying mainly on summary prose.",
+    "regressions": []
+  },
+  "hardGatesPass": false,
+  "hardGateNotes": [
+    "Full repository checks and focused responsive QA passed for the working-tree candidate.",
+    "Exact-SHA approval and post-deployment production smoke remain open release-time gates."
+  ],
+  "scores": [
+    {
+      "criterionId": "LR-JUDGE-ROLE",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-EVIDENCE",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-EMERGING",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-BURDEN",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-CHAD",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-COLLECTIVE",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-VISUAL",
+      "score": 3
+    },
+    {
+      "criterionId": "LR-JUDGE-OPERATIONS",
+      "score": 5
+    },
+    {
+      "criterionId": "LR-JUDGE-MORSE",
+      "score": 4
+    },
+    {
+      "criterionId": "LR-JUDGE-SACK",
+      "score": 5
+    }
+  ],
+  "decisionRecord": {
+    "dimensions": [
+      {
+        "dimension": "role fit",
+        "assessment": "The repository makes the target hiring identity immediate: technical project manager, implementation lead, and technical operations / product operations translator-builder.",
+        "evidence": [
+          "apps/www/src/app/page.tsx - 'Start here' routes the reader directly to role-fit proof.",
+          "apps/www/src/app/about/page.tsx - the first paragraph names the role without hedging."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "demonstrated action",
+        "assessment": "The strongest inspected pages show Jamie doing translation, workflow design, implementation coordination, documentation, facilitation, and handoff work rather than merely stating values.",
+        "evidence": [
+          "apps/www/src/app/work/technical-operations/page.tsx - the operations map and proof map specify concrete actions.",
+          "apps/www/src/content/work/callnyc.mdx - the case states Jamie built the independent prototype and organized records into user pathways."
+        ],
+        "unresolvedRisks": [
+          "WOWList and 196 / Sunday Dinner rely more on summary prose than on stepwise artifact evidence within the inspected files."
+        ]
+      },
+      {
+        "dimension": "usable result",
+        "assessment": "The repository usually connects Jamie's work to something another person can actually use: guidance pathways, followable community surfaces, onboarding systems, decision logs, and durable handoffs.",
+        "evidence": [
+          "apps/www/src/content/work/callnyc.mdx - the outcome is a resident-facing pathway from source data to next steps.",
+          "apps/www/src/content/work/wowlist.mdx - the outcome is a followable keyword-based event distribution and discovery system."
+        ],
+        "unresolvedRisks": [
+          "Some results are described persuasively but not always visually inspectable in the inspected content set."
+        ]
+      },
+      {
+        "dimension": "domain experience",
+        "assessment": "The public portfolio demonstrates range across civic technology, community platforms, cultural infrastructure, and small-business operations without losing the operating throughline.",
+        "evidence": [
+          "apps/www/src/app/about/page.tsx - the domain list spans civic technology, small-business operations, public-facing tools, cultural infrastructure, coalition work, and knowledge systems.",
+          "apps/www/src/app/work/technical-operations/page.tsx - the proof map names civic, cultural, community, and business contexts in one hiring surface."
+        ],
+        "unresolvedRisks": []
+      },
+      {
+        "dimension": "management authority",
+        "assessment": "The pages are careful not to inflate authority; they show coordination, stewardship, facilitation, and implementation leadership more strongly than broad personnel-management power.",
+        "evidence": [
+          "apps/www/src/app/work/technical-operations/page.tsx - the page emphasizes coordination across product, engineering, security, legal, communications, contracts, and external stakeholders.",
+          "apps/www/src/content/work/wowlist.mdx - the 'co-built' framing avoids unsupported sole-ownership or top-down authority claims."
+        ],
+        "unresolvedRisks": [
+          "A skeptical employer looking specifically for formal line-management authority will still need other evidence beyond the inspected pages."
+        ]
+      },
+      {
+        "dimension": "evidentiary confidence",
+        "assessment": "The repository is notably disciplined about claims, boundaries, historical framing, and protected absences.",
+        "evidence": [
+          "apps/www/src/content/work/callnyc.mdx - the page repeatedly narrows what the evidence supports and includes an archive disclaimer.",
+          "apps/www/src/content/work/196-sunday-dinner.mdx - the page publishes only public-safe aggregates while withholding private participant data."
+        ],
+        "unresolvedRisks": [
+          "Summary-only pages ask the reader to trust bounded prose where inspectable approved artifacts are still limited."
+        ]
+      },
+      {
+        "dimension": "unresolved risk",
+        "assessment": "This is a strong PR-level candidate but not a release-complete decision because release-only gates remain intentionally open.",
+        "evidence": [
+          "evals/launch-readiness/runs/2026-07-15-morse-sack-governance-reopen.json - hardGatesPass is false because exact-SHA approval and production smoke remain open.",
+          "evals/launch-readiness/judge.md - the method explicitly says a passing boolean cannot erase unresolved risk, minority judgment, or a substantiated dispute."
+        ],
+        "unresolvedRisks": [
+          "Exact-SHA staging approval remains open.",
+          "Post-deployment production smoke remains open.",
+          "Visual proof is still the weakest public criterion in the inspected content set."
+        ]
+      }
+    ],
+    "authorityLog": [
+      {
+        "action": "promote-public-claim",
+        "humanAuthority": "Jamie Burkart after source, consent, and public-safety review",
+        "disposition": "Not invoked in this run; this evaluation does not authorize production publication or strengthen public claims.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "dispute-attribution",
+        "humanAuthority": "An affected collaborator may trigger a publication hold and human review",
+        "disposition": "Not invoked in this run, but the hold path remains explicitly available if attribution concerns arise.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "override-model-judgment",
+        "humanAuthority": "A human reviewer may override with recorded rationale, evidence, and resulting boundary changes",
+        "disposition": "Not invoked in this run; no human override displaced this scorecard.",
+        "modelHasFinalAuthority": false
+      },
+      {
+        "action": "reopen-decision",
+        "humanAuthority": "Jamie or a context-appropriate human reviewer may reopen a decision when a listed trigger occurs",
+        "disposition": "Still available; release-only evidence and any later attribution, consent, provenance, or role-surface changes could reopen this judgment.",
+        "modelHasFinalAuthority": false
+      }
+    ],
+    "reopenTriggersConsidered": [
+      "new or contradictory evidence",
+      "changed consent or rights",
+      "a substantiated attribution dispute",
+      "source decay or corrected provenance",
+      "a changed target role or public surface"
+    ],
+    "reopenReview": "No current trigger forces a scoring reopen beyond the already-recorded release incompleteness, but each listed trigger remains live and material because this is a working-tree, PR-level judgment rather than a final production release decision.",
+    "overrides": [],
+    "openDisagreements": [
+      "The release judgment is intentionally incomplete because exact-SHA approval and post-deployment production smoke are still open.",
+      "The inspected case-study set still lacks one more decisive approved artifact in WOWList or 196 / Sunday Dinner, so visual proof remains only adequate.",
+      "The Morse continuity is credible but still depends more on compositional reading across pages than on one immediately inspectable flagship artifact."
+    ],
+    "disagreementReview": "These disagreements do not negate role fit or criterion-floor passage, but they remain part of the record and should stay visible rather than being averaged away by the aggregate score."
+  },
+  "declaredResult": {
+    "weightedScore": 4.42,
+    "missing": [],
+    "belowMinimum": [],
+    "governanceFailures": [],
+    "accepted": false
+  }
+}

@@ -3,13 +3,19 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import {
   loadLaunchEvalSuite,
+  loadLaunchEvalRunRecords,
   runSourceChecks,
+  validateLaunchEvalRunRecord,
   validateLaunchEvalSuite
 } from "./lib/launch-evals.mjs";
 
 const suite = loadLaunchEvalSuite();
 const schemaFailures = validateLaunchEvalSuite(suite);
 const sourceFailures = runSourceChecks(suite);
+const runs = loadLaunchEvalRunRecords();
+const runFailures = runs.flatMap(({ file, record }) =>
+  validateLaunchEvalRunRecord(suite, record).map((failure) => `${file}: ${failure}`)
+);
 const lines = [
   "# Launch-readiness eval report",
   "",
@@ -46,10 +52,32 @@ const lines = [
       `| ${criterion.id}: ${criterion.label} | ${criterion.weight} | ${criterion.minimumScore} |`
   ),
   "",
+  "## Decision vector",
+  "",
+  ...suite.lensPolicy.sack.decisionVector.map((dimension) => `- ${dimension}`),
+  "",
+  "## Decision authority and reopen paths",
+  "",
+  ...suite.lensPolicy.sack.authorities.map(
+    (record) =>
+      `- ${record.action}: ${record.authority}. Model has final authority: ${record.modelHasFinalAuthority ? "yes" : "no"}.`
+  ),
+  "",
+  "Reopen triggers:",
+  "",
+  ...suite.lensPolicy.sack.reopenTriggers.map((trigger) => `- ${trigger}`),
+  "",
+  "Per-run governance contract:",
+  "",
+  "- Every decision dimension needs an assessment, evidence, and unresolved-risks array.",
+  "- Every human authority action needs a recorded disposition.",
+  "- Reopen triggers, overrides, and disagreement review remain present beside the aggregate.",
+  `- Machine-readable run records validated: ${runs.length}.`,
+  "",
   "## Current failures",
   "",
-  ...(schemaFailures.length || sourceFailures.length
-    ? [...schemaFailures, ...sourceFailures].map((failure) => `- ${failure}`)
+  ...(schemaFailures.length || sourceFailures.length || runFailures.length
+    ? [...schemaFailures, ...sourceFailures, ...runFailures].map((failure) => `- ${failure}`)
     : ["None in schema or source checks. Runtime and judge evidence remain per-run artifacts."]),
   "",
   "## Stop condition",

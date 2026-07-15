@@ -33,6 +33,14 @@ export default function AboutPage() {
             behind handoffs people can use after the meeting or launch is over.
           </p>
           <p>
+            My operating practice grew from an artistic and participatory one.
+            I learned to treat software, events, rooms, records, and public
+            systems as environments people inhabit, not just outputs to
+            administer. The artistic, civic, technical, and social parts remain
+            connected: participation, memory, place, and relationships shape
+            the structure from the beginning.
+          </p>
+          <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
