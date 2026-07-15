@@ -1148,7 +1148,10 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   assert.match(work, /446 of 696 recovered authored posts/);
   assert.match(projectNote, /1,757-item difference as an explicit recovery gap/);
   assert.match(projectNote, /109 distinct authored posts/);
-  assert.match(projectNote, /outbound communication, not incoming Council engagement/);
+  assert.match(
+    projectNote,
+    /outbound\s+communication, not incoming Council engagement/
+  );
   assert.match(runNote, /A posted destination proves source circulation only/);
 });
 
