@@ -29,7 +29,13 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:content
+npm run check:production
 ```
+
+`check:content` is staging-safe and allows approval TODOs. `check:production`
+sets production mode, runs the public-safety gate, and then runs the full app
+check. It is expected to fail until Jamie resolves launch approvals.
 
 ## Environment
 
@@ -80,8 +86,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Karla for body/UI/prose; Archivo Narrow for display headings, eyebrows, proof
+labels, and compact public-grotesque emphasis. Do not commit or serve private,
+proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -104,3 +111,6 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+
+See `docs/content-safety.md`, `docs/typefaces.md`, and
+`docs/release-checklist.md` for the production-readiness path.

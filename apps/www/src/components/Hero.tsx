@@ -37,7 +37,7 @@ export function Hero() {
           aria-label="Representative operating-structure diagram"
           className="jb-artifact-surface rounded-lg border border-jb-ink/15 p-5 shadow-sm"
         >
-          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
+          <div className="grid gap-3 text-sm font-semibold text-jb-ink sm:grid-cols-2">
             {[
               "Requirements",
               "Workflows",
