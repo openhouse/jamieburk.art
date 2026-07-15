@@ -251,7 +251,7 @@ if (!existsSync(resumePath)) {
   }
 
   if (
-    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
+    !/CallNYC\.org as an archived, unofficial independent follow-on to the New York City\s+Council['’]s first CouncilStat\s+hackathon/i.test(
       resumeText
     )
   ) {

@@ -167,14 +167,14 @@
       "kind": "project-archive",
       "visibility": "public",
       "preservationStatus": "live",
-      "publishedAt": "2026-07-13",
-      "accessedAt": "2026-07-13",
-      "metadataVerifiedAt": "2026-07-13",
+      "publishedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
       "metadataVerifiedBy": "Jamie Burkart approval and Codex artifact review",
       "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "preferredPublicUrl": "canonical",
-      "publicCitation": "Jamie Burkart, Technical Project Manager resume, July 13, 2026.",
-      "publicNote": "Jamie-approved public artifact supporting his distinct Sunday Dinner co-host and 196 Artists Residency founder roles and the separately attributed aggregate scale figures.",
+      "publicCitation": "Jamie Burkart, Technical Project Manager resume, July 15, 2026.",
+      "publicNote": "Jamie-approved public artifact supporting his distinct Sunday Dinner co-host and 196 Artists Residency founder roles and the separately attributed aggregate scale figures; the July 15 artifact states each metric with its corresponding practice.",
       "doesNotEstablish": [
         "independent corroboration of the aggregate figures",
         "sole creation or sole hosting of Sunday Dinner",
@@ -505,7 +505,7 @@
         },
         {
           "key": "resume-html",
-          "text": "Jamie built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+          "text": "Jamie built CallNYC.org as an archived, unofficial independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -660,9 +660,9 @@
         }
       ],
       "boundaries": [
-        "The founder role and 20-plus figure are Jamie-approved, self-reported resume claims rather than independent corroboration.",
+        "The founder role and 20-plus figure are Jamie-approved, self-reported resume claims rather than independent corroboration; the protected onboarding record supports methods, not scale.",
         "This claim concerns 196 Artists Residency, not authorship or sole hosting of Sunday Dinner.",
-        "Do not identify residents or publish their records, work, or images without separate contextual review and permission."
+        "Do not identify residents or publish their records, work, images, contact details, or access instructions without separate contextual review and permission."
       ]
     },
     {

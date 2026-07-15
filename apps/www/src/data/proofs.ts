@@ -143,8 +143,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
-    shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
+      "Built CallNYC.org as an archived, unofficial independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+    shortWording: "Built an archived, unofficial CouncilStat follow-on translating civic data into resident-facing guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
@@ -220,7 +220,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
     sourceBasis:
-      "Approved resume language plus a protected, close-read legislative provenance redline with explicit unofficial and non-legal boundaries.",
+      "Approved resume language plus a protected, close-read legislative provenance redline with explicit unofficial and non-legal boundaries. A separate protected commercial-vacancy proposal supports Jamie's privacy-preserving public-data framing and minimum-release design, not agency adoption or implementation.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -236,7 +236,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    evidenceCanonicalClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"],
+    evidenceCanonicalClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", "CLM-COMMERCIAL-VACANCY-RPIE-PILOT-DESIGN-2026"],
     lastReviewed: "2026-07-15"
   },
   {
@@ -365,7 +365,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "For Sunday Dinner, Jamie worked with Julia Fredenberg on invitation, hosting, documentation, and continuity; his approved resume reports 300+ gatherings. For 196 Artists Residency, Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, and artist-support practices.",
     sourceBasis:
-      "Approved resume language and public-safe aggregate project history support the scale claim; a Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation.",
+      "Approved resume language and public-safe aggregate project history support the scale claim; a Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation. A protected 2023 acceptance record supports the residency's proposal-review, pre-arrival-planning, space-configuration, and access methods, not the 20+ aggregate.",
     guardrail:
       "Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attribute both aggregates to Jamie's approved resume and use 'Jamie reports' for the 20+ residency scale; keep the two role and date ranges distinct.",
     doNotSay: [
@@ -385,7 +385,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

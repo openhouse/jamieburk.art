@@ -522,14 +522,14 @@ const knowledgeBankInput = {
       kind: "project-archive",
       visibility: "public",
       preservationStatus: "live",
-      publishedAt: "2026-07-13",
-      accessedAt: "2026-07-13",
-      metadataVerifiedAt: "2026-07-13",
+      publishedAt: "2026-07-15",
+      accessedAt: "2026-07-15",
+      metadataVerifiedAt: "2026-07-15",
       metadataVerifiedBy: "Jamie Burkart approval and Codex artifact review",
       canonicalUrl: "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       preferredPublicUrl: "canonical",
-      publicCitation: "Jamie Burkart, Technical Project Manager resume, July 13, 2026.",
-      publicNote: "Jamie-approved public artifact supporting his distinct Sunday Dinner co-host and 196 Artists Residency founder roles and the separately attributed aggregate scale figures.",
+      publicCitation: "Jamie Burkart, Technical Project Manager resume, July 15, 2026.",
+      publicNote: "Jamie-approved public artifact supporting his distinct Sunday Dinner co-host and 196 Artists Residency founder roles and the separately attributed aggregate scale figures; the July 15 artifact states each metric with its corresponding practice.",
       supportsGenerally: ["Sunday Dinner co-host role and 2012-present date range", "196 Artists Residency founder role and 2020-present date range", "300-plus documented Sunday Dinner gatherings", "20-plus resident artists supported through the residency"],
       doesNotEstablish: ["independent corroboration of the aggregate figures", "sole creation or sole hosting of Sunday Dinner", "ownership of participant work", "permission to republish community records or images"]
     },
@@ -970,6 +970,147 @@ const knowledgeBankInput = {
       publicNote: "The page documents America: Now and Here's Kansas City launch context and the Barbara Kruger truck's May 11-12 stop at the Nerman Museum.",
       supportsGenerally: ["America: Now and Here Kansas City launch context", "the multidisciplinary national and Kansas City artist program", "the Barbara Kruger truck's Nerman Museum stop"],
       doesNotEstablish: ["that NTER CHNG was installed at the Nerman Museum", "Jamie's participation", "the three collaborators' project title", "the exact location of NTER CHNG within the wider exhibition"]
+    },
+    {
+      id: "SRC-GOOGLE-SHARED-DRIVE-RESEARCH-2026-07-15",
+      title: "Google Drive Shared Drive archival production run",
+      kind: "research-run",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-07-15",
+      accessedAt: "2026-07-15",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-15",
+      contentReviewedBy: "Codex Google Drive archival review",
+      publicCitation: "Public-safe summary of a project-scoped Google Drive Shared Drive archival review, July 15, 2026.",
+      publicNote: "The bounded run inventoried a large mixed Shared Drive account, excluded personal and sensitive collections, and selected project records according to role relevance, public safety, and evidentiary value.",
+      protectedLocatorId: "RESEARCH-GOOGLE-SHARED-DRIVE-2026-07-15-001",
+      supportsGenerally: ["a bounded Shared Drive inventory was completed", "project-scoped selection and privacy exclusions were applied", "selected records were separated into claim evidence, research leads, and media leads"],
+      doesNotEstablish: ["that every accessible drive was exhaustively read", "that account access grants publication rights", "that folder custody establishes authorship", "that an unavailable or empty connector result means a record does not exist"]
+    },
+    {
+      id: "SRC-196-ARTISTS-RESIDENCY-ONBOARDING-2023",
+      title: "196 Artists Residency acceptance and onboarding record",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2023",
+      accessedAt: "2026-07-15",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-15",
+      contentReviewedBy: "Codex Google Drive archival review",
+      publicCitation: "Jamie Burkart, public-safe archival summary of a 196 Artists Residency acceptance and onboarding record, 2023.",
+      publicNote: "The protected record documents proposal review, a scheduled residency window, pre-arrival planning, space configuration, and independent access logistics.",
+      protectedLocatorId: "ARCHIVE-196-RESIDENCY-ONBOARDING-2023-001",
+      supportsGenerally: ["Jamie operated a repeatable residency acceptance and onboarding workflow", "the workflow included proposal review and pre-arrival planning", "space and access arrangements were configured around a resident's working needs"],
+      doesNotEstablish: ["the 20-plus resident aggregate", "independent corroboration of Jamie's founder role", "resident outcomes or impact", "permission to identify the resident or publish private access instructions"]
+    },
+    {
+      id: "SRC-COMMERCIAL-VACANCY-RPIE-PILOT-2026",
+      title: "Commercial vacancy and lease-cost public-data pilot proposal",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-03-27",
+      accessedAt: "2026-07-15",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-15",
+      contentReviewedBy: "Codex Google Drive archival review",
+      publicCitation: "Jamie Burkart, public-safe archival summary of a privacy-preserving commercial vacancy and lease-cost open-data pilot proposal, March 27, 2026.",
+      publicNote: "The protected proposal translates a public-data gap into a minimum viable aggregate release with explicit fields, coverage and suppression reporting, a methods note, and confidentiality exclusions.",
+      protectedLocatorId: "ARCHIVE-COMMERCIAL-VACANCY-RPIE-PILOT-2026-001",
+      supportsGenerally: ["Jamie designed a policy-neutral open-data pilot specification", "the smallest proposed release paired indicators with coverage and suppression reporting and a methods note", "the specification defined geography, weighted rent statistics, vacancy measures, release metadata, and privacy exclusions", "the proposal framed the release as complementary to storefront reporting"],
+      doesNotEstablish: ["agency acceptance", "implementation or publication of the dataset", "presentation or attendance at a public event", "policy adoption or impact", "permission to publish confidential filings or parcel-level records"]
+    },
+    {
+      id: "SRC-COMMERCIAL-VACANCY-MAP-PACKAGE-2026",
+      title: "Commercial vacancy Council District map package",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-03-28",
+      accessedAt: "2026-07-15",
+      reviewStatus: "metadata-reviewed",
+      publicCitation: "Public-safe metadata summary of a 2026 commercial vacancy Council District map package.",
+      publicNote: "A protected project folder contains three map exports labeled as 2025 Q4 HUD-USPS business-vacancy views by New York City Council District.",
+      protectedLocatorId: "ARCHIVE-COMMERCIAL-VACANCY-MAPS-2026-001",
+      supportsGenerally: ["a three-image map package exists", "the package is labeled for Council District comparison and 2025 Q4 business-vacancy context"],
+      doesNotEstablish: ["Jamie's authorship of the underlying data or maps", "the accuracy or completeness of the mapped data", "public presentation or agency use", "display rights"],
+      media: {
+        mediaKind: "graphic",
+        rightsStatus: "unknown",
+        consentStatus: "not-applicable",
+        publicDisplayStatus: "metadata-only",
+        visibleText: ["HUD-USPS Business Vacancy Rate by NYC Council District, 2025 Q4"]
+      }
+    },
+    {
+      id: "SRC-CHESTNUT-DUMPSTER-DAY-COMMS-PACKAGE",
+      title: "Chestnut Avenue Resource Center Dumpster Day communications package",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-15",
+      reviewStatus: "metadata-reviewed",
+      publicCitation: "Public-safe metadata summary of a Chestnut Avenue Resource Center Dumpster Day communications package.",
+      publicNote: "The protected package contains banner and flier source files, export variants, a distribution photograph, and nearby public-data reference files used for mapping context.",
+      protectedLocatorId: "ARCHIVE-CHESTNUT-DUMPSTER-DAY-COMMS-001",
+      supportsGenerally: ["a multi-format neighborhood communications package exists", "the package includes design source files, exports, a distribution photograph, and geospatial reference material"],
+      doesNotEstablish: ["Jamie's authorship of any specific artifact", "printing or distribution quantities", "event attendance or outcomes", "permission to publish the files or photograph"]
+    },
+    {
+      id: "SRC-NYCA-SAVE-JIMMYS-CORNER-PHOTO-PACKAGE-2026",
+      title: "Save Jimmy's Corner photo package",
+      kind: "photo-metadata",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-04-10",
+      accessedAt: "2026-07-15",
+      reviewStatus: "metadata-reviewed",
+      publicCitation: "Public-safe metadata summary of a 2026 Save Jimmy's Corner photo package associated with NYC Artist Coalition.",
+      publicNote: "A protected folder contains a dated photographic sequence labeled for Save Jimmy's Corner and attributes the photography at folder level to Jamie Burkart and NYC Artist Coalition.",
+      protectedLocatorId: "ARCHIVE-NYCA-SAVE-JIMMYS-CORNER-PHOTOS-2026-001",
+      supportsGenerally: ["a dated Save Jimmy's Corner photographic package exists", "the folder-level metadata associates the package with Jamie and NYC Artist Coalition"],
+      doesNotEstablish: ["the identities or consent of people depicted", "the event's complete context or outcome", "publication permission", "that folder-level attribution resolves image-by-image authorship or rights"],
+      media: {
+        mediaKind: "photograph",
+        rightsStatus: "unknown",
+        consentStatus: "review-needed",
+        publicDisplayStatus: "hold",
+        captureTimestamp: "2026-04-10",
+        timestampConfidence: "moderate"
+      }
+    },
+    {
+      id: "SRC-SUNDAY-DINNER-ZOOM-ARCHIVE",
+      title: "Sunday Dinner Zoom recording archive",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-15",
+      reviewStatus: "metadata-reviewed",
+      publicCitation: "Public-safe metadata summary of a protected Sunday Dinner video-conferencing archive.",
+      publicNote: "A protected project archive contains multiple meeting recordings, packaged exports, and converted video files documenting a digital continuity layer for Sunday Dinner.",
+      protectedLocatorId: "ARCHIVE-SUNDAY-DINNER-ZOOM-001",
+      supportsGenerally: ["a protected digital gathering archive exists", "the archive contains multiple recording and export formats"],
+      doesNotEstablish: ["a complete gathering count", "participant consent for public reuse", "the content or outcome of any meeting", "permission to identify participants or publish recordings"]
+    },
+    {
+      id: "SRC-WOWLIST-MEMBERS-MEETING-VIDEO-2015",
+      title: "What is WOW List? members meeting video",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2015",
+      accessedAt: "2026-07-15",
+      reviewStatus: "metadata-reviewed",
+      publicCitation: "Public-safe metadata summary of a preserved 2015 WOW List members meeting video.",
+      publicNote: "A protected project folder preserves a video titled 'Members Meeting: What is wowlist.org?' dated 2015.",
+      protectedLocatorId: "ARCHIVE-WOWLIST-MEMBERS-MEETING-2015-001",
+      supportsGenerally: ["a 2015 members-meeting recording exists", "the recording is explicitly associated with WOWList.org"],
+      doesNotEstablish: ["the meeting's contents", "participant roles or consent", "platform adoption metrics", "Jamie's individual contribution", "permission to publish the recording"]
     }
   ],
   sourceCollections: campaignPressCollections,
@@ -1016,7 +1157,7 @@ const knowledgeBankInput = {
       projections: [
         { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
         { key: "work-card", text: "Jamie independently built CallNYC, translating CouncilStat constituent-services records into issue pages and next-step guidance residents could navigate.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
-        { key: "resume-html", text: "Jamie built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
+        { key: "resume-html", text: "Jamie built CallNYC.org as an archived, unofficial independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
       ],
       evidence: [
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "direct-support", supports: ["sequence from the January event through the fuller data release", "Jamie's independent development and iteration", "Politico coverage"], confidence: "high", renderCitation: true },
@@ -1090,6 +1231,17 @@ const knowledgeBankInput = {
       boundaries: ["This establishes plan design and use of the running-minutes layer, not completion or adoption of every proposed deliverable.", "Keep coalition work collective and private strategy, stakeholder detail, and community records out of public composition."],
       antiClaims: ["Jamie completed every element of the 90-day plan", "Every collaborator adopted the plan", "Jamie solely led the coalition or movement"],
       researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Codex protected-archive review"]
+    },
+    {
+      id: "CLM-COMMERCIAL-VACANCY-RPIE-PILOT-DESIGN-2026",
+      project: "fair-rent-nyc",
+      internalClaim: "Jamie designed a policy-neutral, privacy-preserving pilot specification for publishing geography-aggregated commercial vacancy and lease-cost indicators derived from RPIE filings, defining a smallest serious release, exact data fields, coverage and suppression reporting, a methods note, and explicit confidentiality exclusions.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "Jamie designed a privacy-preserving commercial vacancy and lease-cost open-data pilot specification with a minimum viable release, exact fields, suppression and coverage reporting, and explicit confidentiality exclusions.", status: "hold", citationRequired: false, surfaces: [] }],
+      evidence: [{ sourceId: "SRC-COMMERCIAL-VACANCY-RPIE-PILOT-2026", relationship: "private-support", supports: ["Jamie's authorship of the pilot specification", "the minimum viable release design", "the proposed fields and geographies", "coverage, suppression, methods, and confidentiality boundaries"], locator: "Plain ask, smallest serious pilot, minimum fields, privacy exclusions, and next-step sections", confidence: "high", renderCitation: false }],
+      boundaries: ["This establishes proposal and method design, not agency adoption, implementation, dataset publication, or policy impact.", "Keep raw filings, identifiers, parcel-level records, lease documents, and private outreach context outside public composition."],
+      antiClaims: ["The City adopted Jamie's pilot", "Jamie published an official RPIE dataset", "The proposal establishes a completed agency engagement", "The design proves policy impact"],
+      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Codex Google Drive archival review"]
     },
     {
       id: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
@@ -1182,7 +1334,7 @@ const knowledgeBankInput = {
       ],
       boundaries: ["The independent public sources establish weekly co-hosting and the archive, not the 300-plus figure; that aggregate is Jamie-approved and self-reported through the public resume.", "This claim concerns Sunday Dinner, not the separately named 196 Artists Residency.", "Do not reproduce old RSVP details, identify participants, or republish participant media without contextual rights and consent review.", "Do not present the archive as a current event listing."],
       antiClaims: ["The reviewed sources establish Jamie as Sunday Dinner's sole host or sole creator", "The public archive is comprehensive", "Participant media is cleared for portfolio republication"],
-      researchInquiryIds: [], reviewedAt: "2026-07-13", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
+      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex public-source and artifact review"]
     },
     {
       id: "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
@@ -1190,10 +1342,13 @@ const knowledgeBankInput = {
       internalClaim: "Jamie founded 196 Artists Residency in 2020 and reports supporting 20-plus resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.",
       status: "confirmed-with-boundary",
       projections: [{ key: "case-study", text: "Jamie founded 196 Artists Residency in 2020; Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.", status: "active", citationRequired: true, surfaces: ["/work/196-sunday-dinner"] }],
-      evidence: [{ sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", relationship: "direct-support", supports: ["Jamie's founder role", "the 2020-present date range", "the 20-plus resident-artist figure", "the operating practices used"], locator: "Selected Impact and Experience, pages 1-2", confidence: "moderate", renderCitation: true }],
-      boundaries: ["The founder role and 20-plus figure are Jamie-approved, self-reported resume claims rather than independent corroboration.", "This claim concerns 196 Artists Residency, not authorship or sole hosting of Sunday Dinner.", "Do not identify residents or publish their records, work, or images without separate contextual review and permission."],
+      evidence: [
+        { sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", relationship: "direct-support", supports: ["Jamie's founder role", "the 2020-present date range", "the 20-plus resident-artist figure", "the operating practices used"], locator: "Selected Impact and Experience, pages 1-2", confidence: "moderate", renderCitation: true },
+        { sourceId: "SRC-196-ARTISTS-RESIDENCY-ONBOARDING-2023", relationship: "private-support", supports: ["proposal review", "scheduled onboarding", "pre-arrival planning", "space configuration", "access logistics"], locator: "Acceptance, residency-window, pre-arrival-call, space-configuration, and access sections", confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["The founder role and 20-plus figure are Jamie-approved, self-reported resume claims rather than independent corroboration; the protected onboarding record supports methods, not scale.", "This claim concerns 196 Artists Residency, not authorship or sole hosting of Sunday Dinner.", "Do not identify residents or publish their records, work, images, contact details, or access instructions without separate contextual review and permission."],
       antiClaims: ["Jamie solely created Sunday Dinner", "Resident participation transfers ownership of artists' work", "The public source establishes complete independent impact validation"],
-      researchInquiryIds: [], reviewedAt: "2026-07-13", reviewedBy: ["Jamie Burkart", "Codex artifact review"]
+      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Jamie Burkart", "Codex artifact and Google Drive archival review"]
     },
     {
       id: "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL-2017",

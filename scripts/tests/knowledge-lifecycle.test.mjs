@@ -119,14 +119,14 @@ test("TiredOfTires keeps individual attribution and disputed metrics out of publ
   assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(operations.id) && !candidateClaimIds.includes(metric.id)));
 });
 
-test("Cleveland Avenue and pro bono neighborhood communications stay queued for corroboration", () => {
+test("Cleveland Avenue and pro bono neighborhood communications stay in research for corroboration", () => {
   const cleveland = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-CLEVELAND-AVE-UNIFY-BEAUTIFY-ROLE");
   const communications = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-EAST-KC-PRO-BONO-COMMUNICATIONS");
   const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-CLEVELAND-AVE-ROLE-IMPACT");
 
   assert.equal(cleveland?.maturity, "researching");
   assert.equal(communications?.maturity, "researching");
-  assert.equal(task?.status, "open");
+  assert.equal(task?.status, "in-progress");
   assert.ok(cleveland?.boundaries.some((item) => /Pastor Lee/i.test(item)));
   assert.ok(task?.nextActions.some((item) => /official capital-improvement records/i.test(item)));
   assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(cleveland.id) && !candidateClaimIds.includes(communications.id)));
@@ -195,11 +195,60 @@ test("Teams archive production promotes bounded methods while holding unsupporte
   assert.equal(sprintClaim?.projections[0]?.status, "hold");
   assert.deepEqual(sprintClaim?.projections[0]?.surfaces, []);
   assert.deepEqual(campaignProof?.evidenceCanonicalClaimIds, ["CLM-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN-2026"]);
-  assert.deepEqual(sourceMapProof?.evidenceCanonicalClaimIds, ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"]);
+  assert.ok(sourceMapProof?.evidenceCanonicalClaimIds?.includes("CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"));
   assert.deepEqual(sprintProof?.evidenceCanonicalClaimIds, ["CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026"]);
   assert.equal(campaignProof?.canonicalClaimIds, undefined);
   assert.equal(sourceMapProof?.canonicalClaimIds, undefined);
   assert.equal(sprintProof?.canonicalClaimIds, undefined);
+});
+
+test("Google Shared Drive production develops bounded claims and held media without treating custody as proof", () => {
+  const run = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-GOOGLE-SHARED-DRIVE-ARCHIVE-PRODUCTION-2026-07-15");
+  const pilotTask = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-COMMERCIAL-VACANCY-RPIE-PILOT-REVIEW-2026-07-15");
+  const pilot = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-COMMERCIAL-VACANCY-RPIE-PILOT-DESIGN");
+  const pilotClaim = knowledgeBank.claims.find(({ id }) => id === "CLM-COMMERCIAL-VACANCY-RPIE-PILOT-DESIGN-2026");
+  const pilotDecision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-COMMERCIAL-VACANCY-RPIE-PILOT-PROMOTE-2026-07-15");
+  const residency = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-196-ARTISTS-RESIDENCY-FOUNDER-SCALE");
+  const residencyClaim = knowledgeBank.claims.find(({ id }) => id === "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE");
+  const communications = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-EAST-KC-PRO-BONO-COMMUNICATIONS");
+  const sourceMapProof = proofClaims.find(({ id }) => id === "fair-rent-source-map");
+  const driveSourceIds = run?.sourceIds ?? [];
+  const driveSources = knowledgeBank.sources.filter(({ id }) => driveSourceIds.includes(id));
+  const mediaIds = [
+    "MEDIA-COMMERCIAL-VACANCY-MAPS-2026",
+    "MEDIA-CHESTNUT-DUMPSTER-DAY-COMMS",
+    "MEDIA-NYCA-SAVE-JIMMYS-CORNER-PHOTOS-2026",
+    "MEDIA-SUNDAY-DINNER-ZOOM-ARCHIVE",
+    "MEDIA-WOWLIST-MEMBERS-MEETING-2015"
+  ];
+  const media = knowledgeLifecycle.mediaLeads.filter(({ id }) => mediaIds.includes(id));
+
+  assert.equal(run?.status, "completed");
+  assert.equal(run?.sourceIds.length, 8);
+  assert.ok(run?.limitations.some((item) => /technical access/i.test(item)));
+  assert.ok(run?.limitations.some((item) => /custody/i.test(item)));
+  assert.ok(driveSources.every(({ visibility }) => visibility === "protected"));
+  assert.ok(driveSources.every(({ canonicalUrl, archiveUrl, assetUrl }) => !canonicalUrl && !archiveUrl && !assetUrl));
+
+  assert.equal(pilotTask?.status, "completed");
+  assert.equal(pilot?.maturity, "promoted");
+  assert.equal(pilot?.targetCanonicalClaimId, pilotClaim?.id);
+  assert.ok(pilot?.antiClaims.some((item) => /City adopted/i.test(item)));
+  assert.equal(pilotClaim?.projections[0]?.status, "hold");
+  assert.deepEqual(pilotClaim?.projections[0]?.surfaces, []);
+  assert.deepEqual(pilotDecision?.allowedSurfaces, ["knowledge-bank"]);
+  assert.ok(sourceMapProof?.evidenceCanonicalClaimIds?.includes(pilotClaim.id));
+
+  assert.ok(residency?.observationIds.includes("OBS-196-ARTISTS-RESIDENCY-ONBOARDING-WORKFLOW-2023"));
+  assert.equal(residency?.publicEvidenceQualifier?.kind, "self-reported");
+  assert.ok(residencyClaim?.boundaries.some((item) => /supports methods, not scale/i.test(item)));
+  assert.ok(communications?.observationIds.includes("OBS-CHESTNUT-DUMPSTER-DAY-COMMS-PACKAGE"));
+  assert.equal(communications?.maturity, "researching");
+  assert.ok(communications?.antiClaims.some((item) => /custody proves authorship/i.test(item)));
+
+  assert.equal(media.length, mediaIds.length);
+  assert.ok(media.every(({ displayStatus }) => ["hold", "metadata-only"].includes(displayStatus)));
+  assert.ok(media.every(({ rightsStatus }) => rightsStatus !== "cleared"));
 });
 
 test("evidence-only canonical links cannot authorize or enter public composition", () => {
@@ -617,7 +666,7 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.deepEqual(kcProofs.mediaLeads, []);
 
   const resumePdf = retrieveKnowledgePalette({ proofSurface: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", publicationSafe: true });
-  assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL", "PRJ-FAIR-RENT-CRS"]);
+  assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL", "PRJ-FAIR-RENT-CRS", "PRJ-WOWLIST"]);
   assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"]);
   assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
   assert.deepEqual(resumePdf.researchTasks, []);

@@ -54,8 +54,9 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
             {item.title}
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
-          <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <p className="mt-5 hidden text-xl leading-8 text-jb-ink/78 lg:block">{item.summary}</p>
         </header>
+        <p className="text-xl leading-8 text-jb-ink/78 lg:hidden">{item.summary}</p>
         <aside className="space-y-5 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
           <div className="flex flex-wrap gap-3">

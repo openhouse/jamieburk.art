@@ -53,7 +53,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
-**Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
+**Public wording:** Built CallNYC.org as an archived, unofficial independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
 **Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
 **Where to project:** Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
@@ -67,7 +67,7 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful
 **Support level:** Careful
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Evidence class:** Approved resume / protected close-read working artifacts / public-safe archive summary / firsthand-collaborator context
 **Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 **Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
@@ -82,16 +82,17 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful
 **Support level:** Careful
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Evidence class:** Approved resume / protected close-read working artifacts / public-safe archive summary / firsthand-collaborator context
 **Public wording:** Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.
-**Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.
+**Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected. A separate authored proposal defines a minimum privacy-preserving release for aggregate commercial vacancy and lease-cost indicators.
 **Where to project:** Resume page, Technical Operations, Case study.
 **Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.
-**Guardrail:** Do not imply legal authority or official bill ownership.
-**Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
-**Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
+**Guardrail:** Do not imply legal authority, official bill ownership, agency adoption, implementation, publication, presentation, or policy impact.
+**Source basis:** A protected legislative provenance redline supports the lineage method. A separate protected, Jamie-authored commercial-vacancy proposal supports privacy-preserving public-data framing and minimum-release design, not agency adoption or implementation.
+**Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis; a City agency adopted or implemented the proposed data release.
+**Protected boundaries:** Legal-review context, private strategy, private correspondence, unapproved collaborator notes, and protected working files stay offline.
 **Review owner:** Jamie / Collaborator approval needed  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
@@ -143,16 +144,16 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Evidence class:** Approved resume / public sources / protected onboarding artifact / Jamie review confirmation
 **Public wording:** Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ gatherings. Jamie founded 196 Artists Residency; Jamie reports supporting 20+ resident artists through repeatable participation systems.
-**Detailed public-safe wording:** By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering. Jamie's approved public resume separately identifies him as the founder of 196 Artists Residency, dates Sunday Dinner to 2012-present and the residency to 2020-present, and attributes 300+ gatherings to Sunday Dinner and support for 20+ resident artists to the residency. The independent public sources support Sunday Dinner cadence and co-hosting; the aggregate figures remain Jamie-approved, self-reported claims.
+**Detailed public-safe wording:** By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering. Jamie's approved public resume separately identifies him as the founder of 196 Artists Residency, dates Sunday Dinner to 2012-present and the residency to 2020-present, and attributes 300+ gatherings to Sunday Dinner and support for 20+ resident artists to the residency. Independent public sources support Sunday Dinner cadence and co-hosting. A protected 2023 residency record supports proposal review, scheduled onboarding, pre-arrival planning, space configuration, and access logistics. Neither independently corroborates the aggregate figures, which remain Jamie-approved, self-reported claims.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
-**Guardrail:** Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attribute both aggregates to Jamie's approved resume and use "Jamie reports" for the 20+ residency scale; keep each role and date range distinct.
+**Guardrail:** Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attach 300+ gatherings only to Sunday Dinner and 20+ resident artists only to 196 Artists Residency; attribute both aggregates to Jamie's approved resume and use "Jamie reports" for the residency scale. The protected onboarding record supports methods, not scale.
 **Do not say:** Jamie was Sunday Dinner's sole host or sole creator; institutional ownership of participants' work; comprehensive public archive; attendance database.
-**Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
+**Protected boundaries:** Resident identities, work, images, contact details, access instructions, guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-15
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 

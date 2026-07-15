@@ -129,3 +129,26 @@ addressed and all production preflight gates passing.
 
 The Chad Lens criterion is met for application use. Production publication
 still requires Jamie's explicit approval.
+
+## Google Shared Drive and exact-final pass
+
+- Kept the archive as source material rather than a public interface: the
+  bounded vacancy-data method claim remains held, and protected media did not
+  become site content.
+- Reworked mobile navigation into a compact menu and made the homepage's primary
+  hiring action visually singular.
+- Placed every case-study summary before At a glance on mobile and inside the
+  desktop header, then removed the resulting desktop blank-space regression.
+- Shortened FairRentNYC's opening without losing Jamie's co-founder role,
+  collaborators, usable records and sites, or the collective advocacy end.
+- Removed duplicated status metadata and retained the visible case-study badge.
+- Made `support launch` explicit in the hero and synchronized the deterministic
+  Chad Lens contract.
+- Carried `archived, unofficial` into CallNYC's HTML and PDF resume wording.
+- Labeled the 20+ residency aggregate as Jamie-reported in both PDF occurrences
+  while preserving Sunday Dinner's distinct role, collaborator credit, and
+  300+ gathering figure.
+
+Two exact-final independent judges scored Chad's criterion **5 / 5**. The runner
+reported **100 / 100**, stable pair `yes`, recommendation `criterion-met`, with
+all six dimensions addressed and every deterministic gate passing.

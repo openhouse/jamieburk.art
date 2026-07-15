@@ -18,6 +18,7 @@ explicit approval.
 | Campaign-press integration | 90 / 90 | Application-ready | The complete campaign press corpus remained off the public site; mobile source notes became collapsible while desktop and print retained the full evidence layer. Both fresh judges again scored every criterion at least 4. |
 | KC Council lifecycle and final interface pass | 96 / 94 | Application-ready | The portfolio now states the complete public-record lifecycle without confusing appropriation with receipt, and the application path passed a broader production browser matrix. Every criterion remained at least 4. |
 | Teams archive and expanded visual review | 92 / 92 | Application-ready | Three archive collections produced bounded evidence without expanding the public argument; 17 source-bound captures, both resume pages, and a corrected metadata-label contrast defect deepened interface evidence. Every criterion remained at least 4. |
+| Google Shared Drive and exact-final pass | 98 / 100 | Application-ready | Bounded archive production strengthened the internal palette without dumping it onto the site; mobile proof ordering, desktop composition, resume attribution, and claim guardrails were repaired and re-judged. Every criterion remained at least 4. |
 
 The final scorecards were produced independently from the current working tree,
 the canonical claim layer, the rendered resume, and production-mode browser
@@ -102,3 +103,24 @@ evidence passed, the latest two fresh scores were 92 / 92, every criterion
 reached at least 4, and both judges returned `application-ready`. This run does
 not grant production approval. Publishing to production remains Jamie's
 explicit human decision.
+
+## Google Shared Drive and exact-final pass
+
+- Inventoried 110 accessible Shared Drives and close-read a bounded professional
+  subset while excluding personal and sensitive collections.
+- Added one defensible internal method claim and held five media collections for
+  rights, consent, authorship, context, or methodology review; no archive-derived
+  project claim was promoted directly onto the website.
+- Repaired the hiring path and case-study hierarchy across desktop and mobile,
+  including compact navigation, summary-first mobile composition, and the
+  desktop two-column flow.
+- Tightened FairRentNYC's opening and removed duplicate case-study status
+  metadata.
+- Updated the phone-bearing two-page resume so CallNYC is visibly archived and
+  unofficial and the 20+ residency aggregate is visibly Jamie-reported.
+- Refreshed 17 source-bound captures and 42 production browser observations at
+  three viewports; all observations passed.
+
+The exact-final portfolio pair scored **98 / 100**, stable pair `yes`, with both
+judges recommending `application-ready`. All deterministic fast gates passed.
+Production publication remains Jamie's explicit human decision.

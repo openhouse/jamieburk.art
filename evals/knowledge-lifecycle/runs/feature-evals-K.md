@@ -229,3 +229,31 @@ bank can accept incomplete material, preserve uncertainty, mature claims
 through research, and supply selective public compositions. There is no public
 `/proofs`, `/knowledge-bank`, or `/public-claims` route. Production publication
 remains Jamie's explicit human decision.
+
+## Google Shared Drive archive production
+
+The July 15 pass inventoried 110 accessible Shared Drives, then close-read a
+bounded professional subset. Personal, family, legal, relationship, and
+collaborator-private collections were excluded from research and publication.
+Technical access was not treated as ethical permission.
+
+The pass added seven append-only receipts, seven actionable leads, eight atomic
+observations, one candidate and held canonical method claim, two research tasks,
+one promotion decision, and five rights- or consent-gated media leads. It
+strengthened the 196 Artists Residency operating-method record without treating
+the protected onboarding document as support for the 20+ aggregate.
+
+The strongest new proposition is deliberately narrow: Jamie designed a
+privacy-preserving commercial vacancy and lease-cost open-data pilot
+specification. The records do not establish adoption, implementation,
+publication, agency presentation, or policy impact. The claim remains held in
+the knowledge bank with no public surface. Map files, neighborhood-design
+packages, photographs, and meeting recordings remain metadata-only or held;
+custody does not establish authorship, accuracy, consent, rights, or outcomes.
+
+After the pass, the corpus contains 54 leads and receipts, 90 observations, 37
+candidate claims, 27 research tasks, 44 decisions, 8 editorial briefs, 15
+exact-destination manifests, and 15 media leads. All 42 lifecycle tests passed.
+Two independent final judges scored the lifecycle **91 / 90**, stable pair
+`yes`, with every criterion at least 4 and both recommendations
+`framework-ready`.

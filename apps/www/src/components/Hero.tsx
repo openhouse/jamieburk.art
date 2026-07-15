@@ -1,39 +1,41 @@
+import Link from "next/link";
 import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 
 export function Hero() {
   return (
     <section className="border-b-4 jb-rule">
-      <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
+      <div className="jb-frame grid gap-8 py-10 sm:py-14 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
           <p className="text-sm font-semibold uppercase text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1 className="mt-4 font-display text-4xl font-bold leading-[1.02] text-jb-ink sm:mt-5 sm:text-6xl">
             Jamie Burkart
           </h1>
-          <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
+          <p className="mt-5 text-xl font-semibold leading-snug text-jb-green sm:mt-6 sm:text-2xl">
             I turn emerging work into clear plans, shared decisions, and durable handoffs.
           </p>
-          <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            When requirements, ownership, and next steps are still forming, I
-            help public-facing teams clarify decisions, coordinate
-            implementation, support launch, and leave documentation people can
-            use to continue the work.
+          <p className="mt-4 text-lg leading-7 text-jb-ink/78 sm:mt-5 sm:text-xl sm:leading-8">
+            When requirements and ownership are still forming, I clarify
+            decisions, coordinate implementation, support launch, and leave
+            public-facing teams with documentation they can use.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 sm:mt-8">
             <JBButton href="/work/technical-operations">See technical operations</JBButton>
-            <JBButton href={site.resumePath} variant="secondary" download>
-              Download resume PDF
-            </JBButton>
-            <JBButton href="/contact" variant="ghost">
-              Contact Jamie
-            </JBButton>
-            <JBButton href="/work" variant="ghost">
-              View all work
-            </JBButton>
+            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+              <a className="text-jb-blue hover:text-jb-green" download href={site.resumePath}>
+                Resume PDF
+              </a>
+              <Link className="text-jb-blue hover:text-jb-green" href="/contact">
+                Contact
+              </Link>
+              <Link className="text-jb-blue hover:text-jb-green" href="/work">
+                All work
+              </Link>
+            </div>
           </div>
-          <p className="mt-6 text-sm font-medium text-jb-ink/64">
+          <p className="mt-5 text-sm font-medium text-jb-ink/64 sm:mt-6">
             Brooklyn, NY / Civic technology / Product operations / Knowledge
             systems / Public-facing tools
           </p>

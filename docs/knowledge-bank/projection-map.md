@@ -113,6 +113,7 @@ composed public surface, not a claim database.
 
 - Appropriation is not receipt
 - Keep no disbursement and reappropriation attached to the KC amount
+- Keep Sunday Dinner's 300-plus gatherings distinct from 196 Artists Residency's 20-plus resident artists
 - Keep the phone-bearing artifact available for applications
 ## `/work/technical-operations`
 

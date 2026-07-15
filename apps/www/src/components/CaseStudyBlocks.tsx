@@ -8,35 +8,66 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Role", item.role],
     ["Years", item.years],
     ["Context", item.series],
-    ["Status", item.status],
     ["Visibility", item.visibility],
     ["Role fit", item.roleFit]
   ];
+  const primaryRows = rows.filter(([label]) => ["Role", "Years", "Role fit"].includes(label));
+  const supportingRows = rows.filter(([label]) => !["Role", "Years", "Role fit"].includes(label));
 
   return (
-    <section aria-labelledby="at-a-glance" className="rounded-lg bg-jb-blue p-5 text-jb-paper">
-      <h2 className="text-xl font-semibold" id="at-a-glance">
-        At a glance
-      </h2>
-      <dl className="mt-5 grid gap-4 sm:grid-cols-2">
-        {rows.map(([label, value]) => (
-          <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/90">
-              {label}
-            </dt>
-            <dd className="mt-1 leading-6">{value}</dd>
+    <>
+      <section aria-labelledby="at-a-glance-mobile" className="rounded-lg bg-jb-blue p-5 text-jb-paper sm:hidden">
+        <h2 className="text-xl font-semibold" id="at-a-glance-mobile">
+          At a glance
+        </h2>
+        <dl className="mt-4 grid gap-3">
+          {primaryRows.map(([label, value]) => (
+            <div key={label}>
+              <dt className="text-xs font-semibold uppercase text-jb-paper/90">
+                {label}
+              </dt>
+              <dd className="mt-1 leading-6">{value}</dd>
+            </div>
+          ))}
+        </dl>
+        <details className="mt-4 border-t border-jb-paper/25 pt-3">
+          <summary className="cursor-pointer text-sm font-semibold">More project context</summary>
+          <dl className="mt-4 grid gap-3">
+            {supportingRows.map(([label, value]) => (
+              <div key={label}>
+                <dt className="text-xs font-semibold uppercase text-jb-paper/90">
+                  {label}
+                </dt>
+                <dd className="mt-1 leading-6">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </details>
+      </section>
+      <section aria-labelledby="at-a-glance" className="hidden rounded-lg bg-jb-blue p-5 text-jb-paper sm:block">
+        <h2 className="text-xl font-semibold" id="at-a-glance">
+          At a glance
+        </h2>
+        <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+          {rows.map(([label, value]) => (
+            <div key={label}>
+              <dt className="text-xs font-semibold uppercase text-jb-paper/90">
+                {label}
+              </dt>
+              <dd className="mt-1 leading-6">{value}</dd>
+            </div>
+          ))}
+        </dl>
+        <div className="mt-5">
+          <p className="text-xs font-semibold uppercase text-jb-paper/90">
+            Tags
+          </p>
+          <div className="mt-3">
+            <TagList compact tags={item.tags} tone="inverse" />
           </div>
-        ))}
-      </dl>
-      <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/90">
-          Tags
-        </p>
-        <div className="mt-3">
-          <TagList compact tags={item.tags} tone="inverse" />
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
