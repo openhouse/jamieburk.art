@@ -84,6 +84,20 @@ Cleveland Avenue Unify to Beautify remains an intake and inquiry rather than an
 accomplishment claim. HENC's strategic plan supports the coalition context but
 not the specific program, Jamie's role, or a funding outcome.
 
+# 2026-07-15 NTER CHNG archival recovery
+
+- `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION` - archived project sources credit
+  Jamie Burkart, Drew Bolton, and Garrett Fuselier as co-creators of an
+  interactive texting installation. *America: Now and Here*'s own archived
+  Kansas City article documents visitors submitting text messages and seeing
+  them become moving projected thought clouds. The archive note is active in
+  the historical bank; About and media projections remain held.
+
+The fuller production record credits Mary Nichols with helping engineer and
+construct the wall and names Megan Mantia and Elisha Stetson as actors. Exact
+contribution split, technical architecture, exhibition placement, scale, and
+media rights remain under research.
+
 # 2026-07-13 NYC Artist Coalition campaign press corpus
 
 The four captured campaign Press sections directly support one held

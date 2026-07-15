@@ -97,6 +97,21 @@ yet. HENC's strategic plan establishes coalition context, not the specific
 program, Jamie's role, Pastor Lee's authorship, elected-official participation,
 or a causal relationship to capital funding.
 
+## NTER CHNG
+
+Do not say Jamie created NTER CHNG alone. Credit Drew Bolton and Garrett
+Fuselier as co-creators and retain Mary Nichols, Megan Mantia, and Elisha
+Stetson's production credits when discussing the fuller record.
+
+Do not say NTER CHNG was installed at the Nerman Museum. The museum page
+documents the wider America: Now and Here program and truck stop; the official
+America: Now and Here article establishes NTER CHNG's inclusion in the Kansas
+City program without specifying its exact venue or dates.
+
+Do not infer contribution split, technical architecture, participant count,
+message count, current operation, or permission to republish messages, video,
+thumbnails, or installation images.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

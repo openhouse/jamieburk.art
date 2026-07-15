@@ -32,6 +32,12 @@ import {
   kcTownHallPhaseOneNeighborhoodSources
 } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-phase-one-and-neighborhood-operations.ts";
 import {
+  nterChngClaims,
+  nterChngInquiries,
+  nterChngIntake,
+  nterChngSources
+} from "../../apps/www/src/data/knowledge-bank/nter-chng.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -303,6 +309,81 @@ test("new KC fieldwork records do not silently project onto public hiring surfac
     JSON.stringify(kcTownHallPhaseOneNeighborhoodIntake),
     /\/Users\/|\/Volumes\/|supporting-materials|\.docx|\.xlsx/i
   );
+});
+
+test("NTER CHNG is source-backed, collectively credited, and held from hiring surfaces", () => {
+  assert.equal(nterChngSources.length, 4);
+  assert.equal(nterChngClaims.length, 1);
+  assert.equal(nterChngInquiries.length, 1);
+  assert.equal(nterChngIntake.length, 1);
+
+  const claim = nterChngClaims[0];
+  const archiveProjection = claim.projections.find(
+    (item) => item.key === "archive-note"
+  );
+  const aboutProjection = claim.projections.find((item) => item.key === "about");
+  const evidenceSourceIds = new Set(
+    claim.evidence.map((relationship) => relationship.sourceId)
+  );
+
+  assert.equal(claim.status, "confirmed-with-boundary");
+  assert.equal(archiveProjection.status, "active");
+  assert.deepEqual(archiveProjection.surfaces, [
+    "docs/knowledge-bank/projects/participatory-public-practice"
+  ]);
+  assert.equal(aboutProjection.status, "hold");
+  assert.deepEqual(aboutProjection.surfaces, []);
+  assert.deepEqual(
+    evidenceSourceIds,
+    new Set(nterChngSources.map((source) => source.id))
+  );
+  assert.match(claim.internalClaim, /Drew Bolton and Garrett Fuselier/);
+  assert.ok(claim.boundaries.some((item) => /Mary Nichols/i.test(item)));
+  assert.ok(claim.boundaries.some((item) => /Megan Mantia and Elisha Stetson/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /created NTER CHNG alone/i.test(item)));
+});
+
+test("NTER CHNG evidence distinguishes exhibition inclusion from the Nerman stop", () => {
+  const sourceById = new Map(nterChngSources.map((source) => [source.id, source]));
+  const projectArchive = sourceById.get("SRC-NTER-CHNG-WAYBACK-2011");
+  const exhibitionSource = sourceById.get(
+    "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011"
+  );
+  const nermanSource = sourceById.get("SRC-NERMAN-AMERICA-NOW-HERE-2011");
+  const inquiry = nterChngInquiries[0];
+
+  assert.match(projectArchive.archiveUrl, /20110128193350/);
+  assert.match(exhibitionSource.archiveUrl, /20121017090512/);
+  assert.ok(
+    exhibitionSource.supportsGenerally.includes(
+      "NTER CHNG was presented within America: Now and Here's Kansas City program"
+    )
+  );
+  assert.ok(
+    nermanSource.doesNotEstablish.includes(
+      "that NTER CHNG appeared at the Nerman Museum stop"
+    )
+  );
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.ok(
+    inquiry.limitations.some((item) => /press-release link was not captured/i.test(item))
+  );
+  assert.ok(
+    inquiry.limitations.some((item) => /exact America: Now and Here installation venue/i.test(item))
+  );
+});
+
+test("NTER CHNG does not silently enter the current website or resume", () => {
+  const publicSurfaces = [
+    readFileSync("apps/www/src/app/about/page.tsx", "utf8"),
+    readFileSync("apps/www/src/app/resume/page.tsx", "utf8"),
+    readFileSync("apps/www/src/data/proofs.ts", "utf8"),
+    readFileSync("apps/www/src/data/work.ts", "utf8")
+  ].join("\n");
+
+  assert.doesNotMatch(publicSurfaces, /NTER CHNG/i);
+  assert.doesNotMatch(publicSurfaces, /I Text, Therefore I Am/i);
+  assert.doesNotMatch(publicSurfaces, /Drew Bolton|Garrett Fuselier/i);
 });
 
 test("campaign press ingestion is complete, deduplicated, and archived", () => {

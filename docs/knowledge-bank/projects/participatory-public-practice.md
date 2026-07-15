@@ -49,6 +49,29 @@ decision-making, and distributed documentation.
 **Boundaries:** Participant activity and decisions remain collective work.
 Images, names, and private details require separate review before publication.
 
+## NTER CHNG
+
+Archived project and exhibition sources document Jamie co-creating *NTER
+CHNG* with Drew Bolton and Garrett Fuselier. The interactive installation let
+visitors send text messages to a displayed number and transformed the messages
+into moving projected thought clouds on an angled, floor-to-ceiling gauze
+screen. The project site places an early presentation at Arts Incubator's
+Cocoon Gallery in Kansas City. *America: Now and Here* later documented the
+installation in its own Kansas City program.
+
+Surviving project-video metadata credits Mary Nichols with helping engineer and
+construct the wall and names Megan Mantia and Elisha Stetson as actors. The
+reviewed record does not establish each creator's contribution split, the full
+software or messaging architecture, the exact *America: Now and Here* venue or
+dates, or participation and message counts.
+
+**Boundaries:** Always credit Drew Bolton and Garrett Fuselier as co-creators.
+Retain Mary Nichols, Megan Mantia, and Elisha Stetson's production credits when
+discussing the fuller record. The Nerman Museum page establishes the wider
+program and its May 11-12 truck stop, not that *NTER CHNG* appeared at that
+specific location. Participant messages and project media require privacy,
+rights, and consent review before republication.
+
 ## Sources
 
 - The Pitch, "When artists turn Huck Finn" (2007).
@@ -58,3 +81,8 @@ Images, names, and private details require separate review before publication.
 - KCUR, "The 8th Street Tunnel Is A Gateway To Kansas City's History" (2016).
 - Michael Rees, "Claudette's Theatre on Wheels."
 - Good Times / Metro Santa Cruz, "Open House" coverage (2006).
+- NTER CHNG project website, January 28, 2011 Wayback capture.
+- Garrett Fuselier, "NTER CHNG" project video (2011).
+- America: Now and Here, "I Text, Therefore I Am" (2011, archived).
+- Nerman Museum of Contemporary Art, "America: Now and Here - Barbara Kruger"
+  (2011).
