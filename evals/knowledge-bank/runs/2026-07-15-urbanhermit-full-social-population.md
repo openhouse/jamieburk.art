@@ -123,9 +123,15 @@ structural rather than editorial:
    to Jamie deserved explicit semantic mutation tests that would survive a
    future deliberate hash refresh.
 
-The preliminary acceptance was not recorded as a passing holdout. The fixture
-now redacts identity, date, URL, and metric data for all nine records while
-retaining one disposition per reviewed item. New tests reject removal of M.C.
-Schmidt's co-credit and conversion of the Brooklyn Eagle coalition quote into
-individual Jamie authorship or Office of Nightlife causation. The revised
-candidate requires two fresh reviews.
+The preliminary acceptance and subsequent data-integrity rejection are retained
+in the holdout ledger. The fixture now redacts identity, date, URL, and metric
+data for all nine records while retaining one disposition per reviewed item.
+New tests reject removal of M.C. Schmidt's co-credit and conversion of the
+Brooklyn Eagle coalition quote into individual Jamie authorship or Office of
+Nightlife causation.
+
+A later frozen revision passed every substantive check but one reviewer rejected
+it because the holdout regression still named the prior NYC Artist Coalition
+judges. That reviewer correctly treated the stale contract as a blocker. The
+test now predeclares two new Urbanhermit reviewer IDs, the protocol has reset,
+and the unchanged public-safe content requires two fresh final reviews.

@@ -279,6 +279,37 @@
       "blockers": [
         "Two fresh independent judges must inspect the live-profile versus owner-archive boundary, row-level reconciliation, source authorship, posted-link and mission classifications, personal-context exclusions, stakeholder and interaction semantics, public safety, source-specific role claims, selective non-projection, and count-preserving mutation resistance on a frozen revision."
       ]
+    },
+    {
+      "judgeId": "urbanhermit-holdout-hiring-editor-credit-2026-07-15-final-b",
+      "completedAt": "2026-07-15T09:57:00Z",
+      "lens": "Independent skeptical hiring editor, collective-credit reviewer, and public-interest portfolio editor",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "urbanhermit-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T10:00:00Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and Git-history reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "The committed holdout regression still expected the superseded NYC Artist Coalition judge IDs instead of naming the Urbanhermit review cycle."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-urbanhermit-holdout-contract-2026-07-15",
+      "completedAt": "2026-07-15T10:01:16Z",
+      "lens": "Protocol reset after replacing the stale NYC Artist Coalition holdout regression with two predeclared Urbanhermit final reviewer IDs",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must review the repaired holdout contract and unchanged public-safe Urbanhermit content on a newly frozen revision."
+      ]
     }
   ]
 }

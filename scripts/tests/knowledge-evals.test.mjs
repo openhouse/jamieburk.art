@@ -55,13 +55,13 @@ function refreshFieldPracticeApproval(targetSuite) {
     .digest("hex");
 }
 
-test("knowledge-bank gate records two fresh NYCAC social-population holdout passes", () => {
+test("knowledge-bank gate records two fresh Urbanhermit full-population holdout passes", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nycac-social-holdout-data-integrity-final-2-2026-07-15",
-    "nycac-social-holdout-hiring-editor-final-2-2026-07-15"
+    "urbanhermit-holdout-data-integrity-privacy-2026-07-15-final-c",
+    "urbanhermit-holdout-hiring-editor-credit-2026-07-15-final-d"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
