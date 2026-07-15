@@ -85,6 +85,28 @@ organization is preserved separately as firsthand research context with an
 open corroboration inquiry. It does not alter the source-backed funding claim
 or enter the selected public projection.
 
+## 2026-07-15 KC Town Hall Phase One And Neighborhood Practice
+
+A protected close reading of the 2019 CCED proposal packet adds strong
+project-scope evidence. The packet names Jamie as founder and project manager,
+identifies specialist contractors, reproduces the resident survey, records 2018
+roof and structural-masonry progress, and describes the planned 2019 cold-shell
+completion. Scott Taylor's support letter independently corroborates the
+neighborhood process and survey influence; Julia Cole's letter corroborates a
+listening-driven approach and active network of contractors and architects.
+
+Jamie's firsthand role account adds day-to-day field delivery, actual 2019
+completion, survey authorship, initial Tired of Tires operations, and Cleveland
+Avenue design support. Those personal-role claims remain reserve and bounded:
+the packet does not establish licensure, a formal general-contractor title, or
+actual year-end completion; the public Tired of Tires record does not identify
+every operator; and Cleveland Avenue funding influence remains open research.
+
+The existing KC Town Hall public-benefit proof remains source-backed through
+official government records. This pass deepens role and method evidence without
+silently changing the selected website claim or erasing its agreement,
+disbursement, completion, and current-status boundaries.
+
 ## 2026-07-13 iCloud Teams Archive Pass
 
 A targeted, privacy-bounded review covered the Jamie Projects History, CRS,

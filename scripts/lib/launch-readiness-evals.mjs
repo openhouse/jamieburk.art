@@ -393,6 +393,155 @@ export function evaluateKcTownHallCouncilAllocation({
   return missing;
 }
 
+export function evaluateKcTownHallPhaseOneNeighborhoodPractice({
+  framework,
+  batch,
+  intakeDoc,
+  projectDoc,
+  claimsDoc,
+  sourcesDoc,
+  sourceCoverage,
+  antiClaims,
+  approvalRegister,
+  publicSite
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    "kcTownHallPhaseOneNeighborhoodIntake",
+    "kcTownHallPhaseOneNeighborhoodProjects",
+    "kcTownHallPhaseOneNeighborhoodSources",
+    "kcTownHallPhaseOneNeighborhoodClaims",
+    "kcTownHallPhaseOneNeighborhoodInquiries",
+    "kcTownHallPhaseOneNeighborhoodPublicationDecisions"
+  ]);
+  requireFragments("Phase One structured batch", batch, [
+    "LEAD-KCTH-PHASE-ONE-NEIGHBORHOOD-PRACTICE-2026",
+    "SRC-KCTH-CCED-PHASE-ONE-PACKET-2019",
+    "SRC-JAMIE-KCTH-PHASE-ONE-NEIGHBORHOOD-ROLE-2026",
+    "SRC-KCMO-SCOTT-TAYLOR-KCTH-SUPPORT-2019",
+    "SRC-JULIA-COLE-KCTH-SUPPORT-2019",
+    "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY",
+    "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+    "CLM-EAST-KC-TIRED-OF-TIRES-JAMIE-ROLE",
+    "CLM-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE",
+    "INQ-KCTH-PHASE-ONE-COMPLETION-ROLE",
+    "INQ-KCTH-SURVEY-RESPONSES",
+    "INQ-EAST-KC-TIRED-OF-TIRES-ROLE-SCALE",
+    "INQ-EAST-KC-CLEVELAND-AVE-OUTCOMES",
+    'id: "east-kansas-city-neighborhood-practice"',
+    "general-contractor license or formal contractual title",
+    "planned 2019 Phase One completion",
+    "Pastor Lee's authorship of the Cleveland Avenue corridor idea",
+    'decision: "reserve"'
+  ]);
+  requireFragments("Phase One intake note", intakeDoc, [
+    "packet remains outside the public repository",
+    "day-to-day general-contractor",
+    "packet was assembled before the end of 2019",
+    "4-by-6 handbill",
+    "city services",
+    "later expanded to Indian Mound",
+    "credits Pastor Lee",
+    "does not silently add them to the public hiring site"
+  ]);
+  requireFragments("KC Town Hall project note", projectDoc, [
+    "Phase One delivery",
+    "day-to-day general-contractor and project-management function",
+    "not evidence of licensure",
+    "Participation system",
+    "planned completion rather than independent proof"
+  ]);
+  requireFragments("Human-readable claim register", claimsDoc, [
+    "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY",
+    "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+    "CLM-EAST-KC-TIRED-OF-TIRES-JAMIE-ROLE",
+    "CLM-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE",
+    "packet independently proves Phase One completion",
+    "The survey statistically represented the neighborhood",
+    "program held 99 pickups",
+    "Jamie originated the corridor concept"
+  ]);
+  requireFragments("Source-basis register", sourcesDoc, [
+    "protected 2019 KC Town Hall CCED proposal packet",
+    "support letters from Council Member Scott Taylor and Julia Cole",
+    "Firsthand details remain explicitly distinct from independent corroboration"
+  ]);
+  requireFragments("Source-coverage ledger", sourceCoverage, [
+    "2026-07-15 KC Town Hall Phase One And Neighborhood Practice",
+    "planned 2019 cold-shell completion",
+    "general-contractor title",
+    "Cleveland Avenue funding influence remains open research",
+    "silently changing the selected website claim"
+  ]);
+  requireFragments("Anti-claim register", antiClaims, [
+    "claim of licensure or a formal contractual title",
+    "statistically representative mandate",
+    "Indian Mound expansion as independently verified",
+    "Credit Pastor Lee with the Cleveland Avenue corridor concept"
+  ]);
+  requireFragments("Approval register", approvalRegister, [
+    "KC Town Hall Phase One",
+    "firsthand functional description",
+    "East Kansas City neighborhood practice",
+    "credit Pastor Lee"
+  ]);
+
+  const protectedSources = batch.match(/visibility:\s*"protected"/g)?.length ?? 0;
+  const privatePreservation = batch.match(/preservationStatus:\s*"private"/g)?.length ?? 0;
+  const protectedLocators = batch.match(/protectedLocatorId:/g)?.length ?? 0;
+  if (protectedSources < 4 || privatePreservation < 4 || protectedLocators < 4) {
+    missing.push(
+      "All four mixed-sensitivity Phase One sources must remain protected, private-preservation records with protected locators."
+    );
+  }
+
+  const publicSafeBundle = [batch, intakeDoc, projectDoc].join("\n");
+  const privateMarkers = [
+    /\/Users\//,
+    /\/Volumes\//,
+    /account\s+(?:number|routing)/i,
+    /credit\s+score\s*[:=]\s*\d/i,
+    /(?:\(\d{3}\)|\b\d{3}[-.\s])\s*\d{3}[-.\s]\d{4}\b/,
+    /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicSafeBundle))) {
+    missing.push(
+      "Public Phase One knowledge-bank material contains a private path, contact detail, or financial identifier."
+    );
+  }
+
+  if (
+    /CLM-KCTH-PHASE-ONE-FIELD-DELIVERY|CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM|CLM-EAST-KC-TIRED-OF-TIRES-JAMIE-ROLE|CLM-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE/.test(
+      publicSite
+    )
+  ) {
+    missing.push(
+      "Reserve Phase One and neighborhood-practice claims entered the public hiring site without a publication decision."
+    );
+  }
+
+  if (
+    /licensed general contractor|Jamie (?:alone|solely) (?:delivered|operated|created)|(?:caused|secured) (?:the )?(?:capital|discretionary) (?:allocation|funding)|99 pickups/i.test(
+      publicSite
+    )
+  ) {
+    missing.push(
+      "Public site inflates licensure, sole credit, capital causality, or Tired of Tires scale."
+    );
+  }
+
+  return missing;
+}
+
 export function evaluateCampaignPressCorpus({
   schema,
   framework,
@@ -3904,6 +4053,10 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/kc-town-hall-public-post-ledger.json"
   );
+  const kcTownHallPhaseOneNeighborhoodBatch = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/kc-town-hall-phase-one-neighborhood-batch-2026-07-15.ts"
+  );
   const urbanHermitSocialCorpus = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts"
@@ -3917,6 +4070,7 @@ export function runLaunchEvals(repoRoot) {
     "docs/knowledge-bank/data/urbanhermit-public-engagement-ledger.json"
   );
   const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
+  const claimsDoc = readOptional(repoRoot, "docs/knowledge-bank/claims.md");
   const campaignPressDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-12-campaign-press-corpus.md"
@@ -3928,6 +4082,14 @@ export function runLaunchEvals(repoRoot) {
   const kcTownHallStewardshipTransitionDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-kc-town-hall-stewardship-transition.md"
+  );
+  const kcTownHallPhaseOneNeighborhoodDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-neighborhood-practice.md"
+  );
+  const kcTownHallProjectDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/projects/kc-town-hall.md"
   );
   const iCloudTeamsArchiveDoc = readOptional(
     repoRoot,
@@ -4265,7 +4427,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}\n${nterChngArchiveExpansionBatch}\n${nycArtCGovernmentValueBatch}`,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${kcTownHallPhaseOneNeighborhoodBatch}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}\n${nterChngArchiveExpansionBatch}\n${nycArtCGovernmentValueBatch}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -4387,6 +4549,43 @@ export function runLaunchEvals(repoRoot) {
         "The selected projection distinguishes Jamie's documented presenter role from Council action and does not imply sole causation.",
         "The claim distinguishes allocation and negotiation authority from agreement execution, receipt, disbursement, completion, and later status.",
         "Jamie's involvement is historical; the stewardship transition remains bounded firsthand research context with personal circumstances omitted."
+      ]
+    })
+  );
+
+  const kcTownHallPhaseOneNeighborhoodMissing =
+    evaluateKcTownHallPhaseOneNeighborhoodPractice({
+      framework,
+      batch: kcTownHallPhaseOneNeighborhoodBatch,
+      intakeDoc: kcTownHallPhaseOneNeighborhoodDoc,
+      projectDoc: kcTownHallProjectDoc,
+      claimsDoc,
+      sourcesDoc,
+      sourceCoverage,
+      antiClaims,
+      approvalRegister,
+      publicSite: [
+        homePage,
+        resumePage,
+        siteData,
+        workData,
+        technicalOperations,
+        kcTownHallCase
+      ].join("\n")
+    });
+  results.push(
+    result({
+      id: "kc-town-hall-phase-one-neighborhood-practice",
+      label:
+        "KC Town Hall Phase One and neighborhood practice preserve role depth, collective credit, and source boundaries",
+      weight: 20,
+      hardGate: true,
+      missing: kcTownHallPhaseOneNeighborhoodMissing,
+      evidence: [
+        "The protected packet establishes Jamie's project-manager title, multidisciplinary team, survey instrument, cold-shell scope, 2018 progress, and planned 2019 completion.",
+        "Jamie's firsthand account adds the day-to-day field-delivery function and actual 2019 completion without implying licensure or sole specialist performance.",
+        "Tired of Tires and Cleveland Avenue records preserve operator, collective-credit, scale, expansion, and capital-causality boundaries.",
+        "All four claims remain reserve and cannot silently enter the public hiring site."
       ]
     })
   );

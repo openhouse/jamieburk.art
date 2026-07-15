@@ -104,6 +104,16 @@ import {
   kcTownHallSocialCorpusSources
 } from "./kc-town-hall-social-corpus.ts";
 import {
+  kcTownHallPhaseOneNeighborhoodClaimIds,
+  kcTownHallPhaseOneNeighborhoodClaims,
+  kcTownHallPhaseOneNeighborhoodInquiries,
+  kcTownHallPhaseOneNeighborhoodIntake,
+  kcTownHallPhaseOneNeighborhoodProjects,
+  kcTownHallPhaseOneNeighborhoodPublicationDecisions,
+  kcTownHallPhaseOneNeighborhoodSourceIds,
+  kcTownHallPhaseOneNeighborhoodSources
+} from "./kc-town-hall-phase-one-neighborhood-batch-2026-07-15.ts";
+import {
   urbanHermitSocialCorpusClaims,
   urbanHermitSocialCorpusInquiries,
   urbanHermitSocialCorpusIntake,
@@ -623,6 +633,7 @@ export const frameworkIntake = [
   ...wowlistFacebookPostIntake,
   ...callNycSocialCorpusIntake,
   ...wowlistSocialCorpusIntake,
+  ...kcTownHallPhaseOneNeighborhoodIntake,
   ...kcTownHallSocialCorpusIntake,
   ...urbanHermitSocialCorpusIntake
 ] satisfies IntakeRecord[];
@@ -858,9 +869,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["adaptive reuse", "public benefit", "participation infrastructure", "long-horizon implementation"],
-    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019", "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026", "SRC-X-KC-TOWN-HALL-LAUNCH-2018"],
-    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION", "CLM-KC-TOWN-HALL-COMPLETE-SOCIAL-POPULATION", "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY", "CLM-KC-TOWN-HALL-TIRED-OF-TIRES-RECORD", "CLM-KC-TOWN-HALL-CIVIC-EXCHANGE"],
-    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", "INQ-KC-TOWN-HALL-FULL-POPULATION-2026"],
+    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019", "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026", "SRC-X-KC-TOWN-HALL-LAUNCH-2018", ...kcTownHallPhaseOneNeighborhoodSourceIds],
+    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION", "CLM-KC-TOWN-HALL-COMPLETE-SOCIAL-POPULATION", "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY", "CLM-KC-TOWN-HALL-TIRED-OF-TIRES-RECORD", "CLM-KC-TOWN-HALL-CIVIC-EXCHANGE", ...kcTownHallPhaseOneNeighborhoodClaimIds.filter((id) => id.startsWith("CLM-KCTH-"))],
+    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", "INQ-KC-TOWN-HALL-FULL-POPULATION-2026", "INQ-KCTH-PHASE-ONE-COMPLETION-ROLE", "INQ-KCTH-SURVEY-RESPONSES"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public-safe building or planning image explains the adaptive-reuse proposition without exposing current legal, financial, or occupancy details?",
@@ -868,6 +879,7 @@ export const frameworkProjects = [
       rightsNotes: "Current property, legal, financial, and stakeholder details require separate approval."
     }
   },
+  ...kcTownHallPhaseOneNeighborhoodProjects,
   {
     id: "open-house",
     title: "Open House",
@@ -1549,6 +1561,7 @@ export const frameworkSources = [
   ...wowlistFacebookPostSources,
   ...callNycSocialCorpusSources,
   ...wowlistSocialCorpusSources,
+  ...kcTownHallPhaseOneNeighborhoodSources,
   ...kcTownHallSocialCorpusSources,
   ...urbanHermitSocialCorpusSources
 ] satisfies SourceRecord[];
@@ -1934,6 +1947,7 @@ export const frameworkClaims = [
   ...wowlistFacebookPostClaims,
   ...callNycSocialCorpusClaims,
   ...wowlistSocialCorpusClaims,
+  ...kcTownHallPhaseOneNeighborhoodClaims,
   ...kcTownHallSocialCorpusClaims,
   ...urbanHermitSocialCorpusClaims
 ] satisfies ClaimRecord[];
@@ -1980,6 +1994,7 @@ export const frameworkInquiries = [
   ...wowlistFacebookPostInquiries,
   ...callNycSocialCorpusInquiries,
   ...wowlistSocialCorpusInquiries,
+  ...kcTownHallPhaseOneNeighborhoodInquiries,
   ...kcTownHallSocialCorpusInquiries,
   ...urbanHermitSocialCorpusInquiries
 ] satisfies ResearchInquiry[];
@@ -2044,6 +2059,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   wowlistFacebookPostPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
   wowlistSocialCorpusPublicationDecisions,
+  kcTownHallPhaseOneNeighborhoodPublicationDecisions,
   kcTownHallSocialCorpusPublicationDecisions,
   urbanHermitSocialCorpusPublicationDecisions
 ) satisfies PublicationDecision[];

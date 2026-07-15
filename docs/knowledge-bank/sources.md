@@ -126,6 +126,19 @@ Approved public artifact examples for this launch pass include:
 - Kansas City Council's Second Committee Substitute for Resolution No. 190649,
   accepting the board recommendation and authorizing funding-agreement
   negotiations on September 26, 2019.
+- A protected 2019 KC Town Hall CCED proposal packet naming Jamie as founder and
+  project manager, identifying the multidisciplinary team, reproducing the
+  4-by-6 resident survey, and documenting 2018 cold-shell progress plus planned
+  2019 Phase One completion. The mixed-sensitivity packet itself remains
+  outside the public repository.
+- Protected January 2019 support letters from Council Member Scott Taylor and
+  Julia Cole corroborating KC Town Hall's resident survey, listening-driven
+  process, neighborhood collaboration, and local-contractor context. Contact
+  details and underlying letter files remain protected.
+- Jamie's protected July 2026 role confirmation covering Phase One field
+  delivery, survey-system authorship, initial Tired of Tires operations, and
+  Cleveland Ave Unify to Beautify design support. Firsthand details remain
+  explicitly distinct from independent corroboration.
 - Michael Rees's public Claudette's Theatre on Wheels collaboration page,
   identifying Jamie and Rees as collaborators on an augmented-reality work for
   #MakeUsVisible Munich and crediting Jamie with others for the source video.

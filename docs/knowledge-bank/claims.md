@@ -249,10 +249,12 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong
 **Evidence class:** Government record / public coalition artifact
 **Public wording:** DCLA's public record presents the DIY community's formal recommendations and continued organizing as evidence that CreateNYC engagement produced usable learning and civic capacity; a later commissioner message identifies New York City Artist Coalition by name.
+**Detailed public-safe wording:** Finkelpearl's February 2017 Council testimony used a DIY Office Hours meeting, community-authored recommendations, and continued independent organizing as an example of CreateNYC's useful engagement process; DCLA's later commissioner message explicitly identifies New York City Artist Coalition as an Office Hours outcome.
 **Where to project:** Knowledge-bank NYC Artist Coalition research only.
 **Why it matters:** Establishes that the coalition's emergence was institutionally legible to DCLA, not merely self-described.
 **Guardrail:** The February 27 testimony describes the DIY community but does not name NYC Artist Coalition; the later DCLA message supplies the explicit identification.
 **Do not say:** Finkelpearl's testimony named NYC Artist Coalition; Finkelpearl said he needed Jamie; DCLA adopted every coalition recommendation.
+**Protected boundaries:** Do not infer private motives, unpublished agency deliberations, individual authorship, or participant identities from the public institutional record.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
@@ -262,10 +264,12 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong components, bounded synthesis
 **Evidence class:** Government records / public coalition artifacts
 **Public wording:** Institutional interpretation: NYC Artist Coalition made underrepresented cultural-space experience more usable to government by converting it into organized participation, formal recommendations, public data, testimony, and implementation choices.
+**Detailed public-safe wording:** The public record shows a collective progression from Office Hours and town-hall participation through formal recommendations, maps, letters, safety practices, and Council testimony, creating policy-ready forms through which informal cultural-space knowledge could enter agency learning and legislative deliberation.
 **Where to project:** Knowledge-bank NYC Artist Coalition research; future government and public-interest technology applications after editorial review.
 **Why it matters:** Names the operating capability beneath the advocacy: civic translation between cultural and governmental systems.
 **Guardrail:** This is an evidence-backed interpretation, not a quotation or recovered statement of an official's private motive.
 **Do not say:** Government could not act without Jamie; NYC Artist Coalition authored the Office of Nightlife; coalition testimony caused either law to pass.
+**Protected boundaries:** Keep private strategy, collaborator communications, participant records, and unsupported individual task attribution outside the public repository.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
@@ -275,10 +279,12 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong
 **Evidence class:** Government records / public coalition artifacts / government social post
 **Public wording:** Public records place NYC Artist Coalition in a sustained 2017 policy sequence with Council Member Rafael Espinal: town hall, letter and maps, Council testimony, enacted legislation under his sponsorship, and his later public credit to the coalition and Dance Liberation Network in the repeal effort.
+**Detailed public-safe wording:** Espinal attended a coalition town hall, received a public coalition letter and map-based context, chaired a hearing with coalition and Jamie testimony, sponsored the enacted Office of Nightlife and Cabaret Law repeal laws, and later publicly credited NYC Artist Coalition and Dance Liberation Network in the repeal effort.
 **Where to project:** Knowledge-bank NYC Artist Coalition research only.
 **Why it matters:** Replaces a vague proximity claim with a dated, source-backed policy sequence.
 **Guardrail:** The sequence establishes participation and recognition, not bill authorship, vote influence, or sole causality.
 **Do not say:** Espinal needed Jamie personally to pass the laws; NYC Artist Coalition wrote the bills; Jamie alone repealed the Cabaret Law or created the Office of Nightlife.
+**Protected boundaries:** Do not publish private office communications, coalition strategy, individual participant data, or infer vote influence from sequence alone.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
@@ -779,6 +785,54 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Authentication and session material, private messages and account analytics, personal transition circumstances, and the unapproved receiving-organization identity stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
+
+## CLM-KCTH-PHASE-ONE-FIELD-DELIVERY - Phase One field delivery
+
+**Status:** Confirmed with boundary
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** For KC Town Hall Phase One, Jamie served in the day-to-day field-delivery and project-management function, coordinating specialist trades and interdependent cold-shell work; the project packet names him founder and project manager and documents the scope and team.
+**Evidence:** Jamie's protected firsthand role confirmation; protected 2019 CCED packet; contemporaneous Julia Cole support letter.
+**Boundaries:** “General contractor” describes the function Jamie says he performed, not a recovered license or formal contractual title. The packet documents 2018 progress and planned 2019 completion; Jamie's firsthand account is the present basis for actual 2019 completion. Preserve all specialist and collective credit.
+**Do not say:** Jamie was a licensed general contractor; the packet independently proves Phase One completion; Jamie performed every trade; Jamie alone delivered the restoration.
+**Review owner:** Jamie / Codex protected-document review
+**Last reviewed:** 2026-07-15
+
+## CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM - Resident survey system
+
+**Status:** Confirmed with boundary
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** Jamie designed a 4-by-6 neighborhood survey and backing data system for KC Town Hall; the proposal packet reproduces the instrument and records that resident responses directly shaped the proposal.
+**Evidence:** Protected 2019 proposal packet; Jamie's protected authorship confirmation; Council Member Scott Taylor's January 2019 support letter.
+**Boundaries:** The packet and Taylor letter establish the instrument and process, not Jamie's authorship. The current record does not establish response counts, representativeness, consensus, or implementation of every requested use.
+**Do not say:** The survey statistically represented the neighborhood; every resident supported the proposal; every request was implemented.
+**Review owner:** Jamie / Codex protected-document review
+**Last reviewed:** 2026-07-15
+
+## CLM-EAST-KC-TIRED-OF-TIRES-JAMIE-ROLE - Initial Tired of Tires operations
+
+**Status:** Confirmed with boundary
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** Jamie designed, coordinated, and personally operated the initial Tired of Tires pickups through Oak Park Neighborhood Association, combining city-service coordination, field logistics, print outreach, and count tracking; later operation remained collective.
+**Evidence:** Jamie's protected firsthand role confirmation; May 2019 public launch record; full surviving KC Town Hall public-account census.
+**Boundaries:** The public record establishes the program, not operator identity. Jamie's exact operating period, Indian Mound expansion, pickup and tire totals, and handoff need additional corroboration. City coordination is not municipal ownership, funding, or endorsement.
+**Do not say:** Jamie alone operated every pickup through 2022; the program held 99 pickups; Kansas City owned or endorsed the program; Indian Mound expansion is independently verified.
+**Review owner:** Jamie / Codex protected-document review
+**Last reviewed:** 2026-07-15
+
+## CLM-EAST-KC-CLEVELAND-AVE-DESIGN-PRACTICE - Cleveland Avenue civic-design practice
+
+**Status:** Use with care
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** Firsthand research lead: Jamie contributed identity, mapping, listening-session, social, photography, and print systems to HENC's Cleveland Ave Unify to Beautify program, crediting Pastor Lee with the corridor idea.
+**Evidence:** Jamie's protected firsthand account.
+**Boundaries:** Preserve Pastor Lee's originating credit and collective credit for HENC, neighborhood associations, residents, elected officials, and other contributors. Formation, attendance, geographic coverage, implementation, and funding influence remain open research.
+**Do not say:** Jamie originated the corridor concept; Jamie alone created the program; the program caused a specific capital allocation; every mapped priority was implemented.
+**Review owner:** Jamie / Codex protected-document review
+**Last reviewed:** 2026-07-15
 
 ## urbanhermit-current-population-accounting - Current-profile accounting
 

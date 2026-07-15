@@ -365,3 +365,35 @@ explicit enough for the evaluator; both were tightened. The final recursive
 suite passed all 60 eval tests, all 19 citation tests, schema and public-safety
 checks, route validation, TypeScript, lint, production build, and the launch
 evaluator at **100/100** with every automated hard gate passing.
+
+## KC Town Hall Phase One And Neighborhood Practice Pass
+
+The July 15 follow-up close-read the protected 2019 KC Town Hall CCED proposal
+packet and integrated Jamie's firsthand account of Phase One field delivery,
+the resident survey system, initial Tired of Tires operations, and Cleveland
+Ave Unify to Beautify design support. The packet remains outside the repository
+because it mixes public-safe project evidence with banking, credit, contact,
+property, and private financing details.
+
+Four new reserve claims keep the evidence layers distinct. The packet names
+Jamie founder and project manager, identifies the multidisciplinary team,
+reproduces the 4-by-6 survey, documents 2018 cold-shell progress, and states
+planned 2019 completion. Jamie's firsthand source supplies the day-to-day
+general-contractor function and actual 2019 completion. The record does not
+convert that function into licensure or a formal contractual title and does not
+absorb specialist or collective credit.
+
+The neighborhood practice is modeled separately from the building project.
+Jamie's initial Tired of Tires operating role is joined to the public recurring-
+program record without assigning him every later pickup or converting 99 posts
+into 99 events. Cleveland Avenue remains a bounded firsthand research lead;
+Pastor Lee retains credit for the corridor concept, and any claim about capital-
+allocation influence remains open pending proposition-level public records.
+
+A new 20-point hard gate requires protected-source handling, completion and
+title boundaries, survey limits, operator and scale boundaries, Pastor Lee's
+credit, four open research inquiries, and reserve publication decisions. It
+fails on private-path or contact leakage, licensure inflation, sole credit,
+capital causality, 99-pickup inflation, or silent site projection. Four new
+negative tests bring the deterministic eval suite to **100 passing tests**; the
+launch evaluator remains **100/100** with all automated hard gates passing.

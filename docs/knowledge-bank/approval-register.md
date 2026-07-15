@@ -44,6 +44,8 @@ The repo is public. Approval here means approved for public-safe repository and 
   or media rights.
 - KC Town Hall funding: the public record supports the board's unanimous recommendation, the Council's $490,539 allocation, and authorization of funding-agreement negotiations. Do not imply agreement execution, receipt, disbursement, project completion, later property or operating status, or Jamie's sole causality for the vote.
 - KC Town Hall lifecycle: treat Jamie's involvement as historical. Retain the mission-aligned stewardship transition as firsthand research context; do not publish personal circumstances or name the receiving organization without permission and corroboration.
+- KC Town Hall Phase One: reserve wording may say Jamie served in the day-to-day field-delivery and project-management function and that the packet names him founder and project manager. Treat “general contractor” as a firsthand functional description, not proof of licensure or a formal contractual title. The packet supports planned, not independently verified actual, 2019 completion.
+- East Kansas City neighborhood practice: retain Jamie's initial Tired of Tires role and Cleveland Avenue design contribution as bounded reserve depth. Preserve later operators and collective credit, credit Pastor Lee with the Cleveland Avenue corridor concept, and do not infer municipal endorsement, exact program scale, or capital-allocation causality.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

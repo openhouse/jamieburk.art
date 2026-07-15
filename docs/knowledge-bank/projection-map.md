@@ -125,6 +125,13 @@ transitioning stewardship to a mission-aligned organization remains research
 context, not a selected site claim; personal circumstances and the receiving
 organization's identity are not projected.
 
+KC Town Hall Phase One field delivery, the resident survey system, Jamie's
+initial Tired of Tires operating role, and Cleveland Avenue civic-design work
+are also reserve depth. The packet establishes project-management title, team,
+scope, survey, and planned completion; Jamie's firsthand account supplies the
+functional general-contractor role and actual 2019 completion. No new site copy
+is projected until corroboration and audience-specific composition justify it.
+
 ## Reserve Depth
 
 Open House, Great Accommodations, and the raft expedition are currently mature

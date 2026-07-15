@@ -1,6 +1,36 @@
 # KC Town Hall
 
-**Reviewed:** 2026-07-14
+**Reviewed:** 2026-07-15
+
+## Phase One delivery
+
+Jamie confirms that he served in Phase One's day-to-day general-contractor and
+project-management function, coordinating specialist trades and linked field
+dependencies from the basement through the roof. The protected 2019 CCED packet
+independently names him as founder and project manager, identifies the
+multidisciplinary team, documents 2018 roof and structural-masonry progress,
+and describes the cold-shell scope and planned 2019 completion.
+
+Jamie confirms that Phase One was completed in 2019. Because the packet predates
+the end of that year, it establishes planned completion rather than independent
+proof of the completed milestone. “General contractor” describes Jamie's
+firsthand account of his coordinating function; it is not evidence of licensure
+or a formal contractual title, and it does not absorb specialist or collective
+credit.
+
+## Participation system
+
+The packet reproduces KC Town Hall's 4-by-6 resident survey and says ongoing
+results directly shaped the proposal. Council Member Scott Taylor's January
+2019 support letter corroborates the neighborhood process and says the survey
+influenced proposed retail uses. Jamie confirms that he designed the handbill
+and backing data system and used survey cards during daily site work.
+
+Response counts, representativeness, participant identities, contact details,
+and implementation of every requested use remain protected or open research.
+The deeper [archival production note](../intake/2026-07-15-kc-town-hall-phase-one-neighborhood-practice.md)
+also records Tired of Tires and Cleveland Avenue work as related but distinct
+collective neighborhood initiatives.
 
 Jamie confirms that he established the KC Town Hall public account and project
 identity. The public July 2018 launch record frames that identity as an

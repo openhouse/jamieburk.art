@@ -292,6 +292,19 @@ account-authored Tired of Tires records, not pickups, households, participants,
 tires, or unique program events. Outbound articles are mission context unless
 they explicitly report on KC Town Hall.
 
+Do not convert Jamie's firsthand account of serving in the Phase One general-
+contractor function into a claim of licensure or a formal contractual title.
+The 2019 proposal packet names him founder and project manager and documents the
+team, scope, 2018 progress, and planned 2019 completion; it does not independently
+prove actual year-end completion or Jamie's sole performance of specialist work.
+
+Do not turn the resident survey into a statistically representative mandate or
+claim that every requested use was implemented. Do not assign every later Tired
+of Tires operation to Jamie, treat 99 public records as 99 pickups, or state the
+Indian Mound expansion as independently verified. Credit Pastor Lee with the
+Cleveland Avenue corridor concept and do not claim that Unify to Beautify caused
+a specific capital allocation without proposition-level public records.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

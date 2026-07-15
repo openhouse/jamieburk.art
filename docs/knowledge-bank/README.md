@@ -166,3 +166,10 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+The [KC Town Hall Phase One archival production note](intake/2026-07-15-kc-town-hall-phase-one-neighborhood-practice.md)
+demonstrates mixed-source role reconstruction: a protected proposal packet
+establishes team, scope, survey, and planned milestones; a firsthand account
+adds day-to-day function; public records and support letters corroborate bounded
+parts; and inquiries preserve the remaining completion, scale, authorship, and
+causality debt without publishing sensitive source files.

@@ -13,6 +13,7 @@ import {
   evaluateKcSpacesFundFacebookPostArchive,
   evaluateKcTownHallCouncilAllocation,
   evaluateKcTownHallFullPopulationArchive,
+  evaluateKcTownHallPhaseOneNeighborhoodPractice,
   evaluateKnowledgeLifecycle,
   evaluateNterChngArchiveExpansion,
   evaluateNycArtCGovernmentInstitutionalValue,
@@ -841,6 +842,84 @@ test("project social archive rejects sole-authorship and endorsement boundary re
 
 const readRepoFile = (relativePath) =>
   readFileSync(new URL(`../../${relativePath}`, import.meta.url), "utf8");
+
+const kcTownHallPhaseOneNeighborhoodFixture = {
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  batch: readRepoFile(
+    "apps/www/src/data/knowledge-bank/kc-town-hall-phase-one-neighborhood-batch-2026-07-15.ts"
+  ),
+  intakeDoc: readRepoFile(
+    "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-neighborhood-practice.md"
+  ),
+  projectDoc: readRepoFile("docs/knowledge-bank/projects/kc-town-hall.md"),
+  claimsDoc: readRepoFile("docs/knowledge-bank/claims.md"),
+  sourcesDoc: readRepoFile("docs/knowledge-bank/sources.md"),
+  sourceCoverage: readRepoFile("docs/knowledge-bank/source-coverage.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md"),
+  approvalRegister: readRepoFile("docs/knowledge-bank/approval-register.md"),
+  publicSite: [
+    readRepoFile("apps/www/src/app/page.tsx"),
+    readRepoFile("apps/www/src/app/resume/page.tsx"),
+    readRepoFile("apps/www/src/data/site.ts"),
+    readRepoFile("apps/www/src/data/work.ts"),
+    readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+    readRepoFile("apps/www/src/content/work/kc-town-hall.mdx")
+  ].join("\n")
+};
+
+test("KC Town Hall Phase One and neighborhood practice pass layered-evidence and privacy criteria", () => {
+  assert.deepEqual(
+    evaluateKcTownHallPhaseOneNeighborhoodPractice(
+      kcTownHallPhaseOneNeighborhoodFixture
+    ),
+    []
+  );
+});
+
+test("KC Town Hall Phase One archive rejects erased completion and title boundaries", () => {
+  const failures = evaluateKcTownHallPhaseOneNeighborhoodPractice({
+    ...kcTownHallPhaseOneNeighborhoodFixture,
+    batch: kcTownHallPhaseOneNeighborhoodFixture.batch
+      .replaceAll("general-contractor license or formal contractual title", "role")
+      .replaceAll("planned 2019 Phase One completion", "2019 completion")
+  });
+
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("general-contractor license or formal contractual title")
+    )
+  );
+  assert.ok(
+    failures.some((failure) => failure.includes("planned 2019 Phase One completion"))
+  );
+});
+
+test("KC Town Hall Phase One archive rejects private source leakage", () => {
+  const failures = evaluateKcTownHallPhaseOneNeighborhoodPractice({
+    ...kcTownHallPhaseOneNeighborhoodFixture,
+    intakeDoc: `${kcTownHallPhaseOneNeighborhoodFixture.intakeDoc}\n/Volumes/example/private-packet.pdf`
+  });
+
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("private path, contact detail, or financial identifier")
+    )
+  );
+});
+
+test("KC Town Hall Phase One archive rejects silent reserve projection and inflated credit", () => {
+  const failures = evaluateKcTownHallPhaseOneNeighborhoodPractice({
+    ...kcTownHallPhaseOneNeighborhoodFixture,
+    publicSite: `${kcTownHallPhaseOneNeighborhoodFixture.publicSite}\nCLM-KCTH-PHASE-ONE-FIELD-DELIVERY\nJamie was the licensed general contractor and alone delivered the restoration.`
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("entered the public hiring site"))
+  );
+  assert.ok(
+    failures.some((failure) => failure.includes("inflates licensure, sole credit"))
+  );
+});
 
 const callNycFullPopulationFixture = {
   ledger: readRepoFile("docs/knowledge-bank/data/callnyc-public-post-ledger.json"),
