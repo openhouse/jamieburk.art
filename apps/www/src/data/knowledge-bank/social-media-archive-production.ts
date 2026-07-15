@@ -30,6 +30,16 @@ export const socialMediaArchiveProduction = {
       { project: "kc-spaces-fund", handle: "@KCSpacesFund", profilePosts: 35, recoveredStatuses: 34, recoveredAuthoredPosts: 27 },
       { project: "kc-town-hall", handle: "@KCTownHall", profilePosts: 183, recoveredStatuses: 183, recoveredAuthoredPosts: 155 }
     ],
+    personalAccounts: [
+      {
+        subject: "professional-practice",
+        handle: "@urbanhermit",
+        profilePosts: 434,
+        recoveredStatuses: 425,
+        unresolvedPopulationSlots: 9,
+        boundary: "Personal-account evidence is governed separately from shared project accounts; context-only and protected items are retained only as aggregate dispositions without an item-level crosswalk or relationship partition."
+      }
+    ],
     callnycCouncilMemberCount: 8,
     nycacCouncilMemberFloor: 5,
     callnycCouncilPostIds,

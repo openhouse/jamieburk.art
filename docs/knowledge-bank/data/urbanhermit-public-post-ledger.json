@@ -1,0 +1,3909 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewedAt": "2026-07-14",
+  "sourceProfile": "https://x.com/urbanhermit",
+  "populationDefinition": "The 434-post count displayed by the authenticated @urbanhermit profile on July 14, 2026. Each displayed slot is accounted for through a published mission-relevant evidence record, an aggregate-only withheld disposition, or an explicit carrier-limited unresolved disposition.",
+  "populationAudit": {
+    "profileCountObserved": 434,
+    "profileAndBoundedSearchItemsRecovered": 425,
+    "unresolvedPopulationSlots": 9,
+    "dispositionTotal": 434,
+    "completenessStatement": "All 434 displayed profile-count slots are dispositioned: 141 mission-relevant item records are published, 284 recovered context records are retained only as aggregate dispositions, and nine carrier-limited slots remain unresolved. The local review recovered 425 distinct public statuses. This is population reconciliation, not a platform export, deletion history, or proof that the nine records no longer exist.",
+    "publicEvidenceItemRecordsPublished": 141,
+    "contextItemsWithheldFromPublicLedger": 271,
+    "protectedItemsWithheldFromPublicLedger": 13
+  },
+  "method": {
+    "authenticatedReadOnlyReview": true,
+    "surfaces": [
+      "Posts tab",
+      "Replies tab",
+      "bounded latest-results date searches",
+      "public status pages"
+    ],
+    "freshVerification": {
+      "verifiedAt": "2026-07-14",
+      "profileCountReconfirmed": 434,
+      "uniqueItemRecords": 425,
+      "broadDateWindowsSearched": [
+        "2008-2012",
+        "2012-2016",
+        "2016-2020",
+        "2020-2024"
+      ],
+      "annualWindowsSearched": "2008 through 2024 inclusive",
+      "profileTraversalReachedOldestRecoveredStatus": true,
+      "repliesSurfaceCarrierErrorObserved": true
+    },
+    "exclusions": [
+      "authentication, cookies, session material, and credentials",
+      "private messages, private analytics, and account-administration records",
+      "raw post text and raw browser recovery files",
+      "personal names, links, and status URLs from context-only or protected-context records",
+      "inferences that Jamie authored source statuses he reposted"
+    ]
+  },
+  "contentBoundary": {
+    "rawTextCommitted": false,
+    "nonEvidenceItemRecordsCommitted": false,
+    "publicSafeEvidenceLinksCommitted": true,
+    "publicRecordCrosswalkCommitted": false,
+    "rationale": "A public personal timeline is not blanket consent to republish or index every friendship, remembrance, location, or third-party life. Context-only and protected-context records survive in the public repository only as aggregate disposition counts; the detailed local review remains outside the repo."
+  },
+  "metricBoundary": {
+    "accountAuthoredMetrics": "Mutable current visible counts are retained only for the 81 mission-relevant public account-authored evidence records.",
+    "repostSourceMetrics": "Source-status metrics are excluded because they belong to the source status and do not measure Jamie's repost action; the 60 public source-status evidence records use null metrics.",
+    "doesNotEstablish": [
+      "historical reach",
+      "unique people reached",
+      "endorsement",
+      "causality",
+      "professional impact",
+      "who saw a post"
+    ]
+  },
+  "aggregateFindings": {
+    "dispositionCounts": {
+      "context-only": 271,
+      "protected-context": 13,
+      "public-safe-evidence": 141
+    },
+    "projectSignalCounts": {
+      "callnyc": 1,
+      "harry-j-epstein": 1,
+      "kc-town-hall": 2,
+      "nyc-artist-coalition": 61,
+      "public-media-making": 3,
+      "sunday-dinner": 27,
+      "waterways-and-participatory-art": 11,
+      "wowlist": 14
+    },
+    "themeSignalCounts": {
+      "civic-participation-and-public-service": 37,
+      "collective-campaign-circulation": 58,
+      "community-cultural-infrastructure": 74,
+      "participatory-waterways-practice": 11,
+      "public-media-making": 3,
+      "technical-making-and-media-archaeology": 5
+    },
+    "publicSafeEvidenceRecords": 141,
+    "contextOnlyRecords": 271,
+    "protectedContextRecords": 13,
+    "distinctPublicHandlesInEvidenceRecords": 64,
+    "postedPublicUrlOccurrencesInEvidenceRecords": 104,
+    "uniquePostedPublicUrlsInEvidenceRecords": 87,
+    "selectedMissionSourceStatusIds": [
+      "1459478339",
+      "2082394876",
+      "2179328286",
+      "2294297644",
+      "3248599454",
+      "4038299524",
+      "8154854842",
+      "201361243104227328",
+      "592718356018556928",
+      "608661379893977089",
+      "608694963661078529",
+      "596692863532007424",
+      "726092227856969728",
+      "726144972802691073",
+      "807395049814290433",
+      "817142365580390401",
+      "856610250270662660",
+      "894989030005329920",
+      "936792273349591040",
+      "1098259100255825920",
+      "1330547315132731398",
+      "1648007189049516032"
+    ],
+    "publicLedgerRelationshipCounts": {
+      "account-post": 78,
+      "account-reply": 3,
+      "native-repost-source-status": 60
+    },
+    "publicSafeAccountAuthoredVisibleReactionSnapshot": {
+      "statuses": 81,
+      "statusesWithVisibleReaction": 35,
+      "replies": 4,
+      "reposts": 26,
+      "likes": 67
+    },
+    "sourceStatusMetricsExcluded": {
+      "publicEvidenceSourceStatuses": 60,
+      "metricsCommitted": false
+    }
+  },
+  "unresolvedItems": [
+    {
+      "slot": 1,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 2,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 3,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 4,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 5,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 6,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 7,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 8,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    },
+    {
+      "slot": 9,
+      "disposition": "carrier-limited-not-recovered",
+      "reason": "The live profile count exceeded the deduplicated public statuses exposed by profile traversal and bounded searches."
+    }
+  ],
+  "records": [
+    {
+      "statusId": "1459478339",
+      "statusUrl": "https://x.com/urbanhermit/status/1459478339",
+      "publishedAt": "2009-04-05T23:06:18.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Names preparation for Sunday Dinner in the account's earliest recovered year.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1948647352",
+      "statusUrl": "https://x.com/urbanhermit/status/1948647352",
+      "publishedAt": "2009-05-28T16:05:01.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying participatory-waterways-practice signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "2082394876",
+      "statusUrl": "https://x.com/urbanhermit/status/2082394876",
+      "publishedAt": "2009-06-08T22:52:37.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "States the ongoing inquiry of living in cities on the water.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "2179328286",
+      "statusUrl": "https://x.com/urbanhermit/status/2179328286",
+      "publishedAt": "2009-06-15T15:57:27.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Invites public office hours about river projects, handicrafts, and software design.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "technical-making-and-media-archaeology",
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "2240126407",
+      "statusUrl": "https://x.com/urbanhermit/status/2240126407",
+      "publishedAt": "2009-06-19T16:22:18.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying participatory-waterways-practice signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "2245934025",
+      "statusUrl": "https://x.com/urbanhermit/status/2245934025",
+      "publishedAt": "2009-06-19T23:51:11.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying participatory-waterways-practice signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "2294297644",
+      "statusUrl": "https://x.com/urbanhermit/status/2294297644",
+      "publishedAt": "2009-06-23T13:20:45.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Reports gathering discarded bicycle tubes for the participatory Stretch with the River project.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "2721740755",
+      "statusUrl": "https://x.com/urbanhermit/status/2721740755",
+      "publishedAt": "2009-07-19T13:18:45.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying participatory-waterways-practice signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "3175805914",
+      "statusUrl": "https://x.com/urbanhermit/status/3175805914",
+      "publishedAt": "2009-08-07T09:01:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying participatory-waterways-practice signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "3248599454",
+      "statusUrl": "https://x.com/urbanhermit/status/3248599454",
+      "publishedAt": "2009-08-11T17:05:11.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Routes readers to the public River Marvel project site.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "4038299524",
+      "statusUrl": "https://x.com/urbanhermit/status/4038299524",
+      "publishedAt": "2009-09-16T21:06:35.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Coordinates travel with a river-project collaborator for a Kansas City public program.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "8154854842",
+      "statusUrl": "https://x.com/urbanhermit/status/8154854842",
+      "publishedAt": "2010-01-24T16:46:50.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Documents making a hand-tool website for Harry J. Epstein Co.",
+      "projectIds": [
+        "harry-j-epstein"
+      ],
+      "themes": [
+        "technical-making-and-media-archaeology"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#KCMasterpeas",
+        "#blog"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "201361243104227328",
+      "statusUrl": "https://x.com/urbanhermit/status/201361243104227328",
+      "publishedAt": "2012-05-12T17:20:36.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Links a video Jamie says he made for a UCP public discussion about Kansas City's curfew.",
+      "projectIds": [
+        "public-media-making"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "public-media-making"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/rnFDpjK6"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "211625002221584384",
+      "statusUrl": "https://x.com/urbanhermit/status/211625002221584384",
+      "publishedAt": "2012-06-10T01:05:06.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/keuSUJ8F"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "285892367498739712",
+      "statusUrl": "https://x.com/urbanhermit/status/285892367498739712",
+      "publishedAt": "2012-12-31T23:37:06.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner",
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/5gda7mzM"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "285905487478808576",
+      "statusUrl": "https://x.com/urbanhermit/status/285905487478808576",
+      "publishedAt": "2013-01-01T00:29:14.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/0UOSEv2k"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "286537060934877184",
+      "statusUrl": "https://x.com/urbanhermit/status/286537060934877184",
+      "publishedAt": "2013-01-02T18:18:53.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/iqIQ8gpK"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "286702332064980992",
+      "statusUrl": "https://x.com/urbanhermit/status/286702332064980992",
+      "publishedAt": "2013-01-03T05:15:37.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/sg105rlb"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "287610718155571201",
+      "statusUrl": "https://x.com/urbanhermit/status/287610718155571201",
+      "publishedAt": "2013-01-05T17:25:13.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying technical-making-and-media-archaeology signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "technical-making-and-media-archaeology"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/sbar6hhB"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "288151928993636352",
+      "statusUrl": "https://x.com/urbanhermit/status/288151928993636352",
+      "publishedAt": "2013-01-07T05:15:48.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/fVoajEZ8"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "288428710615478272",
+      "statusUrl": "https://x.com/urbanhermit/status/288428710615478272",
+      "publishedAt": "2013-01-07T23:35:38.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/IEjWwFiM"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "293810887247134721",
+      "statusUrl": "https://x.com/urbanhermit/status/293810887247134721",
+      "publishedAt": "2013-01-22T20:02:28.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/T3T9mlip"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "294218472056057857",
+      "statusUrl": "https://x.com/urbanhermit/status/294218472056057857",
+      "publishedAt": "2013-01-23T23:02:04.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/uq93yF95"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "298997861272649730",
+      "statusUrl": "https://x.com/urbanhermit/status/298997861272649730",
+      "publishedAt": "2013-02-06T03:33:39.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/E1y7srap"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "299004485114667008",
+      "statusUrl": "https://x.com/urbanhermit/status/299004485114667008",
+      "publishedAt": "2013-02-06T03:59:59.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/4DnUVLsn"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "316641626258808832",
+      "statusUrl": "https://x.com/urbanhermit/status/316641626258808832",
+      "publishedAt": "2013-03-26T20:03:41.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/YVFnhbLRrY"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "323873955201024001",
+      "statusUrl": "https://x.com/urbanhermit/status/323873955201024001",
+      "publishedAt": "2013-04-15T19:02:22.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/ZgLRCAIxta",
+        "http://t.co/00XcsPdPEB"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "400413183309279232",
+      "statusUrl": "https://x.com/urbanhermit/status/400413183309279232",
+      "publishedAt": "2013-11-13T00:01:56.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#Craylife"
+      ],
+      "postedUrls": [
+        "http://t.co/hxFpTHWuo3"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "420606421919879169",
+      "statusUrl": "https://x.com/urbanhermit/status/420606421919879169",
+      "publishedAt": "2014-01-07T17:22:40.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/Az9YmCOONX"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "421054273439682561",
+      "statusUrl": "https://x.com/urbanhermit/status/421054273439682561",
+      "publishedAt": "2014-01-08T23:02:16.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/MFMkVV6S7t"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "421416627864104960",
+      "statusUrl": "https://x.com/urbanhermit/status/421416627864104960",
+      "publishedAt": "2014-01-09T23:02:08.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/h5Vz1GnvDa"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "423228632249929728",
+      "statusUrl": "https://x.com/urbanhermit/status/423228632249929728",
+      "publishedAt": "2014-01-14T23:02:23.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying participatory-waterways-practice signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "waterways-and-participatory-art"
+      ],
+      "themes": [
+        "participatory-waterways-practice"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/PDmHvfDTlD"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "430113960994828288",
+      "statusUrl": "https://x.com/urbanhermit/status/430113960994828288",
+      "publishedAt": "2014-02-02T23:02:14.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/QFu0FTLnfa"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "431201037278781440",
+      "statusUrl": "https://x.com/urbanhermit/status/431201037278781440",
+      "publishedAt": "2014-02-05T23:01:53.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/zX6c49oVAW"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "438380626404999169",
+      "statusUrl": "https://x.com/urbanhermit/status/438380626404999169",
+      "publishedAt": "2014-02-25T18:31:00.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/FZ4pNs7Yg7",
+        "http://t.co/qQPP16pRYV"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "439467768447242241",
+      "statusUrl": "https://x.com/urbanhermit/status/439467768447242241",
+      "publishedAt": "2014-02-28T18:30:55.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/vOTndAsvpi",
+        "http://t.co/nkFWBbJEUE"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "471705176915849216",
+      "statusUrl": "https://x.com/urbanhermit/status/471705176915849216",
+      "publishedAt": "2014-05-28T17:30:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/vOTndAsvpi",
+        "http://t.co/pOQ1qMwZMH"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "484388730133028865",
+      "statusUrl": "https://x.com/urbanhermit/status/484388730133028865",
+      "publishedAt": "2014-07-02T17:30:47.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/vOTndAsvpi",
+        "http://t.co/0YYMldbsgT"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "485475910058258432",
+      "statusUrl": "https://x.com/urbanhermit/status/485475910058258432",
+      "publishedAt": "2014-07-05T17:30:51.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/vOTndAsvpi",
+        "http://t.co/PbteleOvJK",
+        "http://t.co/B3UXbLnlhc"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "490606326851334144",
+      "statusUrl": "https://x.com/musichackathon/status/490606326851334144",
+      "publishedAt": "2014-07-19T21:17:18.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@musichackathon",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [
+        "@SpotifyUSA"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/ONbXAeriQb"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "588028157510418432",
+      "statusUrl": "https://x.com/urbanhermit/status/588028157510418432",
+      "publishedAt": "2015-04-14T17:16:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Council20"
+      ],
+      "postedUrls": [
+        "http://t.co/Q0uBQpmAFI"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "589113615292108800",
+      "statusUrl": "https://x.com/NYCCouncil/status/589113615292108800",
+      "publishedAt": "2015-04-17T17:10:05.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCCouncil",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/762al0ZN55"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "591944013768499200",
+      "statusUrl": "https://x.com/urbanhermit/status/591944013768499200",
+      "publishedAt": "2015-04-25T12:37:05.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/yPlmpXlshq"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "592718356018556928",
+      "statusUrl": "https://x.com/urbanhermit/status/592718356018556928",
+      "publishedAt": "2015-04-27T15:54:02.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Explains how residents could use Council20 to participate in New York City Council public hearings.",
+      "projectIds": [
+        "sunday-dinner",
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/jSkbutnuw3"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "593888527198396417",
+      "statusUrl": "https://x.com/urbanhermit/status/593888527198396417",
+      "publishedAt": "2015-04-30T21:23:53.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner",
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/jSkbutnuw3"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "596692863532007424",
+      "statusUrl": "https://x.com/urbanhermit/status/596692863532007424",
+      "publishedAt": "2015-05-08T15:07:19.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Routes a Good Times article about documenting and connecting DIY cultural spaces.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@elisegranata"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "http://t.co/Pj7VKRm24L",
+        "http://t.co/76aSNfRb9s"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "601503635558764544",
+      "statusUrl": "https://x.com/urbanhermit/status/601503635558764544",
+      "publishedAt": "2015-05-21T21:43:36.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/qCEo3ArJ5k"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "608661379893977089",
+      "statusUrl": "https://x.com/kcurCST/status/608661379893977089",
+      "publishedAt": "2015-06-10T15:45:56.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@kcurCST",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "KCUR's Central Standard account quotes Jamie describing water as a way to encounter the life of a city.",
+      "projectIds": [],
+      "themes": [],
+      "mentionedHandles": [
+        "@kcurCST"
+      ],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "608694963661078529",
+      "statusUrl": "https://x.com/urbanhermit/status/608694963661078529",
+      "publishedAt": "2015-06-10T17:59:22.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Responds to KCUR's water discussion by describing immersion in the unknown as a creative method.",
+      "projectIds": [],
+      "themes": [],
+      "mentionedHandles": [
+        "@GinaKCMO",
+        "@kcurCST"
+      ],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "706208629360304128",
+      "statusUrl": "https://x.com/CallNYCapp/status/706208629360304128",
+      "publishedAt": "2016-03-05T20:03:52.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@CallNYCapp",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "callnyc"
+      ],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [
+        "@CallNYCapp",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#nycSoData",
+        "#OpenDataDay"
+      ],
+      "postedUrls": [
+        "https://t.co/yLLGsC6DRO"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "726092227856969728",
+      "statusUrl": "https://x.com/thrilljockey/status/726092227856969728",
+      "publishedAt": "2016-04-29T16:54:11.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@thrilljockey",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Thrill Jockey credits Jamie Burkart and Martin Schmidt with making the Horse Lords video for Truthers and links NPR.",
+      "projectIds": [
+        "public-media-making"
+      ],
+      "themes": [
+        "public-media-making"
+      ],
+      "mentionedHandles": [
+        "@HorseLords",
+        "@lordmcess"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/fzIgyhK3Cp"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "726144972802691073",
+      "statusUrl": "https://x.com/urbanhermit/status/726144972802691073",
+      "publishedAt": "2016-04-29T20:23:47.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Jamie states that he and Martin Schmidt made the Horse Lords video for Truthers and links its NPR publication.",
+      "projectIds": [
+        "public-media-making"
+      ],
+      "themes": [
+        "public-media-making"
+      ],
+      "mentionedHandles": [
+        "@lordmcess",
+        "@HorseLords"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/KNY46agt6a"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 7
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "751150062458269696",
+      "statusUrl": "https://x.com/wowlist/status/751150062458269696",
+      "publishedAt": "2016-07-07T20:25:05.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@wowlist",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#AltonSterling",
+        "#PhilandoCastile",
+        "#BlackLivesMatter"
+      ],
+      "postedUrls": [
+        "https://t.co/a39ETzpVWO"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "771455571501416448",
+      "statusUrl": "https://x.com/wowlist/status/771455571501416448",
+      "publishedAt": "2016-09-01T21:11:55.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@wowlist",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@selfdfens",
+        "@showpaper"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/3an880EXo8"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "784227774571618304",
+      "statusUrl": "https://x.com/juliafredenburg/status/784227774571618304",
+      "publishedAt": "2016-10-07T03:04:06.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@juliafredenburg",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#sundaydinnernyc"
+      ],
+      "postedUrls": [
+        "https://t.co/5OQqsbmf2R"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "796473557387575297",
+      "statusUrl": "https://x.com/wowlist/status/796473557387575297",
+      "publishedAt": "2016-11-09T22:04:28.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@wowlist",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#DownWithTrump"
+      ],
+      "postedUrls": [
+        "https://t.co/D6udDGJ7Um"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "798274424763981824",
+      "statusUrl": "https://x.com/wowlist/status/798274424763981824",
+      "publishedAt": "2016-11-14T21:20:28.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@wowlist",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#NotMyPresident",
+        "#WeAreThePopularVote"
+      ],
+      "postedUrls": [
+        "https://t.co/O1euiAdPmX"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "805210387004223488",
+      "statusUrl": "https://x.com/wowlist/status/805210387004223488",
+      "publishedAt": "2016-12-04T00:41:31.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@wowlist",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/vWtAyQiwMl"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "805501392010051584",
+      "statusUrl": "https://x.com/urbanhermit/status/805501392010051584",
+      "publishedAt": "2016-12-04T19:57:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner",
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#diySavesMyLife",
+        "#oaklandfire"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "805949658405175296",
+      "statusUrl": "https://x.com/urbanhermit/status/805949658405175296",
+      "publishedAt": "2016-12-06T01:39:07.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/jhGFCwormV"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "806517013472485376",
+      "statusUrl": "https://x.com/wowlist/status/806517013472485376",
+      "publishedAt": "2016-12-07T15:13:35.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@wowlist",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/Q2vtL8JdOq"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "807395049814290433",
+      "statusUrl": "https://x.com/urbanhermit/status/807395049814290433",
+      "publishedAt": "2016-12-10T01:22:35.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Shares a public action script for helping artists and spaces thrive safely after the Ghost Ship fire.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#DIYsavesOurLife"
+      ],
+      "postedUrls": [
+        "https://t.co/L0gAiWmIbX"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 8
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "814572461803077632",
+      "statusUrl": "https://x.com/urbanhermit/status/814572461803077632",
+      "publishedAt": "2016-12-29T20:43:03.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@NYCCouncil",
+        "@NYPD83Pct"
+      ],
+      "hashtags": [
+        "#SupportDIYSpaces"
+      ],
+      "postedUrls": [
+        "https://t.co/pprjY0IhR1"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "815697993709993984",
+      "statusUrl": "https://x.com/MeowWolf/status/815697993709993984",
+      "publishedAt": "2017-01-01T23:15:31.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@MeowWolf",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@MeowWolf"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/0jKQMlauld"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "817142365580390401",
+      "statusUrl": "https://x.com/urbanhermit/status/817142365580390401",
+      "publishedAt": "2017-01-05T22:54:56.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Invites a public walk to experience site-specific works by Janet Cardiff and John Luther Adams.",
+      "projectIds": [
+        "wowlist"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/dMqTiF72RD"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "844221071465373696",
+      "statusUrl": "https://x.com/urbanhermit/status/844221071465373696",
+      "publishedAt": "2017-03-21T16:16:02.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/xLHvW0f0vz"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "847855360614563842",
+      "statusUrl": "https://x.com/NYCArtC/status/847855360614563842",
+      "publishedAt": "2017-03-31T16:57:25.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@NYCulture",
+        "@danceliberation",
+        "@commendnyc",
+        "@RLEspinal",
+        "@CMReynoso34"
+      ],
+      "hashtags": [
+        "#CommunityDriven",
+        "#createNYC"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "847929066523168768",
+      "statusUrl": "https://x.com/urbanhermit/status/847929066523168768",
+      "publishedAt": "2017-03-31T21:50:17.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "854715197575098368",
+      "statusUrl": "https://x.com/NYCArtC/status/854715197575098368",
+      "publishedAt": "2017-04-19T15:15:57.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@WNYC"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/QjNH0VVWZq"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "856281783070998528",
+      "statusUrl": "https://x.com/NYCArtC/status/856281783070998528",
+      "publishedAt": "2017-04-23T23:01:00.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@mrmuchmores",
+        "@DanceParadeNYC",
+        "@danceliberation"
+      ],
+      "hashtags": [
+        "#letnycdance"
+      ],
+      "postedUrls": [
+        "https://t.co/rDQ3vpiv85"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "856610250270662660",
+      "statusUrl": "https://x.com/urbanhermit/status/856610250270662660",
+      "publishedAt": "2017-04-24T20:46:13.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Invites the public to a strategy panel about repealing New York City's Cabaret Law.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#letNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/aQdXnmWBaC"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "868603961204502528",
+      "statusUrl": "https://x.com/NYCArtC/status/868603961204502528",
+      "publishedAt": "2017-05-27T23:04:56.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#letNYCdance",
+        "#ImproveDontEvict",
+        "#CreateNYC"
+      ],
+      "postedUrls": [
+        "https://t.co/NLR9GUszdm"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "874308197493985280",
+      "statusUrl": "https://x.com/NYCArtC/status/874308197493985280",
+      "publishedAt": "2017-06-12T16:51:32.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#letnycdance",
+        "#legalizedance"
+      ],
+      "postedUrls": [
+        "https://t.co/dnvOm0cFfc"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "874816190639734784",
+      "statusUrl": "https://x.com/lordmcess/status/874816190639734784",
+      "publishedAt": "2017-06-14T02:30:07.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@lordmcess",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "883158445507174401",
+      "statusUrl": "https://x.com/urbanhermit/status/883158445507174401",
+      "publishedAt": "2017-07-07T02:59:16.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NewYorker",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "894611849156722690",
+      "statusUrl": "https://x.com/NydiaVelazquez/status/894611849156722690",
+      "publishedAt": "2017-08-07T17:31:00.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NydiaVelazquez",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NydiaVelazquez"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/pkV4mZF2ow"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894951104152297472",
+      "statusUrl": "https://x.com/ArtistStudioAP/status/894951104152297472",
+      "publishedAt": "2017-08-08T15:59:05.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@ArtistStudioAP",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@ArtistStudioAP",
+        "@NYCCouncil",
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894951842848718849",
+      "statusUrl": "https://x.com/NYCArtC/status/894951842848718849",
+      "publishedAt": "2017-08-08T16:02:01.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/hWEO5Tbts2"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894953325640208385",
+      "statusUrl": "https://x.com/sptmusic/status/894953325640208385",
+      "publishedAt": "2017-08-08T16:07:54.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@sptmusic",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@cmlauriecumbo"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894955616501993472",
+      "statusUrl": "https://x.com/NYCArtC/status/894955616501993472",
+      "publishedAt": "2017-08-08T16:17:01.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/hWEO5Tt4QC"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894956656026628096",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894956656026628096",
+      "publishedAt": "2017-08-08T16:21:08.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@RitchieTorres",
+        "@DRichards13",
+        "@MMViverito"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/UF8hkFN41e"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894956812226711555",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894956812226711555",
+      "publishedAt": "2017-08-08T16:21:46.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/wfoFRGFYcv"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894956958075191297",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894956958075191297",
+      "publishedAt": "2017-08-08T16:22:20.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/wfoFRGFYcv"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894957273772167168",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894957273772167168",
+      "publishedAt": "2017-08-08T16:23:36.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@CMReynoso34",
+        "@JulissaFerreras"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/UF8hkFN41e"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894957363739979776",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894957363739979776",
+      "publishedAt": "2017-08-08T16:23:57.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@CoreyinNYC",
+        "@JulissaFerreras",
+        "@MMViverito"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/UF8hkFN41e"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894957522515369985",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894957522515369985",
+      "publishedAt": "2017-08-08T16:24:35.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC"
+      ],
+      "hashtags": [
+        "#letnycdance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894957759212519424",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894957759212519424",
+      "publishedAt": "2017-08-08T16:25:31.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@rlespinal",
+        "@JulissaFerreras",
+        "@RoryLancman"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/UF8hkFN41e"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894958966274392064",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894958966274392064",
+      "publishedAt": "2017-08-08T16:30:19.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@StephenLevin33",
+        "@ydanis",
+        "@JimmyVanBramer"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/UF8hkFN41e"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894959005898067968",
+      "statusUrl": "https://x.com/patweaver/status/894959005898067968",
+      "publishedAt": "2017-08-08T16:30:29.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@patweaver",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#letnycdance"
+      ],
+      "postedUrls": [
+        "https://t.co/oujAlycNb3"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894959124588507137",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894959124588507137",
+      "publishedAt": "2017-08-08T16:30:57.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@CMReynoso34",
+        "@JulissaFerreras"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/UF8hkFN41e"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894959542718668800",
+      "statusUrl": "https://x.com/DanceParadeNYC/status/894959542718668800",
+      "publishedAt": "2017-08-08T16:32:37.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DanceParadeNYC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@DanceParadeNYC",
+        "@JumaaneWilliams",
+        "@MarkLevineNYC"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/UF8hkFN41e"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894960838829899777",
+      "statusUrl": "https://x.com/Cultural_Plan/status/894960838829899777",
+      "publishedAt": "2017-08-08T16:37:46.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@Cultural_Plan",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@Cultural_Plan",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "894989030005329920",
+      "statusUrl": "https://x.com/urbanhermit/status/894989030005329920",
+      "publishedAt": "2017-08-08T18:29:47.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Addresses public officials in support of Cabaret Law repeal bill 1652 while preserving coalition context.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@sptmusic",
+        "@NYCArtC",
+        "@cmlauriecumbo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/trmLzXt7bb"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "903372787850645505",
+      "statusUrl": "https://x.com/sptmusic/status/903372787850645505",
+      "publishedAt": "2017-08-31T21:43:51.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@sptmusic",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@cmlauriecumbo"
+      ],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "903413998493855744",
+      "statusUrl": "https://x.com/urbanhermit/status/903413998493855744",
+      "publishedAt": "2017-09-01T00:27:36.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "907646518454358016",
+      "statusUrl": "https://x.com/urbanhermit/status/907646518454358016",
+      "publishedAt": "2017-09-12T16:46:07.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@edefox"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/trmLzXt7bb"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "907761648739418113",
+      "statusUrl": "https://x.com/urbanhermit/status/907761648739418113",
+      "publishedAt": "2017-09-13T00:23:37.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "915338894010454016",
+      "statusUrl": "https://x.com/NYCArtC/status/915338894010454016",
+      "publishedAt": "2017-10-03T22:12:53.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@MarketHotelNYC"
+      ],
+      "hashtags": [
+        "#NightMayor",
+        "#SaveNYCSpaces"
+      ],
+      "postedUrls": [
+        "https://t.co/BUAXcDwe4a"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "921080860748763138",
+      "statusUrl": "https://x.com/NYCArtC/status/921080860748763138",
+      "publishedAt": "2017-10-19T18:29:24.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@MadeinNY",
+        "@NYCulture",
+        "@RLEspinal"
+      ],
+      "hashtags": [
+        "#NightMayor",
+        "#SaveNYCSpaces"
+      ],
+      "postedUrls": [
+        "https://t.co/MFRRJKJt6Z"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "924953677173002241",
+      "statusUrl": "https://x.com/NYCArtC/status/924953677173002241",
+      "publishedAt": "2017-10-30T10:58:36.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/hZSvVdTDHU",
+        "https://t.co/iEoKHdPTFB"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "925525014589399040",
+      "statusUrl": "https://x.com/urbanhermit/status/925525014589399040",
+      "publishedAt": "2017-11-01T00:48:53.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "925705233849880578",
+      "statusUrl": "https://x.com/nytimesmusic/status/925705233849880578",
+      "publishedAt": "2017-11-01T12:45:01.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@nytimesmusic",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/skZa5kFOyT"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "925725662513688578",
+      "statusUrl": "https://x.com/RLEspinal/status/925725662513688578",
+      "publishedAt": "2017-11-01T14:06:11.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@RLEspinal",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@John_McCarten"
+      ],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "925766056160919552",
+      "statusUrl": "https://x.com/NYCulture/status/925766056160919552",
+      "publishedAt": "2017-11-01T16:46:42.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCulture",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCulture"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/QGUHTaVcEX"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "926170990039707650",
+      "statusUrl": "https://x.com/danceliberation/status/926170990039707650",
+      "publishedAt": "2017-11-02T19:35:46.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@danceliberation",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@BossaNovaCivic"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/EDXNCCEoSV"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "935307307881246720",
+      "statusUrl": "https://x.com/Elana_Brooklyn/status/935307307881246720",
+      "publishedAt": "2017-11-28T00:40:14.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@Elana_Brooklyn",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@Elana_Brooklyn",
+        "@Organize20",
+        "@nycartc"
+      ],
+      "hashtags": [
+        "#letNYCdance",
+        "#nightlife4all"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "935386225539735552",
+      "statusUrl": "https://x.com/NYCArtC/status/935386225539735552",
+      "publishedAt": "2017-11-28T05:53:49.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@NYCMayor",
+        "@elsewherespace",
+        "@RLEspinal",
+        "@danceliberation",
+        "@DanceParadeNYC",
+        "@NYCulture"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "935386487083937792",
+      "statusUrl": "https://x.com/NYCArtC/status/935386487083937792",
+      "publishedAt": "2017-11-28T05:54:51.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@elsewherespace",
+        "@NYCMayor",
+        "@RLEspinal",
+        "@danceliberation",
+        "@DanceParadeNYC",
+        "@NYCulture"
+      ],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "935386697046614016",
+      "statusUrl": "https://x.com/NYCArtC/status/935386697046614016",
+      "publishedAt": "2017-11-28T05:55:41.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@RLEspinal",
+        "@elsewherespace",
+        "@NYCMayor"
+      ],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "935949284205359105",
+      "statusUrl": "https://x.com/urbanhermit/status/935949284205359105",
+      "publishedAt": "2017-11-29T19:11:13.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#SaveNYCSpaces"
+      ],
+      "postedUrls": [
+        "https://t.co/zJhR44pQEV"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "936792273349591040",
+      "statusUrl": "https://x.com/urbanhermit/status/936792273349591040",
+      "publishedAt": "2017-12-02T03:00:57.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Marks repeal of New York City's Cabaret Law and links the Let NYC Dance public project.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [
+        "https://t.co/RAJjWpMcXI"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "941345102945021953",
+      "statusUrl": "https://x.com/urbanhermit/status/941345102945021953",
+      "publishedAt": "2017-12-14T16:32:16.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#LetNYCDance"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 4
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "950089870692757504",
+      "statusUrl": "https://x.com/urbanhermit/status/950089870692757504",
+      "publishedAt": "2018-01-07T19:40:51.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [
+        "@cmlauriecumbo",
+        "@NYCHousing"
+      ],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 2,
+        "reposts": 0,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "950100588498489344",
+      "statusUrl": "https://x.com/urbanhermit/status/950100588498489344",
+      "publishedAt": "2018-01-07T20:23:26.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [
+        "@cmlauriecumbo",
+        "@NYCHousing"
+      ],
+      "hashtags": [
+        "#NoHeatNoRent"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "954784630611283968",
+      "statusUrl": "https://x.com/NYCArtC/status/954784630611283968",
+      "publishedAt": "2018-01-20T18:36:09.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#WomensMarchNYC",
+        "#WomensMarch2018"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "954826903814275072",
+      "statusUrl": "https://x.com/urbanhermit/status/954826903814275072",
+      "publishedAt": "2018-01-20T21:24:08.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#WomensMarchNYC",
+        "#WomensMarch2018",
+        "#VOTE2018"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "984847830937493505",
+      "statusUrl": "https://x.com/urbanhermit/status/984847830937493505",
+      "publishedAt": "2018-04-13T17:36:35.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@ACTdotTV",
+        "@Organize20"
+      ],
+      "hashtags": [
+        "#Org20"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "985350894178000896",
+      "statusUrl": "https://x.com/urbanhermit/status/985350894178000896",
+      "publishedAt": "2018-04-15T02:55:34.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@AthenaBright",
+        "@NYCLightBrigade",
+        "@Organize20"
+      ],
+      "hashtags": [
+        "#ArtistPower",
+        "#Org20"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "992989484408082433",
+      "statusUrl": "https://x.com/urbanhermit/status/992989484408082433",
+      "publishedAt": "2018-05-06T04:48:36.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [
+        "@EatWinsteads",
+        "@NYTimes",
+        "@NAACP",
+        "@KCMONAACPYouth"
+      ],
+      "hashtags": [
+        "#RacistCurfew"
+      ],
+      "postedUrls": [
+        "https://t.co/GaOdB5BF6i"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1037785619706068995",
+      "statusUrl": "https://x.com/KCTownHall/status/1037785619706068995",
+      "publishedAt": "2018-09-06T19:32:27.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@KCTownHall",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying kc-town-hall signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "kc-town-hall"
+      ],
+      "themes": [],
+      "mentionedHandles": [
+        "@KCTownHall"
+      ],
+      "hashtags": [
+        "#KCTownHall"
+      ],
+      "postedUrls": [
+        "https://t.co/XX2HOanaDx",
+        "https://t.co/PXs7IxP0Fj"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1047258040926425088",
+      "statusUrl": "https://x.com/NYCArtC/status/1047258040926425088",
+      "publishedAt": "2018-10-02T22:52:28.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@RLEspinal"
+      ],
+      "hashtags": [
+        "#NightlifeListeningTour",
+        "#SaveNYCSpaces"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1058788251899584512",
+      "statusUrl": "https://x.com/urbanhermit/status/1058788251899584512",
+      "publishedAt": "2018-11-03T18:29:25.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#VoteWithMe"
+      ],
+      "postedUrls": [
+        "https://t.co/971XQRsNXK"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1080145023667179520",
+      "statusUrl": "https://x.com/urbanhermit/status/1080145023667179520",
+      "publishedAt": "2019-01-01T16:53:36.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/lQdU9Sv3fr"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1087696691384500224",
+      "statusUrl": "https://x.com/urbanhermit/status/1087696691384500224",
+      "publishedAt": "2019-01-22T13:01:14.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying kc-town-hall signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "kc-town-hall"
+      ],
+      "themes": [],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1093200337647865856",
+      "statusUrl": "https://x.com/NYCArtC/status/1093200337647865856",
+      "publishedAt": "2019-02-06T17:30:45.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TalksNotRaids"
+      ],
+      "postedUrls": [
+        "https://t.co/dmSLKL0L9R",
+        "https://t.co/UmqSq3mo0p"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1093970724556029959",
+      "statusUrl": "https://x.com/NYCArtC/status/1093970724556029959",
+      "publishedAt": "2019-02-08T20:32:00.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@NYCArtC",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#TalksNotRaids"
+      ],
+      "postedUrls": [
+        "https://t.co/dmSLKL0L9R",
+        "https://t.co/UmqSq3mo0p"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1095016997547577344",
+      "statusUrl": "https://x.com/StephenLevin33/status/1095016997547577344",
+      "publishedAt": "2019-02-11T17:49:31.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@StephenLevin33",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@StephenLevin33",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYPD",
+        "#Talksnotraids"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1095033921325223936",
+      "statusUrl": "https://x.com/StephenLevin33/status/1095033921325223936",
+      "publishedAt": "2019-02-11T18:56:46.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@StephenLevin33",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@StephenLevin33",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#MARCH",
+        "#TalksNotRaids"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1098259100255825920",
+      "statusUrl": "https://x.com/urbanhermit/status/1098259100255825920",
+      "publishedAt": "2019-02-20T16:32:28.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Routes readers to Talks Not Raids in response to public advocacy against MARCH enforcement.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/fhRQbkaaBh"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1098626837821997056",
+      "statusUrl": "https://x.com/RLEspinal/status/1098626837821997056",
+      "publishedAt": "2019-02-21T16:53:44.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@RLEspinal",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, community-cultural-infrastructure, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "community-cultural-infrastructure",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@NYCArtC"
+      ],
+      "hashtags": [
+        "#SaveNYCSpaces",
+        "#NYC",
+        "#NYCVotes",
+        "#TalksNotRaids",
+        "#PassSBJSA"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1100438635072155651",
+      "statusUrl": "https://x.com/urbanhermit/status/1100438635072155651",
+      "publishedAt": "2019-02-26T16:53:10.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#NYCVotes"
+      ],
+      "postedUrls": [
+        "https://t.co/5eWzhlqml9"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1100439818889236482",
+      "statusUrl": "https://x.com/urbanhermit/status/1100439818889236482",
+      "publishedAt": "2019-02-26T16:57:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "civic-participation-and-public-service"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#NYCVotes"
+      ],
+      "postedUrls": [
+        "https://t.co/5eWzhlqml9"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1100439911138775040",
+      "statusUrl": "https://x.com/urbanhermit/status/1100439911138775040",
+      "publishedAt": "2019-02-26T16:58:14.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#NYCVotes"
+      ],
+      "postedUrls": [
+        "https://t.co/5eWzhlqml9"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1100440466611490816",
+      "statusUrl": "https://x.com/urbanhermit/status/1100440466611490816",
+      "publishedAt": "2019-02-26T17:00:27.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#NYCVotes"
+      ],
+      "postedUrls": [
+        "https://t.co/5eWzhlqml9"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1255515040071012358",
+      "statusUrl": "https://x.com/DDDrewDaniel/status/1255515040071012358",
+      "publishedAt": "2020-04-29T15:11:26.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DDDrewDaniel",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@DDDrewDaniel"
+      ],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1256291499958026242",
+      "statusUrl": "https://x.com/urbanhermit/status/1256291499958026242",
+      "publishedAt": "2020-05-01T18:36:49.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "sunday-dinner"
+      ],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [
+        "#MayGraceIncrease"
+      ],
+      "postedUrls": [
+        "https://t.co/jXI4RNFvEJ"
+      ],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1268892095412084737",
+      "statusUrl": "https://x.com/DDDrewDaniel/status/1268892095412084737",
+      "publishedAt": "2020-06-05T13:07:05.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@DDDrewDaniel",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying community-cultural-infrastructure signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [
+        "@DDDrewDaniel",
+        "@Bandcamp"
+      ],
+      "hashtags": [],
+      "postedUrls": [
+        "https://t.co/x0OCEMZwHX"
+      ],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1271192474506182657",
+      "statusUrl": "https://x.com/urbanhermit/status/1271192474506182657",
+      "publishedAt": "2020-06-11T21:27:58.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying technical-making-and-media-archaeology signals; retained for research without reproducing the post text.",
+      "projectIds": [],
+      "themes": [
+        "technical-making-and-media-archaeology"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 5
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1330547315132731398",
+      "statusUrl": "https://x.com/urbanhermit/status/1330547315132731398",
+      "publishedAt": "2020-11-22T16:22:54.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@urbanhermit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Offers a dual-boot workflow for maintaining older software used in media-archaeology work.",
+      "projectIds": [],
+      "themes": [
+        "technical-making-and-media-archaeology"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "account-authored-status"
+    },
+    {
+      "statusId": "1459189225572687877",
+      "statusUrl": "https://x.com/usb_nyc/status/1459189225572687877",
+      "publishedAt": "2021-11-12T15:59:56.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@usb_nyc",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "Public record carrying civic-participation-and-public-service, collective-campaign-circulation signals; retained for research without reproducing the post text.",
+      "projectIds": [
+        "nyc-artist-coalition"
+      ],
+      "themes": [
+        "civic-participation-and-public-service",
+        "collective-campaign-circulation"
+      ],
+      "mentionedHandles": [
+        "@NYCCouncil",
+        "@olympiakazi",
+        "@CooperSq",
+        "@nycworker",
+        "@TheInkPad",
+        "@CHARLOTTA_NY",
+        "@paulaznyc"
+      ],
+      "hashtags": [
+        "#Intro1796",
+        "#FairRentNYC"
+      ],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    },
+    {
+      "statusId": "1648007189049516032",
+      "statusUrl": "https://x.com/letsglitchit/status/1648007189049516032",
+      "publishedAt": "2023-04-17T16:55:07.000Z",
+      "relationship": "native-repost-source-status",
+      "authorHandle": "@letsglitchit",
+      "disposition": "public-safe-evidence",
+      "contentSummary": "An outside-authored public thank-you credits Jamie with making introductions among admired artist peers.",
+      "projectIds": [],
+      "themes": [
+        "community-cultural-infrastructure"
+      ],
+      "mentionedHandles": [],
+      "hashtags": [],
+      "postedUrls": [],
+      "currentVisibleMetrics": null,
+      "metricOwner": "source-status-excluded"
+    }
+  ],
+  "withheldPopulationDispositions": [
+    {
+      "disposition": "context-only",
+      "count": 271,
+      "publicDetail": "Aggregate count only; no public item identifier, year, date, author, relationship, metric, length, digest, link, name, or text fingerprint is retained."
+    },
+    {
+      "disposition": "protected-context",
+      "count": 13,
+      "publicDetail": "Aggregate count only; no public item identifier, year, date, author, relationship, metric, length, digest, link, name, or text fingerprint is retained."
+    }
+  ]
+}

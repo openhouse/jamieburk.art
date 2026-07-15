@@ -96,3 +96,10 @@ for the 100-percent-disposition archival pass on the observed `@CallNYCApp`
 population. Its canonical public ledger preserves 107 recovered item records,
 every recovered outbound URL, and three explicit unresolved count slots without
 claiming a platform export.
+
+See
+[intake/2026-07-14-urbanhermit-full-population-social-corpus.md](intake/2026-07-14-urbanhermit-full-population-social-corpus.md)
+for the population-reconciled pass on Jamie's personal public account. It
+preserves 141 mission-relevant records and 87 distinct posted source URLs while
+counting 284 ordinary or protected-context items through aggregate-only
+dispositions, with no public item-level crosswalk or fingerprint.

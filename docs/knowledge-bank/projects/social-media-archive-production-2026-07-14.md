@@ -153,6 +153,21 @@ she authored a particular `@NYCArtC` post or held account access. Jamie's
 account-establishment memory remains held until a collaborator note or
 minimized public-safe administrative record corroborates it.
 
+## Personal practice carrier
+
+The personal [@urbanhermit](https://x.com/urbanhermit) account is inventoried
+separately from the five shared project accounts. Its 434 displayed slots are
+reconciled through 425 recovered public items and nine explicit carrier gaps.
+The [full-population note](../intake/2026-07-14-urbanhermit-full-population-social-corpus.md)
+and [minimized ledger](../data/urbanhermit-public-post-ledger.json) retain 141
+mission-relevant records while retaining 271 context-only and 13 protected-
+context items only as aggregate counts, with no public item-level crosswalk.
+
+This carrier surfaces longitudinal practice and new source leads. It is not a
+shared project identity, a complete professional record, or permission to
+republish personal and third-party life. Its eight new claims all remain held.
+Source-status authorship and source-status metrics remain with their sources.
+
 ## Safety boundary
 
 Only public profile metadata, public status URLs, bounded aggregate results,

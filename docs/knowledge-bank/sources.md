@@ -57,6 +57,15 @@ post text, phone numbers, street addresses, session material, messages, or
 private analytics. See
 [intake/2026-07-14-kctownhall-full-population-social-corpus.md](intake/2026-07-14-kctownhall-full-population-social-corpus.md).
 
+The personal `@urbanhermit` social-corpus audit reconciles 434 displayed slots
+through 425 recovered records and nine explicit carrier-limited absences. Its
+public-safe ledger exposes item detail for 141 mission-relevant records and
+keeps 271 context-only and 13 protected-context items as aggregate-only counts,
+with no public item-level crosswalk or fingerprint. Self-authored statements,
+outside corroboration, contextual links, and source-status metrics remain
+distinct. See
+[intake/2026-07-14-urbanhermit-full-population-social-corpus.md](intake/2026-07-14-urbanhermit-full-population-social-corpus.md).
+
 KCUR election guidance, Northeast News affordable-housing reporting, Curbed
 housing-policy reporting, and Kansas City Star reporting about Leon's Thriftway
 are retained as sources routed by the account. Their appearance establishes

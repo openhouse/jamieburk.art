@@ -10,6 +10,7 @@ import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaArchiveProduction } from "./social-media-archive-production.ts";
 import { teamsArchiveProduction } from "./teams-archive-production.ts";
+import { urbanhermitSocialCorpus } from "./urbanhermit-social-corpus.ts";
 import { wowlistSocialCorpus } from "./wowlist-social-corpus.ts";
 
 const knowledgeBankInput = {
@@ -42,6 +43,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.intakeItems,
     ...callNycSocialCorpus.intakeItems,
     ...wowlistSocialCorpus.intakeItems,
+    ...urbanhermitSocialCorpus.intakeItems,
     ...socialMediaArchiveProduction.intakeItems
   ],
   observations: [
@@ -72,6 +74,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.observations,
     ...callNycSocialCorpus.observations,
     ...wowlistSocialCorpus.observations,
+    ...urbanhermitSocialCorpus.observations,
     ...socialMediaArchiveProduction.observations
   ],
   sources: [
@@ -229,6 +232,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.sources,
     ...callNycSocialCorpus.sources,
     ...wowlistSocialCorpus.sources,
+    ...urbanhermitSocialCorpus.sources,
     ...socialMediaArchiveProduction.sources
   ],
   claims: [
@@ -339,6 +343,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.claims,
     ...callNycSocialCorpus.claims,
     ...wowlistSocialCorpus.claims,
+    ...urbanhermitSocialCorpus.claims,
     ...socialMediaArchiveProduction.claims
   ],
   researchInquiries: [
@@ -389,6 +394,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.researchInquiries,
     ...callNycSocialCorpus.researchInquiries,
     ...wowlistSocialCorpus.researchInquiries,
+    ...urbanhermitSocialCorpus.researchInquiries,
     ...socialMediaArchiveProduction.researchInquiries
   ],
   proofCoverageTargets: [...proofCoverageTargets],

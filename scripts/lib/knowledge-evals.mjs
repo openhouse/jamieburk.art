@@ -10,6 +10,7 @@ import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/da
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { teamsArchiveProduction } from "../../apps/www/src/data/knowledge-bank/teams-archive-production.ts";
+import { urbanhermitCorpusFindings, urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
 import { wowlistCorpusFindings, wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
@@ -1413,9 +1414,455 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(nycacLedgerText) &&
       nycacFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries];
+  const urbanFull = suite.pilot.urbanhermitFullPopulation;
+  const urbanLedgerPath = path.join(repoRoot, urbanFull.ledgerPath);
+  const urbanDocumentation = existsSync(path.join(repoRoot, urbanFull.documentationPath))
+    ? readFileSync(path.join(repoRoot, urbanFull.documentationPath), "utf8")
+    : "";
+  const urbanCanonicalLedger = existsSync(urbanLedgerPath)
+    ? JSON.parse(readFileSync(urbanLedgerPath, "utf8"))
+    : null;
+  const urbanLedger = fixtures.urbanhermitLedger ?? urbanCanonicalLedger;
+  const urbanRecords = urbanLedger?.records ?? [];
+  const urbanRecordIds = new Set(urbanRecords.map((record) => record.statusId));
+  const urbanWithheldDispositions = urbanLedger?.withheldPopulationDispositions ?? [];
+  const urbanContextDisposition = urbanWithheldDispositions.find(
+    (item) => item.disposition === "context-only"
+  );
+  const urbanProtectedDisposition = urbanWithheldDispositions.find(
+    (item) => item.disposition === "protected-context"
+  );
+  const urbanPublicRecords = urbanRecords.filter((record) => record.disposition === "public-safe-evidence");
+  const urbanAuthoredRecords = urbanRecords.filter((record) => record.relationship !== "native-repost-source-status");
+  const urbanSourceRecords = urbanRecords.filter((record) => record.relationship === "native-repost-source-status");
+  const urbanPublicRelationshipCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(urbanRecords, (record) => record.relationship))
+      .map(([relationship, records]) => [relationship, records.length])
+  );
+  const urbanProjectCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(urbanPublicRecords.flatMap((record) => record.projectIds), (project) => project))
+      .map(([project, values]) => [project, values.length])
+  );
+  const urbanThemeCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(urbanPublicRecords.flatMap((record) => record.themes), (theme) => theme))
+      .map(([theme, values]) => [theme, values.length])
+  );
+  const urbanMentionedHandles = new Set(
+    urbanPublicRecords.flatMap((record) => record.mentionedHandles ?? [])
+      .map((handle) => handle.toLowerCase())
+  );
+  const urbanPostedUrls = urbanPublicRecords.flatMap((record) => record.postedUrls ?? []);
+  const urbanUniquePostedUrls = new Set(urbanPostedUrls);
+  const urbanAuthoredReactionSnapshot = urbanAuthoredRecords.reduce(
+    (totals, record) => {
+      const metrics = record.currentVisibleMetrics;
+      totals.statuses += 1;
+      totals.statusesWithVisibleReaction += Object.values(metrics).some((value) => value > 0) ? 1 : 0;
+      totals.replies += metrics.replies;
+      totals.reposts += metrics.reposts;
+      totals.likes += metrics.likes;
+      return totals;
+    },
+    { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
+  const urbanFullSources = urbanhermitSocialCorpus.sources.map((source) => sourceById.get(source.id));
+  const urbanFullIntake = intakeById.get("INTAKE-URBANHERMIT-FULL-POPULATION-CORPUS-2026");
+  const urbanLinkedSources = urbanFullIntake?.sourceIds.map((id) => sourceById.get(id)) ?? [];
+  const urbanFullObservations = urbanhermitSocialCorpus.observations.map(
+    (observation) => observationById.get(observation.id)
+  );
+  const urbanFullClaims = urbanhermitSocialCorpus.claims.map((claim) => claimById.get(claim.id));
+  const urbanHeldClaims = urbanFull.heldClaimIds.map((id) => claimById.get(id));
+  const urbanFullInquiries = urbanhermitSocialCorpus.researchInquiries.map((inquiry) => inquiryById.get(inquiry.id));
+  const urbanAuditSource = sourceById.get(urbanFull.auditSourceId);
+  const urbanPopulationInquiry = inquiryById.get("INQ-URBANHERMIT-FULL-POPULATION-2026");
+  const urbanOutsideInquiry = inquiryById.get("INQ-URBANHERMIT-OUTSIDE-ENGAGEMENT");
+  const urbanPersonalInventory = socialMediaArchiveProduction.inventory.personalAccounts?.find(
+    (account) => account.handle === "@urbanhermit"
+  );
+  const urbanLedgerText = urbanLedger ? JSON.stringify(urbanLedger) : "";
+  const urbanForbiddenRecordFields = [
+    "recordKey",
+    "contentDigestSha256",
+    "normalizedTextCharacterCount",
+    "publishedYear",
+    "text",
+    "rawText"
+  ];
+  const hasExactKeys = (value, allowed) =>
+    value && Object.keys(value).length === allowed.size && Object.keys(value).every((key) => allowed.has(key));
+  const equalUrbanCountMaps = (left, right) => {
+    const keys = new Set([...Object.keys(left ?? {}), ...Object.keys(right ?? {})]);
+    return [...keys].every((key) => left?.[key] === right?.[key]);
+  };
+  const urbanCanonicalRecordsById = new Map(
+    (urbanCanonicalLedger?.records ?? []).map((record) => [record.statusId, record])
+  );
+  const urbanRecordMatchesCanonicalIdentity = (record) => {
+    const canonical = urbanCanonicalRecordsById.get(record.statusId);
+    if (!canonical) return false;
+
+    return [
+      "statusUrl", "publishedAt", "relationship", "authorHandle", "disposition",
+      "contentSummary", "projectIds", "themes", "mentionedHandles", "hashtags",
+      "postedUrls", "currentVisibleMetrics", "metricOwner"
+    ].every((field) => JSON.stringify(record[field]) === JSON.stringify(canonical[field]));
+  };
+  const urbanStatusUrlMatchesAuthor = (record) => {
+    try {
+      const parsed = new URL(record.statusUrl);
+      const parts = parsed.pathname.split("/").filter(Boolean);
+      return parsed.protocol === "https:" &&
+        parsed.hostname === "x.com" &&
+        parts.length === 3 &&
+        parts[0].toLowerCase() === record.authorHandle.slice(1).toLowerCase() &&
+        parts[1] === "status" &&
+        parts[2] === record.statusId;
+    } catch {
+      return false;
+    }
+  };
+  const urbanPublishedAtMatchesSnowflake = (record) => {
+    const id = BigInt(record.statusId);
+    if (id < 100000000000000000n) return true;
+    const snowflakeTime = Number((id >> 22n) + 1288834974657n);
+    return Math.abs(Date.parse(record.publishedAt) - snowflakeTime) < 1000;
+  };
+  const urbanSemanticFieldsMatch = (actual, expected, fields) =>
+    Boolean(actual && expected && fields.every(
+      (field) => JSON.stringify(actual[field]) === JSON.stringify(expected[field])
+    ));
+  const urbanAllowedTopLevelFields = new Set([
+    "schemaVersion", "reviewedAt", "sourceProfile", "populationDefinition", "populationAudit",
+    "method", "contentBoundary", "metricBoundary", "aggregateFindings", "unresolvedItems", "records",
+    "withheldPopulationDispositions"
+  ]);
+  const urbanAllowedPopulationAuditFields = new Set([
+    "profileCountObserved", "profileAndBoundedSearchItemsRecovered", "unresolvedPopulationSlots",
+    "dispositionTotal", "completenessStatement", "publicEvidenceItemRecordsPublished",
+    "contextItemsWithheldFromPublicLedger", "protectedItemsWithheldFromPublicLedger"
+  ]);
+  const urbanAllowedMethodFields = new Set([
+    "authenticatedReadOnlyReview", "surfaces", "freshVerification", "exclusions"
+  ]);
+  const urbanAllowedFreshVerificationFields = new Set([
+    "verifiedAt", "profileCountReconfirmed", "uniqueItemRecords", "broadDateWindowsSearched",
+    "annualWindowsSearched", "profileTraversalReachedOldestRecoveredStatus", "repliesSurfaceCarrierErrorObserved"
+  ]);
+  const urbanAllowedContentBoundaryFields = new Set([
+    "rawTextCommitted", "nonEvidenceItemRecordsCommitted", "publicSafeEvidenceLinksCommitted",
+    "publicRecordCrosswalkCommitted", "rationale"
+  ]);
+  const urbanAllowedMetricBoundaryFields = new Set([
+    "accountAuthoredMetrics", "repostSourceMetrics", "doesNotEstablish"
+  ]);
+  const urbanAllowedAggregateFields = new Set([
+    "dispositionCounts", "projectSignalCounts", "themeSignalCounts", "publicSafeEvidenceRecords",
+    "contextOnlyRecords", "protectedContextRecords", "distinctPublicHandlesInEvidenceRecords",
+    "postedPublicUrlOccurrencesInEvidenceRecords", "uniquePostedPublicUrlsInEvidenceRecords",
+    "selectedMissionSourceStatusIds", "publicLedgerRelationshipCounts",
+    "publicSafeAccountAuthoredVisibleReactionSnapshot", "sourceStatusMetricsExcluded"
+  ]);
+  const urbanAllowedRecordFields = new Set([
+    "statusId", "statusUrl", "publishedAt", "relationship", "authorHandle", "disposition",
+    "contentSummary", "projectIds", "themes", "mentionedHandles", "hashtags", "postedUrls",
+    "currentVisibleMetrics", "metricOwner"
+  ]);
+  const urbanAllowedSourceStatusMetricFields = new Set([
+    "publicEvidenceSourceStatuses", "metricsCommitted"
+  ]);
+  const urbanAllowedDispositionCountFields = new Set([
+    "context-only", "protected-context", "public-safe-evidence"
+  ]);
+  const urbanAllowedProjectSignalFields = new Set([
+    "callnyc", "harry-j-epstein", "kc-town-hall", "nyc-artist-coalition",
+    "public-media-making", "sunday-dinner", "waterways-and-participatory-art", "wowlist"
+  ]);
+  const urbanAllowedThemeSignalFields = new Set([
+    "civic-participation-and-public-service", "collective-campaign-circulation",
+    "community-cultural-infrastructure", "participatory-waterways-practice",
+    "public-media-making", "technical-making-and-media-archaeology"
+  ]);
+  const urbanAllowedRelationshipCountFields = new Set([
+    "account-post", "account-reply", "native-repost-source-status"
+  ]);
+  const urbanAllowedReactionFields = new Set([
+    "statuses", "statusesWithVisibleReaction", "replies", "reposts", "likes"
+  ]);
+  const urbanAllowedCurrentMetricFields = new Set(["replies", "reposts", "likes"]);
+  const urbanAllowedWithheldFields = new Set(["disposition", "count", "publicDetail"]);
+  const urbanAllowedUnresolvedFields = new Set(["slot", "disposition", "reason"]);
+  const urbanNonRecordMetadata = urbanLedger ? structuredClone(urbanLedger) : null;
+  if (urbanNonRecordMetadata) {
+    urbanNonRecordMetadata.records = [];
+    urbanNonRecordMetadata.aggregateFindings.selectedMissionSourceStatusIds = [];
+  }
+  const urbanNonRecordMetadataText = urbanNonRecordMetadata
+    ? JSON.stringify(urbanNonRecordMetadata)
+    : "";
+  const urbanExpectedObservationSources = new Map([
+    ["OBS-URBANHERMIT-POPULATION-DISPOSITION", urbanFull.auditSourceId],
+    ["OBS-URBANHERMIT-PRACTICE-CONTINUITY", urbanFull.auditSourceId],
+    ["OBS-URBANHERMIT-WATER-PRACTICE", "SRC-X-URBANHERMIT-RIVER-OFFICE-HOURS-2009"],
+    ["OBS-URBANHERMIT-KCUR-WATER-QUOTE", "SRC-X-KCUR-CENTRAL-STANDARD-JAMIE-WATER-2015"],
+    ["OBS-URBANHERMIT-UCP-VIDEO-SELF-REPORT", "SRC-X-URBANHERMIT-UCP-CURFEW-VIDEO-2012"],
+    ["OBS-URBANHERMIT-UCP-VIMEO-AVAILABILITY", "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012"],
+    ["OBS-URBANHERMIT-HORSE-LORDS-SELF-REPORT", "SRC-X-URBANHERMIT-HORSE-LORDS-2016"],
+    ["OBS-URBANHERMIT-HORSE-LORDS-OUTSIDE-CREDIT", "SRC-X-THRILL-JOCKEY-HORSE-LORDS-2016"],
+    ["OBS-URBANHERMIT-HORSE-LORDS-NPR-PUBLICATION", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016"],
+    ["OBS-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION", urbanFull.auditSourceId],
+    ["OBS-URBANHERMIT-LETNYCDANCE-CIRCULATION", "SRC-X-URBANHERMIT-LETNYCDANCE-REPEAL-2017"],
+    ["OBS-URBANHERMIT-TALKSNOTRAIDS-CIRCULATION", "SRC-X-URBANHERMIT-TALKSNOTRAIDS-2019"],
+    ["OBS-URBANHERMIT-HJE-WEBSITE-SELF-REPORT", "SRC-X-URBANHERMIT-HJE-WEBSITE-2010"],
+    ["OBS-URBANHERMIT-TECHNICAL-PRACTICE", "SRC-X-URBANHERMIT-MEDIA-ARCHAEOLOGY-2020"],
+    ["OBS-URBANHERMIT-OUTSIDE-RECOGNITION", "SRC-X-LETSGLITCHIT-JAMIE-CONNECTIONS-2023"],
+    ["OBS-URBANHERMIT-GOOD-TIMES-ROUTING", "SRC-X-URBANHERMIT-GOOD-TIMES-ZINES-2-2015"],
+    ["OBS-URBANHERMIT-GOOD-TIMES-ISSUE-CONTEXT", "SRC-GOOD-TIMES-ZINES-2-2015"],
+    ["OBS-URBANHERMIT-MARKET-HOTEL-CONTEXT", "SRC-OBSERVER-MARKET-HOTEL-2016"],
+    ["OBS-URBANHERMIT-VISIBLE-REACTION-SNAPSHOT", urbanFull.auditSourceId]
+  ]);
+  const urbanSemanticContractsHold = Boolean(
+    urbanFullSources.every((source, index) => urbanSemanticFieldsMatch(
+      source,
+      urbanhermitSocialCorpus.sources[index],
+      ["title", "organization", "author", "kind", "visibility", "preservationStatus",
+        "publishedAt", "canonicalUrl", "publicCitation", "publicNote",
+        "supportsGenerally", "doesNotEstablish"]
+    )) &&
+      urbanFullObservations.every((observation, index) => urbanSemanticFieldsMatch(
+        observation,
+        urbanhermitSocialCorpus.observations[index],
+        ["sourceId", "project", "kind", "text", "locator", "status", "publicSafe",
+          "claimIds", "researchInquiryIds", "limitations"]
+      )) &&
+      urbanFullClaims.every((claim, index) => urbanSemanticFieldsMatch(
+        claim,
+        urbanhermitSocialCorpus.claims[index],
+        ["project", "internalClaim", "status", "projections", "evidence", "boundaries",
+          "antiClaims", "researchInquiryIds"]
+      )) &&
+      urbanFullInquiries.every((inquiry, index) => urbanSemanticFieldsMatch(
+        inquiry,
+        urbanhermitSocialCorpus.researchInquiries[index],
+        ["project", "question", "methods", "resultStatus", "findings", "limitations",
+          "sourceIds", "publicSummary"]
+      ))
+  );
+  const urbanObservationsAtomic = Boolean(
+    urbanFullObservations.length === urbanExpectedObservationSources.size &&
+      urbanFullObservations.every((observation) =>
+        observation &&
+          urbanExpectedObservationSources.get(observation.id) === observation.sourceId &&
+          observation.locator &&
+          observation.limitations.length &&
+          (observation.claimIds.length || observation.researchInquiryIds.length) &&
+          !/\b(?:proves?|solely|single-handedly|caused|impact)\b/i.test(observation.text)
+      )
+  );
+  const urbanObservationContractsHold = Object.entries(urbanFull.observationContracts).every(
+    ([observationId, contract]) => {
+      const observation = observationById.get(observationId);
+      return observation?.sourceId === contract.sourceId &&
+        contract.requiredPhrases.every((phrase) => observation.text.includes(phrase));
+    }
+  );
+  const urbanIntakeSourceGraphComplete = Boolean(
+    urbanFullIntake?.sourceIds.length === urbanFull.expectedLinkedSourceCount &&
+      new Set(urbanFullIntake.sourceIds).size === urbanFull.expectedLinkedSourceCount &&
+      urbanLinkedSources.every(Boolean) &&
+      urbanFullIntake.sourceIds.every((sourceId) =>
+        urbanFullObservations.some((observation) =>
+          observation?.intakeId === urbanFullIntake.id && observation.sourceId === sourceId
+        )
+      )
+  );
+  const urbanFullPopulationComplete = Boolean(
+    urbanLedger &&
+      hasExactKeys(urbanLedger, urbanAllowedTopLevelFields) &&
+      hasExactKeys(urbanLedger.populationAudit, urbanAllowedPopulationAuditFields) &&
+      hasExactKeys(urbanLedger.method, urbanAllowedMethodFields) &&
+      hasExactKeys(urbanLedger.method.freshVerification, urbanAllowedFreshVerificationFields) &&
+      hasExactKeys(urbanLedger.contentBoundary, urbanAllowedContentBoundaryFields) &&
+      hasExactKeys(urbanLedger.metricBoundary, urbanAllowedMetricBoundaryFields) &&
+      hasExactKeys(urbanLedger.aggregateFindings, urbanAllowedAggregateFields) &&
+      hasExactKeys(urbanLedger.aggregateFindings.dispositionCounts, urbanAllowedDispositionCountFields) &&
+      hasExactKeys(urbanLedger.aggregateFindings.projectSignalCounts, urbanAllowedProjectSignalFields) &&
+      hasExactKeys(urbanLedger.aggregateFindings.themeSignalCounts, urbanAllowedThemeSignalFields) &&
+      hasExactKeys(urbanLedger.aggregateFindings.publicLedgerRelationshipCounts, urbanAllowedRelationshipCountFields) &&
+      hasExactKeys(urbanLedger.aggregateFindings.publicSafeAccountAuthoredVisibleReactionSnapshot, urbanAllowedReactionFields) &&
+      hasExactKeys(
+        urbanLedger.aggregateFindings.sourceStatusMetricsExcluded,
+        urbanAllowedSourceStatusMetricFields
+      ) &&
+      urbanLedger.sourceProfile === "https://x.com/urbanhermit" &&
+      urbanLedger.reviewedAt === "2026-07-14" &&
+      urbanLedger.populationAudit.profileCountObserved === urbanFull.expectedProfileCount &&
+      urbanLedger.populationAudit.profileAndBoundedSearchItemsRecovered === urbanFull.expectedUniqueItems &&
+      urbanLedger.populationAudit.unresolvedPopulationSlots === urbanFull.expectedUnresolvedSlots &&
+      urbanLedger.populationAudit.dispositionTotal === urbanFull.expectedProfileCount &&
+      urbanLedger.unresolvedItems.length === urbanFull.expectedUnresolvedSlots &&
+      urbanLedger.unresolvedItems.every((item, index) =>
+        hasExactKeys(item, urbanAllowedUnresolvedFields) &&
+          item.slot === index + 1 &&
+          item.disposition === "carrier-limited-not-recovered" &&
+          /profile count exceeded/i.test(item.reason)
+      ) &&
+      /population reconciliation, not a platform export/i.test(urbanLedger.populationAudit.completenessStatement) &&
+      urbanLedger.method.authenticatedReadOnlyReview === true &&
+      JSON.stringify(urbanLedger.method.surfaces) === JSON.stringify([
+        "Posts tab", "Replies tab", "bounded latest-results date searches", "public status pages"
+      ]) &&
+      JSON.stringify(urbanLedger.method.freshVerification.broadDateWindowsSearched) === JSON.stringify([
+        "2008-2012", "2012-2016", "2016-2020", "2020-2024"
+      ]) &&
+      urbanLedger.method.freshVerification.annualWindowsSearched === "2008 through 2024 inclusive" &&
+      urbanLedger.method.exclusions.some((item) => /cookies, session material, and credentials/i.test(item)) &&
+      urbanLedger.contentBoundary.rawTextCommitted === false &&
+      urbanLedger.contentBoundary.nonEvidenceItemRecordsCommitted === false &&
+      urbanLedger.contentBoundary.publicRecordCrosswalkCommitted === false &&
+      urbanRecords.length + urbanContextDisposition?.count + urbanProtectedDisposition?.count +
+        urbanLedger.unresolvedItems.length === urbanFull.expectedProfileCount &&
+      urbanRecords.length + urbanContextDisposition?.count + urbanProtectedDisposition?.count ===
+        urbanFull.expectedUniqueItems &&
+      urbanRecords.length === urbanFull.expectedPublicSafeEvidenceRecords &&
+      new Set(urbanRecords.map((record) => record.statusId)).size === urbanRecords.length &&
+      urbanRecords.every((record) =>
+        record.disposition === "public-safe-evidence" &&
+          hasExactKeys(record, urbanAllowedRecordFields) &&
+          urbanForbiddenRecordFields.every((field) => !Object.hasOwn(record, field)) &&
+          /^\d+$/.test(record.statusId) &&
+          urbanStatusUrlMatchesAuthor(record) &&
+          urbanPublishedAtMatchesSnowflake(record) &&
+          urbanRecordMatchesCanonicalIdentity(record) &&
+          /^@/.test(record.authorHandle) &&
+          Array.isArray(record.mentionedHandles) &&
+          Array.isArray(record.hashtags) &&
+          Array.isArray(record.postedUrls) &&
+          record.postedUrls.every((url) => /^https?:\/\//.test(url)) &&
+          (record.relationship === "native-repost-source-status"
+            ? record.metricOwner === "source-status-excluded" &&
+              record.currentVisibleMetrics === null &&
+              record.authorHandle.toLowerCase() !== "@urbanhermit"
+            : ["account-post", "account-reply"].includes(record.relationship) &&
+              record.authorHandle.toLowerCase() === "@urbanhermit" &&
+              record.metricOwner === "account-authored-status" &&
+              hasExactKeys(record.currentVisibleMetrics, urbanAllowedCurrentMetricFields) &&
+              Number.isInteger(record.currentVisibleMetrics?.replies) &&
+              Number.isInteger(record.currentVisibleMetrics?.reposts) &&
+              Number.isInteger(record.currentVisibleMetrics?.likes) &&
+              Object.values(record.currentVisibleMetrics).every((value) => value >= 0))
+      ) &&
+      urbanWithheldDispositions.length === 2 &&
+      urbanWithheldDispositions.every((item) =>
+        hasExactKeys(item, urbanAllowedWithheldFields) &&
+          Number.isInteger(item.count) &&
+          item.count > 0 &&
+          item.publicDetail === "Aggregate count only; no public item identifier, year, date, author, relationship, metric, length, digest, link, name, or text fingerprint is retained."
+      ) &&
+      urbanContextDisposition?.count === urbanFull.expectedContextOnlyRecords &&
+      urbanProtectedDisposition?.count === urbanFull.expectedProtectedContextRecords &&
+      urbanAuthoredRecords.length === urbanFull.expectedPublicAccountAuthoredEvidenceRecords &&
+      urbanSourceRecords.length === urbanFull.expectedPublicSourceStatusEvidenceRecords &&
+      urbanPublicRelationshipCounts["account-post"] + urbanPublicRelationshipCounts["account-reply"] ===
+        urbanFull.expectedPublicAccountAuthoredEvidenceRecords &&
+      urbanPublicRelationshipCounts["native-repost-source-status"] ===
+        urbanFull.expectedPublicSourceStatusEvidenceRecords &&
+      urbanPublicRecords.length === urbanFull.expectedPublicSafeEvidenceRecords &&
+      urbanMentionedHandles.size === urbanFull.expectedDistinctPublicHandles &&
+      urbanPostedUrls.length === urbanFull.expectedPostedUrlOccurrences &&
+      urbanUniquePostedUrls.size === urbanFull.expectedUniquePostedUrls &&
+      urbanProjectCounts["waterways-and-participatory-art"] === urbanFull.expectedWaterPracticeSignals &&
+      urbanProjectCounts["sunday-dinner"] === urbanFull.expectedSundayDinnerSignals &&
+      urbanProjectCounts.wowlist === urbanFull.expectedWowlistSignals &&
+      urbanProjectCounts["nyc-artist-coalition"] === urbanFull.expectedNycArtistCoalitionSignals &&
+      urbanAuthoredReactionSnapshot.statuses === urbanFull.expectedPublicAccountAuthoredEvidenceRecords &&
+      urbanAuthoredReactionSnapshot.statusesWithVisibleReaction === urbanFull.expectedAuthoredStatusesWithReaction &&
+      urbanAuthoredReactionSnapshot.replies === urbanFull.expectedAuthoredVisibleReplies &&
+      urbanAuthoredReactionSnapshot.reposts === urbanFull.expectedAuthoredVisibleReposts &&
+      urbanAuthoredReactionSnapshot.likes === urbanFull.expectedAuthoredVisibleLikes &&
+      urbanLedger.aggregateFindings.dispositionCounts["public-safe-evidence"] === urbanPublicRecords.length &&
+      urbanLedger.aggregateFindings.dispositionCounts["context-only"] === urbanContextDisposition.count &&
+      urbanLedger.aggregateFindings.dispositionCounts["protected-context"] === urbanProtectedDisposition.count &&
+      urbanLedger.aggregateFindings.distinctPublicHandlesInEvidenceRecords === urbanMentionedHandles.size &&
+      urbanLedger.aggregateFindings.postedPublicUrlOccurrencesInEvidenceRecords === urbanPostedUrls.length &&
+      urbanLedger.aggregateFindings.uniquePostedPublicUrlsInEvidenceRecords === urbanUniquePostedUrls.size &&
+      JSON.stringify(urbanLedger.aggregateFindings.selectedMissionSourceStatusIds) ===
+        JSON.stringify(urbanCanonicalLedger.aggregateFindings.selectedMissionSourceStatusIds) &&
+      urbanLedger.aggregateFindings.selectedMissionSourceStatusIds.every((id) => urbanRecordIds.has(id)) &&
+      equalUrbanCountMaps(urbanLedger.aggregateFindings.projectSignalCounts, urbanProjectCounts) &&
+      equalUrbanCountMaps(urbanLedger.aggregateFindings.themeSignalCounts, urbanThemeCounts) &&
+      equalUrbanCountMaps(
+        urbanLedger.aggregateFindings.publicLedgerRelationshipCounts,
+        urbanPublicRelationshipCounts
+      ) &&
+      equalUrbanCountMaps(
+        urbanLedger.aggregateFindings.publicSafeAccountAuthoredVisibleReactionSnapshot,
+        urbanAuthoredReactionSnapshot
+      ) &&
+      urbanLedger.aggregateFindings.sourceStatusMetricsExcluded.publicEvidenceSourceStatuses ===
+        urbanFull.expectedPublicSourceStatusMetricsExcluded &&
+      urbanLedger.aggregateFindings.sourceStatusMetricsExcluded.publicEvidenceSourceStatuses ===
+        urbanSourceRecords.length &&
+      urbanLedger.aggregateFindings.sourceStatusMetricsExcluded.metricsCommitted === false &&
+      urbanhermitPopulationAudit.profileCountObserved === urbanFull.expectedProfileCount &&
+      urbanhermitPopulationAudit.uniqueItemsRecovered === urbanFull.expectedUniqueItems &&
+      urbanhermitPopulationAudit.unresolvedPopulationSlots === urbanFull.expectedUnresolvedSlots &&
+      urbanhermitCorpusFindings.publicSafeEvidenceRecords === urbanFull.expectedPublicSafeEvidenceRecords &&
+      urbanhermitCorpusFindings.publicSafeAccountAuthoredEvidenceRecords ===
+        urbanFull.expectedPublicAccountAuthoredEvidenceRecords &&
+      urbanhermitCorpusFindings.publicSafeSourceStatusEvidenceRecords ===
+        urbanFull.expectedPublicSourceStatusEvidenceRecords &&
+      urbanhermitCorpusFindings.contextOnlyRecords === urbanFull.expectedContextOnlyRecords &&
+      urbanhermitCorpusFindings.protectedContextRecords === urbanFull.expectedProtectedContextRecords &&
+      urbanhermitCorpusFindings.accountAuthoredStatusesWithVisibleReaction ===
+        urbanFull.expectedAuthoredStatusesWithReaction &&
+      urbanhermitCorpusFindings.accountAuthoredVisibleReplies === urbanFull.expectedAuthoredVisibleReplies &&
+      urbanhermitCorpusFindings.accountAuthoredVisibleReposts === urbanFull.expectedAuthoredVisibleReposts &&
+      urbanhermitCorpusFindings.accountAuthoredVisibleLikes === urbanFull.expectedAuthoredVisibleLikes &&
+      urbanhermitCorpusFindings.publicEvidenceSourceStatusMetricsExcluded ===
+        urbanFull.expectedPublicSourceStatusMetricsExcluded &&
+      urbanhermitSocialCorpus.sources.length === urbanFull.expectedNewSourceCount &&
+      urbanhermitSocialCorpus.observations.length === urbanFull.expectedObservationCount &&
+      urbanhermitSocialCorpus.claims.length === urbanFull.expectedClaimCount &&
+      urbanhermitSocialCorpus.researchInquiries.length === urbanFull.expectedInquiryCount &&
+      urbanObservationsAtomic &&
+      urbanObservationContractsHold &&
+      urbanIntakeSourceGraphComplete &&
+      urbanSemanticContractsHold &&
+      urbanFullSources.every((source) =>
+        source?.visibility === "public" && source.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      urbanAuditSource?.kind === "research-run" &&
+      urbanAuditSource.canonicalUrl?.includes(urbanFull.ledgerPath) &&
+      urbanAuditSource.doesNotEstablish.some((boundary) => /platform export/i.test(boundary)) &&
+      urbanAuditSource.doesNotEstablish.some((boundary) => /personal-account material/i.test(boundary)) &&
+      urbanHeldClaims.every((claim) =>
+        claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+      ) &&
+      urbanFullClaims.every((claim) => claim?.antiClaims.length >= 3 && claim.boundaries.length >= 1) &&
+      urbanPopulationInquiry?.resultStatus === "partially-recovered" &&
+      urbanPopulationInquiry.findings.some((finding) => /Nine slots remain carrier-limited and unresolved/i.test(finding)) &&
+      urbanOutsideInquiry?.resultStatus === "partially-recovered" &&
+      urbanOutsideInquiry.limitations.some((limitation) => /recoverable floor/i.test(limitation)) &&
+      urbanPersonalInventory?.profilePosts === urbanFull.expectedProfileCount &&
+      urbanPersonalInventory.recoveredStatuses === urbanFull.expectedUniqueItems &&
+      /Personal-account evidence is governed separately/i.test(urbanPersonalInventory.boundary) &&
+      urbanDocumentation.includes("425 + 9 = 434") &&
+      urbanDocumentation.includes("personal account is not a project account") &&
+      urbanDocumentation.includes("Nothing from this pass is added automatically") &&
+      urbanDocumentation.includes("source-status metrics") &&
+      urbanDocumentation.includes("aggregate-only") &&
+      urbanDocumentation.includes("no public item-level crosswalk") &&
+      !/(?:recordKey|contentDigestSha256|normalizedTextCharacterCount|publishedYear)/.test(urbanLedgerText) &&
+      !/\b\d{15,}\b/.test(urbanNonRecordMetadataText) &&
+      !/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/.test(urbanNonRecordMetadataText) &&
+      !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(urbanLedgerText) &&
+      !/(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(urbanLedgerText) &&
+      urbanFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -1480,16 +1927,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       criterionId: "KB-EVAL-ATOMICITY",
       score: score(
         allEvaluatedObservations.length >= 30 &&
-        allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
+        allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length)) &&
+        urbanObservationsAtomic
       ),
       evidence: [`${allEvaluatedObservations.filter(Boolean).length} proposition-level observations have locators, limitations, and claim or inquiry links`]
     },
     {
       criterionId: "KB-EVAL-SCOPE",
       score: score(
-        [...pilotSources, ...expansionSources, ...pressIndexSources, ...pressArticleSources, ...kcFundingSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+        [...pilotSources, ...expansionSources, ...pressIndexSources, ...pressArticleSources, ...kcFundingSources, ...urbanFullSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
         expansionSources.length === expansion.expectedSourceCount &&
-        !errors.some((error) => /does not establish|support a proposition/i.test(error))
+        !errors.some((error) => /does not establish|support a proposition/i.test(error)) &&
+        urbanObservationsAtomic
       ),
       evidence: [`${expansionSources.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion records and ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles have explicit support and doesNotEstablish boundaries`]
     },
@@ -1621,6 +2070,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [nycacPopulationDispositionComplete
         ? `All ${nycacFull.expectedProfileCount} displayed profile-count slots are dispositioned through ${nycacRecords.length} unique item records and ${nycacFull.expectedUnresolvedSlots} explicit carrier-limited slots; the ledger preserves ${nycacUniqueShortUrls.size} posted short URLs, ${nycacResolvedDestinations.size} current destinations, ${nycacRepostSourceAccounts.size} source accounts, ${nycacDirectMentionAccounts.size} direct-mention accounts, ten closely read sources, collective authorship, and source-status metric ownership without overloading the public portfolio`
         : "NYC Artist Coalition population arithmetic, item uniqueness, unresolved carrier limits, campaign and source classifications, link inventory, direct-mention distinctions, source-status metric exclusion, collective authorship, held composition, or public safety is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-URBANHERMIT-FULL-POPULATION",
+      score: score(urbanFullPopulationComplete),
+      evidence: [urbanFullPopulationComplete
+        ? `All ${urbanFull.expectedProfileCount} displayed personal-account slots are dispositioned through ${urbanRecords.length} public mission-relevant item records, ${urbanContextDisposition.count + urbanProtectedDisposition.count} aggregate-only withheld dispositions, and ${urbanFull.expectedUnresolvedSlots} carrier-limited slots; ${urbanUniquePostedUrls.size} distinct posted URLs are retained, source-status metrics are excluded, no public item-level crosswalk exists for withheld context, and all ${urbanHeldClaims.length} claims remain held for deliberate future composition`
+        : "Personal-account population arithmetic, aggregate-only withholding, source-link inventory, metric ownership, source maturation, held composition, documentation, or public safety is incomplete"]
     }
   ];
 

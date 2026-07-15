@@ -550,6 +550,80 @@
         "CLM-NYCAC-SOCIAL-VISIBLE-REACTIONS"
       ],
       "auditSourceId": "SRC-X-NYCAC-POPULATION-AUDIT-2026-07-14"
+    },
+    "urbanhermitFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/urbanhermit-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-urbanhermit-full-population-social-corpus.md",
+      "expectedProfileCount": 434,
+      "expectedUniqueItems": 425,
+      "expectedUnresolvedSlots": 9,
+      "expectedPublicSafeEvidenceRecords": 141,
+      "expectedPublicAccountAuthoredEvidenceRecords": 81,
+      "expectedPublicSourceStatusEvidenceRecords": 60,
+      "expectedContextOnlyRecords": 271,
+      "expectedProtectedContextRecords": 13,
+      "expectedDistinctPublicHandles": 64,
+      "expectedPostedUrlOccurrences": 104,
+      "expectedUniquePostedUrls": 87,
+      "expectedWaterPracticeSignals": 11,
+      "expectedSundayDinnerSignals": 27,
+      "expectedWowlistSignals": 14,
+      "expectedNycArtistCoalitionSignals": 61,
+      "expectedAuthoredStatusesWithReaction": 35,
+      "expectedAuthoredVisibleReplies": 4,
+      "expectedAuthoredVisibleReposts": 26,
+      "expectedAuthoredVisibleLikes": 67,
+      "expectedPublicSourceStatusMetricsExcluded": 60,
+      "expectedNewSourceCount": 15,
+      "expectedLinkedSourceCount": 16,
+      "expectedObservationCount": 19,
+      "expectedClaimCount": 8,
+      "expectedInquiryCount": 3,
+      "observationContracts": {
+        "OBS-URBANHERMIT-UCP-VIDEO-SELF-REPORT": {
+          "sourceId": "SRC-X-URBANHERMIT-UCP-CURFEW-VIDEO-2012",
+          "requiredPhrases": ["Jamie's public post says", "links a Vimeo artifact"]
+        },
+        "OBS-URBANHERMIT-UCP-VIMEO-AVAILABILITY": {
+          "sourceId": "SRC-VIMEO-URBANHERMIT-UCP-CURFEW-VIDEO-2012",
+          "requiredPhrases": ["remained publicly available", "July 2026 review"]
+        },
+        "OBS-URBANHERMIT-HORSE-LORDS-SELF-REPORT": {
+          "sourceId": "SRC-X-URBANHERMIT-HORSE-LORDS-2016",
+          "requiredPhrases": ["Jamie's April 2016 post says", "he and Martin Schmidt"]
+        },
+        "OBS-URBANHERMIT-HORSE-LORDS-OUTSIDE-CREDIT": {
+          "sourceId": "SRC-X-THRILL-JOCKEY-HORSE-LORDS-2016",
+          "requiredPhrases": ["Thrill Jockey publicly credited", "Jamie Burkart and Martin Schmidt"]
+        },
+        "OBS-URBANHERMIT-HORSE-LORDS-NPR-PUBLICATION": {
+          "sourceId": "SRC-NPR-HORSE-LORDS-TRUTHERS-2016",
+          "requiredPhrases": ["NPR Music published", "April 29, 2016"]
+        },
+        "OBS-URBANHERMIT-GOOD-TIMES-ROUTING": {
+          "sourceId": "SRC-X-URBANHERMIT-GOOD-TIMES-ZINES-2-2015",
+          "requiredPhrases": ["Jamie's May 2015 post routed readers", "DIY cultural spaces"]
+        },
+        "OBS-URBANHERMIT-GOOD-TIMES-ISSUE-CONTEXT": {
+          "sourceId": "SRC-GOOD-TIMES-ZINES-2-2015",
+          "requiredPhrases": ["Good Times published Elise Granata's reporting", "May 2015"]
+        },
+        "OBS-URBANHERMIT-MARKET-HOTEL-CONTEXT": {
+          "sourceId": "SRC-OBSERVER-MARKET-HOTEL-2016",
+          "requiredPhrases": ["Observer reported", "October 2016 NYPD raid at Market Hotel"]
+        }
+      },
+      "heldClaimIds": [
+        "CLM-URBANHERMIT-SOCIAL-POPULATION-DISPOSITION",
+        "CLM-URBANHERMIT-PRACTICE-CONTINUITY",
+        "CLM-URBANHERMIT-WATERWAYS-PRACTICE",
+        "CLM-URBANHERMIT-PUBLIC-MEDIA-MAKING",
+        "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION",
+        "CLM-URBANHERMIT-TECHNICAL-PRACTICE",
+        "CLM-URBANHERMIT-OUTSIDE-RECOGNITION-FLOOR",
+        "CLM-URBANHERMIT-VISIBLE-TRACTION-SNAPSHOT"
+      ],
+      "auditSourceId": "SRC-X-URBANHERMIT-POPULATION-AUDIT-2026-07-14"
     }
   },
   "criteria": [
@@ -671,6 +745,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 5,124 displayed @NYCArtC profile-count slots receive honest dispositions; every recovered item and posted URL is preserved without raw text; unresolved carrier gaps remain explicit; source authorship, coalition amplification, direct mention, current reactions, and Council-member engagement remain distinct; and the deeper account record stays available for recomposition without burdening the public portfolio."
+    },
+    {
+      "id": "KB-EVAL-URBANHERMIT-FULL-POPULATION",
+      "label": "Personal @urbanhermit population-reconciled archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 434 displayed personal-account slots receive honest dispositions; mission-relevant public evidence remains inspectable; ordinary and protected life context is counted without republication; source-status authorship and metrics remain with their source; self-report, outside corroboration, mutable reactions, and impact remain distinct; and all newly matured claims stay held until deliberate composition."
     }
   ],
   "hillClimb": {
@@ -692,6 +773,7 @@
       "Never count candidate-era or former-member posts as sitting-officeholder engagement.",
       "Never treat profile post totals as stable impact metrics or individual authorship records.",
       "Never count reactions on a reposted source status as engagement earned by the project account's repost action.",
+      "Never call a public personal-account record opaque if its identifier, digest, timestamp, length, metric tuple, or other fingerprint can be linked back to a withheld item.",
       "Never turn project-authored mentions or project-selected reposts into engagement authored by an outside stakeholder.",
       "Never turn a tire-workflow record count into a completed-pickup, household, or resident-outcome count.",
       "Never turn an unrecovered account or status into proof that it never existed."

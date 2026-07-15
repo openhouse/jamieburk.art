@@ -7,6 +7,7 @@ import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/ww
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
+import { urbanhermitPopulationAudit, urbanhermitSocialCorpus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts";
 import { wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
@@ -25,6 +26,10 @@ const kcTownHallLedger = JSON.parse(readFileSync(
 ));
 const nycacLedger = JSON.parse(readFileSync(
   new URL("../../docs/knowledge-bank/data/nycartc-public-post-ledger.json", import.meta.url),
+  "utf8"
+));
+const urbanhermitLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/urbanhermit-public-post-ledger.json", import.meta.url),
   "utf8"
 ));
 
@@ -1051,6 +1056,460 @@ test("NYC Artist Coalition linked articles mature into source-specific observati
       (observation) => observation.limitations.length && observation.claimIds.length
     )
   );
+});
+
+test("urbanhermit population ledger reconciles every displayed profile slot", () => {
+  assert.equal(urbanhermitPopulationAudit.profileCountObserved, 434);
+  assert.equal(urbanhermitLedger.records.length, 141);
+  assert.equal(new Set(urbanhermitLedger.records.map((record) => record.statusId)).size, 141);
+  assert.equal(
+    urbanhermitLedger.withheldPopulationDispositions.reduce((sum, item) => sum + item.count, 0),
+    284
+  );
+  assert.equal(urbanhermitLedger.unresolvedItems.length, 9);
+  assert.equal(
+    urbanhermitLedger.records.length +
+      urbanhermitLedger.withheldPopulationDispositions.reduce((sum, item) => sum + item.count, 0) +
+      urbanhermitLedger.unresolvedItems.length,
+    urbanhermitLedger.populationAudit.profileCountObserved
+  );
+  assert.equal(
+    urbanhermitLedger.records.length +
+      urbanhermitLedger.withheldPopulationDispositions.reduce((sum, item) => sum + item.count, 0),
+    urbanhermitLedger.populationAudit.profileAndBoundedSearchItemsRecovered
+  );
+  assert.match(
+    urbanhermitLedger.populationAudit.completenessStatement,
+    /population reconciliation, not a platform export/i
+  );
+});
+
+test("urbanhermit context and protected records remain aggregate-only and unlinkable", () => {
+  const forbiddenFingerprintFields = [
+    "recordKey",
+    "contentDigestSha256",
+    "normalizedTextCharacterCount",
+    "publishedYear"
+  ];
+
+  assert.ok(
+    urbanhermitLedger.records.every((record) => record.disposition === "public-safe-evidence")
+  );
+  assert.deepEqual(
+    urbanhermitLedger.withheldPopulationDispositions.map(({ disposition, count }) => ({ disposition, count })),
+    [
+      { disposition: "context-only", count: 271 },
+      { disposition: "protected-context", count: 13 }
+    ]
+  );
+  assert.ok(
+    urbanhermitLedger.withheldPopulationDispositions.every((item) =>
+      Object.keys(item).every((key) => ["disposition", "count", "publicDetail"].includes(key)) &&
+        /aggregate count only/i.test(item.publicDetail) &&
+        /no public item identifier/i.test(item.publicDetail)
+    )
+  );
+  assert.ok(urbanhermitLedger.records.every((record) => !("text" in record) && !("rawText" in record)));
+  assert.ok(
+    forbiddenFingerprintFields.every((field) => !JSON.stringify(urbanhermitLedger).includes(`"${field}"`))
+  );
+  const nonRecordMetadata = structuredClone(urbanhermitLedger);
+  nonRecordMetadata.records = [];
+  nonRecordMetadata.aggregateFindings.selectedMissionSourceStatusIds = [];
+  assert.doesNotMatch(JSON.stringify(nonRecordMetadata), /\b\d{15,}\b/);
+  assert.doesNotMatch(JSON.stringify(nonRecordMetadata), /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/);
+  assert.equal(Object.hasOwn(urbanhermitLedger.aggregateFindings, "relationshipCounts"), false);
+  assert.doesNotMatch(
+    JSON.stringify(urbanhermitLedger),
+    /(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/
+  );
+});
+
+test("urbanhermit public evidence aggregates are recomputed from item-level records", () => {
+  const publicRecords = urbanhermitLedger.records.filter(
+    (record) => record.disposition === "public-safe-evidence"
+  );
+  const authoredRecords = urbanhermitLedger.records.filter(
+    (record) => record.relationship !== "native-repost-source-status"
+  );
+  const sourceRecords = urbanhermitLedger.records.filter(
+    (record) => record.relationship === "native-repost-source-status"
+  );
+  const reactionSnapshot = authoredRecords.reduce(
+    (totals, record) => ({
+      statuses: totals.statuses + 1,
+      statusesWithVisibleReaction: totals.statusesWithVisibleReaction +
+        (Object.values(record.currentVisibleMetrics).some((value) => value > 0) ? 1 : 0),
+      replies: totals.replies + record.currentVisibleMetrics.replies,
+      reposts: totals.reposts + record.currentVisibleMetrics.reposts,
+      likes: totals.likes + record.currentVisibleMetrics.likes
+    }),
+    { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
+
+  assert.deepEqual(
+    urbanhermitLedger.aggregateFindings.publicSafeAccountAuthoredVisibleReactionSnapshot,
+    reactionSnapshot
+  );
+  assert.equal(
+    urbanhermitLedger.aggregateFindings.postedPublicUrlOccurrencesInEvidenceRecords,
+    publicRecords.flatMap((record) => record.postedUrls).length
+  );
+  assert.equal(
+    urbanhermitLedger.aggregateFindings.uniquePostedPublicUrlsInEvidenceRecords,
+    new Set(publicRecords.flatMap((record) => record.postedUrls)).size
+  );
+  assert.equal(authoredRecords.length, 81);
+  assert.equal(sourceRecords.length, 60);
+  assert.equal(
+    urbanhermitLedger.aggregateFindings.sourceStatusMetricsExcluded.publicEvidenceSourceStatuses,
+    60
+  );
+  assert.equal(
+    Object.hasOwn(
+      urbanhermitLedger.aggregateFindings.sourceStatusMetricsExcluded,
+      "populationSourceStatuses"
+    ),
+    false
+  );
+  assert.ok(
+    sourceRecords.every(
+      (record) =>
+        record.metricOwner === "source-status-excluded" &&
+        record.currentVisibleMetrics === null
+    )
+  );
+});
+
+test("urbanhermit mature depth stays held off public surfaces", () => {
+  const heldIds = suite.pilot.urbanhermitFullPopulation.heldClaimIds;
+  const heldClaims = urbanhermitSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
+
+  assert.equal(heldClaims.length, heldIds.length);
+  assert.ok(
+    heldClaims.every((claim) =>
+      claim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      )
+    )
+  );
+});
+
+test("urbanhermit eval rejects unresolved-population drift", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.unresolvedItems.pop();
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
+test("urbanhermit eval rejects an item-level crosswalk on a withheld disposition", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.withheldPopulationDispositions[0].statusUrl =
+    "https://x.com/urbanhermit/status/unsafe";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit eval rejects a fingerprint on a withheld disposition", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.withheldPopulationDispositions[0].contentDigestSha256 = "a".repeat(64);
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit eval rejects a withheld fingerprint outside the disposition buckets", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.method.freshVerification.withheldStatusId = "1234567890123456789";
+  alteredLedger.method.freshVerification.withheldMetricTuple = [1, 2, 3];
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
+test("urbanhermit eval rejects subtractive relationship disclosure", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.aggregateFindings.relationshipCounts = {
+    "account-post": 340,
+    "account-reply": 4,
+    "native-repost-source-status": 81
+  };
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit eval rejects source-status metrics assigned to Jamie", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  const sourceRecord = alteredLedger.records.find(
+    (record) => record.relationship === "native-repost-source-status"
+  );
+  sourceRecord.currentVisibleMetrics = { replies: 0, reposts: 0, likes: 1 };
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit eval rejects source-status authorship assigned to Jamie", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  const sourceRecord = alteredLedger.records.find(
+    (record) => record.relationship === "native-repost-source-status"
+  );
+  sourceRecord.authorHandle = "@urbanhermit";
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit handle identities are normalized case-insensitively", () => {
+  const handles = new Set(
+    urbanhermitLedger.records.flatMap((record) => record.mentionedHandles)
+      .map((handle) => handle.toLowerCase())
+  );
+
+  assert.equal(handles.size, suite.pilot.urbanhermitFullPopulation.expectedDistinctPublicHandles);
+  assert.equal(handles.has("@nycartc"), true);
+  assert.equal(handles.has("@rlespinal"), true);
+});
+
+test("urbanhermit eval rejects unexpected nested metric metadata", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  const authored = alteredLedger.records.find(
+    (record) => record.relationship !== "native-repost-source-status"
+  );
+  authored.currentVisibleMetrics.withheldMetadata = true;
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit eval rejects unexpected disposition categories", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.aggregateFindings.dispositionCounts["withheld-account-reply"] = 1;
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit eval rejects an empty selected-source inventory", () => {
+  const alteredLedger = structuredClone(urbanhermitLedger);
+  alteredLedger.aggregateFindings.selectedMissionSourceStatusIds = [];
+  const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+    1
+  );
+});
+
+test("urbanhermit eval rejects empty recomputed aggregate maps", () => {
+  for (const field of [
+    "publicLedgerRelationshipCounts",
+    "publicSafeAccountAuthoredVisibleReactionSnapshot"
+  ]) {
+    const alteredLedger = structuredClone(urbanhermitLedger);
+    alteredLedger.aggregateFindings[field] = {};
+    const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+  }
+});
+
+test("urbanhermit eval binds source-status URL, author, date, and summary", () => {
+  const mutations = [
+    (record) => { record.authorHandle = "@unrelated-source"; },
+    (record) => { record.statusUrl = `https://example.com/status/${record.statusId}`; },
+    (record) => { record.publishedAt = "2099-01-01"; },
+    (record) => { record.contentSummary = "This proves Jamie led and caused the outcome."; }
+  ];
+
+  for (const mutate of mutations) {
+    const alteredLedger = structuredClone(urbanhermitLedger);
+    const sourceRecord = alteredLedger.records.find(
+      (record) => record.relationship === "native-repost-source-status"
+    );
+    mutate(sourceRecord);
+    const result = evaluateKnowledgeBank(suite, { urbanhermitLedger: alteredLedger });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+  }
+});
+
+test("every urbanhermit intake source, including reused sources, has a bounded atomic observation", () => {
+  const intake = urbanhermitSocialCorpus.intakeItems[0];
+  const observedSourceIds = new Set(
+    urbanhermitSocialCorpus.observations.map((observation) => observation.sourceId)
+  );
+
+  assert.equal(intake.sourceIds.length, suite.pilot.urbanhermitFullPopulation.expectedLinkedSourceCount);
+  assert.ok(intake.sourceIds.every((sourceId) => observedSourceIds.has(sourceId)));
+});
+
+test("urbanhermit eval rejects omission of a reused intake source observation", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-URBANHERMIT-GOOD-TIMES-ISSUE-CONTEXT"
+  );
+  assert.ok(observation);
+  const originalSourceId = observation.sourceId;
+
+  try {
+    observation.sourceId = "SRC-X-URBANHERMIT-GOOD-TIMES-ZINES-2-2015";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+  } finally {
+    observation.sourceId = originalSourceId;
+  }
+});
+
+test("urbanhermit semantic contracts reject paraphrased overclaims", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-URBANHERMIT-WATER-PRACTICE"
+  );
+  assert.ok(observation);
+  const originalText = observation.text;
+
+  try {
+    observation.text = "Jamie definitively delivered the river program and drove its results.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+  } finally {
+    observation.text = originalText;
+  }
+});
+
+test("urbanhermit semantic contracts cover sources, claims, projections, and inquiries", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-OBSERVER-MARKET-HOTEL-2016"
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION"
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-URBANHERMIT-LINKED-SOURCE-MATURATION"
+  );
+  assert.ok(source && claim && inquiry);
+
+  const mutations = [
+    [source, "supportsGenerally", ["Jamie caused the policy outcome."]],
+    [claim, "internalClaim", "Jamie single-handedly led every coalition campaign."],
+    [claim.projections[0], "text", "Jamie alone transformed New York nightlife policy."],
+    [inquiry, "publicSummary", "The corpus proves all of Jamie's professional impact."]
+  ];
+
+  for (const [target, field, replacement] of mutations) {
+    const original = target[field];
+    try {
+      target[field] = replacement;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+        1
+      );
+    } finally {
+      target[field] = original;
+    }
+  }
+});
+
+test("urbanhermit native repost boundary preserves source authorship", () => {
+  const claim = urbanhermitSocialCorpus.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-CIVIC-CAMPAIGN-CIRCULATION"
+  );
+
+  assert.ok(claim?.boundaries.some((boundary) =>
+    /underlying authorship, claims, metrics, and any described participation remain with the source account/i.test(boundary)
+  ));
+});
+
+test("urbanhermit eval rejects a semantically overbroad observation", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-URBANHERMIT-WATER-PRACTICE"
+  );
+  assert.ok(observation);
+  const originalText = observation.text;
+
+  try {
+    observation.text = "This source proves attendance, sole authorship, and impact.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-ATOMICITY")?.score,
+      1
+    );
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score,
+      1
+    );
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+  } finally {
+    observation.text = originalText;
+  }
+});
+
+test("urbanhermit eval rejects accidental public projection", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === urbanhermitSocialCorpus.claims[0].id
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const originalStatus = projection.status;
+  const originalSurfaces = projection.surfaces;
+
+  try {
+    projection.status = "active";
+    projection.surfaces = ["/about"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-URBANHERMIT-FULL-POPULATION")?.score,
+      1
+    );
+  } finally {
+    projection.status = originalStatus;
+    projection.surfaces = originalSurfaces;
+  }
 });
 
 test("NYC Artist Coalition direct mentions cannot support the Council-member claim", () => {
