@@ -39,20 +39,36 @@ to Jamie or imply recovered attendance, message volume, or long-term deployment.
 ### America: Now and Here Research Lead
 
 Jamie recalls that NTER CHNG was later included in America: Now and Here's 2011
-Kansas City program. Nerman Museum and Smithsonian Archives of American Art
-records confirm the program's Kansas City timing and multidisciplinary scope,
-but neither names NTER CHNG. A review of 205 recoverable 2011 HTML pages from the
-official exhibition domain recovered no exact project or collaborator-name
-reference.
+Kansas City program. Two protected, contemporaneous project documents now make
+that connection substantially firmer. An April 13 installation plan opens with
+“Staging of install for ANH, May 2011,” specifies Leedy-Voulkos, and records
+software, fabrication, projection, computer, network, floor-number, and gallery
+work. An April 6 working document preserves America-themed and art-focused
+participatory prompts, dated response traces, and the project's
+software-and-architecture description. It attributes to Jamie the aim of
+helping visitors make connections beyond their existing contacts.
+
+Claim: `CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION` - confirmed with boundary.
+
+Use “prepared for” or “staged for installation.” The recovered documents do not
+establish that the installation was completed or opened to the public. Do not
+publish the underlying participant phone numbers, messages, or private
+logistics, and do not assign every shared task to Jamie.
+
+Nerman Museum and Smithsonian Archives of American Art records confirm the
+program's Kansas City timing and multidisciplinary scope, but neither names NTER
+CHNG. A review of 205 recoverable 2011 HTML pages from the official exhibition
+domain recovered no exact project or collaborator-name reference.
 
 Claim: `CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION` - use with care.
 
 Inquiry: `INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026` - partially recovered.
 
-Keep this connection in the research layer until a project-specific program,
-installation, press, organizer, or collaborator record is recovered. “Not
-recovered” does not mean “did not exist.” Do not infer that NTER CHNG was shown
-at the Nerman Museum from its page about Barbara Kruger's project.
+Keep completed-exhibition language in the research layer until a final program,
+installed-view photograph, completion record, press item, organizer record, or
+collaborator confirmation is recovered. “Not recovered” does not mean “did not
+exist.” Do not infer that NTER CHNG was shown at the Nerman Museum; the protected
+plan names Leedy-Voulkos.
 
 ## Horse Lords - Truthers
 

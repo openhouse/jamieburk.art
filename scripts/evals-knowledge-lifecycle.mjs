@@ -105,6 +105,8 @@ const googleDrivePromotedClaimIds = [
 
 const nterChngArchiveSourceIds = [
   "SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011",
+  "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+  "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
   "SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15",
   "SRC-AMERICA-NOW-HERE-NERMAN-2011",
   "SRC-AMERICA-NOW-HERE-SMITHSONIAN-RECORDS",
@@ -244,8 +246,8 @@ check(
 
 check(
   "Source quality",
-  "NTER CHNG recovery separates first-party proof, protected memory, institutional context, and bounded negative search",
-  7,
+  "NTER CHNG recovery separates first-party proof, protected contemporaneous records, protected memory, institutional context, and bounded negative search",
+  8,
   nterChngArchiveSourceIds.every((id) => sourceById.has(id)) &&
     sourceById.get("SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011")?.kind ===
       "archived-web-capture" &&
@@ -256,7 +258,20 @@ check(
     !sourceById.get("SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15")
       ?.canonicalUrl &&
     sourceById.get("SRC-AMERICA-NOW-HERE-WAYBACK-RESEARCH-2026")
-      ?.doesNotEstablish.some((value) => /absent/i.test(value)),
+      ?.doesNotEstablish.some((value) => /absent/i.test(value)) &&
+    [
+      "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+      "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06"
+    ].every((id) => {
+      const source = sourceById.get(id);
+      return source?.visibility === "protected" &&
+        source.preservationStatus === "private" &&
+        source.protectedLocatorId &&
+        !source.canonicalUrl &&
+        !source.archiveUrl &&
+        !source.assetUrl &&
+        source.doesNotEstablish.length >= 4;
+    }),
   true
 );
 
@@ -319,10 +334,18 @@ check(
 
 check(
   "Atomic observations",
-  "NTER CHNG observations distinguish recovered facts from Jamie's provisional exhibition account",
-  6,
+  "NTER CHNG observations distinguish installation preparation, participatory design, and Jamie's provisional completion account",
+  8,
   observationById.get("OBS-NTER-CHNG-OFFICIAL-SITE-DESCRIPTION-CREDITS")
     ?.status === "verified" &&
+    observationById.get("OBS-NTER-CHNG-ANH-INSTALLATION-PREPARATION")
+      ?.status === "verified" &&
+    observationById.get("OBS-NTER-CHNG-ANH-PARTICIPATORY-PROMPTS")
+      ?.status === "verified" &&
+    observationById.get("OBS-NTER-CHNG-JAMIE-PARTICIPATORY-INTENT")
+      ?.status === "verified" &&
+    observationById.get("OBS-NTER-CHNG-ANH-JAMIE-LOGISTICS")
+      ?.status === "verified" &&
     observationById.get("OBS-NTER-CHNG-AMERICA-NOW-HERE-ACCOUNT")?.status ===
       "provisional" &&
     observationById.get("OBS-AMERICA-NOW-HERE-WAYBACK-NO-REFERENCE-RECOVERED")
@@ -358,8 +381,8 @@ check(
 );
 check(
   "Claim maturity",
-  "NTER CHNG project credit is strengthened while the exhibition connection stays held and bounded",
-  8,
+  "NTER CHNG project credit and ANH preparation are confirmed while completed presentation stays held and bounded",
+  10,
   claimById.get("CLM-NTER-CHNG-INTERACTIVE-INSTALLATION")?.status ===
       "confirmed-with-boundary" &&
     claimById
@@ -367,6 +390,19 @@ check(
       ?.evidence.some(
         (item) => item.sourceId === "SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011"
       ) &&
+    claimById.get("CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION")
+      ?.evidence.some(
+        (item) => item.sourceId === "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13"
+      ) &&
+    claimById
+      .get("CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION")
+      ?.boundaries.some((value) => /do not establish.*opened|not establish.*opened|do not establish.*public/i.test(value)) &&
+    claimById
+      .get("CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION")
+      ?.antiClaims.some((value) => /phone numbers|messages.*cleared/i.test(value)) &&
     claimById.get("CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION")?.status ===
       "use-with-care" &&
     claimById

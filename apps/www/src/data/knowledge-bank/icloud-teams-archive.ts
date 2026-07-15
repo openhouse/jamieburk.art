@@ -673,6 +673,24 @@ export const icloudTeamsClaims: KnowledgeBank["claims"] = [
         publicNote: "Recovered first-party project surface.",
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
+        relationship: "corroborating",
+        supports: ["software-and-architectural form", "one-to-one to many-to-many interaction concept", "collective creator credits"],
+        locator: "January 2010 exhibit information preserved in the April 2011 working document",
+        publicNote: "Contemporaneous protected project-description record.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+        relationship: "corroborating",
+        supports: ["physical wall", "software revision", "projector and computer systems", "gallery-installation planning"],
+        locator: "Preparation and installation checklist",
+        publicNote: "Contemporaneous protected installation-planning record.",
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [
@@ -683,7 +701,7 @@ export const icloudTeamsClaims: KnowledgeBank["claims"] = [
     antiClaims: ["Jamie solely created NTER CHNG.", "Jamie programmed NTER CHNG.", "NTER CHNG reached a quantified audience."],
     researchInquiryIds: [],
     reviewedAt: "2026-07-15",
-    reviewedBy: ["Codex public-source and archive review"]
+    reviewedBy: ["Codex public-source and protected-document review"]
   },
   {
     id: "CLM-HORSE-LORDS-TRUTHERS-VIDEO",

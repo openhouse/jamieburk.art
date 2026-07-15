@@ -8,8 +8,9 @@ later included in America: Now and Here's 2011 Kansas City program.
 
 ## Result
 
-The project record is stronger. The exhibition connection remains a qualified
-research lead.
+The project record is materially stronger. Contemporaneous project documents
+now establish preparation for an America: Now and Here installation; final
+completion and public presentation remain a qualified research question.
 
 The recovered first-party site describes NTER CHNG as “an interactive txting
 installation” and names Drew Bolton, Jamie Burkart, and Garrett Fuselier. This
@@ -19,10 +20,26 @@ contribution.
 
 Claim: `CLM-NTER-CHNG-INTERACTIVE-INSTALLATION` - confirmed with boundary.
 
-Jamie recalls that the project was later included in America: Now and Here's
-Kansas City program. Institutional records confirm that the multidisciplinary
-program launched in Kansas City in May 2011, but no project-specific listing has
-yet been recovered.
+A Google document created April 13, 2011 is titled `NTER CHNG Installer` and
+opens with “Staging of install for ANH, May 2011.” It specifies installation at
+Leedy-Voulkos starting April 22 and records work across software, wall
+fabrication, projection, computers, networking, floor numbers, and the gallery
+experience. The schedule also places Jamie in preparation and installation
+logistics. It is a working plan, not a completion record.
+
+A second Google document created April 6, 2011 preserves open-ended prompts
+about an American journey, first encounters with art, and artistic identity,
+alongside dated response traces and the project's software-and-architecture
+description. That description attributes to Jamie the aim of helping visitors
+make connections beyond their existing contacts. Raw phone numbers and
+participant messages remain withheld.
+
+Claim: `CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION` - confirmed with boundary.
+
+Jamie's account that the work was later included in the Kansas City program is
+now strongly corroborated up to the installation-preparation stage. No final
+program listing, installed-view photograph, completion record, press item, or
+organizer/collaborator confirmation has yet been recovered.
 
 Claim: `CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION` - use with care; held from the
 public website.
@@ -37,6 +54,23 @@ public website.
 This source establishes the first-party description and the three names shown
 on the project surface. It does not establish the full labor division, audience,
 longevity, or exhibition connection.
+
+### Contemporaneous protected project records
+
+- `SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13`
+- `SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06`
+
+The installation plan establishes project-specific preparation for America:
+Now and Here at Leedy-Voulkos. The companion working document establishes
+participatory prompts, dated April 2011 interaction traces, and the project's
+many-to-many public-dialogue concept. Because link-level public access was not
+independently verified and the documents contain private logistics, phone
+numbers, and participant messages, the source records expose protected locators
+and public-safe summaries rather than document URLs or raw text.
+
+These records do not establish that every planned task was completed or that
+the installation opened to the public. They also do not authorize publication
+of participant data or transfer collective labor to Jamie alone.
 
 ### First-person research lead
 
@@ -85,16 +119,18 @@ Inquiry: `INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026` - partially recovered.
 
 Highest-value next evidence:
 
-- a Kansas City program, checklist, floor plan, installation record, or caption;
-- a project photograph carrying America: Now and Here context;
+- a final Kansas City program, installation-completion record, or caption;
+- an installed-view photograph carrying America: Now and Here context;
 - correspondence or records from an organizer, venue, or collaborator;
 - relevant folder-level material in the Smithsonian collection;
 - contemporaneous press that names the project in the program.
 
 ## Publication Decision
 
-The recovered site strengthens the knowledge-bank claim that Jamie co-designed
-NTER CHNG. No website change is warranted for the exhibition lead yet. Future
-public language should wait for a project-specific source and should never imply
-that the project was exhibited at the Nerman Museum unless separate evidence
+The recovered site and protected working records strengthen the knowledge-bank
+claim that Jamie co-designed NTER CHNG and support the bounded statement that
+the collaborators prepared it for a May 2011 America: Now and Here installation
+at Leedy-Voulkos. No website change is warranted yet. Future completed-exhibition
+language should wait for final-installation evidence and should never imply that
+the project was exhibited at the Nerman Museum unless separate evidence
 establishes that venue.

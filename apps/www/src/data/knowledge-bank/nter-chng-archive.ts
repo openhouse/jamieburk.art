@@ -5,12 +5,14 @@ export const nterChngArchiveIntakeItems: KnowledgeBank["intakeItems"] = [
     id: "INTAKE-2026-07-15-NTER-CHNG-ARCHIVE-AND-EXHIBITION",
     receivedAt: "2026-07-15",
     inputKind: "url",
-    summary: "A recovered first-party NTER CHNG site confirms the project's interactive-texting form and collective designer credits; Jamie's account of its later inclusion in America: Now and Here remains a bounded research lead because no project-specific program listing has been recovered.",
+    summary: "A recovered first-party site and two contemporaneous working documents establish NTER CHNG's interactive-texting form, collective credits, and preparation for a May 2011 America: Now and Here installation at Leedy-Voulkos; final installation completion remains to be corroborated.",
     projectIds: ["creative-technology-and-media"],
     researchStatus: "needs-more-research",
     publicationStatus: "knowledge-bank-only",
     sourceIds: [
       "SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011",
+      "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+      "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
       "SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15",
       "SRC-AMERICA-NOW-HERE-NERMAN-2011",
       "SRC-AMERICA-NOW-HERE-SMITHSONIAN-RECORDS",
@@ -18,6 +20,10 @@ export const nterChngArchiveIntakeItems: KnowledgeBank["intakeItems"] = [
     ],
     observationIds: [
       "OBS-NTER-CHNG-OFFICIAL-SITE-DESCRIPTION-CREDITS",
+      "OBS-NTER-CHNG-ANH-INSTALLATION-PREPARATION",
+      "OBS-NTER-CHNG-ANH-PARTICIPATORY-PROMPTS",
+      "OBS-NTER-CHNG-JAMIE-PARTICIPATORY-INTENT",
+      "OBS-NTER-CHNG-ANH-JAMIE-LOGISTICS",
       "OBS-NTER-CHNG-AMERICA-NOW-HERE-ACCOUNT",
       "OBS-AMERICA-NOW-HERE-KANSAS-CITY-CONTEXT",
       "OBS-AMERICA-NOW-HERE-SMITHSONIAN-SCOPE",
@@ -25,15 +31,16 @@ export const nterChngArchiveIntakeItems: KnowledgeBank["intakeItems"] = [
     ],
     claimIds: [
       "CLM-NTER-CHNG-INTERACTIVE-INSTALLATION",
+      "CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION",
       "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"
     ],
     researchInquiryIds: [
       "INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026"
     ],
     nextActions: [
-      "Seek a program, checklist, installation record, press item, photograph, organizer archive, or collaborator account that names NTER CHNG within America: Now and Here's Kansas City program.",
+      "Seek a final program, installed-view photograph, completion record, press item, organizer archive, or collaborator account confirming that the planned Leedy-Voulkos installation opened to the public.",
       "Review relevant folder-level material in the Smithsonian Archives of American Art collection if access and permissions permit.",
-      "Keep the exhibition connection out of the public website until project-specific evidence is recovered."
+      "Keep completed-exhibition language out of the public website until final-installation evidence is recovered."
     ]
   }
 ];
@@ -64,6 +71,57 @@ export const nterChngArchiveSources: KnowledgeBank["sources"] = [
       "attendance, message volume, or long-term deployment",
       "inclusion in America: Now and Here"
     ]
+  },
+  {
+    id: "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+    title: "NTER CHNG Installer",
+    organization: "NTER CHNG",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "Google document created April 13, 2011; reviewed July 15, 2026",
+    publicCitation: "NTER CHNG collaborators, protected America: Now and Here installation-planning document, April 2011; reviewed July 15, 2026.",
+    publicNote: "Contemporaneous working plan for staging NTER CHNG for America: Now and Here at Leedy-Voulkos, including fabrication, software, projection, computing, networking, and gallery-installation tasks.",
+    supportsGenerally: [
+      "preparation for an America: Now and Here installation in May 2011",
+      "Leedy-Voulkos as the planned installation venue",
+      "software revision, wall fabrication, projection, computer, network, floor-number, and gallery-experience work",
+      "Jamie's presence in the preparation and installation schedule"
+    ],
+    doesNotEstablish: [
+      "that every planned task was completed",
+      "that the installation opened to the public",
+      "that NTER CHNG was exhibited at the Nerman Museum",
+      "Jamie's sole authorship or responsibility for every listed task",
+      "permission to publish private logistics or collaborator details"
+    ],
+    protectedLocatorId: "LOC-GDRIVE-NTER-CHNG-INSTALLER-2011-04-13"
+  },
+  {
+    id: "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
+    title: "inerchng 2011",
+    organization: "NTER CHNG",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "Google document created April 6, 2011; reviewed July 15, 2026",
+    publicCitation: "NTER CHNG collaborators, protected participatory-content and project-description working document, April 2011; reviewed July 15, 2026.",
+    publicNote: "Contemporaneous working document preserving participatory prompts and message traces alongside the project's January 2010 exhibit description and collective credits.",
+    supportsGenerally: [
+      "open-ended participant prompts about journey, art, and artistic identity",
+      "dated April 2011 message traces showing the prompt-and-response interaction in use",
+      "the project's software, architectural, and many-to-many public-dialogue concept",
+      "Drew Bolton, Jamie Burkart, and Garrett Fuselier as collaborators",
+      "the project description's attribution to Jamie of an intent to help gallery visitors make connections beyond their existing contacts"
+    ],
+    doesNotEstablish: [
+      "consent to publish participant phone numbers or message text",
+      "the identities of message participants",
+      "a complete or representative message corpus",
+      "that the planned 2011 installation opened to the public",
+      "the complete division of labor among collaborators"
+    ],
+    protectedLocatorId: "LOC-GDRIVE-NTER-CHNG-WORKING-DOCUMENT-2011-04-06"
   },
   {
     id: "SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15",
@@ -181,6 +239,68 @@ export const nterChngArchiveObservations: KnowledgeBank["observations"] = [
     reviewedBy: ["Codex Wayback source review"]
   },
   {
+    id: "OBS-NTER-CHNG-ANH-INSTALLATION-PREPARATION",
+    sourceId: "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+    project: "creative-technology-and-media",
+    text: "A contemporaneous plan labels the work 'Staging of install for ANH, May 2011,' specifies installation at Leedy-Voulkos starting April 22, and records software, wall, projection, computer, network, floor-number, and gallery-experience work.",
+    locator: "Title, staging heading, software-change list, preparation schedule, and Leedy-Voulkos installation checklist",
+    status: "verified",
+    confidence: "high",
+    claimIds: [
+      "CLM-NTER-CHNG-INTERACTIVE-INSTALLATION",
+      "CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION",
+      "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"
+    ],
+    researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-document review"]
+  },
+  {
+    id: "OBS-NTER-CHNG-ANH-PARTICIPATORY-PROMPTS",
+    sourceId: "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
+    project: "creative-technology-and-media",
+    text: "An April 2011 working document preserves open-ended prompts about an American journey, first encounters with art, and artistic identity, with timestamped response traces; its project description frames NTER CHNG as a software-and-architectural environment that turns one-to-one texting into many-to-many public dialogue.",
+    locator: "April 5-6 prompt-and-response sections and January 2010 exhibit information",
+    status: "verified",
+    confidence: "high",
+    claimIds: [
+      "CLM-NTER-CHNG-INTERACTIVE-INSTALLATION",
+      "CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION"
+    ],
+    researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-document review"]
+  },
+  {
+    id: "OBS-NTER-CHNG-ANH-JAMIE-LOGISTICS",
+    sourceId: "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+    project: "creative-technology-and-media",
+    text: "The installation schedule records Jamie arriving April 20, preparation in Jamie's mother's garage, an installation period beginning April 22, and a planned interview with all three collaborators and the wall before Jamie's May 5 departure.",
+    locator: "Preparation, installation, and post-install schedule",
+    status: "verified",
+    confidence: "high",
+    claimIds: ["CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION"],
+    researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-document review"]
+  },
+  {
+    id: "OBS-NTER-CHNG-JAMIE-PARTICIPATORY-INTENT",
+    sourceId: "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
+    project: "creative-technology-and-media",
+    text: "The preserved project description attributes to Jamie an intention to help gallery visitors make new connections by reaching beyond their existing address books and buddy lists.",
+    locator: "January 2010 exhibit information, quotation attributed to Jamie Burkart",
+    status: "verified",
+    confidence: "high",
+    claimIds: [
+      "CLM-NTER-CHNG-INTERACTIVE-INSTALLATION",
+      "CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION"
+    ],
+    researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-document review"]
+  },
+  {
     id: "OBS-NTER-CHNG-AMERICA-NOW-HERE-ACCOUNT",
     sourceId: "SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15",
     project: "creative-technology-and-media",
@@ -236,20 +356,99 @@ export const nterChngArchiveObservations: KnowledgeBank["observations"] = [
 
 export const nterChngArchiveClaims: KnowledgeBank["claims"] = [
   {
+    id: "CLM-NTER-CHNG-ANH-INSTALLATION-PREPARATION",
+    project: "creative-technology-and-media",
+    internalClaim: "Contemporaneous first-party records show NTER CHNG's collaborators preparing a May 2011 America: Now and Here installation at Leedy-Voulkos, including software revision, wall fabrication, projection, computing, networking, floor-number, and gallery-experience work; the recovered records document staging and planned installation, not final completion.",
+    status: "confirmed-with-boundary",
+    projections: [
+      {
+        key: "archive-note",
+        text: "In April 2011, NTER CHNG's collaborators prepared the interactive installation for a May America: Now and Here presentation at Leedy-Voulkos, revisiting its software and rebuilding its physical, projection, and computing systems.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/creative-technology-and-media"]
+      }
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+        relationship: "direct-support",
+        supports: [
+          "America: Now and Here installation preparation",
+          "May 2011 timing",
+          "Leedy-Voulkos venue plan",
+          "software, fabrication, projection, computing, networking, and gallery-installation work",
+          "Jamie's scheduled participation"
+        ],
+        locator: "Staging, preparation, installation, and post-install sections",
+        publicNote: "Contemporaneous installation-planning record.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
+        relationship: "corroborating",
+        supports: [
+          "April 2011 project activity",
+          "participant prompts",
+          "message-response traces",
+          "software-and-architectural interaction concept"
+        ],
+        locator: "April 5-6 prompts and January 2010 exhibit information",
+        publicNote: "Contemporaneous participatory-content working record.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "Use 'prepared' or 'staged for installation'; the recovered records do not establish that the installation opened to the public.",
+      "Do not infer that NTER CHNG was shown at the Nerman Museum; the plan names Leedy-Voulkos.",
+      "Preserve collective credit and do not assign every task in the shared plan to Jamie.",
+      "Do not expose participant phone numbers, message text, or private logistics from the working documents."
+    ],
+    antiClaims: [
+      "The recovered documents prove that the America: Now and Here installation was completed.",
+      "NTER CHNG was exhibited at the Nerman Museum.",
+      "Jamie solely designed, programmed, fabricated, and installed NTER CHNG.",
+      "The archived participant messages are cleared for publication."
+    ],
+    researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026"],
+    reviewedAt: "2026-07-15",
+    reviewedBy: ["Codex protected-document review"]
+  },
+  {
     id: "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
     project: "creative-technology-and-media",
-    internalClaim: "Jamie recalls that NTER CHNG was later included in America: Now and Here's 2011 Kansas City program. Institutional records confirm the program context, but no project-specific program listing has been recovered.",
+    internalClaim: "Jamie recalls that NTER CHNG was included in America: Now and Here's 2011 Kansas City program. A contemporaneous project plan now directly establishes preparation for an ANH installation at Leedy-Voulkos, while final completion or public presentation remains to be corroborated.",
     status: "use-with-care",
     projections: [
       {
         key: "archive-note",
-        text: "Jamie recalls NTER CHNG's inclusion in America: Now and Here's 2011 Kansas City program; project-specific program documentation remains to be recovered.",
+        text: "A contemporaneous project plan documents preparation for an America: Now and Here installation at Leedy-Voulkos; final completion or public presentation remains to be corroborated.",
         status: "hold",
         citationRequired: true,
         surfaces: ["docs/knowledge-bank/projects/creative-technology-and-media"]
       }
     ],
     evidence: [
+      {
+        sourceId: "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+        relationship: "direct-support",
+        supports: ["project-specific ANH installation preparation", "May 2011 timing", "planned Leedy-Voulkos venue"],
+        locator: "Staging and installation headings",
+        publicNote: "Contemporaneous installation-planning record.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
+        relationship: "corroborating",
+        supports: ["April 2011 project activity", "America-themed participatory prompt", "collective project description"],
+        locator: "April 5-6 prompts and January 2010 exhibit information",
+        publicNote: "Contemporaneous participatory-content working record.",
+        confidence: "high",
+        renderCitation: false
+      },
       {
         sourceId: "SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15",
         relationship: "private-support",
@@ -289,13 +488,14 @@ export const nterChngArchiveClaims: KnowledgeBank["claims"] = [
       }
     ],
     boundaries: [
-      "Attribute the inclusion statement to Jamie's first-person account until a project-specific program or collaborator source is recovered.",
+      "The contemporaneous project record establishes preparation for an ANH installation, not completion or public presentation.",
       "The Nerman Museum page establishes program context and a Barbara Kruger event, not an NTER CHNG presentation at the museum.",
       "A failed exact-term recovery is not evidence that the project was absent from the program.",
       "Keep this claim out of active website surfaces while the inclusion record remains unrecovered."
     ],
     antiClaims: [
       "NTER CHNG was exhibited at the Nerman Museum.",
+      "The recovered installation plan proves the work opened to the public.",
       "The recovered America: Now and Here website lists NTER CHNG.",
       "The Smithsonian finding aid identifies NTER CHNG.",
       "The Wayback review proves NTER CHNG was not included in America: Now and Here."
@@ -310,9 +510,10 @@ export const nterChngArchiveResearchInquiries: KnowledgeBank["researchInquiries"
   {
     id: "INQ-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2026",
     project: "creative-technology-and-media",
-    question: "What project-specific record establishes NTER CHNG's inclusion, venue, date, and presentation context within America: Now and Here's 2011 Kansas City program?",
+    question: "What final record establishes that NTER CHNG's planned May 2011 America: Now and Here installation at Leedy-Voulkos was completed and presented to the public?",
     methods: [
       "Recover and review the first-party NTER CHNG site and its creator credits.",
+      "Review the two surfaced April 2011 Google Docs as protected, contemporaneous working records while withholding participant phone numbers, message text, and private logistics.",
       "Review the Nerman Museum page and Smithsonian Archives of American Art collection description and finding aid for institutional program context.",
       "Enumerate distinct 2011 HTML captures from AmericanNowAndHere.org, replay every recoverable normalized page, and search exact project-name variants and collaborator names.",
       "Preserve 'not recovered' separately from 'did not exist' and route future program, image, organizer, and collaborator evidence back to this inquiry."
@@ -321,6 +522,8 @@ export const nterChngArchiveResearchInquiries: KnowledgeBank["researchInquiries"
     resultStatus: "partially-recovered",
     findings: [
       "The NTER CHNG site was recovered and independently confirms the project's description and three named creators.",
+      "A project-specific document created April 13, 2011 labels the work 'Staging of install for ANH, May 2011,' specifies Leedy-Voulkos, and records software, fabrication, projection, computing, networking, and gallery-installation preparation.",
+      "A second project document created April 6, 2011 preserves America-themed and art-focused participatory prompts, dated response traces, and the project's software-and-architectural description.",
       "The Nerman Museum and Smithsonian records confirm America: Now and Here's May 2011 Kansas City context and multidisciplinary scope.",
       "The official exhibition domain AmericanNowAndHere.org was identified and its 2011 Wayback captures were enumerated.",
       "No exact project-name or collaborator-name reference was recovered from 205 replayable 2011 official-site HTML pages."
@@ -329,15 +532,17 @@ export const nterChngArchiveResearchInquiries: KnowledgeBank["researchInquiries"
       "Wayback capture and replay coverage is incomplete by design.",
       "Non-HTML, image-based, private, or uncaptured records may contain project-specific evidence.",
       "The public Smithsonian finding aid describes most materials at folder or series level and does not expose every document's contents.",
-      "No project-specific program, checklist, installation record, photograph, press item, organizer record, or collaborator confirmation has yet been recovered."
+      "The recovered documents are working plans rather than a final program, installed-view photograph, completion record, press item, organizer record, or collaborator confirmation."
     ],
     sourceIds: [
       "SRC-NTER-CHNG-OFFICIAL-SITE-WAYBACK-2011",
+      "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
+      "SRC-NTER-CHNG-ANH-WORKING-DOCUMENT-2011-04-06",
       "SRC-NTER-CHNG-JAMIE-EXHIBITION-ACCOUNT-2026-07-15",
       "SRC-AMERICA-NOW-HERE-NERMAN-2011",
       "SRC-AMERICA-NOW-HERE-SMITHSONIAN-RECORDS",
       "SRC-AMERICA-NOW-HERE-WAYBACK-RESEARCH-2026"
     ],
-    publicSummary: "NTER CHNG's first-party site and America: Now and Here's institutional program context are recovered. Jamie's account of the connection is preserved, but a project-specific exhibition record remains to be found."
+    publicSummary: "Contemporaneous project records now establish that NTER CHNG was prepared for a May 2011 America: Now and Here installation at Leedy-Voulkos. A final record confirming completion and public presentation remains to be found."
   }
 ];
