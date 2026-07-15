@@ -20,6 +20,7 @@ import { kcTownHallPhaseOneBatchRecords } from "./kc-town-hall-phase-one-batch-2
 import { jamiePersonalFacebookPostsBatch } from "./jamie-personal-facebook-posts-batch-2026-07-15.ts";
 import { teamsArchiveDeepeningBatch } from "./teams-archive-deepening-batch-2026-07-15.ts";
 import { nycaInstitutionalValueBatch } from "./nyca-institutional-value-batch-2026-07-15.ts";
+import { wowlistSundayDinnerCallscriptBatch } from "./wowlist-sunday-dinner-callscript-batch-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -603,7 +604,8 @@ const knowledgeBankInput = {
     ...kcTownHallPhaseOneBatchRecords.intakeRecords,
     ...jamiePersonalFacebookPostsBatch.intakeRecords,
     ...teamsArchiveDeepeningBatch.intakeRecords,
-    ...nycaInstitutionalValueBatch.intakeRecords
+    ...nycaInstitutionalValueBatch.intakeRecords,
+    ...wowlistSundayDinnerCallscriptBatch.intakeRecords
   ],
   sources: [
     {
@@ -1687,7 +1689,8 @@ const knowledgeBankInput = {
     ...kcTownHallPhaseOneBatchRecords.sources,
     ...jamiePersonalFacebookPostsBatch.sources,
     ...teamsArchiveDeepeningBatch.sources,
-    ...nycaInstitutionalValueBatch.sources
+    ...nycaInstitutionalValueBatch.sources,
+    ...wowlistSundayDinnerCallscriptBatch.sources
   ],
   claims: [
     {
@@ -2294,7 +2297,8 @@ const knowledgeBankInput = {
     ...kcTownHallPhaseOneBatchRecords.claims,
     ...jamiePersonalFacebookPostsBatch.claims,
     ...teamsArchiveDeepeningBatch.claims,
-    ...nycaInstitutionalValueBatch.claims
+    ...nycaInstitutionalValueBatch.claims,
+    ...wowlistSundayDinnerCallscriptBatch.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
@@ -2308,6 +2312,7 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsBatch.researchInquiries,
     ...teamsArchiveDeepeningBatch.researchInquiries,
     ...nycaInstitutionalValueBatch.researchInquiries,
+    ...wowlistSundayDinnerCallscriptBatch.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",
@@ -2398,12 +2403,12 @@ const knowledgeBankInput = {
       id: "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE",
       project: "nyc-artist-coalition",
       question: "Which specific founding, convening, research, web, operations, testimony, and campaign contributions establish Jamie's instrumental role in NYC Artist Coalition?",
-      methods: ["Close-read supplied and discovered public reporting.", "Use the official Council hearing transcript to establish direct testimony.", "Separate public evidence of Jamie's actions from collective coalition history and Jamie's broader recollection."],
+      methods: ["Close-read supplied and discovered public reporting.", "Use the official Council hearing transcript to establish direct testimony.", "Review the public Call Script page and January 27, 2017 event discussion for participatory naming and collaborative advocacy mechanisms.", "Separate public evidence of Jamie's actions from collective coalition history and Jamie's broader recollection."],
       runAt: "2026-07-13",
       resultStatus: "partially-recovered",
-      findings: ["Public sources directly establish Jamie's fire-code study groups, City Hall rallying, multiple public statements, and Council testimony as a coalition member.", "Public reporting identifies Jamie among coalition speakers at an Office of Nightlife town hall and documents his 2018 commercial-rent testimony.", "Public reporting establishes the coalition's January 2017 formation and early advocacy priorities without assigning individual founding roles.", "The existing proof register records co-founder and web-infrastructure claims, but a complete source-linked founding and responsibility map remains open."],
+      findings: ["Public sources directly establish Jamie's fire-code study groups, City Hall rallying, multiple public statements, and Council testimony as a coalition member.", "Public reporting identifies Jamie among coalition speakers at an Office of Nightlife town hall and documents his 2018 commercial-rent testimony.", "Call Script's January 2017 event discussion documents participatory group naming and collaborative letter editing/sign-on during the coalition's emergence.", "The project sequence connects WOW List's popular.vote surface, Call Script, and NYC Artist Coalition events; Jamie's individual facilitation of that bridge remains mixed evidence.", "Public reporting establishes the coalition's January 2017 formation and early advocacy priorities without assigning individual founding roles.", "The existing proof register records co-founder and web-infrastructure claims, but a complete source-linked founding and responsibility map remains open."],
       limitations: ["The reviewed public sources do not identify every founder or assign complete responsibility.", "Website authorship does not by itself establish coalition leadership.", "Collaborator confirmation and contemporaneous project records remain necessary for the strongest role claim."],
-      sourceIds: ["SRC-GOTHAMIST-CABARET-LAW-2017-06-19", "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19", "SRC-VICE-NYCA-DIY-SPACES-2017-03-21", "SRC-GREENE-HILL-QA-2017-12-19", "SRC-MIXMAG-LET-NYC-DANCE-2017-09-20", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017-10-12", "SRC-NYC-COUNCIL-SBJSA-HEARING-2018-10-22"],
+      sourceIds: ["SRC-GOTHAMIST-CABARET-LAW-2017-06-19", "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19", "SRC-VICE-NYCA-DIY-SPACES-2017-03-21", "SRC-GREENE-HILL-QA-2017-12-19", "SRC-MIXMAG-LET-NYC-DANCE-2017-09-20", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017-10-12", "SRC-NYC-COUNCIL-SBJSA-HEARING-2018-10-22", "SRC-CALLSCRIPT-PUBLIC-PAGE-2026", "SRC-CALLSCRIPT-DCLA-EVENT-2017-01-27", "SRC-CALLSCRIPT-NYCA-NAMING-POLL-2017-01-27", "SRC-CALLSCRIPT-DCLA-LETTER-PROMPT-2017-01-27", "SRC-CALLSCRIPT-CURRENT-ADMIN-CONTROL-2026"],
       publicSummary: "Public sources establish a growing set of Jamie's direct organizing, speaking, and testimony actions; research remains open on the coalition's complete founding and responsibility map."
     },
     {
@@ -2434,13 +2439,13 @@ const knowledgeBankInput = {
       id: "INQ-PUBLIC-SITE-SOURCE-COVERAGE",
       project: "portfolio-source-coverage",
       question: "Which consequential public portfolio claims still rely on prose source-basis labels rather than canonical source, evidence, claim, and citation relationships?",
-      methods: ["Compared the structured proof register with the canonical citation Knowledge Bank.", "Confirmed reciprocal canonical links for CallNYC, Sunday Dinner, NYC Artist Coalition, commercial-rent testimony, KC Town Hall, the CRS provenance redline, and AI Evals course completion.", "Prioritized remaining metric-bearing, causal, role, and institutional claims for future source decomposition."],
+      methods: ["Compared the structured proof register with the canonical citation Knowledge Bank.", "Confirmed reciprocal canonical links for CallNYC, Sunday Dinner, WOW List, NYC Artist Coalition, commercial-rent testimony, KC Town Hall, the CRS provenance redline, and AI Evals course completion.", "Prioritized remaining metric-bearing, causal, role, and institutional claims for future source decomposition."],
       runAt: "2026-07-15",
       resultStatus: "partially-recovered",
-      findings: ["CallNYC has canonical source and claim relationships for its core project and member-account engagement claims.", "New sources corroborate Sunday Dinner's weekly public format and hundredth-iteration floor, Jamie's 2017-2018 public coalition advocacy, and the complete public KC Town Hall award lifecycle.", "A protected 2026 artifact now supports Jamie's preparer role and method for the CRS legislative provenance redline without making the artifact public or implying legal authorship.", "A public-safe completion certificate now directly supports the AI Evals course-completion claim while leaving its date and curriculum to separate approved records.", "The broader proof register still contains public claims whose source basis is descriptive rather than linked to canonical source IDs.", "Priority source-wiring targets include the HJE growth contribution, WOWList scale, Sunday Dinner and 196 aggregate scale, and NYC Artist Coalition co-founder and web-authorship claims."],
+      findings: ["CallNYC has canonical source and claim relationships for its core project and member-account engagement claims.", "A protected WOW List production snapshot now supports the rounded 1,800-plus-user, 16,000-plus-post/event, and roughly 35-city-ecosystem language.", "A protected Sunday Dinner workbook now supports a 345-entry operating record while explicitly withholding person-level records and attendance-census claims.", "Call Script public records add canonical support for participatory naming and collaborative letter drafting during NYC Artist Coalition's emergence while keeping Jamie's individual bridge role partly first-person.", "New sources also corroborate Sunday Dinner's weekly public format and hundredth-iteration floor, Jamie's 2017-2018 public coalition advocacy, and the complete public KC Town Hall award lifecycle.", "A protected 2026 artifact supports Jamie's preparer role and method for the CRS legislative provenance redline without making the artifact public or implying legal authorship.", "A public-safe completion certificate directly supports the AI Evals course-completion claim while leaving its date and curriculum to separate approved records.", "The broader proof register still contains public claims whose source basis is descriptive rather than linked to canonical source IDs.", "Priority source-wiring targets now include the HJE growth contribution, 196 resident-artist aggregate, and NYC Artist Coalition co-founder and web-authorship claims."],
       limitations: ["A missing canonical source relationship does not mean the underlying claim is false.", "Some proof claims rely on approved resume or public-safe archive summaries that require careful public-source substitution or protected evidence boundaries.", "This pass did not attempt to research and wire every existing portfolio claim."],
-      sourceIds: ["SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", "SRC-SUNDAY-DINNER-HUNDREDTH-PROJECT-PAGE", "SRC-MAVEN-AI-EVALS-COMPLETION-CERTIFICATE"],
-      publicSummary: "CallNYC remains the first fully rendered citation pilot; canonical source coverage now also reaches Sunday Dinner, multiple NYC Artist Coalition actions, the CRS provenance-redline method, AI Evals course completion, and the KC Town Hall public-award lifecycle, with a standing backlog for remaining consequential claims."
+      sourceIds: ["SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", "SRC-SUNDAY-DINNER-HUNDREDTH-PROJECT-PAGE", "SRC-MAVEN-AI-EVALS-COMPLETION-CERTIFICATE", "SRC-WOWLIST-PRODUCTION-SNAPSHOT-2017-07-22", "SRC-SUNDAY-DINNER-OPERATING-WORKBOOK-2012-2021", "SRC-CALLSCRIPT-NYCA-NAMING-POLL-2017-01-27", "SRC-CALLSCRIPT-DCLA-LETTER-PROMPT-2017-01-27"],
+      publicSummary: "CallNYC remains the first fully rendered citation pilot; canonical source coverage now also reaches WOW List production scale, Sunday Dinner's 300-plus operating record, multiple NYC Artist Coalition actions, the CRS provenance-redline method, AI Evals course completion, and the KC Town Hall public-award lifecycle, with a standing backlog for remaining consequential claims."
     },
     {
       id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",

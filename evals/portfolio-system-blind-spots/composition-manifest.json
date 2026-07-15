@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewedAt": "2026-07-15",
-  "publicSurfaceSha256": "b9e003586af27644c90b2916ca68821b1d431b6b6477e90a2df9ae0a0a091e04",
+  "publicSurfaceSha256": "a79d74eb0af9f47608a5213f2db383ad2c0aa74d010453bf687f11fe3555a943",
   "claimUnitDefinition": "One distinct role, result, capability, uncertainty, transformation, or transferable-method proposition rendered as prose. A full WorkCard contributes five claim units; a compact homepage WorkCard contributes the rendered subtitle and summary only. Navigation labels, headings, status labels, tags, citations, and repeated CTA labels are not separate claim units.",
   "pages": [
     {

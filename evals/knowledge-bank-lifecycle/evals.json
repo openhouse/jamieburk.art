@@ -171,6 +171,18 @@
       "task": "Official records show a community coalition contributing knowledge and participation to public planning and legislation, while a role-memory question asks why named officials needed the coalition.",
       "mustDo": ["separate explicit source statements from institutional inference", "identify the complementary capacities supplied by community and government actors", "preserve public-authority and collective-causality credit", "state when an earlier source does not name the coalition and a later source supplies the identification", "keep coalition-level value distinct from Jamie's individual responsibility map"],
       "mustNotDo": ["present literal dependency as an official quotation", "invent a named official's private motive", "claim commissioning, endorsement, bill authorship, recommendation adoption, or sole causality", "assign collective intermediary work entirely to Jamie"]
+    },
+    {
+      "id": "protected-operational-population-with-public-aggregate",
+      "task": "A protected production database or attendance workbook can support an aggregate public claim but contains private people, account, location, or participation records.",
+      "mustDo": ["retain only governed aggregate findings", "state the snapshot or working-record boundary", "define the counted unit and denominator", "keep raw records and locators protected", "separate operational scale from current activity, lifetime totals, attendance, and impact"],
+      "mustNotDo": ["publish row-level data", "turn interaction marks into unique people", "turn geography labels into official chapters", "treat a stale working formula as reconciled truth", "infer current or lifetime scale from one snapshot"]
+    },
+    {
+      "id": "cross-project-sequence-with-attributed-role",
+      "task": "Public project records support a sequence across two systems while Jamie supplies the interpretation that his facilitation connected them.",
+      "mustDo": ["store the project sequence separately from the individual role proposition", "attribute first-person role language", "use current account custody only for current custody", "preserve shared-account and collective-formation boundaries", "name the collaborator or contemporaneous evidence needed to mature the role"],
+      "mustNotDo": ["turn sequence into sole causality", "use current admin access as historic authorship proof", "assign every shared-account post to Jamie", "claim one poll legally founded a coalition", "erase Jamie's bounded role memory"]
     }
   ],
   "judgeProtocol": {

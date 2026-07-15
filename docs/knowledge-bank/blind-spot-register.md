@@ -30,7 +30,7 @@ response transcripts.
 
 ## 2. Inquiry Closure
 
-**Current signal:** 25 of 31 structured research inquiries are partially
+**Current signal:** 26 of 32 structured research inquiries are partially
 recovered; one is recovered. Partial status is often correct, but it can become
 an indefinite resting place.
 
@@ -70,7 +70,7 @@ contemporaneous role artifacts, not a broad testimonial campaign.
 
 ## 4. Countability And Platform Bias
 
-**Current signal:** The bank has 220 sources across public records, reporting,
+**Current signal:** The bank has 228 sources across public records, reporting,
 project archives, web pages, social posts, and research runs. Source-class
 diversity is healthy, but recent archival effort has favored surfaces that can
 be enumerated. Trace volume does not measure importance, effort, or impact.
@@ -86,7 +86,7 @@ otherwise invisible operating work.
 
 ## 5. Composition And Argument
 
-**Current signal:** The graph contains 95 claims, including 60 active and 37
+**Current signal:** The graph contains 100 claims, including 60 active and 42
 held projections. A mature claim is not automatically a selected claim.
 
 **Control:** Every public route or route template has an audience, reader

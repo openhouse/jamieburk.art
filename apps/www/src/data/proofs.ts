@@ -359,7 +359,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Jamie reports co-founding NYC Artist Coalition and building campaign sites",
     detailedPublicWording:
       "Jamie describes his role as co-founder of NYC Artist Coalition and builder of campaign websites for the coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance. The surviving sites corroborate the public infrastructure, while the complete founding and responsibility map remains under research. Campaign decisions and accomplishments remained collective.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis: "Approved resume language, Jamie confirmation, public campaign websites, and a public Call Script event discussion that connects participatory naming and collaborative letter drafting to the coalition's emergence.",
+    sourceNote:
+      "Call Script and the surviving campaign sites corroborate public infrastructure and sequence. Jamie's co-founder, account-establishment, and web-builder roles remain attributed to his account until a complete responsibility map is recovered.",
     whyItMatters:
       "Makes Jamie's first-person co-founder and web-builder account visible without presenting project custody as complete independent role corroboration or overstating collective campaign accomplishments.",
     guardrail:
@@ -382,7 +384,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-13"
+    structuredClaimIds: ["CLM-CALLSCRIPT-WOWLIST-NYCA-BRIDGE"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyca-campaign-press-architecture",
@@ -463,7 +466,8 @@ export const proofClaims: ProofClaim[] = [
       "CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019",
       "CLM-NYCA-DCLA-ENGAGEMENT-OUTCOME-2017",
       "CLM-NYCA-CIVIC-INTERMEDIARY-VALUE",
-      "CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY"
+      "CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY",
+      "CLM-CALLSCRIPT-PARTICIPATORY-NAMING-AND-LETTER"
     ],
     lastReviewed: "2026-07-15"
   },
@@ -515,7 +519,9 @@ export const proofClaims: ProofClaim[] = [
     ],
     structuredClaimIds: [
       "CLM-NYCAC-PARTICIPATION-SYSTEM",
-      "CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY"
+      "CLM-NYCA-COUNCIL-RECIPROCAL-CAPACITY",
+      "CLM-CALLSCRIPT-PARTICIPATORY-NAMING-AND-LETTER",
+      "CLM-CALLSCRIPT-WOWLIST-NYCA-BRIDGE"
     ],
     lastReviewed: "2026-07-15"
   },
@@ -535,9 +541,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate historical summary, and a 2015 Music Hackathon public post identifying Jamie as a co-organizer and WOW List as an event-sharing service.",
+      "Approved resume language; a protected July 2017 production snapshot; production configuration for the popular.vote community surface; and a 2015 Music Hackathon public post identifying Jamie as a co-organizer and WOW List as an event-sharing service.",
     sourceNote:
-      "The Music Hackathon post supports only the co-organizer role and event-sharing-service description. Approved resume and archive sources separately support the stack, scale, and adoption wording.",
+      "The protected snapshot directly supports 1,846 users, 16,142 post/event records, and 35 operational geography labels with at least 50 records. Public wording remains rounded; the labels are not official chapters, and the snapshot is not current or complete lifetime data.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -555,7 +561,11 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-14"
+    structuredClaimIds: [
+      "CLM-WOWLIST-2017-PRODUCTION-SNAPSHOT-SCALE",
+      "CLM-WOWLIST-POPULAR-VOTE-SURFACE"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "music-hackathon-wowlist-role",
@@ -603,9 +613,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language and public-safe aggregate project history support the scale claim; the 2017 Greene Hill profile documents weekly community dinners; a live Sunday Dinner project page and public Facebook event pages independently document a numbered hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck. The aggregate counts rely on their separate support, not on a single event page or participant workflow.",
+      "A protected operating workbook tracks 345 numbered entries from January 2012 through March 2021; approved resume language and public-safe project history support the combined Sunday Dinner and 196 framing; the Greene Hill profile, live project page, and public event pages document public examples.",
     sourceNote:
-      "The live Sunday Dinner 100 page establishes a public floor of one hundred numbered iterations and credits Julia Fredenburg's image. It does not prove the 300-plus aggregate, attendance, an exact date, sole hosting, or image-reuse rights.",
+      "The workbook supports a 300-plus numbered gathering record but is not a clean attendance census or complete lifetime archive. Its 2,715 recorded marks are not unique people or meals. The separate Sunday Dinner 100 page credits Julia Fredenburg's image and does not grant image-reuse rights.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -626,7 +636,8 @@ export const proofClaims: ProofClaim[] = [
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
     structuredClaimIds: [
       "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING",
-      "CLM-SUNDAY-DINNER-HUNDREDTH-ITERATION-TRACE"
+      "CLM-SUNDAY-DINNER-HUNDREDTH-ITERATION-TRACE",
+      "CLM-SUNDAY-DINNER-OPERATING-WORKBOOK-2012-2021"
     ],
     lastReviewed: "2026-07-15"
   },
