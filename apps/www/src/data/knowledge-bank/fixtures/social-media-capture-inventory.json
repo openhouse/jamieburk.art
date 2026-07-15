@@ -1800,7 +1800,7 @@
     },
     "wowListProfileTimeline": {
       "profileReportedPostCount": 38,
-      "recoveredRecordCount": 37,
+      "recoveredRecordCount": 38,
       "records": [
         {
           "url": "https://x.com/goshwizard/status/819663088634851328",
@@ -1872,19 +1872,19 @@
           "url": "https://x.com/wowlist/status/771457416298921985",
           "publishedAt": "2016-09-01T21:19:15.000Z",
           "authorHandle": "@wowlist",
-          "recordType": "original"
+          "recordType": "reply"
         },
         {
           "url": "https://x.com/wowlist/status/771455571501416448",
           "publishedAt": "2016-09-01T21:11:55.000Z",
           "authorHandle": "@wowlist",
-          "recordType": "original"
+          "recordType": "reply"
         },
         {
           "url": "https://x.com/wowlist/status/771412862191407104",
           "publishedAt": "2016-09-01T18:22:13.000Z",
           "authorHandle": "@wowlist",
-          "recordType": "original"
+          "recordType": "reply"
         },
         {
           "url": "https://x.com/wowlist/status/751150062458269696",
@@ -1897,6 +1897,12 @@
           "publishedAt": "2016-07-02T23:04:01.000Z",
           "authorHandle": "@rchrd2",
           "recordType": "repost"
+        },
+        {
+          "url": "https://x.com/wowlist/status/665520472461860864",
+          "publishedAt": "2015-11-14T13:23:40.000Z",
+          "authorHandle": "@wowlist",
+          "recordType": "original"
         },
         {
           "url": "https://x.com/cotfg/status/663732869357965313",
@@ -1929,12 +1935,6 @@
           "recordType": "repost"
         },
         {
-          "url": "https://x.com/zachfromiji/status/592787353925726208",
-          "publishedAt": "2015-04-27T20:28:13.000Z",
-          "authorHandle": "@zachfromiji",
-          "recordType": "repost"
-        },
-        {
           "url": "https://x.com/wowlist/status/598530404669358080",
           "publishedAt": "2015-05-13T16:49:03.000Z",
           "authorHandle": "@wowlist",
@@ -1959,6 +1959,12 @@
           "recordType": "original"
         },
         {
+          "url": "https://x.com/zachfromiji/status/592787353925726208",
+          "publishedAt": "2015-04-27T20:28:13.000Z",
+          "authorHandle": "@zachfromiji",
+          "recordType": "repost"
+        },
+        {
           "url": "https://x.com/urbanhermit/status/592718356018556928",
           "publishedAt": "2015-04-27T15:54:02.000Z",
           "authorHandle": "@urbanhermit",
@@ -1980,19 +1986,19 @@
           "url": "https://x.com/wowlist/status/591668857670148096",
           "publishedAt": "2015-04-24T18:23:43.000Z",
           "authorHandle": "@wowlist",
-          "recordType": "original"
+          "recordType": "reply"
         },
         {
           "url": "https://x.com/wowlist/status/591666366215811073",
           "publishedAt": "2015-04-24T18:13:48.000Z",
           "authorHandle": "@wowlist",
-          "recordType": "original"
+          "recordType": "reply"
         },
         {
           "url": "https://x.com/wowlist/status/591664757473673216",
           "publishedAt": "2015-04-24T18:07:25.000Z",
           "authorHandle": "@wowlist",
-          "recordType": "original"
+          "recordType": "reply"
         },
         {
           "url": "https://x.com/wowlist/status/590961074326917122",
@@ -2007,12 +2013,6 @@
           "recordType": "original"
         },
         {
-          "url": "https://x.com/all_ages/status/433628764493606913",
-          "publishedAt": "2014-02-12T15:48:48.000Z",
-          "authorHandle": "@all_ages",
-          "recordType": "repost"
-        },
-        {
           "url": "https://x.com/wowlist/status/587713396486856704",
           "publishedAt": "2015-04-13T20:26:07.000Z",
           "authorHandle": "@wowlist",
@@ -2023,6 +2023,12 @@
           "publishedAt": "2014-02-12T18:39:08.000Z",
           "authorHandle": "@wowlist",
           "recordType": "original"
+        },
+        {
+          "url": "https://x.com/all_ages/status/433628764493606913",
+          "publishedAt": "2014-02-12T15:48:48.000Z",
+          "authorHandle": "@all_ages",
+          "recordType": "repost"
         }
       ]
     },
@@ -2065,9 +2071,9 @@
     }
   },
   "limitations": [
+    "All 38 posts reported on the WOW List profile materialized across the authenticated Posts and Replies timelines; the separate incoming-mention search remains bounded.",
     "X search cannot recover every deleted post, private interaction, native repost, or like.",
     "The NYC Artist Coalition incoming-mention inventory is bounded to 2017-2020.",
-    "One of the 38 posts reported on the WOW List profile did not materialize in the recovered timeline.",
     "The full @CallNYCApp population review recovered 107 of the profile's reported 110 posts; three records did not materialize."
   ]
 }

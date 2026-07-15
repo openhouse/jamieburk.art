@@ -1,0 +1,1107 @@
+{
+  "generatedAt": "2026-07-14",
+  "account": "@wowlist",
+  "publicSafety": "Public status URLs, dates, author handles, record types, posted-link metadata, and dated aggregate counts only; post text, cookies, private account state, and session data are excluded.",
+  "populationReconciliation": {
+    "profileReportedPostCount": 38,
+    "postsTimelineUniqueCount": 37,
+    "repliesTimelineUniqueCount": 38,
+    "recoveredUnionRecordCount": 38,
+    "recoveredPopulationReviewedPercent": 100,
+    "profileCountNotMaterialized": 0,
+    "dateRange": {
+      "earliest": "2014-02-12T15:48:48.000Z",
+      "latest": "2017-01-12T21:51:23.000Z"
+    },
+    "repeatedNoGrowthPasses": {
+      "posts": 8,
+      "replies": 10
+    },
+    "conclusion": "Every one of the 38 records reported by the profile counter materialized in the authenticated Posts and Replies timelines and was reviewed. The Posts tab yielded 37 records; one @wowlist reply materialized only in Replies, producing a 38-record union.",
+    "timelineMembershipMethod": "Each row preserves whether it materialized in Posts, Replies, or both. The primary record is the status URL attached to the article timestamp; links inside quoted-post cards are not counted as separate timeline records."
+  },
+  "recordTypeCounts": {
+    "original": 16,
+    "reply": 6,
+    "repost": 16
+  },
+  "publishingPattern": {
+    "accountAuthoredRecordCount": 22,
+    "accountAuthoredOriginalCount": 16,
+    "accountAuthoredReplyCount": 6,
+    "repostedRecordCount": 16,
+    "accountAuthoredRecordsWithExternalLinks": 19,
+    "accountAuthoredExternalLinkOccurrences": 23,
+    "accountAuthoredDistinctExternalShortUrls": 23,
+    "recurringFunctions": [
+      "project origin and community lineage",
+      "inline product support",
+      "community-created onboarding",
+      "event and calendar distribution",
+      "mission-relevant source curation",
+      "rapid civic and mutual-aid coordination"
+    ]
+  },
+  "postedUrlInventory": {
+    "recordsWithExternalLinks": 31,
+    "externalLinkOccurrences": 35,
+    "distinctExternalShortUrls": 35,
+    "curatedMissionRelevantSources": [
+      {
+        "kind": "DIY-cultural-reporting",
+        "title": "Zines 2.0",
+        "organization": "Santa Cruz Good Times",
+        "author": "Elise Granata",
+        "publishedAt": "2015-05-06",
+        "archiveUrl": "https://web.archive.org/web/20150907001335/http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+        "sharedFromStatusUrl": "https://x.com/wowlist/status/596691623993581568"
+      },
+      {
+        "kind": "DIY-organizing-resource",
+        "title": "HOMEWORK: In Every Town - An All-Ages Music Manualfesto",
+        "organization": "Grasstronaut",
+        "author": "Elise Granata",
+        "publishedAt": "2015-01-29",
+        "archiveUrl": "https://web.archive.org/web/20150406041311/http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+        "sharedFromStatusUrl": "https://x.com/wowlist/status/592810776961916929"
+      },
+      {
+        "kind": "DIY-space-resource",
+        "title": "Meow Wolf Creates $100,000 Annual Fund To Support DIY Spaces",
+        "organization": "Meow Wolf",
+        "archiveUrl": "https://web.archive.org/web/20170312084829/https://meowwolf.com/DIY/",
+        "sharedFromStatusUrl": "https://x.com/MeowWolf/status/815697993709993984"
+      },
+      {
+        "kind": "community-created-product-tutorial",
+        "title": "Shelby's WOWLIST tutorial",
+        "organization": "YouTube",
+        "canonicalUrl": "https://www.youtube.com/watch?v=nQg47LtixPI",
+        "sharedFromStatusUrl": "https://x.com/wowlist/status/632168285291835392"
+      },
+      {
+        "kind": "community-safety-and-mourning",
+        "title": "Hundreds Mourn the Victims of the Ghost Ship Fire in Oakland",
+        "organization": "KQED",
+        "canonicalUrl": "https://www.youtube.com/watch?v=g7zIdDeRVjU",
+        "sharedFromStatusUrl": "https://x.com/wowlist/status/806517013472485376"
+      },
+      {
+        "kind": "Indigenous-led-mutual-aid-reporting",
+        "title": "How to Give, and Give Thanks, to Standing Rock",
+        "organization": "Indian Country Today",
+        "canonicalUrl": "https://indiancountrytodaymedianetwork.com/2016/11/23/how-give-and-give-thanks-standing-rock-166566",
+        "sharedFromStatusUrl": "https://x.com/5432fun/status/801883926029447168"
+      },
+      {
+        "kind": "participatory-media-convening",
+        "title": "Allied Media Conference",
+        "organization": "Allied Media Projects",
+        "archiveUrl": "https://web.archive.org/web/20150425020557/https://www.alliedmedia.org/amc",
+        "sharedFromStatusUrl": "https://x.com/wowlist/status/590942060829663232"
+      },
+      {
+        "kind": "rapid-civic-coordination-surface",
+        "title": "popular.vote",
+        "organization": "WOW List",
+        "archiveUrl": "https://web.archive.org/web/20161211233030/http://popular.vote/",
+        "sharedFromStatusUrl": "https://x.com/wowlist/status/798274424763981824"
+      },
+      {
+        "kind": "project-origin-archive",
+        "title": "Sunday Dinner posts tagged WOW List",
+        "organization": "Sunday Dinner",
+        "canonicalUrl": "https://sundaydinnernyc.com/tagged/wowlist",
+        "sharedFromStatusUrl": "https://x.com/wowlist/status/433671630837919744"
+      }
+    ]
+  },
+  "stakeholderInventory": {
+    "queryScope": [
+      "@wowlist -from:wowlist",
+      "@WOWListNYC -from:wowlist",
+      "url:wowlist.org -from:wowlist",
+      "WOW List plus events, excluding @wowlist"
+    ],
+    "recoveredSearchRecordCount": 16,
+    "missionRelevantThirdPartyRecordCount": 10,
+    "missionRelevantThirdPartyAccountCount": 10,
+    "projectContributorSelfDocumentationCount": 1,
+    "contextLimitedGreetingCount": 2,
+    "unrelatedOrFalsePositiveCount": 3,
+    "thirdPartyRecordsPostingWowListUrls": 9,
+    "stakeholderGroupCounts": {
+      "diy-arts-music": 7,
+      "calendar-community": 1,
+      "neighborhood-civic": 1,
+      "creative-technology-peer": 1
+    },
+    "findings": [
+      "Nine mission-relevant third-party records independently distributed a WOW List event, list, or project URL.",
+      "Punks & Criminals explicitly said it was putting shows onto WOW List, supplying direct public evidence of organizer use.",
+      "Music Hackathon described WOW List as an event-sharing service made by its co-organizer Jamie Burkart, supplying direct public attribution from a creative-technology peer.",
+      "An All Ages account publicly responded to a WOW List members-meeting invitation, supplying bounded evidence of community dialogue."
+    ],
+    "boundary": "Authenticated X search is a bounded reception sample, not a complete engagement archive. It excludes likes, private activity, deleted or unindexed records, and does not convert a posted link into event attendance, endorsement, or platform-wide adoption.",
+    "records": [
+      {
+        "url": "https://x.com/StevenM28021817/status/1820287993615089831",
+        "publishedAt": "2024-08-05T02:37:31.650Z",
+        "authorHandle": "@StevenM28021817",
+        "recoveredByQueries": [
+          "project-name"
+        ],
+        "classification": "search-false-positive",
+        "stakeholderGroup": "unrelated"
+      },
+      {
+        "url": "https://x.com/Irina90207674/status/1466536639610691586",
+        "publishedAt": "2021-12-02T22:35:56.473Z",
+        "authorHandle": "@Irina90207674",
+        "recoveredByQueries": [
+          "project-name"
+        ],
+        "classification": "search-false-positive",
+        "stakeholderGroup": "unrelated"
+      },
+      {
+        "url": "https://x.com/goodneighbr/status/983076265187074048",
+        "publishedAt": "2018-04-08T20:17:00.951Z",
+        "authorHandle": "@goodneighbr",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "diy-arts-music"
+      },
+      {
+        "url": "https://x.com/jackascak/status/845116237591920640",
+        "publishedAt": "2017-03-24T03:33:07.199Z",
+        "authorHandle": "@jackascak",
+        "recoveredByQueries": [
+          "current-handle",
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "diy-arts-music"
+      },
+      {
+        "url": "https://x.com/EssentiaSeattle/status/834145172128677888",
+        "publishedAt": "2017-02-21T20:58:01.360Z",
+        "authorHandle": "@EssentiaSeattle",
+        "recoveredByQueries": [
+          "current-handle"
+        ],
+        "classification": "unrelated-handle-reference",
+        "stakeholderGroup": "unrelated"
+      },
+      {
+        "url": "https://x.com/SigeRecords/status/826878408005029889",
+        "publishedAt": "2017-02-01T19:42:29.783Z",
+        "authorHandle": "@SigeRecords",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "diy-arts-music"
+      },
+      {
+        "url": "https://x.com/urbanhermit/status/817142365580390401",
+        "publishedAt": "2017-01-05T22:54:56.382Z",
+        "authorHandle": "@urbanhermit",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "project-contributor-self-documentation",
+        "stakeholderGroup": "project-team"
+      },
+      {
+        "url": "https://x.com/juliafredenburg/status/729327970435862528",
+        "publishedAt": "2016-05-08T15:11:53.067Z",
+        "authorHandle": "@juliafredenburg",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "neighborhood-civic"
+      },
+      {
+        "url": "https://x.com/ReverendWEB/status/711556107928412160",
+        "publishedAt": "2016-03-20T14:12:50.860Z",
+        "authorHandle": "@ReverendWEB",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "diy-arts-music"
+      },
+      {
+        "url": "https://x.com/all_ages/status/665737833219538946",
+        "publishedAt": "2015-11-15T03:47:22.907Z",
+        "authorHandle": "@all_ages",
+        "recoveredByQueries": [
+          "historical-handle-reference"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "calendar-community"
+      },
+      {
+        "url": "https://x.com/cotfg/status/663732869357965313",
+        "publishedAt": "2015-11-09T15:00:22.272Z",
+        "authorHandle": "@cotfg",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "diy-arts-music"
+      },
+      {
+        "url": "https://x.com/Dream_Version/status/661635999714316288",
+        "publishedAt": "2015-11-03T20:08:09.591Z",
+        "authorHandle": "@Dream_Version",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "diy-arts-music"
+      },
+      {
+        "url": "https://x.com/theoatdog/status/642726063093583872",
+        "publishedAt": "2015-09-12T15:46:49.371Z",
+        "authorHandle": "@theoatdog",
+        "recoveredByQueries": [
+          "historical-handle-reference"
+        ],
+        "classification": "context-limited-greeting",
+        "stakeholderGroup": "unclassified"
+      },
+      {
+        "url": "https://x.com/mousefridge/status/642723851730841600",
+        "publishedAt": "2015-09-12T15:38:02.141Z",
+        "authorHandle": "@mousefridge",
+        "recoveredByQueries": [
+          "historical-handle-reference"
+        ],
+        "classification": "context-limited-greeting",
+        "stakeholderGroup": "unclassified"
+      },
+      {
+        "url": "https://x.com/punkscriminals/status/604360847012413440",
+        "publishedAt": "2015-05-29T18:57:09.066Z",
+        "authorHandle": "@punkscriminals",
+        "recoveredByQueries": [
+          "historical-handle-reference",
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "diy-arts-music"
+      },
+      {
+        "url": "https://x.com/musichackathon/status/579088937022406657",
+        "publishedAt": "2015-03-21T01:15:36.195Z",
+        "authorHandle": "@musichackathon",
+        "recoveredByQueries": [
+          "url-domain"
+        ],
+        "classification": "mission-relevant-third-party",
+        "stakeholderGroup": "creative-technology-peer"
+      }
+    ]
+  },
+  "visibleEngagementSnapshot": {
+    "observedAt": "2026-07-14",
+    "accountAuthoredRecordsWithAnyDisplayedInteraction": 12,
+    "accountAuthoredDisplayedReplies": 2,
+    "accountAuthoredDisplayedReposts": 20,
+    "accountAuthoredDisplayedLikes": 21,
+    "accountAuthoredDisplayedInteractionUnits": 43,
+    "boundary": "Displayed counts are volatile interface observations, not unique people, reach, conversion, endorsement, event attendance, or impact. Counts attached to reposted source records are excluded from these account-authored totals."
+  },
+  "records": [
+    {
+      "url": "https://x.com/goshwizard/status/819663088634851328",
+      "publishedAt": "2017-01-12T21:51:23.000Z",
+      "authorHandle": "@goshwizard",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [],
+      "visibleEngagement": {
+        "likes": 5,
+        "replies": 1,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/MeowWolf/status/815697993709993984",
+      "publishedAt": "2017-01-01T23:15:31.000Z",
+      "authorHandle": "@MeowWolf",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/0jKQMlauld",
+          "displayedDestination": "http://meowwolf.com/diy"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 13,
+        "replies": 0,
+        "reposts": 4
+      }
+    },
+    {
+      "url": "https://x.com/urbanhermit/status/807395049814290433",
+      "publishedAt": "2016-12-10T01:22:35.000Z",
+      "authorHandle": "@urbanhermit",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/L0gAiWmIbX",
+          "displayedDestination": "https://docs.google.com/spreadsheets/d/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 8,
+        "replies": 0,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/806517013472485376",
+      "publishedAt": "2016-12-07T15:13:35.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/Q2vtL8JdOq",
+          "displayedDestination": "Fromyoutube.com"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 1,
+        "replies": 0,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/urbanhermit/status/805949658405175296",
+      "publishedAt": "2016-12-06T01:39:07.000Z",
+      "authorHandle": "@urbanhermit",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/jhGFCwormV",
+          "displayedDestination": "https://wowlist.org/events/25653/light-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/805210387004223488",
+      "publishedAt": "2016-12-04T00:41:31.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/vWtAyQiwMl",
+          "displayedDestination": "https://youcaring.com/firevictimsofoaklandfiredec232016-706684"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 1,
+        "replies": 0,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/5432fun/status/801883926029447168",
+      "publishedAt": "2016-11-24T20:23:20.000Z",
+      "authorHandle": "@5432fun",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/xBooqnpcBS",
+          "displayedDestination": "http://fb.me/1TW9AQgwM"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 2,
+        "replies": 0,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/798274424763981824",
+      "publishedAt": "2016-11-14T21:20:28.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/O1euiAdPmX",
+          "displayedDestination": "http://popular.vote"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 3,
+        "replies": 0,
+        "reposts": 3
+      }
+    },
+    {
+      "url": "https://x.com/yokoono/status/797181275308257282",
+      "publishedAt": "2016-11-11T20:56:41.000Z",
+      "authorHandle": "@yokoono",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/ST6A7fMabN",
+          "displayedDestination": "http://ift.tt/2fjVs71"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 467,
+        "replies": 2,
+        "reposts": 211
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/796473557387575297",
+      "publishedAt": "2016-11-09T22:04:28.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/D6udDGJ7Um",
+          "displayedDestination": "https://wowlist.org/DownWithTrump"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 6,
+        "replies": 0,
+        "reposts": 5
+      }
+    },
+    {
+      "url": "https://x.com/FOKLcenter/status/783312785702805504",
+      "publishedAt": "2016-10-04T14:28:16.000Z",
+      "authorHandle": "@FOKLcenter",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/t0grs2Do3H",
+          "displayedDestination": "facebook.comFOKLelectricitygetsturnedonatthenewspottoday.ThisisourFIRSTshowatthenewlocation.samedrive,differentdoor."
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 2,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/771457416298921985",
+      "publishedAt": "2016-09-01T21:19:15.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "reply",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/7lKlHLEZf1",
+          "displayedDestination": "https://wowlist.org/sundaydinner/events/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/771455571501416448",
+      "publishedAt": "2016-09-01T21:11:55.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "reply",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/3an880EXo8",
+          "displayedDestination": "http://NYCdiy.org"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 2,
+        "replies": 1,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/771412862191407104",
+      "publishedAt": "2016-09-01T18:22:13.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "reply",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/ixsJHQRdDK",
+          "displayedDestination": "http://NYCDIY.org"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/751150062458269696",
+      "publishedAt": "2016-07-07T20:25:05.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/a39ETzpVWO",
+          "displayedDestination": "https://wowlist.org/nycdiy/events/23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/rchrd2/status/749378122823245824",
+      "publishedAt": "2016-07-02T23:04:01.000Z",
+      "authorHandle": "@rchrd2",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/DbCvjUQM1n",
+          "displayedDestination": "http://sresproductions.com/events/fillmore-jazz-festival/"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/665520472461860864",
+      "publishedAt": "2015-11-14T13:23:40.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/JpK2QOam9r",
+          "displayedDestination": "https://wowlist.org/AllAges"
+        },
+        {
+          "shortUrl": "https://t.co/YuCfobbQTB",
+          "displayedDestination": "https://wowlist.org/events/18547/wow-list-members-meeting"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 1,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/cotfg/status/663732869357965313",
+      "publishedAt": "2015-11-09T15:00:22.000Z",
+      "authorHandle": "@cotfg",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/606xbcLhMq",
+          "displayedDestination": "https://wowlist.org/events/19077/8pm-sunday-november-22nd--drone-orchestra"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 3,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/632168285291835392",
+      "publishedAt": "2015-08-14T12:33:58.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/KZ7x2zPgtB",
+          "displayedDestination": "https://youtu.be/nQg47LtixPI"
+        },
+        {
+          "shortUrl": "https://t.co/w5zPq7Z89p",
+          "displayedDestination": "https://wowlist.org/join"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 3,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/606517628765650945",
+      "publishedAt": "2015-06-04T17:47:25.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/o65oORabb6",
+          "displayedDestination": "https://wowlist.org/rapidpulse"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/punkscriminals/status/604360847012413440",
+      "publishedAt": "2015-05-29T18:57:09.000Z",
+      "authorHandle": "@punkscriminals",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/wNFjbgp7a1",
+          "displayedDestination": "https://wowlist.org/punksandcriminals"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/pluspoolny/status/603631189308604416",
+      "publishedAt": "2015-05-27T18:37:45.000Z",
+      "authorHandle": "@pluspoolny",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [],
+      "visibleEngagement": {
+        "likes": 3,
+        "replies": 1,
+        "reposts": 4
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/598530404669358080",
+      "publishedAt": "2015-05-13T16:49:03.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/3rl1wMar2x",
+          "displayedDestination": "https://wowlist.org/desertdip"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 2,
+        "replies": 0,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/596691623993581568",
+      "publishedAt": "2015-05-08T15:02:23.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/S7hb8xKAJQ",
+          "displayedDestination": "http://grasstronaut.com"
+        },
+        {
+          "shortUrl": "https://t.co/cG6FgcGsgu",
+          "displayedDestination": "http://gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/596690796641923073",
+      "publishedAt": "2015-05-08T14:59:06.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/592810776961916929",
+      "publishedAt": "2015-04-27T22:01:17.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/IS8uGw6zxb",
+          "displayedDestination": "http://grasstronaut.com/2015/01/29/homework-in-every-town/"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/zachfromiji/status/592787353925726208",
+      "publishedAt": "2015-04-27T20:28:13.000Z",
+      "authorHandle": "@zachfromiji",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [],
+      "visibleEngagement": {
+        "likes": 3,
+        "replies": 0,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/urbanhermit/status/592718356018556928",
+      "publishedAt": "2015-04-27T15:54:02.000Z",
+      "authorHandle": "@urbanhermit",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/jSkbutnuw3",
+          "displayedDestination": "https://wowlist.org/sundaydinner/events/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/TheSilentBarn/status/592424659225845760",
+      "publishedAt": "2015-04-26T20:27:00.000Z",
+      "authorHandle": "@TheSilentBarn",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/03vayVcYxT",
+          "displayedDestination": "http://gofundme.com/sjdjkk"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 3,
+        "replies": 0,
+        "reposts": 2
+      }
+    },
+    {
+      "url": "https://x.com/urbanhermit/status/591944013768499200",
+      "publishedAt": "2015-04-25T12:37:05.000Z",
+      "authorHandle": "@urbanhermit",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/yPlmpXlshq",
+          "displayedDestination": "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 1
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/591668857670148096",
+      "publishedAt": "2015-04-24T18:23:43.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "reply",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/591666366215811073",
+      "publishedAt": "2015-04-24T18:13:48.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "reply",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/d0A6kYzDuc",
+          "displayedDestination": "https://wowlist.org/people/julia"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/591664757473673216",
+      "publishedAt": "2015-04-24T18:07:25.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "reply",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/590961074326917122",
+      "publishedAt": "2015-04-22T19:31:14.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/mM9psewVlR",
+          "displayedDestination": "https://wowlist.org/kcdiy/events/15939"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/590942060829663232",
+      "publishedAt": "2015-04-22T18:15:41.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/dASFox1C0C",
+          "displayedDestination": "http://wowlist.org"
+        },
+        {
+          "shortUrl": "https://t.co/hWIGngWvC2",
+          "displayedDestination": "http://alliedmedia.org/amc"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/587713396486856704",
+      "publishedAt": "2015-04-13T20:26:07.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/e7KLKI81IM",
+          "displayedDestination": "http://wowlist.org/events/15529"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/wowlist/status/433671630837919744",
+      "publishedAt": "2014-02-12T18:39:08.000Z",
+      "authorHandle": "@wowlist",
+      "recordType": "original",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [
+        {
+          "shortUrl": "https://t.co/GgppxNburh",
+          "displayedDestination": "http://ow.ly/tyMAa"
+        }
+      ],
+      "visibleEngagement": {
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "url": "https://x.com/all_ages/status/433628764493606913",
+      "publishedAt": "2014-02-12T15:48:48.000Z",
+      "authorHandle": "@all_ages",
+      "recordType": "repost",
+      "recoveredFrom": [
+        "posts",
+        "replies"
+      ],
+      "externalLinks": [],
+      "visibleEngagement": {
+        "likes": 6,
+        "replies": 1,
+        "reposts": 4
+      }
+    }
+  ],
+  "limitations": [
+    "The 38-record profile population is complete as displayed on July 14, 2026, but deleted, withheld, or historically unavailable records cannot be inferred beyond the profile counter.",
+    "The bounded incoming search is not a complete archive of every historical mention, repost, like, or private interaction.",
+    "The exact historical relationship between @WOWListNYC and @wowlist remains unresolved even though both strings surface mission-relevant records.",
+    "Institutional-account records are not attributed post by post to Jamie without separate authorship evidence.",
+    "The account's small follower and post counts are not used as measures of WOW List platform adoption."
+  ]
+}
