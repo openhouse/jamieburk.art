@@ -33,18 +33,18 @@
     "dateBoundary": "For originals and replies, sourcePublishedAt is the coalition-account post date. For native reposts, X exposes the source post's timestamp, not the date @NYCArtC reposted it; source-post years must not be presented as account-activity years."
   },
   "recordTypeCounts": {
-    "original": 591,
+    "original": 593,
     "reply": 92,
-    "repost": 2440
+    "repost": 2438
   },
   "publishingPattern": {
-    "accountOriginalAndReplyRecordCount": 683,
-    "accountOriginalRecordCount": 591,
+    "accountOriginalAndReplyRecordCount": 685,
+    "accountOriginalRecordCount": 593,
     "accountReplyRecordCount": 92,
-    "nativeRepostAppearanceCount": 2440,
-    "externalSourceNativeRepostCount": 2438,
-    "selfSourceNativeRepostCount": 2,
-    "selfSourceNativeRepostStatusUrls": [
+    "externalSourceNativeRepostRecordCount": 2438,
+    "timelineNativeRepostAppearanceCount": 2440,
+    "accountAuthoredStatusAlsoSeenAsSelfRepostCount": 2,
+    "accountAuthoredStatusAlsoSeenAsSelfRepostUrls": [
       "https://x.com/NYCArtC/status/1995868766614462973",
       "https://x.com/NYCArtC/status/1674013523373068289"
     ],
@@ -66,6 +66,7 @@
       "nightlife governance and accountability follow-through",
       "mission-relevant journalism and public-resource curation"
     ],
+    "recordTypeMethod": "recordType partitions the 3,123 unique source-status URLs: account-authored source statuses are original or reply, while external source statuses surfaced through native repost cards are repost. Two account-authored quote-post URLs also appeared as native self-repost cards; their source-status identity remains original and the nonexclusive appearance is retained separately.",
     "classificationMethod": "Mission signals are deterministic matches against public post text, hashtags, and displayed link destinations. Raw text is intentionally excluded; the rule manifest and first matched public-safe phrase are retained per classified row so the label can be replayed. Signals can overlap and describe subject matter, not authorship, endorsement, causality, or impact."
   },
   "missionSignalClassification": {
@@ -3227,7 +3228,7 @@
         "stakeholderGroup": "unclassified-public-account"
       }
     ],
-    "boundary": "A source-author record can be an @NYCArtC original, reply, or native-repost appearance. Of 2,440 native-repost appearances, 2 preserve @NYCArtC itself as the visible source author and 2,438 preserve another source account. Appearance in this network does not by itself establish that the source account engaged with the coalition, endorsed a campaign, collaborated with Jamie, or authorized the repost."
+    "boundary": "The unique-URL population contains 685 @NYCArtC-authored source statuses and 2,438 external source statuses surfaced through native repost cards. Two of the account-authored quote-post URLs also appeared as native self-repost cards, so source-status identity and timeline appearance are recorded as separate axes. Appearance in this network does not by itself establish that the source account engaged with the coalition, endorsed a campaign, collaborated with Jamie, or authorized the repost."
   },
   "hashtagInventory": {
     "distinctHashtagCount": 675,
@@ -14481,13 +14482,13 @@
   },
   "visibleEngagementSnapshot": {
     "observedAt": "2026-07-14",
-    "originalAndReplyRecordsWithAnyDisplayedInteraction": 616,
-    "originalAndReplyDisplayedReplies": 116,
-    "originalAndReplyDisplayedReposts": 1460,
-    "originalAndReplyDisplayedLikes": 2645,
-    "originalAndReplyDisplayedBookmarks": 61,
-    "originalAndReplyDisplayedInteractionUnits": 4221,
-    "boundary": "Displayed counts are volatile interface observations, not unique people, reach, conversion, endorsement, participation, or impact. Views and bookmarks are excluded from the interaction-unit total; counts attached to native-repost appearances are excluded from the original/reply totals."
+    "originalAndReplyRecordsWithAnyDisplayedInteraction": 618,
+    "originalAndReplyDisplayedReplies": 118,
+    "originalAndReplyDisplayedReposts": 1490,
+    "originalAndReplyDisplayedLikes": 2698,
+    "originalAndReplyDisplayedBookmarks": 65,
+    "originalAndReplyDisplayedInteractionUnits": 4306,
+    "boundary": "Displayed counts are volatile interface observations, not unique people, reach, conversion, endorsement, participation, or impact. Views and bookmarks are excluded from the interaction-unit total; only account-authored source statuses are included, even when one also appeared as a native self-repost card."
   },
   "records": [
     {
@@ -18162,7 +18163,10 @@
       "url": "https://x.com/NYCArtC/status/1995868766614462973",
       "sourcePublishedAt": "2025-12-02T14:52:50.000Z",
       "authorHandle": "@NYCArtC",
-      "recordType": "repost",
+      "recordType": "original",
+      "accountTimelineAppearances": [
+        "native-self-repost-card"
+      ],
       "recoveredFrom": [
         "posts-slow-crosscheck",
         "search-authored-2025-01-01-2026-01-01",
@@ -26598,7 +26602,10 @@
       "url": "https://x.com/NYCArtC/status/1674013523373068289",
       "sourcePublishedAt": "2023-06-28T11:15:00.000Z",
       "authorHandle": "@NYCArtC",
-      "recordType": "repost",
+      "recordType": "original",
+      "accountTimelineAppearances": [
+        "native-self-repost-card"
+      ],
       "recoveredFrom": [
         "posts-slow-crosscheck",
         "search-authored-2023-01-01-2024-01-01"
