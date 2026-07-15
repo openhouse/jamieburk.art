@@ -49,6 +49,14 @@ import {
   socialMediaReviewSummary,
   socialMediaSources,
 } from "../../apps/www/src/data/knowledge-bank/social-media-production.ts";
+import {
+  classifyNycacMissionSignals,
+  extractNycacSourcePostBody,
+  normalizeNycacSourceRecordType,
+  nycacClassificationInputDigest,
+  nycacClassificationInputs,
+  nycacMissionSignalRules,
+} from "../lib/nycac-mission-classifier.mjs";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
@@ -81,6 +89,12 @@ const wowListPopulationInventory = JSON.parse(
 const kcTownHallPopulationInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+    "utf8",
+  ),
+);
+const nycacPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
     "utf8",
   ),
 );
@@ -454,12 +468,12 @@ test("social-media production preserves account, engagement, and timeline invent
     projectSocialAccounts.map((account) => account.currentHandle),
     ["@CallNYCApp", "@NYCArtC", "@wowlist", "@KCTownHall"],
   );
-  assert.equal(socialMediaCaptures.length, 7);
-  assert.equal(socialMediaSources.length, 63);
-  assert.equal(socialMediaObservations.length, 65);
-  assert.equal(socialMediaClaims.length, 6);
-  assert.equal(socialMediaResearchTasks.length, 6);
-  assert.equal(socialMediaInquiries.length, 6);
+  assert.equal(socialMediaCaptures.length, 8);
+  assert.equal(socialMediaSources.length, 66);
+  assert.equal(socialMediaObservations.length, 69);
+  assert.equal(socialMediaClaims.length, 7);
+  assert.equal(socialMediaResearchTasks.length, 7);
+  assert.equal(socialMediaInquiries.length, 7);
 
   const callNycPopulationSource = socialMediaSources.find(
     (source) => source.id === "SRC-SOCIAL-CALLNYC-FULL-POPULATION-2026-07-14",
@@ -488,6 +502,16 @@ test("social-media production preserves account, engagement, and timeline invent
     kcTownHallPopulationSource.canonicalUrl,
     /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/apps\/www\/src\/data\/knowledge-bank\/fixtures\/kctownhall-full-population\.json$/,
   );
+  const nycacPopulationSource = socialMediaSources.find(
+    (source) =>
+      source.id === "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+  );
+  assert.equal(nycacPopulationSource.visibility, "public");
+  assert.equal(nycacPopulationSource.preservationStatus, "live");
+  assert.match(
+    nycacPopulationSource.canonicalUrl,
+    /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/apps\/www\/src\/data\/knowledge-bank\/fixtures\/nycartc-retrievable-population\.json$/,
+  );
   assert.equal(socialMediaReviewSummary.callNycCouncilMemberAccountCount, 8);
   assert.equal(socialMediaReviewSummary.callNycRecoveredTimelineRecordCount, 107);
   assert.equal(socialMediaReviewSummary.callNycUnmaterializedProfileRecordCount, 3);
@@ -498,6 +522,38 @@ test("social-media production preserves account, engagement, and timeline invent
   assert.equal(
     socialMediaReviewSummary.nycacHistoricalMentionRecordCount2017To2020,
     358,
+  );
+  assert.equal(socialMediaReviewSummary.nycacProfilePostCount, 5124);
+  assert.equal(
+    socialMediaReviewSummary.nycacRecoveredTimelineAndSearchRecordCount,
+    3123,
+  );
+  assert.equal(socialMediaReviewSummary.nycacProfileCountNotMaterialized, 2001);
+  assert.equal(socialMediaReviewSummary.nycacRecoveredOriginalPostCount, 608);
+  assert.equal(socialMediaReviewSummary.nycacRecoveredReplyCount, 77);
+  assert.equal(socialMediaReviewSummary.nycacRecoveredRepostCount, 2438);
+  assert.equal(socialMediaReviewSummary.nycacOriginalAndReplyRecordCount, 685);
+  assert.equal(
+    socialMediaReviewSummary.nycacExternalSourceNativeRepostRecordCount,
+    2438,
+  );
+  assert.equal(
+    socialMediaReviewSummary.nycacTimelineNativeRepostAppearanceCount,
+    2440,
+  );
+  assert.equal(
+    socialMediaReviewSummary.nycacAccountAuthoredStatusAlsoSeenAsSelfRepostCount,
+    2,
+  );
+  assert.equal(socialMediaReviewSummary.nycacDistinctSourceAuthorCount, 623);
+  assert.equal(socialMediaReviewSummary.nycacDistinctExternalShortUrlCount, 1161);
+  assert.equal(socialMediaReviewSummary.nycacPost2020IncomingSearchRecordCount, 98);
+  assert.equal(socialMediaReviewSummary.nycacPost2020IncomingAuthorCount, 43);
+  assert.equal(socialMediaReviewSummary.nycacPost2020DirectMentionRecordCount, 75);
+  assert.equal(socialMediaReviewSummary.nycacPost2020DirectMentionAuthorCount, 34);
+  assert.equal(
+    socialMediaReviewSummary.nycacPost2020ConversationContextRecordCount,
+    23,
   );
   assert.equal(socialMediaReviewSummary.wowListRecoveredTimelineRecordCount, 38);
   assert.equal(socialMediaReviewSummary.wowListRecoveredOriginalPostCount, 16);
@@ -643,6 +699,282 @@ test("CallNYC full-population archive reconciles every retrievable record", () =
   );
   assert.doesNotMatch(
     JSON.stringify(wowListPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
+  );
+});
+
+test("NYC Artist Coalition classifier excludes profile chrome and quoted cards", () => {
+  const quotePost = {
+    url: "https://x.com/NYCArtC/status/synthetic-quote",
+    recordType: "reply",
+    text: [
+      "NYC Artist Coalition",
+      "@NYCArtC",
+      "·",
+      "Feb 3, 2023",
+      "Outer #FairRentNYC body",
+      "Quote",
+      "Music Workers Alliance",
+      "@MusicWorkers",
+      "·",
+      "Feb 2, 2023",
+      "Replying to @MusicWorkers",
+      "Quoted Music Workers content",
+    ].join("\n"),
+    hashtags: ["#FairRentNYC"],
+    externalLinks: [],
+  };
+  const quoteInputs = nycacClassificationInputs(quotePost);
+  assert.equal(normalizeNycacSourceRecordType(quotePost), "original");
+  assert.equal(extractNycacSourcePostBody(quotePost), "Outer #FairRentNYC body");
+  assert.deepEqual(classifyNycacMissionSignals(quoteInputs), [
+    {
+      signalId: "fair-rent-nyc",
+      inputField: "source-post-body",
+      matchedValue: "#FairRentNYC",
+    },
+  ]);
+  assert.match(nycacClassificationInputDigest(quoteInputs), /^[a-f0-9]{64}$/);
+
+  const displayNameOnly = {
+    url: "https://x.com/MusicWorkers/status/synthetic-repost",
+    recordType: "repost",
+    text: [
+      "NYC Artist Coalition reposted",
+      "Music Workers Alliance",
+      "@MusicWorkers",
+      "·",
+      "Mar 12",
+      "A body without the subject terms.",
+    ].join("\n"),
+    hashtags: [],
+    externalLinks: [],
+  };
+  assert.deepEqual(
+    classifyNycacMissionSignals(nycacClassificationInputs(displayNameOnly)),
+    [],
+  );
+});
+
+test("NYC Artist Coalition archive reconciles the complete retrievable population", () => {
+  const reconciliation = nycacPopulationInventory.populationReconciliation;
+  assert.equal(reconciliation.profileReportedPostCount, 5124);
+  assert.equal(reconciliation.postsTimelineUniqueCount, 764);
+  assert.equal(reconciliation.postsAndRepliesTimelinePrimaryCount, 2698);
+  assert.equal(reconciliation.recoveredUnionRecordCount, 3123);
+  assert.equal(reconciliation.recoveredPopulationReviewedPercent, 100);
+  assert.equal(reconciliation.profileCountNotMaterialized, 2001);
+  assert.match(reconciliation.conclusion, /3,123 unique records/i);
+  assert.match(reconciliation.conclusion, /owner archive/i);
+
+  const records = nycacPopulationInventory.records;
+  assert.equal(records.length, 3123);
+  assert.equal(new Set(records.map((record) => record.url)).size, 3123);
+  assert.deepEqual(nycacPopulationInventory.recordTypeCounts, {
+    original: 608,
+    reply: 77,
+    repost: 2438,
+  });
+  assert.equal(
+    Object.values(nycacPopulationInventory.recordTypeCounts).reduce(
+      (sum, count) => sum + count,
+      0,
+    ),
+    records.length,
+  );
+  assert.ok(
+    records.every(
+      (record) =>
+        Array.isArray(record.recoveredFrom) && record.recoveredFrom.length > 0,
+    ),
+  );
+
+  const publishing = nycacPopulationInventory.publishingPattern;
+  assert.equal(publishing.accountOriginalAndReplyRecordCount, 685);
+  assert.equal(publishing.accountOriginalRecordCount, 608);
+  assert.equal(publishing.accountReplyRecordCount, 77);
+  assert.equal(publishing.externalSourceNativeRepostRecordCount, 2438);
+  assert.equal(publishing.timelineNativeRepostAppearanceCount, 2440);
+  assert.equal(publishing.accountAuthoredStatusAlsoSeenAsSelfRepostCount, 2);
+  assert.equal(publishing.accountQuotePostReplyInheritanceCorrectionCount, 15);
+  assert.ok(
+    publishing.accountQuotePostReplyInheritanceCorrectionUrls.includes(
+      "https://x.com/NYCArtC/status/1621553786790596609",
+    ),
+  );
+  assert.ok(
+    records
+      .filter((record) =>
+        publishing.accountQuotePostReplyInheritanceCorrectionUrls.includes(
+          record.url,
+        ),
+      )
+      .every((record) => record.recordType === "original"),
+  );
+  const expectedSelfRepostAppearanceUrls = [
+    "https://x.com/NYCArtC/status/1674013523373068289",
+    "https://x.com/NYCArtC/status/1995868766614462973",
+  ];
+  assert.deepEqual(
+    publishing.accountAuthoredStatusAlsoSeenAsSelfRepostUrls.slice().sort(),
+    expectedSelfRepostAppearanceUrls,
+  );
+  const originalsAndReplies = records.filter((record) =>
+    ["original", "reply"].includes(record.recordType),
+  );
+  assert.equal(originalsAndReplies.length, 685);
+  assert.ok(
+    originalsAndReplies.every(
+      (record) => record.authorHandle.toLowerCase() === "@nycartc",
+    ),
+  );
+  const selfRepostAppearanceRecords = records
+    .filter((record) =>
+      record.accountTimelineAppearances?.includes("native-self-repost-card"),
+    )
+    .sort((a, b) => a.url.localeCompare(b.url));
+  assert.deepEqual(
+    selfRepostAppearanceRecords.map((record) => record.url),
+    expectedSelfRepostAppearanceUrls,
+  );
+  assert.ok(
+    selfRepostAppearanceRecords.every(
+      (record) =>
+        record.recordType === "original" &&
+        record.authorHandle.toLowerCase() === "@nycartc" &&
+        record.recoveredFrom.some((surface) =>
+          surface.startsWith("search-authored-"),
+        ),
+    ),
+  );
+  assert.equal(
+    records.filter(
+      (record) =>
+        record.recordType === "repost" &&
+        record.authorHandle.toLowerCase() !== "@nycartc",
+    ).length,
+    2438,
+  );
+  assert.equal(publishing.distinctSourceAuthorCount, 623);
+  assert.deepEqual(publishing.missionSignalRecordCounts, {
+    "fair-rent-nyc": 477,
+    "save-nyc-spaces": 192,
+    "let-nyc-dance": 97,
+    "talks-not-raids": 62,
+    "nightlife-governance": 57,
+    "artist-labor": 98,
+  });
+  const missionClassification =
+    nycacPopulationInventory.missionSignalClassification;
+  const missionRules = new Map(
+    missionClassification.rules.map((rule) => [rule.signalId, rule]),
+  );
+  assert.deepEqual([...missionRules.keys()], [
+    "fair-rent-nyc",
+    "save-nyc-spaces",
+    "let-nyc-dance",
+    "talks-not-raids",
+    "nightlife-governance",
+    "artist-labor",
+  ]);
+  assert.deepEqual(missionClassification.inputFields, [
+    "source-post-body",
+    "hashtag",
+    "displayed-link-destination",
+  ]);
+  assert.deepEqual(
+    missionClassification.rules,
+    nycacMissionSignalRules.map((rule) => ({
+      signalId: rule.id,
+      pattern: rule.pattern.source,
+      flags: rule.pattern.flags,
+    })),
+  );
+  for (const record of [
+    ...records,
+    ...nycacPopulationInventory.post2020IncomingMentionInventory.records,
+  ]) {
+    assert.match(record.classificationInputDigest, /^[a-f0-9]{64}$/);
+    assert.deepEqual(
+      record.missionSignalEvidence.map((evidence) => evidence.signalId),
+      record.missionSignals,
+    );
+    for (const evidence of record.missionSignalEvidence) {
+      const rule = missionRules.get(evidence.signalId);
+      assert.ok(rule);
+      assert.ok(missionClassification.inputFields.includes(evidence.inputField));
+      assert.match(evidence.matchedValue, new RegExp(rule.pattern, rule.flags));
+    }
+  }
+
+  const links = records.flatMap((record) => record.externalLinks);
+  assert.equal(links.length, 1451);
+  assert.equal(new Set(links.map((link) => link.shortUrl)).size, 1161);
+  assert.equal(
+    nycacPopulationInventory.postedUrlInventory.recordsWithExternalLinks,
+    1339,
+  );
+
+  const incoming = nycacPopulationInventory.post2020IncomingMentionInventory;
+  assert.equal(incoming.renderedRecordCount, 98);
+  assert.equal(incoming.records.length, 98);
+  assert.equal(new Set(incoming.records.map((record) => record.url)).size, 98);
+  assert.equal(incoming.distinctAuthorCount, 43);
+  assert.equal(incoming.directlyMatchingRecordCount, 75);
+  assert.equal(incoming.directlyMatchingAuthorCount, 34);
+  assert.equal(incoming.conversationContextRecordCount, 23);
+  assert.equal(incoming.conversationContextAuthorCount, 15);
+  assert.equal(
+    incoming.records.filter((record) =>
+      record.mentionHandles.some(
+        (handle) => handle.toLowerCase() === "@nycartc",
+      ),
+    ).length,
+    75,
+  );
+
+  assert.deepEqual(nycacPopulationInventory.visibleEngagementSnapshot, {
+    observedAt: "2026-07-14",
+    originalAndReplyRecordsWithDisplayedReplyRepostOrLike: 618,
+    originalAndReplyDisplayedReplies: 118,
+    originalAndReplyDisplayedReposts: 1490,
+    originalAndReplyDisplayedLikes: 2698,
+    originalAndReplyDisplayedBookmarks: 65,
+    originalAndReplyDisplayedInteractionUnits: 4306,
+    boundary:
+      "The 618-record count includes account-authored source statuses with at least one displayed reply, repost, or like. Displayed counts are volatile interface observations, not unique people, reach, conversion, endorsement, participation, or impact. Views and bookmarks are excluded from both that record count and the interaction-unit total; only account-authored source statuses are included, even when one also appeared as a native self-repost card.",
+  });
+  const authoredRecords = records.filter((record) =>
+    ["original", "reply"].includes(record.recordType),
+  );
+  assert.equal(
+    authoredRecords.filter(
+      (record) =>
+        record.visibleEngagement.replies > 0 ||
+        record.visibleEngagement.reposts > 0 ||
+        record.visibleEngagement.likes > 0,
+    ).length,
+    nycacPopulationInventory.visibleEngagementSnapshot
+      .originalAndReplyRecordsWithDisplayedReplyRepostOrLike,
+  );
+  assert.match(
+    nycacPopulationInventory.sourceAuthorNetwork.boundary,
+    /does not by itself establish.*engaged/i,
+  );
+
+  const boundedSearchTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY",
+  );
+  assert.equal(boundedSearchTask.status, "complete");
+  assert.match(boundedSearchTask.publicNote, /75 records from 34 authors/i);
+  const ownerArchiveTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-NYCAC-OWNER-ARCHIVE",
+  );
+  assert.equal(ownerArchiveTask.status, "blocked");
+  assert.match(ownerArchiveTask.blockedReason, /account-owner X Archive/i);
+
+  assert.doesNotMatch(
+    JSON.stringify(nycacPopulationInventory),
     /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
   );
 });
@@ -828,7 +1160,29 @@ test("KC Town Hall population source pins the exact classified fixture commit", 
   assert.ok(match);
   assert.equal(match[2], fixturePath);
   assert.deepEqual(
-    execFileSync("git", ["show", `${match[1]}:${fixturePath}`]),
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`], {
+      maxBuffer: 4 * 1024 * 1024,
+    }),
+    readFileSync(fixturePath),
+  );
+});
+
+test("NYC Artist Coalition population source pins the exact classified fixture commit", () => {
+  const fixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json";
+  const source = socialMediaSources.find(
+    (record) =>
+      record.id === "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+  );
+  const match = source.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/nycartc-retrievable-population\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], fixturePath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`], {
+      maxBuffer: 4 * 1024 * 1024,
+    }),
     readFileSync(fixturePath),
   );
 });
@@ -842,6 +1196,9 @@ test("social-media claims use bounded counts and preserve shared-account authors
   );
   const identityClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-NYCAC-SHARED-IDENTITY-STEWARDSHIP",
+  );
+  const nycacInfrastructureClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-SOCIAL-INFRASTRUCTURE",
   );
   const wowListClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
@@ -881,6 +1238,60 @@ test("social-media claims use bounded counts and preserve shared-account authors
     nycacClaim.researchTaskIds.includes(
       "RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY",
     ),
+  );
+
+  assert.equal(nycacInfrastructureClaim.selectionState, "selected");
+  assert.match(
+    nycacInfrastructureClaim.projections[0].text,
+    /used a shared account as durable public infrastructure/i,
+  );
+  assert.match(
+    nycacInfrastructureClaim.projections[0].text,
+    /reviewed every one of the 3,123 unique status URLs X made retrievable/i,
+  );
+  assert.match(
+    nycacInfrastructureClaim.projections[0].text,
+    /cited knowledge record preserves the complete taxonomy, platform limits, and owner-archive boundary/i,
+  );
+  const nycacPopulationSource = socialMediaSources.find(
+    (source) =>
+      source.id === "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+  );
+  assert.match(
+    nycacPopulationSource.publicNote,
+    /2,001 profile-counted records outside the reviewed public surfaces/i,
+  );
+  assert.ok(
+    nycacInfrastructureClaim.evidence.some(
+      (evidence) =>
+        evidence.sourceId === "SRC-X-HELP-MISSING-POSTS-2026-07-14" &&
+        evidence.supports.includes("platform display and indexing limits"),
+    ),
+  );
+  assert.ok(
+    nycacInfrastructureClaim.evidence.some(
+      (evidence) =>
+        evidence.sourceId === "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14" &&
+        evidence.supports.includes(
+          "owner-archive route beyond the recent profile timeline",
+        ),
+    ),
+  );
+  assert.match(
+    nycacInfrastructureClaim.boundaries.join("\n"),
+    /3,123 of 5,124/i,
+  );
+  assert.match(
+    nycacInfrastructureClaim.boundaries.join("\n"),
+    /source authorship/i,
+  );
+  assert.match(
+    nycacInfrastructureClaim.antiClaims.join("\n"),
+    /All 5,124.*recovered/i,
+  );
+  assert.match(
+    nycacInfrastructureClaim.antiClaims.join("\n"),
+    /Jamie authored all/i,
   );
 
   assert.equal(identityClaim.selectionState, "dormant");
@@ -955,6 +1366,10 @@ test("social-media production exposes no authenticated-session secrets or privat
   assert.doesNotMatch(
     JSON.stringify(kcTownHallPopulationInventory),
     /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\/|816-\d{3}-\d{4}/i,
+  );
+  assert.doesNotMatch(
+    JSON.stringify(nycacPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
   );
 });
 

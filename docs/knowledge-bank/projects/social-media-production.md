@@ -9,6 +9,7 @@ Reviewed: 2026-07-14
 | CallNYC | [@CallNYCApp](https://x.com/CallNYCApp) | Historical project account |
 | NYC Artist Coalition, SaveNYCSpaces, LetNYCDance, TalksNotRaids, FairRentNYC | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition and campaign account |
 | WOW List | [@wowlist](https://x.com/wowlist) | Historical project account |
+| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | Historical project account |
 
 Project templates and an external 2015 mention also use `@WOWListNYC`. The
 exact account-rename history was not recovered, so the knowledge bank treats it
@@ -48,6 +49,18 @@ The dedicated CallNYC population fixture is stored at
 preserves metadata for all 107 retrievable records and every posted external
 URL while excluding post text, cookies, private account state, and session
 data.
+
+For `@NYCArtC`, the authenticated Posts and Posts & replies surfaces were
+traversed through repeated no-growth states, then reconciled with exact yearly
+`from:NYCArtC` Latest searches from 2017 through July 14, 2026. Their union
+yielded 3,123 unique public records. The profile reported 5,124 posts. X's
+missing-posts guidance documents that profile Posts exposes the latest 800
+records and Posts & replies exposes the latest 3,200. Its separate new-user FAQ
+directs account owners to an X Archive that can be browsed beginning with the
+first post. The dedicated public-safe fixture at
+`apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json`
+therefore claims 100% review of the retrievable union, not 100% of the profile
+counter. Its 2,001-record owner-archive remainder is explicit and blocking.
 
 For `@wowlist`, both Posts and Replies were likewise traversed to their
 February 2014 beginning and through repeated no-growth passes. Posts yielded
@@ -111,6 +124,51 @@ copy.
 
 ### NYC Artist Coalition
 
+The complete retrievable union contains 3,123 unique source-status URLs: 608
+account originals, 77 account replies, and 2,438 external-source posts surfaced
+through native reposts. Source-status identity and profile-timeline appearance
+are retained as separate facts. Two account-authored quote posts also appeared
+as native self-repost cards, so the profile capture contains 2,440 native-repost
+appearances without double-counting those two source URLs. The corpus contains
+1,451 external-link occurrences representing
+1,161 distinct short URLs and 623 visible source authors. Those source authors
+span artist-labor groups, independent arts organizations, small-business and
+tenant coalitions, legal advocates, public agencies, elected officials,
+journalism, and community accounts.
+
+This is evidence of a durable shared publishing and curation surface, not 3,123
+Jamie-authored statements. Recurring overlapping subject signals include 477
+FairRentNYC records, 192 SaveNYCSpaces records, 97 LetNYCDance records, 62
+TalksNotRaids records, 57 nightlife-governance records, and 98 artist-labor
+records. These counts show continuity and range in the recovered corpus; they
+are not reach, participation, endorsement, or policy-impact measures.
+The checked-in classifier excludes profile chrome, source display names, and
+quoted-card content before matching source-post bodies, hashtags, and displayed
+link destinations. The public fixture retains a SHA-256 input digest and the
+first positive match for each label. That makes positive labels auditable and
+the private capture reproducible without publishing raw post text; a full
+false-negative replay still requires that private capture.
+
+Independent final holdout reviewers live-checked the two ambiguous self-repost
+URLs and a stratified set spanning all six mission signals and represented
+record types. Matched values agreed with visible records where the URLs
+rendered; unavailable URLs remained explicit verification limits. The two
+ambiguous URLs rendered as account-authored quote-post source statuses while
+the raw profile capture preserved their self-repost-card appearance. A separate
+quote-post check found fifteen account source statuses that had inherited a
+quoted card's reply state; those now remain originals. Together, those findings
+produced the two-axis taxonomy above. An owner-archive pass should
+rerun the same public rule manifest over the private full text before publishing
+only redacted matched evidence and aggregate counts.
+
+The source network makes collective infrastructure visible. Frequent source
+authors include Olympia Kazi, Future of Music Coalition, United for Small
+Business NYC, Music Workers Alliance, Street Vendor Project, Artist Studio
+Affordability Project, League of Independent Theater New York, tenant and legal
+advocates, and public-agency or officeholder accounts. A native repost does not
+show that a source account engaged with the coalition or authorized the repost,
+so source circulation remains separate from incoming stakeholder response.
+
 The recovered 2017-2020 incoming-mention corpus contained 358 unique status
 URLs. Six Council Member accounts appeared as authors. Four had clearly
 mission-relevant engagement: Rafael Espinal, Stephen Levin, Carlina Rivera, and
@@ -119,9 +177,22 @@ repeal, Office of Nightlife convening, Talks Not Raids, public testimony,
 co-sponsorship, cultural-space preservation, and arts-and-culture advocacy.
 
 Two additional Council Member author appearances were incidental or too
-context-limited to count as mission-relevant traction. A complete post-2020
-incoming-mention inventory remains open because X returned a persistent search
-error during bounded retries.
+context-limited to count as mission-relevant traction. A bounded 2021-2026
+Latest search subsequently rendered 98 records from 43 authors. Of those, 75
+records from 34 authors directly match `@NYCArtC`; 23 are surrounding
+conversation context retained for auditability. It
+adds collaborator, partner, public-service-advertising, theater, and nightlife
+continuity but no serving-Council Member author to the four-account
+mission-relevant count.
+
+In that later set, Olympia Kazi authored 15 records connecting the shared
+account to Council hearings, Office of Nightlife accountability, Talks Not
+Raids follow-through, and FairRentNYC. TakeRoot Justice named NYC Artist
+Coalition among citywide small-business partners; United for Small Business NYC
+named it among Commercial Rent Stabilization speak-out co-hosts; and F.Y. Eye
+documented FairRentNYC distribution through its public-service-advertising
+network. A 2023 Stephen Levin record is retained as former-officeholder context,
+not serving-Council engagement.
 
 Jamie states that he established the account and a public-facing identity
 system that collaborators, including Olympia Kazi, used over years. That role
@@ -228,10 +299,11 @@ expenditure, or completion of the building project.
 ## Lifecycle state
 
 The CallNYC public-guidance and Council-engagement claims, the mission-relevant
-NYC Artist Coalition engagement claim, and the complete-population WOW List
-product-surface claim are selected for their case studies. The complete-
-population KC Town Hall operating-surface claim is also selected. The NYC
-Artist Coalition account-establishment claim remains held. Open tasks cover the
-three unmaterialized CallNYC records, post-2020 coalition mentions, collaborator
-corroboration, WOW List handle lineage, independent TiredOfTires outcome
-corroboration, and recovery of KC Town Hall site and survey decision records.
+NYC Artist Coalition engagement and shared social-infrastructure claims, and
+the complete-population WOW List product-surface claim are selected for their
+case studies. The complete-population KC Town Hall operating-surface claim is
+also selected. The NYC Artist Coalition account-establishment claim remains
+held. Open tasks cover the three unmaterialized CallNYC records, the 2,001-record
+NYC Artist Coalition owner-archive gap, collaborator corroboration, WOW List
+handle lineage, independent TiredOfTires outcome corroboration, and recovery of
+KC Town Hall site and survey decision records.

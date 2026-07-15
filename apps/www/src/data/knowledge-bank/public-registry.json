@@ -398,6 +398,59 @@
       ]
     },
     {
+      "id": "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+      "title": "Authenticated @NYCArtC retrievable-population archival review",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/8c813d82d6e49ecba7a36ddbabff1280c85d77f2/apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated July 14, 2026 review of all 3,123 unique @NYCArtC records materialized by the exhausted public profile and yearly authored-search surfaces, with public-safe source, link, classification, and bounded incoming-mention metadata preserved in the repository.",
+      "publicNote": "The profile reported 5,124 posts. X's documented display limits left 2,001 profile-counted records outside the reviewed public surfaces; an owner-archive attempt is required to recover or explain that gap. They are not treated as reviewed, absent, or deleted.",
+      "doesNotEstablish": [
+        "the content of 2,001 archive-only profile-counted records",
+        "authorship of every shared-account post",
+        "engagement by every reposted source account",
+        "reach, endorsement, policy causality, or campaign impact"
+      ]
+    },
+    {
+      "id": "SRC-X-HELP-MISSING-POSTS-2026-07-14",
+      "title": "Help with missing Posts",
+      "organization": "X Help Center",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://help.x.com/en/using-x/missing-posts",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "X documents that profile Posts displays the latest 800 records and Posts & replies displays the latest 3,200; older posts can also fail to appear because of indexing limits.",
+      "doesNotEstablish": [
+        "which specific @NYCArtC records fall outside public display limits",
+        "that an unmaterialized record was deleted"
+      ]
+    },
+    {
+      "id": "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14",
+      "title": "New user FAQ",
+      "organization": "X Help Center",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://help.x.com/en/resources/new-user-faq",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "X states that profile timelines expose up to 3,200 recent posts and directs account owners to download an X Archive to browse account information beginning with the first post.",
+      "doesNotEstablish": [
+        "which specific @NYCArtC records fall outside public display limits",
+        "that the archive will reconcile exactly to the current profile counter"
+      ]
+    },
+    {
       "id": "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
       "title": "Authenticated @wowlist full-population archival review",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -2043,9 +2096,63 @@
       ],
       "boundaries": [
         "The broad historical result set contained six Council Member account authors; two incidental or logistical appearances are not counted as mission-relevant traction.",
-        "The recovered mention corpus covers 2017-2020; a complete post-2020 incoming-mention inventory remains open.",
+        "A bounded 2021-2026 search rendered 98 records: 75 direct @NYCArtC matches and 23 surrounding conversation-context records. It added no serving-Council Member author to the four-account mission-relevant count and is not a complete archive of every later mention.",
         "Shared-account posts must not be attributed to Jamie without post-level authorship evidence.",
         "Engagement does not establish policy causality, sole coalition ownership, or blanket endorsement."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-SOCIAL-INFRASTRUCTURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition used a shared account as durable public infrastructure across six campaign and policy lines: calls to action, partner amplification, public resources, and mission-relevant reporting. This pass reviewed every one of the 3,123 unique status URLs X made retrievable; the cited knowledge record preserves the complete taxonomy, platform limits, and owner-archive boundary. No shared-account post is assigned to Jamie without post-level evidence.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+          "relationship": "direct-support",
+          "supports": [
+            "complete retrievable population and reconciliation",
+            "record-type, source-author, hashtag, and posted-URL inventories",
+            "bounded post-2020 stakeholder response"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-HELP-MISSING-POSTS-2026-07-14",
+          "relationship": "supports-boundary",
+          "supports": [
+            "platform display and indexing limits"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14",
+          "relationship": "supports-boundary",
+          "supports": [
+            "owner-archive route beyond the recent profile timeline"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The recovered union is 3,123 of 5,124 profile-counted posts. Literal 100% recovery requires the owner archive; the 2,001-record remainder is not represented as absent or deleted.",
+        "Source-status identity, including source authorship, and profile-timeline appearance are separate fields: 685 source statuses are coalition-account originals or replies and 2,438 are external-source posts surfaced through native reposts. Two coalition-authored quote posts also appeared as native self-repost cards. Reposting does not establish source-account engagement, collaboration, or endorsement.",
+        "The account is institutional and shared. The population does not identify who authored individual coalition posts and does not assign the feed to Jamie.",
+        "Hashtag, source-author, posted-link, and visible-interaction counts describe the recovered public corpus; they are not measures of reach, participation, policy causality, or impact.",
+        "For native reposts, the displayed timestamp is the source-post date rather than the date @NYCArtC reposted it.",
+        "The public fixture retains status URLs and the first matched public-safe value rather than surrounding post text. Reviewers can spot-check a stratified sample of live status URLs, but unavailable posts remain a verification limit."
       ]
     },
     {
@@ -2601,6 +2708,9 @@
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019",
         "SRC-NYCAC-MAYOR-CURE-2023-12-28",
+        "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+        "SRC-X-HELP-MISSING-POSTS-2026-07-14",
+        "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14",
         "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
         "SRC-NYCAC-ESPINAL-CABARET-2017-10-30",
         "SRC-NYCAC-ESPINAL-TOWN-HALL-2018-03-25",
@@ -2692,6 +2802,16 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NYCAC-MAYOR-CURE-2023-12-28"
+          ]
+        },
+        {
+          "id": "social-infrastructure",
+          "claimId": "CLM-NYCAC-SOCIAL-INFRASTRUCTURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+            "SRC-X-HELP-MISSING-POSTS-2026-07-14",
+            "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14"
           ]
         },
         {

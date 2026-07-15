@@ -13,6 +13,7 @@ const callNycCouncilClaimId = "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT";
 const callNycGuidanceClaimId = "CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE";
 const nycacCouncilClaimId = "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT";
 const nycacIdentityClaimId = "CLM-NYCAC-SHARED-IDENTITY-STEWARDSHIP";
+const nycacSocialInfrastructureClaimId = "CLM-NYCAC-SOCIAL-INFRASTRUCTURE";
 const wowListSocialClaimId = "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE";
 const kcTownHallSocialClaimId = "CLM-KCTH-SOCIAL-OPERATING-SURFACE";
 
@@ -91,6 +92,23 @@ export const socialMediaReviewSummary = {
   nycacCouncilMemberAuthorCount2017To2020: 6,
   nycacMissionRelevantCouncilMemberAccountCount2017To2020: 4,
   nycacHistoricalMentionRecordCount2017To2020: 358,
+  nycacProfilePostCount: 5124,
+  nycacRecoveredTimelineAndSearchRecordCount: 3123,
+  nycacProfileCountNotMaterialized: 2001,
+  nycacRecoveredOriginalPostCount: 608,
+  nycacRecoveredReplyCount: 77,
+  nycacRecoveredRepostCount: 2438,
+  nycacOriginalAndReplyRecordCount: 685,
+  nycacExternalSourceNativeRepostRecordCount: 2438,
+  nycacTimelineNativeRepostAppearanceCount: 2440,
+  nycacAccountAuthoredStatusAlsoSeenAsSelfRepostCount: 2,
+  nycacDistinctSourceAuthorCount: 623,
+  nycacDistinctExternalShortUrlCount: 1161,
+  nycacPost2020IncomingSearchRecordCount: 98,
+  nycacPost2020IncomingAuthorCount: 43,
+  nycacPost2020DirectMentionRecordCount: 75,
+  nycacPost2020DirectMentionAuthorCount: 34,
+  nycacPost2020ConversationContextRecordCount: 23,
   wowListProfilePostCount: 38,
   wowListRecoveredTimelineRecordCount: 38,
   wowListRecoveredOriginalPostCount: 16,
@@ -1021,6 +1039,78 @@ const callNycCuratedArticleSources = [
   },
 ] satisfies SourceRecord[];
 
+const nycacPopulationSource = {
+  id: "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+  title: "Authenticated @NYCArtC retrievable-population archival review",
+  organization: "Jamie Burkart portfolio knowledge bank",
+  author: "Codex authenticated archival review",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  capturedAt: reviewedAt,
+  accessedAt: reviewedAt,
+  canonicalUrl:
+    "https://github.com/openhouse/jamieburk.art/blob/8c813d82d6e49ecba7a36ddbabff1280c85d77f2/apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+  preferredPublicUrl: "canonical",
+  publicCitation:
+    "Authenticated July 14, 2026 review of all 3,123 unique @NYCArtC records materialized by the exhausted public profile and yearly authored-search surfaces, with public-safe source, link, classification, and bounded incoming-mention metadata preserved in the repository.",
+  publicNote:
+    "The profile reported 5,124 posts. X's documented display limits left 2,001 profile-counted records outside the reviewed public surfaces; an owner-archive attempt is required to recover or explain that gap. They are not treated as reviewed, absent, or deleted.",
+  supportsGenerally: [
+    "complete retrievable public population",
+    "record-type and posted-URL inventory",
+    "shared-account publishing and curation patterns",
+    "bounded post-2020 stakeholder response",
+  ],
+  doesNotEstablish: [
+    "the content of 2,001 archive-only profile-counted records",
+    "authorship of every shared-account post",
+    "engagement by every reposted source account",
+    "reach, endorsement, policy causality, or campaign impact",
+  ],
+} satisfies SourceRecord;
+
+const xMissingPostsSource = {
+  id: "SRC-X-HELP-MISSING-POSTS-2026-07-14",
+  title: "Help with missing Posts",
+  organization: "X Help Center",
+  kind: "institutional-web-page",
+  visibility: "public",
+  preservationStatus: "live",
+  accessedAt: reviewedAt,
+  canonicalUrl: "https://help.x.com/en/using-x/missing-posts",
+  preferredPublicUrl: "canonical",
+  publicCitation:
+    "X documents that profile Posts displays the latest 800 records and Posts & replies displays the latest 3,200; older posts can also fail to appear because of indexing limits.",
+  supportsGenerally: ["platform retrieval and indexing limits"],
+  doesNotEstablish: [
+    "which specific @NYCArtC records fall outside public display limits",
+    "that an unmaterialized record was deleted",
+  ],
+} satisfies SourceRecord;
+
+const xArchiveHistorySource = {
+  id: "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14",
+  title: "New user FAQ",
+  organization: "X Help Center",
+  kind: "institutional-web-page",
+  visibility: "public",
+  preservationStatus: "live",
+  accessedAt: reviewedAt,
+  canonicalUrl: "https://help.x.com/en/resources/new-user-faq",
+  preferredPublicUrl: "canonical",
+  publicCitation:
+    "X states that profile timelines expose up to 3,200 recent posts and directs account owners to download an X Archive to browse account information beginning with the first post.",
+  supportsGenerally: [
+    "owner-archive route beyond the public profile timeline",
+    "first-post archive boundary",
+  ],
+  doesNotEstablish: [
+    "which specific @NYCArtC records fall outside public display limits",
+    "that the archive will reconcile exactly to the current profile counter",
+  ],
+} satisfies SourceRecord;
+
 const wowListPopulationSource = {
   id: "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
   title: "Authenticated @wowlist full-population archival review",
@@ -1420,6 +1510,9 @@ export const socialMediaSources = [
   ...profileSources,
   callNycPopulationSource,
   ...callNycCuratedArticleSources,
+  nycacPopulationSource,
+  xMissingPostsSource,
+  xArchiveHistorySource,
   wowListPopulationSource,
   ...wowListCuratedSources,
   kcTownHallPopulationSource,
@@ -1574,6 +1667,77 @@ const callNycPopulationObservations = [
     confidence: "high",
     limitations: ["The public thread does not establish a formal partnership with CallNYC."],
     supportsClaimIds: [callNycGuidanceClaimId],
+    reviewedAt,
+  },
+] satisfies ObservationRecord[];
+
+const nycacPopulationObservations = [
+  {
+    id: "OBS-SOCIAL-NYCAC-RETRIEVABLE-POPULATION",
+    sourceId: nycacPopulationSource.id,
+    project: "fair-rent-nyc",
+    statement:
+      "The exhausted authenticated profile and yearly authored-search surfaces yielded 3,123 unique source-status URLs: 608 account originals, 77 account replies, and 2,438 external-source posts surfaced through native reposts. Two account-authored quote posts also appeared as native self-repost cards in the profile capture.",
+    observationType: "metadata",
+    locator:
+      "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+    confidence: "high",
+    limitations: [
+      "The profile reported 5,124 posts, leaving 2,001 profile-counted records outside the recovered public surfaces.",
+      "Native repost timestamps are source-post dates, not the date @NYCArtC reposted them.",
+      "Shared-account records are not assigned to Jamie or another individual without post-level evidence.",
+    ],
+    supportsClaimIds: [
+      nycacSocialInfrastructureClaimId,
+      nycacCouncilClaimId,
+    ],
+    reviewedAt,
+  },
+  {
+    id: "OBS-SOCIAL-NYCAC-PUBLISHING-PATTERN",
+    sourceId: nycacPopulationSource.id,
+    project: "fair-rent-nyc",
+    statement:
+      "Across the recovered population, recurring campaign signals, posted links, and source circulation show the shared account operating as durable public infrastructure for calls to action, partner amplification, public resources, artist-labor information, commercial-rent advocacy, and nightlife accountability.",
+    observationType: "metadata",
+    locator:
+      "publishingPattern, postedUrlInventory, and sourceAuthorNetwork in apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+    confidence: "high",
+    limitations: [
+      "The functions are corpus-level publishing patterns, not evidence that Jamie authored the feed or that a source account engaged with the coalition.",
+      "Overlapping mission signals describe subject matter, not reach, participation, endorsement, causality, or impact.",
+    ],
+    supportsClaimIds: [nycacSocialInfrastructureClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-SOCIAL-NYCAC-PLATFORM-RETRIEVAL-LIMIT",
+    sourceId: xMissingPostsSource.id,
+    project: "fair-rent-nyc",
+    statement:
+      "X documents fixed profile display limits and indexing restrictions, so further public scrolling cannot establish literal 100% recovery of @NYCArtC.",
+    observationType: "explicit",
+    locator: "Missing Posts help page, profile-timeline limits section",
+    confidence: "high",
+    limitations: [
+      "The help page explains platform limits generally; it does not identify the 2,001 specific @NYCArtC records outside the recovered union.",
+    ],
+    supportsClaimIds: [nycacSocialInfrastructureClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-SOCIAL-NYCAC-OWNER-ARCHIVE-ROUTE",
+    sourceId: xArchiveHistorySource.id,
+    project: "fair-rent-nyc",
+    statement:
+      "X directs account owners beyond the recent profile timeline to an X Archive that can be browsed beginning with the account's first post, making the owner archive the appropriate next retrieval surface for the 2,001-record public gap.",
+    observationType: "explicit",
+    locator: "New user FAQ, 'Why can't I see all my posts?'",
+    confidence: "high",
+    limitations: [
+      "The help page documents the archive route generally; it does not guarantee that the downloaded archive will reconcile exactly to the current @NYCArtC profile counter.",
+    ],
+    supportsClaimIds: [nycacSocialInfrastructureClaimId],
     reviewedAt,
   },
 ] satisfies ObservationRecord[];
@@ -1762,6 +1926,7 @@ const kcTownHallPopulationObservations = [
 export const socialMediaObservations = [
   ...profileObservations,
   ...callNycPopulationObservations,
+  ...nycacPopulationObservations,
   ...wowListPopulationObservations,
   ...kcTownHallPopulationObservations,
   ...socialPostDescriptors.map(
@@ -1798,6 +1963,11 @@ const callNycGuidanceSourceIds = [
   ...callNycCuratedArticleSources.map((source) => source.id),
 ];
 const nycacCouncilSourceIds = sourceIdsForClaim(nycacCouncilClaimId);
+const nycacPopulationSourceIds = [
+  nycacPopulationSource.id,
+  xMissingPostsSource.id,
+  xArchiveHistorySource.id,
+];
 const wowListSocialSourceIds = sourceIdsForClaim(wowListSocialClaimId);
 const wowListSourceIds = [
   wowListPopulationSource.id,
@@ -1890,6 +2060,7 @@ export const socialMediaCaptures = [
     potentialProjectIds: ["fair-rent-nyc"],
     potentialClaimFamilies: ["public-official engagement", "campaign mobilization", "coalition traction"],
     sourceIds: [
+      nycacPopulationSource.id,
       ...nycacCouncilSourceIds,
       ...nycacIncidentalCouncilSourceIds,
     ],
@@ -1901,7 +2072,31 @@ export const socialMediaCaptures = [
     ],
     researchTaskIds: ["RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY"],
     disposition:
-      "Promoted four mission-relevant Council Member accounts; retained two incidental or logistical author appearances only in the research count.",
+      "Promoted four mission-relevant Council Member accounts; retained two incidental or logistical author appearances only in the research count, and closed the post-2020 bounded-search task without inflating the serving-Council count.",
+  },
+  {
+    id: "CAP-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026",
+    receivedAt: reviewedAt,
+    submittedBy: "Codex authenticated archival review",
+    kind: "artifact",
+    summary:
+      "Public-safe archival-production pass over all 3,123 unique @NYCArtC records materialized by exhausted public profile and yearly authored-search surfaces, reconciled against a 5,124-post profile counter.",
+    status: "integrated",
+    publicSafety: "public-safe",
+    potentialProjectIds: ["fair-rent-nyc"],
+    potentialClaimFamilies: [
+      "shared public identity",
+      "campaign coordination",
+      "mission-relevant source curation",
+      "stakeholder response",
+    ],
+    sourceIds: nycacPopulationSourceIds,
+    observationIds: nycacPopulationObservations.map(
+      (observation) => observation.id,
+    ),
+    researchTaskIds: ["RT-SOCIAL-NYCAC-OWNER-ARCHIVE"],
+    disposition:
+      "Promoted the defensible shared-account infrastructure pattern; preserved all recovered status and posted-URL metadata, bounded incoming response, and the 2,001-record owner-archive gap without attributing the institutional feed to Jamie post by post.",
   },
   {
     id: "CAP-SOCIAL-NYCAC-IDENTITY-STEWARDSHIP-2026",
@@ -2132,6 +2327,16 @@ export const socialMediaClaims = [
         confidence: "high",
         renderCitation: true,
       },
+      {
+        sourceId: nycacPopulationSource.id,
+        relationship: "context",
+        supports: [
+          "bounded post-2020 incoming-mention inventory",
+          "shared-account authorship boundary",
+        ],
+        confidence: "high",
+        renderCitation: false,
+      },
       ...nycacCouncilSourceIds.map((sourceId) => ({
         sourceId,
         relationship: "direct-support" as const,
@@ -2142,7 +2347,7 @@ export const socialMediaClaims = [
     ],
     boundaries: [
       "The broad historical result set contained six Council Member account authors; two incidental or logistical appearances are not counted as mission-relevant traction.",
-      "The recovered mention corpus covers 2017-2020; a complete post-2020 incoming-mention inventory remains open.",
+      "A bounded 2021-2026 search rendered 98 records: 75 direct @NYCArtC matches and 23 surrounding conversation-context records. It added no serving-Council Member author to the four-account mission-relevant count and is not a complete archive of every later mention.",
       "Shared-account posts must not be attributed to Jamie without post-level authorship evidence.",
       "Engagement does not establish policy causality, sole coalition ownership, or blanket endorsement.",
     ],
@@ -2153,6 +2358,80 @@ export const socialMediaClaims = [
     ],
     researchTaskIds: ["RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY"],
     researchInquiryIds: ["INQ-SOCIAL-NYCAC-COUNCIL-ENGAGEMENT-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"],
+  },
+  {
+    id: nycacSocialInfrastructureClaimId,
+    project: "fair-rent-nyc",
+    claimType: "method",
+    internalClaim:
+      "The 3,123-record retrievable @NYCArtC population shows a durable shared public infrastructure for coalition calls to action, campaign continuity, partner amplification, source curation, artist-labor resources, commercial-rent advocacy, and nightlife accountability.",
+    epistemicState: "corroborated",
+    publicationState: "approved",
+    selectionState: "selected",
+    status: "confirmed-with-boundary",
+    observationIds: observationIdsForClaim(nycacSocialInfrastructureClaimId),
+    projections: [
+      {
+        key: "case-study",
+        text:
+          "NYC Artist Coalition used a shared account as durable public infrastructure across six campaign and policy lines: calls to action, partner amplification, public resources, and mission-relevant reporting. This pass reviewed every one of the 3,123 unique status URLs X made retrievable; the cited knowledge record preserves the complete taxonomy, platform limits, and owner-archive boundary. No shared-account post is assigned to Jamie without post-level evidence.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/fair-rent-nyc"],
+      },
+    ],
+    evidence: [
+      {
+        sourceId: nycacPopulationSource.id,
+        relationship: "direct-support",
+        supports: [
+          "complete retrievable population and reconciliation",
+          "record-type, source-author, hashtag, and posted-URL inventories",
+          "bounded post-2020 stakeholder response",
+        ],
+        confidence: "high",
+        renderCitation: true,
+      },
+      {
+        sourceId: xMissingPostsSource.id,
+        relationship: "supports-boundary",
+        supports: ["platform display and indexing limits"],
+        confidence: "high",
+        renderCitation: true,
+      },
+      {
+        sourceId: xArchiveHistorySource.id,
+        relationship: "supports-boundary",
+        supports: ["owner-archive route beyond the recent profile timeline"],
+        confidence: "high",
+        renderCitation: true,
+      },
+      {
+        sourceId: "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
+        relationship: "context",
+        supports: ["shared multi-campaign identity", "profile counter"],
+        confidence: "high",
+        renderCitation: false,
+      },
+    ],
+    boundaries: [
+      "The recovered union is 3,123 of 5,124 profile-counted posts. Literal 100% recovery requires the owner archive; the 2,001-record remainder is not represented as absent or deleted.",
+      "Source-status identity, including source authorship, and profile-timeline appearance are separate fields: 685 source statuses are coalition-account originals or replies and 2,438 are external-source posts surfaced through native reposts. Two coalition-authored quote posts also appeared as native self-repost cards. Reposting does not establish source-account engagement, collaboration, or endorsement.",
+      "The account is institutional and shared. The population does not identify who authored individual coalition posts and does not assign the feed to Jamie.",
+      "Hashtag, source-author, posted-link, and visible-interaction counts describe the recovered public corpus; they are not measures of reach, participation, policy causality, or impact.",
+      "For native reposts, the displayed timestamp is the source-post date rather than the date @NYCArtC reposted it.",
+      "The public fixture retains status URLs and the first matched public-safe value rather than surrounding post text. Reviewers can spot-check a stratified sample of live status URLs, but unavailable posts remain a verification limit.",
+    ],
+    antiClaims: [
+      "All 5,124 profile-counted posts were recovered.",
+      "Jamie authored all @NYCArtC posts.",
+      "Every reposted source account engaged with or endorsed NYC Artist Coalition.",
+      "The social archive proves that NYC Artist Coalition caused the cited policy outcomes.",
+    ],
+    researchTaskIds: ["RT-SOCIAL-NYCAC-OWNER-ARCHIVE"],
+    researchInquiryIds: ["INQ-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026"],
     reviewedAt,
     reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"],
   },
@@ -2395,9 +2674,15 @@ export const socialMediaResearchTasks = [
     question:
       "Which mission-relevant public-official and collaborator engagements with @NYCArtC can be recovered from 2021 to the present?",
     priority: "medium",
-    status: "open",
-    captureIds: ["CAP-SOCIAL-NYCAC-COUNCIL-ENGAGEMENT-2026"],
-    sourceIds: ["SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14"],
+    status: "complete",
+    captureIds: [
+      "CAP-SOCIAL-NYCAC-COUNCIL-ENGAGEMENT-2026",
+      "CAP-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026",
+    ],
+    sourceIds: [
+      "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
+      nycacPopulationSource.id,
+    ],
     claimIds: [nycacCouncilClaimId],
     successCriteria: [
       "Recover a dated, deduplicated post-2020 incoming-mention inventory.",
@@ -2405,12 +2690,39 @@ export const socialMediaResearchTasks = [
       "Preserve post-level authorship and collective-work boundaries.",
     ],
     nextActions: [
-      "Retry bounded date windows after the platform search error clears.",
-      "Archive public URLs and classify only mission-relevant records.",
+      "Reopen only if an owner archive or a materially broader indexed search surface becomes available.",
+      "Keep former-officeholder, candidate, tag, and source-repost context separate from serving-Council engagement.",
     ],
     publicNote:
-      "The 2017-2020 inventory is complete for the recovered search result; post-2020 incoming mentions remain an explicit gap.",
+      "The bounded post-2020 Latest search rendered 98 public records from 43 authors: 75 records from 34 authors directly match @NYCArtC, while 23 surrounding conversation-context records remain visible for auditability. It adds partner and collaborator continuity but no serving-Council Member author to the four-account mission-relevant count.",
     owner: "Portfolio research",
+    reviewedAt,
+  },
+  {
+    id: "RT-SOCIAL-NYCAC-OWNER-ARCHIVE",
+    project: "fair-rent-nyc",
+    question:
+      "Can the 2,001 @NYCArtC records implied by the 5,124-post profile counter but absent from exhausted public surfaces be recovered from the account-owner X Archive?",
+    priority: "critical",
+    status: "blocked",
+    captureIds: ["CAP-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026"],
+    sourceIds: nycacPopulationSourceIds,
+    claimIds: [nycacSocialInfrastructureClaimId],
+    successCriteria: [
+      "Ingest the owner archive's complete post and repost index without publishing private account data.",
+      "Reconcile stable status IDs against the 3,123-record public union and the 5,124-post profile counter.",
+      "Review and classify every newly materialized record while preserving source authorship and shared-account boundaries.",
+      "Replace the current 3,123-of-5,124 projection only if the archive closes or explains the full counter gap.",
+    ],
+    nextActions: [
+      "Request and download the @NYCArtC X Archive from the authenticated account-owner settings.",
+      "Provide the downloaded ZIP to the private archival workspace for public-safe transformation and reconciliation.",
+    ],
+    publicNote:
+      "All 3,123 records materialized by the exhausted public surfaces were reviewed. X directs account owners beyond the recent profile timeline to an archive that can be browsed from the first post; 2,001 profile-counted records remain outside this public capture.",
+    owner: "Jamie Burkart",
+    blockedReason:
+      "The account-owner X Archive has not yet been supplied; X's documented public display limits prevent literal 100% recovery from profile and search alone.",
     reviewedAt,
   },
   {
@@ -2617,7 +2929,8 @@ export const socialMediaInquiries = [
       "Traversed the authenticated Latest search for @NYCArtC mentions from January 2017 through December 2020.",
       "Deduplicated 358 visible status URLs and grouped records by author handle.",
       "Separated mission-relevant engagement from incidental or logistical thread appearances.",
-      "Retried post-2020 bounded searches and recorded the platform error rather than treating the period as empty.",
+      "Recovered and reviewed a second bounded Latest search for @NYCArtC mentions from January 2021 through July 14, 2026, rendering 98 records from 43 authors; 75 records from 34 authors directly match @NYCArtC and 23 are surrounding conversation context.",
+      "Kept serving Council Members, former officeholders, candidates, tagged officials, and reposted source authors in separate evidence classes.",
     ],
     runAt: reviewedAt,
     resultStatus: "partially-recovered",
@@ -2626,19 +2939,61 @@ export const socialMediaInquiries = [
       "Four had clearly mission-relevant records: Rafael Espinal, Stephen Levin, Carlina Rivera, and Jimmy Van Bramer.",
       "Mission-relevant posts connected the account to Cabaret Law repeal, Office of Nightlife convening, Talks Not Raids, public testimony, co-sponsorship, cultural-space preservation, and arts-and-culture advocacy.",
       "Two additional Council Member author appearances were incidental or too context-limited to count as mission-relevant traction.",
+      "The bounded 2021-2026 set adds partner, collaborator, public-service-advertising, theater, and nightlife continuity but no serving-Council Member author to the four-account mission-relevant count.",
     ],
     limitations: [
-      "The complete post-2020 incoming-mention inventory was not recovered because X returned a persistent search error.",
+      "The 98-record post-2020 set is complete for the materialized bounded search result, including 23 conversation-context records; it is not a complete archive of every later mention.",
       "Native reposts, deleted posts, likes, and private activity are not included.",
       "The account was shared; post authorship must remain at the visible account level.",
     ],
     sourceIds: [
       "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
+      nycacPopulationSource.id,
       ...nycacCouncilSourceIds,
       ...nycacIncidentalCouncilSourceIds,
     ],
     publicSummary:
-      "The recovered 2017-2020 corpus contains mission-relevant engagement from at least four Council Member accounts, with a later-period inventory still open.",
+      "The recovered 2017-2020 corpus contains mission-relevant engagement from at least four Council Member accounts. A bounded 98-record 2021-2026 mention set adds partner and collaborator continuity without inflating that serving-Council count.",
+  },
+  {
+    id: "INQ-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026",
+    project: "fair-rent-nyc",
+    question:
+      "What mission-relevant publishing, posted-source, and stakeholder-response patterns appear across the complete retrievable @NYCArtC population?",
+    methods: [
+      "Traversed the authenticated Posts and Posts & replies timelines through repeated no-growth states.",
+      "Ran exact yearly from:NYCArtC Latest searches from 2017 through July 14, 2026 to recover older authored records outside the profile surfaces.",
+      "Deduplicated 3,123 primary status URLs and classified all materialized records as original, reply, or native repost; source quote posts remain original even when their embedded quoted cards are replies.",
+      "Inventoried every recovered t.co link, visible source author, mention handle, and hashtag while excluding post text and authenticated-session state from the public fixture.",
+      "Separated source-status identity from profile-timeline appearance before measuring publishing or stakeholder patterns: 685 source statuses are account originals or replies, 2,438 are external-source posts surfaced through native reposts, and two account-authored quote posts also appeared as native self-repost cards.",
+      "Excluded profile chrome, source display names, and quoted-card content from source-post-body classification, then generated each mission-signal label with the checked-in classifier and retained a per-row input digest plus the first matched phrase, hashtag, or displayed link destination.",
+      "Reconciled the public union against the 5,124-post profile counter and X's documented 800/3,200 profile display limits.",
+      "Recovered and classified a bounded 98-record post-2020 incoming-mention set for collaborator, partner, public-service-advertising, theater, nightlife, and officeholder context.",
+    ],
+    runAt: reviewedAt,
+    resultStatus: "partially-recovered",
+    findings: [
+      "The retrievable union contains 3,123 unique source-status URLs: 608 account originals, 77 account replies, and 2,438 external-source posts surfaced through native reposts. Fifteen source quote posts were kept original rather than inheriting a quoted card's reply state. Two account-authored quote posts also appeared as native self-repost cards; the taxonomy preserves both facts without double-counting the status URLs.",
+      "The recovered population preserves 1,161 distinct posted short URLs and 623 visible source authors across public agencies, elected officials, artist-labor groups, independent arts organizations, small-business coalitions, tenant and legal advocates, journalism, and community accounts.",
+      "Deterministic overlapping subject signals recover 477 FairRentNYC, 192 SaveNYCSpaces, 97 LetNYCDance, 62 TalksNotRaids, 57 nightlife-governance, and 98 artist-labor records after profile chrome and quoted-card text are excluded; these are publishing-pattern counts, not impact measures.",
+      "The source network's most frequent visible authors include the coalition account, Olympia Kazi, Future of Music Coalition, United for Small Business NYC, Music Workers Alliance, Street Vendor Project, Artist Studio Affordability Project, and League of Independent Theater New York.",
+      "The bounded post-2020 search rendered 98 records from 43 authors: 75 records from 34 authors directly match @NYCArtC and 23 are surrounding conversation context. Olympia Kazi authored 15 of the rendered records; TakeRoot Justice and United for Small Business NYC supplied explicit partner or co-host context, while F.Y. Eye documented public-service-advertising distribution.",
+      "The recovered public union covers 60.9% of the 5,124-post profile counter. X's documented limits make the remaining 2,001 records an owner-archive retrieval task rather than evidence of absence or deletion.",
+    ],
+    limitations: [
+      "Literal 100% profile-counter recovery remains blocked until the account-owner X Archive is supplied.",
+      "Native repost timestamps are source-post dates, not the dates @NYCArtC reposted them.",
+      "A source account's appearance through a native repost is not evidence that it engaged with the coalition, endorsed a campaign, collaborated with Jamie, or authorized the repost.",
+      "The account is shared and institutional; no individual is assigned authorship of the feed without post-level evidence.",
+      "Visible interaction, source-author, hashtag, and posted-link counts do not establish reach, participation, endorsement, policy causality, or impact.",
+      "Mission signals are overlapping deterministic subject labels. Positive matches are auditable from the checked-in classifier, input digest, and retained matched value; full false-negative replay requires the private raw capture. The labels do not establish authorship, endorsement, causality, or impact.",
+    ],
+    sourceIds: [
+      "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
+      ...nycacPopulationSourceIds,
+    ],
+    publicSummary:
+      "All 3,123 records materialized by exhausted public surfaces were reviewed. They show a shared coalition account sustaining calls to action, partner amplification, public resources, source curation, and campaign continuity across cultural-space, commercial-rent, nightlife-accountability, and artist-labor work; the 2,001-record owner-archive gap remains explicit.",
   },
   {
     id: "INQ-SOCIAL-WOWLIST-TIMELINE-2026",

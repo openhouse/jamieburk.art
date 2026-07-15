@@ -75,6 +75,11 @@ website selection. It is a recommendation, not publication approval.
   selected as coalition-level traction. Preserve the two excluded incidental
   appearances, shared-feed authorship, incomplete post-2020 coverage, and
   causality boundaries.
+- `CLM-NYCAC-SOCIAL-INFRASTRUCTURE`: selected as evidence of a durable shared
+  publishing and curation system across six campaign and policy lines. Lead
+  with its public functions, keep the 3,123-of-5,124 reconciliation attached,
+  preserve source-status identity separately from timeline appearance, and do
+  not assign the institutional feed or its native reposts to Jamie.
 - `CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE`: selected as evidence that the project
   account supported onboarding, product support, source curation, event
   distribution, and coordination. All 38 profile-counted records are

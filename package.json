@@ -25,7 +25,7 @@
     "evals:knowledge": "node scripts/check-knowledge-development-evals.mjs",
     "test:knowledge-evals": "node --test scripts/tests/knowledge-development-evals.test.mjs",
     "run:knowledge-development": "node scripts/run-knowledge-development.mjs",
-    "check:knowledge-development": "node scripts/run-knowledge-development.mjs --label maintained-holdout --judgments docs/qa/evals-G/knowledge-development/social-media-holdout-2-judge.json --require-pass",
+    "check:knowledge-development": "node scripts/run-knowledge-development.mjs --label maintained-holdout --judgments docs/qa/evals-G/knowledge-development/nycartc-final-holdout-I-judge.json --require-pass",
     "test:application-contracts": "node --test scripts/tests/application-contracts.test.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",

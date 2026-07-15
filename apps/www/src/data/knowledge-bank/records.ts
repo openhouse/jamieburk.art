@@ -794,6 +794,9 @@ const knowledgeBankInput = {
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019",
         "SRC-NYCAC-MAYOR-CURE-2023-12-28",
+        "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+        "SRC-X-HELP-MISSING-POSTS-2026-07-14",
+        "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14",
         "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
         "SRC-NYCAC-ESPINAL-CABARET-2017-10-30",
         "SRC-NYCAC-ESPINAL-TOWN-HALL-2018-03-25",
@@ -882,6 +885,16 @@ const knowledgeBankInput = {
           claimId: "CLM-NYCAC-MARCH-REPLACED-BY-CURE",
           projection: "case-study",
           sourceIds: ["SRC-NYCAC-MAYOR-CURE-2023-12-28"],
+        },
+        {
+          id: "social-infrastructure",
+          claimId: "CLM-NYCAC-SOCIAL-INFRASTRUCTURE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+            "SRC-X-HELP-MISSING-POSTS-2026-07-14",
+            "SRC-X-HELP-ARCHIVE-HISTORY-2026-07-14",
+          ],
         },
         {
           id: "council-social-engagement",

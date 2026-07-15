@@ -1,11 +1,11 @@
 # Recursive Knowledge-Development Run
 
-- Date: 2026-07-13 to 2026-07-14
+- Date: 2026-07-13 to 2026-07-15
 - Branch: `feature/evals-G`
 - Suite: `knowledge-development-lifecycle`, version 1
 - Decision: `stop_threshold_met`
 - Final candidate fingerprint:
-  `19fff12f055bbde9bac22a596635d5dfd5e1f05ea382e258a3dbe2b0485ed748`
+  `a0c4a30a8b73e365280be545169a64add0b463a07492222ab26026df2eb326a0`
 
 ## Result
 
@@ -61,18 +61,35 @@ coordination functions without treating social activity as adoption or impact.
 Two fresh WOW List holdouts each scored `KD-006` and `KD-012` at `4/4`; both
 unchanged-candidate scorecards reached `1.0000`.
 
+The NYC Artist Coalition expansion exhausted the authenticated Posts, Posts &
+replies, and yearly authored-search surfaces and reviewed all 3,123 unique
+status URLs they materialized. The public fixture preserves 608 account
+originals, 77 account replies, 2,438 external-source statuses surfaced through
+native reposts, 1,161 distinct posted short URLs, 623 visible source authors,
+15 quote-post corrections, and two account-authored statuses also observed as
+self-repost cards. The profile counter reports 5,124 posts; the remaining 2,001
+are explicitly blocked on an account-owner archive rather than represented as
+reviewed, absent, or deleted.
+
+Independent holdouts exposed and corrected source-status/timeline-appearance
+conflation, quoted-card classifier leakage, inherited reply state on quote
+posts, an ambiguous engagement-field name, and excessive archive mechanics in
+the hiring paragraph. Two final fresh holdouts on the unchanged candidate then
+scored `KD-006` and `KD-012` at `4/4`; both scorecards reached `1.0000` with all
+thirteen criteria met.
+
 Passing this suite means the knowledge-development system and calibration
 corpus meet their criteria. It does not approve held claims for the website or
 authorize production deployment.
 
 ## Corpus Developed
 
-- 49 public-safe captures, all integrated or routed;
-- 126 normalized development sources, including 41 new article records and 4
+- 51 public-safe captures, all integrated or routed;
+- 154 normalized sources, including 41 new article records and 4
   campaign Press indexes in the campaign-press expansion;
-- 171 located, limited atomic observations;
-- 34 developed claims, plus selected claims in the canonical registry;
-- 23 prioritized research tasks;
+- 194 located, limited atomic observations;
+- 36 developed claims, plus selected claims in the canonical registry;
+- 26 prioritized research tasks;
 - 0 canonical validation errors;
 - 45 ordered campaign-press placements representing 44 unique articles;
 - 4 official KC Town Hall funding sources, 1 metadata-only first-hand source,
@@ -122,6 +139,11 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 | WOW List first holdout            |     `4/4`, `3/4` | Repair dangling methodology sentence         |
 | WOW List final holdout 1          |         `1.0000` | Pass                                         |
 | WOW List final holdout 2          |         `1.0000` | Pass; stop threshold met                     |
+| NYCAC first population holdout    |     `4/4`, `3/4` | Revise taxonomy and replayability            |
+| NYCAC classifier holdout          |     `4/4`, `3/4` | Remove quoted-card leakage                    |
+| NYCAC editorial holdout           |     `3/4`, `3/4` | Clarify metric; compress public projection   |
+| NYCAC final holdout H             |         `1.0000` | Pass                                         |
+| NYCAC final holdout I             |         `1.0000` | Pass; stop threshold met                     |
 
 ## Accepted Improvements
 
@@ -180,6 +202,22 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 25. Normalized representative organizer-use, peer-attribution,
     community-response, and circulated-context sources while keeping Jamie,
     collaborators, institutional publishing, and downstream outcomes distinct.
+26. Reconciled all 3,123 records retrievable from exhausted authenticated
+    `@NYCArtC` public surfaces against the 5,124-post counter and routed the
+    2,001-record gap to a critical owner-archive task.
+27. Separated source-status identity from timeline appearance, corrected 15
+    quote posts that had inherited a quoted card's reply state, and preserved
+    two account-authored source URLs also observed as self-repost cards.
+28. Checked in a deterministic mission classifier, per-record input digests,
+    positive-match evidence, and regression tests excluding profile chrome,
+    display names, and quoted-card content.
+29. Preserved 1,161 distinct posted short URLs, 623 visible source authors, six
+    overlapping mission-signal inventories, and bounded incoming-stakeholder
+    findings without converting curation or interaction into endorsement,
+    reach, causality, or impact.
+30. Kept the hiring-facing social-infrastructure projection concise while
+    retaining the complete taxonomy, platform limits, and owner-archive
+    dependency in the cited knowledge record.
 
 ## Evidence
 
@@ -220,6 +258,11 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [WOW List final holdout 1 scorecard](./wowlist-full-population-final-holdout-1-run.json)
 - [WOW List final holdout 2 judgment](./wowlist-full-population-final-holdout-2-judge.json)
 - [WOW List final holdout 2 scorecard](./wowlist-full-population-final-holdout-2-run.json)
+- [NYC Artist Coalition hill-climb record](./2026-07-15-nycartc-retrievable-population-hill-climb.md)
+- [NYC Artist Coalition final holdout H judgment](./nycartc-final-holdout-H-judge.json)
+- [NYC Artist Coalition final holdout H scorecard](./nycartc-final-holdout-H-run.json)
+- [NYC Artist Coalition final holdout I judgment](./nycartc-final-holdout-I-judge.json)
+- [NYC Artist Coalition final holdout I scorecard](./nycartc-final-holdout-I-run.json)
 
 ## Teams Archive Production
 

@@ -44,6 +44,7 @@ import {
   socialMediaSources,
 } from "../apps/www/src/data/knowledge-bank/social-media-production.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
+import { nycacMissionSignalRules } from "./lib/nycac-mission-classifier.mjs";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
@@ -61,6 +62,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/social-media-production.ts",
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
@@ -88,6 +90,7 @@ const candidateFiles = [
   "docs/knowledge-bank/projects/google-shared-drives-production.md",
   "docs/knowledge-bank/projects/social-media-production.md",
   "scripts/lib/citation-validation.mjs",
+  "scripts/lib/nycac-mission-classifier.mjs",
   "scripts/tests/citations.test.mjs",
   "scripts/tests/knowledge-development-evals.test.mjs",
   "docs/knowledge-bank/promotion-slate.md",
@@ -108,6 +111,12 @@ const socialMediaInventory = JSON.parse(
 const callNycPopulationInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+    "utf8",
+  ),
+);
+const nycacPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
     "utf8",
   ),
 );
@@ -155,9 +164,9 @@ function immutableGitHubFixtureMatches(source, fixturePath) {
   );
   if (!match || match[2] !== fixturePath) return false;
   try {
-    return execFileSync("git", ["show", `${match[1]}:${fixturePath}`]).equals(
-      readFileSync(fixturePath),
-    );
+    return execFileSync("git", ["show", `${match[1]}:${fixturePath}`], {
+      maxBuffer: 4 * 1024 * 1024,
+    }).equals(readFileSync(fixturePath));
   } catch {
     return false;
   }
@@ -880,6 +889,9 @@ function deterministicResults(judgments) {
   const nycacIdentityClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-NYCAC-SHARED-IDENTITY-STEWARDSHIP",
   );
+  const nycacInfrastructureClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-SOCIAL-INFRASTRUCTURE",
+  );
   const wowListSocialClaim = socialMediaClaims.find(
     (claim) => claim.id === "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
   );
@@ -892,6 +904,9 @@ function deterministicResults(judgments) {
   const accountCorroborationTask = socialMediaResearchTasks.find(
     (task) =>
       task.id === "RT-SOCIAL-NYCAC-ACCOUNT-ESTABLISHMENT-CORROBORATION",
+  );
+  const nycacOwnerArchiveTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-NYCAC-OWNER-ARCHIVE",
   );
   const callNycMissingPostsTask = socialMediaResearchTasks.find(
     (task) => task.id === "RT-SOCIAL-CALLNYC-UNMATERIALIZED-POSTS",
@@ -914,12 +929,12 @@ function deterministicResults(judgments) {
     .join("\n");
 
   if (
-    socialMediaCaptures.length !== 7 ||
-    socialMediaSources.length !== 63 ||
-    socialMediaObservations.length !== 65 ||
-    socialMediaClaims.length !== 6 ||
-    socialMediaResearchTasks.length !== 6 ||
-    socialMediaInquiries.length !== 6
+    socialMediaCaptures.length !== 8 ||
+    socialMediaSources.length !== 66 ||
+    socialMediaObservations.length !== 69 ||
+    socialMediaClaims.length !== 7 ||
+    socialMediaResearchTasks.length !== 7 ||
+    socialMediaInquiries.length !== 7
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media archival-production graph has an unexpected record count",
@@ -933,6 +948,9 @@ function deterministicResults(judgments) {
   const callNycPopulationRecords = callNycPopulationInventory.records;
   const callNycIncomingRecords =
     callNycPopulationInventory.incomingMentionSearch.records;
+  const nycacPopulationRecords = nycacPopulationInventory.records;
+  const nycacIncomingRecords =
+    nycacPopulationInventory.post2020IncomingMentionInventory.records;
   const callNycPostsTimelineRecords = callNycPopulationRecords.filter((record) =>
     record.recoveredFrom?.includes("posts"),
   );
@@ -975,6 +993,10 @@ function deterministicResults(judgments) {
     ) ||
     callNycIncomingRecords.length !== 11 ||
     new Set(callNycIncomingRecords.map((record) => record.url)).size !== 11 ||
+    nycacPopulationRecords.length !== 3123 ||
+    new Set(nycacPopulationRecords.map((record) => record.url)).size !== 3123 ||
+    nycacIncomingRecords.length !== 98 ||
+    new Set(nycacIncomingRecords.map((record) => record.url)).size !== 98 ||
     wowListPopulationRecords.length !== 38 ||
     new Set(wowListPopulationRecords.map((record) => record.url)).size !== 38 ||
     wowListPostsTimelineRecords.length !== 37 ||
@@ -1011,6 +1033,25 @@ function deterministicResults(judgments) {
       4 ||
     socialMediaReviewSummary.nycacHistoricalMentionRecordCount2017To2020 !==
       358 ||
+    socialMediaReviewSummary.nycacRecoveredTimelineAndSearchRecordCount !==
+      3123 ||
+    socialMediaReviewSummary.nycacProfileCountNotMaterialized !== 2001 ||
+    socialMediaReviewSummary.nycacRecoveredOriginalPostCount !== 608 ||
+    socialMediaReviewSummary.nycacRecoveredReplyCount !== 77 ||
+    socialMediaReviewSummary.nycacRecoveredRepostCount !== 2438 ||
+    socialMediaReviewSummary.nycacOriginalAndReplyRecordCount !== 685 ||
+    socialMediaReviewSummary.nycacExternalSourceNativeRepostRecordCount !==
+      2438 ||
+    socialMediaReviewSummary.nycacTimelineNativeRepostAppearanceCount !== 2440 ||
+    socialMediaReviewSummary
+      .nycacAccountAuthoredStatusAlsoSeenAsSelfRepostCount !== 2 ||
+    socialMediaReviewSummary.nycacDistinctSourceAuthorCount !== 623 ||
+    socialMediaReviewSummary.nycacDistinctExternalShortUrlCount !== 1161 ||
+    socialMediaReviewSummary.nycacPost2020IncomingSearchRecordCount !== 98 ||
+    socialMediaReviewSummary.nycacPost2020IncomingAuthorCount !== 43 ||
+    socialMediaReviewSummary.nycacPost2020DirectMentionRecordCount !== 75 ||
+    socialMediaReviewSummary.nycacPost2020DirectMentionAuthorCount !== 34 ||
+    socialMediaReviewSummary.nycacPost2020ConversationContextRecordCount !== 23 ||
     socialMediaReviewSummary.wowListRecoveredTimelineRecordCount !== 38 ||
     socialMediaReviewSummary.wowListRecoveredOriginalPostCount !== 16 ||
     socialMediaReviewSummary.wowListRecoveredReplyCount !== 6 ||
@@ -1058,6 +1099,58 @@ function deterministicResults(judgments) {
   ) {
     socialMediaIntegrityViolations.push(
       "CallNYC full-population reconciliation or publishing-pattern counts drifted",
+    );
+  }
+  if (
+    nycacPopulationInventory.populationReconciliation.profileReportedPostCount !==
+      5124 ||
+    nycacPopulationInventory.populationReconciliation.postsTimelineUniqueCount !==
+      764 ||
+    nycacPopulationInventory.populationReconciliation
+      .postsAndRepliesTimelinePrimaryCount !== 2698 ||
+    nycacPopulationInventory.populationReconciliation.recoveredUnionRecordCount !==
+      3123 ||
+    nycacPopulationInventory.populationReconciliation.profileCountNotMaterialized !==
+      2001 ||
+    nycacPopulationInventory.recordTypeCounts.original !== 608 ||
+    nycacPopulationInventory.recordTypeCounts.reply !== 77 ||
+    nycacPopulationInventory.recordTypeCounts.repost !== 2438 ||
+    nycacPopulationInventory.publishingPattern
+      .accountOriginalAndReplyRecordCount !== 685 ||
+    nycacPopulationInventory.publishingPattern
+      .timelineNativeRepostAppearanceCount !==
+      2440 ||
+    nycacPopulationInventory.publishingPattern
+      .externalSourceNativeRepostRecordCount !==
+      2438 ||
+    nycacPopulationInventory.publishingPattern
+      .accountAuthoredStatusAlsoSeenAsSelfRepostCount !== 2 ||
+    nycacPopulationInventory.publishingPattern
+      .accountQuotePostReplyInheritanceCorrectionCount !== 15 ||
+    !nycacPopulationInventory.publishingPattern.accountQuotePostReplyInheritanceCorrectionUrls.includes(
+      "https://x.com/NYCArtC/status/1621553786790596609",
+    ) ||
+    nycacPopulationRecords.some(
+      (record) =>
+        nycacPopulationInventory.publishingPattern.accountQuotePostReplyInheritanceCorrectionUrls.includes(
+          record.url,
+        ) && record.recordType !== "original",
+    ) ||
+    nycacPopulationInventory.publishingPattern.distinctSourceAuthorCount !== 623 ||
+    nycacPopulationInventory.postedUrlInventory.distinctExternalShortUrls !== 1161 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory.renderedRecordCount !==
+      98 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory.distinctAuthorCount !==
+      43 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory
+      .directlyMatchingRecordCount !== 75 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory
+      .directlyMatchingAuthorCount !== 34 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory
+      .conversationContextRecordCount !== 23
+  ) {
+    socialMediaIntegrityViolations.push(
+      "NYC Artist Coalition retrievable-population reconciliation, source, or stakeholder counts drifted",
     );
   }
   if (
@@ -1120,6 +1213,8 @@ function deterministicResults(judgments) {
     callNycGuidanceClaim?.publicationState !== "approved" ||
     nycacSocialClaim?.selectionState !== "selected" ||
     nycacSocialClaim?.publicationState !== "approved" ||
+    nycacInfrastructureClaim?.selectionState !== "selected" ||
+    nycacInfrastructureClaim?.publicationState !== "approved" ||
     wowListSocialClaim?.selectionState !== "selected" ||
     wowListSocialClaim?.publicationState !== "approved" ||
     kcTownHallSocialClaim?.selectionState !== "selected" ||
@@ -1128,7 +1223,8 @@ function deterministicResults(judgments) {
     !nycacIdentityClaim?.projections.every(
       (projection) => projection.status === "hold" && !projection.surfaces.length,
     ) ||
-    laterNycacTask?.status !== "open" ||
+    laterNycacTask?.status !== "complete" ||
+    nycacOwnerArchiveTask?.status !== "blocked" ||
     accountCorroborationTask?.status !== "open" ||
     callNycMissingPostsTask?.status !== "open" ||
     kcTownHallTireTask?.status !== "open" ||
@@ -1142,6 +1238,7 @@ function deterministicResults(judgments) {
     callNycSocialClaim,
     callNycGuidanceClaim,
     nycacSocialClaim,
+    nycacInfrastructureClaim,
     wowListSocialClaim,
     kcTownHallSocialClaim,
   ]) {
@@ -1161,6 +1258,7 @@ function deterministicResults(judgments) {
     !/CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT/.test(socialMediaPublicText) ||
     !/CLM-CALLNYC-SOCIAL-PUBLIC-GUIDANCE/.test(socialMediaPublicText) ||
     !/CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT/.test(socialMediaPublicText) ||
+    !/CLM-NYCAC-SOCIAL-INFRASTRUCTURE/.test(socialMediaPublicText) ||
     !/CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE/.test(socialMediaPublicText) ||
     !/CLM-KCTH-SOCIAL-OPERATING-SURFACE/.test(socialMediaPublicText) ||
     !/at least eight distinct historical NYC Council Member accounts/i.test(
@@ -1170,6 +1268,15 @@ function deterministicResults(judgments) {
       socialMediaPublicText,
     ) ||
     !/at least four NYC Council Member accounts/i.test(socialMediaPublicText) ||
+    !/reviewed every one of the 3,123 unique status URLs X made retrievable/i.test(
+      socialMediaPublicText,
+    ) ||
+    !/cited knowledge record preserves the complete taxonomy, platform limits, and owner-archive boundary/i.test(
+      socialMediaPublicText,
+    ) ||
+    !/2,001 profile-counted records outside the reviewed public surfaces/i.test(
+      socialMediaPublicText,
+    ) ||
     !/all 38 profile-counted/i.test(socialMediaPublicText) ||
     !/10 mission-relevant third-party accounts/i.test(socialMediaPublicText) ||
     !/all 183 profile-counted records/i.test(socialMediaPublicText) ||
@@ -1239,6 +1346,24 @@ function deterministicResults(judgments) {
   ) {
     socialMediaSafetyViolations.push(
       "Public CallNYC population fixture contains raw post/session data or obscures the unrecovered-record boundary",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i.test(
+      JSON.stringify(nycacPopulationInventory),
+    ) ||
+    !/3,123 unique records/i.test(
+      nycacPopulationInventory.populationReconciliation.conclusion,
+    ) ||
+    !/2,001 profile-counted records/i.test(
+      nycacPopulationInventory.populationReconciliation.conclusion,
+    ) ||
+    !/not a complete archive/i.test(
+      nycacPopulationInventory.post2020IncomingMentionInventory.boundary,
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Public NYC Artist Coalition population fixture contains raw post/session data or obscures denominator, source-authorship, or engagement boundaries",
     );
   }
   if (
@@ -1658,6 +1783,219 @@ function deterministicResults(judgments) {
       "The public-safe fixture or promoted claim obscures raw-data, denominator, or authorship boundaries",
     );
   }
+  const nycacPopulationViolations = [];
+  const nycacReconciliation =
+    nycacPopulationInventory.populationReconciliation;
+  const nycacRecordTypeTotal = Object.values(
+    nycacPopulationInventory.recordTypeCounts,
+  ).reduce((sum, count) => sum + count, 0);
+  const nycacExternalLinks = nycacPopulationRecords.flatMap(
+    (record) => record.externalLinks,
+  );
+  const nycacPopulationFixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json";
+  const nycacPopulationSource = sourceById.get(
+    "SRC-SOCIAL-NYCAC-RETRIEVABLE-POPULATION-2026-07-14",
+  );
+  const expectedNycacSelfRepostAppearanceUrls = [
+    "https://x.com/NYCArtC/status/1674013523373068289",
+    "https://x.com/NYCArtC/status/1995868766614462973",
+  ];
+  const nycacSelfRepostAppearanceRecords = nycacPopulationRecords
+    .filter(
+      (record) =>
+        record.accountTimelineAppearances?.includes("native-self-repost-card"),
+    )
+    .sort((a, b) => a.url.localeCompare(b.url));
+  const nycacExternalSourceReposts = nycacPopulationRecords.filter(
+    (record) =>
+      record.recordType === "repost" &&
+      record.authorHandle.toLowerCase() !== "@nycartc",
+  );
+  const nycacAccountOriginalsAndReplies = nycacPopulationRecords.filter(
+    (record) => ["original", "reply"].includes(record.recordType),
+  );
+  const nycacMissionRules = new Map(
+    nycacPopulationInventory.missionSignalClassification.rules.map((rule) => [
+      rule.signalId,
+      rule,
+    ]),
+  );
+  const nycacMissionSignalRows = [
+    ...nycacPopulationRecords,
+    ...nycacIncomingRecords,
+  ];
+  const nycacMissionSignalManifestValid =
+    nycacMissionRules.size === 6 &&
+    JSON.stringify(
+      nycacPopulationInventory.missionSignalClassification.rules,
+    ) ===
+      JSON.stringify(
+        nycacMissionSignalRules.map((rule) => ({
+          signalId: rule.id,
+          pattern: rule.pattern.source,
+          flags: rule.pattern.flags,
+        })),
+      ) &&
+    JSON.stringify(
+      nycacPopulationInventory.missionSignalClassification.inputFields,
+    ) ===
+      JSON.stringify([
+        "source-post-body",
+        "hashtag",
+        "displayed-link-destination",
+      ]) &&
+    nycacMissionSignalRows.every((record) => {
+      if (!Array.isArray(record.missionSignals)) return false;
+      if (!Array.isArray(record.missionSignalEvidence)) return false;
+      if (!/^[a-f0-9]{64}$/.test(record.classificationInputDigest ?? "")) {
+        return false;
+      }
+      if (
+        record.missionSignals.join("|") !==
+        record.missionSignalEvidence
+          .map((evidence) => evidence.signalId)
+          .join("|")
+      ) {
+        return false;
+      }
+      return record.missionSignalEvidence.every((evidence) => {
+        const rule = nycacMissionRules.get(evidence.signalId);
+        return (
+          rule &&
+          nycacPopulationInventory.missionSignalClassification.inputFields.includes(
+            evidence.inputField,
+          ) &&
+          new RegExp(rule.pattern, rule.flags).test(evidence.matchedValue)
+        );
+      });
+    });
+  if (
+    nycacPopulationRecords.length !== 3123 ||
+    new Set(nycacPopulationRecords.map((record) => record.url)).size !== 3123 ||
+    nycacRecordTypeTotal !== 3123 ||
+    nycacPopulationRecords.some(
+      (record) =>
+        !Array.isArray(record.recoveredFrom) || !record.recoveredFrom.length,
+    )
+  ) {
+    nycacPopulationViolations.push(
+      "The recovered NYC Artist Coalition population is incomplete, duplicated, or does not reconcile by record type and retrieval provenance",
+    );
+  }
+  if (
+    nycacReconciliation.profileReportedPostCount !== 5124 ||
+    nycacReconciliation.recoveredUnionRecordCount !== 3123 ||
+    nycacReconciliation.recoveredPopulationReviewedPercent !== 100 ||
+    nycacReconciliation.profileCountNotMaterialized !== 2001 ||
+    nycacOwnerArchiveTask?.status !== "blocked" ||
+    !nycacOwnerArchiveTask?.blockedReason
+  ) {
+    nycacPopulationViolations.push(
+      "The 5,124-profile / 3,123-recovered / 2,001-owner-archive boundary is not explicit and tasked",
+    );
+  }
+  if (
+    nycacExternalLinks.length !== 1451 ||
+    new Set(nycacExternalLinks.map((link) => link.shortUrl)).size !== 1161 ||
+    nycacPopulationInventory.publishingPattern
+      .accountOriginalAndReplyRecordCount !== 685 ||
+    nycacPopulationInventory.publishingPattern
+      .timelineNativeRepostAppearanceCount !==
+      2440 ||
+    nycacPopulationInventory.publishingPattern
+      .externalSourceNativeRepostRecordCount !==
+      2438 ||
+    nycacPopulationInventory.publishingPattern
+      .accountAuthoredStatusAlsoSeenAsSelfRepostCount !== 2 ||
+    nycacAccountOriginalsAndReplies.length !== 685 ||
+    nycacAccountOriginalsAndReplies.some(
+      (record) => record.authorHandle.toLowerCase() !== "@nycartc",
+    ) ||
+    nycacExternalSourceReposts.length !== 2438 ||
+    nycacSelfRepostAppearanceRecords.length !== 2 ||
+    nycacSelfRepostAppearanceRecords.some(
+      (record) =>
+        record.recordType !== "original" ||
+        record.authorHandle.toLowerCase() !== "@nycartc" ||
+        !record.recoveredFrom.some((surface) =>
+          surface.startsWith("search-authored-"),
+        ),
+    ) ||
+    nycacSelfRepostAppearanceRecords
+      .map((record) => record.url)
+      .join("|") !== expectedNycacSelfRepostAppearanceUrls.join("|") ||
+    nycacPopulationInventory.publishingPattern
+      .accountAuthoredStatusAlsoSeenAsSelfRepostUrls
+      .slice()
+      .sort()
+      .join("|") !== expectedNycacSelfRepostAppearanceUrls.join("|") ||
+    !nycacMissionSignalManifestValid ||
+    nycacPopulationInventory.publishingPattern.distinctSourceAuthorCount !==
+      623 ||
+    nycacIncomingRecords.length !== 98 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory.distinctAuthorCount !==
+      43 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory
+      .directlyMatchingRecordCount !== 75 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory
+      .directlyMatchingAuthorCount !== 34 ||
+    nycacPopulationInventory.post2020IncomingMentionInventory
+      .conversationContextRecordCount !== 23 ||
+    nycacPopulationInventory.publishingPattern.missionSignalRecordCounts[
+      "fair-rent-nyc"
+    ] !== 477 ||
+    nycacPopulationInventory.publishingPattern.missionSignalRecordCounts[
+      "save-nyc-spaces"
+    ] !== 192 ||
+    nycacPopulationInventory.publishingPattern.missionSignalRecordCounts[
+      "let-nyc-dance"
+    ] !== 97 ||
+    nycacPopulationInventory.publishingPattern.missionSignalRecordCounts[
+      "talks-not-raids"
+    ] !== 62 ||
+    nycacPopulationInventory.publishingPattern.missionSignalRecordCounts[
+      "nightlife-governance"
+    ] !== 57 ||
+    nycacPopulationInventory.publishingPattern.missionSignalRecordCounts[
+      "artist-labor"
+    ] !== 98
+  ) {
+    nycacPopulationViolations.push(
+      "The NYC Artist Coalition posted-URL, publishing, campaign-signal, or stakeholder findings do not reproduce from the inventory",
+    );
+  }
+  if (
+    !immutableGitHubFixtureMatches(
+      nycacPopulationSource,
+      nycacPopulationFixturePath,
+    )
+  ) {
+    nycacPopulationViolations.push(
+      "The NYC Artist Coalition population source does not pin a byte-identical committed fixture",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i.test(
+      JSON.stringify(nycacPopulationInventory),
+    ) ||
+    !nycacInfrastructureClaim?.boundaries.some((boundary) =>
+      /3,123 of 5,124/i.test(boundary),
+    ) ||
+    !nycacInfrastructureClaim?.antiClaims.some((antiClaim) =>
+      /All 5,124.*recovered/i.test(antiClaim),
+    ) ||
+    !nycacInfrastructureClaim?.boundaries.some((boundary) =>
+      /source authorship/i.test(boundary),
+    ) ||
+    !nycacInfrastructureClaim?.antiClaims.some((antiClaim) =>
+      /Jamie authored all/i.test(antiClaim),
+    )
+  ) {
+    nycacPopulationViolations.push(
+      "The NYC Artist Coalition fixture or promoted claim obscures public-safety, denominator, source-authorship, or individual-authorship boundaries",
+    );
+  }
   const wowListPopulationViolations = [];
   const wowListReconciliation = wowListPopulationInventory.populationReconciliation;
   const wowListRecordTypeTotal = Object.values(
@@ -1834,6 +2172,7 @@ function deterministicResults(judgments) {
   }
   const fullPopulationViolations = [
     ...callNycPopulationViolations,
+    ...nycacPopulationViolations,
     ...wowListPopulationViolations,
     ...kcTownHallPopulationViolations,
   ];
@@ -1844,6 +2183,8 @@ function deterministicResults(judgments) {
       [
         `CallNYC: ${callNycPopulationRecords.length}/110 profile-counted records recovered; 3 explicitly unmaterialized`,
         `CallNYC: ${callNycPostsTimelineRecords.length} Posts-tab / ${callNycRepliesTimelineRecords.length} Replies-tab records; ${callNycPopulationInventory.postedUrlInventory.distinctExternalShortUrls} distinct posted short URLs; ${callNycIncomingRecords.length} incoming records`,
+        `NYC Artist Coalition: ${nycacPopulationRecords.length}/5,124 profile-counted records recovered; 2,001 owner-archive records explicit`,
+        `NYC Artist Coalition: ${nycacPopulationInventory.publishingPattern.accountOriginalAndReplyRecordCount} account originals/replies / ${nycacPopulationInventory.publishingPattern.externalSourceNativeRepostRecordCount} external-source repost records / ${nycacPopulationInventory.publishingPattern.timelineNativeRepostAppearanceCount} native-repost appearances, including ${nycacPopulationInventory.publishingPattern.accountAuthoredStatusAlsoSeenAsSelfRepostCount} account-authored statuses also seen as self-repost cards; ${nycacPopulationInventory.postedUrlInventory.distinctExternalShortUrls} distinct posted short URLs; ${nycacIncomingRecords.length} bounded later incoming records`,
         `WOW List: ${wowListPopulationRecords.length}/38 profile-counted records recovered; 0 unmaterialized`,
         `WOW List: ${wowListPostsTimelineRecords.length} Posts-tab / ${wowListRepliesTimelineRecords.length} Replies-tab records; ${wowListExternalLinks.length} distinct posted short URLs`,
         `WOW List: ${wowListMissionRelevantIncoming.length}/16 bounded incoming records classified as mission-relevant third-party responses across ${Object.keys(wowListPopulationInventory.stakeholderInventory.stakeholderGroupCounts).length} stakeholder groups`,
@@ -1894,6 +2235,12 @@ function deterministicResults(judgments) {
         socialMediaReviewSummary.callNycDistinctIssueOrApiPathCount,
       nycacMissionRelevantCouncilAccounts:
         socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020,
+      nycacRecoveredTimelineAndSearchRecords:
+        socialMediaReviewSummary.nycacRecoveredTimelineAndSearchRecordCount,
+      nycacProfileCountNotMaterialized:
+        socialMediaReviewSummary.nycacProfileCountNotMaterialized,
+      nycacDistinctPostedUrls:
+        socialMediaReviewSummary.nycacDistinctExternalShortUrlCount,
       wowListRecoveredTimelineRecords:
         socialMediaReviewSummary.wowListRecoveredTimelineRecordCount,
       wowListDistinctPostedUrls:
