@@ -908,7 +908,7 @@ test("KC Town Hall corpus accounts for the full reported population and separate
   assert.equal(corpusSource.preferredPublicUrl, "asset");
   assert.match(
     corpusSource.assetUrl,
-    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/(?:[0-9a-f]{40}|feature\/evals-I)\//
+    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\//
   );
   assert.match(projectNote, /181 distinct account items recovered/);
   assert.match(projectNote, /three then-sitting Kansas City Council-member accounts/);

@@ -138,7 +138,7 @@ export const kcTownHallXFullPopulationBatch20260715: {
       accessedAt: "2026-07-15",
       canonicalUrl: "https://x.com/KCTownHall/with_replies",
       assetUrl:
-        "https://github.com/openhouse/jamieburk.art/blob/feature/evals-I/docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.json",
+        "https://github.com/openhouse/jamieburk.art/blob/2c52fda25c42b4ccff5f32e3642fc0efa60154c6/docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.json",
       preferredPublicUrl: "asset",
       publicCitation:
         "Committed item-level corpus from the authenticated replies-inclusive @KCTownHall review, July 15, 2026.",
