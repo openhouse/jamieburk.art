@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "asOf": "2026-07-15",
+  "purpose": "One public-safe control record for the portfolio's evidence, reader, visual, safety, and release-readiness gaps.",
+  "authority": {
+    "machineState": "The latest output from npm run run:knowledge-development controls executable eval state.",
+    "evidenceState": "This ledger controls the named blind-spot inventory and its evidence or task route.",
+    "releaseState": "Human approvals and an explicit production decision control publication. A machine pass is not permission to deploy."
+  },
+  "releaseState": "held",
+  "releaseReasons": [
+    "Independent review is required for collective-credit and Chad-lens judgments.",
+    "Observed hiring-reader sessions have not yet been recorded.",
+    "The priority visual edit has not completed rights, consent, caption, and credit approval.",
+    "Jamie has not recorded a final production-deploy decision for the evaluated candidate."
+  ],
+  "lanes": [
+    {
+      "evalId": "KD-014",
+      "blindSpot": "Jamie-specific role claims need collaborator or institutional corroboration.",
+      "control": "Every priority role claim is either independently corroborated or held, attributed, bounded, and routed to a named research task.",
+      "state": "managed-gap"
+    },
+    {
+      "evalId": "KD-015",
+      "blindSpot": "The portfolio has not been observed with real hiring readers.",
+      "control": "Record comprehension, credibility, role-fit, and next-action findings from people who were not involved in building the site.",
+      "state": "human-research-required"
+    },
+    {
+      "evalId": "KD-016",
+      "blindSpot": "Readiness can drift across checklists, eval output, approvals, and launch decisions.",
+      "control": "Use this ledger, the executable runner, and the launch-blocker document as one explicit hierarchy of authority.",
+      "state": "controlled"
+    },
+    {
+      "evalId": "KD-017",
+      "blindSpot": "Artifact production can be mistaken for use, adoption, handoff, or decision impact.",
+      "control": "Classify representative evidence by outcome type and preserve the boundary between observed consequence and causal inference.",
+      "state": "controlled"
+    },
+    {
+      "evalId": "KD-018",
+      "blindSpot": "The strongest case studies do not yet have a rights-cleared visual edit.",
+      "control": "Maintain a five-project visual queue with rights, consent, identity, caption, credit, sensitivity, and claim-fit gates.",
+      "state": "human-approval-required"
+    },
+    {
+      "evalId": "KD-019",
+      "blindSpot": "Civic depth can obscure Jamie's technical and commercial operating value.",
+      "control": "Make the target role, implementation work, technical systems, business context, and bounded outcomes legible on the homepage and role-fit page.",
+      "state": "controlled"
+    },
+    {
+      "evalId": "KD-020",
+      "blindSpot": "Individually safe records can create cumulative disclosure or source-durability risk.",
+      "control": "Review the assembled public corpus across records and preserve volatile sources without exposing protected locators or payloads.",
+      "state": "controlled"
+    },
+    {
+      "evalId": "KD-021",
+      "blindSpot": "The archive can explain the past without making Jamie's next contribution concrete.",
+      "control": "State the role, team condition, work Jamie can own, and direct next action without narrowing him to one employer or sector.",
+      "state": "controlled"
+    }
+  ],
+  "roleCorroboration": [
+    {
+      "claimId": "CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE",
+      "state": "held-pending-independent-corroboration",
+      "taskIds": ["RT-NYCAC-OFFICE-CREATION-CONTRIBUTION"]
+    },
+    {
+      "claimId": "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+      "state": "first-hand-with-collective-context",
+      "taskIds": ["RT-NYCAC-FB-JAMIE-EVENT-ROLE-CORROBORATION"]
+    },
+    {
+      "claimId": "CLM-CALLSCRIPT-JAMIE-ESTABLISHMENT-ROLE",
+      "state": "held-pending-dated-or-collaborator-corroboration",
+      "taskIds": ["RT-CALLSCRIPT-ROLE-AND-FORMATION-CORROBORATION"]
+    },
+    {
+      "claimId": "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+      "state": "attributed-first-hand-with-independent-project-context",
+      "taskIds": ["RT-KCTH-PHASE-ONE-ROLE-CORROBORATION"]
+    },
+    {
+      "claimId": "CLM-JAMIE-NYCAC-FACEBOOK-PUBLISHING-MEMORY",
+      "state": "restricted-pending-native-or-collaborator-proof",
+      "taskIds": [
+        "RT-NYCAC-FB-POST-OWNER-EXPORT",
+        "RT-NYCAC-FB-POST-ROLE-AND-ENGAGEMENT-CORROBORATION"
+      ]
+    }
+  ],
+  "hiringReaderResearch": {
+    "state": "not-started",
+    "minimumIndependentReaders": 3,
+    "requiredPrompts": [
+      "What role is Jamie seeking?",
+      "What can Jamie own in the first 90 days?",
+      "Which two claims feel most credible and why?",
+      "Where does collective work make Jamie's role unclear?",
+      "What would you do next after reading?"
+    ],
+    "completedReports": []
+  },
+  "impactEvidence": [
+    {
+      "claimId": "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE",
+      "evidenceClass": "handoff",
+      "sourceIds": [
+        "SRC-CRS-RUNNING-MINUTES-2026-05-15",
+        "SRC-GDRIVE-196-ACCEPTANCE-TEMPLATE-2023"
+      ],
+      "boundedFinding": "Reviewed records show collaborator-oriented memory, onboarding, and access-handoff structures; they do not prove universal adoption."
+    },
+    {
+      "claimId": "CLM-NYCAC-CIVIC-INTERMEDIARY-VALUE",
+      "evidenceClass": "institutional-use",
+      "sourceIds": [
+        "SRC-NYCAC-FINKELPEARL-BUDGET-HEARING-2017-05-19",
+        "SRC-NYCAC-CREATENYC-APPENDIX-2017"
+      ],
+      "boundedFinding": "Official records show the coalition and its recommendations entering agency and Council processes; they do not prove private dependence or sole causality."
+    },
+    {
+      "claimId": "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT",
+      "evidenceClass": "decision-input",
+      "sourceIds": [
+        "SRC-KCTH-CCED-PHASE-ONE-PACKET-2019",
+        "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02"
+      ],
+      "boundedFinding": "The packet says resident input shaped the proposal; it does not isolate one person's causal influence on later City decisions."
+    },
+    {
+      "claimId": "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION",
+      "evidenceClass": "delivery-outcome",
+      "sourceIds": ["SRC-KCTH-CCED-PHASE-ONE-PACKET-2019"],
+      "boundedFinding": "The project record and Jamie's first-hand account support completion of the bounded Phase One scope, distinct from the later Phase Two funding history."
+    }
+  ],
+  "visualEdit": {
+    "state": "rights-review-required",
+    "requiredGates": [
+      "rights",
+      "consent",
+      "identity-and-date",
+      "sensitivity",
+      "claim-fit",
+      "caption",
+      "credit"
+    ],
+    "approvedAssetCount": 0,
+    "priorityProjects": [
+      "Harry J. Epstein Company",
+      "NYC Artist Coalition",
+      "KC Town Hall",
+      "WOW List",
+      "196 / Sunday Dinner"
+    ]
+  },
+  "technicalCommercialLegibility": {
+    "targetRole": "Technical Project Manager - Product Operations & Implementation",
+    "requiredContexts": ["technical", "commercial", "civic", "cultural"],
+    "requiredOperatingSignals": [
+      "requirements",
+      "dependencies",
+      "implementation",
+      "risk",
+      "decision records",
+      "launch support",
+      "onboarding",
+      "handoffs"
+    ],
+    "verifiedPages": ["/", "/work/technical-operations", "/about"]
+  },
+  "sourceDurability": {
+    "cumulativeDisclosureReview": {
+      "state": "pass",
+      "reviewedRisks": [
+        "identity aggregation",
+        "contact or location disclosure",
+        "protected-source reconstruction",
+        "cross-record inference",
+        "volatile engagement metrics"
+      ]
+    },
+    "sourceClasses": [
+      {
+        "class": "public-web",
+        "risk": "link-rot-or-content-drift",
+        "control": "Record access dates and archival URLs where recovery is necessary."
+      },
+      {
+        "class": "official-record",
+        "risk": "government-site-reorganization",
+        "control": "Keep title, date, locator, canonical URL, and preservation state."
+      },
+      {
+        "class": "platform-snapshot",
+        "risk": "mutable-counters-and-retrieval-limits",
+        "control": "Use dated, deduplicated public-safe fixtures with explicit denominators and exclusions."
+      },
+      {
+        "class": "protected-first-party",
+        "risk": "cumulative-private-disclosure",
+        "control": "Keep payloads and locators outside Git; store only approved summaries and opaque record IDs."
+      }
+    ]
+  },
+  "futureOffer": {
+    "role": "Technical project management, product operations, and implementation",
+    "teamCondition": "Consequential work with complex stakeholders whose operating structure is still taking shape",
+    "workJamieCanOwn": "Clarify requirements, coordinate dependencies, make decisions and risk visible, support launch, and leave maintainable workflows and handoffs.",
+    "nextActionRoute": "/contact"
+  }
+}

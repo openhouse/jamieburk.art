@@ -33,9 +33,11 @@ export default function AboutPage() {
             people can use after the meeting or launch is over.
           </p>
           <p>
-            I am currently focused on technical project management, product
-            operations, implementation, business analysis, civic/govtech
-            delivery, and source-backed knowledge systems.
+            I am seeking technical project management, product operations, and
+            implementation work with teams navigating consequential change. I
+            can take ownership of the connective layer: requirements,
+            dependencies, workflows, risk, decision records, launch support,
+            onboarding, and maintainable handoffs.
           </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">

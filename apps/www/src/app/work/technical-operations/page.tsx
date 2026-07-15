@@ -183,6 +183,24 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-12 max-w-4xl border-y border-jb-ink/15 py-8">
+        <h2 className="text-3xl font-semibold text-jb-ink">
+          Where I can help next
+        </h2>
+        <p className="mt-4 text-lg leading-8 text-jb-ink/76">
+          I am ready to own the connective work between a consequential goal
+          and a reliable launch: clarify emerging requirements, coordinate
+          technical and business dependencies, surface risk, keep decisions
+          inspectable, support implementation, and build the operating records
+          that let a team continue with confidence.
+        </p>
+        <p className="mt-4 leading-7 text-jb-ink/72">
+          That work can sit inside a public service, a growing product, a
+          legacy business, or a cross-functional program. The common need is a
+          practical operator who can translate across people and systems while
+          keeping delivery moving.
+        </p>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

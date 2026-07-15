@@ -181,7 +181,7 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
    schemas.
 2. Added graph validation from capture through source, observation, claim,
    research task, and projection.
-3. Added an executable 12-criterion eval suite and deterministic runner.
+3. Added an executable 21-criterion eval suite and deterministic runner.
 4. Added a public-safe intake and promotion protocol plus a photo-editor
    feedback loop.
 5. Normalized the initial five-source calibration corpus and the ten additional
@@ -252,10 +252,17 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
     exhibition lineage; preserved equal credit, Nerman and Kruger anti-claims,
     explicit research gaps, and a metadata-only boundary around the archived
     artist page's historical contact data.
+32. Converted eight known portfolio blind spots into explicit evals, added a
+    canonical public-safe readiness ledger, separated the maintained local gate
+    from the full human-and-independent release gate, and recorded two stable
+    local passes without fabricating reader, rights, or judge approvals.
 
 ## Evidence
 
 - [NYC Artist Coalition institutional-value hill-climb record](./2026-07-15-nycac-institutional-value-hill-climb.md)
+- [Blind-spot eval hill-climb record](./2026-07-15-blind-spot-evals-hill-climb.md)
+- [Blind-spot local pass 1](./blind-spots-local-pass-1.json)
+- [Blind-spot local pass 2](./blind-spots-local-pass-2.json)
 - [NYC Artist Coalition institutional-value deterministic run 1](./nycac-institutional-value-deterministic-1.json)
 - [NYC Artist Coalition institutional-value deterministic run 2](./nycac-institutional-value-deterministic-2.json)
 

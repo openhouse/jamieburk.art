@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
@@ -161,6 +161,17 @@ const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
 );
 const cloneSuite = () => structuredClone(suite);
+const readinessLedger = JSON.parse(
+  readFileSync("docs/knowledge-bank/readiness-ledger.json", "utf8"),
+);
+const readinessLedgerDoc = readFileSync(
+  "docs/knowledge-bank/readiness-ledger.md",
+  "utf8",
+);
+const launchBlockersDoc = readFileSync(
+  "docs/knowledge-bank/launch-blockers.md",
+  "utf8",
+);
 const campaignPressInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
@@ -293,6 +304,107 @@ test("holdout judgments and repeat runs are required", () => {
   const errors = validateKnowledgeDevelopmentSuite(candidate).errors.join("\n");
   assert.match(errors, /holdout judgments/);
   assert.match(errors, /two consecutive passing runs/);
+});
+
+test("eight named blind spots are first-class evals", () => {
+  const expectedIds = Array.from(
+    { length: 8 },
+    (_, index) => `KD-${String(index + 14).padStart(3, "0")}`,
+  );
+  assert.deepEqual(
+    suite.evals.slice(-8).map((entry) => entry.id),
+    expectedIds,
+  );
+  assert.deepEqual(
+    readinessLedger.lanes.map((lane) => lane.evalId),
+    expectedIds,
+  );
+  assert.equal(new Set(readinessLedger.lanes.map((lane) => lane.blindSpot)).size, 8);
+  for (const id of expectedIds) {
+    assert.match(readinessLedgerDoc, new RegExp(id));
+    assert.match(launchBlockersDoc, new RegExp(id));
+  }
+});
+
+test("readiness ledger is public-safe and keeps external gates open", () => {
+  const payload = JSON.stringify(readinessLedger);
+  assert.equal(readinessLedger.releaseState, "held");
+  assert.equal(readinessLedger.hiringReaderResearch.completedReports.length, 0);
+  assert.equal(readinessLedger.visualEdit.approvedAssetCount, 0);
+  assert.equal(readinessLedger.roleCorroboration.length, 5);
+  assert.equal(readinessLedger.impactEvidence.length, 4);
+  assert.doesNotMatch(payload, /\/Users\/|\/Volumes\/|Mobile Documents/);
+  assert.doesNotMatch(payload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+  assert.doesNotMatch(payload, /\b\d{3}[-.)\s]\d{3}[-\s]\d{4}\b/);
+  assert.match(launchBlockersDoc, /Current release state: held/i);
+  assert.match(launchBlockersDoc, /machine.*independent.*human.*release/is);
+});
+
+test("priority role and impact records resolve through the knowledge graph", () => {
+  const claims = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const sources = new Set(knowledgeBank.sources.map((source) => source.id));
+  const tasks = new Map(
+    knowledgeBank.researchTasks.map((task) => [task.id, task]),
+  );
+  for (const item of readinessLedger.roleCorroboration) {
+    assert.ok(claims.has(item.claimId), item.claimId);
+    assert.ok(item.taskIds.length > 0, item.claimId);
+    for (const taskId of item.taskIds) {
+      assert.ok(tasks.get(taskId)?.claimIds.includes(item.claimId), taskId);
+    }
+  }
+  assert.deepEqual(
+    new Set(readinessLedger.impactEvidence.map((item) => item.evidenceClass)),
+    new Set(["handoff", "institutional-use", "decision-input", "delivery-outcome"]),
+  );
+  for (const item of readinessLedger.impactEvidence) {
+    const claim = claims.get(item.claimId);
+    for (const sourceId of item.sourceIds) {
+      assert.ok(sources.has(sourceId), sourceId);
+      assert.ok(
+        claim.evidence.some((relationship) => relationship.sourceId === sourceId),
+        `${item.claimId}->${sourceId}`,
+      );
+    }
+    assert.match(item.boundedFinding, /not|does not|distinct|without|separate/i);
+  }
+});
+
+test("local hill-climb gate passes while external release gates fail honestly", () => {
+  const run = JSON.parse(
+    execFileSync(
+      "node",
+      [
+        "scripts/run-knowledge-development.mjs",
+        "--label",
+        "blind-spot-contract-test",
+        "--require-local-pass",
+      ],
+      { encoding: "utf8", maxBuffer: 16 * 1024 * 1024 },
+    ),
+  );
+  assert.equal(run.local_criteria_met, true);
+  assert.deepEqual(run.local_failures, []);
+  assert.equal(run.criteria_met, false);
+  assert.deepEqual(run.missing_judgments.sort(), [
+    "KD-006",
+    "KD-012",
+    "KD-015",
+    "KD-018",
+  ]);
+  for (const id of ["KD-014", "KD-016", "KD-017", "KD-019", "KD-020", "KD-021"]) {
+    assert.equal(run.evals.find((entry) => entry.eval_id === id)?.score, 4, id);
+  }
+  for (const id of ["KD-015", "KD-018"]) {
+    assert.equal(run.evals.find((entry) => entry.eval_id === id)?.score, 0, id);
+  }
+
+  const fullGate = spawnSync(
+    "node",
+    ["scripts/run-knowledge-development.mjs", "--require-pass"],
+    { encoding: "utf8", maxBuffer: 16 * 1024 * 1024 },
+  );
+  assert.equal(fullGate.status, 1);
 });
 
 test("WOW List, Sunday Dinner, and Call Script audit is aggregate-only and promotion-safe", () => {

@@ -179,6 +179,9 @@ const candidateFiles = [
   "docs/knowledge-bank/anti-claims.md",
   "docs/knowledge-bank/approval-register.md",
   "docs/knowledge-bank/projection-map.md",
+  "docs/knowledge-bank/readiness-ledger.json",
+  "docs/knowledge-bank/readiness-ledger.md",
+  "docs/knowledge-bank/launch-blockers.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nterchng.md",
   "docs/knowledge-bank/projects/urbanhermit.md",
@@ -208,6 +211,8 @@ const candidateFiles = [
   "scripts/tests/kcspacesfund-facebook-guard.test.mjs",
   "scripts/tests/personal-facebook-posts-guard.test.mjs",
   "docs/knowledge-bank/promotion-slate.md",
+  "apps/www/src/components/Hero.tsx",
+  "apps/www/src/app/about/page.tsx",
 ];
 
 const campaignPressInventory = JSON.parse(
@@ -294,6 +299,24 @@ const jamiePersonalFacebookPostInventory = JSON.parse(
     "utf8",
   ),
 );
+const readinessLedger = JSON.parse(
+  readFileSync("docs/knowledge-bank/readiness-ledger.json", "utf8"),
+);
+const readinessLedgerDoc = readFileSync(
+  "docs/knowledge-bank/readiness-ledger.md",
+  "utf8",
+);
+const launchBlockersDoc = readFileSync(
+  "docs/knowledge-bank/launch-blockers.md",
+  "utf8",
+);
+const packageManifest = JSON.parse(readFileSync("package.json", "utf8"));
+const heroSource = readFileSync("apps/www/src/components/Hero.tsx", "utf8");
+const technicalOperationsSource = readFileSync(
+  "apps/www/src/app/work/technical-operations/page.tsx",
+  "utf8",
+);
+const aboutSource = readFileSync("apps/www/src/app/about/page.tsx", "utf8");
 
 function candidateFingerprint() {
   const hash = createHash("sha256");
@@ -3801,6 +3824,246 @@ function deterministicResults(judgments) {
     "apps/www/src/app/public-claims",
   ].filter((path) => existsSync(path));
 
+  const expectedBlindSpotEvalIds = Array.from(
+    { length: 8 },
+    (_, index) => `KD-${String(index + 14).padStart(3, "0")}`,
+  );
+  const readinessLaneIds = readinessLedger.lanes?.map((lane) => lane.evalId) ?? [];
+  const roleCorroborationViolations = [];
+  for (const item of readinessLedger.roleCorroboration ?? []) {
+    const claim = claimById.get(item.claimId);
+    if (!claim) {
+      roleCorroborationViolations.push(`Missing role claim ${item.claimId}`);
+      continue;
+    }
+    if (!item.state || !item.taskIds?.length) {
+      roleCorroborationViolations.push(
+        `Role claim ${item.claimId} lacks a bounded state or task route`,
+      );
+    }
+    for (const taskId of item.taskIds ?? []) {
+      const task = taskById.get(taskId);
+      if (!task || !task.claimIds.includes(item.claimId)) {
+        roleCorroborationViolations.push(
+          `Role claim ${item.claimId} does not resolve through ${taskId}`,
+        );
+      }
+    }
+    if (
+      /^(held|restricted)/.test(item.state) &&
+      claim.projections.some(
+        (projection) =>
+          projection.status === "active" &&
+          projection.surfaces.some((surface) => surface.startsWith("/")),
+      )
+    ) {
+      roleCorroborationViolations.push(
+        `Held role claim ${item.claimId} has an active public route`,
+      );
+    }
+  }
+  if ((readinessLedger.roleCorroboration ?? []).length < 5) {
+    roleCorroborationViolations.push(
+      "Priority role-corroboration inventory must retain at least five claims",
+    );
+  }
+
+  const readinessReconciliationViolations = [];
+  if (
+    JSON.stringify(readinessLaneIds) !==
+    JSON.stringify(expectedBlindSpotEvalIds)
+  ) {
+    readinessReconciliationViolations.push(
+      "The readiness ledger must map one-to-one to KD-014 through KD-021",
+    );
+  }
+  if (
+    readinessLedger.releaseState !== "held" ||
+    (readinessLedger.releaseReasons ?? []).length < 4
+  ) {
+    readinessReconciliationViolations.push(
+      "The release must remain explicitly held with independent, human, visual, and production reasons",
+    );
+  }
+  if (
+    !expectedBlindSpotEvalIds.every(
+      (id) =>
+        readinessLedgerDoc.includes(id) && launchBlockersDoc.includes(id),
+    )
+  ) {
+    readinessReconciliationViolations.push(
+      "Readiness documentation does not cover every new eval",
+    );
+  }
+  if (
+    !/machine.*evidence.*approval.*release/is.test(readinessLedgerDoc) ||
+    !/Current release state: held/i.test(launchBlockersDoc) ||
+    !packageManifest.scripts?.["check:knowledge-development"]?.includes(
+      "--require-local-pass",
+    )
+  ) {
+    readinessReconciliationViolations.push(
+      "Machine, evidence, approval, and release authority are not cleanly separated",
+    );
+  }
+
+  const requiredImpactClasses = new Set([
+    "handoff",
+    "institutional-use",
+    "decision-input",
+    "delivery-outcome",
+  ]);
+  const impactEvidenceViolations = [];
+  for (const item of readinessLedger.impactEvidence ?? []) {
+    const claim = claimById.get(item.claimId);
+    if (!claim) {
+      impactEvidenceViolations.push(`Missing impact claim ${item.claimId}`);
+      continue;
+    }
+    if (!requiredImpactClasses.has(item.evidenceClass)) {
+      impactEvidenceViolations.push(
+        `Unexpected impact class ${item.evidenceClass}`,
+      );
+    }
+    if (!item.sourceIds?.length) {
+      impactEvidenceViolations.push(
+        `Impact claim ${item.claimId} has no source route`,
+      );
+    }
+    for (const sourceId of item.sourceIds ?? []) {
+      if (
+        !sourceById.has(sourceId) ||
+        !claim.evidence.some((relationship) => relationship.sourceId === sourceId)
+      ) {
+        impactEvidenceViolations.push(
+          `Impact claim ${item.claimId} does not resolve through ${sourceId}`,
+        );
+      }
+    }
+    if (!/(?:not|does not|do not|distinct|without|separate)/i.test(item.boundedFinding ?? "")) {
+      impactEvidenceViolations.push(
+        `Impact claim ${item.claimId} lacks a causal boundary`,
+      );
+    }
+  }
+  if (
+    requiredImpactClasses.size !==
+      new Set(
+        (readinessLedger.impactEvidence ?? []).map(
+          (item) => item.evidenceClass,
+        ),
+      ).size ||
+    (readinessLedger.impactEvidence ?? []).length !== 4
+  ) {
+    impactEvidenceViolations.push(
+      "The impact audit must cover exactly four distinct evidence classes",
+    );
+  }
+
+  const technicalCommercialViolations = [];
+  const hiringPathSource = [heroSource, technicalOperationsSource, aboutSource]
+    .join("\n")
+    .toLowerCase();
+  const targetRole = readinessLedger.technicalCommercialLegibility?.targetRole;
+  if (!targetRole || !heroSource.includes(targetRole)) {
+    technicalCommercialViolations.push("The homepage target role is missing");
+  }
+  for (const signal of
+    readinessLedger.technicalCommercialLegibility?.requiredOperatingSignals ?? []) {
+    if (!hiringPathSource.includes(signal.toLowerCase())) {
+      technicalCommercialViolations.push(
+        `The hiring path does not name ${signal}`,
+      );
+    }
+  }
+  for (const context of
+    readinessLedger.technicalCommercialLegibility?.requiredContexts ?? []) {
+    if (!hiringPathSource.includes(context.toLowerCase())) {
+      technicalCommercialViolations.push(
+        `The hiring path does not represent the ${context} context`,
+      );
+    }
+  }
+  for (const projectName of [
+    "Harry J. Epstein Company",
+    "WOWList",
+    "CallNYC",
+    "196 / Sunday Dinner",
+  ]) {
+    if (!technicalOperationsSource.includes(projectName)) {
+      technicalCommercialViolations.push(
+        `The role-fit proof map is missing ${projectName}`,
+      );
+    }
+  }
+
+  const sourceDurabilityViolations = [];
+  const durability = readinessLedger.sourceDurability;
+  const expectedSourceClasses = [
+    "public-web",
+    "official-record",
+    "platform-snapshot",
+    "protected-first-party",
+  ];
+  if (
+    durability?.cumulativeDisclosureReview?.state !== "pass" ||
+    (durability?.cumulativeDisclosureReview?.reviewedRisks ?? []).length < 5
+  ) {
+    sourceDurabilityViolations.push(
+      "The cumulative-disclosure review is incomplete",
+    );
+  }
+  if (
+    JSON.stringify(
+      durability?.sourceClasses?.map((item) => item.class) ?? [],
+    ) !== JSON.stringify(expectedSourceClasses) ||
+    durability.sourceClasses.some((item) => !item.risk || !item.control)
+  ) {
+    sourceDurabilityViolations.push(
+      "The source-durability matrix is incomplete or out of order",
+    );
+  }
+  if (
+    /\/Users\/|\/Volumes\/|Mobile Documents|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.)\s]\d{3}[-\s]\d{4}\b/.test(
+      JSON.stringify(readinessLedger),
+    )
+  ) {
+    sourceDurabilityViolations.push(
+      "The public readiness ledger contains a protected locator or contact detail",
+    );
+  }
+
+  const futureOfferViolations = [];
+  if (
+    !/I am looking for technical project management, product operations,[\s\S]*implementation work/i.test(
+      heroSource,
+    ) ||
+    !/I am seeking technical project management, product operations,[\s\S]*implementation work/i.test(
+      aboutSource,
+    )
+  ) {
+    futureOfferViolations.push(
+      "The homepage and About page do not state the future role plainly",
+    );
+  }
+  if (
+    !/Where I can help next/.test(technicalOperationsSource) ||
+    !/ready to own the connective work/i.test(technicalOperationsSource) ||
+    !/requirements[\s\S]*dependencies[\s\S]*risk[\s\S]*implementation/i.test(
+      technicalOperationsSource,
+    )
+  ) {
+    futureOfferViolations.push(
+      "The role-fit page does not state the team condition and owned work",
+    );
+  }
+  if (
+    readinessLedger.futureOffer?.nextActionRoute !== "/contact" ||
+    !existsSync("apps/www/src/app/contact/page.tsx")
+  ) {
+    futureOfferViolations.push("The future offer lacks a working contact route");
+  }
+
   const results = new Map();
   results.set(
     "KD-001",
@@ -3887,7 +4150,9 @@ function deterministicResults(judgments) {
       "Connect confirmed claims through observations and keep unearned projections held.",
     ),
   );
-  for (const id of ["KD-006", "KD-012"]) {
+  for (const id of suite.evals
+    .filter((entry) => ["llm_judge", "human_approval"].includes(entry.grader))
+    .map((entry) => entry.id)) {
     const judgment = judgments.get(id);
     results.set(
       id,
@@ -3902,9 +4167,9 @@ function deterministicResults(judgments) {
           }
         : result(
             0,
-            ["No independent judgment supplied"],
-            ["Holdout judgment required"],
-            "Run a blind independent judge.",
+            ["No independent judgment or human approval supplied"],
+            ["External gate remains open"],
+            "Run the named independent or human protocol on this exact candidate.",
           ),
     );
   }
@@ -4591,6 +4856,93 @@ function deterministicResults(judgments) {
       "Repair the denominator or classification before strengthening the public interpretation.",
     ),
   );
+  results.set(
+    "KD-014",
+    result(
+      roleCorroborationViolations.length ? 0 : 4,
+      [
+        `${readinessLedger.roleCorroboration.length} priority role claims inventoried`,
+        `${readinessLedger.roleCorroboration.flatMap((item) => item.taskIds).length} explicit corroboration routes`,
+      ],
+      roleCorroborationViolations,
+      "Corroborate the role or keep the strongest attributed wording held and tasked.",
+    ),
+  );
+  results.set(
+    "KD-016",
+    result(
+      readinessReconciliationViolations.length ? 0 : 4,
+      [
+        `${readinessLaneIds.length}/8 blind spots mapped`,
+        `release state: ${readinessLedger.releaseState}`,
+        "machine, evidence, approval, and release authority documented separately",
+      ],
+      readinessReconciliationViolations,
+      "Reconcile the machine ledger, approval state, and release blockers without promoting an open gate.",
+    ),
+  );
+  results.set(
+    "KD-017",
+    result(
+      impactEvidenceViolations.length ? 0 : 4,
+      [
+        `${readinessLedger.impactEvidence.length} outcome records across ${new Set(readinessLedger.impactEvidence.map((item) => item.evidenceClass)).size} evidence classes`,
+        "handoff, institutional use, decision input, and delivery outcome remain distinct",
+      ],
+      impactEvidenceViolations,
+      "Repair the evidence relationship or soften the consequence to what the source directly establishes.",
+    ),
+  );
+  results.set(
+    "KD-019",
+    result(
+      technicalCommercialViolations.length ? 0 : 4,
+      [
+        `target role: ${targetRole ?? "missing"}`,
+        `${readinessLedger.technicalCommercialLegibility.requiredOperatingSignals.length} operating signals checked`,
+        `${readinessLedger.technicalCommercialLegibility.requiredContexts.length} work contexts checked`,
+      ],
+      technicalCommercialViolations,
+      "Make the implementation offer and cross-context proof legible on the primary hiring path.",
+    ),
+  );
+  results.set(
+    "KD-020",
+    result(
+      sourceDurabilityViolations.length ||
+        validationErrors.length ||
+        privateMarkerHits.length ||
+        routeViolations.length
+        ? 0
+        : 4,
+      [
+        `${durability.cumulativeDisclosureReview.reviewedRisks.length} cumulative-disclosure risks reviewed`,
+        `${durability.sourceClasses.length} source classes have durability controls`,
+        `${validationErrors.length} canonical validation errors`,
+        `${routeViolations.length} prohibited public routes`,
+      ],
+      [
+        ...sourceDurabilityViolations,
+        ...validationErrors,
+        ...privateMarkerHits,
+        ...routeViolations,
+      ],
+      "Reduce cumulative exposure, repair source preservation, or remove unsafe public material.",
+    ),
+  );
+  results.set(
+    "KD-021",
+    result(
+      futureOfferViolations.length ? 0 : 4,
+      [
+        `role: ${readinessLedger.futureOffer.role}`,
+        `team condition: ${readinessLedger.futureOffer.teamCondition}`,
+        `next action: ${readinessLedger.futureOffer.nextActionRoute}`,
+      ],
+      futureOfferViolations,
+      "State the future role, team need, owned work, and next action in plain language.",
+    ),
+  );
 
   return {
     results,
@@ -4602,6 +4954,13 @@ function deterministicResults(judgments) {
       observations: knowledgeBank.observations.length,
       developmentClaims: developmentClaims.length,
       researchTasks: knowledgeBank.researchTasks.length,
+      priorityRoleClaims: readinessLedger.roleCorroboration.length,
+      impactEvidenceRecords: readinessLedger.impactEvidence.length,
+      visualPriorityProjects: readinessLedger.visualEdit.priorityProjects.length,
+      approvedVisualAssets: readinessLedger.visualEdit.approvedAssetCount,
+      hiringReaderReports:
+        readinessLedger.hiringReaderResearch.completedReports.length,
+      readinessReleaseState: readinessLedger.releaseState,
       campaignPressPlacements: inventoryPlacements.length,
       campaignPressUniqueArticles: uniqueCampaignPressArticleIds.size,
       kcTownHallFundingSources: kcTownHallFundingSources.length,
@@ -4745,8 +5104,19 @@ function run() {
       !entry.blocking && entry.score < thresholds.nonblocking_score_minimum,
   );
   const missingJudgments = evalResults.filter(
-    (entry) => entry.grader === "llm_judge" && entry.score === 0,
+    (entry) =>
+      ["llm_judge", "human_approval"].includes(entry.grader) &&
+      entry.score === 0,
   );
+  const localFailures = evalResults.filter(
+    (entry) =>
+      ["deterministic", "hybrid"].includes(entry.grader) &&
+      entry.score <
+        (entry.blocking
+          ? thresholds.blocking_score_minimum
+          : thresholds.nonblocking_score_minimum),
+  );
+  const localCriteriaMet = !localFailures.length && !fingerprintMismatch;
   const criteriaMet =
     weightedScore >= thresholds.weighted_score_minimum &&
     !blockingFailures.length &&
@@ -4767,6 +5137,8 @@ function run() {
     weighted_score: Number(weightedScore.toFixed(4)),
     threshold: thresholds.weighted_score_minimum,
     criteria_met: criteriaMet,
+    local_criteria_met: localCriteriaMet,
+    local_failures: localFailures.map((entry) => entry.eval_id),
     blocking_failures: blockingFailures.map((entry) => entry.eval_id),
     nonblocking_failures: nonblockingFailures.map((entry) => entry.eval_id),
     missing_judgments: missingJudgments.map((entry) => entry.eval_id),
@@ -4780,6 +5152,8 @@ function run() {
     process.argv.includes("--require-pass") &&
     (fingerprintMissing || !criteriaMet)
   )
+    process.exit(1);
+  if (process.argv.includes("--require-local-pass") && !localCriteriaMet)
     process.exit(1);
 }
 
