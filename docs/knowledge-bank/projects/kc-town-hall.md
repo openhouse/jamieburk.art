@@ -34,6 +34,23 @@ The packet does not call Jamie the general contractor, assign every trade action
 to him, identify the survey-card designer, or establish completion of Phase Two
 or the full redevelopment.
 
+## Municipal funding sequence and later status
+
+Official Kansas City records preserve the institutional sequence without
+requiring private transition context:
+
+See the [Ordinance 240317 source appraisal](../sources/kc-town-hall-ordinance-240317.md).
+
+- the CCED Board recommended $490,539 for KC Town Hall in July 2019
+- the Council adopted Resolution 190649 in September 2019, accepted the
+  recommendation, and authorized funding-agreement negotiations
+- Ordinance 240317, passed March 28, 2024, records KC Town Hall among three
+  withdrawn CCED projects and reappropriates its unused $490,539 allocation
+
+The 2024 ordinance does not state why KC Town Hall withdrew, who initiated the
+decision, Jamie's role in it, or the property's current status. The later
+funding outcome is distinct from the proposal's record of Phase One completion.
+
 ## Full population accounting
 
 The [raw public capture](../corpora/source-captures/kctownhall-x-browser-extraction-2026-07-15-utc.json), [derived corpus](../corpora/kctownhall-x-full-population-2026-07-15.json), [manifest](../corpora/kctownhall-x-full-population-2026-07-15.manifest.json), and [derivation script](../../../scripts/derive-kctownhall-x-corpus.mjs) preserve the denominator and make the analysis reproducible.
@@ -106,6 +123,11 @@ The public case study may use four bounded claims:
    ongoing survey results directly shaped the proposal.
 3. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners; the shared account then demonstrates a durable public operating surface through the 99-post tire-program pattern.
 4. At least three then-sitting Council-member accounts visibly replied to or quote-posted KC Town Hall, and KCMO 311 visibly replied in a service thread.
+
+The municipal funding claim should preserve the full sourced sequence: 2019
+recommendation and negotiation authority, followed by the 2024 withdrawal and
+reappropriation of the unused allocation. It must not supply an unstated reason
+for withdrawal or assign the institutional action to Jamie.
 
 The proposal-backed claims use protected source support without exposing the
 packet. The public-source claims require citations. All four require

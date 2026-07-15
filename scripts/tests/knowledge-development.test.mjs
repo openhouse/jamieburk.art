@@ -621,8 +621,9 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
   assert.match(work, /years: "Beginning in 2017"/);
   assert.match(
     work,
-    /Council later accepted a \$490,539 CCED funding recommendation and authorized negotiations/
+    /Jamie and Julia Fredenburg co-founded and project-managed Phase One of a Kansas City adaptive-reuse project/
   );
+  assert.match(work, /a 2024 ordinance later recorded withdrawal and reappropriated the unused \$490,539 allocation/);
   assert.doesNotMatch(work, /Council later (?:disbursed|paid|awarded) \$490,539/);
   assert.equal(
     publicRegistry.sources.some((item) => item.id === handoffSource.id),

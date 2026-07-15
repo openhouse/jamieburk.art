@@ -823,9 +823,9 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Historic restoration, neighborhood listening, and public benefit",
+    subtitle: "Historic adaptive reuse planning in Kansas City",
     summary:
-      "Co-founded and project-managed Phase One cold-shell restoration of a long-vacant historic building. A 2019 proposal records completed roof, structural-masonry, and floor-framing work and a neighborhood survey that shaped project plans; the Council later accepted a $490,539 CCED funding recommendation and authorized negotiations.",
+      "Jamie and Julia Fredenburg co-founded and project-managed Phase One of a Kansas City adaptive-reuse project. A 2019 proposal records a completed cold shell and a neighborhood survey that shaped plans; the Council authorized CCED negotiations, and a 2024 ordinance later recorded withdrawal and reappropriated the unused $490,539 allocation.",
     role: "Co-Founder & Project Manager",
     years: "Beginning in 2017",
     status: "Short proof page",
@@ -859,6 +859,7 @@ const workItemsInput = [
       artifactTypes: ["kc-town-hall-public-benefit-documentation"],
       artifacts: [["kc-town-hall-public-benefit-documentation"]],
       evidence: [
+        ["kc-town-hall-public-benefit-documentation"],
         ["kc-town-hall-public-benefit-documentation"],
         ["kc-town-hall-public-benefit-documentation"],
         ["kc-town-hall-public-benefit-documentation"],
@@ -905,7 +906,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe appraisal of the private 2019 CCED proposal and support-letter packet, official Kansas City legislative record, authenticated Resolution 190649, archived KC Town Hall program pages, Jamie's public-safe handoff confirmation, and a governed 181-item public account corpus with an explicit two-item recovery gap.",
+      "Public-safe appraisal of the private 2019 CCED proposal and support-letter packet, official Kansas City legislative records including Resolution 190649 and Ordinance 240317, archived KC Town Hall program pages, Jamie's public-safe handoff confirmation, and a governed 181-item public account corpus with an explicit two-item recovery gap.",
     credits: [
       "Jamie Burkart",
       "Julia Fredenburg",
@@ -920,15 +921,16 @@ const workItemsInput = [
       "Phase One cold-shell completion across roof, structural masonry, and floor framing",
       "Partner-based neighborhood survey that shaped the proposal",
       "Council-adopted $490,539 CCED funding path",
+      "2024 ordinance recording project withdrawal and reappropriation of the unused allocation",
       "Archived Tired of Tires page naming Julia and Jamie as authors",
       "99 authored posts documenting or coordinating Tired of Tires work",
       "Visible incoming dialogue from at least three sitting Council-member accounts"
     ],
     knownOpenProtected: {
       known:
-        "The 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. It documents a partner-based neighborhood survey that shaped project plans. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. The Council later accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539.",
+        "The 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. It documents a partner-based neighborhood survey that shaped project plans. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. The Council later accepted the CCED Board's recommendation and authorized funding-agreement negotiations; Ordinance 240317 records the project as withdrawn in 2024 and reappropriates the unused $490,539 allocation.",
       open:
-        "Contracts, permits, dated artifacts, or collaborator records have not yet corroborated Jamie's recalled general-contractor title, survey-system authorship, detailed Tired of Tires field role or later service geography, or Cleveland Avenue design role. The reviewed resolution does not establish an executed funding agreement, disbursement, or receipt. Phase One completion does not establish Phase Two or full redevelopment completion. Two project-account items, recipient identity, and handoff terms remain unrecovered or unestablished for publication.",
+        "Contracts, permits, dated artifacts, or collaborator records have not yet corroborated Jamie's recalled general-contractor title, survey-system authorship, detailed Tired of Tires field role or later service geography, or Cleveland Avenue design role. The municipal records do not identify the reasons for withdrawal, assign that action to Jamie, or establish the property's current status. Phase One completion does not establish Phase Two or full redevelopment completion. Two project-account items, recipient identity, and handoff terms remain unrecovered or unestablished for publication.",
       protected:
         "The source packet, banking appendices, resident responses, contact records, private transition context, and private financial, legal, property, contractor, and stakeholder details are omitted."
     }

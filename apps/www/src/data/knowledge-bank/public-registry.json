@@ -204,6 +204,27 @@
       ]
     },
     {
+      "id": "SRC-KCTH-KCMO-ORDINANCE-240317",
+      "title": "Ordinance 240317: withdrawn CCED projects",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-03-28",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      "publicNote": "The ordinance records KC Town Hall among three withdrawn CCED projects and reappropriates the unused $490,539 allocation. It does not state the reasons for KC Town Hall's withdrawal or attribute the decision to Jamie.",
+      "doesNotEstablish": [
+        "the reasons for KC Town Hall's withdrawal",
+        "who initiated or decided the withdrawal",
+        "Jamie's role in the withdrawal",
+        "that the separately documented Phase One work was not completed",
+        "the property's current status"
+      ]
+    },
+    {
       "id": "SRC-NAC-NYCARTC-ABOUT-2017",
       "title": "About & Contact",
       "organization": "NYC Artist Coalition",
@@ -1606,7 +1627,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "After the CCED Board recommended $490,539 for KC Town Hall, the Kansas City Council adopted Resolution 190649 on September 26, 2019, accepting the recommendation and authorizing funding-agreement negotiations for an amount not to exceed $490,539.",
+          "text": "After the CCED Board recommended $490,539 for KC Town Hall, the Kansas City Council adopted Resolution 190649 on September 26, 2019, accepting the recommendation and authorizing funding-agreement negotiations. A 2024 ordinance later recorded the project as withdrawn and reappropriated the unused $490,539 allocation.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1628,6 +1649,17 @@
           "renderCitation": true
         },
         {
+          "sourceId": "SRC-KCTH-KCMO-ORDINANCE-240317",
+          "relationship": "direct-support",
+          "supports": [
+            "2024 withdrawn-project status",
+            "the allocation's unused status",
+            "reappropriation of $490,539"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
           "sourceId": "SRC-KCTH-KCMO-LEGISTAR-190649",
           "relationship": "corroborating",
           "supports": [
@@ -1641,7 +1673,8 @@
       ],
       "boundaries": [
         "Credit the CCED Board for the recommendation and the Kansas City Council for the resolution; describe Jamie's planning and documentation role separately.",
-        "Council acceptance and authority to negotiate are not evidence that an agreement was executed, funds were disbursed or received, or the project was completed."
+        "Council acceptance and authority to negotiate are not evidence that an agreement was executed or funds were received.",
+        "The 2024 ordinance records institutional withdrawal and reappropriation of the unused allocation; it does not identify the reasons, assign the decision to Jamie, or negate the separately documented Phase One work."
       ]
     },
     {
@@ -2934,6 +2967,7 @@
       "sourceOrder": [
         "SRC-KCTH-KCMO-AUTHENTICATED-190649",
         "SRC-KCTH-KCMO-LEGISTAR-190649",
+        "SRC-KCTH-KCMO-ORDINANCE-240317",
         "SRC-KCTH-WAYBACK-TIRES-2020",
         "SRC-KCTH-X-CORPUS-2026-07-15",
         "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019",
@@ -2952,7 +2986,8 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-KCTH-KCMO-AUTHENTICATED-190649",
-            "SRC-KCTH-KCMO-LEGISTAR-190649"
+            "SRC-KCTH-KCMO-LEGISTAR-190649",
+            "SRC-KCTH-KCMO-ORDINANCE-240317"
           ]
         },
         {

@@ -30,12 +30,13 @@ export const kcTownHallCouncilRecordBatch20260713: {
       disposition: "source-created",
       sourceIds: [
         "SRC-KCTH-KCMO-LEGISTAR-190649",
-        "SRC-KCTH-KCMO-AUTHENTICATED-190649"
+        "SRC-KCTH-KCMO-AUTHENTICATED-190649",
+        "SRC-KCTH-KCMO-ORDINANCE-240317"
       ],
       claimIds: ["CLM-KCTH-COUNCIL-APPROVAL-190649"],
       researchTaskIds: [],
       notes: [
-        "The official record supports Council acceptance and authorization to negotiate; it does not by itself establish an executed agreement, disbursement, project completion, or Jamie's sole causation."
+        "The official record supports Council acceptance and authorization to negotiate, followed by a 2024 ordinance recording project withdrawal and reappropriation of the unused allocation. It does not identify the reasons for withdrawal, attribute that action to Jamie, or undo the separately documented Phase One work."
       ],
       reviewedAt: "2026-07-13",
       reviewedBy
@@ -121,6 +122,35 @@ export const kcTownHallCouncilRecordBatch20260713: {
       ]
     },
     {
+      id: "SRC-KCTH-KCMO-ORDINANCE-240317",
+      title: "Ordinance 240317: withdrawn CCED projects",
+      organization: "City of Kansas City, Missouri",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2024-03-28",
+      accessedAt: "2026-07-15",
+      canonicalUrl:
+        "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      preferredPublicUrl: "canonical",
+      publicCitation:
+        "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      publicNote:
+        "The ordinance records KC Town Hall among three withdrawn CCED projects and reappropriates the unused $490,539 allocation. It does not state the reasons for KC Town Hall's withdrawal or attribute the decision to Jamie.",
+      supportsGenerally: [
+        "KC Town Hall project withdrawal recorded by the City in 2024",
+        "the $490,539 allocation described as unused",
+        "reappropriation of that amount to the Housing Budget"
+      ],
+      doesNotEstablish: [
+        "the reasons for KC Town Hall's withdrawal",
+        "who initiated or decided the withdrawal",
+        "Jamie's role in the withdrawal",
+        "that the separately documented Phase One work was not completed",
+        "the property's current status"
+      ]
+    },
+    {
       id: "SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026",
       title: "Jamie Burkart KC Town Hall handoff confirmation",
       author: "Jamie Burkart",
@@ -194,6 +224,32 @@ export const kcTownHallCouncilRecordBatch20260713: {
       reviewedBy
     },
     {
+      id: "AST-KCTH-CCED-WITHDRAWAL-240317",
+      sourceId: "SRC-KCTH-KCMO-ORDINANCE-240317",
+      project: "kc-town-hall",
+      assertion:
+        "Kansas City Ordinance 240317, passed March 28, 2024, records KC Town Hall among three withdrawn CCED projects and states that those projects would no longer proceed.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-KCTH-COUNCIL-APPROVAL-190649"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
+      id: "AST-KCTH-CCED-REALLOCATION-240317",
+      sourceId: "SRC-KCTH-KCMO-ORDINANCE-240317",
+      project: "kc-town-hall",
+      assertion:
+        "Ordinance 240317 describes the KC Town Hall allocation as unused, reduces $490,539 from its project account, and reappropriates the combined withdrawn-project funds to the Housing Budget.",
+      relationship: "bounds",
+      confidence: "high",
+      candidateClaimIds: ["CLM-KCTH-COUNCIL-APPROVAL-190649"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
       id: "AST-KCTH-MISSION-ALIGNED-HANDOFF",
       sourceId: "SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026",
       project: "kc-town-hall",
@@ -212,7 +268,7 @@ export const kcTownHallCouncilRecordBatch20260713: {
       id: "CLM-KCTH-COUNCIL-APPROVAL-190649",
       project: "kc-town-hall",
       internalClaim:
-        "After the CCED Board voted on July 16, 2019, to recommend $490,539 for KC Town Hall, the Kansas City Council adopted Resolution 190649 on September 26, accepting up to that amount for eligible costs and authorizing the City Manager to negotiate a funding agreement.",
+        "After the CCED Board voted on July 16, 2019, to recommend $490,539 for KC Town Hall, the Kansas City Council adopted Resolution 190649 on September 26, accepting up to that amount for eligible costs and authorizing the City Manager to negotiate a funding agreement. Ordinance 240317 later recorded the project as withdrawn and reappropriated the unused $490,539 allocation in 2024.",
       status: "confirmed-with-boundary",
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
@@ -221,7 +277,7 @@ export const kcTownHallCouncilRecordBatch20260713: {
         {
           key: "case-study",
           text:
-            "After the CCED Board recommended $490,539 for KC Town Hall, the Kansas City Council adopted Resolution 190649 on September 26, 2019, accepting the recommendation and authorizing funding-agreement negotiations for an amount not to exceed $490,539.",
+            "After the CCED Board recommended $490,539 for KC Town Hall, the Kansas City Council adopted Resolution 190649 on September 26, 2019, accepting the recommendation and authorizing funding-agreement negotiations. A 2024 ordinance later recorded the project as withdrawn and reappropriated the unused $490,539 allocation.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/kc-town-hall"]
@@ -242,6 +298,18 @@ export const kcTownHallCouncilRecordBatch20260713: {
           renderCitation: true
         },
         {
+          sourceId: "SRC-KCTH-KCMO-ORDINANCE-240317",
+          relationship: "direct-support",
+          supports: [
+            "2024 withdrawn-project status",
+            "the allocation's unused status",
+            "reappropriation of $490,539"
+          ],
+          locator: "Title, preamble, and Sections 1-2",
+          confidence: "high",
+          renderCitation: true
+        },
+        {
           sourceId: "SRC-KCTH-KCMO-LEGISTAR-190649",
           relationship: "corroborating",
           supports: [
@@ -255,13 +323,17 @@ export const kcTownHallCouncilRecordBatch20260713: {
       ],
       boundaries: [
         "Credit the CCED Board for the recommendation and the Kansas City Council for the resolution; describe Jamie's planning and documentation role separately.",
-        "Council acceptance and authority to negotiate are not evidence that an agreement was executed, funds were disbursed or received, or the project was completed."
+        "Council acceptance and authority to negotiate are not evidence that an agreement was executed or funds were received.",
+        "The 2024 ordinance records institutional withdrawal and reappropriation of the unused allocation; it does not identify the reasons, assign the decision to Jamie, or negate the separately documented Phase One work."
       ],
       antiClaims: [
         "Jamie alone secured the Council action",
         "Resolution 190649 proves that KC Town Hall received $490,539",
         "The funding agreement was executed",
-        "The project was completed as proposed"
+        "The full redevelopment was completed as proposed",
+        "Jamie caused or personally decided the project withdrawal",
+        "The 2024 ordinance states why KC Town Hall withdrew",
+        "Project withdrawal means Phase One was not completed"
       ],
       researchInquiryIds: ["INQ-KCTH-COUNCIL-ACTION-190649-2026"],
       reviewedAt: "2026-07-13",
@@ -319,25 +391,29 @@ export const kcTownHallCouncilRecordBatch20260713: {
       methods: [
         "Recovered the official Kansas City Legistar record and authenticated resolution from Jamie's public-web archive.",
         "Verified that the official legislative page remained live on July 13, 2026.",
-        "Visually reviewed all three pages of the authenticated resolution and separated recommendation, Council action, negotiation authority, and disbursement status."
+        "Visually reviewed all three pages of the authenticated resolution and separated recommendation, Council action, negotiation authority, and disbursement status.",
+        "Reviewed the official Ordinance 240317 record and separated later institutional withdrawal and reappropriation from the earlier Phase One completion record and private transition context."
       ],
-      runAt: "2026-07-13",
+      runAt: "2026-07-15",
       resultStatus: "recovered",
       findings: [
         "The CCED Board voted on July 16, 2019, to recommend $490,539 for eligible KC Town Hall project costs.",
         "The Kansas City Council adopted Resolution 190649 as substituted on September 26, 2019.",
-        "The resolution accepted the recommendation for an amount not to exceed $490,539 and authorized funding-agreement negotiations subject to public-benefit conditions."
+        "The resolution accepted the recommendation for an amount not to exceed $490,539 and authorized funding-agreement negotiations subject to public-benefit conditions.",
+        "Ordinance 240317, passed March 28, 2024, later recorded KC Town Hall as withdrawn and reappropriated the unused $490,539 allocation."
       ],
       limitations: [
-        "The reviewed resolution does not itself establish an executed funding agreement or disbursement and receipt of funds.",
-        "The municipal record establishes institutional action, not Jamie's sole causation or the current status of the property or project."
+        "The reviewed resolution does not itself establish an executed funding agreement or receipt of funds.",
+        "The 2024 ordinance does not identify the reasons for withdrawal, who initiated it, Jamie's role in it, or the current status of the property.",
+        "The municipal record establishes institutional action, not Jamie's sole causation; later withdrawal does not negate the separately documented Phase One work."
       ],
       sourceIds: [
         "SRC-KCTH-KCMO-LEGISTAR-190649",
-        "SRC-KCTH-KCMO-AUTHENTICATED-190649"
+        "SRC-KCTH-KCMO-AUTHENTICATED-190649",
+        "SRC-KCTH-KCMO-ORDINANCE-240317"
       ],
       publicSummary:
-        "Official Kansas City records confirm that the Council adopted Resolution 190649 after the CCED Board's recommendation, accepting up to $490,539 for eligible KC Town Hall costs and authorizing funding-agreement negotiations."
+        "Official Kansas City records confirm that the Council adopted Resolution 190649 after the CCED Board's recommendation, authorizing funding-agreement negotiations for up to $490,539. Ordinance 240317 later recorded KC Town Hall as withdrawn and reappropriated the unused allocation."
     }
   ],
   pages: [
@@ -347,6 +423,7 @@ export const kcTownHallCouncilRecordBatch20260713: {
       sourceOrder: [
         "SRC-KCTH-KCMO-AUTHENTICATED-190649",
         "SRC-KCTH-KCMO-LEGISTAR-190649",
+        "SRC-KCTH-KCMO-ORDINANCE-240317",
         "SRC-KCTH-WAYBACK-TIRES-2020",
         "SRC-KCTH-X-CORPUS-2026-07-15",
         "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019",
@@ -365,7 +442,8 @@ export const kcTownHallCouncilRecordBatch20260713: {
           projection: "case-study",
           sourceIds: [
             "SRC-KCTH-KCMO-AUTHENTICATED-190649",
-            "SRC-KCTH-KCMO-LEGISTAR-190649"
+            "SRC-KCTH-KCMO-LEGISTAR-190649",
+            "SRC-KCTH-KCMO-ORDINANCE-240317"
           ]
         },
         {

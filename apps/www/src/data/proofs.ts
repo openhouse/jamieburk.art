@@ -655,17 +655,20 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Co-founded and project-managed Phase One cold-shell restoration of a long-vacant historic building while building a neighborhood-survey and public-benefit documentation process. In 2019, the Kansas City Council adopted Resolution 190649, accepting a $490,539 CCED funding recommendation and authorizing funding-agreement negotiations.",
-    shortWording: "Co-founded and project-managed historic adaptive reuse",
+      "With Julia Fredenburg, co-founded and project-managed Phase One cold-shell restoration of a long-vacant Kansas City building while the project conducted a neighborhood survey and built public-benefit documentation. The Council authorized negotiations on a $490,539 CCED recommendation in 2019; a 2024 ordinance later recorded project withdrawal and reappropriated the unused allocation.",
+    shortWording:
+      "Co-founded with Julia Fredenburg and project-managed historic adaptive reuse",
     detailedPublicWording:
-      "A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.",
+      "A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council authorized the City Manager to negotiate a funding agreement for up to $490,539. Ordinance 240317 later recorded KC Town Hall as withdrawn and reappropriated the unused allocation. When Jamie's stewardship concluded, he reports that he transitioned the project to a mission-aligned organization.",
     sourceBasis:
-      "Public-safe page-level appraisal of the private 2019 CCED proposal and support-letter packet, approved resume language, Kansas City Legistar history, authenticated Resolution 190649, the governed project-account corpus, and Jamie's July 14, 2026 handoff confirmation. The underlying packet remains private because appended materials contain financial and contact information. The account corpus preserves a two-item recovery gap, does not assign every post or later operation to Jamie, and does not independently verify self-reported outcome figures.",
+      "Public-safe page-level appraisal of the private 2019 CCED proposal and support-letter packet, approved resume language, Kansas City Legistar history, authenticated Resolution 190649, Ordinance 240317, the governed project-account corpus, and Jamie's July 14, 2026 handoff confirmation. The underlying packet remains private because appended materials contain financial and contact information. The account corpus preserves a two-item recovery gap, does not assign every post or later operation to Jamie, and does not independently verify self-reported outcome figures.",
     guardrail:
-      "Credit Julia's co-leadership, each professional and trade team, survey partners, residents, the CCED Board, and the Council. Phase One completion is not completion of Phase Two or the full redevelopment. Use project manager unless separate evidence corroborates Jamie's recalled general-contractor title. Distinguish negotiation authority from an executed agreement, disbursement, or receipt.",
+      "Credit Julia's co-leadership, each professional and trade team, survey partners, residents, the CCED Board, and the Council. Phase One completion is not completion of Phase Two or the full redevelopment. Use project manager unless separate evidence corroborates Jamie's recalled general-contractor title. Distinguish negotiation authority from receipt, and do not attribute the later withdrawal or its unstated reasons to Jamie.",
     doNotSay: [
       "$490,539 received or disbursed",
       "Funding agreement executed",
+      "Jamie caused or personally decided the project withdrawal",
+      "The 2024 ordinance states why KC Town Hall withdrew",
       "Jamie alone secured the Council action",
       "Jamie alone founded, managed, or completed the restoration",
       "Jamie personally performed every construction trade",
