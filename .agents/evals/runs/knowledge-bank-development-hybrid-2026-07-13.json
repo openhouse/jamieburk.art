@@ -1,38 +1,39 @@
 {
-  "candidate_sha": "1bc9de58eec16506f0b44d87ab998c2daf30bcfb",
+  "candidate_sha": "d3b04787d7dd00f733e4b491b55a9bb90d31a5d1",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 1bc9de58eec16506f0b44d87ab998c2daf30bcfb and scored collective-credit integrity at 4/4 with no material findings.",
-        "Both verified origin's annotated v9 baseline tag object 3d3cefc9d86f73ce7d7e6a63a4c18c5f800fbaa3, peeled commit 6dd6cd201fe1a8ea9611026284842eb3704e9b3d, and the matching anchored baseline blob.",
-        "The 60-claim collective-work inventory, policy version 7, governed runtime, contribution language, collaborator boundaries, anti-claims, and route relationships reproduce the frozen baseline.",
-        "The KC Town Hall card, description, Open Graph, Twitter metadata, proof record, and case study name Julia Fredenburg and Kansas City while separating Jamie and Julia's project-management roles from professional, trade, neighborhood, board, Council, and institutional actions.",
-        "The two proposal-backed Phase One claims remain active; general-contractor, survey-authorship, Tired of Tires field operations, Indian Mound expansion, and Cleveland Avenue recollections remain held and absent from the public registry.",
-        "The mission-aligned handoff renders explicitly as Jamie's first-person report and does not expose the recipient, timing, terms, private context, or present operations.",
-        "Ordinance 240317 is used only for institutional withdrawal, unused-allocation, and reappropriation claims; no public surface attributes those actions or their unstated reasons to Jamie."
+        "Two independent graders reviewed exact candidate d3b04787d7dd00f733e4b491b55a9bb90d31a5d1; the KB-007 reviewer returned 4/4 with no actionable semantic finding.",
+        "The frozen 65-claim collective-work inventory and policy version 7 classify all five new collective Urbanhermit-derived project claims and explicitly classify urbanhermit-public-record as individual work.",
+        "The WOW List attribution retains Richard Kim, other builders, and community organizers; the Horse Lords video retains M.C. Schmidt and Horse Lords credit; the tunnel program retains participant and filmmaker authorship.",
+        "The NYC Artist Coalition claim credits Julia Fredenburg, coalition collaborators, partners, artists, venue workers, Rafael Espinal, Council colleagues, and other participants while rejecting legislative authorship and sole causation.",
+        "The Tired of Tires claim credits KC Town Hall, Oak Park Neighborhood Association, Julia Fredenburg, Pat Clarke, Forest Tyson Jr., Jimmy Fitzner, neighbors, and City staff while limiting Jamie's claim to attributable direct participation.",
+        "The three individual public-record claims distinguish Jamie-authored records from external native reposts and preserve non-endorsement, volatility, and incomplete-history boundaries.",
+        "The dedicated Urbanhermit corpus eval passed 100/100, including full source-positioning and collective-credit points."
       ],
       "findings": [],
-      "confidence": 0.98
+      "confidence": 0.99
     },
     {
       "eval_id": "KB-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 1bc9de58eec16506f0b44d87ab998c2daf30bcfb and scored Chad-lens clarity, source entailment, projection coverage, and privacy at 4/4 with no material findings.",
-        "Projection policy version 4, projection decisions, statement support, route bindings, public surfaces, work-field proof identities, and resume artifacts reproduce their governed fingerprints.",
-        "The public sequence is direct and bounded: Jamie and Julia co-founded and project-managed Phase One; the 2019 proposal records completed cold-shell work and a partner-based survey that shaped plans; the Council authorized negotiations; Ordinance 240317 later recorded withdrawal and reappropriation.",
-        "The ordinance appraisal and public copy withhold unstated reasons, individual causation, current-property conclusions, and any inference that later withdrawal negates the separately documented Phase One work.",
-        "The governed resume statement and proof record share the exact funding-agreement-negotiations semantic anchor across HTML, extracted text, and downloadable PDF artifacts.",
-        "The richer first-person recollections remain preserved as research leads with source boundaries and actionable corroboration tasks rather than projected accomplishments.",
-        "Chad-lens, knowledge-bank, public-safety, citation, route, corpus, portfolio-eval, typecheck, lint, production-build, and rendered-surface checks passed; no protected source content, private path, credential, recipient identity, or private transition detail was exposed."
+        "Two independent graders reviewed exact candidate d3b04787d7dd00f733e4b491b55a9bb90d31a5d1; the KB-009 reviewer returned 4/4 with no material projection, privacy, or audience-fit defect.",
+        "All eight new claims have projectionEligibility hold, only held projections, empty surface arrays, and no citation-page or public-registry occurrence; the public-surface fingerprint is unchanged.",
+        "The hash-locked 434-record corpus contains public-safe metadata rather than raw post bodies and excludes profile biography, contact details, private analytics, credentials, authentication state, direct messages, and local paths.",
+        "Nine non-mission personal or network records retain only identity-free redaction dispositions, while the authenticated raw capture remains protected.",
+        "The run record limits completeness to 434 of 434 live profile-counted records on the capture date and separates 340 originals, 13 replies, 81 external-source native reposts, and 353 account-authored records.",
+        "Visible counters are bounded as 243 interaction units rather than people, reach, endorsement, conversion, attendance, or impact; external repost counters are excluded.",
+        "The knowledge-bank documentation preserves future hiring value across product, creative-media, participatory-program, civic-advocacy, and neighborhood-fieldwork evidence without adding a route or cluttering the current site.",
+        "Chad-lens, citation, knowledge-bank, public-safety, route, portfolio, typecheck, lint, production-build, and dedicated Urbanhermit checks passed."
       ],
       "findings": [],
-      "confidence": 0.98
+      "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact candidate 1bc9de58eec16506f0b44d87ab998c2daf30bcfb passed two fresh independent reviews for KB-007 and KB-009 at 4/4 with no material findings. The KC Town Hall Phase One record, later municipal status, selective public projections, held recollections, collective-credit boundaries, privacy protections, and externally anchored policy baseline meet the frozen criteria."
+  "overall_finding": "Exact candidate d3b04787d7dd00f733e4b491b55a9bb90d31a5d1 passed independent KB-007 and KB-009 review at 4/4 with no material findings. The complete live-profile corpus, source maturation, atomic claim graph, collective-credit boundaries, privacy protections, explicit held projections, and externally anchored policy baseline meet the frozen criteria."
 }
