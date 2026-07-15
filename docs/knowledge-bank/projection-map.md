@@ -108,6 +108,15 @@ workflow claim covering proposal review, acceptance, pre-arrival coordination,
 space configuration, and access handoff. Resident identity and logistics remain
 protected, and one record does not verify the full residency aggregate.
 
+The selected Sunday Dinner proof also gains a protected-source-backed
+300-plus-gathering floor. The site does not add a larger metric display; the
+knowledge bank now carries the 345-column method, date span, and explicit ban
+on unique-attendee inference.
+
+The selected WOW List proof retains its existing concise scale copy. A
+protected database aggregate now supplies the historical denominator and the
+50-post/event geographic threshold without publishing raw rows.
+
 These selections do not publish founding causality, event-production ownership,
 funding-agreement execution or disbursement, participant records, or a claim
 that MARCH was disbanded.
@@ -152,6 +161,12 @@ material.
 
 The participatory-systems longitudinal frame remains on hold pending broader
 cross-project corroboration.
+
+The Call Script formation lineage remains reserve depth. It connects WOW
+List's `popular.vote` route to a January DCLA event discussion and an open
+February coalition priority-setting meeting, strengthening Jamie's facilitation
+and civic-systems account without adding another public-site paragraph or
+claiming a complete founding record.
 
 The personal and WOW List Facebook event pass remains reserve depth. It
 strengthens the Sunday Dinner proof basis with public pages documenting the

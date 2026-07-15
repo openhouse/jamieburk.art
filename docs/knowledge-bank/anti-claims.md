@@ -88,6 +88,13 @@ repeal legislation, supplied the votes, or caused enactment. Keep functional
 alignment, coalition participation, Espinal's sponsorship, Council action, and
 administration implementation distinct.
 
+Do not say Jamie alone founded NYC Artist Coalition, Call Script created the
+coalition, or the January 2017 DCLA event discussion is the complete founding
+record. Do not collapse WOW List, `popular.vote`, Call Script, and NYC Artist
+Coalition into one product. Do not assign every shared-account or institutional
+discussion post to Jamie. Facebook responses are not attendance, membership,
+endorsement, reach, or impact.
+
 Do not describe Jamie's commercial-vacancy public-data brief as City-endorsed,
 adopted, implemented, published, or based on his access to confidential RPIE
 filings. It is an authored proposal unless external outcome evidence matures.
@@ -243,6 +250,21 @@ Do not use one dated residency onboarding record to verify the 20-plus resident
 aggregate or imply that every residency followed an identical process. Do not
 publish resident identity, proposal details, dates, contact information, or
 access instructions.
+
+Do not call the protected workbook a public attendance database or a complete
+lifetime population. Do not describe 345 event columns as exactly 345 unique
+in-person dinners; the record includes numbering irregularities and livestream
+entries. Never sum cached yes counts into unique people, meals, attendees, or
+RSVPs, and do not use this workbook to verify the 20-plus resident aggregate.
+
+## WOW List Database
+
+Do not turn 35 nonblank city or region labels with at least 50 geocoded posts
+or events into official chapters, currently active communities, or 35 distinct
+organizer groups. Do not call all 1,846 user rows unique active users or treat
+the July 2017 snapshot as evidence of current operation, satisfaction,
+retention, reach, or impact. Do not publish raw user, email, password, content,
+organizer, security, relationship, or precise-location rows.
 
 ## Google Drive Shared Drives
 

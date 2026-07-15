@@ -77,7 +77,7 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("intake has no silent loss and memories are not auto-promoted", () => {
-  assert.equal(knowledgeBank.intake.length, 47 + campaignPressIntake.length);
+  assert.equal(knowledgeBank.intake.length, 50 + campaignPressIntake.length);
   assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
   assert.ok(knowledgeBank.intake.every((item) =>
     item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
@@ -106,6 +106,21 @@ test("intake has no silent loss and memories are not auto-promoted", () => {
   assert.ok(
     knowledgeBank.intake.some(
       (item) => item.id === "LEAD-WOWLIST-FULL-POPULATION-CORPUS-2026"
+    )
+  );
+  assert.ok(
+    knowledgeBank.intake.some(
+      (item) => item.id === "LEAD-WOWLIST-DATABASE-SCALE-2026"
+    )
+  );
+  assert.ok(
+    knowledgeBank.intake.some(
+      (item) => item.id === "LEAD-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2026"
+    )
+  );
+  assert.ok(
+    knowledgeBank.intake.some(
+      (item) => item.id === "LEAD-CALLSCRIPT-NYCARTC-FORMATION-LINEAGE-2026"
     )
   );
   assert.ok(

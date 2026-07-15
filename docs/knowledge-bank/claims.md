@@ -243,6 +243,57 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## wowlist-database-scale-2017 - Historical platform scale
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Protected database / deterministic public-safe aggregate run
+**Public safety:** Public with boundary
+**Editorial status:** Selected
+**Public wording:** By July 2017, WOW List's protected database recorded 1,800+ users, 16,000+ posts or events, and substantial activity in roughly 35 city or region ecosystems.
+**Detailed public-safe wording:** The July 22, 2017 snapshot contains 1,846 user records and 16,142 posts or events; 35 nonblank city or region labels contain at least 50 geocoded posts or events.
+**Where to project:** Existing WOW List case-study and Technical Operations scale copy; aggregate method remains in the knowledge bank.
+**Why it matters:** Makes the selected scale proof inspectable while keeping raw database records protected.
+**Guardrail:** Thirty-five means nonblank city or region labels with at least 50 geocoded posts or events, not official chapters, current communities, or distinct organizer groups. User rows are not unique-active-user measures.
+**Do not say:** 35 official chapters; 35 currently active communities; 1,846 unique active users; current operation or impact; Jamie alone created WOW List.
+**Protected boundaries:** Raw user, email, password, content, organizer, security, relationship, and precise-location rows stay offline.
+**Review owner:** Jamie / Codex protected database review
+**Last reviewed:** 2026-07-15
+
+## sunday-dinner-300-gathering-archive - Documented gathering floor
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Protected operational workbook / aggregate data-quality review
+**Public safety:** Public with boundary
+**Editorial status:** Selected
+**Public wording:** A protected event and attendance workbook documents more than 300 Sunday Dinner gatherings across a January 2012-March 2021 record span.
+**Detailed public-safe wording:** The main worksheet contains 345 event-specific columns; 340 have positive cached yes counts. Numbering irregularities and livestream entries remain explicit.
+**Where to project:** Existing 196 / Sunday Dinner case-study and Technical Operations aggregate copy.
+**Why it matters:** Converts the 300-plus gathering claim from a general protected summary into a reviewable aggregate method without exposing participants.
+**Guardrail:** The 345 event columns include numbering irregularities and livestream entries. Cached yes counts are not unique people, meals, attendees, or RSVPs.
+**Do not say:** Exactly 345 unique in-person dinners; 2,714 attendees; a complete lifetime population; the workbook verifies 20+ resident artists.
+**Protected boundaries:** Names, contacts, locations, notes, participant rows, and individual attendance histories stay offline.
+**Review owner:** Jamie / Codex protected workbook review
+**Last reviewed:** 2026-07-15
+
+## nycartc-callscript-formation-lineage - Participation system into coalition formation
+
+**Status:** Confirmed with boundary
+**Support level:** Strong public sequence with moderate firsthand role evidence
+**Evidence class:** Public project and event records / Jamie confirmation
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** Jamie carried an event-participation practice from WOW List and `popular.vote` into Call Script and early NYC Artist Coalition convening; a January 2017 DCLA event discussion led publicly to a follow-up meeting and an invitation to help set coalition priorities.
+**Detailed public-safe wording:** Public records connect a November 2016 WOW List route, the Call Script Page, the January 27 DCLA event, its follow-up poll, and the February 6 coalition general meeting; Jamie separately confirms his account-establishment and facilitation contribution.
+**Where to project:** Reserve NYC Artist Coalition project history and future role-specific composition.
+**Why it matters:** Makes Jamie's participation-system craft legible across product and civic contexts while preserving collective formation credit.
+**Guardrail:** Treat this as a consequential formation pathway, not a complete founding record, sole-founder claim, or single-cause explanation.
+**Do not say:** Jamie alone founded NYC Artist Coalition; Call Script created the coalition; all responders attended or became members; Jamie authored every shared-account post.
+**Protected boundaries:** Participant identities, comments, profiles, invite context, Page administration, and authentication state stay offline.
+**Review owner:** Jamie / Codex authenticated source review
+**Last reviewed:** 2026-07-15
+
 ## nyc-artist-coalition-dcla-engagement-value - DCLA recognition
 
 **Status:** Reserve

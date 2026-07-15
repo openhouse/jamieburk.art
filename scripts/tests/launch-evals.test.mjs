@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   evaluateCallNycFullPopulationArchive,
+  evaluateCallscriptNycArtCFormation,
   evaluateChadLens,
   evaluateCampaignPressCorpus,
   evaluateEvidenceExpansion,
@@ -22,7 +23,9 @@ import {
   evaluateNycArtCFacebookPostArchive,
   evaluatePersonalWowlistFacebookEventArchive,
   evaluateProjectSocialArchiveProduction,
+  evaluateSundayDinnerAttendanceArchive,
   evaluateUrbanHermitFullPopulationArchive,
+  evaluateWowlistDatabaseScale,
   evaluateWowlistFacebookPostArchive,
   evaluateWowlistFullPopulationArchive,
   summarizeLaunchEvals
@@ -1985,5 +1988,175 @@ test("personal and WOW List Facebook event archive rejects silent reserve projec
     publicSite: `${personalWowlistFacebookEventFixture.publicSite}\nCLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017`
   });
 
+  assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
+});
+
+const proofDebtCommonFixture = {
+  evidenceBatch: readRepoFile(
+    "apps/www/src/data/knowledge-bank/proof-debt-evidence-batch-2026-07-15.ts"
+  ),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  sourceCoverage: readRepoFile("docs/knowledge-bank/source-coverage.md"),
+  approvalRegister: readRepoFile("docs/knowledge-bank/approval-register.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+const wowlistDatabaseScaleFixture = {
+  ...proofDebtCommonFixture,
+  ledger: readRepoFile("docs/knowledge-bank/data/wowlist-database-aggregate-ledger.json"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-15-wowlist-database-scale.md"),
+  projectDoc: readRepoFile("docs/knowledge-bank/projects/wowlist.md")
+};
+
+test("WOW List database eval passes recomputed counts, thresholds, and privacy boundaries", () => {
+  assert.deepEqual(evaluateWowlistDatabaseScale(wowlistDatabaseScaleFixture), []);
+});
+
+test("WOW List database eval rejects numerical and geographic-threshold inflation", () => {
+  const ledger = JSON.parse(wowlistDatabaseScaleFixture.ledger);
+  ledger.recordCounts.users = 2000;
+  ledger.geographicActivity.labelsAtOrAboveThreshold["50"] = 48;
+  const failures = evaluateWowlistDatabaseScale({
+    ...wowlistDatabaseScaleFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must remain 1,846")));
+  assert.ok(failures.some((failure) => failure.includes("thresholds must remain")));
+});
+
+test("WOW List database eval rejects erased chapter and active-user boundaries", () => {
+  const failures = evaluateWowlistDatabaseScale({
+    ...wowlistDatabaseScaleFixture,
+    proofs: wowlistDatabaseScaleFixture.proofs
+      .replace("city or region labels with at least 50 geocoded posts or events", "official chapters")
+      .replace("All 1,846 records were unique active users", "All users were active")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("WOW List public proof")));
+});
+
+test("WOW List database eval rejects raw rows and private-path leakage", () => {
+  const ledger = JSON.parse(wowlistDatabaseScaleFixture.ledger);
+  ledger.rawRows = [{ email: "withheld@example.invalid" }];
+  const failures = evaluateWowlistDatabaseScale({
+    ...wowlistDatabaseScaleFixture,
+    ledger: JSON.stringify(ledger),
+    archiveDoc: `${wowlistDatabaseScaleFixture.archiveDoc}\n/Volumes/private/source`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("top-level rawRows")));
+  assert.ok(failures.some((failure) => failure.includes("private path")));
+});
+
+const sundayDinnerAttendanceFixture = {
+  ...proofDebtCommonFixture,
+  ledger: readRepoFile("docs/knowledge-bank/data/sunday-dinner-attendance-aggregate-ledger.json"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-15-sunday-dinner-attendance-workbook.md"),
+  projectDoc: readRepoFile("docs/knowledge-bank/projects/sunday-dinner-196.md")
+};
+
+test("Sunday Dinner attendance eval passes event-floor and privacy boundaries", () => {
+  assert.deepEqual(
+    evaluateSundayDinnerAttendanceArchive(sundayDinnerAttendanceFixture),
+    []
+  );
+});
+
+test("Sunday Dinner attendance eval rejects event and yes-count drift", () => {
+  const ledger = JSON.parse(sundayDinnerAttendanceFixture.ledger);
+  ledger.eventColumns.count = 400;
+  ledger.eventColumns.positiveCachedYesCountColumns = 395;
+  const failures = evaluateSundayDinnerAttendanceArchive({
+    ...sundayDinnerAttendanceFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must remain 345")));
+  assert.ok(failures.some((failure) => failure.includes("must remain 340")));
+});
+
+test("Sunday Dinner attendance eval rejects unique-person and residency inflation", () => {
+  const failures = evaluateSundayDinnerAttendanceArchive({
+    ...sundayDinnerAttendanceFixture,
+    antiClaims: sundayDinnerAttendanceFixture.antiClaims
+      .replace(/unique people, meals, attendees, or\s+RSVPs/, "attendance")
+      .replace(/20-plus resident\s+aggregate/, "resident aggregate")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("Sunday Dinner anti-claims")));
+});
+
+test("Sunday Dinner attendance eval rejects participant data and workbook locators", () => {
+  const ledger = JSON.parse(sundayDinnerAttendanceFixture.ledger);
+  ledger.participantRows = [{ name: "Withheld" }];
+  const failures = evaluateSundayDinnerAttendanceArchive({
+    ...sundayDinnerAttendanceFixture,
+    ledger: JSON.stringify(ledger),
+    archiveDoc: `${sundayDinnerAttendanceFixture.archiveDoc}\nhttps://docs.google.com/spreadsheets/d/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("top-level participantRows")));
+  assert.ok(failures.some((failure) => failure.includes("workbook locator")));
+});
+
+const callscriptFormationFixture = {
+  ...proofDebtCommonFixture,
+  ledger: readRepoFile("docs/knowledge-bank/data/callscript-nycartc-formation-ledger.json"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-15-callscript-nycartc-formation-lineage.md"),
+  projectDoc: readRepoFile("docs/knowledge-bank/projects/nyc-artist-coalition-nightlife.md"),
+  publicSite: [
+    readRepoFile("apps/www/src/app/page.tsx"),
+    readRepoFile("apps/www/src/app/resume/page.tsx"),
+    readRepoFile("apps/www/src/data/site.ts"),
+    readRepoFile("apps/www/src/data/work.ts"),
+    readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+    readRepoFile("apps/www/src/content/work/fair-rent-nyc.mdx")
+  ].join("\n")
+};
+
+test("Call Script formation eval passes the public sequence and collective-credit boundary", () => {
+  assert.deepEqual(
+    evaluateCallscriptNycArtCFormation(callscriptFormationFixture),
+    []
+  );
+});
+
+test("Call Script formation eval rejects a missing bridge and attendance inflation", () => {
+  const ledger = JSON.parse(callscriptFormationFixture.ledger);
+  ledger.sequence.splice(1, 1);
+  ledger.sequence.find((item) => item.date === "2017-01-27").boundary =
+    "445 people attended.";
+  const failures = evaluateCallscriptNycArtCFormation({
+    ...callscriptFormationFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("five bounded sequence records")));
+  assert.ok(failures.some((failure) => failure.includes("attendance boundary")));
+});
+
+test("Call Script formation eval rejects sole-founder and project-collapse boundary loss", () => {
+  const failures = evaluateCallscriptNycArtCFormation({
+    ...callscriptFormationFixture,
+    antiClaims: callscriptFormationFixture.antiClaims
+      .replace("Jamie alone founded NYC Artist Coalition", "Jamie founded NYC Artist Coalition")
+      .replace("Call Script created the coalition", "Call Script and the coalition")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("NYC Artist Coalition anti-claims")));
+});
+
+test("Call Script formation eval rejects participant leakage and silent reserve projection", () => {
+  const ledger = JSON.parse(callscriptFormationFixture.ledger);
+  ledger.comments = [{ author: "Withheld", text: "Withheld" }];
+  const failures = evaluateCallscriptNycArtCFormation({
+    ...callscriptFormationFixture,
+    ledger: JSON.stringify(ledger),
+    publicSite: `${callscriptFormationFixture.publicSite}\nCLM-NYCARTC-CALLSCRIPT-FORMATION-LINEAGE-2016-2017`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("top-level comments")));
   assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
 });

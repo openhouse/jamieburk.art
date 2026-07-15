@@ -424,3 +424,50 @@ protected sources, plan-to-completion inflation, immutable-document inflation,
 sole credit, and silent site projection. The deterministic suite passes all
 **102 tests**; schema, citation, and public-safety checks pass; and the launch
 evaluator remains **100/100** with every automated hard gate passing.
+
+## WOW List, Sunday Dinner, And Call Script Proof-Debt Pass
+
+The July 15 pass treated three long-running portfolio assertions as separate
+evidence problems rather than one general request for stronger numbers. Each
+now has a public-safe aggregate ledger, a close-reading intake, source and claim
+records, explicit anti-claims, a reserve publication decision, and its own
+20-point hard gate.
+
+The WOW List gate verifies the final unique July 2017 database snapshot while
+keeping raw people and event rows outside the repository. The bounded result is
+1,846 users, 16,142 posts/events, 23,864 tags/lists, 28,837 tag follows, 20,927
+stars, and 15,915 Google Calendar event records. It also verifies 35 city/region
+labels with at least 50 geocoded posts/events, but rejects translations of that
+threshold into 35 official chapters, current communities, distinct organizer
+groups, or complete global coverage.
+
+The Sunday Dinner gate verifies the protected workbook as a substantial event
+operations record without publishing guest data. It contains 345 event-specific
+columns spanning January 2012 through March 2021, with positive cached RSVP
+marks in 340 columns. The gate rejects treating spreadsheet columns as unique
+events, people, attendance, in-person dinners, or proof of the separate 20-plus
+artist claim; numbering gaps and duplicates remain visible rather than silently
+normalized.
+
+The Call Script gate records a bounded formation lineage: Jamie established the
+Call Script participation surface; a November 2016 WOW List post routed readers
+to popular.vote; the January 27, 2017 post-Ghost Ship DCLA event named Call
+Script and NYC Artist Coalition among its hosts; and its discussion linked a
+February 6 general meeting while inviting participants to shape what the
+coalition should work on. This supports facilitation and continuity, not sole-
+founder credit, a complete founding record, a single-cause origin story, or the
+conversion of 445 Facebook responses into attendance.
+
+The first focused run failed four checks because important boundaries were only
+implied: one legacy WOW List guardrail, two Sunday Dinner semantic/privacy
+anchors, and one exact formation-lineage statement. The hill climb strengthened
+the records and narrowed the privacy scan to the protected source bundle without
+weakening any criterion. Twelve new adversarial tests bring the deterministic
+suite to **114 passing tests**. Citation, knowledge-bank, and public-safety
+checks pass, and the launch evaluator remains **100/100** with the three new
+hard gates and every prior automated hard gate passing.
+
+The complete `npm run check` gate also passes: citation registry validation,
+19 citation tests, 114 deterministic eval tests, TypeScript, lint, the
+production build and standalone asset copy, knowledge-bank integrity,
+public-safety scanning, route validation, and launch readiness.

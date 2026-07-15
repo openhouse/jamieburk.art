@@ -1,6 +1,6 @@
 # NYC Artist Coalition Nightlife Research
 
-**Reviewed:** 2026-07-13
+**Reviewed:** 2026-07-15
 
 ## Confirmed contribution
 
@@ -16,6 +16,31 @@ description of safety workshops and fire-guard study groups.
 This establishes a concrete organizing contribution. It does not independently
 establish Jamie as sole cause of repeal, sole coalition leader, or author of the
 legislation.
+
+## Formation lineage
+
+A new public-source sequence makes Jamie's early participation-system
+contribution more concrete. In November 2016, the shared `@wowlist` account
+routed people to `popular.vote` for marches, meetings, and local connection.
+The surviving Call Script Facebook Page links directly to `popular.vote`.
+
+The January 27, 2017 DCLA meeting page identifies NYC Artist Coalition and Call
+Script among its displayed hosts. Its discussion then polls for a follow-up,
+links the February 6 NYC Artist Coalition general meeting at Magick City, and
+invites people to help choose what the coalition should work on. Jamie confirms
+establishing Call Script and carrying participation-system lessons from WOW
+List and `popular.vote` into early coalition convening.
+
+This is evidence of a consequential formation and facilitation pathway, not a
+complete founding record. It does not establish sole-founder status, assign
+every shared-account post to Jamie, identify the complete founding group, or
+show that one event caused the coalition to exist. Facebook response totals
+remain mutable event-level signals, not attendance.
+
+See
+`docs/knowledge-bank/intake/2026-07-15-callscript-nycartc-formation-lineage.md`
+and
+`docs/knowledge-bank/data/callscript-nycartc-formation-ledger.json`.
 
 ## Why the work mattered to government
 

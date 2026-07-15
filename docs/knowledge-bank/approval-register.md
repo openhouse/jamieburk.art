@@ -23,8 +23,18 @@ The repo is public. Approval here means approved for public-safe repository and 
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - Commercial Rent Stabilization running minutes: the protected 34-page April-May record supports the public 30-plus-page aggregate. Keep the earlier 12-page April 29 snapshot distinct and do not publish raw coalition material.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
-- WOWList reach: use approximate public-safe adoption wording.
-- Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
+- WOWList reach: use the historical 1,800+ user and 16,000+ post/event floors.
+  Roughly 35 means city or region labels with at least 50 geocoded posts or
+  events, not official chapters, current communities, or distinct organizer
+  groups. Never publish raw database rows.
+- Sunday Dinner / 196 scale: the protected workbook supports 300+ documented
+  gatherings. Do not convert event columns or cached yes counts into unique
+  people, meals, attendance, or RSVPs. The 20+ resident-artist aggregate remains
+  separately approved first-person wording pending its own count methodology.
+- Call Script / NYC Artist Coalition formation: the WOW List-to-popular.vote-to-
+  Call Script-to-follow-up-meeting sequence is approved as reserve formation
+  and facilitation evidence. Do not call it the complete founding record,
+  assign shared-account posts to Jamie, or imply sole causality.
 - KC Spaces Fund: behind-the-scenes digital infrastructure and cross-channel naming-support language only. Jamie confirms website creation and support for choosing a project name available across social and domain surfaces; he was not the stakeholder or owner posting on the Facebook account. AI-assisted archival review is not a human testimonial and does not approve public organizer, Page publisher, campaign voice, sole namer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - Personal Facebook posts: aggregate population accounting, public-safe source
   discoveries, and bounded first-person role patterns may live in the knowledge

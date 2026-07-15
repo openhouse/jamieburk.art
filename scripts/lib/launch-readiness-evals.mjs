@@ -3978,6 +3978,356 @@ export function evaluatePersonalWowlistFacebookEventArchive({
   return missing;
 }
 
+export function evaluateWowlistDatabaseScale({
+  ledger,
+  evidenceBatch,
+  archiveDoc,
+  projectDoc,
+  framework,
+  proofs,
+  sourceCoverage,
+  approvalRegister,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalized = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalized.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(ledger);
+  } catch {
+    missing.push("WOW List database aggregate ledger is not valid JSON.");
+    return missing;
+  }
+
+  const counts = parsed.recordCounts ?? {};
+  const geography = parsed.geographicActivity ?? {};
+  const thresholds = geography.labelsAtOrAboveThreshold ?? {};
+  expect(parsed.snapshot?.createdAt === "2017-07-22T08:00:01-04:00", "WOW List database snapshot date must remain July 22, 2017.");
+  expect(parsed.snapshot?.postCreationRange?.first === "2012-11-26", "WOW List first post date must remain November 26, 2012.");
+  expect(parsed.snapshot?.postCreationRange?.last === "2017-07-21", "WOW List last post date must remain July 21, 2017.");
+  expect(counts.users === 1846, "WOW List user-record count must remain 1,846.");
+  expect(counts.postsOrEvents === 16142, "WOW List post/event count must remain 16,142.");
+  expect(counts.tagsOrLists === 23864, "WOW List tag/list count must remain 23,864.");
+  expect(counts.tagFollows === 28837, "WOW List tag-follow count must remain 28,837.");
+  expect(counts.stars === 20927, "WOW List star count must remain 20,927.");
+  expect(counts.googleCalendarEvents === 15915, "WOW List Google Calendar event count must remain 15,915.");
+  expect(parsed.primaryKeyQuality?.duplicatePrimaryKeys === 0, "WOW List checked tables must retain zero duplicate primary keys.");
+  expect(
+    geography.postsWithNonblankCityOrRegion + geography.postsWithBlankOrUnusableCityOrRegion === counts.postsOrEvents,
+    "WOW List geographic dispositions must reconcile to all 16,142 posts or events."
+  );
+  expect(geography.postsWithMissingGeolocationReference === 0, "WOW List posts must retain zero missing geolocation references.");
+  expect(thresholds["1"] === 709 && thresholds["5"] === 133 && thresholds["10"] === 79 && thresholds["25"] === 48 && thresholds["50"] === 35, "WOW List city/region thresholds must remain 709, 133, 79, 48, and 35.");
+  expect(thresholds["1"] >= thresholds["5"] && thresholds["5"] >= thresholds["10"] && thresholds["10"] >= thresholds["25"] && thresholds["25"] >= thresholds["50"], "WOW List city/region thresholds must remain monotonic.");
+
+  requireFragments("WOW List evidence batch", evidenceBatch, [
+    "LEAD-WOWLIST-DATABASE-SCALE-2026",
+    "SRC-WOWLIST-DATABASE-AGGREGATE-RUN-2017-2026",
+    "CLM-WOWLIST-DATABASE-SCALE-2017",
+    "PUB-WOWLIST-DATABASE-SCALE-2017",
+    'visibility: "protected"',
+    "protectedLocatorId",
+    "35 nonblank city or region labels",
+    "not official chapters",
+    "not establish current platform status",
+    "Preserve Richard's shared-project credit"
+  ]);
+  requireFragments("WOW List database archive note", archiveDoc, [
+    "1,846 users",
+    "16,142 posts or events",
+    "35 nonblank city or region labels",
+    "at least 50 geocoded posts or events",
+    "not a current-platform or official-chapter claim",
+    "contains no raw rows"
+  ]);
+  requireFragments("WOW List project note", projectDoc, [
+    "protected July 22, 2017 database snapshot",
+    "50 geocoded posts or events",
+    "official chapters",
+    "unique active users"
+  ]);
+  requireFragments("Knowledge-bank framework", framework, [
+    "proofDebtEvidenceIntake",
+    "proofDebtEvidenceSources",
+    "proofDebtEvidenceClaims",
+    "proofDebtEvidencePublicationDecisions",
+    "SRC-WOWLIST-DATABASE-AGGREGATE-RUN-2017-2026",
+    "CLM-WOWLIST-DATABASE-SCALE-2017"
+  ]);
+  requireFragments("WOW List public proof", proofs, [
+    "deterministic public-safe aggregate run",
+    "city or region labels with at least 50 geocoded posts or events",
+    "All 1,846 records were unique active users"
+  ]);
+  requireFragments("Source coverage", sourceCoverage, [
+    "Quantified Proof And Formation Pass",
+    "1,846 users and 16,142 posts or events",
+    "50-post/event threshold"
+  ]);
+  requireFragments("Approval register", approvalRegister, [
+    "historical 1,800+ user and 16,000+ post/event floors",
+    "Never publish raw database rows"
+  ]);
+  requireFragments("WOW List anti-claims", antiClaims, [
+    "WOW List Database",
+    "official chapters",
+    "unique active users",
+    "precise-location rows"
+  ]);
+
+  const forbiddenLedgerKeys = ["rawRows", "users", "emails", "passwordHashes", "eventText", "latitude", "longitude"];
+  for (const key of forbiddenLedgerKeys) {
+    if (Object.prototype.hasOwnProperty.call(parsed, key)) {
+      missing.push(`WOW List public aggregate ledger must not expose top-level ${key}.`);
+    }
+  }
+  const publicBundle = [ledger, evidenceBatch, archiveDoc, projectDoc, framework, proofs, sourceCoverage, approvalRegister, antiClaims].join("\n");
+  if ([/\/Users\//, /\/Volumes\//, /password\s*[:=]\s*[^\s]+/i, /auth_token\s*[:=]/i].some((pattern) => pattern.test(publicBundle))) {
+    missing.push("WOW List public aggregate bundle contains a private path, credential, or authentication marker.");
+  }
+
+  return missing;
+}
+
+export function evaluateSundayDinnerAttendanceArchive({
+  ledger,
+  evidenceBatch,
+  archiveDoc,
+  projectDoc,
+  framework,
+  proofs,
+  sourceCoverage,
+  approvalRegister,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalized = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalized.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(ledger);
+  } catch {
+    missing.push("Sunday Dinner attendance aggregate ledger is not valid JSON.");
+    return missing;
+  }
+
+  const events = parsed.eventColumns ?? {};
+  expect(parsed.workbook?.worksheets === 15, "Sunday Dinner worksheet count must remain 15.");
+  expect(parsed.workbook?.mainWorksheetRows === 711, "Sunday Dinner main worksheet row count must remain 711.");
+  expect(parsed.workbook?.mainWorksheetColumns === 393, "Sunday Dinner main worksheet column count must remain 393.");
+  expect(parsed.workbook?.formulaCells === 11414, "Sunday Dinner formula-cell count must remain 11,414.");
+  expect(events.count === 345, "Sunday Dinner event-column count must remain 345.");
+  expect(events.positiveCachedYesCountColumns === 340, "Sunday Dinner positive cached yes-count columns must remain 340.");
+  expect(events.zeroCachedYesCountColumns === 5, "Sunday Dinner zero cached yes-count columns must remain five.");
+  expect(events.positiveCachedYesCountColumns + events.zeroCachedYesCountColumns === events.count, "Sunday Dinner cached yes-count dispositions must reconcile to 345 event columns.");
+  expect(events.first === "001 Africa (1.22.2012)", "Sunday Dinner first event label must remain bounded to January 2012.");
+  expect(events.last === "345 Persimmons (Livestream) 3/7/2021", "Sunday Dinner last event label must retain the March 2021 livestream boundary.");
+  expect(JSON.stringify(parsed.numberingQuality?.duplicatePrefixes) === JSON.stringify([263, 264, 267, 268]), "Sunday Dinner duplicate event prefixes must remain explicit.");
+  expect(JSON.stringify(parsed.numberingQuality?.missingPrefixes) === JSON.stringify([233, 279, 288, 292, 300]), "Sunday Dinner missing event prefixes must remain explicit.");
+
+  requireFragments("Sunday Dinner evidence batch", evidenceBatch, [
+    "LEAD-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2026",
+    "SRC-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2012-2021",
+    "CLM-SUNDAY-DINNER-300-GATHERING-ARCHIVE-2012-2021",
+    "PUB-SUNDAY-DINNER-300-GATHERING-ARCHIVE-2012-2021",
+    'visibility: "protected"',
+    "345 event-specific columns",
+    "340 event columns with a positive cached yes count",
+    "not sum cached yes counts",
+    "does not verify the separate 20-plus resident-artist aggregate"
+  ]);
+  requireFragments("Sunday Dinner archive note", archiveDoc, [
+    "300+ gatherings",
+    "345 event-specific columns",
+    "340 have a positive cached yes count",
+    "numbering irregularities",
+    "cannot be summed into unique attendees",
+    "20-plus resident-artist aggregate",
+    "no raw workbook row"
+  ]);
+  requireFragments("Sunday Dinner project note", projectDoc, [
+    "directly verifies the 300-plus gathering floor",
+    "numbering irregularities and livestream entries",
+    "unique attendees, people, meals, or RSVPs"
+  ]);
+  requireFragments("Knowledge-bank framework", framework, [
+    "SRC-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2012-2021",
+    "CLM-SUNDAY-DINNER-300-GATHERING-ARCHIVE-2012-2021",
+    "The separate 20-plus resident-artist methodology remains open"
+  ]);
+  requireFragments("Sunday Dinner public proof", proofs, [
+    "345 event-specific columns",
+    "never sum cached yes counts into attendees, people, meals, or RSVPs",
+    "Exactly 345 unique in-person dinners"
+  ]);
+  requireFragments("Source coverage", sourceCoverage, [
+    "300-plus gathering lane is now protected-source-backed",
+    "No cached count becomes a unique-attendee claim"
+  ]);
+  requireFragments("Approval register", approvalRegister, [
+    "protected workbook supports 300+ documented gatherings",
+    "Do not convert event columns or cached yes counts"
+  ]);
+  requireFragments("Sunday Dinner anti-claims", antiClaims, [
+    "protected workbook",
+    "345 event columns",
+    "unique people, meals, attendees, or RSVPs",
+    "20-plus resident aggregate"
+  ]);
+
+  const forbiddenKeys = ["participantRows", "participants", "names", "emails", "phoneNumbers", "cachedYesTotal", "cachedInviteTotal", "attendanceRows"];
+  for (const key of forbiddenKeys) {
+    if (Object.prototype.hasOwnProperty.call(parsed, key)) {
+      missing.push(`Sunday Dinner public aggregate ledger must not expose top-level ${key}.`);
+    }
+  }
+  const sensitiveBundle = [ledger, evidenceBatch, archiveDoc, projectDoc, sourceCoverage, antiClaims].join("\n");
+  if ([/\/Users\//, /\/Volumes\//, /docs\.google\.com\/spreadsheets\/d\//, /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/, /(?:\+?1[\s.-]?)?\(?[2-9]\d{2}\)?[\s.-]\d{3}[\s.-]\d{4}/].some((pattern) => pattern.test(sensitiveBundle))) {
+    missing.push("Sunday Dinner public aggregate bundle contains a private path, workbook locator, email, or phone number.");
+  }
+
+  return missing;
+}
+
+export function evaluateCallscriptNycArtCFormation({
+  ledger,
+  evidenceBatch,
+  archiveDoc,
+  projectDoc,
+  framework,
+  proofs,
+  sourceCoverage,
+  approvalRegister,
+  antiClaims,
+  publicSite
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalized = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalized.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(ledger);
+  } catch {
+    missing.push("Call Script formation ledger is not valid JSON.");
+    return missing;
+  }
+
+  const sequence = parsed.sequence ?? [];
+  expect(sequence.length === 5, "Call Script formation ledger must retain five bounded sequence records.");
+  expect(new Set(sequence.map((item) => item.date)).size === 5, "Call Script formation sequence dates must remain distinct.");
+  expect(sequence[0]?.date === "2016-11-14" && sequence[0]?.surface === "@wowlist", "Call Script lineage must begin with the November 2016 @wowlist popular.vote route.");
+  expect(sequence.some((item) => item.surface === "Call Script Facebook Page" && item.finding.includes("popular.vote")), "Call Script Page must retain its direct popular.vote link.");
+  expect(sequence.some((item) => item.date === "2017-01-27" && item.finding.includes("445 people responded") && item.boundary.includes("not attendance")), "The DCLA event must retain the 445-response signal and attendance boundary.");
+  expect(sequence.some((item) => item.date === "2017-02-03" && item.finding.includes("help choose the work")), "The event discussion must retain the open priority-setting invitation.");
+  expect(sequence.some((item) => item.date === "2017-02-06" && item.finding.includes("coalition general meeting")), "The sequence must retain the February 6 coalition general meeting.");
+  expect(sequence.every((item) => /^https:\/\/(?:www\.facebook\.com|x\.com)\//.test(item.record)), "Every Call Script formation record must use a canonical public Facebook or X URL.");
+
+  requireFragments("Call Script evidence batch", evidenceBatch, [
+    "LEAD-CALLSCRIPT-NYCARTC-FORMATION-LINEAGE-2026",
+    "SRC-X-WOWLIST-POPULAR-VOTE-2016",
+    "SRC-FB-CALLSCRIPT-PAGE-2026",
+    "SRC-FB-NYCAC-DCLA-FORMATION-DISCUSSION-2017",
+    "SRC-JAMIE-CALLSCRIPT-PARTICIPATION-LINEAGE-2026",
+    "CLM-NYCARTC-CALLSCRIPT-FORMATION-LINEAGE-2016-2017",
+    "PUB-NYCARTC-CALLSCRIPT-FORMATION-LINEAGE-2016-2017",
+    'decision: "reserve"',
+    "not sole-founder status",
+    "remain distinct projects and collective contexts"
+  ]);
+  requireFragments("Call Script formation archive note", archiveDoc, [
+    "November 14, 2016",
+    "links directly to `popular.vote`",
+    "January 27, 2017 DCLA meeting",
+    "February 6 NYC Artist Coalition general meeting",
+    "help choose what the coalition should work on",
+    "not a complete founding record",
+    "response total is not physical attendance"
+  ]);
+  requireFragments("NYC Artist Coalition project note", projectDoc, [
+    "Formation lineage",
+    "carrying participation-system lessons from WOW List",
+    "not a complete founding record",
+    "Facebook response totals remain mutable event-level signals"
+  ]);
+  requireFragments("Knowledge-bank framework", framework, [
+    "SRC-X-WOWLIST-POPULAR-VOTE-2016",
+    "SRC-FB-CALLSCRIPT-PAGE-2026",
+    "SRC-FB-NYCAC-DCLA-FORMATION-DISCUSSION-2017",
+    "CLM-NYCARTC-CALLSCRIPT-FORMATION-LINEAGE-2016-2017",
+    "complete founding group and independently corroborated co-founder wording remain open"
+  ]);
+  requireFragments("NYC Artist Coalition public proof", proofs, [
+    "source-backed formation sequence",
+    "Call Script's popular.vote route",
+    "campaign accomplishments remain collective"
+  ]);
+  requireFragments("Source coverage", sourceCoverage, [
+    "dated public formation sequence",
+    "complete founding group",
+    "exact co-founder wording open"
+  ]);
+  requireFragments("Approval register", approvalRegister, [
+    "Call Script / NYC Artist Coalition formation",
+    "complete founding record",
+    "assign shared-account posts to Jamie"
+  ]);
+  requireFragments("NYC Artist Coalition anti-claims", antiClaims, [
+    "Jamie alone founded NYC Artist Coalition",
+    "Call Script created the coalition",
+    "complete founding record",
+    "Facebook responses are not attendance"
+  ]);
+
+  const forbiddenKeys = ["participantNames", "comments", "profiles", "inviteContext", "friendContext", "authState", "cookies"];
+  for (const key of forbiddenKeys) {
+    if (Object.prototype.hasOwnProperty.call(parsed, key)) {
+      missing.push(`Call Script public formation ledger must not expose top-level ${key}.`);
+    }
+  }
+  const publicBundle = [ledger, evidenceBatch, archiveDoc, projectDoc, framework, proofs, sourceCoverage, approvalRegister, antiClaims].join("\n");
+  if ([/\/Users\//, /\/Volumes\//, /auth_token\s*[:=]/i, /cookie\s*:\s*[^\s]/i, /session[_-]?id\s*[:=]/i].some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Call Script public formation bundle contains authentication, session, or private-path material.");
+  }
+  expect(
+    !publicSite.includes("CLM-NYCARTC-CALLSCRIPT-FORMATION-LINEAGE-2016-2017") &&
+      !publicSite.includes("carried an event-participation practice from WOW List and popular.vote"),
+    "Reserve Call Script formation copy must not silently appear on the public site."
+  );
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -4097,6 +4447,22 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "apps/www/src/data/knowledge-bank/kc-town-hall-phase-one-neighborhood-batch-2026-07-15.ts"
   );
+  const proofDebtEvidenceBatch = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/proof-debt-evidence-batch-2026-07-15.ts"
+  );
+  const wowlistDatabaseAggregateLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/wowlist-database-aggregate-ledger.json"
+  );
+  const sundayDinnerAttendanceAggregateLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/sunday-dinner-attendance-aggregate-ledger.json"
+  );
+  const callscriptNycArtCFormationLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/callscript-nycartc-formation-ledger.json"
+  );
   const urbanHermitSocialCorpus = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts"
@@ -4126,6 +4492,18 @@ export function runLaunchEvals(repoRoot) {
   const kcTownHallPhaseOneNeighborhoodDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-neighborhood-practice.md"
+  );
+  const wowlistDatabaseScaleDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-15-wowlist-database-scale.md"
+  );
+  const sundayDinnerAttendanceWorkbookDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-15-sunday-dinner-attendance-workbook.md"
+  );
+  const callscriptNycArtCFormationDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-15-callscript-nycartc-formation-lineage.md"
   );
   const kcTownHallProjectDoc = readOptional(
     repoRoot,
@@ -4215,6 +4593,14 @@ export function runLaunchEvals(repoRoot) {
   const participatoryPublicProgramsDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/projects/participatory-public-programs.md"
+  );
+  const wowlistProjectDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/projects/wowlist.md"
+  );
+  const sundayDinnerProjectDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/projects/sunday-dinner-196.md"
   );
   const wowlistFullPopulationDoc = readOptional(
     repoRoot,
@@ -4467,7 +4853,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: `${kcTownHallSocialCorpus}\n${kcTownHallPhaseOneNeighborhoodBatch}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}\n${nterChngArchiveExpansionBatch}\n${nycArtCGovernmentValueBatch}`,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${kcTownHallPhaseOneNeighborhoodBatch}\n${proofDebtEvidenceBatch}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}\n${nterChngArchiveExpansionBatch}\n${nycArtCGovernmentValueBatch}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -4483,6 +4869,88 @@ export function runLaunchEvals(repoRoot) {
         "Every supplied memory and URL has a durable intake record and disposition.",
         "Sources, claims, inquiries, publication decisions, proof-coverage debt, and photo research remain distinct and linked.",
         "Only a deliberately selected bounded claim is promoted to the public site."
+      ]
+    })
+  );
+
+  const wowlistDatabaseScaleMissing = evaluateWowlistDatabaseScale({
+    ledger: wowlistDatabaseAggregateLedger,
+    evidenceBatch: proofDebtEvidenceBatch,
+    archiveDoc: wowlistDatabaseScaleDoc,
+    projectDoc: wowlistProjectDoc,
+    framework,
+    proofs,
+    sourceCoverage,
+    approvalRegister,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "wowlist-database-scale",
+      label: "WOW List database scale is recomputable, historically bounded, and privacy-safe",
+      weight: 20,
+      hardGate: true,
+      missing: wowlistDatabaseScaleMissing,
+      evidence: [
+        "The July 22, 2017 protected snapshot recomputes to 1,846 users and 16,142 posts or events.",
+        "Thirty-five nonblank city or region labels meet an explicit 50-post/event threshold.",
+        "Official-chapter, current-community, active-user, impact, and sole-ownership inflation are rejected.",
+        "The public ledger contains aggregates and boundaries only, never raw database rows."
+      ]
+    })
+  );
+
+  const sundayDinnerAttendanceMissing = evaluateSundayDinnerAttendanceArchive({
+    ledger: sundayDinnerAttendanceAggregateLedger,
+    evidenceBatch: proofDebtEvidenceBatch,
+    archiveDoc: sundayDinnerAttendanceWorkbookDoc,
+    projectDoc: sundayDinnerProjectDoc,
+    framework,
+    proofs,
+    sourceCoverage,
+    approvalRegister,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "sunday-dinner-attendance-archive",
+      label: "Sunday Dinner's 300-plus gathering floor is source-backed without publishing attendance data",
+      weight: 20,
+      hardGate: true,
+      missing: sundayDinnerAttendanceMissing,
+      evidence: [
+        "The protected workbook contains 345 event-specific columns across January 2012-March 2021.",
+        "Three hundred forty columns carry positive cached yes counts, directly supporting the 300-plus floor.",
+        "Numbering, livestream, formula, plus-one, and repeated-participant boundaries block unique-person inference.",
+        "The separate 20-plus resident-artist aggregate remains open and participant rows remain protected."
+      ]
+    })
+  );
+
+  const callscriptFormationMissing = evaluateCallscriptNycArtCFormation({
+    ledger: callscriptNycArtCFormationLedger,
+    evidenceBatch: proofDebtEvidenceBatch,
+    archiveDoc: callscriptNycArtCFormationDoc,
+    projectDoc: nycArtCProjectDoc,
+    framework,
+    proofs,
+    sourceCoverage,
+    approvalRegister,
+    antiClaims,
+    publicSite: [homePage, resumePage, siteData, workData, technicalOperations, fairRentCase].join("\n")
+  });
+  results.push(
+    result({
+      id: "callscript-nycartc-formation-lineage",
+      label: "Call Script formation lineage preserves participation-system value and collective credit",
+      weight: 20,
+      hardGate: true,
+      missing: callscriptFormationMissing,
+      evidence: [
+        "A dated sequence connects @wowlist's popular.vote route, the Call Script identity, the January DCLA event, and the February coalition meeting.",
+        "The discussion records a follow-up poll and an open invitation to help choose coalition priorities.",
+        "Jamie's account-establishment and facilitation contribution remains distinct from the complete founding group.",
+        "Sole-founder, single-cause, attendance, membership, shared-authorship, and silent-site-projection inflation are rejected."
       ]
     })
   );

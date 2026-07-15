@@ -1,6 +1,6 @@
 # 196 Artists Residency / Sunday Dinner
 
-**Reviewed:** 2026-07-14
+**Reviewed:** 2026-07-15
 
 Greene Hill Food Co-op's 2017 member interview externally documents Sunday
 Dinner as a weekly gathering Jamie and a co-host opened to the community. This
@@ -14,13 +14,24 @@ Sunday Dinner hospitality with civic discussion and sign making. These pages
 support longevity, repeatable format, and program variation; they do not
 independently verify the protected aggregate counts or establish attendance.
 
-The source does not verify the current 300-plus gathering or 20-plus
-resident-artist aggregates. Those remain tied to protected RSVP, attendance,
-email, and photo records and should be published only as aggregate conclusions
-with reviewable private methodology.
+A protected workbook now directly verifies the 300-plus gathering floor. Its
+main worksheet contains 345 event-specific columns spanning January 2012
+through March 2021, and 340 carry a positive cached yes count. The workbook
+does not verify the separate 20-plus resident-artist aggregate.
+
+Event columns are not a clean unique in-person-event key: the record includes
+numbering irregularities and livestream entries. Cached yes counts must not be
+summed into unique attendees, people, meals, or RSVPs. The public-safe method
+and aggregate ledger preserve these boundaries without exposing participant
+rows.
 
 No home address, guest identity, attendance row, private message, or unapproved
 participant image belongs in the public repository.
+
+See
+`docs/knowledge-bank/intake/2026-07-15-sunday-dinner-attendance-workbook.md`
+and
+`docs/knowledge-bank/data/sunday-dinner-attendance-aggregate-ledger.json`.
 
 A protected 2023 acceptance record establishes one concrete residency workflow
 led by Jamie: proposal review, acceptance, pre-arrival coordination, space

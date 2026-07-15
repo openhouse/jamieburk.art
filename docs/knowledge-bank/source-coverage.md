@@ -234,3 +234,24 @@ records referencing Council members or the Council are outgoing routes, not 86
 inbound engagements. The 2,366 reactions, 212 comments, and 611 shares are
 mutable record-level signals, not unique people, reach, attendance,
 endorsement, adoption, causality, or impact.
+
+## 2026-07-15 Quantified Proof And Formation Pass
+
+`wowlist-community-platform` remains `partially-backed`, but its historical
+aggregate lane is now direct and reproducible: the protected July 2017 snapshot
+contains 1,846 users and 16,142 posts or events, while 35 nonblank city or
+region labels meet a 50-post/event threshold. Independent public coverage of
+the full geographic-adoption interpretation and complete collaborator and
+technical history remains useful proof depth.
+
+`sunday-dinner-196-participation-infrastructure` remains `partially-backed`
+because the 20-plus resident-artist aggregate is separate. The 300-plus
+gathering lane is now protected-source-backed through 345 event-specific
+columns, 340 with positive cached yes counts, across January 2012-March 2021.
+No cached count becomes a unique-attendee claim.
+
+The NYC Artist Coalition co-founding inquiry gains a dated public formation
+sequence from WOW List's `popular.vote` route through Call Script and the
+January DCLA discussion into the February 6 coalition meeting. This supports
+Jamie's facilitation and systems lineage while leaving the complete founding
+group and independent corroboration of exact co-founder wording open.

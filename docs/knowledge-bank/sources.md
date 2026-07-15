@@ -351,6 +351,25 @@ Raw responses, full text, comments, actor identities, authentication,
 administrative locators, Page-management context, and post-level publisher data
 remain protected.
 
+### July 15 Proof-Debt Sources
+
+Three bounded source packages close distinct proof questions:
+
+- a protected July 2017 WOW List database aggregate run supports historical
+  record counts and a 35-label geographic-activity threshold without exposing
+  raw user, content, security, or location rows;
+- a protected Sunday Dinner workbook aggregate supports more than 300
+  documented event columns without exposing identities, contacts, locations,
+  or attendance histories; and
+- public `@wowlist`, Call Script, and Facebook event records trace a formation
+  sequence into an open February 2017 NYC Artist Coalition priority-setting
+  meeting, supplemented by Jamie's protected role confirmation.
+
+The first two underlying artifacts remain protected. The Facebook formation
+source retains institutional event and project language only; participant
+comments, profiles, invite context, private administration, and authentication
+state are excluded.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

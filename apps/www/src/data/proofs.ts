@@ -346,7 +346,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis:
+      "Approved resume language, Jamie confirmation, public campaign websites, and a source-backed formation sequence linking Call Script's popular.vote route to early NYC Artist Coalition follow-up and priority-setting meetings.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -369,7 +370,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -567,11 +568,13 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers. Public Facebook records show the distributed model in use through member-led calendars in nine cities, a 41-event Los Angeles contribution, and later Phoenix organizer continuity.",
     sourceBasis:
-      "Approved resume language, verified public-safe archive counts, a 2017 Greene Hill Food Co-op interview, a 2015 Music Hackathon post identifying Jamie as a co-organizer and describing WOW List as an event-sharing service, selected public Facebook records, and a protected Page-management aggregate identifying Jamie as publisher on 51 matching records with six unresolved.",
+      "Approved resume language; a deterministic public-safe aggregate run over the protected July 22, 2017 database snapshot; a 2017 Greene Hill Food Co-op interview; a 2015 Music Hackathon post identifying Jamie as a co-organizer and describing WOW List as an event-sharing service; selected public Facebook records; and a protected Page-management aggregate identifying Jamie as publisher on 51 matching records with six unresolved.",
     guardrail:
-      "Use approximate adoption language, describe city activity as member-led calendars rather than official chapters, preserve Richard's shared-project credit, and keep Facebook publisher attribution distinct from sole drafting, source authorship, product ownership, or management of every social channel.",
+      "Use historical snapshot language. Roughly 35 means city or region labels with at least 50 geocoded posts or events, not official chapters, current communities, or distinct organizer groups; preserve Richard's shared-project credit, and keep Facebook publisher attribution distinct from sole drafting, source authorship, product ownership, or management of every social channel.",
     doNotSay: [
       "Official chapters in 35 cities",
+      "Thirty-five currently active communities or independently verified organizer groups",
+      "All 1,846 records were unique active users",
       "Full ownership of all organizer adoption",
       "Current active platform unless confirmed",
       "Jamie published all 57 surviving Facebook records",
@@ -588,7 +591,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-14"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "wowlist-public-support-surface",
@@ -639,13 +642,15 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, proposal review, resident onboarding, space configuration, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language and protected aggregate project records support the scale claim; a 2017 Greene Hill Food Co-op interview documents weekly Sunday dinners open to the community; public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck; and a protected 2023 acceptance record confirms Jamie's proposal-review and onboarding workflow for one residency.",
+      "A protected event and attendance workbook directly supports the 300-plus gathering floor through 345 event-specific columns, 340 with positive cached yes counts, across January 2012-March 2021; a 2017 Greene Hill Food Co-op interview documents weekly Sunday dinners open to the community; public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck; and a protected 2023 acceptance record confirms Jamie's proposal-review and onboarding workflow for one residency.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only and avoid turning community trust work into spectacle. Event columns are not a unique-person count; never sum cached yes counts into attendees, people, meals, or RSVPs. The separate 20-plus resident-artist aggregate remains independently bounded.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
       "Attendance database",
+      "Exactly 345 unique in-person dinners",
+      "Cached yes counts are unique people, meals, or RSVPs",
       "One onboarding record independently verifies the 20-plus resident aggregate"
     ],
     protectedBoundaries: [
@@ -659,7 +664,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
