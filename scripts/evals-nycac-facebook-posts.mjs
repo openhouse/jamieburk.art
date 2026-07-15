@@ -16,10 +16,14 @@ const { corpus, result } = checkRepository();
 const batchText = read(
   "apps/www/src/data/knowledge-bank/batches/nycac-facebook-posts-full-population-2026-07-15.ts"
 );
-const publicSurfaces = [
-  read("apps/www/src/content/work/fair-rent-nyc.mdx"),
-  read("apps/www/src/app/work/technical-operations/page.tsx")
-].join("\n");
+const collectiveCreditPolicy = JSON.parse(
+  read("docs/knowledge-bank/policies/collective-credit-policy.json")
+);
+const governedTextSurfacePaths =
+  collectiveCreditPolicy.collectiveRuntimeFiles.filter(
+    (relativePath) => !relativePath.endsWith(".pdf")
+  );
+const publicSurfaces = governedTextSurfacePaths.map(read).join("\n");
 const docsText = [
   read("docs/knowledge-bank/README.md"),
   read("docs/knowledge-bank/projects/nyc-artist-coalition.md"),
@@ -51,6 +55,42 @@ const operating = claimById.get(
 );
 const civicRelay = claimById.get("CLM-NYCAC-FACEBOOK-CIVIC-RELAY");
 const metrics = claimById.get("CLM-NYCAC-FACEBOOK-NATIVE-METRIC-SNAPSHOT");
+const facebookClaims = [operating, civicRelay, metrics];
+
+function evaluateProjectionCandidate(claims, surfaceText) {
+  const errors = [];
+  if (
+    claims.some(
+      (claim) =>
+        !claim ||
+        claim.collectiveWork !== true ||
+        claim.projectionEligibility !== "hold" ||
+        claim.projections.some(
+          (projection) =>
+            projection.status !== "hold" || projection.surfaces.length !== 0
+        )
+    )
+  ) {
+    errors.push("NYCAC Facebook claims must remain collective and held");
+  }
+  if (
+    !claims.some((claim) =>
+      claim?.antiClaims.includes(
+        "Jamie authored every NYC Artist Coalition Facebook post"
+      )
+    )
+  ) {
+    errors.push("shared-account authorship anti-claim is required");
+  }
+  if (
+    claims.some((claim) => surfaceText.includes(claim?.id ?? "")) ||
+    surfaceText.includes("48,044") ||
+    surfaceText.includes("3,436 unique")
+  ) {
+    errors.push("held Facebook claim entered a governed public surface");
+  }
+  return errors;
+}
 
 const checks = [];
 function score(id, title, points, passes) {
@@ -153,15 +193,8 @@ score(
     intake.claimIds.length === 3 &&
     intake.researchTaskIds.length === 4 &&
     inquiry?.resultStatus === "partially-recovered" &&
-    [operating, civicRelay, metrics].every(
-      (claim) =>
-        claim?.projectionEligibility === "hold" &&
-        claim.projections.every(
-          (projection) =>
-            projection.status === "hold" && projection.surfaces.length === 0
-        )
-    ) &&
-    !publicSurfaces.includes("CLM-NYCAC-FACEBOOK-") &&
+    evaluateProjectionCandidate(facebookClaims, publicSurfaces).length === 0 &&
+    governedTextSurfacePaths.length >= 20 &&
     docsText.includes("All three projections remain held from the website")
 );
 
@@ -298,6 +331,55 @@ for (const testCase of mutationCases) {
   );
 }
 
+const projectionMutationCases = [
+  {
+    id: "activate-held-projection",
+    mutate(claims) {
+      claims[0].projectionEligibility = "eligible";
+      claims[0].projections[0].status = "active";
+      claims[0].projections[0].surfaces = ["/work/fair-rent-nyc"];
+    }
+  },
+  {
+    id: "erase-collective-credit",
+    mutate(claims) {
+      claims[1].collectiveWork = false;
+    }
+  },
+  {
+    id: "remove-authorship-anti-claim",
+    mutate(claims) {
+      claims[0].antiClaims = claims[0].antiClaims.filter(
+        (value) =>
+          value !== "Jamie authored every NYC Artist Coalition Facebook post"
+      );
+    }
+  },
+  {
+    id: "inject-held-claim-into-public-surface",
+    mutate(_claims, state) {
+      state.surfaceText +=
+        "\nCLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD";
+    }
+  },
+  {
+    id: "inject-held-metric-into-public-surface",
+    mutate(_claims, state) {
+      state.surfaceText += "\n48,044 people reached";
+    }
+  }
+];
+
+for (const testCase of projectionMutationCases) {
+  const claims = structuredClone(facebookClaims);
+  const state = { surfaceText: publicSurfaces };
+  testCase.mutate(claims, state);
+  assert.ok(
+    evaluateProjectionCandidate(claims, state.surfaceText).length > 0,
+    `${testCase.id} must fail the projection gate`
+  );
+}
+
 const earned = checks
   .filter((check) => check.passes)
   .reduce((sum, check) => sum + check.points, 0);
@@ -327,10 +409,12 @@ console.log(
       possible,
       candidateFingerprint,
       checks,
-      mutationTests: mutationCases.map((item) => ({
-        id: item.id,
-        rejected: true
-      }))
+      mutationTests: [...mutationCases, ...projectionMutationCases].map(
+        (item) => ({
+          id: item.id,
+          rejected: true
+        })
+      )
     },
     null,
     2
