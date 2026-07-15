@@ -14,6 +14,8 @@ import {
   callNycCouncilSocialSourceIds,
   callNycFullPopulationCensusSourceId,
   callNycProjectSocialSourceIds,
+  kcTownHallCouncilResponseSourceIds,
+  kcTownHallFullPopulationCensusSourceId,
   kcSpacesRecipientSocialSourceIds,
   nycaCouncilSocialSourceIds,
   nycaOlympiaSocialSourceId,
@@ -58,7 +60,7 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  assert.equal(knowledgeBank.corrections.length, 4);
 });
 
 test("negative research preserves scope and limitations", () => {
@@ -195,8 +197,11 @@ test("KC Town Hall intake separates recommendation, appropriation, and use", () 
   );
 
   assert.ok(intake);
-  assert.equal(intake.status, "researching");
+  assert.equal(intake.status, "integrated");
   assert.equal(intake.projectionStatus, "no-public-projection");
+  assert.deepEqual(intake.relatedClaimIds, [
+    "CLM-KC-TOWN-HALL-FUNDING-SEQUENCE"
+  ]);
   assert.deepEqual(intake.relatedProofIds, [
     "kc-town-hall-public-benefit-documentation"
   ]);
@@ -241,10 +246,14 @@ test("KC Town Hall intake separates recommendation, appropriation, and use", () 
       (trigger) => trigger.action === "replace"
     )
   );
+  assert.equal(intake.tensions[0].status, "reconciled");
 
   const publicProof = readFileSync("apps/www/src/data/proofs.ts", "utf8");
-  assert.match(publicProof, /\$490,539 public funding recommendation/);
-  assert.doesNotMatch(JSON.stringify(publicCitationRegistry), /SRC-KCMO-CCED/);
+  assert.match(publicProof, /Council acceptance and appropriation of \$490,539/);
+  assert.match(
+    JSON.stringify(publicCitationRegistry),
+    /CLM-KC-TOWN-HALL-FUNDING-SEQUENCE/
+  );
 });
 
 test("KC Town Hall stewardship transition remains a bounded memory lead", () => {
@@ -453,8 +462,8 @@ test("Google Drive intake preserves attribution, data gaps, and projection bound
 });
 
 test("project social census preserves strict counts and source identity", () => {
-  assert.equal(projectSocialSources.length, 58);
-  assert.equal(new Set(projectSocialSourceIds).size, 58);
+  assert.equal(projectSocialSources.length, 72);
+  assert.equal(new Set(projectSocialSourceIds).size, 72);
   assert.equal(callNycCouncilSocialSourceIds.length, 8);
   assert.equal(callNycProjectSocialSourceIds.length, 4);
   assert.equal(nycaCouncilSocialSourceIds.length, 11);
@@ -581,7 +590,7 @@ test("project social intake protects shared authorship and transitions", () => {
   );
 
   assert.ok(
-    [socialIdentity, wowList, kcSpaces, kcTownHall].every(
+    [socialIdentity, wowList, kcSpaces].every(
       (item) =>
         item.status === "researching" &&
         item.projectionStatus === "no-public-projection" &&
@@ -610,12 +619,17 @@ test("project social intake protects shared authorship and transitions", () => {
   assert.ok(
     kcSpaces.boundaries.some((boundary) => /grant decisions/i.test(boundary))
   );
+  assert.equal(kcTownHall.status, "integrated");
+  assert.equal(kcTownHall.projectionStatus, "no-public-projection");
+  assert.deepEqual(kcTownHall.relatedClaimIds, [
+    "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE"
+  ]);
   assert.ok(
     kcTownHall.boundaries.some((boundary) => /family crisis/i.test(boundary))
   );
   assert.ok(
     kcTownHall.boundaries.some((boundary) =>
-      /post-transition posts or program outcomes/i.test(boundary)
+      /post-transition program outcome/i.test(boundary)
     )
   );
 });
@@ -684,6 +698,103 @@ test("WOW List full-population census reconciles every profile-counted object", 
   );
   assert.doesNotMatch(census, /Punk shows should|Hug those that you love/);
   assert.doesNotMatch(JSON.stringify(summary), /\/Users\/|\/Volumes\//);
+});
+
+test("KC Town Hall full-population census reconciles all 183 records", () => {
+  const census = readFileSync(
+    "docs/knowledge-bank/research/data/kctownhall-x-full-population-census-2026-07-15.csv",
+    "utf8"
+  );
+  const summary = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/research/data/kctownhall-x-full-population-summary-2026-07-15.json",
+      "utf8"
+    )
+  );
+  const intake = knowledgeBank.intakeItems.find(
+    (item) =>
+      item.id === "INTAKE-KC-TOWN-HALL-SOCIAL-CONTINUITY-2026-07-14"
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === kcTownHallFullPopulationCensusSourceId
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE"
+  );
+  const recoveredRows = census.match(/^RECOVERED-\d{3},/gm) ?? [];
+  const statusIds = [
+    ...census.matchAll(/https:\/\/x\.com\/[A-Za-z0-9_]+\/status\/(\d+)/g)
+  ].map((match) => match[1]);
+
+  assert.equal(recoveredRows.length, 183);
+  assert.equal(new Set(statusIds).size, 183);
+  assert.equal((census.match(/,project-post,/g) ?? []).length, 142);
+  assert.equal((census.match(/,project-reply,/g) ?? []).length, 13);
+  assert.equal((census.match(/,project-repost,/g) ?? []).length, 28);
+  assert.equal(summary.population.profileCount, 183);
+  assert.equal(summary.population.recoveredUnionCount, 183);
+  assert.equal(summary.population.reviewedPercent, 100);
+  assert.equal(summary.population.unrecoveredCount, 0);
+  assert.equal(summary.population.projectAuthoredTotal, 155);
+  assert.equal(summary.population.repostedExternalStatuses, 28);
+  assert.equal(summary.population.repliesTimelineConversationContexts, 5);
+  assert.equal(summary.publishingPattern.tireRelatedRecords, 100);
+  assert.equal(summary.publishingPattern.surveyLinkedRecords, 12);
+  assert.equal(summary.urlInventory.recordsWithExternalLinks, 118);
+  assert.equal(summary.urlInventory.externalLinkOccurrences, 133);
+  assert.equal(summary.urlInventory.distinctExternalShortUrls, 31);
+  assert.equal(
+    summary.stakeholderResponses.directCouncilMemberAccountCount,
+    3
+  );
+  assert.deepEqual(
+    summary.stakeholderResponses.councilMemberResponses.map(
+      (item) => item.handle
+    ),
+    ["@QuintonLucasKC", "@joliejustus", "@Robinson4kc"]
+  );
+  assert.deepEqual(summary.accessTimeProjectAuthoredEngagement, {
+    observedAt: "2026-07-14",
+    statusesWithAnyObservedInteraction: 77,
+    replies: 22,
+    reposts: 70,
+    likes: 174,
+    bookmarks: 1,
+    visibleInteractionUnits: 267,
+    boundary:
+      "These are mutable interface observations, not unique people, reach, conversion, endorsement, participation, or impact. Counts attached to reposted source records are excluded from the project-authored totals."
+  });
+  assert.equal(source.visibility, "public");
+  assert.ok(source.doesNotEstablish.some((item) => /human author/i.test(item)));
+  assert.equal(intake.status, "integrated");
+  assert.ok(intake.sourceIds.includes(kcTownHallFullPopulationCensusSourceId));
+  assert.equal(
+    intake.propositions.find(
+      (item) => item.id === "PROP-KC-TOWN-HALL-X-FULL-POPULATION-2026"
+    ).status,
+    "direct-support"
+  );
+  assert.equal(intake.tensions[0].status, "reconciled");
+  assert.ok(
+    kcTownHallCouncilResponseSourceIds.every((sourceId) =>
+      claim.evidence.some((item) => item.sourceId === sourceId)
+    )
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "kc-town-hall",
+      "public-operating-surface"
+    ).sources.map((item) => item.source.id),
+    [
+      kcTownHallFullPopulationCensusSourceId,
+      ...kcTownHallCouncilResponseSourceIds
+    ]
+  );
+  assert.doesNotMatch(
+    census,
+    /Thank you for doing the heavy lifting|Let.?s do this!!/
+  );
+  assert.doesNotMatch(`${census}\n${JSON.stringify(summary)}`, /\/Users\/|\/Volumes\//);
 });
 
 test("social research locators stay private and research notes stay public-safe", () => {

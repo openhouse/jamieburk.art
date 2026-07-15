@@ -4,6 +4,7 @@ import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-regist
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/kc-town-hall.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/app/resume/page.tsx"
@@ -153,8 +154,15 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     for (const pattern of [/first civic-data hackathon/i, /first civic-tech hackathon/i, /the Council['’]s first hackathon(?! of)/i, /2014[-–]2015/, /citation pending|press citation pending/i]) {
       if (pattern.test(publicText)) errors.push(`Retired or unresolved wording remains on a public surface: ${pattern}`);
     }
-    const mdx = readFileSync("apps/www/src/content/work/callnyc.mdx", "utf8");
-    if (/\[\d+\]/.test(mdx)) errors.push("CallNYC MDX contains a manually typed citation number");
+    for (const path of [
+      "apps/www/src/content/work/callnyc.mdx",
+      "apps/www/src/content/work/kc-town-hall.mdx"
+    ]) {
+      const mdx = readFileSync(path, "utf8");
+      if (/\[\d+\]/.test(mdx)) {
+        errors.push(`${path} contains a manually typed citation number`);
+      }
+    }
   }
 
   return errors;

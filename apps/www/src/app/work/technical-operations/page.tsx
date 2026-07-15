@@ -48,7 +48,8 @@ const proofMap = [
   },
   {
     project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof:
+      "long-horizon project planning, public-benefit documentation, municipal-review support, and a shared public operating surface for resident input and neighborhood service."
   },
   {
     project: "Source-Backed Team Memory",

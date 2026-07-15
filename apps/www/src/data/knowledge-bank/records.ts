@@ -10,6 +10,8 @@ import {
   callNycCouncilSocialSourceIds,
   callNycFullPopulationCensusSourceId,
   callNycProjectSocialSourceIds,
+  kcTownHallCouncilResponseSourceIds,
+  kcTownHallFullPopulationCensusSourceId,
   kcSpacesRecipientSocialSourceIds,
   nycaCouncilSocialSourceIds,
   nycaOlympiaSocialSourceId,
@@ -888,6 +890,55 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY"],
       reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex Wayback review"]
+    },
+    {
+      id: "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE",
+      project: "kc-town-hall",
+      internalClaim: "The complete @KCTownHall social record documents a shared public operating surface for resident participation, recurring neighborhood service, civic-resource circulation, and direct stakeholder dialogue.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "case-study",
+        text: "Across all 183 profile-counted records, KC Town Hall's shared public account opened resident survey pathways, coordinated recurring free tire-pickup intake, circulated civic resources, and preserved direct responses from three then-serving Council-member accounts.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/kc-town-hall"]
+      }],
+      evidence: [
+        { sourceId: kcTownHallFullPopulationCensusSourceId, relationship: "direct-support", supports: ["183-of-183 population reconciliation", "resident survey pathways", "recurring tire-pickup operating record", "civic-resource circulation", "three direct Council-member account responses"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KC-TOWN-HALL-X-QUINTON-LUCAS-RESPONSE-1122866432130334720", relationship: "corroborating", supports: ["direct Quinton Lucas quote-response", "neighborhood food-access dialogue"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KC-TOWN-HALL-X-JOLIE-JUSTUS-RESPONSE-1122883010582466560", relationship: "corroborating", supports: ["direct Jolie Justus reply", "neighborhood food-access and economic-development dialogue"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KC-TOWN-HALL-X-MELISSA-ROBINSON-RESPONSE-1289714535251742726", relationship: "corroborating", supports: ["direct Melissa Robinson reply", "recognition of neighborhood work"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KC-STAR-LUCAS-JUSTUS-COUNCIL-2019-04-03", relationship: "context", supports: ["Quinton Lucas and Jolie Justus were Council members in April 2019"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCMO-CLERK-MELISSA-ROBINSON-SERVICE", relationship: "context", supports: ["Melissa Robinson's Council service began before the August 2020 response"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["The shared account does not identify the human author of each status.", "Do not attribute post-transition program activity or outcomes to Jamie.", "The 100 tire-related and 12 survey-linked records classify the corpus; they are not participant, pickup, or outcome totals.", "A direct Council-account response does not establish formal endorsement, partnership, adoption, or policy causality.", "Access-time interaction labels are mutable and are not reach or impact."],
+      antiClaims: ["Jamie authored all 183 records", "Jamie operated every later program", "three Council members formally endorsed KC Town Hall", "the account proves project completion", "access-time interaction totals measure reach or impact"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-X-FULL-POPULATION-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
+    },
+    {
+      id: "CLM-KC-TOWN-HALL-FUNDING-SEQUENCE",
+      project: "kc-town-hall",
+      internalClaim: "KC Town Hall advanced from a CCED Board recommendation to Council acceptance and appropriation of $490,539 in 2019; a 2024 Council record later said the project withdrew and the unused funds were reappropriated.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "case-study",
+        text: "Official records show that the CCED Board recommended $490,539 for KC Town Hall and the City Council accepted and appropriated that amount in 2019; a 2024 ordinance later recorded that KC Town Hall withdrew and the unused funds were reappropriated.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/kc-town-hall"]
+      }],
+      evidence: [
+        { sourceId: "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26", relationship: "direct-support", supports: ["CCED Board recommendation", "Council acceptance", "$490,539 amount", "authorization to negotiate a funding agreement"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26", relationship: "direct-support", supports: ["Council appropriation", "$490,539 project-account amount"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28", relationship: "supports-boundary", supports: ["later project withdrawal", "unused allocation", "2024 reappropriation"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["Appropriation is not evidence of an executed funding agreement, receipt, disbursement, expenditure, construction, or completion.", "The official records do not establish Jamie's individual causality for the recommendation or Council action.", "The 2024 record does not explain why KC Town Hall withdrew and must not be connected to Jamie's family crisis or stewardship-transition account."],
+      antiClaims: ["KC Town Hall received a $490,539 grant", "KC Town Hall spent the allocation", "the project completed the redevelopment", "Jamie alone secured the Council action", "the Council record proves the reason for withdrawal"],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex public-record review"]
     }
   ],
   researchInquiries: [
@@ -917,6 +968,18 @@ const knowledgeBankInput = {
       publicSummary: "A 110-slot full-population census recovered 107 timeline objects. The recovered record includes 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts, while preserving a three-item recovery remainder and separating account mentions from verified office-account interactions."
     },
     {
+      id: "INQ-KC-TOWN-HALL-X-FULL-POPULATION-2026",
+      project: "kc-town-hall",
+      question: "What does a full-population archival review of every object counted by the @KCTownHall profile establish about the project's public operating surface, source trail, and stakeholder response?",
+      methods: ["Crawled the authenticated Posts timeline to exhaustion and deduplicated status URLs.", "Crawled the authenticated Replies timeline to exhaustion and separated five other-account parent or conversation-context cards from the primary project population.", "Reconciled the Posts and Replies union to all 183 objects displayed by the profile.", "Classified every primary object as a project post, project reply, or reposted external status and inventoried its public URLs, mentions, hashtags, bounded mission classifications, and access-time interaction labels.", "Ran bounded authenticated searches for direct replies, quote-responses, domain references, and project-name references, excluding unrelated broad-name matches.", "Inspected three Council-member account responses in the authenticated live interface and checked contemporaneous or official service-date evidence."],
+      runAt: "2026-07-15",
+      resultStatus: "recovered",
+      findings: ["All 183 profile-counted objects were recovered: 142 project-account posts, 13 project-account replies, and 28 reposted external statuses.", "One hundred records are tire-related under a transparent text-and-hashtag classification; 12 records link to a survey pathway.", "The complete corpus contains 133 external-link occurrences representing 31 distinct short URLs and includes neighborhood food access, housing, voting, transit, public health, pandemic relief, cleanup, and project-operation sources.", "Three direct responses came from then-serving Council member accounts: Quinton Lucas, Jolie Justus, and Melissa Robinson.", "Other mission-relevant responses include a Bridging the Gap collaborator report, two community amplifications, and a city-service response.", "At access time, the 155 project-account-authored records displayed 22 replies, 70 reposts, 174 likes, and one bookmark; these mutable labels are retained only as an archival baseline."],
+      limitations: ["The census is not a platform account-data export and cannot establish that no deleted, restricted, deindexed, or otherwise unavailable record ever existed.", "The shared account does not identify the human author of each record.", "The social corpus does not independently verify first-party program quantities or assign post-transition outcomes to Jamie.", "A direct Council-account response is not formal endorsement, partnership, adoption, or policy causality.", "Access-time interaction labels are mutable, do not identify a complete historical audience, and are not reach, conversion, participation, or impact."],
+      sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", kcTownHallFullPopulationCensusSourceId, ...kcTownHallCouncilResponseSourceIds, "SRC-KC-STAR-LUCAS-JUSTUS-COUNCIL-2019-04-03", "SRC-KCMO-CLERK-MELISSA-ROBINSON-SERVICE", "SRC-KC-TOWN-HALL-KC-STAR-LEONS-THRIFTWAY", "SRC-KC-TOWN-HALL-NORTHEAST-NEWS-AFFORDABLE-HOUSING-2018", "SRC-KC-TOWN-HALL-CURBED-RENTER-TAX-CREDIT-2018", "SRC-KC-TOWN-HALL-RIDEKC-NEXT-SYSTEM-REDESIGN", "SRC-KC-TOWN-HALL-KCUR-MISSOURI-PRIMARY-CHEAT-SHEET-2018", "SRC-KC-TOWN-HALL-MISSOURI-VOTER-OUTREACH", "SRC-KC-TOWN-HALL-YOUTUBE-COVID-RELIEF-QA-2020", "SRC-KC-TOWN-HALL-YOUTUBE-PAINT-CLEANUP-2018"],
+      publicSummary: "A full-population review recovered all 183 profile-counted @KCTownHall records. The account functioned as a public operating surface for resident input, recurring neighborhood service, civic-resource circulation, and stakeholder dialogue, including three direct responses from then-serving Council member accounts."
+    },
+    {
       id: "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
       project: "creative-technology-practice",
       question: "What original code, diagrams, cleared installation media, collaborator accounts, and press materials would clarify the NTER CHNG division of labor and support a future visual projection?",
@@ -944,7 +1007,8 @@ const knowledgeBankInput = {
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
-    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
+    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
+    { id: "COR-KC-TOWN-HALL-FUNDING-SEQUENCE-2026", claimId: "CLM-KC-TOWN-HALL-FUNDING-SEQUENCE", previousText: "$490,539 public funding recommendation", replacementText: "CCED Board recommendation followed by Council acceptance and appropriation of $490,539, with the later unused-funds reappropriation attached", reason: "Official 2019 and 2024 records show that recommendation-only wording materially understates the Council action while any receipt, spending, or completion claim would overstate it.", decidedAt: "2026-07-15", affectedSurfaces: ["/work", "/work/kc-town-hall", "knowledge-bank"], status: "active" }
   ],
   intakeItems: [
     {
@@ -1893,13 +1957,13 @@ const knowledgeBankInput = {
     },
     {
       id: "INTAKE-KC-TOWN-HALL-SOCIAL-CONTINUITY-2026-07-14",
-      title: "KC Town Hall public identity and post-transition continuity",
+      title: "KC Town Hall full social population, public operation, and continuity",
       project: "kc-town-hall",
       kind: "source-link",
-      summary: "The authenticated @KCTownHall profile preserves a public identity launched around a neighborhood resource and cultural center and remaining active through 2022, including visible neighborhood-program continuity after Jamie's stated transition to a mission-aligned organization.",
-      status: "researching",
-      sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-KC-TOWN-HALL-X-LAUNCH-1013893135695601665", "SRC-KC-TOWN-HALL-X-CONTINUITY-1457371688300056580"],
-      relatedClaimIds: [],
+      summary: "A full-population authenticated review recovered all 183 profile-counted @KCTownHall records and documents a shared public operating surface for resident input, recurring neighborhood service, civic-resource circulation, and stakeholder response, including three direct then-serving Council-member account responses. The account remained active through 2022, beyond Jamie's stated stewardship transition.",
+      status: "integrated",
+      sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", kcTownHallFullPopulationCensusSourceId, "SRC-KC-TOWN-HALL-X-LAUNCH-1013893135695601665", "SRC-KC-TOWN-HALL-X-CONTINUITY-1457371688300056580", ...kcTownHallCouncilResponseSourceIds, "SRC-KC-STAR-LUCAS-JUSTUS-COUNCIL-2019-04-03", "SRC-KCMO-CLERK-MELISSA-ROBINSON-SERVICE", "SRC-KC-TOWN-HALL-KC-STAR-LEONS-THRIFTWAY", "SRC-KC-TOWN-HALL-NORTHEAST-NEWS-AFFORDABLE-HOUSING-2018", "SRC-KC-TOWN-HALL-CURBED-RENTER-TAX-CREDIT-2018", "SRC-KC-TOWN-HALL-RIDEKC-NEXT-SYSTEM-REDESIGN", "SRC-KC-TOWN-HALL-KCUR-MISSOURI-PRIMARY-CHEAT-SHEET-2018", "SRC-KC-TOWN-HALL-MISSOURI-VOTER-OUTREACH", "SRC-KC-TOWN-HALL-YOUTUBE-COVID-RELIEF-QA-2020", "SRC-KC-TOWN-HALL-YOUTUBE-PAINT-CLEANUP-2018"],
+      relatedClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE"],
       relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
       candidateClaims: [],
       propositions: [
@@ -1913,31 +1977,86 @@ const knowledgeBankInput = {
           decisionUse: "Preserves the project's original public-facing purpose and invitation design."
         },
         {
+          id: "PROP-KC-TOWN-HALL-X-FULL-POPULATION-2026",
+          text: "The authenticated Posts and Replies review recovered and classified all 183 objects displayed by the @KCTownHall profile: 142 project-account posts, 13 project-account replies, and 28 reposted external statuses.",
+          status: "direct-support",
+          sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", kcTownHallFullPopulationCensusSourceId],
+          sourceSupport: ["183-post profile counter", "183-record reconciled union", "Posts and Replies timeline membership", "record relationship classification"],
+          boundaries: ["This is a complete reconciliation of the displayed profile population, not a platform account-data export or proof that no deleted or restricted status ever existed.", "Five other-account parent or conversation-context cards rendered in Replies are preserved separately and not counted as project records."],
+          decisionUse: "Replaces the earlier 170-of-183 partial recovery statement with a complete, auditable population disposition."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE-2026",
+          text: "The full account record documents a shared public operating surface for resident survey pathways, recurring free tire-pickup intake, cleanup and community-resource distribution, civic-information circulation, and public stakeholder dialogue.",
+          status: "synthesis-with-boundary",
+          sourceIds: [kcTownHallFullPopulationCensusSourceId, "SRC-KC-TOWN-HALL-X-LAUNCH-1013893135695601665", "SRC-KC-TOWN-HALL-YOUTUBE-COVID-RELIEF-QA-2020", "SRC-KC-TOWN-HALL-YOUTUBE-PAINT-CLEANUP-2018"],
+          sourceSupport: ["183-record row-level census", "100 tire-related record classifications", "12 survey-linked record classifications", "31 distinct posted short URLs", "project launch invitation", "project-authored resource videos"],
+          boundaries: ["The shared account does not identify the human author of each record.", "The classifications are corpus counts, not participant, pickup, service-completion, or impact totals.", "First-party program quantities in posts are not independently verified."],
+          decisionUse: "Supports a stronger portfolio account of KC Town Hall as civic product operations rather than only project promotion."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-THREE-COUNCIL-RESPONSES-2026",
+          text: "Three direct mission-relevant responses came from then-serving Kansas City Council member accounts: Quinton Lucas and Jolie Justus in an April 2019 neighborhood food-access thread, and Melissa Robinson in an August 2020 neighborhood-work thread.",
+          status: "direct-support",
+          sourceIds: [...kcTownHallCouncilResponseSourceIds, "SRC-KC-STAR-LUCAS-JUSTUS-COUNCIL-2019-04-03", "SRC-KCMO-CLERK-MELISSA-ROBINSON-SERVICE"],
+          sourceSupport: ["authenticated direct quote-response by Quinton Lucas", "authenticated direct reply by Jolie Justus", "authenticated direct reply by Melissa Robinson", "contemporaneous and official service-date evidence"],
+          boundaries: ["Direct response is not formal endorsement, partnership, adoption, policy causality, or a complete Council engagement graph.", "Do not count tags or mentions alone as engagement."],
+          decisionUse: "Adds a defensible stakeholder-response signal while avoiding broad engagement or endorsement language."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-PUBLIC-SOURCE-TRAIL-2026",
+          text: "The 183-record corpus contains 133 external-link occurrences representing 31 distinct short URLs and a mission-relevant source trail across neighborhood food access, housing, voting, transit, public health, pandemic relief, cleanup, and project operations.",
+          status: "supported-with-boundary",
+          sourceIds: [kcTownHallFullPopulationCensusSourceId, "SRC-KC-TOWN-HALL-KC-STAR-LEONS-THRIFTWAY", "SRC-KC-TOWN-HALL-NORTHEAST-NEWS-AFFORDABLE-HOUSING-2018", "SRC-KC-TOWN-HALL-CURBED-RENTER-TAX-CREDIT-2018", "SRC-KC-TOWN-HALL-RIDEKC-NEXT-SYSTEM-REDESIGN", "SRC-KC-TOWN-HALL-KCUR-MISSOURI-PRIMARY-CHEAT-SHEET-2018", "SRC-KC-TOWN-HALL-MISSOURI-VOTER-OUTREACH", "SRC-KC-TOWN-HALL-YOUTUBE-COVID-RELIEF-QA-2020", "SRC-KC-TOWN-HALL-YOUTUBE-PAINT-CLEANUP-2018"],
+          sourceSupport: ["complete posted-link inventory", "selected live and archived mission-relevant sources", "project-authored public resource specimens"],
+          boundaries: ["A source circulated by the account is not necessarily coverage of KC Town Hall.", "Do not assign source authorship, publisher endorsement, or project causality from a posted link or repost."],
+          decisionUse: "Preserves the account's public research and resource-distribution layer for future composition."
+        },
+        {
           id: "PROP-KC-TOWN-HALL-SOCIAL-CONTINUITY-2022",
           text: "The @KCTownHall public identity remained active through September 2022 and carried neighborhood-program documentation beyond the period Jamie describes as his direct project stewardship.",
           status: "synthesis-with-boundary",
-          sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-KC-TOWN-HALL-X-CONTINUITY-1457371688300056580"],
+          sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", kcTownHallFullPopulationCensusSourceId, "SRC-KC-TOWN-HALL-X-CONTINUITY-1457371688300056580"],
           sourceSupport: ["profile chronology", "timeline end date", "post-2020 neighborhood-program documentation"],
           boundaries: ["The social record does not identify the successor steward, prove the legal transfer, or establish the author of each post.", "Do not attribute post-transition program claims or outcomes to Jamie."],
           decisionUse: "Adds public continuity evidence beside Jamie's bounded transition memory without exposing the family crisis or inventing a transfer record."
-        },
-        {
-          id: "PROP-KC-TOWN-HALL-X-CORPUS-RECOVERY-2026",
-          text: "The authenticated review recovered 170 unique status URLs from a @KCTownHall profile displaying 183 posts, including 110 project-account statuses and 60 reposted external statuses.",
-          status: "supported-with-boundary",
-          sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
-          sourceSupport: ["profile post count", "status-author classification", "deduplicated timeline URLs"],
-          boundaries: ["Thirteen profile-counted items were not recovered.", "The count does not identify individual human authors or independently verify every program metric stated in posts."],
-          decisionUse: "Defines the surviving public corpus and makes the recovery gap visible."
         }
       ],
-      tensions: [],
-      researchQuestions: ["Can the missing profile-counted items and formal stewardship-transfer evidence be recovered without publishing private crisis context?", "Which successor organization can confirm the handoff and ongoing use of the public identity system?", "Which later public posts can be independently corroborated before any post-transition program outcome is associated with the project record?"],
-      boundaries: ["Do not encode the family crisis.", "Do not infer abandonment, failure, or project completion from a transition.", "Do not attribute post-transition posts or program outcomes to Jamie.", "Do not project this intake item directly to the website until handoff evidence and public wording are approved."],
+      tensions: [
+        {
+          id: "TENSION-KC-TOWN-HALL-SHARED-ACCOUNT-ATTRIBUTION",
+          propositionIds: ["PROP-KC-TOWN-HALL-X-FULL-POPULATION-2026", "PROP-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE-2026", "PROP-KC-TOWN-HALL-SOCIAL-CONTINUITY-2022"],
+          relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
+          description: "The complete institutional account record is relevant to a project Jamie co-led, but the shared timeline does not identify the human author or operator behind each status and extends beyond Jamie's stated stewardship period.",
+          currentPosition: "Project-level public operating functions may be described with shared-account and chronology boundaries. Individual post authorship and post-transition program operation remain unassigned to Jamie.",
+          status: "reconciled",
+          correctionTriggers: [
+            {
+              id: "TRIGGER-KC-TOWN-HALL-SHARED-ACCOUNT-BOUNDARY-CONFIRM",
+              targetProofId: "kc-town-hall-public-benefit-documentation",
+              condition: "No public actor evidence identifies Jamie as the author or operator of a specific shared-account record.",
+              action: "confirm",
+              requiredEvidence: ["full-population census", "shared-account authorship review", "public projection review"],
+              reason: "Institutional account evidence supports the project operating-surface claim while leaving individual authorship and post-transition operation unassigned."
+            },
+            {
+              id: "TRIGGER-KC-TOWN-HALL-ACTOR-EVIDENCE-REPLACE",
+              targetProofId: "kc-town-hall-public-benefit-documentation",
+              condition: "A permissioned public artifact or collaborator confirmation identifies who authored or operated a material subset of the account record.",
+              action: "replace",
+              requiredEvidence: ["public actor evidence or permissioned collaborator confirmation", "record-level scope", "projection review"],
+              reason: "Specific actor evidence could safely sharpen attribution for a bounded subset without assigning the complete shared account to one person.",
+              replacementGuidance: "Attribute only the records or operating period established by the new evidence, retain shared-account language for the remainder, and keep post-transition activity separate unless the evidence reaches it."
+            }
+          ]
+        }
+      ],
+      researchQuestions: ["Which permissioned public artifact or collaborator account can clarify Jamie's operating responsibilities during the 2018-2020 period without assigning him the complete shared account?", "Which first-party program quantities can be independently corroborated through public agency or collaborator records?", "Which successor organization can confirm the stewardship handoff and ongoing use of the public identity system without exposing the family crisis?"],
+      boundaries: ["Do not encode the family crisis.", "Do not infer abandonment, failure, or project completion from a transition.", "Do not attribute every account post or post-transition program outcome to Jamie.", "Do not treat direct responses, reposts, mentions, or access-time interaction labels as formal endorsement, partnership, reach, or impact.", "Do not independently repeat first-party program quantities without corroboration.", "The governed public claim is projected separately; this intake record remains non-projecting provenance."],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
-      reviewedAt: "2026-07-14",
-      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
     },
     {
       id: "INTAKE-KC-TOWN-HALL-CCED-ALLOCATION-2026-07-13",
@@ -1945,13 +2064,13 @@ const knowledgeBankInput = {
       project: "kc-town-hall",
       kind: "source-link",
       summary: "Official Kansas City records show that the CCED Sales Tax Board recommended $490,539 for KC Town Hall, the City Council accepted the recommendation and appropriated that amount in 2019, and the Council later recorded that KC Town Hall withdrew and the unused funds were reappropriated in 2024.",
-      status: "researching",
+      status: "integrated",
       sourceIds: [
         "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
         "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
         "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"
       ],
-      relatedClaimIds: [],
+      relatedClaimIds: ["CLM-KC-TOWN-HALL-FUNDING-SEQUENCE"],
       relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
       candidateClaims: [],
       propositions: [
@@ -2015,9 +2134,9 @@ const knowledgeBankInput = {
             "PROP-KC-TOWN-HALL-ALLOCATION-SEQUENCE-BOUNDED"
           ],
           relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
-          description: "The governed proof currently says the work included a $490,539 public funding recommendation and instructs editors to retain recommendation-only language unless final funding is confirmed. Official records now establish Council acceptance and appropriation, while also establishing that the allocation was later unused and reappropriated.",
-          currentPosition: "The recommendation wording remains technically true but materially understates the 2019 Council action. A stronger public claim must say Council accepted and appropriated the amount while explicitly withholding receipt, spending, and completion and preserving the 2024 withdrawal outcome.",
-          status: "open",
+          description: "The governed proof previously named only a $490,539 public funding recommendation. Official records establish Council acceptance and appropriation, while also establishing that the allocation was later unused and reappropriated; the proof has now been corrected to preserve the complete bounded sequence.",
+          currentPosition: "The governed proof and case study now use the fuller institutional sequence: Council acceptance and appropriation are named, while receipt, spending, and completion remain withheld and the 2024 withdrawal and unused-funds reappropriation remain attached.",
+          status: "reconciled",
           correctionTriggers: [
             {
               id: "TRIGGER-KC-TOWN-HALL-RECOMMENDATION-CONFIRM",
@@ -2050,11 +2169,11 @@ const knowledgeBankInput = {
         "Keep the 2024 withdrawal and unused-funds reappropriation attached to any outcome summary.",
         "Do not infer Jamie's individual causality from government records that name the project but not his contribution.",
         "Do not publish private legal, financial, property, banking, or stakeholder records.",
-        "Do not project this intake item directly to the website; reconcile and approve the governed proof first."
+        "The governed public claim is projected separately; this intake record remains non-projecting provenance."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-13",
-      reviewedAt: "2026-07-13",
+      reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex public-record review"]
     },
     {
@@ -2562,28 +2681,45 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
     }
   ],
-  pages: [{
-    id: "callnyc",
-    surface: "/work/callnyc",
-    sourceOrder: [
-      "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
-      "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
-      "SRC-CALLNYC-POLITICO-2016-03-14",
-      "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-      callNycFullPopulationCensusSourceId,
-      "SRC-CALLNYC-X-PROFILE-2026-07-14"
-    ],
-    occurrences: [
-      { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
-      { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
-      { id: "public-issue-pathway-census", claimId: "CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS", projection: "case-study", sourceIds: [callNycFullPopulationCensusSourceId, "SRC-CALLNYC-X-PROFILE-2026-07-14"] },
-      { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-      { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
-    ]
-  }]
+  pages: [
+    {
+      id: "callnyc",
+      surface: "/work/callnyc",
+      sourceOrder: [
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        callNycFullPopulationCensusSourceId,
+        "SRC-CALLNYC-X-PROFILE-2026-07-14"
+      ],
+      occurrences: [
+        { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
+        { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
+        { id: "public-issue-pathway-census", claimId: "CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS", projection: "case-study", sourceIds: [callNycFullPopulationCensusSourceId, "SRC-CALLNYC-X-PROFILE-2026-07-14"] },
+        { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
+      ]
+    },
+    {
+      id: "kc-town-hall",
+      surface: "/work/kc-town-hall",
+      sourceOrder: [
+        "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+        "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+        "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28",
+        kcTownHallFullPopulationCensusSourceId,
+        ...kcTownHallCouncilResponseSourceIds
+      ],
+      occurrences: [
+        { id: "funding-sequence", claimId: "CLM-KC-TOWN-HALL-FUNDING-SEQUENCE", projection: "case-study", sourceIds: ["SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26", "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26", "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"] },
+        { id: "public-operating-surface", claimId: "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE", projection: "case-study", sourceIds: [kcTownHallFullPopulationCensusSourceId, ...kcTownHallCouncilResponseSourceIds] }
+      ]
+    }
+  ]
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

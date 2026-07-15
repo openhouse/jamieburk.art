@@ -227,9 +227,13 @@ infrastructure.
 
 ## KC Town Hall
 
-The authenticated review recovered 170 unique status URLs from a profile
-displaying 183 posts: 110 KC Town Hall-authored statuses and 60 reposts. The
-visible record ran from July 2018 through September 2022.
+**July 15 supersession note:** a dedicated Posts-and-Replies pass subsequently
+recovered and classified all 183 profile-counted objects: 142 project-account
+posts, 13 project-account replies, and 28 reposted external statuses. The
+[full-population note](2026-07-15-kctownhall-x-full-population-archival-production.md)
+and its public CSV and JSON supersede the 170-record recovery floor from this
+initial cross-project review. The visible record ran from July 2018 through
+September 2022.
 
 The pinned [launch post](https://x.com/KCTownHall/status/1013893135695601665)
 invited participation in building a permanent neighborhood resource and

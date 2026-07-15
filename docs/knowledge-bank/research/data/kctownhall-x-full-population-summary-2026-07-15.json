@@ -1,0 +1,367 @@
+{
+  "reviewedAt": "2026-07-15",
+  "account": "@KCTownHall",
+  "method": "Authenticated Posts and Replies crawls were exhausted, reconciled to the profile-displayed population, and supplemented by bounded public stakeholder searches.",
+  "publicSafety": "Public status URLs, dates, author handles, relationship types, posted-link metadata, classifications, and dated aggregate counts only; post text, phone numbers, cookies, private account state, and session data are excluded.",
+  "population": {
+    "profileCount": 183,
+    "postsTimelinePrimaryRecords": 170,
+    "repliesTimelineRenderedCards": 188,
+    "repliesTimelineConversationContexts": 5,
+    "repliesTimelinePrimaryRecords": 183,
+    "recoveredUnionCount": 183,
+    "reviewedPercent": 100,
+    "unrecoveredCount": 0,
+    "projectPosts": 142,
+    "projectReplies": 13,
+    "projectAuthoredTotal": 155,
+    "repostedExternalStatuses": 28,
+    "firstPublishedAt": "2018-07-02T21:12:15.000Z",
+    "lastPublishedAt": "2022-09-24T12:31:50.000Z",
+    "recordsByYear": {
+      "2018": 30,
+      "2019": 85,
+      "2020": 41,
+      "2021": 17,
+      "2022": 10
+    },
+    "reconciliation": "Posts yielded 170 primary records. Replies rendered 188 cards: 183 primary @KCTownHall records plus five parent or conversation-context records from other accounts. Excluding those five contexts produces a 183-record union that exactly matches the profile counter."
+  },
+  "publishingPattern": {
+    "tireRelatedRecords": 100,
+    "surveyLinkedRecords": 12,
+    "accountAuthoredRecordsWithExternalLinks": 115,
+    "accountAuthoredExternalLinkOccurrences": 130,
+    "accountAuthoredDistinctExternalShortUrls": 28,
+    "recurringFunctions": [
+      "neighborhood-resource identity and project updates",
+      "resident survey and neighborhood-process invitations",
+      "free tire-pickup intake and operating updates",
+      "cleanup and community-resource distribution",
+      "voting, transit, housing, health, and civic-information circulation",
+      "public stakeholder dialogue and response"
+    ],
+    "classificationMethod": {
+      "tireRelated": "Assigned when close reading of the public post found the case-insensitive string 'tire' in its visible text or hashtag, including #TiredOfTires.",
+      "surveyLinked": "Assigned mechanically when a preserved external-link destination contains the case-insensitive string 'survey'."
+    }
+  },
+  "urlInventory": {
+    "recordsWithExternalLinks": 118,
+    "externalLinkOccurrences": 133,
+    "distinctExternalShortUrls": 31,
+    "distinctLinks": [
+      {
+        "shortUrl": "https://t.co/48yjJD5qWu",
+        "displayedDestination": "http://KCTownHall.com/Survey"
+      },
+      {
+        "shortUrl": "https://t.co/5ABuIyj6CT",
+        "displayedDestination": "http://kcTownHall.com/tires"
+      },
+      {
+        "shortUrl": "https://t.co/5SiJPgIaBU",
+        "displayedDestination": "http://kcata.org/about_kcata/entries/ozone_alert…"
+      },
+      {
+        "shortUrl": "https://t.co/6CANa9RNWd",
+        "displayedDestination": "https://youtube.com/watch?v=1jeyIAH3bUI&feature=youtu.be&t=631…"
+      },
+      {
+        "shortUrl": "https://t.co/8BtTrG0dKQ",
+        "displayedDestination": "https://youtu.be/PmLjLyOpS9I"
+      },
+      {
+        "shortUrl": "https://t.co/bf2VnJH9oy",
+        "displayedDestination": "https://facebook.com/KCTownHall/videos/2135596040064768…"
+      },
+      {
+        "shortUrl": "https://t.co/bsYwe6J1iv",
+        "displayedDestination": "http://KCTownHall.com/survey"
+      },
+      {
+        "shortUrl": "https://t.co/cMLHYX42fV",
+        "displayedDestination": "https://gofundme.com/f/church-ac-theft…"
+      },
+      {
+        "shortUrl": "https://t.co/COA3dXdJRk",
+        "displayedDestination": "http://KCTownHall.com/tires"
+      },
+      {
+        "shortUrl": "https://t.co/COA3dXvlfU",
+        "displayedDestination": "http://KCTownHall.com/tires"
+      },
+      {
+        "shortUrl": "https://t.co/D1LHjkHFmS",
+        "displayedDestination": "https://ridekc.org/planning/ridekc-next…"
+      },
+      {
+        "shortUrl": "https://t.co/euxvbbF4q9",
+        "displayedDestination": "http://KCTownHall.com/COVID19/"
+      },
+      {
+        "shortUrl": "https://t.co/h2rxGUdJJh",
+        "displayedDestination": "https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx…"
+      },
+      {
+        "shortUrl": "https://t.co/Ig0fb0Gbnh",
+        "displayedDestination": "http://Kctownhall.com/tires/"
+      },
+      {
+        "shortUrl": "https://t.co/Ig0fb0ozYH",
+        "displayedDestination": "http://Kctownhall.com/tires/"
+      },
+      {
+        "shortUrl": "https://t.co/jc5nZGtusU",
+        "displayedDestination": "https://curbed.com/2018/7/20/17595698/rent-relief-act-tax-credit-kamala-harris…"
+      },
+      {
+        "shortUrl": "https://t.co/kSEpCVgPwt",
+        "displayedDestination": "http://kctownhall.com/survey/"
+      },
+      {
+        "shortUrl": "https://t.co/lb9UoNFtWE",
+        "displayedDestination": "http://bit.ly/RegisterToVOTEHere…"
+      },
+      {
+        "shortUrl": "https://t.co/ph5INJPPhQ",
+        "displayedDestination": "https://youtu.be/onCKU-TuPhc"
+      },
+      {
+        "shortUrl": "https://t.co/PIFQdEJmOM",
+        "displayedDestination": "http://kctownhall.com/tires"
+      },
+      {
+        "shortUrl": "https://t.co/PXs7IxP0Fj",
+        "displayedDestination": "http://KCTownHall.com"
+      },
+      {
+        "shortUrl": "https://t.co/PyFuI154b3",
+        "displayedDestination": "https://facebook.com/events/299606100678115/…"
+      },
+      {
+        "shortUrl": "https://t.co/qblDnsNEjm",
+        "displayedDestination": "http://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/…"
+      },
+      {
+        "shortUrl": "https://t.co/r3kHwsgVNP",
+        "displayedDestination": "http://KCTownHall.com/join"
+      },
+      {
+        "shortUrl": "https://t.co/rIBQz797HJ",
+        "displayedDestination": "https://KCTownHall.com/tires"
+      },
+      {
+        "shortUrl": "https://t.co/TTxnCGI26V",
+        "displayedDestination": "https://kctownhall.com/tires/"
+      },
+      {
+        "shortUrl": "https://t.co/TTxnCGqqIl",
+        "displayedDestination": "https://kctownhall.com/tires/"
+      },
+      {
+        "shortUrl": "https://t.co/vdw4Yr5aST",
+        "displayedDestination": "https://kansascity.com/news/business/article87241897.html…"
+      },
+      {
+        "shortUrl": "https://t.co/Vsuw0RSM2g",
+        "displayedDestination": "http://KCTownHall.com/tires/"
+      },
+      {
+        "shortUrl": "https://t.co/XX2HOanaDx",
+        "displayedDestination": "http://KCTownHall.com/temporary-elecary-electricity/…"
+      },
+      {
+        "shortUrl": "https://t.co/YOLxn5lCEo",
+        "displayedDestination": "http://kcur.org/post/cheat-sheet-tuesdays-primary-election-missouri#stream/0…"
+      }
+    ],
+    "curatedMissionRelevantSources": [
+      {
+        "kind": "neighborhood-food-access-reporting",
+        "title": "Leon's Thriftway may be the oldest black-owned grocery store in the country",
+        "organization": "The Kansas City Star",
+        "canonicalUrl": "https://www.kansascity.com/news/business/article87241897.html",
+        "sharedFromStatusUrl": "https://x.com/KCTownHall/status/1122859036163170304"
+      },
+      {
+        "kind": "local-affordable-housing-reporting",
+        "title": "Affordable Housing Policy hits the docket in KCMO",
+        "organization": "Northeast News",
+        "publishedAt": "2018-09-19",
+        "archiveUrl": "https://web.archive.org/web/20180920120704/http://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/",
+        "sharedFromStatusUrl": "https://x.com/KCTownHall/status/1043549999550877697"
+      },
+      {
+        "kind": "national-housing-policy-reporting",
+        "title": "Tax credit for renters proposed by U.S. Senator Kamala Harris",
+        "organization": "Curbed",
+        "author": "Alissa Walker",
+        "publishedAt": "2018-07-20",
+        "archiveUrl": "https://web.archive.org/web/20180720221744/https://www.curbed.com/2018/7/20/17595698/rent-relief-act-tax-credit-kamala-harris",
+        "sharedFromStatusUrl": "https://x.com/QuintonLucasKC/status/1020798115367047171"
+      },
+      {
+        "kind": "public-transit-planning",
+        "title": "RideKC Next System Redesign",
+        "organization": "Kansas City Area Transportation Authority",
+        "archiveUrl": "https://web.archive.org/web/20190821135819/https://ridekc.org/planning/ridekc-next",
+        "sharedFromStatusUrl": "https://x.com/RideKCTransit/status/1154729332755050496"
+      },
+      {
+        "kind": "election-information",
+        "title": "A Cheat Sheet For Tuesday's Primary Election In Missouri",
+        "organization": "KCUR",
+        "author": "Erica Hunzinger",
+        "publishedAt": "2018-08-05",
+        "canonicalUrl": "https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri",
+        "sharedFromStatusUrl": "https://x.com/KCTownHall/status/1026922856091987968"
+      },
+      {
+        "kind": "official-voter-information",
+        "title": "Missouri voter outreach search",
+        "organization": "Missouri Secretary of State",
+        "canonicalUrl": "https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx",
+        "sharedFromStatusUrl": "https://x.com/KCTownHall/status/1026922856091987968"
+      },
+      {
+        "kind": "public-health-and-transit-information",
+        "title": "Ozone Alert",
+        "organization": "Kansas City Area Transportation Authority",
+        "canonicalUrl": "http://kcata.org/about_kcata/entries/ozone_alert/",
+        "sharedFromStatusUrl": "https://x.com/KCTownHall/status/1016684231433564160"
+      },
+      {
+        "kind": "community-covid-resource-video",
+        "title": "COVID-19 relief resource Q&A",
+        "organization": "KC Town Hall",
+        "canonicalUrl": "https://youtu.be/onCKU-TuPhc",
+        "sharedFromStatusUrl": "https://x.com/KCTownHall/status/1252344939867824132"
+      },
+      {
+        "kind": "site-cleanup-documentation",
+        "title": "Bad latex paint cleanup video and tool list",
+        "organization": "KC Town Hall",
+        "canonicalUrl": "https://youtu.be/PmLjLyOpS9I",
+        "sharedFromStatusUrl": "https://x.com/KCTownHall/status/1035215055024009216"
+      }
+    ]
+  },
+  "stakeholderResponses": {
+    "boundedSearchQueries": [
+      "@KCTownHall -from:KCTownHall",
+      "to:KCTownHall -from:KCTownHall",
+      "url:kctownhall.com -from:KCTownHall",
+      "\"KC Town Hall\" -from:KCTownHall since:2018-01-01 until:2023-01-01"
+    ],
+    "directCouncilMemberAccountCount": 3,
+    "councilMemberResponses": [
+      {
+        "handle": "@QuintonLucasKC",
+        "responseStatusUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+        "publishedAt": "2019-04-29T14:13:13.926Z",
+        "relationship": "direct quote-response to a KC Town Hall Leon's alert",
+        "serviceDateEvidence": "https://www.kansascity.com/news/politics-government/election/article228683379.html"
+      },
+      {
+        "handle": "@joliejustus",
+        "responseStatusUrl": "https://x.com/joliejustus/status/1122883010582466560",
+        "publishedAt": "2019-04-29T15:19:06.537Z",
+        "relationship": "direct reply to KC Town Hall about Leon's and EDC work",
+        "serviceDateEvidence": "https://www.kansascity.com/news/politics-government/election/article228683379.html"
+      },
+      {
+        "handle": "@Robinson4kc",
+        "responseStatusUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+        "publishedAt": "2020-08-02T00:08:01.598Z",
+        "relationship": "direct reply thanking KC Town Hall for work improving community conditions",
+        "serviceDateEvidence": "https://clerk.kcmo.gov/PersonDetail.aspx?GUID=1696D403-A114-4AB0-B632-A303AF8E3B3C&ID=240616"
+      }
+    ],
+    "otherMissionRelevantResponses": [
+      {
+        "statusUrl": "https://x.com/trutheresme/status/1148277187583389703",
+        "publishedAt": "2019-07-08T17:06:30.135Z",
+        "authorHandle": "@trutheresme",
+        "classification": "environmental-dropoff-collaborator-corroboration",
+        "relationship": "reported a large KC Town Hall tire drop-off received by Bridging the Gap"
+      },
+      {
+        "statusUrl": "https://x.com/JJones816/status/1182369340034707457",
+        "publishedAt": "2019-10-10T18:56:32.000Z",
+        "authorHandle": "@JJones816",
+        "classification": "community-amplification",
+        "relationship": "quote-amplified an Oak Park free dumpster day notice"
+      },
+      {
+        "statusUrl": "https://x.com/trutheresme/status/1182349413722836992",
+        "publishedAt": "2019-10-10T17:37:21.000Z",
+        "authorHandle": "@trutheresme",
+        "classification": "community-amplification",
+        "relationship": "quote-amplified an Oak Park free dumpster day notice"
+      },
+      {
+        "statusUrl": "https://x.com/KCMO311/status/1034093516073459712",
+        "publishedAt": "2018-08-27T15:01:21.000Z",
+        "authorHandle": "@KCMO311",
+        "classification": "city-service-response",
+        "relationship": "responded in a service-resolution thread"
+      }
+    ],
+    "boundary": "Direct replies, quote-responses, and explicit collaborator reports are observable stakeholder responses. Tags and mentions alone are not engagement. The bounded searches do not recover likes, private activity, deleted or unindexed records; unrelated broad-name search results were excluded."
+  },
+  "accessTimeProjectAuthoredEngagement": {
+    "observedAt": "2026-07-14",
+    "statusesWithAnyObservedInteraction": 77,
+    "replies": 22,
+    "reposts": 70,
+    "likes": 174,
+    "bookmarks": 1,
+    "visibleInteractionUnits": 267,
+    "boundary": "These are mutable interface observations, not unique people, reach, conversion, endorsement, participation, or impact. Counts attached to reposted source records are excluded from the project-authored totals."
+  },
+  "conversationContextRecords": [
+    {
+      "statusUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "publishedAt": "2020-08-02T00:08:01.000Z",
+      "authorHandle": "@Robinson4kc",
+      "relationship": "conversation-context",
+      "classification": "mission-relevant-council-response"
+    },
+    {
+      "statusUrl": "https://x.com/KCMOHealthDept/status/1154749460422938624",
+      "publishedAt": "2019-07-26T13:45:00.000Z",
+      "authorHandle": "@KCMOHealthDept",
+      "relationship": "conversation-context",
+      "classification": "incidental-context"
+    },
+    {
+      "statusUrl": "https://x.com/KCMO311/status/1034093516073459712",
+      "publishedAt": "2018-08-27T15:01:21.000Z",
+      "authorHandle": "@KCMO311",
+      "relationship": "conversation-context",
+      "classification": "mission-relevant-city-response"
+    },
+    {
+      "statusUrl": "https://x.com/bballkansas/status/1033501260362772480",
+      "publishedAt": "2018-08-25T23:47:56.000Z",
+      "authorHandle": "@bballkansas",
+      "relationship": "conversation-context",
+      "classification": "incidental-context"
+    },
+    {
+      "statusUrl": "https://x.com/joliejustus/status/1033499895670431744",
+      "publishedAt": "2018-08-25T23:42:31.000Z",
+      "authorHandle": "@joliejustus",
+      "relationship": "conversation-context",
+      "classification": "mission-relevant-city-response"
+    }
+  ],
+  "boundaries": [
+    "The corpus does not identify the human author of each shared-account status.",
+    "Reposts document account curation; they do not prove endorsement, partnership, or reciprocal engagement by the source account.",
+    "The census does not independently verify first-party quantities or outcomes stated in individual posts.",
+    "Access-time interaction labels are mutable and do not identify a complete historical audience.",
+    "No follower identities, private account data, deleted-post claims, private messages, full tweet bodies, or phone numbers are included."
+  ]
+}

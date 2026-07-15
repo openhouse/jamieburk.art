@@ -490,7 +490,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The work advanced to City Council acceptance and appropriation of $490,539; later records say the project withdrew and the unused funds were reappropriated.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -501,14 +501,20 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "Planning materials, public-benefit documentation, municipal-review support, and a shared public operating surface for resident input, recurring neighborhood service, civic-resource circulation, and stakeholder response.",
+    artifactTypes: ["guide", "source map", "workflow"],
     artifacts: [
       {
         title: "Public-benefit documentation set",
         description:
           "Representative materials for describing intended public value, funding context, and stakeholder needs.",
         type: "guide"
+      },
+      {
+        title: "Public operating-surface census",
+        description:
+          "A 183-of-183 archival census documenting resident survey pathways, recurring free tire-pickup intake, civic-resource circulation, and direct stakeholder response.",
+        type: "source map"
       }
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
@@ -516,7 +522,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Official Kansas City records, a full public social census, approved resume language, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -526,13 +532,15 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "$490,539 Council acceptance and appropriation, later unused and reappropriated",
+      "183-of-183 public-account census",
+      "Three direct then-serving Council-member account responses"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-led adaptive reuse planning and public-benefit documentation; the official funding sequence and shared account's public operating functions are independently documented.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Individual shared-account authorship, the stewardship handoff, selected first-party program quantities, and current property status remain unassigned or open.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

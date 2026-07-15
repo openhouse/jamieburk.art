@@ -102,6 +102,71 @@
       ]
     },
     {
+      "id": "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+      "title": "Resolution 190649: KC Town Hall CCED recommendation",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
+      "assetUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628240&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Resolution 190649, adopted as substituted September 26, 2019.",
+      "publicNote": "The authenticated resolution records the CCED Sales Tax Board's July 16, 2019, vote to recommend $490,539 for KC Town Hall, the Council's acceptance of that recommendation, and authorization to negotiate a funding agreement of up to that amount with public-purpose and use restrictions.",
+      "doesNotEstablish": [
+        "Jamie's individual role",
+        "execution of a funding agreement",
+        "receipt or disbursement of funds",
+        "expenditure of funds",
+        "completion of the redevelopment project"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+      "title": "Ordinance 190642: Round Two CCED project appropriations",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
+      "assetUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628353&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Ordinance 190642, passed as substituted September 26, 2019.",
+      "publicNote": "The authenticated ordinance appropriates Round Two CCED funds and lists $490,539 for KC Town Hall. Appropriation is a Council allocation decision, not evidence that KC Town Hall received or spent the funds.",
+      "doesNotEstablish": [
+        "Jamie's individual role",
+        "execution of a funding agreement",
+        "receipt or disbursement of funds",
+        "expenditure of funds",
+        "completion of the redevelopment project"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28",
+      "title": "Ordinance 240317: Reappropriation of unused KC Town Hall funds",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-03-28",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      "publicNote": "The later Council record says Ordinance 190642 appropriated $490,539 to the KC Town Hall project account, that KC Town Hall subsequently withdrew from the project, and that the funds remained unused before being reappropriated to the Housing Budget Fund.",
+      "doesNotEstablish": [
+        "why KC Town Hall withdrew",
+        "Jamie's individual role in the withdrawal",
+        "receipt or expenditure of the allocation",
+        "whether a funding agreement was ever executed",
+        "the property's current status"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-X-PROFILE-2026-07-14",
       "title": "Call NYC X profile",
       "organization": "Call NYC",
@@ -143,6 +208,90 @@
         "product adoption",
         "constituent outcomes",
         "current Council performance"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-X-FULL-POPULATION-CENSUS-2026-07-15",
+      "title": "KC Town Hall X full-population census",
+      "organization": "KC Town Hall",
+      "author": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/research/data/kctownhall-x-full-population-census-2026-07-15.csv",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Full-population archival census of the 183 objects counted by the @KCTownHall profile, reviewed July 15, 2026.",
+      "publicNote": "The authenticated Posts and Replies review reconciles all 183 profile-counted objects: 142 project-account posts, 13 project-account replies, and 28 reposted external statuses. It inventories 31 distinct posted short URLs, classifies 100 tire-related records and 12 survey-linked records, and preserves three direct then-serving Council-member account responses with explicit authorship and engagement boundaries.",
+      "doesNotEstablish": [
+        "a platform account-data export",
+        "a complete deleted-post history",
+        "the human author of shared-account statuses",
+        "independent verification of first-party program quantities",
+        "formal endorsement or partnership",
+        "unique audience reach",
+        "Jamie as operator of post-transition activity",
+        "funding receipt, spending, redevelopment completion, or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-X-QUINTON-LUCAS-RESPONSE-1122866432130334720",
+      "title": "Quinton Lucas responds to KC Town Hall's Leon's alert",
+      "organization": "Quinton Lucas",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Quinton Lucas public quote-response to KC Town Hall's Leon's Thriftway alert, April 29, 2019.",
+      "publicNote": "The then-serving Council member quote-responded to KC Town Hall's alert and described contacting ownership and working to keep the neighborhood grocery open.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "partnership",
+        "project causality",
+        "a completed grocery-store outcome"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-X-JOLIE-JUSTUS-RESPONSE-1122883010582466560",
+      "title": "Jolie Justus replies to KC Town Hall about Leon's",
+      "organization": "Jolie Justus",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jolie Justus public reply to KC Town Hall about Leon's Thriftway, April 29, 2019.",
+      "publicNote": "The then-serving Council member replied directly, describing work with the Economic Development Corporation and a visit to the store.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "partnership",
+        "project causality",
+        "a completed grocery-store outcome"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-X-MELISSA-ROBINSON-RESPONSE-1289714535251742726",
+      "title": "Melissa Robinson thanks KC Town Hall for community work",
+      "organization": "Melissa Robinson",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-08-02",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Melissa Robinson public reply thanking KC Town Hall for work to improve community conditions, August 2, 2020.",
+      "publicNote": "The then-serving Council member directly thanked KC Town Hall for doing heavy work to improve community conditions.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "partnership",
+        "a quantified program outcome",
+        "Jamie's authorship of the triggering shared-account post"
       ]
     }
   ],
@@ -388,6 +537,128 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Across all 183 profile-counted records, KC Town Hall's shared public account opened resident survey pathways, coordinated recurring free tire-pickup intake, circulated civic resources, and preserved direct responses from three then-serving Council-member accounts.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-X-FULL-POPULATION-CENSUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "183-of-183 population reconciliation",
+            "resident survey pathways",
+            "recurring tire-pickup operating record",
+            "civic-resource circulation",
+            "three direct Council-member account responses"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-X-QUINTON-LUCAS-RESPONSE-1122866432130334720",
+          "relationship": "corroborating",
+          "supports": [
+            "direct Quinton Lucas quote-response",
+            "neighborhood food-access dialogue"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-X-JOLIE-JUSTUS-RESPONSE-1122883010582466560",
+          "relationship": "corroborating",
+          "supports": [
+            "direct Jolie Justus reply",
+            "neighborhood food-access and economic-development dialogue"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-X-MELISSA-ROBINSON-RESPONSE-1289714535251742726",
+          "relationship": "corroborating",
+          "supports": [
+            "direct Melissa Robinson reply",
+            "recognition of neighborhood work"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The shared account does not identify the human author of each status.",
+        "Do not attribute post-transition program activity or outcomes to Jamie.",
+        "The 100 tire-related and 12 survey-linked records classify the corpus; they are not participant, pickup, or outcome totals.",
+        "A direct Council-account response does not establish formal endorsement, partnership, adoption, or policy causality.",
+        "Access-time interaction labels are mutable and are not reach or impact."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-FUNDING-SEQUENCE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Official records show that the CCED Board recommended $490,539 for KC Town Hall and the City Council accepted and appropriated that amount in 2019; a 2024 ordinance later recorded that KC Town Hall withdrew and the unused funds were reappropriated.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+          "relationship": "direct-support",
+          "supports": [
+            "CCED Board recommendation",
+            "Council acceptance",
+            "$490,539 amount",
+            "authorization to negotiate a funding agreement"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+          "relationship": "direct-support",
+          "supports": [
+            "Council appropriation",
+            "$490,539 project-account amount"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28",
+          "relationship": "supports-boundary",
+          "supports": [
+            "later project withdrawal",
+            "unused allocation",
+            "2024 reappropriation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Appropriation is not evidence of an executed funding agreement, receipt, disbursement, expenditure, construction, or completion.",
+        "The official records do not establish Jamie's individual causality for the recommendation or Council action.",
+        "The 2024 record does not explain why KC Town Hall withdrew and must not be connected to Jamie's family crisis or stewardship-transition account."
+      ]
     }
   ],
   "pages": [
@@ -462,6 +733,42 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+        "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+        "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28",
+        "SRC-KC-TOWN-HALL-X-FULL-POPULATION-CENSUS-2026-07-15",
+        "SRC-KC-TOWN-HALL-X-QUINTON-LUCAS-RESPONSE-1122866432130334720",
+        "SRC-KC-TOWN-HALL-X-JOLIE-JUSTUS-RESPONSE-1122883010582466560",
+        "SRC-KC-TOWN-HALL-X-MELISSA-ROBINSON-RESPONSE-1289714535251742726"
+      ],
+      "occurrences": [
+        {
+          "id": "funding-sequence",
+          "claimId": "CLM-KC-TOWN-HALL-FUNDING-SEQUENCE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+            "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+            "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"
+          ]
+        },
+        {
+          "id": "public-operating-surface",
+          "claimId": "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-X-FULL-POPULATION-CENSUS-2026-07-15",
+            "SRC-KC-TOWN-HALL-X-QUINTON-LUCAS-RESPONSE-1122866432130334720",
+            "SRC-KC-TOWN-HALL-X-JOLIE-JUSTUS-RESPONSE-1122883010582466560",
+            "SRC-KC-TOWN-HALL-X-MELISSA-ROBINSON-RESPONSE-1289714535251742726"
           ]
         }
       ]

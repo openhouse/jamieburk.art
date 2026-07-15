@@ -85,6 +85,18 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Do not say KC Town Hall received or spent a $490,539 grant, completed the
+adaptive reuse, or that Jamie alone secured the Council action. Official records
+support CCED recommendation, Council acceptance and appropriation, and later
+reappropriation of unused funds as separate stages.
+
+Do not assign all 183 shared-account records to Jamie, attribute later
+neighborhood-program operation to him, turn 100 tire-related records or 12
+survey-linked records into participant or outcome counts, or describe three
+direct Council-member account responses as formal endorsement or partnership.
+Access-time likes, replies, reposts, and bookmarks are archival labels, not
+reach or impact.
+
 Do not treat the Council's withdrawal language as proof that Jamie abandoned or
 failed the project. Do not present Jamie's firsthand stewardship-transition
 account as government-record evidence, identify the receiving organization, or

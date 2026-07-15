@@ -119,7 +119,7 @@ const researchSources: KnowledgeBank["sources"] = [
     preservationStatus: "private",
     accessedAt: "2026-07-14",
     publicCitation: "Authenticated X project-account archival census conducted July 14, 2026.",
-    publicNote: "The bounded review recovered 107 of 110 CallNYC profile-counted objects, 526 live-search results for @NYCArtC, 170 of 183 KC Town Hall statuses, 34 of 35 KC Spaces Fund statuses, and 37 of 38 WOW List statuses. Exact campaign-handle checks and thread-level false-positive review were recorded separately.",
+    publicNote: "This July 14 cross-project snapshot recovered 107 of 110 CallNYC profile-counted objects, 526 live-search results for @NYCArtC, 170 of 183 KC Town Hall statuses, 34 of 35 KC Spaces Fund statuses, and 37 of 38 WOW List statuses. Dedicated July 15 passes later superseded the KC Town Hall and WOW List recovery floors with complete profile-population reconciliations.",
     protectedLocatorId: "RESEARCH-PROJECT-SOCIAL-X-CENSUS-2026-07-14",
     supportsGenerally: ["bounded profile and search counts", "status-author classification", "Council-handle matching", "direct-mention versus thread-match separation", "current exact-handle lookup results"],
     doesNotEstablish: ["a platform export", "a complete deleted-post corpus", "the identity of every shared-account author", "follower identity or lifetime reach", "policy causality", "endorsement from a like, repost, or mention"]
@@ -172,6 +172,23 @@ const wowListFullPopulationCensusSource: SourceRecord = {
   publicNote: "The census reconciles all 38 profile-counted objects: 16 WOW List-authored posts, six WOW List-authored replies, and 16 reposted external statuses. It also inventories 35 posted short URLs and preserves access-time interaction labels without assigning shared-account authorship.",
   supportsGenerally: ["38-of-38 profile-population reconciliation", "16 project-authored posts", "six project-authored replies", "16 reposted external statuses", "13 distinct repost-source accounts", "35 posted short URLs", "public onboarding exchanges", "mission-theme classification", "stakeholder-group classification", "access-time interaction labels"],
   doesNotEstablish: ["a platform account-data export", "a complete deleted-post history", "the human author of shared-account statuses", "endorsement or partnership from a repost", "broad adoption", "lifetime reach", "audience identity", "project causality for linked events or campaigns"]
+};
+
+const kcTownHallFullPopulationCensusSource: SourceRecord = {
+  id: "SRC-KC-TOWN-HALL-X-FULL-POPULATION-CENSUS-2026-07-15",
+  title: "KC Town Hall X full-population census",
+  author: "Codex archival review",
+  organization: "KC Town Hall",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  accessedAt: "2026-07-15",
+  assetUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/research/data/kctownhall-x-full-population-census-2026-07-15.csv",
+  preferredPublicUrl: "asset",
+  publicCitation: "Full-population archival census of the 183 objects counted by the @KCTownHall profile, reviewed July 15, 2026.",
+  publicNote: "The authenticated Posts and Replies review reconciles all 183 profile-counted objects: 142 project-account posts, 13 project-account replies, and 28 reposted external statuses. It inventories 31 distinct posted short URLs, classifies 100 tire-related records and 12 survey-linked records, and preserves three direct then-serving Council-member account responses with explicit authorship and engagement boundaries.",
+  supportsGenerally: ["183-of-183 profile-population reconciliation", "142 project-account posts", "13 project-account replies", "28 reposted external statuses", "31 distinct posted short URLs", "100 tire-related records", "12 survey-linked records", "three direct then-serving Council-member account responses", "public operating-surface patterns", "access-time interaction labels"],
+  doesNotEstablish: ["a platform account-data export", "a complete deleted-post history", "the human author of shared-account statuses", "independent verification of first-party program quantities", "formal endorsement or partnership", "unique audience reach", "Jamie as operator of post-transition activity", "funding receipt, spending, redevelopment completion, or policy causality"]
 };
 
 const wowListContextSources: SourceRecord[] = [
@@ -260,6 +277,210 @@ const wowListContextSources: SourceRecord[] = [
     publicNote: "The archived page documents a $100,000 annual fund for DIY art and music spaces, including infrastructure improvements, rent, materials, equipment, and legal, building-code, and organizational consulting. @wowlist reposted the fund announcement.",
     supportsGenerally: ["the cultural-space support context curated by @wowlist", "the stated $100,000 annual fund", "infrastructure and operational support categories"],
     doesNotEstablish: ["WOW List as fund organizer", "Jamie as account post author", "reciprocal engagement by Meow Wolf", "any funding outcome for a WOW List organizer"]
+  }
+];
+
+const kcTownHallContextSources: SourceRecord[] = [
+  {
+    id: "SRC-KC-TOWN-HALL-KC-STAR-LEONS-THRIFTWAY",
+    title: "Leon's Thriftway may be the oldest black-owned grocery store in the country",
+    organization: "The Kansas City Star",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.kansascity.com/news/business/article87241897.html",
+    preferredPublicUrl: "canonical",
+    publicCitation: "The Kansas City Star, 'Leon's Thriftway may be the oldest black-owned grocery store in the country,' reviewed July 15, 2026.",
+    publicNote: "KC Town Hall circulated the article in an April 2019 neighborhood food-access thread that received direct responses from Council members Quinton Lucas and Jolie Justus.",
+    supportsGenerally: ["Leon's Thriftway neighborhood food-access context", "a mission-relevant source circulated by the project account"],
+    doesNotEstablish: ["coverage of KC Town Hall", "Jamie as article author", "project causality for official response", "a completed grocery-store outcome"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-NORTHEAST-NEWS-AFFORDABLE-HOUSING-2018",
+    title: "Affordable Housing Policy hits the docket in KCMO",
+    organization: "Northeast News",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2018-09-19",
+    accessedAt: "2026-07-15",
+    archiveUrl: "https://web.archive.org/web/20180920120704/http://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/",
+    preferredPublicUrl: "archive",
+    publicCitation: "Northeast News, 'Affordable Housing Policy hits the docket in KCMO,' September 19, 2018; archived September 20, 2018.",
+    publicNote: "The @KCTownHall account circulated this local affordable-housing policy article in September 2018.",
+    supportsGenerally: ["local affordable-housing policy context", "a mission-relevant source circulated by the project account"],
+    doesNotEstablish: ["coverage of KC Town Hall", "Jamie as article author", "the account's influence on housing policy"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-CURBED-RENTER-TAX-CREDIT-2018",
+    title: "Tax credit for renters proposed by U.S. Senator Kamala Harris",
+    author: "Alissa Walker",
+    organization: "Curbed",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2018-07-20",
+    accessedAt: "2026-07-15",
+    archiveUrl: "https://web.archive.org/web/20180720221744/https://www.curbed.com/2018/7/20/17595698/rent-relief-act-tax-credit-kamala-harris",
+    preferredPublicUrl: "archive",
+    publicCitation: "Alissa Walker, 'Tax credit for renters proposed by U.S. Senator Kamala Harris,' Curbed, July 20, 2018; archived July 20, 2018.",
+    publicNote: "The @KCTownHall corpus preserves this national renter-policy article through a reposted public source status.",
+    supportsGenerally: ["renter-policy source context", "housing-information circulation in the project-account record"],
+    doesNotEstablish: ["coverage of KC Town Hall", "Jamie as article author", "formal alignment with the article's publisher or subject"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-RIDEKC-NEXT-SYSTEM-REDESIGN",
+    title: "RideKC Next System Redesign",
+    organization: "Kansas City Area Transportation Authority",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "archived",
+    accessedAt: "2026-07-15",
+    archiveUrl: "https://web.archive.org/web/20190821135819/https://ridekc.org/planning/ridekc-next",
+    preferredPublicUrl: "archive",
+    publicCitation: "Kansas City Area Transportation Authority, 'RideKC Next System Redesign,' archived August 21, 2019.",
+    publicNote: "The @KCTownHall record carried this regional transit-planning and public-input source.",
+    supportsGenerally: ["transit-planning context", "public-input resource circulation"],
+    doesNotEstablish: ["KC Town Hall authorship of the transit plan", "formal partnership", "influence on the redesign"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-KCUR-MISSOURI-PRIMARY-CHEAT-SHEET-2018",
+    title: "A Cheat Sheet For Tuesday's Primary Election In Missouri",
+    author: "Erica Hunzinger",
+    organization: "KCUR",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2018-08-05",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Erica Hunzinger, 'A Cheat Sheet For Tuesday's Primary Election In Missouri,' KCUR, August 5, 2018.",
+    publicNote: "KC Town Hall circulated the article with an official Missouri voter-information link in August 2018.",
+    supportsGenerally: ["election-information source context", "voter-resource circulation"],
+    doesNotEstablish: ["coverage of KC Town Hall", "Jamie as article author", "voter participation or outcome"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-MISSOURI-VOTER-OUTREACH",
+    title: "Missouri voter outreach search",
+    organization: "Missouri Secretary of State",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Missouri Secretary of State voter outreach search, reviewed July 15, 2026.",
+    publicNote: "KC Town Hall circulated the official voter-information pathway alongside election reporting.",
+    supportsGenerally: ["official voter-information resource", "civic-resource circulation"],
+    doesNotEstablish: ["voter participation or outcome", "project ownership of the government resource"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-YOUTUBE-COVID-RELIEF-QA-2020",
+    title: "COVID-19 relief resource Q&A",
+    organization: "KC Town Hall",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2020-04-20",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://youtu.be/onCKU-TuPhc",
+    preferredPublicUrl: "canonical",
+    publicCitation: "KC Town Hall, COVID-19 relief resource Q&A video, April 20, 2020.",
+    publicNote: "The project account circulated this public Q&A as a pandemic-resource pathway.",
+    supportsGenerally: ["project-authored public resource", "pandemic information circulation"],
+    doesNotEstablish: ["current public-benefit eligibility", "legal or financial advice", "Jamie as sole author", "resource uptake"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-YOUTUBE-PAINT-CLEANUP-2018",
+    title: "Bad latex paint cleanup video and tool list",
+    organization: "KC Town Hall",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2018-08-30",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://youtu.be/PmLjLyOpS9I",
+    preferredPublicUrl: "canonical",
+    publicCitation: "KC Town Hall, bad latex paint cleanup video and tool list, August 30, 2018.",
+    publicNote: "The project account circulated this project-authored cleanup documentation and tool list.",
+    supportsGenerally: ["public cleanup documentation", "practical tool-list circulation"],
+    doesNotEstablish: ["Jamie as sole author", "complete remediation", "professional environmental guidance"]
+  },
+  {
+    id: "SRC-KC-STAR-LUCAS-JUSTUS-COUNCIL-2019-04-03",
+    title: "Council members Justus, Lucas win Kansas City mayoral primary",
+    organization: "The Kansas City Star",
+    author: "Allison Kite, Steve Vockrodt, and Andy Marso",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-04-03",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.kansascity.com/news/politics-government/election/article228683379.html",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Allison Kite, Steve Vockrodt, and Andy Marso, 'Council members Justus, Lucas win Kansas City mayoral primary,' The Kansas City Star, April 3, 2019.",
+    publicNote: "Contemporaneous reporting identifies Jolie Justus and Quinton Lucas as sitting Kansas City Council members shortly before their April 29 responses to KC Town Hall.",
+    supportsGenerally: ["Jolie Justus Council service in April 2019", "Quinton Lucas Council service in April 2019"],
+    doesNotEstablish: ["official endorsement of KC Town Hall", "project causality", "a complete Council roster"]
+  },
+  {
+    id: "SRC-KCMO-CLERK-MELISSA-ROBINSON-SERVICE",
+    title: "Melissa Robinson service record",
+    organization: "Kansas City Clerk",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://clerk.kcmo.gov/PersonDetail.aspx?GUID=1696D403-A114-4AB0-B632-A303AF8E3B3C&ID=240616",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Kansas City Clerk service record for Melissa Robinson, reviewed July 15, 2026.",
+    publicNote: "The official person record dates Robinson's Council service from July 19, 2019, establishing that her August 2020 response to KC Town Hall came from a then-serving Council member account.",
+    supportsGenerally: ["Melissa Robinson Council service beginning July 19, 2019", "service-date context for the August 2020 response"],
+    doesNotEstablish: ["formal endorsement", "project partnership", "policy causality"]
+  }
+];
+
+const kcTownHallCouncilResponseSeeds: SocialPostSeed[] = [
+  {
+    id: "SRC-KC-TOWN-HALL-X-QUINTON-LUCAS-RESPONSE-1122866432130334720",
+    title: "Quinton Lucas responds to KC Town Hall's Leon's alert",
+    organization: "Quinton Lucas",
+    kind: "government-social-post",
+    handle: "QuintonLucasKC",
+    statusId: "1122866432130334720",
+    publishedAt: "2019-04-29",
+    publicCitation: "Quinton Lucas public quote-response to KC Town Hall's Leon's Thriftway alert, April 29, 2019.",
+    publicNote: "The then-serving Council member quote-responded to KC Town Hall's alert and described contacting ownership and working to keep the neighborhood grocery open.",
+    supportsGenerally: ["direct Council-member account response", "neighborhood food-access dialogue", "official-response context"],
+    doesNotEstablish: ["formal endorsement", "partnership", "project causality", "a completed grocery-store outcome"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-X-JOLIE-JUSTUS-RESPONSE-1122883010582466560",
+    title: "Jolie Justus replies to KC Town Hall about Leon's",
+    organization: "Jolie Justus",
+    kind: "government-social-post",
+    handle: "joliejustus",
+    statusId: "1122883010582466560",
+    publishedAt: "2019-04-29",
+    publicCitation: "Jolie Justus public reply to KC Town Hall about Leon's Thriftway, April 29, 2019.",
+    publicNote: "The then-serving Council member replied directly, describing work with the Economic Development Corporation and a visit to the store.",
+    supportsGenerally: ["direct Council-member account response", "neighborhood food-access dialogue", "economic-development context"],
+    doesNotEstablish: ["formal endorsement", "partnership", "project causality", "a completed grocery-store outcome"]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-X-MELISSA-ROBINSON-RESPONSE-1289714535251742726",
+    title: "Melissa Robinson thanks KC Town Hall for community work",
+    organization: "Melissa Robinson",
+    kind: "government-social-post",
+    handle: "Robinson4kc",
+    statusId: "1289714535251742726",
+    publishedAt: "2020-08-02",
+    publicCitation: "Melissa Robinson public reply thanking KC Town Hall for work to improve community conditions, August 2, 2020.",
+    publicNote: "The then-serving Council member directly thanked KC Town Hall for doing heavy work to improve community conditions.",
+    supportsGenerally: ["direct Council-member account response", "recognition of neighborhood work"],
+    doesNotEstablish: ["formal endorsement", "partnership", "a quantified program outcome", "Jamie's authorship of the triggering shared-account post"]
   }
 ];
 
@@ -751,6 +972,12 @@ export const callNycFullPopulationCensusSourceId =
 export const wowListFullPopulationCensusSourceId =
   wowListFullPopulationCensusSource.id;
 
+export const kcTownHallFullPopulationCensusSourceId =
+  kcTownHallFullPopulationCensusSource.id;
+
+export const kcTownHallCouncilResponseSourceIds =
+  kcTownHallCouncilResponseSeeds.map((seed) => seed.id);
+
 export const callNycProjectSocialSourceIds = callNycProjectPostSeeds.map(
   (seed) => seed.id
 );
@@ -771,7 +998,10 @@ export const projectSocialSources: KnowledgeBank["sources"] = [
   ...researchSources,
   callNycFullPopulationCensusSource,
   wowListFullPopulationCensusSource,
+  kcTownHallFullPopulationCensusSource,
   ...wowListContextSources,
+  ...kcTownHallContextSources,
+  ...kcTownHallCouncilResponseSeeds.map(toSource),
   ...callNycProjectPostSeeds.map(toSource),
   ...callNycCouncilPostSeeds.map(toSource),
   ...nycaCouncilPostSeeds.map(toSource),

@@ -125,6 +125,15 @@ classification. It strengthens the existing proof page with public onboarding
 and use specimens while keeping mutable metrics and broader mission context in
 the knowledge bank.
 
+The [KC Town Hall full-population archival-production
+note](research/2026-07-15-kctownhall-x-full-population-archival-production.md)
+demonstrates exact 183-of-183 reconciliation across two authenticated timeline
+views, public-safe URL and stakeholder inventories, and explicit separation of
+five other-account conversation contexts. It supports one bounded website
+projection about resident input, recurring neighborhood service, civic-resource
+circulation, and three direct then-serving Council-member account responses;
+shared-account authorship and mutable engagement totals remain unprojected.
+
 The [NTER CHNG archive expansion](intake/2026-07-15-nter-chng-archive-expansion.md)
 demonstrates a related source-chain pattern: an archived project site, an
 official exhibition artist page, a first-party account of visitor use, and an

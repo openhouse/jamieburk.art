@@ -176,15 +176,16 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
-**Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
-**Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The work advanced to City Council acceptance and appropriation of $490,539; later records say the project withdrew and the unused funds were reappropriated.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. The project's shared public account also supported resident survey pathways, recurring free tire-pickup intake, civic-resource circulation, and direct dialogue with three then-serving Council-member accounts.
+**Source basis:** Approved resume language, official Kansas City records, a 183-of-183 public social census, and public-safe project context.
+**Where to project:** Technical Operations, Work card, Case study.
+**Why it matters:** Shows long-horizon project management, civic product operations, public/private boundary judgment, and documentation for complex built-environment work.
+**Guardrail:** Keep Council acceptance and appropriation distinct from agreement execution, receipt, spending, construction, and completion. Keep shared-account authorship and all post-transition program operation unassigned to Jamie.
+**Do not say:** KC Town Hall received or spent a $490,539 grant; the adaptive reuse was completed; Jamie authored all 183 social records; Jamie operated every later neighborhood program; three Council members formally endorsed KC Town Hall; current property status.
+**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
 
 ## source-backed-team-memory-method - Source-backed team memory
 

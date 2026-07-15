@@ -145,7 +145,9 @@ July 12-14, 2026:
   external event-sharing specimen;
 - KC Spaces Fund's campaign timeline, public grantee highlights, recipient
   acknowledgements, and contemporaneous Do816 coverage;
-- KC Town Hall's public launch framing and post-transition identity continuity;
+- KC Town Hall's 183-of-183 public-account census, resident-input and recurring
+  service operating patterns, source trail, three direct then-serving Council-
+  member account responses, and post-transition identity continuity;
 - the KC Town Hall CCED recommendation, 2019 Council acceptance and
   appropriation, and 2024 reappropriation of the unused allocation.
 - Jamie's firsthand account of transitioning KC Town Hall stewardship to a
@@ -175,14 +177,16 @@ eight-account interaction recovery floor remains knowledge-bank depth. The
 strict NYC Artist Coalition result supports five then-serving Council-member
 accounts across 15 direct mention or reply interactions; wider thread matches
 remain excluded from that count. Raw access-time engagement totals remain
-outside website projection. The KC Town Hall thread is `researching`:
-public records
-establish recommendation, Council acceptance, appropriation, later withdrawal,
-and reappropriation, while agreement execution, any disbursement, and Jamie's
-specific contribution remain separate questions. The stewardship transition is
+outside website projection. The KC Town Hall social and allocation threads are
+now `integrated`: all 183 profile-counted account records were recovered, the
+public operating-surface and three-Council-response claim is approved, and the
+governed funding wording now separates recommendation, Council acceptance,
+appropriation, and later reappropriation from receipt, spending, and
+completion. Individual shared-account authorship, post-transition operation,
+agreement execution, any disbursement, and Jamie's specific causal contribution
+to the Council action remain separate questions. The stewardship transition is
 `captured` as a distinct memory lead pending a public-safe handoff record or
-receiving-organization confirmation. None of those items is approved for
-direct website projection. The three July 14 archive-production threads have
+receiving-organization confirmation. The three July 14 archive-production threads have
 reached `claim-candidate` for their supported propositions while retaining
 protected source locators and explicit non-claims. The interactive-media
 thread now links one governed reserve claim for NTER CHNG's 2011 America: Now

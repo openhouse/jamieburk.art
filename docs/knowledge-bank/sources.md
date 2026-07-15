@@ -95,6 +95,15 @@ population. Its public CSV and JSON separate project posts, project replies,
 reposted source statuses, posted URLs, access-time interaction labels, mission
 themes, stakeholder groups, and explicit mention-search exclusions.
 
+The dedicated [KC Town Hall full-population
+note](research/2026-07-15-kctownhall-x-full-population-archival-production.md)
+reconciles all 183 profile-counted objects across Posts and Replies while
+keeping five other-account conversation cards outside the project population.
+Its public CSV and JSON preserve record relationships, 31 distinct posted short
+URLs, bounded tire and survey classifications, access-time labels, and three
+direct then-serving Council-member account responses. Shared-account authorship,
+first-party program quantities, and post-transition operation remain unassigned.
+
 ### Creative Technology Exhibition Records
 
 The NTER CHNG record uses four public sources with deliberately different

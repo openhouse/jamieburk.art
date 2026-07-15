@@ -435,15 +435,19 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The work advanced to City Council acceptance and appropriation of $490,539; later records say the project withdrew and the unused funds were reappropriated.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. The project's shared public account also supported resident survey pathways, recurring free tire-pickup intake, civic-resource circulation, and direct dialogue with three then-serving Council-member accounts.",
+    sourceBasis: "Approved resume language, official Kansas City records, a 183-of-183 public social census, and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Keep Council acceptance and appropriation distinct from agreement execution, receipt, spending, construction, and completion. Keep shared-account authorship and all post-transition program operation unassigned to Jamie.",
     doNotSay: [
-      "Final funding received",
+      "KC Town Hall received or spent a $490,539 grant",
+      "The adaptive reuse was completed",
+      "Jamie authored all 183 social records",
+      "Jamie operated every later neighborhood program",
+      "Three Council members formally endorsed KC Town Hall",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"
@@ -457,8 +461,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
-    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context", "civic-product-operations", "public-engagement"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "source-backed-team-memory-method",
