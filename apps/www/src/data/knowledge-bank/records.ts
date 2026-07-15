@@ -746,6 +746,96 @@ const knowledgeBankInput = {
       protectedLocatorId: "GDRIVE-NTER-CHNG-EXHIBIT-INTERACTION-2011"
     },
     {
+      id: "SRC-UCSC-WARREN-SACK-NARRATIVE-EVALS-2004-2006",
+      title: "Warren Sack narrative evaluations of Jamie Burkart",
+      organization: "University of California, Santa Cruz",
+      author: "Warren Sack",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected public-safe summary of Warren Sack's 2004 and 2006 UCSC narrative evaluations of Jamie Burkart, reviewed July 15, 2026.",
+      publicNote: "The unofficial narrative-evaluation copy documents Jamie's original, evidence-supported social-software reasoning, technical and artistic prototypes, classroom explanation, and contribution to a collaborative spatial-interface design. The raw academic record remains outside the public repository.",
+      supportsGenerally: [
+        "a 2004 program using online dictionary sources",
+        "a primary- and secondary-source analysis of social networks in physical and online space",
+        "a 2006 analysis of recursively overlapping Flickr-group membership",
+        "Warren Sack's assessment that the analysis independently arrived at the social-network concept of structural equivalence",
+        "a Flickr similar-image prototype combining participant-relationship and image analysis",
+        "a Max/MSP Jitter interactive interface and classroom demonstration",
+        "contribution to a collaborative spatial photo-browsing installation design",
+        "documentation across Maya models, short films, sketches, diagrams, prose, and HTML",
+        "active, substantive classroom dialogue"
+      ],
+      doesNotEstablish: [
+        "that Jamie originated the established field concept of structural equivalence",
+        "current professional social-network-analysis authority",
+        "commercial or production deployment of the prototypes",
+        "sole authorship of the collaborative installation design",
+        "surviving source code or publication rights to student work"
+      ],
+      protectedLocatorId: "UCSC-NARRATIVE-EVALS-WARREN-SACK-2004-2006"
+    },
+    {
+      id: "SRC-UCSC-MARGARET-MORSE-NARRATIVE-EVALS-2006",
+      title: "Margaret Morse narrative evaluations of Jamie Burkart",
+      organization: "University of California, Santa Cruz",
+      author: "Margaret Morse",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected public-safe summary of Margaret Morse's 2006 UCSC narrative evaluations of Jamie Burkart, reviewed July 15, 2026.",
+      publicNote: "The unofficial narrative-evaluation copy documents Jamie's media-archaeological presentations, embodied and performative treatment of course concepts, and realization of an installation recorded as Art is Long at a New York gallery. The raw academic record remains outside the public repository.",
+      supportsGenerally: [
+        "presentation of early home-video equipment and video-feedback material",
+        "presentation of an early video synthesizer",
+        "Margaret Morse's assessment of Jamie as an artist and media archaeologist",
+        "embodied and performative demonstration of theoretical ideas",
+        "an installation proposal recorded as Art is Long",
+        "realization of the installation in a New York gallery",
+        "an embodied investigation of real and recorded time",
+        "serious attention to art and life as a practice"
+      ],
+      doesNotEstablish: [
+        "that Art is Long and Time Is Long are definitively the same title or work",
+        "the exact New York gallery, date, collaborator roster, or installation configuration",
+        "sole authorship of the installation",
+        "uninterrupted professional art practice",
+        "current media-production specialization or publication rights to project media"
+      ],
+      protectedLocatorId: "UCSC-NARRATIVE-EVALS-MARGARET-MORSE-2006"
+    },
+    {
+      id: "SRC-MARGARET-MORSE-LINKEDIN-RECOMMENDATION-2014",
+      title: "Margaret Morse recommendation of Jamie Burkart",
+      organization: "LinkedIn",
+      author: "Margaret Morse",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2014-09-04",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected screenshot of Margaret Morse's September 4, 2014 LinkedIn recommendation of Jamie Burkart, reviewed July 15, 2026.",
+      publicNote: "The recommendation recalls Jamie as an unusually bright and creative student, describes his dedicated execution of an ambitious installation, and identifies warmth, generosity, and seriousness in his practice. The screenshot itself is not published in the repository.",
+      supportsGenerally: [
+        "Margaret Morse's teacher and adviser relationship to Jamie",
+        "her first-person assessment of Jamie's creativity",
+        "her assessment of dedicated installation execution",
+        "her description of the installation as successful and memorable",
+        "her description of Jamie as warm, generous, and serious about his work",
+        "an unreserved professional recommendation"
+      ],
+      doesNotEstablish: [
+        "the installation title, date, venue, collaborator roster, or technical scope",
+        "sole authorship",
+        "quantified audience impact",
+        "current project or employment status",
+        "permission to republish the screenshot beyond this public-safe summary"
+      ],
+      protectedLocatorId: "LINKEDIN-MARGARET-MORSE-RECOMMENDATION-2014"
+    },
+    {
       id: "SRC-WAVE-FARM-BAPLAB-PROGRAM-2006-07-22",
       title: "free103point9 at Bushwick Art Project's BAPLab 2006",
       organization: "Wave Farm",
@@ -1247,6 +1337,75 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY"],
       reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex Wayback review"]
+    },
+    {
+      id: "CLM-CREATIVE-TECHNOLOGY-EMBODIED-SYSTEMS",
+      project: "creative-technology-practice",
+      internalClaim: "Jamie's early interactive-media practice combined original social-software reasoning, computational prototyping, media archaeology, embodied installation, communication, and collaborative design; that practice helps explain his later attention to participation, memory, place, and inhabitable operating structures.",
+      status: "confirmed-with-boundary",
+      projections: [
+        {
+          key: "about",
+          text: "An early practice in social software, interactive media, and media archaeology still shapes how Jamie surfaces latent structure and gives it a form people can understand, test, and inhabit.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/about"]
+        },
+        {
+          key: "technical-operations",
+          text: "Prototyped social-software and interactive-media systems that moved from latent group patterns to computational models, interfaces, demonstrations, and collaborative spatial designs.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-UCSC-WARREN-SACK-NARRATIVE-EVALS-2004-2006",
+          relationship: "private-support",
+          supports: ["original social-software reasoning", "Flickr structural analysis and image-search prototype", "Max/MSP Jitter interface", "classroom explanation", "collaborative spatial-interface design"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-UCSC-MARGARET-MORSE-NARRATIVE-EVALS-2006",
+          relationship: "private-support",
+          supports: ["media archaeology", "embodied theoretical practice", "New York gallery installation", "attention to real and recorded time"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-MARGARET-MORSE-LINKEDIN-RECOMMENDATION-2014",
+          relationship: "private-support",
+          supports: ["dedicated installation execution", "warmth", "generosity", "seriousness of practice"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
+          relationship: "corroborating",
+          supports: ["later collaborative interactive-media practice", "shared visual-artist credit", "software-and-architectural form"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The source copy is unofficial and remains protected; do not publish raw evaluations, academic identifiers, grades, correspondence, contact details, or screenshots.",
+        "Art is Long and Time Is Long may be title variants, but the available records do not establish that they are the same title or work.",
+        "Do not convert Warren Sack's assessment into a claim that Jamie invented structural equivalence or holds current research authority.",
+        "Preserve group-project, later NTER CHNG, and other collaborator credits.",
+        "The current professional relevance is an evidence-based interpretation, not a claim of uninterrupted art practice or current operation of historical prototypes."
+      ],
+      antiClaims: [
+        "Jamie invented structural equivalence",
+        "Jamie solely designed the Flickr installation",
+        "Art is Long and Time Is Long are definitively the same work",
+        "The historical prototypes were production products",
+        "Jamie is currently a professional social-network-analysis researcher"
+      ],
+      researchInquiryIds: ["INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex public-safe professor-evidence review"]
     },
     {
       id: "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS",
@@ -2896,8 +3055,8 @@ const knowledgeBankInput = {
       id: "INTAKE-INTERACTIVE-MEDIA-PRACTICE-2026-07-14",
       title: "Interactive media, sound, and public-memory practice",
       kind: "claim-candidate",
-      summary: "Public project records recover a 2006 BAPLab New Media Program credit and three concrete interaction-design works by Jamie across 2010-2022: a texting installation built as a shared gallery dialogue and included in America: Now and Here, a Max/MSP audio-sorting experiment, and an app-accessed public-memory work created with Michael Rees. Time Is Long and a later Matmos video remain research leads because their sources print surname variants rather than Jamie Burkart.",
-      status: "claim-candidate",
+      summary: "Protected contemporaneous UCSC evaluations now establish Jamie's early social-software prototyping, media archaeology, embodied installation practice, classroom communication, and collaborative interface design. Public project records extend that practice across 2006-2022 through BAPLab, NTER CHNG, a Max/MSP audio-sorting experiment, and an app-accessed public-memory work. Art is Long, Time Is Long, and a later Matmos credit retain explicit title or identity boundaries.",
+      status: "integrated",
       sourceIds: [
         "SRC-NTER-CHNG-PITCH-2010-01-07",
         "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23",
@@ -2907,6 +3066,9 @@ const knowledgeBankInput = {
         "SRC-NERMAN-AMERICA-NOW-HERE-2011",
         "SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011",
         "SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011",
+        "SRC-UCSC-WARREN-SACK-NARRATIVE-EVALS-2004-2006",
+        "SRC-UCSC-MARGARET-MORSE-NARRATIVE-EVALS-2006",
+        "SRC-MARGARET-MORSE-LINKEDIN-RECOMMENDATION-2014",
         "SRC-WAVE-FARM-BAPLAB-PROGRAM-2006-07-22",
         "SRC-BAPLAB-ARCHIVED-NEW-MEDIA-PROGRAM-2006-07-22",
         "SRC-BAPLAB-TIME-IS-LONG-ARTICLE-2006",
@@ -2914,9 +3076,14 @@ const knowledgeBankInput = {
         "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
         "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29"
       ],
-      relatedClaimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-2011"],
-      relatedProofIds: [],
+      relatedClaimIds: [
+        "CLM-NTER-CHNG-AMERICA-NOW-HERE-2011",
+        "CLM-CREATIVE-TECHNOLOGY-EMBODIED-SYSTEMS"
+      ],
+      relatedProofIds: ["creative-technology-embodied-systems"],
       candidateClaims: [
+        "Warren Sack's contemporaneous evaluations document Jamie moving from original analysis of recursively overlapping Flickr groups to a similar-image prototype, a Max/MSP Jitter interface, a classroom demonstration, and a collaborative spatial-browsing design.",
+        "Margaret Morse's contemporaneous evaluations document Jamie presenting early video systems as media archaeology and embodying theory through an installation recorded as Art is Long, realized in a New York gallery; the available record does not resolve whether Art is Long and Time Is Long are title variants.",
         "In 2010, Jamie co-designed NTER CHNG with Drew Bolton and Garrett Fuselier, an interactive installation that used a two-sided digital wall and visitor text messages to form an evolving gallery dialogue; Mary Nichols helped engineer and construct the wall.",
         "America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists; a separate first-party article documents visitors using the text-message input and projected display.",
         "A protected 2011 production plan documents NTER CHNG's America: Now and Here restaging as a combined software, server, display-computer, projection, wall-fabrication, wiring, gallery-calibration, transport, and deinstallation effort; it places Jamie in the preparation and installation window without assigning that full scope to him.",
@@ -2926,6 +3093,24 @@ const knowledgeBankInput = {
         "In 2022, Jamie Burkart and Michael Rees created Claudette's Theatre On Wheels, an interactive work honoring Claudette's women-centered theater through short app-accessed performance clips."
       ],
       propositions: [
+        {
+          id: "PROP-UCSC-SACK-SOCIAL-SOFTWARE-PROTOTYPES-2004-2006",
+          text: "Warren Sack's contemporaneous evaluations document Jamie moving from original analysis of recursively overlapping Flickr groups to a similar-image prototype, a Max/MSP Jitter interface, a classroom demonstration, and a collaborative spatial-browsing design.",
+          status: "direct-support",
+          sourceIds: ["SRC-UCSC-WARREN-SACK-NARRATIVE-EVALS-2004-2006"],
+          sourceSupport: ["recursive Flickr-group analysis", "structural-equivalence assessment", "participant-relationship and image-analysis prototype", "Max/MSP Jitter interface", "classroom demonstration", "collaborative spatial-browsing design", "multi-format project documentation"],
+          boundaries: ["Do not say Jamie invented the established concept of structural equivalence.", "Do not present the historical prototypes as production deployments or current services.", "Preserve the final project's group authorship and do not infer a detailed task split."],
+          decisionUse: "Provides unusually concrete evidence that Jamie can originate a model, prototype an interface, explain it to peers, and carry it into collaborative design."
+        },
+        {
+          id: "PROP-UCSC-MORSE-EMBODIED-MEDIA-PRACTICE-2006",
+          text: "Margaret Morse's contemporaneous evaluations document Jamie presenting early video systems as media archaeology and embodying theory through an installation recorded as Art is Long, realized in a New York gallery; the available record does not resolve whether Art is Long and Time Is Long are title variants.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-UCSC-MARGARET-MORSE-NARRATIVE-EVALS-2006", "SRC-MARGARET-MORSE-LINKEDIN-RECOMMENDATION-2014"],
+          sourceSupport: ["early home-video and video-synthesizer presentations", "artist and media-archaeologist assessment", "embodied theoretical practice", "Art is Long title as recorded", "New York gallery realization", "later first-person recommendation describing dedicated installation execution, warmth, generosity, and seriousness"],
+          boundaries: ["Art is Long and Time Is Long may be title variants, but the sources do not establish that they are the same title or work.", "Do not infer the exact venue, date, collaborator roster, or technical configuration.", "Do not publish the raw evaluation, recommendation screenshot, correspondence, academic identifiers, grades, or contact details."],
+          decisionUse: "Preserves embodied experimentation, media archaeology, and relational presence as evidence for why Jamie designs systems people can inhabit rather than only procedures they must follow."
+        },
         {
           id: "PROP-NTER-CHNG-COLLABORATIVE-DESIGN-2010",
           text: "In 2010, Jamie co-designed NTER CHNG with Drew Bolton and Garrett Fuselier, an interactive installation that used a two-sided digital wall and visitor text messages to form an evolving gallery dialogue; Mary Nichols helped engineer and construct the wall.",
@@ -3020,6 +3205,7 @@ const knowledgeBankInput = {
       ],
       tensions: [],
       researchQuestions: [
+        "Can an exhibition record, image caption, or collaborator account resolve whether Art is Long and Time Is Long are title variants without silently normalizing the archive?",
         "Can an unambiguous source resolve the Burkhardt/Burkart Matmos credit and identify Jamie's exact contribution?",
         "Can an unambiguous source resolve the Burkhart/Burkart Time Is Long credit and connect the installation description to Jamie's BAPLab program entry?",
         "Which original code, diagrams, change history, or collaborator accounts identify Jamie's specific design and implementation decisions in NTER CHNG and Claudette's Theatre On Wheels?",
@@ -3029,6 +3215,7 @@ const knowledgeBankInput = {
         "Which additional experimental media projects add a distinct action, output, or consequence rather than duplicating this thread?"
       ],
       boundaries: [
+        "Keep the unofficial UCSC evaluation copy, student record details, raw professor correspondence, direct contact information, and recommendation screenshot outside the public repository.",
         "Do not use a project page that omits Jamie as person-specific role evidence.",
         "Preserve collaborator, programmer, construction, platform, and source-composition credit.",
         "Treat the Time Is Long project description as unresolved research until the Burkhart/Burkart identity conflict is corroborated.",
@@ -3036,12 +3223,12 @@ const knowledgeBankInput = {
         "Do not publish archived phone numbers, participant-submitted messages, or media without privacy and rights review.",
         "Do not publish the protected Google Drive links, raw interaction records, or private installation logistics.",
         "Not recovering the linked NTER CHNG press release is not evidence that it never existed.",
-        "Do not project this intake item directly to the website; create and approve a governed claim first."
+        "Project only through the approved creative-technology proof and governed claim; reserve the remaining project details for future editorial decisions."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
       reviewedAt: "2026-07-15",
-      reviewedBy: ["Jamie Burkart", "Codex iCloud, Wayback, and protected Google Drive review"]
+      reviewedBy: ["Jamie Burkart", "Codex iCloud, Wayback, protected Google Drive, and professor-evidence review"]
     },
     {
       id: "INTAKE-CRS-OPERATING-AND-DATA-INFRASTRUCTURE-2026-07-14",

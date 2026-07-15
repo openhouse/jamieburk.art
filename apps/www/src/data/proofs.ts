@@ -576,6 +576,49 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "creative-technology-embodied-systems",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "An early practice in social software, interactive media, and media archaeology still shapes how Jamie surfaces latent structure and gives it a form people can understand, test, and inhabit.",
+    shortWording:
+      "Moved from latent social patterns to prototypes, interfaces, demonstrations, and collaborative spatial designs",
+    detailedPublicWording:
+      "At UCSC, Jamie analyzed recursively overlapping Flickr groups, prototyped a similar-image system using participant relationships and image analysis, built an interface in Max/MSP and Jitter, and helped translate spatial browsing into a collaborative installation design. In parallel, he treated early video systems and embodied installation as ways to investigate attention, participation, and time.",
+    sourceBasis:
+      "Public-safe summaries of Warren Sack's and Margaret Morse's contemporaneous UCSC narrative evaluations, Margaret Morse's 2014 public recommendation, and public creative-technology project records.",
+    sourceNote:
+      "The academic source copy is unofficial and protected. Art is Long and Time Is Long may be title variants, but the available records do not establish that they are the same title or work.",
+    whyItMatters:
+      "Shows that Jamie can originate a model, prototype it, communicate it, and help others inhabit it; the throughline is systems judgment, not only administration.",
+    guardrail:
+      "Use as a bounded historical throughline on secondary hiring surfaces. Preserve title uncertainty, collaborative credit, and the distinction between early prototypes and current professional practice.",
+    doNotSay: [
+      "Jamie invented structural equivalence",
+      "Jamie solely designed the collaborative Flickr installation",
+      "Art is Long and Time Is Long are definitively the same work",
+      "The historical prototypes were commercial or production products",
+      "Jamie currently holds formal social-network-analysis research authority"
+    ],
+    protectedBoundaries: [
+      "Raw narrative evaluations",
+      "Academic identifiers and grades",
+      "Private professor correspondence and contact details",
+      "Recommendation screenshot",
+      "Unapproved student work or installation media"
+    ],
+    surfaces: ["technical-operations", "about"],
+    relatedProjects: ["creative-technology-practice"],
+    relatedCapabilities: [
+      "systems-thinking",
+      "social-software",
+      "interactive-prototyping",
+      "media-archaeology"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "ai-evals-professional-development",
     status: "ready",
     supportLevel: "strong",
@@ -680,6 +723,11 @@ export const technicalOperationsProofRows = [
       "sunday-dinner-196-participation-infrastructure",
       "source-backed-team-memory-method"
     ]
+  },
+  {
+    capability: "Pattern discovery and interactive prototyping",
+    toward: "Surfacing latent social structures and giving them testable, communicable, inhabitable form.",
+    proofIds: ["creative-technology-embodied-systems"]
   },
   {
     capability: "Public-facing launch and adoption",

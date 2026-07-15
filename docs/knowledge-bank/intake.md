@@ -208,12 +208,17 @@ to the Council action remain separate questions. The stewardship transition is
 receiving-organization confirmation. The three July 14 archive-production threads have
 reached `claim-candidate` for their supported propositions while retaining
 protected source locators and explicit non-claims. The interactive-media
-thread now links one governed reserve claim for NTER CHNG's 2011 America: Now
-and Here inclusion; that claim remains outside the current website and public
+thread is now `integrated`. Protected public-safe summaries of Warren Sack's
+and Margaret Morse's contemporaneous UCSC evaluations establish early
+social-software prototyping, media archaeology, embodied installation,
+communication, and collaborative spatial-interface design. One governed claim
+and proof project a restrained systems-thinking throughline on About and
+Technical Operations; the deeper project history remains reserve knowledge.
+The existing NTER CHNG claim stays outside the current website and public
 citation registry. Two protected NTER CHNG working records add bounded
 installation-operations and conceptual evidence without exposing Drive links,
 participant phone numbers, submitted messages, or private logistics. They do
-not change the governed public claim or current website. The Google Drive pass
+not change the governed NTER CHNG project claim. The Google Drive pass
 adds two more
 `claim-candidate` threads and one `researching` thread; all three remain outside
 the website and generated public registry. The personal-account pass is

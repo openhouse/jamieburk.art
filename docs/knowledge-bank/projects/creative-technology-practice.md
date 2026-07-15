@@ -7,6 +7,41 @@ This record preserves independently documented creative-technology work
 without displacing the portfolio's current technical project management,
 product operations, and implementation argument.
 
+## 2004-2006: Social software and embodied media
+
+Protected public-safe summaries of contemporaneous UCSC narrative evaluations
+add a specific prehistory to the public project record. Warren Sack's 2004 and
+2006 evaluations describe Jamie writing a program that used online dictionary
+sources, analyzing social networks across physical and online space, and then
+moving from recursively overlapping Flickr-group memberships to a similar-image
+prototype that combined participant relationships with image analysis. Jamie
+built an interactive interface with Max/MSP and Jitter, demonstrated it in
+class, and contributed to a group design that turned Flickr browsing into a
+physical walk through projected rooms. The group documented two architectures
+with Maya models, short films, sketches, diagrams, prose, and HTML.
+
+Margaret Morse's 2006 evaluations describe Jamie presenting early home-video
+equipment, video feedback, and an early video synthesizer as material inquiry.
+She identifies him as an artist and media archaeologist whose grasp of theory
+appeared through embodied and performative work. A second evaluation records an
+installation proposal titled *Art is Long*, realized in a New York gallery, as
+an investigation of real and recorded time. Her 2014 public recommendation
+later recalled an ambitious installation executed with dedication and
+described Jamie's warmth, generosity, and seriousness.
+
+**Supported:** original and evidence-backed systems reasoning, movement from
+social observation to computational model and interface, public explanation,
+collaborative spatial design, media archaeology, embodied investigation, and a
+New York gallery realization recorded as *Art is Long*.
+
+**Boundary:** the source copy is unofficial and protected. Raw academic
+records, grades, academic identifiers, correspondence, contact details, and the
+recommendation screenshot remain outside the repository. Warren Sack's
+assessment does not mean Jamie originated the established field concept of
+structural equivalence or holds current research authority. *Art is Long* and
+*Time Is Long* may be title variants, but the available sources do not establish
+that they are the same title or work. Group work retains group credit.
+
 ## 2010-2011: NTER CHNG
 
 [The Pitch](https://www.thepitchkc.com/ntr-chng/) describes NTER CHNG as a
@@ -92,17 +127,22 @@ underlying platform, audience scale, or rights to republish the media.
 
 ## Bounded Throughline
 
-These records support a recurring practice of shaping participant input,
-software, spatial presentation, and public memory into shared interactive
-forms. They do not prove uninterrupted full-time practice. Each project retains
-its own collaborators, context, authorship, and rights.
+These records support a recurring practice of identifying latent structure and
+shaping participant input, software, spatial presentation, and public memory
+into shared interactive forms. They help explain why Jamie's later operating
+systems attend to participation, memory, place, and inhabitation as well as
+delivery. They do not prove uninterrupted full-time practice. Each project
+retains its own collaborators, context, authorship, and rights.
 
-The knowledge bank holds this throughline in reserve until a future audience
-need makes it more useful than the site's current composition.
+The knowledge bank now projects one restrained version of this throughline on
+About and Technical Operations. The deeper project history remains reserve
+knowledge rather than a new public archive or top-level navigation category.
 
 ## Open Research
 
 Recover NTER CHNG code, technical diagrams, the exact linked press-release PDF,
 cleared installation assets, collaborator confirmation of the production task
-split, and project-level rights records. Resolve the Matmos surname conflict
-with an unambiguous source before forming any claim from that lead.
+split, and project-level rights records. Seek an independent title or exhibition
+record that can resolve the *Art is Long* / *Time Is Long* relationship. Resolve
+the Matmos surname conflict with an unambiguous source before forming any claim
+from that lead.

@@ -107,6 +107,7 @@ export function validateMorseLensContracts(sources = {}) {
   const readSource = (key, relativePath) =>
     sources[key] ?? readFileSync(relativePath, "utf8");
   const about = readSource("about", "apps/www/src/app/about/page.tsx");
+  const normalizedAbout = about.replace(/\s+/g, " ");
   const proofs = readSource("proofs", "apps/www/src/data/proofs.ts");
   const records = readSource(
     "records",
@@ -118,7 +119,7 @@ export function validateMorseLensContracts(sources = {}) {
     "artistic, civic, technical, and social",
     "participation, memory, place, and how people inhabit structures"
   ]) {
-    if (!about.includes(expected)) {
+    if (!normalizedAbout.includes(expected)) {
       errors.push(`About page is missing Margaret Morse lens signal: ${expected}`);
     }
   }
@@ -148,6 +149,7 @@ export function validateSackLensContracts(sources = {}) {
   const readSource = (key, relativePath) =>
     sources[key] ?? readFileSync(relativePath, "utf8");
   const about = readSource("about", "apps/www/src/app/about/page.tsx");
+  const normalizedAbout = about.replace(/\s+/g, " ");
   const proofs = readSource("proofs", "apps/www/src/data/proofs.ts");
   const records = readSource(
     "records",
@@ -159,7 +161,7 @@ export function validateSackLensContracts(sources = {}) {
     "Max/MSP and Jitter",
     "social structure could become a usable interface"
   ]) {
-    if (!about.includes(expected) && !proofs.includes(expected)) {
+    if (!normalizedAbout.includes(expected) && !proofs.includes(expected)) {
       errors.push(`Warren Sack lens is missing public signal: ${expected}`);
     }
   }

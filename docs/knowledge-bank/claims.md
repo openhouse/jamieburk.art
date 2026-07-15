@@ -278,6 +278,22 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## creative-technology-embodied-systems - Embodied systems and original prototyping
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public creative-technology records / protected public-safe professor-evidence summaries
+**Public wording:** An early practice in social software, interactive media, and media archaeology still shapes how Jamie surfaces latent structure and gives it a form people can understand, test, and inhabit.
+**Detailed public-safe wording:** At UCSC, Jamie analyzed recursively overlapping Flickr groups, prototyped a similar-image system using participant relationships and image analysis, built an interface in Max/MSP and Jitter, and helped translate spatial browsing into a collaborative installation design. In parallel, he treated early video systems and embodied installation as ways to investigate attention, participation, and time.
+**Source basis:** Public-safe summaries of Warren Sack's and Margaret Morse's contemporaneous UCSC narrative evaluations, Margaret Morse's 2014 public recommendation, and public creative-technology project records.
+**Where to project:** About and Technical Operations only.
+**Why it matters:** Shows that Jamie can originate a model, prototype it, communicate it, and help others inhabit it; the throughline is systems judgment, not only administration.
+**Guardrail:** Use as a bounded historical throughline on secondary hiring surfaces. Preserve title uncertainty, collaborative credit, and the distinction between early prototypes and current professional practice.
+**Do not say:** Jamie invented structural equivalence; Jamie solely designed the collaborative Flickr installation; *Art is Long* and *Time Is Long* are definitively the same work; the historical prototypes were production products; Jamie currently holds formal social-network-analysis research authority.
+**Protected boundaries:** Raw narrative evaluations, academic identifiers and grades, private professor correspondence and contact details, the recommendation screenshot, and unapproved student work or installation media stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## ai-evals-professional-development - AI evals professional development
 
 **Status:** Ready  
