@@ -32,7 +32,7 @@ export const googleDriveProductionBatch20260714: {
       claimIds: [],
       researchTaskIds: [],
       notes: [
-        "The appraisal inventories records at fonds level, close-reads selected project records, and excludes personal, family, legal, recovery, credential, and unconsented participant material from the public repository."
+        "The appraisal inventories records at fonds level, close-reads selected project records, and excludes personal, family, legal, recovery, account-access, and unconsented participant material from the public repository."
       ],
       reviewedAt: "2026-07-14",
       reviewedBy
@@ -51,7 +51,7 @@ export const googleDriveProductionBatch20260714: {
       claimIds: ["CLM-FAIRRENT-WEB-RELAUNCH-2023"],
       researchTaskIds: [],
       notes: [
-        "Credentials, contact details, meeting access, private campaign operations, and raw revision contents remain outside the repository."
+        "Account-access details, contact details, meeting access, private campaign operations, and raw revision contents remain outside the repository."
       ],
       reviewedAt: "2026-07-14",
       reviewedBy
@@ -145,10 +145,7 @@ export const googleDriveProductionBatch20260714: {
       projects: ["callnyc"],
       status: "integrated",
       disposition: "duplicate",
-      sourceIds: [
-        "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-POLITICO-2016-03-14"
-      ],
+      sourceIds: [],
       claimIds: ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"],
       researchTaskIds: [],
       notes: [
@@ -206,7 +203,7 @@ export const googleDriveProductionBatch20260714: {
         "sole authorship of the website or campaign",
         "a complete contributor roster",
         "ownership of campaign strategy",
-        "permission to publish credentials, meeting access, contacts, or private notes"
+        "permission to publish account-access details, meeting access, contacts, or private notes"
       ],
       protectedLocatorId: "GDRIVE-FAIRRENT-WEB-RELAUNCH-2023-001"
     },
