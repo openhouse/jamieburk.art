@@ -51,6 +51,20 @@ const nextConfig: NextConfig = {
         headers: globalHeaders
       }
     ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/work/fair-rent-nyc",
+        destination: "/work/fairrentnyc-commercial-rent-stabilization",
+        permanent: true
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      }
+    ];
   }
 };
 

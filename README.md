@@ -3,7 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
+The site should make this believable: Jamie turns under-structured work into
+usable systems. The support claim is that Jamie creates operating structure for
 complex public-facing teams.
 
 ## Stack
@@ -96,7 +97,10 @@ or serve private, proprietary, or unlicensed font files.
 ## Launch Blockers
 
 - Replace placeholder resume PDF before production.
-- Confirm public email.
+- Confirm whether the resume PDF should be indexable in production or
+  download-only with indexing prevented.
+- Confirm public email. Production should not launch while the primary contact
+  path is still a TODO.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
@@ -104,3 +108,6 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+
+See `docs/launch-checklist.md` for the review checklist that must be cleared
+before production indexing.
