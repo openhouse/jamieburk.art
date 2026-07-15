@@ -8,7 +8,10 @@ import {
   findWowlistFacebookPublicArtifactRisk,
   hasWowlistFacebookPublicArtifactRisk
 } from "./lib/wowlist-facebook-guard.mjs";
-import { findNycartcFacebookPublicArtifactRisk } from "./lib/nycartc-facebook-guard.mjs";
+import {
+  findNycartcFacebookPublicArtifactRisk,
+  hasNycartcFacebookPublicArtifactRisk
+} from "./lib/nycartc-facebook-guard.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -295,6 +298,63 @@ if (existsSync(wowlistBatchSourcePath)) {
       }
     } catch {
       addFailure(wowlistBatchSourcePath, `WOW List immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`);
+    }
+  }
+}
+
+const nycartcFacebookPinnedArtifacts = [
+  "docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
+  "docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
+  "docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md"
+];
+const nycartcFacebookBatchSourcePath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts"
+);
+if (existsSync(nycartcFacebookBatchSourcePath)) {
+  const batchSource = readText(nycartcFacebookBatchSourcePath);
+  for (const artifactPath of nycartcFacebookPinnedArtifacts) {
+    const escapedPath = artifactPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pinnedUrlPattern = new RegExp(
+      `https://github\\.com/openhouse/jamieburk\\.art/blob/([0-9a-f]{40})/${escapedPath}`
+    );
+    const match = batchSource.match(pinnedUrlPattern);
+    if (!match) {
+      addFailure(
+        nycartcFacebookBatchSourcePath,
+        `NYC Artist Coalition Facebook public artifact lacks an immutable Git citation: ${artifactPath}`
+      );
+      continue;
+    }
+
+    const commit = match[1];
+    try {
+      execFileSync("git", ["merge-base", "--is-ancestor", commit, "HEAD"], {
+        cwd: repoRoot,
+        stdio: "ignore"
+      });
+      const pinnedText = execFileSync("git", ["show", `${commit}:${artifactPath}`], {
+        cwd: repoRoot,
+        encoding: "utf8"
+      });
+      const currentPath = path.join(repoRoot, artifactPath);
+      if (pinnedText !== readText(currentPath)) {
+        addFailure(
+          currentPath,
+          "NYC Artist Coalition Facebook immutable citation does not match the current public-safe artifact"
+        );
+      }
+      if (hasNycartcFacebookPublicArtifactRisk(pinnedText)) {
+        addFailure(
+          currentPath,
+          "NYC Artist Coalition Facebook immutable citation contains prohibited population, authorship, engagement, or impact wording"
+        );
+      }
+    } catch {
+      addFailure(
+        nycartcFacebookBatchSourcePath,
+        `NYC Artist Coalition Facebook immutable citation is not reachable from HEAD: ${commit}:${artifactPath}`
+      );
     }
   }
 }

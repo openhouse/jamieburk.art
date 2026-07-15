@@ -160,6 +160,9 @@ export const nycartcFacebookPostIntake = [
       "SRC-FB-NYCAC-FULL-PUBLIC-TIMELINE-RUN-2026",
       "SRC-FB-NYCAC-MANAGED-CONTENT-CROSSCHECK-2026",
       "SRC-FB-NYCAC-POSTED-URL-INVENTORY-2026",
+      "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+      "SRC-FB-NYCAC-PUBLIC-ROUTE-LEDGER-2026",
+      "SRC-FB-NYCAC-POST-REPORT-2026",
       "SRC-CITY-STATE-AGENT-OF-CHANGE-2018",
       "SRC-SEATTLE-TIMES-ARTS-RELIEF-2020",
       ...selectedPostSourceIds
@@ -336,6 +339,87 @@ export const nycartcFacebookPostSources = [
     ]
   },
   {
+    id: "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+    title: "Public-safe NYC Artist Coalition Facebook post disposition ledger",
+    organization: "Jamie Burkart portfolio research",
+    kind: "project-archive",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2026-07-14",
+    accessedAt: "2026-07-14",
+    canonicalUrl:
+      "https://github.com/openhouse/jamieburk.art/blob/267f21b13f77f61b29ef75271659b7c0cc20d9ab/docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Public-safe disposition ledger for the currently recoverable NYC Artist Coalition Facebook Page timeline, July 14, 2026.",
+    publicNote:
+      "Contains one aggregate-only disposition row for each of 444 recovered record identities, together with population controls and bounded aggregate classifications. It omits post text, post URLs, per-record metrics, comments, identities, account state, and private analytics.",
+    supportsGenerally: [
+      "the exact-set-checked 444-record currently recoverable Page surface",
+      "record-form, primary-theme, stakeholder-routing, and aggregate response accounting",
+      "the separation of Page identity from individual authorship and current response signals from impact"
+    ],
+    doesNotEstablish: [
+      "a native Meta export, deletion history, or lifetime population",
+      "individual publisher, drafter, or administrator identity",
+      "stakeholder engagement, unique people, reach, attendance, conversion, causality, or impact"
+    ]
+  },
+  {
+    id: "SRC-FB-NYCAC-PUBLIC-ROUTE-LEDGER-2026",
+    title: "Public-safe NYC Artist Coalition Facebook posted-route ledger",
+    organization: "Jamie Burkart portfolio research",
+    kind: "project-archive",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2026-07-14",
+    accessedAt: "2026-07-14",
+    canonicalUrl:
+      "https://github.com/openhouse/jamieburk.art/blob/267f21b13f77f61b29ef75271659b7c0cc20d9ab/docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Public-safe route ledger for destinations exposed by the currently recoverable NYC Artist Coalition Facebook Page corpus, July 14, 2026.",
+    publicNote:
+      "Accounts for 64 outbound-link occurrences, 39 unique rendered URLs, and 33 normalized public-safe routes. Two historical meeting-access or form routes remain represented without a public URL.",
+    supportsGenerally: [
+      "the 33-route public-safe destination inventory",
+      "campaign, civic-information, press, cultural, event, fundraising, and practical-resource routing",
+      "the distinction between posted source leads and independently corroborated evidence"
+    ],
+    doesNotEstablish: [
+      "the truth of every linked proposition",
+      "authorship, readership, endorsement, clicks, conversion, partnership, outcomes, or impact",
+      "URLs no longer exposed by the current interface"
+    ]
+  },
+  {
+    id: "SRC-FB-NYCAC-POST-REPORT-2026",
+    title: "NYC Artist Coalition Facebook post archival-production report",
+    organization: "Jamie Burkart portfolio research",
+    kind: "project-archive",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2026-07-14",
+    accessedAt: "2026-07-14",
+    canonicalUrl:
+      "https://github.com/openhouse/jamieburk.art/blob/267f21b13f77f61b29ef75271659b7c0cc20d9ab/docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Jamie Burkart portfolio research, NYC Artist Coalition Facebook post archival-production report, July 14, 2026.",
+    publicNote:
+      "Documents population controls, campaign and participation patterns, source routing, stakeholder-reference limits, mutable response boundaries, role uncertainty, lifecycle decisions, and next research actions.",
+    supportsGenerally: [
+      "the public-safe method and aggregate findings for the 444-record currently recoverable Page surface",
+      "the decision to retain these findings as bank-only reserve depth",
+      "the distinction among collective Page identity, Jamie's memory, individual publishing labor, stakeholder engagement, and impact"
+    ],
+    doesNotEstablish: [
+      "a native Meta export or deleted-post history",
+      "Jamie's predominant or sole social-account management",
+      "historical reach, stakeholder response, policy causality, or impact"
+    ]
+  },
+  {
     id: "SRC-CITY-STATE-AGENT-OF-CHANGE-2018",
     title: "A compromise for nightlife venues and their neighbors",
     organization: "City & State New York",
@@ -428,6 +512,13 @@ export const nycartcFacebookPostClaims = [
         renderCitation: false
       },
       {
+        sourceId: "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+        relationship: "direct-support",
+        supports: ["public-safe population controls and item-level dispositions"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
         sourceId: "SRC-FB-NYCAC-MANAGED-CONTENT-CROSSCHECK-2026",
         relationship: "supports-boundary",
         supports: ["public-timeline versus managed-content distinction"],
@@ -469,6 +560,13 @@ export const nycartcFacebookPostClaims = [
         sourceId: "SRC-FB-NYCAC-FULL-PUBLIC-TIMELINE-RUN-2026",
         relationship: "direct-support",
         supports: ["complete classification and cross-campaign publication pattern"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+        relationship: "direct-support",
+        supports: ["public-safe cross-campaign form and theme accounting"],
         confidence: "high",
         renderCitation: false
       },
@@ -532,6 +630,13 @@ export const nycartcFacebookPostClaims = [
         supports: ["record-level stakeholder-reference classification"],
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+        relationship: "direct-support",
+        supports: ["public-safe stakeholder-reference occurrence accounting"],
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [
@@ -569,6 +674,13 @@ export const nycartcFacebookPostClaims = [
         sourceId: "SRC-FB-NYCAC-FULL-PUBLIC-TIMELINE-RUN-2026",
         relationship: "direct-support",
         supports: ["record-level visible interaction totals at capture"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+        relationship: "direct-support",
+        supports: ["public-safe visible-interaction aggregate and interpretation boundary"],
         confidence: "high",
         renderCitation: false
       }
@@ -611,6 +723,13 @@ export const nycartcFacebookPostClaims = [
         sourceId: "SRC-FB-NYCAC-POSTED-URL-INVENTORY-2026",
         relationship: "direct-support",
         supports: ["route occurrence, unique URL, and normalized route accounting"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-FB-NYCAC-PUBLIC-ROUTE-LEDGER-2026",
+        relationship: "direct-support",
+        supports: ["public-safe normalized route inventory and protected-route boundary"],
         confidence: "high",
         renderCitation: false
       },
@@ -731,6 +850,8 @@ export const nycartcFacebookPostInquiries = [
       "SRC-FB-NYCAC-PAGE-CONTROL-2026",
       "SRC-FB-NYCAC-FULL-PUBLIC-TIMELINE-RUN-2026",
       "SRC-FB-NYCAC-MANAGED-CONTENT-CROSSCHECK-2026",
+      "SRC-FB-NYCAC-PUBLIC-POST-LEDGER-2026",
+      "SRC-FB-NYCAC-POST-REPORT-2026",
       ...selectedPostSourceIds,
       "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
       "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
@@ -766,6 +887,8 @@ export const nycartcFacebookPostInquiries = [
     ],
     sourceIds: [
       "SRC-FB-NYCAC-POSTED-URL-INVENTORY-2026",
+      "SRC-FB-NYCAC-PUBLIC-ROUTE-LEDGER-2026",
+      "SRC-FB-NYCAC-POST-REPORT-2026",
       "SRC-CITY-STATE-AGENT-OF-CHANGE-2018",
       "SRC-SEATTLE-TIMES-ARTS-RELIEF-2020"
     ],
