@@ -119,6 +119,22 @@ const teamsArchivalDeepeningIntakeIds = [
   "INT-2026-07-15-TEAMS-JOB-HUNT-PARITY"
 ];
 
+const archivalScaleAndLineageSourceIds = [
+  "SRC-WOWLIST-DATABASE-SNAPSHOT-SERIES-2016-2017",
+  "SRC-WOWLIST-DATABASE-AUDIT-2026-07-15",
+  "SRC-SUNDAY-DINNER-PARTICIPATION-WORKBOOK-2012-2021",
+  "SRC-SUNDAY-DINNER-WORKBOOK-AUDIT-2026-07-15",
+  "SRC-CALLSCRIPT-PUBLIC-PAGE-2026",
+  "SRC-CALLSCRIPT-NYCAC-NAMING-DISCUSSION-2017",
+  "SRC-JAMIE-CALLSCRIPT-FIRST-PERSON-CONTEXT-2026"
+];
+
+const archivalScaleAndLineageIntakeIds = [
+  "INT-2026-07-15-WOWLIST-DATABASE-SNAPSHOTS",
+  "INT-2026-07-15-SUNDAY-DINNER-WORKBOOK",
+  "INT-2026-07-15-CALLSCRIPT-NYCAC-LINEAGE"
+];
+
 const archivalProductionSourceIds = [
   "SRC-RAFT-SOUNDINGS-2007",
   "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013",
@@ -581,6 +597,7 @@ const renderedProjectionSources = [
   readFileSync("apps/www/src/app/about/page.tsx", "utf8"),
   readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8"),
   readFileSync("apps/www/src/content/work/wowlist.mdx", "utf8"),
+  readFileSync("apps/www/src/content/work/196-sunday-dinner.mdx", "utf8"),
   readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8")
 ].join("\n");
 const publicRegistryText = readFileSync(
@@ -686,18 +703,24 @@ const criteria = [
   },
   {
     id: "public-citation-plan",
-    label: "Every newly promoted public claim has a page occurrence rendered on its surface",
+    label: "Every newly promoted public claim renders, and citation-required claims have a page occurrence",
     pass:
       publicSitePromotedCandidates.length > 0 &&
       publicSitePromotedCandidates.every((candidate) => {
+        const claim = knowledgeBank.claims.find(
+          (item) => item.id === candidate.promotedClaimId
+        );
+        const activePublicProjection = claim?.projections.find(
+          (projection) =>
+            projection.status === "active" &&
+            projection.surfaces.some((surface) => surface.startsWith("/"))
+        );
         const occurrence = knowledgeBank.pages
           .flatMap((page) => page.occurrences)
           .find((item) => item.claimId === candidate.promotedClaimId);
-        return (
-          occurrence &&
-          renderedProjectionSources.includes(candidate.promotedClaimId) &&
-          renderedProjectionSources.includes(occurrence.id)
-        );
+        if (!renderedProjectionSources.includes(candidate.promotedClaimId)) return false;
+        if (!activePublicProjection?.citationRequired) return true;
+        return Boolean(occurrence && renderedProjectionSources.includes(occurrence.id));
       })
   },
   {
@@ -3015,6 +3038,163 @@ const criteria = [
         !publicRegistryText.includes("ARCHIVE-CLAUDETTE-IMPLEMENTATION-HANDOFF-2022-001") &&
         !publicRegistryText.includes("ARCHIVE-CRS-90-DAY-OPERATING-PLAN-2026-001") &&
         !publicRegistryText.includes("d1e45343efd1e4125fb258514c70ce8101505b8400de3ccb1d30a8389d58fd8c")
+      );
+    })()
+  },
+  {
+    id: "archival-scale-and-lineage-intake",
+    label: "WOWList, Sunday Dinner, and Call Script evidence completes the intake and atomic-reading path",
+    pass: (() => {
+      const inquiryIds = [
+        "INQ-WOWLIST-DATABASE-AGGREGATE-AUDIT-2026",
+        "INQ-SUNDAY-DINNER-WORKBOOK-STRUCTURAL-AUDIT-2026",
+        "INQ-CALLSCRIPT-POPULAR-VOTE-NYCAC-LINEAGE-2026"
+      ];
+      return Boolean(
+        archivalScaleAndLineageIntakeIds.every((id) => {
+          const intake = intakeItems.find((item) => item.id === id);
+          return intake?.status === "processed" && intake.linkedRecordIds.length >= 5;
+        }) &&
+        archivalScaleAndLineageSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length >= 2 && reading.limitations.length;
+        }) &&
+        inquiryIds.every((id) => {
+          const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === id);
+          return inquiry && inquiry.findings.length >= 4 && inquiry.limitations.length >= 3;
+        })
+      );
+    })()
+  },
+  {
+    id: "wowlist-database-production-scale",
+    label: "WOWList production scale is promoted with a thresholded geography claim and no chapter inflation",
+    pass: (() => {
+      const candidate = candidateById.get("CND-WOWLIST-ARCHIVED-PRODUCTION-SCALE");
+      const rejected = candidateById.get("CND-WOWLIST-OFFICIAL-CITY-CHAPTERS");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-WOWLIST-ARCHIVED-PRODUCTION-SCALE"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/wowlist-sunday-dinner-callscript-2026-07-15.md",
+        "utf8"
+      );
+      return Boolean(
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim?.id &&
+        claim?.status === "confirmed-with-boundary" &&
+        claim.projections.some(
+          (item) =>
+            item.key === "case-study" &&
+            item.surfaces.includes("/work/wowlist") &&
+            /1,846 users.*16,142 posts\/events/is.test(item.text) &&
+            /(?:Thirty-five|35) city labels.*at least 50/i.test(item.text)
+        ) &&
+        claim.boundaries.some((item) => /not as official chapters/i.test(item)) &&
+        renderedProjectionSources.includes(claim.id) &&
+        rejected?.status === "contradicted" &&
+        promotions.some(
+          (item) =>
+            item.candidateClaimId === rejected.id && item.decision === "rejected"
+        ) &&
+        /35 city labels with at least 50/i.test(report) &&
+        /not evidence of 35 official chapters/i.test(report)
+      );
+    })()
+  },
+  {
+    id: "sunday-dinner-longitudinal-participation-system",
+    label: "Sunday Dinner projects the operating system while holding person-level and attendance claims",
+    pass: (() => {
+      const candidate = candidateById.get(
+        "CND-SUNDAY-DINNER-LONGITUDINAL-PARTICIPATION-SYSTEM"
+      );
+      const attendeeTotal = candidateById.get("CND-SUNDAY-DINNER-PUBLIC-ATTENDEE-TOTAL");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-SUNDAY-DINNER-LONGITUDINAL-PARTICIPATION-SYSTEM"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/wowlist-sunday-dinner-callscript-2026-07-15.md",
+        "utf8"
+      );
+      return Boolean(
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim?.id &&
+        claim?.status === "confirmed-with-boundary" &&
+        claim.projections.some(
+          (item) =>
+            item.key === "case-study" &&
+            item.surfaces.includes("/work/196-sunday-dinner") &&
+            /17-sheet workbook/i.test(item.text) &&
+            /numbered gatherings, invitations, responses, attendance logic, themes, hosts/i.test(
+              item.text
+            )
+        ) &&
+        renderedProjectionSources.includes(claim.id) &&
+        attendeeTotal?.status === "research-needed" &&
+        !attendeeTotal.promotedClaimId &&
+        promotions.some(
+          (item) =>
+            item.candidateClaimId === attendeeTotal.id && item.decision === "held"
+        ) &&
+        /300\+ gatherings.*not 340 unique verified events/is.test(report) &&
+        /not a public attendance database/i.test(report)
+      );
+    })()
+  },
+  {
+    id: "callscript-popular-vote-nycac-lineage",
+    label: "Call Script lineage preserves Jamie's agency, collective formation credit, and bank-only placement",
+    pass: (() => {
+      const candidate = candidateById.get("CND-CALLSCRIPT-POPULAR-VOTE-NYCAC-LINEAGE");
+      const inflated = candidateById.get("CND-CALLSCRIPT-REACH-ATTENDANCE-SOLE-FOUNDING");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-CALLSCRIPT-POPULAR-VOTE-NYCAC-LINEAGE"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/wowlist-sunday-dinner-callscript-2026-07-15.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      return Boolean(
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim?.id &&
+        claim?.status === "confirmed-with-boundary" &&
+        claim.projections.every((item) =>
+          item.surfaces.every((surface) => !surface.startsWith("/"))
+        ) &&
+        !renderedProjectionSources.includes(claim.id) &&
+        claim.boundaries.some((item) => /collective|collaborator and participant agency/i.test(item)) &&
+        inflated?.status === "contradicted" &&
+        promotions.some(
+          (item) =>
+            item.candidateClaimId === inflated.id && item.decision === "rejected"
+        ) &&
+        /popular\.vote.*participatory naming.*continued coalition convening/is.test(report) &&
+        /does not establish.*Jamie alone founded/is.test(antiClaims)
+      );
+    })()
+  },
+  {
+    id: "archival-scale-and-lineage-public-safety",
+    label: "Protected databases and participation records stay aggregate-only and locator-free",
+    pass: (() => {
+      const report = readFileSync(
+        "docs/knowledge-bank/wowlist-sunday-dinner-callscript-2026-07-15.md",
+        "utf8"
+      );
+      const protectedLocatorIds = [
+        "ARCHIVE-WOWLIST-DATABASE-SNAPSHOTS-2016-2017-001",
+        "RESEARCH-WOWLIST-DATABASE-AUDIT-2026-001",
+        "ARCHIVE-SUNDAY-DINNER-PARTICIPATION-WORKBOOK-2012-2021-001",
+        "RESEARCH-SUNDAY-DINNER-WORKBOOK-AUDIT-2026-001",
+        "RESEARCH-CALLSCRIPT-NYCAC-LINEAGE-2026-001"
+      ];
+      return Boolean(
+        /Do not publish raw database rows/i.test(report) &&
+        /participant names, phone numbers, email addresses/i.test(report) &&
+        !/\/Volumes\/|\/Users\//.test(report) &&
+        protectedLocatorIds.every((id) => !publicRegistryText.includes(id))
       );
     })()
   },

@@ -324,3 +324,27 @@ independently verify every claim inside the resume.
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+## WOWList Database, Sunday Dinner Workbook, and Call Script
+
+Do not describe WOWList's 35 city labels with at least 50 geocoded posts or
+events as official chapters. Database rows establish point-in-time product
+scale, not attendance, unique reach, equivalent community depth, current
+activity, or a complete archive.
+
+Do not publish raw WOWList user, email, geolocation, activity, or media records.
+Do not publish Sunday Dinner names, phone numbers, email addresses, relationship
+notes, invitations, responses, attendance indicators, formulas, private source
+locators, or checksums.
+
+The Sunday Dinner workbook contains numbered gathering identifiers beyond 300,
+but it also contains numbering gaps and duplicates. Use 300+ gatherings, not an
+unreconciled exact event count. Do not convert invitations or responses into
+attendance, publish an attendee total, or use the workbook to establish the
+20+ resident-artist total.
+
+Call Script's public record supports a popular.vote link, participatory group
+naming, and continued NYC Artist Coalition convening. It does not establish
+that Jamie alone founded the coalition, that a Facebook poll legally created
+the coalition, that event responses equal attendance, or that historical
+platform reach language is audited impact.

@@ -130,6 +130,22 @@ test("multi-source occurrences preserve editorial order", () => {
 
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
+  assert.match(
+    getClaimProjection(
+      "CLM-WOWLIST-ARCHIVED-PRODUCTION-SCALE",
+      "case-study",
+      "/work/wowlist"
+    ).text,
+    /1,846 users/
+  );
+  assert.match(
+    getClaimProjection(
+      "CLM-SUNDAY-DINNER-LONGITUDINAL-PARTICIPATION-SYSTEM",
+      "case-study",
+      "/work/196-sunday-dinner"
+    ).text,
+    /17-sheet workbook/
+  );
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
@@ -153,6 +169,14 @@ test("private and metadata-only evidence is absent from the public registry", ()
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
   assert.doesNotMatch(serialized, /ARCHIVE-TEAMS|ARCHIVE-CRS|RESEARCH-TEAMS/);
   assert.doesNotMatch(serialized, /Mobile Documents|CloudDocs|job-hunt\//i);
+  assert.doesNotMatch(serialized, /SRC-WOWLIST-DATABASE-AUDIT-2026-07-15/);
+  assert.doesNotMatch(serialized, /SRC-SUNDAY-DINNER-WORKBOOK-AUDIT-2026-07-15/);
+  assert.deepEqual(
+    publicCitationRegistry.claims.find(
+      (claim) => claim.id === "CLM-WOWLIST-ARCHIVED-PRODUCTION-SCALE"
+    )?.evidence,
+    []
+  );
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
 });
 

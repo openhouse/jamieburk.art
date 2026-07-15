@@ -207,7 +207,8 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
-      "firsthand-collaborator-context"
+      "firsthand-collaborator-context",
+      "ai-assisted-archive-review"
     ],
     publicWording:
       "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
@@ -478,7 +479,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate historical summary, platform archive, a complete 38-record census of the surviving @wowlist account, and a terminal-cursor census of 57 surviving Facebook Page records.",
+      "Approved resume language, three protected production database snapshots with a fresh aggregate audit, platform archive, a complete 38-record census of the surviving @wowlist account, and a terminal-cursor census of 57 surviving Facebook Page records.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -496,7 +497,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -506,7 +507,8 @@ export const proofClaims: ProofClaim[] = [
       "approved-resume",
       "public-safe-archive-summary",
       "jamie-review-confirmation",
-      "protected-revision-history"
+      "protected-revision-history",
+      "ai-assisted-archive-review"
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
@@ -514,7 +516,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate project history, and protected revision-attributed event and onboarding artifacts that support the operating pattern without independently establishing the aggregate totals.",
+      "Approved resume language, public-safe aggregate project history, a protected longitudinal workbook that substantiates numbered gatherings beyond 300 and the participation operating system, and revision-attributed event and onboarding artifacts. The workbook does not establish the resident-artist total.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -533,7 +535,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

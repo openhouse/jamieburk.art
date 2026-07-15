@@ -2231,6 +2231,51 @@
         "The movement and campaign remained collective; the plan explicitly bounded Jamie's infrastructure role.",
         "Do not publish stakeholder names, outreach lists, private strategy, consent records, or working links from the underlying artifact."
       ]
+    },
+    {
+      "id": "CLM-WOWLIST-ARCHIVED-PRODUCTION-SCALE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Read-only analysis of three surviving production database snapshots supports the public scale claim: by July 22, 2017, WOWList contained 1,846 users, 16,142 posts/events, 23,864 tags/lists, 28,837 list follows, and 20,927 saved/starred-event records. Thirty-five city labels had at least 50 geocoded posts/events, the bounded basis for 'roughly 35 city ecosystems.'",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Treat the counts as point-in-time database rows, not attendance, impressions, or unique audience reach.",
+        "Use 35 city ecosystems as a bounded proxy based on city labels with at least 50 geocoded posts or events, not as official chapters.",
+        "Do not imply current operation or activity after the latest July 22, 2017 snapshot.",
+        "Do not publish raw user, email, geolocation, or activity records."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-LONGITUDINAL-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Behind that aggregate project summary, Jamie designed and maintained a longitudinal participation system: a 17-sheet workbook linking numbered gatherings, invitations, responses, attendance logic, themes, hosts, and reusable formulas. Row-level community records remain private.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The workbook substantiates a recurring operating system and numbered history; it is not a public attendance database.",
+        "Do not equate invitations, responses, or formula outputs with attendance without row-level reconciliation.",
+        "The numbering contains gaps and duplicates, so use 300-plus gatherings rather than 340 unique events.",
+        "The workbook does not establish the 20-plus resident-artist total.",
+        "Do not publish names, contact details, relationship notes, invitations, responses, attendance indicators, formulas, or source locators."
+      ]
     }
   ],
   "pages": [
