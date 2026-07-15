@@ -9,10 +9,10 @@
   ],
   "minimumCollectiveClaimCount": 60,
   "collectiveClaimsSha256": "253e168d297d8bfc2674c8058d8cfd96d3078976d31ca9c28af45781b81645c8",
-  "collectiveRuntimeSha256": "86877fd3d117e4ebbc5f3cb3fdd4b4beb5a7cec15f8791ea7fcffb1d76c5e26f",
+  "collectiveRuntimeSha256": "b0fa70da471d67f867f974048b62f659bdab2ee2b9c5b29b0e7dab2c30cffbd5",
   "statementSupportSha256": "18efa21217bc26a4a91777d4597bc06140aca1fcd871811ce230c1953b2aed8b",
   "projectionRouteBindingsSha256": "66fb867401e7d1e631b5ffb58197a1a6bc9523a5b9926471f7a0d56d40fd4283",
-  "publicSurfaceSha256": "3c47c553793b38e189c691e7a28757c91ea6cb4fce2f0061c0380a6d9d8f6162",
+  "publicSurfaceSha256": "602c4148f9ddb08ed21f8fa0d9e1493b466796aa2bd05a9d0069557989c21590",
   "requiredClaimProjects": {
     "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW": "196-sunday-dinner",
     "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE": "fair-rent-nyc",

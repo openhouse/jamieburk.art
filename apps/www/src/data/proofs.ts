@@ -655,7 +655,7 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "With Julia Fredenburg, co-founded and project-managed Phase One cold-shell restoration of a long-vacant Kansas City building while the project conducted a neighborhood survey and built public-benefit documentation. The Council authorized negotiations on a $490,539 CCED recommendation in 2019; a 2024 ordinance later recorded project withdrawal and reappropriated the unused allocation.",
+      "With Julia Fredenburg, co-founded and project-managed Phase One cold-shell restoration of a long-vacant Kansas City building while the project conducted a neighborhood survey and built public-benefit documentation. The Council authorized funding-agreement negotiations for up to $490,539 in 2019; a 2024 ordinance later recorded project withdrawal and reappropriated the unused allocation.",
     shortWording:
       "Co-founded with Julia Fredenburg and project-managed historic adaptive reuse",
     detailedPublicWording:

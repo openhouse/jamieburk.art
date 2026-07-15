@@ -2408,11 +2408,11 @@ export function evaluateKnowledgeBank(
   const assertionSourceIds = new Set(bank.sourceAssertions.map((item) => item.sourceId));
   const findings = Object.fromEntries(suite.evals.map((entry) => [entry.id, []]));
 
-  if (collectiveCreditPolicy.version !== 6) {
-    findings["KB-007"].push("collective-credit policy version must be 6");
+  if (collectiveCreditPolicy.version !== 7) {
+    findings["KB-007"].push("collective-credit policy version must be 7");
   }
-  if (projectionSurfaceBindings.version !== 3) {
-    findings["KB-009"].push("projection-surface policy version must be 3");
+  if (projectionSurfaceBindings.version !== 4) {
+    findings["KB-009"].push("projection-surface policy version must be 4");
   }
   if (
     collectiveCreditPolicy.collectiveClaimsSha256 !==

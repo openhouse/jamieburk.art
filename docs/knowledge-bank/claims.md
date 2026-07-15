@@ -233,7 +233,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
-**Public wording:** With Julia Fredenburg, co-founded and project-managed Phase One cold-shell restoration of a long-vacant Kansas City building while the project conducted a neighborhood survey and built public-benefit documentation. The Council authorized negotiations on a $490,539 CCED recommendation in 2019; a 2024 ordinance later recorded project withdrawal and reappropriated the unused allocation.
+**Public wording:** With Julia Fredenburg, co-founded and project-managed Phase One cold-shell restoration of a long-vacant Kansas City building while the project conducted a neighborhood survey and built public-benefit documentation. The Council authorized funding-agreement negotiations for up to $490,539 in 2019; a 2024 ordinance later recorded project withdrawal and reappropriated the unused allocation.
 
 **Detailed public-safe wording:** A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council authorized the City Manager to negotiate a funding agreement for up to $490,539. Ordinance 240317 later recorded KC Town Hall as withdrawn and reappropriated the unused allocation. When Jamie's stewardship concluded, he reports that he transitioned the project to a mission-aligned organization.
 **Where to project:** Technical Operations, Work card, Case study.  
