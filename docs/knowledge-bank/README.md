@@ -113,3 +113,13 @@ auditability, which carries residual reconstruction risk. They intentionally omi
 raw post text, handles, status identifiers, exact dates, personal context, and
 per-record metrics. Selected professional records enter the typed bank only
 after close reading; the personal timeline is not a public portfolio artifact.
+
+The NYC Artist Coalition Facebook post production is documented in
+[projects/nycartc-facebook-post-population-2026-07-14.md](projects/nycartc-facebook-post-population-2026-07-14.md).
+Two terminal traversals recovered the same 444 currently available post
+identities and every record received a public-safe disposition. The current
+surface is not a native export, deletion history, or lifetime total. The post
+and route ledgers under `data/` omit raw text, comments, identities, per-record
+metrics, account state, private analytics, and protected historical action
+routes. Page identity, stakeholder routing, and mutable interactions remain
+separate from human authorship, inbound engagement, and impact.

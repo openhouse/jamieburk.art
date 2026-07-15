@@ -161,3 +161,27 @@ endorsement, readership, conversion, or impact.
 Do not publish the record-level personal association graph, guest identities,
 friend or invite context, exact private locations, raw descriptions, comments,
 account administration, or authentication material.
+
+## NYC Artist Coalition Facebook Posts
+
+Do not describe the 444 currently recoverable Page-post records as a native
+Meta export, deletion history, complete managed-content population, or every
+post ever published. Do not assign all records, shared language, campaign
+strategy, or source material to Jamie.
+
+Do not convert the 88 Council-reference records, 40 cultural or nightlife
+agency references, or 39 cultural and advocacy partner references into numbers
+of stakeholders who engaged, endorsed, attended, replied, partnered, or acted.
+These are overlapping rule-matched routing occurrences.
+
+Do not convert 2,374 reactions, 212 comments, and 611 shares into one
+engagement total, unique people, historical analytics, reach, attendance,
+conversion, endorsement, causality, or impact. Do not publish raw post text,
+comments, actor identities, per-record metrics, account state, private
+analytics, or protected historical meeting-access and form URLs.
+
+Jamie recalls being predominantly the person who used the Page while also
+remembering that others used it. Keep that as an attributed research-stage
+memory until collaborator or platform evidence establishes the historical
+division of publishing labor. Do not infer sole administration or any
+record-level authorship.

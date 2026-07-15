@@ -4,6 +4,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import { nycartcFacebookPostAudit } from "../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts";
 import {
   campaignPressDistinctSourceCount,
   campaignPressPlacementCount,
@@ -106,6 +107,18 @@ const wowlistFacebookPostLedgerPath = path.join(
 const wowlistFacebookPostBatchPath = path.join(
   repoRoot,
   "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-batch-2026-07-14.ts"
+);
+const nycartcFacebookPostReportPath = path.join(
+  docsRoot,
+  "projects/nycartc-facebook-post-population-2026-07-14.md"
+);
+const nycartcFacebookPostLedgerPath = path.join(
+  docsRoot,
+  "data/nycartc-public-facebook-post-ledger.json"
+);
+const nycartcFacebookPostRouteLedgerPath = path.join(
+  docsRoot,
+  "data/nycartc-public-facebook-post-route-ledger.json"
 );
 let personalWowlistControls;
 const structuredClaimsById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
@@ -647,6 +660,101 @@ if (!existsSync(wowlistFacebookPostLedgerPath)) {
       }
     }
   }
+}
+
+if (!existsSync(nycartcFacebookPostLedgerPath)) {
+  fail("NYC Artist Coalition Facebook post ledger is missing");
+} else {
+  const ledger = readJson(
+    nycartcFacebookPostLedgerPath,
+    "NYC Artist Coalition Facebook post ledger"
+  );
+  if (ledger) {
+    const records = Array.isArray(ledger.records) ? ledger.records : [];
+    assertEqual(ledger.schemaVersion, 2, "NYC Artist Coalition Facebook post ledger schema");
+    assertEqual(
+      ledger.population?.authenticatedTerminalTraversals,
+      nycartcFacebookPostAudit.terminalTraversals,
+      "NYC Artist Coalition Facebook terminal traversal count"
+    );
+    assertEqual(
+      ledger.population?.distinctSurvivingPosts,
+      nycartcFacebookPostAudit.ownerTimelineRecords,
+      "NYC Artist Coalition Facebook post population"
+    );
+    assertEqual(records.length, nycartcFacebookPostAudit.ownerTimelineRecords, "NYC Artist Coalition Facebook disposition row count");
+    assertEqual(new Set(records.map((record) => record.recordId)).size, records.length, "NYC Artist Coalition Facebook unique disposition IDs");
+    assertEqual(new Set(records.map((record) => record.sequenceNewestToOldest)).size, records.length, "NYC Artist Coalition Facebook unique disposition sequence values");
+    assertEqual(
+      records.filter((record) => record.hasVisibleInteraction).length,
+      nycartcFacebookPostAudit.recordsWithVisibleInteraction,
+      "NYC Artist Coalition Facebook records with visible interaction"
+    );
+    assertEqual(
+      Object.values(ledger.forms ?? {}).reduce((total, value) => total + value, 0),
+      records.length,
+      "NYC Artist Coalition Facebook form accounting"
+    );
+    assertEqual(
+      Object.values(ledger.primaryThemes ?? {}).reduce((total, value) => total + value, 0),
+      records.length,
+      "NYC Artist Coalition Facebook primary-theme accounting"
+    );
+    for (const [field, expected] of Object.entries({
+      reactions: nycartcFacebookPostAudit.reactions,
+      comments: nycartcFacebookPostAudit.comments,
+      shares: nycartcFacebookPostAudit.shares
+    })) {
+      assertEqual(
+        ledger.visibleInteractionSnapshot?.datedAggregateFloor?.[field],
+        expected,
+        `NYC Artist Coalition Facebook visible ${field} floor`
+      );
+    }
+    if (ledger.population?.exactIdentitySetMatch !== true) {
+      fail("NYC Artist Coalition Facebook post traversals must retain an exact identity-set match");
+    }
+    if (!/not a native Meta export[\s\S]*lifetime total/i.test(ledger.population?.completenessBoundary ?? "")) {
+      fail("NYC Artist Coalition Facebook post ledger must preserve native-export and lifetime boundaries");
+    }
+    if (!/not historical analytics[\s\S]*unique people[\s\S]*impact/i.test(ledger.visibleInteractionSnapshot?.boundary ?? "")) {
+      fail("NYC Artist Coalition Facebook response snapshot must reject historical, unique-person, and impact interpretations");
+    }
+  }
+}
+
+if (!existsSync(nycartcFacebookPostRouteLedgerPath)) {
+  fail("NYC Artist Coalition Facebook posted-route ledger is missing");
+} else {
+  const ledger = readJson(
+    nycartcFacebookPostRouteLedgerPath,
+    "NYC Artist Coalition Facebook posted-route ledger"
+  );
+  if (ledger) {
+    const rows = Array.isArray(ledger.rows) ? ledger.rows : [];
+    assertEqual(rows.length, 33, "NYC Artist Coalition Facebook normalized posted-route count");
+    assertEqual(new Set(rows.map((row) => row.routeId)).size, rows.length, "NYC Artist Coalition Facebook unique posted-route IDs");
+    assertEqual(
+      rows.reduce((total, row) => total + row.occurrences, 0),
+      nycartcFacebookPostAudit.outboundLinkOccurrences,
+      "NYC Artist Coalition Facebook posted-route occurrence accounting"
+    );
+    assertEqual(
+      rows.filter((row) => row.disposition === "protected").length,
+      2,
+      "NYC Artist Coalition Facebook protected historical route count"
+    );
+    if (rows.some((row) => row.disposition === "protected" && row.publicUrl !== null)) {
+      fail("NYC Artist Coalition Facebook protected historical routes must not expose URLs");
+    }
+    if (rows.some((row) => !/not automatic corroboration[\s\S]*impact/i.test(row.interpretationBoundary ?? ""))) {
+      fail("NYC Artist Coalition Facebook posted routes must preserve their interpretation boundary");
+    }
+  }
+}
+
+if (!existsSync(nycartcFacebookPostReportPath)) {
+  fail("NYC Artist Coalition Facebook post archival-production report is missing");
 }
 
 if (!existsSync(wowlistFacebookPostReportPath)) {

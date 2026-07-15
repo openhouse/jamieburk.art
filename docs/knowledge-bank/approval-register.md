@@ -22,6 +22,13 @@ The repo is public. Approval here means approved for public-safe repository and 
   items recovered and 1,757 slots unresolved. Never shorten this to "all tweets
   recovered," attribute account-authored or repost populations to Jamie, or
   convert repost and link patterns into endorsement or impact.
+- NYC Artist Coalition Facebook post population: approved as bank-only depth.
+  Say that two terminal traversals recovered the same 444 currently available
+  Page-post identities and every record received a public-safe disposition.
+  Keep the current-surface, lifetime, human-authorship, stakeholder-engagement,
+  and mutable-interaction boundaries attached. Jamie's recollection of
+  predominant but shared Page use remains research-stage and is not approved
+  as a public role claim.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.

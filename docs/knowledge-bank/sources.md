@@ -80,6 +80,7 @@ Approved public artifact examples for this launch pass include:
 - Michael Rees's Claudette's Theatre on Wheels project page.
 - The complete 45-article NYC Artist Coalition campaign press corpus, preserving 46 placements across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.
 - NYC Artist Coalition's authenticated Facebook past-events surface, a public-safe 34-slot event disposition ledger, and a routed outbound-link ledger.
+- NYC Artist Coalition's authenticated Facebook Page-post surface, a 444-row public-safe disposition ledger, a 33-route public-safe destination inventory, selected close-read posts, and separately bounded source leads.
 - Jamie's authenticated personal Past events and hosted-events surfaces,
   public-safe aggregate reconciliation, and selected displayed-host event
   pages from 2006 through 2017.
@@ -103,6 +104,16 @@ private analytics. A 34-event host-card control reconciles to 33 recovered
 event records and one unresolved slot. The ledgers do not convert platform
 responses into attendance, assign every event page to Jamie, or attribute
 policy outcomes to the event system alone.
+
+The governed Facebook post inventory is documented in
+`docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md`.
+Two terminal traversals recovered the same 444 currently available post
+identities from January 2017 through September 2021. The source model keeps
+the Page identity, 64 outbound-link occurrences, 39 unique URLs, 33 normalized
+public-safe routes, stakeholder references, and mutable interaction displays
+distinct. A posted destination is a source-discovery lead until close-read;
+Page identity does not identify a human author, and current counters do not
+measure historical reach or impact.
 
 The governed `@NYCArtC` population and posted-link review is documented in
 `docs/knowledge-bank/projects/nycartc-x-population-2026-07-14.md`. Its public

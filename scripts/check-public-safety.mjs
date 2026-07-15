@@ -8,6 +8,7 @@ import {
   findWowlistFacebookPublicArtifactRisk,
   hasWowlistFacebookPublicArtifactRisk
 } from "./lib/wowlist-facebook-guard.mjs";
+import { findNycartcFacebookPublicArtifactRisk } from "./lib/nycartc-facebook-guard.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -168,6 +169,11 @@ const wowlistFacebookArtifactFiles = textFiles.filter((file) =>
     relative(file)
   )
 );
+const nycartcFacebookPostArtifactFiles = textFiles.filter((file) =>
+  /docs\/knowledge-bank\/(?:data\/nycartc-public-facebook-post(?:-route)?-ledger\.json|projects\/nycartc-facebook-post-population-2026-07-14\.md)$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -242,6 +248,11 @@ scanPattern(
 for (const file of wowlistFacebookArtifactFiles) {
   const risk = findWowlistFacebookPublicArtifactRisk(readText(file));
   if (risk) addFailure(file, `WOW List Facebook public artifact contains ${risk}`);
+}
+
+for (const file of nycartcFacebookPostArtifactFiles) {
+  const risk = findNycartcFacebookPublicArtifactRisk(readText(file));
+  if (risk) addFailure(file, `NYC Artist Coalition Facebook public artifact contains ${risk}`);
 }
 
 const wowlistPinnedArtifacts = [
