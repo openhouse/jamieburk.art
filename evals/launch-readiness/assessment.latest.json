@@ -1,0 +1,117 @@
+{
+  "suiteId": "portfolio-launch-readiness",
+  "suiteVersion": "1.2.0",
+  "commit": "221d2fb9d28afa21eb1b27c7ba6c569313a9c1f3",
+  "judge": {
+    "model": "GPT-5 Codex",
+    "independentPass": true,
+    "scores": [
+      {
+        "criterionId": "hiring-reader-clarity",
+        "score": 4,
+        "evidence": [
+          "/: The hero immediately names Jamie's target role, operating-structure value proposition, focus areas, and direct paths to work, resume, and contact.",
+          "/work/technical-operations: The opening and proof map translate Jamie's professional shape into recognizable delivery, implementation, documentation, launch, and handoff work.",
+          "/resume: The first paragraph states the goal, Jamie's agency, and the operating materials teams can use, followed by working resume and contact actions."
+        ],
+        "smallestChange": "None; 4 is the maximum score.",
+        "preserve": "Preserve the concise role statement, quick-path hierarchy, employer-neutral language, and direct application actions."
+      },
+      {
+        "criterionId": "agency-purpose-usability",
+        "score": 4,
+        "evidence": [
+          "/work/harry-j-epstein: Jamie's implementation actions, the customer and operating need, and the resulting e-commerce and workflow patterns are stated together without assigning him sole business causation.",
+          "/work/callnyc: The page says Jamie independently built the prototype, identifies the resident-navigation problem, and names the usable issue pathways, district context, guidance, repository, and archive record.",
+          "/work/wowlist: The projected social-origin-and-support claim connects Jamie's bounded collective role to a reusable event-sharing system and six surviving support/onboarding replies while separating shared-account behavior from individual authorship."
+        ],
+        "smallestChange": "None; 4 is the maximum score.",
+        "preserve": "Preserve contribution verbs, intended users, usable-result language, and the distinction between Jamie's actions and collective outcomes."
+      },
+      {
+        "criterionId": "chad-lens",
+        "score": 4,
+        "evidence": [
+          "/: The first pass puts Jamie's agency first and explains how ambiguous work becomes workflows, public tools, documentation, onboarding, and handoffs people can continue using.",
+          "/resume: The opening composes role, action, purpose, and maintainable result before the selected-impact list.",
+          "/work/technical-operations: The opening and proof map translate specialized project names into recognizable operating actions and usable team results.",
+          "/work/harry-j-epstein, /work/fair-rent-nyc, and /work/callnyc: The openings state Jamie's bounded actions, the end served, what became usable, and the collective or institutional limits."
+        ],
+        "smallestChange": "None; 4 is the maximum score.",
+        "preserve": "Keep the strongest composed claims early and avoid replacing them with role nouns, technology lists, or stronger causal language."
+      },
+      {
+        "criterionId": "role-fit-proof",
+        "score": 3,
+        "evidence": [
+          "/work/technical-operations: Delivery coordination, risk surfacing, operating documentation, launch, adoption, and handoff practices are mapped to eight named projects.",
+          "/work/harry-j-epstein and /work/callnyc: The cases provide concrete requirements, implementation, iteration, analytics, repository, interface, and handoff proof.",
+          "/work/fair-rent-nyc: Several operating-artifact gallery entries remain descriptive cards rather than inspectable artifacts."
+        ],
+        "smallestChange": "Add one rights-cleared, redacted operating artifact that directly shows Jamie's project-management practice, such as a workflow, implementation plan, decision record, or handoff.",
+        "preserve": "Keep private operational records offline and avoid implying licensure, formal authority, sole ownership, or sole causation."
+      },
+      {
+        "criterionId": "evidence-traceability",
+        "score": 3,
+        "evidence": [
+          "/work/wowlist: The origin citation publicly names Richard and Jamie together; the census and individual examples support the bounded support/onboarding pattern while the page withholds individual reply authorship and adoption inferences.",
+          "/work/callnyc and /work/harry-j-epstein: Numbered sources support chronology, implementation, independent follow-on, company-level context, and explicit causal limits.",
+          "/work/wowlist and /work/fair-rent-nyc: Several prominent quantitative claims still lack equally inspectable rendered source paths."
+        ],
+        "smallestChange": "Render bounded source notes for the remaining prominent quantitative claims, including a direct public-safe link to the WOWList redacted ledger.",
+        "preserve": "Do not expose private user rows, analytics, coalition records, protected locators, or stronger adoption and causality claims than the evidence supports."
+      },
+      {
+        "criterionId": "collective-credit-and-anti-claims",
+        "score": 4,
+        "evidence": [
+          "/work/fair-rent-nyc: Jamie's co-founder, documentation, and web contributions are distinguished from collective campaign outcomes, and the page rejects solo leadership, bill ownership, legal authority, and sole causation.",
+          "/work/wowlist: The project is described as co-built; origin evidence names Richard and Jamie together, and the page separates collective role from shared-account authorship, scale, adoption, and sole ownership.",
+          "/work/harry-j-epstein: Company results are attributed to the company and independent reporting rather than converted into individual causal claims about Jamie."
+        ],
+        "smallestChange": "None; 4 is the maximum score.",
+        "preserve": "Retain collaborator credit, contribution verbs, shared-account authorship limits, and project-specific anti-claims."
+      },
+      {
+        "criterionId": "public-safety-and-boundaries",
+        "score": 4,
+        "evidence": [
+          "/work/callnyc: Archived, independent, unofficial, and not-current boundaries appear throughout the case.",
+          "/work/fair-rent-nyc and /work/harry-j-epstein: Private coalition, legal, business, customer, and operating records stay offline while defensible contributions remain specific.",
+          "docs/knowledge-bank/media-provenance.json: Displayed captures have source, date, caption, rights basis, and consent treatment, with rights review still pending human release confirmation."
+        ],
+        "smallestChange": "None; 4 is the maximum score.",
+        "preserve": "Preserve protected-record omissions, current-service disclaimers, correction paths, causal limits, and every human rights, consent, credit, and corroboration gate."
+      },
+      {
+        "criterionId": "visual-proof",
+        "score": 3,
+        "evidence": [
+          "/work/harry-j-epstein, /work/fair-rent-nyc, and /work/callnyc: Real project captures visibly support the work with descriptive alternative text, captions, provenance, and public-source links.",
+          "docs/knowledge-bank/media-provenance.json: Rights review remains pending human release confirmation, and several workflow and decision-record gallery entries remain descriptions rather than inspectable artifacts."
+        ],
+        "smallestChange": "After documented human rights approval, replace one descriptive gallery card with a real, redacted operating artifact whose caption identifies Jamie's bounded contribution and the usable result.",
+        "preserve": "Do not treat this judgment as rights or consent clearance, and do not publish private records, analytics, correspondence, participant imagery, or decorative substitutes."
+      },
+      {
+        "criterionId": "completion-confidence",
+        "score": 3,
+        "evidence": [
+          "The production-profile local artifact covers 14 routes across four viewports with 56 successful observations, one H1 per route, no overflow, no browser errors, and reachable application paths.",
+          "Visible public-safety notes now describe stable uncertainty, recovery, privacy, and omission boundaries rather than instructing editors.",
+          "The report is local and does not establish that the reviewed portfolio serves the primary domain; production approval and the other named human gates remain pending."
+        ],
+        "smallestChange": "After the named human gates are completed, perform the authorized primary-domain cutover and publish a passing primary-domain production report.",
+        "preserve": "Do not treat a local report, runbook, protocol, corroboration queue, or this judge pass as production authorization, media clearance, collaborator confirmation, or completed blind-reader validation."
+      }
+    ]
+  },
+  "humanGates": [
+    { "gateId": "jamie-production-approval", "status": "pending", "verifiedBy": null },
+    { "gateId": "media-rights-and-consent", "status": "pending", "verifiedBy": null },
+    { "gateId": "collaborator-sensitive-credit", "status": "pending", "verifiedBy": null },
+    { "gateId": "collaborator-claim-corroboration", "status": "pending", "verifiedBy": null },
+    { "gateId": "blind-hiring-reader-validation", "status": "pending", "verifiedBy": null }
+  ]
+}
