@@ -127,12 +127,14 @@ any governed claim or public surface changed.
 
 ## Current Intake Threads
 
-The structured intake records currently preserve twenty-four threads surfaced on
+The structured intake records currently preserve twenty-eight threads surfaced on
 July 12-15, 2026:
 
 - waterways, communal space, and participatory cultural practice;
-- Sunday Dinner as recurring open community infrastructure;
-- NYC Artist Coalition formation and cultural-space policy campaigns;
+- Sunday Dinner as recurring open community infrastructure, including a
+  protected aggregate invitation and follow-through workbook;
+- NYC Artist Coalition formation and cultural-space policy campaigns, including
+  a bounded Call Script-to-coalition participation relay;
 - the press and reference architecture across four NYC Artist Coalition
   campaign sites;
 - the full @CallNYCapp population, its issue-pathway publishing record, and
@@ -145,6 +147,8 @@ July 12-15, 2026:
   engagement, and larger bounded stakeholder mention corpora;
 - WOW List's social record connecting the calendar to Sunday Dinner and one
   external event-sharing specimen;
+- WOW List's protected 2016-2017 production-database growth, product-activity
+  counts, and transparent 35-city-or-region activity threshold;
 - KC Spaces Fund's 40-of-40 surviving Facebook Page disposition, collective
   relief-cycle, public funded-space spotlights, fundraising and source trail,
   uniform public identity, protected technical-role evidence, and bounded
@@ -228,6 +232,17 @@ collective recommendation set, its preservation in the official CreateNYC
 appendix, and DCLA's final-plan recognition. That sequence establishes
 collective institutional value but does not assign Jamie's role or policy
 causality.
+
+The July 15 WOW List, Sunday Dinner, and Call Script reconciliation adds one new
+WOW List `claim-candidate` and strengthens two existing threads. Three protected
+production snapshots now support exact database-object growth and document the
+threshold beneath "roughly 35 active city ecosystems." A protected Sunday
+Dinner workbook supports a reusable invitation and follow-through system, not
+physical attendance or the governed scale metrics. Public Call Script records
+preserve a DCLA-meeting-to-social-to-coalition-meeting handoff sequence and
+Jamie's bounded method-bridge memory without assigning every post to him or
+claiming that Call Script alone created NYC Artist Coalition. All three remain
+outside automatic website projection.
 
 The NYC Artist Coalition Facebook event thread is now `integrated` as
 `INTAKE-NYCAC-FACEBOOK-EVENT-POPULATION-2026-07-15`. It accounts for all 34

@@ -953,6 +953,82 @@ const knowledgeBankInput = {
       doesNotEstablish: ["safe publication of generated overviews without review", "use across every project", "perfect extraction of every file format", "production deployment", "cross-platform behavior in every environment", "independent security review"],
       protectedLocatorId: "LOC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026"
     },
+    {
+      id: "SRC-WOWLIST-PRODUCTION-DATABASE-SNAPSHOTS-2016-2017",
+      title: "WOW List production database snapshots, 2016-2017",
+      organization: "WOW List",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "Three production snapshots dated June 24, 2016; June 1, 2017; and July 22, 2017",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected public-safe aggregate review of three WOW List PostgreSQL production database snapshots from 2016 and 2017.",
+      publicNote: "Read-only extraction preserves aggregate growth and product-activity counts while withholding user rows, account data, credentials, hashes, locations, and raw event records. The July 22, 2017 snapshot contains 1,846 account rows and 16,142 post-index rows; three-snapshot comparison shows growth from 995 account rows and 10,136 post-index rows in June 2016.",
+      supportsGenerally: ["three dated production snapshots", "995 to 1,846 account-row growth", "10,136 to 16,142 post-index-row growth", "23,864 tag rows", "28,837 follow rows", "20,927 star rows", "2,965 going rows", "15,915 calendar-event rows", "35 city or region labels with at least 50 geocoded posts or events"],
+      doesNotEstablish: ["unique active humans", "current users or current operation", "official chapters", "the completeness of the surviving archive", "Jamie's sole authorship", "adoption causality", "permission to publish person-level data"],
+      protectedLocatorId: "WOWLIST-PRODUCTION-DB-SNAPSHOTS-2016-2017-001"
+    },
+    {
+      id: "SRC-SUNDAY-DINNER-INVITATION-RESPONSE-WORKBOOK-2025-2026",
+      title: "Sunday Dinner invitation and response workbook, 2025-2026",
+      organization: "Sunday Dinner",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "Workbook reviewed through January 10, 2026",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected public-safe aggregate review of a 2025-2026 Sunday Dinner invitation and response workbook associated with Jamie Burkart.",
+      publicNote: "The workbook preserves a reusable invitation and follow-through system across four tracked gathering or participation columns. Its 24 person-level rows are not reproduced; aggregate rows record 52 invitation instances, 41 non-empty response entries, 11 no-reply entries, and 25 literal yes marks across mixed response modes.",
+      supportsGenerally: ["four tracked gathering or participation columns", "24 person-level working rows", "52 invitation instances", "41 non-empty response entries", "11 no-reply entries", "25 literal yes marks", "reusable invitation and follow-through workflow"],
+      doesNotEstablish: ["physical attendance", "participant identity or consent", "a complete Sunday Dinner chronology", "300 or more gatherings", "20 or more resident artists", "current cadence", "Jamie's sole operation of every gathering"],
+      protectedLocatorId: "SUNDAY-DINNER-INVITE-WORKBOOK-2025-2026-001"
+    },
+    {
+      id: "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017-2026",
+      title: "Call Script Facebook Page",
+      organization: "Call Script",
+      kind: "institutional-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://www.facebook.com/callscript",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Call Script Facebook Page, accessed July 15, 2026.",
+      publicNote: "The surviving Page describes Call Script as a way to call representatives, links to popular.vote, and retains a route to a March 2017 NYC Artist Coalition general meeting.",
+      supportsGenerally: ["Call Script public identity", "popular.vote link", "representative-contact framing", "surviving route to an NYC Artist Coalition general meeting"],
+      doesNotEstablish: ["Jamie's historical authorship of every post", "a complete historical Page archive", "full account administration history", "audience impact", "coalition-formation causality"]
+    },
+    {
+      id: "SRC-CALLSCRIPT-NYCA-DCLA-EVENT-DISCUSSION-2017",
+      title: "NYC DIY Spaces post-Ghost Ship DCLA meeting discussion",
+      organization: "NYC Artist Coalition / Call Script",
+      kind: "institutional-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-01-27",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Facebook event and surviving discussion for the January 27, 2017, NYC DIY-spaces meeting at the Department of Cultural Affairs, accessed July 15, 2026.",
+      publicNote: "The current event surface names NYC Artist Coalition and Call Script among the public event identities, displays a mutable 445-response label, and preserves a sequence from the DCLA meeting to a nearby post-meeting gathering and a February 6 NYC Artist Coalition general meeting.",
+      supportsGenerally: ["January 27, 2017 DCLA meeting", "Call Script and NYC Artist Coalition public event identities", "post-meeting social continuation", "February 6 NYC Artist Coalition general-meeting route", "access-time 445-response display"],
+      doesNotEstablish: ["physical attendance", "the identity of event respondents", "historical authorship of every event or discussion post", "Jamie's sole facilitation", "that Call Script alone created NYC Artist Coalition", "policy or formation causality"]
+    },
+    {
+      id: "SRC-JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15",
+      title: "Jamie Burkart first-person Call Script and NYC Artist Coalition bridge account",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-07-15",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected public-safe summary of Jamie Burkart's July 2026 first-person account of Call Script, popular.vote, WOW List, and early NYC Artist Coalition facilitation.",
+      publicNote: "Jamie describes Call Script as his project and remembers using its public identity and popular.vote connection to carry participation methods developed through WOW List into the facilitation sequence around NYC Artist Coalition's formation.",
+      supportsGenerally: ["Jamie's first-person project-role account", "Call Script and popular.vote connection", "remembered bridge from WOW List participation methods", "remembered early coalition facilitation"],
+      doesNotEstablish: ["sole project authorship", "authorship of every social post", "sole coalition creation", "a complete formation chronology", "causal sufficiency", "collaborator agreement with Jamie's interpretation"],
+      protectedLocatorId: "JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15-001"
+    },
     ...campaignPressSources,
     ...projectSocialSources,
     ...urbanhermitSources,
@@ -1383,16 +1459,18 @@ const knowledgeBankInput = {
       title: "Sunday Dinner as recurring open community infrastructure",
       project: "196-sunday-dinner",
       kind: "claim-candidate",
-      summary: "A 2017 Greene Hill Food Co-op interview publicly documents Jamie and Julia as hosting an open Sunday dinner every week in their Brooklyn apartment. The current Sunday Dinner site preserves participation and media pathways, but neither source establishes the governed proof's aggregate counts or current cadence.",
+      summary: "A 2017 Greene Hill Food Co-op interview publicly documents Jamie and Julia as hosting an open Sunday dinner every week in their Brooklyn apartment. The current Sunday Dinner site preserves participation and media pathways. A protected 2025-2026 workbook adds aggregate evidence of a reusable invitation and follow-through system, but these sources still do not establish the governed proof's aggregate gathering or resident-artist counts, physical attendance, or current cadence.",
       status: "claim-candidate",
       sourceIds: [
         "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19",
-        "SRC-SUNDAY-DINNER-NYC-HOMEPAGE-2026"
+        "SRC-SUNDAY-DINNER-NYC-HOMEPAGE-2026",
+        "SRC-SUNDAY-DINNER-INVITATION-RESPONSE-WORKBOOK-2025-2026"
       ],
       relatedClaimIds: [],
       relatedProofIds: ["sunday-dinner-196-participation-infrastructure"],
       candidateClaims: [
-        "By December 2017, Jamie and Julia were publicly documented as hosting an open Sunday dinner every week in their Brooklyn apartment."
+        "By December 2017, Jamie and Julia were publicly documented as hosting an open Sunday dinner every week in their Brooklyn apartment.",
+        "A protected 2025-2026 workbook associated with Jamie documents a reusable Sunday Dinner invitation and follow-through system across four tracked gathering or participation columns."
       ],
       propositions: [
         {
@@ -1413,15 +1491,24 @@ const knowledgeBankInput = {
           boundaries: ["The site does not name the current host or cadence.", "Do not republish participant names or media without rights and consent review."],
           decisionUse: "Preserves the project's current public artifact ecology without treating a sparse homepage as proof of scale or continuity.",
           nextStep: "Recover dated public project records, approved aggregate histories, and collaborator accounts before associating the current site with duration, event counts, or resident-artist counts."
+        },
+        {
+          id: "PROP-SUNDAY-DINNER-INVITATION-FOLLOW-THROUGH-SYSTEM-2025-2026",
+          text: "A protected 2025-2026 workbook associated with Jamie documents a reusable Sunday Dinner invitation and follow-through system across four tracked gathering or participation columns.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-SUNDAY-DINNER-INVITATION-RESPONSE-WORKBOOK-2025-2026"],
+          sourceSupport: ["four tracked gathering or participation columns", "52 invitation instances", "41 non-empty response entries", "11 no-reply entries", "mixed response modes", "person-level rows withheld"],
+          boundaries: ["The workbook is an operational record, not an independent attendance census.", "Do not expose names, contact details, responses, or links to the underlying workbook.", "Do not convert invitation or response entries into physical-attendance, gathering-count, or resident-artist claims."],
+          decisionUse: "Strengthens the professional claim that Sunday Dinner involved repeatable participation operations while keeping people and unsupported scale outside the public record."
         }
       ],
       tensions: [
         {
           id: "TENSION-SUNDAY-DINNER-PUBLIC-CORROBORATION-AND-SCALE",
-          propositionIds: ["PROP-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017", "PROP-SUNDAY-DINNER-CURRENT-PUBLIC-SURFACE-2026"],
+          propositionIds: ["PROP-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017", "PROP-SUNDAY-DINNER-CURRENT-PUBLIC-SURFACE-2026", "PROP-SUNDAY-DINNER-INVITATION-FOLLOW-THROUGH-SYSTEM-2025-2026"],
           relatedProofIds: ["sunday-dinner-196-participation-infrastructure"],
-          description: "The governed proof combines Jamie's hosting role with 300+ gatherings, 20+ resident artists, and repeatable operating systems; the new public sources independently corroborate recurring open hosting in 2017 and a public project surface in 2026, but not those aggregate metrics or every system named.",
-          currentPosition: "Keep the approved aggregate proof careful. Treat the 2017 interview as strong independent corroboration for Jamie's hosting role and the form of the gathering, not as a substitute for the sources behind scale or operating-system claims.",
+          description: "The governed proof combines Jamie's hosting role with 300+ gatherings, 20+ resident artists, and repeatable operating systems. The public sources corroborate recurring open hosting in 2017 and a project surface in 2026; the protected workbook now supports an invitation and follow-through system, but none of these sources establishes the two aggregate scale metrics or physical attendance.",
+          currentPosition: "Keep the approved aggregate proof careful. Use the 2017 interview for Jamie's recurring hosting role and the protected workbook for bounded operating-system evidence; do not use either as a substitute for a public-safe gathering or resident-artist count.",
           status: "open",
           correctionTriggers: [
             {
@@ -1453,12 +1540,14 @@ const knowledgeBankInput = {
       boundaries: [
         "Keep guest lists, addresses, private messages, raw attendance records, and unapproved media outside the public repository.",
         "Do not use the 2017 interview to establish the 300+ gathering or 20+ resident-artist metrics.",
+        "Keep the protected workbook's person-level rows and underlying link outside the public repository; publish only reviewed aggregates.",
+        "Do not interpret invitations, responses, yes marks, or workbook attendance formulas as independently verified physical attendance.",
         "Treat the weekly cadence as historical to December 2017, not automatically current.",
         "Do not project this intake item directly to the website; strengthen or create a governed claim and make a separate editorial decision first."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-13",
-      reviewedAt: "2026-07-13",
+      reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
@@ -1480,6 +1569,9 @@ const knowledgeBankInput = {
         "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
         "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
         "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017-2026",
+        "SRC-CALLSCRIPT-NYCA-DCLA-EVENT-DISCUSSION-2017",
+        "SRC-JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15",
         "SRC-NYCA-SAFETY-RESOURCES-2017-02-09",
         "SRC-NYCA-TALKS-NOT-RAIDS-MARCH-2019-02-12",
         "SRC-NYC-COUNCIL-INT-1652-2017",
@@ -1488,12 +1580,15 @@ const knowledgeBankInput = {
       relatedClaimIds: [],
       relatedProofIds: [
         "nyc-artist-coalition-public-web-infrastructure",
-        "nyc-artist-coalition-civic-systems"
+        "nyc-artist-coalition-civic-systems",
+        "nyc-artist-coalition-participation-system"
       ],
       candidateClaims: [
         "In 2017, Jamie organized fire-code study groups for DIY venues and rallied at City Hall for full repeal of New York City's Cabaret Law.",
         "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis.",
-        "In a December 2017 Greene Hill Food Co-op interview, Jamie and Julia were described as working as part of NYC Artist Coalition; Jamie connected Cabaret Law enforcement to barriers faced by community cultural spaces."
+        "In a December 2017 Greene Hill Food Co-op interview, Jamie and Julia were described as working as part of NYC Artist Coalition; Jamie connected Cabaret Law enforcement to barriers faced by community cultural spaces.",
+        "Within Jamie's remembered early coalition-facilitation context, surviving public records place Call Script, linked to popular.vote, in the participation sequence around DCLA's January 27, 2017 DIY-spaces meeting: Call Script appeared as a public event identity, extended the meeting into a nearby social gathering, and the same discussion later routed people to NYC Artist Coalition's February 6 general meeting.",
+        "Jamie remembers designing Call Script as a bridge from WOW List's cultural-discovery network and popular.vote to coalition participation; surviving records corroborate the public handoff sequence but not his sole authorship or the claim that Call Script alone caused NYC Artist Coalition's formation."
       ],
       propositions: [
         {
@@ -1648,12 +1743,39 @@ const knowledgeBankInput = {
           nextStep: "Review committee testimony, sponsor statements, agency reports, implementation records, and later operational directives for campaign contribution and MARCH status."
         },
         {
+          id: "PROP-CALLSCRIPT-PARTICIPATION-RELAY-2017",
+          text: "Within Jamie's remembered early coalition-facilitation context, surviving public records place Call Script, linked to popular.vote, in the participation sequence around DCLA's January 27, 2017 DIY-spaces meeting: Call Script appeared as a public event identity, extended the meeting into a nearby social gathering, and the same discussion later routed people to NYC Artist Coalition's February 6 general meeting.",
+          status: "synthesis-with-boundary",
+          sourceIds: [
+            "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017-2026",
+            "SRC-CALLSCRIPT-NYCA-DCLA-EVENT-DISCUSSION-2017",
+            "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+            "SRC-JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15"
+          ],
+          sourceSupport: ["Call Script Page link to popular.vote", "Call Script and NYC Artist Coalition as public event identities", "post-meeting social invitation", "February 6 coalition general-meeting route", "official recognition that the January DCLA meeting spurred coalition establishment"],
+          boundaries: ["This is a reconstructed public handoff sequence, not proof that Call Script alone created the coalition.", "The current 445-response label is mutable and does not establish attendance.", "Do not assign every event or discussion post to Jamie or any other individual without post-level authorship evidence."],
+          decisionUse: "Adds concrete evidence that early coalition-building used linked public identities and follow-through invitations to carry people from a city meeting into continuing participation."
+        },
+        {
+          id: "PROP-CALLSCRIPT-WOWLIST-METHOD-BRIDGE-2026",
+          text: "Jamie remembers designing Call Script as a bridge from WOW List's cultural-discovery network and popular.vote to coalition participation; surviving records corroborate the public handoff sequence but not his sole authorship or the claim that Call Script alone caused NYC Artist Coalition's formation.",
+          status: "supported-with-boundary",
+          sourceIds: [
+            "SRC-JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15",
+            "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017-2026",
+            "SRC-CALLSCRIPT-NYCA-DCLA-EVENT-DISCUSSION-2017"
+          ],
+          sourceSupport: ["Jamie's first-person project-role account", "public popular.vote connection", "surviving meeting-to-social-to-general-meeting handoff sequence"],
+          boundaries: ["The bridge interpretation remains Jamie's account even where the public sequence is corroborated.", "Do not infer sole account authorship, sole facilitation, or sole coalition formation.", "WOW List database scale is separate evidence and does not by itself prove transfer of method into Call Script."],
+          decisionUse: "Preserves a high-value account of Jamie's participatory product and facilitation practice while making the corroborated sequence and the remembered interpretation visibly distinct."
+        },
+        {
           id: "PROP-NYCA-COALITION-FORMATION-MEMORY",
           text: "Jamie remembers playing an instrumental role in creating NYC Artist Coalition and its operating infrastructure.",
           status: "memory-lead",
-          sourceIds: [],
-          sourceSupport: [],
-          boundaries: ["This is Jamie's recollection, not a source-established formation claim.", "Formation credit requires collaborator and contemporaneous-record review."],
+          sourceIds: ["SRC-JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15"],
+          sourceSupport: ["Jamie's first-person account of early coalition facilitation and operating infrastructure"],
+          boundaries: ["This is Jamie's recollection, not independently source-established formation credit.", "The public Call Script sequence supports an early participation mechanism, not a co-founder title or sole causality.", "Formation credit requires collaborator and contemporaneous-record review."],
           decisionUse: "Preserves a potentially central professional claim for focused formation research.",
           nextStep: "Locate formation messages, early websites, meeting records, first public statements, and accounts from founding collaborators."
         },
@@ -1771,6 +1893,8 @@ const knowledgeBankInput = {
       ],
       researchQuestions: [
         "Which formation records and collaborator accounts establish Jamie's role in creating NYC Artist Coalition?",
+        "Which Call Script repository, domain, design, account-history, and collaborator records establish Jamie's exact role in the project and the popular.vote connection?",
+        "Which early meeting notes or collaborator accounts describe how WOW List participation methods informed Call Script and coalition facilitation?",
         "Which event-production, drafting, CMS, or collaborator records identify Jamie's contribution to the DCLA listening-to-vote-to-recommendation workflow now established at the collective level?",
         "Which public repository commits, CMS records, deployment history, or collaborator accounts associate Jamie with implementation or stewardship of the Cabaret, town-hall, safety, CreateNYC, or Talks Not Raids web surfaces?",
         "Which hearing testimony, sponsor statements, committee reports, and collaborator accounts connect Jamie's documented advocacy actions to a specific institutional decision without overstating causality?",
@@ -1783,13 +1907,15 @@ const knowledgeBankInput = {
         "The Gothamist source directly supports fire-code study groups, City Hall advocacy, coalition affiliation, and Jamie's safety analysis; it does not establish the full campaign history.",
         "The NPR source is context only until it is closely read for person- and organization-specific evidence.",
         "DCLA's final plan and appendix establish institutional recognition and preservation of the coalition's contribution, not Jamie's individual role or sole causality for later policy outcomes.",
+        "Call Script's public Page and event discussion establish a participation relay, not physical attendance, sole account authorship, or coalition-formation causality.",
+        "Treat the WOW List-to-Call Script-to-coalition bridge as Jamie's bounded interpretation until contemporaneous project and collaborator records corroborate the transfer of method.",
         "Coalition campaign pages establish public artifacts and collective positions, not individual authorship or causality unless Jamie is named.",
         "The Council records establish enactment and statutory scope, not which advocates caused passage or whether MARCH was later disbanded.",
         "Do not project this intake item directly to the website; strengthen or create governed claims first."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-12",
-      reviewedAt: "2026-07-13",
+      reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
@@ -3128,6 +3254,67 @@ const knowledgeBankInput = {
       receivedAt: "2026-07-14",
       reviewedAt: "2026-07-14",
       reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
+    },
+    {
+      id: "INTAKE-WOWLIST-PRODUCTION-DATABASE-2026-07-15",
+      title: "WOW List production scale, growth, and city-ecosystem threshold",
+      project: "wowlist",
+      kind: "claim-candidate",
+      summary: "A read-only aggregate review of three protected WOW List PostgreSQL production snapshots makes the platform's growth and operating scale more precise. It supports the existing careful language about more than 1,800 accounts, more than 16,000 indexed posts or events, and roughly 35 active city ecosystems while keeping user-level data and unsupported impact claims outside the repository.",
+      status: "claim-candidate",
+      sourceIds: ["SRC-WOWLIST-PRODUCTION-DATABASE-SNAPSHOTS-2016-2017"],
+      relatedClaimIds: [],
+      relatedProofIds: ["wowlist-community-platform"],
+      candidateClaims: [
+        "Across three protected production snapshots associated with Jamie's WOW List work, the platform grew from 995 account rows and 10,136 post-index rows in June 2016 to 1,846 account rows and 16,142 post-index rows in July 2017.",
+        "A protected July 22, 2017 production snapshot associated with Jamie's WOW List work contained 23,864 tag rows, 28,837 follow rows, 20,927 star rows, 2,965 going rows, and 15,915 calendar-event rows.",
+        "In a protected July 2017 snapshot associated with Jamie's WOW List work, 35 city or region labels had at least 50 geocoded posts or events, supporting the careful description 'roughly 35 active city ecosystems.'"
+      ],
+      propositions: [
+        {
+          id: "PROP-WOWLIST-PRODUCTION-GROWTH-2016-2017",
+          text: "Across three protected production snapshots associated with Jamie's WOW List work, the platform grew from 995 account rows and 10,136 post-index rows in June 2016 to 1,846 account rows and 16,142 post-index rows in July 2017.",
+          status: "direct-support",
+          sourceIds: ["SRC-WOWLIST-PRODUCTION-DATABASE-SNAPSHOTS-2016-2017"],
+          sourceSupport: ["June 24, 2016 snapshot", "June 1, 2017 snapshot", "July 22, 2017 snapshot", "account-row counts", "post-index-row counts"],
+          boundaries: ["Account rows are not unique active humans.", "Post-index rows are database objects, not independently verified attended events.", "The snapshots do not establish current operation or later growth."],
+          decisionUse: "Adds a defensible longitudinal growth statement to the reserve proof bank without exposing production data."
+        },
+        {
+          id: "PROP-WOWLIST-PRODUCTION-ACTIVITY-SCALE-2017",
+          text: "A protected July 22, 2017 production snapshot associated with Jamie's WOW List work contained 23,864 tag rows, 28,837 follow rows, 20,927 star rows, 2,965 going rows, and 15,915 calendar-event rows.",
+          status: "direct-support",
+          sourceIds: ["SRC-WOWLIST-PRODUCTION-DATABASE-SNAPSHOTS-2016-2017"],
+          sourceSupport: ["table-level row counts from a read-only extraction", "dated July 22, 2017 production snapshot"],
+          boundaries: ["Database rows are product-activity records, not reach, satisfaction, impact, or current-use metrics.", "Do not publish user records, event rows, locations, credentials, or hashes."],
+          decisionUse: "Provides exact product-operating depth for future technical product, data, or community-platform positioning."
+        },
+        {
+          id: "PROP-WOWLIST-CITY-ECOSYSTEM-THRESHOLD-2017",
+          text: "In a protected July 2017 snapshot associated with Jamie's WOW List work, 35 city or region labels had at least 50 geocoded posts or events, supporting the careful description 'roughly 35 active city ecosystems.'",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-WOWLIST-PRODUCTION-DATABASE-SNAPSHOTS-2016-2017"],
+          sourceSupport: ["geolocation-to-post-index join", "35 city or region labels at the 50-or-more threshold", "79 labels at 10 or more", "133 labels at five or more"],
+          boundaries: ["City and region labels are not official chapters.", "The threshold is a transparent editorial proxy for activity, not a claim about unique organizers, participants, or institutional presence.", "Geocoded posts or events do not prove attendance."],
+          decisionUse: "Makes the existing ecosystem language reproducible and correctable by documenting the threshold beneath it."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Which public product pages, onboarding materials, collaborator accounts, and code history establish Jamie's role in designing, operating, and iterating the platform at each stage?",
+        "Which additional production snapshots survive, and do they materially change the growth or city-threshold picture?",
+        "How should account, post, calendar-event, follow, star, and going rows be defined for future product-metric use without implying active users or attended events?"
+      ],
+      boundaries: [
+        "Keep raw database dumps, user rows, account data, hashes, credentials, geolocation rows, and event-level records outside the public repository.",
+        "Use database-object nouns in the knowledge bank; translate them into reader-facing language only through a separate projection decision.",
+        "Do not imply current operation, official chapters, unique active humans, attendance, sole authorship, or causal impact.",
+        "Do not project this intake item directly to the website; reconcile it with the governed proof and make a separate editorial decision first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-15",
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex protected database aggregate review"]
     },
     ...urbanhermitIntakeItems,
     ...nycacFacebookEventIntakeItems,

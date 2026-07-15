@@ -108,6 +108,17 @@ collaborative workspaces. It develops residency-operations, longitudinal data
 stewardship, and archive-automation knowledge without exposing Drive IDs,
 participant logistics, private media, or sensitive project folders.
 
+The [WOW List, Sunday Dinner, and Call Script reconciliation
+note](research/2026-07-15-wowlist-sunday-dinner-callscript-reconciliation.md)
+demonstrates how production-database aggregates, a protected participation
+workbook, and a surviving public event discussion can be read together without
+mixing their evidence levels. It makes WOW List growth and the roughly
+35-ecosystem threshold reproducible, adds bounded evidence for Sunday Dinner's
+invitation and follow-through system, and reconstructs a Call Script
+meeting-to-social-to-coalition-meeting relay. Raw user and participant records,
+attendance inference, individual post authorship, and sole coalition-formation
+claims remain outside the public record.
+
 The [project social-media archival-production
 note](research/2026-07-14-project-social-media-archival-production.md)
 demonstrates authenticated account census, historical officeholder matching,

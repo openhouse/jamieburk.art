@@ -1126,6 +1126,100 @@ test("social research locators stay private and research notes stay public-safe"
   );
 });
 
+test("WOW List, Sunday Dinner, and Call Script evidence stays aggregate, bounded, and non-projecting", () => {
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  const intakeById = new Map(
+    knowledgeBank.intakeItems.map((item) => [item.id, item])
+  );
+  const wowSource = sourceById.get(
+    "SRC-WOWLIST-PRODUCTION-DATABASE-SNAPSHOTS-2016-2017"
+  );
+  const dinnerSource = sourceById.get(
+    "SRC-SUNDAY-DINNER-INVITATION-RESPONSE-WORKBOOK-2025-2026"
+  );
+  const eventSource = sourceById.get(
+    "SRC-CALLSCRIPT-NYCA-DCLA-EVENT-DISCUSSION-2017"
+  );
+  const memorySource = sourceById.get(
+    "SRC-JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15"
+  );
+  const wowIntake = intakeById.get(
+    "INTAKE-WOWLIST-PRODUCTION-DATABASE-2026-07-15"
+  );
+  const dinnerIntake = intakeById.get(
+    "INTAKE-SUNDAY-DINNER-COMMUNITY-HOSTING-2026-07-13"
+  );
+  const nycaIntake = intakeById.get(
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12"
+  );
+
+  assert.equal(knowledgeBank.intakeItems.length, 28);
+  assert.equal(wowSource.visibility, "protected");
+  assert.equal(wowSource.canonicalUrl, undefined);
+  assert.equal(dinnerSource.visibility, "protected");
+  assert.equal(dinnerSource.canonicalUrl, undefined);
+  assert.equal(memorySource.visibility, "protected");
+  assert.equal(memorySource.canonicalUrl, undefined);
+  assert.match(wowSource.publicNote, /1,846 account rows and 16,142 post-index rows/);
+  assert.ok(
+    wowSource.supportsGenerally.includes(
+      "35 city or region labels with at least 50 geocoded posts or events"
+    )
+  );
+  assert.ok(
+    wowSource.doesNotEstablish.some((boundary) =>
+      /unique active humans/i.test(boundary)
+    )
+  );
+  assert.match(dinnerSource.publicNote, /52 invitation instances/);
+  assert.ok(
+    dinnerSource.doesNotEstablish.some((boundary) =>
+      /physical attendance/i.test(boundary)
+    )
+  );
+  assert.match(eventSource.canonicalUrl, /facebook\.com\/events\/388137698233507/);
+  assert.ok(
+    eventSource.doesNotEstablish.some((boundary) =>
+      /Call Script alone created NYC Artist Coalition/i.test(boundary)
+    )
+  );
+  assert.equal(wowIntake.status, "claim-candidate");
+  assert.equal(wowIntake.projectionStatus, "no-public-projection");
+  assert.equal(dinnerIntake.reviewedAt, "2026-07-15");
+  assert.equal(nycaIntake.reviewedAt, "2026-07-15");
+  assert.equal(
+    dinnerIntake.propositions.find(
+      (proposition) =>
+        proposition.id ===
+        "PROP-SUNDAY-DINNER-INVITATION-FOLLOW-THROUGH-SYSTEM-2025-2026"
+    ).status,
+    "supported-with-boundary"
+  );
+  assert.equal(
+    nycaIntake.propositions.find(
+      (proposition) => proposition.id === "PROP-CALLSCRIPT-PARTICIPATION-RELAY-2017"
+    ).status,
+    "synthesis-with-boundary"
+  );
+  assert.ok(
+    knowledgeBank.pages.every(
+      (page) => !["/proofs", "/knowledge-bank"].includes(page.surface)
+    )
+  );
+
+  const note = readFileSync(
+    "docs/knowledge-bank/research/2026-07-15-wowlist-sunday-dinner-callscript-reconciliation.md",
+    "utf8"
+  );
+  assert.doesNotMatch(note, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(note, /docs\.google\.com|spreadsheets\/d\//i);
+  assert.match(note, /445 people responded/);
+  assert.match(note, /mutable, access-time response label, not an attendance count/i);
+  assert.match(note, /No `\/proofs` or\s+other public knowledge-bank route is created/i);
+});
+
 test("rendering primitives preserve no-JavaScript document semantics", () => {
   const cite = readFileSync("apps/www/src/components/citations/Cite.tsx", "utf8");
   const references = readFileSync("apps/www/src/components/citations/References.tsx", "utf8");
