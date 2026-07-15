@@ -13,9 +13,9 @@ const suitePath = ".agents/evals/knowledge-bank-development.json";
 const frozenCollectiveBaselinePath =
   ".agents/evals/baselines/collective-credit-v1.json";
 export const FROZEN_COLLECTIVE_BASELINE_COMMIT =
-  "52b0e9edc5d939088a4d6883dbe92b2c3b959b54";
+  "7401353cdfd3f03cf386ae45f3dbd474ede20135";
 export const FROZEN_COLLECTIVE_BASELINE_BLOB =
-  "4b46fbbc522bcbcd04f6e5a037ecdbd88a3369ce";
+  "371b58b5063ae1c171e7a408814622320d9d9281";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
 const publicProjectionKeys = new Set([
   "case-study",
