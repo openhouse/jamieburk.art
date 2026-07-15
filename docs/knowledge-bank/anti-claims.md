@@ -195,6 +195,18 @@ Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant
 decisions, acted as fiscal sponsor, or was one of the campaign's public
 organizers unless the named organizers confirm that framing.
 
+Do not say Jamie alone named KC Spaces Fund or managed, authored, or published
+the KC Spaces Fund Facebook Page. Jamie confirms bounded website and
+cross-channel naming support and explicitly says he was not the stakeholder or
+owner posting on the account.
+
+Do not describe the 38-record surviving public Page census as an official Meta
+export, deletion history, or every historical post. Do not convert 119 visible
+reactions into unique people, reach, endorsement, stakeholder-group engagement,
+conversion, causality, or impact. Outgoing tags and references are not inbound
+engagement. No press-article route recovered from the current Page timeline
+does not mean no press coverage existed elsewhere.
+
 Do not present AI-assisted archival review as a human collaborator testimonial.
 Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or

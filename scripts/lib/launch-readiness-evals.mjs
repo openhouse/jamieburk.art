@@ -1626,6 +1626,244 @@ export function evaluateNycArtCFacebookPostArchive({
   return missing;
 }
 
+export function evaluateKcSpacesFundFacebookPostArchive({
+  census,
+  corpusModel,
+  framework,
+  proofs,
+  technicalOperations,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  const lines = census.trim().split(/\r?\n/).filter(Boolean);
+  const headers = lines.shift()?.split(",") ?? [];
+  const rows = lines.map((line) => {
+    const values = line.split(",");
+    return Object.fromEntries(
+      headers.map((header, index) => [header, values[index]])
+    );
+  });
+  const count = (field, value) =>
+    rows.filter((row) => row[field] === value).length;
+  const sum = (field) =>
+    rows.reduce((total, row) => total + Number(row[field] ?? 0), 0);
+
+  expect(
+    headers.length === 11,
+    "KC Spaces Fund Facebook census must retain 11 public-safe columns."
+  );
+  expect(
+    rows.length === 38,
+    "KC Spaces Fund Facebook census must contain 38 post records."
+  );
+  expect(
+    new Set(rows.map((row) => row.record_id)).size === rows.length,
+    "KC Spaces Fund Facebook census record IDs must remain unique."
+  );
+  expect(
+    rows.every(
+      (row, index) => Number(row.sequence_newest_to_oldest) === index + 1
+    ),
+    "KC Spaces Fund Facebook census sequence must remain complete from 1 through 38."
+  );
+  expect(
+    Number(rows.at(-1)?.sequence_newest_to_oldest) === 38,
+    "KC Spaces Fund Facebook census sequence must remain complete through record 38."
+  );
+  for (const [form, expected] of Object.entries({
+    "original-media-post": 20,
+    "status-update-remnant": 11,
+    "unavailable-attachment-remnant": 5,
+    "video-or-gif-route": 2
+  })) {
+    expect(
+      count("record_form", form) === expected,
+      `KC Spaces Fund Facebook ${form} count must recompute to ${expected}.`
+    );
+  }
+  for (const [theme, expected] of Object.entries({
+    "interface-remnant": 19,
+    "grantee-recognition": 10,
+    "application-scope-and-eligibility": 5,
+    "application-deadline": 2,
+    "campaign-launch-and-action": 1,
+    "mutual-aid-fundraising": 1
+  })) {
+    expect(
+      count("primary_theme", theme) === expected,
+      `KC Spaces Fund Facebook ${theme} count must recompute to ${expected}.`
+    );
+  }
+  expect(
+    count("readable_campaign_message", "true") === 19,
+    "KC Spaces Fund Facebook census must retain 19 readable campaign messages."
+  );
+  expect(
+    count("grantee_recognition", "true") === 10,
+    "KC Spaces Fund Facebook census must retain ten grantee-recognition records."
+  );
+  expect(
+    sum("destination_family_count") === 22,
+    "KC Spaces Fund Facebook destination-family occurrences must recompute to 22."
+  );
+  expect(
+    sum("stakeholder_group_count") === 33,
+    "KC Spaces Fund Facebook stakeholder-reference occurrences must recompute to 33."
+  );
+  expect(
+    sum("reactions_observed_2026_07_14") === 119,
+    "KC Spaces Fund Facebook reaction floor must remain 119."
+  );
+  expect(
+    rows.filter(
+      (row) => Number(row.reactions_observed_2026_07_14) > 0
+    ).length === 28,
+    "KC Spaces Fund Facebook census must retain 28 records with a visible reaction."
+  );
+  expect(
+    rows.filter((row) => row.public_locator?.includes("/photo/?fbid=")).length ===
+      20,
+    "KC Spaces Fund Facebook census must retain 20 stable photo locators."
+  );
+  expect(
+    rows.every(
+      (row) =>
+        /^kcspaces-fb-[a-f0-9]{16}$/.test(row.record_id) &&
+        /^https:\/\/www\.facebook\.com\//.test(row.public_locator)
+    ),
+    "Every KC Spaces Fund Facebook census row must retain an opaque record ID and public Facebook locator."
+  );
+  expect(
+    count("record_status", "recovered-readable") === 19 &&
+      count("record_status", "recovered-interface-remnant") === 14 &&
+      count("record_status", "recovered-unavailable-remnant") === 5,
+    "KC Spaces Fund Facebook record-status dispositions must reconcile all readable and remnant records."
+  );
+  expect(
+    !census.includes("publisher") &&
+      !census.includes("full_text") &&
+      !census.includes("commenter") &&
+      !census.includes("contact") &&
+      !census.includes("admin"),
+    "Public KC Spaces Fund Facebook census must not expose publisher rows, full text, commenters, contact details, or administration data."
+  );
+
+  requireFragments("KC Spaces Fund Facebook corpus model", corpusModel, [
+    "ownerTimelineRecords: 38",
+    "startBoundary: \"2020-04-07\"",
+    "endBoundary: \"2020-07-09\"",
+    "terminalScrollsWithoutAddition: 40",
+    "originalMediaPosts: 20",
+    "statusUpdateRemnants: 11",
+    "readableCampaignMessages: 19",
+    "granteeRecognitionRecords: 10",
+    "campaignSite: 17",
+    "sourceArticlesRecovered: 0",
+    "recordsWithVisibleReactions: 28",
+    "visibleReactionFloor: 119",
+    "jamieAccountPostingRole: \"not-claimed\"",
+    "CLM-KCSPACESFUND-DIGITAL-IDENTITY-SUPPORT",
+    "Jamie was not the stakeholder or owner posting on the Facebook account",
+    "not an official Meta export"
+  ]);
+  requireFragments("KC Spaces Fund Facebook framework integration", framework, [
+    "kcSpacesFundFacebookIntake",
+    "kcSpacesFundFacebookSources",
+    "kcSpacesFundFacebookClaims",
+    "kcSpacesFundFacebookInquiries",
+    "kcSpacesFundFacebookPublicationDecisions",
+    "kcSpacesFundFacebookProofCoverage",
+    "id: \"kc-spaces-fund\"",
+    "INQ-KCSPACESFUND-FACEBOOK-POSTS-2026"
+  ]);
+  requireFragments("KC Spaces Fund proof bank", proofs, [
+    "cross-channel identity work",
+    "38-record census of the surviving Facebook Page timeline",
+    "not the stakeholder or owner posting on its Facebook account",
+    "Jamie alone named KC Spaces Fund",
+    "Jamie managed or posted from the KC Spaces Fund Facebook account"
+  ]);
+  requireFragments("KC Spaces Fund technical-operations projection", technicalOperations, [
+    "collaborator-led 2020 mutual-aid campaign",
+    "available cross-channel project name",
+    "behind-the-scenes digital operations"
+  ]);
+  requireFragments("KC Spaces Fund archival documentation", archiveDoc, [
+    "38 unique records",
+    "100 percent of the surviving public Page timeline",
+    "not an official Meta export",
+    "Original-media post | 20",
+    "ten grantee-recognition posts",
+    "Campaign site | 17",
+    "No source-article route was recovered",
+    "119 reactions",
+    "not 119 unique people",
+    "not the stakeholder or owner posting on this account",
+    "available consistently across social and domain surfaces"
+  ]);
+  requireFragments("KC Spaces Fund anti-claims", antiClaims, [
+    "alone named KC Spaces Fund",
+    "managed, authored, or published the KC Spaces Fund Facebook Page",
+    "official Meta export",
+    "119 visible reactions",
+    "Outgoing tags and references are not inbound engagement"
+  ]);
+
+  expect(
+    !/Jamie (?:managed|authored|published) (?:the|all).*KC Spaces Fund Facebook/i.test(
+      technicalOperations
+    ),
+    "KC Spaces Fund site projection must not assign Page management or post authorship to Jamie."
+  );
+  expect(
+    !/(?:119|one hundred nineteen) (?:people|stakeholders) (?:reached|endorsed)/i.test(
+      technicalOperations
+    ),
+    "KC Spaces Fund site projection must not convert reactions into people, endorsement, or reach."
+  );
+
+  const publicBundle = [
+    census,
+    corpusModel,
+    framework,
+    proofs,
+    technicalOperations,
+    archiveDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /__cft__/i,
+    /asset_id\s*[:=]/i,
+    /contact@kcspacesfund/i,
+    /816[- )]785[- ]5131/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push(
+      "Public KC Spaces Fund Facebook bundle contains authentication, Page-session, contact, management-locator, or private-path material."
+    );
+  }
+
+  return missing;
+}
+
 export function evaluateKcTownHallFullPopulationArchive({
   ledger,
   corpusModel,
@@ -3034,6 +3272,14 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/nycartc-facebook-post-census-2026-07-14.csv"
   );
+  const kcSpacesFundFacebookPostCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts"
+  );
+  const kcSpacesFundFacebookPostCensus = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/kcspacesfund-facebook-post-census-2026-07-14.csv"
+  );
   const personalWowlistFacebookEventCorpus = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-batch-2026-07-14.ts"
@@ -3122,6 +3368,10 @@ export function runLaunchEvals(repoRoot) {
   const nycArtCFacebookPostDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts.md"
+  );
+  const kcSpacesFundFacebookPostDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-kcspacesfund-facebook-posts.md"
   );
   const personalWowlistFacebookEventDoc = readOptional(
     repoRoot,
@@ -3672,6 +3922,33 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies five record forms, nine primary themes, direct outbound-link counts, and mutable interaction totals.",
         "The selected portfolio claim presents the Page as cross-campaign civic publication infrastructure while keeping stakeholder references distinct from inbound engagement.",
         "A first-party crosscheck preserves the public-timeline versus managed-content boundary, and individual publisher attribution remains unresolved."
+      ]
+    })
+  );
+
+  const kcSpacesFundFacebookPostMissing =
+    evaluateKcSpacesFundFacebookPostArchive({
+      census: kcSpacesFundFacebookPostCensus,
+      corpusModel: kcSpacesFundFacebookPostCorpus,
+      framework,
+      proofs,
+      technicalOperations,
+      archiveDoc: kcSpacesFundFacebookPostDoc,
+      antiClaims
+    });
+  results.push(
+    result({
+      id: "kcspacesfund-facebook-post-archive",
+      label:
+        "KC Spaces Fund Facebook posts close the surviving public timeline and preserve Jamie's bounded non-posting role",
+      weight: 20,
+      hardGate: true,
+      missing: kcSpacesFundFacebookPostMissing,
+      evidence: [
+        "All 38 unique records in the surviving public Page timeline are dispositioned after an authenticated traversal and 40 endpoint checks.",
+        "Item-level recomputation verifies four record forms, 19 readable campaign messages, ten grantee-recognition records, route families, and the 119-reaction floor.",
+        "The Page documents a campaign operating sequence and consistent public identity without converting outgoing references into stakeholder engagement.",
+        "The selected site claim credits Jamie's website, digital-operations, and cross-channel naming support while preserving organizer, campaign-voice, and Page-publisher boundaries."
       ]
     })
   );

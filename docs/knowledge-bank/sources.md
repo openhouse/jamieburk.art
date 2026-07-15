@@ -63,6 +63,13 @@ Approved public artifact examples for this launch pass include:
   with NYC Artist Coalition.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- A public-safe 38-record census of the surviving KC Spaces Fund Facebook Page
+  timeline, captured through an authenticated July 2026 terminal traversal.
+- A protected digital-infrastructure review covering Jamie's campaign-site,
+  theme, widget, launch-assignment, and domain-continuity evidence.
+- Jamie's protected July 2026 role correction confirming website and
+  cross-channel naming support while disclaiming stakeholder ownership and
+  Page-posting responsibility.
 - Eric Barton's 2007 Pitch reporting on the recycled-material raft expedition.
 - Laura Mattingly's 2006 Good Times account of Open House.
 - Charlotte Street Foundation's 2009 Great Accommodations event record.

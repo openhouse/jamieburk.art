@@ -54,7 +54,7 @@ const proofMap = [
   {
     project: "KC Spaces Fund",
     proof:
-      "I supported a 2020 mutual-aid campaign through behind-the-scenes web infrastructure, theme, donation, application, and sign-up work."
+      "I supported a collaborator-led 2020 mutual-aid campaign by helping choose an available cross-channel project name, building its website, and providing behind-the-scenes digital operations for donation, application, sign-up, and fundraising routes."
   },
   {
     project: "KC Town Hall",

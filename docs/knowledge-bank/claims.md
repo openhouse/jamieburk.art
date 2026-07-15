@@ -487,16 +487,64 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful
 **Support level:** Careful
-**Evidence class:** Public source / public-safe archive summary / AI-assisted archival review
-**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
-**Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.
+**Evidence class:** Public source / public-safe archive summary / AI-assisted archival review / Jamie review confirmation
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, through behind-the-scenes web infrastructure and cross-channel identity work.
+**Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, supported donation, application, sign-up, and fundraising-display affordances, and helped choose a project name available across social and domain surfaces. Public organizer and campaign-voice credit remains with the campaign's collaborators; Jamie was not the stakeholder or owner posting on its Facebook account.
 **Where to project:** Technical Operations. Future resume or case-study use requires Jamie review and, if public organizer framing changes, collaborator confirmation.
 **Why it matters:** Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.
-**Guardrail:** Treat the source as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical and operational support language only.
-**Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
+**Guardrail:** Treat the source as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical, identity, and operational support language only.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie alone named KC Spaces Fund; Jamie managed or posted from the KC Spaces Fund Facebook account; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
 **Protected boundaries:** Applicant or grantee materials, donor/list exports, subscriber data, payment-request files, credentials/login sheets, billing/payment details, raw email archives, raw text-message archives, private Drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
 **Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-14
+
+## CLM-KCSPACESFUND-SURVIVING-PUBLIC-TIMELINE - KC Spaces Fund surviving public Facebook timeline
+
+**Status:** Confirmed with boundary
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** A checkpointed census recovered 38 unique surviving public KC Spaces Fund Facebook records from April through July 2020.
+**Evidence:** Public-safe metadata from an authenticated July 2026 top-to-bottom Page traversal.
+**Boundaries:** Complete means every record exposed by the surviving public Page timeline received a disposition after 40 endpoint checks. This is not an official Meta export, deletion history, or proof that every historical post survives.
+**Do not say:** The census contains every Facebook item ever published by KC Spaces Fund; the 38 records are a complete Meta export.
+**Review owner:** Jamie / Codex authenticated archival review
+**Last reviewed:** 2026-07-14
+
+## CLM-KCSPACESFUND-CAMPAIGN-ROUTING - KC Spaces Fund campaign routing sequence
+
+**Status:** Confirmed with boundary
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** The surviving Page records campaign launch and action routes, applications and eligibility, mutual-aid fundraising, and ten named grantee-recognition posts.
+**Evidence:** Record-level campaign-function and destination-family classification across the 38-row public-safe census.
+**Boundaries:** The Page documents public communication, not every operational decision or grant file. A posted route does not establish readership, conversion, partnership, endorsement, or outcome. No source-article route was recovered from this Page population.
+**Do not say:** The Facebook Page is a complete grant-administration record; every linked organization endorsed the campaign; the Page archive contains a press corpus.
+**Review owner:** Jamie / Codex source review
+**Last reviewed:** 2026-07-14
+
+## CLM-KCSPACESFUND-DIGITAL-IDENTITY-SUPPORT - KC Spaces Fund digital identity support
+
+**Status:** Confirmed with boundary
+**Public safety:** Public with boundary
+**Editorial status:** Selected
+**Public wording:** For KC Spaces Fund, Jamie supported the choice of an available cross-channel project name, built the campaign website, and provided behind-the-scenes digital operations. The collaborator-led Facebook Page used the same identity to route people to applications, donations, and grantee updates.
+**Evidence:** Protected code and launch review, Jamie's bounded firsthand role correction, the public Page identity, and the 38-record route census.
+**Boundaries:** Credit Jamie with bounded digital infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, campaign voice, or Page publishing. The work served a collaborator-led mutual-aid effort.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie alone named KC Spaces Fund; Jamie managed or posted from the Facebook account; Jamie ran the fundraiser or made grant decisions.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## CLM-KCSPACESFUND-VISIBLE-REACTION-FLOOR - KC Spaces Fund visible reaction floor
+
+**Status:** Use with care
+**Public safety:** Public with boundary
+**Editorial status:** Reserve
+**Public wording:** Twenty-eight surviving records retain at least one visible reaction; the current aggregate reaction floor is 119.
+**Evidence:** Record-level public reaction labels observed during the July 14, 2026 authenticated Page pass.
+**Boundaries:** This is a mutable current interface floor, not a historical peak. Reaction identities are not published or used to infer stakeholder-group engagement.
+**Do not say:** KC Spaces Fund reached 119 people; 119 stakeholders endorsed the campaign; the reaction floor measures impact.
+**Review owner:** Jamie / Codex authenticated archival review
+**Last reviewed:** 2026-07-14
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 

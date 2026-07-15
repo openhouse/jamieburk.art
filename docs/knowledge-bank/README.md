@@ -98,6 +98,15 @@ a public-safe disposition. A first-party crosscheck showed that managed Page
 content and the public timeline are not equivalent, and individual publisher
 attribution remains unresolved.
 
+The KC Spaces Fund Facebook post pass accounts for all 38 records in the
+surviving public Page timeline exposed by the current interface.
+`intake/2026-07-14-kcspacesfund-facebook-posts.md` interprets the campaign
+sequence, cross-channel identity, grantee recognition, routes, mutable reaction
+floor, and Jamie's non-posting role boundary;
+`data/kcspacesfund-facebook-post-census-2026-07-14.csv` gives every recovered
+record a public-safe disposition. Raw post text, identities, comments, contact
+details, and administrator context remain protected.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

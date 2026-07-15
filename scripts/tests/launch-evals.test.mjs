@@ -8,6 +8,7 @@ import {
   evaluateEvidenceExpansion,
   evaluateGoogleSharedDriveArchiveProduction,
   evaluateICloudArchiveProduction,
+  evaluateKcSpacesFundFacebookPostArchive,
   evaluateKcTownHallCouncilAllocation,
   evaluateKcTownHallFullPopulationArchive,
   evaluateKnowledgeLifecycle,
@@ -1228,6 +1229,130 @@ test("NYC Artist Coalition Facebook post archive rejects publisher columns and p
   assert.ok(
     failures.some((failure) =>
       failure.includes("authentication, Page-session, management-locator, or private-path")
+    )
+  );
+});
+
+const kcSpacesFundFacebookPostFixture = {
+  census: readRepoFile(
+    "docs/knowledge-bank/data/kcspacesfund-facebook-post-census-2026-07-14.csv"
+  ),
+  corpusModel: readRepoFile(
+    "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts"
+  ),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  technicalOperations: readRepoFile(
+    "apps/www/src/app/work/technical-operations/page.tsx"
+  ),
+  archiveDoc: readRepoFile(
+    "docs/knowledge-bank/intake/2026-07-14-kcspacesfund-facebook-posts.md"
+  ),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("KC Spaces Fund Facebook post archive passes population, credit, and privacy boundaries", () => {
+  assert.deepEqual(
+    evaluateKcSpacesFundFacebookPostArchive(kcSpacesFundFacebookPostFixture),
+    []
+  );
+});
+
+test("KC Spaces Fund Facebook post archive rejects a silently dropped record", () => {
+  const lines = kcSpacesFundFacebookPostFixture.census.trim().split("\n");
+  lines.pop();
+  const failures = evaluateKcSpacesFundFacebookPostArchive({
+    ...kcSpacesFundFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("38 post records")));
+  assert.ok(
+    failures.some((failure) => failure.includes("sequence must remain complete"))
+  );
+});
+
+test("KC Spaces Fund Facebook post archive rejects identity, form, and reaction drift", () => {
+  const lines = kcSpacesFundFacebookPostFixture.census.trim().split("\n");
+  const first = lines[1].split(",");
+  const second = lines[2].split(",");
+  second[0] = first[0];
+  second[2] = "status-update-remnant";
+  second[8] = String(Number(second[8]) + 100);
+  lines[2] = second.join(",");
+  const failures = evaluateKcSpacesFundFacebookPostArchive({
+    ...kcSpacesFundFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("record IDs must remain unique"))
+  );
+  assert.ok(
+    failures.some((failure) => failure.includes("original-media-post count"))
+  );
+  assert.ok(
+    failures.some((failure) => failure.includes("reaction floor must remain 119"))
+  );
+});
+
+test("KC Spaces Fund Facebook post archive rejects Page-publisher inflation", () => {
+  const failures = evaluateKcSpacesFundFacebookPostArchive({
+    ...kcSpacesFundFacebookPostFixture,
+    corpusModel: kcSpacesFundFacebookPostFixture.corpusModel
+      .replace(
+        'jamieAccountPostingRole: "not-claimed"',
+        'jamieAccountPostingRole: "publisher"'
+      )
+      .replace(
+        "Jamie was not the stakeholder or owner posting on the Facebook account",
+        "Jamie managed and published the Facebook account"
+      ),
+    technicalOperations: `${kcSpacesFundFacebookPostFixture.technicalOperations}\nJamie managed the KC Spaces Fund Facebook Page.`
+  });
+
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes('jamieAccountPostingRole: "not-claimed"')
+    )
+  );
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("not the stakeholder or owner posting")
+    )
+  );
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("must not assign Page management or post authorship")
+    )
+  );
+});
+
+test("KC Spaces Fund Facebook post archive rejects private material and people semantics", () => {
+  const census = kcSpacesFundFacebookPostFixture.census
+    .replace("public_locator", "public_locator,publisher")
+    .replace(/$/gm, ",Jamie Burkart");
+  const failures = evaluateKcSpacesFundFacebookPostArchive({
+    ...kcSpacesFundFacebookPostFixture,
+    census,
+    archiveDoc: `${kcSpacesFundFacebookPostFixture.archiveDoc}\n__cft__=not-a-real-token\ncontact@kcspacesfund.com`,
+    technicalOperations: `${kcSpacesFundFacebookPostFixture.technicalOperations}\n119 people reached and endorsed the campaign.`
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("11 public-safe columns"))
+  );
+  assert.ok(
+    failures.some((failure) => failure.includes("must not expose publisher rows"))
+  );
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("authentication, Page-session, contact")
+    )
+  );
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("must not convert reactions into people")
     )
   );
 });

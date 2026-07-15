@@ -56,6 +56,14 @@ import {
   nycartcFacebookPostSources
 } from "./nycartc-facebook-posts-batch-2026-07-14.ts";
 import {
+  kcSpacesFundFacebookClaims,
+  kcSpacesFundFacebookInquiries,
+  kcSpacesFundFacebookIntake,
+  kcSpacesFundFacebookProofCoverage,
+  kcSpacesFundFacebookPublicationDecisions,
+  kcSpacesFundFacebookSources
+} from "./kcspacesfund-facebook-posts-batch-2026-07-14.ts";
+import {
   personalWowlistFacebookEventClaims,
   personalWowlistFacebookEventInquiries,
   personalWowlistFacebookEventIntake,
@@ -573,6 +581,7 @@ export const frameworkIntake = [
   ...nycArtCSocialCorpusIntake,
   ...nycartcFacebookEventIntake,
   ...nycartcFacebookPostIntake,
+  ...kcSpacesFundFacebookIntake,
   ...personalWowlistFacebookEventIntake,
   ...wowlistFacebookPostIntake,
   ...callNycSocialCorpusIntake,
@@ -897,6 +906,50 @@ export const frameworkProjects = [
       selectionQuestion: "What evidence diagram would help an editor understand proof maturity without exposing private records?",
       evidenceNeeds: ["public-safe claim lineage"],
       rightsNotes: "Raw resumes, correspondence, transcripts, and private archive screenshots are not publication assets."
+    }
+  },
+  {
+    id: "kc-spaces-fund",
+    title: "KC Spaces Fund",
+    aliases: ["KC Arts and Culture Spaces Mutual Aid Fund"],
+    period: "2020",
+    status: "historical",
+    summary:
+      "A collaborator-led COVID-era mutual-aid campaign supporting grassroots arts and culture spaces in the Kansas City region.",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "reserve",
+    themes: [
+      "mutual aid",
+      "campaign infrastructure",
+      "cross-channel identity",
+      "arts and culture spaces"
+    ],
+    sourceIds: [
+      "SRC-FB-KCSPACESFUND-PAGE-CONTROL-2026",
+      "SRC-FB-KCSPACESFUND-FULL-PUBLIC-TIMELINE-RUN-2026",
+      "SRC-KCSPACESFUND-DIGITAL-ARCHIVE-REVIEW-2026",
+      "SRC-JAMIE-KCSPACESFUND-ROLE-CORRECTION-2026",
+      "SRC-KCSPACESFUND-GOFUNDME-2020"
+    ],
+    claimIds: [
+      "CLM-KCSPACESFUND-SURVIVING-PUBLIC-TIMELINE",
+      "CLM-KCSPACESFUND-CAMPAIGN-ROUTING",
+      "CLM-KCSPACESFUND-DIGITAL-IDENTITY-SUPPORT",
+      "CLM-KCSPACESFUND-VISIBLE-REACTION-FLOOR"
+    ],
+    inquiryIds: ["INQ-KCSPACESFUND-FACEBOOK-POSTS-2026"],
+    photoBrief: {
+      status: "research-needed",
+      selectionQuestion:
+        "Which public-safe campaign interface or credited organizer-approved image shows the digital support without recentering Jamie over the mutual-aid organizers?",
+      evidenceNeeds: [
+        "campaign interface",
+        "organizer credit",
+        "public action path",
+        "rights and context"
+      ],
+      rightsNotes:
+        "Do not publish applicant, grantee, donor, organizer, or campaign imagery without project-specific rights and context review."
     }
   },
   {
@@ -1404,6 +1457,7 @@ export const frameworkSources = [
   ...nycArtCSocialCorpusSources,
   ...nycartcFacebookEventSources,
   ...nycartcFacebookPostSources,
+  ...kcSpacesFundFacebookSources,
   ...personalWowlistFacebookEventSources,
   ...wowlistFacebookPostSources,
   ...callNycSocialCorpusSources,
@@ -1778,6 +1832,7 @@ export const frameworkClaims = [
   ...nycArtCSocialCorpusClaims,
   ...nycartcFacebookEventClaims,
   ...nycartcFacebookPostClaims,
+  ...kcSpacesFundFacebookClaims,
   ...personalWowlistFacebookEventClaims,
   ...wowlistFacebookPostClaims,
   ...callNycSocialCorpusClaims,
@@ -1819,6 +1874,7 @@ export const frameworkInquiries = [
   ...nycArtCSocialCorpusInquiries,
   ...nycartcFacebookEventInquiries,
   ...nycartcFacebookPostInquiries,
+  ...kcSpacesFundFacebookInquiries,
   ...personalWowlistFacebookEventInquiries,
   ...wowlistFacebookPostInquiries,
   ...callNycSocialCorpusInquiries,
@@ -1878,6 +1934,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   nycArtCSocialCorpusPublicationDecisions,
   nycartcFacebookEventPublicationDecisions,
   nycartcFacebookPostPublicationDecisions,
+  kcSpacesFundFacebookPublicationDecisions,
   personalWowlistFacebookEventPublicationDecisions,
   wowlistFacebookPostPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
@@ -1908,7 +1965,7 @@ export const frameworkProofCoverage = [
   coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview and Music Hackathon record independently support WOW List's community-events function and Jamie's co-organizer role. Selected Facebook records add member-led city calendars, a 41-event Los Angeles contribution, and Phoenix organizer continuity; a protected Page-management audit identifies Jamie as publisher on 51 matching records with six unresolved. Technical architecture and the larger aggregate scale remain archive-backed and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015", "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015", "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015", "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018", "SRC-FB-WOWLIST-PUBLISHER-ATTRIBUTION-RUN-2026"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-WOWLIST-FACEBOOK-FULL-POPULATION-2026"]),
   coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community; public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck; and a protected 2023 record confirms Jamie's proposal-review and onboarding workflow for one residency. Aggregate gathering and residency totals remain separately protected.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014", "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017", "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS", "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026"]),
   coverage("commercial-vacancy-public-data-brief", "source-backed", "A protected March 2026 artifact directly supports Jamie's authorship of the bounded public-data proposal while external adoption and implementation remain open.", ["SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026"], ["INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME"]),
-  coverage("kc-spaces-fund-digital-infrastructure", "research-needed", "Convert AI-assisted archival review into bounded canonical source metadata where public-safe."),
+  coverage("kc-spaces-fund-digital-infrastructure", "source-backed", "Protected code and launch evidence support website and infrastructure work; Jamie confirms cross-channel naming support and a non-posting role; the public Page and campaign routes corroborate identity consistency.", ["SRC-FB-KCSPACESFUND-PAGE-CONTROL-2026", "SRC-FB-KCSPACESFUND-FULL-PUBLIC-TIMELINE-RUN-2026", "SRC-KCSPACESFUND-DIGITAL-ARCHIVE-REVIEW-2026", "SRC-JAMIE-KCSPACESFUND-ROLE-CORRECTION-2026", "SRC-KCSPACESFUND-GOFUNDME-2020"], ["INQ-KCSPACESFUND-FACEBOOK-POSTS-2026"]),
   coverage("kc-town-hall-public-benefit-documentation", "source-backed", "Official Kansas City records identify Jamie as presenter, record the unanimous recommendation, and show the Council's $490,539 allocation and authorization of funding-agreement negotiations; execution and disbursement remain open.", ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"], ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"]),
   coverage("source-backed-team-memory-method", "partially-backed", "A protected June 2026 proposal supports the bounded method, human-review loop, approved-source scoping, and privacy boundaries; it does not establish a completed client engagement or production product.", ["SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE"]),
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
@@ -1917,6 +1974,7 @@ export const frameworkProofCoverage = [
   ...nycArtCSocialCorpusProofCoverage,
   ...nycartcFacebookEventProofCoverage,
   ...nycartcFacebookPostProofCoverage,
+  ...kcSpacesFundFacebookProofCoverage,
   ...personalWowlistFacebookEventProofCoverage,
   ...wowlistFacebookPostProofCoverage,
   ...callNycSocialCorpusProofCoverage,
