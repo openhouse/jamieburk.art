@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-nter-chng-v3",
+  "judgeId": "archival-editorial-personal-facebook-v4",
   "lens": "archival-editorial",
-  "candidate": "sha256:b563d342fb181ddb3cce2ef4c9319a7da969b799ab04cdf839fe42d32e70f651",
-  "contract": "sha256:0b86c4518c6856fb5d9b14f59c72f1278bd90a4ad6199380a29c9c3b67483f79",
+  "candidate": "sha256:c07fbbe1d3af8e463d006df32299059017e55b615d75ad390cfc41a290d13822",
+  "contract": "sha256:d5cef0be94881674b77d77a98adaa9ec598a1ae0006f8c63d9b86613160cde43",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -10,44 +10,48 @@
     "claim_atomicity": 4,
     "provenance_closure": 4,
     "status_separation": 4,
-    "project_context": 3,
+    "project_context": 4,
     "research_honesty": 4,
     "projection_restraint": 4
   },
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "All recovered NTER CHNG and America: Now and Here fragments retain durable intake identities, explicit dispositions, and closed links to sources, claims, project context, and inquiry."
+      "observation": "The census preserves 1,243 unique owner-filtered records from 3,728 returned nodes across 621 cursor pages, terminal has-next-page false, zero missing dates, zero owner-absent records, and explicit current-surface limits."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "Creator and venue evidence, exhibition inclusion and participant use, May 5-30 chronology, and Nerman contextual evidence remain assigned to distinct sources with accurate relationship types."
+      "observation": "Private census and URL-inventory sources retain opaque protected locators and non-support boundaries; promoted public posts were individually audience-rechecked, and The Pitch article remains independently decomposed."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "The inclusion claim remains bounded to a single exhibition episode and chronology without assigning individual causality or collapsing collaborator credits."
+      "observation": "Population, mission routing, URL routing, stakeholder mentions, mutable counters, campaign routing, CouncilStat wording, and collective raft completion remain separate claims with claim-specific evidence and anti-claims."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "Each new source has intake provenance, close-reading metadata, point locators, support and non-support scope, and a defined role in the recovered Wayback inquiry."
+      "observation": "The repaired WOW List corroborating edge remains on CLM-FB-WOWLIST-COMMUNITY-ROUTING and absent from the Page-population denominator; its mutation test relocates the edge and triggers personal-facebook-wowlist-evidence-edge."
     },
     {
       "rubric": "status_separation",
-      "observation": "Recovered evidence, inquiry findings, qualified claim maturity, and editorial selection remain separate; the projection is held and has no public surfaces."
+      "observation": "Personal Facebook census and routing claims remain internal-only without active projections, while the independently supported raft-completion claim remains qualified and editorially unused."
     },
     {
       "rubric": "project_context",
-      "observation": "The inquiry and research note provide strong chronology, collaborator, venue, source-role, and future-research orientation, while the top-level creative-technical dossier remains comparatively broad."
+      "observation": "personal-public-record now begins in 2006, matching the recovered Facebook chronology. The suite binds recoveredStartYear to 2006, the canonical test requires exact equality, and a mutation to 2008 triggers personal-facebook-project-period."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The records explicitly reject commission, acquisition, Nerman Museum presentation, sole authorship, inferred labor allocation, visitor counts, and measured audience impact."
+      "observation": "The 181 mission records remain overlapping research routes, 549 external destinations remain source leads, stakeholder counts remain outgoing mentions, CouncilStat remains inconclusive, and raft completion retains collective credit."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The contract now independently removes only the audience-impact anti-claim and confirms lifecycle failure, demonstrating that this boundary is specifically enforced rather than passing incidentally through removal of unrelated protections; all 63 lifecycle tests pass."
+      "observation": "The raw corpus remains private because 973 records lacked exposed audience labels; selected counters remain dated mutable observations barred from reach, engagement, attendance, endorsement, conversion, causality, or impact claims."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The deterministic lifecycle evaluation scores 100 with zero findings. All 69 lifecycle tests, knowledge-bank checks, public-safety checks, TypeScript validation, and diff integrity checks pass."
     }
   ],
   "regressions": [],
-  "nextAction": "Create durable archived captures for the currently live Vimeo and Nerman sources while preserving their existing source roles and collaborator-credit boundaries."
+  "nextAction": "No corrective action is required; preserve the recovered-start-year and WOW List evidence-edge mutation tests."
 }

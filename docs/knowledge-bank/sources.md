@@ -208,6 +208,26 @@ personal or financial material.
 
 AI-assisted archival review is not a human collaborator testimonial.
 
+## Jamie Personal Facebook Post Production
+
+The record-level owner-post census and normalized URL inventory are private
+research-run sources with opaque protected locators. They support the current
+1,243-record denominator, 621-page terminal control, deterministic research
+routing, and the 549-URL source queue. They do not establish a lifetime post
+total, public audience for every record, readership, engagement, endorsement,
+attendance, conversion, causality, or impact.
+
+Six individually reopened posts were rechecked as public and promoted as
+source records: NTER CHNG opening documentation, WOW List's nine-city calendar
+announcement, a CouncilStat job route, a Let NYC Dance press-and-action route,
+the KC Town Hall project announcement, and a Talks Not Raids action route.
+Each source states what it supports and what it cannot establish.
+
+The source pass also promoted Carolyn Szczepanski's 2009 Pitch follow-up on
+Great Accommodations. That independent report supports collective Gulf
+completion and a four-month duration for the raft journey while preserving the
+crew and route-log boundaries.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for

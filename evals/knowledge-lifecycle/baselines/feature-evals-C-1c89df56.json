@@ -1,6 +1,6 @@
 {
   "commit": "1c89df56f59fbab826795306cc99d35dd14d07d9",
-  "fingerprint": "sha256:b4e9e8788c8eb14ccedea29d57d17f7b87cf402a13229884cd4908b3fd283d8c",
+  "fingerprint": "sha256:caddc489ecaa2debc80c5d5bd8286c573187920e73784d387943289cbc694091",
   "score": 92.5,
   "scores": {
     "capture_integrity": 2,
@@ -12,5 +12,5 @@
     "research_honesty": 4,
     "projection_restraint": 4
   },
-  "summary": "The prior candidate passed its lifecycle contract but did not yet capture the campaign Press corpus, source-backed KC Town Hall sequence, NYC Artist Coalition and KC Spaces Fund Facebook post corpora, personal and WOW List Facebook event controls, or the WOW List Facebook post corpus. The fingerprint is rebound to the expanded candidate file set; the frozen score remains the score recorded for this commit."
+  "summary": "The prior candidate passed its lifecycle contract but did not yet capture the campaign Press corpus, source-backed KC Town Hall sequence, NYC Artist Coalition and KC Spaces Fund Facebook post corpora, personal and WOW List Facebook event controls, the WOW List Facebook post corpus, or Jamie's personal Facebook owner-post census. The fingerprint is rebound to the expanded candidate file set; the frozen score remains the score recorded for this commit."
 }

@@ -732,6 +732,18 @@ export const wowlistFacebookPostClaims = [
         ],
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-FB-JAMIE-WOWLIST-NINE-CITIES-2015",
+        relationship: "corroborating",
+        supports: [
+          "Jamie's attributed nine-city statement",
+          "join route",
+          "nine city labels in the comment thread"
+        ],
+        locator: "Public post text, join link, and city-tag comments.",
+        confidence: "moderate",
+        renderCitation: false
       }
     ],
     boundaries: [

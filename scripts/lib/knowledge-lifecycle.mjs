@@ -1188,7 +1188,7 @@ export function validateKnowledgeLifecycle(bank, suite) {
     const urlInventorySource = sourceById.get(required.urlInventorySourceId);
     const memorySource = sourceById.get(required.memorySourceId);
     const nineCitiesSource = sourceById.get(required.nineCitiesSourceId);
-    const corpusText = JSON.stringify(corpusSource ?? {});
+    const corpusText = JSON.stringify(corpusSource ?? {}).replaceAll(",", "");
     if (
       !corpusSource ||
       corpusSource.visibility !== "private" ||
@@ -1474,7 +1474,7 @@ export function validateKnowledgeLifecycle(bank, suite) {
     const managementControl = sourceById.get(required.managementControlSourceId);
     const urlInventory = sourceById.get(required.urlInventorySourceId);
     const memorySource = sourceById.get(required.memorySourceId);
-    const corpusText = JSON.stringify(corpusSource ?? {});
+    const corpusText = JSON.stringify(corpusSource ?? {}).replaceAll(",", "");
     if (
       !corpusSource ||
       corpusSource.visibility !== "private" ||
@@ -1537,7 +1537,7 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
     if (
       !population ||
-      !population.internalClaim.includes(String(required.currentPostCount)) ||
+      !population.internalClaim.replaceAll(",", "").includes(String(required.currentPostCount)) ||
       !population.internalClaim.match(/Two independent terminal traversals/i) ||
       !population.boundaries.some((item) => /Deleted, unpublished, pre-migration-omitted/i.test(item)) ||
       !population.antiClaims.some((item) => /exactly 444.*history/i.test(item))
@@ -1723,7 +1723,7 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
     if (
       !population ||
-      !population.internalClaim.includes(String(required.currentPostCount)) ||
+      !population.internalClaim.replaceAll(",", "").includes(String(required.currentPostCount)) ||
       !population.internalClaim.match(/Two independently paced authenticated traversals/i) ||
       !population.boundaries.some((item) => /Deleted, unpublished, pre-migration-omitted/i.test(item)) ||
       !population.antiClaims.some((item) => /exactly 37.*history/i.test(item))
@@ -1824,6 +1824,332 @@ export function validateKnowledgeLifecycle(bank, suite) {
       !roleInquiry.limitations.some((item) => /do(?:es)? not make Jamie a public organizer.*author of the campaign's Facebook voice/i.test(item))
     ) {
       add("research_honesty", "kcspaces-role-inquiry", `${required.roleInquiryId} loses implementation strength or naming and public-voice limits`);
+    }
+  }
+
+  if (suite.requiredPersonalFacebookPosts) {
+    const required = suite.requiredPersonalFacebookPosts;
+    for (const id of required.intakeIds) {
+      if (!intakeIds.has(id)) add("capture_integrity", "missing-personal-facebook-intake", `Missing ${id}`);
+    }
+    for (const id of required.sourceIds) {
+      if (!sourceIds.has(id)) add("source_decomposition", "missing-personal-facebook-source", `Missing ${id}`);
+    }
+    for (const id of required.claimIds) {
+      if (!claimIds.has(id)) add("provenance_closure", "missing-personal-facebook-claim", `Missing ${id}`);
+    }
+    for (const id of required.inquiryIds) {
+      if (!inquiryIds.has(id)) add("research_honesty", "missing-personal-facebook-inquiry", `Missing ${id}`);
+    }
+
+    const corpusIntake = bank.intakeItems.find((item) => item.id === required.corpusIntakeId);
+    const personalPublicRecordProject = bank.projects.find(
+      (item) => item.id === "personal-public-record"
+    );
+    if (
+      !personalPublicRecordProject ||
+      Number(personalPublicRecordProject.period.start) > required.recoveredStartYear
+    ) {
+      add(
+        "project_context",
+        "personal-facebook-project-period",
+        "The personal-public-record project period begins after the recovered Facebook chronology"
+      );
+    }
+    if (
+      !corpusIntake ||
+      corpusIntake.sensitivity === "public-safe" ||
+      corpusIntake.availability !== "local-private" ||
+      !corpusIntake.protectedLocatorId ||
+      corpusIntake.submittedUrl
+    ) {
+      add(
+        "projection_restraint",
+        "personal-facebook-intake-boundary",
+        `${required.corpusIntakeId} exposes the record-level personal post corpus`
+      );
+    }
+
+    const corpusSource = sourceById.get(required.corpusSourceId);
+    const urlInventorySource = sourceById.get(required.urlInventorySourceId);
+    const corpusText = JSON.stringify(corpusSource ?? {}).replaceAll(",", "");
+    if (
+      !corpusSource ||
+      corpusSource.visibility !== "private" ||
+      corpusSource.preservationStatus !== "private" ||
+      !corpusSource.protectedLocatorId ||
+      ![
+        required.currentPostCount,
+        required.cursorPageCount,
+        required.returnedNodeCount
+      ].every((count) => corpusText.includes(String(count))) ||
+      !corpusSource.locator?.match(/has-next-page false/i) ||
+      !corpusSource.doesNotEstablish.some((item) => /native Meta export.*deletion history.*lifetime/i.test(item)) ||
+      !corpusSource.doesNotEstablish.some((item) => /audience visibility was public/i.test(item))
+    ) {
+      add(
+        "capture_integrity",
+        "personal-facebook-population-source",
+        `${required.corpusSourceId} loses its current-surface denominator, terminal control, or audience boundary`
+      );
+    }
+    if (
+      !urlInventorySource ||
+      urlInventorySource.visibility !== "private" ||
+      !urlInventorySource.protectedLocatorId ||
+      ![required.urlBearingRecordCount, required.uniqueExternalUrlCount].every((count) =>
+        JSON.stringify(urlInventorySource).includes(String(count))
+      ) ||
+      !urlInventorySource.doesNotEstablish.some((item) => /truth.*authorship.*availability/i.test(item)) ||
+      !urlInventorySource.doesNotEstablish.some((item) => /partnership.*endorsement/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-posted-url-source",
+        `${required.urlInventorySourceId} loses exact counts or source-routing limits`
+      );
+    }
+
+    const wowlistSource = sourceById.get(required.wowlistSourceId);
+    const callNycSource = sourceById.get(required.callNycSourceId);
+    const kcTownHallSource = sourceById.get(required.kcTownHallSourceId);
+    const pitchSource = sourceById.get(required.pitchSourceId);
+    if (
+      !wowlistSource ||
+      wowlistSource.visibility !== "public" ||
+      wowlistSource.reviewDepth !== "close-reading" ||
+      !wowlistSource.supportsGenerally.some((item) => /attributed nine-city/i.test(item)) ||
+      !wowlistSource.doesNotEstablish.some((item) => /sustained activity.*every city/i.test(item)) ||
+      !wowlistSource.doesNotEstablish.some((item) => /lifetime city count.*reach/i.test(item))
+    ) {
+      add(
+        "source_decomposition",
+        "personal-facebook-wowlist-source-boundary",
+        `${required.wowlistSourceId} loses attribution, city, or metric limits`
+      );
+    }
+    const wowlistPopulation = bank.claims.find(
+      (item) => item.id === suite.requiredWowlistFacebookPosts.populationClaimId
+    );
+    const wowlistCommunity = bank.claims.find(
+      (item) => item.id === suite.requiredWowlistFacebookPosts.communityClaimId
+    );
+    if (
+      wowlistPopulation?.evidence.some((item) => item.sourceId === required.wowlistSourceId) ||
+      !wowlistCommunity?.evidence.some((item) => item.sourceId === required.wowlistSourceId)
+    ) {
+      add(
+        "provenance_closure",
+        "personal-facebook-wowlist-evidence-edge",
+        `${required.wowlistSourceId} must support community routing, not the Page-population denominator`
+      );
+    }
+    if (
+      !callNycSource ||
+      !callNycSource.doesNotEstablish.some((item) => /employment.*title.*contract.*team membership/i.test(item)) ||
+      !callNycSource.doesNotEstablish.some((item) => /hiring authority/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-callnyc-source-boundary",
+        `${required.callNycSourceId} converts social wording into a Council role`
+      );
+    }
+    if (
+      !kcTownHallSource ||
+      !kcTownHallSource.supportsGenerally.some((item) => /attributed co-initiation/i.test(item)) ||
+      !kcTownHallSource.doesNotEstablish.some((item) => /sole founding.*ownership/i.test(item)) ||
+      !kcTownHallSource.doesNotEstablish.some((item) => /later Board recommendation.*Council appropriation/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-kctownhall-source-boundary",
+        `${required.kcTownHallSourceId} loses co-initiation attribution or later-outcome limits`
+      );
+    }
+    if (
+      !pitchSource ||
+      pitchSource.kind !== "published-article" ||
+      pitchSource.reviewDepth !== "close-reading" ||
+      !pitchSource.supportsGenerally.some((item) => /collective arrival.*Gulf/i.test(item)) ||
+      !pitchSource.doesNotEstablish.some((item) => /solo completion/i.test(item))
+    ) {
+      add(
+        "source_decomposition",
+        "personal-facebook-promoted-article",
+        `${required.pitchSourceId} loses independent completion support or collective credit`
+      );
+    }
+
+    const population = bank.claims.find((item) => item.id === required.populationClaimId);
+    const mission = bank.claims.find((item) => item.id === required.missionClaimId);
+    const urlClaim = bank.claims.find((item) => item.id === required.urlClaimId);
+    const stakeholder = bank.claims.find((item) => item.id === required.stakeholderClaimId);
+    const engagement = bank.claims.find((item) => item.id === required.engagementClaimId);
+    const action = bank.claims.find((item) => item.id === required.actionClaimId);
+    const callNyc = bank.claims.find((item) => item.id === required.callNycClaimId);
+    const waterCompletion = bank.claims.find((item) => item.id === required.waterCompletionClaimId);
+    const reserveClaims = [population, mission, urlClaim, stakeholder, engagement, action, callNyc];
+    if (
+      reserveClaims.some(
+        (claim) =>
+          !claim ||
+          claim.publicationStatus !== "internal-only" ||
+          claim.projections.some((projection) => projection.status === "active")
+      )
+    ) {
+      add(
+        "projection_restraint",
+        "personal-facebook-projection-boundary",
+        "Personal Facebook census, routing, role, and engagement research is projected publicly instead of retained as reserve depth"
+      );
+    }
+    if (
+      !population ||
+      !population.internalClaim.replaceAll(",", "").includes(String(required.currentPostCount)) ||
+      !population.internalClaim.includes(String(required.cursorPageCount)) ||
+      !population.evidence.some((item) => item.sourceId === required.corpusSourceId) ||
+      !population.boundaries.some((item) => /Manage Posts.*Posted by You.*current/i.test(item)) ||
+      !population.boundaries.some((item) => /not a native Meta export.*deletion history.*lifetime/i.test(item)) ||
+      !population.antiClaims.some((item) => /exactly 1,243.*lifetime/i.test(item)) ||
+      !population.antiClaims.some((item) => /Every retained record is public/i.test(item))
+    ) {
+      add(
+        "capture_integrity",
+        "personal-facebook-population-claim",
+        `${required.populationClaimId} overstates the currently observable owner-filtered population`
+      );
+    }
+    if (
+      !mission ||
+      !mission.internalClaim.includes(String(required.missionRecordCount)) ||
+      !mission.boundaries.some((item) => /categories overlap.*research routes/i.test(item)) ||
+      !mission.boundaries.some((item) => /do not establish.*acted.*attended.*endorsed/i.test(item)) ||
+      !mission.antiClaims.some((item) => /181 separate professional projects/i.test(item)) ||
+      !mission.antiClaims.some((item) => /authored every linked.*shared.*quoted/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-mission-boundary",
+        `${required.missionClaimId} converts research routes into projects, authorship, or impact`
+      );
+    }
+    if (
+      !urlClaim ||
+      !urlClaim.internalClaim.includes(String(required.urlBearingRecordCount)) ||
+      !urlClaim.internalClaim.includes(String(required.uniqueExternalUrlCount)) ||
+      !urlClaim.boundaries.some((item) => /source lead.*independently recovered.*close-read/i.test(item)) ||
+      !urlClaim.boundaries.some((item) => /does not establish.*truth.*authorship.*partnership.*endorsement/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-posted-url-boundary",
+        `${required.urlClaimId} converts posted routes into proof or endorsement`
+      );
+    }
+    if (
+      !stakeholder ||
+      !stakeholder.boundaries.some((item) => /not actions by the named stakeholders/i.test(item)) ||
+      !stakeholder.boundaries.some((item) => /not engagement.*attendance.*endorsement.*partnership.*impact/i.test(item)) ||
+      !stakeholder.antiClaims.some((item) => /Twenty New York City Council members engaged/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-stakeholder-boundary",
+        `${required.stakeholderClaimId} converts outgoing mentions into stakeholder engagement`
+      );
+    }
+    if (
+      !engagement ||
+      !engagement.internalClaim.match(/106 reactions.*14 comments.*three shares/i) ||
+      !engagement.boundaries.some((item) => /mutable current interface observations/i.test(item)) ||
+      !engagement.boundaries.some((item) => /Do not sum.*reach.*unique people.*stakeholder engagement/i.test(item)) ||
+      !engagement.antiClaims.some((item) => /reached 165 people/i.test(item))
+    ) {
+      add(
+        "projection_restraint",
+        "personal-facebook-engagement-boundary",
+        `${required.engagementClaimId} converts selected mutable counters into reach or impact`
+      );
+    }
+    if (
+      !action ||
+      !action.boundaries.some((item) => /not sole ownership or authorship.*collective campaigns/i.test(item)) ||
+      !action.boundaries.some((item) => /do not prove attendance.*legislative causality/i.test(item)) ||
+      !action.antiClaims.some((item) => /single-handedly organized/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-action-routing-boundary",
+        `${required.actionClaimId} converts personal routing into sole campaign credit or causality`
+      );
+    }
+    if (
+      !callNyc ||
+      callNyc.status !== "use-with-care" ||
+      !callNyc.boundaries.some((item) => /Preserve attribution.*do not infer employment.*title.*contract.*hiring authority/i.test(item)) ||
+      !callNyc.antiClaims.some((item) => /employed by.*Council.*CouncilStat/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-callnyc-role-boundary",
+        `${required.callNycClaimId} converts attributed social wording into an institutional role`
+      );
+    }
+    if (
+      !waterCompletion ||
+      waterCompletion.publicationStatus !== "qualified" ||
+      waterCompletion.editorialStatus !== "unused" ||
+      !waterCompletion.evidence.some((item) => item.sourceId === required.pitchSourceId) ||
+      !waterCompletion.internalClaim.match(/Jamie and his fellow artists.*Gulf of Mexico.*four months/i) ||
+      !waterCompletion.boundaries.some((item) => /Credit the journey collectively/i.test(item)) ||
+      !waterCompletion.antiClaims.some((item) => /Jamie alone completed/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-water-completion-boundary",
+        `${required.waterCompletionClaimId} loses independent support, collective credit, or editorial restraint`
+      );
+    }
+
+    const populationInquiry = bank.researchInquiries.find((item) => item.id === required.populationInquiryId);
+    const sourceInquiry = bank.researchInquiries.find((item) => item.id === required.sourceInquiryId);
+    const callNycInquiry = bank.researchInquiries.find((item) => item.id === required.callNycInquiryId);
+    if (
+      !populationInquiry ||
+      !populationInquiry.methods.some((item) => /621 cursor pages.*has-next-page was false/i.test(item)) ||
+      !populationInquiry.limitations.some((item) => /100 percent coverage.*not a native Meta export.*deletion history/i.test(item)) ||
+      !populationInquiry.limitations.some((item) => /Audience labels were not exposed.*raw population remains private/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-population-inquiry",
+        `${required.populationInquiryId} loses terminal, completeness, or audience controls`
+      );
+    }
+    if (
+      !sourceInquiry ||
+      !sourceInquiry.findings.some((item) => /549 unique normalized external URLs/i.test(item)) ||
+      !sourceInquiry.limitations.some((item) => /not automatic corroboration/i.test(item)) ||
+      !sourceInquiry.findings.some((item) => /Pitch.*independently reports collective Gulf completion/i.test(item))
+    ) {
+      add(
+        "source_decomposition",
+        "personal-facebook-source-inquiry",
+        `${required.sourceInquiryId} promotes routes without independent review`
+      );
+    }
+    if (
+      !callNycInquiry ||
+      callNycInquiry.resultStatus !== "inconclusive" ||
+      !callNycInquiry.findings.some((item) => /does not.*resolve.*title.*employment.*contract.*team membership.*hiring authority/i.test(item)) ||
+      !callNycInquiry.limitations.some((item) => /job PDF is currently unavailable/i.test(item))
+    ) {
+      add(
+        "research_honesty",
+        "personal-facebook-callnyc-inquiry",
+        `${required.callNycInquiryId} resolves an institutional role without corroboration`
+      );
     }
   }
 

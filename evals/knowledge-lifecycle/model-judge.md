@@ -128,6 +128,28 @@ Ask:
     commission, acquisition, visitor-impact claim, or assertion that NTER CHNG
     was shown at the Nerman Museum, while preserving every collaborator's
     documented credit?
+43. Does the personal Facebook census preserve the exact current denominator of
+    1,243 owner-filtered records across 621 cursor pages and a terminal no-next-
+    page control without becoming a lifetime publication count, native export,
+    deletion history, or claim that every retained record is public?
+44. Does the private treatment reflect that audience labels were not exposed for
+    most crawl records, with only individually reopened and rechecked public
+    posts promoted as public sources?
+45. Are the 181 mission-routed records treated as overlapping deterministic
+    research routes rather than 181 projects, effort, performance, authorship,
+    audience conversion, or impact?
+46. Are the 430 URL-bearing records and 549 unique external routes treated as
+    source leads until destination recovery and close reading, while the newly
+    promoted Pitch article receives its own independent source decomposition?
+47. Are New York City Council, officeholder, venue, and agency mention counts
+    explicitly outgoing mentions and routes rather than actions by those
+    stakeholders, engagement, attendance, endorsement, partnership, or impact?
+48. Do the selected current Facebook counters remain dated mutable interface
+    observations that are never summed into reach, unique people, stakeholder
+    engagement, attendance, conversion, causality, or impact?
+49. Does the CouncilStat job-route post remain an attributed first-person clue
+    with an inconclusive role inquiry, while the raft completion claim preserves
+    The Pitch's independent support and collective journey credit?
 
 Return JSON with:
 

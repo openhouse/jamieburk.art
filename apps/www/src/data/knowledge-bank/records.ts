@@ -57,6 +57,12 @@ import {
   kcSpacesFundProject
 } from "./kcspacesfund-facebook-posts-archive-production.ts";
 import {
+  personalFacebookPostClaims,
+  personalFacebookPostIntakes,
+  personalFacebookPostResearchInquiries,
+  personalFacebookPostSources
+} from "./personal-facebook-posts-archive-production.ts";
+import {
   campaignPressCollections,
   campaignPressIntakes,
   campaignPressSources
@@ -74,6 +80,7 @@ import {
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...personalFacebookPostIntakes,
     ...kcSpacesFundFacebookPostIntakes,
     ...nycArtcFacebookPostIntakes,
     ...wowlistFacebookPostIntakes,
@@ -677,6 +684,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...personalFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
     ...nycArtcFacebookPostSources,
     ...wowlistFacebookPostSources,
@@ -853,6 +861,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...personalFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
     ...nycArtcFacebookPostClaims,
     ...wowlistFacebookPostClaims,
@@ -972,6 +981,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...personalFacebookPostResearchInquiries,
     ...kcSpacesFundFacebookPostResearchInquiries,
     ...nycArtcFacebookPostResearchInquiries,
     ...wowlistFacebookPostResearchInquiries,

@@ -660,6 +660,71 @@
     "roleInquiryId": "INQ-KCSPACES-ROLE-AND-NAMING-2026",
     "controlPath": "docs/knowledge-bank/data/kcspacesfund-facebook-post-controls.json"
   },
+  "requiredPersonalFacebookPosts": {
+    "intakeIds": [
+      "INT-2026-07-15-FB-JAMIE-POSTS",
+      "INT-2026-07-15-FB-JAMIE-NTER-OPENING",
+      "INT-2026-07-15-FB-JAMIE-WOWLIST-NINE-CITIES",
+      "INT-2026-07-15-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB",
+      "INT-2026-07-15-FB-JAMIE-LETNYCDANCE-NPR",
+      "INT-2026-07-15-FB-JAMIE-KCTOWNHALL-START",
+      "INT-2026-07-15-FB-JAMIE-TALKSNOTRAIDS-ACTION",
+      "INT-2026-07-15-PITCH-GREAT-ACCOMMODATIONS-FOLLOWUP"
+    ],
+    "sourceIds": [
+      "SRC-FB-JAMIE-POST-CORPUS-2026",
+      "SRC-FB-JAMIE-POSTED-URL-INVENTORY-2026",
+      "SRC-FB-JAMIE-NTER-OPENING-2010",
+      "SRC-FB-JAMIE-WOWLIST-NINE-CITIES-2015",
+      "SRC-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-2016",
+      "SRC-FB-JAMIE-LETNYCDANCE-NPR-2017",
+      "SRC-FB-JAMIE-KCTOWNHALL-START-2018",
+      "SRC-FB-JAMIE-TALKSNOTRAIDS-ACTION-2019",
+      "SRC-PITCH-GREAT-ACCOMMODATIONS-FOLLOWUP-2009"
+    ],
+    "claimIds": [
+      "CLM-FB-JAMIE-POST-POPULATION-2026",
+      "CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE",
+      "CLM-FB-JAMIE-POSTED-URL-ROUTING-2026",
+      "CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026",
+      "CLM-FB-JAMIE-ENGAGEMENT-SAMPLES-2026",
+      "CLM-FB-JAMIE-CAMPAIGN-ACTION-ROUTING",
+      "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE",
+      "CLM-WATER-RAFT-GULF-COMPLETION"
+    ],
+    "inquiryIds": [
+      "INQ-FB-JAMIE-POST-CORPUS-2026",
+      "INQ-FB-JAMIE-POSTED-SOURCES-2026",
+      "INQ-FB-JAMIE-COUNCILSTAT-ROLE-2026"
+    ],
+    "currentPostCount": 1243,
+    "recoveredStartYear": 2006,
+    "cursorPageCount": 621,
+    "returnedNodeCount": 3728,
+    "missionRecordCount": 181,
+    "urlBearingRecordCount": 430,
+    "uniqueExternalUrlCount": 549,
+    "audienceUnknownCount": 973,
+    "corpusIntakeId": "INT-2026-07-15-FB-JAMIE-POSTS",
+    "corpusSourceId": "SRC-FB-JAMIE-POST-CORPUS-2026",
+    "urlInventorySourceId": "SRC-FB-JAMIE-POSTED-URL-INVENTORY-2026",
+    "wowlistSourceId": "SRC-FB-JAMIE-WOWLIST-NINE-CITIES-2015",
+    "callNycSourceId": "SRC-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-2016",
+    "kcTownHallSourceId": "SRC-FB-JAMIE-KCTOWNHALL-START-2018",
+    "pitchSourceId": "SRC-PITCH-GREAT-ACCOMMODATIONS-FOLLOWUP-2009",
+    "populationClaimId": "CLM-FB-JAMIE-POST-POPULATION-2026",
+    "missionClaimId": "CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE",
+    "urlClaimId": "CLM-FB-JAMIE-POSTED-URL-ROUTING-2026",
+    "stakeholderClaimId": "CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026",
+    "engagementClaimId": "CLM-FB-JAMIE-ENGAGEMENT-SAMPLES-2026",
+    "actionClaimId": "CLM-FB-JAMIE-CAMPAIGN-ACTION-ROUTING",
+    "callNycClaimId": "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE",
+    "waterCompletionClaimId": "CLM-WATER-RAFT-GULF-COMPLETION",
+    "populationInquiryId": "INQ-FB-JAMIE-POST-CORPUS-2026",
+    "sourceInquiryId": "INQ-FB-JAMIE-POSTED-SOURCES-2026",
+    "callNycInquiryId": "INQ-FB-JAMIE-COUNCILSTAT-ROLE-2026",
+    "controlPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json"
+  },
   "requiredGoogleDriveArchiveProduction": {
     "intakeIds": [
       "INT-2026-07-14-GDRIVE-196-ACCEPTANCE-WORKFLOW",

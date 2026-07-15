@@ -18,6 +18,36 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## jamie-facebook-public-routing-practice - Personal public routing practice
+
+**Status:** Internal only
+**Support level:** Confirmed with boundary
+**Evidence class:** Complete current-surface census / selected public posts / posted-source inventory
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** The current owner-filtered census contains 1,243 records across 621 cursor pages. A deterministic research pass routed 181 records into overlapping mission categories, and selected public posts show Jamie connecting project identities, press, hearings, campaign tools, official forms, legislation, and in-person invitations.
+**Where to project:** Bank only. Consider later role-specific composition when public participation infrastructure, campaign operations, source routing, or civic translation is material.
+**Why it matters:** Preserves a long-running practice of translating among cultural, technical, and civic contexts without treating a personal account as a reach metric.
+**Guardrail:** The current population is not a native export or lifetime total. Categories overlap. Posted routes are source leads. Current counters are mutable. Shared material retains its authorship and collective credit.
+**Do not say:** Jamie published exactly 1,243 posts; every record is public; 181 mission records equal 181 projects; mentions are stakeholder engagement; reactions prove reach or impact.
+**Protected boundaries:** Raw post text, private-life context, addresses, phone numbers, friend-only material, audience-unknown records, response rosters, and record-level corpus data stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## water-raft-gulf-completion - Collective Gulf completion
+
+**Status:** Mature but unused
+**Support level:** Confirmed with boundary
+**Evidence class:** Independent published article
+**Public wording:** The Pitch reported that Jamie and his fellow artists reached the Gulf of Mexico four months after leaving Kansas City on their bicycle-propelled recycled-material raft.
+**Detailed public-safe wording:** A 2009 Pitch follow-up independently reported collective Gulf completion and a four-month duration, connecting the earlier raft journey to Great Accommodations and Jamie's continuing Missouri River practice.
+**Where to project:** Future water-publics case study or archive note after editorial selection.
+**Why it matters:** Replaces a first-person-only completion account with independent reporting while preserving collective credit.
+**Guardrail:** The article is retrospective and does not provide a complete participant roster, division of labor, or uninterrupted route log.
+**Do not say:** Jamie completed the journey alone; the article documents every stage and participant.
+**Protected boundaries:** Private route records, participant contact information, and unreviewed photographs remain outside the public repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  

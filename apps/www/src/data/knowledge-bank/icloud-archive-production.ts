@@ -885,6 +885,14 @@ export const icloudArchiveClaims = [
         locator: "Archived homepage description, creator line, and Cocoon Gallery line.",
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-FB-JAMIE-NTER-OPENING-2010",
+        relationship: "corroborating",
+        supports: ["dated public opening trace", "three creator credits"],
+        locator: "Public post text and linked opening album.",
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: ["Preserve the full collaborator credit and do not infer the division of technical labor."],

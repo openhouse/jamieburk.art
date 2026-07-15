@@ -118,7 +118,8 @@ test("mature unused claims remain out of public composition", () => {
       "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
     ]
   );
-  assert.equal(unused.length, 16);
+  assert.equal(unused.length, 17);
+  assert.equal(unused.some((claim) => claim.id === "CLM-WATER-RAFT-GULF-COMPLETION"), true);
   assert.equal(unused.every((claim) => claim.projections.every((item) => item.status !== "active")), true);
 });
 
@@ -455,7 +456,8 @@ test("iCloud archive claims preserve collective credit and proposal boundaries",
     [
       "SRC-NTER-CHNG-PITCH-2010",
       "SRC-NTER-CHNG-VIMEO-2011",
-      "SRC-NTER-CHNG-PROJECT-SITE-2011"
+      "SRC-NTER-CHNG-PROJECT-SITE-2011",
+      "SRC-FB-JAMIE-NTER-OPENING-2010"
     ]
   );
 
@@ -1204,6 +1206,123 @@ test("KC Spaces Fund eval keeps posted URLs and naming uniformity out of proof a
   const result = validateKnowledgeLifecycle(bank, suite);
   assert.equal(result.findings.some((item) => item.code === "kcspaces-facebook-posted-url-boundary"), true);
   assert.equal(result.findings.some((item) => item.code === "kcspaces-naming-role-boundary"), true);
+});
+
+test("personal Facebook production accounts for the complete current owner-filtered surface", () => {
+  const required = suite.requiredPersonalFacebookPosts;
+  const controls = JSON.parse(readFileSync(required.controlPath, "utf8"));
+  assert.equal(controls.populationControl.cursorPages, required.cursorPageCount);
+  assert.equal(controls.populationControl.returnedNodes, required.returnedNodeCount);
+  assert.equal(controls.populationControl.uniqueRecords, required.currentPostCount);
+  assert.equal(controls.populationControl.terminalHasNextPage, false);
+  assert.equal(controls.populationControl.missingDates, 0);
+  assert.equal(controls.populationControl.ownerAbsent, 0);
+  assert.equal(controls.populationControl.audienceLabelNotExposedRecords, required.audienceUnknownCount);
+  assert.equal(controls.missionRouting.uniqueRecords, required.missionRecordCount);
+  assert.equal(controls.postedUrlInventory.urlBearingRecords, required.urlBearingRecordCount);
+  assert.equal(controls.postedUrlInventory.uniqueNormalizedExternalUrls, required.uniqueExternalUrlCount);
+  assert.equal(controls.privateArtifactId, "jamie-personal-facebook-owner-post-census-2026-07-15");
+  assert.equal(
+    knowledgeBank.projects.find((item) => item.id === "personal-public-record").period.start,
+    String(required.recoveredStartYear)
+  );
+  for (const id of required.sourceIds) assert.ok(knowledgeBank.sources.find((item) => item.id === id), id);
+  for (const id of required.claimIds) assert.ok(knowledgeBank.claims.find((item) => item.id === id), id);
+  for (const id of required.inquiryIds) assert.ok(knowledgeBank.researchInquiries.find((item) => item.id === id), id);
+});
+
+test("personal public record project context covers the recovered Facebook chronology", () => {
+  const bank = structuredClone(knowledgeBank);
+  bank.projects.find((item) => item.id === "personal-public-record").period.start = "2008";
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-project-period"), true);
+});
+
+test("personal Facebook eval rejects lifetime, public-audience, and mission-count inflation", () => {
+  const required = suite.requiredPersonalFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const intake = bank.intakeItems.find((item) => item.id === required.corpusIntakeId);
+  const population = bank.claims.find((item) => item.id === required.populationClaimId);
+  const mission = bank.claims.find((item) => item.id === required.missionClaimId);
+  intake.sensitivity = "public-safe";
+  intake.availability = "live";
+  intake.submittedUrl = "https://example.com/private-corpus";
+  intake.protectedLocatorId = undefined;
+  population.internalClaim = "Jamie published exactly 1,243 public Facebook posts in his lifetime.";
+  population.boundaries = [];
+  population.antiClaims = [];
+  mission.internalClaim = "Jamie completed 181 professional projects through Facebook.";
+  mission.boundaries = [];
+  mission.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-intake-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-population-claim"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-mission-boundary"), true);
+});
+
+test("personal Facebook eval keeps routes, mentions, and mutable counters out of proof and impact", () => {
+  const required = suite.requiredPersonalFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const routing = bank.claims.find((item) => item.id === required.urlClaimId);
+  const stakeholder = bank.claims.find((item) => item.id === required.stakeholderClaimId);
+  const engagement = bank.claims.find((item) => item.id === required.engagementClaimId);
+  routing.internalClaim = "All 549 posted destinations are true and endorsed Jamie.";
+  routing.boundaries = [];
+  routing.antiClaims = [];
+  stakeholder.internalClaim = "Twenty New York City Council members engaged with Jamie.";
+  stakeholder.boundaries = [];
+  stakeholder.antiClaims = [];
+  engagement.publicationStatus = "public";
+  engagement.editorialStatus = "active";
+  engagement.projections = [{
+    key: "homepage",
+    text: "Jamie's selected posts reached 165 people and prove stakeholder impact.",
+    status: "active",
+    citationRequired: true,
+    surfaces: ["/"]
+  }];
+  engagement.boundaries = [];
+  engagement.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-posted-url-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-stakeholder-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-projection-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-engagement-boundary"), true);
+});
+
+test("personal Facebook eval preserves CouncilStat uncertainty and collective raft credit", () => {
+  const required = suite.requiredPersonalFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const callNyc = bank.claims.find((item) => item.id === required.callNycClaimId);
+  const callNycInquiry = bank.researchInquiries.find((item) => item.id === required.callNycInquiryId);
+  const water = bank.claims.find((item) => item.id === required.waterCompletionClaimId);
+  callNyc.status = "confirmed";
+  callNyc.internalClaim = "Jamie was employed by the New York City Council CouncilStat team.";
+  callNyc.boundaries = [];
+  callNyc.antiClaims = [];
+  callNycInquiry.resultStatus = "recovered";
+  callNycInquiry.limitations = [];
+  water.internalClaim = "Jamie alone completed the raft journey to the Gulf.";
+  water.editorialStatus = "active";
+  water.boundaries = [];
+  water.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-callnyc-role-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-callnyc-inquiry"), true);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-water-completion-boundary"), true);
+});
+
+test("personal WOW List evidence supports community routing rather than the Page denominator", () => {
+  const required = suite.requiredPersonalFacebookPosts;
+  const wowlist = suite.requiredWowlistFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const population = bank.claims.find((item) => item.id === wowlist.populationClaimId);
+  const community = bank.claims.find((item) => item.id === wowlist.communityClaimId);
+  const edge = community.evidence.find((item) => item.sourceId === required.wowlistSourceId);
+  community.evidence = community.evidence.filter((item) => item.sourceId !== required.wowlistSourceId);
+  population.evidence.push(edge);
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "personal-facebook-wowlist-evidence-edge"), true);
 });
 
 test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {

@@ -36,7 +36,7 @@ export const socialArchiveProjects = [
     title: "Jamie Burkart Public Project Record",
     summary: "Jamie's personal public social-media record as a discovery surface for project chronology, source leads, and cross-project lineages.",
     status: "research",
-    period: { start: "2008", end: "2023" },
+    period: { start: "2006", end: "2023" },
     entityIds: [],
     publicSurfaceCandidates: [],
     photoResearchPrompts: [

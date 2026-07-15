@@ -1,8 +1,8 @@
 {
-  "judgeId": "public-safety-nter-chng-v3",
+  "judgeId": "public-safety-personal-facebook-v4",
   "lens": "public-safety-composition",
-  "candidate": "sha256:b563d342fb181ddb3cce2ef4c9319a7da969b799ab04cdf839fe42d32e70f651",
-  "contract": "sha256:0b86c4518c6856fb5d9b14f59c72f1278bd90a4ad6199380a29c9c3b67483f79",
+  "candidate": "sha256:c07fbbe1d3af8e463d006df32299059017e55b615d75ad390cfc41a290d13822",
+  "contract": "sha256:d5cef0be94881674b77d77a98adaa9ec598a1ae0006f8c63d9b86613160cde43",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,37 +17,37 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "All NTER CHNG and America: Now and Here inputs retain stable identities, dispositions, and resolving lifecycle references."
+      "observation": "The 1,243-record owner-filtered census remains bounded to 621 cursor pages with terminal has-next-page false, a recovered chronology beginning December 19, 2006, and 973 records whose audience labels were not exposed."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "Creator credit, exhibition use, May 5-30 chronology, and Nerman context remain assigned to separate sources with appropriate relationship types."
+      "observation": "Private census and URL-inventory sources retain explicit non-support boundaries, while only individually reopened public posts and the independently reviewed Pitch article support promoted source relationships."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Exhibition inclusion remains distinct from collaborative authorship, commission, acquisition, Nerman presentation, visitor counts, and measured audience impact."
+      "observation": "Population, chronology, mission routing, URL inventory, stakeholder mentions, mutable counters, CouncilStat language, and collective raft completion remain separate evaluable claims."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The claim retains scoped evidence relationships, locators, confidence, boundaries, anti-claims, and linkage to the reproducible Wayback inquiry."
+      "observation": "All lifecycle references resolve, and the repaired WOW List source still supports community routing rather than the Page-population denominator; its dedicated evidence-edge mutation test continues to pass."
     },
     {
       "rubric": "status_separation",
-      "observation": "The inclusion claim remains qualified, editorially unused, and held without public projection surfaces."
+      "observation": "Personal-census findings remain internal-only, CouncilStat remains use-with-care and inconclusive, and the independently supported raft claim remains qualified, unused, and held from public composition."
     },
     {
       "rubric": "project_context",
-      "observation": "The project and research records preserve installation form, chronology, venue distinctions, complete collaborator credit, research methods, and rights-aware photo guidance."
+      "observation": "The personal-public-record project now starts in 2006, matching recoveredStartYear 2006 and the corpus chronology. The validator emits personal-facebook-project-period when the start is moved to 2008, and the canonical test requires the exact suite year."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The claim-level anti-claim explicitly prevents participant use from becoming visitor-count or measured-audience-impact evidence while retaining the commission, acquisition, and Nerman boundaries."
+      "observation": "The candidate continues to reject lifetime-count, universal-public-audience, reach, impact, stakeholder-engagement, sole-authorship, and sole-ownership interpretations while preserving CouncilStat uncertainty and collective raft credit."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The contract now includes an isolated mutation that removes only the audience-impact anti-claim and confirms the validator fails with nter-chng-exhibition-boundary. All 63 lifecycle tests pass."
+      "observation": "Raw personal material, audience-unknown records, responder identities, and record-level data remain outside public composition. The deterministic evaluation scores 100 with no findings, public-safety and knowledge-bank checks pass, and all 69 lifecycle tests pass."
     }
   ],
   "regressions": [],
-  "nextAction": "No corrective action is required; preserve the isolated audience-impact mutation test when this claim or its projection changes."
+  "nextAction": "Register this candidate-bound judgment and preserve the project-period, WOW List evidence-edge, and personal-privacy mutation tests in future changes."
 }

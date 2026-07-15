@@ -388,6 +388,14 @@ export const kcTownHallClaims = [
         locator: "PDF p. 2, KC Town Hall LLC section.",
         confidence: "high",
         renderCitation: true
+      },
+      {
+        sourceId: "SRC-FB-JAMIE-KCTOWNHALL-START-2018",
+        relationship: "corroborating",
+        supports: ["Jamie's attributed co-initiation statement", "stated public-benefit intention"],
+        locator: "Public project-announcement post text.",
+        confidence: "moderate",
+        renderCitation: false
       }
     ],
     boundaries: [

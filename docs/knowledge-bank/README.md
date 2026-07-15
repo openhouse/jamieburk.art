@@ -55,6 +55,13 @@ traversals, classifies every currently recoverable record, and preserves
 collective participation, source-routing, stakeholder-addressing, and role
 boundaries without converting Page identity into individual authorship.
 
+The [Jamie personal Facebook post pass](research/jamie-personal-facebook-posts-archival-production-2026-07.md)
+accounts for all 1,243 records currently returned by the authenticated
+owner-filtered Manage Posts control across 621 cursor pages. It keeps the raw
+record census private while promoting individually rechecked public sources,
+source leads, action-routing patterns, explicit anti-claims, and one newly
+close-read independent article.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -120,3 +127,24 @@ role across the campaign site, theme, fundraising widget, deployment, and web
 affordances. His naming contribution remains an attributed memory: the public
 identity is uniform, but uniformity alone does not identify the decision-maker.
 See the [research note](research/kcspacesfund-facebook-posts-archival-production-2026-07.md).
+
+## Jamie Personal Facebook Posts
+
+The July 15, 2026 authenticated pass reached a terminal cursor after 621 pages
+and reconciled 1,243 unique records currently returned by **Manage Posts >
+Posted by You**. A deterministic research pass routed 181 records into
+overlapping mission categories and recovered 549 unique normalized external
+source leads.
+
+The raw corpus remains private because audience labels were not exposed for
+most records and because personal posts can contain private-life context. Only
+six posts individually reopened and rechecked as public became source nodes.
+Selected current counters remain dated mutable observations and cannot be
+summed into reach, unique people, stakeholder engagement, endorsement,
+attendance, conversion, causality, or impact.
+
+The pass adds public traces to NTER CHNG, WOW List, KC Town Hall, Let NYC Dance,
+Talks Not Raids, and CallNYC research. It also promotes one independent Pitch
+article reporting that Jamie and his fellow artists reached the Gulf of Mexico
+four months after leaving Kansas City on their raft. See the [research
+note](research/jamie-personal-facebook-posts-archival-production-2026-07.md).

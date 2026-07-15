@@ -181,6 +181,31 @@ Do not say Jamie alone named KC Spaces Fund. The current uniform domain and
 social identity corroborates the outcome, not who proposed, selected, approved,
 registered, or administered the name.
 
+## Jamie Personal Facebook Posts
+
+Do not describe the 1,243 records currently returned by the owner-filtered
+Manage Posts control as Jamie's lifetime post total, a native Meta export, or
+proof that no historical post is missing. Do not assume that every retained
+record is public; only individually reopened and rechecked public posts may be
+promoted as public sources.
+
+Do not convert 181 deterministically routed mission records into 181 projects,
+effort, performance, reach, or impact. Do not treat posted URLs as automatic
+corroboration, and do not assign Jamie authorship of quoted, shared, linked,
+photographed, or collaborator-created material.
+
+Do not convert Jamie's stakeholder mentions, tags, quotations, links, or calls
+to action into actions by those stakeholders. Mention counts are not engagement,
+attendance, endorsement, partnership, or impact.
+
+Do not sum selected current reactions, likes, comments, or shares into reach or
+unique people. The counters are mutable interface observations, not
+publication-time analytics, conversion, causality, or project outcomes.
+
+Do not infer that Jamie was employed by, held a title with, or had hiring
+authority for the City Council CouncilStat team from his May 2016 job-route
+post. Preserve his exact first-person wording as an open research question.
+
 ## KC Town Hall
 
 The public record supports Jamie's presenter role, four affirmative CCED Board
