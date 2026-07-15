@@ -106,3 +106,9 @@ The [CallNYC full-population receipt](intake/2026-07-15-callnyc-x-full-populatio
 extends that method to every displayed population slot: status-level recovery,
 explicit residual accounting, URL resolution, mission-pattern analysis, public
 counter boundaries, and a machine-readable public corpus.
+
+The [WOW List full-population receipt](intake/2026-07-15-wowlist-x-full-population.md)
+and [project note](projects/wowlist.md) reconcile all 38 records represented by
+the surviving profile count, disposition every posted URL, preserve support,
+scene-knowledge, and civic-care findings, and select one bounded product-support
+claim for the public case study.

@@ -13,6 +13,7 @@ Run:
 npm run evals:knowledge-lifecycle
 npm run evals:chad
 npm run evals:callnyc-x
+npm run evals:wowlist-x
 npm run evals:recursive
 ```
 
@@ -63,6 +64,13 @@ citation layer.
 JSON corpus, reconciles the displayed population, checks every posted URL, and
 enforces privacy and projection boundaries. Passing requires 100/100 and no
 hard failure.
+
+### WOW List X Corpus Criterion
+
+`npm run evals:wowlist-x` recomputes the 38-record surviving-profile census,
+relationship and theme counts, all posted URLs, account-authored public
+counters, lifecycle wiring, source positioning, and projection boundaries.
+Passing requires 100/100 and no hard failure.
 
 ## Loop 2: Claim Projection
 

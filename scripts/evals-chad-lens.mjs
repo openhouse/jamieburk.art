@@ -21,6 +21,10 @@ const sources = {
   ),
   fairRent: read("apps/www/src/content/work/fair-rent-nyc.mdx"),
   callnyc: read("apps/www/src/content/work/callnyc.mdx"),
+  wowlist: read("apps/www/src/content/work/wowlist.mdx"),
+  wowlistKnowledge: read(
+    "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts"
+  ),
   kcTownHall: read("apps/www/src/content/work/kc-town-hall.mdx"),
   proofs: read("apps/www/src/data/proofs.ts"),
   workData: read("apps/www/src/data/work.ts"),
@@ -183,6 +187,24 @@ check(
     includesAll(sources.callnyc, [
       'claimId="CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM"',
       'occurrenceId="social-documentation-system"'
+    ]),
+  true
+);
+check(
+  "Defensible strength",
+  "WOW List turns a complete social census into a concrete product-support result without inflating impact",
+  7,
+  includesAll(sources.wowlist, [
+    'claimId="CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE"',
+    'occurrenceId="public-support-surface"',
+    "complete census of the 38 records",
+    "not a platform export or deletion history",
+    "does not measure adoption or impact"
+  ]) &&
+    includesAll(sources.wowlistKnowledge, [
+      "six surviving replies explained feed scope, profile navigation, multi-list event submission, local-calendar onboarding",
+      "Jamie personally wrote all six replies",
+      "The social record proves adoption scale or impact"
     ]),
   true
 );

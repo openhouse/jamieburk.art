@@ -42,6 +42,13 @@ import {
   callnycXCorpusResearchInquiries,
   callnycXCorpusSources
 } from "./callnyc-x-corpus.ts";
+import {
+  wowlistXCorpusClaims,
+  wowlistXCorpusIntakeItems,
+  wowlistXCorpusObservations,
+  wowlistXCorpusResearchInquiries,
+  wowlistXCorpusSources
+} from "./wowlist-x-corpus.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -51,6 +58,7 @@ const knowledgeBankInput = {
     ...nterChngArchiveIntakeItems,
     ...socialAccountArchiveIntakeItems,
     ...callnycXCorpusIntakeItems,
+    ...wowlistXCorpusIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -335,6 +343,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...wowlistXCorpusSources,
     ...nycaPressSources,
     ...icloudTeamsSources,
     ...googleDriveSources,
@@ -1356,6 +1365,7 @@ const knowledgeBankInput = {
     }
   ],
   observations: [
+    ...wowlistXCorpusObservations,
     ...nycaPressObservations,
     ...icloudTeamsObservations,
     ...googleDriveObservations,
@@ -1945,6 +1955,7 @@ const knowledgeBankInput = {
     }
   ],
   claims: [
+    ...wowlistXCorpusClaims,
     ...nycaPressClaims,
     ...icloudTeamsClaims,
     ...googleDriveClaims,
@@ -2986,6 +2997,7 @@ const knowledgeBankInput = {
     }
   ],
   researchInquiries: [
+    ...wowlistXCorpusResearchInquiries,
     ...nycaPressResearchInquiries,
     ...icloudTeamsResearchInquiries,
     ...googleDriveResearchInquiries,
@@ -3298,6 +3310,30 @@ const knowledgeBankInput = {
       { id: "council-engagement", claimId: "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
+  }, {
+    id: "wowlist",
+    surface: "/work/wowlist",
+    sourceOrder: [
+      "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+      "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+      "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+      "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+      "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+      "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01"
+    ],
+    occurrences: [{
+      id: "public-support-surface",
+      claimId: "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE",
+      projection: "case-study",
+      sourceIds: [
+        "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+        "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+        "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+        "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+        "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+        "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01"
+      ]
+    }]
   }]
 } satisfies KnowledgeBank;
 

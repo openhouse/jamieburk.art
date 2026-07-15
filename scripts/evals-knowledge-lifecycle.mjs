@@ -121,6 +121,20 @@ const callnycXCorpusSourceIds = [
   "SRC-CALLNYC-GOTHAMIST-PULASKI-2016-04-28"
 ];
 
+const wowlistXCorpusSourceIds = [
+  "SRC-WOWLIST-X-FULL-POPULATION-2026-07-15",
+  "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+  "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+  "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+  "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+  "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+  "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01",
+  "SRC-WOWLIST-GRASSTRONAUT-IN-EVERY-TOWN-2015",
+  "SRC-WOWLIST-GOOD-TIMES-ZINES-2015",
+  "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
+  "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2016"
+];
+
 check(
   "Source quality",
   "Every supplied and portfolio-expansion URL has a canonical source record",
@@ -128,6 +142,14 @@ check(
   suppliedSourceIds.every((id) => sourceById.has(id)) &&
     portfolioExpansionSourceIds.length === 10 &&
     portfolioExpansionSourceIds.every((id) => sourceById.has(id)),
+  true
+);
+check(
+  "Source quality",
+  "The WOW List full-population pass reaches all support and mission-context sources",
+  6,
+  wowlistXCorpusSourceIds.length === 11 &&
+    wowlistXCorpusSourceIds.every((id) => sourceById.has(id)),
   true
 );
 check(
@@ -631,17 +653,20 @@ check(
       .every(
         (item) =>
           item.claimIds.length > 0 &&
-          item.claimIds.every((claimId) => {
-            const claim = claimById.get(claimId);
-            return (
-              ["confirmed", "confirmed-with-boundary"].includes(claim?.status ?? "") &&
-              claim?.projections.some(
+          item.claimIds.every((claimId) =>
+            ["confirmed", "confirmed-with-boundary"].includes(
+              claimById.get(claimId)?.status ?? ""
+            )
+          ) &&
+          item.claimIds.some((claimId) =>
+            claimById
+              .get(claimId)
+              ?.projections.some(
                 (projection) =>
                   projection.status === "active" &&
                   projection.surfaces.some((surface) => surface.startsWith("/"))
               )
-            );
-          })
+          )
       )
 );
 check(
@@ -661,7 +686,9 @@ check(
   "Projection discipline",
   "The public citation registry remains a deliberate page plan",
   4,
-  publicRegistry.pages.length === 1 && publicRegistry.pages[0]?.id === "callnyc"
+  publicRegistry.pages.length === 2 &&
+    publicRegistry.pages.some((page) => page.id === "callnyc") &&
+    publicRegistry.pages.some((page) => page.id === "wowlist")
 );
 
 const frameworkDoc = read("docs/knowledge-bank/framework.md");
@@ -683,6 +710,13 @@ const callnycXReceipt = read(
 );
 const callnycXCorpus = read(
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json"
+);
+const wowlistXReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-wowlist-x-full-population.md"
+);
+const normalizedWowlistXReceipt = wowlistXReceipt.replace(/\s+/g, " ");
+const wowlistXCorpus = read(
+  "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json"
 );
 
 check(
@@ -763,6 +797,30 @@ check(
       "confirmed-with-boundary" &&
     inquiryById.get("INQ-CALLNYC-X-FULL-POPULATION-2026")?.resultStatus ===
       "partially-recovered",
+  true
+);
+
+check(
+  "Capture integrity",
+  "The WOW List corpus closes the surviving population and preserves authorship, source, and traction limits",
+  8,
+  [
+    "100% recovery of the surviving July 2026 profile population",
+    "not a native X export, deletion history",
+    "mutable counter events, not unique people",
+    "not press coverage or endorsement of WOW List"
+  ].every((phrase) => normalizedWowlistXReceipt.includes(phrase)) &&
+    [
+      '"profileCountObserved": 38',
+      '"uniqueItemsRecovered": 38',
+      '"unresolvedPopulationSlots": 0',
+      '"directProductSupportReplies": 6',
+      '"uniqueResolvedDestinations": 34'
+    ].every((phrase) => wowlistXCorpus.includes(phrase)) &&
+    claimById.get("CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE")?.status ===
+      "confirmed-with-boundary" &&
+    inquiryById.get("INQ-WOWLIST-X-FULL-POPULATION-2026")?.resultStatus ===
+      "recovered",
   true
 );
 

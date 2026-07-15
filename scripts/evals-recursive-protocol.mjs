@@ -61,8 +61,11 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-stewardship-transition.md",
   "docs/knowledge-bank/intake/2026-07-15-project-social-account-archive.md",
   "docs/knowledge-bank/intake/2026-07-15-callnyc-x-full-population.md",
+  "docs/knowledge-bank/intake/2026-07-15-wowlist-x-full-population.md",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
+  "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
   "docs/knowledge-bank/projects/callnyc.md",
+  "docs/knowledge-bank/projects/wowlist.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
@@ -70,6 +73,7 @@ const requiredFiles = [
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
+  "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts",
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
@@ -79,6 +83,7 @@ const requiredFiles = [
   "scripts/check-public-safety.mjs",
   "scripts/evals-chad-lens.mjs",
   "scripts/evals-callnyc-x-corpus.mjs",
+  "scripts/evals-wowlist-x-corpus.mjs",
   "scripts/evals-knowledge-lifecycle.mjs",
   "scripts/report-knowledge-lifecycle.mjs",
   "scripts/tests/knowledge-lifecycle.test.mjs",
@@ -98,6 +103,7 @@ for (const script of [
   "evals:knowledge-lifecycle",
   "evals:chad",
   "evals:callnyc-x",
+  "evals:wowlist-x",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -121,6 +127,10 @@ if (scripts.check && !scripts.check.includes("npm run evals:callnyc-x")) {
   fail("package.json check script must include npm run evals:callnyc-x");
 }
 
+if (scripts.check && !scripts.check.includes("npm run evals:wowlist-x")) {
+  fail("package.json check script must include npm run evals:wowlist-x");
+}
+
 if (
   scripts["evals:knowledge-lifecycle"] !==
   "node scripts/evals-knowledge-lifecycle.mjs"
@@ -136,6 +146,10 @@ if (scripts["evals:chad"] !== "node scripts/evals-chad-lens.mjs") {
 
 if (scripts["evals:callnyc-x"] !== "node scripts/evals-callnyc-x-corpus.mjs") {
   fail("package.json evals:callnyc-x must run scripts/evals-callnyc-x-corpus.mjs");
+}
+
+if (scripts["evals:wowlist-x"] !== "node scripts/evals-wowlist-x-corpus.mjs") {
+  fail("package.json evals:wowlist-x must run scripts/evals-wowlist-x-corpus.mjs");
 }
 
 if (scripts["evals:recursive"] !== "node scripts/evals-recursive-protocol.mjs") {
@@ -186,6 +200,16 @@ const callnycXModule = read(
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts"
 );
 const callnycCaseStudy = read("apps/www/src/content/work/callnyc.mdx");
+const wowlistXReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-wowlist-x-full-population.md"
+);
+const wowlistXCorpus = read(
+  "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json"
+);
+const wowlistXModule = read(
+  "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts"
+);
+const wowlistCaseStudy = read("apps/www/src/content/work/wowlist.mdx");
 
 for (const doc of [
   ["docs/production-readiness.md", productionReadiness],
@@ -221,6 +245,15 @@ for (const doc of [
   ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
 ]) {
   requireIncludes(doc[1], "npm run evals:callnyc-x", doc[0]);
+}
+
+for (const doc of [
+  ["docs/production-readiness.md", productionReadiness],
+  ["docs/knowledge-bank/review-checklist.md", reviewChecklist],
+  ["docs/knowledge-bank/launch-blockers.md", launchBlockers],
+  ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
+]) {
+  requireIncludes(doc[1], "npm run evals:wowlist-x", doc[0]);
 }
 
 for (const phrase of [
@@ -408,6 +441,47 @@ for (const expected of [
   'occurrenceId="social-documentation-system"'
 ]) {
   requireIncludes(callnycCaseStudy, expected, "CallNYC case study projection");
+}
+
+for (const expected of [
+  "100% recovery of the surviving July 2026 profile population",
+  "16 account posts",
+  "six account replies",
+  "16 reposts",
+  "35 link occurrences",
+  "34 distinct public destinations",
+  "Do not project the number 38 as an impact metric"
+]) {
+  requireIncludes(wowlistXReceipt, expected, "WOW List X full-population receipt");
+}
+
+for (const expected of [
+  "INTAKE-2026-07-15-WOWLIST-X-FULL-POPULATION",
+  "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE",
+  "INQ-WOWLIST-X-FULL-POPULATION-2026",
+  "Jamie personally wrote all six replies",
+  "Reposting proves partnership, endorsement, reach, or impact"
+]) {
+  requireIncludes(wowlistXModule, expected, "WOW List X knowledge-bank module");
+}
+
+for (const expected of [
+  '"profileCountObserved": 38',
+  '"accountPostsRecovered": 16',
+  '"accountRepliesRecovered": 6',
+  '"repostsRecovered": 16',
+  '"uniqueResolvedDestinations": 34'
+]) {
+  requireIncludes(wowlistXCorpus, expected, "WOW List X public corpus");
+}
+
+for (const expected of [
+  'claimId="CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE"',
+  'occurrenceId="public-support-surface"',
+  "complete census of the 38 records",
+  "not a platform export or deletion history"
+]) {
+  requireIncludes(wowlistCaseStudy, expected, "WOW List case study projection");
 }
 
 for (const forbidden of [
