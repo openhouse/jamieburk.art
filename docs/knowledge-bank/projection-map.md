@@ -54,3 +54,9 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+The FairRentNYC case study may project `CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS`
+and `CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT`. Keep the 5,124-slot disposition
+distinct from the 3,123 recovered source records, retain the 2,001 unresolved
+slots, and describe the five-account / 15-interaction Council result as a strict
+recoverable minimum rather than endorsement or impact.

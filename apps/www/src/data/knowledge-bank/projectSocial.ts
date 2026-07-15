@@ -39,11 +39,11 @@ const socialProfileSources: KnowledgeBank["sources"] = [
     kind: "project-archive",
     visibility: "public",
     preservationStatus: "live",
-    accessedAt: "2026-07-14",
+    accessedAt: "2026-07-15",
     canonicalUrl: "https://x.com/NYCArtC",
     preferredPublicUrl: "canonical",
-    publicCitation: "NYC Artist Coalition (@NYCArtC), authenticated X profile reviewed July 14, 2026.",
-    publicNote: "The profile showed 5,124 posts, a January 2017 join date, and an umbrella identity naming #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC.",
+    publicCitation: "NYC Artist Coalition (@NYCArtC), authenticated X profile reviewed July 15, 2026.",
+    publicNote: "The profile showed 5,124 posts, a January 2017 join date, and an umbrella identity naming #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. The profile counter was unchanged when rechecked for the dedicated population review.",
     supportsGenerally: ["the @NYCArtC coalition identity", "5,124-post profile count at access time", "January 2017 account chronology", "four campaign identities carried by the umbrella account"],
     doesNotEstablish: ["the identity of every post author", "Jamie's authorship of every post", "a complete engagement graph", "coalition causality for policy outcomes", "lifetime reach from access-time follower counts"]
   },
@@ -119,7 +119,7 @@ const researchSources: KnowledgeBank["sources"] = [
     preservationStatus: "private",
     accessedAt: "2026-07-14",
     publicCitation: "Authenticated X project-account archival census conducted July 14, 2026.",
-    publicNote: "This July 14 cross-project snapshot recovered 107 of 110 CallNYC profile-counted objects, 526 live-search results for @NYCArtC, 170 of 183 KC Town Hall statuses, 34 of 35 KC Spaces Fund statuses, and 37 of 38 WOW List statuses. Dedicated July 15 passes later superseded the KC Town Hall and WOW List recovery floors with complete profile-population reconciliations.",
+    publicNote: "This July 14 cross-project snapshot recovered 107 of 110 CallNYC profile-counted objects, 526 live-search results for @NYCArtC, 170 of 183 KC Town Hall statuses, 34 of 35 KC Spaces Fund statuses, and 37 of 38 WOW List statuses. Dedicated July 15 passes later superseded the NYC Artist Coalition, KC Town Hall, and WOW List recovery floors with profile-population dispositions.",
     protectedLocatorId: "RESEARCH-PROJECT-SOCIAL-X-CENSUS-2026-07-14",
     supportsGenerally: ["bounded profile and search counts", "status-author classification", "Council-handle matching", "direct-mention versus thread-match separation", "current exact-handle lookup results"],
     doesNotEstablish: ["a platform export", "a complete deleted-post corpus", "the identity of every shared-account author", "follower identity or lifetime reach", "policy causality", "endorsement from a like, repost, or mention"]
@@ -190,6 +190,159 @@ const kcTownHallFullPopulationCensusSource: SourceRecord = {
   supportsGenerally: ["183-of-183 profile-population reconciliation", "142 project-account posts", "13 project-account replies", "28 reposted external statuses", "31 distinct posted short URLs", "100 tire-related records", "12 survey-linked records", "three direct then-serving Council-member account responses", "public operating-surface patterns", "access-time interaction labels"],
   doesNotEstablish: ["a platform account-data export", "a complete deleted-post history", "the human author of shared-account statuses", "independent verification of first-party program quantities", "formal endorsement or partnership", "unique audience reach", "Jamie as operator of post-transition activity", "funding receipt, spending, redevelopment completion, or policy causality"]
 };
+
+const nycaProfilePopulationCensusSource: SourceRecord = {
+  id: "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15",
+  title: "NYC Artist Coalition X profile-population census",
+  author: "Codex archival review",
+  organization: "NYC Artist Coalition",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  accessedAt: "2026-07-15",
+  assetUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/research/data/nycartc-x-profile-population-census-2026-07-15.csv",
+  preferredPublicUrl: "asset",
+  publicCitation: "Profile-population archival census of the 5,124 objects reported by the @NYCArtC profile, reviewed July 15, 2026.",
+  publicNote: "The census gives all 5,124 profile-counted slots a disposition: 3,123 records recovered through authenticated public interfaces and 2,001 slots not materialized there. The recovered set contains 608 coalition-account originals, 77 coalition-account replies, and 2,438 external source statuses surfaced through native reposts.",
+  supportsGenerally: ["5,124-slot population disposition", "3,123 recovered public-interface records", "2,001 not-materialized public-interface slots", "608 coalition-account originals", "77 coalition-account replies", "2,438 external source statuses surfaced through native reposts", "1,161 distinct posted short URLs", "four named campaign identities", "strict five-account and 15-interaction Council-member minimum", "bounded stakeholder and source-network patterns", "dated access-time interaction labels"],
+  doesNotEstablish: ["literal recovery of all 5,124 source records", "the contents or status of the 2,001 unmaterialized slots", "a complete deleted-post history", "the human author of every shared-account status", "Jamie as author of every status", "reciprocal engagement from native-repost source accounts", "endorsement", "unique audience reach", "policy causality", "current project status"]
+};
+
+const nycaPlatformBoundarySources: SourceRecord[] = [
+  {
+    id: "SRC-X-HELP-PUBLIC-TIMELINE-LIMITS-2026",
+    title: "Help with missing posts",
+    organization: "X",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://help.x.com/en/using-x/missing-posts",
+    preferredPublicUrl: "canonical",
+    publicCitation: "X Help, 'Help with missing posts,' reviewed July 15, 2026.",
+    publicNote: "X documents display limits of 800 posts for the Posts tab and 3,200 posts for Posts and replies, and notes that older posts may not always appear because of indexing capacity.",
+    supportsGenerally: ["public-interface display limits", "older-post indexing limitation", "the need to distinguish recovery from profile-counter disposition"],
+    doesNotEstablish: ["which @NYCArtC slots are unavailable", "that an unmaterialized slot was deleted", "the contents of the 2,001 unmaterialized slots"]
+  },
+  {
+    id: "SRC-X-HELP-OWNER-ARCHIVE-2026",
+    title: "New user FAQ: X Archive",
+    organization: "X",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://help.x.com/en/resources/new-user-faq",
+    preferredPublicUrl: "canonical",
+    publicCitation: "X Help, 'New user FAQ,' X Archive guidance reviewed July 15, 2026.",
+    publicNote: "X directs account owners to download their X Archive to browse their account history beginning with the first post.",
+    supportsGenerally: ["owner-archive recovery path", "first-post account-history access"],
+    doesNotEstablish: ["that Jamie has downloaded the archive", "the archive's contents", "recovery of deleted or withheld content"]
+  }
+];
+
+const nycaSourceTrailSources: SourceRecord[] = [
+  {
+    id: "SRC-NYCA-X-SOURCE-GOTHAMIST-CABARET-REPEAL-2017",
+    title: "City Council Set To Repeal Cabaret Law, Finally Legalize Dancing",
+    author: "Jake Offenhartz",
+    organization: "Gothamist",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2017-10-30",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://gothamist.com/arts-entertainment/city-council-set-to-repeal-cabaret-law-finally-legalize-dancing",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Jake Offenhartz, 'City Council Set To Repeal Cabaret Law, Finally Legalize Dancing,' Gothamist, October 30, 2017.",
+    publicNote: "The article documents the pending Council repeal vote and quotes Olympia Kazi as a NYC Artist Coalition member on discriminatory enforcement; @NYCArtC shared the reporting.",
+    supportsGenerally: ["Cabaret Law repeal reporting", "Olympia Kazi's public NYC Artist Coalition identification", "discriminatory-enforcement advocacy context", "a mission-relevant link in the account source trail"],
+    doesNotEstablish: ["Jamie as the quoted speaker", "Jamie as the account-post author", "sole coalition causality for repeal", "authorship of the repeal legislation"]
+  },
+  {
+    id: "SRC-NYCA-X-SOURCE-MOME-MARCH-REPORTS",
+    title: "Multi-Agency Response to Community Hotspots reports",
+    organization: "NYC Mayor's Office of Media and Entertainment",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.nyc.gov/site/mome/nightlife/march-report.page",
+    preferredPublicUrl: "canonical",
+    publicCitation: "NYC Mayor's Office of Media and Entertainment, Multi-Agency Response to Community Hotspots reporting page, reviewed July 15, 2026.",
+    publicNote: "The official page preserves MARCH reporting required under Local Law 220; @NYCArtC linked the reporting in its nightlife-accountability source trail.",
+    supportsGenerally: ["official MARCH reporting surface", "nightlife-enforcement accountability context", "a mission-relevant link in the account source trail"],
+    doesNotEstablish: ["Jamie's authorship of the reports", "Jamie as the account-post author", "coalition causality for every reporting requirement", "the accuracy of every agency field"]
+  },
+  {
+    id: "SRC-NYCA-X-SOURCE-GOTHAMIST-COMMERCIAL-RENTS-2021",
+    title: "In Pandemic's Aftermath, Calls Grow For NYC To Regulate Commercial Rents",
+    author: "Beth Fertig",
+    organization: "Gothamist / WNYC",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2021-09-16",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://gothamist.com/news/in-pandemics-aftermath-calls-grow-for-nyc-to-regulate-commercial-rents",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Beth Fertig, 'In Pandemic's Aftermath, Calls Grow For NYC To Regulate Commercial Rents,' Gothamist, September 16, 2021.",
+    publicNote: "The article reports on a Council proposal for Commercial Rent Stabilization and the public policy debate around storefront rents; the recovered @NYCArtC corpus carried the article through a WNYC source status.",
+    supportsGenerally: ["Commercial Rent Stabilization policy context", "Council hearing and sponsor context", "a mission-relevant link surfaced through account curation"],
+    doesNotEstablish: ["Jamie as article author", "Jamie as the source-status author", "coalition endorsement by WNYC", "policy passage or coalition causality"]
+  },
+  {
+    id: "SRC-NYCA-X-SOURCE-NATION-MUSICIAN-RELIEF-2022",
+    title: "Covid and Canceled Gigs Have Left Musicians High and Dry",
+    author: "Marc Ribot",
+    organization: "The Nation",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2022-03-10",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.thenation.com/article/culture/covid-touring-musicians-aid/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Marc Ribot, 'Covid and Canceled Gigs Have Left Musicians High and Dry,' The Nation, March 10, 2022.",
+    publicNote: "The article concerns pandemic relief and labor conditions for working musicians; the recovered @NYCArtC corpus surfaced it through a Music Workers Alliance source status.",
+    supportsGenerally: ["music-worker relief context", "artist-labor source curation"],
+    doesNotEstablish: ["Jamie as article or source-status author", "reciprocal engagement by the article or source account", "coalition causality for relief policy"]
+  },
+  {
+    id: "SRC-NYCA-X-SOURCE-GOTHAMIST-MUSICIAN-RALLY-2022",
+    title: "New York City musicians, lawmakers rally for extended pandemic relief aid",
+    author: "Steve Smith",
+    organization: "Gothamist",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2022-03-11",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://gothamist.com/arts-entertainment/musicians-rally-for-pandemic-relief",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Steve Smith, 'New York City musicians, lawmakers rally for extended pandemic relief aid,' Gothamist, March 11, 2022.",
+    publicNote: "The article documents public advocacy for working-musician pandemic relief; the recovered @NYCArtC corpus surfaced it through a Music Workers Alliance source status.",
+    supportsGenerally: ["music-worker relief advocacy", "artist-labor source curation"],
+    doesNotEstablish: ["Jamie as article or source-status author", "reciprocal engagement by Gothamist or the source account", "coalition causality for relief policy"]
+  },
+  {
+    id: "SRC-NYCA-X-SOURCE-FUTURE-MUSIC-HOLDBACKS-2023",
+    title: "What are holdbacks in concert ticketing?",
+    author: "Kevin Erickson",
+    organization: "Future of Music Coalition",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2023-03-15",
+    accessedAt: "2026-07-15",
+    canonicalUrl: "https://www.futureofmusic.org/news/2023/3/15/ticketing-basics-holdbacks",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Kevin Erickson, 'What are holdbacks in concert ticketing?' Future of Music Coalition, March 15, 2023.",
+    publicNote: "The explainer documents a music-industry policy issue circulated through a Future of Music Coalition source status in the recovered @NYCArtC corpus.",
+    supportsGenerally: ["music-industry policy source curation", "ticketing-policy context"],
+    doesNotEstablish: ["Jamie as article or source-status author", "reciprocal engagement by Future of Music Coalition", "coalition adoption of every position in the article"]
+  }
+];
 
 const wowListContextSources: SourceRecord[] = [
   {
@@ -975,6 +1128,13 @@ export const wowListFullPopulationCensusSourceId =
 export const kcTownHallFullPopulationCensusSourceId =
   kcTownHallFullPopulationCensusSource.id;
 
+export const nycaProfilePopulationCensusSourceId =
+  nycaProfilePopulationCensusSource.id;
+
+export const nycaSourceTrailSourceIds = nycaSourceTrailSources.map(
+  (source) => source.id
+);
+
 export const kcTownHallCouncilResponseSourceIds =
   kcTownHallCouncilResponseSeeds.map((seed) => seed.id);
 
@@ -999,6 +1159,9 @@ export const projectSocialSources: KnowledgeBank["sources"] = [
   callNycFullPopulationCensusSource,
   wowListFullPopulationCensusSource,
   kcTownHallFullPopulationCensusSource,
+  nycaProfilePopulationCensusSource,
+  ...nycaPlatformBoundarySources,
+  ...nycaSourceTrailSources,
   ...wowListContextSources,
   ...kcTownHallContextSources,
   ...kcTownHallCouncilResponseSeeds.map(toSource),

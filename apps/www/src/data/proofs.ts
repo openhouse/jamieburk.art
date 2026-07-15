@@ -243,7 +243,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis: "Approved resume language, Jamie confirmation, public campaign websites, and a 5,124-slot @NYCArtC archive ledger with 3,123 public-interface records recovered and 2,001 platform-limited slots explicitly unresolved.",
+    sourceNote:
+      "The ledger documents four named campaign identities, public calls to action, source curation, and stakeholder dialogue. It does not independently prove Jamie established the account, identify the author of each shared-account status, or recover all 5,124 source records.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -266,7 +268,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -279,7 +281,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, public-safe NYC Artist Coalition project history, and a 5,124-slot @NYCArtC disposition ledger with a separately verified strict Council-member interaction floor.",
+    sourceNote:
+      "A strict authenticated review recovered at least 15 direct mentions or replies from five then-serving Council-member accounts. That is a recoverable minimum, not endorsement, adoption, legislative authorship, or policy causality.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -306,7 +310,7 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "wowlist-community-platform",

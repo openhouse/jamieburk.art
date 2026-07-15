@@ -194,7 +194,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, campaign websites, and a durable shared public identity across four cultural-space campaigns.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -220,6 +220,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Shared public identity record",
+        description:
+          "A source-backed archive ledger showing one coalition identity carrying four campaign lanes, public resources, source curation, and stakeholder dialogue over time.",
+        type: "decision record"
       }
     ],
     tags: [
@@ -263,6 +269,8 @@ const workItemsInput = [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "A 5,124-slot @NYCArtC archive ledger with 3,123 public records recovered and 2,001 platform-limited slots explicitly unresolved",
+      "At least 15 direct mentions or replies from five then-serving NYC Council member accounts under a strict review rule",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],

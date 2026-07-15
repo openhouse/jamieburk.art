@@ -15,6 +15,8 @@ import {
   kcSpacesRecipientSocialSourceIds,
   nycaCouncilSocialSourceIds,
   nycaOlympiaSocialSourceId,
+  nycaProfilePopulationCensusSourceId,
+  nycaSourceTrailSourceIds,
   projectSocialSources
 } from "./projectSocial.ts";
 
@@ -892,6 +894,52 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex Wayback review"]
     },
     {
+      id: "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS",
+      project: "nyc-artist-coalition",
+      internalClaim: "The @NYCArtC account functioned as durable shared public infrastructure for four named cultural-space campaigns, with a 5,124-slot population ledger that recovers 3,123 public-interface records and keeps 2,001 platform-limited slots explicitly unresolved.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "case-study",
+        text: "NYC Artist Coalition's shared public identity carried four cultural-space campaigns across years; a 5,124-slot archive ledger recovered 3,123 public records and keeps 2,001 platform-limited slots explicitly unresolved.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/fair-rent-nyc"]
+      }],
+      evidence: [
+        { sourceId: nycaProfilePopulationCensusSourceId, relationship: "direct-support", supports: ["5,124-slot population disposition", "3,123 recovered public-interface records", "2,001 explicitly unresolved slots", "four named campaign identities", "repeated public-information and source-curation functions"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NYCA-X-PROFILE-2026-07-14", relationship: "corroborating", supports: ["profile counter", "January 2017 chronology", "four campaign identities in the account description"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-X-HELP-PUBLIC-TIMELINE-LIMITS-2026", relationship: "supports-boundary", supports: ["documented public timeline and indexing limits"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-X-HELP-OWNER-ARCHIVE-2026", relationship: "supports-boundary", supports: ["owner-archive path for first-post history"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["This is 100% disposition coverage, not literal recovery of all 5,124 source records.", "The 2,001 unmaterialized slots are not described as deleted, absent, or nonexistent.", "The account does not identify the human author of each shared-account status.", "Jamie establishing the account remains a first-person memory lead pending independent corroboration.", "Native reposts document account curation, not reciprocal engagement from the source accounts.", "The corpus does not establish reach, endorsement, policy causality, or sole ownership of collective outcomes."],
+      antiClaims: ["all 5,124 post bodies were recovered", "Jamie authored every @NYCArtC status", "every reposted source account engaged with NYC Artist Coalition", "the account proves policy causality", "the interaction labels measure unique reach or impact"],
+      researchInquiryIds: ["INQ-NYCA-X-OWNER-ARCHIVE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
+    },
+    {
+      id: "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT",
+      project: "nyc-artist-coalition",
+      internalClaim: "A strict authenticated review recovered at least 15 direct mentions of or replies to @NYCArtC from five then-serving New York City Council member accounts.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "case-study",
+        text: "A strict review recovered at least 15 direct mentions or replies from five then-serving New York City Council member accounts.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/fair-rent-nyc"]
+      }],
+      evidence: [
+        { sourceId: nycaProfilePopulationCensusSourceId, relationship: "direct-support", supports: ["strict five-account minimum", "15 direct mention or reply interactions", "named then-serving Council-member accounts", "false-positive and conversation-context boundaries"], confidence: "high", renderCitation: true },
+        ...nycaCouncilSocialSourceIds.map((sourceId) => ({ sourceId, relationship: "corroborating" as const, supports: ["status-level Council-member interaction specimen"], confidence: "high" as const, renderCitation: false }))
+      ],
+      boundaries: ["Five accounts and 15 interactions are recoverable minimums, not complete historical totals.", "Direct mention or reply does not establish endorsement, adoption, legislative authorship, partnership, or policy causality.", "Broader thread matches, tags, likes, native-repost source statuses, and the institutional @NYCCouncil account are excluded from the strict count."],
+      antiClaims: ["only five Council members ever interacted with NYC Artist Coalition", "five Council members endorsed NYC Artist Coalition", "the interactions prove policy adoption", "the interactions prove Jamie's personal authorship or causality"],
+      researchInquiryIds: ["INQ-NYCA-X-OWNER-ARCHIVE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
+    },
+    {
       id: "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE",
       project: "kc-town-hall",
       internalClaim: "The complete @KCTownHall social record documents a shared public operating surface for resident participation, recurring neighborhood service, civic-resource circulation, and direct stakeholder dialogue.",
@@ -978,6 +1026,18 @@ const knowledgeBankInput = {
       limitations: ["The census is not a platform account-data export and cannot establish that no deleted, restricted, deindexed, or otherwise unavailable record ever existed.", "The shared account does not identify the human author of each record.", "The social corpus does not independently verify first-party program quantities or assign post-transition outcomes to Jamie.", "A direct Council-account response is not formal endorsement, partnership, adoption, or policy causality.", "Access-time interaction labels are mutable, do not identify a complete historical audience, and are not reach, conversion, participation, or impact."],
       sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", kcTownHallFullPopulationCensusSourceId, ...kcTownHallCouncilResponseSourceIds, "SRC-KC-STAR-LUCAS-JUSTUS-COUNCIL-2019-04-03", "SRC-KCMO-CLERK-MELISSA-ROBINSON-SERVICE", "SRC-KC-TOWN-HALL-KC-STAR-LEONS-THRIFTWAY", "SRC-KC-TOWN-HALL-NORTHEAST-NEWS-AFFORDABLE-HOUSING-2018", "SRC-KC-TOWN-HALL-CURBED-RENTER-TAX-CREDIT-2018", "SRC-KC-TOWN-HALL-RIDEKC-NEXT-SYSTEM-REDESIGN", "SRC-KC-TOWN-HALL-KCUR-MISSOURI-PRIMARY-CHEAT-SHEET-2018", "SRC-KC-TOWN-HALL-MISSOURI-VOTER-OUTREACH", "SRC-KC-TOWN-HALL-YOUTUBE-COVID-RELIEF-QA-2020", "SRC-KC-TOWN-HALL-YOUTUBE-PAINT-CLEANUP-2018"],
       publicSummary: "A full-population review recovered all 183 profile-counted @KCTownHall records. The account functioned as a public operating surface for resident input, recurring neighborhood service, civic-resource circulation, and stakeholder dialogue, including three direct responses from then-serving Council member accounts."
+    },
+    {
+      id: "INQ-NYCA-X-OWNER-ARCHIVE-2026",
+      project: "nyc-artist-coalition",
+      question: "What does the full @NYCArtC profile population document, and what remains unrecoverable without Jamie's owner X Archive?",
+      methods: ["Exhausted the authenticated Posts and Posts-and-replies timelines and deduplicated source-status URLs.", "Ran yearly authenticated Latest searches for statuses authored by @NYCArtC and reconciled them with the timeline union.", "Assigned all 5,124 profile-counted slots a recovered-public-interface or not-materialized-public-interface disposition.", "Classified every recovered record by source relationship, public URL, handle, hashtag, bounded mission signal, and access-time interaction label without publishing raw post bodies.", "Kept the post-2020 incoming-mention inventory and strict historical Council-member review separate from the account-source population.", "Compared the observed public-interface limits with X's official timeline-limit and owner-archive guidance."],
+      runAt: "2026-07-15",
+      resultStatus: "partially-recovered",
+      findings: ["The profile displayed 5,124 posts; 3,123 unique public-interface records were recovered and 2,001 profile-counted slots did not materialize through the documented public surfaces.", "The recovered set contains 608 coalition-account originals, 77 coalition-account replies, and 2,438 external source statuses surfaced through native reposts.", "The recovered corpus includes 1,451 external-link occurrences in 1,339 records, representing 1,161 distinct posted short URLs.", "The account carries four named campaign identities and repeatedly documents campaign calls to action, source curation, arts-labor resources, commercial-rent advocacy, and nightlife-governance follow-through.", "A strict historical review recovered at least 15 direct mentions or replies from five then-serving Council-member accounts.", "A bounded post-2020 incoming-mention search recovered 75 direct matches from 34 authors plus 23 separately labeled conversation-context records."],
+      limitations: ["The 5,124-row artifact is a complete disposition ledger, not literal recovery of every source record.", "X's public interfaces document timeline and indexing limits; the 2,001 unmaterialized slots require an owner archive for literal recovery and are not labeled deleted or nonexistent.", "The shared account does not identify the human author of each coalition-account status.", "Native reposts expose external source-status dates and interaction labels, not the date or traction of the coalition account's repost action.", "Access-time interaction labels are mutable and do not represent unique people, reach, conversion, endorsement, participation, or impact.", "The strict Council result is a recoverable minimum and does not establish endorsement, adoption, legislative authorship, or policy causality."],
+      sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", nycaProfilePopulationCensusSourceId, "SRC-X-HELP-PUBLIC-TIMELINE-LIMITS-2026", "SRC-X-HELP-OWNER-ARCHIVE-2026", ...nycaSourceTrailSourceIds, ...nycaCouncilSocialSourceIds],
+      publicSummary: "A 5,124-slot profile-population disposition recovered 3,123 public-interface records and keeps 2,001 platform-limited slots explicitly unresolved. The recovered corpus documents four named campaign identities, 1,161 distinct posted short URLs, and a strict minimum of 15 direct Council-member-account interactions from five then-serving members."
     },
     {
       id: "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
@@ -1685,8 +1745,8 @@ const knowledgeBankInput = {
       id: "INTAKE-PROJECT-SOCIAL-IDENTITY-SYSTEM-2026-07-14",
       title: "Project social-media identity system",
       kind: "project-lead",
-      summary: "Authenticated X review recovered five active project documentation accounts, one dormant Sunday Dinner account shell, and an umbrella campaign structure in which @NYCArtC carries Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.",
-      status: "researching",
+      summary: "Authenticated X review recovered five active project documentation accounts, one dormant Sunday Dinner account shell, and an umbrella campaign structure in which @NYCArtC carries Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. A dedicated NYC Artist Coalition pass now gives all 5,124 profile-counted slots a disposition, with 3,123 public-interface records recovered and 2,001 kept explicitly unresolved.",
+      status: "integrated",
       sourceIds: [
         "SRC-CALLNYC-X-PROFILE-2026-07-14",
         "SRC-NYCA-X-PROFILE-2026-07-14",
@@ -1695,9 +1755,12 @@ const knowledgeBankInput = {
         "SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14",
         "SRC-KC-SPACES-FUND-X-PROFILE-2026-07-14",
         "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14",
+        nycaProfilePopulationCensusSourceId,
+        "SRC-X-HELP-PUBLIC-TIMELINE-LIMITS-2026",
+        "SRC-X-HELP-OWNER-ARCHIVE-2026",
         nycaOlympiaSocialSourceId
       ],
-      relatedClaimIds: [],
+      relatedClaimIds: ["CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS"],
       relatedProofIds: ["nyc-artist-coalition-public-web-infrastructure", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-spaces-fund-digital-infrastructure", "kc-town-hall-public-benefit-documentation"],
       candidateClaims: [],
       propositions: [
@@ -1724,9 +1787,9 @@ const knowledgeBankInput = {
           id: "PROP-NYCA-SHARED-IDENTITY-STEWARDSHIP-2026",
           text: "The @NYCArtC identity functioned as durable shared campaign infrastructure that collaborators could use across multiple policy and cultural-space efforts.",
           status: "synthesis-with-boundary",
-          sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", nycaOlympiaSocialSourceId],
-          sourceSupport: ["four campaign identities in the profile bio", "multi-year mention corpus", "89 recovered Olympia Kazi posts mentioning @NYCArtC", "status-level FairRentNYC specimen"],
-          boundaries: ["The account does not identify the human author of each shared-account post.", "Olympia Kazi's public use of @NYCArtC does not by itself prove that she authored posts from the coalition account.", "Durability and repeated use do not establish sole ownership or policy causality."],
+          sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", nycaProfilePopulationCensusSourceId, "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", nycaOlympiaSocialSourceId],
+          sourceSupport: ["four campaign identities in the profile bio", "5,124-slot profile-population disposition", "3,123 recovered public-interface records", "multi-year mention corpus", "89 recovered Olympia Kazi posts mentioning @NYCArtC", "status-level FairRentNYC specimen"],
+          boundaries: ["The 5,124-row ledger is complete as a disposition, not as literal source-record recovery.", "The account does not identify the human author of each shared-account post.", "Olympia Kazi's public use of @NYCArtC does not by itself prove that she authored posts from the coalition account.", "Durability and repeated use do not establish sole ownership or policy causality."],
           decisionUse: "Makes durable shared identity stewardship legible while keeping Jamie's account-establishment statement in its separate memory-lead proposition and preserving collective authorship."
         }
       ],
@@ -1734,36 +1797,81 @@ const knowledgeBankInput = {
       researchQuestions: [
         "Which account-establishment records can independently corroborate Jamie's first-person confirmation?",
         "Which collaborators can describe how the shared identity system supported their work without exposing private administrator details?",
-        "Which account snapshots should be preserved outside X to reduce platform-loss risk?"
+        "Can Jamie's owner X Archive recover the 2,001 profile-counted slots that did not materialize through the public interfaces?"
       ],
       boundaries: [
         "Do not publish administrator credentials, account-recovery details, private messages, follower exports, or private analytics.",
         "Do not assign individual authorship to shared-account posts without post-level evidence.",
         "Do not treat account activity, follower counts, mentions, or reposts as policy causality or endorsement.",
-        "Do not project this intake item directly to the website; approve a bounded account-establishment or identity-system claim first."
+        "Project only through the separately approved shared-public-identity claim; do not project the first-person account-establishment memory lead."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
-      reviewedAt: "2026-07-14",
-      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
     },
     {
       id: "INTAKE-NYCA-COUNCIL-SOCIAL-ENGAGEMENT-2026-07-14",
       title: "NYC Council engagement with NYC Artist Coalition on X",
       project: "nyc-artist-coalition",
       kind: "metric-lead",
-      summary: "A bounded authenticated search recovered 526 live-search results for @NYCArtC. After historical-roster matching and thread inspection, five then-serving Council member accounts produced at least 15 direct mention or reply interactions; two additional roster-matched accounts appeared only in broader thread-level results and are excluded from the direct count.",
-      status: "researching",
-      sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS", ...nycaCouncilSocialSourceIds, nycaOlympiaSocialSourceId],
-      relatedClaimIds: [],
+      summary: "A dedicated profile-population review recovered 3,123 of 5,124 profile-counted public records and gave the remaining 2,001 slots an explicit platform-limited disposition. Within separate stakeholder evidence, historical-roster matching and thread inspection establish a strict minimum of five then-serving Council member accounts and 15 direct mention or reply interactions.",
+      status: "integrated",
+      sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", nycaProfilePopulationCensusSourceId, "SRC-X-HELP-PUBLIC-TIMELINE-LIMITS-2026", "SRC-X-HELP-OWNER-ARCHIVE-2026", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS", ...nycaSourceTrailSourceIds, ...nycaCouncilSocialSourceIds, nycaOlympiaSocialSourceId],
+      relatedClaimIds: ["CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS", "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT"],
       relatedProofIds: ["nyc-artist-coalition-civic-systems", "nyc-artist-coalition-public-web-infrastructure"],
       candidateClaims: [],
       propositions: [
         {
+          id: "PROP-NYCA-X-PROFILE-POPULATION-DISPOSITION-2026",
+          text: "A 5,124-row ledger gives every object reported by the @NYCArtC profile a disposition: 3,123 recovered public-interface records and 2,001 slots that did not materialize through the documented public surfaces.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", nycaProfilePopulationCensusSourceId, "SRC-X-HELP-PUBLIC-TIMELINE-LIMITS-2026", "SRC-X-HELP-OWNER-ARCHIVE-2026"],
+          sourceSupport: ["authenticated profile counter", "5,124-row public disposition ledger", "3,123 recovered status URLs", "2,001 explicit not-materialized rows", "official public-interface limits", "owner-archive recovery path"],
+          boundaries: ["This is 100% disposition coverage, not literal recovery of all 5,124 source records.", "The 2,001 slots are not described as deleted, absent, or nonexistent."],
+          decisionUse: "Defines the denominator and unresolved remainder for every downstream social-record claim."
+        },
+        {
+          id: "PROP-NYCA-X-PUBLISHING-AND-CURATION-PATTERN-2026",
+          text: "The 3,123 recovered source-status URLs partition into 608 coalition-account originals, 77 coalition-account replies, and 2,438 external source statuses surfaced through native reposts.",
+          status: "supported-with-boundary",
+          sourceIds: [nycaProfilePopulationCensusSourceId],
+          sourceSupport: ["status URL identity", "source-author handle", "relationship classification", "duplicate self-repost correction", "quote-post reply-inheritance correction"],
+          boundaries: ["The shared account does not identify the human author of each original or reply.", "For native reposts, the visible date and interaction labels belong to the external source status; appearance documents curation, not reciprocal engagement."],
+          decisionUse: "Makes the account's public-information and source-curation function legible without inflating external account participation."
+        },
+        {
+          id: "PROP-NYCA-X-POSTED-URL-SOURCE-TRAIL-2026",
+          text: "The recovered corpus contains 1,451 external-link occurrences in 1,339 records, representing 1,161 distinct posted short URLs across campaign, cultural-space, artist-labor, commercial-rent, and nightlife-governance source trails.",
+          status: "synthesis-with-boundary",
+          sourceIds: [nycaProfilePopulationCensusSourceId, ...nycaSourceTrailSourceIds],
+          sourceSupport: ["public posted-URL inventory", "representative linked articles", "official MARCH report surface", "mission-signal classification"],
+          boundaries: ["A posted link establishes source circulation, not agreement, authorship, participation, endorsement, or causality for the linked event or policy outcome."],
+          decisionUse: "Preserves mission-relevant source discovery while keeping the site focused on the public operating system rather than a link dump."
+        },
+        {
+          id: "PROP-NYCA-X-ACCESS-TIME-TRACTION-2026",
+          text: "At access time, 618 of 685 coalition-account-authored statuses displayed at least one reply, repost, or like; the displayed labels summed to 118 replies, 1,490 reposts, and 2,698 likes.",
+          status: "supported-with-boundary",
+          sourceIds: [nycaProfilePopulationCensusSourceId],
+          sourceSupport: ["dated interface labels", "account-authored status filter", "reply, repost, and like arithmetic"],
+          boundaries: ["The labels are mutable interface observations, not unique people, complete historical reach, conversion, endorsement, participation, or impact.", "Views and bookmarks are excluded from the 4,306 reply-repost-like total."],
+          decisionUse: "Retains a reproducible traction baseline in the bank without promoting it as a hiring-facing impact metric."
+        },
+        {
+          id: "PROP-NYCA-X-POST-2020-INCOMING-STAKEHOLDERS-2026",
+          text: "A bounded post-2020 incoming-mention search recovered 75 direct @NYCArtC matches from 34 authors, plus 23 separately labeled conversation-context records; the direct set includes partner, cohost, and public-service-announcement network references.",
+          status: "supported-with-boundary",
+          sourceIds: [nycaProfilePopulationCensusSourceId],
+          sourceSupport: ["direct-match versus conversation-context classification", "author counts", "public stakeholder specimens"],
+          boundaries: ["This is a bounded post-2020 query, not a complete lifetime incoming-mention corpus.", "The result adds no new then-serving Council account beyond the separate strict historical review.", "A mention does not establish endorsement, formal partnership, shared authorship, or policy causality."],
+          decisionUse: "Documents mission-relevant stakeholder continuity while preserving a strict boundary between direct references and conversation context."
+        },
+        {
           id: "PROP-NYCA-FIVE-DIRECT-COUNCIL-ACCOUNTS-2026",
           text: "At least five then-serving New York City Council member accounts directly mentioned or replied to @NYCArtC in 15 recoverable interactions: Rafael Espinal, Stephen Levin, Jimmy Van Bramer, Mark Levine, and Justin Brannan.",
           status: "supported-with-boundary",
-          sourceIds: ["SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS", ...nycaCouncilSocialSourceIds],
+          sourceIds: [nycaProfilePopulationCensusSourceId, "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS", ...nycaCouncilSocialSourceIds],
           sourceSupport: ["13 authored posts explicitly naming @NYCArtC", "two authenticated conversation views showing direct replies to @NYCArtC", "historical name-to-handle roster matching"],
           boundaries: ["Five accounts and 15 interactions are recoverable minimums, not complete historical totals.", "Brad Lander and Carlina Rivera surfaced in broader thread-level search results but did not satisfy the strict direct-mention or direct-reply rule for those statuses.", "Interaction does not equal endorsement, adoption, or policy causality."],
           decisionUse: "Provides a strict public-sector-engagement floor while documenting false-positive handling."
@@ -1772,7 +1880,7 @@ const knowledgeBankInput = {
           id: "PROP-NYCA-SOCIAL-MISSION-PATTERNS-2026",
           text: "Recovered Council-member posts place NYC Artist Coalition in public work around Cabaret Law repeal, Office of Nightlife creation and listening, MARCH transparency hearings, cultural-space preservation, arts support, accessible public information, and Commercial Rent Stabilization.",
           status: "synthesis-with-boundary",
-          sourceIds: [...nycaCouncilSocialSourceIds],
+          sourceIds: [nycaProfilePopulationCensusSourceId, ...nycaCouncilSocialSourceIds],
           sourceSupport: ["status-level Council-member descriptions", "campaign hashtags and linked public surfaces", "authenticated reply contexts"],
           boundaries: ["The posts show public association and interaction, not sole coalition responsibility or causal ownership of outcomes.", "Accessible-information and Commercial Rent Stabilization thread matches require conversation context; do not present every result as an explicit coalition endorsement."],
           decisionUse: "Connects the social record to mission-relevant project mechanisms rather than treating raw interaction volume as the accomplishment."
@@ -1798,21 +1906,25 @@ const knowledgeBankInput = {
       ],
       tensions: [],
       researchQuestions: [
-        "Should the recoverable denominator remain 526 live-search results and the time window remain February 2017 through March 2025 when this research is refreshed?",
-        "Can an account-data export recover follower, liker, and reposter identities without relying on unstable interface state?",
+        "Which denominator and time window should govern each future refresh: the 5,124-slot profile counter reviewed July 15, 2026, the 526-result February 2017-March 2025 broad mention search, or the post-2020 incoming-mention query?",
+        "Can Jamie's owner X Archive recover and reconcile the 2,001 profile-counted slots that did not materialize through public interfaces?",
+        "Can source-level Wayback captures preserve high-value statuses and posted articles outside X without republishing raw account exports?",
         "Which Council-member interactions should be preserved through stable web archives?",
         "Which collaborator accounts can establish shared authorship and stewardship at post or campaign level?"
       ],
       boundaries: [
         "Use 'at least five then-serving Council member accounts in 15 direct interactions recovered' if the strict result is ever projected.",
         "Do not substitute the wider seven-account, 21-result roster match for the strict direct-interaction count.",
+        "Describe the 5,124-row artifact as a complete disposition ledger, not a literal recovery of all source records.",
+        "Keep the 2,001 not-materialized slots unresolved until an owner archive supplies their records; do not label them deleted or nonexistent.",
+        "Treat native-repost source accounts as coalition curation evidence, not as reciprocal stakeholder engagement.",
         "Do not treat social interaction as endorsement, adoption, legislative authorship, or causal credit for policy outcomes.",
-        "Do not project this intake item directly to the website; create and approve a sourced claim first."
+        "Project only through the separately approved identity-corpus and strict Council-engagement claims."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
-      reviewedAt: "2026-07-14",
-      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
     },
     {
       id: "INTAKE-WOWLIST-SOCIAL-RECORD-2026-07-14",
@@ -2702,6 +2814,17 @@ const knowledgeBankInput = {
         { id: "public-issue-pathway-census", claimId: "CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS", projection: "case-study", sourceIds: [callNycFullPopulationCensusSourceId, "SRC-CALLNYC-X-PROFILE-2026-07-14"] },
         { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
         { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
+      ]
+    },
+    {
+      id: "fair-rent-nyc",
+      surface: "/work/fair-rent-nyc",
+      sourceOrder: [
+        nycaProfilePopulationCensusSourceId
+      ],
+      occurrences: [
+        { id: "shared-public-identity-corpus", claimId: "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS", projection: "case-study", sourceIds: [nycaProfilePopulationCensusSourceId] },
+        { id: "council-social-engagement", claimId: "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT", projection: "case-study", sourceIds: [nycaProfilePopulationCensusSourceId] }
       ]
     },
     {

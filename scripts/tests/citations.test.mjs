@@ -19,6 +19,8 @@ import {
   kcSpacesRecipientSocialSourceIds,
   nycaCouncilSocialSourceIds,
   nycaOlympiaSocialSourceId,
+  nycaProfilePopulationCensusSourceId,
+  nycaSourceTrailSourceIds,
   projectSocialSourceIds,
   projectSocialSources,
   wowListFullPopulationCensusSourceId
@@ -462,8 +464,8 @@ test("Google Drive intake preserves attribution, data gaps, and projection bound
 });
 
 test("project social census preserves strict counts and source identity", () => {
-  assert.equal(projectSocialSources.length, 72);
-  assert.equal(new Set(projectSocialSourceIds).size, 72);
+  assert.equal(projectSocialSources.length, 81);
+  assert.equal(new Set(projectSocialSourceIds).size, 81);
   assert.equal(callNycCouncilSocialSourceIds.length, 8);
   assert.equal(callNycProjectSocialSourceIds.length, 4);
   assert.equal(nycaCouncilSocialSourceIds.length, 11);
@@ -530,7 +532,11 @@ test("Council social intake uses recovery floors and excludes noisy matches", ()
   );
 
   assert.equal(callNyc.status, "integrated");
-  assert.equal(nyca.status, "researching");
+  assert.equal(nyca.status, "integrated");
+  assert.deepEqual(nyca.relatedClaimIds, [
+    "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS",
+    "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT"
+  ]);
   assert.ok(
     callNyc.relatedClaimIds.includes("CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS")
   );
@@ -589,13 +595,16 @@ test("project social intake protects shared authorship and transitions", () => {
     "INTAKE-KC-TOWN-HALL-SOCIAL-CONTINUITY-2026-07-14"
   );
 
+  assert.equal(socialIdentity.status, "integrated");
   assert.ok(
     [socialIdentity, wowList, kcSpaces].every(
       (item) =>
-        item.status === "researching" &&
         item.projectionStatus === "no-public-projection" &&
         item.candidateClaims.length === 0
     )
+  );
+  assert.ok(
+    [wowList, kcSpaces].every((item) => item.status === "researching")
   );
   assert.equal(
     socialIdentity.propositions.find(
@@ -797,6 +806,114 @@ test("KC Town Hall full-population census reconciles all 183 records", () => {
     /Thank you for doing the heavy lifting|Let.?s do this!!/
   );
   assert.doesNotMatch(`${census}\n${JSON.stringify(summary)}`, /\/Users\/|\/Volumes\//);
+});
+
+test("NYC Artist Coalition census gives every profile-counted slot a bounded disposition", () => {
+  const census = readFileSync(
+    "docs/knowledge-bank/research/data/nycartc-x-profile-population-census-2026-07-15.csv",
+    "utf8"
+  );
+  const summary = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/research/data/nycartc-x-profile-population-summary-2026-07-15.json",
+      "utf8"
+    )
+  );
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-NYCA-COUNCIL-SOCIAL-ENGAGEMENT-2026-07-14"
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === nycaProfilePopulationCensusSourceId
+  );
+  const identityClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS"
+  );
+  const councilClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT"
+  );
+
+  assert.equal((census.match(/^RECOVERED-\d{4},/gm) ?? []).length, 3123);
+  assert.equal(
+    (census.match(/^NOT-MATERIALIZED-\d{4},/gm) ?? []).length,
+    2001
+  );
+  assert.equal(
+    (census.match(/,coalition-account-original,/g) ?? []).length,
+    608
+  );
+  assert.equal(
+    (census.match(/,coalition-account-reply,/g) ?? []).length,
+    77
+  );
+  assert.equal(
+    (census.match(/,native-repost-source-status,/g) ?? []).length,
+    2438
+  );
+  assert.equal(summary.population.profileReportedPostCount, 5124);
+  assert.equal(summary.population.recoveredPublicInterfaceRecords, 3123);
+  assert.equal(summary.population.notMaterializedPublicInterfaceRecords, 2001);
+  assert.equal(summary.population.dispositionLedgerRows, 5124);
+  assert.equal(summary.population.dispositionCoveragePercent, 100);
+  assert.equal(summary.population.coalitionAuthoredSourceStatuses, 685);
+  assert.equal(summary.urlInventory.recordsWithExternalLinks, 1339);
+  assert.equal(summary.urlInventory.externalLinkOccurrences, 1451);
+  assert.equal(summary.urlInventory.distinctExternalShortUrls, 1161);
+  assert.deepEqual(summary.publishingPattern.missionSignalRecordCounts, {
+    "fair-rent-nyc": 477,
+    "save-nyc-spaces": 192,
+    "let-nyc-dance": 97,
+    "talks-not-raids": 62,
+    "nightlife-governance": 57,
+    "artist-labor": 98
+  });
+  assert.equal(
+    summary.visibleEngagementSnapshot.originalAndReplyDisplayedInteractionUnits,
+    4306
+  );
+  assert.equal(
+    summary.stakeholderEngagement.strictThenServingCouncilMemberResult.accountCount,
+    5
+  );
+  assert.equal(
+    summary.stakeholderEngagement.strictThenServingCouncilMemberResult
+      .directMentionOrReplyInteractionCount,
+    15
+  );
+  assert.equal(
+    summary.stakeholderEngagement.post2020IncomingMentionInventory
+      .directlyMatchingRecordCount,
+    75
+  );
+  assert.equal(source.visibility, "public");
+  assert.equal(nycaSourceTrailSourceIds.length, 6);
+  assert.equal(intake.status, "integrated");
+  assert.ok(intake.sourceIds.includes(nycaProfilePopulationCensusSourceId));
+  assert.ok(
+    identityClaim.boundaries.some((boundary) =>
+      /not literal recovery of all 5,124/i.test(boundary)
+    )
+  );
+  assert.ok(
+    councilClaim.boundaries.some((boundary) =>
+      /does not establish endorsement/i.test(boundary)
+    )
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "fair-rent-nyc",
+      "shared-public-identity-corpus"
+    ).sources.map((item) => item.source.id),
+    [nycaProfilePopulationCensusSourceId]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "fair-rent-nyc",
+      "council-social-engagement"
+    ).sources.map((item) => item.source.id),
+    [nycaProfilePopulationCensusSourceId]
+  );
+  assert.doesNotMatch(`${census}\n${JSON.stringify(summary)}`, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(census, /(?:utm_|eType=|eId=|linkId=)/);
 });
 
 test("social research locators stay private and research notes stay public-safe", () => {

@@ -235,6 +235,32 @@
       ]
     },
     {
+      "id": "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15",
+      "title": "NYC Artist Coalition X profile-population census",
+      "organization": "NYC Artist Coalition",
+      "author": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/research/data/nycartc-x-profile-population-census-2026-07-15.csv",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Profile-population archival census of the 5,124 objects reported by the @NYCArtC profile, reviewed July 15, 2026.",
+      "publicNote": "The census gives all 5,124 profile-counted slots a disposition: 3,123 records recovered through authenticated public interfaces and 2,001 slots not materialized there. The recovered set contains 608 coalition-account originals, 77 coalition-account replies, and 2,438 external source statuses surfaced through native reposts.",
+      "doesNotEstablish": [
+        "literal recovery of all 5,124 source records",
+        "the contents or status of the 2,001 unmaterialized slots",
+        "a complete deleted-post history",
+        "the human author of every shared-account status",
+        "Jamie as author of every status",
+        "reciprocal engagement from native-repost source accounts",
+        "endorsement",
+        "unique audience reach",
+        "policy causality",
+        "current project status"
+      ]
+    },
+    {
       "id": "SRC-KC-TOWN-HALL-X-QUINTON-LUCAS-RESPONSE-1122866432130334720",
       "title": "Quinton Lucas responds to KC Town Hall's Leon's alert",
       "organization": "Quinton Lucas",
@@ -539,6 +565,78 @@
       ]
     },
     {
+      "id": "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition's shared public identity carried four cultural-space campaigns across years; a 5,124-slot archive ledger recovered 3,123 public records and keeps 2,001 platform-limited slots explicitly unresolved.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "5,124-slot population disposition",
+            "3,123 recovered public-interface records",
+            "2,001 explicitly unresolved slots",
+            "four named campaign identities",
+            "repeated public-information and source-curation functions"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is 100% disposition coverage, not literal recovery of all 5,124 source records.",
+        "The 2,001 unmaterialized slots are not described as deleted, absent, or nonexistent.",
+        "The account does not identify the human author of each shared-account status.",
+        "Jamie establishing the account remains a first-person memory lead pending independent corroboration.",
+        "Native reposts document account curation, not reciprocal engagement from the source accounts.",
+        "The corpus does not establish reach, endorsement, policy causality, or sole ownership of collective outcomes."
+      ]
+    },
+    {
+      "id": "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A strict review recovered at least 15 direct mentions or replies from five then-serving New York City Council member accounts.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "strict five-account minimum",
+            "15 direct mention or reply interactions",
+            "named then-serving Council-member accounts",
+            "false-positive and conversation-context boundaries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Five accounts and 15 interactions are recoverable minimums, not complete historical totals.",
+        "Direct mention or reply does not establish endorsement, adoption, legislative authorship, partnership, or policy causality.",
+        "Broader thread matches, tags, likes, native-repost source statuses, and the institutional @NYCCouncil account are excluded from the strict count."
+      ]
+    },
+    {
       "id": "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -733,6 +831,31 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15"
+      ],
+      "occurrences": [
+        {
+          "id": "shared-public-identity-corpus",
+          "claimId": "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15"
+          ]
+        },
+        {
+          "id": "council-social-engagement",
+          "claimId": "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15"
           ]
         }
       ]

@@ -13,7 +13,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 ## Approved With Guardrails
 
 - HJE 2x claim: contribution wording only.
-- NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective. The case study may describe the 5,124-slot `@NYCArtC` disposition ledger, 3,123 recovered public-interface records, 2,001 explicitly unresolved platform-limited slots, four named campaign identities, and the strict minimum of 15 direct mentions or replies from five then-serving Council-member accounts. It must not call the ledger literal 100% source-record recovery, assign every shared-account status to Jamie, treat native-repost sources as reciprocal engagement, or convert Council interaction into endorsement or policy causality.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified. The case study may say that the recovered social record contains 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts, provided the 107-of-110 recovery boundary remains in the source record and the 26 named accounts are not described as 26 office engagements.
 - WOWList reach: use approximate public-safe adoption wording.

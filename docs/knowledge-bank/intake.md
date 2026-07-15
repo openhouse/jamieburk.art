@@ -139,8 +139,10 @@ July 12-14, 2026:
   typed NYC Council member engagement;
 - the cross-project social identity system and Jamie's bounded account-
   establishment memory lead;
-- strict direct Council-member engagement with NYC Artist Coalition and the
-  larger shared-stewardship mention corpus;
+- NYC Artist Coalition's 5,124-slot profile-population disposition, 3,123
+  recovered public records, 2,001 platform-limited unresolved slots, posted-URL
+  source trail, shared-identity pattern, strict direct Council-member
+  engagement, and larger bounded stakeholder mention corpora;
 - WOW List's social record connecting the calendar to Sunday Dinner and one
   external event-sharing specimen;
 - KC Spaces Fund's campaign timeline, public grantee highlights, recipient
@@ -166,17 +168,19 @@ July 12-14, 2026:
 - Google Drive project-workspace topology as a bounded research map for future
   handoff and collaborator evidence.
 
-The waterways and Sunday Dinner threads have reached `claim-candidate`. The NYC
-Artist Coalition, campaign-press, and most social-evidence threads remain
-`researching`; the press indexes are fully accessioned, while their 45 distinct
+The waterways and Sunday Dinner threads have reached `claim-candidate`. The
+campaign-press and several social-evidence threads remain `researching`; the
+press indexes are fully accessioned, while their 45 distinct
 article bodies remain a bounded close-reading queue. The authenticated CallNYC
 thread is now `integrated`: a 110-slot population census recovered 107 timeline
 objects, preserves three not-recovered slots, and supports the approved
 71-post / 61-page / 26-account issue-pathway projection. Its separate
 eight-account interaction recovery floor remains knowledge-bank depth. The
-strict NYC Artist Coalition result supports five then-serving Council-member
-accounts across 15 direct mention or reply interactions; wider thread matches
-remain excluded from that count. Raw access-time engagement totals remain
+NYC Artist Coalition social threads are now `integrated`: a 5,124-slot
+disposition ledger recovered 3,123 public-interface records, keeps 2,001 slots
+explicitly unresolved, and supports the shared-identity and strict five-Council-
+account / 15-direct-interaction projections. Wider thread matches remain
+excluded from the strict count, and raw access-time engagement totals remain
 outside website projection. The KC Town Hall social and allocation threads are
 now `integrated`: all 183 profile-counted account records were recovered, the
 public operating-surface and three-Council-response claim is approved, and the
