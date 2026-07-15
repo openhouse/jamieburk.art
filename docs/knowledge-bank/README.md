@@ -87,6 +87,16 @@ and [183-item public-safe ledger](data/kctownhall-public-post-ledger.json), with
 exact profile reconciliation, record-level themes and links, metric ownership,
 and a fail-closed privacy boundary.
 
+The [NYC Artist Coalition full-population receipt](intake/2026-07-15-nycartc-x-full-population.md)
+accounts for the profile's 5,124 reported posts as 3,367 recovered account
+items plus an explicit 1,757-item recovery gap. The governed corpus separates
+696 authored posts from 2,671 reposts, resolves every one of the 1,235 distinct
+short URLs in recovered account items, and preserves campaign, source,
+stakeholder, and dated-counter findings with shared-authorship and
+outbound-versus-incoming boundaries. These deeper findings remain held from
+the website unless a future editorial purpose makes them clearer than the
+current bounded coalition projection.
+
 Campaign press sections are preserved as typed source collections rather than
 treated as automatic claim support. The generated
 [NYC Artist Coalition campaign press corpus](campaign-press-corpus.md) records

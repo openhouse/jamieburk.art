@@ -214,3 +214,22 @@ still requires Jamie's explicit approval.
   distinct knowledge-bank depth available for later compositions.
 
 A fresh exact-head Chad Lens pair is required after this change.
+
+## NYC Artist Coalition archive-depth pass
+
+- Kept Jamie's existing co-founder, infrastructure, testimony, and systems
+  contribution legible on the Fair Rent NYC case study.
+- Kept the stronger six-account incoming Council-member floor in the public
+  argument while preventing 109 outbound Council-addressing posts from being
+  misread as 109 engaged members.
+- Preserved the 5,124-item population accounting, campaign counts, resolved
+  links, repost-source patterns, and mutable counters in the knowledge bank
+  rather than making the hiring reader interpret an archival appendix.
+- Added an editorial hold question for every future projection: does this
+  finding make Jamie's operating contribution more legible, or is it merely
+  another number?
+
+The deterministic Chad Lens contract, full repository check, production build,
+and refreshed 42-observation visual matrix pass. Exact-head independent scores
+are reported on the pull request. Production publication remains Jamie's
+explicit decision.

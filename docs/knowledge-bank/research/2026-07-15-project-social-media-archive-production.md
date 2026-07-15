@@ -100,7 +100,37 @@ The 19-person figure is the deduplicated floor across the recovered interaction 
 
 ## NYC Artist Coalition and four campaigns
 
-The [@NYCArtC profile](https://x.com/NYCArtC) explicitly carries one shared identity across Save NYC Spaces, Let NYC Dance, Talks Not Raids, and Fair Rent NYC. That is a significant continuity finding: the coalition did not need to rebuild public legibility from zero for each policy cycle.
+The [@NYCArtC profile](https://x.com/NYCArtC) reported 5,124 posts. The
+[full-population receipt](../intake/2026-07-15-nycartc-x-full-population.md)
+accounts for that control as 3,367 recovered account items plus a 1,757-item
+unclassified recovery gap. The recovered population contains 696 authored
+posts and 2,671 native reposts spanning February 2017 through May 2026. This is
+100% population accounting, not 100% item recovery; the gap is not described as
+deleted and no item type is inferred for it.
+
+The recovered authored corpus shows one shared identity carrying overlapping
+campaign systems across policy cycles: 195 posts used `#FairRentNYC`, 110 used
+`#SaveNYCSpaces`, 78 used `#LetNYCDance`, and 54 used `#TalksNotRaids`.
+Categories overlap. The finding establishes continuity of public campaign
+infrastructure, not campaign outcomes, audience reach, or policy causation.
+
+All 1,235 distinct short URLs in the recovered account items resolved. Among
+authored posts, 446 contain 529 outgoing-link occurrences representing 287
+distinct short URLs. The resulting source-and-action layer spans campaign
+sites, official records, reporting, forms, event pages, and field resources.
+Mission-relevant leads include reporting on Cabaret Law repeal, the Office of
+Nightlife, MARCH accountability, commercial rent, cultural-space closure, and
+later venue enforcement. Posting establishes circulation only; article-level
+claims require a recovered and close-read source body.
+
+The authored corpus contains 115 visible `@NYCCouncil` mention occurrences
+across 109 posts. These are outbound communications, not 109 Council members
+and not incoming engagement. Recovered native reposts most frequently source
+Olympia Kazi (194), United for Small Business NYC (113), Future of Music
+Coalition (110), Street Vendor Project (91), Music Workers Alliance (89),
+Artist Studio Affordability Project (78), Indie Theater Fund (64), and Rafael
+Espinal (47). These are recovery lower bounds and source-circulation patterns,
+not evidence of who selected each repost, endorsement, or formal partnership.
 
 A bounded authenticated review recovered public posts by at least **six serving Council member accounts** that directly mentioned @NYCArtC:
 
@@ -113,13 +143,21 @@ A bounded authenticated review recovered public posts by at least **six serving 
 | Brad Lander | 2021-01-28 | Commercial Rent Stabilization | [Post](https://x.com/bradlander/status/1354840336330330116) |
 | Jimmy Van Bramer | 2020-10-26 | Arts-worker and cultural-policy advocacy | [Post](https://x.com/JimmyVanBramer/status/1320792543773282304) |
 
-The search also recovered 295 campaign-tagged posts and two bounded external-mention result sets: 202 from 2017-2019 and 212 from 2020-2025. These result counts are search-run diagnostics, not complete lifetime totals; X caps, ranking, deletion, privacy, suspension, renaming, and indexing constrain recall.
+This six-account incoming floor remains a separate, stronger engagement
+finding. It is not derived from the account's 109 outbound Council-addressing
+posts and the two populations are never added together.
 
 [Document Journal](https://www.documentjournal.com/2018/02/taking-back-new-york-citys-nightlife/) independently identifies Jamie Burkart and Olympia Kazi as distinct coalition participants. It supports collective context but does not identify account administrators or the author of any specific @NYCArtC post.
 
+On July 15, 2026, 630 of 696 recovered authored posts displayed at least one
+visible interaction; account-owned labels totaled 112 replies, 1,527 reposts,
+2,761 likes, and 64 bookmarks. These mutable counters remain held from
+accomplishment messaging. They do not identify unique people or stakeholder
+classes and do not measure reach, conversion, endorsement, or impact.
+
 ### Defensible claim
 
-> The coalition's shared public identity carried four campaigns across multiple policy cycles. A bounded review recovered posts by at least six serving Council member accounts that directly mentioned @NYCArtC, while individual coalition-post authorship remains deliberately unattributed.
+> A population-accounted pass shows the coalition's shared public identity carrying four campaigns across multiple policy cycles. It recovered 3,367 of 5,124 profile-reported account items and preserves the remaining 1,757 as an explicit gap. A separate bounded review recovered posts by at least six serving Council member accounts that directly mentioned @NYCArtC, while individual coalition-post authorship remains deliberately unattributed.
 
 ## WOW List
 

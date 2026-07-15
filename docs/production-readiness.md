@@ -27,6 +27,8 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run build`
 - [ ] `npm run check`
 - [ ] `npm run knowledge-bank`
+- [ ] `npm run check:nycartc-corpus`
+- [ ] `npm run evals:nycartc-x`
 - [ ] `npm run public-safety`
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`

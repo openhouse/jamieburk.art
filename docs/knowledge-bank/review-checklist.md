@@ -28,6 +28,8 @@ changes public claims.
   credentials, or private correspondence have been committed.
 - [ ] No public `/proofs`, `/knowledge-bank`, or `/public-claims` route exists.
 - [ ] `npm run knowledge-bank` passes.
+- [ ] `npm run check:nycartc-corpus` passes.
+- [ ] `npm run evals:nycartc-x` passes.
 - [ ] `npm run public-safety` passes.
 - [ ] `npm run check:routes` passes.
 - [ ] `npm run preflight:staging` passes.

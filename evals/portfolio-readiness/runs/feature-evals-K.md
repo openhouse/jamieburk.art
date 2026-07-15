@@ -184,3 +184,24 @@ explicit human decision.
   without turning the case study into a social-media analytics report.
 
 A fresh exact-head application-readiness pair is required after this repair.
+
+## NYC Artist Coalition full-population release pass
+
+- Ingested a governed public-safe corpus that accounts for all 5,124
+  profile-reported slots while distinguishing 3,367 recovered items from a
+  1,757-item recovery gap.
+- Preserved source links, campaign continuity, stakeholder communication,
+  repost-source patterns, and dated counters as deep portfolio evidence with
+  explicit authorship, endorsement, and impact boundaries.
+- Retained the existing public case-study composition because it makes Jamie's
+  role and the coalition's collective work clearer than the new corpus metrics.
+- Refreshed 42 production-browser route and viewport observations and 20
+  source-bound captures against the exact current application source; all
+  observations passed.
+
+The complete deterministic release gate passes, including the 100-point
+NYC Artist Coalition corpus eval, 14 citation tests, 6 eval-runner tests, 44
+lifecycle tests, typecheck, lint, production builds, public safety, route
+checks, and compiled-locator checks. Exact-head independent portfolio scores
+are reported on the pull request. Production publication remains Jamie's
+explicit human decision.

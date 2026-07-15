@@ -344,3 +344,26 @@ committed back into the revision it evaluates.
   relationship classes are absorbed into the operations claim again.
 
 A fresh exact-head independent pair is required after this structural repair.
+
+## NYC Artist Coalition full-population accounting
+
+- Accounted for the authenticated 5,124-post profile control as 3,367
+  recovered account items plus a 1,757-item explicit unclassified gap. The
+  corpus does not call the gap deleted or infer its item types.
+- Separated 696 authored posts from 2,671 native reposts and resolved all 1,235
+  distinct short URLs in recovered account items.
+- Preserved four overlapping campaign traces, exact source dispositions,
+  mission-relevant article leads, an outbound Council-addressing pattern, a
+  distinct six-account incoming Council floor, lower-bound repost-source
+  patterns, and a dated traction snapshot as separate evidence classes.
+- Added an append-only receipt, verified source metadata, atomic observations,
+  five held candidates, five hold decisions, one completed research task, and
+  an internal editorial brief. Every canonical projection from this corpus is
+  held from public surfaces.
+- Left the website unchanged because its existing shared-identity and incoming
+  Council-engagement language is clearer for the current hiring purpose.
+
+The corpus eval reached **100 / 100**. The full repository check, 44 lifecycle
+tests, public-safety gate, production build, and refreshed 42-observation visual
+matrix passed. Exact-head independent semantic scores are reported on the pull
+request. Production publication remains Jamie's explicit decision.

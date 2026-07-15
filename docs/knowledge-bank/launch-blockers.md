@@ -12,6 +12,10 @@
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
+- [ ] `npm run check:nycartc-corpus` reproduces the governed NYC Artist
+  Coalition corpus and hashes.
+- [ ] `npm run evals:nycartc-x` passes population, source-positioning,
+  shared-authorship, privacy, and projection-discipline checks.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [x] Jamie approves resume PDF and phone-in-PDF behavior.
