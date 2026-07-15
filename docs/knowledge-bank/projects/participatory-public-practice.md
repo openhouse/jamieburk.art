@@ -4,6 +4,20 @@ These mature claims expand the bank's historical depth. They are intentionally
 held from the current hiring-site composition while their best public role is
 evaluated.
 
+## Sunday Dinner and 196 operating records
+
+A protected Sunday Dinner ledger records 345 numbered event entries from
+January 2012 through March 2021. A separate Jamie-authored 2023 196 Artists
+Residency acceptance template defines a repeatable onboarding sequence: a
+residency window, pre-arrival orientation, space configuration, and independent
+access.
+
+**Boundaries:** The ledger materially supports the 300+ gathering scale but
+does not establish that every numbered entry occurred exactly as planned. These
+records do not independently establish the 20+ resident-artist aggregate.
+Person-level rows, contact details, attendance detail, resident identity,
+addresses, access instructions, and media remain excluded.
+
 ## Waterways expedition and public programs
 
 Jamie conceived and organized a collaborative bicycle-powered raft expedition

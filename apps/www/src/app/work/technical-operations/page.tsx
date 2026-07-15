@@ -6,10 +6,23 @@ import {
   requireReadyOrCarefulProof,
   technicalOperationsProofRows
 } from "@/data/proofs";
+import { getClaimProjection } from "@/data/knowledge-bank";
 import { createMetadata } from "@/lib/metadata";
 
 const kcTownHallProof = requireReadyOrCarefulProof(
   "kc-town-hall-public-benefit-documentation"
+);
+
+const commercialVacancyProof = getClaimProjection(
+  "CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026",
+  "technical-operations",
+  "/work/technical-operations"
+);
+
+const sundayDinnerOperationsProof = getClaimProjection(
+  "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
+  "technical-operations",
+  "/work/technical-operations"
 );
 
 const operationsMap = [
@@ -33,6 +46,10 @@ const proofMap = [
       "Jamie built and stewarded 30+ pages of campaign memory, including decision records, source maps, action trackers, and public/private boundary management."
   },
   {
+    project: "Commercial vacancy public-data framing",
+    proof: commercialVacancyProof.text
+  },
+  {
     project: "CallNYC",
     proof:
       "Jamie built an archived, independent, and unofficial prototype that translated CouncilStat open data into resident-facing guidance."
@@ -44,8 +61,7 @@ const proofMap = [
   },
   {
     project: "196 / Sunday Dinner",
-    proof:
-      "Jamie created repeatable onboarding, facilitation, hosting, documentation, and continuity systems across 300+ gatherings and 20+ resident artists."
+    proof: sundayDinnerOperationsProof.text
   },
   {
     project: "KC Spaces Fund",
@@ -74,7 +90,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">

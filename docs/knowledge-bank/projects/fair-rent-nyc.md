@@ -25,6 +25,30 @@ to make Commercial Rent Stabilization policy inheritance visible across city
 and state source layers and revision paths. The artifact's own disclaimer
 defines it as an unofficial discussion document, not legal advice.
 
+## Commercial vacancy public-data brief
+
+Jamie authored a 2026 brief defining a smallest serious pilot for
+privacy-preserving, geography-aggregated commercial vacancy and lease-cost
+indicators. The proposed release includes an indicators table, a coverage and
+suppression table, and a plain-language methods note. It complements rather than
+replaces the existing storefront reporting system and excludes person-level,
+tax-ID, parcel-level, unit-level, and uploaded-lease data.
+
+This is a proposal. The reviewed record does not establish government
+commissioning, agency adoption, implementation, or measured outcomes.
+
+## Fair Rent NYC web operations
+
+A collaborative January-February 2023 working record marks the new Fair Rent
+NYC website live and tracks a concrete delivery queue spanning site
+administration, email restoration, letterhead, calls to action, joining, press,
+and campaign assets. Revision history records twelve Jamie modifications and
+four collaborator modifications.
+
+The record is direct evidence of one delivery cycle. It does not establish that
+Jamie completed every task, authored every page or policy position, or owned the
+campaign.
+
 ## Boundaries
 
 - Use collective-work language. The artifacts do not establish that Jamie led
@@ -40,3 +64,6 @@ defines it as an unofficial discussion document, not legal advice.
 `CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE` is use-with-care because its numeric
 scale is rendering-dependent. `CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE` is
 confirmed with an explicit unofficial and not-legal-advice boundary.
+`CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026` and
+`CLM-FAIR-RENT-WEB-OPERATIONS-2023` are confirmed with proposal, attribution,
+and collective-work boundaries.

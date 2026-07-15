@@ -675,6 +675,213 @@
         "Later municipal records show that the project withdrew and the unused amount was reappropriated in 2024.",
         "Presenter identification and meeting attendance do not establish sole ownership, authorship, withdrawal responsibility, or current property status."
       ]
+    },
+    {
+      "id": "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "resume-html",
+          "text": "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization language across public policy lineages and revision paths.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ],
+          "rationale": "Use the concise actor-action-artifact proof for hiring readers while the bank carries source-layer and legal-authority boundaries."
+        },
+        {
+          "key": "technical-operations",
+          "text": "Created a legislative source map and provenance redline so collaborators could inspect policy inheritance, revisions, and review lanes.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ],
+          "rationale": "Show source mapping and reviewability as technical-operations capabilities without presenting the artifact as legal authority."
+        },
+        {
+          "key": "archive-note",
+          "text": "Prepared a ten-page, unofficial legislative provenance redline using tracked changes to visualize Commercial Rent Stabilization policy inheritance across city and state source layers.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/fair-rent-nyc"
+          ],
+          "rationale": "Retain the strongest precise description, including length and unofficial status, in the research-facing record."
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The artifact is an unofficial provenance redline for discussion, not legal advice.",
+        "Reviewer labels represent source layers rather than individual drafting authorship.",
+        "Do not imply Jamie authored or owned the underlying legislation.",
+        "Do not publish private review or strategy context."
+      ]
+    },
+    {
+      "id": "CLM-AI-EVALS-PROFESSIONAL-DEVELOPMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "resume-html",
+          "text": "Completed AI Evals For Engineers & PMs with Hamel Husain and Shreya Shankar through Maven in 2026.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ],
+          "rationale": "Use the exact professional-development credential without implying instructor affiliation or licensure."
+        },
+        {
+          "key": "about",
+          "text": "Completed applied professional development in AI evaluation, error analysis, and human-review workflows in 2026.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/about"
+          ],
+          "rationale": "Connect the credential to Jamie's current evaluation practice without overloading the page with course detail."
+        },
+        {
+          "key": "archive-note",
+          "text": "Maven issued Jamie a certificate of completion for AI Evals For Engineers & PMs, taught by Hamel Husain and Shreya Shankar, after Cohort 5 in 2026.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/professional-development"
+          ],
+          "rationale": "Retain the exact credential, provider, instructors, and cohort context in the bank."
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Describe this as professional development and a course certificate of completion.",
+        "Do not imply Jamie teaches the course or is affiliated with the instructors.",
+        "Do not describe the credential as professional licensure or certification authority beyond course completion.",
+        "Do not publish private coursework, cohort records, or portal identifiers.",
+        "Use the private portal for Jamie's completed-cohort curriculum; the public course syllabus continues to change."
+      ]
+    },
+    {
+      "id": "CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie translated a commercial-data gap into a smallest-serious-pilot brief: geography-aggregated vacancy and lease-cost indicators, a coverage and suppression table, a methods note, and explicit privacy exclusions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ],
+          "rationale": "Select as concrete evidence that Jamie can turn a civic data question into a bounded implementation proposal while keeping agency adoption and delivery status explicit."
+        },
+        {
+          "key": "technical-operations",
+          "text": "Defined a smallest publishable pilot for geography-aggregated commercial vacancy and lease-cost indicators, including methods, coverage, suppression, and privacy requirements.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ],
+          "rationale": "Use the implementation-ready deliverables and constraints as compact proof of public-data scoping and risk definition."
+        },
+        {
+          "key": "archive-note",
+          "text": "Authored a privacy-preserving public-data proposal that complements storefront reporting with geography-aggregated commercial vacancy and lease-cost indicators.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/fair-rent-nyc"
+          ],
+          "rationale": "Retain the complete policy-neutral data-design contribution in the bank even when hiring surfaces use shorter wording."
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Describe this as Jamie's proposal, not a government commission, agency commitment, or implemented release.",
+        "Do not imply that a city agency adopted, validated, or delivered the proposed dataset.",
+        "Keep person-level, tax-identifier, parcel-level, unit-level, and lease-document exclusions explicit when describing the proposal in detail.",
+        "No external event listing was recovered in this pass; do not claim formal presentation selection from the brief alone."
+      ]
+    },
+    {
+      "id": "CLM-FAIR-RENT-WEB-OPERATIONS-2023",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A January-February 2023 delivery record shows Jamie maintaining a collaborative FairRentNYC web-operations queue through site launch, restored email, letterhead, join and call-to-action flows, press, and campaign assets.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ],
+          "rationale": "Use a concrete delivery sequence to make Jamie's direct web and campaign-operations contribution legible without assigning him every task or campaign outcome."
+        },
+        {
+          "key": "archive-note",
+          "text": "Maintained a co-edited Fair Rent NYC web operations record spanning launch, email continuity, calls to action, press, signup, letterhead, and campaign assets.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/fair-rent-nyc"
+          ],
+          "rationale": "Preserve the working delivery model and collective edit history in the bank while public copy stays compressed."
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Credit the record as collaborative and do not assign every task, page, asset, message, or policy position to Jamie.",
+        "Do not expose administration links, meeting details, collaborator notes, or underlying records.",
+        "Campaign and policy outcomes remain collective.",
+        "This record is direct evidence for one Fair Rent NYC delivery cycle, not the complete history of every NYC Artist Coalition campaign site."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A protected operations ledger records 345 numbered Sunday Dinner events from 2012 through 2021. A separate 2023 acceptance template turns artist support into a repeatable onboarding sequence: a defined residency window, a pre-arrival call, space configuration, and independent access.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ],
+          "rationale": "Give the summary-only page concrete operating evidence without publishing people-level data or the resident's identity."
+        },
+        {
+          "key": "technical-operations",
+          "text": "Maintained a ledger with 345 numbered Sunday Dinner event records and a reusable residency onboarding sequence covering preparation, space configuration, and independent access.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ],
+          "rationale": "Translate a broad participation claim into inspectable recurring-operations and onboarding evidence for hiring readers."
+        },
+        {
+          "key": "archive-note",
+          "text": "The reviewed archive includes a 345-event Sunday Dinner operating ledger and a 2023 residency acceptance and onboarding template.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/participatory-public-practice"
+          ],
+          "rationale": "Retain the precise artifact basis and date range in the bank while keeping the private rows and resident identity out of the repo."
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Do not publish person-level rows, names, contact details, notes, preferences, attendance detail, addresses, or access instructions.",
+        "The ledger records 345 numbered event entries; it does not independently prove that every entry occurred exactly as planned.",
+        "The reviewed Shared Drive records do not independently establish the 20-plus resident-artist aggregate.",
+        "Do not identify the resident represented in the template without permission.",
+        "Do not imply institutional ownership of participant or resident work."
+      ]
     }
   ],
   "pages": [

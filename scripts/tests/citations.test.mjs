@@ -48,6 +48,22 @@ test("new case-study citations expose only selected public sources", () => {
 
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
+  assert.match(
+    getClaimProjection(
+      "CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026",
+      "technical-operations",
+      "/work/technical-operations"
+    ).text,
+    /smallest publishable pilot/
+  );
+  assert.match(
+    getClaimProjection(
+      "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
+      "case-study",
+      "/work/196-sunday-dinner"
+    ).text,
+    /345 numbered Sunday Dinner events/
+  );
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
@@ -69,6 +85,8 @@ test("private and metadata-only evidence is absent from the public registry", ()
   const serialized = JSON.stringify(publicCitationRegistry);
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-COMMERCIAL-VACANCY-PUBLIC-BASELINE-BRIEF-2026/);
+  assert.doesNotMatch(serialized, /ARCHIVE-SUNDAY-DINNER-OPERATIONS-LEDGER-2012-2021/);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
 });
 

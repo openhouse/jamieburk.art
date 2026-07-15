@@ -44,6 +44,12 @@ import {
   icloudArchiveSources
 } from "../../apps/www/src/data/knowledge-bank/icloud-archive-production.ts";
 import {
+  googleDriveArchiveClaims,
+  googleDriveArchiveInquiries,
+  googleDriveArchiveIntake,
+  googleDriveArchiveSources
+} from "../../apps/www/src/data/knowledge-bank/google-drive-archive-production.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -574,7 +580,7 @@ test("iCloud claims preserve Chad's lens without erasing boundaries", () => {
   ]);
   for (const [proofId, claimId] of expectedProofLinks) {
     const proof = proofClaims.find((item) => item.id === proofId);
-    assert.deepEqual(proof.canonicalClaimIds, [claimId]);
+    assert.ok(proof.canonicalClaimIds.includes(claimId));
   }
 });
 
@@ -780,6 +786,149 @@ test("new evidence returns to every linked research inquiry", () => {
       );
     }
   }
+});
+
+test("Google Drive archive production is bounded, dispositioned, and public-safe", () => {
+  assert.equal(googleDriveArchiveSources.length, 11);
+  assert.equal(googleDriveArchiveClaims.length, 3);
+  assert.equal(googleDriveArchiveInquiries.length, 7);
+  assert.equal(googleDriveArchiveIntake.length, 7);
+
+  assert.ok(
+    googleDriveArchiveSources.every(
+      (source) =>
+        source.visibility === "protected" &&
+        source.preservationStatus === "private" &&
+        source.protectedLocatorId
+    )
+  );
+  assert.ok(
+    googleDriveArchiveSources.every(
+      (source) =>
+        !source.canonicalUrl && !source.archiveUrl && !source.assetUrl
+    )
+  );
+
+  const serialized = JSON.stringify({
+    sources: googleDriveArchiveSources,
+    claims: googleDriveArchiveClaims,
+    inquiries: googleDriveArchiveInquiries,
+    intake: googleDriveArchiveIntake
+  });
+  assert.doesNotMatch(serialized, /drive\.google|docs\.google|\/Users\/|\/Volumes\//i);
+
+  const sourceIds = new Set(googleDriveArchiveSources.map((source) => source.id));
+  const disposedSourceIds = new Set(
+    googleDriveArchiveIntake.flatMap((record) => record.sourceIds)
+  );
+  assert.deepEqual(disposedSourceIds, sourceIds);
+
+  const inventory = googleDriveArchiveSources.find(
+    (source) => source.id === "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026"
+  );
+  const triage = googleDriveArchiveInquiries.find(
+    (inquiry) => inquiry.id === "INQ-GDRIVE-SHARED-DRIVE-TRIAGE-2026"
+  );
+  assert.ok(inventory.supportsGenerally.some((item) => /110 Shared Drive roots/.test(item)));
+  assert.ok(inventory.doesNotEstablish.some((item) => /exhaustive review/i.test(item)));
+  assert.deepEqual(new Set(triage.sourceIds), sourceIds);
+  assert.ok(triage.limitations.some((item) => /bounded professional sample/i.test(item)));
+});
+
+test("Google Drive findings promote only what the reviewed records establish", () => {
+  const claimsById = new Map(
+    googleDriveArchiveClaims.map((claim) => [claim.id, claim])
+  );
+  const sourcesById = new Map(
+    googleDriveArchiveSources.map((source) => [source.id, source])
+  );
+
+  const vacancy = claimsById.get("CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026");
+  assert.equal(vacancy.status, "confirmed-with-boundary");
+  assert.ok(
+    vacancy.projections.some(
+      (projection) =>
+        projection.key === "technical-operations" &&
+        projection.status === "active"
+    )
+  );
+  assert.ok(vacancy.antiClaims.some((item) => /commissioned or adopted/i.test(item)));
+  assert.ok(vacancy.boundaries.some((item) => /external event listing/i.test(item)));
+
+  const web = claimsById.get("CLM-FAIR-RENT-WEB-OPERATIONS-2023");
+  assert.match(web.projections[0].text, /collaborative FairRentNYC web-operations queue/);
+  assert.ok(web.boundaries.some((item) => /not the complete history/i.test(item)));
+  assert.ok(web.antiClaims.some((item) => /every listed task alone/i.test(item)));
+
+  const participation = claimsById.get(
+    "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS"
+  );
+  assert.match(participation.internalClaim, /345 numbered event entries/);
+  assert.ok(
+    participation.boundaries.some((item) => /20-plus resident-artist aggregate/i.test(item))
+  );
+  assert.ok(
+    sourcesById
+      .get("SRC-SUNDAY-DINNER-OPERATIONS-LEDGER-2012-2021")
+      .doesNotEstablish.includes("the 20-plus resident-artist aggregate")
+  );
+
+  const proofById = new Map(proofClaims.map((proof) => [proof.id, proof]));
+  assert.ok(
+    proofById
+      .get("fair-rent-source-map")
+      .canonicalClaimIds.includes(vacancy.id)
+  );
+  assert.deepEqual(
+    proofById.get("nyc-artist-coalition-public-web-infrastructure").canonicalClaimIds,
+    [web.id]
+  );
+  assert.deepEqual(
+    proofById.get("sunday-dinner-196-participation-infrastructure").canonicalClaimIds,
+    [participation.id]
+  );
+});
+
+test("unresolved Shared Drive artifacts remain inquiries, not accomplishments", () => {
+  const wowIntake = googleDriveArchiveIntake.find(
+    (record) => record.id === "INT-GDRIVE-WOWLIST-MEMBERS-MEETING-2026-07-15"
+  );
+  const brandIntake = googleDriveArchiveIntake.find(
+    (record) => record.id === "INT-GDRIVE-SBU-BRAND-GUIDE-SEED-2026-07-15"
+  );
+  const mediaIntake = googleDriveArchiveIntake.find(
+    (record) => record.id === "INT-GDRIVE-PROTECTED-MEDIA-LEADS-2026-07-15"
+  );
+  assert.equal(wowIntake.status, "researching");
+  assert.deepEqual(wowIntake.claimIds ?? [], []);
+  assert.equal(brandIntake.status, "researching");
+  assert.deepEqual(brandIntake.claimIds ?? [], []);
+  assert.equal(mediaIntake.status, "researching");
+  assert.deepEqual(mediaIntake.claimIds ?? [], []);
+  assert.equal(mediaIntake.sourceIds.length, 4);
+  assert.equal(mediaIntake.inquiryIds.length, 4);
+
+  const protectedMediaSources = googleDriveArchiveSources.filter((source) =>
+    mediaIntake.sourceIds.includes(source.id)
+  );
+  assert.ok(
+    protectedMediaSources.every(
+      (source) => source.media?.publicDisplayStatus !== "cleared"
+    )
+  );
+
+  const publicSurfaces = [
+    readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8"),
+    readFileSync("apps/www/src/content/work/196-sunday-dinner.mdx", "utf8"),
+    readFileSync("apps/www/src/app/work/technical-operations/page.tsx", "utf8")
+  ].join("\n");
+  assert.doesNotMatch(
+    publicSurfaces,
+    /members-meeting video|brand-guide seed|Save Jimmy's Corner|Dumpster Day|digital-gathering archive|Council District map package/i
+  );
+  assert.match(publicSurfaces, /CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026/);
+  assert.match(publicSurfaces, /CLM-FAIR-RENT-WEB-OPERATIONS-2023/);
+  assert.match(publicSurfaces, /CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS/);
 });
 
 test("intake cannot reference unknown sources", () => {

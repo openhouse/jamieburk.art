@@ -223,14 +223,14 @@ bibliography claim:
 **Support level:** Careful
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
 **Public wording:** Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.
-**Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.
+**Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected. A 2026 brief also defined a smallest publishable pilot for geography-aggregated commercial vacancy and lease-cost indicators with coverage, suppression, methods, and privacy requirements.
 **Where to project:** Resume page, Technical Operations, Case study.
 **Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.
 **Guardrail:** Do not imply legal authority or official bill ownership.
 **Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
 **Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.
 **Review owner:** Jamie / Collaborator approval needed
-**Canonical claim:** `CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE`.
+**Canonical claims:** `CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE`; `CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026`.
 **Last reviewed:** 2026-07-15
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
@@ -239,14 +239,15 @@ bibliography claim:
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / Jamie review confirmation
 **Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
-**Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.
+**Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy. A co-edited 2023 Fair Rent NYC record directly documents one concrete launch and operations cycle.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
 **Why it matters:** Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.
 **Guardrail:** Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions; Jamie single-handedly caused policy outcomes.
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Canonical claim:** `CLM-FAIR-RENT-WEB-OPERATIONS-2023`.
+**Last reviewed:** 2026-07-15
 
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 
@@ -284,14 +285,16 @@ bibliography claim:
 **Support level:** Careful
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.
+**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. A protected ledger records 345 numbered events, and a 2023 acceptance template preserves a concrete residency onboarding sequence.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Canonical claim:** `CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS`.
+**Measurement boundary:** The reviewed ledger supports the 300+ gathering scale. The reviewed Shared Drive records do not independently establish the 20+ resident-artist aggregate or prove that every numbered event occurred exactly as planned.
+**Last reviewed:** 2026-07-15
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 

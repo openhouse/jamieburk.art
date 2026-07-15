@@ -12,8 +12,11 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
+- Defined a smallest publishable pilot for geography-aggregated commercial vacancy and lease-cost indicators, including coverage, suppression, methods, and privacy requirements.
+- Maintained a collaborative Fair Rent NYC web-operations record through site launch, email restoration, calls to action, press, and campaign-asset delivery.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+- Preserved 345 numbered Sunday Dinner event records and a reusable residency onboarding sequence; the reviewed records do not independently establish the 20+ resident-artist aggregate.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation for a project that advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539. The project later withdrew before disbursement.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.

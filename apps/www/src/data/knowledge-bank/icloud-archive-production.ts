@@ -76,19 +76,20 @@ export const icloudArchiveSources = [
     kind: "project-archive",
     visibility: "protected",
     preservationStatus: "private",
-    capturedAt: "2026-04-29 through 2026-05-15",
+    capturedAt: "2026-04-29 through 2026-05-29",
     accessedAt: "2026-07-15",
     publicCitation:
       "Public-safe archival review of evolving Commercial Rent Stabilization collaboration running minutes, April-May 2026.",
     publicNote:
-      "The protected record establishes a shared, readable operating memory for decisions, open questions, actions, onboarding, and consent-aware story handling. A twelve-page April 29 snapshot and a later 6,532-word working version were inspected.",
+      "The protected record establishes a shared, readable operating memory for decisions, open questions, actions, onboarding, and consent-aware story handling. A twelve-page April 29 snapshot, a later 6,532-word working version, and the current Shared Drive record through May 29 were inspected.",
     protectedLocatorId: "ARCHIVE-CRS-RUNNING-MINUTES-2026",
     supportsGenerally: [
       "Jamie created and maintained shared running minutes and knowledge infrastructure",
       "the record tracked decisions, open questions, actions, and campaign history",
       "the system supported onboarding and continuity across scattered conversations",
       "the record encoded public, anonymized, confidential, and follow-up consent states",
-      "the artifact evolved from a twelve-page snapshot to a 6,532-word working record"
+      "the artifact evolved from a twelve-page snapshot to a 6,532-word working record",
+      "the Shared Drive revision history records sustained Jamie stewardship with collaborator edits through May 29"
     ],
     doesNotEstablish: [
       "that Jamie led or owned the collective campaign",

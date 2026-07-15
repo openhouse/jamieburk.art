@@ -194,7 +194,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, a smallest-publishable public-data pilot brief, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -220,6 +220,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Commercial vacancy public-data brief",
+        description:
+          "A bounded pilot design for geography-aggregated vacancy and lease-cost indicators, coverage and suppression reporting, methods, and privacy exclusions.",
+        type: "source map"
       }
     ],
     tags: [
@@ -262,6 +268,7 @@ const workItemsInput = [
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
+      "Commercial vacancy and lease-cost pilot brief with explicit privacy requirements",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
@@ -450,6 +457,12 @@ const workItemsInput = [
         description:
           "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
         type: "workflow"
+      },
+      {
+        title: "Residency onboarding sequence",
+        description:
+          "A repeatable path from acceptance through orientation, space configuration, and independent access.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
@@ -466,6 +479,8 @@ const workItemsInput = [
     evidence: [
       "300+ hosted gatherings",
       "20+ resident artists supported",
+      "345 numbered event records spanning 2012-2021",
+      "Residency acceptance and onboarding template",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],

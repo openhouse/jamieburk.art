@@ -213,8 +213,9 @@ export const proofClaims: ProofClaim[] = [
       "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
-      "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+      "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected. A 2026 brief also defined a smallest publishable pilot for geography-aggregated commercial vacancy and lease-cost indicators with coverage, suppression, methods, and privacy requirements.",
+    sourceBasis:
+      "Approved resume language, public-safe source-map summary, and protected review of Jamie's commercial-vacancy public-data brief.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -230,7 +231,10 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    canonicalClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE"],
+    canonicalClaimIds: [
+      "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+      "CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026"
+    ],
     lastReviewed: "2026-07-15"
   },
   {
@@ -242,8 +246,9 @@ export const proofClaims: ProofClaim[] = [
       "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
-      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy. A co-edited 2023 Fair Rent NYC record directly documents one concrete launch and operations cycle.",
+    sourceBasis:
+      "Approved resume language, Jamie confirmation, public campaign websites, and protected review of a Fair Rent NYC web operations record.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -266,7 +271,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-FAIR-RENT-WEB-OPERATIONS-2023"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -355,8 +361,9 @@ export const proofClaims: ProofClaim[] = [
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "Jamie created repeatable systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. A protected ledger records 345 numbered events, and a 2023 acceptance template preserves a concrete residency onboarding sequence.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate project history, protected structural review of a 345-event ledger, and a Jamie-authored residency onboarding template. The reviewed Shared Drive records do not independently establish the 20+ resident-artist aggregate.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -375,7 +382,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

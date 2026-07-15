@@ -70,6 +70,14 @@ as open research.
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
 
+The Fair Rent NYC case study may project
+`CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026` and
+`CLM-FAIR-RENT-WEB-OPERATIONS-2023`. The 196 / Sunday Dinner case study and
+Technical Operations page may project
+`CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS`. These projections use
+public-safe summaries only; their protected source records are not rendered as
+citations.
+
 ## Current Portfolio-History Decisions
 
 | Claim | Decision | Audience and compositional reason |

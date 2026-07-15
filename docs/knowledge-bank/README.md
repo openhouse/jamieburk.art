@@ -100,3 +100,11 @@ The July 15 iCloud archive-production pass adds focused project records for
 [professional development](projects/professional-development.md). Historical
 visual and participatory work remains grouped in
 [participatory public practice](projects/participatory-public-practice.md).
+
+The July 15 [Google Drive Shared Drive archival-production pass](projects/google-drive-archive-production.md)
+adds a privacy-screened corpus method plus concrete records for commercial
+vacancy public-data design, Fair Rent NYC web operations, and Sunday Dinner /
+196 participation infrastructure. Maps, neighborhood communications,
+photographs, recordings, video, brand-system, and cultural-media leads remain
+inquiries where authorship, methodology, role, completion, consent, accuracy,
+context, or rights are unresolved.
