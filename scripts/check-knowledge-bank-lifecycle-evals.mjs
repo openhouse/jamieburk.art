@@ -55,7 +55,9 @@ for (const required of [
   "chronology-without-causality",
   "shared-account-population-and-role-memory",
   "private-owner-post-population-and-public-source-selection",
-  "private-collaborative-production-record"
+  "private-collaborative-production-record",
+  "protected-authored-policy-provenance",
+  "credential-completion-boundary"
 ]) {
   if (!fixtureIds.has(required)) fail(`Lifecycle eval is missing fixture ${required}`);
 }

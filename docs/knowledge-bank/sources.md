@@ -240,3 +240,17 @@ collaborators approve.
 - unapproved photos;
 - private financial records;
 - private personal records.
+
+## iCloud Teams Source Deepening
+
+The July 15, 2026 follow-up pass is documented in
+`docs/knowledge-bank/projects/icloud-teams-deepening-2026-07-15.md`. It added:
+
+- one protected policy-provenance artifact represented without a source link;
+- one live public Sunday Dinner project page;
+- one public-safe credential record represented without publishing the asset.
+
+Cloud presence and job-search wording were used for discovery, not as automatic
+proof. The source object carries only the propositions visible in or directly
+established by that object. Private paths, cloud identifiers, raw working files,
+contact data, correspondence, and credential assets remain outside the repo.

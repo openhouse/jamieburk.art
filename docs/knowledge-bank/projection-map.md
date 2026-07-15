@@ -132,5 +132,18 @@ Rent NYC case study: Jamie's documented public invitation and speaking role are
 stated directly, while creation of the office and the campaign's outcomes remain
 collective.
 
+The CRS provenance-redline claim has bounded active projections for the Fair
+Rent case study and Technical Operations. It may describe Jamie's preparer role
+and source-mapping method, but the protected artifact receives no public link
+and the wording must preserve the unofficial, non-legal boundary.
+
+The AI Evals completion claim has an active HTML-resume projection without a
+public certificate link. The certificate supports completion, title,
+instructors, and issuer; date and curriculum language remain separately sourced.
+
+The Sunday Dinner hundredth-iteration trace remains bank-only depth. It is a
+public ordinal floor and image credit, not a replacement for aggregate scale,
+attendance, role, date, or rights evidence.
+
 Bank-only does not mean weak or unimportant. It means the current public
 argument does not yet require the claim, the claim is still maturing, or both.

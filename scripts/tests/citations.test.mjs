@@ -374,3 +374,31 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
 });
+
+test("iCloud Teams source deepening preserves policy, ordinal, and credential boundaries", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+
+  const redlineSource = sourceById.get("SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026");
+  const redlineClaim = claimById.get("CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026");
+  assert.equal(redlineSource?.visibility, "protected");
+  assert.equal(redlineSource?.canonicalUrl, undefined);
+  assert.equal(redlineSource?.archiveUrl, undefined);
+  assert.match(redlineClaim?.internalClaim ?? "", /prepared a tracked-change legislative provenance redline/i);
+  assert.match((redlineClaim?.antiClaims ?? []).join("\n"), /authored Commercial Rent Stabilization legislation/i);
+
+  const sundaySource = sourceById.get("SRC-SUNDAY-DINNER-HUNDREDTH-PROJECT-PAGE");
+  const sundayClaim = claimById.get("CLM-SUNDAY-DINNER-HUNDREDTH-ITERATION-TRACE");
+  assert.equal(sundaySource?.visibility, "public");
+  assert.match(sundaySource?.canonicalUrl ?? "", /^https:\/\/sundaydinnernyc\.com\//);
+  assert.match((sundayClaim?.antiClaims ?? []).join("\n"), /300-plus Sunday Dinner gatherings/i);
+  assert.match((sundayClaim?.antiClaims ?? []).join("\n"), /One hundred people attended/i);
+
+  const certificateSource = sourceById.get("SRC-MAVEN-AI-EVALS-COMPLETION-CERTIFICATE");
+  const certificateClaim = claimById.get("CLM-AI-EVALS-COURSE-COMPLETION");
+  assert.equal(certificateSource?.visibility, "public-metadata-only");
+  assert.equal(certificateSource?.canonicalUrl, undefined);
+  assert.match(certificateSource?.publicNote ?? "", /does not display a completion date/i);
+  assert.match((certificateClaim?.antiClaims ?? []).join("\n"), /certified AI evaluator/i);
+  assert.match((certificateClaim?.antiClaims ?? []).join("\n"), /completion date, curriculum, score, or proficiency/i);
+});

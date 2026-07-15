@@ -18,6 +18,7 @@ import { kcSpacesFundFacebookPostsBatch } from "./kcspacesfund-facebook-posts-ba
 import { nterchngBatchRecords } from "./nterchng-batch-2026-07-15.ts";
 import { kcTownHallPhaseOneBatchRecords } from "./kc-town-hall-phase-one-batch-2026-07-15.ts";
 import { jamiePersonalFacebookPostsBatch } from "./jamie-personal-facebook-posts-batch-2026-07-15.ts";
+import { teamsArchiveDeepeningBatch } from "./teams-archive-deepening-batch-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -599,7 +600,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostsBatch.intakeRecords,
     ...nterchngBatchRecords.intakeRecords,
     ...kcTownHallPhaseOneBatchRecords.intakeRecords,
-    ...jamiePersonalFacebookPostsBatch.intakeRecords
+    ...jamiePersonalFacebookPostsBatch.intakeRecords,
+    ...teamsArchiveDeepeningBatch.intakeRecords
   ],
   sources: [
     {
@@ -1681,7 +1683,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostsBatch.sources,
     ...nterchngBatchRecords.sources,
     ...kcTownHallPhaseOneBatchRecords.sources,
-    ...jamiePersonalFacebookPostsBatch.sources
+    ...jamiePersonalFacebookPostsBatch.sources,
+    ...teamsArchiveDeepeningBatch.sources
   ],
   claims: [
     {
@@ -2286,7 +2289,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostsBatch.claims,
     ...nterchngBatchRecords.claims,
     ...kcTownHallPhaseOneBatchRecords.claims,
-    ...jamiePersonalFacebookPostsBatch.claims
+    ...jamiePersonalFacebookPostsBatch.claims,
+    ...teamsArchiveDeepeningBatch.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
@@ -2298,6 +2302,7 @@ const knowledgeBankInput = {
     ...nterchngBatchRecords.researchInquiries,
     ...kcTownHallPhaseOneBatchRecords.researchInquiries,
     ...jamiePersonalFacebookPostsBatch.researchInquiries,
+    ...teamsArchiveDeepeningBatch.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",
@@ -2424,13 +2429,13 @@ const knowledgeBankInput = {
       id: "INQ-PUBLIC-SITE-SOURCE-COVERAGE",
       project: "portfolio-source-coverage",
       question: "Which consequential public portfolio claims still rely on prose source-basis labels rather than canonical source, evidence, claim, and citation relationships?",
-      methods: ["Compared the structured proof register with the canonical citation Knowledge Bank.", "Confirmed reciprocal canonical links for CallNYC and newly sourced Sunday Dinner, NYC Artist Coalition, commercial-rent testimony, and KC Town Hall claims.", "Prioritized remaining metric-bearing, causal, role, and institutional claims for future source decomposition."],
-      runAt: "2026-07-13",
+      methods: ["Compared the structured proof register with the canonical citation Knowledge Bank.", "Confirmed reciprocal canonical links for CallNYC, Sunday Dinner, NYC Artist Coalition, commercial-rent testimony, KC Town Hall, the CRS provenance redline, and AI Evals course completion.", "Prioritized remaining metric-bearing, causal, role, and institutional claims for future source decomposition."],
+      runAt: "2026-07-15",
       resultStatus: "partially-recovered",
-      findings: ["CallNYC has canonical source and claim relationships for its core project and member-account engagement claims.", "New sources now corroborate Sunday Dinner's weekly public format, Jamie's 2017-2018 public coalition advocacy, and the complete public KC Town Hall award lifecycle.", "The broader proof register still contains public claims whose source basis is descriptive rather than linked to canonical source IDs.", "Priority source-wiring targets include the HJE growth contribution, WOWList scale, Sunday Dinner and 196 aggregate scale, and NYC Artist Coalition co-founder and web-authorship claims."],
+      findings: ["CallNYC has canonical source and claim relationships for its core project and member-account engagement claims.", "New sources corroborate Sunday Dinner's weekly public format and hundredth-iteration floor, Jamie's 2017-2018 public coalition advocacy, and the complete public KC Town Hall award lifecycle.", "A protected 2026 artifact now supports Jamie's preparer role and method for the CRS legislative provenance redline without making the artifact public or implying legal authorship.", "A public-safe completion certificate now directly supports the AI Evals course-completion claim while leaving its date and curriculum to separate approved records.", "The broader proof register still contains public claims whose source basis is descriptive rather than linked to canonical source IDs.", "Priority source-wiring targets include the HJE growth contribution, WOWList scale, Sunday Dinner and 196 aggregate scale, and NYC Artist Coalition co-founder and web-authorship claims."],
       limitations: ["A missing canonical source relationship does not mean the underlying claim is false.", "Some proof claims rely on approved resume or public-safe archive summaries that require careful public-source substitution or protected evidence boundaries.", "This pass did not attempt to research and wire every existing portfolio claim."],
-      sourceIds: [],
-      publicSummary: "CallNYC remains the first fully rendered citation pilot; canonical source coverage now also reaches Sunday Dinner, multiple NYC Artist Coalition actions, and the KC Town Hall public-award lifecycle, with a standing backlog for remaining consequential claims."
+      sourceIds: ["SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", "SRC-SUNDAY-DINNER-HUNDREDTH-PROJECT-PAGE", "SRC-MAVEN-AI-EVALS-COMPLETION-CERTIFICATE"],
+      publicSummary: "CallNYC remains the first fully rendered citation pilot; canonical source coverage now also reaches Sunday Dinner, multiple NYC Artist Coalition actions, the CRS provenance-redline method, AI Evals course completion, and the KC Town Hall public-award lifecycle, with a standing backlog for remaining consequential claims."
     },
     {
       id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",

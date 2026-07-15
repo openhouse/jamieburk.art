@@ -253,3 +253,21 @@ remembering that others used it. Keep that as an attributed research-stage
 memory until collaborator or platform evidence establishes the historical
 division of publishing labor. Do not infer sole administration or any
 record-level authorship.
+
+## iCloud Teams Deepening
+
+Do not say Jamie authored Commercial Rent Stabilization legislation, produced
+official legislative history, provided legal advice, or secured adoption,
+endorsement, passage, or implementation merely because he prepared a tracked-
+change provenance redline. Do not convert reviewer labels into individual
+drafting credit or publish the protected artifact.
+
+Do not use a page labeled `Sunday Dinner 100` as proof that 100 people attended,
+that 300-plus gatherings occurred, that Jamie solely hosted or produced the
+series, that an exact event date is known, or that the displayed image may be
+republished.
+
+Do not infer a completion date, curriculum, score, or proficiency from the AI
+Evals certificate. Course completion is not professional certification and does
+not establish employment, teaching, or institutional affiliation with Maven or
+the instructors.

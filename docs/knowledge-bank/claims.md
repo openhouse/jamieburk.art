@@ -15,7 +15,7 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Does not imply one continuous formal employment role, PMP certification, or government employment.  
 **Do not say:** 14+ years as a formal technical project manager in one organization.  
 **Protected boundaries:** Private clients, collaborator records, raw community materials, and internal operating details stay outside the repo.  
-**Review owner:** Jamie  
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## hje-modernization-stewardship - Legacy e-commerce modernization
@@ -30,7 +30,7 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Use stewardship and contribution language.  
 **Do not say:** Jamie fully owned the business, owned all growth, or replaced the company's institutional knowledge.  
 **Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
-**Review owner:** Jamie  
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
@@ -162,17 +162,18 @@ claim beyond the wording and guardrails here.
 ## fair-rent-source-map - Legislative source map and provenance redline
 
 **Status:** Careful
-**Support level:** Careful
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Support level:** Strong
+**Evidence class:** Protected project artifact / approved resume / public-safe archive summary
+**Structured claim IDs:** `CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026`
 **Public wording:** Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.
-**Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.
+**Detailed public-safe wording:** Jamie prepared a tracked-change legislative provenance redline that made source layers visible from City Council Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and Albany Senate Bill S8319 revisions.
 **Where to project:** Resume page, Technical Operations, Case study.
 **Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.
-**Guardrail:** Do not imply legal authority or official bill ownership.
-**Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
+**Guardrail:** Describe Jamie as the preparer of an unofficial working redline. Do not imply legal authority, underlying bill authorship, official status, adoption, endorsement, passage, or implementation.
+**Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis or history; the artifact proves a policy outcome.
 **Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
-**Review owner:** Jamie / Collaborator approval needed  
-**Last reviewed:** 2026-07-07
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
@@ -310,7 +311,7 @@ claim beyond the wording and guardrails here.
 
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
-**Structured claim IDs:** `CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING`
+**Structured claim IDs:** `CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING`, `CLM-SUNDAY-DINNER-HUNDREDTH-ITERATION-TRACE`
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / public profile / Jamie review confirmation
@@ -318,7 +319,7 @@ claim beyond the wording and guardrails here.
 **Detailed public-safe wording:** Jamie and Julia Fredenberg hosted Sunday Dinner weekly and opened it to the community; Jamie made the recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
-**Guardrail:** The Greene Hill profile supports the weekly, shared-hosting, and open-community description. It does not establish the 300+ gathering or 20+ resident-artist counts. Keep the page summary-only and avoid turning community trust work into spectacle.
+**Guardrail:** The Greene Hill profile supports the weekly, shared-hosting, and open-community description. The live Sunday Dinner 100 page supports a numbered hundredth-iteration floor and Julia Fredenburg image credit. Neither establishes the 300+ gathering or 20+ resident-artist counts, attendance, sole hosting, or image-reuse rights. Keep the page summary-only and avoid turning community trust work into spectacle.
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
@@ -501,15 +502,16 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe certificate  
+**Structured claim IDs:** `CLM-AI-EVALS-COURSE-COMPLETION`
 **Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.  
 **Detailed public-safe wording:** Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.  
 **Where to project:** Resume page, Lab page, About.  
 **Why it matters:** Supports Jamie's source-backed memory and AI-readiness work without overstating product maturity.  
-**Guardrail:** Treat as professional development, not instructor affiliation or certification authority beyond completion.  
+**Guardrail:** The certificate supports completion, course title, instructors, and issuer but displays no date or curriculum. Keep the 2026 date and curriculum tied to approved resume or separate course records. Treat this as professional development, not professional certification, employment, teaching, instructor affiliation, or proof of proficiency.
 **Do not say:** Jamie teaches the course; Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved.  
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
 
 ## participatory-open-house-public-program - Participatory art and shared space
 
@@ -781,4 +783,36 @@ claim beyond the wording and guardrails here.
 **Do not say:** Twenty Council stakeholders engaged with Jamie; reactions measure reach; comments prove endorsement; Jamie was employed by or hired for CouncilStat based on this post.
 **Protected boundaries:** Raw interaction records, responder identities, private analytics, and authentication state stay offline.
 **Review owner:** Jamie / research open
+**Last reviewed:** 2026-07-15
+
+## sunday-dinner-hundredth-iteration-trace - Public ordinal floor
+
+**Status:** Confirmed with boundary; held for composition
+**Support level:** Strong for the page label and credit
+**Evidence class:** Public project page
+**Structured claim ID:** `CLM-SUNDAY-DINNER-HUNDREDTH-ITERATION-TRACE`
+**Public wording:** A live Sunday Dinner project page preserves a numbered hundredth iteration and credits Julia Fredenburg's image.
+**Detailed public-safe wording:** The project archive establishes a public floor of one hundred numbered Sunday Dinner iterations and preserves Julia Fredenburg's image credit without establishing date, attendance, aggregate lifetime scale, or sole authorship.
+**Where to project:** Knowledge Bank; available as a source note when the current composition needs it.
+**Why it matters:** Adds a durable public project trace while keeping ordinal evidence separate from attendance and lifetime totals.
+**Guardrail:** One hundred is a documented iteration floor, not attendance or proof of the separately supported 300-plus aggregate. The page does not establish sole authorship, exact date, or image-reuse rights.
+**Do not say:** One hundred people attended; the page proves 300-plus gatherings; Jamie solely created or hosted every iteration.
+**Protected boundaries:** Do not republish the credited image without a separate rights review; keep participant and attendance records offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## ai-evals-course-completion - Professional development
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Public-safe completion certificate / approved resume
+**Structured claim ID:** `CLM-AI-EVALS-COURSE-COMPLETION`
+**Public wording:** Completed *AI Evals for Engineers & PMs* with Hamel Husain and Shreya Shankar through Maven.
+**Detailed public-safe wording:** A Maven completion certificate directly supports the course title, completion, instructor names, and issuer; approved resume or separate course records carry the date and curriculum details.
+**Where to project:** HTML resume and future professional-development context.
+**Why it matters:** Supplies direct credential support for relevant AI-evaluation professional development without inflating a course into a professional certification.
+**Guardrail:** The certificate supports completion, course title, instructors, and issuer. It displays no date or curriculum and does not establish professional certification, employment, teaching, or proficiency.
+**Do not say:** Jamie is a certified AI evaluator; Jamie taught or worked for Maven; the certificate proves a date, curriculum, score, or proficiency level.
+**Protected boundaries:** Keep the certificate asset, private coursework, cohort materials, and unapproved evaluations offline.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-15

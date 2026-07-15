@@ -62,6 +62,9 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Office of Nightlife: Jamie's public invitation and speaking participation are source-backed; complete production responsibilities and policy causality remain open.
 - Commercial rent testimony: Jamie's October 2018 Council testimony is source-backed; legal authorship and policy causality are not.
 - Sunday Dinner: the weekly community-open format and Julia Fredenberg's co-host role are source-backed; aggregate 300+ scale remains separately supported.
+- Sunday Dinner 100: the live project page is approved as a public ordinal floor and Julia Fredenburg image credit. It does not approve attendance, an exact date, sole authorship, the 300-plus aggregate, or image reuse.
+- Commercial Rent Stabilization provenance redline: Jamie's preparer role and the bounded tracked-change source sequence are approved for public-safe wording. The artifact remains protected and does not establish underlying legislative authorship, official status, legal advice, adoption, endorsement, passage, or implementation.
+- AI Evals course completion: the certificate supports completion, course title, Hamel Husain and Shreya Shankar as instructors, and Maven as issuer. It does not independently support a date, curriculum, score, proficiency, professional certification, employment, or teaching affiliation.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo
@@ -82,3 +85,6 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Jamie's complete instrumental role in creating NYC Artist Coalition.
 - Jamie's complete production contribution to Office of Nightlife advocacy and Save NYC Spaces town halls.
 - Jamie's individual role in Talks Not Raids and the causal pathway from advocacy to MARCH reform and phaseout.
+- Independent support for the HJE growth contribution and its causal boundary.
+- Canonical support for WOW List adoption scale, the 300-plus Sunday Dinner aggregate, and the 20-plus 196 Artists Residency aggregate.
+- Remaining NYC Artist Coalition co-founder, responsibility, and public-web authorship details.

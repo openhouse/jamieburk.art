@@ -278,7 +278,7 @@ export const proofClaims: ProofClaim[] = [
   {
     id: "fair-rent-source-map",
     status: "careful",
-    supportLevel: "careful",
+    supportLevel: "strong",
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
@@ -288,9 +288,13 @@ export const proofClaims: ProofClaim[] = [
       "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
-      "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
-    guardrail: "Do not imply legal authority or official bill ownership.",
+      "Jamie prepared a tracked-change legislative provenance redline that made source layers visible from City Council Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and Albany Senate Bill S8319 revisions.",
+    sourceBasis:
+      "A protected 2026 provenance redline identifies Jamie as preparer and documents the tracked-change source sequence; approved resume language supports the public role framing.",
+    sourceNote:
+      "The protected artifact supports Jamie's preparer credit and the named source layers. It is not a public citation or an official legislative history.",
+    guardrail:
+      "Describe Jamie as the preparer of an unofficial working redline. Do not imply legal authority, underlying bill authorship, official status, adoption, endorsement, passage, or implementation.",
     doNotSay: [
       "Jamie authored the legislation",
       "Jamie provided legal advice",
@@ -305,7 +309,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    structuredClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "experimental-media-systems-practice",
@@ -590,7 +595,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language and public-safe aggregate project history support the scale claim; the 2017 Greene Hill profile documents weekly community dinners; and public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck. The aggregate counts rely on their separate support, not on a single event page or participant workflow.",
+      "Approved resume language and public-safe aggregate project history support the scale claim; the 2017 Greene Hill profile documents weekly community dinners; a live Sunday Dinner project page and public Facebook event pages independently document a numbered hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck. The aggregate counts rely on their separate support, not on a single event page or participant workflow.",
+    sourceNote:
+      "The live Sunday Dinner 100 page establishes a public floor of one hundred numbered iterations and credits Julia Fredenburg's image. It does not prove the 300-plus aggregate, attendance, an exact date, sole hosting, or image-reuse rights.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -609,8 +616,11 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    structuredClaimIds: ["CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING"],
-    lastReviewed: "2026-07-14"
+    structuredClaimIds: [
+      "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING",
+      "CLM-SUNDAY-DINNER-HUNDREDTH-ITERATION-TRACE"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "196-residency-acceptance-workflow",
@@ -1050,9 +1060,12 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Completed AI Evals for Engineers & PMs in 2026",
     detailedPublicWording:
       "Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.",
-    sourceBasis: "Approved resume language and public-safe certificate.",
+    sourceBasis:
+      "A public-safe Maven certificate directly supports completion, course title, instructor names, and issuer. Approved resume language separately supports the 2026 date and curriculum summary.",
+    sourceNote:
+      "The certificate itself displays no completion date or curriculum detail.",
     guardrail:
-      "Treat as professional development, not instructor affiliation or certification authority beyond completion.",
+      "Treat as professional development and course completion, not professional certification, employment, teaching, instructor affiliation, or proof of proficiency.",
     doNotSay: [
       "Jamie teaches the course",
       "Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved"
@@ -1065,7 +1078,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "lab", "about"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
-    lastReviewed: "2026-07-07"
+    structuredClaimIds: ["CLM-AI-EVALS-COURSE-COMPLETION"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "participatory-open-house-public-program",

@@ -133,3 +133,11 @@ three creative-technical claims remain in the Knowledge Bank as future
 compositional range.
 
 This preserves a deep archive and a clear website at the same time.
+
+## Follow-up
+
+A July 15, 2026 selective deepening connected three additional proof areas to
+canonical sources: the protected CRS legislative-provenance redline, a live
+Sunday Dinner hundredth-iteration page, and the public-safe AI Evals completion
+certificate. See
+`docs/knowledge-bank/projects/icloud-teams-deepening-2026-07-15.md`.
