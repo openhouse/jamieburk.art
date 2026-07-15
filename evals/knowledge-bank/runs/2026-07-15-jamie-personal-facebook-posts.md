@@ -25,32 +25,35 @@ Date: 2026-07-15
 
 ## Recursive hill climb
 
-The first focused run scored 88/100 because a privacy assertion expected a
-sentence without its intervening word `therefore`. The evidence and privacy
-treatment were correct. In the same pass, the semantic regression suite found
-that its mission-routing pattern rejected `priority` but missed `priorities`.
+The candidate production record came from a sibling branch whose intake and
+observation shapes predated the current knowledge-bank schema. The first
+integration pass therefore stopped at structural incompatibility rather than
+lowering the current branch's contracts. The intake was migrated to the
+public-safe lifecycle schema, every observation was linked to the intake, the
+aggregate module was registered in all five graph collections, and the older
+recursive runner was deliberately not restored.
 
-The privacy assertion was aligned to the actual bounded sentence, and the guard
-was strengthened to reject both singular and plural priority overclaims. The
-second focused run scored 100/100 with no hard failures. All 23 semantic guard
-tests, the knowledge-bank schema check, and the public-safety check also passed.
+The focused evaluator then scored 100/100 with no hard failures. All 23
+semantic guard tests passed, including mutations that turn a returned
+population into lifetime history, unknown audience state into public content,
+outgoing stakeholder references into engagement, mutable counters into impact,
+or shared work into sole credit.
 
-The evaluator was then wired into the outer recursive protocol and full
-repository check so future changes must preserve the denominator, privacy,
-source-lead, stakeholder, role, and projection boundaries.
+The final `npm run check` passed without another content mutation. It included:
 
-The lifecycle evaluator initially scored 92/100 with hard failures because the
-NTER CHNG opening observation had no claim or inquiry edge. Linking that dated
-public trace to the mission-routing claim restored graph integrity. The second
-lifecycle run scored 97/100 with no hard failures; the remaining projection
-deduction records the intentional decision to keep this intake as selective
-knowledge-bank depth.
+- the 14-eval portfolio suite, with all 11 blocking criteria passing;
+- all five knowledge-bank eval groups and two consecutive independent holdouts;
+- 192 knowledge-bank mutation and structural tests;
+- all 23 personal-Facebook semantic guard tests;
+- KC Spaces Fund Facebook and Jamie personal Facebook focused evaluators at
+  100/100;
+- citation, knowledge-bank, public-safety, and route checks; and
+- TypeScript, lint, and the production Next.js build.
 
-The final `npm run check` passed. It included the production build, citation and
-lifecycle tests, all 23 semantic guard tests, public-safety and route checks,
-all prior corpus evaluators, Chad's lens at 100/100, the new personal Facebook
-evaluator at 100/100, the lifecycle evaluator at 97/100, and the recursive
-protocol.
+The stopping criterion was met: the full returned population has a public-safe
+disposition, the protected corpus remains outside the repository, every
+promoted specimen is individually governed, and no website claim was changed
+without audience-specific need.
 
 ## Held boundaries
 
