@@ -134,8 +134,12 @@ before they support a role or outcome claim.
 
 ## WOW List findings
 
-All 38 records in the current profile control were recovered. Two posts were
-selected for the public case study:
+All 38 records in the current profile control were recovered. A subsequent
+full-population production pass reconciled the Posts and Replies tabs, reviewed
+every record, inventoried every posted URL, classified a bounded incoming
+stakeholder sample, and superseded the narrower two-post public projection.
+
+The selected public case-study claim now draws on:
 
 - a [2014 origin post](https://x.com/wowlist/status/433671630837919744)
   publicly names Jamie and a collaborator and connects WOW List to calendars
@@ -143,8 +147,11 @@ selected for the public case study:
 - a [2015 post](https://x.com/wowlist/status/632168285291835392)
   thanks a community member for making a tutorial for other users.
 
-Together they provide bounded evidence of participatory origin and community
-use. They do not establish sole authorship or broad adoption.
+Together with product-support, calendar-distribution, civic-coordination, and
+third-party use records, they show the account operating as part of the product
+and community practice. See the
+[July 15 full-population note](2026-07-15-wowlist-x-full-population.md) for the
+complete reconciliation and boundaries.
 
 ## KC Town Hall findings
 
@@ -163,8 +170,9 @@ funding receipt, completed redevelopment, or causality for Council action.
 
 - **Selected for public projection:** CallNYC's five-member interaction floor;
   NYC Artist Coalition's shared campaign identity and seven-member-account
-  floor; WOW List's Sunday Dinner origin and community-created tutorial; the
-  cross-project account-establishment operating claim.
+  floor; WOW List's complete displayed-population operating pattern and bounded
+  third-party distribution signals; the cross-project account-establishment
+  operating claim.
 - **Selected for repository documentation only:** KC Town Hall's durable
   account identity and changing-stewardship pattern.
 - **Retained for research:** unresolved timeline slots, post-level teammate

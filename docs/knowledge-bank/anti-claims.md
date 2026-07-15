@@ -41,6 +41,14 @@ selected, or a winner without new evidence and review.
 
 Do not name collaborators unless approved.
 
+Do not describe the 38-record displayed profile population as a complete
+history of deleted, private, withheld, or unindexed activity. Do not turn the
+bounded 16-record incoming search into a complete reception census. Do not use
+follower counts, visible interactions, or independently posted URLs as measures
+of total adoption, reach, attendance, endorsement, or impact. Do not say WOW
+List organized every event it distributed or that Jamie authored every account
+post.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

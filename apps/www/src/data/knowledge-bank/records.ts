@@ -49,6 +49,12 @@ import {
   kcTownHallFieldResearchInquiries20260715,
   kcTownHallFieldSourceRecords20260715
 } from "./kc-town-hall-field-intake-2026-07-15.ts";
+import {
+  wowListFullPopulationClaimRecords20260715,
+  wowListFullPopulationIntakeRecords20260715,
+  wowListFullPopulationResearchInquiries20260715,
+  wowListFullPopulationSourceRecords20260715
+} from "./wowlist-x-full-population-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -59,7 +65,8 @@ const knowledgeBankInput = {
     ...sharedDriveIntakeRecords20260714,
     ...socialMediaIntakeRecords20260714,
     ...webArchiveIntakeRecords20260715,
-    ...kcTownHallFieldIntakeRecords20260715
+    ...kcTownHallFieldIntakeRecords20260715,
+    ...wowListFullPopulationIntakeRecords20260715
   ],
   sources: [
     {
@@ -191,7 +198,8 @@ const knowledgeBankInput = {
     ...sharedDriveSourceRecords20260714,
     ...socialMediaSourceRecords20260714,
     ...webArchiveSourceRecords20260715,
-    ...kcTownHallFieldSourceRecords20260715
+    ...kcTownHallFieldSourceRecords20260715,
+    ...wowListFullPopulationSourceRecords20260715
   ],
   claims: [
     {
@@ -287,7 +295,8 @@ const knowledgeBankInput = {
     ...sharedDriveClaimRecords20260714,
     ...socialMediaClaimRecords20260714,
     ...webArchiveClaimRecords20260715,
-    ...kcTownHallFieldClaimRecords20260715
+    ...kcTownHallFieldClaimRecords20260715,
+    ...wowListFullPopulationClaimRecords20260715
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -301,7 +310,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...intakeResearchInquiries, ...campaignPressResearchInquiries, ...archiveResearchInquiries20260714, ...sharedDriveResearchInquiries20260714, ...socialMediaResearchInquiries20260714, ...webArchiveResearchInquiries20260715, ...kcTownHallFieldResearchInquiries20260715],
+  }, ...intakeResearchInquiries, ...campaignPressResearchInquiries, ...archiveResearchInquiries20260714, ...sharedDriveResearchInquiries20260714, ...socialMediaResearchInquiries20260714, ...webArchiveResearchInquiries20260715, ...kcTownHallFieldResearchInquiries20260715, ...wowListFullPopulationResearchInquiries20260715],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -344,12 +353,26 @@ const knowledgeBankInput = {
       surface: "/work/wowlist",
       sourceOrder: [
         "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+        "SRC-X-WOWLIST-FULL-POPULATION-2026",
         "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-        "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+        "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+        "SRC-X-WOWLIST-PUNKS-USE-2015",
+        "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
       ],
       occurrences: [
         { id: "community-event-sharing", claimId: "CLM-WOWLIST-COMMUNITY-EVENTS-2017", projection: "case-study" },
-        { id: "public-origin-and-use", claimId: "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE", projection: "case-study", sourceIds: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"] }
+        {
+          id: "full-population-practice",
+          claimId: "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-X-WOWLIST-FULL-POPULATION-2026",
+            "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+            "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+            "SRC-X-WOWLIST-PUNKS-USE-2015",
+            "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
+          ]
+        }
       ]
     },
     {

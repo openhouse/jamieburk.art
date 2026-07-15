@@ -584,9 +584,9 @@ export const socialMediaClaimRecords20260714 = [
       {
         key: "case-study",
         text: "Contemporaneous account evidence connects WOW List to calendars made at Sunday Dinner and documents a community member creating a public tutorial for other users.",
-        status: "active",
+        status: "hold",
         citationRequired: true,
-        surfaces: ["/work/wowlist"]
+        surfaces: []
       }
     ],
     evidence: [
@@ -885,11 +885,35 @@ export const socialAccountRecords20260714 = [
     recoveredItems: 38,
     unresolvedItems: 0,
     recoveryStatus: "current-profile-control-recovered",
-    sourceIds: ["SRC-X-WOWLIST-PROFILE-AUDIT-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"],
-    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS", "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE"],
-    inquiryIds: ["INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026", "INQ-WOWLIST-SOCIAL-ARCHIVE-2026"],
+    sourceIds: [
+      "SRC-X-WOWLIST-PROFILE-AUDIT-2026",
+      "SRC-X-WOWLIST-FULL-POPULATION-2026",
+      "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+      "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+      "SRC-X-WOWLIST-NYCDIY-2016",
+      "SRC-X-WOWLIST-PRODUCT-SUPPORT-2015",
+      "SRC-X-WOWLIST-NATIONAL-MARCHES-2016",
+      "SRC-X-WOWLIST-POPULAR-VOTE-2016",
+      "SRC-X-WOWLIST-PUNKS-USE-2015",
+      "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
+      "SRC-X-WOWLIST-ALL-AGES-RESPONSE-2015"
+    ],
+    claimIds: [
+      "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+      "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+      "CLM-WOWLIST-FULL-POPULATION-PRACTICE"
+    ],
+    inquiryIds: [
+      "INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+      "INQ-WOWLIST-SOCIAL-ARCHIVE-2026",
+      "INQ-WOWLIST-FULL-POPULATION-2026"
+    ],
     authorshipBoundary: "Jamie confirms establishing the account; the public timeline does not identify the composer of every account post or reply.",
-    limitations: ["Complete current-profile recovery does not prove that no older record was deleted.", "A community-created tutorial does not establish broad adoption."]
+    limitations: [
+      "Complete current-profile recovery does not prove that no older record was deleted.",
+      "The 16-record incoming search is bounded and does not establish a complete reception census.",
+      "Visible interactions and independently posted URLs do not establish reach, endorsement, adoption, attendance, or impact."
+    ]
   },
   {
     id: "SOCIAL-KCTOWNHALL-X",

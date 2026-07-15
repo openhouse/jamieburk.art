@@ -1,5 +1,16 @@
+import { readFileSync } from "node:fs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { campaignPressCatalogExpectations } from "../../apps/www/src/data/knowledge-bank/campaign-press-2026-07-14.ts";
+
+const wowListFullPopulation = JSON.parse(
+  readFileSync(
+    new URL(
+      "../../apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+      import.meta.url
+    ),
+    "utf8"
+  )
+);
 
 export const requiredSeedIntakeIds = [
   "INTAKE-WATERWAYS-PITCH-HUCK-FINN-2026",
@@ -35,7 +46,8 @@ export const requiredSeedIntakeIds = [
   "INTAKE-CLAUDETTE-AR-COLLABORATION-2026",
   "INTAKE-NTERCHNG-PROJECT-SITE-2026",
   "INTAKE-NTERCHNG-ANH-INCLUSION-2026",
-  "INTAKE-ANH-NERMAN-CONTEXT-2026"
+  "INTAKE-ANH-NERMAN-CONTEXT-2026",
+  "INTAKE-WOWLIST-FULL-POPULATION-2026"
 ];
 
 export const requiredResearchSourceIds = [
@@ -152,6 +164,7 @@ export const requiredSocialClaimIds = [
   "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
   "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
   "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+  "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
   "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
 ];
 
@@ -160,6 +173,7 @@ export const requiredSocialInquiryIds = [
   "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
   "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026",
   "INQ-WOWLIST-SOCIAL-ARCHIVE-2026",
+  "INQ-WOWLIST-FULL-POPULATION-2026",
   "INQ-KCTOWNHALL-SOCIAL-ARCHIVE-2026"
 ];
 
@@ -1148,6 +1162,125 @@ export function validateKnowledgeIntake() {
     }
   }
 
+  const wowListRecords = wowListFullPopulation.records ?? [];
+  const wowListRecordUrls = wowListRecords.map(({ url }) => url);
+  const wowListRecordTypeCounts = wowListRecords.reduce(
+    (counts, record) => ({
+      ...counts,
+      [record.recordType]: (counts[record.recordType] ?? 0) + 1
+    }),
+    {}
+  );
+  const wowListOnlyInReplies = wowListRecords
+    .filter(({ recoveredFrom }) =>
+      recoveredFrom.includes("replies") && !recoveredFrom.includes("posts")
+    )
+    .map(({ url }) => url);
+  const wowListExternalLinkOccurrences = wowListRecords.reduce(
+    (count, record) => count + record.externalLinks.length,
+    0
+  );
+  const wowListDistinctShortUrls = new Set(
+    wowListRecords.flatMap((record) =>
+      record.externalLinks.map(({ shortUrl }) => shortUrl)
+    )
+  );
+  const reconciliation = wowListFullPopulation.populationReconciliation ?? {};
+  if (
+    wowListFullPopulation.generatedAt !== "2026-07-15" ||
+    reconciliation.profileReportedPostCount !== 38 ||
+    reconciliation.postsTimelineUniqueCount !== 37 ||
+    reconciliation.repliesTimelineUniqueCount !== 38 ||
+    reconciliation.recoveredUnionRecordCount !== 38 ||
+    reconciliation.recoveredPopulationReviewedPercent !== 100 ||
+    reconciliation.profileCountNotMaterialized !== 0
+  ) {
+    socialMediaProductionErrors.push("WOW List full-population fixture no longer preserves the 38-record reconciliation");
+  }
+  if (wowListRecords.length !== 38 || new Set(wowListRecordUrls).size !== 38) {
+    socialMediaProductionErrors.push("WOW List fixture must contain 38 unique primary status URLs");
+  }
+  if (
+    wowListRecordTypeCounts.original !== 16 ||
+    wowListRecordTypeCounts.reply !== 6 ||
+    wowListRecordTypeCounts.repost !== 16
+  ) {
+    socialMediaProductionErrors.push("WOW List fixture must retain the 16 original, 6 reply, and 16 repost disposition");
+  }
+  if (
+    wowListOnlyInReplies.length !== 1 ||
+    wowListOnlyInReplies[0] !== "https://x.com/wowlist/status/665520472461860864"
+  ) {
+    socialMediaProductionErrors.push("WOW List fixture must preserve the one status recovered only from Replies");
+  }
+  if (
+    wowListFullPopulation.postedUrlInventory?.recordsWithExternalLinks !== 31 ||
+    wowListExternalLinkOccurrences !== 35 ||
+    wowListFullPopulation.postedUrlInventory?.externalLinkOccurrences !== 35 ||
+    wowListDistinctShortUrls.size !== 35 ||
+    wowListFullPopulation.postedUrlInventory?.distinctExternalShortUrls !== 35 ||
+    wowListFullPopulation.postedUrlInventory?.curatedMissionRelevantSources?.length !== 9
+  ) {
+    socialMediaProductionErrors.push("WOW List fixture must retain all 35 posted URLs and nine curated source leads");
+  }
+  const stakeholderInventory = wowListFullPopulation.stakeholderInventory ?? {};
+  const stakeholderGroupTotal = Object.values(
+    stakeholderInventory.stakeholderGroupCounts ?? {}
+  ).reduce((sum, count) => sum + count, 0);
+  if (
+    stakeholderInventory.recoveredSearchRecordCount !== 16 ||
+    stakeholderInventory.missionRelevantThirdPartyRecordCount !== 10 ||
+    stakeholderInventory.missionRelevantThirdPartyAccountCount !== 10 ||
+    stakeholderInventory.thirdPartyRecordsPostingWowListUrls !== 9 ||
+    stakeholderGroupTotal !== 10
+  ) {
+    socialMediaProductionErrors.push("WOW List bounded stakeholder inventory no longer reconciles 16 records, 10 accounts, four groups, and nine posted URLs");
+  }
+  const visibleEngagement = wowListFullPopulation.visibleEngagementSnapshot ?? {};
+  if (
+    visibleEngagement.observedAt !== "2026-07-15" ||
+    visibleEngagement.accountAuthoredRecordsWithAnyDisplayedInteraction !== 12 ||
+    visibleEngagement.accountAuthoredDisplayedReplies !== 2 ||
+    visibleEngagement.accountAuthoredDisplayedReposts !== 20 ||
+    visibleEngagement.accountAuthoredDisplayedLikes !== 21 ||
+    visibleEngagement.accountAuthoredDisplayedInteractionUnits !== 43
+  ) {
+    socialMediaProductionErrors.push("WOW List dated visible-engagement snapshot no longer reconciles");
+  }
+
+  const wowListFixtureKeys = new Set();
+  const wowListFixtureStack = [wowListFullPopulation];
+  while (wowListFixtureStack.length) {
+    const value = wowListFixtureStack.pop();
+    if (!value || typeof value !== "object") continue;
+    if (Array.isArray(value)) {
+      wowListFixtureStack.push(...value);
+      continue;
+    }
+    for (const [key, child] of Object.entries(value)) {
+      wowListFixtureKeys.add(key.toLowerCase());
+      wowListFixtureStack.push(child);
+    }
+  }
+  for (const forbiddenKey of [
+    "text",
+    "rawtext",
+    "cookies",
+    "credentials",
+    "session",
+    "privatemessages"
+  ]) {
+    if (wowListFixtureKeys.has(forbiddenKey)) {
+      socialMediaProductionErrors.push(`WOW List public fixture contains forbidden raw field: ${forbiddenKey}`);
+    }
+  }
+  const serializedWowListFixture = JSON.stringify(wowListFullPopulation);
+  for (const marker of blockedPublicRepoMarkers) {
+    if (serializedWowListFixture.toLowerCase().includes(marker.toLowerCase())) {
+      socialMediaProductionErrors.push(`WOW List public fixture contains blocked public-repo marker: ${marker}`);
+    }
+  }
+
   const nycArtCAccount = socialAccountById.get("SOCIAL-NYCARTC-X");
   for (const projectId of [
     "nyc-artist-coalition",
@@ -1172,6 +1305,9 @@ export function validateKnowledgeIntake() {
   }
   if (!intakeIdSet.has("INTAKE-PROJECT-SOCIAL-ACCOUNT-ARCHIVE-2026")) {
     socialMediaProductionErrors.push("Missing project social-account archival intake");
+  }
+  if (!intakeIdSet.has("INTAKE-WOWLIST-FULL-POPULATION-2026")) {
+    socialMediaProductionErrors.push("Missing WOW List full-population archival intake");
   }
 
   const requiredSocialSourceIds = new Set([
@@ -1212,12 +1348,19 @@ export function validateKnowledgeIntake() {
     "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016",
     "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
     "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
-    "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+    "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
     "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
   ]);
   for (const claimId of expectedActiveSocialClaims) {
     const active = claimById.get(claimId)?.projections.filter((projection) => projection.status === "active") ?? [];
     if (active.length !== 1) socialMediaProductionErrors.push(`${claimId} must have exactly one selected active projection`);
+  }
+  if (
+    claimById
+      .get("CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE")
+      ?.projections.some((projection) => projection.status === "active")
+  ) {
+    socialMediaProductionErrors.push("The narrower WOW List origin-and-use projection must remain held after the full-population claim superseded it");
   }
 
   const serializedSocialRecords = JSON.stringify([
@@ -1290,7 +1433,7 @@ export function validateKnowledgeIntake() {
       socialMediaProduction: {
         passed: socialMediaProductionErrors.length === 0,
         errors: socialMediaProductionErrors,
-        evidence: "Four project accounts reconcile dated profile controls to recovered and unresolved slots; shared campaign identity, Council-member interaction floors, collective authorship, source discoveries, and selected projections retain explicit public-safety boundaries."
+        evidence: "Four project accounts reconcile dated profile controls to recovered and unresolved slots. WOW List preserves a public-safe 38-record full-population corpus, all 35 posted URLs, nine curated source leads, a bounded 16-record stakeholder inventory, and dated engagement context; selected projections retain collective-authorship, reach, endorsement, causality, and privacy boundaries."
       }
     }
   };

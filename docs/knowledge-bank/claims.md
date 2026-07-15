@@ -168,6 +168,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## wowlist-full-population-practice - Social account as product and community infrastructure
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Complete displayed account population / public status records / bounded stakeholder search
+**Public wording:** A full pass over all 38 profile-counted records shows the account operating as part of WOW List's product and community practice: direct support, community-created onboarding, event distribution, source curation, Sunday Dinner lineage, and rapid civic coordination. A bounded incoming search recovered 10 mission-relevant third-party accounts across four stakeholder groups; nine independently posted a WOW List URL.
+**Detailed public-safe wording:** The authenticated Posts and Replies union reconciles exactly to the 38-record profile control: 16 originals, 6 replies, and 16 reposts. Thirty-one records contain 35 distinct short-URL occurrences. A separate 16-record incoming search yielded 10 mission-relevant third-party accounts, of which nine independently posted a WOW List URL. These are dated publishing, use, and distribution signals, not measures of total adoption, reach, attendance, endorsement, or impact.
+**Where to project:** WOW List case study.
+**Why it matters:** Shows that the communications surface was part of the operating system, not merely promotion, and supplies bounded public evidence of use and distribution.
+**Guardrail:** The 38-record reconciliation is complete only for the displayed profile control. The 16-record incoming search is bounded. Interaction counts and posted URLs are not adoption, reach, attendance, endorsement, or impact.
+**Do not say:** The account represents WOW List's total history or adoption; WOW List organized every distributed event; Jamie authored every post; social activity caused civic outcomes.
+**Protected boundaries:** Raw post text, authenticated-session state, cookies, private messages, credentials, private analytics, and unreviewed collaborator material stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  

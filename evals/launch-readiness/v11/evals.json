@@ -197,18 +197,23 @@
       "evidence": [
         "knowledgeBank.socialAccounts",
         "apps/www/src/data/knowledge-bank/social-media-intake-2026-07-14.ts",
+        "apps/www/src/data/knowledge-bank/wowlist-x-full-population-2026-07-15.ts",
+        "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
         "docs/knowledge-bank/research/2026-07-14-project-social-media-archive-production.md",
+        "docs/knowledge-bank/research/2026-07-15-wowlist-x-full-population.md",
         "apps/www/src/content/work/callnyc.mdx",
         "apps/www/src/content/work/fair-rent-nyc.mdx",
         "apps/www/src/content/work/wowlist.mdx",
         "social-media validation in scripts/lib/knowledge-intake-validation.mjs"
       ],
-      "passCondition": "Four verified project accounts retain dedicated or shared project relationships; every dated profile control equals recovered plus unresolved slots; @NYCArtC retains edges to Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC; required sources, claims, inquiries, and intake records resolve; CallNYC's five-member floor and NYC Artist Coalition's 24-record, seven-member-account floor remain selected with direct status evidence; collective authorship, mutable-count, changing-stewardship, not-recovered, endorsement, reach, and causality boundaries remain explicit; and no private messages, analytics, credentials, session data, private paths, or local research artifacts enter the public repository.",
+      "passCondition": "Four verified project accounts retain dedicated or shared project relationships; every dated profile control equals recovered plus unresolved slots; @NYCArtC retains edges to Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC; required sources, claims, inquiries, and intake records resolve; CallNYC's five-member floor and NYC Artist Coalition's 24-record, seven-member-account floor remain selected with direct status evidence; WOW List preserves a 38-record deduplicated displayed-population corpus with 16 originals, 6 replies, 16 reposts, all 35 posted URLs, nine curated source leads, a bounded 16-record incoming inventory yielding 10 mission-relevant third-party accounts across four groups and nine independently posted WOW List URLs, plus a dated 43-unit visible-engagement snapshot kept out of headline impact language; collective authorship, mutable-count, changing-stewardship, not-recovered, endorsement, reach, attendance, adoption, and causality boundaries remain explicit; and no raw post text, private messages, analytics, credentials, session data, private paths, or local research artifacts enter the public repository.",
       "antiGaming": [
         "Do not count one-way tags, follows, unattributed aggregate reactions, or inferred views as direct engagement.",
         "Do not treat current profile counts as platform exports, deletion histories, historical reach, or proof that no older post was deleted.",
         "Do not infer that Jamie authored every post from account establishment, custody, writing style, or project leadership.",
         "Do not convert member-account behavior into official Council endorsement, adoption, reach, or policy causality.",
+        "Do not represent the complete displayed @wowlist population as a complete history of deleted, private, withheld, or unindexed activity.",
+        "Do not turn WOW List's bounded incoming search, visible interactions, or independently posted URLs into a total reception census, adoption metric, event-attendance measure, endorsement, or impact claim.",
         "Do not hide incomplete recovery by dropping unresolved slots or weakening a recovery floor into a complete census.",
         "Do not expose authenticated-session material, private messages, analytics, drafts, credentials, cookies, or private collaborator records."
       ]

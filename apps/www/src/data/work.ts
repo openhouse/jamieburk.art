@@ -475,9 +475,9 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Complete displayed-account recovery is distinct from deleted or unindexed history, and public-use signals are distinct from adoption or impact.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public archive records, a complete 38-record displayed-account corpus, bounded third-party distribution signals, and aggregate historical product records.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -487,14 +487,16 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
+      "All 38 records in the displayed @wowlist profile control reviewed",
+      "35 posted external URLs and 10 bounded mission-relevant third-party accounts classified",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar platform; the complete displayed @wowlist population documents product support, community onboarding, event distribution, source curation, and civic coordination.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "The @WOWListNYC to @wowlist handle lineage remains unresolved, and broader adoption estimates remain separately governed.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
