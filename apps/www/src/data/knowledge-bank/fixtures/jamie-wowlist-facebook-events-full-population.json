@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-15",
+  "method": "Authenticated Facebook review of Jamie Burkart's Events > Your hosted events > Past surface and the WOW List Page Events plus hosted-past surfaces. Event indexes were scrolled until six consecutive no-growth passes. Every materialized personal event detail page was opened.",
+  "privacyBoundary": "This fixture excludes raw event descriptions, attendee and friend identities, residential street addresses, contact details, access credentials, authenticated-session state, and private group information.",
+  "accounts": {
+    "jamieBurkart": {
+      "profileUrl": "https://www.facebook.com/jburkart/",
+      "surface": "Events > Your hosted events > Past",
+      "displayedEventCount": 21,
+      "materializedEventCount": 21,
+      "detailRecoveredCount": 17,
+      "indexOnlyCount": 4,
+      "dateRange": {
+        "start": "2006-12-02",
+        "end": "2019-02-24"
+      },
+      "coverageState": "complete-as-materialized",
+      "terminalNoGrowthPasses": 6,
+      "responseSnapshot": {
+        "eventsWithDetailResponseTotals": 17,
+        "displayedResponseActions": 608,
+        "eventsAtLeast20Responses": 8,
+        "eventsAtLeast100Responses": 3,
+        "boundary": "Facebook response totals are point-in-time platform actions. They are not unique people, verified attendance, reach, conversion, endorsement, or impact."
+      },
+      "eventLinkedSources": {
+        "eventsWithExternalLinks": 7,
+        "externalLinkCount": 16
+      },
+      "events": [
+        {
+          "eventId": "314671892724189",
+          "canonicalUrl": "https://www.facebook.com/events/314671892724189/",
+          "date": "2019-02-24",
+          "title": "Free Venue Fire Safety Course",
+          "detailState": "recovered",
+          "organizerDisplay": "Tre Mc Manus, Jamie Burkart, and Combustion Inc.",
+          "venue": "The Deep End",
+          "cityOrRegion": "New York City",
+          "displayedResponseCount": 103,
+          "themes": ["cultural-space safety", "public education", "DIY event operations"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "278687849214415",
+          "canonicalUrl": "https://www.facebook.com/events/278687849214415/",
+          "date": "2017-02-01",
+          "title": "Movie Club: HyperNormalisation BBC Doc - Brexit, Trump & Syria",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "Private residence (address withheld)",
+          "cityOrRegion": "Brooklyn",
+          "displayedResponseCount": 38,
+          "themes": ["collective inquiry", "film discussion", "hospitality"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "1416424718368443",
+          "canonicalUrl": "https://www.facebook.com/events/1416424718368443/",
+          "date": "2017-01-15",
+          "title": "Why I March: Sunday Dinner Potluck, Sign Making, Costumes!",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "Private residence (address withheld)",
+          "cityOrRegion": "Brooklyn",
+          "displayedResponseCount": 16,
+          "themes": ["Sunday Dinner", "civic participation", "collective making"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "205659063162313",
+          "canonicalUrl": "https://www.facebook.com/events/205659063162313/",
+          "date": "2016-06-27",
+          "title": "Richard Album / Mega Bog / Russel the Leaf / Slow Ref at The Glove",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart, Rookie Love, and six other cohosts",
+          "venue": "The Glove",
+          "cityOrRegion": "New York City",
+          "displayedResponseCount": 119,
+          "themes": ["DIY cultural space", "touring-artist support", "all-ages music"],
+          "sourceLinks": [
+            {"url": "http://richardalbum.bandcamp.com/", "kind": "artist page"},
+            {"url": "https://megabog.bandcamp.com/", "kind": "artist page"},
+            {"url": "http://russel.bandcamp.com/", "kind": "artist page"},
+            {"url": "https://soundcloud.com/slow-ref/", "kind": "artist page"}
+          ]
+        },
+        {
+          "eventId": "551536301637994",
+          "canonicalUrl": "https://www.facebook.com/events/551536301637994/",
+          "date": "2016-06-26",
+          "title": "200th Sunday Dinner! Special! Wow! Amazing! Interesting!",
+          "detailState": "recovered",
+          "organizerDisplay": "Julia Fredenburg and Jamie Burkart",
+          "venue": "Private residence (address withheld)",
+          "cityOrRegion": "Brooklyn",
+          "displayedResponseCount": 22,
+          "themes": ["Sunday Dinner", "recurring hospitality", "participatory culture"],
+          "sourceLinks": [
+            {"url": "https://wowlist.org/events/22791/sunday-dinner-200", "kind": "WOW List event record"}
+          ]
+        },
+        {
+          "eventId": "1031906753551935",
+          "canonicalUrl": "https://www.facebook.com/events/1031906753551935/",
+          "date": "2016-06-06",
+          "title": "Rebecca Riley / Patrick Weaver / Mac n' Cheese Monday at Pool House",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "Private backyard venue (address withheld)",
+          "cityOrRegion": "Ridgewood, Queens",
+          "displayedResponseCount": 20,
+          "themes": ["touring-artist support", "hospitality", "DIY music"],
+          "sourceLinks": [
+            {"url": "https://chomprecords.bandcamp.com/", "kind": "artist page"},
+            {"url": "https://badheartbull.bandcamp.com/", "kind": "artist page"}
+          ]
+        },
+        {
+          "eventId": "653082538122515",
+          "canonicalUrl": "https://www.facebook.com/events/653082538122515/",
+          "date": "2014-11-23",
+          "title": "Sunday Dinner: Mid-Manhattan / Roosevelt Island (NYC Week 5)",
+          "detailState": "index-only",
+          "organizerDisplay": "Appeared in Jamie Burkart's hosted-event index; exact cohost display was not recovered",
+          "venue": "Private residence (address withheld)",
+          "cityOrRegion": "Roosevelt Island, New York City",
+          "displayedResponseCount": null,
+          "indexResponseLabel": "0 Went / 0 Interested",
+          "themes": ["Sunday Dinner", "recurring hospitality", "neighborhood exchange"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "702417306475691",
+          "canonicalUrl": "https://www.facebook.com/events/702417306475691/",
+          "date": "2014-03-09",
+          "title": "Sunday Dinner Turns 100!",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "Private residence (address withheld)",
+          "cityOrRegion": "Brooklyn",
+          "displayedResponseCount": 21,
+          "themes": ["Sunday Dinner", "recurring hospitality", "participatory culture"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "336325076507688",
+          "canonicalUrl": "https://www.facebook.com/events/336325076507688/",
+          "date": "2014-01-12",
+          "title": "Sunday Dinner potluck show with Jametatone and Meaner Pencil at the Bohemian Grove",
+          "detailState": "index-only",
+          "organizerDisplay": "Appeared in Jamie Burkart's hosted-event index; exact cohost display was not recovered",
+          "venue": "Bohemian Grove",
+          "cityOrRegion": "New York City",
+          "displayedResponseCount": null,
+          "indexResponseLabel": "0 Went / 0 Interested",
+          "themes": ["Sunday Dinner", "DIY cultural space", "music"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "129543367256632",
+          "canonicalUrl": "https://www.facebook.com/events/129543367256632/",
+          "date": "2013-07-14",
+          "title": "Sunday Dinner Prospect Park: Cregg the Giant Pinata's Bash!",
+          "detailState": "recovered",
+          "organizerDisplay": "Julia Fredenburg and Jamie Burkart",
+          "venue": "Prospect Park",
+          "cityOrRegion": "Brooklyn",
+          "displayedResponseCount": 10,
+          "themes": ["Sunday Dinner", "public space", "participatory culture"],
+          "sourceLinks": [
+            {"url": "http://craylife.com/", "kind": "project page"},
+            {"url": "http://sundaydinnernyc.com/", "kind": "project site"}
+          ]
+        },
+        {
+          "eventId": "515145431873418",
+          "canonicalUrl": "https://www.facebook.com/events/515145431873418/",
+          "date": "2013-06-24",
+          "title": "Crystal Palace the Musical video shoot",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "The Crystal Palace",
+          "cityOrRegion": "New York City",
+          "displayedResponseCount": 16,
+          "themes": ["participatory media", "collective production", "DIY cultural space"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "477366412348590",
+          "canonicalUrl": "https://www.facebook.com/events/477366412348590/",
+          "date": "2013-06-11",
+          "title": "The Crystal Palace Return to Space Celebration",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "The Crystal Palace",
+          "cityOrRegion": "New York City",
+          "displayedResponseCount": 14,
+          "themes": ["cultural-space activation", "collective celebration", "DIY culture"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "298498420264248",
+          "canonicalUrl": "https://www.facebook.com/events/298498420264248/",
+          "date": "2012-10-28",
+          "title": "Hurricane Survival Dinner Party + Sleepover tonight!",
+          "detailState": "index-only",
+          "organizerDisplay": "Appeared in Jamie Burkart's hosted-event index; exact cohost display was not recovered",
+          "venue": "Thick Arts",
+          "cityOrRegion": "New York City",
+          "displayedResponseCount": null,
+          "indexResponseLabel": "0 Went / 0 Interested",
+          "themes": ["emergency hospitality", "mutual support", "cultural space"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "464787083542664",
+          "canonicalUrl": "https://www.facebook.com/events/464787083542664/",
+          "date": "2012-08-28",
+          "title": "James Rabbit / IJI / J. Ashley Miller / Tuff Glove",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "Ruby's Jazz House",
+          "cityOrRegion": "Kansas City",
+          "displayedResponseCount": 28,
+          "themes": ["touring-artist support", "DIY music", "hospitality"],
+          "sourceLinks": [
+            {"url": "http://jamesrabbit.bandcamp.com/", "kind": "artist page"},
+            {"url": "http://ijiiji.bandcamp.com/", "kind": "artist page"},
+            {"url": "https://vimeo.com/11906771", "kind": "media"}
+          ]
+        },
+        {
+          "eventId": "824479084255787",
+          "canonicalUrl": "https://www.facebook.com/events/824479084255787/",
+          "date": "2010-08-13",
+          "title": "Going away party for Julia & Jamie!",
+          "detailState": "index-only",
+          "organizerDisplay": "Appeared in Jamie Burkart's hosted-event index; exact cohost display was not recovered",
+          "venue": "Not recovered",
+          "cityOrRegion": "Not recovered",
+          "displayedResponseCount": null,
+          "indexResponseLabel": "14 Went",
+          "themes": ["personal transition"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "10153298280050561",
+          "canonicalUrl": "https://www.facebook.com/events/10153298280050561/",
+          "date": "2010-01-08",
+          "title": "NTER CHNG",
+          "detailState": "recovered",
+          "organizerDisplay": "Drew Bolton, Jamie Burkart, and Garrett Fuselier",
+          "venue": "Cocoon Gallery / First Floor Arts Incubator",
+          "cityOrRegion": "Kansas City",
+          "displayedResponseCount": 177,
+          "themes": ["participatory digital installation", "collective communication", "public archive"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "10153218027900549",
+          "canonicalUrl": "https://www.facebook.com/events/10153218027900549/",
+          "date": "2007-07-14",
+          "title": "Release Yourself onto the Water Until it Tastes of Salt",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "The Pistol Social Club / West Bottoms",
+          "cityOrRegion": "Kansas City",
+          "displayedResponseCount": 5,
+          "themes": ["participatory waterways", "raft expedition", "public invitation"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "10152721710031750",
+          "canonicalUrl": "https://www.facebook.com/events/10152721710031750/",
+          "date": "2007-07-09",
+          "title": "Release yourself onto a bicycle until it tastes of grilled vegetables",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "Private residence (address withheld)",
+          "cityOrRegion": "Kansas City",
+          "displayedResponseCount": 3,
+          "themes": ["participatory waterways", "collaborative design", "hospitality"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "10153329249353169",
+          "canonicalUrl": "https://www.facebook.com/events/10153329249353169/",
+          "date": "2007-01-25",
+          "title": "Micropop: Nation-Scenes",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "Cesar Chavez Co-op",
+          "cityOrRegion": "Santa Cruz",
+          "displayedResponseCount": 5,
+          "themes": ["scene infrastructure", "collective identity", "music networks"],
+          "sourceLinks": [
+            {"url": "https://en.wikipedia.org/wiki/Imagined_Communities", "kind": "reference source"},
+            {"url": "http://www.last.fm/music/Soophie+Nun+Squad/+fans", "kind": "community reference"},
+            {"url": "http://kcdiy.org/", "kind": "community site"}
+          ]
+        },
+        {
+          "eventId": "10155459481930035",
+          "canonicalUrl": "https://www.facebook.com/events/10155459481930035/",
+          "date": "2007-01-06",
+          "title": "Pirate Trolley-In!!",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "8th Street Trolley Tunnel",
+          "cityOrRegion": "Kansas City",
+          "displayedResponseCount": 7,
+          "themes": ["participatory public history", "site-specific media", "urban exploration"],
+          "sourceLinks": []
+        },
+        {
+          "eventId": "10153308288768593",
+          "canonicalUrl": "https://www.facebook.com/events/10153308288768593/",
+          "date": "2006-12-02",
+          "title": "Musicians for a Semantic Web",
+          "detailState": "recovered",
+          "organizerDisplay": "Jamie Burkart",
+          "venue": "DIY venue (street address withheld)",
+          "cityOrRegion": "Santa Cruz",
+          "displayedResponseCount": 4,
+          "themes": ["semantic web", "music networks", "collective inquiry"],
+          "sourceLinks": [
+            {"url": "https://en.wikipedia.org/wiki/Semantic_Web", "kind": "reference source"}
+          ]
+        }
+      ]
+    },
+    "wowList": {
+      "profileUrl": "https://www.facebook.com/wowlist/",
+      "pageEventUrl": "https://www.facebook.com/wowlist/events/",
+      "materializedEventCount": 0,
+      "coverageState": "complete-as-materialized-with-legacy-gap",
+      "surfaceFindings": [
+        {
+          "surface": "WOW List Page Events tab",
+          "displayedState": "No events to show",
+          "materializedEventCount": 0
+        },
+        {
+          "surface": "Authenticated Events > Your hosted events > Past while switched into WOW List",
+          "displayedState": "Events you've hosted will appear here",
+          "materializedEventCount": 0
+        }
+      ],
+      "boundary": "The two current migrated Page surfaces expose zero events. This does not establish that no historical WOW List Facebook event existed, and it is not a complete owner export or deleted-event history."
+    }
+  },
+  "crossAccountFindings": [
+    "The personal hosted archive preserves 21 event records across Kansas City, Santa Cruz, and New York City from 2006 through 2019.",
+    "Six titles explicitly identify Sunday Dinner, including the 100th and 200th gatherings.",
+    "The 200th Sunday Dinner description linked to a WOW List event record, documenting one concrete bridge between Jamie's recurring-event practice and the community-calendar product.",
+    "The chronology moves across participatory art, waterways, public history, recurring hospitality, DIY cultural spaces, civic participation, and cultural-space safety.",
+    "The current WOW List Page event surfaces expose no hosted event records; legacy recovery remains open."
+  ],
+  "doesNotEstablish": [
+    "attendance, unique people, reach, conversion, endorsement, or event impact",
+    "Jamie's sole production of cohosted events",
+    "authorship of every event description or linked source",
+    "ownership or operation of every named venue",
+    "that the current WOW List zero means no historical Facebook event existed",
+    "a complete owner export or deleted-event history"
+  ]
+}
