@@ -10585,8 +10585,12 @@
   },
   "post2020IncomingMentionInventory": {
     "query": "@NYCArtC -from:NYCArtC since:2021-01-01 until:2026-07-15",
-    "recoveredRecordCount": 98,
+    "renderedRecordCount": 98,
     "distinctAuthorCount": 43,
+    "directlyMatchingRecordCount": 75,
+    "directlyMatchingAuthorCount": 34,
+    "conversationContextRecordCount": 23,
+    "conversationContextAuthorCount": 15,
     "authorCounts": [
       {
         "handle": "@olympiakazi",
@@ -13982,13 +13986,13 @@
       }
     ],
     "findings": [
-      "The bounded post-2020 search recovered 98 public records from 36 author accounts.",
+      "The bounded post-2020 search rendered 98 public records from 43 author accounts: 75 records from 34 authors directly match @NYCArtC, while 23 records from 15 authors are surrounding conversation context retained for auditability.",
       "Olympia Kazi authored 15 recovered records connecting the shared account to Council hearings, Office of Nightlife accountability, Talks Not Raids follow-through, and FairRentNYC.",
       "TakeRoot Justice publicly named NYC Artist Coalition among citywide small-business partners; United for Small Business NYC named it among Commercial Rent Stabilization speak-out co-hosts.",
       "F.Y. Eye distributed FairRentNYC through its public-service-advertising network, and theater and nightlife stakeholders described coalition representation or post-repeal continuity.",
       "The recovered post-2020 set adds no serving-Council Member author to the four-account 2017-2020 mission-relevant Council count. A 2023 Stephen Levin record is retained as former-officeholder context, not serving-Council engagement."
     ],
-    "boundary": "This is a complete review of the 98 records materialized by the bounded Latest search, not a complete archive of every post-2020 mention. X warns that older posts may not always appear in timelines or search. Tags, likes, native reposts, private activity, and deleted or unindexed records are not converted into engagement."
+    "boundary": "This is a complete review of the 98 records materialized by the bounded Latest search, including 23 surrounding conversation-context records; it is not a complete archive of every post-2020 mention. X warns that older posts may not always appear in timelines or search. Tags, likes, native reposts, private activity, and deleted or unindexed records are not converted into engagement."
   },
   "visibleEngagementSnapshot": {
     "observedAt": "2026-07-14",
