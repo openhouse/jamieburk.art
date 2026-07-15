@@ -294,12 +294,27 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong
 **Evidence class:** Independent public sources
 **Public wording:** Independent public sources document a decade of Jamie's creative-technology work across time-delayed video, real-time text interaction, audio transformation, and collaborative music visuals.
-**Detailed public-safe wording:** Four dated project records and five public sources document work at intervals from 2006 through 2016 while preserving project-specific collaborators, contexts, and rights.
+**Detailed public-safe wording:** Four dated project records and nine public sources document work at intervals from 2006 through 2016 while preserving project-specific collaborators, contexts, and rights.
 **Where to project:** Knowledge-bank creative-technology project note only.
 **Why it matters:** Gives future editors a defensible account of Jamie's technical and creative range without crowding the current hiring composition.
 **Guardrail:** A dated sequence is not uninterrupted full-time practice. Preserve every project's collaborator and authorship boundary.
 **Do not say:** Jamie worked continuously and full time in creative technology for ten years; Jamie solely authored every project; the sequence proves audience or market impact.
 **Protected boundaries:** Source assets, code, collaborator confirmation, role decomposition, audience evidence, and republication rights remain open research.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nter-chng-america-now-and-here - Exhibition inclusion and observed use
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Official archived exhibition pages / archived project site / institutional context
+**Public wording:** America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists.
+**Detailed public-safe wording:** The official Kansas City artist page directly establishes inclusion and shared credit; a separate official exhibition article documents visitor use of the text-message input and projected display.
+**Where to project:** Knowledge-bank creative-technology project note only.
+**Why it matters:** Converts Jamie's exhibition memory into a direct first-party institutional record while preserving the collaboration and interaction.
+**Guardrail:** The Nerman Museum page is context and does not itself name NTER CHNG. Observed use is not a quantified audience, endorsement, or impact measure.
+**Do not say:** Jamie solely created NTER CHNG; the Nerman Museum page names the project; the sources establish attendance, unique participants, adoption, or impact.
+**Protected boundaries:** Do not reproduce archived phone numbers, participant messages, or media without separate rights and privacy review.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 

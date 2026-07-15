@@ -87,6 +87,12 @@ M.C. Schmidt's joint credit for the Horse Lords video.
 Do not infer complete technical ownership, audience reach, commercial impact,
 or media republication rights from project articles and public video pages.
 
+Do not say the Nerman Museum page names NTER CHNG; America: Now and Here's own
+archived artist page is the direct inclusion source. Do not convert an official
+account of visitors using the installation into attendance, unique-participant,
+reach, endorsement, adoption, or impact claims. Do not reproduce archived
+phone numbers or participant-submitted messages.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

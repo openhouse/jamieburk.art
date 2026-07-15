@@ -56,6 +56,16 @@ Approved public artifact examples for this launch pass include:
   describing WOW List as an event-sharing service.
 - NPR Music's 2016 joint maker credit for Jamie Burkart and M.C. Schmidt on
   Horse Lords' official `Truthers` video.
+- NTER CHNG's archived 2011 project site, preserving the interactive-texting
+  installation description and shared Drew Bolton, Jamie Burkart, and Garrett
+  Fuselier credit.
+- America: Now and Here's archived official Kansas City artist page, directly
+  documenting NTER CHNG in the 2011 exhibition and crediting the three makers
+  together as visual artists.
+- America: Now and Here's archived official article describing visitor use of
+  NTER CHNG's text-message input and projected display.
+- Nerman Museum's institutional page for the 2011 Kansas City launch context;
+  it does not itself name NTER CHNG.
 - KCUR's 2016 reporting on Jamie's participatory public-history program around
   Kansas City's 8th Street Tunnel.
 - Daisy Prince's 2018 Document Journal account of the Cabaret Law repeal and

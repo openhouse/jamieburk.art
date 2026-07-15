@@ -7,6 +7,10 @@ import type {
   ResearchInquiry,
   SourceRecord
 } from "./schema.ts";
+import {
+  nterChngArchiveClaimIds,
+  nterChngArchiveSourceIds
+} from "./nter-chng-archive-expansion-batch-2026-07-14.ts";
 
 const creativeTechnologySourceIds = [
   "SRC-COOL-HUNTING-TIME-IS-LONG-2006",
@@ -21,6 +25,16 @@ const creativeTechnologyClaimIds = [
   "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION-2010",
   "CLM-SORTED-AUDIO-MAX-MSP-2013",
   "CLM-CREATIVE-TECHNOLOGY-LONGITUDINAL-2006-2016"
+] as const;
+
+const expandedCreativeTechnologySourceIds = [
+  ...creativeTechnologySourceIds,
+  ...nterChngArchiveSourceIds
+] as const;
+
+const expandedCreativeTechnologyClaimIds = [
+  ...creativeTechnologyClaimIds,
+  ...nterChngArchiveClaimIds
 ] as const;
 
 export const iCloudTeamsExpansionIntake = [
@@ -102,9 +116,12 @@ export const iCloudTeamsExpansionProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "reserve",
     themes: ["creative technology", "participatory media", "installation", "audio and video systems"],
-    sourceIds: [...creativeTechnologySourceIds],
-    claimIds: [...creativeTechnologyClaimIds],
-    inquiryIds: ["INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY"],
+    sourceIds: [...expandedCreativeTechnologySourceIds],
+    claimIds: [...expandedCreativeTechnologyClaimIds],
+    inquiryIds: [
+      "INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY",
+      "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY"
+    ],
     photoBrief: {
       status: "research-needed",
       selectionQuestion:
@@ -285,6 +302,20 @@ export const iCloudTeamsExpansionClaims = [
         supports: ["three-person maker credit", "collaborative production context"],
         confidence: "high",
         renderCitation: true
+      },
+      {
+        sourceId: "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
+        relationship: "corroborating",
+        supports: ["America: Now and Here exhibition inclusion", "three-person visual-artist credit"],
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
+        relationship: "corroborating",
+        supports: ["observed visitor use", "text input and projected output"],
+        confidence: "high",
+        renderCitation: true
       }
     ],
     boundaries: [
@@ -378,7 +409,7 @@ export const iCloudTeamsExpansionInquiries = [
     limitations: [
       "The current sources support bounded project descriptions and maker credits, but not complete role decomposition, asset ownership, audience reach, or impact."
     ],
-    sourceIds: [...creativeTechnologySourceIds]
+    sourceIds: [...expandedCreativeTechnologySourceIds]
   }
 ] satisfies ResearchInquiry[];
 
@@ -404,10 +435,13 @@ export const iCloudTeamsExpansionProofCoverage = [
   {
     proofId: "creative-technology-practice",
     status: "source-backed",
-    sourceIds: [...creativeTechnologySourceIds],
-    inquiryIds: ["INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY"],
+    sourceIds: [...expandedCreativeTechnologySourceIds],
+    inquiryIds: [
+      "INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY",
+      "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY"
+    ],
     note:
-      "Five independent public records support bounded project and maker claims across 2006-2016; complete role decomposition, source assets, republication rights, reach, and impact remain open.",
+      "Nine public records support bounded project, maker, exhibition, and observed-use claims across 2006-2016; complete role decomposition, source assets, republication rights, reach, and impact remain open.",
     reviewedAt: "2026-07-14"
   }
 ] satisfies ProofCoverage[];

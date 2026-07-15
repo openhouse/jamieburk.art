@@ -125,6 +125,14 @@ earlier 12-page snapshot, and narrows the approved-resume proof queue. See
 `projects/creative-technology-practice.md`. No private archive document,
 contact detail, local path, or browser-session material enters the repo.
 
+The July 14 NTER CHNG expansion follows a user-supplied Wayback lead into the
+official America: Now and Here archive. It adds direct exhibition inclusion,
+shared visual-artist credit, and observed visitor-use evidence while keeping
+Nerman Museum context distinct from project-specific proof. Archived contact
+details and participant submissions remain excluded. See
+`intake/2026-07-14-nter-chng-archive-expansion.md` and
+`projects/creative-technology-practice.md`.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

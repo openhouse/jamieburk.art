@@ -120,6 +120,13 @@ import {
   iCloudTeamsExpansionPublicationDecisions,
   iCloudTeamsExpansionSources
 } from "./icloud-teams-expansion-batch-2026-07-14.ts";
+import {
+  nterChngArchiveClaims,
+  nterChngArchiveInquiries,
+  nterChngArchiveIntake,
+  nterChngArchivePublicationDecisions,
+  nterChngArchiveSources
+} from "./nter-chng-archive-expansion-batch-2026-07-14.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -601,6 +608,7 @@ export const frameworkIntake = [
   ...kcSpacesFundFacebookIntake,
   ...jamieFacebookPostIntake,
   ...iCloudTeamsExpansionIntake,
+  ...nterChngArchiveIntake,
   ...personalWowlistFacebookEventIntake,
   ...wowlistFacebookPostIntake,
   ...callNycSocialCorpusIntake,
@@ -957,9 +965,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "hold",
     themes: ["archival production", "evidence quality", "job applications"],
-    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026", "SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026", "SRC-X-URBANHERMIT-PROFILE-CONTROL-2026", "SRC-X-URBANHERMIT-FULL-POPULATION-AUDIT-2026", "SRC-X-URBANHERMIT-INBOUND-ENGAGEMENT-AUDIT-2026", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016", "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-CONTROL-2026", "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-RUN-2026", "SRC-COOL-HUNTING-TIME-IS-LONG-2006", "SRC-PITCH-NTER-CHNG-2010", "SRC-VIMEO-NTER-CHNG-2011", "SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013"],
-    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS", "CLM-URBANHERMIT-CURRENT-POPULATION-ACCOUNTING", "CLM-URBANHERMIT-SOURCE-ROUTING", "CLM-HORSE-LORDS-TRUTHERS-VIDEO", "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026", "CLM-CREATIVE-TECHNOLOGY-LONGITUDINAL-2006-2016"],
-    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP", "INQ-URBANHERMIT-FULL-POPULATION-2026", "INQ-URBANHERMIT-LINK-RESOLUTION-2026", "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026", "INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY"],
+    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026", "SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026", "SRC-X-URBANHERMIT-PROFILE-CONTROL-2026", "SRC-X-URBANHERMIT-FULL-POPULATION-AUDIT-2026", "SRC-X-URBANHERMIT-INBOUND-ENGAGEMENT-AUDIT-2026", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016", "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-CONTROL-2026", "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-RUN-2026", "SRC-COOL-HUNTING-TIME-IS-LONG-2006", "SRC-PITCH-NTER-CHNG-2010", "SRC-VIMEO-NTER-CHNG-2011", "SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013", "SRC-NTER-CHNG-PROJECT-SITE-2011", "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", "SRC-NERMAN-AMERICA-NOW-HERE-2011"],
+    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS", "CLM-URBANHERMIT-CURRENT-POPULATION-ACCOUNTING", "CLM-URBANHERMIT-SOURCE-ROUTING", "CLM-HORSE-LORDS-TRUTHERS-VIDEO", "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026", "CLM-CREATIVE-TECHNOLOGY-LONGITUDINAL-2006-2016", "CLM-NTER-CHNG-AMERICA-NOW-HERE-2011"],
+    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP", "INQ-URBANHERMIT-FULL-POPULATION-2026", "INQ-URBANHERMIT-LINK-RESOLUTION-2026", "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026", "INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY", "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY"],
     photoBrief: {
       status: "not-applicable",
       selectionQuestion: "What evidence diagram would help an editor understand proof maturity without exposing private records?",
@@ -1523,6 +1531,7 @@ export const frameworkSources = [
   ...kcSpacesFundFacebookSources,
   ...jamieFacebookPostSources,
   ...iCloudTeamsExpansionSources,
+  ...nterChngArchiveSources,
   ...personalWowlistFacebookEventSources,
   ...wowlistFacebookPostSources,
   ...callNycSocialCorpusSources,
@@ -1906,6 +1915,7 @@ export const frameworkClaims = [
   ...kcSpacesFundFacebookClaims,
   ...jamieFacebookPostClaims,
   ...iCloudTeamsExpansionClaims,
+  ...nterChngArchiveClaims,
   ...personalWowlistFacebookEventClaims,
   ...wowlistFacebookPostClaims,
   ...callNycSocialCorpusClaims,
@@ -1950,6 +1960,7 @@ export const frameworkInquiries = [
   ...kcSpacesFundFacebookInquiries,
   ...jamieFacebookPostInquiries,
   ...iCloudTeamsExpansionInquiries,
+  ...nterChngArchiveInquiries,
   ...personalWowlistFacebookEventInquiries,
   ...wowlistFacebookPostInquiries,
   ...callNycSocialCorpusInquiries,
@@ -2012,6 +2023,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   kcSpacesFundFacebookPublicationDecisions,
   jamieFacebookPostPublicationDecisions,
   iCloudTeamsExpansionPublicationDecisions,
+  nterChngArchivePublicationDecisions,
   personalWowlistFacebookEventPublicationDecisions,
   wowlistFacebookPostPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,

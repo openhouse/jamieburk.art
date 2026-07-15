@@ -14,6 +14,7 @@ import {
   evaluateKcTownHallCouncilAllocation,
   evaluateKcTownHallFullPopulationArchive,
   evaluateKnowledgeLifecycle,
+  evaluateNterChngArchiveExpansion,
   evaluateNycArtCFullPopulationArchive,
   evaluateNycArtCFacebookEventArchive,
   evaluateNycArtCFacebookPostArchive,
@@ -493,6 +494,88 @@ test("iCloud archive expansion rejects collapsed CRS snapshots and self-corrobor
   });
   assert.ok(failures.some((failure) => failure.includes("earlier 12-page April 29 snapshot")));
   assert.ok(failures.some((failure) => failure.includes("first-party research guides")));
+});
+
+const nterChngArchiveExpansionFixture = {
+  framework: [
+    "nterChngArchiveIntake nterChngArchiveSources nterChngArchiveClaims",
+    "nterChngArchiveInquiries nterChngArchivePublicationDecisions"
+  ].join(" "),
+  expansionBatch: [
+    "LEAD-NTER-CHNG-ARCHIVE-EXHIBITION-EXPANSION-2026",
+    "SRC-NTER-CHNG-PROJECT-SITE-2011",
+    "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
+    "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
+    "SRC-NERMAN-AMERICA-NOW-HERE-2011",
+    "CLM-NTER-CHNG-AMERICA-NOW-HERE-2011",
+    "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
+    "PUB-NTER-CHNG-AMERICA-NOW-HERE-2011",
+    "Drew Bolton Jamie Burkart Garrett Fuselier",
+    "The Nerman Museum page establishes institutional and launch context but does not itself name NTER CHNG",
+    "Archived phone numbers and participant-submitted messages are excluded",
+    "not recovered is not evidence that it did not exist",
+    'decision: "reserve"'
+  ].join(" "),
+  archiveDoc: [
+    "Recovered Source Chain direct exhibition record observed use",
+    "does not name NTER CHNG",
+    "Archived phone numbers and participant-submitted messages are intentionally excluded",
+    "Not recovered is not evidence that it did not exist",
+    "does not automatically enter the current hiring site"
+  ].join(" "),
+  creativeTechDoc: [
+    "archived project site official archived lists the collaborators as visual artists",
+    "observed visitor use It does not itself name NTER CHNG",
+    "participant-submitted messages are excluded"
+  ].join(" "),
+  sourceCoverage: [
+    "nine public records spanning 2006-2016 official Kansas City artist page",
+    "direct exhibition evidence from contextual institutional evidence"
+  ].join(" "),
+  antiClaims: [
+    "Do not say the Nerman Museum page names NTER CHNG",
+    "Do not convert an official account of visitors using the installation",
+    "Do not reproduce archived phone numbers or participant-submitted messages"
+  ].join(" "),
+  publicSite: "Technical project management, product operations, and implementation"
+};
+
+test("NTER CHNG archive expansion passes direct-source, shared-credit, and privacy boundaries", () => {
+  assert.deepEqual(
+    evaluateNterChngArchiveExpansion(nterChngArchiveExpansionFixture),
+    []
+  );
+});
+
+test("NTER CHNG archive expansion rejects missing direct exhibition evidence and a Nerman overclaim", () => {
+  const failures = evaluateNterChngArchiveExpansion({
+    ...nterChngArchiveExpansionFixture,
+    expansionBatch: nterChngArchiveExpansionFixture.expansionBatch
+      .replace("SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "")
+      .replace("does not itself name NTER CHNG", "names NTER CHNG")
+  });
+  assert.ok(failures.some((failure) => failure.includes("SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011")));
+  assert.ok(failures.some((failure) => failure.includes("does not itself name NTER CHNG")));
+});
+
+test("NTER CHNG archive expansion rejects privacy leakage", () => {
+  const failures = evaluateNterChngArchiveExpansion({
+    ...nterChngArchiveExpansionFixture,
+    archiveDoc: `${nterChngArchiveExpansionFixture.archiveDoc} /Users/example/private 212-555-0123`
+  });
+  assert.ok(failures.some((failure) => failure.includes("local filesystem path or phone number")));
+});
+
+test("NTER CHNG archive expansion rejects sole-credit and silent reserve projection", () => {
+  const failures = evaluateNterChngArchiveExpansion({
+    ...nterChngArchiveExpansionFixture,
+    publicSite: [
+      "Jamie solely created NTER CHNG.",
+      "America: Now and Here's official sites document NTER CHNG."
+    ].join(" ")
+  });
+  assert.ok(failures.some((failure) => failure.includes("sole NTER CHNG credit")));
+  assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
 });
 
 const googleSharedDriveArchiveFixture = {

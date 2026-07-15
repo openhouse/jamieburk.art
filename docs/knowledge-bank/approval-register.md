@@ -30,6 +30,12 @@ The repo is public. Approval here means approved for public-safe repository and 
   Fuselier, M.C. Schmidt, and other source-specific collaborator credits; do
   not project media without rights review or imply continuous full-time
   practice, solo authorship, reach, or commercial impact.
+- NTER CHNG exhibition record: America: Now and Here's archived official pages
+  are approved as direct evidence of 2011 exhibition inclusion, shared
+  visual-artist credit, and observed visitor use. Keep the Nerman Museum page
+  contextual; exclude archived contact details and participant messages; do
+  not infer individual task division, attendance, reach, endorsement, impact,
+  or media rights.
 - KC Town Hall funding: the public record supports the board's unanimous recommendation, the Council's $490,539 allocation, and authorization of funding-agreement negotiations. Do not imply agreement execution, receipt, disbursement, project completion, later property or operating status, or Jamie's sole causality for the vote.
 - KC Town Hall lifecycle: treat Jamie's involvement as historical. Retain the mission-aligned stewardship transition as firsthand research context; do not publish personal circumstances or name the receiving organization without permission and corroboration.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.

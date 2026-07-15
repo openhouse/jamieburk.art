@@ -640,6 +640,109 @@ export function evaluateICloudArchiveExpansion({
   return missing;
 }
 
+export function evaluateNterChngArchiveExpansion({
+  framework,
+  expansionBatch,
+  archiveDoc,
+  creativeTechDoc,
+  sourceCoverage,
+  antiClaims,
+  publicSite
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    "nterChngArchiveIntake",
+    "nterChngArchiveSources",
+    "nterChngArchiveClaims",
+    "nterChngArchiveInquiries",
+    "nterChngArchivePublicationDecisions"
+  ]);
+  requireFragments("NTER CHNG expansion batch", expansionBatch, [
+    "LEAD-NTER-CHNG-ARCHIVE-EXHIBITION-EXPANSION-2026",
+    "SRC-NTER-CHNG-PROJECT-SITE-2011",
+    "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
+    "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
+    "SRC-NERMAN-AMERICA-NOW-HERE-2011",
+    "CLM-NTER-CHNG-AMERICA-NOW-HERE-2011",
+    "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
+    "PUB-NTER-CHNG-AMERICA-NOW-HERE-2011",
+    "Drew Bolton",
+    "Jamie Burkart",
+    "Garrett Fuselier",
+    "The Nerman Museum page establishes institutional and launch context but does not itself name NTER CHNG",
+    "Archived phone numbers and participant-submitted messages are excluded",
+    "not recovered is not evidence that it did not exist",
+    'decision: "reserve"'
+  ]);
+  requireFragments("NTER CHNG intake documentation", archiveDoc, [
+    "Recovered Source Chain",
+    "direct exhibition record",
+    "observed use",
+    "does not name NTER CHNG",
+    "Archived phone numbers and participant-submitted messages are intentionally excluded",
+    "Not recovered is not evidence that it did not exist",
+    "does not automatically enter the current hiring site"
+  ]);
+  requireFragments("Creative-technology project record", creativeTechDoc, [
+    "archived project site",
+    "official archived",
+    "lists the collaborators as visual artists",
+    "observed visitor use",
+    "It does not itself name NTER CHNG",
+    "participant-submitted messages are excluded"
+  ]);
+  requireFragments("Source-coverage ledger", sourceCoverage, [
+    "nine public records spanning 2006-2016",
+    "official Kansas City artist page",
+    "direct exhibition evidence from contextual institutional evidence"
+  ]);
+  requireFragments("Creative-technology anti-claims", antiClaims, [
+    "Do not say the Nerman Museum page names NTER CHNG",
+    "Do not convert an official account of visitors using the installation",
+    "Do not reproduce archived phone numbers or participant-submitted messages"
+  ]);
+
+  const publicBundle = [
+    framework,
+    expansionBatch,
+    archiveDoc,
+    creativeTechDoc,
+    sourceCoverage,
+    antiClaims
+  ].join("\n");
+  const forbiddenPrivateMarkers = [
+    /\/Users\//,
+    /\/Volumes\//,
+    /Mobile Documents/,
+    /com~apple~CloudDocs/,
+    /(?:\+?1[\s.-]?)?\(?[2-9]\d{2}\)?[\s.-]\d{3}[\s.-]\d{4}/
+  ];
+  if (forbiddenPrivateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public NTER CHNG expansion contains a local filesystem path or phone number.");
+  }
+
+  if (
+    publicSite.includes("CLM-NTER-CHNG-AMERICA-NOW-HERE-2011") ||
+    publicSite.includes("America: Now and Here's official sites document NTER CHNG")
+  ) {
+    missing.push("Reserve NTER CHNG exhibition claim must not silently appear on the public site.");
+  }
+  if (/Jamie (?:solely|alone) (?:created|built|made) NTER CHNG/i.test(publicSite)) {
+    missing.push("Public site assigns sole NTER CHNG credit where shared maker credit is required.");
+  }
+
+  return missing;
+}
+
 export function evaluateGoogleSharedDriveArchiveProduction({
   framework,
   proofs,
@@ -3707,6 +3810,14 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/projects/creative-technology-practice.md"
   );
+  const nterChngArchiveExpansionBatch = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/nter-chng-archive-expansion-batch-2026-07-14.ts"
+  );
+  const nterChngArchiveExpansionDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-nter-chng-archive-expansion.md"
+  );
   const sourceCoverage = readOptional(
     repoRoot,
     "docs/knowledge-bank/source-coverage.md"
@@ -4002,7 +4113,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}`,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}\n${nterChngArchiveExpansionBatch}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -4018,6 +4129,31 @@ export function runLaunchEvals(repoRoot) {
         "Every supplied memory and URL has a durable intake record and disposition.",
         "Sources, claims, inquiries, publication decisions, proof-coverage debt, and photo research remain distinct and linked.",
         "Only a deliberately selected bounded claim is promoted to the public site."
+      ]
+    })
+  );
+
+  const nterChngArchiveExpansionMissing = evaluateNterChngArchiveExpansion({
+    framework,
+    expansionBatch: nterChngArchiveExpansionBatch,
+    archiveDoc: nterChngArchiveExpansionDoc,
+    creativeTechDoc: creativeTechnologyDoc,
+    sourceCoverage,
+    antiClaims,
+    publicSite: [homePage, resumePage, siteData, workData, technicalOperations, fairRentCase].join("\n")
+  });
+  results.push(
+    result({
+      id: "nter-chng-archive-expansion",
+      label: "NTER CHNG exhibition provenance preserves direct evidence, shared credit, and participant privacy",
+      weight: 20,
+      hardGate: true,
+      missing: nterChngArchiveExpansionMissing,
+      evidence: [
+        "The archived project site preserves the installation description and three-person maker credit.",
+        "America: Now and Here's official archives directly establish 2011 exhibition inclusion and observed visitor use.",
+        "Nerman Museum context remains distinct from the project-specific inclusion evidence.",
+        "Participant messages, contact details, unsupported audience claims, and silent site projection are hard-gated."
       ]
     })
   );
@@ -4529,6 +4665,7 @@ export function runLaunchEvals(repoRoot) {
       "Do not satisfy press-corpus completeness by dropping duplicates across campaigns, treating index membership as claim support, or marking unreviewed articles as close-read.",
       "Do not satisfy archival-production coverage by exposing local paths, private records, or unhydrated files; not recovered is not evidence of nonexistence.",
       "Do not use first-party job-hunt documents as independent corroboration or promote every mature archive claim to the public site.",
+      "Do not use contextual exhibition pages as project-specific proof, erase NTER CHNG's shared maker credit, convert observed use into audience impact, or republish archived participant messages and contact details.",
       "Do not publish Shared Drive names, links, IDs, membership, participant rows, access details, or private filenames to prove archival depth.",
       "Do not treat Shared Drive custody, a private draft, or one dated workflow record as proof of authorship, distribution, institutional adoption, implementation, or aggregate scale.",
       "Do not treat an authenticated visible social timeline as a complete platform export, count one-way tags as reciprocal engagement, assign every team post to Jamie, expose authentication material, or convert individual-account interactions into official endorsement or policy causality.",
