@@ -395,6 +395,24 @@
       "blockers": [
         "Two fresh independent judges must inspect population reconciliation, anonymous-ledger privacy, profile-association and organizer-attribution boundaries, source-route roles, response semantics, WOW List historical-zero framing, Sunday Dinner milestone limits, collective credit, selective projection, governance bindings, and count-preserving mutation resistance on a frozen revision."
       ]
+    },
+    {
+      "judgeId": "personal-wowlist-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T14:20:53Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, mutation-resistance, and Git-history review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "personal-wowlist-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b",
+      "completedAt": "2026-07-15T14:18:21Z",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, collective-credit reviewer, and archival interpretation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

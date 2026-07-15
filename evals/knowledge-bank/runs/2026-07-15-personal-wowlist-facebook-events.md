@@ -119,15 +119,30 @@ The deterministic candidate reaches 5 / 5 on all 19 criteria with no canonical
 validation errors. A material-change reset requires two fresh independent
 reviewers to inspect a frozen revision before the recursive protocol closes.
 
-## Holdout plan
+## Holdout result
 
-The two independent lenses are:
+Commit `b70aee01a30049190a51e9fa10faa19c18857b9f` was frozen with a clean
+worktree for two independent holdout reviews:
 
 - archival data integrity, privacy, provenance, population reconciliation, and
   mutation resistance; and
 - skeptical hiring-editor usefulness, collective credit, public clarity, and
   non-inflationary projection.
 
-Rejected reviews remain in the holdout ledger. Accepted reviews may close the
-gate only when both judges score all 19 criteria at 5 / 5 with no blockers on
-the same frozen dependency graph.
+Both judges accepted the same frozen dependency graph at 5 / 5 on all 19
+criteria with no blockers. The integrity reviewer independently reconciled all
+511 rows, the 502-parent recurrence arithmetic, every distribution and
+disposition total, the 21 selected public records, the nine source routes, and
+the 23 NYC Artist Coalition referrals. A fresh 41-case mutation pass rejected
+every tested privacy leak, role inflation, response inflation, historical-zero
+overreach, milestone inflation, source mutation, and dependency mutation.
+
+The hiring editor confirmed that the website projection remains selective and
+useful: two bounded Sunday Dinner milestones and one documented WOW List route,
+with Julia Fredenburg's co-organizer credit intact and no conversion, adoption,
+attendance, or profile-wide role inference. A separate 31-case editorial
+attack pass rejected all tested credit erasure and interpretive inflation.
+
+The holdout ledger records both accepted judgments. Residual limitations stay
+explicit: this verdict covers the frozen capture-date accounting and governed
+public-safe evidence, not a native lifetime Meta export or a new live re-fetch.
