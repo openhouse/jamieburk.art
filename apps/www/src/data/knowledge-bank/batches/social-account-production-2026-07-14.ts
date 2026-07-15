@@ -173,7 +173,7 @@ export const socialAccountProductionBatch20260714: {
       publicCitation:
         "Authenticated review of the public @NYCArtC profile and historical mention searches on July 14, 2026.",
       publicNote:
-        "The account reported 5,124 posts and a January 2017 join date. A capped search observation recovered 260 external posts from March 2020-March 2025, plus earlier Council-account results from roster-based searches. Neither set is a complete export.",
+        "This source preserves the initial capped external-mention and Council-roster search used for the lower-bound incoming-engagement claim. A separate July 15 governed corpus now accounts for the profile population as 3,367 recovered account items plus an explicit 1,757-item gap.",
       supportsGenerally: [
         "a durable umbrella identity for Save NYC Spaces, Let NYC Dance, Talks Not Raids, and Fair Rent NYC",
         "visible use by collaborators, partner organizations, and public officials over multiple years",
@@ -879,7 +879,8 @@ export const socialAccountProductionBatch20260714: {
       evidence: [
         { sourceId: "SRC-NAC-OLYMPIA-KAZI-RELIEF-2020", relationship: "direct-support", supports: ["Olympia Kazi's public use", "relief advocacy"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NAC-WONDERVILLE-2020", relationship: "corroborating", supports: ["partner event amplification"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-NAC-BUILD-UP-JUSTICE-2020", relationship: "corroborating", supports: ["professional resource coordination"], confidence: "high", renderCitation: true }
+        { sourceId: "SRC-NAC-BUILD-UP-JUSTICE-2020", relationship: "corroborating", supports: ["professional resource coordination"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NAC-X-CORPUS-2026-07-15", relationship: "context", supports: ["durable collaborator and partner source circulation across the recovered account history"], confidence: "high", renderCitation: false }
       ],
       boundaries: [
         "The posts establish public adoption and use, not who created the account, authored every campaign artifact, or controlled account access."
@@ -910,7 +911,8 @@ export const socialAccountProductionBatch20260714: {
       ],
       evidence: [
         { sourceId: "SRC-SOCIAL-NYCARTC-AUTH-OBSERVATION-2026", relationship: "context", supports: ["long-lived shared public identity"], confidence: "high", renderCitation: false },
-        { sourceId: "SRC-NAC-OLYMPIA-KAZI-RELIEF-2020", relationship: "corroborating", supports: ["collaborator use of the identity"], confidence: "high", renderCitation: false }
+        { sourceId: "SRC-NAC-OLYMPIA-KAZI-RELIEF-2020", relationship: "corroborating", supports: ["collaborator use of the identity"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NAC-X-CORPUS-2026-07-15", relationship: "context", supports: ["nine-year shared account continuity", "collective authorship boundary"], confidence: "high", renderCitation: false }
       ],
       boundaries: [
         "Treat Jamie's account-establishment statement as a first-person recollection until creation records or collaborator corroboration are recovered.",

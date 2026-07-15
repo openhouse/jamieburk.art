@@ -20,6 +20,10 @@ import {
   deriveKcTownHallCorpusItems,
   validateKcTownHallCorpus
 } from "../derive-kctownhall-x-corpus.mjs";
+import {
+  buildNycArtCCorpus,
+  validateNycArtCCorpus
+} from "../derive-nycartc-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 
 const suite = JSON.parse(
@@ -918,6 +922,208 @@ test("KC Town Hall corpus accounts for the full reported population and separate
     [work, mdx].join("\n"),
     /142 tires|\$17,768|zero tires left|zero tires on the curb/i
   );
+});
+
+test("NYC Artist Coalition corpus accounts for the full profile population and preserves campaign, source, and stakeholder boundaries", () => {
+  const rawPath =
+    "docs/knowledge-bank/corpora/source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json";
+  const corpusPath =
+    "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json";
+  const manifestPath =
+    "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json";
+  const rawCaptureText = readFileSync(rawPath, "utf8");
+  const corpusText = readFileSync(corpusPath, "utf8");
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  const raw = JSON.parse(rawCaptureText);
+  const corpus = JSON.parse(corpusText);
+  const metrics = validateNycArtCCorpus(
+    rawCaptureText,
+    corpusText,
+    manifest
+  );
+
+  assert.deepEqual(metrics, {
+    profileReported: 5_124,
+    recoveredAccountItems: 3_367,
+    authored: 696,
+    reposted: 2_671,
+    unrecoveredCountDifference: 1_757,
+    supplementalPublicContexts: 35,
+    allDistinctShortUrlsResolved: 1_235,
+    authoredPostsWithOutgoingLinks: 446,
+    authoredOutgoingLinkOccurrences: 529,
+    distinctAuthoredShortUrls: 287,
+    campaignMarkerCounts: {
+      "fair-rent-nyc": 195,
+      "save-nyc-spaces": 110,
+      "let-nyc-dance": 78,
+      "talks-not-raids": 54
+    },
+    campaignMarkerOccurrenceCounts: {
+      "fair-rent-nyc": 230,
+      "save-nyc-spaces": 117,
+      "let-nyc-dance": 78,
+      "talks-not-raids": 61
+    },
+    nycCouncilOutboundMentions: 115,
+    nycCouncilOutboundPosts: 109,
+    olympiaKaziRecoveredReposts: 194,
+    authoredPostsWithVisibleInteraction: 630,
+    visibleInteractionTotals: {
+      replies: 112,
+      reposts: 1_527,
+      likes: 2_761,
+      bookmarks: 64
+    }
+  });
+  assert.equal(manifest.status, "profile-population-accounted-for-with-1757-item-recovery-gap");
+  assert.equal(corpus.population.profileReported, 5_124);
+  assert.equal(corpus.population.recoveredAccountItems, 3_367);
+  assert.equal(corpus.population.unrecoveredCountDifference, 1_757);
+  assert.equal(corpus.items.length, 3_367);
+  assert.equal(new Set(corpus.items.map((item) => item.statusId)).size, 3_367);
+  assert.equal(corpus.supplementalContexts.length, 35);
+  assert.equal(corpus.sourceLeads.length, 12);
+
+  const accountItems = raw.items.filter((item) => item.kind !== "context");
+  const contexts = raw.items.filter((item) => item.kind === "context");
+  const resolutions = new Set(
+    raw.shortUrlResolutions.map((item) => item.shortUrl)
+  );
+  const accountShortUrls = new Set(
+    accountItems.flatMap((item) =>
+      item.outgoingLinks.map((link) => link.shortUrl)
+    )
+  );
+  const unresolvedContextOnly = new Set(
+    contexts
+      .flatMap((item) => item.outgoingLinks.map((link) => link.shortUrl))
+      .filter((shortUrl) => !resolutions.has(shortUrl))
+  );
+  assert.deepEqual(accountShortUrls, resolutions);
+  assert.equal(unresolvedContextOnly.size, 4);
+  assert.ok(
+    raw.items
+      .filter((item) => item.kind === "reposted")
+      .every(
+        (item) =>
+          item.text === null &&
+          item.publicTextOmitted === true &&
+          /^[a-f0-9]{64}$/.test(item.textSha256)
+      )
+  );
+  assert.match(rawCaptureText, /\[public contact number redacted\]/);
+  for (const privateField of [
+    "directMessages",
+    "sessionIdentifier",
+    "browserStorage",
+    "privateAnalytics",
+    "cookies",
+    "tokens",
+    "credentials"
+  ]) {
+    assert.equal(Object.hasOwn(raw, privateField), false);
+  }
+
+  assert.throws(() =>
+    validateNycArtCCorpus(rawCaptureText, corpusText, {
+      ...manifest,
+      recoveredAccountItems: 3_366
+    })
+  );
+  const rawWithoutAccountResolution = JSON.parse(rawCaptureText);
+  const removedShortUrl = accountItems
+    .find((item) => item.outgoingLinks.length > 0)
+    .outgoingLinks[0].shortUrl;
+  rawWithoutAccountResolution.shortUrlResolutions =
+    rawWithoutAccountResolution.shortUrlResolutions.filter(
+      (item) => item.shortUrl !== removedShortUrl
+    );
+  assert.throws(() =>
+    buildNycArtCCorpus(
+      `${JSON.stringify(rawWithoutAccountResolution, null, 2)}\n`
+    )
+  );
+
+  const sharedLayer = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER"
+  );
+  const sourceCirculation = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NAC-X-PUBLIC-SOURCE-CIRCULATION"
+  );
+  const stakeholderCommunication = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NAC-X-STAKEHOLDER-COMMUNICATION"
+  );
+  const traction = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NAC-X-SOCIAL-TRACTION-OBSERVATION"
+  );
+  const corpusSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NAC-X-CORPUS-2026-07-15"
+  );
+  const intake = knowledgeBank.intake.find(
+    (item) => item.id === "INT-NAC-X-FULL-POPULATION-2026"
+  );
+  const decomposedSourceIds = new Set(
+    knowledgeBank.sourceAssertions.map((item) => item.sourceId)
+  );
+  const page = knowledgeBank.pages.find(
+    (item) => item.id === "fair-rent-nyc"
+  );
+  const mdx = readFileSync(
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "utf8"
+  );
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const projectNote = readFileSync(
+    "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+    "utf8"
+  );
+  const runNote = readFileSync(
+    "docs/knowledge-bank/runs/2026-07-15-nycartc-x-full-population.md",
+    "utf8"
+  );
+
+  assert.equal(sharedLayer.projectionEligibility, "eligible");
+  assert.equal(sourceCirculation.projectionEligibility, "eligible");
+  assert.equal(stakeholderCommunication.projectionEligibility, "eligible");
+  assert.equal(traction.projectionEligibility, "hold");
+  assert.ok(
+    sharedLayer.boundaries.some((item) => /1,757-item gap/.test(item))
+  );
+  assert.ok(
+    sharedLayer.antiClaims.some((item) => /Jamie authored 696/.test(item))
+  );
+  assert.ok(
+    stakeholderCommunication.antiClaims.some((item) =>
+      /109 Council members engaged/.test(item)
+    )
+  );
+  assert.ok(intake.sourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
+  assert.equal(corpusSource.preferredPublicUrl, "asset");
+  assert.match(
+    corpusSource.assetUrl,
+    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/(?:feature\/evals-I|[0-9a-f]{40})\//
+  );
+  assert.equal(
+    page.occurrences.find(
+      (item) => item.id === "shared-public-operating-layer"
+    ).claimId,
+    sharedLayer.id
+  );
+  assert.equal(
+    page.occurrences.find((item) => item.id === "public-source-circulation")
+      .claimId,
+    sourceCirculation.id
+  );
+  assert.match(mdx, /What the shared identity made usable/);
+  assert.match(mdx, /explicit\s+gap/);
+  assert.doesNotMatch(
+    [mdx, work].join("\n"),
+    /1,527 reposts|2,761 likes|64 bookmarks/
+  );
+  assert.match(work, /446 of 696 recovered authored posts/);
+  assert.match(projectNote, /1,757-item difference as an explicit recovery gap/);
+  assert.match(runNote, /A posted destination proves source circulation only/);
 });
 
 test("an intake-linked source without decomposition fails KB-003", () => {

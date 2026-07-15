@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T08:42:42.047Z",
+  "generator": "scripts/derive-nycartc-x-corpus.mjs --write",
+  "sourceCapture": "docs/knowledge-bank/corpora/source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json",
+  "sourceCaptureSha256": "4f56bb945c32b804c2e129075a0012fe0ef3bfc6e5c351f791ea94af19bfba3a",
+  "corpus": "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
+  "corpusSha256": "2be005a420256d9123f4a3314d3dd8da08d3a8c5d62a557974276ef5e07dbf7a",
+  "profileReportedPosts": 5124,
+  "recoveredAccountItems": 3367,
+  "unrecoveredItems": 1757,
+  "supplementalPublicContexts": 35,
+  "status": "profile-population-accounted-for-with-1757-item-recovery-gap"
+}

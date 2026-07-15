@@ -27,12 +27,14 @@ The browser session displayed Jamie's signed-in `@urbanhermit` identity before r
 | Account | Profile-reported posts | Unique status URLs rendered | Notes |
 | --- | ---: | ---: | --- |
 | @CallNYCapp | 110 | 107 | Later replies-inclusive full-population sweep plus direct-mention search; three-count gap retained |
-| @NYCArtC | 5,124 | Not treated as a full sweep | 260 external mentions rendered for March 2020-March 2025 before search cap; earlier roster searches run separately |
+| @NYCArtC | 5,124 | 3,367 recovered account items | Later population-accounting pass retains an explicit 1,757-item gap and 35 separate public contexts |
 | @wowlist | 38 | 37 | Historical handle question retained |
 | @KCTownHall | 183 | 181 | Later full population-accounted pass; two-item gap retained and seven conversation contexts separated |
 | @KCSpacesFund | 35 | 34 | Application, recipient, and named highlight posts appraised |
 
-These are observation counts, not claims of corpus completeness.
+These are observation counts, not claims that inaccessible items were
+recovered. The NYC Artist Coalition follow-on accounts for the profile total as
+recovered items plus an explicit gap.
 
 ## Count rules
 
@@ -58,6 +60,11 @@ At least eight sitting Council member accounts visibly engaged with CallNYC from
 At least four sitting Council member accounts visibly engaged with `@NYCArtC` from March 2018 through December 2020. The posts connect the coalition identity to the nightlife town hall, Talks Not Raids hearing and testimony, arts advocacy, and commercial-rent work. This lower-bound result is now eligible for the NYC Artist Coalition / Fair Rent NYC case study.
 
 Olympia Kazi and partner organizations also used the identity for relief advocacy, public events, and professional-resource coordination. That finding is mature in the bank but remains a deeper archive note.
+
+A later [full population-accounted pass](2026-07-15-nycartc-x-full-population.md)
+recovered 3,367 account items, retained the 1,757-item gap, resolved all 1,235
+distinct short URLs present in recovered account items, and separated campaign,
+outbound-communication, repost-source, and held traction findings.
 
 ### WOW List
 

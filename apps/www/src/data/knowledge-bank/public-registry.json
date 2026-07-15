@@ -1121,6 +1121,29 @@
         "endorsement of every KC Town Hall claim",
         "policy causation"
       ]
+    },
+    {
+      "id": "SRC-NAC-X-CORPUS-2026-07-15",
+      "title": "Authenticated NYC Artist Coalition population-accounted X corpus",
+      "author": "Codex authenticated browser review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/NYCArtC/with_replies",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-I/docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Committed item-level corpus from an authenticated @NYCArtC archival-production pass, July 15, 2026.",
+      "publicNote": "The profile reported 5,124 posts. The corpus preserves 3,367 distinct recovered account items, an explicit 1,757-item recovery gap, 35 separate public contexts, and redirect resolutions for all 1,235 distinct t.co URLs in the recovered account items.",
+      "doesNotEstablish": [
+        "the contents or item types of 1,757 unrecovered profile-count items",
+        "Jamie's authorship of the account's posts",
+        "the individual author of every shared-account post",
+        "complete incoming engagement or lifetime reach",
+        "endorsement of posted sources",
+        "policy causation or sole campaign credit"
+      ]
     }
   ],
   "claims": [
@@ -2670,6 +2693,82 @@
         "Outbound tags and mentions are excluded; only visible replies or quote-posts count as incoming engagement.",
         "Engagement documents public dialogue, not endorsement, policy causation, completed service resolution, or Jamie's authorship of each project-account post."
       ]
+    },
+    {
+      "id": "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "One shared coalition identity carried four public campaign systems across nine years. Among 696 recovered authored posts, 195 used #FairRentNYC, 110 used #SaveNYCSpaces, 78 used #LetNYCDance, and 54 used #TalksNotRaids; categories overlap.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "authored-post denominator",
+            "distinct campaign-marker post counts",
+            "2017-2026 recovered range",
+            "population and authorship boundaries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The profile count is accounted for as 3,367 recovered account items plus an explicit 1,757-item gap; this is not a claim that all 5,124 items were recovered.",
+        "Campaign categories overlap and measure public communication, not unique initiatives, audience reach, or policy outcomes.",
+        "The account was shared. The corpus does not identify Jamie or any collaborator as author of every post, and it does not independently prove Jamie created the account."
+      ]
+    },
+    {
+      "id": "CLM-NAC-X-PUBLIC-SOURCE-CIRCULATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The account also operated as a source-and-action layer: 446 of 696 recovered authored posts linked outward to campaign tools, public records, reporting, forms, events, and field resources.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "All 1,235 distinct t.co URLs in the recovered account items resolved; the governed corpus retains their destinations and source boundaries.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "complete recovered-account-item URL resolution",
+            "authored-post and outgoing-link denominators",
+            "mission-relevant source inventory"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "A resolved destination documents source circulation, not endorsement, page accuracy, audience reach, or authorship of the linked work.",
+        "Four unresolved links appeared only in supplemental contexts and are excluded from the 1,235-account-item count.",
+        "Every article-level claim still requires close reading before it can support a separate accomplishment claim."
+      ]
     }
   ],
   "pages": [
@@ -2859,7 +2958,8 @@
         "SRC-NAC-COUNCIL-LEVIN-TESTIMONY-2019",
         "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020",
         "SRC-NAC-COUNCIL-LEVINE-2020",
-        "SRC-NAC-COUNCIL-VANBRAMER-2020"
+        "SRC-NAC-COUNCIL-VANBRAMER-2020",
+        "SRC-NAC-X-CORPUS-2026-07-15"
       ],
       "occurrences": [
         {
@@ -2977,6 +3077,22 @@
             "SRC-NAC-COUNCIL-LEVIN-FAIRRENT-2020",
             "SRC-NAC-COUNCIL-LEVINE-2020",
             "SRC-NAC-COUNCIL-VANBRAMER-2020"
+          ]
+        },
+        {
+          "id": "shared-public-operating-layer",
+          "claimId": "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-X-CORPUS-2026-07-15"
+          ]
+        },
+        {
+          "id": "public-source-circulation",
+          "claimId": "CLM-NAC-X-PUBLIC-SOURCE-CIRCULATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-X-CORPUS-2026-07-15"
           ]
         }
       ]

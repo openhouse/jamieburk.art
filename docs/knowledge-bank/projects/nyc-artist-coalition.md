@@ -36,19 +36,36 @@ inspections continued.
 
 ## Shared public identity
 
-An authenticated July 2026 observation recovered visible direct engagement
-with `@NYCArtC` by at least four sitting Council member accounts from March 2018
-through December 2020. The posts connected the coalition identity to the
-nightlife town hall, MARCH accountability testimony, arts advocacy, and
+The [full population-accounted @NYCArtC pass](../runs/2026-07-15-nycartc-x-full-population.md)
+recovered 3,367 account items against a profile-reported 5,124 and preserved the
+1,757-item difference as an explicit recovery gap. Thirty-five public contexts
+sit outside the account denominator. The recovered account population contains
+696 authored posts and 2,671 reposts spanning February 2017 through May 2026.
+
+One shared identity carried four public campaign systems over that period.
+Distinct authored posts carrying campaign markers total 195 for
+`#FairRentNYC`, 110 for `#SaveNYCSpaces`, 78 for `#LetNYCDance`, and 54 for
+`#TalksNotRaids`; categories overlap and measure communication, not outcomes.
+
+An authenticated July 2026 observation separately recovered visible direct
+engagement with `@NYCArtC` by at least four sitting Council member accounts from
+March 2018 through December 2020. The posts connected the coalition identity to
+the nightlife town hall, MARCH accountability testimony, arts advocacy, and
 commercial-rent work. Olympia Kazi and partner organizations also used the
 identity for relief advocacy, public events, and professional resources.
+
+The account also functioned as a source-and-action layer. All 1,235 distinct
+short URLs in the recovered account items resolved; 446 of 696 authored posts
+linked outward to campaign tools, official records, reporting, forms, events,
+and field resources. Source circulation is not endorsement, reach, or authorship
+of the linked work.
 
 These are lower-bound findings from visible public posts, not a complete export.
 The account's output was collective. Jamie recalls establishing the project
 accounts and identity system, but account-creation or administrator evidence
 has not yet independently corroborated that role. See the
-[project social-account inventory](social-account-inventory.md) for the count
-rule, sources, and authorship boundary.
+[project social-account inventory](social-account-inventory.md) for campaign,
+stakeholder, source-circulation, count, and authorship boundaries.
 
 A public-safe aggregate review of surviving project records supports describing
 Jamie as a founding-era organizer who built and stewarded coalition and campaign

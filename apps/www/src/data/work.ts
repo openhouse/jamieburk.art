@@ -278,7 +278,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, four structured campaign press indexes, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, four structured campaign press indexes, a governed 3,367-item public account corpus with an explicit 1,757-item gap, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -297,15 +297,17 @@ const workItemsInput = [
       "Running minutes, decision records, action trackers, and source maps",
       "Privacy-preserving commercial-data pilot specification with schema, suppression, methods, and exclusions",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "One shared public account identity carrying Fair Rent NYC, Save NYC Spaces, Let NYC Dance, and Talks Not Raids across the recovered 2017-2026 record",
+      "446 of 696 recovered authored posts linking outward to campaign tools, public records, reporting, forms, events, and field resources",
       "45 campaign press-index entries representing 44 distinct article URLs",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie served as a founding-era NYC Artist Coalition organizer and built public web, civic-action, campaign-memory, legislative-provenance, and commercial-data product-scoping infrastructure. Public sources document his Cabaret Law advocacy and Office of Nightlife public-engagement work; official records establish the related City outcomes while preserving collective and institutional credit.",
+        "Jamie served as a founding-era NYC Artist Coalition organizer and built public web, civic-action, campaign-memory, legislative-provenance, and commercial-data product-scoping infrastructure. Public sources document his Cabaret Law advocacy and Office of Nightlife public-engagement work; the shared public identity carried four campaign systems across the recovered 2017-2026 record; official records establish related City outcomes while preserving collective and institutional credit.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval. The account's 1,757-item recovery gap and Jamie's account-establishment role remain open research.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }

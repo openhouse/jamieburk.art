@@ -57,9 +57,26 @@ Public projection: promoted to the CallNYC case study as evidence that the resid
 
 ## NYC Artist Coalition: @NYCArtC
 
-Profile snapshot: joined January 2017; 5,124 posts reported. An authenticated search observation recovered 260 external mention posts from March 2020 through March 2025 before X stopped returning older results. Roster-based searches recovered earlier Council interactions. Neither set is a complete corpus.
+Profile snapshot: joined January 2017; 5,124 posts reported. A
+[full population-accounted pass](../runs/2026-07-15-nycartc-x-full-population.md)
+recovered 3,367 distinct account items and retained the 1,757-item difference
+explicitly. Thirty-five public conversation records are context outside the
+profile-count denominator.
 
 The account served as an umbrella identity across Let NYC Dance, Save NYC Spaces, Talks Not Raids, and Fair Rent NYC.
+
+The [governed item-level corpus](../corpora/nycartc-x-full-population-2026-07-15.json)
+contains 696 recovered authored posts and 2,671 recovered reposts spanning
+February 2017 through May 2026. Distinct authored posts carrying campaign
+markers total 195 for `#FairRentNYC`, 110 for `#SaveNYCSpaces`, 78 for
+`#LetNYCDance`, and 54 for `#TalksNotRaids`; categories overlap.
+
+All 1,235 distinct `t.co` URLs present in recovered account items resolved.
+Among the authored posts, 446 contain 529 outgoing-link occurrences representing
+287 distinct short URLs. The destinations include campaign tools, government
+records, reporting, forms, event pages, and field resources. A posted link
+documents source circulation, not endorsement, audience reach, or authorship of
+the linked work.
 
 ### Council engagement
 
@@ -77,6 +94,23 @@ The strongest finding is not the number alone. Council members used the identity
 Olympia Kazi used the coalition identity in March 2020 to describe relief advocacy on behalf of musicians, DJs, and grassroots venues. Wonderville amplified a coalition tenant event, and Build Up Justice documented attorneys speaking with the coalition. These posts show an identity that remained functional in collaborators' and partners' hands.
 
 Shared-authorship boundary: Jamie recalls establishing the project accounts and identity system. Public chronology and project repositories align with infrastructure stewardship, but account-creation or administrator records have not yet independently corroborated that role. Do not attribute 5,124 posts, campaign strategy, or every artifact to Jamie.
+
+### Stakeholder communication
+
+The recovered authored corpus mentions `@NYCCouncil` in 109 distinct posts (115
+visible occurrences) and repeatedly addresses agencies, venues, artists, labor,
+tenant, vendor, and community groups. These are outbound communications. They
+are kept separate from the stricter incoming-engagement finding above.
+
+The 2,671 recovered reposts preserve a broad source network across organizers,
+arts and labor groups, tenant and vendor coalitions, elected officials, and
+public agencies. Repost-source counts are lower bounds because historical search
+did not expose older native reposts. A repost records account curation, not an
+endorsement of the coalition by the original source.
+
+Visible interaction labels were retained as a dated research observation and
+held from accomplishment messaging because platform metrics are volatile,
+incomplete, and not stakeholder-attributed.
 
 Public projection: the lower-bound Council result is promoted to the NYC Artist Coalition / Fair Rent NYC case study. Collaborator adoption remains a deeper knowledge-bank claim.
 

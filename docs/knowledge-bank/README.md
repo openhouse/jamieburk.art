@@ -84,6 +84,10 @@ with a committed public browser extraction, transformation manifest, and
 `scripts/derive-callnyc-x-corpus.mjs` check that reproduces the 107 item records
 and their aggregate metrics. The governed account map and per-project findings are in
 [projects/social-account-inventory.md](projects/social-account-inventory.md).
+The full NYC Artist Coalition population-accounting pass is documented in
+[2026-07-15-nycartc-x-full-population.md](runs/2026-07-15-nycartc-x-full-population.md),
+with a public-safe raw extraction, deterministic derivation, and explicit
+1,757-item recovery gap.
 
 The recovered record for the collaborative interactive installation
 *NTER CHNG* is in [projects/nter-chng.md](projects/nter-chng.md), with the
