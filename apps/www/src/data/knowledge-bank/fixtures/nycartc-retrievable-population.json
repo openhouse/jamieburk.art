@@ -17,10 +17,17 @@
       "Authenticated yearly from:NYCArtC Latest searches for 2017 through July 14, 2026"
     ],
     "platformLimitEvidence": {
-      "title": "Help with missing Posts",
       "organization": "X Help Center",
-      "canonicalUrl": "https://help.x.com/en/using-x/missing-posts",
-      "observedLimit": "X documents an 800-record Posts display limit and a 3,200-record Posts & replies display limit, and directs account owners to their X Archive for a first-to-last history."
+      "displayLimitSource": {
+        "title": "Help with missing Posts",
+        "canonicalUrl": "https://help.x.com/en/using-x/missing-posts",
+        "finding": "X documents an 800-record Posts display limit, a 3,200-record Posts & replies display limit, and older-post indexing restrictions."
+      },
+      "archiveHistorySource": {
+        "title": "New user FAQ",
+        "canonicalUrl": "https://help.x.com/en/resources/new-user-faq",
+        "finding": "X directs account owners beyond the recent profile timeline to an X Archive that can be browsed beginning with the first post."
+      }
     },
     "conclusion": "The authenticated public surfaces yielded and this pass reviewed 3,123 unique records, or 60.9% of the 5,124-post profile counter. The remaining 2,001 profile-counted records are not represented as absent or deleted: X's documented display limits make the owner archive necessary for literal 100% recovery.",
     "dateBoundary": "For originals and replies, sourcePublishedAt is the coalition-account post date. For native reposts, X exposes the source post's timestamp, not the date @NYCArtC reposted it; source-post years must not be presented as account-activity years."
