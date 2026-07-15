@@ -424,6 +424,45 @@
       "blockers": [
         "Two fresh independent judges must inspect protected-source privacy, participant-data exclusion, public-safe paraphrase, prospective-plan boundaries, collective credit, component-labor non-attribution, held website status, and approval-hash-resistant mutation defenses on a frozen revision."
       ]
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T10:56:46-04:00",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 1,
+      "criterionScores": [1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Protected intake URLs and protected-to-public disposition changes survived an archive approval-hash refresh.",
+        "Participant email, quotation, and private logistics survived an archive approval-hash refresh.",
+        "Completed-work, individual-lead, Nerman-display, audience-traction, collaborator-erasure, and commission-and-award mutations survived an archive approval-hash refresh.",
+        "NTER CHNG copy placed in an unrelated active claim bypassed the held-claim projection check."
+      ]
+    },
+    {
+      "judgeId": "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-b",
+      "completedAt": "2026-07-15T14:54:46Z",
+      "lens": "Independent archival interpretation, collective-credit, public-safety, hiring-portfolio, and approval-hash-resistant adversarial review",
+      "weightedScore": 3,
+      "criterionScores": [5, 5, 1, 1, 5, 5, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Collaborator erasure and sole-creation language did not fail the safety and agency criteria after an approval-hash refresh.",
+        "Software-lead and installation-lead titles did not fail maturation after an approval-hash refresh.",
+        "Completed restaging, commission, award, endorsement, audience, engagement, impact, adoption, and Barbara Kruger collaboration claims did not fail scope after an approval-hash refresh.",
+        "A participant-message quotation did not fail safety after an approval-hash refresh."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nter-chng-protected-artifact-review-locks-2026-07-15",
+      "completedAt": "2026-07-15T15:10:00Z",
+      "lens": "Protocol reset after converting every escaped protected-artifact mutation into an immutable semantic review lock and permanent adversarial regression",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must verify that the repaired protected-intake, privacy, prospective-plan, collective-credit, individual-role, audience-impact, exhibition-status, and selective-projection controls reject their full attack matrices after ordinary approval hashes are refreshed."
+      ]
     }
   ]
 }

@@ -56,10 +56,24 @@ documentation. The evaluator requires private preservation, opaque locators,
 no public source URLs, non-rendering protected evidence, and the absence of
 Google Doc routes and phone-number patterns from the governed NTER CHNG bundle.
 
-Approval-hash-resistant mutation tests must also reject participant contact
-data, a private Google Doc route, and individual technical-lead language after
-the altered content is deliberately re-approved. Because these artifacts
-materially change the source graph, the prior holdouts are reset. Two fresh
-independent reviewers must accept the same frozen revision at 5 / 5 across all
-19 criteria with no blockers: one focused on data integrity and privacy, and
+The first frozen candidate passed all deterministic checks but failed both
+independent holdouts. After the ordinary archive approval hash was deliberately
+refreshed, the reviewers could mutate protected-intake state, add participant
+data or quotations, convert plans into completed work, assign Jamie individual
+technical leadership, erase collaborators, invent audience or impact, inflate
+exhibition status, and place NTER CHNG copy in an unrelated active claim.
+
+The repair converts that complete attack matrix into permanent regressions. A
+separate immutable review lock now covers the exact two protected intakes, two
+private sources, four observations, governed claim, and inquiry. Semantic checks
+also require three-person collective credit, reject individual component-lead
+and outcome inflation, and prohibit NTER CHNG from every active claim projection
+or proof surface while the governed projection remains held. The lock cannot be
+advanced by merely refreshing the aggregate archive approval hash; a legitimate
+future change requires an explicit evaluator review-lock update.
+
+Because the evaluator itself materially changed, the two rejected holdouts are
+preserved in the ledger and followed by a fresh protocol reset. Two new
+independent reviewers must accept the repaired frozen revision at 5 / 5 across
+all 19 criteria with no blockers: one focused on data integrity and privacy, and
 one focused on archival interpretation, collective credit, and portfolio use.

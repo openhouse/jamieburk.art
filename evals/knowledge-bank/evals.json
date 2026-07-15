@@ -391,6 +391,10 @@
         "SRC-NTER-CHNG-ANH-INSTALLER-2011-04-13",
         "SRC-NTER-CHNG-EXHIBIT-MATERIALS-2011-04-06"
       ],
+      "nterProtectedIntakeIds": [
+        "INTAKE-NTER-CHNG-ANH-INSTALLER-2011",
+        "INTAKE-NTER-CHNG-EXHIBIT-MATERIALS-2011"
+      ],
       "nterProtectedObservationIds": [
         "OBS-NTER-CHNG-ANH-INSTALL-PLAN-2011",
         "OBS-NTER-CHNG-HYBRID-ITERATION-PLAN-2011",

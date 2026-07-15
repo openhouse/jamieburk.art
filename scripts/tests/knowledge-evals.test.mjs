@@ -128,8 +128,8 @@ test("knowledge-bank gate records two fresh NTER CHNG protected-artifact holdout
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-a",
-    "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-b"
+    "nter-chng-protected-artifacts-holdout-data-integrity-privacy-2026-07-15-final-c",
+    "nter-chng-protected-artifacts-holdout-archival-credit-editor-2026-07-15-final-d"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -1523,6 +1523,9 @@ test("NTER CHNG recovers shared authorship and later exhibition inclusion", () =
 
 test("NTER CHNG protected artifacts preserve hybrid-production evidence without exposing participant data", () => {
   const archive = suite.pilot.archiveProduction;
+  const protectedIntakes = archive.nterProtectedIntakeIds.map((id) =>
+    knowledgeBank.intakeItems.find((intake) => intake.id === id)
+  );
   const protectedSources = archive.nterProtectedSourceIds.map((id) =>
     knowledgeBank.sources.find((source) => source.id === id)
   );
@@ -1534,8 +1537,12 @@ test("NTER CHNG protected artifacts preserve hybrid-production evidence without 
   const protectedEvidence = claim?.evidence.filter((evidence) =>
     archive.nterProtectedSourceIds.includes(evidence.sourceId)
   );
-  const bundleText = JSON.stringify({ protectedSources, protectedObservations, claim, inquiry });
+  const bundleText = JSON.stringify({ protectedIntakes, protectedSources, protectedObservations, claim, inquiry });
 
+  assert.equal(protectedIntakes.length, 2);
+  assert.ok(protectedIntakes.every((intake) =>
+    intake?.visibility === "protected" && intake.disposition === "protected" && !intake.sourceUrl
+  ));
   assert.equal(protectedSources.length, 2);
   assert.ok(protectedSources.every((source) =>
     source?.visibility === "private" &&
@@ -1562,41 +1569,194 @@ test("NTER CHNG protected artifacts preserve hybrid-production evidence without 
 
 test("NTER CHNG protected-artifact semantics survive an approval-hash refresh", () => {
   const archive = suite.pilot.archiveProduction;
-  const source = knowledgeBank.sources.find(
+  const installerIntake = knowledgeBank.intakeItems.find(
+    (item) => item.id === archive.nterProtectedIntakeIds[0]
+  );
+  const installerSource = knowledgeBank.sources.find(
+    (item) => item.id === archive.nterProtectedSourceIds[0]
+  );
+  const exhibitSource = knowledgeBank.sources.find(
     (item) => item.id === archive.nterProtectedSourceIds[1]
   );
+  const planObservation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-NTER-CHNG-ANH-INSTALL-PLAN-2011"
+  );
+  const intentObservation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-NTER-CHNG-BURKART-INTERACTION-INTENT-2011"
+  );
   const claim = knowledgeBank.claims.find((item) => item.id === archive.nterClaimId);
-  assert.ok(source);
-  assert.ok(claim);
+  const activeClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026"
+  );
+  const protectedEvidence = claim?.evidence.find(
+    (evidence) => evidence.sourceId === archive.nterProtectedSourceIds[0]
+  );
+  assert.ok(installerIntake);
+  assert.ok(installerSource);
+  assert.ok(exhibitSource);
+  assert.ok(planObservation);
+  assert.ok(intentObservation);
+  assert.ok(claim?.projections[0]);
+  assert.ok(activeClaim?.projections[0]);
+  assert.ok(protectedEvidence);
 
   const originalApprovedHash = archive.approvedContentSha256;
-  const originalPublicNote = source.publicNote;
-  const originalInternalClaim = claim.internalClaim;
+  const replace = (target, key, value) => {
+    const original = target[key];
+    target[key] = value;
+    return () => { target[key] = original; };
+  };
+  const attacks = [
+    {
+      label: "protected intake receives a private document route",
+      mutate: () => replace(installerIntake, "sourceUrl", ["https://docs.google.com", "document", "d", "private-artifact", "edit"].join("/")),
+      criteria: ["KB-EVAL-SAFETY"]
+    },
+    {
+      label: "protected intake becomes integrated public-safe content",
+      mutate: () => {
+        const originalVisibility = installerIntake.visibility;
+        const originalDisposition = installerIntake.disposition;
+        installerIntake.visibility = "public-safe";
+        installerIntake.disposition = "integrated";
+        return () => {
+          installerIntake.visibility = originalVisibility;
+          installerIntake.disposition = originalDisposition;
+        };
+      },
+      criteria: ["KB-EVAL-SAFETY", "KB-EVAL-SCOPE"]
+    },
+    {
+      label: "protected source receives participant email",
+      mutate: () => replace(exhibitSource, "publicNote", `${exhibitSource.publicNote} Contact ${["participant", "example.com"].join("@")} .`),
+      criteria: ["KB-EVAL-SAFETY"]
+    },
+    {
+      label: "protected source receives a canonical private document route",
+      mutate: () => replace(exhibitSource, "canonicalUrl", ["https://docs.google.com", "document", "d", "private-artifact", "edit"].join("/")),
+      criteria: ["KB-EVAL-SAFETY", "KB-EVAL-SCOPE"]
+    },
+    {
+      label: "protected source becomes public",
+      mutate: () => replace(exhibitSource, "visibility", "public"),
+      criteria: ["KB-EVAL-SAFETY", "KB-EVAL-SCOPE"]
+    },
+    {
+      label: "protected evidence becomes a rendered citation",
+      mutate: () => replace(protectedEvidence, "renderCitation", true),
+      criteria: ["KB-EVAL-SAFETY", "KB-EVAL-SCOPE"]
+    },
+    {
+      label: "protected source receives participant phone",
+      mutate: () => replace(exhibitSource, "publicNote", `${exhibitSource.publicNote} Contact ${["212", "555", "0199"].join("-")}.`),
+      criteria: ["KB-EVAL-SAFETY"]
+    },
+    {
+      label: "protected source receives private travel and lodging logistics",
+      mutate: () => replace(installerSource, "publicNote", `${installerSource.publicNote} Family flight arrival at 8:15 PM; lodging at 123 Example Street.`),
+      criteria: ["KB-EVAL-SAFETY"]
+    },
+    {
+      label: "participant message is quoted",
+      mutate: () => replace(intentObservation, "text", `Participant message${":"} ${["This", "changed", "everything"].join(" ")}.`),
+      criteria: ["KB-EVAL-SAFETY"]
+    },
+    {
+      label: "prospective plan becomes completed work",
+      mutate: () => replace(planObservation, "text", "The plan proves that every restaging and installation task was completed."),
+      criteria: ["KB-EVAL-SCOPE", "KB-EVAL-MATURATION"]
+    },
+    {
+      label: "Jamie becomes software and installation lead",
+      mutate: () => replace(planObservation, "text", "Jamie was the software lead and installation lead for NTER CHNG."),
+      criteria: ["KB-EVAL-MATURATION", "KB-EVAL-AGENCY"]
+    },
+    {
+      label: "Nerman context becomes a display claim",
+      mutate: () => replace(planObservation, "text", "NTER CHNG was displayed at the Nerman Museum."),
+      criteria: ["KB-EVAL-SCOPE", "KB-EVAL-SAFETY"]
+    },
+    {
+      label: "intent becomes reception, adoption, and impact",
+      mutate: () => replace(intentObservation, "text", "Participant messages prove attendance, reach, exceptional engagement, broad adoption, and transformative impact."),
+      criteria: ["KB-EVAL-SCOPE", "KB-EVAL-SAFETY"]
+    },
+    {
+      label: "projection erases named collaborators",
+      mutate: () => replace(claim.projections[0], "text", "Jamie co-created NTER CHNG."),
+      criteria: ["KB-EVAL-SAFETY", "KB-EVAL-AGENCY"]
+    },
+    {
+      label: "projection claims sole creation",
+      mutate: () => replace(claim.projections[0], "text", "NTER CHNG was Jamie's sole creation."),
+      criteria: ["KB-EVAL-SAFETY", "KB-EVAL-AGENCY"]
+    },
+    {
+      label: "claim adds commission, award, and endorsement",
+      mutate: () => replace(claim, "internalClaim", `${claim.internalClaim} America: Now and Here commissioned, awarded, and endorsed NTER CHNG.`),
+      criteria: ["KB-EVAL-SCOPE", "KB-EVAL-MATURATION"]
+    },
+    {
+      label: "claim asserts completed restaging",
+      mutate: () => replace(claim, "internalClaim", `${claim.internalClaim} Jamie completed the restaging and installation.`),
+      criteria: ["KB-EVAL-SCOPE", "KB-EVAL-MATURATION"]
+    },
+    {
+      label: "projection invents audience and traction",
+      mutate: () => replace(claim.projections[0], "text", "NTER CHNG reached thousands of visitors, produced exceptional engagement and transformative impact, and achieved broad adoption."),
+      criteria: ["KB-EVAL-SCOPE", "KB-EVAL-SAFETY"]
+    },
+    {
+      label: "projection invents direct Barbara Kruger collaboration",
+      mutate: () => replace(claim.projections[0], "text", "Jamie directly collaborated with Barbara Kruger on NTER CHNG."),
+      criteria: ["KB-EVAL-SCOPE", "KB-EVAL-SAFETY"]
+    },
+    {
+      label: "held NTER CHNG projection becomes active",
+      mutate: () => {
+        const originalStatus = claim.projections[0].status;
+        const originalSurfaces = claim.projections[0].surfaces;
+        claim.projections[0].status = "active";
+        claim.projections[0].surfaces = ["/work"];
+        return () => {
+          claim.projections[0].status = originalStatus;
+          claim.projections[0].surfaces = originalSurfaces;
+        };
+      },
+      criteria: ["KB-EVAL-PROJECTION", "KB-EVAL-SAFETY"]
+    },
+    {
+      label: "unrelated active claim silently publishes NTER CHNG",
+      mutate: () => replace(activeClaim.projections[0], "text", "Co-created NTER CHNG and led its software and installation."),
+      criteria: ["KB-EVAL-PROJECTION", "KB-EVAL-SAFETY"],
+      websiteAttack: true
+    }
+  ];
 
   try {
-    source.publicNote = `${originalPublicNote} Contact ${["212", "555", "0199"].join("-")}.`;
-    refreshArchiveProductionApproval(suite);
-    let result = evaluateKnowledgeBank(suite);
-    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
-    assert.equal(result.accepted, false);
-
-    source.publicNote = originalPublicNote;
-    claim.internalClaim = "Jamie led the NTER CHNG server software and America: Now and Here installation.";
-    refreshArchiveProductionApproval(suite);
-    result = evaluateKnowledgeBank(suite);
-    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
-    assert.equal(result.accepted, false);
-
-    claim.internalClaim = originalInternalClaim;
-    source.canonicalUrl = ["https://docs.google.com", "document", "d", "private-artifact"].join("/");
-    refreshArchiveProductionApproval(suite);
-    result = evaluateKnowledgeBank(suite);
-    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
-    assert.equal(result.accepted, false);
+    for (const attack of attacks) {
+      const restore = attack.mutate();
+      try {
+        refreshArchiveProductionApproval(suite);
+        const result = evaluateKnowledgeBank(suite);
+        for (const criterionId of attack.criteria) {
+          assert.equal(
+            result.criteria.find((item) => item.criterionId === criterionId)?.score,
+            1,
+            `${attack.label} should fail ${criterionId}`
+          );
+        }
+        assert.equal(result.accepted, false, attack.label);
+        if (attack.websiteAttack) {
+          assert.equal(result.contentApprovals.nterProtectedArtifacts.websiteProjectionSafe, false, attack.label);
+        } else {
+          assert.equal(result.contentApprovals.nterProtectedArtifacts.reviewLocksMatch, false, attack.label);
+        }
+      } finally {
+        restore();
+      }
+    }
   } finally {
-    source.publicNote = originalPublicNote;
-    delete source.canonicalUrl;
-    claim.internalClaim = originalInternalClaim;
     archive.approvedContentSha256 = originalApprovedHash;
   }
 });

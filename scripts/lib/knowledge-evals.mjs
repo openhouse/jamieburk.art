@@ -81,6 +81,13 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   sundayDinnerMdxSha256: "b2889ec0ccaac06e4e7e86b14ee9643d0d7cd0e02b727928b7270a776e31fa10",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });
+const NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS = Object.freeze({
+  protectedIntakesSha256: "2479ac40c9228ec2b24fa7b1e9ce13c1cabcf0dead7e27878098ce4319d1a763",
+  protectedSourcesSha256: "187dd3e085b0fddc64b2b7483ce31cd3a32ac82de1699d80435c9e3db9e8de5f",
+  protectedObservationsSha256: "742064fc9245d685819d1a3909fdcec55c39d487d73bb59b8243d553c2ab6e8e",
+  claimSha256: "c3ce0b7c30daef8d58b6caa976db3d09cf5a4f720afc9715ea92635dd07ba26f",
+  inquirySha256: "f77f4dd54b53cf3c0147bedae063d811b75c73fdd1881ea0c57694d28f5cc65b"
+});
 
 export function loadKnowledgeEvalSuite() {
   return JSON.parse(readFileSync(suitePath, "utf8"));
@@ -903,12 +910,54 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   );
   const nterClaim = claimById.get(archive.nterClaimId);
   const nterInquiry = inquiryById.get(archive.nterInquiryId);
+  const nterProtectedIntakes = archive.nterProtectedIntakeIds.map((id) => intakeById.get(id));
   const nterProtectedSources = archive.nterProtectedSourceIds.map((id) => sourceById.get(id));
   const nterProtectedObservations = archive.nterProtectedObservationIds.map((id) => observationById.get(id));
+  const nterProtectedEvidence = nterClaim?.evidence.filter(
+    (evidence) => archive.nterProtectedSourceIds.includes(evidence.sourceId)
+  ) ?? [];
   const nterClaimText = [
     nterClaim?.internalClaim,
     ...(nterClaim?.projections.map((projection) => projection.text) ?? [])
   ].filter(Boolean).join("\n");
+  const nterAffirmativeText = [
+    ...nterProtectedIntakes.flatMap((intake) => [intake?.reason]),
+    ...nterProtectedSources.flatMap((source) => [
+      source?.publicCitation,
+      source?.publicNote,
+      ...(source?.supportsGenerally ?? [])
+    ]),
+    ...nterProtectedObservations.map((observation) => observation?.text),
+    nterClaim?.internalClaim,
+    ...(nterClaim?.projections.map((projection) => projection.text) ?? []),
+    ...(nterClaim?.evidence.flatMap((evidence) => evidence.supports) ?? []),
+    ...(nterInquiry?.findings ?? []),
+    nterInquiry?.publicSummary
+  ].filter(Boolean).join("\n");
+  const nterSharedCreditPreserved = Boolean(
+    nterClaim?.internalClaim.includes("Drew Bolton") &&
+      nterClaim.internalClaim.includes("Jamie Burkart") &&
+      nterClaim.internalClaim.includes("Garrett Fuselier") &&
+      nterClaim.projections.every((projection) =>
+        projection.text.includes("Drew Bolton") && projection.text.includes("Garrett Fuselier")
+      ) &&
+      nterProtectedObservations.find(
+        (observation) => observation?.id === "OBS-NTER-CHNG-EXHIBIT-INFO-COLLECTIVE-CREDIT-2011"
+      )?.text.includes("Drew Bolton, Jamie Burkart, and Garrett Fuselier")
+  );
+  const nterSemanticInflationSafe = ![
+    /\bJamie(?: Burkart)?(?: was| served as)? (?:the )?(?:software|installation|technical|fabrication|production) lead\b/i,
+    /\bJamie(?:'s| Burkart's) sole creation\b|\bJamie(?: Burkart)? (?:alone|solely) (?:created|built|designed|programmed|developed)/i,
+    /\bJamie(?: Burkart)? (?:personally )?(?:completed|led|owned|implemented|maintained|installed|fabricated|executed)[^.]{0,100}(?:NTER CHNG|software|server|wall|restaging|installation)/i,
+    /\b(?:completed every task|completed (?:the )?(?:restaging|installation))\b/i,
+    /\b(?:America: Now and Here|Barbara Kruger)[^.]{0,80}(?:commissioned|awarded|endorsed) NTER CHNG\b/i,
+    /\bNTER CHNG[^.]{0,80}(?:won|received|was (?:commissioned|awarded|endorsed))\b/i,
+    /\b(?:hundreds|thousands) of (?:visitors|participants|people)\b|\bexceptional engagement\b|\btransformative impact\b|\bbroad adoption\b/i,
+    /\b(?:direct(?:ly)? collaborated|direct collaboration) with Barbara Kruger\b/i,
+    /\bNTER CHNG[^.]{0,100}(?:displayed|shown|installed)[^.]{0,60}Nerman\b/i,
+    /\bNerman[^.]{0,100}NTER CHNG\b/i,
+    /\bparticipant message\s*(?:read|said|:|["'])/i
+  ].some((pattern) => pattern.test(nterAffirmativeText));
   const nterAttributionSafe = ![
     /Jamie(?: Burkart)? (?:alone )?(?:created|built|designed|programmed|developed) NTER CHNG/i,
     /Jamie(?: Burkart)? (?:wrote|built|developed) the (?:NTER CHNG )?software/i,
@@ -917,15 +966,43 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     /NTER CHNG[^.]{0,100}(?:displayed|shown|installed)[^.]{0,60}Nerman/i,
     /Nerman[^.]{0,100}NTER CHNG/i,
     /(?:participant phone numbers?|message transcripts?)[^.]{0,80}(?:prove|show|demonstrate|establish)[^.]{0,60}(?:impact|engagement|reach|success)/i
-  ].some((pattern) => pattern.test(nterClaimText));
+  ].some((pattern) => pattern.test(nterClaimText)) &&
+    nterSharedCreditPreserved &&
+    nterSemanticInflationSafe;
   const nterProtectedBundleText = JSON.stringify({
+    intakes: nterProtectedIntakes,
     sources: nterProtectedSources,
     observations: nterProtectedObservations,
     claim: nterClaim,
     inquiry: nterInquiry
   });
+  const nterProtectedReviewLocksMatch = Boolean(
+    createHash("sha256").update(JSON.stringify(nterProtectedIntakes)).digest("hex") ===
+      NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS.protectedIntakesSha256 &&
+      createHash("sha256").update(JSON.stringify(nterProtectedSources)).digest("hex") ===
+        NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS.protectedSourcesSha256 &&
+      createHash("sha256").update(JSON.stringify(nterProtectedObservations)).digest("hex") ===
+        NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS.protectedObservationsSha256 &&
+      createHash("sha256").update(JSON.stringify(nterClaim)).digest("hex") ===
+        NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS.claimSha256 &&
+      createHash("sha256").update(JSON.stringify(nterInquiry)).digest("hex") ===
+        NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS.inquirySha256
+  );
+  const nterWebsiteProjectionSafe = knowledgeBank.claims.every((claim) =>
+    claim.projections.every((projection) =>
+      projection.status !== "active" || !/NTER\s*CHNG|nter-chng/i.test(
+        `${projection.text}\n${projection.surfaces.join("\n")}`
+      )
+    )
+  ) && !/NTER\s*CHNG|nter-chng/i.test(JSON.stringify(proofClaims));
   const nterProtectedArtifactsBounded = Boolean(
-    nterProtectedSources.length === 2 &&
+    nterProtectedIntakes.length === 2 &&
+      nterProtectedIntakes.every((intake) =>
+        intake?.visibility === "protected" &&
+          intake.disposition === "protected" &&
+          !intake.sourceUrl
+      ) &&
+      nterProtectedSources.length === 2 &&
       nterProtectedSources.every((source) =>
         source?.visibility === "private" &&
           source.preservationStatus === "private" &&
@@ -941,9 +1018,15 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           observation.claimIds.includes(archive.nterClaimId) &&
           observation.researchInquiryIds.includes(archive.nterInquiryId)
       ) &&
-      nterClaim?.evidence.filter((evidence) => archive.nterProtectedSourceIds.includes(evidence.sourceId))
-        .every((evidence) => evidence.relationship === "private-support" && evidence.renderCitation === false) &&
+      nterProtectedEvidence.length === 2 &&
+      nterProtectedEvidence.every(
+        (evidence) => evidence.relationship === "private-support" && evidence.renderCitation === false
+      ) &&
+      nterProtectedReviewLocksMatch &&
+      nterAttributionSafe &&
+      nterWebsiteProjectionSafe &&
       !/docs\.google\.com\/document\/d\//i.test(nterProtectedBundleText) &&
+      !/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(nterProtectedBundleText) &&
       !/\b(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}\b/.test(nterProtectedBundleText)
   );
   const archiveProductionComplete = Boolean(
@@ -3491,6 +3574,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       !knowledgeBank.agencyRelations.some(
         (relation) => relation.actorIds.includes("ENT-JAMIE-BURKART") && relation.action === "enacted"
       ) &&
+      nterAttributionSafe &&
+      nterProtectedReviewLocksMatch &&
       ["individual", "shared", "collective", "institutional"].every((creditScope) =>
         knowledgeBank.agencyRelations.some((relation) => relation.creditScope === creditScope)
       ) &&
@@ -3777,6 +3862,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         actualSha256: archiveContentSha256,
         approvedSha256: archive.approvedContentSha256,
         matches: archiveContentSha256 === archive.approvedContentSha256
+      },
+      nterProtectedArtifacts: {
+        reviewLocksMatch: nterProtectedReviewLocksMatch,
+        attributionSafe: nterAttributionSafe,
+        websiteProjectionSafe: nterWebsiteProjectionSafe
       },
       googleDriveProduction: {
         actualSha256: googleDriveContentSha256,
