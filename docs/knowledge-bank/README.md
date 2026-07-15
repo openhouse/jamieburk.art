@@ -126,3 +126,10 @@ for the bounded aggregate audits of WOW List and Sunday Dinner plus the public
 Call Script evidence connecting a calendar surface, a calling tool, and an early
 NYC Artist Coalition listening workflow. The report preserves denominator,
 attendance, shared-account, and collective-credit boundaries.
+
+See
+[projects/nycac-government-interface-2026-07-15.md](projects/nycac-government-interface-2026-07-15.md)
+for the official Council transcript in which Tom Finkelpearl identified NYC
+Artist Coalition as an outcome of DCLA's DIY-arts convening, the bounded
+transcript-search audit, and held institutional interpretations of the
+coalition's value to DCLA, the Council, and Council Member Rafael Espinal.

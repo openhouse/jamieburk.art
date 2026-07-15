@@ -10,6 +10,7 @@ import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/ww
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import { nycacFacebookPostAudit, nycacFacebookPosts } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts";
+import { nycacGovernmentInterface, nycacGovernmentInterfaceAudit } from "../../apps/www/src/data/knowledge-bank/nycac-government-interface.ts";
 import { nterChngArchive } from "../../apps/www/src/data/knowledge-bank/nterchng-archive.ts";
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { participationInfrastructureAudit, participationInfrastructureProduction } from "../../apps/www/src/data/knowledge-bank/participation-infrastructure-production.ts";
@@ -105,6 +106,10 @@ const participationInfrastructureReport = readFileSync(
   new URL("../../docs/knowledge-bank/projects/participation-infrastructure-2026-07-15.md", import.meta.url),
   "utf8"
 );
+const nycacGovernmentInterfaceReport = readFileSync(
+  new URL("../../docs/knowledge-bank/projects/nycac-government-interface-2026-07-15.md", import.meta.url),
+  "utf8"
+);
 const fairRentMdx = readFileSync(
   new URL("../../apps/www/src/content/work/fair-rent-nyc.mdx", import.meta.url),
   "utf8"
@@ -139,6 +144,10 @@ const jamiePersonalFacebookPostCriterionScore = (result) =>
 const participationInfrastructureCriterionScore = (result) =>
   result.criteria.find(
     (item) => item.criterionId === "KB-EVAL-PARTICIPATION-INFRASTRUCTURE"
+  )?.score;
+const nycacGovernmentInterfaceCriterionScore = (result) =>
+  result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-NYCAC-GOVERNMENT-INTERFACE"
   )?.score;
 
 function evaluateEventLedgerWithReboundDigest(altered) {
@@ -4098,6 +4107,112 @@ test("participation-infrastructure eval rejects public reports containing privat
       evaluateKnowledgeBank(suite, {
         participationInfrastructureReport:
           `${participationInfrastructureReport}\n/Users/jburkart/private-ledger.xlsx`
+      })
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition government-interface record meets the recursive criterion", () => {
+  assert.equal(nycacGovernmentInterfaceAudit.officialCouncilTranscriptCandidatesReviewed, 5);
+  assert.equal(nycacGovernmentInterfaceAudit.recoveredFinkelpearlCoalitionReferences, 1);
+  assert.equal(nycacGovernmentInterfaceAudit.recoveredReference.hearingDate, "2017-05-19");
+  assert.equal(nycacGovernmentInterfaceAudit.recoveredReference.transcriptPage, 92);
+  assert.equal(nycacGovernmentInterface.claims.filter((claim) => claim.status === "inference").length, 3);
+  assert.equal(
+    nycacGovernmentInterfaceCriterionScore(evaluateKnowledgeBank(suite)),
+    5
+  );
+});
+
+test("government-interface eval rejects promoting institutional inference as public fact", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-DCLA-CIVIC-INTERMEDIARY-VALUE"
+  );
+  assert.ok(claim);
+  const originalStatus = claim.status;
+  const originalProjection = structuredClone(claim.projections[0]);
+  try {
+    claim.status = "confirmed";
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/fair-rent-nyc"];
+    assert.equal(
+      nycacGovernmentInterfaceCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.status = originalStatus;
+    claim.projections[0] = originalProjection;
+  }
+});
+
+test("government-interface eval rejects turning bounded search into proof of exclusivity", () => {
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-NYCAC-FINKELPEARL-COUNCIL-TRANSCRIPT-AUDIT"
+  );
+  assert.ok(inquiry);
+  const originalLimitations = [...inquiry.limitations];
+  try {
+    inquiry.limitations = [
+      "The audit proves this was the only Council reference ever made.",
+      "No other source exists.",
+      "Search was conclusive."
+    ];
+    assert.equal(
+      nycacGovernmentInterfaceCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    inquiry.limitations = originalLimitations;
+  }
+});
+
+test("government-interface eval requires Espinal-specific evidence", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-ESPINAL-IMPLEMENTATION-PARTNER-VALUE"
+  );
+  assert.ok(claim);
+  const originalEvidence = [...claim.evidence];
+  try {
+    claim.evidence = claim.evidence.filter(
+      (item) => item.sourceId !== "SRC-X-NYCAC-RAFAEL-ESPINAL-2019-02-21"
+    );
+    assert.equal(
+      nycacGovernmentInterfaceCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.evidence = originalEvidence;
+  }
+});
+
+test("government-interface eval requires dependency and sole-causation anti-claims", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-COUNCIL-DELIBERATIVE-VALUE"
+  );
+  assert.ok(claim);
+  const originalAntiClaims = [...claim.antiClaims];
+  try {
+    claim.antiClaims = [
+      "The coalition participated in the hearing.",
+      "The Council received testimony.",
+      "The record is public."
+    ];
+    assert.equal(
+      nycacGovernmentInterfaceCriterionScore(evaluateKnowledgeBank(suite)),
+      1
+    );
+  } finally {
+    claim.antiClaims = originalAntiClaims;
+  }
+});
+
+test("government-interface eval rejects a public report containing a private path", () => {
+  assert.equal(
+    nycacGovernmentInterfaceCriterionScore(
+      evaluateKnowledgeBank(suite, {
+        nycacGovernmentInterfaceReport:
+          `${nycacGovernmentInterfaceReport}\n/Users/jburkart/private-hearing-notes.txt`
       })
     ),
     1

@@ -11,6 +11,7 @@ import { kcTownHallPhaseOne } from "../../apps/www/src/data/knowledge-bank/kc-to
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import { nycacFacebookPostAudit, nycacFacebookPosts } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts";
+import { nycacGovernmentInterface, nycacGovernmentInterfaceAudit } from "../../apps/www/src/data/knowledge-bank/nycac-government-interface.ts";
 import { nycacCorpusFindings, nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { participationInfrastructureAudit, participationInfrastructureProduction } from "../../apps/www/src/data/knowledge-bank/participation-infrastructure-production.ts";
@@ -4669,9 +4670,178 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const participationInfrastructureComplete = Object.values(
     participationDiagnostics
   ).every(Boolean);
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...kcPhaseObservations, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations, ...kcSpacesFacebookObservations, ...personalFacebookObservations, ...participationObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...kcPhaseClaims, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims, ...kcSpacesFacebookClaims, ...personalFacebookClaims, ...participationClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...kcPhaseInquiries, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries, ...kcSpacesFacebookInquiries, ...personalFacebookInquiries, ...participationInquiries];
+  const government = suite.pilot.nycacGovernmentInterface;
+  const governmentIntakes = government.intakeIds.map((id) => intakeById.get(id));
+  const governmentSources = government.sourceIds.map((id) => sourceById.get(id));
+  const governmentObservations = nycacGovernmentInterface.observations.map(
+    (observation) => observationById.get(observation.id)
+  );
+  const governmentClaims = government.claimIds.map((id) => claimById.get(id));
+  const governmentInquiries = government.inquiryIds.map((id) => inquiryById.get(id));
+  const governmentDirectClaim = claimById.get(government.directClaimId);
+  const governmentInferenceClaims = government.inferenceClaimIds.map((id) =>
+    claimById.get(id)
+  );
+  const governmentExistingSources = government.requiredExistingSourceIds.map((id) =>
+    sourceById.get(id)
+  );
+  const governmentProofCoverage = knowledgeBank.proofCoverageTargets.find(
+    (target) => target.proofId === government.proofId
+  );
+  const governmentReportPath = path.join(repoRoot, government.reportPath);
+  const governmentReport = fixtures.nycacGovernmentInterfaceReport ??
+    (existsSync(governmentReportPath) ? readFileSync(governmentReportPath, "utf8") : "");
+  const governmentInspectionText = JSON.stringify(nycacGovernmentInterface);
+  const governmentProjectionText = nycacGovernmentInterface.claims
+    .flatMap((claim) => claim.projections.map((projection) => projection.text))
+    .join("\n");
+  const governmentTranscriptInquiry = inquiryById.get(
+    "INQ-NYCAC-FINKELPEARL-COUNCIL-TRANSCRIPT-AUDIT"
+  );
+  const governmentValueInquiry = inquiryById.get(
+    "INQ-NYCAC-GOVERNMENT-INTERFACE-VALUE"
+  );
+  const governmentDiagnostics = {
+    recordCounts: Boolean(
+      nycacGovernmentInterface.intakeItems.length === government.expectedIntakeCount &&
+      nycacGovernmentInterface.observations.length === government.expectedObservationCount &&
+      nycacGovernmentInterface.sources.length === government.expectedSourceCount &&
+      nycacGovernmentInterface.claims.length === government.expectedClaimCount &&
+      nycacGovernmentInterface.researchInquiries.length === government.expectedInquiryCount &&
+      governmentIntakes.every(Boolean) &&
+      governmentSources.every(Boolean) &&
+      governmentObservations.every(Boolean) &&
+      governmentClaims.every(Boolean) &&
+      governmentInquiries.every(Boolean) &&
+      governmentExistingSources.every(Boolean)
+    ),
+    transcriptAudit: Boolean(
+      nycacGovernmentInterfaceAudit.officialCouncilTranscriptCandidatesReviewed ===
+        government.expectedTranscriptCandidates &&
+      nycacGovernmentInterfaceAudit.recoveredFinkelpearlCoalitionReferences ===
+        government.expectedRecoveredReferences &&
+      nycacGovernmentInterfaceAudit.recoveredReference.hearingDate === "2017-05-19" &&
+      nycacGovernmentInterfaceAudit.recoveredReference.transcriptPage === 92 &&
+      /bounded audit/i.test(nycacGovernmentInterfaceAudit.corpusBoundary) &&
+      /not a complete native export/i.test(nycacGovernmentInterfaceAudit.corpusBoundary) &&
+      governmentTranscriptInquiry?.resultStatus === "partially-recovered" &&
+      governmentTranscriptInquiry.limitations.some((item) =>
+        /not a complete native export/i.test(item)
+      ) &&
+      governmentTranscriptInquiry.limitations.some((item) =>
+        /does not prove.*only|not prove.*only/i.test(item)
+      )
+    ),
+    linkedGraph: Boolean(
+      governmentIntakes.every(
+        (item) => item?.sourceIds.every((id) => sourceById.has(id)) &&
+          item.observationIds.every((id) => observationById.has(id)) &&
+          item.researchInquiryIds.every((id) => inquiryById.has(id)) &&
+          item.boundaries.length >= 2
+      ) &&
+      governmentObservations.every(
+        (item) => item?.sourceId && sourceById.has(item.sourceId) &&
+          item.claimIds.every((id) => claimById.has(id)) &&
+          item.researchInquiryIds.every((id) => inquiryById.has(id)) &&
+          item.limitations.length >= 2
+      ) &&
+      governmentClaims.every(
+        (item) => item?.evidence.every((evidence) => sourceById.has(evidence.sourceId)) &&
+          item.researchInquiryIds.every((id) => inquiryById.has(id)) &&
+          item.boundaries.length >= 2 &&
+          item.antiClaims.length >= 3
+      ) &&
+      governmentInquiries.every(
+        (item) => item?.sourceIds.every((id) => sourceById.has(id)) &&
+          item.methods.length >= 3 &&
+          item.findings.length >= 3 &&
+          item.limitations.length >= 3
+      )
+    ),
+    directRecord: Boolean(
+      governmentDirectClaim?.status === "confirmed-with-boundary" &&
+      governmentDirectClaim.internalClaim.includes("Tom Finkelpearl") &&
+      governmentDirectClaim.internalClaim.includes("City Council") &&
+      governmentDirectClaim.internalClaim.includes("formed after DCLA convened") &&
+      governmentDirectClaim.evidence.some(
+        (evidence) =>
+          evidence.sourceId === "SRC-NYC-COUNCIL-FY2018-DCLA-HEARING-2017-05-19" &&
+          evidence.relationship === "direct-support" &&
+          evidence.locator === "Transcript page 92"
+      ) &&
+      sourceById
+        .get("SRC-NYC-COUNCIL-FY2018-DCLA-HEARING-2017-05-19")
+        ?.doesNotEstablish.includes("private motives or institutional dependency")
+    ),
+    inferenceDiscipline: Boolean(
+      governmentInferenceClaims.length === 3 &&
+      governmentInferenceClaims.every(
+        (claim) => claim?.status === "inference" &&
+          claim.internalClaim.startsWith("Institutional interpretation:") &&
+          claim.projections.length > 0 &&
+          claim.projections.every(
+            (projection) => projection.status === "hold" && projection.surfaces.length === 0
+          ) &&
+          claim.boundaries.some((boundary) => /interpretation|not proof|not a quotation|not Espinal's sole/i.test(boundary)) &&
+          claim.antiClaims.some((antiClaim) => /depend/i.test(antiClaim)) &&
+          claim.antiClaims.some((antiClaim) => /alone|sole/i.test(antiClaim))
+      )
+    ),
+    actorSpecificity: Boolean(
+      claimById
+        .get("CLM-NYCAC-DCLA-CIVIC-INTERMEDIARY-VALUE")
+        ?.evidence.some((evidence) => evidence.sourceId === "SRC-DCLA-COMMISSIONER-CREATENYC-MESSAGE") &&
+      claimById
+        .get("CLM-NYCAC-COUNCIL-DELIBERATIVE-VALUE")
+        ?.evidence.some((evidence) => evidence.sourceId === "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11") &&
+      claimById
+        .get("CLM-NYCAC-ESPINAL-IMPLEMENTATION-PARTNER-VALUE")
+        ?.evidence.some((evidence) => evidence.sourceId === "SRC-X-NYCAC-RAFAEL-ESPINAL-2019-02-21") &&
+      governmentValueInquiry?.findings.some((finding) => /DCLA gained/i.test(finding)) &&
+      governmentValueInquiry?.findings.some((finding) => /Council gained/i.test(finding)) &&
+      governmentValueInquiry?.findings.some((finding) => /Espinal gained/i.test(finding))
+    ),
+    proofCoverage: Boolean(
+      governmentProofCoverage?.sourceIds.includes(
+        "SRC-NYC-COUNCIL-FY2018-DCLA-HEARING-2017-05-19"
+      ) &&
+      governmentProofCoverage.sourceIds.includes("SRC-DCLA-COMMISSIONER-CREATENYC-MESSAGE") &&
+      governmentProofCoverage.sourceIds.includes("SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11") &&
+      governmentProofCoverage.sourceIds.includes("SRC-X-NYCAC-RAFAEL-ESPINAL-2019-02-21") &&
+      governmentProofCoverage.researchInquiryIds.includes(
+        "INQ-NYCAC-FINKELPEARL-COUNCIL-TRANSCRIPT-AUDIT"
+      ) &&
+      governmentProofCoverage.researchInquiryIds.includes(
+        "INQ-NYCAC-GOVERNMENT-INTERFACE-VALUE"
+      )
+    ),
+    reportContract: Boolean(
+      governmentReport.includes("May 19, 2017") &&
+      governmentReport.includes("pages 91-92") &&
+      governmentReport.includes("For DCLA") &&
+      governmentReport.includes("For the Council") &&
+      governmentReport.includes("For Council Member Rafael Espinal") &&
+      governmentReport.includes("One direct coalition reference was recovered") &&
+      /not a complete native Council transcript export/i.test(governmentReport) &&
+      /not[\s\S]{0,120}depended on Jamie/i.test(governmentReport) &&
+      /mature but held/i.test(governmentReport)
+    ),
+    publicSafety: Boolean(
+      !/(?:\/Users\/|\/Volumes\/|\/private\/|Google Drive\/)/i.test(
+        `${governmentInspectionText}\n${governmentReport}`
+      ) &&
+      !containsNycacSoleCreditClaim(governmentProjectionText) &&
+      governmentInferenceClaims.every((claim) =>
+        claim?.evidence.every((evidence) => evidence.relationship !== "private-support")
+      )
+    )
+  };
+  const nycacGovernmentInterfaceComplete = Object.values(
+    governmentDiagnostics
+  ).every(Boolean);
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...kcPhaseObservations, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations, ...kcSpacesFacebookObservations, ...personalFacebookObservations, ...participationObservations, ...governmentObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...kcPhaseClaims, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims, ...kcSpacesFacebookClaims, ...personalFacebookClaims, ...participationClaims, ...governmentClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...kcPhaseInquiries, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries, ...kcSpacesFacebookInquiries, ...personalFacebookInquiries, ...participationInquiries, ...governmentInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -4942,6 +5112,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [participationInfrastructureComplete
         ? `WOW List's two-snapshot scale and Popular Vote relationships, Sunday Dinner's complete aggregate column audit, and Call Script's public participation workflow are integrated with denominator, attendance, shared-account, collective-credit, and selective-projection boundaries intact`
         : `Participation-infrastructure criterion failed: ${Object.entries(participationDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
+    },
+    {
+      criterionId: "KB-EVAL-NYCAC-GOVERNMENT-INTERFACE",
+      score: score(nycacGovernmentInterfaceComplete),
+      evidence: [nycacGovernmentInterfaceComplete
+        ? `The bounded five-transcript-candidate audit preserves the May 19, 2017 Finkelpearl reference at page 92; DCLA, Council, and Espinal value remain three actor-specific held inferences backed by official records and public engagement evidence, with incomplete-corpus, collective-credit, dependency, endorsement, and policy-causation boundaries intact`
+        : `NYC Artist Coalition government-interface criterion failed: ${Object.entries(governmentDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
     }
   ];
 

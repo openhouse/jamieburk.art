@@ -647,7 +647,7 @@
       "expectedLedgerSha256": "c90245a454e7fdf1cf48f499a2abad7c717762da1e3b6135b8dc18c0062911fa",
       "expectedLedgerMetadataSha256": "22fc6d051dd57a476015117ca5aa9e91d27db861faf4d57df86a9451edc1124d",
       "expectedKnowledgeGraphSha256": "67de57f549c5145936116c50b3579a2c94d87e7cd41f28873154036818a4e4f0",
-      "expectedPublicSurfaceSha256": "958bf4e8d77d69e56dc099a8392dece270745efdc8ddb5bccdbfbbdd10ddd92e",
+      "expectedPublicSurfaceSha256": "3255fdf7c4ee536665c46959a6e1133f0ba61de2a36bddf6e6c87ac0103db33a",
       "expectedCrossLedgerSha256": "44929bacce524518dbe8951f51318b35adfa1ce0861d7ab95584c16339d3c401",
       "expectedSemanticContractSha256": "5e735233a76fe98098c09bc9f6e8f4c170bd1bbfbd7e2e84104ba8ac0a8d34dd",
       "methodContract": {
@@ -1215,6 +1215,51 @@
         "sunday-dinner-196-participation-infrastructure",
         "nyc-artist-coalition-civic-systems"
       ]
+    },
+    "nycacGovernmentInterface": {
+      "reportPath": "docs/knowledge-bank/projects/nycac-government-interface-2026-07-15.md",
+      "expectedIntakeCount": 4,
+      "expectedObservationCount": 7,
+      "expectedSourceCount": 4,
+      "expectedClaimCount": 4,
+      "expectedInquiryCount": 2,
+      "expectedTranscriptCandidates": 5,
+      "expectedRecoveredReferences": 1,
+      "intakeIds": [
+        "INTAKE-NYCAC-FINKELPEARL-COUNCIL-TESTIMONY-2017",
+        "INTAKE-NYCAC-DCLA-COMMISSIONER-MESSAGE",
+        "INTAKE-NYCAC-MARCH-COUNCIL-HEARING-2019",
+        "INTAKE-NYCAC-FINKELPEARL-TRANSCRIPT-AUDIT-2026"
+      ],
+      "sourceIds": [
+        "SRC-NYC-COUNCIL-FY2018-DCLA-HEARING-2017-05-19",
+        "SRC-DCLA-COMMISSIONER-CREATENYC-MESSAGE",
+        "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11",
+        "SRC-NYC-COUNCIL-FINKELPEARL-TRANSCRIPT-AUDIT-2026"
+      ],
+      "claimIds": [
+        "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+        "CLM-NYCAC-DCLA-CIVIC-INTERMEDIARY-VALUE",
+        "CLM-NYCAC-COUNCIL-DELIBERATIVE-VALUE",
+        "CLM-NYCAC-ESPINAL-IMPLEMENTATION-PARTNER-VALUE"
+      ],
+      "inquiryIds": [
+        "INQ-NYCAC-FINKELPEARL-COUNCIL-TRANSCRIPT-AUDIT",
+        "INQ-NYCAC-GOVERNMENT-INTERFACE-VALUE"
+      ],
+      "directClaimId": "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+      "inferenceClaimIds": [
+        "CLM-NYCAC-DCLA-CIVIC-INTERMEDIARY-VALUE",
+        "CLM-NYCAC-COUNCIL-DELIBERATIVE-VALUE",
+        "CLM-NYCAC-ESPINAL-IMPLEMENTATION-PARTNER-VALUE"
+      ],
+      "requiredExistingSourceIds": [
+        "SRC-X-NYCAC-RAFAEL-ESPINAL-2019-02-21",
+        "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+        "SRC-NYC-OFFICE-NIGHTLIFE-LOCAL-LAW-178-2017",
+        "SRC-NYC-CABARET-REPEAL-LOCAL-LAW-214-2017"
+      ],
+      "proofId": "nyc-artist-coalition-civic-systems"
     }
   },
   "criteria": [
@@ -1399,6 +1444,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Protected WOW List and Sunday Dinner records become bounded public-safe aggregates; the Call Script public record preserves a concrete listening workflow; database relationships, ledger marks, platform responses, attendance, authorship, and outcomes remain distinct; collective credit survives; and only audience-useful claims are composed into the site."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-GOVERNMENT-INTERFACE",
+      "label": "NYC Artist Coalition government-interface integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The exact Finkelpearl Council reference, DCLA framing, Council testimony and data record, and Espinal engagement remain source-backed and actor-specific; direct facts stay distinct from institutional interpretation; a bounded transcript search never becomes proof of nonexistence; no official is described as dependent on Jamie; collective credit and policy-causation limits survive; and mature depth remains held until deliberate composition."
     }
   ],
   "hillClimb": {
