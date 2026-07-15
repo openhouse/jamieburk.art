@@ -43,6 +43,17 @@ venue. The exhibition's own site directly establishes NTER CHNG's inclusion
 and SMS-to-projection interaction. The museum page supplies program context but
 does not itself name NTER CHNG.
 
+The July 15 KC Town Hall Phase One pass adds two deliberately separate source
+records. Jamie's public review confirmation supplies firsthand role evidence.
+A public-metadata-only record preserves bounded page-level findings from the
+2019 CCED proposal while withholding the raw PDF because its appendices contain
+private financial, banking, property, contact, and correspondence material. The
+proposal identifies Jamie and Julia as founders and project managers, documents
+the neighborhood survey-to-plan pathway, and labels the Phase One cold-shell
+scope completed in 2019. It does not establish contractor licensure, permit
+status, every trade's contractual scope, or completion of the full
+redevelopment.
+
 The July 12 portfolio-strengthening batch and follow-ups add fourteen sources
 across four project areas: two official City Council transcripts of Jamie's public testimony, VICE
 and Village Voice reporting on NYC Artist Coalition, a City announcement of the

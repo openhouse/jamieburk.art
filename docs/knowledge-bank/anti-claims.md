@@ -211,8 +211,18 @@ private Drive documents.
 
 ## KC Town Hall
 
-Use "co-led redevelopment planning and public-benefit documentation" for
-Jamie's role. Council authorization and appropriation of $490,539 are supported
+Use "Founder / Project Manager / Phase One Construction Lead" for Jamie's
+public role. Jamie's firsthand confirmation supports a functional
+general-contractor role and daily on-site leadership, while the proposal
+separately identifies Jamie and Julia as founders and project managers and
+labels Phase One's cold-shell scope completed in 2019.
+
+Do not say Jamie was the licensed general contractor, contractor of record, or
+permit holder without licensing, permit, or contract evidence. Do not imply he
+personally performed every trade. Do not turn completed Phase One cold-shell
+work into completion of Phase Two or the full redevelopment.
+
+Council authorization and appropriation of $490,539 are separately supported
 when paired with Jamie's later transition of the project to a mission-aligned
 organization, KC Town Hall's withdrawal, and return of the unused allocation.
 Do not identify the receiving organization, publish reasons or terms of the
@@ -231,6 +241,14 @@ corroborates the totals and calculation method.
 
 Do not reproduce resident-submitted locations, phone numbers, or contact-form
 information from the social or website record.
+
+Do not publish the raw CCED proposal. Its public-safe role, process, and Phase
+One scope pages can support bounded claims, but its financial, banking,
+property, contact, and correspondence appendices remain protected.
+
+Do not describe the neighborhood survey as statistically representative or
+publish responses and contacts. Do not convert Jamie's memory of appreciation
+into a broad neighborhood-support or measured-impact claim.
 
 ## NTER CHNG
 

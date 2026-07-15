@@ -51,6 +51,13 @@ America: Now and Here. The record keeps all three creator credits, separates
 direct exhibition evidence from institutional context, and holds unresolved
 authorship and chronology claims from public use.
 
+The [KC Town Hall Phase One report](kc-town-hall-phase-one-2026-07-15.md)
+corrects an earlier understatement of Jamie's role. It preserves his daily
+on-site construction leadership, multidisciplinary trade coordination,
+completed 2019 cold-shell scope, neighborhood survey system, and the boundary
+between a functional general-contractor role and an unverified formal license
+or permit classification.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

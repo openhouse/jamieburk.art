@@ -35,6 +35,8 @@ import { jamieFacebookPostsBatchRecords } from "./jamie-facebook-posts-batch-202
 import { jamieFacebookPostsDevelopmentRecords } from "./jamie-facebook-posts-development-2026-07-13.ts";
 import { nterChngBatchRecords } from "./nter-chng-batch-2026-07-14.ts";
 import { nterChngDevelopmentRecords } from "./nter-chng-development-2026-07-14.ts";
+import { kcTownHallPhaseOneBatchRecords } from "./kc-town-hall-phase-one-batch-2026-07-15.ts";
+import { kcTownHallPhaseOneDevelopmentRecords } from "./kc-town-hall-phase-one-development-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -55,7 +57,8 @@ const knowledgeBankInput = {
     ...facebookEventSurfacesDevelopmentRecords.intakeItems,
     ...wowlistFacebookPostsDevelopmentRecords.intakeItems,
     ...jamieFacebookPostsDevelopmentRecords.intakeItems,
-    ...nterChngDevelopmentRecords.intakeItems
+    ...nterChngDevelopmentRecords.intakeItems,
+    ...kcTownHallPhaseOneDevelopmentRecords.intakeItems
   ],
   sourceReadings: [
     ...knowledgeDevelopmentRecords.sourceReadings,
@@ -75,7 +78,8 @@ const knowledgeBankInput = {
     ...facebookEventSurfacesDevelopmentRecords.sourceReadings,
     ...wowlistFacebookPostsDevelopmentRecords.sourceReadings,
     ...jamieFacebookPostsDevelopmentRecords.sourceReadings,
-    ...nterChngDevelopmentRecords.sourceReadings
+    ...nterChngDevelopmentRecords.sourceReadings,
+    ...kcTownHallPhaseOneDevelopmentRecords.sourceReadings
   ],
   candidateClaims: [
     ...knowledgeDevelopmentRecords.candidateClaims,
@@ -95,7 +99,8 @@ const knowledgeBankInput = {
     ...facebookEventSurfacesDevelopmentRecords.candidateClaims,
     ...wowlistFacebookPostsDevelopmentRecords.candidateClaims,
     ...jamieFacebookPostsDevelopmentRecords.candidateClaims,
-    ...nterChngDevelopmentRecords.candidateClaims
+    ...nterChngDevelopmentRecords.candidateClaims,
+    ...kcTownHallPhaseOneDevelopmentRecords.candidateClaims
   ],
   promotions: [
     ...knowledgeDevelopmentRecords.promotions,
@@ -115,7 +120,8 @@ const knowledgeBankInput = {
     ...facebookEventSurfacesDevelopmentRecords.promotions,
     ...wowlistFacebookPostsDevelopmentRecords.promotions,
     ...jamieFacebookPostsDevelopmentRecords.promotions,
-    ...nterChngDevelopmentRecords.promotions
+    ...nterChngDevelopmentRecords.promotions,
+    ...kcTownHallPhaseOneDevelopmentRecords.promotions
   ],
   editorialBriefs: [
     ...knowledgeDevelopmentRecords.editorialBriefs,
@@ -134,7 +140,8 @@ const knowledgeBankInput = {
     ...facebookEventSurfacesDevelopmentRecords.editorialBriefs,
     ...wowlistFacebookPostsDevelopmentRecords.editorialBriefs,
     ...jamieFacebookPostsDevelopmentRecords.editorialBriefs,
-    ...nterChngDevelopmentRecords.editorialBriefs
+    ...nterChngDevelopmentRecords.editorialBriefs,
+    ...kcTownHallPhaseOneDevelopmentRecords.editorialBriefs
   ],
   discoveryNotes: [
     ...knowledgeDevelopmentRecords.discoveryNotes,
@@ -150,7 +157,8 @@ const knowledgeBankInput = {
     ...urbanhermitPopulationDevelopmentRecords.discoveryNotes,
     ...nycartcFacebookEventsDevelopmentRecords.discoveryNotes,
     ...facebookEventSurfacesDevelopmentRecords.discoveryNotes,
-    ...nterChngDevelopmentRecords.discoveryNotes
+    ...nterChngDevelopmentRecords.discoveryNotes,
+    ...kcTownHallPhaseOneDevelopmentRecords.discoveryNotes
   ],
   sources: [
     {
@@ -291,7 +299,8 @@ const knowledgeBankInput = {
     ...facebookEventSurfacesBatchRecords.sources,
     ...wowlistFacebookPostsBatchRecords.sources,
     ...jamieFacebookPostsBatchRecords.sources,
-    ...nterChngBatchRecords.sources
+    ...nterChngBatchRecords.sources,
+    ...kcTownHallPhaseOneBatchRecords.sources
   ],
   claims: [
     {
@@ -397,7 +406,8 @@ const knowledgeBankInput = {
     ...facebookEventSurfacesBatchRecords.claims,
     ...wowlistFacebookPostsBatchRecords.claims,
     ...jamieFacebookPostsBatchRecords.claims,
-    ...nterChngBatchRecords.claims
+    ...nterChngBatchRecords.claims,
+    ...kcTownHallPhaseOneBatchRecords.claims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -411,7 +421,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries, ...socialArchiveBatchRecords.researchInquiries, ...callnycPopulationBatchRecords.researchInquiries, ...wowlistPopulationBatchRecords.researchInquiries, ...kctownhallPopulationBatchRecords.researchInquiries, ...nycartcPopulationBatchRecords.researchInquiries, ...urbanhermitPopulationBatchRecords.researchInquiries, ...nycartcFacebookEventsBatchRecords.researchInquiries, ...facebookEventSurfacesBatchRecords.researchInquiries, ...wowlistFacebookPostsBatchRecords.researchInquiries, ...jamieFacebookPostsBatchRecords.researchInquiries, ...nterChngBatchRecords.researchInquiries],
+  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries, ...socialArchiveBatchRecords.researchInquiries, ...callnycPopulationBatchRecords.researchInquiries, ...wowlistPopulationBatchRecords.researchInquiries, ...kctownhallPopulationBatchRecords.researchInquiries, ...nycartcPopulationBatchRecords.researchInquiries, ...urbanhermitPopulationBatchRecords.researchInquiries, ...nycartcFacebookEventsBatchRecords.researchInquiries, ...facebookEventSurfacesBatchRecords.researchInquiries, ...wowlistFacebookPostsBatchRecords.researchInquiries, ...jamieFacebookPostsBatchRecords.researchInquiries, ...nterChngBatchRecords.researchInquiries, ...kcTownHallPhaseOneBatchRecords.researchInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -435,7 +445,7 @@ const knowledgeBankInput = {
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
-  }, ...evidenceBatchRecords.pages, ...strengtheningBatchRecords.pages, ...campaignPressBatchRecords.pages, ...kcTownHallCouncilBatchRecords.pages],
+  }, ...evidenceBatchRecords.pages, ...strengtheningBatchRecords.pages, ...campaignPressBatchRecords.pages, ...kcTownHallCouncilBatchRecords.pages, ...kcTownHallPhaseOneBatchRecords.pages],
   pressCollections: campaignPressBatchRecords.pressCollections
 } satisfies KnowledgeBank;
 

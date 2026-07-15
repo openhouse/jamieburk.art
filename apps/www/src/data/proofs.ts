@@ -543,6 +543,55 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-09"
   },
   {
+    id: "kc-town-hall-phase-one-delivery",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Served as Phase One construction lead for KC Town Hall's 2018-2019 cold-shell restoration, coordinating historic masonry, roofing, carpentry, welding, engineering, architecture, and plumbing teams while building neighborhood input into the work.",
+    shortWording:
+      "Led Phase One construction delivery and neighborhood-input operations",
+    detailedPublicWording:
+      "As co-founder and project manager, Jamie served in the functional general-contractor role and as the daily on-site construction lead for Phase One. He hired and coordinated specialist teams through completion of the cold shell in 2019, and created a neighborhood survey handbill and contact-intake system whose ongoing results shaped the plan.",
+    sourceBasis:
+      "Jamie's public review confirmation; a public-safe page-level review of the 2019 CCED proposal; and the official municipal packet identifying Jamie as KC Town Hall's developer and presenter.",
+    sourceNote:
+      "The raw proposal is not shipped because its appendices contain private financial, contact, property, and correspondence material.",
+    whyItMatters:
+      "Shows multidisciplinary delivery coordination, schedule-sensitive implementation, field judgment, and participatory research in a real built-environment project.",
+    guardrail:
+      "Use 'Phase One construction lead' publicly. Preserve 'functional general-contractor role' as Jamie's firsthand account without implying a recovered contractor license, permit-holder status, or that Jamie personally performed every trade. Phase One completion is not full redevelopment completion.",
+    doNotSay: [
+      "Jamie was the licensed general contractor of record",
+      "Jamie personally performed every construction trade",
+      "Jamie completed the full KC Town Hall redevelopment",
+      "Phase Two was completed during Jamie's direct involvement",
+      "The neighborhood survey was statistically representative"
+    ],
+    protectedBoundaries: [
+      "Raw proposal and financial appendices",
+      "Banking and property records",
+      "Survey responses and resident contacts",
+      "Private contractor agreements",
+      "Unapproved site photographs",
+      "Private reasons or terms of the later project transition"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: [
+      "project-management",
+      "construction-coordination",
+      "vendor-coordination",
+      "participatory-research",
+      "implementation"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
@@ -559,7 +608,7 @@ export const proofClaims: ProofClaim[] = [
     doNotSay: [
       "Funding received or spent",
       "Executed funding agreement",
-      "Completed construction",
+      "Completion of the full redevelopment or Phase Two",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the recorded actions",
@@ -722,6 +771,7 @@ export const technicalOperationsProofRows = [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
       "callnyc-civic-data-guidance",
+      "kc-town-hall-phase-one-delivery",
       "wowlist-community-platform"
     ]
   },

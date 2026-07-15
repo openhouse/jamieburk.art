@@ -28,7 +28,7 @@ export const kcTownHallCouncilBatchRecords: KcTownHallCouncilBatch = {
       doesNotEstablish: [
         "execution of a funding agreement",
         "disbursement of funds",
-        "completed construction"
+        "Phase One completion or completion of the full redevelopment"
       ]
     },
     {
@@ -76,7 +76,7 @@ export const kcTownHallCouncilBatchRecords: KcTownHallCouncilBatch = {
       doesNotEstablish: [
         "that KC Town Hall received or spent the appropriated funds",
         "the reason for the project's withdrawal",
-        "completed construction"
+        "Phase One completion or completion of the full redevelopment"
       ]
     },
     {
@@ -98,7 +98,7 @@ export const kcTownHallCouncilBatchRecords: KcTownHallCouncilBatch = {
         "the identity of the receiving organization",
         "the legal or financial terms of the transition",
         "the reason for the transition",
-        "completed construction"
+        "Phase One completion or completion of the full redevelopment"
       ]
     }
   ],
@@ -125,7 +125,7 @@ export const kcTownHallCouncilBatchRecords: KcTownHallCouncilBatch = {
       ],
       limitations: [
         "Council authorization and appropriation are not proof of an executed funding agreement or disbursement.",
-        "The reviewed records do not establish the reason for withdrawal or completed construction.",
+        "The reviewed records do not establish the reason for withdrawal, Phase One completion, or completion of the full redevelopment.",
         "Jamie's confirmation does not identify the receiving organization or disclose the reasons or terms of the transition.",
         "No roll-call vote count was recovered; the official histories report adopted or passed as substituted."
       ],

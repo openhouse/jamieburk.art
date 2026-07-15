@@ -24,6 +24,7 @@ const usableOutputs = [
   "action trackers",
   "analytics",
   "campaign memory",
+  "cold shell",
   "documentation",
   "event distribution",
   "facilitation",
@@ -35,7 +36,9 @@ const usableOutputs = [
   "platform",
   "public-benefit documentation",
   "source maps",
+  "survey",
   "web",
+  "workflow",
   "workflows"
 ];
 

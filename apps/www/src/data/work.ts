@@ -506,31 +506,50 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Construction delivery, neighborhood input, and adaptive reuse",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building; the proposal advanced from board recommendation to Council authorization and appropriation of $490,539.",
-    role: "Developer / Project Planning & Documentation",
-    years: "2019-2021",
+      "Co-founded and project-managed a neighborhood-led adaptive reuse effort, serving as Phase One construction lead through completion of the building's cold shell in 2019.",
+    role: "Founder / Project Manager / Phase One Construction Lead",
+    years: "2018-2021",
     status: "Short proof page",
     featured: false,
     priority: 6,
     visibility: "public-safe",
-    proofBankIds: ["kc-town-hall-public-benefit-documentation"],
+    proofBankIds: [
+      "kc-town-hall-phase-one-delivery",
+      "kc-town-hall-public-benefit-documentation"
+    ],
     whatWasUnclear:
-      "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
+      "A long-vacant historic building required coordinated preservation trades, daily field decisions, funding strategy, and a neighborhood-led vision that could keep changing as people encountered the active site.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A completed Phase One cold shell coordinated across specialist teams, plus a neighborhood survey and contact-intake workflow that connected desired uses and offers of help to the plan.",
+    artifactTypes: ["guide", "source map", "template", "workflow"],
     artifacts: [
       {
         title: "Public-benefit documentation set",
         description:
           "Representative materials for describing intended public value, funding context, and stakeholder needs.",
         type: "guide"
+      },
+      {
+        title: "Neighborhood survey and intake workflow",
+        description:
+          "A compact handbill and backing contact system for gathering desired uses, offers of help, and follow-through pathways.",
+        type: "template"
       }
     ],
-    tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    tags: [
+      "Implementation",
+      "Construction Coordination",
+      "Participatory Research",
+      "Documentation"
+    ],
+    capabilities: [
+      "Multidisciplinary Delivery",
+      "Trade and Vendor Coordination",
+      "Stakeholder Documentation",
+      "Historic Preservation Context"
+    ],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
@@ -539,16 +558,17 @@ const workItemsInput = [
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Field-based project management, multidisciplinary delivery coordination, participatory research, public-benefit documentation, and long-horizon implementation.",
     evidence: [
-      "Redevelopment planning",
+      "Phase One cold-shell restoration completed in 2019",
+      "Historic masonry, roofing, carpentry, welding, engineering, architecture, and plumbing coordination",
+      "Neighborhood survey and contact-intake system",
       "Public-benefit documentation",
-      "Historic preservation context",
       "$490,539 Council authorization and appropriation"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; official records show board recommendation followed by Council authorization and appropriation.",
+        "Jamie co-founded and project-managed the effort, served as Phase One's daily on-site construction lead through cold-shell completion in 2019, and created a neighborhood survey and contact workflow; official records separately show board recommendation followed by Council authorization and appropriation.",
       open:
         "Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation and the unused funds were reappropriated. The receiving organization's identity, transition terms, and reasons remain outside the public claim.",
       protected:

@@ -196,7 +196,7 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
       ],
       doesNotEstablish: [
         "final City Council approval, contract execution, or disbursement",
-        "completed construction",
+        "Phase One completion or completion of the full redevelopment",
         "current ownership or project status"
       ]
     },
@@ -221,7 +221,7 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
       doesNotEstablish: [
         "a final funding award",
         "the outcome of every board discussion",
-        "completed construction or current project status"
+        "Phase One completion, completion of the full redevelopment, or current project status"
       ]
     },
     {
@@ -455,6 +455,7 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
       id: "kc-town-hall",
       surface: "/work/kc-town-hall",
       sourceOrder: [
+        "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026",
         "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
         "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
         "SRC-KCMO-CCED-ORDINANCE-190642-2019",
@@ -468,6 +469,24 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
         "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
       ],
       occurrences: [
+        {
+          id: "phase-one-construction-delivery",
+          claimId: "CLM-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY",
+          projection: "case-study",
+          sourceIds: ["SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"]
+        },
+        {
+          id: "neighborhood-survey-system",
+          claimId: "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+          projection: "case-study",
+          sourceIds: ["SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"]
+        },
+        {
+          id: "participatory-construction-practice",
+          claimId: "CLM-KCTH-PARTICIPATORY-CONSTRUCTION-PRACTICE",
+          projection: "case-study",
+          sourceIds: ["SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"]
+        },
         {
           id: "municipal-record",
           claimId: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",

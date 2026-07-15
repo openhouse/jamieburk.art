@@ -433,10 +433,55 @@ claim beyond the wording and guardrails here.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
 **Guardrail:** Use authorization and appropriation language, not receipt or expenditure. Credit the service page to Julia and Jamie and the monthly program to KC Town Hall with Oak Park Neighborhood Association. Treat tire and avoided-fee totals as project-reported until independently corroborated. Include the mission-aligned transition, later withdrawal, and reappropriation when summarizing the lifecycle. Do not publish the receiving organization's identity or the transition's reasons or terms.
-**Do not say:** Funding received or spent; executed funding agreement; completed construction; Jamie alone operated Tired of Tires; independently audited tire or savings totals; identity of the receiving organization; reasons or terms of the transition; current property status; official municipal endorsement beyond the recorded actions.
+**Do not say:** Funding received or spent; executed funding agreement; completion of the full redevelopment or Phase Two; Jamie alone operated Tired of Tires; independently audited tire or savings totals; identity of the receiving organization; reasons or terms of the transition; current property status; official municipal endorsement beyond the recorded actions.
 **Protected boundaries:** Private financial, legal, property, banking, stakeholder, resident-location, and contact details stay offline.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-12
+
+## kc-town-hall-phase-one-delivery - Phase One construction delivery
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Jamie review confirmation / public-safe proposal summary / public municipal record
+**Public wording:** Served as Phase One construction lead for KC Town Hall's 2018-2019 cold-shell restoration, coordinating historic masonry, roofing, carpentry, welding, engineering, architecture, and plumbing teams while building neighborhood input into the work.
+**Detailed public-safe wording:** As co-founder and project manager, Jamie served in the functional general-contractor role and as the daily on-site construction lead. He worked from measured drawings, coordinated from basement to roof deck, managed schedule-sensitive TPO membrane and parapet sequencing, and helped carry the cold shell through completion in 2019.
+**Where to project:** Technical Operations, Work card, KC Town Hall case study.
+**Why it matters:** Shows multidisciplinary delivery coordination, field judgment, vendor and trade management, and schedule-sensitive implementation in a real built-environment project.
+**Guardrail:** Use "Phase One construction lead" publicly. Preserve "functional general-contractor role" as Jamie's firsthand account without implying recovered licensure, permit-holder status, or that Jamie personally performed every trade. Phase One completion is not full redevelopment completion.
+**Do not say:** Jamie was the licensed general contractor of record; Jamie personally performed every trade; Jamie completed Phase Two or the full redevelopment.
+**Protected boundaries:** Raw proposal appendices, banking and property records, private contracts, payment records, and unapproved site photographs remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-neighborhood-survey-system - Neighborhood input workflow
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Jamie review confirmation / public-safe proposal summary
+**Public wording:** Designed a neighborhood survey handbill and backing contact-intake system so desired uses, offers of help, and ongoing neighborhood conversations could directly shape the KC Town Hall plan.
+**Detailed public-safe wording:** The compact handbill gathered desired uses, contact information, and ways residents could help. The proposal describes the survey as an ongoing process with neighborhood partners and says its results directly shaped the plan.
+**Where to project:** KC Town Hall Work card and case study.
+**Why it matters:** Shows Jamie translating participatory intent into a concrete intake, contact, and follow-through system.
+**Guardrail:** Describe the survey as an operating input, not statistically representative research. Preserve neighborhood-partner credit for the broader process.
+**Do not say:** The survey represented every neighbor; Jamie alone conducted every conversation; raw responses or resident contacts are public artifacts.
+**Protected boundaries:** Survey responses, respondent identities, contact information, and private follow-up remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-participatory-construction-practice - Construction as a listening surface
+
+**Status:** Inference with boundaries
+**Support level:** Careful
+**Evidence class:** Jamie review confirmation / cross-source interpretation
+**Public wording:** Daily site presence kept neighborhood knowledge close to implementation: histories, stories, and ideas for the building could accumulate alongside the restoration work rather than remain separate from it.
+**Detailed public-safe wording:** Jamie's construction coordination and the documented survey-to-plan process show a practice in which physical implementation and participatory visioning informed one another over time.
+**Where to project:** KC Town Hall case study.
+**Why it matters:** Makes the distinctive method visible after the concrete delivery role is established.
+**Guardrail:** Label this as a portfolio interpretation, not a measured community outcome or a statement made by every neighbor or collaborator.
+**Do not say:** Jamie's presence alone created trust; all neighbors supported the project; observed appreciation proves impact.
+**Protected boundaries:** Private conversations, resident identities, unapproved quotations, and unreviewed photographs remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
 
 ## source-backed-team-memory-method - Source-backed team memory
 

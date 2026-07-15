@@ -87,6 +87,11 @@ const nterChngSourceIds = [
   "SRC-NERMAN-AMERICA-NOW-HERE-2011"
 ];
 
+const kcTownHallPhaseOneSourceIds = [
+  "SRC-KCTH-PHASE-ONE-CCED-PROPOSAL-2019",
+  "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"
+];
+
 const archivalProductionSourceIds = [
   "SRC-RAFT-SOUNDINGS-2007",
   "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013",
@@ -2401,6 +2406,141 @@ const criteria = [
           report
         ) &&
         !publicRegistryText.includes("RESEARCH-NTER-CHNG-WAYBACK-2026-001")
+      );
+    })()
+  },
+  {
+    id: "kcth-phase-one-source-and-lifecycle-lineage",
+    label: "KC Town Hall Phase One has separate proposal and firsthand source lineages with promoted and held claims",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-KCTH-PHASE-ONE-DELIVERY-2026"
+      );
+      const promotedPairs = [
+        [
+          "CND-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY",
+          "CLM-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY"
+        ],
+        [
+          "CND-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+          "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM"
+        ],
+        [
+          "CND-KCTH-PARTICIPATORY-CONSTRUCTION-PRACTICE",
+          "CLM-KCTH-PARTICIPATORY-CONSTRUCTION-PRACTICE"
+        ]
+      ];
+      const heldCandidateIds = [
+        "CND-KCTH-LICENSED-GENERAL-CONTRACTOR-OF-RECORD",
+        "CND-KCTH-NEIGHBORHOOD-APPRECIATION-OUTCOME"
+      ];
+      return Boolean(
+        [
+          "INT-2026-07-15-KCTH-PHASE-ONE-PROPOSAL",
+          "INT-2026-07-15-KCTH-JAMIE-PHASE-ONE-CONFIRMATION"
+        ].every((id) => intakeItems.some((item) => item.id === id)) &&
+        kcTownHallPhaseOneSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "partially-recovered" &&
+        promotedPairs.every(([candidateId, claimId]) => {
+          const candidate = candidateById.get(candidateId);
+          return candidate?.status === "promoted" && candidate.promotedClaimId === claimId;
+        }) &&
+        heldCandidateIds.every((candidateId) => {
+          const candidate = candidateById.get(candidateId);
+          return (
+            candidate?.status === "research-needed" &&
+            promotions.some(
+              (promotion) =>
+                promotion.candidateClaimId === candidateId &&
+                promotion.decision === "held"
+            )
+          );
+        })
+      );
+    })()
+  },
+  {
+    id: "kcth-phase-one-role-privacy-and-completion-boundaries",
+    label: "KC Town Hall Phase One preserves functional-role, raw-proposal, and full-redevelopment boundaries",
+    pass: (() => {
+      const proposal = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-KCTH-PHASE-ONE-CCED-PROPOSAL-2019"
+      );
+      const confirmation = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"
+      );
+      const deliveryClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY"
+      );
+      const surveyClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/kc-town-hall-phase-one-2026-07-15.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync(
+        "docs/knowledge-bank/anti-claims.md",
+        "utf8"
+      );
+      return Boolean(
+        proposal?.visibility === "public-metadata-only" &&
+        proposal.preservationStatus === "private" &&
+        proposal.protectedLocatorId &&
+        confirmation?.visibility === "public" &&
+        deliveryClaim?.boundaries.some((item) => /licensure|permit-holder/i.test(item)) &&
+        deliveryClaim.boundaries.some((item) => /Phase Two|full redevelopment/i.test(item)) &&
+        surveyClaim?.boundaries.some((item) => /responses|contact/i.test(item)) &&
+        /raw\s+PDF is not committed/i.test(report) &&
+        /licensed general contractor|permit holder/i.test(antiClaims) &&
+        /statistically representative/i.test(antiClaims) &&
+        !publicRegistryText.includes("ARCHIVE-KCTH-PHASE-ONE-PROPOSAL-2019-001") &&
+        !publicRegistryText.includes("RESEARCH-KCTH-PHASE-ONE-2026-001")
+      );
+    })()
+  },
+  {
+    id: "kcth-phase-one-chad-public-projection",
+    label: "Chad's lens makes the completed delivery and participation system visible without overstating the full project",
+    pass: (() => {
+      const brief = editorialBriefs.find(
+        (item) => item.id === "BRIEF-KCTH-PHASE-ONE-EDITORIAL-2026"
+      );
+      const page = knowledgeBank.pages.find((item) => item.id === "kc-town-hall");
+      const caseStudy = readFileSync(
+        "apps/www/src/content/work/kc-town-hall.mdx",
+        "utf8"
+      );
+      const workData = readFileSync("apps/www/src/data/work.ts", "utf8");
+      const proofData = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+      const claimIds = [
+        "CLM-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY",
+        "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+        "CLM-KCTH-PARTICIPATORY-CONSTRUCTION-PRACTICE"
+      ];
+      return Boolean(
+        brief?.selectedClaimIds.length === 3 &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-KCTH-LICENSED-GENERAL-CONTRACTOR-OF-RECORD"
+        ) &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-KCTH-NEIGHBORHOOD-APPRECIATION-OUTCOME"
+        ) &&
+        claimIds.every((id) =>
+          page?.occurrences.some(
+            (occurrence) => occurrence.claimId === id && occurrence.projection === "case-study"
+          )
+        ) &&
+        claimIds.every((id) => renderedProjectionSources.includes(id)) &&
+        /Founder \/ Project Manager \/ Phase One Construction Lead/.test(workData) &&
+        /years: "2018-2021"/.test(workData) &&
+        /kc-town-hall-phase-one-delivery/.test(proofData) &&
+        /functional general-contractor role/.test(proofData) &&
+        /completion of Phase Two.*completion of the full redevelopment/i.test(caseStudy) &&
+        !/It does not claim[^.]*completed construction/i.test(caseStudy)
       );
     })()
   },

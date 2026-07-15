@@ -366,7 +366,7 @@
       "publicNote": "The public packet lists Jamie as KC Town Hall's developer/presenter and records the board's unanimous recommendation to the City Council for approval and $490,539 in funding for four retail spaces and three apartments.",
       "doesNotEstablish": [
         "final City Council approval, contract execution, or disbursement",
-        "completed construction",
+        "Phase One completion or completion of the full redevelopment",
         "current ownership or project status"
       ]
     },
@@ -386,7 +386,7 @@
       "doesNotEstablish": [
         "a final funding award",
         "the outcome of every board discussion",
-        "completed construction or current project status"
+        "Phase One completion, completion of the full redevelopment, or current project status"
       ]
     },
     {
@@ -456,7 +456,7 @@
       "doesNotEstablish": [
         "execution of a funding agreement",
         "disbursement of funds",
-        "completed construction"
+        "Phase One completion or completion of the full redevelopment"
       ]
     },
     {
@@ -494,7 +494,7 @@
       "doesNotEstablish": [
         "that KC Town Hall received or spent the appropriated funds",
         "the reason for the project's withdrawal",
-        "completed construction"
+        "Phase One completion or completion of the full redevelopment"
       ]
     },
     {
@@ -512,7 +512,7 @@
         "the identity of the receiving organization",
         "the legal or financial terms of the transition",
         "the reason for the transition",
-        "completed construction"
+        "Phase One completion or completion of the full redevelopment"
       ]
     },
     {
@@ -963,6 +963,26 @@
         "the complete Phoenix organizer population",
         "current platform activity",
         "the individual teammate who reshared the post"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026",
+      "title": "Jamie Burkart public review confirmation of KC Town Hall Phase One role",
+      "organization": "Jamie Burkart",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "publicCitation": "Jamie Burkart, public portfolio review confirmation of his KC Town Hall Phase One role, July 15, 2026.",
+      "publicNote": "Jamie confirms that he served in the project's functional general-contractor role for Phase One, acting as the daily on-site construction lead; hired and coordinated specialist teams; and created the neighborhood survey handbill and its backing contact-intake system.",
+      "doesNotEstablish": [
+        "a municipal contractor license, permit-holder status, or a particular legal contracting classification",
+        "that Jamie personally performed every specialist trade",
+        "that no collaborators shared project-management or construction responsibilities",
+        "independently measured neighborhood sentiment or impact",
+        "completion of the full redevelopment or Phase Two"
       ]
     }
   ],
@@ -1979,6 +1999,102 @@
         "Use `city calendars` or `city ecosystems`, not official chapters.",
         "The account record does not identify the individual teammate who authored each post."
       ]
+    },
+    {
+      "id": "CLM-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie served as Phase One's on-site construction lead, hiring and coordinating historic masonry, roofing, carpentry, welding, engineering, architecture, and plumbing teams through completion of the building's cold shell in 2019. Working from measured drawings, he coordinated from basement to roof deck, including the sequence tying the TPO membrane to restored parapets and historic ceramic caps.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's functional general-contractor role",
+            "daily on-site construction leadership",
+            "hiring and coordination of specialist teams"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use 'on-site construction lead' in hiring-facing copy and retain 'functional general-contractor role' in the evidence record.",
+        "Do not infer contractor licensure, permit-holder status, or a specific legal classification without municipal or contractual records.",
+        "Coordination of specialist teams does not mean Jamie personally performed every trade.",
+        "Phase One cold-shell completion does not establish completion of Phase Two or the full redevelopment."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie also designed a neighborhood survey handbill and backing contact-intake system so desired uses, offers of help, and ongoing neighborhood conversations could directly shape the plan.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's authorship of the handbill and backing data-collection system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe the survey as an input and contact workflow, not a statistically representative study.",
+        "Do not publish survey responses, contact fields, respondent identities, or raw data.",
+        "Credit neighborhood partners when describing the wider survey process."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-PARTICIPATORY-CONSTRUCTION-PRACTICE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Daily site presence kept neighborhood knowledge close to implementation: histories, stories, and ideas for the building could accumulate alongside the restoration work rather than remain separate from it.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "daily site presence and recurring neighborhood conversations"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is a portfolio-level interpretation of Jamie's practice, not language used by every collaborator or neighbor.",
+        "Do not convert observed appreciation or recurring conversation into a measured community-impact claim.",
+        "Preserve the collective nature of the neighborhood-led vision."
+      ]
     }
   ],
   "pages": [
@@ -2228,6 +2344,7 @@
       "id": "kc-town-hall",
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
+        "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026",
         "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
         "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
         "SRC-KCMO-CCED-ORDINANCE-190642-2019",
@@ -2241,6 +2358,30 @@
         "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
       ],
       "occurrences": [
+        {
+          "id": "phase-one-construction-delivery",
+          "claimId": "CLM-KCTH-PHASE-ONE-CONSTRUCTION-DELIVERY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"
+          ]
+        },
+        {
+          "id": "neighborhood-survey-system",
+          "claimId": "CLM-KCTH-NEIGHBORHOOD-SURVEY-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"
+          ]
+        },
+        {
+          "id": "participatory-construction-practice",
+          "claimId": "CLM-KCTH-PARTICIPATORY-CONSTRUCTION-PRACTICE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-JAMIE-PHASE-ONE-ROLE-CONFIRMATION-2026"
+          ]
+        },
         {
           "id": "municipal-record",
           "claimId": "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
