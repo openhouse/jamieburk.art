@@ -1,37 +1,38 @@
 {
-  "candidate_sha": "478c4613a9af4bd75216eefaa7ac9ac2c54e62d5",
+  "candidate_sha": "1bc9de58eec16506f0b44d87ab998c2daf30bcfb",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 478c4613a9af4bd75216eefaa7ac9ac2c54e62d5 and scored collective-credit integrity at 4/4 with no material findings.",
-        "Both verified origin's annotated v5 baseline tag object f9f3a2ecbacb8591f87e1115cfd094b1926e8071, peeled commit 3e56aa7daf5aff084333f40d365e09b7d37e884c, and the matching anchored baseline blob.",
-        "All 54 collective-work claims retain governed project assignments, contribution language, collaborator and institutional boundaries, anti-claims, projection relationships, and frozen runtime coverage.",
-        "Adversarial review rejected policy opt-outs, vague credit rewrites, coordinated project moves, silent knowledge removal, unsupported causal language, and paraphrased sole-credit claims including no-collaborator, final-authority, lone-architect, and decisive-reason variants.",
-        "NYC Artist Coalition records preserve shared-account authorship, overlapping campaign categories, collaborator and institutional credit, the explicit recovery gap, outbound-versus-incoming stakeholder distinctions, and non-causal outcome framing.",
-        "Both Next.js App Router and Pages Router roots, including currently absent Pages Router roots, are governed by externally anchored public-surface fingerprints."
+        "Two fresh independent graders audited exact candidate 1bc9de58eec16506f0b44d87ab998c2daf30bcfb and scored collective-credit integrity at 4/4 with no material findings.",
+        "Both verified origin's annotated v9 baseline tag object 3d3cefc9d86f73ce7d7e6a63a4c18c5f800fbaa3, peeled commit 6dd6cd201fe1a8ea9611026284842eb3704e9b3d, and the matching anchored baseline blob.",
+        "The 60-claim collective-work inventory, policy version 7, governed runtime, contribution language, collaborator boundaries, anti-claims, and route relationships reproduce the frozen baseline.",
+        "The KC Town Hall card, description, Open Graph, Twitter metadata, proof record, and case study name Julia Fredenburg and Kansas City while separating Jamie and Julia's project-management roles from professional, trade, neighborhood, board, Council, and institutional actions.",
+        "The two proposal-backed Phase One claims remain active; general-contractor, survey-authorship, Tired of Tires field operations, Indian Mound expansion, and Cleveland Avenue recollections remain held and absent from the public registry.",
+        "The mission-aligned handoff renders explicitly as Jamie's first-person report and does not expose the recipient, timing, terms, private context, or present operations.",
+        "Ordinance 240317 is used only for institutional withdrawal, unused-allocation, and reappropriation claims; no public surface attributes those actions or their unstated reasons to Jamie."
       ],
       "findings": [],
-      "confidence": 0.96
+      "confidence": 0.98
     },
     {
       "eval_id": "KB-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 478c4613a9af4bd75216eefaa7ac9ac2c54e62d5 and scored public projection coverage at 4/4 with no material findings.",
-        "Projection decisions, statement support, route bindings, public surfaces, work-field proof identities, citation occurrences, and explicit use-now or hold dispositions match the externally anchored reviewed baseline.",
-        "Adversarial route and document tests reject unrelated routes, comments, unused exports, runtime gates, empty iterations, hidden containers and classes, closed disclosure bodies, and disconnected citation occurrences.",
-        "Resume governance covers visible prose, hidden-container and hidden-attribute boundaries, metadata and JSON-LD, CSS-generated and counter text, inline and embedded channels, and HTML, text, and PDF artifact parity.",
-        "The governed NYC Artist Coalition corpus accounts for 5,124 profile-reported posts as 3,367 recovered account items plus an explicit 1,757-item gap, with 19 context-only records outside the denominator.",
-        "The corpus preserves 696 authored posts, 2,671 reposts, complete resolution of all 1,235 distinct recovered-account short URLs, four overlapping campaign-marker populations, bounded Council engagement, and held volatile traction totals.",
-        "No material bypass survived the exact-candidate, immutable-tag, statement-support, route-binding, runtime, or recursive public-surface fingerprints."
+        "Two fresh independent graders audited exact candidate 1bc9de58eec16506f0b44d87ab998c2daf30bcfb and scored Chad-lens clarity, source entailment, projection coverage, and privacy at 4/4 with no material findings.",
+        "Projection policy version 4, projection decisions, statement support, route bindings, public surfaces, work-field proof identities, and resume artifacts reproduce their governed fingerprints.",
+        "The public sequence is direct and bounded: Jamie and Julia co-founded and project-managed Phase One; the 2019 proposal records completed cold-shell work and a partner-based survey that shaped plans; the Council authorized negotiations; Ordinance 240317 later recorded withdrawal and reappropriation.",
+        "The ordinance appraisal and public copy withhold unstated reasons, individual causation, current-property conclusions, and any inference that later withdrawal negates the separately documented Phase One work.",
+        "The governed resume statement and proof record share the exact funding-agreement-negotiations semantic anchor across HTML, extracted text, and downloadable PDF artifacts.",
+        "The richer first-person recollections remain preserved as research leads with source boundaries and actionable corroboration tasks rather than projected accomplishments.",
+        "Chad-lens, knowledge-bank, public-safety, citation, route, corpus, portfolio-eval, typecheck, lint, production-build, and rendered-surface checks passed; no protected source content, private path, credential, recipient identity, or private transition detail was exposed."
       ],
       "findings": [],
-      "confidence": 0.95
+      "confidence": 0.98
     }
   ],
-  "overall_finding": "Exact candidate 478c4613a9af4bd75216eefaa7ac9ac2c54e62d5 passed two fresh independent reviews for KB-007 and KB-009 at 4/4 with no material findings. The NYC Artist Coalition population-accounted corpus, selective projections, collective-credit boundaries, visibility checks, and externally anchored all-route public-surface baseline meet the frozen criteria."
+  "overall_finding": "Exact candidate 1bc9de58eec16506f0b44d87ab998c2daf30bcfb passed two fresh independent reviews for KB-007 and KB-009 at 4/4 with no material findings. The KC Town Hall Phase One record, later municipal status, selective public projections, held recollections, collective-credit boundaries, privacy protections, and externally anchored policy baseline meet the frozen criteria."
 }
