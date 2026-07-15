@@ -206,11 +206,6 @@ export function validateHybridReportCandidate(report) {
   }
 
   try {
-    const tagObject = execFileSync(
-      "git",
-      ["rev-parse", FROZEN_COLLECTIVE_BASELINE_TAG],
-      { encoding: "utf8" }
-    ).trim();
     execFileSync("git", ["cat-file", "-e", `${report.candidate_sha}^{commit}`], {
       stdio: "ignore"
     });
@@ -1474,6 +1469,11 @@ export function evaluateKnowledgeBank(
     findings["KB-007"].push("collective-credit baseline is not frozen for this run");
   }
   try {
+    const tagObject = execFileSync(
+      "git",
+      ["rev-parse", FROZEN_COLLECTIVE_BASELINE_TAG],
+      { encoding: "utf8" }
+    ).trim();
     const tagType = execFileSync(
       "git",
       ["cat-file", "-t", FROZEN_COLLECTIVE_BASELINE_TAG],
