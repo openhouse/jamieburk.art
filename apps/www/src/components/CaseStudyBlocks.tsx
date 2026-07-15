@@ -47,6 +47,8 @@ export function AtAGlance({
 }
 
 export function ArtifactGallery({ item }: { item: WorkMeta }) {
+  if (!item.artifacts.length) return null;
+
   const visualArtifacts = item.artifacts.filter((artifact) => artifact.asset);
   const mappedArtifacts = item.artifacts.filter((artifact) => !artifact.asset);
 

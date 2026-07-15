@@ -457,15 +457,8 @@ const workItemsInput = [
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
-    artifactTypes: ["website", "workflow", "prototype"],
-    artifacts: [
-      {
-        title: "Keyword-community model",
-        description:
-          "One event could belong to several followable keyword communities, preserving organizer language while widening distribution.",
-        type: "diagram"
-      }
-    ],
+    artifactTypes: [],
+    artifacts: [],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
     capabilities: [
       "Django",
@@ -494,9 +487,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform; public records document organizer use, community-created onboarding, and Jamie's maker role.",
+        "Historical aggregates and public records support the product, scale, organizer-use, and role account above.",
       open:
-        "The @WOWListNYC to @wowlist handle lineage remains unresolved, and broader adoption estimates remain separately governed.",
+        "The @WOWListNYC to @wowlist handle lineage and broader adoption estimates remain unresolved.",
       protected:
         "Private community records are not published."
     }
