@@ -273,6 +273,22 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION`: retain Jamie's interpretation
   of the event practice as a democracy lab. It is useful compositional depth,
   not a measured outcome or a statement attributed to every coalition member.
+- `CLM-FB-JAMIE-POST-POPULATION-2026`: retain the 1,243-record returned-surface
+  control as archival method evidence. Do not turn it into a lifetime-history
+  or universal-public-audience claim.
+- `CLM-FB-JAMIE-POSTED-URL-ROUTING-2026`: use the 549-destination queue to
+  develop future sources; every destination still requires recovery and close
+  reading.
+- `CLM-FB-JAMIE-PROJECT-ACTION-ROUTING`: retain the selected join, contact,
+  neighborhood-process, hearing, and bill-action routes as future evidence of
+  implementation and public communication practice. No current website
+  projection is selected.
+- `CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026` and
+  `CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-FLOOR-2026`: keep dormant. Outbound
+  references are not stakeholder engagement, and mutable counters are not
+  people, reach, endorsement, conversion, causality, or impact.
+- `CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE`: keep restricted until the
+  job posting and Jamie's exact institutional relationship are recovered.
 
 No item in this slate creates a public route or changes the current site's
 composition by itself.

@@ -106,10 +106,21 @@ import {
   kcSpacesFundFacebookPostReviewSummary,
   kcSpacesFundFacebookPostSources,
 } from "../apps/www/src/data/knowledge-bank/kc-spaces-fund-facebook-posts.ts";
+import {
+  jamiePersonalFacebookPostAudit,
+  jamiePersonalFacebookPostCaptures,
+  jamiePersonalFacebookPostClaims,
+  jamiePersonalFacebookPostInquiries,
+  jamiePersonalFacebookPostObservations,
+  jamiePersonalFacebookPostResearchTasks,
+  jamiePersonalFacebookPostReviewSummary,
+  jamiePersonalFacebookPostSources,
+} from "../apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 import { nycacMissionSignalRules } from "./lib/nycac-mission-classifier.mjs";
 import { urbanhermitMissionSignalRules } from "./lib/urbanhermit-mission-classifier.mjs";
 import { findKcSpacesFundFacebookPublicArtifactRisk } from "./lib/kcspacesfund-facebook-guard.mjs";
+import { findPersonalFacebookPostsPublicArtifactRisk } from "./lib/personal-facebook-posts-guard.mjs";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
@@ -134,6 +145,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/wowlist-facebook-posts.ts",
   "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts",
   "apps/www/src/data/knowledge-bank/kc-spaces-fund-facebook-posts.ts",
+  "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts.ts",
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
@@ -146,6 +158,7 @@ const candidateFiles = [
   "docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
   "docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
   "docs/knowledge-bank/data/kcspacesfund-public-facebook-post-ledger.json",
+  "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -172,6 +185,7 @@ const candidateFiles = [
   "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
   "docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md",
   "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+  "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
   "docs/knowledge-bank/projects/kc-town-hall-funding.md",
@@ -184,10 +198,12 @@ const candidateFiles = [
   "scripts/lib/urbanhermit-mission-classifier.mjs",
   "scripts/lib/nycartc-facebook-guard.mjs",
   "scripts/lib/kcspacesfund-facebook-guard.mjs",
+  "scripts/lib/personal-facebook-posts-guard.mjs",
   "scripts/tests/citations.test.mjs",
   "scripts/tests/knowledge-development-evals.test.mjs",
   "scripts/tests/nycartc-facebook-guard.test.mjs",
   "scripts/tests/kcspacesfund-facebook-guard.test.mjs",
+  "scripts/tests/personal-facebook-posts-guard.test.mjs",
   "docs/knowledge-bank/promotion-slate.md",
 ];
 
@@ -266,6 +282,12 @@ const nycartcFacebookPostRouteInventory = JSON.parse(
 const kcSpacesFundFacebookPostInventory = JSON.parse(
   readFileSync(
     "docs/knowledge-bank/data/kcspacesfund-public-facebook-post-ledger.json",
+    "utf8",
+  ),
+);
+const jamiePersonalFacebookPostInventory = JSON.parse(
+  readFileSync(
+    "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
     "utf8",
   ),
 );
@@ -3313,6 +3335,265 @@ function deterministicResults(judgments) {
     );
   }
 
+  const jamiePersonalFacebookIntegrityViolations = [];
+  const jamiePersonalFacebookSafetyViolations = [];
+  const jamiePersonalFacebookControlsPath =
+    "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json";
+  const jamiePersonalFacebookControlsSource = sourceById.get(
+    "SRC-FB-JAMIE-POST-CONTROLS-2026",
+  );
+  const jamiePersonalPopulationClaim = claimById.get(
+    "CLM-FB-JAMIE-POST-POPULATION-2026",
+  );
+  const jamiePersonalMissionClaim = claimById.get(
+    "CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE",
+  );
+  const jamiePersonalUrlClaim = claimById.get(
+    "CLM-FB-JAMIE-POSTED-URL-ROUTING-2026",
+  );
+  const jamiePersonalStakeholderClaim = claimById.get(
+    "CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026",
+  );
+  const jamiePersonalInteractionClaim = claimById.get(
+    "CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-FLOOR-2026",
+  );
+  const jamiePersonalActionRoutingClaim = claimById.get(
+    "CLM-FB-JAMIE-PROJECT-ACTION-ROUTING",
+  );
+  const jamiePersonalCouncilStatClaim = claimById.get(
+    "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE",
+  );
+  const jamiePersonalKcTownHallClaim = claimById.get(
+    "CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE",
+  );
+
+  if (
+    jamiePersonalFacebookPostCaptures.length !== 2 ||
+    jamiePersonalFacebookPostSources.length !== 9 ||
+    jamiePersonalFacebookPostObservations.length !== 13 ||
+    jamiePersonalFacebookPostClaims.length !== 8 ||
+    jamiePersonalFacebookPostResearchTasks.length !== 3 ||
+    jamiePersonalFacebookPostInquiries.length !== 3
+  ) {
+    jamiePersonalFacebookIntegrityViolations.push(
+      "Jamie's personal Facebook graph does not retain the expected 2/9/13/8/3/3 capture-source-observation-claim-task-inquiry shape",
+    );
+  }
+
+  const jamiePersonalYearTotal = Object.values(
+    jamiePersonalFacebookPostInventory.recordsByYear ?? {},
+  ).reduce((sum, value) => sum + value, 0);
+  const jamiePersonalFormTotal = Object.values(
+    jamiePersonalFacebookPostInventory.recordForms ?? {},
+  ).reduce((sum, value) => sum + value, 0);
+  if (
+    jamiePersonalFacebookPostInventory.populationDefinition !==
+      "Facebook Manage Posts filtered to Posted by You" ||
+    jamiePersonalFacebookPostInventory.populationControl?.cursorPages !== 621 ||
+    jamiePersonalFacebookPostInventory.populationControl?.returnedNodes !== 3728 ||
+    jamiePersonalFacebookPostInventory.populationControl?.uniqueRecords !== 1243 ||
+    jamiePersonalFacebookPostInventory.populationControl?.terminalHasNextPage !== false ||
+    jamiePersonalFacebookPostInventory.populationControl?.missingDates !== 0 ||
+    jamiePersonalFacebookPostInventory.populationControl?.ownerAbsentRecords !== 0 ||
+    jamiePersonalFacebookPostInventory.populationControl?.recoveredStart !==
+      "2006-12-19" ||
+    jamiePersonalFacebookPostInventory.populationControl?.recoveredEnd !==
+      "2022-06-12" ||
+    jamiePersonalFacebookPostInventory.populationControl
+      ?.audienceLabelNotExposedRecords !== 973 ||
+    jamiePersonalYearTotal !== 1243 ||
+    jamiePersonalFormTotal !== 1243
+  ) {
+    jamiePersonalFacebookIntegrityViolations.push(
+      "Jamie's personal Facebook population, chronology, form, or audience-boundary accounting drifted",
+    );
+  }
+
+  if (
+    jamiePersonalFacebookPostInventory.missionRouting?.uniqueRecords !== 181 ||
+    jamiePersonalFacebookPostInventory.missionRouting?.projectRecordCounts
+      ?.wowList !== 48 ||
+    jamiePersonalFacebookPostInventory.missionRouting?.projectRecordCounts
+      ?.sundayDinner !== 44 ||
+    jamiePersonalFacebookPostInventory.missionRouting?.projectRecordCounts
+      ?.nycArtistCoalition !== 34 ||
+    jamiePersonalFacebookPostInventory.missionRouting?.projectRecordCounts
+      ?.letNycDance !== 33 ||
+    jamiePersonalFacebookPostInventory.postedUrlInventory?.urlBearingRecords !==
+      430 ||
+    jamiePersonalFacebookPostInventory.postedUrlInventory
+      ?.uniqueNormalizedExternalUrls !== 549 ||
+    jamiePersonalFacebookPostInventory.stakeholderRouting?.recordCounts
+      ?.newYorkCityCouncil !== 20 ||
+    jamiePersonalFacebookPostInventory.stakeholderRouting?.recordCounts
+      ?.rafaelEspinal !== 18 ||
+    jamiePersonalFacebookPostInventory.selectedPublicSourceControls?.length !== 6
+  ) {
+    jamiePersonalFacebookIntegrityViolations.push(
+      "Jamie's personal Facebook mission, source, stakeholder, or selected-public-source accounting drifted",
+    );
+  }
+
+  if (
+    !immutableGitHubFixtureMatches(
+      jamiePersonalFacebookControlsSource,
+      jamiePersonalFacebookControlsPath,
+    )
+  ) {
+    jamiePersonalFacebookIntegrityViolations.push(
+      "Jamie's personal Facebook controls source does not pin a byte-identical committed fixture",
+    );
+  }
+
+  const jamiePersonalFacebookSourcePathIds = new Set([
+    ...jamiePersonalFacebookPostObservations.map(
+      (observation) => observation.sourceId,
+    ),
+    ...jamiePersonalFacebookPostClaims.flatMap((claim) =>
+      claim.evidence.map((relationship) => relationship.sourceId),
+    ),
+    ...jamiePersonalFacebookPostInquiries.flatMap(
+      (inquiry) => inquiry.sourceIds,
+    ),
+  ]);
+  for (const source of jamiePersonalFacebookPostSources) {
+    if (
+      !sourceById.has(source.id) ||
+      !jamiePersonalFacebookSourcePathIds.has(source.id)
+    ) {
+      jamiePersonalFacebookIntegrityViolations.push(
+        `Jamie personal Facebook source lacks a normalized evidence path: ${source.id}`,
+      );
+    }
+  }
+
+  if (
+    jamiePersonalFacebookPostAudit.uniqueRecords !== 1243 ||
+    jamiePersonalFacebookPostAudit.cursorPages !== 621 ||
+    jamiePersonalFacebookPostReviewSummary.records !== 1243 ||
+    jamiePersonalFacebookPostReviewSummary.normalizedExternalDestinations !==
+      549 ||
+    jamiePersonalFacebookPostReviewSummary.rawPopulation !== "protected" ||
+    jamiePersonalFacebookPostReviewSummary.websiteUpdate !== "not-required" ||
+    jamiePersonalPopulationClaim?.selectionState !== "dormant" ||
+    jamiePersonalMissionClaim?.selectionState !== "dormant" ||
+    jamiePersonalUrlClaim?.selectionState !== "candidate" ||
+    jamiePersonalStakeholderClaim?.selectionState !== "dormant" ||
+    jamiePersonalInteractionClaim?.selectionState !== "dormant" ||
+    jamiePersonalActionRoutingClaim?.selectionState !== "candidate" ||
+    jamiePersonalCouncilStatClaim?.publicationState !== "restricted" ||
+    jamiePersonalCouncilStatClaim?.selectionState !== "dormant" ||
+    jamiePersonalKcTownHallClaim?.selectionState !== "candidate" ||
+    jamiePersonalFacebookPostResearchTasks.find(
+      (task) => task.id === "RT-FB-JAMIE-META-EXPORT-RECONCILIATION",
+    )?.status !== "blocked" ||
+    jamiePersonalFacebookPostResearchTasks.find(
+      (task) => task.id === "RT-FB-JAMIE-POSTED-SOURCE-REVIEW",
+    )?.status !== "in-progress"
+  ) {
+    jamiePersonalFacebookIntegrityViolations.push(
+      "Jamie's personal Facebook review summary, claim selection, or research-task state drifted",
+    );
+  }
+
+  const jamiePersonalFacebookGraphPayload = JSON.stringify({
+    captures: jamiePersonalFacebookPostCaptures,
+    sources: jamiePersonalFacebookPostSources,
+    observations: jamiePersonalFacebookPostObservations,
+    claims: jamiePersonalFacebookPostClaims,
+    tasks: jamiePersonalFacebookPostResearchTasks,
+    inquiries: jamiePersonalFacebookPostInquiries,
+  });
+  const jamiePersonalFacebookControlsPayload = JSON.stringify(
+    jamiePersonalFacebookPostInventory,
+  );
+  if (
+    /\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      jamiePersonalFacebookGraphPayload,
+    ) ||
+    /"(?:message|postText|fullTranscript|commenterName|reactorName|friendName|cookie|cookies|session|sessionToken|credentials|contactDetails)"\s*:/i.test(
+      jamiePersonalFacebookControlsPayload,
+    ) ||
+    /\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      jamiePersonalFacebookControlsPayload,
+    ) ||
+    jamiePersonalFacebookPostInventory.populationControl
+      ?.audienceLabelNotExposedRecords !== 973 ||
+    !/source lead until independently recovered/i.test(
+      jamiePersonalFacebookPostInventory.postedUrlInventory?.routingBoundary ??
+        "",
+    ) ||
+    !/not actions by the named stakeholders/i.test(
+      jamiePersonalFacebookPostInventory.stakeholderRouting
+        ?.classificationBoundary ?? "",
+    )
+  ) {
+    jamiePersonalFacebookSafetyViolations.push(
+      "Jamie's personal Facebook graph or controls expose private social data, contact information, local paths, or obscure source and stakeholder boundaries",
+    );
+  }
+
+  const jamiePersonalFacebookActiveProjectionRisks =
+    jamiePersonalFacebookPostClaims.flatMap((claim) =>
+      claim.projections
+        .filter((projection) => projection.status === "active")
+        .map((projection) =>
+          findPersonalFacebookPostsPublicArtifactRisk(projection.text),
+        )
+        .filter(Boolean)
+        .map((risk) => `${claim.id}: ${risk}`),
+    );
+  const jamiePersonalFacebookDossierRisk =
+    findPersonalFacebookPostsPublicArtifactRisk(
+      readFileSync(
+        "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
+        "utf8",
+      ),
+    );
+  if (
+    jamiePersonalFacebookActiveProjectionRisks.length ||
+    jamiePersonalFacebookDossierRisk ||
+    !jamiePersonalPopulationClaim?.boundaries.some((boundary) =>
+      /not a native Meta export/i.test(boundary),
+    ) ||
+    !jamiePersonalPopulationClaim?.antiClaims.some((antiClaim) =>
+      /All 1,243 records were public/i.test(antiClaim),
+    ) ||
+    !jamiePersonalStakeholderClaim?.boundaries.some((boundary) =>
+      /not inbound actions/i.test(boundary),
+    ) ||
+    !jamiePersonalStakeholderClaim?.antiClaims.some((antiClaim) =>
+      /Council stakeholders engaged/i.test(antiClaim),
+    ) ||
+    !jamiePersonalInteractionClaim?.boundaries.some((boundary) =>
+      /Do not sum the counters/i.test(boundary),
+    ) ||
+    !jamiePersonalInteractionClaim?.antiClaims.some((antiClaim) =>
+      /reached 165 people/i.test(antiClaim),
+    ) ||
+    !jamiePersonalCouncilStatClaim?.boundaries.some((boundary) =>
+      /infer no employment/i.test(boundary),
+    ) ||
+    !jamiePersonalKcTownHallClaim?.boundaries.some((boundary) =>
+      /Credit Julia Fredenburg/i.test(boundary),
+    ) ||
+    jamiePersonalFacebookPostClaims.some((claim) =>
+      claim.projections.some(
+        (projection) =>
+          projection.status === "active" &&
+          projection.surfaces.some((surface) => surface.startsWith("/")),
+      ),
+    )
+  ) {
+    jamiePersonalFacebookSafetyViolations.push(
+      ...jamiePersonalFacebookActiveProjectionRisks,
+      ...(jamiePersonalFacebookDossierRisk
+        ? [`Jamie personal Facebook dossier: ${jamiePersonalFacebookDossierRisk}`]
+        : []),
+      "Jamie's personal Facebook claims obscure population, audience, authorship, stakeholder, metric, role, or bank-only projection boundaries",
+    );
+  }
+
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
       (projection) =>
@@ -3568,7 +3849,8 @@ function deterministicResults(judgments) {
         jamieWowListFacebookEventIntegrityViolations.length ||
         wowListFacebookPostIntegrityViolations.length ||
         nycartcFacebookPostIntegrityViolations.length ||
-        kcSpacesFundFacebookIntegrityViolations.length
+        kcSpacesFundFacebookIntegrityViolations.length ||
+        jamiePersonalFacebookIntegrityViolations.length
         ? 0
         : routedCaptures.length === knowledgeBank.captures.length
           ? 4
@@ -3589,6 +3871,7 @@ function deterministicResults(judgments) {
         `${wowListFacebookPostIntegrityViolations.length} WOW List Facebook post integrity violations`,
         `${nycartcFacebookPostIntegrityViolations.length} NYC Artist Coalition Facebook post integrity violations`,
         `${kcSpacesFundFacebookIntegrityViolations.length} KC Spaces Fund Facebook post integrity violations`,
+        `${jamiePersonalFacebookIntegrityViolations.length} Jamie personal Facebook post integrity violations`,
       ],
       [
         ...brokenCaptureRefs,
@@ -3606,6 +3889,7 @@ function deterministicResults(judgments) {
         ...wowListFacebookPostIntegrityViolations,
         ...nycartcFacebookPostIntegrityViolations,
         ...kcSpacesFundFacebookIntegrityViolations,
+        ...jamiePersonalFacebookIntegrityViolations,
       ],
       "Repair broken references and ensure each integrated capture has a traversable path.",
     ),
@@ -3627,7 +3911,8 @@ function deterministicResults(judgments) {
         jamieWowListFacebookEventSafetyViolations.length ||
         wowListFacebookPostSafetyViolations.length ||
         nycartcFacebookPostSafetyViolations.length ||
-        kcSpacesFundFacebookSafetyViolations.length
+        kcSpacesFundFacebookSafetyViolations.length ||
+        jamiePersonalFacebookSafetyViolations.length
         ? 0
         : 4,
       [
@@ -3646,6 +3931,7 @@ function deterministicResults(judgments) {
         `${wowListFacebookPostSafetyViolations.length} WOW List Facebook post safety violations`,
         `${nycartcFacebookPostSafetyViolations.length} NYC Artist Coalition Facebook post safety violations`,
         `${kcSpacesFundFacebookSafetyViolations.length} KC Spaces Fund Facebook post safety violations`,
+        `${jamiePersonalFacebookSafetyViolations.length} Jamie personal Facebook post safety violations`,
       ],
       [
         ...validationErrors,
@@ -3663,6 +3949,7 @@ function deterministicResults(judgments) {
         ...wowListFacebookPostSafetyViolations,
         ...nycartcFacebookPostSafetyViolations,
         ...kcSpacesFundFacebookSafetyViolations,
+        ...jamiePersonalFacebookSafetyViolations,
       ],
       "Remove unsafe payloads and satisfy canonical citation validation.",
     ),
@@ -4148,6 +4435,8 @@ function deterministicResults(judgments) {
     ...nycartcFacebookPostSafetyViolations,
     ...kcSpacesFundFacebookIntegrityViolations,
     ...kcSpacesFundFacebookSafetyViolations,
+    ...jamiePersonalFacebookIntegrityViolations,
+    ...jamiePersonalFacebookSafetyViolations,
   ];
   results.set(
     "KD-013",
@@ -4172,6 +4461,8 @@ function deterministicResults(judgments) {
         `NYC Artist Coalition Facebook posts: ${nycartcFacebookPosts.length}/444 exact-set-checked surviving Page records; ${nycartcFacebookRoutes.length} normalized public-safe routes; ${nycartcFacebookPostInventory.visibleInteractionSnapshot.recordsWithAtLeastOneVisibleSignal} records retain a visible interaction`,
         `KC Spaces Fund Facebook posts: ${kcSpacesFundFacebookPosts.length}/40 surviving public Page cards dispositioned across three terminal traversals; 21 stable media identities matched across all passes`,
         `KC Spaces Fund Facebook posts: ${kcSpacesFundMissionCount("application-routing")} application-routing records; ${kcSpacesFundMissionCount("fundraising")} fundraising records; ${kcSpacesFundMissionCount("funded-space-spotlight")} funded-space spotlights; ${kcSpacesFundVisibleSignalFloor} mutable visible reaction-signal floor`,
+        `Jamie personal Facebook posts: ${jamiePersonalFacebookPostReviewSummary.records} owner-filtered records across ${jamiePersonalFacebookPostReviewSummary.cursorPages} cursor pages; terminal has-next-page false`,
+        `Jamie personal Facebook posts: ${jamiePersonalFacebookPostReviewSummary.missionRoutedRecords} mission-routed records; ${jamiePersonalFacebookPostReviewSummary.normalizedExternalDestinations} normalized source leads; ${jamiePersonalFacebookPostReviewSummary.selectedPublicSources} individually rechecked public project posts`,
         `Jamie Facebook hosted events: ${jamieFacebookEvents.length}/21 materialized records reviewed; 17 detail pages recovered and 4 retained as index-only`,
         `Jamie Facebook hosted events: 6 Sunday Dinner records; ${jamieFacebookResponseEvents.length} response-counted records; ${jamieFacebookExternalLinks.length} event-linked public URLs`,
         `WOW List Facebook events: ${wowListFacebookAccount.materializedEventCount} records exposed by 2 current surfaces; legacy owner history remains unresolved`,
@@ -4287,6 +4578,16 @@ function deterministicResults(judgments) {
         kcSpacesFundFacebookPostReviewSummary.fundedSpaceSpotlights,
       kcSpacesFundFacebookVisibleReactionSignalFloor:
         kcSpacesFundFacebookPostReviewSummary.visibleReactionSignalFloor,
+      jamiePersonalFacebookPostsRecovered:
+        jamiePersonalFacebookPostReviewSummary.records,
+      jamiePersonalFacebookCursorPages:
+        jamiePersonalFacebookPostReviewSummary.cursorPages,
+      jamiePersonalFacebookMissionRoutedRecords:
+        jamiePersonalFacebookPostReviewSummary.missionRoutedRecords,
+      jamiePersonalFacebookNormalizedDestinations:
+        jamiePersonalFacebookPostReviewSummary.normalizedExternalDestinations,
+      jamiePersonalFacebookSelectedPublicSources:
+        jamiePersonalFacebookPostReviewSummary.selectedPublicSources,
       validationErrors: validationErrors.length,
     },
   };

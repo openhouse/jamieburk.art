@@ -18,6 +18,41 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## personal-facebook-archive-production - Personal Facebook research surface
+
+**Status:** Careful
+**Support level:** Strong for returned-surface accounting; selected for bank depth only
+**Evidence class:** Protected research run / public-safe aggregate controls / individually rechecked public first-hand posts / independent reporting
+**Public wording:** Jamie's owner-filtered Facebook archive preserves 1,243 returned records and 549 external source leads; selected public posts show a recurring practice of connecting project explanation to usable participation routes.
+**Detailed public-safe wording:** A July 2026 owner-filtered crawl dispositioned every unique record returned across 621 cursor pages. The protected corpus routed 181 records into overlapping mission categories and 549 destinations into a governed source queue. Six individually rechecked public posts preserve dated project and action-routing traces.
+**Where to project:** Knowledge bank only. No current website change.
+**Why it matters:** Converts a long-running personal publication surface into source discovery, chronology, and bounded practice evidence without making private life part of the portfolio.
+**Guardrail:** Completeness applies only to the returned Posted by: You surface, not lifetime history. Audience labels were unavailable for 973 rows. Stakeholder references are outbound mentions or routes, not inbound engagement. Current counters are mutable observations, not reach or impact.
+**Do not say:** Every Facebook post Jamie ever published; all 1,243 records were public; posting frequency proves professional priority; all 549 links corroborate claims; twenty Council members engaged; selected counters equal people reached; Jamie solely authored the projects or caused outcomes.
+**Protected boundaries:** Raw records, ordinary-life material, comments, identities, media, exact row dates, audience-unknown text, authentication state, and record-level counters stay offline.
+**Review owner:** Jamie / knowledge-bank archival production
+**Last reviewed:** 2026-07-15
+
+### Canonical personal Facebook claim records
+
+- `CLM-FB-JAMIE-POST-POPULATION-2026`: complete disposition of the returned
+  1,243-record owner-filtered surface, not a native Meta export or lifetime
+  archive.
+- `CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE`: 181 overlapping research routes,
+  not measures of effort, priority, authorship, or impact.
+- `CLM-FB-JAMIE-POSTED-URL-ROUTING-2026`: 430 URL-bearing records and 549
+  normalized destination leads, each pending source-specific review.
+- `CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026`: outbound mention, tag,
+  quotation, and link occurrences; not stakeholder actions or endorsement.
+- `CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-FLOOR-2026`: four dated mutable
+  counter snapshots; not historical analytics, reach, or impact.
+- `CLM-FB-JAMIE-PROJECT-ACTION-ROUTING`: selected posts connect explanation to
+  join, contact, neighborhood-process, hearing, and bill-action routes.
+- `CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE`: restricted exact wording
+  pending recovery of the original job posting and Jamie's relationship.
+- `CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE`: Jamie's contemporaneous
+  co-initiation statement with Julia Fredenburg, not sole founding or outcome.
+
 ## google-shared-drive-handoff-practice - Portable project handoffs
 
 **Status:** Ready

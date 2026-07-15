@@ -60,6 +60,12 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
   Facebook, X, Instagram, and GoFundMe route. This result does not by itself
   establish who chose or registered the name. Jamie's naming-support memory is
   restricted pending corroboration, and no Page post is assigned to him.
+- A protected full-population pass dispositioned all 1,243 records returned by
+  Jamie's owner-filtered Facebook surface. Public-safe controls preserve 181
+  overlapping mission routes and 549 external source leads without exposing
+  private rows. Six individually rechecked public posts show a bounded practice
+  of connecting project explanation to participation routes; no current site
+  projection is selected.
 
 ## Projection Rule
 

@@ -274,3 +274,24 @@ Shared Drive revision also strengthened the existing CRS running-minutes source.
 All underlying Drive URLs, IDs, permissions, memberships, raw excerpts, and
 participant identities remain outside Git. See
 `docs/knowledge-bank/projects/google-shared-drives-production.md`.
+
+## Jamie Personal Facebook Archival Production
+
+The July 15 pass preserves a protected research-run source for the 1,243-record
+owner-filtered population and a public-safe aggregate control file. The control
+records pagination, returned chronology, record forms, mission routing, source
+routing, stakeholder-addressing occurrences, and selected-public-source checks
+without exposing row-level personal material.
+
+Six individually rechecked public posts are normalized as first-hand statement
+sources. They support dated project traces and participation routes across NTER
+CHNG, WOW List, CouncilStat/CallNYC context, Let NYC Dance, KC Town Hall, and
+Talks Not Raids. Jake Offenhartz's March 2017 Gothamist reporting is added as
+independent Cabaret Law campaign context. Personal posts remain attributed
+first-hand sources; shared, quoted, linked, and collaborator-created material
+retains its own authorship.
+
+The protected census has no public URL. Raw post text, audience-unknown rows,
+comments, responder identities, media, authentication state, and record-level
+metrics remain outside Git. See
+`docs/knowledge-bank/projects/jamie-personal-facebook-posts.md`.

@@ -122,6 +122,16 @@ import {
   kcSpacesFundFacebookPostSources,
 } from "../../apps/www/src/data/knowledge-bank/kc-spaces-fund-facebook-posts.ts";
 import {
+  jamiePersonalFacebookPostAudit,
+  jamiePersonalFacebookPostCaptures,
+  jamiePersonalFacebookPostClaims,
+  jamiePersonalFacebookPostInquiries,
+  jamiePersonalFacebookPostObservations,
+  jamiePersonalFacebookPostResearchTasks,
+  jamiePersonalFacebookPostReviewSummary,
+  jamiePersonalFacebookPostSources,
+} from "../../apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts.ts";
+import {
   classifyNycacMissionSignals,
   extractNycacSourcePostBody,
   normalizeNycacSourceRecordType,
@@ -204,6 +214,12 @@ const nycartcFacebookPostInventory = JSON.parse(
 const kcSpacesFundFacebookPostInventory = JSON.parse(
   readFileSync(
     "docs/knowledge-bank/data/kcspacesfund-public-facebook-post-ledger.json",
+    "utf8",
+  ),
+);
+const jamiePersonalFacebookPostInventory = JSON.parse(
+  readFileSync(
+    "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
     "utf8",
   ),
 );
@@ -3117,5 +3133,157 @@ test("KC Spaces Fund Facebook source pins the committed public ledger", () => {
   assert.deepEqual(
     execFileSync("git", ["show", `${match[1]}:${ledgerPath}`]),
     readFileSync(ledgerPath),
+  );
+});
+
+test("Jamie personal Facebook population preserves the returned-surface denominator", () => {
+  const control = jamiePersonalFacebookPostInventory.populationControl;
+  assert.equal(control.cursorPages, 621);
+  assert.equal(control.returnedNodes, 3728);
+  assert.equal(control.uniqueRecords, 1243);
+  assert.equal(control.terminalHasNextPage, false);
+  assert.equal(control.missingDates, 0);
+  assert.equal(control.ownerAbsentRecords, 0);
+  assert.equal(control.recoveredStart, "2006-12-19");
+  assert.equal(control.recoveredEnd, "2022-06-12");
+  assert.equal(control.audienceLabelExposedRecords, 270);
+  assert.equal(control.audienceLabelNotExposedRecords, 973);
+  assert.equal(
+    Object.values(jamiePersonalFacebookPostInventory.recordsByYear).reduce(
+      (sum, count) => sum + count,
+      0,
+    ),
+    1243,
+  );
+  assert.equal(
+    Object.values(jamiePersonalFacebookPostInventory.recordForms).reduce(
+      (sum, count) => sum + count,
+      0,
+    ),
+    1243,
+  );
+  assert.match(
+    jamiePersonalFacebookPostInventory.completenessBoundary,
+    /not a native Meta export.*deletion history.*lifetime population/i,
+  );
+});
+
+test("Jamie personal Facebook routing remains research infrastructure rather than engagement proof", () => {
+  assert.equal(
+    jamiePersonalFacebookPostInventory.missionRouting.uniqueRecords,
+    181,
+  );
+  assert.equal(
+    jamiePersonalFacebookPostInventory.postedUrlInventory.urlBearingRecords,
+    430,
+  );
+  assert.equal(
+    jamiePersonalFacebookPostInventory.postedUrlInventory
+      .uniqueNormalizedExternalUrls,
+    549,
+  );
+  assert.deepEqual(
+    jamiePersonalFacebookPostInventory.stakeholderRouting.recordCounts,
+    {
+      newYorkCityCouncil: 20,
+      rafaelEspinal: 18,
+      marketHotel: 9,
+      officeOfNightlife: 6,
+      antonioReynoso: 5,
+      quintonLucas: 1,
+      helenRosenthal: 1,
+    },
+  );
+  assert.match(
+    jamiePersonalFacebookPostInventory.stakeholderRouting
+      .classificationBoundary,
+    /not actions by the named stakeholders.*not evidence of engagement/i,
+  );
+  assert.match(
+    jamiePersonalFacebookPostInventory.postedUrlInventory.routingBoundary,
+    /source lead until independently recovered/i,
+  );
+});
+
+test("Jamie personal Facebook graph preserves privacy, role, metric, and bank-only boundaries", () => {
+  assert.equal(jamiePersonalFacebookPostCaptures.length, 2);
+  assert.equal(jamiePersonalFacebookPostSources.length, 9);
+  assert.equal(jamiePersonalFacebookPostObservations.length, 13);
+  assert.equal(jamiePersonalFacebookPostClaims.length, 8);
+  assert.equal(jamiePersonalFacebookPostResearchTasks.length, 3);
+  assert.equal(jamiePersonalFacebookPostInquiries.length, 3);
+  assert.equal(jamiePersonalFacebookPostAudit.uniqueRecords, 1243);
+  assert.equal(jamiePersonalFacebookPostReviewSummary.records, 1243);
+  assert.equal(
+    jamiePersonalFacebookPostReviewSummary.normalizedExternalDestinations,
+    549,
+  );
+  assert.equal(jamiePersonalFacebookPostReviewSummary.rawPopulation, "protected");
+  assert.equal(jamiePersonalFacebookPostReviewSummary.websiteUpdate, "not-required");
+
+  const populationClaim = jamiePersonalFacebookPostClaims.find(
+    (claim) => claim.id === "CLM-FB-JAMIE-POST-POPULATION-2026",
+  );
+  const stakeholderClaim = jamiePersonalFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026",
+  );
+  const interactionClaim = jamiePersonalFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-FLOOR-2026",
+  );
+  const councilStatClaim = jamiePersonalFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE",
+  );
+  const kcTownHallClaim = jamiePersonalFacebookPostClaims.find(
+    (claim) =>
+      claim.id === "CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE",
+  );
+  assert.match(populationClaim.boundaries.join("\n"), /not a native Meta export/i);
+  assert.match(populationClaim.antiClaims.join("\n"), /All 1,243 records were public/i);
+  assert.match(stakeholderClaim.boundaries.join("\n"), /not inbound actions/i);
+  assert.match(
+    stakeholderClaim.antiClaims.join("\n"),
+    /Council stakeholders engaged/i,
+  );
+  assert.match(interactionClaim.boundaries.join("\n"), /Do not sum the counters/i);
+  assert.equal(councilStatClaim.publicationState, "restricted");
+  assert.equal(councilStatClaim.selectionState, "dormant");
+  assert.match(councilStatClaim.boundaries.join("\n"), /infer no employment/i);
+  assert.match(kcTownHallClaim.boundaries.join("\n"), /Credit Julia Fredenburg/i);
+  assert.ok(
+    jamiePersonalFacebookPostClaims.every((claim) =>
+      claim.projections.every(
+        (projection) =>
+          projection.status !== "active" ||
+          projection.surfaces.every((surface) => !surface.startsWith("/")),
+      ),
+    ),
+  );
+
+  const controlsPayload = JSON.stringify(jamiePersonalFacebookPostInventory);
+  assert.doesNotMatch(
+    controlsPayload,
+    /"(?:message|postText|fullTranscript|commenterName|reactorName|friendName|cookie|cookies|session|sessionToken|credentials|contactDetails)"\s*:/i,
+  );
+  assert.doesNotMatch(controlsPayload, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(controlsPayload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+});
+
+test("Jamie personal Facebook controls source pins the committed public fixture", () => {
+  const fixturePath =
+    "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json";
+  const source = jamiePersonalFacebookPostSources.find(
+    (item) => item.id === "SRC-FB-JAMIE-POST-CONTROLS-2026",
+  );
+  const match = source.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/(docs\/knowledge-bank\/data\/[a-z0-9-]+\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], fixturePath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`]),
+    readFileSync(fixturePath),
   );
 });

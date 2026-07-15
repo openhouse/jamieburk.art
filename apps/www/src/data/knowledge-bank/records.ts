@@ -117,6 +117,14 @@ import {
   kcSpacesFundFacebookPostResearchTasks,
   kcSpacesFundFacebookPostSources,
 } from "./kc-spaces-fund-facebook-posts.ts";
+import {
+  jamiePersonalFacebookPostCaptures,
+  jamiePersonalFacebookPostClaims,
+  jamiePersonalFacebookPostInquiries,
+  jamiePersonalFacebookPostObservations,
+  jamiePersonalFacebookPostResearchTasks,
+  jamiePersonalFacebookPostSources,
+} from "./jamie-personal-facebook-posts.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -135,6 +143,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostCaptures,
     ...nycartcFacebookPostCaptures,
     ...kcSpacesFundFacebookPostCaptures,
+    ...jamiePersonalFacebookPostCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -152,6 +161,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostSources,
     ...nycartcFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
+    ...jamiePersonalFacebookPostSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -364,6 +374,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostObservations,
     ...nycartcFacebookPostObservations,
     ...kcSpacesFundFacebookPostObservations,
+    ...jamiePersonalFacebookPostObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -381,6 +392,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostClaims,
     ...nycartcFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
+    ...jamiePersonalFacebookPostClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -708,6 +720,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostResearchTasks,
     ...nycartcFacebookPostResearchTasks,
     ...kcSpacesFundFacebookPostResearchTasks,
+    ...jamiePersonalFacebookPostResearchTasks,
   ],
   researchInquiries: [
     {
@@ -754,6 +767,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostInquiries,
     ...nycartcFacebookPostInquiries,
     ...kcSpacesFundFacebookPostInquiries,
+    ...jamiePersonalFacebookPostInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,

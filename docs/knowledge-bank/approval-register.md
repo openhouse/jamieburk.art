@@ -133,3 +133,20 @@ The repo is public. Approval here means approved for public-safe repository and 
 - KC Town Hall transition files are excluded. Existing official records and
   Jamie's approved mission-aligned transition statement remain the public
   boundary.
+
+## Personal Facebook Decisions
+
+- The 1,243-record / 621-page owner-filtered control is approved as public-safe
+  knowledge-bank metadata with the returned-surface and audience boundaries
+  attached. The protected row-level corpus is not approved for Git.
+- The 181-record mission routing and 549-destination source queue are approved
+  as research infrastructure, not public accomplishment, engagement, or impact
+  metrics.
+- Six individually rechecked public posts are approved as dated first-hand
+  sources with collaborator credit and source-specific limitations. They are
+  not selected for current website projection.
+- Selected current counters are approved only as dated, mutable interface
+  observations. They may not be summed or converted into people, reach,
+  attendance, endorsement, conversion, causality, or impact.
+- The CouncilStat relationship remains restricted pending recovery of the job
+  posting and corroborating role evidence.

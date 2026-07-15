@@ -210,3 +210,31 @@ complete sensitive-data safeguard, or proof of vacancy-data analysis results.
 
 Do not say Jamie designed the Small Business United identity system, completed
 the style guide, or secured team adoption.
+
+## Personal Facebook Posts
+
+Do not call the 1,243-record owner-filtered control Jamie's complete lifetime
+Facebook history. It accounts for every unique record returned by the July 13
+**Posted by: You** surface, not deleted, hidden, migrated, or otherwise
+unavailable material. Do not say all 1,243 records were public; audience labels
+were not exposed for 973 records.
+
+Do not turn the 181 mission-routed records into a measure of effort,
+professional priority, authorship, audience, or impact. Do not treat the 549
+posted destinations as automatic corroboration. Each remains a source lead
+until recovered, close-read, preserved, and associated with a bounded claim.
+
+Do not describe stakeholder mentions, tags, quotations, or links as inbound
+engagement, endorsement, attendance, partnership, response, or policy
+influence. Do not add or sum selected mutable counters into unique people,
+reach, conversion, causality, or impact.
+
+Do not infer Jamie's Council employment, title, contract, formal team
+membership, or hiring authority from the CouncilStat job-route post. Do not
+describe Jamie as sole founder or sole author of NTER CHNG, WOW List, Let NYC
+Dance, KC Town Hall, Talks Not Raids, or their collective materials and
+outcomes.
+
+Do not publish raw records, ordinary-life material, comments, responder names,
+media, audience-unknown text, private interaction state, or authentication
+context.

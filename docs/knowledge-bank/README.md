@@ -112,6 +112,13 @@ and the strict distinction between collective Page evidence and Jamie's
 behind-the-scenes digital-infrastructure role.
 
 See
+[projects/jamie-personal-facebook-posts.md](projects/jamie-personal-facebook-posts.md)
+for the 1,243-record owner-filtered personal Facebook census, its explicit
+returned-surface denominator, 549-destination source queue, six individually
+rechecked public project posts, bounded stakeholder and interaction treatment,
+and strict separation of professional archive production from private life.
+
+See
 [projects/jamie-wowlist-facebook-events.md](projects/jamie-wowlist-facebook-events.md)
 for the reconciled 21-record personal hosted-event chronology, six Sunday
 Dinner records, source-link and response inventories, public-safety boundary,
