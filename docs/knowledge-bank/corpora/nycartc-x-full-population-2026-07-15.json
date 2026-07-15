@@ -3,7 +3,7 @@
   "account": "@NYCArtC",
   "capturedAt": "2026-07-15T08:42:42.047Z",
   "capturedThrough": "Authenticated replies-inclusive profile traversal, an overlapping sub-viewport verification pass, and monthly authored-search partitions from January 2017 through the profile timeline cutoff",
-  "rawCaptureSha256": "4f56bb945c32b804c2e129075a0012fe0ef3bfc6e5c351f791ea94af19bfba3a",
+  "rawCaptureSha256": "38d26dbfdb4e5b4a5ed85e69c77349a11646d006f055c60d908c3a9ff56ceb18",
   "rawCaptureArtifact": "source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json",
   "derivationManifest": "nycartc-x-full-population-2026-07-15.manifest.json",
   "derivationScript": "scripts/derive-nycartc-x-corpus.mjs",
@@ -27932,7 +27932,7 @@
           "displayedText": [
             "http:// chng.it/wNvpR67LBD"
           ],
-          "resolvedDestination": "https://www.change.org/p/speaker-corey-johnson-nyc-lift-the-cap-on-permits-justice-for-street-vendors?recruiter=1021570399"
+          "resolvedDestination": "https://www.change.org/p/speaker-corey-johnson-nyc-lift-the-cap-on-permits-justice-for-street-vendors"
         }
       ],
       "visibleInteractions": {
@@ -29819,7 +29819,7 @@
           "displayedText": [
             "https:// nytimes.com/2020/03/17/sty le/self-care/is-it-ok-to-take-a-walk.html?referringSource=articleShare …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2020/03/17/style/self-care/is-it-ok-to-take-a-walk.html?referringSource=articleShare"
+          "resolvedDestination": "https://www.nytimes.com/2020/03/17/style/self-care/is-it-ok-to-take-a-walk.html"
         }
       ],
       "visibleInteractions": {
@@ -31813,7 +31813,7 @@
           "displayedText": [
             "http:// chng.it/hywKvs4L"
           ],
-          "resolvedDestination": "https://www.change.org/p/govenor-andrew-cuomo-suspend-rent-mortgage-in-new-york-during-covid-19?recruiter=46384444&recruited_by_id=f899e9a0-7f71-0130-da1f-3c764e049c4f"
+          "resolvedDestination": "https://www.change.org/p/govenor-andrew-cuomo-suspend-rent-mortgage-in-new-york-during-covid-19"
         }
       ],
       "visibleInteractions": {
@@ -32335,7 +32335,7 @@
           "displayedText": [
             "http:// bit.ly/SuspendRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-make-the-road-ny"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -32609,7 +32609,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/demand -a-just-stimulus-in-response-to-covid-19?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/demand-a-just-stimulus-in-response-to-covid-19?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/demand-a-just-stimulus-in-response-to-covid-19"
         }
       ],
       "visibleInteractions": {
@@ -33460,7 +33460,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/engage -the-use-of-disaster-unemployment-assistance-today?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/engage-the-use-of-disaster-unemployment-assistance-today?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/engage-the-use-of-disaster-unemployment-assistance-today"
         }
       ],
       "visibleInteractions": {
@@ -35979,7 +35979,7 @@
           "displayedText": [
             "https:// zoom.us/webinar/regist er/WN_DwmEv7mMRFSgNWLocH9O7w?emci=2ad4cacb-7b70-ea11-a94c-00155d03b1e8&emdi=c3b62c28-ef70-ea11-a94c-00155d03b1e8&ceid=3806879&fbclid=[tracking value redacted] …"
           ],
-          "resolvedDestination": "https://zoom.us/webinar/register/WN_DwmEv7mMRFSgNWLocH9O7w?emci=2ad4cacb-7b70-ea11-a94c-00155d03b1e8&emdi=c3b62c28-ef70-ea11-a94c-00155d03b1e8&ceid=3806879"
+          "resolvedDestination": "https://zoom.us/webinar/register/WN_DwmEv7mMRFSgNWLocH9O7w"
         }
       ],
       "visibleInteractions": {
@@ -36195,7 +36195,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         },
         {
           "shortUrl": "https://t.co/uEYkCb61eu",
@@ -36366,7 +36366,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         },
         {
           "shortUrl": "https://t.co/uEYkCbnCD4",
@@ -36453,7 +36453,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -36509,7 +36509,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         },
         {
           "shortUrl": "https://t.co/uEYkCb61eu",
@@ -36622,7 +36622,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         },
         {
           "shortUrl": "https://t.co/uEYkCb61eu",
@@ -36674,7 +36674,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -36729,7 +36729,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         },
         {
           "shortUrl": "https://t.co/uEYkCb61eu",
@@ -36780,7 +36780,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -36928,7 +36928,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -36969,7 +36969,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -37121,7 +37121,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -37159,7 +37159,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -37236,7 +37236,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -37278,7 +37278,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -37320,7 +37320,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -37428,7 +37428,7 @@
           "displayedText": [
             "http:// bit.ly/CancelNYRent"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now?source=direct_link&referrer=group-right-to-counsel-nyc-coalition"
+          "resolvedDestination": "https://actionnetwork.org/petitions/reclaim-our-homes-rent-suspension-now"
         }
       ],
       "visibleInteractions": {
@@ -40725,7 +40725,7 @@
           "displayedText": [
             "https:// actionnetwork.org/petitions/halt debtcollectionny?source=new-econ-social …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/haltdebtcollectionny?source=new-econ-social"
+          "resolvedDestination": "https://actionnetwork.org/petitions/haltdebtcollectionny"
         }
       ],
       "visibleInteractions": {
@@ -41006,7 +41006,7 @@
           "displayedText": [
             "https:// actionnetwork.org/petitions/home lesscantstayhome?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/homelesscantstayhome?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/homelesscantstayhome"
         }
       ],
       "visibleInteractions": {
@@ -41884,7 +41884,7 @@
           "displayedText": [
             "http:// Tinyurl.com/digital-domain"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace?source=direct_link&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace"
         }
       ],
       "visibleInteractions": {
@@ -42774,7 +42774,7 @@
           "displayedText": [
             "http:// tinyurl.com/digital-domain"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace?source=direct_link&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace"
         }
       ],
       "visibleInteractions": {
@@ -43990,7 +43990,7 @@
           "displayedText": [
             "https:// actionnetwork.org/petitions/gove rnor-cuomonew-yorks-excluded-workers-need-relief?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/governor-cuomonew-yorks-excluded-workers-need-relief?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/governor-cuomonew-yorks-excluded-workers-need-relief"
         }
       ],
       "visibleInteractions": {
@@ -45467,7 +45467,7 @@
           "displayedText": [
             "http:// tinyurl.com/digital-domain"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace?source=direct_link&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace"
         },
         {
           "shortUrl": "https://t.co/e71colCkT7",
@@ -52502,7 +52502,7 @@
           "displayedText": [
             "cnbc.com A housing 'apocalypse' is coming as coronavirus protections across the country expire Evicting people in the middle of a global health crisis puts them at greater risk of contracting and spreading Covid-19, turning \"a catastrophe into an apocalypse.\""
           ],
-          "resolvedDestination": "https://www.cnbc.com/2020/06/10/how-to-prevent-the-coming-coronavirus-tsunami-of-evictions.html?__source=twitter%7Cmakeit+"
+          "resolvedDestination": "https://www.cnbc.com/2020/06/10/how-to-prevent-the-coming-coronavirus-tsunami-of-evictions.html"
         }
       ],
       "visibleInteractions": {
@@ -55316,7 +55316,7 @@
             "NYC Black business owners allege discrimination from city, state",
             "From abc7ny.com"
           ],
-          "resolvedDestination": "https://abc7ny.com/post/nyc-black-business-owners-allege-discrimination-from-city-state/6295711/?userab=kfsn_content_recs-582*variant_a_control_kfsn-2512%2Ckabc_content_recs-577*variant_a_control-2480%2Cwls_content_recs-584*variant_a_control_wls-2516%2Cwtvd_content_recs-585*variant_b_trending_wtvd-2519%2Cktrk_content_recs-587*variant_a_control_ktrk-2522%2Cwpvi_content_recs-586*variant_a_control_wpvi-2520%2Cotv_web_content_rec-539*variant_c_trending-2268%2Cotv_web_topic-580*variant_b_topic_redesign-2509%2Cotv_search_page_design_unification-546*variant_b_search_redesign-2300%2Ckgo_content_recs-583*variant_b_trending_kgo-2515%2Cabcn_popular_reads_exp-542*variant_b_7days_filter-2288"
+          "resolvedDestination": "https://abc7ny.com/post/nyc-black-business-owners-allege-discrimination-from-city-state/6295711/"
         }
       ],
       "visibleInteractions": {
@@ -56298,7 +56298,7 @@
           "displayedText": [
             "http:// tinyurl.com/digital-domain"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace?source=direct_link&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace"
         }
       ],
       "visibleInteractions": {
@@ -56820,7 +56820,7 @@
           "displayedText": [
             "https:// oneclickpolitics.global.ssl.fastly.net/promo/2PT"
           ],
-          "resolvedDestination": "https://oneclickpolitics.global.ssl.fastly.net/messages/edit?promo_id=9267"
+          "resolvedDestination": "https://oneclickpolitics.global.ssl.fastly.net/messages/edit"
         }
       ],
       "visibleInteractions": {
@@ -57070,7 +57070,7 @@
           "displayedText": [
             "https:// nyti.ms/3hG37t2"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2020/07/27/nyregion/coronavirus-small-business-nyc.html?campaign_id=2&emc=edit_th_20200728&instance_id=20700&nl=todaysheadlines&regi_id=69181870&segment_id=34521&user_id=d2fa736715cbcc13fa73b158b1617b25"
+          "resolvedDestination": "https://www.nytimes.com/2020/07/27/nyregion/coronavirus-small-business-nyc.html?nl=todaysheadlines"
         }
       ],
       "visibleInteractions": {
@@ -57237,7 +57237,7 @@
           "displayedText": [
             "http:// tinyurl.com/mwa-digitaldom ain …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace?source=direct_link&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/a-call-by-musical-artists-for-basic-fairness-in-the-digital-marketplace"
         }
       ],
       "visibleInteractions": {
@@ -58290,7 +58290,7 @@
         "altText": [
           "📣",
           "💪",
-          "For questions, please email businessgrants@citizensnyc.org"
+          "For questions, please email [public email redacted]"
         ]
       }
     },
@@ -60163,7 +60163,7 @@
           "displayedText": [
             "https:// facebook.com/watch/live/?v= 302616887676604&ref=notif&notif_id=1597959222112163&notif_t=live_video …"
           ],
-          "resolvedDestination": "https://www.facebook.com/watch/live/?v=302616887676604&ref=notif&notif_id=1597959222112163&notif_t=live_video"
+          "resolvedDestination": "https://www.facebook.com/watch/live/?v=302616887676604&ref=notif"
         },
         {
           "shortUrl": "https://t.co/RFc8S2Skpt",
@@ -61621,7 +61621,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/artshe ro?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/artshero?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/artshero"
         }
       ],
       "visibleInteractions": {
@@ -76189,7 +76189,7 @@
           "displayedText": [
             "https:// tinyurl.com/iatse-fair-deal"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/tell-amptp-to-make-a-deal-with-behind-the-scenes-workers?source=092721-aflcioemail&link_id=4&can_id=349e0208ab30994cf1afabe02716616e&email_referrer=email_1305210&email_subject=petition-support-film-and-tv-crews"
+          "resolvedDestination": "https://actionnetwork.org/petitions/tell-amptp-to-make-a-deal-with-behind-the-scenes-workers"
         }
       ],
       "visibleInteractions": {
@@ -84345,7 +84345,7 @@
           "displayedText": [
             "http:// hj4a.org/Jan14"
           ],
-          "resolvedDestination": "https://actionnetwork.org/events/tell-governor-hochul-pass-good-cause-now?source=direct_link&"
+          "resolvedDestination": "https://actionnetwork.org/events/tell-governor-hochul-pass-good-cause-now"
         }
       ],
       "visibleInteractions": {
@@ -89076,7 +89076,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/stream ing-justice-tell-congress-we-need-to-get-paid-for-our-work?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/streaming-justice-tell-congress-we-need-to-get-paid-for-our-work?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/streaming-justice-tell-congress-we-need-to-get-paid-for-our-work"
         }
       ],
       "visibleInteractions": {
@@ -89943,7 +89943,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/tell-y our-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now"
         }
       ],
       "visibleInteractions": {
@@ -89988,7 +89988,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/tell-y our-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now"
         }
       ],
       "visibleInteractions": {
@@ -90026,7 +90026,7 @@
             "Tell Your State Reps. \"We Need a Pandemic Touring Fund\" Now!",
             "From actionnetwork.org"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now"
         }
       ],
       "visibleInteractions": {
@@ -90420,7 +90420,7 @@
           "displayedText": [
             "https:// actionnetwork.org/events/pandemi c-touring-fund-press-conference-rally?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/events/pandemic-touring-fund-press-conference-rally?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/events/pandemic-touring-fund-press-conference-rally"
         }
       ],
       "visibleInteractions": {
@@ -92757,7 +92757,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/tell-y our-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now"
         }
       ],
       "visibleInteractions": {
@@ -92943,7 +92943,7 @@
           "displayedText": [
             "https:// nytimes.com/2022/03/17/art s/music/jazz-club.html?referringSource=articleShare …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2022/03/17/arts/music/jazz-club.html?referringSource=articleShare"
+          "resolvedDestination": "https://www.nytimes.com/2022/03/17/arts/music/jazz-club.html"
         }
       ],
       "visibleInteractions": {
@@ -92982,7 +92982,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/stream ing-justice-tell-congress-we-need-to-get-paid-for-our-work?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/streaming-justice-tell-congress-we-need-to-get-paid-for-our-work?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/streaming-justice-tell-congress-we-need-to-get-paid-for-our-work"
         }
       ],
       "visibleInteractions": {
@@ -93019,7 +93019,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/stream ing-justice-tell-congress-we-need-to-get-paid-for-our-work?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/streaming-justice-tell-congress-we-need-to-get-paid-for-our-work?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/streaming-justice-tell-congress-we-need-to-get-paid-for-our-work"
         }
       ],
       "visibleInteractions": {
@@ -93944,7 +93944,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/tell-y our-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now"
         }
       ],
       "visibleInteractions": {
@@ -94091,7 +94091,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/tell-y our-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/tell-your-state-reps-we-need-a-pandemic-touring-fund-now"
         }
       ],
       "visibleInteractions": {
@@ -99966,7 +99966,7 @@
           "displayedText": [
             "https:// tinyurl.com/5zus2ksr"
           ],
-          "resolvedDestination": "https://gothamist.com/news/the-buskers-dilemma-whats-allowed-and-whats-not-for-subway-performers?nypr_member=Unknown"
+          "resolvedDestination": "https://gothamist.com/news/the-buskers-dilemma-whats-allowed-and-whats-not-for-subway-performers"
         }
       ],
       "visibleInteractions": {
@@ -103138,7 +103138,7 @@
             "Opinion | Taylor Swift’s Live Nation Debacle Is Just the Beginning (Published 2022)",
             "From nytimes.com"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2022/12/10/opinion/taylor-swift-live-nation-clyde-lawrence.html?smid=nytcore-ios-share&referringSource=articleShare"
+          "resolvedDestination": "https://www.nytimes.com/2022/12/10/opinion/taylor-swift-live-nation-clyde-lawrence.html?smid=nytcore-ios-share"
         }
       ],
       "visibleInteractions": {
@@ -104369,7 +104369,7 @@
           "displayedText": [
             "https:// nytimes.com/2023/01/11/nyr egion/library-funding-cuts-eric-adams.html?smid=nytcore-ios-share&referringSource=articleShare …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/01/11/nyregion/library-funding-cuts-eric-adams.html?smid=nytcore-ios-share&referringSource=articleShare"
+          "resolvedDestination": "https://www.nytimes.com/2023/01/11/nyregion/library-funding-cuts-eric-adams.html?smid=nytcore-ios-share"
         }
       ],
       "visibleInteractions": {
@@ -111167,7 +111167,7 @@
           "displayedText": [
             "actionnetwork.org We demand a People’s Budget! #CareNotCuts Use this tool to quickly submit testimony on the public record on how harmful cuts to libraries and cultural institutions are to New Yorkers — and what we want instead (investments in libraries &..."
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/submit-written-testimony-for-carenotcuts-no-cuts-to-nyc-libraries?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/submit-written-testimony-for-carenotcuts-no-cuts-to-nyc-libraries"
         }
       ],
       "visibleInteractions": {
@@ -111203,7 +111203,7 @@
           "displayedText": [
             "http:// dancenyc.app.neoncrm.com/np/viewEmail.j sp?linkId=519478 …"
           ],
-          "resolvedDestination": "https://dancenyc.app.neoncrm.com/np/viewEmail.jsp?linkId=519478"
+          "resolvedDestination": "https://dancenyc.app.neoncrm.com/np/viewEmail.jsp"
         }
       ],
       "visibleInteractions": {
@@ -111399,7 +111399,7 @@
             "Orchestra musicians stage strike - The Chief",
             "From thechiefleader.com"
           ],
-          "resolvedDestination": "https://www.thechiefleader.com/detail.html?sub_id=3977862af3"
+          "resolvedDestination": "https://www.thechiefleader.com/detail.html"
         }
       ],
       "visibleInteractions": {
@@ -111884,7 +111884,7 @@
           "displayedText": [
             "https:// nytimes.com/2023/04/25/art s/music/harry-belafonte-dead.html?unlocked_article_code=KeZ2ZWjrtFSDEURoDfU7tVkGUm4Evg1Pb_ZqjAXasWzFWsnq9IRVwgQU2P3jU_zjpMtsvgvud1vBUf3AmfSt9K-ZPf2vEQ0XXswpOqpu_BZtxZPpGVR7WAbbia24q-X3GYPWU0i5ccRlDHkGiYePg0_6dpXmtHKeWNO2MkWU30qdejKluMGejlgQeV2x6vW0lZPnbQoSXuyGbSm5LHMrMgOx9oaF-blER7jTE3bgZ68TNpj5ZVH6XBJJqQxZLlMzdizDTfFO6v9SF0JAwDgkeQfHMpiN89yURPDtRNaWKtdr2G24TytbFNkUJVZu_L0uV9IpeccNtLJxVjxirCLoePyI&giftCopy=3_Independent&smid=url-share …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/04/25/arts/music/harry-belafonte-dead.html?unlocked_article_code=KeZ2ZWjrtFSDEURoDfU7tVkGUm4Evg1Pb_ZqjAXasWzFWsnq9IRVwgQU2P3jU_zjpMtsvgvud1vBUf3AmfSt9K-ZPf2vEQ0XXswpOqpu_BZtxZPpGVR7WAbbia24q-X3GYPWU0i5ccRlDHkGiYePg0_6dpXmtHKeWNO2MkWU30qdejKluMGejlgQeV2x6vW0lZPnbQoSXuyGbSm5LHMrMgOx9oaF-blER7jTE3bgZ68TNpj5ZVH6XBJJqQxZLlMzdizDTfFO6v9SF0JAwDgkeQfHMpiN89yURPDtRNaWKtdr2G24TytbFNkUJVZu_L0uV9IpeccNtLJxVjxirCLoePyI&giftCopy=3_Independent&smid=url-share"
+          "resolvedDestination": "https://www.nytimes.com/2023/04/25/arts/music/harry-belafonte-dead.html?smid=url-share"
         }
       ],
       "visibleInteractions": {
@@ -113513,7 +113513,7 @@
           "displayedText": [
             "https:// neweconomynyc.ourpowerbase.net/civicrm/petiti on/sign?sid=46&reset=1 …"
           ],
-          "resolvedDestination": "https://neweconomynyc.ourpowerbase.net/civicrm/petition/sign?sid=46&reset=1"
+          "resolvedDestination": "https://neweconomynyc.ourpowerbase.net/civicrm/petition/sign?reset=1"
         }
       ],
       "visibleInteractions": {
@@ -113588,7 +113588,7 @@
           "displayedText": [
             "https:// actionnetwork.org/events/the-ren t-is-too-damn-high-rally-march?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/events/the-rent-is-too-damn-high-rally-march?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/events/the-rent-is-too-damn-high-rally-march"
         }
       ],
       "visibleInteractions": {
@@ -114280,7 +114280,7 @@
           "displayedText": [
             "https:// nytimes.com/2023/05/03/nyr egion/mental-health-intensive-mobile-treatment.html?smid=nytcore-ios-share&referringSource=articleShare …"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2023/05/03/nyregion/mental-health-intensive-mobile-treatment.html?smid=nytcore-ios-share&referringSource=articleShare"
+          "resolvedDestination": "https://www.nytimes.com/2023/05/03/nyregion/mental-health-intensive-mobile-treatment.html?smid=nytcore-ios-share"
         }
       ],
       "visibleInteractions": {
@@ -116374,7 +116374,7 @@
           "displayedText": [
             "https:// tinyurl.com/46be39t5"
           ],
-          "resolvedDestination": "https://gothamist.com/news/more-than-10000-preschool-kids-missed-required-education-services-this-year?nypr_member=Unknown"
+          "resolvedDestination": "https://gothamist.com/news/more-than-10000-preschool-kids-missed-required-education-services-this-year"
         }
       ],
       "visibleInteractions": {
@@ -117645,7 +117645,7 @@
         "count": 3,
         "altText": [
           "🚨",
-          "flyer text: Tell Music Hall of Williamsburg: Don’t Host Queerphobes!\n\n\nat bottom: Call 212.665.3832 and tell Bowery Presents to cancel the BLEXIT event.\n\nEmail info@bowerypresents.com and lschamis@bowerypresents.com.\n\nTag @bowerypresents on Twitter and IG.\nTag @MusicHallofWB on Twitter and IG."
+          "flyer text: Tell Music Hall of Williamsburg: Don’t Host Queerphobes!\n\n\nat bottom: Call [public contact number redacted] and tell Bowery Presents to cancel the BLEXIT event.\n\nEmail [public email redacted] and [public email redacted].\n\nTag @bowerypresents on Twitter and IG.\nTag @MusicHallofWB on Twitter and IG."
         ]
       }
     },
@@ -117782,7 +117782,7 @@
           "displayedText": [
             "http:// Jfrej.org/PeoplesBudget"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/peoples-budget-2023?source=direct_link&referrer=group-the-jewish-vote"
+          "resolvedDestination": "https://actionnetwork.org/letters/peoples-budget-2023"
         }
       ],
       "visibleInteractions": {
@@ -119449,7 +119449,7 @@
           "displayedText": [
             "https:// tinyurl.com/mwajune202023"
           ],
-          "resolvedDestination": "https://actionnetwork.org/events/mwa-may-in-person-meetup-nyc-2?source=direct_link&link_id=1&can_id=05b73c0b31bc61711047edec19f6f838&source=email-mwa-may-newsletter-upcoming-actions-in-person-date-correction&email_referrer=email_1961176&email_subject=_-june-newsletter-in-person-meeting-620-tomorrow"
+          "resolvedDestination": "https://actionnetwork.org/events/mwa-may-in-person-meetup-nyc-2"
         }
       ],
       "visibleInteractions": {
@@ -120992,7 +120992,7 @@
           "displayedText": [
             "https:// gothamist.com/news/evictions -are-soaring-in-nyc-and-most-tenants-dont-have-a-lawyer?oref=csny_firstread_nl …"
           ],
-          "resolvedDestination": "https://gothamist.com/news/evictions-are-soaring-in-nyc-and-most-tenants-dont-have-a-lawyer?oref=csny_firstread_nl"
+          "resolvedDestination": "https://gothamist.com/news/evictions-are-soaring-in-nyc-and-most-tenants-dont-have-a-lawyer"
         }
       ],
       "visibleInteractions": {
@@ -122289,7 +122289,7 @@
             "Donate to Please Support the QPS Street Vendor Fund, organized by Daniela Jaramillo Cardona",
             "From gofundme.com"
           ],
-          "resolvedDestination": "https://www.gofundme.com/f/please-support-the-qps-street-vendor-fund?member=29798835&sharetype=teams"
+          "resolvedDestination": "https://www.gofundme.com/f/please-support-the-qps-street-vendor-fund?sharetype=teams"
         }
       ],
       "visibleInteractions": {
@@ -122468,7 +122468,7 @@
           "displayedText": [
             "https:// bit.ly/00101923chbka"
           ],
-          "resolvedDestination": "https://us06web.zoom.us/j/89691306174?pwd=AWItFhvds8vnkPSNI9l2QZcaiyhQfL.1"
+          "resolvedDestination": "https://us06web.zoom.us/j/89691306174"
         }
       ],
       "visibleInteractions": {
@@ -122514,7 +122514,7 @@
       "media": {
         "count": 1,
         "altText": [
-          "an ALIGN/New Yorkers for a Fair Economy graphic that reads: ARE YOU RIGHTS BEING VIOLATED? Make a complaint to the NYS Department of Labor: Online Complaint Form: bit.ly/quota_complaint. PHONE: 518-457-9000. WHAT'S NEXT? Even if the most abusive quotas are limited, workers can still experience injury in poorly designed workplaces. The Warehouse Worker Injury Reduction Act is the essential next step in protecting thousands of New York warehouse workers.\""
+          "an ALIGN/New Yorkers for a Fair Economy graphic that reads: ARE YOU RIGHTS BEING VIOLATED? Make a complaint to the NYS Department of Labor: Online Complaint Form: bit.ly/quota_complaint. PHONE: [public contact number redacted]. WHAT'S NEXT? Even if the most abusive quotas are limited, workers can still experience injury in poorly designed workplaces. The Warehouse Worker Injury Reduction Act is the essential next step in protecting thousands of New York warehouse workers.\""
         ]
       }
     },
@@ -123076,7 +123076,7 @@
             "Tell Intuit Mailchimp: No Monkey Business! Quit Union Busting!",
             "From actionnetwork.org"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/tell-intuit-mailchimp-no-monkey-business-quit-union-busting?source=shortlink"
+          "resolvedDestination": "https://actionnetwork.org/letters/tell-intuit-mailchimp-no-monkey-business-quit-union-busting"
         }
       ],
       "visibleInteractions": {
@@ -123594,7 +123594,7 @@
             "Ridgewood's iconic pork store forced to close its doors after nearly 70 years",
             "From abc7ny.com"
           ],
-          "resolvedDestination": "https://abc7ny.com/post/morschers-pork-store-ridgewood-queens-business-closing-nyc/14357620/?userab=kfsn_content_recs-582*variant_b_trending_kfsn-2513%2Ckabc_content_recs-577*variant_c_trending-2482%2Cwls_content_recs-584*variant_a_control_wls-2516%2Cwtvd_content_recs-585*variant_a_control_wtvd-2518%2Cktrk_content_recs-587*variant_a_control_ktrk-2522%2Cwpvi_content_recs-586*variant_a_control_wpvi-2520%2Cotv_web_content_rec-539*variant_c_trending-2268%2Cotv_web_topic-580*variant_b_topic_redesign-2509%2Cotv_search_page_design_unification-546*variant_b_search_redesign-2300%2Ckgo_content_recs-583*variant_b_trending_kgo-2515%2Cabcn_popular_reads_exp-542*variant_b_7days_filter-2288"
+          "resolvedDestination": "https://abc7ny.com/post/morschers-pork-store-ridgewood-queens-business-closing-nyc/14357620/"
         }
       ],
       "visibleInteractions": {
@@ -125805,7 +125805,7 @@
           "displayedText": [
             "https:// tinyurl.com/ysjxh3ye"
           ],
-          "resolvedDestination": "https://gothamist.com/arts-entertainment/where-did-nycs-indie-theater-scene-go-backyards-basements-and-rooftops?nypr_member=Unknown"
+          "resolvedDestination": "https://gothamist.com/arts-entertainment/where-did-nycs-indie-theater-scene-go-backyards-basements-and-rooftops"
         }
       ],
       "visibleInteractions": {
@@ -126792,7 +126792,7 @@
           "displayedText": [
             "https:// actionnetwork.org/letters/fy25pe oplesbudget?source=twitter& …"
           ],
-          "resolvedDestination": "https://actionnetwork.org/letters/fy25peoplesbudget?source=twitter&"
+          "resolvedDestination": "https://actionnetwork.org/letters/fy25peoplesbudget"
         }
       ],
       "visibleInteractions": {
@@ -128069,7 +128069,7 @@
             "Sign the Petition",
             "From change.org"
           ],
-          "resolvedDestination": "https://www.change.org/p/dcp-mayor-adams-we-support-the-queensboro-people-s-space-in-lic-queens?recruiter=1340817208&recruited_by_id=0aa0e630-2546-11ef-9189-5d0e2c787e5c&redirect_reason=deprecated-url"
+          "resolvedDestination": "https://www.change.org/p/dcp-mayor-adams-we-support-the-queensboro-people-s-space-in-lic-queens?redirect_reason=deprecated-url"
         }
       ],
       "visibleInteractions": {
@@ -128844,7 +128844,7 @@
           "displayedText": [
             "https:// tinyurl.com/33hzw7kn"
           ],
-          "resolvedDestination": "https://www.aitrainingstatement.org/?link_id=6&can_id=30517e129cd87ff7b94a4b628161cfcb&source=email-quick-sign-on-ai-statement&email_referrer=email_2499883&email_subject=_-sign-on-statement-on-ai-training"
+          "resolvedDestination": "https://www.aitrainingstatement.org/"
         }
       ],
       "visibleInteractions": {
@@ -133005,7 +133005,7 @@
           "displayedText": [
             "http:// tinyurl.com/WNUPetition"
           ],
-          "resolvedDestination": "https://actionnetwork.org/petitions/we-need-a-union?source=direct_link&link_id=0&can_id=ae94725fb71fe5df7e97f3427313ab7d&email_referrer=email_2874040&email_subject=we-need-a-union&"
+          "resolvedDestination": "https://actionnetwork.org/petitions/we-need-a-union"
         }
       ],
       "visibleInteractions": {
@@ -134558,7 +134558,7 @@
             "Mamdani Appoints New York’s Next Culture Czar (Gift Article)",
             "From nytimes.com"
           ],
-          "resolvedDestination": "https://www.nytimes.com/2026/02/28/arts/design/mamdani-culture-czar-diya-vij.html?unlocked_article_code=1.PlA.Qxkt.ivA8ne1Enw3q&smid=nytcore-ios-share"
+          "resolvedDestination": "https://www.nytimes.com/2026/02/28/arts/design/mamdani-culture-czar-diya-vij.html?smid=nytcore-ios-share"
         }
       ],
       "visibleInteractions": {
@@ -134785,7 +134785,7 @@
             "Rally for AI Protections and Fair Pay",
             "From actionnetwork.org"
           ],
-          "resolvedDestination": "https://actionnetwork.org/events/rally-for-ai-protections-and-fair-pay?clear_id=true&source=direct_link&referrer=group-new-york-city-central-labor-council"
+          "resolvedDestination": "https://actionnetwork.org/events/rally-for-ai-protections-and-fair-pay"
         }
       ],
       "visibleInteractions": {
@@ -135592,7 +135592,7 @@
             "We Need a Union (@we_need_a_union) • Instagram reel",
             "From instagram.com"
           ],
-          "resolvedDestination": "https://www.instagram.com/reel/DYH8AZDNsLq/?igsh=MWFjcXdxMTB6enkybw=="
+          "resolvedDestination": "https://www.instagram.com/reel/DYH8AZDNsLq/"
         }
       ],
       "visibleInteractions": {
@@ -135628,7 +135628,7 @@
           "displayedText": [
             "instagram.com We Need a Union (@we_need_a_union) • Instagram reel"
           ],
-          "resolvedDestination": "https://www.instagram.com/reel/DYBDqTXtBqi/?igsh=MTRnNzRraHg3Y29yZA=="
+          "resolvedDestination": "https://www.instagram.com/reel/DYBDqTXtBqi/"
         }
       ],
       "visibleInteractions": {
@@ -135710,7 +135710,7 @@
             "We Need a Union (@we_need_a_union) • Instagram photo",
             "From instagram.com"
           ],
-          "resolvedDestination": "https://www.instagram.com/p/DYPsqLwESKb/?igsh=Nnk4cHRwMWNvMmZx"
+          "resolvedDestination": "https://www.instagram.com/p/DYPsqLwESKb/"
         }
       ],
       "visibleInteractions": {

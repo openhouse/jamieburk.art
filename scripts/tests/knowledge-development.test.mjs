@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 
@@ -22,6 +23,7 @@ import {
 } from "../derive-kctownhall-x-corpus.mjs";
 import {
   buildNycArtCCorpus,
+  sha256,
   validateNycArtCCorpus
 } from "../derive-nycartc-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -1013,6 +1015,7 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
       )
   );
   assert.match(rawCaptureText, /\[public contact number redacted\]/);
+  assert.match(rawCaptureText, /\[public email redacted\]/);
   for (const privateField of [
     "directMessages",
     "sessionIdentifier",
@@ -1043,6 +1046,17 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
     buildNycArtCCorpus(
       `${JSON.stringify(rawWithoutAccountResolution, null, 2)}\n`
     )
+  );
+  const rawWithNestedEmail = JSON.parse(rawCaptureText);
+  rawWithNestedEmail.items[0].media.altText = ["Contact private@example.org"];
+  assert.throws(() =>
+    buildNycArtCCorpus(`${JSON.stringify(rawWithNestedEmail, null, 2)}\n`)
+  );
+  const rawWithTrackingValue = JSON.parse(rawCaptureText);
+  rawWithTrackingValue.shortUrlResolutions[0].resolvedUrl =
+    "https://example.org/action?can_id=private-value";
+  assert.throws(() =>
+    buildNycArtCCorpus(`${JSON.stringify(rawWithTrackingValue, null, 2)}\n`)
   );
 
   const sharedLayer = knowledgeBank.claims.find(
@@ -1104,6 +1118,16 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
     corpusSource.assetUrl,
     /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\//
   );
+  const [, pinnedSha, pinnedPath] = corpusSource.assetUrl.match(
+    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/([0-9a-f]{40})\/(.+)$/
+  );
+  const pinnedCorpusText = execFileSync(
+    "git",
+    ["show", `${pinnedSha}:${pinnedPath}`],
+    { encoding: "utf8" }
+  );
+  assert.equal(pinnedCorpusText, corpusText);
+  assert.equal(sha256(pinnedCorpusText), manifest.corpusSha256);
   assert.equal(
     page.occurrences.find(
       (item) => item.id === "shared-public-operating-layer"
@@ -1123,6 +1147,8 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   );
   assert.match(work, /446 of 696 recovered authored posts/);
   assert.match(projectNote, /1,757-item difference as an explicit recovery gap/);
+  assert.match(projectNote, /109 distinct authored posts/);
+  assert.match(projectNote, /outbound communication, not incoming Council engagement/);
   assert.match(runNote, /A posted destination proves source circulation only/);
 });
 

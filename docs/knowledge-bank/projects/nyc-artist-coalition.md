@@ -60,6 +60,12 @@ linked outward to campaign tools, official records, reporting, forms, events,
 and field resources. Source circulation is not endorsement, reach, or authorship
 of the linked work.
 
+The authored corpus also contains 115 visible `@NYCCouncil` mention occurrences
+across 109 distinct authored posts. This documents sustained outbound
+communication, not incoming Council engagement. The stricter lower-bound
+incoming-engagement finding above remains grounded in separate, source-specific
+posts from at least four sitting Council member accounts.
+
 These are lower-bound findings from visible public posts, not a complete export.
 The account's output was collective. Jamie recalls establishing the project
 accounts and identity system, but account-creation or administrator evidence

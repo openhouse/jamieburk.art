@@ -10,6 +10,50 @@ const defaultCorpusPath =
 const defaultManifestPath =
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json";
 
+const publicEmailPattern = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
+const publicPhonePattern =
+  /(?:\+?1[ .-]+)?(?:\(\d{3}\)[ .-]*|\d{3}[ .-]+)\d{3}[ .-]+\d{4}/g;
+const trackingParameterNames = new Set([
+  "__source",
+  "can_id",
+  "campaign_id",
+  "ceid",
+  "clear_id",
+  "email_referrer",
+  "email_subject",
+  "emc",
+  "emci",
+  "emdi",
+  "fbclid",
+  "gclid",
+  "giftcopy",
+  "igsh",
+  "instance_id",
+  "link_id",
+  "linkid",
+  "mc_cid",
+  "mc_eid",
+  "member",
+  "notif_id",
+  "notif_t",
+  "nypr_member",
+  "oref",
+  "promo_id",
+  "pwd",
+  "recruited_by_id",
+  "recruiter",
+  "referrer",
+  "referringsource",
+  "regi_id",
+  "segment_id",
+  "sid",
+  "source",
+  "sub_id",
+  "unlocked_article_code",
+  "user_id",
+  "userab"
+]);
+
 const campaignMarkers = [
   {
     id: "fair-rent-nyc",
@@ -215,8 +259,84 @@ export function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function hasSensitiveTrackingParameter(value) {
+  if (!/^https?:\/\//i.test(value)) return false;
+  let url;
+  try {
+    url = new URL(value);
+  } catch {
+    return false;
+  }
+  return [...url.searchParams.keys()].some((key) => {
+    const normalized = key.toLowerCase();
+    return normalized.startsWith("utm_") || trackingParameterNames.has(normalized);
+  });
+}
+
+function sanitizePublicString(value) {
+  let sanitized = value
+    .replace(publicEmailPattern, "[public email redacted]")
+    .replace(publicPhonePattern, "[public contact number redacted]");
+  if (!/^https?:\/\//i.test(sanitized)) return sanitized;
+
+  let url;
+  try {
+    url = new URL(sanitized);
+  } catch {
+    return sanitized;
+  }
+  for (const key of [...url.searchParams.keys()]) {
+    const normalized = key.toLowerCase();
+    if (normalized.startsWith("utm_") || trackingParameterNames.has(normalized)) {
+      url.searchParams.delete(key);
+    }
+  }
+  sanitized = url.toString();
+  return sanitized;
+}
+
+function sanitizePublicValue(value) {
+  if (typeof value === "string") return sanitizePublicString(value);
+  if (Array.isArray(value)) return value.map(sanitizePublicValue);
+  if (!value || typeof value !== "object") return value;
+  return Object.fromEntries(
+    Object.entries(value).map(([key, nested]) => [key, sanitizePublicValue(nested)])
+  );
+}
+
+function assertPublicSafeValue(value, path = "$") {
+  if (typeof value === "string") {
+    assert.doesNotMatch(value, publicEmailPattern, `${path} retains an email address`);
+    assert.doesNotMatch(value, publicPhonePattern, `${path} retains a phone number`);
+    assert.equal(
+      hasSensitiveTrackingParameter(value),
+      false,
+      `${path} retains a tracking or personalization parameter`
+    );
+    return;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((nested, index) => assertPublicSafeValue(nested, `${path}[${index}]`));
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+  for (const [key, nested] of Object.entries(value)) {
+    assertPublicSafeValue(nested, `${path}.${key}`);
+  }
+}
+
+export function sanitizeNycArtCRawCapture(rawCaptureText) {
+  const sanitized = sanitizePublicValue(JSON.parse(rawCaptureText));
+  for (const item of sanitized.items) {
+    if (typeof item.text === "string") item.textSha256 = sha256(item.text);
+  }
+  assertPublicSafeValue(sanitized);
+  return `${JSON.stringify(sanitized, null, 2)}\n`;
+}
+
 export function buildNycArtCCorpus(rawCaptureText) {
   const raw = JSON.parse(rawCaptureText);
+  assertPublicSafeValue(raw);
   assert.equal(raw.account, "@NYCArtC");
   assert.equal(raw.profileReportedPosts, 5_124);
 
@@ -405,6 +525,8 @@ export function buildNycArtCCorpus(rawCaptureText) {
     items
   };
 
+  assertPublicSafeValue(corpus);
+
   assert.deepEqual(deriveNycArtCCorpusMetrics(corpus), {
     profileReported: 5_124,
     recoveredAccountItems: 3_367,
@@ -557,10 +679,19 @@ function writeArtifacts(rawPath, corpusPath, manifestPath) {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const write = process.argv.includes("--write");
-  const paths = process.argv.filter((value) => value !== "--write").slice(2);
+  const sanitizeRaw = process.argv.includes("--sanitize-raw");
+  const paths = process.argv
+    .slice(2)
+    .filter((value) => value !== "--write" && value !== "--sanitize-raw");
   const rawPath = paths[0] ?? defaultRawPath;
   const corpusPath = paths[1] ?? defaultCorpusPath;
   const manifestPath = paths[2] ?? defaultManifestPath;
+  if (sanitizeRaw) {
+    writeFileSync(
+      rawPath,
+      sanitizeNycArtCRawCapture(readFileSync(rawPath, "utf8"))
+    );
+  }
   const metrics = write
     ? writeArtifacts(rawPath, corpusPath, manifestPath)
     : validateNycArtCCorpus(
