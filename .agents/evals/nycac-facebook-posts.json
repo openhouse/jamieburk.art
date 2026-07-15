@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "suite_id": "nycac-facebook-posts-full-population",
+  "title": "NYC Artist Coalition Facebook posts archival production",
+  "objective": "Account for the full available Page-post population, develop mission-relevant sources and claims, preserve shared-account and stakeholder semantics, and publish no protected social data.",
+  "thresholds": {
+    "score_minimum": 100,
+    "all_evals_blocking": true,
+    "all_adversarial_mutations_must_be_rejected": true
+  },
+  "population_boundary": "One hundred percent means every row in the annual Meta Business Suite Published exports across the surviving 2017-2021 chronology, reconciled against the terminal Page feed. It does not mean every post ever created or deleted-post recovery.",
+  "evals": [
+    {
+      "id": "FB-NYCAC-001",
+      "title": "Complete annual Published-export accounting",
+      "weight": 20
+    },
+    {
+      "id": "FB-NYCAC-002",
+      "title": "Mission continuity and source decomposition",
+      "weight": 15
+    },
+    {
+      "id": "FB-NYCAC-003",
+      "title": "Stakeholder references remain distinct from engagement",
+      "weight": 15
+    },
+    {
+      "id": "FB-NYCAC-004",
+      "title": "Native metrics remain bounded row values",
+      "weight": 15
+    },
+    {
+      "id": "FB-NYCAC-005",
+      "title": "Shared-account authorship and collective credit",
+      "weight": 15
+    },
+    {
+      "id": "FB-NYCAC-006",
+      "title": "Knowledge lifecycle and selective projection",
+      "weight": 15
+    },
+    {
+      "id": "FB-NYCAC-007",
+      "title": "Public safety and immutable provenance",
+      "weight": 5
+    }
+  ],
+  "required_mutation_classes": [
+    "missing or duplicated record",
+    "changed annual denominator",
+    "complete-lifetime overstatement",
+    "raw owner-export publication",
+    "individual authorship assignment",
+    "stakeholder-reference to engagement conversion",
+    "metric to unique-person or impact conversion",
+    "cross-surface metric combination",
+    "sensitive route or protected-value leakage",
+    "ungoverned source promotion"
+  ]
+}

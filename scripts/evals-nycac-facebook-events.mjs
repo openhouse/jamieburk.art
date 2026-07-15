@@ -272,6 +272,17 @@ const intake = knowledgeBank.intake.find(
 const participationClaim = claimById.get("CLM-NYCAC-PARTICIPATION-SYSTEM");
 const responseClaim = claimById.get("CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS");
 const democracyClaim = claimById.get("CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE");
+const eventAssertionIds = [
+  "AST-NYCAC-FACEBOOK-EVENT-SURFACE-2026",
+  "AST-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
+  "AST-NYCAC-FACEBOOK-EVENT-CHRONOLOGY-2026",
+  "AST-NYCAC-FACEBOOK-ROTATING-MEETINGS-2026",
+  "AST-NYCAC-FACEBOOK-CIVIC-CULTURAL-INTERFACES-2026",
+  "AST-NYCAC-FACEBOOK-RESPONSE-SIGNALS-2026",
+  "AST-NYCAC-FACEBOOK-POSTED-SOURCE-ROUTES-2026",
+  "AST-NYCAC-FACEBOOK-DETAIL-VOLATILITY-2026",
+  "AST-NYCAC-FACEBOOK-JAMIE-ROLE-MEMORY-2026"
+];
 
 check(
   "Lifecycle integration",
@@ -283,9 +294,9 @@ check(
     sourceById.has("SRC-NYCAC-FACEBOOK-EVENT-SURFACE-2026") &&
     sourceById.has("SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026") &&
     sourceById.has("SRC-NYCAC-FACEBOOK-EVENT-PROTECTED-RUN-2026") &&
-    knowledgeBank.sourceAssertions.filter((assertion) =>
-      assertion.id.startsWith("AST-NYCAC-FACEBOOK-")
-    ).length === 9 &&
+    eventAssertionIds.every((id) =>
+      knowledgeBank.sourceAssertions.some((assertion) => assertion.id === id)
+    ) &&
     participationClaim?.status === "confirmed-with-boundary" &&
     responseClaim?.status === "confirmed-with-boundary" &&
     democracyClaim?.status === "use-with-care" &&

@@ -81,6 +81,29 @@ public-data framing, policy communications, and follow-up systems. The formal
 co-founder title remains held for independent formation-record or collaborator
 corroboration.
 
+## Facebook Page operating record
+
+The [Facebook post population](nyc-artist-coalition-facebook-posts.md) adds an
+owner-data control to the shared-identity record. Annual Meta Business Suite
+Published exports account for 444 rows and 444 unique post IDs across every year
+in the surviving January 2017 to September 2021 chronology. A separate terminal
+Page-feed traversal reconciled to the same denominator after duplicate and
+embedded render fragments were excluded.
+
+The corpus preserves 67 distinct off-Facebook routes and overlapping issue
+patterns across cultural-space survival, Cabaret Law repeal, M.A.R.C.H.
+accountability, nightlife governance, commercial rent, relief, and civic
+participation. Sixty-six rows reference Council or elected-official subjects;
+that is outbound communication and issue routing, not proof that 66 officials
+engaged. Aggregate reactions, comments, shares, reach, and clicks likewise do
+not identify stakeholder groups.
+
+The Page was shared. Jamie remembers predominantly using it while believing
+others also did, but neither current custody nor the exports assign a human
+publisher to every historical post. The corpus therefore strengthens the
+collective operating record while leaving Jamie-specific Facebook stewardship
+held for collaborator or publisher-metadata corroboration.
+
 ## Active Claim Projections
 
 These are the current use-now statements registered for this archive surface:

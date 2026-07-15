@@ -115,6 +115,17 @@ source routes, stakeholder interfaces, and bounded response labels without
 publishing raw descriptions, attendee data, access details, or authenticated
 state.
 
+The authenticated [NYC Artist Coalition Facebook post pass](runs/2026-07-15-nycac-facebook-posts-full-population.md)
+accounts for all 444 rows and 444 unique post IDs in annual Meta Business Suite
+Published exports across the surviving 2017-2021 chronology, cross-checked
+against a terminal Page-feed traversal. Its [public-safe corpus](corpora/nycartc-facebook-posts-full-population.json),
+manifest, deterministic checker, and [project note](projects/nyc-artist-coalition-facebook-posts.md)
+preserve 67 posted routes, mission and civic-interface patterns, and bounded
+owner-export metrics while withholding raw exports, post bodies, post IDs,
+engagement identities, sensitive routes, and authenticated state. Shared-account
+human authorship and incoming stakeholder engagement remain explicit research
+questions.
+
 The authenticated [WOW List Facebook post pass](runs/2026-07-15-wowlist-facebook-posts-full-population.md)
 accounts for all 54 records materialized by the Page's surviving Lifetime
 table: 50 recovered details attributed by Facebook to Jamie as publisher and
