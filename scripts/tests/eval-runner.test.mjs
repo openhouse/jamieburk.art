@@ -9,6 +9,10 @@ import { fileURLToPath } from "node:url";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const runnerPath = path.join(repoRoot, "scripts/eval-portfolio-readiness.mjs");
 const tempDir = mkdtempSync(path.join(tmpdir(), "chad-lens-eval-test-"));
+const headRevision = spawnSync("git", ["rev-parse", "HEAD"], {
+  cwd: repoRoot,
+  encoding: "utf8"
+}).stdout.trim();
 
 const dimensions = {
   actorLegibility: "Jamie and the action are explicit.",
@@ -24,7 +28,7 @@ function scorecard(overrides = {}) {
     evalId: "chad-lens-v1",
     evaluatedAt: "2026-07-12T00:00:00Z",
     evaluator: "Eval runner test",
-    revision: "test",
+    revision: headRevision,
     pagesReviewed: ["/", "/resume", "/work/technical-operations", "/work/harry-j-epstein", "/work/callnyc", "/work/fair-rent-nyc"],
     criteria: [{
       id: "chad-lens",
@@ -58,6 +62,25 @@ function evaluate(name, value) {
   return JSON.parse(result.stdout);
 }
 
+function evaluatePair(name, first, second) {
+  const firstPath = path.join(tempDir, `${name}-a.json`);
+  const secondPath = path.join(tempDir, `${name}-b.json`);
+  writeFileSync(firstPath, `${JSON.stringify(first)}\n`);
+  writeFileSync(secondPath, `${JSON.stringify(second)}\n`);
+  const result = spawnSync(process.execPath, [
+    runnerPath,
+    "--rubric", "evals/chad-lens/rubric.json",
+    "--profile", "fast",
+    "--skip-commands",
+    "--scorecard", firstPath,
+    "--confirming-scorecard", secondPath,
+    "--json"
+  ], { cwd: repoRoot, encoding: "utf8" });
+
+  assert.equal(result.status, 1, "skipped deterministic gates and invalid pairs must fail closed");
+  return JSON.parse(result.stdout);
+}
+
 test("criterion-met recommendation can pass scorecard validation", () => {
   const report = evaluate("criterion-met", scorecard());
   assert.equal(report.scorecard.passed, true);
@@ -77,4 +100,26 @@ test("every Chad Lens dimension is required", () => {
   const report = evaluate("missing-dimension", value);
   assert.equal(report.scorecard.passed, false);
   assert.match(report.scorecard.errors.join("\n"), /dimensionFindings\.usableResult/);
+});
+
+test("the declared JSON schema rejects structurally incomplete scorecards", () => {
+  const value = scorecard();
+  delete value.criteria[0].confidence;
+  const report = evaluate("schema-invalid", value);
+  assert.equal(report.scorecard.passed, false);
+  assert.match(report.scorecard.errors.join("\n"), /Schema .*required property 'confidence'/);
+});
+
+test("scorecards must evaluate the current repository revision", () => {
+  const report = evaluate("stale-revision", scorecard({ revision: "stale-revision" }));
+  assert.equal(report.scorecard.passed, false);
+  assert.match(report.scorecard.errors.join("\n"), /revision must match HEAD/);
+});
+
+test("a confirming scorecard must come from a distinct evaluator", () => {
+  const first = scorecard({ evaluator: "Same judge" });
+  const second = scorecard({ evaluator: "Same judge" });
+  const report = evaluatePair("duplicate-evaluator", first, second);
+  assert.equal(report.stableScorecards, false);
+  assert.match(report.pairValidationFailures.join("\n"), /distinct evaluator identity/);
 });

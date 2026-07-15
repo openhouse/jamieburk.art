@@ -5,6 +5,7 @@ import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "
 import path from "node:path";
 import { parseArgs } from "node:util";
 import { fileURLToPath } from "node:url";
+import Ajv2020 from "ajv/dist/2020.js";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { values } = parseArgs({
@@ -21,6 +22,18 @@ const { values } = parseArgs({
 
 const rubricPath = path.resolve(repoRoot, values.rubric);
 const rubric = JSON.parse(readFileSync(rubricPath, "utf8"));
+const scorecardSchemaPath = path.join(path.dirname(rubricPath), "scorecard.schema.json");
+const scorecardSchema = JSON.parse(readFileSync(scorecardSchemaPath, "utf8"));
+const validateScorecardSchema = new Ajv2020({ allErrors: true, strict: false }).compile(scorecardSchema);
+const revisionResult = spawnSync("git", ["rev-parse", "HEAD"], {
+  cwd: repoRoot,
+  encoding: "utf8"
+});
+if (revisionResult.status !== 0) {
+  console.error("Unable to resolve the repository revision for scorecard validation.");
+  process.exit(2);
+}
+const evaluatedRevision = revisionResult.stdout.trim();
 const allowedRecommendations = new Set(
   rubric.recommendations ?? ["iterate", "application-ready", "production-ready"]
 );
@@ -139,7 +152,17 @@ function scoreScorecard(scorecardPath) {
   const errors = [];
   const entries = new Map(scorecard.criteria?.map((item) => [item.id, item]) ?? []);
 
+  if (!validateScorecardSchema(scorecard)) {
+    for (const error of validateScorecardSchema.errors ?? []) {
+      errors.push(`Schema ${error.instancePath || "/"} ${error.message}.`);
+    }
+  }
+
   if (scorecard.evalId !== rubric.id) errors.push(`Scorecard evalId must be ${rubric.id}.`);
+  if (!scorecard.evaluator?.trim()) errors.push("Scorecard evaluator must be nonempty.");
+  if (scorecard.revision !== evaluatedRevision) {
+    errors.push(`Scorecard revision must match HEAD ${evaluatedRevision}.`);
+  }
   if (entries.size !== rubric.criteria.length) {
     errors.push(`Scorecard must contain exactly ${rubric.criteria.length} unique criteria.`);
   }
@@ -182,6 +205,8 @@ function scoreScorecard(scorecardPath) {
 
   return {
     errors,
+    evaluator: scorecard.evaluator,
+    revision: scorecard.revision,
     weightedScore: Number(weightedScore.toFixed(1)),
     belowMinimum,
     criticalFailures,
@@ -218,10 +243,20 @@ const scorePass = scorecardResult ? scorecardPasses(scorecardResult) : null;
 const confirmingScorePass = confirmingScorecardResult
   ? scorecardPasses(confirmingScorecardResult)
   : null;
+const pairValidationFailures = [];
+if (scorecardResult && confirmingScorecardResult) {
+  if (scorecardResult.evaluator.trim() === confirmingScorecardResult.evaluator.trim()) {
+    pairValidationFailures.push("Confirming scorecard must use a distinct evaluator identity.");
+  }
+  if (scorecardResult.revision !== confirmingScorecardResult.revision) {
+    pairValidationFailures.push("Scorecard revisions must match each other.");
+  }
+}
 const stableScorecards =
   scorecardResult && confirmingScorecardResult
     ? scorePass === true &&
       confirmingScorePass === true &&
+      pairValidationFailures.length === 0 &&
       Math.abs(scorecardResult.weightedScore - confirmingScorecardResult.weightedScore) <= 2 &&
       scorecardResult.releaseRecommendation === confirmingScorecardResult.releaseRecommendation
     : false;
@@ -252,6 +287,7 @@ const report = {
         ...confirmingScorecardResult
       }
     : null,
+  pairValidationFailures,
   stableScorecards,
   criterionCount: rubric.criteria.length,
   stopConditionReached:
@@ -293,6 +329,7 @@ if (values.json) {
       console.log(
         `Confirming score: ${confirmingScorecardResult.weightedScore}/100; stable pair: ${stableScorecards ? "yes" : "no"}`
       );
+      for (const failure of pairValidationFailures) console.log(`FAIL scorecard pair: ${failure}`);
     } else if (scorePass) {
       console.log("A fresh confirming scorecard is still required for the stop condition.");
     }
@@ -309,7 +346,8 @@ if (
   rubricFailures.length > 0 ||
   failedChecks.length > 0 ||
   (scorecardResult && !scorePass) ||
-  (confirmingScorecardResult && !confirmingScorePass)
+  (confirmingScorecardResult && !confirmingScorePass) ||
+  (scorecardResult && confirmingScorecardResult && !stableScorecards)
 ) {
   process.exit(1);
 }
