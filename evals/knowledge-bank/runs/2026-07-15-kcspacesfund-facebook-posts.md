@@ -25,22 +25,32 @@ Date: 2026-07-15
 
 ## Recursive hill climb
 
-The first run scored 90/100 because the immutable public-identity digest in the
-new evaluator did not match the imported 40-row ledger. The ledger itself,
-population counts, sources, lifecycle links, credit boundaries, privacy checks,
-and projection checks all passed. The digest was recomputed from the public
-fixture, updated to the exact 40-row value, and the evaluator was rerun.
+The imported candidate was rejected before scoring because its intake and
+observation records used a retired knowledge-bank schema. The records were
+migrated to the current public-safe intake, disposition, observation-kind, and
+source-closure contract.
 
-The second run scored 100/100 with no hard failures. The first full repository
-check then surfaced a Chad-lens hard failure because the strengthened proof no
-longer contained the evaluator's exact collective-credit phrase. The proof was
-revised to restore explicit named-organizer credit without weakening the new
-role language. Chad's lens then scored 100/100.
+A slower authenticated recheck then recovered the three incomplete destination
+families and one additional recipient spotlight. The fixture, report, claims,
+sources, and evaluator were revised from 19/15 content and metadata records, ten
+spotlights, 13 fundraising records, and five exact routes to 20/14, 11, 14, and
+eight respectively. The recomputed 40-row identity digest changed because
+three remnants gained durable public post identities. The revised evaluator
+scored 100/100 with no hard failures.
 
-The full `npm run check` outer gate passed after that revision. It included the
-production build, citation and lifecycle tests, route and public-safety checks,
-all prior corpus evaluators, the 100/100 KC Spaces Fund evaluator, and the
-recursive protocol.
+The first generic knowledge-bank run fell to 1.6/5 because the intentional KC
+Spaces Fund sentence change invalidated an overly broad KC Town Hall shared-
+surface review lock. The complete affected surface was reviewed and re-locked;
+the generic suite returned to 5/5 across 21 criteria. The first production gate
+then exposed two implementation issues in sequence: a missing current-schema
+aggregate export and missing typed observation defaults. Both were repaired.
+
+Two proposed external model holdouts were not run because the execution
+environment rejected repository transfer to an external model. No independent
+result was fabricated or appended. The safer stopping rule used the local
+replayable gates: the standalone KC Spaces Fund evaluator at 100/100, the
+generic knowledge-bank evaluator at 5/5, all 192 existing mutation tests, the
+production build, citation checks, public-safety validation, and route checks.
 
 ## Held boundaries
 

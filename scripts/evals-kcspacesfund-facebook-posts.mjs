@@ -42,6 +42,9 @@ const moduleSource = read(
   "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07.ts"
 );
 const proofs = read("apps/www/src/data/proofs.ts");
+const technicalOperations = read(
+  "apps/www/src/app/work/technical-operations/page.tsx"
+);
 const normalizedDocs = `${receipt}\n${projectReport}`.replace(/\s+/g, " ");
 
 const checks = [];
@@ -354,6 +357,9 @@ check(
       "collaborator-led Facebook Page",
       "Do not frame Jamie as the Page publisher"
     ]) &&
+    technicalOperations.includes(
+      "Jamie built campaign web infrastructure and supported an available cross-channel identity for a collaborator-led mutual-aid campaign."
+    ) &&
     includesAll(normalizedDocs, [
       "not the stakeholder or owner posting on the Facebook Page",
       "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo",
