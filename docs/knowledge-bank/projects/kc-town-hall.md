@@ -64,6 +64,34 @@ The complete method, source inventory, item-level ledger, privacy boundary, and
 composition decision are in the
 [full-population production note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md).
 
+## Field Implementation and Neighborhood Practice
+
+A protected March 2019 proposal bundle adds source-backed depth to the existing
+founder/project-manager account. It names Jamie Burkart and Julia Fredenburg as
+founders and project managers, presents a multi-trade construction and
+professional team, defines a broad Phase One cold-shell scope, and reports
+substantial roof, masonry, debris-removal, and egress work by 2018.
+
+The proposal also reproduces a compact neighborhood survey and says resident
+responses directly shaped the proposal. A bundled January 2019 Council support
+letter independently says the survey influenced proposed retail uses and notes
+the project's commitment to local and minority-owned construction
+participation.
+
+Jamie has supplied a more detailed first-person account of serving as Phase One
+general contractor; coordinating the site daily; designing the survey handbill
+and data system; operating Tired of Tires; co-founding Cleveland Avenue Unify
+to Beautify; and providing pro bono neighborhood design, printing, mapping, and
+distribution. These propositions are preserved as held participant-memory
+claims. The proposal does not use the title `general contractor`, independently
+prove Phase One completion in 2019, or assign component-level survey and
+communications authorship.
+
+See the
+[field implementation and neighborhood-practice review](../intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md)
+for the proposition ledger, source boundaries, privacy decisions, and research
+queue.
+
 ## Stewardship Transition Lead
 
 Jamie has supplied a first-party memory that he transitioned project
@@ -85,6 +113,11 @@ Private personal context is not recorded in this repository.
 - `SRC-KCMO-COUNCIL-ROSTER-2018`
 - `SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS`
 - `SRC-KCSTAR-CCED-PROJECT-DELAYS-2021`
+- `SRC-KCTH-FIELD-PRACTICE-MEMORY-2026`
+- `SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019`
+- `SRC-KCTH-GHOST-ARCHIVE-2020`
+- `SRC-CLEVELAND-AVE-KC-TIRES-CAPTURE-2020`
+- `SRC-KCTH-FIELD-PRACTICE-REVIEW-2026`
 
 ## Boundary
 
@@ -97,3 +130,11 @@ legal, banking, and stakeholder details remain outside the public repository.
 The social corpus separately does not establish individual post authorship,
 audited service units, Council endorsement, funding receipt, project
 completion, or causal impact.
+
+The protected proposal documents project-manager attribution, scope,
+contemporaneous progress, and a neighborhood-survey process; it does not prove
+Jamie's general-contractor title or final Phase One completion. The Ghost
+archive and social records establish a recurring project-level tire service,
+not Jamie's individual operating role, an Indian Mound expansion, completed
+service units, or audited results. Cleveland Avenue co-founder, design, mapping,
+printing, distribution, and capital-decision propositions remain open inquiries.

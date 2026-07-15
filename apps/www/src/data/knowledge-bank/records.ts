@@ -4,6 +4,7 @@ import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-202
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
+import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
@@ -42,6 +43,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
+    ...kcTownHallFieldPractice.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacInstitutionalCapacity.intakeItems,
@@ -74,6 +76,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.observations,
     ...wowListSocialPopulationJuly2026.observations,
     ...kcTownHallCouncilFunding.observations,
+    ...kcTownHallFieldPractice.observations,
     ...kcTownHallSocialCorpus.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacInstitutionalCapacity.observations,
@@ -210,6 +213,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.sources,
     ...wowListSocialPopulationJuly2026.sources,
     ...kcTownHallCouncilFunding.sources,
+    ...kcTownHallFieldPractice.sources,
     ...kcTownHallSocialCorpus.sources,
     ...nycacImplementationEvidence.sources,
     ...nycacSourceExpansion.sources,
@@ -315,6 +319,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.claims,
     ...wowListSocialPopulationJuly2026.claims,
     ...kcTownHallCouncilFunding.claims,
+    ...kcTownHallFieldPractice.claims,
     ...kcTownHallSocialCorpus.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacInstitutionalCapacity.claims,
@@ -367,6 +372,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
+    ...kcTownHallFieldPractice.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,

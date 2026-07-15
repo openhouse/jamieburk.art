@@ -217,7 +217,7 @@
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall",
       "approvedMdxSha256": "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-      "approvedContentSha256": "bc3d31b930a1eeb46b487e1787313804ddda257483ec979d732bf9332cbbdee9",
+      "approvedContentSha256": "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
       "contributionSourceId": "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
       "contributionObservationId": "OBS-KC-TOWN-HALL-JAMIE-PLANNING-RESUME",
       "transitionObservationId": "OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
@@ -620,6 +620,52 @@
       "independentCoverageSourceId": "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
       "proofId": "kc-town-hall-public-service-interface"
     },
+    "kcTownHallFieldPractice": {
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
+      "approvedContentSha256": "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
+      "expectedIntakeCount": 3,
+      "expectedObservationCount": 13,
+      "expectedSourceCount": 5,
+      "expectedClaimCount": 4,
+      "expectedInquiryCount": 4,
+      "intakeIds": [
+        "INTAKE-KCTH-FIELD-PRACTICE-MEMORY-2026",
+        "INTAKE-KCTH-CCED-PROPOSAL-BUNDLE-2019",
+        "INTAKE-KCTH-WEB-ARCHIVE-2020"
+      ],
+      "sourceIds": [
+        "SRC-KCTH-FIELD-PRACTICE-MEMORY-2026",
+        "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019",
+        "SRC-KCTH-GHOST-ARCHIVE-2020",
+        "SRC-CLEVELAND-AVE-KC-TIRES-CAPTURE-2020",
+        "SRC-KCTH-FIELD-PRACTICE-REVIEW-2026"
+      ],
+      "protectedSourceIds": [
+        "SRC-KCTH-FIELD-PRACTICE-MEMORY-2026",
+        "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019",
+        "SRC-KCTH-GHOST-ARCHIVE-2020",
+        "SRC-CLEVELAND-AVE-KC-TIRES-CAPTURE-2020"
+      ],
+      "claimIds": [
+        "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY",
+        "CLM-KCTH-NEIGHBORHOOD-SURVEY-PRACTICE",
+        "CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE",
+        "CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-CONTRIBUTION"
+      ],
+      "inquiryIds": [
+        "INQ-KCTH-PHASE-ONE-ROLE-AND-COMPLETION",
+        "INQ-KCTH-SURVEY-DESIGN-AND-FIELD-PRACTICE",
+        "INQ-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE",
+        "INQ-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY"
+      ],
+      "fieldDeliveryClaimId": "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY",
+      "tireRoleClaimId": "CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE",
+      "reviewSourceId": "SRC-KCTH-FIELD-PRACTICE-REVIEW-2026",
+      "proofIds": [
+        "kc-town-hall-public-benefit-documentation",
+        "kc-town-hall-public-service-interface"
+      ]
+    },
     "agencyGraph": {
       "expectedEntityCount": 31,
       "expectedRelationCount": 31,
@@ -765,6 +811,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 183 surviving profile objects, every posted URL, all repost-bearing account statuses, stakeholder relationship types, service-workflow classifications, official-at-date checks, privacy boundaries, and selective projection remain complete, reproducible, and non-inflationary."
+    },
+    {
+      "id": "KB-EVAL-KCTH-FIELD-PRACTICE",
+      "label": "KC Town Hall field-practice evidence maturation",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Participant memory, protected proposal evidence, neighborhood-service archives, and public composition remain distinct: project-level facts mature, individual-role and completion propositions stay held, and sensitive source material never enters the public repository."
     }
   ],
   "hillClimb": {

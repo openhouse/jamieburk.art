@@ -120,6 +120,79 @@
       "blockers": [
         "Two fresh independent judges must inspect the archived shared creator credit, installation form and date triangulation, America: Now and Here inclusion, Nerman context boundary, held projection, component-labor anti-claims, updated content hash, and adversarial regression tests together with the cumulative Shared Drive production."
       ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-count-preserving-red-team-rejected-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist and count-preserving mutation reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4],
+      "accepted": false,
+      "blockers": [
+        "Count-preserving claim rewrites and rendered-proof mutations remained acceptable after approval-hash refresh."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-remote-municipal-archivist-rejected-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Fresh independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 2.2,
+      "criterionScores": [5, 5, 1, 1, 1, 1, 1, 5, 1, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Approval-hash refresh defeated the initial content-hash gate for survey authorship, tire operations, Cleveland sole credit and capital causation, held projections, and public proof paraphrases."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-municipal-archivist-lexical-rejection-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4],
+      "accepted": false,
+      "blockers": [
+        "Pronoun substitutions and adjacent vocabulary for resident polling, tire removal, corridor beautification, stabilization, and resident-input systems bypassed lexical guards after approval-hash refresh."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-skeptical-editor-surface-rejection-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent skeptical hiring editor, neighborhood-planning researcher, privacy reviewer, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 3],
+      "accepted": false,
+      "blockers": [
+        "Initial build-out, finished cold-shell, Burkart, proposal-completion, proof, and MDX paraphrases exposed public-surface gaps after editable approval refreshes."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-public-review-report-rejection-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4],
+      "accepted": false,
+      "blockers": [
+        "The public field-practice review document remained outside the initial code-level review locks."
+      ]
+    },
+    {
+      "judgeId": "kcth-field-holdout-municipal-archivist-final-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent municipal archivist, preservation specialist, and causal-claims red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "kcth-field-holdout-skeptical-hiring-editor-final-2026-07-15",
+      "completedAt": "2026-07-15T08:03:54Z",
+      "lens": "Independent skeptical hiring editor, neighborhood-planning researcher, privacy reviewer, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { callNycSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/callnyc-social-population-2026-07.ts";
+import { kcTownHallFieldPractice } from "../../apps/www/src/data/knowledge-bank/kctownhall-field-practice.ts";
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
@@ -16,6 +17,15 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../
 const suitePath = path.join(repoRoot, "evals/knowledge-bank/evals.json");
 const holdoutRunsPath = path.join(repoRoot, "evals/knowledge-bank/holdout-runs.json");
 const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json");
+const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
+  corpusSha256: "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
+  canonicalRecordsSha256: "00d2c80af90f0584311a5557e2ad02a8b67d63e7b1c5719a2418d82f692d4865",
+  governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
+  proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
+  caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
+  sharedPublicSurfacesSha256: "07b3176335c16ebfe407fcf6f20180d9831169f4256a79e7ccc7aa0b8977f783",
+  publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
+});
 
 export function loadKnowledgeEvalSuite() {
   return JSON.parse(readFileSync(suitePath, "utf8"));
@@ -76,6 +86,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const kcTownHallProof = proofClaims.find((proof) => proof.id === kcTownHall.proofId);
   const kcTownHallPage = knowledgeBank.pages.find((page) => page.id === kcTownHall.pageId);
   const kcTownHallProofSourceIds = [...kcTownHall.sourceIds, kcTownHall.contributionSourceId];
+  const kcTownHallProofCoverageSourceIds = [
+    ...kcTownHallProofSourceIds,
+    "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019",
+    "SRC-KCTH-FIELD-PRACTICE-REVIEW-2026"
+  ];
+  const kcTownHallProofCoverageInquiryIds = [
+    kcTownHall.inquiryId,
+    "INQ-KCTH-PHASE-ONE-ROLE-AND-COMPLETION",
+    "INQ-KCTH-SURVEY-DESIGN-AND-FIELD-PRACTICE"
+  ];
   const kcTownHallSocialSourceIds = [
     "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
     "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
@@ -88,6 +108,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
     "utf8"
   );
+  const kcTownHallAdditionalPublicSurfaceText = overrides.kcTownHallAdditionalPublicSurfaceText ?? [
+    readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8"),
+    readFileSync(path.join(repoRoot, "apps/www/src/app/work/technical-operations/page.tsx"), "utf8")
+  ].join("\n");
   const kcTownHallMdxSha256 = createHash("sha256")
     .update(kcTownHallMdx)
     .digest("hex");
@@ -317,8 +341,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       kcTownHallTransitionInquiry.findings.length >= 1 &&
       kcTownHallTransitionInquiry.limitations.length >= 3 &&
       kcTownHallProofCoverage?.status === "partially-source-backed" &&
-      sameOrderedValues(kcTownHallProofCoverage.sourceIds, kcTownHallProofSourceIds) &&
-      sameOrderedValues(kcTownHallProofCoverage.researchInquiryIds, [kcTownHall.inquiryId]) &&
+      sameOrderedValues(kcTownHallProofCoverage.sourceIds, kcTownHallProofCoverageSourceIds) &&
+      sameOrderedValues(kcTownHallProofCoverage.researchInquiryIds, kcTownHallProofCoverageInquiryIds) &&
       /Resolution 190649/.test(kcTownHallProof?.sourceBasis ?? "") &&
       /Ordinance 190642/.test(kcTownHallProof?.sourceBasis ?? "") &&
       /May 17, 2022/.test(kcTownHallProof?.sourceBasis ?? "") &&
@@ -1720,9 +1744,196 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       publicRegistryText.includes(kcthFull.activeClaimId) &&
       kcthFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...kcTownHallSocialCorpus.observations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...kcthFullClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...kcthFullInquiries];
+  const fieldPractice = suite.pilot.kcTownHallFieldPractice;
+  const fieldPracticeIntakes = fieldPractice.intakeIds.map((id) => intakeById.get(id));
+  const fieldPracticeObservations = kcTownHallFieldPractice.observations.map((item) => observationById.get(item.id));
+  const fieldPracticeSources = fieldPractice.sourceIds.map((id) => sourceById.get(id));
+  const fieldPracticeProtectedSources = fieldPractice.protectedSourceIds.map((id) => sourceById.get(id));
+  const fieldPracticeClaims = fieldPractice.claimIds.map((id) => claimById.get(id));
+  const fieldPracticeInquiries = fieldPractice.inquiryIds.map((id) => inquiryById.get(id));
+  const fieldDeliveryClaim = claimById.get(fieldPractice.fieldDeliveryClaimId);
+  const tireRoleClaim = claimById.get(fieldPractice.tireRoleClaimId);
+  const fieldPracticeReviewSource = sourceById.get(fieldPractice.reviewSourceId);
+  const fieldPracticeProofCoverage = fieldPractice.proofIds.map((proofId) =>
+    knowledgeBank.proofCoverageTargets.find((target) => target.proofId === proofId)
+  );
+  const fieldPracticeReport = overrides.kcTownHallFieldPracticeReport ?? readFileSync(
+    path.join(repoRoot, fieldPractice.documentationPath),
+    "utf8"
+  );
+  const fieldPracticeContentSha256 = createHash("sha256").update(JSON.stringify({
+    intakes: kcTownHallFieldPractice.intakeItems,
+    observations: kcTownHallFieldPractice.observations,
+    sources: kcTownHallFieldPractice.sources,
+    claims: kcTownHallFieldPractice.claims,
+    inquiries: kcTownHallFieldPractice.researchInquiries
+  })).digest("hex");
+  const fieldPracticeCanonicalRecordsSha256 = createHash("sha256").update(JSON.stringify({
+    intakes: fieldPracticeIntakes,
+    observations: fieldPracticeObservations,
+    sources: fieldPracticeSources,
+    claims: fieldPracticeClaims,
+    inquiries: fieldPracticeInquiries
+  })).digest("hex");
+  const fieldPracticeProofProjectionSha256 = createHash("sha256").update(JSON.stringify({
+    publicWording: kcTownHallProof?.publicWording,
+    shortWording: kcTownHallProof?.shortWording,
+    detailedPublicWording: kcTownHallProof?.detailedPublicWording
+  })).digest("hex");
+  const fieldPracticeSharedPublicSurfacesSha256 = createHash("sha256")
+    .update(kcTownHallAdditionalPublicSurfaceText)
+    .digest("hex");
+  const fieldPracticePublicReviewReportSha256 = createHash("sha256")
+    .update(fieldPracticeReport)
+    .digest("hex");
+  const fieldPracticeReviewLocksMatch =
+    fieldPracticeContentSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.corpusSha256 &&
+    fieldPracticeCanonicalRecordsSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.canonicalRecordsSha256 &&
+    kcTownHallContentSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.governedKnowledgeSha256 &&
+    fieldPracticeProofProjectionSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.proofProjectionSha256 &&
+    kcTownHallMdxSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.caseStudyMdxSha256 &&
+    fieldPracticeSharedPublicSurfacesSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.sharedPublicSurfacesSha256 &&
+    fieldPracticePublicReviewReportSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.publicReviewReportSha256;
+  const fieldPracticePrivatePathFree = !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(
+    JSON.stringify(kcTownHallFieldPractice) + fieldPracticeReport
+  );
+  const fieldPracticeEvidenceClosed = fieldPracticeClaims.every((claim) =>
+    claim?.evidence.every((evidence) =>
+      evidence.supports.length && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const fieldPracticeAffirmativeText = fieldPracticeClaims.flatMap((claim) => [
+    claim?.internalClaim,
+    ...(claim?.projections.map((projection) => projection.text) ?? []),
+    ...(claim?.evidence.flatMap((evidence) => [
+      evidence.publicNote,
+      evidence.internalExcerpt,
+      ...evidence.supports
+    ]) ?? [])
+  ]).filter(Boolean).join("\n");
+  const fieldPracticeAffirmativeSentences = fieldPracticeAffirmativeText
+    .split(/[.!?\n]+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+  const fieldPracticeSensitiveConcept = /(?:Phase One|first[- ]stage|general contractor|field coordinat|construction|restoration|rehabilitation|renovation|roof(?:ing)?|masonry|parapet|survey|questionnaire|handbill|respondent|resident[- ]feedback|neighborhood engagement|data(?:base| system)|site[- ]based listening|community mandate|Tired of Tires|tire (?:collection|pickup|service)|monthly (?:collection|pickup)|hauling|disposal|Indian Mound|Cleveland Avenue|Unify to Beautify|Pastor Lee|capital allocation|municipal investment)/i;
+  const fieldPracticeEpistemicFrame = /(?:Jamie (?:reports?|reported)|Jamie's reported|participant[- ]memory|memory (?:account|lead)|first[- ]person|remain(?:s|ed)? (?:held|open|uncorroborated|under research)|pending (?:corroboration|independent)|not (?:independently )?(?:established|verified|corroborated)|requires? independent|needs? (?:independent|a dated)|under research)/i;
+  const fieldPracticeEpistemicallyBounded = fieldPracticeAffirmativeSentences.every((sentence) =>
+    !/(?:Jamie|Jamie's)/i.test(sentence) ||
+      !fieldPracticeSensitiveConcept.test(sentence) ||
+      fieldPracticeEpistemicFrame.test(sentence)
+  );
+  const fieldPracticeOutcomeInflationFree = fieldPracticeAffirmativeSentences.every((sentence) => {
+    const attributesOutcome = /(?:Jamie|Jamie's|his (?:campaign|program)|the (?:campaign|program))[^.]{0,180}(?:yield(?:ed|ing)?|caus(?:ed|ing)|brought|secured|produced|established|resulted in)[^.]{0,120}(?:community mandate|capital|allocation|funding|municipal investment)/i.test(sentence);
+    return !attributesOutcome || fieldPracticeEpistemicFrame.test(sentence) || /(?:do not|does not|did not|cannot|without|require|needs?|pending|unverified|uncorroborated)/i.test(sentence);
+  });
+  const fieldPracticeOverclaimPatterns = [
+    /Jamie[^.]{0,120}(?:alone|sole(?:ly)?)[^.]{0,120}(?:survey|handbill|data system)/i,
+    /(?:proposal|archive|archives)[^.]{0,120}(?:prove|proves|establish|establishes)[^.]{0,120}Jamie[^.]{0,120}(?:designed|authored)[^.]{0,100}(?:survey|handbill|data system)/i,
+    /(?:survey|site conversations?)[^.]{0,100}(?:statistically representative|audited (?:community )?mandate)/i,
+    /(?:public archive|public archives|Ghost|social (?:archive|records?))[^.]{0,120}(?:prove|proves|establish|establishes)[^.]{0,120}Jamie[^.]{0,160}(?:individual(?:ly)?|alone|sole(?:ly)?|designed|coordinated|drove|unloaded|logged|operated)/i,
+    /Jamie[^.]{0,120}(?:alone|sole(?:ly)?)[^.]{0,120}(?:created|founded|co-founded|Cleveland Avenue|Unify to Beautify)/i,
+    /Jamie[^.]{0,100}originated[^.]{0,80}Pastor Lee/i,
+    /Jamie[^.]{0,120}(?:caused|secured|drove|resulted in)[^.]{0,120}(?:capital|allocation|funding)/i,
+    /(?:verified|confirmed)[^.]*(?:Jamie[^.]{0,100}(?:alone|sole(?:ly)?|caused)|general contractor|Phase One[^.]{0,40}completed in 2019)/i
+  ];
+  const fieldPracticeOverclaimFree = fieldPracticeOverclaimPatterns.every(
+    (pattern) => !pattern.test(fieldPracticeAffirmativeText)
+  );
+  const kcTownHallRenderedProofText = [
+    kcTownHallProof?.publicWording,
+    kcTownHallProof?.shortWording,
+    kcTownHallProof?.detailedPublicWording,
+    kcTownHallAdditionalPublicSurfaceText
+  ].filter(Boolean).join("\n");
+  const fieldPracticeHeldFromRenderedProof = kcTownHallRenderedProofText
+    .split(/[.!?\n]+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean)
+    .every((sentence) => {
+      const constructionResult = /(?:Phase One|first[- ]stage|construction|restoration|rehabilitation|renovation|roof(?:ing)?|masonry|parapet)/i.test(sentence) &&
+        /(?:deliver(?:ed|y)|complet(?:e|ed|ion)|finish(?:ed)?|built|restor(?:e|ed)|rehabilitat(?:e|ed)|renovat(?:e|ed)|manage(?:d)?|coordinat(?:e|ed)|direct(?:ed)?|oversee|oversaw|led|lead|spearhead(?:ed)?|supervis(?:e|ed)|execut(?:e|ed)|administ(?:er|ered)|orchestrat(?:e|ed)|carr(?:y|ied) out)/i.test(sentence);
+      const surveyAuthorship = /(?:resident[- ]feedback|neighborhood (?:feedback|engagement)|survey|questionnaire|handbill|respondent|data(?:base| system)|community mandate|site[- ]based listening)/i.test(sentence) &&
+        /(?:built|creat(?:e|ed)|design(?:ed)?|author(?:ed)?|implement(?:ed)?|produc(?:e|ed)|establish(?:ed)?|develop(?:ed)?|fashion(?:ed)?|assembl(?:e|ed)|invent(?:ed)?|devis(?:e|ed)|engineer(?:ed)?|launch(?:ed)?|formulat(?:e|ed)|orchestrat(?:e|ed)|\bmade\b)/i.test(sentence);
+      const heldProgram = /(?:Tired of Tires|tire (?:collection|pickup|service)|Indian Mound|Cleveland Avenue|Unify to Beautify|Pastor Lee)/i.test(sentence);
+      return !/general contractor|\bGC\b/i.test(sentence) &&
+        !/Phase One[^.]{0,60}(?:completed|complete) in 2019/i.test(sentence) &&
+        !constructionResult &&
+        !surveyAuthorship &&
+        !heldProgram;
+    });
+  const fieldPracticeComplete = Boolean(
+    kcTownHallFieldPractice.intakeItems.length === fieldPractice.expectedIntakeCount &&
+      kcTownHallFieldPractice.observations.length === fieldPractice.expectedObservationCount &&
+      kcTownHallFieldPractice.sources.length === fieldPractice.expectedSourceCount &&
+      kcTownHallFieldPractice.claims.length === fieldPractice.expectedClaimCount &&
+      kcTownHallFieldPractice.researchInquiries.length === fieldPractice.expectedInquiryCount &&
+      fieldPracticeContentSha256 === fieldPractice.approvedContentSha256 &&
+      fieldPracticeReviewLocksMatch &&
+      fieldPracticeIntakes.every((intake) =>
+        intake?.boundaries.length >= 3 && intake.sourceIds.length && intake.observationIds.length && intake.researchInquiryIds.length
+      ) &&
+      fieldPracticeObservations.every((observation) =>
+        observation?.locator && observation.limitations.length >= 2 && observation.claimIds.length && observation.researchInquiryIds.length
+      ) &&
+      fieldPracticeObservations.filter((observation) => observation?.kind === "participant-memory").length === 7 &&
+      fieldPracticeObservations.filter((observation) => observation?.kind === "participant-memory").every(
+        (observation) => observation?.status === "captured"
+      ) &&
+      fieldPracticeSources.every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length >= 3) &&
+      fieldPracticeProtectedSources.every((source) =>
+        source?.visibility === "protected" &&
+          source.preservationStatus === "private" &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl
+      ) &&
+      fieldPracticeReviewSource?.visibility === "public" &&
+      fieldPracticeReviewSource.kind === "research-run" &&
+      fieldPracticeReviewSource.canonicalUrl?.endsWith(fieldPractice.documentationPath) &&
+      fieldPracticeReviewSource.doesNotEstablish.some((boundary) => /independently verified/i.test(boundary)) &&
+      fieldPracticeClaims.every((claim) =>
+        claim?.status === "use-with-care" &&
+          claim.boundaries.length >= 3 &&
+          claim.antiClaims.length >= 4 &&
+          claim.projections.length > 0 &&
+          claim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+      ) &&
+      fieldPracticeOverclaimFree &&
+      fieldPracticeEpistemicallyBounded &&
+      fieldPracticeOutcomeInflationFree &&
+      fieldPracticeHeldFromRenderedProof &&
+      fieldPracticeEvidenceClosed &&
+      fieldDeliveryClaim?.boundaries.some((boundary) =>
+        /does not independently establish general-contractor title or actual Phase One completion/i.test(boundary)
+      ) &&
+      fieldDeliveryClaim.antiClaims.some((antiClaim) => /proposal proves Jamie was general contractor/i.test(antiClaim)) &&
+      fieldDeliveryClaim.antiClaims.some((antiClaim) => /proposal proves Phase One was completed in 2019/i.test(antiClaim)) &&
+      tireRoleClaim?.boundaries.some((boundary) => /Indian Mound expansion needs/i.test(boundary)) &&
+      tireRoleClaim.boundaries.some((boundary) => /not completed service units/i.test(boundary)) &&
+      fieldPracticeInquiries.every((inquiry) =>
+        inquiry?.findings.length >= 2 && inquiry.limitations.length >= 3 && inquiry.sourceIds.length >= 2
+      ) &&
+      fieldPracticeInquiries.some((inquiry) => inquiry?.resultStatus === "inconclusive") &&
+      fieldPracticeInquiries.some((inquiry) => inquiry?.resultStatus === "partially-recovered") &&
+      fieldPracticeProofCoverage.every((coverage) =>
+        coverage &&
+          fieldPractice.sourceIds.some((sourceId) => coverage.sourceIds.includes(sourceId)) &&
+          fieldPractice.inquiryIds.some((inquiryId) => coverage.researchInquiryIds.includes(inquiryId))
+      ) &&
+      /does not use[\s\S]{0,50}general contractor/i.test(fieldPracticeReport) &&
+      /not later independent proof of completion/i.test(fieldPracticeReport) &&
+      /source body did not materialize/i.test(fieldPracticeReport) &&
+      /website remains\s+unchanged/i.test(fieldPracticeReport) &&
+      fieldPracticePrivatePathFree &&
+      fieldPractice.claimIds.every((id) => !publicRegistryText.includes(id)) &&
+      !/general contractor|Phase One was completed in 2019/i.test(kcTownHallMdx)
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...kcthFullClaims, ...fieldPracticeClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -1924,6 +2135,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        fieldPracticeComplete &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 3 && item.sourceIds.length > 1 && item.observationIds.length)
       ),
       evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, one institutional-capacity analysis, one bounded KC Town Hall funding lifecycle, ${archiveIntakes.filter(Boolean).length}/${archive.expectedIntakeCount} working-archive intakes, ${googleDriveIntakes.filter(Boolean).length}/${googleDrive.expectedIntakeCount} Shared Drive intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
@@ -1935,6 +2147,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        fieldPracticeComplete &&
         allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
       ),
       evidence: [`${allEvaluatedObservations.filter(Boolean).length} proposition-level observations have locators, limitations, and claim or inquiry links`]
@@ -1950,6 +2163,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        fieldPracticeComplete &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
       evidence: [`${expansionSources.filter(Boolean).length + secondExpansionSources.filter(Boolean).length}/${expansion.expectedSourceCount + secondExpansion.expectedSourceCount} source-expansion records, ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles, four KC Town Hall government records, ${archiveSources.filter(Boolean).length}/${archive.expectedSourceCount} working-archive sources, and ${googleDriveSources.filter(Boolean).length}/${googleDrive.expectedSourceCount} Shared Drive sources have explicit support and doesNotEstablish boundaries`]
@@ -1965,7 +2179,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         kcTownHallComplete &&
         archiveProductionComplete &&
         googleDriveComplete &&
-        socialMediaComplete,
+        socialMediaComplete &&
+        fieldPracticeComplete,
         triangulatedExpansionClaims.length >= 8
       ),
       evidence: [`${allExpansionClaims.filter(Boolean).length} source-expansion claims, one repository-backed implementation claim, and the KC Town Hall appropriation lifecycle matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
@@ -1982,6 +2197,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        fieldPracticeComplete &&
         Boolean(fairRentPage)
       ),
       evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections; the KC Town Hall page retains the complete bounded funding lifecycle; four mature creative-technology claims remain held while four archive-supported claims have selected projections`]
@@ -1999,13 +2215,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveProductionComplete &&
         googleDriveComplete &&
         socialMediaComplete &&
+        fieldPracticeComplete &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
       evidence: [`Hiring-relevant NYCAC assertions, one complete KC Town Hall funding lifecycle, two CRS records, two protected participation-workflow claims, one bounded method claim, and one certificate-backed completion claim have governed projections; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
     },
     {
       criterionId: "KB-EVAL-SAFETY",
-      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
+      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && fieldPracticeComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
       evidence: [errors.length ? `${errors.length} canonical validation errors` : "Canonical validation passes with no private-path or protected-locator leak"]
     },
     {
@@ -2022,7 +2239,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         pressInquiry?.resultStatus === "partially-recovered" &&
         archiveProductionComplete &&
         googleDriveComplete &&
-        socialMediaComplete
+        socialMediaComplete &&
+        fieldPracticeComplete
       ),
       evidence: [photoChainComplete
         ? `${heldExpansionClaims.length} newly mature claims, four working-archive claims, and the complete press-archive claim remain held beside open inquiries, memory leads, and the protected photo feedback chain`
@@ -2069,6 +2287,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [kcthFullPopulationComplete
         ? `All ${kcthFull.expectedProfileCount} surviving profile-count items are recovered through ${kcthRecords.length} unique records; the ledger preserves ${kcthUniqueShortUrls.size} posted short URLs, ${kcthFull.expectedTireWorkflowRecords} tire-workflow records, all ${kcthReposterRows.length} repost-bearing account statuses, ${kcthFull.expectedCouncilReposterAppearances} public appearances by ${kcthDistinctCouncilReposters.size} then-sitting Council-member accounts, and a ${kcthFull.expectedDirectCouncilResponses}-member direct-response floor while keeping outreach, amplification, endorsement, mutable reactions, collective authorship, and private service data bounded`
         : "KC Town Hall full-population production is missing a population object, fresh reconciliation, URL, source role, tire-workflow classification, complete repost audit, official-at-date check, direct-response derivation, metric-owner boundary, collective-authorship limit, private-data exclusion, held depth, or selective projection"]
+    },
+    {
+      criterionId: "KB-EVAL-KCTH-FIELD-PRACTICE",
+      score: score(fieldPracticeComplete),
+      evidence: [fieldPracticeComplete
+        ? `${fieldPracticeObservations.length} atomic observations preserve verified project facts and seven participant-memory propositions across ${fieldPracticeSources.length} bounded sources; all four individual-role claims remain held with protected-source, completion, authorship, service-unit, and collective-credit boundaries`
+        : "KC Town Hall field-practice production is missing a proposition, protected-source boundary, evidence relationship, held projection, completion distinction, individual-role limit, privacy check, research inquiry, or proof-coverage link"]
     }
   ];
 
@@ -2100,6 +2325,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         actualSha256: kcTownHallContentSha256,
         approvedSha256: kcTownHall.approvedContentSha256,
         matches: kcTownHallContentSha256 === kcTownHall.approvedContentSha256
+      },
+      kcTownHallFieldPractice: {
+        actualSha256: fieldPracticeContentSha256,
+        approvedSha256: fieldPractice.approvedContentSha256,
+        matches: fieldPracticeContentSha256 === fieldPractice.approvedContentSha256,
+        reviewLocksMatch: fieldPracticeReviewLocksMatch
       },
       archiveProduction: {
         actualSha256: archiveContentSha256,

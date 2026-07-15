@@ -442,9 +442,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Official records separately establish the CCED Board's recommendation, the Council's acceptance and authority to negotiate a funding agreement, the Council's appropriation, the absence of reported disbursement while the agreement remained under negotiation in 2022, and return of the full unused amount after withdrawal in 2024.",
     sourceBasis:
-      "Approved resume language supports Jamie's planning and documentation contribution. Kansas City Resolution 190649, Ordinance 190642, the May 17, 2022 CCED project update, and Ordinance 240317 separately support the institutional funding lifecycle; those municipal records do not establish Jamie's individual role.",
+      "Approved resume language supports Jamie's planning and documentation contribution. A protected 2019 proposal bundle additionally supports founder/project-manager attribution, multi-trade Phase One scope, substantial work reported by 2018, and the neighborhood-survey process; it does not independently establish general-contractor title, final 2019 completion, or component-level authorship. Kansas City Resolution 190649, Ordinance 190642, the May 17, 2022 CCED project update, and Ordinance 240317 separately support the institutional funding lifecycle; those municipal records do not establish Jamie's individual role.",
     guardrail:
-      "Say accepted and appropriated, not received, disbursed, spent, or completed. Keep the 2022 non-disbursement and 2024 withdrawal and return with any public account of the 2019 Council action. Do not attribute the institutional decisions to Jamie.",
+      "Say accepted and appropriated, not received, disbursed, spent, or completed. Keep the 2022 non-disbursement and 2024 withdrawal and return with any public account of the 2019 Council action. Do not attribute institutional decisions to Jamie or promote general-contractor, completion, daily field-coordination, or component-authorship propositions without independent corroboration.",
     doNotSay: [
       "KC Town Hall received or spent $490,539",
       "A funding agreement was executed",
@@ -460,12 +460,14 @@ export const proofClaims: ProofClaim[] = [
       "Legal details",
       "Property details",
       "Banking details",
-      "Stakeholder details"
+      "Stakeholder details",
+      "Resident survey and contact records",
+      "Raw proposal and web archives"
     ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
-    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-14"
+    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context", "construction-coordination", "participatory-design"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-town-hall-public-service-interface",

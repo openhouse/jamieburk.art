@@ -105,6 +105,12 @@ for the complete surviving account census, all posted URLs, resident-service
 workflow, public repost-list audit, Council-role checks, and collective-credit
 boundaries.
 
+See the
+[KC Town Hall field implementation and neighborhood-practice review](intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md)
+for the protected 2019 proposal close reading, participant-memory intake,
+survey and tire-service evidence, and research queues for Phase One,
+Tired of Tires, and Cleveland Avenue Unify to Beautify.
+
 See
 [projects/archive-production-2026-07-14.md](projects/archive-production-2026-07-14.md)
 for the public-safe production record from the Jamie Projects History, CRS,

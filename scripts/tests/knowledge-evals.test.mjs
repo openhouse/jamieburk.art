@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
+import { kcTownHallFieldPractice } from "../../apps/www/src/data/knowledge-bank/kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
@@ -30,11 +31,28 @@ function loadKcTownHallLedger() {
   return JSON.parse(readFileSync(kcTownHallLedgerPath, "utf8"));
 }
 
-test("knowledge-bank gate invalidates stale holdouts after the eval suite changes", () => {
+function refreshFieldPracticeApproval(targetSuite) {
+  targetSuite.pilot.kcTownHallFieldPractice.approvedContentSha256 = createHash("sha256")
+    .update(JSON.stringify({
+      intakes: kcTownHallFieldPractice.intakeItems,
+      observations: kcTownHallFieldPractice.observations,
+      sources: kcTownHallFieldPractice.sources,
+      claims: kcTownHallFieldPractice.claims,
+      inquiries: kcTownHallFieldPractice.researchInquiries
+    }))
+    .digest("hex");
+}
+
+test("knowledge-bank gate records two fresh field-practice holdout passes", () => {
   const result = evaluateKnowledgeBank(suite);
-  assert.equal(result.holdout.complete, false);
-  assert.equal(result.holdout.consecutivePassingRuns, 0);
-  assert.deepEqual(result.holdout.judgeIds, []);
+  assert.equal(result.holdout.complete, true);
+  assert.equal(result.holdout.consecutivePassingRuns, 2);
+  assert.deepEqual(result.holdout.judgeIds, [
+    "kcth-field-holdout-municipal-archivist-final-2026-07-15",
+    "kcth-field-holdout-skeptical-hiring-editor-final-2026-07-15"
+  ]);
+  assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
+  assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
 });
 
 test("knowledge-bank pilot retains every supplied intake item", () => {
@@ -1577,7 +1595,8 @@ test("complete maturation pilot meets every floor", () => {
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.belowMinimum, []);
   assert.equal(result.weightedScore, 5);
-  assert.equal(result.accepted, false);
+  assert.equal(result.holdout.complete, true);
+  assert.equal(result.accepted, true);
 });
 
 test("social archive passes its deterministic account and engagement criterion", () => {
@@ -1810,6 +1829,381 @@ test("KC Town Hall reserve claims remain off public surfaces", () => {
   assert.ok(heldClaims.every((claim) =>
     claim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
   ));
+});
+
+test("KC Town Hall field-practice production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  const criterion = result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE"
+  );
+
+  assert.equal(criterion?.score, 5);
+  assert.equal(kcTownHallFieldPractice.intakeItems.length, 3);
+  assert.equal(kcTownHallFieldPractice.observations.length, 13);
+  assert.equal(kcTownHallFieldPractice.sources.length, 5);
+  assert.equal(kcTownHallFieldPractice.claims.length, 4);
+  assert.equal(kcTownHallFieldPractice.researchInquiries.length, 4);
+});
+
+test("KC Town Hall field-practice eval rejects publication of a protected source", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019"
+  );
+  assert.ok(source);
+  const originalVisibility = source.visibility;
+
+  try {
+    source.visibility = "public";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.visibility = originalVisibility;
+  }
+});
+
+test("KC Town Hall field-practice eval rejects premature field-delivery projection", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY"
+  );
+  assert.ok(claim?.projections[0]);
+  const originalStatus = claim.projections[0].status;
+  const originalSurfaces = claim.projections[0].surfaces;
+
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/kc-town-hall"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.projections[0].status = originalStatus;
+    claim.projections[0].surfaces = originalSurfaces;
+  }
+});
+
+test("KC Town Hall field-practice eval requires the general-contractor and completion boundary", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY"
+  );
+  assert.ok(claim);
+  const originalBoundaries = claim.boundaries;
+
+  try {
+    claim.boundaries = claim.boundaries.filter(
+      (boundary) => !/does not independently establish general-contractor title or actual Phase One completion/i.test(boundary)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.boundaries = originalBoundaries;
+  }
+});
+
+test("KC Town Hall field-practice eval rejects individual-role and service-unit inflation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE"
+  );
+  assert.ok(claim);
+  const originalBoundaries = claim.boundaries;
+
+  try {
+    claim.boundaries = claim.boundaries.filter(
+      (boundary) => !/not completed service units/i.test(boundary)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.boundaries = originalBoundaries;
+  }
+});
+
+test("KC Town Hall field-practice eval rejects private-path leakage", () => {
+  const report = readFileSync(
+    path.join(repoRoot, suite.pilot.kcTownHallFieldPractice.documentationPath),
+    "utf8"
+  );
+  const result = evaluateKnowledgeBank(suite, {
+    kcTownHallFieldPracticeReport: `${report}\n/private/tmp/raw-proposal.txt`
+  });
+
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("KC Town Hall field-practice eval rejects sole survey authorship with counts preserved", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-NEIGHBORHOOD-SURVEY-PRACTICE"
+  );
+  assert.ok(claim);
+  const originalClaim = claim.internalClaim;
+
+  try {
+    claim.internalClaim = "The protected proposal proves Jamie alone designed the survey handbill and data system and produced a statistically representative community mandate.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.internalClaim = originalClaim;
+  }
+});
+
+test("KC Town Hall field-practice eval rejects individual tire-operations inflation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE"
+  );
+  assert.ok(claim);
+  const originalClaim = claim.internalClaim;
+
+  try {
+    claim.internalClaim = "The public archives prove Jamie individually designed, coordinated, drove, unloaded, and logged the monthly tire program.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.internalClaim = originalClaim;
+  }
+});
+
+test("KC Town Hall field-practice eval rejects Cleveland Avenue sole credit and capital causation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-CONTRIBUTION"
+  );
+  assert.ok(claim?.projections[0]);
+  const originalClaim = claim.internalClaim;
+  const originalProjection = claim.projections[0].text;
+
+  try {
+    claim.internalClaim = "Jamie alone created Cleveland Avenue Unify to Beautify, originated Pastor Lee's corridor vision, and caused a specific capital allocation.";
+    claim.projections[0].text = "Verified: Jamie alone created the program and caused the capital allocation.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.internalClaim = originalClaim;
+    claim.projections[0].text = originalProjection;
+  }
+});
+
+test("KC Town Hall rendered proof cannot publish held field-practice claims after hash refresh", () => {
+  const proof = proofClaims.find(
+    (item) => item.id === "kc-town-hall-public-benefit-documentation"
+  );
+  assert.ok(proof?.shortWording);
+  const originalWording = proof.shortWording;
+
+  try {
+    proof.shortWording = `${originalWording} Jamie led Phase One construction as GC and built the neighborhood feedback system.`;
+    const mutatedSuite = structuredClone(suite);
+    const staleHashResult = evaluateKnowledgeBank(mutatedSuite);
+    mutatedSuite.pilot.kcTownHallCouncilFunding.approvedContentSha256 =
+      staleHashResult.contentApprovals.kcTownHall.actualSha256;
+    const refreshedHashResult = evaluateKnowledgeBank(mutatedSuite);
+    assert.equal(refreshedHashResult.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(refreshedHashResult.accepted, false);
+  } finally {
+    proof.shortWording = originalWording;
+  }
+});
+
+test("KC Town Hall field-practice semantics survive approval-hash refresh", () => {
+  const surveyClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-NEIGHBORHOOD-SURVEY-PRACTICE"
+  );
+  const tireClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE"
+  );
+  const clevelandClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-CONTRIBUTION"
+  );
+  assert.ok(surveyClaim?.projections[0]);
+  assert.ok(tireClaim);
+  assert.ok(clevelandClaim);
+
+  const mutations = [
+    [surveyClaim, "internalClaim", "Jamie personally fashioned the questionnaire and respondent database, yielding a reliable neighborhood mandate."],
+    [tireClaim, "internalClaim", "Records show Jamie personally ran every monthly tire collection from intake through hauling and disposal."],
+    [clevelandClaim, "internalClaim", "Jamie was exclusively responsible for launching Cleveland Avenue Unify to Beautify, and his campaign brought municipal investment to the corridor."],
+    [surveyClaim.projections[0], "text", "Jamie personally built the resident questionnaire and database that established the community mandate."]
+  ];
+
+  for (const [record, key, value] of mutations) {
+    const original = record[key];
+    try {
+      record[key] = value;
+      const mutatedSuite = structuredClone(suite);
+      refreshFieldPracticeApproval(mutatedSuite);
+      const result = evaluateKnowledgeBank(mutatedSuite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score,
+        1,
+        `expected semantic rejection after field-practice hash refresh: ${value}`
+      );
+      assert.equal(result.accepted, false);
+    } finally {
+      record[key] = original;
+    }
+  }
+});
+
+test("KC Town Hall rendered proof rejects rehabilitation and feedback paraphrases after hash refresh", () => {
+  const proof = proofClaims.find(
+    (item) => item.id === "kc-town-hall-public-benefit-documentation"
+  );
+  assert.ok(proof?.shortWording);
+  const originalWording = proof.shortWording;
+
+  try {
+    proof.shortWording = `${originalWording} Jamie delivered the first-stage rehabilitation and created its resident-feedback infrastructure.`;
+    const mutatedSuite = structuredClone(suite);
+    const staleHashResult = evaluateKnowledgeBank(mutatedSuite);
+    mutatedSuite.pilot.kcTownHallCouncilFunding.approvedContentSha256 =
+      staleHashResult.contentApprovals.kcTownHall.actualSha256;
+    const result = evaluateKnowledgeBank(mutatedSuite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    proof.shortWording = originalWording;
+  }
+});
+
+test("KC Town Hall shared public surfaces cannot bypass the field-practice hold", () => {
+  const attempts = [
+    "Jamie spearheaded Phase One construction and delivered the roof restoration.",
+    "Jamie devised the neighborhood-engagement questionnaire and made its respondent database."
+  ];
+
+  for (const attempt of attempts) {
+    const result = evaluateKnowledgeBank(suite, {
+      kcTownHallAdditionalPublicSurfaceText: attempt
+    });
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score,
+      1,
+      `expected alternate public-surface rejection: ${attempt}`
+    );
+    assert.equal(result.accepted, false);
+  }
+});
+
+test("KC Town Hall field-practice review locks survive editable manifest refreshes", () => {
+  const fieldClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY"
+  );
+  const proof = proofClaims.find(
+    (item) => item.id === "kc-town-hall-public-benefit-documentation"
+  );
+  assert.ok(fieldClaim);
+  assert.ok(proof);
+
+  const originalFieldClaim = fieldClaim.internalClaim;
+  const originalSourceBasis = proof.sourceBasis;
+  try {
+    fieldClaim.internalClaim = "Burkart served as general contractor and completed Phase One in 2019.";
+    const fieldSuite = structuredClone(suite);
+    refreshFieldPracticeApproval(fieldSuite);
+    let result = evaluateKnowledgeBank(fieldSuite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, false);
+
+    fieldClaim.internalClaim = originalFieldClaim;
+    proof.sourceBasis = "The March 2019 proposal confirms that the initial build-out was finished.";
+    const proofSuite = structuredClone(suite);
+    const staleProofResult = evaluateKnowledgeBank(proofSuite);
+    proofSuite.pilot.kcTownHallCouncilFunding.approvedContentSha256 =
+      staleProofResult.contentApprovals.kcTownHall.actualSha256;
+    result = evaluateKnowledgeBank(proofSuite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, false);
+  } finally {
+    fieldClaim.internalClaim = originalFieldClaim;
+    proof.sourceBasis = originalSourceBasis;
+  }
+});
+
+test("KC Town Hall review locks reject holdout pronoun and synonym evasions", () => {
+  const targets = [
+    ["CLM-KCTH-NEIGHBORHOOD-SURVEY-PRACTICE", "He personally fashioned the questionnaire and respondent database, yielding a reliable neighborhood mandate."],
+    ["CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE", "Records show he personally ran every monthly tire collection from intake through hauling and disposal."],
+    ["CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-CONTRIBUTION", "He was exclusively responsible for launching Cleveland Avenue Unify to Beautify; the initiative attracted City investment to the corridor."],
+    ["CLM-KCTH-NEIGHBORHOOD-SURVEY-PRACTICE", "Jamie was the sole architect of the resident poll and response registry, which demonstrated broad local consensus."],
+    ["CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE", "Records establish Jamie was solely responsible for every recurring scrap-tire removal round."],
+    ["CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-CONTRIBUTION", "Jamie alone launched the Cleveland corridor beautification initiative, which unlocked public capital for the avenue."]
+  ];
+
+  for (const [claimId, mutation] of targets) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    assert.ok(claim);
+    const original = claim.internalClaim;
+    try {
+      claim.internalClaim = mutation;
+      const mutatedSuite = structuredClone(suite);
+      refreshFieldPracticeApproval(mutatedSuite);
+      const result = evaluateKnowledgeBank(mutatedSuite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score,
+        1,
+        `expected code-level review-lock rejection: ${mutation}`
+      );
+      assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, false);
+    } finally {
+      claim.internalClaim = original;
+    }
+  }
+});
+
+test("KC Town Hall proof review lock rejects the holdout's stabilization paraphrase", () => {
+  const proof = proofClaims.find(
+    (item) => item.id === "kc-town-hall-public-benefit-documentation"
+  );
+  assert.ok(proof?.shortWording);
+  const original = proof.shortWording;
+
+  try {
+    proof.shortWording = "Jamie was responsible for the opening stabilization stage and originated its resident-input mechanism.";
+    const mutatedSuite = structuredClone(suite);
+    const staleResult = evaluateKnowledgeBank(mutatedSuite);
+    mutatedSuite.pilot.kcTownHallCouncilFunding.approvedContentSha256 =
+      staleResult.contentApprovals.kcTownHall.actualSha256;
+    const result = evaluateKnowledgeBank(mutatedSuite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+    assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, false);
+  } finally {
+    proof.shortWording = original;
+  }
+});
+
+test("KC Town Hall case-study MDX review lock survives approval-hash refresh", () => {
+  const originalMdx = readFileSync(
+    path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
+    "utf8"
+  );
+  const mutatedMdx = `${originalMdx}\nJamie delivered the opening stabilization stage and created its resident-input mechanism.\n`;
+  const mutatedSuite = structuredClone(suite);
+  mutatedSuite.pilot.kcTownHallCouncilFunding.approvedMdxSha256 = createHash("sha256")
+    .update(mutatedMdx)
+    .digest("hex");
+  const result = evaluateKnowledgeBank(mutatedSuite, { kcTownHallMdx: mutatedMdx });
+
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+  assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, false);
+  assert.equal(result.accepted, false);
+});
+
+test("KC Town Hall public review report is inside the field-practice review lock", () => {
+  const report = readFileSync(
+    path.join(repoRoot, suite.pilot.kcTownHallFieldPractice.documentationPath),
+    "utf8"
+  );
+  const result = evaluateKnowledgeBank(suite, {
+    kcTownHallFieldPracticeReport: `${report}\nRecords establish Burkart completed the opening stabilization and personally authored the resident-input apparatus.\n`
+  });
+
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FIELD-PRACTICE")?.score, 1);
+  assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, false);
+  assert.equal(result.accepted, false);
 });
 
 test("shared-account authorship remains an open inquiry and KC Spaces stays held", () => {

@@ -195,7 +195,7 @@ bundle.
 
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official records separately establish the Board recommendation, Council acceptance and negotiation authority, Council appropriation, the 2022 no-disbursement and still-negotiating status, and return of the unused amount after withdrawal in 2024.
 
-**Evidence division:** The approved resume supports Jamie's planning and documentation contribution. The four municipal records support the institutional funding lifecycle and do not establish Jamie's individual role in those decisions.
+**Evidence division:** The approved resume supports Jamie's planning and documentation contribution. A protected 2019 proposal bundle separately supports founder/project-manager attribution, multi-trade scope, substantial 2018 work, and the neighborhood-survey process; it does not establish general-contractor title or final 2019 completion. The four municipal records support the institutional funding lifecycle and do not establish Jamie's individual role in those decisions.
 
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
@@ -204,7 +204,7 @@ bundle.
 **Do not say:** KC Town Hall received or spent $490,539; a funding agreement was executed; the City funded construction or completion; Jamie secured or caused the Board recommendation or Council appropriation; the record establishes why the project withdrew.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-15
 
 ## kc-town-hall-public-service-interface - Recurring public service interface
 
@@ -223,6 +223,50 @@ bundle.
 **Protected boundaries:** Resident addresses, phone numbers, direct messages, private service records, account credentials, and private analytics stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
+
+## CLM-KCTH-PHASE-ONE-FIELD-DELIVERY - Phase One field delivery
+
+**Status:** Use with care; held
+**Support level:** Partial protected support plus participant memory
+**Evidence class:** Protected proposal bundle / participant-memory intake
+**Working wording:** Jamie reports serving as Phase One general contractor and daily field coordinator. The proposal independently identifies him as founder and project manager, documents a multi-trade team and cold-shell scope, and reports substantial 2018 work.
+**Where to project:** Knowledge bank only until title and final completion are corroborated.
+**Guardrail:** The proposal does not call Jamie general contractor and does not independently prove Phase One completion in 2019.
+**Do not say:** The proposal proves the general-contractor title; the proposal proves 2019 completion; Jamie alone performed the restoration; the City appropriation funded Phase One.
+**Research inquiry:** `INQ-KCTH-PHASE-ONE-ROLE-AND-COMPLETION`
+
+## CLM-KCTH-NEIGHBORHOOD-SURVEY-PRACTICE - Neighborhood survey practice
+
+**Status:** Use with care; held
+**Support level:** Strong project-level process; individual contribution under research
+**Evidence class:** Protected proposal and support letters / participant-memory intake
+**Working wording:** KC Town Hall used a compact neighborhood survey whose results shaped proposed site uses. Jamie reports designing the handbill and data system and using daily site presence as a listening practice.
+**Where to project:** Knowledge bank only until component authorship is corroborated and editorially selected.
+**Guardrail:** Project-level survey use does not assign individual design authorship, prove representative participation, or authorize publication of resident data.
+**Do not say:** Jamie alone designed the system; the survey was statistically representative; every resident supported the uses; site conversations produced an audited mandate.
+**Research inquiry:** `INQ-KCTH-SURVEY-DESIGN-AND-FIELD-PRACTICE`
+
+## CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE - Tired of Tires individual role
+
+**Status:** Use with care; held
+**Support level:** Strong program identity; individual role under research
+**Evidence class:** Protected web archive / complete social corpus / participant-memory intake
+**Working wording:** Public archives establish a recurring joint KC Town Hall and Oak Park tire-pickup service. Jamie reports designing and coordinating it with the City, carrying out monthly field operations and logging, and later extending it to Indian Mound.
+**Where to project:** Knowledge bank only until individual role and expansion are corroborated.
+**Guardrail:** Shared accounts do not establish individual authorship or operations; workflow records are not completed pickups or audited outcomes.
+**Do not say:** Jamie alone created or operated the program; every report became a pickup; the archive proves the Indian Mound expansion; project-reported counts are audited City totals.
+**Research inquiry:** `INQ-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE`
+
+## CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-CONTRIBUTION - Cleveland Avenue contribution
+
+**Status:** Use with care; held
+**Support level:** Participant memory; research needed
+**Evidence class:** Participant-memory intake / protected neighborhood-service context
+**Working wording:** Jamie reports co-founding Cleveland Avenue Unify to Beautify and contributing identity, photography, social media, listening-session maps, resident-reporting materials, printing, and distribution.
+**Where to project:** Knowledge bank only pending collaborator, program, and public-record corroboration.
+**Guardrail:** Credit Pastor Lee's corridor vision and the coalition's collective work. Do not infer a causal relationship to capital allocation.
+**Do not say:** Jamie alone created the program; Jamie originated Pastor Lee's vision; the program caused a specific allocation; hundreds of handbills are independently verified.
+**Research inquiry:** `INQ-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY`
 
 ## source-backed-team-memory-method - Source-backed team memory
 

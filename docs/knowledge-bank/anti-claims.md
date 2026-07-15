@@ -139,6 +139,25 @@ and the contract status reported at publication. It does not establish the later
 withdrawal reason, funding receipt or expenditure, construction, completion, or
 Jamie's individual role.
 
+Do not say the protected 2019 proposal proves that Jamie was Phase One general
+contractor or that Phase One was completed in 2019. It supports
+founder/project-manager attribution, a multi-trade scope, substantial work
+reported by 2018, and a project-level neighborhood-survey process.
+
+Do not assign Jamie individual authorship of the survey handbill, backing data
+system, Tired of Tires program, Cleveland Avenue identity, maps, social media,
+printing, or distribution solely from shared project artifacts or his
+participant-memory account. Do not publish resident responses, contact data,
+addresses, phone numbers, credentials, subscriber records, financial records,
+or raw protected archives.
+
+Do not turn tire-workflow records into completed pickups, households, or
+audited outcomes. Do not claim the Indian Mound expansion without a dated
+public artifact or collaborator confirmation. Do not claim Cleveland Avenue
+Unify to Beautify caused a capital allocation without public decision records
+and decision-maker attribution. Preserve Pastor Lee's corridor vision and the
+coalition's collective credit.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
