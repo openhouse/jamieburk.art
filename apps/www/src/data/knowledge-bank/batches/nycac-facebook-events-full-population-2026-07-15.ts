@@ -267,6 +267,19 @@ export const nycacFacebookEventsFullPopulationBatch20260715: {
   ],
   sourceAssertions: [
     {
+      id: "AST-NYCAC-FACEBOOK-EVENT-SURFACE-2026",
+      sourceId: "SRC-NYCAC-FACEBOOK-EVENT-SURFACE-2026",
+      project: "nyc-artist-coalition",
+      assertion:
+        "Repeated authenticated scrolling of NYC Artist Coalition's live Facebook Past Events surface stabilized at 33 distinct event IDs, while an earlier host control displayed 34 past-event slots.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-NYCAC-FACEBOOK-EVENT-POPULATION"],
+      publicSafe: true,
+      reviewedAt,
+      reviewedBy
+    },
+    {
       id: "AST-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
       sourceId: "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
       project: "nyc-artist-coalition",

@@ -285,7 +285,7 @@ check(
     sourceById.has("SRC-NYCAC-FACEBOOK-EVENT-PROTECTED-RUN-2026") &&
     knowledgeBank.sourceAssertions.filter((assertion) =>
       assertion.id.startsWith("AST-NYCAC-FACEBOOK-")
-    ).length === 8 &&
+    ).length === 9 &&
     participationClaim?.status === "confirmed-with-boundary" &&
     responseClaim?.status === "confirmed-with-boundary" &&
     democracyClaim?.status === "use-with-care" &&

@@ -22,9 +22,9 @@ produce**, with collective and cohost credit preserved.
 
 ## Population Accounting
 
-Facebook's event-host control displayed **34 past events**. Repeated
-authenticated scrolling reached a stable population of **33 distinct event
-IDs**, and all 33 exposed records were reviewed.
+Facebook displayed 34 NYC Artist Coalition past-event slots. The knowledge bank
+recovered all 33 event identities exposed by the live index and preserves the
+remaining slot as unresolved.
 
 A fresh authenticated replay on July 15 reached the same 33 IDs after two
 growth rounds and ten further no-growth rounds. Its sorted event-ID SHA-256
@@ -59,6 +59,10 @@ is not converted into "never existed."
 | **Total** | **33** |
 
 ## Jamie's Role
+
+Jamie describes the recurring event and participation layer as a major part of
+his NYC Artist Coalition contribution. The surviving population corroborates
+the collective system's public form while leaving event-level authorship open.
 
 Jamie describes the event practice as the place where lessons from WOW List's
 "Being there changes everything" ethos met legislative advocacy. In his
@@ -116,11 +120,9 @@ venue, or that one event caused a policy outcome.
 
 ## Visible Traction
 
-Thirty-two recovered event pages display a historical Facebook response count:
-
-- 19 display at least 100 responses;
-- seven display at least 500; and
-- three display at least 1,000.
+Thirty-two recovered event pages display Facebook response counts; 19 show at
+least 100 responses, seven at least 500, and three at least 1,000. The figures
+remain event-level platform signals only.
 
 These are event-level interface labels. They are not verified attendance,
 unique people, reach, participation, endorsement, conversion, mandate, or
