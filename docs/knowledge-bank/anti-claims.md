@@ -99,3 +99,17 @@ without separate evidence and authorization.
 
 Do not name the private collaborator, publish pricing, publish private
 transcript context, or imply deployment inside the collaborator's company.
+
+## Personal Social Record
+
+Do not equate the complete live-profile population with all content ever
+created on the account. Do not attribute externally authored native reposts to
+Jamie. Do not treat mission-signal counts as measures of labor or priority.
+
+Do not treat posted links as proof of authorship, agreement, endorsement,
+partnership, readership, participation, or impact. Do not treat volatile
+visible counters as unique people, reach, conversion, attendance, or outcome.
+
+Do not publish raw historical post text, non-mission personal context, private
+analytics, direct messages, account settings, authentication state, credentials,
+or historical contact details from the protected research capture.

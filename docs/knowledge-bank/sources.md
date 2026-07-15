@@ -28,6 +28,16 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public campaign domain.
 - NTER CHNG archived project site and surviving Vimeo project video.
 - America: Now and Here Kansas City archived visual-artists page.
+- Urbanhermit public-safe 434-record live-profile corpus and transformation
+  manifest.
+- Music Hackathon / Music Community Lab's 2015 public WOW List attribution.
+- NPR's archived 2016 Horse Lords `Truthers` video feature.
+- KCUR's 2016 8th Street Tunnel report.
+- NYC Artist Coalition and peer public records attributing advocacy statements
+  and Cabaret Law work.
+- KC Town Hall and Jimmy Fitzner public records documenting shared tire-pickup
+  participation.
+- Brooklyn Daily Eagle's 2017 Office of Nightlife report.
 
 ### Public-Safe Archive Summary
 
@@ -56,6 +66,21 @@ paths, raw correspondence, lists, payment records, credentials, and sensitive
 personal or financial material.
 
 AI-assisted archival review is not a human collaborator testimonial.
+
+### Personal Public-Account Corpus
+
+The July 15, 2026 authenticated Urbanhermit pass accounts for all 434 records
+represented by the live profile counter. The committed source is a metadata-only
+corpus with stable status URLs, dates, record and source-authorship classes,
+posted-link metadata, auditable mission-signal evidence, bounded incoming
+response, and dated visible counters.
+
+The corpus deliberately excludes raw post text, profile biography, historical
+contact details, cookies, credentials, authentication state, direct messages,
+private analytics, and non-mission personal context. The raw authenticated
+research run remains protected. The public corpus supports population and
+source-discovery claims; article-level claims require close reading of the
+destination or an independently authored attribution.
 
 ### Firsthand / Collaborator Context
 

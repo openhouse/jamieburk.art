@@ -635,6 +635,200 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## urbanhermit-personal-public-working-surface - Cross-project public record
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public corpus / public-safe metadata
+**Public wording:** From 2008 through 2023, Jamie's personal public account
+preserved a cross-project working record spanning community platforms, civic
+participation, cultural-space advocacy, public history, creative media, and
+neighborhood work.
+**Detailed public-safe wording:** A hash-locked metadata corpus accounts for all
+434 records represented by the live profile counter while separating Jamie's
+originals and replies from externally authored native reposts.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Establishes a durable cross-project discovery surface for
+future source and claim development without publishing a personal transcript.
+**Guardrail:** Complete means all 434 records represented by the live profile
+counter on July 15, 2026, not all content ever created. External reposts retain
+their original authorship; mission categories are retrieval aids.
+**Do not say:** Every record was authored by Jamie; no older content was
+deleted; posting establishes endorsement, partnership, reach, or impact.
+**Protected boundaries:** Raw post text, private analytics, personal context,
+authentication state, direct messages, and historical contact details stay
+outside the public repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-bounded-stakeholder-response - Recovered public response
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the bounded result
+**Evidence class:** Authenticated public search / public-safe metadata
+**Public wording:** A year-bounded search recovered 15 mission-relevant
+third-party records from nine accounts across several project lineages.
+**Detailed public-safe wording:** The retained records span creative, civic,
+coalition, neighborhood, public-history, and project-account contexts while
+nine non-mission personal results survive only as identity-free dispositions.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Supplies attributable evidence of relationship and public
+uptake without converting a bounded search result into an endorsement count.
+**Guardrail:** This excludes likes, private activity, deleted or unindexed
+records, direct messages, and responses that omit the handle. Stakeholder
+categories are not endorsements.
+**Do not say:** All historical engagement was recovered; nine accounts endorsed
+Jamie; public response proves reach or professional impact.
+**Protected boundaries:** Non-mission personal identities, private activity,
+direct messages, and protected capture details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-visible-traction-snapshot - Dated visible counters
+
+**Status:** Use with care
+**Support level:** Strong for the dated interface observation
+**Evidence class:** Public-safe metadata
+**Public wording:** On July 15, 2026, 85 of 353 account-authored records
+displayed 175 likes, eight replies, and 60 reposts.
+**Detailed public-safe wording:** The snapshot retains only displayed counters
+on Jamie-authored originals and replies and excludes counters attached to
+externally authored native reposts.
+**Where to project:** Research record only.
+**Why it matters:** Preserves an auditable dated observation while preventing
+volatile platform labels from becoming an accomplishment or impact claim.
+**Guardrail:** These are 243 volatile interaction units, not 243 people, and
+not reach, endorsement, conversion, attendance, or impact.
+**Do not say:** The account reached 243 people; the snapshot is a complete
+historical engagement total.
+**Protected boundaries:** Private analytics, follower exports, identity-level
+interaction data, and authenticated account surfaces stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-wowlist-peer-attribution - WOW List making role
+
+**Status:** Confirmed with boundary
+**Support level:** Strong attribution
+**Evidence class:** Public peer record / public project record
+**Public wording:** In 2015, Music Hackathon / Music Community Lab identified
+Jamie as a co-organizer and credited him with making WOW List as an event-sharing
+service.
+**Detailed public-safe wording:** The public peer record gives external role and
+product attribution while the earlier project record preserves Sunday Dinner
+lineage and Jamie as one of multiple builders.
+**Where to project:** Knowledge bank; future WOW List composition if selected.
+**Why it matters:** Strengthens the product-and-community-systems record with a
+contemporaneous outside attribution.
+**Guardrail:** WOW List was collective work built with Richard Kim and other
+collaborators and organizers; the post does not document complete architecture,
+ownership, or division of labor.
+**Do not say:** Jamie alone created WOW List; the post proves adoption or impact.
+**Protected boundaries:** Private ownership records, collaborator correspondence,
+user data, and unapproved collaborator detail stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-horse-lords-truthers-video - Shared video credit
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Independent published article / contemporaneous public records
+**Public wording:** Jamie Burkart and M.C. Schmidt co-created the official video
+for Horse Lords' `Truthers`; NPR published it in April 2016.
+**Detailed public-safe wording:** NPR directly credits both video creators, and
+contemporaneous public posts independently preserve the same shared attribution.
+**Where to project:** Knowledge bank; future creative-media composition if
+rights and audience fit are resolved.
+**Why it matters:** Documents creative-technology collaboration and national
+editorial publication with unusually clear shared credit.
+**Guardrail:** Credit remains shared with M.C. Schmidt, and Horse Lords created
+the music. The precise division of labor and rights arrangement are not
+recovered.
+**Do not say:** Jamie alone created the video or music; NPR publication proves
+audience impact.
+**Protected boundaries:** Commission terms, rights arrangements, original media,
+and unreleased production records stay offline unless separately cleared.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-eighth-street-tunnel-program - Participatory public history
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Independent published article / collaborator attribution
+**Public wording:** In 2006, Jamie led participants through downtown Kansas
+City on a scavenger-hunt-like route and hosted a three-film screening inside
+the historic 8th Street Tunnel.
+**Detailed public-safe wording:** KCUR records the route, screening, three-part
+program, and Jamie's public-history and access rationale; a collaborator post
+attributes the historical interpretation to him.
+**Where to project:** Knowledge bank; future participatory-program composition
+if rights, captions, and audience fit are resolved.
+**Why it matters:** Shows Jamie designing participation around place, media,
+history, and public imagination well before his later civic-systems work.
+**Guardrail:** Participants and filmmakers retain their roles and authorship.
+The record does not establish ownership, restoration, formal opening,
+attendance, authorization terms, or measured impact.
+**Do not say:** Jamie opened or restored the tunnel; Jamie made all three films.
+**Protected boundaries:** Unrecovered permission records, participant identities,
+unreleased media, and rights-sensitive assets stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-nycac-public-speaker-attribution - Coalition advocacy voice
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for attribution
+**Evidence class:** Coalition public records / peer attribution
+**Public wording:** NYC Artist Coalition records attribute to Jamie statements
+connecting small diverse spaces to New York's cultural traditions and framing
+Cabaret Law repeal as a path toward trust and safety resources.
+**Detailed public-safe wording:** Two coalition posts preserve Jamie's attributed
+public arguments, while a peer record recognizes Jamie and Julia Fredenburg's
+work on the repeal effort without assigning sole causation.
+**Where to project:** Knowledge bank; future NYC Artist Coalition composition
+if selected.
+**Why it matters:** Establishes Jamie as a visible translator of cultural-space
+experience into public policy argument inside collective advocacy.
+**Guardrail:** This is speaking and peer-attribution evidence inside collective
+work. Credit remains shared with Julia Fredenburg, coalition collaborators,
+partners, artists, venue workers, Councilmember Rafael Espinal, Council
+colleagues, and other participants.
+**Do not say:** Jamie alone repealed the Cabaret Law, authored the legislation,
+or solely created coalition strategy.
+**Protected boundaries:** Private coalition deliberations, strategy records,
+collaborator correspondence, and unapproved testimony detail stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-kcth-tire-pickup-participation - Neighborhood fieldwork
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for direct participation
+**Evidence class:** Project public record / first-hand participant account
+**Public wording:** Public project and participant records confirm Jamie's
+direct participation in recurring neighborhood tire pickup, including a
+dump-truck shift in Northeast Kansas City.
+**Detailed public-safe wording:** A KC Town Hall operating update names Jamie
+among participants, Jimmy Fitzner supplies a first-hand shared-shift account,
+and the archived project record preserves the wider partnership and workflow.
+**Where to project:** Knowledge bank; future KC Town Hall composition if
+selected.
+**Why it matters:** Moves this part of Jamie's neighborhood record from personal
+recollection to attributable evidence of direct field participation.
+**Guardrail:** Tired of Tires was shared neighborhood work involving KC Town
+Hall, Oak Park Neighborhood Association, Julia Fredenburg, Pat Clarke, Forest
+Tyson Jr., Jimmy Fitzner, neighbors, and City staff. The evidence does not prove
+sole design, every shift, complete geography, or audited outcomes.
+**Do not say:** Jamie alone created or operated Tired of Tires; Jamie performed
+every pickup; public posts independently verify all totals.
+**Protected boundaries:** Resident contacts, pickup requests, disposal records,
+private neighborhood files, and unapproved participant correspondence stay
+offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  

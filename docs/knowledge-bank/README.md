@@ -106,6 +106,15 @@ The full NYC Artist Coalition population-accounting pass is documented in
 with a public-safe raw extraction, deterministic derivation, and explicit
 1,757-item recovery gap.
 
+The personal [@urbanhermit full-population pass](runs/2026-07-15-urbanhermit-x-full-population.md)
+reconciles all 434 records represented by the live profile counter. Its
+[public-safe corpus](corpora/urbanhermit-x-full-population-2026-07-15.json),
+manifest, checked-in classification rules, and deterministic checker preserve
+record types, posted-link metadata, bounded incoming response, and dated
+visible counters without publishing raw post text or non-mission personal
+context. The corresponding [project note](projects/urbanhermit.md) records the
+claims, source leads, and boundaries; no website projection was selected.
+
 The recovered record for the collaborative interactive installation
 *NTER CHNG* is in [projects/nter-chng.md](projects/nter-chng.md), with the
 Wayback research and explicit not-recovered boundaries documented in

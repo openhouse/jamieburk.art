@@ -22,7 +22,10 @@ Current post, follower, and following counts are unstable profile snapshots. The
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | Dedicated campaign account | Recovered |
 | Harry J. Epstein Company | None recovered in this pass | No dedicated project account recovered | Not recovered |
 
-Jamie's personal [@urbanhermit](https://x.com/urbanhermit) account appears in origin and amplification records. It is not counted as a project account.
+Jamie's personal [@urbanhermit](https://x.com/urbanhermit) account appears in
+origin, authorship, participation, and amplification records. It is not counted
+as a project account, but its complete live population now has a dedicated
+[archival-production record](../runs/2026-07-15-urbanhermit-x-full-population.md).
 
 Historical WOW List code and one 2015 organizer post use `@wowlistnyc`. No current profile or public bridge proving a migration to `@wowlist` was recovered at that handle. The historical label remains unresolved.
 
@@ -159,6 +162,31 @@ The account promoted rolling emergency-relief applications for grants up to $500
 - [Vulpes Bastille, July 9, 2020](https://x.com/KCSpacesFund/status/1281300779266125826)
 
 Knowledge-bank status: confirmed with boundaries. Eleven is a visible lower bound, not a complete grant ledger. The evidence does not establish that Jamie selected grantees, administered funds, or authored campaign posts. Named public organizers retain organizing credit; Jamie's separately documented contribution is behind-the-scenes digital infrastructure.
+
+## Personal public record: @urbanhermit
+
+Profile snapshot: 434 posts reported; all 434 profile-counted records recovered
+through a Posts-and-Replies authenticated pass. The
+[governed corpus](../corpora/urbanhermit-x-full-population-2026-07-15.json)
+contains 340 originals, 13 replies, and 81 external-source native reposts from
+October 2008 through April 2023. Two conversation-parent cards authored by
+other accounts are preserved outside the denominator.
+
+The corpus inventories 321 distinct short URLs and uses checked-in overlapping
+rules to identify source records concerning community platforms, civic
+participation, cultural-space advocacy, public history and waterways, creative
+technology and media, and neighborhood mutual aid. These categories are
+retrieval aids, not measures of work or impact.
+
+A bounded year-by-year incoming search recovered 15 mission-relevant
+third-party records from nine accounts and two additional mission-relevant
+conversation contexts. Source maturation produced bounded records for WOW List,
+the Horse Lords `Truthers` video, the 8th Street Tunnel program, NYC Artist
+Coalition advocacy statements, and Jamie's direct Tired of Tires participation.
+
+Public projection: held. The personal corpus supplies future compositional depth
+without turning personal history, social counters, or reposted material into a
+front-page accomplishment claim.
 
 ## Authorship and care rules
 
