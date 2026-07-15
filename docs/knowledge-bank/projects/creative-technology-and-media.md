@@ -19,6 +19,21 @@ Use this as evidence of rapid technical prototyping and computational media
 experimentation. Do not describe it as a production product, commercial
 deployment, or long-term adoption.
 
+## BAPLab 2006
+
+Wave Farm's institutional event record and an archived Bushwick Art Project
+schedule both place Jamie in BAPLab 2006's 4 p.m. New Media Program at 3rd Ward
+in Brooklyn. The first-party schedule links his listing to artist record 108.
+
+Claim: `CLM-BAPLAB-NEW-MEDIA-PROGRAM-2006` - confirmed with boundary.
+
+The records establish program participation, not the title, medium, content,
+collaborators, curatorial role, attendance, reception, or outcome of Jamie's
+work. The nearby archive folder name `time-is-long` is a lead rather than proof
+of the exhibited title.
+
+Inquiry: `INQ-BAPLAB-JAMIE-WORK-2006` - partially recovered.
+
 ## NTER CHNG
 
 The Pitch described NTER CHNG as a 2010 installation combining software and

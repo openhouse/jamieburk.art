@@ -15,6 +15,13 @@ import {
   icloudTeamsSources
 } from "./icloud-teams-archive.ts";
 import {
+  icloudTeamsExpansionClaims,
+  icloudTeamsExpansionIntakeItems,
+  icloudTeamsExpansionObservations,
+  icloudTeamsExpansionResearchInquiries,
+  icloudTeamsExpansionSources
+} from "./icloud-teams-expansion.ts";
+import {
   googleDriveClaims,
   googleDriveIntakeItems,
   googleDriveObservations,
@@ -110,6 +117,7 @@ const knowledgeBankInput = {
   intakeItems: [
     ...nycaPressIntakeItems,
     ...icloudTeamsIntakeItems,
+    ...icloudTeamsExpansionIntakeItems,
     ...googleDriveIntakeItems,
     ...nterChngArchiveIntakeItems,
     ...socialAccountArchiveIntakeItems,
@@ -410,6 +418,7 @@ const knowledgeBankInput = {
     ...wowlistXCorpusSources,
     ...nycaPressSources,
     ...icloudTeamsSources,
+    ...icloudTeamsExpansionSources,
     ...googleDriveSources,
     ...nterChngArchiveSources,
     ...socialAccountArchiveSources,
@@ -1440,6 +1449,7 @@ const knowledgeBankInput = {
     ...wowlistXCorpusObservations,
     ...nycaPressObservations,
     ...icloudTeamsObservations,
+    ...icloudTeamsExpansionObservations,
     ...googleDriveObservations,
     ...nterChngArchiveObservations,
     ...socialAccountArchiveObservations,
@@ -2038,6 +2048,7 @@ const knowledgeBankInput = {
     ...wowlistXCorpusClaims,
     ...nycaPressClaims,
     ...icloudTeamsClaims,
+    ...icloudTeamsExpansionClaims,
     ...googleDriveClaims,
     ...nterChngArchiveClaims,
     ...socialAccountArchiveClaims,
@@ -3104,6 +3115,7 @@ const knowledgeBankInput = {
     ...wowlistXCorpusResearchInquiries,
     ...nycaPressResearchInquiries,
     ...icloudTeamsResearchInquiries,
+    ...icloudTeamsExpansionResearchInquiries,
     ...googleDriveResearchInquiries,
     ...nterChngArchiveResearchInquiries,
     ...socialAccountArchiveResearchInquiries,

@@ -29,7 +29,7 @@ adoption are separate research questions.
 
 ## Shared Campaign Memory
 
-Running minutes through April 29 assign Jamie the minutes and shared-knowledge
+Running minutes through May 15 assign Jamie the minutes and shared-knowledge
 structure. The record organizes:
 
 - meeting context and decisions;
@@ -49,6 +49,22 @@ Claim: `CLM-CRS-SHARED-MEMORY-SYSTEM` - confirmed with boundary.
 This exact architecture is stronger and more useful than the previous “30+
 pages” shorthand. It makes the operating contribution legible while keeping
 collective campaign ownership and private context intact.
+
+## Coalition Mapping Practice
+
+A protected May 6 working map visualizes relationships among campaign lineage,
+organizing containers, cultural-space and small-business constituencies,
+government contexts, fragmentation risk, and a possible stewardship structure.
+The meeting record says Jamie screen-shared the map and connected event signups,
+QR codes, lists, and follow-up systems to durable organizing power.
+
+Claim: `CLM-CRS-COALITION-MAPPING-PRACTICE` - confirmed with boundary.
+
+The defensible accomplishment is that Jamie created and used a live visual aid
+to make a complex multi-stakeholder system discussable. The artifact is not an
+adopted governance chart, evidence of formal authority, endorsement by everyone
+represented, or proof of policy impact. The protected image remains outside the
+public repo.
 
 ## Open-Data Foundation Memo
 

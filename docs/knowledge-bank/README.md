@@ -88,6 +88,11 @@ shows an anchor-first pass through Jamie Projects History, CRS, and job-hunt:
 project ledgers and public captures become bounded claims, protected operating
 records strengthen selected website language, and unselected creative and civic
 depth remains available for future composition.
+The [iCloud Teams expansion receipt](intake/2026-07-15-icloud-teams-archive-expansion.md)
+reconciles authenticated iCloud web snapshots with local materialized records,
+demonstrates why file modification time is not content freshness, adds a bounded
+BAPLab program claim and CRS coalition-mapping proof, and opens a governed
+verification inquiry for a commercial impact metric.
 The [Google Drive Shared Drives receipt](intake/2026-07-15-google-drive-shared-drives.md)
 applies the same method to collaborative workspaces: the public bank retains
 bounded handoff, implementation, and onboarding claims while Drive names, file

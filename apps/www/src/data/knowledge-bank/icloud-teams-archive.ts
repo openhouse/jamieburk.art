@@ -276,8 +276,8 @@ export const icloudTeamsSources: KnowledgeBank["sources"] = [
     kind: "project-archive",
     visibility: "protected",
     preservationStatus: "private",
-    capturedAt: "Reviewed through April 29, 2026",
-    publicCitation: "Commercial Rent Stabilization collaboration, running minutes through April 29, 2026 (protected project record).",
+    capturedAt: "Reviewed through May 15, 2026",
+    publicCitation: "Commercial Rent Stabilization collaboration, running minutes through May 15, 2026 (protected project record).",
     publicNote: "Shared operating record for decisions, owners, open questions, city/state lanes, consent levels, and continuity.",
     supportsGenerally: [
       "Jamie created and stewarded the running-minutes structure",

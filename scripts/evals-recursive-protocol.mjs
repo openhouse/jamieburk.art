@@ -70,6 +70,7 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-nycac-facebook-posts-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-kcspacesfund-facebook-posts-full-population.md",
   "docs/knowledge-bank/intake/2026-07-15-jamie-personal-facebook-posts-full-population.md",
+  "docs/knowledge-bank/intake/2026-07-15-icloud-teams-archive-expansion.md",
   "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
   "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
   "docs/knowledge-bank/corpora/wowlist-x-public-corpus.json",
@@ -88,12 +89,16 @@ const requiredFiles = [
   "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
   "docs/knowledge-bank/projects/kansas-city-neighborhood-programs.md",
+  "docs/knowledge-bank/projects/commercial-rent-stabilization-operating-memory.md",
+  "docs/knowledge-bank/projects/creative-technology-and-media.md",
+  "docs/knowledge-bank/opportunities/job-search-positioning.md",
   "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-events.md",
   "evals/knowledge-bank/runs/2026-07-15-personal-wowlist-facebook-events.md",
   "evals/knowledge-bank/runs/2026-07-15-wowlist-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-kcspacesfund-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-jamie-personal-facebook-posts.md",
+  "evals/knowledge-bank/runs/2026-07-15-icloud-teams-expansion.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
@@ -106,6 +111,7 @@ const requiredFiles = [
   "apps/www/src/data/knowledge-bank/nycac-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07.ts",
   "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-2026-07.ts",
+  "apps/www/src/data/knowledge-bank/icloud-teams-expansion.ts",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
@@ -131,6 +137,7 @@ const requiredFiles = [
   "scripts/evals-nycac-facebook-posts.mjs",
   "scripts/evals-kcspacesfund-facebook-posts.mjs",
   "scripts/evals-jamie-personal-facebook-posts.mjs",
+  "scripts/evals-icloud-teams-expansion.mjs",
   "scripts/lib/personal-facebook-posts-guard.mjs",
   "scripts/tests/personal-facebook-posts-guard.test.mjs",
   "scripts/lib/urbanhermit-mission-classifier.mjs",
@@ -163,6 +170,7 @@ for (const script of [
   "evals:nycac-facebook-posts",
   "evals:kcspacesfund-facebook-posts",
   "evals:jamie-personal-facebook-posts",
+  "evals:icloud-teams-expansion",
   "test:personal-facebook-posts-guard",
   "evals:recursive",
   "preflight:staging",
@@ -181,6 +189,15 @@ if (scripts.check && !scripts.check.includes("npm run evals:chad")) {
 
 if (scripts.check && !scripts.check.includes("npm run evals:knowledge-lifecycle")) {
   fail("package.json check script must include npm run evals:knowledge-lifecycle");
+}
+
+if (
+  scripts.check &&
+  !scripts.check.includes("npm run evals:icloud-teams-expansion")
+) {
+  fail(
+    "package.json check script must include npm run evals:icloud-teams-expansion"
+  );
 }
 
 if (scripts.check && !scripts.check.includes("npm run evals:callnyc-x")) {
