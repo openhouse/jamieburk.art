@@ -518,6 +518,13 @@ function governedStatementFindings(statement, bank, source, label) {
     ) {
       findings.push(`${label} proof ${support.id} lacks shared semantic anchor`);
     }
+    for (const prohibited of proof.doNotSay ?? []) {
+      if (normalizedIncludes(statement.text, prohibited)) {
+        findings.push(
+          `${label} repeats prohibited wording from proof ${support.id}: ${prohibited}`
+        );
+      }
+    }
   }
   return findings;
 }
@@ -1294,6 +1301,16 @@ function mdxClaimIsReachable(content, index) {
   ) {
     return false;
   }
+  if (
+    /(?:\btrue\b|Boolean\s*\(\s*(?:true|1)\s*\))\s*\?[^:]{0,1000}:\s*\(?\s*$/.test(
+      nearby
+    ) ||
+    /!\s*(?:true|Boolean\s*\(\s*(?:true|1)\s*\))\s*&&\s*\(?\s*$/.test(
+      nearby
+    )
+  ) {
+    return false;
+  }
 
   const declarationPattern =
     /(?:^|\n)[ \t]*(?:export\s+)?(?:default\s+)?function\s+[A-Za-z_$][\w$]*\s*\([^)]*\)\s*\{|(?:^|\n)[ \t]*(?:export\s+)?(?:const|let)\s+[A-Za-z_$][\w$]*\s*=/gm;
@@ -1691,6 +1708,13 @@ export function evaluateKnowledgeBank(
           if (proofSurface && !proof.surfaces.includes(proofSurface)) {
             findings["KB-009"].push(
               `work statement ${statement.id} proof ${proofId} is not approved for ${proofSurface}`
+            );
+          }
+        }
+        for (const prohibited of proof.doNotSay ?? []) {
+          if (normalizedIncludes(statement.text, prohibited)) {
+            findings["KB-009"].push(
+              `work statement ${statement.id} repeats prohibited wording from proof ${proofId}: ${prohibited}`
             );
           }
         }

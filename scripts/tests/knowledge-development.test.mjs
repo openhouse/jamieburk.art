@@ -2141,6 +2141,8 @@ test("MDX route reachability rejects conditional and unused component bindings",
   assert.equal(realizes(`{0 ? (${literal}) : null}`), false);
   assert.equal(realizes(`{null ? (${literal}) : null}`), false);
   assert.equal(realizes(`{Boolean(0) ? (${literal}) : null}`), false);
+  assert.equal(realizes(`{true ? null : (${literal})}`), false);
+  assert.equal(realizes(`{!true && (${literal})}`), false);
   assert.equal(
     realizes(`{process.env.NEXT_PUBLIC_SHOW && (${literal})}`),
     false
