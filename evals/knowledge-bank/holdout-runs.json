@@ -29,6 +29,24 @@
       "blockers": [
         "Two fresh independent judges must inspect the 44 reading records, partial-source boundary, redirect defense, direct-attribution observations, and decision to keep the corpus off the public site."
       ]
+    },
+    {
+      "judgeId": "nycac-press-holdout-policy-editor-final-2026-07-14",
+      "completedAt": "2026-07-14T21:17:08-04:00",
+      "lens": "Skeptical civic-policy researcher, hiring editor, and adversarial evaluation engineer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-press-holdout-archivist-final-2026-07-14",
+      "completedAt": "2026-07-14T21:17:17-04:00",
+      "lens": "Skeptical public-interest archivist and public-safety and copyright editor",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

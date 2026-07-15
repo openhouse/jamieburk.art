@@ -13,8 +13,8 @@ test("knowledge-bank gate records two consecutive independent 5/5 holdouts", () 
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "independent-run-1-public-interest-red-team",
-    "candidate-independent-run-2"
+    "nycac-press-holdout-policy-editor-final-2026-07-14",
+    "nycac-press-holdout-archivist-final-2026-07-14"
   ]);
 });
 
