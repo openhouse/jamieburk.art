@@ -1,7 +1,7 @@
 # NYC Artist Coalition Facebook Event Archival Production
 
-**Reviewed:** July 15, 2026  
-**Surface:** [NYC Artist Coalition Facebook events](https://www.facebook.com/nycartc/events)  
+**Reviewed:** July 15, 2026
+**Surface:** [NYC Artist Coalition Facebook events](https://www.facebook.com/nycartc/events)
 **Public fixture:** [33-event public-safe census](../../../apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json)
 
 ## Answer First

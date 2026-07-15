@@ -53,7 +53,7 @@ const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
 const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "64af7b2f1804b3b319de2f5eef60bfb01371ce5209c8497473f800a334c66555",
   governedModuleSha256: "29e868734b83dc89609c47d3d8eff72939da617742bcb6db16c08e759ec70fb8",
-  publicReportSha256: "dc5c87dee6eaf3760008be3b3ee41db8eb367a1d05e1146ac4a5ff8e1d4ebc48",
+  publicReportSha256: "96d9a6e6f48e569ebe9061850d2829031001df3b398340b2908912123ff925d4",
   caseStudyMdxSha256: "bb027dc5fdd7a0ce2f2602287ad3a7953af98855316efe5986aeafdae387ccfb",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c"
 });

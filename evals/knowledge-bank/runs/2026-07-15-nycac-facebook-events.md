@@ -134,4 +134,3 @@ Pending two predeclared independent reviews on a frozen candidate:
 
 - `nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a`
 - `nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b`
-
