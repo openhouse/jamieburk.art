@@ -74,7 +74,7 @@ export const nycArtCXFullPopulationBatch20260715: {
       accessedAt: "2026-07-15",
       canonicalUrl: "https://x.com/NYCArtC/with_replies",
       assetUrl:
-        "https://github.com/openhouse/jamieburk.art/blob/cfd9dbbfcb2d266f6c11b2d5f216898b61c8bdcc/docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
+        "https://github.com/openhouse/jamieburk.art/blob/ad02078d7fb3a0081286f0d3843c1e0d36f98d62/docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.json",
       preferredPublicUrl: "asset",
       publicCitation:
         "Committed item-level corpus from an authenticated @NYCArtC archival-production pass, July 15, 2026.",

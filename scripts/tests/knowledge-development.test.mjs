@@ -1124,7 +1124,7 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   const pinnedCorpusText = execFileSync(
     "git",
     ["show", `${pinnedSha}:${pinnedPath}`],
-    { encoding: "utf8" }
+    { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 }
   );
   assert.equal(pinnedCorpusText, corpusText);
   assert.equal(sha256(pinnedCorpusText), manifest.corpusSha256);
