@@ -274,3 +274,19 @@ protocol-ready score to imply that the underlying claims are complete.
 These gaps are not instructions to delete accurate bounded copy. They are the
 priority queue for collaborator confirmation, inspectable technical evidence,
 and audience-specific composition.
+
+## 2026-07-15 Professor Lens Sources
+
+The Margaret Morse and Warren Sack lens sources enter as protected historical
+context through an unofficial narrative-evaluation copy and one protected
+recommendation screenshot without a verified canonical URL. They support
+AI-authored editorial controls for embodiment, artistic intelligence,
+recursive technical-social systems thinking, interaction, documentation, and
+collective authorship.
+
+They are not evidence of current professor opinion or current technical
+proficiency. Raw evaluation text, grades, student data, correspondence, contact
+details, screenshots, and private locators remain outside the repository.
+Current public claims continue to rely on the separately sourced project
+record, including *Time Is Long*, NTER CHNG, A Sorted Audio File, WOW List,
+CallNYC, and the public-program records.

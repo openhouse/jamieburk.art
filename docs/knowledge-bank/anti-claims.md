@@ -109,6 +109,17 @@ M.C. Schmidt's joint credit for the Horse Lords video.
 Do not infer complete technical ownership, audience reach, commercial impact,
 or media republication rights from project articles and public video pages.
 
+Do not say Margaret Morse or Warren Sack authored, approved, or currently
+endorses the portfolio's professor-lens evals. Do not publish raw narrative
+evaluations, grades, student identifiers, private correspondence, contact
+details, screenshots without rights review, or private source locators.
+
+Do not use historical course performance as proof of current technical
+proficiency. Do not promote a protected historical observation about structural
+equivalence into a current credential or sole-invention claim. Do not reduce
+artistic and relational practice to organizational utility, and do not erase
+group co-design or collaborators to make a technical narrative cleaner.
+
 Do not say the Nerman Museum page names NTER CHNG; America: Now and Here's own
 archived artist page is the direct inclusion source. Do not convert an official
 account of visitors using the installation into attendance, unique-participant,

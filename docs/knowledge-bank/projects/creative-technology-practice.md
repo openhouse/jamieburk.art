@@ -8,6 +8,25 @@ This project record preserves independently documented creative-technology
 work without displacing the portfolio's current technical project management,
 product operations, and implementation argument.
 
+## Historical Interpretive Context
+
+A protected, unofficial UCSC narrative-evaluation copy supplies historical
+context for how parts of this early practice were recognized in 2004-2006.
+Margaret Morse's records support an editorial lens concerned with media
+archaeology, embodiment, attention, time, and artistic practice. Warren Sack's
+records support an editorial lens concerned with recursive social structure,
+working prototypes, interface design, physical-digital interaction, multimodal
+documentation, dialogue, and collective authorship.
+
+The records are not public testimonials, current endorsements, or proof of
+current proficiency. Raw text, grades, identifiers, correspondence, contact
+details, and private locators remain protected. Current portfolio claims still
+depend on the public project sources below. Those sources preserve viewer
+participation in *Time Is Long*, NTER CHNG's software-and-architecture form,
+its public many-to-many social information space, its shared three-person
+credit, and the later Max/MSP work without assigning individual ownership where
+the evidence does not.
+
 ## 2006: Time Is Long
 
 [Cool Hunting](https://coolhunting.com/culture/bap-lab-part-1/) identifies

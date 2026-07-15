@@ -176,3 +176,11 @@ association control is provenance rather than a portfolio, the 20 recovered
 hosted pages are available for audience-specific future composition, and the
 WOW List zero display is a negative archival control rather than an
 accomplishment.
+
+Professor lenses remain reserve editorial controls. They may direct attention
+to embodiment, experimentation, recursive relationships, interfaces,
+participation, documentation, and collective authorship in existing
+source-backed public proofs. No professor name, evaluation text, grade, or
+endorsement is auto-projected to the website. Any later visible composition
+must answer a specific audience need, rely on public-safe project evidence, and
+retain the source and collective-credit boundaries of the underlying work.

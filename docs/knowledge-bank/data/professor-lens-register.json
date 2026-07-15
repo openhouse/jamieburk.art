@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "scope": {
+    "lensCount": 2,
+    "automatedProtocolReadyCount": 2,
+    "humanOutcomesClaimed": 0,
+    "principle": "Historical professor evaluations may inform an AI-authored editorial test, but they do not become present-tense professor opinions, endorsements, testimonials, or claims of current proficiency."
+  },
+  "sourceBoundary": {
+    "sourceStatus": "protected-unofficial-copy",
+    "rawEvaluationPublished": false,
+    "transcriptLocatorPublished": false,
+    "studentIdentifierPublished": false,
+    "privateCorrespondencePublished": false,
+    "contactDetailsPublished": false,
+    "linkedInScreenshotStatus": "protected-no-canonical-url",
+    "publicSiteAutoProjection": false
+  },
+  "lenses": [
+    {
+      "id": "margaret-morse-lens",
+      "label": "Margaret Morse lens preserves embodied and artistic intelligence",
+      "weight": 18,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "embodied-practice-editorial-review",
+      "lensAuthorship": "AI-authored editorial lens",
+      "professorAuthorshipClaimed": false,
+      "currentProfessorOpinionClaimed": false,
+      "publicProjectionStatus": "reserve",
+      "owner": "Jamie Burkart with an independent editorial reviewer",
+      "protectedSourceIds": [
+        "PROTECTED-UCSC-MORSE-NARRATIVE-EVALUATIONS-2006",
+        "PROTECTED-LINKEDIN-MORSE-RECOMMENDATION-2014"
+      ],
+      "historicalAnchors": [
+        "early video equipment and media archaeology",
+        "embodying concepts through artistic practice",
+        "time-based installation realized in a gallery",
+        "art and life joined through attention",
+        "dedication, warmth, and generosity in collaborative work"
+      ],
+      "requiredSignals": [
+        "embodiment",
+        "attention",
+        "experimentation",
+        "hospitality",
+        "atmosphere",
+        "media archaeology",
+        "participation",
+        "memory",
+        "place",
+        "how people inhabit structures",
+        "artistic-civic-technical-social continuity"
+      ],
+      "publicProofIds": [
+        "creative-technology-time-is-long",
+        "creative-technology-nter-chng",
+        "nter-chng-production-system",
+        "creative-technology-sorted-audio",
+        "sunday-dinner-196",
+        "nyc-artist-coalition-nightlife",
+        "kc-town-hall"
+      ],
+      "antiGaming": [
+        "Do not reduce artistic, relational, or participatory work to organizational utility merely because utility is easier to hire for.",
+        "Do not add professor praise, grades, or evaluation text to the public site to make the gate pass.",
+        "Do not present this AI-authored lens as Margaret Morse's current opinion, authorship, review, or endorsement.",
+        "Do not use historical course performance as proof of current technical proficiency.",
+        "Do not flatten distinct artistic, civic, technical, and social projects into one continuous program."
+      ],
+      "stopRule": "The automated gate passes when the portfolio system preserves embodied, artistic, relational, and place-based intelligence through existing public proof and explicit boundaries; the human gate remains open until an independent editor applies the lens to the current public site.",
+      "nextAction": "Ask an independent editor to review the public site without private professor material and identify where hiring clarity erases or preserves experimentation, hospitality, atmosphere, attention, and embodied participation.",
+      "completionEvidence": []
+    },
+    {
+      "id": "warren-sack-lens",
+      "label": "Warren Sack lens preserves recursive technical-social systems thinking",
+      "weight": 18,
+      "hardGate": true,
+      "automatedStatus": "protocol-ready",
+      "humanStatus": "required-not-run",
+      "manualGateId": "recursive-social-systems-editorial-review",
+      "lensAuthorship": "AI-authored editorial lens",
+      "professorAuthorshipClaimed": false,
+      "currentProfessorOpinionClaimed": false,
+      "publicProjectionStatus": "reserve",
+      "owner": "Jamie Burkart with an independent technical-social-systems reviewer",
+      "protectedSourceIds": [
+        "PROTECTED-UCSC-SACK-INTRO-DIGITAL-MEDIA-2004",
+        "PROTECTED-UCSC-SACK-SOCIAL-INFORMATION-SPACES-2006"
+      ],
+      "historicalAnchors": [
+        "recursive analysis of overlapping social groups",
+        "a working image-search prototype joining network and image analysis",
+        "an interactive Max/MSP and Jitter interface",
+        "physical traversal as an interface to online photographs",
+        "multimodal group documentation and classroom dialogue"
+      ],
+      "requiredSignals": [
+        "recursive relation modeling",
+        "social structure",
+        "working prototype",
+        "interface design",
+        "physical-digital interaction",
+        "multimodal documentation",
+        "collective authorship",
+        "dialogue as contribution"
+      ],
+      "publicProofIds": [
+        "creative-technology-nter-chng",
+        "nter-chng-production-system",
+        "creative-technology-sorted-audio",
+        "wowlist",
+        "callnyc",
+        "nyc-artist-coalition-nightlife",
+        "technical-operations-operating-backbone"
+      ],
+      "antiGaming": [
+        "Do not treat engagement totals as sufficient evidence of a social system, relationship model, or stakeholder response.",
+        "Do not publish the protected historical structural-equivalence observation as a current credential or priority technical claim.",
+        "Do not use historical course performance as proof of current tools, architecture, or implementation proficiency.",
+        "Do not erase group co-design, collaborators, or dialogue from technical accomplishment.",
+        "Do not satisfy the lens with a technology list that lacks relation, prototype, interface, documentation, and use context."
+      ],
+      "stopRule": "The automated gate passes when recursive relations, implementation, interaction, documentation, and collective context can be traced through existing public proof; the human gate remains open until an independent reviewer tests the current public site.",
+      "nextAction": "Ask an independent reviewer to trace one relationship model, one implementation, one interface or embodied interaction, one documentation system, and one collective-credit boundary from the public site alone.",
+      "completionEvidence": []
+    }
+  ],
+  "controls": {
+    "margaretMorse": {
+      "utilityOnlyScoringAllowed": false,
+      "minimumConnectedDomains": 4,
+      "requiredConnectedDomains": [
+        "artistic",
+        "civic",
+        "technical",
+        "social"
+      ],
+      "historicalPerformanceUsedAsCurrentSkillProof": false
+    },
+    "warrenSack": {
+      "recursiveModelRequired": true,
+      "prototypeOrImplementationEvidenceRequired": true,
+      "interfaceOrEmbodiedInteractionRequired": true,
+      "multimodalDocumentationRequired": true,
+      "collectiveCreditRequired": true,
+      "engagementTotalsSufficient": false,
+      "structuralEquivalencePublicClaimStatus": "protected-historical-source-only",
+      "historicalPerformanceUsedAsCurrentSkillProof": false
+    }
+  }
+}

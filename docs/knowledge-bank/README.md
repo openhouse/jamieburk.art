@@ -157,6 +157,16 @@ official motives or legislative causality. See
 `intake/2026-07-15-nycartc-government-institutional-value.md` and
 `projects/nyc-artist-coalition-nightlife.md`.
 
+The July 15 professor-lens pass uses a protected unofficial evaluation copy and
+one protected recommendation screenshot to create two AI-authored editorial
+controls. The Margaret Morse lens tests whether embodiment, experimentation,
+attention, hospitality, and artistic-social continuity survive hiring
+composition. The Warren Sack lens tests whether relation models, prototypes,
+interfaces, multimodal documentation, dialogue, and collective authorship stay
+connected. Neither lens is a professor testimonial or present endorsement. See
+`intake/2026-07-15-ucsc-professor-lenses.md` and
+`../evals/professor-lenses.md`.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

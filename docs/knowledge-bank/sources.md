@@ -370,6 +370,19 @@ source retains institutional event and project language only; participant
 comments, profiles, invite context, private administration, and authentication
 state are excluded.
 
+### July 15 Professor Lens Sources
+
+A protected unofficial UCSC narrative-evaluation copy provides historical
+context from Margaret Morse and Warren Sack course records. A protected 2014
+recommendation screenshot attributed to Morse adds a second historical source
+lane, but no canonical public URL was verified. These sources support
+AI-authored editorial lenses only; they are not current endorsements,
+professor-authored criteria, or current-skill evidence.
+
+Raw text, grades, student data, correspondence, contact details, screenshots,
+and private locators remain protected. Current portfolio claims continue to use
+separately sourced public project evidence.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

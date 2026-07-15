@@ -46,6 +46,13 @@ The repo is public. Approval here means approved for public-safe repository and 
   Fuselier, M.C. Schmidt, and other source-specific collaborator credits; do
   not project media without rights review or imply continuous full-time
   practice, solo authorship, reach, or commercial impact.
+- Professor lenses: the public-safe source boundary and AI-authored Margaret
+  Morse and Warren Sack editorial controls are approved as reserve knowledge-
+  bank infrastructure. The underlying unofficial evaluation copy,
+  recommendation screenshot, grades, identifiers, correspondence, contact
+  details, and private locators are not approved. Do not imply present professor
+  opinion, professor authorship of the evals, current endorsement, or current
+  proficiency from historical records.
 - NTER CHNG exhibition record: America: Now and Here's archived official pages
   are approved as direct evidence of 2011 exhibition inclusion, shared
   visual-artist credit, and observed visitor use. Keep the Nerman Museum page

@@ -4614,6 +4614,209 @@ export function evaluatePortfolioBlindSpot({
   return missing;
 }
 
+export const PROFESSOR_LENS_SPECS = [
+  {
+    id: "margaret-morse-lens",
+    label: "Margaret Morse lens preserves embodied and artistic intelligence",
+    weight: 18,
+    manualGateId: "embodied-practice-editorial-review",
+    protocolFragments: [
+      "experimentation, hospitality, atmosphere, artistic investigation",
+      "participation, memory, place, and how people inhabit structures",
+      "artistic, civic, technical, and social practices remain connected"
+    ]
+  },
+  {
+    id: "warren-sack-lens",
+    label: "Warren Sack lens preserves recursive technical-social systems thinking",
+    weight: 18,
+    manualGateId: "recursive-social-systems-editorial-review",
+    protocolFragments: [
+      "recursive relation modeling",
+      "prototype and interface",
+      "physical and digital interaction",
+      "multimodal documentation",
+      "collective authorship and dialogue"
+    ]
+  }
+];
+
+export function evaluateProfessorLens({
+  id,
+  register,
+  protocol,
+  sourceNote,
+  creativeTechnologyDoc,
+  sourceCoverage,
+  projectionMap,
+  aboutPage,
+  technicalOperations
+}) {
+  const missing = [];
+  const spec = PROFESSOR_LENS_SPECS.find((item) => item.id === id);
+  if (!spec) return [`Unknown professor-lens eval: ${id}`];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalized = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalized.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(register);
+  } catch {
+    return [`Professor-lens register is not valid JSON for ${id}.`];
+  }
+
+  const lenses = parsed.lenses ?? [];
+  const entry = lenses.find((item) => item.id === id);
+  expect(parsed.schemaVersion === 1, "Professor-lens register schemaVersion must remain one.");
+  expect(parsed.scope?.lensCount === PROFESSOR_LENS_SPECS.length, "Professor-lens register count must match the executable evals.");
+  expect(lenses.length === PROFESSOR_LENS_SPECS.length, "Professor-lens register must retain both lens entries.");
+  expect(new Set(lenses.map((item) => item.id)).size === lenses.length, "Professor-lens register IDs must remain unique.");
+  if (!entry) return [...missing, `Professor-lens register is missing ${id}.`];
+
+  expect(entry.label === spec.label, `${id} label must match the executable criterion.`);
+  expect(entry.weight === spec.weight, `${id} weight must match the executable criterion.`);
+  expect(entry.hardGate === true, `${id} must remain a hard gate.`);
+  expect(entry.automatedStatus === "protocol-ready", `${id} automated status must remain protocol-ready.`);
+  expect(entry.humanStatus === "required-not-run", `${id} must not claim an unperformed editorial pass.`);
+  expect(entry.manualGateId === spec.manualGateId, `${id} manual gate ID must remain linked.`);
+  expect(entry.lensAuthorship === "AI-authored editorial lens", `${id} must identify the lens as AI-authored.`);
+  expect(entry.professorAuthorshipClaimed === false, `${id} must not claim that the professor authored the lens.`);
+  expect(entry.currentProfessorOpinionClaimed === false, `${id} must not claim a professor's present opinion or endorsement.`);
+  expect(entry.publicProjectionStatus === "reserve", `${id} must remain reserve rather than auto-projecting professor material.`);
+  expect(typeof entry.owner === "string" && entry.owner.length > 0, `${id} requires an owner.`);
+  expect((entry.protectedSourceIds ?? []).length >= 2, `${id} requires at least two bounded protected-source references.`);
+  expect((entry.historicalAnchors ?? []).length >= 4, `${id} requires at least four historical anchors.`);
+  expect((entry.requiredSignals ?? []).length >= 7, `${id} requires at least seven interpretive signals.`);
+  expect((entry.publicProofIds ?? []).length >= 4, `${id} requires at least four public-proof references.`);
+  expect((entry.antiGaming ?? []).length >= 4, `${id} requires at least four anti-gaming rules.`);
+  expect(typeof entry.stopRule === "string" && entry.stopRule.length > 0, `${id} requires a stop rule.`);
+  expect(typeof entry.nextAction === "string" && entry.nextAction.length > 0, `${id} requires a next action.`);
+  expect((entry.completionEvidence ?? []).length === 0, `${id} must not contain completion evidence before independent review.`);
+
+  const sourceBoundary = parsed.sourceBoundary ?? {};
+  expect(sourceBoundary.sourceStatus === "protected-unofficial-copy", "Professor source status must remain protected unofficial copy.");
+  expect(sourceBoundary.rawEvaluationPublished === false, "Raw narrative evaluations must not be published.");
+  expect(sourceBoundary.transcriptLocatorPublished === false, "The private transcript locator must not be published.");
+  expect(sourceBoundary.studentIdentifierPublished === false, "The student identifier must not be published.");
+  expect(sourceBoundary.privateCorrespondencePublished === false, "Private correspondence must not be published.");
+  expect(sourceBoundary.contactDetailsPublished === false, "Private contact details must not be published.");
+  expect(sourceBoundary.linkedInScreenshotStatus === "protected-no-canonical-url", "The LinkedIn screenshot must remain protected until a canonical public URL is verified.");
+  expect(sourceBoundary.publicSiteAutoProjection === false, "Professor material must not auto-project to the public site.");
+
+  requireFragments("Professor-lens protocol", protocol, [
+    `## ${spec.label}`,
+    `Manual gate: \`${spec.manualGateId}\``,
+    "Historical evidence is not present-tense endorsement",
+    ...spec.protocolFragments
+  ]);
+  requireFragments("Professor-lens source note", sourceNote, [
+    "protected, unofficial narrative-evaluation copy",
+    "AI-authored editorial lenses",
+    "not present-day opinions, endorsements, or professor-authored criteria",
+    "raw evaluations, grades, student identifier, private correspondence, contact details, and private file locations remain outside this public repository"
+  ]);
+  requireFragments("Source coverage", sourceCoverage, [
+    "Margaret Morse and Warren Sack lens sources",
+    "protected historical context",
+    "not evidence of current professor opinion or current technical proficiency"
+  ]);
+  requireFragments("Projection map", projectionMap, [
+    "Professor lenses remain reserve editorial controls",
+    "No professor name, evaluation text, grade, or endorsement is auto-projected",
+    "existing source-backed public proofs"
+  ]);
+
+  const signals = new Set(entry.requiredSignals ?? []);
+  const proofIds = new Set(entry.publicProofIds ?? []);
+  const controls = parsed.controls ?? {};
+  if (id === "margaret-morse-lens") {
+    for (const signal of [
+      "embodiment",
+      "attention",
+      "experimentation",
+      "hospitality",
+      "atmosphere",
+      "media archaeology",
+      "participation",
+      "memory",
+      "place",
+      "how people inhabit structures",
+      "artistic-civic-technical-social continuity"
+    ]) {
+      expect(signals.has(signal), `Margaret Morse lens must retain the ${signal} signal.`);
+    }
+    for (const proofId of [
+      "creative-technology-time-is-long",
+      "creative-technology-nter-chng",
+      "nter-chng-production-system",
+      "sunday-dinner-196"
+    ]) {
+      expect(proofIds.has(proofId), `Margaret Morse lens must retain public proof ${proofId}.`);
+    }
+    const control = controls.margaretMorse ?? {};
+    expect(control.utilityOnlyScoringAllowed === false, "Margaret Morse lens must reject utility-only scoring.");
+    expect(control.minimumConnectedDomains === 4, "Margaret Morse lens must connect all four practice domains.");
+    expect(["artistic", "civic", "technical", "social"].every((domain) => (control.requiredConnectedDomains ?? []).includes(domain)), "Margaret Morse lens must preserve artistic, civic, technical, and social continuity.");
+    expect(control.historicalPerformanceUsedAsCurrentSkillProof === false, "Margaret Morse lens must not treat historical performance as current-skill proof.");
+    requireFragments("Creative-technology record", creativeTechnologyDoc, ["Time Is Long", "viewer participation", "NTER CHNG", "Max/MSP"]);
+    requireFragments("About page", aboutPage, ["stakes are human", "public-facing tools", "cultural infrastructure", "create usable interfaces", "collective credit"]);
+  }
+
+  if (id === "warren-sack-lens") {
+    for (const signal of [
+      "recursive relation modeling",
+      "social structure",
+      "working prototype",
+      "interface design",
+      "physical-digital interaction",
+      "multimodal documentation",
+      "collective authorship",
+      "dialogue as contribution"
+    ]) {
+      expect(signals.has(signal), `Warren Sack lens must retain the ${signal} signal.`);
+    }
+    for (const proofId of [
+      "creative-technology-nter-chng",
+      "nter-chng-production-system",
+      "wowlist",
+      "callnyc"
+    ]) {
+      expect(proofIds.has(proofId), `Warren Sack lens must retain public proof ${proofId}.`);
+    }
+    const control = controls.warrenSack ?? {};
+    expect(control.recursiveModelRequired === true, "Warren Sack lens must require recursive relation modeling.");
+    expect(control.prototypeOrImplementationEvidenceRequired === true, "Warren Sack lens must require prototype or implementation evidence.");
+    expect(control.interfaceOrEmbodiedInteractionRequired === true, "Warren Sack lens must require an interface or embodied interaction.");
+    expect(control.multimodalDocumentationRequired === true, "Warren Sack lens must require multimodal documentation.");
+    expect(control.collectiveCreditRequired === true, "Warren Sack lens must preserve collective credit.");
+    expect(control.engagementTotalsSufficient === false, "Warren Sack lens must reject engagement totals as sufficient social-software evidence.");
+    expect(control.structuralEquivalencePublicClaimStatus === "protected-historical-source-only", "Structural-equivalence wording must remain protected historical context.");
+    expect(control.historicalPerformanceUsedAsCurrentSkillProof === false, "Warren Sack lens must not treat historical performance as current-skill proof.");
+    requireFragments("Creative-technology record", creativeTechnologyDoc, ["software-and-architecture form", "public many-to-many social information space", "shared three-person credit"]);
+    requireFragments("About page", aboutPage, ["translate between technical and nontechnical stakeholders", "create usable interfaces"]);
+    requireFragments("Technical Operations", technicalOperations, ["WOWList", "CallNYC", "Project identity systems"]);
+  }
+
+  const publicSite = [aboutPage, technicalOperations].join("\n");
+  expect(!/Margaret Morse|Warren Sack|structural equivalence|narrative evaluation/i.test(publicSite), "Protected professor material must not silently appear on the public site.");
+
+  const publicBundle = [register, protocol, sourceNote, sourceCoverage, projectionMap].join("\n");
+  if ([/0120470/, /EMERGENCY-BACKUP/, /Narrative-Evals\.txt/, /\/Users\//, /\/Volumes\//, /(?:memorse|morse|wsack)@[A-Za-z0-9.-]+/i].some((pattern) => pattern.test(publicBundle))) {
+    missing.push(`${id} public control bundle contains a protected identifier, private locator, or contact detail.`);
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -4936,6 +5139,18 @@ export function runLaunchEvals(repoRoot) {
   const blindSpotRegisterDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/blind-spot-register.md"
+  );
+  const professorLensRegister = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/professor-lens-register.json"
+  );
+  const professorLensProtocol = readOptional(
+    repoRoot,
+    "docs/evals/professor-lenses.md"
+  );
+  const professorLensSourceNote = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-15-ucsc-professor-lenses.md"
   );
   const launchBlockers = readOptional(
     repoRoot,
@@ -5851,6 +6066,34 @@ export function runLaunchEvals(repoRoot) {
     );
   }
 
+  for (const spec of PROFESSOR_LENS_SPECS) {
+    const professorLensMissing = evaluateProfessorLens({
+      id: spec.id,
+      register: professorLensRegister,
+      protocol: professorLensProtocol,
+      sourceNote: professorLensSourceNote,
+      creativeTechnologyDoc,
+      sourceCoverage,
+      projectionMap,
+      aboutPage: read(repoRoot, "apps/www/src/app/about/page.tsx"),
+      technicalOperations
+    });
+    results.push(
+      result({
+        id: spec.id,
+        label: spec.label,
+        weight: spec.weight,
+        hardGate: true,
+        missing: professorLensMissing,
+        evidence: [
+          "A public-safe register separates historical source evidence from an AI-authored editorial lens.",
+          "The lens tests existing source-backed proof and keeps raw evaluations, private locators, correspondence, contact details, and present-tense endorsement claims out of the repository.",
+          "An independent editorial gate remains required; automated protocol readiness does not claim professor review or approval."
+        ]
+      })
+    );
+  }
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -5877,6 +6120,11 @@ export function runLaunchEvals(repoRoot) {
       id: spec.manualGateId,
       status: "manual-required",
       pass: `Complete and record the independent human evidence required by ${spec.label.toLowerCase()}; automated protocol readiness does not count as completion.`
+    })),
+    ...PROFESSOR_LENS_SPECS.map((spec) => ({
+      id: spec.manualGateId,
+      status: "manual-required",
+      pass: `An independent editor applies ${spec.label.toLowerCase()} to the current public portfolio without seeing private professor materials, and records any blind spot or overreach; automated protocol readiness does not count as professor review.`
     }))
   ];
 

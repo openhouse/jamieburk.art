@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   PORTFOLIO_BLIND_SPOT_SPECS,
+  PROFESSOR_LENS_SPECS,
   evaluateCallNycFullPopulationArchive,
   evaluateCallscriptNycArtCFormation,
   evaluateChadLens,
@@ -24,6 +25,7 @@ import {
   evaluateNycArtCFacebookPostArchive,
   evaluatePersonalWowlistFacebookEventArchive,
   evaluatePortfolioBlindSpot,
+  evaluateProfessorLens,
   evaluateProjectSocialArchiveProduction,
   evaluateSundayDinnerAttendanceArchive,
   evaluateUrbanHermitFullPopulationArchive,
@@ -2282,4 +2284,108 @@ test("integration eval rejects branch-to-production conflation", () => {
   assert.ok(failures.some((failure) => failure.includes("candidate SHA")));
   assert.ok(failures.some((failure) => failure.includes("deployment approval")));
   assert.ok(failures.some((failure) => failure.includes("authorize production")));
+});
+
+const professorLensFixture = {
+  register: readRepoFile("docs/knowledge-bank/data/professor-lens-register.json"),
+  protocol: readRepoFile("docs/evals/professor-lenses.md"),
+  sourceNote: readRepoFile("docs/knowledge-bank/intake/2026-07-15-ucsc-professor-lenses.md"),
+  creativeTechnologyDoc: readRepoFile("docs/knowledge-bank/projects/creative-technology-practice.md"),
+  sourceCoverage: readRepoFile("docs/knowledge-bank/source-coverage.md"),
+  projectionMap: readRepoFile("docs/knowledge-bank/projection-map.md"),
+  aboutPage: readRepoFile("apps/www/src/app/about/page.tsx"),
+  technicalOperations: readRepoFile("apps/www/src/app/work/technical-operations/page.tsx")
+};
+
+const evaluateProfessorLensWithRegister = (id, update) => {
+  const register = JSON.parse(professorLensFixture.register);
+  update(register);
+  return evaluateProfessorLens({
+    ...professorLensFixture,
+    id,
+    register: JSON.stringify(register)
+  });
+};
+
+test("both professor lenses pass protocol readiness without claiming professor review", () => {
+  for (const spec of PROFESSOR_LENS_SPECS) {
+    assert.deepEqual(
+      evaluateProfessorLens({ ...professorLensFixture, id: spec.id }),
+      [],
+      spec.id
+    );
+  }
+});
+
+test("professor lenses reject present endorsement and public auto-projection", () => {
+  const failures = evaluateProfessorLensWithRegister("margaret-morse-lens", (register) => {
+    register.lenses[0].currentProfessorOpinionClaimed = true;
+    register.lenses[0].professorAuthorshipClaimed = true;
+    register.sourceBoundary.publicSiteAutoProjection = true;
+  });
+  assert.ok(failures.some((failure) => failure.includes("present opinion or endorsement")));
+  assert.ok(failures.some((failure) => failure.includes("professor authored")));
+  assert.ok(failures.some((failure) => failure.includes("must not auto-project")));
+});
+
+test("Margaret Morse lens rejects utility-only scoring and broken domain continuity", () => {
+  const failures = evaluateProfessorLensWithRegister("margaret-morse-lens", (register) => {
+    register.controls.margaretMorse.utilityOnlyScoringAllowed = true;
+    register.controls.margaretMorse.minimumConnectedDomains = 3;
+    register.controls.margaretMorse.requiredConnectedDomains = ["civic", "technical", "social"];
+  });
+  assert.ok(failures.some((failure) => failure.includes("utility-only")));
+  assert.ok(failures.some((failure) => failure.includes("all four practice domains")));
+  assert.ok(failures.some((failure) => failure.includes("artistic, civic, technical, and social")));
+});
+
+test("Margaret Morse lens rejects erased embodied signals and historical skill inflation", () => {
+  const failures = evaluateProfessorLensWithRegister("margaret-morse-lens", (register) => {
+    const lens = register.lenses.find((item) => item.id === "margaret-morse-lens");
+    lens.requiredSignals = lens.requiredSignals.filter((signal) => signal !== "hospitality");
+    lens.publicProofIds = lens.publicProofIds.filter((proofId) => proofId !== "creative-technology-time-is-long");
+    register.controls.margaretMorse.historicalPerformanceUsedAsCurrentSkillProof = true;
+  });
+  assert.ok(failures.some((failure) => failure.includes("hospitality signal")));
+  assert.ok(failures.some((failure) => failure.includes("creative-technology-time-is-long")));
+  assert.ok(failures.some((failure) => failure.includes("current-skill proof")));
+});
+
+test("Warren Sack lens rejects metric-only evidence and historical authority inflation", () => {
+  const failures = evaluateProfessorLensWithRegister("warren-sack-lens", (register) => {
+    register.controls.warrenSack.engagementTotalsSufficient = true;
+    register.controls.warrenSack.structuralEquivalencePublicClaimStatus = "selected-current-credential";
+    register.controls.warrenSack.historicalPerformanceUsedAsCurrentSkillProof = true;
+  });
+  assert.ok(failures.some((failure) => failure.includes("engagement totals")));
+  assert.ok(failures.some((failure) => failure.includes("Structural-equivalence wording")));
+  assert.ok(failures.some((failure) => failure.includes("current-skill proof")));
+});
+
+test("Warren Sack lens rejects removal of implementation, interaction, and collective credit", () => {
+  const failures = evaluateProfessorLensWithRegister("warren-sack-lens", (register) => {
+    register.controls.warrenSack.recursiveModelRequired = false;
+    register.controls.warrenSack.prototypeOrImplementationEvidenceRequired = false;
+    register.controls.warrenSack.interfaceOrEmbodiedInteractionRequired = false;
+    register.controls.warrenSack.collectiveCreditRequired = false;
+  });
+  assert.ok(failures.some((failure) => failure.includes("recursive relation modeling")));
+  assert.ok(failures.some((failure) => failure.includes("prototype or implementation")));
+  assert.ok(failures.some((failure) => failure.includes("interface or embodied interaction")));
+  assert.ok(failures.some((failure) => failure.includes("collective credit")));
+});
+
+test("professor lenses reject private locator leakage and silent public professor copy", () => {
+  const privateFailures = evaluateProfessorLens({
+    ...professorLensFixture,
+    id: "margaret-morse-lens",
+    sourceNote: `${professorLensFixture.sourceNote}\n/Users/private/transcript`
+  });
+  const projectionFailures = evaluateProfessorLens({
+    ...professorLensFixture,
+    id: "warren-sack-lens",
+    aboutPage: `${professorLensFixture.aboutPage}\nMargaret Morse`
+  });
+  assert.ok(privateFailures.some((failure) => failure.includes("private locator")));
+  assert.ok(projectionFailures.some((failure) => failure.includes("must not silently appear")));
 });

@@ -50,6 +50,8 @@ The canonical positioning sentence is:
 | Application execution cadence | 16 | Yes | A 90-minute opportunity timebox returns noncritical proof debt to the inquiry queue and effort to applications, outreach, or conversations. |
 | Agency without inflation | 16 | Yes | Direct contribution verbs remain visible while collective-credit, authority, title, and causality boundaries stay intact. |
 | Integration governance | 16 | Yes | Branch-local scores remain distinct from PR ownership, supersession, exact-SHA approval, deployment, and postdeploy verification. |
+| Margaret Morse lens | 18 | Yes | The system preserves embodiment, attention, experimentation, hospitality, atmosphere, media archaeology, participation, memory, place, and artistic-civic-technical-social continuity without projecting protected professor material. |
+| Warren Sack lens | 18 | Yes | The system keeps recursive relations, implementation, interface or embodied interaction, multimodal documentation, dialogue, and collective credit connected without treating historical evaluation as current authority. |
 | NYC Artist Coalition government value | 20 | Yes | DCLA testimony, later named recognition, coalition recommendations, Council testimony, Espinal's policy sequence, and enacted-law functions remain linked while institutional interpretation stays distinct from motive, authorship, and causality. |
 | Portfolio evidence expansion | 18 | Yes | Ten new, non-orphan public sources mature bounded claims, reduce proof debt, and selectively strengthen cited portfolio surfaces. |
 | KC Town Hall Council allocation and lifecycle | 18 | Yes | Board recommendation, Council appropriation, and resolution are primary-sourced; Jamie's involvement is historical; allocation remains distinct from agreement execution, receipt, and disbursement; private transition context stays omitted. |
@@ -92,6 +94,13 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   credit.
 - **Branch/PR/production integration review:** owners, supersession, exact SHA,
   deployment approval, and postdeploy results are recorded.
+- **Embodied-practice editorial review:** an independent editor uses only the
+  public site to test whether hiring clarity preserves experimentation,
+  hospitality, atmosphere, attention, artistic intelligence, and embodied
+  participation.
+- **Recursive social-systems editorial review:** an independent reviewer uses
+  only the public site to trace relation model, implementation, interface or
+  embodied interaction, documentation, use context, and collective credit.
 
 ## Anti-gaming rules
 
@@ -136,6 +145,11 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - Do not erase unresolved social-profile slots, assign later KC Town Hall
   operations to Jamie, or promote project-reported Tired of Tires outcomes as
   independently audited results.
+- Do not represent the Margaret Morse or Warren Sack lens as professor-authored,
+  professor-reviewed, or presently endorsed; publish raw evaluation material;
+  infer current proficiency from historical course work; reduce artistic and
+  relational practice to utility; replace technical-social evidence with
+  engagement totals; or erase group co-design.
 - Do not satisfy CallNYC population completeness by erasing unresolved slots,
   inventing missing status IDs, trusting stored aggregates without item-level
   recomputation, converting Council tags into responses, converting issue rows

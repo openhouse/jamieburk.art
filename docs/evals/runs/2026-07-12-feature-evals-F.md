@@ -520,3 +520,43 @@ The complete `npm run check` gate passes with 19 citation tests, 126
 deterministic eval tests, TypeScript, lint, the production build, standalone
 assets, knowledge-bank integrity, public safety, route validation, and launch
 readiness.
+
+## Margaret Morse And Warren Sack Lens Pass
+
+The July 15 follow-up added two independent 18-point hard gates grounded in a
+protected, unofficial UCSC narrative-evaluation copy and a protected 2014
+recommendation screenshot. The records remain source context; the executable
+lenses are AI-authored editorial controls, not present-day professor opinions,
+endorsements, testimonials, or professor-authored criteria.
+
+The Margaret Morse lens tests whether the portfolio system preserves
+embodiment, attention, experimentation, hospitality, atmosphere, media
+archaeology, participation, memory, place, and continuity across artistic,
+civic, technical, and social practice. The Warren Sack lens tests whether a
+reviewer can trace recursive relations, implementation, interface or embodied
+interaction, multimodal documentation, use context, dialogue, and collective
+authorship rather than receiving a technology list or engagement totals.
+
+The first executable run scored **96/100**. Every prior gate passed; both new
+hard gates failed because the bounded register and protocols did not yet exist.
+After adding the register, source note, projection rules, and knowledge-bank
+context, a second 96/100 run exposed one wording mismatch, two evidence checks
+aimed at the wrong public file, and a faulty grade detector that matched normal
+hyphenated prose. The evaluator was corrected to test the intended public
+surfaces and protected concepts without weakening the source boundary.
+
+The final focused run reached **100/100** with both new and every prior hard
+gate passing. Seven adversarial tests reject present-endorsement and professor-
+authorship inflation, auto-projection, utility-only scoring, broken practice-
+domain continuity, erased embodied signals, historical-to-current skill
+inflation, engagement totals as sufficient social-system evidence, promoted
+structural-equivalence wording, lost implementation or collective credit,
+private locators, and silent public professor copy. The deterministic suite now
+passes **133 tests**.
+
+No raw evaluation, grade, student identifier, private correspondence, contact
+detail, private locator, or protected screenshot entered the repository. No
+professor material or new creative-practice claim was added to the public site.
+The independent `embodied-practice-editorial-review` and
+`recursive-social-systems-editorial-review` remain `manual-required` and
+unrun.

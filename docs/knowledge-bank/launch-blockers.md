@@ -28,6 +28,14 @@ public portfolio surface.
 - [x] Eleven portfolio blind-spot controls pass as automated hard gates: each
   has an owner, evidence requirements, anti-gaming rule, stop rule, next action,
   and linked manual gate while preserving `required-not-run` human status.
+- [x] The Margaret Morse lens passes as an automated hard gate: embodiment,
+  attention, experimentation, hospitality, atmosphere, participation, place,
+  and artistic-civic-technical-social continuity remain legible without
+  publishing protected professor material.
+- [x] The Warren Sack lens passes as an automated hard gate: recursive
+  relations, implementation, interaction, documentation, use, dialogue, and
+  collective credit remain connected without historical-to-current skill
+  inflation.
 
 ## Human gates
 
@@ -52,6 +60,10 @@ public portfolio surface.
   independent editorial review.
 - [ ] Branch-family PR ownership and supersession are resolved before Jamie
   approves an exact production candidate SHA.
+- [ ] An independent editor applies the embodied-practice lens to the current
+  public site without private professor material.
+- [ ] An independent reviewer applies the recursive social-systems lens to the
+  current public site without private professor material.
 
 Names, credits, screenshots, quotes, photos, and collaborator-sensitive claims
 remain omitted unless already public-safe or specifically approved.
