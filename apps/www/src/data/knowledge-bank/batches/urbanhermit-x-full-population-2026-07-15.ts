@@ -426,6 +426,19 @@ export const urbanhermitXFullPopulationBatch20260715: {
   ],
   sourceAssertions: [
     {
+      id: "AST-URBANHERM-X-AUTHENTICATED-METHOD-2026",
+      sourceId: "SRC-URBANHERM-X-AUTHENTICATED-RESEARCH-2026-07-15",
+      project: "urbanhermit-public-record",
+      assertion:
+        "The protected research run records authenticated Posts and Replies traversal, repeated no-growth passes, source-page review, and year-bounded incoming search without publishing raw personal content.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: ["CLM-URBANHERM-X-PERSONAL-PUBLIC-WORKING-SURFACE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
       id: "AST-URBANHERM-X-POPULATION-2026",
       sourceId: "SRC-URBANHERM-X-CORPUS-2026-07-15",
       project: "urbanhermit-public-record",
@@ -546,6 +559,32 @@ export const urbanhermitXFullPopulationBatch20260715: {
       reviewedBy
     },
     {
+      id: "AST-URBANHERM-X-JULIA-HORSE-LORDS-CREDIT-2016",
+      sourceId: "SRC-URBANHERM-X-JULIA-HORSE-LORDS-2016",
+      project: "participatory-programs",
+      assertion:
+        "Julia Fredenburg publicly credited Jamie Burkart and M.C. Schmidt for the analog Horse Lords video and linked the NPR publication.",
+      relationship: "corroborates",
+      confidence: "high",
+      candidateClaimIds: ["CLM-URBANHERM-HORSE-LORDS-TRUTHERS-VIDEO"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
+      id: "AST-URBANHERM-X-TUNNEL-SOURCE-CIRCULATION-2016",
+      sourceId: "SRC-URBANHERM-X-EIGHTH-STREET-TUNNEL-2016",
+      project: "participatory-programs",
+      assertion:
+        "Jamie publicly linked his KCUR interview about immersive cinema and Kansas City's 8th Street Tunnel, connecting the account record to the independent article.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: ["CLM-URBANHERM-EIGHTH-STREET-TUNNEL-PROGRAM"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
       id: "AST-URBANHERM-KCUR-TUNNEL-PROGRAM-2016",
       sourceId: "SRC-URBANHERM-KCUR-EIGHTH-STREET-TUNNEL-2016",
       project: "participatory-programs",
@@ -593,6 +632,19 @@ export const urbanhermitXFullPopulationBatch20260715: {
       project: "nyc-artist-coalition",
       assertion:
         "The NYC Artist Coalition account publicly attributed to Jamie a Save NYC Spaces statement about cultural traditions being born in small diverse spaces.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-URBANHERM-NYCAC-PUBLIC-SPEAKER-ATTRIBUTION"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
+      id: "AST-URBANHERM-X-NYCAC-TRUST-SAFETY-ATTRIBUTION-2017",
+      sourceId: "SRC-URBANHERM-X-NYCARTC-NIGHTLIFE-QUOTE-2017",
+      project: "nyc-artist-coalition",
+      assertion:
+        "The NYC Artist Coalition account publicly attributed to Jamie a statement framing Cabaret Law repeal as supporting trust between cultural spaces and the City and access to safety resources.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: ["CLM-URBANHERM-NYCAC-PUBLIC-SPEAKER-ATTRIBUTION"],
