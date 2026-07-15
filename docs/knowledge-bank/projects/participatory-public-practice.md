@@ -83,6 +83,20 @@ plan, not an independently confirmed completed venue. Participant messages,
 phone numbers, private logistics, and project media require privacy, rights,
 and consent review before republication.
 
+## Horse Lords - Truthers
+
+The official video page and contemporaneous NPR reporting document Jamie
+co-creating the 2016 video for Horse Lords' *Truthers* with M.C. Schmidt. NPR
+records the band's account of how the video's repeated shapes and letters,
+subtle variation, movement from black and white into color, and use of text
+mirrored the band's musical method.
+
+**Boundaries:** Always credit M.C. Schmidt. The reviewed sources do not
+establish contribution split or complete production method, and they do not
+support any claim that Jamie wrote or performed the music. Mutable view and
+engagement counts are excluded. Video, thumbnail, and still-image rights must
+be reviewed before republication.
+
 ## Sources
 
 - The Pitch, "When artists turn Huck Finn" (2007).
@@ -100,3 +114,6 @@ and consent review before republication.
 - Public-safe archival summary of NTER CHNG's January 2010 exhibit text.
 - Public-safe archival summary of the April 2011 America: Now and Here
   installation plan.
+- Horse Lords, "Truthers (Official Video)" (2016).
+- Lars Gotrich, "Video: Horse Lords' Hypnotic 'Truthers' Will Blast Your
+  Noodle," NPR Illinois (2016).

@@ -38,6 +38,12 @@ import {
   nterChngSources
 } from "../../apps/www/src/data/knowledge-bank/nter-chng.ts";
 import {
+  icloudArchiveClaims,
+  icloudArchiveInquiries,
+  icloudArchiveIntake,
+  icloudArchiveSources
+} from "../../apps/www/src/data/knowledge-bank/icloud-archive-production.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -442,6 +448,134 @@ test("NTER CHNG does not silently enter the current website or resume", () => {
   assert.doesNotMatch(publicSurfaces, /NTER CHNG/i);
   assert.doesNotMatch(publicSurfaces, /I Text, Therefore I Am/i);
   assert.doesNotMatch(publicSurfaces, /Drew Bolton|Garrett Fuselier/i);
+});
+
+test("iCloud archive production is source-backed, bounded, and fully dispositioned", () => {
+  assert.equal(icloudArchiveSources.length, 10);
+  assert.equal(icloudArchiveClaims.length, 5);
+  assert.equal(icloudArchiveInquiries.length, 3);
+  assert.equal(icloudArchiveIntake.length, 4);
+
+  const sourceIds = new Set(icloudArchiveSources.map((source) => source.id));
+  const claimIds = new Set(icloudArchiveClaims.map((claim) => claim.id));
+  const inquiryIds = new Set(
+    icloudArchiveInquiries.map((inquiry) => inquiry.id)
+  );
+
+  assert.ok(
+    icloudArchiveIntake.every(
+      (record) => record.status === "matured" && record.claimIds.length > 0
+    )
+  );
+  assert.deepEqual(
+    new Set(icloudArchiveIntake.flatMap((record) => record.sourceIds)),
+    sourceIds
+  );
+  assert.ok(
+    icloudArchiveIntake
+      .flatMap((record) => record.claimIds)
+      .every((claimId) => claimIds.has(claimId))
+  );
+  assert.ok(
+    icloudArchiveIntake
+      .flatMap((record) => record.inquiryIds ?? [])
+      .every((inquiryId) => inquiryIds.has(inquiryId))
+  );
+
+  const protectedSources = icloudArchiveSources.filter(
+    (source) => source.visibility === "protected"
+  );
+  assert.ok(
+    protectedSources.every(
+      (source) =>
+        source.protectedLocatorId &&
+        !source.canonicalUrl &&
+        !source.archiveUrl &&
+        !source.assetUrl
+    )
+  );
+  const protectedSourceIds = new Set(
+    protectedSources.map((source) => source.id)
+  );
+  assert.ok(
+    icloudArchiveClaims
+      .flatMap((claim) => claim.evidence)
+      .filter((relationship) => protectedSourceIds.has(relationship.sourceId))
+      .every(
+        (relationship) =>
+          relationship.relationship === "private-support" &&
+          relationship.renderCitation === false
+      )
+  );
+
+  const serialized = JSON.stringify({
+    intake: icloudArchiveIntake,
+    sources: icloudArchiveSources,
+    claims: icloudArchiveClaims,
+    inquiries: icloudArchiveInquiries
+  });
+  assert.doesNotMatch(
+    serialized,
+    /\/Users\/|\/Volumes\/|Mobile Documents|CloudDocs|supporting-materials/i
+  );
+});
+
+test("iCloud claims preserve Chad's lens without erasing boundaries", () => {
+  const claimById = new Map(icloudArchiveClaims.map((claim) => [claim.id, claim]));
+  const horseLords = claimById.get("CLM-HORSE-LORDS-TRUTHERS-VIDEO");
+  const campaignMemory = claimById.get(
+    "CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE"
+  );
+  const redline = claimById.get(
+    "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE"
+  );
+  const teamMemory = claimById.get("CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD");
+  const aiEvals = claimById.get("CLM-AI-EVALS-PROFESSIONAL-DEVELOPMENT");
+
+  assert.match(horseLords.internalClaim, /co-created.*M\.C\. Schmidt/i);
+  assert.ok(horseLords.antiClaims.some((item) => /alone/i.test(item)));
+  assert.equal(
+    horseLords.projections.find((item) => item.key === "about").status,
+    "hold"
+  );
+
+  assert.match(campaignMemory.internalClaim, /30\+ pages/i);
+  assert.equal(campaignMemory.status, "use-with-care");
+  assert.ok(
+    campaignMemory.boundaries.some((item) => /approximate aggregate/i.test(item))
+  );
+  assert.ok(
+    campaignMemory.boundaries.some((item) => /collective-work language/i.test(item))
+  );
+
+  assert.match(redline.internalClaim, /ten-page legislative provenance redline/i);
+  assert.ok(redline.boundaries.some((item) => /not legal advice/i.test(item)));
+  assert.ok(
+    redline.antiClaims.some((item) => /authored the .* legislation/i.test(item))
+  );
+
+  assert.equal(teamMemory.status, "use-with-care");
+  assert.ok(
+    teamMemory.antiClaims.some((item) => /production AI memory platform/i.test(item))
+  );
+  assert.ok(teamMemory.boundaries.some((item) => /Human review/i.test(item)));
+
+  assert.equal(aiEvals.status, "confirmed-with-boundary");
+  assert.match(aiEvals.internalClaim, /completed/i);
+  assert.ok(
+    aiEvals.boundaries.some((item) => /professional licensure/i.test(item))
+  );
+
+  const expectedProofLinks = new Map([
+    ["fair-rent-campaign-memory", campaignMemory.id],
+    ["fair-rent-source-map", redline.id],
+    ["source-backed-team-memory-method", teamMemory.id],
+    ["ai-evals-professional-development", aiEvals.id]
+  ]);
+  for (const [proofId, claimId] of expectedProofLinks) {
+    const proof = proofClaims.find((item) => item.id === proofId);
+    assert.deepEqual(proof.canonicalClaimIds, [claimId]);
+  }
 });
 
 test("campaign press ingestion is complete, deduplicated, and archived", () => {

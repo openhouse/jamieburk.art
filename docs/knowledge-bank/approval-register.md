@@ -24,7 +24,10 @@ The repo is public. Approval here means approved for public-safe repository and 
 - KC Town Hall Phase One: the completed 2019 cold-shell scope and $189,629 value may remain in the public knowledge bank. Jamie's general-contractor title, daily coordination detail, and survey-system authorship are held from website and resume projection pending independent attribution.
 - Kansas City neighborhood operations: Tired of Tires and Cleveland Avenue accounts may remain as bounded research records. Jamie's individual operating role, Indian Mound expansion, the $17,768 savings estimate, and Cleveland Avenue program outcomes are not approved for website or resume projection pending corroboration.
 - NTER CHNG: the co-creation, January 2010 exhibition window, software-and-architecture and many-to-many framing, Cocoon Gallery presentation, and America: Now and Here inclusion may remain in the public knowledge bank. The 2011 Leedy-Voulkos reference is approved only as an intended venue in a contemporaneous plan. Website and resume projection remain held; all collaborators must be credited, and participant messages, phone numbers, private logistics, direct quotations, and project media require privacy, rights, and consent review.
-- Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
+- Horse Lords / Truthers: co-creation credit with M.C. Schmidt and the contemporary NPR account may remain in the public knowledge bank. Website and resume projection remain held. Video, thumbnail, and still-image publication require rights review.
+- Fair Rent NYC / Commercial Rent Stabilization artifact suite: the campaign-memory and legislative-provenance claims may project in their approved portfolio wording. The 30+ page figure is an approximate, rendering-dependent aggregate across multiple evolving artifacts. The provenance redline is unofficial and not legal advice.
+- Source-Backed Team Memory: the bounded developing method may project to the lab and Technical Operations pages. Do not imply production SaaS, deployment, measured outcomes, or unrestricted archive access.
+- AI Evals professional development: course completion through Maven in 2026 may project to approved resume and About surfaces. Do not imply instructor affiliation, professional licensure, or production outcomes from the credential alone.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo
@@ -39,3 +42,4 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.
+- Private course portals, cohort records, coursework, and participant data.

@@ -56,6 +56,32 @@ Hall case studies. The tunnel, raft, and augmented-reality records remain as
 public-safe depth in the bank until a future composition has the right
 artifacts, rights review, and editorial space.
 
+### iCloud Teams archive production
+
+The July 15 archive-production pass used project overview files to orient three
+large iCloud working archives, then close-read a bounded set of relevant anchor
+records. It added ten typed source records:
+
+- the official Horse Lords *Truthers* video page;
+- Lars Gotrich's contemporaneous NPR feature about the video;
+- protected summaries of evolving Commercial Rent Stabilization running
+  minutes, a 90-day operating plan, and a legislative provenance redline;
+- a protected summary of Source-Backed Team Memory proposal and preparation
+  records plus the public lab page;
+- Jamie's protected certificate of completion, Maven's public AI Evals course
+  page, and a protected completed-cohort portal summary.
+
+Public records retain their canonical URLs. Protected records expose only a
+stable locator, public-safe source description, supported propositions, and
+explicit non-support. The repository does not contain iCloud paths, raw
+documents, collaborator lists, live strategy, pricing, transcripts, course
+materials, portal identifiers, or private contact information.
+
+The public Maven syllabus continues to change. It supports the course title,
+instructors, broad educational context, and certificate format; Jamie's
+certificate establishes completion, while the protected cohort record supports
+the period curriculum.
+
 ### NYC Artist Coalition campaign press corpus
 
 The July 13 press-ingestion pass added 41 previously unrecorded article records

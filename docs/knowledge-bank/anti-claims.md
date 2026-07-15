@@ -119,3 +119,36 @@ images, or private logistics.
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+Do not describe Source-Backed Team Memory as a finished SaaS product, chatbot,
+unrestricted private-archive browser, completed production deployment, or
+replacement for source authority and human judgment.
+
+## Commercial Rent Stabilization artifact suite
+
+Do not present the 30+ page figure as the length of one document. It is an
+approximate, rendering-dependent aggregate across an evolving artifact suite.
+Do not add overlapping versions of the same running minutes as independent
+documents.
+
+Do not present Jamie's legislative provenance redline as official government
+analysis, legal advice, authorship of the underlying legislation, or proof that
+reviewer labels identify individual drafting authors.
+
+## Horse Lords - Truthers
+
+Do not say Jamie created the *Truthers* video alone. Credit M.C. Schmidt as
+co-creator. Do not imply Jamie composed or performed the song, infer the video
+creators' contribution split, or use mutable platform counts as durable
+accomplishment metrics.
+
+Do not publish video, thumbnails, or stills without rights review.
+
+## AI Evals professional development
+
+Do not imply Jamie teaches AI Evals For Engineers & PMs, has an instructor
+affiliation, or holds professional licensure from Maven. Course completion is
+not by itself proof of production AI-system outcomes.
+
+Do not treat the changing public syllabus as identical to Jamie's completed
+cohort or publish private coursework, participant information, or portal data.

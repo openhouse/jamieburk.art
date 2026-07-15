@@ -24,3 +24,10 @@ No intake record is itself permission to publish a website claim. Photo leads
 must first become reviewed sources or inquiries. Private raw records, contact
 data, correspondence, credentials, and unapproved images remain outside this
 repository.
+
+Large private archives enter through modular typed ledgers as protected
+summaries, not raw file inventories. The July 15 iCloud pass added four matured
+intake records in `icloud-archive-production.ts`, covering Jamie Projects
+History, Commercial Rent Stabilization, Source-Backed Team Memory, and AI Evals
+professional development. Each record links every reviewed source to a claim
+and, where uncertainty remains, an inquiry.

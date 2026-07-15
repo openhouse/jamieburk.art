@@ -61,6 +61,10 @@ Use only public-safe method claims.
 Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
 imply production SaaS.
 
+The canonical record is `CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD`. It supports the
+current developing-method language and keeps deployment and measured outcomes
+as open research.
+
 ## Case Studies
 
 Each case study should include proof IDs in work metadata, then use those claims
@@ -81,6 +85,7 @@ as source discipline rather than dumping the bank onto the page.
 | `CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY` | Hold pending authorship and method review | The listening process demonstrably shaped the proposal; preserve partner credit and keep response/contact data private. |
 | `CLM-TIRED-OF-TIRES-NEIGHBORHOOD-OPERATIONS` | Hold pending role and metric review | The program and project-published savings figure are documented; Jamie's operating role, Indian Mound expansion, and any tire count need corroboration. |
 | `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION` | Hold from site; retain in bank and photo research | Strong evidence of participatory technology spanning software, physical installation, public interaction, and national-program inclusion; publish only when it can sharpen the present-day hiring argument and media rights are cleared. |
+| `CLM-HORSE-LORDS-TRUTHERS-VIDEO` | Hold from site; retain in bank and media research | Strong public co-creation credit and contemporary NPR coverage add historical breadth, but the current hiring argument does not need another project and media rights remain unreviewed. |
 
 Cleveland Avenue Unify to Beautify is not yet a claim and has no projection.
 It remains a research inquiry with HENC context only.

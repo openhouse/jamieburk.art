@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { requireReadyOrCarefulProof } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
+
+const aiEvalsProof = requireReadyOrCarefulProof(
+  "ai-evals-professional-development"
+);
 
 export const metadata: Metadata = createMetadata({
   title: "About - Jamie Burkart",
@@ -37,6 +42,7 @@ export default function AboutPage() {
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
           </p>
+          <p>{aiEvalsProof.publicWording}</p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">

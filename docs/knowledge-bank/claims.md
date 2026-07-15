@@ -213,7 +213,9 @@ bibliography claim:
 **Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.
 **Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
 **Review owner:** Jamie / Collaborator approval needed for named materials
-**Last reviewed:** 2026-07-07
+**Canonical claim:** `CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE`.
+**Measurement boundary:** The 30+ figure is an approximate aggregate across an evolving multi-document artifact suite, not one fixed or official document. Page totals vary by version and rendering.
+**Last reviewed:** 2026-07-15
 
 ## fair-rent-source-map - Legislative source map and provenance redline
 
@@ -228,7 +230,8 @@ bibliography claim:
 **Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
 **Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.
 **Review owner:** Jamie / Collaborator approval needed
-**Last reviewed:** 2026-07-07
+**Canonical claim:** `CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE`.
+**Last reviewed:** 2026-07-15
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
@@ -334,7 +337,8 @@ bibliography claim:
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Canonical claim:** `CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD`.
+**Last reviewed:** 2026-07-15
 
 ## technical-operations-operating-backbone - Operating backbone
 
@@ -364,4 +368,64 @@ bibliography claim:
 **Do not say:** Jamie teaches the course; Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved.
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Canonical claim:** `CLM-AI-EVALS-PROFESSIONAL-DEVELOPMENT`.
+**Last reviewed:** 2026-07-15
+
+# 2026-07-15 iCloud Teams archive production
+
+Close reading of selected anchor records from Jamie Projects History, CRS, and
+job-hunt matured five canonical claims from ten source records. The source
+files and private locators remain outside the public repository.
+
+### `CLM-HORSE-LORDS-TRUTHERS-VIDEO`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** Co-created the official 2016 video for Horse Lords'
+*Truthers* with M.C. Schmidt; NPR documented the work and the band's account
+of how its repetition, variation, color, and text mirrored the music.
+**Projection:** Active historical archive note. About and media projections
+remain held.
+**Guardrail:** Always credit M.C. Schmidt. Do not imply music authorship,
+infer contribution split, use mutable platform metrics, or publish video media
+without rights review.
+
+### `CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE`
+
+**Status:** Use with care
+**Public-safe wording:** Built and stewarded 30+ pages of shared Commercial
+Rent Stabilization campaign-memory and coordination infrastructure.
+**Projection:** Active on approved resume and Technical Operations surfaces.
+**Guardrail:** Treat 30+ pages as a rendering-dependent aggregate across an
+evolving artifact suite. Use collective-work language and keep raw coalition
+records private.
+
+### `CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** Created a ten-page legislative provenance redline
+tracing Commercial Rent Stabilization language across city and state policy
+lineages and revision paths.
+**Projection:** Active on approved resume and Technical Operations surfaces.
+**Guardrail:** The document is an unofficial discussion artifact, not legal
+advice or proof that Jamie authored the underlying legislation.
+
+### `CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD`
+
+**Status:** Use with care
+**Public-safe wording:** Developing a bounded method for source-backed team
+memory: reviewable, human-correctable, source-linked operating memory for
+knowledge-heavy teams.
+**Projection:** Active on the lab and Technical Operations surfaces.
+**Guardrail:** A concrete developing method is not a production deployment,
+completed client engagement, chatbot, unrestricted archive browser, or
+replacement for human judgment.
+
+### `CLM-AI-EVALS-PROFESSIONAL-DEVELOPMENT`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** Completed AI Evals For Engineers & PMs with Hamel
+Husain and Shreya Shankar through Maven in 2026.
+**Projection:** Active on approved resume and About surfaces.
+**Guardrail:** Treat this as course completion and professional development,
+not instructor affiliation, professional licensure, or evidence of production
+outcomes by itself.

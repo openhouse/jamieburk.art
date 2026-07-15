@@ -93,3 +93,10 @@ pilot. The Kansas City records are separated into
 [neighborhood operations](projects/kansas-city-neighborhood-operations.md) so
 construction delivery, participatory listening, recurring service operations,
 and still-open role research do not blur into one claim.
+
+The July 15 iCloud archive-production pass adds focused project records for
+[Fair Rent NYC and Commercial Rent Stabilization](projects/fair-rent-nyc.md),
+[Source-Backed Team Memory](projects/source-backed-team-memory.md), and
+[professional development](projects/professional-development.md). Historical
+visual and participatory work remains grouped in
+[participatory public practice](projects/participatory-public-practice.md).

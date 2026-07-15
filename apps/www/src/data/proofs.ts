@@ -197,7 +197,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "fair-rent-source-map",
@@ -229,7 +230,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -485,7 +487,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -542,7 +545,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "lab", "about"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-AI-EVALS-PROFESSIONAL-DEVELOPMENT"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "waterways-participatory-practice",
