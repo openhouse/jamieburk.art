@@ -31,7 +31,7 @@ test("multi-source occurrences preserve editorial order", () => {
 test("structured citations extend across four public case studies", () => {
   assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist"]);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "public-storefront").sources[0].number, 1);
-  assert.equal(resolveCitationOccurrence("harry-j-epstein", "revenue-growth-contribution").sources[0].number, 2);
+  assert.equal(resolveCitationOccurrence("harry-j-epstein", "online-sales-share-2016").sources[0].number, 2);
   assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 1);
   assert.equal(resolveCitationOccurrence("wowlist", "archived-public-surface").sources[0].number, 1);
 });
@@ -45,7 +45,7 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  assert.equal(knowledgeBank.corrections.length, 4);
 });
 
 test("negative research preserves scope and limitations", () => {

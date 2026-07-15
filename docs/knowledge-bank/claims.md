@@ -132,18 +132,18 @@ stay outside the repo.
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
-**Status:** Careful
-**Support level:** Careful
-**Evidence class:** Approved resume / firsthand operational context
+**Status:** Pending
+**Support level:** Pending
+**Evidence class:** Approved resume
 **Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 **Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.
-**Where to project:** Homepage, Resume page, Technical Operations, HJE case study.
-**Why it matters:** Provides a concise business-impact proof point while retaining careful causality.
-**Guardrail:** Must stay as contribution language.
+**Where to project:** Internal research only.
+**Why it matters:** Preserves a potentially valuable business-impact proof point while the exact comparison and contribution relationship are verified.
+**Guardrail:** Do not project until the comparison period, same-basis arithmetic, and authorized contribution confirmation meet the acceptance rule in `TASK-HJE-REVENUE-INDEPENDENT-CORROBORATION`.
 **Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.
 **Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
 
 ## callnyc-civic-data-guidance - Civic data to resident guidance
 

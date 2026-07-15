@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "487bae019fb47106d43671519a02caa076b049ff42d2dd468bdbb746db3d24f7",
+    "fingerprint": "b80711ed5ce268f00ab13f36409640785083b2483026b42e72a24c64064601e6",
     "counts": {
-      "entities": 26,
-      "intake": 117,
-      "sources": 240,
-      "sourceReadings": 240,
-      "claims": 102,
-      "researchTasks": 44,
-      "projectionDecisions": 82
+      "entities": 27,
+      "intake": 125,
+      "sources": 248,
+      "sourceReadings": 248,
+      "claims": 106,
+      "researchTasks": 46,
+      "projectionDecisions": 86
     }
   },
   "judge": {
@@ -24,16 +24,16 @@
             "record": "intakeRecordSchema"
           },
           {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "COR-CALLNYC-SUPERLATIVE-2026"
+            "record": "COR-HJE-REVENUE-CORROBORATION-HOLD-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
             "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/jamie-facebook-posts-2026-07-14.ts",
-            "record": "INTAKE-JAMIE-FACEBOOK-POST-POPULATION-2026"
           }
         ]
       },
@@ -42,20 +42,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "atomicPropositionSchema"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "READ-KCUR-HJE-ONLINE-SALES-2016"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
+            "record": "READ-RIVER-PITCH-2007"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-NYC-OFFICE-NIGHTLIFE-LAW-2017"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/jamie-facebook-posts-2026-07-14.ts",
-            "record": "READ-JAMIE-FACEBOOK-PROFESSIONAL-CLOSE-READ-2026"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "READ-X-REVIEW-NYCARTC-2026"
           }
         ]
       },
@@ -64,20 +60,24 @@
         "score": 4,
         "evidence": [
           {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "CLM-NYCARTC-OFFICE-NIGHTLIFE-TOWN-HALL"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/jamie-facebook-posts-2026-07-14.ts",
-            "record": "CLM-JAMIE-FACEBOOK-PROJECT-OPERATIONS-THREAD-2009-2020"
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "CLM-HJE-ONLINE-SALES-SHARE-2016"
           }
         ]
       },
@@ -86,8 +86,8 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-CREATION-ROLE"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "TASK-HJE-REVENUE-INDEPENDENT-CORROBORATION"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -98,8 +98,8 @@
             "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/jamie-facebook-posts-2026-07-14.ts",
-            "record": "TASK-JAMIE-FACEBOOK-ENGAGEMENT-RECOVERY-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           }
         ]
       },
@@ -108,20 +108,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "projectionDecisionSchema"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-DEFER-HJE-GROWTH"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "DEC-PUBLISH-HJE-ONLINE-SALES-SHARE-2016"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/jamie-facebook-posts-2026-07-14.ts",
-            "record": "DEC-DISALLOW-JAMIE-FACEBOOK-ENGAGEMENT-CLAIM"
-          },
-          {
-            "file": "scripts/generate-public-citations.mjs",
-            "record": "cannot enter the public registry without projected maturity"
           }
         ]
       },
@@ -130,20 +126,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/public-safety.md",
-            "record": "Prohibited Materials"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026"
           },
           {
-            "file": "docs/knowledge-bank/research/jamie-facebook-posts-2026-07-14.md",
-            "record": "The repository census includes only a sequential ledger ID"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "docs/knowledge-bank/data/jamie-facebook-post-census-2026-07-14.csv",
-            "record": "ledger_id,year,record_type,primary_theme,professional_relevance,accounting_status,public_detail_status"
+            "file": "docs/knowledge-bank/sources.md",
+            "record": "Prohibited Source Material In This Repo"
           },
           {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "Jamie Facebook authored-post census accounts for every unique returned record without personal detail"
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "public-repo-boundary-is-enforced"
           }
         ]
       },
@@ -152,20 +148,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/chad-lens.md",
-            "record": "Do not make the reader decode Jamie."
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "CLM-CROSS-PROJECT-ARCHIVE-PRACTICE-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "composition: z.object({"
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "future writers a deep palette"
           }
         ]
       }
@@ -188,5 +184,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh repository-only review of the exact snapshot found an explicit, traversable, defensible, and public-safe lifecycle. The deterministic evaluator reports 0 hard-gate failures and 0 quality-target gaps; all 96 lifecycle tests pass, and the knowledge-bank and public-safety checks pass. Representative captured, researching, corroborated, public-ready, projected, rejected, and superseded records preserve provenance and disposition. The Jamie Facebook census accounts for 1,243 unique returned records through aggregate-only rows, keeps raw personal material protected, treats omitted engagement as unknown, promotes only an independently public source, and defers or disallows all related portfolio projections. NYC Artist Coalition creation, Office of Nightlife contribution, Talks Not Raids and MARCH causation, account establishment, administration, authorship, engagement, and campaign outcomes remain separately bounded. River and Open House claims retain collective credit, and every human gate remains pending."
+  "summary": "Fresh assessment score: 100/100. The deterministic evaluator reports 0 of 7 hard-gate failures and 0 of 4 quality-target gaps. All 102 knowledge-lifecycle tests and all 10 citation tests pass. The July 14 HJE work correctly separates the unsupported Jamie-linked 2x claim from KCUR's independently reported company context, preserves the former on a non-active corroboration hold with an executable two-part acceptance rule, records the correction and defer/publish decisions, updates public copy and citation planning, and adds regression coverage. The wider graph preserves every maturity level, collective credit, protected-source boundaries, social-account distinctions, photo-to-research routing, and proposition-level projection discipline. No new structural failure was found, so every critical floor and the release threshold pass; all human gates remain pending."
 }

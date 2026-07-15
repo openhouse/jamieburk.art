@@ -409,6 +409,151 @@ test("Teams archive claims cannot lose semantic support", () => {
   );
 });
 
+test("authenticated Teams deepening preserves the inventory and version-skew boundary", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-TEAMS-ICLOUD-WEB-INVENTORY-2026"
+  );
+  const reading = knowledgeBank.sourceReadings.find(
+    (item) => item.sourceId === source.id
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-TEAMS-ICLOUD-VERSION-RECONCILIATION-2026"
+  );
+
+  assert.equal(source.visibility, "protected");
+  assert.equal(source.preservationStatus, "private");
+  assert.ok(source.protectedLocatorId);
+  assert.equal(source.canonicalUrl, undefined);
+  assert.equal(source.archiveUrl, undefined);
+  assert.equal(source.assetUrl, undefined);
+  assert.ok(reading.propositions.some((item) => /68 Teams items.*six Jamie Projects History items.*175 CRS items.*58 job-hunt items/i.test(item.text)));
+  assert.ok(reading.limitations.some((item) => /newest cloud overview was inventoried but not close-read/i.test(item)));
+  assert.equal(task.status, "open");
+  assert.equal(task.priority, "high");
+  assert.ok(task.nextActions.some((item) => /checksums/i.test(item)));
+});
+
+test("NTER CHNG preserves participatory behavior and every recovered collaborator credit", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.equal(claim.projections.length, 0);
+  assert.match(claim.composition.action, /co-designed.*participatory texting installation/i);
+  assert.match(claim.composition.usableResult, /participant text messages.*digital wall/i);
+  assert.match(claim.composition.collectiveCredit, /Drew Bolton.*Garrett Fuselier.*Mary Nichols.*Megan Mantia.*Elisha Stetson/i);
+  assert.ok(claim.antiClaims.some((item) => /alone created/i.test(item)));
+  assert.equal(decision.decision, "defer");
+
+  const publicSources = claim.evidence.map((item) =>
+    knowledgeBank.sources.find((source) => source.id === item.sourceId)
+  );
+  assert.equal(publicSources.length, 2);
+  assert.ok(publicSources.every((source) => source.visibility === "public"));
+  assert.ok(publicSources.every((source) => source.canonicalUrl));
+});
+
+test("NYC Artist Coalition Wikipedia handoff separates drafting, editing, and publication", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-WIKIPEDIA-SOURCE-HANDOFF-2025"
+  );
+  const privateSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-TEAMS-NYCAC-WIKIPEDIA-COLLABORATION-2025"
+  );
+  const historySource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WIKIPEDIA-NYCAC-REVISION-HISTORY-2025"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(privateSource.visibility, "protected");
+  assert.equal(privateSource.canonicalUrl, undefined);
+  assert.equal(historySource.visibility, "public");
+  assert.match(historySource.canonicalUrl, /action=history/);
+  assert.match(claim.composition.collectiveCredit, /Dorothy Howard.*expert editing.*publication handoff/i);
+  assert.ok(claim.antiClaims.some((item) => /independently published/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /verified or endorsed every coalition claim/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /image right/i.test(item)));
+  assert.equal(claim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
+});
+
+test("CRS power-map evidence cannot imply adoption or policy impact", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-POWER-MAP-MESSAGING-GRID-2026"
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-TEAMS-CRS-POWER-MAP-2026"
+  );
+
+  assert.equal(source.visibility, "protected");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.match(claim.composition.intendedEnd, /reviewable operational choices.*vulnerable participants/i);
+  assert.ok(claim.boundaries.some((item) => /prepared or designed, not adopted/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /produced passage.*measured outcome/i.test(item)));
+  assert.equal(claim.projections.length, 0);
+});
+
+test("job-hunt synthesis routes the HJE revenue corroboration gap", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-TEAMS-JOB-HUNT-CONTEXT-OUTLINE-2026"
+  );
+  const reading = knowledgeBank.sourceReadings.find(
+    (item) => item.sourceId === source.id
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-HJE-REVENUE-INDEPENDENT-CORROBORATION"
+  );
+
+  assert.equal(source.visibility, "protected");
+  assert.ok(source.doesNotEstablish.some((item) => /independent verification/i.test(item)));
+  assert.ok(reading.propositions.some((item) => /did not independently corroborate.*two-times revenue/i.test(item.text)));
+  assert.equal(task.status, "open");
+  assert.equal(task.priority, "high");
+  assert.deepEqual(task.claimIds, ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"]);
+  assert.ok(task.nextActions.some((item) => /Jori Sackin.*authorized.*financial-record custodian/i.test(item)));
+  assert.ok(task.nextActions.some((item) => /gross-versus-net.*returns treatment/i.test(item)));
+  assert.ok(task.nextActions.some((item) => /between 1\.95 and 2\.05/i.test(item)));
+  assert.ok(task.nextActions.some((item) => /dated written confirmation/i.test(item)));
+
+  const revenueClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"
+  );
+  const revenueDecision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === revenueClaim.id
+  );
+  assert.equal(revenueClaim.maturity, "corroborated");
+  assert.equal(revenueClaim.projections.some((item) => item.status === "active"), false);
+  assert.ok(revenueClaim.antiClaims.some((item) => /independently verified/i.test(item)));
+  assert.equal(revenueDecision.decision, "defer");
+});
+
+test("KCUR replaces the HJE revenue number with independent company context", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KCUR-HJE-ONLINE-SALES-2016"
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-HJE-ONLINE-SALES-SHARE-2016"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(source.visibility, "public");
+  assert.match(source.canonicalUrl, /kcur\.org/);
+  assert.ok(source.doesNotEstablish.some((item) => /Jamie's role/i.test(item)));
+  assert.equal(claim.maturity, "projected");
+  assert.match(claim.projections[0].text, /online sales accounted for half/i);
+  assert.doesNotMatch(claim.projections[0].text, /Jamie|2x|doubled/i);
+  assert.ok(claim.antiClaims.some((item) => /Jamie doubled/i.test(item)));
+  assert.equal(decision.decision, "publish");
+});
+
 test("Google Drive archive production remains protected, bounded, and deferred", () => {
   const sourceIds = [
     "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026",

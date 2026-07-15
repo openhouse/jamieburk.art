@@ -101,19 +101,22 @@ export const proofClaims: ProofClaim[] = [
   },
   {
     id: "hje-revenue-growth-contribution",
-    status: "careful",
-    supportLevel: "careful",
-    evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
+    status: "pending",
+    supportLevel: "pending",
+    evidenceClass: ["approved-resume"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
     shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
-    sourceBasis: "Approved resume language and public-safe firsthand operational context.",
-    sourceNote: "Keep causal language careful and aggregate.",
+    sourceBasis:
+      "Approved resume language only; independent financial and contribution corroboration remains open.",
+    sourceNote:
+      "Retain as a research-stage claim. Do not project until the comparison and contribution-confirmation acceptance rule is met.",
     whyItMatters:
-      "Provides a concise business-impact proof point while retaining careful causality.",
-    guardrail: "Must stay as contribution language.",
+      "Preserves a potentially valuable business-impact claim while making the remaining verification work explicit.",
+    guardrail:
+      "Internal research only until the comparison period, same-basis arithmetic, and authorized contribution confirmation are recovered.",
     doNotSay: [
       "Caused 2x revenue growth",
       "Single-handedly doubled revenue",
@@ -126,10 +129,10 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Internal analytics"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "case-study"],
+    surfaces: ["internal-only"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "implementation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "callnyc-civic-data-guidance",
@@ -572,7 +575,6 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 
 export const homepageProofs = [
   "career-operating-structure-14-years",
-  "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure"
@@ -581,7 +583,6 @@ export const homepageProofs = [
 export const resumeProofHighlights = [
   "career-operating-structure-14-years",
   "hje-modernization-stewardship",
-  "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "callnyc-civic-data-guidance",
@@ -630,7 +631,7 @@ export const technicalOperationsProofRows = [
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
-      "hje-revenue-growth-contribution"
+      "hje-modernization-stewardship"
     ]
   }
 ].map((row) => ({

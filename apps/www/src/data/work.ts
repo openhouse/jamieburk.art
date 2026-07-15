@@ -109,10 +109,7 @@ const workItemsInput = [
     featured: true,
     priority: 1,
     visibility: "public-safe",
-    proofBankIds: [
-      "hje-modernization-stewardship",
-      "hje-revenue-growth-contribution"
-    ],
+    proofBankIds: ["hje-modernization-stewardship"],
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
@@ -136,7 +133,7 @@ const workItemsInput = [
       {
         title: "Public-safe analytics summary",
         description:
-          "Impact framed as a contribution to online growth without exposing private dashboards or internal revenue detail.",
+          "Business context is grounded in independent public reporting without exposing private dashboards or internal revenue detail.",
         type: "analytics summary"
       },
       {
@@ -165,10 +162,10 @@ const workItemsInput = [
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, independent reporting, approved resume role summary, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
-      note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
+      note: "Use only public-safe claims and approved screenshots. Keep precise revenue metrics off the site until independent corroboration is complete."
     },
     currentStatus: "Public-safe full case study with private operational material intentionally omitted.",
     group: "Operating systems for teams",
@@ -177,14 +174,14 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Independent reporting that online sales accounted for half of the business by 2016",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Detailed revenue attribution, internal workflow diagrams, and private operating records remain outside this public case study.",
+        "The precise revenue comparison remains on corroboration hold; internal workflow diagrams and private operating records remain outside this public case study.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }

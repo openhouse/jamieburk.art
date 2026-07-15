@@ -8,7 +8,6 @@ map to decide where claims may appear.
 Use only the smallest, most legible claims:
 
 - `career-operating-structure-14-years`
-- `hje-revenue-growth-contribution`
 - `fair-rent-campaign-memory`
 - `wowlist-community-platform`
 - `sunday-dinner-196-participation-infrastructure`
@@ -19,7 +18,6 @@ Use claims that match the approved resume:
 
 - `career-operating-structure-14-years`
 - `hje-modernization-stewardship`
-- `hje-revenue-growth-contribution`
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `callnyc-civic-data-guidance`
@@ -37,7 +35,6 @@ Use claims that directly support operating-backbone fit:
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `hje-modernization-stewardship`
-- `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`

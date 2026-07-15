@@ -26,7 +26,7 @@ const requiredProofIds = [
 ];
 
 const requiredWorkProofs = new Map([
-  ["harry-j-epstein", ["hje-modernization-stewardship", "hje-revenue-growth-contribution"]],
+  ["harry-j-epstein", ["hje-modernization-stewardship"]],
   [
     "fair-rent-nyc",
     [

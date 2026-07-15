@@ -33,6 +33,15 @@ import {
   teamsArchiveSources
 } from "./teams-archive-production-2026-07-13.ts";
 import {
+  teamsArchiveDeepeningClaims,
+  teamsArchiveDeepeningDecisions,
+  teamsArchiveDeepeningEntities,
+  teamsArchiveDeepeningIntake,
+  teamsArchiveDeepeningReadings,
+  teamsArchiveDeepeningResearchTasks,
+  teamsArchiveDeepeningSources
+} from "./teams-archive-deepening-2026-07-14.ts";
+import {
   googleDriveArchiveClaims,
   googleDriveArchiveDecisions,
   googleDriveArchiveEntities,
@@ -150,8 +159,8 @@ import {
 } from "./jamie-facebook-posts-2026-07-14.ts";
 
 const knowledgeBankInput = {
-  entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities],
-  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake],
+  entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...teamsArchiveDeepeningEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities],
+  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -351,6 +360,7 @@ const knowledgeBankInput = {
     ...sourceExpansionSources,
     ...campaignPressSources,
     ...teamsArchiveSources,
+    ...teamsArchiveDeepeningSources,
     ...googleDriveArchiveSources,
     ...socialArchiveSources,
     ...callNycSocialCensusSources,
@@ -492,15 +502,15 @@ const knowledgeBankInput = {
       id: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
       project: "harry-j-epstein",
       internalClaim: "Jamie's web, e-commerce, marketing, analytics, and operations improvements contributed to a period of 2x revenue growth at Harry J. Epstein Company.",
-      status: "confirmed-with-boundary",
-      maturity: "projected",
+      status: "use-with-care",
+      maturity: "corroborated",
       intakeIds: ["INTAKE-MIGRATION-HJE-PUBLIC-CLAIMS"],
       requiredSupportTags: ["hje-improvement-areas", "hje-revenue-contribution-wording"],
-      projections: [{ key: "case-study", text: "Jamie's web, e-commerce, marketing, analytics, and operations improvements contributed to a period of 2x revenue growth.", status: "active", citationRequired: true, surfaces: ["/work/harry-j-epstein"] }],
-      evidence: [{ sourceId: "SRC-HJE-PUBLIC-RESUME-2026-07-11", relationship: "direct-support", supports: ["Jamie's HJE improvement areas", "contribution to 2x revenue growth", "legacy e-commerce context"], propositionIds: ["PROP-HJE-RESUME-IMPROVEMENT-AREAS", "PROP-HJE-RESUME-REVENUE-CONTRIBUTION", "PROP-HJE-RESUME-FINANCIAL-BOUNDARY"], confidence: "high", renderCitation: true }],
-      boundaries: ["Treat this as approved contribution language, not sole causality or audited public financial disclosure; underlying figures remain private."],
-      antiClaims: ["Jamie caused all revenue growth.", "The portfolio publishes audited revenue figures.", "Jamie solely owned the business outcome."],
-      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
+      projections: [{ key: "case-study", text: "Jamie's web, e-commerce, marketing, analytics, and operations improvements contributed to a period of 2x revenue growth.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [{ sourceId: "SRC-HJE-PUBLIC-RESUME-2026-07-11", relationship: "direct-support", supports: ["Jamie's published HJE improvement areas", "Jamie's published contribution wording", "legacy e-commerce context"], propositionIds: ["PROP-HJE-RESUME-IMPROVEMENT-AREAS", "PROP-HJE-RESUME-REVENUE-CONTRIBUTION", "PROP-HJE-RESUME-FINANCIAL-BOUNDARY"], confidence: "moderate", renderCitation: false }],
+      boundaries: ["The public resume establishes Jamie's published account, not independent financial corroboration.", "Do not restore the numerical website projection until the comparison period, same-basis arithmetic, and authorized contribution confirmation meet the linked research task's acceptance rule."],
+      antiClaims: ["Jamie caused all revenue growth.", "The portfolio has independently verified the 2x figure.", "Online sales reaching 50 percent of the business proves total revenue doubled.", "Jamie solely owned the business outcome."],
+      researchInquiryIds: [], reviewedAt: "2026-07-14", reviewedBy: ["Jamie Burkart", "Codex archive review", "Independent lifecycle judge"]
     },
     {
       id: "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",
@@ -534,6 +544,7 @@ const knowledgeBankInput = {
     ...sourceExpansionClaims,
     ...campaignPressClaims,
     ...teamsArchiveClaims,
+    ...teamsArchiveDeepeningClaims,
     ...googleDriveArchiveClaims,
     ...socialArchiveClaims,
     ...callNycSocialCensusClaims,
@@ -548,8 +559,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostClaims,
     ...jamieFacebookPostClaims
   ],
-  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings],
-  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks],
+  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings],
+  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...teamsArchiveDeepeningResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
@@ -563,11 +574,12 @@ const knowledgeBankInput = {
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
   }, ...urbanHermitSocialCensusInquiries, ...nycArtCFacebookEventInquiries, ...personalWowListFacebookEventInquiries, ...wowListFacebookPostInquiries, ...nycArtCFacebookPostInquiries, ...kcSpacesFundFacebookPostInquiries, ...jamieFacebookPostInquiries],
-  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions],
+  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...teamsArchiveDeepeningDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active", intakeIds: ["INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"] },
-    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
+    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
+    { id: "COR-HJE-REVENUE-CORROBORATION-HOLD-2026", claimId: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", previousText: "Active website projection of Jamie's contribution to 2x revenue growth", replacementText: "Numerical contribution claim retained on corroboration hold; independently reported 2016 online-sales context projected instead", reason: "The available public resume is a first-party assertion and the archive pass did not recover the comparison period, same-basis financial record, or authorized contribution confirmation required for an independently defensible numerical projection.", decidedAt: "2026-07-14", affectedSurfaces: ["/", "/resume", "/work/technical-operations", "/work/harry-j-epstein", "knowledge-bank"], status: "active" }
   ],
   pages: [
     {
@@ -592,10 +604,10 @@ const knowledgeBankInput = {
     {
       id: "harry-j-epstein",
       surface: "/work/harry-j-epstein",
-      sourceOrder: ["SRC-HJE-PUBLIC-STOREFRONT-2026", "SRC-HJE-PUBLIC-RESUME-2026-07-11"],
+      sourceOrder: ["SRC-HJE-PUBLIC-STOREFRONT-2026", "SRC-KCUR-HJE-ONLINE-SALES-2016"],
       occurrences: [
         { id: "public-storefront", claimId: "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-STOREFRONT-2026"] },
-        { id: "revenue-growth-contribution", claimId: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-RESUME-2026-07-11"] }
+        { id: "online-sales-share-2016", claimId: "CLM-HJE-ONLINE-SALES-SHARE-2016", projection: "case-study", sourceIds: ["SRC-KCUR-HJE-ONLINE-SALES-2016"] }
       ]
     },
     {

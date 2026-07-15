@@ -84,6 +84,15 @@ descriptions and bounded claims without committing raw archives or automatically
 changing the website.
 
 The
+[July 14 Teams archive deepening](research/teams-archive-deepening-2026-07-14.md)
+reconciles an authenticated iCloud inventory with locally hydrated material,
+adds source-backed records for NTER CHNG, an NYC Artist Coalition Wikipedia
+handoff, a CRS operating artifact, and independent HJE business context, and
+opens explicit version-reconciliation and HJE revenue-corroboration tasks. Its
+three archive-derived claims remain deferred; the HJE case study receives only
+the separately reviewed independent-context correction.
+
+The
 [Google Drive Shared Drives production record](research/google-drive-shared-drives-production-2026-07-13.md)
 extends that method to collaborative cloud workspaces: central project records
 can strengthen authored and collective-role claims, while unread recordings and

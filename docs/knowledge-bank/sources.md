@@ -232,6 +232,28 @@ destinations are not treated as inbound engagement.
 See
 `docs/knowledge-bank/research/jamie-facebook-posts-2026-07-14.md`.
 
+## Teams Archive Deepening
+
+The July 14 authenticated iCloud inventory was reconciled with locally hydrated
+copies before selected close reading. Its aggregate folder counts and detected
+version skew are preserved in a protected research-run record; private account
+details, filenames, links, paths, and source contents remain outside the public
+repository. The newest cloud-hosted CRS overview was inventoried but not read,
+so an open research task prevents unseen contents from becoming evidence.
+
+Public sources recovered through Jamie Projects History include The Pitch's
+NTER CHNG listing, Vimeo project credits, and the NYC Artist Coalition
+Wikipedia revision history. The job-hunt pass also routed the research to
+KCUR's independent 2016 HJE reporting, which supplies company-level
+online-sales context while expressly not supporting Jamie-specific causation or
+the separate two-times revenue claim. Protected source descriptions preserve
+the Wikipedia collaboration packet, a CRS power-map and messaging artifact,
+and the Job-Hunt Context Outline without publishing their underlying private
+material.
+
+See
+`docs/knowledge-bank/research/teams-archive-deepening-2026-07-14.md`.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

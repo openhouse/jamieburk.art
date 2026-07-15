@@ -121,26 +121,6 @@
       ]
     },
     {
-      "id": "SRC-HJE-PUBLIC-RESUME-2026-07-11",
-      "title": "Jamie Burkart public resume - selected impact",
-      "organization": "Jamie Burkart",
-      "kind": "project-archive",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2026-07-11",
-      "accessedAt": "2026-07-12",
-      "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Jamie Burkart, public resume, selected-impact entry for Harry J. Epstein Company, July 11, 2026.",
-      "publicNote": "The public resume supports Jamie's approved contribution wording. The underlying business figures remain private and are not presented as audited financial disclosure.",
-      "doesNotEstablish": [
-        "sole causality",
-        "audited financial results",
-        "the underlying revenue figures",
-        "ownership of all business growth"
-      ]
-    },
-    {
       "id": "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
       "title": "FairRentNYC public campaign site",
       "organization": "NYC Artist Coalition",
@@ -178,6 +158,27 @@
         "city-ecosystem adoption",
         "Jamie's role",
         "current service availability"
+      ]
+    },
+    {
+      "id": "SRC-KCUR-HJE-ONLINE-SALES-2016",
+      "title": "How Flying Dolphins Kept This Old-School Kansas City Hardware Store Alive",
+      "organization": "KCUR 89.3",
+      "author": "Coy Dugger",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-04-21",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.kcur.org/show/central-standard/2016-04-21/how-flying-dolphins-kept-this-old-school-kansas-city-hardware-store-alive",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Coy Dugger, 'How Flying Dolphins Kept This Old-School Kansas City Hardware Store Alive,' KCUR 89.3, April 21, 2016.",
+      "publicNote": "Independent reporting quotes fourth-generation owner and webmaster Jori Sackin on the internet's role, online sales accounting for 50 percent of the business, and customers beyond Kansas City.",
+      "doesNotEstablish": [
+        "Jamie's role or authorship",
+        "a two-times total-revenue comparison",
+        "the revenue comparison period or basis",
+        "causation between Jamie's work and business outcomes"
       ]
     }
   ],
@@ -413,37 +414,6 @@
       ]
     },
     {
-      "id": "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "Jamie's web, e-commerce, marketing, analytics, and operations improvements contributed to a period of 2x revenue growth.",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/harry-j-epstein"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-HJE-PUBLIC-RESUME-2026-07-11",
-          "relationship": "direct-support",
-          "supports": [
-            "Jamie's HJE improvement areas",
-            "contribution to 2x revenue growth",
-            "legacy e-commerce context"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "Treat this as approved contribution language, not sole causality or audited public financial disclosure; underlying figures remain private."
-      ]
-    },
-    {
       "id": "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -504,6 +474,39 @@
       ],
       "boundaries": [
         "The archived application shell does not establish user totals, event totals, geographic adoption, Jamie's role, or current availability."
+      ]
+    },
+    {
+      "id": "CLM-HJE-ONLINE-SALES-SHARE-2016",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "By 2016, KCUR reported that online sales accounted for half of Harry J. Epstein Company's business and that its customers had expanded from local buyers to customers around the world.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCUR-HJE-ONLINE-SALES-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "internet-enabled inventory and niche-item sales context",
+            "50-percent online-sales share in 2016",
+            "customer reach beyond Kansas City"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute the 50-percent figure and global reach to KCUR's reporting and Jori Sackin's account.",
+        "Use this as company outcome context, not proof of Jamie's role or individual causation.",
+        "Do not convert online-sales share into a two-times total-revenue claim."
       ]
     }
   ],
@@ -577,7 +580,7 @@
       "surface": "/work/harry-j-epstein",
       "sourceOrder": [
         "SRC-HJE-PUBLIC-STOREFRONT-2026",
-        "SRC-HJE-PUBLIC-RESUME-2026-07-11"
+        "SRC-KCUR-HJE-ONLINE-SALES-2016"
       ],
       "occurrences": [
         {
@@ -589,11 +592,11 @@
           ]
         },
         {
-          "id": "revenue-growth-contribution",
-          "claimId": "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+          "id": "online-sales-share-2016",
+          "claimId": "CLM-HJE-ONLINE-SALES-SHARE-2016",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-HJE-PUBLIC-RESUME-2026-07-11"
+            "SRC-KCUR-HJE-ONLINE-SALES-2016"
           ]
         }
       ]

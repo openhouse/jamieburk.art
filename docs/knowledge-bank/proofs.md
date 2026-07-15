@@ -6,7 +6,6 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 
 - 14+ years creating operating structure across civic, cultural, small-business, and technical environments.
 - Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.
-- Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
@@ -22,6 +21,13 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 
 ## Reserve Proofs
+
+- The HJE two-times revenue contribution claim remains preserved as a research
+  record but is not projected. Independent 2016 KCUR reporting supplies a
+  narrower company-level context: online sales accounted for half of the
+  business and customers extended beyond the local market. Restoring the
+  Jamie-linked number requires the task's same-basis comparison and authorized
+  contribution confirmation.
 
 - Jamie Burkart and M.C. Schmidt made Horse Lords' official 2016 “Truthers”
   video; NPR Music featured the work and described its repetition, variation,
