@@ -40,6 +40,26 @@
       ]
     },
     {
+      "id": "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+      "title": "Authenticated @CallNYCapp full-population archival review",
+      "organization": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "Authenticated profile, Replies, and date-partitioned Latest-search review completed July 15, 2026",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/CallNYCapp",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated full-population review of the public @CallNYCapp timeline, July 15, 2026.",
+      "publicNote": "The public JSON corpus preserves 107 recovered status records and accounts for the profile's displayed population of 110 with three explicitly unavailable residual posts.",
+      "doesNotEstablish": [
+        "the status IDs or content of three unavailable residual posts",
+        "identities behind aggregate counters",
+        "supportive sentiment or Council endorsement",
+        "official project status or current service accuracy"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -142,6 +162,58 @@
     }
   ],
   "claims": [
+    {
+      "id": "CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "A full-population-accounted pass recovered 70 issue-recognition posts addressing 24 Council-member accounts and two city-agency accounts across 63 CallNYC destinations.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/callnyc"
+          ]
+        },
+        {
+          "key": "case-study",
+          "text": "CallNYC's public account extended that translation layer into 70 recovered issue-recognition posts, addressing 24 Council-member accounts and two city-agency accounts across 63 distinct CallNYC destinations.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "status corpus",
+            "70-post pattern",
+            "mentioned-account counts",
+            "resolved destination count"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+          "relationship": "supports-boundary",
+          "supports": [
+            "contemporaneous Council-member status during the 2016 activity period"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The displayed population is accounted for as 107 recovered records plus three unavailable residual posts; do not call 107 a complete export.",
+        "Recognition posts identify data patterns and addressed accounts, not endorsement or adoption.",
+        "The social record is historical and not current constituent-service guidance."
+      ]
+    },
     {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
@@ -402,8 +474,9 @@
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
         "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-        "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
-        "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
+        "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+        "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15"
       ],
       "occurrences": [
         {
@@ -446,6 +519,15 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        },
+        {
+          "id": "social-documentation-system",
+          "claimId": "CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+            "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
           ]
         },
         {

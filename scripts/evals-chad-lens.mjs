@@ -20,6 +20,7 @@ const sources = {
     "apps/www/src/app/work/technical-operations/page.tsx"
   ),
   fairRent: read("apps/www/src/content/work/fair-rent-nyc.mdx"),
+  callnyc: read("apps/www/src/content/work/callnyc.mdx"),
   kcTownHall: read("apps/www/src/content/work/kc-town-hall.mdx"),
   proofs: read("apps/www/src/data/proofs.ts"),
   workData: read("apps/www/src/data/work.ts"),
@@ -170,6 +171,19 @@ check(
     "Co-founded NYC Artist Coalition and built public campaign websites",
     '"nyc-artist-coalition-public-web-infrastructure"'
   ]),
+  true
+);
+check(
+  "Defensible strength",
+  "CallNYC projects a quantified public-documentation result with its claim contract",
+  6,
+  includesAll(sources.workData, [
+    "Seventy recovered issue-recognition posts addressed 24 Council-member accounts and two city-agency accounts across 63 CallNYC destinations"
+  ]) &&
+    includesAll(sources.callnyc, [
+      'claimId="CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM"',
+      'occurrenceId="social-documentation-system"'
+    ]),
   true
 );
 check(

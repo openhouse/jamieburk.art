@@ -351,7 +351,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, a bounded six-Council-account engagement finding, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, an authenticated full-timeline social archive, a bounded Council-account response finding, public GitHub repository, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -364,6 +364,7 @@ const workItemsInput = [
       "Independent follow-on to the New York City Council's first CouncilStat hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
+      "Seventy recovered issue-recognition posts addressed 24 Council-member accounts and two city-agency accounts across 63 CallNYC destinations",
       "Covered by Politico New York in 2016",
       "At least six then-Council-member accounts publicly replied to, amplified, or promoted the project in a bounded 2016-2017 review"
     ],

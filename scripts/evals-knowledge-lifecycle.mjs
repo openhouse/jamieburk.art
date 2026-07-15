@@ -111,6 +111,16 @@ const nterChngArchiveSourceIds = [
   "SRC-AMERICA-NOW-HERE-WAYBACK-RESEARCH-2026"
 ];
 
+const callnycXCorpusSourceIds = [
+  "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+  "SRC-CALLNYC-X-LAUNCH-2016-03-05",
+  "SRC-CALLNYC-X-JAMIE-IDENTIFICATION-2016-03-16",
+  "SRC-CALLNYC-X-JSON-API-2016-04-20",
+  "SRC-CALLNYC-X-POLITICO-CIRCULATION-2016-03-17",
+  "SRC-CALLNYC-GIZMODO-311-2016-03-10",
+  "SRC-CALLNYC-GOTHAMIST-PULASKI-2016-04-28"
+];
+
 check(
   "Source quality",
   "Every supplied and portfolio-expansion URL has a canonical source record",
@@ -225,6 +235,20 @@ check(
       ?.canonicalUrl &&
     sourceById.get("SRC-AMERICA-NOW-HERE-WAYBACK-RESEARCH-2026")
       ?.doesNotEstablish.some((value) => /absent/i.test(value)),
+  true
+);
+
+check(
+  "Source quality",
+  "The CallNYC full-population pass preserves a bounded source ecology",
+  7,
+  callnycXCorpusSourceIds.every((id) => sourceById.has(id)) &&
+    sourceById.get("SRC-CALLNYC-X-FULL-POPULATION-2026-07-15")
+      ?.doesNotEstablish.includes("identities behind aggregate counters") &&
+    sourceById.get("SRC-CALLNYC-GIZMODO-311-2016-03-10")
+      ?.doesNotEstablish.includes("CallNYC coverage by Gizmodo") &&
+    sourceById.get("SRC-CALLNYC-GOTHAMIST-PULASKI-2016-04-28")
+      ?.doesNotEstablish.includes("CallNYC coverage by Gothamist"),
   true
 );
 
@@ -654,6 +678,12 @@ const kcTownHallPhaseOneReceipt = read(
 const nterChngReceipt = read(
   "docs/knowledge-bank/intake/2026-07-15-nter-chng-archive-and-exhibition.md"
 );
+const callnycXReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-callnyc-x-full-population.md"
+);
+const callnycXCorpus = read(
+  "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json"
+);
 
 check(
   "Capture integrity",
@@ -710,6 +740,29 @@ check(
     ].every((phrase) =>
       nterChngReceipt.toLowerCase().includes(phrase.toLowerCase())
     ) && /held from\s+the\s+public website/i.test(nterChngReceipt),
+  true
+);
+
+check(
+  "Capture integrity",
+  "The CallNYC corpus reconciles the population and keeps recovery limits explicit",
+  8,
+  [
+    "100% population accounting",
+    "97.3% status-level recovery",
+    "not a complete 110-status export",
+    "mutable counter events"
+  ].every((phrase) => callnycXReceipt.includes(phrase)) &&
+    [
+      '"displayedByProfile": 110',
+      '"recoveredStatusRecords": 107',
+      '"unavailableResidual": 3',
+      '"accountedPopulation": 110'
+    ].every((phrase) => callnycXCorpus.includes(phrase)) &&
+    claimById.get("CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM")?.status ===
+      "confirmed-with-boundary" &&
+    inquiryById.get("INQ-CALLNYC-X-FULL-POPULATION-2026")?.resultStatus ===
+      "partially-recovered",
   true
 );
 

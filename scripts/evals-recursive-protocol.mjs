@@ -60,12 +60,17 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md",
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-stewardship-transition.md",
   "docs/knowledge-bank/intake/2026-07-15-project-social-account-archive.md",
+  "docs/knowledge-bank/intake/2026-07-15-callnyc-x-full-population.md",
+  "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json",
+  "docs/knowledge-bank/projects/callnyc.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
   "docs/knowledge-bank/projects/kansas-city-neighborhood-programs.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
+  "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
+  "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
   "apps/www/src/app/work/technical-operations/page.tsx",
@@ -73,6 +78,7 @@ const requiredFiles = [
   "scripts/check-knowledge-bank.mjs",
   "scripts/check-public-safety.mjs",
   "scripts/evals-chad-lens.mjs",
+  "scripts/evals-callnyc-x-corpus.mjs",
   "scripts/evals-knowledge-lifecycle.mjs",
   "scripts/report-knowledge-lifecycle.mjs",
   "scripts/tests/knowledge-lifecycle.test.mjs",
@@ -91,6 +97,7 @@ for (const script of [
   "check:routes",
   "evals:knowledge-lifecycle",
   "evals:chad",
+  "evals:callnyc-x",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -110,6 +117,10 @@ if (scripts.check && !scripts.check.includes("npm run evals:knowledge-lifecycle"
   fail("package.json check script must include npm run evals:knowledge-lifecycle");
 }
 
+if (scripts.check && !scripts.check.includes("npm run evals:callnyc-x")) {
+  fail("package.json check script must include npm run evals:callnyc-x");
+}
+
 if (
   scripts["evals:knowledge-lifecycle"] !==
   "node scripts/evals-knowledge-lifecycle.mjs"
@@ -121,6 +132,10 @@ if (
 
 if (scripts["evals:chad"] !== "node scripts/evals-chad-lens.mjs") {
   fail("package.json evals:chad must run scripts/evals-chad-lens.mjs");
+}
+
+if (scripts["evals:callnyc-x"] !== "node scripts/evals-callnyc-x-corpus.mjs") {
+  fail("package.json evals:callnyc-x must run scripts/evals-callnyc-x-corpus.mjs");
 }
 
 if (scripts["evals:recursive"] !== "node scripts/evals-recursive-protocol.mjs") {
@@ -161,6 +176,16 @@ const kcTownHallTransitionReceipt = read(
 const socialAccountReceipt = read(
   "docs/knowledge-bank/intake/2026-07-15-project-social-account-archive.md"
 );
+const callnycXReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-callnyc-x-full-population.md"
+);
+const callnycXCorpus = read(
+  "docs/knowledge-bank/corpora/callnyc-x-public-corpus.json"
+);
+const callnycXModule = read(
+  "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts"
+);
+const callnycCaseStudy = read("apps/www/src/content/work/callnyc.mdx");
 
 for (const doc of [
   ["docs/production-readiness.md", productionReadiness],
@@ -187,6 +212,15 @@ for (const doc of [
   ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
 ]) {
   requireIncludes(doc[1], "npm run evals:knowledge-lifecycle", doc[0]);
+}
+
+for (const doc of [
+  ["docs/production-readiness.md", productionReadiness],
+  ["docs/knowledge-bank/review-checklist.md", reviewChecklist],
+  ["docs/knowledge-bank/launch-blockers.md", launchBlockers],
+  ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
+]) {
+  requireIncludes(doc[1], "npm run evals:callnyc-x", doc[0]);
 }
 
 for (const phrase of [
@@ -334,6 +368,46 @@ for (const expected of [
     expected.toLowerCase(),
     "project social account receipt"
   );
+}
+
+for (const expected of [
+  "100% population accounting",
+  "97.3% status-level recovery",
+  "70 recovered issue-recognition posts",
+  "24 Council-member accounts",
+  "two city-agency accounts",
+  "63 distinct CallNYC destinations",
+  "not a complete 110-status export",
+  "mutable counter events"
+]) {
+  requireIncludes(callnycXReceipt, expected, "CallNYC X full-population receipt");
+}
+
+for (const expected of [
+  "INTAKE-2026-07-15-CALLNYC-X-FULL-POPULATION",
+  "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+  "CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM",
+  "INQ-CALLNYC-X-FULL-POPULATION-2026",
+  "do not call 107 a complete export",
+  "not unique people or identified stakeholder accounts"
+]) {
+  requireIncludes(callnycXModule, expected, "CallNYC X knowledge-bank module");
+}
+
+for (const expected of [
+  '"displayedByProfile": 110',
+  '"recoveredStatusRecords": 107',
+  '"unavailableResidual": 3',
+  "Authenticated-user interaction state"
+]) {
+  requireIncludes(callnycXCorpus, expected, "CallNYC X public corpus");
+}
+
+for (const expected of [
+  'claimId="CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM"',
+  'occurrenceId="social-documentation-system"'
+]) {
+  requireIncludes(callnycCaseStudy, expected, "CallNYC case study projection");
 }
 
 for (const forbidden of [

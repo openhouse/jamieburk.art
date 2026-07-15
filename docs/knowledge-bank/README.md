@@ -101,3 +101,8 @@ shows how authenticated public-profile and mention research can preserve project
 identity systems, collaborator use, Council and agency engagement, mission
 patterns, and explicit authorship boundaries without collecting credentials or
 private account data.
+
+The [CallNYC full-population receipt](intake/2026-07-15-callnyc-x-full-population.md)
+extends that method to every displayed population slot: status-level recovery,
+explicit residual accounting, URL resolution, mission-pattern analysis, public
+counter boundaries, and a machine-readable public corpus.

@@ -53,6 +53,23 @@ No dedicated Civic Hall listing or event-detail page was recovered. This is not
 proof that no page ever existed. Google Form contents, agenda, breakout roster,
 registration contents, and a complete participant list were not recovered.
 
+## Full-timeline archival production
+
+An authenticated full-population pass now accounts for the live profile's 110
+displayed posts as 107 recovered status records and three explicitly unavailable
+residual posts. That is 100% population accounting and 97.3% status-level
+recovery, not a complete 110-status export.
+
+The recovered corpus contains 92 account-authored posts and 15 third-party
+reposts. Seventy authored posts use a repeated issue-recognition pattern,
+addressing 24 Council-member accounts and two city-agency accounts across 63
+distinct CallNYC destinations and 16 service categories.
+
+The pass also accounts for all 84 unique short links and preserves a dated
+public-counter snapshot without retaining authenticated-user interaction state.
+See the [full-population receipt](../intake/2026-07-15-callnyc-x-full-population.md)
+and [public JSON corpus](../corpora/callnyc-x-public-corpus.json).
+
 ## Council-member account engagement
 
 A supplied seven-page timeline capture and an authenticated X Latest search

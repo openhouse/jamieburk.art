@@ -12,6 +12,7 @@ Run:
 ```sh
 npm run evals:knowledge-lifecycle
 npm run evals:chad
+npm run evals:callnyc-x
 npm run evals:recursive
 ```
 
@@ -55,6 +56,13 @@ The criterion deliberately permits a deep, mature knowledge bank with no new
 website projection. It fails when evidence is orphaned, inference is promoted,
 source limitations disappear, or unselected depth leaks into the public
 citation layer.
+
+### CallNYC X Corpus Criterion
+
+`npm run evals:callnyc-x` recomputes the archival findings from the public
+JSON corpus, reconciles the displayed population, checks every posted URL, and
+enforces privacy and projection boundaries. Passing requires 100/100 and no
+hard failure.
 
 ## Loop 2: Claim Projection
 

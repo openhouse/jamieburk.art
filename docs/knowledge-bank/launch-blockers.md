@@ -16,6 +16,7 @@
   `npm run evals:knowledge-lifecycle`.
 - [ ] Recursive eval protocol passes with `npm run evals:recursive`.
 - [ ] Chad-lens criterion passes with `npm run evals:chad`.
+- [ ] CallNYC X corpus criterion passes with `npm run evals:callnyc-x`.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.

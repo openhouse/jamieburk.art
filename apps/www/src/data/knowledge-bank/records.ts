@@ -35,6 +35,13 @@ import {
   socialAccountArchiveResearchInquiries,
   socialAccountArchiveSources
 } from "./social-account-archive.ts";
+import {
+  callnycXCorpusClaims,
+  callnycXCorpusIntakeItems,
+  callnycXCorpusObservations,
+  callnycXCorpusResearchInquiries,
+  callnycXCorpusSources
+} from "./callnyc-x-corpus.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -43,6 +50,7 @@ const knowledgeBankInput = {
     ...googleDriveIntakeItems,
     ...nterChngArchiveIntakeItems,
     ...socialAccountArchiveIntakeItems,
+    ...callnycXCorpusIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -332,6 +340,7 @@ const knowledgeBankInput = {
     ...googleDriveSources,
     ...nterChngArchiveSources,
     ...socialAccountArchiveSources,
+    ...callnycXCorpusSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1352,6 +1361,7 @@ const knowledgeBankInput = {
     ...googleDriveObservations,
     ...nterChngArchiveObservations,
     ...socialAccountArchiveObservations,
+    ...callnycXCorpusObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1940,6 +1950,7 @@ const knowledgeBankInput = {
     ...googleDriveClaims,
     ...nterChngArchiveClaims,
     ...socialAccountArchiveClaims,
+    ...callnycXCorpusClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -2980,6 +2991,7 @@ const knowledgeBankInput = {
     ...googleDriveResearchInquiries,
     ...nterChngArchiveResearchInquiries,
     ...socialAccountArchiveResearchInquiries,
+    ...callnycXCorpusResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -3272,8 +3284,9 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
       "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-      "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
-      "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
+      "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+      "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+      "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -3281,6 +3294,7 @@ const knowledgeBankInput = {
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+      { id: "social-documentation-system", claimId: "CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-FULL-POPULATION-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"] },
       { id: "council-engagement", claimId: "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
