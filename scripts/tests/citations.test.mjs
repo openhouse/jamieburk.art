@@ -104,7 +104,7 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 6);
+  assert.equal(knowledgeBank.corrections.length, 7);
 });
 
 test("negative research preserves scope and limitations", () => {
@@ -118,7 +118,34 @@ test("private and metadata-only evidence is absent from the public registry", ()
   const serialized = JSON.stringify(publicCitationRegistry);
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-CRS-90-DAY-PLAN-2026-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-CRS-RUNNING-MINUTES-2026-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-CRS-PROVENANCE-REDLINE-2026-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-SOURCE-BACKED-MEMORY-PROPOSAL-2026-001/);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
+});
+
+test("Teams archive claims retain source-position and public-use boundaries", () => {
+  const protectedSourceIds = [
+    "SRC-CRS-90-DAY-OPERATING-PLAN-2026",
+    "SRC-CRS-RUNNING-MINUTES-2026",
+    "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
+    "SRC-SOURCE-BACKED-TEAM-MEMORY-SPRINT-PROPOSAL-2026"
+  ];
+  const protectedSources = protectedSourceIds.map((id) => knowledgeBank.sources.find((source) => source.id === id));
+  const sprint = knowledgeBank.claims.find(({ id }) => id === "CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026");
+  const operatingPlan = knowledgeBank.claims.find(({ id }) => id === "CLM-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN-2026");
+  const provenance = knowledgeBank.claims.find(({ id }) => id === "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026");
+
+  assert.ok(protectedSources.every((source) => source?.visibility === "protected"));
+  assert.ok(protectedSources.every((source) => source?.canonicalUrl === undefined && source?.archiveUrl === undefined));
+  assert.ok(protectedSources.every((source) => source?.protectedLocatorId));
+  assert.ok(sprint?.antiClaims.includes("The proposal was accepted"));
+  assert.ok(sprint?.antiClaims.includes("Jamie delivered the sprint to a client"));
+  assert.ok(sprint?.antiClaims.includes("The method was deployed in production"));
+  assert.ok(operatingPlan?.antiClaims.includes("Jamie completed every element of the 90-day plan"));
+  assert.ok(provenance?.antiClaims.includes("The redline is legal advice"));
+  assert.ok([sprint, operatingPlan, provenance].every((claim) => claim?.projections.every(({ status, surfaces }) => status === "hold" && surfaces.length === 0)));
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

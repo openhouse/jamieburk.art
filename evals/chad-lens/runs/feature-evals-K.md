@@ -1,6 +1,6 @@
 # feature/evals-K Chad Lens run
 
-Date: 2026-07-14
+Date: 2026-07-15
 
 Decision sought: whether the core application path meets Chad's standard of
 courageous precision. This decision does not authorize production publication.
@@ -93,6 +93,29 @@ was strengthened.
 The runner now requires a passing recommendation, all six dimension findings,
 and six evidence observations. Three regression tests confirm that
 `criterion-met` can pass, `iterate` cannot, and a missing dimension fails.
+
+## Teams archive pass
+
+- Strengthened the raft history around the most useful defensible chain:
+  Jamie initiated and organized a collective expedition; the crew built and
+  adapted the system in public; the voyage traveled more than 1,000 miles from
+  Kansas City into Louisiana. The archive does not claim the intended Gulf
+  endpoint was reached.
+- Preserved CRS planning, running minutes, and legislative provenance as
+  evidence of Jamie's operating method without converting collective policy
+  work into individual ownership.
+- Preserved the Source-Backed Team Memory Sprint as a designed bounded offer,
+  not a completed engagement.
+- Added evidence-only proof lineage so future agents can retrieve these methods
+  without silently publishing them.
+- Corrected a production-browser contrast defect in small case-study metadata
+  labels and repeated the accessibility audit across the governed route matrix.
+- Expanded the visual review set to 17 source-bound artifacts, including both
+  rendered resume pages and desktop/mobile captures of the application path.
+
+Two fresh independent judges again scored the criterion **4 / criterion-met**.
+The stable pair reached the 80-point threshold with every Chad Lens dimension
+addressed and all production preflight gates passing.
 
 ## Remaining refinements
 

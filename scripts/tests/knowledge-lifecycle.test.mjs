@@ -5,6 +5,7 @@ import { readFileSync } from "node:fs";
 import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { intakeAmendmentSchema, intakeReceiptSchema } from "../../apps/www/src/data/knowledge-bank/lifecycle-schema.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateIntakeReceipts, validateKnowledgeLifecycle } from "../lib/knowledge-lifecycle-validation.mjs";
 import { retrieveKnowledgePalette } from "../lib/knowledge-palette.mjs";
 
@@ -161,6 +162,78 @@ test("NTER CHNG preserves collective creation and bounded America: Now and Here 
   assert.equal(nerman?.evidenceRole, "context");
   assert.ok(nerman?.doesNotEstablish.some((item) => /NTER CHNG at the Nerman Museum/i.test(item)));
   assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(candidate.id)));
+});
+
+test("Teams archive production promotes bounded methods while holding unsupported outcomes", () => {
+  const run = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-TEAMS-ICLOUD-ARCHIVE-PRODUCTION-2026-07-15");
+  const raft = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-WATERWAYS-RAFT-EXPEDITION");
+  const gulf = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-WATERWAYS-RAFT-GULF-ENDPOINT");
+  const operatingPlan = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN");
+  const provenance = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-CRS-LEGISLATIVE-PROVENANCE-REDLINE");
+  const sprint = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN");
+  const raftClaim = knowledgeBank.claims.find(({ id }) => id === "CLM-WATERWAYS-RAFT-EXPEDITION-2007");
+  const sprintClaim = knowledgeBank.claims.find(({ id }) => id === "CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026");
+  const campaignProof = proofClaims.find(({ id }) => id === "fair-rent-campaign-memory");
+  const sourceMapProof = proofClaims.find(({ id }) => id === "fair-rent-source-map");
+  const sprintProof = proofClaims.find(({ id }) => id === "source-backed-team-memory-method");
+
+  assert.equal(run?.status, "completed");
+  assert.equal(run?.sourceIds.length, 7);
+  assert.ok(run?.limitations.some((item) => /unavailable was not treated as nonexistent/i.test(item)));
+  assert.equal(raft?.maturity, "promoted");
+  assert.match(raft?.proposition ?? "", /more than 1,000 miles from Kansas City into Louisiana/);
+  assert.match(raftClaim?.internalClaim ?? "", /regulatory pause with community support/);
+  assert.equal(gulf?.maturity, "held");
+  assert.ok(gulf?.antiClaims.some((item) => /Louisiana and the Gulf/i.test(item)));
+  assert.equal(operatingPlan?.maturity, "promoted");
+  assert.ok(operatingPlan?.antiClaims.some((item) => /completed every element/i.test(item)));
+  assert.equal(provenance?.maturity, "promoted");
+  assert.ok(provenance?.antiClaims.some((item) => /legal advice/i.test(item)));
+  assert.equal(sprint?.maturity, "promoted");
+  assert.ok(sprint?.antiClaims.some((item) => /proposal was accepted/i.test(item)));
+  assert.ok(sprint?.antiClaims.some((item) => /deployed in production/i.test(item)));
+  assert.equal(sprintClaim?.projections[0]?.status, "hold");
+  assert.deepEqual(sprintClaim?.projections[0]?.surfaces, []);
+  assert.deepEqual(campaignProof?.evidenceCanonicalClaimIds, ["CLM-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN-2026"]);
+  assert.deepEqual(sourceMapProof?.evidenceCanonicalClaimIds, ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"]);
+  assert.deepEqual(sprintProof?.evidenceCanonicalClaimIds, ["CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026"]);
+  assert.equal(campaignProof?.canonicalClaimIds, undefined);
+  assert.equal(sourceMapProof?.canonicalClaimIds, undefined);
+  assert.equal(sprintProof?.canonicalClaimIds, undefined);
+});
+
+test("evidence-only canonical links cannot authorize or enter public composition", () => {
+  const proof = proofClaims.find(({ id }) => id === "fair-rent-campaign-memory");
+  const claim = knowledgeBank.claims.find(({ id }) => id === "CLM-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN-2026");
+  const decision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-CRS-SHARED-PUBLIC-GOODS-PROMOTE-2026-07-15");
+  const originalIds = proof.evidenceCanonicalClaimIds;
+  const originalProjection = structuredClone(claim.projections[0]);
+  const originalDecision = structuredClone(decision);
+
+  try {
+    proof.evidenceCanonicalClaimIds = ["CLM-NOT-REAL"];
+    assert.match(validateKnowledgeLifecycle().join("\n"), /unknown evidence-only canonical claim/);
+    proof.evidenceCanonicalClaimIds = ["CLM-WATERWAYS-RAFT-EXPEDITION-2007"];
+    assert.match(validateKnowledgeLifecycle().join("\n"), /does not share a project/);
+    proof.evidenceCanonicalClaimIds = [...originalIds];
+    claim.projections[0] = { ...claim.projections[0], status: "active", surfaces: ["/resume"] };
+    assert.match(validateKnowledgeLifecycle().join("\n"), /Evidence-only canonical claim .* is not an unsurfaced hold/);
+    claim.projections[0] = originalProjection;
+    Object.assign(decision, { humanReviewStatus: "approved", humanReviewer: "Jamie Burkart", allowedSurfaces: ["knowledge-bank", "/resume"] });
+    assert.match(validateKnowledgeLifecycle().join("\n"), /Evidence-only canonical claim .* has public-route decision/);
+  } finally {
+    proof.evidenceCanonicalClaimIds = originalIds;
+    claim.projections[0] = originalProjection;
+    Object.assign(decision, originalDecision);
+    if (!("humanReviewer" in originalDecision)) delete decision.humanReviewer;
+  }
+
+  const publicResume = retrieveKnowledgePalette({ proofSurface: "/resume", publicationSafe: true });
+  assert.ok(publicResume.proofs.some(({ id }) => id === proof.id));
+  assert.ok(!publicResume.canonicalClaims.some(({ id }) => id === claim.id));
+  const publicResumeBySurface = retrieveKnowledgePalette({ surface: "/resume", publicationSafe: true });
+  assert.ok(!publicResumeBySurface.canonicalClaims.some(({ id }) => id === claim.id));
+  assert.ok(!publicResumeBySurface.candidates.some(({ targetCanonicalClaimId }) => targetCanonicalClaimId === claim.id));
 });
 
 test("shared observations carry candidate-specific evidence roles and limits", () => {
@@ -428,7 +501,7 @@ test("immutable receipts permit later lead triage and research associations", ()
 
 test("candidate maturity and research-run implication histories cannot drift", () => {
   const brokenHistory = structuredClone(knowledgeLifecycle);
-  brokenHistory.candidateEvents.find(({ candidateClaimId }) => candidateClaimId === "CND-WATERWAYS-RAFT-GULF-ENDPOINT").toMaturity = "promoted";
+  brokenHistory.candidateEvents.filter(({ candidateClaimId }) => candidateClaimId === "CND-WATERWAYS-RAFT-GULF-ENDPOINT").at(-1).toMaturity = "promoted";
   assert.match(validateKnowledgeLifecycle(brokenHistory).join("\n"), /maturity differs from its latest event/);
   const brokenTask = structuredClone(knowledgeLifecycle);
   const ingestion = brokenTask.researchTasks.find(({ id }) => id === "TASK-INGESTION-2026-07-12");
@@ -544,7 +617,7 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.deepEqual(kcProofs.mediaLeads, []);
 
   const resumePdf = retrieveKnowledgePalette({ proofSurface: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", publicationSafe: true });
-  assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL"]);
+  assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL", "PRJ-FAIR-RENT-CRS"]);
   assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"]);
   assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
   assert.deepEqual(resumePdf.researchTasks, []);

@@ -33,6 +33,17 @@ for destination-specific human review. Consequential proof records can require
 canonical linkage on every selected destination. The readable projection map is
 generated from these manifests and validated against them.
 
+A proof may also carry `evidenceCanonicalClaimIds`. These links strengthen the
+proof's internal source lineage but are not public projection authorization.
+Evidence-only canonical claims must have a promoted lifecycle candidate, must
+remain explicitly held with no surfaces, cannot carry a human-approved
+public-route decision, cannot satisfy a manifest, and are omitted from both
+exact-proof and generic publication-safe palettes. Each link must also share
+the proof record's project; an unrelated held claim is not relevant support.
+Moving one into public composition requires changing it to a consequential
+canonical link, activating an exact projection, and obtaining fresh
+destination-specific approval.
+
 The downloadable resume is parsed during public-safety checks. Its KC Town Hall
 entry must retain Council appropriation, the uncompleted agreement, no
 disbursement, and reappropriation after withdrawal as one bounded statement.

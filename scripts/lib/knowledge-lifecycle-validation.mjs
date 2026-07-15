@@ -383,6 +383,29 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     if (proof.surfaces.some((value) => value !== "internal-only") && !input.proofSurfaceManifests.some((manifest) => manifest.proofIds.includes(proof.id))) {
       errors.push(`Public proof ${proof.id} is not selected by any exact-destination manifest`);
     }
+    for (const claimId of proof.evidenceCanonicalClaimIds ?? []) {
+      const claim = canonicalClaimById.get(claimId);
+      if (!claim) errors.push(`Public proof ${proof.id} references unknown evidence-only canonical claim ${claimId}`);
+      if (claim && !proof.relatedProjects.includes(claim.project)) {
+        errors.push(`Evidence-only canonical claim ${claimId} linked by proof ${proof.id} does not share a project`);
+      }
+      if (proof.canonicalClaimIds?.includes(claimId) || proof.requiredCanonicalClaimIds?.includes(claimId)) {
+        errors.push(`Public proof ${proof.id} cannot treat canonical claim ${claimId} as both evidence-only and consequential`);
+      }
+      if (claim?.projections.some(({ status, surfaces }) => status !== "hold" || surfaces.length > 0)) {
+        errors.push(`Evidence-only canonical claim ${claimId} linked by proof ${proof.id} is not an unsurfaced hold`);
+      }
+      const lifecycleCandidates = input.candidateClaims.filter((candidate) => candidate.targetCanonicalClaimId === claimId);
+      if (!lifecycleCandidates.some((candidate) => candidate.maturity === "promoted")) {
+        errors.push(`Evidence-only canonical claim ${claimId} linked by proof ${proof.id} has no promoted lifecycle candidate`);
+      }
+      const publicDecision = lifecycleCandidates
+        .flatMap((candidate) => candidate.promotionDecisionIds.map((id) => decisions.get(id)))
+        .find((decision) => decision?.humanReviewStatus === "approved" && decision.allowedSurfaces.some((surface) => surface.startsWith("/")));
+      if (publicDecision) {
+        errors.push(`Evidence-only canonical claim ${claimId} linked by proof ${proof.id} has public-route decision ${publicDecision.id}`);
+      }
+    }
     for (const claimId of proof.canonicalClaimIds ?? []) {
       if (!canonicalClaims.has(claimId)) errors.push(`Public proof ${proof.id} references unknown canonical claim ${claimId}`);
     }

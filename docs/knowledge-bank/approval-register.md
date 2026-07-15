@@ -19,7 +19,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use 300+ gatherings and 20+ resident artists only as Jamie-reported aggregates, and keep the two practices distinct.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
-- KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
+- KC Town Hall funding: Council accepted the Board recommendation and appropriated $490,539 in 2019; keep that action paired with the unclosed agreement, no disbursement, withdrawal, and 2024 reappropriation of the unused award. Appropriation is not receipt or expenditure.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

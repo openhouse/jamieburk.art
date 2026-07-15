@@ -40,6 +40,7 @@ export type ProofClaim = {
   surfaces: ProofSurface[];
   relatedProjects: string[];
   relatedCapabilities: string[];
+  evidenceCanonicalClaimIds?: string[];
   canonicalClaimIds?: string[];
   requiredCanonicalClaimIds?: string[];
   lastReviewed: string;
@@ -177,7 +178,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Jamie built and stewarded 30+ shared pages for coalition decisions and next steps",
     detailedPublicWording:
       "Jamie helped collaborators turn meetings, decision records, action items, legal/policy questions, sources, and stakeholder next steps into 30+ shared pages they could use to orient, coordinate, and continue the work.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+    sourceBasis:
+      "Approved resume language plus protected 2026 operating-plan and running-minutes artifacts, summarized publicly without private coalition context.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -200,7 +202,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: ["CLM-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN-2026"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "fair-rent-source-map",
@@ -216,7 +219,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language plus a protected, close-read legislative provenance redline with explicit unofficial and non-legal boundaries.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -232,7 +236,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -476,7 +481,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceBasis:
+      "Public-safe lab materials plus a protected, close-read 2026 sprint proposal that establishes offer and method design, not delivery.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -493,7 +499,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: ["CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "technical-operations-operating-backbone",

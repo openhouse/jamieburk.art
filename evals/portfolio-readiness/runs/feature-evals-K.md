@@ -1,6 +1,6 @@
 # feature/evals-K run record
 
-Date: 2026-07-14
+Date: 2026-07-15
 
 Base: `origin/develop` at `2ec37fe6e47d11e600ede204d19a98f7d3cff139`
 
@@ -17,6 +17,7 @@ explicit approval.
 | Final production revision | 90 / 92 | Application-ready | Both fresh judges scored every criterion at least 4 and returned the same recommendation. The pair is within the rubric's two-point stability tolerance. |
 | Campaign-press integration | 90 / 90 | Application-ready | The complete campaign press corpus remained off the public site; mobile source notes became collapsible while desktop and print retained the full evidence layer. Both fresh judges again scored every criterion at least 4. |
 | KC Council lifecycle and final interface pass | 96 / 94 | Application-ready | The portfolio now states the complete public-record lifecycle without confusing appropriation with receipt, and the application path passed a broader production browser matrix. Every criterion remained at least 4. |
+| Teams archive and expanded visual review | 92 / 92 | Application-ready | Three archive collections produced bounded evidence without expanding the public argument; 17 source-bound captures, both resume pages, and a corrected metadata-label contrast defect deepened interface evidence. Every criterion remained at least 4. |
 
 The final scorecards were produced independently from the current working tree,
 the canonical claim layer, the rendered resume, and production-mode browser
@@ -53,11 +54,18 @@ evidence. Prior scores were withheld from the final judges.
   available without dominating the first reading path.
 - Tightened the work index, corrected the Colophon, and preserved direct resume
   download actions and the phone-bearing two-page resume artifact.
+- Ingested the strongest bounded material from Jamie Projects History, CRS, and
+  job-hunt into the private-to-public lifecycle while leaving the new method
+  claims held and unsurfaced.
+- Added project-aligned evidence-only proof lineage that cannot authorize a
+  projection or enter an exact public palette.
+- Corrected insufficient contrast in small case-study metadata labels after the
+  expanded browser review exposed it.
 
 ## Verification evidence
 
 - Fast deterministic eval: all 10 gates passed.
-- Staging preflight: citation registry, 13 citation tests, 35 lifecycle tests, typecheck, lint, build,
+- Staging preflight: citation registry, 14 citation tests, 41 lifecycle tests, typecheck, lint, build,
   knowledge bank, public safety, and route checks passed.
 - Production preflight: the same complete gate set passed with production URL
   and indexing configuration.
@@ -69,6 +77,9 @@ evidence. Prior scores were withheld from the final judges.
   summaries.
 - Resume PDF: two substantive rendered pages, current contact artifact, no
   clipping, overlap, broken glyphs, JavaScript, or encryption.
+- Visual evidence: 17 source-bound captures match the current application hash,
+  including desktop and 320px versions of seven application-path routes, the
+  KC Town Hall desktop page, and both rendered resume pages.
 - `--skip-commands` was tested to fail closed; skipped gates cannot satisfy the
   stop condition.
 
@@ -81,13 +92,13 @@ next improvements:
   specimens when rights and contextual use are settled.
 - Continue consolidating repeated public-safety vocabulary where a single
   project boundary can carry the same meaning.
-- Replace additional text-only output abstractions with approved, redacted
-  visual specimens when rights and contextual use are settled.
+- Consider a more compact 320px navigation treatment while preserving all five
+  destinations, semantic links, visible focus, and immediate access.
 
 ## Decision
 
 The recursive stop condition for **application-ready** is reached: deterministic
-evidence passed, the latest two fresh scores were 96 / 94, every criterion
+evidence passed, the latest two fresh scores were 92 / 92, every criterion
 reached at least 4, and both judges returned `application-ready`. This run does
 not grant production approval. Publishing to production remains Jamie's
 explicit human decision.

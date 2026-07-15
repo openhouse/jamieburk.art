@@ -4,13 +4,14 @@
   "sourceInputs": [
     "apps/www/src",
     "apps/www/next.config.ts",
-    "apps/www/package.json"
+    "apps/www/package.json",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
   ],
   "sourceExcludes": [
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "9bf8a4b69b105da2a9cc141909a46d52c9c8ebe3fe63c2974e568c43343a8e1a",
+  "sourceSha256": "0c631acb2c98319f106e16b967f6aad8b1066c1b4855adc478741ef5c2fe3adc",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -35,10 +36,106 @@
   },
   "captures": [
     {
+      "route": "/",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/home-desktop.png",
+      "artifactSha256": "f245b391cf03ee6e9496109ccb92c98a7ef7eab0ffa9e4a77b907fa48a4c6593"
+    },
+    {
+      "route": "/",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/home-mobile-320.png",
+      "artifactSha256": "f7e61114563656fdf1e7f0511cca8cbc64210a01dc31abd179388696759489d9"
+    },
+    {
+      "route": "/work/technical-operations",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/technical-operations-desktop.png",
+      "artifactSha256": "4dd6a62a54973c6dde101e131d1a2e21252c39fd8d317165d77432fdb46fe525"
+    },
+    {
+      "route": "/work/technical-operations",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/technical-operations-mobile-320.png",
+      "artifactSha256": "b2174b5214c19a6195b3be37a3ffa67236c712bd0bb2757bdd64790e3eb9728f"
+    },
+    {
+      "route": "/resume",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/resume-desktop.png",
+      "artifactSha256": "8ee6d9681cd7767fbad51cb6fe894bb8bb1750406c673c401ba9e093ce7088a3"
+    },
+    {
+      "route": "/resume",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/resume-mobile-320.png",
+      "artifactSha256": "15ad248a825cfe4851356b0a7c30a4967e667d7266a42d2fd59f62aac26a12ae"
+    },
+    {
+      "route": "/contact",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/contact-desktop.png",
+      "artifactSha256": "db3a31b1aa37f6cab19e0578aef68b297d20b4cfad4598f5d18e1bd4e3cb01a3"
+    },
+    {
+      "route": "/contact",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/contact-mobile-320.png",
+      "artifactSha256": "edf040cca32d3580f5e02fe69ab87774f7cca988d9f30f8d37cb113c79c7fadf"
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/harry-j-epstein-desktop.png",
+      "artifactSha256": "f7809145a2624a69717a28fe965a936bcee919e92e78547191cf9f6e457eefb5"
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/harry-j-epstein-mobile-320.png",
+      "artifactSha256": "efb00e34c54126496ff9c9c09f740075c290144730eca20111a5af5bb1515830"
+    },
+    {
+      "route": "/work/callnyc",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/callnyc-desktop.png",
+      "artifactSha256": "def300f92fa21513e1091883de94d51a3e8b9f5e4bfb02162cabbcbd57ac94d1"
+    },
+    {
+      "route": "/work/callnyc",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/callnyc-mobile-320.png",
+      "artifactSha256": "126f684b9c71381946703353a315e5a30dca68a385556409a75546ab9be44800"
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/fair-rent-nyc-desktop.png",
+      "artifactSha256": "d24a2ef3fe0b947ce5792c8389419230136104b601f38ccf5b8bb0a13cfcdf95"
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/fair-rent-nyc-mobile-320.png",
+      "artifactSha256": "4d081ce7a85567702975c5b7cbe11b894408ef4ca62716bc343203be37bacd41"
+    },
+    {
       "route": "/work/kc-town-hall",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
-      "artifactSha256": "91a3d89c94382e40086fee17eccfb77f1d5b0c18a4a869c845a6de60e5a935ed"
+      "artifactSha256": "6b30cac354b40ae1fac85f00cca9d3aa99c9c67cebb1729c38aef489d3bbd149"
+    },
+    {
+      "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "viewport": "PDF page 1 at 144 DPI",
+      "artifactPath": "docs/qa/evals-K/resume-page-1.png",
+      "artifactSha256": "e4468fbd30c949a5dd8dc620651c9facfa7557fcbe61b94b92c32030c2db747b"
+    },
+    {
+      "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "viewport": "PDF page 2 at 144 DPI",
+      "artifactPath": "docs/qa/evals-K/resume-page-2.png",
+      "artifactSha256": "4f0be30b76f020e6e82b572179489c0c61a5315a4342ade7540829447dbcf715"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # feature/evals-K knowledge lifecycle run
 
-Date: 2026-07-14
+Date: 2026-07-15
 
 Decision sought: whether the repository can preserve professional fragments,
 develop them into defensible claims, and compose selective public arguments
@@ -21,10 +21,47 @@ does not authorize production publication.
 | Campaign-press judge B | 4 / 4 / 5 / 5 / 5 / 5 | 93 | Framework-ready. |
 | Council-lifecycle final judge A | 5 / 5 / 5 / 5 / 5 / 5 | 100 | Framework-ready. |
 | Council-lifecycle final judge B | 5 / 5 / 5 / 5 / 5 / 5 | 100 | Framework-ready. |
+| Teams-archive final judge A | 4 / 5 / 5 / 4 / 5 / 4 | 91 | Framework-ready. |
+| Teams-archive final judge B | 4 / 4 / 5 / 5 / 5 / 4 | 91 | Framework-ready. |
 
-The final Council-lifecycle pair supersedes the earlier campaign-press pair for
+The final Teams-archive pair supersedes the earlier Council-lifecycle pair for
 the current working tree. Both fresh judges independently scored every
-criterion 5 and returned `framework-ready`.
+criterion at least 4, returned `framework-ready`, and produced the same weighted
+score.
+
+## Teams iCloud archive production
+
+The July 15 pass close-read hydrated, high-signal material from Jamie Projects
+History, CRS, and job-hunt while preserving unavailable files as unresolved
+rather than treating them as absent. It added five intake leads, seven bounded
+sources, eight atomic observations, two project records, five research tasks,
+and three held canonical claims.
+
+- A preserved Kansas City Star article and two independent public reports now
+  support Jamie's role initiating and organizing a collective, recycled-
+  material, bicycle-powered raft expedition that traveled more than 1,000
+  miles from Kansas City into Louisiana. The intended Gulf endpoint remains
+  held because the recovered sources do not establish that the crew reached
+  it.
+- A 90-day commercial-rent-stabilization operating plan and running minutes
+  support Jamie's design of shared public goods, explicit ownership, a ladder
+  of engagement, governance boundaries, and implementation-ready coordination.
+  The records preserve city and state work as aligned but distinct collective
+  tracks.
+- An unofficial legislative provenance redline supports Jamie's method for
+  tracing language across city and state policy lineages. It remains bounded
+  as discussion material, not legal advice or proof that named reviewers
+  authored the underlying legislation.
+- A Source-Backed Team Memory Sprint proposal supports Jamie's design of a
+  bounded one-to-two-week offer using an approved non-sensitive or synthetic
+  source bundle, inspectable human review, privacy/access/retention notes, and
+  a 30-day continue/revise/stop decision. It does not establish acceptance,
+  delivery, deployment, or a client relationship.
+
+The three method claims remain `hold` projections with no public surfaces. The
+proof layer may link to them for evidence lineage, but those evidence-only
+links cannot authorize publication, enter a public palette, satisfy a route
+manifest, or cross project boundaries.
 
 ## KC Town Hall Council lifecycle
 
@@ -152,17 +189,24 @@ aggregates; neither figure is presented as independently corroborated.
 - Kept lifecycle records out of the application barrel and deployable output.
 - Preserved visual rights, consent, display, and factual-promotion boundaries;
   images remain research leads unless each evidentiary question is resolved.
+- Added evidence-only canonical claim relationships for proof records, with
+  deterministic enforcement that they remain held, unsurfaced, project-
+  aligned, outside exact and generic public palettes, and unable to satisfy a
+  publication manifest or human approval.
+- Expanded source-bound visual evidence from one case-study capture to 17
+  artifacts, including seven routes at desktop and 320px, KC Town Hall at
+  desktop, and both rendered pages of the shipped resume PDF.
 
 ## Verification evidence
 
-- Knowledge lifecycle validation and all 35 regression tests passed.
-- The corpus contains 31 leads and append-only receipts, 53 observations, 25
-  candidate claims, 18 research tasks, 30 decisions, 8 editorial briefs, 15
-  exact-destination proof manifests, 7 bounded media leads, and 4 source collections
+- Knowledge lifecycle validation and all 41 regression tests passed.
+- The corpus contains 47 leads and append-only receipts, 82 observations, 36
+  candidate claims, 25 research tasks, 43 decisions, 8 editorial briefs, 15
+  exact-destination proof manifests, 10 bounded media leads, and 4 source collections
   containing 45 campaign press listings.
 - Citation, knowledge-bank, public-safety, route, and compiled-locator checks
   passed in the release profile.
-- Final independent lifecycle scorecards were 100 / 100, stable pair `yes`, with
+- Final independent lifecycle scorecards were 91 / 91, stable pair `yes`, with
   all criteria at least 4 and both recommendations `framework-ready`.
 
 ## Boundaries and next research
