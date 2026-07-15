@@ -256,6 +256,10 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
     canonical public-safe readiness ledger, separated the maintained local gate
     from the full human-and-independent release gate, and recorded two stable
     local passes without fabricating reader, rights, or judge approvals.
+33. Added public-safe Margaret Morse and Warren Sack lens evals, strengthened
+    the About page with the embodied and recursive roots of Jamie's operating
+    method, and recorded two stable `0.88` local passes while preserving both
+    independent qualitative holdouts.
 
 ## Evidence
 
@@ -263,6 +267,9 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [Blind-spot eval hill-climb record](./2026-07-15-blind-spot-evals-hill-climb.md)
 - [Blind-spot local pass 1](./blind-spots-local-pass-1.json)
 - [Blind-spot local pass 2](./blind-spots-local-pass-2.json)
+- [Margaret Morse and Warren Sack lens hill-climb record](./2026-07-15-morse-sack-lenses-hill-climb.md)
+- [Margaret Morse and Warren Sack local pass 1](./morse-sack-local-pass-1.json)
+- [Margaret Morse and Warren Sack local pass 2](./morse-sack-local-pass-2.json)
 - [NYC Artist Coalition institutional-value deterministic run 1](./nycac-institutional-value-deterministic-1.json)
 - [NYC Artist Coalition institutional-value deterministic run 2](./nycac-institutional-value-deterministic-2.json)
 

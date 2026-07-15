@@ -172,6 +172,10 @@ const launchBlockersDoc = readFileSync(
   "docs/knowledge-bank/launch-blockers.md",
   "utf8",
 );
+const evalLensesDoc = readFileSync(
+  "docs/knowledge-bank/eval-lenses.md",
+  "utf8",
+);
 const campaignPressInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
@@ -306,20 +310,36 @@ test("holdout judgments and repeat runs are required", () => {
   assert.match(errors, /two consecutive passing runs/);
 });
 
-test("eight named blind spots are first-class evals", () => {
+test("hybrid external judgments are typed and cannot migrate to local graders", () => {
+  const invalidType = cloneSuite();
+  invalidType.evals.find((entry) => entry.id === "KD-022").external_judgment_required = "yes";
+  assert.match(
+    validateKnowledgeDevelopmentSuite(invalidType).errors.join("\n"),
+    /external_judgment_required must be boolean/,
+  );
+
+  const invalidGrader = cloneSuite();
+  invalidGrader.evals.find((entry) => entry.id === "KD-023").grader = "deterministic";
+  assert.match(
+    validateKnowledgeDevelopmentSuite(invalidGrader).errors.join("\n"),
+    /only valid for hybrid evals/,
+  );
+});
+
+test("ten named blind spots are first-class evals", () => {
   const expectedIds = Array.from(
-    { length: 8 },
+    { length: 10 },
     (_, index) => `KD-${String(index + 14).padStart(3, "0")}`,
   );
   assert.deepEqual(
-    suite.evals.slice(-8).map((entry) => entry.id),
+    suite.evals.slice(-10).map((entry) => entry.id),
     expectedIds,
   );
   assert.deepEqual(
     readinessLedger.lanes.map((lane) => lane.evalId),
     expectedIds,
   );
-  assert.equal(new Set(readinessLedger.lanes.map((lane) => lane.blindSpot)).size, 8);
+  assert.equal(new Set(readinessLedger.lanes.map((lane) => lane.blindSpot)).size, 10);
   for (const id of expectedIds) {
     assert.match(readinessLedgerDoc, new RegExp(id));
     assert.match(launchBlockersDoc, new RegExp(id));
@@ -336,6 +356,9 @@ test("readiness ledger is public-safe and keeps external gates open", () => {
   assert.doesNotMatch(payload, /\/Users\/|\/Volumes\/|Mobile Documents/);
   assert.doesNotMatch(payload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
   assert.doesNotMatch(payload, /\b\d{3}[-.)\s]\d{3}[-\s]\d{4}\b/);
+  assert.match(readinessLedger.lensFoundations.attributionBoundary, /not quotations, testimonials, or rubrics written, approved, or currently endorsed/i);
+  assert.match(evalLensesDoc, /Jamie Burkart and Codex/);
+  assert.doesNotMatch(evalLensesDoc, /\/Users\/|\/Volumes\/|Mobile Documents|student id/i);
   assert.match(launchBlockersDoc, /Current release state: held/i);
   assert.match(launchBlockersDoc, /machine.*independent.*human.*release/is);
 });
@@ -391,12 +414,19 @@ test("local hill-climb gate passes while external release gates fail honestly", 
     "KD-012",
     "KD-015",
     "KD-018",
+    "KD-022",
+    "KD-023",
   ]);
   for (const id of ["KD-014", "KD-016", "KD-017", "KD-019", "KD-020", "KD-021"]) {
     assert.equal(run.evals.find((entry) => entry.eval_id === id)?.score, 4, id);
   }
   for (const id of ["KD-015", "KD-018"]) {
     assert.equal(run.evals.find((entry) => entry.eval_id === id)?.score, 0, id);
+  }
+  for (const id of ["KD-022", "KD-023"]) {
+    const entry = run.evals.find((candidate) => candidate.eval_id === id);
+    assert.equal(entry?.score, 3, id);
+    assert.equal(entry?.external_judgment_required, true, id);
   }
 
   const fullGate = spawnSync(

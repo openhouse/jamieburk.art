@@ -1,7 +1,7 @@
 # Portfolio Readiness Ledger
 
 The machine-readable
-[`readiness-ledger.json`](./readiness-ledger.json) turns eight known blind spots
+[`readiness-ledger.json`](./readiness-ledger.json) turns ten known blind spots
 into maintained controls. It does not declare the portfolio ready to publish.
 
 ## Authority
@@ -17,7 +17,7 @@ No lower layer grants authority to a higher one. A passing test cannot grant
 image rights, simulate a hiring reader, approve a collaborator-sensitive
 claim, or authorize deployment.
 
-## Eight Controls
+## Ten Controls
 
 | Eval | Control | Completion authority |
 | --- | --- | --- |
@@ -29,6 +29,8 @@ claim, or authorize deployment.
 | `KD-019` | Technical and commercial operating legibility | Executable content contract |
 | `KD-020` | Cumulative disclosure and source durability | Safety scanner and corpus-level review |
 | `KD-021` | Future-facing offer clarity | Executable content contract |
+| `KD-022` | Margaret Morse lens: embodied and relational intelligence | Hybrid preflight and independent judgment |
+| `KD-023` | Warren Sack lens: recursive systems thinking | Hybrid preflight and independent judgment |
 
 ## Commands
 

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "asOf": "2026-07-15",
-  "purpose": "One public-safe control record for the portfolio's evidence, reader, visual, safety, and release-readiness gaps.",
+  "purpose": "One public-safe control record for the portfolio's evidence, reader, visual, interpretive, safety, and release-readiness gaps.",
   "authority": {
     "machineState": "The latest output from npm run run:knowledge-development controls executable eval state.",
     "evidenceState": "This ledger controls the named blind-spot inventory and its evidence or task route.",
@@ -9,7 +9,7 @@
   },
   "releaseState": "held",
   "releaseReasons": [
-    "Independent review is required for collective-credit and Chad-lens judgments.",
+    "Independent review is required for collective-credit, Chad-lens, Margaret Morse-lens, and Warren Sack-lens judgments.",
     "Observed hiring-reader sessions have not yet been recorded.",
     "The priority visual edit has not completed rights, consent, caption, and credit approval.",
     "Jamie has not recorded a final production-deploy decision for the evaluated candidate."
@@ -62,8 +62,59 @@
       "blindSpot": "The archive can explain the past without making Jamie's next contribution concrete.",
       "control": "State the role, team condition, work Jamie can own, and direct next action without narrowing him to one employer or sector.",
       "state": "controlled"
+    },
+    {
+      "evalId": "KD-022",
+      "blindSpot": "A hiring-oriented portfolio can erase the embodied, artistic, and relational intelligence that distinguishes Jamie's operating practice.",
+      "control": "Keep one primary hiring surface where embodied inquiry, participation, memory, place, atmosphere, hospitality, and artistic, civic, technical, and social practice remain connected.",
+      "state": "independent-judgment-required"
+    },
+    {
+      "evalId": "KD-023",
+      "blindSpot": "Generic systems language can obscure Jamie's demonstrated movement from relational analysis to working form and situated learning.",
+      "control": "Show a concrete sequence from relationships across systems to a visible structure, interface, prototype, process, or real-setting test, with sources and collective credit intact.",
+      "state": "independent-judgment-required"
     }
   ],
+  "lensFoundations": {
+    "derivedBy": "Jamie Burkart and Codex on 2026-07-15",
+    "sourceBoundary": "Protected educational records and a user-supplied image of a public professional recommendation informed these portfolio questions; no protected payload, locator, educational identifier, correspondence, contact detail, or screenshot is stored in Git.",
+    "attributionBoundary": "These are not quotations, testimonials, or rubrics written, approved, or currently endorsed by Margaret Morse or Warren Sack.",
+    "margaretMorse": {
+      "requiredSignals": [
+        "embodied inquiry",
+        "experimentation",
+        "participation",
+        "memory",
+        "place",
+        "atmosphere",
+        "hospitality",
+        "artistic, civic, technical, and social practice"
+      ],
+      "antiPatterns": [
+        "reducing all value to organizational utility",
+        "detaching artistic history from present operating method",
+        "obscuring the hiring path with interpretive language"
+      ]
+    },
+    "warrenSack": {
+      "requiredSignals": [
+        "relationships across systems",
+        "latent structure",
+        "source-backed analysis",
+        "working interface, prototype, process, or social situation",
+        "real-setting learning",
+        "multiple representations",
+        "calibrated collective credit"
+      ],
+      "antiPatterns": [
+        "claiming systems thinking without a demonstrable sequence",
+        "detaching technical novelty from situated use",
+        "treating a prototype as adoption or impact"
+      ]
+    },
+    "primaryPublicSurface": "/about"
+  },
   "roleCorroboration": [
     {
       "claimId": "CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE",

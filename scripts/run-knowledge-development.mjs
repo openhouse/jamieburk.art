@@ -182,6 +182,7 @@ const candidateFiles = [
   "docs/knowledge-bank/readiness-ledger.json",
   "docs/knowledge-bank/readiness-ledger.md",
   "docs/knowledge-bank/launch-blockers.md",
+  "docs/knowledge-bank/eval-lenses.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nterchng.md",
   "docs/knowledge-bank/projects/urbanhermit.md",
@@ -308,6 +309,10 @@ const readinessLedgerDoc = readFileSync(
 );
 const launchBlockersDoc = readFileSync(
   "docs/knowledge-bank/launch-blockers.md",
+  "utf8",
+);
+const evalLensesDoc = readFileSync(
+  "docs/knowledge-bank/eval-lenses.md",
   "utf8",
 );
 const packageManifest = JSON.parse(readFileSync("package.json", "utf8"));
@@ -3825,7 +3830,7 @@ function deterministicResults(judgments) {
   ].filter((path) => existsSync(path));
 
   const expectedBlindSpotEvalIds = Array.from(
-    { length: 8 },
+    { length: 10 },
     (_, index) => `KD-${String(index + 14).padStart(3, "0")}`,
   );
   const readinessLaneIds = readinessLedger.lanes?.map((lane) => lane.evalId) ?? [];
@@ -3874,7 +3879,7 @@ function deterministicResults(judgments) {
     JSON.stringify(expectedBlindSpotEvalIds)
   ) {
     readinessReconciliationViolations.push(
-      "The readiness ledger must map one-to-one to KD-014 through KD-021",
+      "The readiness ledger must map one-to-one to KD-014 through KD-023",
     );
   }
   if (
@@ -4062,6 +4067,80 @@ function deterministicResults(judgments) {
     !existsSync("apps/www/src/app/contact/page.tsx")
   ) {
     futureOfferViolations.push("The future offer lacks a working contact route");
+  }
+
+  const lensFoundationPayload = JSON.stringify(
+    readinessLedger.lensFoundations ?? {},
+  );
+  const lensSourceBoundaryViolations = [];
+  if (
+    !/Jamie Burkart and Codex/.test(
+      readinessLedger.lensFoundations?.derivedBy ?? "",
+    ) ||
+    !/not quotations, testimonials, or rubrics written, approved, or currently endorsed/i.test(
+      readinessLedger.lensFoundations?.attributionBoundary ?? "",
+    ) ||
+    !/not quotations, testimonials, or rubrics written,[\s\S]*approved,[\s\S]*currently endorsed/i.test(
+      evalLensesDoc,
+    )
+  ) {
+    lensSourceBoundaryViolations.push(
+      "The lens derivation or professor-attribution boundary is incomplete",
+    );
+  }
+  if (
+    /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.)\s]\d{3}[-\s]\d{4}\b|student id/i.test(
+      `${lensFoundationPayload}\n${evalLensesDoc}`,
+    )
+  ) {
+    lensSourceBoundaryViolations.push(
+      "The public lens material contains a protected locator, identifier, or contact detail",
+    );
+  }
+
+  const morseLensViolations = [...lensSourceBoundaryViolations];
+  for (const signal of [
+    "embodied inquiry",
+    "participation",
+    "memory",
+    "place",
+    "atmosphere",
+    "hospitality",
+  ]) {
+    if (!aboutSource.toLowerCase().includes(signal)) {
+      morseLensViolations.push(`The About page does not name ${signal}`);
+    }
+  }
+  if (
+    !/artistic,[\s\S]*civic,[\s\S]*technical,[\s\S]*social/i.test(
+      aboutSource,
+    ) ||
+    !/how people inhabit/i.test(aboutSource)
+  ) {
+    morseLensViolations.push(
+      "The About page does not keep artistic, civic, technical, social, and inhabitation concerns connected",
+    );
+  }
+
+  const sackLensViolations = [...lensSourceBoundaryViolations];
+  for (const signal of [
+    "recursively",
+    "relationships across systems",
+    "hidden structures visible",
+    "prototype",
+    "real settings",
+  ]) {
+    if (!aboutSource.toLowerCase().includes(signal)) {
+      sackLensViolations.push(`The About page does not name ${signal}`);
+    }
+  }
+  if (
+    !/source-backed/i.test(aboutSource) ||
+    !/test it with\s+people/i.test(aboutSource)
+  ) {
+    sackLensViolations.push(
+      "The About page does not connect source-backed analysis, working form, and situated use",
+    );
   }
 
   const results = new Map();
@@ -4873,7 +4952,7 @@ function deterministicResults(judgments) {
     result(
       readinessReconciliationViolations.length ? 0 : 4,
       [
-        `${readinessLaneIds.length}/8 blind spots mapped`,
+        `${readinessLaneIds.length}/10 blind spots mapped`,
         `release state: ${readinessLedger.releaseState}`,
         "machine, evidence, approval, and release authority documented separately",
       ],
@@ -4941,6 +5020,40 @@ function deterministicResults(judgments) {
       ],
       futureOfferViolations,
       "State the future role, team need, owned work, and next action in plain language.",
+    ),
+  );
+  results.set(
+    "KD-022",
+    result(
+      morseLensViolations.length ? 0 : 3,
+      [
+        "public-safe derivation and attribution boundary checked",
+        "About-page embodied and relational intelligence contract checked",
+        "local preflight is capped at 3 pending independent judgment",
+      ],
+      morseLensViolations.length
+        ? morseLensViolations
+        : ["Independent Margaret Morse-lens judgment remains required"],
+      morseLensViolations.length
+        ? "Restore a concise connection between embodied inquiry and present operating method."
+        : "Run the frozen Margaret Morse lens with an independent reviewer on this exact candidate.",
+    ),
+  );
+  results.set(
+    "KD-023",
+    result(
+      sackLensViolations.length ? 0 : 3,
+      [
+        "public-safe derivation and attribution boundary checked",
+        "About-page recursive systems-thinking contract checked",
+        "local preflight is capped at 3 pending independent judgment",
+      ],
+      sackLensViolations.length
+        ? sackLensViolations
+        : ["Independent Warren Sack-lens judgment remains required"],
+      sackLensViolations.length
+        ? "Show the sequence from relational observation to working form and situated learning."
+        : "Run the frozen Warren Sack lens with an independent reviewer on this exact candidate.",
     ),
   );
 
@@ -5081,14 +5194,31 @@ function run() {
   );
   const judgments = fingerprintMismatch ? new Map() : loadedJudgments.judgments;
   const { results, metrics } = deterministicResults(judgments);
-  const evalResults = suite.evals.map((entry) => ({
-    eval_id: entry.id,
-    title: entry.title,
-    grader: entry.grader,
-    blocking: entry.blocking,
-    weight: entry.weight,
-    ...results.get(entry.id),
-  }));
+  const evalResults = suite.evals.map((entry) => {
+    const externalJudgment = entry.external_judgment_required
+      ? judgments.get(entry.id)
+      : undefined;
+    return {
+      eval_id: entry.id,
+      title: entry.title,
+      grader: entry.grader,
+      external_judgment_required:
+        entry.external_judgment_required === true,
+      blocking: entry.blocking,
+      weight: entry.weight,
+      ...(externalJudgment
+        ? {
+            score: externalJudgment.score,
+            pass: externalJudgment.pass,
+            evidence: externalJudgment.evidence,
+            findings: externalJudgment.findings,
+            recommended_next_move:
+              externalJudgment.recommended_next_move,
+            confidence: externalJudgment.confidence,
+          }
+        : results.get(entry.id)),
+    };
+  });
   const weightedScore =
     evalResults.reduce(
       (sum, entry) => sum + (entry.score / 4) * entry.weight,
@@ -5105,8 +5235,9 @@ function run() {
   );
   const missingJudgments = evalResults.filter(
     (entry) =>
-      ["llm_judge", "human_approval"].includes(entry.grader) &&
-      entry.score === 0,
+      (["llm_judge", "human_approval"].includes(entry.grader) ||
+        entry.external_judgment_required) &&
+      !judgments.has(entry.eval_id),
   );
   const localFailures = evalResults.filter(
     (entry) =>

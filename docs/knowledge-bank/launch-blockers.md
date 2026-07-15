@@ -8,11 +8,12 @@ production publication.
 
 ## Machine Gate
 
-- `KD-014`, `KD-016`, `KD-017`, `KD-019`, `KD-020`, and `KD-021`
+- `KD-014`, `KD-016`, `KD-017`, `KD-019`, `KD-020`, `KD-021`, `KD-022`, and `KD-023`
   are locally executable controls for role-claim routing, readiness
   reconciliation, outcome distinctions, technical and commercial legibility,
-  corpus safety, and future-offer clarity. `KD-015` and `KD-018` remain human
-  gates below.
+  corpus safety, future-offer clarity, and the structural preflights for the
+  Margaret Morse and Warren Sack lenses. `KD-015` and `KD-018` remain human
+  gates below; `KD-022` and `KD-023` also retain independent judgments below.
 - Run `npm run check:knowledge-development` for the maintained local evidence,
   governance, safety, and content contract.
 - Run `npm run check` and the production preflight on the exact release
@@ -26,6 +27,12 @@ production publication.
   causality on the current candidate fingerprint.
 - [ ] `KD-012`: a blind hiring-oriented reviewer passes Chad's lens on the
   current candidate fingerprint.
+- [ ] `KD-022`: an independent reviewer passes the Margaret Morse lens on the
+  current candidate fingerprint; the local structural preflight cannot award
+  the final qualitative score.
+- [ ] `KD-023`: an independent reviewer passes the Warren Sack lens on the
+  current candidate fingerprint; the local structural preflight cannot award
+  the final qualitative score.
 
 ## Human Research And Approval
 

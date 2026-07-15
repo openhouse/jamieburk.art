@@ -32,6 +32,29 @@ export default function AboutPage() {
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
           </p>
+          <section className="border-y border-jb-blue/20 py-6">
+            <h2 className="text-2xl font-semibold text-jb-ink">
+              A practice of attention
+            </h2>
+            <div className="mt-4 space-y-4">
+              <p>
+                My practice began in participatory media and social software,
+                where code, interfaces, prototypes, installations, gatherings,
+                and public situations were ways to understand a system by
+                entering it. I still keep artistic, civic, technical, and
+                social work connected: embodied inquiry, participation,
+                memory, place, atmosphere, hospitality, and how people inhabit
+                a structure all shape what I build.
+              </p>
+              <p>
+                I work recursively: follow relationships across systems, make
+                hidden structures visible, test a source-backed analysis
+                through a prototype or usable process, and then test it with
+                people in real settings. That cycle turns observation into
+                working form and use into further learning.
+              </p>
+            </div>
+          </section>
           <p>
             I am seeking technical project management, product operations, and
             implementation work with teams navigating consequential change. I

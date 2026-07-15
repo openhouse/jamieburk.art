@@ -37,6 +37,16 @@ export function validateKnowledgeDevelopmentSuite(suite) {
     requireValue(allowedGraders.has(entry.grader), `${prefix}.grader is invalid`);
     requireValue(typeof entry.blocking === "boolean", `${prefix}.blocking must be boolean`);
     requireValue(Number.isInteger(entry.weight) && entry.weight > 0, `${prefix}.weight must be a positive integer`);
+    if ("external_judgment_required" in entry) {
+      requireValue(
+        typeof entry.external_judgment_required === "boolean",
+        `${prefix}.external_judgment_required must be boolean`,
+      );
+      requireValue(
+        entry.grader === "hybrid",
+        `${prefix}.external_judgment_required is only valid for hybrid evals`,
+      );
+    }
     for (const field of ["inputs", "procedure", "pass_criteria", "evidence_required"]) {
       requireValue(Array.isArray(entry[field]) && entry[field].length > 0, `${prefix}.${field} must be non-empty`);
     }
