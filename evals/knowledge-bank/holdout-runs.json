@@ -328,6 +328,17 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-events-2026-07-15",
+      "completedAt": "2026-07-15T14:30:00Z",
+      "lens": "Protocol reset because the prior holdout state predates the 34-slot NYC Artist Coalition Facebook event population, 33 recovered public records, unresolved-slot accounting, platform-volatility recheck, source routing, response-label controls, role boundaries, and dedicated adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect population reconciliation, authenticated-public provenance, later route volatility, response-versus-attendance semantics, private-link exclusions, role attribution, collective credit, selective projection, and count-preserving mutation resistance on a frozen revision."
+      ]
     }
   ]
 }

@@ -358,6 +358,21 @@ bundle.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## nyc-artist-coalition-participation-system - Recurring civic participation system
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the collective event population; bounded for Jamie's individual role
+**Evidence class:** Authenticated public event census / contemporary reporting / Jamie first-hand account
+**Public wording:** Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system across cultural-space meetings, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings.
+**Detailed public-safe wording:** The complete exposed Facebook event control contains 33 recovered event records plus one unresolved slot. Twelve recurring-meeting records include ten different named physical cultural spaces and two virtual meetings. Thirty-two pages display Facebook response labels; these are not attendance or unique reach.
+**Where to project:** Fair Rent NYC / NYC Artist Coalition case study and Technical Operations.
+**Why it matters:** Makes Jamie's relational civic-production and participation-system work legible alongside the site's existing web, policy, and documentation evidence.
+**Guardrail:** Use helped establish and produce. Preserve collaborator, host, artist, advocate, agency, and official credit; do not assign every event to Jamie or infer event-to-policy causality.
+**Do not say:** Jamie solely produced every event; 9,989 people attended; Facebook responses equal attendance; the event program alone caused Cabaret Law repeal.
+**Protected boundaries:** Raw descriptions, participant identities, comments, contact details, meeting credentials, private working links, and authenticated-session data remain outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  

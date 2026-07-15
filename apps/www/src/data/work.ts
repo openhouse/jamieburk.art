@@ -206,12 +206,13 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-participation-system"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -261,7 +262,8 @@ const workItemsInput = [
       "Action Tracking",
       "Campaign Websites",
       "Public Guidance",
-      "Decision Records"
+      "Decision Records",
+      "Participation Systems"
     ],
     links: [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
@@ -284,6 +286,8 @@ const workItemsInput = [
     evidence: [
       "Founding-member and organizer role in NYC Artist Coalition",
       "Civic systems, coalition operations, and policy-communications infrastructure",
+      "Recurring participation system across cultural-space meetings, practical sessions, hearings, town halls, campaign actions, and relief convenings",
+      "Public-safe census of 33 Facebook event records, with one additional platform control slot preserved as unresolved",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",

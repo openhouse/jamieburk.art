@@ -626,6 +626,29 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "title": "NYC Artist Coalition Facebook event full-population public-safe census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
+      "publicNote": "Retains 33 event identities, dates, venues, organizer displays, bounded response snapshots, topics, source routes, and public-safety dispositions without raw descriptions or participant and access data.",
+      "doesNotEstablish": [
+        "the unresolved event identity",
+        "every historical coalition event",
+        "individual event authorship or production",
+        "physical attendance or unique people",
+        "policy causality",
+        "permission to publish attendee identities, comments, contacts, or credentials"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
       "title": "NYC Artist Coalition X retrievable-population manifest",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -1630,6 +1653,109 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie describes the recurring event and participation layer as a major part of his NYC Artist Coalition contribution. The surviving event population corroborates the collective system's public form while leaving event-level authorship and production credit open.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "33 recovered event records",
+            "12 recurring-meeting records across ten named physical cultural spaces"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie organized fire-code study groups",
+            "Jamie rallied for Cabaret Law repeal"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+          "relationship": "corroborating",
+          "supports": [
+            "NYC Artist Coalition participation",
+            "September 28 town hall invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use helped establish and produce; do not assign Jamie authorship or sole production of every event.",
+        "Preserve event partners, venue hosts, artists, advocates, officials, and coalition collaborators as part of the work.",
+        "The rotating-venue finding covers 12 recurring-meeting records, including ten named physical cultural spaces and two virtual meetings; it is not a claim of one meeting every calendar month.",
+        "The event sequence does not establish that any gathering caused a legislative, agency, or enforcement outcome."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public event layer also carried visible platform traction: 19 recovered event pages display at least 100 Facebook responses, seven at least 500, and three at least 1,000. These are historical response labels, not verified attendance or unique reach.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Thirty-two recovered event pages display Facebook response counts; 19 show at least 100 responses, seven at least 500, and three at least 1,000. The figures remain event-level platform signals only.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "response-threshold arithmetic"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Facebook response labels are not verified attendance, unique people, reach, participation, endorsement, conversion, mandate, or impact.",
+        "People may respond to multiple events, and three displayed values are rounded in thousands.",
+        "Do not sum the event-level values into a people-reached claim.",
+        "Use independent reporting for physical attendance at a particular event when available."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1973,7 +2099,8 @@
         "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
         "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
         "SRC-X-HELP-MISSING-POSTS",
-        "SRC-X-HELP-ACCOUNT-ARCHIVE"
+        "SRC-X-HELP-ACCOUNT-ARCHIVE",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
       ],
       "occurrences": [
         {
@@ -2051,6 +2178,24 @@
             "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
             "SRC-X-HELP-MISSING-POSTS",
             "SRC-X-HELP-ACCOUNT-ARCHIVE"
+          ]
+        },
+        {
+          "id": "coalition-participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+            "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+            "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+          ]
+        },
+        {
+          "id": "coalition-event-response-signals",
+          "claimId": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
           ]
         },
         {

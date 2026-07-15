@@ -152,7 +152,7 @@
       "correctedSourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "correctionId": "COR-NYCAC-CABARET-HEARING-DATE-2026",
       "approvedContentSha256": "06f499a9c10eee7afe2ee47227919a4994b868690093743a63113d3d161111f2",
-      "approvedRelatedClaimsSha256": "6e0e5cf6f978db578a5288bd7f8e094ceb853e066c9833abcc823dacb71612fe",
+      "approvedRelatedClaimsSha256": "3b07bb17ff7d6dd7226202d51b897807337624a50a04f3f2349e649122fb81e8",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-COUNCIL-EVIDENTIARY-USE",
@@ -251,7 +251,7 @@
       "expectedSourceCount": 15,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "ae25ffb2d86f1ec4d262860757f62aa4f242f960c5a13c53ab18f06190d3ba1a",
+      "approvedContentSha256": "443c8050520a3715a5403a3d79fc907549af14f3fa12955873900d65762b45ab",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -788,6 +788,39 @@
         "kc-town-hall-public-service-interface"
       ]
     },
+    "nycacFacebookEvents": {
+      "reviewedAt": "2026-07-15",
+      "manifestPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "reportPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
+      "expectedDisplayedControlSlots": 34,
+      "expectedRecoveredEventCount": 33,
+      "expectedUnresolvedControlSlots": 1,
+      "expectedDirectOrganizerCount": 24,
+      "expectedCohostedCount": 9,
+      "expectedRecurringMeetingCount": 12,
+      "expectedPhysicalMeetingVenueCount": 10,
+      "expectedEventsWithResponses": 32,
+      "expectedAtLeast100": 19,
+      "expectedAtLeast500": 7,
+      "expectedAtLeast1000": 3,
+      "expectedPostedArticleCount": 7,
+      "expectedWithheldLinkCount": 13,
+      "expectedDetailRecheckRecovered": 28,
+      "expectedDetailRecheckUnavailable": 5,
+      "expectedIntakeCount": 2,
+      "expectedObservationCount": 9,
+      "expectedSourceCount": 6,
+      "expectedClaimCount": 4,
+      "expectedInquiryCount": 2,
+      "populationClaimId": "CLM-NYCAC-FACEBOOK-EVENT-POPULATION",
+      "participationClaimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "responseClaimId": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",
+      "interpretationClaimId": "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE",
+      "ownerExportInquiryId": "INQ-NYCAC-FACEBOOK-EVENT-OWNER-EXPORT",
+      "roleInquiryId": "INQ-NYCAC-FACEBOOK-EVENT-ROLE-AND-ATTENDANCE",
+      "manifestSourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "proofId": "nyc-artist-coalition-participation-system"
+    },
     "agencyGraph": {
       "expectedEntityCount": 31,
       "expectedRelationCount": 31,
@@ -954,6 +987,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Participant memory, protected proposal evidence, neighborhood-service archives, and public composition remain distinct: project-level facts mature, individual-role and completion propositions stay held, and sensitive source material never enters the public repository."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      "label": "NYC Artist Coalition Facebook event archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every displayed past-event control slot has a disposition; all 33 exposed event records, source routes, venue and stakeholder interfaces, response-label boundaries, Jamie's attributed role, collective credit, transient availability, protected details, and the unresolved owner-export gap remain complete, auditable, public-safe, and non-inflationary."
     }
   ],
   "hillClimb": {

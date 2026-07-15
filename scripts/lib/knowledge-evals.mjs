@@ -9,6 +9,12 @@ import { kcTownHallFieldPractice } from "../../apps/www/src/data/knowledge-bank/
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/nycac-social-population-2026-07.ts";
+import {
+  nycacFacebookEventArticleSourceIds,
+  nycacFacebookEventClaimIds,
+  nycacFacebookEventKnowledge,
+  nycacFacebookEventReviewSummary
+} from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { urbanhermitSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-population-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/wowlist-social-population-2026-07.ts";
@@ -27,7 +33,7 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  sharedPublicSurfacesSha256: "07b3176335c16ebfe407fcf6f20180d9831169f4256a79e7ccc7aa0b8977f783",
+  sharedPublicSurfacesSha256: "87721e178ee2573418885aee43ffaae7cb60587b014989289bffa7b787828582",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 const NYCAC_SOCIAL_REVIEW_LOCKS = Object.freeze({
@@ -43,6 +49,13 @@ const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
   incomingRecordsSha256: "c09b3150e127e69f0382cbad3ffa350fb2fccdfb3b0fc1b41943325f16ac5f1f",
   governedModuleSha256: "8e97d84adf69cec38fad3a37108ccbcfa0b4e0b8d0630b8f63bff1e32b7f7a94",
   publicReportSha256: "c1dcc58a79ff1c51a3c2e9bcd2803f711d4234a61e22bff5f9e8d54babea16f6"
+});
+const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
+  manifestSha256: "64af7b2f1804b3b319de2f5eef60bfb01371ce5209c8497473f800a334c66555",
+  governedModuleSha256: "29e868734b83dc89609c47d3d8eff72939da617742bcb6db16c08e759ec70fb8",
+  publicReportSha256: "dc5c87dee6eaf3760008be3b3ee41db8eb367a1d05e1146ac4a5ff8e1d4ebc48",
+  caseStudyMdxSha256: "bb027dc5fdd7a0ce2f2602287ad3a7953af98855316efe5986aeafdae387ccfb",
+  proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c"
 });
 
 export function loadKnowledgeEvalSuite() {
@@ -2485,9 +2498,280 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       fieldPractice.claimIds.every((id) => !publicRegistryText.includes(id)) &&
       !/general contractor|Phase One was completed in 2019/i.test(kcTownHallMdx)
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries];
+  const nycacFacebookEvents = suite.pilot.nycacFacebookEvents;
+  const nycacFacebookManifestPath = path.join(repoRoot, nycacFacebookEvents.manifestPath);
+  const nycacFacebookReportPath = path.join(repoRoot, nycacFacebookEvents.reportPath);
+  const nycacFacebookManifestText = readFileSync(nycacFacebookManifestPath, "utf8");
+  const nycacFacebookManifest = overrides.nycacFacebookEventPopulation ?? JSON.parse(nycacFacebookManifestText);
+  const nycacFacebookReport = overrides.nycacFacebookEventReport ?? readFileSync(nycacFacebookReportPath, "utf8");
+  const nycacFacebookMdx = overrides.nycacFacebookEventMdx ?? fairRentMdx;
+  const nycacFacebookEventsRows = nycacFacebookManifest.events ?? [];
+  const nycacFacebookEventIds = new Set(nycacFacebookEventsRows.map((event) => event.id));
+  const nycacFacebookEventUrls = new Set(nycacFacebookEventsRows.map((event) => event.url));
+  const nycacFacebookYearCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(nycacFacebookEventsRows, (event) => event.date?.slice(0, 4)))
+      .map(([year, events]) => [year, events.length])
+  );
+  const nycacFacebookDirectEvents = nycacFacebookEventsRows.filter(
+    (event) => event.relationToPage === "index-displayed-nycac-organizer"
+  );
+  const nycacFacebookCohostedEvents = nycacFacebookEventsRows.filter(
+    (event) => event.relationToPage === "allied-or-cohosted-listing"
+  );
+  const nycacFacebookRecurringMeetingIds = new Set(
+    nycacFacebookEventReviewSummary.recurringMeetingEventIds
+  );
+  const nycacFacebookRecurringMeetings = nycacFacebookEventsRows.filter(
+    (event) => nycacFacebookRecurringMeetingIds.has(event.id)
+  );
+  const nycacFacebookPhysicalMeetingVenues = new Set(
+    nycacFacebookRecurringMeetings
+      .filter((event) => event.venueCategory === "cultural-or-community-space")
+      .map((event) => event.venue)
+  );
+  const nycacFacebookVirtualMeetings = nycacFacebookRecurringMeetings.filter(
+    (event) => event.venueCategory === "virtual"
+  );
+  const nycacFacebookResponseEvents = nycacFacebookEventsRows.filter(
+    (event) => event.responseSnapshot?.respondedDisplay !== null
+  );
+  const nycacFacebookResponseThresholdCount = (minimum) => nycacFacebookEventsRows.filter(
+    (event) => (event.responseSnapshot?.pointEstimate ?? 0) >= minimum
+  ).length;
+  const nycacFacebookWithheldLinkCount = nycacFacebookEventsRows.reduce(
+    (total, event) => total + (event.withheldOutboundLinkCount ?? 0),
+    0
+  );
+  const nycacFacebookOutboundUrls = nycacFacebookEventsRows.flatMap(
+    (event) => event.outboundResources?.map((resource) => resource.url) ?? []
+  );
+  const nycacFacebookRecheck = nycacFacebookManifest.populationReconciliation?.detailAvailabilityRecheck;
+  const nycacFacebookRecheckUnavailableIds = new Set(
+    nycacFacebookRecheck?.temporarilyUnavailableEventIds ?? []
+  );
+  const nycacFacebookIntakes = nycacFacebookEventKnowledge.intakeItems.map((item) => intakeById.get(item.id));
+  const nycacFacebookObservations = nycacFacebookEventKnowledge.observations.map((item) => observationById.get(item.id));
+  const nycacFacebookSources = nycacFacebookEventKnowledge.sources.map((item) => sourceById.get(item.id));
+  const nycacFacebookClaims = nycacFacebookEventKnowledge.claims.map((item) => claimById.get(item.id));
+  const nycacFacebookInquiries = nycacFacebookEventKnowledge.researchInquiries.map((item) => inquiryById.get(item.id));
+  const nycacFacebookPopulationClaim = claimById.get(nycacFacebookEvents.populationClaimId);
+  const nycacFacebookParticipationClaim = claimById.get(nycacFacebookEvents.participationClaimId);
+  const nycacFacebookResponseClaim = claimById.get(nycacFacebookEvents.responseClaimId);
+  const nycacFacebookInterpretationClaim = claimById.get(nycacFacebookEvents.interpretationClaimId);
+  const nycacFacebookOwnerExportInquiry = inquiryById.get(nycacFacebookEvents.ownerExportInquiryId);
+  const nycacFacebookRoleInquiry = inquiryById.get(nycacFacebookEvents.roleInquiryId);
+  const nycacFacebookProof = proofClaims.find((proof) => proof.id === nycacFacebookEvents.proofId);
+  const nycacFacebookProofCoverage = knowledgeBank.proofCoverageTargets.find(
+    (coverage) => coverage.proofId === nycacFacebookEvents.proofId
+  );
+  const nycacFacebookArticleSources = nycacFacebookEventArticleSourceIds.map((id) => sourceById.get(id));
+  const nycacFacebookSourceById = new Map(nycacFacebookSources.map((source) => [source?.id, source]));
+  const nycacFacebookEvidenceClosed = nycacFacebookClaims.every((claim) =>
+    claim?.evidence.every((evidence) =>
+      evidence.supports.length > 0 && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const nycacFacebookAffirmativeProjectionText = [
+    ...nycacFacebookClaims.flatMap((claim) =>
+      claim?.projections.filter((projection) => projection.status === "active")
+        .map((projection) => projection.text) ?? []
+    ),
+    nycacFacebookProof?.publicWording,
+    nycacFacebookProof?.shortWording,
+    nycacFacebookProof?.detailedPublicWording,
+    nycacFacebookMdx,
+    workSource
+  ].filter(Boolean).join("\n");
+  const nycacFacebookUnsafeAffirmativePatterns = [
+    /9,?989 (?:people|attendees|participants|unique)/i,
+    /Facebook responses? (?:equal|equaled|represented|proved|showed) (?:event )?attendance/i,
+    /Jamie (?:solely |single-handedly )?(?:created|produced|organized|ran) (?:all|every|the) NYC Artist Coalition events?/i,
+    /(?:the events?|the participation system) (?:caused|secured|delivered|won) (?:the )?(?:Cabaret Law repeal|Office of Nightlife|policy outcomes?)/i,
+    /all 34 event (?:pages|records) (?:were )?recovered/i,
+    /complete (?:Facebook|Meta|historical) (?:owner )?(?:archive|history)/i
+  ];
+  const nycacFacebookAffirmativeSafe = nycacFacebookUnsafeAffirmativePatterns.every(
+    (pattern) => !pattern.test(nycacFacebookAffirmativeProjectionText)
+  );
+  const nycacFacebookPublicArtifactText = JSON.stringify({
+    manifest: nycacFacebookManifest,
+    intakes: nycacFacebookIntakes,
+    observations: nycacFacebookObservations,
+    sources: nycacFacebookSources,
+    claims: nycacFacebookClaims,
+    inquiries: nycacFacebookInquiries,
+    proof: nycacFacebookProof
+  }) + nycacFacebookReport;
+  const nycacFacebookPrivateDataFree =
+    !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(nycacFacebookPublicArtifactText) &&
+    !/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(nycacFacebookPublicArtifactText) &&
+    !/zoom\.us|meet\.google|docs\.google|drive\.google|passcode|meeting id|cookie|session token/i.test(
+      JSON.stringify([...nycacFacebookEventUrls, ...nycacFacebookOutboundUrls])
+    );
+  const nycacFacebookProofSourceText = readFileSync(
+    path.join(repoRoot, "apps/www/src/data/proofs.ts"),
+    "utf8"
+  );
+  const nycacFacebookProofStart = nycacFacebookProofSourceText.indexOf(
+    'id: "nyc-artist-coalition-participation-system"'
+  );
+  const nycacFacebookProofEnd = nycacFacebookProofSourceText.indexOf(
+    "\n  {\n    id:",
+    nycacFacebookProofStart + 5
+  );
+  const nycacFacebookProofSnippet = nycacFacebookProofSourceText.slice(
+    nycacFacebookProofStart,
+    nycacFacebookProofEnd === -1 ? nycacFacebookProofSourceText.length : nycacFacebookProofEnd
+  );
+  const nycacFacebookReviewLocksMatch =
+    createHash("sha256").update(nycacFacebookManifestText).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.manifestSha256 &&
+    createHash("sha256").update(readFileSync(
+      path.join(repoRoot, "apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts"),
+      "utf8"
+    )).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.governedModuleSha256 &&
+    createHash("sha256").update(nycacFacebookReport).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.publicReportSha256 &&
+    createHash("sha256").update(nycacFacebookMdx).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.caseStudyMdxSha256 &&
+    createHash("sha256").update(nycacFacebookProofSnippet).digest("hex") === NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.proofSnippetSha256;
+  const nycacFacebookEventsComplete = Boolean(
+    existsSync(nycacFacebookManifestPath) &&
+      existsSync(nycacFacebookReportPath) &&
+      nycacFacebookManifest.schemaVersion === 2 &&
+      nycacFacebookManifest.capturedAt === nycacFacebookEvents.reviewedAt &&
+      nycacFacebookManifest.page?.handle === "nycartc" &&
+      nycacFacebookManifest.populationReconciliation?.pageDisplayedPastEventCount === nycacFacebookEvents.expectedDisplayedControlSlots &&
+      nycacFacebookManifest.populationReconciliation.recoveredIndexEventCount === nycacFacebookEvents.expectedRecoveredEventCount &&
+      nycacFacebookManifest.populationReconciliation.recoveredDetailEventCount === nycacFacebookEvents.expectedRecoveredEventCount &&
+      nycacFacebookManifest.populationReconciliation.unmaterializedCount === nycacFacebookEvents.expectedUnresolvedControlSlots &&
+      nycacFacebookManifest.populationReconciliation.recoveredIndexEventCount +
+        nycacFacebookManifest.populationReconciliation.unmaterializedCount ===
+        nycacFacebookManifest.populationReconciliation.pageDisplayedPastEventCount &&
+      /unmaterialized, not as nonexistent/i.test(
+        nycacFacebookManifest.populationReconciliation.reconciliationNote
+      ) &&
+      nycacFacebookRecheck?.recoveredEventIdCount === nycacFacebookEvents.expectedRecoveredEventCount &&
+      nycacFacebookRecheck.recoveredDetailCount === nycacFacebookEvents.expectedDetailRecheckRecovered &&
+      nycacFacebookRecheck.temporarilyUnavailableDetailCount === nycacFacebookEvents.expectedDetailRecheckUnavailable &&
+      nycacFacebookRecheckUnavailableIds.size === nycacFacebookEvents.expectedDetailRecheckUnavailable &&
+      [...nycacFacebookRecheckUnavailableIds].every((id) => nycacFacebookEventIds.has(id)) &&
+      /(?:does|did) not exist/i.test(nycacFacebookRecheck.interpretation) &&
+      nycacFacebookEventsRows.length === nycacFacebookEvents.expectedRecoveredEventCount &&
+      nycacFacebookEventIds.size === nycacFacebookEvents.expectedRecoveredEventCount &&
+      nycacFacebookEventUrls.size === nycacFacebookEvents.expectedRecoveredEventCount &&
+      Object.entries(nycacFacebookEventReviewSummary.recoveredYears).every(
+        ([year, count]) => nycacFacebookYearCounts[year] === count
+      ) &&
+      nycacFacebookDirectEvents.length === nycacFacebookEvents.expectedDirectOrganizerCount &&
+      nycacFacebookCohostedEvents.length === nycacFacebookEvents.expectedCohostedCount &&
+      nycacFacebookDirectEvents.length + nycacFacebookCohostedEvents.length === nycacFacebookEventsRows.length &&
+      nycacFacebookRecurringMeetingIds.size === nycacFacebookEvents.expectedRecurringMeetingCount &&
+      nycacFacebookRecurringMeetings.length === nycacFacebookEvents.expectedRecurringMeetingCount &&
+      nycacFacebookPhysicalMeetingVenues.size === nycacFacebookEvents.expectedPhysicalMeetingVenueCount &&
+      nycacFacebookVirtualMeetings.length === nycacFacebookEventReviewSummary.virtualMeetingRecords &&
+      nycacFacebookEventsRows.every((event) =>
+        event.url === `https://www.facebook.com/events/${event.id}/` &&
+          /^\d{4}-\d{2}-\d{2}$/.test(event.date) &&
+          event.title &&
+          event.topics?.length > 0 &&
+          event.responseSnapshot?.interpretation === "Historical Facebook response actions; not unique people or verified attendance."
+      ) &&
+      nycacFacebookResponseEvents.length === nycacFacebookEvents.expectedEventsWithResponses &&
+      nycacFacebookResponseThresholdCount(100) === nycacFacebookEvents.expectedAtLeast100 &&
+      nycacFacebookResponseThresholdCount(500) === nycacFacebookEvents.expectedAtLeast500 &&
+      nycacFacebookResponseThresholdCount(1000) === nycacFacebookEvents.expectedAtLeast1000 &&
+      nycacFacebookManifest.aggregateSnapshot?.eventsWithDisplayedResponseCount === nycacFacebookEvents.expectedEventsWithResponses &&
+      nycacFacebookManifest.aggregateSnapshot.eventsAtOrAbove100Responses === nycacFacebookEvents.expectedAtLeast100 &&
+      nycacFacebookManifest.aggregateSnapshot.eventsAtOrAbove500Responses === nycacFacebookEvents.expectedAtLeast500 &&
+      nycacFacebookManifest.aggregateSnapshot.eventsAtOrAbove1000Responses === nycacFacebookEvents.expectedAtLeast1000 &&
+      /not unique people/i.test(nycacFacebookManifest.aggregateSnapshot.interpretation) &&
+      nycacFacebookWithheldLinkCount === nycacFacebookEvents.expectedWithheldLinkCount &&
+      nycacFacebookManifest.postedSourceArticles?.length === nycacFacebookEvents.expectedPostedArticleCount &&
+      nycacFacebookEventArticleSourceIds.length === nycacFacebookEvents.expectedPostedArticleCount &&
+      new Set(nycacFacebookEventArticleSourceIds).size === nycacFacebookEvents.expectedPostedArticleCount &&
+      nycacFacebookArticleSources.every((source) =>
+        source?.kind === "published-article" && source.visibility === "public" && source.doesNotEstablish.length >= 3
+      ) &&
+      nycacFacebookManifest.postedSourceArticles.every((article) =>
+        nycacFacebookEventIds.has(article.eventId) && /^https?:\/\//.test(article.url)
+      ) &&
+      nycacFacebookEventKnowledge.intakeItems.length === nycacFacebookEvents.expectedIntakeCount &&
+      nycacFacebookEventKnowledge.observations.length === nycacFacebookEvents.expectedObservationCount &&
+      nycacFacebookEventKnowledge.sources.length === nycacFacebookEvents.expectedSourceCount &&
+      nycacFacebookEventKnowledge.claims.length === nycacFacebookEvents.expectedClaimCount &&
+      nycacFacebookEventKnowledge.researchInquiries.length === nycacFacebookEvents.expectedInquiryCount &&
+      nycacFacebookIntakes.every((intake) =>
+        intake?.disposition === "integrated" && intake.boundaries.length >= 3 && intake.observationIds.length > 0 && intake.researchInquiryIds.length > 0
+      ) &&
+      nycacFacebookObservations.every((observation) =>
+        observation?.locator && observation.publicSafe === true && observation.limitations.length >= 2 && observation.claimIds.length > 0
+      ) &&
+      nycacFacebookSources.every((source) =>
+        source?.supportsGenerally.length > 0 && source.doesNotEstablish.length >= 3
+      ) &&
+      nycacFacebookSources.filter((source) => source?.visibility !== "public").every((source) =>
+        source?.preservationStatus === "private" && source.protectedLocatorId && !source.canonicalUrl && !source.archiveUrl && !source.assetUrl
+      ) &&
+      nycacFacebookEvidenceClosed &&
+      nycacFacebookPopulationClaim?.status === "confirmed-with-boundary" &&
+      nycacFacebookPopulationClaim.boundaries.length >= 3 &&
+      nycacFacebookPopulationClaim.antiClaims.length >= 4 &&
+      nycacFacebookParticipationClaim?.status === "confirmed-with-boundary" &&
+      nycacFacebookParticipationClaim.projections.some((projection) =>
+        projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc") && /helped establish and produce/i.test(projection.text)
+      ) &&
+      nycacFacebookParticipationClaim.boundaries.some((boundary) => /authorship or sole production/i.test(boundary)) &&
+      nycacFacebookParticipationClaim.antiClaims.some((antiClaim) => /solely created or produced every/i.test(antiClaim)) &&
+      nycacFacebookResponseClaim?.status === "confirmed-with-boundary" &&
+      nycacFacebookResponseClaim.projections.some((projection) =>
+        projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc") && /not verified attendance or unique reach/i.test(projection.text)
+      ) &&
+      nycacFacebookResponseClaim.boundaries.some((boundary) => /not verified attendance, unique people/i.test(boundary)) &&
+      nycacFacebookInterpretationClaim?.status === "use-with-care" &&
+      nycacFacebookInterpretationClaim.projections.every((projection) =>
+        projection.status === "active" && projection.key === "archive-note" && projection.surfaces.every((surface) => surface.startsWith("docs/"))
+      ) &&
+      nycacFacebookInterpretationClaim.boundaries.some((boundary) => /attributed to Jamie/i.test(boundary)) &&
+      nycacFacebookOwnerExportInquiry?.resultStatus === "partially-recovered" &&
+      nycacFacebookOwnerExportInquiry.findings.length >= 4 &&
+      nycacFacebookOwnerExportInquiry.limitations.length >= 3 &&
+      nycacFacebookRoleInquiry?.resultStatus === "partially-recovered" &&
+      nycacFacebookRoleInquiry.findings.length >= 4 &&
+      nycacFacebookRoleInquiry.limitations.length >= 4 &&
+      nycacFacebookProof?.status === "careful" &&
+      /helped establish and produce/i.test(nycacFacebookProof.publicWording) &&
+      nycacFacebookProof.doNotSay.some((item) => /Facebook responses equal physical attendance/i.test(item)) &&
+      nycacFacebookProofCoverage?.status === "partially-source-backed" &&
+      nycacFacebookProofCoverage.sourceIds.includes(nycacFacebookEvents.manifestSourceId) &&
+      nycacFacebookProofCoverage.researchInquiryIds.includes(nycacFacebookEvents.ownerExportInquiryId) &&
+      nycacFacebookProofCoverage.researchInquiryIds.includes(nycacFacebookEvents.roleInquiryId) &&
+      nycacFacebookMdx.includes(nycacFacebookEvents.participationClaimId) &&
+      nycacFacebookMdx.includes(nycacFacebookEvents.responseClaimId) &&
+      fairRentPage?.occurrences.some((occurrence) =>
+        occurrence.claimId === nycacFacebookEvents.participationClaimId && occurrence.sourceIds?.includes(nycacFacebookEvents.manifestSourceId)
+      ) &&
+      fairRentPage?.occurrences.some((occurrence) =>
+        occurrence.claimId === nycacFacebookEvents.responseClaimId && occurrence.sourceIds?.includes(nycacFacebookEvents.manifestSourceId)
+      ) &&
+      nycacFacebookEventsRows.every((event) => nycacFacebookReport.includes(event.url)) &&
+      /100 percent control-slot accounting, not 100 percent historical content/i.test(nycacFacebookReport) &&
+      /Facebook response count[\s\S]{0,160}not verified attendance/i.test(nycacFacebookReport) &&
+      /helped establish and produce/i.test(nycacFacebookReport) &&
+      /platform volatility/i.test(nycacFacebookReport) &&
+      publicRegistryText.includes("SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026") &&
+      !publicRegistryText.includes("LOC-NYCAC-FACEBOOK-EVENT-RESEARCH-2026") &&
+      !publicRegistryText.includes("LOC-NYCAC-FACEBOOK-EVENT-FIRSTHAND-2026") &&
+      nycacFacebookManifest.publicSafety?.rawDescriptionsPublished === false &&
+      nycacFacebookManifest.publicSafety.attendeeIdentitiesPublished === false &&
+      nycacFacebookManifest.publicSafety.contactDetailsPublished === false &&
+      nycacFacebookManifest.publicSafety.accessCredentialsPublished === false &&
+      nycacFacebookAffirmativeSafe &&
+      nycacFacebookPrivateDataFree &&
+      nycacFacebookReviewLocksMatch
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations, ...nycacFacebookObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims, ...nycacFacebookClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries, ...nycacFacebookInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -2692,6 +2976,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         nycacRetrievablePopulationComplete &&
         urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
+        nycacFacebookEventsComplete &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 3 && item.sourceIds.length > 1 && item.observationIds.length)
       ),
       evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, one institutional-capacity analysis, one bounded KC Town Hall funding lifecycle, ${archiveIntakes.filter(Boolean).length}/${archive.expectedIntakeCount} working-archive intakes, ${googleDriveIntakes.filter(Boolean).length}/${googleDrive.expectedIntakeCount} Shared Drive intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
@@ -2706,6 +2991,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         nycacRetrievablePopulationComplete &&
         urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
+        nycacFacebookEventsComplete &&
         allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
       ),
       evidence: [`${allEvaluatedObservations.filter(Boolean).length} proposition-level observations have locators, limitations, and claim or inquiry links`]
@@ -2724,6 +3010,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         nycacRetrievablePopulationComplete &&
         urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
+        nycacFacebookEventsComplete &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
       evidence: [`${expansionSources.filter(Boolean).length + secondExpansionSources.filter(Boolean).length}/${expansion.expectedSourceCount + secondExpansion.expectedSourceCount} source-expansion records, ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles, four KC Town Hall government records, ${archiveSources.filter(Boolean).length}/${archive.expectedSourceCount} working-archive sources, and ${googleDriveSources.filter(Boolean).length}/${googleDrive.expectedSourceCount} Shared Drive sources have explicit support and doesNotEstablish boundaries`]
@@ -2742,7 +3029,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
         urbanhermitFullPopulationComplete &&
-        fieldPracticeComplete,
+        fieldPracticeComplete &&
+        nycacFacebookEventsComplete,
         triangulatedExpansionClaims.length >= 8
       ),
       evidence: [`${allExpansionClaims.filter(Boolean).length} source-expansion claims, one repository-backed implementation claim, and the KC Town Hall appropriation lifecycle matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
@@ -2762,6 +3050,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         nycacRetrievablePopulationComplete &&
         urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
+        nycacFacebookEventsComplete &&
         Boolean(fairRentPage)
       ),
       evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections; the KC Town Hall page retains the complete bounded funding lifecycle; four mature creative-technology claims remain held while four archive-supported claims have selected projections`]
@@ -2782,13 +3071,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         nycacRetrievablePopulationComplete &&
         urbanhermitFullPopulationComplete &&
         fieldPracticeComplete &&
+        nycacFacebookEventsComplete &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
       evidence: [`Hiring-relevant NYCAC assertions, one complete KC Town Hall funding lifecycle, two CRS records, two protected participation-workflow claims, one bounded method claim, and one certificate-backed completion claim have governed projections; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
     },
     {
       criterionId: "KB-EVAL-SAFETY",
-      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && nycacRetrievablePopulationComplete && urbanhermitFullPopulationComplete && fieldPracticeComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
+      score: score(errors.length === 0 && institutionalCapacityComplete && kcTownHallComplete && archiveProductionComplete && googleDriveComplete && socialMediaComplete && nycacRetrievablePopulationComplete && urbanhermitFullPopulationComplete && fieldPracticeComplete && nycacFacebookEventsComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
       evidence: [errors.length ? `${errors.length} canonical validation errors` : "Canonical validation passes with no private-path or protected-locator leak"]
     },
     {
@@ -2808,7 +3098,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         socialMediaComplete &&
         nycacRetrievablePopulationComplete &&
         urbanhermitFullPopulationComplete &&
-        fieldPracticeComplete
+        fieldPracticeComplete &&
+        nycacFacebookEventsComplete
       ),
       evidence: [photoChainComplete
         ? `${heldExpansionClaims.length} newly mature claims, four working-archive claims, and the complete press-archive claim remain held beside open inquiries, memory leads, and the protected photo feedback chain`
@@ -2876,6 +3167,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [fieldPracticeComplete
         ? `${fieldPracticeObservations.length} atomic observations preserve verified project facts and seven participant-memory propositions across ${fieldPracticeSources.length} bounded sources; all four individual-role claims remain held with protected-source, completion, authorship, service-unit, and collective-credit boundaries`
         : "KC Town Hall field-practice production is missing a proposition, protected-source boundary, evidence relationship, held projection, completion distinction, individual-role limit, privacy check, research inquiry, or proof-coverage link"]
+    },
+    {
+      criterionId: "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      score: score(nycacFacebookEventsComplete),
+      evidence: [nycacFacebookEventsComplete
+        ? `All ${nycacFacebookEvents.expectedDisplayedControlSlots} displayed Facebook event slots have a disposition: ${nycacFacebookEventsRows.length} recovered event records and one unresolved slot; the census preserves ${nycacFacebookManifest.postedSourceArticles.length} posted source articles, ${nycacFacebookResponseEvents.length} bounded response displays, ${nycacFacebookWithheldLinkCount} protected-link exclusions, rotating cultural-space and government interfaces, Jamie's attributed role, collective credit, and the later ${nycacFacebookRecheck.recoveredDetailCount}/${nycacFacebookRecheck.temporarilyUnavailableDetailCount} detail-availability split`
+        : "NYC Artist Coalition Facebook event production is missing a control-slot disposition, event record, source route, response-label boundary, stakeholder or venue interface, transient-availability record, collective-credit limit, protected-data exclusion, governed projection, proof-coverage link, or review lock"]
     }
   ];
 
@@ -2939,6 +3237,17 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         governedModuleSha256: urbanhermitGovernedModuleSha256,
         publicReportSha256: urbanhermitPublicReportSha256,
         reviewLocksMatch: urbanhermitReviewLocksMatch
+      },
+      nycacFacebookEvents: {
+        manifestSha256: createHash("sha256").update(nycacFacebookManifestText).digest("hex"),
+        governedModuleSha256: createHash("sha256").update(readFileSync(
+          path.join(repoRoot, "apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts"),
+          "utf8"
+        )).digest("hex"),
+        publicReportSha256: createHash("sha256").update(nycacFacebookReport).digest("hex"),
+        caseStudyMdxSha256: createHash("sha256").update(nycacFacebookMdx).digest("hex"),
+        proofSnippetSha256: createHash("sha256").update(nycacFacebookProofSnippet).digest("hex"),
+        reviewLocksMatch: nycacFacebookReviewLocksMatch
       }
     },
     accepted: errors.length === 0 &&

@@ -8,6 +8,12 @@ import { kcTownHallFieldPractice } from "../../apps/www/src/data/knowledge-bank/
 import { kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
+import {
+  nycacFacebookEventArticleSourceIds,
+  nycacFacebookEventClaimIds,
+  nycacFacebookEventKnowledge,
+  nycacFacebookEventReviewSummary
+} from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
@@ -22,6 +28,10 @@ const wowListPopulationPath = path.join(repoRoot, suite.pilot.wowListFullPopulat
 const nycacPopulationPath = path.join(repoRoot, suite.pilot.nycacRetrievablePopulation.manifestPath);
 const urbanhermitPopulationPath = path.join(repoRoot, suite.pilot.urbanhermitFullPopulation.manifestPath);
 const kcTownHallLedgerPath = path.join(repoRoot, suite.pilot.kcTownHallFullPopulation.ledgerPath);
+const nycacFacebookEventPopulationPath = path.join(
+  repoRoot,
+  suite.pilot.nycacFacebookEvents.manifestPath
+);
 
 function loadCallNycPopulation() {
   return JSON.parse(readFileSync(callNycPopulationPath, "utf8"));
@@ -43,6 +53,10 @@ function loadKcTownHallLedger() {
   return JSON.parse(readFileSync(kcTownHallLedgerPath, "utf8"));
 }
 
+function loadNycacFacebookEventPopulation() {
+  return JSON.parse(readFileSync(nycacFacebookEventPopulationPath, "utf8"));
+}
+
 function refreshFieldPracticeApproval(targetSuite) {
   targetSuite.pilot.kcTownHallFieldPractice.approvedContentSha256 = createHash("sha256")
     .update(JSON.stringify({
@@ -55,13 +69,13 @@ function refreshFieldPracticeApproval(targetSuite) {
     .digest("hex");
 }
 
-test("knowledge-bank gate records two fresh Urbanhermit full-population holdout passes", () => {
+test("knowledge-bank gate records two fresh NYCAC Facebook event holdout passes", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "urbanhermit-holdout-data-integrity-privacy-2026-07-15-final-c",
-    "urbanhermit-holdout-hiring-editor-credit-2026-07-15-final-d"
+    "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
+    "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -2632,4 +2646,187 @@ test("social archive rejects removal of collective-authorship boundaries", () =>
   } finally {
     claim.antiClaims = originalAntiClaims;
   }
+});
+
+test("NYCAC Facebook census accounts for every displayed event slot without overstating recovery", () => {
+  const population = loadNycacFacebookEventPopulation();
+  const reconciliation = population.populationReconciliation;
+  const eventIds = new Set(population.events.map((event) => event.id));
+  const eventUrls = new Set(population.events.map((event) => event.url));
+
+  assert.equal(reconciliation.pageDisplayedPastEventCount, 34);
+  assert.equal(reconciliation.recoveredIndexEventCount, 33);
+  assert.equal(reconciliation.recoveredDetailEventCount, 33);
+  assert.equal(reconciliation.unmaterializedCount, 1);
+  assert.equal(reconciliation.recoveredIndexEventCount + reconciliation.unmaterializedCount, 34);
+  assert.equal(population.events.length, 33);
+  assert.equal(eventIds.size, 33);
+  assert.equal(eventUrls.size, 33);
+  assert.match(reconciliation.reconciliationNote, /unmaterialized, not as nonexistent/i);
+});
+
+test("NYCAC Facebook census preserves chronology, organizer relations, and recurring venue practice", () => {
+  const population = loadNycacFacebookEventPopulation();
+  const yearCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(population.events, (event) => event.date.slice(0, 4)))
+      .map(([year, events]) => [year, events.length])
+  );
+  const direct = population.events.filter(
+    (event) => event.relationToPage === "index-displayed-nycac-organizer"
+  );
+  const cohosted = population.events.filter(
+    (event) => event.relationToPage === "allied-or-cohosted-listing"
+  );
+  const recurringIds = new Set(nycacFacebookEventReviewSummary.recurringMeetingEventIds);
+  const recurring = population.events.filter((event) => recurringIds.has(event.id));
+  const physicalVenues = new Set(
+    recurring
+      .filter((event) => event.venueCategory === "cultural-or-community-space")
+      .map((event) => event.venue)
+  );
+
+  assert.deepEqual(yearCounts, nycacFacebookEventReviewSummary.recoveredYears);
+  assert.equal(direct.length, 24);
+  assert.equal(cohosted.length, 9);
+  assert.equal(recurring.length, 12);
+  assert.equal(physicalVenues.size, 10);
+  assert.equal(recurring.filter((event) => event.venueCategory === "virtual").length, 2);
+});
+
+test("NYCAC Facebook later replay records platform volatility without deleting earlier recoveries", () => {
+  const population = loadNycacFacebookEventPopulation();
+  const recheck = population.populationReconciliation.detailAvailabilityRecheck;
+  const eventIds = new Set(population.events.map((event) => event.id));
+
+  assert.equal(recheck.recoveredEventIdCount, 33);
+  assert.equal(recheck.recoveredDetailCount, 28);
+  assert.equal(recheck.temporarilyUnavailableDetailCount, 5);
+  assert.equal(new Set(recheck.temporarilyUnavailableEventIds).size, 5);
+  assert.ok(recheck.temporarilyUnavailableEventIds.every((id) => eventIds.has(id)));
+  assert.match(recheck.interpretation, /rather than evidence that those events did not exist/i);
+});
+
+test("NYCAC Facebook response labels remain bounded interface states rather than attendance", () => {
+  const population = loadNycacFacebookEventPopulation();
+  const withResponses = population.events.filter(
+    (event) => event.responseSnapshot.respondedDisplay !== null
+  );
+  const atLeast = (minimum) => population.events.filter(
+    (event) => event.responseSnapshot.pointEstimate >= minimum
+  ).length;
+
+  assert.equal(withResponses.length, 32);
+  assert.equal(atLeast(100), 19);
+  assert.equal(atLeast(500), 7);
+  assert.equal(atLeast(1000), 3);
+  assert.ok(population.events.every((event) =>
+    /not unique people or verified attendance/i.test(event.responseSnapshot.interpretation)
+  ));
+  assert.match(population.aggregateSnapshot.interpretation, /do not establish attendance/i);
+});
+
+test("NYCAC Facebook census routes seven articles and withholds thirteen protected link occurrences", () => {
+  const population = loadNycacFacebookEventPopulation();
+  const withheld = population.events.reduce(
+    (total, event) => total + event.withheldOutboundLinkCount,
+    0
+  );
+
+  assert.equal(population.postedSourceArticles.length, 7);
+  assert.equal(nycacFacebookEventArticleSourceIds.length, 7);
+  assert.equal(withheld, 13);
+  assert.ok(population.postedSourceArticles.every((article) =>
+    /^https?:\/\//.test(article.url) && population.events.some((event) => event.id === article.eventId)
+  ));
+});
+
+test("NYCAC Facebook public artifacts exclude private locators and sensitive event payloads", () => {
+  const files = [
+    suite.pilot.nycacFacebookEvents.manifestPath,
+    "apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts",
+    suite.pilot.nycacFacebookEvents.reportPath
+  ];
+  const publicText = files.map((file) => readFileSync(path.join(repoRoot, file), "utf8")).join("\n");
+
+  assert.doesNotMatch(publicText, /(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/);
+  assert.doesNotMatch(publicText, /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+  assert.doesNotMatch(publicText, /(?:zoom\.us\/j\/|docs\.google\.com\/document|"passcode"\s*:)/i);
+  assert.equal(loadNycacFacebookEventPopulation().publicSafety.rawDescriptionsPublished, false);
+});
+
+test("NYCAC Facebook report enumerates every recovered event and states the population boundary", () => {
+  const population = loadNycacFacebookEventPopulation();
+  const report = readFileSync(
+    path.join(repoRoot, suite.pilot.nycacFacebookEvents.reportPath),
+    "utf8"
+  );
+
+  assert.ok(population.events.every((event) => report.includes(event.url)));
+  assert.match(report, /100 percent control-slot accounting, not 100 percent historical content/i);
+  assert.match(report, /Facebook response count[\s\S]{0,160}not verified attendance/i);
+  assert.match(report, /helped establish and produce/i);
+  assert.match(report, /platform volatility/i);
+});
+
+test("NYCAC Facebook event gate rejects attendance, sole-credit, causation, and completion overclaims", () => {
+  const mutations = [
+    [nycacFacebookEventClaimIds.responseSignals, "The events drew 9,989 people."],
+    [nycacFacebookEventClaimIds.responseSignals, "Facebook responses equal event attendance."],
+    [nycacFacebookEventClaimIds.participationSystem, "Jamie solely produced every NYC Artist Coalition event."],
+    [nycacFacebookEventClaimIds.participationSystem, "The participation system caused the Cabaret Law repeal."],
+    [nycacFacebookEventClaimIds.population, "All 34 event pages were recovered."]
+  ];
+
+  for (const [claimId, mutation] of mutations) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const activeProjection = claim?.projections.find((projection) => projection.status === "active");
+    assert.ok(activeProjection);
+    const original = activeProjection.text;
+    try {
+      activeProjection.text = mutation;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score,
+        1,
+        `expected event gate rejection: ${mutation}`
+      );
+    } finally {
+      activeProjection.text = original;
+    }
+  }
+});
+
+test("NYCAC Facebook event review locks reject count and public-report mutations", () => {
+  const population = loadNycacFacebookEventPopulation();
+  population.populationReconciliation.unmaterializedCount = 0;
+  let result = evaluateKnowledgeBank(suite, { nycacFacebookEventPopulation: population });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+  assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, true);
+
+  const report = readFileSync(
+    path.join(repoRoot, suite.pilot.nycacFacebookEvents.reportPath),
+    "utf8"
+  );
+  result = evaluateKnowledgeBank(suite, {
+    nycacFacebookEventReport: `${report}\nAll 34 event pages were recovered.\n`
+  });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score, 1);
+  assert.equal(result.contentApprovals.nycacFacebookEvents.reviewLocksMatch, false);
+});
+
+test("NYCAC Facebook participation claim preserves collective credit and attributed interpretation", () => {
+  const participation = nycacFacebookEventKnowledge.claims.find(
+    (claim) => claim.id === nycacFacebookEventClaimIds.participationSystem
+  );
+  const interpretation = nycacFacebookEventKnowledge.claims.find(
+    (claim) => claim.id === nycacFacebookEventClaimIds.democraticPractice
+  );
+
+  assert.ok(participation?.boundaries.some((boundary) => /authorship or sole production/i.test(boundary)));
+  assert.ok(participation?.antiClaims.some((antiClaim) => /solely created or produced every/i.test(antiClaim)));
+  assert.equal(interpretation?.status, "use-with-care");
+  assert.ok(interpretation?.boundaries.some((boundary) => /attributed to Jamie/i.test(boundary)));
+  assert.ok(interpretation?.projections.every((projection) =>
+    projection.status === "active" && projection.surfaces.every((surface) => surface.startsWith("docs/"))
+  ));
 });

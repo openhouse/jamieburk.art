@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "capturedAt": "2026-07-15",
   "page": {
     "name": "NYC Artist Coalition",
@@ -14,11 +14,24 @@
     "recoveredDetailEventCount": 33,
     "detailRetrievalFailureCount": 0,
     "unmaterializedCount": 1,
+    "detailAvailabilityRecheck": {
+      "recoveredEventIdCount": 33,
+      "recoveredDetailCount": 28,
+      "temporarilyUnavailableDetailCount": 5,
+      "temporarilyUnavailableEventIds": [
+        "1451617855032658",
+        "533594734223350",
+        "133554860735306",
+        "113308576029782",
+        "472114119789400"
+      ],
+      "interpretation": "A later authenticated replay re-found all 33 event IDs but five detail routes returned an unavailable state. Earlier authenticated captures had recovered all 33 public detail records, so the later state is preserved as platform volatility rather than evidence that those events did not exist."
+    },
     "terminalState": {
       "scrollRounds": 9,
       "stableRounds": 4
     },
-    "reconciliationNote": "Facebook displayed 34 past events but materialized 33 unique event cards. All 33 exposed detail pages were recovered. The remaining one is recorded as unmaterialized, not as nonexistent."
+    "reconciliationNote": "Facebook displayed 34 past events but materialized 33 unique event cards. All 33 exposed detail records were recovered across authenticated captures. A later replay re-found the 33 IDs while five detail routes were temporarily unavailable. The remaining control slot is recorded as unmaterialized, not as nonexistent."
   },
   "publicSafety": {
     "rawDescriptionsPublished": false,

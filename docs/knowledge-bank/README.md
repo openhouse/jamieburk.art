@@ -142,6 +142,15 @@ The
 preserves the rejected holdouts, repairs, final independent acceptance, and
 stopping decision.
 
+See the
+[NYC Artist Coalition Facebook event production](projects/nyc-artist-coalition-facebook-events.md)
+and its
+[33-event public-safe census](../../apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json)
+for complete disposition of Facebook's 34 displayed past-event slots, the
+rotating cultural-space meeting pattern, event-source routes, stakeholder
+interfaces, response-label boundaries, Jamie's attributed participation-system
+account, and the unresolved native-owner-export gap.
+
 See
 [projects/urbanhermit-social-population.md](projects/urbanhermit-social-population.md)
 and its

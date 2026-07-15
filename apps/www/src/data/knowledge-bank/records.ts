@@ -7,6 +7,7 @@ import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
+import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacInstitutionalCapacity } from "./nycac-institutional-capacity.ts";
 import { nycacSocialPopulationJuly2026 } from "./nycac-social-population-2026-07.ts";
@@ -50,6 +51,7 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacInstitutionalCapacity.intakeItems,
+    ...nycacFacebookEventKnowledge.intakeItems,
     ...nycacSocialPopulationJuly2026.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacSourceExpansionII.intakeItems,
@@ -85,6 +87,7 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacInstitutionalCapacity.observations,
+    ...nycacFacebookEventKnowledge.observations,
     ...nycacSocialPopulationJuly2026.observations,
     ...nycacSourceExpansion.observations,
     ...nycacSourceExpansionII.observations,
@@ -223,6 +226,7 @@ const knowledgeBankInput = {
     ...kcTownHallFieldPractice.sources,
     ...kcTownHallSocialCorpus.sources,
     ...nycacImplementationEvidence.sources,
+    ...nycacFacebookEventKnowledge.sources,
     ...nycacSocialPopulationJuly2026.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
@@ -332,6 +336,7 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacInstitutionalCapacity.claims,
+    ...nycacFacebookEventKnowledge.claims,
     ...nycacSocialPopulationJuly2026.claims,
     ...nycacSourceExpansion.claims,
     ...nycacSourceExpansionII.claims,
@@ -386,6 +391,7 @@ const knowledgeBankInput = {
     ...kcTownHallFieldPractice.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
+    ...nycacFacebookEventKnowledge.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,
@@ -442,7 +448,8 @@ const knowledgeBankInput = {
       "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
       "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
       "SRC-X-HELP-MISSING-POSTS",
-      "SRC-X-HELP-ACCOUNT-ARCHIVE"
+      "SRC-X-HELP-ACCOUNT-ARCHIVE",
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
@@ -453,6 +460,8 @@ const knowledgeBankInput = {
       { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] },
       { id: "coalition-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] },
       { id: "coalition-social-population", claimId: "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE", projection: "case-study", sourceIds: ["SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026", "SRC-X-HELP-MISSING-POSTS", "SRC-X-HELP-ACCOUNT-ARCHIVE"] },
+      { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
+      { id: "coalition-event-response-signals", claimId: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"] },
       { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
       { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
     ]
