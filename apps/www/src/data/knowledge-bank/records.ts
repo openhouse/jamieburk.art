@@ -4,6 +4,7 @@ import { googleDriveSharedDrivesProduction } from "./google-drive-shared-drives-
 import { kcTownHallFunding } from "./kc-town-hall-funding.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { nycacFacebookEvents } from "./nycac-facebook-events.ts";
+import { nycacFacebookPosts } from "./nycac-facebook-posts.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacSocialCorpus } from "./nycac-social-corpus.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
@@ -43,6 +44,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
     ...nycacFacebookEvents.intakeItems,
+    ...nycacFacebookPosts.intakeItems,
     ...nycacSocialCorpus.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems,
@@ -78,6 +80,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.observations,
     ...kcTownHallSocialCorpus.observations,
     ...nycacFacebookEvents.observations,
+    ...nycacFacebookPosts.observations,
     ...nycacSocialCorpus.observations,
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations,
@@ -240,6 +243,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.sources,
     ...kcTownHallSocialCorpus.sources,
     ...nycacFacebookEvents.sources,
+    ...nycacFacebookPosts.sources,
     ...nycacSocialCorpus.sources,
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources,
@@ -355,6 +359,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.claims,
     ...kcTownHallSocialCorpus.claims,
     ...nycacFacebookEvents.claims,
+    ...nycacFacebookPosts.claims,
     ...nycacSocialCorpus.claims,
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims,
@@ -410,6 +415,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycacFacebookEvents.researchInquiries,
+    ...nycacFacebookPosts.researchInquiries,
     ...nycacSocialCorpus.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacPressArchive.researchInquiries,

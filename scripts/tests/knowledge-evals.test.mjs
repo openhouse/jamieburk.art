@@ -7,6 +7,7 @@ import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/da
 import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
+import { nycacFacebookPostAudit, nycacFacebookPosts } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts";
 import { nterChngArchive } from "../../apps/www/src/data/knowledge-bank/nterchng-archive.ts";
 import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
@@ -69,6 +70,15 @@ const wowlistFacebookPostReport = readFileSync(
   new URL("../../docs/knowledge-bank/wowlist-facebook-posts-2015-2018.md", import.meta.url),
   "utf8"
 );
+const nycacFacebookPostLedgerText = readFileSync(
+  new URL("../../docs/knowledge-bank/data/nycartc-facebook-post-ledger.json", import.meta.url),
+  "utf8"
+);
+const nycacFacebookPostLedger = JSON.parse(nycacFacebookPostLedgerText);
+const nycacFacebookPostReport = readFileSync(
+  new URL("../../docs/knowledge-bank/nycartc-facebook-posts-2017-2021.md", import.meta.url),
+  "utf8"
+);
 const fairRentMdx = readFileSync(
   new URL("../../apps/www/src/content/work/fair-rent-nyc.mdx", import.meta.url),
   "utf8"
@@ -88,6 +98,10 @@ const wowlistFacebookPostCriterionScore = (result) =>
   result.criteria.find(
     (item) => item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
   )?.score;
+const nycacFacebookPostCriterionScore = (result) =>
+  result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+  )?.score;
 
 function evaluateEventLedgerWithReboundDigest(altered) {
   const alteredSuite = structuredClone(suite);
@@ -103,6 +117,18 @@ function evaluateLinkLedgerWithReboundDigest(altered) {
     .update(JSON.stringify(altered))
     .digest("hex");
   return evaluateKnowledgeBank(alteredSuite, { nycacFacebookEventLinkLedger: altered });
+}
+
+function evaluateNycacFacebookPostLedgerWithReboundDigest(altered) {
+  const alteredSuite = structuredClone(suite);
+  const text = JSON.stringify(altered);
+  alteredSuite.pilot.nycacFacebookPosts.expectedLedgerDigestSha256 = createHash("sha256")
+    .update(text)
+    .digest("hex");
+  return evaluateKnowledgeBank(alteredSuite, {
+    nycacFacebookPostLedger: altered,
+    nycacFacebookPostLedgerText: text
+  });
 }
 
 test("knowledge-bank pilot retains every supplied intake item", () => {
@@ -3203,6 +3229,193 @@ test("WOW List Facebook post report states the bounded management and stakeholde
   assert.match(wowlistFacebookPostReport, /Jamie operated WOW List's Facebook publishing surface/);
   assert.match(wowlistFacebookPostReport, /did not recover a defensible count of stakeholder-group reactions/);
   assert.match(wowlistFacebookPostReport, /not a native Meta export/);
+});
+
+test("NYC Artist Coalition Facebook post population meets both non-additive controls", () => {
+  assert.equal(nycacFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 5);
+  assert.equal(nycacFacebookPosts.intakeItems.length, 2);
+  assert.equal(nycacFacebookPosts.sources.length, 9);
+  assert.equal(nycacFacebookPostAudit.publicDistinctContentSignatures, 413);
+  assert.equal(nycacFacebookPostAudit.nativeExactPosts, 185);
+});
+
+test("NYC Artist Coalition Facebook post eval rejects overlap summation", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.controls.reconciliation =
+    "The populations total 598 non-overlapping posts and should be added together.";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval rejects an exact-lifetime public census claim", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.controls.publicChronology.boundary =
+    "The 413 records are the exact lifetime post population.";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval preserves the failed reverse control", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.controls.publicChronology.reverseControl = "complete-independent-confirmation";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval rejects public-surface raw fields", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.publicChronologyDispositions[0].rawCaption = "protected text";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval rejects native-record private metrics", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.nativePostDispositions[0].reach = 100;
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval rejects sensitive destination exposure", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.postedDestinationInventory.publicSafeDestinations[0].url =
+    "https://docs.google.com/document/d/private-working-document";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval rejects people inflation from aggregate metrics", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.controls.nativeAnnualExports.lifetimeMetricSnapshot.boundary =
+    "These values prove 1,378 people engaged and measure stakeholder impact.";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval preserves collective credit", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.publicSafety.creditBoundary =
+    "Jamie alone authored every post, campaign, event, image, and outcome.";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval keeps predominant-operation memory attributed", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.authorshipAndCredit.userMemory =
+    "The archive independently verifies Jamie as the sole operator.";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval keeps the publisher-memory claim off public surfaces", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-FACEBOOK-PREDOMINANT-PUBLISHER-MEMORY"
+  );
+  assert.ok(claim);
+  const originalProjection = structuredClone(claim.projections[0]);
+  try {
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/fair-rent-nyc"];
+    assert.equal(nycacFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    claim.projections[0] = originalProjection;
+  }
+});
+
+test("NYC Artist Coalition Facebook post eval rejects stakeholder-response inference", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-FACEBOOK-DESTINATION-NETWORK"
+  );
+  assert.ok(claim);
+  const originalAntiClaims = claim.antiClaims;
+  try {
+    claim.antiClaims = claim.antiClaims.filter((item) => !/reciprocal/i.test(item));
+    assert.equal(nycacFacebookPostCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    claim.antiClaims = originalAntiClaims;
+  }
+});
+
+test("NYC Artist Coalition Facebook post eval preserves product-surface disagreement", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.controls.nativeAnnualExports.productSurfaceDisagreement =
+    "All Meta product surfaces agree on March 31, 2019.";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval requires posted-route limitations", () => {
+  const altered = structuredClone(nycacFacebookPostLedger);
+  altered.postedDestinationInventory.boundary =
+    "Every posted route establishes partnership, readership, and impact.";
+  assert.equal(
+    nycacFacebookPostCriterionScore(
+      evaluateNycacFacebookPostLedgerWithReboundDigest(altered)
+    ),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post eval does not force the bank onto the portfolio", () => {
+  const alteredReport = nycacFacebookPostReport.replace(
+    "No new claim was added to the visible portfolio",
+    "Every recovered claim was added to the visible portfolio"
+  );
+  assert.equal(
+    nycacFacebookPostCriterionScore(evaluateKnowledgeBank(suite, {
+      nycacFacebookPostReport: alteredReport
+    })),
+    1
+  );
+});
+
+test("NYC Artist Coalition Facebook post report preserves population, source, traction, and credit boundaries", () => {
+  assert.match(nycacFacebookPostReport, /413 conservative content/);
+  assert.match(nycacFacebookPostReport, /185 exact unique Page/);
+  assert.match(nycacFacebookPostReport, /must never be added/);
+  assert.match(nycacFacebookPostReport, /No defensible count of reciprocal engagement/);
+  assert.match(nycacFacebookPostReport, /Jamie's role and collective credit/);
 });
 
 test("complete maturation pilot meets every floor", () => {

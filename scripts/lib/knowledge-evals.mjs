@@ -7,6 +7,7 @@ import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowl
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
+import { nycacFacebookPostAudit, nycacFacebookPosts } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts";
 import { nycacCorpusFindings, nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { personalWowlistFacebookEvents } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events.ts";
@@ -3304,9 +3305,361 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
   const wowlistFacebookPostPopulationComplete = Object.values(
     wowFacebookDiagnostics
   ).every(Boolean);
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries];
+  const nycacFacebook = suite.pilot.nycacFacebookPosts;
+  const nycacFacebookLedgerPath = path.join(repoRoot, nycacFacebook.ledgerPath);
+  const nycacFacebookReportPath = path.join(repoRoot, nycacFacebook.reportPath);
+  const nycacFacebookLedgerText = fixtures.nycacFacebookPostLedgerText ??
+    (existsSync(nycacFacebookLedgerPath)
+      ? readFileSync(nycacFacebookLedgerPath, "utf8")
+      : "{}");
+  const nycacFacebookLedger = fixtures.nycacFacebookPostLedger ??
+    JSON.parse(nycacFacebookLedgerText);
+  const nycacFacebookReport = fixtures.nycacFacebookPostReport ??
+    (existsSync(nycacFacebookReportPath)
+      ? readFileSync(nycacFacebookReportPath, "utf8")
+      : "");
+  const nycacFacebookIntakes = nycacFacebookPosts.intakeItems.map((item) =>
+    intakeById.get(item.id)
+  );
+  const nycacFacebookNewSources = nycacFacebookPosts.sources.map((source) =>
+    sourceById.get(source.id)
+  );
+  const nycacFacebookObservations = nycacFacebookPosts.observations.map((observation) =>
+    observationById.get(observation.id)
+  );
+  const nycacFacebookClaims = nycacFacebook.claimIds.map((id) => claimById.get(id));
+  const nycacFacebookInquiries = nycacFacebook.inquiryIds.map((id) => inquiryById.get(id));
+  const nycacFacebookSelectedSources = nycacFacebook.selectedPublicSourceIds.map((id) =>
+    sourceById.get(id)
+  );
+  const nycacFacebookMemoryClaim = claimById.get(nycacFacebook.heldMemoryClaimId);
+  const nycacFacebookPopulationClaim = claimById.get(
+    "CLM-NYCAC-FACEBOOK-POPULATION-RECONCILIATION"
+  );
+  const nycacFacebookOperatingClaim = claimById.get(
+    "CLM-NYCAC-FACEBOOK-PUBLISHING-OPERATING-SURFACE"
+  );
+  const nycacFacebookDestinationClaim = claimById.get(
+    "CLM-NYCAC-FACEBOOK-DESTINATION-NETWORK"
+  );
+  const nycacFacebookTractionClaim = claimById.get(
+    "CLM-NYCAC-FACEBOOK-TRACTION-SNAPSHOT"
+  );
+  const publicChronologyRecords = Array.isArray(
+    nycacFacebookLedger.publicChronologyDispositions
+  ) ? nycacFacebookLedger.publicChronologyDispositions : [];
+  const nativeFacebookRecords = Array.isArray(nycacFacebookLedger.nativePostDispositions)
+    ? nycacFacebookLedger.nativePostDispositions
+    : [];
+  const facebookDestinations = Array.isArray(
+    nycacFacebookLedger.postedDestinationInventory?.publicSafeDestinations
+  ) ? nycacFacebookLedger.postedDestinationInventory.publicSafeDestinations : [];
+  const publicRecordKeys = ["id", "surfaceSlot", "primaryTheme", "routeClass"];
+  const nativeRecordKeys = [
+    "id",
+    "postId",
+    "publishedAt",
+    "postType",
+    "primaryTheme",
+    "postedPublicUrlCount",
+    "permalink"
+  ];
+  const destinationKeys = ["url", "occurrences", "kind"];
+  const recordHasExactKeys = (record, keys) =>
+    Object.keys(record).sort().join("|") === [...keys].sort().join("|");
+  const publicFacebookThemeCounts = publicChronologyRecords.reduce((counts, record) => {
+    counts[record.primaryTheme] = (counts[record.primaryTheme] ?? 0) + 1;
+    return counts;
+  }, {});
+  const nativeFacebookThemeCounts = nativeFacebookRecords.reduce((counts, record) => {
+    counts[record.primaryTheme] = (counts[record.primaryTheme] ?? 0) + 1;
+    return counts;
+  }, {});
+  const nativeFacebookYearCounts = nativeFacebookRecords.reduce((counts, record) => {
+    const year = String(record.publishedAt).slice(0, 4);
+    counts[year] = (counts[year] ?? 0) + 1;
+    return counts;
+  }, {});
+  const nativeFacebookTypeCounts = nativeFacebookRecords.reduce((counts, record) => {
+    counts[record.postType] = (counts[record.postType] ?? 0) + 1;
+    return counts;
+  }, {});
+  const nativeFacebookPostIds = new Set(nativeFacebookRecords.map((record) => record.postId));
+  const nativeFacebookRecordIds = new Set(nativeFacebookRecords.map((record) => record.id));
+  const publicFacebookRecordIds = new Set(publicChronologyRecords.map((record) => record.id));
+  const publicFacebookSlots = new Set(
+    publicChronologyRecords.map((record) => record.surfaceSlot)
+  );
+  const uniqueFacebookDestinations = new Set(
+    facebookDestinations.map((destination) => destination.url)
+  );
+  const destinationOccurrenceTotal = facebookDestinations.reduce(
+    (total, destination) => total + destination.occurrences,
+    0
+  );
+  const nycacFacebookPublicText = [
+    nycacFacebookLedgerText,
+    nycacFacebookReport,
+    JSON.stringify(nycacFacebookPosts)
+  ].join("\n");
+  const nycacFacebookPrivatePathViolation =
+    /(?:\/(?:Users|Volumes|private\/tmp)\/|GoogleDrive-|Mobile Documents)/.test(
+      nycacFacebookPublicText
+    );
+  const nycacFacebookPersonalDataViolation =
+    /(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(
+      nycacFacebookPublicText
+    );
+  const destinationSensitiveRouteViolation = facebookDestinations.some((destination) =>
+    /(?:docs\.google\.com|drive\.google\.com|zoom\.us|venmo\.com|paypal)/i.test(
+      destination.url
+    )
+  );
+  const nycacFacebookDiagnostics = {
+    ledgerDigest: sha256(nycacFacebookLedgerText) ===
+      nycacFacebook.expectedLedgerDigestSha256,
+    moduleShape: Boolean(
+      nycacFacebookPosts.intakeItems.length === nycacFacebook.expectedIntakeCount &&
+      nycacFacebookPosts.sources.length === nycacFacebook.expectedSourceCount &&
+      nycacFacebookPosts.observations.length === nycacFacebook.expectedObservationCount &&
+      nycacFacebookPosts.claims.length === nycacFacebook.expectedClaimCount &&
+      nycacFacebookPosts.researchInquiries.length === nycacFacebook.expectedInquiryCount
+    ),
+    publicPopulation: Boolean(
+      nycacFacebookLedger.controls?.publicChronology?.candidateRecords ===
+        nycacFacebook.expectedPublicCandidateRecords &&
+      nycacFacebookLedger.controls?.publicChronology?.distinctNormalizedRecords ===
+        nycacFacebook.expectedPublicNormalizedRecords &&
+      nycacFacebookLedger.controls?.publicChronology?.distinctContentSignatures ===
+        nycacFacebook.expectedPublicContentSignatures &&
+      nycacFacebookLedger.controls?.publicChronology?.forwardScrollSteps ===
+        nycacFacebook.expectedPublicForwardSteps &&
+      nycacFacebookLedger.controls?.publicChronology?.terminalConfirmations ===
+        nycacFacebook.expectedPublicTerminalConfirmations &&
+      nycacFacebookLedger.controls?.publicChronology?.reverseControl ===
+        "failed-to-rehydrate-older-cards" &&
+      /not an exact lifetime post count/i.test(
+        nycacFacebookLedger.controls?.publicChronology?.boundary ?? ""
+      ) &&
+      publicChronologyRecords.length === nycacFacebook.expectedPublicContentSignatures &&
+      publicFacebookRecordIds.size === nycacFacebook.expectedPublicContentSignatures &&
+      publicFacebookSlots.size === nycacFacebook.expectedPublicContentSignatures &&
+      publicFacebookSlots.has(1) &&
+      publicFacebookSlots.has(nycacFacebook.expectedPublicContentSignatures)
+    ),
+    nativePopulation: Boolean(
+      nycacFacebookLedger.controls?.nativeAnnualExports?.exactUniquePostIds ===
+        nycacFacebook.expectedNativePosts &&
+      nativeFacebookRecords.length === nycacFacebook.expectedNativePosts &&
+      nativeFacebookPostIds.size === nycacFacebook.expectedNativePosts &&
+      nativeFacebookRecordIds.size === nycacFacebook.expectedNativePosts &&
+      numericRecordEquals(nativeFacebookYearCounts, nycacFacebook.expectedNativeYearCounts) &&
+      numericRecordEquals(nativeFacebookTypeCounts, nycacFacebook.expectedPostTypeCounts) &&
+      nativeFacebookRecords.every((record) => {
+        try {
+          const parsed = new URL(record.permalink);
+          return parsed.protocol === "https:" &&
+            parsed.hostname === "facebook.com" &&
+            (
+              parsed.pathname.startsWith("/nycartc/posts/") ||
+              parsed.pathname.startsWith("/nycartc/videos/") ||
+              parsed.pathname === "/photo.php"
+            ) &&
+            /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00$/.test(record.publishedAt);
+        } catch {
+          return false;
+        }
+      })
+    ),
+    overlapBoundary: Boolean(
+      /overlap/i.test(nycacFacebookLedger.controls?.reconciliation ?? "") &&
+      /never be added together/i.test(
+        nycacFacebookLedger.controls?.reconciliation ?? ""
+      ) &&
+      nycacFacebookPopulationClaim?.antiClaims.some((claim) =>
+        /598 posts/i.test(claim)
+      ) &&
+      nycacFacebookPopulationClaim.antiClaims.some((claim) =>
+        /exactly 413 lifetime posts/i.test(claim)
+      )
+    ),
+    productSurfaceDrift: Boolean(
+      /March 31, 2019/i.test(
+        nycacFacebookLedger.controls?.nativeAnnualExports?.productSurfaceDisagreement ?? ""
+      ) &&
+      /February 6, 2019/i.test(
+        nycacFacebookLedger.controls?.nativeAnnualExports?.productSurfaceDisagreement ?? ""
+      ) &&
+      nycacFacebookReport.includes("failed control")
+    ),
+    recordShapes: Boolean(
+      publicChronologyRecords.every((record) => recordHasExactKeys(record, publicRecordKeys)) &&
+      nativeFacebookRecords.every((record) => recordHasExactKeys(record, nativeRecordKeys)) &&
+      facebookDestinations.every((record) => recordHasExactKeys(record, destinationKeys))
+    ),
+    themeDisposition: Boolean(
+      numericRecordEquals(
+        publicFacebookThemeCounts,
+        nycacFacebook.expectedPublicThemeCounts
+      ) &&
+      numericRecordEquals(
+        nativeFacebookThemeCounts,
+        nycacFacebook.expectedNativeThemeCounts
+      ) &&
+      Object.values(publicFacebookThemeCounts).reduce((sum, value) => sum + value, 0) ===
+        nycacFacebook.expectedPublicContentSignatures &&
+      Object.values(nativeFacebookThemeCounts).reduce((sum, value) => sum + value, 0) ===
+        nycacFacebook.expectedNativePosts
+    ),
+    destinationInventory: Boolean(
+      nycacFacebookLedger.postedDestinationInventory?.publicSafeOccurrences ===
+        nycacFacebook.expectedDestinationOccurrences &&
+      nycacFacebookLedger.postedDestinationInventory?.publicSafeUniqueDestinations ===
+        nycacFacebook.expectedUniqueDestinations &&
+      destinationOccurrenceTotal === nycacFacebook.expectedDestinationOccurrences &&
+      facebookDestinations.length === nycacFacebook.expectedUniqueDestinations &&
+      uniqueFacebookDestinations.size === nycacFacebook.expectedUniqueDestinations &&
+      facebookDestinations.every((destination) => {
+        try {
+          return new URL(destination.url).protocol === "https:" &&
+            Number.isInteger(destination.occurrences) && destination.occurrences > 0;
+        } catch {
+          return false;
+        }
+      }) &&
+      !destinationSensitiveRouteViolation &&
+      /not authorship, endorsement, readership/i.test(
+        nycacFacebookLedger.postedDestinationInventory?.boundary ?? ""
+      )
+    ),
+    protectedRouteClasses: Boolean(
+      nycacFacebookLedger.postedDestinationInventory?.withheldOccurrencesByClass?.[
+        "protected-working-document"
+      ] === 6 &&
+      nycacFacebookLedger.postedDestinationInventory?.withheldOccurrencesByClass?.[
+        "protected-meeting-route"
+      ] === 3 &&
+      nycacFacebookLedger.postedDestinationInventory?.withheldOccurrencesByClass?.[
+        "protected-financial-route"
+      ] === 2 &&
+      nycacFacebookLedger.postedDestinationInventory?.withheldOccurrencesByClass?.[
+        "withheld-participant-or-profile-route"
+      ] === 2
+    ),
+    metricBoundary: Boolean(
+      numericRecordEquals(
+        {
+          reactions: nycacFacebookLedger.controls?.nativeAnnualExports?.lifetimeMetricSnapshot?.reactions,
+          comments: nycacFacebookLedger.controls?.nativeAnnualExports?.lifetimeMetricSnapshot?.comments,
+          shares: nycacFacebookLedger.controls?.nativeAnnualExports?.lifetimeMetricSnapshot?.shares
+        },
+        nycacFacebook.expectedLifetimeMetrics
+      ) &&
+      /not unique people/i.test(
+        nycacFacebookLedger.controls?.nativeAnnualExports?.lifetimeMetricSnapshot?.boundary ?? ""
+      ) &&
+      /stakeholder-group counts/i.test(
+        nycacFacebookLedger.controls?.nativeAnnualExports?.lifetimeMetricSnapshot?.boundary ?? ""
+      ) &&
+      nycacFacebookTractionClaim?.status === "use-with-care" &&
+      nycacFacebookTractionClaim.antiClaims.some((claim) =>
+        /1,378 people engaged/i.test(claim)
+      )
+    ),
+    graph: Boolean(
+      nycacFacebookIntakes.every((item) =>
+        item?.boundaries.length >= 4 &&
+        item.observationIds.every((id) => observationById.has(id)) &&
+        item.sourceIds.every((id) => sourceById.has(id)) &&
+        item.researchInquiryIds.every((id) => inquiryById.has(id))
+      ) &&
+      nycacFacebookObservations.every((observation) =>
+        observation?.locator && observation.limitations.length >= 2 &&
+        observation.claimIds.length && observation.researchInquiryIds.length
+      ) &&
+      nycacFacebookClaims.every((claim) =>
+        claim?.boundaries.length >= 2 && claim.antiClaims.length >= 4 &&
+        claim.reviewedBy.length >= 2
+      ) &&
+      nycacFacebookInquiries.every((inquiry) =>
+        inquiry?.findings.length >= 4 && inquiry.limitations.length >= 4 &&
+        inquiry.sourceIds.every((id) => sourceById.has(id))
+      )
+    ),
+    sourceScope: Boolean(
+      nycacFacebookNewSources.every((source) =>
+        source?.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      nycacFacebookSelectedSources.every((source) =>
+        source?.visibility === "public" && source.canonicalUrl &&
+        source.supportsGenerally.length && source.doesNotEstablish.length
+      )
+    ),
+    collectiveCreditAndMemory: Boolean(
+      nycacFacebookMemoryClaim?.status === "use-with-care" &&
+      nycacFacebookMemoryClaim.evidence.length === 0 &&
+      nycacFacebookMemoryClaim.projections.every((projection) =>
+        projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      nycacFacebookMemoryClaim.boundaries.some((boundary) =>
+        /native export does not identify/i.test(boundary)
+      ) &&
+      /other coalition members also published/i.test(
+        nycacFacebookLedger.authorshipAndCredit?.userMemory ?? ""
+      ) &&
+      /collective work/i.test(
+        nycacFacebookLedger.publicSafety?.creditBoundary ?? ""
+      ) &&
+      nycacFacebookOperatingClaim?.antiClaims.some((claim) =>
+        /Every tagged official reciprocally engaged/i.test(claim)
+      )
+    ),
+    routeAndStakeholderBoundary: Boolean(
+      nycacFacebookDestinationClaim?.antiClaims.some((claim) =>
+        /reciprocal/i.test(claim)
+      ) &&
+      /Project-authored mentions of public officials\s+are not counted as engagement/i.test(
+        nycacFacebookReport
+      ) &&
+      /No defensible count of reciprocal engagement by key stakeholder groups was\s+recovered/i.test(
+        nycacFacebookReport
+      )
+    ),
+    deliberateComposition: Boolean(
+      nycacFacebookClaims
+        .filter((claim) => claim?.id !== nycacFacebook.heldMemoryClaimId)
+        .every((claim) =>
+          claim?.projections.every((projection) =>
+            projection.key === "archive-note" &&
+            projection.surfaces.every((surface) => surface === nycacFacebook.reportPath)
+          )
+        ) &&
+      nycacFacebookReport.includes("No new claim was added to the visible portfolio")
+    ),
+    reportContract: Boolean(
+      nycacFacebookReport.includes("413 conservative content") &&
+      nycacFacebookReport.includes("185 exact unique Page") &&
+      nycacFacebookReport.includes("must never be added") &&
+      nycacFacebookReport.includes("failed control") &&
+      nycacFacebookReport.includes("1,006 reactions") &&
+      nycacFacebookReport.includes("Jamie's role and collective credit")
+    ),
+    publicSafety: Boolean(
+      !nycacFacebookPrivatePathViolation &&
+      !nycacFacebookPersonalDataViolation &&
+      !destinationSensitiveRouteViolation &&
+      nycacFacebookLedger.publicSafety?.excluded?.includes("raw captions and descriptions") &&
+      nycacFacebookLedger.publicSafety?.excluded?.includes(
+        "per-post reach, click, and engagement metrics"
+      )
+    )
+  };
+  const nycacFacebookPostPopulationComplete = Object.values(
+    nycacFacebookDiagnostics
+  ).every(Boolean);
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations, ...wowFacebookObservations, ...nycacFacebookObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims, ...wowFacebookClaims, ...nycacFacebookClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries, ...wowFacebookInquiries, ...nycacFacebookInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -3542,6 +3895,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [wowlistFacebookPostPopulationComplete
         ? `All ${wowFacebook.expectedDistinctPosts} distinct surviving WOW List Facebook posts have public-safe dispositions; fresh forward and reverse controls agree 53-for-53; ${wowFacebook.expectedUniqueExplicitDestinations} explicit canonical routes and a bounded ${wowFacebook.expectedWiderDistinctDestinations}-destination rendered graph remain available; publisher attribution, shared authorship, sole management, mutable reactions, stakeholder response, and impact stay distinct; and only Jamie's bounded Page-publishing operation enters the portfolio`
         : `WOW List Facebook post criterion failed: ${Object.entries(wowFacebookDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
+    },
+    {
+      criterionId: "KB-EVAL-NYCAC-FACEBOOK-POSTS",
+      score: score(nycacFacebookPostPopulationComplete),
+      evidence: [nycacFacebookPostPopulationComplete
+        ? `All ${nycacFacebook.expectedPublicContentSignatures} conservative public-surface signatures and ${nycacFacebook.expectedNativePosts} exact native post IDs have redacted dispositions as overlapping controls; ${nycacFacebook.expectedDestinationOccurrences} public-safe route occurrences resolve to ${nycacFacebook.expectedUniqueDestinations} destinations; failed controls, source authorship, collective credit, sensitive evidence, mutable metrics, stakeholder response, and impact remain bounded; and no new visible portfolio claim is forced from the archive`
+        : `NYC Artist Coalition Facebook post criterion failed: ${Object.entries(nycacFacebookDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
     }
   ];
 

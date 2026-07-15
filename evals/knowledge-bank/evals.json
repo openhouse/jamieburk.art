@@ -861,6 +861,79 @@
         "SRC-WESTWORD-DENVER-DIY-SPACES-FUND-2017",
         "SRC-WILLAMETTE-WEEK-THE-KNOW-CLOSING-2016"
       ]
+    },
+    "nycacFacebookPosts": {
+      "ledgerPath": "docs/knowledge-bank/data/nycartc-facebook-post-ledger.json",
+      "reportPath": "docs/knowledge-bank/nycartc-facebook-posts-2017-2021.md",
+      "expectedLedgerDigestSha256": "4ad6fb8497c6859f144126124f141d6a506e94d302fe352a81a82579c420d0b1",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 9,
+      "expectedObservationCount": 18,
+      "expectedClaimCount": 6,
+      "expectedInquiryCount": 2,
+      "expectedPublicCandidateRecords": 634,
+      "expectedPublicNormalizedRecords": 460,
+      "expectedPublicContentSignatures": 413,
+      "expectedPublicForwardSteps": 522,
+      "expectedPublicTerminalConfirmations": 12,
+      "expectedNativePosts": 185,
+      "expectedNativeYearCounts": {
+        "2019": 111,
+        "2020": 69,
+        "2021": 5
+      },
+      "expectedPostTypeCounts": {
+        "Text": 79,
+        "Links": 58,
+        "Photos": 44,
+        "Videos": 4
+      },
+      "expectedPublicThemeCounts": {
+        "cultural-space-policy-and-advocacy": 142,
+        "community-resource-and-mutual-aid": 112,
+        "solidarity-and-cultural-amplification": 75,
+        "public-meeting-and-mobilization": 51,
+        "coalition-governance-and-listening": 24,
+        "source-press-and-public-knowledge": 9
+      },
+      "expectedNativeThemeCounts": {
+        "community-resource-and-mutual-aid": 116,
+        "cultural-space-policy-and-advocacy": 39,
+        "solidarity-and-cultural-amplification": 15,
+        "public-meeting-and-mobilization": 12,
+        "coalition-governance-and-listening": 2,
+        "source-press-and-public-knowledge": 1
+      },
+      "expectedDestinationOccurrences": 239,
+      "expectedUniqueDestinations": 83,
+      "expectedLifetimeMetrics": {
+        "reactions": 1006,
+        "comments": 164,
+        "shares": 208
+      },
+      "claimIds": [
+        "CLM-NYCAC-FACEBOOK-POPULATION-RECONCILIATION",
+        "CLM-NYCAC-FACEBOOK-PUBLISHING-OPERATING-SURFACE",
+        "CLM-NYCAC-FACEBOOK-DESTINATION-NETWORK",
+        "CLM-NYCAC-FACEBOOK-MISSION-SOURCE-CIRCULATION",
+        "CLM-NYCAC-FACEBOOK-TRACTION-SNAPSHOT",
+        "CLM-NYCAC-FACEBOOK-PREDOMINANT-PUBLISHER-MEMORY"
+      ],
+      "inquiryIds": [
+        "INQ-NYCAC-FACEBOOK-POST-POPULATION-2026",
+        "INQ-NYCAC-FACEBOOK-PUBLISHING-CREDIT-2026"
+      ],
+      "selectedPublicSourceIds": [
+        "SRC-NYCAC-BEDFORD-MARCH-2019",
+        "SRC-NYCAC-BAFFLER-MARCH",
+        "SRC-NYCAC-CITY-LIMITS-RENT-COVID-2020",
+        "SRC-NYC-COMPTROLLER-RETAIL-VACANCY-2019",
+        "SRC-NYCAC-BUZZFEED-MARCH-GENTRIFICATION-2020",
+        "SRC-NYCAC-GRUBSTREET-ODE-TO-BABEL-2019",
+        "SRC-NYCAC-POND-VENUE-DIVERSITY-2020",
+        "SRC-NYCAC-GOTHAMIST-BOOK-CULTURE-2020"
+      ],
+      "heldMemoryClaimId": "CLM-NYCAC-FACEBOOK-PREDOMINANT-PUBLISHER-MEMORY"
     }
   },
   "criteria": [
@@ -1010,6 +1083,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every surviving WOW List Facebook post receives a public-safe disposition; independent traversals reconcile; explicit routes and selected source articles remain inspectable; wider participant relationships stay aggregate-only; publisher action, shared authorship, sole management, mutable reactions, stakeholder response, and impact remain distinct; and only the bounded Page-publishing claim enters the portfolio."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-FACEBOOK-POSTS",
+      "label": "NYC Artist Coalition Facebook post population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every recovered NYC Artist Coalition Facebook post receives a public-safe disposition across overlapping public-surface and native-export controls; the populations are never summed; failed controls and product-surface disagreement remain visible; public destinations and selected sources remain inspectable; private evidence and participant relationships stay protected; individual memory, shared authorship, mutable metrics, stakeholder response, and impact remain distinct; and deliberate portfolio composition is not replaced by archive dumping."
     }
   ],
   "hillClimb": {
@@ -1033,6 +1113,12 @@
       "Never count reactions on a reposted source status as engagement earned by the project account's repost action.",
       "Never call a public personal-account record opaque if its identifier, digest, timestamp, length, metric tuple, or other fingerprint can be linked back to a withheld item.",
       "Never turn project-authored mentions or project-selected reposts into engagement authored by an outside stakeholder.",
+      "Never add overlapping Facebook public-surface and native-export populations together.",
+      "Never turn a failed reverse traversal into an independent population confirmation.",
+      "Never turn aggregate reactions, comments, and shares into unique people, stakeholder groups, or impact.",
+      "Never turn a Page-authored mention or posted source route into reciprocal engagement, endorsement, readership, or adoption.",
+      "Never expose raw captions, comments, per-post private analytics, working documents, meeting credentials, financial routes, or participant relationship graphs.",
+      "Never turn a first-person memory of predominant Page operation into verified sole authorship or administration.",
       "Never turn a tire-workflow record count into a completed-pickup, household, or resident-outcome count.",
       "Never turn an unrecovered account or status into proof that it never existed."
     ],
