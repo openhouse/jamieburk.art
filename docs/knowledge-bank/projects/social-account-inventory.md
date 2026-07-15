@@ -28,9 +28,15 @@ Historical WOW List code and one 2015 organizer post use `@wowlistnyc`. No curre
 
 ## CallNYC: @CallNYCapp
 
-Profile snapshot: joined March 2016; 110 posts reported; 106 unique status URLs rendered during the authenticated sweep.
+Profile snapshot: joined March 2016; 110 posts reported; 107 distinct items recovered in the later replies-inclusive full-population sweep. The item-level corpus is [preserved here](../corpora/callnyc-x-full-population-2026-07-14.json); the three-count difference remains unresolved.
 
 ### Significant finding
+
+The complete recoverable account population contains 92 authored posts and 15
+reposts. Seventy-one authored posts used a repeated service-recognition pattern
+that named 26 Council members and linked residents across 65 distinct displayed
+CallNYC destinations. This is project output, not a claim that all 26 members
+engaged back.
 
 At least eight people serving on the New York City Council visibly engaged with CallNYC between April 2016 and July 2017:
 

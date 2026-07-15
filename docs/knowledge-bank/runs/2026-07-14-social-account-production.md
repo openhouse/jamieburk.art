@@ -26,7 +26,7 @@ The browser session displayed Jamie's signed-in `@urbanhermit` identity before r
 
 | Account | Profile-reported posts | Unique status URLs rendered | Notes |
 | --- | ---: | ---: | --- |
-| @CallNYCapp | 110 | 106 | Profile sweep plus direct-mention search |
+| @CallNYCapp | 110 | 107 | Later replies-inclusive full-population sweep plus direct-mention search; three-count gap retained |
 | @NYCArtC | 5,124 | Not treated as a full sweep | 260 external mentions rendered for March 2020-March 2025 before search cap; earlier roster searches run separately |
 | @wowlist | 38 | 37 | Historical handle question retained |
 | @KCTownHall | 183 | 170 | Mission, survey, public dialogue, and neighborhood documentation appraised |

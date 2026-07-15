@@ -54,14 +54,14 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
 **Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance. Its complete recoverable project-account corpus documents a repeatable recognition and issue-linking system across 26 Council members and 65 CallNYC destinations; Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
-**Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation.
-**Do not say:** Broader historical hackathon superlatives; official submission or winner; current city service; official city guidance; emergency guidance; legal guidance.
+**Why it matters:** Shows civic-data translation, information architecture, public interface delivery, stakeholder engagement, and public coverage of the prototype.
+**Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation. Keep 26 members named by project output separate from the lower bound of eight members whose accounts visibly engaged back.
+**Do not say:** Broader historical hackathon superlatives; official submission or winner; current city service; official city guidance; emergency guidance; legal guidance; 26 Council members engaged; all 110 profile-reported posts were recovered.
 **Protected boundaries:** No current-service claims, private user data, or unverified guidance.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-11
+**Last reviewed:** 2026-07-14
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 

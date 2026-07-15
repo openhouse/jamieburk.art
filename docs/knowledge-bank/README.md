@@ -78,5 +78,7 @@ documented in
 [2026-07-14-google-drive-archive-production.md](runs/2026-07-14-google-drive-archive-production.md).
 The authenticated project-account pass is documented in
 [2026-07-14-social-account-production.md](runs/2026-07-14-social-account-production.md),
+and the complete CallNYC population pass is documented in
+[2026-07-14-callnyc-x-full-population.md](runs/2026-07-14-callnyc-x-full-population.md),
 with the governed account map and per-project findings in
 [projects/social-account-inventory.md](projects/social-account-inventory.md).

@@ -12,6 +12,8 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
+  assert.deepEqual(resolveCitationOccurrence("callnyc", "product-iteration").sources.map((item) => item.number), [3, 6]);
+  assert.deepEqual(resolveCitationOccurrence("callnyc", "social-translation-system").sources.map((item) => item.number), [7]);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -19,8 +21,8 @@ test("repeated sources retain one note and unique backlinks", () => {
   const council = references.find((item) => item.number === 2);
   const politico = references.find((item) => item.number === 3);
   assert.equal(council.backlinks.length, 2);
-  assert.equal(politico.backlinks.length, 3);
-  assert.equal(new Set(politico.backlinks.map((item) => item.id)).size, 3);
+  assert.equal(politico.backlinks.length, 4);
+  assert.equal(new Set(politico.backlinks.map((item) => item.id)).size, 4);
   assert.equal(council.noteId, citationNoteId("callnyc", 2));
 });
 

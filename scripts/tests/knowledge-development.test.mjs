@@ -150,6 +150,97 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
   assert.deepEqual(publicHandoffClaim.evidence, []);
 });
 
+test("CallNYC corpus accounts for every recoverable timeline item and preserves the profile-count gap", () => {
+  const corpus = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/corpora/callnyc-x-full-population-2026-07-14.json",
+      "utf8"
+    )
+  );
+  const authored = corpus.items.filter((item) => item.type === "authored");
+  const reposted = corpus.items.filter((item) => item.type === "reposted");
+  const canonicalUrls = new Set(corpus.items.map((item) => item.canonicalUrl));
+
+  assert.equal(corpus.population.profileReported, 110);
+  assert.equal(corpus.population.renderedDistinct, 107);
+  assert.equal(corpus.population.unresolvedCountDifference, 3);
+  assert.equal(corpus.items.length, 107);
+  assert.equal(canonicalUrls.size, 107);
+  assert.equal(authored.length, 92);
+  assert.equal(reposted.length, 15);
+  assert.deepEqual(
+    corpus.items.map((item) => item.index),
+    Array.from({ length: 107 }, (_, index) => index + 1)
+  );
+
+  const serviceRecognition = authored.filter(
+    (item) =>
+      /@NYCCouncil/i.test(item.visibleText) &&
+      /(provides|provided|gives) the most/i.test(item.visibleText)
+  );
+  const ignoredHandles = new Set(["CallNYCapp", "NYCCouncil", "NYCHousing"]);
+  const recipients = serviceRecognition
+    .map((item) =>
+      [...item.visibleText.matchAll(/@([A-Za-z0-9_]+)/g)]
+        .map((match) => match[1])
+        .find((handle) => !ignoredHandles.has(handle))
+    )
+    .filter(Boolean);
+  const internalDestinations = new Set(
+    authored.flatMap((item) =>
+      item.outgoingLinks
+        .map((link) =>
+          link.displayedDestination
+            .replace(/^https?:\/\//i, "")
+            .replace(/\s+/g, "")
+            .replace(/…$/, "")
+        )
+        .filter((destination) => /^callnyc\.org(?:\/|$)/i.test(destination))
+    )
+  );
+  const postsWithVisibleEngagement = authored.filter(
+    (item) =>
+      item.engagement.replies + item.engagement.reposts + item.engagement.likes > 0
+  );
+  const engagementTotals = authored.reduce(
+    (totals, item) => ({
+      replies: totals.replies + item.engagement.replies,
+      reposts: totals.reposts + item.engagement.reposts,
+      likes: totals.likes + item.engagement.likes
+    }),
+    { replies: 0, reposts: 0, likes: 0 }
+  );
+
+  assert.equal(serviceRecognition.length, 71);
+  assert.equal(new Set(recipients).size, 26);
+  assert.equal(
+    authored.filter((item) => item.mentions.includes("@NYCCouncil")).length,
+    82
+  );
+  assert.equal(
+    authored.filter((item) => item.outgoingLinks.length > 0).length,
+    87
+  );
+  assert.equal(internalDestinations.size, 65);
+  assert.equal(authored.filter((item) => item.hasVisibleMedia).length, 75);
+  assert.equal(postsWithVisibleEngagement.length, 59);
+  assert.deepEqual(engagementTotals, { replies: 8, reposts: 74, likes: 111 });
+
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CALLNYC-SOCIAL-TRANSLATION-SYSTEM"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "callnyc");
+  assert.equal(claim.maturity, "confirmed-with-boundary");
+  assert.ok(
+    claim.antiClaims.some((item) => /Twenty-six Council members engaged/i.test(item))
+  );
+  assert.ok(claim.boundaries.some((item) => /three-count gap/i.test(item)));
+  assert.equal(
+    page.occurrences.find((item) => item.id === "social-translation-system").claimId,
+    claim.id
+  );
+});
+
 test("an intake-linked source without decomposition fails KB-003", () => {
   const candidate = structuredClone(knowledgeBank);
   const sourceId = candidate.intake[0].sourceIds[0];

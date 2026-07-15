@@ -346,6 +346,12 @@ const workItemsInput = [
         type: "map"
       },
       {
+        title: "Public engagement system",
+        description:
+          "A repeatable recognition, issue-linking, and Council-contact pattern documented across the complete recoverable project-account corpus.",
+        type: "guide"
+      },
+      {
         title: "Archived press note",
         description:
           "Politico New York covered CallNYC in 2016 as a public way to explore City Council constituent-services data.",
@@ -364,7 +370,8 @@ const workItemsInput = [
       "Resident Guidance",
       "Prototype Delivery",
       "Information Architecture",
-      "Public Interfaces"
+      "Public Interfaces",
+      "Stakeholder Engagement"
     ],
     links: [
       {
@@ -377,7 +384,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, a complete recoverable 107-item project-account corpus, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -390,6 +397,7 @@ const workItemsInput = [
       "Independent follow-on to the New York City Council's first CouncilStat hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
+      "Ran a repeatable public recognition and issue-linking system across 26 Council members and 65 CallNYC destinations",
       "Covered by Politico New York in 2016"
     ],
     knownOpenProtected: {

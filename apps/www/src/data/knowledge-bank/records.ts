@@ -5,6 +5,7 @@ import { nacCampaignPressBatch20260713 } from "./batches/nac-campaign-press-2026
 import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-07-13.ts";
 import { teamsArchiveProductionBatch20260714 } from "./batches/teams-archive-production-2026-07-14.ts";
 import { socialAccountProductionBatch20260714 } from "./batches/social-account-production-2026-07-14.ts";
+import { callNycXFullPopulationBatch20260714 } from "./batches/callnyc-x-full-population-2026-07-14.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -218,7 +219,8 @@ const knowledgeBankInput = {
     ...nacCampaignPressBatch20260713.intake,
     ...teamsArchiveProductionBatch20260714.intake,
     ...googleDriveProductionBatch20260714.intake,
-    ...socialAccountProductionBatch20260714.intake
+    ...socialAccountProductionBatch20260714.intake,
+    ...callNycXFullPopulationBatch20260714.intake
   ],
   sources: [
     {
@@ -458,7 +460,8 @@ const knowledgeBankInput = {
     ...nacCampaignPressBatch20260713.sources,
     ...teamsArchiveProductionBatch20260714.sources,
     ...googleDriveProductionBatch20260714.sources,
-    ...socialAccountProductionBatch20260714.sources
+    ...socialAccountProductionBatch20260714.sources,
+    ...callNycXFullPopulationBatch20260714.sources
   ],
   sourceAssertions: [
     {
@@ -646,7 +649,8 @@ const knowledgeBankInput = {
     ...nacCampaignPressBatch20260713.sourceAssertions,
     ...teamsArchiveProductionBatch20260714.sourceAssertions,
     ...googleDriveProductionBatch20260714.sourceAssertions,
-    ...socialAccountProductionBatch20260714.sourceAssertions
+    ...socialAccountProductionBatch20260714.sourceAssertions,
+    ...callNycXFullPopulationBatch20260714.sourceAssertions
   ],
   claims: [
     {
@@ -1000,7 +1004,8 @@ const knowledgeBankInput = {
         { sourceId: "SRC-CALLNYC-COUNCIL-MENDEZ-2016", relationship: "direct-support", supports: ["Rosie Mendez interaction"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016", relationship: "direct-support", supports: ["Ydanis Rodriguez interaction"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NYC-COUNCIL-STATED-MEETING-2017-04-25", relationship: "corroborating", supports: ["official Council-member attribution for all eight counted people"], confidence: "high", renderCitation: false },
-        { sourceId: "SRC-SOCIAL-CALLNYC-AUTH-OBSERVATION-2026", relationship: "supports-boundary", supports: ["authenticated observation method", "timeline and search missingness", "lower-bound definition"], confidence: "high", renderCitation: false }
+        { sourceId: "SRC-SOCIAL-CALLNYC-AUTH-OBSERVATION-2026", relationship: "supports-boundary", supports: ["authenticated observation method", "timeline and search missingness", "lower-bound definition"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-CALLNYC-X-CORPUS-2026-07-14", relationship: "supports-boundary", supports: ["complete recoverable project-account population", "distinction between outbound recognition and officials' responsive engagement", "three-item profile-count gap"], confidence: "high", renderCitation: false }
       ],
       boundaries: [
         "Count only visible, dated posts authored by accounts attributable to people serving on the Council at the interaction date: replies, quote posts, retransmissions, direct mentions, or direct CallNYC links.",
@@ -1017,7 +1022,8 @@ const knowledgeBankInput = {
     ...nacCampaignPressBatch20260713.claims,
     ...teamsArchiveProductionBatch20260714.claims,
     ...googleDriveProductionBatch20260714.claims,
-    ...socialAccountProductionBatch20260714.claims
+    ...socialAccountProductionBatch20260714.claims,
+    ...callNycXFullPopulationBatch20260714.claims
   ],
   researchTasks: [
     {
@@ -1138,7 +1144,8 @@ const knowledgeBankInput = {
     ...nacCampaignPressBatch20260713.researchTasks,
     ...teamsArchiveProductionBatch20260714.researchTasks,
     ...googleDriveProductionBatch20260714.researchTasks,
-    ...socialAccountProductionBatch20260714.researchTasks
+    ...socialAccountProductionBatch20260714.researchTasks,
+    ...callNycXFullPopulationBatch20260714.researchTasks
   ],
   researchInquiries: [
     {
@@ -1158,7 +1165,8 @@ const knowledgeBankInput = {
     ...nacPublicSourceBatch20260713.researchInquiries,
     ...nacCampaignPressBatch20260713.researchInquiries,
     ...googleDriveProductionBatch20260714.researchInquiries,
-    ...socialAccountProductionBatch20260714.researchInquiries
+    ...socialAccountProductionBatch20260714.researchInquiries,
+    ...callNycXFullPopulationBatch20260714.researchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -1175,6 +1183,8 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
         "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-X-API-2016",
+        "SRC-CALLNYC-X-CORPUS-2026-07-14",
         "SRC-CALLNYC-COUNCIL-CHIN-2017",
         "SRC-CALLNYC-COUNCIL-WILLS-2016",
         "SRC-CALLNYC-COUNCIL-MATTEO-2016",
@@ -1190,6 +1200,8 @@ const knowledgeBankInput = {
         { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
         { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
         { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "product-iteration", claimId: "CLM-CALLNYC-PRODUCT-ITERATION-DECISIONS", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-X-API-2016"] },
+        { id: "social-translation-system", claimId: "CLM-CALLNYC-SOCIAL-TRANSLATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-CORPUS-2026-07-14"] },
         { id: "council-engagement", claimId: "CLM-CALLNYC-COUNCIL-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-CALLNYC-COUNCIL-CHIN-2017", "SRC-CALLNYC-COUNCIL-WILLS-2016", "SRC-CALLNYC-COUNCIL-MATTEO-2016", "SRC-CALLNYC-COUNCIL-KOO-2016", "SRC-CALLNYC-COUNCIL-EUGENE-2016", "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016", "SRC-CALLNYC-COUNCIL-MENDEZ-2016", "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"] },
         { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
       ]

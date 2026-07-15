@@ -146,7 +146,7 @@ export const socialAccountProductionBatch20260714: {
       publicCitation:
         "Authenticated review of the public @CallNYCapp profile, rendered timeline, and direct-mention search on July 14, 2026.",
       publicNote:
-        "The profile reported 110 posts; 106 unique status URLs rendered during the sweep. The Council count is a lower bound over visible public posts, not a complete platform export.",
+        "The profile reported 110 posts; a later replies-inclusive full-population pass recovered 107 distinct items. The Council count is a lower bound over visible public posts, and the three-count profile discrepancy remains unresolved.",
       supportsGenerally: [
         "the @CallNYCapp project identity",
         "account activity beginning in 2016",
