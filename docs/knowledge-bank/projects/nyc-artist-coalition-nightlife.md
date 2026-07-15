@@ -17,6 +17,37 @@ This establishes a concrete organizing contribution. It does not independently
 establish Jamie as sole cause of repeal, sole coalition leader, or author of the
 legislation.
 
+## Why the work mattered to government
+
+Finkelpearl's February 27, 2017, Council testimony used a well-attended DIY
+Office Hours meeting as an example of why CreateNYC's public-engagement process
+was useful. He described community members preparing formal recommendations,
+continuing to organize independently, and giving DCLA an opportunity for
+continuing learning. The testimony describes the DIY community but does not
+name NYC Artist Coalition. A later DCLA commissioner message makes that link
+explicit by identifying New York City Artist Coalition as a coalition that the
+Office Hours helped launch.
+
+The coalition's public artifacts show what became usable: formal CreateNYC
+recommendations, a cultural-liaison concept, safety and affordability
+proposals, a Cabaret Law letter to Espinal, Council-district license and zoning
+maps, public forums, and Council testimony. The source record therefore
+supports an institutional interpretation: the coalition translated experience
+from informal cultural spaces into organized participation, evidence, and
+implementation choices that DCLA and Council could receive.
+
+For Espinal, the direct record forms a sustained sequence: attendance at the
+March 30 town hall, the coalition's April 18 letter and maps, the June 19
+hearing he chaired, enacted Office of Nightlife and Cabaret Law repeal laws
+under his sponsorship, and his later public credit to NYC Artist Coalition and
+Dance Liberation Network in the repeal effort.
+
+This sequence establishes relevance and participation, not personal
+dependence, bill authorship, vote influence, or sole causality. Functional
+alignment between the coalition's liaison proposals and the Office of
+Nightlife's later liaison and navigation duties is a useful comparison, not
+proof that the coalition authored the law.
+
 ## Confirmed collective outcomes
 
 - Bedford + Bowery reported that NYC Artist Coalition spearheaded a public
@@ -76,6 +107,8 @@ identity and campaign vocabulary in later Council-hearing contexts.
 - The relationship between Jamie's organizing, the collective campaign,
   Council sponsorship, hearings, and final repeal.
 - Advocacy surrounding creation of the Office of Nightlife.
+- Government reception of specific recommendations, maps, testimony, and
+  convenings, including bill-drafting and implementation provenance.
 - Public town halls: dates, production roles, collaborators, audiences, and
   outputs.
 - Talks Not Raids: campaign methods, transparency outcomes, Jamie's role, and

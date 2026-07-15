@@ -15,6 +15,7 @@ import {
   evaluateKcTownHallFullPopulationArchive,
   evaluateKnowledgeLifecycle,
   evaluateNterChngArchiveExpansion,
+  evaluateNycArtCGovernmentInstitutionalValue,
   evaluateNycArtCFullPopulationArchive,
   evaluateNycArtCFacebookEventArchive,
   evaluateNycArtCFacebookPostArchive,
@@ -576,6 +577,105 @@ test("NTER CHNG archive expansion rejects sole-credit and silent reserve project
   });
   assert.ok(failures.some((failure) => failure.includes("sole NTER CHNG credit")));
   assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
+});
+
+const nycArtCGovernmentValueFixture = {
+  framework: [
+    "nycArtCGovernmentValueIntake nycArtCGovernmentValueSources",
+    "nycArtCGovernmentValueClaims nycArtCGovernmentValueInquiries",
+    "nycArtCGovernmentValuePublicationDecisions",
+    "INQ-NYCARTC-GOVERNMENT-RECEPTION-CAUSALITY-2017",
+    "DCLA explicitly identified the coalition",
+    "legislative causality remain only partly canonical"
+  ].join(" "),
+  institutionalBatch: [
+    "LEAD-NYCARTC-GOVERNMENT-INSTITUTIONAL-VALUE-2026",
+    "SRC-DCLA-CREATENYC-NEXT-STEPS-TESTIMONY-2017",
+    "SRC-DCLA-COMMISSIONER-NYCARTC-MESSAGE-2017",
+    "SRC-NYCARTC-DCLA-RECOMMENDATIONS-2017",
+    "SRC-NYCARTC-ESPINAL-REPEAL-LETTER-2017",
+    "SRC-NYC-COUNCIL-CABARET-OVERSIGHT-2017",
+    "SRC-NYC-COUNCIL-OFFICE-NIGHTLIFE-LAW-2017",
+    "SRC-MOME-OFFICE-NIGHTLIFE-SIGNING-2017",
+    "SRC-NYC-COUNCIL-CABARET-REPEAL-LAW-2017",
+    "CLM-NYCARTC-DCLA-PUBLIC-ENGAGEMENT-VALUE-2017",
+    "CLM-NYCARTC-GOVERNMENT-TRANSLATION-VALUE-2017",
+    "CLM-NYCARTC-ESPINAL-POLICY-SEQUENCE-2017",
+    'status: "inference"',
+    "does not name NYC Artist Coalition",
+    "institutional-value interpretation is an inference",
+    "alignment does not establish that the coalition authored the law or caused its enactment",
+    'decision: "reserve"'
+  ].join(" "),
+  intakeDoc: [
+    "Why was NYC Artist Coalition's work useful to DCLA, the NYC Council, and",
+    "The language of \"need\" is retained as an interpretive prompt",
+    "The testimony describes members of the DIY community",
+    "later DCLA commissioner message",
+    "Institutional interpretation For DCLA For Council For Espinal",
+    "Functional alignment is not authorship",
+    "do not automatically add copy to the current hiring site"
+  ].join(" "),
+  projectDoc: [
+    "Why the work mattered to government",
+    "does not name NYC Artist Coalition",
+    "translated experience For Espinal Functional alignment",
+    "not proof that the coalition authored the law"
+  ].join(" "),
+  sourcesDoc: [
+    "Tom Finkelpearl's February 27, 2017, DCLA testimony",
+    "DCLA's commissioner message explicitly identifying New York City Artist Coalition",
+    "June 19, 2017, oversight hearing transcript",
+    "enacted Espinal-sponsored Office of Nightlife and Cabaret Law repeal laws"
+  ].join(" "),
+  antiClaims: [
+    "Do not say Finkelpearl's February 27, 2017, testimony named NYC Artist Coalition",
+    "Do not convert \"why did they need us?\" into a recovered motive or fact",
+    "Do not say NYC Artist Coalition authored the Office of Nightlife or Cabaret Law repeal legislation"
+  ].join(" "),
+  approvalRegister: [
+    "NYC Artist Coalition government value",
+    "explicitly labeled institutional interpretation",
+    "Do not state officials' private motives"
+  ].join(" "),
+  sourceCoverage: [
+    "2026-07-15 DCLA And Council Institutional Value",
+    "Eight additional public records",
+    "translated informal cultural-space experience into forms government could receive and use",
+    "does not establish officials' private motives"
+  ].join(" "),
+  publicSite: "Technical project management and product operations"
+};
+
+test("NYC Artist Coalition government-value eval preserves evidence, interpretation, and causality boundaries", () => {
+  assert.deepEqual(
+    evaluateNycArtCGovernmentInstitutionalValue(nycArtCGovernmentValueFixture),
+    []
+  );
+});
+
+test("NYC Artist Coalition government-value eval rejects testimony-name conflation", () => {
+  const failures = evaluateNycArtCGovernmentInstitutionalValue({
+    ...nycArtCGovernmentValueFixture,
+    projectDoc: `${nycArtCGovernmentValueFixture.projectDoc} The February 27 testimony named NYC Artist Coalition.`
+  });
+  assert.ok(failures.some((failure) => failure.includes("must not be represented as naming")));
+});
+
+test("NYC Artist Coalition government-value eval rejects motive, authorship, and causality inflation", () => {
+  const failures = evaluateNycArtCGovernmentInstitutionalValue({
+    ...nycArtCGovernmentValueFixture,
+    projectDoc: `${nycArtCGovernmentValueFixture.projectDoc} Espinal personally needed Jamie. NYC Artist Coalition wrote the Office of Nightlife.`
+  });
+  assert.ok(failures.some((failure) => failure.includes("personal motive, bill authorship")));
+});
+
+test("NYC Artist Coalition government-value eval rejects silent reserve projection", () => {
+  const failures = evaluateNycArtCGovernmentInstitutionalValue({
+    ...nycArtCGovernmentValueFixture,
+    publicSite: "CLM-NYCARTC-GOVERNMENT-TRANSLATION-VALUE-2017"
+  });
+  assert.ok(failures.some((failure) => failure.includes("silently appears on the public site")));
 });
 
 const googleSharedDriveArchiveFixture = {

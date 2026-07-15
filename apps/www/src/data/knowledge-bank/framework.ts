@@ -127,6 +127,15 @@ import {
   nterChngArchivePublicationDecisions,
   nterChngArchiveSources
 } from "./nter-chng-archive-expansion-batch-2026-07-14.ts";
+import {
+  nycArtCGovernmentValueClaimIds,
+  nycArtCGovernmentValueClaims,
+  nycArtCGovernmentValueInquiries,
+  nycArtCGovernmentValueIntake,
+  nycArtCGovernmentValuePublicationDecisions,
+  nycArtCGovernmentValueSourceIds,
+  nycArtCGovernmentValueSources
+} from "./nycartc-government-value-batch-2026-07-15.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -609,6 +618,7 @@ export const frameworkIntake = [
   ...jamieFacebookPostIntake,
   ...iCloudTeamsExpansionIntake,
   ...nterChngArchiveIntake,
+  ...nycArtCGovernmentValueIntake,
   ...personalWowlistFacebookEventIntake,
   ...wowlistFacebookPostIntake,
   ...callNycSocialCorpusIntake,
@@ -739,6 +749,7 @@ export const frameworkProjects = [
       "SRC-BUSHWICK-DAILY-LEASE-RENEWALS-2026",
       "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
       "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021",
+      ...nycArtCGovernmentValueSourceIds,
       ...campaignPressNewSourceIds
     ],
     claimIds: [
@@ -759,9 +770,10 @@ export const frameworkProjects = [
       "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
       "CLM-NYCAC-FACEBOOK-STAKEHOLDER-ROUTING",
       "CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS",
-      "CLM-JAMIE-FACEBOOK-NYCAC-IMPLEMENTATION-PRACTICE-2017-2019"
+      "CLM-JAMIE-FACEBOOK-NYCAC-IMPLEMENTATION-PRACTICE-2017-2019",
+      ...nycArtCGovernmentValueClaimIds
     ],
-    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026", "INQ-NYCAC-FACEBOOK-EVENTS-2026", "INQ-NYCAC-FACEBOOK-POSTS-2026"],
+    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026", "INQ-NYCAC-FACEBOOK-EVENTS-2026", "INQ-NYCAC-FACEBOOK-POSTS-2026", "INQ-NYCARTC-GOVERNMENT-RECEPTION-CAUSALITY-2017"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public images show Jamie's facilitation, web, documentation, or event-production role while preserving collective credit?",
@@ -1532,6 +1544,7 @@ export const frameworkSources = [
   ...jamieFacebookPostSources,
   ...iCloudTeamsExpansionSources,
   ...nterChngArchiveSources,
+  ...nycArtCGovernmentValueSources,
   ...personalWowlistFacebookEventSources,
   ...wowlistFacebookPostSources,
   ...callNycSocialCorpusSources,
@@ -1916,6 +1929,7 @@ export const frameworkClaims = [
   ...jamieFacebookPostClaims,
   ...iCloudTeamsExpansionClaims,
   ...nterChngArchiveClaims,
+  ...nycArtCGovernmentValueClaims,
   ...personalWowlistFacebookEventClaims,
   ...wowlistFacebookPostClaims,
   ...callNycSocialCorpusClaims,
@@ -1961,6 +1975,7 @@ export const frameworkInquiries = [
   ...jamieFacebookPostInquiries,
   ...iCloudTeamsExpansionInquiries,
   ...nterChngArchiveInquiries,
+  ...nycArtCGovernmentValueInquiries,
   ...personalWowlistFacebookEventInquiries,
   ...wowlistFacebookPostInquiries,
   ...callNycSocialCorpusInquiries,
@@ -2024,6 +2039,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   jamieFacebookPostPublicationDecisions,
   iCloudTeamsExpansionPublicationDecisions,
   nterChngArchivePublicationDecisions,
+  nycArtCGovernmentValuePublicationDecisions,
   personalWowlistFacebookEventPublicationDecisions,
   wowlistFacebookPostPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
@@ -2049,7 +2065,7 @@ export const frameworkProofCoverage = [
   coverage("fair-rent-campaign-memory", "source-backed", "A protected April-May 2026 archive review supports Jamie's bounded operating-design and running-minutes claim, including a preserved 34-page document that verifies the public 30-plus-page aggregate. Additional public corroboration could deepen the record but is not required for this protected-source-backed wording.", ["SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026"], []),
   coverage("fair-rent-source-map", "research-needed", "Identify the public records and approved artifact metadata that support the source-map claim."),
   coverage("nyc-artist-coalition-public-web-infrastructure", "partially-backed", "The Save NYC Spaces and Talks Not Raids campaign sites are canonical public artifacts; individual web authorship still relies on Jamie confirmation and repository research.", ["SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-TALKS-NOT-RAIDS-CAMPAIGN"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE"]),
-  coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records support early organizing, Council testimony, a coalition-led town hall, campaign artifacts, FOIL-derived data, and MARCH reporting legislation; a protected 2017 FAQ adds collective mutual-support infrastructure, while individual systems authorship remains only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019", "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]),
+  coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records support early organizing, formal DCLA recommendations, Council testimony, a coalition-led town hall, public maps, campaign artifacts, FOIL-derived data, and MARCH reporting legislation. DCLA explicitly identified the coalition as an Office Hours outcome, and Espinal publicly credited it in the repeal effort; individual systems authorship and legislative causality remain only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-DCLA-CREATENYC-NEXT-STEPS-TESTIMONY-2017", "SRC-DCLA-COMMISSIONER-NYCARTC-MESSAGE-2017", "SRC-NYCARTC-DCLA-RECOMMENDATIONS-2017", "SRC-NYCARTC-ESPINAL-REPEAL-LETTER-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-OVERSIGHT-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-NYC-COUNCIL-OFFICE-NIGHTLIFE-LAW-2017", "SRC-NYC-COUNCIL-CABARET-REPEAL-LAW-2017", "SRC-X-NYCARTC-ESPINAL-CABARET-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019", "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-GOVERNMENT-RECEPTION-CAUSALITY-2017"]),
   coverage("nyc-artist-coalition-cabaret-organizing", "source-backed", "Gothamist reporting and the official Council transcript directly support the bounded organizing and testimony claim.", ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"], []),
   coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview and Music Hackathon record independently support WOW List's community-events function and Jamie's co-organizer role. Selected Facebook records add member-led city calendars, a 41-event Los Angeles contribution, and Phoenix organizer continuity; a protected Page-management audit identifies Jamie as publisher on 51 matching records with six unresolved. Technical architecture and the larger aggregate scale remain archive-backed and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015", "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015", "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015", "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018", "SRC-FB-WOWLIST-PUBLISHER-ATTRIBUTION-RUN-2026"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-WOWLIST-FACEBOOK-FULL-POPULATION-2026"]),
   coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community; public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck; and a protected 2023 record confirms Jamie's proposal-review and onboarding workflow for one residency. Aggregate gathering and residency totals remain separately protected.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014", "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017", "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS", "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026"]),

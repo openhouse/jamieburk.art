@@ -39,6 +39,7 @@ The canonical positioning sentence is:
 | Release gate wiring | 12 | Yes | Citation, knowledge-bank, public-safety, route, eval-test, and prelaunch commands exist. |
 | Chad-lens legibility | 16 | Yes | Jamie is the actor; entry condition, purpose, usable outputs, bounded proof, and next actions are explicit. |
 | Knowledge-bank lifecycle | 18 | Yes | Intake has no silent loss; evidence maturity, safety, and editorial selection remain separate; every public proof has source-coverage status. |
+| NYC Artist Coalition government value | 20 | Yes | DCLA testimony, later named recognition, coalition recommendations, Council testimony, Espinal's policy sequence, and enacted-law functions remain linked while institutional interpretation stays distinct from motive, authorship, and causality. |
 | Portfolio evidence expansion | 18 | Yes | Ten new, non-orphan public sources mature bounded claims, reduce proof debt, and selectively strengthen cited portfolio surfaces. |
 | KC Town Hall Council allocation and lifecycle | 18 | Yes | Board recommendation, Council appropriation, and resolution are primary-sourced; Jamie's involvement is historical; allocation remains distinct from agreement execution, receipt, and disbursement; private transition context stays omitted. |
 | Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
@@ -83,6 +84,10 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   corroboration, or moving every mature reserve claim onto the current site.
 - Do not satisfy evidence expansion with duplicate, orphaned,
   self-authored-only, or boundary-free source records.
+- Do not say Finkelpearl's February testimony named NYC Artist Coalition,
+  convert institutional value into an official's private motive, infer bill
+  authorship from functional alignment, or turn participation and public credit
+  into sole legislative causality.
 - Do not equate a Council appropriation or funding-negotiation authorization
   with an executed agreement, receipt, disbursement, project completion, or
   current status.

@@ -133,6 +133,15 @@ details and participant submissions remain excluded. See
 `intake/2026-07-14-nter-chng-archive-expansion.md` and
 `projects/creative-technology-practice.md`.
 
+The July 15 NYC Artist Coalition government-value pass distinguishes direct
+record from institutional interpretation. DCLA testimony, DCLA's later named
+recognition, coalition recommendations, Council testimony, enacted laws, and
+Espinal's public credit show what the coalition supplied to government. The
+result is reserve depth, not automatic site copy, and does not encode private
+official motives or legislative causality. See
+`intake/2026-07-15-nycartc-government-institutional-value.md` and
+`projects/nyc-artist-coalition-nightlife.md`.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

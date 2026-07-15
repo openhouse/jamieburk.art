@@ -102,6 +102,20 @@ Approved public artifact examples for this launch pass include:
 - Kristine Villanueva's October 2017 Edge of Sound reporting on the town hall
   and Jamie's public cultural-space framing.
 - New York City Council's September 14, 2017, Cabaret Law hearing transcript.
+- Tom Finkelpearl's February 27, 2017, DCLA testimony to the Council about
+  CreateNYC next steps, including the DIY Office Hours recommendations and
+  continued independent organizing.
+- DCLA's commissioner message explicitly identifying New York City Artist
+  Coalition as a coalition that CreateNYC Office Hours helped launch.
+- NYC Artist Coalition's March 7, 2017, recommendations to DCLA and April 18,
+  2017, Cabaret Law repeal letter to Council Member Rafael Espinal.
+- New York City Council's June 19, 2017, oversight hearing transcript recording
+  coalition and Jamie testimony before the committee chaired by Espinal.
+- New York City Council records for the enacted Espinal-sponsored Office of
+  Nightlife and Cabaret Law repeal laws.
+- The Mayor's Office of Media and Entertainment's September 19, 2017, Office of
+  Nightlife signing announcement, including Espinal's bridge-building rationale
+  and Finkelpearl's CreateNYC small-venue engagement context.
 - The Talks Not Raids campaign website.
 - New York City Council's November 14, 2019, report and vote on MARCH reporting
   and advance-notice legislation.

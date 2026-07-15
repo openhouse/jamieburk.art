@@ -743,6 +743,141 @@ export function evaluateNterChngArchiveExpansion({
   return missing;
 }
 
+export function evaluateNycArtCGovernmentInstitutionalValue({
+  framework,
+  institutionalBatch,
+  intakeDoc,
+  projectDoc,
+  sourcesDoc,
+  antiClaims,
+  approvalRegister,
+  sourceCoverage,
+  publicSite
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    "nycArtCGovernmentValueIntake",
+    "nycArtCGovernmentValueSources",
+    "nycArtCGovernmentValueClaims",
+    "nycArtCGovernmentValueInquiries",
+    "nycArtCGovernmentValuePublicationDecisions",
+    "INQ-NYCARTC-GOVERNMENT-RECEPTION-CAUSALITY-2017",
+    "DCLA explicitly identified the coalition",
+    "legislative causality remain only partly canonical"
+  ]);
+  requireFragments("Institutional-value batch", institutionalBatch, [
+    "LEAD-NYCARTC-GOVERNMENT-INSTITUTIONAL-VALUE-2026",
+    "SRC-DCLA-CREATENYC-NEXT-STEPS-TESTIMONY-2017",
+    "SRC-DCLA-COMMISSIONER-NYCARTC-MESSAGE-2017",
+    "SRC-NYCARTC-DCLA-RECOMMENDATIONS-2017",
+    "SRC-NYCARTC-ESPINAL-REPEAL-LETTER-2017",
+    "SRC-NYC-COUNCIL-CABARET-OVERSIGHT-2017",
+    "SRC-NYC-COUNCIL-OFFICE-NIGHTLIFE-LAW-2017",
+    "SRC-MOME-OFFICE-NIGHTLIFE-SIGNING-2017",
+    "SRC-NYC-COUNCIL-CABARET-REPEAL-LAW-2017",
+    "CLM-NYCARTC-DCLA-PUBLIC-ENGAGEMENT-VALUE-2017",
+    "CLM-NYCARTC-GOVERNMENT-TRANSLATION-VALUE-2017",
+    "CLM-NYCARTC-ESPINAL-POLICY-SEQUENCE-2017",
+    'status: "inference"',
+    "does not name NYC Artist Coalition",
+    "institutional-value interpretation is an inference",
+    "alignment does not establish that the coalition authored the law or caused its enactment",
+    'decision: "reserve"'
+  ]);
+  requireFragments("Institutional-value intake note", intakeDoc, [
+    "Why was NYC Artist Coalition's work useful to DCLA, the NYC Council, and",
+    "The language of \"need\" is retained as an interpretive prompt",
+    "The testimony describes members of the DIY community",
+    "later DCLA commissioner message",
+    "Institutional interpretation",
+    "For DCLA",
+    "For Council",
+    "For Espinal",
+    "Functional alignment is not authorship",
+    "do not automatically add copy to the current hiring site"
+  ]);
+  requireFragments("NYC Artist Coalition project record", projectDoc, [
+    "Why the work mattered to government",
+    "does not name NYC Artist Coalition",
+    "translated experience",
+    "For Espinal",
+    "Functional alignment",
+    "not proof that the coalition authored the law"
+  ]);
+  requireFragments("Source-basis documentation", sourcesDoc, [
+    "Tom Finkelpearl's February 27, 2017, DCLA testimony",
+    "DCLA's commissioner message explicitly identifying New York City Artist Coalition",
+    "June 19, 2017, oversight hearing transcript",
+    "enacted Espinal-sponsored Office of Nightlife and Cabaret Law repeal laws"
+  ]);
+  requireFragments("Anti-claims", antiClaims, [
+    "Do not say Finkelpearl's February 27, 2017, testimony named NYC Artist Coalition",
+    "Do not convert \"why did they need us?\" into a recovered motive or fact",
+    "Do not say NYC Artist Coalition authored the Office of Nightlife or Cabaret Law repeal legislation"
+  ]);
+  requireFragments("Approval register", approvalRegister, [
+    "NYC Artist Coalition government value",
+    "explicitly labeled institutional interpretation",
+    "Do not state officials' private motives"
+  ]);
+  requireFragments("Source-coverage ledger", sourceCoverage, [
+    "2026-07-15 DCLA And Council Institutional Value",
+    "Eight additional public records",
+    "translated informal cultural-space experience into forms government could receive and use",
+    "does not establish officials' private motives"
+  ]);
+
+  if (
+    /February 27[^.\n]{0,160}(?:named|identified)[^.\n]{0,80}NYC Artist Coalition/i.test(
+      `${intakeDoc}\n${projectDoc}`
+    )
+  ) {
+    missing.push(
+      "The February 27 testimony must not be represented as naming NYC Artist Coalition."
+    );
+  }
+  const assertedInterpretation = `${intakeDoc}\n${projectDoc}`
+    .replace(/\s+/g, " ")
+    .split(/(?<=[.!?])\s+/)
+    .filter(
+      (sentence) =>
+        !/do not|does not|not proof|not a claim|not authorship|not personal dependence|does not establish/i.test(
+          sentence
+        )
+    )
+    .join(" ");
+  if (
+    /(?:Finkelpearl|Espinal|the Council) (?:personally )?needed (?:Jamie|NYC Artist Coalition)|NYC Artist Coalition (?:authored|wrote) (?:the )?(?:Office of Nightlife|Cabaret Law repeal)|(?:coalition|testimony) caused (?:the )?(?:law|repeal|vote|enactment)/i.test(
+      assertedInterpretation
+    )
+  ) {
+    missing.push(
+      "Institutional value must not become personal motive, bill authorship, or legislative causality."
+    );
+  }
+  for (const marker of [
+    "CLM-NYCARTC-DCLA-PUBLIC-ENGAGEMENT-VALUE-2017",
+    "CLM-NYCARTC-GOVERNMENT-TRANSLATION-VALUE-2017",
+    "CLM-NYCARTC-ESPINAL-POLICY-SEQUENCE-2017",
+    "Institutional interpretation: NYC Artist Coalition made underrepresented cultural-space experience"
+  ]) {
+    if (publicSite.includes(marker)) {
+      missing.push(`Reserve institutional-value claim silently appears on the public site: ${marker}`);
+    }
+  }
+
+  return missing;
+}
+
 export function evaluateGoogleSharedDriveArchiveProduction({
   framework,
   proofs,
@@ -3818,9 +3953,26 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-nter-chng-archive-expansion.md"
   );
+  const nycArtCGovernmentValueBatch = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/nycartc-government-value-batch-2026-07-15.ts"
+  );
+  const nycArtCGovernmentValueDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-15-nycartc-government-institutional-value.md"
+  );
+  const nycArtCProjectDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/projects/nyc-artist-coalition-nightlife.md"
+  );
   const sourceCoverage = readOptional(
     repoRoot,
     "docs/knowledge-bank/source-coverage.md"
+  );
+  const sourcesDoc = readOptional(repoRoot, "docs/knowledge-bank/sources.md");
+  const approvalRegister = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/approval-register.md"
   );
   const googleSharedDrivesArchiveDoc = readOptional(
     repoRoot,
@@ -4113,7 +4265,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}\n${nterChngArchiveExpansionBatch}`,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}\n${nterChngArchiveExpansionBatch}\n${nycArtCGovernmentValueBatch}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -4154,6 +4306,42 @@ export function runLaunchEvals(repoRoot) {
         "America: Now and Here's official archives directly establish 2011 exhibition inclusion and observed visitor use.",
         "Nerman Museum context remains distinct from the project-specific inclusion evidence.",
         "Participant messages, contact details, unsupported audience claims, and silent site projection are hard-gated."
+      ]
+    })
+  );
+
+  const nycArtCGovernmentValueMissing =
+    evaluateNycArtCGovernmentInstitutionalValue({
+      framework,
+      institutionalBatch: nycArtCGovernmentValueBatch,
+      intakeDoc: nycArtCGovernmentValueDoc,
+      projectDoc: nycArtCProjectDoc,
+      sourcesDoc,
+      antiClaims,
+      approvalRegister,
+      sourceCoverage,
+      publicSite: [
+        homePage,
+        resumePage,
+        siteData,
+        workData,
+        technicalOperations,
+        fairRentCase
+      ].join("\n")
+    });
+  results.push(
+    result({
+      id: "nycartc-government-institutional-value",
+      label:
+        "NYC Artist Coalition government value preserves evidence, interpretation, and causality boundaries",
+      weight: 20,
+      hardGate: true,
+      missing: nycArtCGovernmentValueMissing,
+      evidence: [
+        "Finkelpearl's February testimony describes DIY recommendations and continued organizing; DCLA's later message supplies the explicit coalition name.",
+        "Coalition recommendations, maps, forums, and Council testimony document a usable civic-translation function.",
+        "Espinal's town-hall, hearing, sponsorship, enactment, and public-credit sequence remains distinct from bill authorship and sole causality.",
+        "The institutional interpretation stays reserve and cannot silently enter the current hiring site."
       ]
     })
   );

@@ -88,6 +88,35 @@ The semantic validator caught one misplaced project-link block. After repair,
 the lifecycle and launch suites returned to **100/100** with all hard gates
 passing.
 
+## NYC Artist Coalition government-value recursive pass
+
+The July 15 pass added a 20-point hard gate for the institutional interpretation
+of NYC Artist Coalition's relationship to DCLA, the Council, and Rafael
+Espinal. Eight additional public records establish the direct sequence:
+
+- Finkelpearl's February 27 CreateNYC testimony described DIY-community formal
+  recommendations and continued independent organizing without naming NYC
+  Artist Coalition;
+- a later DCLA commissioner message explicitly identified New York City Artist
+  Coalition as a coalition that Office Hours helped launch;
+- coalition recommendations, an Espinal letter, public maps, forums, and
+  Council testimony made cultural-space experience legible in administrative
+  and legislative forms; and
+- Council records establish Espinal's sponsorship of the enacted Office of
+  Nightlife and Cabaret Law repeal laws, while his public account separately
+  credited NYC Artist Coalition and Dance Liberation Network in the repeal
+  effort.
+
+The first complete run scored **96/100** because prose-sensitive checks failed
+on Markdown emphasis and a negative-claim sentence was mistaken for an asserted
+overclaim. The evaluator was repaired to normalize formatting and distinguish
+assertions from explicit prohibitions without weakening its negative tests.
+
+The final pass scored **100/100** with all automated hard gates passing.
+Adversarial tests reject testimony-name conflation, private-motive claims, bill
+authorship and legislative-causality inflation, and silent projection of the
+reserve interpretation onto the current site.
+
 ## Ten-source evidence-expansion recursive pass
 
 A third follow-up added an 18-point evidence-expansion hard gate. The baseline

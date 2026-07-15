@@ -34,6 +34,25 @@ legislative record. It remains partially-backed at the umbrella-proof level
 because co-founding, individual website authorship, Fair Rent work, and the
 full Talks Not Raids role still require distinct provenance.
 
+## 2026-07-15 DCLA And Council Institutional Value
+
+Eight additional public records deepen `nyc-artist-coalition-civic-systems`
+without changing its `partially-backed` status. The records establish:
+
+- Finkelpearl's use of DIY recommendations and continued organizing as a
+  CreateNYC public-engagement example before Council;
+- DCLA's later explicit identification of New York City Artist Coalition;
+- coalition recommendations, maps, letters, forums, and testimony;
+- Espinal's hearing-chair and legislative-sponsor roles; and
+- enacted liaison, navigation, public-input, repeal, and retained-safety
+  functions in the resulting laws.
+
+The source set supports a bounded institutional interpretation that the
+coalition translated informal cultural-space experience into forms government
+could receive and use. It does not establish officials' private motives,
+coalition bill authorship, adoption of every proposal, vote influence, sole
+causality, or Jamie's individual authorship of each collective artifact.
+
 ## 2026-07-12 Campaign Press Corpus
 
 The four NYC Artist Coalition campaign press indexes add 46 historical index

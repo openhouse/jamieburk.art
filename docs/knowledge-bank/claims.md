@@ -243,6 +243,45 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## nyc-artist-coalition-dcla-engagement-value - DCLA recognition
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Government record / public coalition artifact
+**Public wording:** DCLA's public record presents the DIY community's formal recommendations and continued organizing as evidence that CreateNYC engagement produced usable learning and civic capacity; a later commissioner message identifies New York City Artist Coalition by name.
+**Where to project:** Knowledge-bank NYC Artist Coalition research only.
+**Why it matters:** Establishes that the coalition's emergence was institutionally legible to DCLA, not merely self-described.
+**Guardrail:** The February 27 testimony describes the DIY community but does not name NYC Artist Coalition; the later DCLA message supplies the explicit identification.
+**Do not say:** Finkelpearl's testimony named NYC Artist Coalition; Finkelpearl said he needed Jamie; DCLA adopted every coalition recommendation.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-government-translation - Institutional interpretation
+
+**Status:** Reserve / inference
+**Support level:** Strong components, bounded synthesis
+**Evidence class:** Government records / public coalition artifacts
+**Public wording:** Institutional interpretation: NYC Artist Coalition made underrepresented cultural-space experience more usable to government by converting it into organized participation, formal recommendations, public data, testimony, and implementation choices.
+**Where to project:** Knowledge-bank NYC Artist Coalition research; future government and public-interest technology applications after editorial review.
+**Why it matters:** Names the operating capability beneath the advocacy: civic translation between cultural and governmental systems.
+**Guardrail:** This is an evidence-backed interpretation, not a quotation or recovered statement of an official's private motive.
+**Do not say:** Government could not act without Jamie; NYC Artist Coalition authored the Office of Nightlife; coalition testimony caused either law to pass.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-espinal-policy-sequence - Sustained public interaction
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Government records / public coalition artifacts / government social post
+**Public wording:** Public records place NYC Artist Coalition in a sustained 2017 policy sequence with Council Member Rafael Espinal: town hall, letter and maps, Council testimony, enacted legislation under his sponsorship, and his later public credit to the coalition and Dance Liberation Network in the repeal effort.
+**Where to project:** Knowledge-bank NYC Artist Coalition research only.
+**Why it matters:** Replaces a vague proximity claim with a dated, source-backed policy sequence.
+**Guardrail:** The sequence establishes participation and recognition, not bill authorship, vote influence, or sole causality.
+**Do not say:** Espinal needed Jamie personally to pass the laws; NYC Artist Coalition wrote the bills; Jamie alone repealed the Cabaret Law or created the Office of Nightlife.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## creative-technology-time-is-long - Time-delayed video installation
 
 **Status:** Reserve

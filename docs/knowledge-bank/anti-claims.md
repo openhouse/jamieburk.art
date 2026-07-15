@@ -73,6 +73,21 @@ and do not claim one event caused a policy outcome. Keep
 working-document locators, meeting-access paths, guest identities, comments,
 participant profiles, and private account context outside the repository.
 
+Do not say Finkelpearl's February 27, 2017, testimony named NYC Artist
+Coalition. It describes the DIY community's recommendations and continued
+organizing; a later DCLA commissioner message supplies the explicit coalition
+name.
+
+Do not convert "why did they need us?" into a recovered motive or fact. The
+public record supports a bounded institutional-value interpretation, not a
+claim that Finkelpearl, Council, or Espinal personally depended on Jamie or the
+coalition.
+
+Do not say NYC Artist Coalition authored the Office of Nightlife or Cabaret Law
+repeal legislation, supplied the votes, or caused enactment. Keep functional
+alignment, coalition participation, Espinal's sponsorship, Council action, and
+administration implementation distinct.
+
 Do not describe Jamie's commercial-vacancy public-data brief as City-endorsed,
 adopted, implemented, published, or based on his access to confidential RPIE
 filings. It is an authored proposal unless external outcome evidence matures.

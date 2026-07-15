@@ -77,7 +77,7 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("intake has no silent loss and memories are not auto-promoted", () => {
-  assert.equal(knowledgeBank.intake.length, 44 + campaignPressIntake.length);
+  assert.equal(knowledgeBank.intake.length, 45 + campaignPressIntake.length);
   assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
   assert.ok(knowledgeBank.intake.every((item) =>
     item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
@@ -91,6 +91,11 @@ test("intake has no silent loss and memories are not auto-promoted", () => {
   assert.ok(
     knowledgeBank.intake.some(
       (item) => item.id === "LEAD-CALLNYC-FULL-POPULATION-CORPUS-2026"
+    )
+  );
+  assert.ok(
+    knowledgeBank.intake.some(
+      (item) => item.id === "LEAD-NYCARTC-GOVERNMENT-INSTITUTIONAL-VALUE-2026"
     )
   );
   assert.ok(

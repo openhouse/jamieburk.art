@@ -14,6 +14,12 @@ The repo is public. Approval here means approved for public-safe repository and 
 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition government value: DCLA recognition, formal
+  recommendations, public testimony, public maps, and the dated Espinal policy
+  sequence are approved as reserve knowledge-bank depth. The translation-layer
+  framing is an explicitly labeled institutional interpretation. Do not state
+  officials' private motives, say the February testimony named the coalition,
+  assign bill authorship, or imply sole legislative causality.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - Commercial Rent Stabilization running minutes: the protected 34-page April-May record supports the public 30-plus-page aggregate. Keep the earlier 12-page April 29 snapshot distinct and do not publish raw coalition material.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
