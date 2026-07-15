@@ -1,7 +1,7 @@
 {
   "version": 3,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "88a4f6dca1157426ed62f858101ed0408ff3ec9a7b6b9c82e7a013d663108b23",
+  "publicSurfaceSha256": "882542b56348a7c5c09cd951a32ab36f7f744a3118b3089a984a50bff056c545",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -56,20 +56,21 @@
   ],
   "resumeArtifact": {
     "sourcePath": "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
-    "sourceSha256": "469d89bd77e3a44fbe572bd96424fb6c91dc031bf9aa5449b9adb61c44d70aaa",
+    "sourceSha256": "e7ad907d2ed636b9553426996a7c061b16fae088509fd40d08dc4d873bb71947",
     "extractedTextPath": "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
-    "extractedTextSha256": "680c6d7be7145f4c271824c04456adf6d59da3c6c6401e16092230d8673adb94",
+    "extractedTextSha256": "5f1bff398fb97548d24f63c9e79263d240fde9f6fbd7b5ca09192a6ac4dd8a5d",
     "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-    "pdfSha256": "7e36d41f7b7f86d3c2302add19505895178afa1cec480d897e17c901579d9661",
+    "pdfSha256": "5e38ca89c4cfb5ef1cf3a36eb15a8aed013fbf2c73ee083279f7ad08b78dfa52",
     "requiredText": [
       "Brooklyn, NY | (816) 728-8685",
       "Civic Systems, Coalition Operations",
-      "Communications Lead",
+      "Policy Communications",
       "The CCED Board recommended up to $490,539 for eligible project costs; the Kansas City Council later accepted that recommendation and authorized funding-agreement negotiations."
     ],
     "prohibitedText": [
       "NYC Artist Coalition / FairRentNYC - Co-Founder",
       "NYC Artist Coalition / Fair Rent NYC - Co-Founder",
+      "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy Communications Lead",
       "secured a $490,539 public funding recommendation",
       "Richard Caceres"
     ],
@@ -101,10 +102,7 @@
         "text": "Web, open data & civic technology JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, open-data workflows, APIs, and data-product requirements.",
         "pdfAnchor": "Web, open data & civic technology",
         "claims": [],
-        "proofs": [
-          { "id": "hje-modernization-stewardship", "anchor": "web" },
-          { "id": "callnyc-civic-data-guidance", "anchor": "open-data" }
-        ]
+        "proofs": [{ "id": "technical-stack-operating-history", "anchor": "JavaScript / TypeScript" }]
       },
       {
         "id": "impact-hje-growth",
@@ -172,7 +170,7 @@
       },
       {
         "id": "experience-nycac-role",
-        "text": "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy Communications Lead",
+        "text": "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy Communications",
         "pdfAnchor": "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy",
         "claims": [],
         "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "Civic Systems" }]

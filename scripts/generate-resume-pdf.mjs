@@ -19,6 +19,8 @@ const chrome =
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
 mkdirSync(dirname(output), { recursive: true });
+const sourceUrl = pathToFileURL(source);
+sourceUrl.searchParams.set("revision", String(Date.now()));
 const result = spawnSync(
   chrome,
   [
@@ -26,7 +28,7 @@ const result = spawnSync(
     "--disable-gpu",
     "--no-pdf-header-footer",
     `--print-to-pdf=${output}`,
-    pathToFileURL(source).href
+    sourceUrl.href
   ],
   { encoding: "utf8" }
 );

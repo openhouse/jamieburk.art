@@ -10,6 +10,12 @@ import ts from "typescript";
 import { proofClaims } from "../apps/www/src/data/proofs.ts";
 
 const suitePath = ".agents/evals/knowledge-bank-development.json";
+const frozenCollectiveBaselinePath =
+  ".agents/evals/baselines/collective-credit-v1.json";
+export const FROZEN_COLLECTIVE_BASELINE_COMMIT =
+  "52b0e9edc5d939088a4d6883dbe92b2c3b959b54";
+export const FROZEN_COLLECTIVE_BASELINE_BLOB =
+  "4b46fbbc522bcbcd04f6e5a037ecdbd88a3369ce";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
 const publicProjectionKeys = new Set([
   "case-study",
@@ -31,10 +37,7 @@ const projectionSurfaceBindings = JSON.parse(
   )
 );
 const frozenCollectiveCreditBaseline = JSON.parse(
-  readFileSync(
-    ".agents/evals/baselines/collective-credit-v1.json",
-    "utf8"
-  )
+  readFileSync(frozenCollectiveBaselinePath, "utf8")
 );
 const proofById = new Map(proofClaims.map((proof) => [proof.id, proof]));
 const collectiveProjectEntries = collectiveCreditPolicy.collectiveProjects;
@@ -97,7 +100,10 @@ const requiredCollectiveRuntimeFiles = new Set([
   "apps/www/src/data/work.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/knowledge-bank/public.ts",
-  "apps/www/src/lib/work.ts"
+  "apps/www/src/lib/work.ts",
+  "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+  "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
+  "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt"
 ]);
 const requiredResumeStatementIds = new Set([
   "profile-operating-structure",
@@ -159,6 +165,7 @@ const hybridCandidatePaths = [
   ".agents/evals/baselines/collective-credit-v1.json",
   "docs/knowledge-bank",
   "scripts/check-knowledge-development.mjs",
+  "scripts/generate-resume-pdf.mjs",
   "scripts/lib/citation-validation.mjs",
   "scripts/tests/citations.test.mjs",
   "scripts/tests/knowledge-development.test.mjs"
@@ -444,6 +451,18 @@ export function statementSupportFingerprint(policy = projectionSurfaceBindings) 
   });
 }
 
+export function projectionRouteBindingFingerprint(
+  policy = projectionSurfaceBindings
+) {
+  return stableSha256({
+    routes: policy.routes,
+    caseStudyRoutes: policy.caseStudyRoutes,
+    caseStudySharedFiles: policy.caseStudySharedFiles,
+    publicSurfaceRoots: policy.publicSurfaceRoots,
+    publicSurfaceFiles: policy.publicSurfaceFiles
+  });
+}
+
 function filesBelow(root, extensions) {
   const files = [];
   for (const entry of readdirSync(root, { withFileTypes: true })) {
@@ -563,6 +582,7 @@ function identifierIsConstFalse(identifier, sourceFile) {
 function expressionIsAlwaysFalse(expression, sourceFile) {
   if (!expression) return false;
   if (expression.kind === ts.SyntaxKind.FalseKeyword) return true;
+  if (ts.isNumericLiteral(expression) && Number(expression.text) === 0) return true;
   if (ts.isParenthesizedExpression(expression)) {
     return expressionIsAlwaysFalse(expression.expression, sourceFile);
   }
@@ -953,9 +973,38 @@ export function evaluateKnowledgeBank(
   ) {
     findings["KB-007"].push("collective-credit baseline is not frozen for this run");
   }
+  try {
+    const anchoredBlob = execFileSync(
+      "git",
+      [
+        "rev-parse",
+        `${FROZEN_COLLECTIVE_BASELINE_COMMIT}:${frozenCollectiveBaselinePath}`
+      ],
+      { encoding: "utf8" }
+    ).trim();
+    const currentBlob = execFileSync(
+      "git",
+      ["hash-object", frozenCollectiveBaselinePath],
+      { encoding: "utf8" }
+    ).trim();
+    if (
+      anchoredBlob !== FROZEN_COLLECTIVE_BASELINE_BLOB ||
+      currentBlob !== FROZEN_COLLECTIVE_BASELINE_BLOB
+    ) {
+      findings["KB-007"].push(
+        "collective-credit baseline differs from its immutable Git anchor"
+      );
+    }
+  } catch (error) {
+    findings["KB-007"].push(
+      `collective-credit baseline Git anchor cannot be verified: ${error.message}`
+    );
+  }
   const collectiveClaimCount = bank.claims.filter(
     (claim) => claim.collectiveWork
   ).length;
+  const frozenClaimProjects =
+    frozenCollectiveCreditBaseline.requiredClaimProjects;
   if (
     collectiveClaimCount <
     frozenCollectiveCreditBaseline.minimumCollectiveClaimCount
@@ -963,6 +1012,18 @@ export function evaluateKnowledgeBank(
     findings["KB-007"].push(
       `collective claim count fell below frozen baseline ${frozenCollectiveCreditBaseline.minimumCollectiveClaimCount}`
     );
+  }
+  if (Object.keys(frozenClaimProjects).length !== collectiveClaimCount) {
+    findings["KB-007"].push(
+      "frozen collective-credit baseline must classify every collective claim"
+    );
+  }
+  for (const claim of bank.claims.filter((item) => item.collectiveWork)) {
+    if (frozenClaimProjects[claim.id] !== claim.project) {
+      findings["KB-007"].push(
+        `collective claim ${claim.id} is missing or reassigned in the frozen baseline`
+      );
+    }
   }
   if (
     frozenCollectiveCreditBaseline.collectiveClaimsSha256 !==
@@ -980,8 +1041,24 @@ export function evaluateKnowledgeBank(
       "public statement text or support assignments differ from the frozen human-review baseline"
     );
   }
+  if (
+    frozenCollectiveCreditBaseline.projectionRouteBindingsSha256 !==
+    projectionRouteBindingFingerprint()
+  ) {
+    findings["KB-009"].push(
+      "projection route bindings differ from the frozen human-review baseline"
+    );
+  }
+  if (
+    frozenCollectiveCreditBaseline.publicSurfaceSha256 !==
+    publicSurfaceFingerprint()
+  ) {
+    findings["KB-009"].push(
+      "public surfaces differ from the frozen human-review baseline"
+    );
+  }
   for (const [id, project] of Object.entries(
-    frozenCollectiveCreditBaseline.requiredClaimProjects
+    frozenClaimProjects
   )) {
     const claim = bank.claims.find((item) => item.id === id);
     if (!claim || !claim.collectiveWork || claim.project !== project) {

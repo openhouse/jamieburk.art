@@ -4,6 +4,8 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
+  FROZEN_COLLECTIVE_BASELINE_BLOB,
+  FROZEN_COLLECTIVE_BASELINE_COMMIT,
   collectiveCreditFingerprint,
   documentRealizesProjection,
   evaluateKnowledgeBank,
@@ -104,6 +106,21 @@ test("reviewed credit, projection, and public-surface inventories are current", 
     publicSurfaceFingerprint(projectionSurfaceBindings),
     projectionSurfaceBindings.publicSurfaceSha256
   );
+});
+
+test("the frozen collective-credit baseline is content-addressed to an immutable commit", () => {
+  const path = ".agents/evals/baselines/collective-credit-v1.json";
+  const anchoredBlob = execFileSync(
+    "git",
+    ["rev-parse", `${FROZEN_COLLECTIVE_BASELINE_COMMIT}:${path}`],
+    { encoding: "utf8" }
+  ).trim();
+  const currentBlob = execFileSync("git", ["hash-object", path], {
+    encoding: "utf8"
+  }).trim();
+
+  assert.equal(anchoredBlob, FROZEN_COLLECTIVE_BASELINE_BLOB);
+  assert.equal(currentBlob, FROZEN_COLLECTIVE_BASELINE_BLOB);
 });
 
 test("the governed resume artifact preserves contact and collective-credit boundaries", () => {
@@ -1938,6 +1955,10 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
   );
   assert.equal(
     realizes(`export default function TestPage() { return false ? (${literal}) : null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { if (0) return (${literal}); return null; }`),
     false
   );
   assert.equal(

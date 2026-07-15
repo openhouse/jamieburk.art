@@ -823,6 +823,36 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-15"
   },
   {
+    id: "technical-stack-operating-history",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-safe-archive-summary"],
+    publicWording:
+      "Working technical history spanning JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, open-data workflows, APIs, and data-product requirements.",
+    shortWording: "Cross-stack web, data, and implementation experience",
+    detailedPublicWording:
+      "Jamie's public and public-safe project record documents implementation work across modern and legacy web stacks, deployment systems, open-data workflows, geographic tools, APIs, and data-product requirements.",
+    sourceBasis:
+      "Approved public resume, public repositories, deployed project surfaces, and public-safe aggregate code and project-history review.",
+    guardrail:
+      "This is a working-history inventory, not a claim of equal current mastery, certification, or sole authorship in every technology.",
+    doNotSay: [
+      "Expert certification in every listed technology",
+      "Sole author of every listed system",
+      "Equal current depth across every listed tool"
+    ],
+    protectedBoundaries: [
+      "Private repositories",
+      "Credentials",
+      "Client source code",
+      "Unpublished infrastructure details"
+    ],
+    surfaces: ["resume"],
+    relatedProjects: [],
+    relatedCapabilities: ["web-systems", "open-data", "implementation"],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "technical-operations-operating-backbone",
     status: "ready",
     supportLevel: "strong",

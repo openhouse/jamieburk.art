@@ -18,6 +18,8 @@ and enforceable by agents.
   the minimum collective-claim population, and critical project ownership for
   the duration of a recursive run. It is changed only through explicit human
   review, never by the fingerprint-report command.
+  The evaluator also pins that file to an immutable Git commit and blob ID, so
+  coordinated edits to current policy and baseline files fail closed.
 - `projection-surface-bindings.json` maps each approved public route to the
   source files that can render knowledge-bank projections there. An active
   route projection must use a literal `Claim` component or
