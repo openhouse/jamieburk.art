@@ -227,7 +227,7 @@ export const proofClaims: ProofClaim[] = [
       "Private correspondence",
       "Unapproved collaborator notes"
     ],
-    surfaces: ["resume", "technical-operations", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
     lastReviewed: "2026-07-14"
@@ -710,10 +710,224 @@ export const proofClaims: ProofClaim[] = [
       "Private transcript excerpts",
       "Private company context"
     ],
-    surfaces: ["technical-operations", "lab"],
+    surfaces: ["technical-operations", "work-card", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
     lastReviewed: "2026-07-14"
+  },
+  {
+    id: "product-operations-delivery-practice",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-safe-archive-summary"],
+    publicWording:
+      "Uses requirements, workflow mapping, user stories, acceptance criteria, decision logs, action tracking, rollout planning, QA, user-acceptance testing, stakeholder updates, adoption support, and handoffs to coordinate delivery.",
+    shortWording: "Requirements-to-handoff product operations practice",
+    detailedPublicWording:
+      "Jamie translates emerging needs into bounded delivery artifacts and review loops, including requirements, acceptance criteria, implementation plans, quality assurance, user-acceptance testing, rollout support, adoption materials, and durable handoffs.",
+    sourceBasis:
+      "Approved public resume and public-safe aggregate project, launch, workflow, testing, documentation, and handoff history.",
+    whyItMatters:
+      "Supports the complete product-operations capability instead of relying on a generic requirements keyword.",
+    guardrail:
+      "This is a working-practice claim, not PMP certification or a claim that every project used every method.",
+    doNotSay: ["Certified PMP", "Every project used every listed method"],
+    protectedBoundaries: ["Private test plans", "Client requirements", "Internal rollout records"],
+    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    relatedProjects: [],
+    relatedCapabilities: ["product-operations", "quality-assurance", "uat", "handoffs"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "nycac-commercial-data-framing",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Developed policy-neutral public-data framing around commercial vacancy, occupancy, lease-cost indicators, storefront data, Local Law 157, and aggregate RPIE-derived reporting.",
+    shortWording: "Policy-neutral commercial-space data framing",
+    detailedPublicWording:
+      "Jamie organized public-source questions and data-product requirements around commercial vacancy, occupancy, lease costs, storefront reporting, Local Law 157, and privacy-preserving aggregate use of RPIE-derived indicators.",
+    sourceBasis:
+      "Approved resume, public legislation and data context, and public-safe Commercial Rent Stabilization research materials.",
+    whyItMatters:
+      "Supports the specific statutory and reporting terms used in the resume while keeping the proposal distinct from an adopted City product.",
+    guardrail:
+      "Describe framing, research, and requirements work; do not imply official City adoption, access to confidential filings, or completed production reporting.",
+    doNotSay: ["The City adopted Jamie's data product", "Jamie accessed confidential RPIE filings", "The proposed reporting system is in production"],
+    protectedBoundaries: ["Confidential filings", "Private strategy", "Unvalidated transformations"],
+    surfaces: ["resume", "technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["public-data-framing", "data-product-requirements", "policy-translation"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "cross-functional-dependency-coordination",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-safe-archive-summary"],
+    publicWording:
+      "Coordinates dependencies across technical, legal-review, communications, contracts, and external-stakeholder work while keeping decision ownership visible.",
+    shortWording: "Cross-functional dependency coordination",
+    detailedPublicWording:
+      "Jamie surfaces owners, sequencing, open questions, and handoffs where implementation depends on technical, legal-review, communications, contract, or external-stakeholder decisions.",
+    sourceBasis:
+      "Approved public positioning and public-safe aggregate review of civic, client, campaign, and implementation workflows.",
+    guardrail:
+      "Coordination does not replace legal, contract, technical, communications, or executive judgment.",
+    doNotSay: ["Provides legal advice", "Owns every cross-functional decision"],
+    protectedBoundaries: ["Legal review", "Contracts", "Private stakeholder records"],
+    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    relatedProjects: [],
+    relatedCapabilities: ["dependency-coordination", "stakeholder-management", "risk-surfacing"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "operational-reporting-human-judgment",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-safe-archive-summary"],
+    publicWording:
+      "Reports what is working, what remains open, and what needs human judgment so teams can improve without overengineering.",
+    shortWording: "Operational reporting that preserves human judgment",
+    detailedPublicWording:
+      "Jamie uses status, decision, risk, and open-question records to distinguish observed progress from unresolved issues and decisions that remain with people.",
+    sourceBasis:
+      "Approved public positioning and public-safe aggregate review of running minutes, decision records, action trackers, and implementation reporting.",
+    guardrail:
+      "Do not imply automated judgment, universal measurement, or authority over decisions held by collaborators or institutions.",
+    doNotSay: ["Automates human judgment", "Owns every team decision"],
+    protectedBoundaries: ["Private status reports", "Personnel context", "Confidential decisions"],
+    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    relatedProjects: [],
+    relatedCapabilities: ["status-reporting", "decision-records", "human-review"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "nyc-artist-coalition-founding-era-role",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Served as a founding-era NYC Artist Coalition organizer, contributing civic systems, public web infrastructure, event and campaign operations, and policy communications from 2017 onward.",
+    shortWording: "Founding-era NYC Artist Coalition organizer",
+    detailedPublicWording:
+      "Jamie's documented and reviewed role began in the coalition's founding period and centered on operating and public-facing systems; this does not make him the sole founder, sole leader, or author of every coalition action.",
+    sourceBasis:
+      "Public 2017 interview and campaign records, public-safe project history, and Jamie's reviewed role attestation.",
+    guardrail:
+      "Use founding-era organizer, not sole founder; preserve collaborator, campaign, legislative, agency, and institutional credit.",
+    doNotSay: ["Sole founder of NYC Artist Coalition", "Sole coalition leader", "Author of every coalition action"],
+    protectedBoundaries: ["Unapproved collaborator identities", "Private membership records", "Private coalition history"],
+    surfaces: ["work-card", "case-study", "resume"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["coalition-operations", "civic-systems", "policy-communications"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "nyc-artist-coalition-shared-public-identity",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "One shared NYC Artist Coalition public identity carried Fair Rent NYC, Save NYC Spaces, Let NYC Dance, and Talks Not Raids across the recovered 2017-2026 account record.",
+    shortWording: "Shared public identity across four coalition campaigns",
+    detailedPublicWording:
+      "The population-accounted public corpus documents durable campaign communication under one shared account while preserving shared authorship and the explicit 1,757-item recovery gap.",
+    sourceBasis:
+      "Governed public @NYCArtC corpus, campaign markers, campaign sites, and deterministic derivation.",
+    guardrail:
+      "This supports identity continuity, not sole account authorship, audience reach, campaign outcomes, or recovery of every profile-reported post.",
+    doNotSay: ["Jamie authored every post", "All 5,124 posts were recovered", "The account caused policy outcomes"],
+    protectedBoundaries: ["Private account surfaces", "Authentication data", "Private messages", "Non-public analytics"],
+    surfaces: ["work-card", "case-study", "technical-operations"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["public-identity-systems", "campaign-communications", "archive-production"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "nyc-artist-coalition-x-source-circulation",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Among 696 recovered authored @NYCArtC posts, 446 linked outward to campaign tools, public records, reporting, forms, events, and field resources.",
+    shortWording: "446 recovered authored posts linked to public action and source paths",
+    detailedPublicWording:
+      "The governed corpus contains 529 outgoing-link occurrences representing 287 distinct authored short URLs; every one of the 1,235 distinct account-item short URLs resolved in the population-accounted pass.",
+    sourceBasis:
+      "Governed public @NYCArtC corpus, URL-resolution inventory, manifest, and deterministic derivation.",
+    guardrail:
+      "Posted destinations prove circulation only, not endorsement, article accuracy, audience reach, authorship, or causation.",
+    doNotSay: ["Every link was endorsed", "Link posting proves audience reach", "Links caused policy outcomes"],
+    protectedBoundaries: ["Private analytics", "Private messages", "Session data", "Unredacted contact details"],
+    surfaces: ["work-card", "case-study", "technical-operations"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["source-circulation", "public-communications", "archive-production"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "wowlist-public-support-practice",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "WOWList's public account and support record document organizer-facing help with location scope, list discovery, event entry, and publishing-workflow friction.",
+    shortWording: "Organizer-facing WOWList product support",
+    detailedPublicWording:
+      "The recovered public record shows a practical support loop around how organizers discovered lists, scoped locations, entered events, and used distribution workflows.",
+    sourceBasis:
+      "Governed public WOWList account corpus and public-safe product-support archive review.",
+    guardrail:
+      "Describe visible support practice, not complete customer-service coverage, resolution of every issue, or Jamie's sole authorship of every reply.",
+    doNotSay: ["Every support issue was resolved", "Jamie authored every support reply"],
+    protectedBoundaries: ["Private user data", "Private support messages", "Account credentials"],
+    surfaces: ["work-card", "case-study", "technical-operations"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["product-support", "workflow-discovery", "community-operations"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "wowlist-civic-care-circulation",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "WOWList's public account combined direct calendar links with circulation of demonstrations, vigils, fundraisers, and mutual-aid resources.",
+    shortWording: "Calendar distribution joined with civic-care circulation",
+    detailedPublicWording:
+      "The recovered account record documents a public-use pattern in which event infrastructure also circulated time-sensitive civic and community-care information.",
+    sourceBasis:
+      "Governed public WOWList account corpus and deterministic mission-relevant classification.",
+    guardrail:
+      "Treat this as a recovered public-use pattern, not proof of organizer attendance, audience reach, endorsement, or event outcomes.",
+    doNotSay: ["WOWList organized every listed action", "Posting proves attendance or outcomes"],
+    protectedBoundaries: ["Private user records", "Private organizer communications", "Non-public analytics"],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["public-information-circulation", "community-systems", "archive-production"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "kc-town-hall-neighborhood-operations",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as partners; the recovered project-account corpus contains 99 authored posts documenting or coordinating that work and visible incoming dialogue from at least three sitting Council-member accounts.",
+    shortWording: "Documented neighborhood operations and civic dialogue",
+    detailedPublicWording:
+      "The public record preserves shared program authorship, partner credit, sustained operational communication, and a narrow lower bound of visible Council-member-account dialogue.",
+    sourceBasis:
+      "Archived public program page, governed 181-item project-account corpus, and public role corroboration.",
+    guardrail:
+      "Do not assign every post or later operation to Jamie, convert visible dialogue into endorsement, or present self-reported tire outcomes as independently verified.",
+    doNotSay: ["Jamie alone ran Tired of Tires", "Council engagement proves endorsement", "Every project-account post was Jamie's"],
+    protectedBoundaries: ["Private neighborhood records", "Private messages", "Unapproved resident identities"],
+    surfaces: ["work-card", "case-study", "technical-operations"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: ["neighborhood-operations", "public-documentation", "stakeholder-communication"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "knowledge-systems-documentation-practice",
@@ -1025,7 +1239,7 @@ export const proofClaims: ProofClaim[] = [
       "HR context",
       "Confidential team information"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    surfaces: ["homepage", "resume", "technical-operations", "work-card", "about"],
     relatedProjects: [],
     relatedCapabilities: ["delivery-coordination", "risk-surfacing", "handoffs"],
     lastReviewed: "2026-07-07"

@@ -11,11 +11,13 @@ import {
   fileInventoryFingerprint,
   projectionDecisionFingerprint,
   publicSurfaceFingerprint,
+  resumeCssGeneratedText,
   resumeVisibleBlocks,
   resumeSubstantiveStatements,
   routeRealizesProjection,
   validateHybridReportCandidate,
-  validateKnowledgeDevelopmentSuite
+  validateKnowledgeDevelopmentSuite,
+  workStatementSupportRecords
 } from "../check-knowledge-development.mjs";
 import {
   validateCommittedCorpus as validateCallNycCorpus
@@ -180,12 +182,36 @@ test("the resume manifest is derived from every substantive HTML block", () => {
 
   const injected = source.replace(
     "</body>",
-    '<section><div>Unsupported profile claim.</div></section><footer><p>Unsupported footer claim.</p></footer></body>'
+    '<section><div>Unsupported profile claim.</div><aside>Unsupported aside claim.</aside><table><tbody><tr><td>Unsupported table claim.</td></tr></tbody></table><a href="#">Unsupported link claim.</a></section><footer>Unsupported footer claim.</footer></body>'
   );
   const injectedVisible = resumeVisibleBlocks(injected);
   assert.ok(injectedVisible.includes("Unsupported profile claim."));
   assert.ok(injectedVisible.includes("Unsupported footer claim."));
-  assert.equal(injectedVisible.length, visible.length + 2);
+  assert.ok(injectedVisible.includes("Unsupported aside claim."));
+  assert.ok(injectedVisible.includes("Unsupported table claim."));
+  assert.ok(injectedVisible.includes("Unsupported link claim."));
+  assert.equal(injectedVisible.length, visible.length + 5);
+  assert.deepEqual(
+    resumeCssGeneratedText('<style>.hidden::after { content: "Unsupported CSS claim."; }</style>'),
+    ["Unsupported CSS claim."]
+  );
+});
+
+test("every consequential work-data statement has field-level proof identity", () => {
+  const source = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const records = workStatementSupportRecords(source);
+  assert.equal(records.length, projectionSurfaceBindings.expectedWorkStatementCount);
+  assert.equal(new Set(records.map((record) => record.id)).size, records.length);
+  assert.ok(records.every((record) => record.proofs.length > 0));
+
+  const missingMapping = source.replace(
+    'role: ["hje-modernization-stewardship"],',
+    "role: [],"
+  );
+  assert.throws(
+    () => workStatementSupportRecords(missingMapping),
+    /lacks text or statement-level proof IDs/
+  );
 });
 
 test("campaign press corpus preserves all memberships without duplicating articles", () => {
@@ -2014,6 +2040,37 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     false
   );
   assert.equal(
+    realizes(`export default function TestPage() { return true ? null : (${literal}); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return !true && (${literal}); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { while (false) return (${literal}); return null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { for (; false;) return (${literal}); return null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return [].map(() => (${literal})); }`),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `export function Hidden() { return (${literal}); }`,
+      claim,
+      projection,
+      surface,
+      knowledgeBank,
+      "apps/www/src/components/Hidden.tsx"
+    ),
+    false
+  );
+  assert.equal(
     realizes(`export default function TestPage() { return process.env.NEXT_PUBLIC_SHOW ? (${literal}) : null; }`),
     false
   );
@@ -2076,6 +2133,7 @@ test("MDX route reachability rejects conditional and unused component bindings",
   assert.equal(realizes(`{false ? (${literal}) : null}`), false);
   assert.equal(realizes(`{0 ? (${literal}) : null}`), false);
   assert.equal(realizes(`{null ? (${literal}) : null}`), false);
+  assert.equal(realizes(`{Boolean(0) ? (${literal}) : null}`), false);
   assert.equal(
     realizes(`{process.env.NEXT_PUBLIC_SHOW && (${literal})}`),
     false
@@ -2089,6 +2147,18 @@ test("MDX route reachability rejects conditional and unused component bindings",
     false
   );
   assert.equal(realizes(`const Hidden = () => (${literal});`), false);
+  assert.equal(
+    realizes(`export const Hidden = () =>\n  (${literal});`),
+    false
+  );
+  assert.equal(
+    realizes(`const unused = (${literal});`),
+    false
+  );
+  assert.equal(
+    realizes(`const unused = { render() { return (${literal}); } };`),
+    false
+  );
 });
 
 test("unused TypeScript projection resolvers do not satisfy route coverage", () => {

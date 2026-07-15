@@ -305,6 +305,156 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## product-operations-delivery-practice - Product operations and delivery
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / public-safe archive summary
+**Public wording:** Uses requirements, workflow mapping, user stories, acceptance criteria, decision logs, action tracking, rollout planning, QA, user-acceptance testing, stakeholder updates, adoption support, and handoffs to coordinate delivery.
+**Detailed public-safe wording:** Jamie translates emerging needs into bounded delivery artifacts and review loops, including requirements, acceptance criteria, implementation plans, quality assurance, user-acceptance testing, rollout support, adoption materials, and durable handoffs.
+**Where to project:** Homepage, Resume, Technical Operations, About.
+**Why it matters:** Supports the complete product-operations capability instead of relying on a generic requirements keyword.
+**Guardrail:** This is a working-practice claim, not PMP certification or a claim that every project used every method.
+**Do not say:** Certified PMP; every project used every listed method.
+**Protected boundaries:** Private test plans, client requirements, and internal rollout records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-commercial-data-framing - Commercial-space data framing
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Approved resume / public source / public-safe archive summary
+**Public wording:** Developed policy-neutral public-data framing around commercial vacancy, occupancy, lease-cost indicators, storefront data, Local Law 157, and aggregate RPIE-derived reporting.
+**Detailed public-safe wording:** Jamie organized public-source questions and data-product requirements around commercial vacancy, occupancy, lease costs, storefront reporting, Local Law 157, and privacy-preserving aggregate use of RPIE-derived indicators.
+**Where to project:** Resume, Technical Operations, Fair Rent NYC case study.
+**Why it matters:** Supports the specific statutory and reporting terms used in the resume while keeping the proposal distinct from an adopted City product.
+**Guardrail:** Describe framing, research, and requirements work; do not imply official City adoption, access to confidential filings, or completed production reporting.
+**Do not say:** The City adopted Jamie's data product; Jamie accessed confidential RPIE filings; the proposed reporting system is in production.
+**Protected boundaries:** Confidential filings, private strategy, and unvalidated transformations stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## cross-functional-dependency-coordination - Dependency coordination
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / public-safe archive summary
+**Public wording:** Coordinates dependencies across technical, legal-review, communications, contracts, and external-stakeholder work while keeping decision ownership visible.
+**Detailed public-safe wording:** Jamie surfaces owners, sequencing, open questions, and handoffs where implementation depends on technical, legal-review, communications, contract, or external-stakeholder decisions.
+**Where to project:** Homepage, Resume, Technical Operations, About.
+**Why it matters:** Supports cross-functional coordination as a full proposition.
+**Guardrail:** Coordination does not replace legal, contract, technical, communications, or executive judgment.
+**Do not say:** Provides legal advice; owns every cross-functional decision.
+**Protected boundaries:** Legal review, contracts, and private stakeholder records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## operational-reporting-human-judgment - Operational reporting
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / public-safe archive summary
+**Public wording:** Reports what is working, what remains open, and what needs human judgment so teams can improve without overengineering.
+**Detailed public-safe wording:** Jamie uses status, decision, risk, and open-question records to distinguish observed progress from unresolved issues and decisions that remain with people.
+**Where to project:** Homepage, Resume, Technical Operations, About.
+**Why it matters:** Supports reporting and human-judgment language directly.
+**Guardrail:** Do not imply automated judgment, universal measurement, or authority over decisions held by collaborators or institutions.
+**Do not say:** Automates human judgment; owns every team decision.
+**Protected boundaries:** Private status reports, personnel context, and confidential decisions stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-founding-era-role - Founding-era coalition role
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Served as a founding-era NYC Artist Coalition organizer, contributing civic systems, public web infrastructure, event and campaign operations, and policy communications from 2017 onward.
+**Detailed public-safe wording:** Jamie's documented and reviewed role began in the coalition's founding period and centered on operating and public-facing systems; this does not make him the sole founder, sole leader, or author of every coalition action.
+**Where to project:** Work card, Fair Rent NYC case study, Resume.
+**Why it matters:** Names Jamie's actual organizational role without converting collective history into sole credit.
+**Guardrail:** Use founding-era organizer, not sole founder; preserve collaborator, campaign, legislative, agency, and institutional credit.
+**Do not say:** Sole founder of NYC Artist Coalition; sole coalition leader; author of every coalition action.
+**Protected boundaries:** Unapproved collaborator identities, private membership records, and private coalition history stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-shared-public-identity - Shared campaign identity
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** One shared NYC Artist Coalition public identity carried Fair Rent NYC, Save NYC Spaces, Let NYC Dance, and Talks Not Raids across the recovered 2017-2026 account record.
+**Detailed public-safe wording:** The population-accounted public corpus documents durable campaign communication under one shared account while preserving shared authorship and the explicit 1,757-item recovery gap.
+**Where to project:** Work card, Fair Rent NYC case study, Technical Operations.
+**Why it matters:** Makes the public identity system and campaign continuity visible without assigning every post to Jamie.
+**Guardrail:** This supports identity continuity, not sole account authorship, audience reach, campaign outcomes, or recovery of every profile-reported post.
+**Do not say:** Jamie authored every post; all 5,124 posts were recovered; the account caused policy outcomes.
+**Protected boundaries:** Private account surfaces, authentication data, private messages, and non-public analytics stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-x-source-circulation - Public source circulation
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Among 696 recovered authored @NYCArtC posts, 446 linked outward to campaign tools, public records, reporting, forms, events, and field resources.
+**Detailed public-safe wording:** The governed corpus contains 529 outgoing-link occurrences representing 287 distinct authored short URLs; every one of the 1,235 distinct account-item short URLs resolved in the population-accounted pass.
+**Where to project:** Work card, Fair Rent NYC case study, Technical Operations.
+**Why it matters:** Documents the account as a public source-and-action-path system.
+**Guardrail:** Posted destinations prove circulation only, not endorsement, article accuracy, audience reach, authorship, or causation.
+**Do not say:** Every link was endorsed; link posting proves audience reach; links caused policy outcomes.
+**Protected boundaries:** Private analytics, private messages, session data, and unredacted contact details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-public-support-practice - WOWList public product support
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** WOWList's public account and support record document organizer-facing help with location scope, list discovery, event entry, and publishing-workflow friction.
+**Detailed public-safe wording:** The recovered public record shows a practical support loop around how organizers discovered lists, scoped locations, entered events, and used distribution workflows.
+**Where to project:** Work card, WOWList case study, Technical Operations.
+**Why it matters:** Supports the organizer-facing product-operations claim directly.
+**Guardrail:** Describe visible support practice, not complete customer-service coverage, resolution of every issue, or Jamie's sole authorship of every reply.
+**Do not say:** Every support issue was resolved; Jamie authored every support reply.
+**Protected boundaries:** Private user data, private support messages, and account credentials stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-civic-care-circulation - WOWList civic-care circulation
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** WOWList's public account combined direct calendar links with circulation of demonstrations, vigils, fundraisers, and mutual-aid resources.
+**Detailed public-safe wording:** The recovered account record documents a public-use pattern in which event infrastructure also circulated time-sensitive civic and community-care information.
+**Where to project:** Work card, WOWList case study.
+**Why it matters:** Preserves a mission-relevant use pattern beyond product feature inventory.
+**Guardrail:** Treat this as a recovered public-use pattern, not proof of organizer attendance, audience reach, endorsement, or event outcomes.
+**Do not say:** WOWList organized every listed action; posting proves attendance or outcomes.
+**Protected boundaries:** Private user records, private organizer communications, and non-public analytics stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-neighborhood-operations - KC Town Hall neighborhood operations
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as partners; the recovered project-account corpus contains 99 authored posts documenting or coordinating that work and visible incoming dialogue from at least three sitting Council-member accounts.
+**Detailed public-safe wording:** The public record preserves shared program authorship, partner credit, sustained operational communication, and a narrow lower bound of visible Council-member-account dialogue.
+**Where to project:** Work card, KC Town Hall case study, Technical Operations.
+**Why it matters:** Supports the neighborhood-operations and civic-dialogue statements while preserving shared credit.
+**Guardrail:** Do not assign every post or later operation to Jamie, convert visible dialogue into endorsement, or present self-reported tire outcomes as independently verified.
+**Do not say:** Jamie alone ran Tired of Tires; Council engagement proves endorsement; every project-account post was Jamie's.
+**Protected boundaries:** Private neighborhood records, private messages, and unapproved resident identities stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## knowledge-systems-documentation-practice - Knowledge systems and documentation
 
 **Status:** Ready

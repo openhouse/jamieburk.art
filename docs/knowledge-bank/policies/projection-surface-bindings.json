@@ -1,7 +1,8 @@
 {
   "version": 3,
+  "expectedWorkStatementCount": 95,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "38ed08446e5418f25fb875edeeec17f4e3c8faac578b6788016a56b37e8a4912",
+  "publicSurfaceSha256": "2628b30a93ea8cbaeda765c6c3b7d52a0035a7990bce8db46f91cd29accd20b6",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -43,12 +44,15 @@
   "publicSurfaceFiles": [
     "apps/www/mdx-components.tsx",
     "apps/www/next.config.ts",
+    "apps/www/src/app/globals.css",
     "apps/www/src/data/proofs.ts",
     "apps/www/src/data/knowledge-bank/public-registry.json",
     "apps/www/src/data/knowledge-bank/public.ts",
     "apps/www/src/data/knowledge-bank/schema.ts",
     "apps/www/src/data/site.ts",
     "apps/www/src/data/work.ts",
+    "apps/www/src/lib/metadata.ts",
+    "apps/www/src/lib/site-url.ts",
     "apps/www/src/lib/work.ts",
     "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
     "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
@@ -112,14 +116,14 @@
         "text": "Product operations & implementation Requirements, workflow mapping, user stories, acceptance criteria, decision logs, action tracking, rollout planning, UAT / QA, stakeholder updates, adoption, and handoffs.",
         "pdfAnchor": "Product operations & implementation",
         "claims": [],
-        "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "requirements" }]
+        "proofs": [{ "id": "product-operations-delivery-practice", "anchor": "acceptance criteria" }]
       },
       {
         "id": "capability-knowledge-systems",
         "text": "Knowledge systems & documentation Documentation architecture, meeting synthesis, source maps, shared drives, public guidance, resource libraries, reusable templates, and searchable reference systems.",
         "pdfAnchor": "Knowledge systems & documentation",
         "claims": [],
-        "proofs": [{ "id": "career-operating-structure-14-years", "anchor": "documentation" }]
+        "proofs": [{ "id": "knowledge-systems-documentation-practice", "anchor": "documentation" }]
       },
       {
         "id": "capability-web-open-data",
@@ -203,7 +207,7 @@
         "id": "experience-nycac-infrastructure",
         "text": "Build and steward campaign and knowledge infrastructure for commercial rent stabilization, storefront stability, cultural-space advocacy, public-data framing, and civic action.",
         "claims": [],
-        "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "public-data" }]
+        "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "infrastructure" }]
       },
       {
         "id": "experience-nycac-coordination",
@@ -221,7 +225,7 @@
         "id": "experience-nycac-public-data",
         "text": "Developed policy-neutral public-data framing around commercial vacancy, occupancy, lease-cost indicators, storefront data, Local Law 157, and RPIE-derived aggregate reporting.",
         "claims": [],
-        "proofs": [{ "id": "nyc-artist-coalition-civic-systems", "anchor": "public-data" }]
+        "proofs": [{ "id": "nycac-commercial-data-framing", "anchor": "Local Law 157" }]
       },
       {
         "id": "experience-wowlist-role",
@@ -318,7 +322,7 @@
       "surface": "/work/technical-operations",
       "text": "Coordinate dependencies across technical, legal, communications, contracts, and external-stakeholder work.",
       "claims": [],
-      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "technical" }]
+      "proofs": [{ "id": "cross-functional-dependency-coordination", "anchor": "contracts" }]
     },
     {
       "id": "technical-operations-records",
@@ -334,7 +338,7 @@
       "surface": "/work/technical-operations",
       "text": "Report what is working, what remains open, and what needs human judgment so teams can improve without overengineering.",
       "claims": [],
-      "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "teams" }]
+      "proofs": [{ "id": "operational-reporting-human-judgment", "anchor": "human judgment" }]
     },
     {
       "id": "technical-operations-hje-action",
@@ -442,7 +446,7 @@
         "surface": "/",
         "text": "Requirements, workflows, status rhythms, risk notes, implementation plans, quality assurance, user-acceptance testing, and handoffs.",
         "claims": [],
-        "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "requirements" }]
+        "proofs": [{ "id": "product-operations-delivery-practice", "anchor": "quality assurance" }]
       },
       {
         "id": "capability-product-operations",
@@ -450,7 +454,7 @@
         "surface": "/",
         "text": "Planning systems, decision logs, feedback loops, launch support, adoption materials, and operating memory.",
         "claims": [],
-        "proofs": [{ "id": "technical-operations-operating-backbone", "anchor": "launch" }]
+        "proofs": [{ "id": "product-operations-delivery-practice", "anchor": "adoption materials" }]
       },
       {
         "id": "capability-knowledge-systems",

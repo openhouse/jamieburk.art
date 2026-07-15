@@ -44,6 +44,17 @@ export type Artifact = {
   type: ArtifactType;
 };
 
+export type WorkStatementProofs = {
+  role: string[];
+  summary: string[];
+  whatWasUnclear: string[];
+  whatBecameUsable: string[];
+  roleFit: string[];
+  artifacts: string[][];
+  evidence: string[][];
+  known: string[];
+};
+
 export type WorkMeta = {
   title: string;
   slug: string;
@@ -57,6 +68,7 @@ export type WorkMeta = {
   priority: number;
   visibility: Visibility;
   proofBankIds: string[];
+  statementProofs: WorkStatementProofs;
   whatWasUnclear: string;
   whatBecameUsable: string;
   artifactTypes: ArtifactType[];

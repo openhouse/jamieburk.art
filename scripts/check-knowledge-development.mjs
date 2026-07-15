@@ -12,6 +12,7 @@ import { proofClaims } from "../apps/www/src/data/proofs.ts";
 const suitePath = ".agents/evals/knowledge-bank-development.json";
 const frozenCollectiveBaselinePath =
   ".agents/evals/baselines/collective-credit-v1.json";
+const workDataPath = "apps/www/src/data/work.ts";
 export const FROZEN_COLLECTIVE_BASELINE_TAG =
   "refs/tags/knowledge-bank-policy-baseline-2026-07-15-v1";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
@@ -60,12 +61,15 @@ const requiredPublicSurfaceRoots = new Map([
 const requiredPublicSurfaceFiles = new Set([
   "apps/www/mdx-components.tsx",
   "apps/www/next.config.ts",
+  "apps/www/src/app/globals.css",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/knowledge-bank/public.ts",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/site.ts",
   "apps/www/src/data/work.ts",
+  "apps/www/src/lib/metadata.ts",
+  "apps/www/src/lib/site-url.ts",
   "apps/www/src/lib/work.ts",
   "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
   "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
@@ -395,6 +399,11 @@ export function resumeVisibleBlocks(source) {
   function visit(node, hidden = false) {
     const isHidden = hidden || ["head", "script", "style", "template"].includes(node.tag);
     if (isHidden) return;
+    if (node.tag === "#text") {
+      const text = decodedElementText(node.text);
+      if (text) blocks.push(text);
+      return;
+    }
     if (resumeAtomicBlockTags.has(node.tag)) {
       const text = decodedElementText(htmlNodeText(node));
       if (text) blocks.push(text);
@@ -419,6 +428,15 @@ export function resumeVisibleBlocks(source) {
   return blocks;
 }
 
+export function resumeCssGeneratedText(source) {
+  return [...source.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)]
+    .flatMap((style) =>
+      [...style[1].matchAll(/\bcontent\s*:\s*(["'])([\s\S]*?)\1/gi)]
+        .map((match) => normalizedText(match[2]))
+        .filter(Boolean)
+    );
+}
+
 function normalizedIncludes(haystack, needle) {
   return normalizedText(haystack)
     .toLowerCase()
@@ -428,6 +446,8 @@ function normalizedIncludes(haystack, needle) {
 function proofSurfaceForRoute(surface) {
   if (surface === "/resume") return "resume";
   if (surface === "/work/technical-operations") return "technical-operations";
+  if (surface === "/work") return "work-card";
+  if (surface.startsWith("/work/")) return "case-study";
   return null;
 }
 
@@ -576,8 +596,176 @@ export function statementSupportFingerprint(policy = projectionSurfaceBindings) 
         claims: statement.claims,
         proofs: statement.proofs
       }))
-      .sort((left, right) => left.id.localeCompare(right.id))
+      .sort((left, right) => left.id.localeCompare(right.id)),
+    work: {
+      expectedStatementCount: policy.expectedWorkStatementCount,
+      statements: workStatementSupportRecords().map((statement) => ({
+        id: statement.id,
+        text: statement.text,
+        proofs: statement.proofs,
+        surfaces: statement.surfaces
+      }))
+    }
   });
+}
+
+function unwrappedTsExpression(node) {
+  if (
+    ts.isAsExpression(node) ||
+    ts.isSatisfiesExpression(node) ||
+    ts.isParenthesizedExpression(node)
+  ) {
+    return unwrappedTsExpression(node.expression);
+  }
+  return node;
+}
+
+function objectProperty(object, name, sourceFile) {
+  return object.properties.find(
+    (property) =>
+      ts.isPropertyAssignment(property) &&
+      property.name.getText(sourceFile).replace(/["']/g, "") === name
+  )?.initializer;
+}
+
+function literalStringValue(node) {
+  if (!node) return null;
+  const value = unwrappedTsExpression(node);
+  return ts.isStringLiteral(value) || ts.isNoSubstitutionTemplateLiteral(value)
+    ? value.text
+    : null;
+}
+
+function stringArrayValue(node) {
+  if (!node) return null;
+  const value = unwrappedTsExpression(node);
+  if (!ts.isArrayLiteralExpression(value)) return null;
+  const strings = value.elements.map(literalStringValue);
+  return strings.every((item) => item !== null) ? strings : null;
+}
+
+function nestedStringArraysValue(node) {
+  if (!node) return null;
+  const value = unwrappedTsExpression(node);
+  if (!ts.isArrayLiteralExpression(value)) return null;
+  const arrays = value.elements.map(stringArrayValue);
+  return arrays.every((item) => item !== null) ? arrays : null;
+}
+
+export function workStatementSupportRecords(
+  source = readFileSync(workDataPath, "utf8")
+) {
+  const sourceFile = ts.createSourceFile(
+    workDataPath,
+    source,
+    ts.ScriptTarget.Latest,
+    true,
+    ts.ScriptKind.TS
+  );
+  let workItemsInput = null;
+  function findWorkItems(node) {
+    if (
+      ts.isVariableDeclaration(node) &&
+      ts.isIdentifier(node.name) &&
+      node.name.text === "workItemsInput"
+    ) {
+      workItemsInput = unwrappedTsExpression(node.initializer);
+    }
+    ts.forEachChild(node, findWorkItems);
+  }
+  findWorkItems(sourceFile);
+  if (!workItemsInput || !ts.isArrayLiteralExpression(workItemsInput)) {
+    throw new Error("workItemsInput must remain a literal governed array");
+  }
+
+  const records = [];
+  for (const rawItem of workItemsInput.elements) {
+    const item = unwrappedTsExpression(rawItem);
+    if (!ts.isObjectLiteralExpression(item)) {
+      throw new Error("every work item must remain a literal governed object");
+    }
+    const slug = literalStringValue(objectProperty(item, "slug", sourceFile));
+    const proofBankIds = stringArrayValue(
+      objectProperty(item, "proofBankIds", sourceFile)
+    );
+    const proofMap = unwrappedTsExpression(
+      objectProperty(item, "statementProofs", sourceFile)
+    );
+    if (!slug || !proofBankIds || !ts.isObjectLiteralExpression(proofMap)) {
+      throw new Error("every work item needs a slug, proofBankIds, and statementProofs");
+    }
+
+    const caseStudySurface = `/work/${slug}`;
+    const sharedSurfaces = ["/work", caseStudySurface];
+    const add = (key, textNode, proofs, surfaces) => {
+      const text =
+        literalStringValue(textNode) ??
+        unwrappedTsExpression(textNode).getText(sourceFile);
+      if (!text || !proofs || proofs.length === 0) {
+        throw new Error(`${slug}.${key} lacks text or statement-level proof IDs`);
+      }
+      for (const proofId of proofs) {
+        if (!proofBankIds.includes(proofId)) {
+          throw new Error(`${slug}.${key} uses ${proofId} outside proofBankIds`);
+        }
+      }
+      records.push({ id: `${slug}.${key}`, text, proofs, surfaces });
+    };
+
+    for (const key of [
+      "role",
+      "summary",
+      "whatWasUnclear",
+      "whatBecameUsable",
+      "roleFit"
+    ]) {
+      add(
+        key,
+        objectProperty(item, key, sourceFile),
+        stringArrayValue(objectProperty(proofMap, key, sourceFile)),
+        sharedSurfaces
+      );
+    }
+
+    const artifacts = unwrappedTsExpression(objectProperty(item, "artifacts", sourceFile));
+    const artifactProofs = nestedStringArraysValue(
+      objectProperty(proofMap, "artifacts", sourceFile)
+    );
+    if (!ts.isArrayLiteralExpression(artifacts) || artifactProofs?.length !== artifacts.elements.length) {
+      throw new Error(`${slug}.artifacts statement-proof count is not complete`);
+    }
+    artifacts.elements.forEach((rawArtifact, index) => {
+      const artifact = unwrappedTsExpression(rawArtifact);
+      add(
+        `artifacts.${index}`,
+        objectProperty(artifact, "description", sourceFile),
+        artifactProofs[index],
+        [caseStudySurface]
+      );
+    });
+
+    const evidence = unwrappedTsExpression(objectProperty(item, "evidence", sourceFile));
+    const evidenceProofs = nestedStringArraysValue(
+      objectProperty(proofMap, "evidence", sourceFile)
+    );
+    if (!ts.isArrayLiteralExpression(evidence) || evidenceProofs?.length !== evidence.elements.length) {
+      throw new Error(`${slug}.evidence statement-proof count is not complete`);
+    }
+    evidence.elements.forEach((statement, index) => {
+      add(`evidence.${index}`, statement, evidenceProofs[index], []);
+    });
+
+    const knownOpenProtected = unwrappedTsExpression(
+      objectProperty(item, "knownOpenProtected", sourceFile)
+    );
+    add(
+      "known",
+      objectProperty(knownOpenProtected, "known", sourceFile),
+      stringArrayValue(objectProperty(proofMap, "known", sourceFile)),
+      [caseStudySurface]
+    );
+  }
+  return records;
 }
 
 export function projectionRouteBindingFingerprint(
@@ -708,6 +896,27 @@ function identifierIsConstFalse(identifier, sourceFile) {
   return found;
 }
 
+function identifierIsConstTrue(identifier, sourceFile) {
+  let found = false;
+  function visit(node) {
+    if (found) return;
+    if (
+      ts.isVariableDeclaration(node) &&
+      ts.isIdentifier(node.name) &&
+      node.name.text === identifier &&
+      expressionIsAlwaysTrue(node.initializer, sourceFile) &&
+      ts.isVariableDeclarationList(node.parent) &&
+      (node.parent.flags & ts.NodeFlags.Const) !== 0
+    ) {
+      found = true;
+      return;
+    }
+    ts.forEachChild(node, visit);
+  }
+  visit(sourceFile);
+  return found;
+}
+
 function expressionIsAlwaysFalse(expression, sourceFile) {
   if (!expression) return false;
   if (
@@ -717,6 +926,14 @@ function expressionIsAlwaysFalse(expression, sourceFile) {
     return true;
   }
   if (ts.isNumericLiteral(expression) && Number(expression.text) === 0) return true;
+  if (ts.isStringLiteral(expression) && expression.text.length === 0) return true;
+  if (ts.isIdentifier(expression) && expression.text === "undefined") return true;
+  if (
+    ts.isPrefixUnaryExpression(expression) &&
+    expression.operator === ts.SyntaxKind.ExclamationToken
+  ) {
+    return expressionIsAlwaysTrue(expression.operand, sourceFile);
+  }
   if (
     ts.isCallExpression(expression) &&
     ts.isIdentifier(expression.expression) &&
@@ -739,19 +956,40 @@ function expressionIsAlwaysFalse(expression, sourceFile) {
   );
 }
 
-function expressionIsAlwaysTrue(expression) {
+function expressionIsAlwaysTrue(expression, sourceFile) {
   if (!expression) return false;
   if (expression.kind === ts.SyntaxKind.TrueKeyword) return true;
   if (ts.isNumericLiteral(expression) && Number(expression.text) !== 0) return true;
+  if (ts.isStringLiteral(expression) && expression.text.length > 0) return true;
+  if (ts.isArrayLiteralExpression(expression) || ts.isObjectLiteralExpression(expression)) {
+    return true;
+  }
+  if (
+    ts.isPrefixUnaryExpression(expression) &&
+    expression.operator === ts.SyntaxKind.ExclamationToken
+  ) {
+    return expressionIsAlwaysFalse(expression.operand, sourceFile);
+  }
+  if (
+    ts.isCallExpression(expression) &&
+    ts.isIdentifier(expression.expression) &&
+    expression.expression.text === "Boolean" &&
+    expression.arguments.length === 1
+  ) {
+    return expressionIsAlwaysTrue(expression.arguments[0], sourceFile);
+  }
   if (
     ts.isParenthesizedExpression(expression) ||
     ts.isAsExpression(expression) ||
     ts.isTypeAssertionExpression(expression) ||
     ts.isSatisfiesExpression(expression)
   ) {
-    return expressionIsAlwaysTrue(expression.expression);
+    return expressionIsAlwaysTrue(expression.expression, sourceFile);
   }
-  return false;
+  return (
+    ts.isIdentifier(expression) &&
+    identifierIsConstTrue(expression.text, sourceFile)
+  );
 }
 
 function statementAlwaysExits(statement, sourceFile) {
@@ -764,7 +1002,7 @@ function statementAlwaysExits(statement, sourceFile) {
   }
   return (
     ts.isIfStatement(statement) &&
-    expressionIsAlwaysTrue(statement.expression) &&
+    expressionIsAlwaysTrue(statement.expression, sourceFile) &&
     statementAlwaysExits(statement.thenStatement, sourceFile)
   );
 }
@@ -789,30 +1027,57 @@ function followsUnconditionalExit(node, sourceFile) {
 function hasDisallowedRuntimeGate(node, sourceFile) {
   if (followsUnconditionalExit(node, sourceFile)) return true;
   for (let current = node.parent; current; current = current.parent) {
-    const condition = ts.isConditionalExpression(current)
-      ? current.condition
-      : ts.isIfStatement(current)
-        ? current.expression
-        : null;
+    if (ts.isConditionalExpression(current)) {
+      if (
+        hasProcessEnv(current.condition) ||
+        (node.pos >= current.whenTrue.pos &&
+          node.end <= current.whenTrue.end &&
+          expressionIsAlwaysFalse(current.condition, sourceFile)) ||
+        (node.pos >= current.whenFalse.pos &&
+          node.end <= current.whenFalse.end &&
+          expressionIsAlwaysTrue(current.condition, sourceFile))
+      ) {
+        return true;
+      }
+    }
+    if (ts.isIfStatement(current)) {
+      const inThen =
+        node.pos >= current.thenStatement.pos &&
+        node.end <= current.thenStatement.end;
+      const inElse =
+        current.elseStatement &&
+        node.pos >= current.elseStatement.pos &&
+        node.end <= current.elseStatement.end;
+      if (
+        hasProcessEnv(current.expression) ||
+        (inThen && expressionIsAlwaysFalse(current.expression, sourceFile)) ||
+        (inElse && expressionIsAlwaysTrue(current.expression, sourceFile))
+      ) {
+        return true;
+      }
+    }
     if (
-      condition &&
-      (expressionIsAlwaysFalse(condition, sourceFile) || hasProcessEnv(condition))
+      (ts.isWhileStatement(current) || ts.isDoStatement(current)) &&
+      expressionIsAlwaysFalse(current.expression, sourceFile)
+    ) {
+      return true;
+    }
+    if (
+      ts.isForStatement(current) &&
+      current.condition &&
+      expressionIsAlwaysFalse(current.condition, sourceFile)
     ) {
       return true;
     }
     if (
       ts.isBinaryExpression(current) &&
-      [
-        ts.SyntaxKind.AmpersandAmpersandToken,
-        ts.SyntaxKind.BarBarToken,
-        ts.SyntaxKind.EqualsEqualsToken,
-        ts.SyntaxKind.EqualsEqualsEqualsToken,
-        ts.SyntaxKind.ExclamationEqualsToken,
-        ts.SyntaxKind.ExclamationEqualsEqualsToken
-      ].includes(current.operatorToken.kind) &&
-      (expressionIsAlwaysFalse(current.left, sourceFile) ||
-        expressionIsAlwaysFalse(current.right, sourceFile) ||
-        hasProcessEnv(current))
+      node.pos >= current.right.pos &&
+      node.end <= current.right.end &&
+      (hasProcessEnv(current.left) ||
+        (current.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken &&
+          expressionIsAlwaysFalse(current.left, sourceFile)) ||
+        (current.operatorToken.kind === ts.SyntaxKind.BarBarToken &&
+          expressionIsAlwaysTrue(current.left, sourceFile)))
     ) {
       return true;
     }
@@ -820,7 +1085,26 @@ function hasDisallowedRuntimeGate(node, sourceFile) {
   return false;
 }
 
-function isReachableModuleNode(node, sourcePath) {
+function exportedComponentHasRenderer(sourcePath, exportName, surface) {
+  const sourceStem = basename(sourcePath).replace(/\.[^.]+$/, "");
+  for (const routePath of routeFilesForSurface(surface)) {
+    if (routePath === sourcePath) continue;
+    let content;
+    try {
+      content = readFileSync(routePath, "utf8");
+    } catch {
+      continue;
+    }
+    const importsComponent = new RegExp(
+      `import\\s+(?:\\{[^}]*\\b${exportName}\\b[^}]*\\}|${exportName})[\\s\\S]*?from\\s+["'][^"']*${sourceStem}["']`
+    ).test(content);
+    const rendersComponent = new RegExp(`<${exportName}\\b`).test(content);
+    if (importsComponent && rendersComponent) return true;
+  }
+  return false;
+}
+
+function isReachableModuleNode(node, sourcePath, surface) {
   const expectedExportName = basename(sourcePath).replace(/\.[^.]+$/, "");
   for (let current = node.parent; current; current = current.parent) {
     if (ts.isVariableDeclaration(current) && ts.isJsxSelfClosingElement(node)) {
@@ -836,7 +1120,8 @@ function isReachableModuleNode(node, sourcePath) {
       }
       if (
         hasModifier(current, ts.SyntaxKind.ExportKeyword) &&
-        current.name?.text === expectedExportName
+        current.name &&
+        exportedComponentHasRenderer(sourcePath, current.name.text, surface)
       ) {
         return true;
       }
@@ -849,6 +1134,10 @@ function isReachableModuleNode(node, sourcePath) {
         ts.isPropertyAccessExpression(current.parent.expression) &&
         ["map", "flatMap"].includes(current.parent.expression.name.text)
       ) {
+        const receiver = current.parent.expression.expression;
+        if (ts.isArrayLiteralExpression(receiver) && receiver.elements.length === 0) {
+          return false;
+        }
         continue;
       }
       return false;
@@ -864,7 +1153,14 @@ function isReachableModuleNode(node, sourcePath) {
       if (
         exported &&
         (names.includes(expectedExportName) ||
-          (sourcePath.endsWith("/data/work.ts") && names.includes("workItems")))
+          (sourcePath.endsWith("/data/work.ts") &&
+            names.some((name) => ["workItems", "workItemsInput"].includes(name))))
+      ) {
+        return true;
+      }
+      if (
+        sourcePath.endsWith("/data/work.ts") &&
+        names.includes("workItemsInput")
       ) {
         return true;
       }
@@ -909,7 +1205,7 @@ function tsxRouteRealizesProjection(
       ts.isJsxSelfClosingElement(node) &&
       node.tagName.getText(sourceFile) === "Claim" &&
       !hasDisallowedRuntimeGate(node, sourceFile) &&
-      isReachableModuleNode(node, sourcePath)
+      isReachableModuleNode(node, sourcePath, surface)
     ) {
       const tag = node.getText(sourceFile);
       if (
@@ -927,7 +1223,7 @@ function tsxRouteRealizesProjection(
       node.expression.getText(sourceFile) === "getClaimProjection" &&
       !hasDisallowedRuntimeGate(node, sourceFile) &&
       (!sourcePath.endsWith("/data/work.ts") || isDirectWorkSummaryResolver(node)) &&
-      isReachableModuleNode(node, sourcePath)
+      isReachableModuleNode(node, sourcePath, surface)
     ) {
       const values = node.arguments.map((argument) =>
         ts.isStringLiteral(argument) ? argument.text : null
@@ -990,7 +1286,7 @@ function mdxClaimIsReachable(content, index) {
   const before = content.slice(0, index);
   const nearby = before.slice(-1200);
   if (
-    /(?:\b[A-Za-z_$][\w$]*|\b(?:false|null)\b|(?:^|\W)0|process\.env[^\s]*)\s*(?:&&|\?)\s*\(?\s*$/.test(
+    /(?:Boolean\s*\(\s*(?:false|null|0)\s*\)|\b[A-Za-z_$][\w$]*|\b(?:false|null)\b|(?:^|\W)0|process\.env[^\s]*)\s*(?:&&|\?)\s*\(?\s*$/.test(
       nearby
     )
   ) {
@@ -998,7 +1294,7 @@ function mdxClaimIsReachable(content, index) {
   }
 
   const declarationPattern =
-    /(?:^|\n)[ \t]*(?:export\s+)?(?:default\s+)?function\s+[A-Za-z_$][\w$]*\s*\([^)]*\)\s*\{|(?:^|\n)[ \t]*(?:export\s+)?(?:const|let)\s+[A-Za-z_$][\w$]*\s*=\s*(?:async\s*)?\([^)]*\)\s*=>/gm;
+    /(?:^|\n)[ \t]*(?:export\s+)?(?:default\s+)?function\s+[A-Za-z_$][\w$]*\s*\([^)]*\)\s*\{|(?:^|\n)[ \t]*(?:export\s+)?(?:const|let)\s+[A-Za-z_$][\w$]*\s*=/gm;
   const declarations = [...before.matchAll(declarationPattern)];
   const declaration = declarations.at(-1);
   if (declaration) {
@@ -1007,6 +1303,8 @@ function mdxClaimIsReachable(content, index) {
       (componentPrefix.match(/\{/g) ?? []).length -
       (componentPrefix.match(/\}/g) ?? []).length;
     const arrowIndex = componentPrefix.indexOf("=>");
+    const isVariableDeclaration = /\b(?:const|let)\b/.test(declaration[0]);
+    if (isVariableDeclaration && !componentPrefix.includes(";")) return false;
     if (arrowIndex >= 0) {
       const expressionPrefix = componentPrefix.slice(arrowIndex + 2);
       const parenthesisBalance =
@@ -1353,6 +1651,46 @@ export function evaluateKnowledgeBank(
     );
   }
 
+  try {
+    const workStatements = workStatementSupportRecords();
+    if (
+      workStatements.length !==
+      projectionSurfaceBindings.expectedWorkStatementCount
+    ) {
+      findings["KB-009"].push(
+        `work statement manifest contains ${workStatements.length} records; expected ${projectionSurfaceBindings.expectedWorkStatementCount}`
+      );
+    }
+    for (const statement of workStatements) {
+      for (const proofId of statement.proofs) {
+        const proof = proofById.get(proofId);
+        if (!proof) {
+          findings["KB-009"].push(
+            `work statement ${statement.id} references missing proof ${proofId}`
+          );
+          continue;
+        }
+        if (!["ready", "careful"].includes(proof.status)) {
+          findings["KB-009"].push(
+            `work statement ${statement.id} references non-public proof ${proofId}`
+          );
+        }
+        for (const surface of statement.surfaces) {
+          const proofSurface = proofSurfaceForRoute(surface);
+          if (proofSurface && !proof.surfaces.includes(proofSurface)) {
+            findings["KB-009"].push(
+              `work statement ${statement.id} proof ${proofId} is not approved for ${proofSurface}`
+            );
+          }
+        }
+      }
+    }
+  } catch (error) {
+    findings["KB-009"].push(
+      `work statement-level proof manifest is invalid: ${error.message}`
+    );
+  }
+
   const publicStatementIds = new Set();
   for (const statement of projectionSurfaceBindings.publicStatementManifest ?? []) {
     if (publicStatementIds.has(statement.id)) {
@@ -1416,6 +1754,7 @@ export function evaluateKnowledgeBank(
     const visibleSource = decodedHtmlText(source);
     const derivedStatements = resumeSubstantiveStatements(source);
     const visibleBlocks = resumeVisibleBlocks(source);
+    const generatedCssText = resumeCssGeneratedText(source);
     const manifestedStatements = resumeArtifact.statements.map((statement) =>
       normalizedText(statement.text)
     );
@@ -1456,6 +1795,11 @@ export function evaluateKnowledgeBank(
     ) {
       findings["KB-009"].push(
         "resume visible-block inventory differs from the governed statement and presentation manifests"
+      );
+    }
+    if (generatedCssText.length > 0) {
+      findings["KB-009"].push(
+        "resume CSS-generated text is prohibited because it bypasses the visible-block manifest"
       );
     }
     const regeneratedPdfText = execFileSync(
