@@ -413,7 +413,7 @@ function literalClassTokens(tag) {
 }
 
 function classTokenIsNonRendering(token) {
-  return /(?:^|:|!)(?:hidden|invisible|collapse|sr-only|opacity-0|scale-0)$|\[(?:display\s*:\s*none|visibility\s*:\s*(?:hidden|collapse)|opacity\s*:\s*0)\]/i.test(
+  return /(?:^|:|!)(?:hidden|invisible|collapse|sr-only|opacity-(?:0|\[0\])|scale-(?:0|\[0\]))$|\[(?:display\s*:\s*none|visibility\s*:\s*(?:hidden|collapse)|opacity\s*:\s*0)\]/i.test(
     token
   );
 }
@@ -450,6 +450,7 @@ function nonRenderingCssClasses(source) {
 function tagIsNonRendering(tagName, tag, cssClasses = new Set()) {
   if (["head", "script", "style", "template"].includes(tagName)) return true;
   if (tagName === "dialog" && !/\sopen(?:\s|=|>)/i.test(tag)) return true;
+  if (tagName === "details" && !/\sopen(?:\s|=|>)/i.test(tag)) return true;
   if (/\spopover(?:\s|=|>)/i.test(tag)) return true;
   if (/\s(?:hidden|inert)(?:\s|=|>)/i.test(tag)) return true;
   if (
@@ -570,12 +571,24 @@ export function resumeCssGeneratedText(source) {
 
 export function resumeVisibleAttributeText(source) {
   const body = source.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
-  return [...body.matchAll(/<(?!style\b|script\b)[A-Za-z][^>]*>/g)]
-    .flatMap((tag) =>
-      [...tag[0].matchAll(/\b(?:alt|alttext|aria-braillelabel|aria-description|aria-label|aria-roledescription|aria-valuetext|data|label|srcdoc|title|placeholder|value)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
-        .map((match) => decodedElementText(match[1] ?? match[2] ?? match[3]))
-        .filter(Boolean)
-    );
+  const tree = parsedHtmlTree(body);
+  const cssClasses = nonRenderingCssClasses(source);
+  const values = [];
+  function visit(node, hidden = false) {
+    if (node.tag === "#text") return;
+    const isHidden =
+      hidden || tagIsNonRendering(node.tag, node.rawTag ?? "", cssClasses);
+    if (!isHidden && node.rawTag) {
+      values.push(
+        ...[...node.rawTag.matchAll(/\b(?:alt|alttext|aria-braillelabel|aria-description|aria-label|aria-roledescription|aria-valuetext|data|label|srcdoc|title|placeholder|value)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
+          .map((match) => decodedElementText(match[1] ?? match[2] ?? match[3]))
+          .filter(Boolean)
+      );
+    }
+    for (const child of node.children) visit(child, isHidden);
+  }
+  visit(tree);
+  return values;
 }
 
 export function resumeMetadataText(source) {

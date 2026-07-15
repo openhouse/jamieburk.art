@@ -222,6 +222,10 @@ test("the resume manifest is derived from every substantive HTML block", () => {
     ["Unsupported alt claim", "Unsupported ARIA claim"]
   );
   assert.deepEqual(
+    resumeVisibleAttributeText('<body><div hidden><img alt="Hidden alt claim"></div><details><div aria-label="Closed details claim"></div></details><img alt="Visible alt claim"></body>'),
+    ["Visible alt claim"]
+  );
+  assert.deepEqual(
     resumeCssPublicTextRisks('<style>.x::after { content: attr(data-claim); } .y { background: url("data:image/svg+xml,text"); }</style>'),
     ["content: attr(data-claim)", "CSS url() content"]
   );
