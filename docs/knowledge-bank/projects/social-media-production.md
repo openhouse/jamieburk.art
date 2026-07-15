@@ -49,6 +49,16 @@ preserves metadata for all 107 retrievable records and every posted external
 URL while excluding post text, cookies, private account state, and session
 data.
 
+For `@wowlist`, both Posts and Replies were likewise traversed to their
+February 2014 beginning and through repeated no-growth passes. Posts yielded
+37 unique primary records. Replies yielded 38, adding one project-account
+reply that appeared only on that surface. Their 38-record union exactly
+reconciles to the profile counter. The dedicated public-safe fixture at
+`apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json`
+preserves record provenance, all posted-link metadata, bounded incoming-search
+classifications, and dated aggregate interaction context without post text or
+authenticated-session state.
+
 ## Findings
 
 ### CallNYC
@@ -121,21 +131,47 @@ Jamie post by post without evidence.
 
 ### WOW List
 
-The profile reported 38 posts. Thirty-seven unique timeline records
-materialized: 21 original posts and 16 reposts. The surviving account shows
-social media operating as part of the product: public support replies, a
-community-created tutorial, event-distribution guidance, documentation of the
-Sunday Dinner calendar lineage, and later adaptation into rapid multi-city
-civic coordination.
+All 38 profile-counted records materialized and were reviewed: 16 originals,
+6 replies, and 16 reposts. Twenty-two were authored by `@wowlist`. The authored
+population shows social media operating as part of the product: direct support
+for calendar and event workflows, a community-created tutorial, event and list
+distribution, documentation of the Sunday Dinner lineage, mission-relevant
+source curation, and later adaptation into rapid multi-city civic coordination.
 
-The small account count is not used as an adoption metric. WOW List's platform
-scale remains supported by its separate aggregate product records.
+Thirty-one records contained an external link. The inventory preserves 35
+link occurrences representing 35 distinct short URLs; 23 appeared in
+`@wowlist`-authored records. Representative destinations include DIY cultural
+reporting from Santa Cruz Good Times, an all-ages organizing resource from
+Grasstronaut, Meow Wolf's archived DIY-space fund page, KQED's Ghost Ship
+vigil documentation, an Indian Country Today Standing Rock giving resource,
+the Allied Media Conference, a community-created product tutorial, and the
+archived `popular.vote` adaptation.
+
+A separate bounded search recovered 16 incoming records. Ten were
+mission-relevant third-party records from ten accounts across DIY arts and
+music, calendar-community, neighborhood-civic, and creative-technology
+contexts. Nine independently posted a WOW List event, list, or project URL.
+Punks & Criminals explicitly said it was adding shows to WOW List; Music
+Hackathon described the service as made by its co-organizer Jamie Burkart; and
+an All Ages calendar account publicly responded to a members-meeting
+invitation. Six other search results were retained as project-contributor
+self-documentation, context-limited greetings, unrelated handle use, or false
+positives rather than converted into traction.
+
+The small account count is not used as an adoption metric. Evidence about WOW
+List's platform scale comes from separate aggregate product records.
+
+As a dated interface snapshot, 12 of the 22 `@wowlist`-authored records showed
+at least one interaction, totaling 2 replies, 20 reposts, and 21 likes. These
+43 displayed units are not unique people, reach, conversion, endorsement,
+attendance, or impact. Interaction counts on the 16 redistributed source
+records are excluded from the project-account total.
 
 ## Lifecycle state
 
 The CallNYC public-guidance and Council-engagement claims, the mission-relevant
-NYC Artist Coalition engagement claim, and the WOW List product-surface claim
-are selected for their case studies. The NYC Artist Coalition account-
-establishment claim remains held. Open tasks cover the three unmaterialized
-CallNYC records, post-2020 coalition mentions, collaborator corroboration, and
-WOW List handle lineage.
+NYC Artist Coalition engagement claim, and the complete-population WOW List
+product-surface claim are selected for their case studies. The NYC Artist
+Coalition account-establishment claim remains held. Open tasks cover the three
+unmaterialized CallNYC records, post-2020 coalition mentions, collaborator
+corroboration, and WOW List handle lineage.

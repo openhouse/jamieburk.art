@@ -76,9 +76,11 @@ website selection. It is a recommendation, not publication approval.
   appearances, shared-feed authorship, incomplete post-2020 coverage, and
   causality boundaries.
 - `CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE`: selected as evidence that the project
-  account supported onboarding, product support, event distribution, and
-  coordination. Do not treat a small historical timeline as an adoption or
-  impact metric.
+  account supported onboarding, product support, source curation, event
+  distribution, and coordination. All 38 profile-counted records are
+  reconciled; the separate 10-account mission-relevant reception result is a
+  bounded third-party signal. Treat neither the small historical account nor
+  the search result as an adoption or impact metric.
 
 ## Strong Future Feature Candidates
 

@@ -380,6 +380,26 @@
       ]
     },
     {
+      "id": "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
+      "title": "Authenticated @wowlist full-population archival review",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/cdf5d08798f1d5dbd516ac826e4537b07ab1bbf9/apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated July 14, 2026 review of all 38 @wowlist records reported by the profile counter, with posted-link and bounded stakeholder metadata preserved in the repository.",
+      "publicNote": "The Posts tab yielded 37 records and Replies yielded 38; their union reconciles exactly to the 38-post profile counter.",
+      "doesNotEstablish": [
+        "every deleted or unindexed historical interaction",
+        "authorship of every institutional post",
+        "reach, conversion, endorsement, attendance, or platform-wide adoption"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CHIN-ENGAGEMENT-2017-07-11",
       "title": "Margaret Chin response to CallNYC recognition",
       "organization": "New York City Council",
@@ -805,6 +825,60 @@
       "doesNotEstablish": [
         "complete product ownership",
         "participation totals"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-PUNKS-ADOPTION-2015-05-29",
+      "title": "Punks & Criminals public WOW List use",
+      "author": "Punks & Criminals",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-05-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/punkscriminals/status/604360847012413440",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Punks & Criminals publicly said it was adding shows to WOW List and linked its project list.",
+      "doesNotEstablish": [
+        "platform-wide adoption",
+        "event attendance",
+        "ongoing use"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015-03-20",
+      "title": "Music Hackathon public WOW List attribution",
+      "author": "Music Hackathon / Music Community Lab",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-03-20",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/musichackathon/status/579088937022406657",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Music Hackathon described WOW List as an event-sharing service made by its co-organizer Jamie Burkart.",
+      "doesNotEstablish": [
+        "sole authorship",
+        "complete project team",
+        "platform impact"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-ALL-AGES-MEETING-RESPONSE-2015-11-14",
+      "title": "All Ages response to a WOW List members meeting",
+      "author": "All Ages",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-11-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/all_ages/status/665737833219538946",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "An All Ages calendar account publicly responded to a WOW List members-meeting invitation.",
+      "doesNotEstablish": [
+        "meeting attendance",
+        "formal partnership",
+        "platform-wide participation"
       ]
     },
     {
@@ -1810,7 +1884,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "WOW List's 2014-2017 account shows social media functioning as part of the product: explaining how to add and follow calendars, sharing a user tutorial, documenting Sunday Dinner as an origin, distributing events, and adapting the calendar to rapid civic coordination across cities.",
+          "text": "A full pass over all 38 profile-counted records shows social media functioning as part of WOW List's product and community practice: direct user support, a community-created tutorial, event distribution, Sunday Dinner lineage, mission-relevant source curation, and rapid civic coordination. A separate bounded search recovered 10 mission-relevant third-party accounts across arts, calendar, civic, and creative-technology communities; nine independently posted a WOW List URL. These are public-use and distribution signals, not a measure of total adoption or impact.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1825,6 +1899,16 @@
           "supports": [
             "historical project account",
             "timeline scope"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
+          "relationship": "direct-support",
+          "supports": [
+            "complete displayed population and reconciliation",
+            "posted-URL and stakeholder-pattern inventory"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -1882,12 +1966,42 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-PUNKS-ADOPTION-2015-05-29",
+          "relationship": "direct-support",
+          "supports": [
+            "observable product-support or coordination use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015-03-20",
+          "relationship": "direct-support",
+          "supports": [
+            "observable product-support or coordination use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-ALL-AGES-MEETING-RESPONSE-2015-11-14",
+          "relationship": "direct-support",
+          "supports": [
+            "observable product-support or coordination use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
-        "The recovered timeline contains 37 of 38 profile posts and is not a complete platform-usage history.",
+        "All 38 records reported by the profile counter materialized across Posts and Replies; that is a complete displayed account population, not a complete history of deleted, private, or unindexed activity.",
+        "The incoming 16-record search inventory is bounded; 10 mission-relevant third-party accounts are not represented as every historical user or stakeholder.",
         "The account's follower count is not used as a WOW List adoption measure.",
-        "Event distribution does not establish attendance, event ownership, or causal movement impact."
+        "Event distribution does not establish attendance, event ownership, or causal movement impact.",
+        "Displayed interaction totals are volatile context and are not used as reach, conversion, endorsement, or impact metrics.",
+        "Institutional account records are not attributed post by post to Jamie without authorship evidence."
       ]
     },
     {
@@ -2323,10 +2437,14 @@
       "surface": "/work/wowlist",
       "sourceOrder": [
         "SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14",
+        "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
         "SRC-WOWLIST-ORIGIN-2014-02-12",
         "SRC-WOWLIST-TUTORIAL-2015-08-14",
         "SRC-WOWLIST-NYCDIY-2016-09-01",
         "SRC-WOWLIST-PRODUCT-SUPPORT-2015-04-24",
+        "SRC-WOWLIST-PUNKS-ADOPTION-2015-05-29",
+        "SRC-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015-03-20",
+        "SRC-WOWLIST-ALL-AGES-MEETING-RESPONSE-2015-11-14",
         "SRC-WOWLIST-NATIONAL-MARCHES-2016-11-09",
         "SRC-WOWLIST-POPULAR-VOTE-2016-11-14"
       ],
@@ -2337,10 +2455,14 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14",
+            "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
             "SRC-WOWLIST-ORIGIN-2014-02-12",
             "SRC-WOWLIST-TUTORIAL-2015-08-14",
             "SRC-WOWLIST-NYCDIY-2016-09-01",
             "SRC-WOWLIST-PRODUCT-SUPPORT-2015-04-24",
+            "SRC-WOWLIST-PUNKS-ADOPTION-2015-05-29",
+            "SRC-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015-03-20",
+            "SRC-WOWLIST-ALL-AGES-MEETING-RESPONSE-2015-11-14",
             "SRC-WOWLIST-NATIONAL-MARCHES-2016-11-09",
             "SRC-WOWLIST-POPULAR-VOTE-2016-11-14"
           ]

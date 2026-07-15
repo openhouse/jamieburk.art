@@ -5,7 +5,7 @@
 - Suite: `knowledge-development-lifecycle`, version 1
 - Decision: `stop_threshold_met`
 - Final candidate fingerprint:
-  `0e50340382c93104ff84d53ae136716f403d224e2af202cabf8d0874f4b96eb7`
+  `19fff12f055bbde9bac22a596635d5dfd5e1f05ea382e258a3dbe2b0485ed748`
 
 ## Result
 
@@ -52,18 +52,27 @@ The runner binds each judgment to the reviewed candidate files with a SHA-256
 fingerprint. `npm run check` fails if evaluated content changes without a new
 matching judgment.
 
+The latest social-production expansion reconciles both authenticated project
+account populations. CallNYC preserves 107 recovered records against a
+110-post counter and makes the three-record gap explicit. WOW List preserves
+all 38 profile-counted records, including one record recovered only in Replies,
+and develops the account's product-support, distribution, curation, and
+coordination functions without treating social activity as adoption or impact.
+Two fresh WOW List holdouts each scored `KD-006` and `KD-012` at `4/4`; both
+unchanged-candidate scorecards reached `1.0000`.
+
 Passing this suite means the knowledge-development system and calibration
 corpus meet their criteria. It does not approve held claims for the website or
 authorize production deployment.
 
 ## Corpus Developed
 
-- 28 public-safe captures, all integrated or routed;
-- 65 normalized development sources, including 41 new article records and 4
+- 49 public-safe captures, all integrated or routed;
+- 126 normalized development sources, including 41 new article records and 4
   campaign Press indexes in the campaign-press expansion;
-- 84 located, limited atomic observations;
-- 19 developed claims, plus selected claims in the canonical registry;
-- 10 prioritized research tasks;
+- 171 located, limited atomic observations;
+- 34 developed claims, plus selected claims in the canonical registry;
+- 23 prioritized research tasks;
 - 0 canonical validation errors;
 - 45 ordered campaign-press placements representing 44 unique articles;
 - 4 official KC Town Hall funding sources, 1 metadata-only first-hand source,
@@ -108,6 +117,11 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 | KC Town Hall deterministic pass   |         `0.8900` | Continue: independent judgments required     |
 | KC Town Hall holdout 1            |         `0.9925` | Pass                                         |
 | KC Town Hall holdout 2            |         `0.9925` | Pass; stop threshold met                     |
+| CallNYC final holdout 1           |         `1.0000` | Pass                                         |
+| CallNYC final holdout 2           |         `1.0000` | Pass; stop threshold met                     |
+| WOW List first holdout            |     `4/4`, `3/4` | Repair dangling methodology sentence         |
+| WOW List final holdout 1          |         `1.0000` | Pass                                         |
+| WOW List final holdout 2          |         `1.0000` | Pass; stop threshold met                     |
 
 ## Accepted Improvements
 
@@ -156,6 +170,16 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 22. Added Jamie's approved first-hand KC Town Hall transition as a distinct,
     metadata-only evidence class; omitted private circumstances; and required
     attribution and separation from the City record on every public surface.
+23. Reconciled all 38 profile-counted WOW List records across Posts and Replies,
+    preserved row-level recovery provenance, and added exact population,
+    authorship, URL, classification, and anti-inflation tests.
+24. Classified a bounded 16-record incoming search, promoted ten
+    mission-relevant third-party records across four stakeholder groups, kept
+    all six exclusions visible, and linked nine independent URL posts to their
+    query provenance.
+25. Normalized representative organizer-use, peer-attribution,
+    community-response, and circulated-context sources while keeping Jamie,
+    collaborators, institutional publishing, and downstream outcomes distinct.
 
 ## Evidence
 
@@ -184,6 +208,18 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [KC Town Hall holdout 1 judgment](./kc-town-hall-funding-holdout-1-judge.json)
 - [KC Town Hall holdout 1 scorecard](./kc-town-hall-funding-holdout-1-final.json)
 - [KC Town Hall holdout 2 judgment](./kc-town-hall-funding-holdout-2-judge.json)
+- [KC Town Hall holdout 2 scorecard](./kc-town-hall-funding-holdout-2-final.json)
+
+## Full-population Social Production
+
+- [CallNYC hill-climb record](./2026-07-14-callnyc-full-population-hill-climb.md)
+- [CallNYC final holdout 1](./callnyc-full-population-final-holdout-5-run.json)
+- [CallNYC final holdout 2](./callnyc-full-population-final-holdout-6-run.json)
+- [WOW List hill-climb record](./2026-07-14-wowlist-full-population-hill-climb.md)
+- [WOW List final holdout 1 judgment](./wowlist-full-population-final-holdout-1-judge.json)
+- [WOW List final holdout 1 scorecard](./wowlist-full-population-final-holdout-1-run.json)
+- [WOW List final holdout 2 judgment](./wowlist-full-population-final-holdout-2-judge.json)
+- [WOW List final holdout 2 scorecard](./wowlist-full-population-final-holdout-2-run.json)
 
 ## Teams Archive Production
 
@@ -194,7 +230,6 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [Holdout 1 final](./teams-archive-holdout-1-final.json)
 - [Holdout 2 judgment](./teams-archive-holdout-2-judge.json)
 - [Holdout 2 final](./teams-archive-holdout-2-final.json)
-- [KC Town Hall holdout 2 scorecard](./kc-town-hall-funding-holdout-2-final.json)
 
 ## Google Shared Drives Production
 

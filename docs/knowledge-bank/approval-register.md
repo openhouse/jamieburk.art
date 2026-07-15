@@ -23,7 +23,10 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Public URL inventories: may enumerate already approved public sites and
   routes; do not include screenshots, private analytics, participant records,
   or stronger causality claims.
-- WOWList reach: use approximate public-safe adoption wording.
+- WOWList reach: use approximate public-safe platform adoption wording. The
+  complete 38-record account population and bounded 10-account third-party
+  reception result may describe observable publishing and distribution
+  patterns, but neither is a total-adoption or impact measure.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall role and funding: the official developer/presenter designation,

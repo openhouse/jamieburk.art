@@ -60,6 +60,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/social-media-production.ts",
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -105,6 +106,12 @@ const socialMediaInventory = JSON.parse(
 const callNycPopulationInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+    "utf8",
+  ),
+);
+const wowListPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
     "utf8",
   ),
 );
@@ -872,8 +879,8 @@ function deterministicResults(judgments) {
 
   if (
     socialMediaCaptures.length !== 6 ||
-    socialMediaSources.length !== 34 ||
-    socialMediaObservations.length !== 34 ||
+    socialMediaSources.length !== 45 ||
+    socialMediaObservations.length !== 46 ||
     socialMediaClaims.length !== 5 ||
     socialMediaResearchTasks.length !== 4 ||
     socialMediaInquiries.length !== 5
@@ -896,11 +903,19 @@ function deterministicResults(judgments) {
   const callNycRepliesTimelineRecords = callNycPopulationRecords.filter((record) =>
     record.recoveredFrom?.includes("replies"),
   );
+  const wowListPopulationRecords = wowListPopulationInventory.records;
+  const wowListIncomingRecords = wowListPopulationInventory.stakeholderInventory.records;
+  const wowListPostsTimelineRecords = wowListPopulationRecords.filter((record) =>
+    record.recoveredFrom?.includes("posts"),
+  );
+  const wowListRepliesTimelineRecords = wowListPopulationRecords.filter((record) =>
+    record.recoveredFrom?.includes("replies"),
+  );
   if (
     nycacInventoryRecords.length !== 358 ||
     new Set(nycacInventoryRecords.map((record) => record.url)).size !== 358 ||
-    wowListInventoryRecords.length !== 37 ||
-    new Set(wowListInventoryRecords.map((record) => record.url)).size !== 37 ||
+    wowListInventoryRecords.length !== 38 ||
+    new Set(wowListInventoryRecords.map((record) => record.url)).size !== 38 ||
     callNycPopulationRecords.length !== 107 ||
     new Set(callNycPopulationRecords.map((record) => record.url)).size !== 107 ||
     callNycPostsTimelineRecords.length !== 106 ||
@@ -914,7 +929,13 @@ function deterministicResults(judgments) {
         ),
     ) ||
     callNycIncomingRecords.length !== 11 ||
-    new Set(callNycIncomingRecords.map((record) => record.url)).size !== 11
+    new Set(callNycIncomingRecords.map((record) => record.url)).size !== 11 ||
+    wowListPopulationRecords.length !== 38 ||
+    new Set(wowListPopulationRecords.map((record) => record.url)).size !== 38 ||
+    wowListPostsTimelineRecords.length !== 37 ||
+    wowListRepliesTimelineRecords.length !== 38 ||
+    wowListIncomingRecords.length !== 16 ||
+    new Set(wowListIncomingRecords.map((record) => record.url)).size !== 16
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media capture inventory is incomplete or contains duplicate status URLs",
@@ -936,7 +957,14 @@ function deterministicResults(judgments) {
       4 ||
     socialMediaReviewSummary.nycacHistoricalMentionRecordCount2017To2020 !==
       358 ||
-    socialMediaReviewSummary.wowListRecoveredTimelineRecordCount !== 37
+    socialMediaReviewSummary.wowListRecoveredTimelineRecordCount !== 38 ||
+    socialMediaReviewSummary.wowListRecoveredOriginalPostCount !== 16 ||
+    socialMediaReviewSummary.wowListRecoveredReplyCount !== 6 ||
+    socialMediaReviewSummary.wowListRecoveredRepostCount !== 16 ||
+    socialMediaReviewSummary.wowListAuthoredRecordCount !== 22 ||
+    socialMediaReviewSummary.wowListDistinctExternalShortUrlCount !== 35 ||
+    socialMediaReviewSummary.wowListIncomingSearchRecordCount !== 16 ||
+    socialMediaReviewSummary.wowListMissionRelevantThirdPartyAccountCount !== 10
   ) {
     socialMediaIntegrityViolations.push(
       "Social-media inventory no longer matches the bounded authenticated research record",
@@ -969,6 +997,23 @@ function deterministicResults(judgments) {
   ) {
     socialMediaIntegrityViolations.push(
       "CallNYC full-population reconciliation or publishing-pattern counts drifted",
+    );
+  }
+  if (
+    wowListPopulationInventory.populationReconciliation.profileReportedPostCount !== 38 ||
+    wowListPopulationInventory.populationReconciliation.postsTimelineUniqueCount !== 37 ||
+    wowListPopulationInventory.populationReconciliation.repliesTimelineUniqueCount !== 38 ||
+    wowListPopulationInventory.populationReconciliation.recoveredUnionRecordCount !== 38 ||
+    wowListPopulationInventory.populationReconciliation.profileCountNotMaterialized !== 0 ||
+    wowListPopulationInventory.recordTypeCounts.original !== 16 ||
+    wowListPopulationInventory.recordTypeCounts.reply !== 6 ||
+    wowListPopulationInventory.recordTypeCounts.repost !== 16 ||
+    wowListPopulationInventory.publishingPattern.accountAuthoredRecordCount !== 22 ||
+    wowListPopulationInventory.postedUrlInventory.distinctExternalShortUrls !== 35 ||
+    wowListPopulationInventory.stakeholderInventory.missionRelevantThirdPartyAccountCount !== 10
+  ) {
+    socialMediaIntegrityViolations.push(
+      "WOW List full-population reconciliation, source, or stakeholder counts drifted",
     );
   }
   for (const sourceId of socialMediaSourceIds) {
@@ -1029,7 +1074,9 @@ function deterministicResults(judgments) {
       socialMediaPublicText,
     ) ||
     !/at least four NYC Council Member accounts/i.test(socialMediaPublicText) ||
-    !/product support, community onboarding, event distribution, and rapid civic coordination/i.test(
+    !/all 38 profile-counted/i.test(socialMediaPublicText) ||
+    !/10 mission-relevant third-party accounts/i.test(socialMediaPublicText) ||
+    !/product support, community onboarding, source curation, event distribution, and rapid civic coordination/i.test(
       socialMediaPublicText,
     )
   ) {
@@ -1092,6 +1139,18 @@ function deterministicResults(judgments) {
   ) {
     socialMediaSafetyViolations.push(
       "Public CallNYC population fixture contains raw post/session data or obscures the unrecovered-record boundary",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i.test(
+      JSON.stringify(wowListPopulationInventory),
+    ) ||
+    !/Every one of the 38 records/i.test(
+      wowListPopulationInventory.populationReconciliation.conclusion,
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Public WOW List population fixture contains raw post/session data or obscures the complete displayed denominator",
     );
   }
 
@@ -1484,18 +1543,93 @@ function deterministicResults(judgments) {
       "The public-safe fixture or promoted claim obscures raw-data, denominator, or authorship boundaries",
     );
   }
+  const wowListPopulationViolations = [];
+  const wowListReconciliation = wowListPopulationInventory.populationReconciliation;
+  const wowListRecordTypeTotal = Object.values(
+    wowListPopulationInventory.recordTypeCounts,
+  ).reduce((sum, count) => sum + count, 0);
+  const wowListExternalLinks = wowListPopulationRecords.flatMap(
+    (record) => record.externalLinks,
+  );
+  const wowListMissionRelevantIncoming = wowListIncomingRecords.filter(
+    (record) => record.classification === "mission-relevant-third-party",
+  );
+  if (
+    wowListPopulationRecords.length !== 38 ||
+    new Set(wowListPopulationRecords.map((record) => record.url)).size !== 38 ||
+    wowListRecordTypeTotal !== 38 ||
+    wowListPostsTimelineRecords.length !== wowListReconciliation.postsTimelineUniqueCount ||
+    wowListRepliesTimelineRecords.length !== wowListReconciliation.repliesTimelineUniqueCount ||
+    wowListPopulationRecords.some(
+      (record) =>
+        !Array.isArray(record.recoveredFrom) ||
+        !record.recoveredFrom.length ||
+        record.recoveredFrom.some(
+          (timeline) => !["posts", "replies"].includes(timeline),
+        ),
+    )
+  ) {
+    wowListPopulationViolations.push(
+      "The recovered WOW List population is incomplete, duplicated, or does not reconcile by record type and tab provenance",
+    );
+  }
+  if (
+    wowListReconciliation.profileReportedPostCount !== 38 ||
+    wowListReconciliation.recoveredUnionRecordCount !== 38 ||
+    wowListReconciliation.recoveredPopulationReviewedPercent !== 100 ||
+    wowListReconciliation.profileCountNotMaterialized !== 0 ||
+    wowListPopulationRecords.filter(
+      (record) => !record.recoveredFrom.includes("posts"),
+    ).map((record) => record.url).join("|") !==
+      "https://x.com/wowlist/status/665520472461860864"
+  ) {
+    wowListPopulationViolations.push(
+      "The 38-profile / 38-recovered / one-Replies-only reconciliation is not explicit",
+    );
+  }
+  if (
+    wowListExternalLinks.length !== 35 ||
+    new Set(wowListExternalLinks.map((link) => link.shortUrl)).size !== 35 ||
+    wowListPopulationInventory.publishingPattern.accountAuthoredRecordCount !== 22 ||
+    wowListIncomingRecords.length !== 16 ||
+    wowListMissionRelevantIncoming.length !== 10 ||
+    new Set(wowListMissionRelevantIncoming.map((record) => record.authorHandle)).size !== 10 ||
+    Object.values(
+      wowListPopulationInventory.stakeholderInventory.stakeholderGroupCounts,
+    ).reduce((sum, count) => sum + count, 0) !== 10
+  ) {
+    wowListPopulationViolations.push(
+      "The WOW List posted-URL, publishing, or stakeholder findings do not reproduce from the inventory",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i.test(
+      JSON.stringify(wowListPopulationInventory),
+    ) ||
+    !wowListSocialClaim?.boundaries.some((boundary) => /All 38 records/i.test(boundary)) ||
+    !wowListSocialClaim?.antiClaims.some((antiClaim) => /Only 37.*38/i.test(antiClaim)) ||
+    !wowListSocialClaim?.boundaries.some((boundary) => /Institutional account records/i.test(boundary))
+  ) {
+    wowListPopulationViolations.push(
+      "The WOW List fixture or promoted claim obscures public-safety, denominator, or authorship boundaries",
+    );
+  }
+  const fullPopulationViolations = [
+    ...callNycPopulationViolations,
+    ...wowListPopulationViolations,
+  ];
   results.set(
     "KD-013",
     result(
-      callNycPopulationViolations.length ? 0 : 4,
+      fullPopulationViolations.length ? 0 : 4,
       [
-        `${callNycPopulationRecords.length}/110 profile-counted records recovered; 3 explicitly unmaterialized`,
-        `${new Set(callNycPopulationRecords.map((record) => record.url)).size} unique status URLs`,
-        `${callNycPostsTimelineRecords.length} Posts-tab / ${callNycRepliesTimelineRecords.length} Replies-tab records recomputed from row provenance`,
-        `${callNycPopulationInventory.postedUrlInventory.distinctExternalShortUrls} distinct posted short URLs`,
-        `${callNycIncomingRecords.length} classified incoming-mention records`,
+        `CallNYC: ${callNycPopulationRecords.length}/110 profile-counted records recovered; 3 explicitly unmaterialized`,
+        `CallNYC: ${callNycPostsTimelineRecords.length} Posts-tab / ${callNycRepliesTimelineRecords.length} Replies-tab records; ${callNycPopulationInventory.postedUrlInventory.distinctExternalShortUrls} distinct posted short URLs; ${callNycIncomingRecords.length} incoming records`,
+        `WOW List: ${wowListPopulationRecords.length}/38 profile-counted records recovered; 0 unmaterialized`,
+        `WOW List: ${wowListPostsTimelineRecords.length} Posts-tab / ${wowListRepliesTimelineRecords.length} Replies-tab records; ${wowListExternalLinks.length} distinct posted short URLs`,
+        `WOW List: ${wowListMissionRelevantIncoming.length}/16 bounded incoming records classified as mission-relevant third-party responses across ${Object.keys(wowListPopulationInventory.stakeholderInventory.stakeholderGroupCounts).length} stakeholder groups`,
       ],
-      callNycPopulationViolations,
+      fullPopulationViolations,
       "Repair the denominator or classification before strengthening the public interpretation.",
     ),
   );
@@ -1538,6 +1672,12 @@ function deterministicResults(judgments) {
         socialMediaReviewSummary.callNycDistinctIssueOrApiPathCount,
       nycacMissionRelevantCouncilAccounts:
         socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020,
+      wowListRecoveredTimelineRecords:
+        socialMediaReviewSummary.wowListRecoveredTimelineRecordCount,
+      wowListDistinctPostedUrls:
+        socialMediaReviewSummary.wowListDistinctExternalShortUrlCount,
+      wowListMissionRelevantThirdPartyAccounts:
+        socialMediaReviewSummary.wowListMissionRelevantThirdPartyAccountCount,
       validationErrors: validationErrors.length,
     },
   };

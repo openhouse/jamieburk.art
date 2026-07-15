@@ -79,9 +79,14 @@ export const socialMediaReviewSummary = {
   nycacMissionRelevantCouncilMemberAccountCount2017To2020: 4,
   nycacHistoricalMentionRecordCount2017To2020: 358,
   wowListProfilePostCount: 38,
-  wowListRecoveredTimelineRecordCount: 37,
-  wowListRecoveredOriginalPostCount: 21,
+  wowListRecoveredTimelineRecordCount: 38,
+  wowListRecoveredOriginalPostCount: 16,
+  wowListRecoveredReplyCount: 6,
   wowListRecoveredRepostCount: 16,
+  wowListAuthoredRecordCount: 22,
+  wowListDistinctExternalShortUrlCount: 35,
+  wowListIncomingSearchRecordCount: 16,
+  wowListMissionRelevantThirdPartyAccountCount: 10,
   observedAt: reviewedAt,
 } as const;
 
@@ -633,6 +638,63 @@ const socialPostDescriptors: SocialPostDescriptor[] = [
     limitations: ["The post does not establish participation totals or complete team ownership."],
     supportsClaimIds: [wowListSocialClaimId],
   },
+  {
+    sourceId: "SRC-WOWLIST-PUNKS-ADOPTION-2015-05-29",
+    observationId: "OBS-WOWLIST-PUNKS-ADOPTION",
+    project: "wowlist",
+    title: "Punks & Criminals public WOW List use",
+    author: "Punks & Criminals",
+    kind: "institutional-social-post",
+    publishedAt: "2015-05-29",
+    canonicalUrl: "https://x.com/punkscriminals/status/604360847012413440",
+    publicCitation:
+      "Punks & Criminals publicly said it was adding shows to WOW List and linked its project list.",
+    supportsGenerally: ["organizer product use", "event-publishing workflow"],
+    doesNotEstablish: ["platform-wide adoption", "event attendance", "ongoing use"],
+    statement:
+      "A DIY music organizer publicly described putting shows onto WOW List and shared its list URL.",
+    locator: "Post text, project-list link, and timestamp",
+    limitations: ["One account's use does not establish total platform adoption."],
+    supportsClaimIds: [wowListSocialClaimId],
+  },
+  {
+    sourceId: "SRC-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015-03-20",
+    observationId: "OBS-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION",
+    project: "wowlist",
+    title: "Music Hackathon public WOW List attribution",
+    author: "Music Hackathon / Music Community Lab",
+    kind: "institutional-social-post",
+    publishedAt: "2015-03-20",
+    canonicalUrl: "https://x.com/musichackathon/status/579088937022406657",
+    publicCitation:
+      "Music Hackathon described WOW List as an event-sharing service made by its co-organizer Jamie Burkart.",
+    supportsGenerally: ["Jamie attribution", "event-sharing product", "creative-technology peer context"],
+    doesNotEstablish: ["sole authorship", "complete project team", "platform impact"],
+    statement:
+      "A creative-technology peer publicly attributed the WOW List event-sharing service to its co-organizer Jamie Burkart.",
+    locator: "Post text, WOW List URL, and timestamp",
+    limitations: ["The post does not name every collaborator or establish sole authorship."],
+    supportsClaimIds: [wowListSocialClaimId],
+  },
+  {
+    sourceId: "SRC-WOWLIST-ALL-AGES-MEETING-RESPONSE-2015-11-14",
+    observationId: "OBS-WOWLIST-ALL-AGES-MEETING-RESPONSE",
+    project: "wowlist",
+    title: "All Ages response to a WOW List members meeting",
+    author: "All Ages",
+    kind: "institutional-social-post",
+    publishedAt: "2015-11-14",
+    canonicalUrl: "https://x.com/all_ages/status/665737833219538946",
+    publicCitation:
+      "An All Ages calendar account publicly responded to a WOW List members-meeting invitation.",
+    supportsGenerally: ["calendar-community dialogue", "members-meeting response"],
+    doesNotEstablish: ["meeting attendance", "formal partnership", "platform-wide participation"],
+    statement:
+      "A calendar-community account publicly answered a WOW List invitation to a members meeting.",
+    locator: "Reply context and timestamp",
+    limitations: ["The response does not establish attendance or a formal relationship."],
+    supportsClaimIds: [wowListSocialClaimId],
+  },
 ];
 
 const profileSources = [
@@ -780,6 +842,175 @@ const callNycCuratedArticleSources = [
   },
 ] satisfies SourceRecord[];
 
+const wowListPopulationSource = {
+  id: "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
+  title: "Authenticated @wowlist full-population archival review",
+  organization: "Jamie Burkart portfolio knowledge bank",
+  author: "Codex authenticated archival review",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  capturedAt: reviewedAt,
+  accessedAt: reviewedAt,
+  canonicalUrl:
+    "https://github.com/openhouse/jamieburk.art/blob/cdf5d08798f1d5dbd516ac826e4537b07ab1bbf9/apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+  preferredPublicUrl: "canonical",
+  publicCitation:
+    "Authenticated July 14, 2026 review of all 38 @wowlist records reported by the profile counter, with posted-link and bounded stakeholder metadata preserved in the repository.",
+  publicNote:
+    "The Posts tab yielded 37 records and Replies yielded 38; their union reconciles exactly to the 38-post profile counter.",
+  supportsGenerally: [
+    "complete displayed account population",
+    "record-type and posted-URL inventory",
+    "publishing-pattern analysis",
+    "bounded stakeholder-response inventory",
+  ],
+  doesNotEstablish: [
+    "every deleted or unindexed historical interaction",
+    "authorship of every institutional post",
+    "reach, conversion, endorsement, attendance, or platform-wide adoption",
+  ],
+} satisfies SourceRecord;
+
+const wowListCuratedSources = [
+  {
+    id: "SRC-WOWLIST-GOOD-TIMES-ZINES-2015-05-06",
+    title: "Zines 2.0",
+    author: "Elise Granata",
+    organization: "Santa Cruz Good Times",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2015-05-06",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+    archiveUrl:
+      "https://web.archive.org/web/20150907001335/http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "Elise Granata's Good Times cover story examined how DIY culture documents and connects geographically dispersed grassroots arts communities.",
+    publicNote:
+      "Mission-relevant reporting circulated by @wowlist; it is context for the account's curatorial practice, not coverage of WOW List.",
+    supportsGenerally: ["DIY cultural documentation", "distributed grassroots arts networks"],
+    doesNotEstablish: ["WOW List coverage", "WOW List platform adoption"],
+  },
+  {
+    id: "SRC-WOWLIST-GRASSTRONAUT-HOMEWORK-2015-01-29",
+    title: "HOMEWORK: In Every Town - An All-Ages Music Manualfesto",
+    author: "Elise Granata",
+    organization: "Grasstronaut",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2015-01-29",
+    accessedAt: reviewedAt,
+    canonicalUrl: "http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+    archiveUrl:
+      "https://web.archive.org/web/20150406041311/http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "Grasstronaut reviewed In Every Town as a practical all-ages organizing resource covering structures, promotion, space, fundraising, community building, and conflict resolution.",
+    publicNote:
+      "Mission-relevant resource circulated by @wowlist; it is not coverage of WOW List.",
+    supportsGenerally: ["DIY organizing knowledge", "all-ages cultural infrastructure"],
+    doesNotEstablish: ["WOW List coverage", "formal partnership"],
+  },
+  {
+    id: "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2017",
+    title: "Meow Wolf Creates $100,000 Annual Fund To Support DIY Spaces",
+    organization: "Meow Wolf",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "archived",
+    accessedAt: reviewedAt,
+    canonicalUrl: "https://meowwolf.com/diy/",
+    archiveUrl:
+      "https://web.archive.org/web/20170312084829/https://meowwolf.com/DIY/",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "Meow Wolf announced a $100,000 annual fund for DIY music and arts spaces, including infrastructure, rent, equipment, and organizational support.",
+    publicNote:
+      "Resource reposted by @wowlist; it does not establish WOW List involvement in the fund.",
+    supportsGenerally: ["DIY-space resource circulation", "cultural-space infrastructure"],
+    doesNotEstablish: ["WOW List fund administration", "formal partnership"],
+  },
+  {
+    id: "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016-12-05",
+    title: "Hundreds Mourn the Victims of the Ghost Ship Fire in Oakland",
+    organization: "KQED",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2016-12-05",
+    accessedAt: reviewedAt,
+    canonicalUrl: "https://www.youtube.com/watch?v=g7zIdDeRVjU",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "KQED documented public mourning after the Ghost Ship fire in Oakland.",
+    publicNote:
+      "Community-safety and mourning source circulated by @wowlist; it does not establish WOW List event ownership or impact.",
+    supportsGenerally: ["community mourning", "cultural-space safety context"],
+    doesNotEstablish: ["WOW List event ownership", "causal impact"],
+  },
+  {
+    id: "SRC-WOWLIST-INDIAN-COUNTRY-TODAY-STANDING-ROCK-2016-11-23",
+    title: "How to Give, and Give Thanks, to Standing Rock",
+    organization: "Indian Country Today",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "dead",
+    publishedAt: "2016-11-23",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://indiancountrytodaymedianetwork.com/2016/11/23/how-give-and-give-thanks-standing-rock-166566",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Indian Country Today published a giving and solidarity resource connected to Standing Rock.",
+    publicNote:
+      "Mission-relevant resource present in the @wowlist timeline through a repost; the historical destination no longer resolves reliably.",
+    supportsGenerally: ["mutual-aid resource circulation", "Indigenous-led movement context"],
+    doesNotEstablish: ["WOW List authorship", "formal partnership", "causal impact"],
+  },
+  {
+    id: "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015",
+    title: "Allied Media Conference",
+    organization: "Allied Media Projects",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "archived",
+    accessedAt: reviewedAt,
+    canonicalUrl: "https://amc.alliedmedia.org/",
+    archiveUrl:
+      "https://web.archive.org/web/20150425020557/https://www.alliedmedia.org/amc",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "The Allied Media Conference convened participatory-media practitioners in Detroit; @wowlist publicly announced its planned presence at the 2015 gathering.",
+    supportsGenerally: ["participatory-media peer context", "public project convening"],
+    doesNotEstablish: ["conference presentation", "formal partnership", "attendance outcome"],
+  },
+  {
+    id: "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016-12-11",
+    title: "popular.vote WOW List event-sharing surface",
+    organization: "WOW List",
+    kind: "archived-web-capture",
+    visibility: "public",
+    preservationStatus: "archived",
+    capturedAt: "2016-12-11",
+    accessedAt: reviewedAt,
+    canonicalUrl: "http://popular.vote/",
+    archiveUrl:
+      "https://web.archive.org/web/20161211233030/http://popular.vote/",
+    preferredPublicUrl: "archive",
+    publicCitation:
+      "A December 2016 popular.vote capture identifies the surface as WOW List event sharing and community building for friendship in real life.",
+    publicNote:
+      "The capture establishes a themed project surface; it does not establish participation totals or complete team ownership.",
+    supportsGenerally: ["rapid civic coordination surface", "WOW List product continuity"],
+    doesNotEstablish: ["participation totals", "complete authorship", "causal impact"],
+  },
+] satisfies SourceRecord[];
+
 const firsthandSource = {
   id: "SRC-SOCIAL-JAMIE-ACCOUNT-STEWARDSHIP-2026",
   title: "Jamie Burkart statement about project-account establishment and shared use",
@@ -801,6 +1032,8 @@ export const socialMediaSources = [
   ...profileSources,
   callNycPopulationSource,
   ...callNycCuratedArticleSources,
+  wowListPopulationSource,
+  ...wowListCuratedSources,
   firsthandSource,
   ...socialPostDescriptors.map(
     (descriptor): SourceRecord => ({
@@ -940,9 +1173,138 @@ const callNycPopulationObservations = [
   },
 ] satisfies ObservationRecord[];
 
+const wowListPopulationObservations = [
+  {
+    id: "OBS-SOCIAL-WOWLIST-FULL-POPULATION",
+    sourceId: "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
+    project: "wowlist",
+    statement:
+      "The authenticated Posts and Replies timelines yielded all 38 records reported by the profile counter: 16 originals, 6 replies, and 16 reposts. Posts materialized 37 records; one additional @wowlist reply appeared only in Replies.",
+    observationType: "metadata",
+    locator:
+      "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+    confidence: "high",
+    limitations: [
+      "The complete displayed profile population does not recover deleted or unindexed activity outside the counter.",
+      "Profile and interaction counts are point-in-time interface observations.",
+    ],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-SOCIAL-WOWLIST-STAKEHOLDER-PATTERN",
+    sourceId: "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
+    project: "wowlist",
+    statement:
+      "A bounded incoming search recovered 10 mission-relevant third-party records across DIY arts and music, calendar-community, neighborhood-civic, and creative-technology accounts; nine independently posted a WOW List URL.",
+    observationType: "metadata",
+    locator:
+      "stakeholderInventory in apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+    confidence: "high",
+    limitations: [
+      "The search cannot recover every deleted, private, native-repost, liked, or unindexed interaction.",
+      "A posted URL is not evidence of attendance, endorsement, or platform-wide adoption.",
+    ],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-WOWLIST-GOOD-TIMES-DIY-DOCUMENTATION",
+    sourceId: "SRC-WOWLIST-GOOD-TIMES-ZINES-2015-05-06",
+    project: "wowlist",
+    statement:
+      "The linked Good Times cover story describes self-documentation and cross-place connection as core problems for geographically dispersed DIY arts communities.",
+    observationType: "explicit",
+    locator: "Headline, byline, publication date, and article body",
+    confidence: "high",
+    limitations: ["The article supplies mission context but does not cover WOW List."],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-WOWLIST-GRASSTRONAUT-ORGANIZING-RESOURCE",
+    sourceId: "SRC-WOWLIST-GRASSTRONAUT-HOMEWORK-2015-01-29",
+    project: "wowlist",
+    statement:
+      "The linked Grasstronaut article presents In Every Town as a practical organizing resource spanning structures, promotion, production, space, fundraising, community building, and conflict resolution.",
+    observationType: "explicit",
+    locator: "Headline, publication metadata, summary, and article body",
+    confidence: "high",
+    limitations: ["The article is a circulated resource, not coverage of WOW List."],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-WOWLIST-MEOW-WOLF-DIY-FUND",
+    sourceId: "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2017",
+    project: "wowlist",
+    statement:
+      "The reposted Meow Wolf page announced a $100,000 annual fund for DIY arts and music spaces covering infrastructure, rent, equipment, and organizational support.",
+    observationType: "explicit",
+    locator: "Archived headline, program description, and application criteria",
+    confidence: "high",
+    limitations: ["The resource does not establish WOW List involvement in the fund."],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-WOWLIST-KQED-GHOST-SHIP-MOURNING",
+    sourceId: "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016-12-05",
+    project: "wowlist",
+    statement:
+      "The linked KQED video documents public mourning after the Ghost Ship fire, part of a cluster of account records connecting cultural-space loss, mutual aid, and gathering information.",
+    observationType: "explicit",
+    locator: "Video title and linked @wowlist status context",
+    confidence: "high",
+    limitations: ["The source does not establish event ownership or causal impact."],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-WOWLIST-STANDING-ROCK-RESOURCE",
+    sourceId: "SRC-WOWLIST-INDIAN-COUNTRY-TODAY-STANDING-ROCK-2016-11-23",
+    project: "wowlist",
+    statement:
+      "The timeline preserved an Indian Country Today giving and solidarity resource connected to Standing Rock.",
+    observationType: "explicit",
+    locator: "Article title, publication date, and reposted status link",
+    confidence: "moderate",
+    limitations: ["The historical article destination no longer resolves reliably."],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-WOWLIST-ALLIED-MEDIA-CONFERENCE",
+    sourceId: "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015",
+    project: "wowlist",
+    statement:
+      "The account announced that WOW List would be present at the 2015 Allied Media Conference and linked the official conference surface.",
+    observationType: "explicit",
+    locator: "Official conference archive and linked @wowlist status",
+    confidence: "high",
+    limitations: ["The record does not establish a presentation, partnership, or attendance outcome."],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+  {
+    id: "OBS-WOWLIST-POPULAR-VOTE-ARCHIVE",
+    sourceId: "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016-12-11",
+    project: "wowlist",
+    statement:
+      "The December 2016 popular.vote capture identifies the surface as WOW List event sharing and community building, corroborating continuity between the calendar platform and its rapid civic-coordination adaptation.",
+    observationType: "explicit",
+    locator: "Archived title, description metadata, and linked @wowlist status",
+    confidence: "high",
+    limitations: ["The capture does not establish participation totals or complete authorship."],
+    supportsClaimIds: [wowListSocialClaimId],
+    reviewedAt,
+  },
+] satisfies ObservationRecord[];
+
 export const socialMediaObservations = [
   ...profileObservations,
   ...callNycPopulationObservations,
+  ...wowListPopulationObservations,
   ...socialPostDescriptors.map(
     (descriptor): ObservationRecord => ({
       id: descriptor.observationId,
@@ -978,6 +1340,11 @@ const callNycGuidanceSourceIds = [
 ];
 const nycacCouncilSourceIds = sourceIdsForClaim(nycacCouncilClaimId);
 const wowListSocialSourceIds = sourceIdsForClaim(wowListSocialClaimId);
+const wowListSourceIds = [
+  wowListPopulationSource.id,
+  ...wowListSocialSourceIds,
+  ...wowListCuratedSources.map((source) => source.id),
+];
 const nycacIncidentalCouncilSourceIds = [
   "SRC-NYCAC-LEVINE-INCIDENTAL-2020-03-20",
   "SRC-NYCAC-BRANNAN-INCIDENTAL-2019-08-30",
@@ -1100,16 +1467,22 @@ export const socialMediaCaptures = [
     submittedBy: "Codex authenticated archival review",
     kind: "artifact",
     summary:
-      "Thirty-seven recovered records from a 38-post WOW List profile, close-read for product-support and civic-coordination patterns.",
+      "Full archival-production pass over all 38 records reported by the WOW List profile, plus a bounded 16-record incoming-search inventory.",
     status: "integrated",
     publicSafety: "public-safe",
     potentialProjectIds: ["wowlist"],
-    potentialClaimFamilies: ["product support", "community publishing", "rapid civic coordination"],
-    sourceIds: ["SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14", ...wowListSocialSourceIds],
+    potentialClaimFamilies: [
+      "product support",
+      "community publishing",
+      "source curation",
+      "stakeholder traction",
+      "rapid civic coordination",
+    ],
+    sourceIds: ["SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14", ...wowListSourceIds],
     observationIds: observationIdsForClaim(wowListSocialClaimId),
     researchTaskIds: ["RT-SOCIAL-WOWLIST-HANDLE-LINEAGE"],
     disposition:
-      "Promoted the account as a product and coordination surface; did not treat the small profile count as the platform's adoption measure.",
+      "Promoted the account as a product, curation, distribution, and coordination surface; preserved the complete displayed population and bounded third-party patterns without treating the account count as platform adoption.",
   },
 ] satisfies CaptureRecord[];
 
@@ -1352,7 +1725,7 @@ export const socialMediaClaims = [
     project: "wowlist",
     claimType: "method",
     internalClaim:
-      "WOW List used its project account as an extension of the product for onboarding, product support, event distribution, community lineage, and rapid civic coordination.",
+      "Across its complete 38-record displayed population, WOW List used its project account as an extension of the product for onboarding, support, event distribution, source curation, community lineage, and rapid civic coordination, with bounded third-party evidence of use and distribution.",
     epistemicState: "corroborated",
     publicationState: "approved",
     selectionState: "selected",
@@ -1362,7 +1735,7 @@ export const socialMediaClaims = [
       {
         key: "case-study",
         text:
-          "WOW List's 2014-2017 account shows social media functioning as part of the product: explaining how to add and follow calendars, sharing a user tutorial, documenting Sunday Dinner as an origin, distributing events, and adapting the calendar to rapid civic coordination across cities.",
+          "A full pass over all 38 profile-counted records shows social media functioning as part of WOW List's product and community practice: direct user support, a community-created tutorial, event distribution, Sunday Dinner lineage, mission-relevant source curation, and rapid civic coordination. A separate bounded search recovered 10 mission-relevant third-party accounts across arts, calendar, civic, and creative-technology communities; nine independently posted a WOW List URL. These are public-use and distribution signals, not a measure of total adoption or impact.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/wowlist"],
@@ -1376,6 +1749,16 @@ export const socialMediaClaims = [
         confidence: "high",
         renderCitation: true,
       },
+      {
+        sourceId: wowListPopulationSource.id,
+        relationship: "direct-support",
+        supports: [
+          "complete displayed population and reconciliation",
+          "posted-URL and stakeholder-pattern inventory",
+        ],
+        confidence: "high",
+        renderCitation: true,
+      },
       ...wowListSocialSourceIds.map((sourceId) => ({
         sourceId,
         relationship: "direct-support" as const,
@@ -1383,16 +1766,28 @@ export const socialMediaClaims = [
         confidence: "high" as const,
         renderCitation: true,
       })),
+      ...wowListCuratedSources.map((source) => ({
+        sourceId: source.id,
+        relationship: "context" as const,
+        supports: ["mission-relevant content of a source circulated by the account"],
+        confidence: "high" as const,
+        renderCitation: false,
+      })),
     ],
     boundaries: [
-      "The recovered timeline contains 37 of 38 profile posts and is not a complete platform-usage history.",
+      "All 38 records reported by the profile counter materialized across Posts and Replies; that is a complete displayed account population, not a complete history of deleted, private, or unindexed activity.",
+      "The incoming 16-record search inventory is bounded; 10 mission-relevant third-party accounts are not represented as every historical user or stakeholder.",
       "The account's follower count is not used as a WOW List adoption measure.",
       "Event distribution does not establish attendance, event ownership, or causal movement impact.",
+      "Displayed interaction totals are volatile context and are not used as reach, conversion, endorsement, or impact metrics.",
+      "Institutional account records are not attributed post by post to Jamie without authorship evidence.",
     ],
     antiClaims: [
+      "Only 37 of the 38 profile-counted records were recovered.",
       "The Twitter account measures WOW List's total adoption.",
       "WOW List organized every event it distributed.",
       "The social posts establish attendance or causal civic impact.",
+      "Jamie personally authored every @wowlist post.",
     ],
     researchInquiryIds: ["INQ-SOCIAL-WOWLIST-TIMELINE-2026"],
     reviewedAt,
@@ -1623,26 +2018,34 @@ export const socialMediaInquiries = [
   {
     id: "INQ-SOCIAL-WOWLIST-TIMELINE-2026",
     project: "wowlist",
-    question: "What professional and mission-relevant work is visible in WOW List's project-account timeline?",
+    question:
+      "What publishing, posted-source, and stakeholder-response patterns appear across the full displayed @wowlist population?",
     methods: [
-      "Traversed the authenticated @wowlist profile timeline to exhaustion.",
-      "Recovered 37 unique status records from a profile reporting 38 posts.",
-      "Separated 21 original account posts from 16 reposted records and close-read the original posts for product and coordination patterns.",
+      "Traversed the authenticated @wowlist Posts and Replies timelines through repeated no-growth states.",
+      "Deduplicated primary status URLs across both tabs and reconciled their union against the 38-post profile counter.",
+      "Classified all 38 records as original, reply, or repost and inventoried all 35 posted external short URLs without retaining post text or session state.",
+      "Close-read the 22 @wowlist-authored records and the 16 redistributed records for product, curation, distribution, and coordination patterns.",
+      "Ran bounded authenticated searches for @wowlist, @WOWListNYC, and wowlist.org references; deduplicated and classified all 16 recovered records by mission relevance and stakeholder group.",
+      "Resolved or archived nine representative mission-relevant destinations and kept broken-link and alias uncertainty explicit.",
     ],
     runAt: reviewedAt,
-    resultStatus: "partially-recovered",
+    resultStatus: "recovered",
     findings: [
-      "The account documented the project's Sunday Dinner calendar lineage and named Jamie and Richard.",
-      "The account functioned as public product support, onboarding, event distribution, and community documentation.",
-      "The account later adapted the calendar model to rapid multi-city civic coordination and the popular.vote surface.",
+      "The Posts tab yielded 37 records and Replies yielded 38; their union exactly matches the 38-post profile counter.",
+      "The population comprises 16 original posts, 6 replies, and 16 reposts; 22 records were authored by @wowlist.",
+      "Thirty-one records contained external links, producing 35 occurrences and 35 distinct short URLs; 23 occurred in @wowlist-authored records.",
+      "The authored records document Sunday Dinner lineage, inline product support, community-created onboarding, event distribution, source curation, and rapid civic coordination.",
+      "The bounded incoming search recovered 10 mission-relevant third-party accounts in four stakeholder groups; nine independently posted a WOW List URL.",
+      "Punks & Criminals explicitly described adding shows to WOW List, while Music Hackathon publicly attributed the event-sharing service to co-organizer Jamie Burkart.",
     ],
     limitations: [
-      "One of the profile's 38 posts did not materialize in the recovered timeline.",
-      "The timeline is not a measure of total product adoption, event attendance, or civic impact.",
+      "A complete displayed profile population is not a complete archive of deleted, private, withheld, or unindexed activity.",
+      "The incoming search is bounded and does not include every historical mention, native repost, like, or private interaction.",
+      "The timeline and visible interaction totals are not measures of total product adoption, event attendance, endorsement, or civic impact.",
       "The exact @WOWListNYC to @wowlist handle lineage remains unresolved.",
     ],
-    sourceIds: ["SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14", ...wowListSocialSourceIds],
+    sourceIds: ["SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14", ...wowListSourceIds],
     publicSummary:
-      "WOW List's recovered account history shows social media used as a product-support, community-publishing, and rapid civic-coordination surface.",
+      "All 38 profile-counted records were reviewed. Together with a bounded third-party reception inventory, they show social media operating as product support, community publishing, source curation, event distribution, and rapid civic-coordination infrastructure.",
   },
 ] satisfies ResearchInquiry[];

@@ -470,7 +470,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe aggregate records, historical project context, and a metadata-only review of all 38 records reported by the project-account profile.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -482,12 +482,15 @@ const workItemsInput = [
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached",
-      "Historical project account used for product support, community onboarding, event distribution, and rapid civic coordination",
+      "All 38 profile-counted project-account records reviewed across Posts and Replies",
+      "Historical account used for product support, community onboarding, source curation, event distribution, and rapid civic coordination",
+      "Bounded search recovered 10 mission-relevant third-party accounts; nine independently posted a WOW List URL",
     ],
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
-      open: "Screenshots, archive links, and precise adoption wording need approval.",
+      open:
+        "Screenshot selection and the exact historical relationship between @WOWListNYC and @wowlist remain open.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published.",
     },

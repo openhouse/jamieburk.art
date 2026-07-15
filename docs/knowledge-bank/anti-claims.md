@@ -41,6 +41,12 @@ selected, or a winner without new evidence and review.
 
 Do not name collaborators unless approved.
 
+Do not treat the 38-record historical account as a measure of platform
+adoption, or the 10 mission-relevant third-party accounts in a bounded search
+as every historical user or stakeholder. Do not say WOW List organized every
+event it distributed, that visible interaction units establish attendance or
+impact, or that Jamie authored every institutional-account post.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

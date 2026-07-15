@@ -26,6 +26,25 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
+### Project social-media populations
+
+Authenticated archival-production fixtures preserve public-safe metadata for
+the complete materialized `@CallNYCApp` and `@wowlist` timelines. The WOW List
+fixture reconciles all 38 profile-counted records across Posts and Replies,
+inventories all 35 posted short URLs, and classifies a bounded 16-record
+incoming-search sample. Nine representative mission-relevant destinations are
+preserved or linked, including Santa Cruz Good Times and Grasstronaut DIY
+articles, Meow Wolf's archived DIY fund page, KQED's Ghost Ship vigil video,
+an Indian Country Today Standing Rock resource, the Allied Media Conference,
+a community-created tutorial, and `popular.vote`.
+
+The fixtures contain status URLs, dates, author handles, classifications, and
+dated aggregate counts only. They exclude post text, cookies, session state,
+private activity, and local paths. Social counts describe observable
+publishing or reception patterns; they do not establish endorsement, event
+attendance, platform-wide adoption, or individual authorship of every
+institutional post.
+
 ### NYC Artist Coalition campaign press corpus
 
 The July 14 press-ingestion pass added 41 previously unrecorded article records

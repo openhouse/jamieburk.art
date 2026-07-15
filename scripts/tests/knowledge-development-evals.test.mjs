@@ -71,6 +71,12 @@ const callNycPopulationInventory = JSON.parse(
     "utf8",
   ),
 );
+const wowListPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+    "utf8",
+  ),
+);
 
 const normalizeSourceUrl = (value) =>
   value
@@ -442,8 +448,8 @@ test("social-media production preserves account, engagement, and timeline invent
     ["@CallNYCApp", "@NYCArtC", "@wowlist"],
   );
   assert.equal(socialMediaCaptures.length, 6);
-  assert.equal(socialMediaSources.length, 34);
-  assert.equal(socialMediaObservations.length, 34);
+  assert.equal(socialMediaSources.length, 45);
+  assert.equal(socialMediaObservations.length, 46);
   assert.equal(socialMediaClaims.length, 5);
   assert.equal(socialMediaResearchTasks.length, 4);
   assert.equal(socialMediaInquiries.length, 5);
@@ -457,6 +463,15 @@ test("social-media production preserves account, engagement, and timeline invent
     callNycPopulationSource.canonicalUrl,
     /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/apps\/www\/src\/data\/knowledge-bank\/fixtures\/callnyc-full-population\.json$/,
   );
+  const wowListPopulationSource = socialMediaSources.find(
+    (source) => source.id === "SRC-SOCIAL-WOWLIST-FULL-POPULATION-2026-07-14",
+  );
+  assert.equal(wowListPopulationSource.visibility, "public");
+  assert.equal(wowListPopulationSource.preservationStatus, "live");
+  assert.match(
+    wowListPopulationSource.canonicalUrl,
+    /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/apps\/www\/src\/data\/knowledge-bank\/fixtures\/wowlist-full-population\.json$/,
+  );
   assert.equal(socialMediaReviewSummary.callNycCouncilMemberAccountCount, 8);
   assert.equal(socialMediaReviewSummary.callNycRecoveredTimelineRecordCount, 107);
   assert.equal(socialMediaReviewSummary.callNycUnmaterializedProfileRecordCount, 3);
@@ -468,7 +483,17 @@ test("social-media production preserves account, engagement, and timeline invent
     socialMediaReviewSummary.nycacHistoricalMentionRecordCount2017To2020,
     358,
   );
-  assert.equal(socialMediaReviewSummary.wowListRecoveredTimelineRecordCount, 37);
+  assert.equal(socialMediaReviewSummary.wowListRecoveredTimelineRecordCount, 38);
+  assert.equal(socialMediaReviewSummary.wowListRecoveredOriginalPostCount, 16);
+  assert.equal(socialMediaReviewSummary.wowListRecoveredReplyCount, 6);
+  assert.equal(socialMediaReviewSummary.wowListRecoveredRepostCount, 16);
+  assert.equal(socialMediaReviewSummary.wowListAuthoredRecordCount, 22);
+  assert.equal(socialMediaReviewSummary.wowListDistinctExternalShortUrlCount, 35);
+  assert.equal(socialMediaReviewSummary.wowListIncomingSearchRecordCount, 16);
+  assert.equal(
+    socialMediaReviewSummary.wowListMissionRelevantThirdPartyAccountCount,
+    10,
+  );
 
   const nycacRecords =
     socialMediaInventory.inventories.nycArtistCoalitionIncomingMentions2017To2020
@@ -477,8 +502,8 @@ test("social-media production preserves account, engagement, and timeline invent
     socialMediaInventory.inventories.wowListProfileTimeline.records;
   assert.equal(nycacRecords.length, 358);
   assert.equal(new Set(nycacRecords.map((record) => record.url)).size, 358);
-  assert.equal(wowListRecords.length, 37);
-  assert.equal(new Set(wowListRecords.map((record) => record.url)).size, 37);
+  assert.equal(wowListRecords.length, 38);
+  assert.equal(new Set(wowListRecords.map((record) => record.url)).size, 38);
 
   const observedSourceIds = new Set(
     socialMediaObservations.map((observation) => observation.sourceId),
@@ -593,6 +618,79 @@ test("CallNYC full-population archive reconciles every retrievable record", () =
     JSON.stringify(callNycPopulationInventory),
     /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
   );
+  assert.doesNotMatch(
+    JSON.stringify(wowListPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
+  );
+});
+
+test("WOW List full-population archive reconciles all 38 profile records", () => {
+  const reconciliation = wowListPopulationInventory.populationReconciliation;
+  assert.equal(reconciliation.profileReportedPostCount, 38);
+  assert.equal(reconciliation.postsTimelineUniqueCount, 37);
+  assert.equal(reconciliation.repliesTimelineUniqueCount, 38);
+  assert.equal(reconciliation.recoveredUnionRecordCount, 38);
+  assert.equal(reconciliation.recoveredPopulationReviewedPercent, 100);
+  assert.equal(reconciliation.profileCountNotMaterialized, 0);
+  assert.match(reconciliation.conclusion, /Every one of the 38 records/i);
+
+  const records = wowListPopulationInventory.records;
+  assert.equal(records.length, 38);
+  assert.equal(new Set(records.map((record) => record.url)).size, 38);
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("posts")).length,
+    37,
+  );
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("replies")).length,
+    38,
+  );
+  assert.deepEqual(
+    records
+      .filter((record) => !record.recoveredFrom.includes("posts"))
+      .map((record) => record.url),
+    ["https://x.com/wowlist/status/665520472461860864"],
+  );
+  assert.deepEqual(wowListPopulationInventory.recordTypeCounts, {
+    original: 16,
+    reply: 6,
+    repost: 16,
+  });
+
+  const links = records.flatMap((record) => record.externalLinks);
+  assert.equal(links.length, 35);
+  assert.equal(new Set(links.map((link) => link.shortUrl)).size, 35);
+  assert.equal(
+    wowListPopulationInventory.publishingPattern.accountAuthoredRecordCount,
+    22,
+  );
+  assert.equal(
+    wowListPopulationInventory.postedUrlInventory.curatedMissionRelevantSources
+      .length,
+    9,
+  );
+
+  const incoming = wowListPopulationInventory.stakeholderInventory.records;
+  const missionRelevant = incoming.filter(
+    (record) => record.classification === "mission-relevant-third-party",
+  );
+  assert.equal(incoming.length, 16);
+  assert.equal(new Set(incoming.map((record) => record.url)).size, 16);
+  assert.equal(missionRelevant.length, 10);
+  assert.equal(
+    new Set(missionRelevant.map((record) => record.authorHandle)).size,
+    10,
+  );
+  assert.equal(
+    Object.values(
+      wowListPopulationInventory.stakeholderInventory.stakeholderGroupCounts,
+    ).reduce((sum, count) => sum + count, 0),
+    10,
+  );
+  assert.doesNotMatch(
+    JSON.stringify(wowListPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
+  );
 });
 
 test("social-media claims use bounded counts and preserve shared-account authorship", () => {
@@ -652,8 +750,11 @@ test("social-media claims use bounded counts and preserve shared-account authors
   assert.match(identityClaim.boundaries.join("\n"), /cannot establish who opened/i);
 
   assert.equal(wowListClaim.selectionState, "selected");
-  assert.match(wowListClaim.projections[0].text, /part of the product/i);
+  assert.match(wowListClaim.projections[0].text, /all 38 profile-counted records/i);
+  assert.match(wowListClaim.projections[0].text, /10 mission-relevant third-party accounts/i);
   assert.match(wowListClaim.boundaries.join("\n"), /not used as.*adoption/i);
+  assert.match(wowListClaim.boundaries.join("\n"), /All 38 records/i);
+  assert.match(wowListClaim.antiClaims.join("\n"), /Only 37.*38/i);
 });
 
 test("social-media production exposes no authenticated-session secrets or private locators", () => {
