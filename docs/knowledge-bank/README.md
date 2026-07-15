@@ -151,3 +151,13 @@ incoming-response set, and develops source-backed Horse Lords, 8th Street
 Tunnel, and KC Town Hall claims.
 The [project note](projects/urbanhermit.md) records their editorial disposition:
 reserve knowledge, not an automatic website projection.
+
+The [NYC Artist Coalition Facebook event archival-production
+report](projects/nyc-artist-coalition-facebook-events.md) accounts for the full
+34-slot Past Events control as 33 recovered event records and one unresolved
+historical slot. Its public-safe fixture preserves event plot points, organizer
+relationships, bounded response snapshots, mission topics, and posted source
+routes while excluding participant identities, raw descriptions, contacts,
+credentials, and authenticated-session data. The hiring site receives only
+separately governed participation-system and response-signal claims; no event
+or knowledge-bank route is created.

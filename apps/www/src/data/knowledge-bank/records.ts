@@ -25,6 +25,13 @@ import {
   urbanhermitResearchInquiries,
   urbanhermitSources
 } from "./urbanhermit.ts";
+import {
+  nycacFacebookEventClaims,
+  nycacFacebookEventIntakeItems,
+  nycacFacebookEventResearchInquiries,
+  nycacFacebookEventSourceIds,
+  nycacFacebookEventSources
+} from "./nycacFacebookEvents.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -758,7 +765,8 @@ const knowledgeBankInput = {
     },
     ...campaignPressSources,
     ...projectSocialSources,
-    ...urbanhermitSources
+    ...urbanhermitSources,
+    ...nycacFacebookEventSources
   ],
   claims: [
     {
@@ -995,7 +1003,8 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex public-record review"]
     },
-    ...urbanhermitClaims
+    ...urbanhermitClaims,
+    ...nycacFacebookEventClaims
   ],
   researchInquiries: [
     {
@@ -1071,7 +1080,8 @@ const knowledgeBankInput = {
       sourceIds: ["SRC-NTER-CHNG-PROJECT-SITE-2011", "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", "SRC-NERMAN-AMERICA-NOW-HERE-2011"],
       publicSummary: "America: Now and Here's archived official pages establish NTER CHNG's 2011 Kansas City exhibition inclusion, shared Drew Bolton / Jamie Burkart / Garrett Fuselier visual-artist credit, and observed visitor use; the Nerman Museum page supplies context rather than project-specific proof."
     },
-    ...urbanhermitResearchInquiries
+    ...urbanhermitResearchInquiries,
+    ...nycacFacebookEventResearchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -2801,7 +2811,8 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-14",
       reviewedBy: ["Jamie Burkart", "Codex Google Drive archive review"]
     },
-    ...urbanhermitIntakeItems
+    ...urbanhermitIntakeItems,
+    ...nycacFacebookEventIntakeItems
   ],
   pages: [
     {
@@ -2830,11 +2841,17 @@ const knowledgeBankInput = {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
       sourceOrder: [
-        nycaProfilePopulationCensusSourceId
+        nycaProfilePopulationCensusSourceId,
+        nycacFacebookEventSourceIds.firsthandRole,
+        nycacFacebookEventSourceIds.census,
+        "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
+        "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19"
       ],
       occurrences: [
         { id: "shared-public-identity-corpus", claimId: "CLM-NYCA-SHARED-PUBLIC-IDENTITY-CORPUS", projection: "case-study", sourceIds: [nycaProfilePopulationCensusSourceId] },
-        { id: "council-social-engagement", claimId: "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT", projection: "case-study", sourceIds: [nycaProfilePopulationCensusSourceId] }
+        { id: "council-social-engagement", claimId: "CLM-NYCA-COUNCIL-SOCIAL-ENGAGEMENT", projection: "case-study", sourceIds: [nycaProfilePopulationCensusSourceId] },
+        { id: "participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: [nycacFacebookEventSourceIds.firsthandRole, nycacFacebookEventSourceIds.census, "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19", "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19"] },
+        { id: "facebook-event-response-signals", claimId: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS", projection: "case-study", sourceIds: [nycacFacebookEventSourceIds.census] }
       ]
     },
     {

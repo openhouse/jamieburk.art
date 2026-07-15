@@ -71,3 +71,11 @@ knowledge-bank reserve. They are not current website requirements and must not
 create a `/proofs`, `/urbanhermit`, or other public route without a new
 audience-and-purpose decision, citation review, and any needed media-rights
 clearance.
+
+The NYC Artist Coalition Facebook event population follows the same reserve
+rule for its 33-row ledger, posted-source inventory, platform-response
+arithmetic, and democracy-lab interpretation. The FairRentNYC case study
+receives only two governed claims: Jamie helped establish and produce the
+recurring participation system, and 19 event pages displayed at least 100
+Facebook responses, with an explicit no-attendance boundary. No event archive
+or knowledge-bank route is created.

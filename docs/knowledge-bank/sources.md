@@ -173,3 +173,15 @@ collaborators approve.
 - unapproved photos;
 - private financial records;
 - private personal records.
+
+## NYC Artist Coalition Facebook Event Sources
+
+- `SRC-NYCAC-FACEBOOK-EVENT-SURFACE-2026-07-15`: live authenticated Past Events surface and 34-event host-card control.
+- `SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026-07-15`: public-safe 33-event fixture with population arithmetic, event metadata, response boundaries, topic classifications, posted source routes, and protected-link counts.
+- `SRC-NYCAC-FACEBOOK-EVENT-RESEARCH-2026-07-15`: protected traversal and detail-page provenance. No raw capture or session data is public.
+- `SRC-NYCAC-FACEBOOK-EVENT-FIRSTHAND-ROLE-2026-07-15`: Jamie's attributed first-hand account of the event practice and his contribution.
+- `SRC-NYCAC-NYPOST-FOOTLOOSE-2017-04-08` and `SRC-NYCAC-GOTHAMIST-COMMERCIAL-RENT-2019-11-06`: event-posted article routes not already represented in the campaign-press bank.
+
+Five additional event-posted article routes reuse existing WNYC, Metro, New
+Yorker, Baffler, and Curbed source records. A route in an event establishes
+circulation context, not adoption of every article statement.

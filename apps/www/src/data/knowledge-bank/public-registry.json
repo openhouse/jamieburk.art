@@ -102,6 +102,50 @@
       ]
     },
     {
+      "id": "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "The reporting identifies Jamie with NYC Artist Coalition, documents his fire-code study groups and City Hall advocacy, and quotes his public-safety analysis of the Cabaret Law.",
+      "doesNotEstablish": [
+        "Jamie alone repealed the Cabaret Law",
+        "Jamie alone created NYC Artist Coalition",
+        "Jamie authored the repeal legislation",
+        "Jamie alone created the Office of Nightlife",
+        "the complete coalition campaign history"
+      ]
+    },
+    {
+      "id": "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "A contemporaneous interview connecting Jamie's cooperative labor, weekly Sunday Dinner hosting, WOWList, and NYC Artist Coalition work. The title says Julie while the body says Julia; the knowledge bank preserves that source inconsistency rather than silently resolving it.",
+      "doesNotEstablish": [
+        "300+ Sunday Dinner gatherings",
+        "20+ resident artists",
+        "Sunday Dinner's current frequency",
+        "Jamie as sole creator of NYC Artist Coalition",
+        "Jamie as sole producer of the September 2017 town hall",
+        "resolution of the Julie and Julia name inconsistency"
+      ]
+    },
+    {
       "id": "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
       "title": "Resolution 190649: KC Town Hall CCED recommendation",
       "organization": "City of Kansas City, Missouri",
@@ -318,6 +362,50 @@
         "partnership",
         "a quantified program outcome",
         "Jamie's authorship of the triggering shared-account post"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026-07-15",
+      "title": "NYC Artist Coalition Facebook event full-population census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
+      "publicNote": "The fixture retains 33 public event identities, dates, venues, organizer displays, bounded response snapshots, topic classifications, and selected mission-relevant links while excluding raw descriptions and personal or access data.",
+      "doesNotEstablish": [
+        "the missing event identity",
+        "every historical coalition event",
+        "individual event authorship",
+        "physical attendance or unique people",
+        "policy causality",
+        "permission to publish attendee identities, comments, contacts, or access credentials"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-FIRSTHAND-ROLE-2026-07-15",
+      "title": "Jamie Burkart first-hand account of the NYC Artist Coalition event practice",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Jamie Burkart, first-hand account of his contribution to NYC Artist Coalition's event and participation practice, July 15, 2026.",
+      "publicNote": "Jamie identifies the recurring event system as a major part of his coalition contribution: combining lessons from WOW List with legislative advocacy, rotating meetings through small cultural spaces, listening to artists, and creating public paths from lived experience to collective civic action.",
+      "doesNotEstablish": [
+        "independent corroboration of every task",
+        "Jamie's authorship or sole production of every event",
+        "consensus among all coalition members",
+        "physical attendance",
+        "causality for legislative or agency outcomes"
       ]
     }
   ],
@@ -757,6 +845,126 @@
         "The official records do not establish Jamie's individual causality for the recommendation or Council action.",
         "The 2024 record does not explain why KC Town Hall withdrew; do not speculate about or publish a reason for the withdrawal."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie describes the recurring event and participation layer as a major part of his NYC Artist Coalition contribution. The surviving event population corroborates the collective system's public form while leaving event-level authorship and production credit open.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-FIRSTHAND-ROLE-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's first-hand role account",
+            "event-system intention",
+            "connection between cultural listening and civic action"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026-07-15",
+          "relationship": "corroborating",
+          "supports": [
+            "recurring meetings across cultural spaces",
+            "practical sessions, hearings, campaigns, and relief formats",
+            "cultural and government venue pattern"
+          ],
+          "publicNote": "The event record proves the collective system existed; it does not identify the producer of every event.",
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's coalition affiliation",
+            "fire-code study groups organized by Jamie",
+            "Jamie's City Hall advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's coalition participation",
+            "contemporaneous cultural-space and Cabaret Law context"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use helped establish and produce; do not assign Jamie authorship or sole production of every event.",
+        "Preserve event partners, venue hosts, organizers, artists, advocates, public officials, and coalition collaborators as part of the work.",
+        "The rotating-venue finding is supported by 12 recurring-meeting records, including ten distinct named physical cultural spaces and two virtual meetings; it is not a claim that a meeting occurred every calendar month.",
+        "The event record does not establish that any one gathering caused a legislative, agency, or enforcement outcome."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public event layer generated visible platform traction: 19 recovered event pages display at least 100 Facebook responses, seven at least 500, and three at least 1,000. These are historical response labels, not verified attendance or unique reach.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Thirty-two recovered event pages display Facebook response counts; 19 show at least 100 responses, seven at least 500, and three at least 1,000. The figures remain event-level platform signals only.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "32 response displays",
+            "19 at or above 100",
+            "seven at or above 500",
+            "three at or above 1,000"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Facebook response labels are not verified attendance, unique people, reach, participation, endorsement, conversion, mandate, or impact.",
+        "People may respond to multiple events, and three displayed figures are rounded in thousands.",
+        "Do not sum the event-level figures into a people-reached claim.",
+        "Use independent reporting for physical attendance at a particular event when available."
+      ]
     }
   ],
   "pages": [
@@ -839,7 +1047,11 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
-        "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15"
+        "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15",
+        "SRC-NYCAC-FACEBOOK-EVENT-FIRSTHAND-ROLE-2026-07-15",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026-07-15",
+        "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
+        "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19"
       ],
       "occurrences": [
         {
@@ -856,6 +1068,25 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NYCA-X-PROFILE-POPULATION-CENSUS-2026-07-15"
+          ]
+        },
+        {
+          "id": "participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-FIRSTHAND-ROLE-2026-07-15",
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026-07-15",
+            "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
+            "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19"
+          ]
+        },
+        {
+          "id": "facebook-event-response-signals",
+          "claimId": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026-07-15"
           ]
         }
       ]

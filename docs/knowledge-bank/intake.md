@@ -204,3 +204,12 @@ the website and generated public registry. The personal-account pass is
 `integrated` into four governed reserve claims, but raw historical post text
 remains protected and no `/proofs`, `/urbanhermit`, or other public route is
 created.
+
+The NYC Artist Coalition Facebook event thread is now `integrated` as
+`INTAKE-NYCAC-FACEBOOK-EVENT-POPULATION-2026-07-15`. It accounts for all 34
+displayed control slots as 33 recovered public event records and one unresolved
+historical slot, associates the event graph with seven posted source articles,
+and promotes bounded participation-system and response-signal claims. Jamie's
+democracy-lab framing remains attributed interpretation. The intake itself is
+non-projectable; attendee identities, comments, raw event bodies, credentials,
+private working links, and authenticated-session data remain protected.

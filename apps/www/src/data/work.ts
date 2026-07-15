@@ -180,7 +180,7 @@ const workItemsInput = [
     summary:
       "Jamie co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -189,12 +189,13 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-participation-system"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, campaign websites, and a durable shared public identity across four cultural-space campaigns.",
+      "A recurring participation system across small cultural spaces and civic forums, alongside running minutes, action trackers, source maps, public-data framing, campaign websites, and a durable shared public identity across four cultural-space campaigns.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -226,6 +227,12 @@ const workItemsInput = [
         description:
           "A source-backed archive ledger showing one coalition identity carrying four campaign lanes, public resources, source curation, and stakeholder dialogue over time.",
         type: "decision record"
+      },
+      {
+        title: "Recurring participation system",
+        description:
+          "Public event pages, rotating cultural-space meetings, practical sessions, hearings, town halls, campaign actions, and relief convenings that connected lived experience with civic pathways.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -241,6 +248,8 @@ const workItemsInput = [
       "Source Mapping",
       "Action Tracking",
       "Campaign Websites",
+      "Public Programs",
+      "Stakeholder Convening",
       "Public Guidance",
       "Decision Records"
     ],
@@ -269,6 +278,9 @@ const workItemsInput = [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "A 34-slot Facebook event control with 33 public event pages recovered and one historical slot explicitly unresolved",
+      "Twelve recurring-meeting records, including ten distinct named physical cultural spaces and two virtual meetings",
+      "Nineteen recovered event pages displaying at least 100 Facebook responses, with response labels kept separate from attendance",
       "A 5,124-slot @NYCArtC archive ledger with 3,123 public records recovered and 2,001 platform-limited slots explicitly unresolved",
       "At least 15 direct mentions or replies from five then-serving NYC Council member accounts under a strict review rule",
       "Legal/policy questions organized for collaborators",
@@ -276,7 +288,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition and helped establish its recurring participation system while building public-safe civic systems, campaign memory, source maps, policy-communications materials, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

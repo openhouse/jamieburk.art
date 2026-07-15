@@ -63,6 +63,66 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## nycac-facebook-event-population - NYC Artist Coalition Facebook event population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public surface / public-safe full-population fixture / protected traversal record
+**Public wording:** Facebook displayed 34 NYC Artist Coalition past-event slots. The knowledge bank recovered all 33 event identities exposed by the live index and records the remaining slot as unresolved.
+**Detailed public-safe wording:** The current Past Events control displayed 34 slots; repeated terminal scrolling exposed 33 unique event identities, and all 33 detail pages were reviewed. The final metadata-free slot remains explicitly unresolved.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Establishes a complete and auditable denominator without erasing the part of the historical record that Facebook did not materialize.
+**Guardrail:** This is complete control-slot accounting, not a native Meta export or proof that no historical event was deleted before capture.
+**Do not say:** All 34 event pages were recovered; the coalition created exactly 34 events; the unresolved event never existed; Facebook is a complete owner archive.
+**Protected boundaries:** Raw event descriptions, participant identities, comments, contacts, credentials, private working links, account administration, and authenticated-session data stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-participation-system - Recurring cultural and civic participation system
+
+**Status:** Ready
+**Support level:** Strong with collective-credit boundary
+**Evidence class:** Jamie first-hand role account / 33-event public census / independent reporting / contemporaneous interview
+**Public wording:** Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, small cultural-space meetings, practical sessions, town halls, hearings, campaign actions, and relief convenings.
+**Detailed public-safe wording:** Jamie combined public event infrastructure, rotating cultural-space meetings, practical safety and legal sessions, civic forums, and campaign action paths so artists' lived experience could enter shared advocacy work.
+**Where to project:** FairRentNYC case study, work metadata, and knowledge-bank project note.
+**Why it matters:** Makes relational program production, stakeholder convening, public participation, and translation between cultural and civic settings legible as professional systems work.
+**Guardrail:** Preserve collective and cohost credit. The event record proves the system's public form but does not identify the producer of every event or establish event-to-policy causality.
+**Do not say:** Jamie solely created or produced every event; every event used a different venue; the coalition met every calendar month; the event program alone caused policy outcomes.
+**Protected boundaries:** Attendee identities, comments, reactions, meeting credentials, private working links, raw event bodies, and unapproved collaborator detail stay protected.
+**Review owner:** Jamie / collaborator review welcome for event-level credit
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-event-response-signals - Bounded event-platform traction
+
+**Status:** Ready with boundary
+**Support level:** Strong
+**Evidence class:** Public-safe full-population fixture
+**Public wording:** Nineteen recovered event pages display at least 100 Facebook responses, seven at least 500, and three at least 1,000.
+**Detailed public-safe wording:** Thirty-two of 33 recovered event pages display a historical Facebook response label. Threshold counts preserve visible traction without summing repeat responders or rounded values into a people-reached total.
+**Where to project:** FairRentNYC case study and knowledge-bank project note.
+**Why it matters:** Supplies a concrete public traction signal while preserving the difference between an interface action and a person in a room.
+**Guardrail:** These are historical event-level interface labels, not attendance, unique people, reach, participation, endorsement, conversion, mandate, or impact.
+**Do not say:** 9,989 unique people engaged; Facebook responses equal attendance; every responder participated; the three largest events each drew more than 1,000 people in person.
+**Protected boundaries:** Do not publish responder identities, guest lists, comments, reactions, invite context, or private analytics.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-democratic-listening-practice - Jamie's attributed democracy-lab interpretation
+
+**Status:** Careful
+**Support level:** Attributed interpretation
+**Evidence class:** Jamie first-hand account / corroborating event pattern
+**Public wording:** Jamie describes the event practice as a kind of democracy lab: listening in small cultural spaces, believing artists, and translating lived experience into collective civic pathways.
+**Detailed public-safe wording:** Jamie understands the recurring event practice as relational infrastructure linking cultural experience, collective listening, practical support, and civic action while leaving room for collaborators and participants to describe the work differently.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves the ethical and poetic intention behind the operating system without forcing it into the hiring site's primary empirical proof layer.
+**Guardrail:** Keep this attributed to Jamie. It is an interpretation of practice, not a measured outcome or participant consensus.
+**Do not say:** The events empirically proved democratic impact; every participant shared the interpretation; Facebook responses measure democratic participation.
+**Protected boundaries:** Do not publish participant testimony, private coalition discussion, or unapproved collaborator interpretations as support for this framing.
+**Review owner:** Jamie / participant and collaborator context welcome
+**Last reviewed:** 2026-07-15
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful
