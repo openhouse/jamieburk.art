@@ -33,7 +33,7 @@ const currentSurfaceSignal =
 const historicalPopulationSignal =
   /\b(?:historical|lifetime|ever published|deletion history|whole history|complete history|entire history|all history)\b/i;
 const completenessSignal =
-  /\b(?:all|every|complete|entire|full|whole|100 percent|100%|total|none missing|no .{0,60} missing)\b/i;
+  /\b(?:all|every|complete|entire|full|whole|exhaustive|definitive|comprehensive|100 percent|100%|total|none missing|no .{0,60} missing)\b/i;
 const populationObjectSignal =
   /\b(?:Facebook|Page|posts?|archive|history|corpus|timeline|record)\b/i;
 const lifetimeEscalationSignal =
@@ -41,7 +41,7 @@ const lifetimeEscalationSignal =
 const explicitPopulationBoundary =
   /\b(?:not|isn't|is not|does not|cannot|may still be missing|not proof)\b.{0,100}\b(?:native Meta export|deletion history|lifetime|historical|every post|complete history|missing)\b/i;
 const negatedCompletenessSignal =
-  /(?:\b(?:does not|do not|did not|cannot)\b.{0,40}\b(?:assign|attribute|author|write|publish|post|include|recover|cover)\b.{0,80}\b(?:all|every|complete|entire|full|whole)|\b(?:this|it) is not\b.{0,120}\b(?:complete|entire|full|whole|lifetime|historical)\b|\bnot (?:a |the )?(?:complete|entire|full|whole|lifetime|historical)\b|\bnot proof that no\b.{0,80}\bmissing\b|\bhistorical posts?\b.{0,50}\bmay still be missing\b)/i;
+  /(?:\b(?:does not|do not|did not|cannot)\b.{0,40}\b(?:assign|attribute|author|write|publish|post|include|recover|cover)\b.{0,80}\b(?:all|every|complete|entire|full|whole|exhaustive|definitive|comprehensive)|\b(?:this|it) is not\b.{0,120}\b(?:complete|entire|full|whole|exhaustive|definitive|comprehensive|lifetime|historical)\b|\bnot (?:a |the )?(?:complete|entire|full|whole|exhaustive|definitive|comprehensive|lifetime|historical)\b|\bnot\b.{0,60}\b(?:exhaustive|definitive|comprehensive)\b|\bnot proof that no\b.{0,80}\bmissing\b|\bhistorical posts?\b.{0,50}\bmay still be missing\b)/i;
 const protectedPopulationBoundary =
   /\b(?:outside the repository|remain(?:s)? offline|withheld|protected|not published)\b/i;
 const currentPopulationDefinition =
@@ -51,7 +51,7 @@ const jamieSignal = /\bJamie(?:'s)?\b/i;
 const publishingContextSignal =
   /\b(?:NYCAC|NYC Artist Coalition|coalition(?:'s)?|Facebook|Page|account|social|publishing|posting|authorship|publisher|administrator|admin|operator|management|operations?)\b/i;
 const roleAssertionSignal =
-  /\b(?:authored|wrote|written|penned|drafted|prepared|composed|supplied (?:the )?copy|published|posted|created|ran|run|managed|managing|administered|administration|controlled|owned|handled|operated|led|operator|administrator|admin|author|publisher|authorship|responsibility|rested|Page use|publishing|posting)\b/i;
+  /\b(?:authored|wrote|written|penned|drafted|prepared|composed|supplied|copy|language|prose|voice|content|publish|published|posted|created|ran|run|managed|managing|administered|administration|controlled|owned|handled|operated|led|operator|administrator|admin|author|publisher|authorship|responsibility|rested|Page use|publishing|posting)\b/i;
 const exclusiveRoleSignal =
   /\b(?:sole|only|exclusive|exclusively|solely|alone|no one else|nobody else|entire|all|every|predominant|predominantly|primary|principally|mainly|most)\b/i;
 const sharedRoleSignal =
@@ -66,13 +66,15 @@ const confirmationSignal =
 const routeSignal =
   /\b(?:tag|tags|tagged|mention|mentions|mentioned|link|links|linked|reference|references|referenced|route|routes|routed|citation|citations)\b/i;
 const stakeholderActorSignal =
-  /\b(?:Council|agenc(?:y|ies)|partners?|officials?|Council offices?|institutional)\b/i;
+  /\b(?:Council|agenc(?:y|ies)|partners?|officials?|staff|Council offices?|institutional)\b/i;
 const stakeholderResponseSignal =
   /\b(?:engaged|engagement|interacted|interaction|involved|involvement|present|presence|in the room|endorsed|endorsement|responded|response|replied|partnered|participated|participation|took part|attended|attendance|acted|support(?:ed)?|collaborat(?:ed|ion))\b/i;
 const inboundStakeholderActionSignal =
   /\b(?:engaged|engagement|interacted|interaction|involved|involvement|present|presence|in the room|endorsed|endorsement|responded|replied|partnered|participated|participation|took part|attended|attendance|acted|support(?:ed)?|collaborat(?:ed|ion))\b/i;
 const directStakeholderResponseSignal =
   /\bstakeholders?[- ](?:engagement|interaction|involvement|presence|endorsement|response|participation|attendance|support|collaboration)\b/i;
+const stakeholderPresenceSignal =
+  /\b(?:Council|agenc(?:y|ies)|officials?|staff)\b.{0,100}\b(?:at|inside|in)\b.{0,50}\b(?:gatherings?|events?|meetings?|activities|the room)\b/i;
 const positiveInferenceSignal =
   /\b(?:proves?|proved|establishes?|established|confirms?|confirmed|verifies?|verified|demonstrates?|demonstrated|documents?|documented|indicates?|indicated|shows?|showed|evidences?|evidenced|means?|amounts? to)\b/i;
 const explicitInferenceBoundary =
@@ -83,9 +85,9 @@ const contrastReassertionSignal =
 const metricSignal =
   /\b(?:reactions?|comments?|shares?|likes?|interactions?|engagements?|response (?:signals?|floor|counters?)|visible response|reposting|reposts?|volume of reposting|2,374|2374|611|212)\b/i;
 const impactSignal =
-  /\b(?:reach|reached|impact|attendance|attention|traction|conversion|adoption|influence|amplif(?:y|ied|ication)|unique people|constituents?|policy change|legislation|Council decision|campaign result|decisions?|results?|outcomes?|causality)\b/i;
+  /\b(?:reach|reached|impact|attendance|attention|traction|conversion|adoption|influence|amplif(?:y|ied|ication)|unique people|constituents?|policy change|political movement|legislative (?:movement|progress|result)|policy (?:movement|progress|result)|legislation|votes?|Council decision|campaign result|decisions?|results?|outcomes?|causality)\b/i;
 const explicitImpactBoundary =
-  /(?:\b(?:does not|do not|did not|cannot|is not|are not|was not|were not)\b.{0,100}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|legislation|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\bnot\b.{0,40}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|legislation|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\b(?:out of impact claims|separat(?:e|ed|ing|ion).{0,100}from impact|without converting.{0,120}into impact)\b)/i;
+  /(?:\b(?:does not|do not|did not|cannot|is not|are not|was not|were not)\b.{0,100}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|political movement|legislative (?:movement|progress|result)|policy (?:movement|progress|result)|legislation|votes?|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\bnot\b.{0,40}\b(?:reach|impact|attendance|attention|traction|conversion|adoption|influence|amplification|unique people|policy change|political movement|legislative (?:movement|progress|result)|policy (?:movement|progress|result)|legislation|votes?|Council decision|campaign result|decisions?|results?|outcomes?|causality)|\b(?:out of impact claims|separat(?:e|ed|ing|ion).{0,100}from impact|without converting.{0,120}into impact)\b)/i;
 
 const accountSurfaceSignal =
   /\b(?:authenticated|signed[- ]in|logged[- ]in|dashboard|Meta Business Suite|management (?:view|console)|content control|Page controls?|creator tools?|back office|account controls?|control surface)\b/i;
@@ -139,8 +141,9 @@ export function findNycartcFacebookPublicArtifactRisk(text) {
         inboundStakeholderActionSignal.test(sentence) &&
         positiveInferenceSignal.test(sentence)) ||
         (stakeholderActorSignal.test(sentence) && inboundStakeholderActionSignal.test(sentence)) ||
-        directStakeholderResponseSignal.test(sentence)) &&
-      stakeholderResponseSignal.test(sentence) &&
+        directStakeholderResponseSignal.test(sentence) ||
+        stakeholderPresenceSignal.test(sentence)) &&
+      (stakeholderResponseSignal.test(sentence) || stakeholderPresenceSignal.test(sentence)) &&
       (!explicitInferenceBoundary.test(sentence) || contrastReassertionSignal.test(sentence))
     ) {
       return "stakeholder-engagement inflation";

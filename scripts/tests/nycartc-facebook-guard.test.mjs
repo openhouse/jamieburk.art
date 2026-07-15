@@ -85,7 +85,15 @@ const prohibited = [
   "Visible comment volume delivered the campaign result.",
   "Jamie prepared the coalition Facebook copy.",
   "Repeated mentions place Council officials in the room.",
-  "The share total moved the legislation forward."
+  "The share total moved the legislation forward.",
+  "Jamie supplied NYCAC Facebook language.",
+  "The 444-row census is NYCAC's exhaustive past on Facebook.",
+  "Those references put agency staff at coalition gatherings.",
+  "The reaction total yielded political movement.",
+  "The shares helped secure the vote.",
+  "Jamie was effectively the Page's principal voice.",
+  "Jamie remained able to publish through Page controls.",
+  "The surviving archive is definitive for NYCAC's Facebook history."
 ];
 
 for (const statement of prohibited) {
@@ -114,7 +122,11 @@ const bounded = [
   "Jamie may have drafted Page copy, but authorship remains unresolved.",
   "Jamie prepared an archival note about Page copy; this does not establish authorship.",
   "Mentions do not establish that officials were in the room.",
-  "Share totals do not establish that legislation moved."
+  "Share totals do not establish that legislation moved.",
+  "The current census is not exhaustive or definitive for NYCAC's Facebook history.",
+  "References do not establish that agency staff were at coalition gatherings.",
+  "Reaction totals do not establish political movement or a policy result.",
+  "Jamie supplied research language about Facebook; authorship remains unresolved."
 ];
 
 for (const statement of bounded) {
