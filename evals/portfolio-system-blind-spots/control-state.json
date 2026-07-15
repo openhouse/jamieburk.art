@@ -20,7 +20,7 @@
     {
       "id": "inquiry-closure",
       "signalSource": "Live inquiry states plus priorityInquiryControls.",
-      "currentState": "26 of 32 inquiries are partially recovered; one is recovered.",
+      "currentState": "27 of 33 inquiries are partially recovered; one is recovered.",
       "controlArtifact": "priorityInquiryControls",
       "trigger": "When a priority inquiry is selected for another research pass.",
       "owner": "knowledge-bank-maintainer",
@@ -106,12 +106,18 @@
     "status": "planned",
     "actionClass": "bounded-hiring-reader-study",
     "deadline": "2026-07-18",
-    "frozenSurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/resume", "/contact"],
-    "entrySurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc"],
+    "frozenSurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/about", "/resume", "/contact"],
+    "entrySurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/about"],
+    "entrySurfaceAllocation": {
+      "/": 1,
+      "/work/technical-operations": 1,
+      "/work/fair-rent-nyc": 1,
+      "/about": 2
+    },
     "destinationSurfaces": ["/resume", "/contact"],
-    "sample": "Five consented readers: at least two hiring-adjacent readers and one implementation, civic-tech, or product-operations peer. Assign two readers to the home page, two to technical operations, and one to Fair Rent NYC; all five must attempt the resume and contact destinations.",
+    "sample": "Five consented readers: at least two hiring-adjacent readers and one implementation, civic-tech, or product-operations peer. Assign one reader to the home page, one to technical operations, one to Fair Rent NYC, and two to About so the new practice-lineage threshold can produce a repeated page-specific signal; all five must attempt the resume and contact destinations.",
     "exposure": "Five minutes without coaching, followed by a structured recall task.",
-    "frozenSurfaceDigest": "a79d74eb0af9f47608a5213f2db383ad2c0aa74d010453bf687f11fe3555a943",
+    "frozenSurfaceDigest": "e5b777e5a92049f7d9acf6c55f76ab41b5957872fec9e30eafbfa7e06839625a",
     "taskOrder": [
       "Open the assigned entry page without coaching.",
       "Browse for no more than five minutes.",
@@ -156,7 +162,7 @@
       "time to locate contact path": "aggregateCounts.contactWithin90Seconds",
       "concrete reason to contact Jamie": "aggregateCounts.concreteContactReason"
     },
-    "entrySurfaceDecisionRule": "Use global thresholds for the baseline. Make a page-specific change only after the same failure appears for at least two assigned readers; the single Fair Rent observation is a directional lead that requires another reader or independent evidence before page-specific revision.",
+    "entrySurfaceDecisionRule": "Use global thresholds for the baseline. Make a page-specific About change only after the same failure appears for both assigned readers. A single home, technical-operations, or Fair Rent observation is a directional lead that requires another reader or independent evidence before page-specific revision.",
     "fairRentFollowUpTrigger": "If the assigned Fair Rent reader misses role, proof, or role fit, or records a trust or confusion concern, recruit one additional consented reader for that same entry page before making a page-specific revision.",
     "fairRentFollowUpReceiptPath": "evals/portfolio-system-blind-spots/external-receipts/fair-rent-follow-up.json",
     "decisionLink": "Repeated failures trigger subtraction or clarification on the affected page; passing the threshold does not establish interview or hiring impact.",
@@ -238,10 +244,10 @@
   },
   "sourceBalanceReview": {
     "snapshot": {
-      "sources": 228,
+      "sources": 232,
       "sourceKinds": 12,
       "socialPostSources": 32,
-      "projectArchiveSources": 43,
+      "projectArchiveSources": 46,
       "publishedArticleSources": 67,
       "researchRunSources": 27
     },
@@ -313,6 +319,13 @@
         "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "documentation", "follow-through", "handoff"],
         "evidenceDisposition": "Facebook association is treated as a historical locator, not proof of attendance, production responsibility, or impact.",
         "nextDecision": "Pursue event-specific production evidence only when it can resolve an active role question."
+      },
+      {
+        "project": "experimental-media-practice",
+        "platformTraceRisk": "Public profiles and protected academic records can make artistic practice look like a credential list or a prehistory valuable only through later employment.",
+        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "Use public Open House and Time is Long records for public specimens, retain protected evaluations only as bounded corroboration, distinguish realized installations from prototypes and proposals, and keep tending, atmosphere, participation, and value beyond utility visible.",
+        "nextDecision": "Seek original project artifacts only when they can refine maturity, collaboration, or public-use boundaries; do not publish raw educational records."
       },
       {
         "project": "kc-spaces-fund",

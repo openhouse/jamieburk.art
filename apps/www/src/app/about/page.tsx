@@ -33,6 +33,9 @@ export default function AboutPage() {
             people can use after the meeting or launch is over.
           </p>
           <p>
+            My operating practice has an artistic lineage: a ten-day communal Open House I tended and the realized Time is Long installation that made elapsed time physical. I also prototyped an interface joining recursive social-network analysis with image comparison, and co-designed a documented proposal for browsing online photographs by moving through physical rooms. These were experiments in attention, atmosphere, participation, representation, and care, with value beyond organizational utility. The same inquiry continues through my civic, technical, and organizational work: form grows from the people, materials, relationships, and place already present.
+          </p>
+          <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.

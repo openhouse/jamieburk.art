@@ -1,8 +1,8 @@
 {
   "version": 1,
   "reviewedAt": "2026-07-15",
-  "publicSurfaceSha256": "a79d74eb0af9f47608a5213f2db383ad2c0aa74d010453bf687f11fe3555a943",
-  "claimUnitDefinition": "One distinct role, result, capability, uncertainty, transformation, or transferable-method proposition rendered as prose. A full WorkCard contributes five claim units; a compact homepage WorkCard contributes the rendered subtitle and summary only. Navigation labels, headings, status labels, tags, citations, and repeated CTA labels are not separate claim units.",
+  "publicSurfaceSha256": "e5b777e5a92049f7d9acf6c55f76ab41b5957872fec9e30eafbfa7e06839625a",
+  "claimUnitDefinition": "One distinct role, result, capability, uncertainty, transformation, or transferable-method proposition rendered as prose. A paragraph containing several independently meaningful role, artifact-maturity, or continuity propositions contributes several semantic claim keys. A full WorkCard contributes five claim units; a compact homepage WorkCard contributes the rendered subtitle and summary only. Navigation labels, headings, status labels, tags, citations, and repeated CTA labels are not separate claim units.",
   "pages": [
     {
       "path": "/",
@@ -470,18 +470,24 @@
       "readerDecision": "Decide whether the working approach feels relevant and trustworthy.",
       "governingArgument": "Structure grows from the material, and documentation is a form of care and continuity.",
       "primaryAction": "Review work or contact Jamie.",
-      "claimBudget": 8,
-      "currentClaimCount": 6,
+      "claimBudget": 12,
+      "currentClaimCount": 12,
       "countedClaimKeys": [
         "about-block-9d11c96daf16",
         "about-block-716a22fb0563",
         "about-block-a295c03dc847",
         "about-block-1830a39b1b60",
         "about-block-5e0383ae9c10",
+        "about-lineage-open-house-tending",
+        "about-lineage-time-is-long-realized-installation",
+        "about-lineage-network-image-interface-prototype",
+        "about-lineage-physical-browsing-proposal",
+        "about-lineage-practice-values-beyond-utility",
+        "about-lineage-cross-period-continuity",
         "contact-cta-247f71948fe5"
       ],
-      "selectionRule": "Prioritize working principles over a second resume narrative.",
-      "omissionRationale": "Detailed project proof remains on work pages."
+      "selectionRule": "Prioritize working principles and one bounded artistic-practice threshold over a second resume narrative; a new About claim requires subtraction.",
+      "omissionRationale": "The six practice-lineage units are retained because they distinguish specimen, maturity, collective role, value, and continuity; detailed chronology, records, and further project proof remain in the Knowledge Bank or work pages."
     },
     {
       "path": "/contact",

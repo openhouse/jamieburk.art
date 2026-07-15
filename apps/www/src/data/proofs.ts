@@ -1101,6 +1101,61 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-15"
   },
   {
+    id: "artistic-technical-practice-lineage",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "firsthand-collaborator-context"
+    ],
+    publicWording:
+      "Jamie describes his operating practice as having an artistic lineage in participatory art, embodied media systems, and recursive social-software experiments.",
+    shortWording:
+      "Jamie describes an artistic lineage across participation, media, and systems.",
+    detailedPublicWording:
+      "Jamie describes a continuous inquiry across a ten-day communal Open House he tended, a realized time-delay installation, a recursive network-and-image interface prototype, and a co-designed physical-browsing proposal; public reporting and bounded protected records support the specimens, while the continuity remains his interpretation.",
+    sourceBasis:
+      "Laura Mattingly's 2006 Good Times Santa Cruz Open House profile, public Time is Long coverage, public-safe summaries of protected UCSC narrative evaluations by Margaret Morse and Warren Sack, and a protected 2014 Margaret Morse recommendation capture.",
+    sourceNote:
+      "Public sources establish the named installations and Open House practice. Protected records corroborate the specimens; Jamie supplies the cross-period interpretation.",
+    whyItMatters:
+      "Explains why Jamie's operating systems attend to participation, memory, atmosphere, place, and how people inhabit structures without reducing the artistic practice to organizational utility.",
+    guardrail:
+      "Keep the lineage statement attributed to Jamie, distinguish built installations from prototypes, preserve collective authorship and participant agency, and do not publish raw educational records or private recommendation material.",
+    doNotSay: [
+      "Every later Jamie project directly derives from these courses",
+      "Jamie solely authored Open House or the collaborative Flickr installation proposal",
+      "Jamie invented structural equivalence as an academic field",
+      "Jamie's artistic work matters only because it supports hiring"
+    ],
+    protectedBoundaries: [
+      "Raw educational records and grades",
+      "Student identifiers",
+      "Private correspondence and contact details",
+      "Unapproved recommendation screenshots",
+      "Unapproved participant identities and images"
+    ],
+    surfaces: ["about", "internal-only"],
+    relatedProjects: [
+      "participatory-public-practice",
+      "experimental-media-practice"
+    ],
+    relatedCapabilities: [
+      "participation-design",
+      "systems-thinking",
+      "prototyping",
+      "facilitation",
+      "documentation"
+    ],
+    structuredClaimIds: [
+      "CLM-UCSC-MORSE-EMBODIED-MEDIA-PRACTICE-2006",
+      "CLM-UCSC-SACK-RECURSIVE-SOCIAL-SOFTWARE-2004-2006",
+      "CLM-PRACTICE-LINEAGE-ART-TECHNOLOGY-PARTICIPATION"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "participatory-open-house-public-program",
     status: "ready",
     supportLevel: "strong",

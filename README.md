@@ -33,6 +33,8 @@ npm run knowledge-bank
 npm run check:knowledge-bank
 npm run evals:portfolio
 npm run evals:chad-lens
+npm run evals:margaret-morse
+npm run evals:warren-sack
 npm run evals:knowledge-bank-lifecycle
 npm run public-safety
 npm run check:routes
@@ -86,6 +88,14 @@ criterion.
 burden, makes Jamie's bounded action visible, explains what became usable,
 translates specialist language, and preserves collective credit. Run
 `npm run evals:chad-lens` to validate that focused eval and its committed runs.
+
+`evals/margaret-morse-lens/eval.json` tests embodied inquiry, tending and
+hospitality, material specificity, art-life continuity, and artistic value that
+cannot be reduced to organizational utility. `evals/warren-sack-lens/eval.json`
+tests recursive relational reasoning, translation across representations,
+prototype maturity, source rigor, and collective agency. Run
+`npm run evals:margaret-morse` and `npm run evals:warren-sack` to validate their
+independent read-only judge artifacts and two-pass stopping receipts.
 
 `evals/knowledge-bank-lifecycle/evals.json` tests the full
 intake-to-source-to-claim-to-projection process, including bank-only material,

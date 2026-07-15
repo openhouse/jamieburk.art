@@ -53,6 +53,7 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public Facebook Page, public-safe 38-row post census, and public posted-route ledger.
 - Oddities Prints' archived Mutual Aid Print Editions fundraiser and Dan Kelly's April 2020 Kansas City Star COVID-19 resource guide.
 - Good Times Santa Cruz's 2006 Open House profile.
+- Cool Hunting's 2006 documentation of the Time is Long installation.
 - The Pitch's 2007 raft-expedition reporting.
 - Charlotte Street's 2009 Great Accommodations event record.
 - Gothamist's June 2017 Cabaret Law reporting.
@@ -193,6 +194,13 @@ were reused rather than duplicated.
 Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
+
+Protected educational records follow the same rule. Public-safe records may
+name an instructor, course context, date range, supported practice, and explicit
+non-support boundaries. Student identifiers, grades, raw narrative evaluations,
+private correspondence, contact details, and unapproved recommendation captures
+remain outside the repository. An unofficial record must be labeled as such and
+cannot be represented as an authenticated transcript.
 
 Google Shared Drive records use the same rule. A protected source record may
 name a public-safe artifact class, date, supported propositions, non-support

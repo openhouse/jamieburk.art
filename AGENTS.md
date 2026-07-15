@@ -26,6 +26,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run check`
 - `npm run knowledge-bank`
 - `npm run evals:portfolio`
+- `npm run evals:chad-lens`
+- `npm run evals:margaret-morse`
+- `npm run evals:warren-sack`
+- `npm run evals:knowledge-bank-lifecycle`
 - `npm run evals:blind-spots`
 - `npm run public-safety`
 - `npm run check:routes`
@@ -87,6 +91,15 @@ instead of claiming completion.
 Use `evals/chad-lens/eval.json` for focused hiring-language revisions. A Chad
 Lens pass requires all five dimensions together and two consecutive independent
 passes; do not trade collective credit or evidentiary scope for readability.
+
+Use `evals/margaret-morse-lens/eval.json` to preserve embodied inquiry,
+sustained tending, material specificity, art-life continuity, and value beyond
+organizational utility. Do not make art justify itself only through hiring.
+
+Use `evals/warren-sack-lens/eval.json` to test recursive relational reasoning,
+translation across data, media, interfaces, and physical space, accurate
+prototype status, source rigor, and collective agency. Do not mistake platform
+traces for the relationships they represent.
 
 Use `evals/knowledge-bank-lifecycle/evals.json` when new sources, memories,
 artifacts, corrections, or photo leads arrive. Capture first, decompose sources,

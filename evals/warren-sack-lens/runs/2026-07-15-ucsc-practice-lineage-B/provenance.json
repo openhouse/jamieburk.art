@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "evalId": "warren-sack-lens",
+  "runId": "2026-07-15-ucsc-practice-lineage-B",
+  "trustBoundary": "Each deciding judgment came from a fresh Codex session restricted to read-only repository access. Judges reviewed public-safe records only.",
+  "generatorWasJudge": false,
+  "judges": [
+    {
+      "judgeRunId": "sack-final-r2-systems-20260715",
+      "role": "systems-and-evidence-judge",
+      "round": 2,
+      "mode": "read-only",
+      "sessionId": "019f6706-4544-7571-9407-e5e33442ff1f",
+      "artifact": "judges/round-2-systems-and-evidence-judge.json",
+      "outputSha256": "0c5361b599aac5bdebb0f00e38bda21ca5beccd8a09978e9c74f0b04799a0a34",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    },
+    {
+      "judgeRunId": "sack-final-r2-reader-20260715",
+      "role": "hiring-reader-judge",
+      "round": 2,
+      "mode": "read-only",
+      "sessionId": "019f6706-4459-7e92-a6ee-3feba785b2f5",
+      "artifact": "judges/round-2-hiring-reader-judge.json",
+      "outputSha256": "a0f02d1544b58f4d29d4549152dda55c70fad4ce518ab5a5e0b5b0131378798e",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    },
+    {
+      "judgeRunId": "sack-final-r3-systems-20260715",
+      "role": "systems-and-evidence-judge",
+      "round": 3,
+      "mode": "read-only",
+      "sessionId": "019f6708-0fe4-7fc2-ba9e-d0651c792704",
+      "artifact": "judges/round-3-systems-and-evidence-judge.json",
+      "outputSha256": "66eea8c59f4a0124a0f0ef80fe7fde272778825f207346baaa3d06f0fc481910",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    },
+    {
+      "judgeRunId": "sack-final-r3-reader-20260715",
+      "role": "hiring-reader-judge",
+      "round": 3,
+      "mode": "read-only",
+      "sessionId": "019f6708-1366-7740-89d3-f3027c2602dc",
+      "artifact": "judges/round-3-hiring-reader-judge.json",
+      "outputSha256": "4908a1d25117ab4792269f220a8a85d9f02559fc701e8e06d951b151df8b5fa8",
+      "candidateSha256": "c9bdee47272f1f90089b2568a89a224c173fcce97eca299aad6898037eb549c4"
+    }
+  ]
+}

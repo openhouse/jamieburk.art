@@ -21,6 +21,7 @@ import { jamiePersonalFacebookPostsBatch } from "./jamie-personal-facebook-posts
 import { teamsArchiveDeepeningBatch } from "./teams-archive-deepening-batch-2026-07-15.ts";
 import { nycaInstitutionalValueBatch } from "./nyca-institutional-value-batch-2026-07-15.ts";
 import { wowlistSundayDinnerCallscriptBatch } from "./wowlist-sunday-dinner-callscript-batch-2026-07-15.ts";
+import { ucscPracticeLensesBatch } from "./ucsc-practice-lenses-batch-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -605,7 +606,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsBatch.intakeRecords,
     ...teamsArchiveDeepeningBatch.intakeRecords,
     ...nycaInstitutionalValueBatch.intakeRecords,
-    ...wowlistSundayDinnerCallscriptBatch.intakeRecords
+    ...wowlistSundayDinnerCallscriptBatch.intakeRecords,
+    ...ucscPracticeLensesBatch.intakeRecords
   ],
   sources: [
     {
@@ -1315,8 +1317,8 @@ const knowledgeBankInput = {
       canonicalUrl: "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
       preferredPublicUrl: "canonical",
       publicCitation: "Laura Mattingly, 'Open House,' Good Times Santa Cruz, June 28, 2006.",
-      publicNote: "The profile documents Open House and the earlier Shop Shows as participatory experiments; it also makes housemate and participant contributions visible.",
-      supportsGenerally: ["Jamie instigated the UC Santa Cruz Open House", "Open House combined public art participation and temporary communal living", "Jamie and housemates held Shop Shows from 2003 to 2005", "participants could contribute and revise work"],
+      publicNote: "The profile documents Open House and the earlier Shop Shows as participatory experiments; it makes housemate and participant contributions visible and quotes Margaret Morse describing Jamie's continuous tending of the space.",
+      supportsGenerally: ["Jamie instigated and continuously tended the UC Santa Cruz Open House", "Open House combined public art participation and temporary communal living", "participants shared responsibility and decision-making", "the collective used multiple documentation methods", "Jamie and housemates held Shop Shows from 2003 to 2005", "participants could contribute and revise work"],
       doesNotEstablish: ["sole authorship of every activity", "a formal housing or social-service program", "approval to republish participant names or photographs", "outcomes beyond the reported event"]
     },
     {
@@ -1690,7 +1692,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsBatch.sources,
     ...teamsArchiveDeepeningBatch.sources,
     ...nycaInstitutionalValueBatch.sources,
-    ...wowlistSundayDinnerCallscriptBatch.sources
+    ...wowlistSundayDinnerCallscriptBatch.sources,
+    ...ucscPracticeLensesBatch.sources
   ],
   claims: [
     {
@@ -2298,7 +2301,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsBatch.claims,
     ...teamsArchiveDeepeningBatch.claims,
     ...nycaInstitutionalValueBatch.claims,
-    ...wowlistSundayDinnerCallscriptBatch.claims
+    ...wowlistSundayDinnerCallscriptBatch.claims,
+    ...ucscPracticeLensesBatch.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
@@ -2313,6 +2317,7 @@ const knowledgeBankInput = {
     ...teamsArchiveDeepeningBatch.researchInquiries,
     ...nycaInstitutionalValueBatch.researchInquiries,
     ...wowlistSundayDinnerCallscriptBatch.researchInquiries,
+    ...ucscPracticeLensesBatch.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",

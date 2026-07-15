@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "evalId": "margaret-morse-lens",
+  "objective": "Keep Jamie's embodied artistic inquiry, tending practice, material specificity, and art-life continuity legible without reducing their value to organizational utility or exposing protected records.",
+  "candidateContract": {
+    "maximumWords": 90,
+    "maximumSentences": 4,
+    "instructions": [
+      "Name at least one concrete embodied work or practice rather than describing Jamie as generically creative.",
+      "Make attention, tending, participation, atmosphere, or material experience visible as forms of work.",
+      "Connect artistic practice to later civic, technical, or organizational work without claiming simple causality.",
+      "State or preserve value beyond professional utility.",
+      "Keep protected educational records and recommendation captures offline."
+    ]
+  },
+  "hardGates": [
+    {
+      "id": "evidence-and-attribution",
+      "passCondition": "Every concrete specimen and role is supported at its stated scope, and cross-period continuity is presented as Jamie's interpretation rather than Morse's quotation."
+    },
+    {
+      "id": "participant-and-record-safety",
+      "passCondition": "The candidate exposes no protected educational record, grade, identifier, correspondence, contact detail, image, or unapproved participant identity."
+    },
+    {
+      "id": "anti-instrumentalization",
+      "passCondition": "The candidate does not imply that art matters only because it produces employable or organizational outcomes."
+    },
+    {
+      "id": "collective-agency",
+      "passCondition": "Jamie's tending and authorship are visible while co-design, participant contribution, and shared inhabitation remain shared."
+    }
+  ],
+  "criterion": {
+    "id": "margaret-morse-lens",
+    "threshold": 5,
+    "dimensions": [
+      {
+        "id": "embodied-inquiry",
+        "passCondition": "The copy recognizes performance, installation, inhabitation, or bodily encounter as knowledge-making rather than treating prose as the only valid evidence of thought."
+      },
+      {
+        "id": "tending-and-hospitality",
+        "passCondition": "The copy makes sustained presence, care, atmosphere, and conditions for participation legible as substantive practice."
+      },
+      {
+        "id": "material-and-temporal-specificity",
+        "passCondition": "The copy names concrete materials, media, durations, or spatial translations instead of relying on a generic creativity claim."
+      },
+      {
+        "id": "art-life-continuity",
+        "passCondition": "The copy shows a bounded continuity among artistic, civic, technical, and organizational practice without forcing a linear origin story."
+      },
+      {
+        "id": "irreducible-value-and-legibility",
+        "passCondition": "A general reader can understand the professional relevance while artistic and relational value remains visibly irreducible to organizational utility."
+      }
+    ],
+    "anchors": {
+      "1": "The candidate calls Jamie creative but erases embodied practice, tending, material specificity, and participant agency, or makes art serve hiring alone.",
+      "3": "A concrete practice is visible, but atmosphere, art-life continuity, collective agency, or value beyond utility remains weak.",
+      "5": "In one bounded passage, embodied inquiry, sustained tending, material specificity, shared participation, art-life continuity, and irreducible value are all legible."
+    }
+  },
+  "fixture": {
+    "id": "ucsc-embodied-practice-lineage",
+    "task": "Write one brief About-page paragraph that preserves the artistic lineage of Jamie's operating practice for a public portfolio.",
+    "evidence": {
+      "publicSpecimens": [
+        "A 2006 public profile reports that Jamie instigated and continuously tended a ten-day communal Open House in a UCSC gallery.",
+        "The same profile documents shared decision-making, participant contribution, public inhabitation, and multiple forms of documentation.",
+        "Public reporting documents Time is Long as a realized installation translating elapsed time through a physical VHS delay."
+      ],
+      "protectedCorroboration": [
+        "Protected Margaret Morse course evaluations describe embodied demonstrations of media theory, media archaeology, performance, and the realized Time is Long installation.",
+        "A protected 2014 recommendation recalls advising an ambitious installation Jamie executed with dedication and describes his warmth, generosity, creativity, and seriousness."
+      ],
+      "interpretiveBoundary": "The continuity across later civic, technical, and organizational work is Jamie's interpretation supported by bounded specimens, not a claim attributed to Margaret Morse."
+    },
+    "startingCandidate": "Jamie has always combined creativity and systems thinking. His early art projects developed skills he now uses in technical project management.",
+    "mustInclude": [
+      "at least one named or materially specific practice",
+      "tending, attention, atmosphere, participation, or care",
+      "a bounded connection to later practice",
+      "value beyond organizational utility",
+      "collective or participant agency"
+    ],
+    "mustNotClaim": [
+      "Margaret Morse authored Jamie's cross-period interpretation",
+      "artistic work matters only because it improves employability",
+      "Jamie solely authored participatory or co-designed works",
+      "protected records or images are public sources"
+    ]
+  },
+  "projectionContract": {
+    "exactCandidatePaths": [
+      "apps/www/src/app/about/page.tsx"
+    ],
+    "knowledgeBankClaimIds": [
+      "CLM-UCSC-MORSE-EMBODIED-MEDIA-PRACTICE-2006",
+      "CLM-UCSC-SACK-RECURSIVE-SOCIAL-SOFTWARE-2004-2006",
+      "CLM-PRACTICE-LINEAGE-ART-TECHNOLOGY-PARTICIPATION"
+    ],
+    "knowledgeBankPaths": [
+      "apps/www/src/data/knowledge-bank/ucsc-practice-lenses-batch-2026-07-15.ts",
+      "docs/knowledge-bank/claims.md"
+    ]
+  },
+  "judgeProtocol": {
+    "artifactSchema": "evals/practice-lens-judge-artifact.schema.json",
+    "independentRoles": [
+      "embodied-practice-judge",
+      "portfolio-composition-judge"
+    ],
+    "rules": [
+      "Both judges score the same candidate independently in read-only sessions.",
+      "A failed hard gate blocks the candidate regardless of its lens score.",
+      "Score 5 only when all five dimensions pass together.",
+      "The generator cannot be a deciding judge.",
+      "Keep the highest-scoring non-regressing candidate, not the latest candidate."
+    ]
+  },
+  "stopPolicy": {
+    "targetScore": 5,
+    "requiredConsecutivePasses": 2,
+    "maxIterations": 6,
+    "maxRegressions": 0,
+    "successCondition": "Both independent judges pass every hard gate and score the Margaret Morse lens 5 in two consecutive rounds.",
+    "failureCondition": "At iteration 6, return the best passing candidate and unresolved dimensions without claiming completion."
+  }
+}

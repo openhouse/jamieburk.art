@@ -337,6 +337,17 @@ function deriveRouteClaimKeys(workCompositions) {
     }),
     ...mdxClaimKeys(read("apps/www/src/content/lab/source-backed-team-memory.mdx")).map((key) => `lab-${key}`)
   ];
+  const aboutSource = read("apps/www/src/app/about/page.tsx");
+  const practiceLineageKeys = aboutSource.includes("My operating practice has an artistic lineage")
+    ? [
+        "about-lineage-open-house-tending",
+        "about-lineage-time-is-long-realized-installation",
+        "about-lineage-network-image-interface-prototype",
+        "about-lineage-physical-browsing-proposal",
+        "about-lineage-practice-values-beyond-utility",
+        "about-lineage-cross-period-continuity"
+      ]
+    : [];
   return {
     "/": deriveHomeClaimKeys(workCompositions),
     "/work": [
@@ -347,7 +358,10 @@ function deriveRouteClaimKeys(workCompositions) {
     "/work/technical-operations": technicalKeys,
     "/resume": resumeKeys,
     "/about": [
-      ...staticParagraphKeys("apps/www/src/app/about/page.tsx", "about-block"),
+      ...staticParagraphKeys("apps/www/src/app/about/page.tsx", "about-block", {
+        exclude: [/My operating practice has an artistic lineage/]
+      }),
+      ...practiceLineageKeys,
       ...staticParagraphKeys("apps/www/src/components/ContactCTA.tsx", "contact-cta")
     ],
     "/contact": staticParagraphKeys("apps/www/src/app/contact/page.tsx", "contact-block"),
@@ -519,6 +533,14 @@ const bundleFiles = [
   ["scripts/check-portfolio-system-blind-spots.mjs", read("scripts/check-portfolio-system-blind-spots.mjs")],
   ["scripts/check-citations.mjs", read("scripts/check-citations.mjs")],
   ["scripts/generate-public-citations.mjs", read("scripts/generate-public-citations.mjs")],
+  ["scripts/check-practice-lens-eval.mjs", read("scripts/check-practice-lens-eval.mjs")],
+  ["evals/practice-lens-judge-artifact.schema.json", read("evals/practice-lens-judge-artifact.schema.json")],
+  ...listAllFiles("evals/margaret-morse-lens")
+    .filter((relativePath) => /\.(?:json|md)$/.test(relativePath))
+    .map((relativePath) => [relativePath, read(relativePath)]),
+  ...listAllFiles("evals/warren-sack-lens")
+    .filter((relativePath) => /\.(?:json|md)$/.test(relativePath))
+    .map((relativePath) => [relativePath, read(relativePath)]),
   ["AGENTS.md", read("AGENTS.md")],
   ["package.json", read("package.json")],
   ...listSourceFiles("apps/www/src").map((relativePath) => [relativePath, read(relativePath)]),
@@ -947,8 +969,8 @@ if (!(mosaicReview.removalsOrMinimizations ?? []).length || !(mosaicReview.unres
 if (!/not legal/i.test(mosaicReview.reviewerRole ?? "")) fail("Mosaic review must disclose its review boundary");
 
 const readerStudy = controlState.readerStudyProtocol ?? {};
-strictKeys(readerStudy, ["status", "actionClass", "deadline", "frozenSurfaces", "entrySurfaces", "destinationSurfaces", "sample", "exposure", "frozenSurfaceDigest", "taskOrder", "baseline", "dimensions", "clarityThreshold", "integerThresholds", "aggregateFieldMap", "entrySurfaceDecisionRule", "fairRentFollowUpTrigger", "fairRentFollowUpReceiptPath", "decisionLink", "privacyBoundary", "receiptState", "receiptPath", "receiptTransition"], "reader-study protocol");
-for (const field of ["status", "actionClass", "deadline", "frozenSurfaces", "entrySurfaces", "destinationSurfaces", "sample", "exposure", "frozenSurfaceDigest", "taskOrder", "baseline", "dimensions", "clarityThreshold", "integerThresholds", "decisionLink", "privacyBoundary", "receiptPath"]) {
+strictKeys(readerStudy, ["status", "actionClass", "deadline", "frozenSurfaces", "entrySurfaces", "entrySurfaceAllocation", "destinationSurfaces", "sample", "exposure", "frozenSurfaceDigest", "taskOrder", "baseline", "dimensions", "clarityThreshold", "integerThresholds", "aggregateFieldMap", "entrySurfaceDecisionRule", "fairRentFollowUpTrigger", "fairRentFollowUpReceiptPath", "decisionLink", "privacyBoundary", "receiptState", "receiptPath", "receiptTransition"], "reader-study protocol");
+for (const field of ["status", "actionClass", "deadline", "frozenSurfaces", "entrySurfaces", "entrySurfaceAllocation", "destinationSurfaces", "sample", "exposure", "frozenSurfaceDigest", "taskOrder", "baseline", "dimensions", "clarityThreshold", "integerThresholds", "decisionLink", "privacyBoundary", "receiptPath"]) {
   if (!readerStudy[field]) fail(`Reader-study protocol lacks ${field}`);
 }
 if ((readerStudy.dimensions ?? []).length !== 9 || (readerStudy.taskOrder ?? []).length < 6) {
@@ -964,8 +986,21 @@ strictKeys(readerStudy.receiptTransition?.validStates, ["planned", "attempted", 
 if (readerStudy.status === "planned" && readerStudy.frozenSurfaceDigest !== readerSurfaceSha256) {
   fail("Planned reader-study frozen surface digest is stale");
 }
-if (JSON.stringify(readerStudy.entrySurfaces) !== JSON.stringify(["/", "/work/technical-operations", "/work/fair-rent-nyc"])) {
+if (JSON.stringify(readerStudy.entrySurfaces) !== JSON.stringify(["/", "/work/technical-operations", "/work/fair-rent-nyc", "/about"])) {
   fail("Reader-study entry-surface coverage is invalid");
+}
+requireExactMap(readerStudy.entrySurfaceAllocation, {
+  "/": 1,
+  "/work/technical-operations": 1,
+  "/work/fair-rent-nyc": 1,
+  "/about": 2
+}, "reader-study entry-surface allocation");
+if (
+  JSON.stringify(Object.keys(readerStudy.entrySurfaceAllocation ?? {})) !==
+    JSON.stringify(readerStudy.entrySurfaces) ||
+  Object.values(readerStudy.entrySurfaceAllocation ?? {}).reduce((total, value) => total + value, 0) !== 5
+) {
+  fail("Reader-study entry-surface allocation must cover the declared five-reader sample exactly");
 }
 if (JSON.stringify(readerStudy.destinationSurfaces) !== JSON.stringify(["/resume", "/contact"])) {
   fail("Reader-study destination coverage is invalid");
@@ -1128,7 +1163,10 @@ function validateExternalReceipt(protocol, kind) {
     if (receipt.aggregateCounts !== undefined) {
       strictKeys(receipt.aggregateCounts, ["surfaceCoverage", ...thresholdFields], "reader-study aggregate counts");
       strictKeys(receipt.aggregateCounts?.surfaceCoverage, readerStudy.frozenSurfaces, "reader-study surface counts");
-      const expectedCoverage = { "/": 2, "/work/technical-operations": 2, "/work/fair-rent-nyc": 1, "/resume": 5, "/contact": 5 };
+      const expectedCoverage = {
+        ...readerStudy.entrySurfaceAllocation,
+        ...Object.fromEntries(readerStudy.destinationSurfaces.map((surface) => [surface, 5]))
+      };
       for (const [surface, expected] of Object.entries(expectedCoverage)) {
         if (receipt.aggregateCounts?.surfaceCoverage?.[surface] !== expected) {
           fail(`Reader-study entry coverage ${surface} must equal ${expected}`);
@@ -1144,7 +1182,7 @@ function validateExternalReceipt(protocol, kind) {
     const perEntryFields = ["sampleSize", ...thresholdFields];
     if (receipt.entrySurfaceResults !== undefined) {
       strictKeys(receipt.entrySurfaceResults, readerStudy.entrySurfaces, "reader-study entry-surface results");
-      const expectedSamples = { "/": 2, "/work/technical-operations": 2, "/work/fair-rent-nyc": 1 };
+      const expectedSamples = readerStudy.entrySurfaceAllocation;
       for (const [surface, expectedSample] of Object.entries(expectedSamples)) {
         const result = receipt.entrySurfaceResults?.[surface];
         strictKeys(result, perEntryFields, `reader-study result ${surface}`);
@@ -1285,6 +1323,15 @@ for (const expectedText of [
   `${currentSnapshot.heldProjections} held`
 ]) {
   if (!normalizedRegisterSource.includes(expectedText)) fail(`Blind-spot register narrative count is stale: ${expectedText}`);
+}
+const fairRentComposition = composition.pages
+  ?.find((page) => page.path === "/work/[slug]")
+  ?.concretePages?.find((page) => page.path === "/work/fair-rent-nyc");
+const fairRentNarrative = fairRentComposition
+  ? `Fair Rent NYC is the densest at ${fairRentComposition.currentClaimCount} of ${fairRentComposition.claimBudget}`
+  : "";
+if (!fairRentNarrative || !normalizedRegisterSource.includes(fairRentNarrative)) {
+  fail("Blind-spot register Fair Rent composition count is stale");
 }
 
 for (const heading of [

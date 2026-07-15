@@ -18,9 +18,10 @@ effect attributable to the site.
 **Control:** Treat external effectiveness as `not-yet-measured`. By July 18,
 2026, ask five consented readers, including at least two hiring-adjacent readers
 and one implementation, civic-tech, or product-operations peer, to review a
-frozen surface for five minutes without coaching. Assign two readers to home,
-two to technical operations, and one to the 51-of-54 Fair Rent case; all five
-must attempt the resume and contact destinations. Record aggregate entry
+frozen surface for five minutes without coaching. Assign one reader each to
+home, technical operations, and the 53-of-56 Fair Rent case, and two readers to
+About so the new artistic-practice threshold can produce a repeated signal; all
+five must attempt the resume and contact destinations. Record aggregate entry
 coverage, exposure completion, role identification, proof recall, role fit,
 trust concerns, contact reason, and separate times to find resume and contact.
 
@@ -30,7 +31,7 @@ response transcripts.
 
 ## 2. Inquiry Closure
 
-**Current signal:** 26 of 32 structured research inquiries are partially
+**Current signal:** 27 of 33 structured research inquiries are partially
 recovered; one is recovered. Partial status is often correct, but it can become
 an indefinite resting place.
 
@@ -70,7 +71,7 @@ contemporaneous role artifacts, not a broad testimonial campaign.
 
 ## 4. Countability And Platform Bias
 
-**Current signal:** The bank has 228 sources across public records, reporting,
+**Current signal:** The bank has 232 sources across public records, reporting,
 project archives, web pages, social posts, and research runs. Source-class
 diversity is healthy, but recent archival effort has favored surfaces that can
 be enumerated. Trace volume does not measure importance, effort, or impact.
@@ -86,7 +87,7 @@ otherwise invisible operating work.
 
 ## 5. Composition And Argument
 
-**Current signal:** The graph contains 100 claims, including 60 active and 42
+**Current signal:** The graph contains 103 claims, including 61 active and 44
 held projections. A mature claim is not automatically a selected claim.
 
 **Control:** Every public route or route template has an audience, reader
@@ -100,8 +101,10 @@ Every concrete route has an ordered, render-derived claim-key inventory. A work
 card counts its subtitle, summary, uncertainty, usable transformation, and role
 fit as separate propositions even though they share a container. Concrete case
 studies add MDX prose and `<Claim>` nodes to the metadata actually rendered by
-the shared layout; they do not inherit a generic count. In this snapshot the six
-cases range from 24 to 51 claim units; Fair Rent NYC is the densest at 51 of 54.
+the shared layout; they do not inherit a generic count. Multi-proposition About
+copy is likewise decomposed into semantic claim keys rather than counted as one
+paragraph. In this snapshot the six cases range from 24 to 53 claim units; Fair
+Rent NYC is the densest at 53 of 56.
 
 **Next evidence:** Short reader-recall results and page-level subtraction tests,
 not a larger page by default.

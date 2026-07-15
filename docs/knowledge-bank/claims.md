@@ -513,6 +513,22 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-15
 
+## artistic-technical-practice-lineage - Artistic, technical, and participatory lineage
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe protected-archive summary / firsthand collaborator context / first-person account
+**Structured claim IDs:** `CLM-UCSC-MORSE-EMBODIED-MEDIA-PRACTICE-2006`, `CLM-UCSC-SACK-RECURSIVE-SOCIAL-SOFTWARE-2004-2006`, `CLM-PRACTICE-LINEAGE-ART-TECHNOLOGY-PARTICIPATION`
+**Public wording:** Jamie describes his operating practice as having an artistic lineage in participatory art, embodied media systems, and recursive social-software experiments.
+**Detailed public-safe wording:** Jamie describes a continuous inquiry across a ten-day communal Open House he tended, a realized time-delay installation, a recursive network-and-image interface prototype, and a co-designed physical-browsing proposal; public reporting and bounded protected records support the specimens, while the continuity remains his interpretation.
+**Where to project:** About page as one bounded threshold connecting artistic, civic, technical, and organizational practice; Knowledge Bank for the underlying source distinctions.
+**Why it matters:** Explains why Jamie's operating systems attend to participation, memory, atmosphere, place, and how people inhabit structures without reducing artistic practice to organizational utility.
+**Guardrail:** Keep the lineage statement attributed to Jamie, distinguish built installations from prototypes, preserve collective authorship and participant agency, and do not publish raw educational records or private recommendation material.
+**Do not say:** Every later Jamie project directly derives from these courses; Jamie solely authored Open House or the collaborative Flickr installation proposal; Jamie invented structural equivalence as an academic field; Jamie's artistic work matters only because it supports hiring.
+**Protected boundaries:** Raw educational records, grades, student identifiers, private correspondence, contact details, unapproved recommendation screenshots, participant identities, and participant images stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## participatory-open-house-public-program - Participatory art and shared space
 
 **Status:** Ready
