@@ -15,7 +15,7 @@ const highlights = [
   "Contributed to 2x revenue growth for a legacy e-commerce business",
   "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
   "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "Created repeatable hosting and continuity systems documenting 300+ gatherings and supporting 20+ resident artists"
 ];
 
 export default function ResumePage() {
@@ -42,8 +42,7 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Public resume PDF publication is pending Jamie approval.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
