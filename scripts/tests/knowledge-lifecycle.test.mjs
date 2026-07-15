@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import {
@@ -108,6 +109,47 @@ test("campaign authorship and press claims retain collective boundaries", () => 
   assert.ok(
     rent?.boundaries.some((value) => /do not establish Jamie's complete individual/i.test(value))
   );
+});
+
+test("KC Town Hall funding lifecycle preserves appropriation and non-disbursement", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-2026-07-14-KC-TOWN-HALL-COUNCIL-FUNDING"
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION"
+  );
+  const sourceIds = [
+    "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+    "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+    "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+    "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+  ];
+
+  assert.ok(intake);
+  assert.equal(intake.researchStatus, "researched");
+  assert.equal(intake.publicationStatus, "eligible");
+  assert.ok(sourceIds.every((sourceId) => intake.sourceIds.includes(sourceId)));
+  assert.ok(
+    sourceIds.every((sourceId) => sourceById.get(sourceId)?.kind === "government-record")
+  );
+  assert.equal(claim?.status, "confirmed-with-boundary");
+  assert.ok(sourceIds.every((sourceId) => claim?.evidence.some((item) => item.sourceId === sourceId)));
+  assert.ok(
+    claim?.boundaries.some((value) => /appropriation is not receipt.*disbursement/i.test(value))
+  );
+  assert.ok(claim?.antiClaims.some((value) => /received or spent/i.test(value)));
+});
+
+test("KC Town Hall public proof advances beyond recommendation without claiming receipt", () => {
+  const proof = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+
+  assert.match(proof, /City Council acceptance and appropriation/);
+  assert.match(proof, /project ultimately withdrew/);
+  assert.match(proof, /KC Town Hall received or spent \$490,539/);
+  assert.match(work, /City Council acceptance and appropriation/);
+  assert.match(work, /full unused appropriation was reclaimed/);
 });
 
 test("claim maturity matches recovered evidence", () => {

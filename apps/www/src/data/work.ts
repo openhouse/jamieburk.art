@@ -494,7 +494,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the $490,539 proposal advanced from a unanimous board recommendation to City Council acceptance and appropriation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -521,12 +521,24 @@ const workItemsInput = [
       {
         label: "Official board minutes",
         url: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000"
+      },
+      {
+        label: "Council funding resolution",
+        url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search="
+      },
+      {
+        label: "Council appropriation ordinance",
+        url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search="
+      },
+      {
+        label: "Later funding disposition",
+        url: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search="
       }
     ],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official Kansas City board minutes, public-safe summary, and protected project records.",
+      "Official Kansas City board minutes, Council resolution and appropriation ordinance, later project-status and clawback records, public-safe summary, and protected project records.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -537,13 +549,14 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "$490,539 board recommendation followed by City Council acceptance and appropriation",
+      "Official record that the project later withdrew and the full unused appropriation was reclaimed"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie presented and supported planning and documentation for the adaptive-reuse proposal. The board unanimously recommended $490,539; the City Council accepted the recommendation and appropriated the amount. The project later withdrew, and the unused appropriation was reclaimed.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Jamie's exact responsibilities during the Council and funding-agreement phases are not established by the public legislative records.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

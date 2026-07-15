@@ -73,3 +73,6 @@ The [NYC Artist Coalition campaign press corpus](intake/2026-07-13-nyca-campaign
 shows the same method applied to a complete four-site press index: source
 recovery, deduplication, preservation, atomic observations, bounded claims, and
 selective public projection.
+The [KC Town Hall Council-funding receipt](intake/2026-07-14-kc-town-hall-council-funding.md)
+demonstrates longitudinal municipal research: recommendation, Council action,
+appropriation, implementation status, withdrawal, and final fund disposition.

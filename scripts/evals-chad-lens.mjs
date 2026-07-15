@@ -183,6 +183,22 @@ check(
   ]),
   true
 );
+check(
+  "Defensible strength",
+  "KC Town Hall advances from recommendation to appropriation without implying receipt",
+  6,
+  includesAll(sources.proofs, [
+    "City Council acceptance and appropriation",
+    "project ultimately withdrew",
+    "KC Town Hall received or spent $490,539",
+    "Jamie personally secured or controlled the Council vote"
+  ]) &&
+    includesAll(sources.workData, [
+      "$490,539 proposal advanced from a unanimous board recommendation to City Council acceptance and appropriation",
+      "the full unused appropriation was reclaimed"
+    ]),
+  true
+);
 
 const forbiddenPublicOverclaims = [
   "Jamie single-handedly caused policy outcomes",

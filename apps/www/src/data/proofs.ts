@@ -429,16 +429,18 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the $490,539 proposal advanced from a unanimous board recommendation to City Council acceptance and appropriation.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "Jamie presented the KC Town Hall proposal and helped shape its planning, public-benefit documentation, stakeholder context, and municipal-review support. The CCED Board unanimously recommended $490,539, and the Kansas City Council later accepted the recommendation and appropriated that amount. The project ultimately withdrew, and the City reclaimed the full unused appropriation in 2024.",
     sourceBasis:
-      "Approved resume language, official Kansas City Central City Economic Development Sales Tax Board minutes, and public-safe project context.",
+      "Approved resume language; official Kansas City CCED Board minutes; Council Resolution 190649; Ordinance 190642; the May 2022 project update; Ordinance 240317; and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Say the Council appropriated the amount, not that KC Town Hall received or spent it. Preserve the later non-disbursement, withdrawal, and clawback whenever the funding outcome is described.",
     doNotSay: [
-      "Final funding received",
+      "KC Town Hall received or spent $490,539",
+      "Council appropriation means the project was completed",
+      "Jamie personally secured or controlled the Council vote",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"
@@ -453,7 +455,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",

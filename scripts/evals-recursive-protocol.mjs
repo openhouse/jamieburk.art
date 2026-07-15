@@ -56,8 +56,10 @@ const requiredFiles = [
   "docs/knowledge-bank/framework.md",
   "docs/knowledge-bank/intake/README.md",
   "docs/knowledge-bank/intake/2026-07-12-waterways-nightlife.md",
+  "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+  "docs/knowledge-bank/projects/kc-town-hall.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
@@ -142,6 +144,9 @@ const claims = read("docs/knowledge-bank/claims.md");
 const labPage = read("apps/www/src/app/lab/source-backed-team-memory/page.tsx");
 const resumePage = read("apps/www/src/app/resume/page.tsx");
 const technicalOperationsPage = read("apps/www/src/app/work/technical-operations/page.tsx");
+const kcTownHallReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md"
+);
 
 for (const doc of [
   ["docs/production-readiness.md", productionReadiness],
@@ -256,6 +261,16 @@ requireIncludes(
   '"source-backed-team-memory-method"',
   "technical operations proof rows"
 );
+
+for (const expected of [
+  "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+  "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+  "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+  "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+  "Appropriation is not receipt or expenditure"
+]) {
+  requireIncludes(kcTownHallReceipt, expected, "KC Town Hall funding receipt");
+}
 
 for (const forbidden of [
   "Jamie is certified by Maven as an AI evaluator",

@@ -76,6 +76,13 @@ const portfolioExpansionSourceIds = [
   "SRC-KC-FRONTIER-DREAMERS-2012-05-17"
 ];
 
+const kcTownHallCouncilSourceIds = [
+  "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+  "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+  "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+  "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+];
+
 check(
   "Source quality",
   "Every supplied and portfolio-expansion URL has a canonical source record",
@@ -132,6 +139,15 @@ check(
         sourceById.has(article.sourceId) &&
         article.archiveUrl.startsWith("https://web.archive.org/web/")
     ),
+  true
+);
+check(
+  "Source quality",
+  "KC Town Hall Council funding and later disposition use primary government records",
+  6,
+  kcTownHallCouncilSourceIds.every(
+    (id) => sourceById.get(id)?.kind === "government-record"
+  ),
   true
 );
 
@@ -252,6 +268,30 @@ check(
       ?.boundaries.some((value) => /do not establish Jamie's complete individual/i.test(value)),
   true
 );
+check(
+  "Claim maturity",
+  "KC Town Hall distinguishes Council appropriation from receipt and later disposition",
+  6,
+  claimById.get("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION")?.status ===
+      "confirmed-with-boundary" &&
+    [
+      "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+      "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+      "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+      "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+    ].every((sourceId) =>
+      claimById
+        .get("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION")
+        ?.evidence.some((item) => item.sourceId === sourceId)
+    ) &&
+    claimById
+      .get("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION")
+      ?.boundaries.some((value) => /appropriation is not receipt.*disbursement/i.test(value)) &&
+    claimById
+      .get("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION")
+      ?.antiClaims.some((value) => /received or spent/i.test(value)),
+  true
+);
 
 check(
   "Research recursion",
@@ -319,6 +359,9 @@ const intakeDoc = read("docs/knowledge-bank/intake/README.md");
 const nycaPressReceipt = read(
   "docs/knowledge-bank/intake/2026-07-13-nyca-campaign-press-corpus.md"
 );
+const kcTownHallReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md"
+);
 
 check(
   "Capture integrity",
@@ -327,6 +370,19 @@ check(
   /\| \*\*Total placements\*\* \| \*\*45\*\* \|/.test(nycaPressReceipt) &&
     /\| \*\*Unique articles\*\* \| \*\*44\*\* \|/.test(nycaPressReceipt) &&
     nycaPressArticles.every((article) => nycaPressReceipt.includes(article.sourceId)),
+  true
+);
+check(
+  "Capture integrity",
+  "The KC Town Hall receipt preserves the complete municipal decision chain",
+  5,
+  [
+    "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+    ...kcTownHallCouncilSourceIds
+  ].every((sourceId) => kcTownHallReceipt.includes(sourceId)) &&
+    ["recommendation", "appropriating", "no funds disbursed", "withdrawn"].every(
+      (phrase) => kcTownHallReceipt.toLowerCase().includes(phrase.toLowerCase())
+    ),
   true
 );
 
