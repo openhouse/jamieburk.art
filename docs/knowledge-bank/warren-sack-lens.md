@@ -65,6 +65,15 @@ remained in the correction trail, and the photograph stayed held pending rights
 and consent review. This is evidence of the method operating inside this
 portfolio, not external client delivery or impact.
 
+The NYC Artist Coalition sequence supplies the complementary situated-use
+episode. A public event surface gathered issues before a DCLA meeting; the
+surviving discussion then supported a shared letter draft and group-naming
+poll; the record routed people into a February follow-up meeting and later
+recurring coalition work. Jamie helped shape those next steps around what
+participants contributed. This is evidence of an evolving participation
+system, not sole authorship, attendance, a complete founding history, or proof
+that one event caused the coalition or any policy outcome.
+
 ## Guardrails
 
 - Do not publicly claim Jamie invented structural equivalence.

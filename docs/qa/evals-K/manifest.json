@@ -25,7 +25,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "ac74e0a6a9e22c3bcd73967b8711f424a40346c0c43f9363371713508d70631c",
+  "sourceSha256": "88cf8de415046a72725204f195e929d689add147fe7d0f0def6a0b0ae3f82566",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -141,13 +141,13 @@
       "route": "/work/fair-rent-nyc",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/fair-rent-nyc-desktop.png",
-      "artifactSha256": "5c091b062676ab56f759978ccb9734508d2408297a51053052773168f9e2ed08"
+      "artifactSha256": "b605cbc7fc457b4f0b2d924d742da0fe2a3443024fc46117cdc96fb7b3866e99"
     },
     {
       "route": "/work/fair-rent-nyc",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/fair-rent-nyc-mobile-320.png",
-      "artifactSha256": "4272a05d4bf078101e213ea5ccd627c601c3750332fa3c095c70dec0e318a471"
+      "artifactSha256": "5b67ae239c3f9786eca11b05554fa046fd9284cc3fe729222bcf6fafef4055c7"
     },
     {
       "route": "/work/wowlist",

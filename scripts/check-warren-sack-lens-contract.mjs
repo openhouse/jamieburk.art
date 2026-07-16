@@ -41,6 +41,11 @@ for (const [relativePath, expected, label] of [
   ["apps/www/src/data/proofs.ts", "the public claim was corrected", "the use-to-revision result"],
   ["apps/www/src/data/proofs.ts", "the photograph stayed held pending rights and consent review", "the correction's public-safety boundary"],
   ["apps/www/src/content/work/callnyc.mdx", "## What became usable", "the civic prototype result"],
+  ["apps/www/src/content/work/fair-rent-nyc.mdx", "How the structure changed in use", "the situated participation episode"],
+  ["apps/www/src/content/work/fair-rent-nyc.mdx", "event surface gathered issues before a DCLA meeting", "the starting social interface"],
+  ["apps/www/src/content/work/fair-rent-nyc.mdx", "shared letter draft and group-naming poll", "participant-shaped shared artifacts"],
+  ["apps/www/src/content/work/fair-rent-nyc.mdx", "Jamie helped shape those next steps around what participants contributed", "the situated learning and revision link"],
+  ["apps/www/src/content/work/fair-rent-nyc.mdx", "not sole authorship, verified", "the collective and causal boundary"],
   ["apps/www/src/data/work.ts", "Richard Caceres", "collective product credit"],
   ["apps/www/src/data/knowledge-bank/ucsc-lenses-lifecycle.ts", "CND-UCSC-RECURSIVE-SYSTEMS-METHOD", "the bounded method claim"]
 ]) {
