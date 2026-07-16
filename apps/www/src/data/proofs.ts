@@ -12,6 +12,17 @@ export type EvidenceClass =
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
 
+const evidenceClassLabels: Record<EvidenceClass, string> = {
+  "approved-resume": "approved resume",
+  "independent-press": "independent press",
+  "public-source": "public sources",
+  "public-safe-archive-summary": "public-safe archive",
+  "ai-assisted-archive-review": "AI-assisted archive review",
+  "firsthand-collaborator-context": "firsthand context",
+  "jamie-review-confirmation": "Jamie-confirmed",
+  "collaborator-approval-pending": "collaborator approval pending"
+};
+
 export type ProofSurface =
   | "homepage"
   | "resume"
@@ -633,6 +644,10 @@ export function getProofsForSurface(surface: ProofSurface): ProofClaim[] {
   return proofClaims.filter((proof) => {
     return publicProofStatuses.has(proof.status) && proof.surfaces.includes(surface);
   });
+}
+
+export function formatEvidenceBasis(proof: Pick<ProofClaim, "evidenceClass">): string {
+  return proof.evidenceClass.map((evidenceClass) => evidenceClassLabels[evidenceClass]).join(" + ");
 }
 
 export function requireReadyOrCarefulProof(id: string): ProofClaim {

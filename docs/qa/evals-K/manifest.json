@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "9690b11155d01b8400484bf106071d30f117e2206f8f7ffd3508350a765a9728",
+  "sourceSha256": "2a78d9108abc01add7a4bfea6fb07e355d77b3a2d45c5f0fa75bd1f4a15295bf",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -67,7 +67,7 @@
       "route": "/resume",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/resume-desktop.png",
-      "artifactSha256": "cbde3c3de6e564f44fc5005e49e516645cedfe1d5d63bba64794b118a95c2138"
+      "artifactSha256": "96417a6856d9afbcb62a34f7dbdf26b51421e3639350ca1625bb651ce4975501"
     },
     {
       "route": "/resume",

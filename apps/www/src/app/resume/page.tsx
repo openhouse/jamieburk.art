@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Claim } from "@/components/citations";
+import { EvidenceBasis } from "@/components/EvidenceBasis";
 import { JBButton } from "@/components/JBButton";
 import { resumeProofHighlights } from "@/data/proofs";
 import { site } from "@/data/site";
@@ -85,6 +86,7 @@ export default function ResumePage() {
                 <p className="leading-7 text-jb-ink/78">
                   <ProofWording proof={proof} />
                 </p>
+                <EvidenceBasis proof={proof} />
                 {project ? (
                   <Link
                     className="mt-4 inline-block text-sm font-semibold text-jb-blue hover:text-jb-green"

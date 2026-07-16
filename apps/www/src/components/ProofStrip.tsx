@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Route } from "next";
+import { EvidenceBasis } from "@/components/EvidenceBasis";
 import { homepageProofs } from "@/data/proofs";
 
 export function ProofStrip() {
@@ -13,6 +14,7 @@ export function ProofStrip() {
               <p className="text-base font-semibold leading-6">
                 {proof.shortWording ?? proof.publicWording}
               </p>
+              <EvidenceBasis inverse proof={proof} />
               {project ? <span className="mt-3 block text-sm underline">View proof</span> : null}
             </>
           );
