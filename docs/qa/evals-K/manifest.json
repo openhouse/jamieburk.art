@@ -25,7 +25,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "58d979c6bfe4eb96d0433f9edaa797f5781634ebc6052a6139378d089f88aba0",
+  "sourceSha256": "ac74e0a6a9e22c3bcd73967b8711f424a40346c0c43f9363371713508d70631c",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -172,6 +172,18 @@
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-mobile-320.png",
       "artifactSha256": "bccc2c46e08dc4d85ff88ced7d311ef6e5e26a677150602d8ea8948fdcee07a6"
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/source-backed-team-memory-desktop.png",
+      "artifactSha256": "af6f39bc8bcb950ea8226da3a51f428f256f393999cb06e724051e4efa98c943"
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/source-backed-team-memory-mobile-320.png",
+      "artifactSha256": "a3b4855a1ee1d571f1ae18a5fdca739b5706b57ac15a067afcb136662d6b3947"
     },
     {
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",

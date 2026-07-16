@@ -57,6 +57,14 @@ CallNYC, WOW List, Source-Backed Team Memory, and the portfolio's knowledge
 lifecycle can then demonstrate the continuity without turning the About page
 into a project inventory.
 
+The Source-Backed Team Memory lab now supplies one bounded correction episode.
+An early portfolio pass treated a participant photograph's approximate 2:10
+p.m. timestamp as an event time. Review recovered a direct Civic Hall
+announcement stating 1-3 p.m.; the public claim changed, the weaker inference
+remained in the correction trail, and the photograph stayed held pending rights
+and consent review. This is evidence of the method operating inside this
+portfolio, not external client delivery or impact.
+
 ## Guardrails
 
 - Do not publicly claim Jamie invented structural equivalence.

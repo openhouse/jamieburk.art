@@ -563,14 +563,18 @@ export const proofClaims: ProofClaim[] = [
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
-    evidenceClass: ["public-safe-archive-summary"],
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
     publicWording:
       "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
+      "While developing this portfolio, an early pass treated a participant photograph's approximate 2:10 p.m. timestamp as an event time. Review found a direct Civic Hall announcement stating 1-3 p.m.; the public claim was corrected, the earlier inference remained in the correction trail, and the photograph stayed held pending rights and consent review.",
     sourceBasis:
-      "Public-safe lab materials plus a protected, close-read 2026 sprint proposal that establishes offer and method design, not delivery.",
+      "Public-safe lab materials, the CallNYC event-time correction record and direct archived Civic Hall announcement, held photograph metadata, and a protected, close-read 2026 sprint proposal that establishes offer and method design, not client delivery.",
+    sourceNote:
+      "The event-time example documents this portfolio's own human-reviewed claim lifecycle, not external client adoption or impact.",
+    whyItMatters:
+      "This is the method in use: stronger evidence changed the public account while provenance, uncertainty, rights, and consent remained visible.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -587,8 +591,10 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    evidenceCanonicalClaimIds: ["CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026"],
-    lastReviewed: "2026-07-15"
+    evidenceCanonicalClaimIds: [
+      "CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026"
+    ],
+    lastReviewed: "2026-07-16"
   },
   {
     id: "technical-operations-operating-backbone",

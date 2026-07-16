@@ -34,6 +34,12 @@ for (const [relativePath, expected, label] of [
   ["apps/www/src/app/about/page.tsx", "learn from what happens in use", "the situated-learning loop"],
   ["apps/www/src/app/about/page.tsx", "revise the structure without erasing the relationships that produced it", "the recursive revision and collective-history boundary"],
   ["apps/www/src/app/work/technical-operations/page.tsx", "Source-Backed Team Memory", "the current source-backed systems practice"],
+  ["apps/www/src/app/lab/source-backed-team-memory/page.tsx", "Correction in practice", "the situated correction example"],
+  ["apps/www/src/app/lab/source-backed-team-memory/page.tsx", "methodProof.detailedPublicWording", "the proof-bank projection"],
+  ["apps/www/src/data/proofs.ts", "approximate 2:10 p.m. timestamp", "the initial bounded inference"],
+  ["apps/www/src/data/proofs.ts", "direct Civic Hall announcement stating 1-3 p.m.", "the stronger source"],
+  ["apps/www/src/data/proofs.ts", "the public claim was corrected", "the use-to-revision result"],
+  ["apps/www/src/data/proofs.ts", "the photograph stayed held pending rights and consent review", "the correction's public-safety boundary"],
   ["apps/www/src/content/work/callnyc.mdx", "## What became usable", "the civic prototype result"],
   ["apps/www/src/data/work.ts", "Richard Caceres", "collective product credit"],
   ["apps/www/src/data/knowledge-bank/ucsc-lenses-lifecycle.ts", "CND-UCSC-RECURSIVE-SYSTEMS-METHOD", "the bounded method claim"]
