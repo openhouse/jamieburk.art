@@ -37,6 +37,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run evals:facebook-events-archive`
 - `npm run check:wowlist-facebook-posts`
 - `npm run evals:wowlist-facebook-posts`
+- `npm run check:nycac-facebook-posts`
+- `npm run evals:nycac-facebook-posts`
 
 ## Public-Safety Rules
 
@@ -136,6 +138,13 @@ change for V1.
 - Treat Facebook Past Events as a dated interface population. Reconcile the
   displayed host control to recovered and explicitly unresolved slots; do not
   rename a reconciled control full historical content recovery.
+- Treat annual Meta Business Suite Published exports as a surviving owner-data
+  population. Reconcile every nonempty year and every unique post identity, but
+  do not call that denominator every post ever created or a deletion history.
+- Keep raw owner exports, native post and Page IDs, raw bodies, comments,
+  interaction identities, authenticated routes, and sensitive posted URLs out
+  of the public repository. Use one-way identities and public-safe route
+  dispositions for reconciliation.
 - Facebook response labels are not attendance, unique people, reach,
   endorsement, mandate, or impact. Keep organizer, cohost, venue, and official
   displays bounded to an event-level interface unless another source supports

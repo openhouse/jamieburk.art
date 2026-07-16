@@ -8,9 +8,11 @@ import { validateFacebookEventsArchive } from
   "./lib/facebook-events-archive-validation.mjs";
 import { validateWowListFacebookPosts } from
   "./lib/wowlist-facebook-posts-validation.mjs";
+import { validateNYCACFacebookPosts } from
+  "./lib/nycac-facebook-posts-validation.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v16/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v17/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");
@@ -112,6 +114,15 @@ deterministic.set("WOWFB-001", {
   evidence: wowListFacebookPostValidation.passed
     ? [wowListFacebookPostValidation.evidence]
     : wowListFacebookPostValidation.errors
+});
+
+const nycacFacebookPostValidation = validateNYCACFacebookPosts();
+deterministic.set("NYCACFB-001", {
+  score: nycacFacebookPostValidation.passed ? 1 : 0,
+  passed: nycacFacebookPostValidation.passed,
+  evidence: nycacFacebookPostValidation.passed
+    ? [nycacFacebookPostValidation.evidence]
+    : nycacFacebookPostValidation.errors
 });
 
 const criteriaById = new Map(suite.criteria.map((criterion) => [criterion.id, criterion]));

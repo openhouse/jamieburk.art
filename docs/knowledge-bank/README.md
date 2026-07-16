@@ -106,3 +106,14 @@ patterns, and an explicit owner-archive remainder. The item-level personal
 timeline, raw text, ordinary-life context, private analytics, and authenticated
 session material remain outside the repository. No new website projection was
 selected.
+
+See the authenticated
+[NYC Artist Coalition Facebook post pass](projects/nyc-artist-coalition-facebook-posts.md)
+for all 444 rows and 444 unique post IDs in five annual Meta Business Suite
+Published exports across the surviving 2017-2021 chronology. Its
+[public-safe corpus](corpora/nycartc-facebook-posts-full-population.json) and
+manifest preserve a 67-route research queue, mission and civic-interface
+patterns, and bounded capture-date metrics while withholding raw exports, post
+bodies, platform IDs, engager identities, sensitive routes, and authenticated
+state. Shared-account authorship and incoming stakeholder-group engagement
+remain explicit research questions; no website copy changes were made.
