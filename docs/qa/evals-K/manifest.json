@@ -11,6 +11,8 @@
     "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts",
+    "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts.ts",
     "apps/www/src/data/knowledge-bank/nycac-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts",
     "apps/www/src/data/knowledge-bank/records.ts",

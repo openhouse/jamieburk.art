@@ -127,6 +127,20 @@ platform IDs, engager identities, sensitive routes, and authenticated state.
 Shared-account human authorship and incoming stakeholder-group engagement remain
 explicit research questions; no website copy changes were made from this pass.
 
+The authenticated [KC Spaces Fund Facebook post pass](projects/kc-spaces-fund-facebook-posts.md)
+accounts for all 37 distinct surviving records in the public Page feed available
+on July 16, 2026, after four duplicate or alternate render variants were
+excluded from 41 encountered rows. Its
+[public-safe corpus](corpora/kcspacesfund-facebook-posts-full-population.json)
+preserves content states, mutual-aid operating patterns, five exact public
+routes, named public organization references, and dated counter boundaries
+without publishing raw posts, platform IDs, comments, ordinary people,
+authenticated state, or protected captures. No owner export was available, so
+the result is a surviving-feed control rather than a lifetime total. Jamie's
+behind-the-scenes digital role remains separate from campaign-account
+authorship, public organizing, fundraising, grant selection, and fiscal
+sponsorship; no website copy changes were made from this pass.
+
 The [WOW List Facebook post archival-production report](projects/wowlist-facebook-posts.md)
 accounts for all 57 records in a terminal 19-page protected capture and gives
 each a public-safe content, live, and publisher-attribution disposition. The

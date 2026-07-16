@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-16",
+  "generator": "Authenticated public Page-feed archival production with public-safe source and lifecycle review",
+  "sourceCaptures": "protected and not committed",
+  "sourceCapturesPublished": false,
+  "corpus": "docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-full-population.json",
+  "corpusSha256": "c89ca289d2de755e92b767ad53111eb0a4467f3286a7d095cc2096065dd4fca7",
+  "corpusBytes": 26336,
+  "population": {
+    "renderRowsEncountered": 41,
+    "duplicateOrAlternateRenderVariantsExcluded": 4,
+    "distinctSurvivingPosts": 37,
+    "ownerExportUsed": false,
+    "start": "2020-04-07",
+    "end": "2020-07-09",
+    "status": "complete-surviving-authenticated-public-page-feed"
+  },
+  "publicReconciliationHashSet": {
+    "count": 37,
+    "sha256": "f86072e8173752c8345d2195dc1d63098aaab5a4bcfb3910c328b741baf8cff5"
+  },
+  "privacy": {
+    "rawCapturesPublished": false,
+    "rawPostTextPublished": false,
+    "platformIdsPublished": false,
+    "commentTextPublished": false,
+    "engagerIdentitiesPublished": false,
+    "authenticatedSessionDataPublished": false,
+    "privatePathsPublished": false
+  }
+}

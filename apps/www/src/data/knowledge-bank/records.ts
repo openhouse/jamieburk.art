@@ -31,6 +31,11 @@ import {
   nycacFacebookPostSources
 } from "./nycac-facebook-posts.ts";
 import {
+  kcSpacesFundFacebookClaims,
+  kcSpacesFundFacebookResearchInquiries,
+  kcSpacesFundFacebookSources
+} from "./kcspacesfund-facebook-posts.ts";
+import {
   personalWowListFacebookEventClaims,
   personalWowListFacebookEventResearchInquiries,
   personalWowListFacebookEventSources
@@ -51,6 +56,7 @@ const knowledgeBankInput = {
     ...urbanhermitXCorpusSources,
     ...nycacFacebookEventSources,
     ...nycacFacebookPostSources,
+    ...kcSpacesFundFacebookSources,
     ...personalWowListFacebookEventSources,
     ...wowlistFacebookPostSources,
     {
@@ -1222,6 +1228,7 @@ const knowledgeBankInput = {
     ...urbanhermitXCorpusClaims,
     ...nycacFacebookEventClaims,
     ...nycacFacebookPostClaims,
+    ...kcSpacesFundFacebookClaims,
     ...personalWowListFacebookEventClaims,
     ...wowlistFacebookPostClaims,
     {
@@ -1602,6 +1609,7 @@ const knowledgeBankInput = {
     ...urbanhermitXCorpusResearchInquiries,
     ...nycacFacebookEventResearchInquiries,
     ...nycacFacebookPostResearchInquiries,
+    ...kcSpacesFundFacebookResearchInquiries,
     ...personalWowListFacebookEventResearchInquiries,
     ...wowlistFacebookPostResearchInquiries,
     {
