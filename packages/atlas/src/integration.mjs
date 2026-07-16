@@ -4,7 +4,31 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import ts from "typescript";
 
-const semanticIdPattern = /\b(?:ENT|INTAKE|SRC|READ|CLM|TASK|INQ|DEC|COR|PROP|PROOF|PUB|MEDIA|EVID|KB)-[A-Z0-9][A-Z0-9._-]*/g;
+const semanticIdPrefixes = [
+  "AST",
+  "CAP",
+  "CLM",
+  "COR",
+  "DEC",
+  "ENT",
+  "EVID",
+  "INQ",
+  "INTAKE",
+  "INT",
+  "KB",
+  "LEAD",
+  "MEDIA",
+  "OBS",
+  "PROOF",
+  "PROP",
+  "PUB",
+  "READ",
+  "SRC",
+  "TASK"
+];
+const semanticIdAlternation = semanticIdPrefixes.join("|");
+const semanticIdPattern = new RegExp(`\\b(?:${semanticIdAlternation})-[A-Z0-9][A-Z0-9._-]*`, "g");
+const semanticIdValuePattern = new RegExp(`^(?:${semanticIdAlternation})-[A-Z0-9][A-Z0-9._-]*$`);
 const urlPattern = /https?:\/\/[^\s"'<>()[\]{}]+/g;
 const relevantRoots = [
   ".agents/evals/",
@@ -126,8 +150,7 @@ function selectedRecordFromObject(node) {
     const value = literalValue(property.initializer);
     if (value !== undefined) fields[name] = value;
   }
-  if (!semanticIdPattern.test(fields.id ?? "")) return null;
-  semanticIdPattern.lastIndex = 0;
+  if (!semanticIdValuePattern.test(fields.id ?? "")) return null;
   return fields;
 }
 
@@ -156,8 +179,7 @@ function recordsFromJson(content) {
   const visit = (value) => {
     if (Array.isArray(value)) return value.forEach(visit);
     if (!value || typeof value !== "object") return;
-    if (typeof value.id === "string" && value.id.match(semanticIdPattern)) {
-      semanticIdPattern.lastIndex = 0;
+    if (typeof value.id === "string" && semanticIdValuePattern.test(value.id)) {
       const selected = {};
       for (const [key, fieldValue] of Object.entries(value)) {
         if (!selectedFields.has(key)) continue;

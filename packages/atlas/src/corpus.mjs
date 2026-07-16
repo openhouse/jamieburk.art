@@ -22,6 +22,12 @@ import {
   validateFeatureEvalKnowledge
 } from "./integration.mjs";
 import { findDeprecatedKnowledgeBankImports } from "./deprecation.mjs";
+import {
+  atlasEvalContractFingerprint,
+  evaluateAdvancedAtlas,
+  loadAtlasEvalContracts,
+  validateAtlasEvalResultSet
+} from "./advanced-evals.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -383,6 +389,7 @@ export function compileAtlas({
   const integrationFingerprint = hash(JSON.stringify(manifest));
   const sourceKnowledgeFingerprint = sourceKnowledge.catalogFingerprint;
   const stakeholderCreditFingerprint = hash(JSON.stringify(stakeholderCredits));
+  const evalContractFingerprint = atlasEvalContractFingerprint(repoRoot);
   const implementationRoot = path.join(repoRoot, "packages/atlas");
   const implementationSource = [
     path.join(implementationRoot, "package.json"),
@@ -391,7 +398,7 @@ export function compileAtlas({
   ].map((file) => [path.relative(repoRoot, file), readFileSync(file, "utf8")]);
   const implementationFingerprint = hash(JSON.stringify(implementationSource));
   const candidateFingerprint = hash(
-    `${corpusFingerprint}:${recordStoreFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${stakeholderCreditFingerprint}:${implementationFingerprint}`
+    `${corpusFingerprint}:${recordStoreFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${stakeholderCreditFingerprint}:${evalContractFingerprint}:${implementationFingerprint}`
   );
   const canonicalUnion = {};
   for (const page of pageNodes.filter(({ canonical }) => canonical)) {
@@ -415,6 +422,7 @@ export function compileAtlas({
       integrationFingerprint,
       sourceKnowledgeFingerprint,
       stakeholderCreditFingerprint,
+      evalContractFingerprint,
       implementationFingerprint
     },
     metrics: {
@@ -447,7 +455,12 @@ export function compileAtlas({
   };
 }
 
-export function evaluateAtlas(compiled) {
+export function evaluateAtlas(compiled, {
+  repoRoot = defaultRepoRoot,
+  recordStore = atlasRecordStore,
+  sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  contracts = loadAtlasEvalContracts(repoRoot)
+} = {}) {
   const failures = compiled.validation.errors;
   const hardGateDefinitions = [
     ["semantic-markdown-contract", ["schema", "identity"]],
@@ -511,18 +524,36 @@ export function evaluateAtlas(compiled) {
       evidence: compiled.inputs
     }
   );
+  results.push(...evaluateAdvancedAtlas({
+    repoRoot,
+    compiled,
+    recordStore,
+    catalog: sourceKnowledge,
+    manifest: compiled.integration,
+    contracts
+  }));
+  const resultSetErrors = validateAtlasEvalResultSet(contracts.suite, results);
+  if (resultSetErrors.length) {
+    const lineage = results.find(({ id }) => id === "eval-lineage-completeness");
+    lineage.passed = false;
+    lineage.observed = `${resultSetErrors.length} defect(s)`;
+    lineage.evidence.push(...resultSetErrors);
+  }
   const hardGates = results.filter(({ kind }) => kind === "hard-gate");
   const qualityTargets = results.filter(({ kind }) => kind === "quality-target");
+  const humanGates = results.filter(({ kind }) => kind === "human-gate");
   return {
-    suiteId: "atlas-semantic-wiki",
-    suiteVersion: "3.0.0",
+    suiteId: contracts.suite.id,
+    suiteVersion: contracts.suite.version,
     candidateFingerprint: compiled.candidateFingerprint,
     results,
     summary: {
       hardGateFailures: hardGates.filter(({ passed }) => !passed).length,
       hardGateTotal: hardGates.length,
       qualityTargetGaps: qualityTargets.filter(({ passed }) => !passed).length,
-      qualityTargetTotal: qualityTargets.length
+      qualityTargetTotal: qualityTargets.length,
+      humanGatesPending: humanGates.filter(({ passed }) => !passed).length,
+      humanGateTotal: humanGates.length
     }
   };
 }

@@ -27,6 +27,10 @@ feature/evals integration manifest
 federated A-N knowledge catalog
         +
 named stakeholder credit register
+        +
+ontology, disposition, and variant contracts
+        +
+versioned machine, task, and human eval contracts
         |
         v
 @jamie-burkart/atlas
@@ -40,9 +44,11 @@ named stakeholder credit register
   - query/explain service
   - exact candidate fingerprint
   - deterministic and adversarial evals
+  - clean-room portable bundle and fixity verification
         |
         +--> disposable graph JSON
         +--> private CLI reports
+        +--> branch-independent portable package
         +--> optional read-only consumers
 ```
 
@@ -67,3 +73,21 @@ base schema. Exact source artifacts remain attributable to their frozen commit;
 selected public-safe records and document abstracts become queryable through
 Atlas. This preserves disagreement and schema variation while creating one
 loss-aware discovery surface.
+
+## Knowledge and evaluation layers
+
+Atlas separates five responsibilities that the earlier banks frequently
+combined:
+
+1. Atomic canonical records preserve exact lifecycle structure.
+2. Semantic Markdown pages compose navigable, situated neighborhoods.
+3. The federated catalog preserves branch-local variants and immutable source
+   artifacts without silently resolving disagreement.
+4. Ontology, disposition, rights, credit, and projection contracts state how
+   records may be related and used.
+5. Versioned evals test machine invariants, grounded retrieval, adversarial
+   mutations, clean-room reconstruction, and named human judgments.
+
+This is a component architecture inside the monorepo: the human-authored wiki,
+machine graph, full-fidelity evidence, and eval system remain independently
+inspectable while sharing stable identifiers and one release contract.

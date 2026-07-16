@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "policyId": "atlas-record-disposition",
+  "addressTemplate": "atlas://records/{collection}/{id}",
+  "allowedDispositions": [
+    "page-composed-and-addressable",
+    "addressable-atomic-record",
+    "public-projection-record",
+    "protected-metadata-only"
+  ],
+  "collections": {
+    "entities": { "disposition": "page-composed-and-addressable", "projectCoverageRequired": true },
+    "intake": { "disposition": "addressable-atomic-record", "projectCoverageRequired": true },
+    "sources": { "disposition": "addressable-atomic-record", "projectCoverageRequired": true },
+    "sourceReadings": { "disposition": "addressable-atomic-record", "projectCoverageRequired": true },
+    "claims": { "disposition": "page-composed-and-addressable", "projectCoverageRequired": true },
+    "researchTasks": { "disposition": "addressable-atomic-record", "projectCoverageRequired": true },
+    "researchInquiries": { "disposition": "addressable-atomic-record", "projectCoverageRequired": true },
+    "projectionDecisions": { "disposition": "public-projection-record", "projectCoverageRequired": true },
+    "corrections": { "disposition": "public-projection-record", "projectCoverageRequired": true },
+    "pages": { "disposition": "public-projection-record", "projectCoverageRequired": true },
+    "proofClaims": { "disposition": "public-projection-record", "projectCoverageRequired": false }
+  }
+}

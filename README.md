@@ -46,6 +46,9 @@ npm run atlas:generate
 npm run atlas:check
 npm run atlas:test
 npm run atlas:eval
+npm run atlas:bundle -- --output /path/to/atlas-portable
+npm run atlas:verify-bundle -- --input /path/to/atlas-portable
+npm run atlas:release
 npm run atlas:query -- --project callnyc
 npm run eval:launch:browser -- --url http://127.0.0.1:3000 --profile local
 npm run preflight:staging
@@ -120,6 +123,11 @@ credit, and exact candidate fingerprints. Its federated catalog indexes all
 fourteen frozen `feature/evals-*` knowledge trees without flattening their
 provenance or exposing protected locators. It also provides in-process page,
 knowledge, source-lineage, and explanation APIs.
+
+Its v4 evaluation contract separates 30 deterministic hard gates, 9 measurable
+quality targets, and 3 human judgments. Mutation tests prove the checks reject
+representative knowledge loss, while a full portable bundle proves Atlas can
+be reconstructed without Git or the deprecated branch refs.
 
 Atlas is a package with service-like contracts, not a separately deployed
 application. Its generated graph is rebuildable, its canonical records are

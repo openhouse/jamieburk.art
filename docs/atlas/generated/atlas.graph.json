@@ -1,14 +1,15 @@
 {
   "schemaVersion": 3,
-  "candidateFingerprint": "764e0ae31967bf0d65cc2d890afaaa5d57510ff2a7dbb01a83db95b8336c663a",
+  "candidateFingerprint": "01f453eb6009f1fc925c0bb6bc8b8715f64e7bdeff800d4d342f75d1ea6e4c5b",
   "inputs": {
     "corpusFingerprint": "4697e185b6636cc3284f53d8697d4f6f33fe84e75805d194c46598b6d71979bd",
     "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
     "recordStoreFingerprint": "2b137e5892b97504f479e70d6865a6ff5c1a20f8f8b711b91b619a6920b8d453",
     "integrationFingerprint": "9cd4f3bae826dec0c57b1545536a09544e9c12bff577eec7117773f76827ec77",
-    "sourceKnowledgeFingerprint": "e758fdf383288ad9a18e4e14d5f8a227f1ef1f4618ff38635dde59bb7aa18e65",
+    "sourceKnowledgeFingerprint": "ee17c068e63c2a1750cb163aa33d69d95638566f5fbf642a9c635e331520fa4f",
     "stakeholderCreditFingerprint": "a8ede705241b376757d6bca5b6d82a3ef77f8989dc4899e2bd912622fa09d1e9",
-    "implementationFingerprint": "7fb20857e086139f15bc777219ee228a90aa6fe20845298f460c114bab77118e"
+    "evalContractFingerprint": "eec69c8e40ca099c413248c64d1e5cd8c7d9b5ad745b2947e9075d2b347d0f33",
+    "implementationFingerprint": "b2d991731f6c8616b247c229bfd64c3490e424f4445d624b15873b137a1614e2"
   },
   "metrics": {
     "pages": 25,
@@ -12524,14 +12525,14 @@
     ]
   },
   "sourceKnowledge": {
-    "catalogFingerprint": "e758fdf383288ad9a18e4e14d5f8a227f1ef1f4618ff38635dde59bb7aa18e65",
+    "catalogFingerprint": "ee17c068e63c2a1750cb163aa33d69d95638566f5fbf642a9c635e331520fa4f",
     "totals": {
       "branches": 14,
       "artifactMappings": 1833,
       "fullFidelityArtifacts": 1833,
       "uniqueBlobs": 1676,
-      "semanticIds": 5695,
-      "recordVariants": 5723,
+      "semanticIds": 7650,
+      "recordVariants": 7653,
       "documents": 829,
       "publicUrls": 16691,
       "protectedLocators": 1520,
@@ -12542,7 +12543,7 @@
         "branch": "feature/evals-A",
         "commit": "34703796f774563c05e0e2c09a9c7a1bd67bdb9c",
         "artifacts": 122,
-        "semanticIds": 574,
+        "semanticIds": 854,
         "publicUrls": 3104,
         "protectedLocators": 8
       },
@@ -12558,7 +12559,7 @@
         "branch": "feature/evals-C",
         "commit": "b07ae0675b39b41ee1820cb3eeca1902a22940f7",
         "artifacts": 89,
-        "semanticIds": 396,
+        "semanticIds": 522,
         "publicUrls": 226,
         "protectedLocators": 0
       },
@@ -12582,7 +12583,7 @@
         "branch": "feature/evals-F",
         "commit": "c7e63011619aa30842fac9fdeb567218c4582ad6",
         "artifacts": 101,
-        "semanticIds": 469,
+        "semanticIds": 518,
         "publicUrls": 6619,
         "protectedLocators": 578
       },
@@ -12590,7 +12591,7 @@
         "branch": "feature/evals-G",
         "commit": "78f130b5345a96517eb76804ae93e750324422f8",
         "artifacts": 81,
-        "semanticIds": 377,
+        "semanticIds": 710,
         "publicUrls": 7053,
         "protectedLocators": 521
       },
@@ -12598,7 +12599,7 @@
         "branch": "feature/evals-H",
         "commit": "679f9ba816a2c749622e1e8f54c28cc84d6f7f88",
         "artifacts": 125,
-        "semanticIds": 555,
+        "semanticIds": 846,
         "publicUrls": 6872,
         "protectedLocators": 509
       },
@@ -12606,7 +12607,7 @@
         "branch": "feature/evals-I",
         "commit": "ff4801fd6de4c555ca4e060d023d56208fd94008",
         "artifacts": 134,
-        "semanticIds": 461,
+        "semanticIds": 841,
         "publicUrls": 7887,
         "protectedLocators": 778
       },
@@ -12622,7 +12623,7 @@
         "branch": "feature/evals-K",
         "commit": "7f858dc00eaf3b561ce9515539f270ed3c6c2616",
         "artifacts": 120,
-        "semanticIds": 580,
+        "semanticIds": 932,
         "publicUrls": 6326,
         "protectedLocators": 485
       },
@@ -12630,7 +12631,7 @@
         "branch": "feature/evals-L",
         "commit": "11b16eb0022feb5d189dbe7b908540c55a45e793",
         "artifacts": 114,
-        "semanticIds": 404,
+        "semanticIds": 615,
         "publicUrls": 7646,
         "protectedLocators": 489
       },
@@ -12638,7 +12639,7 @@
         "branch": "feature/evals-M",
         "commit": "b5ce9e39f0c5887def24081eb6dcee380b39d1b2",
         "artifacts": 103,
-        "semanticIds": 471,
+        "semanticIds": 572,
         "publicUrls": 1519,
         "protectedLocators": 0
       },
@@ -12646,7 +12647,7 @@
         "branch": "feature/evals-N",
         "commit": "6ab66903c11974d04a576f9749f906e8eacd9fe1",
         "artifacts": 121,
-        "semanticIds": 388,
+        "semanticIds": 449,
         "publicUrls": 1023,
         "protectedLocators": 226
       }

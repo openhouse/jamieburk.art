@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "atlas-situated-knowledge-universe",
+  "suiteVersion": "4.0.0",
+  "status": "pending-human-review",
+  "criteria": [
+    {
+      "id": "social-mechanism-fidelity",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must judge whether participation, authorship, hosting, sponsorship, institutional response, feedback, and causation remain distinct."
+    },
+    {
+      "id": "situated-experience-fidelity",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must judge whether artistic practice, embodiment, atmosphere, and voice remain legible alongside operational structure."
+    },
+    {
+      "id": "no-context-reader-navigation",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named no-context reader must navigate from a project to its evidence, collaborators, methods, corrections, and open questions."
+    }
+  ]
+}

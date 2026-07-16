@@ -21,6 +21,10 @@ import {
   findAtlasRecord,
   loadAtlasRecordStore
 } from "../src/records.mjs";
+import {
+  materializePortableAtlasBundle,
+  verifyPortableAtlasBundle
+} from "../src/portable.mjs";
 
 const [command = "check", ...args] = process.argv.slice(2);
 const valueFor = (flag) => {
@@ -37,9 +41,16 @@ function stableJson(value) {
 
 function printEvaluation(evaluation) {
   for (const result of evaluation.results) {
-    console.log(`${result.passed ? "PASS" : result.kind === "hard-gate" ? "FAIL" : "GAP "} ${result.id}: ${result.observed}`);
+    const label = result.passed
+      ? "PASS"
+      : result.kind === "hard-gate"
+        ? "FAIL"
+        : result.kind === "human-gate"
+          ? "PEND"
+          : "GAP ";
+    console.log(`${label} ${result.id}: ${result.observed}`);
   }
-  console.log(`Summary: ${evaluation.summary.hardGateFailures}/${evaluation.summary.hardGateTotal} hard gates failing; ${evaluation.summary.qualityTargetGaps}/${evaluation.summary.qualityTargetTotal} quality targets open.`);
+  console.log(`Summary: ${evaluation.summary.hardGateFailures}/${evaluation.summary.hardGateTotal} hard gates failing; ${evaluation.summary.qualityTargetGaps}/${evaluation.summary.qualityTargetTotal} quality targets open; ${evaluation.summary.humanGatesPending}/${evaluation.summary.humanGateTotal} human gates pending.`);
   console.log(`Candidate: ${evaluation.candidateFingerprint}`);
 }
 
@@ -135,6 +146,23 @@ try {
     }
     if (args.includes("--json")) console.log(stableJson(evaluation));
     else printEvaluation(evaluation);
+  } else if (command === "bundle") {
+    const output = valueFor("--output");
+    if (!output) throw new Error("Use --output <bundle-directory>");
+    const catalog = loadFeatureEvalKnowledge(defaultRepoRoot);
+    const manifest = materializePortableAtlasBundle({
+      repoRoot: defaultRepoRoot,
+      bundleRoot: path.resolve(output),
+      compiled,
+      catalog
+    });
+    console.log(`Materialized ${manifest.totals.files} portable files and ${manifest.totals.uniqueSourceBlobs} source blobs.`);
+  } else if (command === "verify-bundle") {
+    const input = valueFor("--input");
+    if (!input) throw new Error("Use --input <bundle-directory>");
+    const errors = verifyPortableAtlasBundle(path.resolve(input));
+    if (errors.length) throw new Error(errors.join("\n"));
+    console.log("Portable Atlas bundle is complete, internally linked, and independent of Git.");
   } else if (command === "query") {
     const service = createAtlasService(compiled);
     const result = service.query({
@@ -170,6 +198,15 @@ try {
     }
     printEvaluation(evaluation);
     console.log("Generated Atlas graph is current.");
+  } else if (command === "release") {
+    const expected = stableJson(compiled);
+    const current = readFileSync(generatedPath, "utf8");
+    if (current !== expected) throw new Error("Generated Atlas graph is stale");
+    printEvaluation(evaluation);
+    if (evaluation.summary.hardGateFailures || evaluation.summary.qualityTargetGaps || evaluation.summary.humanGatesPending) {
+      throw new Error("Atlas release contract is not satisfied");
+    }
+    console.log("Atlas release contract passed.");
   } else {
     throw new Error(`Unknown Atlas command: ${command}`);
   }

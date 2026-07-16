@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "atlas-situated-knowledge-universe",
+  "runs": [
+    {
+      "status": "accepted",
+      "candidateFingerprint": "01f453eb6009f1fc925c0bb6bc8b8715f64e7bdeff800d4d342f75d1ea6e4c5b",
+      "parentCandidateFingerprint": "764e0ae31967bf0d65cc2d890afaaa5d57510ff2a7dbb01a83db95b8336c663a",
+      "suiteVersion": "4.0.0",
+      "sourceBranch": "feature/atlas-o",
+      "sourceParentCommit": "c50269ca77ae0f46d3ec6e7c23b8c6fdde657a44",
+      "objective": "Add the Atlas-Wikipedia gap evals without weakening existing gates or converting human judgments into machine passes.",
+      "acceptedChange": "Accepted after 18 mutation and contract tests, including clean-room bundle verification and deliberate source-blob corruption detection; repository and browser evidence are recorded separately in the PR.",
+      "inputs": {
+        "corpusFingerprint": "4697e185b6636cc3284f53d8697d4f6f33fe84e75805d194c46598b6d71979bd",
+        "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
+        "recordStoreFingerprint": "2b137e5892b97504f479e70d6865a6ff5c1a20f8f8b711b91b619a6920b8d453",
+        "integrationFingerprint": "9cd4f3bae826dec0c57b1545536a09544e9c12bff577eec7117773f76827ec77",
+        "sourceKnowledgeFingerprint": "ee17c068e63c2a1750cb163aa33d69d95638566f5fbf642a9c635e331520fa4f",
+        "stakeholderCreditFingerprint": "a8ede705241b376757d6bca5b6d82a3ef77f8989dc4899e2bd912622fa09d1e9",
+        "evalContractFingerprint": "eec69c8e40ca099c413248c64d1e5cd8c7d9b5ad745b2947e9075d2b347d0f33",
+        "implementationFingerprint": "b2d991731f6c8616b247c229bfd64c3490e424f4445d624b15873b137a1614e2"
+      },
+      "mutations": [
+        "record-disposition-removed",
+        "variant-provenance-removed",
+        "temporal-value-corrupted",
+        "retired-wording-revived",
+        "projection-evidence-removed",
+        "non-recovery-strengthened-to-nonexistence",
+        "catalog-total-drifted",
+        "media-rights-documentation-overstated",
+        "protected-locator-exposed",
+        "stakeholder-boundary-erased",
+        "ontology-inverse-broken",
+        "wiki-neighborhood-orphaned",
+        "lineage-candidate-drifted",
+        "grounded-task-misanswered",
+        "human-gate-self-certified",
+        "portable-source-blob-corrupted"
+      ]
+    }
+  ]
+}

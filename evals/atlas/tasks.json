@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "taskSetId": "atlas-grounded-knowledge-tasks",
+  "tasks": [
+    {
+      "id": "retrieve-canonical-claim",
+      "operation": "record",
+      "input": { "id": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON" },
+      "expect": { "collection": "claims", "contains": "independent" }
+    },
+    {
+      "id": "explain-project-slice",
+      "operation": "project",
+      "input": { "projectKey": "callnyc" },
+      "expect": { "pageId": "ATLAS-PROJECT-CALLNYC", "minimumClaims": 1 }
+    },
+    {
+      "id": "trace-federated-lineage",
+      "operation": "lineage",
+      "input": { "id": "CLM-WATERWAYS-RAFT-EXPEDITION" },
+      "expect": { "branch": "feature/evals-A", "minimumLocations": 1 }
+    },
+    {
+      "id": "retrieve-full-fidelity-source",
+      "operation": "artifact",
+      "input": {
+        "branch": "feature/evals-N",
+        "path": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07.ts"
+      },
+      "expect": { "contains": "survivingPublicRecords: 40" }
+    },
+    {
+      "id": "preserve-proof-boundary",
+      "operation": "record",
+      "input": { "id": "kc-spaces-fund-digital-infrastructure" },
+      "expect": { "collection": "proofClaims", "contains": "collective" }
+    }
+  ]
+}

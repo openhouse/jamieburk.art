@@ -34,6 +34,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run atlas:check`
 - `npm run atlas:test`
 - `npm run atlas:eval`
+- `npm run atlas:bundle -- --output PATH`
+- `npm run atlas:verify-bundle -- --input PATH`
+- `npm run atlas:release`
 
 ## Public-Safety Rules
 
@@ -100,7 +103,11 @@ publishing them.
 
 Before accepting canonical changes, run `npm run atlas:verify-legacy`,
 `npm run atlas:verify-deprecation`, `npm run atlas:verify-history`,
-`npm run atlas:generate`, and the full `npm run check`.
+`npm run atlas:generate`, `npm run atlas:check`, `npm run atlas:test`, and the
+full `npm run check`. For release work, also materialize and verify a portable
+bundle. Do not self-certify Atlas's three human gates or weaken the suite,
+tasks, lineage, mutation probes, ontology, disposition, or variant contracts
+to make a candidate pass.
 
 Atlas is an in-process package, not a network service, CMS, database, or public
 application. Do not add a public Atlas route without explicit approval.

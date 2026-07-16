@@ -1,7 +1,7 @@
 {
-  "suiteId": "atlas-semantic-wiki",
-  "suiteVersion": "3.0.0",
-  "candidateFingerprint": "764e0ae31967bf0d65cc2d890afaaa5d57510ff2a7dbb01a83db95b8336c663a",
+  "suiteId": "atlas-situated-knowledge-universe",
+  "suiteVersion": "4.0.0",
+  "candidateFingerprint": "01f453eb6009f1fc925c0bb6bc8b8715f64e7bdeff800d4d342f75d1ea6e4c5b",
   "results": [
     {
       "id": "semantic-markdown-contract",
@@ -112,14 +112,14 @@
       "id": "federated-source-depth",
       "kind": "quality-target",
       "passed": true,
-      "observed": "5695 semantic IDs from 14 branches",
+      "observed": "7650 semantic IDs from 14 branches",
       "evidence": {
         "branches": 14,
         "artifactMappings": 1833,
         "fullFidelityArtifacts": 1833,
         "uniqueBlobs": 1676,
-        "semanticIds": 5695,
-        "recordVariants": 5723,
+        "semanticIds": 7650,
+        "recordVariants": 7653,
         "documents": 829,
         "publicUrls": 16691,
         "protectedLocators": 1520,
@@ -137,22 +137,196 @@
       "id": "candidate-is-exactly-bound",
       "kind": "quality-target",
       "passed": true,
-      "observed": "764e0ae31967bf0d65cc2d890afaaa5d57510ff2a7dbb01a83db95b8336c663a",
+      "observed": "01f453eb6009f1fc925c0bb6bc8b8715f64e7bdeff800d4d342f75d1ea6e4c5b",
       "evidence": {
         "corpusFingerprint": "4697e185b6636cc3284f53d8697d4f6f33fe84e75805d194c46598b6d71979bd",
         "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
         "recordStoreFingerprint": "2b137e5892b97504f479e70d6865a6ff5c1a20f8f8b711b91b619a6920b8d453",
         "integrationFingerprint": "9cd4f3bae826dec0c57b1545536a09544e9c12bff577eec7117773f76827ec77",
-        "sourceKnowledgeFingerprint": "e758fdf383288ad9a18e4e14d5f8a227f1ef1f4618ff38635dde59bb7aa18e65",
+        "sourceKnowledgeFingerprint": "ee17c068e63c2a1750cb163aa33d69d95638566f5fbf642a9c635e331520fa4f",
         "stakeholderCreditFingerprint": "a8ede705241b376757d6bca5b6d82a3ef77f8989dc4899e2bd912622fa09d1e9",
-        "implementationFingerprint": "7fb20857e086139f15bc777219ee228a90aa6fe20845298f460c114bab77118e"
+        "evalContractFingerprint": "eec69c8e40ca099c413248c64d1e5cd8c7d9b5ad745b2947e9075d2b347d0f33",
+        "implementationFingerprint": "b2d991731f6c8616b247c229bfd64c3490e424f4445d624b15873b137a1614e2"
       }
+    },
+    {
+      "id": "portable-export-closure",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "46 files and 1676 source blobs close",
+      "evidence": []
+    },
+    {
+      "id": "branch-independent-recovery",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "14 commits and 1676 blobs reachable",
+      "evidence": []
+    },
+    {
+      "id": "record-disposition-completeness",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "1044 records dispositioned",
+      "evidence": []
+    },
+    {
+      "id": "variant-and-disagreement-ledger",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "7653 variants retain explicit provenance",
+      "evidence": []
+    },
+    {
+      "id": "temporal-integrity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "All structured temporal values are valid",
+      "evidence": []
+    },
+    {
+      "id": "correction-propagation",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "4 active corrections remain enforced",
+      "evidence": []
+    },
+    {
+      "id": "epistemic-projection-integrity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Projected claims retain evidence, composition, and boundaries",
+      "evidence": []
+    },
+    {
+      "id": "negative-knowledge-integrity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Non-recovery remains distinct from nonexistence",
+      "evidence": []
+    },
+    {
+      "id": "dataset-reproducibility",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Catalog totals and fingerprint reproduce",
+      "evidence": []
+    },
+    {
+      "id": "attachment-fixity-and-rights",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Displayed media has provenance and unresolved rights remain human-gated",
+      "evidence": []
+    },
+    {
+      "id": "protected-knowledge-inference",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "1520 protected locators remain value-free",
+      "evidence": []
+    },
+    {
+      "id": "collective-credit-integrity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "25 stakeholder boundaries and projected collective credit retained",
+      "evidence": []
+    },
+    {
+      "id": "ontology-backward-compatibility",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "9 predicates have migration-safe inverses",
+      "evidence": []
+    },
+    {
+      "id": "wiki-navigation-health",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "25/25 pages have navigable neighborhoods",
+      "evidence": []
+    },
+    {
+      "id": "eval-lineage-completeness",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Current candidate, inputs, suite, and mutations are recorded",
+      "evidence": []
+    },
+    {
+      "id": "clean-room-execution",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Portable bundle is materializable without Git after export",
+      "evidence": []
+    },
+    {
+      "id": "task-grounded-retrieval",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "5/5 grounded tasks pass",
+      "evidence": []
+    },
+    {
+      "id": "record-addressability",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "1044 canonical records addressable",
+      "evidence": []
+    },
+    {
+      "id": "variant-provenance-coverage",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "7653/7653 variants carry provenance",
+      "evidence": []
+    },
+    {
+      "id": "navigable-neighborhood-coverage",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "25/25 pages have incoming and outgoing relations",
+      "evidence": []
+    },
+    {
+      "id": "task-scenario-coverage",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "5/5 task scenarios pass",
+      "evidence": []
+    },
+    {
+      "id": "social-mechanism-fidelity",
+      "kind": "human-gate",
+      "passed": false,
+      "status": "pending",
+      "observed": "Pending named human review",
+      "evidence": []
+    },
+    {
+      "id": "situated-experience-fidelity",
+      "kind": "human-gate",
+      "passed": false,
+      "status": "pending",
+      "observed": "Pending named human review",
+      "evidence": []
+    },
+    {
+      "id": "no-context-reader-navigation",
+      "kind": "human-gate",
+      "passed": false,
+      "status": "pending",
+      "observed": "Pending named human review",
+      "evidence": []
     }
   ],
   "summary": {
     "hardGateFailures": 0,
-    "hardGateTotal": 13,
+    "hardGateTotal": 30,
     "qualityTargetGaps": 0,
-    "qualityTargetTotal": 5
+    "qualityTargetTotal": 9,
+    "humanGatesPending": 3,
+    "humanGateTotal": 3
   }
 }

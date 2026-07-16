@@ -37,6 +37,9 @@ npm run atlas:query -- --project callnyc
 npm run atlas:knowledge -- --id CLM-WATERWAYS-RAFT-EXPEDITION
 npm run atlas:records -- --id CLM-CALLNYC-INDEPENDENT-FOLLOW-ON
 npm run atlas:artifact -- --branch feature/evals-K --path apps/www/src/data/knowledge-bank/dcla-council-bridge.ts
+npm run atlas:bundle -- --output /path/to/atlas-portable
+npm run atlas:verify-bundle -- --input /path/to/atlas-portable
+npm run atlas:release
 npm run atlas:explain -- --project callnyc
 ```
 
@@ -44,3 +47,10 @@ The generated graph is disposable. Canonical records, Markdown, the frozen
 branch manifest, the federated source catalog, and the named stakeholder credit
 register bind the candidate. Deprecated banks remain audit sources only.
 Protected locators remain hashed in ordinary Atlas projections.
+
+The versioned v4 suite executes 30 hard gates and 9 quality targets, plus 3
+explicit human gates for social-mechanism fidelity, situated-experience
+fidelity, and no-context navigation. Portable export includes every semantic
+page, canonical and federated records, the ontology and disposition contracts,
+eval lineage, and all unique source blobs. Bundle verification needs neither a
+Git repository nor the deprecated branch refs.

@@ -30,6 +30,21 @@ export {
 } from "./records.mjs";
 export { findDeprecatedKnowledgeBankImports } from "./deprecation.mjs";
 export {
+  atlasEvalContractFingerprint,
+  evaluateAdvancedAtlas,
+  evaluateGroundedTasks,
+  loadAtlasEvalContracts,
+  validateAtlasEvalContracts,
+  validateAtlasEvalResultSet
+} from "./advanced-evals.mjs";
+export {
+  buildPortableAtlasManifest,
+  materializePortableAtlasBundle,
+  portableAtlasFiles,
+  validatePortableAtlasSource,
+  verifyPortableAtlasBundle
+} from "./portable.mjs";
+export {
   atlasAuthoritySchema,
   atlasCanonicalSchema,
   atlasIdSchema,
