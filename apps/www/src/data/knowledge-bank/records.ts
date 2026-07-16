@@ -474,6 +474,31 @@ const knowledgeBankInput = {
     {
       id: "kc-town-hall",
       surface: "/work/kc-town-hall",
+      sharedBoundary:
+        "Across the municipal records below, a proposal, recommendation, appropriation, or negotiation status does not establish an executed agreement, disbursement, construction, completed redevelopment, personal receipt, or individual causality.",
+      sourceBoundaryOmissions: {
+        "SRC-KC-TOWN-HALL-CCED-MINUTES-2019": [
+          "that the request was final funding received",
+          "that construction was completed"
+        ],
+        "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649": [
+          "that a funding agreement was executed",
+          "that funds were paid or disbursed",
+          "that construction began or was completed",
+          "that Jamie alone caused the Council action"
+        ],
+        "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642": [
+          "that funds were paid or disbursed",
+          "that a funding agreement was executed",
+          "that construction began or was completed",
+          "that Jamie personally received the appropriation",
+          "that Jamie alone caused the Council action"
+        ],
+        "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022": [
+          "that a funding agreement was later executed",
+          "construction or project completion"
+        ]
+      },
       sourceOrder: [
         "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
         "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",

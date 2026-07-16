@@ -575,13 +575,7 @@ const workItemsInput = [
         "work-card",
         "/work"
       ).text,
-      getClaimProjection("CLM-KC-TOWN-HALL-PROPOSAL-2019", "work-card", "/work").text,
-      getClaimProjection(
-        "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
-        "work-card",
-        "/work"
-      ).text,
-      getClaimProjection("CLM-KC-TOWN-HALL-WITHDRAWN-2024", "work-card", "/work").text,
+      "Built resident-input and neighborhood-service workflows alongside the public funding process.",
       getClaimProjection(
         "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
         "work-card",
@@ -642,7 +636,7 @@ const workItemsInput = [
       "Official Kansas City public meeting and legislation records plus Jamie's public-use confirmation of the later transition, with private project records omitted.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus:
-      "The project stopped proceeding under the CCED award, the unused public allocation was reappropriated, and Jamie transitioned the project to a mission-aligned organization.",
+      "Archived proof of a proposed rehabilitation that did not proceed under its public award; the planning record and later stewardship transition remain documented.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, neighborhood operations, service-intake design, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -661,7 +655,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie's approved resume and project records support his co-founder, planning, and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal. A review of all 183 records currently displayed by the project-account profile documents resident-input, recurring neighborhood-service, civic-resource, and direct stakeholder-response patterns. Jamie's public-use confirmation supports the subsequent transition to a mission-aligned organization.",
+        "Official municipal records document Jamie's presenter role and the proposal's review sequence. The complete displayed account population supports bounded resident-input, recurring neighborhood-service, civic-resource, and stakeholder-response patterns; Jamie confirms the later stewardship transition.",
       open:
         "The records do not establish an executed funding agreement, disbursement, construction, every collaborator's role, the receiving organization's identity, the form or timing of the transition, or the project's current status.",
       protected:

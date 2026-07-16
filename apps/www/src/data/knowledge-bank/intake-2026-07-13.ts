@@ -229,7 +229,7 @@ export const researchedSourceRecords20260713 = [
     canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
     preferredPublicUrl: "canonical",
     publicCitation: "City of Kansas City, Missouri, Resolution 190649, adopted September 26, 2019.",
-    publicNote: "The authenticated resolution accepts the CCED Board's recommendation of up to $490,539 for KC Town Hall and authorizes funding-agreement negotiations; it does not document an executed agreement or payment.",
+    publicNote: "The authenticated resolution accepts the CCED Board's recommendation of up to $490,539 for KC Town Hall and authorizes funding-agreement negotiations.",
     supportsGenerally: [
       "the CCED Board recommended $490,539 for KC Town Hall on July 16, 2019",
       "the City Council accepted the recommendation of up to $490,539 on September 26, 2019",
@@ -254,7 +254,7 @@ export const researchedSourceRecords20260713 = [
     canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
     preferredPublicUrl: "canonical",
     publicCitation: "City of Kansas City, Missouri, Ordinance 190642, passed September 26, 2019.",
-    publicNote: "The authenticated ordinance's Round Two project table appropriates $490,539 to KC Town Hall. Appropriation is not evidence that the money was disbursed or that the project was completed.",
+    publicNote: "The authenticated ordinance's Round Two project table appropriates $490,539 to KC Town Hall.",
     supportsGenerally: [
       "the City Council passed Ordinance 190642 on September 26, 2019",
       "the Round Two project table appropriated $490,539 to KC Town Hall",

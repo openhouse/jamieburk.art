@@ -155,7 +155,7 @@
       "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
       "preferredPublicUrl": "canonical",
       "publicCitation": "City of Kansas City, Missouri, Resolution 190649, adopted September 26, 2019.",
-      "publicNote": "The authenticated resolution accepts the CCED Board's recommendation of up to $490,539 for KC Town Hall and authorizes funding-agreement negotiations; it does not document an executed agreement or payment.",
+      "publicNote": "The authenticated resolution accepts the CCED Board's recommendation of up to $490,539 for KC Town Hall and authorizes funding-agreement negotiations.",
       "doesNotEstablish": [
         "that a funding agreement was executed",
         "that funds were paid or disbursed",
@@ -175,7 +175,7 @@
       "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
       "preferredPublicUrl": "canonical",
       "publicCitation": "City of Kansas City, Missouri, Ordinance 190642, passed September 26, 2019.",
-      "publicNote": "The authenticated ordinance's Round Two project table appropriates $490,539 to KC Town Hall. Appropriation is not evidence that the money was disbursed or that the project was completed.",
+      "publicNote": "The authenticated ordinance's Round Two project table appropriates $490,539 to KC Town Hall.",
       "doesNotEstablish": [
         "that funds were paid or disbursed",
         "that a funding agreement was executed",
@@ -2048,7 +2048,31 @@
             "SRC-X-KCTOWNHALL-FULL-POPULATION-2026"
           ]
         }
-      ]
+      ],
+      "sharedBoundary": "Across the municipal records below, a proposal, recommendation, appropriation, or negotiation status does not establish an executed agreement, disbursement, construction, completed redevelopment, personal receipt, or individual causality.",
+      "sourceBoundaryOmissions": {
+        "SRC-KC-TOWN-HALL-CCED-MINUTES-2019": [
+          "that the request was final funding received",
+          "that construction was completed"
+        ],
+        "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649": [
+          "that a funding agreement was executed",
+          "that funds were paid or disbursed",
+          "that construction began or was completed",
+          "that Jamie alone caused the Council action"
+        ],
+        "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642": [
+          "that funds were paid or disbursed",
+          "that a funding agreement was executed",
+          "that construction began or was completed",
+          "that Jamie personally received the appropriation",
+          "that Jamie alone caused the Council action"
+        ],
+        "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022": [
+          "that a funding agreement was later executed",
+          "construction or project completion"
+        ]
+      }
     }
   ]
 }

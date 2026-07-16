@@ -28,7 +28,7 @@ test("multi-source occurrences preserve editorial order", () => {
 });
 
 test("shared citation boundaries consolidate only declared source limits", () => {
-  for (const pageId of ["callnyc", "fair-rent-nyc"]) {
+  for (const pageId of ["callnyc", "fair-rent-nyc", "kc-town-hall"]) {
     const page = citationPagesById[pageId];
     assert.ok(page.sharedBoundary);
     for (const [sourceId, omissions] of Object.entries(page.sourceBoundaryOmissions)) {
