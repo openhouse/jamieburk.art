@@ -21,20 +21,36 @@ addresses, access instructions, and media remain excluded.
 ## Waterways expedition and public programs
 
 Jamie conceived, co-built, and organized a collaborative bicycle-powered raft
-expedition from Kansas City down the Missouri and Mississippi rivers. A 2007
-independent report says he and Libby Hendon spent weeks constructing the
-recycled-material raft and that the group traveled more than 1,000 miles before
-a Coast Guard interruption. A 2009 independent follow-up reports that Jamie and
-the crew reached the Gulf of Mexico four months after leaving Kansas City.
-Jamie later
-spearheaded *Great Accommodations*, a participatory exhibition and public
-program that treated connected rivers as a social network linking cities,
-stories, correspondence, and possible ways of living.
+expedition from Kansas City down the Missouri and Mississippi rivers. Two
+independent November 2007 reports establish unusually concrete implementation
+detail: *The Pitch* reports that Jamie and Libby Hendon spent weeks constructing
+the craft, while *The Kansas City Star* reports a three-week build from reused
+materials. The roughly 12-by-13-foot craft used two bicycles linked to a
+paddlewheel, and the expedition traveled more than 1,000 miles before a Coast
+Guard interruption. The *Star* reports that the crew was stranded for 51 days;
+local supporters helped recover the raft, modifications and safety equipment
+were added, and the expedition resumed.
+A 2009 independent follow-up reports that Jamie and the crew reached the Gulf of Mexico
+four months after leaving Kansas City.
 
-**Boundaries:** The work was collaborative. Follow-up reporting supports the
-Gulf terminus and four-month duration, not every stop, participant, or route
-detail. Credit named collaborators when discussing their specific
-contributions.
+The *Star* also documents the expedition as participatory public practice. It
+describes a living experience centered on meeting people along the rivers,
+friends joining and leaving in river cities, and Jamie inviting people
+encountered along the way aboard. The article attributes to Jamie an
+interpretation of the river as a possible cultural connection between Kansas
+City's West Bottoms and Delta towns. Jamie later spearheaded *Great
+Accommodations*, a participatory exhibition and public program that treated
+connected rivers as a social network linking cities, stories, correspondence,
+and possible ways of living.
+
+**Boundaries:** The work was collaborative. The *Star* supports the three-week
+build and craft details, not Jamie's sole authorship of every
+construction task. Its cultural-connection language records Jamie's
+interpretation, not consensus from every participant or river community.
+Follow-up reporting supports the Gulf terminus and four-month duration, not
+every stop, participant, or route detail. Credit named collaborators when
+discussing their specific contributions. The supplied newspaper PDF and its
+photographs remain outside the repository pending rights and consent review.
 
 ## 8th Street Tunnel public-history program
 
@@ -156,6 +172,9 @@ contacts, notes, and invitation status remain protected.
 
 - The Pitch, "When artists turn Huck Finn" (2007).
 - The Pitch, "Artists Turned Huck Finn, Part III" (2007).
+- Darryl Levings, "In the name of art, go with the flow," *The Kansas City
+  Star*, November 15, 2007, pp. A1 and A4 (protected PDF; metadata and bounded
+  findings only).
 - The Pitch, "Former Huck Finn artist now working in a pink, plastic bubble"
   (2009).
 - Charlotte Street, "Great Accommodations with Jamie Burkart" (2009).

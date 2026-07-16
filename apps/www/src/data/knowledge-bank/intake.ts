@@ -57,6 +57,27 @@ export const intakeRecords = [
     boundaries: ["The article does not independently establish the complete route or sole authorship."]
   },
   {
+    id: "INT-WATERWAYS-KC-STAR-ARTICLE-2026-07-16",
+    receivedAt: "2026-07-16",
+    kind: "public-artifact",
+    visibility: "protected-summary",
+    title: "The Kansas City Star front-page raft-expedition feature",
+    description: "A protected two-page PDF of Darryl Levings's November 15, 2007 front-page feature documenting the collaborative bicycle-powered raft, its three-week build and mid-journey recovery, and its participatory river-community purpose.",
+    whyItMatters: "Adds strong contemporaneous evidence for Jamie's originating idea, hands-on expedition design, persistence through interruption, and early practice of building structures through which public encounter and cultural connection could happen.",
+    projectIds: ["waterways-participatory-practice"],
+    status: "matured",
+    disposition: "claim-created",
+    dispositionNote: "The article's public bibliographic metadata and bounded findings strengthen the raft claim and support a distinct participatory-river-practice claim; the supplied PDF and photographs remain outside Git.",
+    sourceIds: ["SRC-WATERWAYS-KC-STAR-2007-11-15"],
+    claimIds: ["CLM-WATERWAYS-RAFT-EXPEDITION", "CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE"],
+    inquiryIds: ["INQ-WATERWAYS-FULL-PROGRAM-CORPUS"],
+    artifactPaths: [
+      "docs/knowledge-bank/projects/participatory-public-practice.md",
+      "docs/evals/runs/2026-07-16-kc-star-waterways-ingestion.md"
+    ],
+    boundaries: ["Do not commit or republish the supplied newspaper PDF, page design, article text, or photographs without rights review.", "Omit publication contact details and avoid presenting quoted or paraphrased interpretations as community consensus."]
+  },
+  {
     id: "INT-WATERWAYS-CHARLOTTE-STREET-2026-07-12",
     receivedAt: "2026-07-12",
     kind: "public-url",

@@ -84,9 +84,9 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 
 **Status:** Careful
 **Support level:** Strong
-**Public wording:** Conceived and organized a collaborative raft expedition whose crew reached the Gulf of Mexico four months after leaving Kansas City, then developed participatory public programs around how waterways connect cities, stories, and people.
-**Guardrail:** Describe the work as collaborative; follow-up reporting supports the Gulf terminus and four-month duration, not every stop or participant.
-**Canonical claims:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-WATERWAYS-GREAT-ACCOMMODATIONS`.
+**Public wording:** Conceived, co-built, and organized a collaborative bicycle-powered raft expedition whose crew reached the Gulf of Mexico four months after leaving Kansas City, then developed participatory public programs around how waterways connect cities, stories, and people.
+**Guardrail:** Describe the work as collaborative; contemporaneous reporting supports the three-week reused-material build, craft design, interruption, recovery, and public encounters but not sole construction authorship or community consensus. Follow-up reporting supports the Gulf terminus and four-month duration, not every stop or participant.
+**Canonical claims:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE`, `CLM-WATERWAYS-GREAT-ACCOMMODATIONS`.
 
 # 2026-07-12 ten-source expansion
 
@@ -117,6 +117,28 @@ The Gulf follow-up source also strengthens `CLM-WATERWAYS-RAFT-EXPEDITION`,
 replacing the earlier salt-water-only boundary with independently reported Gulf
 terminus language while preserving the collaborative and incomplete-route
 limits.
+
+# 2026-07-16 Kansas City Star waterways source maturation
+
+A protected two-page copy of Darryl Levings's November 15, 2007 *Kansas City
+Star* front-page feature strengthens `CLM-WATERWAYS-RAFT-EXPEDITION` and
+supports a distinct `CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE` claim.
+
+The source independently attributes the originating expedition idea to Jamie;
+documents that the craft was built in three weeks from reused materials, a roughly
+12-by-13-foot bicycle-powered craft, more than 1,000 miles traveled, and a
+51-day Coast Guard interruption followed by repairs and resumed travel; and
+describes the project as a living river experience centered on meeting people.
+It also reports friends joining and leaving in river cities, Jamie inviting
+people encountered along the way aboard, and Jamie's interpretation of the
+river as a possible cultural connection between Kansas City's West Bottoms and
+Delta towns.
+
+**Boundaries:** The article does not establish sole authorship of every
+construction task, the later Gulf terminus, a complete route or participant
+roster, community consensus, or durable outcomes from the encounters. The PDF,
+newspaper design, article text, and credited photographs remain outside Git
+pending rights and consent review. Publication contact details are omitted.
 
 # 2026-07-15 KC Town Hall Phase One and neighborhood operations
 

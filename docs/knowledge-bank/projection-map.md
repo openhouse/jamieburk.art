@@ -89,7 +89,8 @@ citations.
 
 | Claim | Decision | Audience and compositional reason |
 | --- | --- | --- |
-| `CLM-WATERWAYS-RAFT-EXPEDITION` | Hold from site; retain in bank and photo research | Strong evidence of initiative and range, but the current hiring path needs a concise bridge to Jamie's present operating practice and an inspectable visual artifact. |
+| `CLM-WATERWAYS-RAFT-EXPEDITION` | Hold from site; retain in bank and photo research | Strong front-page and follow-up evidence now establishes initiative, physical implementation, persistence, and range. The current hiring argument remains clear without another historical example, and the most inspectable supplied visual artifact cannot be republished without rights and consent review. |
+| `CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE` | Hold from site; retain in bank and photo research | The source-backed public-encounter model strengthens Jamie's participatory-practice throughline, but `/about` already makes that method legible through Open House. Preserve this depth for future audiences and a rights-clearable visual composition. |
 | `CLM-WATERWAYS-GREAT-ACCOMMODATIONS` | Hold from site; retain in bank and photo research | Useful for participatory-program and public-engagement roles; adding it now would increase About-page burden and diffuse the technical-operations category. |
 | `CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE` | Active on `/about`; photographs remain held | One compact, publicly cited threshold now connects early artistic facilitation and shared governance to Jamie's present operating method. Participant identities and images remain outside the site pending context, rights, and consent review. |
 | `CLM-OPEN-HOUSE-ITERATIVE-GOVERNANCE` | Active on `/about` | The recursive-method map uses the independently reported group response to show that an inhabitable experiment could absorb feedback and revise its operating boundary. |

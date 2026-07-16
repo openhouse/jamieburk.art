@@ -26,6 +26,9 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 - The Pitch reporting on Jamie's collaborative raft expedition.
+- Public bibliographic metadata and a bounded public-safe summary of Darryl
+  Levings's November 15, 2007 *Kansas City Star* front-page raft-expedition
+  feature; the supplied PDF and credited photographs remain protected.
 - Charlotte Street's institutional page for *Great Accommodations*.
 - Good Times / Metro Santa Cruz reporting on *Open House*.
 - Gothamist, NPR, and Bedford + Bowery reporting on NYC Artist Coalition work.
@@ -49,6 +52,13 @@ Typed source records include a public-safe summary, what the source supports,
 what it does not establish, preservation status, and claim or inquiry links.
 Adding a source without a disposition or association fails
 `npm run knowledge-lifecycle`.
+
+The *Kansas City Star* record is intentionally `public-metadata-only`. The
+public repo preserves the title, author, publication date, pages, source
+boundaries, and propositions established by a complete two-page review. It
+does not contain the supplied PDF, article text, newspaper layout, publication
+contact details, or photographs. Reproduction requires separate rights and
+consent review.
 
 The July 12 source-expansion pass added exactly ten source records. Four cited
 claim groups project to the WOWList, Sunday Dinner, FairRentNYC, and KC Town

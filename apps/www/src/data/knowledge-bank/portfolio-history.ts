@@ -34,6 +34,46 @@ export const portfolioHistorySources = [
     ]
   },
   {
+    id: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    title: "In the name of art, go with the flow",
+    organization: "The Kansas City Star",
+    author: "Darryl Levings",
+    kind: "published-article",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    publishedAt: "2007-11-15",
+    accessedAt: "2026-07-16",
+    publicCitation: "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, pp. A1 and A4; protected reader-provided PDF reviewed July 16, 2026.",
+    publicNote: "The two-page front-page feature independently documents the collaborative bicycle-powered raft, attributes the originating idea to Jamie, reports the three-week build and more than 1,000 miles traveled, describes the project as a living river experience centered on meeting people, and attributes to Jamie the possibility that the river could awaken cultural connection between river communities.",
+    protectedLocatorId: "ARCHIVE-WATERWAYS-KC-STAR-2007-11-15",
+    supportsGenerally: [
+      "the raft-expedition idea originated with Jamie",
+      "the craft was built in three weeks from reused materials",
+      "the roughly 12-by-13-foot craft used two bicycles linked to a paddlewheel",
+      "the expedition had passed the 1,000-mile marker by November 2007",
+      "the crew spent 51 days stranded after a Coast Guard interruption and resumed after repairs",
+      "the project was framed as a living experience on the rivers and an encounter with people along them",
+      "friends joined or left the raft at multiple river cities",
+      "Jamie invited people met along the way to join the raft",
+      "Jamie described the river as a possible cultural connection between Kansas City's West Bottoms and Delta towns"
+    ],
+    doesNotEstablish: [
+      "that Jamie acted alone",
+      "that Jamie personally performed every construction task",
+      "the later Gulf of Mexico terminus",
+      "a complete route or participant roster",
+      "permission to republish the supplied PDF or its photographs",
+      "that every person or community encountered shared Jamie's interpretation"
+    ],
+    media: {
+      mediaKind: "document",
+      rightsStatus: "permission-needed",
+      consentStatus: "review-needed",
+      publicDisplayStatus: "metadata-only",
+      visibleText: ["In the name of art, go with the flow"]
+    }
+  },
+  {
     id: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01",
     title: "Great Accommodations with Jamie Burkart - Imagining Lifestyles for Cities on the Water",
     organization: "Charlotte Street Foundation",
@@ -317,15 +357,35 @@ export const portfolioHistoryClaims = [
     ],
     evidence: [
       { sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["Jamie originated the raft expedition idea", "the project investigated Kansas City's relationship to the Missouri River"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15", relationship: "corroborating", supports: ["the raft-expedition idea originated with Jamie", "the craft was built in three weeks from reused materials", "the roughly 12-by-13-foot craft used two bicycles linked to a paddlewheel", "the expedition had passed the 1,000-mile marker by November 2007", "the crew spent 51 days stranded after a Coast Guard interruption and resumed after repairs"], publicNote: "The protected PDF supplies unusually detailed contemporaneous implementation evidence. Its metadata and bounded findings may remain in the public bank, but the PDF and photographs are not approved for republication.", confidence: "high", renderCitation: false },
       { sourceId: "SRC-WATERWAYS-PITCH-PART-III-2007-11-12", relationship: "corroborating", supports: ["Jamie Burkart and Libby Hendon's participation", "their weeks spent constructing the recycled-material raft", "the expedition's public title", "more than 1,000 miles traveled before the reported Coast Guard interruption"], publicNote: "This independent mid-journey report adds direct implementation evidence and a dated route checkpoint; it does not establish the later Gulf terminus or a complete route.", confidence: "high", renderCitation: true },
       { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", relationship: "direct-support", supports: ["Jamie's published account that he organized the bicycle-powered raft project", "Jamie's published account of traveling from Kansas City down the Missouri and Mississippi rivers for four months until the water reached salt"], publicNote: "Charlotte Street reproduces Jamie's first-person retrospective account; it is public evidence of his account, not an independent route log.", confidence: "moderate", renderCitation: true },
       { sourceId: "SRC-WATERWAYS-PITCH-GULF-2009-09-03", relationship: "corroborating", supports: ["Jamie and the raft crew reached the Gulf of Mexico", "the journey lasted four months"], publicNote: "The Pitch independently corroborates the collaborative crew's Gulf terminus and four-month duration, but it is not a complete route log.", confidence: "high", renderCitation: true }
     ],
-    boundaries: ["Describe the expedition as collaborative.", "The later report independently corroborates the Gulf terminus and four-month duration, not every stop, participant, or route detail."],
+    boundaries: ["Describe the expedition as collaborative.", "The Kansas City Star supports a three-week build and detailed craft description, not Jamie's sole authorship of every construction task.", "The later report independently corroborates the Gulf terminus and four-month duration, not every stop, participant, or route detail.", "Do not republish the protected newspaper PDF or its photographs without rights and consent review."],
     antiClaims: ["Jamie completed the expedition alone.", "The reviewed sources independently establish every stop or participant."],
     researchInquiryIds: ["INQ-WATERWAYS-FULL-PROGRAM-CORPUS"],
     reviewedAt: "2026-07-16",
-    reviewedBy: ["Codex public-source review", "Codex Facebook-events source maturation review"]
+    reviewedBy: ["Codex public-source review", "Codex Facebook-events source maturation review", "Codex Kansas City Star source review"]
+  },
+  {
+    id: "CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE",
+    project: "waterways-participatory-practice",
+    internalClaim: "Contemporaneous Kansas City Star reporting documents the 2007 raft expedition as a participatory public practice: the crew stopped to meet people, friends joined and left at river cities, Jamie invited people encountered along the way aboard, and he articulated the river as a possible cultural connection between Kansas City's West Bottoms and Delta towns.",
+    status: "confirmed-with-boundary",
+    projections: [
+      { key: "archive-note", text: "The 2007 raft expedition functioned as a participatory river practice: the crew stopped to meet people, friends joined and left in river cities, Jamie invited people encountered along the way aboard, and he described the river as a possible cultural connection between Kansas City's West Bottoms and Delta towns.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Preserve the independently reported public-purpose and participation model in the historical bank without exposing the protected newspaper artifact." },
+      { key: "about", text: "Built a collaborative river expedition as a moving public encounter, inviting people aboard and exploring cultural connection between river communities.", status: "hold", citationRequired: false, surfaces: [], rationale: "This sharpens the participatory-practice throughline, but the current About page already carries that argument through Open House; hold until the audience and composition benefit from another historical example." },
+      { key: "photo-brief", text: "Look for rights-clearable evidence of the bicycle-powered raft, its reused-material construction, people joining or meeting the crew, river-city stops, repairs, and the relation between craft and public encounter.", status: "hold", citationRequired: false, surfaces: [], rationale: "Use only as a private photo-research brief; the newspaper photographs and supplied PDF remain metadata-only pending rights and consent review." }
+    ],
+    evidence: [
+      { sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15", relationship: "direct-support", supports: ["the project was framed as a living experience on the rivers and an encounter with people along them", "friends joined or left the raft at multiple river cities", "Jamie invited people met along the way to join the raft", "Jamie described the river as a possible cultural connection between Kansas City's West Bottoms and Delta towns"], publicNote: "This is a bounded interpretation of reported actions and Jamie's attributed contemporaneous statement, not a claim that every community shared the same interpretation.", confidence: "high", renderCitation: false }
+    ],
+    boundaries: ["Describe the project and travel as collaborative.", "Attribute the cultural-connection interpretation to Jamie rather than to every participant or river community.", "Do not infer attendance, endorsement, or outcomes beyond the encounters the article reports.", "Do not republish the protected PDF, newspaper design, or photographs without rights and consent review."],
+    antiClaims: ["Jamie alone created the expedition or every encounter.", "Every person encountered joined the raft or endorsed the project.", "The article proves lasting cultural or policy outcomes."],
+    researchInquiryIds: ["INQ-WATERWAYS-FULL-PROGRAM-CORPUS"],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex Kansas City Star source review"]
   },
   {
     id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS",
@@ -452,14 +512,18 @@ export const portfolioHistoryInquiries = [
     project: "waterways-participatory-practice",
     question: "What is the complete chronology, route, collaborator network, public-program inventory, and surviving artifact set for Jamie's raft and waterways practice?",
     methods: [
-      "Reviewed the supplied August 2007 Pitch article, the newly recovered November 2007 Pitch mid-journey report, the 2009 Pitch follow-up, and the Charlotte Street institutional event page.",
+      "Reviewed the supplied August 2007 Pitch article, the November 2007 Pitch mid-journey report, the protected two-page November 15, 2007 Kansas City Star front-page feature, the 2009 Pitch follow-up, and the Charlotte Street institutional event page.",
       "Separated direct reporting from Jamie's quoted retrospective account.",
-      "Recorded route, duration, program, and collaboration limits as claim boundaries."
+      "Close-read and visually verified both Kansas City Star pages, separating article text, captions, credited photographs, and publication contact details before encoding only public-safe metadata and bounded findings.",
+      "Recorded route, duration, program, participation, rights, and collaboration limits as claim boundaries."
     ],
     runAt: "2026-07-16",
     resultStatus: "partially-recovered",
     findings: [
       "The Pitch attributes the expedition concept to Jamie and documents the recycled-material raft project.",
+      "The Kansas City Star independently attributes the originating idea to Jamie and reports that the roughly 12-by-13-foot bicycle-powered craft was built collaboratively in three weeks from reused materials.",
+      "The Kansas City Star says the expedition had passed 1,000 miles, describes a 51-day Coast Guard interruption followed by repairs and resumed travel, and does not establish the later Gulf terminus.",
+      "The Kansas City Star documents the project as a living river experience centered on meeting people, reports friends joining or leaving at river cities, records Jamie inviting people encountered aboard, and attributes to him a cultural-connection interpretation linking Kansas City's West Bottoms with Delta towns.",
       "The November 2007 Pitch report says Jamie Burkart and Libby Hendon spent weeks constructing the recycled-material raft.",
       "The November 2007 Pitch report names Jamie Burkart and Libby Hendon and says the collaborative group had traveled more than 1,000 miles before a Coast Guard interruption.",
       "Charlotte Street documents Great Accommodations and quotes Jamie's account of a four-month journey reaching salt water.",
@@ -469,10 +533,12 @@ export const portfolioHistoryInquiries = [
     limitations: [
       "No complete route log or participant roster was reviewed.",
       "The Gulf terminus and four-month duration are independently corroborated, but the complete route remains unrecovered.",
+      "The Kansas City Star article does not establish that Jamie performed every construction task or that every participant and community shared his interpretation.",
+      "The supplied Kansas City Star PDF and its photographs remain outside the repository pending rights and consent review.",
       "Photographs, correspondence, video, and additional programs remain to be inventoried and reviewed for rights and consent."
     ],
-    sourceIds: ["SRC-WATERWAYS-PITCH-2007-08-09", "SRC-WATERWAYS-PITCH-PART-III-2007-11-12", "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
-    publicSummary: "Public reporting and an institutional exhibition record establish Jamie's collaborative raft expedition, the crew's Gulf terminus after four months, and Jamie's participatory waterways practice; the complete route, collaborator, program, and artifact corpus remains under research."
+    sourceIds: ["SRC-WATERWAYS-PITCH-2007-08-09", "SRC-WATERWAYS-PITCH-PART-III-2007-11-12", "SRC-WATERWAYS-KC-STAR-2007-11-15", "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
+    publicSummary: "Public reporting and an institutional exhibition record establish Jamie's collaborative raft expedition, its hands-on bicycle-powered build, a moving public encounter with river communities, the crew's Gulf terminus after four months, and Jamie's later participatory waterways practice; the complete route, collaborator, program, and artifact corpus remains under research."
   },
   {
     id: "INQ-NYCAC-JAMIE-ROLE-CAUSALITY",

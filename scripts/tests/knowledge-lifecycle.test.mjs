@@ -1930,6 +1930,103 @@ test("a claim cannot use a source for an explicitly excluded proposition", () =>
   );
 });
 
+test("the Kansas City Star waterways source preserves evidence without publishing the artifact", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WATERWAYS-KC-STAR-2007-11-15"
+  );
+  assert.ok(source);
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.equal(source.preservationStatus, "private");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.equal(source.archiveUrl, undefined);
+  assert.equal(source.assetUrl, undefined);
+  assert.equal(source.media.rightsStatus, "permission-needed");
+  assert.equal(source.media.publicDisplayStatus, "metadata-only");
+  for (const proposition of [
+    "the raft-expedition idea originated with Jamie",
+    "the craft was built in three weeks from reused materials",
+    "the crew spent 51 days stranded after a Coast Guard interruption and resumed after repairs",
+    "Jamie invited people met along the way to join the raft"
+  ]) {
+    assert.ok(source.supportsGenerally.includes(proposition));
+  }
+
+  const raftClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATERWAYS-RAFT-EXPEDITION"
+  );
+  const participatoryClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE"
+  );
+  assert.ok(raftClaim);
+  assert.ok(participatoryClaim);
+  assert.equal(
+    raftClaim.evidence.find((item) => item.sourceId === source.id).renderCitation,
+    false
+  );
+  assert.equal(participatoryClaim.status, "confirmed-with-boundary");
+  assert.equal(
+    participatoryClaim.projections.find((item) => item.key === "about").status,
+    "hold"
+  );
+  assert.match(participatoryClaim.internalClaim, /invited people encountered/i);
+  assert.ok(
+    participatoryClaim.boundaries.some((boundary) =>
+      /not consensus|rather than to every participant|community/i.test(boundary)
+    )
+  );
+
+  const intake = knowledgeBank.intake.find(
+    (item) => item.id === "INT-WATERWAYS-KC-STAR-ARTICLE-2026-07-16"
+  );
+  assert.ok(intake);
+  assert.equal(intake.visibility, "protected-summary");
+  assert.deepEqual(
+    new Set(intake.claimIds),
+    new Set([
+      "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE"
+    ])
+  );
+
+  const proof = proofClaims.find(
+    (item) => item.id === "waterways-participatory-practice"
+  );
+  assert.match(proof.publicWording, /Conceived, co-built, and organized/i);
+  assert.ok(
+    proof.canonicalClaimIds.includes("CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE")
+  );
+
+  const projectNote = readFileSync(
+    "docs/knowledge-bank/projects/participatory-public-practice.md",
+    "utf8"
+  );
+  assert.match(projectNote, /In the name of art, go with the flow/);
+  assert.match(projectNote, /51 days/);
+
+  const candidateFiles = [
+    "apps/www/src/data/knowledge-bank/portfolio-history.ts",
+    "apps/www/src/data/knowledge-bank/intake.ts",
+    "apps/www/src/data/proofs.ts",
+    "docs/knowledge-bank/approval-register.md",
+    "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/projection-map.md",
+    "docs/knowledge-bank/projects/participatory-public-practice.md",
+    "docs/knowledge-bank/sources.md",
+    "docs/evals/runs/2026-07-16-kc-star-waterways-ingestion.md",
+    "scripts/tests/knowledge-lifecycle.test.mjs"
+  ];
+  const candidateText = candidateFiles
+    .map((path) => readFileSync(path, "utf8"))
+    .join("\n");
+  const contactScanText = candidateText.replaceAll("jamie.burkart@gmail.com", "");
+  assert.doesNotMatch(candidateText, /\/Users\/[^/\s]+\/(?:Downloads|Desktop)\//);
+  assert.doesNotMatch(
+    contactScanText,
+    /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i
+  );
+  assert.doesNotMatch(contactScanText, /\b\d{3}[-.\s]\d{3}[-.\s]\d{4}\b/);
+});
+
 test("high-risk projections retain their evidence posture", () => {
   const byId = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   assert.match(

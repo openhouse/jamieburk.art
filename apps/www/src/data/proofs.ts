@@ -653,34 +653,38 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source"],
     publicWording:
-      "Conceived and organized a collaborative raft expedition whose crew reached the Gulf of Mexico four months after leaving Kansas City, then developed participatory public programs around how waterways connect cities, stories, and people.",
+      "Conceived, co-built, and organized a collaborative bicycle-powered raft expedition whose crew reached the Gulf of Mexico four months after leaving Kansas City, then developed participatory public programs around how waterways connect cities, stories, and people.",
     shortWording: "Built participatory public work around connected waterways",
     detailedPublicWording:
-      "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; a later independent report says the crew reached the Gulf of Mexico four months after leaving Kansas City. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",
+      "Jamie conceived, co-built, and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers. Contemporaneous reporting documents a three-week reused-material build, more than 1,000 miles traveled, a 51-day interruption followed by repairs and resumed travel, people joining and leaving in river cities, and Jamie's invitation for people encountered along the way to come aboard. A later independent report says the crew reached the Gulf of Mexico four months after leaving Kansas City. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",
     sourceBasis:
-      "Contemporaneous and follow-up reporting in The Pitch and a Charlotte Street institutional program page.",
+      "Contemporaneous reporting in The Kansas City Star and The Pitch, follow-up reporting in The Pitch, and a Charlotte Street institutional program page.",
     whyItMatters:
       "Recovers a long-running participatory practice that connects expedition design, public programming, infrastructure, and civic imagination.",
     guardrail:
-      "Describe both projects as collaborative; the follow-up reporting supports the Gulf terminus and four-month duration, not every stop or participant.",
+      "Describe both projects as collaborative; the Kansas City Star supports the craft, journey, interruption, and public-encounter details but not sole construction authorship or community consensus, while follow-up reporting supports the Gulf terminus and four-month duration, not every stop or participant.",
     doNotSay: [
       "Jamie completed the raft expedition alone",
+      "Jamie personally performed every construction task",
       "The reviewed sources establish every participant or stop",
+      "Every river community shared Jamie's cultural-connection interpretation",
       "Jamie created every Great Accommodations component alone"
     ],
     protectedBoundaries: [
       "Unreviewed participant identities",
       "Private correspondence",
-      "Unreviewed archive images"
+      "Unreviewed archive images",
+      "The protected Kansas City Star PDF and photographs"
     ],
     surfaces: ["internal-only"],
     relatedProjects: ["waterways-participatory-practice"],
     relatedCapabilities: ["participatory-design", "public-programming", "project-initiation"],
     canonicalClaimIds: [
       "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-WATERWAYS-PARTICIPATORY-RIVER-PRACTICE",
       "CLM-WATERWAYS-GREAT-ACCOMMODATIONS"
     ],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "open-house-participatory-practice",
