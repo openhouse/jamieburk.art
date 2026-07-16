@@ -1,6 +1,305 @@
 {
   "sources": [
     {
+      "id": "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+      "title": "WOW List followed-calendar feed reply",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List followed-calendar feed reply, 2015-04-24.",
+      "publicNote": "The account explained the followed-calendar home feed and a planned local-or-everywhere control.",
+      "doesNotEstablish": [
+        "which individual teammate composed the shared-account post",
+        "the product's complete support workload",
+        "platform-wide adoption, satisfaction, audience, or impact"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+      "title": "WOW List profile-navigation reply",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591666366215811073",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List profile-navigation reply, 2015-04-24.",
+      "publicNote": "The account explained where a person could find their WOW Lists on their profile.",
+      "doesNotEstablish": [
+        "which individual teammate composed the shared-account post",
+        "the product's complete support workload",
+        "platform-wide adoption, satisfaction, audience, or impact"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+      "title": "WOW List multi-list submission reply",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/591668857670148096",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List multi-list submission reply, 2015-04-24.",
+      "publicNote": "The account explained how to add an event and place it on multiple WOW Lists.",
+      "doesNotEstablish": [
+        "which individual teammate composed the shared-account post",
+        "the product's complete support workload",
+        "platform-wide adoption, satisfaction, audience, or impact"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+      "title": "WOW List NYCDIY identity reply",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/771412862191407104",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List NYCDIY identity reply, 2016-09-01.",
+      "publicNote": "The account identified NYCDIY.org as a local calendar identity.",
+      "doesNotEstablish": [
+        "which individual teammate composed the shared-account post",
+        "the product's complete support workload",
+        "platform-wide adoption, satisfaction, audience, or impact"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+      "title": "WOW List NYCDIY joining reply",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/771455571501416448",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List NYCDIY joining reply, 2016-09-01.",
+      "publicNote": "The account explained how people could join NYCDIY, add shows, and receive the weekly email.",
+      "doesNotEstablish": [
+        "which individual teammate composed the shared-account post",
+        "the product's complete support workload",
+        "platform-wide adoption, satisfaction, audience, or impact"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01",
+      "title": "WOW List NYCDIY and Sunday Dinner lineage reply",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List NYCDIY and Sunday Dinner lineage reply, 2016-09-01.",
+      "publicNote": "The account explained that NYCDIY ran on WOW List and connected it to the Sunday Dinner potluck.",
+      "doesNotEstablish": [
+        "which individual teammate composed the shared-account post",
+        "the product's complete support workload",
+        "platform-wide adoption, satisfaction, audience, or impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+      "title": "Authenticated X Latest search for @CallNYCapp",
+      "organization": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "Authenticated search completed July 15, 2026",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/search?q=%40CallNYCapp&src=typed_query&f=live",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated X Latest search for posts mentioning @CallNYCapp, reviewed July 15, 2026.",
+      "publicNote": "The search returned 11 distinct visible posts. Four were authored by then-Council-member accounts; a separate preserved timeline capture supplies two additional Council-member examples omitted by direct mention search.",
+      "doesNotEstablish": [
+        "a complete account export",
+        "quote posts or URL-only references omitted by direct mention search",
+        "likes, deleted posts, inaccessible repost history, or renamed accounts",
+        "Council endorsement, adoption, commissioning, or official project status"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+      "title": "Minutes of the Stated Meeting, November 16, 2016",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-11-16",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=bf984b80-ed07-45ba-8f66-feb05ab509a3&ID=39395&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, minutes of the Stated Meeting, November 16, 2016.",
+      "publicNote": "The official membership list includes Margaret Chin, Mathieu Eugene, Peter Koo, Steven Matteo, Helen Rosenthal, and Ruben Wills.",
+      "doesNotEstablish": [
+        "social-account control",
+        "CallNYC engagement",
+        "project endorsement"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+      "title": "Authenticated @CallNYCapp full-population archival review",
+      "organization": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "Authenticated profile, Replies, and date-partitioned Latest-search review completed July 15, 2026",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/CallNYCapp",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated full-population review of the public @CallNYCapp timeline, July 15, 2026.",
+      "publicNote": "The public JSON corpus preserves 107 recovered status records and accounts for the profile's displayed population of 110 with three explicitly unavailable residual posts.",
+      "doesNotEstablish": [
+        "the status IDs or content of three unavailable residual posts",
+        "identities behind aggregate counters",
+        "supportive sentiment or Council endorsement",
+        "official project status or current service accuracy"
+      ]
+    },
+    {
+      "id": "SRC-NAC-X-CORPUS-2026-07-15",
+      "title": "Authenticated NYC Artist Coalition population-accounted X corpus",
+      "organization": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "Authenticated replies-inclusive traversal and monthly historical-search partitions completed July 15, 2026",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/NYCArtC/with_replies",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated population-accounted review of the public @NYCArtC account, July 15, 2026.",
+      "publicNote": "The profile reported 5,124 posts. The governed corpus preserves 3,367 recovered account items, an explicit 1,757-item recovery gap, 19 context-only public records, and redirect dispositions for every distinct t.co URL in recovered account items.",
+      "doesNotEstablish": [
+        "the contents or item types of 1,757 unrecovered profile-count items",
+        "Jamie's authorship of the account's posts",
+        "the individual author of every shared-account post",
+        "complete incoming engagement or lifetime reach",
+        "endorsement of posted sources",
+        "policy causation or sole campaign credit"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "title": "NYC Artist Coalition Facebook event full-population public-safe census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
+      "publicNote": "The metadata-only fixture retains 33 recovered event identities and a disposition for all 34 displayed control slots while excluding raw descriptions and personal or authenticated-session data.",
+      "doesNotEstablish": [
+        "the unresolved event identity",
+        "every historical coalition event",
+        "individual event authorship or production",
+        "physical attendance or unique people",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026",
+      "title": "Personal and WOW List Facebook event full-population public-safe census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/personal-wowlist-facebook-events-full-population.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe census of the Facebook event surfaces exposed for Jamie Burkart's personal profile and the WOW List page on July 15, 2026.",
+      "publicNote": "Accounts for all 511 personal-profile event-card instances and the zero-card current WOW List owner surface while identifying only 21 selected public Jamie-attributed events.",
+      "doesNotEstablish": [
+        "a complete native Meta export",
+        "Jamie's role in profile-associated events without explicit attribution",
+        "physical attendance or unique reach",
+        "sole event authorship or production",
+        "historical nonexistence from an empty current surface"
+      ]
+    },
+    {
+      "id": "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+      "title": "SUNDAY DINNER Turns 100! Facebook event",
+      "author": "Jamie Burkart",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-03-09",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/702417306475691/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "'SUNDAY DINNER Turns 100!,' Facebook event, March 9, 2014.",
+      "publicNote": "The public event page names Jamie as organizer and presents the gathering as the 100th Sunday Dinner.",
+      "doesNotEstablish": [
+        "an independent audit of 100 gatherings",
+        "attendance",
+        "sole production",
+        "the complete Sunday Dinner history"
+      ]
+    },
+    {
+      "id": "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+      "title": "200th Sunday Dinner! Facebook event",
+      "organization": "Sunday Dinner",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-06-26",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/551536301637994/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "'200th Sunday Dinner! Special! Wow! Amazing! Interesting!,' Facebook event, June 26, 2016.",
+      "publicNote": "The public event page names Julia Fredenburg and Jamie Burkart as co-organizers, presents the event as the 200th Sunday Dinner, and links to a WOW List event page.",
+      "doesNotEstablish": [
+        "an independent audit of 200 gatherings",
+        "attendance",
+        "sole production by Jamie",
+        "the complete Sunday Dinner history"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19",
+      "title": "Executive Budget hearing transcript for Cultural Affairs and Libraries",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-05-19",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, joint Finance, Cultural Affairs, and Libraries Executive Budget hearing transcript, May 19, 2017.",
+      "publicNote": "In prepared testimony, DCLA Commissioner Tom Finkelpearl placed NYC Artist Coalition within an account of CreateNYC, direct public feedback, and reciprocal agency-public relationships.",
+      "doesNotEstablish": [
+        "that DCLA solely created or governed NYC Artist Coalition",
+        "that Finkelpearl named Jamie or assigned his individual role",
+        "that DCLA endorsed every coalition position",
+        "that the coalition alone caused a legislative or agency outcome"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -100,9 +399,403 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live-and-archived",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "archiveUrl": "https://web.archive.org/web/20190507132352/http://gothamist.com:80/2017/06/19/cabaret_law_nyc.php",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "Independent reporting directly identifies Jamie's fire-code study groups, City Hall rally, NYC Artist Coalition affiliation, and safety framing.",
+      "doesNotEstablish": [
+        "that Jamie solely led the repeal campaign",
+        "that NYC Artist Coalition alone caused repeal",
+        "that every venue agreed with the coalition",
+        "the later legislative outcome by itself"
+      ]
+    },
+    {
+      "id": "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "author": "Outreach Committee",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op Outreach Committee, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "Contemporaneous community profile documenting weekly open Sunday dinners, WOW List, coalition participation, Cabaret Law advocacy, and an invitation to public dialogue with the new Office of Nightlife.",
+      "doesNotEstablish": [
+        "the lifetime number of dinners",
+        "the number of resident artists",
+        "sole ownership of Sunday Dinner or WOW List",
+        "sole causality for Cabaret Law repeal"
+      ]
     }
   ],
   "claims": [
+    {
+      "id": "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public account Jamie established became a direct support surface: its six surviving replies explained feed scope, profile navigation, multi-list event submission, local-calendar onboarding, and how NYCDIY ran on WOW List from the Sunday Dinner potluck.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit Jamie with establishing the account only as his first-person account and with co-building the product; do not assign individual post authorship without direct evidence.",
+        "The surviving record demonstrates public support behavior, not the complete support workload, audience, adoption, satisfaction, or impact."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "A full-population-accounted pass recovered 70 issue-recognition posts addressing 24 Council-member accounts and two city-agency accounts across 63 CallNYC destinations.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/callnyc"
+          ]
+        },
+        {
+          "key": "case-study",
+          "text": "CallNYC's public account extended that translation layer into 70 recovered issue-recognition posts, addressing 24 Council-member accounts and two city-agency accounts across 63 distinct CallNYC destinations.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "status corpus",
+            "70-post pattern",
+            "mentioned-account counts",
+            "resolved destination count"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+          "relationship": "supports-boundary",
+          "supports": [
+            "contemporaneous Council-member status during the 2016 activity period"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The displayed population is accounted for as 107 recovered records plus three unavailable residual posts; do not call 107 a complete export.",
+        "Recognition posts identify data patterns and addressed accounts, not endorsement or adoption.",
+        "The social record is historical and not current constituent-service guidance."
+      ]
+    },
+    {
+      "id": "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "One shared coalition identity carried four public campaign systems across nine years. Among 696 recovered authored posts, 195 used #FairRentNYC, 110 used #SaveNYCSpaces, 78 used #LetNYCDance, and 54 used #TalksNotRaids; categories overlap.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "authored-post denominator",
+            "distinct campaign-marker post counts",
+            "2017-2026 recovered range",
+            "population and authorship boundaries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The profile control is accounted for as 3,367 recovered account items plus an explicit 1,757-item gap; this is not a claim that all 5,124 items were recovered.",
+        "Campaign categories overlap and measure public communication, not unique initiatives, audience reach, or policy outcomes.",
+        "The account was shared. The corpus does not identify Jamie or any collaborator as author of every post, and it does not independently prove Jamie created the account."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie describes the recurring event and participation layer as a major part of his NYC Artist Coalition contribution. The surviving population corroborates the collective system's public form while leaving event-level authorship open.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "33-event collective participation system",
+            "12 recurring meetings across ten physical cultural spaces"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie organized fire-code study groups",
+            "Jamie participated in City Hall advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's NYC Artist Coalition participation",
+            "a nightlife town hall invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use helped establish and produce; do not assign Jamie authorship or sole production of every event.",
+        "Preserve partners, venue hosts, artists, advocates, officials, and coalition collaborators as part of the work.",
+        "The rotating pattern covers ten physical meeting spaces and two virtual meetings, not one meeting every calendar month.",
+        "The event sequence does not establish that any gathering caused a policy outcome."
+      ]
+    },
+    {
+      "id": "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public event pages preserve a 100th Sunday Dinner milestone in 2014, naming Jamie as organizer, and a 200th in 2016, naming Julia Fredenburg and Jamie as co-organizers. The numbered titles are contemporaneous records, not an independent audit of every gathering.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "public 100th Sunday Dinner event-page milestone",
+            "Jamie organizer display for the 100th event"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public 200th Sunday Dinner event-page milestone",
+            "Julia Fredenburg and Jamie Burkart co-organizer display"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat 100th and 200th as contemporaneous event-page milestone titles, not independently audited totals.",
+        "Preserve Julia Fredenburg's co-organizer credit on the 200th event.",
+        "Do not infer attendance or continuous weekly frequency from the two pages.",
+        "The pages do not independently verify the current 300-plus aggregate claim."
+      ]
+    },
+    {
+      "id": "CLM-FACEBOOK-WOWLIST-IN-PRACTICE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A public 2016 event page for the 200th Sunday Dinner links directly to its WOW List event page, preserving one concrete route from the recurring gathering into the community-calendar platform.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "direct WOW List route from the 200th Sunday Dinner page"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "nine mission-relevant source routes",
+            "direct WOW List route from the 200th Sunday Dinner page"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is one documented route, not a complete adoption or traffic census.",
+        "The historical WOW List page may no longer resolve.",
+        "The event-page link does not establish who entered the event into WOW List.",
+        "Keep platform and Sunday Dinner credit shared."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "At a May 2017 City Council budget hearing, DCLA Commissioner Tom Finkelpearl cited NYC Artist Coalition's formation as evidence that bringing people together could create a closer, reciprocal relationship between the agency and the public.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Finkelpearl named NYC Artist Coalition in prepared Council testimony while explaining DCLA's effort to expand direct public feedback through CreateNYC.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Finkelpearl's Council testimony",
+            "the NYC Artist Coalition reference",
+            "direct-public-feedback and reciprocal-relationship context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Finkelpearl referred to the coalition, not to Jamie individually.",
+        "DCLA's January convening does not establish that DCLA solely created, owned, or governed the coalition.",
+        "The bounded census covers Cultural Affairs meeting records, not every Council committee or every possible transcript.",
+        "Institutional citation does not establish endorsement of every coalition position or causation of later policy outcomes."
+      ]
+    },
     {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
@@ -299,6 +992,58 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "A bounded review recovers at least six distinct then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017. This is a documented lower bound, not a comprehensive engagement count.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/callnyc"
+          ]
+        },
+        {
+          "key": "case-study",
+          "text": "A bounded review recovered at least six then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "11-post direct-mention corpus",
+            "four additional Council-member accounts",
+            "dates and interaction text"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+          "relationship": "supports-boundary",
+          "supports": [
+            "official Council-member status for all six recovered officeholders during the relevant Council term"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use at least six and the April 2016-July 2017 date range; do not describe the result as comprehensive.",
+        "The four direct-mention search results and two preserved-timeline results come from complementary recovery methods.",
+        "Do not aggregate visible repost and like counts without identifying which accounts performed them.",
+        "Engagement does not establish endorsement, adoption, commissioning, or official status."
+      ]
     }
   ],
   "pages": [
@@ -310,7 +1055,10 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+        "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15"
       ],
       "occurrences": [
         {
@@ -356,12 +1104,126 @@
           ]
         },
         {
+          "id": "social-documentation-system",
+          "claimId": "CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-X-FULL-POPULATION-2026-07-15",
+            "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
+          ]
+        },
+        {
+          "id": "council-engagement",
+          "claimId": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+            "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
+          ]
+        },
+        {
           "id": "archived-status",
           "claimId": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19",
+        "SRC-NAC-X-CORPUS-2026-07-15",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+        "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+        "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
+      ],
+      "occurrences": [
+        {
+          "id": "finkelpearl-council-reference",
+          "claimId": "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017-05-19"
+          ]
+        },
+        {
+          "id": "shared-public-operating-layer",
+          "claimId": "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-X-CORPUS-2026-07-15"
+          ]
+        },
+        {
+          "id": "coalition-participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+            "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
+            "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+        "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+        "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+        "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+        "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+        "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01",
+        "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+        "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "public-support-surface",
+          "claimId": "CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-SUPPORT-FEED-2015-04-24",
+            "SRC-WOWLIST-X-SUPPORT-PROFILE-2015-04-24",
+            "SRC-WOWLIST-X-SUPPORT-SUBMISSION-2015-04-24",
+            "SRC-WOWLIST-X-SUPPORT-NYCDIY-IDENTITY-2016-09-01",
+            "SRC-WOWLIST-X-SUPPORT-NYCDIY-JOIN-2016-09-01",
+            "SRC-WOWLIST-X-SUPPORT-NYCDIY-LINEAGE-2016-09-01"
+          ]
+        },
+        {
+          "id": "facebook-event-route",
+          "claimId": "CLM-FACEBOOK-WOWLIST-IN-PRACTICE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+            "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [
+        "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+        "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
+      ],
+      "occurrences": [
+        {
+          "id": "facebook-milestones",
+          "claimId": "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+            "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
           ]
         }
       ]

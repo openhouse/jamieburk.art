@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "updated": "2026-07-16",
+  "candidate": "feature/evals-L candidate",
+  "automatedVerification": {
+    "state": "passed-2026-07-16",
+    "commands": ["npm run check", "npm run preflight:staging", "npm run preflight:production"],
+    "additionalCriteria": ["npm run evals:margaret-morse", "npm run evals:warren-sack"],
+    "result": "The full check, staging preflight, and production preflight pass for the Kansas City Star source candidate; all eval criteria remain met."
+  },
+  "humanGates": [
+    {"gate": "External five-minute hiring comprehension", "state": "open"},
+    {"gate": "Collaborator-sensitive names, quotes, images, and exact-role corroboration", "state": "open"},
+    {"gate": "Human Chad-lens editorial review", "state": "open"},
+    {"gate": "Jamie approval of the exact production candidate", "state": "open"}
+  ],
+  "productionDecision": "blocked-pending-human-approval",
+  "boundary": "Automated evals are regression gates. They cannot count as external participants, grant collaborator consent, or authorize production."
+}

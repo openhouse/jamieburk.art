@@ -53,6 +53,59 @@ No dedicated Civic Hall listing or event-detail page was recovered. This is not
 proof that no page ever existed. Google Form contents, agenda, breakout roster,
 registration contents, and a complete participant list were not recovered.
 
+## Full-timeline archival production
+
+An authenticated full-population pass now accounts for the live profile's 110
+displayed posts as 107 recovered status records and three explicitly unavailable
+residual posts. That is 100% population accounting and 97.3% status-level
+recovery, not a complete 110-status export.
+
+The recovered corpus contains 92 account-authored posts and 15 third-party
+reposts. Seventy authored posts use a repeated issue-recognition pattern,
+addressing 24 Council-member accounts and two city-agency accounts across 63
+distinct CallNYC destinations and 16 service categories.
+
+The pass also accounts for all 84 unique short links and preserves a dated
+public-counter snapshot without retaining authenticated-user interaction state.
+See the [full-population receipt](../intake/2026-07-15-callnyc-x-full-population.md)
+and [public JSON corpus](../corpora/callnyc-x-public-corpus.json).
+
+## Council-member account engagement
+
+A supplied seven-page timeline capture and an authenticated X Latest search
+now preserve a documented lower bound for Council-member engagement with
+CallNYC in 2016-2017:
+
+- Dr. Mathieu Eugene quote-posted CallNYC's October 3 HPD Housing Lottery award
+  post on October 4, 2016.
+- Helen Rosenthal directed readers to `callnyc.org` on September 27, 2016;
+  CallNYC reposted her post.
+- Peter Koo amplified CallNYC's Lifeline recognition on April 27, 2016.
+- Steven Matteo replied to CallNYC about potholes on May 3, 2016.
+- Ruben Wills replied to CallNYC and the Council and copied the Queens
+  Chronicle on May 17, 2016.
+- Margaret Chin thanked CallNYC for recognizing her office's issue counts on
+  July 11, 2017.
+
+Official New York City Council records confirm that all six served during the
+relevant Council term. The canonical source records include
+`SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11`,
+`SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15`, and
+`SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16`.
+
+This evidence supports **at least six distinct then-Council-member accounts
+publicly replying to, amplifying, or promoting CallNYC between April 2016 and
+July 2017**. It does not establish a comprehensive account count, interaction
+total, endorsement, adoption, commissioning, or official project status.
+Direct-mention search can omit quote posts and URL-only promotions; timeline
+captures can omit other dates; deleted posts, account renames, and incomplete
+archives keep the comprehensive measurement inquiry open. The PDF itself
+remains outside the public repo; only public-safe metadata and bounded
+observations are committed.
+
+See the [project social account archive](../intake/2026-07-15-project-social-account-archive.md)
+for the complete method, post list, and cross-project account registry.
+
 ## Corrections
 
 The correction registry preserves three active decisions:

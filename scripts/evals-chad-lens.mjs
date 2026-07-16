@@ -1,0 +1,362 @@
+#!/usr/bin/env node
+
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+
+function read(relativePath) {
+  return readFileSync(path.join(repoRoot, relativePath), "utf8");
+}
+
+const sources = {
+  hero: read("apps/www/src/components/Hero.tsx"),
+  home: read("apps/www/src/app/page.tsx"),
+  workIndex: read("apps/www/src/app/work/page.tsx"),
+  workCard: read("apps/www/src/components/WorkCard.tsx"),
+  resume: read("apps/www/src/app/resume/page.tsx"),
+  technicalOperations: read(
+    "apps/www/src/app/work/technical-operations/page.tsx"
+  ),
+  fairRent: read("apps/www/src/content/work/fair-rent-nyc.mdx"),
+  callnyc: read("apps/www/src/content/work/callnyc.mdx"),
+  wowlist: read("apps/www/src/content/work/wowlist.mdx"),
+  wowlistKnowledge: read(
+    "apps/www/src/data/knowledge-bank/wowlist-x-corpus.ts"
+  ),
+  kcTownHall: read("apps/www/src/content/work/kc-town-hall.mdx"),
+  proofs: read("apps/www/src/data/proofs.ts"),
+  workData: read("apps/www/src/data/work.ts"),
+  chadLens: read("docs/chad-lens.md"),
+  knowledgeBankLens: read("docs/knowledge-bank/chad-lens.md")
+};
+
+const checks = [];
+
+function check(dimension, label, points, passes, hard = false) {
+  checks.push({ dimension, label, points, passes: Boolean(passes), hard });
+}
+
+function includesAll(source, values) {
+  return values.every((value) => source.includes(value));
+}
+
+check(
+  "Actor visibility",
+  "The first viewport names Jamie, the target role, and Jamie's action",
+  8,
+  includesAll(sources.hero, [
+    "Jamie Burkart",
+    "Technical Project Manager - Product Operations & Implementation",
+    "I create operating structure"
+  ]),
+  true
+);
+check(
+  "Actor visibility",
+  "Every work card projects the explicit project role",
+  8,
+  includesAll(sources.workCard, ["Jamie's role", "item.role"]),
+  true
+);
+check(
+  "Actor visibility",
+  "The work index frames the transformation as Jamie's work",
+  4,
+  /\bI\s+(?:turn|build|create|help|translate|coordinate)\b/.test(
+    sources.workIndex
+  )
+);
+
+check(
+  "Purpose",
+  "The portfolio repeatedly answers what became usable",
+  6,
+  includesAll(sources.workCard, ["What became usable", "item.whatBecameUsable"])
+);
+check(
+  "Purpose",
+  "Technical Operations ties each capability to an end",
+  5,
+  includesAll(sources.technicalOperations, ["row.toward", "proof.shortWording"])
+);
+check(
+  "Purpose",
+  "The hero names usable outputs and durable handoffs",
+  4,
+  includesAll(sources.hero, ["usable", "launch support", "durable handoffs"])
+);
+
+check(
+  "Concrete work",
+  "The first viewport names specific operating artifacts",
+  7,
+  includesAll(sources.hero, [
+    "requirements",
+    "workflows",
+    "documentation",
+    "decision trails",
+    "onboarding"
+  ])
+);
+check(
+  "Concrete work",
+  "The role-fit page names delivery, risk, records, onboarding, and handoffs",
+  7,
+  includesAll(sources.technicalOperations, [
+    "Coordinate delivery",
+    "surface risks",
+    "decision records",
+    "Onboard collaborators",
+    "handoff"
+  ])
+);
+check(
+  "Concrete work",
+  "Work records carry role, proof, usability, evidence, and role-fit fields",
+  6,
+  includesAll(sources.workData, [
+    "role: z.string()",
+    "proofBankIds: z.array(z.string())",
+    "whatBecameUsable: z.string()",
+    "roleFit: z.string()",
+    "evidence: z.array(z.string())"
+  ]),
+  true
+);
+
+check(
+  "One-pass legibility",
+  "The homepage supplies a short hiring-reviewer path",
+  5,
+  includesAll(sources.home, [
+    "Quick path through the portfolio",
+    "hiring managers",
+    "/work/technical-operations",
+    "/resume"
+  ])
+);
+check(
+  "One-pass legibility",
+  "Resume and contact actions are visible in the application path",
+  5,
+  includesAll(sources.resume, ["Download resume PDF", "Contact Jamie"])
+);
+check(
+  "One-pass legibility",
+  "Work cards separate role, problem, result, and role fit",
+  5,
+  includesAll(sources.workCard, [
+    "Jamie's role",
+    "What was unclear",
+    "What became usable",
+    "Role fit"
+  ])
+);
+
+check(
+  "Defensible strength",
+  "The homepage retains the strongest approved scale and impact proofs",
+  6,
+  includesAll(sources.proofs, [
+    '"career-operating-structure-14-years"',
+    '"hje-revenue-growth-contribution"',
+    '"fair-rent-campaign-memory"',
+    '"wowlist-community-platform"',
+    '"sunday-dinner-196-participation-infrastructure"'
+  ])
+);
+check(
+  "Defensible strength",
+  "Direct NYC Artist Coalition website authorship remains visible",
+  5,
+  includesAll(sources.proofs, [
+    "Co-founded NYC Artist Coalition and built public campaign websites",
+    '"nyc-artist-coalition-public-web-infrastructure"'
+  ]),
+  true
+);
+check(
+  "Defensible strength",
+  "CallNYC projects a quantified public-documentation result with its claim contract",
+  6,
+  includesAll(sources.workData, [
+    "Seventy recovered issue-recognition posts addressed 24 Council-member accounts and two city-agency accounts across 63 CallNYC destinations"
+  ]) &&
+    includesAll(sources.callnyc, [
+      'claimId="CLM-CALLNYC-X-PUBLIC-DOCUMENTATION-SYSTEM"',
+      'occurrenceId="social-documentation-system"'
+    ]),
+  true
+);
+check(
+  "Defensible strength",
+  "WOW List turns a complete social census into a concrete product-support result without inflating impact",
+  7,
+  includesAll(sources.wowlist, [
+    'claimId="CLM-WOWLIST-X-PUBLIC-SUPPORT-SURFACE"',
+    'occurrenceId="public-support-surface"',
+    "complete census of the 38 records",
+    "not a platform export or deletion history",
+    "does not measure adoption or impact"
+  ]) &&
+    includesAll(sources.wowlistKnowledge, [
+      "six surviving replies explained feed scope, profile navigation, multi-list event submission, local-calendar onboarding",
+      "Jamie personally wrote all six replies",
+      "The social record proves adoption scale or impact"
+    ]),
+  true
+);
+check(
+  "Defensible strength",
+  "Evidence strength is paired with source basis and guardrails",
+  4,
+  includesAll(sources.proofs, [
+    "supportLevel:",
+    "sourceBasis:",
+    "guardrail:",
+    "protectedBoundaries:"
+  ]),
+  true
+);
+check(
+  "Defensible strength",
+  "KC Town Hall shows completed operating work and later municipal advancement without overclaiming",
+  8,
+  includesAll(sources.proofs, [
+    "Co-founded KC Town Hall and served as project manager",
+    "multi-trade Phase One cold-shell restoration recorded as completed in 2019",
+    "neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church",
+    "City Council acceptance and appropriation",
+    "transitioned project stewardship to an organization he regarded as mission-aligned",
+    "Separately, the municipal funding project ultimately withdrew",
+    "project ultimately withdrew",
+    "independently verified as a licensed general contractor",
+    "KC Town Hall received or spent $490,539",
+    "Jamie personally secured or controlled the Council vote"
+  ]) &&
+    includesAll(sources.workData, [
+      "Co-Founder, Project Manager & Construction Coordinator",
+      "multi-trade Phase One cold-shell restoration recorded as completed in 2019",
+      "Neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church directly shaped the proposal",
+      "transitioned project stewardship to a mission-aligned organization",
+      "separate municipal funding project later withdrew",
+      "the full unused appropriation was reclaimed"
+    ]) &&
+    includesAll(sources.kcTownHall, [
+      "Jamie Burkart and Julia Fredenburg co-founded KC Town Hall",
+      "records the multi-trade Phase One cold-shell scope as completed",
+      "Council accepted the recommendation and appropriated the amount",
+      "transitioned project stewardship to an organization he regarded as mission-aligned",
+      "Separately, the municipal funding project later withdrew",
+      "withdrew before disbursement",
+      "those exact role details remain bounded rather than being presented as independently verified"
+    ]) &&
+    !sources.kcTownHall.includes("stay tied to a $490,539 public funding recommendation") &&
+    !sources.workData.includes("licensed general contractor"),
+  true
+);
+
+const forbiddenPublicOverclaims = [
+  "Jamie single-handedly caused policy outcomes",
+  "Jamie alone repealed the Cabaret Law",
+  "Jamie authored the legislation",
+  "Jamie organized KC Spaces Fund",
+  "Jamie is certified by Maven as an AI evaluator"
+];
+const publicProjection = [
+  sources.hero,
+  sources.home,
+  sources.workIndex,
+  sources.workCard,
+  sources.resume,
+  sources.technicalOperations,
+  sources.fairRent
+].join("\n");
+
+check(
+  "Collective credit",
+  "Direct contribution and collective campaign credit coexist",
+  6,
+  includesAll(sources.fairRent, [
+    "Jamie's role was more direct",
+    "co-founding NYC Artist Coalition",
+    "building campaign websites",
+    "campaign work around those sites remains collective"
+  ]),
+  true
+);
+check(
+  "Collective credit",
+  "Careful proofs preserve contribution and stewardship guardrails",
+  5,
+  includesAll(sources.proofs, [
+    "Must stay as contribution language",
+    "campaign accomplishments remain collective",
+    "public organizer credit remains"
+  ]),
+  true
+);
+check(
+  "Collective credit",
+  "Public projection contains no known inflated claims",
+  4,
+  forbiddenPublicOverclaims.every((claim) => !publicProjection.includes(claim)),
+  true
+);
+
+check(
+  "Criterion integrity",
+  "The evaluator is grounded in both Chad-lens source documents",
+  5,
+  includesAll(sources.chadLens, [
+    "Is Jamie visible as the actor?",
+    'answer "toward what end?"',
+    "what became usable",
+    "courageous precision"
+  ]) &&
+    includesAll(sources.knowledgeBankLens, [
+      "Do not make the reader decode Jamie",
+      "neither understatement nor overclaiming"
+    ]),
+  true
+);
+
+const possiblePoints = checks.reduce((total, item) => total + item.points, 0);
+const earnedPoints = checks.reduce(
+  (total, item) => total + (item.passes ? item.points : 0),
+  0
+);
+const score = Math.round((earnedPoints / possiblePoints) * 100);
+const failedChecks = checks.filter((item) => !item.passes);
+const failedHardChecks = failedChecks.filter((item) => item.hard);
+const threshold = 90;
+
+console.log(`Chad-lens eval: ${score}/100 (criterion: >= ${threshold}, no hard failures)`);
+
+for (const dimension of [...new Set(checks.map((item) => item.dimension))]) {
+  const dimensionChecks = checks.filter((item) => item.dimension === dimension);
+  const dimensionEarned = dimensionChecks.reduce(
+    (total, item) => total + (item.passes ? item.points : 0),
+    0
+  );
+  const dimensionPossible = dimensionChecks.reduce(
+    (total, item) => total + item.points,
+    0
+  );
+  console.log(`- ${dimension}: ${dimensionEarned}/${dimensionPossible}`);
+}
+
+if (failedChecks.length) {
+  console.error("Chad-lens gaps:");
+  for (const item of failedChecks) {
+    console.error(`- ${item.hard ? "HARD " : ""}${item.dimension}: ${item.label}`);
+  }
+}
+
+if (score < threshold || failedHardChecks.length) {
+  process.exit(1);
+}
+
+console.log("Chad-lens criterion met.");

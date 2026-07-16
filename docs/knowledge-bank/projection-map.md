@@ -47,6 +47,9 @@ Use claims that directly support operating-backbone fit:
 
 Use only public-safe method claims.
 
+- `source-backed-team-memory-method`
+- `ai-evals-professional-development`
+
 Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
 imply production SaaS.
 

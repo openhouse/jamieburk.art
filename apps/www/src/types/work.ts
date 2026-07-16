@@ -38,6 +38,12 @@ export type KnownOpenProtected = {
   protected: string;
 };
 
+export type OutcomeStatus =
+  | "verified-outcome"
+  | "partial-outcome"
+  | "verified-output"
+  | "open";
+
 export type Artifact = {
   title: string;
   description: string;
@@ -59,6 +65,10 @@ export type WorkMeta = {
   proofBankIds: string[];
   whatWasUnclear: string;
   whatBecameUsable: string;
+  outcomeStatus: OutcomeStatus;
+  outcomeSummary: string;
+  outcomeBoundary: string;
+  adoptionEvidence: string[];
   artifactTypes: ArtifactType[];
   artifacts: Artifact[];
   tags: string[];

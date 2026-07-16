@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "updated": "2026-07-15",
+  "rule": "A delivered output is not automatically an organizational outcome, sustained adoption, or proof of sole causality.",
+  "projects": [
+    {
+      "slug": "harry-j-epstein",
+      "status": "partial-outcome",
+      "verifiedOutputs": ["Public e-commerce site", "Long-running web and operations stewardship"],
+      "adoptionEvidence": ["Work continued from 2012 to the present", "The public e-commerce operation remains live"],
+      "boundaries": ["Private growth metrics remain protected", "Do not attribute company growth solely to Jamie"]
+    },
+    {
+      "slug": "fair-rent-nyc",
+      "status": "partial-outcome",
+      "verifiedOutputs": ["Campaign websites", "Coalition documentation and public guidance", "FairRentNYC implementation and handoff record"],
+      "adoptionEvidence": ["Independent organizer attribution", "Official Council testimony naming NYC Artist Coalition", "Recovered recurring event and campaign records"],
+      "boundaries": ["Collective causality", "No claim that every recommendation was adopted", "Current policy implementation remains open"]
+    },
+    {
+      "slug": "callnyc",
+      "status": "verified-output",
+      "verifiedOutputs": ["Archived prototype", "Public repository", "Issue-recognition corpus"],
+      "adoptionEvidence": ["2016 Politico coverage", "Bounded engagement by at least six then-Council-member accounts"],
+      "boundaries": ["No official adoption claim", "Not a current service"]
+    },
+    {
+      "slug": "wowlist",
+      "status": "partial-outcome",
+      "verifiedOutputs": ["Community-calendar platform", "Followable keyword-community model"],
+      "adoptionEvidence": ["Public-safe aggregates support 1,800+ users", "Public-safe aggregates support 16,000+ posts and events", "Roughly 35 city ecosystems reached"],
+      "boundaries": ["Historical approximate counts", "Current retention and activity remain open", "Co-built project"]
+    },
+    {
+      "slug": "196-sunday-dinner",
+      "status": "partial-outcome",
+      "verifiedOutputs": ["Recurring hosting practice", "Artist onboarding workflow"],
+      "adoptionEvidence": ["Independent 2017 report of weekly open dinners", "Protected 2023 onboarding record", "First-party public-safe aggregate history"],
+      "boundaries": ["No participant data", "Aggregate counts are not an independently audited census"]
+    },
+    {
+      "slug": "kc-town-hall",
+      "status": "partial-outcome",
+      "verifiedOutputs": ["Completed Phase One scope", "Neighborhood-informed proposal", "Municipal decision trail"],
+      "adoptionEvidence": ["Official board recommendation", "Council acceptance and appropriation", "Later official withdrawal and reclamation record"],
+      "boundaries": ["Appropriation was not disbursement", "Exact general-contractor role and stewardship transition remain pending corroboration"]
+    }
+  ]
+}

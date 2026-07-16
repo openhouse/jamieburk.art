@@ -24,7 +24,7 @@ const proofMap = [
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "shared campaign memory, live coalition mapping, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
   },
   {
     project: "CallNYC",

@@ -1,0 +1,1286 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "sourceProfile": "https://x.com/wowlist",
+  "method": {
+    "authenticatedReadOnlyReview": true,
+    "surfaces": [
+      "Posts tab",
+      "Replies tab",
+      "status pages",
+      "top-level article time links reconciled against two independent ledgers"
+    ],
+    "exclusions": [
+      "authentication and session material",
+      "private messages and account analytics",
+      "inferences about individual teammate authorship",
+      "full reproduction of third-party repost text"
+    ]
+  },
+  "populationAudit": {
+    "profileCountObserved": 38,
+    "postsTabItemsRecovered": 37,
+    "repliesTabItemsRecovered": 38,
+    "accountPostsRecovered": 16,
+    "accountRepliesRecovered": 6,
+    "accountAuthoredStatusesRecovered": 22,
+    "repostsRecovered": 16,
+    "distinctRepostSourceAccounts": 13,
+    "uniqueItemsRecovered": 38,
+    "unresolvedPopulationSlots": 0,
+    "dispositionTotal": 38,
+    "completenessStatement": "All 38 items in the live profile control were recovered at item level. This is complete recovery of the surviving July 2026 profile population, not a platform export or proof that no older item was deleted before capture."
+  },
+  "aggregateFindings": {
+    "themeCounts": {
+      "civic-care-amplification": 5,
+      "civic-mobilization-and-care": 5,
+      "community-scene-context": 6,
+      "event-distribution": 5,
+      "platform-use-and-event-amplification": 5,
+      "product-community-infrastructure": 3,
+      "product-support-and-onboarding": 6,
+      "scene-knowledge-and-connection": 3
+    },
+    "directProductSupportReplies": 6,
+    "eventDistributionPosts": 5,
+    "sceneKnowledgePosts": 3,
+    "productCommunityInfrastructurePosts": 3,
+    "civicCareAuthoredPosts": 5,
+    "civicCareReposts": 5,
+    "platformUseAndEventAmplificationReposts": 5,
+    "distinctExternalHandlesInAuthoredRecords": 14,
+    "shortUrlOccurrences": 35,
+    "uniqueShortUrls": 35,
+    "uniqueResolvedDestinations": 34,
+    "uniqueProjectOrLineageDestinations": 19,
+    "externalDestinationUrls": [
+      "https://alliedmedia.org/amc",
+      "https://docs.google.com/spreadsheets/d/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml",
+      "https://fb.me/1TW9AQgwM",
+      "https://fb.me/2TmsoJZSP",
+      "https://grasstronaut.com/",
+      "https://grasstronaut.com/2015/01/29/homework-in-every-town/",
+      "https://ift.tt/2fjVs71",
+      "https://popular.vote/",
+      "https://www.gofundme.com/sjdjkk",
+      "https://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+      "https://www.meowwolf.com/diy",
+      "https://www.sresproductions.com/events/fillmore-jazz-festival/",
+      "https://www.youcaring.com/firevictimsofoaklandfiredec232016-706684",
+      "https://www.youtube.com/watch?v=g7zIdDeRVjU",
+      "https://youtu.be/nQg47LtixPI"
+    ]
+  },
+  "records": [
+    {
+      "statusId": "433628764493606913",
+      "statusUrl": "https://x.com/all_ages/status/433628764493606913",
+      "publishedAt": "2014-02-12T15:48:48.000Z",
+      "relationship": "repost",
+      "authorHandle": "@all_ages",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reflection on how local scenes orient cultural thinking toward a humane scale.",
+      "primaryTheme": "community-scene-context",
+      "mentionedHandles": [
+        "@all_ages"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 6
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "433671630837919744",
+      "statusUrl": "https://x.com/wowlist/status/433671630837919744",
+      "publishedAt": "2014-02-12T18:39:08.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Names Richard and Jamie and describes WOWList as based on calendars made at Sunday Dinner.",
+      "primaryTheme": "product-community-infrastructure",
+      "mentionedHandles": [
+        "@wowlist",
+        "@urbanhermit"
+      ],
+      "hashtags": [
+        "#SundayDinner"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "http://t.co/GgppxNburh",
+          "destinationUrl": "https://sundaydinnernyc.com/tagged/wowlist",
+          "intermediateUrl": "https://ow.ly/tyMAa",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "587713396486856704",
+      "statusUrl": "https://x.com/wowlist/status/587713396486856704",
+      "publishedAt": "2015-04-13T20:26:07.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Thanks Michelle for adding the Organizing 2.0 conference and links its WOWList event page.",
+      "primaryTheme": "event-distribution",
+      "mentionedHandles": [
+        "@wowlist"
+      ],
+      "hashtags": [
+        "#org20"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "http://t.co/e7KLKI81IM",
+          "destinationUrl": "https://wowlist.org/events/15529",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "590942060829663232",
+      "statusUrl": "https://x.com/wowlist/status/590942060829663232",
+      "publishedAt": "2015-04-22T18:15:41.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Announces WOWList participation at the Allied Media Conference in Detroit.",
+      "primaryTheme": "event-distribution",
+      "mentionedHandles": [
+        "@wowlist",
+        "@PMPressOrg",
+        "@AlliedMediaConf",
+        "@Allied_Media"
+      ],
+      "hashtags": [
+        "#amc2015"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "http://t.co/dASFox1C0C",
+          "destinationUrl": "https://wowlist.org/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        },
+        {
+          "shortUrl": "http://t.co/hWIGngWvC2",
+          "destinationUrl": "https://alliedmedia.org/amc",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "590961074326917122",
+      "statusUrl": "https://x.com/wowlist/status/590961074326917122",
+      "publishedAt": "2015-04-22T19:31:14.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Distributes a Kansas City DIY music event through a WOWList event page.",
+      "primaryTheme": "event-distribution",
+      "mentionedHandles": [
+        "@wowlist",
+        "@DSTRYNATEALLEN"
+      ],
+      "hashtags": [
+        "#folkPunk",
+        "#KCDIY"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/mM9psewVlR",
+          "destinationUrl": "https://wowlist.org/kcdiy/events/15939",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "591664757473673216",
+      "statusUrl": "https://x.com/wowlist/status/591664757473673216",
+      "publishedAt": "2015-04-24T18:07:25.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Explains the followed-calendar home feed and a planned local or everywhere control.",
+      "primaryTheme": "product-support-and-onboarding",
+      "mentionedHandles": [
+        "@wowlist",
+        "@juliafredenburg"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "591666366215811073",
+      "statusUrl": "https://x.com/wowlist/status/591666366215811073",
+      "publishedAt": "2015-04-24T18:13:48.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Explains where a person can find their WOW Lists on their profile.",
+      "primaryTheme": "product-support-and-onboarding",
+      "mentionedHandles": [
+        "@wowlist",
+        "@juliafredenburg"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/d0A6kYzDuc",
+          "destinationUrl": "https://wowlist.org/people/julia",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "591668857670148096",
+      "statusUrl": "https://x.com/wowlist/status/591668857670148096",
+      "publishedAt": "2015-04-24T18:23:43.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Explains how to add an event and place it on multiple WOW Lists.",
+      "primaryTheme": "product-support-and-onboarding",
+      "mentionedHandles": [
+        "@wowlist",
+        "@juliafredenburg"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "591944013768499200",
+      "statusUrl": "https://x.com/urbanhermit/status/591944013768499200",
+      "publishedAt": "2015-04-25T12:37:05.000Z",
+      "relationship": "repost",
+      "authorHandle": "@urbanhermit",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Promotes a Kansas City architecture lecture through a WOWList event page.",
+      "primaryTheme": "platform-use-and-event-amplification",
+      "mentionedHandles": [
+        "@urbanhermit"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yPlmpXlshq",
+          "destinationUrl": "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "592424659225845760",
+      "statusUrl": "https://x.com/TheSilentBarn/status/592424659225845760",
+      "publishedAt": "2015-04-26T20:27:00.000Z",
+      "relationship": "repost",
+      "authorHandle": "@TheSilentBarn",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares a fundraiser for Akai Gurley's family from The Silent Barn account.",
+      "primaryTheme": "civic-care-amplification",
+      "mentionedHandles": [
+        "@TheSilentBarn"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "http://t.co/03vayVcYxT",
+          "destinationUrl": "https://www.gofundme.com/sjdjkk",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "592718356018556928",
+      "statusUrl": "https://x.com/urbanhermit/status/592718356018556928",
+      "publishedAt": "2015-04-27T15:54:02.000Z",
+      "relationship": "repost",
+      "authorHandle": "@urbanhermit",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Promotes a multimedia theater event through the Sunday Dinner calendar.",
+      "primaryTheme": "platform-use-and-event-amplification",
+      "mentionedHandles": [
+        "@urbanhermit"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/jSkbutnuw3",
+          "destinationUrl": "https://wowlist.org/sundaydinner/events/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "592787353925726208",
+      "statusUrl": "https://x.com/zachfromiji/status/592787353925726208",
+      "publishedAt": "2015-04-27T20:28:13.000Z",
+      "relationship": "repost",
+      "authorHandle": "@zachfromiji",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Community-scene observation about being an idea list.",
+      "primaryTheme": "community-scene-context",
+      "mentionedHandles": [
+        "@zachfromiji"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "592810776961916929",
+      "statusUrl": "https://x.com/wowlist/status/592810776961916929",
+      "publishedAt": "2015-04-27T22:01:17.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Recommends a Grasstronaut guide to grassroots all-ages arts infrastructure.",
+      "primaryTheme": "scene-knowledge-and-connection",
+      "mentionedHandles": [
+        "@wowlist",
+        "@elisegranata"
+      ],
+      "hashtags": [
+        "#grasstronaut"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "http://t.co/IS8uGw6zxb",
+          "destinationUrl": "https://grasstronaut.com/2015/01/29/homework-in-every-town/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "596690796641923073",
+      "statusUrl": "https://x.com/wowlist/status/596690796641923073",
+      "publishedAt": "2015-05-08T14:59:06.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Highlights the disconnect between similar alternative arts warehouses in different regions.",
+      "primaryTheme": "scene-knowledge-and-connection",
+      "mentionedHandles": [
+        "@wowlist",
+        "@elisegranata"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "596691623993581568",
+      "statusUrl": "https://x.com/wowlist/status/596691623993581568",
+      "publishedAt": "2015-05-08T15:02:23.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Links reporting about documenting and connecting DIY culture and spaces.",
+      "primaryTheme": "scene-knowledge-and-connection",
+      "mentionedHandles": [
+        "@wowlist",
+        "@elisegranata"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "http://t.co/S7hb8xKAJQ",
+          "destinationUrl": "https://grasstronaut.com/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        },
+        {
+          "shortUrl": "http://t.co/cG6FgcGsgu",
+          "destinationUrl": "https://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "598530404669358080",
+      "statusUrl": "https://x.com/wowlist/status/598530404669358080",
+      "publishedAt": "2015-05-13T16:49:03.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Distributes a multi-state DIY music tour through a WOWList page.",
+      "primaryTheme": "event-distribution",
+      "mentionedHandles": [
+        "@wowlist",
+        "@zachfromiji"
+      ],
+      "hashtags": [
+        "#DesertDip"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/3rl1wMar2x",
+          "destinationUrl": "https://wowlist.org/desertdip",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "603631189308604416",
+      "statusUrl": "https://x.com/pluspoolny/status/603631189308604416",
+      "publishedAt": "2015-05-27T18:37:45.000Z",
+      "relationship": "repost",
+      "authorHandle": "@pluspoolny",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a seasonal community-scene message from + POOL.",
+      "primaryTheme": "community-scene-context",
+      "mentionedHandles": [
+        "@pluspoolny"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 3
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "604360847012413440",
+      "statusUrl": "https://x.com/punkscriminals/status/604360847012413440",
+      "publishedAt": "2015-05-29T18:57:09.000Z",
+      "relationship": "repost",
+      "authorHandle": "@punkscriminals",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts an organizer saying they were adding shows to a WOWList calendar.",
+      "primaryTheme": "platform-use-and-event-amplification",
+      "mentionedHandles": [
+        "@punkscriminals",
+        "@wowlistnyc",
+        "@weareonthewater"
+      ],
+      "hashtags": [
+        "#livemusic",
+        "#show",
+        "#concert",
+        "#event",
+        "#music",
+        "#calendar"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/wNFjbgp7a1",
+          "destinationUrl": "https://wowlist.org/punksandcriminals",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "606517628765650945",
+      "statusUrl": "https://x.com/wowlist/status/606517628765650945",
+      "publishedAt": "2015-06-04T17:47:25.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Distributes Chicago's Rapid Pulse performance-art festival.",
+      "primaryTheme": "event-distribution",
+      "mentionedHandles": [
+        "@wowlist",
+        "@RapidPulseFest"
+      ],
+      "hashtags": [
+        "#RP15"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/o65oORabb6",
+          "destinationUrl": "https://wowlist.org/rapidpulse",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "632168285291835392",
+      "statusUrl": "https://x.com/wowlist/status/632168285291835392",
+      "publishedAt": "2015-08-14T12:33:58.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Thanks a community member for creating a WOWList tutorial and links the join flow.",
+      "primaryTheme": "product-community-infrastructure",
+      "mentionedHandles": [
+        "@wowlist"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KZ7x2zPgtB",
+          "destinationUrl": "https://youtu.be/nQg47LtixPI",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        },
+        {
+          "shortUrl": "https://t.co/w5zPq7Z89p",
+          "destinationUrl": "https://wowlist.org/join",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "663732869357965313",
+      "statusUrl": "https://x.com/cotfg/status/663732869357965313",
+      "publishedAt": "2015-11-09T15:00:22.000Z",
+      "relationship": "repost",
+      "authorHandle": "@cotfg",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts an organizer's event announcement linked through WOWList.",
+      "primaryTheme": "platform-use-and-event-amplification",
+      "mentionedHandles": [
+        "@cotfg"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/606xbcLhMq",
+          "destinationUrl": "https://wowlist.org/events/19077/8pm-sunday-november-22nd--drone-orchestra",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "665520472461860864",
+      "statusUrl": "https://x.com/wowlist/status/665520472461860864",
+      "publishedAt": "2015-11-14T13:23:40.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "contentSummary": "Invites an all-ages calendar community to a WOWList members meeting.",
+      "primaryTheme": "product-community-infrastructure",
+      "mentionedHandles": [
+        "@wowlist",
+        "@all_ages"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/JpK2QOam9r",
+          "destinationUrl": "https://wowlist.org/AllAges",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        },
+        {
+          "shortUrl": "https://t.co/YuCfobbQTB",
+          "destinationUrl": "https://wowlist.org/events/18547/wow-list-members-meeting",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "749378122823245824",
+      "statusUrl": "https://x.com/rchrd2/status/749378122823245824",
+      "publishedAt": "2016-07-02T23:04:01.000Z",
+      "relationship": "repost",
+      "authorHandle": "@rchrd2",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a collaborator tagging WOWList in a San Francisco festival announcement.",
+      "primaryTheme": "platform-use-and-event-amplification",
+      "mentionedHandles": [
+        "@rchrd2",
+        "@wowlist"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/DbCvjUQM1n",
+          "destinationUrl": "https://www.sresproductions.com/events/fillmore-jazz-festival/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "751150062458269696",
+      "statusUrl": "https://x.com/wowlist/status/751150062458269696",
+      "publishedAt": "2016-07-07T20:25:05.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Distributes a Black Lives Matter demonstration for Alton Sterling and Philando Castile.",
+      "primaryTheme": "civic-mobilization-and-care",
+      "mentionedHandles": [
+        "@wowlist"
+      ],
+      "hashtags": [
+        "#AltonSterling",
+        "#PhilandoCastile",
+        "#BlackLivesMatter"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/a39ETzpVWO",
+          "destinationUrl": "https://wowlist.org/nycdiy/events/23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "771412862191407104",
+      "statusUrl": "https://x.com/wowlist/status/771412862191407104",
+      "publishedAt": "2016-09-01T18:22:13.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Identifies NYCDIY.org as a local calendar identity.",
+      "primaryTheme": "product-support-and-onboarding",
+      "mentionedHandles": [
+        "@wowlist",
+        "@285KENT",
+        "@lil_seltz"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ixsJHQRdDK",
+          "destinationUrl": "https://nycdiy.org/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "771455571501416448",
+      "statusUrl": "https://x.com/wowlist/status/771455571501416448",
+      "publishedAt": "2016-09-01T21:11:55.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Explains how to join NYCDIY, add shows, and receive the weekly email.",
+      "primaryTheme": "product-support-and-onboarding",
+      "mentionedHandles": [
+        "@wowlist",
+        "@selfdfens",
+        "@showpaper"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/3an880EXo8",
+          "destinationUrl": "https://nycdiy.org/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 2
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "771457416298921985",
+      "statusUrl": "https://x.com/wowlist/status/771457416298921985",
+      "publishedAt": "2016-09-01T21:19:15.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Explains that NYCDIY runs on WOWList and connects it to the Sunday Dinner potluck.",
+      "primaryTheme": "product-support-and-onboarding",
+      "mentionedHandles": [
+        "@wowlist",
+        "@selfdfens",
+        "@showpaper"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/7lKlHLEZf1",
+          "destinationUrl": "https://wowlist.org/sundaydinner/events/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "783312785702805504",
+      "statusUrl": "https://x.com/FOKLcenter/status/783312785702805504",
+      "publishedAt": "2016-10-04T14:28:16.000Z",
+      "relationship": "repost",
+      "authorHandle": "@FOKLcenter",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a cultural space's announcement of power and a first show at a new location.",
+      "primaryTheme": "community-scene-context",
+      "mentionedHandles": [
+        "@FOKLcenter"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/t0grs2Do3H",
+          "destinationUrl": "https://fb.me/2TmsoJZSP",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "796473557387575297",
+      "statusUrl": "https://x.com/wowlist/status/796473557387575297",
+      "publishedAt": "2016-11-09T22:04:28.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Routes people to nationwide anti-Trump marches and movement-building events.",
+      "primaryTheme": "civic-mobilization-and-care",
+      "mentionedHandles": [
+        "@wowlist"
+      ],
+      "hashtags": [
+        "#DownWithTrump"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/D6udDGJ7Um",
+          "destinationUrl": "https://wowlist.org/DownWithTrump",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 6
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "797181275308257282",
+      "statusUrl": "https://x.com/yokoono/status/797181275308257282",
+      "publishedAt": "2016-11-11T20:56:41.000Z",
+      "relationship": "repost",
+      "authorHandle": "@yokoono",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a Yoko Ono link whose mission context was not recovered from the post alone.",
+      "primaryTheme": "community-scene-context",
+      "mentionedHandles": [
+        "@yokoono"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ST6A7fMabN",
+          "destinationUrl": "https://ift.tt/2fjVs71",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 2,
+        "reposts": 211,
+        "likes": 467
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "798274424763981824",
+      "statusUrl": "https://x.com/wowlist/status/798274424763981824",
+      "publishedAt": "2016-11-14T21:20:28.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Routes people to a national calendar for marches, meetings, and local connection.",
+      "primaryTheme": "civic-mobilization-and-care",
+      "mentionedHandles": [
+        "@wowlist"
+      ],
+      "hashtags": [
+        "#NotMyPresident",
+        "#WeAreThePopularVote"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/O1euiAdPmX",
+          "destinationUrl": "https://popular.vote/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "801883926029447168",
+      "statusUrl": "https://x.com/5432fun/status/801883926029447168",
+      "publishedAt": "2016-11-24T20:23:20.000Z",
+      "relationship": "repost",
+      "authorHandle": "@5432fun",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a resource about supporting Standing Rock.",
+      "primaryTheme": "civic-care-amplification",
+      "mentionedHandles": [
+        "@5432fun"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/xBooqnpcBS",
+          "destinationUrl": "https://fb.me/1TW9AQgwM",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "805210387004223488",
+      "statusUrl": "https://x.com/wowlist/status/805210387004223488",
+      "publishedAt": "2016-12-04T00:41:31.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares a fundraiser for people affected by the Ghost Ship fire.",
+      "primaryTheme": "civic-mobilization-and-care",
+      "mentionedHandles": [
+        "@wowlist"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/vWtAyQiwMl",
+          "destinationUrl": "https://www.youcaring.com/firevictimsofoaklandfiredec232016-706684",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "805949658405175296",
+      "statusUrl": "https://x.com/urbanhermit/status/805949658405175296",
+      "publishedAt": "2016-12-06T01:39:07.000Z",
+      "relationship": "repost",
+      "authorHandle": "@urbanhermit",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a WOWList page for the Lake Merritt Ghost Ship vigil.",
+      "primaryTheme": "civic-care-amplification",
+      "mentionedHandles": [
+        "@urbanhermit"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/jhGFCwormV",
+          "destinationUrl": "https://wowlist.org/events/25653/light-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "806517013472485376",
+      "statusUrl": "https://x.com/wowlist/status/806517013472485376",
+      "publishedAt": "2016-12-07T15:13:35.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@wowlist",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Shares KQED's video documenting the Ghost Ship memorial vigil.",
+      "primaryTheme": "civic-mobilization-and-care",
+      "mentionedHandles": [
+        "@wowlist"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Q2vtL8JdOq",
+          "destinationUrl": "https://www.youtube.com/watch?v=g7zIdDeRVjU",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "metricOwner": "wowlist-status"
+    },
+    {
+      "statusId": "807395049814290433",
+      "statusUrl": "https://x.com/urbanhermit/status/807395049814290433",
+      "publishedAt": "2016-12-10T01:22:35.000Z",
+      "relationship": "repost",
+      "authorHandle": "@urbanhermit",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a call-your-mayor script advocating safe conditions for DIY spaces.",
+      "primaryTheme": "civic-care-amplification",
+      "mentionedHandles": [
+        "@urbanhermit"
+      ],
+      "hashtags": [
+        "#DIYsavesOurLife"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/L0gAiWmIbX",
+          "destinationUrl": "https://docs.google.com/spreadsheets/d/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 8
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "815697993709993984",
+      "statusUrl": "https://x.com/MeowWolf/status/815697993709993984",
+      "publishedAt": "2017-01-01T23:15:31.000Z",
+      "relationship": "repost",
+      "authorHandle": "@MeowWolf",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts Meow Wolf's announcement of a fund for DIY arts and music spaces.",
+      "primaryTheme": "civic-care-amplification",
+      "mentionedHandles": [
+        "@MeowWolf"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/0jKQMlauld",
+          "destinationUrl": "https://www.meowwolf.com/diy",
+          "observedHttpStatus": 301,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 13
+      },
+      "metricOwner": "source-status"
+    },
+    {
+      "statusId": "819663088634851328",
+      "statusUrl": "https://x.com/goshwizard/status/819663088634851328",
+      "publishedAt": "2017-01-12T21:51:23.000Z",
+      "relationship": "repost",
+      "authorHandle": "@goshwizard",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "contentSummary": "Reposts a playful community-scene observation about morning punk shows.",
+      "primaryTheme": "community-scene-context",
+      "mentionedHandles": [
+        "@goshwizard"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 5
+      },
+      "metricOwner": "source-status"
+    }
+  ]
+}

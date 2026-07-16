@@ -14,6 +14,7 @@ export const metadata: Metadata = createMetadata({
 
 export default function SourceBackedTeamMemoryPage() {
   const methodProof = requireReadyOrCarefulProof("source-backed-team-memory-method");
+  const aiEvalProof = requireReadyOrCarefulProof("ai-evals-professional-development");
 
   return (
     <article className="jb-frame py-12">
@@ -30,6 +31,19 @@ export default function SourceBackedTeamMemoryPage() {
             Early research / method / consulting practice. Not a finished
             production SaaS, chatbot, surveillance system, AI replacement for
             judgment, or private archive browser.
+          </p>
+        </div>
+        <div className="mt-6 rounded-lg border border-jb-blue/20 bg-jb-sky/15 p-5">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Evaluation practice
+          </p>
+          <p className="mt-2 leading-7 text-jb-ink/76">
+            {aiEvalProof.publicWording} {aiEvalProof.detailedPublicWording}
+          </p>
+          <p className="mt-3 text-sm leading-6 text-jb-ink/58">
+            Framed as professional development: useful for human review,
+            evaluation design, and AI-readiness work, not as instructor
+            affiliation or a standalone credential claim.
           </p>
         </div>
         <div className="mt-10 space-y-6">
