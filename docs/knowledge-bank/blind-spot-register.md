@@ -71,7 +71,7 @@ contemporaneous role artifacts, not a broad testimonial campaign.
 
 ## 4. Countability And Platform Bias
 
-**Current signal:** The bank has 232 sources across public records, reporting,
+**Current signal:** The bank has 233 sources across public records, reporting,
 project archives, web pages, social posts, and research runs. Source-class
 diversity is healthy, but recent archival effort has favored surfaces that can
 be enumerated. Trace volume does not measure importance, effort, or impact.
@@ -87,7 +87,7 @@ otherwise invisible operating work.
 
 ## 5. Composition And Argument
 
-**Current signal:** The graph contains 103 claims, including 61 active and 44
+**Current signal:** The graph contains 104 claims, including 61 active and 45
 held projections. A mature claim is not automatically a selected claim.
 
 **Control:** Every public route or route template has an audience, reader

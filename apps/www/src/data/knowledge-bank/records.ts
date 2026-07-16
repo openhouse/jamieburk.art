@@ -22,6 +22,7 @@ import { teamsArchiveDeepeningBatch } from "./teams-archive-deepening-batch-2026
 import { nycaInstitutionalValueBatch } from "./nyca-institutional-value-batch-2026-07-15.ts";
 import { wowlistSundayDinnerCallscriptBatch } from "./wowlist-sunday-dinner-callscript-batch-2026-07-15.ts";
 import { ucscPracticeLensesBatch } from "./ucsc-practice-lenses-batch-2026-07-15.ts";
+import { kcStarRaftBatch } from "./kc-star-raft-batch-2026-07-16.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -607,7 +608,8 @@ const knowledgeBankInput = {
     ...teamsArchiveDeepeningBatch.intakeRecords,
     ...nycaInstitutionalValueBatch.intakeRecords,
     ...wowlistSundayDinnerCallscriptBatch.intakeRecords,
-    ...ucscPracticeLensesBatch.intakeRecords
+    ...ucscPracticeLensesBatch.intakeRecords,
+    ...kcStarRaftBatch.intakeRecords
   ],
   sources: [
     {
@@ -1693,7 +1695,8 @@ const knowledgeBankInput = {
     ...teamsArchiveDeepeningBatch.sources,
     ...nycaInstitutionalValueBatch.sources,
     ...wowlistSundayDinnerCallscriptBatch.sources,
-    ...ucscPracticeLensesBatch.sources
+    ...ucscPracticeLensesBatch.sources,
+    ...kcStarRaftBatch.sources
   ],
   claims: [
     {
@@ -2056,19 +2059,37 @@ const knowledgeBankInput = {
     {
       id: "CLM-WATERWAYS-RAFT-EXPEDITION",
       project: "waterways-participatory-practice",
-      internalClaim: "Jamie conceived an experiential raft expedition and helped organize a collaborative, recycled-material journey that traveled from Kansas City down the Missouri and Mississippi rivers for four months until the water tasted salty.",
+      internalClaim: "Jamie conceived Release Yourself onto the Water Until it Tastes of Salt, a collaborative raft expedition with Libby Hendon and Laura Mattingly. The crew departed Kansas City's West Bottoms on July 21, 2007, aboard a found-material raft with bicycle-linked paddlewheel propulsion, passed 1,000 river miles by November 15, and later reached the Gulf of Mexico after four months.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "archive-note", text: "Jamie conceived and helped organize a collaborative, recycled-material raft expedition that traveled from Kansas City down the Missouri and Mississippi rivers for four months, using the journey to explore how river systems connect cities and people.", status: "hold", citationRequired: true, surfaces: [] }],
+      projections: [{ key: "archive-note", text: "Jamie conceived Release Yourself onto the Water Until it Tastes of Salt and traveled with Libby Hendon and Laura Mattingly from Kansas City's West Bottoms toward the Gulf of Mexico on a collaborative, found-material raft expedition. The four-month journey used the Missouri and Mississippi rivers to explore how waterways connect cities and people.", status: "hold", citationRequired: true, surfaces: [] }],
       evidence: [
         { sourceId: "SRC-PITCH-HUCK-FINN-2007", relationship: "direct-support", supports: ["Jamie conceived the expedition", "collaborative recycled-material raft", "Jamie organized related public activity"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KC-STAR-RAFT-EXPEDITION-2007-11-15", relationship: "direct-support", supports: ["Jamie originated the expedition idea", "Libby Hendon and Laura Mattingly as crew members", "July 21 West Bottoms departure", "found-material construction and bicycle-linked paddlewheel system", "more than 1,000 river miles by November 15, 2007"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009", relationship: "corroborating", supports: ["four-month journey down the Missouri and Mississippi", "the water tasted salty", "river-city connection as later project context"], confidence: "moderate", renderCitation: false },
         { sourceId: "SRC-PITCH-GREAT-ACCOMMODATIONS-2009-09-03", relationship: "direct-support", supports: ["the collaborative expedition reached the Gulf of Mexico", "the journey took four months from Kansas City", "Great Accommodations continued the waterways inquiry"], confidence: "high", renderCitation: false }
       ],
-      boundaries: ["Use collaborative language for construction, travel, and hosting.", "The reviewed sources establish the Gulf of Mexico broadly, not the exact landing place.", "Treat the 2009 accounts as retrospective descriptions of the 2007 journey."],
-      antiClaims: ["Jamie alone built and operated the raft", "The reviewed sources prove the exact Gulf landing place", "Every participant and community role is recovered"],
+      boundaries: ["Use collaborative language for construction, travel, and hosting, and name Libby Hendon and Laura Mattingly when describing the traveling crew.", "Separate the contemporaneous November 15 position south of Baton Rouge from the Gulf endpoint documented retrospectively in 2009.", "The reviewed sources establish the Gulf of Mexico broadly, not the exact landing place.", "Treat the 2009 accounts as retrospective descriptions of the 2007 journey."],
+      antiClaims: ["Jamie alone built and operated the raft", "The Kansas City Star article proves the crew had already reached the Gulf", "The reviewed sources prove the exact Gulf landing place", "Every participant and community role is recovered"],
       proofClaimIds: ["waterways-participatory-practice"],
       researchInquiryIds: ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
-      reviewedAt: "2026-07-13",
+      reviewedAt: "2026-07-16",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-WATERWAYS-RAFT-PARTICIPATORY-METHOD",
+      project: "waterways-participatory-practice",
+      internalClaim: "During the 2007 raft expedition, Jamie described inviting people encountered along the route to join the raft and using the journey to awaken cultural connection between Kansas City's West Bottoms and towns along the Mississippi Delta.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "The raft expedition was also a participatory public practice: Jamie described inviting people encountered along the route aboard and using the journey to explore cultural connections among river cities.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [
+        { sourceId: "SRC-KC-STAR-RAFT-EXPEDITION-2007-11-15", relationship: "direct-support", supports: ["Jamie's invitation to people encountered along the route", "Jamie's stated West Bottoms-to-Delta cultural-connection intent"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007", relationship: "corroborating", supports: ["the public invitation into a found-material, bicycle-powered river expedition"], confidence: "moderate", renderCitation: false }
+      ],
+      boundaries: ["Attribute the cultural-connection interpretation to Jamie.", "Do not imply that every person encountered joined the raft or shared Jamie's interpretation.", "Do not convert reported invitations and encounters into measured community impact."],
+      antiClaims: ["Every river community participated", "The expedition produced measured civic outcomes", "Jamie spoke for the communities encountered along the route"],
+      proofClaimIds: ["waterways-participatory-practice"],
+      researchInquiryIds: ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
+      reviewedAt: "2026-07-16",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
@@ -2396,13 +2417,13 @@ const knowledgeBankInput = {
       id: "INQ-WATERWAYS-FULL-ROUTE-AND-ROLES",
       project: "waterways-participatory-practice",
       question: "What route, dates, participants, public programs, community encounters, and artifacts can be independently established for the raft journey and its relationship to Great Accommodations?",
-      methods: ["Close-read the supplied Pitch and Charlotte Street records.", "Compare contemporaneous reporting with two 2009 retrospective accounts.", "Identify additional public reporting, project artifacts, and independently anchored photographs for a future pass."],
-      runAt: "2026-07-13",
+      methods: ["Close-read the supplied Pitch and Charlotte Street records.", "Render and visually inspect both pages of the supplied Kansas City Star archival scan, then compare the layout against extracted text.", "Separate contemporaneous November 2007 facts from two 2009 retrospective accounts.", "Compare the public Facebook event invitation with the newspaper's account of invitations and encounters during the journey.", "Identify additional route, builder, host, passenger, and project artifacts for a future pass."],
+      runAt: "2026-07-16",
       resultStatus: "partially-recovered",
-      findings: ["The Pitch directly attributes the expedition idea to Jamie and documents collaborative raft travel across Missouri.", "Charlotte Street documents a four-month journey down the Missouri and Mississippi until the water tasted salty and connects it to Great Accommodations.", "A separate 2009 Pitch follow-up reports that Jamie and collaborators reached the Gulf of Mexico four months after leaving Kansas City.", "The broad endpoint is now recovered, while the exact landing place, complete route, and responsibility map remain open."],
-      limitations: ["The exact Gulf landing place remains unresolved.", "The complete route, participant, and host roster has not been reconstructed.", "No photograph has been approved for publication through this inquiry."],
-      sourceIds: ["SRC-PITCH-HUCK-FINN-2007", "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009", "SRC-PITCH-GREAT-ACCOMMODATIONS-2009-09-03"],
-      publicSummary: "Three public sources establish Jamie's conception of a collaborative raft expedition, its four-month journey to the Gulf of Mexico, and its later development into participatory river-city work; the exact landing place and complete roles remain open."
+      findings: ["The Pitch and Kansas City Star independently attribute the expedition idea to Jamie and document a collaborative found-material raft.", "The Kansas City Star identifies the traveling crew as Jamie Burkart, Libby Hendon, and Laura Mattingly; records a July 21, 2007, West Bottoms departure; and places the crew south of Baton Rouge after more than 1,000 river miles by November 15.", "The Kansas City Star documents a roughly 12-by-13-foot raft, two bicycles linked to a paddlewheel, and construction from discarded housing materials, civic refuse, and soda-syrup drums.", "The Facebook event and Kansas City Star together establish a public invitation before departure and Jamie's reported practice of inviting people encountered along the route aboard.", "Jamie described the journey as a way to awaken cultural connection between Kansas City's West Bottoms and Mississippi Delta towns; this remains his attributed interpretation, not a measured outcome.", "Charlotte Street documents a four-month journey down the Missouri and Mississippi until the water tasted salty and connects it to Great Accommodations.", "A separate 2009 Pitch follow-up reports that Jamie and collaborators reached the Gulf of Mexico four months after leaving Kansas City.", "The broad endpoint and traveling crew are now recovered, while the exact landing place, complete route, construction responsibility, host network, and full participation record remain open."],
+      limitations: ["The exact Gulf landing place remains unresolved.", "The complete route, builder, host, passenger, and support rosters have not been reconstructed.", "The article documents public invitations and encounters, not measured community impact.", "The supplied scan and its photographs remain offline pending copyright, rights, and participant review.", "No photograph has been approved for publication through this inquiry."],
+      sourceIds: ["SRC-PITCH-HUCK-FINN-2007", "SRC-KC-STAR-RAFT-EXPEDITION-2007-11-15", "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007", "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009", "SRC-PITCH-GREAT-ACCOMMODATIONS-2009-09-03"],
+      publicSummary: "Contemporaneous reporting now establishes Jamie's conception of the collaborative expedition, its three-person traveling crew, July 21 West Bottoms departure, found-material bicycle-paddlewheel craft, 1,000-plus-mile progress by November 15, and participatory invitation method; later sources establish the broad Gulf endpoint and relationship to Great Accommodations, while the exact landing place and complete roles remain open."
     },
     {
       id: "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE",

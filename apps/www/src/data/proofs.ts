@@ -1194,20 +1194,21 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source"],
     publicWording:
-      "Conceived and helped organize a collaborative raft expedition, then developed Great Accommodations as participatory river-city installation and public programming.",
+      "Conceived and helped organize Release Yourself onto the Water Until it Tastes of Salt with crew members Libby Hendon and Laura Mattingly, then developed Great Accommodations as participatory river-city installation and public programming.",
     shortWording: "Participatory waterways projects connecting river cities",
     detailedPublicWording:
-      "Jamie conceived a collaborative recycled-material raft expedition and later spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.",
+      "Jamie conceived Release Yourself onto the Water Until it Tastes of Salt, a collaborative found-material raft expedition with Libby Hendon and Laura Mattingly. The crew departed Kansas City's West Bottoms on July 21, 2007, invited people encountered along the route aboard, and later reached the Gulf of Mexico after four months. Jamie subsequently spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.",
     sourceBasis:
-      "Independent 2007 and 2009 Pitch reporting and Charlotte Street's 2009 institutional event record.",
+      "Contemporaneous 2007 reporting by The Kansas City Star and The Pitch, the public expedition event record, 2009 Pitch follow-up reporting, and Charlotte Street's 2009 institutional event record.",
     sourceNote:
-      "The sources support a four-month journey from Kansas City to the Gulf of Mexico; the exact landing place remains open.",
+      "The Kansas City Star anchors the July 21 West Bottoms departure, three-person traveling crew, found-material bicycle-paddlewheel craft, 1,000-plus-mile progress, and participatory invitation method. Later sources support the four-month journey to the Gulf of Mexico; the exact landing place remains open.",
     whyItMatters:
       "Shows a long practice of using technical making, public programs, and participatory systems to reconnect people with shared civic infrastructure.",
     guardrail:
-      "Use collaborative language, name Suzanne Hogan for letter-based outreach, and distinguish the broadly established Gulf endpoint from an unrecovered exact landing place.",
+      "Use collaborative language; name Libby Hendon and Laura Mattingly for the traveling crew and Suzanne Hogan for later letter-based outreach; distinguish November 2007 progress from the retrospectively established Gulf endpoint and from the unrecovered exact landing place.",
     doNotSay: [
       "Jamie alone built and operated the raft",
+      "The Kansas City Star article proves the crew had already reached the Gulf",
       "The reviewed sources prove the exact Gulf landing place",
       "Jamie solely authored every Great Accommodations component"
     ],
@@ -1222,9 +1223,10 @@ export const proofClaims: ProofClaim[] = [
     relatedCapabilities: ["public-programming", "participation-design", "facilitation"],
     structuredClaimIds: [
       "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-WATERWAYS-RAFT-PARTICIPATORY-METHOD",
       "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES"
     ],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "nyca-cabaret-law-direct-organizing",

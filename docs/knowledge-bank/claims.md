@@ -550,16 +550,16 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Strong
 **Evidence class:** Public source
-**Structured claim IDs:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES`
-**Public wording:** Conceived and helped organize a collaborative raft expedition, then developed Great Accommodations as participatory river-city installation and public programming.
-**Detailed public-safe wording:** Jamie conceived a collaborative recycled-material raft expedition and later spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.
+**Structured claim IDs:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-WATERWAYS-RAFT-PARTICIPATORY-METHOD`, `CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES`
+**Public wording:** Conceived and helped organize Release Yourself onto the Water Until it Tastes of Salt with crew members Libby Hendon and Laura Mattingly, then developed Great Accommodations as participatory river-city installation and public programming.
+**Detailed public-safe wording:** Jamie conceived Release Yourself onto the Water Until it Tastes of Salt, a collaborative found-material raft expedition with Libby Hendon and Laura Mattingly. The crew departed Kansas City's West Bottoms on July 21, 2007, invited people encountered along the route aboard, and later reached the Gulf of Mexico after four months. Jamie subsequently spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.
 **Where to project:** Knowledge Bank only while route, roles, artifacts, and compositional relevance continue to develop.
 **Why it matters:** Shows a long practice of using technical making, public programs, and participatory systems to reconnect people with shared civic infrastructure.
-**Guardrail:** Use collaborative language, name Suzanne Hogan for letter-based outreach, and distinguish the broadly established Gulf of Mexico endpoint from an unrecovered exact landing place.
-**Do not say:** Jamie alone built and operated the raft; the reviewed sources prove the exact Gulf landing place; Jamie solely authored every Great Accommodations component.
+**Guardrail:** Use collaborative language; name Libby Hendon and Laura Mattingly for the traveling crew and Suzanne Hogan for later letter-based outreach; distinguish November 2007 progress from the retrospectively established Gulf endpoint and from the unrecovered exact landing place.
+**Do not say:** Jamie alone built and operated the raft; the Kansas City Star article proves the crew had already reached the Gulf; the reviewed sources prove the exact Gulf landing place; Jamie solely authored every Great Accommodations component.
 **Protected boundaries:** Unapproved participant identities, private host records, unapproved photographs, and incomplete route and responsibility data stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-16
 
 ## nyca-cabaret-law-direct-organizing - Direct Cabaret Law organizing
 

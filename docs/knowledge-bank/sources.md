@@ -55,6 +55,11 @@ Approved public artifact examples for this launch pass include:
 - Good Times Santa Cruz's 2006 Open House profile.
 - Cool Hunting's 2006 documentation of the Time is Long installation.
 - The Pitch's 2007 raft-expedition reporting.
+- Darryl Levings's November 15, 2007, Kansas City Star front-page report on
+  *Release Yourself onto the Water Until it Tastes of Salt*. The source record
+  exposes public-safe citation metadata and bounded findings only; the supplied
+  archival scan and photographs remain offline pending copyright, rights, and
+  participant review.
 - Charlotte Street's 2009 Great Accommodations event record.
 - Gothamist's June 2017 Cabaret Law reporting.
 - New York City Council Cabaret Law hearing transcripts and legislation.

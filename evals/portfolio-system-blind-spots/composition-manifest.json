@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "reviewedAt": "2026-07-15",
-  "publicSurfaceSha256": "e5b777e5a92049f7d9acf6c55f76ab41b5957872fec9e30eafbfa7e06839625a",
+  "reviewedAt": "2026-07-16",
+  "publicSurfaceSha256": "0cce06933b73a1e545afd54cfbf41f590fb846c0efdef1b3919520db94b6f0a0",
   "claimUnitDefinition": "One distinct role, result, capability, uncertainty, transformation, or transferable-method proposition rendered as prose. A paragraph containing several independently meaningful role, artifact-maturity, or continuity propositions contributes several semantic claim keys. A full WorkCard contributes five claim units; a compact homepage WorkCard contributes the rendered subtitle and summary only. Navigation labels, headings, status labels, tags, citations, and repeated CTA labels are not separate claim units.",
   "pages": [
     {

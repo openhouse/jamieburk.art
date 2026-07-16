@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedAt": "2026-07-15",
+  "reviewedAt": "2026-07-16",
   "externalOutcomeStatus": "not-yet-measured",
   "substantialPassDefinition": "A pass that changes public positioning, adds or activates consequential claims, or ingests ten or more sources.",
   "polishingCap": "After a substantial pass, complete one outward field action before another discretionary archive pass unless new evidence would correct a consequential public claim or safety risk.",
@@ -117,7 +117,7 @@
     "destinationSurfaces": ["/resume", "/contact"],
     "sample": "Five consented readers: at least two hiring-adjacent readers and one implementation, civic-tech, or product-operations peer. Assign one reader to the home page, one to technical operations, one to Fair Rent NYC, and two to About so the new practice-lineage threshold can produce a repeated page-specific signal; all five must attempt the resume and contact destinations.",
     "exposure": "Five minutes without coaching, followed by a structured recall task.",
-    "frozenSurfaceDigest": "e5b777e5a92049f7d9acf6c55f76ab41b5957872fec9e30eafbfa7e06839625a",
+    "frozenSurfaceDigest": "0cce06933b73a1e545afd54cfbf41f590fb846c0efdef1b3919520db94b6f0a0",
     "taskOrder": [
       "Open the assigned entry page without coaching.",
       "Browse for no more than five minutes.",
@@ -244,11 +244,11 @@
   },
   "sourceBalanceReview": {
     "snapshot": {
-      "sources": 232,
+      "sources": 233,
       "sourceKinds": 12,
       "socialPostSources": 32,
       "projectArchiveSources": 46,
-      "publishedArticleSources": 67,
+      "publishedArticleSources": 68,
       "researchRunSources": 27
     },
     "populationPassInquiryIds": [
@@ -326,6 +326,13 @@
         "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "documentation", "follow-through", "handoff"],
         "evidenceDisposition": "Use public Open House and Time is Long records for public specimens, retain protected evaluations only as bounded corroboration, distinguish realized installations from prototypes and proposals, and keep tending, atmosphere, participation, and value beyond utility visible.",
         "nextDecision": "Seek original project artifacts only when they can refine maturity, collaboration, or public-use boundaries; do not publish raw educational records."
+      },
+      {
+        "project": "waterways-participatory-practice",
+        "platformTraceRisk": "A dramatic newspaper narrative and expedition photographs can eclipse the crew's shared labor, local hosts, safety adaptation, and the distinction between reported intent and demonstrated impact.",
+        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "Use the contemporaneous report to anchor chronology, crew, craft, invitations, and Jamie's attributed interpretation; keep construction responsibility, host networks, unmeasured outcomes, the archival scan, and photographs bounded or offline.",
+        "nextDecision": "Pursue builder, route, host, passenger, and handoff evidence only when it can materially refine role or participatory-method claims."
       },
       {
         "project": "kc-spaces-fund",
