@@ -345,25 +345,25 @@ export const knowledgeDevelopmentRecords: KnowledgeDevelopmentRecords = {
       project: "participatory-public-systems",
       text: "Jamie's early cultural projects created participatory public systems through shared space, facilitation, documentation, river travel, and invitations for people to contribute.",
       status: "promoted",
-      sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-RAFT-SOUNDINGS-2007"],
+      sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-RAFT-SOUNDINGS-2007", "SRC-KANSAS-CITY-STAR-RAFT-2007"],
       researchInquiryIds: ["INQ-RIVER-RAFT-ROUTE-2026"],
-      supportSummary: "Four public sources across 2006-2009 independently support the recurring participatory-systems pattern, including a documented journey of more than 1,000 miles.",
+      supportSummary: "Five public or public-metadata source records across 2006-2009 independently support the recurring participatory-systems pattern, including a documented journey of more than 1,000 miles.",
       missingEvidence: ["Exact raft route and final landing point remain incomplete."],
       boundaries: ["Use as a throughline, not formal employment history.", "Preserve collaborator and participant credit."],
       promotedClaimId: "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
-      reviewedAt: "2026-07-12"
+      reviewedAt: "2026-07-16"
     },
     {
       id: "CND-RIVER-RAFT-KC-GULF",
       project: "participatory-public-systems",
       text: "Jamie organized a collaborative raft expedition from Kansas City to the Gulf of Mexico.",
       status: "research-needed",
-      sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-RAFT-SOUNDINGS-2007"],
+      sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-RAFT-SOUNDINGS-2007", "SRC-KANSAS-CITY-STAR-RAFT-2007"],
       researchInquiryIds: ["INQ-RIVER-RAFT-ROUTE-2026"],
-      supportSummary: "Sources establish origin in Kansas City, more than 1,000 miles traveled, and a journey down the Missouri and Mississippi until salt water, but not the exact final landing point.",
+      supportSummary: "Sources establish origin in Kansas City, more than 1,000 miles traveled, and a journey into Louisiana; the contemporaneous Kansas City Star report says the saltwater objective was still ahead, so the exact final landing point remains unresolved.",
       missingEvidence: ["Contemporaneous route log or map", "Exact final landing location", "Complete chronology and collaborator record"],
       boundaries: ["Do not project the Gulf destination as settled fact yet."],
-      reviewedAt: "2026-07-12"
+      reviewedAt: "2026-07-16"
     },
     {
       id: "CND-NYCAC-CIVIC-ADVOCACY-BOUNDED",
@@ -438,10 +438,10 @@ export const knowledgeDevelopmentRecords: KnowledgeDevelopmentRecords = {
     }
   ],
   promotions: [
-    { id: "PROM-PARTICIPATORY-THROUGHLINE-2026", candidateClaimId: "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE", claimId: "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE", decision: "promoted", reason: "Three public sources support a bounded throughline useful on the About page.", decidedAt: "2026-07-12", decidedBy: ["Jamie Burkart", "Codex source review"] },
+    { id: "PROM-PARTICIPATORY-THROUGHLINE-2026", candidateClaimId: "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE", claimId: "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE", decision: "promoted", reason: "Five public or public-metadata source records support a bounded throughline useful on the About page.", decidedAt: "2026-07-16", decidedBy: ["Jamie Burkart", "Codex source review"] },
     { id: "PROM-NYCAC-CIVIC-ADVOCACY-2026", candidateClaimId: "CND-NYCAC-CIVIC-ADVOCACY-BOUNDED", claimId: "CLM-NYCAC-CIVIC-ADVOCACY-2017", decision: "promoted", reason: "Direct Jamie-specific reporting and official context support bounded advocacy and participation wording.", decidedAt: "2026-07-12", decidedBy: ["Jamie Burkart", "Codex source review"] },
     { id: "PROM-TALKS-NOT-RAIDS-TRANSPARENCY-2026", candidateClaimId: "CND-TALKS-NOT-RAIDS-TRANSPARENCY", claimId: "CLM-TALKS-NOT-RAIDS-TRANSPARENCY", decision: "promoted", reason: "The campaign site and legislative record directly establish the public-action and enacted-transparency sequence.", decidedAt: "2026-07-12", decidedBy: ["Jamie Burkart", "Codex source review"] },
-    { id: "PROM-RIVER-GULF-HOLD-2026", candidateClaimId: "CND-RIVER-RAFT-KC-GULF", decision: "held", reason: "The reviewed sources establish the river journey but not an exact Gulf landing point.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
+    { id: "PROM-RIVER-GULF-HOLD-2026", candidateClaimId: "CND-RIVER-RAFT-KC-GULF", decision: "held", reason: "The reviewed sources establish travel from Kansas City into Louisiana, but the contemporaneous Kansas City Star report says the saltwater objective was still ahead and does not establish an exact Gulf landing point.", decidedAt: "2026-07-16", decidedBy: ["Codex source review"] },
     { id: "PROM-NYCAC-INSTRUMENTAL-HOLD-2026", candidateClaimId: "CND-NYCAC-OFFICE-NIGHTLIFE-INSTRUMENTAL-ROLE", decision: "held", reason: "Coalition influence and Jamie's participation are supported; stronger individual causal allocation needs more evidence.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
     { id: "PROM-MARCH-CAUSALITY-HOLD-2026", candidateClaimId: "CND-TALKS-NOT-RAIDS-DISBAND-CAUSALITY", decision: "held", reason: "Chronology is established but causal attribution is not.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
     { id: "PROM-CALLNYC-ENGAGEMENT-HOLD-2026", candidateClaimId: "CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS", decision: "held", reason: "Six direct Council-member engagements support a strong minimum, but neither authenticated search nor public archives support 'substantially' or an exact lifetime total.", decidedAt: "2026-07-12", decidedBy: ["Codex authenticated archival review"] }

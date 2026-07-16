@@ -45,6 +45,8 @@ import { wowlistSundayDinnerCallscriptBatchRecords } from "./wowlist-sunday-dinn
 import { wowlistSundayDinnerCallscriptDevelopmentRecords } from "./wowlist-sunday-dinner-callscript-development-2026-07-15.ts";
 import { nycacGovernmentInterfaceBatchRecords } from "./nycac-government-interface-batch-2026-07-15.ts";
 import { nycacGovernmentInterfaceDevelopmentRecords } from "./nycac-government-interface-development-2026-07-15.ts";
+import { kansasCityStarRaftBatchRecords } from "./kansas-city-star-raft-batch-2026-07-16.ts";
+import { kansasCityStarRaftDevelopmentRecords } from "./kansas-city-star-raft-development-2026-07-16.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -70,7 +72,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeDevelopmentRecords.intakeItems,
     ...teamsArchivalDeepeningDevelopmentRecords.intakeItems,
     ...wowlistSundayDinnerCallscriptDevelopmentRecords.intakeItems,
-    ...nycacGovernmentInterfaceDevelopmentRecords.intakeItems
+    ...nycacGovernmentInterfaceDevelopmentRecords.intakeItems,
+    ...kansasCityStarRaftDevelopmentRecords.intakeItems
   ],
   sourceReadings: [
     ...knowledgeDevelopmentRecords.sourceReadings,
@@ -95,7 +98,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeDevelopmentRecords.sourceReadings,
     ...teamsArchivalDeepeningDevelopmentRecords.sourceReadings,
     ...wowlistSundayDinnerCallscriptDevelopmentRecords.sourceReadings,
-    ...nycacGovernmentInterfaceDevelopmentRecords.sourceReadings
+    ...nycacGovernmentInterfaceDevelopmentRecords.sourceReadings,
+    ...kansasCityStarRaftDevelopmentRecords.sourceReadings
   ],
   candidateClaims: [
     ...knowledgeDevelopmentRecords.candidateClaims,
@@ -120,7 +124,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeDevelopmentRecords.candidateClaims,
     ...teamsArchivalDeepeningDevelopmentRecords.candidateClaims,
     ...wowlistSundayDinnerCallscriptDevelopmentRecords.candidateClaims,
-    ...nycacGovernmentInterfaceDevelopmentRecords.candidateClaims
+    ...nycacGovernmentInterfaceDevelopmentRecords.candidateClaims,
+    ...kansasCityStarRaftDevelopmentRecords.candidateClaims
   ],
   promotions: [
     ...knowledgeDevelopmentRecords.promotions,
@@ -145,7 +150,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeDevelopmentRecords.promotions,
     ...teamsArchivalDeepeningDevelopmentRecords.promotions,
     ...wowlistSundayDinnerCallscriptDevelopmentRecords.promotions,
-    ...nycacGovernmentInterfaceDevelopmentRecords.promotions
+    ...nycacGovernmentInterfaceDevelopmentRecords.promotions,
+    ...kansasCityStarRaftDevelopmentRecords.promotions
   ],
   editorialBriefs: [
     ...knowledgeDevelopmentRecords.editorialBriefs,
@@ -169,7 +175,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeDevelopmentRecords.editorialBriefs,
     ...teamsArchivalDeepeningDevelopmentRecords.editorialBriefs,
     ...wowlistSundayDinnerCallscriptDevelopmentRecords.editorialBriefs,
-    ...nycacGovernmentInterfaceDevelopmentRecords.editorialBriefs
+    ...nycacGovernmentInterfaceDevelopmentRecords.editorialBriefs,
+    ...kansasCityStarRaftDevelopmentRecords.editorialBriefs
   ],
   discoveryNotes: [
     ...knowledgeDevelopmentRecords.discoveryNotes,
@@ -190,7 +197,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeDevelopmentRecords.discoveryNotes,
     ...teamsArchivalDeepeningDevelopmentRecords.discoveryNotes,
     ...wowlistSundayDinnerCallscriptDevelopmentRecords.discoveryNotes,
-    ...nycacGovernmentInterfaceDevelopmentRecords.discoveryNotes
+    ...nycacGovernmentInterfaceDevelopmentRecords.discoveryNotes,
+    ...kansasCityStarRaftDevelopmentRecords.discoveryNotes
   ],
   sources: [
     {
@@ -336,7 +344,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeBatchRecords.sources,
     ...teamsArchivalDeepeningBatchRecords.sources,
     ...wowlistSundayDinnerCallscriptBatchRecords.sources,
-    ...nycacGovernmentInterfaceBatchRecords.sources
+    ...nycacGovernmentInterfaceBatchRecords.sources,
+    ...kansasCityStarRaftBatchRecords.sources
   ],
   claims: [
     {
@@ -447,7 +456,8 @@ const knowledgeBankInput = {
     ...kcTownHallNeighborhoodPracticeBatchRecords.claims,
     ...teamsArchivalDeepeningBatchRecords.claims,
     ...wowlistSundayDinnerCallscriptBatchRecords.claims,
-    ...nycacGovernmentInterfaceBatchRecords.claims
+    ...nycacGovernmentInterfaceBatchRecords.claims,
+    ...kansasCityStarRaftBatchRecords.claims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",

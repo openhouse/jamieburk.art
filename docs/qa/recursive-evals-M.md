@@ -32,7 +32,9 @@ public-safe, and ready to act from.
    every runtime criterion passes without promoting unresolved claims. The suite
    includes bounded Teams, Shared Drive, project-social, authenticated-search,
    collaborator-credit, city-dialogue, and full-population CallNYC, NYC Artist
-   Coalition, WOWList, and KC Town Hall archival-production gates.
+   Coalition, WOWList, and KC Town Hall archival-production gates, plus
+   rights-aware newspaper-artifact lineage where supplied print evidence
+   strengthens an existing project record.
 7. **Portfolio-readiness pass:** run `npm run check:portfolio-readiness`. Confirm
    that external review, outcome proof, compression, visual proof, leadership
    scale, currentness, audience conversion, collective accountability, release

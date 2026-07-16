@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 
 const intakeItems = knowledgeBank.intakeItems ?? [];
@@ -3302,6 +3302,68 @@ const criteria = [
         /`Not recovered` is not the same as `did not exist`/i.test(report) &&
         /three full transcripts/i.test(report) &&
         !/\/Volumes\/|\/Users\//.test(report)
+      );
+    })()
+  },
+  {
+    id: "kc-star-raft-front-page-lineage",
+    label: "Kansas City Star raft reporting has complete lineage, bounded promotion, and rights controls",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-KANSAS-CITY-STAR-RAFT-2007"
+      );
+      const reading = readingBySourceId.get(source?.id);
+      const candidate = candidateById.get(
+        "CND-RAFT-EXPEDITION-DESIGN-RESILIENCE"
+      );
+      const gulfHold = candidateById.get("CND-RIVER-RAFT-KC-GULF");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-RAFT-EXPEDITION-DESIGN-RESILIENCE"
+      );
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-RIVER-RAFT-ROUTE-2026"
+      );
+      const reportPath =
+        "docs/knowledge-bank/kansas-city-star-raft-2026-07-16.md";
+      const report = existsSync(reportPath)
+        ? readFileSync(reportPath, "utf8")
+        : "";
+
+      return Boolean(
+        source?.kind === "published-article" &&
+          source.visibility === "public-metadata-only" &&
+          source.preservationStatus === "private" &&
+          source.publicCitation.includes("The Kansas City Star") &&
+          source.media?.publicDisplayStatus === "metadata-only" &&
+          reading?.assertions.some((item) => /more than 1,000 miles/i.test(item.statement)) &&
+          reading?.assertions.some((item) => /originat|idea/i.test(item.statement)) &&
+          reading?.assertions.some((item) => /salt.*still ahead|objective.*still ahead/i.test(item.statement)) &&
+          candidate?.status === "promoted" &&
+          candidate.promotedClaimId === claim?.id &&
+          claim?.status === "confirmed-with-boundary" &&
+          claim.projections.every((item) =>
+            item.surfaces.every((surface) => !surface.startsWith("/"))
+          ) &&
+          claim.evidence.some(
+            (item) =>
+              item.sourceId === source.id &&
+              item.relationship === "direct-support" &&
+              !item.renderCitation
+          ) &&
+          gulfHold?.status === "research-needed" &&
+          !gulfHold.promotedClaimId &&
+          promotions.some(
+            (item) =>
+              item.candidateClaimId === gulfHold.id && item.decision === "held"
+          ) &&
+          inquiry?.sourceIds.includes(source.id) &&
+          inquiry.findings.some((item) => /Louisiana.*1,000 miles/i.test(item)) &&
+          /does not establish completion of the Gulf objective/i.test(report) &&
+          /No website copy changed/i.test(report) &&
+          !/\/Users\/|\/Volumes\//.test(report) &&
+          !publicRegistryText.includes(
+            "ARCHIVE-KANSAS-CITY-STAR-RAFT-SCAN-2007-001"
+          )
       );
     })()
   },

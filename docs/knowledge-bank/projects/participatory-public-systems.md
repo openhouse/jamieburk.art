@@ -16,6 +16,28 @@ together.
 The About page uses this pattern once as professional context. It does not turn
 the projects into formal employment history or claim solo authorship.
 
+## 2007 Front-Page Source Deepening
+
+Darryl Levings' November 15, 2007, *Kansas City Star* feature, "In the
+name of art, go with the flow," adds contemporaneous detail to the river-raft
+record:
+
+- The article attributes the expedition idea to Jamie and identifies Jamie,
+  Libby Hendon, and Laura Mattingly as the three-person core crew.
+- The roughly 12-by-13-foot craft was built in three weeks from reclaimed
+  materials and propelled by two bicycles linked to a paddlewheel.
+- By publication, the crew had traveled more than 1,000 miles from Kansas City
+  into Louisiana.
+- Friends joined for stretches, people encountered along the route were invited
+  aboard, and Jamie connected the journey to cultural relationships among river
+  communities.
+- The crew resumed after a 51-day Vicksburg interruption involving local legal
+  help, community support, raft recovery, and technical modifications.
+
+The article is an in-progress report. It says the saltwater objective remained
+ahead and does not establish the later final landing point. The scanned pages
+and newspaper photography remain metadata-only pending rights review.
+
 NTER CHNG adds an interactive-media example to this lineage. The recovered
 project and exhibition records document a collaborative texting installation
 by Drew Bolton, Jamie Burkart, and Garrett Fuselier: visitors sent a text and
@@ -58,6 +80,8 @@ claim under active research rather than a discarded memory or promoted fact.
 
 - Shared responsibility and documentation inside Open House.
 - Construction, navigation, hosting, and public encounters around the raft.
+- The Kansas City Star's front-page raft image and interior crew, craft, and
+  river-infrastructure photographs as rights-gated visual leads.
 - Great Accommodations as an inhabited exhibition and public program.
 - NTER CHNG's gauze projection, audience interaction, and collaborative making.
 - Evidence of participation, facilitation, handoff, and multiple authorship.

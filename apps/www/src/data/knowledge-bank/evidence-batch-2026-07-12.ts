@@ -396,6 +396,20 @@ export const evidenceBatchRecords: EvidenceBatch = {
           locator: "Expedition background and participant sections",
           confidence: "high",
           renderCitation: true
+        },
+        {
+          sourceId: "SRC-KANSAS-CITY-STAR-RAFT-2007",
+          relationship: "corroborating",
+          supports: [
+            "Jamie's originating role",
+            "the three-person core crew",
+            "more than 1,000 miles from Kansas City into Louisiana",
+            "bicycle-powered reclaimed-material construction",
+            "participatory invitation and operational recovery"
+          ],
+          locator: "Front page and page A4 continuation",
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
@@ -410,8 +424,12 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "every participant consented to current photo publication"
       ],
       researchInquiryIds: ["INQ-RIVER-RAFT-ROUTE-2026"],
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Jamie Burkart", "Codex source review"]
+      reviewedAt: "2026-07-16",
+      reviewedBy: [
+        "Jamie Burkart",
+        "Codex source review",
+        "Codex Kansas City Star archival review"
+      ]
     },
     {
       id: "CLM-NYCAC-CIVIC-ADVOCACY-2017",
@@ -530,21 +548,25 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "What complete route, dates, stops, collaborators, and final landing point can be established for the raft expedition?",
       methods: [
         "Closely read the supplied Pitch and Charlotte Street sources.",
+        "Closely read the supplied Kansas City Star print scan as rendered pages and extracted text.",
         "Separated documented river segments from the remembered Gulf destination."
       ],
-      runAt: "2026-07-12",
+      runAt: "2026-07-16",
       resultStatus: "partially-recovered",
       findings: [
         "The Pitch documents Jamie originating the idea and an early Missouri stage.",
-        "Charlotte Street documents travel from Kansas City down the Missouri and Mississippi Rivers until the water tasted salty, four months on the river, and a 51-day Vicksburg delay."
+        "Charlotte Street documents travel from Kansas City down the Missouri and Mississippi Rivers until the water tasted salty, four months on the river, and a 51-day Vicksburg delay.",
+        "The Kansas City Star documents the three-person crew traveling from Kansas City into Louisiana after more than 1,000 miles while stating that the saltwater objective was still ahead and the endpoint remained unknown."
       ],
       limitations: [
         "The reviewed sources do not name the exact final landing point.",
+        "The November 2007 Kansas City Star article is an in-progress report and does not establish the later endpoint.",
         "The complete participant roster, route chronology, and return logistics require further archival research."
       ],
       sourceIds: [
         "SRC-RAFT-PITCH-2007",
-        "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"
+        "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009",
+        "SRC-KANSAS-CITY-STAR-RAFT-2007"
       ],
       publicSummary:
         "Public sources establish a collaborative raft journey from Kansas City down the Missouri and Mississippi Rivers; exact route and landing details remain under research."
