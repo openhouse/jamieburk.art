@@ -55,15 +55,20 @@ export const teamsArchiveProductionBatch20260714: {
       publicSafeSummary:
         "Recover public project credits for Claudette's Theater on Wheels without treating an unavailable cloud placeholder as a missing historical record.",
       projects: ["claudettes-theater-on-wheels"],
-      status: "decomposed",
-      disposition: "research-queued",
-      sourceIds: [],
+      status: "integrated",
+      disposition: "source-created",
+      sourceIds: [
+        "SRC-CLAUDETTES-MICHAEL-REES-PROJECT-PAGE-2022",
+        "SRC-CLAUDETTES-MAKE-US-VISIBLE-MUNICH-2022"
+      ],
       claimIds: [],
       researchTaskIds: ["TASK-CLAUDETTES-ROLE-SOURCE-RECOVERY"],
       notes: [
-        "A selected public-page capture remained a dataless cloud placeholder after a targeted materialization request; no role claim was created from adjacent pages that omitted Jamie."
+        "The first pass preserved the selected public-page capture as unavailable rather than nonexistent.",
+        "A July 15 follow-up recovered a live primary project page and a public event capture that credit Jamie's collaboration while preserving Michael Rees, Anne Dufy Burkart, Julia Fredenburg, Claudette, and the wider #MakeUsVisible context.",
+        "The role assertion is integrated as source-backed knowledge. Public projection remains an editorial decision after project-classification review."
       ],
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {
@@ -79,18 +84,20 @@ export const teamsArchiveProductionBatch20260714: {
       sourceIds: [
         "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
         "SRC-TEAMS-CRS-PROVENANCE-REDLINE-2026",
-        "SRC-TEAMS-CRS-PUBLIC-DATA-BRIEFS-2025-2026"
+        "SRC-TEAMS-CRS-PUBLIC-DATA-BRIEFS-2025-2026",
+        "SRC-TEAMS-CRS-90-DAY-ACTION-PLAN-2026"
       ],
       claimIds: [
         "CLM-CRS-SHARED-MEMORY-SYSTEM",
         "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
         "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT"
       ],
-      researchTaskIds: [],
+      researchTaskIds: ["TASK-CRS-90-DAY-IMPLEMENTATION-VERIFICATION"],
       notes: [
-        "Private strategy, legal-review context, stakeholder details, and vulnerable business information remain outside the repository."
+        "Private strategy, legal-review context, stakeholder details, and vulnerable business information remain outside the repository.",
+        "The 90-day action plan is retained as evidence of operating design, not proof that every proposed deliverable was adopted or completed."
       ],
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {
@@ -110,9 +117,10 @@ export const teamsArchiveProductionBatch20260714: {
       claimIds: ["CLM-SOURCE-BACKED-MEMORY-BOUNDED-SPRINT"],
       researchTaskIds: [],
       notes: [
-        "The public record preserves the reusable method, not collaborator identity, pricing, private company context, or unaccepted commercial outcomes."
+        "The public record preserves the reusable method, not collaborator identity, pricing, private company context, or unaccepted commercial outcomes.",
+        "The July 15 close reading retained the dossier as a routing map and did not upgrade quantified claims from summary or resume language."
       ],
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     }
   ],
@@ -160,6 +168,59 @@ export const teamsArchiveProductionBatch20260714: {
         "the current 300-plus gathering total",
         "the 20-plus resident-artist total",
         "attendance or comprehensive participant records"
+      ]
+    },
+    {
+      id: "SRC-CLAUDETTES-MICHAEL-REES-PROJECT-PAGE-2022",
+      title: "Claudette's Theatre on Wheels project page",
+      organization: "Michael Rees / ad hoc",
+      author: "Michael Rees",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://michaelrees.org/claudette",
+      preferredPublicUrl: "canonical",
+      publicCitation:
+        "Michael Rees, 'Claudette's Theatre on Wheels,' project page, accessed July 15, 2026.",
+      publicNote:
+        "The page credits the augmented-reality collaboration and separately credits the people who produced the source video with Claudette.",
+      supportsGenerally: [
+        "Jamie Burkart and Michael Rees as collaborators on the augmented-reality experience",
+        "the #MakeUsVisible Munich context",
+        "video produced by Jamie Burkart, Anne Dufy Burkart, and Julia Fredenburg with Claudette",
+        "video filmed in 2017"
+      ],
+      doesNotEstablish: [
+        "sole authorship by Jamie",
+        "sole authorship by Michael Rees",
+        "Jamie's authorship of every technical or artistic component",
+        "ownership of Claudette's life story"
+      ]
+    },
+    {
+      id: "SRC-CLAUDETTES-MAKE-US-VISIBLE-MUNICH-2022",
+      title: "#MakeUsVisible Munich event capture",
+      organization: "ARORA / XR Ensemble",
+      kind: "archived-web-capture",
+      visibility: "public-metadata-only",
+      preservationStatus: "archived",
+      capturedAt: "2026-01-08",
+      publicCitation:
+        "Archived public #MakeUsVisible Munich event page for 'Claudette's Theatre On Wheels,' reviewed July 15, 2026; local capture not published.",
+      publicNote:
+        "The capture preserves event dates, venue, artist credits, and a description of the short-video interaction without exposing local archive paths.",
+      supportsGenerally: [
+        "an October 1-31, 2022, Munich presentation",
+        "Residenz Theatre as the displayed venue",
+        "Michael Rees and Jamie Burkart as displayed artists",
+        "short clips activated through clickable tondos in the app"
+      ],
+      doesNotEstablish: [
+        "attendance or audience reach",
+        "sole authorship by either displayed artist",
+        "the division of every technical task",
+        "rights to republish the underlying audio or images"
       ]
     },
     {
@@ -235,6 +296,32 @@ export const teamsArchiveProductionBatch20260714: {
         "publication of the proposed indicators",
         "agency approval",
         "access to confidential tax or lease records"
+      ]
+    },
+    {
+      id: "SRC-TEAMS-CRS-90-DAY-ACTION-PLAN-2026",
+      title: "Fair Rent NYC and Commercial Rent Stabilization 90-day action plan",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-04-06",
+      publicCitation:
+        "Public-safe appraisal of Jamie Burkart's April 2026 Fair Rent NYC and Commercial Rent Stabilization 90-day action plan; private working artifact not published.",
+      publicNote:
+        "The appraisal preserves the operating design and explicit role boundaries while withholding names, strategy, contacts, and live-campaign details.",
+      supportsGenerally: [
+        "a role framed around shared public goods rather than sole movement ownership",
+        "a canonical join path and recurring room",
+        "a shared message kit and stewarded story bank",
+        "an implementation-readiness packet",
+        "a durable movement-memory and source-of-truth spine"
+      ],
+      doesNotEstablish: [
+        "coalition adoption of the plan",
+        "completion of every proposed deliverable",
+        "sole leadership by Jamie",
+        "consent to publish private campaign strategy or participant information"
       ]
     },
     {
@@ -314,6 +401,32 @@ export const teamsArchiveProductionBatch20260714: {
       reviewedBy
     },
     {
+      id: "AST-CLAUDETTES-AR-COLLABORATION",
+      sourceId: "SRC-CLAUDETTES-MICHAEL-REES-PROJECT-PAGE-2022",
+      project: "portfolio-archive",
+      assertion:
+        "Michael Rees's public project page credits Jamie Burkart and Michael Rees with collaborating on an augmented-reality experience for #MakeUsVisible Munich and credits Jamie Burkart, Anne Dufy Burkart, and Julia Fredenburg with Claudette on the source video.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: [],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
+      id: "AST-CLAUDETTES-MUNICH-EVENT",
+      sourceId: "SRC-CLAUDETTES-MAKE-US-VISIBLE-MUNICH-2022",
+      project: "portfolio-archive",
+      assertion:
+        "The archived public event page displays an October 1-31, 2022, Munich presentation at Residenz Theatre, credits Michael Rees and Jamie Burkart as artists, and describes short clips activated through clickable tondos in the app.",
+      relationship: "corroborates",
+      confidence: "high",
+      candidateClaimIds: [],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
       id: "AST-CRS-RUNNING-MEMORY-SYSTEM",
       sourceId: "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
       project: "fair-rent-nyc",
@@ -324,6 +437,19 @@ export const teamsArchiveProductionBatch20260714: {
       candidateClaimIds: ["CLM-CRS-SHARED-MEMORY-SYSTEM"],
       publicSafe: true,
       reviewedAt: "2026-07-14",
+      reviewedBy
+    },
+    {
+      id: "AST-CRS-90-DAY-SHARED-PUBLIC-GOODS",
+      sourceId: "SRC-TEAMS-CRS-90-DAY-ACTION-PLAN-2026",
+      project: "fair-rent-nyc",
+      assertion:
+        "Jamie's 90-day plan structures the work around a join path, recurring room, message kit, story bank, implementation-readiness packet, and durable shared memory while explicitly rejecting sole movement ownership.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: [],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {
@@ -624,7 +750,7 @@ export const teamsArchiveProductionBatch20260714: {
       question:
         "Which materialized public or collaborator-approved sources establish Jamie's contribution to Claudette's Theater on Wheels?",
       priority: "low",
-      status: "queued",
+      status: "completed",
       methodsPlanned: [
         "Retry targeted cloud materialization without downloading the entire private collection",
         "Recover public event and project credits",
@@ -636,11 +762,39 @@ export const teamsArchiveProductionBatch20260714: {
         "Recover Jamie's specific role from a public or approved source",
         "Preserve collaborator and project credit"
       ],
-      sourceIds: [],
+      sourceIds: [
+        "SRC-CLAUDETTES-MICHAEL-REES-PROJECT-PAGE-2022",
+        "SRC-CLAUDETTES-MAKE-US-VISIBLE-MUNICH-2022"
+      ],
       claimIds: [],
       publicSummary:
-        "Continue source recovery for Claudette's Theater on Wheels; no role claim is public until a materialized source establishes it.",
-      reviewedAt: "2026-07-14"
+        "Public sources now establish Jamie's bounded collaboration on Claudette's Theatre on Wheels while preserving the other artists, video producers, Claudette, and #MakeUsVisible context.",
+      reviewedAt: "2026-07-15"
+    },
+    {
+      id: "TASK-CRS-90-DAY-IMPLEMENTATION-VERIFICATION",
+      project: "fair-rent-nyc",
+      question:
+        "Which dated public or collaborator-approved records show which 90-day action-plan deliverables were adopted, completed, handed off, or revised?",
+      priority: "medium",
+      status: "queued",
+      methodsPlanned: [
+        "Compare the plan with later dated running minutes and public campaign outputs",
+        "Separate Jamie-authored artifacts from coalition decisions and partner-owned work",
+        "Seek collaborator confirmation for adoption and handoff claims",
+        "Verify public-facing deliverables without publishing private contacts, strategy, or participant records"
+      ],
+      successCriteria: [
+        "Map each proposed deliverable to adopted, completed, revised, deferred, or not recovered",
+        "Preserve collective decision-making and ownership",
+        "Promote only completed work with dated evidence",
+        "Keep private campaign details out of the public repository"
+      ],
+      sourceIds: ["SRC-TEAMS-CRS-90-DAY-ACTION-PLAN-2026"],
+      claimIds: [],
+      publicSummary:
+        "Treat the 90-day plan as operating-design evidence while researching dated implementation and handoff outcomes separately.",
+      reviewedAt: "2026-07-15"
     }
   ]
 };

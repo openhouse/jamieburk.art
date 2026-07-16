@@ -93,6 +93,10 @@ for the first complete citation pilot.
 Archive-production run records live in [runs](runs). The Google Drive pass is
 documented in
 [2026-07-14-google-drive-archive-production.md](runs/2026-07-14-google-drive-archive-production.md).
+The iCloud Teams close reading and its July 15 follow-up are documented in
+[2026-07-14-teams-archive-production.md](runs/2026-07-14-teams-archive-production.md)
+and
+[2026-07-15-teams-archive-production-followup.md](runs/2026-07-15-teams-archive-production-followup.md).
 The authenticated project-account pass is documented in
 [2026-07-14-social-account-production.md](runs/2026-07-14-social-account-production.md),
 and the complete CallNYC population pass is documented in

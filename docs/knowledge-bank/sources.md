@@ -28,6 +28,8 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public campaign domain.
 - NTER CHNG archived project site and surviving Vimeo project video.
 - America: Now and Here Kansas City archived visual-artists page.
+- Michael Rees's public Claudette's Theatre on Wheels project page and the
+  archived #MakeUsVisible Munich event listing.
 - Urbanhermit public-safe 434-record live-profile corpus and transformation
   manifest.
 - Music Hackathon / Music Community Lab's 2015 public WOW List attribution.
