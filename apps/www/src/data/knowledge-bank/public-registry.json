@@ -161,6 +161,26 @@
       ]
     },
     {
+      "id": "SRC-RIVER-PITCH-HUCK-FINN-2007",
+      "title": "When Artists Turn Huck Finn",
+      "organization": "The Pitch",
+      "author": "Eric Barton",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2007-08-09",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.thepitchkc.com/when-artists-turn-huck-finn/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Eric Barton, 'When Artists Turn Huck Finn,' The Pitch, August 9, 2007.",
+      "publicNote": "Contemporaneous reporting on the expedition's origin, early organization, and Missouri crossing.",
+      "doesNotEstablish": [
+        "the full route to the Gulf of Mexico",
+        "every participant's role",
+        "sole authorship of the collective expedition"
+      ]
+    },
+    {
       "id": "SRC-GREENE-HILL-COOP-QA-2017",
       "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
       "organization": "Greene Hill Food Co-op",
@@ -179,6 +199,27 @@
         "a founder title",
         "that the town hall changed city policy",
         "sole causation for Cabaret Law repeal"
+      ]
+    },
+    {
+      "id": "SRC-WLBT-RAFT-2007",
+      "title": "Rafters Beached On Mississippi River",
+      "organization": "WLBT",
+      "author": "Bert Case",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2007-09-25",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.wlbt.com/story/7123200/rafters-beached-on-mississippi-river/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Bert Case, 'Rafters Beached On Mississippi River,' WLBT, September 25, 2007.",
+      "publicNote": "Contemporaneous reporting during the expedition identifying Jamie as organizer, naming the three-person crew, and documenting more than one thousand river miles.",
+      "doesNotEstablish": [
+        "completion of the later route",
+        "sole authorship of the expedition",
+        "the Coast Guard's final disposition",
+        "every participant or supporter's contribution"
       ]
     },
     {
@@ -363,6 +404,26 @@
         "physical attendance for every invitation",
         "the 20-plus resident-artist figure",
         "Jamie's sole operation of every gathering"
+      ]
+    },
+    {
+      "id": "SRC-KCSTAR-RIVER-EXPEDITION-2007",
+      "title": "In the name of art, go with the flow",
+      "organization": "The Kansas City Star",
+      "author": "Darryl Levings",
+      "kind": "published-article",
+      "visibility": "public-metadata-only",
+      "preservationStatus": "archived",
+      "publishedAt": "2007-11-15",
+      "accessedAt": "2026-07-16",
+      "publicCitation": "Darryl Levings, \"In the name of art, go with the flow,\" The Kansas City Star, November 15, 2007, pp. A1, A4.",
+      "publicNote": "A participant-supplied scan was reviewed. No public article URL was recovered, and the copyrighted scan is not republished.",
+      "doesNotEstablish": [
+        "the later Gulf of Mexico arrival",
+        "sole authorship or sole construction by Jamie",
+        "the exact division of labor among the crew and supporters",
+        "a complete route log or participant list",
+        "measured audience, civic, or cultural outcomes"
       ]
     }
   ],
@@ -661,6 +722,65 @@
       ]
     },
     {
+      "id": "CLM-RIVER-EXPEDITION-ORIGIN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "In 2007, I originated \"Release Yourself onto the Water until it Tastes of Salt\" and carried it out with Libby Hendon and Laura Mattingly as a found-material, bicycle-powered river expedition from Kansas City. We invited people we met along the route to join the raft, treating the Missouri and Mississippi as lived places connecting cities and people.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCSTAR-RIVER-EXPEDITION-2007",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's origin role",
+            "named collective crew",
+            "found-material bicycle-powered construction",
+            "participatory invitation",
+            "cultural-connection purpose",
+            "adaptive implementation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WLBT-RAFT-2007",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's organizer role",
+            "named crew",
+            "more than one thousand miles in progress"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-RIVER-PITCH-HUCK-FINN-2007",
+          "relationship": "corroborating",
+          "supports": [
+            "origin of the expedition idea",
+            "Jamie's screening work",
+            "river and transportation purpose",
+            "collective Missouri crossing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit Libby Hendon and Laura Mattingly with Jamie as the three-person expedition crew.",
+        "Treat the Kansas City Star article as in-progress evidence through Louisiana, not proof of the later Gulf arrival.",
+        "Do not publish the participant-supplied newspaper scan without a separate rights decision."
+      ]
+    },
+    {
       "id": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -882,7 +1002,10 @@
       "surface": "/about",
       "sourceOrder": [
         "SRC-PITCH-NTER-CHNG-2010",
-        "SRC-VIMEO-NTER-CHNG-2011"
+        "SRC-VIMEO-NTER-CHNG-2011",
+        "SRC-KCSTAR-RIVER-EXPEDITION-2007",
+        "SRC-WLBT-RAFT-2007",
+        "SRC-RIVER-PITCH-HUCK-FINN-2007"
       ],
       "occurrences": [
         {
@@ -892,6 +1015,16 @@
           "sourceIds": [
             "SRC-PITCH-NTER-CHNG-2010",
             "SRC-VIMEO-NTER-CHNG-2011"
+          ]
+        },
+        {
+          "id": "river-participatory-expedition",
+          "claimId": "CLM-RIVER-EXPEDITION-ORIGIN",
+          "projection": "archive-note",
+          "sourceIds": [
+            "SRC-KCSTAR-RIVER-EXPEDITION-2007",
+            "SRC-WLBT-RAFT-2007",
+            "SRC-RIVER-PITCH-HUCK-FINN-2007"
           ]
         }
       ]

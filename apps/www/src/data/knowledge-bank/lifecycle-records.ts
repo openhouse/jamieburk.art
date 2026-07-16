@@ -608,26 +608,55 @@ export const lifecycleClaims = [
   {
     id: "CLM-RIVER-EXPEDITION-ORIGIN",
     project: "river-public-engagement",
-    internalClaim: "Jamie originated the idea for an experiential boat expedition and organized an earlier transportation-history screening that connected the project to Kansas City's relationship with the Missouri River.",
+    internalClaim: "Contemporary independent reporting attributes the 2007 river expedition's originating idea to Jamie and documents his work with Libby Hendon and Laura Mattingly on a found-material, bicycle-powered raft that invited people encountered along the route to join and treated the river as a lived cultural connection; earlier reporting connects the project to Jamie's transportation-history screening and Kansas City's relationship with the Missouri River.",
     status: "confirmed-with-boundary",
-    maturity: "public-ready",
-    intakeIds: ["INTAKE-RIVER-PITCH-2007"],
-    requiredSupportTags: ["expedition-concept-origin", "transportation-history-screening", "river-public-purpose"],
+    maturity: "projected",
+    intakeIds: ["INTAKE-RIVER-PITCH-2007", "INTAKE-KCSTAR-RIVER-EXPEDITION-2007", "INTAKE-WLBT-RAFT-2007"],
+    requiredSupportTags: [
+      "expedition-concept-origin",
+      "transportation-history-screening",
+      "river-public-purpose",
+      "river-expedition-crew-credit",
+      "river-found-material-construction",
+      "river-participant-invitation",
+      "river-cultural-connection-purpose"
+    ],
     composition: {
-      action: "Originated the expedition concept and organized a transportation-history screening.",
-      intendedEnd: "Reconnect public imagination about Kansas City with the Missouri River and its transportation history.",
-      usableResult: "An experiential expedition concept grounded in a concrete public-history program.",
-      audience: "Kansas City residents and cultural participants.",
-      collectiveCredit: "The concept and screening role are attributed to Jamie; the expedition was collective.",
-      causalBoundary: "The source establishes origin and early organization, not sole authorship or the complete later route."
+      action: "Originated the expedition concept and carried it out with Libby Hendon and Laura Mattingly on a found-material, bicycle-powered raft.",
+      intendedEnd: "Create a lived river experience that connected people and cities through the Missouri and Mississippi waterways.",
+      usableResult: "A working participatory expedition that began in Kansas City, passed one thousand river miles, invited people encountered along the route aboard, and adapted through major logistical interruption.",
+      audience: "River communities, cultural participants, and people invited into the journey along its route.",
+      collectiveCredit: "Contemporary reporting attributes the originating idea to Jamie and names Libby Hendon and Laura Mattingly as the three-person crew; it does not divide every construction, navigation, support, or adaptation task.",
+      causalBoundary: "The Kansas City Star documents the expedition in progress through Louisiana, not the later Gulf arrival or every contributor's role."
     },
-    projections: [],
-    evidence: [{ sourceId: "SRC-RIVER-PITCH-HUCK-FINN-2007", relationship: "direct-support", supports: ["origin of the expedition idea", "Jamie's screening work", "river and transportation purpose"], propositionIds: ["PROP-RIVER-PITCH-ORIGIN", "PROP-RIVER-PITCH-SCREENING"], confidence: "high", renderCitation: false }],
-    boundaries: ["Credit the expedition itself as collective work."],
-    antiClaims: ["Jamie alone built or completed the raft expedition.", "The Pitch article establishes the complete route to the Gulf of Mexico."],
+    projections: [
+      {
+        key: "archive-note",
+        text: "In 2007, I originated \"Release Yourself onto the Water until it Tastes of Salt\" and carried it out with Libby Hendon and Laura Mattingly as a found-material, bicycle-powered river expedition from Kansas City. We invited people we met along the route to join the raft, treating the Missouri and Mississippi as lived places connecting cities and people.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/about"]
+      }
+    ],
+    evidence: [
+      { sourceId: "SRC-KCSTAR-RIVER-EXPEDITION-2007", relationship: "direct-support", supports: ["Jamie's origin role", "named collective crew", "found-material bicycle-powered construction", "participatory invitation", "cultural-connection purpose", "adaptive implementation"], propositionIds: ["PROP-KCSTAR-RIVER-ORIGIN", "PROP-KCSTAR-RIVER-CREW", "PROP-KCSTAR-RIVER-CONSTRUCTION", "PROP-KCSTAR-RIVER-PARTICIPATION", "PROP-KCSTAR-RIVER-CULTURAL-CONNECTION", "PROP-KCSTAR-RIVER-ADAPTATION"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-WLBT-RAFT-2007", relationship: "corroborating", supports: ["Jamie's organizer role", "named crew", "more than one thousand miles in progress"], propositionIds: ["PROP-WLBT-JAMIE-ORGANIZER", "PROP-WLBT-COLLABORATORS", "PROP-WLBT-THOUSAND-MILES"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-RIVER-PITCH-HUCK-FINN-2007", relationship: "corroborating", supports: ["origin of the expedition idea", "Jamie's screening work", "river and transportation purpose", "collective Missouri crossing"], propositionIds: ["PROP-RIVER-PITCH-ORIGIN", "PROP-RIVER-PITCH-SCREENING", "PROP-RIVER-PITCH-CROSSING"], confidence: "high", renderCitation: true }
+    ],
+    boundaries: [
+      "Credit Libby Hendon and Laura Mattingly with Jamie as the three-person expedition crew.",
+      "Treat the Kansas City Star article as in-progress evidence through Louisiana, not proof of the later Gulf arrival.",
+      "Do not publish the participant-supplied newspaper scan without a separate rights decision."
+    ],
+    antiClaims: [
+      "Jamie alone built, operated, or completed the raft expedition.",
+      "The Kansas City Star article establishes the later Gulf of Mexico arrival.",
+      "The sources identify every expedition contributor or divide every task.",
+      "The project produced measured civic or cultural outcomes."
+    ],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-12",
-    reviewedBy: ["Codex public-source review"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex public-source review", "Jamie Burkart role and collective-credit clarification"]
   },
   {
     id: "CLM-RIVER-GREAT-ACCOMMODATIONS",
@@ -1017,9 +1046,18 @@ export const lifecycleProjectionDecisions = [
     claimId: "CLM-RIVER-EXPEDITION-ORIGIN",
     surface: "future-portfolio-composition",
     decision: "defer",
-    rationale: "The claim is public-ready, but the current job-application argument does not yet include a river-program case study.",
-    decidedAt: "2026-07-12",
-    reviewedBy: ["Codex editorial review"]
+    rationale: "Keep a full river-program case study deferred; the compact About projection is independently approved and cited.",
+    decidedAt: "2026-07-16",
+    reviewedBy: ["Codex editorial review", "Jamie Burkart"]
+  },
+  {
+    id: "DEC-RIVER-EXPEDITION-ORIGIN-PUBLISH-ABOUT",
+    claimId: "CLM-RIVER-EXPEDITION-ORIGIN",
+    surface: "/about",
+    decision: "publish",
+    rationale: "Contemporary independent reporting now supports a concise formation example that joins Jamie's agency, collective credit, participatory purpose, and implementation under real constraints.",
+    decidedAt: "2026-07-16",
+    reviewedBy: ["Codex editorial review", "Jamie Burkart"]
   },
   {
     id: "DEC-RIVER-GREAT-ACCOMMODATIONS-DEFER",

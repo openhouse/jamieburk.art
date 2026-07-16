@@ -75,7 +75,7 @@ test("researching claims cannot project", () => {
 test("context-only evidence cannot promote a lifecycle claim", () => {
   const bank = structuredClone(knowledgeBank);
   const claim = bank.claims.find((item) => item.id === "CLM-RIVER-EXPEDITION-ORIGIN");
-  claim.evidence[0].relationship = "context";
+  for (const evidence of claim.evidence) evidence.relationship = "context";
   const report = evaluateLifecycle({ suite, bank });
   assert.equal(report.results.find((item) => item.id === "claim-promotion-is-evidence-backed").passed, false);
 });
@@ -459,8 +459,10 @@ test("NTER CHNG preserves participatory behavior and every recovered collaborato
   assert.ok(publicSources.every((source) => source.canonicalUrl));
   assert.ok(claim.evidence.every((item) => item.renderCitation));
   const aboutPage = knowledgeBank.pages.find((page) => page.id === "about");
+  const occurrence = aboutPage.occurrences.find((item) => item.claimId === claim.id);
   assert.equal(aboutPage.surface, "/about");
-  assert.deepEqual(aboutPage.sourceOrder, claim.evidence.map((item) => item.sourceId));
+  assert.deepEqual(occurrence.sourceIds, claim.evidence.map((item) => item.sourceId));
+  assert.deepEqual(aboutPage.sourceOrder.slice(0, 2), claim.evidence.map((item) => item.sourceId));
 });
 
 test("NTER CHNG exhibition inclusion uses the official program record without overstating venue", () => {
@@ -2628,6 +2630,36 @@ test("Call Script participation lineage stays corroborated and research-routed",
   assert.equal(task.status, "open");
   assert.ok(task.nextActions.some((item) => /proof notes.*collaborator/i.test(item)));
   assert.ok(event.doesNotEstablish.some((item) => /445 physical attendees/i.test(item)));
+});
+
+test("Kansas City Star river accession promotes agency while preserving collective and route limits", () => {
+  const intake = knowledgeBank.intake.find((item) => item.id === "INTAKE-KCSTAR-RIVER-EXPEDITION-2007");
+  const source = knowledgeBank.sources.find((item) => item.id === "SRC-KCSTAR-RIVER-EXPEDITION-2007");
+  const reading = knowledgeBank.sourceReadings.find((item) => item.id === "READ-KCSTAR-RIVER-EXPEDITION-2007");
+  const claim = knowledgeBank.claims.find((item) => item.id === "CLM-RIVER-EXPEDITION-ORIGIN");
+  const gulfClaim = knowledgeBank.claims.find((item) => item.id === "CLM-RIVER-EXPEDITION-GULF-COMPLETION");
+  const decision = knowledgeBank.projectionDecisions.find((item) => item.id === "DEC-RIVER-EXPEDITION-ORIGIN-PUBLISH-ABOUT");
+  const about = knowledgeBank.pages.find((item) => item.id === "about");
+
+  assert.equal(intake.rawMaterialPolicy, "protected-outside-repo");
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.equal(source.publishedAt, "2007-11-15");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.equal(source.archiveUrl, undefined);
+  assert.equal(source.media.publicDisplayStatus, "metadata-only");
+  assert.equal(reading.status, "closely-read");
+  assert.equal(reading.propositions.length, 8);
+  assert.ok(reading.limitations.some((item) => /does not establish the later Gulf arrival/i.test(item)));
+
+  assert.equal(claim.maturity, "projected");
+  assert.match(claim.projections[0].text, /originated.*Libby Hendon and Laura Mattingly/i);
+  assert.ok(claim.evidence.some((item) => item.sourceId === source.id && item.renderCitation));
+  assert.ok(claim.boundaries.some((item) => /three-person expedition crew/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /alone built, operated, or completed/i.test(item)));
+  assert.ok(gulfClaim.evidence.some((item) => item.sourceId === source.id && /not the later Gulf arrival/i.test(item.publicNote)));
+  assert.equal(decision.surface, "/about");
+  assert.equal(decision.decision, "publish");
+  assert.ok(about.occurrences.some((item) => item.id === "river-participatory-expedition" && item.claimId === claim.id));
 });
 
 test("judge evidence and floors are enforced", () => {

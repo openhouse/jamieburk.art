@@ -208,3 +208,10 @@ aggregate-only ledger and protected close reading preserve source-discovery and
 operating-practice depth without publishing personal post text, people, URLs,
 media, relationships, privacy context, or interaction rows. Population-level
 engagement remains explicitly not recovered rather than zero.
+
+The
+[Kansas City Star river-expedition accession](research/kansas-city-star-river-expedition-2007.md)
+records a close reading of contemporaneous 2007 reporting, promotes a bounded
+river-origin claim to the About page, preserves Libby Hendon and Laura
+Mattingly's collective credit, and keeps the participant-supplied newspaper
+scan outside the repository.

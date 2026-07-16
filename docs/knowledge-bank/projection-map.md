@@ -110,6 +110,20 @@ corroborated rather than public-ready. The planning artifact makes the breadth
 of implementation work visible, but a future public accomplishment claim needs
 after-the-fact execution evidence and collaborator-specific credit.
 
+## River Expedition
+
+Project `CLM-RIVER-EXPEDITION-ORIGIN` on `/about` as a compact, source-backed
+formation example. The composition puts Jamie's documented origin role first,
+names Libby Hendon and Laura Mattingly as the expedition crew with him, and
+connects concept, physical implementation, participation, and adaptation under
+real constraints. The Kansas City Star source remains metadata-only; WLBT and
+The Pitch provide public corroboration.
+
+Do not use the Kansas City Star article to claim the later Gulf arrival. Keep
+that outcome attached to `CLM-RIVER-EXPEDITION-GULF-COMPLETION` and its
+separate retrospective source. Keep a full river-program case study deferred
+until the public argument needs that additional depth.
+
 ## NYC Artist Coalition Government Interface
 
 Keep `CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017` and

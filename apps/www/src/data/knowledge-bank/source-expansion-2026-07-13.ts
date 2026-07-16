@@ -223,7 +223,7 @@ export const sourceExpansionIntake = [
     entityIds: ["ENT-RIVER-PUBLIC-ENGAGEMENT"],
     disposition: "source-created",
     sourceIds: ["SRC-WLBT-RAFT-2007"],
-    claimIds: ["CLM-RIVER-EXPEDITION-ORGANIZER-2007", "CLM-RIVER-EXPEDITION-GULF-COMPLETION"],
+    claimIds: ["CLM-RIVER-EXPEDITION-ORIGIN", "CLM-RIVER-EXPEDITION-ORGANIZER-2007", "CLM-RIVER-EXPEDITION-GULF-COMPLETION"],
     researchTaskIds: [],
     rawMaterialPolicy: "public-source-only"
   },
@@ -941,7 +941,7 @@ export const sourceExpansionClaims = [
     internalClaim: "Independent reporting says the collective raft expedition reached the Gulf of Mexico four months after leaving Kansas City; contemporaneous reporting documents the crew more than one thousand miles into the journey.",
     status: "confirmed-with-boundary",
     maturity: "public-ready",
-    intakeIds: ["INTAKE-PITCH-GREAT-ACCOMMODATIONS-2009", "INTAKE-WLBT-RAFT-2007"],
+    intakeIds: ["INTAKE-PITCH-GREAT-ACCOMMODATIONS-2009", "INTAKE-WLBT-RAFT-2007", "INTAKE-KCSTAR-RIVER-EXPEDITION-2007"],
     requiredSupportTags: ["river-gulf-completion", "river-four-month-duration", "river-thousand-miles-in-progress"],
     composition: {
       action: "Helped carry a collective, bicycle-powered raft expedition from Kansas City to the Gulf of Mexico.",
@@ -954,10 +954,11 @@ export const sourceExpansionClaims = [
     projections: [],
     evidence: [
       { sourceId: "SRC-PITCH-GREAT-ACCOMMODATIONS-2009", relationship: "direct-support", supports: ["Gulf completion", "four-month duration", "collective expedition"], propositionIds: ["PROP-PITCH-GULF-COMPLETION"], confidence: "high", renderCitation: false },
-      { sourceId: "SRC-WLBT-RAFT-2007", relationship: "corroborating", supports: ["more than one thousand miles in progress", "named crew context"], propositionIds: ["PROP-WLBT-THOUSAND-MILES", "PROP-WLBT-COLLABORATORS"], confidence: "high", renderCitation: false }
+      { sourceId: "SRC-WLBT-RAFT-2007", relationship: "corroborating", supports: ["more than one thousand miles in progress", "named crew context"], propositionIds: ["PROP-WLBT-THOUSAND-MILES", "PROP-WLBT-COLLABORATORS"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-KCSTAR-RIVER-EXPEDITION-2007", relationship: "corroborating", supports: ["more than one thousand miles in progress", "Kansas City departure", "named crew context"], propositionIds: ["PROP-KCSTAR-RIVER-IN-PROGRESS-ROUTE", "PROP-KCSTAR-RIVER-CREW"], publicNote: "This contemporaneous article documents the journey through Louisiana, not the later Gulf arrival.", confidence: "high", renderCitation: false }
     ],
     boundaries: ["Use collective credit and retain uncertainty about the exact final landing point and complete support network."],
-    antiClaims: ["Jamie completed the expedition alone.", "The sources provide a complete route log or contribution ledger.", "The in-progress WLBT report itself proves later Gulf arrival."],
+    antiClaims: ["Jamie completed the expedition alone.", "The sources provide a complete route log or contribution ledger.", "The in-progress WLBT and Kansas City Star reports themselves prove later Gulf arrival."],
     researchInquiryIds: [],
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex public-source review"]
@@ -968,7 +969,7 @@ export const sourceExpansionClaims = [
     internalClaim: "Contemporaneous WLBT reporting identified Jamie as organizer of the three-person river expedition during its 2007 journey.",
     status: "confirmed-with-boundary",
     maturity: "public-ready",
-    intakeIds: ["INTAKE-WLBT-RAFT-2007"],
+    intakeIds: ["INTAKE-WLBT-RAFT-2007", "INTAKE-KCSTAR-RIVER-EXPEDITION-2007"],
     requiredSupportTags: ["river-expedition-organizer", "river-expedition-crew-credit"],
     composition: {
       action: "Organized a three-person river expedition and continued it through a major logistical interruption.",
@@ -979,7 +980,10 @@ export const sourceExpansionClaims = [
       causalBoundary: "Organizer is not sole creator or sole operator; the report does not enumerate every supporter or later participant."
     },
     projections: [],
-    evidence: [{ sourceId: "SRC-WLBT-RAFT-2007", relationship: "direct-support", supports: ["organizer role", "named expedition crew"], propositionIds: ["PROP-WLBT-JAMIE-ORGANIZER", "PROP-WLBT-COLLABORATORS"], confidence: "high", renderCitation: false }],
+    evidence: [
+      { sourceId: "SRC-WLBT-RAFT-2007", relationship: "direct-support", supports: ["organizer role", "named expedition crew"], propositionIds: ["PROP-WLBT-JAMIE-ORGANIZER", "PROP-WLBT-COLLABORATORS"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-KCSTAR-RIVER-EXPEDITION-2007", relationship: "corroborating", supports: ["Jamie's originating idea", "named three-person crew", "participatory purpose"], propositionIds: ["PROP-KCSTAR-RIVER-ORIGIN", "PROP-KCSTAR-RIVER-CREW", "PROP-KCSTAR-RIVER-PARTICIPATION"], confidence: "high", renderCitation: false }
+    ],
     boundaries: ["Keep organizer credit alongside named crew and broader collective-credit limits."],
     antiClaims: ["Jamie alone designed, built, operated, or completed the expedition.", "The report names every person who contributed to the journey."],
     researchInquiryIds: [],

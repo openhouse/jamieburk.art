@@ -31,6 +31,7 @@ test("multi-source occurrences preserve editorial order", () => {
 test("structured citations extend across About and five public case studies", () => {
   assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["about", "callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist", "196-sunday-dinner"]);
   assert.deepEqual(resolveCitationOccurrence("about", "nter-chng-participatory-installation").sources.map((item) => item.number), [1, 2]);
+  assert.deepEqual(resolveCitationOccurrence("about", "river-participatory-expedition").sources.map((item) => item.number), [3, 4, 5]);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "public-storefront").sources[0].number, 1);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "online-sales-share-2016").sources[0].number, 2);
   assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 1);
@@ -64,6 +65,7 @@ test("private evidence stays absent while metadata-only notes expose no archive"
   assert.ok(publicCitationRegistry.sources.every((source) => ["public", "public-metadata-only"].includes(source.visibility)));
   const metadataOnly = publicCitationRegistry.sources.filter((source) => source.visibility === "public-metadata-only");
   assert.deepEqual(metadataOnly.map((source) => source.id).sort(), [
+    "SRC-KCSTAR-RIVER-EXPEDITION-2007",
     "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021",
     "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22"
   ]);
@@ -72,7 +74,7 @@ test("private evidence stays absent while metadata-only notes expose no archive"
     assert.equal(source.archiveUrl, undefined);
     assert.equal(source.assetUrl, undefined);
   }
-  assert.doesNotMatch(serialized, /ARCHIVE-WOWLIST-DATABASE-2017|ARCHIVE-SUNDAY-DINNER-OPERATIONS-2012-2021/);
+  assert.doesNotMatch(serialized, /ARCHIVE-WOWLIST-DATABASE-2017|ARCHIVE-SUNDAY-DINNER-OPERATIONS-2012-2021|ARCHIVE-KCSTAR-RIVER-2007-001/);
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

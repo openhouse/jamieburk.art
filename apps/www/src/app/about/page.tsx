@@ -54,6 +54,19 @@ export default function AboutPage() {
             questions still guide how I approach civic tools, community
             infrastructure, and technical implementation.
           </p>
+          <Claim
+            as="p"
+            claimId="CLM-RIVER-EXPEDITION-ORIGIN"
+            projection="archive-note"
+            surface="/about"
+            pageId="about"
+            occurrenceId="river-participatory-expedition"
+          />
+          <p>
+            That mix of concept, field operations, public participation, and
+            adaptation under real constraints is part of the same
+            implementation practice I bring to teams now.
+          </p>
           <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech

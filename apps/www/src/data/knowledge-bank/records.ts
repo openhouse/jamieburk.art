@@ -194,10 +194,15 @@ import {
   participationLineageResearchTasks,
   participationLineageSources
 } from "./participation-lineage-2026-07-15.ts";
+import {
+  kansasCityStarRiverIntake,
+  kansasCityStarRiverReadings,
+  kansasCityStarRiverSources
+} from "./kansas-city-star-river-expedition-2026-07-16.ts";
 
 const knowledgeBankInput = {
   entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...teamsArchiveDeepeningEntities, ...nterChngAmericaNowHereEntities, ...nycArtCGovernmentInterfaceEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities, ...kcTownHallPhaseOneEntities, ...participationLineageEntities],
-  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake, ...kcTownHallPhaseOneIntake, ...participationLineageIntake],
+  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake, ...kcTownHallPhaseOneIntake, ...participationLineageIntake, ...kansasCityStarRiverIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -414,7 +419,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostSources,
     ...jamieFacebookPostSources,
     ...kcTownHallPhaseOneSources,
-    ...participationLineageSources
+    ...participationLineageSources,
+    ...kansasCityStarRiverSources
   ],
   claims: [
     {
@@ -676,7 +682,7 @@ const knowledgeBankInput = {
     ...kcTownHallPhaseOneClaims,
     ...participationLineageClaims
   ],
-  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...nterChngAmericaNowHereReadings, ...nycArtCGovernmentInterfaceReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings, ...kcTownHallPhaseOneReadings, ...participationLineageReadings],
+  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...nterChngAmericaNowHereReadings, ...nycArtCGovernmentInterfaceReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings, ...kcTownHallPhaseOneReadings, ...participationLineageReadings, ...kansasCityStarRiverReadings],
   researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...teamsArchiveDeepeningResearchTasks, ...nterChngAmericaNowHereResearchTasks, ...nycArtCGovernmentInterfaceResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks, ...kcTownHallPhaseOneResearchTasks, ...participationLineageResearchTasks],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -702,13 +708,29 @@ const knowledgeBankInput = {
     {
       id: "about",
       surface: "/about",
-      sourceOrder: ["SRC-PITCH-NTER-CHNG-2010", "SRC-VIMEO-NTER-CHNG-2011"],
+      sourceOrder: [
+        "SRC-PITCH-NTER-CHNG-2010",
+        "SRC-VIMEO-NTER-CHNG-2011",
+        "SRC-KCSTAR-RIVER-EXPEDITION-2007",
+        "SRC-WLBT-RAFT-2007",
+        "SRC-RIVER-PITCH-HUCK-FINN-2007"
+      ],
       occurrences: [
         {
           id: "nter-chng-participatory-installation",
           claimId: "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010",
           projection: "archive-note",
           sourceIds: ["SRC-PITCH-NTER-CHNG-2010", "SRC-VIMEO-NTER-CHNG-2011"]
+        },
+        {
+          id: "river-participatory-expedition",
+          claimId: "CLM-RIVER-EXPEDITION-ORIGIN",
+          projection: "archive-note",
+          sourceIds: [
+            "SRC-KCSTAR-RIVER-EXPEDITION-2007",
+            "SRC-WLBT-RAFT-2007",
+            "SRC-RIVER-PITCH-HUCK-FINN-2007"
+          ]
         }
       ]
     },

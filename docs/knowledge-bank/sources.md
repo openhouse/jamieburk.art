@@ -42,6 +42,27 @@ personal or financial material.
 
 AI-assisted archival review is not a human collaborator testimonial.
 
+## Kansas City Star River Expedition Record
+
+The July 16, 2026 pass adds a close reading of Darryl Levings's front-page
+Kansas City Star article, "In the name of art, go with the flow," published
+November 15, 2007. A participant-supplied scan is represented as a
+public-metadata-only source: the citation, page locations, bounded source note,
+and derived propositions are public, while the copyrighted pages and protected
+archive locator remain outside the repository.
+
+The article independently supports Jamie's origin role, the three-person crew
+credit shared with Libby Hendon and Laura Mattingly, the found-material and
+bicycle-powered craft, the participatory invitation, the cultural-connection
+purpose, more than one thousand miles of in-progress travel, and collective
+adaptation through regulatory and logistical interruption. It documents the
+journey through Louisiana on the publication date; it does not establish the
+later Gulf arrival, sole authorship, a complete contribution ledger, or
+measured civic or cultural outcomes.
+
+See
+`docs/knowledge-bank/research/kansas-city-star-river-expedition-2007.md`.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for
