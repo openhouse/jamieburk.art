@@ -77,6 +77,17 @@ requireValue(
     thresholds.chad_lens_median_minimum <= suite.score_scale.maximum,
   "Chad Lens median threshold must fit the score scale"
 );
+for (const [key, label] of [
+  ["margaret_morse_lens_median_minimum", "Margaret Morse Lens"],
+  ["warren_sack_lens_median_minimum", "Warren Sack Lens"]
+]) {
+  requireValue(
+    Number.isInteger(thresholds[key]) &&
+      thresholds[key] >= suite.score_scale.minimum &&
+      thresholds[key] <= suite.score_scale.maximum,
+    `${label} median threshold must fit the score scale`
+  );
+}
 requireValue(thresholds.all_blocking_evals_must_pass === true,
   "all blocking evals must pass");
 requireValue(thresholds.human_production_approval_required === true,

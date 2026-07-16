@@ -24,6 +24,8 @@
     "individual_score_minimum": 3,
     "blind_reader_median_minimum": 4,
     "chad_lens_median_minimum": 4,
+    "margaret_morse_lens_median_minimum": 4,
+    "warren_sack_lens_median_minimum": 4,
     "all_blocking_evals_must_pass": true,
     "holdout_regression_must_pass": true,
     "human_production_approval_required": true
@@ -99,7 +101,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 9,
+      "weight": 7,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -119,7 +121,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 6,
+      "weight": 4,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -334,7 +336,7 @@
       "category": "hiring_legibility",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 10,
+      "weight": 8,
       "source_basis": "Public-safe synthesis of Chad Berkowitz's February and June 2026 resume-review guidance. The private review files are not part of the eval bundle or public repository.",
       "inputs": [
         "homepage",
@@ -367,6 +369,87 @@
         "understatement and overstatement findings"
       ],
       "remediation_hint": "Reduce the reader's burden: name Jamie's action, the work's purpose, and the usable result in familiar language; strengthen a weak contribution verb only as far as the knowledge bank supports."
+    },
+    {
+      "id": "PR-015",
+      "title": "Prof. Margaret Morse lens: inhabited systems",
+      "category": "practice_lineage",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 3,
+      "source_basis": "Public-safe synthesis grounded in contemporaneous reporting on Open House and protected UCSC educational records reviewed for rubric design only. The raw records, private correspondence, and unapproved testimonial text are excluded from the repository and public site.",
+      "inputs": [
+        "homepage",
+        "about page",
+        "work index",
+        "WOWList case study",
+        "Sunday Dinner / 196 case study",
+        "FairRentNYC / NYC Artist Coalition case study",
+        "public Open House article",
+        "source-bounded knowledge bank"
+      ],
+      "procedure": [
+        "Give three fresh judges the rendered candidate and no implementation discussion.",
+        "Ask whether the portfolio reduces Jamie to organizational utility or preserves a visible threshold where artistic, civic, technical, and social practices remain connected.",
+        "Ask each judge to trace at least three current practices to evidence of experimentation, hospitality, atmosphere or place, participation, attention, documentation, embodiment, care, or the ways people inhabit systems.",
+        "Verify that the lineage is legible within two clicks of the homepage and supports, rather than obscures, the target professional role.",
+        "Audit collective credit, participant privacy, protected educational records, and testimonial use; reject romanticized vulnerability or unapproved private-source projection."
+      ],
+      "pass_criteria": [
+        "A visible surface within two clicks of the homepage connects the artistic, civic, technical, and social dimensions of Jamie's practice without turning the portfolio into an artist biography.",
+        "At least three public-safe project continuities show how experimentation, participation, attention, documentation, care, place, or hospitality shape the operating systems Jamie builds.",
+        "Readers can explain why Jamie's systems differ from conventional administration: people must be able to inhabit, influence, remember, and continue them.",
+        "Collective work remains collectively credited, participant privacy is preserved, and no protected educational record, private correspondence, or unapproved testimonial is quoted or projected.",
+        "The median score across three judges is 4, and no judge scores below 3."
+      ],
+      "evidence_required": [
+        "three independent Margaret Morse Lens scorecards",
+        "project-continuity trace",
+        "two-click path and rendered screenshot",
+        "collective-credit and privacy audit",
+        "protected-source exclusion check"
+      ],
+      "remediation_hint": "Restore one concise, evidence-backed threshold where experimentation, participation, attention, place, and care explain the operating practice; do not publish private praise to manufacture authority."
+    },
+    {
+      "id": "PR-016",
+      "title": "Prof. Warren Sack lens: recursive social systems",
+      "category": "systems_method",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 3,
+      "source_basis": "Public-safe synthesis of Jamie's public project record and protected UCSC educational records reviewed for rubric design only. Dated coursework remains contextual lineage, not public proof of present proficiency, production deployment, disciplinary invention, or sole authorship.",
+      "inputs": [
+        "homepage",
+        "about page",
+        "technical operations page",
+        "WOWList case study",
+        "CallNYC case study",
+        "Source-Backed Team Memory lab",
+        "source-bounded knowledge bank"
+      ],
+      "procedure": [
+        "Give three fresh judges the rendered candidate and no implementation discussion.",
+        "Ask each judge to reconstruct Jamie's recurring sequence: observe relationships, model a system, prototype an interface, test it through social or collective use, and document a handoff.",
+        "Require each judge to trace the sequence through at least three current public-safe projects and identify where recursive systems thinking, social structure, information architecture, or prototype-to-public-system continuity is visible.",
+        "Verify that one public surface names the method plainly while project pages supply inspectable proof rather than abstract systems language alone.",
+        "Audit the distinction between dated coursework and present role evidence; reject invention of structural equivalence, peer-reviewed research, production deployment, sole authorship, and current Max/Jitter proficiency."
+      ],
+      "pass_criteria": [
+        "At least three current public-safe projects make the observation-to-model-to-interface-to-social-use-to-documentation sequence reconstructable.",
+        "One visible surface within two clicks of the homepage states the recursive method in plain language and links to project evidence.",
+        "Readers can connect social structure and information architecture to usable interfaces, collective participation, learning, and handoffs rather than seeing disconnected outputs or a tool list.",
+        "Dated coursework appears only as bounded lineage or remains held in the knowledge bank; the public site does not claim disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency from protected records.",
+        "The median score across three judges is 4, and no judge scores below 3."
+      ],
+      "evidence_required": [
+        "three independent Warren Sack Lens scorecards",
+        "three-project systems-sequence trace",
+        "two-click path and rendered screenshot",
+        "coursework-versus-current-proof audit",
+        "anti-overclaim findings"
+      ],
+      "remediation_hint": "Name the recurring systems sequence once, then let three bounded project examples show how relationship models become interfaces, collective use, learning, and durable handoffs."
     }
   ]
 }
