@@ -136,6 +136,16 @@ mission patterns, bounded dashboard signals, and open stakeholder-engagement
 question without publishing raw post bodies, personal engagement data, or
 authenticated state.
 
+The authenticated [personal Facebook post pass](runs/2026-07-15-jamie-personal-facebook-posts-full-population.md)
+accounts for all 1,243 unique records returned across 621 pages after applying
+Facebook's **Posted by: You** filter. Its [aggregate controls](data/jamie-personal-facebook-post-controls.json)
+and [project note](projects/jamie-personal-facebook-posts.md) preserve the
+December 2006-June 2022 chronology, 181 overlapping mission-research routes,
+549 normalized source leads, and six governed public specimens while keeping
+the record-level personal corpus protected. Stakeholder references remain
+outgoing routes rather than incoming engagement, and no website projection was
+selected.
+
 The personal [@urbanhermit full-population pass](runs/2026-07-15-urbanhermit-x-full-population.md)
 reconciles all 434 records represented by the live profile counter. Its
 [public-safe corpus](corpora/urbanhermit-x-full-population-2026-07-15.json),

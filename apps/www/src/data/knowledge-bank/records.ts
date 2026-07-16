@@ -17,6 +17,7 @@ import { nycacFacebookPostsFullPopulationBatch20260715 } from "./batches/nycac-f
 import { personalWowListFacebookEventsFullPopulationBatch20260715 } from "./batches/personal-wowlist-facebook-events-full-population-2026-07-15.ts";
 import { wowListFacebookPostsFullPopulationBatch20260715 } from "./batches/wowlist-facebook-posts-full-population-2026-07-15.ts";
 import { kcSpacesFundFacebookPostsFullPopulationBatch20260715 } from "./batches/kcspacesfund-facebook-posts-full-population-2026-07-15.ts";
+import { jamiePersonalFacebookPostsFullPopulationBatch20260715 } from "./batches/jamie-personal-facebook-posts-full-population-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -242,6 +243,7 @@ const knowledgeBankInput = {
     ...personalWowListFacebookEventsFullPopulationBatch20260715.intake,
     ...wowListFacebookPostsFullPopulationBatch20260715.intake,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.intake,
+    ...jamiePersonalFacebookPostsFullPopulationBatch20260715.intake,
     ...nterChngArchiveBatch20260715.intake
   ],
   sources: [
@@ -494,6 +496,7 @@ const knowledgeBankInput = {
     ...personalWowListFacebookEventsFullPopulationBatch20260715.sources,
     ...wowListFacebookPostsFullPopulationBatch20260715.sources,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.sources,
+    ...jamiePersonalFacebookPostsFullPopulationBatch20260715.sources,
     ...nterChngArchiveBatch20260715.sources
   ],
   sourceAssertions: [
@@ -694,6 +697,7 @@ const knowledgeBankInput = {
     ...personalWowListFacebookEventsFullPopulationBatch20260715.sourceAssertions,
     ...wowListFacebookPostsFullPopulationBatch20260715.sourceAssertions,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.sourceAssertions,
+    ...jamiePersonalFacebookPostsFullPopulationBatch20260715.sourceAssertions,
     ...nterChngArchiveBatch20260715.sourceAssertions
   ],
   claims: [
@@ -824,17 +828,20 @@ const knowledgeBankInput = {
     {
       id: "CLM-WATER-GULF-ROUTE",
       project: "waterway-participation",
-      internalClaim: "Jamie recalls a raft journey from Kansas City toward the Gulf of Mexico; the reviewed public source does not yet establish the complete route.",
-      status: "inference",
-      maturity: "research-needed",
+      internalClaim: "Independent follow-up reporting states that Jamie and the collaborative raft crew reached the Gulf of Mexico four months after departing Kansas City.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
       projectionEligibility: "hold",
       collectiveWork: true,
-      projections: [{ key: "archive-note", text: "Research is underway on the expedition's complete route and later phases.", status: "hold", citationRequired: false, surfaces: [] }],
-      evidence: [{ sourceId: "SRC-WATER-PITCH-HUCK-FINN-2007", relationship: "supports-boundary", supports: ["the article documents the Missouri River expedition but not the complete recollected route"], confidence: "high", renderCitation: false }],
-      boundaries: ["Treat the route as a recollection until route records, contemporaneous reporting, or participant testimony corroborate it."],
-      antiClaims: ["The Pitch confirms a completed Kansas City-to-Gulf journey", "Jamie completed the journey alone"],
+      projections: [{ key: "archive-note", text: "Independent reporting says Jamie and the collaborative raft crew reached the Gulf of Mexico four months after leaving Kansas City.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [
+        { sourceId: "SRC-WATER-PITCH-HUCK-FINN-2007", relationship: "context", supports: ["the expedition's concept, departure context, and collaborative character"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-WATERWAYS-PITCH-GULF-2009-09-03", relationship: "direct-support", supports: ["Gulf of Mexico terminus", "four-month duration", "collaborative crew"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["The reporting establishes the terminus and duration, not every participant, stop, or route segment.", "Credit the expedition and journey as collective work."],
+      antiClaims: ["Jamie completed the journey alone", "The reviewed sources establish every route segment or participant contribution"],
       researchInquiryIds: [],
-      reviewedAt: "2026-07-12",
+      reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
@@ -1079,6 +1086,7 @@ const knowledgeBankInput = {
     ...personalWowListFacebookEventsFullPopulationBatch20260715.claims,
     ...wowListFacebookPostsFullPopulationBatch20260715.claims,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.claims,
+    ...jamiePersonalFacebookPostsFullPopulationBatch20260715.claims,
     ...nterChngArchiveBatch20260715.claims
   ],
   researchTasks: [
@@ -1087,13 +1095,13 @@ const knowledgeBankInput = {
       project: "waterway-participation",
       question: "What route and phases of the raft expedition can contemporaneous records and participant accounts establish?",
       priority: "medium",
-      status: "queued",
+      status: "in-progress",
       methodsPlanned: ["Search contemporaneous press and project sites", "Review public-safe expedition records", "Request bounded participant corroboration"],
       successCriteria: ["Establish route endpoints and dates with cited evidence", "Separate planned, attempted, and completed segments", "Record collective participant credit"],
-      sourceIds: ["SRC-WATER-PITCH-HUCK-FINN-2007"],
+      sourceIds: ["SRC-WATER-PITCH-HUCK-FINN-2007", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
       claimIds: ["CLM-WATER-GULF-ROUTE"],
-      publicSummary: "Research the expedition's complete route without extending the existing article beyond what it reports.",
-      reviewedAt: "2026-07-12"
+      publicSummary: "Independent follow-up reporting establishes that the collaborative crew reached the Gulf of Mexico after four months; the complete stop-by-stop route remains outside the claim.",
+      reviewedAt: "2026-07-15"
     },
     {
       id: "TASK-NAC-CREATION-ROLE",
@@ -1212,6 +1220,7 @@ const knowledgeBankInput = {
     ...personalWowListFacebookEventsFullPopulationBatch20260715.researchTasks,
     ...wowListFacebookPostsFullPopulationBatch20260715.researchTasks,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.researchTasks,
+    ...jamiePersonalFacebookPostsFullPopulationBatch20260715.researchTasks,
     ...nterChngArchiveBatch20260715.researchTasks
   ],
   researchInquiries: [
@@ -1244,6 +1253,7 @@ const knowledgeBankInput = {
     ...personalWowListFacebookEventsFullPopulationBatch20260715.researchInquiries,
     ...wowListFacebookPostsFullPopulationBatch20260715.researchInquiries,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.researchInquiries,
+    ...jamiePersonalFacebookPostsFullPopulationBatch20260715.researchInquiries,
     ...nterChngArchiveBatch20260715.researchInquiries
   ],
   corrections: [
