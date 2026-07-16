@@ -1318,6 +1318,25 @@ export function validateKnowledgeIntake() {
   if (!intakeIdSet.has("INTAKE-PROJECT-SOCIAL-SOURCE-LEADS-2026")) {
     socialMediaProductionErrors.push("Missing project social source-lead staging intake");
   }
+  const selectedSocialIntake = knowledgeBank.intakes.find(
+    ({ id }) => id === "INTAKE-PROJECT-SOCIAL-ACCOUNT-ARCHIVE-2026"
+  );
+  const socialSourceLeadIntake = knowledgeBank.intakes.find(
+    ({ id }) => id === "INTAKE-PROJECT-SOCIAL-SOURCE-LEADS-2026"
+  );
+  const claimLinkedSourceIds = new Set(
+    knowledgeBank.claims.flatMap((claim) => claim.evidence.map(({ sourceId }) => sourceId))
+  );
+  if (
+    selectedSocialIntake?.claimIds.some((claimId) => claimById.get(claimId)?.status === "disallowed")
+  ) {
+    socialMediaProductionErrors.push("Selected social intake includes a disallowed claim");
+  }
+  if (
+    socialSourceLeadIntake?.sourceIds.some((sourceId) => claimLinkedSourceIds.has(sourceId))
+  ) {
+    socialMediaProductionErrors.push("Metadata-only social source leads include claim-linked evidence");
+  }
   if (!intakeIdSet.has("INTAKE-WOWLIST-FULL-POPULATION-2026")) {
     socialMediaProductionErrors.push("Missing WOW List full-population archival intake");
   }

@@ -5,6 +5,7 @@ import type {
   SocialAccountRecord,
   SourceRecord
 } from "./schema.ts";
+import { wowListFullPopulationClaimRecords20260715 } from "./wowlist-x-full-population-2026-07-15.ts";
 
 const reviewedAt = "2026-07-14";
 
@@ -791,9 +792,22 @@ export const socialMediaResearchInquiries20260714 = [
   }
 ] satisfies ResearchInquiry[];
 
-const decomposedSocialSourceIds = [
+const claimLinkedSocialSourceIds = [
   ...new Set(
-    socialMediaClaimRecords20260714.flatMap((claim) =>
+    [
+      ...socialMediaClaimRecords20260714,
+      ...wowListFullPopulationClaimRecords20260715
+    ].flatMap((claim) => claim.evidence.map(({ sourceId }) => sourceId))
+  )
+];
+
+const selectedSocialClaims = socialMediaClaimRecords20260714.filter(
+  ({ status }) => status !== "disallowed"
+);
+
+const selectedSocialSourceIds = [
+  ...new Set(
+    selectedSocialClaims.flatMap((claim) =>
       claim.evidence.map(({ sourceId }) => sourceId)
     )
   )
@@ -801,7 +815,7 @@ const decomposedSocialSourceIds = [
 
 const metadataOnlySocialSourceIds = socialMediaSourceRecords20260714
   .map(({ id }) => id)
-  .filter((sourceId) => !decomposedSocialSourceIds.includes(sourceId));
+  .filter((sourceId) => !claimLinkedSocialSourceIds.includes(sourceId));
 
 export const socialMediaIntakeRecords20260714 = [
   {
@@ -823,8 +837,8 @@ export const socialMediaIntakeRecords20260714 = [
     publicUse: "public-linkable",
     editorialState: "selected",
     disposition: "claim-candidate-created",
-    sourceIds: decomposedSocialSourceIds,
-    claimIds: socialMediaClaimRecords20260714.map(({ id }) => id),
+    sourceIds: selectedSocialSourceIds,
+    claimIds: selectedSocialClaims.map(({ id }) => id),
     inquiryIds: socialMediaResearchInquiries20260714.map(({ id }) => id),
     limitations: [
       "No private messages, analytics, credentials, session material, or account-recovery data were collected.",
