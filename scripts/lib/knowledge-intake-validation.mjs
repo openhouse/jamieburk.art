@@ -42,6 +42,16 @@ const nycArtCInboundEngagement = JSON.parse(
   )
 );
 
+const urbanhermitFullPopulation = JSON.parse(
+  readFileSync(
+    new URL(
+      "../../docs/knowledge-bank/corpora/urbanhermit-x-population-ledger-2026-07-15.json",
+      import.meta.url
+    ),
+    "utf8"
+  )
+);
+
 export const requiredSeedIntakeIds = [
   "INTAKE-WATERWAYS-PITCH-HUCK-FINN-2026",
   "INTAKE-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2026",
@@ -250,6 +260,49 @@ export const requiredNYCArtCXArchivalClaimIds = [
   "CLM-NYCARTC-STAKEHOLDER-EXCHANGE-FLOOR"
 ];
 
+export const requiredUrbanhermitSourceIds = [
+  "SRC-URBANHERM-X-POPULATION-LEDGER-2026-07-15",
+  "SRC-URBANHERM-X-AUTHENTICATED-CAPTURE-2026-07-15",
+  "SRC-URBANHERM-X-HORSE-LORDS-POST-2016",
+  "SRC-URBANHERM-X-DREW-HORSE-LORDS-2016",
+  "SRC-URBANHERM-X-JULIA-HORSE-LORDS-2016",
+  "SRC-URBANHERM-NPR-HORSE-LORDS-2016",
+  "SRC-URBANHERM-X-JULIA-EIGHTH-STREET-TUNNEL-2016",
+  "SRC-URBANHERM-KCUR-EIGHTH-STREET-TUNNEL-2016",
+  "SRC-URBANHERM-X-ALIZA-CABARET-REPEAL-2017",
+  "SRC-URBANHERM-X-NYCARTC-SAVE-SPACES-QUOTE-2017",
+  "SRC-URBANHERM-X-NYCARTC-NIGHTLIFE-QUOTE-2017",
+  "SRC-URBANHERM-X-NYCARTC-TOWN-HALL-QUOTE-2017",
+  "SRC-URBANHERM-BROOKLYN-EAGLE-NIGHTLIFE-2017",
+  "SRC-URBANHERM-X-KCTH-TIRES-2019",
+  "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+  "SRC-URBANHERM-X-DAWNIA-INTRODUCTIONS-2023"
+];
+
+export const requiredUrbanhermitClaimIds = [
+  "CLM-URBANHERM-X-PERSONAL-PUBLIC-WORKING-SURFACE",
+  "CLM-URBANHERM-X-BOUNDED-STAKEHOLDER-RESPONSE",
+  "CLM-URBANHERM-X-VISIBLE-TRACTION-SNAPSHOT",
+  "CLM-URBANHERM-HORSE-LORDS-TRUTHERS-VIDEO",
+  "CLM-URBANHERM-EIGHTH-STREET-TUNNEL-PROGRAM",
+  "CLM-URBANHERM-NYCAC-PUBLIC-SPEAKER-ATTRIBUTION",
+  "CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION",
+  "CLM-URBANHERM-CREATIVE-COMMUNITY-INTRODUCTIONS"
+];
+
+export const requiredUrbanhermitIntakeIds = [
+  "INTAKE-URBANHERM-X-FULL-POPULATION-2026",
+  "INTAKE-URBANHERM-X-MISSION-SOURCES-2026",
+  "INTAKE-URBANHERM-NPR-HORSE-LORDS-2016",
+  "INTAKE-URBANHERM-KCUR-EIGHTH-STREET-TUNNEL-2016",
+  "INTAKE-URBANHERM-BROOKLYN-EAGLE-NIGHTLIFE-2017"
+];
+
+export const requiredUrbanhermitInquiryIds = [
+  "INQ-URBANHERM-X-OWNER-ARCHIVE-2026",
+  "INQ-URBANHERM-X-POSTED-SOURCE-MATURATION-2026"
+];
+
 const blockedPublicRepoMarkers = [
   "/Users/",
   "/Volumes/",
@@ -286,6 +339,7 @@ export function validateKnowledgeIntake() {
   const sharedDriveProductionErrors = [];
   const socialMediaProductionErrors = [];
   const nycArtCXArchivalProductionErrors = [];
+  const urbanhermitProductionErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -714,6 +768,27 @@ export function validateKnowledgeIntake() {
     ) {
       dispositionErrors.push(
         `${intake.id} is decomposed without a source and a claim candidate or inquiry`
+      );
+    }
+
+    if (intake.maturity === "decomposed") {
+      for (const claimId of intake.claimIds) {
+        for (const evidence of claimById.get(claimId)?.evidence ?? []) {
+          if (!evidence.locator) {
+            dispositionErrors.push(
+              `${intake.id} links decomposed ${claimId} evidence without a locator: ${evidence.sourceId}`
+            );
+          }
+        }
+      }
+    }
+
+    if (
+      ["metadata-reviewed", "source-reviewed"].includes(intake.maturity) &&
+      (intake.editorialState !== "unsurfaced" || intake.claimIds.length)
+    ) {
+      dispositionErrors.push(
+        `${intake.id} must remain claim-free and unsurfaced until decomposition`
       );
     }
 
@@ -1898,6 +1973,207 @@ export function validateKnowledgeIntake() {
     }
   }
 
+  for (const intakeId of requiredUrbanhermitIntakeIds) {
+    if (!intakeIdSet.has(intakeId)) {
+      urbanhermitProductionErrors.push(`Missing Urbanhermit intake: ${intakeId}`);
+    }
+  }
+  for (const sourceId of requiredUrbanhermitSourceIds) {
+    const source = sourceById.get(sourceId);
+    if (!source) {
+      urbanhermitProductionErrors.push(`Missing Urbanhermit source: ${sourceId}`);
+      continue;
+    }
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      urbanhermitProductionErrors.push(
+        `${sourceId} needs explicit support and does-not-establish boundaries`
+      );
+    }
+  }
+  for (const claimId of requiredUrbanhermitClaimIds) {
+    const claim = claimById.get(claimId);
+    if (!claim) {
+      urbanhermitProductionErrors.push(`Missing Urbanhermit claim: ${claimId}`);
+      continue;
+    }
+    if (
+      claim.projections.some(
+        (projection) => projection.status !== "hold" || projection.surfaces.length
+      )
+    ) {
+      urbanhermitProductionErrors.push(
+        `${claimId} must remain held with no public surface until editorial selection`
+      );
+    }
+  }
+  for (const inquiryId of requiredUrbanhermitInquiryIds) {
+    if (!inquiryById.has(inquiryId)) {
+      urbanhermitProductionErrors.push(`Missing Urbanhermit inquiry: ${inquiryId}`);
+    }
+  }
+
+  const urbanPopulation = urbanhermitFullPopulation.population ?? {};
+  const urbanLinks = urbanhermitFullPopulation.sourceCirculation ?? {};
+  const urbanStakeholders = urbanhermitFullPopulation.incomingStakeholderSearch ?? {};
+  const urbanInteraction =
+    urbanhermitFullPopulation.heldVisibleInteractionObservation ?? {};
+  if (
+    urbanhermitFullPopulation.account !== "@urbanhermit" ||
+    urbanPopulation.profileReported !== 434 ||
+    urbanPopulation.recoveredAccountItems !== 434 ||
+    urbanPopulation.recoveryGap !== 0 ||
+    urbanPopulation.accountAuthored !== 353 ||
+    urbanPopulation.externalSourceNativeReposts !== 81 ||
+    urbanPopulation.independentCompletePasses !== 3 ||
+    urbanPopulation.allPassesRecoveredSamePopulation !== true ||
+    urbanPopulation.passStatusIdDigests?.length !== 3 ||
+    !urbanPopulation.passStatusIdDigests?.every(
+      (pass) =>
+        pass.distinctStatusIds === 434 &&
+        pass.statusIdDigest === urbanPopulation.recoveredStatusIdDigest
+    )
+  ) {
+    urbanhermitProductionErrors.push(
+      "Urbanhermit 434-record live-profile population no longer reconciles"
+    );
+  }
+  if (
+    urbanLinks.recordsWithExternalLinks !== 277 ||
+    urbanLinks.normalizedRecordLinkPairs !== 345 ||
+    urbanLinks.distinctShortUrls !== 321 ||
+    urbanLinks.researchQueueDisposition?.status !== "open" ||
+    urbanLinks.researchQueueDisposition?.bulkUrlInventoryPublished !== false
+  ) {
+    urbanhermitProductionErrors.push(
+      "Urbanhermit posted-source inventory or open research queue no longer reconciles"
+    );
+  }
+  if (
+    urbanStakeholders.recoveredPublicRecords !== 26 ||
+    urbanStakeholders.missionRelevantThirdPartyRecords !== 15 ||
+    urbanStakeholders.missionRelevantThirdPartyAccounts !== 9 ||
+    urbanStakeholders.missionRelevantConversationContexts !== 2 ||
+    urbanStakeholders.redactedNonMissionPersonalOrNetworkRecords !== 9
+  ) {
+    urbanhermitProductionErrors.push(
+      "Urbanhermit bounded incoming-stakeholder inventory no longer reconciles"
+    );
+  }
+  if (
+    urbanInteraction.accountAuthoredRecordsWithOneOrMoreDisplayedInteraction !== 85 ||
+    urbanInteraction.displayedInteractionUnits?.likes !== 175 ||
+    urbanInteraction.displayedInteractionUnits?.replies !== 8 ||
+    urbanInteraction.displayedInteractionUnits?.reposts !== 60 ||
+    urbanInteraction.displayedInteractionUnits?.total !== 243 ||
+    urbanInteraction.status !== "hold"
+  ) {
+    urbanhermitProductionErrors.push(
+      "Urbanhermit dated visible-interaction snapshot no longer reconciles or is no longer held"
+    );
+  }
+
+  const urbanCanonicalUrls = new Set(
+    knowledgeBank.sources.map((source) => source.canonicalUrl).filter(Boolean)
+  );
+  for (const lead of urbanhermitFullPopulation.selectedSourceLeads ?? []) {
+    if (!urbanCanonicalUrls.has(lead.canonicalUrl)) {
+      urbanhermitProductionErrors.push(
+        `Urbanhermit selected source lead has no canonical source record: ${lead.id}`
+      );
+    }
+  }
+  const urbanProtectedSource = sourceById.get(
+    "SRC-URBANHERM-X-AUTHENTICATED-CAPTURE-2026-07-15"
+  );
+  if (
+    urbanProtectedSource?.visibility !== "protected" ||
+    urbanProtectedSource?.preservationStatus !== "private" ||
+    urbanProtectedSource?.canonicalUrl ||
+    urbanProtectedSource?.archiveUrl ||
+    urbanProtectedSource?.assetUrl
+  ) {
+    urbanhermitProductionErrors.push(
+      "Urbanhermit protected capture must remain non-linkable and outside the public repository"
+    );
+  }
+
+  const ownerInquiry = inquiryById.get("INQ-URBANHERM-X-OWNER-ARCHIVE-2026");
+  const ownerBoundary = JSON.stringify([
+    ownerInquiry?.findings,
+    ownerInquiry?.limitations,
+    ownerInquiry?.publicSummary
+  ]).toLowerCase();
+  if (
+    ownerInquiry?.resultStatus !== "partially-recovered" ||
+    !ownerBoundary.includes("owner") ||
+    !ownerBoundary.includes("live profile")
+  ) {
+    urbanhermitProductionErrors.push(
+      "Urbanhermit owner-archive inquiry must preserve the live-profile and all-ever boundary"
+    );
+  }
+
+  const tractionClaim = claimById.get("CLM-URBANHERM-X-VISIBLE-TRACTION-SNAPSHOT");
+  const tractionBoundary = JSON.stringify([
+    tractionClaim?.boundaries,
+    tractionClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["not unique people", "reach", "impact", "mutable"]) {
+    if (!tractionBoundary.includes(boundary)) {
+      urbanhermitProductionErrors.push(
+        `Urbanhermit traction claim is missing the ${boundary} boundary`
+      );
+    }
+  }
+  const roleBoundaryText = JSON.stringify(
+    requiredUrbanhermitClaimIds.map((id) => ({
+      boundaries: claimById.get(id)?.boundaries,
+      antiClaims: claimById.get(id)?.antiClaims
+    }))
+  ).toLowerCase();
+  for (const boundary of [
+    "m.c. schmidt",
+    "legislative authorship",
+    "sole program ownership",
+    "tunnel restoration"
+  ]) {
+    if (!roleBoundaryText.includes(boundary)) {
+      urbanhermitProductionErrors.push(
+        `Urbanhermit role claims are missing the ${boundary} boundary`
+      );
+    }
+  }
+
+  const serializedUrbanhermit = JSON.stringify([
+    urbanhermitFullPopulation,
+    requiredUrbanhermitIntakeIds.map((id) =>
+      knowledgeBank.intakes.find((intake) => intake.id === id)
+    ),
+    requiredUrbanhermitSourceIds.map((id) => sourceById.get(id)),
+    requiredUrbanhermitClaimIds.map((id) => claimById.get(id)),
+    requiredUrbanhermitInquiryIds.map((id) => inquiryById.get(id))
+  ]).toLowerCase();
+  for (const marker of blockedPublicRepoMarkers) {
+    if (serializedUrbanhermit.includes(marker.toLowerCase())) {
+      urbanhermitProductionErrors.push(
+        `Urbanhermit public records contain blocked public-repo marker: ${marker}`
+      );
+    }
+  }
+  for (const forbiddenKey of [
+    '"items":',
+    '"text":',
+    '"visibletext":',
+    '"engagementlabel":',
+    '"authenticatedas":'
+  ]) {
+    if (JSON.stringify(urbanhermitFullPopulation).toLowerCase().includes(forbiddenKey)) {
+      urbanhermitProductionErrors.push(
+        `Urbanhermit minimized ledger contains forbidden row-level field: ${forbiddenKey}`
+      );
+    }
+  }
+
   errors.push(
     ...coverageErrors,
     ...researchErrors,
@@ -1908,7 +2184,8 @@ export function validateKnowledgeIntake() {
     ...archiveProductionErrors,
     ...sharedDriveProductionErrors,
     ...socialMediaProductionErrors,
-    ...nycArtCXArchivalProductionErrors
+    ...nycArtCXArchivalProductionErrors,
+    ...urbanhermitProductionErrors
   );
   return {
     errors,
@@ -1962,6 +2239,11 @@ export function validateKnowledgeIntake() {
         passed: nycArtCXArchivalProductionErrors.length === 0,
         errors: nycArtCXArchivalProductionErrors,
         evidence: "The @NYCArtC archival production preserves all 5,124 dated profile-count slots as 3,367 item-level recoveries plus 1,757 explicit unresolved slots; recomputes 715 account statuses, 2,652 reposts, 1,772 posted-link occurrences, 1,241 unique URLs, and a 501-record inbound stakeholder floor; links eight close-read mission sources; keeps all new projections held; and excludes raw text, private account data, and local paths."
+      },
+      urbanhermitProduction: {
+        passed: urbanhermitProductionErrors.length === 0,
+        errors: urbanhermitProductionErrors,
+        evidence: "Three independent authenticated passes reconcile all 434 live-profile records; the public repo keeps only aggregates, digests, and selected role-bearing sources; 321 posted URLs remain dispositioned as a protected research queue; 15 mission-relevant third-party records from nine accounts and two conversation contexts retain bounded stakeholder meaning; all eight new claims remain held; and the all-ever owner-archive question stays open."
       }
     }
   };

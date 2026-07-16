@@ -89,3 +89,17 @@ repaired by independent graders before all agent-mutable criteria passed.
 See `nycartc-x-full-population-recursive-run.md` for the population boundary,
 stakeholder floors, score progression, exact-candidate browser evidence, and
 the runtime and human stop boundary.
+
+## Urbanhermit X archival production
+
+Launch-readiness `v14` adds a deterministic full-live-population gate for
+Jamie's personal `@urbanhermit` account. Three independent authenticated passes
+reconciled all 434 live profile-counted records while the public repository kept
+only a minimized aggregate ledger, selected source leads, bounded claims, and
+an explicit all-ever owner-archive inquiry. A recursive semantic pass exposed
+and repaired reader-burden, evidence-locator, metadata-stage, and editorial
+layering failures before two independent graders passed every mutable criterion.
+
+See `urbanhermit-full-population-recursive-run.md` for the source and stakeholder
+findings, held claim palette, score progression, browser evidence, and stop
+boundary.

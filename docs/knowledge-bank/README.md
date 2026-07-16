@@ -97,3 +97,12 @@ See
 for a source-aware account of Phase One construction coordination, resident
 input infrastructure, neighborhood service operations, collective credit, and
 active research leads held from public projection.
+
+See [projects/urbanhermit.md](projects/urbanhermit.md) and
+[runs/2026-07-15-urbanhermit-x-full-population.md](runs/2026-07-15-urbanhermit-x-full-population.md)
+for a zero-gap review of the 434-record live-profile population, a minimized
+aggregate and digest ledger, selected role-bearing sources, bounded stakeholder
+patterns, and an explicit owner-archive remainder. The item-level personal
+timeline, raw text, ordinary-life context, private analytics, and authenticated
+session material remain outside the repository. No new website projection was
+selected.

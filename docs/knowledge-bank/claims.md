@@ -3,6 +3,35 @@
 This is the human-readable claim register. Public pages should not strengthen a
 claim beyond the wording and guardrails here.
 
+## Urbanhermit archival production - held claim palette
+
+The July 15, 2026 pass accounts for all 434 records represented by the live
+profile counter while keeping the item-level personal archive protected.
+
+- `CLM-URBANHERM-X-PERSONAL-PUBLIC-WORKING-SURFACE` preserves the complete
+  capture-date population without treating the live interface as an all-ever
+  owner archive.
+- `CLM-URBANHERM-X-BOUNDED-STAKEHOLDER-RESPONSE` preserves 15 mission-relevant
+  third-party records from nine accounts plus two conversation contexts without
+  presenting them as endorsements or complete engagement.
+- `CLM-URBANHERM-X-VISIBLE-TRACTION-SNAPSHOT` holds 243 volatile displayed
+  interaction units outside accomplishment messaging.
+- `CLM-URBANHERM-HORSE-LORDS-TRUTHERS-VIDEO` preserves shared credit to Jamie
+  and M.C. Schmidt, with NPR Music as independent article-level support.
+- `CLM-URBANHERM-EIGHTH-STREET-TUNNEL-PROGRAM` records the 2006 participatory
+  route and three-film program without implying tunnel ownership, restoration,
+  permanent access, attendance, or measured impact.
+- `CLM-URBANHERM-NYCAC-PUBLIC-SPEAKER-ATTRIBUTION` records coalition and peer
+  attribution while rejecting legislative authorship and sole policy causation.
+- `CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION` records direct neighborhood
+  pickup participation without converting it into sole program ownership.
+- `CLM-URBANHERM-CREATIVE-COMMUNITY-INTRODUCTIONS` preserves a bounded peer
+  acknowledgment without inventing a formal role or downstream outcomes.
+
+All Urbanhermit projections remain held. The source depth is available for
+future audience-specific composition; it does not need to crowd the current
+job-application site.
+
 ## career-operating-structure-14-years - Operating structure over 14+ years
 
 **Status:** Ready  

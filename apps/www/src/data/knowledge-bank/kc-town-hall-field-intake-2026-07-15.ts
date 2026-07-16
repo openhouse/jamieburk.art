@@ -190,6 +190,7 @@ export const kcTownHallFieldClaimRecords20260715 = [
           "roof-membrane and parapet sequencing",
           "Phase One completion in 2019"
         ],
+        locator: "first-person field-practice account: Phase One role, daily coordination, trade dependencies, and completion recollection",
         confidence: "high",
         renderCitation: false
       },
@@ -251,6 +252,7 @@ export const kcTownHallFieldClaimRecords20260715 = [
           "four-by-six-inch format",
           "backing data-collection workflow"
         ],
+        locator: "first-person field-practice account: four-by-six-inch survey card and backing data workflow",
         confidence: "high",
         renderCitation: false
       },
@@ -308,6 +310,7 @@ export const kcTownHallFieldClaimRecords20260715 = [
           "informal gathering of neighborhood histories and future-use ideas",
           "connection between implementation and participation"
         ],
+        locator: "first-person field-practice account: daily site presence and neighborhood listening practice",
         confidence: "high",
         renderCitation: false
       },
@@ -363,6 +366,7 @@ export const kcTownHallFieldClaimRecords20260715 = [
           "tracking and cross-promotion workflow",
           "later Indian Mound service"
         ],
+        locator: "first-person field-practice account: TiredOfTires design, city coordination, pickup operations, and later service area",
         confidence: "high",
         renderCitation: false
       },
@@ -386,6 +390,7 @@ export const kcTownHallFieldClaimRecords20260715 = [
           "Jamie's named participation in June 2019",
           "recurring curbside pickup and resident-intake context"
         ],
+        locator: "X status 1135246124883861504: participant thanks and next-pickup intake",
         confidence: "high",
         renderCitation: true
       }

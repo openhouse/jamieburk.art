@@ -19,48 +19,48 @@ const proofMap = [
   {
     project: "HJE",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "I helped modernize e-commerce, analytics, marketing, content, and recurring operations in a legacy business."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "I built shared campaign memory, decision records, source maps, action trackers, and public/private boundaries for coalition work."
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "I translated released CouncilStat data into an independent resident-facing guidance prototype."
   },
   {
     project: "WOWList",
     proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
+      "I created and operated a community event-distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
   },
   {
     project: "196 / Sunday Dinner",
     proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+      "I co-created onboarding, facilitation, hosting rhythms, and continuity practices for a recurring gathering."
   },
   {
     project: "KC Spaces Fund",
     proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+      "I built behind-the-scenes digital infrastructure for a collective 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
   },
   {
     project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof: "I co-led long-horizon project planning and public-benefit documentation through a municipal funding process."
   },
   {
     project: "Source-Backed Team Memory",
     proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+      "I am developing a lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
   }
 ];
 
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
   description:
-    "Role-specific proof surface for technical operations, implementation, product operations, documentation systems, and durable handoffs.",
+    "How Jamie Burkart coordinates technical operations, implementation, product operations, documentation systems, and durable handoffs.",
   path: "/work/technical-operations"
 });
 

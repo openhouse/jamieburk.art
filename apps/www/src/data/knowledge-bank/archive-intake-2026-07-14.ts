@@ -358,6 +358,7 @@ export const archiveClaimRecords20260714 = [
         sourceId: "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
         relationship: "corroborating",
         supports: ["project identity", "Jamie's initiating role", "Kansas City departure context"],
+        locator: "article title, introduction, and passages identifying Jamie's initiating role and Kansas City departure",
         confidence: "high",
         renderCitation: false
       }

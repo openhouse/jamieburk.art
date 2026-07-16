@@ -862,7 +862,7 @@ export const socialMediaIntakeRecords20260714 = [
     projectHints: ["career-proof-system", "callnyc", "nyc-artist-coalition", "wowlist", "kc-town-hall"],
     maturity: "metadata-reviewed",
     publicUse: "cite-with-care",
-    editorialState: "candidate",
+    editorialState: "unsurfaced",
     disposition: "source-created",
     sourceIds: metadataOnlySocialSourceIds,
     claimIds: [],

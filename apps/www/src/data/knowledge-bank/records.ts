@@ -67,6 +67,12 @@ import {
   nycArtCXArchivalResearchInquiries20260715,
   nycArtCXArchivalSourceRecords20260715
 } from "./nycartc-x-archival-production-2026-07-15.ts";
+import {
+  urbanhermitFullPopulationClaimRecords20260715,
+  urbanhermitFullPopulationIntakeRecords20260715,
+  urbanhermitFullPopulationResearchInquiries20260715,
+  urbanhermitFullPopulationSourceRecords20260715
+} from "./urbanhermit-x-full-population-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -80,7 +86,8 @@ const knowledgeBankInput = {
     ...kcTownHallFieldIntakeRecords20260715,
     ...wowListFullPopulationIntakeRecords20260715,
     ...kcTownHallFullPopulationIntakeRecords20260715,
-    ...nycArtCXArchivalIntakeRecords20260715
+    ...nycArtCXArchivalIntakeRecords20260715,
+    ...urbanhermitFullPopulationIntakeRecords20260715
   ],
   sources: [
     {
@@ -215,7 +222,8 @@ const knowledgeBankInput = {
     ...kcTownHallFieldSourceRecords20260715,
     ...wowListFullPopulationSourceRecords20260715,
     ...kcTownHallFullPopulationSourceRecords20260715,
-    ...nycArtCXArchivalSourceRecords20260715
+    ...nycArtCXArchivalSourceRecords20260715,
+    ...urbanhermitFullPopulationSourceRecords20260715
   ],
   claims: [
     {
@@ -314,7 +322,8 @@ const knowledgeBankInput = {
     ...kcTownHallFieldClaimRecords20260715,
     ...wowListFullPopulationClaimRecords20260715,
     ...kcTownHallFullPopulationClaimRecords20260715,
-    ...nycArtCXArchivalClaimRecords20260715
+    ...nycArtCXArchivalClaimRecords20260715,
+    ...urbanhermitFullPopulationClaimRecords20260715
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -338,7 +347,8 @@ const knowledgeBankInput = {
     ...kcTownHallFieldResearchInquiries20260715,
     ...wowListFullPopulationResearchInquiries20260715,
     ...kcTownHallFullPopulationResearchInquiries20260715,
-    ...nycArtCXArchivalResearchInquiries20260715
+    ...nycArtCXArchivalResearchInquiries20260715,
+    ...urbanhermitFullPopulationResearchInquiries20260715
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },

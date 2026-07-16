@@ -18,7 +18,7 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "How I coordinate technical delivery, product operations, implementation, and durable handoffs."
   },
   {
     href: "/work/harry-j-epstein",
@@ -54,9 +54,9 @@ export default function HomePage() {
               Quick path through the portfolio
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+              Choose a starting point based on the work you want to understand:
+              technical delivery, business operations, public systems, or my
+              resume.
             </p>
           </div>
           <div className="grid gap-3">
