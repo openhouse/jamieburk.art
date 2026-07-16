@@ -11,6 +11,7 @@ export const kcSpacesFundFacebookSourceIds = {
   star: "SRC-KCSF-KANSAS-CITY-STAR-2020-04-07",
   oddities: "SRC-KCSF-ODDITIES-PRINTS-MAPE-2020",
   roleArchive: "SRC-KCSF-DIGITAL-OPERATIONS-ARCHIVE-2026-07-09",
+  namingMemory: "SRC-KCSF-NAMING-ROLE-MEMORY-2026-07-16",
 } as const;
 
 export const kcSpacesFundFacebookClaimIds = {
@@ -232,18 +233,42 @@ export const kcSpacesFundFacebookSources: KnowledgeBank["sources"] = [
     publicCitation:
       "AI-assisted archival review of Jamie Burkart's KC Spaces Fund project records, July 2026.",
     publicNote:
-      "The protected review covers campaign code, deployment history, the custom Ghost theme, fundraising widget, launch checklist, domain records, and Jamie's first-person account of supporting a coherent available project name across public routes.",
+      "The protected review covers campaign code, deployment history, the custom Ghost theme, fundraising widget, launch checklist, and domain records.",
     protectedLocatorId: "RESEARCH-KCSF-DIGITAL-OPERATIONS-2026-001",
     supportsGenerally: [
       "Jamie's behind-the-scenes digital implementation role",
       "campaign site, theme, widget, deployment, and public-action affordances",
-      "Jamie's first-person account of supporting name availability across domain and social routes",
     ],
     doesNotEstablish: [
       "public organizer, fundraiser-owner, fiscal-sponsor, or grant-decision authority",
       "Jamie's authorship of campaign-account posts",
       "sole authorship or sole control of the campaign identity",
       "a human collaborator testimonial",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.namingMemory,
+    title: "Jamie Burkart KC Spaces Fund naming and public-identity account",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: reviewedAt,
+    accessedAt: reviewedAt,
+    publicCitation:
+      "Jamie Burkart first-person account of his bounded KC Spaces Fund naming and public-identity contribution, July 16, 2026.",
+    publicNote:
+      "Jamie states that he supported the choice of a project name available uniformly across relevant social platforms and domain routes. Public route coherence corroborates the result, not the attribution.",
+    protectedLocatorId: "MEMORY-KCSF-NAMING-ROLE-2026-001",
+    supportsGenerally: [
+      "Jamie's first-person account of supporting name availability across domain and social routes",
+      "a research lead for collaborator or setup-record corroboration",
+    ],
+    doesNotEstablish: [
+      "independent corroboration",
+      "sole naming authority or sole campaign-identity authorship",
+      "historical account administration or post authorship",
+      "public organizer, fundraiser-owner, fiscal-sponsor, or grant-decision authority",
     ],
   },
 ];
@@ -297,7 +322,8 @@ export const kcSpacesFundFacebookClaims: KnowledgeBank["claims"] = [
       { key: "archive-note", text: "Jamie built and maintained the campaign's Ghost-based web stack and supported coherent public routing across its campaign name, website, fundraiser, and social identity.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md"] },
     ],
     evidence: [
-      { sourceId: kcSpacesFundFacebookSourceIds.roleArchive, relationship: "private-support", supports: ["site, theme, widget, deployment, and public-action implementation", "Jamie's first-person name-availability account"], confidence: "moderate", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.roleArchive, relationship: "private-support", supports: ["site, theme, widget, deployment, and public-action implementation"], confidence: "moderate", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.namingMemory, relationship: "private-support", supports: ["Jamie's first-person name-availability account"], confidence: "moderate", renderCitation: false },
       { sourceId: kcSpacesFundFacebookSourceIds.page, relationship: "corroborating", supports: ["coherent KCSpacesFund Page identity and campaign routes"], confidence: "high", renderCitation: false },
       { sourceId: kcSpacesFundFacebookSourceIds.site, relationship: "corroborating", supports: ["live campaign website and public-action affordances"], confidence: "high", renderCitation: true },
       { sourceId: kcSpacesFundFacebookSourceIds.protectedRun, relationship: "supports-boundary", supports: ["Jamie's non-publisher statement and unresolved historical account authorship"], confidence: "high", renderCitation: false },

@@ -139,7 +139,13 @@ authenticated state, or protected captures. No owner export was available, so
 the result is a surviving-feed control rather than a lifetime total. Jamie's
 behind-the-scenes digital role remains separate from campaign-account
 authorship, public organizing, fundraising, grant selection, and fiscal
-sponsorship; no website copy changes were made from this pass.
+sponsorship. A separate
+[public-safe acquisition control](corpora/kcspacesfund-facebook-posts-acquisition-control.json)
+binds 41 opaque render keys to the 37-row corpus, preserves the four duplicate
+groups and eight stable endpoint checks, and exposes no raw text, platform IDs,
+URLs, identities, paths, or session state. Twenty photo records remain in a
+rights- and consent-gated media queue; no website copy changes were made from
+this pass.
 
 The [WOW List Facebook post archival-production report](projects/wowlist-facebook-posts.md)
 accounts for all 57 records in a terminal 19-page protected capture and gives

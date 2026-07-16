@@ -15,6 +15,7 @@ export const integrityArtifactPaths = [
   "docs/knowledge-bank/governance/retirements.jsonl",
   "docs/knowledge-bank/corpora/wowlist-facebook-posts-acquisition-manifest.json",
   "docs/knowledge-bank/corpora/nycartc-facebook-posts-full-population.manifest.json",
+  "docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-acquisition-control.json",
   "docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-full-population.manifest.json",
 ];
 

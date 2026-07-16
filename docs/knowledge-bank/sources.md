@@ -25,7 +25,7 @@ Approved public artifact examples for this launch pass include:
 - CallNYC archived Politico New York PDF.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
-- KC Spaces Fund Facebook surviving-feed public-safe corpus and protected authenticated traversal, reviewed July 16, 2026.
+- KC Spaces Fund Facebook surviving-feed public-safe corpus, independently testable opaque acquisition control, and protected authenticated traversal, reviewed July 16, 2026.
 - The Kansas City Star's April 2020 COVID-19 giving guide and the close-read Oddities Prints MAPE partner-fundraising page.
 - Protected AI-assisted archival review of KC Spaces Fund code, deployment, launch, domain, and public-identity records; use as evidence, not a human collaborator testimonial.
 - KC Town Hall's complete surviving 183-record public social ledger, which

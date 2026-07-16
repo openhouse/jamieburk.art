@@ -34,6 +34,13 @@ The feed held at the same terminal position across eight consecutive checks,
 with no loading status. The terminal control supports the surviving-feed
 denominator; it cannot recover a post absent before capture.
 
+A separate public-safe acquisition control independently binds 41 one-way,
+domain-separated render keys to the 37 public record hashes, records the four
+two-render groups, and preserves all eight terminal checkpoints. It publishes
+no post text, native IDs, media IDs, posted URLs, people, paths, credentials, or
+session state. Mutation checks fail if the denominator, duplicate grouping, or
+terminal stop condition drifts.
+
 | Measure | Result |
 | --- | ---: |
 | Encountered render rows | 41 |
@@ -165,6 +172,13 @@ composition without forcing archival depth onto the current portfolio. No
 
 The public-safe row ledger lives in
 [the population corpus](../corpora/kcspacesfund-facebook-posts-full-population.json).
+Its independently testable reconciliation lives in
+[the acquisition control](../corpora/kcspacesfund-facebook-posts-acquisition-control.json).
+
+The 20 photo records are retained as one protected media lead. They are not
+content-reviewed or display-approved. Any future visual use requires explicit
+authorization followed by item-level creator, rights, consent, identity, role,
+date, place, meaning, and public-display decisions.
 
 ## Open research
 
@@ -176,3 +190,5 @@ The public-safe row ledger lives in
    account-setup and naming contribution.
 4. Preserve future public or owner-export snapshots as new versions so platform
    retention and counter drift remain visible.
+5. Review the 20-record photo collection only after explicit authorization and
+   keep evidence discovery separate from display approval.
