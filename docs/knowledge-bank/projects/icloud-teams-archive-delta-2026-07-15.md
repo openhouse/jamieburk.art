@@ -34,10 +34,36 @@ The `raft-project` folder surfaced a stronger contemporary source sequence:
   November 15. It explicitly distinguished reaching salt water from seeing the
   Gulf on the raft.
 
+### Kansas City Star close-reading delta - July 16
+
+A page-by-page visual review of the two-page clipping added four proposition-level
+records that the earlier source summary had compressed:
+
+- the article attributes the initiating idea to Jamie while documenting a July
+  21 collective departure from the West Bottoms with several friends aboard;
+- it describes a roughly 12-by-13-foot raft built in three weeks from salvaged
+  building material, civic refuse, and industrial syrup drums, with two bicycles
+  linked to a paddlewheel and active pedaling used mainly to avoid hazards;
+- it reports a 51-day interruption and a recovery network involving Vicksburg
+  residents, legal help, temporary work, raft retrieval, repairs, navigation
+  equipment, and a legal return to the river;
+- it describes the project as a lived river experience, reports friends joining
+  for route segments, and documents Jamie inviting people encountered along the
+  way to participate while seeking connection between Kansas City's West Bottoms
+  and Delta communities.
+
+These propositions strengthen the professional interpretation of the work as an
+adaptive field operation without converting collective labor into a solo claim.
+They also preserve the difference between reported purpose and measured outcome.
+The source still does not establish the complete crew and support roster, final
+distance, exact salt-water terminus, arrival at the Gulf on the raft, or permission
+to republish the scan or article body.
+
 This changes the professional reading. The project is defensibly a shared,
 participatory field operation involving physical prototyping, navigation,
-safety correction, compliance negotiation, route-community support, and
-adaptive implementation across more than 1,100 documented miles.
+safety correction, compliance negotiation, a 51-day interruption and recovery,
+route-community support, and adaptive implementation across more than 1,100
+documented miles.
 
 The website projection remains held. The current portfolio does not need a new
 card, and the exact later salt-water terminus remains unresolved. The 1,100-mile
