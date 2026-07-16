@@ -1,0 +1,352 @@
+{
+  "version": 1,
+  "derivedAt": "2026-07-13",
+  "method": "Transcribed from the rendered Press sections in the four dated Wayback captures. Responsive duplicate markup was collapsed; visual source-page order was retained.",
+  "captures": [
+    {
+      "campaignId": "let-nyc-dance",
+      "indexSourceId": "SRC-NYCAC-LET-NYC-DANCE-PRESS-INDEX-2026-05-11",
+      "capturedAt": "2026-05-11T05:55:41Z",
+      "captureUrl": "https://web.archive.org/web/20260511055541/https://letnycdance.nycartc.com/",
+      "placementCount": 21
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "indexSourceId": "SRC-NYCAC-TALKS-NOT-RAIDS-PRESS-INDEX-2026-04-16",
+      "capturedAt": "2026-04-16T02:22:27Z",
+      "captureUrl": "https://web.archive.org/web/20260416022227/https://talksnotraids.com/",
+      "placementCount": 7
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "indexSourceId": "SRC-NYCAC-SAVE-NYC-SPACES-PRESS-INDEX-2026-05-21",
+      "capturedAt": "2026-05-21T13:34:38Z",
+      "captureUrl": "https://web.archive.org/web/20260521133438/https://savenycspaces.nycartc.com/",
+      "placementCount": 8
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "indexSourceId": "SRC-FAIR-RENT-PRESS-INDEX-2021-12-01",
+      "capturedAt": "2021-12-01T10:44:25Z",
+      "captureUrl": "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/",
+      "placementCount": 9
+    }
+  ],
+  "placements": [
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 1,
+      "listedUrl": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html",
+      "sourceId": "SRC-PRESS-LND-NYT-2017-10-30",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 2,
+      "listedUrl": "http://www.newyorker.com/magazine/2017/07/10/dance-outlaws-fight-for-the-right-to-party",
+      "sourceId": "SRC-PRESS-LND-NEW-YORKER-2017-07-03",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 3,
+      "listedUrl": "http://www.villagevoice.com/news/nycs-cabaret-law-is-racist-stupid-and-must-be-eliminated-9834234",
+      "sourceId": "SRC-PRESS-LND-VILLAGE-VOICE-CABARET",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 4,
+      "listedUrl": "http://nypost.com/2017/09/14/de-blasio-might-scrap-ridiculous-law-banning-dancing-in-bars/",
+      "sourceId": "SRC-PRESS-LND-NY-POST-2017-09-14",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 5,
+      "listedUrl": "http://www.nydailynews.com/new-york/footloose-new-yorkers-archaic-ban-dancing-article-1.3260553",
+      "sourceId": "SRC-PRESS-LND-DAILY-NEWS-FOOTLOOSE",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 6,
+      "listedUrl": "http://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law",
+      "sourceId": "SRC-PRESS-LND-WNYC-BUREAUCRATIC-DANCE",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 7,
+      "listedUrl": "https://www.forbes.com/sites/realspin/2017/10/04/nyc-republicans-should-support-cabaret-law-repeal-effort",
+      "sourceId": "SRC-PRESS-LND-FORBES-2017-10-04",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 8,
+      "listedUrl": "http://gothamist.com/2017/06/19/cabaret_law_nyc.php",
+      "sourceId": "SRC-NYCAC-GOTHAMIST-2017-06-19",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 9,
+      "listedUrl": "http://www.smithsonianmag.com/smart-news/new-york-city-could-finally-lose-its-prohibition-era-dancing-rule-180964998/",
+      "sourceId": "SRC-PRESS-LND-SMITHSONIAN-2017-09-22",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 10,
+      "listedUrl": "https://www.dnainfo.com/new-york/20170620/williamsburg/cabaret-law-dancing-footloose-brooklyn-north-brooklyn",
+      "sourceId": "SRC-PRESS-LND-DNAINFO-2017-06-20",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 11,
+      "listedUrl": "http://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      "sourceId": "SRC-NYCAC-NPR-2017-09-20",
+      "duplicateDisposition": "shared-with-save-nyc-spaces"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 12,
+      "listedUrl": "http://www.crainsnewyork.com/article/20170619/SMALLBIZ/170619882",
+      "sourceId": "SRC-PRESS-LND-CRAINS-2017-06-19",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 13,
+      "listedUrl": "http://www.metro.us/news/local-news/new-york/arts-advocates-renew-call-end-new-york-citys-antiquated-cabaret-laws",
+      "sourceId": "SRC-PRESS-LND-METRO-NY-CABARET",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 14,
+      "listedUrl": "http://www.brooklyneagle.com/articles/2017/5/12/there-are-only-17-places-brooklyn-where-you-can-legally-dance",
+      "sourceId": "SRC-PRESS-LND-BROOKLYN-EAGLE-2017-05-12",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 15,
+      "listedUrl": "http://www.brooklynpaper.com/stories/40/14/dtg-cabaret-law-followup-2017-04-07-bk.html",
+      "sourceId": "SRC-PRESS-LND-BROOKLYN-PAPER-2017-04-07",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 16,
+      "listedUrl": "https://www.timeout.com/newyork/blog/its-time-to-make-it-legal-to-dance-anywhere-the-f-ck-you-want-in-new-york-081517",
+      "sourceId": "SRC-PRESS-LND-TIMEOUT-2017-08-15",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 17,
+      "listedUrl": "http://www.qchron.com/editions/queenswide/aged-cabaret-law-finally-at-its-end/article_368ea4d3-28ba-5a18-bb25-58f4c50a290f.html",
+      "sourceId": "SRC-PRESS-LND-QUEENS-CHRONICLE-CABARET",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 18,
+      "listedUrl": "http://bedfordandbowery.com/2017/09/cabaret-law-repeal-supported-by-everyone-from-de-blasio-to-duke-ellingtons-family/",
+      "sourceId": "SRC-PRESS-LND-BEDFORD-BOWERY-CABARET-2017",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 19,
+      "listedUrl": "https://thump.vice.com/en_us/article/nyc-artist-coalition-dance-liberation-network-diy-spaces",
+      "sourceId": "SRC-PRESS-LND-VICE-THUMP-CABARET",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 20,
+      "listedUrl": "http://www.sfgate.com/news/media/New-York-City-apparently-has-a-No-Dancing-law-800714.php",
+      "sourceId": "SRC-PRESS-LND-SFGATE-NO-DANCING",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "let-nyc-dance",
+      "ordinal": 21,
+      "listedUrl": "http://mixmag.net/read/nyc-activists-aim-to-repeal-local-no-dancing-law-news",
+      "sourceId": "SRC-PRESS-LND-MIXMAG-NO-DANCING",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "ordinal": 1,
+      "listedUrl": "http://gothamist.com/2019/02/12/march_nightlife_raids_city_council.php",
+      "sourceId": "SRC-PRESS-TNR-GOTHAMIST-2019-02-12",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "ordinal": 2,
+      "listedUrl": "https://www.villagevoice.com/2016/12/08/palisades-owners-explain-why-the-beloved-venue-was-shut-down/",
+      "sourceId": "SRC-PRESS-TNR-VILLAGE-VOICE-PALISADES-2016-12-08",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "ordinal": 3,
+      "listedUrl": "http://bedfordandbowery.com/2019/02/disco-discord-nypd-and-nightlife-operators-clash-over-party-crashing-raids/",
+      "sourceId": "SRC-PRESS-TNR-BEDFORD-BOWERY-DISCO-DISCORD-2019",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "ordinal": 4,
+      "listedUrl": "https://thebaffler.com/latest/cut-the-music-pelly",
+      "sourceId": "SRC-PRESS-TNR-BAFFLER-CUT-THE-MUSIC",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "ordinal": 5,
+      "listedUrl": "https://www.nytimes.com/2002/11/10/nyregion/city-cracks-down-on-nightclubs-and-may-revise-its-policies.html",
+      "sourceId": "SRC-PRESS-TNR-NYT-NIGHTCLUBS-2002-11-10",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "ordinal": 6,
+      "listedUrl": "https://www.amny.com/news/politics/nightlife-mayor-brooklyn-panel-1.17689726",
+      "sourceId": "SRC-PRESS-TNR-AMNY-NIGHTLIFE-MAYOR",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "talks-not-raids",
+      "ordinal": 7,
+      "listedUrl": "https://observer.com/2018/03/new-york-city-night-mayor/",
+      "sourceId": "SRC-PRESS-TNR-OBSERVER-NIGHT-MAYOR-2018",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 1,
+      "listedUrl": "http://www.nydailynews.com/news/politics/nyc-creates-office-manage-issues-affecting-nightlife-industry-article-1.3507451",
+      "sourceId": "SRC-PRESS-SAVE-DAILY-NEWS-OFFICE-NIGHTLIFE",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 2,
+      "listedUrl": "http://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      "sourceId": "SRC-NYCAC-NPR-2017-09-20",
+      "duplicateDisposition": "shared-with-let-nyc-dance"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 3,
+      "listedUrl": "https://www.citylab.com/solutions/2017/09/america-discovers-the-night-mayor/539505/",
+      "sourceId": "SRC-PRESS-SAVE-CITYLAB-NIGHTLIFE-MAYOR",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 4,
+      "listedUrl": "http://nypost.com/2017/09/19/de-blasios-newest-city-agency-office-of-nightlife/",
+      "sourceId": "SRC-PRESS-SAVE-NY-POST-OFFICE-NIGHTLIFE-2017-09-19",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 5,
+      "listedUrl": "http://gothamist.com/2017/09/20/punk_blaz_signs_bill.php",
+      "sourceId": "SRC-PRESS-SAVE-GOTHAMIST-OFFICE-NIGHTLIFE-2017-09-20",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 6,
+      "listedUrl": "http://www.brooklyneagle.com/articles/2017/9/20/new-era-mayor-de-blasio-signs-bill-create-nyc-office-nightlife",
+      "sourceId": "SRC-PRESS-SAVE-BROOKLYN-EAGLE-OFFICE-NIGHTLIFE-2017-09-20",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 7,
+      "listedUrl": "http://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      "sourceId": "SRC-NYCAC-BEDFORD-BOWERY-NIGHT-MAYOR",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "save-nyc-spaces",
+      "ordinal": 8,
+      "listedUrl": "http://www.brooklynvegan.com/mayor-de-blasio-signed-nyc-office-of-nightlife-bill-at-house-of-yes/",
+      "sourceId": "SRC-PRESS-SAVE-BROOKLYNVEGAN-OFFICE-NIGHTLIFE",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 1,
+      "listedUrl": "https://www.nytimes.com/interactive/2018/09/06/nyregion/nyc-storefront-vacancy.html",
+      "sourceId": "SRC-PRESS-FAIR-NYT-EMPTY-STOREFRONTS-2018-09-06",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 2,
+      "listedUrl": "https://www.nydailynews.com/news/politics/ny-commercial-rent-regulation-steve-levin-20191114-eh3aigksp5edlf4itwdkfur74y-story.html",
+      "sourceId": "SRC-PRESS-FAIR-DAILY-NEWS-RENT-HIKES-2019-11-14",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 3,
+      "listedUrl": "https://ny.curbed.com/2019/11/8/20953724/commercial-rent-stabilization-bill-nyc-retail-vacancy",
+      "sourceId": "SRC-PRESS-FAIR-CURBED-RENT-STABILIZATION-2019-11-08",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 4,
+      "listedUrl": "https://www.amny.com/opinion/the-sad-story-behind-nyc-vacant-storefronts-1.26023055",
+      "sourceId": "SRC-PRESS-FAIR-AMNY-VACANT-STOREFRONTS-2019-01-17",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 5,
+      "listedUrl": "https://www.theatlantic.com/ideas/archive/2018/10/new-york-retail-vacancy/572911/",
+      "sourceId": "SRC-PRESS-FAIR-ATLANTIC-RICH-GHOST-TOWN-2018-10-15",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 6,
+      "listedUrl": "https://gothamist.com/food/neirs-tavern-saved-rally-commercial-rent-regulations",
+      "sourceId": "SRC-PRESS-FAIR-GOTHAMIST-NEIRS-2020-01-13",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 7,
+      "listedUrl": "https://qns.com/story/2019/12/18/sunnyside-councilman-small-business-owners-rally-for-commercial-rent-control/",
+      "sourceId": "SRC-PRESS-FAIR-QNS-RENT-CONTROL-2019-12-18",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 8,
+      "listedUrl": "https://sunnysidepost.com/van-bramer-calls-for-commercial-rent-control-bill-aims-to-protect-small-businesses-from-rent-hikes",
+      "sourceId": "SRC-PRESS-FAIR-SUNNYSIDE-RENT-CONTROL-2019-12-18",
+      "duplicateDisposition": "unique"
+    },
+    {
+      "campaignId": "fair-rent-nyc",
+      "ordinal": 9,
+      "listedUrl": "http://thejewishvoice.com/2019/11/11/bklyn-councilman-aims-to-save-mom-pop-retail-outlets/",
+      "sourceId": "SRC-PRESS-FAIR-JEWISH-VOICE-MOM-POP-2019-11-11",
+      "duplicateDisposition": "unique"
+    }
+  ]
+}

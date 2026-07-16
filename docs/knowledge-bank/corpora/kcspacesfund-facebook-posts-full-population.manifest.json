@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "corpus": "kcspacesfund-facebook-posts-full-population.json",
+  "account": "@kcspacesfund",
+  "platform": "facebook",
+  "capturedAt": "2026-07-15",
+  "independentlyVerifiedAt": "2026-07-16",
+  "recordCount": 40,
+  "sha256": "bbe54d3cf4b63b9cf38b96e5b44336a8163ef3873dac47b2dfd23237bc14404b",
+  "publicIdentitySetSha256": "eec42c8175289777dd42e62dfb4d5cd1439915b0afc7b5ebb55011f11c9b1114",
+  "protectedCapture": {
+    "published": false,
+    "sha256": "f591af30365fbad37b094c84f92cb49a7a0bdcd7653ee63926f5a9ebde072a03",
+    "recordCount": 40
+  },
+  "boundary": "The corpus accounts for every distinct surviving public record exposed by repeated authenticated Page-feed traversals. It is not a native Meta export, lifetime history, deleted-post record, or authorship ledger."
+}

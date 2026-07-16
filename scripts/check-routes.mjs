@@ -48,6 +48,7 @@ for (const slug of [
   "callnyc",
   "harry-j-epstein",
   "kc-town-hall",
+  "nyc-artist-coalition",
   "wowlist"
 ]) {
   if (!workSource.includes(`slug: "${slug}"`)) fail(`work slug is missing: ${slug}`);

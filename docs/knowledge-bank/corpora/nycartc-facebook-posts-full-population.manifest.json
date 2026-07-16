@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T18:48:00-04:00",
+  "generator": "Authenticated Meta owner-export and Page-feed reconciliation with public-safe derivation",
+  "sourceCaptures": "protected and not committed",
+  "sourceCapturesPublished": false,
+  "corpus": "docs/knowledge-bank/corpora/nycartc-facebook-posts-full-population.json",
+  "corpusSha256": "d39d851976da5e35cba5df9b8258db9c48c7f24faea058a0c242223403d50ac4",
+  "corpusBytes": 469134,
+  "population": {
+    "ownerExportRows": 444,
+    "ownerExportUniquePostIds": 444,
+    "publicFeedLedgerRows": 445,
+    "start": "2017-01-29",
+    "end": "2021-09-15",
+    "status": "complete-independent-owner-export-and-terminal-feed-populations"
+  },
+  "annualOwnerExportRows": {
+    "2017": 185,
+    "2018": 74,
+    "2019": 111,
+    "2020": 69,
+    "2021": 5
+  },
+  "publicReconciliationHashSet": {
+    "count": 445,
+    "sha256": "79add9a8e36d93d41c0b30ddf233c39c3fe59fe4014db0b96f769ec98cf1ce5c"
+  },
+  "privacy": {
+    "rawOwnerExportsPublished": false,
+    "rawPostTextPublished": false,
+    "postIdsPublished": false,
+    "engagerIdentitiesPublished": false,
+    "authenticatedSessionDataPublished": false,
+    "sensitiveExactRoutesPublished": false,
+    "privatePathsPublished": false
+  }
+}

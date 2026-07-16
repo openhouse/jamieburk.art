@@ -13,6 +13,30 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+## Knowledge Lifecycle
+
+Every useful fragment should receive a disposition, but publication is never
+automatic:
+
+1. **Capture:** Add a public-safe intake record with provenance, why it matters,
+   project links, and explicit boundaries.
+2. **Triage:** Link it to a source, inquiry, claim, correction, or a documented
+   defer/reject reason.
+3. **Research:** Read sources closely, record what each establishes and does not
+   establish, and keep unresolved questions open.
+4. **Mature:** Promote a claim only when evidence, confidence, reviewer,
+   boundaries, and anti-claims are present.
+5. **Project:** Decide independently whether the claim belongs on a particular
+   website page, in a photo brief, only in the public-safe bank, or nowhere yet.
+6. **Revisit:** Treat new sources, collaborator corrections, and photo-editor
+   discoveries as fresh intake. They may strengthen, narrow, supersede, or
+   retract earlier claims.
+
+The canonical typed records live in `apps/www/src/data/knowledge-bank/`. Run
+`npm run knowledge-lifecycle` to enforce the lifecycle and
+`npm run report:knowledge-lifecycle` to see held mature claims and research
+backlog items.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -30,6 +54,8 @@ The knowledge bank exists to:
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
+- **Intake ledger:** lossless public-safe queue of incoming URLs, artifacts,
+  memories, hypotheses, corrections, and photo leads with explicit disposition.
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
@@ -62,4 +88,173 @@ one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+pilot. The Kansas City records are separated into
+[KC Town Hall](projects/kc-town-hall.md) and
+[neighborhood operations](projects/kansas-city-neighborhood-operations.md) so
+construction delivery, participatory listening, recurring service operations,
+and still-open role research do not blur into one claim.
+
+The July 15 iCloud archive-production pass adds focused project records for
+[Fair Rent NYC and Commercial Rent Stabilization](projects/fair-rent-nyc.md),
+[Source-Backed Team Memory](projects/source-backed-team-memory.md), and
+[professional development](projects/professional-development.md). Historical
+visual and participatory work remains grouped in
+[participatory public practice](projects/participatory-public-practice.md).
+
+The July 16 [UCSC media and social-systems pass](projects/ucsc-media-and-social-systems.md)
+adds public-safe source summaries for Margaret Morse's and Warren Sack's
+narrative evaluations, while keeping academic identifiers, grades, private
+correspondence, contact details, raw records, and screenshots outside Git. It
+documents the artistic and recursive technical lineage behind Jamie's present
+operating method and activates one compact, publicly cited threshold on the
+About page.
+
+The July 16 iCloud follow-up adds a public 2013 Max/MSP project record,
+strengthens the Commercial Rent Stabilization operating-infrastructure claim
+with a protected stakeholder-map and messaging-grid artifact, and uses the
+private [job-hunt orientation](projects/job-hunt-evidence-control.md) as an
+evidence-control queue rather than proof of its own summaries. The website
+gains the sharper CRS operating-artifact language; the music project remains
+knowledge-bank depth.
+
+The July 15 [Google Drive Shared Drive archival-production pass](projects/google-drive-archive-production.md)
+adds a privacy-screened corpus method plus concrete records for commercial
+vacancy public-data design, Fair Rent NYC web operations, and Sunday Dinner /
+196 participation infrastructure. Maps, neighborhood communications,
+photographs, recordings, video, brand-system, and cultural-media leads remain
+inquiries where authorship, methodology, role, completion, consent, accuracy,
+context, or rights are unresolved.
+
+The July 15 [social-media archival-production pass](projects/social-media-archive-production.md)
+adds a public-safe account registry and bounded engagement ledgers for CallNYC,
+NYC Artist Coalition and its shared campaigns, WOW List, KC Town Hall, and KC
+Spaces Fund. It keeps project identity, account establishment, shared use,
+individual post authorship, public interaction, endorsement, and policy
+causation as separate claim types.
+
+The CallNYC pass also preserves a reproducible item-level corpus: 107 distinct
+timeline items recovered against a 110-post profile baseline, with the raw
+authenticated capture, transformation manifest, derivation script, posted URL
+inventory, and unresolved three-count difference kept together. See the
+[full-population research run](runs/2026-07-15-callnyc-x-full-population.md).
+
+The [WOW List full-population pass](projects/wowlist.md) reconciles all 38
+profile-reported posts to 38 distinct canonical status IDs. Its reproducible
+corpus separates 22 authored posts from 16 reposts, resolves all 35 posted
+short-URL occurrences, recovers three public product-support conversations,
+and preserves organizer-use, civic-care, and field-learning patterns without
+assigning every project-account post to Jamie. See the
+[research run](runs/2026-07-15-wowlist-x-full-population.md).
+
+See
+[projects/kc-spaces-fund-facebook-posts.md](projects/kc-spaces-fund-facebook-posts.md)
+and its
+[40-row public-safe census](corpora/kcspacesfund-facebook-posts-full-population.json)
+for the complete capture-date KC Spaces Fund Facebook population, mission and
+fundraising routes, funded-space spotlights, bounded interaction signals,
+collective credit, and Jamie's documented digital-infrastructure boundary.
+
+See
+[projects/kc-town-hall.md](projects/kc-town-hall.md)
+for the official sequence from CCED Board recommendation through Council
+acceptance, negotiation authority, and appropriation, followed by
+non-disbursement, withdrawal, and return of the full unused amount.
+
+Historical scale and Jamie's technical contribution have a separate archive
+inquiry and intake, so the social corpus is not asked to prove implementation
+or adoption.
+
+The [KC Town Hall project note](projects/kc-town-hall.md) now links a complete
+183-record public-account fixture to the existing municipal, Phase One,
+neighborhood-listening, and stewardship records. The population separates 142
+originals, 13 replies, 28 reposts, and five conversation-context cards; retains
+posted-source and stakeholder-response inventories; and keeps historical
+contact details, raw post text, individual authorship, self-published program
+totals, endorsement, and causal impact behind explicit boundaries. A separate
+redacted acquisition ledger preserves the authenticated route inventory, and a
+31-item URL disposition ledger routes every posted short URL to a promoted
+source, an operational link family, or a named research inquiry. See the
+[full-population research run](runs/2026-07-15-kctownhall-x-full-population.md).
+The case study now also projects the municipal packet's statement that the
+$189,629 Phase One scope was completed and its collaborative survey account
+while keeping Jamie's general-contractor title and individual survey authorship
+in research.
+
+The [NYC Artist Coalition project note](projects/nyc-artist-coalition.md) now
+links a population-accounted `@NYCArtC` archive. The profile's 5,124 reported
+slots are dispositioned as 3,367 recovered public items and an explicit
+1,757-item owner-archive gap. A minimized public ledger preserves aggregate
+classifications and cryptographic reconciliation controls; the authenticated
+capture, full item-level record, bulk post text, and per-item counters stay
+protected outside the repo. All new social metrics remain held from the public
+site. See the
+[research run](runs/2026-07-15-nycartc-x-full-population.md).
+
+The personal [@urbanhermit project note](projects/urbanhermit.md) records a
+complete capture-date live-profile pass: three independent traversals recovered
+the same 434-status population. The public repo retains a minimized aggregate,
+digest, and selected-source ledger; the item-level capture, raw post text,
+ordinary-life context, and other people's unnecessary traces stay in Jamie's
+protected archive. Selected public attributions deepen WOW List, Horse Lords,
+8th Street Tunnel, NYC Artist Coalition, and Tired of Tires records without
+adding a new website projection. See the
+[research run](runs/2026-07-15-urbanhermit-x-full-population.md).
+
+The July 16 [personal and WOW List Facebook event pass](projects/personal-and-wowlist-facebook-events.md)
+accounts for all 511 cards exposed by Jamie's personal Past Events surface,
+separates 20 explicit organizer records from 491 profile-associated research
+leads, and records one current WOW List Page rendering with no Events section
+as a historical-preservation inquiry. The complete personal index remains
+protected; the public repo keeps a minimized ledger, integrity digests,
+selected mission-relevant events, and strict response and stakeholder
+boundaries. See the
+[research run](runs/2026-07-16-facebook-personal-wowlist-events.md).
+
+The July 16 [WOW List Facebook post pass](projects/wowlist-facebook-posts.md)
+accounts for all 54 post records exposed by the authenticated legacy Lifetime
+table. It separates canonical public IDs from legacy management IDs, records
+51 Jamie Page-publisher bylines and three video redirects without recovered
+bylines, inventories 42 normalized destinations, and reconciles one 29-row
+native owner-export segment exactly. Raw social copy, administrator analytics,
+identities, and authenticated state remain protected. See the
+[research run](runs/2026-07-16-wowlist-facebook-posts-full-population.md).
+
+The July 16 [NYC Artist Coalition Facebook post pass](projects/nyc-artist-coalition-facebook-posts.md)
+accounts independently for all 444 rows in five annual Meta Business Suite
+Published exports and all 445 distinct identities in the terminal Page feed
+covering the surviving 2017-2021 chronology. No one-to-one row crosswalk is
+asserted between the surfaces. The public corpus retains dates, one-way hashes,
+67 external-route dispositions, overlapping mission and stakeholder-reference
+classifications, and bounded aggregate controls. Raw copy, native IDs, comments,
+identities, sensitive routes, and owner exports remain protected. Jamie's
+predominant-use recollection is preserved as an inquiry rather than converted
+into authorship of the shared account. See the
+[research run](runs/2026-07-15-nycac-facebook-posts-full-population.md).
+
+The July 16 [personal Facebook post pass](projects/jamie-personal-facebook-posts.md)
+accounts for all 1,243 records currently returned by Manage Posts filtered to
+Posted by You. Two independent methods recover the same population and visible
+endpoints while exposing different audience and URL fields. The public repo
+retains aggregate controls, cryptographic commitments, 549 normalized source
+and action-route leads, six individually rechecked Public sources, and strict
+engagement boundaries. Bulk text, nonpublic and unlabeled record contents,
+comments, identities, media, sensitive routes, protected paths, and
+authenticated state remain outside Git.
+
+The July 16 [participation-lineage pass](projects/participation-lineage.md)
+connects Sunday Dinner's recurring operating record, WOW List's followable
+calendar model, `popular.vote`, Call Script's public-input use, and a concrete
+route into recurring NYC Artist Coalition meetings. It corrects “345 numbered
+events” to “345 prefixed event columns,” retains aggregate attendance and
+database associations as bounded archival evidence, and promotes one concise
+civic-reuse sentence to the WOW List case study. See the
+[research run](runs/2026-07-16-participation-lineage.md).
+
+The July 16 [NYC Artist Coalition, DCLA, and Council pass](projects/nycac-dcla-council-interface.md)
+recovers Finkelpearl's May 2017 Council-hearing reference, documents Jamie's
+own 2018 testimony about safety and civic translation, and distinguishes
+confirmed public record from a bounded institutional account of why DCLA,
+Council, and Councilmember Espinal benefited from the coalition's work. All
+confirmed case-study projections now resolve through the dedicated
+`/work/nyc-artist-coalition` composition; the institutional-benefit claim
+remains a labeled inference in the knowledge bank.

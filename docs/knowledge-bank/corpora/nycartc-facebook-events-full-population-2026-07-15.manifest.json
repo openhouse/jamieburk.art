@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "corpusSchemaVersion": 3,
+  "status": "public-safe-metadata-only",
+  "capturedAt": "2026-07-15",
+  "account": "@nycartc",
+  "surface": "Facebook Past Events",
+  "corpusPath": "docs/knowledge-bank/corpora/nycartc-facebook-events-full-population-2026-07-15.json",
+  "corpusSha256": "1562bb57fa58d788e8171f2efb98c71be47f42099482320ab113d631925e545e",
+  "corpusBytes": 51922,
+  "pageDisplayedPastEventSlots": 34,
+  "recoveredEventRecords": 33,
+  "unresolvedControlSlots": 1,
+  "sortedEventIdSha256": "b9e63a508958e7b7ed71236803aef60bc597123b1ff5c497550df90c80fe09fc",
+  "eventIdentitySha256": "4b7b9f29b9ff91c45c823cf14e31dc64358d4fcdd6ee47e49bf20eacff797c52",
+  "currentReplay": {
+    "recoveredEventRecords": 33,
+    "growthSequence": [24, 32, 33],
+    "terminalStableCount": 33,
+    "sortedEventIdSha256": "b9e63a508958e7b7ed71236803aef60bc597123b1ff5c497550df90c80fe09fc"
+  },
+  "scopeNote": "This is 100 percent accounting for the 34-slot host control observed in an authenticated same-day capture: 33 public event identities were recovered and one slot remains unresolved. It is not a native Meta owner export or a claim that every historical event ever created remains visible.",
+  "publicSafetyNote": "The corpus retains event metadata, organizer displays, bounded response snapshots, classifications, and selected mission-relevant public links. It excludes raw descriptions, attendee identities, comments, contacts, access credentials, private working links, and authenticated-session state."
+}

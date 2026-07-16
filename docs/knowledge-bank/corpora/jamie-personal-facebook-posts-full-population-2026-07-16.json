@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-16",
+  "platform": "facebook",
+  "account": "Jamie Burkart personal account",
+  "surface": "Manage Posts filtered to Posted by You",
+  "population": {
+    "ownerFilteredRecords": 1243,
+    "cursorPages": 621,
+    "returnedNodes": 3728,
+    "terminalHasNextPage": false,
+    "missingDates": 0,
+    "ownerAbsent": 0,
+    "earliestVisibleDate": "2006-12-19",
+    "latestVisibleDate": "2022-06-12",
+    "visualTraversalRecords": 1243,
+    "visuallyAvailableRecords": 1237,
+    "visuallyUnavailableRecords": 6,
+    "boundary": "Every record returned by the capture-date owner-filtered surface received a disposition. This is not a native Meta export, deletion history, or immutable lifetime publication count."
+  },
+  "captureCommitments": {
+    "initialCursorCaptureSha256": "ee5a65f5872cd47d1ca8289ef0ec6757314ac4b065fa8ed9f87fb624544e97f7",
+    "normalizedGraphPassSha256": "44d8b9cd2172458cb9f20952a458a80fd9e5b0ccda31a2267f183ed7b90f3a77",
+    "visualPopulationCaptureSha256": "4e04614dc1749fbf8792ad1325fba7559d667cab6d64e7b6994fc67ead2c4d01",
+    "visualRecordSetSha256": "07c1614f75d1b25bcc92f22129bdd99089b14da4c478dab9759b625c0a973560",
+    "visualAnalysisArtifactSha256": "d5f14cd3c102368415cdb47c179c3a963c4cb8c6ea73840d305ff4f3873a3f9a",
+    "boundary": "The committed digests permit reconciliation without publishing protected record contents or private filesystem locations."
+  },
+  "yearCounts": {
+    "2006": 2,
+    "2007": 5,
+    "2008": 4,
+    "2009": 218,
+    "2010": 82,
+    "2011": 88,
+    "2012": 153,
+    "2013": 184,
+    "2014": 109,
+    "2015": 68,
+    "2016": 122,
+    "2017": 118,
+    "2018": 27,
+    "2019": 42,
+    "2020": 19,
+    "2022": 2
+  },
+  "recordForms": {
+    "textOrLink": 616,
+    "photoOrAlbum": 356,
+    "mediaShell": 198,
+    "video": 38,
+    "event": 35
+  },
+  "audienceReconciliation": {
+    "graphFieldCapture": {
+      "Public": 268,
+      "Friends": 1,
+      "OnlyMe": 1,
+      "unlabeled": 973
+    },
+    "visualCapture": {
+      "Public": 671,
+      "Friends": 204,
+      "OnlyMe": 98,
+      "unlabeled": 270
+    },
+    "interpretation": "The methods expose different fields from the same 1,243-record population. The visual traversal recovered more current audience labels. Neither distribution is a publication-time privacy history, and unlabeled never means public."
+  },
+  "structuralRouteInventory": {
+    "externalUrlBearingRecords": 430,
+    "uniqueNormalizedExternalUrls": 549,
+    "interpretation": "Structural fields recover embedded and shared destinations more completely than rendered-text extraction. Every destination remains a research lead until independently recovered and close-read."
+  },
+  "visualRouteCrossCheck": {
+    "recordsWithRenderedOutboundUrls": 291,
+    "uniqueRenderedOutboundUrls": 363,
+    "interpretation": "The visual extraction is a lower-recall cross-check and is not combined with the structural denominator."
+  },
+  "missionRouting": {
+    "recordsWithAtLeastOneStructuralRoute": 181,
+    "overlappingProjectCounts": {
+      "wowList": 48,
+      "sundayDinner": 44,
+      "nycArtistCoalition": 34,
+      "letNycDance": 33,
+      "creativeTechnical": 19,
+      "civicTechnical": 13,
+      "saveNycSpaces": 10,
+      "waterPublics": 10,
+      "talksNotRaids": 4,
+      "fairRentNyc": 3,
+      "kcTownHall": 2,
+      "nterChng": 2,
+      "callNyc": 1
+    },
+    "interpretation": "Deterministic overlapping labels route records for research. They are not exclusive semantic judgments, effort measures, project counts, priorities, or impact scores."
+  },
+  "outgoingStakeholderReferences": {
+    "nycCouncil": 20,
+    "rafaelEspinal": 18,
+    "marketHotel": 9,
+    "officeOfNightlife": 6,
+    "antonioReynoso": 5,
+    "kcTownHall": 2,
+    "helenRosenthal": 1,
+    "quintonLucas": 1,
+    "interpretation": "Counts are outgoing text, tag, quotation, event, and route matches, not incoming engagement, attendance, endorsement, partnership, or impact."
+  },
+  "selectedPublicPosts": [
+    {
+      "id": "nter-chng-opening-2010",
+      "publishedAt": "2010-01-10",
+      "url": "https://www.facebook.com/jburkart/posts/226963042167",
+      "project": "nter-chng",
+      "sourceRole": "dated first-party public trace and co-creator credit",
+      "captureDateSignals": null
+    },
+    {
+      "id": "wowlist-nine-cities-2015",
+      "publishedAt": "2015-10-05",
+      "url": "https://www.facebook.com/jburkart/posts/pfbid02hjaUtK2swFUy1XeNkQjqUnZj4M6ecbYpPjGa365MFo2oWR57HwEqNdrhSDQjJjBMl",
+      "project": "wow-list",
+      "sourceRole": "attributed nine-city statement and join route",
+      "captureDateSignals": {
+        "likes": 28,
+        "comments": 8
+      }
+    },
+    {
+      "id": "councilstat-job-route-2016",
+      "publishedAt": "2016-05-18",
+      "url": "https://www.facebook.com/jburkart/posts/pfbid023maJq9xB4QQYyFzJswPL5tbT2ToUbJxJ5MRnV9L51y94fPDVZVuHcVGsuBpmEnTSl",
+      "project": "callnyc",
+      "sourceRole": "attributed team language and historical job route",
+      "captureDateSignals": {
+        "likes": 7,
+        "comments": 0
+      }
+    },
+    {
+      "id": "letnycdance-npr-action-2017",
+      "publishedAt": "2017-09-20",
+      "url": "https://www.facebook.com/jburkart/posts/pfbid021AY6ydWmHSAXQooc1KgivMWjY3jcuWSj958Z73MQ6fJick7jNaHHDwfKgZuo7cbal",
+      "project": "let-nyc-dance",
+      "sourceRole": "NPR press paired with Council and campaign action routes",
+      "captureDateSignals": {
+        "reactions": 24
+      }
+    },
+    {
+      "id": "kc-town-hall-start-2018",
+      "publishedAt": "2018-07-02",
+      "url": "https://www.facebook.com/jburkart/posts/pfbid023rhzPSnUranjNyMCotufqMNS6uqLJatPp9R4e2m4s1ytZutdVSw2vKzEijbueVigl",
+      "project": "kc-town-hall",
+      "sourceRole": "attributed co-initiation and intended public-benefit purpose",
+      "captureDateSignals": {
+        "reactions": 106,
+        "comments": 14,
+        "shares": 3
+      }
+    },
+    {
+      "id": "talks-not-raids-action-2019",
+      "publishedAt": "2019-02-11",
+      "url": "https://www.facebook.com/jburkart/posts/pfbid033Wq5p6tEctq8Lc4R5WxYpCyTgUfeEpyTQGa6y7VsTwMjfk81CJb7C7RRoxmAAQWXl",
+      "project": "talks-not-raids",
+      "sourceRole": "hearing, coalition-media, campaign-site, and legislation routing",
+      "captureDateSignals": null
+    }
+  ],
+  "reviewedPublicDestinations": [
+    {
+      "sourceId": "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01",
+      "url": "https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/",
+      "disposition": "existing-source-associated"
+    },
+    {
+      "sourceId": "SRC-WATERWAYS-PITCH-GULF-2009-09-03",
+      "url": "https://www.thepitchkc.com/former-huck-finn-artist-now-working-in-a-pink-plastic-bubble/",
+      "disposition": "existing-source-associated"
+    },
+    {
+      "sourceId": "SRC-NYCAC-X-GOTHAMIST-CABARET-MOMENTUM-2017",
+      "url": "https://gothamist.com/arts-entertainment/movement-for-repealing-nycs-archaic-no-dancing-law-gains-momentum",
+      "disposition": "existing-source-associated"
+    },
+    {
+      "sourceId": "SRC-PRESS-LND-WNYC-BUREAUCRATIC-DANCE",
+      "url": "https://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law/",
+      "disposition": "existing-source-associated"
+    },
+    {
+      "sourceId": "SRC-NYCAC-NPR-2017-09-20",
+      "url": "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      "disposition": "existing-source-associated"
+    },
+    {
+      "sourceId": null,
+      "url": "https://www.rollingstone.com/culture/videos/diy-music-nightlife-nyc-night-mayor-rafael-espinal-w517312",
+      "disposition": "posted-route-preserved-retrieval-blocked"
+    }
+  ],
+  "privacy": {
+    "omitted": [
+      "raw post bodies",
+      "Friends and Only me record contents",
+      "unlabeled record contents",
+      "comment text and responder identities",
+      "ordinary personal-life context",
+      "private or sensitive destination URLs",
+      "media and social-graph identities",
+      "authenticated state and management data",
+      "protected filesystem locations"
+    ],
+    "note": "Only six individually rechecked Public posts, selected aggregate controls, source routes, and non-sensitive cryptographic commitments enter the public repository."
+  },
+  "engagementBoundary": "Manage Posts did not expose reliable population-wide reaction, comment, share, or reshare totals. Selected counters are mutable July 16, 2026 interface observations, not unique people, reach, stakeholder engagement, endorsement, attendance, conversion, causality, or impact."
+}

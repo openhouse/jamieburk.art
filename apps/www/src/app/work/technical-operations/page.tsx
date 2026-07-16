@@ -1,59 +1,127 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
+import {
+  requireReadyOrCarefulProof,
+  technicalOperationsProofRows
+} from "@/data/proofs";
+import { getClaimProjection } from "@/data/knowledge-bank";
 import { createMetadata } from "@/lib/metadata";
 
+const kcTownHallProof = requireReadyOrCarefulProof(
+  "kc-town-hall-public-benefit-documentation"
+);
+
+const commercialVacancyProof = getClaimProjection(
+  "CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026",
+  "technical-operations",
+  "/work/technical-operations"
+);
+
+const commercialRentOperationsProof = requireReadyOrCarefulProof(
+  "fair-rent-campaign-memory"
+);
+
+const sundayDinnerOperationsProof = getClaimProjection(
+  "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
+  "technical-operations",
+  "/work/technical-operations"
+);
+
+const kcSpacesFundOperationsProof = getClaimProjection(
+  "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+  "technical-operations",
+  "/work/technical-operations"
+);
+
+const sourceBackedMemoryProof = requireReadyOrCarefulProof(
+  "source-backed-team-memory-method"
+);
+
+const aiEvalsProof = requireReadyOrCarefulProof(
+  "ai-evals-professional-development"
+);
+
+const technicalOperationsProjectionOverrides = new Map<string, string>([
+  [
+    "kc-spaces-fund-digital-infrastructure",
+    kcSpacesFundOperationsProof.text
+  ]
+]);
+
 const operationsMap = [
-  "Coordinate delivery across concurrent projects and keep work moving from concept through public launch.",
-  "Track status, surface risks early, and name recurring blockers before they become patterns.",
-  "Build planning cycles, team rituals, decision frameworks, status reporting, and retrospectives.",
-  "Coordinate dependencies across product, engineering, security, legal, communications, contracts, and external stakeholders.",
-  "Onboard collaborators with handbooks, runbooks, operating documentation, source maps, and decision records.",
-  "Report team health, project status, and operational metrics with honesty about what is and is not working.",
+  "Clarify requirements and map workflows for public-facing technical work.",
+  "Coordinate delivery from ambiguity toward launch.",
+  "Surface risks and open questions early so teams can act on them.",
+  "Maintain decision records and clear project-status reporting.",
+  "Prepare onboarding materials, operating documentation, and durable handoffs.",
   "Improve working systems over time without overengineering."
 ];
 
 const proofMap = [
   {
-    project: "HJE",
+    project: "Harry J. Epstein Company",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "Jamie helped modernize e-commerce, analytics, marketing, content, and operations workflows in a legacy business."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
-    proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+    proof: commercialRentOperationsProof.publicWording
+  },
+  {
+    project: "Commercial vacancy public-data framing",
+    proof: commercialVacancyProof.text
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "Jamie built an archived, independent, and unofficial prototype that translated CouncilStat open data into resident-facing guidance."
   },
   {
     project: "WOWList",
     proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
+      "Jamie co-built a community-calendar platform using Python / Django, PostgreSQL / PostGIS, and Ember.js, with recorded activity across roughly 35 city ecosystems."
   },
   {
     project: "196 / Sunday Dinner",
-    proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+    proof: sundayDinnerOperationsProof.text
   },
   {
     project: "KC Spaces Fund",
-    proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+    proof: kcSpacesFundOperationsProof.text
   },
   {
     project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof: kcTownHallProof.shortWording ?? kcTownHallProof.publicWording
   },
   {
     project: "Source-Backed Team Memory",
     proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+      "Jamie is developing a bounded lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+  }
+];
+
+const currentPractice = [
+  {
+    period: "2026",
+    title: "Source-backed team memory",
+    text: sourceBackedMemoryProof.shortWording ?? sourceBackedMemoryProof.publicWording,
+    href: "/lab/source-backed-team-memory" as Route
+  },
+  {
+    period: "2026",
+    title: "Public-data product framing",
+    text: commercialVacancyProof.text,
+    href: "/work/fair-rent-nyc" as Route
+  },
+  {
+    period: "2026",
+    title: "AI evaluation practice",
+    text: aiEvalsProof.shortWording ?? aiEvalsProof.publicWording,
+    href: "/about" as Route
   }
 ];
 
@@ -68,17 +136,43 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          Across 14+ years in civic, cultural, small-business, and public-facing
+          technical environments, I have created the operating structure teams
+          need to move: requirements, workflows, decision records, action
+          trackers, onboarding materials, documentation systems, launch
+          support, and durable handoffs.
         </p>
       </div>
+      <section
+        aria-labelledby="current-practice-heading"
+        className="mt-10 border-y border-jb-ink/15 py-7"
+      >
+        <div className="grid gap-6 lg:grid-cols-[0.28fr_0.72fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase text-jb-blue">Current practice</p>
+            <h2 className="mt-2 text-2xl font-semibold text-jb-ink" id="current-practice-heading">
+              Recent evidence, clearly bounded
+            </h2>
+          </div>
+          <dl className="grid gap-5 md:grid-cols-3">
+            {currentPractice.map((item) => (
+              <div className="border-l-4 border-jb-ochre pl-4" key={item.title}>
+                <dt>
+                  <span className="text-xs font-semibold text-jb-blue">{item.period}</span>
+                  <Link className="mt-1 block font-semibold text-jb-ink hover:text-jb-blue" href={item.href}>
+                    {item.title}
+                  </Link>
+                </dt>
+                <dd className="mt-2 text-sm leading-6 text-jb-ink/72">{item.text}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
         <JBCard>
           <h2 className="text-2xl font-semibold text-jb-ink">
@@ -114,10 +208,29 @@ export default function TechnicalOperationsPage() {
               {row.proofs.map((proof) => (
                 <li className="flex gap-3" key={proof.id}>
                   <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
+                  <span>
+                    {technicalOperationsProjectionOverrides.get(proof.id) ??
+                      proof.shortWording ??
+                      proof.publicWording}
+                  </span>
                 </li>
               ))}
             </ul>
+            <div className="mt-6 border-t border-jb-ink/10 pt-4">
+              <h3 className="text-sm font-semibold text-jb-ink">View related work</h3>
+              <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold">
+                {row.destinations.map((destination) => (
+                  <li key={destination.href}>
+                    <Link
+                      className="text-jb-blue underline decoration-jb-blue/30 underline-offset-4 hover:text-jb-green"
+                      href={destination.href as Route}
+                    >
+                      {destination.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </JBCard>
         ))}
       </div>
