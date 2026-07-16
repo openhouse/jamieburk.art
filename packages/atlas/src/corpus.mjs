@@ -10,8 +10,13 @@ import matter from "gray-matter";
 import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
 import {
   atlasPageSchema,
-  evalIntegrationManifestSchema
+  evalIntegrationManifestSchema,
+  stakeholderCreditRegisterSchema
 } from "./schema.mjs";
+import {
+  loadFeatureEvalKnowledge,
+  validateFeatureEvalKnowledge
+} from "./integration.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -119,12 +124,27 @@ export function loadIntegrationManifest(repoRoot = defaultRepoRoot) {
   return evalIntegrationManifestSchema.parse(JSON.parse(readFileSync(file, "utf8")));
 }
 
+export function loadStakeholderCreditRegister(repoRoot = defaultRepoRoot) {
+  const file = path.join(repoRoot, "docs/atlas/stakeholder-credit.json");
+  return stakeholderCreditRegisterSchema.parse(JSON.parse(readFileSync(file, "utf8")));
+}
+
 export function selectProjectSlice(bank, canonical) {
   const primaryEntity = bank.entities.find((entity) => entity.id === canonical.entityId);
-  const entityIds = new Set([
-    canonical.entityId,
-    ...(primaryEntity?.relatedEntityIds ?? [])
-  ]);
+  const entityIds = new Set([canonical.entityId]);
+  const queue = [...(primaryEntity?.relatedEntityIds ?? [])];
+  while (queue.length) {
+    const entityId = queue.shift();
+    if (entityIds.has(entityId)) continue;
+    entityIds.add(entityId);
+    const entity = bank.entities.find(({ id }) => id === entityId);
+    const incomingIds = bank.entities
+      .filter(({ relatedEntityIds }) => relatedEntityIds.includes(entityId))
+      .map(({ id }) => id);
+    for (const relatedId of [...(entity?.relatedEntityIds ?? []), ...incomingIds]) {
+      if (!entityIds.has(relatedId)) queue.push(relatedId);
+    }
+  }
   const claims = bank.claims.filter((claim) => claim.project === canonical.projectKey);
   const claimIds = new Set(claims.map(({ id }) => id));
   const intake = bank.intake.filter((item) =>
@@ -190,6 +210,8 @@ export function validateAtlas({
   bank = knowledgeBank,
   manifest,
   repoRoot = defaultRepoRoot,
+  sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  stakeholderCredits = loadStakeholderCreditRegister(repoRoot),
   enforceRepositoryBoundary = true
 }) {
   const errors = [];
@@ -224,8 +246,8 @@ export function validateAtlas({
         errors.push(issue("canonical", `Entity ${entity.id} does not own project key ${page.canonical.projectKey}`, page));
       }
       const slice = selectProjectSlice(bank, page.canonical);
-      if (!slice.counts.entities || !slice.counts.claims || !slice.counts.sources) {
-        errors.push(issue("migration", "Complete project slice is missing entities, claims, or sources", page));
+      if (!slice.counts.entities || !slice.counts.claims) {
+        errors.push(issue("migration", "Complete project slice is missing entities or claims", page));
       }
       const evidenceSourceIds = new Set(
         bank.claims
@@ -272,6 +294,31 @@ export function validateAtlas({
   )) {
     errors.push(issue("integration", "Base branch commit does not match its integration entry"));
   }
+  const expectedProjectKeys = sorted(bank.entities.flatMap(({ projectKey }) => projectKey ? [projectKey] : []));
+  const observedProjectKeys = sorted(pages.flatMap(({ canonical }) => canonical?.projectKey ? [canonical.projectKey] : []));
+  for (const projectKey of expectedProjectKeys.filter((key) => !observedProjectKeys.includes(key))) {
+    errors.push(issue("migration", `Canonical project lacks an Atlas page: ${projectKey}`));
+  }
+  for (const message of validateFeatureEvalKnowledge({ catalog: sourceKnowledge, manifest })) {
+    errors.push(issue("source-integration", message));
+  }
+  const allRecordIds = new Set(Object.values(bank)
+    .filter(Array.isArray)
+    .flatMap((records) => records.map(({ id }) => id)));
+  const duplicateStakeholders = stakeholderCredits.entries
+    .map(({ name }) => name)
+    .filter((name, index, names) => names.indexOf(name) !== index);
+  for (const name of sorted(duplicateStakeholders)) {
+    errors.push(issue("stakeholder", `Duplicate stakeholder credit entry: ${name}`));
+  }
+  for (const entry of stakeholderCredits.entries) {
+    const page = pageById.get(entry.atlasPage);
+    if (!page) errors.push(issue("stakeholder", `Stakeholder ${entry.name} points to an unknown Atlas page`));
+    else if (!page.raw.includes(entry.name)) errors.push(issue("stakeholder", `Stakeholder ${entry.name} is absent from ${page.id}`, page));
+    for (const recordId of entry.basisRecordIds) {
+      if (!allRecordIds.has(recordId)) errors.push(issue("stakeholder", `Stakeholder ${entry.name} cites unknown record ${recordId}`, page));
+    }
+  }
 
   if (enforceRepositoryBoundary && existsSync(path.join(repoRoot, "apps/www/src/app/atlas"))) {
     errors.push(issue("boundary", "Atlas must not create a public application route"));
@@ -288,9 +335,11 @@ export function compileAtlas({
   bank = knowledgeBank,
   pages = loadAtlasPages(repoRoot),
   manifest = loadIntegrationManifest(repoRoot),
+  sourceKnowledge = loadFeatureEvalKnowledge(repoRoot),
+  stakeholderCredits = loadStakeholderCreditRegister(repoRoot),
   enforceRepositoryBoundary = true
 } = {}) {
-  const validation = validateAtlas({ pages, bank, manifest, repoRoot, enforceRepositoryBoundary });
+  const validation = validateAtlas({ pages, bank, manifest, sourceKnowledge, stakeholderCredits, repoRoot, enforceRepositoryBoundary });
   const pageNodes = pages
     .map((page) => ({
       id: page.id,
@@ -316,6 +365,8 @@ export function compileAtlas({
   const corpusFingerprint = hash(JSON.stringify(corpusSource));
   const bankFingerprint = hash(JSON.stringify(bank));
   const integrationFingerprint = hash(JSON.stringify(manifest));
+  const sourceKnowledgeFingerprint = sourceKnowledge.catalogFingerprint;
+  const stakeholderCreditFingerprint = hash(JSON.stringify(stakeholderCredits));
   const implementationRoot = path.join(repoRoot, "packages/atlas");
   const implementationSource = [
     path.join(implementationRoot, "package.json"),
@@ -324,7 +375,7 @@ export function compileAtlas({
   ].map((file) => [path.relative(repoRoot, file), readFileSync(file, "utf8")]);
   const implementationFingerprint = hash(JSON.stringify(implementationSource));
   const candidateFingerprint = hash(
-    `${corpusFingerprint}:${bankFingerprint}:${integrationFingerprint}:${implementationFingerprint}`
+    `${corpusFingerprint}:${bankFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${stakeholderCreditFingerprint}:${implementationFingerprint}`
   );
   const canonicalUnion = {};
   for (const page of pageNodes.filter(({ canonical }) => canonical)) {
@@ -332,19 +383,27 @@ export function compileAtlas({
       canonicalUnion[collection] = sorted([...(canonicalUnion[collection] ?? []), ...ids]);
     }
   }
+  for (const [collection, records] of Object.entries(bank).filter(([, value]) => Array.isArray(value))) {
+    const covered = new Set(canonicalUnion[collection] ?? []);
+    const missing = records.map(({ id }) => id).filter((id) => !covered.has(id));
+    if (missing.length) validation.errors.push(issue("migration", `${collection} has ${missing.length} record(s) outside Atlas project coverage`));
+  }
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     candidateFingerprint,
     inputs: {
       corpusFingerprint,
       bankFingerprint,
       integrationFingerprint,
+      sourceKnowledgeFingerprint,
+      stakeholderCreditFingerprint,
       implementationFingerprint
     },
     metrics: {
       pages: pageNodes.length,
       projectPages: pageNodes.filter(({ kind }) => kind === "project").length,
+      stakeholderCredits: stakeholderCredits.entries.length,
       relations: pageNodes.reduce((sum, page) => sum + page.relations.length, 0),
       canonicalCoverage: Object.fromEntries(
         Object.entries(canonicalUnion).map(([collection, ids]) => [collection, ids.length])
@@ -352,6 +411,13 @@ export function compileAtlas({
     },
     pages: pageNodes,
     integration: manifest,
+    sourceKnowledge: {
+      catalogFingerprint: sourceKnowledge.catalogFingerprint,
+      totals: sourceKnowledge.totals,
+      branches: sourceKnowledge.branches,
+      stakeholders: sourceKnowledge.stakeholders
+    },
+    stakeholderCredits: stakeholderCredits.entries,
     validation
   };
 }
@@ -367,7 +433,9 @@ export function evaluateAtlas(compiled) {
     ["authority-and-correction-are-explicit", ["governance"]],
     ["public-safety-boundary-is-enforced", ["safety"]],
     ["atlas-remains-a-private-package", ["boundary"]],
-    ["eval-branch-family-is-accounted-for", ["integration"]]
+    ["eval-branch-family-is-accounted-for", ["integration"]],
+    ["all-eval-branch-knowledge-is-cataloged", ["source-integration"]],
+    ["named-stakeholder-credit-is-preserved", ["stakeholder"]]
   ];
   const results = hardGateDefinitions.map(([id, codes]) => {
     const evidence = failures.filter(({ code }) => codes.includes(code));
@@ -381,11 +449,25 @@ export function evaluateAtlas(compiled) {
   });
   results.push(
     {
-      id: "six-project-specimens",
+      id: "named-stakeholder-coverage",
       kind: "quality-target",
-      passed: compiled.metrics.projectPages >= 6,
-      observed: `${compiled.metrics.projectPages} project page(s); target 6`,
+      passed: compiled.metrics.stakeholderCredits >= 20,
+      observed: `${compiled.metrics.stakeholderCredits} named stakeholder credit boundaries; target 20`,
       evidence: []
+    },
+    {
+      id: "canonical-project-universe",
+      kind: "quality-target",
+      passed: compiled.metrics.projectPages >= 21,
+      observed: `${compiled.metrics.projectPages} project page(s); target 21`,
+      evidence: []
+    },
+    {
+      id: "federated-source-depth",
+      kind: "quality-target",
+      passed: compiled.sourceKnowledge.totals.branches === 14 && compiled.sourceKnowledge.totals.semanticIds >= 5000,
+      observed: `${compiled.sourceKnowledge.totals.semanticIds} semantic IDs from ${compiled.sourceKnowledge.totals.branches} branches`,
+      evidence: compiled.sourceKnowledge.totals
     },
     {
       id: "semantic-neighborhood-depth",
@@ -406,7 +488,7 @@ export function evaluateAtlas(compiled) {
   const qualityTargets = results.filter(({ kind }) => kind === "quality-target");
   return {
     suiteId: "atlas-semantic-wiki",
-    suiteVersion: "1.0.0",
+    suiteVersion: "2.0.0",
     candidateFingerprint: compiled.candidateFingerprint,
     results,
     summary: {

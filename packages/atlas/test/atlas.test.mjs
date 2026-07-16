@@ -10,9 +10,16 @@ import {
   validateAtlas
 } from "../src/corpus.mjs";
 import { createAtlasService } from "../src/service.mjs";
+import {
+  integrationCatalogFingerprint,
+  loadFeatureEvalKnowledge,
+  validateFeatureEvalKnowledge,
+  verifyFeatureEvalSourceArtifacts
+} from "../src/integration.mjs";
 
 const manifest = loadIntegrationManifest();
 const pages = loadAtlasPages();
+const sourceKnowledge = loadFeatureEvalKnowledge(defaultRepoRoot);
 
 function clonePages() {
   return structuredClone(pages);
@@ -21,9 +28,9 @@ function clonePages() {
 test("real Atlas corpus compiles as a private semantic graph", () => {
   const compiled = compileAtlas();
   assert.deepEqual(compiled.validation.errors, []);
-  assert.equal(compiled.metrics.projectPages, 6);
-  assert.equal(compiled.metrics.pages, 10);
-  assert.ok(compiled.metrics.relations >= 48);
+  assert.equal(compiled.metrics.projectPages, 21);
+  assert.equal(compiled.metrics.pages, 25);
+  assert.ok(compiled.metrics.relations >= 108);
   assert.match(compiled.candidateFingerprint, /^[a-f0-9]{64}$/);
 });
 
@@ -91,6 +98,14 @@ test("public-safe Markdown rejects local private paths", () => {
   assert.ok(errors.some(({ code }) => code === "safety"));
 });
 
+test("named stakeholder credit cannot disappear from its project page", () => {
+  const mutated = clonePages();
+  const page = mutated.find(({ id }) => id === "ATLAS-PROJECT-NYC-ARTIST-COALITION");
+  page.raw = page.raw.replaceAll("Olympia Kazi", "a coalition participant");
+  const { errors } = validateAtlas({ pages: mutated, bank: knowledgeBank, manifest, repoRoot: defaultRepoRoot });
+  assert.ok(errors.some(({ code, message }) => code === "stakeholder" && message.includes("Olympia Kazi")));
+});
+
 test("complete project slices retain every claim and every linked evidence source", () => {
   for (const page of pages.filter(({ kind }) => kind === "project")) {
     const slice = selectProjectSlice(knowledgeBank, page.canonical);
@@ -101,10 +116,79 @@ test("complete project slices retain every claim and every linked evidence sourc
   }
 });
 
+test("the authored project universe covers every canonical record collection", () => {
+  const compiled = compileAtlas();
+  for (const [collection, records] of Object.entries(knowledgeBank).filter(([, value]) => Array.isArray(value))) {
+    assert.equal(compiled.metrics.canonicalCoverage[collection], records.length, collection);
+  }
+});
+
 test("all fourteen eval branches are explicitly integrated", () => {
   assert.deepEqual(
     manifest.branches.map(({ branch }) => branch).sort(),
     "ABCDEFGHIJKLMN".split("").map((letter) => `feature/evals-${letter}`)
   );
   assert.equal(manifest.base.branch, "feature/evals-E");
+});
+
+test("the federated catalog binds every branch to its exact source commit", () => {
+  assert.deepEqual(validateFeatureEvalKnowledge({ catalog: sourceKnowledge, manifest }), []);
+  assert.equal(sourceKnowledge.totals.branches, 14);
+  assert.ok(sourceKnowledge.totals.semanticIds >= 5_000);
+  assert.ok(sourceKnowledge.totals.recordVariants >= 5_000);
+  assert.ok(sourceKnowledge.totals.documents >= 800);
+  assert.ok(sourceKnowledge.totals.publicUrls >= 10_000);
+  for (const source of manifest.branches) {
+    const catalogBranch = sourceKnowledge.branches.find(({ branch }) => branch === source.branch);
+    assert.equal(catalogBranch.commit, source.sourceCommit);
+    assert.ok(catalogBranch.artifacts > 0);
+  }
+});
+
+test("catalog omissions and fingerprint drift are rejected", () => {
+  const missingBranch = structuredClone(sourceKnowledge);
+  missingBranch.branches = missingBranch.branches.filter(({ branch }) => branch !== "feature/evals-N");
+  missingBranch.totals.branches -= 1;
+  missingBranch.catalogFingerprint = integrationCatalogFingerprint(missingBranch);
+  assert.ok(validateFeatureEvalKnowledge({ catalog: missingBranch, manifest })
+    .some((message) => message.includes("feature/evals-N")));
+
+  const drifted = structuredClone(sourceKnowledge);
+  drifted.semanticRecords.pop();
+  assert.ok(validateFeatureEvalKnowledge({ catalog: drifted, manifest })
+    .some((message) => message.includes("fingerprint")));
+});
+
+test("the committed artifact inventory matches every frozen source tree", () => {
+  assert.deepEqual(verifyFeatureEvalSourceArtifacts({
+    repoRoot: defaultRepoRoot,
+    catalog: sourceKnowledge,
+    manifest
+  }), []);
+
+  const omitted = structuredClone(sourceKnowledge);
+  omitted.artifacts.shift();
+  assert.ok(verifyFeatureEvalSourceArtifacts({
+    repoRoot: defaultRepoRoot,
+    catalog: omitted,
+    manifest
+  }).some((message) => message.includes("Missing source artifact")));
+});
+
+test("federated knowledge is queryable with provenance and protected locators stay hashed", () => {
+  const service = createAtlasService(compileAtlas(), sourceKnowledge);
+  const records = service.queryKnowledge({ id: "CLM-WATERWAYS-RAFT-EXPEDITION" });
+  assert.ok(records.length > 0);
+  assert.ok(records.some(({ branches }) => branches.includes("feature/evals-A")));
+  const lineage = service.sourceLineage("CLM-WATERWAYS-RAFT-EXPEDITION");
+  assert.ok(lineage.locations.some((location) => location.startsWith("feature/evals-A:")));
+  assert.ok(sourceKnowledge.sources.protected.every((entry) =>
+    /^[a-f0-9]{64}$/.test(entry.locatorHash) && !("url" in entry)
+  ));
+  const stakeholderNames = service.stakeholders().map(({ name }) => name);
+  assert.ok(stakeholderNames.includes("Rafael Espinal"));
+  assert.ok(stakeholderNames.includes("Tom Finkelpearl"));
+  assert.ok(stakeholderNames.includes("Olympia Kazi"));
+  assert.ok(stakeholderNames.includes("Drew Bolton"));
+  assert.ok(stakeholderNames.includes("Julia Fredenburg"));
 });

@@ -62,9 +62,12 @@ resident concerns into documented next actions.
 ## Evidence and limits
 
 Official records, public project material, and archive research support bounded
-claims. The bank preserves organizer credit, unused-fund history, transition
-boundaries, and the difference between a documented action and a claimed civic
-outcome.
+claims. Julia Fredenburg shares documented building, neighborhood, and tire
+workflow credit; Jimmy Fitzner publicly corroborated one hands-on collection
+activity. Oak Park Neighborhood Association, participating residents, city
+staff, tradespeople, service partners, and other collaborators retain their own
+work. The bank also preserves unused-fund history, transition boundaries, and
+the difference between a documented action and a claimed civic outcome.
 
 ## Open questions
 

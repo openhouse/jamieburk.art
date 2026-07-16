@@ -5,8 +5,14 @@ import path from "node:path";
 import {
   compileAtlas,
   defaultRepoRoot,
-  evaluateAtlas
+  evaluateAtlas,
+  loadIntegrationManifest
 } from "../src/corpus.mjs";
+import {
+  buildFeatureEvalKnowledge,
+  loadFeatureEvalKnowledge,
+  verifyFeatureEvalSourceArtifacts
+} from "../src/integration.mjs";
 import { createAtlasService } from "../src/service.mjs";
 
 const [command = "check", ...args] = process.argv.slice(2);
@@ -15,6 +21,7 @@ const valueFor = (flag) => {
   return index === -1 ? undefined : args[index + 1];
 };
 const generatedPath = path.join(defaultRepoRoot, "docs/atlas/generated/atlas.graph.json");
+const sourceCatalogPath = path.join(defaultRepoRoot, "docs/atlas/generated/feature-evals-knowledge.json");
 
 function stableJson(value) {
   return `${JSON.stringify(value, null, 2)}\n`;
@@ -29,6 +36,23 @@ function printEvaluation(evaluation) {
 }
 
 try {
+  if (command === "refresh-sources") {
+    const manifest = loadIntegrationManifest();
+    const catalog = buildFeatureEvalKnowledge({ repoRoot: defaultRepoRoot, manifest });
+    mkdirSync(path.dirname(sourceCatalogPath), { recursive: true });
+    writeFileSync(sourceCatalogPath, stableJson(catalog));
+    console.log(`Wrote ${path.relative(defaultRepoRoot, sourceCatalogPath)}`);
+    console.log(`Integrated ${catalog.totals.semanticIds} semantic IDs, ${catalog.totals.recordVariants} record variants, ${catalog.totals.documents} documents, and ${catalog.totals.publicUrls} public source locators from ${catalog.totals.branches} branches.`);
+    process.exit(0);
+  }
+  if (command === "verify-sources") {
+    const manifest = loadIntegrationManifest();
+    const catalog = loadFeatureEvalKnowledge(defaultRepoRoot);
+    const errors = verifyFeatureEvalSourceArtifacts({ repoRoot: defaultRepoRoot, catalog, manifest });
+    if (errors.length) throw new Error(errors.join("\n"));
+    console.log(`Verified ${catalog.totals.artifactMappings} source artifact mappings across ${catalog.totals.branches} immutable branch heads.`);
+    process.exit(0);
+  }
   const compiled = compileAtlas();
   const evaluation = evaluateAtlas(compiled);
   if (command === "generate") {
@@ -55,6 +79,15 @@ try {
       projectKey: valueFor("--project")
     });
     console.log(stableJson({ candidateFingerprint: compiled.candidateFingerprint, pages: result }));
+  } else if (command === "knowledge") {
+    const service = createAtlasService(compiled);
+    const result = service.queryKnowledge({
+      text: valueFor("--text"),
+      id: valueFor("--id"),
+      kind: valueFor("--kind"),
+      branch: valueFor("--branch")
+    });
+    console.log(stableJson({ candidateFingerprint: compiled.candidateFingerprint, knowledge: result }));
   } else if (command === "explain") {
     const projectKey = valueFor("--project");
     if (!projectKey) throw new Error("Use --project <project-key>");

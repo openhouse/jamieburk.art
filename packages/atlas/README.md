@@ -24,12 +24,16 @@ require a demonstrated consumer and explicit approval.
 
 ```bash
 npm run atlas:generate
+npm run atlas:refresh-sources
+npm run atlas:verify-sources
 npm run atlas:check
 npm run atlas:test
 npm run atlas:eval
 npm run atlas:query -- --project callnyc
+npm run atlas:knowledge -- --id CLM-WATERWAYS-RAFT-EXPEDITION
 npm run atlas:explain -- --project callnyc
 ```
 
-The generated graph is disposable. Markdown and the typed knowledge bank are
-the rebuildable inputs.
+The generated graph is disposable. Markdown, the typed knowledge bank, the
+frozen branch manifest, the federated source catalog, and the named stakeholder
+credit register bind the candidate. Protected locators remain hashed.

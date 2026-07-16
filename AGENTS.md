@@ -84,6 +84,13 @@ Every Atlas page needs stable identity, typed reciprocal relations, authority,
 consent, public-use, correction-route, and review metadata. Regenerate and
 check the disposable graph after semantic page or package changes.
 
+Use `docs/atlas/feature-evals-integration.json` as the immutable A-N source cut,
+`docs/atlas/generated/feature-evals-knowledge.json` as the federated inventory,
+and `docs/atlas/stakeholder-credit.json` for named public-record contribution
+boundaries. Do not convert a catalog entry into equivalence, endorsement,
+permission, or a stronger public claim. Hash protected locators rather than
+publishing them.
+
 Atlas is an in-process package, not a network service, CMS, database, or public
 application. Do not add a public Atlas route without explicit approval.
 

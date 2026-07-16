@@ -21,12 +21,19 @@ docs/atlas/pages/*.md
 typed canonical knowledge bank
         +
 feature/evals integration manifest
+        +
+federated A-N knowledge catalog
+        +
+named stakeholder credit register
         |
         v
 @jamie-burkart/atlas
   - semantic schema
   - graph compiler
   - complete project-slice migration
+  - immutable source-artifact inventory
+  - public/protected locator separation
+  - named-credit boundary checks
   - query/explain service
   - exact candidate fingerprint
   - deterministic and adversarial evals
@@ -50,3 +57,9 @@ V1 keeps the typed bank canonical and compiles complete project slices into the
 Atlas graph. A later proposal may make Markdown authoritative only after
 round-trip parity, loss detection, correction history, protected-boundary
 enforcement, and independent human review have all been demonstrated.
+
+Branch-specific knowledge is federated rather than silently coerced into the
+base schema. Exact source artifacts remain attributable to their frozen commit;
+selected public-safe records and document abstracts become queryable through
+Atlas. This preserves disagreement and schema variation while creating one
+loss-aware discovery surface.

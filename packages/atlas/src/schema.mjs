@@ -82,15 +82,29 @@ export const evalBranchSchema = z.object({
   branch: z.string().regex(/^feature\/evals-[A-N]$/),
   sourceCommit: z.string().regex(/^[a-f0-9]{40}$/),
   strength: z.string().min(1),
-  adoptedInAtlas: z.array(z.string().min(1)).min(1)
+  adoptedInAtlas: z.array(z.string().min(1)).min(1),
+  knowledgeDisposition: z.enum(["canonical-base", "federated-source"])
 });
 
 export const evalIntegrationManifestSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
+  sourceCutAt: z.iso.datetime({ offset: true }),
   base: z.object({
     branch: z.literal("feature/evals-E"),
     commit: z.string().regex(/^[a-f0-9]{40}$/),
     rationale: z.string().min(1)
   }),
   branches: z.array(evalBranchSchema).length(14)
+});
+
+export const stakeholderCreditRegisterSchema = z.object({
+  schemaVersion: z.literal(1),
+  sourcePosition: z.literal("public-record-attribution-not-endorsement"),
+  entries: z.array(z.object({
+    name: z.string().min(1),
+    atlasPage: atlasIdSchema,
+    basisRecordIds: z.array(z.string().min(1)).min(1),
+    credit: z.string().min(1),
+    boundary: z.string().min(1)
+  })).min(1)
 });

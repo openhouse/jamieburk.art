@@ -62,7 +62,8 @@ inspectable without putting the database on the public website.
 ## Evidence and limits
 
 Recovered application, database, post, reply, and archive records support
-bounded claims. Recovered surfaces do not establish a complete lifetime export,
+bounded claims. Richard Kim and other product collaborators retain their
+credit. Recovered surfaces do not establish a complete lifetime export,
 unobserved deletion history, or sole authorship of amplified work.
 
 ## Open questions

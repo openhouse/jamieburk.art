@@ -113,9 +113,11 @@ photos, unapproved screenshots, or unapproved quotes.
 `packages/atlas` is the private semantic Markdown component for the knowledge
 universe. Authored pages live in `docs/atlas/pages/`; the package validates
 stable identity, reciprocal typed relations, authority and consent posture,
-complete canonical project slices, public-safety boundaries, and exact
-candidate fingerprints. It also provides in-process query and explanation
-APIs.
+complete canonical project slices, public-safety boundaries, named stakeholder
+credit, and exact candidate fingerprints. Its federated catalog indexes all
+fourteen frozen `feature/evals-*` knowledge trees without flattening their
+provenance or exposing protected locators. It also provides in-process page,
+knowledge, source-lineage, and explanation APIs.
 
 Atlas is a package with service-like contracts, not a separately deployed
 application. Its generated graph is rebuildable, the typed knowledge bank
