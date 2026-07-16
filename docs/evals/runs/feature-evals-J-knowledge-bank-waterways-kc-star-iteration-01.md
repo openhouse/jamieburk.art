@@ -8,6 +8,7 @@
 - Target: `claim-development`
 - Selected failure: `KB-010 - Recursive optimization integrity`
 - Baseline judge session: `019f6cdd-9de5-7aa1-9e1b-5fd365ec3fcc`
+- Certification 1 judge session: `019f6ce3-d9e9-7450-8826-fb1ed9d62485`
 
 ## Scope
 
@@ -46,13 +47,18 @@ iteration record. The knowledge content and frozen rubric remain unchanged.
 - Rubric blob remains identical to rubric commit:
   `2cf0cb573345b8d328e8274922b70f36081bd311`
 - Complete `npm run check` passed twice on the unchanged content candidate.
-- Certification status: pending two fresh independent passing judgments.
+- Certification 1 scorecard:
+  `knowledge-bank-development-waterways-kc-star-certification-01-0b6b6446.json`
+- Certification 1 weighted score: `0.955`
+- Certification 1: all ten criteria passed; consecutive passing runs `1`
+- Certification status: pending one additional fresh independent passing
+  judgment.
 
 ## Scores
 
 - Score before: weighted `0.9325`; `KB-010 = 0`; not eligible.
-- Score after: pending fresh independent certification on the unchanged
-  content candidate.
+- Score after: weighted `0.955`; `KB-001` through `KB-010` passed; the only
+  scorer blocker is the required second consecutive passing run.
 
 ## Regressions
 
