@@ -420,6 +420,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId: "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
         relationship: "private-support",
         supports: ["Jamie's establishment of the four project accounts"],
+        locator: "Jamie public-use confirmation, July 14, 2026",
         confidence: "high",
         renderCitation: false
       },
@@ -432,6 +433,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId,
         relationship: "corroborating" as const,
         supports: ["public account existence, mission, use, and continuity"],
+        locator: "dated profile summary and account-reconciliation fields",
         confidence: "high" as const,
         renderCitation: false
       }))
@@ -468,6 +470,7 @@ export const socialMediaClaimRecords20260714 = [
       sourceId,
       relationship: "direct-support" as const,
       supports: ["member-authored promotion, quote amplification, or direct reply involving CallNYC"],
+      locator: "visible member-authored status text and thread context",
       confidence: "high" as const,
       renderCitation: true
     })),
@@ -505,6 +508,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId: "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
         relationship: "direct-support",
         supports: ["the shared handle", "the four named campaign hashtags", "multiyear continuity"],
+        locator: "profile bio, dated profile control, and campaign-site social links",
         confidence: "high",
         renderCitation: true
       },
@@ -512,6 +516,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId: "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
         relationship: "corroborating",
         supports: ["Jamie and Olympia Kazi's public coalition affiliations", "Let NYC Dance context"],
+        locator: "article passage naming coalition affiliations and Let NYC Dance context",
         confidence: "high",
         renderCitation: true
       }
@@ -548,6 +553,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId: "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
         relationship: "direct-support",
         supports: ["the 24-record recovery floor", "the seven-account floor", "bounded authenticated method"],
+        locator: "profile audit summary and bounded Council-account recovery table",
         confidence: "high",
         renderCitation: true
       },
@@ -555,6 +561,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId,
         relationship: "corroborating" as const,
         supports: ["representative member-authored public interaction involving @NYCArtC"],
+        locator: "visible member-authored status text and thread context",
         confidence: "high" as const,
         renderCitation: true
       }))
@@ -578,41 +585,23 @@ export const socialMediaClaimRecords20260714 = [
   {
     id: "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
     project: "wowlist",
-    internalClaim: "Contemporaneous WOW List account posts connect the project to Sunday Dinner calendar practice, publicly name Jamie and a collaborator, and document a community member creating a tutorial for other users.",
-    status: "confirmed-with-boundary",
+    internalClaim: "Deprecated omnibus assertion formerly combining WOW List's Sunday Dinner lineage, named participants, and community-created product instruction.",
+    status: "disallowed",
     projections: [
       {
         key: "case-study",
         text: "Contemporaneous account evidence connects WOW List to calendars made at Sunday Dinner and documents a community member creating a public tutorial for other users.",
-        status: "hold",
-        citationRequired: true,
+        status: "deprecated",
+        citationRequired: false,
         surfaces: []
       }
     ],
-    evidence: [
-      {
-        sourceId: "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-        relationship: "direct-support",
-        supports: ["publicly named project participants", "Sunday Dinner calendar origin"],
-        confidence: "high",
-        renderCitation: true
-      },
-      {
-        sourceId: "SRC-X-WOWLIST-USER-TUTORIAL-2015",
-        relationship: "direct-support",
-        supports: ["community-created instructional artifact", "public platform use"],
-        confidence: "high",
-        renderCitation: true
-      }
-    ],
+    evidence: [],
     boundaries: [
-      "The origin post does not establish complete product authorship.",
-      "One community-created tutorial is evidence of use, not broad adoption."
+      "Superseded by CLM-WOWLIST-SUNDAY-DINNER-LINEAGE and CLM-WOWLIST-SOCIAL-PRODUCT-SUPPORT so each proposition retains its own evidence and boundary."
     ],
     antiClaims: [
-      "Jamie alone created WOW List",
-      "A tutorial proves broad adoption",
-      "Social activity measures the complete user population"
+      "Combine lineage, participant attribution, product instruction, and adoption into one public assertion"
     ],
     researchInquiryIds: ["INQ-WOWLIST-SOCIAL-ARCHIVE-2026"],
     reviewedAt,
@@ -637,6 +626,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId: "SRC-X-KCTOWNHALL-PROFILE-AUDIT-2026",
         relationship: "direct-support",
         supports: ["account population", "date range", "mission-relevant activity patterns"],
+        locator: "dated profile summary and account-reconciliation fields",
         confidence: "high",
         renderCitation: false
       },
@@ -644,6 +634,7 @@ export const socialMediaClaimRecords20260714 = [
         sourceId: "SRC-X-KCTOWNHALL-LAUNCH-2018",
         relationship: "direct-support",
         supports: ["public project identity", "participatory launch framing"],
+        locator: "visible launch-post text and status metadata",
         confidence: "high",
         renderCitation: false
       }
@@ -800,6 +791,18 @@ export const socialMediaResearchInquiries20260714 = [
   }
 ] satisfies ResearchInquiry[];
 
+const decomposedSocialSourceIds = [
+  ...new Set(
+    socialMediaClaimRecords20260714.flatMap((claim) =>
+      claim.evidence.map(({ sourceId }) => sourceId)
+    )
+  )
+];
+
+const metadataOnlySocialSourceIds = socialMediaSourceRecords20260714
+  .map(({ id }) => id)
+  .filter((sourceId) => !decomposedSocialSourceIds.includes(sourceId));
+
 export const socialMediaIntakeRecords20260714 = [
   {
     id: "INTAKE-PROJECT-SOCIAL-ACCOUNT-ARCHIVE-2026",
@@ -820,7 +823,7 @@ export const socialMediaIntakeRecords20260714 = [
     publicUse: "public-linkable",
     editorialState: "selected",
     disposition: "claim-candidate-created",
-    sourceIds: socialMediaSourceRecords20260714.map(({ id }) => id),
+    sourceIds: decomposedSocialSourceIds,
     claimIds: socialMediaClaimRecords20260714.map(({ id }) => id),
     inquiryIds: socialMediaResearchInquiries20260714.map(({ id }) => id),
     limitations: [
@@ -832,6 +835,31 @@ export const socialMediaIntakeRecords20260714 = [
       "Seek privacy-preserving first-party exports only when they can narrow unresolved slots without exposing nonpublic account data.",
       "Attribute individual posts only from post-level evidence or collaborator confirmation.",
       "Close-read linked articles and reports selectively before promoting additional claims."
+    ]
+  },
+  {
+    id: "INTAKE-PROJECT-SOCIAL-SOURCE-LEADS-2026",
+    capturedAt: reviewedAt,
+    capturedBy: "Jamie Burkart and Codex authenticated archival review",
+    kind: "research-lead",
+    title: "Project social-account source leads awaiting claim-level review",
+    publicSafeSummary: "Public reports, articles, and linked destinations recovered during social-account research that have not yet been promoted into atomic claim evidence.",
+    whyItMatters: "Keeps mission-relevant source leads available for later close reading without inflating metadata recovery into claim-level support.",
+    projectHints: ["career-proof-system", "callnyc", "nyc-artist-coalition", "wowlist", "kc-town-hall"],
+    maturity: "metadata-reviewed",
+    publicUse: "cite-with-care",
+    editorialState: "candidate",
+    disposition: "source-created",
+    sourceIds: metadataOnlySocialSourceIds,
+    claimIds: [],
+    inquiryIds: [],
+    limitations: [
+      "Metadata recovery does not establish the article or report's substantive claims.",
+      "Each source requires claim-level close reading before public projection."
+    ],
+    nextActions: [
+      "Close-read a source only when it can support an atomic professional claim or boundary.",
+      "Keep unreviewed source leads off public portfolio surfaces."
     ]
   }
 ] satisfies IntakeRecord[];
@@ -902,7 +930,6 @@ export const socialAccountRecords20260714 = [
     ],
     claimIds: [
       "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
-      "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
       "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
       "CLM-WOWLIST-SOCIAL-PRODUCT-SUPPORT",
       "CLM-WOWLIST-SUNDAY-DINNER-LINEAGE",

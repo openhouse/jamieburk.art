@@ -457,13 +457,13 @@ const workItemsInput = [
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
-    artifactTypes: ["website", "public-safe screenshot"],
+    artifactTypes: ["website"],
     artifacts: [
       {
         title: "Archived WOW List home page",
         description:
           "The May 2017 public interface presented WOW List as a simple way to find and share things to do in real life.",
-        type: "public-safe screenshot",
+        type: "website",
         asset: {
           src: "/artifacts/wowlist/archived-home-2017.png",
           width: 1440,

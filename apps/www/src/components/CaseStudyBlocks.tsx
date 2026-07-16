@@ -15,7 +15,6 @@ export function AtAGlance({
     ["Years", item.years],
     ["Context", item.series],
     ["Status", item.status],
-    ["Visibility", item.visibility],
     ["Role fit", item.roleFit]
   ];
 
@@ -117,12 +116,36 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   );
 }
 
-export function EvidenceAndLimits({ item }: { item: WorkMeta }) {
+export function EvidenceAndLimits({
+  compact = false,
+  item
+}: {
+  compact?: boolean;
+  item: WorkMeta;
+}) {
   const blocks = [
     ["Known", item.knownOpenProtected.known],
     ["Open", item.knownOpenProtected.open],
     ["Protected", item.knownOpenProtected.protected]
   ] as const;
+
+  if (compact) {
+    return (
+      <section aria-labelledby="evidence-and-limits">
+        <h2 className="text-2xl font-semibold text-jb-ink" id="evidence-and-limits">
+          Evidence and limits
+        </h2>
+        <dl className="mt-5 grid gap-5 border-y border-jb-ink/14 py-5 md:grid-cols-3">
+          {blocks.map(([label, value]) => (
+            <div key={label}>
+              <dt className="font-semibold text-jb-blue">{label}</dt>
+              <dd className="mt-2 text-sm leading-6 text-jb-ink/72">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    );
+  }
 
   return (
     <section aria-labelledby="evidence-and-limits">

@@ -58,7 +58,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </aside>
       </div>
       <div className="mt-14 space-y-12">
-        <EvidenceAndLimits item={item} />
+        <EvidenceAndLimits compact={item.status === "Short proof page"} item={item} />
         <LinksList item={item} />
         <CreditsList item={item} />
       </div>

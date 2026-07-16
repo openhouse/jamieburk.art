@@ -1315,6 +1315,9 @@ export function validateKnowledgeIntake() {
   if (!intakeIdSet.has("INTAKE-PROJECT-SOCIAL-ACCOUNT-ARCHIVE-2026")) {
     socialMediaProductionErrors.push("Missing project social-account archival intake");
   }
+  if (!intakeIdSet.has("INTAKE-PROJECT-SOCIAL-SOURCE-LEADS-2026")) {
+    socialMediaProductionErrors.push("Missing project social source-lead staging intake");
+  }
   if (!intakeIdSet.has("INTAKE-WOWLIST-FULL-POPULATION-2026")) {
     socialMediaProductionErrors.push("Missing WOW List full-population archival intake");
   }
@@ -1366,12 +1369,12 @@ export function validateKnowledgeIntake() {
     const active = claimById.get(claimId)?.projections.filter((projection) => projection.status === "active") ?? [];
     if (active.length !== 1) socialMediaProductionErrors.push(`${claimId} must have exactly one selected active projection`);
   }
+  const deprecatedWowListOmnibus = claimById.get("CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE");
   if (
-    claimById
-      .get("CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE")
-      ?.projections.some((projection) => projection.status === "active")
+    deprecatedWowListOmnibus?.status !== "disallowed" ||
+    deprecatedWowListOmnibus.projections.some((projection) => projection.status !== "deprecated")
   ) {
-    socialMediaProductionErrors.push("The narrower WOW List origin-and-use projection must remain held in favor of atomic organizer-use and peer-attribution claims");
+    socialMediaProductionErrors.push("The omnibus WOW List origin-and-use claim must remain deprecated in favor of atomic lineage and product-support claims");
   }
   if (
     claimById
