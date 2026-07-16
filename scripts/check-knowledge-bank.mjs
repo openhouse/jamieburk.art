@@ -3,6 +3,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -15,10 +16,13 @@ const requiredProofIds = [
   "hje-modernization-stewardship",
   "hje-revenue-growth-contribution",
   "callnyc-civic-data-guidance",
+  "callnyc-council-member-amplification",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "nyc-artist-coalition-civic-systems",
+  "nyc-artist-coalition-cabaret-organizing",
   "wowlist-community-platform",
+  "wowlist-public-support-surface",
   "sunday-dinner-196-participation-infrastructure",
   "kc-spaces-fund-digital-infrastructure",
   "kc-town-hall-public-benefit-documentation",
@@ -33,11 +37,15 @@ const requiredWorkProofs = new Map([
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-cabaret-organizing"
     ]
   ],
-  ["callnyc", ["callnyc-civic-data-guidance"]],
-  ["wowlist", ["wowlist-community-platform"]],
+  [
+    "callnyc",
+    ["callnyc-civic-data-guidance", "callnyc-council-member-amplification"]
+  ],
+  ["wowlist", ["wowlist-community-platform", "wowlist-public-support-surface"]],
   ["196-sunday-dinner", ["sunday-dinner-196-participation-infrastructure"]],
   ["kc-town-hall", ["kc-town-hall-public-benefit-documentation"]]
 ]);
@@ -152,6 +160,14 @@ if (existsSync(proofPath)) {
 
   for (const id of requiredProofIds) {
     if (!uniqueIds.has(id)) fail(`Missing required proof claim: ${id}`);
+  }
+
+  const coverageIds = new Set(knowledgeBank.proofCoverage.map((item) => item.proofId));
+  for (const id of uniqueIds) {
+    if (!coverageIds.has(id)) fail(`Source-coverage ledger is missing proof claim: ${id}`);
+  }
+  for (const id of coverageIds) {
+    if (!uniqueIds.has(id)) fail(`Source-coverage ledger references missing proof claim: ${id}`);
   }
 
   for (const [id, block] of proofBlocks.entries()) {
@@ -293,6 +309,7 @@ for (const requiredDoc of [
   "claims.md",
   "proofs.md",
   "sources.md",
+  "source-coverage.md",
   "projection-map.md",
   "publishing-governance.md",
   "launch-blockers.md",

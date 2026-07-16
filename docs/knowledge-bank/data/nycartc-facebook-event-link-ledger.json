@@ -1,0 +1,589 @@
+{
+  "schemaVersion": "1.0.0",
+  "account": "@nycartc",
+  "surface": "Facebook past-event descriptions",
+  "capturedAt": "2026-07-13",
+  "revalidatedAt": "2026-07-14",
+  "method": "Expanded public descriptions were inspected for outbound links. Query parameters and fragments were removed and hostnames normalized. HTTP and HTTPS variants remain separate rows so the transformation is reproducible.",
+  "interpretationBoundary": "A posted URL is a routing record and research lead, not automatic corroboration, authorship, endorsement, readership, conversion, attendance, reach, or policy impact.",
+  "privacyBoundary": "Meeting access paths and working-document locators are withheld. Unresolved goo.gl locators are withheld until their destinations can be reviewed.",
+  "accounting": {
+    "linkOccurrences": 61,
+    "normalizedUrlRows": 38,
+    "eventsWithOutboundLinks": 25,
+    "sourceArticles": 7,
+    "protectedRows": 1,
+    "researchNeededRows": 4
+  },
+  "rows": [
+    {
+      "rowId": "nycartc-facebook-link-001",
+      "host": "twitch.tv",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://twitch.tv/wondervillenyc",
+      "eventIds": [
+        "109513027694163"
+      ],
+      "eventTitles": [
+        "Among Us Benefit Stream"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-002",
+      "host": "bit.ly",
+      "category": "unresolved-short-link",
+      "disposition": "research-needed",
+      "publicUrl": "https://bit.ly/closedbycovid",
+      "eventIds": [
+        "533594734223350"
+      ],
+      "eventTitles": [
+        "Commercial Tenant Town Call with USBnyc"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-003",
+      "host": "musicworkersalliance.org",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://musicworkersalliance.org/live",
+      "eventIds": [
+        "2616087105332260"
+      ],
+      "eventTitles": [
+        "Coronavirus resources and actions for artists and freelancers"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-004",
+      "host": "eventbrite.com",
+      "category": "action-or-registration-path",
+      "disposition": "public-lead",
+      "publicUrl": "https://eventbrite.com/e/covid-19-resources-and-actions-for-artists-and-freelancers-nys-edition-tickets-102117450042",
+      "eventIds": [
+        "2616087105332260"
+      ],
+      "eventTitles": [
+        "Coronavirus resources and actions for artists and freelancers"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-005",
+      "host": "fairrentnyc.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://fairrentnyc.com/",
+      "eventIds": [
+        "1014934072187610",
+        "373845436658926",
+        "149896349250651",
+        "468698540318956"
+      ],
+      "eventTitles": [
+        "Fair Rent NYC: Anti-Displacement Rally",
+        "NYC Artist Coalition: Summer of Change Meeting",
+        "NYC Artist Coalition - February Meeting",
+        "MARCH Raids & Fair Rent: NYC Artist Coalition Meeting"
+      ],
+      "occurrences": 5
+    },
+    {
+      "rowId": "nycartc-facebook-link-006",
+      "host": "ny.curbed.com",
+      "category": "published-article",
+      "disposition": "source-routed",
+      "publicUrl": "https://ny.curbed.com/2019/11/8/20953724/commercial-rent-stabilization-bill-nyc-retail-vacancy",
+      "eventIds": [
+        "1014934072187610"
+      ],
+      "eventTitles": [
+        "Fair Rent NYC: Anti-Displacement Rally"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-007",
+      "host": "gothamist.com",
+      "category": "published-article",
+      "disposition": "source-routed",
+      "publicUrl": "https://gothamist.com/news/facing-retail-vacancy-crisis-city-council-consider-plan-commercial-rent-stabilization",
+      "eventIds": [
+        "1014934072187610"
+      ],
+      "eventTitles": [
+        "Fair Rent NYC: Anti-Displacement Rally"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-008",
+      "host": "talksnotraids.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "https://talksnotraids.com/",
+      "eventIds": [
+        "373845436658926",
+        "149896349250651"
+      ],
+      "eventTitles": [
+        "NYC Artist Coalition: Summer of Change Meeting",
+        "NYC Artist Coalition - February Meeting"
+      ],
+      "occurrences": 3
+    },
+    {
+      "rowId": "nycartc-facebook-link-009",
+      "host": "nycartc.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://nycartc.com/",
+      "eventIds": [
+        "373845436658926",
+        "149896349250651",
+        "113308576029782",
+        "472114119789400"
+      ],
+      "eventTitles": [
+        "NYC Artist Coalition: Summer of Change Meeting",
+        "NYC Artist Coalition - February Meeting",
+        "Repeal the Cabaret Law Now: City Hall Hearing",
+        "Cabaret Law Hearing: One Chance to Legalize Dance!"
+      ],
+      "occurrences": 4
+    },
+    {
+      "rowId": "nycartc-facebook-link-010",
+      "host": "bit.ly",
+      "category": "unresolved-short-link",
+      "disposition": "research-needed",
+      "publicUrl": "https://bit.ly/PlannersNetworkNYC",
+      "eventIds": [
+        "2998476473711342"
+      ],
+      "eventTitles": [
+        "PN Mobile Workshop: In Defense of Grassroots Cultural Spaces"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-011",
+      "host": "talksnotraids.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://talksnotraids.com/",
+      "eventIds": [
+        "2347093582223366",
+        "790581997948463",
+        "468698540318956"
+      ],
+      "eventTitles": [
+        "Save Ode To Babel",
+        "MARCH Raids in NYC - City Hall Hearing #TalksNotRaids",
+        "MARCH Raids & Fair Rent: NYC Artist Coalition Meeting"
+      ],
+      "occurrences": 3
+    },
+    {
+      "rowId": "nycartc-facebook-link-012",
+      "host": "thebaffler.com",
+      "category": "published-article",
+      "disposition": "source-routed",
+      "publicUrl": "https://thebaffler.com/latest/cut-the-music-pelly",
+      "eventIds": [
+        "790581997948463"
+      ],
+      "eventTitles": [
+        "MARCH Raids in NYC - City Hall Hearing #TalksNotRaids"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-013",
+      "host": "nyc.pollsitelocator.com",
+      "category": "action-or-registration-path",
+      "disposition": "public-lead",
+      "publicUrl": "https://nyc.pollsitelocator.com/",
+      "eventIds": [
+        "468698540318956"
+      ],
+      "eventTitles": [
+        "MARCH Raids & Fair Rent: NYC Artist Coalition Meeting"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-014",
+      "host": "nycartc.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://nycartc.com/join",
+      "eventIds": [
+        "468698540318956",
+        "383292402137451",
+        "212427345900529",
+        "1907948219437421"
+      ],
+      "eventTitles": [
+        "MARCH Raids & Fair Rent: NYC Artist Coalition Meeting",
+        "Night Mayor Panel - NAC March Meeting",
+        "Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting",
+        "Market Hotel - Show NYC We Support Spaces"
+      ],
+      "occurrences": 4
+    },
+    {
+      "rowId": "nycartc-facebook-link-015",
+      "host": "passsbjsa.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://passsbjsa.com/",
+      "eventIds": [
+        "1916200875140739"
+      ],
+      "eventTitles": [
+        "City Hall Hearing: Lease Protections for Spaces #PassSBJSA"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-016",
+      "host": "secure2.convio.net",
+      "category": "action-or-registration-path",
+      "disposition": "public-lead",
+      "publicUrl": "https://secure2.convio.net/gvshp/site/Advocacy",
+      "eventIds": [
+        "1916200875140739"
+      ],
+      "eventTitles": [
+        "City Hall Hearing: Lease Protections for Spaces #PassSBJSA"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-017",
+      "host": "eventbrite.com",
+      "category": "action-or-registration-path",
+      "disposition": "public-lead",
+      "publicUrl": "https://eventbrite.com/e/tell-nycs-night-mayor-save-nyc-spaces-tickets-38503111844",
+      "eventIds": [
+        "120802405289008"
+      ],
+      "eventTitles": [
+        "Tell NYC's Night Mayor: Save NYC Spaces"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-018",
+      "host": "letnycdance.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://letnycdance.com/",
+      "eventIds": [
+        "113308576029782"
+      ],
+      "eventTitles": [
+        "Repeal the Cabaret Law Now: City Hall Hearing"
+      ],
+      "occurrences": 3
+    },
+    {
+      "rowId": "nycartc-facebook-link-019",
+      "host": "danceliberationnetwork.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://danceliberationnetwork.com/",
+      "eventIds": [
+        "113308576029782",
+        "472114119789400",
+        "1907948219437421"
+      ],
+      "eventTitles": [
+        "Repeal the Cabaret Law Now: City Hall Hearing",
+        "Cabaret Law Hearing: One Chance to Legalize Dance!",
+        "Market Hotel - Show NYC We Support Spaces"
+      ],
+      "occurrences": 3
+    },
+    {
+      "rowId": "nycartc-facebook-link-020",
+      "host": "danceparade.org",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://danceparade.org/",
+      "eventIds": [
+        "113308576029782",
+        "472114119789400"
+      ],
+      "eventTitles": [
+        "Repeal the Cabaret Law Now: City Hall Hearing",
+        "Cabaret Law Hearing: One Chance to Legalize Dance!"
+      ],
+      "occurrences": 2
+    },
+    {
+      "rowId": "nycartc-facebook-link-021",
+      "host": "legalizedance.org",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://legalizedance.org/",
+      "eventIds": [
+        "113308576029782",
+        "472114119789400"
+      ],
+      "eventTitles": [
+        "Repeal the Cabaret Law Now: City Hall Hearing",
+        "Cabaret Law Hearing: One Chance to Legalize Dance!"
+      ],
+      "occurrences": 2
+    },
+    {
+      "rowId": "nycartc-facebook-link-022",
+      "host": "newyorker.com",
+      "category": "published-article",
+      "disposition": "source-routed",
+      "publicUrl": "http://newyorker.com/magazine/2017/07/10/dance-outlaws-fight-for-the-right-to-party",
+      "eventIds": [
+        "107158013279474"
+      ],
+      "eventTitles": [
+        "NAC July Meeting: Legalize Dance, Repairs Fund, CreateNYC"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-023",
+      "host": "nycartc.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://nycartc.com/cabaret",
+      "eventIds": [
+        "107158013279474",
+        "212427345900529"
+      ],
+      "eventTitles": [
+        "NAC July Meeting: Legalize Dance, Repairs Fund, CreateNYC",
+        "Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting"
+      ],
+      "occurrences": 2
+    },
+    {
+      "rowId": "nycartc-facebook-link-024",
+      "host": "peoplesculturalplan.org",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "https://peoplesculturalplan.org/",
+      "eventIds": [
+        "107158013279474"
+      ],
+      "eventTitles": [
+        "NAC July Meeting: Legalize Dance, Repairs Fund, CreateNYC"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-025",
+      "host": "www1.nyc.gov",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://www1.nyc.gov/assets/fdny/downloads/pdf/business/cof-f04-noe-study-materials.pdf",
+      "eventIds": [
+        "107158013279474"
+      ],
+      "eventTitles": [
+        "NAC July Meeting: Legalize Dance, Repairs Fund, CreateNYC"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-026",
+      "host": "nycartc.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://nycartc.com/letter-espinal",
+      "eventIds": [
+        "472114119789400"
+      ],
+      "eventTitles": [
+        "Cabaret Law Hearing: One Chance to Legalize Dance!"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-027",
+      "host": "nypost.com",
+      "category": "published-article",
+      "disposition": "source-routed",
+      "publicUrl": "http://nypost.com/2017/04/08/these-footloose-inspired-rebels-are-fighting-nycs-dancing-ban",
+      "eventIds": [
+        "472114119789400"
+      ],
+      "eventTitles": [
+        "Cabaret Law Hearing: One Chance to Legalize Dance!"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-028",
+      "host": "wnyc.org",
+      "category": "published-article",
+      "disposition": "source-routed",
+      "publicUrl": "http://wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law",
+      "eventIds": [
+        "472114119789400"
+      ],
+      "eventTitles": [
+        "Cabaret Law Hearing: One Chance to Legalize Dance!"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-029",
+      "host": "metro.us",
+      "category": "published-article",
+      "disposition": "source-routed",
+      "publicUrl": "http://metro.us/news/local-news/new-york/arts-advocates-renew-call-end-new-york-citys-antiquated-cabaret-laws",
+      "eventIds": [
+        "472114119789400"
+      ],
+      "eventTitles": [
+        "Cabaret Law Hearing: One Chance to Legalize Dance!"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-030",
+      "host": "nyclofttenants.org",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://nyclofttenants.org/",
+      "eventIds": [
+        "1472395276154065",
+        "173887729801951"
+      ],
+      "eventTitles": [
+        "Architectural Q&A + Advocacy",
+        "LEGAL Q&A + Advocacy"
+      ],
+      "occurrences": 2
+    },
+    {
+      "rowId": "nycartc-facebook-link-031",
+      "host": "twitter.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "https://twitter.com/nycartc",
+      "eventIds": [
+        "1907948219437421"
+      ],
+      "eventTitles": [
+        "Market Hotel - Show NYC We Support Spaces"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-032",
+      "host": "goo.gl",
+      "category": "unresolved-short-link",
+      "disposition": "research-needed",
+      "publicUrl": null,
+      "eventIds": [
+        "330648000670969",
+        "629158950604663"
+      ],
+      "eventTitles": [
+        "Become a Fire Guard: Group Test & Study"
+      ],
+      "occurrences": 2
+    },
+    {
+      "rowId": "nycartc-facebook-link-033",
+      "host": "goo.gl",
+      "category": "unresolved-short-link",
+      "disposition": "research-needed",
+      "publicUrl": null,
+      "eventIds": [
+        "1833265643557435"
+      ],
+      "eventTitles": [
+        "NYC Artist Coalition - March General Meeting"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-034",
+      "host": "thefloasis.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://thefloasis.com/",
+      "eventIds": [
+        "1833265643557435"
+      ],
+      "eventTitles": [
+        "NYC Artist Coalition - March General Meeting"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-035",
+      "host": "nycartc.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://nycartc.com/path-to-be-legal",
+      "eventIds": [
+        "406505576359490"
+      ],
+      "eventTitles": [
+        "DIY: NYC Artist Coalition - General Meeting"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-036",
+      "host": "nycartc.com",
+      "category": "campaign-or-organization",
+      "disposition": "public-lead",
+      "publicUrl": "http://nycartc.com/dcla-meeting",
+      "eventIds": [
+        "406505576359490"
+      ],
+      "eventTitles": [
+        "DIY: NYC Artist Coalition - General Meeting"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-037",
+      "host": "docs.google.com",
+      "category": "working-document",
+      "disposition": "protected",
+      "publicUrl": null,
+      "eventIds": [
+        "406505576359490"
+      ],
+      "eventTitles": [
+        "DIY: NYC Artist Coalition - General Meeting"
+      ],
+      "occurrences": 1
+    },
+    {
+      "rowId": "nycartc-facebook-link-038",
+      "host": "res.cloudinary.com",
+      "category": "public-resource",
+      "disposition": "public-lead",
+      "publicUrl": "https://res.cloudinary.com/sagacity/image/upload/v1482164218/Commissions_Response_to_Oakland_Fire_mykyrd.pdf",
+      "eventIds": [
+        "388137698233507"
+      ],
+      "eventTitles": [
+        "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting"
+      ],
+      "occurrences": 1
+    }
+  ]
+}

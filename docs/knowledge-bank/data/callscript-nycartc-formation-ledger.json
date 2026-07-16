@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewedAt": "2026-07-15",
+  "populationDefinition": "Selected public records sufficient to test the proposed WOW List-popular.vote-Call Script-NYC Artist Coalition formation lineage; not a complete archive of every formation conversation, host, or participant.",
+  "sequence": [
+    {
+      "date": "2016-11-14",
+      "surface": "@wowlist",
+      "record": "https://x.com/wowlist/status/798274424763981824",
+      "finding": "The shared project account routed people to popular.vote for marches, meetings, and local connection.",
+      "boundary": "The record does not assign individual post authorship or prove popular.vote use or impact."
+    },
+    {
+      "date": "2026-07-15",
+      "surface": "Call Script Facebook Page",
+      "record": "https://www.facebook.com/callscript",
+      "finding": "The surviving public Page links directly to popular.vote and routes to NYC Artist Coalition meetings.",
+      "boundary": "The current Page does not prove individual authorship, complete history, audience, or impact."
+    },
+    {
+      "date": "2017-01-27",
+      "surface": "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting",
+      "record": "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+      "finding": "The public event identifies NYC Artist Coalition and Call Script among its displayed hosts and shows 445 people responded.",
+      "boundary": "The response signal is not attendance, unique people, endorsement, or a complete host record."
+    },
+    {
+      "date": "2017-02-03",
+      "surface": "DCLA meeting event discussion",
+      "record": "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+      "finding": "Institutional discussion posts used a date poll to invite a follow-up meeting, linked the February 6 coalition general meeting, and invited people to help choose the work.",
+      "boundary": "The institutional discussion sequence does not establish Jamie's authorship of every post or the complete formation history."
+    },
+    {
+      "date": "2017-02-06",
+      "surface": "DIY: NYC Artist Coalition - General Meeting",
+      "record": "https://www.facebook.com/events/406505576359490/",
+      "finding": "The linked follow-up became a named coalition general meeting at Magick City with collective priority-setting language.",
+      "boundary": "The meeting record does not establish the complete founding group, physical attendance, or sole causality."
+    }
+  ],
+  "jamieRoleBoundary": {
+    "supported": "Jamie confirms establishing Call Script and carrying participation-system lessons from WOW List and popular.vote into early coalition convening; the public sequence corroborates the project and event lineage.",
+    "notSupported": [
+      "Jamie alone founded NYC Artist Coalition",
+      "Call Script created NYC Artist Coalition",
+      "one event caused the coalition to exist",
+      "everyone who responded attended or became a member",
+      "the discussion is the complete founding record",
+      "WOW List, popular.vote, and Call Script were one product",
+      "Jamie authored every shared-account or event-discussion post"
+    ]
+  },
+  "privacyBoundary": "Participant identities, profiles, comments, reactions, friend and invite context, authentication state, and private Page administration are excluded."
+}

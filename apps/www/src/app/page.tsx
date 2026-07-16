@@ -87,8 +87,8 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
-              situations becoming usable systems, public-facing tools,
+              These projects show a recurring pattern: emerging, high-context
+              work becoming usable systems, public-facing tools,
               documentation, decision trails, and durable handoffs.
             </p>
           </div>

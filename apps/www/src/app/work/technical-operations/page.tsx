@@ -19,41 +19,52 @@ const proofMap = [
   {
     project: "HJE",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "I helped modernize e-commerce, analytics, marketing, content, and operating workflows for a legacy industrial business."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "I designed and maintained a lightweight operating backbone for multi-organization policy work: running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work."
+  },
+  {
+    project: "Commercial Vacancy Data",
+    proof:
+      "I translated administrative-data constraints into a practical proposal for privacy-preserving commercial vacancy and lease-cost indicators, including coverage, suppression, and methods requirements."
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "I built an independent civic-data follow-on that translated constituent-services records into resident-facing guidance and a public-engagement layer spanning 61 issue pathways and 26 Council-member accounts."
+  },
+  {
+    project: "Project identity systems",
+    proof:
+      "I established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including shared systems collaborators carried across campaigns, programs, and changing stewardship."
   },
   {
     project: "WOWList",
     proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
+      "I co-built a public-facing community event distribution platform using Python / Django, PostgreSQL / PostGIS, and Ember.js."
   },
   {
     project: "196 / Sunday Dinner",
     proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+      "I created repeatable onboarding, facilitation, hosting, documentation, and continuity practices for recurring gatherings."
   },
   {
     project: "KC Spaces Fund",
     proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+      "I supported a collaborator-led 2020 mutual-aid campaign by helping choose an available cross-channel project name, building its website, and providing behind-the-scenes digital operations for donation, application, sign-up, and fundraising routes."
   },
   {
     project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof:
+      "I co-led long-horizon redevelopment planning and public-benefit documentation tied to a municipal funding recommendation."
   },
   {
     project: "Source-Backed Team Memory",
     proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+      "I am developing a bounded lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
   }
 ];
 
@@ -68,7 +79,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -79,6 +90,43 @@ export default function TechnicalOperationsPage() {
           handoffs.
         </p>
       </div>
+      <section
+        aria-labelledby="role-fit-at-a-glance"
+        className="mt-10 border-y border-jb-ink/15 py-7"
+      >
+        <p className="text-sm font-semibold uppercase text-jb-blue">
+          Role fit at a glance
+        </p>
+        <div className="mt-5 grid gap-7 md:grid-cols-3">
+          <div>
+            <h2 id="role-fit-at-a-glance" className="text-xl font-semibold text-jb-ink">
+              Where I enter
+            </h2>
+            <p className="mt-3 leading-7 text-jb-ink/76">
+              A public-facing project has multiple stakeholders, consequential
+              details, and useful work already emerging, but no shared operating
+              structure yet.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-jb-ink">What I coordinate</h2>
+            <p className="mt-3 leading-7 text-jb-ink/76">
+              I coordinate requirements, owners, dependencies, status, risks,
+              decisions, documentation, launch work, and follow-through.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-jb-ink">
+              What teams can use afterward
+            </h2>
+            <p className="mt-3 leading-7 text-jb-ink/76">
+              Teams leave with clearer plans, current records, maintainable
+              workflows, public guidance, and handoff materials that keep the
+              work moving.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
         <JBCard>
           <h2 className="text-2xl font-semibold text-jb-ink">

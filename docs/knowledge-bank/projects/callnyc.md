@@ -1,6 +1,6 @@
 # CallNYC citational record
 
-**Reviewed:** 2026-07-11
+**Reviewed:** 2026-07-13
 
 **Public surface:** `/work/callnyc`
 
@@ -31,11 +31,65 @@ product, a documented formal submission, or a documented winner.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
 - Public CallNYC GitHub repository.
+- New York City Council stated-meeting minutes confirming the five named
+  officeholders were serving Council members in 2016.
+- Public posts by Helen Rosenthal, Ydanis Rodriguez, Rosie Mendez, and Mathieu
+  Eugene, plus the archived CallNYC post and resolvable Peter Koo retweet
+  object.
+- Authenticated 107-item public-account ledger with three explicit unresolved
+  profile-count slots.
+- NYC School of Data's March 2016 recap featuring CallNYC among civic hacks.
+- Current City dataset metadata distinguishing issue rows from cases and
+  unique people.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
+
+## Council-member amplification
+
+The recovered public record supports a verified minimum: at least five sitting
+NYC Council members publicly amplified CallNYC in 2016. Helen Rosenthal
+directly recommended the service to constituents; Ydanis Rodriguez, Rosie
+Mendez, and Mathieu Eugene quote-amplified project recognitions; and Peter Koo
+retweeted a CallNYC recognition.
+
+This is evidence of public amplification by individual member accounts. It is
+not an official NYC Council endorsement, and `at least five` is not a claim
+that only five members engaged. Mentions and tags without an affirmative action
+are not counted as engagement.
+
+## Public-engagement architecture
+
+The recovered `@CallNYCApp` corpus contains 92 account-authored statuses and 15
+reposts. Seventy-one data-derived recognition posts name 26 contemporaneous
+Council-member accounts and link to 61 issue pages across 16 constituent-
+service categories. Eighty-two of the 92 account-authored statuses mention
+`@NYCCouncil`.
+
+This is evidence of a repeatable public-engagement and information-architecture
+system. It documents intended institutional reach, not 26 reciprocal
+engagements, 71 service outcomes, or a verified count of unique people helped.
+The City dataset's current metadata says a row represents an issue and one case
+can contain multiple issues.
+
+All 110 observed profile-count slots have a disposition: 107 unique public
+items were recovered at item level, and three remain explicitly not recovered.
+This is 100 percent disposition coverage of the observed population, not a
+complete platform export.
+
+NYC School of Data's March 2016 recap featured CallNYC among civic hacks using
+open data. That is independent contemporaneous recognition, not an award,
+presentation record, or official endorsement.
+
+## Reserve product depth
+
+Contemporaneous public posts announced a District Profile API, a JSON endpoint
+for Council-member Twitter usernames, and issue-specific buttons for contacting
+Council members. These announcements are preserved as reserve depth while the
+historical endpoint behavior, interaction implementation, use, and adoption
+remain open research questions.
 
 ## Bounded research finding
 

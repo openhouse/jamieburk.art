@@ -1,0 +1,3646 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-13",
+  "sourceProfile": "https://x.com/CallNYCapp",
+  "method": {
+    "authenticatedReadOnlyReview": true,
+    "surfaces": [
+      "Posts tab",
+      "Replies tab",
+      "date-bounded live search",
+      "status pages"
+    ],
+    "exclusions": [
+      "authentication and session material",
+      "private messages and account analytics",
+      "inferences about individual post authorship"
+    ]
+  },
+  "populationAudit": {
+    "profileCountObserved": 110,
+    "postsTabItemsRecovered": 106,
+    "accountPostsRecovered": 86,
+    "accountRepliesRecovered": 6,
+    "accountAuthoredStatusesRecovered": 92,
+    "repostsRecovered": 15,
+    "uniqueItemsRecovered": 107,
+    "unresolvedPopulationSlots": 3,
+    "dispositionTotal": 110,
+    "completenessStatement": "Every slot in the observed 110-item profile population is dispositioned: 107 unique public items were recovered at item level and 3 remain explicitly unresolved. This is not a platform export."
+  },
+  "aggregateFindings": {
+    "accountAuthoredStatusesMentioningCouncil": 82,
+    "issueRecognitionPosts": 71,
+    "councilMemberHandlesNamedInRecognitions": 26,
+    "uniqueIssuePagesLinkedFromRecognitions": 61,
+    "issueCategoriesLinkedFromRecognitions": 16,
+    "issueCategorySlugs": [
+      "cultural-affairs",
+      "economy-jobs",
+      "environment",
+      "finance",
+      "general-welfare",
+      "governmental-operations",
+      "health",
+      "housing-and-buildings",
+      "immigration",
+      "land-use-and-zoning",
+      "legal-services",
+      "parks",
+      "quality-of-life",
+      "sanitation",
+      "transportation",
+      "utilities"
+    ],
+    "shortUrlOccurrences": 98,
+    "uniqueShortUrls": 84,
+    "uniqueResolvedDestinations": 76,
+    "uniqueCallNycDestinations": 63,
+    "externalDestinationUrls": [
+      "http://chriswhong.github.io/311buddy/",
+      "http://www.capitalnewyork.com/article/city-hall/2016/03/8593638/website-allows-getting-know-councilmembers-through-data",
+      "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+      "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday",
+      "https://labs.council.nyc/",
+      "https://nyctwg.org/",
+      "https://popular.vote/",
+      "https://talk.beta.nyc/",
+      "https://wowlist.org/",
+      "https://wowlist.org/DownWithTrump",
+      "https://www.nyc.gov/rentfreeze",
+      "https://www.nyc.gov:443/site/hra/help/homelessness-prevention.page",
+      "https://www.youtube.com/watch?v=vwpGGRK4JgA"
+    ]
+  },
+  "unresolvedItems": [
+    {
+      "slot": "UNRESOLVED-CALLNYC-001",
+      "status": "not-recovered",
+      "note": "Profile count reconciliation slot; no status ID or content was recovered."
+    },
+    {
+      "slot": "UNRESOLVED-CALLNYC-002",
+      "status": "not-recovered",
+      "note": "Profile count reconciliation slot; no status ID or content was recovered."
+    },
+    {
+      "slot": "UNRESOLVED-CALLNYC-003",
+      "status": "not-recovered",
+      "note": "Profile count reconciliation slot; no status ID or content was recovered."
+    }
+  ],
+  "records": [
+    {
+      "statusId": "706146203604492288",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288",
+      "publishedAt": "2016-03-05T15:55:49.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "#NYC leading #opengov: see models http:// nyctwg.org, http:// labs.council.nyc from @NYCCouncil , http:// talk.beta.nyc by @betanyc ...",
+      "mentionedHandles": [
+        "@NYCCouncil",
+        "@betanyc"
+      ],
+      "hashtags": [
+        "#NYC",
+        "#opengov"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/595mNVKE1j",
+          "destinationUrl": "https://nyctwg.org/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 35
+        },
+        {
+          "shortUrl": "https://t.co/fxKlcXONki",
+          "destinationUrl": "https://labs.council.nyc/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 60
+        },
+        {
+          "shortUrl": "https://t.co/0998D9hEqF",
+          "destinationUrl": "https://talk.beta.nyc/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 6
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "706208629360304128",
+      "statusUrl": "https://x.com/CallNYCapp/status/706208629360304128",
+      "publishedAt": "2016-03-05T20:03:52.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Announcing http:// CallNYC.org The first project using @NYCCouncil Constituent Services Data #nycSoData #OpenDataDay",
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#nycSoData",
+        "#OpenDataDay"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "707677287366467584",
+      "statusUrl": "https://x.com/CallNYCapp/status/707677287366467584",
+      "publishedAt": "2016-03-09T21:19:47.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "94% of @NYCCouncil Members are on Twitter! Find them all and tweet by specialty at http:// CallNYC.org #CallNYC",
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "710150246781882369",
+      "statusUrl": "https://x.com/CallNYCapp/status/710150246781882369",
+      "publishedAt": "2016-03-16T17:06:27.000Z",
+      "relationship": "account-reply",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "text": "Hello @noneck ! I'm Jamie Burkart. http:// CallNYC.org is my first Civic Tech project! Also making http:// WOWList.org <!3",
+      "mentionedHandles": [
+        "@noneck"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        },
+        {
+          "shortUrl": "https://t.co/IBvFeEBZSP",
+          "destinationUrl": "https://wowlist.org/",
+          "observedHttpStatus": 301,
+          "curlExitCode": 28
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "710154803054301184",
+      "statusUrl": "https://x.com/CallNYCapp/status/710154803054301184",
+      "publishedAt": "2016-03-16T17:24:33.000Z",
+      "relationship": "account-reply",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "text": "Also @noneck I just added buttons to tweet Council Members for help on specific issues http:// callnyc.org/finance/tax-pr eparation-assistance.html … 94% of Council is on Twitter!",
+      "mentionedHandles": [
+        "@noneck"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/7mstGHJlRD",
+          "destinationUrl": "https://callnyc.org/finance/tax-preparation-assistance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "710498412349800450",
+      "statusUrl": "https://x.com/CallNYCapp/status/710498412349800450",
+      "publishedAt": "2016-03-17T16:09:56.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": ". @alizauf is such a prolific civic designer / dev! Check out her new #311 Chrome extension http:// gizmodo.com/check-the-hist ory-of-complaints-at-any-nyc-address-with-1764099069 …",
+      "mentionedHandles": [
+        "@alizauf"
+      ],
+      "hashtags": [
+        "#311"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uhtgJwS83b",
+          "destinationUrl": "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "710507767447031808",
+      "statusUrl": "https://x.com/CallNYCapp/status/710507767447031808",
+      "publishedAt": "2016-03-17T16:47:07.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Thanks @Politico ! \"not just getting a pothole filled, this is going to be a relationship\" http:// politi.co/1RW5eXZ",
+      "mentionedHandles": [
+        "@Politico"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/mnTxsOm2u5",
+          "destinationUrl": "http://www.capitalnewyork.com/article/city-hall/2016/03/8593638/website-allows-getting-know-councilmembers-through-data",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "Image"
+      ]
+    },
+    {
+      "statusId": "712349795403374592",
+      "statusUrl": "https://x.com/CallNYCapp/status/712349795403374592",
+      "publishedAt": "2016-03-22T18:46:40.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "The http:// callnyc.org award for #MostService goes to… @NYCCouncil Member @JimmyVanBramer ! 2,330 helped in 365!",
+      "mentionedHandles": [
+        "@NYCCouncil",
+        "@JimmyVanBramer"
+      ],
+      "hashtags": [
+        "#MostService"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/o34NImeSCP",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "Image"
+      ]
+    },
+    {
+      "statusId": "713537148000018432",
+      "statusUrl": "https://x.com/CallNYCapp/status/713537148000018432",
+      "publishedAt": "2016-03-26T01:24:47.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "CallNYC's new @NYCCouncil District Profile API: Name, Phone, Email, Twitter, Services… http:// CallNYC.org/api/ @ppolitics @noneck #opendata",
+      "mentionedHandles": [
+        "@NYCCouncil",
+        "@ppolitics",
+        "@noneck"
+      ],
+      "hashtags": [
+        "#opendata"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/3FD3LmieU3",
+          "destinationUrl": "https://callnyc.org/api/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "715139663384547328",
+      "statusUrl": "https://x.com/chris_whong/status/715139663384547328",
+      "publishedAt": "2016-03-30T11:32:37.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Last night's hack: Last 30 days of @nyc311 #opendata for all of NYC. Check out your block. http:// bit.ly/1Y0gSCZ",
+      "mentionedHandles": [
+        "@nyc311"
+      ],
+      "hashtags": [
+        "#opendata"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KvWTMollyY",
+          "destinationUrl": "http://chriswhong.github.io/311buddy/",
+          "observedHttpStatus": 404,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 5,
+        "likes": 8
+      },
+      "mediaUrls": [
+        "Image"
+      ]
+    },
+    {
+      "statusId": "722837286476390401",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837286476390401",
+      "publishedAt": "2016-04-20T17:20:13.000Z",
+      "relationship": "account-reply",
+      "recoveredFrom": [
+        "replies-tab"
+      ],
+      "text": "@ppolitics @noneck I made a JSON API so you can get Twitter usernames for @NYCCouncil Members http:// callnyc.org/api/",
+      "mentionedHandles": [
+        "@ppolitics",
+        "@noneck",
+        "@NYCCouncil"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/QLHrhiHP1y",
+          "destinationUrl": "https://callnyc.org/api/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "722837868008177664",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837868008177664",
+      "publishedAt": "2016-04-20T17:22:32.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RitchieTorres provides the most #USCitizenship help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/immigration/u- s-citizenship.html …",
+      "mentionedHandles": [
+        "@RitchieTorres",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#USCitizenship",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/2ihtdXQMGs",
+          "destinationUrl": "https://callnyc.org/immigration/u-s-citizenship.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "722928370237853696",
+      "statusUrl": "https://x.com/CallNYCapp/status/722928370237853696",
+      "publishedAt": "2016-04-20T23:22:09.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@StephenLevin33 provides the most #Libraries help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/cultural-affai rs/libraries.html …",
+      "mentionedHandles": [
+        "@StephenLevin33",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Libraries",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/fkq7hzWi6c",
+          "destinationUrl": "https://callnyc.org/cultural-affairs/libraries.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "723132373114572801",
+      "statusUrl": "https://x.com/CallNYCapp/status/723132373114572801",
+      "publishedAt": "2016-04-21T12:52:47.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RLEspinal provides the most #FoodStamps help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/general-welfar e/food-stamps.html …",
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#FoodStamps",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/R9Bx3XNjYv",
+          "destinationUrl": "https://callnyc.org/general-welfare/food-stamps.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "723153082096345092",
+      "statusUrl": "https://x.com/CallNYCapp/status/723153082096345092",
+      "publishedAt": "2016-04-21T14:15:04.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@HelenRosenthal provides the most #LandlordIssues help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/landlord-managing-agent-issues.html …",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LandlordIssues",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ZQZbxgPqPx",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/landlord-managing-agent-issues.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "723249608659443712",
+      "statusUrl": "https://x.com/CallNYCapp/status/723249608659443712",
+      "publishedAt": "2016-04-21T20:38:38.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ydanis provides the most #NYCHANewApplication help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/nycha-new-application.html …",
+      "mentionedHandles": [
+        "@ydanis",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHANewApplication",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/jP1mkW2MfY",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/nycha-new-application.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "723313062950907905",
+      "statusUrl": "https://x.com/CallNYCapp/status/723313062950907905",
+      "publishedAt": "2016-04-22T00:50:47.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@JimmyVanBramer provides the most #NYCHABuildingMaintenance help on @NYCCouncil . Thank you! http:// callnyc.org/housing-and-bu ildings/nycha-building-maintenance.html …",
+      "mentionedHandles": [
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHABuildingMaintenance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "723546610576306176",
+      "statusUrl": "https://x.com/CallNYCapp/status/723546610576306176",
+      "publishedAt": "2016-04-22T16:18:49.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CMMathieuEugene provides the most #Immigration help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/legal-services /immigration.html …",
+      "mentionedHandles": [
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Immigration",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KaN1Ph34OH",
+          "destinationUrl": "https://callnyc.org/legal-services/immigration.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "723547805709676544",
+      "statusUrl": "https://x.com/CallNYCapp/status/723547805709676544",
+      "publishedAt": "2016-04-22T16:23:34.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@NYCGreenfield provides the most #TreePlanting help on @NYCCouncil . Thank you! #EarthDay http:// callnyc.org/parks/tree-pla nting-pruning.html …",
+      "mentionedHandles": [
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TreePlanting",
+        "#EarthDay"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/t4aK6PYHIG",
+          "destinationUrl": "https://callnyc.org/parks/tree-planting-pruning.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "724723473852059649",
+      "statusUrl": "https://x.com/CallNYCapp/status/724723473852059649",
+      "publishedAt": "2016-04-25T22:15:15.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@BenKallos provides the most #GeneralConstruction help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/construction-general.html …",
+      "mentionedHandles": [
+        "@BenKallos",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#GeneralConstruction",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KUZBXbkGrp",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/construction-general.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "724727480909705216",
+      "statusUrl": "https://x.com/CallNYCapp/status/724727480909705216",
+      "publishedAt": "2016-04-25T22:31:10.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ChaimDeutsch provides the most #ParkMaintenance help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/parks/park-mai ntenance.html …",
+      "mentionedHandles": [
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ParkMaintenance",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/UwHNuZs1qj",
+          "destinationUrl": "https://callnyc.org/parks/park-maintenance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "724767660353949697",
+      "statusUrl": "https://x.com/CallNYCapp/status/724767660353949697",
+      "publishedAt": "2016-04-26T01:10:50.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@Dromm25 provides the most #Noise help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/quality-of-lif e/noise-other.html …",
+      "mentionedHandles": [
+        "@Dromm25",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Noise",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/D6cgQ300iJ",
+          "destinationUrl": "https://callnyc.org/quality-of-life/noise-other.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "724986599419875333",
+      "statusUrl": "https://x.com/CallNYCapp/status/724986599419875333",
+      "publishedAt": "2016-04-26T15:40:49.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RitchieTorres provides the most #TaxPrepAssistance on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/finance/tax-pr eparation-assistance.html …",
+      "mentionedHandles": [
+        "@RitchieTorres",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TaxPrepAssistance",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/7mstGHJlRD",
+          "destinationUrl": "https://callnyc.org/finance/tax-preparation-assistance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725048363528392704",
+      "statusUrl": "https://x.com/CallNYCapp/status/725048363528392704",
+      "publishedAt": "2016-04-26T19:46:15.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@StevenMatteo provides the most #StreetResurfacing help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /street-resurfacing.html …",
+      "mentionedHandles": [
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetResurfacing",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/CfUcCUgR5v",
+          "destinationUrl": "https://callnyc.org/transportation/street-resurfacing.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725052316978663426",
+      "statusUrl": "https://x.com/CallNYCapp/status/725052316978663426",
+      "publishedAt": "2016-04-26T20:01:57.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MMViverito provides the most #NYCHATransfer help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/nycha-transfers.html …",
+      "mentionedHandles": [
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHATransfer",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/9GUjrTPVfR",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/nycha-transfers.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725084356432269313",
+      "statusUrl": "https://x.com/CallNYCapp/status/725084356432269313",
+      "publishedAt": "2016-04-26T22:09:16.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MarkTreyger718 provides the most #Employment help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/economy-jobs/s eeking-employment.html …",
+      "mentionedHandles": [
+        "@MarkTreyger718",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Employment",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ixqxa8cPpB",
+          "destinationUrl": "https://callnyc.org/economy-jobs/seeking-employment.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image",
+        "🍎"
+      ]
+    },
+    {
+      "statusId": "725334082364821504",
+      "statusUrl": "https://x.com/CallNYCapp/status/725334082364821504",
+      "publishedAt": "2016-04-27T14:41:35.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@Vanessalgibson provides the most #CommunityBasedOrg help on @NYCCouncil . Thank you! http:// callnyc.org/cultural-affai rs/community-based-organization.html …",
+      "mentionedHandles": [
+        "@Vanessalgibson",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CommunityBasedOrg"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KlskCGW2jn",
+          "destinationUrl": "https://callnyc.org/cultural-affairs/community-based-organization.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725403215282487296",
+      "statusUrl": "https://x.com/CallNYCapp/status/725403215282487296",
+      "publishedAt": "2016-04-27T19:16:18.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CMPeterKoo provides the most #Lifeline help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/utilities/life line.html …",
+      "mentionedHandles": [
+        "@CMPeterKoo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Lifeline",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/FZduliunTG",
+          "destinationUrl": "https://callnyc.org/utilities/lifeline.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725445909241278468",
+      "statusUrl": "https://x.com/CallNYCapp/status/725445909241278468",
+      "publishedAt": "2016-04-27T22:05:57.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ElizCrowleyNYC provides the most #AnimalCare / #WildAnimal help on @NYCCouncil . Thank you! http:// callnyc.org/health/animal- care-wild-animal.html …",
+      "mentionedHandles": [
+        "@ElizCrowleyNYC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AnimalCare",
+        "#WildAnimal"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/dQTEpirK0c",
+          "destinationUrl": "https://callnyc.org/health/animal-care-wild-animal.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725447728503902211",
+      "statusUrl": "https://x.com/CallNYCapp/status/725447728503902211",
+      "publishedAt": "2016-04-27T22:13:11.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@cmenchaca provides the most #CityServicesAndBenefits help on @NYCCouncil . Thank you! http:// callnyc.org/immigration/ci ty-services-and-benefits.html …",
+      "mentionedHandles": [
+        "@cmenchaca",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CityServicesAndBenefits"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/1Uo5Non4dz",
+          "destinationUrl": "https://callnyc.org/immigration/city-services-and-benefits.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image",
+        "🦋"
+      ]
+    },
+    {
+      "statusId": "725462205173518338",
+      "statusUrl": "https://x.com/CallNYCapp/status/725462205173518338",
+      "publishedAt": "2016-04-27T23:10:42.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RosieMendez provides the most #HomelessShelter help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/general-welfar e/homeless-shelter-dhs.html …",
+      "mentionedHandles": [
+        "@RosieMendez",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#HomelessShelter",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/f7sPewFLeA",
+          "destinationUrl": "https://callnyc.org/general-welfare/homeless-shelter-dhs.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725783813880684544",
+      "statusUrl": "https://x.com/CallNYCapp/status/725783813880684544",
+      "publishedAt": "2016-04-28T20:28:40.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RLEspinal provides the most #AffordableHousing help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/affordable-housing-apartment.html …",
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AffordableHousing",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/grEZDUYGgo",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/affordable-housing-apartment.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725788478676570113",
+      "statusUrl": "https://x.com/Gothamist/status/725788478676570113",
+      "publishedAt": "2016-04-28T20:47:12.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Long-Overdue Pulaski Bridge Bike Path Will Officially Open Friday http:// gothamist.com/2016/04/28/pul aski_bridge_bike_path.php … #bikenyc",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#bikenyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/nOPVwvQhOv",
+          "destinationUrl": "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 2,
+        "reposts": 10,
+        "likes": 19
+      },
+      "mediaUrls": [
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725789777673465857",
+      "statusUrl": "https://x.com/CallNYCapp/status/725789777673465857",
+      "publishedAt": "2016-04-28T20:52:22.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@HelenRosenthal provides the most #LeaseIssue help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/lease-issue.html …",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LeaseIssue",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/48kNXGpGNx",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/lease-issue.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "725813046631911424",
+      "statusUrl": "https://x.com/CallNYCapp/status/725813046631911424",
+      "publishedAt": "2016-04-28T22:24:49.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@JimmyVanBramer provides the most #LandUseApplication help on @NYCCouncil . Thank you! http:// callnyc.org/land-use-and-z oning/land-use-application-process.html …",
+      "mentionedHandles": [
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#LandUseApplication"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Ki4PWJgXMf",
+          "destinationUrl": "https://callnyc.org/land-use-and-zoning/land-use-application-process.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "726080902024040448",
+      "statusUrl": "https://x.com/CallNYCapp/status/726080902024040448",
+      "publishedAt": "2016-04-29T16:09:11.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CMMathieuEugene provides the most #GreenCard help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/immigration/gr een-card.html …",
+      "mentionedHandles": [
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#GreenCard",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/BJ0kKbfsHS",
+          "destinationUrl": "https://callnyc.org/immigration/green-card.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "726819779953188865",
+      "statusUrl": "https://x.com/CallNYCapp/status/726819779953188865",
+      "publishedAt": "2016-05-01T17:05:13.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@NYCGreenfield provides the most #ConEdison help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/utilities/con- edison.html …",
+      "mentionedHandles": [
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ConEdison",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uRvk9DxiIn",
+          "destinationUrl": "https://callnyc.org/utilities/con-edison.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 7
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "726900698827358208",
+      "statusUrl": "https://x.com/CallNYCapp/status/726900698827358208",
+      "publishedAt": "2016-05-01T22:26:46.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@FCabreraNY provides the most #RentalArrears help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/rental-arrears.html …",
+      "mentionedHandles": [
+        "@FCabreraNY",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#RentalArrears",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/xGXnqIMgz2",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/rental-arrears.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "727164122106847233",
+      "statusUrl": "https://x.com/CallNYCapp/status/727164122106847233",
+      "publishedAt": "2016-05-02T15:53:31.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ChaimDeutsch provides the most #StreetLights help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /street-lights.html …",
+      "mentionedHandles": [
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetLights",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/NPe2gejGrr",
+          "destinationUrl": "https://callnyc.org/transportation/street-lights.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "727218948127739905",
+      "statusUrl": "https://x.com/CallNYCapp/status/727218948127739905",
+      "publishedAt": "2016-05-02T19:31:22.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "\"[#CatPictures] remind us that we're all human on the other side of the screen\" - @spedwybabs at #org20 @Organize20",
+      "mentionedHandles": [
+        "@spedwybabs",
+        "@Organize20"
+      ],
+      "hashtags": [
+        "#CatPictures",
+        "#org20"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "727251825414561792",
+      "statusUrl": "https://x.com/CallNYCapp/status/727251825414561792",
+      "publishedAt": "2016-05-02T21:42:01.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@BenKallos provides the most #Bicycle help on @NYCCouncil . Thank you! #BikeMonth #CallNYC http:// callnyc.org/transportation /bicycles.html …",
+      "mentionedHandles": [
+        "@BenKallos",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Bicycle",
+        "#BikeMonth",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ii9fYml6sq",
+          "destinationUrl": "https://callnyc.org/transportation/bicycles.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "727528637340241920",
+      "statusUrl": "https://x.com/CallNYCapp/status/727528637340241920",
+      "publishedAt": "2016-05-03T16:01:58.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@IDaneekMiller provided the most #SnowRemoval help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/sanitation/sno w-removal.html …",
+      "mentionedHandles": [
+        "@IDaneekMiller",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SnowRemoval",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/fs5dINLYGQ",
+          "destinationUrl": "https://callnyc.org/sanitation/snow-removal.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "727601279984381952",
+      "statusUrl": "https://x.com/CallNYCapp/status/727601279984381952",
+      "publishedAt": "2016-05-03T20:50:37.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MMViverito provides the most #Heat and #HotWater help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/heat-hot-water.html …",
+      "mentionedHandles": [
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Heat",
+        "#HotWater",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/lSRkB621fB",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/heat-hot-water.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "727619816081784832",
+      "statusUrl": "https://x.com/CallNYCapp/status/727619816081784832",
+      "publishedAt": "2016-05-03T22:04:17.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@StevenMatteo provides the most #PotHoles help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /pot-holes.html …",
+      "mentionedHandles": [
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#PotHoles",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/0sswRK5kfj",
+          "destinationUrl": "https://callnyc.org/transportation/pot-holes.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 2
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "727689676115611650",
+      "statusUrl": "https://x.com/CallNYCapp/status/727689676115611650",
+      "publishedAt": "2016-05-04T02:41:53.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MarkTreyger718 provides the most #VotingInfo help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/governmental-o perations/voting-information.html …",
+      "mentionedHandles": [
+        "@MarkTreyger718",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#VotingInfo",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ipg2ACxsfA",
+          "destinationUrl": "https://callnyc.org/governmental-operations/voting-information.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image",
+        "🍎"
+      ]
+    },
+    {
+      "statusId": "727878157076959232",
+      "statusUrl": "https://x.com/CallNYCapp/status/727878157076959232",
+      "publishedAt": "2016-05-04T15:10:50.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "http:// CallNYC.org Awards for @NYCCouncil Members & their staff are based on #CouncilStat Constituent Service #OpenData. Great work!",
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CouncilStat",
+        "#OpenData"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🚀",
+        "💕"
+      ]
+    },
+    {
+      "statusId": "727880846271782913",
+      "statusUrl": "https://x.com/CallNYCapp/status/727880846271782913",
+      "publishedAt": "2016-05-04T15:21:31.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Thank you @NYCCouncil for your hackathon and #ConstituentServices #OpenData making http:// CallNYC.org possible",
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ConstituentServices",
+        "#OpenData"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "727919445763575809",
+      "statusUrl": "https://x.com/CallNYCapp/status/727919445763575809",
+      "publishedAt": "2016-05-04T17:54:54.000Z",
+      "relationship": "account-reply",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "text": "The bumpy road is smoother thanks to your great district engagement! #ConstituentServices #OpenData http:// callnyc.org/transportation /pot-holes.html … @StevenMatteo",
+      "mentionedHandles": [
+        "@StevenMatteo"
+      ],
+      "hashtags": [
+        "#ConstituentServices",
+        "#OpenData"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/0sswRK5kfj",
+          "destinationUrl": "https://callnyc.org/transportation/pot-holes.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 5
+      },
+      "mediaUrls": [
+        "🌳"
+      ]
+    },
+    {
+      "statusId": "728001482692399104",
+      "statusUrl": "https://x.com/CallNYCapp/status/728001482692399104",
+      "publishedAt": "2016-05-04T23:20:53.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@bradlander provides the most #PedestrianSafety help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /pedestrian-safety.html …",
+      "mentionedHandles": [
+        "@bradlander",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#PedestrianSafety",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/RakQv8ztqc",
+          "destinationUrl": "https://callnyc.org/transportation/pedestrian-safety.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "728259132705353728",
+      "statusUrl": "https://x.com/CMPeterKoo/status/728259132705353728",
+      "publishedAt": "2016-05-05T16:24:42.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Thank you @JihaJacques @NYCFinance @SelfhelpNY for helping to bridge the #SCRIE #DRIE enrollment gap",
+      "mentionedHandles": [
+        "@JihaJacques",
+        "@NYCFinance",
+        "@SelfhelpNY"
+      ],
+      "hashtags": [
+        "#SCRIE",
+        "#DRIE"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 6,
+        "likes": 2
+      },
+      "mediaUrls": [
+        "Image"
+      ]
+    },
+    {
+      "statusId": "728333768226947077",
+      "statusUrl": "https://x.com/CallNYCapp/status/728333768226947077",
+      "publishedAt": "2016-05-05T21:21:16.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@HelenRosenthal provides the most #Eviction help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/eviction.html …",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Eviction",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/II5uv5lxQV",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/eviction.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "728666490250113026",
+      "statusUrl": "https://x.com/CallNYCapp/status/728666490250113026",
+      "publishedAt": "2016-05-06T19:23:23.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RLEspinal provides the most #Section8 help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/section-8.html …",
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Section8",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/DBrHgcWshC",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/section-8.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "728692814079463429",
+      "statusUrl": "https://x.com/CallNYCapp/status/728692814079463429",
+      "publishedAt": "2016-05-06T21:07:59.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Thanks @NYCCouncil for releasing the #ConstituentService data that powers http:// CallNYC.org! #Tech4all",
+      "mentionedHandles": [
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ConstituentService",
+        "#Tech4all"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "729670658406400001",
+      "statusUrl": "https://x.com/darrenbloch/status/729670658406400001",
+      "publishedAt": "2016-05-09T13:53:36.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "On #NYCdigital Playbook, @deBlasioNYC: we want govt to think differently, and be in a constant dialogue w/ the people of our city.",
+      "mentionedHandles": [
+        "@deBlasioNYC"
+      ],
+      "hashtags": [
+        "#NYCdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "729673498608685058",
+      "statusUrl": "https://x.com/CivicHall/status/729673498608685058",
+      "publishedAt": "2016-05-09T14:04:53.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "\"The playbook offers a place for people to analyze & manipulate data to create solutions we might not see\" - Mayor @BilldeBlasio #nycdigital",
+      "mentionedHandles": [
+        "@BilldeBlasio"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "729676362634629120",
+      "statusUrl": "https://x.com/NYCMayorsOffice/status/729676362634629120",
+      "publishedAt": "2016-05-09T14:16:16.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Mayor @BillDeBlasio : The Digital Playbook essentially says government must be better connected to the people. #NYCdigital",
+      "mentionedHandles": [
+        "@BillDeBlasio"
+      ],
+      "hashtags": [
+        "#NYCdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 13,
+        "likes": 14
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "729713874715455488",
+      "statusUrl": "https://x.com/CallNYCapp/status/729713874715455488",
+      "publishedAt": "2016-05-09T16:45:19.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "\"The person who is calling ostensibly complaining, may also be offering the solution & they deserve a response.\" @BilldeBlasio #nycdigital",
+      "mentionedHandles": [
+        "@BilldeBlasio"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "📞"
+      ]
+    },
+    {
+      "statusId": "729737077340946432",
+      "statusUrl": "https://x.com/CallNYCapp/status/729737077340946432",
+      "publishedAt": "2016-05-09T18:17:31.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Important about @BilldeBlasio #NYCDigital Playbook + @NYCCouncil Council 2.0+ @galeabrewer #OpenData is seeking evermore engaged democracy",
+      "mentionedHandles": [
+        "@BilldeBlasio",
+        "@NYCCouncil",
+        "@galeabrewer"
+      ],
+      "hashtags": [
+        "#NYCDigital",
+        "#OpenData"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🌳"
+      ]
+    },
+    {
+      "statusId": "729741165273165824",
+      "statusUrl": "https://x.com/CallNYCapp/status/729741165273165824",
+      "publishedAt": "2016-05-09T18:33:46.000Z",
+      "relationship": "account-reply",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "text": "For sure. Sometimes the person facing the issue is positioned to see an answer that could help them + others too @ibookery @BilldeBlasio",
+      "mentionedHandles": [
+        "@ibookery",
+        "@BilldeBlasio"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "729757799647981570",
+      "statusUrl": "https://x.com/CallNYCapp/status/729757799647981570",
+      "publishedAt": "2016-05-09T19:39:52.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Great #AntiEviction #FreeLegalServices list @NYCHRA ! http:// bit.ly/homelessnesspr evention …",
+      "mentionedHandles": [
+        "@NYCHRA"
+      ],
+      "hashtags": [
+        "#AntiEviction",
+        "#FreeLegalServices"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/rgMJ2CoXGE",
+          "destinationUrl": "https://www.nyc.gov:443/site/hra/help/homelessness-prevention.page",
+          "observedHttpStatus": 403,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "729830383689281537",
+      "statusUrl": "https://x.com/CallNYCapp/status/729830383689281537",
+      "publishedAt": "2016-05-10T00:28:17.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ChaimDeutsch provides the most #TreesAndSidewalksProgram help on @NYCCouncil . Thank you! http:// callnyc.org/parks/trees-an d-sidewalks-program.html …",
+      "mentionedHandles": [
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TreesAndSidewalksProgram"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/YMBsQlYVUD",
+          "destinationUrl": "https://callnyc.org/parks/trees-and-sidewalks-program.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "729832019304194052",
+      "statusUrl": "https://x.com/CallNYCapp/status/729832019304194052",
+      "publishedAt": "2016-05-10T00:34:47.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CMMathieuEugene provides the most help with #Visas on @NYCCouncil . Thank you! #Immigration http:// callnyc.org/immigration/vi sas.html …",
+      "mentionedHandles": [
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Visas",
+        "#Immigration"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/hYFYASsn6j",
+          "destinationUrl": "https://callnyc.org/immigration/visas.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "729835258808537088",
+      "statusUrl": "https://x.com/CallNYCapp/status/729835258808537088",
+      "publishedAt": "2016-05-10T00:47:40.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Inspiring services are how @CMMathieuEugene provides the most #Visas help on @NYCCouncil http:// callnyc.org/immigration/vi sas.html …",
+      "mentionedHandles": [
+        "@CMMathieuEugene",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Visas"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/hYFYASaMeL",
+          "destinationUrl": "https://callnyc.org/immigration/visas.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🇺🇸",
+        "🗽",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "730739253358018561",
+      "statusUrl": "https://x.com/CallNYCapp/status/730739253358018561",
+      "publishedAt": "2016-05-12T12:39:49.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@HelenRosenthal provides the most #NYCHABuildingMaintenance help on @NYCCouncil . Thank you! http:// callnyc.org/housing-and-bu ildings/nycha-building-maintenance.html …",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHABuildingMaintenance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "730838778772893696",
+      "statusUrl": "https://x.com/CallNYCapp/status/730838778772893696",
+      "publishedAt": "2016-05-12T19:15:17.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Find @twitter names for the 96% of @NYCCouncil who use them at http:// CallNYC.org #CallNYC @MMViverito",
+      "mentionedHandles": [
+        "@twitter",
+        "@NYCCouncil",
+        "@MMViverito"
+      ],
+      "hashtags": [
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🐦",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "730842213429710850",
+      "statusUrl": "https://x.com/CallNYCapp/status/730842213429710850",
+      "publishedAt": "2016-05-12T19:28:56.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@JimmyVanBramer provides the most #TrafficEnforcement help on @NYCCouncil . Thank you! http:// callnyc.org/transportation /traffic-enforcement.html …",
+      "mentionedHandles": [
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TrafficEnforcement"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Rr2SCkG4ha",
+          "destinationUrl": "https://callnyc.org/transportation/traffic-enforcement.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "730856560071741440",
+      "statusUrl": "https://x.com/CallNYCapp/status/730856560071741440",
+      "publishedAt": "2016-05-12T20:25:57.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@NYCGreenfield provides the most #DirtySidewalks help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/sanitation/dir ty-sidewalk.html …",
+      "mentionedHandles": [
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#DirtySidewalks",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uIv6B7KlFk",
+          "destinationUrl": "https://callnyc.org/sanitation/dirty-sidewalk.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "730862177037488128",
+      "statusUrl": "https://x.com/StephCW_/status/730862177037488128",
+      "publishedAt": "2016-05-12T20:48:16.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "http:// callnyc.org #dataisbeautiful",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#dataisbeautiful"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/CPuzz8aIbk",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "✨"
+      ]
+    },
+    {
+      "statusId": "731168037433450496",
+      "statusUrl": "https://x.com/CallNYCapp/status/731168037433450496",
+      "publishedAt": "2016-05-13T17:03:39.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RLEspinal provides the most #Medicaid help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/general-welfar e/medicaid.html …",
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Medicaid",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ffdda0QyEM",
+          "destinationUrl": "https://callnyc.org/general-welfare/medicaid.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "731212042863005697",
+      "statusUrl": "https://x.com/CallNYCapp/status/731212042863005697",
+      "publishedAt": "2016-05-13T19:58:30.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CM_MargaretChin provides the most #Heat / #HotWater help on @NYCCouncil . Thank you! http:// callnyc.org/housing-and-bu ildings/heat-hot-water.html …",
+      "mentionedHandles": [
+        "@CM_MargaretChin",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Heat",
+        "#HotWater"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/lSRkB621fB",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/heat-hot-water.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "731254021000986624",
+      "statusUrl": "https://x.com/CallNYCapp/status/731254021000986624",
+      "publishedAt": "2016-05-13T22:45:19.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@BenKallos provides the most help with #Buses on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /buses.html …",
+      "mentionedHandles": [
+        "@BenKallos",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Buses",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/LfBEH2jLbI",
+          "destinationUrl": "https://callnyc.org/transportation/buses.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "731873940923109376",
+      "statusUrl": "https://x.com/CallNYCapp/status/731873940923109376",
+      "publishedAt": "2016-05-15T15:48:39.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CM_RubenWills gives the most #BuildingsViolation help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/violation.html …",
+      "mentionedHandles": [
+        "@CM_RubenWills",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#BuildingsViolation",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/4HbbAUkItU",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/violation.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "732370968946065408",
+      "statusUrl": "https://x.com/CallNYCapp/status/732370968946065408",
+      "publishedAt": "2016-05-17T00:43:40.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ChaimDeutsch provides the most #ConEdison help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/utilities/con- edison.html …",
+      "mentionedHandles": [
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ConEdison",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uRvk9DxiIn",
+          "destinationUrl": "https://callnyc.org/utilities/con-edison.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "732660179540578306",
+      "statusUrl": "https://x.com/CallNYCapp/status/732660179540578306",
+      "publishedAt": "2016-05-17T19:52:53.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@StevenMatteo provides the most #TrafficSignal help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /traffic-signals.html …",
+      "mentionedHandles": [
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TrafficSignal",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/pTyzAfP1VC",
+          "destinationUrl": "https://callnyc.org/transportation/traffic-signals.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "732687384597430273",
+      "statusUrl": "https://x.com/CallNYCapp/status/732687384597430273",
+      "publishedAt": "2016-05-17T21:40:59.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MMViverito provides the most #IDNYC help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/governmental-o perations/idnyc.html …",
+      "mentionedHandles": [
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#IDNYC",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/s1o4UnLYUh",
+          "destinationUrl": "https://callnyc.org/governmental-operations/idnyc.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "732752376709447680",
+      "statusUrl": "https://x.com/CallNYCapp/status/732752376709447680",
+      "publishedAt": "2016-05-18T01:59:15.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ElizCrowleyNYC provides the most #Recycling help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/sanitation/rec ycling.html …",
+      "mentionedHandles": [
+        "@ElizCrowleyNYC",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Recycling",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/rswa2xGz1k",
+          "destinationUrl": "https://callnyc.org/sanitation/recycling.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "732928060635373569",
+      "statusUrl": "https://x.com/CallNYCapp/status/732928060635373569",
+      "publishedAt": "2016-05-18T13:37:21.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MarkTreyger718 gives the most #HospitalFacility help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/health/hospita l-facility-or-clinic.html …",
+      "mentionedHandles": [
+        "@MarkTreyger718",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#HospitalFacility",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/d7ArO9ggzv",
+          "destinationUrl": "https://callnyc.org/health/hospital-facility-or-clinic.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image",
+        "🍎"
+      ]
+    },
+    {
+      "statusId": "732959093225345024",
+      "statusUrl": "https://x.com/CallNYCapp/status/732959093225345024",
+      "publishedAt": "2016-05-18T15:40:40.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Keep #RentStabilized event 6pm by @HelenRosenthal @RentJustice @galeabrewer @CoreyinNYC @DanGarodnick @MarkLevineNYC",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@RentJustice",
+        "@galeabrewer",
+        "@CoreyinNYC",
+        "@DanGarodnick",
+        "@MarkLevineNYC"
+      ],
+      "hashtags": [
+        "#RentStabilized"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "Image"
+      ]
+    },
+    {
+      "statusId": "733027856025047041",
+      "statusUrl": "https://x.com/CallNYCapp/status/733027856025047041",
+      "publishedAt": "2016-05-18T20:13:54.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RosieMendez provides the most #EmergencyRepairs help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/emergency-repairs.html …",
+      "mentionedHandles": [
+        "@RosieMendez",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#EmergencyRepairs",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/llG6NvBbg5",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/emergency-repairs.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "733063600152141825",
+      "statusUrl": "https://x.com/CallNYCapp/status/733063600152141825",
+      "publishedAt": "2016-05-18T22:35:56.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ydanis gives the most #RentOvercharges help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/rent-overcharges.html …",
+      "mentionedHandles": [
+        "@ydanis",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#RentOvercharges",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/VhFe6Rlsgt",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/rent-overcharges.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "733089563334299648",
+      "statusUrl": "https://x.com/ydanis/status/733089563334299648",
+      "publishedAt": "2016-05-19T00:19:06.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "It's a privilege to serve my community and ensure tenants rights are protected in northern Manhattan and citywide.",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "733387247362379777",
+      "statusUrl": "https://x.com/CallNYCapp/status/733387247362379777",
+      "publishedAt": "2016-05-19T20:02:00.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@HelenRosenthal gives the most #SCRIE (rent freeze) help on @NYCCouncil . Thank you!#CallNYC http:// callnyc.org/finance/scrie. html …",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SCRIE",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/U2jumuuuMK",
+          "destinationUrl": "https://callnyc.org/finance/scrie.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "733388862806982656",
+      "statusUrl": "https://x.com/CallNYCapp/status/733388862806982656",
+      "publishedAt": "2016-05-19T20:08:25.000Z",
+      "relationship": "account-reply",
+      "recoveredFrom": [
+        "posts-tab",
+        "replies-tab"
+      ],
+      "text": "#SCRIE is a #RentFreeze Program for @NYCSeniors. http:// nyc.gov/rentfreeze How-to video: https:// youtube.com/watch?v=vwpGGR K4JgA … @HelenRosenthal @NYCCouncil",
+      "mentionedHandles": [
+        "@NYCSeniors",
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SCRIE",
+        "#RentFreeze"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/hbYVTNLDAJ",
+          "destinationUrl": "https://www.nyc.gov/rentfreeze",
+          "observedHttpStatus": 403,
+          "curlExitCode": 0
+        },
+        {
+          "shortUrl": "https://t.co/wjTEKDJRnR",
+          "destinationUrl": "https://www.youtube.com/watch?v=vwpGGRK4JgA",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "733410096915550208",
+      "statusUrl": "https://x.com/RosieMendez/status/733410096915550208",
+      "publishedAt": "2016-05-19T21:32:47.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Thank you #TeamRosie @Fadonna @EvillPunki @shyviviana @CarlinaRivera",
+      "mentionedHandles": [
+        "@Fadonna",
+        "@EvillPunki",
+        "@shyviviana",
+        "@CarlinaRivera"
+      ],
+      "hashtags": [
+        "#TeamRosie"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "733440491673489408",
+      "statusUrl": "https://x.com/CarlinaRivera/status/733440491673489408",
+      "publishedAt": "2016-05-19T23:33:34.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Putting work in for #NYCtenants",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#NYCtenants"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "733649303223336960",
+      "statusUrl": "https://x.com/CallNYCapp/status/733649303223336960",
+      "publishedAt": "2016-05-20T13:23:19.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@NYCGreenfield gives the most #Sidewalks help on @NYCCouncil . Thank you! #ImWalkinHere! http:// callnyc.org/transportation /sidewalks.html …",
+      "mentionedHandles": [
+        "@NYCGreenfield",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Sidewalks",
+        "#ImWalkinHere"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/eaopIEuKTI",
+          "destinationUrl": "https://callnyc.org/transportation/sidewalks.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "734492930262585344",
+      "statusUrl": "https://x.com/CallNYCapp/status/734492930262585344",
+      "publishedAt": "2016-05-22T21:15:35.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RLEspinal gives the most #Housing #LegalServices help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/legal-services /housing.html …",
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#Housing",
+        "#LegalServices",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ZydpCtAgvM",
+          "destinationUrl": "https://callnyc.org/legal-services/housing.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "734897908353470464",
+      "statusUrl": "https://x.com/CallNYCapp/status/734897908353470464",
+      "publishedAt": "2016-05-24T00:04:49.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ChaimDeutsch provides the most #ParkingPermits help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /parking-permits.html …",
+      "mentionedHandles": [
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#ParkingPermits",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/tq0BISDhHW",
+          "destinationUrl": "https://callnyc.org/transportation/parking-permits.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "735214806249144320",
+      "statusUrl": "https://x.com/CallNYCapp/status/735214806249144320",
+      "publishedAt": "2016-05-24T21:04:04.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@JimmyVanBramer gives the most #SpeedBumpRequest help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /speed-bump-request.html …",
+      "mentionedHandles": [
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SpeedBumpRequest",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/EZNfChqkZ9",
+          "destinationUrl": "https://callnyc.org/transportation/speed-bump-request.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "735644754340401152",
+      "statusUrl": "https://x.com/CallNYCapp/status/735644754340401152",
+      "publishedAt": "2016-05-26T01:32:31.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@StevenMatteo provides the most #StreetSigns help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /street-signs.html …",
+      "mentionedHandles": [
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetSigns",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/eZOLTVq7Dd",
+          "destinationUrl": "https://callnyc.org/transportation/street-signs.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "735914869782904832",
+      "statusUrl": "https://x.com/CallNYCapp/status/735914869782904832",
+      "publishedAt": "2016-05-26T19:25:52.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@HelenRosenthal provides the most #SeniorHousing help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/senior-housing.html …",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#SeniorHousing",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/WrNWyaz9jp",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/senior-housing.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "736904163414675456",
+      "statusUrl": "https://x.com/CallNYCapp/status/736904163414675456",
+      "publishedAt": "2016-05-29T12:56:58.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MMViverito provides the most #NYCHAMisc help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/nycha-misc.html …",
+      "mentionedHandles": [
+        "@MMViverito",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHAMisc",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/VVY0b0qR3v",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/nycha-misc.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "738115545002807296",
+      "statusUrl": "https://x.com/CallNYCapp/status/738115545002807296",
+      "publishedAt": "2016-06-01T21:10:34.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@RLEspinal provides the most #GreenCard help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/immigration/gr een-card.html …",
+      "mentionedHandles": [
+        "@RLEspinal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#GreenCard",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/BJ0kKbfsHS",
+          "destinationUrl": "https://callnyc.org/immigration/green-card.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "738140834973900800",
+      "statusUrl": "https://x.com/CallNYCapp/status/738140834973900800",
+      "publishedAt": "2016-06-01T22:51:03.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ChaimDeutsch provides the most #AccessARide help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/transportation /access-a-ride.html …",
+      "mentionedHandles": [
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AccessARide",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/FM6CIEx4Ih",
+          "destinationUrl": "https://callnyc.org/transportation/access-a-ride.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 4
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "738458056716091392",
+      "statusUrl": "https://x.com/CallNYCapp/status/738458056716091392",
+      "publishedAt": "2016-06-02T19:51:35.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@HelenRosenthal gives the most #BuildingMaintenance help on @NYCCouncil . Thank you!#CallNYC http:// callnyc.org/housing-and-bu ildings/building-maintenance.html …",
+      "mentionedHandles": [
+        "@HelenRosenthal",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#BuildingMaintenance",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/MIOl6874Ns",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/building-maintenance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "748532929802997760",
+      "statusUrl": "https://x.com/CallNYCapp/status/748532929802997760",
+      "publishedAt": "2016-06-30T15:05:32.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@StevenMatteo provides the most #StreetFlooding help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/environment/st reet-flooding.html …",
+      "mentionedHandles": [
+        "@StevenMatteo",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#StreetFlooding",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/y8HNgKVmZy",
+          "destinationUrl": "https://callnyc.org/environment/street-flooding.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "753631998221033472",
+      "statusUrl": "https://x.com/CallNYCapp/status/753631998221033472",
+      "publishedAt": "2016-07-14T16:47:24.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CMReynoso34 provides the most #TaxPrep help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/finance/tax-pr eparation-assistance.html …",
+      "mentionedHandles": [
+        "@CMReynoso34",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#TaxPrep",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/7mstGHrKt3",
+          "destinationUrl": "https://callnyc.org/finance/tax-preparation-assistance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "753678962501390336",
+      "statusUrl": "https://x.com/CallNYCapp/status/753678962501390336",
+      "publishedAt": "2016-07-14T19:54:01.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@MMViverito gives the most @NYCHA Bldg Maintenance help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/nycha-building-maintenance.html …",
+      "mentionedHandles": [
+        "@MMViverito",
+        "@NYCHA",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHzN1dC",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "773637656555163648",
+      "statusUrl": "https://x.com/CallNYCapp/status/773637656555163648",
+      "publishedAt": "2016-09-07T21:42:45.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@JulissaFerreras gives the most #AffordableHousing help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/housing-and-bu ildings/affordable-housing-apartment.html …",
+      "mentionedHandles": [
+        "@JulissaFerreras",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#AffordableHousing",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/grEZDUYGgo",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/affordable-housing-apartment.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "775370427644411904",
+      "statusUrl": "https://x.com/CallNYCapp/status/775370427644411904",
+      "publishedAt": "2016-09-12T16:28:10.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@JimmyVanBramer provides the most #NYCHABuildingMaintenance help on @NYCCouncil . Thank you! http:// callnyc.org/housing-and-bu ildings/nycha-building-maintenance.html …",
+      "mentionedHandles": [
+        "@JimmyVanBramer",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#NYCHABuildingMaintenance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "776509377897500672",
+      "statusUrl": "https://x.com/CallNYCapp/status/776509377897500672",
+      "publishedAt": "2016-09-15T19:53:57.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@JulissaFerreras provides the most #FoodStamps help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/general-welfar e/food-stamps.html …",
+      "mentionedHandles": [
+        "@JulissaFerreras",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#FoodStamps",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/R9Bx3XvJ6X",
+          "destinationUrl": "https://callnyc.org/general-welfare/food-stamps.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "780797474277511170",
+      "statusUrl": "https://x.com/HelenRosenthal/status/780797474277511170",
+      "publishedAt": "2016-09-27T15:53:19.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@NYCCouncil offices are here to help you! Find your Council Member & http:// callnyc.org @MFYLegal @GoddardRiv @HousingConCoord",
+      "mentionedHandles": [
+        "@NYCCouncil",
+        "@MFYLegal",
+        "@GoddardRiv",
+        "@HousingConCoord"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/2uxB0ADLpY",
+          "destinationUrl": "https://callnyc.org/",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "783022174890229760",
+      "statusUrl": "https://x.com/CallNYCapp/status/783022174890229760",
+      "publishedAt": "2016-10-03T19:13:28.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@CMMathieuEugene provides the most #HPDHousingLottery help on @NYCCouncil . Thank you! #CallNYC @NYCHousing http:// callnyc.org/housing-and-bu ildings/hpd-housing-lottery.html …",
+      "mentionedHandles": [
+        "@CMMathieuEugene",
+        "@NYCCouncil",
+        "@NYCHousing"
+      ],
+      "hashtags": [
+        "#HPDHousingLottery",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/4dT9nvJtsb",
+          "destinationUrl": "https://callnyc.org/housing-and-buildings/hpd-housing-lottery.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "783305320508514304",
+      "statusUrl": "https://x.com/CMMathieuEugene/status/783305320508514304",
+      "publishedAt": "2016-10-04T13:58:36.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Equal opportunities are essential to the growth of the community. I'm honored to help my constituents improve their #housing options.",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#housing"
+      ],
+      "outboundLinks": [],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "783410245632655364",
+      "statusUrl": "https://x.com/CallNYCapp/status/783410245632655364",
+      "publishedAt": "2016-10-04T20:55:32.000Z",
+      "relationship": "account-post",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "@ChaimDeutsch provides the most #WaterQuality help on @NYCCouncil . Thank you! #CallNYC http:// callnyc.org/environment/wa ter-quality.html …",
+      "mentionedHandles": [
+        "@ChaimDeutsch",
+        "@NYCCouncil"
+      ],
+      "hashtags": [
+        "#WaterQuality",
+        "#CallNYC"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/xRaVn9NchH",
+          "destinationUrl": "https://callnyc.org/environment/water-quality.html",
+          "observedHttpStatus": 200,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "mediaUrls": [
+        "🏆",
+        "Image"
+      ]
+    },
+    {
+      "statusId": "796473557387575297",
+      "statusUrl": "https://x.com/wowlist/status/796473557387575297",
+      "publishedAt": "2016-11-09T22:04:28.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "Marches across the US tonight on the #DownWithTrump WOW List. Build a movement to fight sexism, racism, Islamophobia https:// wowlist.org/DownWithTrump",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#DownWithTrump"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/D6udDGJ7Um",
+          "destinationUrl": "https://wowlist.org/DownWithTrump",
+          "observedHttpStatus": 301,
+          "curlExitCode": 28
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 6
+      },
+      "mediaUrls": []
+    },
+    {
+      "statusId": "798274424763981824",
+      "statusUrl": "https://x.com/wowlist/status/798274424763981824",
+      "publishedAt": "2016-11-14T21:20:28.000Z",
+      "relationship": "repost",
+      "recoveredFrom": [
+        "posts-tab"
+      ],
+      "text": "http:// popular.vote add events, get updates on marches, meetings, friendship near you across the us #NotMyPresident #WeAreThePopularVote",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#NotMyPresident",
+        "#WeAreThePopularVote"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/O1euiAdPmX",
+          "destinationUrl": "https://popular.vote/",
+          "observedHttpStatus": 522,
+          "curlExitCode": 0
+        }
+      ],
+      "visibleMetricsObserved2026": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "mediaUrls": []
+    }
+  ]
+}

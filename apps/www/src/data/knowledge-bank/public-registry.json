@@ -100,6 +100,772 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+      "title": "New York City Council stated-meeting minutes",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-28",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, minutes of the stated meeting, September 28, 2016.",
+      "publicNote": "The minutes list Helen Rosenthal, Ydanis Rodriguez, Rosie Mendez, Mathieu Eugene, and Peter Koo as serving Council members in 2016.",
+      "doesNotEstablish": [
+        "an institutional Council endorsement of CallNYC",
+        "the social-media actions themselves"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170",
+      "title": "Helen Rosenthal constituent-facing CallNYC recommendation",
+      "organization": "Office of Council Member Helen Rosenthal",
+      "author": "Helen Rosenthal",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-27",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/HelenRosenthal/status/780797474277511170",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Helen Rosenthal, public post directing constituents to find their Council member through CallNYC.org, September 27, 2016.",
+      "publicNote": "This is a direct member-authored recommendation of CallNYC to constituents.",
+      "doesNotEstablish": [
+        "an institutional NYC Council endorsement",
+        "current constituent guidance"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648",
+      "title": "Ydanis Rodriguez quote post responding to CallNYC",
+      "organization": "Office of Council Member Ydanis Rodriguez",
+      "author": "Ydanis Rodriguez",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/ydanis/status/733089563334299648",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Ydanis Rodriguez, public quote post responding to CallNYC's recognition of his office's tenant-rights work, May 2016.",
+      "publicNote": "Rodriguez described protecting tenants' rights as a privilege while quote-amplifying the CallNYC recognition.",
+      "doesNotEstablish": [
+        "an institutional NYC Council endorsement",
+        "exclusive credit for tenant-rights work"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208",
+      "title": "Rosie Mendez quote post responding to CallNYC",
+      "organization": "Office of Council Member Rosie Mendez",
+      "author": "Rosie Mendez",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/RosieMendez/status/733410096915550208",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Rosie Mendez, public quote post thanking her team in response to CallNYC's recognition of emergency-repair constituent work, May 19, 2016.",
+      "publicNote": "Mendez quote-amplified the CallNYC recognition and credited her staff.",
+      "doesNotEstablish": [
+        "an institutional NYC Council endorsement",
+        "Jamie as the source of the office's constituent-service work"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
+      "title": "Mathieu Eugene quote post responding to CallNYC",
+      "organization": "Office of Council Member Mathieu Eugene",
+      "author": "Mathieu Eugene",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-10-04",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/CMMathieuEugene/status/783305320508514304",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Mathieu Eugene, public quote post responding to CallNYC's recognition of his office's housing work, October 4, 2016.",
+      "publicNote": "Eugene described himself as honored to help constituents while quote-amplifying the CallNYC recognition.",
+      "doesNotEstablish": [
+        "an institutional NYC Council endorsement",
+        "exclusive credit for housing assistance"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328",
+      "title": "Peter Koo retweet of CallNYC Lifeline recognition",
+      "organization": "Office of Council Member Peter Koo",
+      "author": "Peter Koo",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live-and-archived",
+      "publishedAt": "2016-04-27",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/CMPeterKoo/status/725422714807267328",
+      "archiveUrl": "https://web.archive.org/web/20200625082202/https://twitter.com/CallNYCapp/status/725403215282487296/photo/1?utm_source=fb&utm_medium=fb&utm_campaign=CMPeterKoo&utm_content=725422714807267328",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archived CallNYC post and still-resolvable Peter Koo retweet-object URL documenting Koo's retweet of the project's Lifeline recognition, April 27, 2016.",
+      "publicNote": "The retweet is directly supported. A like is strongly indicated by the archived combined engagement row but is not separately attributed in public wording.",
+      "doesNotEstablish": [
+        "a separately attributable like",
+        "an institutional NYC Council endorsement"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "The article identifies Jamie with NYC Artist Coalition, reports that he organized fire-code study groups for DIY venues, and documents his City Hall advocacy for full repeal.",
+      "doesNotEstablish": [
+        "Jamie solely caused repeal",
+        "Jamie alone led the coalition",
+        "Jamie authored the repeal legislation",
+        "the full history of the collective campaign"
+      ]
+    },
+    {
+      "id": "SRC-GHFC-JAMIE-JULIA-QA-2017",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "author": "Outreach Committee",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op Outreach Committee, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "The member interview describes Jamie and a co-host holding weekly Sunday dinners open to the community, publishing community events through WOW List, working with NYC Artist Coalition, and inviting readers to an Office of Nightlife town hall.",
+      "doesNotEstablish": [
+        "300 or more total gatherings",
+        "20 or more resident artists",
+        "NYC Artist Coalition co-founder status",
+        "Jamie as sole organizer of the town hall",
+        "the town hall's attendance or policy effect"
+      ]
+    },
+    {
+      "id": "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+      "title": "6 Things to Know About Making DIY Spaces Work",
+      "organization": "Bedford + Bowery",
+      "author": "Cassidy Dawn Graves",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-02-07",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cassidy Dawn Graves, '6 Things to Know About Making DIY Spaces Work,' Bedford + Bowery, February 7, 2017.",
+      "publicNote": "The contemporaneous report identifies Jamie as an NYC Artist Coalition organizer and documents a coalition meeting focused on fire safety, mutual aid, and policy proposals for cultural spaces.",
+      "doesNotEstablish": [
+        "Jamie as sole founder or leader",
+        "independent verification of the reported signup count",
+        "adoption of every proposal",
+        "complete coalition membership"
+      ]
+    },
+    {
+      "id": "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+      "title": "What Can the Night Mayor Do? The DIY Scene Discusses",
+      "organization": "Bedford + Bowery",
+      "author": "Cassidy Dawn Graves",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-12",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
+      "publicNote": "The report says NYC Artist Coalition spearheaded the town hall, identifies Jamie and Olympia Kazi as speakers, and records participation by cultural organizations and three Council members.",
+      "doesNotEstablish": [
+        "Jamie as sole producer",
+        "an exact attendance count",
+        "sole coalition causality for creating the Office of Nightlife",
+        "implementation of every request made at the event"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+      "title": "Committee on Consumer Affairs Cabaret Law hearing transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-14",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=E8FF9F52-F802-49FB-92A8-0AF58EE0F37A&ID=5444681&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council Committee on Consumer Affairs, Cabaret Law hearing transcript, September 14, 2017.",
+      "publicNote": "The official transcript records Jamie's testimony as an NYC Artist Coalition member calling for repeal and describing community-space safety workshops and fire-guard study groups.",
+      "doesNotEstablish": [
+        "independent verification of the self-reported pass rate",
+        "Jamie as sole organizer",
+        "Jamie as author of legislation",
+        "sole causality for repeal"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+      "title": "Council report and vote on Intro 1156-A MARCH reporting",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-11-14",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=0C3B9F69-B958-48E9-9DCD-FB00125A173F&ID=8200738&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, report and stated-meeting vote on Intro 1156-A, November 14, 2019.",
+      "publicNote": "The Council report credits NYC Artist Coalition with obtaining MARCH data through a records request, incorporates its district-level graph, and records a 43-4 vote adopting reporting and advance-notice requirements.",
+      "doesNotEstablish": [
+        "Jamie's individual role obtaining or analyzing the data",
+        "sole coalition causality for passage",
+        "disbandment of MARCH",
+        "full implementation or agency compliance"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+      "title": "Central City Economic Development Sales Tax Board Round 2 minutes and recommendations",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-29",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Central City Economic Development Sales Tax Board, Round 2 meeting minutes and funding recommendations, June-July 2019.",
+      "publicNote": "The official minutes identify Jamie as KC Town Hall's presenter and record the board's unanimous recommendation of the $490,539 adaptive-reuse proposal to City Council.",
+      "doesNotEstablish": [
+        "Council action without the later ordinance and resolution",
+        "contract execution",
+        "receipt or disbursement of funds",
+        "current property status"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-ORDINANCE-190642-2019",
+      "title": "Committee Substitute for Ordinance No. 190642",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?FullText=1&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Kansas City Council, Committee Substitute for Ordinance No. 190642, passed September 26, 2019.",
+      "publicNote": "The Council passed the ordinance as substituted, appropriating Round Two Central City Economic Development Sales Tax funds and listing $490,539 for KC Town Hall's adaptive-reuse project.",
+      "doesNotEstablish": [
+        "executed funding agreement",
+        "receipt or disbursement of funds",
+        "project completion",
+        "Jamie's sole causality for the Council vote",
+        "current property status"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-RESOLUTION-190649-2019",
+      "title": "Second Committee Substitute for Resolution No. 190649",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?FullText=1&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Kansas City Council, Second Committee Substitute for Resolution No. 190649, adopted September 26, 2019.",
+      "publicNote": "The Council adopted the resolution as substituted, accepting the CCED Board recommendation for up to $490,539 in KC Town Hall project costs and authorizing the City Manager to negotiate a funding agreement.",
+      "doesNotEstablish": [
+        "executed funding agreement",
+        "receipt or disbursement of funds",
+        "project completion",
+        "Jamie's sole causality for the Council vote",
+        "current property status"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+      "title": "WOW List public Sunday Dinner origin post",
+      "organization": "X (formerly Twitter)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public post naming Richard and Jamie and describing the project as based on calendars made at Sunday Dinner, February 12, 2014.",
+      "publicNote": "The account's own contemporaneous description publicly connects Jamie, a collaborator named Richard, WOW List, and Sunday Dinner.",
+      "doesNotEstablish": [
+        "complete product authorship",
+        "the collaborator's full identity",
+        "later adoption scale"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+      "title": "WOW List community-created tutorial post",
+      "organization": "X (formerly Twitter)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-08-14",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://x.com/wowlist/status/632168285291835392",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public post thanking a community member for creating a tutorial about using the platform, August 14, 2015.",
+      "publicNote": "This is direct public evidence that someone outside the account team created an instructional artifact for other users.",
+      "doesNotEstablish": [
+        "broad adoption",
+        "the tutorial's current availability",
+        "the creator's motivation or representative status"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+      "title": "Authenticated @NYCArtC public inbound-engagement recovery",
+      "organization": "X (formerly Twitter)",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/search?q=%40NYCArtC%20-from%3ANYCArtC&src=typed_query&f=live",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only recovery of 501 public inbound-search records from 178 accounts around @NYCArtC, July 14, 2026.",
+      "publicNote": "The recoverable Latest-search floor spans February 2017 through March 2025. Of 501 rendered records, 347 explicitly name @NYCArtC and 154 are marked as search or thread context. The set includes 24 reviewable Council-member-account posts across at least seven accounts, 16 city-agency-account posts across two accounts, and 235 coalition, civic, or cultural partner posts across 15 identified accounts.",
+      "doesNotEstablish": [
+        "an absolute historical engagement census or platform export",
+        "likes, impressions, unique people, private analytics, or audience reach",
+        "official Council or agency endorsement",
+        "policy causality or Jamie's authorship of the shared-account posts"
+      ]
+    },
+    {
+      "id": "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+      "title": "Awaiting the Night Mayor",
+      "organization": "The Village Voice",
+      "author": "Roshan Abraham",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-11-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.villagevoice.com/awaiting-the-night-mayor/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Roshan Abraham, 'Awaiting the Night Mayor,' The Village Voice, November 17, 2017.",
+      "publicNote": "Independent reporting describes about one hundred people gathering at Market Hotel for the NYC Artist Coalition's Save NYC Spaces town hall with Council members and city-agency representatives.",
+      "doesNotEstablish": [
+        "Jamie's individual production tasks for the event",
+        "that the Facebook response count measured attendance",
+        "sole coalition credit or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+      "title": "NYC Artist Coalition - March General Meeting",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-03-06",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/1833265643557435/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'NYC Artist Coalition - March General Meeting,' Facebook event, March 6, 2017.",
+      "doesNotEstablish": [
+        "individual authorship of the event page",
+        "physical attendance from Facebook response totals",
+        "unique responders across events",
+        "sole organization or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+      "title": "Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-04-25",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/212427345900529/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting,' Facebook event, April 25, 2017.",
+      "doesNotEstablish": [
+        "individual authorship of the event page",
+        "physical attendance from Facebook response totals",
+        "unique responders across events",
+        "sole organization or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+      "title": "Tell NYC's Night Mayor: Save NYC Spaces",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/120802405289008/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition and campaign partners, 'Tell NYC's Night Mayor: Save NYC Spaces,' Facebook event, October 11, 2017.",
+      "doesNotEstablish": [
+        "individual authorship of the event page",
+        "physical attendance from Facebook response totals",
+        "unique responders across events",
+        "sole organization or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+      "title": "Cabaret Law repeal event route",
+      "organization": "NYC Artist Coalition and campaign partners",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-30",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/133554860735306/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, Cabaret Law repeal event route, Facebook, October 30, 2017.",
+      "doesNotEstablish": [
+        "unique people reached or historical peak engagement",
+        "physical attendance, endorsement, or policy causality",
+        "individual publisher or drafter identity",
+        "sole coalition ownership of partner work or quoted source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+      "title": "MARCH transparency report route",
+      "organization": "NYC Artist Coalition and campaign partners",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-07-23",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/photo/?fbid=2686676394920065&set=a.544849644343446",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, MARCH transparency report route, Facebook, July 2020.",
+      "doesNotEstablish": [
+        "Jamie's individual role in obtaining or analyzing the records",
+        "that MARCH was disbanded",
+        "sole coalition causality for legislation or agency change",
+        "sole coalition ownership of partner work or quoted source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021",
+      "title": "FairRentNYC virtual-house action route",
+      "organization": "NYC Artist Coalition and campaign partners",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-09-15",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/photo/?fbid=2960969320824103&set=a.544849644343446",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, FairRentNYC virtual-house action route, Facebook, September 15, 2021.",
+      "doesNotEstablish": [
+        "individual publisher or drafter identity",
+        "bill passage, attendance, reach, endorsement, or policy causality",
+        "sole coalition ownership of partner work or quoted source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+      "title": "WOW List members introduce calendars in nine cities",
+      "organization": "WOW List",
+      "author": "WOW List account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-10-05",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/watch/?v=439926419547504",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List Facebook video announcing member-introduced community calendars in nine cities, October 5, 2015.",
+      "doesNotEstablish": [
+        "official chapters in nine cities",
+        "the full set of city ecosystems that used WOW List",
+        "unique people reached, historical impressions, or causal impact",
+        "sole project ownership or authorship of quoted and reshared source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+      "title": "WOW List credits a contributor with adding 41 Los Angeles events",
+      "organization": "WOW List",
+      "author": "WOW List account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-11-16",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/450622238477922",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List Facebook post crediting Joe Gutierrez with adding 41 upcoming DIY events to the LADIY calendar, November 16, 2015.",
+      "doesNotEstablish": [
+        "independent verification of every event record",
+        "that Jamie personally entered the 41 events",
+        "the full volume of Los Angeles activity",
+        "sole project ownership or authorship of quoted and reshared source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018",
+      "title": "Phoenix organizer describes continued WOW List use",
+      "organization": "WOW List",
+      "author": "WOW List account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-03-23",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/pfbid02Ao38e5ECy89isroMuqjhh62gBdutGNTkgmfYJAzPErEZi3SQ5uD2tRtv2GG8wRZWl",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List Facebook share of Aaron Ponzo's public post describing WOW List use while updating PHXDIY.com, March 23, 2018.",
+      "doesNotEstablish": [
+        "the complete Phoenix organizer population",
+        "current platform activity",
+        "platform-wide adoption or impact",
+        "sole project ownership or authorship of quoted and reshared source material"
+      ]
+    },
+    {
+      "id": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+      "title": "Authenticated @CallNYCApp full-population recovery and public-post ledger",
+      "organization": "X (formerly Twitter)",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-13",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://x.com/CallNYCapp",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only review of the public @CallNYCApp Posts and Replies surfaces, with a 107-record public ledger and three explicit unresolved count slots, July 13, 2026.",
+      "publicNote": "The profile displayed 110 posts. Cross-tab reconciliation recovered 107 unique public items: 86 original account posts, 6 account replies, and 15 reposts. Three profile-count slots remain unresolved. The recovered corpus contains 71 issue-recognition posts naming 26 Council-member handles and linking to 61 issue pages across 16 categories.",
+      "doesNotEstablish": [
+        "a complete platform export",
+        "that no deleted, withheld, or inaccessible status exists",
+        "Jamie's authorship of every account post",
+        "that every tagged office saw or responded to a post",
+        "official NYC Council endorsement",
+        "service quality, case resolution, unique residents helped, or policy causality",
+        "contemporaneous or project-owned engagement analytics"
+      ]
+    },
+    {
+      "id": "SRC-NYC-SCHOOL-OF-DATA-CALLNYC-2016",
+      "title": "A brief recap of NYC School of Data 2016",
+      "organization": "NYC School of Data / BetaNYC",
+      "author": "Noel Hidalgo",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-03-08",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://schoolofdata.nyc/a-brief-recap-of-nyc-school-of-data-2016/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Noel Hidalgo, 'A brief recap of NYC School of Data 2016,' NYC School of Data, March 8, 2016.",
+      "publicNote": "The event recap featured CallNYC among the civic hacks and described it as profiling the City Council's constituent-service data.",
+      "doesNotEstablish": [
+        "an award",
+        "an official NYC School of Data endorsement",
+        "Jamie's presentation or attendance",
+        "CallNYC as an official Council product"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATASET-2026",
+      "title": "City Council Constituent Services (2015 to 2025)",
+      "organization": "City of New York",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-01-09",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://catalog.data.gov/dataset/nyc-council-constituent-services",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of New York, 'City Council Constituent Services (2015 to 2025),' public dataset metadata, updated January 20, 2026.",
+      "publicNote": "The current public metadata states that each row represents an issue, while a single constituent interaction or case can contain multiple issues.",
+      "doesNotEstablish": [
+        "the exact 2016 dataset schema or row count",
+        "unique people helped",
+        "case resolution or service quality",
+        "comparability across offices or reporting practices"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+      "title": "WOWList reply explaining followed-calendar feed scope",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining followed-calendar feed scope and a planned local/everywhere control, April 24, 2015.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+      "title": "WOWList reply explaining profile navigation",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591666366215811073",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining where a person could find their WOW Lists on their profile, April 24, 2015.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+      "title": "WOWList reply explaining multi-list event submission",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591668857670148096",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining how to add an event and place it on multiple WOW Lists, April 24, 2015.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+      "title": "WOWList reply identifying NYCDIY",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771412862191407104",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply identifying NYCDIY.org as a local calendar identity, September 1, 2016.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+      "title": "WOWList reply explaining how to join NYCDIY",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771455571501416448",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining how people could join NYCDIY, add shows, and receive a weekly email, September 1, 2016.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016",
+      "title": "WOWList reply connecting NYCDIY, WOWList, and Sunday Dinner",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining that NYCDIY ran on WOWList and connecting the project to the Sunday Dinner potluck, September 1, 2016.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
+      "title": "Authenticated @KCTownHall full-population recovery and public-post ledger",
+      "organization": "X (formerly Twitter)",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only review of the public @KCTownHall Posts and Replies surfaces, with a 181-record public ledger and two explicit unresolved profile-count slots, July 14, 2026.",
+      "publicNote": "The profile displayed 183 posts. Fine-grained cross-tab reconciliation recovered 181 surviving public timeline items: 155 account-authored statuses and 26 reposts from 16 public accounts. Seven contextual conversation statuses were excluded from the population, and two profile-count slots remain unresolved.",
+      "doesNotEstablish": [
+        "a complete platform export or deletion history",
+        "the identity of two unresolved profile-count slots",
+        "Jamie's authorship of every shared-account status",
+        "Jamie's operation of later programs after stewardship transitioned",
+        "historical impressions, unique people, endorsement, funding support, or independently audited impact"
+      ]
+    },
+    {
+      "id": "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+      "title": "KC Town Hall public identity launch post",
+      "organization": "X (formerly Twitter)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-07-02",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013893135695601665",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall public post inviting participation in building a neighborhood resource and cultural center, July 2, 2018.",
+      "publicNote": "The pinned launch record frames the account as a participation surface around a permanent neighborhood resource and cultural center on Indiana Avenue.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "official endorsement, funding support, causality, or independently audited impact"
+      ]
     }
   ],
   "claims": [
@@ -299,6 +1065,915 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "At least five sitting NYC Council members publicly amplified CallNYC in 2016 through a constituent-facing recommendation, affirmative quote posts, and a verified retweet.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "At least five sitting NYC Council members publicly amplified CallNYC in 2016.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Earned public amplification from at least five sitting NYC Council members.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+          "relationship": "context",
+          "supports": [
+            "the five named people were serving Council members in 2016"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170",
+          "relationship": "direct-support",
+          "supports": [
+            "direct constituent-facing recommendation of CallNYC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648",
+          "relationship": "direct-support",
+          "supports": [
+            "affirmative quote-amplification by Ydanis Rodriguez"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208",
+          "relationship": "direct-support",
+          "supports": [
+            "quote-amplification and staff credit by Rosie Mendez"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
+          "relationship": "direct-support",
+          "supports": [
+            "affirmative quote-amplification by Mathieu Eugene"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328",
+          "relationship": "direct-support",
+          "supports": [
+            "verified retweet by Peter Koo"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is public amplification by individual member accounts, not an official NYC Council endorsement.",
+        "At least five is a verified minimum, not a complete historical census."
+      ]
+    },
+    {
+      "id": "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie prepared a public-data brief proposing privacy-preserving, geography-aggregated commercial vacancy, occupancy, and lease-cost indicators alongside New York City's existing storefront data.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Jamie translated administrative-data constraints into a practical proposal for privacy-preserving commercial vacancy and lease-cost indicators, including coverage, suppression, and methods requirements.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The artifact establishes a proposal, not City adoption, implementation, endorsement, or access to confidential filings.",
+        "Do not expose raw filings, tenant identities, parcel-level rent rows, lease records, or unverified map outputs.",
+        "The current Shared Drive file's public access status was not verified, so the underlying URL remains protected."
+      ]
+    },
+    {
+      "id": "CLM-196-RESIDENCY-ONBOARDING-2023",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For 196 Artists Residency, Jamie supported the path from proposal review and acceptance through pre-arrival coordination, space configuration, and access handoff.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "One record demonstrates the workflow but does not independently verify the 20-plus resident aggregate or establish that every residency followed an identical process.",
+        "Resident identity, dates, proposal details, contact information, access instructions, and private messages remain protected.",
+        "The work supported an artist's process; it does not establish institutional ownership of that work."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-CABARET-ORGANIZING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2017, Jamie organized fire-code study groups for DIY venues and publicly advocated at City Hall for full repeal of the Cabaret Law as part of NYC Artist Coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Organized fire-code study groups for DIY venues and supported public advocacy for Cabaret Law repeal.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "fire-code study groups",
+            "City Hall advocacy for full repeal",
+            "NYC Artist Coalition affiliation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's Council testimony",
+            "public request for full repeal",
+            "Jamie's description of safety workshops and study groups"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This establishes Jamie's documented organizing contribution, not sole causality for the collective repeal outcome."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In early 2017, Jamie was publicly identified as an NYC Artist Coalition organizer while the coalition convened fire-safety, mutual-aid, and policy meetings for informal cultural spaces.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie publicly identified as a coalition organizer",
+            "coalition-organized fire-safety and policy meeting",
+            "mutual-aid network activity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This supports an early organizer role, not sole founder or sole leader status.",
+        "The reported mutual-aid signup count remains attributed to Jamie rather than independently audited."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Later in 2017, NYC Artist Coalition spearheaded a public town hall about what the new Office of Nightlife should do; Jamie participated as a coalition speaker alongside cultural organizations and city officials.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "coalition spearheaded the Office of Nightlife town hall",
+            "Jamie participated as a speaker",
+            "diverse cultural-organization participation",
+            "three Council members spoke"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Spearheaded is attributed to the coalition; Jamie's independently documented role is speaker and public advocate.",
+        "Do not convert coalition advocacy into sole causality for establishing the Office of Nightlife."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-MARCH-TRANSPARENCY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition's records-request data on MARCH raids entered the Council's legislative record; in 2019 the Council adopted a law requiring recurring MARCH reporting and advance notice subject to law-enforcement exceptions.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "NYC Artist Coalition obtained MARCH data",
+            "coalition data entered the Council record",
+            "Intro 1156-A reporting and notice requirements",
+            "43-4 Council adoption"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The record establishes collective data work, public campaigning, and legislative sequence, not sole causality.",
+        "The reviewed sources do not establish Jamie's individual role in the records request or that MARCH was disbanded."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "By 2017, Sunday Dinner was publicly documented as a weekly gathering Jamie and a co-host opened to the community.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-GHFC-JAMIE-JULIA-QA-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "weekly Sunday dinners open to the community"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This source confirms the weekly open practice at that time, not the 300-plus gathering or 20-plus residency totals.",
+        "Do not publish the home address, guest identities, attendance records, or unapproved photographs."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process. After the CCED Board unanimously recommended it, the Council allocated $490,539 on September 26, 2019, and authorized funding-agreement negotiations.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie as KC Town Hall presenter",
+            "$490,539 request",
+            "unanimous board recommendation to City Council"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-ORDINANCE-190642-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Council passage on September 26, 2019",
+            "$490,539 KC Town Hall appropriation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-RESOLUTION-190649-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Council acceptance of the board recommendation",
+            "authorization to negotiate a funding agreement not to exceed $490,539"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Council allocation and authorization do not establish an executed funding agreement, receipt or disbursement of funds, later implementation, project completion, or current property or operating status.",
+        "The public sequence does not establish that Jamie solely caused the board recommendation or Council vote.",
+        "Do not infer current property, financial, legal, or occupancy status."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Authenticated archival review recovered 24 direct public interactions from at least seven contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "The shared coalition identity earned 24 recovered public interactions from at least seven contemporaneous NYC Council-member accounts across multiple campaigns.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "authenticated full inbound-search method",
+            "24-interaction and seven-account recovery floor",
+            "501 rendered records from 178 accounts with explicit-mention and context distinctions"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "At least seven is a recovered minimum, not a complete historical census.",
+        "The 24-post count includes direct mentions, replies, or quote interactions; it does not treat one-way tags by @NYCArtC as reciprocal engagement.",
+        "Mark Levine's reply supports account interaction only, not mission-specific endorsement.",
+        "This is individual-account activity, not an official NYC Council endorsement, policy outcome, or proof that Jamie authored the underlying posts."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The project's public timeline named Richard and Jamie and described WOW List as growing from calendars made at Sunday Dinner; a later post thanked a community member for creating a public tutorial showing others how to use the platform.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "publicly named project participants",
+            "Sunday Dinner origin context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "community-created instructional artifact",
+            "public evidence of use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The origin post names the collaborator only as Richard; do not infer a surname from this source.",
+        "One community-created tutorial is evidence of use, not proof of broad adoption or satisfaction."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie helped establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Twelve recovered recurring-meeting records span ten distinct named physical venues and two virtual meetings; the wider event population also includes public hearings, rallies, training and Q&A sessions, venue-support actions, and relief coordination.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/nycartc-facebook-events-2026-07-13"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "the recurring meeting format and its mix of safety, listening, survey, and town-hall work"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "the rotating cultural-space practice and policy-to-action format"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "a cultural-space town hall connecting lived concerns with public officials"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "independent reporting on the town hall, its approximate attendance, and city-participant context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's named coalition advocacy and the coalition's practical fire-safety study groups"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit the event practice and outcomes collectively; Jamie's first-person account supports his contribution, not sole organization or authorship.",
+        "Do not attribute every event page, invitation, or facilitation decision to Jamie without event-level production evidence or collaborator confirmation.",
+        "The event record supports a recurring rotating-venue practice, not an uninterrupted monthly schedule in every year.",
+        "Policy outcomes require independent official evidence and collective-work language."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Across 441 surviving Facebook timeline records from 2017 through 2021, the coalition's shared identity connected events, public meetings, campaign calls, source routes, and partner voices across Cabaret Law repeal, nightlife governance, cultural-space care, MARCH transparency, and Commercial Rent Stabilization.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The public timeline contains 148 event routes and 26 source-or-resource routes inside a broader 441-record civic publication system.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Cabaret Law event and press routing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "MARCH public-information routing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021",
+          "relationship": "direct-support",
+          "supports": [
+            "FairRentNYC campaign continuity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The account is a shared coalition surface; the review does not assign individual authorship or publisher identity record by record.",
+        "Campaign and partner work remains collective even when the coalition account routed or amplified it.",
+        "The 441-record count describes surviving public timeline records, not impact."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The operating model traveled: members introduced calendars in nine cities, a contributor loaded 41 Los Angeles events, and a Phoenix organizer later described continued use of WOWList.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Selected Facebook records preserve member-led city calendars, community event contribution, and later external-organizer continuity.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/intake/2026-07-14-wowlist-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "member-introduced calendars in nine cities"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public credit for a 41-event Los Angeles contribution"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018",
+          "relationship": "corroborating",
+          "supports": [
+            "external Phoenix organizer use and continuity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The nine-city and 41-event statements are contemporaneous project-account records, not an independent audit of platform-wide adoption.",
+        "Use city calendars or city ecosystems, not official chapters."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Authenticated Page records identify Jamie as publisher on at least 51 of the 57 surviving posts, substantiating his Facebook publishing role while preserving WOW List as a shared project.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The protected publisher audit attributes 51 matching post identities to Jamie, leaves six records unresolved, and finds no record attributed to another publisher.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/intake/2026-07-14-wowlist-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Published by identifies the Page publisher, not necessarily the drafter of every word or originator of reshared material.",
+        "The six unresolved records cannot be assigned to Jamie or anyone else.",
+        "WOW List was Jamie and Richard's shared project; Facebook publishing responsibility does not become sole product ownership.",
+        "This audit covers Facebook posts, not every WOW List social channel."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The recoverable 2016 public-account corpus includes 71 data-derived recognition posts naming 26 sitting Council-member accounts and linking to 61 issue pages across 16 constituent-service categories.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Built a public-engagement layer spanning 61 issue pathways and 26 Council-member accounts, with source and outcome boundaries kept explicit.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "item-level corpus and population reconciliation",
+            "71 recognition posts",
+            "26 named Council-member handles",
+            "61 issue pages across 16 categories"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+          "relationship": "corroborating",
+          "supports": [
+            "2016 Council officeholding for the people represented by the 26 handles"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATASET-2026",
+          "relationship": "supports-boundary",
+          "supports": [
+            "rows and issues must not be equated with cases or unique people"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Named or tagged accounts are the intended institutional audience; this count does not mean all 26 offices saw, replied to, reposted, or endorsed CallNYC.",
+        "The 71 posts and 61 linked issue pages document an engagement architecture, not 71 service outcomes or 61 independently validated guidance products.",
+        "CouncilStat rows represent issues rather than unique cases or people, and office comparisons reflect participation and reporting practices.",
+        "The corpus has 107 recovered items plus three unresolved profile-count slots; it is not a complete platform export.",
+        "The project account does not establish Jamie's authorship of every post."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-SCHOOL-OF-DATA-RECOGNITION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC School of Data's March 2016 recap featured CallNYC among civic hacks using New York City open data.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-SCHOOL-OF-DATA-CALLNYC-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "contemporaneous independent recognition",
+            "civic-hack placement",
+            "constituent-service data description"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The recap featured CallNYC; it does not document an award, official endorsement, presentation, or Jamie's attendance."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public account Jamie established became a direct support surface: its six surviving replies explained feed scope, profile navigation, multi-list event submission, joining local calendars, and how NYCDIY ran on WOWList from the Sunday Dinner potluck.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Established a shared public identity that supported people through product navigation, event submission, local-calendar onboarding, and community lineage.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit Jamie with establishing the account and co-building the product; do not assign individual post authorship without direct evidence.",
+        "The account record demonstrates public support behavior, not the full support workload, adoption, satisfaction, audience, or impact."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie established a public project identity and participation surface that collaborators could carry forward across resident input, neighborhood operations, civic information, and public exchange.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Established a durable public identity and participation system that remained useful across changing programs and stewardship.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "public launch framing and participation invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "public continuity across resident input, neighborhood operations, civic routing, and exchange"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public record corroborates the identity's use and continuity, while Jamie's setup action is a firsthand source.",
+        "The account was shared and later stewardship continued after Jamie's involvement ended; individual posts and later program operations are not assigned to him without direct evidence."
+      ]
     }
   ],
   "pages": [
@@ -310,7 +1985,16 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+        "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+        "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATASET-2026",
+        "SRC-NYC-SCHOOL-OF-DATA-CALLNYC-2016",
+        "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170",
+        "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648",
+        "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208",
+        "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
+        "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328"
       ],
       "occurrences": [
         {
@@ -356,12 +2040,242 @@
           ]
         },
         {
+          "id": "social-engagement-architecture",
+          "claimId": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+            "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+            "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATASET-2026"
+          ]
+        },
+        {
+          "id": "school-of-data-recognition",
+          "claimId": "CLM-CALLNYC-SCHOOL-OF-DATA-RECOGNITION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-SCHOOL-OF-DATA-CALLNYC-2016"
+          ]
+        },
+        {
+          "id": "council-member-amplification",
+          "claimId": "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+            "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170",
+            "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648",
+            "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208",
+            "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
+            "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328"
+          ]
+        },
+        {
           "id": "archived-status",
           "claimId": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+        "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+        "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+        "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+        "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+        "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+        "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+        "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+        "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+        "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021"
+      ],
+      "occurrences": [
+        {
+          "id": "cabaret-organizing",
+          "claimId": "CLM-NYCARTC-CABARET-ORGANIZING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+            "SRC-NYC-COUNCIL-CABARET-HEARING-2017"
+          ]
+        },
+        {
+          "id": "early-mutual-aid-organizing",
+          "claimId": "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-BEDFORD-BOWERY-DIY-SPACES-2017"
+          ]
+        },
+        {
+          "id": "nightlife-town-hall",
+          "claimId": "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017"
+          ]
+        },
+        {
+          "id": "march-transparency",
+          "claimId": "CLM-NYCARTC-MARCH-TRANSPARENCY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"
+          ]
+        },
+        {
+          "id": "council-social-engagement",
+          "claimId": "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"
+          ]
+        },
+        {
+          "id": "participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+            "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+            "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+            "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+            "SRC-NYCARTC-CABARET-GOTHAMIST-2017"
+          ]
+        },
+        {
+          "id": "facebook-publication-system",
+          "claimId": "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+            "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+            "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021"
+          ]
+        },
+        {
+          "id": "commercial-vacancy-public-data-brief",
+          "claimId": "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+        "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+        "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+        "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+        "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016",
+        "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+        "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+        "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018"
+      ],
+      "occurrences": [
+        {
+          "id": "public-origin-and-use",
+          "claimId": "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+            "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+          ]
+        },
+        {
+          "id": "public-support-surface",
+          "claimId": "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+            "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+            "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+            "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+            "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+            "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+          ]
+        },
+        {
+          "id": "facebook-distributed-use",
+          "claimId": "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+            "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+            "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018"
+          ]
+        },
+        {
+          "id": "facebook-publishing-role",
+          "claimId": "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [
+        "SRC-GHFC-JAMIE-JULIA-QA-2017"
+      ],
+      "occurrences": [
+        {
+          "id": "weekly-open-gathering",
+          "claimId": "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-GHFC-JAMIE-JULIA-QA-2017"
+          ]
+        },
+        {
+          "id": "residency-onboarding",
+          "claimId": "CLM-196-RESIDENCY-ONBOARDING-2023",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+        "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
+        "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+        "SRC-KCMO-ORDINANCE-190642-2019",
+        "SRC-KCMO-RESOLUTION-190649-2019"
+      ],
+      "occurrences": [
+        {
+          "id": "durable-public-identity",
+          "claimId": "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+            "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026"
+          ]
+        },
+        {
+          "id": "council-allocation",
+          "claimId": "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+            "SRC-KCMO-ORDINANCE-190642-2019",
+            "SRC-KCMO-RESOLUTION-190649-2019"
           ]
         }
       ]

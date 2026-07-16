@@ -3,8 +3,8 @@
 ## Mission
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
-Technical Project Manager - Product Operations & Implementation lead who creates
-operating structure for complex public-facing teams.
+Technical Project Manager - Product Operations & Implementation lead who turns
+emerging work into usable systems for complex public-facing teams.
 
 ## Current Canonical App
 
@@ -30,6 +30,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run test:evals`
+- `npm run evals:launch`
+- `npm run prelaunch:production`
 
 ## Public-Safety Rules
 
@@ -47,6 +50,11 @@ When uncertain, write: `TODO: Jamie approval required.`
 
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
+
+Record new memories, URLs, artifacts, claims, corrections, and photo leads in
+the intake lifecycle before deciding whether they belong on the site. No silent
+loss does not mean automatic publication. Keep evidentiary maturity,
+publication safety, and editorial selection independent.
 
 Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceBoundary": "Protected Sunday Dinner RSVP and attendance workbook supplied by Jamie; this is a broad project record, not a complete lifetime export.",
+  "reviewedAt": "2026-07-15",
+  "workbook": {
+    "worksheets": 15,
+    "mainWorksheetRows": 711,
+    "mainWorksheetColumns": 393,
+    "formulaCells": 11414
+  },
+  "eventColumns": {
+    "count": 345,
+    "first": "001 Africa (1.22.2012)",
+    "last": "345 Persimmons (Livestream) 3/7/2021",
+    "positiveCachedYesCountColumns": 340,
+    "zeroCachedYesCountColumns": 5
+  },
+  "numberingQuality": {
+    "duplicatePrefixes": [263, 264, 267, 268],
+    "missingPrefixes": [233, 279, 288, 292, 300],
+    "boundary": "Event labels and numbering are documentary aids, not a clean unique-event key. One 300th-event label exists without a three-digit prefix, and the population includes livestream entries."
+  },
+  "claimBoundary": {
+    "supported": "The workbook directly supports more than 300 documented Sunday Dinner event columns across January 2012-March 2021.",
+    "notSupported": [
+      "exactly 345 unique in-person dinners",
+      "345 unique gatherings across the full project lifetime",
+      "a unique attendee, participant, meal, or RSVP total",
+      "that cached yes counts each equal one person physically present",
+      "the 20+ resident-artist aggregate",
+      "a public attendance database"
+    ]
+  },
+  "privacyBoundary": "Participant names, phone numbers, email addresses, locations, notes, individual attendance histories, and raw workbook rows remain protected and are not reproduced in the public repository."
+}

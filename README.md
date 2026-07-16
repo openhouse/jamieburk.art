@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie turns emerging work into usable
+systems for complex public-facing teams.
 
 ## Stack
 
@@ -35,8 +35,11 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run test:evals
+npm run evals:launch
 npm run preflight:staging
 npm run preflight:production
+npm run prelaunch:production
 ```
 
 ## Knowledge Bank
@@ -65,6 +68,10 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`npm run evals:launch` evaluates the bounded launch contracts documented in
+`docs/evals/launch-readiness.md` and writes ignored evidence reports to
+`reports/generated/`. Manual approval and post-deploy gates remain human-owned.
 
 ## Environment
 
@@ -132,11 +139,6 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+Automated launch contracts live in `npm run evals:launch`. Human approvals and
+post-deploy gates live in `docs/knowledge-bank/launch-blockers.md`; they must not
+be converted into automatic approval by an agent.

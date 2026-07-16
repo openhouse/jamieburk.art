@@ -14,12 +14,68 @@ The repo is public. Approval here means approved for public-safe repository and 
 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition government value: DCLA recognition, formal
+  recommendations, public testimony, public maps, and the dated Espinal policy
+  sequence are approved as reserve knowledge-bank depth. The translation-layer
+  framing is an explicitly labeled institutional interpretation. Do not state
+  officials' private motives, say the February testimony named the coalition,
+  assign bill authorship, or imply sole legislative causality.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
+- Commercial Rent Stabilization running minutes: the protected 34-page April-May record supports the public 30-plus-page aggregate. Keep the earlier 12-page April 29 snapshot distinct and do not publish raw coalition material.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
-- WOWList reach: use approximate public-safe adoption wording.
-- Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
-- KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
-- KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
+- WOWList reach: use the historical 1,800+ user and 16,000+ post/event floors.
+  Roughly 35 means city or region labels with at least 50 geocoded posts or
+  events, not official chapters, current communities, or distinct organizer
+  groups. Never publish raw database rows.
+- Sunday Dinner / 196 scale: the protected workbook supports 300+ documented
+  gatherings. Do not convert event columns or cached yes counts into unique
+  people, meals, attendance, or RSVPs. The 20+ resident-artist aggregate remains
+  separately approved first-person wording pending its own count methodology.
+- Call Script / NYC Artist Coalition formation: the WOW List-to-popular.vote-to-
+  Call Script-to-follow-up-meeting sequence is approved as reserve formation
+  and facilitation evidence. Do not call it the complete founding record,
+  assign shared-account posts to Jamie, or imply sole causality.
+- KC Spaces Fund: behind-the-scenes digital infrastructure and cross-channel naming-support language only. Jamie confirms website creation and support for choosing a project name available across social and domain surfaces; he was not the stakeholder or owner posting on the Facebook account. AI-assisted archival review is not a human testimonial and does not approve public organizer, Page publisher, campaign voice, sole namer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
+- Personal Facebook posts: aggregate population accounting, public-safe source
+  discoveries, and bounded first-person role patterns may live in the knowledge
+  bank. The raw population, full URL inventory, social context, and interaction
+  data remain protected. No personal-timeline route or stakeholder-engagement
+  claim is approved.
+- Creative technology: the source-backed 2006-2016 project record is approved
+  for the public knowledge bank as reserve depth. Preserve Drew Bolton, Garrett
+  Fuselier, M.C. Schmidt, and other source-specific collaborator credits; do
+  not project media without rights review or imply continuous full-time
+  practice, solo authorship, reach, or commercial impact.
+- Professor lenses: the public-safe source boundary and AI-authored Margaret
+  Morse and Warren Sack editorial controls are approved as reserve knowledge-
+  bank infrastructure. The underlying unofficial evaluation copy,
+  recommendation screenshot, grades, identifiers, correspondence, contact
+  details, and private locators are not approved. Do not imply present professor
+  opinion, professor authorship of the evals, current endorsement, or current
+  proficiency from historical records.
+- Kansas City Star raft report: bibliographic metadata and bounded paraphrase
+  are approved as reserve knowledge-bank depth. Do not publish the PDF or its
+  photographs, reporter contact details, article body text, or private locator.
+  Preserve Libby Hendon and Laura Mattingly as the crew then traveling, other
+  participants and hosts, the pre-completion publication date, and the open
+  final-endpoint question.
+- NTER CHNG exhibition record: America: Now and Here's archived official pages
+  are approved as direct evidence of 2011 exhibition inclusion, shared
+  visual-artist credit, and observed visitor use. Keep the Nerman Museum page
+  contextual; exclude archived contact details and participant messages; do
+  not infer individual task division, attendance, reach, endorsement, impact,
+  or media rights.
+- NTER CHNG production system: two protected, contemporaneous-origin project
+  documents are approved as reserve evidence for the planned software,
+  hardware, architectural, network, and gallery-tuning workflow and for the
+  many-to-many interaction rationale. Keep shared maker credit; do not publish
+  the Drive links or raw records, convert plans into completion claims, treat
+  modified documents as frozen 2011 revisions, or infer individual task
+  ownership.
+- KC Town Hall funding: the public record supports the board's unanimous recommendation, the Council's $490,539 allocation, and authorization of funding-agreement negotiations. Do not imply agreement execution, receipt, disbursement, project completion, later property or operating status, or Jamie's sole causality for the vote.
+- KC Town Hall lifecycle: treat Jamie's involvement as historical. Retain the mission-aligned stewardship transition as firsthand research context; do not publish personal circumstances or name the receiving organization without permission and corroboration.
+- KC Town Hall Phase One: reserve wording may say Jamie served in the day-to-day field-delivery and project-management function and that the packet names him founder and project manager. Treat “general contractor” as a firsthand functional description, not proof of licensure or a formal contractual title. The packet supports planned, not independently verified actual, 2019 completion.
+- East Kansas City neighborhood practice: retain Jamie's initial Tired of Tires role and Cleveland Avenue design contribution as bounded reserve depth. Preserve later operators and collective credit, credit Pastor Lee with the Cleveland Avenue corridor concept, and do not infer municipal endorsement, exact program scale, or capital-allocation causality.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

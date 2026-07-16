@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceBoundary": "Latest unique protected WOW List PostgreSQL snapshot available in the reviewed archive.",
+  "snapshot": {
+    "createdAt": "2017-07-22T08:00:01-04:00",
+    "postCreationRange": {
+      "first": "2012-11-26",
+      "last": "2017-07-21"
+    },
+    "reviewedAt": "2026-07-15"
+  },
+  "recordCounts": {
+    "users": 1846,
+    "postsOrEvents": 16142,
+    "tagsOrLists": 23864,
+    "tagFollows": 28837,
+    "stars": 20927,
+    "goingRecords": 2965,
+    "googleCalendarEvents": 15915,
+    "googleCalendarPostEventLinks": 15875,
+    "geolocationRecords": 25938,
+    "postTagLinks": 45562,
+    "signupRecords": 818
+  },
+  "primaryKeyQuality": {
+    "tablesChecked": 10,
+    "duplicatePrimaryKeys": 0
+  },
+  "geographicActivity": {
+    "populationDefinition": "Nonblank city or region labels attached through post geolocation; thresholds count posts or events, not people, organizers, chapters, or current communities.",
+    "postsWithNonblankCityOrRegion": 12433,
+    "postsWithBlankOrUnusableCityOrRegion": 3709,
+    "postsWithMissingGeolocationReference": 0,
+    "labelsAtOrAboveThreshold": {
+      "1": 709,
+      "5": 133,
+      "10": 79,
+      "25": 48,
+      "50": 35
+    }
+  },
+  "claimBoundary": {
+    "supported": "Historical public wording may use 1,800+ users, 16,000+ posts or events, and roughly 35 city or region ecosystems when the 50-post/event threshold is preserved.",
+    "notSupported": [
+      "35 official chapters",
+      "35 currently active communities",
+      "35 distinct organizer groups",
+      "1,846 unique active users",
+      "current platform operation",
+      "satisfaction, retention, reach, or impact",
+      "complete media uploads",
+      "Jamie's sole ownership"
+    ]
+  },
+  "privacyBoundary": "The public repository contains aggregate results only. Raw user, email, password, content, organizer, security, precise location, and relationship rows remain protected."
+}
