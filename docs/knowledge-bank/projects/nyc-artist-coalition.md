@@ -69,6 +69,30 @@ the clearer bounded claims about Jamie's identity-system contribution,
 attributable collaborator use, and directly recovered Council interactions.
 See `docs/knowledge-bank/runs/2026-07-15-nycartc-x-full-population.md`.
 
+## Facebook Page operating record
+
+The [Facebook post population](nyc-artist-coalition-facebook-posts.md) adds an
+owner-data control to the shared-identity record. Annual Meta Business Suite
+Published exports account for 444 rows and 444 unique post IDs across every year
+in the surviving January 2017 to September 2021 chronology. A separate terminal
+Page-feed traversal accounts for 445 distinct identities after 153 duplicate or
+embedded render variants were excluded. Both populations are complete within
+their observed surfaces; no one-to-one row crosswalk is asserted.
+
+The corpus preserves 67 distinct off-Facebook routes and overlapping issue
+patterns across cultural-space survival, Cabaret Law repeal, M.A.R.C.H.
+accountability, nightlife governance, commercial rent, relief, and civic
+participation. Sixty-six rows reference Council or elected-official subjects;
+that is outbound communication and issue routing, not proof that 66 officials
+engaged. Aggregate reactions, comments, shares, reach, and clicks likewise do
+not identify stakeholder groups.
+
+The Page was shared. Jamie remembers predominantly using it while believing
+others also did, but neither current custody nor the exports assign a human
+publisher to every historical post. The corpus therefore strengthens the
+collective operating record while leaving Jamie-specific Facebook stewardship
+held for collaborator or publisher-metadata corroboration.
+
 ## Facebook event system
 
 The authenticated Facebook event pass accounts for every slot in the

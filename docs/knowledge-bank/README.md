@@ -188,3 +188,15 @@ bylines, inventories 42 normalized destinations, and reconciles one 29-row
 native owner-export segment exactly. Raw social copy, administrator analytics,
 identities, and authenticated state remain protected. See the
 [research run](runs/2026-07-16-wowlist-facebook-posts-full-population.md).
+
+The July 16 [NYC Artist Coalition Facebook post pass](projects/nyc-artist-coalition-facebook-posts.md)
+accounts independently for all 444 rows in five annual Meta Business Suite
+Published exports and all 445 distinct identities in the terminal Page feed
+covering the surviving 2017-2021 chronology. No one-to-one row crosswalk is
+asserted between the surfaces. The public corpus retains dates, one-way hashes,
+67 external-route dispositions, overlapping mission and stakeholder-reference
+classifications, and bounded aggregate controls. Raw copy, native IDs, comments,
+identities, sensitive routes, and owner exports remain protected. Jamie's
+predominant-use recollection is preserved as an inquiry rather than converted
+into authorship of the shared account. See the
+[research run](runs/2026-07-15-nycac-facebook-posts-full-population.md).
