@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "capturedAt": "2026-07-15",
+  "capturedAt": "2026-07-16",
   "sourceInputs": [
     "apps/www/src",
     "apps/www/next.config.ts",
@@ -22,7 +22,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "2c2846120ece72a83e4e78fd5764060d397a4d95cdb8e7560146ed2e945a36b7",
+  "sourceSha256": "e0a598a2157ca789e01084895b8f679c5b1f6fb40ae9918a2a4ce87cc2c4415e",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,

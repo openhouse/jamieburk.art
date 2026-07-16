@@ -619,7 +619,7 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Completed AI Evals for Engineers & PMs in 2026",
     detailedPublicWording:
       "Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.",
-    sourceBasis: "Approved resume language and public-safe certificate.",
+    sourceBasis: "Public-safe completion certificate, approved resume language, and Maven's public course page.",
     guardrail:
       "Treat as professional development, not instructor affiliation or certification authority beyond completion.",
     doNotSay: [
@@ -632,9 +632,10 @@ export const proofClaims: ProofClaim[] = [
       "Unapproved evaluations"
     ],
     surfaces: ["resume", "resume-pdf", "lab", "about"],
-    relatedProjects: ["source-backed-team-memory"],
+    relatedProjects: ["source-backed-team-memory", "ai-evals-professional-development"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: ["CLM-AI-EVALS-COMPLETION-2026"],
+    lastReviewed: "2026-07-16"
   }
 ];
 
