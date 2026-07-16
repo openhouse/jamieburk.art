@@ -332,6 +332,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-FULL-POPULATION-2026",
         relationship: "direct-support",
         supports: ["38 unique recovered records", "exact reconciliation with the displayed profile counter"],
+        locator: "fixture summary and all 38 deduplicated record entries",
         confidence: "high",
         renderCitation: false
       }
@@ -370,6 +371,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-PRODUCT-SUPPORT-2015",
         relationship: "direct-support",
         supports: ["an inline reply explaining how to add an event to one or more lists"],
+        locator: "visible reply text and status metadata",
         confidence: "high",
         renderCitation: false
       },
@@ -377,6 +379,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-USER-TUTORIAL-2015",
         relationship: "corroborating",
         supports: ["community-created onboarding for the event-publishing workflow"],
+        locator: "visible post text thanking the tutorial author",
         confidence: "high",
         renderCitation: false
       }
@@ -407,6 +410,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
         relationship: "direct-support",
         supports: ["the stated Sunday Dinner origin of the event-sharing approach"],
+        locator: "visible post text naming Richard, Jamie, and Sunday Dinner calendars",
         confidence: "high",
         renderCitation: false
       },
@@ -414,6 +418,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-NYCDIY-2016",
         relationship: "corroborating",
         supports: ["the later connection between NYC DIY's workflow and Sunday Dinner"],
+        locator: "visible reply text connecting the NYC DIY calendar workflow to Sunday Dinner",
         confidence: "high",
         renderCitation: false
       }
@@ -441,6 +446,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-NATIONAL-MARCHES-2016",
         relationship: "direct-support",
         supports: ["same-day distribution of a multi-city march calendar"],
+        locator: "visible post text and linked national march calendar",
         confidence: "high",
         renderCitation: false
       },
@@ -448,6 +454,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-POPULAR-VOTE-2016",
         relationship: "direct-support",
         supports: ["a themed surface for contributing events and receiving updates"],
+        locator: "visible post text and popular.vote destination",
         confidence: "high",
         renderCitation: false
       },
@@ -455,6 +462,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
         relationship: "corroborating",
         supports: ["preservation of the themed event-sharing surface"],
+        locator: "archived home page capture",
         confidence: "high",
         renderCitation: false
       }
@@ -481,6 +489,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
       sourceId: "SRC-X-WOWLIST-PUNKS-USE-2015",
       relationship: "direct-support",
       supports: ["one DIY music organizer's stated use of WOW List to add shows"],
+      locator: "visible post text and linked Punks & Criminals project list",
       confidence: "high",
       renderCitation: true
     }],
@@ -506,6 +515,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
       sourceId: "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
       relationship: "direct-support",
       supports: ["a creative-technology peer's public attribution of Jamie's maker role"],
+      locator: "visible post text naming co-organizer Jamie Burkart",
       confidence: "high",
       renderCitation: true
     }],
@@ -531,6 +541,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
       sourceId: "SRC-X-WOWLIST-ALL-AGES-RESPONSE-2015",
       relationship: "direct-support",
       supports: ["a public response to one WOW List members-meeting invitation"],
+      locator: "visible reply text and status metadata",
       confidence: "high",
       renderCitation: false
     }],
@@ -556,6 +567,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
       sourceId: "SRC-WOWLIST-ARCHIVED-HOME-2017",
       relationship: "direct-support",
       supports: ["the visible May 2017 interface and public product positioning"],
+      locator: "archived home page headline, interface, and testing invitation",
       confidence: "high",
       renderCitation: false
     }],
@@ -581,6 +593,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
       sourceId: "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
       relationship: "direct-support",
       supports: ["the three reported aggregate historical scale fields"],
+      locator: "WOW List project record, aggregate historical summary",
       confidence: "moderate",
       renderCitation: true
     }],
@@ -607,6 +620,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-FULL-POPULATION-2026",
         relationship: "direct-support",
         supports: ["the account records containing the posted source destinations"],
+        locator: "externalUrls fields across all 38 fixture records",
         confidence: "high",
         renderCitation: false
       },
@@ -614,6 +628,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-USER-TUTORIAL-2015",
         relationship: "context",
         supports: ["a community-created tutorial for publishing through WOW List"],
+        locator: "visible post text thanking the tutorial author",
         confidence: "high",
         renderCitation: false
       },
@@ -621,6 +636,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
         relationship: "context",
         supports: ["the Sunday Dinner calendar archive named in the project-origin record"],
+        locator: "visible post text and linked Sunday Dinner calendar archive",
         confidence: "high",
         renderCitation: false
       },
@@ -628,6 +644,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-GOOD-TIMES-ZINES-2015",
         relationship: "context",
         supports: ["DIY cultural documentation represented by this destination"],
+        locator: "article headline and main body",
         confidence: "high",
         renderCitation: false
       },
@@ -635,6 +652,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-GRASSTRONAUT-HOMEWORK-2015",
         relationship: "context",
         supports: ["all-ages music organizing guidance represented by this destination"],
+        locator: "manualfesto introduction and organizing guidance",
         confidence: "high",
         renderCitation: false
       },
@@ -642,6 +660,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2017",
         relationship: "context",
         supports: ["a DIY-space funding resource represented by this destination"],
+        locator: "fund announcement and eligibility description",
         confidence: "high",
         renderCitation: false
       },
@@ -649,6 +668,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-KQED-GHOST-SHIP-2016",
         relationship: "context",
         supports: ["cultural-space safety and mourning represented by this destination"],
+        locator: "article headline and main body",
         confidence: "high",
         renderCitation: false
       },
@@ -656,6 +676,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-STANDING-ROCK-2016",
         relationship: "context",
         supports: ["an Indigenous-led mutual-aid resource represented by this destination"],
+        locator: "resource headline and contribution guidance",
         confidence: "high",
         renderCitation: false
       },
@@ -663,6 +684,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015",
         relationship: "context",
         supports: ["participatory-media convening context represented by this destination"],
+        locator: "archived conference home page",
         confidence: "high",
         renderCitation: false
       },
@@ -670,6 +692,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
         sourceId: "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
         relationship: "context",
         supports: ["the archived civic event-sharing surface represented by this destination"],
+        locator: "archived home page capture",
         confidence: "high",
         renderCitation: false
       }

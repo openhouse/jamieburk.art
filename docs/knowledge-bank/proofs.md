@@ -15,7 +15,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Facilitated and documented an alignment session, producing a multilingual record that connected discussion to action items, governance questions, and public-share boundaries.
 - Prepared a legislative provenance redline tracing Commercial Rent Stabilization language from Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and S8319 revisions.
 - Prepared a privacy-preserving open-data pilot proposal for geography-aggregated commercial vacancy and lease-cost indicators, with coverage, suppression, and methods documentation.
-- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform for DIY arts and music organizers, with activity across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Directly handled a documented residency workflow spanning acceptance, pre-arrival coordination, space configuration, and independent access.
 - Maintained a recurring invitation and continuity system spanning event themes, invitations, replies, attendance signals, and follow-up.

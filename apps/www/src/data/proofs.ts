@@ -385,13 +385,13 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform for DIY arts and music organizers, with activity across roughly 35 city ecosystems.",
+    shortWording: "WOWList recorded activity across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Keep documented organizer use separate from aggregate geographic activity, and do not describe city activity as official chapters.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",

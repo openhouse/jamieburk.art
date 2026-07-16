@@ -445,7 +445,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Jamie co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Jamie co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform for DIY arts and music organizers, with activity across roughly 35 city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s-2020s",
     status: "Short proof page",
@@ -488,8 +488,6 @@ const workItemsInput = [
     ],
     careNote:
       "Historical proof page. Public-use signals do not by themselves measure total adoption or impact.",
-    sourceLayer:
-      "Contemporaneous organizer and peer records, public archives, and historical product aggregates.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -502,13 +500,13 @@ const workItemsInput = [
       "Public evidence of organizer use and community-created onboarding",
       "Peer attribution of Jamie's maker role",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "Activity across roughly 35 city ecosystems"
     ],
     knownOpenProtected: {
       known:
-        "Historical aggregates and public records support the product, scale, organizer-use, and role account above.",
+        "The cited organizer, peer, and aggregate records establish the three public claims above.",
       open:
-        "The @WOWListNYC to @wowlist handle lineage and broader adoption estimates remain unresolved.",
+        "The @WOWListNYC to @wowlist handle lineage and use beyond the documented records remain unresolved.",
       protected:
         "Private community records are not published."
     }

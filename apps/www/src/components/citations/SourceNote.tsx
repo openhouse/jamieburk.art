@@ -55,7 +55,7 @@ export function SourceNote({ backlinks, noteId, number, source }: SourceNoteProp
             key={backlink.id}
             role="doc-backlink"
           >
-            Return {index + 1}
+            {backlinks.length === 1 ? "Back to text" : `Back ${index + 1}`}
           </a>
         ))}
       </p>

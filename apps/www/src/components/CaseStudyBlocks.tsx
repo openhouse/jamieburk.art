@@ -65,7 +65,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
               : "mt-5 grid gap-5 lg:grid-cols-2"
           }
         >
-          {visualArtifacts.map((artifact) => (
+          {visualArtifacts.map((artifact, index) => (
             <figure
               className="overflow-hidden rounded-lg border border-jb-ink/14 bg-jb-paper"
               key={artifact.title}
@@ -75,6 +75,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                   alt={artifact.asset?.alt ?? ""}
                   className="h-auto w-full border-b border-jb-ink/12"
                   height={artifact.asset?.height ?? 1}
+                  loading={index === 0 ? "eager" : "lazy"}
                   src={artifact.asset?.src ?? ""}
                   width={artifact.asset?.width ?? 1}
                 />
