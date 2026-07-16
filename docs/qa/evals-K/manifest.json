@@ -8,10 +8,14 @@
     "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
   ],
   "sourceExcludes": [
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-    "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
+    "apps/www/src/data/knowledge-bank/lifecycle-schema.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "76fe3de5ec2ebccb4802b7cd06a3bf21dab2e898402c02cee6c2d2cdf82ea9e5",
+  "sourceSha256": "94132daa9ba649bb0bb04b50b15719de11e91647d8172db2acb221f1cf6f3743",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,

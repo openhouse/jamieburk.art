@@ -127,6 +127,8 @@ export const wowlistFacebookPostSources = [
     preservationStatus: "live",
     capturedAt: "2026-07-15",
     accessedAt: "2026-07-15",
+    metadataVerifiedAt: "2026-07-15",
+    metadataVerifiedBy: "Codex public-fixture and protected-input reconciliation",
     assetUrl:
       "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
     preferredPublicUrl: "asset",
@@ -530,7 +532,7 @@ export const wowlistFacebookPostClaims = [
         renderCitation: true,
       },
       {
-        sourceId: "SRC-WOWLIST-YOUTUBE-SHELBY-TUTORIAL-2015",
+        sourceId: "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
         relationship: "corroborating",
         supports: ["participant-created product-onboarding specimen"],
         confidence: "high",
@@ -612,7 +614,7 @@ export const wowlistFacebookPostClaims = [
         renderCitation: true,
       },
       {
-        sourceId: "SRC-MEOW-WOLF-DIY-FUND-2017",
+        sourceId: "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2017",
         relationship: "context",
         supports: ["DIY-space infrastructure and operational-support context"],
         confidence: "high",
@@ -711,158 +713,13 @@ export const wowlistFacebookPostResearchInquiries = [
       wowlistFacebookPostSourceIds.eastBayGhostShip,
       wowlistFacebookPostSourceIds.willametteKnowClosing,
       wowlistFacebookPostSourceIds.pehrspaceFundraiser,
-      "SRC-WOWLIST-YOUTUBE-SHELBY-TUTORIAL-2015",
-      "SRC-MEOW-WOLF-DIY-FUND-2017",
+      "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+      "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2017",
     ],
     publicSummary:
       "The complete recovered Facebook corpus documents WOW List's account as an operating and editorial layer for contributor onboarding, event circulation, peer knowledge, cultural-space continuity, mutual aid, and advocacy. The analysis does not convert source sharing into endorsement or post publication into impact.",
     protectedLocatorId: "LOC-WOWLIST-FACEBOOK-SOURCE-NETWORK-2026-07-15",
   },
 ] satisfies KnowledgeBank["researchInquiries"];
-
-export const wowlistFacebookPostIntakeItems = [
-  {
-    id: "INTAKE-WOWLIST-FACEBOOK-POSTS-2026-07-15",
-    title: "WOW List Facebook full-population publishing and source record",
-    project: projectId,
-    kind: "claim-candidate",
-    summary:
-      "A 57-record full-population pass reconciled WOW List's recovered Facebook publishing history, manager-only publisher attribution, posted URLs, source relationships, mission themes, stakeholder groups, and public-safety boundaries.",
-    status: "integrated",
-    sourceIds: [
-      ...Object.values(wowlistFacebookPostSourceIds),
-      "SRC-WOWLIST-YOUTUBE-SHELBY-TUTORIAL-2015",
-      "SRC-MEOW-WOLF-DIY-FUND-2017",
-    ],
-    relatedClaimIds: Object.values(wowlistFacebookPostClaimIds),
-    relatedProofIds: ["wowlist-community-platform"],
-    candidateClaims: [
-      "Facebook's manager-only interface attributes 51 of the 57 recovered WOW List post identities to Jamie, attributes none to another publisher, and leaves six unresolved; together with Jamie's first-person recollection, this supports that he managed WOW List's Facebook publishing across the recovered 2015-2018 corpus while WOW List remained his and Richard Caceres's shared project.",
-    ],
-    propositions: [
-      {
-        id: "PROP-WOWLIST-FACEBOOK-RECOVERED-POPULATION-2026",
-        text: "A terminal 19-page owner-post capture recovered 57 unique WOW List Facebook posts dated April 2015 through March 2018, and all 57 received a public-safe content and live-review disposition.",
-        status: "direct-support",
-        sourceIds: [
-          wowlistFacebookPostSourceIds.census,
-          wowlistFacebookPostSourceIds.protectedCapture,
-        ],
-        sourceSupport: [
-          "terminal pagination control",
-          "57 unique protected records",
-          "57-row public-safe census",
-        ],
-        boundaries: [
-          "Complete recovered-population disposition is not a complete native owner export or proof that no earlier post was deleted or omitted.",
-        ],
-        decisionUse:
-          "Defines the denominator for every downstream Facebook publishing claim.",
-      },
-      {
-        id: "PROP-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-2026",
-        text: "Facebook's manager-only interface attributes 51 of the 57 recovered WOW List post identities to Jamie, attributes none to another publisher, and leaves six unresolved; together with Jamie's first-person recollection, this supports that he managed WOW List's Facebook publishing across the recovered 2015-2018 corpus while WOW List remained his and Richard Caceres's shared project.",
-        status: "supported-with-boundary",
-        sourceIds: [
-          wowlistFacebookPostSourceIds.census,
-          wowlistFacebookPostSourceIds.publisherAudit,
-          wowlistFacebookPostSourceIds.firsthandMemory,
-        ],
-        sourceSupport: [
-          "51 manager-only Jamie publisher labels",
-          "zero other-publisher labels",
-          "six explicitly unresolved records",
-          "Jamie's first-person recollection",
-        ],
-        boundaries: [
-          "Use Facebook-corpus language, retain the six unresolved records, preserve Richard Caceres's shared project credit, and do not assign Jamie authorship of attached source statements.",
-        ],
-        decisionUse:
-          "Supports a strong, specific operating-responsibility claim without overstating sole authorship or cross-platform control.",
-      },
-      {
-        id: "PROP-WOWLIST-FACEBOOK-OPERATING-SURFACE-2026",
-        text: "The Facebook account operated as a participation layer for WOW List: 44 records include page-authored commentary, 21 carry attached shared sources, and the public link trail contains 65 distinct normalized URLs, including 36 WOW List routes.",
-        status: "direct-support",
-        sourceIds: [wowlistFacebookPostSourceIds.census],
-        sourceSupport: [
-          "record relationship counts",
-          "posted-URL inventory",
-          "mission-theme classification",
-        ],
-        boundaries: [
-          "Publication does not establish readership, conversion, endorsement, adoption, attendance, or impact.",
-        ],
-        decisionUse:
-          "Makes the professional operating practice legible beyond the generic phrase 'social media management.'",
-      },
-      {
-        id: "PROP-WOWLIST-FACEBOOK-CARE-SOURCE-TRAIL-2026",
-        text: "The recovered source trail connects event discovery and contributor onboarding with cultural-space continuity, mutual aid, Ghost Ship mourning and safety, peer infrastructure, and Cabaret Law advocacy.",
-        status: "synthesis-with-boundary",
-        sourceIds: [
-          wowlistFacebookPostSourceIds.census,
-          wowlistFacebookPostSourceIds.eastBayGhostShip,
-          wowlistFacebookPostSourceIds.willametteKnowClosing,
-          wowlistFacebookPostSourceIds.pehrspaceFundraiser,
-          wowlistFacebookPostSourceIds.westwordDenverFund,
-          "SRC-MEOW-WOLF-DIY-FUND-2017",
-        ],
-        sourceSupport: [
-          "57-record theme chronology",
-          "selected source close reads",
-          "public route inventory",
-        ],
-        boundaries: [
-          "The pattern is evidence of account curation and operating concern, not sole organization or causality for linked outcomes.",
-        ],
-        decisionUse:
-          "Preserves the deeper continuity between product operations, cultural infrastructure, and public advocacy for future composition.",
-      },
-      {
-        id: "PROP-WOWLIST-FACEBOOK-ENGAGEMENT-NOT-RECOVERED-2026",
-        text: "No stable full-population reaction, comment, share, reach, or audience-identity dataset was recovered for the 57 Facebook posts.",
-        status: "research-only",
-        sourceIds: [
-          wowlistFacebookPostSourceIds.census,
-          wowlistFacebookPostSourceIds.managementGap,
-        ],
-        sourceSupport: [
-          "public census engagement boundary",
-          "post-2019 management-interface coverage gap",
-        ],
-        boundaries: [
-          "Do not convert a current follower snapshot, isolated interaction labels, or the post-2019 zero-state into lifetime traction or impact.",
-        ],
-        decisionUse:
-          "Prevents unsupported engagement claims while preserving a clear path for a future owner-export review.",
-        nextStep:
-          "Request a native Meta owner export or Insights archive and reconcile it against the 57-record post ledger before publishing aggregate traction.",
-      },
-    ],
-    tensions: [],
-    researchQuestions: [
-      "Can a native Meta owner export recover stable reaction, comment, share, reach, and audience aggregates for the 57 records without exposing individual users?",
-      "Can the three unavailable wrappers and three video redirects be preserved through Wayback or another public archive with publisher attribution intact?",
-      "Which cross-platform WOW List social records independently corroborate Jamie's broader memory of managing the project's social presence?",
-      "Which linked organizers can document specific product or event-discovery outcomes without turning specimens into platform-wide adoption claims?",
-      "What does the withheld Google document contain, and is any public-safe source association worth preserving?",
-    ],
-    boundaries: [
-      "Do not publish raw post bodies, comments, contacts, ordinary individual source-account names, account IDs, administration details, local paths, cookies, or session state.",
-      "Do not infer authorship for the six unresolved records or for attached source statements.",
-      "Do not convert a share, like, follower count, or source association into endorsement, adoption, attendance, causality, or impact.",
-      "Preserve Richard Caceres's shared WOW List project credit.",
-      "Keep this integrated knowledge-bank work out of the public website until a separate composition decision identifies a hiring-reader need.",
-    ],
-    projectionStatus: "no-public-projection",
-    receivedAt: "2026-07-15",
-    reviewedAt: "2026-07-15",
-    reviewedBy: [
-      "Jamie Burkart",
-      "Codex full-population authenticated archival-production review",
-    ],
-  },
-] satisfies KnowledgeBank["intakeItems"];
 
 export const wowlistFacebookPostReportUrl = reportUrl;
