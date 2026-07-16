@@ -694,6 +694,47 @@
         "physical attendance or unique people",
         "policy causality"
       ]
+    },
+    {
+      "id": "SRC-FACEBOOK-EVENTS-PUBLIC-SAFE-AGGREGATE-2026",
+      "title": "Facebook events public-safe aggregate manifest",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-16",
+      "accessedAt": "2026-07-16",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/corpora/facebook-events-public-safe-manifest-2026-07-16.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Jamie Burkart portfolio knowledge bank, public-safe Facebook event aggregate, reviewed July 16, 2026.",
+      "publicNote": "The manifest publishes population controls and selected public event metadata while withholding the reconstructable personal timeline, addresses, attendee data, raw descriptions, and authenticated state.",
+      "captureFingerprint": "sha256:a37f0bc93967f2c8cff36227c1624be820e67a3609aa0e70c91aed620e1e4d77",
+      "doesNotEstablish": [
+        "a native Meta owner export",
+        "every event ever created, deleted, withheld, or unindexed",
+        "event attendance, unique people, reach, endorsement, mandate, or impact",
+        "Jamie's participation in every event on his Past Events surface",
+        "complete event-body or posted-URL recovery"
+      ]
+    },
+    {
+      "id": "SRC-FACEBOOK-WOWLIST-PROFILE-2026",
+      "title": "WOW List Facebook Page profile",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-16",
+      "canonicalUrl": "https://www.facebook.com/wowlist/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List, Facebook Page profile describing the project as an event-sharing tool and community-building project and using the motto 'Being there changes everything,' accessed July 16, 2026.",
+      "publicNote": "This is the project's own public description, not an independent evaluation of adoption or impact.",
+      "doesNotEstablish": [
+        "adoption, reach, attendance, endorsement, or impact",
+        "the complete project team",
+        "Facebook event-history completeness"
+      ]
     }
   ],
   "claims": [
@@ -1929,6 +1970,68 @@
         "It does not establish endorsement of Jamie, attendance, agreement, partnership beyond the event, or policy causality.",
         "Names not retained in the public-safe corpus require separate source records before publication."
       ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-MILESTONES-2014-2016",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public event records document Sunday Dinner's 100th gathering in March 2014 and its 200th in June 2016; the 200th listing names Julia Fredenburg and Jamie Burkart as organizers.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FACEBOOK-EVENTS-PUBLIC-SAFE-AGGREGATE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "public-safe milestone dates, titles, and organizer displays"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The ordinal milestones come from the events' own titles, not an independent audit.",
+        "The organizer display is event-specific and does not identify every contributor or steward.",
+        "Historic addresses and mutable response labels remain outside the public projection."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-FACEBOOK-MISSION-STATEMENT-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "WOW List described itself as an event-sharing tool and community-building project with the motto 'Being there changes everything.'",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FACEBOOK-WOWLIST-PROFILE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "project purpose",
+            "project motto"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is the project's own mission language, not an independent evaluation.",
+        "The description does not measure adoption, reach, attendance, endorsement, or impact."
+      ]
     }
   ],
   "pages": [
@@ -2034,13 +2137,22 @@
       "id": "196-sunday-dinner",
       "surface": "/work/196-sunday-dinner",
       "sourceOrder": [
-        "SRC-COMMUNITY-GREENE-HILL-QA-2017"
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+        "SRC-FACEBOOK-EVENTS-PUBLIC-SAFE-AGGREGATE-2026"
       ],
       "occurrences": [
         {
           "id": "weekly-community-dinners",
           "claimId": "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-2017",
           "projection": "case-study"
+        },
+        {
+          "id": "public-milestone-continuity",
+          "claimId": "CLM-SUNDAY-DINNER-MILESTONES-2014-2016",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FACEBOOK-EVENTS-PUBLIC-SAFE-AGGREGATE-2026"
+          ]
         }
       ]
     },
@@ -2050,7 +2162,8 @@
       "sourceOrder": [
         "SRC-X-WOWLIST-PUNKS-USE-2015",
         "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
-        "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026"
+        "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
+        "SRC-FACEBOOK-WOWLIST-PROFILE-2026"
       ],
       "occurrences": [
         {
@@ -2075,6 +2188,14 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026"
+          ]
+        },
+        {
+          "id": "facebook-mission-language",
+          "claimId": "CLM-WOWLIST-FACEBOOK-MISSION-STATEMENT-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FACEBOOK-WOWLIST-PROFILE-2026"
           ]
         }
       ]

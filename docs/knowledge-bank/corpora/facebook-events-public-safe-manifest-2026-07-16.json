@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-16",
+  "populationBoundary": "A complete census of the records exposed by the capture-date Facebook Past Events interfaces, not a native Meta owner export, deletion history, or proof of every event ever created.",
+  "personalPastEvents": {
+    "surface": "authenticated-current-past-events-index",
+    "independentTraversalCount": 2,
+    "occurrenceRows": 511,
+    "canonicalEventPages": 502,
+    "occurrenceSpecificRows": 9,
+    "recurringCanonicalEventPages": 4,
+    "sortedOccurrenceKeySha256": "a37f0bc93967f2c8cff36227c1624be820e67a3609aa0e70c91aed620e1e4d77",
+    "stableTerminalObservations": [18, 18],
+    "dateRange": {
+      "first": "2006-12-02",
+      "last": "2023-08-26"
+    },
+    "yearCounts": {
+      "2006": 1,
+      "2007": 4,
+      "2010": 1,
+      "2011": 3,
+      "2012": 2,
+      "2013": 2,
+      "2014": 3,
+      "2015": 50,
+      "2016": 52,
+      "2017": 239,
+      "2018": 105,
+      "2019": 40,
+      "2020": 6,
+      "2022": 1,
+      "2023": 2
+    },
+    "organizerDisplayCoverage": {
+      "populated": 455,
+      "missing": 56
+    },
+    "selectedOrganizerDisplayLeads": [
+      {
+        "label": "NYC Artist Coalition",
+        "cardCount": 21,
+        "group": "coalition"
+      },
+      {
+        "label": "Jamie Burkart",
+        "cardCount": 20,
+        "group": "jamie-organizer-display"
+      },
+      {
+        "label": "The Silent Barn",
+        "cardCount": 10,
+        "group": "cultural-space"
+      },
+      {
+        "label": "The Glove",
+        "cardCount": 7,
+        "group": "cultural-space"
+      },
+      {
+        "label": "Flux Factory",
+        "cardCount": 6,
+        "group": "cultural-space"
+      },
+      {
+        "label": "New York City Department of Cultural Affairs",
+        "cardCount": 5,
+        "group": "city-agency"
+      },
+      {
+        "label": "Rafael L Espinal Jr.",
+        "cardCount": 4,
+        "group": "public-official"
+      },
+      {
+        "label": "KC Tenants",
+        "cardCount": 4,
+        "group": "housing-advocacy"
+      },
+      {
+        "label": "Charlotte Street",
+        "cardCount": 4,
+        "group": "arts-organization"
+      }
+    ],
+    "responseLabelCoverage": {
+      "indexRowsWithResponseLabel": 0,
+      "selectedDetailPagesReviewed": 3,
+      "selectedDetailPagesWithAggregateResponseLabel": 3,
+      "interpretation": "Mutable event-level interface labels only; not attendance, unique people, reach, endorsement, mandate, or impact."
+    }
+  },
+  "selectedEventSummaries": [
+    {
+      "key": "sunday-dinner-100",
+      "date": "2014-03-09",
+      "title": "SUNDAY DINNER Turns 100!",
+      "organizerDisplay": ["Jamie Burkart"],
+      "aggregateResponseDisplay": "21 people responded",
+      "publicUse": "selected",
+      "supports": [
+        "the event's self-described 100th-gathering milestone",
+        "Jamie's organizer display for this event"
+      ],
+      "doesNotEstablish": [
+        "an independently audited total",
+        "physical attendance",
+        "sole authorship of Sunday Dinner"
+      ]
+    },
+    {
+      "key": "sunday-dinner-200",
+      "date": "2016-06-26",
+      "title": "200th Sunday Dinner! Special! Wow! Amazing! Interesting!",
+      "organizerDisplay": ["Julia Fredenburg", "Jamie Burkart"],
+      "aggregateResponseDisplay": "22 people responded",
+      "publicUse": "selected",
+      "supports": [
+        "the event's self-described 200th-gathering milestone",
+        "Julia Fredenburg and Jamie Burkart as displayed event organizers"
+      ],
+      "doesNotEstablish": [
+        "an independently audited total",
+        "physical attendance",
+        "the complete Sunday Dinner stewardship history"
+      ],
+      "interfaceCaveat": "The detail page's displayed Went and Interested subcounts did not reconcile to its aggregate response label."
+    },
+    {
+      "key": "release-yourself-onto-the-water",
+      "date": "2007-07-14",
+      "title": "Release Yourself onto the Water Until it Tastes of Salt",
+      "organizerDisplay": ["Jamie Burkart"],
+      "aggregateResponseDisplay": "5 people responded",
+      "publicUse": "knowledge-bank-only",
+      "supports": [
+        "a Jamie-organized public event around a found-material raft with bicycle-powered propulsion",
+        "participatory public presentation of the work in progress"
+      ],
+      "doesNotEstablish": [
+        "the raft's eventual route",
+        "a completed Kansas City-to-Gulf voyage",
+        "physical attendance"
+      ]
+    }
+  ],
+  "wowListPastEvents": {
+    "surface": "authenticated-page-context-past-events",
+    "displayedMessage": "No events to show",
+    "recoveredEventCards": 0,
+    "personalIndexTitleMatches": 0,
+    "personalIndexOrganizerMatches": 0,
+    "status": "not-recovered",
+    "finding": "No WOW List event record was recovered from the capture-date Facebook Page Past Events surface or by exact WOW List title and organizer matching in Jamie's current Past Events index.",
+    "limitation": "The current empty surface does not establish that WOW List never created, hosted, cohosted, or circulated an event."
+  },
+  "sourceRouting": {
+    "currentPersonalIndexEventLinks": 502,
+    "selectedEventDetailPagesCloseRead": 3,
+    "externalArticleUrlsRecoveredFromIndexCards": 0,
+    "postedUrlStatus": "The index cards did not expose event-body outbound links. This pass does not claim complete body-level URL recovery across all 511 occurrence rows."
+  },
+  "publicSafety": {
+    "retained": [
+      "aggregate counts",
+      "date distribution",
+      "population digest",
+      "selected public event metadata",
+      "selected public organization labels",
+      "evidence limitations"
+    ],
+    "excluded": [
+      "raw personal timeline",
+      "addresses",
+      "guest or attendee identities",
+      "event-body text",
+      "comments",
+      "private messages",
+      "analytics",
+      "credentials",
+      "authenticated-session material",
+      "machine-local paths"
+    ]
+  }
+}

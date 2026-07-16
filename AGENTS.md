@@ -33,6 +33,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:knowledge-intake`
 - `npm run check:nycac-facebook-events`
 - `npm run evals:nycac-facebook-events`
+- `npm run check:facebook-events-archive`
+- `npm run evals:facebook-events-archive`
 
 ## Public-Safety Rules
 
@@ -139,7 +141,7 @@ change for V1.
 
 ## Launch-Readiness Evals
 
-- Read `evals/launch-readiness/v14/evals.json` before optimizing the public site
+- Read `evals/launch-readiness/v15/evals.json` before optimizing the public site
   for production or job applications.
 - Run `npm run eval:launch-readiness` to establish the current baseline.
 - Improve one failing mutable criterion at a time and keep a change only when

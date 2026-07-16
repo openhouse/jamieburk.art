@@ -79,6 +79,12 @@ import {
   nycacFacebookEventIntake,
   nycacFacebookEventSources
 } from "./nycac-facebook-events-full-population.ts";
+import {
+  facebookEventArchiveClaimRecords20260716,
+  facebookEventArchiveIntakeRecords20260716,
+  facebookEventArchiveResearchInquiries20260716,
+  facebookEventArchiveSourceRecords20260716
+} from "./facebook-events-archive-2026-07-16.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -94,7 +100,8 @@ const knowledgeBankInput = {
     ...kcTownHallFullPopulationIntakeRecords20260715,
     ...nycArtCXArchivalIntakeRecords20260715,
     ...urbanhermitFullPopulationIntakeRecords20260715,
-    ...nycacFacebookEventIntake
+    ...nycacFacebookEventIntake,
+    ...facebookEventArchiveIntakeRecords20260716
   ],
   sources: [
     {
@@ -231,7 +238,8 @@ const knowledgeBankInput = {
     ...kcTownHallFullPopulationSourceRecords20260715,
     ...nycArtCXArchivalSourceRecords20260715,
     ...urbanhermitFullPopulationSourceRecords20260715,
-    ...nycacFacebookEventSources
+    ...nycacFacebookEventSources,
+    ...facebookEventArchiveSourceRecords20260716
   ],
   claims: [
     {
@@ -332,7 +340,8 @@ const knowledgeBankInput = {
     ...kcTownHallFullPopulationClaimRecords20260715,
     ...nycArtCXArchivalClaimRecords20260715,
     ...urbanhermitFullPopulationClaimRecords20260715,
-    ...nycacFacebookEventClaims
+    ...nycacFacebookEventClaims,
+    ...facebookEventArchiveClaimRecords20260716
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -358,7 +367,8 @@ const knowledgeBankInput = {
     ...kcTownHallFullPopulationResearchInquiries20260715,
     ...nycArtCXArchivalResearchInquiries20260715,
     ...urbanhermitFullPopulationResearchInquiries20260715,
-    ...nycacFacebookEventInquiries
+    ...nycacFacebookEventInquiries,
+    ...facebookEventArchiveResearchInquiries20260716
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -416,9 +426,18 @@ const knowledgeBankInput = {
     {
       id: "196-sunday-dinner",
       surface: "/work/196-sunday-dinner",
-      sourceOrder: ["SRC-COMMUNITY-GREENE-HILL-QA-2017"],
+      sourceOrder: [
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+        "SRC-FACEBOOK-EVENTS-PUBLIC-SAFE-AGGREGATE-2026"
+      ],
       occurrences: [
-        { id: "weekly-community-dinners", claimId: "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-2017", projection: "case-study" }
+        { id: "weekly-community-dinners", claimId: "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-2017", projection: "case-study" },
+        {
+          id: "public-milestone-continuity",
+          claimId: "CLM-SUNDAY-DINNER-MILESTONES-2014-2016",
+          projection: "case-study",
+          sourceIds: ["SRC-FACEBOOK-EVENTS-PUBLIC-SAFE-AGGREGATE-2026"]
+        }
       ]
     },
     {
@@ -427,7 +446,8 @@ const knowledgeBankInput = {
       sourceOrder: [
         "SRC-X-WOWLIST-PUNKS-USE-2015",
         "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
-        "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026"
+        "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
+        "SRC-FACEBOOK-WOWLIST-PROFILE-2026"
       ],
       occurrences: [
         {
@@ -447,6 +467,12 @@ const knowledgeBankInput = {
           claimId: "CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT",
           projection: "case-study",
           sourceIds: ["SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026"]
+        },
+        {
+          id: "facebook-mission-language",
+          claimId: "CLM-WOWLIST-FACEBOOK-MISSION-STATEMENT-2026",
+          projection: "case-study",
+          sourceIds: ["SRC-FACEBOOK-WOWLIST-PROFILE-2026"]
         }
       ]
     },

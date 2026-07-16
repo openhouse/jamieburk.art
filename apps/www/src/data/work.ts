@@ -500,12 +500,13 @@ const workItemsInput = [
       "Organizer-facing distribution workflows",
       "Public evidence of organizer use and community-created onboarding",
       "Peer attribution of Jamie's maker role",
+      "The project's public event-sharing and community-building mission language",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Activity across roughly 35 city ecosystems"
     ],
     knownOpenProtected: {
       known:
-        "The cited organizer, peer, and aggregate records establish the three public claims above.",
+        "The cited organizer, peer, aggregate, and public mission records establish the four public claims above.",
       open:
         "The @WOWListNYC to @wowlist handle lineage and use beyond the documented records remain unresolved.",
       protected:
@@ -554,11 +555,12 @@ const workItemsInput = [
       "300+ hosted gatherings",
       "20+ resident artists supported",
       "A documented residency workflow covering acceptance, pre-arrival coordination, space configuration, and independent access",
-      "A recurring invitation and continuity system covering event themes, invitations, replies, attendance signals, and follow-up"
+      "A recurring invitation and continuity system covering event themes, invitations, replies, attendance signals, and follow-up",
+      "Public event records identifying the 100th gathering in 2014 and the 200th in 2016, with Julia Fredenburg and Jamie Burkart displayed as organizers of the latter"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts; protected operating records directly document onboarding and continuity workflows.",
+        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts; protected operating records document onboarding and continuity workflows, while public event metadata records 100th and 200th milestones and shared stewardship.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:

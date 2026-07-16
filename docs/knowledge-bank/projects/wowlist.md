@@ -10,6 +10,19 @@ in Replies, bringing the deduplicated union to 38. This completeness is bounded
 to the displayed profile control and does not prove that no earlier post was
 deleted, withheld, or left unindexed.
 
+The current public [WOW List Facebook Page](https://www.facebook.com/wowlist/)
+preserves the project's own purpose and motto: an event-sharing tool and
+community-building project where "Being there changes everything." That
+first-party mission language is selected for the case study, with an explicit
+boundary that it does not independently prove adoption or impact.
+
+An authenticated Page-context review of Facebook Past Events displayed `No
+events to show`, and exact WOW List matching in Jamie's capture-date personal
+index recovered no event record. This is a bounded not-recovered result, not a
+claim that WOW List never created, hosted, cohosted, or circulated a Facebook
+event. See [the Facebook event archival-production note](facebook-events.md)
+for the population method and remaining owner-export and archive inquiries.
+
 The complete population comprises 16 original posts, 6 replies, and 16 reposts.
 Thirty-one records contain an external link, producing 35 distinct short-URL
 occurrences. The 22 account-authored records show recurring operating uses:
