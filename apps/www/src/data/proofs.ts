@@ -519,8 +519,10 @@ export const proofClaims: ProofClaim[] = [
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Public records identify him as the proposal's presenter; the Council accepted the Board recommendation and appropriated $490,539 to the project account in 2019. A 2022 update listed no funds disbursed, and a 2024 ordinance reappropriated the unused award.",
     sourceBasis:
       "Approved resume language, public-safe project context, CCED Board minutes naming Jamie as presenter, 2019 Council appropriation and resolution records, the 2022 project-status table, and the 2024 reappropriation ordinance.",
+    sourceNote:
+      "When the funding lifecycle appears in the downloadable resume, include a compact public-record note and path to the case-study source links.",
     guardrail:
-      "Appropriation must never be compressed into receipt: keep the no-disbursement and reappropriation endpoint attached to any public funding language.",
+      "Appropriation must never be compressed into receipt: keep the no-disbursement and reappropriation endpoint attached to any public funding language, and retain the public-record source path in the downloadable resume.",
     doNotSay: [
       "KC Town Hall received or spent $490,539",
       "The project was completed",
@@ -542,7 +544,7 @@ export const proofClaims: ProofClaim[] = [
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
     canonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026"],
     requiredCanonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "source-backed-team-memory-method",

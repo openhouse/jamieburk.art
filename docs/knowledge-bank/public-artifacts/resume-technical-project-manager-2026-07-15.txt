@@ -41,7 +41,7 @@ SELECTED IMPACT
                                                                                           Jamie Burkart | Technical Project Manager | July 2026
 EXPERIENCE
 
-THICK ARTS - Founder, Technical Project Manager & Web Systems Lead                                                                          2012-Present
+THICK ARTS - Founder, Technical Project Manager & Web Systems Lead                                                                                2012-Present
 New York, NY / Remote
     Lead an independent web strategy, design, and engineering studio delivering maintainable publishing systems, campaign hubs, e-
     commerce workflows, documentation infrastructure, resource libraries, and post-launch maintenance.
@@ -50,7 +50,7 @@ New York, NY / Remote
     Led digital transformation work for Harry J. Epstein Company across e-commerce, analytics, content, marketing, and operational
     workflows while preserving the company's distinctive institutional voice.
 
-NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy                                                         2017-Present
+NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy                                                               2017-Present
 Communications
 New York, NY
     Build and steward campaign and knowledge infrastructure for commercial rent stabilization, storefront stability, cultural-space advocacy,
@@ -62,26 +62,28 @@ New York, NY
     Developed policy-neutral public-data framing around commercial vacancy, occupancy, lease-cost indicators, storefront data, Local Law
     157, and RPIE-derived aggregate reporting.
 
-WOWList.org - Co-Founder, Product & Community Systems                                                                                           2015-2020
+WOWList.org - Co-Founder, Product & Community Systems                                                                                                 2015-2020
 New York, NY / Remote
     Co-built a community event-calendar and distribution platform organized around user-followed keyword communities, natural-language
     event entry, weekly digest emails, embeddable calendars, and low-cost deployment.
 
-196 Artists Residency - Founder & Systems Steward                                                                                           2020-Present
+196 Artists Residency - Founder & Systems Steward                                                                                                 2020-Present
 Brooklyn, NY
     Jamie reports supporting 20-plus resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and
     continuity systems.
 
-Sunday Dinner - Co-Host & Systems Steward with Julia Fredenberg                                                                             2012-Present
+Sunday Dinner - Co-Host & Systems Steward with Julia Fredenberg                                                                                   2012-Present
 Brooklyn, NY
     Co-hosted an open weekly community gathering with Julia Fredenberg through invitation, hospitality, facilitation, participatory
     documentation, and continuity practices; Jamie's approved resume reports 300-plus documented gatherings.
 
-KC Town Hall LLC - Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development                                                   2015-2024
+KC Town Hall LLC - Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development                                                         2015-2024
 Kansas City, MO
     Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. On September 26,
     2019, the City Council accepted the Board's recommendation and appropriated $490,539 to the project account; the agreement was not
-    completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award.
+    completed, no funds were disbursed, and in 2024 the Council reappropriated the unused award.[1]
+[1] Public-record sources: KCMO CCED Board minutes (June 2019), Ordinance 190642 and Resolution 190649 (September 26, 2019), the May 2022 CCED project-status
+table, and Ordinance 240317 (March 28, 2024). Source links: jamieburk.art/work/kc-town-hall.
 
 EDUCATION & PROFESSIONAL DEVELOPMENT
 
@@ -96,5 +98,5 @@ Valid New York State driver's license. Authorized to work in the U.S.; no U.S. s
 
 
 
-                                                                                            Jamie Burkart | Technical Project Manager | July 2026
+                                                                                                  Jamie Burkart | Technical Project Manager | July 2026
 

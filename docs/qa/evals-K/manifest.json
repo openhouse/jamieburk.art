@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "2a78d9108abc01add7a4bfea6fb07e355d77b3a2d45c5f0fa75bd1f4a15295bf",
+  "sourceSha256": "76fe3de5ec2ebccb4802b7cd06a3bf21dab2e898402c02cee6c2d2cdf82ea9e5",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -157,7 +157,7 @@
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "viewport": "PDF page 2 at 144 DPI",
       "artifactPath": "docs/qa/evals-K/resume-page-2.png",
-      "artifactSha256": "252e37fe2ea4978e2a6ed5c900cb3c94b8d9fdc31d4ca87e663e25cb6ba1d280"
+      "artifactSha256": "2aeedcb5621f40c0f5e6fa8b23dd24088179f1509ac8941bde11a367f0a55681"
     }
   ]
 }

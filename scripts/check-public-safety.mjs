@@ -269,6 +269,14 @@ if (!existsSync(resumePath)) {
   }
 
   if (
+    !/Public-record\s+sources:\s+KCMO\s+CCED\s+Board\s+minutes/i.test(resumeText) ||
+    !/Ordinance\s+190642\s+and\s+Resolution\s+190649/i.test(resumeText) ||
+    !/jamieburk\.art\/work\/kc-town-hall/i.test(resumeText)
+  ) {
+    addFailure(resumePath, "resume PDF is missing the governed KC Town Hall public-record source note");
+  }
+
+  if (
     !/Jamie\s+co-built\s+WOWList\s+with\s+Richard\s+Caceres;\s+historical\s+production\s+records\s+show\s+use\s+across\s+35-plus\s+city\s+scenes,\s+each\s+with\s+at\s+least\s+50\s+geocoded\s+posts\/events/i.test(
       resumeText
     ) || /35-plus\s+active\s+city-scene\s+tags/i.test(resumeText)

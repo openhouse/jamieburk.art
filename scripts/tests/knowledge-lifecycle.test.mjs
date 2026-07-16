@@ -482,6 +482,10 @@ test("the downloadable resume is an exact governed destination", () => {
   assert.match(validateKnowledgeLifecycle(unauthorized).join("\n"), /Active canonical projection CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019 lacks current human approval/);
 
   const manifest = knowledgeLifecycle.proofSurfaceManifests.find((item) => item.route === route);
+  assert.ok(manifest?.selectionCriteria.includes("Render a compact public-record source path for citation-required claims"));
+  assert.ok(manifest?.guardrails.some((item) => /public-record source note and path/i.test(item)));
+  const kcTownHallProof = proofClaims.find(({ id }) => id === "kc-town-hall-public-benefit-documentation");
+  assert.match(kcTownHallProof?.sourceNote ?? "", /downloadable resume.*public-record note.*source links/i);
   assert.ok(manifest?.canonicalClaimIds.includes("CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017"));
   assert.ok(manifest?.canonicalClaimIds.includes("CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE"));
   const sundayDinnerDecision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-SUNDAY-DINNER-WEEKLY-PROMOTE");

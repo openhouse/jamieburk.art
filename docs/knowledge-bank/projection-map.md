@@ -124,6 +124,7 @@ composed public surface, not a claim database.
 - Keep the HJE metric self-reported and contributory
 - Appropriation is not receipt
 - Keep no disbursement and reappropriation attached to the KC amount
+- Keep the public-record source note and path attached to the KC claim in the downloadable resume
 - Keep Sunday Dinner's 300-plus gatherings distinct from 196 Artists Residency's 20-plus resident artists
 - Credit Julia Fredenberg wherever Sunday Dinner hosting is named
 - Keep both participation aggregates explicitly self-reported
