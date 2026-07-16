@@ -179,3 +179,12 @@ protected; the public repo keeps a minimized ledger, integrity digests,
 selected mission-relevant events, and strict response and stakeholder
 boundaries. See the
 [research run](runs/2026-07-16-facebook-personal-wowlist-events.md).
+
+The July 16 [WOW List Facebook post pass](projects/wowlist-facebook-posts.md)
+accounts for all 54 post records exposed by the authenticated legacy Lifetime
+table. It separates canonical public IDs from legacy management IDs, records
+51 Jamie Page-publisher bylines and three video redirects without recovered
+bylines, inventories 42 normalized destinations, and reconciles one 29-row
+native owner-export segment exactly. Raw social copy, administrator analytics,
+identities, and authenticated state remain protected. See the
+[research run](runs/2026-07-16-wowlist-facebook-posts-full-population.md).

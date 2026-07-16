@@ -40,7 +40,7 @@ test("multi-source occurrences preserve editorial order", () => {
 });
 
 test("new case-study citations expose only selected public sources", () => {
-  assert.equal(resolveCitationReferences("wowlist").length, 14);
+  assert.equal(resolveCitationReferences("wowlist").length, 15);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
   assert.equal(resolveCitationReferences("fair-rent-nyc").length, 12);
   assert.equal(resolveCitationReferences("kc-town-hall").length, 12);
@@ -94,6 +94,20 @@ test("new case-study citations expose only selected public sources", () => {
       (item) => item.source.id
     ),
     ["SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "wowlist",
+      "facebook-publishing-stewardship"
+    ).sources.map((item) => item.source.id),
+    ["SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026"]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "wowlist",
+      "facebook-distribution-practice"
+    ).sources.map((item) => item.source.id),
+    ["SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026"]
   );
   assert.deepEqual(
     resolveCitationOccurrence("wowlist", "product-support-loop").sources.map(

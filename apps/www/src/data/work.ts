@@ -421,7 +421,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "A protected aggregate review of the July 2017 production database snapshot, Greene Hill Food Co-op's 2017 profile, an independent sbdiy calendar integration, and a reproducible 38-of-38 public-account corpus with 35 posted short URLs resolved and account authorship boundaries retained.",
+      "A protected aggregate review of the July 2017 production database snapshot, Greene Hill Food Co-op's 2017 profile, an independent sbdiy calendar integration, a reproducible 38-of-38 X corpus, and a public-safe 54-post Facebook owner record with 51 Jamie Page-publisher bylines and collective-credit boundaries retained.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -433,6 +433,7 @@ const workItemsInput = [
       "Organizer-facing distribution workflows",
       "Three recovered public product-support conversations and community-made onboarding",
       "Complete 38-item public social corpus",
+      "Facebook publishing stewardship across a surviving 54-post owner record",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],

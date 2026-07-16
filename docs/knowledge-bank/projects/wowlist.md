@@ -90,6 +90,22 @@ Mission-relevant sources and leads include:
 - the KQED Ghost Ship vigil video;
 - Elise Granata's archived *Zines 2.0*, retained as field context for why self-authored archives and connective infrastructure mattered to DIY communities, not as coverage of WOW List.
 
+## Facebook publishing population
+
+An authenticated July 15-16, 2026 pass reconciled all 54 post records exposed
+by Meta's legacy Lifetime table. The surviving chronology spans April 25,
+2015-March 22, 2018. All 51 renderable post details identify Jamie as Page
+publisher; three video redirects do not expose a byline. This supports Jamie's
+bounded publishing stewardship as one of WOW List's co-builders, not sole
+authorship of shared material or sole ownership of the project.
+
+The [public-safe post ledger](../corpora/wowlist-facebook-posts-full-population-2026-07-16.json)
+preserves 54 canonical post IDs, 54 distinct legacy management IDs, 42
+normalized destinations, mission classifications, and explicit source and
+traction boundaries. One recovered native owner-export file exactly matches
+29 consecutive canonical records; two other completed export files remain
+unrecovered because the browser client blocked their downloads.
+
 ## Projection decision
 
 Promote:
@@ -108,16 +124,23 @@ Hold:
 - complete adoption or impact language;
 - any claim that *Zines 2.0* covered WOW List;
 - a same-account bridge between `@wowlistnyc` and `@wowlist` until a dated public source is recovered.
+- Meta administrator analytics, current follower counts, and stakeholder-group engagement totals.
+- any claim that linked organizations endorsed WOW List or that circulation caused campaign outcomes.
 
 ## Next research
 
 1. Classify all 35 destinations as live, archived, redirected, dead, or not recovered.
 2. Resolve or preserve uncertainty around the historical `@wowlistnyc` label.
 3. Seek public or collaborator evidence that can distinguish account creation, identity design, administration, posting strategy, and individual post authorship.
-4. Request a Meta Page owner export or recover dated Facebook captures: one authenticated July 16, 2026 rendering exposed no Events section, a volatile interface observation rather than evidence of no historical events.
+4. Recover the two browser-blocked Meta Page export files and verify them at file level; one 29-row native export segment already reconciles exactly.
+5. Seek identity-complete evidence before making stakeholder-group Facebook engagement claims.
 
 ## Active Claim Projection
 
 The project account paired product support with field learning: a member-made
 tutorial, grassroots venue guidance, Allied Media Conference, peer funding
 infrastructure, and an archived article about self-authored DIY documentation.
+
+The Facebook Page extended that operating practice: calendar onboarding and
+participatory feedback sat alongside event distribution, cultural-space
+recovery and funding, civic-action calendars, and community care.

@@ -653,6 +653,7 @@ export const sourceExpansionPages = [
       "SRC-WOWLIST-X-CORPUS-2026-07-15",
       "SRC-WOWLIST-POPULAR-VOTE-2016",
       "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
+      "SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026",
       "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
     ],
     occurrences: [
@@ -701,6 +702,18 @@ export const sourceExpansionPages = [
           "SRC-WOWLIST-POPULAR-VOTE-2016",
           "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016"
         ]
+      },
+      {
+        id: "facebook-publishing-stewardship",
+        claimId: "CLM-WOWLIST-FACEBOOK-PUBLISHING-STEWARDSHIP",
+        projection: "case-study",
+        sourceIds: ["SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026"]
+      },
+      {
+        id: "facebook-distribution-practice",
+        claimId: "CLM-WOWLIST-FACEBOOK-DISTRIBUTION-PRACTICE",
+        projection: "case-study",
+        sourceIds: ["SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026"]
       },
       {
         id: "technical-contribution",
