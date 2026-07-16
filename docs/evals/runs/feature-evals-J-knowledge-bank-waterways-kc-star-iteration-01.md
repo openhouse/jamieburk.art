@@ -9,6 +9,7 @@
 - Selected failure: `KB-010 - Recursive optimization integrity`
 - Baseline judge session: `019f6cdd-9de5-7aa1-9e1b-5fd365ec3fcc`
 - Certification 1 judge session: `019f6ce3-d9e9-7450-8826-fb1ed9d62485`
+- Certification 2 judge session: `019f6ce9-0d5b-7a22-88b2-4f90d67663df`
 
 ## Scope
 
@@ -51,14 +52,18 @@ iteration record. The knowledge content and frozen rubric remain unchanged.
   `knowledge-bank-development-waterways-kc-star-certification-01-0b6b6446.json`
 - Certification 1 weighted score: `0.955`
 - Certification 1: all ten criteria passed; consecutive passing runs `1`
-- Certification status: pending one additional fresh independent passing
-  judgment.
+- Certification 2 scorecard:
+  `knowledge-bank-development-waterways-kc-star-certification-02-0b6b6446.json`
+- Certification 2 weighted score: `0.955`
+- Certification 2: all ten criteria passed; consecutive passing runs `2`
+- Frozen scorer result: eligible, with no errors or blockers.
 
 ## Scores
 
 - Score before: weighted `0.9325`; `KB-010 = 0`; not eligible.
 - Score after: weighted `0.955`; `KB-001` through `KB-010` passed; the only
-  scorer blocker is the required second consecutive passing run.
+  scorer blocker after certification 1 was the required second consecutive
+  passing run. Certification 2 cleared that blocker without content changes.
 
 ## Regressions
 
@@ -74,7 +79,7 @@ iteration record. The knowledge content and frozen rubric remain unchanged.
 
 ## Decision
 
-`revise`
+`stop_threshold_met`
 
-Obtain two fresh independent passing judgments on the unchanged content
-candidate, persisting each scorecard before the next judgment.
+The exact candidate has two fresh independent passing judgments against the
+frozen rubric. Stop recursive content revision for this source-ingestion pass.
