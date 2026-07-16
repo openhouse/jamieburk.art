@@ -223,3 +223,21 @@ The Urbanhermit eval reaches **100 / 100** and the full repository check passes,
 including typecheck, lint, production build, public safety, route checks, and
 the 42-observation visual-evidence matrix. Exact-head independent portfolio
 scores are reported on the pull request.
+
+## WOW List Facebook selective release pass
+
+- Added a governed 57-record Facebook post census and source trail without
+  exposing raw post bodies, ordinary personal identities, private account
+  state, or protected source material.
+- Replaced the WOW List case study's dense social-account paragraph with one
+  hiring-relevant sentence that names Jamie's Facebook publishing role,
+  credits Richard Caceres, and keeps six unresolved records explicit.
+- Projected what became usable: contributor onboarding, event circulation, and
+  practical support routing. Full-population counts and source-network depth
+  remain available for later compositions without burdening the current page.
+- Kept Facebook engagement, adoption, attendance, endorsement, and impact out
+  of the public argument because no stable full-population dataset supports
+  those claims.
+
+The exact public page, citation registry, visual evidence, and complete release
+gate must be refreshed before final independent application-readiness review.

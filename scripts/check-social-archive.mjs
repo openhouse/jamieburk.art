@@ -449,7 +449,7 @@ const activeClaims = [
   ["CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT", "/work/callnyc"],
   ["CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", "/work/fair-rent-nyc"],
   ["CLM-WOWLIST-HISTORICAL-SCALE", "/work/wowlist"],
-  ["CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", "/work/wowlist"],
+  ["CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT", "/work/wowlist"],
   ["CLM-KCTH-SOCIAL-SERVICE-REPORTING", "/work/kc-town-hall"]
 ];
 for (const [claimId, surface] of activeClaims) {
@@ -458,6 +458,9 @@ for (const [claimId, surface] of activeClaims) {
   const page = knowledgeBank.pages.find((item) => item.surface === surface);
   expect(page?.occurrences.some((occurrence) => occurrence.claimId === claimId), `${claimId} is not registered on ${surface}`);
 }
+
+const retiredWowListSocialProjection = claimById.get("CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT");
+expect(retiredWowListSocialProjection?.projections.every(({ status }) => status !== "active"), "The replaced WOW List social-account projection must remain retired from the case study");
 
 const wowListScaleClaim = claimById.get("CLM-WOWLIST-HISTORICAL-SCALE");
 const wowListPublicThresholdTexts = [

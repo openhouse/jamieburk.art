@@ -3,7 +3,7 @@
 **Review date:** July 15, 2026  
 **Project:** WOW List  
 **Surface:** Facebook page posts  
-**Projection decision:** Knowledge bank only; no website copy changed in this pass
+**Projection decision:** Selective case-study projection; the corpus remains in the knowledge bank
 
 ## Answer first
 
@@ -223,11 +223,16 @@ The public repository excludes:
 
 ## Website projection decision
 
-No website page was changed in this pass. The knowledge bank now has much
-stronger material available, but the public portfolio should use it only when a
-specific hiring-reader need justifies the space. The most useful future
-projection is likely one sentence clarifying Jamie's operating role, not a new
-social-media section or a new public evidence page.
+One bounded role-and-operating-practice sentence now appears on the WOW List
+case study because it resolves a material hiring-reader gap: Jamie's Facebook
+publishing responsibility had remained implicit. The sentence credits Richard
+Caceres, keeps the 51/0/6 manager audit attached, and describes the practical
+work of onboarding contributors, circulating events, and routing support.
+
+The population census, source trail, stakeholder classifications, and open
+engagement questions remain knowledge-bank depth. They do not become a new
+social-media section or public evidence route, and the site makes no Facebook
+engagement, adoption, attendance, endorsement, or impact claim.
 
 ## Next research
 

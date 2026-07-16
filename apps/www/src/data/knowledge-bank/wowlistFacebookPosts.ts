@@ -448,6 +448,13 @@ export const wowlistFacebookPostClaims = [
     status: "confirmed-with-boundary",
     projections: [
       {
+        key: "case-study",
+        text: "Within the project he co-built with Richard Caceres, Jamie managed WOW List's Facebook publishing across the recovered 2015-2018 corpus, using the page to onboard contributors, circulate events, and connect organizers with practical support; a manager audit attributes 51 of 57 recovered posts to Jamie, none to another publisher, and leaves six unresolved.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/wowlist"],
+      },
+      {
         key: "archive-note",
         text: "A record-by-record manager audit attributes 51 of 57 recovered WOW List Facebook posts to Jamie, attributes none to another publisher, and leaves six unresolved. This supports Jamie's account that he managed the project's Facebook publishing while preserving Richard Caceres's shared project credit.",
         status: "active",

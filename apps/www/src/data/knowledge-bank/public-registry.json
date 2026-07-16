@@ -66,28 +66,6 @@
       ]
     },
     {
-      "id": "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
-      "title": "Authenticated WOW List X full-population archival review",
-      "organization": "Jamie Burkart portfolio knowledge bank",
-      "kind": "research-run",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-15",
-      "metadataVerifiedAt": "2026-07-15",
-      "metadataVerifiedBy": "Codex authenticated public-web review",
-      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-K/docs/knowledge-bank/research/2026-07-15-project-social-media-archive-production.md",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Authenticated full-population review of @wowlist, July 15, 2026.",
-      "publicNote": "All 38 profile-counted records were recovered; the minimized fixture reproduces record type and posted-link counts while significant sources and bounded external-use signals remain separately citable.",
-      "doesNotEstablish": [
-        "deleted or unindexed activity outside the displayed population",
-        "individual authorship of every account post",
-        "current product availability",
-        "complete adoption",
-        "attendance or endorsement"
-      ]
-    },
-    {
       "id": "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15",
       "title": "WOW List public-safe production archive summary",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -109,95 +87,6 @@
         "unique active people",
         "Jamie's sole causation of adoption",
         "permission to publish raw records"
-      ]
-    },
-    {
-      "id": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
-      "title": "WOW List first recovered authored post",
-      "organization": "WOW List",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2014-02-12",
-      "accessedAt": "2026-07-15",
-      "metadataVerifiedAt": "2026-07-15",
-      "metadataVerifiedBy": "Codex authenticated public-web review",
-      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "WOW List, first recovered authored post, February 12, 2014.",
-      "publicNote": "The post credits Richard and Jamie and connects the project to calendars made at Sunday Dinner.",
-      "doesNotEstablish": [
-        "sole authorship",
-        "complete collaborator roster",
-        "platform scale",
-        "current availability"
-      ]
-    },
-    {
-      "id": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
-      "title": "WOW List public product-support thread",
-      "organization": "WOW List",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2016-09-01",
-      "accessedAt": "2026-07-15",
-      "metadataVerifiedAt": "2026-07-15",
-      "metadataVerifiedBy": "Codex authenticated public-web review",
-      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "WOW List public product-support thread, September 1, 2016.",
-      "publicNote": "The thread describes the project as growing from Sunday Dinner and explains historical user workflows.",
-      "doesNotEstablish": [
-        "current service availability",
-        "complete feature history",
-        "individual authorship of every platform component"
-      ]
-    },
-    {
-      "id": "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
-      "title": "SHELBY'S WOWLIST TUTORIAL - for my new fave events website",
-      "organization": "Shelby Turner / YouTube",
-      "author": "Shelby Turner",
-      "kind": "institutional-web-page",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2015-08-14",
-      "accessedAt": "2026-07-15",
-      "metadataVerifiedAt": "2026-07-15",
-      "metadataVerifiedBy": "Codex authenticated public-web review",
-      "canonicalUrl": "https://www.youtube.com/watch?v=nQg47LtixPI",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Shelby Turner, 'SHELBY'S WOWLIST TUTORIAL - for my new fave events website,' YouTube, 2015.",
-      "publicNote": "Public video metadata and the account post identify an independently published WOW List tutorial.",
-      "doesNotEstablish": [
-        "complete tutorial contents without transcript review",
-        "platform-wide adoption",
-        "formal partnership",
-        "Jamie's authorship",
-        "current product availability"
-      ]
-    },
-    {
-      "id": "SRC-WOWLIST-SBDIY-ADOPTION",
-      "title": "Santa Barbara DIY resource page",
-      "organization": "Santa Barbara DIY",
-      "kind": "institutional-web-page",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-15",
-      "metadataVerifiedAt": "2026-07-15",
-      "metadataVerifiedBy": "Codex authenticated public-web review",
-      "canonicalUrl": "https://www.sbdiy.org/",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Santa Barbara DIY resource page, accessed July 15, 2026.",
-      "publicNote": "The page directs visitors to add events to its WOW List calendar and links the corresponding WOW List community.",
-      "doesNotEstablish": [
-        "current WOW List availability",
-        "usage volume",
-        "formal partnership",
-        "Jamie's individual role",
-        "city-ecosystem scale"
       ]
     },
     {
@@ -312,6 +201,30 @@
         "attendance",
         "sole production by Jamie",
         "the complete Sunday Dinner history"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026-07-15",
+      "title": "WOW List Facebook post public-safe full-population census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex public-fixture and protected-input reconciliation",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe full-population census of 57 recovered WOW List Facebook posts, July 15, 2026.",
+      "publicNote": "The fixture gives all 57 recovered post identities a public-safe content and live-review disposition, preserves aggregate publishing and source patterns, inventories 65 distinct public posted URLs, and excludes raw post bodies, comments, contacts, ordinary individual source-account names, and authenticated-session state.",
+      "doesNotEstablish": [
+        "a complete native Meta owner export",
+        "the contents or publisher of the six unattributed records",
+        "that no post was deleted, withheld, or omitted before capture",
+        "shared-source authorship by Jamie",
+        "post-level reach, audience identity, endorsement, adoption, or impact"
       ]
     },
     {
@@ -899,91 +812,6 @@
       ]
     },
     {
-      "id": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "The shared project's 38 records displayed by @wowlist at review time preserve its origin and show the account providing user support, onboarding, event distribution, and rapid civic coordination. A bounded incoming review found 10 mission-relevant outside accounts; nine independently shared a WOW List URL. That is evidence of public use and distribution, not total adoption, attendance, or impact.",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/wowlist"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
-          "relationship": "direct-support",
-          "supports": [
-            "authenticated collection method",
-            "complete displayed-population reconciliation",
-            "bounded public stakeholder review",
-            "explicit stopping conditions and limitations"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
-          "relationship": "direct-support",
-          "supports": [
-            "38-of-38 population recovery",
-            "record-type and posted-link inventory",
-            "bounded stakeholder sample",
-            "dated interaction snapshot"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
-          "relationship": "direct-support",
-          "supports": [
-            "Richard and Jamie attribution",
-            "Sunday Dinner calendar provenance"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
-          "relationship": "direct-support",
-          "supports": [
-            "DIY community-calendar framing",
-            "historical organizer workflows"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
-          "relationship": "direct-support",
-          "supports": [
-            "independent organizer-facing tutorial"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-WOWLIST-SBDIY-ADOPTION",
-          "relationship": "direct-support",
-          "supports": [
-            "external local-calendar use"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "Keep credit shared with Richard, Sunday Dinner participants, organizers, and other collaborators.",
-        "Describe historical workflows rather than current service availability.",
-        "Treat 10 third-party accounts as a bounded reception sample, not a complete adoption census.",
-        "Treat 12 records with displayed interactions and the 2 reply, 20 repost, and 21 like snapshot as mutable interface observations, not unique people, reach, conversion, attendance, endorsement, or impact."
-      ]
-    },
-    {
       "id": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1152,6 +980,49 @@
         "The historical WOW List page may no longer resolve.",
         "The event-page link does not establish who entered the event into WOW List.",
         "Keep platform and Sunday Dinner credit shared."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Within the project he co-built with Richard Caceres, Jamie managed WOW List's Facebook publishing across the recovered 2015-2018 corpus, using the page to onboard contributors, circulate events, and connect organizers with practical support; a manager audit attributes 51 of 57 recovered posts to Jamie, none to another publisher, and leaves six unresolved.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "A record-by-record manager audit attributes 51 of 57 recovered WOW List Facebook posts to Jamie, attributes none to another publisher, and leaves six unresolved. This supports Jamie's account that he managed the project's Facebook publishing while preserving Richard Caceres's shared project credit.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/wowlist-facebook-posts.md"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026-07-15",
+          "relationship": "corroborating",
+          "supports": [
+            "public-safe attribution ledger",
+            "live-disposition accounting"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Say 'managed WOW List's Facebook publishing across the recovered corpus,' not 'authored every WOW List social post.'",
+        "The audit leaves six unresolved records: three unavailable wrappers and three video redirects.",
+        "Attached or quoted source statements retain their original authorship even when Jamie published the WOW List wrapper.",
+        "Richard Caceres's shared project ownership and contribution remain explicit.",
+        "The evidence does not establish Jamie's operation of every WOW List social platform."
       ]
     },
     {
@@ -1920,12 +1791,7 @@
       "surface": "/work/wowlist",
       "sourceOrder": [
         "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15",
-        "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
-        "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
-        "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
-        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
-        "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
-        "SRC-WOWLIST-SBDIY-ADOPTION",
+        "SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026-07-15",
         "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
       ],
       "occurrences": [
@@ -1938,16 +1804,11 @@
           ]
         },
         {
-          "id": "social-provenance-support",
-          "claimId": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+          "id": "facebook-publishing-management",
+          "claimId": "CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
-            "SRC-WOWLIST-FULL-POPULATION-2026-07-15",
-            "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
-            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
-            "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
-            "SRC-WOWLIST-SBDIY-ADOPTION"
+            "SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026-07-15"
           ]
         },
         {

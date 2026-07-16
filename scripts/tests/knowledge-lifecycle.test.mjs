@@ -316,7 +316,8 @@ test("new public projections preserve exact-surface human approval", () => {
     ["CND-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING", "/work/196-sunday-dinner"],
     ["CND-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL", "/work/fair-rent-nyc"],
     ["CND-NYCA-COMMERCIAL-RENT-ADVOCACY", "/work/fair-rent-nyc"],
-    ["CND-KC-TOWN-HALL-PUBLIC-RECORD", "/work/kc-town-hall"]
+    ["CND-KC-TOWN-HALL-PUBLIC-RECORD", "/work/kc-town-hall"],
+    ["CND-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT", "/work/wowlist"]
   ]);
   const superseded = new Set(
     knowledgeLifecycle.promotionDecisions.map(({ supersedesDecisionId }) => supersedesDecisionId).filter(Boolean)
@@ -549,7 +550,7 @@ test("the WOW List exact-route manifest inventories every rendered canonical cla
   ];
   assert.match(
     validateKnowledgeLifecycle(omission).join("\n"),
-    /Rendered canonical claim CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT is missing from exact manifest for \/work\/wowlist/
+    /Rendered canonical claim CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT is missing from exact manifest for \/work\/wowlist/
   );
 });
 

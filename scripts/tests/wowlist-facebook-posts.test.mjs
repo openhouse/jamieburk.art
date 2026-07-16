@@ -180,23 +180,33 @@ test("knowledge bank integrates governed Facebook sources and claims", () => {
   );
 });
 
-test("Facebook findings remain in the knowledge bank, not the website", async () => {
+test("only the bounded Facebook publishing role projects to the WOW List case study", async () => {
   const governedClaimIds = new Set(Object.values(wowlistFacebookPostClaimIds));
-  assert.ok(
-    knowledgeBank.pages.every((page) =>
-      page.occurrences.every(
-        (occurrence) => !governedClaimIds.has(occurrence.claimId),
-      ),
-    ),
+  const governedOccurrences = knowledgeBank.pages.flatMap((page) =>
+    page.occurrences
+      .filter((occurrence) => governedClaimIds.has(occurrence.claimId))
+      .map((occurrence) => ({ page: page.surface, ...occurrence })),
   );
+  assert.deepEqual(governedOccurrences, [
+    {
+      page: "/work/wowlist",
+      id: "facebook-publishing-management",
+      claimId: wowlistFacebookPostClaimIds.publishingManagement,
+      projection: "case-study",
+      sourceIds: [wowlistFacebookPostSourceIds.census],
+    },
+  ]);
 
   const registryText = JSON.stringify(publicRegistry);
   assert.doesNotMatch(registryText, /INTAKE-WOWLIST-FACEBOOK-POSTS/);
-  assert.doesNotMatch(registryText, /CLM-WOWLIST-FACEBOOK/);
+  assert.match(registryText, /CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT/);
+  assert.doesNotMatch(registryText, /CLM-WOWLIST-FACEBOOK-POST-POPULATION/);
+  assert.doesNotMatch(registryText, /CLM-WOWLIST-FACEBOOK-OPERATING-PRACTICE/);
+  assert.doesNotMatch(registryText, /CLM-WOWLIST-FACEBOOK-CARE-ADVOCACY-ARC/);
 
   const report = await readFile(reportPath, "utf8");
-  assert.match(report, /Projection decision.*Knowledge bank only/i);
-  assert.match(report, /no website page was changed/i);
+  assert.match(report, /Projection decision.*selective case-study projection/i);
+  assert.match(report, /one bounded role-and-operating-practice sentence/i);
   assert.doesNotMatch(report, /\/proofs\b/i);
 });
 

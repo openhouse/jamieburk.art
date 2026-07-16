@@ -409,7 +409,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     canonicalClaimIds: [
       "CLM-WOWLIST-HISTORICAL-SCALE",
-      "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+      "CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT",
       "CLM-FACEBOOK-WOWLIST-IN-PRACTICE"
     ],
     requiredCanonicalClaimIds: ["CLM-WOWLIST-HISTORICAL-SCALE"],

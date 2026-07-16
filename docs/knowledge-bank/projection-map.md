@@ -306,7 +306,7 @@ composed public surface, not a claim database.
 ### Required Canonical Claims
 
 - `CLM-WOWLIST-HISTORICAL-SCALE`
-- `CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT`
+- `CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT`
 - `CLM-FACEBOOK-WOWLIST-IN-PRACTICE`
 
 ### Exclusions
@@ -315,6 +315,9 @@ composed public surface, not a claim database.
 - Official city chapters
 - Unsupported current-status claims
 - Complete adoption claims
+- The six unresolved publisher identities
+- Attached-source authorship
+- Facebook engagement or impact
 - Traffic or conversion claims from one link
 
 ### Guardrails
@@ -322,8 +325,9 @@ composed public surface, not a claim database.
 - Protect user data
 - Define the 35+ city-scene figure by at least 50 geocoded posts/events
 - Treat the Sunday Dinner link as one concrete route
+- Keep the 51/0/6 publisher audit bounded to the recovered Facebook corpus
 - Keep social counters out of impact claims
-- Keep collective credit visible
+- Keep Richard Caceres's shared-project credit visible
 ## `/work/196-sunday-dinner`
 
 **Surface:** `case-study`

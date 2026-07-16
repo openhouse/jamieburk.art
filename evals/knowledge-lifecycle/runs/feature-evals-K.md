@@ -387,3 +387,24 @@ request. Production publication remains Jamie's explicit decision.
 The dedicated Urbanhermit corpus eval reached **100 / 100** and the complete
 repository check passed. Exact-head independent lifecycle scores are reported
 on the pull request; production remains Jamie's explicit decision.
+
+## WOW List Facebook full-population lifecycle
+
+- Reconciled and dispositioned all 57 recovered Page-post identities, with a
+  fresh 53-record bidirectional live control and ten terminal no-growth checks
+  in each direction.
+- Preserved a public-safe record ledger, 65 distinct posted URLs, reproducible
+  mission and stakeholder classifications, selected close-read source records,
+  and protected raw account material.
+- Promoted a bounded Facebook publishing-management claim from the 51/0/6
+  manager audit while preserving Richard Caceres's shared-project credit and
+  attached-source authorship limits.
+- Added a superseding exact-surface decision for one sentence on
+  `/work/wowlist`; the population, operating-practice aggregates, care and
+  advocacy synthesis, and engagement questions remain knowledge-bank depth.
+- Added regression coverage preventing the three reserve claims from entering
+  the website and preventing engagement, adoption, attendance, endorsement, or
+  impact inference.
+
+The lifecycle validator and all 45 lifecycle tests pass. Fresh exact-head
+semantic evaluation remains required after the final artifact refresh.

@@ -250,3 +250,24 @@ explicit decision.
 The dedicated corpus score is **100 / 100** and the full deterministic suite
 passes. Exact-head independent Chad Lens scores are reported on the pull
 request.
+
+## WOW List Facebook publishing-role hill climb
+
+- The first exact-head Chad pair split **4 / 3**. Both judges accepted the
+  57-record census and its attribution, authorship, collaborator-credit, and
+  impact boundaries; the dissenting judge found that the public case study
+  still let the account, rather than Jamie, act.
+- Replaced the dense general social-account paragraph with one bounded role
+  sentence: Jamie managed Facebook publishing across the recovered 2015-2018
+  corpus and used the page for contributor onboarding, event circulation, and
+  practical support routing.
+- Kept Richard Caceres's shared-project credit and the 51/0/6 audit visible.
+  Six publisher identities remain unresolved, and the sentence makes no claim
+  about attached-source authorship, engagement, adoption, attendance,
+  endorsement, or impact.
+- Kept the full census, source ecology, stakeholder classifications, and open
+  engagement research in the knowledge bank rather than adding a social-media
+  section or public archive route.
+
+A fresh exact-head independent pair is required after this compositional
+repair.

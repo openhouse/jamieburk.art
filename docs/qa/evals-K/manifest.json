@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "capturedAt": "2026-07-15",
+  "capturedAt": "2026-07-16",
   "sourceInputs": [
     "apps/www/src",
     "apps/www/next.config.ts",
@@ -15,7 +15,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "94132daa9ba649bb0bb04b50b15719de11e91647d8172db2acb221f1cf6f3743",
+  "sourceSha256": "073698f786c4e6e45ee0c79af9babcd25e2f8764107d58592e4a8efbf385d3f6",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -131,13 +131,13 @@
       "route": "/work/wowlist",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/wowlist-desktop.png",
-      "artifactSha256": "96658e46ca3f291057cd8380729fdd840b73de6d8ba795567878e5e2c27c2fea"
+      "artifactSha256": "2e57e5ed2065c5188bcee12c36e7409d34f5f21bee5b259c869f7fa852cafe45"
     },
     {
       "route": "/work/wowlist",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
-      "artifactSha256": "78b74152df52aa33a140b6381d5749afff4fca94d21f14ca63fe0c7c9844444d"
+      "artifactSha256": "91851f79fa20ace57790cda84be35ec05f667866710a7d7fd87ba6dd66bf60f5"
     },
     {
       "route": "/work/kc-town-hall",
