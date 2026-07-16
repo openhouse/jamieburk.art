@@ -31,6 +31,25 @@ The project account answered each question with the current workflow or a stated
 
 The account also thanked a user for producing a public WOW List tutorial and linked the join flow. This is evidence of user-created onboarding, not a complete adoption measure.
 
+## Production Data and Civic Deployment
+
+Three protected production database snapshots add scale and chronology without
+publishing person-level records. From June 2016 to July 2017, WOW List grew from
+995 to 1,846 users and from 10,136 to 16,142 posts/events. The July 2017 snapshot
+also contains 23,864 tags/lists and 28,837 list follows.
+
+The Popular Vote civic calendar was created November 12, 2016. By July 22, 2017,
+it contained 933 linked post/event records, 196 follows, and contributions from
+10 anonymous contributor IDs. A local Git commit authored by Jamie on the
+creation date directly added `popular.vote` and `www.popular.vote` routing to
+the WOW List configuration.
+
+These records establish production scale, collaborative use, chronology, and
+Jamie's bounded implementation role. Snapshot counts are not unique reach,
+attendance, endorsement, conversion, or current activity. The commit does not
+establish sole conception, ownership, editorial authorship, or later operation
+of Popular Vote.
+
 ## Stakeholder patterns
 
 The complete population preserves several distinct forms of engagement:

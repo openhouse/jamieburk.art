@@ -18,6 +18,7 @@ import { personalWowListFacebookEventsFullPopulationBatch20260715 } from "./batc
 import { wowListFacebookPostsFullPopulationBatch20260715 } from "./batches/wowlist-facebook-posts-full-population-2026-07-15.ts";
 import { kcSpacesFundFacebookPostsFullPopulationBatch20260715 } from "./batches/kcspacesfund-facebook-posts-full-population-2026-07-15.ts";
 import { jamiePersonalFacebookPostsFullPopulationBatch20260715 } from "./batches/jamie-personal-facebook-posts-full-population-2026-07-15.ts";
+import { wowListSundayDinnerCallScriptLineageBatch20260715 } from "./batches/wowlist-sunday-dinner-callscript-lineage-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -244,6 +245,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostsFullPopulationBatch20260715.intake,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.intake,
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.intake,
+    ...wowListSundayDinnerCallScriptLineageBatch20260715.intake,
     ...nterChngArchiveBatch20260715.intake
   ],
   sources: [
@@ -497,6 +499,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostsFullPopulationBatch20260715.sources,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.sources,
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.sources,
+    ...wowListSundayDinnerCallScriptLineageBatch20260715.sources,
     ...nterChngArchiveBatch20260715.sources
   ],
   sourceAssertions: [
@@ -698,6 +701,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostsFullPopulationBatch20260715.sourceAssertions,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.sourceAssertions,
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.sourceAssertions,
+    ...wowListSundayDinnerCallScriptLineageBatch20260715.sourceAssertions,
     ...nterChngArchiveBatch20260715.sourceAssertions
   ],
   claims: [
@@ -1087,6 +1091,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostsFullPopulationBatch20260715.claims,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.claims,
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.claims,
+    ...wowListSundayDinnerCallScriptLineageBatch20260715.claims,
     ...nterChngArchiveBatch20260715.claims
   ],
   researchTasks: [
@@ -1221,6 +1226,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostsFullPopulationBatch20260715.researchTasks,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.researchTasks,
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.researchTasks,
+    ...wowListSundayDinnerCallScriptLineageBatch20260715.researchTasks,
     ...nterChngArchiveBatch20260715.researchTasks
   ],
   researchInquiries: [
@@ -1254,6 +1260,7 @@ const knowledgeBankInput = {
     ...wowListFacebookPostsFullPopulationBatch20260715.researchInquiries,
     ...kcSpacesFundFacebookPostsFullPopulationBatch20260715.researchInquiries,
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.researchInquiries,
+    ...wowListSundayDinnerCallScriptLineageBatch20260715.researchInquiries,
     ...nterChngArchiveBatch20260715.researchInquiries
   ],
   corrections: [

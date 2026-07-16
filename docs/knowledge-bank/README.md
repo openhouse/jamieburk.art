@@ -165,3 +165,12 @@ Wayback research and explicit not-recovered boundaries documented in
 [2026-07-15-nter-chng-archive-production.md](runs/2026-07-15-nter-chng-archive-production.md).
 That record now also includes a privacy-bounded close read of two
 contemporaneous installation and exhibit working documents.
+
+The [WOW List, Sunday Dinner, and Call Script lineage pass](runs/2026-07-15-wowlist-sunday-dinner-callscript-lineage.md)
+adds public-safe production aggregates, a Jamie-authored `popular.vote`
+implementation record, protected Sunday Dinner operating evidence, and a close
+read of the public January 2017 DCLA event discussion. Its
+[aggregate corpus](corpora/wowlist-sunday-dinner-callscript-lineage-2026-07-15.json)
+preserves exact source-level counts and causal boundaries without publishing
+participant records, raw database rows, authenticated state, or a new website
+claim before collective-credit review.

@@ -42,6 +42,9 @@ Approved public artifact examples for this launch pass include:
 - Brooklyn Daily Eagle's 2017 Office of Nightlife report.
 - NYC Artist Coalition's public-safe 33-event Facebook corpus, with one
   unresolved slot retained against the 34-slot host control.
+- Call Script's public Facebook Page and the January 27, 2017, Department of
+  Cultural Affairs event discussion connecting `popular.vote`, agenda
+  solicitation, peer-city learning, and later coalition priority-setting.
 
 ### Public-Safe Archive Summary
 
@@ -60,6 +63,13 @@ at fonds level and close-read a bounded set of high-signal project records. It
 promoted only public-safe aggregate findings. Personal, family, legal,
 administrative, recovery, credential, guest, resident, and unconsented media
 records remained excluded or protected.
+
+A July 15, 2026, lineage pass reviewed three historic WOW List production
+database snapshots, a Jamie-authored `popular.vote` routing commit, and a
+protected Sunday Dinner operating workbook. The repository stores only
+aggregate table counts, dated chronology, source-level assertions, and explicit
+boundaries. Raw rows, person identifiers, guest histories, contact fields,
+authentication data, and private locators remain excluded.
 
 ### AI-Assisted Archival Review
 

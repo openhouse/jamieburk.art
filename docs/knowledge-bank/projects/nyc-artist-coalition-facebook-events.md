@@ -83,6 +83,27 @@ independent reporting that identifies his fire-code study groups and City Hall
 advocacy, and a contemporaneous community profile connecting him to coalition
 work. It does not assign Jamie sole authorship or production of every event.
 
+## Call Script Formation Bridge
+
+The January 27, 2017, Department of Cultural Affairs event adds a formation-era
+bridge among WOW List, Call Script, and NYC Artist Coalition. The public Call
+Script Page links directly to `popular.vote`, a WOW List civic calendar whose
+domain routing Jamie implemented in November 2016. The event displays NYC Artist
+Coalition and Call Script among its hosts and 445 responses; the response label
+is not attendance.
+
+Before the meeting, Call Script used the event discussion to solicit priorities
+and circulate a peer-city organizing example from Oakland. The WOW List
+production database dates the NYC Artist Coalition list to February 7, 2017.
+Later, an NYC Artist Coalition poll on the same discussion surface invited
+participants to add and assess coalition priorities across compliance support,
+displacement, safety, mutual aid, professional services, and advocacy.
+
+Together these records support Jamie's reported facilitation and infrastructure
+contribution to an emerging participation system. They do not establish that
+Jamie alone founded NYC Artist Coalition, that one tool caused the coalition,
+or that every shared-account post was authored by Jamie.
+
 ## Participation System
 
 Twelve records are classified as recurring coalition meetings. Two were
@@ -239,3 +260,5 @@ measured outcome, participant consensus, or external evaluation.
    enforcement records without claiming sole or linear causality.
 5. Invite collaborators and participants, with consent, to add, complicate, or
    correct Jamie's account of the practice.
+6. Seek collaborator confirmation of how WOW List, popular.vote, and Call Script
+   practices informed the coalition's January-February 2017 formation sequence.
