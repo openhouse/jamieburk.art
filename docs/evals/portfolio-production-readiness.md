@@ -117,6 +117,29 @@ them. A passing record requires independent reviewers, dates, the exact
 candidate SHA, and the evidence named in each rubric entry. The machine-readable
 status lives in `docs/evals/blind-spot-human-status.json`.
 
+## Margaret Morse And Warren Sack Lenses
+
+`PR-026` and `PR-027` make two dimensions of Jamie's record blocking
+application-share criteria.
+
+- `PR-026`, the Margaret Morse lens, asks whether one compact public threshold
+  preserves the continuity among artistic, civic, technical, and social work.
+  It looks for embodied inquiry, media archaeology, attention, hospitality,
+  atmosphere, participation, place, and shared authorship without turning the
+  site into a detached autobiography.
+- `PR-027`, the Warren Sack lens, asks whether Jamie's recurring technical
+  method is inspectable: observe relationships, model or prototype, build an
+  interface or inhabitable system, expose it to use, and revise from response.
+  It requires prototype, deployment, originality, and collaborative-credit
+  boundaries.
+
+Both lenses use independent LLM judges. Historical faculty records are
+protected corroborating context, not current blanket endorsements. The public
+site uses independently published evidence; raw academic records, grades,
+student identifiers, private correspondence, contact information, and
+protected screenshots stay outside Git. See
+`docs/evals/margaret-morse-and-warren-sack-lenses.md`.
+
 Evidence state, visibility state, and projection state are independent. A
 public source may suggest an unresolved claim. A mature public-safe claim may be
 held from the current site for composition. A private visual lead may create a
@@ -187,6 +210,10 @@ Every run should identify:
   matrices for `PR-021` through `PR-024`;
 - dated hands-on keyboard, screen-reader, mobile, PDF, and trusted-reader
   results for `PR-025`.
+- artistic-continuity scorecards, a protected-source boundary audit, and the
+  About-page threshold for `PR-026`;
+- a recursive-method project map, prototype-production audit, and independent
+  scorecards for `PR-027`.
 
 Do not place raw transcripts, private correspondence, private notes, internal
 analytics, contact lists, credentials, or unapproved artifacts in an eval

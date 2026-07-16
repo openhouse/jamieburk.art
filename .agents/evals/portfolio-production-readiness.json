@@ -23,7 +23,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015", "PR-016", "PR-017", "PR-019", "PR-020", "PR-022", "PR-024"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015", "PR-016", "PR-017", "PR-019", "PR-020", "PR-022", "PR-024", "PR-026", "PR-027"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
@@ -110,7 +110,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -130,7 +130,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -511,7 +511,7 @@
       "category": "evidence-quality",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["high-value role claims", "source graph", "open inquiries", "proof-note request protocol", "approval register"],
       "procedure": [
         "Inventory high-value claims whose strongest support is Jamie's memory, a shared-account record, or project-level evidence that does not establish Jamie's exact role.",
@@ -555,7 +555,7 @@
       "category": "visual-proof",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["lead case studies", "visual proof inventory", "artifact rights and consent states", "responsive screenshots"],
       "procedure": [
         "Inventory every visible photograph, screenshot, document excerpt, diagram, timeline, download, and public artifact on lead pages.",
@@ -615,6 +615,54 @@
       ],
       "evidence_required": ["dated human QA matrix", "reviewer roles", "exact candidate SHA", "issue dispositions", "trusted-reader answer", "Jamie's approval"],
       "remediation_hint": "Prepare the route and task matrix, then stop for hands-on human review; automated checks cannot satisfy this gate."
+    },
+    {
+      "id": "PR-026",
+      "title": "Margaret Morse lens: embodied artistic continuity",
+      "category": "artistic-continuity",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 2,
+      "inputs": ["about page", "lead work compositions", "participatory-public-practice knowledge-bank records", "public Open House source", "protected-source summaries from Margaret Morse"],
+      "procedure": [
+        "Give three blind judges the public candidate, the public Open House source, and the public-safe Morse source summaries without raw academic records, patch intent, or optimization history.",
+        "Ask whether the portfolio preserves a visible connection among Jamie's artistic, civic, technical, and social practices rather than flattening the record into conventional administration.",
+        "Ask judges to identify one concrete instance of embodied inquiry, media archaeology, hospitality, atmosphere, attention, or an inhabitable participatory situation and connect it to Jamie's present operating method.",
+        "Audit every Morse-derived statement for source class, historical date, privacy, collective credit, and current-endorsement boundaries."
+      ],
+      "pass_criteria": [
+        "At least one primary public threshold makes the artistic, civic, technical, and social practices visibly continuous without obscuring the target role.",
+        "Open House or another approved example shows Jamie making and tending an inhabitable participatory situation, not merely administering an event.",
+        "The portfolio explains that attention, hospitality, atmosphere, place, participation, and shared authorship help distinguish Jamie's operating systems from conventional administration.",
+        "Historical faculty records are treated as corroborating context, not current blanket endorsement; no student identifier, grade, private correspondence, contact detail, raw academic record, or unapproved screenshot is published.",
+        "All three judges report no critical artistic flattening, privacy defect, or unsupported endorsement; no score is below 3 and the median is 4."
+      ],
+      "evidence_required": ["three independent scorecards", "About-page excerpt", "public Open House citation", "protected-source boundary audit", "artistic-continuity map"],
+      "remediation_hint": "Add one compact, source-backed threshold where Jamie's artistic method clarifies the present operating practice; do not add a detached autobiography or publish protected academic material."
+    },
+    {
+      "id": "PR-027",
+      "title": "Warren Sack lens: recursive social-systems invention",
+      "category": "systems-thinking",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 2,
+      "inputs": ["about page", "technical operations page", "WOW List case study", "Source-Backed Team Memory lab", "public Open House source", "protected-source summaries from Warren Sack"],
+      "procedure": [
+        "Give three blind judges the public candidate, the public Open House source, and the public-safe Sack source summary without raw academic records, patch intent, or optimization history.",
+        "Ask each judge to trace Jamie's recurring method from observing relationships, to modeling or prototyping, to an interface or inhabitable system, to use, feedback, and revision.",
+        "Require judges to cite at least three distinct project surfaces and distinguish technical specificity from stack-name display.",
+        "Audit every Sack-derived statement for prototype-versus-production status, collective authorship, originality boundaries, privacy, and current-endorsement boundaries."
+      ],
+      "pass_criteria": [
+        "A primary public threshold states a relational, recursive method that a hiring reader can connect to concrete work.",
+        "At least three projects make the sequence observe relationships, model, build, expose to use, and revise legible through specific actions or artifacts.",
+        "Technical detail explains what the systems made possible rather than functioning as an uncontextualized tool list.",
+        "The record distinguishes original application of structural-equivalence reasoning from invention of the field-wide concept, classroom prototypes from deployed systems, and Jamie's contributions from collaborative authorship.",
+        "Historical faculty records are treated as corroborating context, not current blanket endorsement; all three judges report no critical technical flattening, overclaim, or privacy defect, no score is below 3, and the median is 4."
+      ],
+      "evidence_required": ["three independent scorecards", "recursive-method project map", "page excerpts and artifact references", "prototype-production audit", "protected-source boundary audit"],
+      "remediation_hint": "Make the observe-model-build-use-revise sequence concrete across a small number of projects; add specificity without promoting classroom prototypes into deployed products."
     }
   ],
   "grader_output_schema": {

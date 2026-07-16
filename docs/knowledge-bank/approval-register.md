@@ -33,6 +33,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Job-hunt context outline: use only as protected research control and a verification queue. It is not independent evidence for any accomplishment it summarizes.
 - Source-Backed Team Memory: the bounded developing method may project to the lab and Technical Operations pages. Do not imply production SaaS, deployment, measured outcomes, or unrestricted archive access.
 - AI Evals professional development: course completion through Maven in 2026 may project to approved resume and About surfaces. Do not imply instructor affiliation, professional licensure, or production outcomes from the credential alone.
+- UCSC artistic and social-systems lineage: public-safe summaries of Margaret Morse's and Warren Sack's historical narrative evaluations may remain in the knowledge bank. The About page may project the compact Open House and relational-systems throughline using the independently published *Good Times* source. Do not publish the student identifier, grades, raw evaluation text, private correspondence, contact details, protected locators, or recommendation screenshot; do not imply current blanket faculty endorsement, field-wide invention of structural equivalence, production deployment of classroom prototypes, or sole authorship of collaborative work.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo

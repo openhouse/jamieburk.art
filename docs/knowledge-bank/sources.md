@@ -76,12 +76,24 @@ anchor records. They added thirteen typed source records:
   power map and functional messaging grid;
 - a protected job-hunt context outline used as an evidence-control record, not
   accomplishment evidence.
+- public-safe summaries of Margaret Morse's and Warren Sack's historical UCSC
+  narrative evaluations, plus a protected Margaret Morse recommendation
+  screenshot; and
+- the independently published *Good Times* feature on *Open House*, used as the
+  only public citation for the About-page artistic and relational-systems
+  threshold.
 
 Public records retain their canonical URLs. Protected records expose only a
 stable locator, public-safe source description, supported propositions, and
 explicit non-support. The repository does not contain iCloud paths, raw
 documents, collaborator lists, live strategy, pricing, transcripts, course
 materials, portal identifiers, or private contact information.
+
+The UCSC summaries omit the student identifier, grades, raw evaluation text,
+private correspondence, email addresses, telephone numbers, postal addresses,
+protected locators, and screenshot. They support historical artistic and
+technical lineage, not official-transcript status or current blanket faculty
+endorsement.
 
 The stakeholder-map record supports the existence and design of an operating
 artifact. It does not establish collective approval, completion of its

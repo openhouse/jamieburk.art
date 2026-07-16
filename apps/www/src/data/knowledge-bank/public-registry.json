@@ -102,6 +102,27 @@
       ]
     },
     {
+      "id": "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "title": "Open House",
+      "organization": "Good Times",
+      "author": "Laura Mattingly",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2006-06-28",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Laura Mattingly, 'Open House,' Good Times, June 28, 2006.",
+      "publicNote": "The feature documents Jamie's initiation and facilitation of a 10-day communal-living and participatory-art experiment at UC Santa Cruz, including collective decision-making and distributed documentation.",
+      "doesNotEstablish": [
+        "that Jamie was the sole author of collective activity",
+        "a complete participant list",
+        "consent to republish photographs or private participant details",
+        "a complete archive of the project"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-GOTHAMIST-2017-06-19",
       "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
       "organization": "Gothamist",
@@ -1372,6 +1393,51 @@
       ],
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
+      ]
+    },
+    {
+      "id": "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "Jamie initiated and tended Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/participatory-public-practice"
+          ],
+          "rationale": "Retain in the public-safe historical bank because it establishes an early, source-backed throughline of participation infrastructure and collective governance without adding it to the current hiring site."
+        },
+        {
+          "key": "about",
+          "text": "Long before I called this operations, I initiated and tended Open House, a 10-day communal gallery experiment organized around shared responsibility, public art-making, and distributed documentation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ],
+          "rationale": "The About page now gives this early participatory practice one compact threshold that connects artistic, social, civic, and technical work without displacing the hiring narrative."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie initiated Open House",
+            "Margaret Morse described Jamie as tending the experiment",
+            "the public experiment ran for 10 days",
+            "participants shared responsibility and decisions",
+            "the project integrated communal living, art, performance, and documentation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Collective decisions and participant work remain collectively credited.",
+        "Do not republish participant identities, images, or private details without review."
       ]
     },
     {
@@ -3024,6 +3090,181 @@
         "Do not convert policy recommendations, testimony, or trusted access into legislative authorship or sole outcome causality.",
         "The City-facing interface included many coalition members, partner groups, witnesses, public officials, and agency staff."
       ]
+    },
+    {
+      "id": "CLM-OPEN-HOUSE-ITERATIVE-GOVERNANCE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "Open House incorporated institutional feedback through a group meeting, cleanup, and a newly marked operating boundary around technical equipment.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/projects/ucsc-media-and-social-systems"
+          ],
+          "rationale": "Preserve a concrete feedback-to-revision example from the independently published article."
+        },
+        {
+          "key": "about",
+          "text": "Observed how social software represents people in relation; modeled shared responsibility in an open communal gallery; built and tended the 10-day space; then used participant experience and staff feedback to hold a group meeting, clean up, and mark a new operating boundary.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ],
+          "rationale": "Make one complete observe-model-build-use-revise sequence inspectable without publishing participant details or images."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+          "relationship": "direct-support",
+          "supports": [
+            "shared responsibility and decision-making",
+            "institutional feedback from Porter staff",
+            "a group meeting with staff",
+            "cleanup and a newly taped operating boundary"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit the housemates collectively for the group response and revision.",
+        "Do not publish participant identities, pseudonym relationships, private details, or article photographs without separate review."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-RECURSIVE-METHOD",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "about",
+          "text": "Observed noisy records and residents' communication barriers; modeled district-and-issue guidance; built the independent app and JSON interface; then used conversations to add Twitter contacts and borough filtering.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ],
+          "rationale": "Give the recursive-method map one concise product example while leaving the governed CallNYC case-study projection unchanged."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-POLITICO-2016-03-14",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie independently developed and iterated CallNYC",
+            "record filtering and borough guidance",
+            "resident communication preferences",
+            "addition of Council-member Twitter contacts"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-X-API-2016",
+          "relationship": "corroborating",
+          "supports": [
+            "a public JSON interface for Council-member Twitter usernames"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "CallNYC was an independent project, not an official Council product.",
+        "Informal conversations are not presented as representative user research.",
+        "The sources do not establish a formal hackathon submission or documented prize."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-RECURSIVE-METHOD",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "about",
+          "text": "Listened through recurring meetings in rotating cultural spaces; modeled a convene-listen-translate-route cycle; built public event, safety, campaign, and testimony infrastructure; then helped the coalition take up issues artists surfaced, including Cabaret Law, M.A.R.C.H. raids, commercial rent, and emergency relief.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ],
+          "rationale": "Give the recursive-method map a bounded collective example while leaving the corpus-governed role projection unchanged."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "recurring meetings in rotating cultural spaces",
+            "practical safety sessions, campaigns, hearings, and relief convenings"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-GOTHAMIST-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's identified role with NYC Artist Coalition",
+            "fire-code study-group organizing",
+            "City Hall advocacy for Cabaret Law repeal"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The individual operating role is Jamie's first-hand account, supported but not exhaustively attributed by public records.",
+        "Events, campaigns, testimony, and outcomes remain collective work.",
+        "The evidence does not establish that one meeting or one person caused legislation or agency action."
+      ]
+    },
+    {
+      "id": "CLM-UCSC-SACK-RECURSIVE-SOCIAL-SYSTEMS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "Warren Sack's evaluations document an early method of analyzing relationships, building models and interfaces, and translating online social structures into embodied collective experience.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/ucsc-media-and-social-systems"
+          ],
+          "rationale": "Preserve the technical and intellectual lineage without presenting classroom prototypes as deployed products."
+        },
+        {
+          "key": "about",
+          "text": "That practice is technical as well as social: study the relationships around a system, build a model or interface people can enter, and learn from what happens when they use it.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ],
+          "rationale": "A compact relational-systems throughline connects early social-software inquiry to Jamie's later product, civic, and knowledge-system work without publishing protected academic details."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+          "relationship": "context",
+          "supports": [
+            "Jamie connected an embodied participatory project to social software and representations of relationships",
+            "the public experiment invited participants to interpret and revise a shared system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The structural-equivalence, Flickr, dictionary, and Jitter details come from a protected unofficial academic-record copy.",
+        "Classroom prototypes are not presented as production deployments or sustained adoption.",
+        "The final installation design was collaborative and remains collectively credited."
+      ]
     }
   ],
   "pages": [
@@ -3443,6 +3684,61 @@
             "SRC-NYCAC-TALKS-NOT-RAIDS",
             "SRC-NYC-COUNCIL-INTRO-1156-2018",
             "SRC-NYC-MAYOR-CURE-2023-12-28"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "surface": "/about",
+      "sourceOrder": [
+        "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-X-API-2016",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+        "SRC-NYCAC-GOTHAMIST-2017-06-19"
+      ],
+      "occurrences": [
+        {
+          "id": "open-house-throughline",
+          "claimId": "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
+          "projection": "about",
+          "sourceIds": [
+            "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        },
+        {
+          "id": "relational-systems-throughline",
+          "claimId": "CLM-UCSC-SACK-RECURSIVE-SOCIAL-SYSTEMS",
+          "projection": "about",
+          "sourceIds": [
+            "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        },
+        {
+          "id": "open-house-recursive-method",
+          "claimId": "CLM-OPEN-HOUSE-ITERATIVE-GOVERNANCE",
+          "projection": "about",
+          "sourceIds": [
+            "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        },
+        {
+          "id": "callnyc-recursive-method",
+          "claimId": "CLM-CALLNYC-RECURSIVE-METHOD",
+          "projection": "about",
+          "sourceIds": [
+            "SRC-CALLNYC-POLITICO-2016-03-14",
+            "SRC-CALLNYC-X-API-2016"
+          ]
+        },
+        {
+          "id": "nycac-recursive-method",
+          "claimId": "CLM-NYCAC-RECURSIVE-METHOD",
+          "projection": "about",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+            "SRC-NYCAC-GOTHAMIST-2017-06-19"
           ]
         }
       ]

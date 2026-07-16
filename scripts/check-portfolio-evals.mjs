@@ -139,6 +139,20 @@ export function validateSuite(suite) {
     );
   }
 
+  for (const id of ["PR-026", "PR-027"]) {
+    const entry = suite.evals?.find((candidate) => candidate.id === id);
+    requireValue(Boolean(entry), `suite must include ${id} faculty-lens eval`);
+    requireValue(entry?.blocking === true, `${id} faculty-lens eval must be blocking`);
+    requireValue(
+      entry?.grader === "llm_judge",
+      `${id} faculty-lens eval must use an independent LLM judge`
+    );
+    requireValue(
+      suite.application_share_thresholds?.required_eval_ids?.includes(id),
+      `application-share threshold must require ${id}`
+    );
+  }
+
   const validateThresholds = (name, thresholds, production = false) => {
     requireValue(typeof thresholds === "object" && thresholds !== null, `${name} is required`);
     requireValue(

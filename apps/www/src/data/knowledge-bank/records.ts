@@ -136,6 +136,12 @@ import {
   nycacDclaCouncilPages,
   nycacDclaCouncilSources
 } from "./nycac-dcla-council-interface.ts";
+import {
+  ucscLensClaims,
+  ucscLensIntake,
+  ucscLensPages,
+  ucscLensSources
+} from "./ucsc-lenses.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -161,7 +167,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostIntake,
     ...personalFacebookPostIntake,
     ...participationLineageIntake,
-    ...nycacDclaCouncilIntake
+    ...nycacDclaCouncilIntake,
+    ...ucscLensIntake
   ],
   sources: [
     {
@@ -306,7 +313,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostSources,
     ...personalFacebookPostSources,
     ...participationLineageSources,
-    ...nycacDclaCouncilSources
+    ...nycacDclaCouncilSources,
+    ...ucscLensSources
   ],
   claims: [
     {
@@ -415,7 +423,8 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostClaims,
     ...personalFacebookPostClaims,
     ...participationLineageClaims,
-    ...nycacDclaCouncilClaims
+    ...nycacDclaCouncilClaims,
+    ...ucscLensClaims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -462,7 +471,7 @@ const knowledgeBankInput = {
       { id: "social-public-feedback-loop", claimId: "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28", "SRC-CALLNYC-X-CORPUS-2026-07-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
-  }, ...sourceExpansionPages, ...nycacDclaCouncilPages]
+  }, ...sourceExpansionPages, ...nycacDclaCouncilPages, ...ucscLensPages]
 } satisfies KnowledgeBankInput;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

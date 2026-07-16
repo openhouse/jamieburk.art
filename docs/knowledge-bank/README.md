@@ -101,6 +101,14 @@ The July 15 iCloud archive-production pass adds focused project records for
 visual and participatory work remains grouped in
 [participatory public practice](projects/participatory-public-practice.md).
 
+The July 16 [UCSC media and social-systems pass](projects/ucsc-media-and-social-systems.md)
+adds public-safe source summaries for Margaret Morse's and Warren Sack's
+narrative evaluations, while keeping academic identifiers, grades, private
+correspondence, contact details, raw records, and screenshots outside Git. It
+documents the artistic and recursive technical lineage behind Jamie's present
+operating method and activates one compact, publicly cited threshold on the
+About page.
+
 The July 16 iCloud follow-up adds a public 2013 Max/MSP project record,
 strengthens the Commercial Rent Stabilization operating-infrastructure claim
 with a protected stakeholder-map and messaging-grid artifact, and uses the

@@ -185,6 +185,46 @@ bibliography claim:
 **Guardrail:** Collective decisions and participant work remain collectively credited; identities and images require separate review.
 **Canonical claim:** `CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE`.
 
+### open-house-iterative-governance
+
+**Status:** Ready with collective-credit boundary
+**Support level:** Strong independent public reporting
+**Public wording:** Open House modeled shared responsibility, exposed that model to public and institutional use, and revised its operating boundary through a group meeting, cleanup, and marked protection for technical equipment.
+**Guardrail:** Credit the housemates collectively for the response; the revision does not establish that the experiment was risk-free or universally approved.
+**Canonical claim:** `CLM-OPEN-HOUSE-ITERATIVE-GOVERNANCE`.
+
+### ucsc-morse-embodied-media-practice
+
+**Status:** Ready in the knowledge bank; held from direct faculty attribution on the site
+**Support level:** Strong protected corroboration plus independent public context
+**Public wording:** Margaret Morse's historical evaluations document an early practice joining media archaeology, embodied theory, installation, attention, and the tending of participatory situations.
+**Guardrail:** Treat the evaluations as historical context, not current blanket endorsement; do not publish academic identifiers, grades, private correspondence, contact details, raw records, or screenshots.
+**Canonical claim:** `CLM-UCSC-MORSE-EMBODIED-MEDIA-PRACTICE`.
+
+### ucsc-sack-recursive-social-systems
+
+**Status:** Ready with boundaries
+**Support level:** Strong protected corroboration plus bounded public context
+**Public wording:** Jamie's recurring method is technical as well as social: study relationships around a system, build a model or interface people can enter, and learn from use.
+**Guardrail:** Do not turn original application of structural-equivalence reasoning into invention of the field-wide concept, classroom prototypes into deployed products, or collaborative work into sole authorship.
+**Canonical claim:** `CLM-UCSC-SACK-RECURSIVE-SOCIAL-SYSTEMS`.
+
+### callnyc-recursive-method
+
+**Status:** Ready on About with product boundaries
+**Support level:** Strong public reporting and project-account corroboration
+**Public wording:** Jamie observed noisy records and residents' communication barriers, modeled district-and-issue guidance, built the independent application and JSON interface, and revised it through conversations and record review.
+**Guardrail:** CallNYC was independent, not an official Council product; informal conversations are not representative user research.
+**Canonical claim:** `CLM-CALLNYC-RECURSIVE-METHOD`.
+
+### nycac-recursive-method
+
+**Status:** Ready on About with first-hand attribution and collective-credit boundary
+**Support level:** First-hand role account supported by a public event census and independent reporting
+**Public wording:** Jamie reports that his NYC Artist Coalition contribution followed a convene-listen-translate-route cycle connecting rotating cultural-space meetings to events, safety sessions, campaigns, testimony, and relief responses.
+**Guardrail:** Events and outcomes remain collective; the evidence does not assign every event or policy result to Jamie or equate Facebook records with attendance.
+**Canonical claim:** `CLM-NYCAC-RECURSIVE-METHOD`.
+
 ### nyc-artist-coalition-cabaret-advocacy
 
 **Status:** Careful
