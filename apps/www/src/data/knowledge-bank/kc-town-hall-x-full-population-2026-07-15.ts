@@ -98,9 +98,9 @@ export const kcTownHallFullPopulationSourceRecords20260715 = [
       "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
     preferredPublicUrl: "canonical",
     publicCitation:
-      "Authenticated July 15, 2026 review of all 183 records reported by the @KCTownHall profile counter, with record, posted-link, conversation-context, and bounded stakeholder metadata preserved in the repository.",
+      "Public-safe July 2026 review of all 183 records currently reported by the @KCTownHall profile counter.",
     publicNote:
-      "Posts yielded 170 primary records. Replies rendered 188 cards: the same 183 primary records plus five parent or conversation-context records from other accounts. Excluding those contexts reconciles the union exactly to 183.",
+      "The review reconciles the current displayed population and supports the tire-related publishing pattern and bounded stakeholder-response floor; record-level public status URLs remain in the repository fixture.",
     supportsGenerally: [
       "the complete displayed account population",
       "record-type and posted-URL inventories",
@@ -406,7 +406,7 @@ export const kcTownHallFullPopulationClaimRecords20260715 = [
       {
         key: "case-study",
         text:
-          "I established @KCTownHall as a public-facing project identity and handoff surface. It later carried team and changing-stewardship work, so I do not assign every post or later activity to myself.",
+          "I established @KCTownHall as a shared project identity collaborators could continue using. Because it carried team work and later stewardship, I do not assign every post or later activity to myself.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/kc-town-hall"]
@@ -487,7 +487,7 @@ export const kcTownHallFullPopulationClaimRecords20260715 = [
       {
         key: "case-study",
         text:
-          "The project account opened as a resident-input loop: it invited people to help build a neighborhood resource and cultural center, then asked what they wanted in the proposed 36th-and-Indiana site.",
+          "The project account invited people to help build a neighborhood resource and cultural center and asked what they wanted in the proposed 36th-and-Indiana site.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/kc-town-hall"]
@@ -530,7 +530,7 @@ export const kcTownHallFullPopulationClaimRecords20260715 = [
       {
         key: "case-study",
         text:
-          "The account also documents an operating system rather than a one-off event: 100 of its 183 profile-counted records were tire-related, tracing recurring free household pickup intake and updates from 2019 through 2022.",
+          "Across the 183 records currently displayed by the profile, 100 are tire-related. Together with archived service material, they document recurring free household pickup intake and updates from 2019 through 2022.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/kc-town-hall"]
@@ -629,13 +629,21 @@ export const kcTownHallFullPopulationClaimRecords20260715 = [
       {
         key: "case-study",
         text:
-          "Three sitting Kansas City Council-member accounts directly responded in mission-relevant contexts: Quinton Lucas and Jolie Justus around Leon's Thriftway, and Melissa Robinson around work to improve community conditions.",
+          "At least three sitting Kansas City Council-member accounts directly responded in mission-relevant contexts: Quinton Lucas and Jolie Justus around Leon's Thriftway, and Melissa Robinson around work to improve community conditions. These exchanges show public response, not endorsement or government adoption.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/kc-town-hall"]
       }
     ],
     evidence: [
+      {
+        sourceId: kcTownHallFullPopulationSourceIds.population,
+        relationship: "corroborating",
+        supports: ["the three-account direct-response floor and bounded stakeholder inventory"],
+        locator: "fixture stakeholderResponseInventory.councilMemberAccounts",
+        confidence: "high",
+        renderCitation: true
+      },
       {
         sourceId: kcTownHallFullPopulationSourceIds.lucas,
         relationship: "direct-support",

@@ -513,71 +513,6 @@
       ]
     },
     {
-      "id": "SRC-X-KCTOWNHALL-LAUNCH-2018",
-      "title": "KC Town Hall public account launch post",
-      "organization": "KC Town Hall",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2018-07-02",
-      "accessedAt": "2026-07-14",
-      "canonicalUrl": "https://x.com/KCTownHall/status/1013893135695601665",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "KC Town Hall, public account launch post inviting people to follow and help build a neighborhood resource and cultural center, July 2, 2018.",
-      "publicNote": "The post documents the account's public project identity, participatory invitation, and launch framing.",
-      "doesNotEstablish": [
-        "completed redevelopment",
-        "funding receipt",
-        "authorship of later posts"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
-      "title": "Tired of Tires? Free Tire Pickup",
-      "organization": "KC Town Hall",
-      "author": "Julia and Jamie",
-      "kind": "archived-web-capture",
-      "visibility": "public",
-      "preservationStatus": "archived",
-      "publishedAt": "2019-05-02",
-      "capturedAt": "2020-10-30",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "http://kctownhall.com/tires/",
-      "archiveUrl": "https://web.archive.org/web/20201030223311/http://kctownhall.com/tires/",
-      "preferredPublicUrl": "archive",
-      "publicCitation": "Julia and Jamie, 'Tired of Tires? Free Tire Pickup,' KC Town Hall, published May 2, 2019; archived October 30, 2020.",
-      "publicNote": "The archived page describes a monthly free residential pickup service run by KC Town Hall with Oak Park Neighborhood Association and includes resident-request and volunteer pathways.",
-      "doesNotEstablish": [
-        "Jamie's individual design or city-coordination role by itself",
-        "sole operation by Jamie, Julia, KC Town Hall, or Oak Park Neighborhood Association",
-        "independently audited tire, savings, participation, or neighborhood totals",
-        "the complete chronology or every service area",
-        "current program operation",
-        "permission to publish resident submissions, contact data, or source photographs"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019",
-      "title": "KC Town Hall June 2019 TiredOfTires operating update",
-      "organization": "KC Town Hall",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2019-06-02",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/KCTownHall/status/1135246124883861504",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "KC Town Hall, public TiredOfTires operating update naming Jamie Burkart among participants, June 2, 2019.",
-      "publicNote": "The shared project account names Jamie's @urbanhermit account in thanks after a pickup and routes residents to the next recurring curbside collection.",
-      "doesNotEstablish": [
-        "Jamie's sole operation of the program",
-        "which participant performed each task",
-        "Jamie's individual program-design or city-coordination role",
-        "independently audited tire or savings totals",
-        "the Indian Mound expansion"
-      ]
-    },
-    {
       "id": "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
       "title": "WOW List public-safe aggregate historical summary",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -648,8 +583,8 @@
       "accessedAt": "2026-07-15",
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
       "preferredPublicUrl": "canonical",
-      "publicCitation": "Authenticated July 15, 2026 review of all 183 records reported by the @KCTownHall profile counter, with record, posted-link, conversation-context, and bounded stakeholder metadata preserved in the repository.",
-      "publicNote": "Posts yielded 170 primary records. Replies rendered 188 cards: the same 183 primary records plus five parent or conversation-context records from other accounts. Excluding those contexts reconciles the union exactly to 183.",
+      "publicCitation": "Public-safe July 2026 review of all 183 records currently reported by the @KCTownHall profile counter.",
+      "publicNote": "The review reconciles the current displayed population and supports the tire-related publishing pattern and bounded stakeholder-response floor; record-level public status URLs remain in the repository fixture.",
       "doesNotEstablish": [
         "every deleted, private, withheld, or unindexed historical record",
         "authorship of every institutional post",
@@ -678,84 +613,6 @@
       ]
     },
     {
-      "id": "SRC-X-KCTOWNHALL-TIRE-WORKFLOW-2021",
-      "title": "KC Town Hall free household tire-pickup workflow",
-      "organization": "KC Town Hall",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2021-11-06",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/KCTownHall/status/1457012244588412935",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "KC Town Hall, public free household tire-pickup intake and update post, November 6, 2021.",
-      "publicNote": "The post documents the project account operating as an intake and update surface for recurring free household tire pickup in East Kansas City. The linked public status contains historical contact information that is not reproduced in the knowledge bank.",
-      "doesNotEstablish": [
-        "independently verified tire totals",
-        "total participation",
-        "causal health impact",
-        "individual post authorship"
-      ]
-    },
-    {
-      "id": "SRC-X-KCTOWNHALL-LUCAS-RESPONSE-2019",
-      "title": "Quinton Lucas response to KC Town Hall's Leon's alert",
-      "organization": "Kansas City, Missouri City Council",
-      "kind": "government-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2019-04-29",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Then-Council Member Quinton Lucas, public quote-response to KC Town Hall's Leon's Thriftway alert, April 29, 2019.",
-      "publicNote": "Lucas said he had spoken with ownership and was looking for a way to help keep the neighborhood grocery store operating.",
-      "doesNotEstablish": [
-        "KC Town Hall policy causality",
-        "store preservation",
-        "blanket endorsement"
-      ]
-    },
-    {
-      "id": "SRC-X-KCTOWNHALL-JUSTUS-RESPONSE-2019",
-      "title": "Jolie Justus response to KC Town Hall about Leon's",
-      "organization": "Kansas City, Missouri City Council",
-      "kind": "government-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2019-04-29",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Then-Council Member Jolie Justus, public reply to KC Town Hall about Leon's Thriftway, April 29, 2019.",
-      "publicNote": "Justus said she had been working with the EDC on possible solutions, had stopped by for an update, and saw strong community commitment.",
-      "doesNotEstablish": [
-        "KC Town Hall policy causality",
-        "store preservation",
-        "blanket endorsement"
-      ]
-    },
-    {
-      "id": "SRC-X-KCTOWNHALL-ROBINSON-RESPONSE-2020",
-      "title": "Melissa Robinson response to KC Town Hall",
-      "organization": "Kansas City, Missouri City Council",
-      "kind": "government-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2020-08-01",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Council Member Melissa Robinson, public reply thanking KC Town Hall for work to improve community conditions, August 1, 2020.",
-      "publicNote": "The reply directly acknowledges KC Town Hall's community-condition work without identifying every underlying activity or outcome.",
-      "doesNotEstablish": [
-        "specific program totals",
-        "policy adoption",
-        "blanket endorsement",
-        "causal government impact"
-      ]
-    },
-    {
       "id": "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019",
       "title": "Bridging the Gap collaborator report of a KC Town Hall tire drop-off",
       "organization": "Bridging the Gap",
@@ -772,42 +629,6 @@
         "an exact tire count",
         "full program scale",
         "causal health outcome"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
-      "title": "Kansas City Council roster in the 2019 Bike KC Master Plan",
-      "organization": "City of Kansas City, Missouri",
-      "kind": "government-record",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2019-01-01",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/6992/637684219737100000",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "City of Kansas City, Missouri, 2019 Bike KC Master Plan Council roster.",
-      "publicNote": "The roster identifies Quinton Lucas and Jolie Justus as Council members during the April 2019 responses.",
-      "doesNotEstablish": [
-        "endorsement of KC Town Hall",
-        "policy causality"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-KCMO-ROBINSON-SERVICE-RECORD",
-      "title": "Melissa Robinson person and Council service record",
-      "organization": "City Clerk, Kansas City, Missouri",
-      "kind": "government-record",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://clerk.kcmo.gov/PersonDetail.aspx?GUID=1696D403-A114-4AB0-B632-A303AF8E3B3C&ID=240616",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Kansas City Clerk record for Councilmember Melissa Robinson.",
-      "publicNote": "The record identifies Robinson as a Councilmember beginning July 19, 2019, before the August 2020 response.",
-      "doesNotEstablish": [
-        "endorsement of KC Town Hall",
-        "program totals",
-        "policy causality"
       ]
     }
   ],
@@ -1784,7 +1605,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "I established @KCTownHall as a public-facing project identity and handoff surface. It later carried team and changing-stewardship work, so I do not assign every post or later activity to myself.",
+          "text": "I established @KCTownHall as a shared project identity collaborators could continue using. Because it carried team work and later stewardship, I do not assign every post or later activity to myself.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1804,7 +1625,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "The project account opened as a resident-input loop: it invited people to help build a neighborhood resource and cultural center, then asked what they wanted in the proposed 36th-and-Indiana site.",
+          "text": "The project account invited people to help build a neighborhood resource and cultural center and asked what they wanted in the proposed 36th-and-Indiana site.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1813,16 +1634,6 @@
         }
       ],
       "evidence": [
-        {
-          "sourceId": "SRC-X-KCTOWNHALL-LAUNCH-2018",
-          "relationship": "direct-support",
-          "supports": [
-            "participatory launch",
-            "neighborhood-resource purpose"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
         {
           "sourceId": "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018",
           "relationship": "direct-support",
@@ -1845,7 +1656,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "The account also documents an operating system rather than a one-off event: 100 of its 183 profile-counted records were tire-related, tracing recurring free household pickup intake and updates from 2019 through 2022.",
+          "text": "Across the 183 records currently displayed by the profile, 100 are tire-related. Together with archived service material, they document recurring free household pickup intake and updates from 2019 through 2022.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1860,36 +1671,6 @@
           "supports": [
             "100 tire-related records",
             "2019-2022 continuity"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
-          "relationship": "direct-support",
-          "supports": [
-            "monthly free residential pickup",
-            "Oak Park partnership",
-            "resident and volunteer intake"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019",
-          "relationship": "corroborating",
-          "supports": [
-            "a recurring 2019 pickup workflow",
-            "Jamie's named participation"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-X-KCTOWNHALL-TIRE-WORKFLOW-2021",
-          "relationship": "corroborating",
-          "supports": [
-            "a 2021 household intake and update workflow"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -1936,7 +1717,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Three sitting Kansas City Council-member accounts directly responded in mission-relevant contexts: Quinton Lucas and Jolie Justus around Leon's Thriftway, and Melissa Robinson around work to improve community conditions.",
+          "text": "At least three sitting Kansas City Council-member accounts directly responded in mission-relevant contexts: Quinton Lucas and Jolie Justus around Leon's Thriftway, and Melissa Robinson around work to improve community conditions. These exchanges show public response, not endorsement or government adoption.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1946,49 +1727,10 @@
       ],
       "evidence": [
         {
-          "sourceId": "SRC-X-KCTOWNHALL-LUCAS-RESPONSE-2019",
-          "relationship": "direct-support",
-          "supports": [
-            "Quinton Lucas quote-response",
-            "neighborhood food-access follow-up"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-X-KCTOWNHALL-JUSTUS-RESPONSE-2019",
-          "relationship": "direct-support",
-          "supports": [
-            "Jolie Justus reply",
-            "EDC and community follow-up"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-X-KCTOWNHALL-ROBINSON-RESPONSE-2020",
-          "relationship": "direct-support",
-          "supports": [
-            "Melissa Robinson reply",
-            "community-condition acknowledgment"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+          "sourceId": "SRC-X-KCTOWNHALL-FULL-POPULATION-2026",
           "relationship": "corroborating",
           "supports": [
-            "Lucas and Justus Council service during the April 2019 responses"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-KCMO-ROBINSON-SERVICE-RECORD",
-          "relationship": "corroborating",
-          "supports": [
-            "Robinson Council service before the August 2020 response"
+            "the three-account direct-response floor and bounded stakeholder inventory"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -2184,18 +1926,9 @@
         "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
         "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
         "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
-        "SRC-X-KCTOWNHALL-LAUNCH-2018",
         "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018",
         "SRC-X-KCTOWNHALL-FULL-POPULATION-2026",
-        "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
-        "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019",
-        "SRC-X-KCTOWNHALL-TIRE-WORKFLOW-2021",
-        "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019",
-        "SRC-X-KCTOWNHALL-LUCAS-RESPONSE-2019",
-        "SRC-X-KCTOWNHALL-JUSTUS-RESPONSE-2019",
-        "SRC-X-KCTOWNHALL-ROBINSON-RESPONSE-2020",
-        "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
-        "SRC-KCTH-KCMO-ROBINSON-SERVICE-RECORD"
+        "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019"
       ],
       "occurrences": [
         {
@@ -2226,22 +1959,34 @@
         {
           "id": "resident-input-surface",
           "claimId": "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
-          "projection": "case-study"
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018"
+          ]
         },
         {
           "id": "tire-operating-pattern",
           "claimId": "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
-          "projection": "case-study"
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-KCTOWNHALL-FULL-POPULATION-2026"
+          ]
         },
         {
           "id": "tire-dropoff-corroboration",
           "claimId": "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
-          "projection": "case-study"
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019"
+          ]
         },
         {
           "id": "council-response-floor",
           "claimId": "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR",
-          "projection": "case-study"
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-KCTOWNHALL-FULL-POPULATION-2026"
+          ]
         }
       ]
     }

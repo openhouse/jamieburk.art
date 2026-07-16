@@ -652,7 +652,7 @@ const workItemsInput = [
       "Jamie identified as the public proposal presenter",
       "Council acceptance of the $490,539 recommendation",
       "$490,539 project appropriation",
-      "A complete public-safe archive of 183 profile-counted project-account records",
+      "A public-safe review of all 183 records currently displayed by the project-account profile",
       "100 tire-related account records documenting recurring household pickup intake and updates",
       "Direct mission-relevant responses from three sitting Council-member accounts",
       "External qualitative corroboration of a KC Town Hall tire drop-off",
@@ -661,7 +661,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie's approved resume and project records support his co-founder, planning, and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal. A complete public-account archive documents resident-input, recurring neighborhood-service, civic-resource, and direct stakeholder-response patterns. Jamie's public-use confirmation supports the subsequent transition to a mission-aligned organization.",
+        "Jamie's approved resume and project records support his co-founder, planning, and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal. A review of all 183 records currently displayed by the project-account profile documents resident-input, recurring neighborhood-service, civic-resource, and direct stakeholder-response patterns. Jamie's public-use confirmation supports the subsequent transition to a mission-aligned organization.",
       open:
         "The records do not establish an executed funding agreement, disbursement, construction, every collaborator's role, the receiving organization's identity, the form or timing of the transition, or the project's current status.",
       protected:

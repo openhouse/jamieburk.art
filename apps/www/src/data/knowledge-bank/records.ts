@@ -428,18 +428,9 @@ const knowledgeBankInput = {
         "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
         "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
         "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
-        "SRC-X-KCTOWNHALL-LAUNCH-2018",
         "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018",
         "SRC-X-KCTOWNHALL-FULL-POPULATION-2026",
-        "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
-        "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019",
-        "SRC-X-KCTOWNHALL-TIRE-WORKFLOW-2021",
-        "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019",
-        "SRC-X-KCTOWNHALL-LUCAS-RESPONSE-2019",
-        "SRC-X-KCTOWNHALL-JUSTUS-RESPONSE-2019",
-        "SRC-X-KCTOWNHALL-ROBINSON-RESPONSE-2020",
-        "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
-        "SRC-KCTH-KCMO-ROBINSON-SERVICE-RECORD"
+        "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019"
       ],
       occurrences: [
         { id: "public-proposal", claimId: "CLM-KC-TOWN-HALL-PROPOSAL-2019", projection: "case-study" },
@@ -450,22 +441,26 @@ const knowledgeBankInput = {
         {
           id: "resident-input-surface",
           claimId: "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
-          projection: "case-study"
+          projection: "case-study",
+          sourceIds: ["SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018"]
         },
         {
           id: "tire-operating-pattern",
           claimId: "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
-          projection: "case-study"
+          projection: "case-study",
+          sourceIds: ["SRC-X-KCTOWNHALL-FULL-POPULATION-2026"]
         },
         {
           id: "tire-dropoff-corroboration",
           claimId: "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
-          projection: "case-study"
+          projection: "case-study",
+          sourceIds: ["SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019"]
         },
         {
           id: "council-response-floor",
           claimId: "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR",
-          projection: "case-study"
+          projection: "case-study",
+          sourceIds: ["SRC-X-KCTOWNHALL-FULL-POPULATION-2026"]
         }
       ]
     }
