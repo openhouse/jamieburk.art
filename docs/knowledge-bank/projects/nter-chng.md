@@ -32,6 +32,26 @@ City launch and for the museum's May 11-12 Barbara Kruger truck stop. It does
 not name Jamie or NTER CHNG and must not be used to claim that NTER CHNG was
 displayed at the Nerman Museum.
 
+## Protected working records
+
+Two newly surfaced Google Docs were close-read as protected project-archive
+evidence. The repository stores public-safe summaries and opaque protected
+locators, not the private links, file identifiers, phone numbers, or
+message-level material.
+
+One first-party exhibit-information section records January 8-29, 2010 as the
+original run dates. It also credits Drew Bolton, Jamie Burkart, and Garrett
+Fuselier collectively and describes their combined scenic-design,
+computer-programming, motion-graphics, and experiential-production range. The
+record does not assign those disciplines to individual collaborators.
+
+The other document plans a 2011 America: Now and Here staging at Leedy-Voulkos,
+beginning with installation on April 22. Its checklist spans show-organizer
+permissions, software reliability, hosting, equipment, projection, wall
+fabrication, transport, wiring, and tuning the gallery experience. It is a
+production plan, not proof that the staging occurred exactly as described or
+that every task was completed.
+
 ## Atomic claims
 
 ### Collective installation
@@ -58,6 +78,30 @@ America: Now and Here's archived Kansas City site lists all three collaborators
 as Kansas City visual artists and gives the trio a dedicated page carrying the
 NTER CHNG artist statement.
 
+### Original run dates
+
+**Status:** Confirmed with first-party boundary; held from public projection
+
+A protected exhibit-information record identifies January 8-29, 2010 as the
+original NTER CHNG run. Independent public corroboration remains open.
+
+### America: Now and Here production plan
+
+**Status:** Confirmed as a plan; completion remains open
+
+A protected April 2011 working document plans a Leedy-Voulkos installation
+beginning April 22 and records the interdependent software, equipment,
+fabrication, transport, installation, and gallery-experience work.
+
+### Cross-disciplinary production range
+
+**Status:** Confirmed with collective-credit boundary
+
+A protected first-party record describes the three collaborators as combining
+scenic-design, computer-programming, motion-graphics, and
+experiential-production backgrounds. It does not allocate those disciplines
+among them.
+
 ## Sources
 
 - [NTER CHNG project site, archived January 28, 2011](https://web.archive.org/web/20110128193350/http://nterchng.com/)
@@ -75,6 +119,15 @@ NTER CHNG artist statement.
 - The Arts Incubator installation was remounted unchanged for America: Now and
   Here.
 - NTER CHNG toured nationally with America: Now and Here.
+- A production plan proves NTER CHNG was installed or opened at Leedy-Voulkos
+  on April 22, 2011.
+- Every task in the production plan was completed, or Jamie completed every
+  listed task.
+- An independent public source confirms the January 8-29, 2010 run dates.
+- The protected exhibit-information passage is a recovered published press
+  release.
+- Message samples in the protected working document can be republished or
+  treated as verified gallery-visitor records.
 - The missing first-party press release never existed.
 
 ## Editorial state
@@ -85,3 +138,7 @@ public composition should ask whether this early participatory system helps a
 specific reader understand Jamie's present operating practice. If it does,
 credit all three collaborators and keep the individual task split open unless
 stronger records or collaborator review resolve it.
+
+See
+[`2026-07-16-nter-chng-working-documents.md`](../research/2026-07-16-nter-chng-working-documents.md)
+for the protected close reading, provenance limits, and next research steps.

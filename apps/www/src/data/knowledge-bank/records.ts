@@ -44,6 +44,12 @@ import {
   webArchiveSourceRecords20260715
 } from "./web-archive-intake-2026-07-15.ts";
 import {
+  nterChngArtifactClaimRecords20260716,
+  nterChngArtifactIntakeRecords20260716,
+  nterChngArtifactResearchInquiries20260716,
+  nterChngArtifactSourceRecords20260716
+} from "./nter-chng-artifact-intake-2026-07-16.ts";
+import {
   kcTownHallFieldClaimRecords20260715,
   kcTownHallFieldIntakeRecords20260715,
   kcTownHallFieldResearchInquiries20260715,
@@ -107,6 +113,7 @@ const knowledgeBankInput = {
     ...sharedDriveIntakeRecords20260714,
     ...socialMediaIntakeRecords20260714,
     ...webArchiveIntakeRecords20260715,
+    ...nterChngArtifactIntakeRecords20260716,
     ...kcTownHallFieldIntakeRecords20260715,
     ...wowListFullPopulationIntakeRecords20260715,
     ...kcTownHallFullPopulationIntakeRecords20260715,
@@ -247,6 +254,7 @@ const knowledgeBankInput = {
     ...sharedDriveSourceRecords20260714,
     ...socialMediaSourceRecords20260714,
     ...webArchiveSourceRecords20260715,
+    ...nterChngArtifactSourceRecords20260716,
     ...kcTownHallFieldSourceRecords20260715,
     ...wowListFullPopulationSourceRecords20260715,
     ...kcTownHallFullPopulationSourceRecords20260715,
@@ -351,6 +359,7 @@ const knowledgeBankInput = {
     ...sharedDriveClaimRecords20260714,
     ...socialMediaClaimRecords20260714,
     ...webArchiveClaimRecords20260715,
+    ...nterChngArtifactClaimRecords20260716,
     ...kcTownHallFieldClaimRecords20260715,
     ...wowListFullPopulationClaimRecords20260715,
     ...kcTownHallFullPopulationClaimRecords20260715,
@@ -380,6 +389,7 @@ const knowledgeBankInput = {
     ...sharedDriveResearchInquiries20260714,
     ...socialMediaResearchInquiries20260714,
     ...webArchiveResearchInquiries20260715,
+    ...nterChngArtifactResearchInquiries20260716,
     ...kcTownHallFieldResearchInquiries20260715,
     ...wowListFullPopulationResearchInquiries20260715,
     ...kcTownHallFullPopulationResearchInquiries20260715,

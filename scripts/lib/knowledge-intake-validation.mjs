@@ -86,6 +86,8 @@ export const requiredSeedIntakeIds = [
   "INTAKE-CLAUDETTE-AR-COLLABORATION-2026",
   "INTAKE-NTERCHNG-PROJECT-SITE-2026",
   "INTAKE-NTERCHNG-ANH-INCLUSION-2026",
+  "INTAKE-NTERCHNG-ANH-INSTALLER-WORKING-DOC-2026",
+  "INTAKE-NTERCHNG-EXHIBIT-INFORMATION-WORKING-DOC-2026",
   "INTAKE-ANH-NERMAN-CONTEXT-2026",
   "INTAKE-WOWLIST-FULL-POPULATION-2026",
   "INTAKE-KCTOWNHALL-FULL-POPULATION-2026",
@@ -680,7 +682,10 @@ export function validateKnowledgeIntake() {
   const nterChngClaimIds = [
     "CLM-NTERCHNG-COLLECTIVE-INSTALLATION-2011",
     "CLM-NTERCHNG-PARTICIPATORY-SYSTEM-2011",
-    "CLM-NTERCHNG-ANH-KC-INCLUSION-2011"
+    "CLM-NTERCHNG-ANH-KC-INCLUSION-2011",
+    "CLM-NTERCHNG-ORIGINAL-RUN-DATES-2010",
+    "CLM-NTERCHNG-ANH-PRODUCTION-PLAN-2011",
+    "CLM-NTERCHNG-CROSS-DISCIPLINARY-PRODUCTION-2010"
   ];
   for (const claimId of nterChngClaimIds) {
     const claim = claimById.get(claimId);
@@ -733,6 +738,96 @@ export function validateKnowledgeIntake() {
     !nterChngInquiryText.includes("exact physical")
   ) {
     researchErrors.push("NTER CHNG archive recovery must preserve its recovered finding and unresolved physical-display and press-release boundaries");
+  }
+
+  const nterChngProtectedSourceIds = [
+    "SRC-NTERCHNG-ANH-INSTALLER-WORKING-DOC-2011",
+    "SRC-NTERCHNG-EXHIBIT-INFORMATION-WORKING-DOC-2011"
+  ];
+  for (const sourceId of nterChngProtectedSourceIds) {
+    const source = sourceById.get(sourceId);
+    if (!source) {
+      researchErrors.push(`Missing protected NTER CHNG source: ${sourceId}`);
+      continue;
+    }
+    if (
+      source.visibility !== "protected" ||
+      source.preservationStatus !== "private" ||
+      source.canonicalUrl ||
+      source.archiveUrl ||
+      source.assetUrl ||
+      !source.protectedLocatorId
+    ) {
+      researchErrors.push(`${sourceId} must remain protected, privately preserved, URL-free, and locator-governed`);
+    }
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      researchErrors.push(`${sourceId} needs explicit support and does-not-establish boundaries`);
+    }
+    const linkedIntakes = knowledgeBank.intakes.filter((intake) =>
+      intake.sourceIds.includes(sourceId)
+    );
+    const linkedClaims = knowledgeBank.claims.filter((claim) =>
+      claim.evidence.some((evidence) => evidence.sourceId === sourceId)
+    );
+    if (!linkedIntakes.length || !linkedClaims.length) {
+      researchErrors.push(`${sourceId} needs at least one intake and one atomic claim edge`);
+    }
+  }
+
+  const nterChngProtectedIntakeIds = [
+    "INTAKE-NTERCHNG-ANH-INSTALLER-WORKING-DOC-2026",
+    "INTAKE-NTERCHNG-EXHIBIT-INFORMATION-WORKING-DOC-2026"
+  ];
+  for (const intakeId of nterChngProtectedIntakeIds) {
+    const intake = knowledgeBank.intakes.find((item) => item.id === intakeId);
+    if (
+      intake?.maturity !== "decomposed" ||
+      intake.publicUse !== "protected" ||
+      intake.editorialState !== "unsurfaced" ||
+      intake.canonicalUrl
+    ) {
+      researchErrors.push(`${intakeId} must remain decomposed, protected, unsurfaced, and URL-free`);
+    }
+  }
+
+  const nterChngPlanClaim = claimById.get("CLM-NTERCHNG-ANH-PRODUCTION-PLAN-2011");
+  const nterChngPlanText = JSON.stringify([
+    nterChngPlanClaim?.internalClaim,
+    nterChngPlanClaim?.boundaries,
+    nterChngPlanClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["plan", "completed", "april 22", "individual"]) {
+    if (!nterChngPlanText.includes(boundary)) {
+      researchErrors.push(`NTER CHNG production-plan claim is missing its ${boundary} boundary`);
+    }
+  }
+
+  const nterChngDatesClaim = claimById.get("CLM-NTERCHNG-ORIGINAL-RUN-DATES-2010");
+  const nterChngDatesText = JSON.stringify([
+    nterChngDatesClaim?.internalClaim,
+    nterChngDatesClaim?.boundaries,
+    nterChngDatesClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["january 8-29, 2010", "first-party", "independent", "press release"]) {
+    if (!nterChngDatesText.includes(boundary)) {
+      researchErrors.push(`NTER CHNG run-dates claim is missing its ${boundary} boundary`);
+    }
+  }
+
+  const nterChngWorkingInquiry = inquiryById.get(
+    "INQ-NTERCHNG-WORKING-DOCUMENTS-2026"
+  );
+  const nterChngWorkingInquiryText = JSON.stringify([
+    nterChngWorkingInquiry?.findings,
+    nterChngWorkingInquiry?.limitations
+  ]).toLowerCase();
+  for (const boundary of ["revision history", "phone numbers", "task", "publicly recoverable", "timed out", "not recover"]) {
+    if (!nterChngWorkingInquiryText.includes(boundary)) {
+      researchErrors.push(`NTER CHNG working-document inquiry is missing its ${boundary} boundary`);
+    }
+  }
+  if (nterChngWorkingInquiry?.resultStatus !== "partially-recovered") {
+    researchErrors.push("NTER CHNG working-document inquiry must remain partially recovered");
   }
 
   for (const intake of knowledgeBank.intakes) {

@@ -88,9 +88,12 @@ for authenticated public-account inventory, bounded interaction recovery,
 collective-authorship rules, and selected public projections.
 See
 [projects/nter-chng.md](projects/nter-chng.md) and
-[research/2026-07-15-nter-chng-archive-recovery.md](research/2026-07-15-nter-chng-archive-recovery.md)
+[research/2026-07-15-nter-chng-archive-recovery.md](research/2026-07-15-nter-chng-archive-recovery.md),
+plus
+[research/2026-07-16-nter-chng-working-documents.md](research/2026-07-16-nter-chng-working-documents.md)
 for a recovered participatory installation, official exhibition-site context,
-collective-credit boundaries, and deliberate non-projection.
+protected production records, collective-credit boundaries, and deliberate
+non-projection.
 See
 [projects/kc-town-hall.md](projects/kc-town-hall.md) and
 [research/2026-07-15-kc-town-hall-phase-one-and-neighborhood-practice.md](research/2026-07-15-kc-town-hall-phase-one-and-neighborhood-practice.md)

@@ -110,8 +110,20 @@ installation venue or configuration, a Nerman Museum display, or a national
 tour from the recovered pages. The linked first-party press release is not
 recovered; do not convert that status into proof that it never existed.
 
+Do not convert the protected America: Now and Here production plan into proof
+that NTER CHNG was installed or opened at Leedy-Voulkos on April 22, 2011, that
+every task was completed, or that Jamie personally performed every task. Do not
+map scenic design, computer programming, motion graphics, experiential
+production, or installation tasks to an individual collaborator without a
+source that makes that assignment.
+
+Do not call the January 8-29, 2010 dates independently verified or describe the
+protected exhibit-information passage as a recovered published press release.
+Do not treat its message samples as verified gallery-visitor records or
+publication permission.
+
 Do not reproduce the personal phone numbers visible in the archived America:
-Now and Here artist interview.
+Now and Here artist interview or the protected working records.
 
 ## Source-Backed Team Memory
 
