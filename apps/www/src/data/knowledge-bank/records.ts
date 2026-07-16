@@ -41,6 +41,11 @@ import {
   personalWowListFacebookEventSources
 } from "./personal-wowlist-facebook-events-2026-07.ts";
 import {
+  personalFacebookPostClaims,
+  personalFacebookPostResearchInquiries,
+  personalFacebookPostSources
+} from "./personal-facebook-posts.ts";
+import {
   wowlistFacebookPostClaims,
   wowlistFacebookPostResearchInquiries,
   wowlistFacebookPostSources
@@ -58,6 +63,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostSources,
     ...kcSpacesFundFacebookSources,
     ...personalWowListFacebookEventSources,
+    ...personalFacebookPostSources,
     ...wowlistFacebookPostSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -1230,6 +1236,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostClaims,
     ...kcSpacesFundFacebookClaims,
     ...personalWowListFacebookEventClaims,
+    ...personalFacebookPostClaims,
     ...wowlistFacebookPostClaims,
     {
       id: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
@@ -1611,6 +1618,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostResearchInquiries,
     ...kcSpacesFundFacebookResearchInquiries,
     ...personalWowListFacebookEventResearchInquiries,
+    ...personalFacebookPostResearchInquiries,
     ...wowlistFacebookPostResearchInquiries,
     {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",

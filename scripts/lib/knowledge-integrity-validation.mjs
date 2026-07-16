@@ -17,6 +17,7 @@ export const integrityArtifactPaths = [
   "docs/knowledge-bank/corpora/nycartc-facebook-posts-full-population.manifest.json",
   "docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-acquisition-control.json",
   "docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-full-population.manifest.json",
+  "docs/knowledge-bank/corpora/personal-facebook-posts-full-population.manifest.json",
 ];
 
 export function validateIntegrityCheckpoints(checkpoints, artifactTexts) {

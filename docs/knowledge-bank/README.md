@@ -109,6 +109,20 @@ held from the current job-application website. A closed aggregate schema and
 protected-side derivation manifest make the 434-of-434 result reproducible for
 authorized reviewers without publishing a row-level personal timeline.
 
+The authenticated [personal Facebook authored-post pass](projects/personal-facebook-posts.md)
+accounts for all 1,243 cards exposed by Jamie's owner-visible `Manage posts`
+surface on July 16, 2026, spanning December 2006 through June 2022. Its
+aggregate-only fixture preserves exact population, visibility-label,
+posted-route, overlapping mission-signal, stakeholder-reference, and
+traction-boundary findings without publishing raw post text, private records,
+ordinary identities, personal chronology, comments, images, or authenticated
+state. Selected explicitly public professional posts enter the source bank as
+first-party specimens; role, outcome, causal, and impact claims still require
+the stronger independent and official sources already governed elsewhere. The
+compact-card surface exposed no reaction, comment, share, or incoming-engager
+fields, so full-population engagement remains held rather than guessed. No
+website copy or public route changed from this pass.
+
 Campaign press sections are preserved as typed source collections rather than
 treated as automatic claim support. The generated
 [NYC Artist Coalition campaign press corpus](campaign-press-corpus.md) records
