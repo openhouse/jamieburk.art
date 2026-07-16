@@ -208,7 +208,7 @@ score(
   sourceById
     .get("SRC-NYCAC-FACEBOOK-POST-CORPUS-2026")
     ?.canonicalUrl?.includes(
-      "blob/998d25b5fc64e4b781da52590cf54a142ddf4274/"
+      "blob/cf30662e4d4adbe35f97f6dcf26600b374477999/"
     ) &&
     sourceById.get("SRC-NYCAC-FACEBOOK-POST-PROTECTED-RUN-2026")
       ?.visibility === "protected" &&

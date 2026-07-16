@@ -2,6 +2,7 @@
 
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,13 +14,13 @@ export const corpusPath =
 export const manifestPath =
   "docs/knowledge-bank/corpora/nycartc-facebook-posts-full-population.manifest.json";
 export const expectedCorpusSha256 =
-  "9ba80499cd92c43bdec153d446f2bd61e4bb5fd9a3b215d4a3d920d3512d5801";
+  "d39d851976da5e35cba5df9b8258db9c48c7f24faea058a0c242223403d50ac4";
 export const expectedReconciliationSha256 =
   "79add9a8e36d93d41c0b30ddf233c39c3fe59fe4014db0b96f769ec98cf1ce5c";
 export const expectedPopulationSemanticSha256 =
   "d7a7d1f72d8643b8c59f3e7009d151eb90afe7269abb1d8e84f31df508d4488d";
 export const expectedUrlInventorySemanticSha256 =
-  "e057d06003bfe77a8e110721c5ba1e51cc588ab98f40dfc17055b88a06d0445e";
+  "43c0eeb051dacf60a6286fce755483d6ffeef669842b66ec3599e6286f2a53af";
 export const expectedOwnerSummarySemanticSha256 =
   "7d35076d4edf985ec751f00759c02f2b3510c5097bb3c516a7949b0353db6879";
 
@@ -269,6 +270,16 @@ export function evaluateCorpus(corpus, corpusText) {
     "posted URL inventory drift"
   );
   fail(
+    inventory.every((route) => {
+      const firstSeenRecord = records[route.firstSeenOrdinal - 1];
+      return (
+        firstSeenRecord?.publishedAt === route.firstSeenAt &&
+        firstSeenRecord?.postedRouteKeys.includes(route.routeKey)
+      );
+    }),
+    "posted URL first-seen reference drift"
+  );
+  fail(
     withheld.length === 2 &&
       withheld.every(
         (route) =>
@@ -387,6 +398,26 @@ export function checkRepository() {
     knowledgeRecords,
     /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/docs\/knowledge-bank\/corpora\/nycartc-facebook-posts-full-population\.json/
   );
+  const corpusSource = knowledgeBank.sources.find(
+    (source) => source.id === "SRC-NYCAC-FACEBOOK-POST-CORPUS-2026"
+  );
+  const immutableCommit = corpusSource?.canonicalUrl?.match(
+    /\/blob\/([0-9a-f]{40})\//
+  )?.[1];
+  assert.ok(immutableCommit, "corpus source must use an immutable commit URL");
+  const immutableCorpus = execFileSync(
+    "git",
+    ["show", `${immutableCommit}:${corpusPath}`],
+    { cwd: repoRoot }
+  );
+  assert.equal(
+    sha256(immutableCorpus),
+    expectedCorpusSha256,
+    "immutable corpus source does not match the reviewed corpus"
+  );
+  execFileSync("git", ["merge-base", "--is-ancestor", immutableCommit, "HEAD"], {
+    cwd: repoRoot
+  });
   assert.ok(records.includes("nycacFacebookPostClaims"));
   assert.ok(report.includes("all 445 distinct feed identities"));
   assert.ok(report.includes("all 444 owner-export rows"));

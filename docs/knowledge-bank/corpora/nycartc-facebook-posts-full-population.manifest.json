@@ -5,7 +5,7 @@
   "sourceCaptures": "protected and not committed",
   "sourceCapturesPublished": false,
   "corpus": "docs/knowledge-bank/corpora/nycartc-facebook-posts-full-population.json",
-  "corpusSha256": "9ba80499cd92c43bdec153d446f2bd61e4bb5fd9a3b215d4a3d920d3512d5801",
+  "corpusSha256": "d39d851976da5e35cba5df9b8258db9c48c7f24faea058a0c242223403d50ac4",
   "corpusBytes": 469134,
   "population": {
     "ownerExportRows": 444,

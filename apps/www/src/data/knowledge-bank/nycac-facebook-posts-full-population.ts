@@ -49,7 +49,7 @@ export const nycacFacebookPostSources: SourceRecord[] = [
     capturedAt: "2026-07-15",
     accessedAt: reviewedAt,
     canonicalUrl:
-      "https://github.com/openhouse/jamieburk.art/blob/998d25b5fc64e4b781da52590cf54a142ddf4274/docs/knowledge-bank/corpora/nycartc-facebook-posts-full-population.json",
+      "https://github.com/openhouse/jamieburk.art/blob/cf30662e4d4adbe35f97f6dcf26600b374477999/docs/knowledge-bank/corpora/nycartc-facebook-posts-full-population.json",
     preferredPublicUrl: "canonical",
     publicCitation:
       "NYC Artist Coalition Facebook posts full-population public-safe corpus, reconciled July 15-16, 2026.",
