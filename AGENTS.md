@@ -30,6 +30,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run atlas:generate`
+- `npm run atlas:check`
+- `npm run atlas:test`
+- `npm run atlas:eval`
 
 ## Public-Safety Rules
 
@@ -68,6 +72,20 @@ the bank with source basis, status, guardrail, and public-use boundary.
 
 Every structured claim needs status, support level, evidence class, public
 wording, guardrail, protected boundaries, and last-reviewed date.
+
+## Atlas
+
+Use `packages/atlas/` for the semantic Markdown component and
+`docs/atlas/pages/` for authored Atlas pages. During the transition,
+`apps/www/src/data/knowledge-bank/records.ts` remains canonical and Atlas
+compiles complete, loss-checked project slices from it.
+
+Every Atlas page needs stable identity, typed reciprocal relations, authority,
+consent, public-use, correction-route, and review metadata. Regenerate and
+check the disposable graph after semantic page or package changes.
+
+Atlas is an in-process package, not a network service, CMS, database, or public
+application. Do not add a public Atlas route without explicit approval.
 
 The website should read as a composed portfolio, not a claims database.
 

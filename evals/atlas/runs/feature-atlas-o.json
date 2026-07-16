@@ -1,0 +1,102 @@
+{
+  "suiteId": "atlas-semantic-wiki",
+  "suiteVersion": "1.0.0",
+  "candidateFingerprint": "a60cc129948a4874b3b8c8484eccebfe8c795e69dd34244431be3471134de1b5",
+  "results": [
+    {
+      "id": "semantic-markdown-contract",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "typed-relations-are-reciprocal",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "portable-markdown-links-resolve",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "canonical-records-resolve",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "project-migration-loses-nothing-silently",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "authority-and-correction-are-explicit",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "public-safety-boundary-is-enforced",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "atlas-remains-a-private-package",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "eval-branch-family-is-accounted-for",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "six-project-specimens",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "6 project page(s); target 6",
+      "evidence": []
+    },
+    {
+      "id": "semantic-neighborhood-depth",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "48 typed relation(s) across 10 page(s)",
+      "evidence": []
+    },
+    {
+      "id": "candidate-is-exactly-bound",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "a60cc129948a4874b3b8c8484eccebfe8c795e69dd34244431be3471134de1b5",
+      "evidence": {
+        "corpusFingerprint": "e60b60f986fc033d6bd574ab64159aa5753c9466c7c3777d5103b4695f2c47a7",
+        "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
+        "integrationFingerprint": "cb5873d06951ec7b99cd74a48681cfad9da2df28b809a1de69a2d3a581d42fbb",
+        "implementationFingerprint": "1bc4bf6d97ffa13144cf445e9fdd7e93d285168ca892c3a41d9ef80e3e29499d"
+      }
+    }
+  ],
+  "summary": {
+    "hardGateFailures": 0,
+    "hardGateTotal": 9,
+    "qualityTargetGaps": 0,
+    "qualityTargetTotal": 3
+  }
+}

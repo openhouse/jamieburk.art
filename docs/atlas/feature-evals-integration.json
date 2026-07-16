@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "base": {
+    "branch": "feature/evals-E",
+    "commit": "fc32ae02b275f5e18e3abb5e6c541256849980ef",
+    "rationale": "E provides the strongest current typed lifecycle, exact repository fingerprint, independent assessment boundary, and broad public-safe evidence corpus on which to stage Atlas."
+  },
+  "branches": [
+    {
+      "branch": "feature/evals-A",
+      "sourceCommit": "34703796f774563c05e0e2c09a9c7a1bd67bdb9c",
+      "strength": "Recursive launch and evidence gates with participation-lineage coverage.",
+      "adoptedInAtlas": ["recursive graph checks", "participation and lineage semantics"]
+    },
+    {
+      "branch": "feature/evals-B",
+      "sourceCommit": "973c76496e122511988058e1dbe4352414f3a364",
+      "strength": "Blind-spot governance and participatory-infrastructure framing.",
+      "adoptedInAtlas": ["explicit authority fields", "failure-oriented eval design"]
+    },
+    {
+      "branch": "feature/evals-C",
+      "sourceCommit": "b07ae0675b39b41ee1820cb3eeca1902a22940f7",
+      "strength": "Editorial lenses and clean separation of archival, project, and portfolio layers.",
+      "adoptedInAtlas": ["semantic projection boundary", "human-readable page contract"]
+    },
+    {
+      "branch": "feature/evals-D",
+      "sourceCommit": "48a156e69d99d96d3a568ac82128895bc96d5e4b",
+      "strength": "Recursive evidence intake, atomic claims, and full-population audit trails.",
+      "adoptedInAtlas": ["complete project-slice migration", "no-silent-loss gate"]
+    },
+    {
+      "branch": "feature/evals-E",
+      "sourceCommit": "fc32ae02b275f5e18e3abb5e6c541256849980ef",
+      "strength": "Typed knowledge lifecycle, exact candidate fingerprinting, and independent assessment controls.",
+      "adoptedInAtlas": ["base implementation", "candidate fingerprint", "human approval boundary"]
+    },
+    {
+      "branch": "feature/evals-F",
+      "sourceCommit": "c7e63011619aa30842fac9fdeb567218c4582ad6",
+      "strength": "A general lifecycle framework joined to broad archival corpora.",
+      "adoptedInAtlas": ["package-level lifecycle service", "corpus-to-project joins"]
+    },
+    {
+      "branch": "feature/evals-G",
+      "sourceCommit": "78f130b5345a96517eb76804ae93e750324422f8",
+      "strength": "Executable blind-spot evaluation and archive reconciliation.",
+      "adoptedInAtlas": ["mutation tests", "reconciliation-oriented evaluation"]
+    },
+    {
+      "branch": "feature/evals-H",
+      "sourceCommit": "679f9ba816a2c749622e1e8f54c28cc84d6f7f88",
+      "strength": "Release readability, public contracts, and strict inference guards.",
+      "adoptedInAtlas": ["required human-readable sections", "public-use declarations"]
+    },
+    {
+      "branch": "feature/evals-I",
+      "sourceCommit": "ff4801fd6de4c555ca4e060d023d56208fd94008",
+      "strength": "Adversarial projection correction and independently reviewed archive boundaries.",
+      "adoptedInAtlas": ["adversarial relation tests", "correction-route requirement"]
+    },
+    {
+      "branch": "feature/evals-J",
+      "sourceCommit": "a5de092a67c783291db0fa91ee3ca8ee006b424a",
+      "strength": "Documented recursive runs and reconciliation histories.",
+      "adoptedInAtlas": ["durable eval run reports", "explainable migration output"]
+    },
+    {
+      "branch": "feature/evals-K",
+      "sourceCommit": "47ebcc6be9478098c48560e05e3cef3a5523c6eb",
+      "strength": "Append-safe intake, query tooling, inspectable proof bases, and visual evidence checks.",
+      "adoptedInAtlas": ["query and explain service", "rebuildable generated graph", "append-safe future intake boundary"]
+    },
+    {
+      "branch": "feature/evals-L",
+      "sourceCommit": "11b16eb0022feb5d189dbe7b908540c55a45e793",
+      "strength": "Recursive knowledge development and Chad-lens portfolio translation.",
+      "adoptedInAtlas": ["human-situation page structure", "usable-result and public-projection sections"]
+    },
+    {
+      "branch": "feature/evals-M",
+      "sourceCommit": "b5ce9e39f0c5887def24081eb6dcee380b39d1b2",
+      "strength": "Explicit intake-to-maturation layers and production-readiness CI.",
+      "adoptedInAtlas": ["staged authority transition", "full-check integration"]
+    },
+    {
+      "branch": "feature/evals-N",
+      "sourceCommit": "e775e3f7e1f1866bdeb4dc568a6ca96ebef49cd8",
+      "strength": "Deterministic grader separation, correction traceability, and governance-first projection decisions.",
+      "adoptedInAtlas": ["deterministic semantic gates", "projection remains independent of evidence readiness"]
+    }
+  ]
+}

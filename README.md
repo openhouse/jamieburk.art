@@ -42,6 +42,11 @@ npm run check:knowledge-lifecycle
 npm run test:knowledge-lifecycle
 npm run eval:knowledge-lifecycle
 npm run eval:knowledge-lifecycle:gate
+npm run atlas:generate
+npm run atlas:check
+npm run atlas:test
+npm run atlas:eval
+npm run atlas:query -- --project callnyc
 npm run eval:launch:browser -- --url http://127.0.0.1:3000 --profile local
 npm run preflight:staging
 npm run preflight:production
@@ -102,6 +107,21 @@ The knowledge bank is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
+
+## Atlas
+
+`packages/atlas` is the private semantic Markdown component for the knowledge
+universe. Authored pages live in `docs/atlas/pages/`; the package validates
+stable identity, reciprocal typed relations, authority and consent posture,
+complete canonical project slices, public-safety boundaries, and exact
+candidate fingerprints. It also provides in-process query and explanation
+APIs.
+
+Atlas is a package with service-like contracts, not a separately deployed
+application. Its generated graph is rebuildable, the typed knowledge bank
+remains canonical during this transition, and there is intentionally no public
+Atlas route. See `docs/atlas/architecture.md` and
+`docs/atlas/evals/hill-climb.md`.
 
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
