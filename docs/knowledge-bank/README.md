@@ -189,6 +189,15 @@ institutional context page support different parts of the record. The resulting
 [creative-technology practice note](projects/creative-technology-practice.md)
 is reserve knowledge, not an automatic website projection.
 
+The [waterways participatory-practice
+note](projects/waterways-participatory-practice.md) and its [Kansas City Star
+source review](research/2026-07-16-kansas-city-star-waterways-evidence.md)
+demonstrate how a locally preserved public newspaper artifact can strengthen a
+governed claim without republishing copyrighted pages. They separate Jamie's
+documented project conception from the three-person crew's collective journey,
+preserve route and material evidence, retain Gulf-endpoint uncertainty, and
+keep the result off the current hiring site pending a later composition need.
+
 The [@urbanhermit full-population archival-production
 note](research/2026-07-15-urbanhermit-x-full-population-archival-production.md)
 demonstrates exact reconciliation of a 434-record personal public profile while

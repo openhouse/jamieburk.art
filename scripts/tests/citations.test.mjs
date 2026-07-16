@@ -116,8 +116,48 @@ test("intake maturity states require their supporting structure", () => {
 test("new source leads preserve claim boundaries", () => {
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   assert.ok(sourceById.get("SRC-WATERWAYS-PITCH-HUCK-FINN-2007").doesNotEstablish.some((item) => /Gulf of Mexico/i.test(item)));
+  assert.ok(sourceById.get("SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007").supportsGenerally.some((item) => /1,000-mile marker/i.test(item)));
+  assert.ok(sourceById.get("SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007").doesNotEstablish.some((item) => /arrival at the Gulf of Mexico/i.test(item)));
+  assert.ok(sourceById.get("SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007").doesNotEstablish.some((item) => /permission to republish/i.test(item)));
   assert.ok(sourceById.get("SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19").doesNotEstablish.some((item) => /alone repealed/i.test(item)));
   assert.ok(sourceById.get("SRC-NYCA-NPR-CABARET-REPEAL-2017-09-20").doesNotEstablish.some((item) => /Jamie's role/i.test(item)));
+});
+
+test("Kansas City Star waterways evidence promotes a bounded reserve claim", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007"
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATERWAYS-RAFT-EXPEDITION-2007"
+  );
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12"
+  );
+
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.equal(source.preservationStatus, "private");
+  assert.equal(source.media.rightsStatus, "permission-needed");
+  assert.equal(source.media.publicDisplayStatus, "hold");
+  assert.equal(claim.status, "confirmed-with-boundary");
+  assert.ok(claim.boundaries.some((item) => /Libby Hendon and Laura Mattingly/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /reached the Gulf of Mexico/i.test(item)));
+  assert.equal(intake.status, "integrated");
+  assert.ok(intake.relatedClaimIds.includes("CLM-WATERWAYS-RAFT-EXPEDITION-2007"));
+  assert.equal(
+    intake.propositions.find(
+      (item) => item.id === "PROP-WATERWAYS-RAFT-CONCEPTION-2007"
+    ).status,
+    "direct-support"
+  );
+  assert.equal(
+    intake.propositions.find(
+      (item) =>
+        item.id === "PROP-WATERWAYS-RIVER-AS-CONNECTIVE-CULTURAL-SPACE-2007"
+    ).status,
+    "direct-support"
+  );
+  assert.doesNotMatch(JSON.stringify(publicCitationRegistry), /SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007/);
+  assert.doesNotMatch(JSON.stringify(knowledgeBank), /KC_Star_Article\.pdf|\/Users\/|\/Volumes\//);
 });
 
 test("campaign press census preserves every placement and its limits", () => {

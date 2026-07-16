@@ -294,6 +294,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## waterways-raft-expedition-2007 - Kansas City-to-Louisiana river expedition
+
+**Status:** Ready with boundary
+**Support level:** Strong
+**Evidence class:** Contemporaneous Kansas City Star front-page reporting / corroborating Pitch reporting / later institutional project context
+**Public wording:** In 2007, Jamie conceived *Release Yourself onto the Water until it Tastes of Salt*. The Kansas City Star documented Jamie, Libby Hendon, and Laura Mattingly traveling from Kansas City's West Bottoms into Louisiana on a reclaimed-material, bicycle-powered raft and passing the 1,000-mile marker.
+**Detailed public-safe wording:** The article documents a roughly 12-by-13-foot raft made from reclaimed building materials, civic refuse, and soda-manufacturing containers, propelled by two bicycles linked to a paddlewheel. It records the expedition as a living experience centered on waterways and encounters with people along them, and attributes to Jamie an interpretation of the river as connective cultural space between Kansas City's West Bottoms and Delta communities.
+**Where to project:** Knowledge-bank project note only. Reserve for later artistic-practice, public-engagement, participatory-program, or systems-thinking composition.
+**Why it matters:** Makes an unusual actor-action-artifact-useful-end sequence defensible: Jamie initiated an ambitious participatory premise, helped give it material and operational form with others, sustained it across more than 1,000 miles, and articulated a civic-cultural purpose for the journey.
+**Guardrail:** Always name Libby Hendon and Laura Mattingly as the other core crew members. Preserve the wider support ecology and distinguish progress into Louisiana from arrival at the Gulf.
+**Do not say:** Jamie completed the expedition alone; Jamie personally built or operated every part of the raft; the crew reached the Gulf of Mexico; the article establishes the exact endpoint or complete itinerary; the historical journey is a currently authorized or reproducible operating model.
+**Protected boundaries:** The locally preserved Kansas City Star PDF, article text, and photographs are not committed or republished. Publication rights, complete task allocation, and the complete participant and supporter roster remain unresolved.
+**Review owner:** Jamie / collaborator role confirmation welcome
+**Last reviewed:** 2026-07-16
+
 ## ai-evals-professional-development - AI evals professional development
 
 **Status:** Ready  

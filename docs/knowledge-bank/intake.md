@@ -183,7 +183,14 @@ July 12-15, 2026:
   inventory, bounded incoming-response set, and source-backed Horse Lords,
   8th Street Tunnel, and KC Town Hall participation claims.
 
-The waterways and Sunday Dinner threads have reached `claim-candidate`. The
+The waterways thread is now `integrated`. A November 15, 2007 Kansas City Star
+front page independently supports a governed reserve claim about Jamie's
+conception of *Release Yourself onto the Water until it Tastes of Salt*, the
+named three-person core crew, the reclaimed bicycle-powered raft, and progress
+from Kansas City's West Bottoms into Louisiana beyond the 1,000-mile marker.
+Gulf arrival, exact endpoint, complete task allocation, and republication
+rights remain unresolved; no website projection was added. The Sunday Dinner
+thread remains at `claim-candidate`. The
 campaign-press and several social-evidence threads remain `researching`; the
 press indexes are fully accessioned, while their 45 distinct
 article bodies remain a bounded close-reading queue. The authenticated CallNYC

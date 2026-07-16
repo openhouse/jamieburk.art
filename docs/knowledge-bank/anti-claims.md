@@ -45,6 +45,21 @@ into attendance, reach, endorsement, adoption, reception, or impact. Do not
 reproduce archived phone numbers, participant messages, or media without
 separate permission and review.
 
+## Waterways Expedition
+
+Do not say Jamie completed *Release Yourself onto the Water until it Tastes of
+Salt* alone, personally performed every design, fabrication, navigation,
+documentation, logistics, or public-engagement task, or was the journey's only
+participant. Always credit Libby Hendon and Laura Mattingly as the other named
+core crew members and preserve the wider support ecology.
+
+Do not claim Gulf-of-Mexico arrival or an exact final endpoint from the current
+sources. The Kansas City Star establishes travel from Kansas City's West
+Bottoms into Louisiana, a location south of Baton Rouge at publication, and
+passage beyond the 1,000-mile marker. Do not republish the newspaper PDF,
+article text, or photographs without rights clearance, and do not treat the
+historical journey as current river-travel guidance.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

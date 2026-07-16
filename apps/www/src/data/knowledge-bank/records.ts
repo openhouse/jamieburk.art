@@ -210,6 +210,48 @@ const knowledgeBankInput = {
       doesNotEstablish: ["completion of the full route to the Gulf of Mexico", "the exact final landing point", "Jamie's sole authorship of the collective expedition", "a complete participant roster"]
     },
     {
+      id: "SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007",
+      title: "In the name of art, go with the flow",
+      organization: "The Kansas City Star",
+      author: "Darryl Levings",
+      kind: "published-article",
+      visibility: "public-metadata-only",
+      preservationStatus: "private",
+      publishedAt: "2007-11-15",
+      accessedAt: "2026-07-16",
+      publicCitation: "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, A1 and A4.",
+      publicNote: "The front-page article and continuation independently document Release Yourself onto the Water until it Tastes of Salt, attribute the originating idea to Jamie, name Libby Hendon and Laura Mattingly as the other core crew members, and report the reclaimed-material bicycle-powered raft's progress from Kansas City's West Bottoms into Louisiana. The locally preserved PDF is not republished.",
+      protectedLocatorId: "KC-STAR-WATERWAYS-ARTICLE-2007",
+      media: {
+        mediaKind: "document",
+        rightsStatus: "permission-needed",
+        consentStatus: "not-applicable",
+        publicDisplayStatus: "hold",
+        visibleText: ["In the name of art, go with the flow", "RIVER: Adventure of a lifetime takes three friends from KC to Louisiana"]
+      },
+      supportsGenerally: [
+        "Release Yourself onto the Water until it Tastes of Salt project identity",
+        "Jamie as originator of the expedition idea",
+        "Libby Hendon and Laura Mattingly as core crew members with Jamie",
+        "July 21 launch from Kansas City's West Bottoms",
+        "a roughly 12-by-13-foot raft built from reclaimed materials with bicycle-powered paddlewheel propulsion",
+        "reported passage beyond the 1,000-mile marker and location south of Baton Rouge by November 15, 2007",
+        "a living-experience purpose centered on waterways and encounters with people along them",
+        "Jamie's public interpretation of the river as connective cultural space rather than only a boundary or industrial corridor",
+        "front-page Kansas City Star coverage"
+      ],
+      doesNotEstablish: [
+        "arrival at the Gulf of Mexico or the exact final endpoint",
+        "an uninterrupted water-only route or a complete day-by-day itinerary",
+        "Jamie's sole authorship, construction, navigation, or operation of the collective expedition",
+        "the complete participant, host, supporter, or collaborator roster",
+        "the exact division of design, fabrication, logistical, legal, documentary, and public-engagement work",
+        "that every quoted estimate or recollection was independently audited",
+        "current authorization, safety, or suitability of repeating the journey",
+        "permission to republish the newspaper PDF, article text, or photographs"
+      ]
+    },
+    {
       id: "SRC-WATERWAYS-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009",
       title: "Great Accommodations with Jamie Burkart - Imagining Lifestyles for Cities on the Water",
       organization: "Charlotte Street Foundation",
@@ -1310,6 +1352,52 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
+      id: "CLM-WATERWAYS-RAFT-EXPEDITION-2007",
+      project: "waterways-participatory-practice",
+      internalClaim: "Jamie conceived Release Yourself onto the Water until it Tastes of Salt; contemporaneous reporting documents Jamie, Libby Hendon, and Laura Mattingly carrying the collaborative expedition from Kansas City's West Bottoms into Louisiana on a reclaimed-material, bicycle-powered raft and passing the 1,000-mile marker.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "archive-note",
+        text: "In 2007, Jamie conceived Release Yourself onto the Water until it Tastes of Salt. The Kansas City Star documented Jamie, Libby Hendon, and Laura Mattingly traveling from Kansas City's West Bottoms into Louisiana on a reclaimed-material, bicycle-powered raft and passing the 1,000-mile marker.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/waterways-participatory-practice"]
+      }],
+      evidence: [
+        {
+          sourceId: "SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007",
+          relationship: "direct-support",
+          supports: ["project identity", "Jamie's originating idea", "named core crew", "West Bottoms launch", "reclaimed-material bicycle-powered raft", "travel into Louisiana", "passage beyond the 1,000-mile marker", "public-purpose interpretation"],
+          locator: "Front page and A4 continuation.",
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
+          relationship: "corroborating",
+          supports: ["Jamie's conception of the expedition", "reclaimed-material raft", "Missouri River launch context", "art and transportation-history framing"],
+          confidence: "high",
+          renderCitation: true
+        }
+      ],
+      boundaries: [
+        "Always credit Libby Hendon and Laura Mattingly as the other named core crew members; friends, hosts, legal support, and local communities also materially supported the journey.",
+        "The Kansas City Star establishes progress into Louisiana and passage beyond the 1,000-mile marker, not arrival at the Gulf or an exact final endpoint.",
+        "The record attributes the originating idea to Jamie but does not assign him every fabrication, navigation, logistics, documentation, public-engagement, or safety task.",
+        "The project is historical evidence of participatory artistic and civic practice, not current authorization or guidance for river travel."
+      ],
+      antiClaims: [
+        "Jamie completed the expedition alone",
+        "Jamie personally built or operated every part of the raft",
+        "The crew reached the Gulf of Mexico",
+        "The article establishes the exact endpoint or complete itinerary",
+        "The historical journey is a currently authorized or reproducible operating model"
+      ],
+      researchInquiryIds: ["INQ-WATERWAYS-RAFT-ROUTE-AND-ROLES-2026"],
+      reviewedAt: "2026-07-16",
+      reviewedBy: ["Jamie Burkart", "Codex Kansas City Star source review"]
+    },
+    {
       id: "CLM-NTER-CHNG-AMERICA-NOW-HERE-2011",
       project: "creative-technology-practice",
       internalClaim: "America: Now and Here's official Kansas City site listed Drew Bolton, Jamie Burkart, and Garrett Fuselier as visual artists and documented NTER CHNG in the 2011 exhibition; the exhibition's main site later described visitors using the installation.",
@@ -1595,6 +1683,39 @@ const knowledgeBankInput = {
       publicSummary: "A bounded official-record search recovered one exact Finkelpearl reference to NYC Artist Coalition: in May 2017 budget testimony he used the coalition's formation after DCLA's DIY-arts meeting as evidence for the value of reciprocal public engagement. Separate hearings show Jamie translating coalition safety work into Council testimony and the Council using coalition research in agency oversight."
     },
     {
+      id: "INQ-WATERWAYS-RAFT-ROUTE-AND-ROLES-2026",
+      project: "waterways-participatory-practice",
+      question: "What route, endpoint, collaborator roles, public encounters, project artifacts, and publication rights can be established for Release Yourself onto the Water until it Tastes of Salt?",
+      methods: [
+        "Rendered and visually reviewed both pages of the November 15, 2007 Kansas City Star article.",
+        "Extracted layout-aware text and reconciled the A1 story with its A4 continuation, captions, byline, date, and page placement.",
+        "Compared the article with the existing contemporaneous Pitch report, the later Charlotte Street Great Accommodations project page, and the recovered public Facebook event records.",
+        "Separated attributed conception, named crew, artifact design, route progress, public interpretation, and support ecology from endpoint, task-allocation, and rights questions."
+      ],
+      runAt: "2026-07-16",
+      resultStatus: "partially-recovered",
+      findings: [
+        "The Kansas City Star placed the expedition on its November 15, 2007 front page and continued it on A4.",
+        "The article attributes the initial dream, vision, or idea to Jamie and names Libby Hendon and Laura Mattingly as the other core crew members.",
+        "The crew launched from Kansas City's West Bottoms on July 21 and, by publication, was reported south of Baton Rouge after passing the 1,000-mile marker.",
+        "The article describes a roughly 12-by-13-foot raft made from reclaimed building material, civic refuse, and soda-manufacturing containers, with two bicycles linked to a paddlewheel.",
+        "Jamie framed the river as an overlooked connective cultural space linking Kansas City's West Bottoms with Delta communities.",
+        "The record also documents a wider support ecology involving friends who joined segments, Vicksburg residents, legal assistance, hosts, and public agencies."
+      ],
+      limitations: [
+        "The article reports an intended search for salt but does not establish arrival at the Gulf of Mexico or the exact final endpoint.",
+        "It does not provide a complete day-by-day route, participant roster, or division of design, construction, navigation, documentation, legal, and public-engagement work.",
+        "The local PDF preserves a public newspaper artifact but does not confer republication rights for the article text or photographs.",
+        "Contemporaneous reporting can corroborate public facts and attributed statements without independently auditing every estimate, recollection, or safety characterization."
+      ],
+      sourceIds: [
+        "SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007",
+        "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
+        "SRC-WATERWAYS-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009"
+      ],
+      publicSummary: "The November 15, 2007 Kansas City Star front page independently attributes the expedition's originating idea to Jamie and documents Jamie, Libby Hendon, and Laura Mattingly carrying a reclaimed-material, bicycle-powered raft from Kansas City's West Bottoms into Louisiana beyond the 1,000-mile marker. Gulf arrival, exact endpoint, complete task allocation, and republication rights remain unresolved."
+    },
+    {
       id: "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
       project: "creative-technology-practice",
       question: "What original code, diagrams, cleared installation media, collaborator accounts, and press materials would clarify the NTER CHNG division of labor and support a future visual projection?",
@@ -1644,19 +1765,21 @@ const knowledgeBankInput = {
       title: "Waterways, communal space, and participatory cultural practice",
       project: "waterways-participatory-practice",
       kind: "claim-candidate",
-      summary: "Jamie surfaced a long arc of participatory work spanning Shop Shows, Open House, a recycled-material river expedition, and Great Accommodations. The sources suggest a durable practice of turning homes, galleries, and waterways into shared structures for participation, communal authorship, and civic imagination.",
-      status: "claim-candidate",
+      summary: "Jamie surfaced a long arc of participatory work spanning Shop Shows, Open House, Release Yourself onto the Water until it Tastes of Salt, and Great Accommodations. Contemporaneous reporting now supports a governed claim about his conception of the river expedition, the three-person core crew's travel from Kansas City into Louisiana beyond the 1,000-mile marker, and the reclaimed bicycle-powered raft, while preserving collective credit and endpoint uncertainty.",
+      status: "integrated",
       sourceIds: [
         "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
+        "SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007",
         "SRC-WATERWAYS-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009",
         "SRC-PARTICIPATION-GOOD-TIMES-OPEN-HOUSE-2006"
       ],
-      relatedClaimIds: [],
+      relatedClaimIds: ["CLM-WATERWAYS-RAFT-EXPEDITION-2007"],
       relatedProofIds: [],
       candidateClaims: [
         "From 2003 to 2005, Jamie and his housemates held collectively produced Shop Shows in their Santa Cruz home, inviting participants to contribute art, performance, food, and unfinished work.",
         "In 2006, Jamie turned Porter Bridge Gallery into Open House, a ten-day experiment in communal living and participatory art whose responsibility and decision-making he explicitly described as communal.",
-        "Jamie conceived an experiential river expedition; a group of Kansas City and California participants traveled across Missouri on a homemade raft built from recycled materials.",
+        "In 2007, Jamie conceived Release Yourself onto the Water until it Tastes of Salt; The Kansas City Star documented Jamie, Libby Hendon, and Laura Mattingly traveling from Kansas City's West Bottoms into Louisiana beyond the 1,000-mile marker on a reclaimed-material, bicycle-powered raft.",
+        "Jamie publicly framed the river as connective cultural space linking Kansas City's West Bottoms and Delta communities rather than only as an invisible boundary or industrial corridor.",
         "In 2009, Jamie spearheaded Great Accommodations and worked with Suzanne Hogan on outreach that invited river communities to contribute stories and perspectives to an interactive exhibition and its public programs."
       ],
       propositions: [
@@ -1680,12 +1803,21 @@ const knowledgeBankInput = {
         },
         {
           id: "PROP-WATERWAYS-RAFT-CONCEPTION-2007",
-          text: "Jamie conceived an experiential river expedition; a group of Kansas City and California participants traveled across Missouri on a homemade raft built from recycled materials.",
-          status: "supported-with-boundary",
-          sourceIds: ["SRC-WATERWAYS-PITCH-HUCK-FINN-2007"],
-          sourceSupport: ["Jamie originated the idea", "experiential expedition", "Kansas City and California participants", "cross-Missouri travel", "homemade recycled-material raft"],
-          boundaries: ["Separate Jamie's conception from the group's collective travel and construction.", "This source does not establish completion to the Gulf, the exact endpoint, or a complete collaborator roster."],
-          decisionUse: "Supports a bounded claim about project conception and collective expedition design without overstating route completion."
+          text: "In 2007, Jamie conceived Release Yourself onto the Water until it Tastes of Salt; The Kansas City Star documented Jamie, Libby Hendon, and Laura Mattingly traveling from Kansas City's West Bottoms into Louisiana beyond the 1,000-mile marker on a reclaimed-material, bicycle-powered raft.",
+          status: "direct-support",
+          sourceIds: ["SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007", "SRC-WATERWAYS-PITCH-HUCK-FINN-2007"],
+          sourceSupport: ["Jamie originated the idea", "project title", "Libby Hendon and Laura Mattingly as core crew", "West Bottoms launch", "Louisiana progress", "passage beyond the 1,000-mile marker", "reclaimed-material bicycle-powered raft"],
+          boundaries: ["Separate Jamie's conception from the crew's collective travel and the wider support ecology.", "The sources do not establish Gulf arrival, the exact endpoint, a complete collaborator roster, or individual responsibility for every task."],
+          decisionUse: "Supports a governed reserve claim about project conception, material systems-making, sustained collaborative execution, and geographic scale without overstating completion or sole authorship."
+        },
+        {
+          id: "PROP-WATERWAYS-RIVER-AS-CONNECTIVE-CULTURAL-SPACE-2007",
+          text: "Jamie publicly framed the river as connective cultural space linking Kansas City's West Bottoms and Delta communities rather than only as an invisible boundary or industrial corridor.",
+          status: "direct-support",
+          sourceIds: ["SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007"],
+          sourceSupport: ["Jamie's attributed interpretation", "West Bottoms and Delta-town relationship", "river as cultural connection", "boundary and industrial-corridor contrast"],
+          boundaries: ["Keep the interpretation attributed to Jamie.", "Do not convert a public artistic proposition into measured community impact or participant consensus."],
+          decisionUse: "Preserves the civic and relational purpose behind the artifact and route rather than reducing the work to endurance or spectacle."
         },
         {
           id: "PROP-WATERWAYS-GREAT-ACCOMMODATIONS-2009",
@@ -1699,20 +1831,21 @@ const knowledgeBankInput = {
       ],
       tensions: [],
       researchQuestions: [
-        "What route, dates, duration, collaborators, public programs, and stopping points can be independently established for the raft expedition?",
-        "Which additional institutional records, photographs, project sites, press accounts, and collaborator memories survive?",
+        "What exact endpoint, dates after November 15, 2007, later route segments, and stopping points can be independently established for the raft expedition?",
+        "Which additional institutional records, photographs, project sites, video, press accounts, and collaborator memories survive with clear publication rights?",
         "How should this early participatory practice connect to Jamie's later hosting, facilitation, civic systems, and public-engagement work without flattening its artistic character?"
       ],
       boundaries: [
-        "Do not publish the Gulf-of-Mexico completion claim until route and endpoint evidence is reconciled.",
+        "Do not publish a Gulf-of-Mexico arrival claim until route and endpoint evidence is reconciled.",
+        "Always credit Libby Hendon and Laura Mattingly as the other named core crew members in the 2007 Kansas City-to-Louisiana record.",
         "Credit Suzanne Hogan and other collaborators where the sources identify collective work.",
         "Do not convert communal authorship into sole-leadership language.",
-        "Do not project this intake item directly to the website; create and approve a governed claim first."
+        "The intake remains no-public-projection. Use only the governed archive-note claim unless a later editorial review approves a specific website projection."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-12",
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Jamie Burkart", "Codex source review"]
+      reviewedAt: "2026-07-16",
+      reviewedBy: ["Jamie Burkart", "Codex source review", "Codex Kansas City Star source review"]
     },
     {
       id: "INTAKE-SUNDAY-DINNER-COMMUNITY-HOSTING-2026-07-13",
