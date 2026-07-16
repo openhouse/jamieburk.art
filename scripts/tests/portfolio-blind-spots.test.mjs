@@ -21,7 +21,7 @@ const state = buildBlindSpotRepoState();
 
 const clone = (value) => structuredClone(value);
 
-test("blind-spot suite defines all seven weighted controls", () => {
+test("blind-spot suite defines all nine weighted controls", () => {
   assert.deepEqual(validateBlindSpotSuite(suite).errors, []);
 });
 
@@ -91,5 +91,55 @@ test("role clarity cannot pass if the role disappears from the first viewport", 
   assert.match(
     evaluateBlindSpots(suite, evidence, candidateState).errors.join("\n"),
     /role conversion evidence does not meet/
+  );
+});
+
+test("Morse lens fails when the cited artistic-social threshold disappears", () => {
+  const candidateState = {
+    ...state,
+    about: state.about.replace(
+      'claimId="CLM-PARTICIPATION-ART-SOCIAL-SYSTEMS-THRESHOLD"',
+      'claimId="REMOVED-PARTICIPATORY-THRESHOLD"'
+    )
+  };
+  assert.match(
+    evaluateBlindSpots(suite, evidence, candidateState).errors.join("\n"),
+    /Morse lens does not preserve/
+  );
+});
+
+test("Morse lens fails if the conflicting installation title is promoted", () => {
+  const candidateState = {
+    ...state,
+    claimById: new Map(state.claimById)
+  };
+  candidateState.claimById.set("CLM-UCSC-INSTALLATION-TITLE-CONFLICT", {
+    ...candidateState.claimById.get("CLM-UCSC-INSTALLATION-TITLE-CONFLICT"),
+    projectionEligibility: "eligible"
+  });
+  assert.match(
+    evaluateBlindSpots(suite, evidence, candidateState).errors.join("\n"),
+    /Morse lens does not preserve/
+  );
+});
+
+test("Sack lens fails when a continuity proof is invented", () => {
+  const candidate = clone(evidence);
+  candidate.professorLensEvidence.warrenSack.continuityProofIds[0] =
+    "invented-social-system-proof";
+  assert.match(
+    evaluateBlindSpots(suite, candidate, state).errors.join("\n"),
+    /Sack lens does not preserve/
+  );
+});
+
+test("Sack lens rejects an unqualified structural-equivalence invention claim", () => {
+  const candidateState = {
+    ...state,
+    about: `${state.about}\n<p>I independently invented structural equivalence.</p>`
+  };
+  assert.match(
+    evaluateBlindSpots(suite, evidence, candidateState).errors.join("\n"),
+    /Sack lens does not preserve/
   );
 });

@@ -52,13 +52,13 @@ export function validateBlindSpotSuite(suite) {
     "suite must preserve at least five hard constraints"
   );
   requireValue(
-    Array.isArray(suite.evals) && suite.evals.length === 7,
-    "suite must define all seven blind-spot evals"
+    Array.isArray(suite.evals) && suite.evals.length === 9,
+    "suite must define all nine blind-spot evals"
   );
 
   for (const [index, entry] of (suite.evals ?? []).entries()) {
     const prefix = `suite.evals[${index}]`;
-    requireValue(/^BS-00[1-7]$/.test(entry.id), `${prefix}.id must use BS-001..BS-007`);
+    requireValue(/^BS-00[1-9]$/.test(entry.id), `${prefix}.id must use BS-001..BS-009`);
     requireValue(!ids.has(entry.id), `${prefix}.id must be unique`);
     ids.add(entry.id);
     requireValue(allowedGraders.has(entry.grader), `${prefix}.grader is invalid`);
@@ -113,7 +113,11 @@ export function buildBlindSpotRepoState() {
     maintenanceReport: buildKnowledgeMaintenanceReport(),
     proofIds: new Set(proofClaims.map(({ id }) => id)),
     claimIds: new Set(knowledgeBank.claims.map(({ id }) => id)),
-    proofById: new Map(proofClaims.map((proof) => [proof.id, proof]))
+    proofById: new Map(proofClaims.map((proof) => [proof.id, proof])),
+    claimById: new Map(knowledgeBank.claims.map((claim) => [claim.id, claim])),
+    sourceById: new Map(knowledgeBank.sources.map((source) => [source.id, source])),
+    assertionIds: new Set(knowledgeBank.sourceAssertions.map(({ id }) => id)),
+    pageById: new Map(knowledgeBank.pages.map((page) => [page.id, page]))
   };
 }
 
@@ -355,6 +359,82 @@ export function evaluateBlindSpots(suite, evidence, state = buildBlindSpotRepoSt
       bs7?.status === "criteria_met" &&
       bs7.score === 4,
     "BS-007 maintenance report is stale or integrity controls are failing"
+  );
+
+  const morse = evidence.professorLensEvidence?.margaretMorse;
+  const morsePublicClaim = state.claimById.get(morse?.publicClaimId);
+  const morseHistoricalClaim = state.claimById.get(morse?.historicalClaimId);
+  const titleConflictClaim = state.claimById.get(morse?.titleConflictClaimId);
+  const aboutPage = state.pageById.get("about");
+  const morseLensValid =
+    morse &&
+    state.about.includes(`claimId="${morse.publicClaimId}"`) &&
+    morsePublicClaim?.projectionEligibility === "eligible" &&
+    morsePublicClaim.projections.some((projection) =>
+      projection.key === "homepage" &&
+      projection.status === "active" &&
+      projection.citationRequired &&
+      projection.surfaces.includes(morse.publicSurface) &&
+      morse.practiceDimensions.every((term) =>
+        projection.text.toLowerCase().includes(term.toLowerCase())
+      )
+    ) &&
+    morseHistoricalClaim?.projectionEligibility === "hold" &&
+    titleConflictClaim?.projectionEligibility === "hold" &&
+    titleConflictClaim.status === "use-with-care" &&
+    state.sourceById.get(morse.publicSourceId)?.visibility === "public" &&
+    morse.protectedSourceIds.every((id) =>
+      ["protected", "public-metadata-only"].includes(
+        state.sourceById.get(id)?.visibility
+      )
+    ) &&
+    morse.requiredAssertionIds.every((id) => state.assertionIds.has(id)) &&
+    aboutPage?.occurrences.some((occurrence) =>
+      occurrence.claimId === morse.publicClaimId &&
+      occurrence.sourceIds?.length === 1 &&
+      occurrence.sourceIds[0] === morse.publicSourceId
+    ) &&
+    !/student id|student identifier|A\+|A-|Time is Long|Art is Long/i.test(state.about);
+  const bs8 = resultById.get("BS-008");
+  requireValue(
+    morseLensValid && bs8?.status === "criteria_met" && bs8.score === 4,
+    "BS-008 Morse lens does not preserve the public threshold, protected boundary, and unresolved title conflict"
+  );
+
+  const sack = evidence.professorLensEvidence?.warrenSack;
+  const sackHistoricalClaim = state.claimById.get(sack?.historicalClaimId);
+  const publicSurfaceText = `${state.hero}\n${state.homepage}\n${state.technicalOperations}\n${state.about}`;
+  const sackLensValid =
+    sack &&
+    state.about.includes(`claimId="${sack.publicClaimId}"`) &&
+    sackHistoricalClaim?.projectionEligibility === "hold" &&
+    state.sourceById.get(sack.protectedSourceId)?.visibility === "protected" &&
+    sack.requiredAssertionIds.every((id) => state.assertionIds.has(id)) &&
+    sack.continuityProofIds.length >= 4 &&
+    sack.continuityProofIds.every((id) => {
+      const proof = state.proofById.get(id);
+      return proof && !["pending", "private"].includes(proof.status);
+    }) &&
+    /social-software/i.test(
+      state.claimById.get(sack.publicClaimId)?.projections.find(
+        ({ key }) => key === "homepage"
+      )?.text ?? ""
+    ) &&
+    /relation to a place, a system, and one another/i.test(
+      state.claimById.get(sack.publicClaimId)?.projections.find(
+        ({ key }) => key === "homepage"
+      )?.text ?? ""
+    ) &&
+    sack.forbiddenPublicClaims.every((claim) =>
+      !publicSurfaceText.toLowerCase().includes(claim.toLowerCase())
+    ) &&
+    !/independently invented (?:the idea of )?structural equivalence/i.test(
+      publicSurfaceText
+    );
+  const bs9 = resultById.get("BS-009");
+  requireValue(
+    sackLensValid && bs9?.status === "criteria_met" && bs9.score === 4,
+    "BS-009 Sack lens does not preserve the recursive systems lineage and historical or collective boundaries"
   );
 
   const applicableResults = suite.evals.map((entry) => ({

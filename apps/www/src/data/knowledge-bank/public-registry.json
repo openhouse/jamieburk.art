@@ -102,6 +102,26 @@
       ]
     },
     {
+      "id": "SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006",
+      "title": "Open House",
+      "organization": "Good Times",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2006-06-28",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Good Times, 'Open House,' June 28, 2006.",
+      "publicNote": "Contemporaneous reporting on Jamie's gallery-based communal-living experiment and the participatory Shop Shows that preceded it.",
+      "doesNotEstablish": [
+        "sole leadership",
+        "sole authorship of participant contributions",
+        "a permanent housing program",
+        "long-term outcomes"
+      ]
+    },
+    {
       "id": "SRC-NAC-GOTHAMIST-CABARET-2017",
       "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
       "organization": "Gothamist",
@@ -2992,6 +3012,38 @@
         "Published by identifies the Page publisher, not necessarily the drafter or originator of every quoted or shared item.",
         "WOW List was a shared project; Facebook publishing responsibility does not become sole product ownership or exclusive management of every project platform."
       ]
+    },
+    {
+      "id": "CLM-PARTICIPATION-ART-SOCIAL-SYSTEMS-THRESHOLD",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "homepage",
+          "text": "Before I called this operations work, I was building participatory-art and social-software experiments: shared situations where people could see themselves in relation to a place, a system, and one another. That practice still shapes how I build operating structure. I pay attention to the people, materials, histories, and relationships already present, then create forms they can inhabit, question, and carry forward together.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006",
+          "relationship": "direct-support",
+          "supports": [
+            "participatory-art and social-software connection",
+            "communal responsibility and decision-making",
+            "attentive tending and distributed documentation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Present this as a throughline from a documented collective experiment, not proof that Jamie authored participant experience or invented social software.",
+        "The present-day operating interpretation is Jamie's synthesis; the historical facts remain bounded to the public article."
+      ]
     }
   ],
   "pages": [
@@ -3401,6 +3453,23 @@
           "sourceIds": [
             "SRC-WOWLIST-ORIGIN-2014",
             "SRC-WOWLIST-NYCDIY-LINEAGE-2016"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "surface": "/about",
+      "sourceOrder": [
+        "SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006"
+      ],
+      "occurrences": [
+        {
+          "id": "participatory-social-systems-throughline",
+          "claimId": "CLM-PARTICIPATION-ART-SOCIAL-SYSTEMS-THRESHOLD",
+          "projection": "homepage",
+          "sourceIds": [
+            "SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006"
           ]
         }
       ]

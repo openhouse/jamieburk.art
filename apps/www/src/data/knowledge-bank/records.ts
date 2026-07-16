@@ -20,6 +20,7 @@ import { kcSpacesFundFacebookPostsFullPopulationBatch20260715 } from "./batches/
 import { jamiePersonalFacebookPostsFullPopulationBatch20260715 } from "./batches/jamie-personal-facebook-posts-full-population-2026-07-15.ts";
 import { wowListSundayDinnerCallScriptLineageBatch20260715 } from "./batches/wowlist-sunday-dinner-callscript-lineage-2026-07-15.ts";
 import { nycacGovernmentValueBatch20260715 } from "./batches/nycac-government-value-2026-07-15.ts";
+import { ucscProfessorLensesBatch20260715 } from "./batches/ucsc-professor-lenses-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -248,7 +249,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.intake,
     ...wowListSundayDinnerCallScriptLineageBatch20260715.intake,
     ...nycacGovernmentValueBatch20260715.intake,
-    ...nterChngArchiveBatch20260715.intake
+    ...nterChngArchiveBatch20260715.intake,
+    ...ucscProfessorLensesBatch20260715.intake
   ],
   sources: [
     {
@@ -503,7 +505,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.sources,
     ...wowListSundayDinnerCallScriptLineageBatch20260715.sources,
     ...nycacGovernmentValueBatch20260715.sources,
-    ...nterChngArchiveBatch20260715.sources
+    ...nterChngArchiveBatch20260715.sources,
+    ...ucscProfessorLensesBatch20260715.sources
   ],
   sourceAssertions: [
     {
@@ -706,7 +709,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.sourceAssertions,
     ...wowListSundayDinnerCallScriptLineageBatch20260715.sourceAssertions,
     ...nycacGovernmentValueBatch20260715.sourceAssertions,
-    ...nterChngArchiveBatch20260715.sourceAssertions
+    ...nterChngArchiveBatch20260715.sourceAssertions,
+    ...ucscProfessorLensesBatch20260715.sourceAssertions
   ],
   claims: [
     {
@@ -1097,7 +1101,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.claims,
     ...wowListSundayDinnerCallScriptLineageBatch20260715.claims,
     ...nycacGovernmentValueBatch20260715.claims,
-    ...nterChngArchiveBatch20260715.claims
+    ...nterChngArchiveBatch20260715.claims,
+    ...ucscProfessorLensesBatch20260715.claims
   ],
   researchTasks: [
     {
@@ -1233,7 +1238,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.researchTasks,
     ...wowListSundayDinnerCallScriptLineageBatch20260715.researchTasks,
     ...nycacGovernmentValueBatch20260715.researchTasks,
-    ...nterChngArchiveBatch20260715.researchTasks
+    ...nterChngArchiveBatch20260715.researchTasks,
+    ...ucscProfessorLensesBatch20260715.researchTasks
   ],
   researchInquiries: [
     {
@@ -1268,7 +1274,8 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostsFullPopulationBatch20260715.researchInquiries,
     ...wowListSundayDinnerCallScriptLineageBatch20260715.researchInquiries,
     ...nycacGovernmentValueBatch20260715.researchInquiries,
-    ...nterChngArchiveBatch20260715.researchInquiries
+    ...nterChngArchiveBatch20260715.researchInquiries,
+    ...ucscProfessorLensesBatch20260715.researchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -1311,7 +1318,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilRecordBatch20260713.pages,
     ...nacPublicSourceBatch20260713.pages,
     ...socialAccountProductionBatch20260714.pages,
-    ...nterChngArchiveBatch20260715.pages
+    ...nterChngArchiveBatch20260715.pages,
+    ...ucscProfessorLensesBatch20260715.pages
   ]
 } satisfies KnowledgeBank;
 

@@ -67,14 +67,33 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("every citation plan is connected to its route and rendered occurrences", () => {
+  const routeSourceOverrides = new Map([
+    ["/about", "apps/www/src/app/about/page.tsx"]
+  ]);
   for (const page of knowledgeBank.pages) {
     assert.equal(page.id, page.surface.split("/").at(-1));
-    const mdx = readFileSync(`apps/www/src/content${page.surface}.mdx`, "utf8");
+    const sourcePath = routeSourceOverrides.get(page.surface) ??
+      `apps/www/src/content${page.surface}.mdx`;
+    const routeSource = readFileSync(sourcePath, "utf8");
     for (const occurrence of page.occurrences) {
-      assert.match(mdx, new RegExp(`occurrenceId=["']${occurrence.id}["']`));
+      assert.match(
+        routeSource,
+        new RegExp(`occurrenceId=["']${occurrence.id}["']`)
+      );
     }
     assert.ok(resolveCitationReferences(page.id).length > 0);
   }
+});
+
+test("the About throughline resolves only its public source", () => {
+  const occurrence = resolveCitationOccurrence(
+    "about",
+    "participatory-social-systems-throughline"
+  );
+  assert.deepEqual(
+    occurrence.sources.map(({ source }) => source.id),
+    ["SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006"]
+  );
 });
 
 test("rendered citations do not stand in for protected direct support", () => {

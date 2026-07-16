@@ -185,13 +185,21 @@ direct evidence from interpretation, preserve one explicit recovered
 Finkelpearl reference without calling the transcript census complete, and hold
 new website projection for collective-credit review.
 
-The [portfolio blind-spot suite](evals/portfolio-blind-spots.md) governs seven
+The [portfolio blind-spot suite](evals/portfolio-blind-spots.md) governs nine
 remaining readiness risks: external corroboration, role conversion, recent
 evidence, hiring-reader observation, action-to-outcome chains, visual rights,
-and knowledge-bank maintenance. Its recursive run brings all four
+knowledge-bank maintenance, embodied artistic practice, and recursive social
+information systems. Its recursive run brings all six
 machine-actionable criteria to their stopping conditions while preserving
 three explicit human gates for exact-candidate review, observed hiring use,
 and rights-cleared visual selection. Run `npm run eval:blind-spots`,
 `npm run test:blind-spots`, and `npm run report:knowledge-maintenance` to
 reproduce the current result. The [hill-climb run record](runs/2026-07-15-portfolio-blind-spots-hill-climb.md)
 documents the baseline, iterations, measured score, and stopping boundary.
+
+The [UCSC professor-lens production pass](runs/2026-07-15-ucsc-professor-lenses.md)
+and [project note](projects/ucsc-media-practice.md) preserve Margaret Morse's
+embodied-attention lens and Warren Sack's social-information-systems lens. The
+pass keeps the educational record protected, uses the public Good Times Open
+House article for the one public projection, and retains an unresolved
+installation-title conflict rather than silently normalizing it.

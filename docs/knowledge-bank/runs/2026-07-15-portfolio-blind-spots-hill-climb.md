@@ -8,7 +8,7 @@ Suite: `.agents/evals/portfolio-blind-spots.json`
 
 ## Objective
 
-Turn seven identified portfolio risks into measurable stopping conditions,
+Turn nine identified portfolio risks into measurable stopping conditions,
 improve every condition an agent can address from public-safe repository
 evidence, and stop honestly where direct human evidence is required.
 
@@ -23,6 +23,9 @@ evidence, and stop honestly where direct human evidence is required.
 - No governed protocols existed for collaborator review, hiring-reader tasks,
   market-response observation, or rights-aware photo selection.
 - The public asset tree contained no project-image files.
+- The portfolio lacked one explicit threshold connecting its artistic, civic,
+  technical, and social practices, and did not evaluate the longer
+  social-information-systems lineage.
 
 ## Iterations
 
@@ -41,6 +44,14 @@ evidence, and stop honestly where direct human evidence is required.
 6. Added mutation tests proving that absent human evidence, invented current
    proofs, missing causal boundaries, first-screen role drift, visual absence,
    and maintenance drift fail their respective controls.
+7. Added Margaret Morse and Warren Sack lenses from a privacy-bounded review of
+   protected narrative evaluations, a metadata-only recommendation, and the
+   public Good Times Open House article.
+8. Added one cited About-page throughline, protected the historical records,
+   and retained the conflicting `Art is Long` / `Time is Long` title readings.
+9. Added mutations that reject removing the artistic-social threshold,
+   promoting the title conflict, inventing systems proof, or claiming Jamie
+   independently invented structural equivalence.
 
 ## Result
 
@@ -53,12 +64,14 @@ evidence, and stop honestly where direct human evidence is required.
 | BS-005 Three lead outcome chains | Criteria met | 4/4 |
 | BS-006 Rights-aware visual evidence | Human blocked | 1/4 |
 | BS-007 Knowledge-bank maintenance | Criteria met | 4/4 |
+| BS-008 Margaret Morse lens | Criteria met | 4/4 |
+| BS-009 Warren Sack lens | Criteria met | 4/4 |
 
-Weighted score: `0.71`
+Weighted score: `0.7575`
 
 Machine-actionable score: `1.00`
 
-Human-evidence score: `0.3409`
+Human-evidence score: `0.3446`
 
 Status: `human_blocked`
 

@@ -2,7 +2,7 @@
   "version": 1,
   "suite_id": "portfolio-blind-spots",
   "title": "Jamie Burkart portfolio blind-spot controls",
-  "objective": "Turn the portfolio's known evidence, audience, outcome, visual, and maintenance blind spots into observable criteria without allowing an agent to fabricate human review or market response.",
+  "objective": "Turn the portfolio's known evidence, audience, outcome, visual, maintenance, artistic-practice, and social-information-systems blind spots into observable criteria without allowing an agent to fabricate human review or market response.",
   "score_scale": {
     "minimum": 0,
     "maximum": 4,
@@ -24,7 +24,8 @@
     "A protocol is not evidence that the human activity occurred.",
     "Public artifacts may not expose private correspondence, contact lists, applicant data, audience identities, private analytics, or uncleared media.",
     "Action-to-outcome chains must distinguish Jamie's work, team or movement work, institutional action, and observed result.",
-    "The public website remains a selective projection of the knowledge bank rather than a complete mirror of it."
+    "The public website remains a selective projection of the knowledge bank rather than a complete mirror of it.",
+    "Protected educational records may shape evaluation criteria but may not be exposed, quoted as current endorsement, or converted into unqualified present-day accomplishment claims."
   ],
   "evals": [
     {
@@ -32,7 +33,7 @@
       "title": "Collaborator corroboration and independent collective-credit review",
       "blind_spot": "The archive contains strong records but too little exact-candidate review by people who participated in collective work.",
       "grader": "human_approval",
-      "weight": 16,
+      "weight": 14,
       "human_evidence_required": true,
       "inputs": [
         "candidate commit",
@@ -52,7 +53,7 @@
       "title": "First-screen hiring conversion and decisive role fit",
       "blind_spot": "A reader may admire the work without knowing what role to hire Jamie for or what he will make usable.",
       "grader": "deterministic",
-      "weight": 15,
+      "weight": 13,
       "human_evidence_required": false,
       "inputs": [
         "homepage hero",
@@ -73,7 +74,7 @@
       "title": "Current professional evidence and forward trajectory",
       "blind_spot": "Historical work can overshadow Jamie's current technical, product-operations, data, and AI-evaluation practice.",
       "grader": "hybrid",
-      "weight": 14,
+      "weight": 12,
       "human_evidence_required": false,
       "inputs": [
         "2025-2026 proof records",
@@ -94,7 +95,7 @@
       "title": "Observed hiring-reader comprehension and market response",
       "blind_spot": "Internal evals cannot establish what recruiters and hiring managers actually notice, misunderstand, or act upon.",
       "grader": "human_approval",
-      "weight": 15,
+      "weight": 13,
       "human_evidence_required": true,
       "inputs": [
         "exact candidate URLs",
@@ -114,7 +115,7 @@
       "title": "Action-to-outcome chains for the three lead case studies",
       "blind_spot": "Artifacts and public outcomes can sit near each other without establishing Jamie's specific action or the boundary between contribution and causation.",
       "grader": "hybrid",
-      "weight": 15,
+      "weight": 12,
       "human_evidence_required": false,
       "inputs": [
         "Harry J. Epstein Company",
@@ -135,7 +136,7 @@
       "title": "Rights-aware visual evidence on lead work",
       "blind_spot": "The portfolio describes materially and relationally rich work but currently exposes no rights-cleared project-image set.",
       "grader": "human_approval",
-      "weight": 13,
+      "weight": 10,
       "human_evidence_required": true,
       "inputs": [
         "public asset inventory",
@@ -156,7 +157,7 @@
       "title": "Knowledge-bank maintenance and drift visibility",
       "blind_spot": "A deep knowledge bank can become difficult to maintain unless staleness, unresolved claims, orphan records, and target-role coverage stay visible.",
       "grader": "deterministic",
-      "weight": 12,
+      "weight": 10,
       "human_evidence_required": false,
       "inputs": [
         "knowledge-bank records",
@@ -171,6 +172,50 @@
         "Technical project management, product operations, implementation, data or knowledge systems, and AI evaluation each retain governed proof coverage."
       ],
       "stopping_boundary": "A maintenance report may expose work to do; it must not rewrite claims or approve projections automatically."
+    },
+    {
+      "id": "BS-008",
+      "title": "Prof. Margaret Morse lens: embodied attention and the artistic-civic-technical threshold",
+      "blind_spot": "A hiring-optimized portfolio can reduce experimentation, hospitality, atmosphere, embodied thought, and participation to organizational utility, hiding why Jamie's operating structures differ from conventional administration.",
+      "grader": "hybrid",
+      "weight": 8,
+      "human_evidence_required": false,
+      "inputs": [
+        "public Good Times Open House record",
+        "protected Margaret Morse narrative evaluations",
+        "metadata-only 2014 recommendation",
+        "About page and participation case studies"
+      ],
+      "pass_criteria": [
+        "At least one cited public threshold keeps Jamie's artistic, social, technical, and civic practices visibly connected.",
+        "The portfolio recognizes attentive tending, embodiment, participation, place, memory, hospitality, or experiment as part of how structure is made, not merely as atmosphere.",
+        "The threshold remains legible to a hiring reader and does not displace the first-screen role proposition.",
+        "Protected educational records, correspondence, grades, identifiers, and uncleared recommendation media remain outside public projection.",
+        "Conflicting source language stays unresolved until additional evidence can adjudicate it."
+      ],
+      "stopping_boundary": "Preserve one grounded threshold; do not turn historical praise into a testimonial wall or let poetic language obscure role, action, and practical use."
+    },
+    {
+      "id": "BS-009",
+      "title": "Prof. Warren Sack lens: recursive social-information systems and inhabitable interfaces",
+      "blind_spot": "The portfolio can describe outputs without making visible Jamie's recurring practice of modeling relationships, prototyping interfaces, translating between physical and digital space, and designing systems people collectively inhabit.",
+      "grader": "hybrid",
+      "weight": 8,
+      "human_evidence_required": false,
+      "inputs": [
+        "protected Warren Sack narrative evaluations",
+        "public Good Times Open House record",
+        "governed WOW List, CallNYC, NYC Artist Coalition, and Source-Backed Team Memory proofs",
+        "About page"
+      ],
+      "pass_criteria": [
+        "The evidence chain distinguishes relational analysis, prototype, interface, physical-digital translation, and collective use.",
+        "At least four governed project proofs demonstrate the social-information-systems pattern beyond one historical course artifact.",
+        "A concise public throughline describes people in relation to place, system, and one another without claiming sole authorship or measured impact.",
+        "Historical student work remains historical; an instructor's structural-equivalence interpretation is not rewritten as Jamie's unqualified invention claim.",
+        "Collective installation and platform work retains collaborator credit and unresolved component ownership."
+      ],
+      "stopping_boundary": "Use the lens to reveal a repeatable systems practice, not to claim novelty, production scale, or individual ownership the sources do not establish."
     }
   ]
 }

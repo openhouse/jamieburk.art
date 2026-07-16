@@ -114,6 +114,41 @@
         "Held and not-recovered records remain visible and unpromoted."
       ],
       "nextStep": null
+    },
+    {
+      "evalId": "BS-008",
+      "score": 4,
+      "status": "criteria_met",
+      "evidence": [
+        "apps/www/src/app/about/page.tsx",
+        "apps/www/src/data/knowledge-bank/batches/ucsc-professor-lenses-2026-07-15.ts",
+        "docs/knowledge-bank/evals/portfolio-blind-spots.md#bs-008-prof-margaret-morse-lens"
+      ],
+      "observations": [
+        "The About page now preserves one cited threshold connecting participatory art, social software, attention, place, relationships, and present operating practice.",
+        "The public projection uses only the public Good Times source; protected educational records and recommendation media remain absent from the citation registry.",
+        "The unresolved Art is Long versus Time is Long title conflict remains held rather than silently normalized.",
+        "The role proposition remains in the first viewport, while the deeper About route preserves the artistic and relational origin of the practice."
+      ],
+      "nextStep": null
+    },
+    {
+      "evalId": "BS-009",
+      "score": 4,
+      "status": "criteria_met",
+      "evidence": [
+        "apps/www/src/app/about/page.tsx",
+        "apps/www/src/data/knowledge-bank/batches/ucsc-professor-lenses-2026-07-15.ts",
+        "apps/www/src/data/proofs.ts",
+        "docs/knowledge-bank/evals/portfolio-blind-spots.md#bs-009-prof-warren-sack-lens"
+      ],
+      "observations": [
+        "The evidence chain distinguishes recursive relational analysis, prototype, interface, physical-digital translation, and collective installation design.",
+        "WOW List, CallNYC, NYC Artist Coalition infrastructure, and Source-Backed Team Memory provide four governed continuities beyond the historical course record.",
+        "The public throughline names relation among people, place, and system without assigning sole authorship or impact.",
+        "The structural-equivalence interpretation remains attributed to Sack inside the protected evidence layer and is prohibited as an unqualified public invention claim."
+      ],
+      "nextStep": null
     }
   ],
   "humanEvidence": {
@@ -268,23 +303,78 @@
       "callnyc"
     ]
   },
+  "professorLensEvidence": {
+    "margaretMorse": {
+      "publicClaimId": "CLM-PARTICIPATION-ART-SOCIAL-SYSTEMS-THRESHOLD",
+      "historicalClaimId": "CLM-UCSC-MORSE-EMBODIED-MEDIA-LINEAGE",
+      "titleConflictClaimId": "CLM-UCSC-INSTALLATION-TITLE-CONFLICT",
+      "publicSourceId": "SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006",
+      "protectedSourceIds": [
+        "SRC-UCSC-NARRATIVE-EVALUATIONS-2004-2006",
+        "SRC-UCSC-NARRATIVE-TRANSCRIPTION-2026",
+        "SRC-UCSC-MORSE-RECOMMENDATION-2014"
+      ],
+      "requiredAssertionIds": [
+        "AST-UCSC-MORSE-EMBODIED-THEORY",
+        "AST-UCSC-MORSE-MEDIA-ARCHAEOLOGY",
+        "AST-OPEN-HOUSE-MORSE-TENDING",
+        "AST-OPEN-HOUSE-DISTRIBUTED-DOCUMENTATION",
+        "AST-UCSC-MORSE-INSTALLATION-TITLE-RAW",
+        "AST-UCSC-MORSE-INSTALLATION-TITLE-TRANSCRIPTION"
+      ],
+      "publicSurface": "/about",
+      "practiceDimensions": [
+        "participatory-art",
+        "attention",
+        "people",
+        "materials",
+        "histories",
+        "relationships",
+        "inhabit"
+      ]
+    },
+    "warrenSack": {
+      "publicClaimId": "CLM-PARTICIPATION-ART-SOCIAL-SYSTEMS-THRESHOLD",
+      "historicalClaimId": "CLM-UCSC-SACK-SOCIAL-INFORMATION-LINEAGE",
+      "protectedSourceId": "SRC-UCSC-NARRATIVE-EVALUATIONS-2004-2006",
+      "requiredAssertionIds": [
+        "AST-UCSC-SACK-DICTIONARY-PROGRAM",
+        "AST-UCSC-SACK-RECURSIVE-SOCIAL-ANALYSIS",
+        "AST-UCSC-SACK-IMAGE-PROTOTYPE",
+        "AST-UCSC-SACK-COLLECTIVE-INSTALLATION",
+        "AST-OPEN-HOUSE-SOCIAL-SOFTWARE-RELATION"
+      ],
+      "continuityProofIds": [
+        "wowlist-community-platform",
+        "callnyc-civic-data-guidance",
+        "nyc-artist-coalition-public-web-infrastructure",
+        "source-backed-team-memory-method"
+      ],
+      "publicSurface": "/about",
+      "forbiddenPublicClaims": [
+        "I independently invented structural equivalence",
+        "I solely designed the Flickr installation",
+        "The prototype was a production search system"
+      ]
+    }
+  },
   "maintenanceSnapshot": {
     "reviewAgePolicyDays": 90,
     "inventory": {
-      "intake": 62,
-      "sources": 253,
-      "sourceAssertions": 338,
-      "claims": 108,
+      "intake": 64,
+      "sources": 256,
+      "sourceAssertions": 350,
+      "claims": 112,
       "proofRecords": 44,
-      "researchTasks": 58,
-      "researchInquiries": 27,
-      "citationPages": 5
+      "researchTasks": 59,
+      "researchInquiries": 28,
+      "citationPages": 6
     },
-    "heldClaimCount": 46,
+    "heldClaimCount": 49,
     "notRecoveredClaimCount": 3,
     "inferenceClaimCount": 5,
-    "contradictoryAssertionCount": 0,
-    "queuedResearchTaskCount": 38,
+    "contradictoryAssertionCount": 1,
+    "queuedResearchTaskCount": 39,
     "inProgressResearchTaskCount": 13,
     "staleClaimCount": 0,
     "staleProofCount": 0,
@@ -299,6 +389,6 @@
       "dataOrKnowledgeSystems": 6,
       "aiEvaluation": 1
     },
-    "fingerprint": "7ea9ff9fc061d0b7cbaaa563f689389425f416086cd7b9c6008975c3b253e004"
+    "fingerprint": "b5bdd944db1c8bb3a36b0895e46d3699dd3f0bfa7108675210ccf99ecbd80597"
   }
 }

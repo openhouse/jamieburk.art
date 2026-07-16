@@ -230,10 +230,75 @@ claims, five inference claims, and the open research queue remain visible work.
 
 **Current status:** Machine criterion met.
 
+## BS-008 Prof. Margaret Morse Lens
+
+Margaret Morse's historical evaluations do not function here as a testimonial
+wall. They establish a criterion: can the portfolio recognize thought embodied
+in an installation, tool, situation, act of attention, or mode of hospitality,
+or does it value only what becomes an organizational deliverable?
+
+The public hill climb adds one bounded threshold to the About page:
+
+- participatory art and social software remain visible as origins of the
+  present operating practice;
+- people appear in relation to place, system, and one another;
+- structure begins with attention to people, materials, histories, and
+  relationships;
+- the resulting forms are meant to be inhabited, questioned, and carried
+  forward, not merely administered.
+
+The claim cites only the public 2006 Good Times Open House article. The
+protected educational record, student identifier, grades, private locator,
+correspondence, and recommendation image do not enter the public citation
+registry. The recommendation remains metadata-only pending rights and display
+review.
+
+The source review also found a conflict: the recovered unofficial evaluation
+file records the New York installation title as `Art is Long`, while Jamie's
+supplied transcription records `Time is Long`. The title remains held. Neither
+reading is silently corrected or projected.
+
+The first-screen role proposition is unchanged. This deeper threshold explains
+why Jamie's operational systems attend to participation, memory, place, and
+care without asking a hiring reader to infer the role.
+
+**Current status:** Machine criterion met.
+
+## BS-009 Prof. Warren Sack Lens
+
+Warren Sack's historical evaluations supply a second criterion: does the
+portfolio show Jamie moving through the complete social-information-systems
+sequence, or only list finished outputs?
+
+The protected source layer distinguishes:
+
+1. relational analysis across physical and online social space;
+2. recursive analysis of overlapping group memberships;
+3. a social-and-image similarity prototype;
+4. an interactive interface built and demonstrated with Max/MSP Jitter;
+5. a collectively designed sensor- and projection-based installation.
+
+The public claim stays narrower. It describes the recurring concern with people
+in relation to place, system, and one another. Four governed proof records show
+that this pattern continued beyond student work:
+
+- `wowlist-community-platform`;
+- `callnyc-civic-data-guidance`;
+- `nyc-artist-coalition-public-web-infrastructure`;
+- `source-backed-team-memory-method`.
+
+The evaluator rejects any public claim that Jamie independently invented
+structural equivalence, solely designed the collective installation, or
+delivered a historical course prototype as a production search system. Sack's
+interpretation remains attributed to Sack inside the protected evidence layer.
+
+**Current status:** Machine criterion met.
+
 ## Hill-Climb Result
 
 The machine-actionable criteria for role clarity, current evidence,
-action-to-outcome chains, and maintenance are met. Protocols and honest zero
-baselines now exist for the remaining human work. The suite therefore stops at
-**human-blocked**, not threshold-met: collaborator review, hiring-reader
-observation, market feedback, and visual-rights clearance still require people.
+action-to-outcome chains, maintenance, the Morse lens, and the Sack lens are
+met. Protocols and honest zero baselines now exist for the remaining human
+work. The suite therefore stops at **human-blocked**, not threshold-met:
+collaborator review, hiring-reader observation, market feedback, and
+visual-rights clearance still require people.
