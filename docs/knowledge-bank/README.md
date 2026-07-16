@@ -83,6 +83,9 @@ for source-aware close reading of materialized iCloud working records, and
 [research/2026-07-14-google-shared-drive-archive-production.md](research/2026-07-14-google-shared-drive-archive-production.md)
 for governed Shared Drive inventory, selection, protected locators, and
 public-safe workflow projections, and
+[research/2026-07-16-icloud-teams-archive-follow-up.md](research/2026-07-16-icloud-teams-archive-follow-up.md)
+for the second iCloud Teams close-reading pass, three non-duplicative held
+claims, a materialization recheck, and deliberate non-projection, and
 [research/2026-07-14-project-social-media-archive-production.md](research/2026-07-14-project-social-media-archive-production.md)
 for authenticated public-account inventory, bounded interaction recovery,
 collective-authorship rules, and selected public projections.

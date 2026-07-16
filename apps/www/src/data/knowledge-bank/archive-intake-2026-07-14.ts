@@ -462,18 +462,21 @@ export const archiveResearchInquiries20260714 = [
   {
     id: "INQ-ICLOUD-TEAMS-MATERIALIZATION-2026",
     project: "knowledge-bank",
-    question: "Which high-signal records in the three required Teams collections were readable in the July 14 archive pass?",
+    question: "Which high-signal records in the three required Teams collections were readable across the July 14 archive pass and July 16 materialization recheck?",
     methods: [
       "Start from project overviews and known anchor documents instead of broad recursive content scans.",
       "Request iCloud materialization for selected placeholders and verify the readable data fork before interpreting a file.",
-      "Record unreadable placeholders as not materialized in this pass rather than empty."
+      "Record unreadable placeholders as not materialized in this pass rather than empty.",
+      "Re-request selected dataless files on July 16 and verify allocation and data-fork readability before interpreting them."
     ],
-    runAt: "2026-07-14",
+    runAt: "2026-07-16",
     resultStatus: "partially-recovered",
     findings: [
       "High-signal records were close-read in Jamie Projects History, CRS, and job-hunt.",
       "Some iCloud placeholders exposed filenames and logical sizes before their data forks became readable.",
-      "A Sunday Dinner archive page and RSVP capture were readable even though the root capture did not materialize during this pass."
+      "A Sunday Dinner archive page and RSVP capture were readable even though the root capture did not materialize during the first pass.",
+      "The Sunday Dinner root capture remained dataless after a fresh July 16 download request and was not treated as reviewed.",
+      "Three additional readable records were close-read in the follow-up: a Monthly Music Hackathon project page, a Commercial Rent Stabilization data memo, and a Source-Backed Team Memory source-correction working artifact."
     ],
     limitations: [
       "The archive is larger than one bounded pass.",
@@ -484,7 +487,7 @@ export const archiveResearchInquiries20260714 = [
       "SRC-CRS-RUNNING-MINUTES-2026-05-14",
       "SRC-JOB-HUNT-CONTEXT-OUTLINE-2026-07-03"
     ],
-    publicSummary: "The pass close-read high-signal records from all three named collections and preserved iCloud materialization limits as bounded research status.",
+    publicSummary: "Two bounded passes close-read high-signal records from all three named collections and preserved iCloud materialization limits as bounded research status.",
     protectedLocatorId: "RESEARCH-ICLOUD-TEAMS-MATERIALIZATION-2026"
   }
 ] satisfies ResearchInquiry[];

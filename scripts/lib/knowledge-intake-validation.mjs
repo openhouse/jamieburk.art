@@ -124,7 +124,10 @@ export const requiredArchiveSourceIds = [
   "SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15",
   "SRC-SUNDAY-DINNER-RSVP-LIVE",
   "SRC-JOB-HUNT-SOURCE-BACKED-MEMORY-PROPOSAL-2026-06-26",
-  "SRC-JOB-HUNT-CONTEXT-OUTLINE-2026-07-03"
+  "SRC-JOB-HUNT-CONTEXT-OUTLINE-2026-07-03",
+  "SRC-JPH-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+  "SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26",
+  "SRC-JOB-HUNT-SOURCE-CORRECTION-ARTIFACT-2026-06-18"
 ];
 
 export const requiredArchiveClaimIds = [
@@ -134,7 +137,10 @@ export const requiredArchiveClaimIds = [
   "CLM-CRS-OPERATING-PLAN-2026",
   "CLM-WATERWAYS-KANSAS-CITY-STAR-FEATURE-2007",
   "CLM-SUNDAY-DINNER-LIVE-RSVP",
-  "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN-2026"
+  "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN-2026",
+  "CLM-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+  "CLM-CRS-OPEN-DATA-FOUNDATION-MEMO-2025",
+  "CLM-SOURCE-BACKED-CORRECTION-ARTIFACT-2026"
 ];
 
 export const requiredArchiveIntakeIds = [
@@ -146,13 +152,17 @@ export const requiredArchiveIntakeIds = [
   "INTAKE-SUNDAY-DINNER-LIVE-RSVP-2026",
   "INTAKE-JOB-HUNT-SOURCE-BACKED-MEMORY-PROPOSAL-2026",
   "INTAKE-JOB-HUNT-CONTEXT-OUTLINE-2026",
-  "INTAKE-ICLOUD-TEAMS-MATERIALIZATION-2026"
+  "INTAKE-ICLOUD-TEAMS-MATERIALIZATION-2026",
+  "INTAKE-JPH-MUSIC-HACKATHON-SORTED-AUDIO-2026",
+  "INTAKE-CRS-OPEN-DATA-FOUNDATION-MEMO-2026",
+  "INTAKE-JOB-HUNT-SOURCE-CORRECTION-ARTIFACT-2026"
 ];
 
 export const requiredArchiveInquiryIds = [
   "INQ-JOB-HUNT-QUANTIFIED-CLAIMS-2026",
   "INQ-JOB-HUNT-SOURCE-BACKED-MEMORY-OUTCOME-2026",
-  "INQ-ICLOUD-TEAMS-MATERIALIZATION-2026"
+  "INQ-ICLOUD-TEAMS-MATERIALIZATION-2026",
+  "INQ-ICLOUD-TEAMS-FOLLOWUP-2026"
 ];
 
 export const requiredSharedDriveSourceIds = [
@@ -479,6 +489,80 @@ export function validateKnowledgeIntake() {
     !materializationBoundaryText.includes("not evidence")
   ) {
     archiveProductionErrors.push("iCloud placeholders must remain partially recovered with an explicit not-materialized boundary");
+  }
+
+  const sortedAudioSource = sourceById.get("SRC-JPH-MUSIC-HACKATHON-SORTED-AUDIO-2013");
+  const sortedAudioClaim = claimById.get("CLM-MUSIC-HACKATHON-SORTED-AUDIO-2013");
+  if (
+    sortedAudioSource?.visibility !== "public" ||
+    sortedAudioSource.preservationStatus !== "live" ||
+    !sortedAudioSource.canonicalUrl ||
+    sortedAudioClaim?.evidence.some(
+      (evidence) => evidence.sourceId === sortedAudioSource.id && evidence.relationship === "direct-support"
+    ) !== true
+  ) {
+    archiveProductionErrors.push("The sorted-audio record needs a live institutional source and a direct-support claim edge");
+  }
+
+  const openDataMemoSource = sourceById.get("SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26");
+  const openDataMemoClaim = claimById.get("CLM-CRS-OPEN-DATA-FOUNDATION-MEMO-2025");
+  const sourceCorrectionArtifact = sourceById.get("SRC-JOB-HUNT-SOURCE-CORRECTION-ARTIFACT-2026-06-18");
+  const sourceCorrectionClaim = claimById.get("CLM-SOURCE-BACKED-CORRECTION-ARTIFACT-2026");
+  for (const source of [openDataMemoSource, sourceCorrectionArtifact]) {
+    if (
+      !source ||
+      !["public-metadata-only", "private"].includes(source.visibility) ||
+      source.preservationStatus !== "private" ||
+      !source.protectedLocatorId ||
+      source.canonicalUrl ||
+      source.archiveUrl ||
+      source.assetUrl
+    ) {
+      archiveProductionErrors.push("Private iCloud follow-up sources need protected locators and no exposed URLs");
+      break;
+    }
+  }
+
+  const openDataBoundaryText = JSON.stringify([
+    openDataMemoSource?.doesNotEstablish,
+    openDataMemoClaim?.boundaries,
+    openDataMemoClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["adopt", "released", "government", "confidential"]) {
+    if (!openDataBoundaryText.includes(boundary)) {
+      archiveProductionErrors.push(`The CRS open-data memo is missing the ${boundary} boundary`);
+    }
+  }
+
+  const sourceCorrectionBoundaryText = JSON.stringify([
+    sourceCorrectionArtifact?.doesNotEstablish,
+    sourceCorrectionClaim?.boundaries,
+    sourceCorrectionClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["private", "fact-check", "commissioned", "outcome", "human"]) {
+    if (!sourceCorrectionBoundaryText.includes(boundary)) {
+      archiveProductionErrors.push(`The source-correction working artifact is missing the ${boundary} boundary`);
+    }
+  }
+  const sourceCorrectionEvidence = sourceCorrectionClaim?.evidence.find(
+    (evidence) => evidence.sourceId === sourceCorrectionArtifact?.id
+  );
+  if (sourceCorrectionEvidence?.relationship !== "private-support" || sourceCorrectionEvidence.renderCitation) {
+    archiveProductionErrors.push("The source-correction working artifact must remain non-rendered private support");
+  }
+
+  const followupInquiry = inquiryById.get("INQ-ICLOUD-TEAMS-FOLLOWUP-2026");
+  const followupText = JSON.stringify(followupInquiry ?? {}).toLowerCase();
+  if (
+    followupInquiry?.resultStatus !== "partially-recovered" ||
+    !followupText.includes("jamie projects history") ||
+    !followupText.includes("crs") ||
+    !followupText.includes("job-hunt") ||
+    !followupText.includes("not materialized") ||
+    !followupText.includes("not evidence") ||
+    !followupText.includes("no new aggregate portfolio metric")
+  ) {
+    archiveProductionErrors.push("The iCloud follow-up inquiry must preserve three-collection coverage, materialization limits, and unresolved aggregate metrics");
   }
 
   for (const id of requiredSharedDriveIntakeIds) {

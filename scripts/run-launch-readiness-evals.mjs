@@ -16,7 +16,7 @@ import { knowledgeBank } from
   "../apps/www/src/data/knowledge-bank/records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v18/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v19/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");
@@ -85,6 +85,7 @@ for (const [criterionId, checkName] of [
   ["INTAKE-001", "coverage"],
   ["RESEARCH-001", "research"],
   ["ARCHIVE-001", "archiveProduction"],
+  ["ARCHIVE-002", "archiveProduction"],
   ["GDRIVE-001", "sharedDriveProduction"],
   ["SOCIAL-001", "socialMediaProduction"],
   ["NYCARTC-001", "nycArtCXArchivalProduction"],

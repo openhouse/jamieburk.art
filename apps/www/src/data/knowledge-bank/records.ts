@@ -25,6 +25,12 @@ import {
   archiveSourceRecords20260714
 } from "./archive-intake-2026-07-14.ts";
 import {
+  archiveFollowupClaimRecords20260716,
+  archiveFollowupIntakeRecords20260716,
+  archiveFollowupResearchInquiries20260716,
+  archiveFollowupSourceRecords20260716
+} from "./archive-followup-2026-07-16.ts";
+import {
   sharedDriveClaimRecords20260714,
   sharedDriveIntakeRecords20260714,
   sharedDriveResearchInquiries20260714,
@@ -116,6 +122,7 @@ const knowledgeBankInput = {
     ...researchedIntakeRecords20260713,
     ...campaignPressIntakeRecords,
     ...archiveIntakeRecords20260714,
+    ...archiveFollowupIntakeRecords20260716,
     ...sharedDriveIntakeRecords20260714,
     ...socialMediaIntakeRecords20260714,
     ...webArchiveIntakeRecords20260715,
@@ -258,6 +265,7 @@ const knowledgeBankInput = {
     ...campaignPressIndexSourceRecords,
     ...campaignPressArticleSourceRecords,
     ...archiveSourceRecords20260714,
+    ...archiveFollowupSourceRecords20260716,
     ...sharedDriveSourceRecords20260714,
     ...socialMediaSourceRecords20260714,
     ...webArchiveSourceRecords20260715,
@@ -364,6 +372,7 @@ const knowledgeBankInput = {
     ...researchedClaimRecords20260713,
     ...campaignPressClaimRecords,
     ...archiveClaimRecords20260714,
+    ...archiveFollowupClaimRecords20260716,
     ...sharedDriveClaimRecords20260714,
     ...socialMediaClaimRecords20260714,
     ...webArchiveClaimRecords20260715,
@@ -395,6 +404,7 @@ const knowledgeBankInput = {
     ...intakeResearchInquiries,
     ...campaignPressResearchInquiries,
     ...archiveResearchInquiries20260714,
+    ...archiveFollowupResearchInquiries20260716,
     ...sharedDriveResearchInquiries20260714,
     ...socialMediaResearchInquiries20260714,
     ...webArchiveResearchInquiries20260715,
