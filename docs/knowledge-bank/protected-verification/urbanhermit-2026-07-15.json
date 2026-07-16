@@ -1,0 +1,35 @@
+{
+  "contractVersion": "urbanhermit-protected-derivation-v1",
+  "revisionDate": "2026-07-15",
+  "account": "@urbanhermit",
+  "scope": "Authenticated Posts and Replies traversal plus year-bounded incoming mention search, reconciled to the 434-record live profile counter.",
+  "protectedInputs": {
+    "populationSchema": "Authenticated capture containing profile, traversal, rows, and excluded conversation context.",
+    "populationIdSetDigestAlgorithm": "SHA-256 of unique status IDs sorted lexicographically and joined with a newline, without a terminal newline.",
+    "populationIdSetSha256": "77fc6565525d03997c40ce0d9f75e979b7e8c72f1ee15aa5318d71a287015aad",
+    "incomingSchema": "Authenticated year-bounded search capture containing query, year summary, and recovered rows.",
+    "incomingIdSetDigestAlgorithm": "SHA-256 of unique status IDs sorted lexicographically and joined with a newline, without a terminal newline.",
+    "incomingIdSetSha256": "f3d8ba46b56c3a933af71dadf289fc10c0a0f5492ef9bfff52a15084031c5c26",
+    "stakeholderDispositionSchema": "One protected statusId, authorHandle, classification, and stakeholderGroup record for every incoming row.",
+    "stakeholderDispositionsDigestAlgorithm": "SHA-256 of recursively key-sorted canonical JSON after sorting records by statusId.",
+    "stakeholderDispositionsSha256": "5e7986216f324c13f481f3a172933261caa2a0602c17e97a54b2fd3c2955a547"
+  },
+  "classifier": {
+    "implementation": "scripts/lib/urbanhermit-mission-classifier.mjs",
+    "inputFields": ["source-post-body", "hashtag", "displayed-link-destination"],
+    "excludedFields": ["quoted-card text", "conversation-parent cards", "private activity"],
+    "manifestDigestAlgorithm": "SHA-256 of recursively key-sorted canonical JSON.",
+    "manifestSha256": "978490fdfb255eba6795529fe77d3ef3ce1397a099dc549736ee3acfa70bff75"
+  },
+  "publicOutput": {
+    "fixture": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
+    "fixtureSha256": "489566e8dd89f725d3c9da3449879dac794559131879d03696982370d24bdaaa",
+    "privacyContract": "The public fixture must satisfy the exact allowed-key schema and cannot contain row-level status, text, handle, date, link, session, contact, or local-path fields."
+  },
+  "verification": {
+    "command": "node scripts/verify-urbanhermit-protected-derivation.mjs --population <protected-population.json> --incoming <protected-incoming.json> --dispositions <protected-dispositions.json> --fixture apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json --manifest docs/knowledge-bank/protected-verification/urbanhermit-2026-07-15.json",
+    "reviewedBy": ["Jamie Burkart", "Codex authenticated archival-production review"],
+    "reviewedAt": "2026-07-15",
+    "reproducibilityBoundary": "The command is intentionally runnable only by an authorized reviewer with the three protected inputs. It proves the checked-in aggregate from protected rows without copying the personal timeline into the public repository."
+  }
+}

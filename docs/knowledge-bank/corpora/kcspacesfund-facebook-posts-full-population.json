@@ -1,0 +1,886 @@
+{
+  "schemaVersion": 1,
+  "account": "KC Spaces Fund",
+  "handle": "KCSpacesFund",
+  "capturedAt": "2026-07-16",
+  "completeness": {
+    "scope": "complete surviving authenticated public Page feed control",
+    "ownerExportUsed": false,
+    "renderRowsEncountered": 41,
+    "duplicateOrAlternateRenderVariantsExcluded": 4,
+    "distinctRecords": 37,
+    "dateRange": {
+      "start": "2020-04-07",
+      "end": "2020-07-09"
+    },
+    "terminalChecks": 8,
+    "terminalDocumentHeight": 22984
+  },
+  "mutableSnapshot": {
+    "followers": 108,
+    "reactionTotal": 119,
+    "recordsWithReactions": 28,
+    "recordsWithVisibleComments": 4,
+    "visibleCulturalSpaceCommentAccounts": 3,
+    "visibleIndividualCommentAccounts": 1,
+    "shareCounterInterpretation": "No positive share counter was recovered; this is not proof of zero historical sharing."
+  },
+  "contentStates": {
+    "readable": 28,
+    "sharedSourceShell": 5,
+    "sourceUnavailable": 4,
+    "photoRecords": 20
+  },
+  "sourceRoutes": {
+    "https://kcspacesfund.com/": [
+      "July 9, 2020",
+      "May 30, 2020",
+      "May 26, 2020",
+      "May 5, 2020",
+      "May 4, 2020",
+      "April 30, 2020",
+      "April 25, 2020",
+      "April 21, 2020",
+      "April 10, 2020",
+      "April 7, 2020"
+    ],
+    "https://twocc.us/donate": [
+      "May 18, 2020"
+    ],
+    "https://www.gofundme.com/f/kcspacesfund": [
+      "May 17, 2020",
+      "April 10, 2020"
+    ],
+    "https://www.odditiesprints.com/covid-19-fundraise": [
+      "July 9, 2020",
+      "June 30, 2020"
+    ],
+    "https://www.odditiesprints.com/covid-19-fundraiser": [
+      "June 14, 2020",
+      "June 11, 2020"
+    ]
+  },
+  "sourceLeads": [
+    {
+      "id": "LEAD-KCSF-DO816-DAILY-DOGOOD",
+      "publishedDate": "2020-04-21",
+      "label": "Do816 — The Daily DoGood: Kansas City",
+      "status": "URL recovery and close read required"
+    }
+  ],
+  "roleBoundary": {
+    "accountVoice": "Collective campaign account; historical post-level authorship unresolved.",
+    "jamie": "Jamie states he was not the stakeholder or owner posting on this account. His supported role is behind-the-scenes digital operations, including campaign website work and support for a coherent name across domain and social platforms."
+  },
+  "rows": [
+    {
+      "sequence": 1,
+      "recordHash": "48d3d08e5ee8c9e490f76b07ed2b21b21fc31f6472cd62d7b0f9e074a2f6d046",
+      "publishedDate": "July 9, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Vulpes Bastille"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 2,
+      "recordHash": "4b1423b8b655bd373c164ff5abb0a61482fdf56985463bd88c4e4ba128bb3fc9",
+      "publishedDate": "June 30, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "SWAN"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 3,
+      "recordHash": "d0c98bf0475c8a4b85fe6ea60820369d2a161a8e2ae3e6166f1945455174a2a4",
+      "publishedDate": "June 14, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Kansas City Textile Arts Center"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 4,
+      "recordHash": "79b57ca4b517170b102f49b0eda5591724d7c67d3fa5371747fe14251b24a67d",
+      "publishedDate": "June 11, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Parker 2"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 5,
+      "recordHash": "f9afcf9fec18a00b583bc3113c2f4304c6e9569dd2a552d00b05239635040c0f",
+      "publishedDate": "June 9, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "priority-community or equity framing",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Farewell Transmission",
+        "One Mic Stand",
+        "Blackbox on Troost",
+        "UN/TUCK",
+        "Latino Foundation for the Arts",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 3,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 6,
+      "recordHash": "893abea3d3afd6390186166f44b71c7c8069ea292d91c7cdd630bdf501f77955",
+      "publishedDate": "May 30, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value",
+        "program operations and eligibility",
+        "Lawrence geographic expansion"
+      ],
+      "publicOrganizations": [
+        "Vulpes Bastille",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 7,
+      "recordHash": "9722a243f4d6e68925db76062cae0e47cdba2efe0ddf25e481aa5a956b1a9db9",
+      "publishedDate": "May 28, 2020",
+      "contentState": "shared-source-shell",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 3,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 8,
+      "recordHash": "275367ada08b22c97adb8763a1ffbbc3bd67ea5fd2bf6e87bec4756c7264cd4e",
+      "publishedDate": "May 26, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value",
+        "program operations and eligibility",
+        "Lawrence geographic expansion"
+      ],
+      "publicOrganizations": [
+        "Vulpes Bastille",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 3,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 9,
+      "recordHash": "f3fc39a81749f6d3763c8a643968092f799b00876a0d3cc23bdc627e211ce128",
+      "publishedDate": "May 24, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Oddities Prints",
+        "State of the Art Frames"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 10,
+      "recordHash": "eb0600f52cf00ce069b6f5bb97f8f4bcb1ca7e61d6ca6db895134ca6122bdd58",
+      "publishedDate": "May 22, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "priority-community or equity framing",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "One Mic Stand",
+        "Blackbox on Troost",
+        "UN/TUCK",
+        "Latino Foundation for the Arts",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 9,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 11,
+      "recordHash": "ab2bf6361cc1f1c8c9b96d48656656fbb74a549cfb04c16ead9017b7800589e7",
+      "publishedDate": "May 21, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "priority-community or equity framing",
+        "cultural-space survival and public value",
+        "Lawrence geographic expansion"
+      ],
+      "publicOrganizations": [
+        "Vulpes Bastille",
+        "Blackbox on Troost",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 15,
+        "visibleComment": true,
+        "visibleCommenterGroup": "cultural-space account"
+      }
+    },
+    {
+      "sequence": 12,
+      "recordHash": "94acf38335ed10e8f55ca211fe3ba3f3cd981ec248655f9818d4a2e03fe36e94",
+      "publishedDate": "May 19, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Single Wing Creative"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 13,
+      "recordHash": "cd36e2caf8c0d946ab88fe3048807067d42f15ea0639d51cd8286448c52fda00",
+      "publishedDate": "May 18, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "priority-community or equity framing",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Trans Women of Color Collective"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-TWOCC-DONATE"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 14,
+      "recordHash": "16533151cfacb873f1a971f1465f24a6d3c0fb6cd422ac40bb9b88494a1aa1ba",
+      "publishedDate": "May 17, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 15,
+      "recordHash": "bdb591aeb1cccc1dda8662bc635a561d003e52f114580545246470fabbea90dc",
+      "publishedDate": "May 17, 2020",
+      "contentState": "shared-source-shell",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-GOFUNDME"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 16,
+      "recordHash": "e97b7f770685d2e55ecf3bca2b394845523a7828947242e676172c1987cc0173",
+      "publishedDate": "May 14, 2020",
+      "contentState": "source-unavailable",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 17,
+      "recordHash": "28599e6ca0a7d88032f6bd3919b232e9ef903d836c9ad14f3cdfe50b22afb870",
+      "publishedDate": "May 13, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "priority-community or equity framing"
+      ],
+      "publicOrganizations": [
+        "GetWoke"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 4,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 18,
+      "recordHash": "2be080ec11dc34c264e18a9e205752d1b5967f3f429841c43d6774686bc4c711",
+      "publishedDate": "May 11, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 4,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 19,
+      "recordHash": "eb810f09bc2626456f3b32b0d972346c847f8c5ca6379f2abf354db6f603a7da",
+      "publishedDate": "May 11, 2020",
+      "contentState": "source-unavailable",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 20,
+      "recordHash": "9affd76d3e3e98101ef5034c16ad4d726ca0263a117d2f728c6852507b0ecbbb",
+      "publishedDate": "May 5, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "fundraising and donation routing",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 21,
+      "recordHash": "a0fa763ce4577999c2e4879b609011baa68823a258b43c310076684e7c9a46ad",
+      "publishedDate": "May 4, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 2,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 22,
+      "recordHash": "be60df40b028159dec2e937b8878e6c31b43ead08b1dcc973052a44fb6b0a6c4",
+      "publishedDate": "April 30, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "application and deadline routing"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 4,
+        "visibleComment": true,
+        "visibleCommenterGroup": "cultural-space account"
+      }
+    },
+    {
+      "sequence": 23,
+      "recordHash": "7552a5fc07228415ccc84636700bda900f15602603ef4e75a8b3edd31bdb68f4",
+      "publishedDate": "April 29, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "application and deadline routing",
+        "cultural-space survival and public value",
+        "program operations and eligibility"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 7,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 24,
+      "recordHash": "200341d9e2ae792f9cf3d876823801661376a6d1328c67d32c4746a2de0c0962",
+      "publishedDate": "April 28, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "cultural-space survival and public value",
+        "program operations and eligibility",
+        "Lawrence geographic expansion"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 3,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 25,
+      "recordHash": "b6d05ace68eaddc96cb08536dfae0f79c2af4e4d36c9d003a658576df60633c8",
+      "publishedDate": "April 25, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "fundraising and donation routing",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 26,
+      "recordHash": "6fc492307616f106741e8ff478b2baa84e110c9be9c1595558515dd7785ef3b3",
+      "publishedDate": "April 23, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "priority-community or equity framing",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "UN/TUCK",
+        "Latino Foundation for the Arts",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 9,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 27,
+      "recordHash": "6fdd4bc4a61f623c16fac484a4ed7ea5fa406fb1b33abe68cc8bec8961afe67f",
+      "publishedDate": "April 21, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "priority-community or equity framing",
+        "cultural-space survival and public value",
+        "program operations and eligibility"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 28,
+      "recordHash": "ac2525a3aaca681b2de5246445c4d4dffcbfb83d3a5c5e7ebc4905209fad4d71",
+      "publishedDate": "April 21, 2020",
+      "contentState": "readable",
+      "postType": "text-or-link",
+      "themes": [
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "LEAD-KCSF-DO816-DAILY-DOGOOD"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 29,
+      "recordHash": "4a6b50ed804fbcb9350872a9d3799a91da7c39799196cde69ec1bee46b5fe82a",
+      "publishedDate": "April 18, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "grant-recipient or funded-space updates",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "priority-community or equity framing",
+        "cultural-space survival and public value",
+        "program operations and eligibility"
+      ],
+      "publicOrganizations": [
+        "Latino Foundation for the Arts",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 9,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 30,
+      "recordHash": "974fa1d33385943279c27644dce684495bc6376bc2ac86318b912174e734e98d",
+      "publishedDate": "April 12, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "priority-community or equity framing",
+        "cultural-space survival and public value",
+        "program operations and eligibility"
+      ],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 11,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 31,
+      "recordHash": "b275d979ab91e92eab5d6fe0695352f64b906a86d8541cf3a445e2604e0ac95b",
+      "publishedDate": "April 10, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "fundraising and donation routing",
+        "mutual-aid print collaboration",
+        "cultural-space survival and public value"
+      ],
+      "publicOrganizations": [
+        "UN/TUCK",
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS",
+        "URL-KCSF-GOFUNDME"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 8,
+        "visibleComment": true,
+        "visibleCommenterGroup": "individual account"
+      }
+    },
+    {
+      "sequence": 32,
+      "recordHash": "d9608884142336a603b2f0771efc151b55a6fe9327616fc670216b2ebfb5da5d",
+      "publishedDate": "April 10, 2020",
+      "contentState": "source-unavailable",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 1,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 33,
+      "recordHash": "c04f496fcc52577807bbf3144e411bc70e753318fc8df4d23d6640c0bcf6c32d",
+      "publishedDate": "April 9, 2020",
+      "contentState": "shared-source-shell",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [
+        "URL-KCSF-GOFUNDME"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 4,
+        "visibleComment": true,
+        "visibleCommenterGroup": "cultural-space account"
+      }
+    },
+    {
+      "sequence": 34,
+      "recordHash": "4bd4e70ca25c1909b13cac1213a85b44e0bef37979228808c9341cc49d002c84",
+      "publishedDate": "April 8, 2020",
+      "contentState": "readable",
+      "postType": "photo",
+      "themes": [
+        "application and deadline routing",
+        "mutual-aid print collaboration",
+        "priority-community or equity framing",
+        "cultural-space survival and public value",
+        "program operations and eligibility"
+      ],
+      "publicOrganizations": [
+        "Oddities Prints"
+      ],
+      "sourceRouteIds": [
+        "URL-KCSF-SITE",
+        "URL-KCSF-ODDITIES-PRINTS"
+      ],
+      "tractionSnapshot": {
+        "reactionCount": 6,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 35,
+      "recordHash": "52a5957a34ee9f0ce6d2e6b8936fa42f9ba80febb1023e91b0a19a3943e1e170",
+      "publishedDate": "April 7, 2020",
+      "contentState": "shared-source-shell",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 5,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 36,
+      "recordHash": "ec89ffb355ca2d22233ef3cea39210db0b210a1be2cb6cdf0597b8e6f5e2e255",
+      "publishedDate": "April 7, 2020",
+      "contentState": "shared-source-shell",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    },
+    {
+      "sequence": 37,
+      "recordHash": "73cb9a61a0940247994bdbb62153fb71ac1fe4e81c02405757c1e18059e83483",
+      "publishedDate": "April 7, 2020",
+      "contentState": "source-unavailable",
+      "postType": "text-or-link",
+      "themes": [],
+      "publicOrganizations": [],
+      "sourceRouteIds": [],
+      "tractionSnapshot": {
+        "reactionCount": 0,
+        "visibleComment": false,
+        "visibleCommenterGroup": null
+      }
+    }
+  ]
+}

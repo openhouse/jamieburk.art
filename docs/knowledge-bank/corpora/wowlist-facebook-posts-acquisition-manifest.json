@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "wowlist-facebook-owner-posts-2026-07-15",
+  "reviewedAt": "2026-07-15",
+  "scope": "Complete disposition of the 57 records recovered by the protected owner-post capture; not a native export, deletion history, or lifetime-total claim.",
+  "protectedOwnerCapture": {
+    "locatorId": "RESEARCH-WOWLIST-FACEBOOK-POSTS-2026-001",
+    "artifactFileSha256": "60d41e463801b4c02219c4fbce9f2781f35c608ebe1448c5e43e7711c2fcf5b8",
+    "recordSetSha256": "bfd2e181265ed8df43f028604f92c2488fc78a3f093d2493c0c418cd6c716ca1",
+    "pageCount": 19,
+    "uniqueRecordCount": 57,
+    "terminal": true,
+    "stoppingCondition": "Traversal ended after the nineteenth protected owner-post page without a repeated cursor; every recovered identity received a disposition."
+  },
+  "publicCensus": {
+    "recordCount": 57,
+    "recordIdSetSha256": "8f5efb6479611ab1ae2f7658ff4a76a0afb69d2379b29bde3320bafda93e7cd4",
+    "recordsReviewedPercent": 100
+  },
+  "liveBidirectionalControl": {
+    "locatorId": "RESEARCH-WOWLIST-FACEBOOK-LIVE-CONTROL-2026-001",
+    "artifactFileSha256": "026de97076853fc76a3b2b91d6e65a5844feab5b5c772c2faa3305fbfdb8b87d",
+    "normalizedMessageSetSha256": "ed6c06d22696218621963fd4bea7bdf14253576c7b67213e7cbdef30f8e07cf6",
+    "terminalNoGrowthChecks": 10,
+    "forward": {
+      "steps": 120,
+      "uniqueMessageRecords": 53,
+      "checkpoints": [
+        { "step": 0, "cumulativeUniqueRecords": 2 },
+        { "step": 10, "cumulativeUniqueRecords": 7 },
+        { "step": 20, "cumulativeUniqueRecords": 11 },
+        { "step": 30, "cumulativeUniqueRecords": 17 },
+        { "step": 40, "cumulativeUniqueRecords": 23 },
+        { "step": 50, "cumulativeUniqueRecords": 28 },
+        { "step": 60, "cumulativeUniqueRecords": 33 },
+        { "step": 70, "cumulativeUniqueRecords": 39 },
+        { "step": 80, "cumulativeUniqueRecords": 46 },
+        { "step": 90, "cumulativeUniqueRecords": 52 },
+        { "step": 100, "cumulativeUniqueRecords": 53 },
+        { "step": 110, "cumulativeUniqueRecords": 53 },
+        { "step": 120, "cumulativeUniqueRecords": 53 }
+      ]
+    },
+    "reverse": {
+      "steps": 120,
+      "uniqueMessageRecords": 53,
+      "checkpoints": [
+        { "step": 0, "cumulativeUniqueRecords": 2 },
+        { "step": 10, "cumulativeUniqueRecords": 7 },
+        { "step": 20, "cumulativeUniqueRecords": 12 },
+        { "step": 30, "cumulativeUniqueRecords": 18 },
+        { "step": 40, "cumulativeUniqueRecords": 23 },
+        { "step": 50, "cumulativeUniqueRecords": 28 },
+        { "step": 60, "cumulativeUniqueRecords": 32 },
+        { "step": 70, "cumulativeUniqueRecords": 38 },
+        { "step": 80, "cumulativeUniqueRecords": 42 },
+        { "step": 90, "cumulativeUniqueRecords": 45 },
+        { "step": 100, "cumulativeUniqueRecords": 50 },
+        { "step": 110, "cumulativeUniqueRecords": 53 },
+        { "step": 120, "cumulativeUniqueRecords": 53 }
+      ]
+    },
+    "exactMessageAgreement": 53,
+    "boundary": "The live control reproduces the 53 message-bearing records. It does not recover the four no-message records or establish a native or lifetime population."
+  },
+  "publisherAudit": {
+    "locatorId": "RESEARCH-WOWLIST-FACEBOOK-PUBLISHER-AUDIT-2026-001",
+    "artifactFileSha256": "47fec1875af680ce4c813b9db48f1896438ff7244f0c557475f67cfc44cf035f",
+    "recordSetSha256": "67a2f7088c69c400d8491977b97ba25eb4d1967f7ee579ed53cf2bd1f2b15f2d",
+    "reviewedRecordCount": 57,
+    "jamieAttributed": 51,
+    "otherPublisherAttributed": 0,
+    "unresolved": 6
+  },
+  "attestation": {
+    "methodReviewer": "Codex authenticated public-web review",
+    "publicUseReviewer": "Jamie Burkart",
+    "reviewAuthority": "jamie-approved",
+    "protectedInputsPublished": false,
+    "reproducibility": "Public-safe acquisition checkpoints and protected-input digests permit integrity review; rerunning protected acquisition requires authorized account access.",
+    "limitations": [
+      "Protected post bodies, account administration data, and authenticated state remain outside the repository.",
+      "The owner-post denominator is an attested protected capture, not a native Meta export.",
+      "Public post identities and digests do not establish reactions, reach, audience identity, adoption, attendance, endorsement, or impact."
+    ]
+  }
+}

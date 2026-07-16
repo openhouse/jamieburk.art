@@ -69,7 +69,7 @@ export default function WorkPage() {
               <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
               <div className="mt-5 grid gap-5 lg:grid-cols-2">
                 {groupedItems.map((item) => (
-                  <WorkCard item={item} key={item.slug} />
+                  <WorkCard compact item={item} key={item.slug} />
                 ))}
               </div>
             </section>

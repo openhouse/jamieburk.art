@@ -35,6 +35,19 @@ export default function SourceBackedTeamMemoryPage() {
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />
         </div>
+        <section className="mt-10 border-t border-jb-ink/15 pt-8" aria-labelledby="correction-heading">
+          <h2 className="text-3xl font-semibold text-jb-ink" id="correction-heading">
+            Correction in practice
+          </h2>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            {methodProof.detailedPublicWording}
+          </p>
+          {methodProof.whyItMatters ? (
+            <p className="mt-4 leading-8 text-jb-ink/76">
+              {methodProof.whyItMatters}
+            </p>
+          ) : null}
+        </section>
         <div className="mt-10 flex flex-wrap gap-3">
           <JBButton href="/work" variant="secondary">
             View selected work

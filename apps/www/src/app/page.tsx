@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
@@ -18,22 +17,17 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "See how I clarify requirements, coordinate delivery, surface risks, and leave teams with working documentation and handoffs."
   },
   {
     href: "/work/harry-j-epstein",
     label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
-  },
-  {
-    href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    note: "See how I helped a legacy business move product knowledge and recurring operations into maintainable e-commerce workflows."
   },
   {
     href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    label: "CallNYC",
+    note: "See how I turned constituent-services records into issue pages and next-step guidance residents could navigate."
   },
   {
     href: "/resume",
@@ -76,20 +70,20 @@ export default function HomePage() {
         </div>
       </section>
       <ProofStrip />
-      <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
             <p className="text-sm font-semibold uppercase text-jb-blue">
-              Selected systems
+              Selected work
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              Proof across operating, civic, and community systems
+              What I helped teams make usable
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
-              situations becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
+              In each project, I entered while requirements, ownership, or next
+              steps were still forming and helped people leave with clearer
+              workflows, public tools, decision records, or handoffs they could
+              continue using.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -98,7 +92,7 @@ export default function HomePage() {
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <WorkCard compact item={item} key={item.slug} />
           ))}
         </div>
       </section>

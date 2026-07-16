@@ -4,12 +4,24 @@ export type SupportLevel = "strong" | "moderate" | "careful" | "pending";
 
 export type EvidenceClass =
   | "approved-resume"
+  | "independent-press"
   | "public-source"
   | "public-safe-archive-summary"
   | "ai-assisted-archive-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
+
+const evidenceClassLabels: Record<EvidenceClass, string> = {
+  "approved-resume": "approved resume",
+  "independent-press": "independent press",
+  "public-source": "public sources",
+  "public-safe-archive-summary": "public-safe archive",
+  "ai-assisted-archive-review": "AI-assisted archive review",
+  "firsthand-collaborator-context": "firsthand context",
+  "jamie-review-confirmation": "Jamie-confirmed",
+  "collaborator-approval-pending": "collaborator approval pending"
+};
 
 export type ProofSurface =
   | "homepage"
@@ -19,6 +31,7 @@ export type ProofSurface =
   | "case-study"
   | "lab"
   | "about"
+  | "resume-pdf"
   | "internal-only";
 
 export type ProofClaim = {
@@ -38,6 +51,9 @@ export type ProofClaim = {
   surfaces: ProofSurface[];
   relatedProjects: string[];
   relatedCapabilities: string[];
+  evidenceCanonicalClaimIds?: string[];
+  canonicalClaimIds?: string[];
+  requiredCanonicalClaimIds?: string[];
   lastReviewed: string;
 };
 
@@ -49,9 +65,9 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
       "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
-    shortWording: "14+ years creating operating structure",
+    shortWording: "14+ years turning unclear work into plans, workflows, and handoffs",
     detailedPublicWording:
-      "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
+      "Jamie turns emerging work into clear plans, shared decisions, coordinated implementation, and durable handoffs when requirements, ownership, documentation, and next steps are still forming.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
     whyItMatters:
       "Establishes the throughline across projects without forcing one job title onto every period of work.",
@@ -64,7 +80,7 @@ export const proofClaims: ProofClaim[] = [
       "Raw community materials",
       "Internal operating details"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "about"],
     relatedProjects: [],
     relatedCapabilities: ["technical-project-management", "product-operations", "implementation"],
     lastReviewed: "2026-07-07"
@@ -75,8 +91,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
-    shortWording: "Modernized legacy e-commerce and operations workflows",
+      "Jamie helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+    shortWording: "Jamie helped move legacy product knowledge into maintainable e-commerce workflows",
     detailedPublicWording:
       "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
     sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
@@ -94,7 +110,7 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Sensitive operating practices"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
     lastReviewed: "2026-07-07"
@@ -105,15 +121,16 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
+      "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth.",
+    shortWording:
+      "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth",
     detailedPublicWording:
-      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
+      "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth. This is an approved first-person contribution claim, not an independently audited metric or a claim of sole causation.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
-    sourceNote: "Keep causal language careful and aggregate.",
+    sourceNote: "Keep the first-person evidence label, causal boundary, and aggregate framing visible.",
     whyItMatters:
       "Provides a concise business-impact proof point while retaining careful causality.",
-    guardrail: "Must stay as contribution language.",
+    guardrail: "Must stay explicitly self-reported and use contribution language.",
     doNotSay: [
       "Caused 2x revenue growth",
       "Single-handedly doubled revenue",
@@ -126,10 +143,11 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Internal analytics"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "implementation"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "callnyc-civic-data-guidance",
@@ -137,8 +155,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
-    shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
+      "Built CallNYC.org as an archived, unofficial independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+    shortWording: "Built an archived, unofficial CouncilStat follow-on translating civic data into resident-facing guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
@@ -153,7 +171,7 @@ export const proofClaims: ProofClaim[] = [
       "Legal guidance"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
     lastReviewed: "2026-07-11"
@@ -169,10 +187,11 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Jamie built and stewarded 30+ shared pages for coalition decisions and next steps",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+      "Jamie helped collaborators turn meetings, decision records, action items, legal/policy questions, sources, and stakeholder next steps into 30+ shared pages they could use to orient, coordinate, and continue the work.",
+    sourceBasis:
+      "Approved resume language plus protected 2026 operating-plan and running-minutes artifacts, summarized publicly without private coalition context.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -192,10 +211,11 @@ export const proofClaims: ProofClaim[] = [
       "Raw strategy context",
       "Unapproved quotes"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: ["CLM-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN-2026"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "fair-rent-source-map",
@@ -211,7 +231,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language plus a protected, close-read legislative provenance redline with explicit unofficial and non-legal boundaries. A separate protected commercial-vacancy proposal supports Jamie's privacy-preserving public-data framing and minimum-release design, not agency adoption or implementation.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -224,22 +245,23 @@ export const proofClaims: ProofClaim[] = [
       "Private correspondence",
       "Unapproved collaborator notes"
     ],
-    surfaces: ["resume", "technical-operations", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: ["CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", "CLM-COMMERCIAL-VACANCY-RPIE-PILOT-DESIGN-2026"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
-    supportLevel: "careful",
-    evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "independent-press", "public-source", "jamie-review-confirmation"],
     publicWording:
       "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis: "Independent NPR reporting identifies Jamie as a founding member; approved resume language, Jamie confirmation, and the public campaign sites support his web-infrastructure role.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -259,10 +281,11 @@ export const proofClaims: ProofClaim[] = [
       "Private correspondence",
       "Unapproved collaborator details"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-NYCA-CABARET-REPEAL-ADVOCACY-2017"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-civic-systems",
@@ -294,7 +317,7 @@ export const proofClaims: ProofClaim[] = [
       "Unapproved collaborator names",
       "Legal-review materials"
     ],
-    surfaces: ["resume", "technical-operations", "work-card", "case-study", "about"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study", "about"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: [
       "coalition-operations",
@@ -303,6 +326,67 @@ export const proofClaims: ProofClaim[] = [
       "civic-systems"
     ],
     lastReviewed: "2026-07-09"
+  },
+  {
+    id: "nyc-artist-coalition-participation-system",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Beginning in 2017, helped establish and produce NYC Artist Coalition's recurring participation system, moving emerging work from public invitation and listening through collaborative drafting, collective naming, follow-up meetings, and sustained civic action.",
+    shortWording:
+      "Helped establish NYC Artist Coalition's recurring participation system",
+    detailedPublicWording:
+      "Jamie connected lessons from WOW List with coalition advocacy through Call Script and public event pages. The early record shows the participation system changing through use: an event surface gathered issues before a DCLA meeting; the public discussion supported a shared letter draft and naming poll; and the record routed people into a follow-up general meeting before the system expanded across small cultural spaces, practical sessions, town halls, hearings, campaign actions, and relief convenings. Jamie helped shape those next steps around what participants contributed.",
+    sourceBasis:
+      "Jamie's first-hand role account; the archived popular.vote surface; the surviving Call Script page; the complete public discussion for a Call Script-cohosted January 2017 DCLA meeting; a protected WOW List production snapshot corroborating the event sequence; a public-safe census of 33 recovered coalition event records; contemporaneous Gothamist reporting; a community profile connecting Jamie to coalition work; and close-read official DCLA and Council records documenting recommendations, institutional listening, coalition testimony, Espinal's public credit, and the Intro 1652 legislative sequence.",
+    whyItMatters:
+      "Shows why iterative participation infrastructure mattered institutionally: public contributions informed shared artifacts and follow-up convening, then helped make emerging cultural-space knowledge legible and actionable to agency and legislative processes while preserving the coalition, hosts, partners, and participants as co-authors of the work.",
+    sourceNote:
+      "The sequence supports evolving shared artifacts and convening, not sole authorship, verified attendance, a complete founding history, or proof that one event caused coalition formation or a policy outcome.",
+    guardrail:
+      "Use helped establish, produce, build, and steward. Do not assign Jamie sole authorship of every event, recommendation, testimony, or page post; treat Facebook response labels as attendance; turn the naming poll's displayed 57% into a vote total or mandate; say DCLA created the coalition; imply Finkelpearl used the formal name in every relevant hearing; or claim that one tool, person, or event system alone caused coalition formation or a policy outcome.",
+    doNotSay: [
+      "Jamie solely produced every NYC Artist Coalition event",
+      "9,989 people attended",
+      "Facebook responses equal attendance or unique reach",
+      "The naming poll proves a vote total, representative mandate, or complete founding roster",
+      "Call Script or popular.vote alone created NYC Artist Coalition",
+      "DCLA created or controlled NYC Artist Coalition",
+      "Finkelpearl named NYC Artist Coalition in every relevant hearing",
+      "The Council needed Jamie personally",
+      "Espinal could not have advanced Intro 1652 without Jamie",
+      "Every event used a different venue",
+      "The event program alone repealed the Cabaret Law"
+    ],
+    protectedBoundaries: [
+      "Raw event descriptions",
+      "Attendee identities",
+      "Comments and reactions",
+      "Contact details",
+      "Meeting credentials",
+      "Private working links",
+      "Authenticated-session data",
+      "Raw WOW List database records"
+    ],
+    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "participation-systems",
+      "coalition-operations",
+      "event-production",
+      "civic-engagement",
+      "public-communications"
+    ],
+    canonicalClaimIds: [
+      "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "CLM-NYCAC-DCLA-COUNCIL-INSTITUTIONAL-BRIDGE-2017"
+    ],
+    lastReviewed: "2026-07-16"
   },
   {
     id: "wowlist-community-platform",
@@ -314,13 +398,14 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform historically used by DIY arts and music organizers across 35+ city scenes, each with at least 50 geocoded posts/events.",
+    shortWording: "Jamie co-built WOWList; historical records show use across 35+ city scenes, each with 50+ geocoded posts/events",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, a protected production-database analysis with public-safe aggregate findings, and a public 2016 Sunday Dinner event page that links directly to its WOW List event route.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Use rounded historical aggregates; define the 35+ city-scene figure by the documented threshold of at least 50 geocoded posts/events; treat the Sunday Dinner link as one concrete route, not an adoption or traffic census; and do not describe scenes as official chapters or current service.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -333,10 +418,16 @@ export const proofClaims: ProofClaim[] = [
       "Geolocation rows",
       "Unapproved community artifacts"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
+    canonicalClaimIds: [
+      "CLM-WOWLIST-HISTORICAL-SCALE",
+      "CLM-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT",
+      "CLM-FACEBOOK-WOWLIST-IN-PRACTICE"
+    ],
+    requiredCanonicalClaimIds: ["CLM-WOWLIST-HISTORICAL-SCALE"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -348,14 +439,17 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+      "Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ gatherings. Jamie founded 196 Artists Residency; Jamie reports supporting 20+ resident artists through repeatable participation systems.",
+    shortWording:
+      "Co-hosted Sunday Dinner with Julia Fredenberg (Jamie reports 300+ gatherings); founded 196 Artists Residency and reports supporting 20+ resident artists",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+      "For Sunday Dinner, Jamie worked with Julia Fredenberg on invitation, hosting, documentation, and continuity; his approved resume reports 300+ gatherings. For 196 Artists Residency, Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, and artist-support practices.",
+    sourceBasis:
+      "Approved resume language supplies the public scale wording; a protected working ledger preserves numbered Sunday Dinner records through 345 and a contemporaneous 300th record without establishing attendance or unique participants. A Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation. Public Facebook event pages preserve 100th and 200th milestone titles. A protected 2023 acceptance record supports the residency's operating methods, not the 20+ aggregate.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; treat numbered Facebook titles as contemporaneous milestones and the protected ledger as project-history support rather than attendance or unique-participant evidence; keep the ledger out of public citations and detail; attribute both aggregates to Jamie's approved resume and use 'Jamie reports' for the 20+ residency scale; keep the two role and date ranges distinct.",
     doNotSay: [
+      "Jamie was Sunday Dinner's sole host or sole creator",
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
       "Attendance database"
@@ -363,15 +457,21 @@ export const proofClaims: ProofClaim[] = [
     protectedBoundaries: [
       "Guest lists",
       "Attendance records",
+      "Workbook rows and response markers",
       "Addresses",
       "Private messages",
       "Raw community records",
       "Unapproved photos"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
+    canonicalClaimIds: [
+      "CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017",
+      "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
+      "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES"
+    ],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -411,14 +511,16 @@ export const proofClaims: ProofClaim[] = [
       "Sensitive strategy, legal, financial, or personal information"
     ],
     surfaces: ["technical-operations"],
-    relatedProjects: [],
+    relatedProjects: ["kc-spaces-fund"],
+    canonicalClaimIds: ["CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY"],
+    requiredCanonicalClaimIds: ["CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY"],
     relatedCapabilities: [
       "public-facing-web-systems",
       "campaign-infrastructure",
       "implementation",
       "technical-operations"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",
@@ -426,42 +528,55 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, carrying a $490,539 proposal through Board recommendation and City Council appropriation. The agreement was not completed, no funds were disbursed, and the unused award was later reappropriated.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Public records identify him as the proposal's presenter; the Council accepted the Board recommendation and appropriated $490,539 to the project account in 2019. A 2022 update listed no funds disbursed, and a 2024 ordinance reappropriated the unused award.",
+    sourceBasis:
+      "Approved resume language, public-safe project context, CCED Board minutes naming Jamie as presenter, 2019 Council appropriation and resolution records, the 2022 project-status table, and the 2024 reappropriation ordinance.",
+    sourceNote:
+      "When the funding lifecycle appears in the downloadable resume, include a compact public-record note and path to the case-study source links.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Appropriation must never be compressed into receipt: keep the no-disbursement and reappropriation endpoint attached to any public funding language, and retain the public-record source path in the downloadable resume.",
     doNotSay: [
-      "Final funding received",
-      "Current property status",
+      "KC Town Hall received or spent $490,539",
+      "The project was completed",
+      "Withdrawal from the funding process means Jamie abandoned the project",
+      "Why the project's stewardship changed",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded Council actions"
     ],
     protectedBoundaries: [
       "Private financial details",
       "Legal details",
       "Property details",
       "Banking details",
-      "Stakeholder details"
+      "Stakeholder details",
+      "Private personal circumstances"
     ],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026"],
+    requiredCanonicalClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019"],
+    lastReviewed: "2026-07-16"
   },
   {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
-    evidenceClass: ["public-safe-archive-summary"],
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
     publicWording:
       "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+      "While developing this portfolio, an early pass treated a participant photograph's approximate 2:10 p.m. timestamp as an event time. Review found a direct Civic Hall announcement stating 1-3 p.m.; the public claim was corrected, the earlier inference remained in the correction trail, and the photograph stayed held pending rights and consent review.",
+    sourceBasis:
+      "Public-safe lab materials, the CallNYC event-time correction record and direct archived Civic Hall announcement, held photograph metadata, and a protected, close-read 2026 sprint proposal that establishes offer and method design, not client delivery.",
+    sourceNote:
+      "The event-time example documents this portfolio's own human-reviewed claim lifecycle, not external client adoption or impact.",
+    whyItMatters:
+      "This is the method in use: stronger evidence changed the public account while provenance, uncertainty, rights, and consent remained visible.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -478,7 +593,10 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: [
+      "CLM-SOURCE-BACKED-TEAM-MEMORY-SPRINT-DESIGN-2026"
+    ],
+    lastReviewed: "2026-07-16"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -505,7 +623,7 @@ export const proofClaims: ProofClaim[] = [
       "HR context",
       "Confidential team information"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "about"],
     relatedProjects: [],
     relatedCapabilities: ["delivery-coordination", "risk-surfacing", "handoffs"],
     lastReviewed: "2026-07-07"
@@ -520,7 +638,7 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Completed AI Evals for Engineers & PMs in 2026",
     detailedPublicWording:
       "Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.",
-    sourceBasis: "Approved resume language and public-safe certificate.",
+    sourceBasis: "Public-safe completion certificate, approved resume language, and Maven's public course page.",
     guardrail:
       "Treat as professional development, not instructor affiliation or certification authority beyond completion.",
     doNotSay: [
@@ -532,10 +650,11 @@ export const proofClaims: ProofClaim[] = [
       "Private cohort materials",
       "Unapproved evaluations"
     ],
-    surfaces: ["resume", "lab", "about"],
-    relatedProjects: ["source-backed-team-memory"],
+    surfaces: ["resume", "resume-pdf", "lab", "about"],
+    relatedProjects: ["source-backed-team-memory", "ai-evals-professional-development"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
-    lastReviewed: "2026-07-07"
+    evidenceCanonicalClaimIds: ["CLM-AI-EVALS-COMPLETION-2026"],
+    lastReviewed: "2026-07-16"
   }
 ];
 
@@ -549,6 +668,10 @@ export function getProofsForSurface(surface: ProofSurface): ProofClaim[] {
   return proofClaims.filter((proof) => {
     return publicProofStatuses.has(proof.status) && proof.surfaces.includes(surface);
   });
+}
+
+export function formatEvidenceBasis(proof: Pick<ProofClaim, "evidenceClass">): string {
+  return proof.evidenceClass.map((evidenceClass) => evidenceClassLabels[evidenceClass]).join(" + ");
 }
 
 export function requireReadyOrCarefulProof(id: string): ProofClaim {
@@ -585,6 +708,23 @@ export const resumeProofHighlights = [
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "ai-evals-professional-development"
+].map(requireReadyOrCarefulProof);
+
+export const resumePdfProofs = [
+  ...resumeProofHighlights,
+  requireReadyOrCarefulProof("technical-operations-operating-backbone"),
+  requireReadyOrCarefulProof("kc-town-hall-public-benefit-documentation")
+];
+
+export const aboutProofs = [
+  "career-operating-structure-14-years",
+  "nyc-artist-coalition-civic-systems",
+  "technical-operations-operating-backbone",
+  "ai-evals-professional-development"
+].map(requireReadyOrCarefulProof);
+
+export const labProofs = [
+  "source-backed-team-memory-method"
 ].map(requireReadyOrCarefulProof);
 
 export const technicalOperationsProofRows = [

@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-07-16",
+  "account": "Jamie Burkart personal Facebook profile",
+  "publicSafety": {
+    "status": "public-safe-aggregate-only",
+    "included": "Capture-date population arithmetic, date and visibility-label aggregates, annual counts, aggregate URL and host counts, overlapping mission-signal counts, selected professional source-route leads, bounded public-stakeholder reference counts, classifier rules, and a SHA-256 digest of the protected record set.",
+    "excluded": "Raw post text, item-level post URLs except separately governed professional source specimens, ordinary identities, comments, reactions, personal-life chronology, private or malformed URLs, images, local paths, cookies, session data, and authenticated state.",
+    "rawCaptureLocation": "protected pointer outside the public repository",
+    "reason": "A row-level personal Facebook ledger would reconstruct private and ordinary life context. The public artifact preserves the research contract and professional retrieval signals without becoming a personal-history index."
+  },
+  "populationReconciliation": {
+    "surface": "Facebook Manage posts",
+    "filter": "Posted by You; all years; all privacy states",
+    "authoredPostCount": 1243,
+    "reviewedPostCount": 1243,
+    "reviewedPopulationPercent": 100,
+    "dateRange": {
+      "earliest": "2006-12-19",
+      "latest": "2022-06-12"
+    },
+    "terminalChecks": 2,
+    "terminalPostCount": 1243,
+    "terminalProgressIndicators": 0,
+    "protectedRecordSetSha256": "07c1614f75d1b25bcc92f22129bdd99089b14da4c478dab9759b625c0a973560",
+    "conclusion": "Every one of the 1,243 authored-post cards materialized by the filtered Manage Posts surface was reviewed, and the terminal count remained stable at the oldest dated card with no loading indicator.",
+    "boundary": "This is a complete review of the capture-date authored-post population exposed to the authenticated owner on July 16, 2026. It is not a native account export and does not establish that no post was deleted, withheld, or otherwise absent before capture."
+  },
+  "visibilityLabelCounts": {
+    "Public": 671,
+    "Friends": 204,
+    "Only me": 98,
+    "Unlabeled in compact card": 270,
+    "boundary": "An absent compact-card label is unknown, not public. Public-only findings use the 671 cards explicitly labeled Public."
+  },
+  "availability": {
+    "readableOrRendered": 1237,
+    "sourceUnavailable": 6,
+    "boundary": "An unavailable source card remains part of the population but does not support a content proposition."
+  },
+  "recordsByYear": {
+    "2006": 2,
+    "2007": 5,
+    "2008": 4,
+    "2009": 218,
+    "2010": 82,
+    "2011": 88,
+    "2012": 153,
+    "2013": 184,
+    "2014": 109,
+    "2015": 68,
+    "2016": 122,
+    "2017": 118,
+    "2018": 27,
+    "2019": 42,
+    "2020": 19,
+    "2022": 2
+  },
+  "postedUrlInventory": {
+    "postsWithExternalUrls": 291,
+    "externalUrlOccurrences": 470,
+    "distinctExternalUrls": 363,
+    "topHosts": {
+      "flic.kr": 138,
+      "wowlist.org": 36,
+      "sundaydinnernyc.com": 26,
+      "flickr.com": 13,
+      "vimeo.com": 13,
+      "juliafredenburg.com": 12,
+      "youtube.com": 11,
+      "cargocollective.com": 10,
+      "gli.tc": 9,
+      "cityideas.tumblr.com": 7,
+      "craylife.com": 7,
+      "talksnotraids.com": 3,
+      "kcdiy.info": 3,
+      "rafaelespinal.nyc": 2,
+      "nycartc.com": 2
+    },
+    "selectedProfessionalRoutes": [
+      { "url": "https://talksnotraids.com/", "disposition": "existing campaign source family" },
+      { "url": "http://PassSBJSA.com", "disposition": "campaign route; preserve as historical lead" },
+      { "url": "http://SaveNYCSpaces.com", "disposition": "existing campaign source family" },
+      { "url": "http://LetNYCDance.org", "disposition": "existing campaign source family" },
+      { "url": "http://nycartc.com", "disposition": "existing coalition source family" },
+      { "url": "https://www.rollingstone.com/culture/videos/diy-music-nightlife-nyc-night-mayor-rafael-espinal-w517312", "disposition": "public article lead; close-read before claim use" },
+      { "url": "http://amc2016.sched.org/event/77P7/decoding-my-neighborhood-tapping-into-invisible-networks", "disposition": "public program lead; close-read before claim use" },
+      { "url": "https://wowlist.org/join", "disposition": "existing project source family" },
+      { "url": "http://SundayDinnerNYC.com", "disposition": "existing project source family" },
+      { "url": "http://treycorkern.com/?page_id=527", "disposition": "waterways source lead; recover or archive before claim use" },
+      { "url": "http://www.youtube.com/watch?v=B2JIyifhSsM", "disposition": "creative-media source lead; close-read before claim use" },
+      { "url": "https://urbane.formstack.com/forms/nycnightlife2018_mome", "disposition": "historical Office of Nightlife participation route" }
+    ],
+    "boundary": "A posted URL establishes publication or redistribution, not authorship of the destination, endorsement, readership, conversion, participation, or impact. Only selected professional routes are exposed; the full item-level URL inventory remains protected."
+  },
+  "missionSignalInventory": {
+    "inputFields": ["rendered post card text", "displayed outbound route"],
+    "rules": [
+      { "signalId": "community-platforms-and-gatherings", "pattern": "wow list|wowlist.org|sunday dinner|sundaydinnernyc", "flags": "i" },
+      { "signalId": "cultural-space-advocacy", "pattern": "nyc artist coalition|nycartc|cabaret law|letnycdance|talksnotraids|march raids|commercial rent|fairrentnyc|passsbjsa|save nyc spaces", "flags": "i" },
+      { "signalId": "civic-participation-and-service", "pattern": "city council|council member|mayor|commissioner|department of cultural affairs|dcla|city hall|elected official|office of nightlife|nightlife mayor", "flags": "i" },
+      { "signalId": "public-history-place-and-waterways", "pattern": "mississippi river|raft|riverfront|waterway|great accommodations|huck finn|8th street tunnel", "flags": "i" },
+      { "signalId": "creative-technology-and-media", "pattern": "nter chng|nterchng|horse lords|analog video|video synthes|glitch|augmented reality", "flags": "i" },
+      { "signalId": "neighborhood-operations", "pattern": "kc town hall|kctownhall|tiredoftires|unify to beautify|oak park neighborhood|kc spaces fund|mutual aid", "flags": "i" },
+      { "signalId": "public-events", "pattern": "town hall|public meeting|hearing|workshop|panel|rally|benefit show|meetup", "flags": "i" }
+    ],
+    "overlappingRecordCounts": {
+      "community-platforms-and-gatherings": { "allVisibilityStates": 87, "explicitlyPublic": 57 },
+      "cultural-space-advocacy": { "allVisibilityStates": 36, "explicitlyPublic": 36 },
+      "civic-participation-and-service": { "allVisibilityStates": 38, "explicitlyPublic": 38 },
+      "public-history-place-and-waterways": { "allVisibilityStates": 21, "explicitlyPublic": 12 },
+      "creative-technology-and-media": { "allVisibilityStates": 4, "explicitlyPublic": 4 },
+      "neighborhood-operations": { "allVisibilityStates": 1, "explicitlyPublic": 1 },
+      "public-events": { "allVisibilityStates": 23, "explicitlyPublic": 23 }
+    },
+    "selectedProjectSignals": {
+      "wowList": { "records": 44, "explicitlyPublic": 41 },
+      "sundayDinner": { "records": 45, "explicitlyPublic": 17 },
+      "nycArtistCoalition": { "records": 26, "explicitlyPublic": 26 },
+      "cabaretAndDance": { "records": 19, "explicitlyPublic": 19 },
+      "talksNotRaids": { "records": 4, "explicitlyPublic": 4 },
+      "commercialRent": { "records": 4, "explicitlyPublic": 4 },
+      "officeOfNightlife": { "records": 9, "explicitlyPublic": 9 },
+      "kcTownHall": { "records": 1, "explicitlyPublic": 1 },
+      "nterChng": { "records": 2, "explicitlyPublic": 2 },
+      "waterways": { "records": 19, "explicitlyPublic": 10 }
+    },
+    "boundary": "These are overlapping retrieval signals, not measures of labor, project priority, authorship of shared cards, reach, or impact. Zero results for a project name do not establish that Jamie never posted about that project."
+  },
+  "stakeholderReferenceInventory": {
+    "explicitlyPublicPostCounts": {
+      "New York City Council language": 17,
+      "Office of Nightlife or nightlife-mayor language": 9,
+      "NYC Artist Coalition language": 24,
+      "Silent Barn": 4,
+      "Market Hotel": 5,
+      "Secret Project Robot": 7,
+      "Dance Liberation Network": 3,
+      "House Coalition": 5,
+      "Dance Parade": 3,
+      "Kansas City City Hall language": 3
+    },
+    "boundary": "A reference establishes that an explicitly public post named or addressed a stakeholder group. It is not incoming engagement, endorsement, collaboration confirmation, or an audience count."
+  },
+  "eventCardSocialContext": {
+    "missionRelevantPostsWithRenderedAndNFriendsContext": 20,
+    "renderedRange": { "minimum": 6, "maximum": 157 },
+    "boundary": "The compact Facebook event cards rendered social-context phrases such as 'and N friends.' These figures are volatile interface context, not attendance, RSVPs, unique people reached, post engagement, endorsement, or impact."
+  },
+  "tractionBoundary": {
+    "reactionCountsRecovered": false,
+    "commentCountsRecovered": false,
+    "shareCountsRecovered": false,
+    "incomingStakeholderIdentityAuditCompleted": false,
+    "finding": "The complete Manage Posts surface did not expose reactions, comments, shares, or incoming engager identities. No full-population Facebook engagement total is claimed from this pass.",
+    "nextResearch": "If a purpose requires engagement analysis, reconcile a minimized native account export or inspect a bounded, Jamie-approved professional subset without indexing ordinary personal engagement."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "chad-lens-v1",
+  "title": "Chad Lens eval",
+  "objective": "Reduce the reader's burden without reducing Jamie's record: make Jamie visible as the actor, state the end and usable result, translate specialized work in one pass, and preserve collective credit and factual boundaries.",
+  "decision": "Do the core application surfaces meet Chad's standard of courageous precision?",
+  "audiences": [
+    "hiring managers",
+    "HR reviewers",
+    "public-sector readers",
+    "product and implementation leaders",
+    "referrers and collaborators"
+  ],
+  "recommendations": ["iterate", "criterion-met"],
+  "passingRecommendations": ["criterion-met"],
+  "stopCondition": {
+    "allDeterministicGatesPass": true,
+    "weightedScoreAtLeast": 80,
+    "everyCriterionAtLeast": 4,
+    "criticalCriteriaAtLeast": 4,
+    "stablePassingRuns": 2,
+    "explicitHumanApprovalRequiredForProduction": true
+  },
+  "scoreScale": {
+    "1": "Jamie is obscured, the result is undecodable, or the wording materially overclaims.",
+    "2": "The reader can infer some value, but important action, outcome, translation, or credit is missing.",
+    "3": "Directionally clear, but a material decoding burden or actor-to-outcome gap remains on a core application surface.",
+    "4": "A first-pass reader can identify Jamie's action, the end, what became usable, and the relevant boundary with only minor refinements.",
+    "5": "Courageously precise: unusually direct, memorable, concrete, and bounded without flattening the work."
+  },
+  "deterministicChecks": [
+    {
+      "id": "chad-lens-contract",
+      "description": "Core surfaces contain the required actor, outcome, application-path, and collective-credit structure without known decoding shortcuts.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:chad-lens"
+    },
+    {
+      "id": "citation-registry-valid",
+      "description": "Clarity repairs preserve canonical citation projections and source boundaries.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:citations"
+    },
+    {
+      "id": "knowledge-bank-valid",
+      "description": "The public copy remains no stronger than the structured claim layer.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run knowledge-bank"
+    },
+    {
+      "id": "public-safety-valid",
+      "description": "Courageous precision does not expose protected context or private records.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run public-safety"
+    },
+    {
+      "id": "route-contract-valid",
+      "description": "The direct reader path and public-route boundaries remain intact.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:routes"
+    },
+    {
+      "id": "production-preflight",
+      "description": "The Chad Lens revision passes the complete production preflight.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:production"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "chad-lens",
+      "name": "Chad Lens",
+      "weight": 100,
+      "minimumScore": 4,
+      "critical": true,
+      "stewards": ["Chad Berkowitz", "Jamie Burkart", "Cyd Harrell", "Helen Nissenbaum"],
+      "question": "Across the core application path, can a busy reader say what Jamie did, for whom, toward what end, and what became usable, without decoding specialized language or being misled about collective work?",
+      "passDefinition": "The homepage, Technical Operations page, HTML resume, and recommended HJE, CallNYC, and FairRentNYC proof surfaces consistently make Jamie the bounded actor; connect action to a practical end and usable result; translate domain terms for hiring and public-sector readers; sequence strongest proof before supporting context; and preserve collective credit, consent, and causality guardrails.",
+      "dimensions": [
+        "actor-legibility",
+        "toward-what-end",
+        "usable-result",
+        "one-pass-translation",
+        "reader-burden",
+        "collective-precision"
+      ],
+      "dimensionFields": [
+        "actorLegibility",
+        "towardWhatEnd",
+        "usableResult",
+        "onePassTranslation",
+        "readerBurden",
+        "collectivePrecision"
+      ],
+      "minimumEvidence": 6,
+      "evidenceToInspect": [
+        "homepage first viewport and Start Here path",
+        "Technical Operations introduction and strongest role-fit proof",
+        "HTML resume lead proof and application sequence",
+        "Harry J. Epstein Company case study",
+        "CallNYC case study",
+        "NYC Artist Coalition / FairRentNYC case study",
+        "320px and desktop production screenshots",
+        "proof records and public boundary language"
+      ],
+      "repairPolicy": "Repair the smallest correct layer. Move Jamie's action and the usable end forward; replace shorthand with the actual work; shorten repeated setup; and retain contribution or stewardship language wherever ownership, causality, or authority is shared.",
+      "antiGaming": "Do not pass by inserting Jamie's name mechanically, deleting context or collective credit, adding unsupported causality, repeating the words usable or outcome, hiding weak pages, or substituting generic hiring jargon for the actual work. Judge complete rendered sentences and their sequence."
+    }
+  ]
+}

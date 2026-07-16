@@ -1,0 +1,566 @@
+# feature/evals-K knowledge lifecycle run
+
+Date: 2026-07-15
+
+Decision sought: whether the repository can preserve professional fragments,
+develop them into defensible claims, and compose selective public arguments
+without turning the website into an archive or claims database. This decision
+does not authorize production publication.
+
+## Score history
+
+| Pass | Criterion scores | Weighted score | Result |
+| --- | --- | --- | --- |
+| Baseline | 2 / 3 / 3 / 2 / 3 / 2 | 51 | Intake, maturation, promotion, retrieval, and media feedback were not yet durable. |
+| First implemented loop | 3 / 3 / 3 / 3 / 3 / 3 | 60 | Real records existed, but receipts, graph semantics, query dimensions, and publication governance remained incomplete. |
+| First ten-source review | 4 / 4 / 5 / 5 / 4 / 5 | 90 | Framework-ready, but later adversarial review found proof-layer exact-surface bypasses. |
+| Route-governance review | 5 / 4 / 5 / 3 / 3 / 5 | 79 | Iterate: the residency's self-reported 20+ figure lost its qualifier in public composition. |
+| Final judge A | 4 / 5 / 5 / 4 / 5 / 4 | 91 | Framework-ready. |
+| Final judge B | 4 / 4 / 5 / 5 / 5 / 4 | 91 | Framework-ready. |
+| Campaign-press judge A | 5 / 4 / 5 / 5 / 5 / 4 | 94 | Framework-ready. |
+| Campaign-press judge B | 4 / 4 / 5 / 5 / 5 / 5 | 93 | Framework-ready. |
+| Council-lifecycle final judge A | 5 / 5 / 5 / 5 / 5 / 5 | 100 | Framework-ready. |
+| Council-lifecycle final judge B | 5 / 5 / 5 / 5 / 5 / 5 | 100 | Framework-ready. |
+| Teams-archive final judge A | 4 / 5 / 5 / 4 / 5 / 4 | 91 | Framework-ready. |
+| Teams-archive final judge B | 4 / 4 / 5 / 5 / 5 / 4 | 91 | Framework-ready. |
+
+The final Teams-archive pair supersedes the earlier Council-lifecycle pair for
+the current working tree. Both fresh judges independently scored every
+criterion at least 4, returned `framework-ready`, and produced the same weighted
+score.
+
+## Teams iCloud archive production
+
+The July 15 pass close-read hydrated, high-signal material from Jamie Projects
+History, CRS, and job-hunt while preserving unavailable files as unresolved
+rather than treating them as absent. It added five intake leads, seven bounded
+sources, eight atomic observations, two project records, five research tasks,
+and three held canonical claims.
+
+- A preserved Kansas City Star article and two independent public reports now
+  support Jamie's role initiating and organizing a collective, recycled-
+  material, bicycle-powered raft expedition that traveled more than 1,000
+  miles from Kansas City into Louisiana. The intended Gulf endpoint remains
+  held because the recovered sources do not establish that the crew reached
+  it.
+- A 90-day commercial-rent-stabilization operating plan and running minutes
+  support Jamie's design of shared public goods, explicit ownership, a ladder
+  of engagement, governance boundaries, and implementation-ready coordination.
+  The records preserve city and state work as aligned but distinct collective
+  tracks.
+- An unofficial legislative provenance redline supports Jamie's method for
+  tracing language across city and state policy lineages. It remains bounded
+  as discussion material, not legal advice or proof that named reviewers
+  authored the underlying legislation.
+- A Source-Backed Team Memory Sprint proposal supports Jamie's design of a
+  bounded one-to-two-week offer using an approved non-sensitive or synthetic
+  source bundle, inspectable human review, privacy/access/retention notes, and
+  a 30-day continue/revise/stop decision. It does not establish acceptance,
+  delivery, deployment, or a client relationship.
+
+The three method claims remain `hold` projections with no public surfaces. The
+proof layer may link to them for evidence lineage, but those evidence-only
+links cannot authorize publication, enter a public palette, satisfy a route
+manifest, or cross project boundaries.
+
+## KC Town Hall Council lifecycle
+
+The July 14 pass located five linked Kansas City legislative records and
+ingested them as immutable receipts, canonical sources, atomic observations,
+candidate relationships, research decisions, and exact-surface projections:
+
+- the September 26, 2019 Council meeting record;
+- Ordinance 190642, which appropriated $490,539 to the KC Town Hall project
+  account;
+- Resolution 190649, which accepted the Board recommendation and authorized
+  negotiation of a funding agreement;
+- the May 17, 2022 status report, which recorded no disbursement and an
+  agreement still under negotiation; and
+- Ordinance 240317, which recorded the project's withdrawal and reappropriated
+  the unused $490,539 award in 2024.
+
+The promoted claim therefore records recommendation, Council authorization and
+appropriation, unclosed agreement, no disbursement, withdrawal, and
+reappropriation as one bounded lifecycle. A competing candidate that Jamie or
+the project received the funds is explicitly disallowed. The public wording
+does not infer the reason for withdrawal or claim expenditure, implementation,
+completion, or present project status.
+
+## NYC Artist Coalition campaign press ingestion
+
+The July 14 run captured all press-section listings from Let NYC Dance, Talks
+Not Raids, Save NYC Spaces, and the supplied December 1, 2021 FairRentNYC
+Wayback snapshot. The frozen extraction fixture and generated corpus preserve:
+
+- 21 Let NYC Dance listings;
+- 7 Talks Not Raids listings;
+- 8 Save NYC Spaces listings;
+- 9 FairRentNYC listings;
+- 45 campaign occurrences resolving to 44 unique article records because the
+  NPR Cabaret Law article appears in two campaign collections.
+
+Every collection records its source page, capture method, completeness posture,
+ordered membership, and interpretation boundary. Metadata-only article records
+remain research leads. They cannot support article-content claims until a
+documented close read produces bounded observations and survives promotion.
+
+The ingestion also corrected the existing NPR interpretation: independent NPR
+reporting identifies Jamie as a founding member of NYC Artist Coalition and
+quotes his Cabaret Law repeal advocacy. The correction is source-linked,
+human-approved, and bounded against sole-founder and individual-causality
+claims.
+
+## Ten-source ingestion
+
+The July 13 run close-read and ingested ten public sources spanning an
+institutional interview, project archives, campaign sites, independent press,
+government records, and a collaborator page. It added 10 source records, 13
+atomic observations, append-only receipts, research findings, candidate
+relationships, and explicit source limits.
+
+The new material supports bounded public claims about:
+
+- Jamie and Julia Fredenberg's weekly Sunday Dinner co-hosting;
+- NYC Artist Coalition campaign architecture, Jamie's public speaking and
+  Council testimony, and coalition-spearheaded nightlife advocacy;
+- Jamie's documented KC Town Hall presenter role and the Board-recommendation
+  stage later completed by the Council-lifecycle research described above;
+- Jamie's augmented-reality and collective video-production collaboration on
+  Claudette's Theatre on Wheels.
+
+The run also preserved the Sunday Dinner and 196 Artists Residency practices as
+distinct. Jamie's approved resume is the current basis for the 300+ and 20+
+aggregates; neither figure is presented as independently corroborated.
+
+## Recursive repairs
+
+- Added append-only intake receipts, duplicate disposition, bare-URL capture,
+  private-reference locators, stable IDs, and actionable next steps.
+- Added an explicit unassigned-project intake state and retained Jamie's
+  "Structure grows out of the material" fragment as the first real append-only
+  specimen awaiting honest project triage.
+- Added atomic observations with locators, evidence roles, certainty, source
+  limits, and reciprocal candidate links.
+- Added candidate maturity, counterevidence posture, research tasks, promotion
+  decisions, corrections, supersession, and append-only histories.
+- Required current human approval for every active canonical projection and
+  every reusable proof relationship.
+- Replaced category-only proof permissions with 15 Jamie-approved
+  exact-destination manifests containing audience, purpose, exclusions, and
+  guardrails.
+- Generated `projection-map.md` from those manifests and made drift a failing
+  deterministic check.
+- Scoped route retrieval to the relevant editorial brief and project rather
+  than returning unrelated project context.
+- Made observation roles candidate-relative where one source can support the
+  boundary of a true lifecycle claim while contradicting a false funding-receipt
+  claim.
+- Added candidate-specific relationship records for every observation shared
+  across propositions, including the supported fragment, evidence role, and
+  limitations for each candidate.
+- Made publication-safe retrieval fail closed across projects, canonical
+  claims, proofs, tasks, and media when no exact human-approved route manifest
+  authorizes the requested surface.
+- Made exact proof-destination retrieval return only manifest-selected
+  canonical claims and currently authorized candidates; research tasks and
+  media stay out of public palettes without a separate explicit selection path.
+- Replaced page-category proof fallback with a complete inventory of 14
+  rendered routes and the downloadable resume; every destination's full proof
+  set must equal its Jamie-approved manifest.
+- Made the resume PDF a first-class download destination with an artifact path,
+  canonical KC claim linkage, an active PDF projection, exact human approval,
+  and deterministic parsing of the shipped lifecycle wording.
+- Bound the checked-in KC case-study screenshot to both its artifact hash and a
+  digest of the application source that produced it, so stale visual evidence
+  fails the release gate.
+- Persisted all 42 production browser observations as a compact route-by-
+  viewport matrix; the validator now requires one passing result for every one
+  of 14 governed routes at all three declared viewports.
+- Added a first-class self-reported evidence qualifier and a regression test
+  that rejects active canonical or proof wording if the 20+ residency metric
+  loses its attribution to Jamie.
+- Added source-collection records, a frozen campaign extraction fixture, and a
+  generated human-readable press corpus with drift checks.
+- Added append-only intake amendments so later source discovery can correct a
+  mutable lead without rewriting its original capture receipt.
+- Prohibited campaign listing observations before article close reading and
+  reconciled promoted observations against canonical evidence or correction
+  provenance.
+- Kept lifecycle records out of the application barrel and deployable output.
+- Preserved visual rights, consent, display, and factual-promotion boundaries;
+  images remain research leads unless each evidentiary question is resolved.
+- Added evidence-only canonical claim relationships for proof records, with
+  deterministic enforcement that they remain held, unsurfaced, project-
+  aligned, outside exact and generic public palettes, and unable to satisfy a
+  publication manifest or human approval.
+- Expanded source-bound visual evidence from one case-study capture to 17
+  artifacts, including seven routes at desktop and 320px, KC Town Hall at
+  desktop, and both rendered pages of the shipped resume PDF.
+
+## Verification evidence
+
+- Knowledge lifecycle validation and all 41 regression tests passed.
+- The corpus contains 47 leads and append-only receipts, 82 observations, 36
+  candidate claims, 25 research tasks, 43 decisions, 8 editorial briefs, 15
+  exact-destination proof manifests, 10 bounded media leads, and 4 source collections
+  containing 45 campaign press listings.
+- Citation, knowledge-bank, public-safety, route, and compiled-locator checks
+  passed in the release profile.
+- Final independent lifecycle scorecards were 91 / 91, stable pair `yes`, with
+  all criteria at least 4 and both recommendations `framework-ready`.
+
+## Boundaries and next research
+
+- Instrumental causality for Cabaret Law repeal, the Office of Nightlife,
+  MARCH phaseout, town-hall production and influence, and authenticated CallNYC
+  Council-member engagement metrics remain research-only.
+- KC Town Hall's Council record is now bounded through the 2024 withdrawal and
+  reappropriation; the private reason for withdrawal and any work outside that
+  legislative record remain out of scope.
+- The 20+ residency aggregate remains Jamie-reported until an independent
+  collaborator or institutional source is recovered.
+- Additional visual review cycles can deepen the media-feedback evidence while
+  preserving rights, consent, and protected locator boundaries.
+
+## Decision
+
+The recursive stop condition for **framework-ready** is reached. The knowledge
+bank can accept incomplete material, preserve uncertainty, mature claims
+through research, and supply selective public compositions. There is no public
+`/proofs`, `/knowledge-bank`, or `/public-claims` route. Production publication
+remains Jamie's explicit human decision.
+
+## Google Shared Drive archive production
+
+The July 15 pass inventoried 110 accessible Shared Drives, then close-read a
+bounded professional subset. Personal, family, legal, relationship, and
+collaborator-private collections were excluded from research and publication.
+Technical access was not treated as ethical permission.
+
+The pass added seven append-only receipts, seven actionable leads, eight atomic
+observations, one candidate and held canonical method claim, two research tasks,
+one promotion decision, and five rights- or consent-gated media leads. It
+strengthened the 196 Artists Residency operating-method record without treating
+the protected onboarding document as support for the 20+ aggregate.
+
+The strongest new proposition is deliberately narrow: Jamie designed a
+privacy-preserving commercial vacancy and lease-cost open-data pilot
+specification. The records do not establish adoption, implementation,
+publication, agency presentation, or policy impact. The claim remains held in
+the knowledge bank with no public surface. Map files, neighborhood-design
+packages, photographs, and meeting recordings remain metadata-only or held;
+custody does not establish authorship, accuracy, consent, rights, or outcomes.
+
+After the pass, the corpus contains 54 leads and receipts, 90 observations, 37
+candidate claims, 27 research tasks, 44 decisions, 8 editorial briefs, 15
+exact-destination manifests, and 15 media leads. All 42 lifecycle tests passed.
+Two independent final judges scored the lifecycle **91 / 90**, stable pair
+`yes`, with every criterion at least 4 and both recommendations
+`framework-ready`.
+
+## WOW List full-population release pass
+
+The July 15 release pass reconciled all 38 profile-displayed `@wowlist`
+records: 37 appeared in Posts, 38 in Replies, and their union remained 38 after
+seven no-growth traversals. The population contains 16 original posts, 6
+replies, and 16 reposted external records. It preserves 35 posted-link
+occurrences, dated counters for all 22 account-authored records, and a bounded
+10-account external-use sample in which 9 accounts independently posted WOW
+List URLs.
+
+The pass separates the account's public record from the protected production
+analysis that supports historical scale. Exact internal figures remain
+protected: 1,846 users, 16,142 posts or events, and 35 city or region entries
+meeting the named threshold of at least 50 geocoded posts or events. Public
+projections use rounded figures and keep that threshold attached wherever the
+35+ figure appears.
+
+The lifecycle now contains 61 leads and receipts, 107 observations, 43
+candidate claims, 33 research tasks, 51 decisions, 10 editorial briefs, 15
+exact-destination manifests, 15 media leads, and 4 source collections containing
+45 campaign press listings. All 44 lifecycle tests passed. The exact WOW List
+manifest inventories both rendered canonical claims, and the runner now rejects
+schema-invalid, stale-revision, duplicate-evaluator, or unstable confirming
+scorecards.
+
+The final independent release pair scored **97 / 95**, stable pair `yes`, with
+both recommendations `framework-ready`. Interaction counters remain dated and
+mutable; they are not treated as people, reach, conversion, attendance,
+endorsement, or impact. Collective authorship, privacy, lifetime-population,
+and current-status boundaries remain explicit. There is no public `/proofs`,
+`/knowledge-bank`, or `/public-claims` route, and production remains Jamie's
+explicit decision.
+
+## KC Town Hall full-population pass
+
+- Reconciled all 183 records in the surviving `@KCTownHall` profile control:
+  142 account posts, 13 account replies, and 28 reposts, with no unresolved
+  profile slots.
+- Preserved a public-safe item ledger and a complete dated public-reposter
+  audit without raw post text, resident contact details, private messages,
+  credentials, session material, or private analytics.
+- Recomputed the 100-record resident tire workflow, five additional mission
+  themes, 133 posted-link occurrences, 31 unique short URLs, 20 resolved public
+  destinations, and all account-owned visible counters.
+- Separated outbound mentions, project-selected reposts, public-reposter
+  appearances, direct outside-authored responses, and source-post counters.
+  The combined incoming review supports a three-account Council-response floor;
+  it does not establish endorsement, partnership, adoption, or impact.
+- Added closed-schema and privacy-mutation failures so later agents cannot add
+  raw text, addresses, sessions, analytics payloads, or opaque source data.
+- Projected only the operating-loop and bounded dialogue result onto the KC
+  Town Hall case study; the source ecology and mutable traction snapshot remain
+  knowledge-bank depth.
+
+The deterministic lifecycle contract, 44 lifecycle tests, social-archive gate,
+knowledge-bank validation, public-safety gate, and typecheck pass. Exact-head
+semantic release evaluation is recorded in the pull request rather than
+committed back into the revision it evaluates.
+
+## KC Town Hall compositional hill climb
+
+- Preserved the full-population ledger, evidence graph, and all claim
+  boundaries while changing only the public composition.
+- Reframed the promoted claim as a resident-reporting and
+  collaborator-coordination channel and made its project-level scope explicit.
+- The first exact-head lifecycle pair remained framework-ready; a new
+  exact-head pair is required after this composition revision.
+
+## KC Town Hall atomic-claim repair
+
+- The next exact-head lifecycle pair split **5 / 3**. The dissenting judge
+  identified one duplicated canonical claim ID and a compound observation that
+  mixed resident operations, direct Council responses, public-reposter
+  appearances, and mutable interaction counters.
+- Kept the promoted public claim strictly about the 100-of-183 resident-intake
+  and collaborator-coordination workflow.
+- Split the remaining evidence into independently governed reserve claims: a
+  two-account response floor inside the 183-record profile population, a
+  three-account bounded incoming-response floor, and seven public-reposter
+  appearances from three then-sitting Council-member accounts.
+- Retained the 22-reply, 70-repost, and 174-like snapshot as mutable held
+  context, not as a public claim of people, reach, endorsement, or impact.
+- Removed hidden module precedence and made the validator fail if any of those
+  relationship classes are absorbed into the operations claim again.
+
+A fresh exact-head independent pair is required after this structural repair.
+
+## NYC Artist Coalition full-population accounting
+
+- Accounted for the authenticated 5,124-post profile control as 3,367
+  recovered account items plus a 1,757-item explicit unclassified gap. The
+  corpus does not call the gap deleted or infer its item types.
+- Separated 696 authored posts from 2,671 native reposts and resolved all 1,235
+  distinct short URLs in recovered account items.
+- Preserved four overlapping campaign traces, exact source dispositions,
+  mission-relevant article leads, an outbound Council-addressing pattern, a
+  distinct six-account incoming Council floor, lower-bound repost-source
+  patterns, and a dated traction snapshot as separate evidence classes.
+- Added an append-only receipt, verified source metadata, atomic observations,
+  five held candidates, five hold decisions, one completed research task, and
+  an internal editorial brief. Every canonical projection from this corpus is
+  held from public surfaces.
+- Left the website unchanged because its existing shared-identity and incoming
+  Council-engagement language is clearer for the current hiring purpose.
+
+The corpus eval reached **100 / 100**. The full repository check, 44 lifecycle
+tests, public-safety gate, production build, and refreshed 42-observation visual
+matrix passed. Exact-head independent semantic scores are reported on the pull
+request. Production publication remains Jamie's explicit decision.
+
+## Urbanhermit full-population and privacy pass
+
+- Reconciled all 434 records counted by the authenticated live profile: 340
+  originals, 13 replies, and 81 native reposts, with a zero-item capture-date
+  recovery gap and an explicit all-ever archive boundary.
+- Preserved exact population, 321-link, six-family mission-signal, bounded
+  stakeholder, and dated counter aggregates while keeping raw post text and
+  the reconstructable row-level personal timeline protected.
+- Matured independent and corroborating sources for the Horse Lords `Truthers`
+  video, the 8th Street Tunnel program, and direct TiredOfTires participation;
+  retained Brooklyn Eagle Office of Nightlife reporting as context without
+  assigning Jamie an individual role.
+- Added eight observations, four held candidates, two research tasks, four hold
+  decisions, and one internal editorial brief. No claim gained a public route
+  or active website projection.
+
+The dedicated Urbanhermit corpus eval reached **100 / 100** and the complete
+repository check passed. Exact-head independent lifecycle scores are reported
+on the pull request; production remains Jamie's explicit decision.
+
+## WOW List Facebook full-population lifecycle
+
+- Reconciled and dispositioned all 57 recovered Page-post identities, with a
+  fresh 53-record bidirectional live control and ten terminal no-growth checks
+  in each direction.
+- Preserved a public-safe record ledger, 65 distinct posted URLs, reproducible
+  mission and stakeholder classifications, selected close-read source records,
+  and protected raw account material.
+- Promoted a bounded Facebook publishing-management claim from the 51/0/6
+  manager audit while preserving Richard Caceres's shared-project credit and
+  attached-source authorship limits.
+- Added a superseding exact-surface decision for one sentence on
+  `/work/wowlist`; the population, operating-practice aggregates, care and
+  advocacy synthesis, and engagement questions remain knowledge-bank depth.
+- Added regression coverage preventing the three reserve claims from entering
+  the website and preventing engagement, adoption, attendance, endorsement, or
+  impact inference.
+
+The lifecycle validator and all 45 lifecycle tests pass. Fresh exact-head
+semantic evaluation remains required after the final artifact refresh.
+
+## WOW List Facebook decomposition and visual-feedback repair
+
+- The first adversarial lifecycle pair accepted the public-safety and
+  governance boundaries but one judge found that Jamie's recollection and four
+  selected external source readings were not yet represented as atomic
+  observations.
+- Added source-specific observations and candidate relationships for the
+  first-person role recollection, Ghost Ship artist testimony, The Know's
+  rent-pressure closure, the pehrspace relocation fundraiser, and Denver's
+  combined DIY-space funding, safety, code-guidance, and policy response.
+- Added a rights- and consent-gated research task and internal editorial brief
+  for the protected 2015 members-meeting video. Visual discoveries must become
+  source-positioned atomic observations before claim association, and the
+  brief does not authorize display.
+- Added project-level retrieval coverage proving that unprojected candidates,
+  open tasks, and held media remain available internally while the public WOW
+  List route receives only its exact approved selection.
+- Added a corpus-boundary mutation check so the 38-record `@wowlist` X
+  population cannot silently replace the 57-record Facebook population.
+
+The repaired lifecycle validator, 47 lifecycle tests, focused seven-test
+Facebook suite, social-archive gate, and visual-evidence gate pass. Fresh
+exact-head independent semantic evaluation remains required.
+
+## WOW List enforceability repair
+
+- A fresh adversarial judge scored source decomposition and media feedback at
+  **3**, correctly identifying that single-candidate relationships could be
+  removed without validator failure and that the visual content-review gate
+  existed only in prose.
+- Normalized every linked observation to an explicit candidate relationship
+  carrying an evidence role, supported proposition, and limitations; the
+  validator now requires exact relationship coverage for single- and
+  multi-candidate observations alike.
+- Narrowed Jamie's first-person observation to the recollection itself. The
+  independent manager audit remains a separate observation and meets the
+  memory only at the governed candidate claim.
+- Added an explicit media content-review authorization state, human authority,
+  reviewer, and date contract. Research tasks that require content review
+  cannot advance beyond `open` until their linked media receive authorization.
+- Added negative mutations proving that a deleted single-candidate
+  relationship, an unapproved `in-progress` visual task, and authorization
+  without human metadata all fail closed.
+
+The focused lifecycle, Facebook, and social-archive gates pass after this
+repair. A new exact-head pair is required because the prior judge evaluated the
+superseded revision.
+
+## WOW List cross-corpus governance repair
+
+- A second independent judge challenged the prior revision with stronger
+  mutations and found three release-blocking paths: a retired X-era decision
+  could still authorize `/work/wowlist`, protected media review depended on an
+  optional task flag, and a Facebook record ID could enter the X fixture while
+  the denominator-only boundary check still passed.
+- Added a Jamie-approved retirement decision that supersedes the old X
+  case-study authorization while retaining the 38-record corpus as internal
+  knowledge-bank depth. Publication-safe surface retrieval now uses only the
+  active `public-composition` brief, so internal briefs cannot widen a public
+  palette.
+- Made protected content-review assignments originate on the media record.
+  Every media lead now carries an explicit content-review task list, and a
+  linked task cannot omit or downgrade its authorization requirement.
+- Added platform and corpus identities, a pinned X record-set digest, a pinned
+  Facebook record-set digest, record-set disjointness, and a direct
+  cross-platform contamination mutation.
+- Rejected identical blanket relationships on multi-candidate observations and
+  stopped synthesizing missing multi-candidate relationships from
+  observation-wide prose.
+
+The focused typecheck, 47 lifecycle tests, social-archive gate, and seven-test
+WOW List Facebook suite pass. Fresh exact-head semantic evaluation remains
+required after committing this repair.
+
+## Coordinated-downgrade repair
+
+- An exact-revision adversarial judge showed that cosmetically varied blanket
+  relationships, an internal brief passed to publication-safe retrieval,
+  coordinated removal of both media authorization fields, and coordinated
+  erasure of retirement route history could still bypass separate checks.
+- Added token-similarity review for same-role multi-candidate relationships,
+  with a mutation that adds meaningless candidate-label suffixes to otherwise
+  identical evidence.
+- Publication-safe retrieval now rejects an explicitly requested internal or
+  research brief instead of treating it as no selection constraint.
+- Protected-source tasks whose own methods say `content review` now require a
+  media-assigned gate and authorization flag even when both assignment fields
+  are removed together.
+- Retirement decisions now retain an independent `retiredSurfaces` history,
+  require a formerly authorized superseded decision, and require matching
+  inactive projection history.
+
+Fresh deterministic and exact-revision semantic evaluation is required after
+this repair is committed.
+
+## Integrity and acquisition repair
+
+Exact-revision judge `lifecycle-a-18eb6b55` passed research posture at **4**
+but correctly held the framework at **3** for intake preservation, source
+decomposition, promotion governance, editorial composability, media feedback,
+and social-archive production. It demonstrated six coordinated attacks rather
+than relying on declared completion:
+
+- rewriting a receipt and its incorporated lead together;
+- varying an evidence role while copying blanket relationship prose;
+- deleting a retirement decision, candidate link, and route history together;
+- applying an active public brief to a route it did not target;
+- paraphrasing protected-review prose while deleting both authorization fields;
+- treating a declared protected denominator as independently reproduced.
+
+The repair adds Git-history prefix enforcement and a chained digest checkpoint
+for intake, amendments, retirement events, and acquisition controls. A separate
+append-only retirement ledger now prevents a deleted tombstone from silently
+reactivating an earlier route authorization. Relationship similarity is checked
+independently of evidence role, and publication-safe retrieval binds explicit
+briefs to their exact target surfaces.
+
+Protected media now carry structured review intent, and review tasks carry a
+structured `review-protected-media` action. The gate no longer depends on a
+phrase in task prose. The WOW List Facebook corpus now has a public-safe
+acquisition manifest binding the protected capture and publisher-audit digests,
+the public 57-ID set, forward and reverse traversal checkpoints, ten terminal
+no-growth checks, exact 53-message agreement, and the 51/0/6 attribution
+disposition. Denominator tampering and omitted-checkpoint mutations fail.
+
+The focused typecheck, 49 lifecycle tests, eight-test WOW List Facebook suite,
+social-archive gate, integrity checkpoint, and Git-history validation pass.
+Fresh deterministic and independent exact-revision semantic evaluation remains
+required after committing this repair.
+
+## Call Script to coalition operating bridge
+
+The July 16 pass added a governed bridge across the archived `popular.vote`
+surface, the surviving Call Script page, the complete January 27, 2017 DCLA
+event discussion, a protected WOW List production snapshot, and a protected
+Sunday Dinner working ledger.
+
+The lifecycle now preserves the early sequence as atomic evidence: civic event
+sharing, public invitation, issue gathering, collaborative drafting, collective
+naming, and follow-up convening. It strengthens the existing promoted NYC
+Artist Coalition participation-system claim rather than introducing a competing
+founding claim. The current page link does not establish its 2017 state; the
+naming poll has no denominator; page authorship remains open; and protected
+database chronology corroborates sequence rather than impact.
+
+The Sunday Dinner ledger now supports numbered project history through 345,
+including a contemporaneous 300th record. It remains non-rendered protected
+support and cannot establish attendance, unique participants, or an
+independently audited census.
+
+The dedicated evaluator hill-climbed from **88 / 100** to **100 / 100**. The
+52-test lifecycle suite, citation registry, projection map, compiled-locator
+gate, public-safety checks, and complete Node 26 release gate pass. External
+semantic judges remain pending explicit authorization to disclose the bounded
+evaluation bundle.

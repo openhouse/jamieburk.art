@@ -1,0 +1,85 @@
+{
+  "captureVersion": 1,
+  "capturedAt": "2026-07-14",
+  "capturedBy": "Codex campaign press-index review",
+  "scope": "Public Press sections on four NYC Artist Coalition campaign sites",
+  "collections": [
+    {
+      "id": "COL-NYCA-LET-NYC-DANCE-PRESS",
+      "indexUrl": "https://letnycdance.nycartc.com/",
+      "captureMethod": "live-page",
+      "captureNote": "Twenty-one external article links displayed under the live Press heading, preserved in display order.",
+      "itemSourceIds": [
+        "SRC-PRESS-LND-NYT-BOOGIE-2017",
+        "SRC-PRESS-LND-NEW-YORKER-DANCE-OUTLAWS-2017",
+        "SRC-PRESS-LND-NYPOST-SCRAP-DANCING-LAW-2017",
+        "SRC-PRESS-LND-VILLAGE-VOICE-CABARET-LAW-2017",
+        "SRC-PRESS-LND-NYDN-FOOTLOOSE-2017",
+        "SRC-PRESS-LND-WNYC-BUREAUCRATIC-DANCE-2017",
+        "SRC-PRESS-LND-FORBES-REPEAL-2017",
+        "SRC-NYCA-GOTHAMIST-CABARET-2017",
+        "SRC-PRESS-LND-SMITHSONIAN-DANCING-RULE-2017",
+        "SRC-PRESS-LND-DNAINFO-CITY-STONEWALLS-2017",
+        "SRC-NYCA-NPR-CABARET-CONTEXT-2017",
+        "SRC-PRESS-LND-CRAINS-COUNCIL-MOVES-2017",
+        "SRC-PRESS-LND-METRO-ARTS-ADVOCATES-2017",
+        "SRC-PRESS-LND-BROOKLYN-EAGLE-17-PLACES-2017",
+        "SRC-PRESS-LND-BROOKLYN-PAPER-FIGHT-RIGHT-PARTY-2017",
+        "SRC-PRESS-LND-TIMEOUT-LEGAL-DANCE-2017",
+        "SRC-PRESS-LND-QUEENS-CHRONICLE-CABARET-END-2017",
+        "SRC-PRESS-LND-BEDFORD-ANTI-DANCE-2017",
+        "SRC-PRESS-LND-VICE-DIY-SAFETY-2017",
+        "SRC-PRESS-LND-SFGATE-NO-DANCING-2017",
+        "SRC-PRESS-LND-MIXMAG-ACTIVISTS-2017"
+      ]
+    },
+    {
+      "id": "COL-NYCA-TALKS-NOT-RAIDS-PRESS",
+      "indexUrl": "https://talksnotraids.com/",
+      "captureMethod": "live-page",
+      "captureNote": "Seven external article links displayed under the live Press heading, preserved in display order.",
+      "itemSourceIds": [
+        "SRC-PRESS-TNR-GOTHAMIST-MARCH-2019",
+        "SRC-PRESS-TNR-VILLAGE-VOICE-PALISADES-2016",
+        "SRC-PRESS-TNR-BEDFORD-DISCO-DISCORD-2019",
+        "SRC-PRESS-TNR-BAFFLER-CUT-MUSIC",
+        "SRC-PRESS-TNR-NYT-NIGHTCLUB-CRACKDOWN-2002",
+        "SRC-PRESS-TNR-AMNY-NIGHTLIFE-MAYOR-2018",
+        "SRC-PRESS-TNR-OBSERVER-NIGHTLIFE-MAYOR-2018"
+      ]
+    },
+    {
+      "id": "COL-NYCA-SAVE-NYC-SPACES-PRESS",
+      "indexUrl": "https://savenycspaces.nycartc.com/",
+      "captureMethod": "live-page",
+      "captureNote": "Eight external article links displayed under the live Press heading, preserved in display order.",
+      "itemSourceIds": [
+        "SRC-PRESS-SNS-NYDN-OFFICE-NIGHTLIFE-2017",
+        "SRC-PRESS-SNS-NYPOST-OFFICE-NIGHTLIFE-2017",
+        "SRC-PRESS-SNS-GOTHAMIST-NIGHTLIFE-MAYOR-2017",
+        "SRC-NYCA-NPR-CABARET-CONTEXT-2017",
+        "SRC-PRESS-SNS-BROOKLYN-EAGLE-NEW-ERA-2017",
+        "SRC-PRESS-SNS-CITYLAB-GOOD-NIGHTLIFE-MAYOR-2017",
+        "SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017",
+        "SRC-PRESS-SNS-BROOKLYN-VEGAN-OFFICE-NIGHTLIFE-2017"
+      ]
+    },
+    {
+      "id": "COL-NYCA-FAIR-RENT-NYC-PRESS-2021",
+      "indexUrl": "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/",
+      "captureMethod": "wayback-snapshot",
+      "captureNote": "Nine external article links displayed under Press in the specified December 1, 2021 capture, preserved in display order.",
+      "itemSourceIds": [
+        "SRC-PRESS-FRN-NYT-SPACE-AVAILABLE-2018",
+        "SRC-PRESS-FRN-NYDN-RENT-HIKES-2019",
+        "SRC-PRESS-FRN-CURBED-RETAIL-VACANCY-2019",
+        "SRC-PRESS-FRN-AMNY-VACANT-STOREFRONTS-2019",
+        "SRC-PRESS-FRN-ATLANTIC-GHOST-TOWN-2018",
+        "SRC-PRESS-FRN-GOTHAMIST-NEIRS-2020",
+        "SRC-PRESS-FRN-QNS-COMMERCIAL-RENT-2019",
+        "SRC-PRESS-FRN-SUNNYSIDE-POST-RENT-CONTROL-2019",
+        "SRC-PRESS-FRN-JEWISH-VOICE-MOM-POP-2019"
+      ]
+    }
+  ]
+}

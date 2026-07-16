@@ -27,6 +27,11 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run build`
 - [ ] `npm run check`
 - [ ] `npm run knowledge-bank`
+- [ ] `npm run check:nycartc-corpus`
+- [ ] `npm run evals:nycartc-x`
+- [ ] `npm run check:urbanhermit-corpus`
+- [ ] `npm run evals:urbanhermit-x`
+- [ ] `npm run evals:nycac-facebook-events`
 - [ ] `npm run public-safety`
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`
@@ -54,6 +59,8 @@ ideas from the production-readiness-composite family.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
+- [ ] Urbanhermit remains aggregate-only in public data, with every new claim
+  held from the site unless Jamie approves an audience-specific composition.
 
 Production deploy remains blocked until Jamie explicitly approves the reviewed
 content and release.

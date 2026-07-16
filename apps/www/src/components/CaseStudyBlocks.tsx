@@ -8,42 +8,74 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Role", item.role],
     ["Years", item.years],
     ["Context", item.series],
-    ["Status", item.status],
     ["Visibility", item.visibility],
     ["Role fit", item.roleFit]
   ];
+  const primaryRows = rows.filter(([label]) => ["Role", "Years", "Role fit"].includes(label));
+  const supportingRows = rows.filter(([label]) => !["Role", "Years", "Role fit"].includes(label));
 
   return (
-    <section aria-labelledby="at-a-glance" className="rounded-lg bg-jb-blue p-5 text-jb-paper">
-      <h2 className="text-xl font-semibold" id="at-a-glance">
-        At a glance
-      </h2>
-      <dl className="mt-5 grid gap-4 sm:grid-cols-2">
-        {rows.map(([label, value]) => (
-          <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
-              {label}
-            </dt>
-            <dd className="mt-1 leading-6">{value}</dd>
+    <>
+      <section aria-labelledby="at-a-glance-mobile" className="rounded-lg bg-jb-blue p-5 text-jb-paper sm:hidden">
+        <h2 className="text-xl font-semibold" id="at-a-glance-mobile">
+          At a glance
+        </h2>
+        <dl className="mt-4 grid gap-3">
+          {primaryRows.map(([label, value]) => (
+            <div key={label}>
+              <dt className="text-xs font-semibold uppercase text-jb-paper/90">
+                {label}
+              </dt>
+              <dd className="mt-1 leading-6">{value}</dd>
+            </div>
+          ))}
+        </dl>
+        <details className="mt-4 border-t border-jb-paper/25 pt-3">
+          <summary className="cursor-pointer text-sm font-semibold">More project context</summary>
+          <dl className="mt-4 grid gap-3">
+            {supportingRows.map(([label, value]) => (
+              <div key={label}>
+                <dt className="text-xs font-semibold uppercase text-jb-paper/90">
+                  {label}
+                </dt>
+                <dd className="mt-1 leading-6">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </details>
+      </section>
+      <section aria-labelledby="at-a-glance" className="hidden rounded-lg bg-jb-blue p-5 text-jb-paper sm:block">
+        <h2 className="text-xl font-semibold" id="at-a-glance">
+          At a glance
+        </h2>
+        <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+          {rows.map(([label, value]) => (
+            <div key={label}>
+              <dt className="text-xs font-semibold uppercase text-jb-paper/90">
+                {label}
+              </dt>
+              <dd className="mt-1 leading-6">{value}</dd>
+            </div>
+          ))}
+        </dl>
+        <div className="mt-5">
+          <p className="text-xs font-semibold uppercase text-jb-paper/90">
+            Tags
+          </p>
+          <div className="mt-3">
+            <TagList compact tags={item.tags} tone="inverse" />
           </div>
-        ))}
-      </dl>
-      <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
-          Tags
-        </p>
-        <div className="mt-3">
-          <TagList compact tags={item.tags} />
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
-export function ArtifactList({ item }: { item: WorkMeta }) {
+export function ArtifactList({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
+  const headingId = `${idPrefix}artifact-list`;
   return (
-    <section aria-labelledby="artifact-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Primary artifacts
       </h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -60,11 +92,12 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
   );
 }
 
-export function ArtifactGallery({ item }: { item: WorkMeta }) {
+export function ArtifactGallery({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
+  const headingId = `${idPrefix}artifact-gallery`;
   return (
-    <section aria-labelledby="artifact-gallery">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
+        Representative outputs
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
@@ -81,7 +114,8 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   );
 }
 
-export function KnownOpenProtected({ item }: { item: WorkMeta }) {
+export function KnownOpenProtected({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
+  const headingId = `${idPrefix}known-open-protected`;
   const blocks = [
     ["Known", item.knownOpenProtected.known],
     ["Open", item.knownOpenProtected.open],
@@ -89,8 +123,8 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   ] as const;
 
   return (
-    <section aria-labelledby="known-open-protected">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Known / Open / Protected
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
@@ -158,6 +192,18 @@ export function PublicSafetyNote({ item }: { item: WorkMeta }) {
   );
 }
 
+export function BoundaryNote({ item }: { item: WorkMeta }) {
+  if (!item.careNote && !item.publicSafety?.note) return null;
+  return (
+    <NoteBlock title="Boundaries" tone="ochre">
+      {item.careNote ? <p>{item.careNote}</p> : null}
+      {item.publicSafety?.note ? (
+        <p className={item.careNote ? "mt-3" : undefined}>{item.publicSafety.note}</p>
+      ) : null}
+    </NoteBlock>
+  );
+}
+
 export function SourceLayer({ item }: { item: WorkMeta }) {
   if (!item.sourceLayer) return null;
   return (
@@ -167,11 +213,12 @@ export function SourceLayer({ item }: { item: WorkMeta }) {
   );
 }
 
-export function CreditsList({ item }: { item: WorkMeta }) {
+export function CreditsList({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
   if (!item.credits?.length) return null;
+  const headingId = `${idPrefix}credits-list`;
   return (
-    <section aria-labelledby="credits-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="credits-list">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Credits
       </h2>
       <ul className="mt-3 list-disc space-y-2 pl-6 text-jb-ink/76">
@@ -183,11 +230,12 @@ export function CreditsList({ item }: { item: WorkMeta }) {
   );
 }
 
-export function LinksList({ item }: { item: WorkMeta }) {
+export function LinksList({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
   if (!item.links?.length) return null;
+  const headingId = `${idPrefix}links-list`;
   return (
-    <section aria-labelledby="links-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="links-list">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Public links
       </h2>
       <ul className="mt-3 flex flex-wrap gap-3 text-sm font-semibold">

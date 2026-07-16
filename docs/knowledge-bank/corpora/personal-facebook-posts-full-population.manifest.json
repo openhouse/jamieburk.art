@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-16",
+  "corpus": "apps/www/src/data/knowledge-bank/fixtures/personal-facebook-posts-full-population.json",
+  "corpusSha256": "3cdc005f705109e7328994fb6b04cdbe079c93995f68cb1971b3e18e7a3107b2",
+  "corpusBytes": 9799,
+  "protectedRecordSetSha256": "07c1614f75d1b25bcc92f22129bdd99089b14da4c478dab9759b625c0a973560",
+  "acquisition": {
+    "surface": "Facebook Manage posts",
+    "accountContext": "authenticated owner view",
+    "filters": ["Posted by You", "all years", "all privacy states"],
+    "capturedAt": "2026-07-16",
+    "terminalChecks": 2,
+    "terminalCount": 1243,
+    "terminalProgressIndicators": 0,
+    "earliestDate": "2006-12-19",
+    "latestDate": "2022-06-12"
+  },
+  "population": {
+    "authoredPostCards": 1243,
+    "reviewedPostCards": 1243,
+    "reviewedPercent": 100,
+    "explicitlyPublic": 671,
+    "friends": 204,
+    "onlyMe": 98,
+    "unlabeled": 270,
+    "readableOrRendered": 1237,
+    "sourceUnavailable": 6
+  },
+  "routes": {
+    "postsWithExternalUrls": 291,
+    "externalUrlOccurrences": 470,
+    "distinctExternalUrls": 363
+  },
+  "privacy": {
+    "aggregateOnly": true,
+    "rawPostTextPublished": false,
+    "itemLevelPersonalTimelinePublished": false,
+    "privatePostUrlsPublished": false,
+    "ordinaryIdentitiesPublished": false,
+    "commentsPublished": false,
+    "imagesPublished": false,
+    "authenticatedStatePublished": false,
+    "unlabeledCardsTreatedAsPublic": false
+  },
+  "traction": {
+    "reactionCountsRecovered": false,
+    "commentCountsRecovered": false,
+    "shareCountsRecovered": false,
+    "incomingStakeholderIdentityAuditCompleted": false,
+    "eventCardSocialContextTreatedAsEngagement": false
+  },
+  "boundary": "The manifest binds the public aggregate to a protected record-set digest. It does not make the protected capture reproducible from the public repository and does not claim lifetime, deleted-post, or native-export completeness."
+}

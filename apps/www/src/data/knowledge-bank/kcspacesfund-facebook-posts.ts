@@ -1,0 +1,388 @@
+import type { KnowledgeBank } from "./schema.ts";
+
+const reviewedAt = "2026-07-16";
+const project = "kc-spaces-fund";
+
+export const kcSpacesFundFacebookSourceIds = {
+  corpus: "SRC-KCSF-FACEBOOK-POST-CORPUS-2026-07-16",
+  protectedRun: "SRC-KCSF-FACEBOOK-PROTECTED-RESEARCH-2026-07-16",
+  page: "SRC-KCSF-FACEBOOK-PAGE-2026-07-16",
+  site: "SRC-KCSF-CAMPAIGN-SITE-2026-07-16",
+  star: "SRC-KCSF-KANSAS-CITY-STAR-2020-04-07",
+  oddities: "SRC-KCSF-ODDITIES-PRINTS-MAPE-2020",
+  roleArchive: "SRC-KCSF-DIGITAL-OPERATIONS-ARCHIVE-2026-07-09",
+  namingMemory: "SRC-KCSF-NAMING-ROLE-MEMORY-2026-07-16",
+} as const;
+
+export const kcSpacesFundFacebookClaimIds = {
+  population: "CLM-KCSF-FACEBOOK-SURVIVING-POST-POPULATION",
+  operatingSurface: "CLM-KCSF-FACEBOOK-MUTUAL-AID-OPERATING-SURFACE",
+  digitalInfrastructure: "CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY",
+  metrics: "CLM-KCSF-FACEBOOK-MUTABLE-METRIC-SNAPSHOT",
+} as const;
+
+export const kcSpacesFundFacebookReviewSummary = {
+  renderRowsEncountered: 41,
+  duplicateOrAlternateRenderVariantsExcluded: 4,
+  distinctSurvivingPosts: 37,
+  dateRange: { start: "2020-04-07", end: "2020-07-09" },
+  readablePosts: 28,
+  sharedSourceShells: 5,
+  sourceUnavailable: 4,
+  photoPosts: 20,
+  distinctExactExternalUrls: 5,
+  currentFollowers: 108,
+  visibleReactions: 119,
+  postsWithVisibleReactions: 28,
+  postsWithVisibleComments: 4,
+} as const;
+
+export const kcSpacesFundFacebookSources: KnowledgeBank["sources"] = [
+  {
+    id: kcSpacesFundFacebookSourceIds.corpus,
+    title: "KC Spaces Fund Facebook posts full-population public-safe corpus",
+    organization: "Jamie Burkart portfolio knowledge bank",
+    author: "Codex authenticated archival review",
+    kind: "project-archive",
+    visibility: "public",
+    preservationStatus: "live",
+    capturedAt: reviewedAt,
+    accessedAt: reviewedAt,
+    metadataVerifiedAt: reviewedAt,
+    metadataVerifiedBy: "Codex authenticated Page-feed and corpus-integrity review",
+    reviewStatus: "close-read",
+    contentReviewedAt: reviewedAt,
+    contentReviewedBy: "Codex public-safe corpus review",
+    assetUrl:
+      "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-full-population.json",
+    preferredPublicUrl: "asset",
+    publicCitation:
+      "KC Spaces Fund Facebook posts full-population public-safe corpus, July 16, 2026.",
+    publicNote:
+      "The corpus gives all 37 distinct surviving records in the authenticated public Page feed a public-safe disposition. Raw post bodies, platform identities, comments, people, authenticated state, and protected capture material remain excluded.",
+    supportsGenerally: [
+      "37 distinct surviving feed records from April 7 through July 9, 2020",
+      "41 encountered render rows with four duplicate or alternate variants excluded",
+      "content-state, theme, public-organization, source-route, and dated traction accounting",
+      "five exact public external routes and one unresolved Do816 source lead",
+    ],
+    doesNotEstablish: [
+      "every post ever created or deleted-post recovery",
+      "an owner-export denominator",
+      "historical human authorship of the campaign account",
+      "grant selection, payment, attendance, conversion, endorsement, mandate, or impact",
+      "Jamie's individual digital-operations role",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.protectedRun,
+    title: "Authenticated KC Spaces Fund Facebook Page-feed research run",
+    author: "Codex authenticated archival review",
+    kind: "research-run",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: reviewedAt,
+    accessedAt: reviewedAt,
+    publicCitation:
+      "Authenticated archival-production pass over the KC Spaces Fund Facebook Page feed, July 16, 2026.",
+    publicNote:
+      "Protected captures retain traversal, render, post-body, source-card, and visible-engagement evidence. The public corpus retains only one-way record hashes, dates, classifications, named public organizations, route keys, and aggregates.",
+    protectedLocatorId: "RESEARCH-KCSF-FACEBOOK-POSTS-2026-001",
+    supportsGenerally: [
+      "terminal traversal across eight consecutive stable checks",
+      "duplicate and alternate-render exclusion",
+      "content and route extraction",
+      "dated public engagement-counter snapshot",
+    ],
+    doesNotEstablish: [
+      "permission to publish protected captures or raw posts",
+      "owner-export completeness",
+      "deleted, hidden, private, or no-longer-retained history",
+      "the historical human publisher of each post",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.page,
+    title: "KC Spaces Fund Facebook Page",
+    organization: "KC Spaces Fund",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: reviewedAt,
+    metadataVerifiedAt: reviewedAt,
+    metadataVerifiedBy: "Codex authenticated live Page review",
+    canonicalUrl: "https://www.facebook.com/KCSpacesFund/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "KC Spaces Fund Facebook Page, authenticated review July 16, 2026.",
+    publicNote:
+      "The live Page displayed the campaign mission, KCSpacesFund identity, campaign website and fundraiser routes, and 108 current followers. The count is a mutable present-day snapshot.",
+    supportsGenerally: [
+      "the public KC Spaces Fund Facebook identity",
+      "the campaign mission and public routes",
+      "108 followers displayed on July 16, 2026",
+    ],
+    doesNotEstablish: [
+      "a historical follower count for 2020",
+      "historical account administration or post authorship",
+      "Jamie's role in naming or account setup",
+      "complete campaign reach or impact",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.site,
+    title: "KC Spaces Fund campaign website",
+    organization: "KC Spaces Fund",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2020-04-02",
+    accessedAt: reviewedAt,
+    metadataVerifiedAt: reviewedAt,
+    metadataVerifiedBy: "Codex live-source review",
+    reviewStatus: "close-read",
+    contentReviewedAt: reviewedAt,
+    contentReviewedBy: "Codex public-source review",
+    canonicalUrl: "https://kcspacesfund.com/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "KC Spaces Fund campaign website and application guidance, reviewed July 16, 2026.",
+    publicNote:
+      "The site describes emergency grants of up to $500, priority for spaces serving communities disproportionately affected by economic inequality, eligible space types and geographies, rolling review, fiscal sponsorship, and the four named public organizers.",
+    supportsGenerally: [
+      "a COVID-era mutual-aid fund for grassroots arts and culture spaces",
+      "application, donation, contact, and coalition-join routes",
+      "emergency grants of up to $500",
+      "public organizer and fiscal-sponsor framing",
+    ],
+    doesNotEstablish: [
+      "Jamie's individual role",
+      "the complete grant ledger or payment history",
+      "sole campaign causation by any one contributor",
+      "current campaign operation",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.star,
+    title: "Money, blood, time: How to help KC during COVID-19 crisis",
+    organization: "The Kansas City Star",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2020-04-07",
+    accessedAt: reviewedAt,
+    metadataVerifiedAt: reviewedAt,
+    metadataVerifiedBy: "Codex live-source review",
+    reviewStatus: "close-read",
+    contentReviewedAt: reviewedAt,
+    contentReviewedBy: "Codex public-source review",
+    canonicalUrl: "https://www.kansascity.com/news/coronavirus/article241807581.html",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "The Kansas City Star, 'Money, blood, time: How to help KC during COVID-19 crisis,' April 7, 2020.",
+    publicNote:
+      "The newspaper's COVID-19 giving guide listed KC Spaces Fund and its website under support for artists and artisans.",
+    supportsGenerally: [
+      "independent contemporaneous recognition of the campaign",
+      "kcspacesfund.com as a public action route",
+      "placement among local artist-support resources",
+    ],
+    doesNotEstablish: [
+      "Jamie's individual role",
+      "grant receipt or payment",
+      "campaign reach, effectiveness, or causality",
+      "endorsement of every campaign claim",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.oddities,
+    title: "KAIJU: Frank Norton Riso Edition",
+    organization: "Oddities Prints",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: reviewedAt,
+    metadataVerifiedAt: reviewedAt,
+    metadataVerifiedBy: "Codex live-source review",
+    reviewStatus: "close-read",
+    contentReviewedAt: reviewedAt,
+    contentReviewedBy: "Codex public-source review",
+    canonicalUrl: "https://www.odditiesprints.com/odd-shop/frank-norton-kaiju",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Oddities Prints, 'KAIJU: Frank Norton Riso Edition,' reviewed July 16, 2026.",
+    publicNote:
+      "The product page identifies the print as part of the MAPE series and says proceeds partially benefited KC Spaces Fund and KC Tenants.",
+    supportsGenerally: [
+      "a public partner fundraising route",
+      "a mutual-aid print collaboration benefiting KC Spaces Fund and KC Tenants",
+    ],
+    doesNotEstablish: [
+      "the amount raised or transferred",
+      "the complete MAPE series",
+      "Jamie's role in the collaboration",
+      "grant selection or payment",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.roleArchive,
+    title: "AI-assisted KC Spaces Fund digital-operations archival review",
+    author: "Jamie Burkart and Codex",
+    kind: "research-run",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-07-09",
+    accessedAt: reviewedAt,
+    publicCitation:
+      "AI-assisted archival review of Jamie Burkart's KC Spaces Fund project records, July 2026.",
+    publicNote:
+      "The protected review covers campaign code, deployment history, the custom Ghost theme, fundraising widget, launch checklist, and domain records.",
+    protectedLocatorId: "RESEARCH-KCSF-DIGITAL-OPERATIONS-2026-001",
+    supportsGenerally: [
+      "Jamie's behind-the-scenes digital implementation role",
+      "campaign site, theme, widget, deployment, and public-action affordances",
+    ],
+    doesNotEstablish: [
+      "public organizer, fundraiser-owner, fiscal-sponsor, or grant-decision authority",
+      "Jamie's authorship of campaign-account posts",
+      "sole authorship or sole control of the campaign identity",
+      "a human collaborator testimonial",
+    ],
+  },
+  {
+    id: kcSpacesFundFacebookSourceIds.namingMemory,
+    title: "Jamie Burkart KC Spaces Fund naming and public-identity account",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: reviewedAt,
+    accessedAt: reviewedAt,
+    publicCitation:
+      "Jamie Burkart first-person account of his bounded KC Spaces Fund naming and public-identity contribution, July 16, 2026.",
+    publicNote:
+      "Jamie states that he supported the choice of a project name available uniformly across relevant social platforms and domain routes. Public route coherence corroborates the result, not the attribution.",
+    protectedLocatorId: "MEMORY-KCSF-NAMING-ROLE-2026-001",
+    supportsGenerally: [
+      "Jamie's first-person account of supporting name availability across domain and social routes",
+      "a research lead for collaborator or setup-record corroboration",
+    ],
+    doesNotEstablish: [
+      "independent corroboration",
+      "sole naming authority or sole campaign-identity authorship",
+      "historical account administration or post authorship",
+      "public organizer, fundraiser-owner, fiscal-sponsor, or grant-decision authority",
+    ],
+  },
+];
+
+export const kcSpacesFundFacebookClaims: KnowledgeBank["claims"] = [
+  {
+    id: kcSpacesFundFacebookClaimIds.population,
+    project,
+    internalClaim:
+      "The authenticated public KC Spaces Fund Facebook Page feed preserved 37 distinct surviving posts from April 7 through July 9, 2020, after four duplicate or alternate render variants were excluded from 41 encountered rows.",
+    status: "confirmed-with-boundary",
+    projections: [{ key: "archive-note", text: "A complete pass over the surviving public Page feed accounts for 37 distinct posts from April through July 2020.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md"] }],
+    evidence: [
+      { sourceId: kcSpacesFundFacebookSourceIds.corpus, relationship: "direct-support", supports: ["37-row public-safe ledger", "date and disposition accounting"], locator: "completeness, contentStates, and rows", confidence: "high", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.protectedRun, relationship: "corroborating", supports: ["terminal traversal", "duplicate-render exclusion"], confidence: "high", renderCitation: false },
+    ],
+    boundaries: ["Say complete surviving authenticated public Page feed, not owner export or lifetime history.", "Retain partial and unavailable source states rather than silently excluding them."],
+    antiClaims: ["Exactly 37 posts were ever created", "Deleted or hidden posts were recovered", "Every post has readable content", "Jamie authored the posts"],
+    researchInquiryIds: ["INQ-KCSF-FACEBOOK-POST-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"],
+  },
+  {
+    id: kcSpacesFundFacebookClaimIds.operatingSurface,
+    project,
+    internalClaim:
+      "The surviving Facebook record functioned as a collective mutual-aid operating surface, routing campaign explanation, applications, donations, funded-space updates, equity priorities, partner fundraising, and public source context.",
+    status: "confirmed-with-boundary",
+    projections: [{ key: "archive-note", text: "The Page linked a collective mutual-aid operating record: applications, donations, funded-space updates, eligibility, equity priorities, and partner fundraising.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md"] }],
+    evidence: [
+      { sourceId: kcSpacesFundFacebookSourceIds.corpus, relationship: "direct-support", supports: ["full-population theme counts", "posted-route inventory", "named public organization references"], locator: "rows and sourceRoutes", confidence: "high", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.site, relationship: "corroborating", supports: ["program purpose", "application and donation routes", "eligibility and priority guidance"], confidence: "high", renderCitation: true },
+      { sourceId: kcSpacesFundFacebookSourceIds.star, relationship: "corroborating", supports: ["independent contemporaneous campaign listing"], confidence: "high", renderCitation: true },
+      { sourceId: kcSpacesFundFacebookSourceIds.oddities, relationship: "corroborating", supports: ["partner print-fundraising route"], confidence: "high", renderCitation: true },
+      { sourceId: kcSpacesFundFacebookSourceIds.protectedRun, relationship: "supports-boundary", supports: ["collective campaign-account authorship boundary"], confidence: "high", renderCitation: false },
+    ],
+    boundaries: ["Treat theme tags as overlapping classifications.", "Public recipient references are campaign reporting, not an audited grant or payment ledger.", "Keep the account voice collective and public organizer credit with the campaign's named organizers."],
+    antiClaims: ["The Page proves every grant was paid", "Jamie selected grantees", "Jamie ran the fundraiser", "Posting caused the campaign outcome"],
+    researchInquiryIds: ["INQ-KCSF-FACEBOOK-POST-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex public-source review"],
+  },
+  {
+    id: kcSpacesFundFacebookClaimIds.digitalInfrastructure,
+    project,
+    internalClaim:
+      "Jamie supported KC Spaces Fund as behind-the-scenes digital infrastructure, building and maintaining its Ghost-based web stack and supporting coherent public identity routing while the named organizers owned the campaign's public organizing and grant work.",
+    status: "confirmed-with-boundary",
+    projections: [
+      { key: "technical-operations", text: "Behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
+      { key: "archive-note", text: "Jamie built and maintained the campaign's Ghost-based web stack and supported coherent public routing across its campaign name, website, fundraiser, and social identity.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md"] },
+    ],
+    evidence: [
+      { sourceId: kcSpacesFundFacebookSourceIds.roleArchive, relationship: "private-support", supports: ["site, theme, widget, deployment, and public-action implementation"], confidence: "moderate", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.namingMemory, relationship: "private-support", supports: ["Jamie's first-person name-availability account"], confidence: "moderate", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.page, relationship: "corroborating", supports: ["coherent KCSpacesFund Page identity and campaign routes"], confidence: "high", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.site, relationship: "corroborating", supports: ["live campaign website and public-action affordances"], confidence: "high", renderCitation: true },
+      { sourceId: kcSpacesFundFacebookSourceIds.protectedRun, relationship: "supports-boundary", supports: ["Jamie's non-publisher statement and unresolved historical account authorship"], confidence: "high", renderCitation: false },
+    ],
+    boundaries: ["Treat the role source as AI-assisted archival review, not a human collaborator testimonial.", "The public routes corroborate identity coherence, not who selected the name.", "Use behind-the-scenes technical and operational support language only."],
+    antiClaims: ["Jamie organized KC Spaces Fund", "Jamie authored the campaign's Facebook posts", "Jamie ran the fundraiser or selected grantees", "Jamie alone created or controlled the campaign identity"],
+    researchInquiryIds: ["INQ-KCSF-FACEBOOK-POST-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex archival review"],
+  },
+  {
+    id: kcSpacesFundFacebookClaimIds.metrics,
+    project,
+    internalClaim:
+      "On July 16, 2026, the surviving Page feed displayed 119 reactions across 28 posts, visible comments on four posts, and 108 current followers.",
+    status: "use-with-care",
+    projections: [{ key: "archive-note", text: "Capture-date public counters remain a mutable research snapshot and are held from portfolio use.", status: "hold", citationRequired: false, surfaces: ["knowledge-bank"] }],
+    evidence: [
+      { sourceId: kcSpacesFundFacebookSourceIds.corpus, relationship: "direct-support", supports: ["dated post-level reaction and visible-comment accounting"], locator: "mutableSnapshot and rows", confidence: "high", renderCitation: false },
+      { sourceId: kcSpacesFundFacebookSourceIds.page, relationship: "context", supports: ["dated current follower display"], confidence: "high", renderCitation: false },
+    ],
+    boundaries: ["Counters are mutable capture-date values, not historical 2020 analytics.", "No positive share counter was recovered; this is not proof of zero historical sharing.", "Visible commenter groups are an incomplete public floor, not an audience census."],
+    antiClaims: ["119 unique people engaged", "108 people followed the campaign in 2020", "No one shared the posts", "The counters prove conversion, endorsement, payment, or impact"],
+    researchInquiryIds: ["INQ-KCSF-FACEBOOK-POST-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Codex public-safety review"],
+  },
+];
+
+export const kcSpacesFundFacebookResearchInquiries: KnowledgeBank["researchInquiries"] = [
+  {
+    id: "INQ-KCSF-FACEBOOK-POST-POPULATION-2026",
+    project,
+    question:
+      "What can the complete surviving KC Spaces Fund Facebook Page feed establish about campaign operations, public sources, engagement, account authorship, and Jamie's bounded digital-infrastructure role?",
+    methods: [
+      "Traversed the authenticated public Page feed in fine-grained increments to a stable terminal position across eight consecutive checks.",
+      "Excluded four duplicate or alternate render variants from 41 encountered rows and assigned all 37 distinct surviving records a public-safe disposition.",
+      "Close-read readable posts and source cards for overlapping mission themes, public organization references, exact posted routes, and visible public counters.",
+      "Compared the collective Facebook record with the live campaign site, independent reporting, partner fundraising, and protected digital-operations evidence.",
+    ],
+    runAt: reviewedAt,
+    resultStatus: "partially-recovered",
+    findings: [
+      "The complete surviving public feed contains 37 distinct posts from April 7 through July 9, 2020.",
+      "Twenty-eight records are readable, five are shared-source shells, and four have unavailable source content.",
+      "The Page repeatedly routed program information, applications, donations, funded-space updates, equity priorities, and partner fundraising.",
+      "Five exact external URLs were recovered; the Do816 Daily DoGood item remains a source lead without a recovered exact route.",
+      "The social record corroborates a coherent campaign identity but does not independently attribute name selection, account setup, or posting to Jamie.",
+    ],
+    limitations: [
+      "No owner export was available in the authenticated management surface, so completeness is bounded to the surviving public feed.",
+      "Deleted, hidden, private, or no-longer-retained posts may be absent.",
+      "Public counters are mutable and do not identify all engagers or historical reach.",
+      "The campaign account does not identify its historical human publishers.",
+    ],
+    sourceIds: Object.values(kcSpacesFundFacebookSourceIds),
+    publicSummary:
+      "A public-safe ledger accounts for every distinct surviving post in the authenticated Page feed while preserving unavailable-source, collective-authorship, mutable-metric, and Jamie-role boundaries.",
+    protectedLocatorId: "RESEARCH-KCSF-FACEBOOK-POSTS-2026-001",
+  },
+];

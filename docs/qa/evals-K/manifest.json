@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "capturedAt": "2026-07-16",
+  "sourceInputs": [
+    "apps/www/src",
+    "apps/www/next.config.ts",
+    "apps/www/package.json",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ],
+  "sourceExcludes": [
+    "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+    "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+    "apps/www/src/data/knowledge-bank/lifecycle-schema.ts",
+    "apps/www/src/data/knowledge-bank/portfolio-blind-spots-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts.ts",
+    "apps/www/src/data/knowledge-bank/nycac-facebook-posts-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/nycac-facebook-posts.ts",
+    "apps/www/src/data/knowledge-bank/fixtures/personal-facebook-posts-full-population.json",
+    "apps/www/src/data/knowledge-bank/personal-facebook-posts-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/personal-facebook-posts.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/ucsc-lenses-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/ucsc-lenses.ts",
+    "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
+    "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
+  ],
+  "sourceSha256": "88cf8de415046a72725204f195e929d689add147fe7d0f0def6a0b0ae3f82566",
+  "qaMatrix": {
+    "resultsPath": "docs/qa/evals-K/route-matrix.json",
+    "routes": 14,
+    "viewports": [
+      "1440x1000",
+      "390x844",
+      "320x740"
+    ],
+    "observations": 42,
+    "failures": 0,
+    "checks": [
+      "status",
+      "expected copy",
+      "one H1",
+      "horizontal overflow",
+      "broken images",
+      "duplicate IDs",
+      "empty links",
+      "contrast",
+      "source disclosure",
+      "keyboard traversal",
+      "reduced motion",
+      "console errors",
+      "page errors"
+    ]
+  },
+  "captures": [
+    {
+      "route": "/",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/home-desktop.png",
+      "artifactSha256": "1347ec2a39758426204d44f5eeb3bb52bdd7cdd41a6eeda4661f80a217a65db6"
+    },
+    {
+      "route": "/",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/home-mobile-320.png",
+      "artifactSha256": "c3666c989f015f12b1f4f74a934b4c8aef30c55123c11ffb1a0deab71295aa73"
+    },
+    {
+      "route": "/work/technical-operations",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/technical-operations-desktop.png",
+      "artifactSha256": "ee18ba857078c4290e45ab5fcfccbb6febf399ccf0230848b96acbb427b6d66c"
+    },
+    {
+      "route": "/work/technical-operations",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/technical-operations-mobile-320.png",
+      "artifactSha256": "e97112b0eb6463f944f9228d4d139be04c213fb53774450bc332f98148b1380f"
+    },
+    {
+      "route": "/resume",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/resume-desktop.png",
+      "artifactSha256": "947f1df9a9bff3d18b3a0775147efc7a17fb1ff812424c766764d0b8770113bd"
+    },
+    {
+      "route": "/resume",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/resume-mobile-320.png",
+      "artifactSha256": "a2ee148ec7bf749c17cca1a3351c9f5bff18c368bd95ea4002844efbc0dec41a"
+    },
+    {
+      "route": "/contact",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/contact-desktop.png",
+      "artifactSha256": "8143b2181922a1acfa725b65bdc50225b696dda4fb4a5f5439aa89f2f086e784"
+    },
+    {
+      "route": "/contact",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/contact-mobile-320.png",
+      "artifactSha256": "223d1e89e9e06445a13c04168915e09483f5725888a284d73299ab10dc54d223"
+    },
+    {
+      "route": "/about",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/about-desktop.png",
+      "artifactSha256": "457b8f8d25a10cbef104dc59d3272133dfe12dbe09c721d53fa60a576ed7f178"
+    },
+    {
+      "route": "/about",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/about-mobile-320.png",
+      "artifactSha256": "a2afbd4f8b7eac72bc6928cbd4386a31e7d715082c68dae3e94f4e6920d7a4e4"
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/harry-j-epstein-desktop.png",
+      "artifactSha256": "689cd35ff9c80ffdeeda7ba486167ad0c67973b128836537b6c8256834667eed"
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/harry-j-epstein-mobile-320.png",
+      "artifactSha256": "baa060938205cf5b9b72094819981d8641b2e5c9f3e5973c52dce9aaefe2da2e"
+    },
+    {
+      "route": "/work/callnyc",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/callnyc-desktop.png",
+      "artifactSha256": "ff6bbbea28d6c8a3cf99b24134ad3b8c656c182d3680fccf68185442957a8bb9"
+    },
+    {
+      "route": "/work/callnyc",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/callnyc-mobile-320.png",
+      "artifactSha256": "6ba068818280341750bdaef7c022e4491fd36f8092305017bcb21eeb1d3f8628"
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/fair-rent-nyc-desktop.png",
+      "artifactSha256": "b605cbc7fc457b4f0b2d924d742da0fe2a3443024fc46117cdc96fb7b3866e99"
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/fair-rent-nyc-mobile-320.png",
+      "artifactSha256": "5b67ae239c3f9786eca11b05554fa046fd9284cc3fe729222bcf6fafef4055c7"
+    },
+    {
+      "route": "/work/wowlist",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/wowlist-desktop.png",
+      "artifactSha256": "e89f78adbc8f1ae147f10f0f6de7d3dedac6889e9b7d25a4e8e4115f0ad00fea"
+    },
+    {
+      "route": "/work/wowlist",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
+      "artifactSha256": "d3a99f45d38070fff9ba210568a261a0fe1445dd894aeef30903ecce8c729581"
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/kc-town-hall-desktop.png",
+      "artifactSha256": "d6a0be0c520bf31867becc3856c2a2b6fa94d6d18150d6661e6df1638059ddfb"
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/kc-town-hall-mobile-320.png",
+      "artifactSha256": "bccc2c46e08dc4d85ff88ced7d311ef6e5e26a677150602d8ea8948fdcee07a6"
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "viewport": "1440x1000",
+      "artifactPath": "docs/qa/evals-K/source-backed-team-memory-desktop.png",
+      "artifactSha256": "af6f39bc8bcb950ea8226da3a51f428f256f393999cb06e724051e4efa98c943"
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "viewport": "320x740",
+      "artifactPath": "docs/qa/evals-K/source-backed-team-memory-mobile-320.png",
+      "artifactSha256": "a3b4855a1ee1d571f1ae18a5fdca739b5706b57ac15a067afcb136662d6b3947"
+    },
+    {
+      "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "viewport": "PDF page 1 at 144 DPI",
+      "artifactPath": "docs/qa/evals-K/resume-page-1.png",
+      "artifactSha256": "beb3122bdc614dbdf192d87eb1cb1da13b4f955f0e036c7284f4a1dafb04f3de"
+    },
+    {
+      "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "viewport": "PDF page 2 at 144 DPI",
+      "artifactPath": "docs/qa/evals-K/resume-page-2.png",
+      "artifactSha256": "218a77a2e771cb167fe7e26cb634f36afba2deb0188370833ce3f1e01a130f7a"
+    }
+  ]
+}

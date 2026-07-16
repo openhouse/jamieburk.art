@@ -251,11 +251,48 @@ if (!existsSync(resumePath)) {
   }
 
   if (
-    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
+    !/CallNYC\.org as an archived, unofficial independent follow-on to the New York City\s+Council['’]s first CouncilStat\s+hackathon/i.test(
       resumeText
     )
   ) {
     addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+  }
+
+  if (
+    !/On\s+September\s+26,\s+2019,\s+the\s+City\s+Council\s+accepted\s+the\s+Board['’]s\s+recommendation\s+and\s+appropriated\s+\$490,539\s+to\s+the\s+project\s+account/i.test(
+      resumeText
+    ) ||
+    !/the\s+agreement\s+was\s+not\s+completed,\s+no\s+funds\s+were\s+disbursed/i.test(resumeText) ||
+    !/in\s+2024\s+the\s+Council\s+reappropriated\s+the\s+unused\s+award/i.test(resumeText)
+  ) {
+    addFailure(resumePath, "resume PDF is missing the approved bounded KC Town Hall Council lifecycle");
+  }
+
+  if (
+    !/Public-record\s+sources:\s+KCMO\s+CCED\s+Board\s+minutes/i.test(resumeText) ||
+    !/Ordinance\s+190642\s+and\s+Resolution\s+190649/i.test(resumeText) ||
+    !/jamieburk\.art\/work\/kc-town-hall/i.test(resumeText)
+  ) {
+    addFailure(resumePath, "resume PDF is missing the governed KC Town Hall public-record source note");
+  }
+
+  if (
+    !/Jamie\s+co-built\s+WOWList\s+with\s+Richard\s+Caceres;\s+historical\s+production\s+records\s+show\s+use\s+across\s+35-plus\s+city\s+scenes,\s+each\s+with\s+at\s+least\s+50\s+geocoded\s+posts\/events/i.test(
+      resumeText
+    ) || /35-plus\s+active\s+city-scene\s+tags/i.test(resumeText)
+  ) {
+    addFailure(resumePath, "resume PDF is missing the approved historical WOW List scale and collaborator credit");
+  }
+
+  if (
+    !/Jamie\s+co-hosted\s+Sunday\s+Dinner\s+with\s+Julia\s+Fredenberg;\s+his\s+approved\s+resume\s+reports\s+300-plus\s+documented\s+gatherings/i.test(
+      resumeText
+    ) ||
+    !/Jamie\s+founded\s+196\s+Artists\s+Residency(?:\s+in\s+2020)?(?:\s+and|;)\s+Jamie\s+reports\s+supporting\s+20-plus\s+resident\s+artists/i.test(
+      resumeText
+    )
+  ) {
+    addFailure(resumePath, "resume PDF must keep Sunday Dinner co-hosting and 196 Artists Residency founding distinct");
   }
 
   if (

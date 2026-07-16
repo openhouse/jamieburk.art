@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 type JBButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "inverse" | "ghost";
   download?: boolean;
 };
 
@@ -15,13 +15,18 @@ export function JBButton({
   variant = "primary",
   download = false
 }: JBButtonProps) {
-  const className = {
-    primary: "btn btn-primary min-h-11 rounded-lg px-5 normal-case tracking-normal",
+  const baseClassName =
+    "btn h-auto min-h-11 min-w-0 max-w-full whitespace-normal rounded-lg px-5 py-3 text-center leading-5 normal-case tracking-normal";
+  const variantClassName = {
+    primary: "btn-primary",
     secondary:
-      "btn btn-outline min-h-11 rounded-lg border-jb-blue px-5 text-jb-blue normal-case tracking-normal hover:border-jb-blue hover:bg-jb-blue hover:text-jb-paper",
+      "btn-outline border-jb-blue text-jb-blue hover:border-jb-blue hover:bg-jb-blue hover:text-jb-paper",
+    inverse:
+      "border-jb-paper bg-jb-paper text-jb-blue hover:border-jb-lemon hover:bg-jb-lemon hover:text-jb-ink",
     ghost:
-      "btn btn-ghost min-h-11 rounded-lg px-5 text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20"
+      "btn-ghost text-jb-ink hover:bg-jb-sky/20"
   }[variant];
+  const className = `${baseClassName} ${variantClassName}`;
 
   if (href.startsWith("/")) {
     return (
