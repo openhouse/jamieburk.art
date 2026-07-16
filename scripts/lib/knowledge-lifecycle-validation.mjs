@@ -118,12 +118,10 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     for (const id of duplicateIds(observation.candidateRelationships.map((item) => ({ id: item.candidateClaimId })))) {
       errors.push(`Observation ${observation.id} repeats candidate relationship ${id}`);
     }
-    if (observation.candidateClaimIds.length > 1) {
-      const linked = [...observation.candidateClaimIds].sort();
-      const related = [...relationshipIds].sort();
-      if (JSON.stringify(linked) !== JSON.stringify(related)) {
-        errors.push(`Observation ${observation.id} must define a candidate-specific evidence relationship for every linked candidate`);
-      }
+    const linked = [...observation.candidateClaimIds].sort();
+    const related = [...relationshipIds].sort();
+    if (JSON.stringify(linked) !== JSON.stringify(related)) {
+      errors.push(`Observation ${observation.id} must define a candidate-specific evidence relationship for every linked candidate`);
     }
     for (const candidateClaimId of relationshipIds) {
       if (!observation.candidateClaimIds.includes(candidateClaimId)) {
@@ -224,6 +222,17 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     if (task.status === "completed" && !task.completedAt) errors.push(`Completed research task ${task.id} has no completion date`);
     if (task.status === "completed" && !task.findings.length) errors.push(`Completed research task ${task.id} has no findings`);
     if (task.status !== "completed" && task.completedAt) errors.push(`Incomplete research task ${task.id} has a completion date`);
+    if (task.requiresContentReviewAuthorization) {
+      const linkedMedia = input.mediaLeads.filter((item) => item.researchTaskIds.includes(task.id));
+      if (!linkedMedia.length) errors.push(`Research task ${task.id} requires content-review authorization but has no linked media lead`);
+      if (task.status !== "open") {
+        for (const item of linkedMedia) {
+          if (!["authorized", "completed"].includes(item.contentReviewStatus)) {
+            errors.push(`Research task ${task.id} cannot enter ${task.status} before media lead ${item.id} receives content-review authorization`);
+          }
+        }
+      }
+    }
   }
 
   for (const decision of input.promotionDecisions) {

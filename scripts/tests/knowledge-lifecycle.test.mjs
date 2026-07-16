@@ -3,7 +3,7 @@ import test from "node:test";
 import { execFileSync, spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
-import { intakeAmendmentSchema, intakeReceiptSchema } from "../../apps/www/src/data/knowledge-bank/lifecycle-schema.ts";
+import { intakeAmendmentSchema, intakeReceiptSchema, mediaLeadSchema } from "../../apps/www/src/data/knowledge-bank/lifecycle-schema.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateIntakeReceipts, validateKnowledgeLifecycle } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -290,6 +290,16 @@ test("shared observations carry candidate-specific evidence roles and limits", (
   const observation = broken.observations.find(({ id }) => id === "OBS-KC-TOWN-HALL-COUNCIL-APPROPRIATION");
   observation.candidateRelationships = observation.candidateRelationships.filter(({ candidateClaimId }) => candidateClaimId !== "CND-KC-TOWN-HALL-FUNDING-RECEIVED");
   assert.match(validateKnowledgeLifecycle(broken).join("\n"), /must define a candidate-specific evidence relationship for every linked candidate/);
+
+  const singleCandidateBroken = structuredClone(knowledgeLifecycle);
+  singleCandidateBroken.observations.find(({ id }) => id === "OBS-WOWLIST-FACEBOOK-PUBLISHER-AUDIT").candidateRelationships = [];
+  assert.match(validateKnowledgeLifecycle(singleCandidateBroken).join("\n"), /must define a candidate-specific evidence relationship for every linked candidate/);
+
+  const allLinkedObservations = knowledgeLifecycle.observations.filter(({ candidateClaimIds }) => candidateClaimIds.length > 0);
+  assert.ok(allLinkedObservations.every(({ candidateClaimIds, candidateRelationships }) =>
+    candidateClaimIds.length === candidateRelationships.length &&
+    candidateClaimIds.every((id) => candidateRelationships.some(({ candidateClaimId }) => candidateClaimId === id))
+  ));
 
   const directSupport = retrieveKnowledgePalette({
     projectId: "PRJ-NYC-ARTIST-COALITION",
@@ -825,6 +835,7 @@ test("WOW List visual research remains a rights-gated evidence feedback loop", (
   const media = knowledgeLifecycle.mediaLeads.find(({ id }) => id === "MEDIA-WOWLIST-MEMBERS-MEETING-2015");
 
   assert.equal(task?.status, "open");
+  assert.equal(task?.requiresContentReviewAuthorization, true);
   assert.deepEqual(task?.sourceIds, ["SRC-WOWLIST-MEMBERS-MEETING-VIDEO-2015"]);
   assert.ok(task?.methods.some((item) => /atomic observation/i.test(item)));
   assert.ok(task?.limitations.some((item) => /not authorized for public display/i.test(item)));
@@ -833,7 +844,27 @@ test("WOW List visual research remains a rights-gated evidence feedback loop", (
   assert.equal(media?.rightsStatus, "unknown");
   assert.equal(media?.consentStatus, "review-needed");
   assert.equal(media?.displayStatus, "hold");
+  assert.equal(media?.contentReviewStatus, "not-authorized");
   assert.ok(media?.researchTaskIds.includes(task.id));
+
+  const unauthorizedReview = structuredClone(knowledgeLifecycle);
+  unauthorizedReview.researchTasks.find(({ id }) => id === task.id).status = "in-progress";
+  assert.match(
+    validateKnowledgeLifecycle(unauthorizedReview).join("\n"),
+    /cannot enter in-progress before media lead MEDIA-WOWLIST-MEMBERS-MEETING-2015 receives content-review authorization/,
+  );
+
+  const ungovernedAuthorization = structuredClone(media);
+  ungovernedAuthorization.contentReviewStatus = "authorized";
+  assert.equal(mediaLeadSchema.safeParse(ungovernedAuthorization).success, false);
+
+  const governedAuthorization = {
+    ...ungovernedAuthorization,
+    contentReviewAuthority: "jamie-approved",
+    contentReviewAuthorizedBy: "Jamie Burkart",
+    contentReviewAuthorizedAt: "2026-07-16",
+  };
+  assert.equal(mediaLeadSchema.safeParse(governedAuthorization).success, true);
 });
 
 test("retrieval composes cross-project palettes by time, entity, evidence, priority, audience, and purpose", () => {

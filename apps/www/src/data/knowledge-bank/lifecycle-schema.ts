@@ -149,6 +149,7 @@ export const researchTaskSchema = z.object({
   findings: z.array(z.string().min(1)).default([]),
   limitations: z.array(z.string().min(1)).min(1),
   nextActions: z.array(z.string().min(1)).min(1),
+  requiresContentReviewAuthorization: z.boolean().optional(),
   openedAt: dated,
   completedAt: dated.optional()
 });
@@ -242,7 +243,20 @@ export const mediaLeadSchema = z.object({
   candidateClaimIds: idList,
   researchTaskIds: idList,
   researchPrompt: z.string().min(1),
+  contentReviewStatus: z.enum(["not-authorized", "authorized", "completed"]).optional(),
+  contentReviewAuthority: z.enum(["jamie-approved", "collaborator-approved"]).optional(),
+  contentReviewAuthorizedBy: z.string().min(1).optional(),
+  contentReviewAuthorizedAt: dated.optional(),
   status: z.enum(["captured", "queued", "reviewed", "held"])
+}).superRefine((item, context) => {
+  const contentReviewStatus = item.contentReviewStatus ?? "not-authorized";
+  const authorizationFields = [item.contentReviewAuthority, item.contentReviewAuthorizedBy, item.contentReviewAuthorizedAt];
+  if (contentReviewStatus === "not-authorized" && authorizationFields.some(Boolean)) {
+    context.addIssue({ code: "custom", path: ["contentReviewStatus"], message: "Unauthorized content review cannot carry approval metadata" });
+  }
+  if (contentReviewStatus !== "not-authorized" && authorizationFields.some((value) => !value)) {
+    context.addIssue({ code: "custom", path: ["contentReviewStatus"], message: "Authorized content review requires authority, reviewer, and date" });
+  }
 });
 
 export const knowledgeLifecycleSchema = z.object({

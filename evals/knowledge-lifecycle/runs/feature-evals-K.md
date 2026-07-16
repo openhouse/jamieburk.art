@@ -432,3 +432,27 @@ semantic evaluation remains required after the final artifact refresh.
 The repaired lifecycle validator, 47 lifecycle tests, focused seven-test
 Facebook suite, social-archive gate, and visual-evidence gate pass. Fresh
 exact-head independent semantic evaluation remains required.
+
+## WOW List enforceability repair
+
+- A fresh adversarial judge scored source decomposition and media feedback at
+  **3**, correctly identifying that single-candidate relationships could be
+  removed without validator failure and that the visual content-review gate
+  existed only in prose.
+- Normalized every linked observation to an explicit candidate relationship
+  carrying an evidence role, supported proposition, and limitations; the
+  validator now requires exact relationship coverage for single- and
+  multi-candidate observations alike.
+- Narrowed Jamie's first-person observation to the recollection itself. The
+  independent manager audit remains a separate observation and meets the
+  memory only at the governed candidate claim.
+- Added an explicit media content-review authorization state, human authority,
+  reviewer, and date contract. Research tasks that require content review
+  cannot advance beyond `open` until their linked media receive authorization.
+- Added negative mutations proving that a deleted single-candidate
+  relationship, an unapproved `in-progress` visual task, and authorization
+  without human metadata all fail closed.
+
+The focused lifecycle, Facebook, and social-archive gates pass after this
+repair. A new exact-head pair is required because the prior judge evaluated the
+superseded revision.
