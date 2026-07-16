@@ -76,7 +76,10 @@ as source discipline rather than dumping the bank onto the page.
 
 The Fair Rent NYC case study may project
 `CLM-COMMERCIAL-VACANCY-PILOT-BRIEF-2026` and
-`CLM-FAIR-RENT-WEB-OPERATIONS-2023`. The 196 / Sunday Dinner case study and
+`CLM-FAIR-RENT-WEB-OPERATIONS-2023`. It may also project the attributed,
+collective-credit-preserving `CLM-NYCAC-PARTICIPATION-SYSTEM`; its event
+population counts and Facebook response thresholds remain in the knowledge
+bank. The 196 / Sunday Dinner case study and
 Technical Operations page may project
 `CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS`. These projections use
 public-safe summaries only; their protected source records are not rendered as

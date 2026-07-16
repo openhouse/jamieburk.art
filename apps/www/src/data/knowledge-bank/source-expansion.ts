@@ -734,7 +734,11 @@ export const sourceExpansionPages = [
       "SRC-NYCAC-X-PROFILE-2026",
       "SRC-NYCAC-OLYMPIA-RELIEF-2020",
       "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
-      "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
+      "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022",
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "SRC-NYCAC-GOTHAMIST-2017-06-19",
+      "SRC-NYCAC-NPR-2017-09-20",
+      "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
     ],
     occurrences: [
       {
@@ -765,6 +769,17 @@ export const sourceExpansionPages = [
           "SRC-NYCAC-OLYMPIA-RELIEF-2020",
           "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
           "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
+        ]
+      },
+      {
+        id: "coalition-participation-system",
+        claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "SRC-NYCAC-GOTHAMIST-2017-06-19",
+          "SRC-NYCAC-NPR-2017-09-20",
+          "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
         ]
       }
     ]

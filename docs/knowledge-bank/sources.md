@@ -107,6 +107,22 @@ records every placement's source-page order, exact listed URL, normalized
 source ID, dated capture, and duplicate disposition. The lifecycle suite uses
 it to reproduce the four manifests offline.
 
+### NYC Artist Coalition Facebook event corpus
+
+The July 15 authenticated pass reconciles the complete capture-date Past Events
+control as 33 recovered public event records plus one unresolved historical
+slot. The public-safe corpus retains dates, titles, organizer displays, venue
+categories, mission topics, bounded response labels, and selected public source
+routes while excluding raw descriptions, attendee identities, comments,
+contacts, meeting credentials, private working links, and authenticated state.
+
+Seven posted article routes connect selected events to New York Post, WNYC,
+Metro, The New Yorker, The Baffler, Curbed, and Gothamist reporting. Five
+articles were already typed in the campaign press corpus; the New York Post
+Cabaret Law article and Gothamist Commercial Rent Stabilization article are new
+source records. A link establishes circulation through an event description,
+not endorsement, Jamie's role, attendance, or policy causality.
+
 ### CallNYC authenticated social corpus
 
 The July 15 archival-production pass preserves all 107 distinct items rendered

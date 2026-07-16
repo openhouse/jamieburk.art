@@ -102,6 +102,50 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-GOTHAMIST-2017-06-19",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live-and-archived",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "archiveUrl": "https://web.archive.org/web/20190507132352/http://gothamist.com/2017/06/19/cabaret_law_nyc.php",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "The reporting identifies Jamie with NYC Artist Coalition, documents his fire-code study-group organizing, and records his City Hall advocacy for full Cabaret Law repeal.",
+      "doesNotEstablish": [
+        "that Jamie acted alone",
+        "that Jamie authored the repeal legislation",
+        "that one rally caused repeal",
+        "that every DIY venue shared one position"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-NPR-2017-09-20",
+      "title": "With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife",
+      "organization": "NPR Music",
+      "author": "Jane Lerner",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live-and-archived",
+      "publishedAt": "2017-09-20",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      "archiveUrl": "https://web.archive.org/web/20251028172606/https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jane Lerner, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' NPR Music, September 20, 2017.",
+      "publicNote": "The reporting identifies Jamie as a founding member of NYC Artist Coalition, situates the coalition inside the broader repeal movement, and records Jamie's public argument against the discriminatory law.",
+      "doesNotEstablish": [
+        "that Jamie or NYC Artist Coalition acted alone",
+        "that Jamie drafted the legislation",
+        "sole causality for the Office of Nightlife",
+        "sole causality for Cabaret Law repeal"
+      ]
+    },
+    {
       "id": "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
       "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
       "organization": "Greene Hill Food Co-op",
@@ -817,6 +861,28 @@
         "exact tire count",
         "complete program scale",
         "causal health impact"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "title": "NYC Artist Coalition Facebook event public-safe census",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/corpora/nycartc-facebook-events-full-population-2026-07-15.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
+      "publicNote": "The metadata-only corpus retains 33 recovered event identities and a disposition for all 34 displayed control slots while excluding raw descriptions and personal or authenticated-session data.",
+      "doesNotEstablish": [
+        "the unresolved event identity",
+        "every historical coalition event",
+        "individual event authorship or production",
+        "physical attendance or unique people",
+        "policy causality"
       ]
     }
   ],
@@ -2055,6 +2121,71 @@
         "The record does not establish attendance, money raised, service uptake, or policy outcomes.",
         "Historical links are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie reports that, beginning in 2017, he helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ],
+          "rationale": "This is the clearest bounded description of Jamie's operating contribution; attribution and collective-credit language preserve the evidence boundary."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "the recurring event system existed",
+            "rotating cultural-space meetings",
+            "practical sessions, public actions, hearings, and relief convenings"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-GOTHAMIST-2017-06-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's coalition role",
+            "fire-code study-group organizing",
+            "City Hall advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-NPR-2017-09-20",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's founding coalition role",
+            "public advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+          "relationship": "context",
+          "supports": [
+            "Jamie's public cultural-space framing",
+            "WOW List as community event infrastructure"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The event pages establish the collective system, not Jamie's authorship or production of every event.",
+        "Policy outcomes, programs, hosting, and campaign accomplishments remain collective.",
+        "Facebook response labels are not attendance, unique people, reach, endorsement, mandate, or impact."
+      ]
     }
   ],
   "pages": [
@@ -2251,7 +2382,11 @@
         "SRC-NYCAC-X-PROFILE-2026",
         "SRC-NYCAC-OLYMPIA-RELIEF-2020",
         "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
-        "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
+        "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+        "SRC-NYCAC-GOTHAMIST-2017-06-19",
+        "SRC-NYCAC-NPR-2017-09-20",
+        "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
       ],
       "occurrences": [
         {
@@ -2288,6 +2423,17 @@
             "SRC-NYCAC-OLYMPIA-RELIEF-2020",
             "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
             "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
+          ]
+        },
+        {
+          "id": "coalition-participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+            "SRC-NYCAC-GOTHAMIST-2017-06-19",
+            "SRC-NYCAC-NPR-2017-09-20",
+            "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
           ]
         }
       ]

@@ -18,6 +18,7 @@ const requiredProofIds = [
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "nyc-artist-coalition-civic-systems",
+  "nyc-artist-coalition-participation-system",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "kc-spaces-fund-digital-infrastructure",
@@ -33,7 +34,8 @@ const requiredWorkProofs = new Map([
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-participation-system"
     ]
   ],
   ["callnyc", ["callnyc-civic-data-guidance"]],

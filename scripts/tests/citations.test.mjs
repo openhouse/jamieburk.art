@@ -42,8 +42,20 @@ test("multi-source occurrences preserve editorial order", () => {
 test("new case-study citations expose only selected public sources", () => {
   assert.equal(resolveCitationReferences("wowlist").length, 14);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
-  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 8);
+  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 12);
   assert.equal(resolveCitationReferences("kc-town-hall").length, 12);
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "fair-rent-nyc",
+      "coalition-participation-system"
+    ).sources.map((item) => item.source.id),
+    [
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "SRC-NYCAC-GOTHAMIST-2017-06-19",
+      "SRC-NYCAC-NPR-2017-09-20",
+      "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
+    ]
+  );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "phase-one-completion").sources.map(
       (item) => item.source.id

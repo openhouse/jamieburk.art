@@ -68,3 +68,22 @@ The deeper metrics remain in held archive claims. The current case study keeps
 the clearer bounded claims about Jamie's identity-system contribution,
 attributable collaborator use, and directly recovered Council interactions.
 See `docs/knowledge-bank/runs/2026-07-15-nycartc-x-full-population.md`.
+
+## Facebook event system
+
+The authenticated Facebook event pass accounts for every slot in the
+capture-date Past Events control: 33 public event identities were recovered and
+one historical slot remains unresolved. The chronology spans 2017 through 2021
+and includes 12 recurring coalition meetings, practical safety and legal
+sessions, cultural-space support, campaign actions, hearings, nightlife and
+commercial-rent work, and pandemic relief coordination.
+
+Jamie reports that he helped establish and produce this recurring participation
+system. The event pages independently establish the collective pattern, while
+public reporting corroborates his founding coalition role, fire-code study
+groups, and City Hall advocacy. They do not assign him authorship or production
+of every event. Facebook response labels remain held interface signals, not
+attendance, unique people, reach, endorsement, mandate, or impact.
+
+See the [full public-safe event archival-production note](nyc-artist-coalition-facebook-events.md)
+and [intake receipt](../runs/2026-07-15-nycac-facebook-events-full-population.md).
