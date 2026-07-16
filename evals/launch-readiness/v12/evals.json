@@ -389,7 +389,8 @@
         "homepage first viewport",
         "/work/technical-operations first viewport",
         "resume page",
-        "two priority case-study openings"
+        "two priority case-study openings",
+        "KC Town Hall opening and working-neighborhood-interface section"
       ],
       "passCondition": "Within a 30-second skim, an independent grader can state Jamie's target role, recurring contribution, two concrete proofs, and the next action without consulting source notes.",
       "rubric": {
@@ -415,9 +416,10 @@
         "homepage and Technical Operations openings",
         "resume opening",
         "HJE, FairRentNYC, and CallNYC case-study openings",
+        "KC Town Hall opening and working-neighborhood-interface section",
         "docs/chad-lens.md"
       ],
-      "passCondition": "In one pass, two independent graders can identify Jamie as the actor, describe the concrete work he performed, name what became usable and toward what end, and distinguish his contribution from collective outcomes on the homepage, Technical Operations page, resume, and at least two priority case studies.",
+      "passCondition": "In one pass, two independent graders can identify Jamie as the actor, describe the concrete work he performed, name what became usable and toward what end, and distinguish his contribution from collective outcomes on the homepage, Technical Operations page, resume, at least two priority case studies, and KC Town Hall.",
       "rubric": {
         "0": "Jamie is hidden behind projects, abstractions, or unexplained domain language.",
         "0.5": "Jamie is visible, but the work product, purpose, or usable change must be inferred on several priority surfaces.",
@@ -442,6 +444,8 @@
         "all metadata-reviewed and decomposed public intake records",
         "their linked atomic claim candidates, evidence relationships, and locators",
         "their doesNotEstablish boundaries and research inquiries",
+        "apps/www/src/data/knowledge-bank/kc-town-hall-x-full-population-2026-07-15.ts",
+        "docs/knowledge-bank/research/2026-07-15-kctownhall-x-full-population.md",
         "docs/knowledge-bank/projects/waterways-participatory-programs.md",
         "docs/knowledge-bank/projects/nyc-artist-coalition.md",
         "docs/knowledge-bank/research/2026-07-14-nycac-campaign-press-catalog.md"
@@ -469,7 +473,7 @@
       "weight": 0.1,
       "intent": "Public prose stays primary while citations, care notes, and governance remain available at the right depth.",
       "evidence": [
-        "HJE, FairRentNYC, CallNYC, and Source-Backed Team Memory pages"
+        "HJE, FairRentNYC, CallNYC, KC Town Hall, and Source-Backed Team Memory pages"
       ],
       "passCondition": "The opening communicates role, action, outcome, and artifact; later governance sections add new information rather than restating the same boundary.",
       "rubric": {
@@ -492,7 +496,7 @@
       "weight": 0.1,
       "intent": "Jamie should remain visible as a careful systems-builder rather than becoming generic portfolio copy.",
       "evidence": [
-        "homepage, About, Contact, and priority case-study prose",
+        "homepage, About, Contact, priority case-study prose, and KC Town Hall",
         "Jamie's writer's-voice guide used only as an editorial reference"
       ],
       "passCondition": "The prose joins care to structure, distinguishes known from assumed, uses active specific language, and ends in a usable next step.",
