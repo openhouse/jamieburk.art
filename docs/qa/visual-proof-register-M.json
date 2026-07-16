@@ -1,0 +1,41 @@
+{
+  "version": "2026-07-15",
+  "projects": [
+    {
+      "slug": "harry-j-epstein",
+      "state": "candidate-rights-review",
+      "candidate": "A public website surface or a recreated e-commerce workflow map.",
+      "rightsGuardrail": "Confirm company approval and exclude customer, analytics, order, vendor, and administrative data before publication."
+    },
+    {
+      "slug": "fair-rent-nyc",
+      "state": "linked-public-artifact",
+      "candidate": "The linked public-data pilot brief, a public campaign interface, or a redacted source-map fragment.",
+      "rightsGuardrail": "Use public campaign material or obtain collaborator review; redact private strategy, legal review, and stakeholder information."
+    },
+    {
+      "slug": "callnyc",
+      "state": "linked-public-artifact",
+      "candidate": "The linked Politico archive, public repository, an archived interface capture, or a recreated issue-pathway diagram.",
+      "rightsGuardrail": "Retain the archived and unofficial disclaimer and verify archive attribution before displaying an interface capture."
+    },
+    {
+      "slug": "wowlist",
+      "state": "candidate-rights-review",
+      "candidate": "A public-safe interface capture or a recreated keyword-community and event-distribution diagram.",
+      "rightsGuardrail": "Exclude private user rows, organizer contacts, precise location history, and unapproved collaborator material."
+    },
+    {
+      "slug": "196-sunday-dinner",
+      "state": "candidate-rights-review",
+      "candidate": "A hosting and continuity workflow diagram before any identifiable participant photograph.",
+      "rightsGuardrail": "Treat identifiable people, guest records, addresses, and private community context as consent-required."
+    },
+    {
+      "slug": "kc-town-hall",
+      "state": "candidate-rights-review",
+      "candidate": "A Phase One construction photograph, measured drawing, survey handbill, or field-coordination diagram.",
+      "rightsGuardrail": "Review photographer credit, visible people, property details, permit context, and private project records before publication."
+    }
+  ]
+}

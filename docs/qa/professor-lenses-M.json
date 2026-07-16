@@ -1,0 +1,33 @@
+{
+  "version": "2026-07-15",
+  "sharedBoundary": "These are Codex-authored evaluation lenses informed by records Jamie supplied. A passing result is not a fresh review, testimonial, or approval by either professor. Protected academic records and private correspondence stay outside the public repository; public composition relies on public-safe claims and sources.",
+  "lenses": [
+    {
+      "id": "margaret-morse",
+      "name": "Prof. Margaret Morse lens",
+      "state": "controlled",
+      "mode": "source-bounded editorial and automated",
+      "criterion": "The portfolio preserves one clear threshold where Jamie's artistic, civic, technical, and social practices remain connected through participation, attention, hospitality, memory, place, and the ways people inhabit structures.",
+      "failureMode": "The portfolio reduces Jamie to organizational utility and removes the artistic and embodied inquiry that distinguishes how he builds systems.",
+      "publicSurface": "/about",
+      "sourceBasis": [
+        "Public 2006 Open House reporting",
+        "Protected UCSC narrative-evaluation records reviewed but not reproduced",
+        "User-supplied screenshot of a public 2014 recommendation reviewed but not committed"
+      ]
+    },
+    {
+      "id": "warren-sack",
+      "name": "Prof. Warren Sack lens",
+      "state": "controlled",
+      "mode": "source-bounded editorial and automated",
+      "criterion": "The portfolio makes Jamie visible as an original social-technical thinker who finds patterns connecting people, information, and place, then tests them through interfaces, workflows, prototypes, and inhabited systems.",
+      "failureMode": "The portfolio presents Jamie only as an implementer of settled requirements and obscures his capacity to frame research-quality questions and prototype social systems.",
+      "publicSurface": "/about",
+      "sourceBasis": [
+        "Public 2006 Open House reporting",
+        "Protected UCSC narrative-evaluation records reviewed but not reproduced"
+      ]
+    }
+  ]
+}
