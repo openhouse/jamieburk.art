@@ -42,12 +42,13 @@ claims for:
 - calendar-community dialogue; and
 - mission-relevant source curation.
 
-Only the organizer-use and peer-attribution claims are selected for the public
-case study. They strengthen the product story directly: Punks & Criminals
-described adding shows to WOW List, and Music Hackathon described the service
-as made by its co-organizer Jamie Burkart. Population accounting, engagement
-totals, and broader source curation remain in the knowledge bank rather than
-competing with Jamie's role on the public page.
+Three claims are selected for the public case study: organizer use, peer
+attribution, and the bounded historical-scale snapshot. Punks & Criminals
+described adding shows to WOW List, Music Hackathon described the service as
+made by its co-organizer Jamie Burkart, and the public-safe aggregate preserves
+historical scale without presenting an independent audit. Population
+accounting, engagement totals, and broader source curation remain in the
+knowledge bank rather than competing with Jamie's role on the public page.
 
 A May 12, 2017 Wayback capture is selected as the page's one visual artifact.
 It preserves the public interface and find-and-share product positioning. It
