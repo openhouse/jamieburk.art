@@ -45,6 +45,7 @@
     "atlas:knowledge": "node packages/atlas/bin/atlas.mjs knowledge",
     "atlas:records": "node packages/atlas/bin/atlas.mjs records",
     "atlas:artifact": "node packages/atlas/bin/atlas.mjs artifact",
+    "atlas:source-object": "node packages/atlas/bin/atlas.mjs source-object",
     "atlas:bundle": "node packages/atlas/bin/atlas.mjs bundle",
     "atlas:verify-bundle": "node packages/atlas/bin/atlas.mjs verify-bundle",
     "atlas:release": "node packages/atlas/bin/atlas.mjs release",

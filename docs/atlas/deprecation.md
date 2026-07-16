@@ -4,15 +4,21 @@ The knowledge banks in `feature/evals-A` through `feature/evals-N` are frozen
 reference sources at the exact commits in `feature-evals-integration.json`.
 They are not future authoring surfaces or runtime dependencies.
 
-Atlas retains them in four forms:
+Atlas retains their knowledge in five forms:
 
-1. exact source commits and blobs reachable through Atlas Git ancestry;
-2. a complete content-addressed artifact inventory;
-3. queryable semantic identifiers, variants, abstracts, and safe locators; and
-4. complete canonical Atlas records for the selected authoritative lifecycle
+1. complete canonical Atlas records for the selected authoritative lifecycle
    and public-proof layer.
+2. native-addressed semantic identities, variants, documents, locators, and
+   stakeholder representations;
+3. explicit situated-evaluation, procedure, dataset, and narrative targets;
+4. full-fidelity SHA-256 source objects with format-aware structural profiles;
+   and
+5. historical Git associations retained only as accession provenance and an
+   additional initial-materialization recovery path.
 
 New work depends on Atlas. Corrections create new Atlas records and correction
 relationships; they do not rewrite frozen source history. Deleting branch refs
-is safe only after the Atlas merge ancestry and an independent source bundle
-have been retained. Squash-merging Atlas breaks the ancestry guarantee.
+is safe after the Atlas merge ancestry and a verified portable bundle have been
+retained. The bundle itself operates without Git. Squash-merging Atlas breaks
+the additional ancestry guarantee even though it does not change the native
+bundle contract.

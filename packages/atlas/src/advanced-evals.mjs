@@ -4,7 +4,9 @@ import path from "node:path";
 import {
   integrationCatalogFingerprint,
   readFeatureEvalArtifact,
-  verifyFeatureEvalHistory
+  renderAccessionMigrationReport,
+  verifyFeatureEvalHistory,
+  verifyFeatureEvalSourceArtifacts
 } from "./integration.mjs";
 import {
   atlasRecordCollections,
@@ -42,6 +44,7 @@ export function loadAtlasEvalContracts(repoRoot) {
     ontology: readJson(repoRoot, "docs/atlas/ontology.json"),
     dispositions: readJson(repoRoot, "docs/atlas/record-dispositions.json"),
     variantPolicy: readJson(repoRoot, "docs/atlas/variant-policy.json"),
+    migrationPolicy: readJson(repoRoot, "docs/atlas/accession-migration-policy.json"),
     lineage: existsSync(lineagePath) ? JSON.parse(readFileSync(lineagePath, "utf8")) : null
   };
 }
@@ -49,6 +52,7 @@ export function loadAtlasEvalContracts(repoRoot) {
 export function atlasEvalContractFingerprint(repoRoot) {
   const files = [
     "docs/atlas/ontology.json",
+    "docs/atlas/accession-migration-policy.json",
     "docs/atlas/record-dispositions.json",
     "docs/atlas/variant-policy.json",
     "evals/atlas/human-judge.md",
@@ -60,7 +64,7 @@ export function atlasEvalContractFingerprint(repoRoot) {
 
 export function validateAtlasEvalContracts(contracts) {
   const errors = [];
-  const { suite, humanAssessment, ontology, dispositions, variantPolicy, tasks } = contracts;
+  const { suite, humanAssessment, ontology, dispositions, variantPolicy, migrationPolicy, tasks } = contracts;
   if (suite.schemaVersion !== 1 || suite.id !== "atlas-situated-knowledge-universe") {
     errors.push("Atlas eval suite identity is invalid");
   }
@@ -84,6 +88,9 @@ export function validateAtlasEvalContracts(contracts) {
   }
   if (dispositions.schemaVersion !== 1 || variantPolicy.schemaVersion !== 1) {
     errors.push("Atlas disposition or variant policy is invalid");
+  }
+  if (migrationPolicy.schemaVersion !== 1 || migrationPolicy.id !== "atlas-accession-exit" || migrationPolicy.antiGaming?.length < 7) {
+    errors.push("Atlas accession migration policy is invalid");
   }
   if (tasks.schemaVersion !== 1 || tasks.tasks?.length < 5) {
     errors.push("Atlas grounded task set is incomplete");
@@ -327,6 +334,144 @@ function navigationErrors(compiled) {
   return errors;
 }
 
+function accessionMigrationErrors({ repoRoot, catalog, manifest, policy, tasks }) {
+  const errors = {
+    census: [],
+    dispositions: [],
+    exclusivity: [],
+    forms: [],
+    fields: [],
+    propositions: [],
+    variants: [],
+    evaluations: [],
+    procedures: [],
+    datasets: [],
+    narratives: [],
+    credit: [],
+    corrections: [],
+    provenance: [],
+    fixity: [],
+    consumers: [],
+    changeset: []
+  };
+  const artifactsByLocation = new Map(catalog.artifacts.map((artifact) => [`${artifact.branch}:${artifact.path}`, artifact]));
+  const sourceObjects = new Map((catalog.sourceObjects ?? []).map((source) => [source.id, source]));
+  const supportedExtensions = new Set(policy.supportedExtensions ?? []);
+  const supportedClasses = new Set(policy.knowledgeClasses ?? []);
+  const targetPrefixes = policy.nativeTargetPrefixes ?? [];
+  const expectedBranches = new Set(manifest.branches.map(({ branch }) => branch));
+  const observedBranches = new Set(catalog.artifacts.map(({ branch }) => branch));
+
+  if (catalog.totals.artifactMappings !== catalog.artifacts.length) errors.census.push("Artifact association census drifted");
+  errors.census.push(...verifyFeatureEvalSourceArtifacts({ repoRoot, catalog, manifest }));
+  if (catalog.totals.nativeSourceObjects !== sourceObjects.size) errors.census.push("Native source-object census drifted");
+  for (const branch of expectedBranches) if (!observedBranches.has(branch)) errors.census.push(`Accession branch is absent: ${branch}`);
+
+  for (const artifact of catalog.artifacts) {
+    const location = `${artifact.branch}:${artifact.path}`;
+    const profileTarget = `atlas://source-profiles/sha256/${artifact.sha256}`;
+    for (const field of policy.requiredArtifactFields ?? []) {
+      if (artifact[field] === undefined || artifact[field] === null) errors.fields.push(`${location} lacks ${field}`);
+    }
+    for (const field of policy.requiredMigrationFields ?? []) {
+      if (artifact.migration?.[field] === undefined || artifact.migration?.[field] === null) errors.fields.push(`${location} migration lacks ${field}`);
+    }
+    if (artifact.migration?.status !== "native" || artifact.migration?.residualKnowledge !== "none-known") {
+      errors.dispositions.push(`${location} is not closed as native with no known residual`);
+    }
+    if (!artifact.migration?.nativeTargets?.includes(artifact.sourceObjectId) || !artifact.migration?.nativeTargets?.includes(profileTarget)) {
+      errors.dispositions.push(`${location} lacks both native object and structural-profile targets`);
+    }
+    if (artifact.contentAddress !== artifact.sourceObjectId || /git-(?:blob|tree|commit):/.test(artifact.contentAddress ?? "")) {
+      errors.exclusivity.push(`${location} still uses an accession association as its content address`);
+    }
+    const extension = path.extname(artifact.path).toLowerCase();
+    if (!supportedExtensions.has(extension)) errors.forms.push(`${location} has unsupported format ${extension || "(none)"}`);
+    if (!artifact.knowledgeClasses?.length) errors.forms.push(`${location} has no knowledge class`);
+    for (const knowledgeClass of artifact.knowledgeClasses ?? []) {
+      if (!supportedClasses.has(knowledgeClass)) errors.forms.push(`${location} has unsupported knowledge class ${knowledgeClass}`);
+    }
+    for (const target of artifact.migration?.nativeTargets ?? []) {
+      if (!targetPrefixes.some((prefix) => target.startsWith(prefix))) errors.fields.push(`${location} has unsupported native target ${target}`);
+    }
+    if (artifact.kind === "evaluation" && !artifact.migration?.nativeTargets?.includes(`atlas://source-evaluations/sha256/${artifact.sha256}`)) {
+      errors.evaluations.push(`${location} lacks a native situated-evaluation target`);
+    }
+    if (artifact.kind === "knowledge-tooling" && !artifact.migration?.nativeTargets?.includes(`atlas://procedures/sha256/${artifact.sha256}`)) {
+      errors.procedures.push(`${location} lacks a native procedural target`);
+    }
+    if (artifact.kind === "source-corpus" && !artifact.migration?.nativeTargets?.includes(`atlas://datasets/sha256/${artifact.sha256}`)) {
+      errors.datasets.push(`${location} lacks a native dataset target`);
+    }
+    if (artifact.kind === "knowledge-document" && !artifact.migration?.nativeTargets?.includes(`atlas://narratives/sha256/${artifact.sha256}`)) {
+      errors.narratives.push(`${location} lacks a native narrative target`);
+    }
+
+    const sourceObject = sourceObjects.get(artifact.sourceObjectId);
+    if (!sourceObject) errors.fixity.push(`${location} points to a missing native source object`);
+    else {
+      if (sourceObject.id !== `atlas://source-objects/sha256/${sourceObject.sha256}` || !/^[a-f0-9]{64}$/.test(sourceObject.sha256)) {
+        errors.fixity.push(`${location} has an invalid native source-object identity`);
+      }
+      if (sourceObject.bytes !== artifact.bytes || sourceObject.sha256 !== artifact.sha256) errors.fixity.push(`${location} source-object fixity metadata drifted`);
+      if (!sourceObject.profile?.extension || !sourceObject.profile?.mediaType || !Number.isInteger(sourceObject.profile?.lines)) {
+        errors.forms.push(`${location} lacks a format-aware structural profile`);
+      }
+      if (!sourceObject.accessionLocations?.includes(location)) errors.provenance.push(`${location} is absent from source-object provenance`);
+      if (!sourceObject.historicalGitBlobs?.includes(artifact.blob)) errors.provenance.push(`${location} omits historical Git-blob provenance`);
+    }
+  }
+
+  const requireLocationTarget = (entries, targetFor, bucket) => {
+    for (const entry of entries) {
+      const target = targetFor(entry);
+      if (entry.address !== target) bucket.push(`${entry.id ?? entry.title ?? "entry"} lacks its deterministic native address`);
+      for (const location of entry.locations ?? []) {
+        const artifact = artifactsByLocation.get(location);
+        if (!artifact) bucket.push(`${location} does not resolve to an accession disposition for ${target}`);
+      }
+    }
+  };
+  requireLocationTarget(catalog.semanticRecords, ({ id }) => `atlas://semantic-records/${encodeURIComponent(id)}`, errors.propositions);
+  requireLocationTarget(catalog.recordVariants, ({ id, digest }) => `atlas://record-variants/${encodeURIComponent(`${id}/${digest}`)}`, errors.variants);
+  requireLocationTarget(catalog.stakeholders, ({ id, label }) => `atlas://stakeholders/${encodeURIComponent(`${id}/${label}`)}`, errors.credit);
+  requireLocationTarget(
+    catalog.semanticRecords.filter(({ id }) => /^(?:COR|DEC)-/.test(id)),
+    ({ id }) => `atlas://semantic-records/${encodeURIComponent(id)}`,
+    errors.corrections
+  );
+
+  for (const sourceObject of sourceObjects.values()) {
+    if (!sourceObject.accessionLocations?.length || !sourceObject.nativeTargets?.includes(sourceObject.id)) {
+      errors.provenance.push(`${sourceObject.id} lacks closed provenance or native self-address`);
+    }
+    for (const location of sourceObject.accessionLocations ?? []) {
+      if (!artifactsByLocation.has(location)) errors.provenance.push(`${sourceObject.id} cites unknown accession location ${location}`);
+    }
+    const situatedArtifacts = (sourceObject.accessionLocations ?? []).map((location) => artifactsByLocation.get(location)).filter(Boolean);
+    const expectedClasses = [...new Set(situatedArtifacts.flatMap(({ knowledgeClasses }) => knowledgeClasses))].sort();
+    const expectedTargets = [...new Set(situatedArtifacts.flatMap(({ migration }) => migration.nativeTargets))].sort();
+    if (JSON.stringify(sourceObject.knowledgeClasses) !== JSON.stringify(expectedClasses)) {
+      errors.provenance.push(`${sourceObject.id} collapses a situated knowledge class`);
+    }
+    if (JSON.stringify(sourceObject.nativeTargets) !== JSON.stringify(expectedTargets)) {
+      errors.provenance.push(`${sourceObject.id} collapses a situated native target`);
+    }
+  }
+  if ((tasks.tasks ?? []).some(({ operation }) => operation === "artifact")) {
+    errors.consumers.push("A grounded task still reads knowledge through a branch/path accession association");
+  }
+  if (!(tasks.tasks ?? []).some(({ operation }) => operation === "source-object")) {
+    errors.consumers.push("No grounded task proves native source-object retrieval");
+  }
+  const reportPath = path.join(repoRoot, "docs/atlas/generated/accession-migration-report.md");
+  if (!existsSync(reportPath)) errors.changeset.push("Human-readable accession migration report is missing");
+  else if (readFileSync(reportPath, "utf8") !== renderAccessionMigrationReport(catalog)) {
+    errors.changeset.push("Human-readable accession migration report is stale");
+  }
+  return errors;
+}
+
 export function evaluateGroundedTasks({ taskSet, compiled, recordStore, catalog, repoRoot }) {
   const failures = [];
   for (const task of taskSet.tasks) {
@@ -351,6 +496,20 @@ export function evaluateGroundedTasks({ taskSet, compiled, recordStore, catalog,
           encoding: "utf8"
         });
         if (!content.includes(task.expect.contains)) throw new Error("artifact expectation failed");
+      } else if (task.operation === "source-object") {
+        const sourceObject = catalog.sourceObjects.find(({ id }) => id === task.input.id);
+        if (!sourceObject) throw new Error("native source object missing");
+        const artifact = catalog.artifacts.find(({ sourceObjectId }) => sourceObjectId === sourceObject.id);
+        if (!artifact) throw new Error("source object lacks accession provenance for materialization");
+        const content = readFeatureEvalArtifact({
+          repoRoot,
+          catalog,
+          branch: artifact.branch,
+          artifactPath: artifact.path,
+          encoding: "utf8"
+        });
+        if (hash(content) !== sourceObject.sha256) throw new Error("native source-object fixity failed");
+        if (!content.includes(task.expect.contains)) throw new Error("source-object expectation failed");
       } else {
         throw new Error(`unknown operation ${task.operation}`);
       }
@@ -377,6 +536,13 @@ export function evaluateAdvancedAtlas({ repoRoot, compiled, recordStore, catalog
   const ontology = ontologyErrors({ ontology: contracts.ontology, compiled });
   const navigation = navigationErrors(compiled);
   const tasks = evaluateGroundedTasks({ taskSet: contracts.tasks, compiled, recordStore, catalog, repoRoot });
+  const migration = accessionMigrationErrors({
+    repoRoot,
+    catalog,
+    manifest,
+    policy: contracts.migrationPolicy,
+    tasks: contracts.tasks
+  });
   const contractErrors = validateAtlasEvalContracts(contracts);
   const latestRun = contracts.lineage?.runs?.at(-1);
   const lineageErrors = [...contractErrors];
@@ -390,7 +556,7 @@ export function evaluateAdvancedAtlas({ repoRoot, compiled, recordStore, catalog
   }
   const navigable = compiled.pages.length - navigation.filter((message) => /no outgoing|no backlinks/.test(message)).length;
   const results = [
-    result("portable-export-closure", "hard-gate", portable.errors, `${portable.manifest?.totals.files ?? 0} files and ${portable.manifest?.totals.uniqueSourceBlobs ?? 0} source blobs close`),
+    result("portable-export-closure", "hard-gate", portable.errors, `${portable.manifest?.totals.files ?? 0} files and ${portable.manifest?.totals.nativeSourceObjects ?? 0} native source objects close`),
     result("branch-independent-recovery", "hard-gate", history, `${manifest.branches.length} commits and ${catalog.totals.uniqueBlobs} blobs reachable`),
     result("record-disposition-completeness", "hard-gate", dispositions, `${Object.values(recordStore.counts).reduce((sum, count) => sum + count, 0)} records dispositioned`),
     result("variant-and-disagreement-ledger", "hard-gate", variants, `${catalog.recordVariants.length} variants retain explicit provenance`),
@@ -407,10 +573,33 @@ export function evaluateAdvancedAtlas({ repoRoot, compiled, recordStore, catalog
     result("eval-lineage-completeness", "hard-gate", lineageErrors, "Current candidate, inputs, suite, and mutations are recorded"),
     result("clean-room-execution", "hard-gate", portable.errors, "Portable bundle is materializable without Git after export"),
     result("task-grounded-retrieval", "hard-gate", tasks, `${contracts.tasks.tasks.length}/${contracts.tasks.tasks.length} grounded tasks pass`),
+    result("accession-source-census-parity", "hard-gate", migration.census, `${catalog.artifacts.length} accession associations reconcile exactly`),
+    result("native-migration-disposition-completeness", "hard-gate", migration.dispositions, `${catalog.artifacts.length} artifact dispositions close with no known residual`),
+    result("accession-source-exclusivity-zero", "hard-gate", migration.exclusivity, "Accession associations remain provenance only"),
+    result("unsupported-knowledge-form-zero", "hard-gate", migration.forms, `${catalog.sourceObjects.length} source objects have supported format-aware profiles`),
+    result("semantic-field-disposition-completeness", "hard-gate", migration.fields, "All required migration fields and target protocols are present"),
+    result("proposition-evidence-parity", "hard-gate", migration.propositions, `${catalog.semanticRecords.length} semantic identities retain native targets`),
+    result("heteroglossic-variant-preservation", "hard-gate", migration.variants, `${catalog.recordVariants.length} record variants remain independently addressed`),
+    result("source-eval-knowledge-migration", "hard-gate", migration.evaluations, "Every source evaluation is retained as situated evaluative knowledge"),
+    result("procedural-knowledge-operationalization", "hard-gate", migration.procedures, "Every knowledge tool has a native procedure target"),
+    result("dataset-structural-parity", "hard-gate", migration.datasets, "Every source corpus has a native dataset target and structural profile"),
+    result("dataset-query-equivalence", "hard-gate", [...migration.datasets, ...migration.consumers, ...tasks], "Native source-object retrieval preserves grounded dataset answers"),
+    result("narrative-context-fidelity", "hard-gate", migration.narratives, "Every knowledge document has a native narrative target"),
+    result("credit-authority-voice-parity", "hard-gate", migration.credit, `${catalog.stakeholders.length} source stakeholder identities retain native targets`),
+    result("correction-rejection-lineage-parity", "hard-gate", migration.corrections, "Correction and decision identities retain native lineage"),
+    result("migration-privacy-non-expansion", "hard-gate", protectedErrors, "Migration does not expand protected knowledge exposure"),
+    result("native-provenance-closure", "hard-gate", migration.provenance, `${catalog.sourceObjects.length} native source objects close over accession provenance`),
+    result("native-source-object-fixity", "hard-gate", migration.fixity, `${catalog.sourceObjects.length} SHA-256 source-object identities are internally fixed`),
+    result("git-association-independent-execution", "hard-gate", [...portable.errors, ...migration.consumers], "Native source-object consumers and clean-room bundle do not require Git associations"),
+    result("consumer-projection-continuity", "hard-gate", [...migration.consumers, ...tasks], `${contracts.tasks.tasks.length} consumers continue through Atlas-native protocols`),
+    result("semantic-changeset-completeness", "hard-gate", migration.changeset, "Migration has a current human-readable semantic changeset"),
     result("record-addressability", "quality-target", dispositions, `${Object.values(recordStore.counts).reduce((sum, count) => sum + count, 0)} canonical records addressable`),
     result("variant-provenance-coverage", "quality-target", variants, `${catalog.recordVariants.length}/${catalog.recordVariants.length} variants carry provenance`),
     result("navigable-neighborhood-coverage", "quality-target", navigation, `${navigable}/${compiled.pages.length} pages have incoming and outgoing relations`),
-    result("task-scenario-coverage", "quality-target", tasks, `${contracts.tasks.tasks.length - tasks.length}/${contracts.tasks.tasks.length} task scenarios pass`)
+    result("task-scenario-coverage", "quality-target", tasks, `${contracts.tasks.tasks.length - tasks.length}/${contracts.tasks.tasks.length} task scenarios pass`),
+    result("migration-knowledge-class-coverage", "quality-target", [...migration.forms, ...migration.fields], `${contracts.migrationPolicy.knowledgeClasses.length} knowledge classes are governed`),
+    result("native-target-coverage", "quality-target", migration.dispositions, `${catalog.artifacts.length}/${catalog.artifacts.length} artifacts have object, profile, and component targets`),
+    result("accession-reviewability", "quality-target", migration.changeset, "JSON audit ledger and Markdown changeset are current")
   ];
   for (const criterion of contracts.humanAssessment.criteria) {
     results.push({

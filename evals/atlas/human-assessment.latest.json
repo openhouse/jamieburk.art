@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "suiteId": "atlas-situated-knowledge-universe",
-  "suiteVersion": "4.0.0",
+  "suiteVersion": "5.0.0",
   "status": "pending-human-review",
   "criteria": [
     {
@@ -24,6 +24,27 @@
       "reviewer": null,
       "evidence": [],
       "note": "A named no-context reader must navigate from a project to its evidence, collaborators, methods, corrections, and open questions."
+    },
+    {
+      "id": "native-semantic-assimilation-review",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must sample each knowledge class and judge whether native dispositions preserve meaning, difference, and evidentiary relationships rather than merely bytes and counts."
+    },
+    {
+      "id": "migration-changeset-comprehensibility",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named no-context reviewer must judge whether the Markdown report and repository diff make the migration understandable without treating generated JSON as a black box."
+    },
+    {
+      "id": "situated-source-context-fidelity",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": [],
+      "note": "A named human must judge whether provenance, voice, authority, disagreement, negative knowledge, and social context survive across representative accession sources."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "suiteId": "atlas-situated-knowledge-universe",
-  "suiteVersion": "4.0.0",
-  "candidateFingerprint": "01f453eb6009f1fc925c0bb6bc8b8715f64e7bdeff800d4d342f75d1ea6e4c5b",
+  "suiteVersion": "5.0.0",
+  "candidateFingerprint": "926e9b8e3cd46782fb7fe7a80a094b473499d8b12c4dda8565c09189bb2a6f1a",
   "results": [
     {
       "id": "semantic-markdown-contract",
@@ -118,6 +118,7 @@
         "artifactMappings": 1833,
         "fullFidelityArtifacts": 1833,
         "uniqueBlobs": 1676,
+        "nativeSourceObjects": 1676,
         "semanticIds": 7650,
         "recordVariants": 7653,
         "documents": 829,
@@ -137,23 +138,23 @@
       "id": "candidate-is-exactly-bound",
       "kind": "quality-target",
       "passed": true,
-      "observed": "01f453eb6009f1fc925c0bb6bc8b8715f64e7bdeff800d4d342f75d1ea6e4c5b",
+      "observed": "926e9b8e3cd46782fb7fe7a80a094b473499d8b12c4dda8565c09189bb2a6f1a",
       "evidence": {
         "corpusFingerprint": "4697e185b6636cc3284f53d8697d4f6f33fe84e75805d194c46598b6d71979bd",
         "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
         "recordStoreFingerprint": "2b137e5892b97504f479e70d6865a6ff5c1a20f8f8b711b91b619a6920b8d453",
         "integrationFingerprint": "9cd4f3bae826dec0c57b1545536a09544e9c12bff577eec7117773f76827ec77",
-        "sourceKnowledgeFingerprint": "ee17c068e63c2a1750cb163aa33d69d95638566f5fbf642a9c635e331520fa4f",
+        "sourceKnowledgeFingerprint": "da9ee6f7f86e5a64960ac69c7abb8be01dee885f87a92592b87fb5b9a447198b",
         "stakeholderCreditFingerprint": "a8ede705241b376757d6bca5b6d82a3ef77f8989dc4899e2bd912622fa09d1e9",
-        "evalContractFingerprint": "eec69c8e40ca099c413248c64d1e5cd8c7d9b5ad745b2947e9075d2b347d0f33",
-        "implementationFingerprint": "b2d991731f6c8616b247c229bfd64c3490e424f4445d624b15873b137a1614e2"
+        "evalContractFingerprint": "26ccb88acf631ea4c9896ed6f324103caab385c30fb9ed039a18a3d133e74125",
+        "implementationFingerprint": "240b10f5b5c3a4c13924fc0bf0bc121075eb29e6251205ec1f074bafb00ad7c0"
       }
     },
     {
       "id": "portable-export-closure",
       "kind": "hard-gate",
       "passed": true,
-      "observed": "46 files and 1676 source blobs close",
+      "observed": "48 files and 1676 native source objects close",
       "evidence": []
     },
     {
@@ -269,6 +270,146 @@
       "evidence": []
     },
     {
+      "id": "accession-source-census-parity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "1833 accession associations reconcile exactly",
+      "evidence": []
+    },
+    {
+      "id": "native-migration-disposition-completeness",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "1833 artifact dispositions close with no known residual",
+      "evidence": []
+    },
+    {
+      "id": "accession-source-exclusivity-zero",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Accession associations remain provenance only",
+      "evidence": []
+    },
+    {
+      "id": "unsupported-knowledge-form-zero",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "1676 source objects have supported format-aware profiles",
+      "evidence": []
+    },
+    {
+      "id": "semantic-field-disposition-completeness",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "All required migration fields and target protocols are present",
+      "evidence": []
+    },
+    {
+      "id": "proposition-evidence-parity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "7650 semantic identities retain native targets",
+      "evidence": []
+    },
+    {
+      "id": "heteroglossic-variant-preservation",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "7653 record variants remain independently addressed",
+      "evidence": []
+    },
+    {
+      "id": "source-eval-knowledge-migration",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Every source evaluation is retained as situated evaluative knowledge",
+      "evidence": []
+    },
+    {
+      "id": "procedural-knowledge-operationalization",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Every knowledge tool has a native procedure target",
+      "evidence": []
+    },
+    {
+      "id": "dataset-structural-parity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Every source corpus has a native dataset target and structural profile",
+      "evidence": []
+    },
+    {
+      "id": "dataset-query-equivalence",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Native source-object retrieval preserves grounded dataset answers",
+      "evidence": []
+    },
+    {
+      "id": "narrative-context-fidelity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Every knowledge document has a native narrative target",
+      "evidence": []
+    },
+    {
+      "id": "credit-authority-voice-parity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "2 source stakeholder identities retain native targets",
+      "evidence": []
+    },
+    {
+      "id": "correction-rejection-lineage-parity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Correction and decision identities retain native lineage",
+      "evidence": []
+    },
+    {
+      "id": "migration-privacy-non-expansion",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Migration does not expand protected knowledge exposure",
+      "evidence": []
+    },
+    {
+      "id": "native-provenance-closure",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "1676 native source objects close over accession provenance",
+      "evidence": []
+    },
+    {
+      "id": "native-source-object-fixity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "1676 SHA-256 source-object identities are internally fixed",
+      "evidence": []
+    },
+    {
+      "id": "git-association-independent-execution",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Native source-object consumers and clean-room bundle do not require Git associations",
+      "evidence": []
+    },
+    {
+      "id": "consumer-projection-continuity",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "5 consumers continue through Atlas-native protocols",
+      "evidence": []
+    },
+    {
+      "id": "semantic-changeset-completeness",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "Migration has a current human-readable semantic changeset",
+      "evidence": []
+    },
+    {
       "id": "record-addressability",
       "kind": "quality-target",
       "passed": true,
@@ -297,6 +438,27 @@
       "evidence": []
     },
     {
+      "id": "migration-knowledge-class-coverage",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "15 knowledge classes are governed",
+      "evidence": []
+    },
+    {
+      "id": "native-target-coverage",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "1833/1833 artifacts have object, profile, and component targets",
+      "evidence": []
+    },
+    {
+      "id": "accession-reviewability",
+      "kind": "quality-target",
+      "passed": true,
+      "observed": "JSON audit ledger and Markdown changeset are current",
+      "evidence": []
+    },
+    {
       "id": "social-mechanism-fidelity",
       "kind": "human-gate",
       "passed": false,
@@ -319,14 +481,38 @@
       "status": "pending",
       "observed": "Pending named human review",
       "evidence": []
+    },
+    {
+      "id": "native-semantic-assimilation-review",
+      "kind": "human-gate",
+      "passed": false,
+      "status": "pending",
+      "observed": "Pending named human review",
+      "evidence": []
+    },
+    {
+      "id": "migration-changeset-comprehensibility",
+      "kind": "human-gate",
+      "passed": false,
+      "status": "pending",
+      "observed": "Pending named human review",
+      "evidence": []
+    },
+    {
+      "id": "situated-source-context-fidelity",
+      "kind": "human-gate",
+      "passed": false,
+      "status": "pending",
+      "observed": "Pending named human review",
+      "evidence": []
     }
   ],
   "summary": {
     "hardGateFailures": 0,
-    "hardGateTotal": 30,
+    "hardGateTotal": 50,
     "qualityTargetGaps": 0,
-    "qualityTargetTotal": 9,
-    "humanGatesPending": 3,
-    "humanGateTotal": 3
+    "qualityTargetTotal": 12,
+    "humanGatesPending": 6,
+    "humanGateTotal": 6
   }
 }

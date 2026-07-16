@@ -12,6 +12,7 @@ import {
   buildFeatureEvalKnowledge,
   loadFeatureEvalKnowledge,
   readFeatureEvalArtifact,
+  renderAccessionMigrationReport,
   verifyFeatureEvalHistory,
   verifyFeatureEvalSourceArtifacts
 } from "../src/integration.mjs";
@@ -23,6 +24,7 @@ import {
 } from "../src/records.mjs";
 import {
   materializePortableAtlasBundle,
+  readPortableAtlasSourceObject,
   verifyPortableAtlasBundle
 } from "../src/portable.mjs";
 
@@ -33,6 +35,7 @@ const valueFor = (flag) => {
 };
 const generatedPath = path.join(defaultRepoRoot, "docs/atlas/generated/atlas.graph.json");
 const sourceCatalogPath = path.join(defaultRepoRoot, "docs/atlas/generated/feature-evals-knowledge.json");
+const migrationReportPath = path.join(defaultRepoRoot, "docs/atlas/generated/accession-migration-report.md");
 const recordStorePath = path.join(defaultRepoRoot, "docs/atlas/records/canonical.json");
 
 function stableJson(value) {
@@ -82,8 +85,9 @@ try {
     const catalog = buildFeatureEvalKnowledge({ repoRoot: defaultRepoRoot, manifest });
     mkdirSync(path.dirname(sourceCatalogPath), { recursive: true });
     writeFileSync(sourceCatalogPath, stableJson(catalog));
+    writeFileSync(migrationReportPath, renderAccessionMigrationReport(catalog));
     console.log(`Wrote ${path.relative(defaultRepoRoot, sourceCatalogPath)}`);
-    console.log(`Integrated ${catalog.totals.semanticIds} semantic IDs, ${catalog.totals.recordVariants} record variants, ${catalog.totals.documents} documents, and ${catalog.totals.publicUrls} public source locators from ${catalog.totals.branches} branches.`);
+    console.log(`Integrated ${catalog.totals.semanticIds} semantic IDs, ${catalog.totals.recordVariants} record variants, ${catalog.totals.documents} documents, and ${catalog.totals.nativeSourceObjects} native source objects from ${catalog.totals.branches} branches.`);
     process.exit(0);
   }
   if (command === "verify-sources") {
@@ -129,6 +133,19 @@ try {
     }
     process.exit(0);
   }
+  if (command === "source-object") {
+    const id = valueFor("--id");
+    if (!id) throw new Error("Use --id <atlas://source-objects/sha256/...>");
+    const catalog = loadFeatureEvalKnowledge(defaultRepoRoot);
+    const sourceObject = catalog.sourceObjects.find((entry) => entry.id === id);
+    if (!sourceObject) throw new Error("Atlas source object not found");
+    if (args.includes("--content")) {
+      const bundle = valueFor("--bundle");
+      if (!bundle) throw new Error("Native content access requires --bundle <portable-atlas-directory>");
+      process.stdout.write(readPortableAtlasSourceObject(path.resolve(bundle), id));
+    } else console.log(stableJson(sourceObject));
+    process.exit(0);
+  }
   const compiled = compileAtlas();
   const evaluation = evaluateAtlas(compiled);
   if (command === "generate") {
@@ -156,7 +173,7 @@ try {
       compiled,
       catalog
     });
-    console.log(`Materialized ${manifest.totals.files} portable files and ${manifest.totals.uniqueSourceBlobs} source blobs.`);
+    console.log(`Materialized ${manifest.totals.files} portable files and ${manifest.totals.nativeSourceObjects} native source objects.`);
   } else if (command === "verify-bundle") {
     const input = valueFor("--input");
     if (!input) throw new Error("Use --input <bundle-directory>");

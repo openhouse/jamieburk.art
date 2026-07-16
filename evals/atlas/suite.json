@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "atlas-situated-knowledge-universe",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "objectiveOrder": [
     "knowledge-loss-privacy-authority-attribution-provenance",
     "identity-correction-temporal-dataset-reproducibility",
@@ -15,7 +15,10 @@
     "An agent cannot certify a human gate.",
     "Protected knowledge cannot be exposed to improve retrieval or coverage.",
     "Removing difficult records, variants, or pages cannot improve the score.",
-    "A stronger public claim must not outrun its canonical support and boundaries."
+    "A stronger public claim must not outrun its canonical support and boundaries.",
+    "Full-fidelity bytes cannot substitute for semantic disposition, and extracted semantics cannot substitute for reversible source recovery.",
+    "Removing or ignoring a difficult accession artifact cannot improve migration completeness.",
+    "Historical Git associations may remain as provenance but cannot remain the only access protocol."
   ],
   "evaluations": [
     { "id": "semantic-markdown-contract", "kind": "hard-gate", "executor": "core" },
@@ -48,6 +51,26 @@
     { "id": "eval-lineage-completeness", "kind": "hard-gate", "executor": "advanced" },
     { "id": "clean-room-execution", "kind": "hard-gate", "executor": "resilience" },
     { "id": "task-grounded-retrieval", "kind": "hard-gate", "executor": "advanced" },
+    { "id": "accession-source-census-parity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "native-migration-disposition-completeness", "kind": "hard-gate", "executor": "migration" },
+    { "id": "accession-source-exclusivity-zero", "kind": "hard-gate", "executor": "migration" },
+    { "id": "unsupported-knowledge-form-zero", "kind": "hard-gate", "executor": "migration" },
+    { "id": "semantic-field-disposition-completeness", "kind": "hard-gate", "executor": "migration" },
+    { "id": "proposition-evidence-parity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "heteroglossic-variant-preservation", "kind": "hard-gate", "executor": "migration" },
+    { "id": "source-eval-knowledge-migration", "kind": "hard-gate", "executor": "migration" },
+    { "id": "procedural-knowledge-operationalization", "kind": "hard-gate", "executor": "migration" },
+    { "id": "dataset-structural-parity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "dataset-query-equivalence", "kind": "hard-gate", "executor": "migration" },
+    { "id": "narrative-context-fidelity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "credit-authority-voice-parity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "correction-rejection-lineage-parity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "migration-privacy-non-expansion", "kind": "hard-gate", "executor": "migration" },
+    { "id": "native-provenance-closure", "kind": "hard-gate", "executor": "migration" },
+    { "id": "native-source-object-fixity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "git-association-independent-execution", "kind": "hard-gate", "executor": "resilience" },
+    { "id": "consumer-projection-continuity", "kind": "hard-gate", "executor": "migration" },
+    { "id": "semantic-changeset-completeness", "kind": "hard-gate", "executor": "migration" },
     { "id": "named-stakeholder-coverage", "kind": "quality-target", "executor": "core" },
     { "id": "canonical-project-universe", "kind": "quality-target", "executor": "core" },
     { "id": "federated-source-depth", "kind": "quality-target", "executor": "core" },
@@ -57,8 +80,14 @@
     { "id": "variant-provenance-coverage", "kind": "quality-target", "executor": "advanced" },
     { "id": "navigable-neighborhood-coverage", "kind": "quality-target", "executor": "advanced" },
     { "id": "task-scenario-coverage", "kind": "quality-target", "executor": "advanced" },
+    { "id": "migration-knowledge-class-coverage", "kind": "quality-target", "executor": "migration" },
+    { "id": "native-target-coverage", "kind": "quality-target", "executor": "migration" },
+    { "id": "accession-reviewability", "kind": "quality-target", "executor": "migration" },
     { "id": "social-mechanism-fidelity", "kind": "human-gate", "executor": "human" },
     { "id": "situated-experience-fidelity", "kind": "human-gate", "executor": "human" },
-    { "id": "no-context-reader-navigation", "kind": "human-gate", "executor": "human" }
+    { "id": "no-context-reader-navigation", "kind": "human-gate", "executor": "human" },
+    { "id": "native-semantic-assimilation-review", "kind": "human-gate", "executor": "human" },
+    { "id": "migration-changeset-comprehensibility", "kind": "human-gate", "executor": "human" },
+    { "id": "situated-source-context-fidelity", "kind": "human-gate", "executor": "human" }
   ]
 }

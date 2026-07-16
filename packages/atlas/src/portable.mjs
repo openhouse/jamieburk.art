@@ -14,8 +14,10 @@ const fixedPortableFiles = Object.freeze([
   "docs/atlas/README.md",
   "docs/atlas/architecture.md",
   "docs/atlas/deprecation.md",
+  "docs/atlas/accession-migration-policy.json",
   "docs/atlas/evals/hill-climb.md",
   "docs/atlas/feature-evals-integration.json",
+  "docs/atlas/generated/accession-migration-report.md",
   "docs/atlas/generated/atlas.graph.json",
   "docs/atlas/generated/feature-evals-knowledge.json",
   "docs/atlas/ontology.json",
@@ -76,16 +78,15 @@ export function buildPortableAtlasManifest({ repoRoot, compiled, catalog }) {
       mediaType: mediaType(relativePath)
     };
   });
-  const byBlob = new Map();
-  for (const artifact of catalog.artifacts) {
-    const current = byBlob.get(artifact.blob);
-    if (current && current.bytes !== artifact.bytes) {
-      throw new Error(`Inconsistent byte count for source blob ${artifact.blob}`);
-    }
-    byBlob.set(artifact.blob, { sha1: artifact.blob, bytes: artifact.bytes });
-  }
+  const sourceObjects = catalog.sourceObjects.map((source) => ({
+    id: source.id,
+    sha256: source.sha256,
+    bytes: source.bytes,
+    mediaType: source.mediaType,
+    historicalGitBlobs: source.historicalGitBlobs
+  }));
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     packageId: "atlas-portable-situated-knowledge-universe",
     candidateFingerprint: compiled.candidateFingerprint,
     recordStoreFingerprint: compiled.recordStore.fingerprint,
@@ -96,13 +97,13 @@ export function buildPortableAtlasManifest({ repoRoot, compiled, catalog }) {
       markdownIsHumanLayerNotEntirePackage: true
     },
     files,
-    sourceBlobs: [...byBlob.values()].sort((left, right) => left.sha1.localeCompare(right.sha1)),
+    sourceObjects,
     totals: {
       files: files.length,
       markdownPages: compiled.metrics.pages,
       canonicalRecords: compiled.metrics.canonicalRecords,
       artifactMappings: catalog.totals.artifactMappings,
-      uniqueSourceBlobs: byBlob.size
+      nativeSourceObjects: sourceObjects.length
     }
   };
 }
@@ -154,15 +155,15 @@ export function validatePortableAtlasSource({ repoRoot, compiled, catalog }) {
   if (manifest.totals.canonicalRecords !== Object.values(compiled.recordStore.counts).reduce((sum, count) => sum + count, 0)) {
     errors.push("Portable manifest canonical record count drifted");
   }
-  if (manifest.totals.uniqueSourceBlobs !== catalog.totals.uniqueBlobs) {
-    errors.push("Portable manifest omits full-fidelity source blobs");
+  if (manifest.totals.nativeSourceObjects !== catalog.totals.nativeSourceObjects) {
+    errors.push("Portable manifest omits full-fidelity native source objects");
   }
   const generatedGraph = JSON.parse(readFileSync(path.join(repoRoot, "docs/atlas/generated/atlas.graph.json"), "utf8"));
   if (generatedGraph.candidateFingerprint !== compiled.candidateFingerprint) {
     errors.push("Portable manifest includes a stale generated Atlas graph");
   }
-  if (catalog.artifacts.some(({ blob, contentAddress }) => contentAddress !== `git-blob:${blob}`)) {
-    errors.push("Portable source artifact lacks its content address");
+  if (catalog.artifacts.some(({ sha256, contentAddress }) => contentAddress !== `atlas://source-objects/sha256/${sha256}`)) {
+    errors.push("Portable source artifact lacks its native content address");
   }
   return { errors, manifest };
 }
@@ -175,13 +176,15 @@ export function materializePortableAtlasBundle({ repoRoot, bundleRoot, compiled,
     mkdirSync(path.dirname(destination), { recursive: true });
     writeFileSync(destination, readFileSync(path.join(repoRoot, file.path)));
   }
-  const blobs = readGitBlobs(repoRoot, manifest.sourceBlobs.map(({ sha1 }) => sha1));
-  for (const source of manifest.sourceBlobs) {
-    const content = blobs.get(source.sha1);
-    if (content.length !== source.bytes || gitBlobHash(content) !== source.sha1) {
-      throw new Error(`Source blob failed fixity before export: ${source.sha1}`);
+  const gitBlobIds = [...new Set(manifest.sourceObjects.flatMap(({ historicalGitBlobs }) => historicalGitBlobs))];
+  const blobs = readGitBlobs(repoRoot, gitBlobIds);
+  for (const source of manifest.sourceObjects) {
+    const gitBlob = source.historicalGitBlobs[0];
+    const content = blobs.get(gitBlob);
+    if (content.length !== source.bytes || gitBlobHash(content) !== gitBlob || hash(content) !== source.sha256) {
+      throw new Error(`Source object failed fixity before export: ${source.id}`);
     }
-    const destination = path.join(bundleRoot, "source-blobs", source.sha1);
+    const destination = path.join(bundleRoot, "objects", "sha256", source.sha256);
     mkdirSync(path.dirname(destination), { recursive: true });
     writeFileSync(destination, content);
   }
@@ -209,15 +212,15 @@ export function verifyPortableAtlasBundle(bundleRoot) {
       errors.push(`Portable file failed fixity: ${file.path}`);
     }
   }
-  for (const source of manifest.sourceBlobs ?? []) {
-    const absolute = path.join(bundleRoot, "source-blobs", source.sha1);
+  for (const source of manifest.sourceObjects ?? []) {
+    const absolute = path.join(bundleRoot, "objects", "sha256", source.sha256);
     if (!existsSync(absolute)) {
-      errors.push(`Portable source blob is missing: ${source.sha1}`);
+      errors.push(`Portable source object is missing: ${source.id}`);
       continue;
     }
     const content = readFileSync(absolute);
-    if (content.length !== source.bytes || gitBlobHash(content) !== source.sha1) {
-      errors.push(`Portable source blob failed fixity: ${source.sha1}`);
+    if (content.length !== source.bytes || hash(content) !== source.sha256) {
+      errors.push(`Portable source object failed fixity: ${source.id}`);
     }
   }
   const pageRoot = path.join(bundleRoot, "package/docs/atlas/pages");
@@ -246,4 +249,17 @@ export function verifyPortableAtlasBundle(bundleRoot) {
     errors.push("Portable generated graph is not bound to the exported candidate");
   }
   return errors;
+}
+
+export function readPortableAtlasSourceObject(bundleRoot, sourceObjectId, encoding = null) {
+  const match = /^atlas:\/\/source-objects\/sha256\/([a-f0-9]{64})$/.exec(sourceObjectId);
+  if (!match) throw new Error(`Invalid Atlas source-object address: ${sourceObjectId}`);
+  const manifest = JSON.parse(readFileSync(path.join(bundleRoot, "manifest.json"), "utf8"));
+  const source = manifest.sourceObjects?.find(({ id }) => id === sourceObjectId);
+  if (!source) throw new Error(`Unknown Atlas source object: ${sourceObjectId}`);
+  const content = readFileSync(path.join(bundleRoot, "objects", "sha256", match[1]));
+  if (content.length !== source.bytes || hash(content) !== source.sha256) {
+    throw new Error(`Portable source object failed fixity: ${sourceObjectId}`);
+  }
+  return encoding ? content.toString(encoding) : content;
 }

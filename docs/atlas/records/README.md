@@ -11,8 +11,10 @@ allowing Atlas to acquire future records. Consumers import
 
 Branch-specific A-N variants remain full-fidelity source knowledge rather than
 being silently coerced into canonical equivalence. Use `atlas:knowledge` to
-query their normalized public-safe fields and `atlas:artifact` for explicitly
-requested internal full-fidelity retrieval from immutable Git objects.
+query normalized public-safe fields and `atlas:source-object` to inspect native
+metadata or retrieve full-fidelity content from a verified portable bundle.
+Branch/path artifact lookup remains an accession-provenance diagnostic, not the
+consumer protocol.
 
 After editing canonical records, regenerate projections and run the complete
 Atlas and repository eval suites. Never place raw private archives, credentials,

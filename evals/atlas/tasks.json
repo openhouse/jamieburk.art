@@ -22,10 +22,9 @@
     },
     {
       "id": "retrieve-full-fidelity-source",
-      "operation": "artifact",
+      "operation": "source-object",
       "input": {
-        "branch": "feature/evals-N",
-        "path": "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07.ts"
+        "id": "atlas://source-objects/sha256/0e5964ca442230c507a6cbabf800d7ba25b83fa835aec57d14673e5fabe0b921"
       },
       "expect": { "contains": "survivingPublicRecords: 40" }
     },

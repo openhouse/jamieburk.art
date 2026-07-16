@@ -24,6 +24,7 @@ import {
 import { loadFeatureEvalKnowledge } from "../src/integration.mjs";
 import {
   materializePortableAtlasBundle,
+  readPortableAtlasSourceObject,
   verifyPortableAtlasBundle
 } from "../src/portable.mjs";
 import { atlasRecordStore } from "../src/records.mjs";
@@ -58,13 +59,13 @@ function evaluation(results, id) {
   return results.find((entry) => entry.id === id);
 }
 
-test("Atlas 4.0 implements its complete versioned eval contract", () => {
+test("Atlas 5.0 implements its complete versioned eval contract", () => {
   assert.deepEqual(validateAtlasEvalContracts(contracts), []);
   const report = evaluateAtlas(compiled);
   assert.deepEqual(validateAtlasEvalResultSet(contracts.suite, report.results), []);
-  assert.equal(report.summary.hardGateTotal, 30);
-  assert.equal(report.summary.qualityTargetTotal, 9);
-  assert.equal(report.summary.humanGateTotal, 3);
+  assert.equal(report.summary.hardGateTotal, 50);
+  assert.equal(report.summary.qualityTargetTotal, 12);
+  assert.equal(report.summary.humanGateTotal, 6);
 });
 
 test("record disposition mutation cannot silently strand a collection", () => {
@@ -125,6 +126,7 @@ test("protected locator mutation cannot expose a recoverable value", () => {
   const mutated = structuredClone(catalog);
   mutated.sources.protected[0].url = "https://private.example.test/source";
   assert.equal(evaluation(runAdvanced({ knowledge: mutated }), "protected-knowledge-inference").passed, false);
+  assert.equal(evaluation(runAdvanced({ knowledge: mutated }), "migration-privacy-non-expansion").passed, false);
 });
 
 test("collective-credit mutation cannot erase a stakeholder boundary", () => {
@@ -180,6 +182,63 @@ test("portable bundle verifies without Git and detects blob corruption", () => {
     catalog
   });
   assert.deepEqual(verifyPortableAtlasBundle(bundleRoot), []);
-  appendFileSync(path.join(bundleRoot, "source-blobs", bundleManifest.sourceBlobs[0].sha1), "corruption");
+  const source = bundleManifest.sourceObjects.find(({ id }) => id === contracts.tasks.tasks.find(({ operation }) => operation === "source-object").input.id);
+  assert.match(readPortableAtlasSourceObject(bundleRoot, source.id, "utf8"), /survivingPublicRecords:\s*40/);
+  appendFileSync(path.join(bundleRoot, "objects", "sha256", source.sha256), "corruption");
   assert.ok(verifyPortableAtlasBundle(bundleRoot).some((message) => /failed fixity/.test(message)));
+  assert.throws(() => readPortableAtlasSourceObject(bundleRoot, source.id), /failed fixity/);
+});
+
+test("every accession-exit gate rejects its named mutation", () => {
+  const cases = [
+    ["accession-source-census-parity", (value) => value.artifacts.shift()],
+    ["native-migration-disposition-completeness", (value) => { value.artifacts[0].migration.residualKnowledge = "undispositioned"; }],
+    ["accession-source-exclusivity-zero", (value) => { value.artifacts[0].contentAddress = `git-blob:${value.artifacts[0].blob}`; }],
+    ["unsupported-knowledge-form-zero", (value) => { value.sourceObjects[0].profile.mediaType = ""; }],
+    ["semantic-field-disposition-completeness", (value) => { delete value.artifacts[0].migration.reviewability; }],
+    ["proposition-evidence-parity", (value) => {
+      const record = value.semanticRecords.find(({ locations }) => locations.length);
+      record.address = "atlas://semantic-records/WRONG";
+    }],
+    ["heteroglossic-variant-preservation", (value) => {
+      const record = value.recordVariants.find(({ locations }) => locations.length);
+      record.address = "atlas://record-variants/WRONG";
+    }],
+    ["source-eval-knowledge-migration", (value) => {
+      const artifact = value.artifacts.find(({ kind }) => kind === "evaluation");
+      artifact.migration.nativeTargets = artifact.migration.nativeTargets.filter((target) => !target.startsWith("atlas://source-evaluations/"));
+    }],
+    ["procedural-knowledge-operationalization", (value) => {
+      const artifact = value.artifacts.find(({ kind }) => kind === "knowledge-tooling");
+      artifact.migration.nativeTargets = artifact.migration.nativeTargets.filter((target) => !target.startsWith("atlas://procedures/"));
+    }],
+    ["dataset-structural-parity", (value) => {
+      const artifact = value.artifacts.find(({ kind }) => kind === "source-corpus");
+      artifact.migration.nativeTargets = artifact.migration.nativeTargets.filter((target) => !target.startsWith("atlas://datasets/"));
+    }],
+    ["narrative-context-fidelity", (value) => {
+      const artifact = value.artifacts.find(({ kind }) => kind === "knowledge-document");
+      artifact.migration.nativeTargets = artifact.migration.nativeTargets.filter((target) => !target.startsWith("atlas://narratives/"));
+    }],
+    ["credit-authority-voice-parity", (value) => {
+      const record = value.stakeholders.find(({ locations }) => locations.length);
+      record.address = "atlas://stakeholders/WRONG";
+    }],
+    ["correction-rejection-lineage-parity", (value) => {
+      const record = value.semanticRecords.find(({ id, locations }) => /^(?:COR|DEC)-/.test(id) && locations.length);
+      record.address = "atlas://semantic-records/WRONG";
+    }],
+    ["native-provenance-closure", (value) => { value.sourceObjects[0].knowledgeClasses = []; }],
+    ["native-source-object-fixity", (value) => { value.sourceObjects[0].sha256 = "0".repeat(64); }],
+    ["dataset-query-equivalence", (_value, contract) => { contract.tasks.tasks.find(({ operation }) => operation === "source-object").operation = "artifact"; }],
+    ["git-association-independent-execution", (_value, contract) => { contract.tasks.tasks.find(({ operation }) => operation === "source-object").operation = "artifact"; }],
+    ["consumer-projection-continuity", (_value, contract) => { contract.tasks.tasks.find(({ operation }) => operation === "source-object").operation = "artifact"; }],
+    ["semantic-changeset-completeness", (value) => { value.artifacts[0].knowledgeClasses.push("knowledge-artifact"); }]
+  ];
+  for (const [id, mutate] of cases) {
+    const knowledge = structuredClone(catalog);
+    const contract = structuredClone(contracts);
+    mutate(knowledge, contract);
+    assert.equal(evaluation(runAdvanced({ knowledge, contract }), id).passed, false, `${id} accepted its named mutation`);
+  }
 });

@@ -14,6 +14,7 @@ export {
   integrationCatalogFingerprint,
   loadFeatureEvalKnowledge,
   readFeatureEvalArtifact,
+  renderAccessionMigrationReport,
   validateFeatureEvalKnowledge,
   verifyFeatureEvalHistory,
   verifyFeatureEvalSourceArtifacts
@@ -42,7 +43,8 @@ export {
   materializePortableAtlasBundle,
   portableAtlasFiles,
   validatePortableAtlasSource,
-  verifyPortableAtlasBundle
+  verifyPortableAtlasBundle,
+  readPortableAtlasSourceObject
 } from "./portable.mjs";
 export {
   atlasAuthoritySchema,

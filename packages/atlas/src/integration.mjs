@@ -95,6 +95,139 @@ function gitBlobHash(value) {
     .digest("hex");
 }
 
+function mediaType(file) {
+  const extension = path.extname(file).toLowerCase();
+  return {
+    ".csv": "text/csv",
+    ".html": "text/html",
+    ".json": "application/json",
+    ".jsonl": "application/x-ndjson",
+    ".md": "text/markdown",
+    ".mjs": "text/javascript",
+    ".ts": "text/typescript",
+    ".txt": "text/plain"
+  }[extension] ?? "application/octet-stream";
+}
+
+function csvHeader(line) {
+  const values = [];
+  let current = "";
+  let quoted = false;
+  for (let index = 0; index < line.length; index += 1) {
+    const character = line[index];
+    if (character === '"' && quoted && line[index + 1] === '"') {
+      current += '"';
+      index += 1;
+    } else if (character === '"') quoted = !quoted;
+    else if (character === "," && !quoted) {
+      values.push(sanitize(current));
+      current = "";
+    } else current += character;
+  }
+  values.push(sanitize(current));
+  return values;
+}
+
+function jsonShape(value) {
+  const counts = { arrays: 0, objects: 0, scalars: 0 };
+  const keys = new Set();
+  const visit = (nested) => {
+    if (Array.isArray(nested)) {
+      counts.arrays += 1;
+      nested.forEach(visit);
+    } else if (nested && typeof nested === "object") {
+      counts.objects += 1;
+      Object.keys(nested).forEach((key) => keys.add(key));
+      Object.values(nested).forEach(visit);
+    } else counts.scalars += 1;
+  };
+  visit(value);
+  return { ...counts, keys: [...keys].sort() };
+}
+
+function structuralProfile(content, file) {
+  const extension = path.extname(file).toLowerCase();
+  const lines = content ? content.split(/\r?\n/).length : 0;
+  const profile = { extension, mediaType: mediaType(file), lines };
+  if (extension === ".md") {
+    return {
+      ...profile,
+      headings: [...content.matchAll(/^(#{1,6})\s+(.+)$/gm)].map((match) => ({ level: match[1].length, text: sanitize(match[2]) })),
+      fencedCodeBlocks: [...content.matchAll(/^```/gm)].length / 2,
+      tableRows: [...content.matchAll(/^\|.*\|\s*$/gm)].length
+    };
+  }
+  if (extension === ".json") {
+    try {
+      const parsed = JSON.parse(content);
+      return { ...profile, valid: true, topLevel: Array.isArray(parsed) ? "array" : typeof parsed, ...jsonShape(parsed) };
+    } catch {
+      return { ...profile, valid: false };
+    }
+  }
+  if (extension === ".jsonl") {
+    const rows = content.split(/\r?\n/).filter(Boolean);
+    const parsed = [];
+    for (const row of rows) {
+      try { parsed.push(JSON.parse(row)); } catch { /* represented by validRows */ }
+    }
+    return { ...profile, rows: rows.length, validRows: parsed.length, ...jsonShape(parsed) };
+  }
+  if (extension === ".csv") {
+    const rows = content.split(/\r?\n/).filter(Boolean);
+    return { ...profile, columns: rows.length ? csvHeader(rows[0]) : [], rows: Math.max(0, rows.length - 1) };
+  }
+  if ([".ts", ".mjs"].includes(extension)) {
+    const source = ts.createSourceFile(file, content, ts.ScriptTarget.Latest, true, extension === ".ts" ? ts.ScriptKind.TS : ts.ScriptKind.JS);
+    const exports = new Set();
+    let imports = 0;
+    let declarations = 0;
+    const visit = (node) => {
+      if (ts.isImportDeclaration(node) || ts.isImportEqualsDeclaration(node)) imports += 1;
+      if (ts.isVariableStatement(node) || ts.isFunctionDeclaration(node) || ts.isClassDeclaration(node) || ts.isInterfaceDeclaration(node) || ts.isTypeAliasDeclaration(node)) {
+        declarations += 1;
+        if (node.modifiers?.some(({ kind }) => kind === ts.SyntaxKind.ExportKeyword)) {
+          if (ts.isVariableStatement(node)) {
+            for (const declaration of node.declarationList.declarations) {
+              if (ts.isIdentifier(declaration.name)) exports.add(declaration.name.text);
+            }
+          } else if (node.name) exports.add(node.name.text);
+        }
+      }
+      if (ts.isExportAssignment(node)) exports.add("default");
+      ts.forEachChild(node, visit);
+    };
+    visit(source);
+    return { ...profile, imports, declarations, exports: [...exports].sort() };
+  }
+  if (extension === ".html") {
+    return { ...profile, title: sanitize(content.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? ""), headings: [...content.matchAll(/<h[1-6]\b/gi)].length };
+  }
+  return profile;
+}
+
+function baseKnowledgeClasses(kind, file) {
+  const classes = new Set({
+    evaluation: ["situated-evaluation"],
+    "knowledge-document": ["narrative-context"],
+    "knowledge-tooling": ["operational-procedure"],
+    "source-corpus": ["source-dataset"],
+    "structured-knowledge": ["structured-records"]
+  }[kind] ?? ["knowledge-artifact"]);
+  const extension = path.extname(file).toLowerCase();
+  if (extension === ".md") classes.add("semantic-markdown");
+  if ([".json", ".jsonl"].includes(extension)) classes.add("structured-dataset");
+  if (extension === ".csv") classes.add("tabular-dataset");
+  if ([".ts", ".mjs"].includes(extension)) classes.add("executable-schema-or-procedure");
+  if (extension === ".html") classes.add("web-document");
+  if (extension === ".txt") classes.add("plain-text-context");
+  return classes;
+}
+
+function nativeTarget(type, id) {
+  return `atlas://${type}/${encodeURIComponent(id)}`;
+}
+
 function sorted(values) {
   return [...new Set(values)].sort();
 }
@@ -284,15 +417,26 @@ export function buildFeatureEvalKnowledge({ repoRoot, manifest }) {
     const branchPublicUrls = new Set();
     const branchProtected = new Set();
     for (const artifact of branchArtifacts) {
+      if (!contents.has(artifact.blob)) contents.set(artifact.blob, readBlob(repoRoot, artifact.blob));
+      const content = contents.get(artifact.blob);
+      const sha256 = hash(content);
+      const sourceObjectId = `atlas://source-objects/sha256/${sha256}`;
       const mapped = {
         branch: source.branch,
         commit: source.sourceCommit,
         ...artifact,
-        contentAddress: `git-blob:${artifact.blob}`
+        contentAddress: sourceObjectId,
+        sourceObjectId,
+        sha256,
+        accessionProvenance: {
+          system: "git",
+          blob: artifact.blob,
+          branch: source.branch,
+          commit: source.sourceCommit,
+          path: artifact.path
+        }
       };
       artifacts.push(mapped);
-      if (!contents.has(artifact.blob)) contents.set(artifact.blob, readBlob(repoRoot, artifact.blob));
-      const content = contents.get(artifact.blob);
       for (const id of content.match(semanticIdPattern) ?? []) {
         branchSemantic.add(id);
         if (!semantic.has(id)) semantic.set(id, { id, kind: id.split("-")[0], branches: new Set(), locations: new Set() });
@@ -363,13 +507,95 @@ export function buildFeatureEvalKnowledge({ repoRoot, manifest }) {
     branches: sorted(entry.branches),
     locations: sorted(entry.locations)
   });
+  const semanticRecords = [...semantic.values()].map(serializeSetEntry)
+    .map((entry) => ({ ...entry, address: nativeTarget("semantic-records", entry.id) }))
+    .sort((left, right) => left.id.localeCompare(right.id));
+  const serializedVariants = [...recordVariants.values()].map(serializeSetEntry)
+    .map((entry) => ({ ...entry, address: nativeTarget("record-variants", `${entry.id}/${entry.digest}`) }))
+    .sort((left, right) => `${left.id}:${left.digest}`.localeCompare(`${right.id}:${right.digest}`));
+  const serializedDocuments = [...documents.values()].map(serializeSetEntry)
+    .map((entry) => ({ ...entry, address: nativeTarget("documents", `${hash(contents.get(entry.blob))}/${entry.title}`) }))
+    .sort((left, right) => `${left.title}:${left.blob}`.localeCompare(`${right.title}:${right.blob}`));
+  const serializedPublicSources = [...publicUrls.values()].map(serializeSetEntry)
+    .map((entry) => ({ ...entry, address: nativeTarget("source-locators/public", hash(entry.url)) }))
+    .sort((left, right) => left.url.localeCompare(right.url));
+  const serializedProtectedSources = [...protectedLocators.values()].map(serializeSetEntry)
+    .map((entry) => ({ ...entry, address: nativeTarget("source-locators/protected", entry.locatorHash) }))
+    .sort((left, right) => left.locatorHash.localeCompare(right.locatorHash));
+  const serializedStakeholders = [...stakeholders.values()].map(serializeSetEntry)
+    .map((entry) => ({ ...entry, address: nativeTarget("stakeholders", `${entry.id}/${entry.label}`) }))
+    .sort((left, right) => `${left.label}:${left.id}`.localeCompare(`${right.label}:${right.id}`));
+  const targetsByLocation = new Map();
+  const addTarget = (location, target) => {
+    if (!targetsByLocation.has(location)) targetsByLocation.set(location, new Set());
+    targetsByLocation.get(location).add(target);
+  };
+  for (const entry of semanticRecords) for (const location of entry.locations) addTarget(location, entry.address);
+  for (const entry of serializedVariants) for (const location of entry.locations) addTarget(location, entry.address);
+  for (const entry of serializedDocuments) for (const location of entry.locations) addTarget(location, entry.address);
+  for (const entry of serializedPublicSources) for (const location of entry.locations) addTarget(location, entry.address);
+  for (const entry of serializedProtectedSources) for (const location of entry.locations) addTarget(location, entry.address);
+  for (const entry of serializedStakeholders) for (const location of entry.locations) addTarget(location, entry.address);
+
+  const sourceObjects = new Map();
+  for (const artifact of artifacts) {
+    const content = contents.get(artifact.blob);
+    const location = `${artifact.branch}:${artifact.path}`;
+    const classes = baseKnowledgeClasses(artifact.kind, artifact.path);
+    const targets = new Set([
+      artifact.sourceObjectId,
+      nativeTarget("source-profiles/sha256", artifact.sha256)
+    ]);
+    if (artifact.kind === "evaluation") targets.add(nativeTarget("source-evaluations/sha256", artifact.sha256));
+    if (artifact.kind === "knowledge-tooling") targets.add(nativeTarget("procedures/sha256", artifact.sha256));
+    if (artifact.kind === "source-corpus") targets.add(nativeTarget("datasets/sha256", artifact.sha256));
+    if (artifact.kind === "knowledge-document") targets.add(nativeTarget("narratives/sha256", artifact.sha256));
+    const mappedTargets = [...(targetsByLocation.get(location) ?? [])];
+    if (mappedTargets.some((target) => target.startsWith("atlas://semantic-records/"))) classes.add("semantic-identifiers");
+    if (mappedTargets.some((target) => target.startsWith("atlas://record-variants/"))) classes.add("heteroglossic-record-variants");
+    if (mappedTargets.some((target) => target.startsWith("atlas://source-locators/"))) classes.add("source-locators");
+    if (mappedTargets.some((target) => target.startsWith("atlas://stakeholders/"))) classes.add("stakeholder-credit");
+    artifact.knowledgeClasses = [...classes].sort();
+    artifact.migration = {
+      status: "native",
+      disposition: "native-component-with-full-fidelity-source-object",
+      nativeTargets: [...targets].sort(),
+      residualKnowledge: "none-known",
+      reviewability: "structural-profile-and-full-fidelity-object"
+    };
+    const existing = sourceObjects.get(artifact.sha256);
+    if (existing) {
+      existing.accessionLocations.push(location);
+      if (!existing.historicalGitBlobs.includes(artifact.blob)) existing.historicalGitBlobs.push(artifact.blob);
+      existing.knowledgeClasses = sorted([...existing.knowledgeClasses, ...artifact.knowledgeClasses]);
+      existing.nativeTargets = sorted([...existing.nativeTargets, ...artifact.migration.nativeTargets]);
+    } else {
+      sourceObjects.set(artifact.sha256, {
+        id: artifact.sourceObjectId,
+        sha256: artifact.sha256,
+        bytes: Buffer.byteLength(content),
+        mediaType: mediaType(artifact.path),
+        profile: structuralProfile(content, artifact.path),
+        knowledgeClasses: artifact.knowledgeClasses,
+        nativeTargets: artifact.migration.nativeTargets,
+        historicalGitBlobs: [artifact.blob],
+        accessionLocations: [location]
+      });
+    }
+  }
+  for (const sourceObject of sourceObjects.values()) {
+    sourceObject.historicalGitBlobs.sort();
+    sourceObject.accessionLocations.sort();
+  }
   const catalog = {
-    schemaVersion: 2,
+    schemaVersion: 3,
     sourceCutAt: manifest.sourceCutAt,
     sourceManifestFingerprint: hash(JSON.stringify(manifest)),
     retention: {
-      mode: "git-object-ancestry",
+      mode: "atlas-native-source-objects",
       branchRefsRequired: false,
+      gitRequiredAfterMaterialization: false,
+      accessionAssociationsAreProvenanceOnly: true,
       completeContentAvailableThroughAtlas: true
     },
     totals: {
@@ -377,6 +603,7 @@ export function buildFeatureEvalKnowledge({ repoRoot, manifest }) {
       artifactMappings: artifacts.length,
       fullFidelityArtifacts: artifacts.length,
       uniqueBlobs: contents.size,
+      nativeSourceObjects: sourceObjects.size,
       semanticIds: semantic.size,
       recordVariants: recordVariants.size,
       documents: documents.size,
@@ -386,14 +613,15 @@ export function buildFeatureEvalKnowledge({ repoRoot, manifest }) {
     },
     branches: branchSummaries.sort((left, right) => left.branch.localeCompare(right.branch)),
     artifacts: artifacts.sort((left, right) => `${left.branch}:${left.path}`.localeCompare(`${right.branch}:${right.path}`)),
-    semanticRecords: [...semantic.values()].map(serializeSetEntry).sort((left, right) => left.id.localeCompare(right.id)),
-    recordVariants: [...recordVariants.values()].map(serializeSetEntry).sort((left, right) => `${left.id}:${left.digest}`.localeCompare(`${right.id}:${right.digest}`)),
-    documents: [...documents.values()].map(serializeSetEntry).sort((left, right) => `${left.title}:${left.blob}`.localeCompare(`${right.title}:${right.blob}`)),
+    sourceObjects: [...sourceObjects.values()].sort((left, right) => left.sha256.localeCompare(right.sha256)),
+    semanticRecords,
+    recordVariants: serializedVariants,
+    documents: serializedDocuments,
     sources: {
-      public: [...publicUrls.values()].map(serializeSetEntry).sort((left, right) => left.url.localeCompare(right.url)),
-      protected: [...protectedLocators.values()].map(serializeSetEntry).sort((left, right) => left.locatorHash.localeCompare(right.locatorHash))
+      public: serializedPublicSources,
+      protected: serializedProtectedSources
     },
-    stakeholders: [...stakeholders.values()].map(serializeSetEntry).sort((left, right) => `${left.label}:${left.id}`.localeCompare(`${right.label}:${right.id}`))
+    stakeholders: serializedStakeholders
   };
   return { ...catalog, catalogFingerprint: integrationCatalogFingerprint(catalog) };
 }
@@ -402,11 +630,81 @@ export function loadFeatureEvalKnowledge(repoRoot) {
   return JSON.parse(readFileSync(path.join(repoRoot, "docs/atlas/generated/feature-evals-knowledge.json"), "utf8"));
 }
 
+function countBy(values, selector) {
+  const counts = new Map();
+  for (const value of values) {
+    const key = selector(value);
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort(([left], [right]) => left.localeCompare(right));
+}
+
+export function renderAccessionMigrationReport(catalog) {
+  const kindRows = countBy(catalog.artifacts, ({ kind }) => kind)
+    .map(([kind, count]) => `| ${kind} | ${count} |`)
+    .join("\n");
+  const extensionRows = countBy(catalog.artifacts, ({ path: artifactPath }) => path.extname(artifactPath) || "(none)")
+    .map(([extension, count]) => `| ${extension} | ${count} |`)
+    .join("\n");
+  const classRows = countBy(catalog.artifacts.flatMap(({ knowledgeClasses }) => knowledgeClasses), (value) => value)
+    .map(([knowledgeClass, count]) => `| ${knowledgeClass} | ${count} |`)
+    .join("\n");
+  return `# Atlas accession migration report
+
+This generated report makes the migration from the fourteen \`feature/evals-*\`
+accession sources inspectable without treating Git associations as Atlas access
+protocols. Historical branches, commits, paths, and Git blob identities remain
+provenance. Native SHA-256 source objects, structural profiles, knowledge classes,
+and semantic targets are the retained Atlas representations.
+
+## Closure
+
+- Source branches accessioned: ${catalog.totals.branches}
+- Artifact associations dispositioned: ${catalog.totals.artifactMappings}
+- Native source objects fixed by SHA-256: ${catalog.totals.nativeSourceObjects}
+- Semantic identities indexed: ${catalog.totals.semanticIds}
+- Heteroglossic record variants retained: ${catalog.totals.recordVariants}
+- Narrative document digests retained: ${catalog.totals.documents}
+- Public locators retained: ${catalog.totals.publicUrls}
+- Protected locators retained by non-reversible hash: ${catalog.totals.protectedLocators}
+- Artifacts with known residual knowledge: ${catalog.artifacts.filter(({ migration }) => migration.residualKnowledge !== "none-known").length}
+- Catalog fingerprint: \`${catalog.catalogFingerprint}\`
+
+## Artifact dispositions
+
+| Atlas artifact kind | Associations |
+| --- | ---: |
+${kindRows}
+
+## Format coverage
+
+| Format | Associations |
+| --- | ---: |
+${extensionRows}
+
+## Knowledge-class coverage
+
+One artifact may carry more than one class.
+
+| Knowledge class | Associations |
+| --- | ---: |
+${classRows}
+
+## Review boundary
+
+Automated closure means that every accession artifact has a recoverable native
+source object, a format-aware structural profile, declared knowledge classes,
+native targets, and no known undispositioned remainder. It does not mean an agent
+has certified social meaning, situated experience, voice, or interpretive
+equivalence. Those questions remain fail-closed human gates in the Atlas suite.
+`;
+}
+
 export function validateFeatureEvalKnowledge({ catalog, manifest }) {
   const errors = [];
-  if (catalog.schemaVersion !== 2) errors.push("Feature-evals catalog requires schemaVersion 2");
-  if (catalog.retention?.mode !== "git-object-ancestry" || catalog.retention?.branchRefsRequired !== false) {
-    errors.push("Feature-evals catalog lacks the branch-independent full-fidelity retention contract");
+  if (catalog.schemaVersion !== 3) errors.push("Feature-evals catalog requires schemaVersion 3");
+  if (catalog.retention?.mode !== "atlas-native-source-objects" || catalog.retention?.branchRefsRequired !== false || catalog.retention?.gitRequiredAfterMaterialization !== false) {
+    errors.push("Feature-evals catalog lacks the native, branch-independent full-fidelity retention contract");
   }
   const branches = new Map(catalog.branches.map((entry) => [entry.branch, entry]));
   for (const source of manifest.branches) {
@@ -424,6 +722,17 @@ export function validateFeatureEvalKnowledge({ catalog, manifest }) {
   if (catalog.totals.fullFidelityArtifacts !== catalog.totals.artifactMappings) {
     errors.push("Not every source artifact has a full-fidelity Atlas content address");
   }
+  if (catalog.totals.nativeSourceObjects !== catalog.sourceObjects?.length || catalog.totals.nativeSourceObjects !== catalog.totals.uniqueBlobs) {
+    errors.push("Native source-object census does not close over the accession blobs");
+  }
+  for (const artifact of catalog.artifacts) {
+    if (artifact.contentAddress !== artifact.sourceObjectId || artifact.sourceObjectId !== `atlas://source-objects/sha256/${artifact.sha256}`) {
+      errors.push(`Artifact lacks a native content address: ${artifact.branch}:${artifact.path}`);
+    }
+    if (artifact.migration?.status !== "native" || artifact.migration?.residualKnowledge !== "none-known" || artifact.migration?.nativeTargets?.length < 2) {
+      errors.push(`Artifact migration is incomplete: ${artifact.branch}:${artifact.path}`);
+    }
+  }
   return errors;
 }
 
@@ -432,11 +741,12 @@ export function verifyFeatureEvalSourceArtifacts({ repoRoot, catalog, manifest }
     listArtifacts(repoRoot, source.sourceCommit).map((artifact) => ({
       branch: source.branch,
       commit: source.sourceCommit,
-      ...artifact,
-      contentAddress: `git-blob:${artifact.blob}`
+      ...artifact
     }))
   ).sort((left, right) => `${left.branch}:${left.path}`.localeCompare(`${right.branch}:${right.path}`));
-  const observed = [...catalog.artifacts]
+  const observed = catalog.artifacts.map(({ branch, commit, blob, bytes, path: artifactPath, kind }) => ({
+    branch, commit, blob, bytes, path: artifactPath, kind
+  }))
     .sort((left, right) => `${left.branch}:${left.path}`.localeCompare(`${right.branch}:${right.path}`));
   if (JSON.stringify(observed) === JSON.stringify(expected)) return [];
   const expectedKeys = new Set(expected.map((entry) => `${entry.branch}:${entry.path}:${entry.blob}`));

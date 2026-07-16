@@ -2,7 +2,7 @@
 
 Atlas is the canonical private knowledge system for Jamie's public-safe
 personal-professional knowledge universe. It joins complete atomic records,
-the semantic Markdown wiki, immutable A-N source artifacts, queries, evals, and
+the semantic Markdown wiki, native A-N source objects, queries, evals, and
 a clean-room portable export without exposing the private archive or turning
 the portfolio into a database.
 
@@ -23,6 +23,11 @@ federated source catalog in `generated/feature-evals-knowledge.json` preserves
 the knowledge inventory from all fourteen frozen `feature/evals-*` source
 trees. See [`source-integration.md`](source-integration.md) for its provenance,
 privacy, and merge-history contract.
+
+`accession-migration-policy.json` defines the native migration protocols.
+`generated/accession-migration-report.md` summarizes closure, formats, and
+knowledge classes for a human PR reader; the full JSON catalog remains the
+deterministic audit ledger.
 
 The ontology, record-disposition ledger, and variant policy are versioned in
 `ontology.json`, `record-dispositions.json`, and `variant-policy.json`. The

@@ -26,6 +26,10 @@ feature/evals integration manifest
         +
 federated A-N knowledge catalog
         +
+native source-object and structural-profile protocol
+        +
+accession migration policy and human-readable changeset
+        +
 named stakeholder credit register
         +
 ontology, disposition, and variant contracts
@@ -39,6 +43,8 @@ versioned machine, task, and human eval contracts
   - canonical lifecycle and proof records
   - complete project-slice migration
   - immutable source-artifact inventory
+  - native SHA-256 source objects and format-aware profiles
+  - explicit dataset, procedure, evaluation, and narrative targets
   - public/protected locator separation
   - named-credit boundary checks
   - query/explain service
@@ -69,10 +75,12 @@ Atlas. Semantic Markdown remains the human composition layer, while atomic
 JSON records retain exact nested lifecycle structure.
 
 Branch-specific knowledge is federated rather than silently coerced into the
-base schema. Exact source artifacts remain attributable to their frozen commit;
-selected public-safe records and document abstracts become queryable through
-Atlas. This preserves disagreement and schema variation while creating one
-loss-aware discovery surface.
+base schema. Exact source artifacts receive native SHA-256 identities;
+historical Git commits and paths remain accession provenance rather than access
+protocols. Public-safe records, variants, documents, locators, evaluations,
+procedures, datasets, and source profiles become independently addressable.
+This preserves disagreement and schema variation while creating one loss-aware
+discovery surface and a Git-independent portable bundle.
 
 ## Knowledge and evaluation layers
 
@@ -81,8 +89,9 @@ combined:
 
 1. Atomic canonical records preserve exact lifecycle structure.
 2. Semantic Markdown pages compose navigable, situated neighborhoods.
-3. The federated catalog preserves branch-local variants and immutable source
-   artifacts without silently resolving disagreement.
+3. The federated catalog preserves branch-local variants, native source
+   objects, structural profiles, and situated component dispositions without
+   silently resolving disagreement.
 4. Ontology, disposition, rights, credit, and projection contracts state how
    records may be related and used.
 5. Versioned evals test machine invariants, grounded retrieval, adversarial
