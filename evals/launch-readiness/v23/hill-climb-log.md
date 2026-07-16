@@ -158,3 +158,54 @@ suite size.
   criteria.
 - **Protected boundaries:** Preserve historical eval versions and every prior
   hill-climb record. Do not delete audit evidence to simplify maintenance.
+
+## Attempt 9: deepen the Kansas City Star source without projecting it
+
+- **Observed limitation:** The bank had normalized the November 15, 2007,
+  Kansas City Star clipping, but reduced its affordance to front-page placement,
+  Jamie's crew participation, and a broad Kansas City-to-Louisiana frame.
+- **Hypothesis:** A fresh visual and textual close read can recover the source's
+  distinct role, apparatus, participation, and civic-interpretation claims
+  without creating a duplicate source or strengthening the public website.
+- **Bounded change:** Fingerprint the supplied duplicate; deepen the canonical
+  source affordances; retain one updated publication claim; add four atomic
+  claims for initiating role, collective crew and raft, participatory method,
+  and attributed river interpretation; add a duplicate intake receipt; and
+  preserve locators, anti-claims, clipping rights, and non-projection.
+- **Protected boundaries:** Keep the copyrighted PDF outside the repository;
+  expose no machine-local path; keep the expedition collective; do not infer a
+  completed Gulf endpoint, person-by-person labor allocation, or measured
+  cultural outcome.
+- **Result:** `INTAKE-001` increases from 43 to 44 required fragments and the
+  archive validator from 10 to 14 required claims and 12 to 13 required
+  intakes. Every deterministic gate remains passing. Two independent semantic
+  graders place every semantic criterion at or above `0.8`; the conservative
+  `DECOMP-001` score is `0.8` because route, rights, and labor-allocation
+  follow-up remains intentionally open.
+
+## Attempt 10: repair measured compact-text contrast
+
+- **Observed failure:** A fresh browser pass found seven 12-pixel labels or
+  provenance lines on CallNYC at approximately `3.86:1` to `3.87:1`, below the
+  `4.5:1` normal-text requirement in `A11Y-001`.
+- **Hypothesis:** Increasing only the affected shared text opacities will clear
+  the hard gate without changing hierarchy, content, spacing, or responsive
+  behavior.
+- **Bounded change:** Raise inverse At-a-glance labels from 70 to 80 percent
+  paper and artifact provenance text from 64 to 72 percent ink.
+- **Protected boundaries:** Do not remove labels, captions, citations, or
+  artifact context; do not hide overflow or reduce type size.
+- **Result:** The repeated browser pass measures a minimum contrast of `4.53:1`
+  across 128 CallNYC text specimens, with zero failures. All 56 route-width
+  checks at 320, 375, 768, and 1440 pixels pass; all 14 200-percent-equivalent
+  reflow checks pass; all 48 traversed controls expose visible focus; all 13
+  citation links and 13 backlinks retain accessible names and local targets;
+  and HJE, FairRentNYC, and CallNYC retain legible, captioned artifacts.
+
+## Current stop boundary
+
+All deterministic, browser, and semantic criteria available to agents meet
+their individual thresholds. The release target remains open because it still
+requires real reader, collaborator, holdout, application-selection, launch-
+approval, and deployed-runtime observations. Those gates may not be inferred
+or satisfied by this repository pass.
