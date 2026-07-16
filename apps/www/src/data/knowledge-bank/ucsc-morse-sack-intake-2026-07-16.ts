@@ -100,10 +100,10 @@ export const ucscMorseSackClaimRecords20260716 = [
     projections: [
       {
         key: "about",
-        text: "Before I had product-operations language for this work, I was building participatory art and social-software experiments: communal spaces with shared governance, open invitations, and many ways for participants to document what happened.",
-        status: "hold",
+        text: "In 2006, Open House and the earlier Shop Shows used participatory art, communal space, shared responsibility, open invitations, and multiple forms of documentation to let participants help shape what happened.",
+        status: "active",
         citationRequired: true,
-        surfaces: []
+        surfaces: ["/about"]
       }
     ],
     evidence: [
@@ -275,7 +275,7 @@ export const ucscMorseSackIntakeRecords20260716 = [
     projectHints: ["open-house-ucsc", "participatory-systems", "ucsc-digital-media"],
     maturity: "decomposed",
     publicUse: "public-linkable",
-    editorialState: "unsurfaced",
+    editorialState: "selected",
     disposition: "linked-existing",
     sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006"],
     claimIds: ["CLM-OPEN-HOUSE-PARTICIPATORY-SYSTEM-2006"],

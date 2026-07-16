@@ -457,6 +457,21 @@ const knowledgeBankInput = {
   ],
   pages: [
     {
+      id: "about",
+      surface: "/about",
+      sharedBoundary:
+        "The article documents the historical projects. The present-day bridge is Jamie's interpretation; it does not establish current endorsement, sole authorship, measured impact, or current technical capability.",
+      sourceOrder: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006"],
+      occurrences: [
+        {
+          id: "artistic-social-systems-lineage",
+          claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-SYSTEM-2006",
+          projection: "about",
+          sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006"]
+        }
+      ]
+    },
+    {
       id: "callnyc",
       surface: "/work/callnyc",
       sharedBoundary:

@@ -109,3 +109,30 @@ observed use. The conservative minimum therefore failed all three.
 - **Bounded change:** Keep the four-example Proof map; retain all other work in
   `/work` and the bank; point the README to v23; distinguish maintained use from
   unmeasured customer or staff effects.
+
+## Independent Morse and Sack baseline: `0d02a716`
+
+Two independent semantic graders scored both `MORSE-001` and `SACK-001` at
+`0.5`. They agreed that the public site contained relevant ingredients in
+Sunday Dinner, WOW List, CallNYC, and Source-Backed Team Memory, but required a
+reader to reconstruct the lineage. The strongest public-source-backed bridge
+remained held in the knowledge bank. Neither grader found protected educational
+records, private correspondence, or an unapproved testimonial on public
+surfaces.
+
+## Attempt 7: make the lineage visible
+
+- **Observed failure:** Hiring clarity flattened the connection among embodied
+  artistic inquiry, hospitality, social relationships, prototypes, and current
+  operating systems.
+- **Hypothesis:** One cited historical sentence plus a short reflective bridge
+  will make the method visible without adding another case study, weakening role
+  clarity, or exposing the protected records that informed the lenses.
+- **Bounded change:** Activate one Good Times-backed Open House claim on About;
+  separate the historical claim from Jamie's present-day interpretation; name
+  the recurring move from relationships to a shared representation or interface
+  to perceivable, usable, revisable collective context.
+- **Protected boundaries:** Keep the unofficial evaluations, recommendation
+  screenshot, and private correspondence protected. Preserve collective credit.
+  Do not claim present endorsement, sole authorship, measured impact, or current
+  technical breadth from historical coursework.

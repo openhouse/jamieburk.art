@@ -83,6 +83,29 @@
       ]
     },
     {
+      "id": "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
+      "title": "Open House: How Jamie Burkart turned a UCSC gallery into a 10-day experiment in communal living",
+      "organization": "Good Times / Metro Santa Cruz",
+      "author": "Laura Mattingly",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2006-06-28",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Laura Mattingly, 'Open House,' Good Times / Metro Santa Cruz, June 28, 2006.",
+      "publicNote": "The reported feature documents Open House, the earlier Shop Shows, participant experiences, communal decision-making, shared documentation, and Jamie's participatory art approach.",
+      "captureFingerprint": "sha256:ac7a139b71b82f5250a6e25229ad13fb8e18d1664b5e80b24755c546d9153511",
+      "doesNotEstablish": [
+        "a formal housing program",
+        "long-term outcomes for participants",
+        "municipal sponsorship",
+        "sole authorship of participant-created work",
+        "current technical capability without additional evidence"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-GOTHAMIST-CABARET-2017",
       "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
       "organization": "Gothamist",
@@ -1667,9 +1690,61 @@
         "This is the project's own mission language, not an independent evaluation.",
         "The description does not measure adoption, reach, attendance, endorsement, or impact."
       ]
+    },
+    {
+      "id": "CLM-OPEN-HOUSE-PARTICIPATORY-SYSTEM-2006",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "about",
+          "text": "In 2006, Open House and the earlier Shop Shows used participatory art, communal space, shared responsibility, open invitations, and multiple forms of documentation to let participants help shape what happened.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
+          "relationship": "direct-support",
+          "supports": [
+            "participatory art and communal-space practice",
+            "shared governance and open invitation",
+            "multi-perspective documentation",
+            "an explicit relationship to social-software ideas"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit Open House residents, Shop Show participants, and collaborators collectively where the work was shared.",
+        "Do not reproduce sensitive participant details or images from the historical article without separate review.",
+        "The article supports the early lineage; the present-day connection is Jamie's reflective framing."
+      ]
     }
   ],
   "pages": [
+    {
+      "id": "about",
+      "surface": "/about",
+      "sourceOrder": [
+        "SRC-OPEN-HOUSE-GOOD-TIMES-2006"
+      ],
+      "occurrences": [
+        {
+          "id": "artistic-social-systems-lineage",
+          "claimId": "CLM-OPEN-HOUSE-PARTICIPATORY-SYSTEM-2006",
+          "projection": "about",
+          "sourceIds": [
+            "SRC-OPEN-HOUSE-GOOD-TIMES-2006"
+          ]
+        }
+      ],
+      "sharedBoundary": "The article documents the historical projects. The present-day bridge is Jamie's interpretation; it does not establish current endorsement, sole authorship, measured impact, or current technical capability."
+    },
     {
       "id": "callnyc",
       "surface": "/work/callnyc",
