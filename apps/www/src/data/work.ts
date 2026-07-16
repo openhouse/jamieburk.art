@@ -174,24 +174,129 @@ const workItemsInput = [
     }
   },
   {
-    title: "NYC Artist Coalition / FairRentNYC",
-    slug: "fair-rent-nyc",
-    series: "Civic Systems",
-    subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
+    title: "NYC Artist Coalition",
+    slug: "nyc-artist-coalition",
+    series: "Civic Participation Systems",
+    subtitle: "Listening, safety practice, public identity, and cultural-policy interfaces",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+      "Co-founded NYC Artist Coalition and helped build its recurring participation, public identity, safety, campaign, and testimony systems, connecting artists and small cultural spaces with practical services and civic processes.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications",
-    years: "NYC Artist Coalition: 2017-Present; FairRentNYC: 2018-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     proofBankIds: [
-      "fair-rent-campaign-memory",
-      "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
       "nyc-artist-coalition-participation-system"
+    ],
+    whatWasUnclear:
+      "Artists and small cultural spaces held essential knowledge about safety, enforcement, licensing, affordability, and cultural policy, but that knowledge was distributed across people, neighborhoods, venues, and nights.",
+    whatBecameUsable:
+      "A recurring participation system, durable public identity, practical safety pathways, campaign websites, coalition recommendations, public testimony, and continuing routes between cultural-space experience and civic process.",
+    artifactTypes: ["website", "workflow", "public handout", "decision record", "press"],
+    artifacts: [
+      {
+        title: "Recurring participation system",
+        description:
+          "Public meetings rotating through small cultural spaces, connected to practical sessions, town halls, hearings, and campaign actions.",
+        type: "workflow"
+      },
+      {
+        title: "Shared public identity",
+        description:
+          "A coalition identity and campaign family that collaborators used across cultural-space, rent, relief, nightlife, and accountability work.",
+        type: "website"
+      },
+      {
+        title: "Safety and civic pathways",
+        description:
+          "Study groups, walkthroughs, Fire Guard access, recommendations, and testimony connecting practical care with public process.",
+        type: "guide"
+      },
+      {
+        title: "Source-backed operating sequence",
+        description:
+          "A public-record timeline separating Jamie's work, coalition action, legislation, agency decisions, and longer movement history.",
+        type: "diagram"
+      }
+    ],
+    tags: [
+      "Civic Technology",
+      "Coalition Operations",
+      "Public Programs",
+      "Safety",
+      "Policy Communications",
+      "Public-Facing Tools"
+    ],
+    capabilities: [
+      "Participation Design",
+      "Coalition Operations",
+      "Public Identity Systems",
+      "Safety Practice",
+      "Public Testimony",
+      "Campaign Websites",
+      "Stakeholder Translation"
+    ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" }
+    ],
+    careNote:
+      "This composition gives Jamie direct credit for documented work while preserving collaborator, movement, legislative, agency, venue, and participant credit.",
+    sourceLayer:
+      "Council transcripts, DCLA records, independent reporting, public campaign sites, population-accounted public event and social records, and bounded first-hand context.",
+    credits: [
+      "Jamie Burkart",
+      "NYC Artist Coalition collaborators",
+      "Let NYC Dance and Talks Not Raids partners",
+      "Artists, venue workers, advocates, public witnesses, agency staff, and elected officials"
+    ],
+    publicSafety: {
+      note:
+        "Do not convert participation, quotation, access, testimony, or sequence into sole authorship, endorsement, government authority, or policy causality."
+    },
+    currentStatus:
+      "Public-safe source-backed case study. Exact individual event-production roles and new media remain under corroboration and rights review.",
+    group: "Civic and public-facing systems",
+    roleFit:
+      "Civic delivery, coalition operations, public programs, stakeholder translation, safety systems, policy communications, and implementation support.",
+    evidence: [
+      "Co-founder role and recurring participation system",
+      "Public identity and campaign web infrastructure",
+      "Fire-code study groups, safety pathways, and public testimony",
+      "Council and DCLA interfaces with bounded institutional recognition",
+      "Collectively credited Cabaret Law, Office of Nightlife, and M.A.R.C.H. accountability sequences"
+    ],
+    knownOpenProtected: {
+      known:
+        "Jamie co-founded NYC Artist Coalition and helped operate recurring participation, public identity, safety, campaign, and government-facing testimony systems.",
+      open:
+        "Exact individual production roles for every event, approved photographs, and collaborator quotations require corroboration, consent, and rights review.",
+      protected:
+        "Private coalition notes, participant stories, contact data, legal-review materials, internal strategy, and unapproved media remain offline."
+    }
+  },
+  {
+    title: "FairRentNYC / Commercial Rent Stabilization",
+    slug: "fair-rent-nyc",
+    series: "Civic Systems",
+    subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
+    summary:
+      "Built and stewarded public-facing campaign systems, 30+ pages of shared memory, source maps, stakeholder power mapping, and public-data framing for FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+    role: "Civic Systems, Campaign Operations & Policy Communications",
+    years: "2018-Present",
+    status: "Full case study",
+    featured: true,
+    priority: 3,
+    visibility: "public-safe",
+    proofBankIds: [
+      "fair-rent-campaign-memory",
+      "fair-rent-source-map",
+      "nyc-artist-coalition-public-web-infrastructure"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
@@ -268,14 +373,13 @@ const workItemsInput = [
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active public-safe case study. Specific collaborator materials and screenshots remain approval-gated.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
     evidence: [
-      "Co-founder role in NYC Artist Coalition",
-      "Civic systems, coalition operations, and policy-communications infrastructure",
-      "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
+      "Civic systems, campaign operations, and policy-communications infrastructure",
+      "Campaign materials around Commercial Rent Stabilization and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Stakeholder power mapping, audience-specific messaging, testimony safety, and execution planning",
@@ -286,7 +390,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, stakeholder power mapping, policy-communications materials, and follow-up systems.",
+        "Jamie built and stewarded public-safe campaign memory, coordination documents, source maps, stakeholder power mapping, policy-communications materials, public-data framing, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -587,6 +691,7 @@ export type WorkSlug =
   | "fair-rent-nyc"
   | "harry-j-epstein"
   | "kc-town-hall"
+  | "nyc-artist-coalition"
   | "wowlist";
 
 export const featuredWork = workItems.filter((item) => item.featured);

@@ -42,12 +42,13 @@ test("multi-source occurrences preserve editorial order", () => {
 test("new case-study citations expose only selected public sources", () => {
   assert.equal(resolveCitationReferences("wowlist").length, 18);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
-  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 12);
+  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 2);
+  assert.equal(resolveCitationReferences("nyc-artist-coalition").length, 21);
   assert.equal(resolveCitationReferences("kc-town-hall").length, 12);
   assert.deepEqual(
     resolveCitationOccurrence(
-      "fair-rent-nyc",
-      "coalition-participation-system"
+      "nyc-artist-coalition",
+      "participation-system"
     ).sources.map((item) => item.source.id),
     [
       "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
@@ -165,7 +166,7 @@ test("new case-study citations expose only selected public sources", () => {
     ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-X-API-2016"]
   );
   assert.deepEqual(
-    resolveCitationOccurrence("fair-rent-nyc", "social-identity-system").sources.map(
+    resolveCitationOccurrence("nyc-artist-coalition", "shared-identity").sources.map(
       (item) => item.source.id
     ),
     [

@@ -36,7 +36,9 @@ const receipt = read(
 const projectNote = read(
   "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md"
 );
-const caseStudy = read("apps/www/src/content/work/fair-rent-nyc.mdx");
+const fairRentCaseStudy = read("apps/www/src/content/work/fair-rent-nyc.mdx");
+const nycacCaseStudy = read("apps/www/src/content/work/nyc-artist-coalition.mdx");
+const caseStudies = `${fairRentCaseStudy}\n${nycacCaseStudy}`;
 const workSource = read("apps/www/src/data/work.ts");
 const docs = `${receipt}\n${projectNote}`.replace(/\s+/g, " ");
 
@@ -284,7 +286,7 @@ check(
       "unique people",
       "not summed into a people-reached claim"
     ]) &&
-    !caseStudy.includes("9,989")
+    !caseStudies.includes("9,989")
 );
 
 const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -378,7 +380,7 @@ check(
 
 const approvedProjection =
   "Jamie reports that, beginning in 2017, he helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.";
-const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
+const nycacPage = knowledgeBank.pages.find((page) => page.id === "nyc-artist-coalition");
 const proof = proofClaims.find(
   (item) => item.id === "nyc-artist-coalition-participation-system"
 );
@@ -390,16 +392,16 @@ check(
     participationClaim.projections[0].status === "active" &&
     participationClaim.projections[0].text === approvedProjection &&
     participationClaim.projections[0].surfaces.length === 1 &&
-    participationClaim.projections[0].surfaces[0] === "/work/fair-rent-nyc" &&
+    participationClaim.projections[0].surfaces[0] === "/work/nyc-artist-coalition" &&
     responseClaim?.projections.every(
       (projection) => projection.status === "hold" && !projection.surfaces.length
     ) &&
     democracyClaim?.projections.every(
       (projection) => projection.status === "hold" && !projection.surfaces.length
     ) &&
-    fairRentPage?.occurrences.some(
+    nycacPage?.occurrences.some(
       (occurrence) =>
-        occurrence.id === "coalition-participation-system" &&
+        occurrence.id === "participation-system" &&
         occurrence.claimId === "CLM-NYCAC-PARTICIPATION-SYSTEM"
     ) &&
     proof?.publicWording ===
@@ -409,11 +411,10 @@ check(
     ) &&
     proof.doNotSay.includes("Facebook responses equal attendance or unique reach") &&
     workSource.includes('"nyc-artist-coalition-participation-system"') &&
-    includesAll(caseStudy, [
+    includesAll(nycacCaseStudy, [
       'claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"',
-      "It does not assign Jamie authorship of every event or policy outcome",
-      "it does not convert Facebook responses into attendance",
-      "not endorsement, verified attendance, a continuing partnership, or policy causality"
+      "endorsement of Jamie",
+      "not a single-person causal claim"
     ])
 );
 

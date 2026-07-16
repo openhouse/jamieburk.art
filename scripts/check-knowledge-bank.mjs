@@ -33,6 +33,12 @@ const requiredWorkProofs = new Map([
     [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "nyc-artist-coalition-public-web-infrastructure"
+    ]
+  ],
+  [
+    "nyc-artist-coalition",
+    [
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
       "nyc-artist-coalition-participation-system"

@@ -60,6 +60,7 @@ import {
   nycacDclaCouncilClaims,
   nycacDclaCouncilInquiries,
   nycacDclaCouncilIntake,
+  nycacDclaCouncilPages,
   nycacDclaCouncilSources
 } from "../../apps/www/src/data/knowledge-bank/nycac-dcla-council-interface.ts";
 import {
@@ -1650,6 +1651,7 @@ test("NYCAC DCLA and Council interface separates record, role, and inference", (
   assert.equal(nycacDclaCouncilClaims.length, 3);
   assert.equal(nycacDclaCouncilInquiries.length, 2);
   assert.equal(nycacDclaCouncilIntake.length, 1);
+  assert.equal(nycacDclaCouncilPages.length, 1);
 
   const sourceById = new Map(
     nycacDclaCouncilSources.map((source) => [source.id, source])
@@ -1674,15 +1676,28 @@ test("NYCAC DCLA and Council interface separates record, role, and inference", (
   assert.ok(
     finkelpearl.antiClaims.includes("Finkelpearl endorsed Jamie personally.")
   );
-  assert.ok(
-    finkelpearl.projections.every(
-      (projection) => projection.key !== "case-study" || projection.status === "hold"
-    )
+  const finkelpearlCaseStudy = finkelpearl.projections.find(
+    (projection) => projection.key === "case-study"
   );
+  assert.equal(finkelpearlCaseStudy.status, "active");
+  assert.deepEqual(finkelpearlCaseStudy.surfaces, ["/work/nyc-artist-coalition"]);
 
   const jamie = claimById.get("CLM-NYCAC-JAMIE-CIVIC-TRANSLATION");
   assert.match(jamie.internalClaim, /interface between informal cultural communities and City government/i);
   assert.ok(jamie.boundaries.some((item) => /collective program production/i.test(item)));
+  assert.ok(
+    jamie.projections.some(
+      (projection) =>
+        projection.key === "case-study" &&
+        projection.status === "active" &&
+        projection.surfaces.includes("/work/nyc-artist-coalition")
+    )
+  );
+
+  const page = nycacDclaCouncilPages[0];
+  assert.equal(page.id, "nyc-artist-coalition");
+  assert.equal(page.surface, "/work/nyc-artist-coalition");
+  assert.ok(page.occurrences.length >= 9);
 
   const institutional = claimById.get(
     "CLM-NYCAC-INSTITUTIONAL-INTERFACE-VALUE"

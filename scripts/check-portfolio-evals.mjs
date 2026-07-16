@@ -104,6 +104,32 @@ export function validateSuite(suite) {
       `suite must include ${id} knowledge-lifecycle eval`
     );
   }
+
+  const blindSpotIds = ["PR-019", "PR-020", "PR-021", "PR-022", "PR-023", "PR-024", "PR-025"];
+  for (const id of blindSpotIds) {
+    requireValue(
+      suite.evals?.some((entry) => entry.id === id),
+      `suite must include ${id} blind-spot eval`
+    );
+  }
+
+  for (const id of ["PR-019", "PR-020", "PR-022", "PR-024"]) {
+    const entry = suite.evals?.find((candidate) => candidate.id === id);
+    requireValue(entry?.blocking === true, `${id} blind-spot eval must be blocking`);
+    requireValue(
+      suite.application_share_thresholds?.required_eval_ids?.includes(id),
+      `application-share threshold must require ${id}`
+    );
+  }
+
+  for (const id of ["PR-019", "PR-025"]) {
+    const entry = suite.evals?.find((candidate) => candidate.id === id);
+    requireValue(
+      entry?.grader === "human_approval",
+      `${id} must remain a human-approval eval`
+    );
+    requireValue(entry?.blocking === true, `${id} human eval must remain blocking`);
+  }
   for (const id of ["PR-016", "PR-017"]) {
     const entry = suite.evals?.find((candidate) => candidate.id === id);
     requireValue(entry?.blocking === true, `${id} knowledge-lifecycle eval must be blocking`);

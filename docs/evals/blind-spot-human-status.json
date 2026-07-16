@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "evaluatedAt": "2026-07-16",
+  "evals": {
+    "PR-019": {
+      "status": "pending-human-review",
+      "candidateSha": null,
+      "reviewedAt": null,
+      "reviewers": [],
+      "evidencePaths": [
+        "docs/evals/hiring-reader-response-loop.md"
+      ],
+      "blockingReason": "No independent target reader has yet reviewed the exact post-hill-climb candidate."
+    },
+    "PR-025": {
+      "status": "pending-human-review",
+      "candidateSha": null,
+      "reviewedAt": null,
+      "reviewers": [],
+      "evidencePaths": [
+        "docs/evals/human-launch-qa.md"
+      ],
+      "blockingReason": "Hands-on keyboard, screen-reader, mobile, PDF, metadata, and trusted-reader review remains to be performed on the exact candidate."
+    }
+  }
+}

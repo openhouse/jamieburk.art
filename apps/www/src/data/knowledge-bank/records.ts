@@ -133,6 +133,7 @@ import {
   nycacDclaCouncilClaims,
   nycacDclaCouncilInquiries,
   nycacDclaCouncilIntake,
+  nycacDclaCouncilPages,
   nycacDclaCouncilSources
 } from "./nycac-dcla-council-interface.ts";
 
@@ -461,7 +462,7 @@ const knowledgeBankInput = {
       { id: "social-public-feedback-loop", claimId: "CLM-CALLNYC-SOCIAL-PUBLIC-FEEDBACK-LOOP", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026", "SRC-NYC-COUNCIL-STATED-MEETING-2016-09-28", "SRC-CALLNYC-X-CORPUS-2026-07-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
-  }, ...sourceExpansionPages]
+  }, ...sourceExpansionPages, ...nycacDclaCouncilPages]
 } satisfies KnowledgeBankInput;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

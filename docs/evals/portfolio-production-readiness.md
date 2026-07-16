@@ -93,8 +93,29 @@ an appendix to the current website.
   research backlog.
 - `PR-018` requires projection discipline and reciprocal discovery. The bank
   remains deeper than the site; audience-specific compositions select from it;
-  and photo or reader feedback returns to intake without becoming an automatic
-  public claim.
+and photo or reader feedback returns to intake without becoming an automatic
+public claim.
+
+## Blind-Spot Evals
+
+`PR-019` through `PR-025` cover failure modes that a source-complete archive
+and technically sound site can still miss:
+
+- `PR-019` requires observed response from real target readers and a bounded
+  application-outcome loop;
+- `PR-020` requires a fully composed flagship civic story rather than scattered
+  coalition references;
+- `PR-021` inventories collaborator corroboration and consent gaps;
+- `PR-022` separates outputs, use, outcomes, and transfer;
+- `PR-023` measures whether approved visual and inspectable artifacts reduce
+  reading burden;
+- `PR-024` requires a legible 2024-2026 capability bridge; and
+- `PR-025` requires hands-on human launch QA.
+
+The optimizing agent may prepare `PR-019` and `PR-025`, but it cannot pass
+them. A passing record requires independent reviewers, dates, the exact
+candidate SHA, and the evidence named in each rubric entry. The machine-readable
+status lives in `docs/evals/blind-spot-human-status.json`.
 
 Evidence state, visibility state, and projection state are independent. A
 public source may suggest an unresolved claim. A mature public-safe claim may be
@@ -161,6 +182,11 @@ Every run should identify:
   including explicit understatement and overstatement findings;
 - application packet manifest, target-role brief, and cross-surface consistency
   report when evaluating a live application.
+- target-reader scorecards and bounded application outcomes for `PR-019`;
+- collaborator corroboration, output-transfer, visual-proof, and recent-work
+  matrices for `PR-021` through `PR-024`;
+- dated hands-on keyboard, screen-reader, mobile, PDF, and trusted-reader
+  results for `PR-025`.
 
 Do not place raw transcripts, private correspondence, private notes, internal
 analytics, contact lists, credentials, or unapproved artifacts in an eval

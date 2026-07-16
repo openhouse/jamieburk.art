@@ -9,7 +9,8 @@ const ledgerText = read("docs/knowledge-bank/corpora/nycartc-x-population-ledger
 const ledger = JSON.parse(ledgerText);
 const manifest = JSON.parse(read("docs/knowledge-bank/corpora/nycartc-x-population-ledger-2026-07-15.manifest.json"));
 const receipt = read("docs/knowledge-bank/runs/2026-07-15-nycartc-x-full-population.md").replace(/\s+/g, " ");
-const caseStudy = read("apps/www/src/content/work/fair-rent-nyc.mdx");
+const fairRentCaseStudy = read("apps/www/src/content/work/fair-rent-nyc.mdx");
+const nycacCaseStudy = read("apps/www/src/content/work/nyc-artist-coalition.mdx");
 const workData = read("apps/www/src/data/work.ts");
 const gitignore = read(".gitignore");
 const sha256 = (value) => createHash("sha256").update(value).digest("hex");
@@ -83,12 +84,15 @@ check("Public safety", "Public artifacts are minimized and protected item-level 
     "docs/knowledge-bank/corpora/*-x-full-population-*.json"
   ]) && manifest.publicLedgerSha256 === sha256(ledgerText));
 
-check("Projection discipline", "Deeper metrics remain held while public chronology and claims stay clear", 10,
+check("Projection discipline", "Deeper social metrics remain held while selected civic claims compose on their canonical page", 10,
   claimIds.every((id) => claimById.get(id)?.projections.every(
     (projection) => projection.status === "hold" && projection.surfaces.length === 0)) &&
-  includesAll(caseStudy, ['claimId="CLM-NYCAC-SOCIAL-COUNCIL-ENGAGEMENT"',
+  includesAll(nycacCaseStudy, ['claimId="CLM-NYCAC-SOCIAL-COUNCIL-ENGAGEMENT"',
     'claimId="CLM-SOCIAL-PROJECT-IDENTITY-ESTABLISHMENT"']) &&
-  !caseStudy.includes("CLM-NYCAC-X-") && workData.includes("FairRentNYC: 2018-Present"));
+  !fairRentCaseStudy.includes("CLM-NYCAC-X-") &&
+  !nycacCaseStudy.includes("CLM-NYCAC-X-") &&
+  /title: "NYC Artist Coalition"[\s\S]{0,1200}years: "2017-Present"/.test(workData) &&
+  /title: "FairRentNYC \/ Commercial Rent Stabilization"[\s\S]{0,1200}years: "2018-Present"/.test(workData));
 
 const possible = checks.reduce((sum, item) => sum + item.points, 0);
 const earned = checks.reduce((sum, item) => sum + (item.passes ? item.points : 0), 0);

@@ -13,6 +13,9 @@
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
+- [ ] Three independent target readers complete `PR-019` on the exact candidate.
+- [ ] Human keyboard, screen-reader, mobile, PDF, metadata, and trusted-reader
+  review completes `PR-025` on the exact candidate.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
 - [ ] Jamie approves proof metrics.

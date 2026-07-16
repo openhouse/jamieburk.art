@@ -756,17 +756,7 @@ export const sourceExpansionPages = [
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
       "SRC-NYCAC-SAVE-NYC-SPACES",
-      "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22",
-      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
-      "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
-      "SRC-NYCAC-X-PROFILE-2026",
-      "SRC-NYCAC-OLYMPIA-RELIEF-2020",
-      "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
-      "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022",
-      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
-      "SRC-NYCAC-GOTHAMIST-2017-06-19",
-      "SRC-NYCAC-NPR-2017-09-20",
-      "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
+      "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22"
     ],
     occurrences: [
       {
@@ -780,35 +770,6 @@ export const sourceExpansionPages = [
         claimId: "CLM-NYCAC-COMMERCIAL-RENT-TESTIMONY",
         projection: "case-study",
         sourceIds: ["SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22"]
-      },
-      {
-        id: "social-council-engagement",
-        claimId: "CLM-NYCAC-SOCIAL-COUNCIL-ENGAGEMENT",
-        projection: "case-study",
-        sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026"]
-      },
-      {
-        id: "social-identity-system",
-        claimId: "CLM-SOCIAL-PROJECT-IDENTITY-ESTABLISHMENT",
-        projection: "case-study",
-        sourceIds: [
-          "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
-          "SRC-NYCAC-X-PROFILE-2026",
-          "SRC-NYCAC-OLYMPIA-RELIEF-2020",
-          "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
-          "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
-        ]
-      },
-      {
-        id: "coalition-participation-system",
-        claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
-        projection: "case-study",
-        sourceIds: [
-          "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
-          "SRC-NYCAC-GOTHAMIST-2017-06-19",
-          "SRC-NYCAC-NPR-2017-09-20",
-          "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
-        ]
       }
     ]
   },

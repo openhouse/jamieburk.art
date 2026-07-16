@@ -37,6 +37,14 @@ const kcSpacesFundOperationsProof = getClaimProjection(
   "/work/technical-operations"
 );
 
+const sourceBackedMemoryProof = requireReadyOrCarefulProof(
+  "source-backed-team-memory-method"
+);
+
+const aiEvalsProof = requireReadyOrCarefulProof(
+  "ai-evals-professional-development"
+);
+
 const technicalOperationsProjectionOverrides = new Map<string, string>([
   [
     "kc-spaces-fund-digital-infrastructure",
@@ -96,6 +104,27 @@ const proofMap = [
   }
 ];
 
+const currentPractice = [
+  {
+    period: "2026",
+    title: "Source-backed team memory",
+    text: sourceBackedMemoryProof.shortWording ?? sourceBackedMemoryProof.publicWording,
+    href: "/lab/source-backed-team-memory" as Route
+  },
+  {
+    period: "2026",
+    title: "Public-data product framing",
+    text: commercialVacancyProof.text,
+    href: "/work/fair-rent-nyc" as Route
+  },
+  {
+    period: "2026",
+    title: "AI evaluation practice",
+    text: aiEvalsProof.shortWording ?? aiEvalsProof.publicWording,
+    href: "/about" as Route
+  }
+];
+
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
   description:
@@ -118,6 +147,32 @@ export default function TechnicalOperationsPage() {
           support, and durable handoffs.
         </p>
       </div>
+      <section
+        aria-labelledby="current-practice-heading"
+        className="mt-10 border-y border-jb-ink/15 py-7"
+      >
+        <div className="grid gap-6 lg:grid-cols-[0.28fr_0.72fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase text-jb-blue">Current practice</p>
+            <h2 className="mt-2 text-2xl font-semibold text-jb-ink" id="current-practice-heading">
+              Recent evidence, clearly bounded
+            </h2>
+          </div>
+          <dl className="grid gap-5 md:grid-cols-3">
+            {currentPractice.map((item) => (
+              <div className="border-l-4 border-jb-ochre pl-4" key={item.title}>
+                <dt>
+                  <span className="text-xs font-semibold text-jb-blue">{item.period}</span>
+                  <Link className="mt-1 block font-semibold text-jb-ink hover:text-jb-blue" href={item.href}>
+                    {item.title}
+                  </Link>
+                </dt>
+                <dd className="mt-2 text-sm leading-6 text-jb-ink/72">{item.text}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
         <JBCard>
           <h2 className="text-2xl font-semibold text-jb-ink">

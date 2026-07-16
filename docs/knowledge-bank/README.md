@@ -247,4 +247,6 @@ recovers Finkelpearl's May 2017 Council-hearing reference, documents Jamie's
 own 2018 testimony about safety and civic translation, and distinguishes
 confirmed public record from a bounded institutional account of why DCLA,
 Council, and Councilmember Espinal benefited from the coalition's work. All
-new website projections remain held pending a dedicated coalition composition.
+confirmed case-study projections now resolve through the dedicated
+`/work/nyc-artist-coalition` composition; the institutional-benefit claim
+remains a labeled inference in the knowledge bank.

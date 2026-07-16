@@ -239,7 +239,7 @@ export const nycacFacebookEventClaims: ClaimRecord[] = [
           "Jamie reports that, beginning in 2017, he helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotating through small cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief convenings that connected artists' lived experience with civic pathways.",
         status: "active",
         citationRequired: true,
-        surfaces: ["/work/fair-rent-nyc"],
+        surfaces: ["/work/nyc-artist-coalition"],
         rationale:
           "This is the clearest bounded description of Jamie's operating contribution; attribution and collective-credit language preserve the evidence boundary."
       }

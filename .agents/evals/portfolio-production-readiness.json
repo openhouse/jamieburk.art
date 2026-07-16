@@ -23,7 +23,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015", "PR-016", "PR-017"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015", "PR-016", "PR-017", "PR-019", "PR-020", "PR-022", "PR-024"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
@@ -65,7 +65,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 7,
+      "weight": 5,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -88,7 +88,7 @@
       "category": "proof",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 10,
+      "weight": 6,
       "inputs": ["Harry J. Epstein case study", "FairRentNYC case study", "CallNYC case study", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
@@ -110,7 +110,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 4,
+      "weight": 3,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -130,7 +130,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 4,
+      "weight": 3,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -152,7 +152,7 @@
       "category": "trust",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 10,
+      "weight": 8,
       "inputs": ["public pages", "knowledge bank", "citation registry", "approval register"],
       "procedure": [
         "Run knowledge-bank, citation, and public-safety checks.",
@@ -174,7 +174,7 @@
       "category": "application",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 7,
+      "weight": 5,
       "inputs": ["resume PDF", "resume HTML page"],
       "procedure": [
         "Extract resume text and render every page.",
@@ -196,7 +196,7 @@
       "category": "usability",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 4,
+      "weight": 3,
       "inputs": ["all public links and buttons"],
       "procedure": [
         "Inventory CTA labels, hrefs, download attributes, and final destinations.",
@@ -217,7 +217,7 @@
       "category": "production",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 8,
+      "weight": 6,
       "inputs": ["staging responses", "production-mode responses", "robots.txt", "sitemap.xml", "metadata"],
       "procedure": [
         "Check headers and metadata for every canonical route in staging and production mode.",
@@ -240,7 +240,7 @@
       "category": "engineering",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 5,
+      "weight": 4,
       "inputs": ["repository checks", "staging routes", "production Docker image"],
       "procedure": [
         "Run npm check, staging preflight, and production preflight serially.",
@@ -263,7 +263,7 @@
       "category": "accessibility",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 5,
+      "weight": 4,
       "inputs": ["all canonical routes at 320, 375, 768, and 1280 pixel widths"],
       "procedure": [
         "Capture responsive screenshots and measure document overflow.",
@@ -285,7 +285,7 @@
       "category": "deployment",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 5,
+      "weight": 4,
       "inputs": ["apex domain", "www domain", "npr subdomain", "production health endpoint", "Dokku configuration"],
       "procedure": [
         "Verify the production app, domains, TLS, build arguments, runtime environment, redirect behavior, and rollback target.",
@@ -307,7 +307,7 @@
       "category": "governance",
       "grader": "human_approval",
       "blocking": true,
-      "weight": 4,
+      "weight": 3,
       "inputs": ["approval register", "launch blockers", "candidate commit", "asset inventory"],
       "procedure": [
         "Reconcile approvals and blockers into one current go or no-go record.",
@@ -369,7 +369,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 7,
+      "weight": 6,
       "inputs": ["homepage", "resume page", "technical operations page", "lead work summaries", "knowledge-bank claims", "Chad Lens guidance"],
       "procedure": [
         "Give three blind judges the public candidate, approved knowledge-bank claims, and Chad Lens guidance without patch intent or optimization history.",
@@ -394,7 +394,7 @@
       "category": "knowledge-lifecycle",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 6,
+      "weight": 5,
       "inputs": ["intake ledger", "source registry", "research inquiries", "private/public boundary policy"],
       "procedure": [
         "Submit a mixed batch containing a public URL, public-safe memory, claim hypothesis, artifact lead, and photo lead.",
@@ -417,7 +417,7 @@
       "category": "knowledge-lifecycle",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 6,
+      "weight": 5,
       "inputs": ["source registry", "research inquiries", "claim graph", "proof bank", "public projections"],
       "procedure": [
         "Decompose each source into propositions it supports, boundaries it establishes, and questions it leaves open.",
@@ -440,7 +440,7 @@
       "category": "knowledge-lifecycle",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 4,
+      "weight": 3,
       "inputs": ["eligible claim palette", "website projections", "application packet", "photo-editor brief", "research backlog"],
       "procedure": [
         "Compare the mature eligible claim palette with the claims selected for each public surface.",
@@ -456,6 +456,165 @@
       ],
       "evidence_required": ["projection comparison", "selection rationale", "photo-editor brief", "feedback-loop trace"],
       "remediation_hint": "Preserve the claim in the bank, clarify its eligibility and audience fit, and keep the public composition selective."
+    },
+    {
+      "id": "PR-019",
+      "title": "Observed hiring-reader response loop",
+      "category": "market-validation",
+      "grader": "human_approval",
+      "blocking": true,
+      "weight": 4,
+      "inputs": ["exact candidate SHA", "homepage", "technical operations page", "resume", "target-reader protocol", "application outcome ledger"],
+      "procedure": [
+        "Recruit at least three independent target readers who resemble hiring managers, recruiters, referrers, or senior peers for Jamie's target roles.",
+        "Give each reader the exact candidate without an explanatory preface and record a 30-second comprehension response, a two-minute proof-recall response, confusion points, trust concerns, and intended next action.",
+        "Record application, referral, interview, and recurring-objection signals as dated outcomes without publishing private identities or correspondence.",
+        "Disposition every observed finding as accepted, deferred, rejected, or requiring research; do not let the optimizing agent grade its own changes."
+      ],
+      "pass_criteria": [
+        "At least three independent target readers review the exact candidate commit and provide dated scorecards.",
+        "At least two of three identify Jamie's target role family and central value within 30 seconds.",
+        "At least two of three accurately recall three distinct proof examples after two minutes without inventing authority, causality, or employment.",
+        "At least two of three identify a clear next action and no reader reports a critical privacy, overstatement, or trust defect.",
+        "Application outcomes and recurring objections have an owner, review cadence, and explicit interpretation boundary; they are not treated as causal proof from a tiny sample."
+      ],
+      "evidence_required": ["three dated reader scorecards", "exact candidate SHA", "aggregate comprehension results", "finding dispositions", "bounded application outcome ledger"],
+      "remediation_hint": "Prepare the test and evidence bundle, then stop for real readers; an agent cannot manufacture market validation."
+    },
+    {
+      "id": "PR-020",
+      "title": "Flagship civic story is fully composed",
+      "category": "composition",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 4,
+      "inputs": ["NYC Artist Coalition case study", "canonical claims", "citation registry", "projection map", "collective-credit guardrails"],
+      "procedure": [
+        "Read the dedicated NYC Artist Coalition composition without access to archive-production history.",
+        "Trace the story from recurring participation and listening through safety practice, public systems, testimony, campaigns, and bounded institutional outcomes.",
+        "Verify every strong role or outcome statement against canonical claims and rendered sources.",
+        "Ask a blind judge to distinguish Jamie's individual work, coalition work, government action, and longer movement history."
+      ],
+      "pass_criteria": [
+        "A dedicated public composition names Jamie's co-founder role, concrete operating actions, practical ends, and what became usable within the first 250 words.",
+        "The composition makes recurring meetings, public identity, safety practice, campaign infrastructure, and government-facing testimony legible as one operating pattern.",
+        "Cabaret Law repeal, Office of Nightlife work, M.A.R.C.H. transparency, CURE, and other policy outcomes retain collective, legislative, and historical credit.",
+        "Every strong claim renders inspectable public citations and no institutional quotation becomes personal endorsement.",
+        "A blind reader can explain why the work mattered without confusing advocacy with government authority or solo causality."
+      ],
+      "evidence_required": ["public case-study URL", "first-250-word excerpt", "claim-to-citation map", "collective-credit review", "blind scorecard"],
+      "remediation_hint": "Compose the flagship story from approved claims instead of adding it piecemeal to unrelated pages."
+    },
+    {
+      "id": "PR-021",
+      "title": "Collaborator corroboration and consent coverage",
+      "category": "evidence-quality",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "inputs": ["high-value role claims", "source graph", "open inquiries", "proof-note request protocol", "approval register"],
+      "procedure": [
+        "Inventory high-value claims whose strongest support is Jamie's memory, a shared-account record, or project-level evidence that does not establish Jamie's exact role.",
+        "For each claim, record the best-positioned corroborator, the narrow question to ask, consent status, public-quotation permission, and a fallback source path.",
+        "Verify that AI-assisted archival notes are never presented as eyewitness testimony and that no outreach response enters the public repo without review."
+      ],
+      "pass_criteria": [
+        "Every high-value role-attribution gap has an explicit corroboration status, next source, and owner.",
+        "The request protocol asks for bounded first-hand recollection, correction, collective credit, privacy boundaries, and permission separately.",
+        "Public claims distinguish independent corroboration, collaborator testimony, Jamie's first-hand account, and AI-assisted archival synthesis.",
+        "A missing response cannot be interpreted as confirmation, rejection, or evidence that work did not occur."
+      ],
+      "evidence_required": ["corroboration coverage matrix", "request template", "source-class audit", "approval states"],
+      "remediation_hint": "Prioritize a small number of role-defining questions for the collaborators best able to answer them."
+    },
+    {
+      "id": "PR-022",
+      "title": "Outputs, use, outcomes, and transfer stay distinct",
+      "category": "impact",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 3,
+      "inputs": ["homepage proofs", "technical operations page", "lead case studies", "outcome and transfer matrix", "canonical claims"],
+      "procedure": [
+        "For every lead project, separate what Jamie made, who used or responded to it, what observable result followed, and what continued or transferred.",
+        "Check that outputs and engagement are not presented as outcomes, and that collective policy outcomes are not presented as individual causality.",
+        "Ask a blind judge what became usable and for whom after reading each lead case study."
+      ],
+      "pass_criteria": [
+        "Every lead project names at least one concrete output and one defensible use, result, or transfer state.",
+        "Unknown adoption, durability, or post-handoff state is labeled as open rather than filled with generic impact language.",
+        "At least three lead projects show durable use, continuation, handoff, or bounded external response supported by evidence.",
+        "A blind judge can distinguish activity, artifact, engagement, outcome, and causal contribution."
+      ],
+      "evidence_required": ["outcome and transfer matrix", "page excerpts", "claim citations", "blind scorecard"],
+      "remediation_hint": "Replace generic impact language with the strongest verified output-use-result-transfer sequence and leave unknowns open."
+    },
+    {
+      "id": "PR-023",
+      "title": "Visual and artifact proof reduces reading burden",
+      "category": "visual-proof",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "inputs": ["lead case studies", "visual proof inventory", "artifact rights and consent states", "responsive screenshots"],
+      "procedure": [
+        "Inventory every visible photograph, screenshot, document excerpt, diagram, timeline, download, and public artifact on lead pages.",
+        "Verify provenance, relation to a claim, alt text, caption, rights or consent state, and responsive behavior.",
+        "Ask a blind reader what each artifact proves before reading the surrounding long-form copy."
+      ],
+      "pass_criteria": [
+        "At least three lead pages contain a genuine inspectable artifact or source-backed visualization rather than only descriptive cards.",
+        "Every published visual has useful alternative text, a concise caption, provenance, a claim relationship, and an approved rights or consent state.",
+        "No pending or unknown-rights asset is published merely to satisfy the eval.",
+        "The artifacts let a reader recover role, action, or result with less prose and introduce no mobile overflow or accessibility regression."
+      ],
+      "evidence_required": ["visual proof inventory", "rights and consent states", "artifact screenshots", "responsive and accessibility results", "blind explanations"],
+      "remediation_hint": "Publish a small number of approved, claim-bearing artifacts; record rights gaps instead of substituting decoration."
+    },
+    {
+      "id": "PR-024",
+      "title": "Recent capability and present-tense trajectory",
+      "category": "recency",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 3,
+      "inputs": ["homepage", "technical operations page", "resume", "2024-2026 evidence map", "current lab work"],
+      "procedure": [
+        "Identify the work a hiring reader can verify from the most recent three years.",
+        "Distinguish current delivery, developing methods, coursework, and historical depth.",
+        "Ask a blind judge whether Jamie appears ready to execute now and which recent evidence supports that conclusion."
+      ],
+      "pass_criteria": [
+        "A primary hiring path makes at least three bounded 2024-2026 capability signals easy to find.",
+        "Recent evidence includes concrete artifacts or methods, not only a course credential or an assertion of continued interest.",
+        "Developing work is labeled as developing and historical projects remain dated.",
+        "A blind judge can connect Jamie's established operating practice to present-day technical, public-data, documentation, and human-reviewed AI work."
+      ],
+      "evidence_required": ["recent capability map", "page excerpts", "artifact or source references", "blind scorecard"],
+      "remediation_hint": "Add a compact current-practice bridge using verified recent work; do not imply production deployment or measured outcomes where none exist."
+    },
+    {
+      "id": "PR-025",
+      "title": "Hands-on human launch QA",
+      "category": "human-qa",
+      "grader": "human_approval",
+      "blocking": true,
+      "weight": 3,
+      "inputs": ["exact production candidate", "canonical route matrix", "resume PDF", "keyboard", "screen reader", "mobile devices", "production metadata"],
+      "procedure": [
+        "Have at least one person other than the optimizing agent exercise every canonical route on desktop and mobile using keyboard navigation.",
+        "Have a qualified reviewer perform a screen-reader pass of primary navigation, headings, links, citations, and application actions.",
+        "Inspect the rendered resume PDF, redirects, links, sitemap, robots, OpenGraph, focus behavior, contrast, and production metadata on the exact candidate.",
+        "Ask one trusted reviewer to answer whether Jamie's work is understandable and whether anything feels private, overstated, broken, or confusing."
+      ],
+      "pass_criteria": [
+        "Dated human results cover keyboard, mobile, contrast, screen reader, PDF, links, redirects, sitemap, robots, OpenGraph, and production metadata on the exact candidate SHA.",
+        "No critical or high-severity issue remains open.",
+        "The trusted reviewer answers the comprehension and safety question affirmatively with any caveats dispositioned.",
+        "Jamie approves the exact candidate after reviewing the human QA record."
+      ],
+      "evidence_required": ["dated human QA matrix", "reviewer roles", "exact candidate SHA", "issue dispositions", "trusted-reader answer", "Jamie's approval"],
+      "remediation_hint": "Prepare the route and task matrix, then stop for hands-on human review; automated checks cannot satisfy this gate."
     }
   ],
   "grader_output_schema": {

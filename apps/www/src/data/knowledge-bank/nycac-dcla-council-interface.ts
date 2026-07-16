@@ -1,5 +1,6 @@
 import type {
   ClaimRecord,
+  CitationPage,
   IntakeRecordInput,
   ResearchInquiry,
   SourceRecord
@@ -204,11 +205,11 @@ export const nycacDclaCouncilClaims: ClaimRecord[] = [
         key: "case-study",
         text:
           "DCLA Commissioner Tom Finkelpearl later cited the coalition in Council testimony as an example of what direct public engagement could produce.",
-        status: "hold",
+        status: "active",
         citationRequired: true,
-        surfaces: [],
+        surfaces: ["/work/nyc-artist-coalition"],
         rationale:
-          "Hold until a dedicated NYC Artist Coalition case study can explain the public-engagement relationship without implying endorsement or agency ownership."
+          "The dedicated NYC Artist Coalition case study explains the public-engagement relationship without implying endorsement or agency ownership."
       }
     ],
     evidence: [
@@ -279,11 +280,11 @@ export const nycacDclaCouncilClaims: ClaimRecord[] = [
         key: "case-study",
         text:
           "Connected informal cultural communities with public safety knowledge and city decision-making through coalition operations, practical safety work, and public testimony.",
-        status: "hold",
+        status: "active",
         citationRequired: true,
-        surfaces: [],
+        surfaces: ["/work/nyc-artist-coalition"],
         rationale:
-          "Hold for a dedicated coalition case study that can carry the necessary collaborator, movement, and agency context."
+          "The dedicated coalition case study carries the necessary collaborator, movement, and agency context."
       }
     ],
     evidence: [
@@ -540,6 +541,125 @@ export const nycacDclaCouncilIntake: IntakeRecordInput[] = [
       "Treat 'needed' as institutional analysis, not personal dependence or recovered private motive.",
       "Preserve coalition, movement, agency, Council, witness, and venue credit.",
       "Do not convert public access, quotation, or incorporation into endorsement, control, exclusivity, or policy causality."
+    ]
+  }
+];
+
+export const nycacDclaCouncilPages: CitationPage[] = [
+  {
+    id: "nyc-artist-coalition",
+    surface: "/work/nyc-artist-coalition",
+    sourceOrder: [
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "SRC-NYCAC-GOTHAMIST-2017-06-19",
+      "SRC-NYCAC-NPR-2017-09-20",
+      "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+      "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
+      "SRC-NYCAC-X-PROFILE-2026",
+      "SRC-NYCAC-OLYMPIA-RELIEF-2020",
+      "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
+      "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022",
+      "SRC-SOCIAL-ARCHIVE-INVENTORY-2026",
+      "SRC-NYCAC-FINKELPEARL-COUNCIL-BUDGET-2017",
+      "SRC-NYCAC-FINKELPEARL-DCLA-MESSAGE-2017",
+      "SRC-NYCAC-JAMIE-COUNCIL-DCLA-BUDGET-2018",
+      "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+      "SRC-NYCAC-ESPINAL-CABARET-HEARING-2017",
+      "SRC-NYCAC-LET-NYC-DANCE",
+      "SRC-NYCAC-BEDFORD-BOWERY-NIGHT-MAYOR",
+      "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11",
+      "SRC-NYCAC-TALKS-NOT-RAIDS",
+      "SRC-NYC-COUNCIL-INTRO-1156-2018",
+      "SRC-NYC-MAYOR-CURE-2023-12-28"
+    ],
+    occurrences: [
+      {
+        id: "participation-system",
+        claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "SRC-NYCAC-GOTHAMIST-2017-06-19",
+          "SRC-NYCAC-NPR-2017-09-20",
+          "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
+        ]
+      },
+      {
+        id: "shared-identity",
+        claimId: "CLM-SOCIAL-PROJECT-IDENTITY-ESTABLISHMENT",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
+          "SRC-NYCAC-X-PROFILE-2026",
+          "SRC-NYCAC-OLYMPIA-RELIEF-2020",
+          "SRC-NYCAC-OLYMPIA-FAIR-RENT-2021",
+          "SRC-NYCAC-OLYMPIA-NIGHTLIFE-2022"
+        ]
+      },
+      {
+        id: "council-interface",
+        claimId: "CLM-NYCAC-SOCIAL-COUNCIL-ENGAGEMENT",
+        projection: "case-study",
+        sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026"]
+      },
+      {
+        id: "finkelpearl-reference",
+        claimId: "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-FINKELPEARL-COUNCIL-BUDGET-2017",
+          "SRC-NYCAC-FINKELPEARL-DCLA-MESSAGE-2017"
+        ]
+      },
+      {
+        id: "jamie-civic-translation",
+        claimId: "CLM-NYCAC-JAMIE-CIVIC-TRANSLATION",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-JAMIE-COUNCIL-DCLA-BUDGET-2018",
+          "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+          "SRC-NYCAC-ESPINAL-CABARET-HEARING-2017"
+        ]
+      },
+      {
+        id: "cabaret-advocacy",
+        claimId: "CLM-NYCAC-CABARET-ADVOCACY",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-GOTHAMIST-2017-06-19",
+          "SRC-NYCAC-NPR-2017-09-20",
+          "SRC-NYCAC-LET-NYC-DANCE"
+        ]
+      },
+      {
+        id: "office-nightlife-town-hall",
+        claimId: "CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-BEDFORD-BOWERY-NIGHT-MAYOR",
+          "SRC-NYCAC-NPR-2017-09-20"
+        ]
+      },
+      {
+        id: "talks-not-raids",
+        claimId: "CLM-TALKS-NOT-RAIDS-ADVOCACY",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11",
+          "SRC-NYCAC-TALKS-NOT-RAIDS",
+          "SRC-NYC-COUNCIL-INTRO-1156-2018"
+        ]
+      },
+      {
+        id: "march-to-cure",
+        claimId: "CLM-MARCH-TRANSPARENCY-TO-CURE",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-TALKS-NOT-RAIDS",
+          "SRC-NYC-COUNCIL-INTRO-1156-2018",
+          "SRC-NYC-MAYOR-CURE-2023-12-28"
+        ]
+      }
     ]
   }
 ];

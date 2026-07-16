@@ -672,7 +672,8 @@ inscription remains unresolved.
 Finkelpearl cited NYC Artist Coalition's formation after a DCLA DIY-arts
 meeting as evidence of the value of direct public feedback and convening around
 a common cause.
-**Projection:** Active archive note; website case study held.
+**Projection:** Active archive note and active on the dedicated NYC Artist
+Coalition case study.
 **Guardrail:** This is institutional recognition, not a personal endorsement,
 DCLA ownership, exclusive representation, or policy causality.
 
@@ -683,7 +684,8 @@ DCLA ownership, exclusive representation, or policy causality.
 public testimony to translate between informal cultural communities and City
 government, helping artists reach practical safety knowledge while carrying
 community-defined problems into DCLA and Council processes.
-**Projection:** Active archive note; website case study held.
+**Projection:** Active archive note and active on the dedicated NYC Artist
+Coalition case study.
 **Guardrail:** Preserve collective production and policy credit. Do not convert
 testimony or recommendations into government authority or legislative
 authorship.
