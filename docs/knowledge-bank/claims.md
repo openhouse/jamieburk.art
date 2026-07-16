@@ -16,7 +16,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** 14+ years as a formal technical project manager in one organization.  
 **Protected boundaries:** Private clients, collaborator records, raw community materials, and internal operating details stay outside the repo.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
 
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
@@ -37,16 +37,52 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / firsthand operational context  
+**Evidence class:** Approved resume / protected first-person operational context
 **Public wording:** Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.
 **Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
 **Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
 **Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
-**Guardrail:** Must stay as contribution language.
+**Canonical claim:** `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
+**Guardrail:** Attribute the metric to Jamie's approved public account; it is not independently corroborated. It must stay as contribution language.
 **Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.
 **Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-15
+
+## Personal and WOW List Facebook event population - Profile census
+
+**Canonical claim:** `CLM-FACEBOOK-PERSONAL-WOWLIST-EVENT-POPULATION`
+**Status:** Confirmed with boundaries
+**Public-safe finding:** The authenticated July 2026 census reconciles 511 displayed instances to 502 parent events. It is a profile-association corpus, not a record that Jamie created, organized, attended, or endorsed every event.
+**Boundary:** Thirty-three private records remain withheld. The WOW List current owner surface displayed no event cards; that is a current-surface observation, not proof of historical absence.
+
+## Jamie Facebook convening practice - Explicit organizer records
+
+**Canonical claim:** `CLM-FACEBOOK-JAMIE-CONVENING-PRACTICE`
+**Status:** Confirmed with boundaries
+**Public-safe finding:** Twenty-one selected public event pages explicitly name Jamie as organizer or co-organizer across participatory cultural, civic, food, waterway, and neighborhood work.
+**Boundary:** Organizer credit does not establish attendance, reach, impact, sole authorship, or responsibility for every associated event.
+
+## Sunday Dinner Facebook milestones - 100th and 200th
+
+**Canonical claim:** `CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES`
+**Status:** Confirmed with boundaries
+**Public-safe finding:** Public event pages identify Jamie as organizer of the 100th Sunday Dinner in 2014 and Julia Fredenberg and Jamie as co-organizers of the 200th in 2016.
+**Boundary:** Numbered event titles are contemporaneous milestone records, not an independent audit of the complete gathering count. Facebook response labels are not attendance.
+
+## WOW List in event practice - One documented route
+
+**Canonical claim:** `CLM-FACEBOOK-WOWLIST-IN-PRACTICE`
+**Status:** Confirmed with boundaries
+**Public-safe finding:** The public 200th Sunday Dinner event page links directly to a corresponding WOW List event route, documenting one concrete connection between gathering practice and the platform.
+**Boundary:** One route does not establish traffic, conversion, platform-wide adoption, or current service availability.
+
+## Early participatory practice - Organizer-attributed examples
+
+**Canonical claim:** `CLM-FACEBOOK-EARLY-PARTICIPATORY-PRACTICE`
+**Status:** Confirmed with boundaries
+**Public-safe finding:** Selected public event pages preserve Jamie-attributed organizing across an early participatory practice spanning 2006-2019.
+**Boundary:** Keep collaborators and hosts visible; do not generalize beyond the selected organizer-attributed pages or infer impact from platform counters.
 
 ## callnyc-civic-data-guidance - Civic data to resident guidance
 

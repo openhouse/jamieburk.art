@@ -16,6 +16,16 @@ const leadProofs = resumeProofHighlights.filter((proof) => leadProofIds.has(proo
 const supportingProofs = resumeProofHighlights.filter((proof) => !leadProofIds.has(proof.id));
 
 function ProofWording({ proof }: { proof: (typeof resumeProofHighlights)[number] }) {
+  if (proof.id === "hje-revenue-growth-contribution") {
+    return (
+      <Claim
+        claimId="CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"
+        projection="resume-html"
+        surface="/resume"
+      />
+    );
+  }
+
   return proof.id === "callnyc-civic-data-guidance" ? (
     <Claim
       claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
@@ -56,8 +66,7 @@ export default function ResumePage() {
           </JBButton>
         </div>
         <p className="mt-4 text-sm text-jb-ink/62">
-          Current public resume PDF. Phone remains inside the approved resume
-          artifact; email is available on the contact page.
+          The PDF includes phone and email. Use Contact Jamie for online outreach.
         </p>
       </div>
       <nav aria-label="Recommended application path" className="mt-10 border-l-4 border-jb-blue pl-5">

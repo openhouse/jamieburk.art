@@ -135,7 +135,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "implementation"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "callnyc-civic-data-guidance",

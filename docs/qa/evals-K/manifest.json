@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "1ffcbaa99a6dc460fd73939730a26214b9b6c709bbc0bdf421ff5a912643ee90",
+  "sourceSha256": "3f73b890a255e323a8f868eadb08d40a7a0f764ca90d5e3899d0448cd548a930",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -67,7 +67,7 @@
       "route": "/resume",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/resume-desktop.png",
-      "artifactSha256": "cc05702414ec1b99fba01f1c37827d4440838df4307a3906b665ba3f06ec1c47"
+      "artifactSha256": "b8b6aa913839e1632cf1dce024cb35405bdecb1d1322523d02d03185ee521732"
     },
     {
       "route": "/resume",
@@ -91,7 +91,7 @@
       "route": "/work/harry-j-epstein",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/harry-j-epstein-desktop.png",
-      "artifactSha256": "a7f5a7d66e557fe692afbf2662a97e7cb631a8b175a92dd3b8176693c20873b1"
+      "artifactSha256": "c1d471f04d1fd7548777cb25171998fff4bc1881422455c6ece46aabcf8ba0df"
     },
     {
       "route": "/work/harry-j-epstein",

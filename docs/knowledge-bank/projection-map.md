@@ -28,6 +28,7 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
+- `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 - `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
@@ -38,6 +39,7 @@ composed public surface, not a claim database.
 
 ### Guardrails
 
+- Keep HJE contribution language self-reported and noncausal
 - Keep collaborator credit and causal boundaries
 - Route detail to case studies
 - Keep WOW List scale historical and threshold-bound
@@ -64,6 +66,7 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
+- `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 - `CLM-WOWLIST-HISTORICAL-SCALE`
 
 ### Exclusions
@@ -74,6 +77,7 @@ composed public surface, not a claim database.
 
 ### Guardrails
 
+- Keep the HJE metric self-reported and contributory
 - Keep the PDF and HTML roles aligned
 - Do not strengthen a metric beyond its proof record
 ## `/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`
@@ -102,6 +106,7 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
+- `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
 - `CLM-WOWLIST-HISTORICAL-SCALE`
 
@@ -114,6 +119,7 @@ composed public surface, not a claim database.
 
 ### Guardrails
 
+- Keep the HJE metric self-reported and contributory
 - Appropriation is not receipt
 - Keep no disbursement and reappropriation attached to the KC amount
 - Keep Sunday Dinner's 300-plus gatherings distinct from 196 Artists Residency's 20-plus resident artists
@@ -144,6 +150,7 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
+- `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
 - `CLM-WOWLIST-HISTORICAL-SCALE`
 
@@ -155,6 +162,7 @@ composed public surface, not a claim database.
 
 ### Guardrails
 
+- Keep the HJE metric self-reported and contributory
 - Name what became usable
 - Keep collective projects collective
 - Keep WOW List scale historical and threshold-bound
@@ -181,6 +189,7 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
+- `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
 - `CLM-WOWLIST-HISTORICAL-SCALE`
 
@@ -192,6 +201,7 @@ composed public surface, not a claim database.
 
 ### Guardrails
 
+- Keep the HJE metric self-reported and contributory
 - Do not let compression erase collaborator credit
 - Use the case study for full boundaries
 - Keep WOW List scale historical and threshold-bound
@@ -209,15 +219,17 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
-- None
+- `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 
 ### Exclusions
 
 - Private analytics
 - Internal revenue detail
+- Independent corroboration of the self-reported metric
 
 ### Guardrails
 
+- Attribute the metric to Jamie's approved public account
 - Do not imply sole causality
 - Keep private operating records offline
 ## `/work/fair-rent-nyc`

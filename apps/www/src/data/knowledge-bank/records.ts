@@ -561,9 +561,26 @@ const knowledgeBankInput = {
       canonicalUrl: "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       preferredPublicUrl: "canonical",
       publicCitation: "Jamie Burkart, Technical Project Manager resume, July 15, 2026.",
-      publicNote: "Jamie-approved public artifact supporting his distinct Sunday Dinner co-host and 196 Artists Residency founder roles and the separately attributed aggregate scale figures; the July 15 artifact states each metric with its corresponding practice.",
-      supportsGenerally: ["Sunday Dinner co-host role and 2012-present date range", "196 Artists Residency founder role and 2020-present date range", "300-plus documented Sunday Dinner gatherings", "20-plus resident artists supported through the residency"],
-      doesNotEstablish: ["independent corroboration of the aggregate figures", "sole creation or sole hosting of Sunday Dinner", "ownership of participant work", "permission to republish community records or images"]
+      publicNote: "Jamie-approved public artifact supporting his self-reported HJE contribution and his distinct Sunday Dinner co-host and 196 Artists Residency founder roles. The artifact states each metric with its corresponding practice; it is not independent corroboration.",
+      supportsGenerally: ["Jamie's self-reported HJE operating contribution during a period of 2x revenue growth", "Sunday Dinner co-host role and 2012-present date range", "196 Artists Residency founder role and 2020-present date range", "300-plus documented Sunday Dinner gatherings", "20-plus resident artists supported through the residency"],
+      doesNotEstablish: ["independent corroboration of the HJE revenue-growth or participation figures", "that Jamie alone caused HJE revenue growth", "private revenue amounts, dates, or business records", "sole creation or sole hosting of Sunday Dinner", "ownership of participant work", "permission to republish community records or images"]
+    },
+    {
+      id: "SRC-HJE-REVENUE-CONTEXT-2026",
+      title: "Harry J. Epstein Company revenue-growth operating context",
+      organization: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-15",
+      reviewStatus: "close-read",
+      contentReviewedAt: "2026-07-15",
+      contentReviewedBy: "Jamie Burkart authorization and Codex public-safety review",
+      publicCitation: "Jamie-approved, public-safe first-person summary of HJE operating context.",
+      publicNote: "The protected context supports careful contribution language while keeping revenue detail, dashboards, customer data, vendor terms, and internal analytics outside the public repository.",
+      protectedLocatorId: "HJE-REVENUE-CONTEXT-2026-001",
+      supportsGenerally: ["Jamie's web, e-commerce, analytics, marketing, content, and operational workflow contributions", "a period of approximately 2x revenue growth", "the need for contributory rather than sole-causation language"],
+      doesNotEstablish: ["independent third-party corroboration", "sole causation", "a public revenue ledger", "permission to publish private business records"]
     },
     {
       id: "SRC-NYCA-CABARET-CAMPAIGN-2017",
@@ -1154,6 +1171,29 @@ const knowledgeBankInput = {
     ...nycacFacebookEventClaims,
     ...personalWowListFacebookEventClaims,
     {
+      id: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+      project: "harry-j-epstein",
+      internalClaim: "Jamie improved HJE's web, e-commerce, analytics, marketing, content, and operational workflows during a period in which the business's revenue approximately doubled; the available evidence supports contribution, not sole causation.",
+      status: "confirmed-with-boundary",
+      projections: [
+        { key: "homepage", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/"] },
+        { key: "work-card", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/work"] },
+        { key: "technical-operations", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
+        { key: "resume-html", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/resume"] },
+        { key: "resume-pdf", text: "Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] },
+        { key: "case-study", text: "Jamie contributed to a period of 2x revenue growth while supporting e-commerce and marketing systems and helping translate legacy operating knowledge into more durable digital workflows.", status: "active", citationRequired: true, surfaces: ["/work/harry-j-epstein"] }
+      ],
+      evidence: [
+        { sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", relationship: "direct-support", supports: ["Jamie's approved public wording", "his self-reported operating contribution", "the bounded 2x revenue-growth figure"], locator: "Selected Impact and Harry J. Epstein Company experience, pages 1-2", confidence: "moderate", renderCitation: true },
+        { sourceId: "SRC-HJE-REVENUE-CONTEXT-2026", relationship: "private-support", supports: ["the workstreams Jamie contributed", "the revenue-growth period", "the contribution-only causal boundary"], confidence: "moderate", renderCitation: false }
+      ],
+      boundaries: ["Attribute the metric to Jamie's approved public account; it is not independently corroborated.", "Always use contribution language and keep the business's other people, decisions, products, market conditions, and operating factors in the causal frame.", "Do not publish private revenue amounts, date ranges, dashboards, customer data, vendor terms, or internal analytics."],
+      antiClaims: ["Jamie caused HJE revenue to double", "Jamie single-handedly doubled revenue", "The portfolio publishes an independently audited revenue metric", "The claim establishes a precise public revenue total or period"],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex public-safety and portfolio-eval review"]
+    },
+    {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
       internalClaim: "The New York City Council constituent-services hackathon took place at Civic Hall on January 30, 2016, from 1-3 p.m.",
@@ -1512,6 +1552,14 @@ const knowledgeBankInput = {
     { id: "COR-WATERWAYS-RAFT-ROUTE-2026", claimId: "CLM-WATERWAYS-RAFT-EXPEDITION-2007", previousText: "A collective raft expedition traveled across Missouri; the exact southern endpoint remained open.", replacementText: "A collective recycled-material, bicycle-powered raft expedition traveled more than 1,000 miles from Kansas City into Louisiana; the reviewed record still does not establish arrival at the Gulf of Mexico.", reason: "Close reading of a preserved Kansas City Star clipping and corroborating contemporaneous reporting recovered the longer route, distance, organizer role, regulatory pause, and community-supported resumption while preserving the unsupported Gulf endpoint as a hold.", sourceIds: ["SRC-WATERWAYS-KANSAS-CITY-STAR-RAFT-2007", "SRC-WATERWAYS-WLBT-RAFT-2007", "SRC-WATERWAYS-PITCH-HUCK-FINN-PART-III-2007"], decidedAt: "2026-07-15", decisionId: "DEC-WATERWAYS-RAFT-CORRECT-2026-07-15", affectedSurfaces: ["knowledge-bank", "future-waterways-case-study"], status: "active" }
   ],
   pages: [
+    {
+      id: "harry-j-epstein",
+      surface: "/work/harry-j-epstein",
+      sourceOrder: ["SRC-JAMIE-APPROVED-RESUME-2026-07-13"],
+      occurrences: [
+        { id: "revenue-growth-contribution", claimId: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", projection: "case-study", sourceIds: ["SRC-JAMIE-APPROVED-RESUME-2026-07-13"] }
+      ]
+    },
     {
       id: "callnyc",
       surface: "/work/callnyc",

@@ -512,9 +512,11 @@
       "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Jamie Burkart, Technical Project Manager resume, July 15, 2026.",
-      "publicNote": "Jamie-approved public artifact supporting his distinct Sunday Dinner co-host and 196 Artists Residency founder roles and the separately attributed aggregate scale figures; the July 15 artifact states each metric with its corresponding practice.",
+      "publicNote": "Jamie-approved public artifact supporting his self-reported HJE contribution and his distinct Sunday Dinner co-host and 196 Artists Residency founder roles. The artifact states each metric with its corresponding practice; it is not independent corroboration.",
       "doesNotEstablish": [
-        "independent corroboration of the aggregate figures",
+        "independent corroboration of the HJE revenue-growth or participation figures",
+        "that Jamie alone caused HJE revenue growth",
+        "private revenue amounts, dates, or business records",
         "sole creation or sole hosting of Sunday Dinner",
         "ownership of participant work",
         "permission to republish community records or images"
@@ -1153,6 +1155,84 @@
       ]
     },
     {
+      "id": "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "homepage",
+          "text": "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ]
+        },
+        {
+          "key": "resume-pdf",
+          "text": "Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company, contributing to 2x revenue growth.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+          ]
+        },
+        {
+          "key": "case-study",
+          "text": "Jamie contributed to a period of 2x revenue growth while supporting e-commerce and marketing systems and helping translate legacy operating knowledge into more durable digital workflows.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-JAMIE-APPROVED-RESUME-2026-07-13",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's approved public wording",
+            "his self-reported operating contribution",
+            "the bounded 2x revenue-growth figure"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute the metric to Jamie's approved public account; it is not independently corroborated.",
+        "Always use contribution language and keep the business's other people, decisions, products, market conditions, and operating factors in the causal frame.",
+        "Do not publish private revenue amounts, date ranges, dashboards, customer data, vendor terms, or internal analytics."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -1646,6 +1726,23 @@
     }
   ],
   "pages": [
+    {
+      "id": "harry-j-epstein",
+      "surface": "/work/harry-j-epstein",
+      "sourceOrder": [
+        "SRC-JAMIE-APPROVED-RESUME-2026-07-13"
+      ],
+      "occurrences": [
+        {
+          "id": "revenue-growth-contribution",
+          "claimId": "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-JAMIE-APPROVED-RESUME-2026-07-13"
+          ]
+        }
+      ]
+    },
     {
       "id": "callnyc",
       "surface": "/work/callnyc",

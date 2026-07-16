@@ -708,8 +708,8 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
     homepageProofs.proofs.map(({ id }) => id),
     homepageProofs.proofSurfaceManifest?.proofIds
   );
-  assert.deepEqual(homepageProofs.canonicalClaims.map(({ id }) => id), ["CLM-WOWLIST-HISTORICAL-SCALE"]);
-  assert.deepEqual(homepageProofs.candidates.map(({ id }) => id), ["CND-WOWLIST-HISTORICAL-SCALE"]);
+  assert.deepEqual(homepageProofs.canonicalClaims.map(({ id }) => id), ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", "CLM-WOWLIST-HISTORICAL-SCALE"]);
+  assert.deepEqual(homepageProofs.candidates.map(({ id }) => id), ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION", "CND-WOWLIST-HISTORICAL-SCALE"]);
   assert.deepEqual(homepageProofs.researchTasks, []);
   assert.deepEqual(homepageProofs.mediaLeads, []);
 
@@ -725,11 +725,17 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.deepEqual(kcProofs.mediaLeads, []);
 
   const resumePdf = retrieveKnowledgePalette({ proofSurface: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", publicationSafe: true });
-  assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL", "PRJ-FAIR-RENT-CRS", "PRJ-WOWLIST"]);
-  assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-WOWLIST-HISTORICAL-SCALE"]);
-  assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-WOWLIST-HISTORICAL-SCALE", "CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
+  assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL", "PRJ-FAIR-RENT-CRS", "PRJ-WOWLIST", "PRJ-HARRY-J-EPSTEIN"]);
+  assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-WOWLIST-HISTORICAL-SCALE"]);
+  assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION", "CND-WOWLIST-HISTORICAL-SCALE", "CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
   assert.deepEqual(resumePdf.researchTasks, []);
   assert.deepEqual(resumePdf.mediaLeads, []);
+
+  const hjeProofs = retrieveKnowledgePalette({ proofSurface: "/work/harry-j-epstein", publicationSafe: true });
+  assert.deepEqual(hjeProofs.projects.map(({ id }) => id), ["PRJ-HARRY-J-EPSTEIN"]);
+  assert.deepEqual(hjeProofs.canonicalClaims.map(({ id }) => id), ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"]);
+  assert.deepEqual(hjeProofs.candidates.map(({ id }) => id), ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION"]);
+  assert.deepEqual(hjeProofs.researchTasks, []);
 
   const plannedNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study" });
   const publicNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study", publicationSafe: true });
