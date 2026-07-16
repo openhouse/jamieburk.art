@@ -27,6 +27,19 @@ const sundayDinnerOperationsProof = getClaimProjection(
   "/work/technical-operations"
 );
 
+const kcSpacesFundOperationsProof = getClaimProjection(
+  "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+  "technical-operations",
+  "/work/technical-operations"
+);
+
+const technicalOperationsProjectionOverrides = new Map<string, string>([
+  [
+    "kc-spaces-fund-digital-infrastructure",
+    kcSpacesFundOperationsProof.text
+  ]
+]);
+
 const operationsMap = [
   "Clarify requirements and map workflows for public-facing technical work.",
   "Coordinate delivery from ambiguity toward launch.",
@@ -67,8 +80,7 @@ const proofMap = [
   },
   {
     project: "KC Spaces Fund",
-    proof:
-      "Jamie built behind-the-scenes web infrastructure for a 2020 mutual-aid campaign, while organizer credit remains with the campaign's named organizers."
+    proof: kcSpacesFundOperationsProof.text
   },
   {
     project: "KC Town Hall",
@@ -138,7 +150,11 @@ export default function TechnicalOperationsPage() {
               {row.proofs.map((proof) => (
                 <li className="flex gap-3" key={proof.id}>
                   <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
+                  <span>
+                    {technicalOperationsProjectionOverrides.get(proof.id) ??
+                      proof.shortWording ??
+                      proof.publicWording}
+                  </span>
                 </li>
               ))}
             </ul>

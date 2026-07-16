@@ -2276,6 +2276,38 @@
         "Circulation is not authorship, endorsement by linked organizations, or causation of campaign outcomes.",
         "The captures do not identify a complete population of reactors or commenters."
       ]
+    },
+    {
+      "id": "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "For KC Spaces Fund, Jamie built campaign web infrastructure and supported an available cross-channel identity; collaborator-led channels used it to route applications, donations, and funded-space updates.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ],
+          "rationale": "This is the strongest role-specific statement supported by Jamie's firsthand clarification and the protected technical archive."
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie's bounded role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts"
+          ],
+          "rationale": "The research-facing note preserves both useful credit and the essential collective boundary."
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Credit Jamie with bounded web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, or campaign voice.",
+        "The public channels corroborate identity consistency; Jamie's firsthand clarification supplies the naming-support and non-posting account, pending collaborator confirmation of process detail.",
+        "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as named by the fundraiser."
+      ]
     }
   ],
   "pages": [

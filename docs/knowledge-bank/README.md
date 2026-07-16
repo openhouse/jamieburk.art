@@ -130,6 +130,20 @@ and preserves organizer-use, civic-care, and field-learning patterns without
 assigning every project-account post to Jamie. See the
 [research run](runs/2026-07-15-wowlist-x-full-population.md).
 
+See
+[projects/kc-spaces-fund-facebook-posts.md](projects/kc-spaces-fund-facebook-posts.md)
+and its
+[40-row public-safe census](corpora/kcspacesfund-facebook-posts-full-population.json)
+for the complete capture-date KC Spaces Fund Facebook population, mission and
+fundraising routes, funded-space spotlights, bounded interaction signals,
+collective credit, and Jamie's documented digital-infrastructure boundary.
+
+See
+[projects/kc-town-hall.md](projects/kc-town-hall.md)
+for the official sequence from CCED Board recommendation through Council
+acceptance, negotiation authority, and appropriation, followed by
+non-disbursement, withdrawal, and return of the full unused amount.
+
 Historical scale and Jamie's technical contribution have a separate archive
 inquiry and intake, so the social corpus is not asked to prove implementation
 or adoption.
