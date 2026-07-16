@@ -1,0 +1,222 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 11,
+  "runId": "feature-evals-D-wowlist-full-population-v11-b-20260715T211158-0400",
+  "commit": "647d986f21f48a9aae718e057cd7bcd441e91a10",
+  "baseUrl": "http://127.0.0.1:3042",
+  "performedAt": "2026-07-15T21:11:58-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "A second browser run returned 200 without horizontal overflow for eleven public routes at desktop and mobile widths.",
+        "The WOW List case study independently passed at 320, 375, 768, and 1440 CSS pixels with its artifact and citation targets intact."
+      ],
+      "limitations": [
+        "Measurements were performed against the local application, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-wowlist-final9-b-20260715"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "A second run found zero overflow across eleven routes at 200-percent-equivalent reflow and visibly focused all twenty-four controls reached by real Tab events on CallNYC.",
+        "CallNYC and Fair Rent NYC citation links and backlinks had valid targets and useful accessible names; WOW List passed its independent citation and reflow checks."
+      ],
+      "limitations": [
+        "Automated browser checks do not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-wowlist-final9-b-20260715"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "A second independent pass found loaded, legible, public-linked artifacts for Harry J. Epstein, Fair Rent NYC, and CallNYC at 375 and 1440 pixels, with substantial captions and alt text.",
+        "WOW List also loaded its May 2017 archived homepage capture without mobile or desktop overflow."
+      ],
+      "limitations": [
+        "The check verifies the existing public-web-capture policy and does not authorize additional private or approval-gated imagery."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-priority-artifacts-final9-b-20260715"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.84,
+      "passed": true,
+      "evidence": [
+        "The page makes the project, organizer audience, value proposition, Jamie's role, and immediate actions quickly scannable."
+      ],
+      "limitations": [
+        "The career-level target role appears in the footer rather than the case-study opening."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v11-b1",
+        "runId": "semantic-v11-b1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.88,
+      "passed": true,
+      "evidence": [
+        "The captures immediately identify Jamie's role, the organizer audience, the technology stack, and activity across roughly 35 city ecosystems."
+      ],
+      "limitations": [
+        "The opening communicates project role more strongly than the exact target job title."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v11-b2",
+        "runId": "semantic-v11-b2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.86,
+      "passed": true,
+      "evidence": [
+        "The summary names Jamie as actor and immediately identifies the product, stack, audience, and bounded geographic scope."
+      ],
+      "limitations": [
+        "The system-support phrase does not identify subsystem-level ownership."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v11-b1",
+        "runId": "semantic-v11-b1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.87,
+      "passed": true,
+      "evidence": [
+        "Jamie is grammatically visible as the actor, and What I did names the concrete model, workflows, feedback, and public-service adaptation."
+      ],
+      "limitations": [
+        "The bounded verbs do not claim decision authority or subsystem ownership that the evidence does not establish."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v11-b2",
+        "runId": "semantic-v11-b2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.95,
+      "passed": true,
+      "evidence": [
+        "The fixture reconciles all 38 displayed records while retaining only public metadata, URLs, classifications, and dated aggregates and excluding private session material."
+      ],
+      "limitations": [
+        "Raw authenticated records are intentionally excluded from the public-safe packet, so the population cannot be independently reconstructed from the repo alone."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v11-b1",
+        "runId": "semantic-v11-b1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.97,
+      "passed": true,
+      "evidence": [
+        "The archive is decomposed into distinct claims with evidence roles, locators, boundaries, anti-claims, source maturity, and projection status."
+      ],
+      "limitations": [
+        "The serialized public registry omits the detailed locators retained in the canonical knowledge module."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v11-b2",
+        "runId": "semantic-v11-b2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.87,
+      "passed": true,
+      "evidence": [
+        "The page leads with a short proposition and artifact, then uses five compact narrative sections before introducing source governance."
+      ],
+      "limitations": [
+        "The lower mobile page is substantially longer and more procedural than the narrative."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v11-b1",
+        "runId": "semantic-v11-b1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.86,
+      "passed": true,
+      "evidence": [
+        "The public story presents context, problem, usable result, Jamie's work, and transferable relevance before the evidence layer."
+      ],
+      "limitations": [
+        "The three selected claims are repeated across narrative, source notes, and the final evidence summary."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v11-b2",
+        "runId": "semantic-v11-b2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.85,
+      "passed": true,
+      "evidence": [
+        "The organizing question and preservation of community language make the page human and purpose-led rather than generic platform copy."
+      ],
+      "limitations": [
+        "Evidence-governance labels slightly cool the otherwise warm narrative voice."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-ia-public-sector-reviewer-v11-b1",
+        "runId": "semantic-v11-b1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.91,
+      "passed": true,
+      "evidence": [
+        "The opening organizing question sounds human and connects care for community language to a concrete systems problem."
+      ],
+      "limitations": [
+        "The at-a-glance role-fit copy is denser and more taxonomic than the main narrative."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-tpm-hiring-reviewer-v11-b2",
+        "runId": "semantic-v11-b2-20260715-final9"
+      }
+    }
+  ],
+  "humanApprovals": []
+}

@@ -1,0 +1,222 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 11,
+  "runId": "feature-evals-D-wowlist-full-population-v11-a-20260715T210758-0400",
+  "commit": "647d986f21f48a9aae718e057cd7bcd441e91a10",
+  "baseUrl": "http://127.0.0.1:3042",
+  "performedAt": "2026-07-15T21:07:58-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Eleven public routes returned 200 without horizontal overflow at 1440 by 1000 and 390 by 844 CSS pixels.",
+        "The WOW List case study independently passed at 320, 375, 768, and 1440 CSS pixels with its artifact loaded and all three citation pairs valid."
+      ],
+      "limitations": [
+        "Measurements were performed against the local application, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-wowlist-final9-a-20260715"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "All eleven routes passed 200-percent-equivalent reflow with zero overflow, and twenty-four real Tab events on CallNYC produced twenty-four visibly focused controls.",
+        "WOW List citation markers, source notes, and backlinks had valid targets and useful accessible names."
+      ],
+      "limitations": [
+        "Automated browser checks do not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-wowlist-final9-a-20260715"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Harry J. Epstein, Fair Rent NYC, and CallNYC each rendered a loaded public-web artifact at 375 and 1440 pixels with substantial alt text, a substantial caption, a public source link, and no overflow.",
+        "WOW List rendered its May 2017 archived homepage capture as the first evidence-bearing artifact."
+      ],
+      "limitations": [
+        "The check verifies the existing public-web-capture policy and does not authorize additional private or approval-gated imagery."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium / Playwright",
+        "runId": "browser-priority-artifacts-final9-a-20260715"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.86,
+      "passed": true,
+      "evidence": [
+        "The case-study opening identifies the project, audience, Jamie's co-builder role, intervention, and bounded geographic activity."
+      ],
+      "limitations": [
+        "The packet evaluates the WOW List page more deeply than the site-wide surfaces named by this criterion."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v11-a1",
+        "runId": "semantic-v11-a1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.86,
+      "passed": true,
+      "evidence": [
+        "The desktop and mobile captures immediately identify WOWList.org, its organizer audience, Jamie's role, the product, and activity across roughly 35 city ecosystems."
+      ],
+      "limitations": [
+        "The bounded semantic packet does not include the rendered homepage, Technical Operations, or resume surfaces."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v11-a2",
+        "runId": "semantic-v11-a2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.86,
+      "passed": true,
+      "evidence": [
+        "Jamie is the explicit actor, and the page names the keyword-community model, publishing, list-selection, digest, distribution, feedback, and platform work."
+      ],
+      "limitations": [
+        "The technology-support wording is less specific about Jamie's personal implementation than the workflow and product-model statements."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v11-a1",
+        "runId": "semantic-v11-a1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.87,
+      "passed": true,
+      "evidence": [
+        "The opening names Jamie as actor with the bounded verb co-built, identifies the work product, and states its purpose for DIY arts and music organizers."
+      ],
+      "limitations": [
+        "The generic collaborator credit does not identify responsibility by component."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v11-a2",
+        "runId": "semantic-v11-a2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.91,
+      "passed": true,
+      "evidence": [
+        "The decomposed intake links ten separately identified claims spanning population reconciliation, product support, lineage, adaptation, use, attribution, dialogue, positioning, scale, and source curation."
+      ],
+      "limitations": [
+        "Several records remain moderately composite, including the three-part historical-scale snapshot."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v11-a1",
+        "runId": "semantic-v11-a1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.95,
+      "passed": true,
+      "evidence": [
+        "Each selected claim has source edges, evidence roles, locators, confidence, boundaries, anti-claims, projection policy, and a linked research inquiry where appropriate."
+      ],
+      "limitations": [
+        "External source contents were not independently reopened during this semantic grading pass."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v11-a2",
+        "runId": "semantic-v11-a2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.82,
+      "passed": true,
+      "evidence": [
+        "The reader-facing story remains primary and moves from context through the organizing problem, usable result, Jamie's contribution, and transferable proof."
+      ],
+      "limitations": [
+        "Organizer use, peer attribution, scale, and their limits recur across narrative, source notes, and the final evidence summary."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v11-a1",
+        "runId": "semantic-v11-a1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.82,
+      "passed": true,
+      "evidence": [
+        "The public page leads with role, purpose, artifact, and narrative before introducing evidence governance."
+      ],
+      "limitations": [
+        "On mobile, the three source notes and later evidence section form a substantial governance tail."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v11-a2",
+        "runId": "semantic-v11-a2-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.9,
+      "passed": true,
+      "evidence": [
+        "The organizing question gives the work a human purpose, while preserving organizers' language makes Jamie's systems practice concrete and distinctive."
+      ],
+      "limitations": [
+        "Evidence-layer phrases such as public-safe aggregate remain necessarily procedural."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-delivery-reviewer-v11-a1",
+        "runId": "semantic-v11-a1-20260715-final9"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.89,
+      "passed": true,
+      "evidence": [
+        "The practical opening question and the phrase listening for the language a community already uses give the page a humane systems-builder voice."
+      ],
+      "limitations": [
+        "Technology shorthand and repeated source-note patterns occasionally make the page more procedural than conversational."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-public-evidence-editor-v11-a2",
+        "runId": "semantic-v11-a2-20260715-final9"
+      }
+    }
+  ],
+  "humanApprovals": []
+}
