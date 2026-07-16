@@ -136,3 +136,25 @@ surfaces.
   screenshot, and private correspondence protected. Preserve collective credit.
   Do not claim present endorsement, sole authorship, measured impact, or current
   technical breadth from historical coursework.
+
+## Independent semantic observation: `48c88798`
+
+Two fresh graders scored `MORSE-001` and `SACK-001` at `0.8` and found no
+regression in clarity, Chad's lens, decomposition, editorial composition,
+voice, selection, archive-bias discipline, consequence, or current fit. Both
+held `MAINTAIN-001` at `0.5`: the intake guide duplicated a stale `v22` pointer,
+and the `v23` maintenance scorecard still reported the pre-lens 41-criterion
+suite size.
+
+## Attempt 8: one mutable pointer and an accurate scorecard
+
+- **Observed failure:** Current-version and suite-size metadata disagreed with
+  the active runner and `evals.json`.
+- **Hypothesis:** Removing the redundant version declaration and correcting the
+  scorecard counts will restore a trustworthy newcomer path without changing
+  runtime behavior or public composition.
+- **Bounded change:** Let AGENTS.md and the active runner own the mutable current
+  version; update the scorecard to 43 criteria, 26 hard gates, and 17 scored
+  criteria.
+- **Protected boundaries:** Preserve historical eval versions and every prior
+  hill-climb record. Do not delete audit evidence to simplify maintenance.

@@ -97,9 +97,9 @@ and opaque protected locator.
 `npm run check:knowledge-intake` validates required intake coverage, stable
 destinations, canonical links, projection discipline, campaign press
 provenance, protected cloud-source boundaries, and blocked path or link
-markers. AGENTS.md and the active runner identify the current suite; at this
-review it is launch-readiness v22. Its intake and decomposition criteria
-include:
+markers. AGENTS.md and the active runner identify the current suite; this guide
+does not duplicate that mutable version pointer. Its intake and decomposition
+criteria include:
 
 - `INTAKE-001` for lossless public-safe capture;
 - `DISPOSITION-001` for resolvable destinations;

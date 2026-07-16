@@ -5,7 +5,7 @@ Status: prepared for newcomer semantic review
 ## Current control surface
 
 - Current launch-readiness suite: `v23`.
-- Current suite size: 41 criteria, comprising 26 hard gates and 15 scored
+- Current suite size: 43 criteria, comprising 26 hard gates and 17 scored
   criteria.
 - Canonical citational claim store:
   `apps/www/src/data/knowledge-bank/records.ts` and its imported modules.
