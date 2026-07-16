@@ -10,11 +10,13 @@ not treated as stable evidence; every source is bound to an exact commit.
    V1 source of authority for claims, evidence relationships, corrections,
    projection decisions, and citations.
 2. **Federated knowledge.** `generated/feature-evals-knowledge.json` inventories
-   every relevant artifact in all fourteen source trees and indexes their
-   semantic identifiers, selected public-safe record variants, document
-   abstracts, source locators, and named entity records. Different identifiers
+   every relevant artifact in all fourteen source trees, gives every artifact
+   an immutable Git content address, and indexes its semantic identifiers,
+   selected public-safe record variants, document abstracts, source locators,
+   and named entity records. Full artifact content is available through the
+   private Atlas service without requiring a branch ref. Different identifiers
    are preserved without asserting that they are equivalent.
-3. **Source history.** The frozen source commits are incorporated into the
+3. **Source history.** The frozen source commits and their complete blobs are incorporated into the
    Atlas branch ancestry. Preserve that ancestry with a merge commit when this
    PR is integrated; a squash merge does not retain the same source-history
    guarantee.
@@ -45,6 +47,7 @@ npm run atlas:check
 npm run atlas:test
 ```
 
-`atlas:refresh-sources` requires the frozen source commits to be available in
-the local Git object database. Ordinary consumers use the committed catalog and
-do not need access to other worktrees or remote branches.
+`atlas:refresh-sources` requires the frozen source commits in the local Git
+object database. `atlas:verify-history` proves that every commit and cataloged
+blob remains reachable from Atlas itself. Ordinary consumers need neither the
+old worktrees nor the remote branch names.

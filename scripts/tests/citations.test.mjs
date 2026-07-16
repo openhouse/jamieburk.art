@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeBank } from "@jamie-burkart/atlas/records";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
 

@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  atlasRecordStore,
+  knowledgeBank,
+  validateAtlasRecordStore
+} from "../src/records.mjs";
 import {
   compileAtlas,
   defaultRepoRoot,
@@ -13,9 +17,13 @@ import { createAtlasService } from "../src/service.mjs";
 import {
   integrationCatalogFingerprint,
   loadFeatureEvalKnowledge,
+  readFeatureEvalArtifact,
   validateFeatureEvalKnowledge,
+  verifyFeatureEvalHistory,
   verifyFeatureEvalSourceArtifacts
 } from "../src/integration.mjs";
+import { findDeprecatedKnowledgeBankImports } from "../src/deprecation.mjs";
+import { verifyLegacyParity } from "../src/legacy.mjs";
 
 const manifest = loadIntegrationManifest();
 const pages = loadAtlasPages();
@@ -32,6 +40,28 @@ test("real Atlas corpus compiles as a private semantic graph", () => {
   assert.equal(compiled.metrics.pages, 25);
   assert.ok(compiled.metrics.relations >= 108);
   assert.match(compiled.candidateFingerprint, /^[a-f0-9]{64}$/);
+});
+
+test("Atlas owns every complete canonical lifecycle record", () => {
+  assert.deepEqual(validateAtlasRecordStore(atlasRecordStore), []);
+  assert.equal(atlasRecordStore.authority, "atlas-canonical-records");
+  assert.equal(atlasRecordStore.deprecationPolicy.legacyKnowledgeBanks, "frozen-reference-only");
+  assert.equal(Object.values(atlasRecordStore.counts).reduce((sum, count) => sum + count, 0), 1044);
+  assert.deepEqual(verifyLegacyParity(atlasRecordStore), []);
+});
+
+test("canonical record mutation is detected", () => {
+  const mutated = structuredClone(atlasRecordStore);
+  mutated.records.claims.pop();
+  assert.ok(validateAtlasRecordStore(mutated).some((message) => /count drift|fingerprint/i.test(message)));
+});
+
+test("future consumers use Atlas rather than the deprecated bank", () => {
+  assert.deepEqual(findDeprecatedKnowledgeBankImports(defaultRepoRoot), []);
+  const service = createAtlasService(compileAtlas());
+  assert.ok(service.recordCollections().includes("claims"));
+  assert.equal(service.getRecord("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON").collection, "claims");
+  assert.ok(service.queryRecords({ project: "callnyc", collection: "claims" }).length > 0);
 });
 
 test("ordinary YAML dates normalize to portable ISO date strings", () => {
@@ -173,6 +203,14 @@ test("the committed artifact inventory matches every frozen source tree", () => 
     catalog: omitted,
     manifest
   }).some((message) => message.includes("Missing source artifact")));
+});
+
+test("full-fidelity source knowledge is reachable without branch refs", () => {
+  assert.deepEqual(verifyFeatureEvalHistory({ repoRoot: defaultRepoRoot, catalog: sourceKnowledge, manifest }), []);
+  const kPath = "apps/www/src/data/knowledge-bank/dcla-council-bridge.ts";
+  const nPath = "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-2026-07.ts";
+  assert.match(readFeatureEvalArtifact({ repoRoot: defaultRepoRoot, catalog: sourceKnowledge, branch: "feature/evals-K", artifactPath: kPath, encoding: "utf8" }), /Finkelpearl/);
+  assert.match(readFeatureEvalArtifact({ repoRoot: defaultRepoRoot, catalog: sourceKnowledge, branch: "feature/evals-N", artifactPath: nPath, encoding: "utf8" }), /survivingPublicRecords:\s*40/);
 });
 
 test("federated knowledge is queryable with provenance and protected locators stay hashed", () => {

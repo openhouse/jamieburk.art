@@ -85,13 +85,29 @@ const assessmentInvalid = report.assessment && !report.assessment.valid;
 if (has("--gate") && (sourceGateFailed || assessmentInvalid)) process.exit(1);
 
 if (has("--release")) {
-  const releaseFailed =
-    sourceGateFailed ||
-    !report.browser ||
-    report.summary.browserHardGateFailures > 0 ||
-    !report.assessment ||
-    !report.assessment.valid ||
-    !report.assessment.judgeThresholdMet ||
-    report.assessment.pendingHumanGates.length > 0;
-  if (releaseFailed) process.exit(1);
+  const releaseFailures = [];
+  if (sourceGateFailed) releaseFailures.push("source hard gates are failing");
+  if (!report.browser) {
+    releaseFailures.push("a browser report was not supplied");
+  } else if (report.summary.browserHardGateFailures > 0) {
+    releaseFailures.push("browser hard gates are failing");
+  }
+  if (!report.assessment) {
+    releaseFailures.push("a human assessment was not supplied");
+  } else {
+    if (!report.assessment.valid) releaseFailures.push("the human assessment is invalid");
+    if (!report.assessment.judgeThresholdMet) {
+      releaseFailures.push("the judge threshold is not met");
+    }
+    if (report.assessment.pendingHumanGates.length > 0) {
+      releaseFailures.push(
+        `${report.assessment.pendingHumanGates.length} human gates remain pending`
+      );
+    }
+  }
+  if (releaseFailures.length > 0) {
+    console.error("Release gate failed:");
+    releaseFailures.forEach((failure) => console.error(`- ${failure}`));
+    process.exit(1);
+  }
 }

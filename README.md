@@ -74,10 +74,11 @@ npm run eval:launch:compare -- before.json after.json
 ```
 
 Read `evals/launch-readiness/agent-loop.md` before recursive work. A full
-release decision also needs an independent assessment based on
-`judge-prompt.md`, a passing browser report, and named confirmation of every
-human gate. `npm run preflight:production` intentionally enforces the
-source-level launch gate.
+release decision needs an independent assessment based on `judge-prompt.md`, a
+passing browser report supplied through `LAUNCH_BROWSER_REPORT`, and named
+confirmation of every human gate. `npm run preflight:production` enforces that
+complete release contract and therefore remains nonzero while human gates are
+pending.
 
 The suite maps eight recurring blind spots to deterministic, browser, judge,
 and human evaluations. See
@@ -86,24 +87,25 @@ and human evaluations. See
 `docs/production-cutover.md` for human handoff paths that agents may prepare but
 may not self-certify.
 
-## Knowledge Bank
+## Atlas knowledge system
 
-This repo includes a public-safe knowledge bank for professional claims:
+Atlas is the canonical public-safe knowledge system for professional claims:
 
-- `docs/knowledge-bank/`
-- `apps/www/src/data/proofs.ts`
-- `apps/www/src/data/knowledge-bank/records.ts`
+- `docs/atlas/records/canonical.json` holds complete atomic records and proof claims.
+- `docs/atlas/pages/` holds the human-readable semantic Markdown wiki.
+- `docs/atlas/generated/feature-evals-knowledge.json` inventories full-fidelity A-N source artifacts by immutable Git content address.
+- `packages/atlas/` provides record, graph, query, provenance, compatibility, and evaluation contracts.
 
-The website is a projection of this bank. Pages select, sequence, and phrase
+The website is a purposeful projection of Atlas. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
-first adding a public-safe proof record.
+first adding a public-safe Atlas record and projection decision.
 
 `docs/knowledge-bank/lifecycle.md` defines the loss-resistant path from intake
 through source reading, claim maturity, research, and an independent
 publication decision. The recursive checks live in
 `evals/knowledge-lifecycle/`.
 
-The knowledge bank is not a private archive. Do not commit raw transcripts,
+Atlas is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
@@ -120,9 +122,10 @@ provenance or exposing protected locators. It also provides in-process page,
 knowledge, source-lineage, and explanation APIs.
 
 Atlas is a package with service-like contracts, not a separately deployed
-application. Its generated graph is rebuildable, the typed knowledge bank
-remains canonical during this transition, and there is intentionally no public
-Atlas route. See `docs/atlas/architecture.md` and
+application. Its generated graph is rebuildable, its canonical records are
+portable JSON, and there is intentionally no public Atlas route. The former
+typed banks are frozen, parity-checked migration sources. See
+`docs/atlas/architecture.md` and
 `docs/atlas/evals/hill-climb.md`.
 
 There is intentionally no public `/proofs` route. The site should remain a

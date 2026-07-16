@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeBank } from "@jamie-burkart/atlas/records";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -538,7 +538,8 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
 export function requiredLifecycleFiles(repoRoot = defaultRepoRoot) {
   return [
     "apps/www/src/data/knowledge-bank/schema.ts",
-    "apps/www/src/data/knowledge-bank/records.ts",
+    "docs/atlas/records/canonical.json",
+    "packages/atlas/src/records.mjs",
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "docs/knowledge-bank/lifecycle.md",
     "evals/knowledge-lifecycle/suite.json",

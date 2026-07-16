@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeBank } from "@jamie-burkart/atlas/records";
 
 const outputUrl = new URL(
   "../apps/www/src/data/knowledge-bank/public-registry.json",

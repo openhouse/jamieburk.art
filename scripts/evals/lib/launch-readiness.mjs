@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeBank } from "@jamie-burkart/atlas/records";
 import {
   homepageProofs,
   proofClaims,
@@ -294,7 +294,6 @@ export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadS
   const homepageFile = path.join(repoRoot, "apps/www/src/app/page.tsx");
   const colophonFile = path.join(repoRoot, "apps/www/src/app/colophon/page.tsx");
   const launchFile = path.join(repoRoot, "docs/knowledge-bank/launch-blockers.md");
-  const recordsFile = path.join(repoRoot, "apps/www/src/data/knowledge-bank/records.ts");
   const publicDir = path.join(repoRoot, "apps/www/public");
   const corroborationFile = path.join(repoRoot, "docs/knowledge-bank/corroboration-register.json");
   const blindReaderFile = path.join(repoRoot, "evals/launch-readiness/blind-reader-protocol.md");
@@ -570,8 +569,15 @@ export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadS
     )
   );
 
-  const records = existsSync(recordsFile) ? readFileSync(recordsFile, "utf8") : "";
-  const citationProjects = [...new Set([...records.matchAll(/\bproject:\s*"([^"]+)"/g)].map((match) => match[1]))];
+  const citedClaimIds = new Set(
+    knowledgeBank.pages.flatMap((page) => page.occurrences.map(({ claimId }) => claimId))
+  );
+  const citationProjects = [...new Set(
+    knowledgeBank.claims
+      .filter(({ id }) => citedClaimIds.has(id))
+      .map(({ project }) => project)
+      .filter(Boolean)
+  )];
   const citationCheck = checks.get("structured-citation-project-depth");
   results.push(
     result(

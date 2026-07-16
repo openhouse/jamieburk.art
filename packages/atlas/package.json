@@ -3,7 +3,10 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "exports": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./records": "./src/records.mjs"
+  },
   "bin": {
     "atlas": "./bin/atlas.mjs"
   },

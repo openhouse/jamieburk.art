@@ -58,6 +58,9 @@ joining, fundraising, and recognizing recipient spaces.
 
 The records do not show that Jamie raised or allocated funds, authored campaign
 posts, created every account, or caused donations.
+Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo retain the
+public organizer credit stated by the fundraiser; Allied Media Projects retains
+the stated fiscal-sponsor role.
 
 ## Open questions
 

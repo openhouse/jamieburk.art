@@ -141,6 +141,41 @@
       "basisRecordIds": ["CLM-CLAUDETTE-AR-COLLABORATION"],
       "credit": "Participant in the source-video production record.",
       "boundary": "Do not infer endorsement or disclose private context beyond the public source."
+    },
+    {
+      "name": "Caitlin Horsmon",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit for KC Spaces Fund.",
+      "boundary": "Organizer credit does not transfer campaign ownership or fundraising authorship to Jamie."
+    },
+    {
+      "name": "Jordan Carr",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit for KC Spaces Fund.",
+      "boundary": "Organizer credit does not transfer campaign ownership or fundraising authorship to Jamie."
+    },
+    {
+      "name": "Kendell Harbin",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit and the public Allied Media Projects relationship.",
+      "boundary": "Do not infer that Jamie organized, fiscally sponsored, or allocated the fund."
+    },
+    {
+      "name": "Megan Pobywajlo",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains named public organizer credit for KC Spaces Fund.",
+      "boundary": "Organizer credit does not transfer campaign ownership or fundraising authorship to Jamie."
+    },
+    {
+      "name": "Allied Media Projects",
+      "atlasPage": "ATLAS-PROJECT-KC-SPACES-FUND",
+      "basisRecordIds": ["SRC-KCSPACES-GOFUNDME-2020"],
+      "credit": "Retains the fiscal-sponsor role stated in the public fundraiser.",
+      "boundary": "Fiscal sponsorship is not evidence that Jamie controlled fundraising or grant allocation."
     }
   ]
 }

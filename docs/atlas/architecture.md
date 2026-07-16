@@ -16,9 +16,11 @@ contracts, not a separately deployed application or network service.
 ## Component contract
 
 ```text
+docs/atlas/records/canonical.json
+        +
 docs/atlas/pages/*.md
         +
-typed canonical knowledge bank
+frozen legacy migration baseline
         +
 feature/evals integration manifest
         +
@@ -30,6 +32,7 @@ named stakeholder credit register
 @jamie-burkart/atlas
   - semantic schema
   - graph compiler
+  - canonical lifecycle and proof records
   - complete project-slice migration
   - immutable source-artifact inventory
   - public/protected locator separation
@@ -51,12 +54,13 @@ writes that cannot be handled safely through the repository. Even then,
 Markdown remains an exportable interchange format and no service may silently
 become a second canonical source.
 
-## Authority transition
+## Authority
 
-V1 keeps the typed bank canonical and compiles complete project slices into the
-Atlas graph. A later proposal may make Markdown authoritative only after
-round-trip parity, loss detection, correction history, protected-boundary
-enforcement, and independent human review have all been demonstrated.
+Atlas owns the complete canonical record store. The former typed bank and A-N
+branch banks are frozen reference sources. Lossless migration parity proves
+that every legacy record entered Atlas unchanged; future records belong only in
+Atlas. Semantic Markdown remains the human composition layer, while atomic
+JSON records retain exact nested lifecycle structure.
 
 Branch-specific knowledge is federated rather than silently coerced into the
 base schema. Exact source artifacts remain attributable to their frozen commit;

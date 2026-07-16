@@ -47,22 +47,29 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
-## Knowledge Bank
+## Atlas Knowledge Authority
 
-Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
-public-safe claim layer.
+Use `docs/atlas/records/canonical.json` as the canonical machine-readable
+record and proof-claim layer. Use `docs/atlas/pages/` for the semantic Markdown
+wiki and `@jamie-burkart/atlas` for all record, query, provenance, and
+projection access.
 
-Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
-canonical machine-readable source. Do not add or strengthen a public factual
-claim without updating the canonical claim, evidence relationship, and source
-records.
+The former `feature/evals-*` banks, `docs/knowledge-bank/`,
+`apps/www/src/data/knowledge-bank/records.ts`, and the embedded legacy array in
+`apps/www/src/data/proofs.ts` are frozen migration and audit sources. Do not add
+new knowledge or new consumers there. Do not import the deprecated canonical
+bank directly.
+
+Do not add or strengthen a public factual claim without updating its Atlas
+record, evidence relationship, source records, proof boundary, and projection
+decision.
 
 Use `<Claim>` for high-risk canonical wording and `<Cite>` for supported
 authored prose. Do not type citation numbers manually.
 
 Do not expose private source paths, private assets, protected locators, signed
-URLs, or raw research artifacts. Regenerate the redacted public registry after
-changing canonical records.
+URLs, or raw research artifacts. Regenerate the redacted public registry and
+Atlas graph after changing canonical records.
 
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
@@ -75,10 +82,10 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 
 ## Atlas
 
-Use `packages/atlas/` for the semantic Markdown component and
-`docs/atlas/pages/` for authored Atlas pages. During the transition,
-`apps/www/src/data/knowledge-bank/records.ts` remains canonical and Atlas
-compiles complete, loss-checked project slices from it.
+Use `packages/atlas/` for the knowledge component,
+`docs/atlas/records/canonical.json` for complete atomic records, and
+`docs/atlas/pages/` for authored semantic pages. Atlas is canonical;
+deprecated banks are reference-only and parity-checked migration inputs.
 
 Every Atlas page needs stable identity, typed reciprocal relations, authority,
 consent, public-use, correction-route, and review metadata. Regenerate and
@@ -90,6 +97,10 @@ and `docs/atlas/stakeholder-credit.json` for named public-record contribution
 boundaries. Do not convert a catalog entry into equivalence, endorsement,
 permission, or a stronger public claim. Hash protected locators rather than
 publishing them.
+
+Before accepting canonical changes, run `npm run atlas:verify-legacy`,
+`npm run atlas:verify-deprecation`, `npm run atlas:verify-history`,
+`npm run atlas:generate`, and the full `npm run check`.
 
 Atlas is an in-process package, not a network service, CMS, database, or public
 application. Do not add a public Atlas route without explicit approval.

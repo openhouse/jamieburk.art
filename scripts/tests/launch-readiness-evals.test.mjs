@@ -11,7 +11,7 @@ import {
   scoreAssessment,
   validateSuite
 } from "../evals/lib/launch-readiness.mjs";
-import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeBank } from "@jamie-burkart/atlas/records";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
 const suite = loadSuite();
@@ -209,4 +209,27 @@ test("objective comparison accepts only lexicographic improvement", () => {
 
   assert.equal(compareObjective(before, after).accepted, true);
   assert.equal(compareObjective(before, regression).accepted, false);
+});
+
+test("production preflight invokes the complete release contract", () => {
+  const pkg = JSON.parse(readFileSync("package.json", "utf8"));
+  const preflight = pkg.scripts["preflight:production"];
+  const release = pkg.scripts["eval:launch:release"];
+
+  assert.match(preflight, /eval:launch:release/);
+  assert.doesNotMatch(preflight, /eval:launch:gate/);
+  assert.match(release, /--browser-report/);
+  assert.match(release, /--assessment/);
+  assert.match(release, /--release/);
+});
+
+test("browser eval runtime is declared and locked", () => {
+  const pkg = JSON.parse(readFileSync("package.json", "utf8"));
+  const lock = JSON.parse(readFileSync("package-lock.json", "utf8"));
+
+  assert.match(pkg.devDependencies.playwright, /^\^?1\.55\.[1-9]\d*$/);
+  assert.equal(
+    lock.packages["node_modules/playwright"].version,
+    pkg.devDependencies.playwright.replace(/^\^/, "")
+  );
 });

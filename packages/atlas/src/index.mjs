@@ -13,9 +13,22 @@ export {
   buildFeatureEvalKnowledge,
   integrationCatalogFingerprint,
   loadFeatureEvalKnowledge,
+  readFeatureEvalArtifact,
   validateFeatureEvalKnowledge,
+  verifyFeatureEvalHistory,
   verifyFeatureEvalSourceArtifacts
 } from "./integration.mjs";
+export {
+  atlasRecordCollections,
+  atlasRecordFingerprint,
+  atlasRecordStore,
+  findAtlasRecord,
+  knowledgeBank,
+  knowledgeBankCollections,
+  loadAtlasRecordStore,
+  validateAtlasRecordStore
+} from "./records.mjs";
+export { findDeprecatedKnowledgeBankImports } from "./deprecation.mjs";
 export {
   atlasAuthoritySchema,
   atlasCanonicalSchema,

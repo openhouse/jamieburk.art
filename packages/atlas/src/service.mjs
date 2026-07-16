@@ -1,7 +1,20 @@
 import { defaultRepoRoot } from "./corpus.mjs";
-import { loadFeatureEvalKnowledge } from "./integration.mjs";
+import {
+  loadFeatureEvalKnowledge,
+  readFeatureEvalArtifact
+} from "./integration.mjs";
+import {
+  atlasRecordCollections,
+  atlasRecordStore,
+  findAtlasRecord,
+} from "./records.mjs";
 
-export function createAtlasService(compiled, sourceKnowledge = loadFeatureEvalKnowledge(defaultRepoRoot)) {
+export function createAtlasService(
+  compiled,
+  sourceKnowledge = loadFeatureEvalKnowledge(defaultRepoRoot),
+  records = atlasRecordStore.records,
+  repoRoot = defaultRepoRoot
+) {
   const pages = new Map(compiled.pages.map((page) => [page.id, page]));
   return Object.freeze({
     candidateFingerprint: compiled.candidateFingerprint,
@@ -43,6 +56,37 @@ export function createAtlasService(compiled, sourceKnowledge = loadFeatureEvalKn
     },
     sourceStakeholders() {
       return sourceKnowledge.stakeholders;
+    },
+    recordCollections() {
+      return [...atlasRecordCollections];
+    },
+    records(collection) {
+      if (!atlasRecordCollections.includes(collection)) throw new Error(`Unknown Atlas record collection ${collection}`);
+      return records[collection];
+    },
+    getRecord(id) {
+      return findAtlasRecord(id, { records });
+    },
+    queryRecords({ text, collection, project } = {}) {
+      const needle = text?.toLowerCase();
+      const collections = collection ? [collection] : atlasRecordCollections;
+      return collections.flatMap((name) => {
+        if (!atlasRecordCollections.includes(name)) throw new Error(`Unknown Atlas record collection ${name}`);
+        return records[name]
+          .filter((record) => (!project || record.project === project || record.projectKey === project))
+          .filter((record) => !needle || JSON.stringify(record).toLowerCase().includes(needle))
+          .map((record) => ({ collection: name, record }));
+      });
+    },
+    sourceArtifacts({ branch, kind, path: artifactPath } = {}) {
+      return sourceKnowledge.artifacts.filter((artifact) =>
+        (!branch || artifact.branch === branch) &&
+        (!kind || artifact.kind === kind) &&
+        (!artifactPath || artifact.path === artifactPath)
+      );
+    },
+    readSourceArtifact(branch, artifactPath, encoding = null) {
+      return readFeatureEvalArtifact({ repoRoot, catalog: sourceKnowledge, branch, artifactPath, encoding });
     },
     explainProject(projectKey) {
       const page = [...pages.values()].find((candidate) => candidate.canonical?.projectKey === projectKey);

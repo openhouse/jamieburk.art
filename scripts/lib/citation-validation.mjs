@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeBank } from "@jamie-burkart/atlas/records";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
 
 const publicSurfaceFiles = [

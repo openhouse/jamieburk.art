@@ -1,3 +1,5 @@
+import atlasRecordStore from "../../../../docs/atlas/records/canonical.json" with { type: "json" };
+
 export type ProofStatus = "ready" | "careful" | "pending" | "private";
 
 export type SupportLevel = "strong" | "moderate" | "careful" | "pending";
@@ -41,7 +43,8 @@ export type ProofClaim = {
   lastReviewed: string;
 };
 
-export const proofClaims: ProofClaim[] = [
+/** @deprecated Frozen migration source. New proof knowledge belongs in Atlas records. */
+export const deprecatedProofClaims: ProofClaim[] = [
   {
     id: "career-operating-structure-14-years",
     status: "ready",
@@ -546,6 +549,8 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   }
 ];
+
+export const proofClaims = atlasRecordStore.records.proofClaims as ProofClaim[];
 
 const publicProofStatuses = new Set<ProofStatus>(["ready", "careful"]);
 

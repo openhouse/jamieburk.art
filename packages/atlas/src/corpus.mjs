@@ -7,7 +7,11 @@ import {
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
-import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  atlasRecordStore,
+  knowledgeBank,
+  validateAtlasRecordStore
+} from "./records.mjs";
 import {
   atlasPageSchema,
   evalIntegrationManifestSchema,
@@ -17,6 +21,7 @@ import {
   loadFeatureEvalKnowledge,
   validateFeatureEvalKnowledge
 } from "./integration.mjs";
+import { findDeprecatedKnowledgeBankImports } from "./deprecation.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -305,6 +310,7 @@ export function validateAtlas({
   const allRecordIds = new Set(Object.values(bank)
     .filter(Array.isArray)
     .flatMap((records) => records.map(({ id }) => id)));
+  for (const { id } of sourceKnowledge.semanticRecords) allRecordIds.add(id);
   const duplicateStakeholders = stakeholderCredits.entries
     .map(({ name }) => name)
     .filter((name, index, names) => names.indexOf(name) !== index);
@@ -326,12 +332,18 @@ export function validateAtlas({
   if (enforceRepositoryBoundary && !existsSync(path.join(repoRoot, "packages/atlas/package.json"))) {
     errors.push(issue("boundary", "Atlas package boundary is missing"));
   }
+  if (enforceRepositoryBoundary) {
+    for (const file of findDeprecatedKnowledgeBankImports(repoRoot)) {
+      errors.push(issue("deprecation", `Direct deprecated knowledge-bank import: ${file}`));
+    }
+  }
 
   return { errors };
 }
 
 export function compileAtlas({
   repoRoot = defaultRepoRoot,
+  recordStore = atlasRecordStore,
   bank = knowledgeBank,
   pages = loadAtlasPages(repoRoot),
   manifest = loadIntegrationManifest(repoRoot),
@@ -340,6 +352,9 @@ export function compileAtlas({
   enforceRepositoryBoundary = true
 } = {}) {
   const validation = validateAtlas({ pages, bank, manifest, sourceKnowledge, stakeholderCredits, repoRoot, enforceRepositoryBoundary });
+  for (const message of validateAtlasRecordStore(recordStore)) {
+    validation.errors.push(issue("record-authority", message));
+  }
   const pageNodes = pages
     .map((page) => ({
       id: page.id,
@@ -364,6 +379,7 @@ export function compileAtlas({
     .sort(([left], [right]) => left.localeCompare(right));
   const corpusFingerprint = hash(JSON.stringify(corpusSource));
   const bankFingerprint = hash(JSON.stringify(bank));
+  const recordStoreFingerprint = recordStore.fingerprint;
   const integrationFingerprint = hash(JSON.stringify(manifest));
   const sourceKnowledgeFingerprint = sourceKnowledge.catalogFingerprint;
   const stakeholderCreditFingerprint = hash(JSON.stringify(stakeholderCredits));
@@ -375,7 +391,7 @@ export function compileAtlas({
   ].map((file) => [path.relative(repoRoot, file), readFileSync(file, "utf8")]);
   const implementationFingerprint = hash(JSON.stringify(implementationSource));
   const candidateFingerprint = hash(
-    `${corpusFingerprint}:${bankFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${stakeholderCreditFingerprint}:${implementationFingerprint}`
+    `${corpusFingerprint}:${recordStoreFingerprint}:${integrationFingerprint}:${sourceKnowledgeFingerprint}:${stakeholderCreditFingerprint}:${implementationFingerprint}`
   );
   const canonicalUnion = {};
   for (const page of pageNodes.filter(({ canonical }) => canonical)) {
@@ -390,11 +406,12 @@ export function compileAtlas({
   }
 
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     candidateFingerprint,
     inputs: {
       corpusFingerprint,
       bankFingerprint,
+      recordStoreFingerprint,
       integrationFingerprint,
       sourceKnowledgeFingerprint,
       stakeholderCreditFingerprint,
@@ -404,6 +421,7 @@ export function compileAtlas({
       pages: pageNodes.length,
       projectPages: pageNodes.filter(({ kind }) => kind === "project").length,
       stakeholderCredits: stakeholderCredits.entries.length,
+      canonicalRecords: Object.values(recordStore.counts).reduce((sum, count) => sum + count, 0),
       relations: pageNodes.reduce((sum, page) => sum + page.relations.length, 0),
       canonicalCoverage: Object.fromEntries(
         Object.entries(canonicalUnion).map(([collection, ids]) => [collection, ids.length])
@@ -418,6 +436,13 @@ export function compileAtlas({
       stakeholders: sourceKnowledge.stakeholders
     },
     stakeholderCredits: stakeholderCredits.entries,
+    recordStore: {
+      authority: recordStore.authority,
+      deprecationPolicy: recordStore.deprecationPolicy,
+      migratedFrom: recordStore.migratedFrom,
+      counts: recordStore.counts,
+      fingerprint: recordStore.fingerprint
+    },
     validation
   };
 }
@@ -435,7 +460,9 @@ export function evaluateAtlas(compiled) {
     ["atlas-remains-a-private-package", ["boundary"]],
     ["eval-branch-family-is-accounted-for", ["integration"]],
     ["all-eval-branch-knowledge-is-cataloged", ["source-integration"]],
-    ["named-stakeholder-credit-is-preserved", ["stakeholder"]]
+    ["named-stakeholder-credit-is-preserved", ["stakeholder"]],
+    ["atlas-record-store-is-canonical", ["record-authority"]],
+    ["deprecated-knowledge-banks-have-no-consumers", ["deprecation"]]
   ];
   const results = hardGateDefinitions.map(([id, codes]) => {
     const evidence = failures.filter(({ code }) => codes.includes(code));
@@ -451,8 +478,8 @@ export function evaluateAtlas(compiled) {
     {
       id: "named-stakeholder-coverage",
       kind: "quality-target",
-      passed: compiled.metrics.stakeholderCredits >= 20,
-      observed: `${compiled.metrics.stakeholderCredits} named stakeholder credit boundaries; target 20`,
+      passed: compiled.metrics.stakeholderCredits >= 25,
+      observed: `${compiled.metrics.stakeholderCredits} named stakeholder credit boundaries; target 25`,
       evidence: []
     },
     {
@@ -488,7 +515,7 @@ export function evaluateAtlas(compiled) {
   const qualityTargets = results.filter(({ kind }) => kind === "quality-target");
   return {
     suiteId: "atlas-semantic-wiki",
-    suiteVersion: "2.0.0",
+    suiteVersion: "3.0.0",
     candidateFingerprint: compiled.candidateFingerprint,
     results,
     summary: {

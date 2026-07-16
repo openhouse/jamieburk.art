@@ -1,6 +1,12 @@
 {
-  "schemaVersion": 2,
-  "sourceCutAt": "2026-07-16T15:28:06Z",
+  "schemaVersion": 3,
+  "sourceCutAt": "2026-07-16T16:11:10Z",
+  "deprecation": {
+    "status": "frozen-reference-only",
+    "successor": "@jamie-burkart/atlas",
+    "branchWrites": "prohibited-after-source-cut",
+    "compatibility": "generated-and-parity-checked"
+  },
   "base": {
     "branch": "feature/evals-E",
     "commit": "fc32ae02b275f5e18e3abb5e6c541256849980ef",
@@ -79,7 +85,7 @@
     },
     {
       "branch": "feature/evals-K",
-      "sourceCommit": "2b8db2e9aa1c366671bfe4556f5b4c8bf8ecbd11",
+      "sourceCommit": "7f858dc00eaf3b561ce9515539f270ed3c6c2616",
       "strength": "Append-safe intake, query tooling, inspectable proof bases, and visual evidence checks.",
       "adoptedInAtlas": ["query and explain service", "rebuildable generated graph", "append-safe future intake boundary"],
       "knowledgeDisposition": "federated-source"
@@ -100,7 +106,7 @@
     },
     {
       "branch": "feature/evals-N",
-      "sourceCommit": "e4f113ec101125535d6618093e85488f6ee3e416",
+      "sourceCommit": "6ab66903c11974d04a576f9749f906e8eacd9fe1",
       "strength": "Deterministic grader separation, correction traceability, and governance-first projection decisions.",
       "adoptedInAtlas": ["deterministic semantic gates", "projection remains independent of evidence readiness"],
       "knowledgeDisposition": "federated-source"

@@ -37,7 +37,8 @@ changes public claims.
 - [ ] `npm run public-safety` passes.
 - [ ] `npm run check:routes` passes.
 - [ ] `npm run preflight:staging` passes.
-- [ ] `npm run preflight:production` passes only with explicit production
-  indexing environment variables.
+- [ ] `LAUNCH_BROWSER_REPORT` points to a passing production-profile browser
+  report and `npm run preflight:production` passes the independent assessment
+  and every named human gate.
 - [ ] Jamie has approved production launch content.
 - [ ] The primary domain passes `primary-domain-serves-current-portfolio` after the authorized cutover.

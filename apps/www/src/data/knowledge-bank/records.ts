@@ -1,3 +1,9 @@
+/**
+ * @deprecated Frozen Atlas migration source.
+ * New records belong in docs/atlas/records/canonical.json and consumers must
+ * use @jamie-burkart/atlas/records. This module remains only for migration
+ * parity until the compatibility window closes.
+ */
 import { knowledgeBankSchema, type KnowledgeBankInput } from "./schema.ts";
 import {
   lifecycleClaims,

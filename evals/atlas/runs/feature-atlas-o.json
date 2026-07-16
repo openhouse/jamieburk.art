@@ -1,7 +1,7 @@
 {
   "suiteId": "atlas-semantic-wiki",
-  "suiteVersion": "2.0.0",
-  "candidateFingerprint": "4dd3bfa6503291c4cd379fa1cc8dff21cb9a32774aa3f3b5a293e0fc37c91a23",
+  "suiteVersion": "3.0.0",
+  "candidateFingerprint": "e6e45186dbedf373517c7b458e4167d033f6261e7bcba52b5295b9945686d5af",
   "results": [
     {
       "id": "semantic-markdown-contract",
@@ -81,10 +81,24 @@
       "evidence": []
     },
     {
+      "id": "atlas-record-store-is-canonical",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
+      "id": "deprecated-knowledge-banks-have-no-consumers",
+      "kind": "hard-gate",
+      "passed": true,
+      "observed": "No defects",
+      "evidence": []
+    },
+    {
       "id": "named-stakeholder-coverage",
       "kind": "quality-target",
       "passed": true,
-      "observed": "20 named stakeholder credit boundaries; target 20",
+      "observed": "25 named stakeholder credit boundaries; target 25",
       "evidence": []
     },
     {
@@ -98,15 +112,16 @@
       "id": "federated-source-depth",
       "kind": "quality-target",
       "passed": true,
-      "observed": "5685 semantic IDs from 14 branches",
+      "observed": "5695 semantic IDs from 14 branches",
       "evidence": {
         "branches": 14,
-        "artifactMappings": 1823,
-        "uniqueBlobs": 1666,
-        "semanticIds": 5685,
-        "recordVariants": 5709,
-        "documents": 824,
-        "publicUrls": 16687,
+        "artifactMappings": 1833,
+        "fullFidelityArtifacts": 1833,
+        "uniqueBlobs": 1676,
+        "semanticIds": 5695,
+        "recordVariants": 5723,
+        "documents": 829,
+        "publicUrls": 16691,
         "protectedLocators": 1520,
         "namedStakeholders": 2
       }
@@ -122,20 +137,21 @@
       "id": "candidate-is-exactly-bound",
       "kind": "quality-target",
       "passed": true,
-      "observed": "4dd3bfa6503291c4cd379fa1cc8dff21cb9a32774aa3f3b5a293e0fc37c91a23",
+      "observed": "e6e45186dbedf373517c7b458e4167d033f6261e7bcba52b5295b9945686d5af",
       "evidence": {
-        "corpusFingerprint": "f8609cfea5d3b0e7df400bad7c314e803fdcf6a157693fa96c9ec0b96cb6f04e",
+        "corpusFingerprint": "4697e185b6636cc3284f53d8697d4f6f33fe84e75805d194c46598b6d71979bd",
         "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
-        "integrationFingerprint": "5b0b428b134e9a34f813c2d9ba2a0b56a6e0ea37ef88e0052cd12c18558be7db",
-        "sourceKnowledgeFingerprint": "8fc077624f471177a1399fac3e12150dd095b29f739f2b7db7f265bb5ecdd128",
-        "stakeholderCreditFingerprint": "bd06d05404d9a5680f6f0cd427054afb1197e9dc848d1907310d0d40bdb0fe4d",
-        "implementationFingerprint": "5a83cbef1f7c2aa75f04f682652bfc863b4767143e3fb8ca47b699d316ef5fa2"
+        "recordStoreFingerprint": "2b137e5892b97504f479e70d6865a6ff5c1a20f8f8b711b91b619a6920b8d453",
+        "integrationFingerprint": "9cd4f3bae826dec0c57b1545536a09544e9c12bff577eec7117773f76827ec77",
+        "sourceKnowledgeFingerprint": "e758fdf383288ad9a18e4e14d5f8a227f1ef1f4618ff38635dde59bb7aa18e65",
+        "stakeholderCreditFingerprint": "a8ede705241b376757d6bca5b6d82a3ef77f8989dc4899e2bd912622fa09d1e9",
+        "implementationFingerprint": "d7c6d38b48c69f345742d03c5c427b12e2b0a0d74d13545e622204ea8f9d943e"
       }
     }
   ],
   "summary": {
     "hardGateFailures": 0,
-    "hardGateTotal": 11,
+    "hardGateTotal": 13,
     "qualityTargetGaps": 0,
     "qualityTargetTotal": 5
   }

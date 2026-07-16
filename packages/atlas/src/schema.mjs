@@ -87,8 +87,14 @@ export const evalBranchSchema = z.object({
 });
 
 export const evalIntegrationManifestSchema = z.object({
-  schemaVersion: z.literal(2),
+  schemaVersion: z.literal(3),
   sourceCutAt: z.iso.datetime({ offset: true }),
+  deprecation: z.object({
+    status: z.literal("frozen-reference-only"),
+    successor: z.literal("@jamie-burkart/atlas"),
+    branchWrites: z.literal("prohibited-after-source-cut"),
+    compatibility: z.literal("generated-and-parity-checked")
+  }),
   base: z.object({
     branch: z.literal("feature/evals-E"),
     commit: z.string().regex(/^[a-f0-9]{40}$/),

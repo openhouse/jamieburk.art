@@ -64,6 +64,13 @@ function hash(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function gitBlobHash(value) {
+  return createHash("sha1")
+    .update(`blob ${value.length}\0`)
+    .update(value)
+    .digest("hex");
+}
+
 function sorted(values) {
   return [...new Set(values)].sort();
 }
@@ -255,7 +262,12 @@ export function buildFeatureEvalKnowledge({ repoRoot, manifest }) {
     const branchPublicUrls = new Set();
     const branchProtected = new Set();
     for (const artifact of branchArtifacts) {
-      const mapped = { branch: source.branch, commit: source.sourceCommit, ...artifact };
+      const mapped = {
+        branch: source.branch,
+        commit: source.sourceCommit,
+        ...artifact,
+        contentAddress: `git-blob:${artifact.blob}`
+      };
       artifacts.push(mapped);
       if (!contents.has(artifact.blob)) contents.set(artifact.blob, readBlob(repoRoot, artifact.blob));
       const content = contents.get(artifact.blob);
@@ -330,12 +342,18 @@ export function buildFeatureEvalKnowledge({ repoRoot, manifest }) {
     locations: sorted(entry.locations)
   });
   const catalog = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     sourceCutAt: manifest.sourceCutAt,
     sourceManifestFingerprint: hash(JSON.stringify(manifest)),
+    retention: {
+      mode: "git-object-ancestry",
+      branchRefsRequired: false,
+      completeContentAvailableThroughAtlas: true
+    },
     totals: {
       branches: branchSummaries.length,
       artifactMappings: artifacts.length,
+      fullFidelityArtifacts: artifacts.length,
       uniqueBlobs: contents.size,
       semanticIds: semantic.size,
       recordVariants: recordVariants.size,
@@ -364,6 +382,10 @@ export function loadFeatureEvalKnowledge(repoRoot) {
 
 export function validateFeatureEvalKnowledge({ catalog, manifest }) {
   const errors = [];
+  if (catalog.schemaVersion !== 2) errors.push("Feature-evals catalog requires schemaVersion 2");
+  if (catalog.retention?.mode !== "git-object-ancestry" || catalog.retention?.branchRefsRequired !== false) {
+    errors.push("Feature-evals catalog lacks the branch-independent full-fidelity retention contract");
+  }
   const branches = new Map(catalog.branches.map((entry) => [entry.branch, entry]));
   for (const source of manifest.branches) {
     const observed = branches.get(source.branch);
@@ -377,6 +399,9 @@ export function validateFeatureEvalKnowledge({ catalog, manifest }) {
   if (!catalog.totals.recordVariants || !catalog.totals.documents || !catalog.totals.publicUrls) {
     errors.push("Knowledge catalog lacks substantive records, documents, or public sources");
   }
+  if (catalog.totals.fullFidelityArtifacts !== catalog.totals.artifactMappings) {
+    errors.push("Not every source artifact has a full-fidelity Atlas content address");
+  }
   return errors;
 }
 
@@ -385,7 +410,8 @@ export function verifyFeatureEvalSourceArtifacts({ repoRoot, catalog, manifest }
     listArtifacts(repoRoot, source.sourceCommit).map((artifact) => ({
       branch: source.branch,
       commit: source.sourceCommit,
-      ...artifact
+      ...artifact,
+      contentAddress: `git-blob:${artifact.blob}`
     }))
   ).sort((left, right) => `${left.branch}:${left.path}`.localeCompare(`${right.branch}:${right.path}`));
   const observed = [...catalog.artifacts]
@@ -397,4 +423,37 @@ export function verifyFeatureEvalSourceArtifacts({ repoRoot, catalog, manifest }
     ...[...expectedKeys].filter((key) => !observedKeys.has(key)).map((key) => `Missing source artifact ${key}`),
     ...[...observedKeys].filter((key) => !expectedKeys.has(key)).map((key) => `Unexpected source artifact ${key}`)
   ];
+}
+
+export function readFeatureEvalArtifact({ repoRoot, catalog, branch, artifactPath, encoding = null }) {
+  const artifact = catalog.artifacts.find((entry) => entry.branch === branch && entry.path === artifactPath);
+  if (!artifact) throw new Error(`Unknown Atlas source artifact ${branch}:${artifactPath}`);
+  const content = execFileSync("git", ["cat-file", "blob", artifact.blob], {
+    cwd: repoRoot,
+    maxBuffer: 256 * 1024 * 1024
+  });
+  if (content.length !== artifact.bytes) throw new Error(`Atlas source artifact size drift for ${branch}:${artifactPath}`);
+  if (gitBlobHash(content) !== artifact.blob) throw new Error(`Atlas source artifact hash drift for ${branch}:${artifactPath}`);
+  return encoding ? content.toString(encoding) : content;
+}
+
+export function verifyFeatureEvalHistory({ repoRoot, catalog, manifest, head = "HEAD" }) {
+  const errors = [];
+  const reachable = new Set(
+    execFileSync("git", ["rev-list", "--objects", head], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      maxBuffer: 512 * 1024 * 1024
+    }).trim().split("\n").map((line) => line.split(" ")[0])
+  );
+  for (const source of manifest.branches) {
+    if (!reachable.has(source.sourceCommit)) {
+      errors.push(`Frozen source commit is not reachable from Atlas: ${source.branch}@${source.sourceCommit}`);
+    }
+  }
+  const uniqueBlobs = new Set(catalog.artifacts.map(({ blob }) => blob));
+  for (const blob of uniqueBlobs) {
+    if (!reachable.has(blob)) errors.push(`Atlas source blob is unavailable from Atlas history: ${blob}`);
+  }
+  return errors;
 }

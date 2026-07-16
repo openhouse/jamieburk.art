@@ -11,9 +11,16 @@ import {
 import {
   buildFeatureEvalKnowledge,
   loadFeatureEvalKnowledge,
+  readFeatureEvalArtifact,
+  verifyFeatureEvalHistory,
   verifyFeatureEvalSourceArtifacts
 } from "../src/integration.mjs";
 import { createAtlasService } from "../src/service.mjs";
+import { findDeprecatedKnowledgeBankImports } from "../src/deprecation.mjs";
+import {
+  findAtlasRecord,
+  loadAtlasRecordStore
+} from "../src/records.mjs";
 
 const [command = "check", ...args] = process.argv.slice(2);
 const valueFor = (flag) => {
@@ -22,6 +29,7 @@ const valueFor = (flag) => {
 };
 const generatedPath = path.join(defaultRepoRoot, "docs/atlas/generated/atlas.graph.json");
 const sourceCatalogPath = path.join(defaultRepoRoot, "docs/atlas/generated/feature-evals-knowledge.json");
+const recordStorePath = path.join(defaultRepoRoot, "docs/atlas/records/canonical.json");
 
 function stableJson(value) {
   return `${JSON.stringify(value, null, 2)}\n`;
@@ -36,6 +44,28 @@ function printEvaluation(evaluation) {
 }
 
 try {
+  if (command === "migrate-legacy") {
+    const { buildLegacyMigrationStore } = await import("../src/legacy.mjs");
+    const store = buildLegacyMigrationStore();
+    mkdirSync(path.dirname(recordStorePath), { recursive: true });
+    writeFileSync(recordStorePath, stableJson(store));
+    console.log(`Wrote ${path.relative(defaultRepoRoot, recordStorePath)}`);
+    console.log(`Migrated ${Object.values(store.counts).reduce((sum, count) => sum + count, 0)} complete canonical records into Atlas.`);
+    process.exit(0);
+  }
+  if (command === "verify-legacy") {
+    const { verifyLegacyParity } = await import("../src/legacy.mjs");
+    const errors = verifyLegacyParity(loadAtlasRecordStore(recordStorePath));
+    if (errors.length) throw new Error(errors.join("\n"));
+    console.log("Atlas canonical records round-trip exactly to the deprecated legacy stores.");
+    process.exit(0);
+  }
+  if (command === "verify-deprecation") {
+    const errors = findDeprecatedKnowledgeBankImports(defaultRepoRoot);
+    if (errors.length) throw new Error(`Direct deprecated knowledge-bank imports:\n${errors.join("\n")}`);
+    console.log("No consumer imports the deprecated legacy knowledge bank directly.");
+    process.exit(0);
+  }
   if (command === "refresh-sources") {
     const manifest = loadIntegrationManifest();
     const catalog = buildFeatureEvalKnowledge({ repoRoot: defaultRepoRoot, manifest });
@@ -51,6 +81,41 @@ try {
     const errors = verifyFeatureEvalSourceArtifacts({ repoRoot: defaultRepoRoot, catalog, manifest });
     if (errors.length) throw new Error(errors.join("\n"));
     console.log(`Verified ${catalog.totals.artifactMappings} source artifact mappings across ${catalog.totals.branches} immutable branch heads.`);
+    process.exit(0);
+  }
+  if (command === "verify-history") {
+    const manifest = loadIntegrationManifest();
+    const catalog = loadFeatureEvalKnowledge(defaultRepoRoot);
+    const errors = verifyFeatureEvalHistory({ repoRoot: defaultRepoRoot, catalog, manifest });
+    if (errors.length) throw new Error(errors.join("\n"));
+    console.log(`Verified all ${manifest.branches.length} frozen source commits and ${catalog.totals.uniqueBlobs} full-fidelity blobs are reachable from Atlas.`);
+    process.exit(0);
+  }
+  if (command === "records") {
+    const store = loadAtlasRecordStore(recordStorePath);
+    const id = valueFor("--id");
+    const collection = valueFor("--collection");
+    const output = id
+      ? findAtlasRecord(id, store)
+      : collection
+        ? store.records[collection]
+        : { counts: store.counts, fingerprint: store.fingerprint };
+    if (output === null || output === undefined) throw new Error("Atlas record not found");
+    console.log(stableJson(output));
+    process.exit(0);
+  }
+  if (command === "artifact") {
+    const branch = valueFor("--branch");
+    const artifactPath = valueFor("--path");
+    if (!branch || !artifactPath) throw new Error("Use --branch <feature/evals-X> --path <repository-path>");
+    const catalog = loadFeatureEvalKnowledge(defaultRepoRoot);
+    const artifact = catalog.artifacts.find((entry) => entry.branch === branch && entry.path === artifactPath);
+    if (!artifact) throw new Error("Atlas source artifact not found");
+    if (args.includes("--content")) {
+      process.stdout.write(readFeatureEvalArtifact({ repoRoot: defaultRepoRoot, catalog, branch, artifactPath }));
+    } else {
+      console.log(stableJson(artifact));
+    }
     process.exit(0);
   }
   const compiled = compileAtlas();
