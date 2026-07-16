@@ -480,6 +480,14 @@ test("the downloadable resume is an exact governed destination", () => {
   const unauthorized = structuredClone(knowledgeLifecycle);
   unauthorized.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT").allowedSurfaces = unauthorized.promotionDecisions.find(({ id }) => id === "DEC-KC-TOWN-HALL-COUNCIL-LIFECYCLE-CORRECT").allowedSurfaces.filter((surface) => surface !== route);
   assert.match(validateKnowledgeLifecycle(unauthorized).join("\n"), /Active canonical projection CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019 lacks current human approval/);
+
+  const manifest = knowledgeLifecycle.proofSurfaceManifests.find((item) => item.route === route);
+  assert.ok(manifest?.canonicalClaimIds.includes("CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017"));
+  assert.ok(manifest?.canonicalClaimIds.includes("CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE"));
+  const sundayDinnerDecision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-SUNDAY-DINNER-WEEKLY-PROMOTE");
+  const residencyDecision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-196-ARTISTS-RESIDENCY-FOUNDER-SCALE-PROMOTE");
+  assert.ok(sundayDinnerDecision?.allowedSurfaces.includes(route));
+  assert.ok(residencyDecision?.allowedSurfaces.includes(route));
 });
 
 test("WOW List historical scale is governed from protected source through every public destination", () => {
@@ -751,8 +759,8 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
 
   const resumePdf = retrieveKnowledgePalette({ proofSurface: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", publicationSafe: true });
   assert.deepEqual(resumePdf.projects.map(({ id }) => id), ["PRJ-NYC-ARTIST-COALITION", "PRJ-CALLNYC", "PRJ-SUNDAY-DINNER-196", "PRJ-KC-TOWN-HALL", "PRJ-FAIR-RENT-CRS", "PRJ-WOWLIST", "PRJ-HARRY-J-EPSTEIN"]);
-  assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-WOWLIST-HISTORICAL-SCALE"]);
-  assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION", "CND-WOWLIST-HISTORICAL-SCALE", "CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
+  assert.deepEqual(resumePdf.canonicalClaims.map(({ id }) => id), ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", "CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019", "CLM-WOWLIST-HISTORICAL-SCALE", "CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017", "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE"]);
+  assert.deepEqual(resumePdf.candidates.map(({ id }) => id), ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION", "CND-WOWLIST-HISTORICAL-SCALE", "CND-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING", "CND-196-ARTISTS-RESIDENCY-FOUNDER-SCALE", "CND-KC-TOWN-HALL-PUBLIC-RECORD"]);
   assert.deepEqual(resumePdf.researchTasks, []);
   assert.deepEqual(resumePdf.mediaLeads, []);
 

@@ -1404,7 +1404,10 @@ const knowledgeBankInput = {
       project: "196-sunday-dinner",
       internalClaim: "By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering; Jamie's approved resume reports 300-plus documented gatherings across the practice.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering; Jamie's approved resume reports 300+ documented gatherings across the practice.", status: "active", citationRequired: true, surfaces: ["/work/196-sunday-dinner"] }],
+      projections: [
+        { key: "case-study", text: "By 2017, Jamie and Julia Fredenberg were co-hosting Sunday Dinner every week as an open community gathering; Jamie's approved resume reports 300+ documented gatherings across the practice.", status: "active", citationRequired: true, surfaces: ["/work/196-sunday-dinner"] },
+        { key: "resume-pdf", text: "Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ documented gatherings.", status: "active", citationRequired: false, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] }
+      ],
       evidence: [
         { sourceId: "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", relationship: "direct-support", supports: ["Jamie and Julia as weekly co-hosts", "the gathering's open-community posture"], locator: "Opening description and interview body", confidence: "high", renderCitation: true },
         { sourceId: "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE", relationship: "corroborating", supports: ["the surviving project archive", "participatory media pathways around the gatherings"], locator: "Homepage and public navigation", confidence: "moderate", renderCitation: true },
@@ -1419,7 +1422,10 @@ const knowledgeBankInput = {
       project: "196-sunday-dinner",
       internalClaim: "Jamie founded 196 Artists Residency in 2020 and reports supporting 20-plus resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "Jamie founded 196 Artists Residency in 2020; Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.", status: "active", citationRequired: true, surfaces: ["/work/196-sunday-dinner"] }],
+      projections: [
+        { key: "case-study", text: "Jamie founded 196 Artists Residency in 2020; Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.", status: "active", citationRequired: true, surfaces: ["/work/196-sunday-dinner"] },
+        { key: "resume-pdf", text: "Jamie founded 196 Artists Residency in 2020; Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.", status: "active", citationRequired: false, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] }
+      ],
       evidence: [
         { sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", relationship: "direct-support", supports: ["Jamie's founder role", "the 2020-present date range", "the 20-plus resident-artist figure", "the operating practices used"], locator: "Selected Impact and Experience, pages 1-2", confidence: "moderate", renderCitation: true },
         { sourceId: "SRC-196-ARTISTS-RESIDENCY-ONBOARDING-2023", relationship: "private-support", supports: ["proposal review", "scheduled onboarding", "pre-arrival planning", "space configuration", "access logistics"], locator: "Acceptance, residency-window, pre-arrival-call, space-configuration, and access sections", confidence: "high", renderCitation: false }

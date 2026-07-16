@@ -109,6 +109,8 @@ composed public surface, not a claim database.
 - `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
 - `CLM-WOWLIST-HISTORICAL-SCALE`
+- `CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017`
+- `CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE`
 
 ### Exclusions
 
@@ -123,6 +125,8 @@ composed public surface, not a claim database.
 - Appropriation is not receipt
 - Keep no disbursement and reappropriation attached to the KC amount
 - Keep Sunday Dinner's 300-plus gatherings distinct from 196 Artists Residency's 20-plus resident artists
+- Credit Julia Fredenberg wherever Sunday Dinner hosting is named
+- Keep both participation aggregates explicitly self-reported
 - Keep the phone-bearing artifact available for applications
 - Keep WOW List scale historical and threshold-bound
 ## `/work/technical-operations`

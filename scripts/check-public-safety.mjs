@@ -269,6 +269,25 @@ if (!existsSync(resumePath)) {
   }
 
   if (
+    !/Jamie\s+co-built\s+WOWList\s+with\s+Richard\s+Caceres;\s+historical\s+production\s+records\s+show\s+use\s+across\s+35-plus\s+city\s+scenes,\s+each\s+with\s+at\s+least\s+50\s+geocoded\s+posts\/events/i.test(
+      resumeText
+    ) || /35-plus\s+active\s+city-scene\s+tags/i.test(resumeText)
+  ) {
+    addFailure(resumePath, "resume PDF is missing the approved historical WOW List scale and collaborator credit");
+  }
+
+  if (
+    !/Jamie\s+co-hosted\s+Sunday\s+Dinner\s+with\s+Julia\s+Fredenberg;\s+his\s+approved\s+resume\s+reports\s+300-plus\s+documented\s+gatherings/i.test(
+      resumeText
+    ) ||
+    !/Jamie\s+founded\s+196\s+Artists\s+Residency(?:\s+in\s+2020)?(?:\s+and|;)\s+Jamie\s+reports\s+supporting\s+20-plus\s+resident\s+artists/i.test(
+      resumeText
+    )
+  ) {
+    addFailure(resumePath, "resume PDF must keep Sunday Dinner co-hosting and 196 Artists Residency founding distinct");
+  }
+
+  if (
     isProduction &&
     !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&
     !siteHasDefaultContactEmail &&

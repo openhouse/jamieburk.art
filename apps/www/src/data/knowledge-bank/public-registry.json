@@ -1441,6 +1441,15 @@
           "surfaces": [
             "/work/196-sunday-dinner"
           ]
+        },
+        {
+          "key": "resume-pdf",
+          "text": "Jamie co-hosted Sunday Dinner with Julia Fredenberg; his approved resume reports 300+ documented gatherings.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+          ]
         }
       ],
       "evidence": [
@@ -1494,6 +1503,15 @@
           "citationRequired": true,
           "surfaces": [
             "/work/196-sunday-dinner"
+          ]
+        },
+        {
+          "key": "resume-pdf",
+          "text": "Jamie founded 196 Artists Residency in 2020; Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, documentation, and continuity systems.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
           ]
         }
       ],

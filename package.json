@@ -15,7 +15,7 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check:citations && npm run test:citations && npm run test:evals && npm run check:knowledge-lifecycle && npm run check:social-archive && npm run check:nycartc-corpus && npm run evals:nycartc-x && npm run check:urbanhermit-corpus && npm run evals:urbanhermit-x && npm run evals:nycac-facebook-events && npm run evals:personal-wowlist-facebook-events && npm run check:visual-evidence && npm run check -w @jamie-burkart/www && npm run check:compiled-lifecycle-leaks && npm run knowledge-bank && npm run public-safety && npm run check:routes",
+    "check": "npm run check:chad-lens && npm run check:citations && npm run test:citations && npm run test:evals && npm run check:knowledge-lifecycle && npm run check:social-archive && npm run check:nycartc-corpus && npm run evals:nycartc-x && npm run check:urbanhermit-corpus && npm run evals:urbanhermit-x && npm run evals:nycac-facebook-events && npm run evals:personal-wowlist-facebook-events && npm run check:visual-evidence && npm run check -w @jamie-burkart/www && npm run check:compiled-lifecycle-leaks && npm run knowledge-bank && npm run public-safety && npm run check:routes",
     "generate:citations": "node scripts/generate-public-citations.mjs",
     "generate:projection-map": "node scripts/generate-projection-map.mjs",
     "generate:campaign-press": "node scripts/generate-campaign-press-corpus.mjs",
