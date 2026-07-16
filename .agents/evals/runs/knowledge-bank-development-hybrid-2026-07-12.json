@@ -1,0 +1,36 @@
+{
+  "candidate_sha": "e76515c4e08a1af4eb17e2fa5d786836c058f4d3",
+  "results": [
+    {
+      "eval_id": "KB-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/records.ts:722-927: all collective-work records have explicit boundaries and antiClaims; supported actions are named while research-stage claims remain bounded and held.",
+        "apps/www/src/data/knowledge-bank/records.ts:770-787: CLM-WATER-PARTICIPATORY-THROUGHLINE names Jamie's action while preserving participant authorship and collective-project boundaries.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx:15-29: the public case study identifies Jamie's documentation, translation, coordination, organizing, and web-infrastructure actions while rejecting movement leadership, bill ownership, legal authority, and solo policy causation.",
+        "docs/knowledge-bank/projects/nyc-artist-coalition.md:5-21,40-45: the project record separates Jamie's documented contributions from coalition formation, legislative authorship, institutional creation, and policy causation.",
+        "docs/knowledge-bank/projects/waterway-participation.md:7-22,37-41: the project record credits Jamie with initiating Open House and originating the expedition concept while preserving communal decision-making, expedition participants, and method/outcome uncertainty.",
+        "apps/www/src/data/work.ts:176-182,247-275: the work projection uses the bounded role label Founding-Era Organizer, Civic Systems & Coalition Operations, credits collaborators and advocates, and avoids policy-leadership claims."
+      ],
+      "findings": [],
+      "confidence": 0.98
+    },
+    {
+      "eval_id": "KB-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/records.ts:433-503,770-787: CLM-WATER-PARTICIPATORY-THROUGHLINE connects intake and atomic assertions to three sources with explicit evidence, boundary, anti-claims, and a use-now disposition.",
+        "apps/www/src/data/knowledge-bank/records.ts:722-838: eligible unprojected waterway and nightlife claims each receive an explicit hold projection with no forced surface display.",
+        "apps/www/src/data/knowledge-bank/records.ts:841-876: CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE and CLM-NAC-CIVIC-SYSTEMS are source-backed, bounded, eligible, and active for /work/fair-rent-nyc.",
+        "apps/www/src/data/proofs.ts:162-305 and apps/www/src/data/work.ts:188-192: consequential FairRentNYC work-card claims trace to approved proof records.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx:15-29 and docs/knowledge-bank/projects/nyc-artist-coalition.md:5-21: public claims match approved proof and canonical records; unresolved formation and institutional-outcome claims remain research questions.",
+        "apps/www/src/data/knowledge-bank/public-registry.json:105-369: runtime projections remain limited to registered, source-backed claims and occurrences."
+      ],
+      "findings": [],
+      "confidence": 0.97
+    }
+  ],
+  "overall_finding": "Candidate e76515c4 satisfies both frozen hybrid criteria at score 4: collective claims make Jamie's supported actions legible without collapsing collective or institutional boundaries, and consequential public claims are backed by canonical or approved proof records while eligible depth receives explicit active-or-hold editorial disposition."
+}

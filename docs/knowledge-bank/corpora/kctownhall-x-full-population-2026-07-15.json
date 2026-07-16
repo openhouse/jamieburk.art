@@ -1,0 +1,4722 @@
+{
+  "schemaVersion": 1,
+  "account": "@KCTownHall",
+  "capturedAt": "2026-07-15T07:20:55.093Z",
+  "capturedThrough": "Authenticated X replies-inclusive profile traversal, posts-only cross-check, and authored-search cross-check",
+  "authenticatedSessionIdentity": "@urbanhermit",
+  "rawCaptureSha256": "366202efa66c749924a653ac79d6af746f2fbe208ba04f7529f1e8d18fd170d9",
+  "rawCaptureArtifact": "source-captures/kctownhall-x-browser-extraction-2026-07-15-utc.json",
+  "derivationManifest": "kctownhall-x-full-population-2026-07-15.manifest.json",
+  "derivationScript": "scripts/derive-kctownhall-x-corpus.mjs",
+  "population": {
+    "profileReported": 183,
+    "renderedDistinct": 181,
+    "authored": 155,
+    "reposted": 26,
+    "unresolvedCountDifference": 2,
+    "range": [
+      "2018-07-02T21:12:15.000Z",
+      "2022-09-24T12:31:50.000Z"
+    ],
+    "byYear": {
+      "2018": {
+        "authored": 24,
+        "reposted": 6,
+        "total": 30
+      },
+      "2019": {
+        "authored": 64,
+        "reposted": 19,
+        "total": 83
+      },
+      "2020": {
+        "authored": 41,
+        "reposted": 0,
+        "total": 41
+      },
+      "2021": {
+        "authored": 17,
+        "reposted": 0,
+        "total": 17
+      },
+      "2022": {
+        "authored": 9,
+        "reposted": 1,
+        "total": 10
+      }
+    }
+  },
+  "boundaries": [
+    "The profile reported 183 posts. Repeated replies-inclusive traversal, posts-only cross-checking, and authored searches recovered 181 distinct account-timeline status IDs; two items remain unrecovered.",
+    "The pass accounts for the full reported population by preserving all 181 recovered items and an explicit two-item gap. It does not claim to have recovered inaccessible or deleted items.",
+    "Seven separately rendered public conversation records are preserved as context and excluded from the 183-post denominator.",
+    "Authored posts and reposts are separate. Repost engagement belongs to the original post and is not treated as KC Town Hall traction.",
+    "Visible interaction labels are dated observations and may omit deleted, hidden, private, or platform-suppressed activity.",
+    "Posts to Council and agency handles are outbound communication, not stakeholder engagement. Only visible replies or quote-posts in preserved contexts support the lower-bound incoming-engagement claim.",
+    "This is a collective project-account record. It does not identify Jamie or any collaborator as the author of every post or assign later project operations to Jamie.",
+    "Public contact numbers were redacted; no private messages, settings, analytics, credentials, follower exports, or session data were captured."
+  ],
+  "missionPatterns": [
+    {
+      "id": "tired-of-tires-public-operations",
+      "summary": "Authored posts repeatedly documented and coordinated the Tired of Tires neighborhood tire-pickup program.",
+      "statusIds": [
+        "1124416898064580608",
+        "1124448415293874176",
+        "1124481129057333250",
+        "1124789562293870592",
+        "1124791429790879745",
+        "1124793002843615233",
+        "1124795681389076481",
+        "1124810411302359040",
+        "1134594449256984576",
+        "1134608391614160896",
+        "1135246124883861504",
+        "1147586873423998976",
+        "1147589894660907009",
+        "1147602234127130624",
+        "1147679988600254465",
+        "1157464628324110336",
+        "1157482636463476736",
+        "1157483198781087744",
+        "1157483542529617926",
+        "1157861700944703488",
+        "1170072880090165249",
+        "1170387602329034754",
+        "1170387688496799744",
+        "1170387736492224512",
+        "1180178311848366083",
+        "1180550513819095042",
+        "1180551346090577920",
+        "1180552140005298176",
+        "1180552910071095301",
+        "1180553578689236992",
+        "1180556215870541824",
+        "1180557262823264256",
+        "1180568634260897794",
+        "1180569203717353472",
+        "1180569809475588096",
+        "1180570492530577410",
+        "1180639237781250049",
+        "1190017854248239115",
+        "1190367471129300992",
+        "1190393136054521856",
+        "1190703057161601024",
+        "1190704251263160322",
+        "1190705445008216064",
+        "1190707863292956672",
+        "1190708575510958080",
+        "1190709291289890823",
+        "1190710238212694016",
+        "1190995865814667266",
+        "1236102068680695808",
+        "1236385304245927936",
+        "1236689218174357504",
+        "1288612274228396032",
+        "1288952731982598144",
+        "1289313255966617602",
+        "1289350670730948608",
+        "1289350962709065729",
+        "1289634461638778880",
+        "1289713591843565569",
+        "1301921883831570434",
+        "1301997561356652546",
+        "1302003448833953792",
+        "1302003767831912448",
+        "1302004390585421825",
+        "1302281027960926210",
+        "1302311398999982081",
+        "1302391602812518401",
+        "1311091878306213889",
+        "1312091287273824265",
+        "1312167901252608001",
+        "1312482560316895232",
+        "1312530339051393024",
+        "1312649591469342722",
+        "1324836875568320512",
+        "1325099960933748744",
+        "1367257547724509189",
+        "1367878555556777989",
+        "1368272511490744325",
+        "1368365228765945858",
+        "1423734504691314698",
+        "1423795274879836160",
+        "1424055770472198146",
+        "1424106887482683397",
+        "1424143001505386498",
+        "1433862792990400527",
+        "1434323234346967046",
+        "1444329446287290382",
+        "1444466053665509377",
+        "1457012244588412935",
+        "1457046287753285637",
+        "1457371688300056580",
+        "1500289857750401026",
+        "1510295173548367877",
+        "1511091801087692813",
+        "1525157225542651910",
+        "1532864718490292226",
+        "1542991559674716165",
+        "1543272488318242817",
+        "1555940701338206208",
+        "1566197849297195009"
+      ]
+    },
+    {
+      "id": "survey-and-listening",
+      "summary": "Authored posts invited survey responses, public input, or neighborhood listening around project and program decisions.",
+      "statusIds": [
+        "1124418375181058048",
+        "1124789562293870592",
+        "1124791429790879745",
+        "1124793002843615233",
+        "1126284471894933504",
+        "1134594449256984576",
+        "1134608391614160896",
+        "1147586873423998976",
+        "1147589894660907009",
+        "1147602234127130624",
+        "1170072880090165249",
+        "1180178311848366083"
+      ]
+    },
+    {
+      "id": "building-history-and-reuse",
+      "summary": "Authored posts preserved building history and described the adaptive-reuse and neighborhood-resource purpose.",
+      "statusIds": [
+        "1013893135695601665",
+        "1013894923031113728",
+        "1013895905932726273",
+        "1013897573856370688",
+        "1062377455338618880",
+        "1124717766756503552",
+        "1147586873423998976",
+        "1147589894660907009",
+        "1147602234127130624",
+        "1170072880090165249",
+        "1180178311848366083"
+      ]
+    },
+    {
+      "id": "leons-grocery-access",
+      "summary": "Two authored posts connected Leon's Thriftway to neighborhood grocery access.",
+      "statusIds": [
+        "1122854798884257797",
+        "1122859036163170304"
+      ]
+    },
+    {
+      "id": "covid-relief",
+      "summary": "One authored post linked a KC Town Hall video assembling public COVID-19 relief and safety resources.",
+      "statusIds": [
+        "1252344939867824132"
+      ]
+    },
+    {
+      "id": "voting-and-elections",
+      "summary": "Authored posts linked public voting information and election participation resources.",
+      "statusIds": [
+        "1026922856091987968",
+        "1126284471894933504"
+      ]
+    },
+    {
+      "id": "affordable-housing-policy",
+      "summary": "Authored posts linked or discussed Kansas City affordable-housing policy context.",
+      "statusIds": [
+        "1024739337282441218",
+        "1043549999550877697"
+      ]
+    },
+    {
+      "id": "neighborhood-service-response",
+      "summary": "Authored posts documented reports and follow-up involving dumped material, cleanup, water, tires, or city service response.",
+      "statusIds": [
+        "1033485724899794944",
+        "1035215055024009216",
+        "1124810411302359040",
+        "1182329689689473029",
+        "1183035237233823745"
+      ]
+    },
+    {
+      "id": "black-lives-matter-city-hall-documentation",
+      "summary": "Twelve authored posts form a dated public documentation series from a Black Lives Matter protest at Kansas City Hall.",
+      "statusIds": [
+        "1269121890733473795",
+        "1269122302970662912",
+        "1269122489461997568",
+        "1269122641086033920",
+        "1269122793544855552",
+        "1269122955965009921",
+        "1269123177885679618",
+        "1269123270391091200",
+        "1269123426414985216",
+        "1269123738911625217",
+        "1269123813171757059",
+        "1269123902070042624"
+      ]
+    }
+  ],
+  "sourceLeads": [
+    {
+      "id": "ridekc-transit-initiatives",
+      "postedByStatusId": "1016684231433564160",
+      "title": "RideKC transit initiatives",
+      "canonicalUrl": "https://ridekc.org/kcata/transit-initiatives/",
+      "disposition": "live-context",
+      "note": "The post used a RideKC destination for regional transit and ozone-day context. The page is field context, not evidence KC Town Hall operated transit service."
+    },
+    {
+      "id": "kcur-missouri-primary-guide",
+      "postedByStatusId": "1026922856091987968",
+      "title": "A Cheat Sheet For Tuesday's Primary Election In Missouri",
+      "canonicalUrl": "https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri",
+      "disposition": "live-and-close-read",
+      "note": "KCUR's August 5, 2018 guide contextualizes the account's voter-information post; it does not establish voter reach or turnout caused by the account."
+    },
+    {
+      "id": "missouri-voter-lookup",
+      "postedByStatusId": "1026922856091987968",
+      "title": "Missouri voter registration lookup",
+      "canonicalUrl": "https://voteroutreach.sos.mo.gov/portal",
+      "disposition": "live-official-resource",
+      "note": "The official Missouri Secretary of State destination corroborates the practical voter-resource context."
+    },
+    {
+      "id": "northeast-news-affordable-housing",
+      "postedByStatusId": "1043549999550877697",
+      "title": "Affordable housing policy hits docket at KCMO",
+      "canonicalUrl": "https://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/",
+      "disposition": "live-and-close-read",
+      "note": "The September 19, 2018 article describes seven housing proposals before the Council Housing Committee. It supports policy context, not KC Town Hall causation."
+    },
+    {
+      "id": "kc-star-leons-thriftway",
+      "postedByStatusId": "1122859036163170304",
+      "title": "Leon's Thriftway may be the oldest black-owned grocery store in the country",
+      "canonicalUrl": "https://www.kansascity.com/news/business/article87241897.html",
+      "disposition": "posted-url-page-not-recovered",
+      "note": "The title and destination are preserved from the account post, but the article body was not recovered in this pass."
+    },
+    {
+      "id": "kctownhall-latex-paint-video",
+      "postedByStatusId": "1035215055024009216",
+      "title": "4 TONS of DUMPED LATEX PAINT - SOLUTION",
+      "canonicalUrl": "https://www.youtube.com/watch?v=PmLjLyOpS9I",
+      "disposition": "live-metadata",
+      "note": "YouTube public metadata identifies KC Town Hall as the channel author. The title is an account-level claim; it is not independent tonnage corroboration."
+    },
+    {
+      "id": "kctownhall-covid-relief-video",
+      "postedByStatusId": "1252344939867824132",
+      "title": "#COVID19 Relief: Stay Safe Resources",
+      "canonicalUrl": "https://www.youtube.com/watch?v=onCKU-TuPhc",
+      "disposition": "live-metadata",
+      "note": "YouTube public metadata identifies KC Town Hall as the channel author and preserves the public-resource title."
+    },
+    {
+      "id": "church-ac-theft-gofundme",
+      "postedByStatusId": "1159153322236026881",
+      "title": "Church air-conditioner theft fundraiser",
+      "canonicalUrl": "https://www.gofundme.com/f/church-ac-theft",
+      "disposition": "posted-url-now-dead",
+      "note": "The posted destination now returns not found. It remains a lead and is not used to assert funds raised or beneficiary outcomes."
+    },
+    {
+      "id": "kctownhall-facebook-event",
+      "postedByStatusId": "1102627427992375296",
+      "title": "KC Town Hall Facebook event 299606100678115",
+      "canonicalUrl": "https://www.facebook.com/events/299606100678115/",
+      "disposition": "posted-url-not-close-read",
+      "note": "The public destination is retained as a source lead; no event details are promoted without a recoverable page body."
+    },
+    {
+      "id": "kctownhall-facebook-video",
+      "postedByStatusId": "1126284471894933504",
+      "title": "KC Town Hall Facebook video 2135596040064768",
+      "canonicalUrl": "https://www.facebook.com/KCTownHall/videos/2135596040064768",
+      "disposition": "posted-url-not-close-read",
+      "note": "The public destination is retained as a source lead; no video content is promoted without a recoverable public record."
+    },
+    {
+      "id": "curbed-rent-relief",
+      "postedByStatusId": "1020798115367047171",
+      "title": "Rent relief is becoming a popular solution to housing shortages",
+      "canonicalUrl": "https://archive.curbed.com/2018/7/20/17595698/rent-relief-act-tax-credit-kamala-harris",
+      "disposition": "reposted-url-now-dead",
+      "note": "The URL appeared in a repost, not an authored KC Town Hall post. It is field context and not KC Town Hall authorship or policy work."
+    }
+  ],
+  "archivedSitePages": [
+    {
+      "id": "root-2018",
+      "canonicalUrl": "http://kctownhall.com/",
+      "archiveUrl": "https://web.archive.org/web/20180803002431/http://kctownhall.com/",
+      "disposition": "recovered-and-close-read",
+      "note": "The earliest recovered root page states the historic-neighborhood-resource purpose."
+    },
+    {
+      "id": "join-2019",
+      "canonicalUrl": "http://kctownhall.com/join/",
+      "archiveUrl": "https://web.archive.org/web/20190813025929/http://kctownhall.com/join/",
+      "disposition": "recovered-and-close-read",
+      "note": "The recovered join page invited people to follow and participate in building a neighborhood resource and cultural center."
+    },
+    {
+      "id": "tires-2020",
+      "canonicalUrl": "http://kctownhall.com/tires/",
+      "archiveUrl": "https://web.archive.org/web/20201030223311/http://kctownhall.com/tires/",
+      "disposition": "recovered-and-close-read",
+      "note": "The page identifies Julia and Jamie as its authors and KC Town Hall with Oak Park Neighborhood Association as program partners. Its savings figure remains a project self-report."
+    },
+    {
+      "id": "root-cards-2020",
+      "canonicalUrl": "http://kctownhall.com/",
+      "archiveUrl": "https://web.archive.org/web/20201106221214/http://kctownhall.com/",
+      "disposition": "recovered-index-context",
+      "note": "Root-page cards preserve public evidence for survey, lowercase covid19, and temporary-electricity routes whose page bodies were not directly recovered in this pass."
+    }
+  ],
+  "supplementalContexts": [
+    {
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "publishedAt": "2020-08-02T00:08:01.000Z",
+      "relationship": "council-member-reply-in-thread",
+      "visibleText": "Melissa Robinson\n@Robinson4kc\n·\nAug 1, 2020\nThank you for doing the heavy lifting to improve community conditions!!!\n1\n2",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "relatedAuthoredCanonicalUrls": [
+        "https://x.com/KCTownHall/status/1289713591843565569",
+        "https://x.com/KCTownHall/status/1289714654579580928"
+      ]
+    },
+    {
+      "canonicalUrl": "https://x.com/KCMOHealthDept/status/1154749460422938624",
+      "publishedAt": "2019-07-26T13:45:00.000Z",
+      "relationship": "city-agency-post-parent-to-account-reply",
+      "visibleText": "KCMO Health Dept\n@KCMOHealthDept\n·\nJul 26, 2019\nNext week the back to school rush begins  But there is still time to get immunizations  The \n@KCMOHealthDept\n clinic is open TODAY from 8-11:30am and from 1-4pm #GetVaccinated #Back2School2019\n2\n3\n6",
+      "engagement": {
+        "replies": 2,
+        "reposts": 3,
+        "likes": 6,
+        "bookmarks": 0
+      },
+      "relatedAuthoredCanonicalUrls": [
+        "https://x.com/KCTownHall/status/1154888028889976834"
+      ]
+    },
+    {
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "publishedAt": "2019-04-29T15:19:06.000Z",
+      "relationship": "council-member-reply-in-thread",
+      "visibleText": "Jolie Justus\n@joliejustus\n·\nApr 29, 2019\nWe’ve been working with the EDC on possible solutions. Stopped by this weekend for an update on progress. Lot of work to do, but the community is all in.\n1\n1\n3",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "relatedAuthoredCanonicalUrls": [
+        "https://x.com/KCTownHall/status/1122977313468157953",
+        "https://x.com/KCTownHall/status/1122884316093210627"
+      ]
+    },
+    {
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "publishedAt": "2019-04-29T14:13:13.000Z",
+      "relationship": "council-member-quote-post-of-account-post",
+      "visibleText": "Mayor Q\n@QuintonLucasKC\n·\nApr 29, 2019\nSad to hear it. Talked to ownership this AM. Trying to see if there’s a way to keep it going. This is important for the community and access to quality food in East Kansas City.\nQuote\nKC Town Hall\n@KCTownHall\n·\nApr 29, 2019\nReplying to @KCTownHall\nLeon's will close this week! Can we save Leon’s? @QuintonLucasKC @JermaineReed \n\nLeon’s Thriftway may be the oldest black-owned grocery store in the country \nhttps://\nkansascity.com/news/business/\narticle87241897.html\n…\n2\n4\n20",
+      "engagement": {
+        "replies": 2,
+        "reposts": 4,
+        "likes": 20,
+        "bookmarks": 0
+      },
+      "relatedAuthoredCanonicalUrls": [
+        "https://x.com/KCTownHall/status/1122854798884257797",
+        "https://x.com/KCTownHall/status/1122867070729949184",
+        "https://x.com/KCTownHall/status/1122859036163170304"
+      ]
+    },
+    {
+      "canonicalUrl": "https://x.com/KCMO311/status/1034093516073459712",
+      "publishedAt": "2018-08-27T15:01:21.000Z",
+      "relationship": "city-service-account-reply-in-thread",
+      "visibleText": "KCMO 311\n@KCMO311\n·\nAug 27, 2018\nHello, we hope this issue was resolved? We apologize as our twitter account is only managed M-F 8am-5pm.\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "relatedAuthoredCanonicalUrls": [
+        "https://x.com/KCTownHall/status/1033485724899794944",
+        "https://x.com/KCTownHall/status/1034145416663769088"
+      ]
+    },
+    {
+      "canonicalUrl": "https://x.com/bballkansas/status/1033501260362772480",
+      "publishedAt": "2018-08-25T23:47:56.000Z",
+      "relationship": "public-user-reply-in-thread",
+      "visibleText": "Chris \n@bballkansas\n·\nAug 25, 2018\nMight be Kansas\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "relatedAuthoredCanonicalUrls": [
+        "https://x.com/KCTownHall/status/1033505948533448705"
+      ]
+    },
+    {
+      "canonicalUrl": "https://x.com/joliejustus/status/1033499895670431744",
+      "publishedAt": "2018-08-25T23:42:31.000Z",
+      "relationship": "council-member-reply-in-thread",
+      "visibleText": "Jolie Justus\n@joliejustus\n·\nAug 25, 2018\nThanks! \n@KCMO311\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "relatedAuthoredCanonicalUrls": [
+        "https://x.com/KCTownHall/status/1033500102801993729"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "index": 1,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013893135695601665",
+      "publishedAt": "2018-07-02T21:12:15.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "Pinned\nKC Town Hall\n@KCTownHall\n·\nJul 2, 2018\nFollow the story and get your hands dirty as we build a permanent neighborhood resource and cultural center on Indiana Ave in Kansas City, MO! #KCTownHall \nhttp://\nKCTownHall.com\n1\n5\n15",
+      "engagement": {
+        "replies": 1,
+        "reposts": 5,
+        "likes": 15,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 5 reposts, 15 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 2,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013894923031113728",
+      "publishedAt": "2018-07-02T21:19:21.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 2, 2018\nIn 1940 the #KCTownHall building was home to Crown Drug and Barnett's Bakery. The doctor and the baker lived upstairs! Join KC Town Hall to follow the story: \nhttp://\nKCTownHall.com/join\n1\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 3 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/r3kHwsgVNP",
+          "displayedDestination": "http://\nKCTownHall.com/join",
+          "resolvedDestination": "https://kctownhall.com/join"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 3,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013895905932726273",
+      "publishedAt": "2018-07-02T21:23:15.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 2, 2018\nTOGETHER we are bringing back the historic #KCTownHall building at 36th Street and Indiana Avenue in Kansas City, Missouri. Join to follow the story: \nhttp://\nKCTownHall.com/join",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/r3kHwsgVNP",
+          "displayedDestination": "http://\nKCTownHall.com/join",
+          "resolvedDestination": "https://kctownhall.com/join"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 4,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013897573856370688",
+      "publishedAt": "2018-07-02T21:29:53.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 2, 2018\nJoin us in restoring the long abandoned #KCTownHall building to create a permanently affordable community space in Kansas City! \nhttp://\nKCTownHall.com",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 5,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013902884285681665",
+      "publishedAt": "2018-07-02T21:50:59.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 2, 2018\n#KCTownHall is committed to a NEIGHBORHOOD PROCESS and wants to hear from you! What would dream to have in this neighborhood spot? \nhttp://\nKCTownHall.com",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 6,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013903134551347200",
+      "publishedAt": "2018-07-02T21:51:59.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 2, 2018\nThe street-level spaces will meet the needs of the immediate neighborhood, put daily necessities within walkable distance, and amplify a thriving and unique community of place. Julia, Jamie and others will live in apartments above! #KCTownHall \nhttp://\nKCTownHall.com\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 7,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013903289392517120",
+      "publishedAt": "2018-07-02T21:52:36.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 2, 2018\n#KCTownHall is committed to a NEIGHBORHOOD PROCESS and wants to hear from you! What would dream to have in this neighborhood spot? \nhttp://\nKCTownHall.com",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 8,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1014742105145692161",
+      "publishedAt": "2018-07-05T05:25:45.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 5, 2018\nKim and Dennis really know how to put on a 4th of July block party \n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 likes",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 9,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1016684231433564160",
+      "publishedAt": "2018-07-10T14:03:04.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 10, 2018\n#OzoneDay KCMO Bus fare only 75¢ TODAY! \n@RideKC\n \n@airqkc\n \n\nhttp://\nkcata.org/about_kcata/en\ntries/ozone_alert\n…\n0:00 / 0:03\n0:02\n1\n2\n7",
+      "engagement": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 7,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 2 reposts, 7 likes",
+      "mentions": [
+        "@RideKC",
+        "@airqkc"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/5SiJPgIaBU",
+          "displayedDestination": "http://\nkcata.org/about_kcata/en\ntries/ozone_alert\n…",
+          "resolvedDestination": "https://ridekc.org/kcata/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 10,
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1020798115367047171",
+      "publishedAt": "2018-07-21T22:30:10.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nMayor Q\n@QuintonLucasKC\n·\nJul 21, 2018\nInteresting idea from @SenKamalaHarris \nhttps://\ncurbed.com/2018/7/20/1759\n5698/rent-relief-act-tax-credit-kamala-harris\n…\n2\n2\n3",
+      "engagement": {
+        "replies": 2,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 replies, 2 reposts, 3 likes",
+      "mentions": [
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/jc5nZGtusU",
+          "displayedDestination": "https://\ncurbed.com/2018/7/20/1759\n5698/rent-relief-act-tax-credit-kamala-harris\n…",
+          "resolvedDestination": "https://archive.curbed.com/2018/7/20/17595698/rent-relief-act-tax-credit-kamala-harris"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 11,
+      "canonicalUrl": "https://x.com/GCI1919/status/1022510145014824962",
+      "publishedAt": "2018-07-26T15:53:10.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nGuadalupe Centers\n@GCI1919\n·\nJul 26, 2018\nWe are here at the Grand Opening of our Youth Rec Center! This will be a hub for the youth in our community. #countdownto100years #youth #latinocommunities #afterschool #wearehere #KCMO\n5\n8",
+      "engagement": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "engagementLabel": "5 reposts, 8 likes",
+      "mentions": [
+        "@GCI1919"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 12,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1023249193878597632",
+      "publishedAt": "2018-07-28T16:49:53.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 28, 2018\nGot mail service and first piece of mail! Drop us a line 3548 Indiana Ave Kcmo 64128! #snailmail #mysteryhand\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 likes",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 13,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1024739337282441218",
+      "publishedAt": "2018-08-01T19:31:11.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 1, 2018\nA big thank you to \n@QuintonLucasKC\n for sharing your ideas about how to create affordable housing and small business opportunities on Indiana ave! #kctownhall\n1\n3\n10",
+      "engagement": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 10,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 3 reposts, 10 likes",
+      "mentions": [
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 14,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1026922856091987968",
+      "publishedAt": "2018-08-07T20:07:42.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 7, 2018\nVOTING DAY TODAY! Polls are open until 7pm  aaaaand the bus is free today! \n@RideKCTransit\n \nBALLOT CHEAT SHEET: \nhttp://\nkcur.org/post/cheat-she\net-tuesdays-primary-election-missouri#stream/0\n…\nFIND POLLING PLACE: \nhttps://\nvoteroutreach.sos.mo.gov/PRD/VoterOutre\nach/VOSearch.aspx\n…\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [
+        "@RideKCTransit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/YOLxn5lCEo",
+          "displayedDestination": "http://\nkcur.org/post/cheat-she\net-tuesdays-primary-election-missouri#stream/0\n…",
+          "resolvedDestination": "https://www.kcur.org/politics-elections-and-government/2018-08-05/a-cheat-sheet-for-tuesdays-primary-election-in-missouri"
+        },
+        {
+          "shortUrl": "https://t.co/h2rxGUdJJh",
+          "displayedDestination": "https://\nvoteroutreach.sos.mo.gov/PRD/VoterOutre\nach/VOSearch.aspx\n…",
+          "resolvedDestination": "https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 15,
+      "canonicalUrl": "https://x.com/CentralHS_KCPS/status/1029067847740391426",
+      "publishedAt": "2018-08-13T18:11:08.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nCentral High School\n@CentralHS_KCPS\n·\nAug 13, 2018\nWhat a start for Central High School!!!!!!\n0:01 / 0:39\n0:38\n4\n11",
+      "engagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 11,
+        "bookmarks": 0
+      },
+      "engagementLabel": "4 reposts, 11 likes",
+      "mentions": [
+        "@CentralHS_KCPS"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 16,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1033485724899794944",
+      "publishedAt": "2018-08-25T22:46:12.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 25, 2018\nTon o water coming out of ruptured roadway at state line rd and 45th st. Probably something to take a look at! \n@KCMOwater\n \n@joliejustus\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 like",
+      "mentions": [
+        "@KCMOwater",
+        "@joliejustus"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 17,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1033500102801993729",
+      "publishedAt": "2018-08-25T23:43:20.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 25, 2018\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 18,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1033505948533448705",
+      "publishedAt": "2018-08-26T00:06:34.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 25, 2018\nIt's on the east side of state line rd, so probs Missouri? #MetrowideProblemSolving\n2\n2",
+      "engagement": {
+        "replies": 2,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 replies, 2 likes",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 19,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1034145416663769088",
+      "publishedAt": "2018-08-27T18:27:35.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 27, 2018\nLooks like a metal plate is over it now, there's not water gushing everywhere - a City agency of some sort must have gone out.\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 20,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1035215055024009216",
+      "publishedAt": "2018-08-30T17:17:57.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 30, 2018\n Someone dumped 4 TONS of bad LATEX PAINT \n@KCTownHall\n! Here’s what we did…\nTool List: \nhttps://\nyoutu.be/PmLjLyOpS9I Join: \nhttp://\nKCTownHall.com\n0:00 / 2:19\n2:19\n2\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 3 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/8BtTrG0dKQ",
+          "displayedDestination": "https://\nyoutu.be/PmLjLyOpS9I",
+          "resolvedDestination": "https://www.youtube.com/watch?v=PmLjLyOpS9I&feature=youtu.be"
+        },
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 21,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1037785619706068995",
+      "publishedAt": "2018-09-06T19:32:27.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 6, 2018\nWe Got Temporary Construction Electricity! \n@KCTownHall\n \nDeets - \nhttp://\nKCTownHall.com/temporary-elec\nary-electricity/\n… \nJoin #KCTownHall - \nhttp://\nKCTownHall.com\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/XX2HOanaDx",
+          "displayedDestination": "http://\nKCTownHall.com/temporary-elec\nary-electricity/\n…",
+          "resolvedDestination": "https://kctownhall.com/temporary-electricity/"
+        },
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 22,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1038153710864670721",
+      "publishedAt": "2018-09-07T19:55:07.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 7, 2018\nThanks \n@cancunkc\n for following us on Twitter! #honored\nCancunkc\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [
+        "@cancunkc"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 23,
+      "canonicalUrl": "https://x.com/INCThrives/status/1043539982676369408",
+      "publishedAt": "2018-09-22T16:38:14.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nIvanhoe Neighborhood\n@INCThrives\n·\nSep 22, 2018\nBasketball already going on at our Family Fun Day. Come to Ivanhoe Park and come celebrate with us (43rd Brooklyn).\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [
+        "@INCThrives"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 24,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1043549999550877697",
+      "publishedAt": "2018-09-22T17:18:02.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 22, 2018\nSome good steps forward from \n@QuintonLucasKC\n on affordable housing in KCMO! All in for affordable units in tax break developments! \nhttp://\nnortheastnews.net/pages/affordab\nle-housing-policy-hits-docket-kcmo/\n…\n2\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 1 like",
+      "mentions": [
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/qblDnsNEjm",
+          "displayedDestination": "http://\nnortheastnews.net/pages/affordab\nle-housing-policy-hits-docket-kcmo/\n…",
+          "resolvedDestination": "https://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 25,
+      "canonicalUrl": "https://x.com/GCI1919/status/1044677436204560384",
+      "publishedAt": "2018-09-25T19:58:04.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nGuadalupe Centers\n@GCI1919\n·\nSep 25, 2018\nDO YOU NEED TO REGISTER TO VOTE!! It's very easy, just use the following link \nhttp://\nbit.ly/RegisterToVOTE\nHere\n… #sisepuede #yourvoicematters #vote\n1\n5",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 5,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 5 likes",
+      "mentions": [
+        "@GCI1919"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/lb9UoNFtWE",
+          "displayedDestination": "http://\nbit.ly/RegisterToVOTE\nHere\n…",
+          "resolvedDestination": "https://www.becomeavoter.org/register-to-vote/?partner=26429&source=300051"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 26,
+      "canonicalUrl": "https://x.com/kholmesKARES/status/1059533163519770624",
+      "publishedAt": "2018-11-05T19:49:26.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nKevin Holmes\n@kholmesKARES\n·\nNov 5, 2018\nKansas City is like Wakanda.  To outsiders it looks blah, but it's really a city with vibranium and a place that no one wants to leave once they arrive.\n19\n175\n923",
+      "engagement": {
+        "replies": 19,
+        "reposts": 175,
+        "likes": 923,
+        "bookmarks": 2
+      },
+      "engagementLabel": "19 replies, 175 reposts, 923 likes, 2 bookmarks",
+      "mentions": [
+        "@kholmesKARES"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 27,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1060936086648733702",
+      "publishedAt": "2018-11-09T16:44:08.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 9, 2018\n#NoOrdinaryLove  Earl Brown \n@KCTownHall\n \nhttp://\nKCTownHall.com\n0:00 / 2:12\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PXs7IxP0Fj",
+          "displayedDestination": "http://\nKCTownHall.com",
+          "resolvedDestination": "https://kctownhall.com/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 28,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1061347310758699008",
+      "publishedAt": "2018-11-10T19:58:12.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 10, 2018\nPastor Gill, the New Horizon Missionary Baptist Church, and the charming ladies of the Women of Warriors are serving up a truly delicious Thanksgiving lunch today! Come and get it!  #womenofwarriors\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 29,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1062375399429169152",
+      "publishedAt": "2018-11-13T16:03:27.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 13, 2018\nWe found a tiny treasure in the basement at KC Town Hall! This is a label for Bird's Drugs, which was a pharmacy in the corner store at KC Town Hall in 1930!! Can you believe it, that was about 90 years ago, and this label still exists!\n1\n1\n8",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 8 likes",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 30,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1062377455338618880",
+      "publishedAt": "2018-11-13T16:11:38.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 13, 2018\nThank you Susan Jazek Ford for your great historical research!\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 likes",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 31,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1087695661020205056",
+      "publishedAt": "2019-01-22T12:57:08.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJan 22, 2019\n\"One day we must come to see that peace is not merely a distant goal we seek, but it is a means by which we arrive at that goal.\" \"The means represents the seed. And the end represents the tree.\" - Rev. Dr. Martin Luther King, Jr.\n\nhttps://\nyoutube.com/watch?v=1jeyIA\nH3bUI&feature=youtu.be&t=631\n…",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/6CANa9RNWd",
+          "displayedDestination": "https://\nyoutube.com/watch?v=1jeyIA\nH3bUI&feature=youtu.be&t=631\n…",
+          "resolvedDestination": "https://www.youtube.com/watch?v=1jeyIAH3bUI&feature=youtu.be&t=631"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 32,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1102627427992375296",
+      "publishedAt": "2019-03-04T17:50:39.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 4, 2019\nSat March 16, 10am - CITY COUNCIL CANDIDATE FORUM (District 3 and District 4). Learn about the candidates!\n \n There will be snacks! \n \n@KCLibrary\n NorthEast Branch, 6000 Wilson Rd, KCMO. \n RSVP: \nhttps://\nfacebook.com/events/2996061\n00678115/\n…\n\n@NEKCchamber\n \n@MattieRhodes\n \n@onekcradio\n2\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 3 likes",
+      "mentions": [
+        "@KCLibrary",
+        "@NEKCchamber",
+        "@MattieRhodes",
+        "@onekcradio"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PyFuI154b3",
+          "displayedDestination": "https://\nfacebook.com/events/2996061\n00678115/\n…",
+          "resolvedDestination": "https://www.facebook.com/events/299606100678115/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 33,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1122854798884257797",
+      "publishedAt": "2019-04-29T13:27:00.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 29, 2019\nLeon's Thriftway to close this week!  Leon’s is the OLDEST BLACK-OWNED supermarket GROCERY in the USA & its right here in KC! Can we save Leon’s? \n@kcurCST\n \n@kcur\n \n@pubradiosly\n @GinaKCUR\n2\n4",
+      "engagement": {
+        "replies": 2,
+        "reposts": 0,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 replies, 4 likes",
+      "mentions": [
+        "@kcurCST",
+        "@kcur",
+        "@pubradiosly"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 34,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1122859036163170304",
+      "publishedAt": "2019-04-29T13:43:50.000Z",
+      "type": "authored",
+      "isTopLevelReply": true,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 29, 2019\nReplying to \n@KCTownHall\nLeon's will close this week! Can we save Leon’s? \n@QuintonLucasKC\n \n@JermaineReed\n \n\nLeon’s Thriftway may be the oldest black-owned grocery store in the country \nhttps://\nkansascity.com/news/business/\narticle87241897.html\n…\n2\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 2 likes",
+      "mentions": [
+        "@QuintonLucasKC",
+        "@JermaineReed"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/vdw4Yr5aST",
+          "displayedDestination": "https://\nkansascity.com/news/business/\narticle87241897.html\n…",
+          "resolvedDestination": "https://www.kansascity.com/news/business/article87241897.html"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 35,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1122867070729949184",
+      "publishedAt": "2019-04-29T14:15:46.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 29, 2019\nThanks for your help!!",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 36,
+      "canonicalUrl": "https://x.com/joliejustus/status/1122881981484797954",
+      "publishedAt": "2019-04-29T15:15:01.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nJolie Justus\n@joliejustus\n·\nApr 29, 2019\nVisiting with the owners of Leon’s Thriftway this weekend to talk about how we can keep this vital community asset open & ready for the next generation. Leon’s is the oldest black-owned grocery store in the country.\n4\n13\n60",
+      "engagement": {
+        "replies": 4,
+        "reposts": 13,
+        "likes": 60,
+        "bookmarks": 0
+      },
+      "engagementLabel": "4 replies, 13 reposts, 60 likes",
+      "mentions": [
+        "@joliejustus"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 37,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1122884316093210627",
+      "publishedAt": "2019-04-29T15:24:17.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 29, 2019\nThanks for your help! \n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 38,
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122905778464153602",
+      "publishedAt": "2019-04-29T16:49:34.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nMayor Q\n@QuintonLucasKC\n·\nApr 29, 2019\nJust wrapped a visit with Leon’s Thriftway on 39th. I hope there’s more we can do to help them continue providing groceries for another 51 years. #KCMO #KansasCity\n1\n5\n24",
+      "engagement": {
+        "replies": 1,
+        "reposts": 5,
+        "likes": 24,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 5 reposts, 24 likes",
+      "mentions": [
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 39,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1122977313468157953",
+      "publishedAt": "2019-04-29T21:33:50.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 29, 2019\nThanks for your work on this!\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 40,
+      "canonicalUrl": "https://x.com/KansasCity/status/1123264511698456577",
+      "publishedAt": "2019-04-30T16:35:03.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nKansas City\n@KansasCity\n·\nApr 30, 2019\nKansas City's 12th Street became nationally known for its jazz clubs earning the city the moniker “The Paris of the Plains.\" #JazzDay\n14\n39",
+      "engagement": {
+        "replies": 0,
+        "reposts": 14,
+        "likes": 39,
+        "bookmarks": 0
+      },
+      "engagementLabel": "14 reposts, 39 likes",
+      "mentions": [
+        "@KansasCity"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 41,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124416898064580608",
+      "publishedAt": "2019-05-03T20:54:13.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 3, 2019\nTired of Tires? New FREE TIRE PICKUP program from \n@KCTownHall\n & Oak Park Nbhd!\n\nGET ON THE LIST: reply or text  [public contact number redacted] with addresses in KC's Oak Park and we'll pick up! \n\nHomes only, not biz. STARTS TODAY #TiredOfTires \nhttp://\nKCTownHall.com/tires/\nBryce Bradford and 2 others\n1\n1\n2",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 2 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/Vsuw0RSM2g",
+          "displayedDestination": "http://\nKCTownHall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 42,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124418375181058048",
+      "publishedAt": "2019-05-03T21:00:05.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 3, 2019\nWhat would you like to have \n@KCTownHall\n at 36th & Indiana? \nhttp://\nkctownhall.com/survey/\n1\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 2 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/kSEpCVgPwt",
+          "displayedDestination": "http://\nkctownhall.com/survey/",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 43,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124448415293874176",
+      "publishedAt": "2019-05-03T22:59:28.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 3, 2019\n#TiredOfTires? Send KC Town Hall addresses for free pickup! Pickup for homes only in Oak Park Neighborhood KCMO, not businesses. \nhttp://\nKCTownHall.com/tires\n\nCheck out these  tire before-and-afters  from today!",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 44,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124481129057333250",
+      "publishedAt": "2019-05-04T01:09:27.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 3, 2019\nWe're making great progress! #TiredOfTires? Send \n@KCTownHall\n addresses for free pickup! Pickup for homes only in Oak Park Neighborhood KCMO, not businesses.\nhttp://\nKCTownHall.com/tires\n\nBefore and After \n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 45,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124717766756503552",
+      "publishedAt": "2019-05-04T16:49:46.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 4, 2019\nThelma on College Ave moved to \n@KCTownHall\n's neighborhood 1953 from her father's MS farm. Thrilled by KC to WALK to the store! A certified nurse's assistant, loves helping people. Remembers KC's original trolleys, as on Indiana Ave. Trolley poles stand at historic KC Town Hall\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 46,
+      "canonicalUrl": "https://x.com/_Titi81/status/1124760081596391424",
+      "publishedAt": "2019-05-04T19:37:55.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nPrice Tiffany\n@_Titi81\n·\nMay 4, 2019\nReplying to \n@KCTownHall\nI’m from 39th and Indiana born and raised...\n1\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 1 like",
+      "mentions": [
+        "@_Titi81"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 47,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124779534795071489",
+      "publishedAt": "2019-05-04T20:55:13.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 4, 2019",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 48,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124789562293870592",
+      "publishedAt": "2019-05-04T21:35:03.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 4, 2019\nJust a few tires? No prob! We'll pick em up! \n\n#TiredOfTires? Send \n@KCTownHall\n addresses for free pickup! Pickup for homes only in Oak Park KCMO, not businesses.\nhttp://\nKCTownHall.com/tires\n\nWhat walkable neighbor-owned businesses do you want at \n@KCTownHall\n? \nhttp://\nKCTownHall.com/survey",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 49,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124791429790879745",
+      "publishedAt": "2019-05-04T21:42:29.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 4, 2019\nWe're grabbin' those tires! #TiredOfTires? Send \n@KCTownHall\n addresses for free pickup! Pickup for homes only in Oak Park KCMO, not biz. \nhttp://\nKCTownHall.com/tires\n\nWhat neighbor-owned businesses do you want at \n@KCTownHall\n- 36th & Indiana? \nhttp://\nKCTownHall.com/survey",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 50,
+      "canonicalUrl": "https://x.com/NickStarlingPIO/status/1124792146064748550",
+      "publishedAt": "2019-05-04T21:45:19.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nNick Starling\n@NickStarlingPIO\n·\nMay 4, 2019\nIt’s the final good bye for loyal customers of Leon’s Thriftway on 39th Street. The owners say they couldn’t keep up with the newer trends and increased competition caused them to turn off the lights. But could the store be revived? Story at 10 on \n@41actionnews\n.\n2\n7\n9",
+      "engagement": {
+        "replies": 2,
+        "reposts": 7,
+        "likes": 9,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 replies, 7 reposts, 9 likes",
+      "mentions": [
+        "@NickStarlingPIO",
+        "@41actionnews"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 51,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124793002843615233",
+      "publishedAt": "2019-05-04T21:48:44.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 4, 2019\nWe're movin and groovin! #TiredOfTires? Send \n@KCTownHall\n addresses for free pickup! Pickup for homes only in Oak Park KCMO, not biz. \nhttp://\nKCTownHall.com/tires\n\nWhat walkable neighbor-owned businesses do you want at \n@KCTownHall\n? \nhttp://\nKCTownHall.com/survey",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 52,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124795681389076481",
+      "publishedAt": "2019-05-04T21:59:22.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 4, 2019\nWe're picking up those tires! Even this lonely one! #TiredOfTires? Send \n@KCTownHall\n addresses for free pickup! Pickup for homes only in Oak Park Neighborhood KCMO, not businesses. \nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 53,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124810411302359040",
+      "publishedAt": "2019-05-04T22:57:54.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 4, 2019\nWe dropped off 75 TIRES this month!  Can we beat it next month? Share where tires have been dumped!  #TiredOfTires \nhttp://\nKCTownHall.com/tires\n\nSaved Oak Park residents $1,540 in tire dump fees! \n\nBig thanks Oak Park Neighborhood, Pat Clarke, \n@foresttysonjr\n, \n@urbanhermit\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 likes",
+      "mentions": [
+        "@foresttysonjr",
+        "@urbanhermit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 54,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1126284471894933504",
+      "publishedAt": "2019-05-09T00:35:18.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 8, 2019\nLive:  Mayoral Forum  at \n@GCI1919\n with \n@joliejustus\n  & \n@QuintonLucasKC\n #kcmayor #voteKC #kcmayoraldebate \nWatch: \nhttps://\nfacebook.com/KCTownHall/vid\neos/2135596040064768\n…\n\nWhat would you like to have at 36th and Indiana? \nhttp://\nkctownhall.com/survey/\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "3 likes",
+      "mentions": [
+        "@GCI1919",
+        "@joliejustus",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/bf2VnJH9oy",
+          "displayedDestination": "https://\nfacebook.com/KCTownHall/vid\neos/2135596040064768\n…",
+          "resolvedDestination": "https://www.facebook.com/KCTownHall/videos/2135596040064768"
+        },
+        {
+          "shortUrl": "https://t.co/kSEpCVgPwt",
+          "displayedDestination": "http://\nkctownhall.com/survey/",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 55,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1134594449256984576",
+      "publishedAt": "2019-05-31T22:56:11.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 31, 2019\n#TiredOfTires? Free Tire Pickup, Fri & Sat Morning June 1!\nDM addresses & we'll pick up tires off the curb! Homes only, not businesses.\n\n\nhttp://\nKCTownHall.com/tires\n\nWe just picked up 19 tires!! \n\nWhat walkable neighbor-owned biz do you want \n@KCTownHall\n? \nhttp://\nKCTownHall.com/Survey\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/48yjJD5qWu",
+          "displayedDestination": "http://\nKCTownHall.com/Survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 56,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1134608391614160896",
+      "publishedAt": "2019-05-31T23:51:35.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 31, 2019\nWhether you've got 1 or 20 tires, we'll grab! \n\n#TiredOfTires? Free Tire Pickup-Fri 5/31 & Sat Morning 6/1\n\nDm address & we'll pick up tires! Homes only, not biz. \n\n\nhttp://\nKCTownHall.com/tires\n\nWhat walkable neighbor-owned biz do you want at \n@kctownhall\n? \nhttp://\nKCTownHall.com/survey",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 57,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1135225497384890368",
+      "publishedAt": "2019-06-02T16:43:44.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 2, 2019\nLast night rescued a family  trapped on active train tracks @ 975 E 1 St. Paved edge in darkness, drop to tracks inescapable. Pulled 1st out, 2nd  onto tracks! Redesign + Lights, stop  crash. \n@JermaineReed\n \n@joliejustus\n \n@QuintonLucasKC\n \n@mcmanuskc\n \n@danfowlerkcmo\n \n@K_J_Shields\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [
+        "@JermaineReed",
+        "@joliejustus",
+        "@QuintonLucasKC",
+        "@mcmanuskc",
+        "@danfowlerkcmo",
+        "@K_J_Shields"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 58,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1135246124883861504",
+      "publishedAt": "2019-06-02T18:05:42.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 2, 2019\nWe dropped off 74 TIRES for June, saving neighbors $3,243 so far in tire dump fees!  Can we top it July 5? #TiredOfTires Sign up now for Free Tire Disposal curbside pickup July 5! \nhttp://\nKCTownHall.com/tires \n\nThanks Oak Park Neighborhood, Pat Clarke, \n@foresttysonjr\n, \n@urbanhermit\n1\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 3 likes",
+      "mentions": [
+        "@foresttysonjr",
+        "@urbanhermit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 59,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1147586873423998976",
+      "publishedAt": "2019-07-06T19:23:26.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 6, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Nbhd are picking up tires for FREE Sat! Dm or call [public contact number redacted] with address \nhttp://\nKCTownHall.com/tires\n\n\n@KCTownHall\n is building walkable small biz incubator at 36th & Indiana! What neighbor owned biz would you like? \nhttp://\nKCTownHall.com/survey\n1\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 60,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1147589894660907009",
+      "publishedAt": "2019-07-06T19:35:26.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 6, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Nbhd are picking up tires for FREE Sat! Dm or call [public contact number redacted] with address \nhttp://\nKCTownHall.com/tires\n\n\n@KCTownHall\n is building walkable small biz incubator at 36th & Indiana! What neighbor owned biz would you like? \nhttp://\nKCTownHall.com/survey",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 61,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1147602234127130624",
+      "publishedAt": "2019-07-06T20:24:28.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 6, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Nbhd are picking up tires for FREE Sat! Dm or call [public contact number redacted] with address \nhttp://\nKCTownHall.com/tires\n\n\n@KCTownHall\n is building walkable small biz incubator at 36th & Indiana! What neighbor owned biz would you like? \nhttp://\nKCTownHall.com/survey",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 62,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1147679988600254465",
+      "publishedAt": "2019-07-07T01:33:26.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 6, 2019\nNew #TiredOfTires record! Today \n@KCTownHall\n dropped off 93 TIRES, saving neighbors $2,082 in tire disposal fees!  \n\nCall or dm with address for free tire pickup Aug 2nd! [public contact number redacted] \nhttp://\nKCTownHall.com/tires\n\nSo far #TiredOfTires saved east KC residents $5,325 in tire fees! \nMayor Q and 3 others\n2\n4",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 4 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 63,
+      "canonicalUrl": "https://x.com/trutheresme/status/1148277187583389703",
+      "publishedAt": "2019-07-08T17:06:30.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nI'm adapting to this new life\n@trutheresme\n·\nJul 8, 2019\nWe are buzzing today \n@BTG_KC\n we received a huge tire dropoff from \n@KCTownHall\n at the Deramus dropoff over the weekend! Building healthy, greener communities one tire pick-up at a time. \n#environmentaljustice #communitybuilding #moregreenplease\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [
+        "@trutheresme",
+        "@BTG_KC"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 64,
+      "canonicalUrl": "https://x.com/RideKCTransit/status/1154729332755050496",
+      "publishedAt": "2019-07-26T12:25:01.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nRideKC\n@RideKCTransit\n·\nJul 26, 2019\nWhether you use RideKC or not, we want your input. RideKC Next is a comprehensive review and redesign of transit service focused on Kansas City, Mo. Ten minutes of your time is all we need. Take the RideKC Next survey here: \nhttps://\nridekc.org/planning/ridek\nc-next\n…\n3\n4",
+      "engagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "engagementLabel": "3 reposts, 4 likes",
+      "mentions": [
+        "@RideKCTransit"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/D1LHjkHFmS",
+          "displayedDestination": "https://\nridekc.org/planning/ridek\nc-next\n…",
+          "resolvedDestination": "https://ridekc.org/kcata/transit-initiatives/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 65,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1154888028889976834",
+      "publishedAt": "2019-07-26T22:55:37.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 26, 2019\nWhat is the cost of the vaccinations?",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 66,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1157464628324110336",
+      "publishedAt": "2019-08-03T01:34:06.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 2, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Neighborhood Assn are picking up tires FREE Saturday! DM, call, or text [public contact number redacted] with address for free home curbside tire pickup! \nhttp://\nKCTownHall.com/tires\n\nFollow along for Before and Afters \n\n\n@ellington_b\n \n@Robinson4kc\n \n@QuintonLucasKC",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@ellington_b",
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 67,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1157482636463476736",
+      "publishedAt": "2019-08-03T02:45:40.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 2, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Neighborhood Assn are picking up tires FREE Saturday! DM, call, or text [public contact number redacted] with address for free home curbside tire pickup! \n\n\nhttp://\nKCTownHall.com/tires\n\nFollow along for Before and Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 68,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1157483198781087744",
+      "publishedAt": "2019-08-03T02:47:54.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 2, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Neighborhood Assn are picking up tires FREE Saturday! DM, call, or text [public contact number redacted] with address for free home curbside tire pickup! \nhttp://\nKCTownHall.com/tires\n\nFollow along for Before and Afters\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 69,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1157483542529617926",
+      "publishedAt": "2019-08-03T02:49:16.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 2, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Neighborhood Assn are picking up tires FREE Saturday! DM, call, or text [public contact number redacted] with address for free home curbside tire pickup! \nhttp://\nKCTownHall.com/tires\n\nFollow along for Before and Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 70,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1157861700944703488",
+      "publishedAt": "2019-08-04T03:51:56.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 3, 2019\nNew #TiredOfTires record! Today \n@KCTownHall\n dropped off 104 TIRES for August, saving neighbors $2,303 in tire disposal fees!  \n\nCall, text, or comment with addresses (homes not businesses) for free tire pickup September 6th! [public contact number redacted]  \n\n\nhttp://\nKCTownHall.com/tires\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 71,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1159153322236026881",
+      "publishedAt": "2019-08-07T17:24:22.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 7, 2019\nOur neighbors New Horizon Church had their air conditioning stolen!\n\nCan we chip in for new AC for their 25th Anniversary party on Aug 18?\n\nDonate: \nhttps://\ngofundme.com/f/church-ac-th\neft\n…\n\nNew Horizon hosts many programs, & is a vital community space.\n\n\n@QuintonLucasKC\n \n@Robinson4kc\n \n@ellington_b",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@QuintonLucasKC",
+        "@Robinson4kc",
+        "@ellington_b"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/cMLHYX42fV",
+          "displayedDestination": "https://\ngofundme.com/f/church-ac-th\neft\n…",
+          "resolvedDestination": "https://www.gofundme.com/f/church-ac-theft"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 72,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1170072880090165249",
+      "publishedAt": "2019-09-06T20:34:48.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 6, 2019\n#TiredOfTires? \n@KCTownHall\n\n & Oak Park Nbhd are picking up tires for FREE Fri & Sat! Dm or [public contact number redacted] with address \nhttp://\nKCTownHall.com/tires\n\n\n@KCTownHall\n is building walkable small biz incubator at 36th / Indiana! What neighbor owned biz would you like? \nhttp://\nKCTownHall.com/survey\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 73,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1170387602329034754",
+      "publishedAt": "2019-09-07T17:25:23.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 7, 2019\n#TiredOfTires? FREE Tire Pickup TODAY SATURDAY September 7! \n\nComment, call or share addresses   & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted]\n\nhttp://\nKCTownHall.com/tires\n\nFollow along for  before and afters \n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 74,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1170387688496799744",
+      "publishedAt": "2019-09-07T17:25:44.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 7, 2019\n#TiredOfTires? FREE Tire Pickup TODAY SATURDAY September 7! \n\nComment, call or share addresses   & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted]\n\nhttp://\nKCTownHall.com/tires\n\nFollow along for  before and afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 75,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1170387736492224512",
+      "publishedAt": "2019-09-07T17:25:55.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 7, 2019\n#TiredOfTires? FREE Tire Pickup TODAY SATURDAY September 7! \n\nComment, call or share addresses   & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted]\n\nhttp://\nKCTownHall.com/tires\n\nFollow along for  before and afters \n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 76,
+      "canonicalUrl": "https://x.com/trutheresme/status/1173037571162738689",
+      "publishedAt": "2019-09-15T00:55:25.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nI'm adapting to this new life\n@trutheresme\n·\nSep 14, 2019\nAll these street lights out on and around Cleaver Blvd. between Benton and Cleveland area is dangerous.\n1\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 2 likes",
+      "mentions": [
+        "@trutheresme"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 77,
+      "canonicalUrl": "https://x.com/laurazig/status/1180176299471638528",
+      "publishedAt": "2019-10-04T17:42:11.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nLaura Ziegler\n@laurazig\n·\nOct 4, 2019\nA most enlightening conversation w/ Robert Hughes,Jr. in ⁦@CityofKCK⁩. His dad started 1st black-owned mortgage co. west of the Mississippi. More on @HughesDevelopmentCo. & # Quindaro Blvd on \n@kcur\n last week Oct. #HereToListenKCUR\n1\n4",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 4,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 4 likes",
+      "mentions": [
+        "@laurazig",
+        "@kcur"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 78,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180178311848366083",
+      "publishedAt": "2019-10-04T17:50:10.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 4, 2019\n#TiredOfTires? \n@KCTownHall\n & Oak Park Nbhd are picking up tires for FREE Fri & Sat! Dm or [public contact number redacted] with address \nhttp://\nKCTownHall.com/tires\n\n\n@KCTownHall\n is building walkable small biz incubator at 36th / Indiana! What neighbor owned biz would you like? \nhttp://\nKCTownHall.com/survey",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        },
+        {
+          "shortUrl": "https://t.co/bsYwe6J1iv",
+          "displayedDestination": "http://\nKCTownHall.com/survey",
+          "resolvedDestination": "https://kctownhall.com/survey/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 79,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180550513819095042",
+      "publishedAt": "2019-10-05T18:29:10.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5! \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires\n\nFollow along for  before and afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 80,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180551346090577920",
+      "publishedAt": "2019-10-05T18:32:29.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\nFollow along for  Before and Afters \n\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5! \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 81,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180552140005298176",
+      "publishedAt": "2019-10-05T18:35:38.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\nFollow along for  Before and Afters \n\n#TiredOfTires?   FREE Tire Pickup  TODAY SATURDAY October 5! \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 82,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180552910071095301",
+      "publishedAt": "2019-10-05T18:38:42.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5! \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\nFollow along for  before and afters \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 83,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180553578689236992",
+      "publishedAt": "2019-10-05T18:41:21.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5! \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\nFollow along for  before and afters \n\n\nhttp://\nKCTownHall.com/tires\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 84,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180556215870541824",
+      "publishedAt": "2019-10-05T18:51:50.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\n#TiredOfTires? FREE Tire PickupTODAY SATURDAY October 5! \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\nFollow along for  before and afters \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 85,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180557262823264256",
+      "publishedAt": "2019-10-05T18:55:59.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\nFollow along for  Before and Afters \n\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5!\n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 86,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180568634260897794",
+      "publishedAt": "2019-10-05T19:41:10.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\nFollow along for  Before and Afters \n\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5!\n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 87,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180569203717353472",
+      "publishedAt": "2019-10-05T19:43:26.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5!\n\nFollow along for  Before and Afters \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 88,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180569809475588096",
+      "publishedAt": "2019-10-05T19:45:51.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY SATURDAY October 5!\n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires\n\nFollow along for  Before and Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 89,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180570492530577410",
+      "publishedAt": "2019-10-05T19:48:34.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\n#TiredOfTires?   FREE Tire Pickup  TODAY SATURDAY October 5! \n\nFollow along for  Before and Afters \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 90,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1180639237781250049",
+      "publishedAt": "2019-10-06T00:21:44.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 5, 2019\nDropped off 61 tires & saved neighbors $1,355 in disposal fees\n\nNov. is FINAL pickup in 2019\n\nText, call or dm address & we'll pick up tires! [public contact number redacted]\n\nProgram's back Spring 2020\n\n#TiredOfTires saved residents $10,595 tire fees so far!\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 91,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1182329689689473029",
+      "publishedAt": "2019-10-10T16:18:59.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 10, 2019\nFREE DUMPSTER DAYNeighborhood Clean-Up SATURDAY 8am-Noonby Oak Park Nbhd Assoc.\n\nBringhousehold trash & brushto:\n\n34th + Bellefontaine\n38th + Wabash\n39th + Hardesty\n40th + Cleveland\n42nd + Indiana\n43rd + Spruce\n4401 Chestnut\n\n\n@foresttysonjr\n \n@Robinson4kc\n \n@KikiCurls\n7\n6",
+      "engagement": {
+        "replies": 0,
+        "reposts": 7,
+        "likes": 6,
+        "bookmarks": 0
+      },
+      "engagementLabel": "7 reposts, 6 likes",
+      "mentions": [
+        "@foresttysonjr",
+        "@Robinson4kc",
+        "@KikiCurls"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 92,
+      "canonicalUrl": "https://x.com/trutheresme/status/1182349413722836992",
+      "publishedAt": "2019-10-10T17:37:21.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nI'm adapting to this new life\n@trutheresme\n·\nOct 10, 2019\nNo excuses!  Lets clean up our neighborhoods! While at it if you have a few things in your house here is an opportunity to throw them away!\nQuote\nKC Town Hall\n@KCTownHall\n·\nOct 10, 2019\nFREE DUMPSTER DAYNeighborhood Clean-Up SATURDAY 8am-Noonby Oak Park Nbhd Assoc.\n\nBringhousehold trash & brushto:\n\n34th + Bellefontaine\n38th + Wabash\n39th + Hardesty\n40th + Cleveland\n42nd + Indiana\n43rd + Spruce\n4401 Chestnut\n\n@foresttysonjr @Robinson4kc @KikiCurls\n2\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 1 like",
+      "mentions": [
+        "@trutheresme"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 93,
+      "canonicalUrl": "https://x.com/JJones816/status/1182369340034707457",
+      "publishedAt": "2019-10-10T18:56:32.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nBallot or the Bullet\n@JJones816\n·\nOct 10, 2019\nThis should happen more often around the city. Bravo.\nQuote\nKC Town Hall\n@KCTownHall\n·\nOct 10, 2019\nFREE DUMPSTER DAYNeighborhood Clean-Up SATURDAY 8am-Noonby Oak Park Nbhd Assoc.\n\nBringhousehold trash & brushto:\n\n34th + Bellefontaine\n38th + Wabash\n39th + Hardesty\n40th + Cleveland\n42nd + Indiana\n43rd + Spruce\n4401 Chestnut\n\n@foresttysonjr @Robinson4kc @KikiCurls\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [
+        "@JJones816"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 94,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1183035237233823745",
+      "publishedAt": "2019-10-12T15:02:34.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 12, 2019\nTODAY 8am-Noon FREE DUMPSTER DAYNeighborhood Clean-Upby Oak Park Nbhd Assoc.\n\nBringhousehold trash & brushto:\n\n34th + Bellefontaine\n38th + Wabash\n39th + Hardesty\n40th + Cleveland\n42nd + Indiana\n43rd + Spruce\n4401 Chestnut\n\n\n@foresttysonjr\n \n@Robinson4kc\n \n@KikiCurls\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 like",
+      "mentions": [
+        "@foresttysonjr",
+        "@Robinson4kc",
+        "@KikiCurls"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 95,
+      "canonicalUrl": "https://x.com/DjPittel/status/1184421200400801792",
+      "publishedAt": "2019-10-16T10:49:54.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nBlue Eagle Football\n@DjPittel\n·\nOct 16, 2019\n#WeAreCentral\n3\n11",
+      "engagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 11,
+        "bookmarks": 0
+      },
+      "engagementLabel": "3 reposts, 11 likes",
+      "mentions": [
+        "@DjPittel"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 96,
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1185289925748580352",
+      "publishedAt": "2019-10-18T20:21:54.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nMayor Q\n@QuintonLucasKC\n·\nOct 18, 2019\nYep. Should happen here.\nQuote\nTara Raghuveer\n@taraghuveer\n·\nOct 18, 2019\nBig Free Transit Energy x.com/alboradanet/st…\n4\n8\n50",
+      "engagement": {
+        "replies": 4,
+        "reposts": 8,
+        "likes": 50,
+        "bookmarks": 0
+      },
+      "engagementLabel": "4 replies, 8 reposts, 50 likes",
+      "mentions": [
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 97,
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1187199836682117126",
+      "publishedAt": "2019-10-24T02:51:12.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nMelissa Robinson\n@Robinson4kc\n·\nOct 23, 2019\nOppression is determing that there is something wrong with the people instead of addressing the environment and how the people arrived at this depressive state. #ViolenceFreeKC\n2\n1\n9",
+      "engagement": {
+        "replies": 2,
+        "reposts": 1,
+        "likes": 9,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 replies, 1 repost, 9 likes",
+      "mentions": [
+        "@Robinson4kc"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 98,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190017854248239115",
+      "publishedAt": "2019-10-31T21:29:00.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 31, 2019\n#TiredOfTires? FREE Tire Pickup FRIDAY & SATURDAY\n\n FINAL pickup in 2019 \n\nText, call or dm address & we'll pick up tires! [public contact number redacted]\n \nProgram's back Spring 2020\n \n#TiredOfTires saved residents $10,595 tire fees so far!\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 99,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190367471129300992",
+      "publishedAt": "2019-11-01T20:38:15.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 1, 2019\n#TiredOfTiresFINAL pickup in 2019 \n\n FREE Tire Pickup  FRIDAY & SATURDAY \n \nText, call or dm address & we'll pick up tires! [public contact number redacted]\n \nProgram's back Spring 2020\n \n#TiredOfTires saved residents $10,595 tire fees so far!\n\nhttp://\nKCTownHall.com/tires\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 100,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190393136054521856",
+      "publishedAt": "2019-11-01T22:20:14.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 1, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY & SATURDAY!\n\nFollow along for  Before and Afters \n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east neighborhoods of KCMO, not businesses. [public contact number redacted] \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 101,
+      "canonicalUrl": "https://x.com/NortheastNewsKC/status/1190674584502177797",
+      "publishedAt": "2019-11-02T16:58:37.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nNortheast News KC\n@NortheastNewsKC\n·\nNov 2, 2019\nClean up time in Northeast thanks to an army of vols and the city. \n@KCMOParks\n \n@QuintonLucasKC\n \n@ScarrittKC\n \n@PHNA\n \n@IndianMoundNA\n \n@Houstondefoe\n4\n8",
+      "engagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "engagementLabel": "4 reposts, 8 likes",
+      "mentions": [
+        "@NortheastNewsKC",
+        "@KCMOParks",
+        "@QuintonLucasKC",
+        "@ScarrittKC",
+        "@PHNA",
+        "@IndianMoundNA",
+        "@Houstondefoe"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 102,
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1190688421276246016",
+      "publishedAt": "2019-11-02T17:53:36.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nMelissa Robinson\n@Robinson4kc\n·\nNov 2, 2019\nCoding in the Neighborhood!  Thank you Code KC for your vision and implementation.  Kids are looking forward to building a raspberry pie.\n1\n20",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 20,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 20 likes",
+      "mentions": [
+        "@Robinson4kc"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 103,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190703057161601024",
+      "publishedAt": "2019-11-02T18:51:45.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 2, 2019\nLast day of 2019 for Tire Pickup! \n\n#TiredOfTires?  FREE Tire Pickup  TODAY\n\nDM, call, text with address  & we'll pick up tires off the curb! \n\nHomes only in East KC, not businesses. [public contact number redacted] \n\nhttp://\nKCTownHall.com/tires\n\nFollow along for  Before and Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 104,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190704251263160322",
+      "publishedAt": "2019-11-02T18:56:30.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 2, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY\n\nLast day of 2019 for Tire Pickup! \n\nDM, call, or text with address  & we'll pick up tires off the curb! \n\nHomes only in East KC, not businesses. [public contact number redacted] \n\nhttp://\nKCTownHall.com/tires\n\nFollow along for  Before and Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 105,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190705445008216064",
+      "publishedAt": "2019-11-02T19:01:14.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 2, 2019\nFollow along for  Before and Afters \n\n#TiredOfTires?  FREE Tire Pickup  TODAY\n\nLast day of 2019 for Tire Pickup! \n \nDM, call, or text with address  & we'll pick up tires off the curb! Homes only in East KC, not businesses. [public contact number redacted] \n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 106,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190707863292956672",
+      "publishedAt": "2019-11-02T19:10:51.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 2, 2019\nThanks for leads on tire locations! \n\n#TiredOfTires?FREE Tire PickupTODAY\n\nLast day of 2019 for Tire Pickup!\n\nDM, call, or text with address  & we'll pick up tires off the curb! Homes only in East KC, not biz. [public contact number redacted] \n\nhttp://\nKCTownHall.com/tires\n\nBefore & Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 107,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190708575510958080",
+      "publishedAt": "2019-11-02T19:13:41.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 2, 2019\n#TiredOfTires?  FREE Tire Pickup  TODAY\n \nLast day of 2019 for Tire Pickup! \n \nDM, call, or text with address  & we'll pick up tires off the curb!\n \nHomes only in East KC, not businesses. [public contact number redacted] \n\nhttp://\nKCTownHall.com/tires\n \nFollow along for  Before and Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 108,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190709291289890823",
+      "publishedAt": "2019-11-02T19:16:32.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 2, 2019\nLast day of 2019 for Tire Pickup! \n \n#TiredOfTires?  FREE Tire Pickup  TODAY\n \nDM, call, or text with addresses  & we'll pick up tires off the curb! Homes only in East KC, not businesses. [public contact number redacted] \n\nhttp://\nKCTownHall.com/tires\n \nFollow along for  Before and Afters \n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "3 reposts",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 109,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190710238212694016",
+      "publishedAt": "2019-11-02T19:20:17.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 2, 2019\n#TiredOfTires  FINAL TIRE PICKUP for 2019 \n \nFREE Tire Pickup TODAY!\n \nDM, call or share addresses  & we'll pick up tires off the curb! Homes only in East KC, not businesses. [public contact number redacted]\n \n\nhttp://\nKCTownHall.com/tires\n\nFollow along for Before & Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 110,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1190995865814667266",
+      "publishedAt": "2019-11-03T14:15:16.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 3, 2019\nClosed 2019As of now  0 tires on curb 10 min walking of \n@KCTownHall\n \n \n#TiredOfTires record: 118 tires & 599 tires 2019\n \nYou showed as a neighborhood we can go big\n \nIn 2019, saved east KC $13,235 in tire dump fees!\n\nProgram's back March 2020\n\nhttp://\nKCTownHall.com/tires\nMelissa Robinson and 2 others",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 111,
+      "canonicalUrl": "https://x.com/trutheresme/status/1191405830693904385",
+      "publishedAt": "2019-11-04T17:24:19.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nI'm adapting to this new life\n@trutheresme\n·\nNov 4, 2019\nFree bus rides tomorrow! It is for a purpose but, if you need to get the grocery store nobody will mind.\nQuote\nRideKC\n@RideKCTransit\n·\nNov 4, 2019\nDon't forget: All RideKC buses will offer free rides for #ElectionDay on Tuesday, Nov. 5.  \nTake RideKC to the polls and all around town tomorrow. \nhttps://\nridekc.org/blog/free-bus-\nrides-nov-5\n…\n6\n14",
+      "engagement": {
+        "replies": 0,
+        "reposts": 6,
+        "likes": 14,
+        "bookmarks": 0
+      },
+      "engagementLabel": "6 reposts, 14 likes",
+      "mentions": [
+        "@trutheresme"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 112,
+      "canonicalUrl": "https://x.com/KansasCity/status/1209146067817762816",
+      "publishedAt": "2019-12-23T16:17:42.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nKansas City\n@KansasCity\n·\nDec 23, 2019\nIn observance of Christmas & New Year’s Day, City offices & 311 will be closed on Dec. 25 & Jan. 1. As a result, trash & recycling collection will move to the holiday schedule. For example, trash normally picked up on Wednesday will be picked up Thursday & so on through the week.\n1\n4\n2",
+      "engagement": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 4 reposts, 2 likes",
+      "mentions": [
+        "@KansasCity"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 113,
+      "canonicalUrl": "https://x.com/KansasCity/status/1209146457590247424",
+      "publishedAt": "2019-12-23T16:19:15.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nKansas City\n@KansasCity\n·\nDec 23, 2019\nReplying to \n@KansasCity\nAlso, it's going to be cheaper & easier to dispose of more trash from December 26-31. During this week, residents can set out more than two bags of trash (not more than 15) for free curbside pickup, without buying tags for extra trash bags.\n1\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 1 like",
+      "mentions": [
+        "@KansasCity"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 114,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1236102068680695808",
+      "publishedAt": "2020-03-07T01:31:13.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 6, 2020\n#TiredOfTires? FREE Tire Pickup is back SATURDAY\n\nText, call or dm  address & we'll pick up tires from homes (no biz) in East KC! [public contact number redacted]\n \n#TiredOfTires saved residents $13,235 tire fees so far!\n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 115,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1236385304245927936",
+      "publishedAt": "2020-03-07T20:16:42.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 7, 2020\n#TiredOfTires? FREE Tire PickupTODAY\n\nText, call or dm  address & we'll pick up tires from homes (no biz) in East KC! [public contact number redacted]\n \nFollow along for  before and after \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 116,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1236689218174357504",
+      "publishedAt": "2020-03-08T16:24:20.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 8, 2020\nAs of now, there are 0 tires on curb from 31st-39th between Prospect-Cleveland \n\nFree tire pickup April 3: Call, text or dm with address (homes no biz)  [public contact number redacted] \nhttp://\nKCTownHall.com/tires\n\nSo far #TiredofTires saved east KC residents $14,638 tire disposal fees!\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 117,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1252344939867824132",
+      "publishedAt": "2020-04-20T21:14:35.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 20, 2020\n#COVID19 Relief: Stay Safe Resources\n@KCTownHall\n Q&A with Pastor Lee & \n@Robinson4kc\n\n\nSocial Distance\nRegister With Hospital\nApply For Unemployment\nTalk With Landlord\nUtilities Won’t Be Shut Off\n\nFull Video \nhttps://\nyoutu.be/onCKU-TuPhc\nInfo \nhttp://\nKCTownHall.com/COVID19/\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply",
+      "mentions": [
+        "@Robinson4kc"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/ph5INJPPhQ",
+          "displayedDestination": "https://\nyoutu.be/onCKU-TuPhc",
+          "resolvedDestination": "https://www.youtube.com/watch?v=onCKU-TuPhc&feature=youtu.be"
+        },
+        {
+          "shortUrl": "https://t.co/euxvbbF4q9",
+          "displayedDestination": "http://\nKCTownHall.com/COVID19/",
+          "resolvedDestination": "https://kctownhall.com/COVID19/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 118,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1252345034038407168",
+      "publishedAt": "2020-04-20T21:14:58.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 20, 2020\n@KCTenants\n \n\n@ChildrensMercy\n\n@TrumanMedKC\n\n@SwopeHealth\n\n@samuelurodgers\n\n@KCCAREHealth\n\n\n@QuintonLucasKC\n\n@EricWBunch\n\n@KCMOHealthDept",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@KCTenants",
+        "@ChildrensMercy",
+        "@SwopeHealth",
+        "@KCCAREHealth",
+        "@QuintonLucasKC",
+        "@KCMOHealthDept"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 119,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269121890733473795",
+      "publishedAt": "2020-06-06T04:20:12.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 120,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269122302970662912",
+      "publishedAt": "2020-06-06T04:21:50.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 121,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269122489461997568",
+      "publishedAt": "2020-06-06T04:22:35.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 122,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269122641086033920",
+      "publishedAt": "2020-06-06T04:23:11.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 123,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269122793544855552",
+      "publishedAt": "2020-06-06T04:23:47.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 124,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269122955965009921",
+      "publishedAt": "2020-06-06T04:24:26.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 125,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269123177885679618",
+      "publishedAt": "2020-06-06T04:25:19.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 126,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269123270391091200",
+      "publishedAt": "2020-06-06T04:25:41.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 127,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269123426414985216",
+      "publishedAt": "2020-06-06T04:26:18.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 128,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269123738911625217",
+      "publishedAt": "2020-06-06T04:27:33.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 129,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269123813171757059",
+      "publishedAt": "2020-06-06T04:27:50.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 130,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1269123902070042624",
+      "publishedAt": "2020-06-06T04:28:12.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 6, 2020\n#BlackLivesMatter Rally at Kansas City MO City Hall #KCMO #Protest\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 131,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1288612274228396032",
+      "publishedAt": "2020-07-29T23:08:02.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 29, 2020\n#TiredOfTires?FREE Tire PickupFRIDAY & SATURDAY\n\nText, call, dmaddress & we'll pick up tires off curb! Homes only in east neighborhoods of KCMO, not biz.   [public contact number redacted]\n￼\nSo far #TiredOfTires saved east KC residents $14,638 in tire dump fees! \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 132,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1288952731982598144",
+      "publishedAt": "2020-07-30T21:40:53.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 30, 2020\n#TiredOfTires? FREE Tire Pickup FRIDAY & SATURDAY\n\nText, call, dmaddress & we'll pick up tires off curb! Homes only in east neighborhoods of KCMO, not biz.   [public contact number redacted]\n￼\nCan we beat our record of 118 tires this month?\n\n\nhttp://\nKCTownHall.com/tires\n1\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 2 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 133,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1289313255966617602",
+      "publishedAt": "2020-07-31T21:33:29.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 31, 2020\n#TiredOfTires? FREE Tire PickupFRIDAY & SATURDAY\n\nText, call or comment  address & we'll pick up tires from homes (no biz) in East KC! [public contact number redacted]\n \nFollow along for  before and afters \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 134,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1289350670730948608",
+      "publishedAt": "2020-08-01T00:02:09.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 31, 2020\n#TiredOfTires? FREE Tire PickupFRIDAY & SATURDAY\n\nText, call or comment  address & we'll pick up tires from homes (no biz) in East KC! [public contact number redacted]\n \nFollow along for before and afters\n\n\nhttp://\nKCTownHall.com/tires\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 135,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1289350962709065729",
+      "publishedAt": "2020-08-01T00:03:19.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 31, 2020\n#TiredOfTires? FREE Tire PickupFRIDAY & SATURDAY\n\nText, call or comment  address & we'll pick up tires from homes (no biz) in East KC! [public contact number redacted]\n \nFollow along for before and after \n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 136,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1289634461638778880",
+      "publishedAt": "2020-08-01T18:49:50.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 1, 2020\n#TiredOfTires? FREE Tire Pickup TODAY\n\nText, call or comment  address & we'll pick up tires from homes (no biz) in East KC! [public contact number redacted]\n \nFollow along for before and afters\n\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 137,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1289713591843565569",
+      "publishedAt": "2020-08-02T00:04:16.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 1, 2020\nNew record! \n@KCTownHall\n dropped off 142 tiresAs of now  0 tires on curb 31st-39th between Prospect & Cleveland \n\nText/call/dmaddress for free tire pickup Sept 4. [public contact number redacted]\n\nSo far #TiredOfTires saved east KC residents $17,768 in tire dump fees!\nhttp://\nKCTownHall.com/tires\nMelissa Robinson and 2 others\n1\n1\n7",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 7,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 7 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 138,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1289714654579580928",
+      "publishedAt": "2020-08-02T00:08:30.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 1, 2020\nThank you!!",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 139,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1301921883831570434",
+      "publishedAt": "2020-09-04T16:35:40.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 4, 2020\n#TiredOfTires? FREE Tire Pickup  FRIDAY & SATURDAY\n\nText, call or comment  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted]\n\nSo far, #TiredOfTires saved east neighborhood residents $17,768 in tire disposal fees! \nhttp://\nKCTownHall.com/tires\n1\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 140,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1301997561356652546",
+      "publishedAt": "2020-09-04T21:36:23.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 4, 2020\n#TiredOfTires? FREE Tire Pickup  FRIDAY & SATURDAY\n\nText, call or comment  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted]\n\n\nhttp://\nkctownhall.com/tires\n\nFollow along for  before and afters \n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "displayedDestination": "http://\nkctownhall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 141,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1302003448833953792",
+      "publishedAt": "2020-09-04T21:59:46.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 4, 2020\nPicked me up! Thank you for letting us know! Before #TiredofTires\n1\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 142,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1302003767831912448",
+      "publishedAt": "2020-09-04T22:01:02.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 4, 2020\nAfter! #TiredofTires? If you have any other spots, let us know. We’re doing free tire pickup Friday & Saturday",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 143,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1302004390585421825",
+      "publishedAt": "2020-09-04T22:03:31.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 4, 2020\n#TiredOfTires?   FREE Tire Pickup  FRIDAY/SATURDAY\n\nText, call or comment  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] or \nhttp://\nkctownhall.com/tires\n\nFollow along for  Before and Afters \n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "displayedDestination": "http://\nkctownhall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 144,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1302281027960926210",
+      "publishedAt": "2020-09-05T16:22:46.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 5, 2020\n#TiredOfTires?  FREE Tire Pickup  SATURDAY Sept 5\n\nText, call or comment   address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttp://\nkctownhall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "displayedDestination": "http://\nkctownhall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 145,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1302311398999982081",
+      "publishedAt": "2020-09-05T18:23:27.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 5, 2020\n#TiredOfTires?  FREE Tire Pickup SATURDAY Sept 5\n\nText, call or comment   address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttp://\nkctownhall.com/tires\n\nFollow along for Before & Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "displayedDestination": "http://\nkctownhall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 146,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1302391602812518401",
+      "publishedAt": "2020-09-05T23:42:10.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 5, 2020\nAs of now  0 tires on curb 31st-39th between Prospect & Cleveland Red heart\n\nText/call/dmfor free tire pickup Oct 2. [public contact number redacted]\n\nSo far #TiredOfTires saved east KC residents  $19,193 in tire dump fees!  \nhttp://\nKCTownHall.com/tires\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 147,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1311091878306213889",
+      "publishedAt": "2020-09-29T23:53:57.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 29, 2020\n#TiredOfTires?FREE Tire PickupFriday & Saturday!\n\nText/call/dmaddress & we'll pick up tires from homes(no biz) in East KC! [public contact number redacted]\n\nCan we beat our 141 tire record this month? So far #TiredOfTires saved east kc $19,193in tire dump fees! \nhttp://\nKCTownHall.com/tires\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 148,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1312091287273824265",
+      "publishedAt": "2020-10-02T18:05:15.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 2, 2020\n#TiredOfTires?FREE Tire PickupToday & Saturday!\n\nText/call/dmaddress & we'll pick up tires from homes(no biz) in East KC! [public contact number redacted]\n\nCan we beat our 141 tire record this month? So far #TiredOfTires saved east kc $19,193in tire dump fees! \nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 149,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1312167901252608001",
+      "publishedAt": "2020-10-02T23:09:41.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 2, 2020\n#TiredOfTires? FREE Tire Pickup Friday and Saturday (Oct 2nd & 3rd)!\n\nText, call or comment  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttp://\nKctownhall.com/tires/\n\nFollow along for  Before & Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/Ig0fb0ozYH",
+          "displayedDestination": "http://\nKctownhall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 150,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1312482560316895232",
+      "publishedAt": "2020-10-03T20:00:01.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 3, 2020\n#TiredOfTires? FREE Tire Pickup Friday and Saturday (Oct 2nd & 3rd)!\n\nText, call or comment  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttp://\nKctownhall.com/tires/\n\nFollow along for Before & Afters \n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/Ig0fb0ozYH",
+          "displayedDestination": "http://\nKctownhall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 151,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1312530339051393024",
+      "publishedAt": "2020-10-03T23:09:53.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 3, 2020\nDropped off a bunch of tires for Oct! So far this program saved east KC $20,023 in tire disposal fees!\n\nDM/call/text addresses (homes not biz) for free tire pickup Nov 6th! [public contact number redacted]  \nhttp://\nKCTownHall.com/tires\n\nBrought to you by \n@KCTownHall\n & Oak Park Neighborhood Association!\n1\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 3 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXdJRk",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 152,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1312649591469342722",
+      "publishedAt": "2020-10-04T07:03:45.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 4, 2020\n#TiredOfTires? FREE Tire Pickup Friday and Saturday (Oct 2nd & 3rd)!\n\nText, call or comment  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttp://\nKctownhall.com/tires/\n\nFollow along for Before & Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/Ig0fb0Gbnh",
+          "displayedDestination": "http://\nKctownhall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 153,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1324836875568320512",
+      "publishedAt": "2020-11-06T22:11:40.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 6, 2020\n#TiredOfTires  FINAL TIRE PICKUP 2020 \n\nFREE Tire Pickup FRIDAY & SATURDAY\n\nDm/call address  & we'll pick up tires [public contact number redacted]\n\nSo far #TiredOfTires saved E KC residents$20k in tire dump fees!\n\nhttp://\nKCTownHall.com/tires\n\nBrought by \n@KCTownHall\n & Oak Park Neighborhood",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 154,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1325099960933748744",
+      "publishedAt": "2020-11-07T15:37:04.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 7, 2020\n#TiredOfTiresFINAL TIRE PICKUP for 2020\n\nFREE Tire Pickup SATURDAY\n\nComment, call or share addresses  & we'll pick up tires off the curb! Homes only in east KCMO, no biz. [public contact number redacted]\n\nSo far this program saved E KCMO $20kin tire dump fees!\n\nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 155,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1367257547724509189",
+      "publishedAt": "2021-03-03T23:36:16.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 3, 2021\n#TiredOfTires?FREE Tire PickupFRIDAY & SATURDAY\n\nDM, call, textto share address & we'll pick up tires off  curb! Homes only in east KCMO, no biz. [public contact number redacted]\n\nSo far this program saved E KCMO$20kin tire dump fees! \nhttp://\nKCTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 156,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1367878555556777989",
+      "publishedAt": "2021-03-05T16:43:56.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 5, 2021\n#TiredOfTires?FREE Tire PickupFRIDAY & SATURDAY\n\nDM, call, textto share address & we'll pick up tires off  curb! Homes only in east KCMO, no biz. [public contact number redacted]\n\nSo far this program saved E KCMO$20kin tire dump fees! \nhttp://\nKCTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC\n1\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 repost, 1 like",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 157,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1368272511490744325",
+      "publishedAt": "2021-03-06T18:49:22.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 6, 2021\n#TiredOfTires?FREE Tire PickupTODAY (Saturday)\n\nDM, call, textto share address & we'll pick up tires off  curb! Homes only in east KCMO, no biz. [public contact number redacted]\n\nSo far this program saved E KCMO$20kin tire dump fees! \nhttp://\nKCTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 158,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1368365228765945858",
+      "publishedAt": "2021-03-07T00:57:48.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 6, 2021\nAs of now  0 tires on curb 31st-39th between Prospect & Cleveland \n\nText/call/dmfor free tire pickup April 2. [public contact number redacted]\n\nSo far #TiredOfTires saved east KC residents  $21k in tire dump fees!  \nhttp://\nKCTownHall.com/tires\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 159,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1423734504691314698",
+      "publishedAt": "2021-08-06T19:55:32.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 6, 2021\n#TiredOfTires?  FREE Tire Pickup Today & Saturday!\n\nText/call/dm  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttps://\nkctownhall.com/tires/\n\n\n@Robinson4kc\n \n@QuintonLucasKC\n1\n4\n3",
+      "engagement": {
+        "replies": 1,
+        "reposts": 4,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 4 reposts, 3 likes",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGI26V",
+          "displayedDestination": "https://\nkctownhall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 160,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1423795274879836160",
+      "publishedAt": "2021-08-06T23:57:01.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 6, 2021\n Thanks \n@TroostwoodKCMO\n for the tip!  We’re picking up tires tomorrow (Saturday) too, so DM / call / text with any other addresses  for #TiredOfTires pickup  [public contact number redacted] \nhttps://\nKCTownHall.com/tires\n1\n1\n1",
+      "engagement": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 1 repost, 1 like",
+      "mentions": [
+        "@TroostwoodKCMO"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/rIBQz797HJ",
+          "displayedDestination": "https://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 161,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1424055770472198146",
+      "publishedAt": "2021-08-07T17:12:08.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 7, 2021\n#TiredOfTires?  FREE Tire Pickup  Today (Saturday)!\n\nText/call/dm  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \n\n\nhttps://\nKCTownHall.com/tires\n First Saturdays until November \n\n\n@Robinson4kc\n \n@QuintonLucasKC",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/rIBQz797HJ",
+          "displayedDestination": "https://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 162,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1424106887482683397",
+      "publishedAt": "2021-08-07T20:35:15.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 7, 2021\n#TiredOfTires? FREE Tire Pickup TODAY & every First Saturday until Nov!\n\nText, call or comment  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttps://\nKCTownHall.com/tires\n\nFollow along for Before & Afters",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/rIBQz797HJ",
+          "displayedDestination": "https://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 163,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1424143001505386498",
+      "publishedAt": "2021-08-07T22:58:45.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 7, 2021\n This month we collected and recycled  65 tires! \n\nNext month: Text/call/dmfor free tire pickup September 3. [public contact number redacted]\n\nSo far #TiredOfTires saved east KC residents $26k in tire dump fees!  \nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 164,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1433862792990400527",
+      "publishedAt": "2021-09-03T18:41:44.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 3, 2021\n#TiredOfTires? FREE Tire Pickup Today & Saturday Rain or shine!\n\nText/call/dm  address & we'll pick up tires from homes  (no biz) in East KC! [public contact number redacted] \nhttps://\nkctownhall.com/tires/\n\n\n@Robinson4kc\n \n@QuintonLucasKC\n2\n3",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 3 likes",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGI26V",
+          "displayedDestination": "https://\nkctownhall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 165,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1434323234346967046",
+      "publishedAt": "2021-09-05T01:11:22.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 4, 2021\nThis month #TiredOfTires recycled 98 tires!  Help us break 100 for October! \n\nText/call/dm  for free  tire pickup  from homes  (no biz) October 1st. [public contact number redacted]\n\nSo far #TiredOfTires saved east KC residents  $28k in tire dump fees!  \nhttp://\nKCTownHall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 166,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1444329446287290382",
+      "publishedAt": "2021-10-02T15:52:28.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 2, 2021\nTODAY  Free Tire Pickup  #TiredOfTires Saturday!\n\nText, call or comment  addresses or intersections & we'll pick up tires to recycle from homes (no biz) in East KC! [public contact number redacted] \nhttp://\nKCTownHall.com/tires\n\nFollow along for  before & afters \n\n\n@Robinson4kc\n \n@QuintonLucasKC",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 167,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1444466053665509377",
+      "publishedAt": "2021-10-03T00:55:18.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nOct 2, 2021\n#TiredOfTires thanks Chestnut Family Resource Center for collecting at their dumpster day! This month we recycled 51 tires with zero now on the curb btwn 31st & 39th, Prospect & Cleveland. Next month is last of 2021, so share pickup addresses \nhttp://\nKCTownHall.com/tires\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 likes",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 168,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1457012244588412935",
+      "publishedAt": "2021-11-06T15:49:23.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 6, 2021\n3…2…1…0 Tires! TODAY is the last #TiredOfTires Free Tire Pickup  of 2021!\n\nText, call or comment  addresses. We’ll pick up tires to recycle from homes (no biz) in East KC! [public contact number redacted] \nhttps://\nkctownhall.com/tires/\n\nFollow for  before & after \n\n\n@Robinson4kc\n \n@QuintonLucasKC\nGIF\n1\n3\n7",
+      "engagement": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 7,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 reply, 3 reposts, 7 likes",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGI26V",
+          "displayedDestination": "https://\nkctownhall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 169,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1457031966444896259",
+      "publishedAt": "2021-11-06T17:07:45.000Z",
+      "type": "authored",
+      "isTopLevelReply": true,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 6, 2021\nReplying to \n@BarsottiKlb\n \n@Robinson4kc\n and \n@QuintonLucasKC\nOur focus is residents of the Oak Park neighborhood in East KC.  But if you’re close, let us know! Oak Park is between Linwood Boulevard, South to Emanuel Cleaver Boulevard, Prospect Avenue, East to Cleveland Avenue. Linwood South to 43rd Street, Cleveland East to Jackson",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@BarsottiKlb",
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": false
+    },
+    {
+      "index": 170,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1457046287753285637",
+      "publishedAt": "2021-11-06T18:04:40.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 6, 2021\nBiggest. Tire. Ever! Took all four of us!  Teamwork makes the dream work! #TiredOfTires\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 171,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1457371688300056580",
+      "publishedAt": "2021-11-07T15:37:41.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nNov 7, 2021\nAnd that’s 2021!  As of now there are ZERO tires on the curb Prospect to Cleveland, Linwood to 39th! 112 tires this month!\n\nSo far #TiredOfTires has saved east neighborhood residents + $32k in tire dump fees.\n\n#TiredOfTires returns 2022! \nhttp://\nkctownhall.com/tires",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/PIFQdEJmOM",
+          "displayedDestination": "http://\nkctownhall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 172,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1500289857750401026",
+      "publishedAt": "2022-03-06T01:59:10.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMar 5, 2022\n #TiredOfTires is back!  Free tire pickup for East KC residents 1st Saturdays!\n\nCall / text / DM addresses (homes not biz) for April 2 pickup! [public contact number redacted]\n\nToday collected 70 tires Thanks DJ Sly @ recycling center! \nhttps://\nkctownhall.com/tires/\n\n\n@Robinson4kc\n \n@QuintonLucasKC\n2\n9",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 9,
+        "bookmarks": 0
+      },
+      "engagementLabel": "2 reposts, 9 likes",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/TTxnCGqqIl",
+          "displayedDestination": "https://\nkctownhall.com/tires/",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 173,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1510295173548367877",
+      "publishedAt": "2022-04-02T16:36:43.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 2, 2022\nTODAY  Free Tire Pickup  #TiredOfTires Saturday!\n\nText, call or comment  addresses or intersections & we'll pick up tires to recycle from homes (no biz) in East KC! [public contact number redacted] \nhttp://\nKCTownHall.com/tires\n\nFollow along for  before & afters \n\n\n@Robinson4kc\n \n@QuintonLucasKC",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 174,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1511091801087692813",
+      "publishedAt": "2022-04-04T21:22:14.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nApr 4, 2022\n #TiredOfTires weekend!\n\n by Saturday night we collected all tires on the curb between Prospect & Cleveland, 39th and 31st!\n\n call / txt / dm addresses (homes not biz) in East KC for May 7 free tire pickup! [public contact number redacted] \nhttp://\nKCTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 175,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1525157225542651910",
+      "publishedAt": "2022-05-13T16:53:13.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nMay 13, 2022\nYour #TiredOfTires free tire pickup program by \n@KCTownHall\n collected 139 tires for May!  ZERO on the curb btwn Prospect & Cleveland Ave, 31st & 39th! \n\nCall/txt/dm addresses for free pickup: Saturday June 4\n\n\nhttp://\nKCTownHall.com/tires\n[public contact number redacted]\n\n\n@Robinson4kc\n \n@QuintonLucasKC",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/COA3dXvlfU",
+          "displayedDestination": "http://\nKCTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 176,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1532864718490292226",
+      "publishedAt": "2022-06-03T23:20:02.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJun 3, 2022\n#TiredOfTires?  Free tire pickup Sat June 4th! Dm/call/text addresses or intersections for homes only (no biz) in East KC. [public contact number redacted] \nhttp://\nkcTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC\nGIF\n2\n2",
+      "engagement": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2,
+        "bookmarks": 1
+      },
+      "engagementLabel": "2 reposts, 2 likes, 1 bookmark",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "displayedDestination": "http://\nkcTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 177,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1542991559674716165",
+      "publishedAt": "2022-07-01T22:00:29.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 1, 2022\n#TiredOfTires?  Free tire pickup Sat July 2nd! Dm/call/text addresses or intersections for homes only (no biz) in East KC. [public contact number redacted] \nhttp://\nkcTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC\nGIF\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "displayedDestination": "http://\nkcTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 178,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1543272488318242817",
+      "publishedAt": "2022-07-02T16:36:48.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nJul 2, 2022\nTODAY #TiredOfTires?  Free tire pickup Sat July 2nd! Dm/call/text\n[public contact number redacted] w/ addresses or intersections for homes only (no biz) in East KC  \nhttp://\nkcTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC\nGIF",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0,
+        "bookmarks": 0
+      },
+      "engagementLabel": "",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "displayedDestination": "http://\nkcTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 179,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1555940701338206208",
+      "publishedAt": "2022-08-06T15:35:45.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nAug 6, 2022\nTODAY #TiredOfTires?  Free tire pickup Sat August 6th! Dm/call/text\n[public contact number redacted] w/ addresses or intersections for homes only (no biz) in East KC  \nhttp://\nkcTownHall.com/tires\n\n\n@Robinson4kc\n \n@QuintonLucasKC\nGIF\n1",
+      "engagement": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1,
+        "bookmarks": 0
+      },
+      "engagementLabel": "1 like",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [
+        {
+          "shortUrl": "https://t.co/5ABuIyj6CT",
+          "displayedDestination": "http://\nkcTownHall.com/tires",
+          "resolvedDestination": "https://kctownhall.com/tires/"
+        }
+      ],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 180,
+      "canonicalUrl": "https://x.com/KCTownHall/status/1566197849297195009",
+      "publishedAt": "2022-09-03T22:54:00.000Z",
+      "type": "authored",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall\n@KCTownHall\n·\nSep 3, 2022\n Now ZERO tires on the curb btwn 31st & Prospect — 39th & Cleveland  Next #TiredOfTires free pickup OCT 1 (homes only, no biz)I’m asked: what options for legacy small businesses buried under tire collections? KCMO one-shot-amnesty program?  \n@Robinson4kc\n \n@QuintonLucasKC\n3\n8",
+      "engagement": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 8,
+        "bookmarks": 0
+      },
+      "engagementLabel": "3 reposts, 8 likes",
+      "mentions": [
+        "@Robinson4kc",
+        "@QuintonLucasKC"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    },
+    {
+      "index": 181,
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1573651421681139714",
+      "publishedAt": "2022-09-24T12:31:50.000Z",
+      "type": "reposted",
+      "isTopLevelReply": false,
+      "visibleText": "KC Town Hall reposted\nMelissa Robinson\n@Robinson4kc\n·\nSep 24, 2022\nLet’s do this!!  Grateful for all of the residents, resident leaders and City staff for ensuring Kansas City is a healthy and vibrant for everyone #CleanUp #TrashDay #3rdDistrictStrong #KCStrong\n4\n6",
+      "engagement": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 6,
+        "bookmarks": 0
+      },
+      "engagementLabel": "4 reposts, 6 likes",
+      "mentions": [
+        "@Robinson4kc"
+      ],
+      "outgoingLinks": [],
+      "hasVisibleMedia": true
+    }
+  ]
+}

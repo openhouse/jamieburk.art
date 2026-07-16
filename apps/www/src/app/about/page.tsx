@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { Claim } from "@/components/citations/Claim";
+import { References } from "@/components/citations/References";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -37,6 +39,14 @@ export default function AboutPage() {
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
           </p>
+          <Claim
+            as="p"
+            claimId="CLM-PARTICIPATION-ART-SOCIAL-SYSTEMS-THRESHOLD"
+            occurrenceId="participatory-social-systems-throughline"
+            pageId="about"
+            projection="homepage"
+            surface="/about"
+          />
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">
@@ -46,6 +56,7 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+        <References pageId="about" />
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />

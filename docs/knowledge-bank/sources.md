@@ -23,14 +23,60 @@ Approved public artifact examples for this launch pass include:
 - Harry J. Epstein Company public website.
 - CallNYC public GitHub repository.
 - CallNYC archived Politico New York PDF.
+- CallNYC authenticated 107-item complete recoverable project-account corpus.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- NTER CHNG archived project site and surviving Vimeo project video.
+- America: Now and Here Kansas City archived visual-artists page.
+- Michael Rees's public Claudette's Theatre on Wheels project page and the
+  archived #MakeUsVisible Munich event listing.
+- Urbanhermit public-safe 434-record live-profile corpus and transformation
+  manifest.
+- Music Hackathon / Music Community Lab's 2015 public WOW List attribution.
+- NPR's archived 2016 Horse Lords `Truthers` video feature.
+- KCUR's 2016 8th Street Tunnel report.
+- NYC Artist Coalition and peer public records attributing advocacy statements
+  and Cabaret Law work.
+- New York City Council transcripts documenting Tom Finkelpearl's May 2017
+  reference to NYC Artist Coalition, Jamie's September 2017 Cabaret Law
+  testimony and Espinal's response, and Espinal's March 2019 acknowledgment of
+  sustained coalition collaboration.
+- DCLA and CreateNYC records documenting NYC Artist Coalition as a
+  public-engagement outcome and preserving its recommendations for partnership
+  with informal community-driven cultural spaces.
+- KC Town Hall and Jimmy Fitzner public records documenting shared tire-pickup
+  participation.
+- Brooklyn Daily Eagle's 2017 Office of Nightlife report.
+- NYC Artist Coalition's public-safe 33-event Facebook corpus, with one
+  unresolved slot retained against the 34-slot host control.
+- Call Script's public Facebook Page and the January 27, 2017, Department of
+  Cultural Affairs event discussion connecting `popular.vote`, agenda
+  solicitation, peer-city learning, and later coalition priority-setting.
 
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
+
+A July 2026 archival-production pass appraised the Jamie Projects History,
+Commercial Rent Stabilization, and job-hunt working collections. The repository
+stores only the resulting public-safe source records, atomic assertions,
+boundaries, research tasks, and approved projections. It does not store the
+underlying working folders.
+
+A second July 2026 pass inventoried 110 accessible Google Drive Shared Drives
+at fonds level and close-read a bounded set of high-signal project records. It
+promoted only public-safe aggregate findings. Personal, family, legal,
+administrative, recovery, credential, guest, resident, and unconsented media
+records remained excluded or protected.
+
+A July 15, 2026, lineage pass reviewed three historic WOW List production
+database snapshots, a Jamie-authored `popular.vote` routing commit, and a
+protected Sunday Dinner operating workbook. The repository stores only
+aggregate table counts, dated chronology, source-level assertions, and explicit
+boundaries. Raw rows, person identifiers, guest histories, contact fields,
+authentication data, and private locators remain excluded.
 
 ### AI-Assisted Archival Review
 
@@ -41,6 +87,36 @@ paths, raw correspondence, lists, payment records, credentials, and sensitive
 personal or financial material.
 
 AI-assisted archival review is not a human collaborator testimonial.
+
+### Personal Public-Account Corpus
+
+The July 15, 2026 authenticated Urbanhermit pass accounts for all 434 records
+represented by the live profile counter. The committed source is a metadata-only
+corpus with stable status URLs, dates, record and source-authorship classes,
+posted-link metadata, auditable mission-signal evidence, bounded incoming
+response, and dated visible counters.
+
+The corpus deliberately excludes raw post text, profile biography, historical
+contact details, cookies, credentials, authentication state, direct messages,
+private analytics, and non-mission personal context. The raw authenticated
+research run remains protected. The public corpus supports population and
+source-discovery claims; article-level claims require close reading of the
+destination or an independently authored attribution.
+
+### Public Event Population
+
+The July 15, 2026 authenticated NYC Artist Coalition Facebook pass preserves
+33 public event identities exposed by the Past Events index and one unresolved
+slot from an earlier 34-past-events host control. The corpus contains public
+metadata, organizer-display relationships, venues, overlapping mission topics,
+bounded historical response labels, and seven public article routes.
+
+The public corpus excludes raw descriptions, attendee and guest identities,
+comments and reactions, contact details, meeting credentials, private working
+links, account-administration data, and authenticated-session state. Event
+pages establish a recurring collective system and event-level interfaces; they
+do not establish individual production credit, attendance, endorsement, or
+policy causality.
 
 ### Firsthand / Collaborator Context
 
@@ -69,3 +145,5 @@ collaborators approve.
 - unapproved photos;
 - private financial records;
 - private personal records.
+- Shared Drive IDs, private locators, raw revision contents, and collaborator
+  workspaces.

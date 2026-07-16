@@ -8,6 +8,8 @@ type CiteProps = {
 export function Cite({ pageId, occurrenceId }: CiteProps) {
   const citation = resolveCitationOccurrence(pageId, occurrenceId);
 
+  if (citation.sources.length === 0) return null;
+
   return (
     <sup className="jb-citation">
       {citation.sources.map(({ noteId, number, referenceId, source }) => (

@@ -1,0 +1,954 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-15",
+  "project": "kc-spaces-fund",
+  "platform": "facebook",
+  "account": "@KCSpacesFund",
+  "method": {
+    "surface": "Authenticated public KC Spaces Fund Facebook Page, 2020 year filter, and repeated terminal scrolling",
+    "captureDate": "2026-07-15",
+    "managementAccessRecovered": false,
+    "terminalControl": {
+      "terminalScrollY": 24347,
+      "documentHeightPx": 25148,
+      "consecutiveStableTerminalChecks": 4,
+      "terminalLatestDate": "2020-07-09",
+      "terminalEarliestDate": "2020-04-07",
+      "visibleLoadingBoundary": false
+    },
+    "reconciliation": "Private rendered-record tokens distinguish the 38 surviving public records. The public ledger retains only one-way hashes and excludes raw tokens, bodies, comments, identities, and authenticated routes.",
+    "limitations": [
+      "This accounts for 100% of the surviving public Page records exposed by the authenticated 2020 filter on July 15, 2026; it is not a Meta owner export or deleted-post recovery.",
+      "Deleted, hidden, private, unpublished, or no-longer-retained posts may remain outside the surviving Page surface.",
+      "The Page identity does not identify the historical human publisher of each post.",
+      "Page-authored references, tags, and links are outgoing public routing, not incoming stakeholder engagement, endorsement, partnership, or impact.",
+      "Visible reaction counts are capture-date interface values, not unique people, historical reach, attendance, conversion, or outcome measures."
+    ]
+  },
+  "populationReconciliation": {
+    "coverageState": "complete-surviving-public-surface",
+    "exposedDistinctPosts": 38,
+    "ledgerRows": 38,
+    "recoveredPublicationDates": 38,
+    "contentStateCounts": {
+      "public-body-recovered": 33,
+      "embedded-source-unavailable": 2,
+      "body-not-recovered": 3
+    },
+    "dateRange": {
+      "earliest": "2020-04-07",
+      "latest": "2020-07-09"
+    },
+    "yearCounts": {
+      "2020": 38
+    },
+    "boundary": "The ledger accounts for all 38 distinct records exposed by the authenticated 2020 Page filter through four stable terminal checks. It does not establish every post ever created or recover deleted, hidden, private, unpublished, or no-longer-retained records."
+  },
+  "missionSummary": {
+    "tagCounts": {
+      "grant-and-grantee-documentation": 12,
+      "application-and-eligibility-routing": 10,
+      "fundraising-and-mutual-aid-prints": 23,
+      "coalition-and-volunteer-participation": 6,
+      "press-and-media-circulation": 1
+    },
+    "boundary": "Tags overlap and describe the Page's public operating concerns. They do not assign authorship to Jamie or prove that a post caused a grant, donation, application, or campaign outcome."
+  },
+  "stakeholderSummary": {
+    "tagCounts": {
+      "grantees-and-grassroots-cultural-spaces": 12,
+      "applicants-and-eligible-spaces": 10,
+      "donors-and-fundraising-partners": 23,
+      "volunteers-and-community-contributors": 6,
+      "published-media": 1
+    },
+    "namedGranteeOrFundedSpaceHighlights": 11,
+    "boundary": "Stakeholder tags describe Page-authored references, invitations, and routes. Reaction and commenter identities were not recovered, so incoming engagement by key stakeholder groups remains unmeasured."
+  },
+  "postedUrlSummary": {
+    "distinctExternalRoutes": 9,
+    "governedSourceRoutes": 7,
+    "inventoryOnlyRoutes": 2,
+    "boundary": "A posted route establishes circulation through the Page, not authorship, endorsement by the linked organization, present availability, or a campaign result."
+  },
+  "displayedInteractionSummary": {
+    "rowsWithVisibleReactions": 28,
+    "displayedReactions": 119,
+    "maxReactionsOnOneRow": 15,
+    "highestReactionOrdinal": 11,
+    "rowsWithVisibleCommentOrShareCountLabels": 0,
+    "boundary": "The 119 displayed reactions are post-level capture-date interface values and are not 119 unique people, historical reach, incoming engagement by a named stakeholder group, endorsement, attendance, conversion, or impact. No visible comment or share count labels were used as zero-valued engagement."
+  },
+  "currentPageSnapshot": {
+    "observedOn": "2026-07-15",
+    "followers": 108,
+    "boundary": "The current follower display is a dated profile snapshot and is not evidence of 2020 reach or campaign-period audience size."
+  },
+  "ownershipAndCreditBoundary": {
+    "namedPublicOrganizers": [
+      "Caitlin Horsmon",
+      "Jordan Carr",
+      "Kendell Harbin",
+      "Megan Pobywajlo"
+    ],
+    "historicalPagePublisherRecovered": false,
+    "jamiePagePublisherAttribution": "not-supported",
+    "jamieSeparatelyDocumentedRole": "Behind-the-scenes digital infrastructure, including the campaign web stack and public action affordances.",
+    "participantBoundary": "Jamie states that he was not the stakeholder or owner posting to this Page. His recollection that he supported selection of a project name available across domains and social platforms remains a research lead, not a claim established by this Facebook corpus.",
+    "boundary": "Credit the named public organizers and the campaign collective. Do not attribute Page ownership, publishing, grant selection, fundraising control, fiscal sponsorship, or campaign authorship to Jamie."
+  },
+  "publicationBoundary": {
+    "rawBodiesStored": false,
+    "rawRenderedTokensStored": false,
+    "nativePostIdsStored": false,
+    "commentTextStored": false,
+    "interactionIdentitiesStored": false,
+    "followerIdentitiesStored": false,
+    "authenticatedUrlsStored": false,
+    "oneWayReconciliationHashesStored": true
+  },
+  "postedUrlInventory": [
+    {
+      "routeKey": "ee2cc4820ee8d27c40eb",
+      "url": "https://www.odditiesprints.com/covid-19-fundraise",
+      "host": "odditiesprints.com",
+      "firstSeenOrdinal": 1,
+      "recordOccurrences": 2,
+      "evidenceRole": "fundraising-partner",
+      "sourceId": "SRC-KCSPACES-ODDITIES-PRINTS-2020",
+      "preservationDisposition": "governed-source-record"
+    },
+    {
+      "routeKey": "a81dab03a812ea423903",
+      "url": "https://kcspacesfund.com/",
+      "host": "kcspacesfund.com",
+      "firstSeenOrdinal": 1,
+      "recordOccurrences": 14,
+      "evidenceRole": "project-route",
+      "sourceId": "SRC-KCSPACES-CAMPAIGN-SITE-2020",
+      "preservationDisposition": "governed-source-record"
+    },
+    {
+      "routeKey": "52d766d800597e1e98f3",
+      "url": "https://www.odditiesprints.com/covid-19-fundraiser",
+      "host": "odditiesprints.com",
+      "firstSeenOrdinal": 3,
+      "recordOccurrences": 5,
+      "evidenceRole": "fundraising-partner",
+      "sourceId": "SRC-KCSPACES-ODDITIES-PRINTS-2020",
+      "preservationDisposition": "governed-source-record"
+    },
+    {
+      "routeKey": "81502c5bb7e59e0116ca",
+      "url": "https://www.facebook.com/farewelltransmission",
+      "host": "facebook.com",
+      "firstSeenOrdinal": 5,
+      "recordOccurrences": 1,
+      "evidenceRole": "recipient-page",
+      "sourceId": null,
+      "preservationDisposition": "route-inventory-only"
+    },
+    {
+      "routeKey": "67e7def8b7f79afd24c7",
+      "url": "https://kcspacesfund.com/join/",
+      "host": "kcspacesfund.com",
+      "firstSeenOrdinal": 7,
+      "recordOccurrences": 1,
+      "evidenceRole": "volunteer-route",
+      "sourceId": "SRC-KCSPACES-CAMPAIGN-SITE-2020",
+      "preservationDisposition": "governed-source-record"
+    },
+    {
+      "routeKey": "b73e8ff7e51d3ef649d6",
+      "url": "http://twocc.us/donate",
+      "host": "twocc.us",
+      "firstSeenOrdinal": 13,
+      "recordOccurrences": 1,
+      "evidenceRole": "recipient-context",
+      "sourceId": null,
+      "preservationDisposition": "route-inventory-only"
+    },
+    {
+      "routeKey": "3eb80b229515585ddd2e",
+      "url": "https://www.gofundme.com/f/kcspacesfund",
+      "host": "gofundme.com",
+      "firstSeenOrdinal": 15,
+      "recordOccurrences": 2,
+      "evidenceRole": "fundraising-route",
+      "sourceId": "SRC-KCSPACES-GOFUNDME-2020",
+      "preservationDisposition": "governed-source-record"
+    },
+    {
+      "routeKey": "5ebe8adb3a1e8b96b3bd",
+      "url": "https://kcspacesfund.com/apply/",
+      "host": "kcspacesfund.com",
+      "firstSeenOrdinal": 23,
+      "recordOccurrences": 1,
+      "evidenceRole": "application-route",
+      "sourceId": "SRC-KCSPACES-CAMPAIGN-SITE-2020",
+      "preservationDisposition": "governed-source-record"
+    },
+    {
+      "routeKey": "411e8fd1d4565a5ec2c7",
+      "url": "https://do816.com/p/the-daily-dogood-kansas-city",
+      "host": "do816.com",
+      "firstSeenOrdinal": 28,
+      "recordOccurrences": 1,
+      "evidenceRole": "published-media",
+      "sourceId": "SRC-KCSPACES-DO816-DAILY-DOGOOD-2020",
+      "preservationDisposition": "governed-source-record"
+    }
+  ],
+  "population": [
+    {
+      "ordinal": 1,
+      "publishedAt": "2020-07-09",
+      "reconciliationKeySha256": "8bba22d216c5a8d7da67a462630872d8d4399db405c0b6453a5d81832983a63b",
+      "contentFingerprint": "f86ee41360600b24b164b8eb29b4a75d285e38aaff645efb4a227433272ae406",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "ee2cc4820ee8d27c40eb",
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "publishedAt": "2020-06-30",
+      "reconciliationKeySha256": "65889e4569cf36429f756c4b0a2dedc6eda040b9a603bafd6aab05acc644b10c",
+      "contentFingerprint": "633222f133f7d1854add2c4604d86ec08c04e54a4f910ba46a74ba05e5ccb4e0",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "ee2cc4820ee8d27c40eb"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "publishedAt": "2020-06-14",
+      "reconciliationKeySha256": "185edecb15d2737f396a16cfaea4239d4233bb071894ed884a750c76637faa3a",
+      "contentFingerprint": "da8673e864251df2f7d2da18b3108ac03d95d14554ea425c4f4a89ddd60a3c8f",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "52d766d800597e1e98f3"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "publishedAt": "2020-06-11",
+      "reconciliationKeySha256": "24345f00a2f9a51c252a53ef27801625bbb6e9fcf9bf590d6251c1968f332fe3",
+      "contentFingerprint": "79a2930a996b584c3c0f65991a5a2fcf91c04d6b40f7ab8222c0a4b443c19296",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "52d766d800597e1e98f3"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "publishedAt": "2020-06-09",
+      "reconciliationKeySha256": "68cb9abfb3f699e212e28000494b2e913b5c308867c19f1bc8893f83fc0fa37e",
+      "contentFingerprint": "920a06e5d83032dc520e638e758f65897fe05561d3fcb3d54964d54e03b24e34",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 3,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "81502c5bb7e59e0116ca"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "publishedAt": "2020-05-30",
+      "reconciliationKeySha256": "859e7946d61ce7798e35b039a64085cdd6ec4c9ef8586bbf16c7e9a13b893c90",
+      "contentFingerprint": "81c273f781ef523e72984d3b0a1e177dba77b68abc7338a02087c5ff1d598022",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "publishedAt": "2020-05-28",
+      "reconciliationKeySha256": "cd59e7e96d0e6287c790b3efb2a862fecf5b2b444f29ff34827639e4a1d0bdf6",
+      "contentFingerprint": "108227028c8eec728f7f56e7342d7185c17c3f1f379dbb3a0964c95b083cec42",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 3,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints",
+        "coalition-and-volunteer-participation"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners",
+        "volunteers-and-community-contributors"
+      ],
+      "postedRouteKeys": [
+        "67e7def8b7f79afd24c7"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "publishedAt": "2020-05-26",
+      "reconciliationKeySha256": "f31fcc4c56757217967bbefb57347aaded93e91cf73d5227dd45aee2e0696ebc",
+      "contentFingerprint": "067f034de4ca13df10ef0e88c6ab083511f75eabe7261dcccf81a60b72aa69df",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 3,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 9,
+      "publishedAt": "2020-05-24",
+      "reconciliationKeySha256": "139fa25e24c9ba9ac32f0b3ffd89882fbab9499907d928c046143100204772cd",
+      "contentFingerprint": "b943bcfa4cdee17b1cf4618f6691bb8004f2a7a006b8cf212eaff9720dc29b97",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints",
+        "coalition-and-volunteer-participation"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners",
+        "volunteers-and-community-contributors"
+      ],
+      "postedRouteKeys": [
+        "52d766d800597e1e98f3"
+      ]
+    },
+    {
+      "ordinal": 10,
+      "publishedAt": "2020-05-22",
+      "reconciliationKeySha256": "665bf2514062c561678d3e01d758fe9504c5e98398d9c4410f0beec38d03ceac",
+      "contentFingerprint": "b4a70941b5d71f359258f3317a48cd5cd54bd026a540d644614956d3d5e69af5",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 9,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints",
+        "coalition-and-volunteer-participation"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners",
+        "volunteers-and-community-contributors"
+      ],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 11,
+      "publishedAt": "2020-05-21",
+      "reconciliationKeySha256": "023df2863cc500a152eab677c8e13ac8d18401d4352a1f5dff60d878b1505fca",
+      "contentFingerprint": "2085927f5549f6b525200e56913ca59dccae387b6b51d01c2ce6efbe964e0487",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 15,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 12,
+      "publishedAt": "2020-05-19",
+      "reconciliationKeySha256": "1e6dba7493d40cfec846c4b91c4b24c1a49f8efefb15c5219309029dcb088764",
+      "contentFingerprint": "c10156b4095ac889c207f74daf8aa88797bc337df8f7aef931ae9a48a944e855",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints",
+        "coalition-and-volunteer-participation"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners",
+        "volunteers-and-community-contributors"
+      ],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 13,
+      "publishedAt": "2020-05-18",
+      "reconciliationKeySha256": "8ae49a68ad54bb4c4edb993fba35d9521c6cf03f1468aef2bbca140b0dbaf9b5",
+      "contentFingerprint": "bf5de6a3b9f415a1d7bb20862a373bda82a9812490891e79a91bac9bb31f9f0f",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces"
+      ],
+      "postedRouteKeys": [
+        "b73e8ff7e51d3ef649d6"
+      ]
+    },
+    {
+      "ordinal": 14,
+      "publishedAt": "2020-05-17",
+      "reconciliationKeySha256": "b5617d403f18ad0442e5adc75ab11be6d47bc625410af82d4214bcdbcf4adb3b",
+      "contentFingerprint": "c090884a872605282acc970eee411b06adbdd143a3ba1e72d44330596a6d5d6e",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "52d766d800597e1e98f3"
+      ]
+    },
+    {
+      "ordinal": 15,
+      "publishedAt": "2020-05-17",
+      "reconciliationKeySha256": "717d8196e69877928ea30ce4704c68375dcd2d3275373829b17a416b58fdc63c",
+      "contentFingerprint": "316deeb28892b1cdebfe5c12c2cd620b5b8f29289c1ffe3d4f5fc1b2e6a4ea7d",
+      "contentState": "body-not-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": [
+        "3eb80b229515585ddd2e"
+      ]
+    },
+    {
+      "ordinal": 16,
+      "publishedAt": "2020-05-14",
+      "reconciliationKeySha256": "cc5f0abc78f5055870cd1d06490d27c634cb6f51285afb2a2d4ead5683acba26",
+      "contentFingerprint": "f6cbc373a20c8c519d2000d9fdfe57261f350cda119920f7578c6c54e41a468d",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 17,
+      "publishedAt": "2020-05-13",
+      "reconciliationKeySha256": "0bd9f53c63123c8f1b99cee399c4965b989e15189c7ddfecaaafec95f8f71b0a",
+      "contentFingerprint": "4df8962c13165e3ff8f01da64f48181c51bd89f8c9ef846a7fe5c179fa2e08df",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 4,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 18,
+      "publishedAt": "2020-05-11",
+      "reconciliationKeySha256": "1fbb061c4546891ccd939742e1391e87942e800832c25003845770aae960ed62",
+      "contentFingerprint": "cead1f0905b14d55447e42d8dc146a03f44c4c4737cdb054cca774f8370e2c30",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 4,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "52d766d800597e1e98f3"
+      ]
+    },
+    {
+      "ordinal": 19,
+      "publishedAt": "2020-05-11",
+      "reconciliationKeySha256": "c6a039782121d434bd6c9b93c1d659b3f13fb37e1a389ea1d806d7b860c35a4b",
+      "contentFingerprint": "f4c3f0daff2a8ea480db271f70491b9fab11d6206c85b37bb7639b6fb7c877f5",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints",
+        "press-and-media-circulation"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners",
+        "published-media"
+      ],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 20,
+      "publishedAt": "2020-05-05",
+      "reconciliationKeySha256": "c0e24d930a3e8c858761c7df2f0da414a3f07113cce2a3d6af7f3d8a9ad954c5",
+      "contentFingerprint": "1abedb44eafab901d211504dea8d969e4f193c5558c934dbe90fd28ea92fc3ea",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 21,
+      "publishedAt": "2020-05-04",
+      "reconciliationKeySha256": "21f1fcafe3874a0a1050e8d698de6653b6e3c012cd21c1fbbe6f7b7e41d64984",
+      "contentFingerprint": "3b447a49373a4b7fde10b4a7117e80bb3d5f861faf2a4d2ccafa9c087fc6d778",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 2,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 22,
+      "publishedAt": "2020-04-30",
+      "reconciliationKeySha256": "e112c27974c9882eb4407c7e24dfdc7466fc96fe5bdf047242caeaeeda87fd0b",
+      "contentFingerprint": "208511c2a2ee9c6f1d12a1b5d4e0703420ec7367ddcd1e0866623ca46fa3790e",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 4,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 23,
+      "publishedAt": "2020-04-29",
+      "reconciliationKeySha256": "c4bc67f1ec4d60d18bc3c2fffd42651213f3a74b08e416aec77460cc1eb17650",
+      "contentFingerprint": "4dbd302ee3e960baf96dc19fe867aafd694aec305070258ace8ddaaf9a56611a",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 7,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces"
+      ],
+      "postedRouteKeys": [
+        "5ebe8adb3a1e8b96b3bd"
+      ]
+    },
+    {
+      "ordinal": 24,
+      "publishedAt": "2020-04-28",
+      "reconciliationKeySha256": "ae47bf2fd38f9c47a6890a5a05c6a4581c453bc3769b50cf6c8f00987002a322",
+      "contentFingerprint": "f1a999086e16476bde88ac6ea201116968de6ecf10fdb26f786c56256ced10fc",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 3,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 25,
+      "publishedAt": "2020-04-25",
+      "reconciliationKeySha256": "7e77864b36d05097a7d1884c0cabe5ffbc699a0e32b63fa2dd9053ca77b6791c",
+      "contentFingerprint": "7840558f6411a695af7bc1b0c57d82f4f229965bde096dc518da0f6ea782d288",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 26,
+      "publishedAt": "2020-04-23",
+      "reconciliationKeySha256": "bfea1a785ff9ab55d6b0c040aac3a101d61f9398ad889264ad737557445b5b4c",
+      "contentFingerprint": "ac0f8814fb9761e832048a6051c0b93ab48a241d664662ae40ae21883b036aef",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 9,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints",
+        "coalition-and-volunteer-participation"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners",
+        "volunteers-and-community-contributors"
+      ],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 27,
+      "publishedAt": "2020-04-21",
+      "reconciliationKeySha256": "b9a7516766dc32540dbadf4c054f6e115f01ef779e8d8495c5a89c2d8ec380f7",
+      "contentFingerprint": "7c0eb7f419019e2f2bd1838ca474c09eeb5d78bcae2b540a058c16d4e80d4114",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 28,
+      "publishedAt": "2020-04-21",
+      "reconciliationKeySha256": "a3c62e25a43ca1d002d9a0a58872588284acaf8d9c943f264ff68162ee898ea9",
+      "contentFingerprint": "c45d1025b3bab86b6d95b383c6ef971b86af6d157b8f1b556616c5a5593685bb",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": [
+        "411e8fd1d4565a5ec2c7"
+      ]
+    },
+    {
+      "ordinal": 29,
+      "publishedAt": "2020-04-18",
+      "reconciliationKeySha256": "82bdc74190ad12b1307526585d5aea4a6bfaacfd6058af671acbaac0b88edda7",
+      "contentFingerprint": "7aa4c83215478bb7c7765c2cd961b3e354b63da28cc93ea4de2a8af8b5117e0c",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 9,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "grant-and-grantee-documentation",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "grantees-and-grassroots-cultural-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 30,
+      "publishedAt": "2020-04-12",
+      "reconciliationKeySha256": "402355c10b80d078f621b52b6df2dd60499e7915597de74ec831406eafe7dbef",
+      "contentFingerprint": "bb0527bd2925a5c8cf44f288aa64603b83c2633c513e3c9228892144f2a86a5b",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 11,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces"
+      ],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 31,
+      "publishedAt": "2020-04-10",
+      "reconciliationKeySha256": "f705ff7ee5f0195a982e01da69f63901bd7882a7d12cab1fe285e00e5bc29728",
+      "contentFingerprint": "81a8ce0e818d507a0ed1ae536fdf212e88cb45adb67ce1bf03862573698fbf29",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 8,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing",
+        "fundraising-and-mutual-aid-prints",
+        "coalition-and-volunteer-participation"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces",
+        "donors-and-fundraising-partners",
+        "volunteers-and-community-contributors"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903",
+        "3eb80b229515585ddd2e"
+      ]
+    },
+    {
+      "ordinal": 32,
+      "publishedAt": "2020-04-10",
+      "reconciliationKeySha256": "c19655c759aa4174bff0adc76fa9aadc74f3a3103b63952a073bf3e0cecd82ac",
+      "contentFingerprint": "9aaa81dc9e694a0cddb12684cac74cb2755b1400e2c015edc77669e4d535ccd6",
+      "contentState": "embedded-source-unavailable",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 1,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 33,
+      "publishedAt": "2020-04-09",
+      "reconciliationKeySha256": "de17e3f6cfd7c52ee2ae8651088f94a96c9c8732445ae525e82ac6e0408bcd3c",
+      "contentFingerprint": "da9a5b846511b5275e759a0dc602372ce8da5ad81f79c6c1f9b6d2feb1742def",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 4,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 34,
+      "publishedAt": "2020-04-08",
+      "reconciliationKeySha256": "321013a7e8e10ce8c10e40838ea36e19b90d0182f797cce028f5a78b5939893d",
+      "contentFingerprint": "8278d3384f7116c670ef719d383f382084d9d71bcff9c302d127cbf12530962b",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 6,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [
+        "application-and-eligibility-routing",
+        "fundraising-and-mutual-aid-prints"
+      ],
+      "stakeholderReferences": [
+        "applicants-and-eligible-spaces",
+        "donors-and-fundraising-partners"
+      ],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 35,
+      "publishedAt": "2020-04-07",
+      "reconciliationKeySha256": "3e0bb368c6d46f34a845f69d2138e7fd46956523e439bab6286b6c65532157bb",
+      "contentFingerprint": "da9a5b846511b5275e759a0dc602372ce8da5ad81f79c6c1f9b6d2feb1742def",
+      "contentState": "public-body-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 5,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": [
+        "a81dab03a812ea423903"
+      ]
+    },
+    {
+      "ordinal": 36,
+      "publishedAt": "2020-04-07",
+      "reconciliationKeySha256": "bf097e72e91939899acbe5b1c4d156e7ab1de7d7061a1422081d072dacf22a1d",
+      "contentFingerprint": "316deeb28892b1cdebfe5c12c2cd620b5b8f29289c1ffe3d4f5fc1b2e6a4ea7d",
+      "contentState": "body-not-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 37,
+      "publishedAt": "2020-04-07",
+      "reconciliationKeySha256": "0070bbd124f32d82ec4a603db12e0fbe5943cf2e281c9113b609d6f7af0b422a",
+      "contentFingerprint": "316deeb28892b1cdebfe5c12c2cd620b5b8f29289c1ffe3d4f5fc1b2e6a4ea7d",
+      "contentState": "body-not-recovered",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": []
+    },
+    {
+      "ordinal": 38,
+      "publishedAt": "2020-04-07",
+      "reconciliationKeySha256": "cce7145572e6aa6aff45887f870b7eff2a25cb9a405a8293f7eac798311eee4e",
+      "contentFingerprint": "9aaa81dc9e694a0cddb12684cac74cb2755b1400e2c015edc77669e4d535ccd6",
+      "contentState": "embedded-source-unavailable",
+      "authorshipDisposition": "project-page-human-publisher-unresolved",
+      "bodyStored": false,
+      "visibleReactions": 0,
+      "visibleCommentOrShareCountLabels": 0,
+      "missionTags": [],
+      "stakeholderReferences": [],
+      "postedRouteKeys": []
+    }
+  ]
+}

@@ -29,6 +29,9 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run knowledge-bank`
 - [ ] `npm run public-safety`
 - [ ] `npm run check:routes`
+- [ ] `npm run evals:portfolio`
+- [ ] `npm run test:portfolio-evals`
+- [ ] `npm run check:chad-lens`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
 - [ ] Docker build

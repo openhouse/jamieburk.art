@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "scope": "Public-safe aggregate evidence connecting Sunday Dinner, WOW List, popular.vote, Call Script, and formation-era NYC Artist Coalition participation infrastructure.",
+  "wowListSnapshots": [
+    {
+      "date": "2016-06-24",
+      "users": 995,
+      "postsEvents": 10136,
+      "tagsLists": 14813,
+      "listFollows": 18181,
+      "stars": 12935,
+      "goingRecords": 1864,
+      "googleCalendarPostEventLinks": 10650
+    },
+    {
+      "date": "2017-06-01",
+      "users": 1775,
+      "postsEvents": 15559,
+      "tagsLists": 23296,
+      "listFollows": 28084,
+      "stars": 20193,
+      "goingRecords": 2871,
+      "googleCalendarPostEventLinks": 15363
+    },
+    {
+      "date": "2017-07-22",
+      "users": 1846,
+      "postsEvents": 16142,
+      "tagsLists": 23864,
+      "listFollows": 28837,
+      "stars": 20927,
+      "goingRecords": 2965,
+      "googleCalendarPostEventLinks": 15875
+    }
+  ],
+  "focusListsAsOf2017-07-22": [
+    {
+      "name": "Down With Trump",
+      "createdAt": "2016-11-09T15:43:00-05:00",
+      "linkedPostEventRecords": 39,
+      "listFollows": 16,
+      "anonymousDistinctContributorIds": 2
+    },
+    {
+      "name": "Not My President",
+      "createdAt": "2016-11-10T07:28:00-05:00",
+      "linkedPostEventRecords": 51,
+      "listFollows": 16,
+      "anonymousDistinctContributorIds": 4
+    },
+    {
+      "name": "Popular Vote",
+      "createdAt": "2016-11-12T14:30:00-05:00",
+      "linkedPostEventRecords": 933,
+      "listFollows": 196,
+      "anonymousDistinctContributorIds": 10
+    },
+    {
+      "name": "NYC Artist Coalition",
+      "createdAt": "2017-02-07T16:05:00-05:00",
+      "linkedPostEventRecords": 82,
+      "listFollows": 6,
+      "anonymousDistinctContributorIds": 2,
+      "earliestLinkedEventStart": "2017-01-27T15:00:00-05:00"
+    }
+  ],
+  "popularVoteImplementation": {
+    "date": "2016-11-12",
+    "commit": "8337b8956050b66702748c727b51f26950b82a35",
+    "author": "Jamie Burkart",
+    "change": "Added popular.vote and www.popular.vote routing to the WOW List configuration.",
+    "boundary": "The commit establishes implementation, not sole conception, ownership, editorial authorship, or later operation."
+  },
+  "sundayDinnerWorkbook": {
+    "numberedGatheringColumns": 345,
+    "distinctNumberLabels": 340,
+    "dateSpan": {
+      "start": "2012-01-22",
+      "end": "2021-03-07"
+    },
+    "displayedMealsServedFormulaValue": 2783,
+    "gatheringSequenceSum": 2769,
+    "unreconciledDifference": 14,
+    "status": "Protected working evidence; exact public total held pending reconciliation."
+  },
+  "callScriptPublicEvidence": {
+    "pageUrl": "https://www.facebook.com/callscript",
+    "pageLinksTo": "popular.vote",
+    "eventDiscussionUrl": "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+    "eventDate": "2017-01-27",
+    "eventContext": "Department of Cultural Affairs meeting concerning DIY and alternative art spaces after the Ghost Ship fire.",
+    "displayedHostsInclude": [
+      "NYC Artist Coalition",
+      "Call Script"
+    ],
+    "displayedResponses": 445,
+    "responseBoundary": "A Facebook response display is not attendance, reach, endorsement, or impact.",
+    "discussionPatterns": [
+      "Call Script solicited priorities for the meeting.",
+      "Call Script circulated a peer-city organizing example from Oakland.",
+      "A later NYC Artist Coalition poll used the same discussion surface for public priority-setting."
+    ]
+  },
+  "interpretiveBoundaries": [
+    "Chronology and connected surfaces do not establish a single linear cause.",
+    "The evidence supports Jamie's facilitation and infrastructure contribution, not a claim that Jamie alone founded NYC Artist Coalition.",
+    "Database counts are snapshot totals, not unique reach, attendance, endorsement, conversion, or current activity.",
+    "Shared project accounts and collective event pages do not identify the author of every contribution."
+  ],
+  "privacyExclusions": [
+    "Raw database rows and person identifiers",
+    "Usernames, emails, password or authentication fields, and sessions",
+    "Sunday Dinner participant names, contact details, histories, notes, and addresses",
+    "Facebook attendee, commenter, reactor, friend, and administration data",
+    "Authenticated browser state and private archive locators"
+  ]
+}

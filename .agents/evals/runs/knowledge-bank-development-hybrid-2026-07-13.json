@@ -1,0 +1,35 @@
+{
+  "candidate_sha": "c5b93a0b533bc86aa82e3ac1b21e350ce32c7097",
+  "results": [
+    {
+      "eval_id": "KB-007",
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "An independent grader reviewed exact published candidate c5b93a0b533bc86aa82e3ac1b21e350ce32c7097 and found this Teams pass preserves collaborator credit, creates no ClaimRecord, activates no projection, and passes its focused 105/105 evaluation.",
+        "Michael Rees's public project page supports the bounded Claudette's Theatre on Wheels collaboration assertion, while the CRS 90-day plan remains protected operating-design evidence rather than an adopted outcome.",
+        "The deterministic KB-007 gate currently inspects 84 collective claims while the frozen human-review baseline classifies 76."
+      ],
+      "findings": [
+        "Eight collective claims elsewhere in the branch are absent from the frozen baseline.",
+        "The collective-claim and collective-runtime fingerprints differ from the frozen policy baseline and require explicit independent policy review."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "An independent grader reviewed exact published candidate c5b93a0b533bc86aa82e3ac1b21e350ce32c7097 and returned 4/4 with no material projection, privacy, denominator, or coverage finding.",
+        "This Teams pass changes no registered website surface; its new records remain in source, assertion, project-note, run-note, and research-task layers without ClaimRecords or active projections.",
+        "The Claudette record retains Michael Rees, Anne Dufy Burkart, Julia Fredenburg, Claudette, and #MakeUsVisible context; the CRS plan remains a proposal, and the job-hunt outline remains a routing map rather than independent proof.",
+        "Public records exclude private correspondence, contacts, archive locators, campaign strategy, participant records, and authenticated state.",
+        "The focused Teams evaluation passed 105/105, citation validation passed, and no new Teams assertion entered the public citation registry."
+      ],
+      "findings": [],
+      "confidence": 0.98
+    }
+  ],
+  "overall_finding": "Exact published candidate c5b93a0b533bc86aa82e3ac1b21e350ce32c7097 passed independent KB-009 review and the focused Teams archive gate, but KB-007 remains stopped at the frozen collective-credit boundary because eight prior collective claims still require explicit policy-baseline review."
+}

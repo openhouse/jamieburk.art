@@ -12,6 +12,8 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
+  assert.deepEqual(resolveCitationOccurrence("callnyc", "product-iteration").sources.map((item) => item.number), [3, 6]);
+  assert.deepEqual(resolveCitationOccurrence("callnyc", "social-translation-system").sources.map((item) => item.number), [7]);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -19,8 +21,8 @@ test("repeated sources retain one note and unique backlinks", () => {
   const council = references.find((item) => item.number === 2);
   const politico = references.find((item) => item.number === 3);
   assert.equal(council.backlinks.length, 2);
-  assert.equal(politico.backlinks.length, 3);
-  assert.equal(new Set(politico.backlinks.map((item) => item.id)).size, 3);
+  assert.equal(politico.backlinks.length, 4);
+  assert.equal(new Set(politico.backlinks.map((item) => item.id)).size, 4);
   assert.equal(council.noteId, citationNoteId("callnyc", 2));
 });
 
@@ -62,4 +64,45 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(references, /role="doc-endnotes"/);
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
+});
+
+test("every citation plan is connected to its route and rendered occurrences", () => {
+  const routeSourceOverrides = new Map([
+    ["/about", "apps/www/src/app/about/page.tsx"]
+  ]);
+  for (const page of knowledgeBank.pages) {
+    assert.equal(page.id, page.surface.split("/").at(-1));
+    const sourcePath = routeSourceOverrides.get(page.surface) ??
+      `apps/www/src/content${page.surface}.mdx`;
+    const routeSource = readFileSync(sourcePath, "utf8");
+    for (const occurrence of page.occurrences) {
+      assert.match(
+        routeSource,
+        new RegExp(`occurrenceId=["']${occurrence.id}["']`)
+      );
+    }
+    assert.ok(resolveCitationReferences(page.id).length > 0);
+  }
+});
+
+test("the About throughline resolves only its public source", () => {
+  const occurrence = resolveCitationOccurrence(
+    "about",
+    "participatory-social-systems-throughline"
+  );
+  assert.deepEqual(
+    occurrence.sources.map(({ source }) => source.id),
+    ["SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006"]
+  );
+});
+
+test("rendered citations do not stand in for protected direct support", () => {
+  for (const page of knowledgeBank.pages) {
+    for (const occurrence of page.occurrences) {
+      const claim = knowledgeBank.claims.find((item) => item.id === occurrence.claimId);
+      const hasNonrenderedDirectSupport = claim.evidence.some((item) => !item.renderCitation && ["direct-support", "private-support"].includes(item.relationship));
+      if (!hasNonrenderedDirectSupport) continue;
+      assert.ok(claim.evidence.some((item) => item.renderCitation && item.relationship === "direct-support" && occurrence.sourceIds?.includes(item.sourceId)));
+    }
+  }
 });

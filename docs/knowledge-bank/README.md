@@ -13,6 +13,11 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+Nothing is silently discarded. That does not mean everything is published.
+Every public-safe lead receives an intake record and disposition; only supported
+claims become eligible for projection, and only claims useful to the current
+argument are selected for a public surface.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -30,6 +35,9 @@ The knowledge bank exists to:
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
+- **Intake ledger:** public-safe record of URLs, recollections, artifact leads,
+  photo observations, collaborator notes, and research questions. Intake is
+  memory, not confirmation.
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
@@ -60,6 +68,147 @@ usable, what Jamie did, and what boundary remains protected.
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
 
+## Evaluation Trust Boundary
+
+Deterministic checks govern the collective-credit inventory, runtime renderers,
+projection routes, public surfaces, and every visible resume block. The frozen
+policy baseline is pinned to the annotated Git tag
+`knowledge-bank-policy-baseline-2026-07-15-v16`; ordinary branch commits cannot
+silently rewrite that tagged object. The evaluator also pins the annotated tag
+object ID, and the tag is published to `origin` so a clean clone or CI checkout
+can reproduce the same baseline without local state.
+
+This is a drift detector, not a substitute for judgment. A candidate patch
+cannot grade its own semantics, so `KB-007` and `KB-009` also require two
+independent evaluator reviews of the exact candidate commit. The hybrid
+scorecard records those reviews and is accepted only when its candidate SHA
+matches the governed input tree. Moving the tag, changing the policy contract,
+or changing claim-support assignments requires explicit new human review.
+
 See [citational-care.md](citational-care.md) for the authoring and validation
-workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+workflow, [development-loop.md](development-loop.md) for the recursive
+knowledge-development protocol, and [projects/callnyc.md](projects/callnyc.md)
+for the first complete citation pilot.
+
+Archive-production run records live in [runs](runs). The Google Drive pass is
+documented in
+[2026-07-14-google-drive-archive-production.md](runs/2026-07-14-google-drive-archive-production.md).
+The iCloud Teams close reading and its July 15 follow-up are documented in
+[2026-07-14-teams-archive-production.md](runs/2026-07-14-teams-archive-production.md)
+and
+[2026-07-15-teams-archive-production-followup.md](runs/2026-07-15-teams-archive-production-followup.md).
+The authenticated project-account pass is documented in
+[2026-07-14-social-account-production.md](runs/2026-07-14-social-account-production.md),
+and the complete CallNYC population pass is documented in
+[2026-07-14-callnyc-x-full-population.md](runs/2026-07-14-callnyc-x-full-population.md),
+with a committed public browser extraction, transformation manifest, and
+`scripts/derive-callnyc-x-corpus.mjs` check that reproduces the 107 item records
+and their aggregate metrics. The governed account map and per-project findings are in
+[projects/social-account-inventory.md](projects/social-account-inventory.md).
+The full NYC Artist Coalition population-accounting pass is documented in
+[2026-07-15-nycartc-x-full-population.md](runs/2026-07-15-nycartc-x-full-population.md),
+with a public-safe raw extraction, deterministic derivation, and explicit
+1,757-item recovery gap.
+
+The authenticated [NYC Artist Coalition Facebook event pass](runs/2026-07-15-nycac-facebook-events-full-population.md)
+accounts for all 34 slots displayed by a same-day host control: 33 recovered
+event records and one unresolved slot. Its [public-safe corpus](corpora/nycartc-facebook-events-full-population-2026-07-15.json),
+manifest, deterministic checker, and [project note](projects/nyc-artist-coalition-facebook-events.md)
+preserve the recurring participation system, rotating cultural-space pattern,
+source routes, stakeholder interfaces, and bounded response labels without
+publishing raw descriptions, attendee data, access details, or authenticated
+state.
+
+The authenticated [NYC Artist Coalition Facebook post pass](runs/2026-07-15-nycac-facebook-posts-full-population.md)
+accounts for all 444 rows and 444 unique post IDs in annual Meta Business Suite
+Published exports across the surviving 2017-2021 chronology, cross-checked
+against a terminal Page-feed traversal. Its [public-safe corpus](corpora/nycartc-facebook-posts-full-population.json),
+manifest, deterministic checker, and [project note](projects/nyc-artist-coalition-facebook-posts.md)
+preserve 67 posted routes, mission and civic-interface patterns, and bounded
+owner-export metrics while withholding raw exports, post bodies, post IDs,
+engagement identities, sensitive routes, and authenticated state. Shared-account
+human authorship and incoming stakeholder engagement remain explicit research
+questions.
+
+The authenticated [WOW List Facebook post pass](runs/2026-07-15-wowlist-facebook-posts-full-population.md)
+accounts for all 54 records materialized by the Page's surviving Lifetime
+table: 50 recovered details attributed by Facebook to Jamie as publisher and
+four table-only records. Its [public-safe corpus](corpora/wowlist-facebook-posts-full-population.json),
+manifest, deterministic checker, and [project note](projects/wowlist-facebook-posts.md)
+preserve the publishing-role boundary, 42 normalized destinations, overlapping
+mission patterns, bounded dashboard signals, and open stakeholder-engagement
+question without publishing raw post bodies, personal engagement data, or
+authenticated state.
+
+The authenticated [personal Facebook post pass](runs/2026-07-15-jamie-personal-facebook-posts-full-population.md)
+accounts for all 1,243 unique records returned across 621 pages after applying
+Facebook's **Posted by: You** filter. Its [aggregate controls](data/jamie-personal-facebook-post-controls.json)
+and [project note](projects/jamie-personal-facebook-posts.md) preserve the
+December 2006-June 2022 chronology, 181 overlapping mission-research routes,
+549 normalized source leads, and six governed public specimens while keeping
+the record-level personal corpus protected. Stakeholder references remain
+outgoing routes rather than incoming engagement, and no website projection was
+selected.
+
+The personal [@urbanhermit full-population pass](runs/2026-07-15-urbanhermit-x-full-population.md)
+reconciles all 434 records represented by the live profile counter. Its
+[public-safe corpus](corpora/urbanhermit-x-full-population-2026-07-15.json),
+manifest, checked-in classification rules, and deterministic checker preserve
+record types, posted-link metadata, bounded incoming response, and dated
+visible counters without publishing raw post text or non-mission personal
+context. The corresponding [project note](projects/urbanhermit.md) records the
+claims, source leads, and boundaries; no website projection was selected.
+
+The recovered record for the collaborative interactive installation
+*NTER CHNG* is in [projects/nter-chng.md](projects/nter-chng.md), with the
+Wayback research and explicit not-recovered boundaries documented in
+[2026-07-15-nter-chng-archive-production.md](runs/2026-07-15-nter-chng-archive-production.md).
+That record now also includes a privacy-bounded close read of two
+contemporaneous installation and exhibit working documents.
+
+The [WOW List, Sunday Dinner, and Call Script lineage pass](runs/2026-07-15-wowlist-sunday-dinner-callscript-lineage.md)
+adds public-safe production aggregates, a Jamie-authored `popular.vote`
+implementation record, protected Sunday Dinner operating evidence, and a close
+read of the public January 2017 DCLA event discussion. Its
+[aggregate corpus](corpora/wowlist-sunday-dinner-callscript-lineage-2026-07-15.json)
+preserves exact source-level counts and causal boundaries without publishing
+participant records, raw database rows, authenticated state, or a new website
+claim before collective-credit review.
+
+The [NYC Artist Coalition government-value pass](runs/2026-07-15-nycac-government-value.md)
+adds six official City records and a bounded institutional analysis of why the
+coalition's participation, recommendations, testimony, and implementation
+feedback were useful to DCLA, the New York City Council, and Rafael Espinal.
+Its [project note](projects/nyc-artist-coalition-government-value.md) and
+[public-safe corpus](corpora/nycac-government-value-2026-07-15.json) distinguish
+direct evidence from interpretation, preserve one explicit recovered
+Finkelpearl reference without calling the transcript census complete, and hold
+new website projection for collective-credit review.
+
+The [portfolio blind-spot suite](evals/portfolio-blind-spots.md) governs nine
+remaining readiness risks: external corroboration, role conversion, recent
+evidence, hiring-reader observation, action-to-outcome chains, visual rights,
+knowledge-bank maintenance, embodied artistic practice, and recursive social
+information systems. Its recursive run brings all six
+machine-actionable criteria to their stopping conditions while preserving
+three explicit human gates for exact-candidate review, observed hiring use,
+and rights-cleared visual selection. Run `npm run eval:blind-spots`,
+`npm run test:blind-spots`, and `npm run report:knowledge-maintenance` to
+reproduce the current result. The [hill-climb run record](runs/2026-07-15-portfolio-blind-spots-hill-climb.md)
+documents the baseline, iterations, measured score, and stopping boundary.
+
+The [UCSC professor-lens production pass](runs/2026-07-15-ucsc-professor-lenses.md)
+and [project note](projects/ucsc-media-practice.md) preserve Margaret Morse's
+embodied-attention lens and Warren Sack's social-information-systems lens. The
+pass keeps the educational record protected, uses the public Good Times Open
+House article for the one public projection, and retains an unresolved
+installation-title conflict rather than silently normalizing it.
+
+The [Kansas City Star waterway ingestion](runs/2026-07-16-kansas-city-star-waterway-ingestion.md)
+close-reads a recovered November 2007 front-page report and strengthens the
+[waterway-participation record](projects/waterway-participation.md) with
+independent concept-origin corroboration, collective-crew credit, raft-system
+detail, interim route chronology, participatory method, operational disruption,
+and civic interpretation. The copyrighted scan remains outside the repository,
+and the article's pre-terminus date is preserved rather than converted into
+proof of the later Gulf endpoint.

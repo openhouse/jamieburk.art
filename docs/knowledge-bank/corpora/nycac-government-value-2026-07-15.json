@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "scope": "Official New York City records concerning NYC Artist Coalition's relationship with DCLA, the New York City Council, and Council Member Rafael Espinal.",
+  "finkelpearlTranscriptSearch": {
+    "result": "one-explicit-instance-recovered",
+    "completeCensus": false,
+    "positiveRecord": {
+      "date": "2017-05-19",
+      "body": "New York City Council",
+      "hearing": "Fiscal 2018 Executive Budget hearing",
+      "committees": [
+        "Committee on Finance",
+        "Committee on Cultural Affairs, Libraries and International Intergroup Relations",
+        "Subcommittee on Libraries"
+      ],
+      "speaker": "Tom Finkelpearl",
+      "finding": "Finkelpearl named NYC Artist Coalition while explaining the value of direct public feedback, common-cause organizing, and collaboration emerging from public engagement.",
+      "sourceId": "SRC-NYCAC-COUNCIL-FINKELPEARL-TESTIMONY-2017"
+    },
+    "searchedVariants": [
+      "Finkelpearl",
+      "Finklepearl",
+      "NYC Artist Coalition",
+      "New York City Artist Coalition",
+      "Artist Coalition",
+      "DIY",
+      "CreateNYC"
+    ],
+    "boundary": "The Council transcript inventory denominator is incomplete because the Legistar API requires a token and public indexing can miss OCR variants. One recovered instance is not proof that no other mention exists."
+  },
+  "directEvidence": [
+    {
+      "date": "2017-03-17",
+      "institution": "NYC Artist Coalition and CreateNYC",
+      "finding": "The coalition continued work after the January meeting and submitted collective recommendations about DCLA partnership with informal community-driven cultural spaces.",
+      "sourceId": "SRC-CREATENYC-NYCAC-RECOMMENDATIONS-2017"
+    },
+    {
+      "date": "2017-05-19",
+      "institution": "Department of Cultural Affairs and New York City Council",
+      "finding": "Finkelpearl presented the coalition as an example within testimony about reciprocal public relationships and expanded direct feedback.",
+      "sourceId": "SRC-NYCAC-COUNCIL-FINKELPEARL-TESTIMONY-2017"
+    },
+    {
+      "date": "2017-09-14",
+      "institution": "New York City Council Committee on Consumer Affairs",
+      "finding": "Jamie gave lived and operational testimony about Cabaret Law repeal, cultural-space safety, compliance, and trust. Espinal directly thanked him for his story and advocacy.",
+      "sourceId": "SRC-NYCAC-COUNCIL-JAMIE-ESPINAL-TESTIMONY-2017"
+    },
+    {
+      "date": "2019-03-18",
+      "institution": "New York City Council Committee on Small Business",
+      "finding": "Espinal acknowledged a multi-year working relationship with NYC Artist Coalition. Jamie offered specific public-data and online-tool recommendations for small-business legality, safety, and compliance.",
+      "sourceId": "SRC-NYCAC-COUNCIL-ESPINAL-COLLABORATION-2019"
+    }
+  ],
+  "institutionalAnalysis": {
+    "dcla": "The coalition gave DCLA a continuing, self-organized counterpart for direct feedback from informal cultural spaces and a concrete example that public listening could produce durable civic capacity.",
+    "council": "The coalition made an informal cultural constituency more legible and reachable by bringing field conditions, repeat participation, testimony, and implementable recommendations into public proceedings.",
+    "espinal": "Espinal benefited from a prepared constituency able to connect lived experience and operational detail to legislative and oversight questions while mobilizing public participation around nightlife policy.",
+    "status": "Source-backed interpretation, not a direct statement that any institution or official was dependent on Jamie or NYC Artist Coalition."
+  },
+  "causalBoundaries": [
+    "DCLA helped create conditions for coalition formation; the records do not establish DCLA ownership or sole causation.",
+    "The coalition contributed testimony and recommendations; it did not exercise Council's legislative authority.",
+    "Jamie supplied evidence, tools, and advocacy; the records do not establish that he authored the bills or alone caused policy outcomes.",
+    "Espinal's appreciation and repeated collaboration establish value, not indispensability or dependency.",
+    "One recovered Finkelpearl mention is not a complete hearing census."
+  ],
+  "projectionDecision": {
+    "newClaimRecord": false,
+    "websiteUpdate": false,
+    "reason": "The source layer materially strengthens existing candidate claims, but promotion remains subject to the frozen collective-credit review."
+  }
+}

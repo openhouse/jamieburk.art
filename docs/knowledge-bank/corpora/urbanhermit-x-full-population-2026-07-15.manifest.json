@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T15:44:00-04:00",
+  "generator": "authenticated browser archival-production pass with public-safe metadata projection",
+  "sourceCapture": "protected pointer outside the public repository",
+  "corpus": "docs/knowledge-bank/corpora/urbanhermit-x-full-population-2026-07-15.json",
+  "corpusSha256": "9fedab737b1e4d6ded779942203d4a77272fe0120663f50402c81bdbcdc0c455",
+  "profileReportedPosts": 434,
+  "corpusItems": 434,
+  "status": "complete-live-profile-reported-population",
+  "boundary": "The corpus accounts for every record reported by the live profile on July 15, 2026. It is not an account-owner export and does not establish that no older record was deleted, withheld, or absent before capture."
+}

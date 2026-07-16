@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-15",
+  "corpusFile": "jamie-wowlist-facebook-events-full-population-2026-07-15.json",
+  "corpusSha256": "0dc80da93b52bdbe2c01922720164783d18a1832b034ce44c69bea15d5f5bd60",
+  "corpusBytes": 21755,
+  "population": {
+    "personalDisplayedSlots": 21,
+    "personalPublicSafeEventRecords": 20,
+    "personalPrivateWithheldSlots": 1,
+    "wowListCurrentDisplayedEventRecords": 0
+  },
+  "publicEventIdSet": {
+    "count": 20,
+    "sort": "ascending lexical",
+    "serialization": "one event ID per line with a trailing newline",
+    "sha256": "f3f655c819fc2b80b15fcde1213eaf37cab2b8d26d01e1398e6bc5e11c412b29"
+  },
+  "protectedPopulationDigestPublished": false,
+  "publicSafety": {
+    "privateEventIdentityPublished": false,
+    "residentialAddressesPublished": false,
+    "phoneNumbersPublished": false,
+    "attendeeOrGuestIdentitiesPublished": false,
+    "authenticatedSessionStatePublished": false
+  },
+  "boundary": "This manifest accounts for the current Facebook interface population reviewed on July 15, 2026. It is not a native Meta owner export or proof that every historical event remains visible."
+}

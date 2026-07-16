@@ -3,7 +3,7 @@ import { JBCard } from "@/components/JBCard";
 const capabilities = [
   {
     title: "Technical project management",
-    text: "Requirements, workflows, status rhythms, risk notes, implementation plans, QA/UAT support, and handoffs."
+    text: "Requirements, workflows, status rhythms, risk notes, implementation plans, quality assurance, user-acceptance testing, and handoffs."
   },
   {
     title: "Product operations",

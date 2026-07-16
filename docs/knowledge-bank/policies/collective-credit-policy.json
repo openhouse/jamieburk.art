@@ -1,0 +1,70 @@
+{
+  "version": 7,
+  "collectiveClaimsSha256": "9dc133285ce87f2b0c89414597a33a17687bfc8a6deb04c37d30fd181d761635",
+  "collectiveRuntimeSha256": "11002467b28224658561af6b7365170b5aec4f4f3b2895b78551f4bc73e60fba",
+  "collectiveRuntimeFiles": [
+    "apps/www/mdx-components.tsx",
+    "apps/www/src/app/page.tsx",
+    "apps/www/src/app/resume/page.tsx",
+    "apps/www/src/app/work/[slug]/page.tsx",
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "apps/www/src/components/CaseStudyBlocks.tsx",
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/components/ProofStrip.tsx",
+    "apps/www/src/components/WorkCard.tsx",
+    "apps/www/src/components/citations/Claim.tsx",
+    "apps/www/src/content/work/196-sunday-dinner.mdx",
+    "apps/www/src/content/work/callnyc.mdx",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/content/work/harry-j-epstein.mdx",
+    "apps/www/src/content/work/kc-town-hall.mdx",
+    "apps/www/src/content/work/wowlist.mdx",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/knowledge-bank/public.ts",
+    "apps/www/src/lib/work.ts",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
+    "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt"
+  ],
+  "collectiveProjects": [
+    "196-sunday-dinner",
+    "commercial-rent-data",
+    "fair-rent-nyc",
+    "kc-spaces-fund",
+    "kc-town-hall",
+    "nter-chng",
+    "nyc-artist-coalition",
+    "participatory-programs",
+    "portfolio-archive",
+    "sunday-dinner",
+    "wowlist"
+  ],
+  "individualProjects": [
+    "callnyc",
+    "source-backed-team-memory",
+    "urbanhermit-public-record"
+  ],
+  "mixedProjects": {
+    "waterway-participation": {
+      "collectiveClaims": [
+        "CLM-WATER-RAFT-CONCEPT",
+        "CLM-WATER-GULF-ROUTE",
+        "CLM-WATER-PARTICIPATORY-THROUGHLINE",
+        "CLM-WATER-FACEBOOK-PLANNING-SENDOFF"
+      ],
+      "individualClaims": [
+        "CLM-WATER-GREAT-ACCOMMODATIONS"
+      ]
+    }
+  },
+  "unassertedIndividualClaims": {
+    "CLM-CALLNYC-HACKATHON-DATE-TIME": "callnyc",
+    "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON": "callnyc",
+    "CLM-CALLNYC-EVENT-BRANDING": "callnyc",
+    "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS": "callnyc",
+    "CLM-CALLNYC-DIGITAL-DISTRICT": "callnyc",
+    "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED": "callnyc"
+  }
+}
