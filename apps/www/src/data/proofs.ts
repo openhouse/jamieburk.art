@@ -498,14 +498,16 @@ export const proofClaims: ProofClaim[] = [
       "Sensitive strategy, legal, financial, or personal information"
     ],
     surfaces: ["technical-operations"],
-    relatedProjects: [],
+    relatedProjects: ["kc-spaces-fund"],
+    canonicalClaimIds: ["CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY"],
+    requiredCanonicalClaimIds: ["CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY"],
     relatedCapabilities: [
       "public-facing-web-systems",
       "campaign-infrastructure",
       "implementation",
       "technical-operations"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",

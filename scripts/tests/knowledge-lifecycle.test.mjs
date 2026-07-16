@@ -20,6 +20,31 @@ test("the canonical lifecycle corpus is internally consistent", () => {
   assert.deepEqual(validateKnowledgeLifecycle(), []);
 });
 
+test("KC Spaces Fund observations and exact-route proof lineage stay atomic and governed", () => {
+  const operating = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KCSF-FACEBOOK-MUTUAL-AID-OPERATING-SURFACE");
+  const implementation = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY");
+  const observationIds = new Set([...operating.observationIds, ...implementation.observationIds]);
+  const retiredCompoundIds = [
+    "OBS-KCSF-FACEBOOK-OPERATING-PATTERNS",
+    "OBS-KCSF-CAMPAIGN-SITE-PROGRAM",
+    "OBS-KCSF-DIGITAL-OPERATIONS-IMPLEMENTATION",
+  ];
+  const proof = proofClaims.find(({ id }) => id === "kc-spaces-fund-digital-infrastructure");
+  const manifest = knowledgeLifecycle.proofSurfaceManifests.find(({ id }) => id === "MANIFEST-PROOFS-TECHNICAL-OPERATIONS");
+
+  assert.equal(retiredCompoundIds.some((id) => observationIds.has(id)), false);
+  assert.equal([...observationIds].filter((id) => id.startsWith("OBS-KCSF-FACEBOOK-") || id.startsWith("OBS-KCSF-CAMPAIGN-SITE-") || id.startsWith("OBS-KCSF-DIGITAL-OPERATIONS-")).length, 23);
+  assert.ok(proof.relatedProjects.includes("kc-spaces-fund"));
+  assert.ok(proof.canonicalClaimIds.includes("CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY"));
+  assert.ok(proof.requiredCanonicalClaimIds.includes("CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY"));
+  assert.ok(manifest.canonicalClaimIds.includes("CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY"));
+
+  const broken = structuredClone(knowledgeLifecycle);
+  const brokenManifest = broken.proofSurfaceManifests.find(({ id }) => id === "MANIFEST-PROOFS-TECHNICAL-OPERATIONS");
+  brokenManifest.canonicalClaimIds = brokenManifest.canonicalClaimIds.filter((id) => id !== "CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY");
+  assert.match(validateKnowledgeLifecycle(broken).join("\n"), /Consequential proof kc-spaces-fund-digital-infrastructure lacks canonical claim/);
+});
+
 test("the July 13 ten-source ingestion remains complete and decomposed", () => {
   const sourceIds = [
     "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",

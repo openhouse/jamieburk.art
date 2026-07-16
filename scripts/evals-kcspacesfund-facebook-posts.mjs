@@ -6,6 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 import { knowledgeLifecycle } from "../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
+import { proofClaims } from "../apps/www/src/data/proofs.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const corpusPath = "docs/knowledge-bank/corpora/kcspacesfund-facebook-posts-full-population.json";
@@ -241,15 +242,42 @@ const sourceIds = new Set(knowledgeBank.sources.map((source) => source.id));
 const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
 const inquiryById = new Map(knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry]));
 const lead = knowledgeLifecycle.leads.find((item) => item.id === "LEAD-KCSF-FACEBOOK-POST-FULL-POPULATION");
+const themeObservationIds = [
+  "OBS-KCSF-FACEBOOK-CULTURAL-SPACE-SURVIVAL",
+  "OBS-KCSF-FACEBOOK-MUTUAL-AID-PRINTS",
+  "OBS-KCSF-FACEBOOK-DONATION-ROUTING",
+  "OBS-KCSF-FACEBOOK-FUNDED-SPACE-UPDATES",
+  "OBS-KCSF-FACEBOOK-APPLICATION-ROUTING",
+  "OBS-KCSF-FACEBOOK-EQUITY-PRIORITIES",
+  "OBS-KCSF-FACEBOOK-PROGRAM-OPERATIONS",
+  "OBS-KCSF-FACEBOOK-LAWRENCE-EXPANSION",
+];
+const campaignSiteObservationIds = [
+  "OBS-KCSF-CAMPAIGN-SITE-GRANT-CEILING",
+  "OBS-KCSF-CAMPAIGN-SITE-ELIGIBILITY",
+  "OBS-KCSF-CAMPAIGN-SITE-PRIORITIES",
+  "OBS-KCSF-CAMPAIGN-SITE-ROLLING-REVIEW",
+  "OBS-KCSF-CAMPAIGN-SITE-FISCAL-SPONSOR",
+  "OBS-KCSF-CAMPAIGN-SITE-ORGANIZERS",
+  "OBS-KCSF-CAMPAIGN-SITE-ACTION-ROUTES",
+];
+const implementationObservationIds = [
+  "OBS-KCSF-DIGITAL-OPERATIONS-SITE",
+  "OBS-KCSF-DIGITAL-OPERATIONS-DEPLOYMENT",
+  "OBS-KCSF-DIGITAL-OPERATIONS-THEME",
+  "OBS-KCSF-DIGITAL-OPERATIONS-WIDGET",
+  "OBS-KCSF-DIGITAL-OPERATIONS-ACTION-AFFORDANCES",
+];
 const kcsfObservationIds = [
   "OBS-KCSF-FACEBOOK-SURVIVING-POPULATION",
   "OBS-KCSF-FACEBOOK-TERMINAL-CONTROL",
-  "OBS-KCSF-FACEBOOK-OPERATING-PATTERNS",
+  ...themeObservationIds,
+  "OBS-KCSF-FACEBOOK-PHOTO-RECORD-POPULATION",
   "OBS-KCSF-FACEBOOK-PUBLIC-SOURCE-ROUTES",
   "OBS-KCSF-KANSAS-CITY-STAR-LISTING",
-  "OBS-KCSF-CAMPAIGN-SITE-PROGRAM",
+  ...campaignSiteObservationIds,
   "OBS-KCSF-ODDITIES-PRINT-FUNDRAISING",
-  "OBS-KCSF-DIGITAL-OPERATIONS-IMPLEMENTATION",
+  ...implementationObservationIds,
   "OBS-KCSF-PUBLIC-IDENTITY-NAMING-MEMORY",
   "OBS-KCSF-FACEBOOK-COLLECTIVE-AUTHORSHIP-BOUNDARY",
   "OBS-KCSF-FACEBOOK-MUTABLE-METRICS",
@@ -262,6 +290,8 @@ const tasks = knowledgeLifecycle.researchTasks.filter((item) => item.id.startsWi
 const decisions = knowledgeLifecycle.promotionDecisions.filter((item) => item.id.startsWith("DEC-KCSF-FACEBOOK-") || item.id === "DEC-KCSF-DIGITAL-INFRASTRUCTURE-PROMOTE");
 const mediaLead = knowledgeLifecycle.mediaLeads.find((item) => item.id === "MEDIA-KCSF-FACEBOOK-PHOTO-COLLECTION");
 const editorialBrief = knowledgeLifecycle.editorialBriefs.find((item) => item.id === "BRIEF-KCSF-FACEBOOK-RESERVE");
+const technicalManifest = knowledgeLifecycle.proofSurfaceManifests.find((item) => item.id === "MANIFEST-PROOFS-TECHNICAL-OPERATIONS");
+const technicalProof = proofClaims.find((item) => item.id === "kc-spaces-fund-digital-infrastructure");
 
 check(
   "Lifecycle integration",
@@ -276,7 +306,7 @@ check(
     ].every((id) => receipts.includes(`"id":"${id}"`)) &&
     lead?.sourceIds.length === 8 &&
     lead?.candidateClaimIds.length === 4 &&
-    observations.length === 11 &&
+    observations.length === 29 &&
     candidates.length === 4 &&
     events.length === 4 &&
     tasks.length === 5 &&
@@ -306,14 +336,27 @@ check(
 
 check(
   "Source decomposition",
-  "Independent publications, campaign evidence, implementation records, and naming memory remain atomic observations",
+  "Theme counts, campaign propositions, implementation components, independent publications, and naming memory remain independently reviewable observations",
   6,
   observationById.get("OBS-KCSF-KANSAS-CITY-STAR-LISTING")?.sourceId === "SRC-KCSF-KANSAS-CITY-STAR-2020-04-07" &&
-    observationById.get("OBS-KCSF-CAMPAIGN-SITE-PROGRAM")?.sourceId === "SRC-KCSF-CAMPAIGN-SITE-2026-07-16" &&
+    themeObservationIds.every((id) => observationById.get(id)?.sourceId === "SRC-KCSF-FACEBOOK-POST-CORPUS-2026-07-16") &&
+    campaignSiteObservationIds.every((id) => observationById.get(id)?.sourceId === "SRC-KCSF-CAMPAIGN-SITE-2026-07-16") &&
     observationById.get("OBS-KCSF-ODDITIES-PRINT-FUNDRAISING")?.sourceId === "SRC-KCSF-ODDITIES-PRINTS-MAPE-2020" &&
-    observationById.get("OBS-KCSF-DIGITAL-OPERATIONS-IMPLEMENTATION")?.sourceId === "SRC-KCSF-DIGITAL-OPERATIONS-ARCHIVE-2026-07-09" &&
+    implementationObservationIds.every((id) => observationById.get(id)?.sourceId === "SRC-KCSF-DIGITAL-OPERATIONS-ARCHIVE-2026-07-09") &&
     observationById.get("OBS-KCSF-PUBLIC-IDENTITY-NAMING-MEMORY")?.sourceId === "SRC-KCSF-NAMING-ROLE-MEMORY-2026-07-16" &&
-    !knowledgeLifecycle.observations.some((item) => ["OBS-KCSF-PUBLISHED-AND-PARTNER-CONTEXT", "OBS-KCSF-DIGITAL-OPERATIONS-ROLE"].includes(item.id))
+    [...themeObservationIds, ...campaignSiteObservationIds, ...implementationObservationIds].every((id) => observationById.get(id)?.candidateRelationships.length === 1) &&
+    !knowledgeLifecycle.observations.some((item) => ["OBS-KCSF-FACEBOOK-OPERATING-PATTERNS", "OBS-KCSF-CAMPAIGN-SITE-PROGRAM", "OBS-KCSF-DIGITAL-OPERATIONS-IMPLEMENTATION", "OBS-KCSF-PUBLISHED-AND-PARTNER-CONTEXT", "OBS-KCSF-DIGITAL-OPERATIONS-ROLE"].includes(item.id))
+);
+
+check(
+  "Projection lineage",
+  "The rendered KC Spaces Fund proof is linked to its project, canonical claim, human-approved decision, and exact-route manifest",
+  6,
+  technicalProof?.relatedProjects.includes("kc-spaces-fund") &&
+    technicalProof?.canonicalClaimIds?.includes("CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY") &&
+    technicalManifest?.proofIds.includes("kc-spaces-fund-digital-infrastructure") &&
+    technicalManifest?.canonicalClaimIds.includes("CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY") &&
+    decisions.some((item) => item.id === "DEC-KCSF-DIGITAL-INFRASTRUCTURE-PROMOTE" && item.humanReviewStatus === "approved" && item.allowedSurfaces.includes("/work/technical-operations"))
 );
 
 check(

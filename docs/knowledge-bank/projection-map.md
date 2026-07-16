@@ -158,6 +158,7 @@ composed public surface, not a claim database.
 - `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
 - `CLM-KC-TOWN-HALL-PUBLIC-RECORD-2019`
 - `CLM-WOWLIST-HISTORICAL-SCALE`
+- `CLM-KCSF-DIGITAL-INFRASTRUCTURE-AND-IDENTITY`
 
 ### Exclusions
 
@@ -171,6 +172,7 @@ composed public surface, not a claim database.
 - Name what became usable
 - Keep collective projects collective
 - Keep WOW List scale historical and threshold-bound
+- Keep KC Spaces Fund organizer, account-author, fundraiser, and grant-work boundaries visible
 ## `/work`
 
 **Surface:** `work-card`
