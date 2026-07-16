@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-14-z-nycartc-facebook-events-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 5,
+  "qualifyingRounds": [
+    4,
+    5
+  ],
+  "candidate": "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He helped establish and produce a recurring participation system spanning public event pages, meetings across cultural spaces, practical safety and advocacy sessions, and paths from artist concerns to public action. These pages and workflows gave artists and organizers places to gather, find resources, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 75,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise",
+      "finding": "The contribution was supportable, but stale citations, movable repository references, an unrecorded candidate, and crowded page composition blocked acceptance."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The repaired candidate and evidence system passed every Chad Lens hard gate and all five dimensions."
+    },
+    {
+      "round": 3,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated the full pass without regression or a recommended material edit."
+    },
+    {
+      "round": 4,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The citation-only composition removed a duplicate rendered claim while preserving the accepted candidate and governed occurrence."
+    },
+    {
+      "round": 5,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated every Chad Lens and page-composition pass without regression."
+    }
+  ]
+}

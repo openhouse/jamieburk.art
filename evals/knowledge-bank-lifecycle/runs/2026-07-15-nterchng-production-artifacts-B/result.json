@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "evaluatedThrough": "2026-07-15",
+  "iterations": 4,
+  "status": "passed",
+  "graphSnapshot": {
+    "intakeRecords": 55,
+    "sources": 210,
+    "claims": 89,
+    "researchInquiries": 29,
+    "activeProjections": 57,
+    "heldProjections": 33
+  },
+  "qualifyingRounds": [3, 4],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 84,
+      "editorialFutureUseScore": 86,
+      "result": "revise",
+      "finding": "Protect both source documents and exclude their links, participant identifiers, messages, personal schedules, and location details from the public repository."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 92,
+      "editorialFutureUseScore": 95,
+      "result": "revise",
+      "finding": "Separate Jamie's documented participation from individual task ownership, planned workstreams from completed work, and the protected January 8-29 range from the archived site's conflicting January 24 display."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 100,
+      "result": "qualifying-pass",
+      "finding": "The revised graph preserves the installation's technical and operational breadth, Jamie's bounded participation, equal collaborator credit, the chronology conflict, and every protected boundary without underclaiming or overclaiming."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 100,
+      "result": "qualifying-pass",
+      "finding": "A second independent challenge repeated every hard-gate and scored-criterion pass with zero regression."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "unresolvedCriteria": [],
+  "contentClusters": [
+    {
+      "id": "nterchng-protected-production-artifacts",
+      "sourceIds": [
+        "SRC-NTERCHNG-INSTALLER-PLAN-2011",
+        "SRC-NTERCHNG-EXHIBITION-PARTICIPANT-NOTES-2011",
+        "SRC-NTERCHNG-ARCHIVED-PROJECT-SITE-2011",
+        "SRC-AMERICA-NOW-AND-HERE-KC-NTERCHNG-2011",
+        "SRC-NERMAN-AMERICA-NOW-AND-HERE-2011"
+      ],
+      "claimIds": [
+        "CLM-NTERCHNG-COLLABORATIVE-INSTALLATION-2011",
+        "CLM-NTERCHNG-AMERICA-NOW-AND-HERE-2011",
+        "CLM-NTERCHNG-REINSTALLATION-OPERATIONS-2011"
+      ],
+      "researchInquiryIds": [
+        "INQ-NTERCHNG-PRODUCTION-AND-EXHIBITION-2011"
+      ],
+      "projectionDecision": "Retain the production-system breadth and Jamie's bounded participation as Knowledge Bank depth. Do not add website copy until the current public composition needs the creative-technical throughline or collaborator evidence supports individual task attribution."
+    }
+  ],
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS",
+    "INTAKE-2026-07-14-WOWLIST-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-WOWLIST-SOCIAL-MANAGEMENT-MEMORY",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-PUBLISHING-MEMORY",
+    "INTAKE-2026-07-14-KCSPACES-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-KCSPACES-NAMING-ROLE-CORRECTION",
+    "INTAKE-2026-07-15-NTERCHNG-AMERICA-NOW-AND-HERE",
+    "INTAKE-2026-07-15-NTERCHNG-PRODUCTION-ARTIFACTS",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-PROPOSAL",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-ROLE",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-PUBLIC-PROJECT-POSTS"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "suiteId": "portfolio-claim-hill-climb",
+  "runId": "2026-07-13-kc-town-hall-stewardship-transition-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "baseSha": "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  "conductedAt": "2026-07-13",
+  "status": "passed",
+  "stoppingReason": "success-condition-reached",
+  "iterations": 2,
+  "judgeRoles": ["independent-evidence-judge", "independent-hiring-reader-judge"],
+  "threshold": {
+    "weightedScore": 92,
+    "minimumCriterionScore": 4,
+    "requiredPerfectCriteria": ["calibration"],
+    "requiredConsecutivePasses": 2
+  },
+  "summary": {
+    "fixtures": 8,
+    "thresholdMet": 8,
+    "unresolved": 0,
+    "acceptedDraftRegressions": 0,
+    "hardGateFailuresInFinalCandidates": 0
+  },
+  "fixtures": [
+    {
+      "id": "emerging-work-throughline",
+      "disposition": "accepted-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "Jamie gives emerging public-facing work operating structure: clarifying requirements, mapping workflows, maintaining decision records and status rhythms, and building runbooks, onboarding, launch support, and durable handoffs that help teams make usable forward movement through transition.",
+      "evidenceJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 98, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    },
+    {
+      "id": "callnyc-member-engagement",
+      "disposition": "accepted-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven surviving public posts document engagement by accounts of 10 then-sitting NYC Council members through interpretation, replies, amplification, acknowledgment, and a resident referral. This is account-level evidence; it does not establish Council commissioning, adoption, partnership, institutional endorsement, or who personally authored each post.",
+      "evidenceJudge": {"weightedScore": 98, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 92, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    },
+    {
+      "id": "callnyc-access-audit",
+      "disposition": "accepted-supporting-method-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "X reported 110 posts while failing to render the logged-out CallNYC timeline, so the review treated this as a retrieval limitation rather than evidence of an empty account. An authenticated PDF preserved one populated page and six blank continuation pages; exact pagination cursors across two public mirrors recovered 107 unique entries, leaving three unrecovered. No API credential was configured or required for the core engagement claim.",
+      "evidenceJudge": {"weightedScore": 93, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    },
+    {
+      "id": "photo-coalition-corroboration",
+      "disposition": "accepted-private-editorial-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "Curated photographs from 2017 through 2025 show Jamie in public and collaborative settings with gathered participants, signs, and banners, corroborating sustained participation in NYC Artist Coalition and FairRentNYC advocacy environments. Documentary and public project records separately establish Jamie's bounded website-building contribution. The photographs do not independently prove role, authorship, leadership, or outcomes, and each image still requires asset-specific rights, consent or a documented public-event basis, and publication review.",
+      "evidenceJudge": {"weightedScore": 92, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 92, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    },
+    {
+      "id": "photo-cultural-hosting-material-practice",
+      "disposition": "accepted-private-editorial-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "Across 196 Artists Residency and Sunday Dinner, photographs corroborate the material work of Jamie's hosting practice: preparing spaces and tables, facilitating gatherings, documenting activity, and sustaining continuity over time. The separately approved 300+ gatherings and 20+ resident artists metrics come from documentary evidence, not the photographs. Guests, private interiors, private gatherings, and participants' work remain protected pending asset-specific review.",
+      "evidenceJudge": {"weightedScore": 98, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 95, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    },
+    {
+      "id": "photo-source-backed-memory-vocabulary",
+      "disposition": "accepted-private-editorial-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "Photographs of documents, handwriting, boards, and working surfaces make Jamie's Source-Backed Team Memory method concrete by showing the material practice of arranging evidence and its relationships for team review. They are representative images, not proof of a finished product, client deployment, browsable private archives, automated trust, or access to private source material.",
+      "evidenceJudge": {"weightedScore": 98, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 98, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    },
+    {
+      "id": "photo-unsupported-project-attribution",
+      "disposition": "accepted-internal-control-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "This review withheld independent photographic attribution for Harry J. Epstein Company, CallNYC, WOWList, KC Town Hall, general Technical Operations, and the Colophon because earlier generated editor-album labels had entered retrieval provenance. This limits the photo review only: it does not negate documentary evidence or establish that relevant photographs do not exist. Fresh retrieval must begin from independently verified dates, places, public artifacts, or collaborator-confirmed events.",
+      "evidenceJudge": {"weightedScore": 94, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 96, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    },
+    {
+      "id": "photo-asset-publication-gate",
+      "disposition": "accepted-internal-instruction-recheck",
+      "acceptedIteration": 1,
+      "qualifyingRounds": [1, 2],
+      "candidate": "Editor-field membership and retrieval metadata are not publication approval. Keep each image in private editorial review until identity, context, creator and rights, consent or a documented public-event basis, Knowledge Bank claim, factual caption, crop risks, and Jamie's final approval for the specific image and placement have all been checked.",
+      "evidenceJudge": {"weightedScore": 94, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []},
+      "hiringReaderJudge": {"weightedScore": 96, "minimumCriterionScore": 4, "calibration": 5, "allHardGatesPassed": true, "regressions": []}
+    }
+  ],
+  "unresolvedCriteria": []
+}

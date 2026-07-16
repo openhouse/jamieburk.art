@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-12-feature-evals-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-12",
+  "status": "passed",
+  "iterations": 3,
+  "qualifyingRounds": [2, 3],
+  "graphSnapshot": {
+    "intakeRecords": 8,
+    "sources": 20,
+    "claims": 15,
+    "researchInquiries": 6,
+    "activeProjections": 9,
+    "heldProjections": 8
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE"
+  ],
+  "contentClusters": [
+    {
+      "id": "participatory-public-practice",
+      "sourceIds": ["SRC-GOOD-TIMES-OPEN-HOUSE-2006"],
+      "claimIds": ["CLM-PARTICIPATORY-OPEN-HOUSE-AND-SHOP-SHOWS"],
+      "researchInquiryIds": [],
+      "projectionDecision": "Confirmed and retained in the bank; public projection held for future composition."
+    },
+    {
+      "id": "waterways-participatory-practice",
+      "sourceIds": ["SRC-PITCH-HUCK-FINN-2007", "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009"],
+      "claimIds": ["CLM-WATERWAYS-RAFT-EXPEDITION", "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES"],
+      "researchInquiryIds": ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
+      "projectionDecision": "Strong bounded claims retained; route, roles, and photo review remain open; public projection held."
+    },
+    {
+      "id": "cabaret-law-organizing",
+      "sourceIds": ["SRC-GOTHAMIST-CABARET-LAW-2017-06-19", "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19", "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20"],
+      "claimIds": ["CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING", "CLM-NYCA-JAMIE-INSTRUMENTAL-ROLE-HYPOTHESIS"],
+      "researchInquiryIds": ["INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE"],
+      "projectionDecision": "Direct organizing and testimony confirmed; broader instrumental-role hypothesis retained for research; public projection held."
+    },
+    {
+      "id": "office-of-nightlife",
+      "sourceIds": ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20", "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017-11-17", "SRC-NYCA-PRIORITIES-2017"],
+      "claimIds": ["CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY"],
+      "researchInquiryIds": ["INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE"],
+      "projectionDecision": "Coalition advocacy and town hall confirmed; Jamie's individual role remains under research; public projection held."
+    },
+    {
+      "id": "talks-not-raids",
+      "sourceIds": ["SRC-TALKS-NOT-RAIDS-PROJECT", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-NYC-MAYOR-MARCH-PHASEOUT-2023", "SRC-NYCA-PRIORITIES-2017"],
+      "claimIds": ["CLM-TALKS-NOT-RAIDS-TRANSPARENCY-TO-PHASEOUT"],
+      "researchInquiryIds": ["INQ-NYCA-JAMIE-TALKS-NOT-RAIDS-ROLE"],
+      "projectionDecision": "Advocacy, legislation, and phaseout chronology confirmed; causality and Jamie's role remain under research; public projection held."
+    },
+    {
+      "id": "existing-site-source-coverage",
+      "sourceIds": ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-MEMBER-ENGAGEMENT-REVIEW-2026"],
+      "claimIds": ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT"],
+      "researchInquiryIds": ["INQ-PUBLIC-SITE-SOURCE-COVERAGE"],
+      "projectionDecision": "CallNYC reciprocal source wiring confirmed; remaining consequential site claims entered a standing canonical-source backlog."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 98,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 89,
+      "editorialFutureUseScore": 96,
+      "result": "revise",
+      "finding": "Good Times source classification was inconsistent, two pending proof projections overstated Jamie's personal role, source boundaries were not required, and proof-to-claim links were implicit."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 98,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "Source metadata, personal-role calibration, reciprocal claim links, and standing source-coverage maintenance were repaired without projection or public-safety regression."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 98,
+      "editorialFutureUseScore": 100,
+      "result": "qualifying-pass",
+      "finding": "The unchanged corrected graph passed every hard gate and repeated the threshold without regression."
+    }
+  ],
+  "unresolvedCriteria": []
+}

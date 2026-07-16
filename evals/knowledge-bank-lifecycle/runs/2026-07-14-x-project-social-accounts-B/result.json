@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-14-x-project-social-accounts-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-14",
+  "status": "passed",
+  "iterations": 5,
+  "qualifyingRounds": [4, 5],
+  "graphSnapshot": {
+    "intakeRecords": 39,
+    "sources": 111,
+    "claims": 40,
+    "researchInquiries": 12,
+    "activeProjections": 27,
+    "heldProjections": 19
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS"
+  ],
+  "contentClusters": [
+    {
+      "id": "project-social-identity-system-map",
+      "sourceIds": ["SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026", "SRC-CALLNYC-X-PROFILE-2026", "SRC-NYCA-X-PROFILE-2026", "SRC-WOWLIST-X-PROFILE-2026", "SRC-WOWLIST-X-TIMELINE-REVIEW-2026", "SRC-KCSPACES-X-PROFILE-2026", "SRC-KCTOWNHALL-X-PROFILE-2026"],
+      "claimIds": ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS"],
+      "researchInquiryIds": ["INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14"],
+      "projectionDecision": "Project Jamie's first-person account-establishment role with the independently verified project-to-account map. Keep individual post authorship, later stewardship, current counters, and project outcomes separate."
+    },
+    {
+      "id": "nyca-shared-identity-and-council-account-engagement",
+      "sourceIds": ["SRC-NYCA-X-PROFILE-2026", "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026", "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT", "SRC-DOCUMENT-JOURNAL-NYC-NIGHTLIFE-2018-02-27", "SRC-AMNY-OFFICE-NIGHTLIFE-REPORT-2019-01-24", "SRC-BROOKLYN-EAGLE-NIGHTLIFE-WEBSITE-2019-05-13"],
+      "claimIds": ["CLM-NYCA-SHARED-SOCIAL-IDENTITY", "CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT", "CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING", "CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY"],
+      "researchInquiryIds": ["INQ-NYCA-X-ENGAGEMENT-2026-07-14", "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE", "INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE"],
+      "projectionDecision": "Project the shared identity and its bounded account-level engagement as evidence of a durable public address. Do not infer personal authorship, formal endorsement, commissioning, adoption, partnership, or policy causality."
+    },
+    {
+      "id": "nyca-full-population-and-source-trail",
+      "sourceIds": ["SRC-NYCA-X-FULL-POPULATION-REVIEW-2026", "SRC-NYCA-X-PUBLIC-POST-LEDGER-2026", "SRC-NYCA-X-PUBLIC-ENGAGEMENT-LEDGER-2026", "SRC-GOTHAMIST-MARCH-TRANSPARENCY-2019", "SRC-GOTHAMIST-COMMERCIAL-RENTS-2021", "SRC-CITY-LIMITS-COMMERCIAL-RENT-2020", "SRC-NYC-COMPTROLLER-RETAIL-VACANCY-2019"],
+      "claimIds": ["CLM-NYCA-SHARED-PUBLISHING-SYSTEM-RANGE"],
+      "researchInquiryIds": ["INQ-NYCA-X-FULL-POPULATION-2026-07-14"],
+      "projectionDecision": "Keep the complete 5,124-slot disposition, source trail, and stakeholder patterns as held Knowledge Bank depth. Preserve 3,367 recovered items and 1,757 unresolved slots together; do not infer personal authorship, endorsement, reach, or causality."
+    },
+    {
+      "id": "kc-spaces-fund-public-operations-timeline",
+      "sourceIds": ["SRC-KCSPACES-X-PROFILE-2026", "SRC-KCSPACES-X-TIMELINE-REVIEW-2026"],
+      "claimIds": ["CLM-KCSPACES-PUBLIC-OPERATIONS-TIMELINE"],
+      "researchInquiryIds": ["INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14"],
+      "projectionDecision": "Retain the operational timeline as bank-only depth. Keep it separate from Jamie's technical infrastructure contribution and from organizer, grant-decision, fiscal-sponsor, and individual-post claims."
+    },
+    {
+      "id": "kc-town-hall-public-operations-channel",
+      "sourceIds": ["SRC-KCTOWNHALL-X-PROFILE-2026", "SRC-KCTOWNHALL-X-TIMELINE-REVIEW-2026"],
+      "claimIds": ["CLM-KCTOWNHALL-PUBLIC-OPERATIONS-CHANNEL"],
+      "researchInquiryIds": ["INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14"],
+      "projectionDecision": "Project the account as a resident-facing operations channel while keeping post authorship, program stewardship, municipal funding, and the later stewardship transition as distinct claims."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 97,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 99,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 90,
+      "editorialFutureUseScore": 91,
+      "result": "revise",
+      "finding": "The graph was calibrated, but public emphasis and repo-local provenance still needed revision."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 91,
+      "editorialFutureUseScore": 95,
+      "result": "revise",
+      "finding": "The copy passed, but immutable-source and live semantic gates were not yet complete."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 88,
+      "editorialFutureUseScore": 97,
+      "result": "revise",
+      "finding": "Adversarial review found slash-notation and personal-communication variants plus archival surfaces outside the semantic scan."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 94,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "The repaired graph, immutable refs, adversarial fixtures, research note, and ledgers passed every gate without regression."
+    },
+    {
+      "round": 5,
+      "evidenceGovernanceScore": 97,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated every hard-gate, threshold, calibration, public-safety, and future-use pass without a recommended material edit."
+    }
+  ],
+  "unresolvedCriteria": []
+}

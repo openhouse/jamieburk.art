@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-14-zzz-wowlist-facebook-posts-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-14",
+  "status": "passed",
+  "iterations": 8,
+  "qualifyingRounds": [7, 8],
+  "graphSnapshot": {
+    "intakeRecords": 45,
+    "sources": 171,
+    "claims": 63,
+    "researchInquiries": 19,
+    "activeProjections": 48,
+    "heldProjections": 22
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS",
+    "INTAKE-2026-07-14-WOWLIST-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-WOWLIST-SOCIAL-MANAGEMENT-MEMORY"
+  ],
+  "contentClusters": [
+    {
+      "id": "wowlist-facebook-current-post-population",
+      "sourceIds": [
+        "SRC-WOWLIST-FACEBOOK-PAGE-2026",
+        "SRC-WOWLIST-FACEBOOK-POST-POPULATION-RUN-2026",
+        "SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026",
+        "SRC-WOWLIST-FACEBOOK-POST-REPORT-2026",
+        "SRC-WOWLIST-FACEBOOK-LET-NYC-DANCE-POST",
+        "SRC-WOWLIST-FACEBOOK-WOMENS-MARCH-POST",
+        "SRC-JAMIE-WOWLIST-SOCIAL-MANAGEMENT-MEMORY-2026"
+      ],
+      "claimIds": [
+        "CLM-WOWLIST-FACEBOOK-CURRENT-POST-POPULATION-2026",
+        "CLM-WOWLIST-FACEBOOK-COMMUNITY-ROUTING-PRACTICE",
+        "CLM-WOWLIST-FACEBOOK-CROSS-PROJECT-CIVIC-ROUTING",
+        "CLM-WOWLIST-FACEBOOK-CURRENT-TRACTION-SNAPSHOT-2026",
+        "CLM-WOWLIST-FACEBOOK-ACCOUNT-STATED-SCALE",
+        "CLM-WOWLIST-FACEBOOK-COMMUNITY-DESIGN-ATTRIBUTION",
+        "CLM-JAMIE-WOWLIST-SOCIAL-MANAGEMENT-MEMORY"
+      ],
+      "researchInquiryIds": [
+        "INQ-WOWLIST-FACEBOOK-POST-POPULATION-2026",
+        "INQ-WOWLIST-FACEBOOK-SOCIAL-MANAGEMENT-2026"
+      ],
+      "projectionDecision": "Retain the complete current-surface ledger, community and civic routing patterns, account-stated scale, mutable traction snapshot, role-memory hypothesis, source queue, and photo leads as governed bank depth. Add no new visible portfolio claim."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {"round": 1, "evidenceGovernanceScore": 82, "editorialFutureUseScore": 76, "result": "revise", "finding": "Repair status calibration, public account-state exposure, row locators, source and photo queues, and product-participation wording."},
+    {"round": 2, "evidenceGovernanceScore": 92, "editorialFutureUseScore": 100, "result": "revise", "finding": "Remove residual private account-surface detail, distinguish invitation from demonstrated member input, and strengthen semantic validation."},
+    {"round": 3, "evidenceGovernanceScore": 93, "editorialFutureUseScore": 89, "result": "revise", "finding": "Replace stale immutable citations with corrected public-safe artifacts and validate pinned blobs."},
+    {"round": 4, "evidenceGovernanceScore": 96, "editorialFutureUseScore": 98, "result": "revise", "finding": "Broaden public-safety semantics beyond exact phrases and add mutation tests."},
+    {"round": 5, "evidenceGovernanceScore": 94, "editorialFutureUseScore": 93, "result": "revise", "finding": "Generalize invitation exemptions and account-control paraphrase coverage."},
+    {"round": 6, "evidenceGovernanceScore": 96, "editorialFutureUseScore": 96, "result": "revise", "finding": "Refactor phrase checks into sentence-level claim families, then harden invitation, denial, governance, influence, Page-role, and held social-management semantics through adversarial probes."},
+    {"round": 7, "evidenceGovernanceScore": 100, "editorialFutureUseScore": 100, "result": "qualifying-pass", "finding": "All lifecycle, calibration, citation, public-safety, semantic-guard, and future-use criteria passed."},
+    {"round": 8, "evidenceGovernanceScore": 100, "editorialFutureUseScore": 100, "result": "qualifying-pass", "finding": "An unchanged independent recheck repeated every hard-gate and criterion pass with zero regression."}
+  ],
+  "unresolvedCriteria": []
+}

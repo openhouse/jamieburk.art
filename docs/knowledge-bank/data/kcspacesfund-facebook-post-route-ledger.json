@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-07-14",
+  "account": "KC Spaces Fund Facebook Page",
+  "postedRouteBoundary": "Three normalized public destination families survive in readable Page records. Facebook text obfuscation and historical URL decay are normalized at the family level; a posted route is not automatic corroboration or evidence of conversion.",
+  "routes": [
+    {
+      "routeId": "kcspaces-fb-route-campaign-site",
+      "label": "KC Spaces Fund campaign site",
+      "routeType": "campaign-site",
+      "occurrenceFloor": 17,
+      "publicUrl": "https://kcspacesfund.com/",
+      "sourceId": "SRC-KCSPACES-CAMPAIGN-SITE-2026",
+      "status": "live"
+    },
+    {
+      "routeId": "kcspaces-fb-route-mutual-aid-prints",
+      "label": "Oddities Prints Mutual Aid Print Editions",
+      "routeType": "partner-fundraiser",
+      "occurrenceFloor": 4,
+      "publicUrl": "https://web.archive.org/web/20200528023922/http://www.odditiesprints.com/covid-19-fundraiser",
+      "sourceId": "SRC-KCSPACES-ODDITIES-PRINT-FUNDRAISER-2020",
+      "status": "archived"
+    },
+    {
+      "routeId": "kcspaces-fb-route-gofundme",
+      "label": "KC Spaces Fund GoFundMe",
+      "routeType": "fundraiser",
+      "occurrenceFloor": 1,
+      "publicUrl": "https://www.gofundme.com/f/kcspacesfund",
+      "sourceId": "SRC-KCSPACES-GOFUNDME-2020",
+      "status": "live"
+    }
+  ]
+}

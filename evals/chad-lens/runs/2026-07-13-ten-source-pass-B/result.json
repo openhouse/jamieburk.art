@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-13-ten-source-pass-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 2,
+  "qualifyingRounds": [1, 2],
+  "candidate": "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 53,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The established throughline remained exact in its public projections, and the ten-source pass strengthened its supporting role and outcome detail without making the summary carry more reader burden."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "Fresh independent re-evaluation found Jamie visible as the actor, public usefulness explicit, collective credit intact, and no regression after the new case-study projections."
+    }
+  ]
+}

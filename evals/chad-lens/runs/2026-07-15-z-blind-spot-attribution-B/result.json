@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-15-z-blind-spot-attribution-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 2,
+  "qualifyingRounds": [1, 2],
+  "candidate": "Jamie describes his role as a NYC Artist Coalition co-founder, campaign-website builder, and civic-systems contributor. Public sources and protected revision records corroborate specific organizing, testimony, web, meeting-production, and documentation work, while the complete founding and responsibility map remains under research. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 46,
+  "sentenceCount": 3,
+  "finalJudgments": {
+    "evidenceJudge": {"hardGatesPass": true, "score": 5, "dimensionsPass": 5},
+    "hiringReaderJudge": {"hardGatesPass": true, "score": 5, "dimensionsPass": 5}
+  },
+  "regressions": [],
+  "rounds": [
+    {"round": 1, "evidenceJudgeScore": 5, "hiringReaderJudgeScore": 5, "result": "qualifying-pass", "finding": "The revision makes the co-founder role explicitly first-person while keeping concrete corroborated actions and the collective-work boundary visible."},
+    {"round": 2, "evidenceJudgeScore": 5, "hiringReaderJudgeScore": 5, "result": "qualifying-pass", "finding": "An unchanged recheck retained direct actor visibility, usable outputs, public-sector legibility, and the responsibility-map boundary without regression."}
+  ]
+}

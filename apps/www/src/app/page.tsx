@@ -87,7 +87,7 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
+              These projects show a recurring pattern: emerging, high-context
               situations becoming usable systems, public-facing tools,
               documentation, decision trails, and durable handoffs.
             </p>
@@ -98,7 +98,7 @@ export default function HomePage() {
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <WorkCard compact item={item} key={item.slug} />
           ))}
         </div>
       </section>
@@ -109,7 +109,7 @@ export default function HomePage() {
               Operating motif
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              What was unclear becomes usable
+              What is still forming becomes usable
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
               The projects differ, but the move is consistent: clarify what is

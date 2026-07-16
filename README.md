@@ -30,6 +30,12 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:knowledge-bank
+npm run evals:portfolio
+npm run evals:chad-lens
+npm run evals:margaret-morse
+npm run evals:warren-sack
+npm run evals:knowledge-bank-lifecycle
 npm run public-safety
 npm run check:routes
 npm run check:citations
@@ -65,6 +71,37 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+## Portfolio Claim Evals
+
+`evals/portfolio-claims/evals.json` expresses the portfolio's editorial intent
+as hard gates, scored criteria, public-safe fixtures, and a bounded recursive
+revision protocol. It rewards strong evidence-backed language while blocking
+overclaiming, underclaiming, unsafe publication, misplaced credit, and
+pathologizing descriptions of emerging work.
+
+Run `npm run evals:portfolio` to validate the suite. See
+`evals/portfolio-claims/README.md` for the generator/judge loop and stopping
+criterion.
+
+`evals/chad-lens/eval.json` separately tests whether a claim minimizes reader
+burden, makes Jamie's bounded action visible, explains what became usable,
+translates specialist language, and preserves collective credit. Run
+`npm run evals:chad-lens` to validate that focused eval and its committed runs.
+
+`evals/margaret-morse-lens/eval.json` tests embodied inquiry, tending and
+hospitality, material specificity, art-life continuity, and artistic value that
+cannot be reduced to organizational utility. `evals/warren-sack-lens/eval.json`
+tests recursive relational reasoning, translation across representations,
+prototype maturity, source rigor, and collective agency. Run
+`npm run evals:margaret-morse` and `npm run evals:warren-sack` to validate their
+independent read-only judge artifacts and two-pass stopping receipts.
+
+`evals/knowledge-bank-lifecycle/evals.json` tests the full
+intake-to-source-to-claim-to-projection process, including bank-only material,
+open role hypotheses, citation maintenance, and photo discoveries that return
+as research leads. Run `npm run evals:knowledge-bank-lifecycle` to validate the
+suite, graph, and committed recursive runs.
 
 ## Environment
 

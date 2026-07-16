@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-12-feature-evals-B-recheck",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 2,
+  "qualifyingRounds": [1, 2],
+  "candidate": "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 53,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The unchanged winner passed every hard gate and all five dimensions in its current Knowledge Bank and website projections."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "Fresh independent re-evaluation found no regression and established the second consecutive pass."
+    }
+  ]
+}

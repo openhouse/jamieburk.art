@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["judgeRunId", "role", "bundleSha256", "allHardGatesPassed", "hardGateFindings", "scores", "weightedScore", "minimumCriterionScore", "calibration", "regressions", "requiredRevisions", "limitations"],
+  "properties": {
+    "judgeRunId": { "type": "string" },
+    "role": { "enum": ["evidence-and-governance-judge", "hiring-and-field-use-judge"] },
+    "bundleSha256": { "type": "string" },
+    "allHardGatesPassed": { "type": "boolean" },
+    "hardGateFindings": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "passed", "finding"],
+        "properties": {
+          "id": { "type": "string" },
+          "passed": { "type": "boolean" },
+          "finding": { "type": "string" }
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["coverage", "calibration", "observability", "intervention-quality", "external-reality", "composition-utility", "actionability"],
+      "properties": {
+        "coverage": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "calibration": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "observability": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "intervention-quality": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "external-reality": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "composition-utility": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "actionability": { "type": "integer", "minimum": 1, "maximum": 5 }
+      }
+    },
+    "weightedScore": { "type": "number" },
+    "minimumCriterionScore": { "type": "integer" },
+    "calibration": { "type": "integer" },
+    "regressions": { "type": "array", "items": { "type": "string" } },
+    "requiredRevisions": { "type": "array", "items": { "type": "string" } },
+    "limitations": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+  }
+}

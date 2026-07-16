@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "evaluatedThrough": "2026-07-15",
+  "iterations": 2,
+  "status": "passed",
+  "graphSnapshot": {
+    "intakeRecords": 58,
+    "sources": 228,
+    "claims": 100,
+    "researchInquiries": 32,
+    "activeProjections": 60,
+    "heldProjections": 42
+  },
+  "qualifyingRounds": [1, 2],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 95,
+      "editorialFutureUseScore": 97,
+      "result": "qualifying-pass",
+      "finding": "The batch decomposes protected operational populations into bounded aggregate claims, keeps the cross-project sequence distinct from Jamie's attributed role, and retains every new projection on hold."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 95,
+      "editorialFutureUseScore": 95,
+      "result": "qualifying-pass",
+      "finding": "A fresh independent repeat found no regression: counted units, privacy boundaries, current-custody limits, collective credit, and future role-evidence actions remain explicit."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 95,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 95,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "unresolvedCriteria": [],
+  "contentClusters": [
+    {
+      "id": "wowlist-sunday-dinner-callscript-bridge",
+      "sourceIds": [
+        "SRC-WOWLIST-PRODUCTION-SNAPSHOT-2017-07-22",
+        "SRC-WOWLIST-POPULAR-VOTE-CONFIGURATION-2017",
+        "SRC-SUNDAY-DINNER-OPERATING-WORKBOOK-2012-2021",
+        "SRC-CALLSCRIPT-PUBLIC-PAGE-2026",
+        "SRC-CALLSCRIPT-DCLA-EVENT-2017-01-27",
+        "SRC-CALLSCRIPT-NYCA-NAMING-POLL-2017-01-27",
+        "SRC-CALLSCRIPT-DCLA-LETTER-PROMPT-2017-01-27",
+        "SRC-CALLSCRIPT-CURRENT-ADMIN-CONTROL-2026"
+      ],
+      "claimIds": [
+        "CLM-WOWLIST-2017-PRODUCTION-SNAPSHOT-SCALE",
+        "CLM-WOWLIST-POPULAR-VOTE-SURFACE",
+        "CLM-SUNDAY-DINNER-OPERATING-WORKBOOK-2012-2021",
+        "CLM-CALLSCRIPT-PARTICIPATORY-NAMING-AND-LETTER",
+        "CLM-CALLSCRIPT-WOWLIST-NYCA-BRIDGE"
+      ],
+      "researchInquiryIds": [
+        "INQ-WOWLIST-SUNDAY-DINNER-CALLSCRIPT-BRIDGE-2026-07-15",
+        "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE"
+      ],
+      "projectionDecision": "Retain the exact production and workbook findings as protected aggregate support, keep participatory Call Script mechanisms public-source-backed, and hold the attributed bridge interpretation until collaborator or contemporaneous role evidence is recovered."
+    }
+  ],
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+    "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS",
+    "INTAKE-2026-07-14-WOWLIST-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-WOWLIST-SOCIAL-MANAGEMENT-MEMORY",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-PUBLISHING-MEMORY",
+    "INTAKE-2026-07-14-KCSPACES-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-KCSPACES-NAMING-ROLE-CORRECTION",
+    "INTAKE-2026-07-15-NTERCHNG-AMERICA-NOW-AND-HERE",
+    "INTAKE-2026-07-15-NTERCHNG-PRODUCTION-ARTIFACTS",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-PROPOSAL",
+    "INTAKE-2026-07-15-KCTOWNHALL-PHASE-ONE-ROLE",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-POST-POPULATION",
+    "INTAKE-2026-07-15-JAMIE-FACEBOOK-PUBLIC-PROJECT-POSTS",
+    "INTAKE-2026-07-15-ICLOUD-TEAMS-DEEPENING",
+    "INTAKE-2026-07-15-NYCA-INSTITUTIONAL-RECIPROCITY",
+    "INTAKE-2026-07-15-WOWLIST-SUNDAY-DINNER-CALLSCRIPT-BRIDGE"
+  ]
+}

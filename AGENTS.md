@@ -25,6 +25,12 @@ workspaces, Dockerfile, Dokku.
 - `npm run build`
 - `npm run check`
 - `npm run knowledge-bank`
+- `npm run evals:portfolio`
+- `npm run evals:chad-lens`
+- `npm run evals:margaret-morse`
+- `npm run evals:warren-sack`
+- `npm run evals:knowledge-bank-lifecycle`
+- `npm run evals:blind-spots`
 - `npm run public-safety`
 - `npm run check:routes`
 - `npm run check:citations`
@@ -72,6 +78,40 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+## Claim Evals
+
+Use `evals/portfolio-claims/evals.json` when an LLM agent drafts or strengthens
+portfolio claims. Hard gates outrank rhetorical quality. Keep the highest-scoring
+candidate that passes every gate, compare revisions for regression, and stop
+only at the suite's explicit threshold. If the threshold is not reached within
+the iteration limit, return the best passing candidate with unresolved criteria
+instead of claiming completion.
+
+Use `evals/chad-lens/eval.json` for focused hiring-language revisions. A Chad
+Lens pass requires all five dimensions together and two consecutive independent
+passes; do not trade collective credit or evidentiary scope for readability.
+
+Use `evals/margaret-morse-lens/eval.json` to preserve embodied inquiry,
+sustained tending, material specificity, art-life continuity, and value beyond
+organizational utility. Do not make art justify itself only through hiring.
+
+Use `evals/warren-sack-lens/eval.json` to test recursive relational reasoning,
+translation across data, media, interfaces, and physical space, accurate
+prototype status, source rigor, and collective agency. Do not mistake platform
+traces for the relationships they represent.
+
+Use `evals/knowledge-bank-lifecycle/evals.json` when new sources, memories,
+artifacts, corrections, or photo leads arrive. Capture first, decompose sources,
+separate claim maturity from projection selection, open explicit research paths,
+and stop only at the suite's independent two-pass threshold.
+
+Use `evals/portfolio-system-blind-spots/evals.json` to test the portfolio process
+against external-validation gaps, inquiry accumulation, individual-role gaps,
+platform-shaped evidence, additive composition, mosaic privacy, evaluator
+self-certification, and indefinite polishing. A pass confirms the controls, not
+an external outcome. Keep hiring-reader, collaborator, and application results
+`not-yet-measured` until separately observed.
 
 ## Chad Lens
 

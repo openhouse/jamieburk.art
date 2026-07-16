@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-14-google-shared-drives-production-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 4,
+  "qualifyingRounds": [3, 4],
+  "candidate": "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 53,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 3,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise",
+      "finding": "The first Shared Drive projection let one specific workflow imply aggregate program scale and allowed revision history to read too much like authorship."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 4,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise",
+      "finding": "Jamie was visible and the tools were concrete, but the aggregate residency proof still mixed one workflow with independently supported scale metrics."
+    },
+    {
+      "round": 3,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The revised projections made Jamie's bounded actions and usable artifacts legible while preserving collective credit and explicit limits on authorship, adoption, implementation, and impact."
+    },
+    {
+      "round": 4,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck passed all five dimensions with no regression, unsupported metric, or privacy leak."
+    }
+  ]
+}

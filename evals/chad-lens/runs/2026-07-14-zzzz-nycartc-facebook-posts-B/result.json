@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-14-zzzz-nycartc-facebook-posts-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 2,
+  "qualifyingRounds": [1, 2],
+  "candidate": "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He helped establish and produce a recurring participation system spanning public event pages, meetings across cultural spaces, practical safety and advocacy sessions, and paths from artist concerns to public action. These pages and workflows gave artists and organizers places to gather, find resources, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 75,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {"hardGatesPass": true, "score": 5, "dimensionsPass": 5},
+    "hiringReaderJudge": {"hardGatesPass": true, "score": 5, "dimensionsPass": 5}
+  },
+  "regressions": [],
+  "rounds": [
+    {"round": 1, "evidenceJudgeScore": 5, "hiringReaderJudgeScore": 5, "result": "qualifying-pass", "finding": "The accepted candidate remained unchanged; this pass added governed archive depth without increasing reader burden or promoting uncertain authorship, engagement, or impact claims."},
+    {"round": 2, "evidenceJudgeScore": 5, "hiringReaderJudgeScore": 5, "result": "qualifying-pass", "finding": "An unchanged recheck repeated every hard gate and Chad Lens dimension pass without regression."}
+  ]
+}

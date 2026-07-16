@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-13-kc-town-hall-council-allocation-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 2,
+  "qualifyingRounds": [1, 2],
+  "candidate": "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 53,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The established throughline remained exact in its public projections while the KC Town Hall copy separately named Jamie's presentation, the Board recommendation, and the Council actions without transferring collective authority to him."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "Fresh independent re-evaluation found Jamie visible as the actor, the public process legible in plain language, institutional actions accurately attributed, and no regression after the KC Town Hall projection changed."
+    }
+  ]
+}
