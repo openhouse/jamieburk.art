@@ -311,6 +311,16 @@ test("shared observations carry candidate-specific evidence roles and limits", (
   }));
   assert.match(validateKnowledgeLifecycle(blanketRelationships).join("\n"), /identical blanket evidence relationships/);
 
+  const cosmeticBlanketRelationships = structuredClone(knowledgeLifecycle);
+  const cosmeticObservation = cosmeticBlanketRelationships.observations.find(({ id }) => id === "OBS-WOWLIST-FACEBOOK-MISSION-AND-STAKEHOLDER-PATTERNS");
+  cosmeticObservation.candidateRelationships = cosmeticObservation.candidateClaimIds.map((candidateClaimId, index) => ({
+    candidateClaimId,
+    evidenceRole: cosmeticObservation.evidenceRole,
+    supports: cosmeticObservation.statement,
+    limitations: [...cosmeticObservation.doesNotEstablish, `Candidate label ${index + 1}`],
+  }));
+  assert.match(validateKnowledgeLifecycle(cosmeticBlanketRelationships).join("\n"), /cosmetically varied blanket evidence relationships/);
+
   const directSupport = retrieveKnowledgePalette({
     projectId: "PRJ-NYC-ARTIST-COALITION",
     evidenceRole: "direct-support"
@@ -845,10 +855,27 @@ test("WOW List retrieval preserves research depth and exact-route selectivity", 
   assert.equal(retiredDecision?.decision, "retire");
   assert.equal(retiredDecision?.supersedesDecisionId, "DEC-WOWLIST-SOCIAL-PROMOTE");
   assert.deepEqual(retiredDecision?.allowedSurfaces, []);
+  assert.deepEqual(retiredDecision?.retiredSurfaces, ["/work/wowlist"]);
 
   const staleRetirement = structuredClone(knowledgeLifecycle);
   staleRetirement.promotionDecisions.find(({ id }) => id === "DEC-WOWLIST-SOCIAL-CASE-STUDY-RETIRE").supersedesDecisionId = undefined;
   assert.match(validateKnowledgeLifecycle(staleRetirement).join("\n"), /Inactive canonical projection .* retains active route authorization/);
+
+  const erasedRetirementHistory = structuredClone(knowledgeLifecycle);
+  const retiredClaim = knowledgeBank.claims.find(({ id }) => id === "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT");
+  const retiredProjection = retiredClaim.projections[0];
+  const originalRetiredSurfaces = [...retiredProjection.surfaces];
+  try {
+    retiredProjection.surfaces = [];
+    assert.match(validateKnowledgeLifecycle(erasedRetirementHistory).join("\n"), /has no inactive projection history/);
+  } finally {
+    retiredProjection.surfaces = originalRetiredSurfaces;
+  }
+
+  assert.throws(
+    () => retrieveKnowledgePalette({ surface: "/work/wowlist", briefId: "BRIEF-WOWLIST-VISUAL-RESEARCH", publicationSafe: true }),
+    /rejects non-public brief/,
+  );
 });
 
 test("WOW List visual research remains a rights-gated evidence feedback loop", () => {
@@ -889,6 +916,14 @@ test("WOW List visual research remains a rights-gated evidence feedback loop", (
   assert.match(
     validateKnowledgeLifecycle(omittedMediaAssignment).join("\n"),
     /must explicitly declare content-review task IDs/,
+  );
+
+  const coordinatedDowngrade = structuredClone(knowledgeLifecycle);
+  coordinatedDowngrade.mediaLeads.find(({ id }) => id === media.id).contentReviewTaskIds = [];
+  delete coordinatedDowngrade.researchTasks.find(({ id }) => id === task.id).requiresContentReviewAuthorization;
+  assert.match(
+    validateKnowledgeLifecycle(coordinatedDowngrade).join("\n"),
+    /reviews protected content but has no media-assigned authorization gate/,
   );
 
   const ungovernedAuthorization = structuredClone(media);

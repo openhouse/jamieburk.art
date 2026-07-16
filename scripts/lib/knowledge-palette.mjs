@@ -21,6 +21,9 @@ export function retrieveKnowledgePalette(filters = {}) {
     ? knowledgeLifecycle.editorialBriefs.find(({ id }) => id === filters.briefId)
     : undefined;
   if (filters.briefId && !exactBrief) throw new Error(`Unknown editorial brief ${filters.briefId}`);
+  if (filters.publicationSafe && exactBrief && (exactBrief.status !== "active" || exactBrief.publicationIntent !== "public-composition")) {
+    throw new Error(`Publication-safe retrieval rejects non-public brief ${exactBrief.id}`);
+  }
   const candidateBriefs = exactBrief
     ? [exactBrief]
     : knowledgeLifecycle.editorialBriefs.filter((brief) =>

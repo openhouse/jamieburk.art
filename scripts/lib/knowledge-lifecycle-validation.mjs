@@ -37,6 +37,15 @@ function checkRefs(errors, owner, values, index, label) {
   for (const value of values) if (!index.has(value)) errors.push(`${owner} references unknown ${label} ${value}`);
 }
 
+function tokenSimilarity(left, right) {
+  const tokens = (value) => new Set(value.toLowerCase().match(/[a-z0-9]+/g) ?? []);
+  const leftTokens = tokens(left);
+  const rightTokens = tokens(right);
+  const intersection = [...leftTokens].filter((token) => rightTokens.has(token)).length;
+  const union = new Set([...leftTokens, ...rightTokens]).size;
+  return union ? intersection / union : 1;
+}
+
 export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
   const errors = [];
   const collections = [
@@ -129,6 +138,17 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
       ));
       if (relationshipSignatures.size === 1) {
         errors.push(`Observation ${observation.id} uses identical blanket evidence relationships for multiple candidates`);
+      }
+      for (let left = 0; left < observation.candidateRelationships.length; left += 1) {
+        for (let right = left + 1; right < observation.candidateRelationships.length; right += 1) {
+          const a = observation.candidateRelationships[left];
+          const b = observation.candidateRelationships[right];
+          const aText = `${a.supports} ${a.limitations.join(" ")}`;
+          const bText = `${b.supports} ${b.limitations.join(" ")}`;
+          if (a.evidenceRole === b.evidenceRole && tokenSimilarity(aText, bText) >= 0.8) {
+            errors.push(`Observation ${observation.id} uses cosmetically varied blanket evidence relationships for multiple candidates`);
+          }
+        }
       }
     }
     for (const candidateClaimId of relationshipIds) {
@@ -231,8 +251,21 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     if (task.status === "completed" && !task.findings.length) errors.push(`Completed research task ${task.id} has no findings`);
     if (task.status !== "completed" && task.completedAt) errors.push(`Incomplete research task ${task.id} has a completion date`);
     const contentReviewMedia = input.mediaLeads.filter((item) => item.contentReviewTaskIds?.includes(task.id));
+    const taskSignalsContentReview = /before content review/i.test([
+      task.question,
+      ...task.methods,
+    ].join(" "));
+    const protectedContentReview = taskSignalsContentReview && task.sourceIds.some((sourceId) =>
+      sourceById.get(sourceId)?.visibility === "protected"
+    );
+    if (protectedContentReview && !contentReviewMedia.length) {
+      errors.push(`Research task ${task.id} reviews protected content but has no media-assigned authorization gate`);
+    }
     if (contentReviewMedia.length && task.requiresContentReviewAuthorization !== true) {
       errors.push(`Research task ${task.id} must declare content-review authorization because a media lead assigns it protected content review`);
+    }
+    if (protectedContentReview && task.requiresContentReviewAuthorization !== true) {
+      errors.push(`Research task ${task.id} must require authorization before protected content review`);
     }
     if (task.requiresContentReviewAuthorization) {
       if (!contentReviewMedia.length) errors.push(`Research task ${task.id} requires content-review authorization but no media lead assigns it protected content review`);
@@ -257,6 +290,21 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     if (decision.targetCanonicalClaimId && candidate?.targetCanonicalClaimId && decision.targetCanonicalClaimId !== candidate.targetCanonicalClaimId) errors.push(`Decision ${decision.id} target differs from candidate target`);
     if (decision.humanReviewStatus === "approved" && !decision.humanReviewer) errors.push(`Approved decision ${decision.id} has no human reviewer`);
     if (decision.reviewAuthority === "jamie-approved" && decision.humanReviewStatus !== "approved") errors.push(`Jamie-approved decision ${decision.id} is not human-approved`);
+    if (decision.decision === "retire") {
+      if (!decision.targetCanonicalClaimId) errors.push(`Retire decision ${decision.id} has no canonical target`);
+      if (!decision.retiredSurfaces?.length) errors.push(`Retire decision ${decision.id} must preserve its retired surfaces`);
+      if (decision.allowedSurfaces.length) errors.push(`Retire decision ${decision.id} cannot authorize surfaces`);
+      const superseded = decision.supersedesDecisionId ? decisions.get(decision.supersedesDecisionId) : undefined;
+      for (const surface of decision.retiredSurfaces ?? []) {
+        if (!superseded || !authorizesSurface(superseded, surface)) {
+          errors.push(`Retire decision ${decision.id} does not preserve a formerly authorized surface ${surface}`);
+        }
+        const claim = decision.targetCanonicalClaimId ? canonicalClaimById.get(decision.targetCanonicalClaimId) : undefined;
+        if (!claim?.projections.some((projection) => projection.status !== "active" && projection.surfaces.includes(surface))) {
+          errors.push(`Retire decision ${decision.id} has no inactive projection history for ${surface}`);
+        }
+      }
+    }
     if (decision.decision === "promote") {
       if (!decision.targetCanonicalClaimId) errors.push(`Promote decision ${decision.id} has no canonical target`);
       if (decision.targetCanonicalClaimId && !canonicalClaims.has(decision.targetCanonicalClaimId)) errors.push(`Decision ${decision.id} targets unknown canonical claim ${decision.targetCanonicalClaimId}`);

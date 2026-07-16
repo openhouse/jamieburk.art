@@ -482,3 +482,24 @@ superseded revision.
 The focused typecheck, 47 lifecycle tests, social-archive gate, and seven-test
 WOW List Facebook suite pass. Fresh exact-head semantic evaluation remains
 required after committing this repair.
+
+## Coordinated-downgrade repair
+
+- An exact-revision adversarial judge showed that cosmetically varied blanket
+  relationships, an internal brief passed to publication-safe retrieval,
+  coordinated removal of both media authorization fields, and coordinated
+  erasure of retirement route history could still bypass separate checks.
+- Added token-similarity review for same-role multi-candidate relationships,
+  with a mutation that adds meaningless candidate-label suffixes to otherwise
+  identical evidence.
+- Publication-safe retrieval now rejects an explicitly requested internal or
+  research brief instead of treating it as no selection constraint.
+- Protected-source tasks whose own methods say `content review` now require a
+  media-assigned gate and authorization flag even when both assignment fields
+  are removed together.
+- Retirement decisions now retain an independent `retiredSurfaces` history,
+  require a formerly authorized superseded decision, and require matching
+  inactive projection history.
+
+Fresh deterministic and exact-revision semantic evaluation is required after
+this repair is committed.

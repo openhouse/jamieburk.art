@@ -168,6 +168,7 @@ export const promotionDecisionSchema = z.object({
   targetCanonicalClaimId: stableIdSchema.optional(),
   allowedSurfaces: z.array(z.string().min(1)).default([]),
   guardrails: z.array(z.string().min(1)).min(1),
+  retiredSurfaces: z.array(z.string().min(1)).optional(),
   supersedesDecisionId: stableIdSchema.optional()
 });
 

@@ -54,8 +54,9 @@ from a related project. They return only manifest-selected claims and
 candidates with current approval for those claims and that destination.
 Surface queries also ignore internal and research briefs: only the active
 public-composition brief may select a public candidate palette. Retiring a
-projection requires a superseding decision so stale route authorization cannot
-restore deprecated copy.
+projection requires a superseding decision with its own retired-route history,
+so stale authorization cannot be restored by erasing route metadata from the
+deprecated projection.
 Every publication-safe query omits research tasks and media. Those records
 remain available to internal planning queries and require a separate explicit
 publication path.
