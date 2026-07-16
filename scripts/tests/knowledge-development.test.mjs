@@ -632,6 +632,84 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
   assert.deepEqual(publicHandoffClaim.evidence, []);
 });
 
+test("Kansas City Star waterway evidence preserves collective credit and the interim-route boundary", () => {
+  const sourceId = "SRC-WATER-KCSTAR-GO-WITH-FLOW-2007";
+  const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+  const assertions = knowledgeBank.sourceAssertions.filter(
+    (item) => item.sourceId === sourceId
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-WATER-KCSTAR-CLOSE-READ-2026"
+  );
+  const conceptClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATER-RAFT-CONCEPT"
+  );
+  const routeClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATER-GULF-ROUTE"
+  );
+  const throughlineClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATER-PARTICIPATORY-THROUGHLINE"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-WATER-GULF-ROUTE"
+  );
+  const projectNote = readFileSync(
+    "docs/knowledge-bank/projects/waterway-participation.md",
+    "utf8"
+  );
+  const publicRegistry = JSON.parse(
+    readFileSync("apps/www/src/data/knowledge-bank/public-registry.json", "utf8")
+  );
+
+  assert.equal(source.author, "Darryl Levings");
+  assert.equal(source.organization, "The Kansas City Star");
+  assert.equal(source.publishedAt, "2007-11-15");
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.equal(source.archiveUrl, undefined);
+  assert.equal(source.assetUrl, undefined);
+  assert.equal(source.media.publicDisplayStatus, "metadata-only");
+  assert.equal(assertions.length, 9);
+  assert.ok(
+    assertions.some(
+      (item) =>
+        item.id === "AST-WATER-KCSTAR-COLLECTIVE-CREW" &&
+        item.relationship === "bounds"
+    )
+  );
+  assert.ok(
+    assertions.some(
+      (item) =>
+        item.id === "AST-WATER-KCSTAR-GULF-BOUNDARY" &&
+        item.relationship === "bounds"
+    )
+  );
+  assert.equal(inquiry.resultStatus, "recovered");
+  assert.ok(
+    inquiry.limitations.some((item) => /predates the later Gulf terminus/i.test(item))
+  );
+  assert.ok([conceptClaim, routeClaim, throughlineClaim].every(Boolean));
+  assert.ok([conceptClaim, routeClaim, throughlineClaim].every((claim) => claim.collectiveWork));
+  assert.ok(
+    [conceptClaim, routeClaim, throughlineClaim].every((claim) =>
+      claim.evidence.some((item) => item.sourceId === sourceId)
+    )
+  );
+  assert.ok(
+    conceptClaim.antiClaims.some((item) => /alone designed or built/i.test(item))
+  );
+  assert.ok(
+    routeClaim.boundaries.some((item) => /predates the Gulf terminus/i.test(item))
+  );
+  assert.ok(task.sourceIds.includes(sourceId));
+  assert.match(projectNote, /approximately\s+12-by-13-foot raft/);
+  assert.match(projectNote, /published while the journey was still underway/);
+  assert.equal(
+    publicRegistry.sources.some((item) => item.id === sourceId),
+    false
+  );
+});
+
 test("NTER CHNG preserves co-creator credit and the official exhibition connection", () => {
   const claimIds = [
     "CLM-NTER-CHNG-CO-CREATION",

@@ -203,3 +203,12 @@ embodied-attention lens and Warren Sack's social-information-systems lens. The
 pass keeps the educational record protected, uses the public Good Times Open
 House article for the one public projection, and retains an unresolved
 installation-title conflict rather than silently normalizing it.
+
+The [Kansas City Star waterway ingestion](runs/2026-07-16-kansas-city-star-waterway-ingestion.md)
+close-reads a recovered November 2007 front-page report and strengthens the
+[waterway-participation record](projects/waterway-participation.md) with
+independent concept-origin corroboration, collective-crew credit, raft-system
+detail, interim route chronology, participatory method, operational disruption,
+and civic interpretation. The copyrighted scan remains outside the repository,
+and the article's pre-terminus date is preserved rather than converted into
+proof of the later Gulf endpoint.

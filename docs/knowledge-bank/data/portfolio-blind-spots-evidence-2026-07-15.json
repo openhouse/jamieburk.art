@@ -361,13 +361,13 @@
   "maintenanceSnapshot": {
     "reviewAgePolicyDays": 90,
     "inventory": {
-      "intake": 64,
-      "sources": 256,
-      "sourceAssertions": 350,
+      "intake": 65,
+      "sources": 257,
+      "sourceAssertions": 359,
       "claims": 112,
       "proofRecords": 44,
       "researchTasks": 59,
-      "researchInquiries": 28,
+      "researchInquiries": 29,
       "citationPages": 6
     },
     "heldClaimCount": 49,
@@ -389,6 +389,6 @@
       "dataOrKnowledgeSystems": 6,
       "aiEvaluation": 1
     },
-    "fingerprint": "b5bdd944db1c8bb3a36b0895e46d3699dd3f0bfa7108675210ccf99ecbd80597"
+    "fingerprint": "79b03be63cf71c1fb50741fe6c4e5eb1d53785a3b3fc28c9034c8843f84a4e7b"
   }
 }

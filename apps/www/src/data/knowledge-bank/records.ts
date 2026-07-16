@@ -21,6 +21,7 @@ import { jamiePersonalFacebookPostsFullPopulationBatch20260715 } from "./batches
 import { wowListSundayDinnerCallScriptLineageBatch20260715 } from "./batches/wowlist-sunday-dinner-callscript-lineage-2026-07-15.ts";
 import { nycacGovernmentValueBatch20260715 } from "./batches/nycac-government-value-2026-07-15.ts";
 import { ucscProfessorLensesBatch20260715 } from "./batches/ucsc-professor-lenses-2026-07-15.ts";
+import { kansasCityStarWaterwayBatch20260716 } from "./batches/kansas-city-star-waterway-2007-2026-07-16.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -250,7 +251,8 @@ const knowledgeBankInput = {
     ...wowListSundayDinnerCallScriptLineageBatch20260715.intake,
     ...nycacGovernmentValueBatch20260715.intake,
     ...nterChngArchiveBatch20260715.intake,
-    ...ucscProfessorLensesBatch20260715.intake
+    ...ucscProfessorLensesBatch20260715.intake,
+    ...kansasCityStarWaterwayBatch20260716.intake
   ],
   sources: [
     {
@@ -506,7 +508,8 @@ const knowledgeBankInput = {
     ...wowListSundayDinnerCallScriptLineageBatch20260715.sources,
     ...nycacGovernmentValueBatch20260715.sources,
     ...nterChngArchiveBatch20260715.sources,
-    ...ucscProfessorLensesBatch20260715.sources
+    ...ucscProfessorLensesBatch20260715.sources,
+    ...kansasCityStarWaterwayBatch20260716.sources
   ],
   sourceAssertions: [
     {
@@ -710,7 +713,8 @@ const knowledgeBankInput = {
     ...wowListSundayDinnerCallScriptLineageBatch20260715.sourceAssertions,
     ...nycacGovernmentValueBatch20260715.sourceAssertions,
     ...nterChngArchiveBatch20260715.sourceAssertions,
-    ...ucscProfessorLensesBatch20260715.sourceAssertions
+    ...ucscProfessorLensesBatch20260715.sourceAssertions,
+    ...kansasCityStarWaterwayBatch20260716.sourceAssertions
   ],
   claims: [
     {
@@ -830,9 +834,12 @@ const knowledgeBankInput = {
       projectionEligibility: "eligible",
       collectiveWork: true,
       projections: [{ key: "archive-note", text: "The Pitch reported that Jamie originated the idea for a recycled-material Missouri River expedition connecting participatory art, transportation history, and Kansas City's relationship with the river.", status: "hold", citationRequired: true, surfaces: [] }],
-      evidence: [{ sourceId: "SRC-WATER-PITCH-HUCK-FINN-2007", relationship: "direct-support", supports: ["concept origin", "recycled-material raft", "transportation-history and river context"], confidence: "high", renderCitation: true }],
-      boundaries: ["Credit the expedition as collective work and separate the supported Missouri River account from the still-unverified Kansas City-to-Gulf recollection."],
-      antiClaims: ["Jamie alone built the raft", "The reviewed article establishes the complete route to the Gulf of Mexico", "Jamie was the expedition's only participant"],
+      evidence: [
+        { sourceId: "SRC-WATER-PITCH-HUCK-FINN-2007", relationship: "direct-support", supports: ["concept origin", "recycled-material raft", "transportation-history and river context"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-WATER-KCSTAR-GO-WITH-FLOW-2007", relationship: "private-support", supports: ["independent concept-origin corroboration", "found-material bicycle-powered raft system", "collective crew", "Jamie's civic interpretation of the river"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["Credit the expedition as collective work and distinguish Jamie's documented origination of the idea from unresolved individual authorship of raft construction, operation, and participant experience."],
+      antiClaims: ["Jamie alone designed or built the raft", "The Kansas City Star article establishes the complete route to the Gulf of Mexico", "Jamie was the expedition's only participant"],
       researchInquiryIds: [],
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
@@ -848,9 +855,10 @@ const knowledgeBankInput = {
       projections: [{ key: "archive-note", text: "Independent reporting says Jamie and the collaborative raft crew reached the Gulf of Mexico four months after leaving Kansas City.", status: "hold", citationRequired: true, surfaces: [] }],
       evidence: [
         { sourceId: "SRC-WATER-PITCH-HUCK-FINN-2007", relationship: "context", supports: ["the expedition's concept, departure context, and collaborative character"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-WATER-KCSTAR-GO-WITH-FLOW-2007", relationship: "private-support", supports: ["July 21 West Bottoms departure", "interim position south of Baton Rouge", "collective crew", "the article's pre-terminus boundary"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-WATERWAYS-PITCH-GULF-2009-09-03", relationship: "direct-support", supports: ["Gulf of Mexico terminus", "four-month duration", "collaborative crew"], confidence: "high", renderCitation: true }
       ],
-      boundaries: ["The reporting establishes the terminus and duration, not every participant, stop, or route segment.", "Credit the expedition and journey as collective work."],
+      boundaries: ["The Kansas City Star establishes the departure date and interim geography but predates the Gulf terminus; the later Pitch follow-up establishes the terminus and duration.", "Together the sources still do not establish every participant, stop, or route segment.", "Credit the expedition and journey as collective work."],
       antiClaims: ["Jamie completed the journey alone", "The reviewed sources establish every route segment or participant contribution"],
       researchInquiryIds: [],
       reviewedAt: "2026-07-15",
@@ -884,6 +892,7 @@ const knowledgeBankInput = {
       evidence: [
         { sourceId: "SRC-PARTICIPATION-GOODTIMES-OPEN-HOUSE-2006", relationship: "direct-support", supports: ["participatory program structure", "communal inhabitation and decision-making"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-WATER-PITCH-HUCK-FINN-2007", relationship: "direct-support", supports: ["experiential river expedition", "place, transportation, and river relationship"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-WATER-KCSTAR-GO-WITH-FLOW-2007", relationship: "private-support", supports: ["encounters and invitations aboard as participatory method", "local support during disruption", "Jamie's civic and cultural interpretation of the river"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-WATER-CHARLOTTE-GREAT-ACCOMMODATIONS-2009", relationship: "corroborating", supports: ["later cities-on-the-water program", "continuity of subject"], confidence: "moderate", renderCitation: true }
       ],
       boundaries: ["Present this as an evidence-based synthesis across distinct collective projects, not as proof that Jamie solely authored participant experience or every element of each program."],
@@ -1102,7 +1111,8 @@ const knowledgeBankInput = {
     ...wowListSundayDinnerCallScriptLineageBatch20260715.claims,
     ...nycacGovernmentValueBatch20260715.claims,
     ...nterChngArchiveBatch20260715.claims,
-    ...ucscProfessorLensesBatch20260715.claims
+    ...ucscProfessorLensesBatch20260715.claims,
+    ...kansasCityStarWaterwayBatch20260716.claims
   ],
   researchTasks: [
     {
@@ -1113,10 +1123,10 @@ const knowledgeBankInput = {
       status: "in-progress",
       methodsPlanned: ["Search contemporaneous press and project sites", "Review public-safe expedition records", "Request bounded participant corroboration"],
       successCriteria: ["Establish route endpoints and dates with cited evidence", "Separate planned, attempted, and completed segments", "Record collective participant credit"],
-      sourceIds: ["SRC-WATER-PITCH-HUCK-FINN-2007", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
+      sourceIds: ["SRC-WATER-PITCH-HUCK-FINN-2007", "SRC-WATER-KCSTAR-GO-WITH-FLOW-2007", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
       claimIds: ["CLM-WATER-GULF-ROUTE"],
-      publicSummary: "Independent follow-up reporting establishes that the collaborative crew reached the Gulf of Mexico after four months; the complete stop-by-stop route remains outside the claim.",
-      reviewedAt: "2026-07-15"
+      publicSummary: "Contemporaneous reporting establishes a July 21 West Bottoms departure and an interim position south of Baton Rouge; independent follow-up reporting establishes that the collaborative crew later reached the Gulf after four months. The complete stop-by-stop route remains outside the claim.",
+      reviewedAt: "2026-07-16"
     },
     {
       id: "TASK-NAC-CREATION-ROLE",
@@ -1239,7 +1249,8 @@ const knowledgeBankInput = {
     ...wowListSundayDinnerCallScriptLineageBatch20260715.researchTasks,
     ...nycacGovernmentValueBatch20260715.researchTasks,
     ...nterChngArchiveBatch20260715.researchTasks,
-    ...ucscProfessorLensesBatch20260715.researchTasks
+    ...ucscProfessorLensesBatch20260715.researchTasks,
+    ...kansasCityStarWaterwayBatch20260716.researchTasks
   ],
   researchInquiries: [
     {
@@ -1275,7 +1286,8 @@ const knowledgeBankInput = {
     ...wowListSundayDinnerCallScriptLineageBatch20260715.researchInquiries,
     ...nycacGovernmentValueBatch20260715.researchInquiries,
     ...nterChngArchiveBatch20260715.researchInquiries,
-    ...ucscProfessorLensesBatch20260715.researchInquiries
+    ...ucscProfessorLensesBatch20260715.researchInquiries,
+    ...kansasCityStarWaterwayBatch20260716.researchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -1319,7 +1331,8 @@ const knowledgeBankInput = {
     ...nacPublicSourceBatch20260713.pages,
     ...socialAccountProductionBatch20260714.pages,
     ...nterChngArchiveBatch20260715.pages,
-    ...ucscProfessorLensesBatch20260715.pages
+    ...ucscProfessorLensesBatch20260715.pages,
+    ...kansasCityStarWaterwayBatch20260716.pages
   ]
 } satisfies KnowledgeBank;
 
