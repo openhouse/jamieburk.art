@@ -6,9 +6,11 @@ import { fileURLToPath } from "node:url";
 import { validateKnowledgeIntake } from "./lib/knowledge-intake-validation.mjs";
 import { validateFacebookEventsArchive } from
   "./lib/facebook-events-archive-validation.mjs";
+import { validateWowListFacebookPosts } from
+  "./lib/wowlist-facebook-posts-validation.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v15/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v16/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");
@@ -101,6 +103,15 @@ deterministic.set("FBEVENT-001", {
   evidence: facebookEventValidation.passed
     ? [facebookEventValidation.evidence]
     : facebookEventValidation.errors
+});
+
+const wowListFacebookPostValidation = validateWowListFacebookPosts();
+deterministic.set("WOWFB-001", {
+  score: wowListFacebookPostValidation.passed ? 1 : 0,
+  passed: wowListFacebookPostValidation.passed,
+  evidence: wowListFacebookPostValidation.passed
+    ? [wowListFacebookPostValidation.evidence]
+    : wowListFacebookPostValidation.errors
 });
 
 const criteriaById = new Map(suite.criteria.map((criterion) => [criterion.id, criterion]));

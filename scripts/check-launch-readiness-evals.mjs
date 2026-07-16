@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suitePath = path.join(repoRoot, "evals/launch-readiness/v15/evals.json");
+const suitePath = path.join(repoRoot, "evals/launch-readiness/v16/evals.json");
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
 const failures = [];
 

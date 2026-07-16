@@ -84,3 +84,36 @@ See
 [the full-population research note](../research/2026-07-15-wowlist-x-full-population.md)
 for reconciliation, source links, stakeholder classification, engagement
 boundaries, and lifecycle disposition.
+
+## Facebook Page post population
+
+An authenticated July 16, 2026 pass recovered the complete capture-date WOW
+List Facebook Page post stream. Three independent traversals rendered 79, 81,
+and 90 raw card variants but reconciled to the same 57 semantic posts after
+normalizing Facebook's lazy link-card duplication and randomized accessibility
+timestamp characters.
+
+The source field contains 30 unique WOW List destinations and 27 unique
+external destinations. Close reading developed five mission-relevant records
+around DIY-space funding, public-agency response, venue displacement,
+cultural-space safety, and community-space continuity. The Page also documents
+community-calendar routing, tour and event distribution, member feedback, and
+public-interest event collections.
+
+These are Page circulation and operating-practice records. They do not make
+WOW List the author, partner, administrator, or cause of the underlying work.
+One identifiable incoming comment is retained as a bounded reception specimen;
+it is not a traction metric. Current follower counts are mutable controls, not
+historical reach or adoption.
+
+Jamie remembers managing the project's social presence. That memory is stored
+as a protected research lead, keeps Richard's co-project credit visible, and
+remains out of public projections pending collaborator or archival
+corroboration.
+
+No new public case-study sentence was selected. The Facebook archive deepens
+the source field without making the composed portfolio carry the weight of the
+entire census. See
+[the Facebook post research note](../research/2026-07-16-wowlist-facebook-posts-full-population.md)
+for the population fingerprint, safe source inventory, limitations, and intake
+dispositions.

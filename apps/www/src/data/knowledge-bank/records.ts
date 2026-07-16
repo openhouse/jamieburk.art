@@ -85,6 +85,12 @@ import {
   facebookEventArchiveResearchInquiries20260716,
   facebookEventArchiveSourceRecords20260716
 } from "./facebook-events-archive-2026-07-16.ts";
+import {
+  wowListFacebookPostClaimRecords20260716,
+  wowListFacebookPostIntakeRecords20260716,
+  wowListFacebookPostResearchInquiries20260716,
+  wowListFacebookPostSourceRecords20260716
+} from "./wowlist-facebook-posts-2026-07-16.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -101,7 +107,8 @@ const knowledgeBankInput = {
     ...nycArtCXArchivalIntakeRecords20260715,
     ...urbanhermitFullPopulationIntakeRecords20260715,
     ...nycacFacebookEventIntake,
-    ...facebookEventArchiveIntakeRecords20260716
+    ...facebookEventArchiveIntakeRecords20260716,
+    ...wowListFacebookPostIntakeRecords20260716
   ],
   sources: [
     {
@@ -239,7 +246,8 @@ const knowledgeBankInput = {
     ...nycArtCXArchivalSourceRecords20260715,
     ...urbanhermitFullPopulationSourceRecords20260715,
     ...nycacFacebookEventSources,
-    ...facebookEventArchiveSourceRecords20260716
+    ...facebookEventArchiveSourceRecords20260716,
+    ...wowListFacebookPostSourceRecords20260716
   ],
   claims: [
     {
@@ -341,7 +349,8 @@ const knowledgeBankInput = {
     ...nycArtCXArchivalClaimRecords20260715,
     ...urbanhermitFullPopulationClaimRecords20260715,
     ...nycacFacebookEventClaims,
-    ...facebookEventArchiveClaimRecords20260716
+    ...facebookEventArchiveClaimRecords20260716,
+    ...wowListFacebookPostClaimRecords20260716
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -368,7 +377,8 @@ const knowledgeBankInput = {
     ...nycArtCXArchivalResearchInquiries20260715,
     ...urbanhermitFullPopulationResearchInquiries20260715,
     ...nycacFacebookEventInquiries,
-    ...facebookEventArchiveResearchInquiries20260716
+    ...facebookEventArchiveResearchInquiries20260716,
+    ...wowListFacebookPostResearchInquiries20260716
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
