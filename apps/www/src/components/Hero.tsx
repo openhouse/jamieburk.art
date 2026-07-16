@@ -15,17 +15,23 @@ export function Hero() {
             I create operating structure for complex public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I help teams move consequential, stakeholder-heavy work from
+            emerging requirements through implementation: clarifying scope,
+            coordinating dependencies, making decisions and risk visible,
+            supporting launch, and leaving durable workflows and handoffs.
+          </p>
+          <p className="mt-4 text-base leading-7 text-jb-ink/70">
+            I am looking for technical project management, product operations,
+            and implementation work where a team needs both structure and care
+            as the work takes shape.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <JBButton href="/work">View selected work</JBButton>
+            <JBButton href="/work/technical-operations">View role-fit proof</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
-            <JBButton href="/contact" variant="ghost">
-              Contact Jamie
+            <JBButton href="/work" variant="ghost">
+              Selected work
             </JBButton>
           </div>
           <p className="mt-6 text-sm font-medium text-jb-ink/64">

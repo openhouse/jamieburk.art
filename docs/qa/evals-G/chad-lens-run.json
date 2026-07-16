@@ -1,0 +1,40 @@
+{
+  "eval_id": "PR-015",
+  "title": "Courageous professional legibility through Chad's lens",
+  "candidate_commit": "5d872a92",
+  "baseline": {
+    "scores": [3, 4, 3],
+    "median": 3,
+    "pass": false,
+    "primary_gap": "Strong approved outcomes were separated from Jamie's action, their usable result, and their consequence."
+  },
+  "iteration": {
+    "number": 1,
+    "changes": [
+      "Moved the linked proof band directly beneath the homepage hero.",
+      "Rewrote five approved homepage proof projections with Jamie as actor and a clear usable end.",
+      "Linked every homepage proof to project or role-fit evidence.",
+      "Joined Harry J. Epstein Company modernization to the carefully attributed 2x growth contribution.",
+      "Joined NYC Artist Coalition and FairRentNYC infrastructure to collaborator continuity and public explanation."
+    ],
+    "claim_boundary": "No new claim or private evidence was introduced. Shared causality remains qualified through helped, contributed, co-built, co-founded, and collective-work language."
+  },
+  "confirmation_runs": [
+    {
+      "scores": [4, 4, 4],
+      "median": 4,
+      "pass": true
+    },
+    {
+      "scores": [4, 4, 4],
+      "median": 4,
+      "pass": true
+    }
+  ],
+  "representative_referral_sentences": [
+    "Jamie Burkart turns complex, stakeholder-heavy public-facing work into clear requirements, reliable workflows, launch support, and durable handoffs, with demonstrated impact across civic technology, e-commerce, and community platforms.",
+    "Jamie Burkart builds the operational backbone for complex public-facing technical teams, turning ambiguous, stakeholder-heavy work into launchable systems, clear decision records, and durable handoffs.",
+    "Jamie Burkart is a technical project manager and product-operations builder who turns complex public-facing work into requirements, workflows, decision records, launches, and durable handoffs, with demonstrated results across civic systems, e-commerce modernization, and community platforms."
+  ],
+  "decision": "pass"
+}
