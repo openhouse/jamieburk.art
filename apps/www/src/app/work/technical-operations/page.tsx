@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
@@ -92,22 +91,6 @@ export default function TechnicalOperationsPage() {
           </dl>
         </JBCard>
       </section>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {technicalOperationsProofRows.map((row) => (
-          <JBCard key={row.capability}>
-            <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
-            <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => (
-                <li className="flex gap-3" key={proof.id}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
-                </li>
-              ))}
-            </ul>
-          </JBCard>
-        ))}
-      </div>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

@@ -88,3 +88,24 @@ and the relationship between `records.ts` and `proofs.ts` was not explicit.
 - **Protected boundaries:** No source or claim is deleted from the knowledge
   bank. No held construction role, social engagement metric, resident reach,
   adoption, or policy causality is promoted.
+
+## Independent semantic observation: `f1893ded`
+
+Two fresh graders agreed that clarity, Chad's lens, decomposition, editorial
+composition, voice, archive-bias discipline, and current fit met the `0.8`
+threshold. Both held `SELECT-001` and `MAINTAIN-001` at `0.5`; one also held
+`CONSEQUENCE-001` at `0.5` because the HJE case did not explicitly classify
+observed use. The conservative minimum therefore failed all three.
+
+## Attempt 6: one proof path, one current pointer, explicit observed use
+
+- **Observed failure:** The Technical Operations page repeated eight secondary
+  proof bullets after its four selected examples; the root README still named
+  v19 as current; and HJE moved from output to growth contribution without
+  explicitly stating what use was observed or not separately measured.
+- **Hypothesis:** Removing the redundant grid, correcting the current-suite
+  pointer, and adding an observed-use column and bounded HJE sentence will meet
+  the three criteria without strengthening any outcome claim.
+- **Bounded change:** Keep the four-example Proof map; retain all other work in
+  `/work` and the bank; point the README to v22; distinguish maintained use from
+  unmeasured customer or staff effects.
