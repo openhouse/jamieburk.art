@@ -337,7 +337,7 @@ export const ucscMorseSackIntakeRecords20260716 = [
     ]
   },
   {
-    id: "INTAKE-MORSE-JAMIE-PRIVATE-CORRESPONDENCE-2026",
+    id: "INTAKE-MORSE-JAMIE-PROTECTED-CORRESPONDENCE-2026",
     capturedAt: "2026-07-16",
     capturedBy: "Jamie Burkart and Codex protected-source review",
     kind: "artifact-lead",
