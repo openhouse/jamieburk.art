@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-16",
+  "proofs": [
+    {
+      "id": "CURRENT-HJE-OPERATIONS",
+      "projectId": "PRJ-HARRY-J-EPSTEIN",
+      "year": 2026,
+      "proofType": "ongoing private-sector operations",
+      "corroborationStatus": "self-reported-and-protected-first-party",
+      "outcomeStatus": "self-reported",
+      "applicationApproval": "approved-with-qualifier",
+      "nextAction": "Seek a bounded collaborator attestation or privacy-preserving aggregate."
+    },
+    {
+      "id": "CURRENT-SOURCE-BACKED-TEAM-MEMORY",
+      "projectId": "PRJ-SOURCE-BACKED-TEAM-MEMORY",
+      "year": 2026,
+      "proofType": "method and consulting-offer design",
+      "corroborationStatus": "first-party",
+      "outcomeStatus": "not-yet-delivered",
+      "applicationApproval": "internal-brief-only",
+      "nextAction": "Complete one bounded pilot and obtain participant-approved delivery evidence."
+    },
+    {
+      "id": "CURRENT-AI-EVALS-COMPLETION",
+      "projectId": "PRJ-AI-EVALS-PROFESSIONAL-DEVELOPMENT",
+      "year": 2026,
+      "proofType": "professional development",
+      "corroborationStatus": "certificate-corroborated",
+      "outcomeStatus": "training-not-delivery",
+      "applicationApproval": "approved-as-training",
+      "nextAction": "Pair training with a delivered evaluation system and observed use."
+    },
+    {
+      "id": "CURRENT-CRS-OPERATING-MEMORY",
+      "projectId": "PRJ-FAIR-RENT-CRS",
+      "year": 2026,
+      "proofType": "operating plan, provenance, and shared memory",
+      "corroborationStatus": "protected-first-party-and-collaborator-context",
+      "outcomeStatus": "adoption-not-established",
+      "applicationApproval": "internal-brief-only",
+      "nextAction": "Seek collaborator-approved evidence of adoption, continued use, or decision improvement."
+    },
+    {
+      "id": "CURRENT-CLAUDETTE-AR-HANDOFF",
+      "projectId": "PRJ-CLAUDETTE-THEATRE-AR",
+      "year": 2022,
+      "proofType": "augmented-reality implementation handoff",
+      "corroborationStatus": "protected-collaborator-correspondence",
+      "outcomeStatus": "public-launch-not-established",
+      "applicationApproval": "internal-brief-only",
+      "nextAction": "Obtain collaborator-approved public wording and delivery endpoint."
+    }
+  ]
+}

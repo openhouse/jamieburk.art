@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "portfolio-blind-spots-v1",
+  "title": "Portfolio blind-spot governance",
+  "objective": "Turn seven known portfolio blind spots into inspectable evidence gates without treating process readiness as proof that an external dependency has been satisfied.",
+  "governanceStopCondition": {
+    "score": 100,
+    "falseClosureCount": 0
+  },
+  "closureRule": "Closure progress is reported separately and is not a passing gate. Collaborator confirmation, unfamiliar-reader validation, and media rights require real external evidence.",
+  "criteria": [
+    {
+      "id": "collaborator-corroboration",
+      "name": "Collaborator corroboration",
+      "weight": 15,
+      "taskId": "TASK-PORTFOLIO-COLLABORATOR-CORROBORATION",
+      "question": "Do job-critical role and outcome claims have bounded confirmation from people who directly worked with Jamie?",
+      "closureDefinition": "At least three public-safe, permission-scoped collaborator confirmations cover distinct projects and specify Jamie's action, what became usable, collective context, and reuse boundary.",
+      "externalEvidenceRequired": true
+    },
+    {
+      "id": "contemporary-implementation",
+      "name": "Contemporary implementation proof",
+      "weight": 15,
+      "taskId": "TASK-PORTFOLIO-CONTEMPORARY-IMPLEMENTATION",
+      "question": "Can a present-day employer inspect recent paid technical, product-operations, implementation, or AI workflow work?",
+      "closureDefinition": "At least three current-role proofs from 2022-2026 are corroborated, outcome-bearing, and approved for an application surface.",
+      "externalEvidenceRequired": true
+    },
+    {
+      "id": "human-audience-validation",
+      "name": "Unfamiliar-reader validation",
+      "weight": 15,
+      "taskId": "TASK-PORTFOLIO-HUMAN-AUDIENCE-VALIDATION",
+      "question": "Can unfamiliar hiring readers identify Jamie's role, strongest proof, and next action without coaching?",
+      "closureDefinition": "At least five bounded sessions across two target reader groups meet the comprehension, recall, navigation, and interview-intent thresholds.",
+      "externalEvidenceRequired": true
+    },
+    {
+      "id": "visual-proof-rights",
+      "name": "Visual proof and rights",
+      "weight": 15,
+      "taskId": "TASK-PORTFOLIO-VISUAL-PROOF-CLEARANCE",
+      "question": "Can readers inspect the work through rights-cleared, contextually appropriate visual evidence?",
+      "closureDefinition": "At least three visual proofs across three projects have cleared rights, resolved consent, factual captions, source lineage, and an approved display destination.",
+      "externalEvidenceRequired": true
+    },
+    {
+      "id": "source-maturation",
+      "name": "Claim-bearing source maturation",
+      "weight": 15,
+      "taskId": "TASK-PORTFOLIO-SOURCE-MATURATION",
+      "question": "Are high-consequence public claims backed by explicitly close-read sources rather than archival volume or metadata alone?",
+      "closureDefinition": "Every source supporting front-door claims is dispositioned, and at least 80 percent are explicitly close-read or replaced by a stronger source with the remainder bounded.",
+      "externalEvidenceRequired": false
+    },
+    {
+      "id": "outcome-evidence",
+      "name": "Outcome evidence",
+      "weight": 15,
+      "taskId": "TASK-PORTFOLIO-OUTCOME-EVIDENCE",
+      "question": "Does the portfolio distinguish outputs, observed use, outcomes, and causal contribution?",
+      "closureDefinition": "At least four major case studies carry a corroborated outcome or durable-use claim, with output, use, outcome, and causality represented as separate fields.",
+      "externalEvidenceRequired": true
+    },
+    {
+      "id": "audience-compositions",
+      "name": "Audience-specific compositions",
+      "weight": 10,
+      "taskId": "TASK-PORTFOLIO-AUDIENCE-COMPOSITIONS",
+      "question": "Can the governed bank compose distinct application arguments without changing the underlying facts?",
+      "closureDefinition": "Four internal briefs define distinct audiences, goals, selection criteria, evidence palettes, exclusions, and next actions without widening public approval.",
+      "externalEvidenceRequired": false
+    }
+  ]
+}

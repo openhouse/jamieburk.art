@@ -68,6 +68,12 @@ promotion, retrieval, and visual-feedback operations;
 [projects/callnyc.md](projects/callnyc.md) for the first complete citation pilot.
 
 Research runs may also leave a human-readable public-safe map under `research/`.
+The [portfolio blind-spot ledger](blind-spots.md) governs collaborator
+corroboration, contemporary implementation proof, unfamiliar-reader testing,
+visual rights, source maturation, outcome evidence, and audience-specific
+application briefs. Run `npm run evals:blind-spots` to verify that unresolved
+external work remains explicit rather than being converted into false closure.
+
 The [July 13 ten-source ingestion](research/2026-07-13-ten-source-ingestion.md)
 shows how new sources become observations, bounded claims, research questions,
 and selective exact-surface projections.

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-16",
+  "scope": "Sources supporting active claims on the homepage, HTML resume, Technical Operations page, or downloadable resume.",
+  "sources": [
+    { "sourceId": "SRC-WOWLIST-PRODUCTION-ARCHIVE-ANALYSIS-2026-07-15", "disposition": "close-read", "nextAction": "Retain current boundary." },
+    { "sourceId": "SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15", "disposition": "close-read", "nextAction": "Retain current threshold definition." },
+    { "sourceId": "SRC-SUNDAY-DINNER-WORKING-LEDGER-2012-2021", "disposition": "close-read", "nextAction": "Keep protected and do not convert ledger markers into attendance." },
+    { "sourceId": "SRC-KCSF-FACEBOOK-PROTECTED-RESEARCH-2026-07-16", "disposition": "review-needed", "nextAction": "Add explicit close-read metadata or replace with decomposed sources." },
+    { "sourceId": "SRC-KCSF-FACEBOOK-PAGE-2026-07-16", "disposition": "review-needed", "nextAction": "Confirm the exact live-page sections supporting the front-door claim." },
+    { "sourceId": "SRC-KCSF-CAMPAIGN-SITE-2026-07-16", "disposition": "close-read", "nextAction": "Retain action-route boundary." },
+    { "sourceId": "SRC-KCSF-DIGITAL-OPERATIONS-ARCHIVE-2026-07-09", "disposition": "review-needed", "nextAction": "Separate code, deployment, and role observations." },
+    { "sourceId": "SRC-KCSF-NAMING-ROLE-MEMORY-2026-07-16", "disposition": "review-needed", "nextAction": "Seek organizer confirmation; keep first-person memory qualified." },
+    { "sourceId": "SRC-CALLNYC-POLITICO-2016-03-14", "disposition": "review-needed", "nextAction": "Record exact locator and article-level role boundary." },
+    { "sourceId": "SRC-CALLNYC-GITHUB-REPOSITORY", "disposition": "review-needed", "nextAction": "Record code-history and ownership locators for the independent follow-on claim." },
+    { "sourceId": "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "disposition": "close-read", "nextAction": "Retain weekly open-hosting boundary." },
+    { "sourceId": "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE", "disposition": "review-needed", "nextAction": "Add explicit close-read metadata and preserve participant privacy." },
+    { "sourceId": "SRC-JAMIE-APPROVED-RESUME-2026-07-13", "disposition": "review-needed", "nextAction": "Record explicit artifact close-read metadata after PDF-to-site reconciliation." },
+    { "sourceId": "SRC-HJE-REVENUE-CONTEXT-2026", "disposition": "close-read", "nextAction": "Seek independent corroboration without exposing private business records." },
+    { "sourceId": "SRC-KC-TOWN-HALL-CCED-2019", "disposition": "review-needed", "nextAction": "Record exact proposal and recommendation locators as source metadata." },
+    { "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642", "disposition": "review-needed", "nextAction": "Record appropriation locator and no-disbursement boundary." },
+    { "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", "disposition": "review-needed", "nextAction": "Record acceptance and negotiation-authority locator." },
+    { "sourceId": "SRC-KC-TOWN-HALL-CCED-UPDATE-2022", "disposition": "review-needed", "nextAction": "Record funding-agreement status locator." },
+    { "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-240317", "disposition": "review-needed", "nextAction": "Record reappropriation locator and endpoint boundary." },
+    { "sourceId": "SRC-KC-TOWN-HALL-CCED-2021", "disposition": "review-needed", "nextAction": "Record non-disbursement status locator." },
+    { "sourceId": "SRC-196-ARTISTS-RESIDENCY-ONBOARDING-2023", "disposition": "close-read", "nextAction": "Keep scale self-reported and participant records protected." }
+  ]
+}
