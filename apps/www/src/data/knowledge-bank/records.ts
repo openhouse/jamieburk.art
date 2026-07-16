@@ -236,6 +236,7 @@ const knowledgeBankInput = {
         "July 21 launch from Kansas City's West Bottoms",
         "a roughly 12-by-13-foot raft built from reclaimed materials with bicycle-powered paddlewheel propulsion",
         "reported passage beyond the 1,000-mile marker and location south of Baton Rouge by November 15, 2007",
+        "a reported 51-day interruption near Vicksburg followed by legal, material, local, and crew-supported adaptation and return to the river",
         "a living-experience purpose centered on waterways and encounters with people along them",
         "Jamie's public interpretation of the river as connective cultural space rather than only a boundary or industrial corridor",
         "front-page Kansas City Star coverage"
@@ -1367,7 +1368,7 @@ const knowledgeBankInput = {
         {
           sourceId: "SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007",
           relationship: "direct-support",
-          supports: ["project identity", "Jamie's originating idea", "named core crew", "West Bottoms launch", "reclaimed-material bicycle-powered raft", "travel into Louisiana", "passage beyond the 1,000-mile marker", "public-purpose interpretation"],
+          supports: ["project identity", "Jamie's originating idea", "named core crew", "West Bottoms launch", "reclaimed-material bicycle-powered raft", "travel into Louisiana", "passage beyond the 1,000-mile marker", "51-day interruption and supported adaptive return", "public-purpose interpretation"],
           locator: "Front page and A4 continuation.",
           confidence: "high",
           renderCitation: false
@@ -1384,6 +1385,7 @@ const knowledgeBankInput = {
         "Always credit Libby Hendon and Laura Mattingly as the other named core crew members; friends, hosts, legal support, and local communities also materially supported the journey.",
         "The Kansas City Star establishes progress into Louisiana and passage beyond the 1,000-mile marker, not arrival at the Gulf or an exact final endpoint.",
         "The record attributes the originating idea to Jamie but does not assign him every fabrication, navigation, logistics, documentation, public-engagement, or safety task.",
+        "Describe the interruption and return as a crew-and-community recovery network; do not convert it into a solo resilience claim.",
         "The project is historical evidence of participatory artistic and civic practice, not current authorization or guidance for river travel."
       ],
       antiClaims: [
@@ -1699,6 +1701,7 @@ const knowledgeBankInput = {
         "The article attributes the initial dream, vision, or idea to Jamie and names Libby Hendon and Laura Mattingly as the other core crew members.",
         "The crew launched from Kansas City's West Bottoms on July 21 and, by publication, was reported south of Baton Rouge after passing the 1,000-mile marker.",
         "The article describes a roughly 12-by-13-foot raft made from reclaimed building material, civic refuse, and soda-manufacturing containers, with two bicycles linked to a paddlewheel.",
+        "The article reports a 51-day interruption near Vicksburg and a supported return involving local food and shelter, free legal assistance, temporary work, raft retrieval, repairs, navigation equipment, and crew adaptation.",
         "Jamie framed the river as an overlooked connective cultural space linking Kansas City's West Bottoms with Delta communities.",
         "The record also documents a wider support ecology involving friends who joined segments, Vicksburg residents, legal assistance, hosts, and public agencies."
       ],
@@ -1713,7 +1716,7 @@ const knowledgeBankInput = {
         "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
         "SRC-WATERWAYS-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009"
       ],
-      publicSummary: "The November 15, 2007 Kansas City Star front page independently attributes the expedition's originating idea to Jamie and documents Jamie, Libby Hendon, and Laura Mattingly carrying a reclaimed-material, bicycle-powered raft from Kansas City's West Bottoms into Louisiana beyond the 1,000-mile marker. Gulf arrival, exact endpoint, complete task allocation, and republication rights remain unresolved."
+      publicSummary: "The November 15, 2007 Kansas City Star front page independently attributes the expedition's originating idea to Jamie and documents Jamie, Libby Hendon, and Laura Mattingly carrying a reclaimed-material, bicycle-powered raft from Kansas City's West Bottoms into Louisiana beyond the 1,000-mile marker, including a 51-day interruption and supported adaptive return. Gulf arrival, exact endpoint, complete task allocation, and republication rights remain unresolved."
     },
     {
       id: "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
@@ -1806,7 +1809,7 @@ const knowledgeBankInput = {
           text: "In 2007, Jamie conceived Release Yourself onto the Water until it Tastes of Salt; The Kansas City Star documented Jamie, Libby Hendon, and Laura Mattingly traveling from Kansas City's West Bottoms into Louisiana beyond the 1,000-mile marker on a reclaimed-material, bicycle-powered raft.",
           status: "direct-support",
           sourceIds: ["SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007", "SRC-WATERWAYS-PITCH-HUCK-FINN-2007"],
-          sourceSupport: ["Jamie originated the idea", "project title", "Libby Hendon and Laura Mattingly as core crew", "West Bottoms launch", "Louisiana progress", "passage beyond the 1,000-mile marker", "reclaimed-material bicycle-powered raft"],
+          sourceSupport: ["Jamie originated the idea", "project title", "Libby Hendon and Laura Mattingly as core crew", "West Bottoms launch", "Louisiana progress", "passage beyond the 1,000-mile marker", "reclaimed-material bicycle-powered raft", "51-day interruption and crew-and-community-supported adaptive return"],
           boundaries: ["Separate Jamie's conception from the crew's collective travel and the wider support ecology.", "The sources do not establish Gulf arrival, the exact endpoint, a complete collaborator roster, or individual responsibility for every task."],
           decisionUse: "Supports a governed reserve claim about project conception, material systems-making, sustained collaborative execution, and geographic scale without overstating completion or sole authorship."
         },

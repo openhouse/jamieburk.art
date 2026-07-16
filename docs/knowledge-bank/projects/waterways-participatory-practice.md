@@ -39,6 +39,9 @@ repository. Its article text and photographs are not republished.
   bicycles linked to a paddlewheel.
 - By publication, the crew was reported south of Baton Rouge and beyond the
   1,000-mile marker.
+- The article reports a 51-day interruption near Vicksburg and a supported
+  return involving local food and shelter, free legal assistance, temporary
+  work, raft retrieval, repairs, navigation equipment, and crew adaptation.
 - Friends joined portions of the journey, and the record identifies material
   support from Vicksburg residents, hosts, legal assistance, and public
   agencies.
@@ -53,7 +56,9 @@ Laura Mattingly formed the named core crew, within a larger support ecology.
 
 **Action:** The crew translated an artistic and civic proposition into a
 material vessel, route, daily operating practice, public encounters, and an
-extended collaborative journey.
+extended collaborative journey. After a 51-day interruption, the crew and a
+wider local, legal, and material support network adapted the vessel and made a
+return to the river possible.
 
 **Artifact:** A reclaimed-material raft with bicycle-powered paddlewheel
 propulsion, supported by launch events, documentation, public reporting, and
@@ -69,6 +74,8 @@ reduced to infrastructure.
   core expedition crew.
 - Do not convert Jamie's documented conception into sole authorship of the
   journey, vessel, logistics, documentation, public encounters, or outcome.
+- Do not recast the interruption and return as Jamie's solo resilience story;
+  the source documents crew adaptation and a community-supported recovery.
 - Say Kansas City to Louisiana, south of Baton Rouge, or beyond the 1,000-mile
   marker. Do not claim Gulf arrival without additional endpoint evidence.
 - Do not treat the historical journey as current safety, legal, navigation, or

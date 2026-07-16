@@ -117,6 +117,7 @@ test("new source leads preserve claim boundaries", () => {
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   assert.ok(sourceById.get("SRC-WATERWAYS-PITCH-HUCK-FINN-2007").doesNotEstablish.some((item) => /Gulf of Mexico/i.test(item)));
   assert.ok(sourceById.get("SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007").supportsGenerally.some((item) => /1,000-mile marker/i.test(item)));
+  assert.ok(sourceById.get("SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007").supportsGenerally.some((item) => /51-day interruption/i.test(item)));
   assert.ok(sourceById.get("SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007").doesNotEstablish.some((item) => /arrival at the Gulf of Mexico/i.test(item)));
   assert.ok(sourceById.get("SRC-WATERWAYS-KC-STAR-GO-WITH-FLOW-2007").doesNotEstablish.some((item) => /permission to republish/i.test(item)));
   assert.ok(sourceById.get("SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19").doesNotEstablish.some((item) => /alone repealed/i.test(item)));

@@ -31,7 +31,11 @@ the unresolved boundaries, and left the current hiring site unchanged.
 6. Separated project conception, crew identity, artifact form, route progress,
    public purpose, and support ecology from endpoint, complete task allocation,
    and publication-rights questions.
-7. Kept the source PDF, full article text, newspaper photographs, unrelated
+7. Compared the close reading against the independently developed
+   `feature/evals-H` treatment, retaining its stronger recovery-network insight
+   without importing that branch's different data model or weakening this
+   branch's established governance.
+8. Kept the source PDF, full article text, newspaper photographs, unrelated
    page content, and the reporter's contact details outside Git.
 
 ## New Defensible Knowledge
@@ -50,6 +54,9 @@ Additional supported context:
 - it used reclaimed building material, civic refuse, soda-manufacturing
   containers, and bicycle-powered paddlewheel propulsion;
 - the article reported the crew south of Baton Rouge by November 15, 2007;
+- the article reported a 51-day interruption near Vicksburg followed by a
+  crew-and-community-supported return involving local hospitality, free legal
+  help, temporary work, raft retrieval, repairs, and navigation equipment;
 - the journey was framed as a living experience on the rivers and with people
   encountered along them;
 - Jamie interpreted the river as connective cultural space between Kansas
@@ -88,6 +95,8 @@ Additional supported context:
   - added a separate proposition preserving Jamie's river-as-connective-space
     interpretation;
   - updated research questions, boundaries, review date, and reviewers.
+  - incorporated the parallel `feature/evals-H` pass's recovery-network insight
+    as bounded support, without adopting incompatible record identifiers.
 
 ### Human-Readable Knowledge
 
