@@ -1,0 +1,577 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "version": 12,
+  "objective": "Make Jamie's portfolio safe, accurate, legible, persuasive, and production-ready for job applications without weakening evidence or collective-credit boundaries.",
+  "target": {
+    "hardGatePolicy": "all-pass",
+    "minimumScoredCriterion": 0.8,
+    "minimumWeightedScore": 0.9,
+    "requiredConsecutivePassingRuns": 2,
+    "requiredIndependentSemanticGraders": 2,
+    "humanApprovalPolicy": "all-required-approvals-recorded"
+  },
+  "optimizationOrder": [
+    "hard_gate_pass_rate",
+    "minimum_scored_criterion",
+    "weighted_score",
+    "change_complexity"
+  ],
+  "protectedInvariants": [
+    "No private source material, raw transcripts, private paths, credentials, or unapproved photographs are exposed.",
+    "No public claim becomes stronger than its knowledge-bank projection and evidence relationship.",
+    "Collective work retains collective credit and explicit role boundaries.",
+    "Not recovered never becomes did not exist.",
+    "Accessibility, citation coverage, and source limitations may not regress to improve another score.",
+    "A human approval gate may not be satisfied by an LLM, repository edit, inferred consent, or absence of objection."
+  ],
+  "hillClimb": {
+    "unitOfChange": "one bounded hypothesis targeting one failing criterion",
+    "acceptWhen": [
+      "all previously passing hard gates remain passing",
+      "no protected invariant regresses",
+      "the targeted criterion improves",
+      "the lexicographic objective improves or stays equal with lower complexity"
+    ],
+    "rejectWhen": [
+      "a score rises by deleting evidence, caveats, credits, or accessibility affordances",
+      "a human approval is guessed or self-certified by an agent",
+      "the change improves only the grader-facing wording rather than the reader experience",
+      "the change introduces an unrelated redesign or broad refactor"
+    ],
+    "stopWhen": [
+      "the suite target is reached in the required consecutive independent runs",
+      "the next failing item requires human approval or rights clearance",
+      "three bounded attempts fail to improve the same criterion",
+      "the proposed improvement conflicts with a protected invariant"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "FACT-001",
+      "name": "NYC Artist Coalition chronology agrees across surfaces",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "A hiring reader should not encounter conflicting start dates for Jamie's NYC Artist Coalition role.",
+      "evidence": [
+        "apps/www/src/data/work.ts",
+        "apps/www/src/data/proofs.ts",
+        "docs/knowledge-bank/claims.md",
+        "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+      ],
+      "passCondition": "The combined case-study metadata names 2017 onward, or explicitly separates the 2017 coalition history from a later Commercial Rent Stabilization workstream; it must not imply that the co-founder role began only in 2024.",
+      "antiGaming": [
+        "Do not delete the date from every surface merely to remove the contradiction.",
+        "Do not rewrite the resume without reconciling the knowledge bank."
+      ]
+    },
+    {
+      "id": "FACT-002",
+      "name": "CallNYC hours remain attributed to Civic Hall's announcement",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "The public sentence should say what the source can prove and no more.",
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/records.ts",
+        "apps/www/src/data/knowledge-bank/public-registry.json",
+        "apps/www/src/content/work/callnyc.mdx"
+      ],
+      "passCondition": "The active case-study projection attributes the 1-3 p.m. window to Civic Hall's announcement and does not present the announced window as independently observed event duration.",
+      "antiGaming": [
+        "Do not remove the citation.",
+        "Do not replace the time with a photograph timestamp.",
+        "Do not convert not recovered into never existed."
+      ]
+    },
+    {
+      "id": "CTA-001",
+      "name": "Resume actions describe their actual destination",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "A button labeled Download resume should download the PDF; a button opening /resume should say View resume.",
+      "evidence": [
+        "apps/www/src/components/Hero.tsx",
+        "apps/www/src/components/ContactCTA.tsx",
+        "apps/www/src/components/CaseStudyLayout.tsx",
+        "apps/www/src/app/resume/page.tsx"
+      ],
+      "passCondition": "No action labeled Download resume points to /resume without a download; direct PDF actions are labeled Download resume PDF.",
+      "antiGaming": [
+        "Do not remove the resume action.",
+        "Do not add a download attribute to an HTML route."
+      ]
+    },
+    {
+      "id": "INTAKE-001",
+      "name": "Every submitted fragment has a stable public-safe intake record",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "A URL, memory, possible claim, artifact lead, or research question should enter the knowledge bank without being silently lost or prematurely promoted.",
+      "evidence": [
+        "knowledgeBank.intakes",
+        "required seed intake IDs in scripts/lib/knowledge-intake-validation.mjs",
+        "docs/knowledge-bank/intake-workflow.md"
+      ],
+      "passCondition": "Every required submitted fragment has one unique INTAKE ID, captured date, kind, public-safe summary, project hints, evidence maturity, public-use policy, editorial state, and next action.",
+      "antiGaming": [
+        "Do not merge distinct memories merely to reduce the intake count.",
+        "Do not copy raw private material or machine-local paths into the public repository.",
+        "Do not mark an unread source as source-reviewed."
+      ]
+    },
+    {
+      "id": "RESEARCH-001",
+      "name": "New public-source research is uniquely normalized and claim-linked",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "A requested source-research batch should produce distinct, close-read knowledge records rather than a list of links or repeated evidence.",
+      "evidence": [
+        "required research source IDs in scripts/lib/knowledge-intake-validation.mjs",
+        "apps/www/src/data/knowledge-bank/intake-2026-07-13.ts",
+        "docs/knowledge-bank/research/2026-07-13-ten-source-intake.md",
+        "docs/knowledge-bank/research/2026-07-14-kc-town-hall-council-action.md"
+      ],
+      "passCondition": "Every required close-read public source has a unique canonical URL, explicit supports and does-not-establish boundaries, at least one intake edge, and at least one atomic claim edge.",
+      "antiGaming": [
+        "Do not count duplicate URLs or mirrors as distinct research sources.",
+        "Do not satisfy the gate with unread links or source records that have no claim relationship.",
+        "Do not strengthen Jamie's role beyond what each source can establish."
+      ]
+    },
+    {
+      "id": "ARCHIVE-001",
+      "name": "iCloud archival production is source-aware, bounded, and selectively projected",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Working archives should deepen the knowledge bank without turning private folders, unread placeholders, planning documents, or job-search synthesis into unsupported public proof.",
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/archive-intake-2026-07-14.ts",
+        "docs/knowledge-bank/research/2026-07-14-icloud-teams-archive-production.md",
+        "apps/www/src/content/work/fair-rent-nyc.mdx",
+        "iCloud archive validation in scripts/lib/knowledge-intake-validation.mjs"
+      ],
+      "passCondition": "Jamie Projects History, CRS, and job-hunt each contribute normalized close-read records; every required source has explicit support and limitation boundaries plus intake and claim or inquiry edges; authored plans remain distinct from completed work; unread iCloud placeholders remain bounded research status; protected sources expose no URL or local path; and only explicitly selected, public-safe claims reach the website.",
+      "antiGaming": [
+        "Do not count filenames, logical sizes, or project-overview mentions as close reading when the source data fork is unreadable.",
+        "Do not treat a resume, job-hunt synthesis, authored plan, or proposal as independent proof of outcomes.",
+        "Do not publish raw collaboration records, private correspondence, copyrighted clippings, participant data, or machine-local paths.",
+        "Do not project every defensible archive claim; preserve an unsurfaced research and evidence layer."
+      ]
+    },
+    {
+      "id": "GDRIVE-001",
+      "name": "Google Shared Drive archival production is governed, source-aware, and selectively projected",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Collaborative working drives should deepen Jamie's professional record without converting access, file presence, private rosters, authored drafts, or visual holdings into unsupported public proof.",
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/shared-drive-intake-2026-07-14.ts",
+        "docs/knowledge-bank/research/2026-07-14-google-shared-drive-archive-production.md",
+        "apps/www/src/content/work/fair-rent-nyc.mdx",
+        "apps/www/src/content/work/196-sunday-dinner.mdx",
+        "Shared Drive validation in scripts/lib/knowledge-intake-validation.mjs"
+      ],
+      "passCondition": "The dated inventory preserves all 110 accessible Shared Drives as governed scope while explicitly limiting close reading to professionally relevant, text-rich records; every required close-read source has support and does-not-establish boundaries plus intake and claim or inquiry edges; private Drive identifiers and links, credentials, meeting links, contacts, row-level records, and sensitive personal or collaborator material remain absent; revision attribution retains collective credit; authored proposals and research drafts remain distinct from outcomes and corroboration; visual-only holdings remain rights-and-role research; aggregate participation counts remain only partially recovered; and exactly four selected public-safe workflow claims reach the website through non-rendered private-support relationships.",
+      "antiGaming": [
+        "Do not describe inventory, file listings, or drive access as file-by-file close reading, authorship, role evidence, consent, or publication permission.",
+        "Do not expose Shared Drive or file identifiers, links, credentials, meeting links, contact records, quotations, or row-level data.",
+        "Do not use the NYC Artist Coalition draft as independent corroboration or the visual holdings as role proof.",
+        "Do not convert the Comptroller scoping brief into an agency meeting, agreement, adoption, implementation, or released dataset.",
+        "Do not use one residency record or an operations workbook to certify aggregate gathering or resident-artist counts.",
+        "Do not project every defensible Shared Drive claim; retain held and research layers."
+      ]
+    },
+    {
+      "id": "SOCIAL-001",
+      "name": "Project social-account archival production is bounded and queryable",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Public social records should deepen the portfolio while keeping account identity, teammate authorship, engagement, endorsement, reach, and policy outcomes distinct.",
+      "evidence": [
+        "knowledgeBank.socialAccounts",
+        "apps/www/src/data/knowledge-bank/social-media-intake-2026-07-14.ts",
+        "apps/www/src/data/knowledge-bank/wowlist-x-full-population-2026-07-15.ts",
+        "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
+        "apps/www/src/data/knowledge-bank/kc-town-hall-x-full-population-2026-07-15.ts",
+        "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+        "docs/knowledge-bank/research/2026-07-14-project-social-media-archive-production.md",
+        "docs/knowledge-bank/research/2026-07-15-wowlist-x-full-population.md",
+        "docs/knowledge-bank/research/2026-07-15-kctownhall-x-full-population.md",
+        "apps/www/src/content/work/callnyc.mdx",
+        "apps/www/src/content/work/fair-rent-nyc.mdx",
+        "apps/www/src/content/work/wowlist.mdx",
+        "apps/www/src/content/work/kc-town-hall.mdx",
+        "social-media validation in scripts/lib/knowledge-intake-validation.mjs"
+      ],
+      "passCondition": "Four verified project accounts retain dedicated or shared project relationships; every dated profile control equals recovered plus unresolved slots; @NYCArtC retains edges to Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC; required sources, claims, inquiries, and intake records resolve; CallNYC's five-member floor and NYC Artist Coalition's 24-record, seven-member-account floor remain selected with direct status evidence; WOW List preserves a 38-record deduplicated displayed-population corpus with 16 originals, 6 replies, 16 reposts, all 35 posted URLs, nine curated source leads, a bounded 16-record incoming inventory yielding 10 mission-relevant third-party accounts across four groups and nine independently posted WOW List URLs, plus a dated 43-unit visible-engagement snapshot kept out of headline impact language; KC Town Hall preserves the full 183-record displayed-account population reconciled from 170 Posts records and 188 rendered Replies cards after separating five other-account context cards, with a 142-original, 13-reply, and 28-repost type breakdown, 31 distinct posted URLs, nine curated mission-relevant source records, 100 tire-related records, 12 survey-linked records, three direct Council-member response records, one external tire-dropoff corroboration record, and a dated 267-unit visible-engagement snapshot kept out of headline impact language; collective authorship, mutable-count, changing-stewardship, not-recovered, endorsement, reach, attendance, adoption, and causality boundaries remain explicit; and no raw post text, phone numbers, private messages, analytics, credentials, session data, private paths, or local research artifacts enter the public repository.",
+      "antiGaming": [
+        "Do not count one-way tags, follows, unattributed aggregate reactions, or inferred views as direct engagement.",
+        "Do not treat current profile counts as platform exports, deletion histories, historical reach, or proof that no older post was deleted.",
+        "Do not infer that Jamie authored every post from account establishment, custody, writing style, or project leadership.",
+        "Do not convert member-account behavior into official Council endorsement, adoption, reach, or policy causality.",
+        "Do not represent the complete displayed @wowlist population as a complete history of deleted, private, withheld, or unindexed activity.",
+        "Do not turn WOW List's bounded incoming search, visible interactions, or independently posted URLs into a total reception census, adoption metric, event-attendance measure, endorsement, or impact claim.",
+        "Do not represent the complete displayed @KCTownHall population as a complete history of deleted, private, withheld, or unindexed activity.",
+        "Do not convert 100 tire-related records into 100 pickups, households served, tires collected, or completed service events.",
+        "Do not convert three direct Council-member responses into Council endorsement, adoption, policy causality, or a complete stakeholder-engagement census.",
+        "Do not convert the dated 267-unit visible-engagement sum into unique people, reach, adoption, attendance, or impact.",
+        "Do not infer that Jamie authored every @KCTownHall post from account establishment, custody, project leadership, or first-person archive context.",
+        "Do not hide incomplete recovery by dropping unresolved slots or weakening a recovery floor into a complete census.",
+        "Do not expose authenticated-session material, phone numbers, contact records, private messages, analytics, drafts, credentials, cookies, or private collaborator records."
+      ]
+    },
+    {
+      "id": "KCTH-001",
+      "name": "KC Town Hall municipal, field-practice, and stewardship records remain complete and bounded",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "The knowledge bank should retain the consequential Council action, Jamie's Phase One and neighborhood operating practice, and his later stewardship transition without converting mixed evidence into unsupported payment, transfer, construction, causality, sole-credit, or present-status claims.",
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/intake-2026-07-13.ts",
+        "apps/www/src/data/knowledge-bank/kc-town-hall-field-intake-2026-07-15.ts",
+        "apps/www/src/data/knowledge-bank/records.ts",
+        "apps/www/src/content/work/kc-town-hall.mdx",
+        "docs/knowledge-bank/research/2026-07-14-kc-town-hall-council-action.md",
+        "docs/knowledge-bank/research/2026-07-15-kc-town-hall-phase-one-and-neighborhood-practice.md",
+        "KC Town Hall validation in scripts/lib/knowledge-intake-validation.mjs"
+      ],
+      "passCondition": "The official sequence preserves the 2019 proposal, CCED Board recommendation, Council acceptance through Resolution 190649, $490,539 appropriation through Ordinance 190642, the May 2022 negotiation status and absence of a reported disbursement amount at that point, and 2024 withdrawal and reappropriation. A separate field-practice layer distinguishes protected proposal corroboration, Jamie's first-person general-contractor and completion account, public TiredOfTires evidence, and research leads for Cleveland Avenue, Indian Mound, and pro bono design. It credits collaborators, protects respondent and source data, distinguishes Phase One from full-project completion, and holds all new projections. A separate, non-rendered first-person evidence relationship supports Jamie's public statement that he transitioned the project to a mission-aligned organization.",
+      "antiGaming": [
+        "Do not weaken the Council action back to a recommendation-only claim.",
+        "Do not describe an appropriation as money received, paid, or spent.",
+        "Do not generalize the May 2022 no-disbursement status beyond that reporting point.",
+        "Do not remove the later withdrawal and reappropriation context.",
+        "Do not omit Jamie's later transition or attribute it to the municipal record.",
+        "Do not name the receiving organization or infer a transfer of public funds, property, assets, current operation, or private circumstances.",
+        "Do not attribute the collective or municipal outcome solely to Jamie.",
+        "Do not collapse first-person role evidence into independent proposal corroboration.",
+        "Do not turn Phase One cold-shell completion into full adaptive-reuse completion.",
+        "Do not expose the proposal PDF, respondent data, financial appendices, contact details, signatures, or unapproved photographs.",
+        "Do not project Cleveland Avenue, Indian Mound, pro bono print quantities, or capital-allocation causality as independently corroborated."
+      ]
+    },
+    {
+      "id": "PRESS-001",
+      "name": "Campaign press indexes are complete, deduplicated, and bounded",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Campaign-maintained press bibliographies should remain fully recoverable without turning article placement into proof of Jamie's role or campaign causality.",
+      "evidence": [
+        "knowledgeBank.campaignPressPlacements",
+        "apps/www/src/data/knowledge-bank/campaign-press-2026-07-14.ts",
+        "docs/knowledge-bank/research/2026-07-14-nycac-campaign-press-catalog.md",
+        "campaign press validation in scripts/lib/knowledge-intake-validation.mjs"
+      ],
+      "passCondition": "The four archive-backed campaign indexes contain 21, 7, 8, and 9 contiguous placements; all 45 placements resolve to 44 canonical public article sources; the shared NPR article remains one source with two campaign edges; archive-backed records have preservation URLs; newly cataloged articles remain metadata-reviewed, unsurfaced, and claim-free until close reading.",
+      "antiGaming": [
+        "Do not count the shared NPR article twice as two sources.",
+        "Do not treat campaign placement as article-level support for Jamie's role, causality, or policy outcomes.",
+        "Do not mark an article decomposed merely because its title and URL were recovered.",
+        "Do not remove dead or restricted sources to improve link-health counts; preserve their original identity and archival fallback."
+      ]
+    },
+    {
+      "id": "DISPOSITION-001",
+      "name": "Every intake has a resolvable disposition",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Nothing should disappear between capture and research; every intake must resolve to a source, claim candidate, inquiry, duplicate, protected hold, or superseding record.",
+      "evidence": [
+        "intake sourceIds, claimIds, inquiryIds, duplicateOf, and disposition",
+        "canonical knowledge-bank sources, claims, and research inquiries"
+      ],
+      "passCondition": "Every intake disposition points to existing canonical records of the required type, and every decomposed intake links at least one source plus one atomic claim candidate or bounded research inquiry.",
+      "antiGaming": [
+        "Do not use a generic reviewed status without a destination edge.",
+        "Do not delete an unresolved intake because research has not yet succeeded.",
+        "Do not satisfy several unrelated fragments with one vague umbrella claim."
+      ]
+    },
+    {
+      "id": "PROJECTION-001",
+      "name": "Intake, public safety, and editorial selection remain separate",
+      "layer": "deterministic",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "A public source or defensible claim must not become website copy merely because it entered the bank or became supportable.",
+      "evidence": [
+        "intake maturity, publicUse, and editorialState fields",
+        "claim projection statuses and surfaces",
+        "public citation registry"
+      ],
+      "passCondition": "No intake-linked claim has an active public projection unless the intake is decomposed, public-linkable, and explicitly selected; protected or approval-required intakes never expose source URLs or active projections.",
+      "antiGaming": [
+        "Do not equate public availability with publication approval.",
+        "Do not mark every defensible claim selected.",
+        "Do not hide a premature projection by omitting its intake relationship."
+      ]
+    },
+    {
+      "id": "RESP-001",
+      "name": "No horizontal overflow at required widths",
+      "layer": "browser",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Every application-facing route remains usable without horizontal scrolling.",
+      "evidence": [
+        "browser measurements at 320, 375, 768, and 1440 CSS pixels",
+        "screenshots of /work/technical-operations and /lab/source-backed-team-memory at 320 pixels"
+      ],
+      "passCondition": "For every required route and width, document.scrollWidth is less than or equal to document.clientWidth, long headings wrap, and controls remain fully visible.",
+      "antiGaming": [
+        "Do not hide overflow while clipping content.",
+        "Do not shrink body text below the design-system minimum.",
+        "Do not remove the long CTA or heading solely to pass."
+      ]
+    },
+    {
+      "id": "A11Y-001",
+      "name": "Case-study metadata and controls meet accessibility requirements",
+      "layer": "browser",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Case-study tags, citations, navigation, and calls to action remain perceivable and keyboard usable.",
+      "evidence": [
+        "computed foreground and effective background colors",
+        "keyboard traversal",
+        "200 percent zoom review",
+        "accessible names and landmarks"
+      ],
+      "passCondition": "Normal text contrast is at least 4.5:1, focus is visible, citation links and backlinks have useful names, and no content overlaps at 200 percent zoom.",
+      "antiGaming": [
+        "Do not remove tags or citations merely to avoid testing them.",
+        "Do not rely on color alone for status.",
+        "Do not certify contrast from token names; measure the rendered composite."
+      ]
+    },
+    {
+      "id": "PROOF-001",
+      "name": "Priority case studies show actual public-safe artifacts",
+      "layer": "browser",
+      "gate": "scored",
+      "weight": 0.15,
+      "intent": "The portfolio should display evidence, not only cards describing evidence.",
+      "evidence": [
+        "rendered HJE, FairRentNYC, and CallNYC case studies",
+        "rights and approval records for each displayed asset"
+      ],
+      "passCondition": "Each priority case contains at least one legible, relevant, rights-cleared screenshot, document excerpt, diagram, or photograph that reveals the actual work and has an accurate caption and alt text.",
+      "rubric": {
+        "0": "No actual artifacts are rendered.",
+        "0.5": "One or two priority cases show artifacts, or assets are decorative/illegible.",
+        "0.8": "All three priority cases show relevant artifacts with captions and public-safe boundaries.",
+        "1": "All three show decisive artifacts that materially improve understanding, with verified rights, alt text, and mobile legibility."
+      },
+      "antiGaming": [
+        "A colored text card labeled artifact is not an artifact.",
+        "Do not publish an unapproved private image.",
+        "Do not use representative imagery as direct proof of a specific event."
+      ]
+    },
+    {
+      "id": "CLARITY-001",
+      "name": "A hiring reader can identify role, value, proof, and next action",
+      "layer": "semantic",
+      "gate": "scored",
+      "weight": 0.2,
+      "intent": "The site should minimize the reader's burden without flattening the record.",
+      "evidence": [
+        "homepage first viewport",
+        "/work/technical-operations first viewport",
+        "resume page",
+        "two priority case-study openings"
+      ],
+      "passCondition": "Within a 30-second skim, an independent grader can state Jamie's target role, recurring contribution, two concrete proofs, and the next action without consulting source notes.",
+      "rubric": {
+        "0": "Role or purpose is unclear.",
+        "0.5": "Role is clear but proof or next action requires deep reading.",
+        "0.8": "Role, value, two proofs, and next action are clear in a short skim.",
+        "1": "The path is immediate, memorable, specific, and free of avoidable repetition."
+      },
+      "antiGaming": [
+        "Do not replace specific proof with generic leadership language.",
+        "Do not optimize only for keyword density.",
+        "Do not remove necessary collective-credit qualifiers."
+      ]
+    },
+    {
+      "id": "CHAD-001",
+      "name": "Priority surfaces pass Chad's lens",
+      "layer": "semantic",
+      "gate": "scored",
+      "weight": 0.15,
+      "intent": "The portfolio should make Jamie's specific contribution, purpose, and usable result legible without asking a hiring or public-sector reader to decode domain language or evidence governance.",
+      "evidence": [
+        "homepage and Technical Operations openings",
+        "resume opening",
+        "HJE, FairRentNYC, and CallNYC case-study openings",
+        "docs/chad-lens.md"
+      ],
+      "passCondition": "In one pass, two independent graders can identify Jamie as the actor, describe the concrete work he performed, name what became usable and toward what end, and distinguish his contribution from collective outcomes on the homepage, Technical Operations page, resume, and at least two priority case studies.",
+      "rubric": {
+        "0": "Jamie is hidden behind projects, abstractions, or unexplained domain language.",
+        "0.5": "Jamie is visible, but the work product, purpose, or usable change must be inferred on several priority surfaces.",
+        "0.8": "The actor, concrete intervention, usable result, and purpose are clear in one pass across the required surfaces, with collective work accurately bounded.",
+        "1": "Every priority surface gives an immediate, specific, memorable account of Jamie's intervention and its value without avoidable abstraction, repetition, or reader-facing process language."
+      },
+      "antiGaming": [
+        "Do not insert Jamie or I mechanically without naming a concrete action and usable result.",
+        "Do not delete collective-credit, uncertainty, source, or public-safety qualifiers.",
+        "Do not add rubric-facing phrases such as for a hiring manager merely to explain relevance.",
+        "Do not strengthen causality, ownership, authority, or outcome claims beyond the knowledge bank."
+      ]
+    },
+    {
+      "id": "DECOMP-001",
+      "name": "Knowledge maturity matches the work actually performed",
+      "layer": "semantic",
+      "gate": "scored",
+      "weight": 0.1,
+      "intent": "The bank should distinguish captured metadata from close-read evidence, and close-read evidence from editorially selected public claims.",
+      "evidence": [
+        "all metadata-reviewed and decomposed public intake records",
+        "their linked atomic claim candidates, evidence relationships, and locators",
+        "their doesNotEstablish boundaries and research inquiries",
+        "docs/knowledge-bank/projects/waterways-participatory-programs.md",
+        "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+        "docs/knowledge-bank/research/2026-07-14-nycac-campaign-press-catalog.md"
+      ],
+      "passCondition": "Two independent graders find that every decomposed source yields specific atomic propositions, evidence roles, locators, and limits, while metadata-reviewed sources remain claim-free, unsurfaced, and queued for selective close reading.",
+      "rubric": {
+        "0": "Sources are stored only as links or converted directly into broad promotional claims.",
+        "0.5": "Some claims are decomposed, but maturity states are inflated or support, attribution, collective credit, and limitations remain conflated.",
+        "0.8": "Every decomposed source has useful atomic knowledge and boundaries; metadata-only sources remain visibly staged with a next action and no claim or projection edge.",
+        "1": "Maturity is consistently truthful across intake, source, claim, evidence, inquiry, and editorial layers, making both deep evidence and undecomposed research queues immediately legible."
+      },
+      "antiGaming": [
+        "Do not create many near-duplicate assertions merely to increase apparent depth.",
+        "Do not mark a source decomposed merely because its title, URL, and campaign placement were recovered.",
+        "Do not convert Jamie's memory into independent corroboration.",
+        "Do not let movement coverage establish sole causality or authorship.",
+        "Do not quote or reproduce copyrighted source text beyond the minimum needed for identification."
+      ]
+    },
+    {
+      "id": "EDITORIAL-001",
+      "name": "Case studies preserve nuance without evidence-dump repetition",
+      "layer": "semantic",
+      "gate": "scored",
+      "weight": 0.1,
+      "intent": "Public prose stays primary while citations, care notes, and governance remain available at the right depth.",
+      "evidence": [
+        "HJE, FairRentNYC, CallNYC, and Source-Backed Team Memory pages"
+      ],
+      "passCondition": "The opening communicates role, action, outcome, and artifact; later governance sections add new information rather than restating the same boundary.",
+      "rubric": {
+        "0": "The page reads as a database or internal governance dump.",
+        "0.5": "The story is credible but substantially repetitive.",
+        "0.8": "The narrative is composed, skimmable, and appropriately layered.",
+        "1": "Every section earns its place and evidence depth never displaces the reader's story."
+      },
+      "antiGaming": [
+        "Do not delete source limitations to make the page shorter.",
+        "Do not move private governance language into public prose.",
+        "Do not hide required disclaimers in inaccessible interactions."
+      ]
+    },
+    {
+      "id": "VOICE-001",
+      "name": "The site sounds warm, precise, useful, and human",
+      "layer": "semantic",
+      "gate": "scored",
+      "weight": 0.1,
+      "intent": "Jamie should remain visible as a careful systems-builder rather than becoming generic portfolio copy.",
+      "evidence": [
+        "homepage, About, Contact, and priority case-study prose",
+        "Jamie's writer's-voice guide used only as an editorial reference"
+      ],
+      "passCondition": "The prose joins care to structure, distinguishes known from assumed, uses active specific language, and ends in a usable next step.",
+      "rubric": {
+        "0": "Generic, inflated, or impersonal.",
+        "0.5": "Accurate but flat or overly procedural.",
+        "0.8": "Warm, precise, modular, and clearly Jamie's.",
+        "1": "Distinctive voice improves trust and action without ornament or overclaiming."
+      },
+      "antiGaming": [
+        "Do not imitate private writing or publish private details.",
+        "Do not add lyrical language where plain operational language is clearer.",
+        "Do not use first-person warmth to blur collective credit."
+      ]
+    },
+    {
+      "id": "RELEASE-001",
+      "name": "Production release preserves staging safety and production indexability",
+      "layer": "runtime",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "The canonical domain should serve the reviewed portfolio with environment-correct metadata and a reversible deployment.",
+      "evidence": [
+        "npm run preflight:production",
+        "production /api/health, /robots.txt, /sitemap.xml, canonical metadata, social image, and resume PDF",
+        "deployment SHA and rollback reference"
+      ],
+      "passCondition": "The exact reviewed SHA passes production preflight; jamieburk.art serves the new app; production is indexable; staging remains noindex; all canonical routes and the PDF return 200; rollback is documented.",
+      "antiGaming": [
+        "Do not make staging indexable.",
+        "Do not mark the gate passed from a local build alone.",
+        "Do not redirect the canonical domain to the legacy application."
+      ]
+    },
+    {
+      "id": "APPROVAL-001",
+      "name": "Required public-use and launch approvals are explicit",
+      "layer": "human",
+      "gate": "hard",
+      "weight": 0,
+      "intent": "Publication permission remains distinct from evidence availability.",
+      "evidence": [
+        "docs/knowledge-bank/approval-register.md",
+        "docs/knowledge-bank/launch-blockers.md",
+        "human approval record tied to the reviewed commit"
+      ],
+      "passCondition": "Jamie explicitly approves the final resume, phone-in-PDF behavior, public metrics, collaborator-sensitive assets, and production deployment; approval and blocker records agree.",
+      "antiGaming": [
+        "An agent may report this gate but may not approve it.",
+        "A merged branch is not publication consent.",
+        "Public availability is not rights clearance."
+      ]
+    },
+    {
+      "id": "APPLICATION-001",
+      "name": "The application handoff is small and role-specific",
+      "layer": "human",
+      "gate": "scored",
+      "weight": 0.2,
+      "intent": "A job application should send a purposeful route through the portfolio rather than the entire archive.",
+      "evidence": [
+        "production homepage",
+        "Technical Operations page",
+        "approved resume PDF",
+        "two role-relevant case-study links"
+      ],
+      "passCondition": "For a named role, the application packet contains the resume, homepage or Technical Operations page, and no more than two cases whose relevance can be explained in one sentence each.",
+      "rubric": {
+        "0": "No application path exists.",
+        "0.5": "The packet exists but is generic or overloaded.",
+        "0.8": "The packet is concise, role-specific, and uses the canonical production domain.",
+        "1": "The packet anticipates the role's operating needs and every included link earns its place."
+      },
+      "antiGaming": [
+        "An agent may propose the packet, but the final role-specific selection requires human review.",
+        "Do not create a new landing page for every application.",
+        "Do not include more cases merely to look comprehensive.",
+        "Do not use staging URLs in a final external application unless explicitly necessary."
+      ]
+    }
+  ]
+}

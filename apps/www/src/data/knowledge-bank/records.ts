@@ -55,6 +55,12 @@ import {
   wowListFullPopulationResearchInquiries20260715,
   wowListFullPopulationSourceRecords20260715
 } from "./wowlist-x-full-population-2026-07-15.ts";
+import {
+  kcTownHallFullPopulationClaimRecords20260715,
+  kcTownHallFullPopulationIntakeRecords20260715,
+  kcTownHallFullPopulationResearchInquiries20260715,
+  kcTownHallFullPopulationSourceRecords20260715
+} from "./kc-town-hall-x-full-population-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -66,7 +72,8 @@ const knowledgeBankInput = {
     ...socialMediaIntakeRecords20260714,
     ...webArchiveIntakeRecords20260715,
     ...kcTownHallFieldIntakeRecords20260715,
-    ...wowListFullPopulationIntakeRecords20260715
+    ...wowListFullPopulationIntakeRecords20260715,
+    ...kcTownHallFullPopulationIntakeRecords20260715
   ],
   sources: [
     {
@@ -199,7 +206,8 @@ const knowledgeBankInput = {
     ...socialMediaSourceRecords20260714,
     ...webArchiveSourceRecords20260715,
     ...kcTownHallFieldSourceRecords20260715,
-    ...wowListFullPopulationSourceRecords20260715
+    ...wowListFullPopulationSourceRecords20260715,
+    ...kcTownHallFullPopulationSourceRecords20260715
   ],
   claims: [
     {
@@ -296,7 +304,8 @@ const knowledgeBankInput = {
     ...socialMediaClaimRecords20260714,
     ...webArchiveClaimRecords20260715,
     ...kcTownHallFieldClaimRecords20260715,
-    ...wowListFullPopulationClaimRecords20260715
+    ...wowListFullPopulationClaimRecords20260715,
+    ...kcTownHallFullPopulationClaimRecords20260715
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -310,7 +319,17 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...intakeResearchInquiries, ...campaignPressResearchInquiries, ...archiveResearchInquiries20260714, ...sharedDriveResearchInquiries20260714, ...socialMediaResearchInquiries20260714, ...webArchiveResearchInquiries20260715, ...kcTownHallFieldResearchInquiries20260715, ...wowListFullPopulationResearchInquiries20260715],
+  },
+    ...intakeResearchInquiries,
+    ...campaignPressResearchInquiries,
+    ...archiveResearchInquiries20260714,
+    ...sharedDriveResearchInquiries20260714,
+    ...socialMediaResearchInquiries20260714,
+    ...webArchiveResearchInquiries20260715,
+    ...kcTownHallFieldResearchInquiries20260715,
+    ...wowListFullPopulationResearchInquiries20260715,
+    ...kcTownHallFullPopulationResearchInquiries20260715
+  ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -408,14 +427,46 @@ const knowledgeBankInput = {
         "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
         "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
-        "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024"
+        "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
+        "SRC-X-KCTOWNHALL-LAUNCH-2018",
+        "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018",
+        "SRC-X-KCTOWNHALL-FULL-POPULATION-2026",
+        "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
+        "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019",
+        "SRC-X-KCTOWNHALL-TIRE-WORKFLOW-2021",
+        "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019",
+        "SRC-X-KCTOWNHALL-LUCAS-RESPONSE-2019",
+        "SRC-X-KCTOWNHALL-JUSTUS-RESPONSE-2019",
+        "SRC-X-KCTOWNHALL-ROBINSON-RESPONSE-2020",
+        "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+        "SRC-KCTH-KCMO-ROBINSON-SERVICE-RECORD"
       ],
       occurrences: [
         { id: "public-proposal", claimId: "CLM-KC-TOWN-HALL-PROPOSAL-2019", projection: "case-study" },
         { id: "council-acceptance", claimId: "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019", projection: "case-study" },
         { id: "council-appropriation", claimId: "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019", projection: "case-study" },
         { id: "interim-funding-status", claimId: "CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022", projection: "case-study" },
-        { id: "project-withdrawal", claimId: "CLM-KC-TOWN-HALL-WITHDRAWN-2024", projection: "case-study" }
+        { id: "project-withdrawal", claimId: "CLM-KC-TOWN-HALL-WITHDRAWN-2024", projection: "case-study" },
+        {
+          id: "resident-input-surface",
+          claimId: "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
+          projection: "case-study"
+        },
+        {
+          id: "tire-operating-pattern",
+          claimId: "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
+          projection: "case-study"
+        },
+        {
+          id: "tire-dropoff-corroboration",
+          claimId: "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
+          projection: "case-study"
+        },
+        {
+          id: "council-response-floor",
+          claimId: "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR",
+          projection: "case-study"
+        }
       ]
     }
   ],

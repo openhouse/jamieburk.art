@@ -378,6 +378,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie / collaborator and artifact review needed for broader projection
 **Last reviewed:** 2026-07-15
 
+## kc-town-hall-public-operating-interface - Resident input and neighborhood service operations
+
+**Status:** Selected with public-source and shared-account boundaries
+**Support level:** Strong for the operating pattern; bounded for individual authorship and outcomes
+**Evidence class:** Complete displayed project-account population / archived project page / public stakeholder responses / first-person account-establishment confirmation
+**Public wording:** Jamie established `@KCTownHall` as a public-facing project identity and handoff surface. The account opened a resident-input loop, documented recurring free household tire-pickup operations, and preserved direct mission-relevant responses from three sitting Kansas City Council-member accounts.
+**Detailed public-safe wording:** All 183 profile-counted records were reviewed. The corpus contains 100 tire-related records tracing recurring pickup intake and updates from 2019 through 2022. A Bridging the Gap collaborator separately reported receiving a large KC Town Hall tire drop-off. Quinton Lucas, Jolie Justus, and Melissa Robinson directly responded in neighborhood food-access or community-condition contexts.
+**Where to project:** KC Town Hall case study; compact evidence bullets on the Work record.
+**Why it matters:** Shows a public identity becoming an operating interface for resident input, recurring service delivery, civic-resource distribution, public documentation, and stakeholder response.
+**Guardrail:** The account is institutional and later reflects changing stewardship. One hundred tire-related records are not one hundred pickups, households, or tires. Three official-account responses are a floor, not endorsement, adoption, funding approval, or causal government impact. The Bridging the Gap record is qualitative corroboration, not an audited program total.
+**Do not say:** Jamie authored every post; Jamie alone operated every pickup; 100 pickups occurred; the account reached 267 people; every tagged official engaged; the Council endorsed KC Town Hall; KC Town Hall caused government action; outside publishers were project partners; the social record proves funding receipt or completed redevelopment.
+**Protected boundaries:** Post bodies, telephone numbers, resident submissions, private messages, account analytics, credentials, session data, and unapproved photographs stay outside the public repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

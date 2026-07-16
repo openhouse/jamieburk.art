@@ -568,7 +568,7 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Proposed adaptive reuse and public-benefit documentation",
+    subtitle: "Proposed adaptive reuse, neighborhood operations, and public-benefit documentation",
     summary: [
       getClaimProjection(
         "CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE",
@@ -588,8 +588,8 @@ const workItemsInput = [
         "/work"
       ).text
     ].join(" "),
-    role: "Project Planning & Documentation Support",
-    years: "2019-2024",
+    role: "Co-founder, Project Operations & Documentation",
+    years: "2018-2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -598,7 +598,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "A reviewable mixed-use proposal, public-benefit case, stakeholder context, municipal funding record, and documented stewardship transition.",
+      "A reviewable mixed-use proposal, resident-input loop, recurring neighborhood-service workflow, public-benefit case, municipal funding record, and documented stewardship transition.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -626,6 +626,14 @@ const workItemsInput = [
       {
         label: "2024 withdrawal ordinance",
         url: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search="
+      },
+      {
+        label: "KC Town Hall public account",
+        url: "https://x.com/KCTownHall"
+      },
+      {
+        label: "Archived Tired of Tires workflow",
+        url: "https://web.archive.org/web/20201030223311/http://kctownhall.com/tires/"
       }
     ],
     careNote:
@@ -637,19 +645,23 @@ const workItemsInput = [
       "The project stopped proceeding under the CCED award, the unused public allocation was reappropriated, and Jamie transitioned the project to a mission-aligned organization.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Long-horizon project management, neighborhood operations, service-intake design, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Jamie identified as the public proposal presenter",
       "Council acceptance of the $490,539 recommendation",
       "$490,539 project appropriation",
+      "A complete public-safe archive of 183 profile-counted project-account records",
+      "100 tire-related account records documenting recurring household pickup intake and updates",
+      "Direct mission-relevant responses from three sitting Council-member accounts",
+      "External qualitative corroboration of a KC Town Hall tire drop-off",
       "2024 withdrawal and reappropriation record",
       "Jamie-confirmed transition to a mission-aligned organization"
     ],
     knownOpenProtected: {
       known:
-        "Jamie's approved resume supports the planning and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal; Jamie's public-use confirmation supports the subsequent transition to a mission-aligned organization.",
+        "Jamie's approved resume and project records support his co-founder, planning, and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal. A complete public-account archive documents resident-input, recurring neighborhood-service, civic-resource, and direct stakeholder-response patterns. Jamie's public-use confirmation supports the subsequent transition to a mission-aligned organization.",
       open:
         "The records do not establish an executed funding agreement, disbursement, construction, every collaborator's role, the receiving organization's identity, the form or timing of the transition, or the project's current status.",
       protected:

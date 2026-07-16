@@ -105,15 +105,35 @@ stewardship.
 ## Social-account boundary
 
 The dedicated public identity is
-[`@KCTownHall`](https://x.com/KCTownHall). The July 2026 recovery retained 183
-unique public status records against the current 183-post profile control,
-spanning July 2018 through September 2022. A launch post documents the account's
-participatory invitation to help build a neighborhood resource and cultural
-center.
+[`@KCTownHall`](https://x.com/KCTownHall). A full-population pass reconciled all
+183 profile-counted records across Posts and Replies, separating five
+other-account conversation-context cards. The public-safe corpus contains 142
+original posts, 13 replies, and 28 reposts spanning July 2018 through September
+2022.
+
+The account opened a resident-input loop and later functioned as recurring
+neighborhood-service and civic-information infrastructure. One hundred records
+are tire-related, documenting a long-running public intake and update pattern;
+that count describes records, not pickups, households, tires, or outcomes. An
+environmental-program collaborator separately corroborated one large KC Town
+Hall tire drop-off.
+
+Three sitting Council-member accounts directly responded in mission-relevant
+contexts: Quinton Lucas and Jolie Justus around Leon's Thriftway, and Melissa
+Robinson around community-condition work. Three is a verified floor, not a
+complete engagement census, endorsement, policy adoption, or proof of causal
+government impact.
+
+The corpus inventories 31 distinct posted short URLs and normalizes nine
+mission-relevant sources spanning food access, housing, transit, elections,
+public health, COVID-19 resources, and site cleanup. Circulating those sources
+does not establish authorship, formal partnership, use, or impact.
 
 Jamie confirms establishing the account. The later account record reflects
 changing stewardship, and later posts or programs are not assigned to Jamie
 without post-level role evidence. Account activity does not establish municipal
 endorsement, funding receipt, completed redevelopment, or causality for the
 Council action. See
-[the social-media archive-production note](../research/2026-07-14-project-social-media-archive-production.md).
+[the full-population research note](../research/2026-07-15-kctownhall-x-full-population.md)
+and the broader
+[social-media archive-production note](../research/2026-07-14-project-social-media-archive-production.md).

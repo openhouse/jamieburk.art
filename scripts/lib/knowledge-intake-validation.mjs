@@ -12,6 +12,16 @@ const wowListFullPopulation = JSON.parse(
   )
 );
 
+const kcTownHallFullPopulation = JSON.parse(
+  readFileSync(
+    new URL(
+      "../../apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+      import.meta.url
+    ),
+    "utf8"
+  )
+);
+
 export const requiredSeedIntakeIds = [
   "INTAKE-WATERWAYS-PITCH-HUCK-FINN-2026",
   "INTAKE-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2026",
@@ -47,7 +57,8 @@ export const requiredSeedIntakeIds = [
   "INTAKE-NTERCHNG-PROJECT-SITE-2026",
   "INTAKE-NTERCHNG-ANH-INCLUSION-2026",
   "INTAKE-ANH-NERMAN-CONTEXT-2026",
-  "INTAKE-WOWLIST-FULL-POPULATION-2026"
+  "INTAKE-WOWLIST-FULL-POPULATION-2026",
+  "INTAKE-KCTOWNHALL-FULL-POPULATION-2026"
 ];
 
 export const requiredResearchSourceIds = [
@@ -174,7 +185,15 @@ export const requiredSocialClaimIds = [
   "CLM-WOWLIST-ARCHIVED-HOME-POSITIONING",
   "CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT",
   "CLM-WOWLIST-SOURCE-CURATION-PRACTICE",
-  "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
+  "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY",
+  "CLM-KCTOWNHALL-ACCOUNT-ESTABLISHMENT-ROLE",
+  "CLM-KCTOWNHALL-FULL-POPULATION-PRACTICE",
+  "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
+  "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
+  "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
+  "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR",
+  "CLM-KCTOWNHALL-CIVIC-RESOURCE-CURATION",
+  "CLM-KCTOWNHALL-VISIBLE-ENGAGEMENT-SNAPSHOT"
 ];
 
 export const requiredSocialInquiryIds = [
@@ -183,7 +202,8 @@ export const requiredSocialInquiryIds = [
   "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026",
   "INQ-WOWLIST-SOCIAL-ARCHIVE-2026",
   "INQ-WOWLIST-FULL-POPULATION-2026",
-  "INQ-KCTOWNHALL-SOCIAL-ARCHIVE-2026"
+  "INQ-KCTOWNHALL-SOCIAL-ARCHIVE-2026",
+  "INQ-KCTOWNHALL-FULL-POPULATION-2026"
 ];
 
 const blockedPublicRepoMarkers = [
@@ -836,6 +856,26 @@ export function validateKnowledgeIntake() {
     "CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022",
     "CLM-KC-TOWN-HALL-WITHDRAWN-2024"
   ];
+  const requiredKcTownHallSocialPageSourceIds = [
+    "SRC-X-KCTOWNHALL-LAUNCH-2018",
+    "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018",
+    "SRC-X-KCTOWNHALL-FULL-POPULATION-2026",
+    "SRC-KCTH-TIRED-OF-TIRES-ARCHIVE-2020",
+    "SRC-KCTH-TIRED-OF-TIRES-UPDATE-2019",
+    "SRC-X-KCTOWNHALL-TIRE-WORKFLOW-2021",
+    "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019",
+    "SRC-X-KCTOWNHALL-LUCAS-RESPONSE-2019",
+    "SRC-X-KCTOWNHALL-JUSTUS-RESPONSE-2019",
+    "SRC-X-KCTOWNHALL-ROBINSON-RESPONSE-2020",
+    "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+    "SRC-KCTH-KCMO-ROBINSON-SERVICE-RECORD"
+  ];
+  const requiredKcTownHallSocialPageClaimIds = [
+    "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
+    "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
+    "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
+    "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR"
+  ];
   const requiredKcTownHallPracticeSourceIds = [
     "SRC-KCTH-CCED-PROPOSAL-PHASE-ONE-2019",
     "SRC-KCTH-JAMIE-FIELD-PRACTICE-MEMORY-2026",
@@ -1105,13 +1145,20 @@ export function validateKnowledgeIntake() {
     const occurrenceClaimIds = new Set(
       kcTownHallPage.occurrences.map((occurrence) => occurrence.claimId)
     );
-    for (const claimId of requiredKcTownHallClaimIds) {
+    for (const claimId of [
+      ...requiredKcTownHallClaimIds,
+      ...requiredKcTownHallSocialPageClaimIds
+    ]) {
       if (!occurrenceClaimIds.has(claimId)) {
         kcTownHallErrors.push(`KC Town Hall page plan does not render ${claimId}`);
       }
     }
-    if (JSON.stringify(kcTownHallPage.sourceOrder) !== JSON.stringify(requiredKcTownHallSourceIds)) {
-      kcTownHallErrors.push("KC Town Hall source order must preserve proposal, acceptance, appropriation, interim status, and withdrawal chronology");
+    const expectedSourceOrder = [
+      ...requiredKcTownHallSourceIds,
+      ...requiredKcTownHallSocialPageSourceIds
+    ];
+    if (JSON.stringify(kcTownHallPage.sourceOrder) !== JSON.stringify(expectedSourceOrder)) {
+      kcTownHallErrors.push("KC Town Hall source order must preserve the municipal chronology followed by the public operating and stakeholder record");
     }
     if (
       kcTownHallPage.sourceOrder.includes("SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026") ||
@@ -1290,6 +1337,179 @@ export function validateKnowledgeIntake() {
     }
   }
 
+  const kcTownHallRecords = kcTownHallFullPopulation.records ?? [];
+  const kcTownHallRecordUrls = kcTownHallRecords.map(({ url }) => url);
+  const kcTownHallRecordTypeCounts = kcTownHallRecords.reduce(
+    (counts, record) => ({
+      ...counts,
+      [record.recordType]: (counts[record.recordType] ?? 0) + 1
+    }),
+    {}
+  );
+  const kcTownHallClassificationCounts = kcTownHallRecords
+    .flatMap(({ classifications }) => classifications)
+    .reduce(
+      (counts, classification) => ({
+        ...counts,
+        [classification]: (counts[classification] ?? 0) + 1
+      }),
+      {}
+    );
+  const kcTownHallExternalLinkOccurrences = kcTownHallRecords.reduce(
+    (count, record) => count + record.externalLinks.length,
+    0
+  );
+  const kcTownHallDistinctShortUrls = new Set(
+    kcTownHallRecords.flatMap((record) =>
+      record.externalLinks.map(({ shortUrl }) => shortUrl)
+    )
+  );
+  const kcTownHallReconciliation =
+    kcTownHallFullPopulation.populationReconciliation ?? {};
+  if (
+    kcTownHallFullPopulation.generatedAt !== "2026-07-14" ||
+    kcTownHallReconciliation.profileReportedPostCount !== 183 ||
+    kcTownHallReconciliation.postsTimelineUniqueCount !== 170 ||
+    kcTownHallReconciliation.repliesTimelineRenderedArticleCount !== 188 ||
+    kcTownHallReconciliation.repliesTimelineConversationContextCount !== 5 ||
+    kcTownHallReconciliation.repliesTimelinePrimaryRecordCount !== 183 ||
+    kcTownHallReconciliation.recoveredUnionRecordCount !== 183 ||
+    kcTownHallReconciliation.recoveredPopulationReviewedPercent !== 100 ||
+    kcTownHallReconciliation.profileCountNotMaterialized !== 0
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall full-population fixture no longer preserves the 183-record reconciliation"
+    );
+  }
+  if (
+    kcTownHallRecords.length !== 183 ||
+    new Set(kcTownHallRecordUrls).size !== 183
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall fixture must contain 183 unique primary status URLs"
+    );
+  }
+  if (
+    kcTownHallRecordTypeCounts.original !== 142 ||
+    kcTownHallRecordTypeCounts.reply !== 13 ||
+    kcTownHallRecordTypeCounts.repost !== 28
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall fixture must retain the 142 original, 13 reply, and 28 repost disposition"
+    );
+  }
+  if (
+    kcTownHallFullPopulation.recordsByYear?.["2018"] !== 30 ||
+    kcTownHallFullPopulation.recordsByYear?.["2019"] !== 85 ||
+    kcTownHallFullPopulation.recordsByYear?.["2020"] !== 41 ||
+    kcTownHallFullPopulation.recordsByYear?.["2021"] !== 17 ||
+    kcTownHallFullPopulation.recordsByYear?.["2022"] !== 10
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall fixture must retain its 2018-2022 record chronology"
+    );
+  }
+  if (
+    kcTownHallClassificationCounts["tire-related"] !== 100 ||
+    kcTownHallClassificationCounts["survey-linked"] !== 12 ||
+    kcTownHallFullPopulation.publishingPattern?.tireRelatedRecordCount !== 100 ||
+    kcTownHallFullPopulation.publishingPattern?.surveyLinkedRecordCount !== 12
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall fixture must retain 100 tire-related and 12 survey-linked classifications"
+    );
+  }
+  if (
+    kcTownHallFullPopulation.postedUrlInventory?.recordsWithExternalLinks !==
+      118 ||
+    kcTownHallExternalLinkOccurrences !== 133 ||
+    kcTownHallFullPopulation.postedUrlInventory?.externalLinkOccurrences !==
+      133 ||
+    kcTownHallDistinctShortUrls.size !== 31 ||
+    kcTownHallFullPopulation.postedUrlInventory?.distinctExternalShortUrls !==
+      31 ||
+    kcTownHallFullPopulation.postedUrlInventory?.curatedMissionRelevantSources
+      ?.length !== 9
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall fixture must retain all 31 distinct posted URLs and nine curated source leads"
+    );
+  }
+  const kcTownHallStakeholders =
+    kcTownHallFullPopulation.stakeholderResponseInventory ?? {};
+  if (
+    kcTownHallStakeholders.incomingMissionRelevantSearchRecordCount !== 3 ||
+    kcTownHallStakeholders.directCouncilMemberAccountCount !== 3 ||
+    kcTownHallStakeholders.communityOrProgramCorroborationAccountCount !== 1 ||
+    kcTownHallStakeholders.councilMemberAccounts?.length !== 3 ||
+    kcTownHallStakeholders.otherMissionRelevantRecords?.length !== 4 ||
+    kcTownHallFullPopulation.conversationContextRecords?.length !== 5
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall stakeholder inventory must retain three Council-member responses, one program corroborator, four other mission-relevant records, and five separated contexts"
+    );
+  }
+  const kcTownHallVisibleEngagement =
+    kcTownHallFullPopulation.visibleEngagementSnapshot ?? {};
+  if (
+    kcTownHallVisibleEngagement.observedAt !== "2026-07-14" ||
+    kcTownHallVisibleEngagement.accountAuthoredRecordsWithAnyDisplayedInteraction !==
+      77 ||
+    kcTownHallVisibleEngagement.accountAuthoredDisplayedReplies !== 22 ||
+    kcTownHallVisibleEngagement.accountAuthoredDisplayedReposts !== 70 ||
+    kcTownHallVisibleEngagement.accountAuthoredDisplayedLikes !== 174 ||
+    kcTownHallVisibleEngagement.accountAuthoredDisplayedBookmarks !== 1 ||
+    kcTownHallVisibleEngagement.accountAuthoredDisplayedInteractionUnits !== 267
+  ) {
+    socialMediaProductionErrors.push(
+      "KC Town Hall dated visible-engagement snapshot no longer reconciles"
+    );
+  }
+
+  const kcTownHallFixtureKeys = new Set();
+  const kcTownHallFixtureStack = [kcTownHallFullPopulation];
+  while (kcTownHallFixtureStack.length) {
+    const value = kcTownHallFixtureStack.pop();
+    if (!value || typeof value !== "object") continue;
+    if (Array.isArray(value)) {
+      kcTownHallFixtureStack.push(...value);
+      continue;
+    }
+    for (const [key, child] of Object.entries(value)) {
+      kcTownHallFixtureKeys.add(key.toLowerCase());
+      kcTownHallFixtureStack.push(child);
+    }
+  }
+  for (const forbiddenKey of [
+    "text",
+    "rawtext",
+    "phonenumber",
+    "cookies",
+    "credentials",
+    "session",
+    "privatemessages"
+  ]) {
+    if (kcTownHallFixtureKeys.has(forbiddenKey)) {
+      socialMediaProductionErrors.push(
+        `KC Town Hall public fixture contains forbidden raw field: ${forbiddenKey}`
+      );
+    }
+  }
+  const serializedKcTownHallFixture = JSON.stringify(
+    kcTownHallFullPopulation
+  );
+  for (const marker of blockedPublicRepoMarkers) {
+    if (
+      serializedKcTownHallFixture
+        .toLowerCase()
+        .includes(marker.toLowerCase())
+    ) {
+      socialMediaProductionErrors.push(
+        `KC Town Hall public fixture contains blocked public-repo marker: ${marker}`
+      );
+    }
+  }
+
   const nycArtCAccount = socialAccountById.get("SOCIAL-NYCARTC-X");
   for (const projectId of [
     "nyc-artist-coalition",
@@ -1340,6 +1560,11 @@ export function validateKnowledgeIntake() {
   if (!intakeIdSet.has("INTAKE-WOWLIST-FULL-POPULATION-2026")) {
     socialMediaProductionErrors.push("Missing WOW List full-population archival intake");
   }
+  if (!intakeIdSet.has("INTAKE-KCTOWNHALL-FULL-POPULATION-2026")) {
+    socialMediaProductionErrors.push(
+      "Missing KC Town Hall full-population archival intake"
+    );
+  }
 
   const requiredSocialSourceIds = new Set([
     ...knowledgeBank.socialAccounts.flatMap((account) => account.sourceIds),
@@ -1382,7 +1607,12 @@ export function validateKnowledgeIntake() {
     "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
     "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
     "CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT",
-    "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
+    "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY",
+    "CLM-KCTOWNHALL-ACCOUNT-ESTABLISHMENT-ROLE",
+    "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
+    "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
+    "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
+    "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR"
   ]);
   for (const claimId of expectedActiveSocialClaims) {
     const active = claimById.get(claimId)?.projections.filter((projection) => projection.status === "active") ?? [];
@@ -1401,6 +1631,21 @@ export function validateKnowledgeIntake() {
       ?.projections.some((projection) => projection.status === "active")
   ) {
     socialMediaProductionErrors.push("The WOW List population-reconciliation claim must remain internal rather than replacing the public product story");
+  }
+  for (const claimId of [
+    "CLM-KCTOWNHALL-FULL-POPULATION-PRACTICE",
+    "CLM-KCTOWNHALL-CIVIC-RESOURCE-CURATION",
+    "CLM-KCTOWNHALL-VISIBLE-ENGAGEMENT-SNAPSHOT"
+  ]) {
+    if (
+      claimById
+        .get(claimId)
+        ?.projections.some((projection) => projection.status === "active")
+    ) {
+      socialMediaProductionErrors.push(
+        `${claimId} must remain internal rather than displacing the bounded public operating story`
+      );
+    }
   }
 
   const serializedSocialRecords = JSON.stringify([
@@ -1473,7 +1718,7 @@ export function validateKnowledgeIntake() {
       socialMediaProduction: {
         passed: socialMediaProductionErrors.length === 0,
         errors: socialMediaProductionErrors,
-        evidence: "Four project accounts reconcile dated profile controls to recovered and unresolved slots. WOW List preserves a public-safe 38-record full-population corpus, all 35 posted URLs, nine curated source leads, a bounded 16-record stakeholder inventory, and dated engagement context; selected projections retain collective-authorship, reach, endorsement, causality, and privacy boundaries."
+        evidence: "Four project accounts reconcile dated profile controls to recovered and unresolved slots. WOW List preserves its public-safe 38-record corpus and KC Town Hall preserves a public-safe 183-record corpus, all 31 distinct posted URLs, nine curated source leads, five separated conversation contexts, three direct Council-member responses, one external program corroborator, and dated engagement context; selected projections retain collective-authorship, stewardship, reach, endorsement, causality, and privacy boundaries."
       }
     }
   };

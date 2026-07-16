@@ -21,6 +21,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Maintained a recurring invitation and continuity system spanning event themes, invitations, replies, attendance signals, and follow-up.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation, presented the $490,539 public proposal, and now states the project's later withdrawal and reappropriation boundary.
+- Established KC Town Hall's shared public project identity; a complete 183-record account review documents resident input, recurring neighborhood-service operations, external tire-dropoff corroboration, and direct mission-relevant responses from three sitting Council-member accounts, with authorship, stewardship, metric, endorsement, and causality boundaries intact.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 
 ## Projection Rule

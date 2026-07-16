@@ -155,16 +155,32 @@ complete reconciliation and boundaries.
 
 ## KC Town Hall findings
 
-The 183 recovered status records span July 2018 through September 2022. A
-[launch post](https://x.com/KCTownHall/status/1013893135695601665) documents a
-participatory invitation to help build a neighborhood resource and cultural
-center. The larger account record preserves restoration, resident-input,
-neighborhood-operations, civic-information, and later Tired of Tires patterns.
+All 183 records reported by the current profile counter were recovered and
+reviewed in a subsequent full-population pass. Posts yielded 170 primary
+records. Replies rendered those 183 primary records plus five parent or
+conversation-context cards from other accounts; excluding the contexts
+reconciles the primary union exactly to 183.
+
+The corpus contains 142 original posts, 13 replies, and 28 reposts. It preserves
+all 31 distinct posted short URLs, nine normalized mission-relevant sources,
+100 tire-related records, 12 survey-linked records, a bounded stakeholder
+inventory, and dated visible-engagement context. Three sitting Council-member
+accounts directly responded in mission-relevant contexts, and a Bridging the
+Gap collaborator supplied qualitative tire-dropoff corroboration.
+
+A [launch post](https://x.com/KCTownHall/status/1013893135695601665)
+documents a participatory invitation to help build a neighborhood resource and
+cultural center. The larger account record preserves restoration,
+resident-input, neighborhood-operations, civic-information, public
+stakeholder-response, and recurring Tired of Tires patterns.
 
 Jamie confirms establishing the account. Later posts and programs remain
 unattributed or under changing stewardship unless post-level evidence supports
 a more specific role. Account activity does not prove municipal endorsement,
 funding receipt, completed redevelopment, or causality for Council action.
+See the
+[July 15 full-population note](2026-07-15-kctownhall-x-full-population.md) for
+the complete reconciliation and boundaries.
 
 ## Lifecycle disposition
 
@@ -173,8 +189,9 @@ funding receipt, completed redevelopment, or causality for Council action.
   floor; WOW List's complete displayed-population operating pattern and bounded
   third-party distribution signals; the cross-project account-establishment
   operating claim.
-- **Selected for repository documentation only:** KC Town Hall's durable
-  account identity and changing-stewardship pattern.
+- **Selected for public projection:** KC Town Hall's bounded account-establishment
+  role, resident-input loop, recurring tire-removal operating pattern, external
+  tire-dropoff corroboration, and three-Council-member-account response floor.
 - **Retained for research:** unresolved timeline slots, post-level teammate
   authorship, the complete NYC Artist Coalition interaction census, and close
   reading of the Nightlife Advisory Board report.

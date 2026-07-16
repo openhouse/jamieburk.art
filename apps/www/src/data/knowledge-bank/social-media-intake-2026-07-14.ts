@@ -979,9 +979,29 @@ export const socialAccountRecords20260714 = [
     recoveredItems: 183,
     unresolvedItems: 0,
     recoveryStatus: "current-profile-control-recovered",
-    sourceIds: ["SRC-X-KCTOWNHALL-PROFILE-AUDIT-2026", "SRC-X-KCTOWNHALL-LAUNCH-2018"],
-    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS", "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"],
-    inquiryIds: ["INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026", "INQ-KCTOWNHALL-SOCIAL-ARCHIVE-2026", "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026"],
+    sourceIds: [
+      "SRC-X-KCTOWNHALL-PROFILE-AUDIT-2026",
+      "SRC-X-KCTOWNHALL-LAUNCH-2018",
+      "SRC-X-KCTOWNHALL-FULL-POPULATION-2026"
+    ],
+    claimIds: [
+      "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+      "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY",
+      "CLM-KCTOWNHALL-ACCOUNT-ESTABLISHMENT-ROLE",
+      "CLM-KCTOWNHALL-FULL-POPULATION-PRACTICE",
+      "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
+      "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
+      "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
+      "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR",
+      "CLM-KCTOWNHALL-CIVIC-RESOURCE-CURATION",
+      "CLM-KCTOWNHALL-VISIBLE-ENGAGEMENT-SNAPSHOT"
+    ],
+    inquiryIds: [
+      "INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+      "INQ-KCTOWNHALL-SOCIAL-ARCHIVE-2026",
+      "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026",
+      "INQ-KCTOWNHALL-FULL-POPULATION-2026"
+    ],
     authorshipBoundary: "Jamie confirms establishing the account; shared and later stewardship is retained separately, and later activity is not assigned to Jamie without post-level evidence.",
     limitations: ["Complete current-profile recovery does not prove that no older record was deleted.", "Account activity does not establish endorsement, funding, or Council-allocation causality."]
   }
