@@ -1,0 +1,24 @@
+{
+  "suite_id": "knowledge-bank-development",
+  "target": "claim-development",
+  "candidate_sha": "4e0ac83c62b7066500d11ffb477728724c60bf68",
+  "rubric_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "content_scope": [
+    "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12",
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12"
+  ],
+  "consecutive_passing_runs": 2,
+  "results": [
+    { "eval_id": "KB-001", "score": 4, "pass": true, "evidence": ["Citation, public-safety, private-evidence exclusion, and intake non-projection checks passed."], "findings": [], "recommended_next_move": null, "confidence": 0.99 },
+    { "eval_id": "KB-002", "score": 3, "pass": true, "evidence": ["Sources map to bounded propositions with affirmative support, non-support, decision use, and next steps."], "findings": ["Most public-source mappings use close-reading notes rather than passage-level locators."], "recommended_next_move": null, "confidence": 0.96 },
+    { "eval_id": "KB-003", "score": 4, "pass": true, "evidence": ["Jamie, collaborators, institutions, collective outcomes, and policy causality remain distinct."], "findings": [], "recommended_next_move": null, "confidence": 0.98 },
+    { "eval_id": "KB-004", "score": 3, "pass": true, "evidence": ["Candidate claims name Jamie, concrete actions, collaborators, outputs, and decision value."], "findings": ["Some audience consequence remains in decision-use metadata."], "recommended_next_move": null, "confidence": 0.94 },
+    { "eval_id": "KB-005", "score": 3, "pass": true, "evidence": ["Known dates, uncertain sequences, and future metric time windows are explicit."], "findings": ["Chronology remains distributed across propositions."], "recommended_next_move": null, "confidence": 0.94 },
+    { "eval_id": "KB-006", "score": 4, "pass": true, "evidence": ["Maturity, proof-link, trigger, route, and no-public-projection checks passed without public-surface changes."], "findings": [], "recommended_next_move": null, "confidence": 0.99 },
+    { "eval_id": "KB-007", "score": 3, "pass": true, "evidence": ["Material gaps name recoverable sources, methods, corpus rules, and decisions."], "findings": ["No separately ranked research queue is committed."], "recommended_next_move": null, "confidence": 0.95 },
+    { "eval_id": "KB-008", "score": 3, "pass": true, "evidence": ["Artistic, civic, facilitation, implementation, and public-sector uses remain available without forced projection."], "findings": [], "recommended_next_move": null, "confidence": 0.95 },
+    { "eval_id": "KB-009", "score": 3, "pass": true, "evidence": ["NYCA tensions define confirm, narrow, hold, and replace conditions against exact propositions and governed proofs."], "findings": ["Open triggers have not yet been exercised."], "recommended_next_move": null, "confidence": 0.97 },
+    { "eval_id": "KB-010", "score": 3, "pass": true, "evidence": ["Frozen rubric, exact commits, iteration records, independent scorecards, regressions, and two unchanged-candidate certifications are durable."], "findings": [], "recommended_next_move": null, "confidence": 0.98 }
+  ]
+}

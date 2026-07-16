@@ -1,0 +1,782 @@
+{
+  "corpus": {
+    "account": "@CallNYCapp",
+    "profileDisplayedPostCount": 110,
+    "populationDispositionCount": 110,
+    "recoveredUniqueTimelineObjects": 107,
+    "unrecoveredProfileCountRemainder": 3,
+    "recoveredDateRange": [
+      "2016-03-05T15:55:49.000Z",
+      "2016-11-14T21:20:28.000Z"
+    ],
+    "methods": [
+      "Authenticated profile Posts timeline crawl",
+      "Authenticated profile Replies timeline crawl",
+      "Authenticated date-bounded chronological search",
+      "Internet Archive CDX status-URL lookup",
+      "Per-object classification of all recovered timeline records"
+    ]
+  },
+  "summary": {
+    "relationshipCounts": {
+      "project-post": 86,
+      "project-repost": 15,
+      "project-reply": 6
+    },
+    "sourceViewCounts": {
+      "posts": 106,
+      "with_replies": 1
+    },
+    "monthlyCounts": {
+      "2016-05": 56,
+      "2016-04": 26,
+      "2016-03": 10,
+      "2016-06": 4,
+      "2016-09": 4,
+      "2016-10": 3,
+      "2016-07": 2,
+      "2016-11": 2
+    },
+    "recognitionPostCount": 71,
+    "recognitionTargetHandleCount": 26,
+    "recognitionTargetHandles": {
+      "@ChaimDeutsch": 7,
+      "@HelenRosenthal": 7,
+      "@RLEspinal": 6,
+      "@CMMathieuEugene": 5,
+      "@JimmyVanBramer": 5,
+      "@MMViverito": 5,
+      "@StevenMatteo": 5,
+      "@NYCGreenfield": 4,
+      "@BenKallos": 3,
+      "@MarkTreyger718": 3,
+      "@ElizCrowleyNYC": 2,
+      "@JulissaFerreras": 2,
+      "@RitchieTorres": 2,
+      "@RosieMendez": 2,
+      "@ydanis": 2,
+      "@bradlander": 1,
+      "@CM_MargaretChin": 1,
+      "@CM_RubenWills": 1,
+      "@cmenchaca": 1,
+      "@CMPeterKoo": 1,
+      "@CMReynoso34": 1,
+      "@Dromm25": 1,
+      "@FCabreraNY": 1,
+      "@IDaneekMiller": 1,
+      "@StephenLevin33": 1,
+      "@Vanessalgibson": 1
+    },
+    "recognitionDistinctIssuePageCount": 61,
+    "recognitionIssueHashtags": {
+      "#NYCHABuildingMaintenance": 3,
+      "#AffordableHousing": 2,
+      "#ConEdison": 2,
+      "#FoodStamps": 2,
+      "#GreenCard": 2,
+      "#Heat": 2,
+      "#HotWater": 2,
+      "#Immigration": 2,
+      "#Visas": 2,
+      "#AccessARide": 1,
+      "#AnimalCare": 1,
+      "#Bicycle": 1,
+      "#BikeMonth": 1,
+      "#BuildingMaintenance": 1,
+      "#BuildingsViolation": 1,
+      "#Buses": 1,
+      "#CityServicesAndBenefits": 1,
+      "#CommunityBasedOrg": 1,
+      "#DirtySidewalks": 1,
+      "#EarthDay": 1,
+      "#EmergencyRepairs": 1,
+      "#Employment": 1,
+      "#Eviction": 1,
+      "#GeneralConstruction": 1,
+      "#HomelessShelter": 1,
+      "#HospitalFacility": 1,
+      "#Housing": 1,
+      "#HPDHousingLottery": 1,
+      "#IDNYC": 1,
+      "#ImWalkinHere": 1,
+      "#LandlordIssues": 1,
+      "#LandUseApplication": 1,
+      "#LeaseIssue": 1,
+      "#LegalServices": 1,
+      "#Libraries": 1,
+      "#Lifeline": 1,
+      "#Medicaid": 1,
+      "#Noise": 1,
+      "#NYCHAMisc": 1,
+      "#NYCHANewApplication": 1,
+      "#NYCHATransfer": 1,
+      "#ParkingPermits": 1,
+      "#ParkMaintenance": 1,
+      "#PedestrianSafety": 1,
+      "#PotHoles": 1,
+      "#Recycling": 1,
+      "#RentalArrears": 1,
+      "#RentOvercharges": 1,
+      "#SCRIE": 1,
+      "#Section8": 1,
+      "#SeniorHousing": 1,
+      "#Sidewalks": 1,
+      "#SnowRemoval": 1,
+      "#SpeedBumpRequest": 1,
+      "#StreetFlooding": 1,
+      "#StreetLights": 1,
+      "#StreetResurfacing": 1,
+      "#StreetSigns": 1,
+      "#TaxPrep": 1,
+      "#TaxPrepAssistance": 1,
+      "#TrafficEnforcement": 1,
+      "#TrafficSignal": 1,
+      "#TreePlanting": 1,
+      "#TreesAndSidewalksProgram": 1,
+      "#USCitizenship": 1,
+      "#VotingInfo": 1,
+      "#WaterQuality": 1,
+      "#WildAnimal": 1
+    },
+    "issueFamilyCounts": {
+      "housing-and-tenants": 38,
+      "transportation-and-streets": 19,
+      "civic-technology-and-open-data": 15,
+      "parks-environment-and-sanitation": 12,
+      "immigration-and-legal-services": 9,
+      "culture-and-community": 6,
+      "jobs-and-economic-support": 6,
+      "benefits-and-social-services": 5,
+      "government-and-democracy": 3,
+      "health-and-safety": 3
+    },
+    "stakeholderGroupCounts": {
+      "Council institution": 88,
+      "New York City Council members and offices": 82,
+      "city agencies and executive offices": 12,
+      "civic-technology community": 10,
+      "community and cultural networks": 4,
+      "legal, housing, and service organizations": 3,
+      "press and journalism": 3
+    },
+    "uniqueMentionCount": 68,
+    "uniqueHashtagCount": 96,
+    "uniquePostedShortUrls": 84,
+    "engagementTotals": {
+      "replies": 2,
+      "reposts": 134,
+      "likes": 187
+    },
+    "postsWithAnyObservableEngagement": 71,
+    "topObservableEngagement": [
+      {
+        "statusUrl": "https://x.com/Gothamist/status/725788478676570113",
+        "authorHandle": "Gothamist",
+        "publishedAt": "2016-04-28T20:47:12.000Z",
+        "replies": 2,
+        "reposts": 10,
+        "likes": 19,
+        "total": 31
+      },
+      {
+        "statusUrl": "https://x.com/NYCMayorsOffice/status/729676362634629120",
+        "authorHandle": "NYCMayorsOffice",
+        "publishedAt": "2016-05-09T14:16:16.000Z",
+        "replies": 0,
+        "reposts": 13,
+        "likes": 14,
+        "total": 27
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/706208629360304128",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-03-05T20:03:52.000Z",
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9,
+        "total": 13
+      },
+      {
+        "statusUrl": "https://x.com/chris_whong/status/715139663384547328",
+        "authorHandle": "chris_whong",
+        "publishedAt": "2016-03-30T11:32:37.000Z",
+        "replies": 0,
+        "reposts": 5,
+        "likes": 8,
+        "total": 13
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/730856560071741440",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-05-12T20:25:57.000Z",
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9,
+        "total": 13
+      },
+      {
+        "statusUrl": "https://x.com/wowlist/status/796473557387575297",
+        "authorHandle": "wowlist",
+        "publishedAt": "2016-11-09T22:04:28.000Z",
+        "replies": 0,
+        "reposts": 5,
+        "likes": 6,
+        "total": 11
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/726819779953188865",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-05-01T17:05:13.000Z",
+        "replies": 0,
+        "reposts": 3,
+        "likes": 7,
+        "total": 10
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/738140834973900800",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-06-01T22:51:03.000Z",
+        "replies": 0,
+        "reposts": 5,
+        "likes": 4,
+        "total": 9
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/724986599419875333",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-04-26T15:40:49.000Z",
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4,
+        "total": 8
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/725048363528392704",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-04-26T19:46:15.000Z",
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4,
+        "total": 8
+      },
+      {
+        "statusUrl": "https://x.com/CMPeterKoo/status/728259132705353728",
+        "authorHandle": "CMPeterKoo",
+        "publishedAt": "2016-05-05T16:24:42.000Z",
+        "replies": 0,
+        "reposts": 6,
+        "likes": 2,
+        "total": 8
+      },
+      {
+        "statusUrl": "https://x.com/darrenbloch/status/729670658406400001",
+        "authorHandle": "darrenbloch",
+        "publishedAt": "2016-05-09T13:53:36.000Z",
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5,
+        "total": 8
+      },
+      {
+        "statusUrl": "https://x.com/CivicHall/status/729673498608685058",
+        "authorHandle": "CivicHall",
+        "publishedAt": "2016-05-09T14:04:53.000Z",
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5,
+        "total": 8
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/727919445763575809",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-05-04T17:54:54.000Z",
+        "replies": 0,
+        "reposts": 2,
+        "likes": 5,
+        "total": 7
+      },
+      {
+        "statusUrl": "https://x.com/ppolitics/status/706146203604492288",
+        "authorHandle": "ppolitics",
+        "publishedAt": "2016-03-05T15:55:49.000Z",
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3,
+        "total": 6
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/725084356432269313",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-04-26T22:09:16.000Z",
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3,
+        "total": 6
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/725783813880684544",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-04-28T20:28:40.000Z",
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3,
+        "total": 6
+      },
+      {
+        "statusUrl": "https://x.com/RosieMendez/status/733410096915550208",
+        "authorHandle": "RosieMendez",
+        "publishedAt": "2016-05-19T21:32:47.000Z",
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3,
+        "total": 6
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/734492930262585344",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-05-22T21:15:35.000Z",
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4,
+        "total": 6
+      },
+      {
+        "statusUrl": "https://x.com/CallNYCapp/status/753631998221033472",
+        "authorHandle": "CallNYCapp",
+        "publishedAt": "2016-07-14T16:47:24.000Z",
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4,
+        "total": 6
+      }
+    ]
+  },
+  "externalUrlInventory": [
+    {
+      "shortUrl": "https://t.co/595mNVKE1j",
+      "displayedUrl": "http://nyctwg.org",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288"
+    },
+    {
+      "shortUrl": "https://t.co/fxKlcXONki",
+      "displayedUrl": "http://labs.council.nyc",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288"
+    },
+    {
+      "shortUrl": "https://t.co/0998D9hEqF",
+      "displayedUrl": "http://talk.beta.nyc",
+      "statusUrl": "https://x.com/ppolitics/status/706146203604492288"
+    },
+    {
+      "shortUrl": "https://t.co/yLLGsC6DRO",
+      "displayedUrl": "http://CallNYC.org",
+      "statusUrl": "https://x.com/CallNYCapp/status/730838778772893696"
+    },
+    {
+      "shortUrl": "https://t.co/IBvFeEBZSP",
+      "displayedUrl": "http://WOWList.org",
+      "statusUrl": "https://x.com/CallNYCapp/status/710150246781882369"
+    },
+    {
+      "shortUrl": "https://t.co/7mstGHJlRD",
+      "displayedUrl": "http://callnyc.org/finance/tax-preparation-assistance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724986599419875333"
+    },
+    {
+      "shortUrl": "https://t.co/uhtgJwS83b",
+      "displayedUrl": "http://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+      "resolvedUrl": "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+      "statusUrl": "https://x.com/CallNYCapp/status/710498412349800450"
+    },
+    {
+      "shortUrl": "https://t.co/mnTxsOm2u5",
+      "displayedUrl": "http://politi.co/1RW5eXZ",
+      "resolvedUrl": "http://www.capitalnewyork.com/article/city-hall/2016/03/8593638/website-allows-getting-know-councilmembers-through-data",
+      "statusUrl": "https://x.com/CallNYCapp/status/710507767447031808"
+    },
+    {
+      "shortUrl": "https://t.co/o34NImeSCP",
+      "displayedUrl": "http://callnyc.org",
+      "statusUrl": "https://x.com/CallNYCapp/status/712349795403374592"
+    },
+    {
+      "shortUrl": "https://t.co/3FD3LmieU3",
+      "displayedUrl": "http://CallNYC.org/api/",
+      "statusUrl": "https://x.com/CallNYCapp/status/713537148000018432"
+    },
+    {
+      "shortUrl": "https://t.co/KvWTMollyY",
+      "displayedUrl": "http://bit.ly/1Y0gSCZ",
+      "resolvedUrl": "http://chriswhong.github.io/311buddy/",
+      "statusUrl": "https://x.com/chris_whong/status/715139663384547328"
+    },
+    {
+      "shortUrl": "https://t.co/QLHrhiHP1y",
+      "displayedUrl": "http://callnyc.org/api/",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837286476390401"
+    },
+    {
+      "shortUrl": "https://t.co/2ihtdXQMGs",
+      "displayedUrl": "http://callnyc.org/immigration/u-s-citizenship.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/722837868008177664"
+    },
+    {
+      "shortUrl": "https://t.co/fkq7hzWi6c",
+      "displayedUrl": "http://callnyc.org/cultural-affairs/libraries.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/722928370237853696"
+    },
+    {
+      "shortUrl": "https://t.co/R9Bx3XNjYv",
+      "displayedUrl": "http://callnyc.org/general-welfare/food-stamps.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723132373114572801"
+    },
+    {
+      "shortUrl": "https://t.co/ZQZbxgPqPx",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/landlord-managing-agent-issues.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723153082096345092"
+    },
+    {
+      "shortUrl": "https://t.co/jP1mkW2MfY",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-new-application.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723249608659443712"
+    },
+    {
+      "shortUrl": "https://t.co/kb8YHA4CCc",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/775370427644411904"
+    },
+    {
+      "shortUrl": "https://t.co/KaN1Ph34OH",
+      "displayedUrl": "http://callnyc.org/legal-services/immigration.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723546610576306176"
+    },
+    {
+      "shortUrl": "https://t.co/t4aK6PYHIG",
+      "displayedUrl": "http://callnyc.org/parks/tree-planting-pruning.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/723547805709676544"
+    },
+    {
+      "shortUrl": "https://t.co/KUZBXbkGrp",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/construction-general.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724723473852059649"
+    },
+    {
+      "shortUrl": "https://t.co/UwHNuZs1qj",
+      "displayedUrl": "http://callnyc.org/parks/park-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724727480909705216"
+    },
+    {
+      "shortUrl": "https://t.co/D6cgQ300iJ",
+      "displayedUrl": "http://callnyc.org/quality-of-life/noise-other.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/724767660353949697"
+    },
+    {
+      "shortUrl": "https://t.co/CfUcCUgR5v",
+      "displayedUrl": "http://callnyc.org/transportation/street-resurfacing.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725048363528392704"
+    },
+    {
+      "shortUrl": "https://t.co/9GUjrTPVfR",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-transfers.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725052316978663426"
+    },
+    {
+      "shortUrl": "https://t.co/ixqxa8cPpB",
+      "displayedUrl": "http://callnyc.org/economy-jobs/seeking-employment.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725084356432269313"
+    },
+    {
+      "shortUrl": "https://t.co/KlskCGW2jn",
+      "displayedUrl": "http://callnyc.org/cultural-affairs/community-based-organization.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725334082364821504"
+    },
+    {
+      "shortUrl": "https://t.co/FZduliunTG",
+      "displayedUrl": "http://callnyc.org/utilities/lifeline.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725403215282487296"
+    },
+    {
+      "shortUrl": "https://t.co/dQTEpirK0c",
+      "displayedUrl": "http://callnyc.org/health/animal-care-wild-animal.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725445909241278468"
+    },
+    {
+      "shortUrl": "https://t.co/1Uo5Non4dz",
+      "displayedUrl": "http://callnyc.org/immigration/city-services-and-benefits.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725447728503902211"
+    },
+    {
+      "shortUrl": "https://t.co/f7sPewFLeA",
+      "displayedUrl": "http://callnyc.org/general-welfare/homeless-shelter-dhs.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725462205173518338"
+    },
+    {
+      "shortUrl": "https://t.co/grEZDUYGgo",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/affordable-housing-apartment.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/773637656555163648"
+    },
+    {
+      "shortUrl": "https://t.co/nOPVwvQhOv",
+      "displayedUrl": "http://gothamist.com/2016/04/28/pulaski_bridge_bike_path.php",
+      "resolvedUrl": "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday",
+      "statusUrl": "https://x.com/Gothamist/status/725788478676570113"
+    },
+    {
+      "shortUrl": "https://t.co/48kNXGpGNx",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/lease-issue.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725789777673465857"
+    },
+    {
+      "shortUrl": "https://t.co/Ki4PWJgXMf",
+      "displayedUrl": "http://callnyc.org/land-use-and-zoning/land-use-application-process.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/725813046631911424"
+    },
+    {
+      "shortUrl": "https://t.co/BJ0kKbfsHS",
+      "displayedUrl": "http://callnyc.org/immigration/green-card.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/738115545002807296"
+    },
+    {
+      "shortUrl": "https://t.co/uRvk9DxiIn",
+      "displayedUrl": "http://callnyc.org/utilities/con-edison.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732370968946065408"
+    },
+    {
+      "shortUrl": "https://t.co/xGXnqIMgz2",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/rental-arrears.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/726900698827358208"
+    },
+    {
+      "shortUrl": "https://t.co/NPe2gejGrr",
+      "displayedUrl": "http://callnyc.org/transportation/street-lights.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727164122106847233"
+    },
+    {
+      "shortUrl": "https://t.co/ii9fYml6sq",
+      "displayedUrl": "http://callnyc.org/transportation/bicycles.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727251825414561792"
+    },
+    {
+      "shortUrl": "https://t.co/fs5dINLYGQ",
+      "displayedUrl": "http://callnyc.org/sanitation/snow-removal.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727528637340241920"
+    },
+    {
+      "shortUrl": "https://t.co/lSRkB621fB",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/heat-hot-water.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731212042863005697"
+    },
+    {
+      "shortUrl": "https://t.co/0sswRK5kfj",
+      "displayedUrl": "http://callnyc.org/transportation/pot-holes.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727919445763575809"
+    },
+    {
+      "shortUrl": "https://t.co/ipg2ACxsfA",
+      "displayedUrl": "http://callnyc.org/governmental-operations/voting-information.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/727689676115611650"
+    },
+    {
+      "shortUrl": "https://t.co/RakQv8ztqc",
+      "displayedUrl": "http://callnyc.org/transportation/pedestrian-safety.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/728001482692399104"
+    },
+    {
+      "shortUrl": "https://t.co/II5uv5lxQV",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/eviction.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/728333768226947077"
+    },
+    {
+      "shortUrl": "https://t.co/DBrHgcWshC",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/section-8.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/728666490250113026"
+    },
+    {
+      "shortUrl": "https://t.co/rgMJ2CoXGE",
+      "displayedUrl": "http://bit.ly/homelessnessprevention",
+      "resolvedUrl": "https://www.nyc.gov/site/hra/help/homelessness-prevention.page",
+      "statusUrl": "https://x.com/CallNYCapp/status/729757799647981570"
+    },
+    {
+      "shortUrl": "https://t.co/YMBsQlYVUD",
+      "displayedUrl": "http://callnyc.org/parks/trees-and-sidewalks-program.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/729830383689281537"
+    },
+    {
+      "shortUrl": "https://t.co/hYFYASsn6j",
+      "displayedUrl": "http://callnyc.org/immigration/visas.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/729832019304194052"
+    },
+    {
+      "shortUrl": "https://t.co/hYFYASaMeL",
+      "displayedUrl": "http://callnyc.org/immigration/visas.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/729835258808537088"
+    },
+    {
+      "shortUrl": "https://t.co/Rr2SCkG4ha",
+      "displayedUrl": "http://callnyc.org/transportation/traffic-enforcement.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/730842213429710850"
+    },
+    {
+      "shortUrl": "https://t.co/uIv6B7KlFk",
+      "displayedUrl": "http://callnyc.org/sanitation/dirty-sidewalk.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/730856560071741440"
+    },
+    {
+      "shortUrl": "https://t.co/CPuzz8aIbk",
+      "displayedUrl": "http://callnyc.org",
+      "statusUrl": "https://x.com/StephCW_/status/730862177037488128"
+    },
+    {
+      "shortUrl": "https://t.co/ffdda0QyEM",
+      "displayedUrl": "http://callnyc.org/general-welfare/medicaid.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731168037433450496"
+    },
+    {
+      "shortUrl": "https://t.co/LfBEH2jLbI",
+      "displayedUrl": "http://callnyc.org/transportation/buses.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731254021000986624"
+    },
+    {
+      "shortUrl": "https://t.co/4HbbAUkItU",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/violation.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/731873940923109376"
+    },
+    {
+      "shortUrl": "https://t.co/pTyzAfP1VC",
+      "displayedUrl": "http://callnyc.org/transportation/traffic-signals.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732660179540578306"
+    },
+    {
+      "shortUrl": "https://t.co/s1o4UnLYUh",
+      "displayedUrl": "http://callnyc.org/governmental-operations/idnyc.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732687384597430273"
+    },
+    {
+      "shortUrl": "https://t.co/rswa2xGz1k",
+      "displayedUrl": "http://callnyc.org/sanitation/recycling.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732752376709447680"
+    },
+    {
+      "shortUrl": "https://t.co/d7ArO9ggzv",
+      "displayedUrl": "http://callnyc.org/health/hospital-facility-or-clinic.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/732928060635373569"
+    },
+    {
+      "shortUrl": "https://t.co/llG6NvBbg5",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/emergency-repairs.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733027856025047041"
+    },
+    {
+      "shortUrl": "https://t.co/VhFe6Rlsgt",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/rent-overcharges.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733063600152141825"
+    },
+    {
+      "shortUrl": "https://t.co/U2jumuuuMK",
+      "displayedUrl": "http://callnyc.org/finance/scrie.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733387247362379777"
+    },
+    {
+      "shortUrl": "https://t.co/hbYVTNLDAJ",
+      "displayedUrl": "http://nyc.gov/rentfreeze",
+      "statusUrl": "https://x.com/CallNYCapp/status/733388862806982656"
+    },
+    {
+      "shortUrl": "https://t.co/wjTEKDJRnR",
+      "displayedUrl": "https://youtube.com/watch?v=vwpGGRK4JgA",
+      "resolvedUrl": "https://www.youtube.com/watch?v=vwpGGRK4JgA",
+      "statusUrl": "https://x.com/CallNYCapp/status/733388862806982656"
+    },
+    {
+      "shortUrl": "https://t.co/eaopIEuKTI",
+      "displayedUrl": "http://callnyc.org/transportation/sidewalks.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/733649303223336960"
+    },
+    {
+      "shortUrl": "https://t.co/ZydpCtAgvM",
+      "displayedUrl": "http://callnyc.org/legal-services/housing.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/734492930262585344"
+    },
+    {
+      "shortUrl": "https://t.co/tq0BISDhHW",
+      "displayedUrl": "http://callnyc.org/transportation/parking-permits.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/734897908353470464"
+    },
+    {
+      "shortUrl": "https://t.co/EZNfChqkZ9",
+      "displayedUrl": "http://callnyc.org/transportation/speed-bump-request.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/735214806249144320"
+    },
+    {
+      "shortUrl": "https://t.co/eZOLTVq7Dd",
+      "displayedUrl": "http://callnyc.org/transportation/street-signs.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/735644754340401152"
+    },
+    {
+      "shortUrl": "https://t.co/WrNWyaz9jp",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/senior-housing.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/735914869782904832"
+    },
+    {
+      "shortUrl": "https://t.co/VVY0b0qR3v",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-misc.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/736904163414675456"
+    },
+    {
+      "shortUrl": "https://t.co/FM6CIEx4Ih",
+      "displayedUrl": "http://callnyc.org/transportation/access-a-ride.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/738140834973900800"
+    },
+    {
+      "shortUrl": "https://t.co/MIOl6874Ns",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/building-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/738458056716091392"
+    },
+    {
+      "shortUrl": "https://t.co/y8HNgKVmZy",
+      "displayedUrl": "http://callnyc.org/environment/street-flooding.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/748532929802997760"
+    },
+    {
+      "shortUrl": "https://t.co/7mstGHrKt3",
+      "displayedUrl": "http://callnyc.org/finance/tax-preparation-assistance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/753631998221033472"
+    },
+    {
+      "shortUrl": "https://t.co/kb8YHzN1dC",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/753678962501390336"
+    },
+    {
+      "shortUrl": "https://t.co/R9Bx3XvJ6X",
+      "displayedUrl": "http://callnyc.org/general-welfare/food-stamps.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/776509377897500672"
+    },
+    {
+      "shortUrl": "https://t.co/2uxB0ADLpY",
+      "displayedUrl": "http://callnyc.org",
+      "statusUrl": "https://x.com/HelenRosenthal/status/780797474277511170"
+    },
+    {
+      "shortUrl": "https://t.co/4dT9nvJtsb",
+      "displayedUrl": "http://callnyc.org/housing-and-buildings/hpd-housing-lottery.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/783022174890229760"
+    },
+    {
+      "shortUrl": "https://t.co/xRaVn9NchH",
+      "displayedUrl": "http://callnyc.org/environment/water-quality.html",
+      "statusUrl": "https://x.com/CallNYCapp/status/783410245632655364"
+    },
+    {
+      "shortUrl": "https://t.co/D6udDGJ7Um",
+      "displayedUrl": "https://wowlist.org/DownWithTrump",
+      "statusUrl": "https://x.com/wowlist/status/796473557387575297"
+    },
+    {
+      "shortUrl": "https://t.co/O1euiAdPmX",
+      "displayedUrl": "http://popular.vote",
+      "statusUrl": "https://x.com/wowlist/status/798274424763981824"
+    }
+  ]
+}

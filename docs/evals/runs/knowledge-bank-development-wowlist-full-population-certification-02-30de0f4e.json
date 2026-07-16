@@ -1,0 +1,198 @@
+{
+  "suite_id": "knowledge-bank-development",
+  "target": "claim-development",
+  "candidate_sha": "30de0f4ef59d9e8586ed7dca11e58e37ecb10d92",
+  "rubric_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "content_scope": [
+    "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12",
+    "INTAKE-SUNDAY-DINNER-COMMUNITY-HOSTING-2026-07-13",
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
+    "INTAKE-NYCA-CAMPAIGN-PRESS-CORPUS-2026-07-13",
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12",
+    "INTAKE-PROJECT-SOCIAL-IDENTITY-SYSTEM-2026-07-14",
+    "INTAKE-NYCA-COUNCIL-SOCIAL-ENGAGEMENT-2026-07-14",
+    "INTAKE-WOWLIST-SOCIAL-RECORD-2026-07-14",
+    "INTAKE-KC-SPACES-FUND-SOCIAL-RECORD-2026-07-14",
+    "INTAKE-KC-TOWN-HALL-SOCIAL-CONTINUITY-2026-07-14",
+    "INTAKE-KC-TOWN-HALL-CCED-ALLOCATION-2026-07-13",
+    "INTAKE-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026-07-14",
+    "INTAKE-INTERACTIVE-MEDIA-PRACTICE-2026-07-14",
+    "INTAKE-CRS-OPERATING-AND-DATA-INFRASTRUCTURE-2026-07-14",
+    "INTAKE-EVALS-AND-SOURCE-BACKED-SPRINT-2026-07-14",
+    "INTAKE-GDRIVE-196-RESIDENCY-OPERATIONS-2026-07-14",
+    "INTAKE-GDRIVE-VACANCY-ARCHIVE-AND-OVERVIEW-AUTOMATION-2026-07-14",
+    "INTAKE-GDRIVE-SHARED-WORKSPACE-PRACTICE-2026-07-14"
+  ],
+  "results": [
+    {
+      "eval_id": "KB-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Fresh Node 26.4.0 runs of `npm run check:citations`, `npm run test:citations`, `npm run evals:knowledge-bank`, `npm run test:knowledge-bank-evals`, `npm run knowledge-bank`, `npm run public-safety`, and `npm run check:routes` all exited 0; 23 citation tests and 16 knowledge-bank evaluation tests passed.",
+        "A fresh runtime import of `apps/www/src/data/knowledge-bank/records.ts` found exactly 18 intake items, 151 source records, and 145 distinct intake-associated sources; no intake item lacked `reviewedAt`, `reviewedBy`, provenance kind, or `no-public-projection` status, and no associated source lacked affirmative or negative boundaries.",
+        "A fresh comparison with `apps/www/src/data/knowledge-bank/public-registry.json` found no intake-ID leak and no registry occurrence among the 137 intake-associated sources not also used by governed claims. Non-public sources exposed no public URL, and every protected source had an opaque locator.",
+        "`docs/knowledge-bank/research/data/wowlist-x-full-population-census-2026-07-15.csv` contains derived public metadata rather than raw post bodies or private paths; the boundaries in `docs/knowledge-bank/research/2026-07-15-wowlist-x-full-population-archival-production.md` exclude private account data, follower identities, private messages, deleted-post speculation, and unsupported shared-account attribution."
+      ],
+      "findings": [
+        "All eighteen records remain public-safe, provenance-aware, and separated from direct public projection.",
+        "The WOW List census preserves enough metadata for independent arithmetic while withholding private and participant-level material."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-002",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh runtime inspection found 77 propositions and 22 candidate claims across nine intake items, with no unresolved proposition source, out-of-scope proposition source, missing source-support decomposition, unsupported candidate wording, or context-only, memory-lead, or research-only proposition lacking a next step.",
+        "`apps/www/src/data/knowledge-bank/records.ts` decomposes WOW List population recovery, product workflows, external-use specimens, source-trail themes, and mutable engagement into seven separate propositions with explicit non-support boundaries.",
+        "An independent Node 26 CSV parser recomputed 38 unique statuses in chronological order: 16 project posts, six project replies, and 16 external-status reposts from 13 source accounts. It independently reproduced 31 URL-bearing statuses, 19 project-authored URL-bearing statuses, 35 unique short URLs, and every committed summary total.",
+        "`scripts/research/build-wowlist-x-census.mjs` requires an uncommitted authenticated capture, while `apps/www/src/data/knowledge-bank/projectSocial.ts` points to a mutable `develop` asset URL that is absent from the local `origin/develop` tree; the repository contains no redacted replay fixture or capture manifest."
+      ],
+      "findings": [
+        "Claims and propositions fit their source classes, and context, memory, institutional outcomes, shared authorship, and person-specific evidence remain distinct.",
+        "The committed census is internally reproducible, but the original capture-to-census transformation cannot be replayed solely from durable public-safe repository inputs."
+      ],
+      "recommended_next_move": "Preserve a redacted, hashed capture manifest or replay fixture and replace the mutable branch-relative census locator with a durable content-addressed locator.",
+      "confidence": 0.98
+    },
+    {
+      "eval_id": "KB-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Fresh runtime inspection confirmed that all 22 candidate claims explicitly name Jamie while collective and institutional actions remain separately attributed.",
+        "`apps/www/src/data/knowledge-bank/records.ts` distinguishes Jamie's actions from housemates, Suzanne Hogan, Julia, Anya Sapozhnikova, Tara Mc Manus, campaign collaborators, Council members, government bodies, residents, and other project participants.",
+        "The WOW List intake assigns no human author to shared-account statuses, treats reposts as curation rather than reciprocal engagement, and presents three external uses as specimens rather than an adoption total.",
+        "The KC Town Hall records separately preserve Board recommendation, Council acceptance and appropriation, later withdrawal and reappropriation, Jamie's unresolved contribution, and the independent stewardship-transition memory lead."
+      ],
+      "findings": [
+        "Jamie is visible through concrete mechanisms without being presented as the sole cause of collective, participant, governmental, or post-transition outcomes.",
+        "Collaborator credit, institutional authority, shared-account authorship limits, and participant agency are consistently preserved."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-004",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "The 22 supported candidate claims in `apps/www/src/data/knowledge-bank/records.ts` name concrete work including communal exhibitions, recurring hosting, public-safety study groups, interactive installations, coalition operating artifacts, privacy-aware data specifications, residency onboarding, archive stewardship, and mixed-format overview automation.",
+        "The candidate wording generally identifies actor, action, collaborator, artifact, and bounded result rather than relying on generic systems language.",
+        "`apps/www/src/data/work.ts` gives a context-free WOW List account of contribution, onboarding, event entry, weekly-email use, tutorial creation, and public page circulation while preserving historical and adoption limits."
+      ],
+      "findings": [
+        "A hiring reader can usually identify what Jamie did and what tangible structure or artifact resulted.",
+        "Several useful consequences remain only in proposition `decisionUse` metadata rather than in portable candidate wording, preventing exceptional credit."
+      ],
+      "recommended_next_move": "Where source support permits, incorporate one concrete useful end into mature portable claims without strengthening role, scale, chronology, or causality.",
+      "confidence": 0.96
+    },
+    {
+      "eval_id": "KB-005",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "The independent WOW List recomputation confirmed chronological ordering from `2014-02-12T15:48:48.000Z` through `2017-01-12T21:51:23.000Z` across all 38 rows.",
+        "`apps/www/src/data/knowledge-bank/records.ts` keeps the July 2019 CCED recommendation, September 2019 Council acceptance and appropriation, and 2024 withdrawal and reappropriation as distinct events.",
+        "The interactive-media record preserves the 2010-2022 project sequence and unresolved Burkhardt/Burkart identity conflict, while the vacancy record preserves its December 2005 through December 2025 range, missing March 2019 quarter, and duplicated 2012 format transition.",
+        "`docs/knowledge-bank/research/2026-07-15-wowlist-x-full-population-archival-production.md` distinguishes the profile-counted population from an account export or complete deleted-post history."
+      ],
+      "findings": [
+        "Known dates, historical states, current-state limits, and adverse later events are internally coherent.",
+        "Cross-thread chronology remains distributed, and several routes, handoff dates, current states, and lineage relationships remain intentionally unresolved."
+      ],
+      "recommended_next_move": "Create a bounded cross-thread chronology and relationship index using existing source anchors without implying unsupported causal lineage.",
+      "confidence": 0.97
+    },
+    {
+      "eval_id": "KB-006",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh Node 26 runs of `npm run evals:knowledge-bank` and `npm run test:knowledge-bank-evals` passed the suite and all 16 maturity, source, proof-link, proposition, tension, correction-trigger, and projection tests.",
+        "Fresh runtime inspection found seven `claim-candidate`, nine `researching`, one `integrated`, and one `captured` item. All 18 remain `no-public-projection`, and the integrated CallNYC item resolves to a governed claim.",
+        "`docs/knowledge-bank/research/2026-07-15-wowlist-x-full-population-archival-production.md` records a separate portfolio decision to update an existing governed proof and public work artifact while withholding engagement totals and avoiding a new public route.",
+        "`apps/www/src/data/proofs.ts` routes the update through the existing `wowlist-community-platform` proof, but that proof retains a July 7 `lastReviewed` date and the new contribution-and-circulation artifact lacks a dedicated machine-readable claim occurrence."
+      ],
+      "findings": [
+        "Structural maturity, governed-claim linkage, registry exclusion, and intake non-projection all pass; the public change is supported by a separate editorial decision.",
+        "Review metadata and the explicit machine-readable projection relationship are not complete enough for exceptional governance credit."
+      ],
+      "recommended_next_move": "Advance the governed proof review metadata and record an explicit canonical claim-to-artifact projection relationship.",
+      "confidence": 0.96
+    },
+    {
+      "eval_id": "KB-007",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh runtime inspection found between three and five research questions on every intake item and no context-only, memory-lead, or research-only proposition lacking a concrete next step.",
+        "The WOW List record names archived event pages, collaborator outcome evidence, source-account classification, capture preservation, and replay inputs as research paths.",
+        "The KC, interactive-media, CRS, residency, vacancy, and shared-workspace records name recoverable government records, handoff artifacts, collaborator confirmations, integrity manifests, public-safe outputs, rights reviews, version reconciliation, and adoption evidence."
+      ],
+      "findings": [
+        "Unresolved threads generally identify a recoverable fact, likely source or method, and consequential claim or projection decision.",
+        "Priorities are legible within individual threads but are not consolidated into one ranked source-fact-decision queue across all eighteen records."
+      ],
+      "recommended_next_move": "Rank the cross-scope research queue by recoverable source, fact sought, affected decision, and expected evidentiary value.",
+      "confidence": 0.96
+    },
+    {
+      "eval_id": "KB-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "`apps/www/src/data/knowledge-bank/records.ts` preserves participatory art, domestic cultural space, hosting, policy advocacy, press architecture, civic data, social identity, mutual aid, adaptive reuse, interactive media, coalition operations, privacy-aware data design, AI evaluation, residency operations, archive stewardship, automation, and handoff practice.",
+        "Proposition-level `decisionUse` fields preserve hiring, civic, cultural, artistic, facilitation, technical, archival, product-operations, and public-data uses without requiring current website projection.",
+        "`docs/knowledge-bank/intake.md` separates maturity from importance and knowledge governance from portfolio composition.",
+        "`docs/knowledge-bank/research/2026-07-15-wowlist-x-full-population-archival-production.md` retains DIY documentation, cross-scene learning, public care, cultural-space safety, source uses, and specific non-uses beyond the concise public artifact."
+      ],
+      "findings": [
+        "The bank preserves unusually specific civic, artistic, relational, technical, archival, and operational texture rather than reducing the scope to résumé abstractions.",
+        "Developed material remains reusable across multiple future narratives while appropriately staying off current public surfaces."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-009",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh runtime inspection found six formal tensions and 14 correction triggers across five intake items, with all proposition and governed-proof references resolving.",
+        "`apps/www/src/data/knowledge-bank/records.ts` preserves the Julie/Julia inconsistency, the Burkhardt/Burkart identity conflict, appropriation versus receipt and expenditure, later withdrawal and reappropriation, missing chronology, and duplicate-version conditions.",
+        "`docs/knowledge-bank/research/2026-07-15-wowlist-x-full-population-archival-production.md` bounds the 38-object result to the displayed population, limits negative searches, excludes deleted-post speculation, and withholds shared-account attribution.",
+        "The independent census recomputation found no duplicate ID, duplicate status URL, slot gap, chronology error, summary mismatch, or missing mission or stakeholder classification."
+      ],
+      "findings": [
+        "Known conflicts, adverse evidence, incomplete recovery, mutable metrics, and correction-ready governed tensions remain visible; negative recovery is not treated as proof of nonexistence.",
+        "WOW List has strong prose boundaries but no formal correction trigger for census drift, replay or locator failure, new shared-author evidence, or contradiction of an external-use specimen."
+      ],
+      "recommended_next_move": "Add a governed WOW List correction trigger covering census drift, replay or locator failure, shared-account attribution evidence, and contradiction of bounded external-use specimens.",
+      "confidence": 0.98
+    },
+    {
+      "eval_id": "KB-010",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "Fresh Git checks confirmed rubric commit `2216610afa01637ef81d95c1a69112cc2acdc090` is an ancestor of candidate `30de0f4ef59d9e8586ed7dca11e58e37ecb10d92`; the rubric JSON and Markdown blobs remain `2cf0cb573345b8d328e8274922b70f36081bd311` and `4dd7df7d028c29d3616ff991bd43dd5285a62411` at the rubric commit, candidate, and HEAD.",
+        "`git diff --name-status 30de0f4ef59d9e8586ed7dca11e58e37ecb10d92..HEAD` returned exactly six added process artifacts under `docs/evals/runs`; the exclusion diff over every non-process path exited 0, and the worktree remained clean.",
+        "Fresh frozen-scorer calls validated the exact-candidate baseline at 0.8275 with KB-010 at 1, the failed follow-up at 0.835 with KB-010 at 2, and certification 1 at 0.8425 with every criterion passing and only the one-run streak blocker.",
+        "The three iteration records preserve the exact candidate and rubric, one selected failure, distinct judge sessions `019f6441-333a-7ed1-83c0-2c55e91bc27c`, `019f644b-8114-7bd3-9837-3f24aa408c0d`, and `019f6456-f26f-7751-869a-102e467abf7b`, explicit before-and-after scores, regressions, unchanged-content decisions, and non-reuse of older certifications.",
+        "Certification 1 is a valid independent passing judgment on the exact 18-ID unchanged candidate. A fresh frozen-scorer calculation for this second independent vector `[4,3,4,3,3,3,3,4,3,3]` with two consecutive passes returned weighted score 0.8425, `eligible: true`, no errors, and no blockers."
+      ],
+      "findings": [
+        "The baseline, failed follow-up, three iteration records, and certification 1 are durable, exact-candidate, frozen-rubric, content-neutral process evidence; the older candidate SHA appears only as the baseline's before-candidate comparison and is not counted as a certification.",
+        "Evaluator separation is recorded through distinct judge sessions and regression records. The trail lacks stronger signed evaluator metadata, limiting exceptional process credit but not the validity of the two-run result."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.99
+    }
+  ],
+  "consecutive_passing_runs": 2
+}

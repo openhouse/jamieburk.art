@@ -28,6 +28,38 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not turn the April 2026 ninety-day plan into proof that every deliverable was
+completed or adopted. Do not represent the Open Data Foundation memo or Fuller
+Public Baseline handout as an agency-adopted plan, completed data release, new
+empirical finding, or enacted Commercial Rent Guidelines Board.
+
+## Interactive Media
+
+Do not silently normalize the Matmos credit from Jamie Burkhardt to Jamie
+Burkart. Do not collapse collaborator, programmer, construction, platform, or
+source-composition credits into sole authorship by Jamie.
+
+For NTER CHNG, do not say the Nerman Museum page names the project; its role is
+exhibition context only. Do not convert a first-party account of visitor use
+into attendance, reach, endorsement, adoption, reception, or impact. Do not
+reproduce archived phone numbers, participant messages, or media without
+separate permission and review.
+
+## Waterways Expedition
+
+Do not say Jamie completed *Release Yourself onto the Water until it Tastes of
+Salt* alone, personally performed every design, fabrication, navigation,
+documentation, logistics, or public-engagement task, or was the journey's only
+participant. Always credit Libby Hendon and Laura Mattingly as the other named
+core crew members and preserve the wider support ecology.
+
+Do not claim Gulf-of-Mexico arrival or an exact final endpoint from the current
+sources. The Kansas City Star establishes travel from Kansas City's West
+Bottoms into Louisiana, a location south of Baton Rouge at publication, and
+passage beyond the 1,000-mile marker. Do not republish the newspaper PDF,
+article text, or photographs without rights clearance, and do not treat the
+historical journey as current river-travel guidance.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -37,9 +69,33 @@ first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,
 selected, or a winner without new evidence and review.
 
+Do not say all 110 profile-counted social objects were recovered; 107 are
+recovered and three remain not recovered. Do not turn 26 Council-member
+accounts named by CallNYC's issue-recognition posts into 26 offices that
+engaged with, endorsed, or adopted the product. Do not treat access-time likes
+or reposts as stable reach, adoption, or outcome metrics.
+
 ## WOWList
 
 Do not name collaborators unless approved.
+
+## NYC Artist Coalition Facebook Posts
+
+Do not call the 444-record surviving Page census a native Meta export, deletion
+history, lifetime total, or proof that no historical post is missing. Do not
+say Jamie authored or published all 444 records, was the sole Page
+administrator, or was the predominant publisher as an established fact.
+
+Do not turn 88 Council-related routing records into 88 Council members who
+engaged. Tags, mentions, links, quotations, and reshares do not prove response,
+endorsement, partnership, attendance, or action. Current reaction, comment, and
+share floors and post-level manager-export reach values do not establish unique
+people, lifetime analytics, reach, attendance, conversion, policy influence,
+causality, or impact.
+
+Do not publish raw post bodies, comments, names, per-record metrics, raw post
+URLs, media, post-to-route relationships, administrator state, authenticated
+session details, or protected historical action routes.
 
 ## 196 / Sunday Dinner
 
@@ -57,12 +113,74 @@ Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or
 private Drive documents.
 
+Do not say the 40-card public ledger is a native Meta export, a complete
+lifetime archive, or proof that no historical post is missing. Do not assign
+the Page, its posts, or its administration to Jamie; he states that he was not
+the stakeholder or owner posting on the account.
+
+Do not say Jamie alone named KC Spaces Fund. The public record establishes a
+uniform identity across the domain, Facebook, X, Instagram, and GoFundMe, but
+not who proposed, checked, approved, registered, or administered the name.
+
+Do not turn 119 visible reaction units into people reached or impact. Do not
+treat four comment relationships as endorsement or partnership. Do not call
+the ten surviving funded-space spotlights the complete grantee population or
+say Jamie raised the public fundraiser total.
+
 ## KC Town Hall
 
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Do not say KC Town Hall received or spent a $490,539 grant, completed the
+adaptive reuse, or that Jamie alone secured the Council action. Official records
+support CCED recommendation, Council acceptance and appropriation, and later
+reappropriation of unused funds as separate stages.
+
+Do not assign all 183 shared-account records to Jamie, attribute later
+neighborhood-program operation to him, turn 100 tire-related records or 12
+survey-linked records into participant or outcome counts, or describe three
+direct Council-member account responses as formal endorsement or partnership.
+Access-time likes, replies, reposts, and bookmarks are archival labels, not
+reach or impact.
+
+Do not treat the Council's withdrawal language as proof that Jamie abandoned or
+failed the project. Do not present Jamie's firsthand stewardship-transition
+account as government-record evidence, identify the receiving organization, or
+assert transfer mechanics, timing, continuity, or later status without
+appropriate corroboration and review.
+
+Do not turn the 2019 application package into an independent audit. Its visible
+2018 and 2019 Phase One column totals and at least one row subtotal do not
+reconcile to the displayed $189,629 total. Say the proposal displays that total;
+do not call it verified cost, audited expenditure, or money Jamie personally
+spent or controlled.
+
+Do not present the proposal as independently assigning Jamie the
+general-contractor title, every field-coordination duty, survey-card authorship,
+or the complete TiredOfTires role. Those details come from Jamie's attributed
+first-person account and should stay paired with the narrower corroboration.
+Do not imply that he personally performed licensed trade work, erase Julia or
+named contractors and neighborhood partners, claim sole TiredOfTires operation,
+or quantify tires, savings, handbills, survey responses, participants, or
+neighborhoods without reconciled evidence.
+
+Cleveland Avenue Unify to Beautify, Indian Mound expansion, and the pro bono
+neighborhood print-production scale remain research leads. Preserve Pastor
+Lee's origin credit and do not claim a particular capital-allocation outcome
+until program, city, or collaborator records support it.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+Do not represent a scoped sprint as accepted, paid, delivered, deployed, or
+successful without permissioned evidence of that status.
+
+## AI Evals
+
+Use course-completion language. Do not imply that Jamie teaches the course, has
+professional certification authority, or has demonstrated mastery solely from
+the completion certificate. Do not publish private cohort or coursework
+material.

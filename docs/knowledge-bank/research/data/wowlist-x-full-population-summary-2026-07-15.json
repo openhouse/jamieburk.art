@@ -1,0 +1,468 @@
+{
+  "reviewedAt": "2026-07-15",
+  "account": "@wowlist",
+  "method": "Authenticated Posts and Replies crawl reconciled to the profile-displayed population; public mention search reviewed separately.",
+  "population": {
+    "profileCount": 38,
+    "recoveredCount": 38,
+    "projectPosts": 16,
+    "projectReplies": 6,
+    "projectAuthoredTotal": 22,
+    "repostedExternalStatuses": 16,
+    "uniqueRepostSourceAccounts": 13,
+    "firstPublishedAt": "2014-02-12T15:48:48.000Z",
+    "lastPublishedAt": "2017-01-12T21:51:23.000Z"
+  },
+  "urlInventory": {
+    "urlBearingStatuses": 31,
+    "projectAuthoredUrlBearingStatuses": 19,
+    "uniqueShortUrls": 35,
+    "items": [
+      {
+        "statusId": "433671630837919744",
+        "statusUrl": "https://x.com/wowlist/status/433671630837919744",
+        "shortUrl": "http://t.co/GgppxNburh",
+        "displayedTarget": "http://ow.ly/tyMAa",
+        "resolvedTarget": "https://sundaydinnernyc.com/tagged/wowlist",
+        "archiveUrl": null,
+        "disposition": "resolved-live"
+      },
+      {
+        "statusId": "587713396486856704",
+        "statusUrl": "https://x.com/wowlist/status/587713396486856704",
+        "shortUrl": "http://t.co/e7KLKI81IM",
+        "displayedTarget": "http://wowlist.org/events/15529",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "590942060829663232",
+        "statusUrl": "https://x.com/wowlist/status/590942060829663232",
+        "shortUrl": "http://t.co/dASFox1C0C",
+        "displayedTarget": "http://wowlist.org",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "590942060829663232",
+        "statusUrl": "https://x.com/wowlist/status/590942060829663232",
+        "shortUrl": "http://t.co/hWIGngWvC2",
+        "displayedTarget": "http://alliedmedia.org/amc",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "590961074326917122",
+        "statusUrl": "https://x.com/wowlist/status/590961074326917122",
+        "shortUrl": "https://t.co/mM9psewVlR",
+        "displayedTarget": "https://wowlist.org/kcdiy/events/15939",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "591666366215811073",
+        "statusUrl": "https://x.com/wowlist/status/591666366215811073",
+        "shortUrl": "https://t.co/d0A6kYzDuc",
+        "displayedTarget": "https://wowlist.org/people/julia",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "591944013768499200",
+        "statusUrl": "https://x.com/urbanhermit/status/591944013768499200",
+        "shortUrl": "https://t.co/yPlmpXlshq",
+        "displayedTarget": "https://wowlist.org/kcdiy/events/15928/in-the-surface-of-architecture-conversation-with-jack-rees",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "592424659225845760",
+        "statusUrl": "https://x.com/TheSilentBarn/status/592424659225845760",
+        "shortUrl": "http://t.co/03vayVcYxT",
+        "displayedTarget": "http://gofundme.com/sjdjkk",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "592718356018556928",
+        "statusUrl": "https://x.com/urbanhermit/status/592718356018556928",
+        "shortUrl": "https://t.co/jSkbutnuw3",
+        "displayedTarget": "https://wowlist.org/sundaydinner/events/15993/s-multimedia-theatre-adapatation-of-andrei-tarkovskys-solaris-with-mike-rekevics--secret-location-cl",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "592810776961916929",
+        "statusUrl": "https://x.com/wowlist/status/592810776961916929",
+        "shortUrl": "http://t.co/IS8uGw6zxb",
+        "displayedTarget": "http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+        "resolvedTarget": "http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+        "archiveUrl": "https://web.archive.org/web/20150201081214/http://grasstronaut.com/2015/01/29/homework-in-every-town/",
+        "disposition": "resolved-archived"
+      },
+      {
+        "statusId": "596691623993581568",
+        "statusUrl": "https://x.com/wowlist/status/596691623993581568",
+        "shortUrl": "http://t.co/S7hb8xKAJQ",
+        "displayedTarget": "http://grasstronaut.com",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "596691623993581568",
+        "statusUrl": "https://x.com/wowlist/status/596691623993581568",
+        "shortUrl": "http://t.co/cG6FgcGsgu",
+        "displayedTarget": "http://gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+        "resolvedTarget": "http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+        "archiveUrl": "https://web.archive.org/web/20150907001335/http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html",
+        "disposition": "resolved-archived"
+      },
+      {
+        "statusId": "598530404669358080",
+        "statusUrl": "https://x.com/wowlist/status/598530404669358080",
+        "shortUrl": "https://t.co/3rl1wMar2x",
+        "displayedTarget": "https://wowlist.org/desertdip",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "604360847012413440",
+        "statusUrl": "https://x.com/punkscriminals/status/604360847012413440",
+        "shortUrl": "https://t.co/wNFjbgp7a1",
+        "displayedTarget": "https://wowlist.org/punksandcriminals",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "606517628765650945",
+        "statusUrl": "https://x.com/wowlist/status/606517628765650945",
+        "shortUrl": "https://t.co/o65oORabb6",
+        "displayedTarget": "https://wowlist.org/rapidpulse",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "632168285291835392",
+        "statusUrl": "https://x.com/wowlist/status/632168285291835392",
+        "shortUrl": "https://t.co/KZ7x2zPgtB",
+        "displayedTarget": "https://youtu.be/nQg47LtixPI",
+        "resolvedTarget": "https://www.youtube.com/watch?v=nQg47LtixPI",
+        "archiveUrl": null,
+        "disposition": "resolved-live"
+      },
+      {
+        "statusId": "632168285291835392",
+        "statusUrl": "https://x.com/wowlist/status/632168285291835392",
+        "shortUrl": "https://t.co/w5zPq7Z89p",
+        "displayedTarget": "https://wowlist.org/join",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "663732869357965313",
+        "statusUrl": "https://x.com/cotfg/status/663732869357965313",
+        "shortUrl": "https://t.co/606xbcLhMq",
+        "displayedTarget": "https://wowlist.org/events/19077/8pm-sunday-november-22nd--drone-orchestra",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "665520472461860864",
+        "statusUrl": "https://x.com/wowlist/status/665520472461860864",
+        "shortUrl": "https://t.co/JpK2QOam9r",
+        "displayedTarget": "https://wowlist.org/AllAges",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "665520472461860864",
+        "statusUrl": "https://x.com/wowlist/status/665520472461860864",
+        "shortUrl": "https://t.co/YuCfobbQTB",
+        "displayedTarget": "https://wowlist.org/events/18547/wow-list-members-meeting",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "749378122823245824",
+        "statusUrl": "https://x.com/rchrd2/status/749378122823245824",
+        "shortUrl": "https://t.co/DbCvjUQM1n",
+        "displayedTarget": "http://sresproductions.com/events/fillmore-jazz-festival/",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "751150062458269696",
+        "statusUrl": "https://x.com/wowlist/status/751150062458269696",
+        "shortUrl": "https://t.co/a39ETzpVWO",
+        "displayedTarget": "https://wowlist.org/nycdiy/events/23185/demonstration-for-altonsterling--philandocastile-at-5pm-today-in-union-square-nyc",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "771412862191407104",
+        "statusUrl": "https://x.com/wowlist/status/771412862191407104",
+        "shortUrl": "https://t.co/ixsJHQRdDK",
+        "displayedTarget": "http://NYCDIY.org",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "771455571501416448",
+        "statusUrl": "https://x.com/wowlist/status/771455571501416448",
+        "shortUrl": "https://t.co/3an880EXo8",
+        "displayedTarget": "http://NYCdiy.org",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "771457416298921985",
+        "statusUrl": "https://x.com/wowlist/status/771457416298921985",
+        "shortUrl": "https://t.co/7lKlHLEZf1",
+        "displayedTarget": "https://wowlist.org/sundaydinner/events/24130/sunday-dinner-potluck-uop-psdn-8pm--jjs",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "783312785702805504",
+        "statusUrl": "https://x.com/FOKLcenter/status/783312785702805504",
+        "shortUrl": "https://t.co/t0grs2Do3H",
+        "displayedTarget": "facebook.comFOKLelectricitygetsturnedonatthenewspottoday.ThisisourFIRSTshowatthenewlocation.samedrive,differentdoor.",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "preview-only"
+      },
+      {
+        "statusId": "796473557387575297",
+        "statusUrl": "https://x.com/wowlist/status/796473557387575297",
+        "shortUrl": "https://t.co/D6udDGJ7Um",
+        "displayedTarget": "https://wowlist.org/DownWithTrump",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "797181275308257282",
+        "statusUrl": "https://x.com/yokoono/status/797181275308257282",
+        "shortUrl": "https://t.co/ST6A7fMabN",
+        "displayedTarget": "http://ift.tt/2fjVs71",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "798274424763981824",
+        "statusUrl": "https://x.com/wowlist/status/798274424763981824",
+        "shortUrl": "https://t.co/O1euiAdPmX",
+        "displayedTarget": "http://popular.vote",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "801883926029447168",
+        "statusUrl": "https://x.com/5432fun/status/801883926029447168",
+        "shortUrl": "https://t.co/xBooqnpcBS",
+        "displayedTarget": "http://fb.me/1TW9AQgwM",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "805210387004223488",
+        "statusUrl": "https://x.com/wowlist/status/805210387004223488",
+        "shortUrl": "https://t.co/vWtAyQiwMl",
+        "displayedTarget": "https://youcaring.com/firevictimsofoaklandfiredec232016-706684",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "805949658405175296",
+        "statusUrl": "https://x.com/urbanhermit/status/805949658405175296",
+        "shortUrl": "https://t.co/jhGFCwormV",
+        "displayedTarget": "https://wowlist.org/events/25653/light-vigil-for-ghost-ship-at-lake-merritt-oakland---tonight",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "806517013472485376",
+        "statusUrl": "https://x.com/wowlist/status/806517013472485376",
+        "shortUrl": "https://t.co/Q2vtL8JdOq",
+        "displayedTarget": "HundredsMourntheVictimsoftheGhostShipFireinOakland|KQED | Fromyoutube.com",
+        "resolvedTarget": "https://www.kqed.org/news/11207317/video-mourners-gather-at-candlelight-vigil-to-honor-victims-of-oakland-fire",
+        "archiveUrl": null,
+        "disposition": "resolved-live"
+      },
+      {
+        "statusId": "807395049814290433",
+        "statusUrl": "https://x.com/urbanhermit/status/807395049814290433",
+        "shortUrl": "https://t.co/L0gAiWmIbX",
+        "displayedTarget": "https://docs.google.com/spreadsheets/d/1otIba941Na_zR4chOkitdn6wZ6mLInJQkYOU8lmYqUY/pubhtml",
+        "resolvedTarget": null,
+        "archiveUrl": null,
+        "disposition": "displayed-target-recorded"
+      },
+      {
+        "statusId": "815697993709993984",
+        "statusUrl": "https://x.com/MeowWolf/status/815697993709993984",
+        "shortUrl": "https://t.co/0jKQMlauld",
+        "displayedTarget": "http://meowwolf.com/diy",
+        "resolvedTarget": "https://meowwolf.com/diy",
+        "archiveUrl": "https://web.archive.org/web/20170312084829/https://meowwolf.com/DIY/",
+        "disposition": "resolved-archived"
+      }
+    ]
+  },
+  "accessTimeProjectAuthoredEngagement": {
+    "observedAt": "2026-07-15",
+    "statusesWithAnyObservedInteraction": 12,
+    "replies": 2,
+    "reposts": 20,
+    "likes": 21,
+    "boundary": "These are mutable access-time labels on the 22 project-authored statuses. Metrics on the 16 reposted source statuses are excluded because they are not project-account traction."
+  },
+  "missionPatterns": [
+    {
+      "pattern": "participatory product operation",
+      "statusIds": [
+        "591664757473673216",
+        "591666366215811073",
+        "591668857670148096",
+        "632168285291835392",
+        "665520472461860864",
+        "771455571501416448"
+      ],
+      "finding": "The account taught people how to follow lists, use profile views, add events to multiple lists, join, and receive a weekly email; an external participant also published a product tutorial."
+    },
+    {
+      "pattern": "event and movement circulation",
+      "statusIds": [
+        "590961074326917122",
+        "598530404669358080",
+        "606517628765650945",
+        "751150062458269696",
+        "796473557387575297",
+        "798274424763981824",
+        "805949658405175296"
+      ],
+      "finding": "WOW List pages circulated shows, festivals, tours, demonstrations, meetings, and memorial gatherings across several local and national contexts."
+    },
+    {
+      "pattern": "documentation and cross-scene learning",
+      "statusIds": [
+        "592810776961916929",
+        "596690796641923073",
+        "596691623993581568",
+        "590942060829663232"
+      ],
+      "finding": "The account linked DIY documentation, operational manuals, arts journalism, and Allied Media Conference participation as part of a cross-scene learning practice."
+    },
+    {
+      "pattern": "care and cultural-space safety",
+      "statusIds": [
+        "592424659225845760",
+        "805210387004223488",
+        "805949658405175296",
+        "806517013472485376",
+        "807395049814290433",
+        "815697993709993984"
+      ],
+      "finding": "After loss and crisis, the account circulated mutual aid, vigils, public-action resources, reporting, and institutional support for safer DIY cultural spaces."
+    }
+  ],
+  "keyStakeholderSignals": [
+    {
+      "group": "community contributors",
+      "finding": "The record contains direct onboarding exchanges, a participant-created tutorial, and a public post reporting that an organizer was adding shows."
+    },
+    {
+      "group": "DIY venues and arts organizations",
+      "finding": "The curated record includes Silent Barn, FOKL, Meow Wolf, + POOL, performance and music organizers, and all-ages networks; a repost is evidence of account curation, not reciprocal endorsement."
+    },
+    {
+      "group": "media and peer-learning networks",
+      "finding": "Posts linked Good Times, Grasstronaut, KQED, Allied Media Conference, and a participant's YouTube tutorial."
+    }
+  ],
+  "sourceArticles": [
+    {
+      "statusId": "592810776961916929",
+      "title": "HOMEWORK: In Every Town - An All-Ages Music Manualfesto",
+      "author": "Elise Granata",
+      "archiveUrl": "https://web.archive.org/web/20150201081214/http://grasstronaut.com/2015/01/29/homework-in-every-town/"
+    },
+    {
+      "statusId": "596691623993581568",
+      "title": "Zines 2.0: How DIY culture - and the way we document it - is evolving",
+      "author": "Elise Granata",
+      "archiveUrl": "https://web.archive.org/web/20150907001335/http://www.gtweekly.com/index.php/santa-cruz-news/good-times-cover-stories/6548-zines-20.html"
+    },
+    {
+      "statusId": "806517013472485376",
+      "title": "VIDEO: Mourners Gather at Candlelight Vigil to Honor Victims of Oakland Fire",
+      "organization": "KQED",
+      "canonicalUrl": "https://www.kqed.org/news/11207317/video-mourners-gather-at-candlelight-vigil-to-honor-victims-of-oakland-fire"
+    },
+    {
+      "statusId": "815697993709993984",
+      "title": "Meow Wolf DIY Fund",
+      "organization": "Meow Wolf",
+      "archiveUrl": "https://web.archive.org/web/20170312084829/https://meowwolf.com/DIY/"
+    }
+  ],
+  "externalMentionSearch": [
+    {
+      "statusId": "771457416298921985",
+      "statusUrl": "https://x.com/wowlist/status/771457416298921985",
+      "authorHandle": "wowlist",
+      "publishedAt": "2016-09-01T21:19:15.000Z",
+      "disposition": "project-self-reference",
+      "note": "Already represented in the 38-object profile census."
+    },
+    {
+      "statusId": "834145172128677888",
+      "statusUrl": "https://x.com/EssentiaSeattle/status/834145172128677888",
+      "authorHandle": "EssentiaSeattle",
+      "publishedAt": "2017-02-21T20:58:01.000Z",
+      "disposition": "excluded-unrelated-handle-use",
+      "note": "Promotional post used the handle in an unrelated context; excluded from project evidence."
+    },
+    {
+      "statusId": "845116237591920640",
+      "statusUrl": "https://x.com/jackascak/status/845116237591920640",
+      "authorHandle": "jackascak",
+      "publishedAt": "2017-03-24T03:33:07.000Z",
+      "disposition": "mission-relevant-external-use",
+      "note": "External event organizer shared a WOW List page for a Silent Barn benefit."
+    }
+  ],
+  "boundaries": [
+    "The corpus does not identify the human author of any shared-account status.",
+    "Reposts document the account's public curation; they do not prove endorsement, partnership, or reciprocal engagement by the source account.",
+    "Three external usage specimens do not establish broad adoption or lifetime reach.",
+    "No follower identities, private account data, deleted-post claims, or private messages are included.",
+    "The public artifacts store status identifiers and derived metadata rather than republishing full tweet bodies."
+  ]
+}

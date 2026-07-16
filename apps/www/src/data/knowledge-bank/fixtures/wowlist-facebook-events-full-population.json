@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-15",
+  "page": {
+    "name": "WOWList",
+    "handle": "wowlist",
+    "eventsUrl": "https://www.facebook.com/wowlist/events",
+    "selectedSurface": "Events"
+  },
+  "populationReconciliation": {
+    "scope": "The complete event-card population exposed by the authenticated WOWList Facebook Events surface on the capture date, kept separate from event links shared in preserved WOWList page posts.",
+    "currentDisplayedEventCount": 0,
+    "currentSurfaceMessage": "No events to show",
+    "recoveredCurrentEventCount": 0,
+    "preservedPagePostLinkedEventCount": 2,
+    "linkedEventsHostedByWowlist": 0,
+    "reconciliationNote": "The current Events surface exposed no event cards. Two distinct Facebook event routes were recovered from the complete preserved WOWList page-post corpus; both were externally hosted and are evidence of project-account curation, not WOWList-hosted events. The zero-state does not establish that WOWList never hosted an event or that no older event was removed during page migration or platform change."
+  },
+  "publicSafety": {
+    "rawPostBodiesPublished": false,
+    "attendeeIdentitiesPublished": false,
+    "commentsOrReactionsPublished": false,
+    "accountAdministrationPublished": false,
+    "authenticatedSessionStatePublished": false,
+    "privateArchiveLocationPublished": false,
+    "rawCaptureLocation": "protected-research-workspace",
+    "note": "The public fixture retains the current page-level zero-state and two public event routes recovered from a protected full-population page-post review. It excludes raw post bodies, participant identities, comments, reactions, account identifiers, archive paths, and session state."
+  },
+  "linkedEvents": [
+    {
+      "id": "1673245942951908",
+      "url": "https://www.facebook.com/events/1673245942951908/",
+      "date": "2015-11-12",
+      "title": "Pinky Swear Pancake Party",
+      "venue": "Pinky Swear, Humboldt Park, Chicago",
+      "organizerDisplay": "Shermy Turtel",
+      "relationToWowlist": "shared-from-page-post",
+      "hostedByWowlist": false,
+      "pagePostDate": "2015-11-13",
+      "purpose": "A Chicago DIY music and community gathering whose event description routed readers to a dedicated WOWList scene page.",
+      "responseSnapshot": { "respondedDisplay": 165, "interpretation": "Historical Facebook response label; not verified attendance." },
+      "outboundResources": [
+        { "url": "http://wowlist.org/pinkyswear", "kind": "wowlist-scene-page" }
+      ]
+    },
+    {
+      "id": "388137698233507",
+      "url": "https://www.facebook.com/events/388137698233507/",
+      "date": "2017-01-27",
+      "title": "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting",
+      "venue": "New York City Department of Cultural Affairs",
+      "organizerDisplay": "NYC Artist Coalition, Call Script, and two others",
+      "relationToWowlist": "shared-from-page-post",
+      "hostedByWowlist": false,
+      "purpose": "A New York City cultural-space safety meeting that the WOWList account circulated as important to local arts and DIY spaces.",
+      "responseSnapshot": { "respondedDisplay": 445, "interpretation": "Historical Facebook response label; not verified attendance." },
+      "outboundResources": [
+        { "url": "https://nycartc.com/", "kind": "organizer-project-page" }
+      ]
+    }
+  ]
+}

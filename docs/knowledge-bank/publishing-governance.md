@@ -7,14 +7,24 @@ bank.
 
 ## Flow
 
-1. Private material exists outside repo.
-2. Jamie or reviewer creates a public-safe summary.
-3. Summary is added to the knowledge bank with source-basis class and boundary.
-4. Status is set to Ready, Careful, Pending, or Private.
-5. Website projection uses only Ready or Careful claims.
-6. If a page needs stronger wording, update the bank first.
-7. Public-safety check fails production if pending/private/approval-marker
+1. A source, memory, artifact, metric lead, or project lead is encountered.
+2. Private material remains outside the repo; a reviewer creates a public-safe
+   intake summary when possible.
+3. The intake item is recorded with maturity status, source associations,
+   research questions, boundaries, and `no-public-projection` status.
+4. Sources are closely read into `supportsGenerally` and `doesNotEstablish`.
+5. Research develops a coherent claim and records uncertainty or missing proof.
+6. The claim is added to the governed claim layer with source-basis class and
+   boundary.
+7. Status is set to Ready, Careful, Pending, or Private.
+8. Website projection uses only Ready or Careful claims selected for that
+   audience and surface.
+9. If a page needs stronger wording, update the bank first.
+10. Public-safety check fails production if pending/private/approval-marker
    material is projected.
+
+Intake is not a shortcut around claim review. An intake item can be mature,
+well-sourced, and valuable without ever being selected for the website.
 
 ## Status Meanings
 

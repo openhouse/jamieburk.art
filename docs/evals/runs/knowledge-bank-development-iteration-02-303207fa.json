@@ -1,0 +1,24 @@
+{
+  "suite_id": "knowledge-bank-development",
+  "target": "claim-development",
+  "candidate_sha": "303207fa889472cae501103702c6e794fbe28479",
+  "rubric_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "content_scope": [
+    "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12",
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12"
+  ],
+  "consecutive_passing_runs": 0,
+  "results": [
+    { "eval_id": "KB-001", "score": 4, "pass": true, "evidence": ["Public-safety, citation, and non-projection checks passed."], "findings": [], "recommended_next_move": null, "confidence": 0.98 },
+    { "eval_id": "KB-002", "score": 3, "pass": true, "evidence": ["Candidate wording resolves to proposition-level source support."], "findings": [], "recommended_next_move": null, "confidence": 0.94 },
+    { "eval_id": "KB-003", "score": 4, "pass": true, "evidence": ["Actor, action, collaborator, institution, and causality boundaries are explicit."], "findings": [], "recommended_next_move": null, "confidence": 0.96 },
+    { "eval_id": "KB-004", "score": 3, "pass": true, "evidence": ["Supported wording names Jamie, concrete work, collaborators, and decision value."], "findings": [], "recommended_next_move": null, "confidence": 0.92 },
+    { "eval_id": "KB-005", "score": 3, "pass": true, "evidence": ["Known chronology and unresolved sequences remain distinct."], "findings": [], "recommended_next_move": null, "confidence": 0.92 },
+    { "eval_id": "KB-006", "score": 4, "pass": true, "evidence": ["Maturity and no-public-projection contracts passed without website changes."], "findings": [], "recommended_next_move": null, "confidence": 0.97 },
+    { "eval_id": "KB-007", "score": 3, "pass": true, "evidence": ["Research gaps name source classes, methods, and decisions they could change."], "findings": [], "recommended_next_move": null, "confidence": 0.93 },
+    { "eval_id": "KB-008", "score": 3, "pass": true, "evidence": ["Artistic, civic, facilitation, systems, and metric threads remain available without projection."], "findings": [], "recommended_next_move": null, "confidence": 0.93 },
+    { "eval_id": "KB-009", "score": 2, "pass": false, "evidence": ["NYCA memory leads and stronger governed proofs lacked a linked tension register and exact correction triggers."], "findings": ["The system could not yet state what evidence would confirm or change the co-founder and campaign-systems wording."], "recommended_next_move": "Link the intake to governed proofs and add wording-specific confirmation and correction triggers.", "confidence": 0.97 },
+    { "eval_id": "KB-010", "score": 3, "pass": true, "evidence": ["The frozen rubric, baseline, first iteration, judge output, and selected next failure were committed."], "findings": [], "recommended_next_move": null, "confidence": 0.95 }
+  ]
+}

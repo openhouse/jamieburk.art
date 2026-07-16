@@ -4,6 +4,7 @@ import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-regist
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/kc-town-hall.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/app/resume/page.tsx"
@@ -45,6 +46,7 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     ["claim", knowledgeBank.claims],
     ["research inquiry", knowledgeBank.researchInquiries],
     ["correction", knowledgeBank.corrections],
+    ["intake item", knowledgeBank.intakeItems],
     ["page", knowledgeBank.pages]
   ]) {
     for (const id of duplicateIds(items)) errors.push(`Duplicate ${label} ID: ${id}`);
@@ -99,6 +101,21 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     if (!claimById.has(correction.claimId)) errors.push(`Correction ${correction.id} references unknown claim ${correction.claimId}`);
   }
 
+  for (const item of knowledgeBank.intakeItems) {
+    for (const sourceId of item.sourceIds) {
+      if (!sourceById.has(sourceId)) errors.push(`Intake item ${item.id} references unknown source ${sourceId}`);
+    }
+    for (const claimId of item.relatedClaimIds) {
+      if (!claimById.has(claimId)) errors.push(`Intake item ${item.id} references unknown claim ${claimId}`);
+    }
+    if (item.projectionStatus !== "no-public-projection") {
+      errors.push(`Intake item ${item.id} is incorrectly approved for public projection`);
+    }
+    if (JSON.stringify(publicRegistry).includes(item.id)) {
+      errors.push(`Intake item ${item.id} leaked into the public citation registry`);
+    }
+  }
+
   for (const page of knowledgeBank.pages) {
     for (const id of duplicateIds(page.occurrences)) errors.push(`Duplicate occurrence ${page.id}/${id}`);
     if (new Set(page.sourceOrder).size !== page.sourceOrder.length) errors.push(`Page ${page.id} has duplicate source-order entries`);
@@ -137,8 +154,15 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     for (const pattern of [/first civic-data hackathon/i, /first civic-tech hackathon/i, /the Council['’]s first hackathon(?! of)/i, /2014[-–]2015/, /citation pending|press citation pending/i]) {
       if (pattern.test(publicText)) errors.push(`Retired or unresolved wording remains on a public surface: ${pattern}`);
     }
-    const mdx = readFileSync("apps/www/src/content/work/callnyc.mdx", "utf8");
-    if (/\[\d+\]/.test(mdx)) errors.push("CallNYC MDX contains a manually typed citation number");
+    for (const path of [
+      "apps/www/src/content/work/callnyc.mdx",
+      "apps/www/src/content/work/kc-town-hall.mdx"
+    ]) {
+      const mdx = readFileSync(path, "utf8");
+      if (/\[\d+\]/.test(mdx)) {
+        errors.push(`${path} contains a manually typed citation number`);
+      }
+    }
   }
 
   return errors;
@@ -153,7 +177,8 @@ export function citationReport() {
   const citedClaimIds = new Set(knowledgeBank.pages.flatMap((page) => page.occurrences.map((item) => item.claimId)));
   const referencedSourceIds = new Set([
     ...knowledgeBank.claims.flatMap((claim) => claim.evidence.map((item) => item.sourceId)),
-    ...knowledgeBank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds)
+    ...knowledgeBank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds),
+    ...knowledgeBank.intakeItems.flatMap((item) => item.sourceIds)
   ]);
   const activeProjections = knowledgeBank.claims.flatMap((claim) => claim.projections.filter((item) => item.status === "active"));
   return {
@@ -164,6 +189,7 @@ export function citationReport() {
     projectionSurfaces: [...new Set(activeProjections.flatMap((item) => item.surfaces))].sort(),
     corrections: knowledgeBank.corrections.length,
     inquiries: knowledgeBank.researchInquiries.length,
+    intakeByStatus: countBy(knowledgeBank.intakeItems, "status"),
     citedClaims: citedClaimIds.size,
     uncitedPublicClaims: knowledgeBank.claims.filter((claim) => claim.projections.some((item) => item.status === "active" && item.surfaces.some((surface) => surface.startsWith("/"))) && !citedClaimIds.has(claim.id)).map((claim) => claim.id),
     orphanSources: knowledgeBank.sources.filter((source) => !referencedSourceIds.has(source.id)).map((source) => source.id),

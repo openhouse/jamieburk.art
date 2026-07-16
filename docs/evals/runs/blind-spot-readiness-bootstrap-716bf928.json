@@ -1,0 +1,63 @@
+{
+  "suite_id": "blind-spot-readiness",
+  "target": "development-readiness",
+  "run_kind": "deterministic-bootstrap-and-certification",
+  "rubric_sha": "bde9294b1add43227a244bc316cf1a9ca6931e34",
+  "candidate_sha": "716bf9289bc5f33d6fed5c769d41a4057185867b",
+  "content_scope": [
+    "collaborator corroboration queue",
+    "institutional pathway register",
+    "metric register",
+    "application argument register",
+    "contextual-integrity register",
+    "validation-state register"
+  ],
+  "baseline": {
+    "candidate_ref": "bde9294b1add43227a244bc316cf1a9ca6931e34",
+    "command": "npm run evals:blind-spots",
+    "result": "fail",
+    "evidence": [
+      "The suite validator reported six missing required registers.",
+      "No collaborator-corroboration queue existed.",
+      "No institutional-pathway register existed.",
+      "No metric register existed.",
+      "No application-argument register existed.",
+      "No contextual-integrity register existed.",
+      "No independent, cold-reader, or live-use validation-state register existed."
+    ]
+  },
+  "remediation": {
+    "primary_failure": "The seven known blind spots were advisory observations without a machine-checkable operating state.",
+    "change_summary": "Added six public-safe registers tied to governed proof, proposition, and source identifiers; added mutation tests and release-state invariants; preserved the absence of a public proofs or knowledge-bank route.",
+    "regressions_observed": []
+  },
+  "certification": {
+    "consecutive_deterministic_passes": 2,
+    "commands": [
+      "npm run check",
+      "npm run check"
+    ],
+    "result": "pass",
+    "evidence": [
+      "Both complete runs passed citation governance and 83 citation and archive tests.",
+      "Both complete runs passed the 15-eval portfolio suite and 14 portfolio-eval tests.",
+      "Both complete runs passed the 10-eval knowledge-bank suite and 16 knowledge-bank-eval tests.",
+      "Both complete runs passed the 7-eval blind-spot suite and 11 blind-spot mutation and scoring tests.",
+      "Both complete runs passed TypeScript, lint, production build, knowledge-bank validation, public-safety scans, and route checks."
+    ]
+  },
+  "weighted_judgment": {
+    "status": "not_run",
+    "score_before": "not_observed",
+    "score_after": "not_observed",
+    "reason": "The optimizer may not grade its own patch, and no independent judge received the repository contents."
+  },
+  "remaining_validation": {
+    "independent_holdout": "blocked pending explicit approval for external transfer of public-repository knowledge-bank contents and eval prompts",
+    "cold_reader": "pending real hiring-manager or referrer observations on one fixed candidate SHA",
+    "live_use": "pending exact-candidate staging accessibility and production QA",
+    "human_approval": "pending exact-candidate approval"
+  },
+  "decision": "stop_human_blocked",
+  "decision_reason": "Deterministic development contracts pass twice. Weighted development and release thresholds cannot be claimed until the required independent and human evidence exists."
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "audience": "Hiring managers, public-interest technology leaders, and trusted referrers seeking implementation leadership across technical and nontechnical teams.",
+  "desiredAction": "Understand Jamie's fit in thirty seconds, refer or interview him for the right work, and use the resume and selected case studies to verify that judgment.",
+  "category": "Technical Project Manager - Product Operations and Implementation",
+  "leadClaim": "I create operating structure for complex public-facing teams, turning emerging goals into requirements, workflows, decision trails, launch support, onboarding, and durable handoffs.",
+  "proofPillars": [
+    {
+      "id": "ARG-LEGACY-MODERNIZATION",
+      "job": "Show that Jamie can enter a consequential operating environment, learn its material logic, and improve systems without discarding institutional knowledge.",
+      "proofIds": [
+        "hje-modernization-stewardship",
+        "hje-revenue-growth-contribution"
+      ],
+      "routes": [
+        "/work/harry-j-epstein",
+        "/work/technical-operations"
+      ]
+    },
+    {
+      "id": "ARG-CIVIC-TRANSLATION",
+      "job": "Show source-backed translation between resident needs, public data, cultural communities, policy actors, and usable public information.",
+      "proofIds": [
+        "callnyc-civic-data-guidance",
+        "fair-rent-campaign-memory"
+      ],
+      "routes": [
+        "/work/callnyc",
+        "/work/fair-rent-nyc"
+      ]
+    },
+    {
+      "id": "ARG-PARTICIPATION-CONTINUITY",
+      "job": "Show that hosting, facilitation, product operations, documentation, and care can become repeatable infrastructure that other people can use.",
+      "proofIds": [
+        "wowlist-community-platform",
+        "sunday-dinner-196-participation-infrastructure",
+        "kc-town-hall-public-benefit-documentation"
+      ],
+      "routes": [
+        "/work/wowlist",
+        "/work/196-sunday-dinner",
+        "/work/kc-town-hall"
+      ]
+    }
+  ],
+  "deferred": [
+    "The full social-media and event corpus remains knowledge-bank depth, not homepage inventory.",
+    "The complete Commercial Rent Stabilization legislative and archival lineage remains available for future role-specific composition.",
+    "Early art, waterway, and participatory-public-program work remains preserved for future editorial use without competing with the current hiring argument.",
+    "Experimental source-backed team-memory work remains a bounded Lab proof, not a claim that Jamie has launched a finished SaaS product."
+  ],
+  "humanPresenceRule": "Each major case study should contain one concrete scene, decision, or material constraint that lets care appear through the work without turning the page into memoir.",
+  "selectionRule": "A true claim belongs on a public page only when it advances the desired reader action better than the strongest available alternative at that level of the site."
+}

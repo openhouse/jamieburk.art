@@ -35,9 +35,23 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run evals:portfolio
+npm run test:portfolio-evals
 npm run preflight:staging
 npm run preflight:production
 ```
+
+The recursive readiness rubric lives at
+`.agents/evals/portfolio-production-readiness.json`. Validate the frozen rubric
+and its source-level contracts with `npm run evals:portfolio`. Score a complete
+application-share or production-launch run with:
+
+```bash
+npm run evals:portfolio:score -- path/to/run.json
+```
+
+See `docs/evals/portfolio-production-readiness.md` for grader separation,
+evidence requirements, stopping rules, and the recursive improvement protocol.
 
 ## Knowledge Bank
 

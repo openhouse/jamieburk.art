@@ -1,0 +1,893 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-15",
+  "account": "KCSpacesFund",
+  "platform": "Facebook",
+  "surface": "authenticated public Page timeline",
+  "ordering": "newest-to-oldest as rendered",
+  "completeness": {
+    "survivingPublicRecords": 40,
+    "terminalTraversalCounts": [
+      40,
+      38,
+      40
+    ],
+    "scrollIterations": [
+      54,
+      49,
+      74
+    ],
+    "terminalNoAdditionPasses": [
+      18,
+      18,
+      24
+    ],
+    "stableMediaIds": 21,
+    "stableMediaSetMatchedAcrossAllTraversals": true,
+    "publicRecordIdSetSha256": "846f60f1a6dac18bf487652a5d89f9b4dbe979eff662156129b90f2645bac687",
+    "protectedMediaIdSetSha256": "029ffa8737c2e2058b1cc5b582e6cc741eb3242e5e7504a3d4833fa32e4fd1fb",
+    "interpretation": "Two terminal traversals recovered 40 cards and a faster middle traversal recovered 38. The final slower traversal reproduced 40. The 21 stable media IDs matched across all three; non-media records retain positional identities because Facebook did not expose durable public permalinks.",
+    "excludedHistory": "Deleted, private, unrendered, and owner-export-only history is not represented."
+  },
+  "profileSnapshot": {
+    "followers": 108,
+    "following": 1,
+    "observedAt": "2026-07-15",
+    "boundary": "Mutable current profile counts; not historical reach."
+  },
+  "aggregate": {
+    "mediaBackedRecords": 20,
+    "nonMediaRecords": 20,
+    "contentMaterializedRecords": 19,
+    "metadataDepthRecords": 15,
+    "unavailableAttachmentRecords": 6,
+    "fundedSpaceSpotlights": 10,
+    "applicationRoutingRecords": 8,
+    "fundraisingRecords": 13,
+    "recordsWithVisibleReactionSignals": 28,
+    "visibleReactionSignalFloor": 119,
+    "recordsWithVisibleCommentRelations": 4,
+    "culturalSpaceAccountCommentRelations": 3,
+    "otherPublicCommentRelations": 1
+  },
+  "routeDictionary": {
+    "kc-spaces-fund-site": {
+      "label": "KC Spaces Fund campaign site",
+      "url": "https://kcspacesfund.com/"
+    },
+    "kc-spaces-fund-apply": {
+      "label": "KC Spaces Fund application guidance",
+      "url": "https://kcspacesfund.com/apply/"
+    },
+    "kc-spaces-fund-gofundme": {
+      "label": "KC Spaces Fund GoFundMe",
+      "url": "https://www.gofundme.com/f/kcspacesfund"
+    },
+    "oddities-mutual-aid-prints": {
+      "label": "Oddities Prints mutual-aid print route",
+      "url": null,
+      "retrievalState": "historical-route-not-recovered"
+    },
+    "oddities-prints-facebook": {
+      "label": "Oddities Prints Facebook source",
+      "url": "https://www.facebook.com/oddities.prints"
+    },
+    "farewell-transmission-facebook": {
+      "label": "Farewell Transmission Facebook Page",
+      "url": "https://www.facebook.com/farewelltransmission"
+    },
+    "twocc-donation-resource": {
+      "label": "Trans Women of Color Collective donation resource",
+      "url": null,
+      "retrievalState": "preview-only"
+    },
+    "do816-daily-dogood": {
+      "label": "Do816, The Daily DoGood: Kansas City",
+      "url": null,
+      "retrievalState": "preview-only"
+    }
+  },
+  "privacy": {
+    "omitted": [
+      "full post transcripts",
+      "personal commenter identity",
+      "reaction identities",
+      "authenticated-session state",
+      "session tokens",
+      "private Page-management data",
+      "contact details"
+    ],
+    "note": "Named funded-space spotlights and public organization routes are retained; personal engagement identities are not."
+  },
+  "records": [
+    {
+      "id": "kcspacesfund-facebook-01",
+      "order": 1,
+      "publicIdentity": "facebook-media:153638726296561",
+      "mediaIds": [
+        "153638726296561"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=153638726296561"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "Vulpes Bastille",
+      "publicDestinations": [
+        "oddities-mutual-aid-prints",
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-02",
+      "order": 2,
+      "publicIdentity": "facebook-media:150615036598930",
+      "mediaIds": [
+        "150615036598930"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=150615036598930"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "SWAN",
+      "publicDestinations": [
+        "oddities-mutual-aid-prints"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-03",
+      "order": 3,
+      "publicIdentity": "facebook-media:145013447159089",
+      "mediaIds": [
+        "145013447159089"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=145013447159089"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "Kansas City Textile Arts Center",
+      "publicDestinations": [
+        "oddities-mutual-aid-prints"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-04",
+      "order": 4,
+      "publicIdentity": "facebook-media:144021393924961",
+      "mediaIds": [
+        "144021393924961"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=144021393924961"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "Parker 2",
+      "publicDestinations": [
+        "oddities-mutual-aid-prints"
+      ],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-05",
+      "order": 5,
+      "publicIdentity": "facebook-media:143405120653255",
+      "mediaIds": [
+        "143405120653255"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=143405120653255"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "Farewell Transmission",
+      "publicDestinations": [
+        "farewell-transmission-facebook"
+      ],
+      "visibleReactionSignals": 3,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-06",
+      "order": 6,
+      "publicIdentity": "facebook-media:139689317691502",
+      "mediaIds": [
+        "139689317691502"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=139689317691502"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-07",
+      "order": 7,
+      "publicIdentity": "timeline-position:07",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "metadata-depth"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 3,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-08",
+      "order": 8,
+      "publicIdentity": "facebook-media:138091041184663",
+      "mediaIds": [
+        "138091041184663"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=138091041184663"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 3,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-09",
+      "order": 9,
+      "publicIdentity": "timeline-position:09",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "attachment-unavailable",
+      "missionModes": [
+        "partner-source-amplification",
+        "unavailable-attachment"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "oddities-prints-facebook"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-10",
+      "order": 10,
+      "publicIdentity": "facebook-media:136663087994125",
+      "mediaIds": [
+        "136663087994125"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=136663087994125"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "One Mic Stand",
+      "publicDestinations": [],
+      "visibleReactionSignals": 9,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-11",
+      "order": 11,
+      "publicIdentity": "facebook-media:136348721358895",
+      "mediaIds": [
+        "136348721358895"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=136348721358895"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "Blackbox on Troost",
+      "publicDestinations": [],
+      "visibleReactionSignals": 15,
+      "visibleCommentRelation": "funded-cultural-space-account"
+    },
+    {
+      "id": "kcspacesfund-facebook-12",
+      "order": 12,
+      "publicIdentity": "facebook-media:135546938105740",
+      "mediaIds": [
+        "135546938105740",
+        "135546931439074"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=135546938105740"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "metadata-depth"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-13",
+      "order": 13,
+      "publicIdentity": "timeline-position:13",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "community-resource"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "twocc-donation-resource"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-14",
+      "order": 14,
+      "publicIdentity": "timeline-position:14",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "partner-source-amplification"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "oddities-prints-facebook"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-15",
+      "order": 15,
+      "publicIdentity": "timeline-position:15",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "metadata-depth"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-gofundme"
+      ],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-16",
+      "order": 16,
+      "publicIdentity": "timeline-position:16",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "attachment-unavailable",
+      "missionModes": [
+        "partner-source-amplification",
+        "unavailable-attachment"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "oddities-prints-facebook"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-17",
+      "order": 17,
+      "publicIdentity": "facebook-media:133121925014908",
+      "mediaIds": [
+        "133121925014908"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=133121925014908"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "GetWoke: Queer and Trans People of Color",
+      "publicDestinations": [],
+      "visibleReactionSignals": 4,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-18",
+      "order": 18,
+      "publicIdentity": "timeline-position:18",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "partner-source-amplification"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "oddities-prints-facebook"
+      ],
+      "visibleReactionSignals": 4,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-19",
+      "order": 19,
+      "publicIdentity": "timeline-position:19",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "attachment-unavailable",
+      "missionModes": [
+        "unavailable-attachment"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-20",
+      "order": 20,
+      "publicIdentity": "facebook-media:130062675320833",
+      "mediaIds": [
+        "130062675320833"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=130062675320833"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "fundraising"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-21",
+      "order": 21,
+      "publicIdentity": "timeline-position:21",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "campaign-site-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 2,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-22",
+      "order": 22,
+      "publicIdentity": "timeline-position:22",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "campaign-site-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 4,
+      "visibleCommentRelation": "funded-cultural-space-account"
+    },
+    {
+      "id": "kcspacesfund-facebook-23",
+      "order": 23,
+      "publicIdentity": "timeline-position:23",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "campaign-site-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-apply"
+      ],
+      "visibleReactionSignals": 7,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-24",
+      "order": 24,
+      "publicIdentity": "facebook-media:126941488966285",
+      "mediaIds": [
+        "126941488966285"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=126941488966285"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-apply"
+      ],
+      "visibleReactionSignals": 3,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-25",
+      "order": 25,
+      "publicIdentity": "facebook-media:125555442438223",
+      "mediaIds": [
+        "125555442438223"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=125555442438223"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing",
+        "fundraising"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-26",
+      "order": 26,
+      "publicIdentity": "facebook-media:124554605871640",
+      "mediaIds": [
+        "124554605871640"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=124554605871640"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "UN/TUCK Queer & Trans Collective",
+      "publicDestinations": [],
+      "visibleReactionSignals": 9,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-27",
+      "order": 27,
+      "publicIdentity": "facebook-media:123595942634173",
+      "mediaIds": [
+        "123595942634173"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=123595942634173"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-apply"
+      ],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-28",
+      "order": 28,
+      "publicIdentity": "timeline-position:28",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "local-resource-roundup"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "do816-daily-dogood"
+      ],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-29",
+      "order": 29,
+      "publicIdentity": "facebook-media:121726656154435",
+      "mediaIds": [
+        "121726656154435"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=121726656154435"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "funded-space-spotlight",
+        "fundraising"
+      ],
+      "spotlightSubject": "Latino Foundation for the Arts",
+      "publicDestinations": [],
+      "visibleReactionSignals": 9,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-30",
+      "order": 30,
+      "publicIdentity": "facebook-media:117603333233434",
+      "mediaIds": [
+        "117603333233434"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=117603333233434"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-apply"
+      ],
+      "visibleReactionSignals": 11,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-31",
+      "order": 31,
+      "publicIdentity": "facebook-media:116335740026860",
+      "mediaIds": [
+        "116335740026860"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=116335740026860"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing",
+        "fundraising"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-gofundme",
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 8,
+      "visibleCommentRelation": "other-public-commenter"
+    },
+    {
+      "id": "kcspacesfund-facebook-32",
+      "order": 32,
+      "publicIdentity": "timeline-position:32",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "attachment-unavailable",
+      "missionModes": [
+        "unavailable-attachment"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 1,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-33",
+      "order": 33,
+      "publicIdentity": "timeline-position:33",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "metadata-depth"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-gofundme"
+      ],
+      "visibleReactionSignals": 4,
+      "visibleCommentRelation": "cultural-space-account"
+    },
+    {
+      "id": "kcspacesfund-facebook-34",
+      "order": 34,
+      "publicIdentity": "facebook-media:114781443515623",
+      "mediaIds": [
+        "114781443515623"
+      ],
+      "publicUrls": [
+        "https://www.facebook.com/photo/?fbid=114781443515623"
+      ],
+      "recordForm": "media-backed",
+      "recoveryState": "content-materialized",
+      "missionModes": [
+        "application-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-apply"
+      ],
+      "visibleReactionSignals": 6,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-35",
+      "order": 35,
+      "publicIdentity": "timeline-position:35",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "campaign-site-routing"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [
+        "kc-spaces-fund-site"
+      ],
+      "visibleReactionSignals": 5,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-36",
+      "order": 36,
+      "publicIdentity": "timeline-position:36",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "metadata-depth"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-37",
+      "order": 37,
+      "publicIdentity": "timeline-position:37",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "metadata-depth"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-38",
+      "order": 38,
+      "publicIdentity": "timeline-position:38",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "attachment-unavailable",
+      "missionModes": [
+        "unavailable-attachment"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-39",
+      "order": 39,
+      "publicIdentity": "timeline-position:39",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "metadata-depth",
+      "missionModes": [
+        "metadata-depth"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    },
+    {
+      "id": "kcspacesfund-facebook-40",
+      "order": 40,
+      "publicIdentity": "timeline-position:40",
+      "mediaIds": [],
+      "publicUrls": [],
+      "recordForm": "non-media",
+      "recoveryState": "attachment-unavailable",
+      "missionModes": [
+        "unavailable-attachment"
+      ],
+      "spotlightSubject": null,
+      "publicDestinations": [],
+      "visibleReactionSignals": 0,
+      "visibleCommentRelation": null
+    }
+  ]
+}

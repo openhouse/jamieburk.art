@@ -1,0 +1,24 @@
+{
+  "suite_id": "knowledge-bank-development",
+  "target": "claim-development",
+  "candidate_sha": "4e0ac83c62b7066500d11ffb477728724c60bf68",
+  "rubric_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "content_scope": [
+    "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12",
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12"
+  ],
+  "consecutive_passing_runs": 0,
+  "results": [
+    { "eval_id": "KB-001", "score": 4, "pass": true, "evidence": ["Public registry remained redacted and public-safety checks passed."], "findings": [], "recommended_next_move": null, "confidence": 0.99 },
+    { "eval_id": "KB-002", "score": 3, "pass": true, "evidence": ["Sources are decomposed into bounded propositions with support and next steps."], "findings": ["Few finer-grained source locators are present."], "recommended_next_move": null, "confidence": 0.95 },
+    { "eval_id": "KB-003", "score": 4, "pass": true, "evidence": ["Jamie, collaborators, institutions, collective work, and policy causality remain distinct."], "findings": [], "recommended_next_move": null, "confidence": 0.97 },
+    { "eval_id": "KB-004", "score": 3, "pass": true, "evidence": ["Candidate wording names concrete projects, actions, collaborators, and decision uses."], "findings": ["Some audience consequence remains in decision-use metadata rather than candidate sentences."], "recommended_next_move": null, "confidence": 0.93 },
+    { "eval_id": "KB-005", "score": 3, "pass": true, "evidence": ["Dated anchors and unresolved route and campaign sequences remain visible."], "findings": ["Chronology is distributed rather than consolidated."], "recommended_next_move": null, "confidence": 0.92 },
+    { "eval_id": "KB-006", "score": 4, "pass": true, "evidence": ["Typed maturity, proof-link, and non-projection contracts passed with no website changes."], "findings": [], "recommended_next_move": null, "confidence": 0.99 },
+    { "eval_id": "KB-007", "score": 3, "pass": true, "evidence": ["Material gaps name recoverable source classes, methods, and decisions."], "findings": ["No ranked research queue is committed."], "recommended_next_move": null, "confidence": 0.94 },
+    { "eval_id": "KB-008", "score": 3, "pass": true, "evidence": ["Artistic, civic, facilitation, implementation, and public-sector uses remain possible without forced projection."], "findings": [], "recommended_next_move": null, "confidence": 0.94 },
+    { "eval_id": "KB-009", "score": 3, "pass": true, "evidence": ["Two NYCA tensions define exact confirm, narrow, hold, and replace evidence conditions against governed proofs."], "findings": ["The open triggers are correction-ready but have not yet been exercised."], "recommended_next_move": null, "confidence": 0.96 },
+    { "eval_id": "KB-010", "score": 2, "pass": false, "evidence": ["Earlier run records existed, but this candidate and judge result had not yet been committed."], "findings": ["The content cleared the weighted threshold, but the audit trail was incomplete at judgment time."], "recommended_next_move": "Commit this scorecard and iteration record, then obtain the required independent passing judgments without changing content.", "confidence": 0.99 }
+  ]
+}

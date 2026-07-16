@@ -53,15 +53,75 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
-**Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
+**Public wording:** Jamie built CallNYC.org as an archived, unofficial, independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
 **Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
-**Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation.
+**Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype. The 110-slot social census also shows that architecture operating publicly through 71 issue-recognition posts linking 61 distinct issue pages to 26 Council-member accounts.
+**Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation. The social census recovered 107 objects and preserves three profile-counted objects as not recovered; naming 26 accounts is not the same as engagement by 26 offices.
 **Do not say:** Broader historical hackathon superlatives; official submission or winner; current city service; official city guidance; emergency guidance; legal guidance.
 **Protected boundaries:** No current-service claims, private user data, or unverified guidance.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-11
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-event-population - NYC Artist Coalition Facebook event population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public surface / public-safe full-population fixture / protected traversal record
+**Public wording:** Facebook displayed 34 NYC Artist Coalition past-event slots. The knowledge bank recovered all 33 event identities exposed by the live index and records the remaining slot as unresolved.
+**Detailed public-safe wording:** The current Past Events control displayed 34 slots; repeated terminal scrolling exposed 33 unique event identities, and all 33 detail pages were reviewed. The final metadata-free slot remains explicitly unresolved.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Establishes a complete and auditable denominator without erasing the part of the historical record that Facebook did not materialize.
+**Guardrail:** This is complete control-slot accounting, not a native Meta export or proof that no historical event was deleted before capture.
+**Do not say:** All 34 event pages were recovered; the coalition created exactly 34 events; the unresolved event never existed; Facebook is a complete owner archive.
+**Protected boundaries:** Raw event descriptions, participant identities, comments, contacts, credentials, private working links, account administration, and authenticated-session data stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nyc-artist-coalition-participation-system - Recurring cultural and civic participation system
+
+**Status:** Ready
+**Support level:** Strong with collective-credit boundary
+**Evidence class:** Jamie first-hand role account / 33-event public census / independent reporting / contemporaneous interview
+**Public wording:** Beginning in 2017, Jamie helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, small cultural-space meetings, practical sessions, town halls, hearings, campaign actions, and relief convenings.
+**Detailed public-safe wording:** Jamie combined public event infrastructure, rotating cultural-space meetings, practical safety and legal sessions, civic forums, and campaign action paths so artists' lived experience could enter shared advocacy work.
+**Where to project:** FairRentNYC case study, work metadata, and knowledge-bank project note.
+**Why it matters:** Makes relational program production, stakeholder convening, public participation, and translation between cultural and civic settings legible as professional systems work.
+**Guardrail:** Preserve collective and cohost credit. The event record proves the system's public form but does not identify the producer of every event or establish event-to-policy causality.
+**Do not say:** Jamie solely created or produced every event; every event used a different venue; the coalition met every calendar month; the event program alone caused policy outcomes.
+**Protected boundaries:** Attendee identities, comments, reactions, meeting credentials, private working links, raw event bodies, and unapproved collaborator detail stay protected.
+**Review owner:** Jamie / collaborator review welcome for event-level credit
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-event-response-signals - Bounded event-platform traction
+
+**Status:** Ready with boundary
+**Support level:** Strong
+**Evidence class:** Public-safe full-population fixture
+**Public wording:** Nineteen recovered event pages display at least 100 Facebook responses, seven at least 500, and three at least 1,000.
+**Detailed public-safe wording:** Thirty-two of 33 recovered event pages display a historical Facebook response label. Threshold counts preserve visible traction without summing repeat responders or rounded values into a people-reached total.
+**Where to project:** FairRentNYC case study and knowledge-bank project note.
+**Why it matters:** Supplies a concrete public traction signal while preserving the difference between an interface action and a person in a room.
+**Guardrail:** These are historical event-level interface labels, not attendance, unique people, reach, participation, endorsement, conversion, mandate, or impact.
+**Do not say:** 9,989 unique people engaged; Facebook responses equal attendance; every responder participated; the three largest events each drew more than 1,000 people in person.
+**Protected boundaries:** Do not publish responder identities, guest lists, comments, reactions, invite context, or private analytics.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-democratic-listening-practice - Jamie's attributed democracy-lab interpretation
+
+**Status:** Careful
+**Support level:** Attributed interpretation
+**Evidence class:** Jamie first-hand account / corroborating event pattern
+**Public wording:** Jamie describes the event practice as a kind of democracy lab: listening in small cultural spaces, believing artists, and translating lived experience into collective civic pathways.
+**Detailed public-safe wording:** Jamie understands the recurring event practice as relational infrastructure linking cultural experience, collective listening, practical support, and civic action while leaving room for collaborators and participants to describe the work differently.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves the ethical and poetic intention behind the operating system without forcing it into the hiring site's primary empirical proof layer.
+**Guardrail:** Keep this attributed to Jamie. It is an interpretation of practice, not a measured outcome or participant consensus.
+**Do not say:** The events empirically proved democratic impact; every participant shared the interpretation; Facebook responses measure democratic participation.
+**Protected boundaries:** Do not publish participant testimony, private coalition discussion, or unapproved collaborator interpretations as support for this framing.
+**Review owner:** Jamie / participant and collaborator context welcome
+**Last reviewed:** 2026-07-15
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
@@ -130,6 +190,7 @@ claim beyond the wording and guardrails here.
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
 **Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
 **Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
+**Source basis:** Approved resume language, public-safe aggregate historical summary, surviving code and database records, and a 38-status public social census documenting contribution, onboarding, circulation, and external-use specimens.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
 **Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
@@ -142,16 +203,18 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
+**Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Jamie hosts Sunday Dinner and created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Source basis:** Approved resume language, public-safe aggregate project history, Jamie's confirmation that he hosts Sunday Dinner, a 2017 Greene Hill Food Co-op interview documenting weekly open hosting, and the current public Sunday Dinner project site.
+**Source note:** The public sources independently corroborate Jamie's hosting role and the recurring open-community form in 2017, but not the 300+ gathering or 20+ resident-artist aggregates.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
@@ -159,29 +222,31 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Public source / public-safe archive summary / AI-assisted archival review
 **Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
-**Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.
+**Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, supported deployment, and implemented donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.
+**Source basis:** Public campaign site, application guidance, GoFundMe, a 40-of-40 public-safe census of the surviving Facebook Page surface, and protected AI-assisted review of Jamie-authored launch-period site, theme, deployment, and widget history.
 **Where to project:** Technical Operations. Future resume or case-study use requires Jamie review and, if public organizer framing changes, collaborator confirmation.
 **Why it matters:** Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.
-**Guardrail:** Treat the source as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical and operational support language only.
-**Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
+**Guardrail:** Treat the repository evidence as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical and operational support language only. Jamie states that he was not the stakeholder or owner posting to Facebook. His recollection of supporting the search for a uniformly available project name remains a research lead pending corroboration.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; Jamie owned or published the Facebook account; Jamie alone named the project; a human collaborator provided this testimonial.
 **Protected boundaries:** Applicant or grantee materials, donor/list exports, subscriber data, payment-request files, credentials/login sheets, billing/payment details, raw email archives, raw text-message archives, private Drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
 **Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-15
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
-**Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
-**Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The work advanced to City Council acceptance and appropriation of $490,539; later records say the project withdrew and the unused funds were reappropriated.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. The project's shared public account also supported resident survey pathways, recurring free tire-pickup intake, civic-resource circulation, and direct dialogue with three then-serving Council-member accounts.
+**Source basis:** Approved resume language, official Kansas City records, a 183-of-183 public social census, and public-safe project context.
+**Where to project:** Technical Operations, Work card, Case study.
+**Why it matters:** Shows long-horizon project management, civic product operations, public/private boundary judgment, and documentation for complex built-environment work.
+**Guardrail:** Keep Council acceptance and appropriation distinct from agreement execution, receipt, spending, construction, and completion. Keep shared-account authorship and all post-transition program operation unassigned to Jamie.
+**Do not say:** KC Town Hall received or spent a $490,539 grant; the adaptive reuse was completed; Jamie authored all 183 social records; Jamie operated every later neighborhood program; three Council members formally endorsed KC Town Hall; current property status.
+**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
 
 ## source-backed-team-memory-method - Source-backed team memory
 
@@ -213,6 +278,37 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## creative-technology-embodied-systems - Embodied systems and original prototyping
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public creative-technology records / protected public-safe professor-evidence summaries
+**Public wording:** An early practice in social software, interactive media, and media archaeology still shapes how Jamie surfaces latent structure and gives it a form people can understand, test, and inhabit.
+**Detailed public-safe wording:** At UCSC, Jamie analyzed recursively overlapping Flickr groups, prototyped a similar-image system using participant relationships and image analysis, built an interface in Max/MSP and Jitter, and helped translate spatial browsing into a collaborative installation design. In parallel, he treated early video systems and embodied installation as ways to investigate attention, participation, and time.
+**Source basis:** Public-safe summaries of Warren Sack's and Margaret Morse's contemporaneous UCSC narrative evaluations, Margaret Morse's 2014 public recommendation, and public creative-technology project records.
+**Where to project:** About and Technical Operations only.
+**Why it matters:** Shows that Jamie can originate a model, prototype it, communicate it, and help others inhabit it; the throughline is systems judgment, not only administration.
+**Guardrail:** Use as a bounded historical throughline on secondary hiring surfaces. Preserve title uncertainty, collaborative credit, and the distinction between early prototypes and current professional practice.
+**Do not say:** Jamie invented structural equivalence; Jamie solely designed the collaborative Flickr installation; *Art is Long* and *Time Is Long* are definitively the same work; the historical prototypes were production products; Jamie currently holds formal social-network-analysis research authority.
+**Protected boundaries:** Raw narrative evaluations, academic identifiers and grades, private professor correspondence and contact details, the recommendation screenshot, and unapproved student work or installation media stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## waterways-raft-expedition-2007 - Kansas City-to-Louisiana river expedition
+
+**Status:** Ready with boundary
+**Support level:** Strong
+**Evidence class:** Contemporaneous Kansas City Star front-page reporting / corroborating Pitch reporting / later institutional project context
+**Public wording:** In 2007, Jamie conceived *Release Yourself onto the Water until it Tastes of Salt*. The Kansas City Star documented Jamie, Libby Hendon, and Laura Mattingly traveling from Kansas City's West Bottoms into Louisiana on a reclaimed-material, bicycle-powered raft and passing the 1,000-mile marker.
+**Detailed public-safe wording:** The article documents a roughly 12-by-13-foot raft made from reclaimed building materials, civic refuse, and soda-manufacturing containers, propelled by two bicycles linked to a paddlewheel. It reports a 51-day interruption and a crew-and-community-supported adaptive return involving local hospitality, free legal help, temporary work, vessel retrieval, repairs, and navigation equipment. It records the expedition as a living experience centered on waterways and encounters with people along them, and attributes to Jamie an interpretation of the river as connective cultural space between Kansas City's West Bottoms and Delta communities.
+**Where to project:** Knowledge-bank project note only. Reserve for later artistic-practice, public-engagement, participatory-program, or systems-thinking composition.
+**Why it matters:** Makes an unusual actor-action-artifact-useful-end sequence defensible: Jamie initiated an ambitious participatory premise, helped give it material and operational form with others, sustained and adapted the work through a major interruption within a wider support ecology, traveled more than 1,000 miles, and articulated a civic-cultural purpose for the journey.
+**Guardrail:** Always name Libby Hendon and Laura Mattingly as the other core crew members. Preserve the wider support ecology and distinguish progress into Louisiana from arrival at the Gulf.
+**Do not say:** Jamie completed the expedition alone; Jamie personally built or operated every part of the raft; the crew reached the Gulf of Mexico; the article establishes the exact endpoint or complete itinerary; the historical journey is a currently authorized or reproducible operating model.
+**Protected boundaries:** The locally preserved Kansas City Star PDF, article text, and photographs are not committed or republished. Publication rights, complete task allocation, and the complete participant and supporter roster remain unresolved.
+**Review owner:** Jamie / collaborator role confirmation welcome
+**Last reviewed:** 2026-07-16
+
 ## ai-evals-professional-development - AI evals professional development
 
 **Status:** Ready  
@@ -227,3 +323,349 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## nter-chng-america-now-here - NTER CHNG exhibition provenance
+
+**Status:** Careful
+**Support level:** Strong with boundaries
+**Evidence class:** Archived project site / official archived exhibition pages / institutional context
+**Public wording:** America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists.
+**Detailed public-safe wording:** The archived artist page describes the work as a participatory software-and-architectural installation; a separate first-party article documents visitors sending text messages and seeing them projected on a large gauze display.
+**Where to project:** Knowledge-bank project note only. Reserve for a future creative-technology or interaction-design context after editorial review.
+**Why it matters:** Adds direct institutional evidence for a long-running practice of translating participant input, software, and spatial form into shared public interaction.
+**Guardrail:** Preserve shared authorship and the distinction between exhibition inclusion, observed use, and impact. The Nerman Museum page supplies exhibition context but does not name NTER CHNG.
+**Do not say:** Jamie solely created NTER CHNG; the sources establish Jamie's detailed technical scope; the Nerman Museum page names the project; the installation reached a quantified audience or produced a measured impact.
+**Protected boundaries:** Do not reproduce archived phone numbers, participant messages, or media without separate permission and review.
+**Review owner:** Jamie / collaborator confirmation needed for a detailed division of labor
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-personal-public-working-surface - Personal public working surface
+
+**Status:** Careful
+**Support level:** Strong with boundaries
+**Evidence class:** Authenticated full-population census / public status metadata / protected research run
+**Public wording:** Jamie's personal @urbanhermit account preserves a 2008-2023 cross-project public record; a public-safe aggregate fixture documents the complete review of all 434 records counted by the live profile on July 15, 2026.
+**Detailed public-safe wording:** The population includes 353 Jamie-authored originals or replies and 81 external-source native reposts, with 321 distinct posted short URLs and a bounded incoming-response inventory.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves a broad discovery surface for future source-backed composition without forcing personal history onto the hiring site.
+**Guardrail:** The exact denominator is the live profile-counted population on the capture date, not every post Jamie ever published. Frequency and dated interactions are not labor, priority, reach, endorsement, conversion, or impact.
+**Do not say:** Jamie authored all 434 source records; the live profile is a complete owner archive; every linked source endorses Jamie; incoming mentions measure total engagement or impact.
+**Protected boundaries:** Raw post text, personal material, non-evidence item identifiers, historical contact details, authentication state, direct messages, private activity, and local archive paths stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-horse-lords-video - Horse Lords "Truthers" video
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** NPR published article / Jamie contemporaneous statement / two public collaborator-network accounts
+**Public wording:** Co-created the music video for Horse Lords' "Truthers" with M.C. Schmidt; NPR published the video and directly credited both collaborators.
+**Detailed public-safe wording:** NPR also attributes to Horse Lords member Andrew Bernstein an explanation of how the video's materials, repetition, variation, color, and text mirror the band's music.
+**Where to project:** Knowledge-bank project note only; future creative-technology feature after editorial and rights review.
+**Why it matters:** Adds independently published evidence of Jamie's collaborative creative-technology and moving-image practice.
+**Guardrail:** Always credit M.C. Schmidt. The sources do not establish the precise production split, commission terms, media rights, or audience impact.
+**Do not say:** Jamie solely created or directed the video; Jamie performed every production role; NPR commissioned the video; the video is cleared for republication.
+**Protected boundaries:** Do not embed or republish the video or project assets without rights and current playability review.
+**Review owner:** Jamie / collaborator review needed for detailed production roles and asset rights
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-eighth-street-tunnel-screening - 8th Street Tunnel participatory screening
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** KCUR published article / public collaborator response
+**Public wording:** In 2006, Jamie led participants through downtown Kansas City on a scavenger hunt and hosted a three-part film screening inside the historic 8th Street Tunnel.
+**Detailed public-safe wording:** KCUR documents the combination of artist, popular, and archival media and records Jamie's public-history and youth-imagination rationale for access.
+**Where to project:** Knowledge-bank project note only; future participatory-public-history feature after editorial, rights, and safety review.
+**Why it matters:** Makes a concrete early example of Jamie's practice of building participatory structures from place, media, public memory, and shared movement.
+**Guardrail:** Describe a participatory screening, not tunnel restoration, ownership, permanent opening, or currently authorized access. Attendance and measured impact are not established.
+**Do not say:** Jamie restored or reopened the tunnel; Jamie controlled public access; the event's attendance or educational impact was measured; the access model should be repeated without current authorization and safety review.
+**Protected boundaries:** Do not republish event media or identify access details without rights, authorization, and safety review.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## urbanhermit-kc-town-hall-tire-participation - KC Town Hall tire-pickup participation
+
+**Status:** Careful
+**Support level:** Strong with boundaries
+**Evidence class:** Participant first-hand public account / shared project-account operating update
+**Public wording:** Directly participated in KC Town Hall's recurring TiredOfTires neighborhood workflow, including a documented dump-truck pickup shift around Northeast Kansas City.
+**Detailed public-safe wording:** A participant's first-hand public account and a KC Town Hall operating update independently connect Jamie to the recurring curbside tire-disposal workflow.
+**Where to project:** Knowledge-bank project note only; reserve for a future service-delivery context.
+**Why it matters:** Adds a material example of Jamie participating directly in the operational work behind a public-facing neighborhood service.
+**Guardrail:** Direct participation is not sole program ownership. First-party tire and resident-savings quantities remain unaudited and should not become Jamie's personal outcomes.
+**Do not say:** Jamie alone ran TiredOfTires; Jamie personally collected every tire; the project's quantities are independently audited; one participant post establishes the complete program history.
+**Protected boundaries:** Do not republish participant photographs without permission or infer the identity and responsibilities of every participant.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## jamie-facebook-event-population - Personal Facebook event population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public surface / public-safe full-population fixture / protected traversal record
+**Public wording:** Facebook displayed 21 past-event slots for Jamie. The knowledge bank recovered all 20 event identities exposed by the live index and records the remaining slot as unresolved.
+**Detailed public-safe wording:** The current personal Past Events control displayed 21 slots; repeated terminal scrolling exposed 20 unique event identities, and every exposed detail page was reviewed. The remaining metadata-free slot stays unresolved.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Establishes an auditable denominator without erasing the part of the historical record Facebook did not materialize.
+**Guardrail:** This is complete control-slot accounting, not a Meta owner export or proof that no older event was deleted or withheld.
+**Do not say:** All 21 pages were recovered; Jamie organized exactly 21 events; the unresolved event never existed; Facebook is a complete archive.
+**Protected boundaries:** Residential addresses, contacts, guest identities, comments, invite context, raw event bodies, and authenticated-session state stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## jamie-event-practice-long-arc - Event and program formation across time
+
+**Status:** Confirmed with boundary
+**Support level:** Strong with collaborator-credit boundary
+**Evidence class:** Twenty recovered public event pages
+**Public wording:** Twenty recovered public event pages from December 2006 through February 2019 name Jamie as organizer or co-organizer across participatory art, public history, DIY music, recurring hosting, mutual aid, civic preparation, cultural-space safety, and interactive media.
+**Detailed public-safe wording:** Thirteen pages display Jamie alone and seven preserve cohost credit; their public-safe purpose summaries document gatherings, screenings, installations, meals, practical training, public art, and music programs built around emerging cultural and civic premises.
+**Where to project:** Knowledge-bank project note only; reserve for later audience-specific composition.
+**Why it matters:** Shows a durable practice of giving emerging cultural, civic, and community needs a usable form people could enter.
+**Guardrail:** Preserve cohost credit. Organizer displays do not prove complete task ownership, sole authorship, attendance, or impact.
+**Do not say:** Jamie solely created every event; Facebook preserves his complete event history; every event belonged to one continuous formal program.
+**Protected boundaries:** Residential addresses, contacts, guests, comments, invite context, raw event bodies, unapproved media, and authenticated-session state stay protected.
+**Review owner:** Jamie / collaborator review welcome for event-level credit
+**Last reviewed:** 2026-07-15
+
+## jamie-facebook-event-response-signals - Personal event-platform signals
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Public-safe full-population fixture
+**Public wording:** Six recovered event pages retain historical Facebook response labels; five display at least 20 responses and two at least 100.
+**Detailed public-safe wording:** The threshold counts preserve visible event-level platform signals without summing repeat responders into a people-reached total.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Supplies a bounded public traction signal while preserving the difference between an interface action and a person in a room.
+**Guardrail:** These are not verified attendance, unique people, reach, participation, endorsement, conversion, mandate, or impact; do not sum them.
+**Do not say:** 329 unique people engaged; Facebook responses equal attendance; response labels prove impact.
+**Protected boundaries:** Do not publish responder identities, guest lists, comments, reactions, invite context, or private analytics.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-event-zero-state - Current WOWList event absence
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the capture-date interface state
+**Evidence class:** Authenticated public surface
+**Public wording:** WOWList's current Facebook Events surface says "No events to show." The knowledge bank records that as a capture-date zero-state, not proof that no historical WOWList event existed.
+**Detailed public-safe wording:** The current authenticated interface exposed no event cards; historical hosted-event completeness remains open pending a native Meta owner export or equivalent page archive.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves a visible archival absence without converting platform loss or migration into false historical certainty.
+**Guardrail:** Do not convert current absence into a historical negative.
+**Do not say:** WOWList never hosted a Facebook event; the page has no event history; Facebook preserves a complete owner archive.
+**Protected boundaries:** Account administration, internal page identifiers, archive paths, raw post data, and authenticated-session state stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-surviving-post-population - Surviving Page population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the surviving current surface
+**Evidence class:** Two protected terminal traversals / public-safe 444-row ledger
+**Public wording:** Two independent terminal traversals recovered the same 444 surviving NYC Artist Coalition Facebook post identities from January 2017 through September 2021, and every recovered record received a public-safe disposition.
+**Detailed public-safe wording:** The traversals used distinct scroll cadences, matched exactly, and remained stable through 42 and 41 additional no-addition controls; the public disposition digest regenerates from all 444 anonymous record IDs.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Establishes an auditable denominator without erasing the platform-history gap.
+**Guardrail:** This is 100 percent of the surviving July 2026 surface, not a native Meta lifetime export or deletion history.
+**Do not say:** NYC Artist Coalition published exactly 444 posts; no historical post is missing.
+**Protected boundaries:** Raw post bodies, names, links, per-record metrics, media, and authenticated state stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-public-operating-surface - Collective civic publishing system
+
+**Status:** Confirmed with boundary
+**Support level:** Strong collective-system evidence
+**Evidence class:** Public-safe full-population census / posted-route inventory / independently documented Jamie role context
+**Public wording:** Across 444 surviving records, the coalition Page routed among meetings, hearings, Let NYC Dance, Save NYC Spaces, Talks Not Raids, FairRentNYC, press, public information, practical resources, and relief information.
+**Detailed public-safe wording:** The corpus contains 150 event routes, 138 standalone posts, 78 original-media posts, 52 reshared stories, and 26 source-or-resource routes across a 2017-2021 campaign chronology.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Makes a sustained public operating surface legible beyond generic social-media promotion.
+**Guardrail:** This is a collective Page-level pattern, not individual post authorship or policy causality.
+**Do not say:** Jamie authored every post; Facebook publishing caused the coalition's policy outcomes.
+**Protected boundaries:** Do not publish raw post text, comments, names, per-record metrics, post-to-route relationships, media, or account administration.
+**Review owner:** Jamie / collaborator review welcome for division of publishing labor
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-stakeholder-routing - Public addressing, not inbound engagement
+
+**Status:** Confirmed with boundary
+**Support level:** Strong classification evidence
+**Evidence class:** Public-safe 444-row stakeholder-routing census
+**Public wording:** Rule-matched routing appears on 88 records for NYC Council members or Council, 40 for cultural and nightlife agencies, 39 for cultural and advocacy partners, 13 for business and enforcement agencies, and 12 for press or public-information organizations.
+**Detailed public-safe wording:** The overlapping categories preserve how the Page publicly addressed institutions and movement actors without identifying ordinary individuals or converting references into inbound actions.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Shows stakeholder architecture and civic translation while preserving the difference between addressing and response.
+**Guardrail:** Categories overlap and count records. Tags, mentions, links, quotations, and reshares do not establish stakeholder response, endorsement, attendance, partnership, or action.
+**Do not say:** Eighty-eight Council members engaged; agency tags prove endorsement.
+**Protected boundaries:** Raw actor lists, individual-level relationship data, comments, and post-to-stakeholder joins stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-source-routing - Posted source and action routes
+
+**Status:** Confirmed with boundary
+**Support level:** Strong route-inventory evidence
+**Evidence class:** Public-safe 33-row normalized route ledger
+**Public wording:** The corpus contains 64 outbound-link occurrences consolidated into 33 normalized public-safe routes across campaigns, civic information, cultural programs, press, practical resources, fundraising, and relief information.
+**Detailed public-safe wording:** Thirty-one public routes are preserved with category and occurrence count; two historical meeting-access or form destinations are counted without publishing their URLs.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves the Page's source-discovery and action-routing architecture for future research and composition.
+**Guardrail:** A posted route is not automatic corroboration, authorship, readership, conversion, partnership, endorsement, or impact. Two historical action routes remain protected.
+**Do not say:** Every route corroborates a coalition claim; every linked organization partnered with the coalition; posted links prove action.
+**Protected boundaries:** Historical meeting links, forms, post-to-route joins, raw text, and authenticated context stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-visible-interaction-signals - Dated response floor
+
+**Status:** Confirmed with boundary
+**Support level:** Strong dated-interface evidence
+**Evidence class:** Unlinkable public counter frequencies / protected first-party 2019-2021 metric crosscheck
+**Public wording:** On July 14, 2026, 389 of 444 surviving records retained at least one visible response signal; current unlinkable counters sum to floors of 2,374 reactions, 212 comments, and 611 shares.
+**Detailed public-safe wording:** Aggregate value-frequency tables reproduce the dated floors without linking a count to a post or person; 185 manager-export rows independently preserve bounded 2019-2021 metric fields.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Retains mission-relevant traction evidence while preventing a mutable interface count from becoming an impact claim.
+**Guardrail:** These are mutable interface observations, not lifetime analytics, unique people, reach, attendance, conversion, endorsement, causality, or impact.
+**Do not say:** The coalition reached 2,374 people; 611 shares moved legislation.
+**Protected boundaries:** Per-post metrics, audience identities, comments, reach rows, raw exports, and source-to-metric joins stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## nycac-facebook-publishing-memory - Jamie's predominant-but-shared use memory
+
+**Status:** Research-stage / hold
+**Support level:** First-person memory lead; human publisher not recovered
+**Evidence class:** Jamie first-person recollection / protected manager-export field audit
+**Public wording:** Jamie remembers handling much of the coalition's Facebook publishing while also remembering that others used the Page.
+**Detailed public-safe wording:** The memory is accessioned as predominant but shared Page use; neither the surviving surface nor the recovered 2019-2021 CSV exports identifies the human publisher of each post.
+**Where to project:** No public projection pending corroboration.
+**Why it matters:** Preserves a potentially important operating-role claim without using shared-account custody as authorship proof.
+**Guardrail:** Neither the surviving Page nor the recovered 2019-2021 manager exports supplies record-level human publishers.
+**Do not say:** Jamie authored or published all 444 posts; Jamie was the sole administrator; the archive confirms he was the predominant publisher.
+**Protected boundaries:** Account administration, access state, raw exports, collaborator identities, and record-level attribution research stay protected.
+**Review owner:** Jamie / collaborator proof notes welcome
+**Next evidence:** Native administrator chronology, record-level publisher export, or collaborator proof notes.
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-event-cross-surface - Event routing through a shared project identity
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Complete preserved page-post event-link search / two public event pages
+**Public wording:** Two externally hosted Facebook event routes survive in the preserved WOWList page-post corpus: one linked a dedicated WOWList scene page and one carried New York cultural-space safety advocacy.
+**Detailed public-safe wording:** One Chicago DIY gathering linked a WOWList scene page from its event description, and the WOWList account circulated a New York cultural-space safety meeting; neither event was hosted by WOWList.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves evidence of the project account routing between scene, calendar, event, and civic surfaces.
+**Guardrail:** Neither route was hosted by WOWList; shared-account custody does not establish Jamie's individual post authorship.
+**Do not say:** WOWList hosted both events; Jamie authored both posts; two links prove broad adoption or impact.
+**Protected boundaries:** Raw page-post bodies, comments, reactions, account administration, archive paths, and authenticated-session state stay protected.
+**Review owner:** Jamie / collaborator review welcome for shared-account authorship
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-post-population - Recovered Facebook post population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Protected terminal capture / public-safe 57-row census / authenticated live review
+**Public wording:** A terminal 19-page capture recovered 57 unique WOW List Facebook posts from April 2015 through March 2018, and every recovered record received a public-safe content and live-review disposition.
+**Detailed public-safe wording:** Fifty-four post identities remain available and three wrappers are unavailable; the public fixture preserves all 57 dispositions without reproducing raw post bodies.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Establishes a complete recovered-population denominator without turning platform migration or unavailable wrappers into false absence.
+**Guardrail:** This is 57-of-57 recovered-population disposition, not a native owner export or proof that no older post was deleted, withheld, or omitted.
+**Do not say:** WOW List made exactly 57 Facebook posts; every post remains live; the capture proves no post was deleted.
+**Protected boundaries:** Raw bodies, comments, contacts, ordinary individual source accounts, administration state, and local paths stay protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-publishing-management - Jamie's Facebook publishing role
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the recovered Facebook corpus
+**Evidence class:** Authenticated manager-only 57-record publisher audit / Jamie first-person recollection
+**Public wording:** A record-by-record manager audit attributes 51 of 57 recovered WOW List Facebook posts to Jamie, attributes none to another publisher, and leaves six unresolved. This supports Jamie's account that he managed the project's Facebook publishing while preserving Richard Caceres's shared project credit.
+**Detailed public-safe wording:** The unresolved set consists of three unavailable post wrappers and three video redirects that did not yield a publisher label; attached source material retains its original authorship.
+**Where to project:** Knowledge-bank project note only; future role sentence only after a separate audience decision.
+**Why it matters:** Replaces generic social-media language with specific, source-backed operating responsibility.
+**Guardrail:** Say managed Facebook publishing across the recovered corpus. Preserve three unavailable wrappers, three attribution-less video redirects, attached-source authorship, Richard's shared credit, and the distinction between Facebook and all social platforms.
+**Do not say:** Jamie authored all 57 post texts; Jamie was WOW List's sole creator; the six unresolved posts were his; Jamie managed every platform.
+**Protected boundaries:** Manager-only administration details and authenticated session state stay outside the repo.
+**Review owner:** Jamie / Richard welcome for shared-project context
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-operating-practice - Facebook as an operating surface
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Public-safe full-population fixture / participant-created tutorial
+**Public wording:** WOW List's Facebook account functioned as an operating layer for a participatory event system: it onboarded contributors, circulated event and organizer routes, connected scenes to peer knowledge, and made community support actionable.
+**Detailed public-safe wording:** Forty-four of 57 records include page-authored commentary, 21 carry attached shared sources, and the public link trail contains 65 distinct normalized URLs, including 36 WOW List routes.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Makes the product-operations, implementation, and contributor-support work visible without relying on inflated reach language.
+**Guardrail:** URL publication and source association are not readership, adoption, endorsement, attendance, or impact.
+**Do not say:** 65 organizations adopted WOW List; 36 communities used it; every linked event belonged to WOW List; every source endorsed the project.
+**Protected boundaries:** One Google document route remains withheld pending separate review.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-care-advocacy-arc - Cultural infrastructure and care
+
+**Status:** Confirmed with boundary
+**Support level:** Strong source-backed synthesis
+**Evidence class:** Full-population theme chronology / selected linked-source close reads
+**Public wording:** The Facebook record shows the same infrastructure widening its field of care: event discovery and contributor onboarding sit beside venue continuity, Ghost Ship relief and safety, DIY-space funding, and Cabaret Law advocacy.
+**Detailed public-safe wording:** The overlapping classifier identifies 19 cultural-space-sustainability records, 17 mutual-aid-and-solidarity records, and nine civic-and-cultural-advocacy records across the 57-post corpus.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Preserves the continuity between product operations, mutual aid, cultural-space infrastructure, and civic advocacy.
+**Guardrail:** This is evidence of account curation and operating concern, not sole organization or causality for linked campaigns and outcomes.
+**Do not say:** WOW List created every campaign; its posts caused fundraisers to succeed; Jamie alone repealed the Cabaret Law; every linked organization endorsed WOW List.
+**Protected boundaries:** Do not republish raw crisis posts, comments, contacts, or individual source-account data.
+**Review owner:** Jamie / collaborator context welcome
+**Last reviewed:** 2026-07-15
+
+## kcth-phase-one-field-coordination - Multidisciplinary restoration operations
+
+**Status:** Confirmed with boundary
+**Support level:** Strong first-person role evidence with contemporaneous project corroboration
+**Evidence class:** Protected first-person account / protected 2019 application package
+**Public wording:** Jamie served as KC Town Hall's Phase One general contractor and daily field coordinator. A contemporaneous project package independently documents his founder/project-manager role, a named multidisciplinary local team, and a displayed $189,629 cold-shell total; Jamie's exact title and complete duty list are first-person evidence, and the source arithmetic remains unreconciled.
+**Detailed public-safe wording:** The documented scope spans roofing, masonry, structural framing, water service, access, safety, materials, and related field dependencies; Jamie's account adds carpentry, welding, engineering, architecture, and plumbing coordination.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Shows technical project management through daily field coordination, contractor alignment, dependency sequencing, and public-interest implementation.
+**Guardrail:** Keep proposal corroboration separate from first-person role attribution. Treat $189,629 only as the proposal's displayed total because the visible budget arithmetic does not fully reconcile.
+**Do not say:** Jamie single-handedly restored KC Town Hall; Jamie personally performed every trade; $189,629 is audited expenditure; Phase One proves full adaptive-reuse completion; the later CCED appropriation paid for Phase One.
+**Protected boundaries:** Raw PDF, finances, contacts, addresses, signatures, and unapproved photographs stay outside the repo.
+**Review owner:** Jamie / Julia and contractor review welcome
+**Last reviewed:** 2026-07-15
+
+## kcth-neighborhood-survey-system - Resident input translated into project structure
+
+**Status:** Confirmed with boundary
+**Support level:** Strong artifact and process corroboration; individual attribution is first-person
+**Evidence class:** Protected first-person account / reproduced survey artifact / project statement / third-party support letter
+**Public wording:** Jamie designed a compact neighborhood survey handbill and backing data workflow. The 2019 application reproduces the card, names Oak Park Neighborhood Association and New Horizon Missionary Baptist Church, and says the ongoing survey directly shaped the proposal; the individual design attribution remains first-person evidence.
+**Detailed public-safe wording:** The card combined selectable neighborhood uses, open response, contact fields, and a contribution pathway; Jamie describes carrying it during daily site work as neighborhood histories and future-use ideas accumulated around the restoration.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Connects field presence, participatory research, information design, and implementation rather than treating listening as a separate consultation phase.
+**Guardrail:** The source does not establish representativeness, response count, complete implementation, or measured impact.
+**Do not say:** Jamie alone determined the neighborhood vision; the survey was statistically representative; every response was implemented.
+**Protected boundaries:** Respondent identities, raw responses, addresses, phone numbers, and email addresses stay private.
+**Review owner:** Jamie / neighborhood collaborator review welcome
+**Last reviewed:** 2026-07-15
+
+## kcth-tired-of-tires-program-operations - Recurring neighborhood service system
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for direct participation; individual design and city-coordination detail is first-person
+**Evidence class:** Protected first-person account / jointly authored project archive / two public participation records
+**Public wording:** Jamie reports designing and city-coordinating the Oak Park TiredOfTires service and conducting recurring field operations. A shared project archive documents the monthly resident-intake and volunteer system, while two public records independently corroborate his direct participation.
+**Detailed public-safe wording:** The operating pattern joined resident requests, volunteer intake, routing, pickup, city recycling, tracking, and cross-promotion of neighborhood services.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Shows service design as a complete implementation loop rather than a campaign message.
+**Guardrail:** Direct participation is public-source supported; program design, city coordination, recurring operation, and Indian Mound expansion remain first-person details pending further corroboration.
+**Do not say:** Jamie alone ran the program; Jamie collected every tire; quantities or savings are independently audited; every later service date was Jamie-operated.
+**Protected boundaries:** Resident requests, volunteer records, contact data, routes, and raw project exports stay protected.
+**Review owner:** Jamie / Oak Park and city collaborator review welcome
+**Last reviewed:** 2026-07-15
