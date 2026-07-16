@@ -9,6 +9,28 @@ the coalition in public reporting and the Save NYC Spaces campaign, testifying
 in 2018 about commercial affordability and cultural-space safety, and
 testifying before the New York City Council for Talks Not Raids.
 
+## DCLA and Council interface
+
+Official Council records now establish that DCLA Commissioner Tom Finkelpearl
+referred to NYC Artist Coalition in his May 19, 2017, Executive Budget
+testimony. He cited the coalition's formation after a DCLA DIY-arts meeting
+while explaining the value of direct public feedback and convening around a
+common cause.
+
+Jamie's March 2018 Cultural Affairs budget testimony documents his own work at
+that interface: practical safety organizing, Fire Guard support, coalition
+participation, city-facing recommendations, and testimony intended both to
+help artists reach services and to help City government understand informal
+cultural work.
+
+The resulting institutional interpretation is deliberately bounded. DCLA,
+Council, and Councilmember Rafael Espinal benefited from an organized
+interlocutor able to translate dispersed cultural-space experience into
+recurring participation, recommendations, safety practice, and public
+testimony. The record does not show personal dependence, government control,
+exclusive representation, endorsement of every position, or sole policy
+causality. See the [DCLA and Council interface note](nycac-dcla-council-interface.md).
+
 ## Collective accomplishments
 
 - NYC Artist Coalition participated in the broad Let NYC Dance coalition that
@@ -34,7 +56,8 @@ extent of Jamie's individual town-hall production role remains an open inquiry.
 
 ## Sources
 
-The canonical source records link contemporaneous Gothamist, NPR, and Bedford +
+The canonical source records link official Council and DCLA records alongside
+contemporaneous Gothamist, NPR, and Bedford +
 Bowery reporting; Let NYC Dance, Save NYC Spaces, and Talks Not Raids public
 campaign materials; the 2018 Small Business and 2019 Justice System Council
 hearing transcripts; the legislative record; and New York City's 2023 CURE

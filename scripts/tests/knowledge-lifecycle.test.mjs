@@ -57,6 +57,12 @@ import {
   participationLineageSources
 } from "../../apps/www/src/data/knowledge-bank/participation-lineage.ts";
 import {
+  nycacDclaCouncilClaims,
+  nycacDclaCouncilInquiries,
+  nycacDclaCouncilIntake,
+  nycacDclaCouncilSources
+} from "../../apps/www/src/data/knowledge-bank/nycac-dcla-council-interface.ts";
+import {
   callNycCouncilReposts,
   callNycMemberAuthoredInteractions,
   kcSpacesFundHighlights,
@@ -1637,6 +1643,76 @@ test("participation lineage is strong, bounded, and newspaper safe", () => {
   });
   assert.doesNotMatch(serialized, /\/Users\/|\/Volumes\/|docs\.google\.com\/spreadsheets/);
   assert.doesNotMatch(serialized, /Talking with people:/);
+});
+
+test("NYCAC DCLA and Council interface separates record, role, and inference", () => {
+  assert.equal(nycacDclaCouncilSources.length, 6);
+  assert.equal(nycacDclaCouncilClaims.length, 3);
+  assert.equal(nycacDclaCouncilInquiries.length, 2);
+  assert.equal(nycacDclaCouncilIntake.length, 1);
+
+  const sourceById = new Map(
+    nycacDclaCouncilSources.map((source) => [source.id, source])
+  );
+  const claimById = new Map(
+    nycacDclaCouncilClaims.map((claim) => [claim.id, claim])
+  );
+  const transcript = sourceById.get(
+    "SRC-NYCAC-FINKELPEARL-COUNCIL-BUDGET-2017"
+  );
+
+  assert.match(transcript.canonicalUrl, /ID=5271559/);
+  assert.match(transcript.publicNote, /direct public feedback/i);
+  assert.ok(
+    transcript.doesNotEstablish.some((item) => /DCLA created, owned, directed/i.test(item))
+  );
+
+  const finkelpearl = claimById.get(
+    "CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE"
+  );
+  assert.equal(finkelpearl.status, "confirmed-with-boundary");
+  assert.ok(
+    finkelpearl.antiClaims.includes("Finkelpearl endorsed Jamie personally.")
+  );
+  assert.ok(
+    finkelpearl.projections.every(
+      (projection) => projection.key !== "case-study" || projection.status === "hold"
+    )
+  );
+
+  const jamie = claimById.get("CLM-NYCAC-JAMIE-CIVIC-TRANSLATION");
+  assert.match(jamie.internalClaim, /interface between informal cultural communities and City government/i);
+  assert.ok(jamie.boundaries.some((item) => /collective program production/i.test(item)));
+
+  const institutional = claimById.get(
+    "CLM-NYCAC-INSTITUTIONAL-INTERFACE-VALUE"
+  );
+  assert.equal(institutional.status, "inference");
+  assert.ok(institutional.boundaries.some((item) => /institutional analysis/i.test(item)));
+  for (const antiClaim of [
+    "Finkelpearl, DCLA, Espinal, or the Council needed Jamie personally.",
+    "NYC Artist Coalition spoke for every artist or cultural space.",
+    "The coalition's usefulness proves that it caused legislation."
+  ]) {
+    assert.ok(institutional.antiClaims.includes(antiClaim));
+  }
+
+  const referenceInquiry = nycacDclaCouncilInquiries.find(
+    (inquiry) => inquiry.id === "INQ-NYCAC-FINKELPEARL-COUNCIL-REFERENCES"
+  );
+  assert.equal(referenceInquiry.resultStatus, "recovered");
+  assert.match(referenceInquiry.publicSummary, /30 Cultural Affairs meeting records/);
+  assert.match(referenceInquiry.publicSummary, /24 Finkelpearl-bearing transcripts/);
+  assert.ok(referenceInquiry.limitations.some((item) => /not every attachment/i.test(item)));
+
+  const serialized = JSON.stringify({
+    sources: nycacDclaCouncilSources,
+    claims: nycacDclaCouncilClaims,
+    inquiries: nycacDclaCouncilInquiries,
+    intake: nycacDclaCouncilIntake
+  });
+  assert.doesNotMatch(serialized, /\/Users\/|\/Volumes\/|authenticatedAs|sessionIdentity/i);
+  assert.doesNotMatch(serialized, /Finkelpearl needed Jamie\./i);
 });
 
 test("unresolved Shared Drive artifacts remain inquiries, not accomplishments", () => {

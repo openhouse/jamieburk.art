@@ -662,3 +662,39 @@ the simpler approved 300-plus gathering scale.
 **Guardrail:** Marks are not unique people, audited door counts, or meals
 served. Person-level rows remain protected, and the workbook's "Meals Served"
 inscription remains unresolved.
+
+## NYC Artist Coalition, DCLA, And Council Interface
+
+### `CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** In 2017 Council testimony, DCLA Commissioner Tom
+Finkelpearl cited NYC Artist Coalition's formation after a DCLA DIY-arts
+meeting as evidence of the value of direct public feedback and convening around
+a common cause.
+**Projection:** Active archive note; website case study held.
+**Guardrail:** This is institutional recognition, not a personal endorsement,
+DCLA ownership, exclusive representation, or policy causality.
+
+### `CLM-NYCAC-JAMIE-CIVIC-TRANSLATION`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** Jamie used coalition organizing, safety practice, and
+public testimony to translate between informal cultural communities and City
+government, helping artists reach practical safety knowledge while carrying
+community-defined problems into DCLA and Council processes.
+**Projection:** Active archive note; website case study held.
+**Guardrail:** Preserve collective production and policy credit. Do not convert
+testimony or recommendations into government authority or legislative
+authorship.
+
+### `CLM-NYCAC-INSTITUTIONAL-INTERFACE-VALUE`
+
+**Status:** Inference
+**Public-safe wording:** NYC Artist Coalition made dispersed cultural-space
+knowledge more legible and actionable through recurring participation, safety
+practice, recommendations, testimony, and feedback.
+**Projection:** Active archive note; website case study held.
+**Guardrail:** "Needed" is institutional analysis, not personal dependence or
+private motive. Civic usefulness is not endorsement, control, exclusivity, or
+policy causality.

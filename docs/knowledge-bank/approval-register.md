@@ -14,6 +14,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition / DCLA / Council interface: Finkelpearl's May 2017 Council reference and Jamie's March 2018 Council testimony are approved for public-safe knowledge-bank use. The institutional-benefit interpretation may remain as a labeled inference. Website projections remain held pending a dedicated coalition composition; do not imply personal endorsement, government control, exclusive representation, private dependence, or policy causality.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: historical, independently developed civic-data prototype; Politico New York coverage is verified, and no official city affiliation is claimed.
 - WOWList reach: use approximate public-safe adoption wording.

@@ -262,3 +262,23 @@ Do not say Sunday Dinner had 2,714 unique attendees or served 2,714 meals. The
 workbook contains affirmative attendance marks, not unique-person or meal
 counts. Do not describe its 345 prefixed event columns as 345 distinct sequence
 numbers.
+
+## NYC Artist Coalition, DCLA, And Council Interface
+
+Do not say Finkelpearl endorsed Jamie personally or that DCLA created,
+controlled, owned, or spoke for NYC Artist Coalition. His Council testimony
+supports the narrower conclusion that he regarded coalition formation as a
+useful result of direct public engagement.
+
+Do not say Finkelpearl, Espinal, DCLA, or the Council needed Jamie personally.
+The public record supports an institutional inference about the value of an
+organized civic interface, not private motive or dependence.
+
+Do not say NYC Artist Coalition spoke for every artist or cultural space,
+received delegated public authority, secured agreement with every position, or
+alone caused Cabaret Law repeal, the Office of Nightlife, or another policy
+outcome.
+
+Do not describe the bounded transcript search as proof that no other reference
+could exist. Unavailable, unindexed, image-only, or mistranscribed records
+remain possible.

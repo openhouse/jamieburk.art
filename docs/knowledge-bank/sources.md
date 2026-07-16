@@ -300,3 +300,17 @@ raw database rows, person-level workbook records, authenticated state,
 sensitive stories, or private paths. Event rows, calendar mappings, attendance
 marks, and Facebook response labels remain explicitly distinct from unique
 people, attendance, endorsement, and impact.
+
+## NYC Artist Coalition, DCLA, And Council Sources
+
+The July 16 Council-side pass adds five public government or agency records and
+one bounded research-run record. The decisive source is Finkelpearl's May 19,
+2017, Executive Budget testimony. Jamie's March 16, 2018, testimony supplies
+direct role evidence; Espinal's June 19, 2017, hearing supplies the Council's
+problem frame; the DCLA commissioner message and CreateNYC appendix corroborate
+the public-engagement and recommendation pathway.
+
+The corpus control records 30 Cultural Affairs meeting records, 50 transcript
+attachment entries, 41 distinct PDFs, and 24 Finkelpearl-bearing transcripts.
+It supports one recovered speaker-attributed reference. It does not prove that
+no unavailable, unindexed, image-only, or mistranscribed record exists.

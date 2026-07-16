@@ -109,6 +109,9 @@ citations.
 | `CLM-URBANHERM-NYCAC-PUBLIC-SPEAKER-ATTRIBUTION` | Hold from site; retain for future coalition composition | Specific speaker and peer attributions strengthen Jamie's record, but a dedicated NYC Artist Coalition composition is needed to preserve collective and policy credit. |
 | `CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE` | Active on `/work/wowlist` | A single bounded sentence shows civic reuse of the participation model; exact database associations and unresolved authorship stay in the bank. |
 | `CLM-SUNDAY-DINNER-ATTENDANCE-LEDGER-STRUCTURE` | Archive note only | The aggregate structure strengthens the 300-plus gathering claim, but attendance-mark counts add ambiguity to the public hiring page and remain protected-summary evidence. |
+| `CLM-NYCAC-FINKELPEARL-COUNCIL-REFERENCE` | Archive note only | The exact institutional recognition is useful evidence, but a current hiring route could read it as endorsement without the full DCLA and coalition context. |
+| `CLM-NYCAC-JAMIE-CIVIC-TRANSLATION` | Archive note only | Jamie's documented safety and translation work is strong; hold for a dedicated coalition case study that can preserve shared program and policy credit. |
+| `CLM-NYCAC-INSTITUTIONAL-INTERFACE-VALUE` | Archive note only | The institutional synthesis adds strategic depth but remains an inference and should not displace concrete work on current hiring surfaces. |
 
 The Urbanhermit hold palette generated a public-safe
 [audience comparison and photo-editor brief](briefs/urbanhermit-photo-editor-brief.md).

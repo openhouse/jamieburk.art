@@ -241,3 +241,10 @@ events” to “345 prefixed event columns,” retains aggregate attendance and
 database associations as bounded archival evidence, and promotes one concise
 civic-reuse sentence to the WOW List case study. See the
 [research run](runs/2026-07-16-participation-lineage.md).
+
+The July 16 [NYC Artist Coalition, DCLA, and Council pass](projects/nycac-dcla-council-interface.md)
+recovers Finkelpearl's May 2017 Council-hearing reference, documents Jamie's
+own 2018 testimony about safety and civic translation, and distinguishes
+confirmed public record from a bounded institutional account of why DCLA,
+Council, and Councilmember Espinal benefited from the coalition's work. All
+new website projections remain held pending a dedicated coalition composition.

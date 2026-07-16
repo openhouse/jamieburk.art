@@ -38,3 +38,9 @@ the WOW List civic-tag aggregate, the Sunday Dinner attendance-ledger
 structure, and the Call Script / DCLA discussion chronology. Every item has a
 claim and inquiry disposition. The Sunday Dinner intake also records the
 correction from "345 numbered event entries" to "345 prefixed event columns."
+
+The July 16 NYC Artist Coalition / DCLA / Council intake matures one confirmed
+Finkelpearl reference, one confirmed-with-boundary Jamie role claim, and one
+institutional inference. The intake explicitly prohibits treating "needed" as
+personal dependence or turning government access into endorsement, control,
+exclusive representation, or policy causality.
