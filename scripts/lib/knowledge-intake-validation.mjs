@@ -95,7 +95,8 @@ export const requiredSeedIntakeIds = [
   "INTAKE-WOWLIST-DB-SNAPSHOT-2026",
   "INTAKE-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2026",
   "INTAKE-CALLSCRIPT-PAGE-2026",
-  "INTAKE-CALLSCRIPT-DCA-EVENT-DISCUSSION-2026"
+  "INTAKE-CALLSCRIPT-DCA-EVENT-DISCUSSION-2026",
+  "INTAKE-KANSAS-CITY-STAR-RAFT-PDF-2026-07-16"
 ];
 
 export const requiredResearchSourceIds = [
@@ -140,6 +141,10 @@ export const requiredArchiveClaimIds = [
   "CLM-CRS-PUBLIC-BASELINE-PILOT-2026",
   "CLM-CRS-OPERATING-PLAN-2026",
   "CLM-WATERWAYS-KANSAS-CITY-STAR-FEATURE-2007",
+  "CLM-WATERWAYS-KANSAS-CITY-STAR-ORIGIN-2007",
+  "CLM-WATERWAYS-KANSAS-CITY-STAR-CREW-AND-RAFT-2007",
+  "CLM-WATERWAYS-KANSAS-CITY-STAR-PARTICIPATORY-METHOD-2007",
+  "CLM-WATERWAYS-KANSAS-CITY-STAR-RIVER-INTERPRETATION-2007",
   "CLM-SUNDAY-DINNER-LIVE-RSVP",
   "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN-2026",
   "CLM-MUSIC-HACKATHON-SORTED-AUDIO-2013",
@@ -153,6 +158,7 @@ export const requiredArchiveIntakeIds = [
   "INTAKE-CRS-PUBLIC-BASELINE-HANDOUT-2026",
   "INTAKE-CRS-90-DAY-ACTION-PLAN-2026",
   "INTAKE-JPH-KANSAS-CITY-STAR-RAFT-2026",
+  "INTAKE-KANSAS-CITY-STAR-RAFT-PDF-2026-07-16",
   "INTAKE-SUNDAY-DINNER-LIVE-RSVP-2026",
   "INTAKE-JOB-HUNT-SOURCE-BACKED-MEMORY-PROPOSAL-2026",
   "INTAKE-JOB-HUNT-CONTEXT-OUTLINE-2026",
@@ -548,6 +554,74 @@ export function validateKnowledgeIntake() {
   const operatingPlanClaim = claimById.get("CLM-CRS-OPERATING-PLAN-2026");
   if (!JSON.stringify([operatingPlanClaim?.boundaries, operatingPlanClaim?.antiClaims]).toLowerCase().includes("completion")) {
     archiveProductionErrors.push("The CRS operating plan must remain distinct from completed work");
+  }
+
+  const kansasCityStarSource = sourceById.get(
+    "SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15"
+  );
+  const kansasCityStarDuplicateIntake = knowledgeBank.intakes.find(
+    (intake) => intake.id === "INTAKE-KANSAS-CITY-STAR-RAFT-PDF-2026-07-16"
+  );
+  const kansasCityStarClaimIds = [
+    "CLM-WATERWAYS-KANSAS-CITY-STAR-FEATURE-2007",
+    "CLM-WATERWAYS-KANSAS-CITY-STAR-ORIGIN-2007",
+    "CLM-WATERWAYS-KANSAS-CITY-STAR-CREW-AND-RAFT-2007",
+    "CLM-WATERWAYS-KANSAS-CITY-STAR-PARTICIPATORY-METHOD-2007",
+    "CLM-WATERWAYS-KANSAS-CITY-STAR-RIVER-INTERPRETATION-2007"
+  ];
+  if (
+    kansasCityStarSource?.captureFingerprint !==
+    "sha256:8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3"
+  ) {
+    archiveProductionErrors.push(
+      "The Kansas City Star close-read source must retain the supplied artifact fingerprint"
+    );
+  }
+  if (
+    kansasCityStarDuplicateIntake?.disposition !== "linked-duplicate" ||
+    kansasCityStarDuplicateIntake.duplicateOf !==
+      "INTAKE-JPH-KANSAS-CITY-STAR-RAFT-2026"
+  ) {
+    archiveProductionErrors.push(
+      "The supplied Kansas City Star PDF must remain a duplicate intake linked to the canonical source intake"
+    );
+  }
+  for (const claimId of kansasCityStarClaimIds) {
+    const claim = claimById.get(claimId);
+    const sourceEvidence = claim?.evidence.find(
+      (evidence) => evidence.sourceId === kansasCityStarSource?.id
+    );
+    if (!sourceEvidence || !sourceEvidence.locator || sourceEvidence.renderCitation) {
+      archiveProductionErrors.push(
+        `${claimId} needs located, non-rendered Kansas City Star evidence`
+      );
+    }
+    if (claim?.projections.some((projection) => projection.status === "active")) {
+      archiveProductionErrors.push(
+        `${claimId} must remain unsurfaced pending editorial selection and clipping-use review`
+      );
+    }
+  }
+  const kansasCityStarBoundaryText = JSON.stringify([
+    kansasCityStarSource?.doesNotEstablish,
+    ...kansasCityStarClaimIds.map((claimId) => {
+      const claim = claimById.get(claimId);
+      return [claim?.boundaries, claim?.antiClaims];
+    })
+  ]).toLowerCase();
+  for (const boundary of [
+    "gulf",
+    "alone",
+    "division of labor",
+    "measured",
+    "aspiration",
+    "copyright"
+  ]) {
+    if (!kansasCityStarBoundaryText.includes(boundary)) {
+      archiveProductionErrors.push(
+        `The Kansas City Star claim cluster is missing the ${boundary} boundary`
+      );
+    }
   }
   const proposalOutcomeInquiry = inquiryById.get("INQ-JOB-HUNT-SOURCE-BACKED-MEMORY-OUTCOME-2026");
   if (proposalOutcomeInquiry?.resultStatus !== "inconclusive") {

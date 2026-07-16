@@ -124,17 +124,25 @@ export const archiveSourceRecords20260714 = [
     visibility: "public-metadata-only",
     preservationStatus: "private",
     publishedAt: "2007-11-15",
-    accessedAt: "2026-07-14",
+    accessedAt: "2026-07-16",
     publicCitation: "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, front page and A4.",
-    publicNote: "A preserved newspaper clipping documents the expedition and names Jamie as a member of the raft crew; the copyrighted pages are not republished.",
+    publicNote: "A close-read preserved newspaper clipping documents the expedition, its collective crew, Jamie's initiating role, the raft system, and the participatory purpose; the copyrighted pages are not republished.",
+    captureFingerprint: "sha256:8e9821ddccffc062983e3cf38f5a6080a1a5d1ee0cf1d0ff2b38b5ff40b17cd3",
     supportsGenerally: [
       "The Kansas City Star featured the raft journey on its front page and continued the report on page A4",
-      "the article names Jamie as a crew member",
-      "the article describes an artist-built raft journey from Kansas City toward Louisiana"
+      "the article names Libby Hendon, James Burkart, and Laura Mattingly as the three-person crew",
+      "the article attributes the initiating dream, vision, or idea to Jamie",
+      "the article describes a raft built in three weeks from discarded building materials, civic refuse, and beverage-industry drums, with two bicycles linked to a paddlewheel",
+      "the article reports a July 21 departure from the West Bottoms and places the crew south of Baton Rouge by November 15",
+      "the article describes the work as a living experience on the rivers that included meeting people, inviting others aboard, and allowing friends to join for stretches",
+      "the article attributes to Jamie an interpretation of the river as an invisible or dividing civic space whose cultural connections could be reawakened"
     ],
     doesNotEstablish: [
-      "that Jamie completed the entire journey alone",
+      "that the raft reached the Gulf of Mexico or the precise endpoint of the expedition",
+      "that Jamie completed or executed the journey alone",
       "the precise division of labor among the crew",
+      "that every reported distance, date, quotation, or operational detail is independently corroborated by this single article",
+      "that the project produced a measured long-term civic outcome",
       "permission to republish the full newspaper pages"
     ],
     protectedLocatorId: "ARCHIVE-JPH-KANSAS-CITY-STAR-RAFT-2007"
@@ -363,11 +371,101 @@ export const archiveClaimRecords20260714 = [
         renderCitation: false
       }
     ],
-    boundaries: ["Keep the expedition collective and do not republish the copyrighted newspaper pages."],
-    antiClaims: ["Jamie completed the entire journey alone.", "The article establishes every crew member's role."],
+    boundaries: ["Keep the expedition collective, describe the November position as reported progress rather than a completed Gulf endpoint, and do not republish the copyrighted newspaper pages."],
+    antiClaims: ["Jamie completed the entire journey alone.", "The article establishes every crew member's role.", "The article proves the raft reached the Gulf of Mexico."],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-14",
-    reviewedBy: ["Codex iCloud archive review"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex visual and textual PDF close read"]
+  },
+  {
+    id: "CLM-WATERWAYS-KANSAS-CITY-STAR-ORIGIN-2007",
+    project: "waterways-participatory-programs",
+    internalClaim: "The Kansas City Star reported that the raft project began with a dream, vision, or idea by Jamie Burkart.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [
+      {
+        sourceId: "SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15",
+        relationship: "direct-support",
+        supports: ["the article's attribution of the initiating idea to Jamie"],
+        locator: "page A4, first column, paragraph beginning 'Where does this odyssey begin?'",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
+        relationship: "corroborating",
+        supports: ["Jamie's originating role", "the expedition's public and experiential framing"],
+        locator: "introduction and passages identifying Jamie's initiating role",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: ["Originating the idea does not imply sole authorship, construction, navigation, facilitation, or credit for the collective expedition."],
+    antiClaims: ["Jamie alone created and executed the expedition.", "The other crew members were merely participants in Jamie's work."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex visual and textual PDF close read"]
+  },
+  {
+    id: "CLM-WATERWAYS-KANSAS-CITY-STAR-CREW-AND-RAFT-2007",
+    project: "waterways-participatory-programs",
+    internalClaim: "The Kansas City Star identified Libby Hendon, James Burkart, and Laura Mattingly as the raft crew and described a roughly 12-by-13-foot craft built in three weeks from discarded materials, with two bicycles linked to a paddlewheel.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15",
+      relationship: "direct-support",
+      supports: ["three named crew members", "reported build duration", "found-material construction", "bicycle-linked paddlewheel propulsion"],
+      locator: "front-page caption and page A4, first column, opening description of the craft",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The article describes the collective and the apparatus but does not allocate design, fabrication, navigation, or maintenance work person by person."],
+    antiClaims: ["Jamie alone built the raft.", "The article establishes the precise division of labor among the crew."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex visual and textual PDF close read"]
+  },
+  {
+    id: "CLM-WATERWAYS-KANSAS-CITY-STAR-PARTICIPATORY-METHOD-2007",
+    project: "waterways-participatory-programs",
+    internalClaim: "The Kansas City Star described the expedition as a living experience on the rivers: the crew stopped for supplies and interaction, invited people aboard, and welcomed friends for stretches of the journey.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15",
+      relationship: "direct-support",
+      supports: ["living-experience framing", "interaction with strangers", "open invitation aboard", "friends joining for stretches"],
+      locator: "page A4, first and fifth columns, passages on purpose, stops, visiting friends, and Jamie's invitation",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The article documents an intended and observed participatory form, not a complete participant roster or measured social outcome."],
+    antiClaims: ["Everyone encountered along the route participated.", "The article proves a durable community outcome in every stop."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex visual and textual PDF close read"]
+  },
+  {
+    id: "CLM-WATERWAYS-KANSAS-CITY-STAR-RIVER-INTERPRETATION-2007",
+    project: "waterways-participatory-programs",
+    internalClaim: "Jamie told The Kansas City Star that the river had functioned in his Kansas City experience as invisible space, a dividing line, historic novelty, or industrial pipeline, and that cultural connection between Kansas City and Delta communities might be reawakened through the river.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15",
+      relationship: "direct-support",
+      supports: ["Jamie's attributed interpretation of the river", "the connection between Kansas City's West Bottoms and Delta communities", "the stated hope of reawakening cultural connection"],
+      locator: "page A4, final column, Jamie's reported voice-mail remarks",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["Treat this as Jamie's contemporaneously reported interpretation and aspiration, not as independent proof of residents' perceptions or a measured cultural effect."],
+    antiClaims: ["Kansas City residents universally experienced the river this way.", "The expedition conclusively reawakened cultural connection between the regions."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex visual and textual PDF close read"]
   },
   {
     id: "CLM-SUNDAY-DINNER-LIVE-RSVP",
@@ -584,10 +682,46 @@ export const archiveIntakeRecords20260714 = [
     editorialState: "candidate",
     disposition: "claim-candidate-created",
     sourceIds: ["SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15"],
-    claimIds: ["CLM-WATERWAYS-KANSAS-CITY-STAR-FEATURE-2007"],
+    claimIds: [
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-FEATURE-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-ORIGIN-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-CREW-AND-RAFT-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-PARTICIPATORY-METHOD-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-RIVER-INTERPRETATION-2007"
+    ],
     inquiryIds: [],
     limitations: ["The clipping is copyrighted and is not republished in the repository."],
     nextActions: ["Seek a stable article URL, licensed clipping use, or library citation before public projection."]
+  },
+  {
+    id: "INTAKE-KANSAS-CITY-STAR-RAFT-PDF-2026-07-16",
+    capturedAt: "2026-07-16",
+    capturedBy: "Codex visual and textual PDF close read",
+    kind: "artifact-lead",
+    title: "User-supplied Kansas City Star raft-expedition PDF",
+    publicSafeSummary: "A user-supplied copy matches the already governed November 15, 2007, Kansas City Star clipping and supports a deeper atomic decomposition of the project's origin, collective apparatus, participatory method, and stated civic interpretation.",
+    whyItMatters: "The duplicate artifact did not require a second source record, but its fresh close reading materially increased what the existing source can defensibly support.",
+    projectHints: ["waterways-participatory-programs", "raft-expedition"],
+    maturity: "decomposed",
+    publicUse: "cite-with-care",
+    editorialState: "unsurfaced",
+    disposition: "linked-duplicate",
+    sourceIds: ["SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15"],
+    claimIds: [
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-FEATURE-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-ORIGIN-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-CREW-AND-RAFT-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-PARTICIPATORY-METHOD-2007",
+      "CLM-WATERWAYS-KANSAS-CITY-STAR-RIVER-INTERPRETATION-2007"
+    ],
+    inquiryIds: [],
+    duplicateOf: "INTAKE-JPH-KANSAS-CITY-STAR-RAFT-2026",
+    limitations: [
+      "The copyrighted clipping remains outside the repository.",
+      "The public record retains a fingerprint and citation metadata, not the local filename or filesystem path.",
+      "No website projection or image-publication permission follows from source decomposition."
+    ],
+    nextActions: ["Seek a stable article URL, licensed clipping use, or library citation before considering a public citation or image."]
   },
   {
     id: "INTAKE-SUNDAY-DINNER-LIVE-RSVP-2026",
