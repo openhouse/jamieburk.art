@@ -145,7 +145,7 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
           const b = observation.candidateRelationships[right];
           const aText = `${a.supports} ${a.limitations.join(" ")}`;
           const bText = `${b.supports} ${b.limitations.join(" ")}`;
-          if (a.evidenceRole === b.evidenceRole && tokenSimilarity(aText, bText) >= 0.8) {
+          if (tokenSimilarity(aText, bText) >= 0.8) {
             errors.push(`Observation ${observation.id} uses cosmetically varied blanket evidence relationships for multiple candidates`);
           }
         }
@@ -251,20 +251,14 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     if (task.status === "completed" && !task.findings.length) errors.push(`Completed research task ${task.id} has no findings`);
     if (task.status !== "completed" && task.completedAt) errors.push(`Incomplete research task ${task.id} has a completion date`);
     const contentReviewMedia = input.mediaLeads.filter((item) => item.contentReviewTaskIds?.includes(task.id));
-    const taskSignalsContentReview = /before content review/i.test([
-      task.question,
-      ...task.methods,
-    ].join(" "));
-    const protectedContentReview = taskSignalsContentReview && task.sourceIds.some((sourceId) =>
-      sourceById.get(sourceId)?.visibility === "protected"
-    );
-    if (protectedContentReview && !contentReviewMedia.length) {
+    const reviewsProtectedMedia = task.actions?.includes("review-protected-media") === true;
+    if (reviewsProtectedMedia && !contentReviewMedia.length) {
       errors.push(`Research task ${task.id} reviews protected content but has no media-assigned authorization gate`);
     }
     if (contentReviewMedia.length && task.requiresContentReviewAuthorization !== true) {
       errors.push(`Research task ${task.id} must declare content-review authorization because a media lead assigns it protected content review`);
     }
-    if (protectedContentReview && task.requiresContentReviewAuthorization !== true) {
+    if (reviewsProtectedMedia && task.requiresContentReviewAuthorization !== true) {
       errors.push(`Research task ${task.id} must require authorization before protected content review`);
     }
     if (task.requiresContentReviewAuthorization) {
@@ -512,10 +506,19 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     checkRefs(errors, `Media lead ${item.id}`, item.projectIds, projects, "project");
     checkRefs(errors, `Media lead ${item.id}`, item.candidateClaimIds, candidates, "candidate claim");
     checkRefs(errors, `Media lead ${item.id}`, item.researchTaskIds, tasks, "research task");
+    if (!item.reviewIntent) errors.push(`Media lead ${item.id} must declare structured review intent`);
     if (!Array.isArray(item.contentReviewTaskIds)) errors.push(`Media lead ${item.id} must explicitly declare content-review task IDs`);
+    if (item.reviewIntent === "protected-content-review" && !item.contentReviewTaskIds?.length) {
+      errors.push(`Media lead ${item.id} requires at least one protected-content review task`);
+    }
+    if (item.reviewIntent === "metadata-only" && item.contentReviewTaskIds?.length) {
+      errors.push(`Metadata-only media lead ${item.id} cannot assign protected-content review tasks`);
+    }
     checkRefs(errors, `Media lead ${item.id} content review`, item.contentReviewTaskIds ?? [], tasks, "research task");
     for (const taskId of item.contentReviewTaskIds ?? []) {
       if (!item.researchTaskIds.includes(taskId)) errors.push(`Media lead ${item.id} assigns content review to unlinked research task ${taskId}`);
+      const task = input.researchTasks.find(({ id }) => id === taskId);
+      if (!task?.actions?.includes("review-protected-media")) errors.push(`Media lead ${item.id} content-review task ${taskId} lacks structured protected-media action`);
     }
     checkRefs(errors, `Media lead ${item.id}`, item.sourceIds, sources, "source");
     if (!item.protectedLocatorId && !item.sourceIds.length) errors.push(`Media lead ${item.id} has neither an opaque locator nor a canonical source`);

@@ -406,6 +406,7 @@ export const wowlistFacebookPostLifecycle = {
         "Record each factual discovery as an atomic observation with a precise locator before associating it with a candidate claim.",
         "Keep evidence discovery separate from public display authorization.",
       ],
+      actions: ["review-protected-media", "claim-decomposition"],
       sourceIds: ["SRC-WOWLIST-MEMBERS-MEETING-VIDEO-2015"],
       observationIds: ["OBS-WOWLIST-MEMBERS-MEETING-VIDEO-2015"],
       findings: ["Metadata establishes that a protected 2015 recording titled 'Members Meeting: What is wowlist.org?' exists."],

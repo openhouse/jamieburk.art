@@ -13,6 +13,7 @@ import {
 } from "../apps/www/src/data/knowledge-bank/social-archive.ts";
 import { knowledgeLifecycle } from "../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import { validateWowListFacebookAcquisition } from "./lib/wowlist-facebook-acquisition-validation.mjs";
 
 const failures = [];
 let recomputedPopulationRecords = 0;
@@ -32,6 +33,11 @@ const wowListFacebookFixture = JSON.parse(readFileSync(
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
   "utf8",
 ));
+const wowListFacebookAcquisition = JSON.parse(readFileSync(
+  "docs/knowledge-bank/corpora/wowlist-facebook-posts-acquisition-manifest.json",
+  "utf8",
+));
+failures.push(...validateWowListFacebookAcquisition(wowListFacebookAcquisition, wowListFacebookFixture));
 const validateWowListPlatformCorpusBoundary = ({ xCorpus, facebookCorpus }) => {
   const errors = [];
   const xIds = xCorpus.records.map(({ statusId }) => statusId);

@@ -6,6 +6,8 @@ import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifec
 import { intakeAmendmentSchema, intakeReceiptSchema, mediaLeadSchema } from "../../apps/www/src/data/knowledge-bank/lifecycle-schema.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
+import { validateAppendOnlySnapshots } from "../lib/append-only-history.mjs";
+import { integrityArtifactPaths, validateIntegrityCheckpoints, validateRetirementLedger } from "../lib/knowledge-integrity-validation.mjs";
 import { validateIntakeReceipts, validateKnowledgeLifecycle } from "../lib/knowledge-lifecycle-validation.mjs";
 import { retrieveKnowledgePalette } from "../lib/knowledge-palette.mjs";
 
@@ -321,6 +323,16 @@ test("shared observations carry candidate-specific evidence roles and limits", (
   }));
   assert.match(validateKnowledgeLifecycle(cosmeticBlanketRelationships).join("\n"), /cosmetically varied blanket evidence relationships/);
 
+  const roleVariedBlanketRelationships = structuredClone(knowledgeLifecycle);
+  const roleVariedObservation = roleVariedBlanketRelationships.observations.find(({ id }) => id === "OBS-WOWLIST-FACEBOOK-MISSION-AND-STAKEHOLDER-PATTERNS");
+  roleVariedObservation.candidateRelationships = roleVariedObservation.candidateClaimIds.map((candidateClaimId, index) => ({
+    candidateClaimId,
+    evidenceRole: index ? "context" : "direct-support",
+    supports: roleVariedObservation.statement,
+    limitations: roleVariedObservation.doesNotEstablish,
+  }));
+  assert.match(validateKnowledgeLifecycle(roleVariedBlanketRelationships).join("\n"), /cosmetically varied blanket evidence relationships/);
+
   const directSupport = retrieveKnowledgePalette({
     projectId: "PRJ-NYC-ARTIST-COALITION",
     evidenceRole: "direct-support"
@@ -633,6 +645,39 @@ test("the tracked append-only intake receipts remain valid", () => {
   assert.match(amendment?.replacementValue ?? "", /21-article/);
 });
 
+test("Git-anchored integrity rejects coordinated receipt and retirement erasure", () => {
+  const receiptText = readFileSync("docs/knowledge-bank/intake/receipts.jsonl", "utf8");
+  const rewrittenReceiptLines = receiptText.split("\n");
+  const rewritten = JSON.parse(rewrittenReceiptLines[0]);
+  rewritten.title = "Coordinated rewrite";
+  rewrittenReceiptLines[0] = JSON.stringify(rewritten);
+  assert.match(
+    validateAppendOnlySnapshots("receipts", rewrittenReceiptLines.join("\n"), [receiptText]).join("\n"),
+    /rewrote append-only record 1/,
+  );
+
+  const retirementText = readFileSync("docs/knowledge-bank/governance/retirements.jsonl", "utf8");
+  assert.match(
+    validateAppendOnlySnapshots("retirements", "", [retirementText]).join("\n"),
+    /deleted 1 append-only record/,
+  );
+
+  const retirements = retirementText.split("\n").filter(Boolean).map((line) => JSON.parse(line));
+  const erasedLifecycle = structuredClone(knowledgeLifecycle);
+  erasedLifecycle.promotionDecisions = erasedLifecycle.promotionDecisions.filter(({ id }) => id !== "DEC-WOWLIST-SOCIAL-CASE-STUDY-RETIRE");
+  erasedLifecycle.candidateClaims.find(({ id }) => id === "CND-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT").promotionDecisionIds = ["DEC-WOWLIST-SOCIAL-PROMOTE"];
+  assert.match(validateRetirementLedger(retirements, erasedLifecycle, knowledgeBank).join("\n"), /has no current retire decision/);
+});
+
+test("knowledge-integrity checkpoints bind the governed artifact set", () => {
+  const checkpointPath = "docs/knowledge-bank/governance/integrity-checkpoints.jsonl";
+  const checkpoints = readFileSync(checkpointPath, "utf8").split("\n").filter(Boolean).map((line) => JSON.parse(line));
+  const artifactTexts = Object.fromEntries(integrityArtifactPaths.map((path) => [path, readFileSync(path, "utf8")]));
+  assert.deepEqual(validateIntegrityCheckpoints(checkpoints, artifactTexts), []);
+  const tampered = { ...artifactTexts, [integrityArtifactPaths[0]]: `${artifactTexts[integrityArtifactPaths[0]]}tampered` };
+  assert.match(validateIntegrityCheckpoints(checkpoints, tampered).join("\n"), /digest mismatch/);
+});
+
 test("every incorporated lead retains its append-only capture receipt", () => {
   const receipts = readFileSync("docs/knowledge-bank/intake/receipts.jsonl", "utf8")
     .split("\n").filter(Boolean).map((line) => intakeReceiptSchema.parse(JSON.parse(line)));
@@ -876,6 +921,10 @@ test("WOW List retrieval preserves research depth and exact-route selectivity", 
     () => retrieveKnowledgePalette({ surface: "/work/wowlist", briefId: "BRIEF-WOWLIST-VISUAL-RESEARCH", publicationSafe: true }),
     /rejects non-public brief/,
   );
+  assert.throws(
+    () => retrieveKnowledgePalette({ surface: "/resume", briefId: "BRIEF-WOWLIST-CURRENT", publicationSafe: true }),
+    /outside target surface \/resume/,
+  );
 });
 
 test("WOW List visual research remains a rights-gated evidence feedback loop", () => {
@@ -924,6 +973,18 @@ test("WOW List visual research remains a rights-gated evidence feedback loop", (
   assert.match(
     validateKnowledgeLifecycle(coordinatedDowngrade).join("\n"),
     /reviews protected content but has no media-assigned authorization gate/,
+  );
+
+  const paraphrasedDowngrade = structuredClone(knowledgeLifecycle);
+  const downgradedTask = paraphrasedDowngrade.researchTasks.find(({ id }) => id === task.id);
+  const downgradedMedia = paraphrasedDowngrade.mediaLeads.find(({ id }) => id === media.id);
+  downgradedTask.methods[0] = "Do not inspect protected video frames until rights, consent, and participant-identity protections are resolved.";
+  downgradedTask.actions = [];
+  delete downgradedTask.requiresContentReviewAuthorization;
+  downgradedMedia.contentReviewTaskIds = [];
+  assert.match(
+    validateKnowledgeLifecycle(paraphrasedDowngrade).join("\n"),
+    /requires at least one protected-content review task/,
   );
 
   const ungovernedAuthorization = structuredClone(media);

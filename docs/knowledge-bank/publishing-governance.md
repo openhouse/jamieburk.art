@@ -53,13 +53,25 @@ Publication-safe destination queries do not infer additional canonical claims
 from a related project. They return only manifest-selected claims and
 candidates with current approval for those claims and that destination.
 Surface queries also ignore internal and research briefs: only the active
-public-composition brief may select a public candidate palette. Retiring a
-projection requires a superseding decision with its own retired-route history,
-so stale authorization cannot be restored by erasing route metadata from the
-deprecated projection.
+public-composition brief may select a public candidate palette, and an explicit
+brief is rejected when it does not target the requested destination. Retiring
+a projection requires a superseding decision with its own retired-route history
+and an append-only retirement event, so stale authorization cannot be restored
+by erasing current decision or route metadata.
 Every publication-safe query omits research tasks and media. Those records
 remain available to internal planning queries and require a separate explicit
 publication path.
+
+Intake receipts, amendments, retirement events, and acquisition controls are
+bound by a chained integrity checkpoint. The release check compares their
+current digests with that checkpoint and verifies that every committed version
+of each append-only log remains a literal prefix of the current log. A receipt
+and its live lead cannot therefore be rewritten together without detection.
+
+Media review intent is structured rather than inferred from prose. A media lead
+marked for protected-content review must assign at least one task carrying the
+`review-protected-media` action, and that task must retain its explicit human
+authorization gate before work advances beyond `open`.
 
 ## Status Meanings
 

@@ -647,6 +647,9 @@ export const knowledgeLifecycle = knowledgeLifecycleSchema.parse({
   }),
   mediaLeads: knowledgeLifecycleInput.mediaLeads.map((item) => ({
     ...item,
+    reviewIntent: item.id === "MEDIA-WOWLIST-MEMBERS-MEETING-2015"
+      ? "protected-content-review" as const
+      : "metadata-only" as const,
     contentReviewTaskIds: "contentReviewTaskIds" in item ? item.contentReviewTaskIds : [],
   })),
 });

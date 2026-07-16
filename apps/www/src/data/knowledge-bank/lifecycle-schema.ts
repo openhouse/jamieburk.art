@@ -144,6 +144,14 @@ export const researchTaskSchema = z.object({
   status: z.enum(["open", "in-progress", "completed", "blocked"]),
   priority: z.enum(["low", "medium", "high", "urgent"]),
   methods: z.array(z.string().min(1)).min(1),
+  actions: z.array(z.enum([
+    "metadata-review",
+    "public-source-research",
+    "source-close-read",
+    "claim-decomposition",
+    "corroboration",
+    "review-protected-media"
+  ])).optional(),
   sourceIds: idList,
   observationIds: idList,
   findings: z.array(z.string().min(1)).default([]),
@@ -243,6 +251,7 @@ export const mediaLeadSchema = z.object({
   displayStatus: z.enum(["candidate", "metadata-only", "hold", "do-not-publish"]),
   candidateClaimIds: idList,
   researchTaskIds: idList,
+  reviewIntent: z.enum(["metadata-only", "protected-content-review"]),
   contentReviewTaskIds: idList.optional(),
   researchPrompt: z.string().min(1),
   contentReviewStatus: z.enum(["not-authorized", "authorized", "completed"]).optional(),

@@ -10,14 +10,18 @@ import {
   wowlistFacebookPostSourceIds,
 } from "../../apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
+import { validateWowListFacebookAcquisition } from "../lib/wowlist-facebook-acquisition-validation.mjs";
 
 const fixturePath =
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json";
 const reportPath = "docs/knowledge-bank/projects/wowlist-facebook-posts.md";
 const builderPath =
   "scripts/research/build-wowlist-facebook-posts-census.mjs";
+const acquisitionPath =
+  "docs/knowledge-bank/corpora/wowlist-facebook-posts-acquisition-manifest.json";
 
 const fixture = JSON.parse(await readFile(fixturePath, "utf8"));
+const acquisition = JSON.parse(await readFile(acquisitionPath, "utf8"));
 
 test("WOW List Facebook census reconciles the full recovered population", () => {
   assert.equal(fixture.platform, "facebook");
@@ -39,6 +43,18 @@ test("WOW List Facebook census reconciles the full recovered population", () => 
     fixture.populationReconciliation.protectedRecordSetSha256,
     /^[a-f0-9]{64}$/,
   );
+});
+
+test("public-safe acquisition controls independently bind the recovered denominator", () => {
+  assert.deepEqual(validateWowListFacebookAcquisition(acquisition, fixture), []);
+
+  const denominatorTamper = structuredClone(acquisition);
+  denominatorTamper.protectedOwnerCapture.uniqueRecordCount = 56;
+  assert.match(validateWowListFacebookAcquisition(denominatorTamper, fixture).join("\n"), /denominator drifted/);
+
+  const omittedCheckpoint = structuredClone(acquisition);
+  omittedCheckpoint.liveBidirectionalControl.reverse.checkpoints.pop();
+  assert.match(validateWowListFacebookAcquisition(omittedCheckpoint, fixture).join("\n"), /final checkpoint/);
 });
 
 test("publisher attribution stays strong and explicitly bounded", () => {

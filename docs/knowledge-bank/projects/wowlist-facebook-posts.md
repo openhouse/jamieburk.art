@@ -48,9 +48,14 @@ advocacy all appear in the complete population.
 
 The public fixture is the record-level disposition ledger:
 [wowlist-facebook-posts-full-population.json](../../../apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json).
-It includes a SHA-256 digest for each protected input set so a future agent can
-verify that an aggregate was generated from the same protected population
-without publishing that population.
+The separate public-safe
+[acquisition manifest](../corpora/wowlist-facebook-posts-acquisition-manifest.json)
+binds that ledger to protected-input digests, the 19-page stopping condition,
+the 57-ID public set, forward and reverse traversal checkpoints, the normalized
+53-message control digest, and the 51/0/6 publisher audit. CI recomputes every
+public-side count and digest and rejects missing checkpoints or denominator
+drift. Protected bodies and account-administration records remain unpublished;
+rerunning acquisition still requires authorized account access.
 
 The fresh authenticated page control traversed the live Page in both
 directions. Each pass recovered the same 53 normalized message-bearing

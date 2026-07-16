@@ -24,6 +24,13 @@ export function retrieveKnowledgePalette(filters = {}) {
   if (filters.publicationSafe && exactBrief && (exactBrief.status !== "active" || exactBrief.publicationIntent !== "public-composition")) {
     throw new Error(`Publication-safe retrieval rejects non-public brief ${exactBrief.id}`);
   }
+  if (filters.publicationSafe && exactBrief) {
+    for (const surface of [filters.surface, filters.proofSurface].filter(Boolean)) {
+      if (!exactBrief.targetSurfaces.includes(surface)) {
+        throw new Error(`Publication-safe retrieval rejects brief ${exactBrief.id} outside target surface ${surface}`);
+      }
+    }
+  }
   const candidateBriefs = exactBrief
     ? [exactBrief]
     : knowledgeLifecycle.editorialBriefs.filter((brief) =>

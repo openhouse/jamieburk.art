@@ -503,3 +503,38 @@ required after committing this repair.
 
 Fresh deterministic and exact-revision semantic evaluation is required after
 this repair is committed.
+
+## Integrity and acquisition repair
+
+Exact-revision judge `lifecycle-a-18eb6b55` passed research posture at **4**
+but correctly held the framework at **3** for intake preservation, source
+decomposition, promotion governance, editorial composability, media feedback,
+and social-archive production. It demonstrated six coordinated attacks rather
+than relying on declared completion:
+
+- rewriting a receipt and its incorporated lead together;
+- varying an evidence role while copying blanket relationship prose;
+- deleting a retirement decision, candidate link, and route history together;
+- applying an active public brief to a route it did not target;
+- paraphrasing protected-review prose while deleting both authorization fields;
+- treating a declared protected denominator as independently reproduced.
+
+The repair adds Git-history prefix enforcement and a chained digest checkpoint
+for intake, amendments, retirement events, and acquisition controls. A separate
+append-only retirement ledger now prevents a deleted tombstone from silently
+reactivating an earlier route authorization. Relationship similarity is checked
+independently of evidence role, and publication-safe retrieval binds explicit
+briefs to their exact target surfaces.
+
+Protected media now carry structured review intent, and review tasks carry a
+structured `review-protected-media` action. The gate no longer depends on a
+phrase in task prose. The WOW List Facebook corpus now has a public-safe
+acquisition manifest binding the protected capture and publisher-audit digests,
+the public 57-ID set, forward and reverse traversal checkpoints, ten terminal
+no-growth checks, exact 53-message agreement, and the 51/0/6 attribution
+disposition. Denominator tampering and omitted-checkpoint mutations fail.
+
+The focused typecheck, 49 lifecycle tests, eight-test WOW List Facebook suite,
+social-archive gate, integrity checkpoint, and Git-history validation pass.
+Fresh deterministic and independent exact-revision semantic evaluation remains
+required after committing this repair.

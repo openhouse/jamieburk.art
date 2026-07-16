@@ -126,5 +126,10 @@ contacts, ordinary individual source accounts, comments, or account
 administration. A fresh authenticated bidirectional page reconciliation on July
 15 recovered the same 53 message-bearing live records in both directions; four
 no-message records remain represented through the protected population rather
-than silently falling out. The resulting claims remain reserve knowledge rather
-than automatic website copy.
+than silently falling out. Its
+[public-safe acquisition manifest](corpora/wowlist-facebook-posts-acquisition-manifest.json)
+adds protected-input attestations, the public 57-ID digest, traversal
+checkpoints, and independent denominator mutations without publishing raw
+content. Only the bounded Facebook publishing-role claim projects to the case
+study; the population, source ecology, mission synthesis, and engagement
+questions remain reserve knowledge.
