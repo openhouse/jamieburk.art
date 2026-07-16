@@ -244,7 +244,7 @@ composed public surface, not a claim database.
 **Surface:** `case-study`
 **Destination type:** `route`
 **Audience:** Readers validating Jamie's coalition and civic systems work
-**Purpose:** Show Jamie's documented action and recurring participation-system contribution inside collective cultural-space advocacy.
+**Purpose:** Show Jamie's documented participation-system and institutional-translation contribution inside collective cultural-space advocacy.
 
 ### Approved Proofs
 
@@ -257,10 +257,14 @@ composed public surface, not a claim database.
 ### Required Canonical Claims
 
 - `CLM-NYCAC-PARTICIPATION-SYSTEM`
+- `CLM-NYCAC-DCLA-COUNCIL-INSTITUTIONAL-BRIDGE-2017`
 
 ### Exclusions
 
 - Private coalition strategy
+- Private institutional motive
+- DCLA ownership of the coalition
+- Personal necessity to Finkelpearl, the Council, or Espinal
 - Individual policy causality
 - Sole event production or page authorship
 - Single-tool coalition causality
@@ -271,6 +275,9 @@ composed public surface, not a claim database.
 - Credit collaborators
 - Do not expose private records
 - Use the public Call Script record for the early sequence and keep the protected database out of citations
+- Use the official DCLA and Council records for the institutional bridge
+- Distinguish Finkelpearl's exact May name from his functional descriptions in other hearings
+- Treat institutional benefit as interpretation, not private motive
 - Do not convert response counters into attendance or the 57% poll display into a vote total
 ## `/work/callnyc`
 

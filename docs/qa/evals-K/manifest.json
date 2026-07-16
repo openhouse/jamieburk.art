@@ -22,7 +22,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "2a193c9f9f7c121f9c533a4a9cdcf52b7035d61fffa592d886ab145ad54d3421",
+  "sourceSha256": "7fcfd98953186eaa8e70f4331b41f7c1fabcf73c853f67605de3d86a339e01eb",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,

@@ -341,19 +341,23 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Helped establish NYC Artist Coalition's recurring participation system",
     detailedPublicWording:
-      "Jamie connected lessons from WOW List with coalition advocacy through Call Script and public event pages. The early record preserves a DCLA meeting, issue gathering, collaborative letter drafting, a public naming poll, and a follow-up general meeting before the system expanded across small cultural spaces, practical sessions, town halls, hearings, campaign actions, and relief convenings.",
+      "Jamie connected lessons from WOW List with coalition advocacy through Call Script and public event pages. The early record preserves a DCLA meeting, issue gathering, collaborative letter drafting, a public naming poll, and a follow-up general meeting before the system expanded across small cultural spaces, practical sessions, town halls, hearings, campaign actions, and relief convenings. That operating layer gave emerging cultural-space concerns a usable path into formal recommendations, agency dialogue, Council testimony, and legislative follow-through.",
     sourceBasis:
-      "Jamie's first-hand role account; the archived popular.vote surface; the surviving Call Script page; the complete public discussion for a Call Script-cohosted January 2017 DCLA meeting; a protected WOW List production snapshot corroborating the event sequence; a public-safe census of 33 recovered coalition event records; contemporaneous Gothamist reporting; and a community profile connecting Jamie to coalition work.",
+      "Jamie's first-hand role account; the archived popular.vote surface; the surviving Call Script page; the complete public discussion for a Call Script-cohosted January 2017 DCLA meeting; a protected WOW List production snapshot corroborating the event sequence; a public-safe census of 33 recovered coalition event records; contemporaneous Gothamist reporting; a community profile connecting Jamie to coalition work; and close-read official DCLA and Council records documenting recommendations, institutional listening, coalition testimony, Espinal's public credit, and the Intro 1652 legislative sequence.",
     whyItMatters:
-      "Shows event production and recurring participation as civic operating infrastructure, while preserving the coalition, hosts, partners, and participants as co-authors of the work.",
+      "Shows why the participation system mattered institutionally: it made emerging cultural-space knowledge legible and actionable to agency and legislative processes while preserving the coalition, hosts, partners, and participants as co-authors of the work.",
     guardrail:
-      "Use helped establish and produce. Do not assign Jamie sole authorship of every event or page post, treat Facebook response labels as attendance, turn the naming poll's displayed 57% into a vote total or mandate, or claim that one tool or the event system alone caused coalition formation or a policy outcome.",
+      "Use helped establish, produce, build, and steward. Do not assign Jamie sole authorship of every event, recommendation, testimony, or page post; treat Facebook response labels as attendance; turn the naming poll's displayed 57% into a vote total or mandate; say DCLA created the coalition; imply Finkelpearl used the formal name in every relevant hearing; or claim that one tool, person, or event system alone caused coalition formation or a policy outcome.",
     doNotSay: [
       "Jamie solely produced every NYC Artist Coalition event",
       "9,989 people attended",
       "Facebook responses equal attendance or unique reach",
       "The naming poll proves a vote total, representative mandate, or complete founding roster",
       "Call Script or popular.vote alone created NYC Artist Coalition",
+      "DCLA created or controlled NYC Artist Coalition",
+      "Finkelpearl named NYC Artist Coalition in every relevant hearing",
+      "The Council needed Jamie personally",
+      "Espinal could not have advanced Intro 1652 without Jamie",
       "Every event used a different venue",
       "The event program alone repealed the Cabaret Law"
     ],
@@ -376,7 +380,10 @@ export const proofClaims: ProofClaim[] = [
       "civic-engagement",
       "public-communications"
     ],
-    canonicalClaimIds: ["CLM-NYCAC-PARTICIPATION-SYSTEM"],
+    canonicalClaimIds: [
+      "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "CLM-NYCAC-DCLA-COUNCIL-INSTITUTIONAL-BRIDGE-2017"
+    ],
     lastReviewed: "2026-07-16"
   },
   {

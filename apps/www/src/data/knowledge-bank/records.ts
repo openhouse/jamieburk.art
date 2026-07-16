@@ -13,6 +13,12 @@ import {
   callscriptBridgeResearchInquiries,
   callscriptBridgeSources
 } from "./callscript-bridge.ts";
+import {
+  dclaCouncilBridgeClaims,
+  dclaCouncilBridgeResearchInquiries,
+  dclaCouncilBridgeSourceIds,
+  dclaCouncilBridgeSources
+} from "./dcla-council-bridge.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import {
   nycartcXCorpusClaims,
@@ -61,6 +67,7 @@ const knowledgeBankInput = {
     ...campaignPressArticleSources,
     ...socialArchiveSources,
     ...callscriptBridgeSources,
+    ...dclaCouncilBridgeSources,
     ...kcTownHallSocialCorpus.sources,
     ...nycartcXCorpusSources,
     ...urbanhermitXCorpusSources,
@@ -1324,6 +1331,7 @@ const knowledgeBankInput = {
   ],
   sourceCollections: campaignPressCollections,
   claims: [
+    ...dclaCouncilBridgeClaims,
     ...socialArchiveClaims,
     ...kcTownHallSocialCorpus.claims,
     ...nycartcXCorpusClaims,
@@ -1713,6 +1721,7 @@ const knowledgeBankInput = {
     }
   ],
   researchInquiries: [
+    ...dclaCouncilBridgeResearchInquiries,
     {
       id: "INQ-HJE-REVENUE-GROWTH-CORROBORATION-2026",
       project: "harry-j-epstein",
@@ -1803,12 +1812,13 @@ const knowledgeBankInput = {
     {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
-      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018", "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016", "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"],
+      sourceOrder: ["SRC-NYCA-BEDFORD-BOWERY-TOWN-HALL-2017", "SRC-NYCA-SAVE-NYC-SPACES", "SRC-NYCA-COUNCIL-COMMERCIAL-RENT-2018", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018", "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016", "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017", ...Object.values(dclaCouncilBridgeSourceIds)],
       occurrences: [
         { id: "office-nightlife-town-hall", claimId: "CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study" },
         { id: "commercial-rent-testimony", claimId: "CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-2018", projection: "case-study" },
         { id: "shared-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] },
-        { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016", "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"] }
+        { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCA-GOTHAMIST-CABARET-2017", "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016", "SRC-CALLSCRIPT-FACEBOOK-PAGE-2026-07-16", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"] },
+        { id: "coalition-institutional-bridge", claimId: "CLM-NYCAC-DCLA-COUNCIL-INSTITUTIONAL-BRIDGE-2017", projection: "case-study", sourceIds: Object.values(dclaCouncilBridgeSourceIds) }
       ]
     },
     {

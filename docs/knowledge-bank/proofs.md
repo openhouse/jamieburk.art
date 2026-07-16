@@ -14,6 +14,10 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
   coalition work acquire usable structure through public invitation, issue
   gathering, collaborative drafting, collective naming, and follow-up
   convening.
+- Helped build and steward a collective operating layer that moved emerging
+  cultural-space concerns into formal recommendations, DCLA dialogue, Council
+  testimony, and legislative follow-through. Official records support the
+  institutional bridge; policy outcomes remain collective.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform historically used across 35+ city scenes, each with at least 50 geocoded posts/events.

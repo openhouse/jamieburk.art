@@ -27,6 +27,12 @@ Approved public artifact examples for this launch pass include:
   page, and the complete surviving public discussion for the January 27, 2017
   DCLA event. Together they support a bounded civic-tool-to-coalition operating
   sequence, not sole authorship, attendance, a poll vote total, or causality.
+- Official 2017 DCLA and New York City Council records: Finkelpearl's Cultural
+  Plan testimony, the Fiscal 2018 Executive Budget hearing, the comprehensive
+  cultural-plan hearing, DCLA's CreateNYC NYC Artists page, Espinal's June 21
+  stated-meeting remarks, the September 14 Intro 1652 hearing, and the Intro
+  1652 legislative record. These establish public statements, participation,
+  and sequence, not private motive or a measured causal share.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 - KC Spaces Fund Facebook surviving-feed public-safe corpus, independently testable opaque acquisition control, and protected authenticated traversal, reviewed July 16, 2026.

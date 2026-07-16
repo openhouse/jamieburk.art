@@ -195,7 +195,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Emerging work gained a public path from invitation and listening through shared drafting, collective naming, follow-up meetings, and durable campaign memory. Collaborators could then find decisions, sources, open questions, and next steps across 30+ shared pages without exposing private coalition context.",
+      "Emerging work gained a public path from invitation and listening through shared drafting, collective naming, formal recommendations, agency dialogue, Council testimony, follow-up meetings, and durable campaign memory. Collaborators could then find decisions, sources, open questions, and next steps across 30+ shared pages without exposing private coalition context.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -227,6 +227,12 @@ const workItemsInput = [
         description:
           "Jamie used Call Script and WOW List's civic event-sharing adaptation to help move an emerging group from a DCLA meeting through issue gathering, collaborative drafting, collective naming, and a follow-up meeting.",
         type: "meeting memory"
+      },
+      {
+        title: "Agency-to-Council bridge",
+        description:
+          "Jamie helped build and steward a collective operating layer that moved cultural-space concerns into formal recommendations, DCLA dialogue, Council testimony, and legislative follow-through.",
+        type: "decision record"
       }
     ],
     tags: [
@@ -270,6 +276,7 @@ const workItemsInput = [
       "Named NYC Artist Coalition speaker at a 2017 Office of Nightlife town hall",
       "2018 City Council testimony connecting commercial affordability to cultural-space safety",
       "Public records preserving an early sequence from civic event sharing through issue gathering, collaborative drafting, collective naming, and follow-up convening",
+      "Official DCLA and Council records showing the coalition's recommendations, institutional listening role, formal testimony, and legislative relevance",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
@@ -278,7 +285,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped emerging work acquire usable structure through public invitation, listening, collaborative drafting, collective naming, recurring meetings, campaign memory, source maps, policy communications, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition and helped emerging work acquire usable structure through public invitation, listening, collaborative drafting, collective naming, formal recommendations, agency dialogue, Council testimony, recurring meetings, campaign memory, source maps, policy communications, and follow-up systems.",
       open:
         "Named collaborators, meeting materials, and screenshots appear only when already public or separately approved.",
       protected:

@@ -123,6 +123,13 @@ compact-card surface exposed no reaction, comment, share, or incoming-engager
 fields, so full-population engagement remains held rather than guessed. No
 website copy or public route changed from this pass.
 
+The [DCLA and Council institutional-bridge review](research/2026-07-16-nycac-dcla-council-institutional-bridge.md)
+close-reads official 2017 records to distinguish Finkelpearl's exact May 19
+reference to NYC Artist Coalition from his functional descriptions in other
+hearings. It records why DCLA and Council actors found the coalition's
+participation system useful while keeping private motive, personal necessity,
+individual authorship, and sole policy causality out of the claim.
+
 Campaign press sections are preserved as typed source collections rather than
 treated as automatic claim support. The generated
 [NYC Artist Coalition campaign press corpus](campaign-press-corpus.md) records

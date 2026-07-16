@@ -34,6 +34,11 @@ displayed 57% establishes a vote total, representative mandate, or complete
 founding roster. Do not convert Facebook responses or reach language into
 attendance, unique people, or impact.
 
+Do not say DCLA created or controlled NYC Artist Coalition, that Finkelpearl
+used the coalition's formal name in every relevant hearing, that the Council
+needed Jamie personally, that Espinal could not advance Intro 1652 without
+Jamie, or that Jamie or the coalition alone caused Cabaret Law repeal.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
