@@ -22,6 +22,26 @@ const kcTownHallFullPopulation = JSON.parse(
   )
 );
 
+const nycArtCFullPopulation = JSON.parse(
+  readFileSync(
+    new URL(
+      "../../docs/knowledge-bank/data/nycartc-public-post-ledger.json",
+      import.meta.url
+    ),
+    "utf8"
+  )
+);
+
+const nycArtCInboundEngagement = JSON.parse(
+  readFileSync(
+    new URL(
+      "../../docs/knowledge-bank/data/nycartc-public-engagement-ledger.json",
+      import.meta.url
+    ),
+    "utf8"
+  )
+);
+
 export const requiredSeedIntakeIds = [
   "INTAKE-WATERWAYS-PITCH-HUCK-FINN-2026",
   "INTAKE-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2026",
@@ -58,7 +78,8 @@ export const requiredSeedIntakeIds = [
   "INTAKE-NTERCHNG-ANH-INCLUSION-2026",
   "INTAKE-ANH-NERMAN-CONTEXT-2026",
   "INTAKE-WOWLIST-FULL-POPULATION-2026",
-  "INTAKE-KCTOWNHALL-FULL-POPULATION-2026"
+  "INTAKE-KCTOWNHALL-FULL-POPULATION-2026",
+  "INTAKE-NYCARTC-X-FULL-POPULATION-2026"
 ];
 
 export const requiredResearchSourceIds = [
@@ -174,6 +195,9 @@ export const requiredSocialClaimIds = [
   "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016",
   "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
   "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
+  "CLM-NYCARTC-FULL-PROFILE-DISPOSITION",
+  "CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY",
+  "CLM-NYCARTC-STAKEHOLDER-EXCHANGE-FLOOR",
   "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
   "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
   "CLM-WOWLIST-SOCIAL-PRODUCT-SUPPORT",
@@ -199,11 +223,31 @@ export const requiredSocialClaimIds = [
 export const requiredSocialInquiryIds = [
   "INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
   "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
+  "INQ-NYCARTC-OWNER-ARCHIVE-2026",
   "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026",
   "INQ-WOWLIST-SOCIAL-ARCHIVE-2026",
   "INQ-WOWLIST-FULL-POPULATION-2026",
   "INQ-KCTOWNHALL-SOCIAL-ARCHIVE-2026",
   "INQ-KCTOWNHALL-FULL-POPULATION-2026"
+];
+
+export const requiredNYCArtCXArchivalSourceIds = [
+  "SRC-X-NYCARTC-FULL-POPULATION-LEDGER-2026",
+  "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-LEDGER-2026",
+  "SRC-HELL-GATE-WHO-LEADS-NIGHTCLUB-RAIDS-2023",
+  "SRC-NYT-COMMERCIAL-RENTS-SURGING-2023",
+  "SRC-HELL-GATE-LUCYS-EVICTION-2024",
+  "SRC-HELL-GATE-SAINT-VITUS-RAID-2024",
+  "SRC-HELL-GATE-NIGHTCLUB-RAIDS-2025",
+  "SRC-CITY-STATE-COMMERCIAL-RENT-2026",
+  "SRC-GOTHAMIST-SMALL-BUSINESS-RENT-CONTROL-2026",
+  "SRC-BUSHWICK-DAILY-LEASE-RENEWALS-2026"
+];
+
+export const requiredNYCArtCXArchivalClaimIds = [
+  "CLM-NYCARTC-FULL-PROFILE-DISPOSITION",
+  "CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY",
+  "CLM-NYCARTC-STAKEHOLDER-EXCHANGE-FLOOR"
 ];
 
 const blockedPublicRepoMarkers = [
@@ -241,6 +285,7 @@ export function validateKnowledgeIntake() {
   const archiveProductionErrors = [];
   const sharedDriveProductionErrors = [];
   const socialMediaProductionErrors = [];
+  const nycArtCXArchivalProductionErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -1652,6 +1697,207 @@ export function validateKnowledgeIntake() {
     }
   }
 
+  for (const sourceId of requiredNYCArtCXArchivalSourceIds) {
+    const source = sourceById.get(sourceId);
+    if (!source) {
+      nycArtCXArchivalProductionErrors.push(
+        `Missing NYC Artist Coalition X archival source: ${sourceId}`
+      );
+      continue;
+    }
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      nycArtCXArchivalProductionErrors.push(
+        `${sourceId} needs explicit support and does-not-establish boundaries`
+      );
+    }
+  }
+  for (const claimId of requiredNYCArtCXArchivalClaimIds) {
+    const claim = claimById.get(claimId);
+    if (!claim) {
+      nycArtCXArchivalProductionErrors.push(
+        `Missing NYC Artist Coalition X archival claim: ${claimId}`
+      );
+      continue;
+    }
+    if (claim.projections.some((projection) => projection.status === "active")) {
+      nycArtCXArchivalProductionErrors.push(
+        `${claimId} must remain held in the knowledge bank until editorial selection`
+      );
+    }
+  }
+  if (!intakeIdSet.has("INTAKE-NYCARTC-X-FULL-POPULATION-2026")) {
+    nycArtCXArchivalProductionErrors.push(
+      "Missing NYC Artist Coalition full-population X intake"
+    );
+  }
+  const ownerArchiveInquiry = inquiryById.get("INQ-NYCARTC-OWNER-ARCHIVE-2026");
+  const ownerArchiveBoundary = JSON.stringify([
+    ownerArchiveInquiry?.findings,
+    ownerArchiveInquiry?.limitations,
+    ownerArchiveInquiry?.publicSummary
+  ]).toLowerCase();
+  if (
+    ownerArchiveInquiry?.resultStatus !== "partially-recovered" ||
+    !ownerArchiveBoundary.includes("first-party") ||
+    !ownerArchiveBoundary.includes("unresolved")
+  ) {
+    nycArtCXArchivalProductionErrors.push(
+      "The owner-archive inquiry must preserve the partially recovered and unresolved boundary"
+    );
+  }
+
+  const nycArtCItems = nycArtCFullPopulation.items ?? [];
+  const recoveredNYCArtCItems = nycArtCItems.filter(
+    ({ status }) => status === "recovered-public-status"
+  );
+  const unresolvedNYCArtCItems = nycArtCItems.filter(
+    ({ status }) => status === "unresolved-profile-count-slot"
+  );
+  const accountStatuses = recoveredNYCArtCItems.filter(
+    ({ relationship }) => relationship === "account-status"
+  );
+  const reposts = recoveredNYCArtCItems.filter(
+    ({ relationship }) => relationship === "repost"
+  );
+  const dispositionIds = new Set(
+    nycArtCItems.map(({ dispositionId }) => dispositionId)
+  );
+  const recoveredStatusIds = new Set(
+    recoveredNYCArtCItems.map(({ statusId }) => statusId)
+  );
+  const populationAudit = nycArtCFullPopulation.populationAudit ?? {};
+  const aggregateFindings = nycArtCFullPopulation.aggregateFindings ?? {};
+
+  if (
+    nycArtCFullPopulation.account !== "@NYCArtC" ||
+    populationAudit.profileCountObserved !== 5124 ||
+    nycArtCItems.length !== 5124 ||
+    dispositionIds.size !== 5124 ||
+    recoveredNYCArtCItems.length !== 3367 ||
+    recoveredStatusIds.size !== 3367 ||
+    unresolvedNYCArtCItems.length !== 1757 ||
+    accountStatuses.length !== 715 ||
+    reposts.length !== 2652 ||
+    recoveredNYCArtCItems.length + unresolvedNYCArtCItems.length !== 5124
+  ) {
+    nycArtCXArchivalProductionErrors.push(
+      "NYC Artist Coalition 5,124-slot population ledger no longer reconciles"
+    );
+  }
+  if (
+    aggregateFindings.outboundLinkOccurrences !== 1772 ||
+    aggregateFindings.uniqueOutboundUrls !== 1241
+  ) {
+    nycArtCXArchivalProductionErrors.push(
+      "NYC Artist Coalition posted-link inventory no longer reconciles"
+    );
+  }
+  if (
+    recoveredNYCArtCItems.some(
+      ({ statusId, statusUrl, publishedAt, contentDigestSha256 }) =>
+        !statusId || !statusUrl || !publishedAt || !contentDigestSha256
+    ) ||
+    unresolvedNYCArtCItems.some(
+      ({ statusId, statusUrl, publishedAt, relationship }) =>
+        statusId || statusUrl || publishedAt || relationship
+    )
+  ) {
+    nycArtCXArchivalProductionErrors.push(
+      "Recovered and unresolved NYC Artist Coalition ledger rows are not cleanly separated"
+    );
+  }
+
+  const inboundRecords = nycArtCInboundEngagement.records ?? [];
+  const explicitMentions = inboundRecords.filter(
+    ({ evidenceDisposition }) => evidenceDisposition === "explicit-account-mention"
+  );
+  const contextRecords = inboundRecords.filter(
+    ({ evidenceDisposition }) => evidenceDisposition === "search-or-thread-context"
+  );
+  const distinctInboundAccounts = new Set(
+    inboundRecords.map(({ authorHandle }) => authorHandle?.toLowerCase())
+  );
+  const stakeholderCount = (stakeholderGroup) =>
+    inboundRecords.filter((record) => record.stakeholderGroup === stakeholderGroup)
+      .length;
+  if (
+    inboundRecords.length !== 501 ||
+    explicitMentions.length !== 347 ||
+    contextRecords.length !== 154 ||
+    distinctInboundAccounts.size !== 178 ||
+    stakeholderCount("nyc-council-member-account") !== 24 ||
+    stakeholderCount("nyc-city-agency-account") !== 16 ||
+    stakeholderCount("coalition-civic-or-cultural-partner") !== 235
+  ) {
+    nycArtCXArchivalProductionErrors.push(
+      "NYC Artist Coalition inbound stakeholder ledger no longer reconciles"
+    );
+  }
+
+  const publicLedgerKeys = new Set();
+  const publicLedgerStack = [nycArtCFullPopulation, nycArtCInboundEngagement];
+  while (publicLedgerStack.length) {
+    const value = publicLedgerStack.pop();
+    if (!value || typeof value !== "object") continue;
+    if (Array.isArray(value)) {
+      publicLedgerStack.push(...value);
+      continue;
+    }
+    for (const [key, child] of Object.entries(value)) {
+      publicLedgerKeys.add(key.toLowerCase());
+      publicLedgerStack.push(child);
+    }
+  }
+  for (const forbiddenKey of [
+    "text",
+    "rawtext",
+    "phonenumber",
+    "email",
+    "cookies",
+    "credentials",
+    "session",
+    "privatemessages"
+  ]) {
+    if (publicLedgerKeys.has(forbiddenKey)) {
+      nycArtCXArchivalProductionErrors.push(
+        `NYC Artist Coalition public ledger contains forbidden raw field: ${forbiddenKey}`
+      );
+    }
+  }
+  const serializedNYCArtCLedgers = JSON.stringify([
+    nycArtCFullPopulation,
+    nycArtCInboundEngagement
+  ]).toLowerCase();
+  for (const marker of blockedPublicRepoMarkers) {
+    if (serializedNYCArtCLedgers.includes(marker.toLowerCase())) {
+      nycArtCXArchivalProductionErrors.push(
+        `NYC Artist Coalition public ledger contains blocked public-repo marker: ${marker}`
+      );
+    }
+  }
+
+  const fullPopulationClaim = claimById.get(
+    "CLM-NYCARTC-FULL-PROFILE-DISPOSITION"
+  );
+  const fullPopulationBoundary = JSON.stringify([
+    fullPopulationClaim?.boundaries,
+    fullPopulationClaim?.antiClaims,
+    sourceById.get("SRC-X-NYCARTC-FULL-POPULATION-LEDGER-2026")
+      ?.doesNotEstablish
+  ]).toLowerCase();
+  for (const boundary of [
+    "not 100 percent item-level",
+    "first-party",
+    "deletion history",
+    "jamie authored every"
+  ]) {
+    if (!fullPopulationBoundary.includes(boundary)) {
+      nycArtCXArchivalProductionErrors.push(
+        `NYC Artist Coalition population claim is missing the ${boundary} boundary`
+      );
+    }
+  }
+
   errors.push(
     ...coverageErrors,
     ...researchErrors,
@@ -1661,7 +1907,8 @@ export function validateKnowledgeIntake() {
     ...kcTownHallErrors,
     ...archiveProductionErrors,
     ...sharedDriveProductionErrors,
-    ...socialMediaProductionErrors
+    ...socialMediaProductionErrors,
+    ...nycArtCXArchivalProductionErrors
   );
   return {
     errors,
@@ -1710,6 +1957,11 @@ export function validateKnowledgeIntake() {
         passed: socialMediaProductionErrors.length === 0,
         errors: socialMediaProductionErrors,
         evidence: "Four project accounts reconcile dated profile controls to recovered and unresolved slots. WOW List preserves its public-safe 38-record corpus and KC Town Hall preserves a public-safe 183-record corpus, all 31 distinct posted URLs, nine curated source leads, five separated conversation contexts, three direct Council-member responses, one external program corroborator, and dated engagement context; selected projections retain collective-authorship, stewardship, reach, endorsement, causality, and privacy boundaries."
+      },
+      nycArtCXArchivalProduction: {
+        passed: nycArtCXArchivalProductionErrors.length === 0,
+        errors: nycArtCXArchivalProductionErrors,
+        evidence: "The @NYCArtC archival production preserves all 5,124 dated profile-count slots as 3,367 item-level recoveries plus 1,757 explicit unresolved slots; recomputes 715 account statuses, 2,652 reposts, 1,772 posted-link occurrences, 1,241 unique URLs, and a 501-record inbound stakeholder floor; links eight close-read mission sources; keeps all new projections held; and excludes raw text, private account data, and local paths."
       }
     }
   };

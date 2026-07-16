@@ -909,11 +909,31 @@ export const socialAccountRecords20260714 = [
     recoveredItems: 3367,
     unresolvedItems: 1757,
     recoveryStatus: "partial-with-all-slots-dispositioned",
-    sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", ...nycArtCCouncilSourceIds],
-    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS", "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY", "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT"],
-    inquiryIds: ["INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026"],
+    sourceIds: [
+      "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+      "SRC-X-NYCARTC-FULL-POPULATION-LEDGER-2026",
+      "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-LEDGER-2026",
+      ...nycArtCCouncilSourceIds
+    ],
+    claimIds: [
+      "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+      "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
+      "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
+      "CLM-NYCARTC-FULL-PROFILE-DISPOSITION",
+      "CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY",
+      "CLM-NYCARTC-STAKEHOLDER-EXCHANGE-FLOOR"
+    ],
+    inquiryIds: [
+      "INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+      "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
+      "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026",
+      "INQ-NYCARTC-OWNER-ARCHIVE-2026"
+    ],
     authorshipBoundary: "Jamie confirms establishing the account; teammates, including Olympia Kazi, used and stewarded the shared identity, so post-level authorship remains collective or unattributed without separate evidence.",
-    limitations: ["1,757 historical profile-count slots remain unresolved.", "The 24 Council-member interaction records are a recovery floor, not an endorsement or complete census."]
+    limitations: [
+      "1,757 historical profile-count slots remain unresolved; full slot disposition is not full item-level recovery.",
+      "The 24 Council-member interaction records are a recovery floor, not an endorsement or complete census."
+    ]
   },
   {
     id: "SOCIAL-WOWLIST-X",

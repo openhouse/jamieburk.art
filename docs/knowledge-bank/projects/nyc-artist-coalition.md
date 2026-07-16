@@ -103,3 +103,10 @@ The same pass added a Made in NY Nightlife Town Hall post, a Document Journal
 profile, and the public Nightlife Advisory Board report as source or research
 records. See
 [the social-media archive-production note](../research/2026-07-14-project-social-media-archive-production.md).
+
+The follow-on [full-population X production](../research/2026-07-15-nycartc-x-full-population.md)
+adds a 5,124-row disposition ledger, a 501-record bounded inbound ledger, eight
+close-read mission-relevant articles, and separate claims for population
+provenance, source routing, and stakeholder exchange. It preserves the 1,757
+unresolved slots instead of calling them recovered and holds all new website
+projections pending editorial selection.
