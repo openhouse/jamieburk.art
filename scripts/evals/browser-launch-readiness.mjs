@@ -14,6 +14,7 @@ const valueFor = (flag, fallback) => {
 const baseUrl = valueFor("--url", "http://127.0.0.1:3000").replace(/\/$/, "");
 const profile = valueFor("--profile", "local");
 const outputPath = valueFor("--output", "reports/generated/launch-browser.json");
+const browserChannel = valueFor("--browser-channel", process.env.PLAYWRIGHT_BROWSER_CHANNEL);
 
 if (!["local", "staging", "production"].includes(profile)) {
   console.error("--profile must be local, staging, or production");
@@ -21,7 +22,10 @@ if (!["local", "staging", "production"].includes(profile)) {
 }
 
 const suite = loadSuite();
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({
+  headless: true,
+  ...(browserChannel ? { channel: browserChannel } : {})
+});
 const context = await browser.newContext();
 const page = await context.newPage();
 const failures = [];
@@ -174,6 +178,7 @@ const report = {
   suiteVersion: suite.version,
   baseUrl,
   profile,
+  browserChannel: browserChannel ?? "bundled-chromium",
   summary: {
     hardGateFailures: failures.length,
     routes: suite.routes.length,

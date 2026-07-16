@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "candidateFingerprint": "e6e45186dbedf373517c7b458e4167d033f6261e7bcba52b5295b9945686d5af",
+  "candidateFingerprint": "764e0ae31967bf0d65cc2d890afaaa5d57510ff2a7dbb01a83db95b8336c663a",
   "inputs": {
     "corpusFingerprint": "4697e185b6636cc3284f53d8697d4f6f33fe84e75805d194c46598b6d71979bd",
     "bankFingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
@@ -8,7 +8,7 @@
     "integrationFingerprint": "9cd4f3bae826dec0c57b1545536a09544e9c12bff577eec7117773f76827ec77",
     "sourceKnowledgeFingerprint": "e758fdf383288ad9a18e4e14d5f8a227f1ef1f4618ff38635dde59bb7aa18e65",
     "stakeholderCreditFingerprint": "a8ede705241b376757d6bca5b6d82a3ef77f8989dc4899e2bd912622fa09d1e9",
-    "implementationFingerprint": "d7c6d38b48c69f345742d03c5c427b12e2b0a0d74d13545e622204ea8f9d943e"
+    "implementationFingerprint": "7fb20857e086139f15bc777219ee228a90aa6fe20845298f460c114bab77118e"
   },
   "metrics": {
     "pages": 25,
