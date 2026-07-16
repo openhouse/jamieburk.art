@@ -103,14 +103,14 @@ export const wowListFullPopulationSourceRecords20260715 = [
     canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/wowlist.md",
     preferredPublicUrl: "canonical",
     publicCitation: "Jamie Burkart portfolio knowledge bank, public-safe WOW List aggregate historical summary, reviewed July 15, 2026.",
-    publicNote: "The summary preserves approved aggregate historical figures while excluding private user, organizer, and geolocation records.",
+    publicNote: "The summary is a redacted public projection of reproducible protected database analysis while excluding private user, organizer, event, and geolocation records.",
     supportsGenerally: [
       "more than 1,800 historical users",
       "more than 16,000 historical posts and events",
       "activity across roughly 35 city ecosystems"
     ],
     doesNotEstablish: [
-      "an independent audit of the aggregates",
+      "an audit independent of Jamie's archive and this archival-production review",
       "current platform activity",
       "official chapters in 35 cities",
       "individual user or organizer records"
@@ -580,7 +580,7 @@ export const wowListFullPopulationClaimRecords20260715 = [
   {
     id: "CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT",
     project: "wowlist",
-    internalClaim: "Approved aggregate historical records report more than 1,800 users, more than 16,000 posts and events, and activity across roughly 35 city ecosystems.",
+    internalClaim: "A reproducible July 2017 production database snapshot contains 1,846 user rows and 16,142 post and event rows; a geographic aggregate yields 35 city-region pairs with at least 50 geocoded posts.",
     status: "confirmed-with-boundary",
     projections: [{
       key: "case-study",
@@ -589,19 +589,29 @@ export const wowListFullPopulationClaimRecords20260715 = [
       citationRequired: true,
       surfaces: ["/work/wowlist"]
     }],
-    evidence: [{
-      sourceId: "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
-      relationship: "direct-support",
-      supports: ["the three reported aggregate historical scale fields"],
-      locator: "WOW List project record, aggregate historical summary",
-      confidence: "moderate",
-      renderCitation: true
-    }],
-    boundaries: ["The aggregate summary is approved and public-safe but is not an independent audit; city ecosystems are not official chapters or a current-activity measure."],
+    evidence: [
+      {
+        sourceId: "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
+        relationship: "direct-support",
+        supports: ["the rounded public historical scale fields"],
+        locator: "WOW List project record, public-safe aggregate summary",
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-WOWLIST-PRODUCTION-DB-SNAPSHOT-2017-07-22",
+        relationship: "private-support",
+        supports: ["the exact dated row counts and geographic threshold behind the rounded projection"],
+        locator: "table data sections and aggregate city-region join",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: ["The public summary is a redacted projection of reproducible protected analysis, not an audit independent of Jamie's archive; database rows are not active people or verified attendance, and city ecosystems are not official chapters or a current-activity measure."],
     antiClaims: ["An independent audit verified every aggregate", "WOW List had official chapters in 35 cities", "The figures describe current activity"],
     researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
     reviewedAt,
-    reviewedBy: ["Jamie Burkart", "Codex evidence-boundary review"]
+    reviewedBy: ["Jamie Burkart", "Codex reproducible database review"]
   },
   {
     id: "CLM-WOWLIST-SOURCE-CURATION-PRACTICE",

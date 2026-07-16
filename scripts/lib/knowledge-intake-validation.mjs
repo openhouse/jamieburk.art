@@ -91,7 +91,11 @@ export const requiredSeedIntakeIds = [
   "INTAKE-ANH-NERMAN-CONTEXT-2026",
   "INTAKE-WOWLIST-FULL-POPULATION-2026",
   "INTAKE-KCTOWNHALL-FULL-POPULATION-2026",
-  "INTAKE-NYCARTC-X-FULL-POPULATION-2026"
+  "INTAKE-NYCARTC-X-FULL-POPULATION-2026",
+  "INTAKE-WOWLIST-DB-SNAPSHOT-2026",
+  "INTAKE-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2026",
+  "INTAKE-CALLSCRIPT-PAGE-2026",
+  "INTAKE-CALLSCRIPT-DCA-EVENT-DISCUSSION-2026"
 ];
 
 export const requiredResearchSourceIds = [
@@ -315,6 +319,36 @@ export const requiredUrbanhermitInquiryIds = [
   "INQ-URBANHERM-X-POSTED-SOURCE-MATURATION-2026"
 ];
 
+export const requiredParticipationLineageSourceIds = [
+  "SRC-WOWLIST-PRODUCTION-DB-SNAPSHOT-2017-07-22",
+  "SRC-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2012-2021",
+  "SRC-FACEBOOK-CALLSCRIPT-PAGE-2026",
+  "SRC-FACEBOOK-CALLSCRIPT-DCA-EVENT-DISCUSSION-2017",
+  "SRC-FACEBOOK-NYCAC-FIRST-GENERAL-MEETING-2017"
+];
+
+export const requiredParticipationLineageClaimIds = [
+  "CLM-WOWLIST-DB-SCALE-SNAPSHOT-2017",
+  "CLM-SUNDAY-DINNER-HISTORICAL-OPERATIONS-2012-2021",
+  "CLM-CALLSCRIPT-POPULAR-VOTE-LINK",
+  "CLM-CALLSCRIPT-DCA-UNITED-VOICE-FOLLOWUP-2017",
+  "CLM-NYCAC-PARTICIPANT-AGENDA-POLL-2017",
+  "CLM-NYCAC-FIRST-GENERAL-MEETING-FORMATION-2017",
+  "CLM-CALLSCRIPT-NYCAC-ORGANIZING-SEQUENCE-2017"
+];
+
+export const requiredParticipationLineageIntakeIds = [
+  "INTAKE-WOWLIST-DB-SNAPSHOT-2026",
+  "INTAKE-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2026",
+  "INTAKE-CALLSCRIPT-PAGE-2026",
+  "INTAKE-CALLSCRIPT-DCA-EVENT-DISCUSSION-2026"
+];
+
+export const requiredParticipationLineageInquiryIds = [
+  "INQ-PARTICIPATION-LINEAGE-ARCHIVE-PASS-2026",
+  "INQ-CALLSCRIPT-NYCAC-JAMIE-ROLE-ATTRIBUTION-2026"
+];
+
 const blockedPublicRepoMarkers = [
   "/Users/",
   "/Volumes/",
@@ -352,6 +386,7 @@ export function validateKnowledgeIntake() {
   const socialMediaProductionErrors = [];
   const nycArtCXArchivalProductionErrors = [];
   const urbanhermitProductionErrors = [];
+  const participationLineageErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -563,6 +598,207 @@ export function validateKnowledgeIntake() {
     !followupText.includes("no new aggregate portfolio metric")
   ) {
     archiveProductionErrors.push("The iCloud follow-up inquiry must preserve three-collection coverage, materialization limits, and unresolved aggregate metrics");
+  }
+
+  for (const id of requiredParticipationLineageIntakeIds) {
+    if (!intakeIdSet.has(id)) {
+      participationLineageErrors.push(`Missing participation-lineage intake: ${id}`);
+    }
+  }
+  for (const id of requiredParticipationLineageSourceIds) {
+    const source = sourceById.get(id);
+    if (!source) {
+      participationLineageErrors.push(`Missing participation-lineage source: ${id}`);
+      continue;
+    }
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      participationLineageErrors.push(`${id} needs support and does-not-establish boundaries`);
+    }
+    const linkedIntake = knowledgeBank.intakes.some((intake) => intake.sourceIds.includes(id));
+    const linkedClaim = knowledgeBank.claims.some((claim) =>
+      claim.evidence.some((evidence) => evidence.sourceId === id)
+    );
+    const linkedInquiry = knowledgeBank.researchInquiries.some((inquiry) =>
+      inquiry.sourceIds.includes(id)
+    );
+    if (!linkedIntake || (!linkedClaim && !linkedInquiry)) {
+      participationLineageErrors.push(`${id} needs intake and claim or inquiry edges`);
+    }
+  }
+  for (const id of requiredParticipationLineageClaimIds) {
+    const claim = claimById.get(id);
+    if (!claim) {
+      participationLineageErrors.push(`Missing participation-lineage claim: ${id}`);
+      continue;
+    }
+    if (claim.projections.some((projection) => projection.status === "active")) {
+      participationLineageErrors.push(`${id} must remain held during this archival-production pass`);
+    }
+  }
+  for (const id of requiredParticipationLineageInquiryIds) {
+    if (!inquiryById.has(id)) {
+      participationLineageErrors.push(`Missing participation-lineage inquiry: ${id}`);
+    }
+  }
+
+  const wowSnapshotSource = sourceById.get(
+    "SRC-WOWLIST-PRODUCTION-DB-SNAPSHOT-2017-07-22"
+  );
+  const sundayWorkbookSource = sourceById.get(
+    "SRC-SUNDAY-DINNER-ATTENDANCE-WORKBOOK-2012-2021"
+  );
+  for (const source of [wowSnapshotSource, sundayWorkbookSource]) {
+    if (
+      !source ||
+      source.visibility !== "protected" ||
+      source.preservationStatus !== "private" ||
+      !source.protectedLocatorId ||
+      !source.captureFingerprint ||
+      source.canonicalUrl ||
+      source.archiveUrl ||
+      source.assetUrl
+    ) {
+      participationLineageErrors.push(
+        "Database and attendance-workbook sources must remain fingerprinted, protected, and non-linkable"
+      );
+      break;
+    }
+  }
+  if (
+    wowSnapshotSource?.captureFingerprint !==
+    "sha256:6987cc78a4b307487150642f17be66e7779999d308a2080abe5fedf9a7122695"
+  ) {
+    participationLineageErrors.push("WOW List snapshot fingerprint must match the analyzed protected artifact");
+  }
+  if (
+    sundayWorkbookSource?.captureFingerprint !==
+    "sha256:8d04b588d731191f82e08430c4f314d3cb8ae2985714bef4c3b16cbd7c4f13f7"
+  ) {
+    participationLineageErrors.push("Sunday Dinner workbook fingerprint must match the analyzed protected artifact");
+  }
+
+  const wowScaleClaim = claimById.get("CLM-WOWLIST-DB-SCALE-SNAPSHOT-2017");
+  const publicWowScaleClaim = claimById.get("CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT");
+  const wowScaleText = JSON.stringify([
+    wowSnapshotSource?.supportsGenerally,
+    wowScaleClaim,
+    publicWowScaleClaim
+  ]).toLowerCase();
+  for (const marker of ["1,846", "16,142", "35", "snapshot", "not current", "official chapters"]) {
+    if (!wowScaleText.includes(marker)) {
+      participationLineageErrors.push(`WOW List reproducible scale records are missing: ${marker}`);
+    }
+  }
+  const publicScalePrivateEvidence = publicWowScaleClaim?.evidence.find(
+    (evidence) => evidence.sourceId === wowSnapshotSource?.id
+  );
+  if (
+    publicScalePrivateEvidence?.relationship !== "private-support" ||
+    publicScalePrivateEvidence.renderCitation
+  ) {
+    participationLineageErrors.push(
+      "The public WOW List scale claim must use the protected snapshot only as non-rendered private support"
+    );
+  }
+
+  const sundayClaim = claimById.get(
+    "CLM-SUNDAY-DINNER-HISTORICAL-OPERATIONS-2012-2021"
+  );
+  const sundayBoundaryText = JSON.stringify([
+    sundayWorkbookSource?.supportsGenerally,
+    sundayWorkbookSource?.doesNotEstablish,
+    sundayClaim?.boundaries,
+    sundayClaim?.antiClaims
+  ]).toLowerCase();
+  for (const marker of [
+    "349 event columns",
+    "344 event columns",
+    "2,767",
+    "409 named rows",
+    "not an audited attendance census",
+    "not independently deduplicated",
+    "row-level"
+  ]) {
+    if (!sundayBoundaryText.includes(marker)) {
+      participationLineageErrors.push(`Sunday Dinner aggregate records are missing: ${marker}`);
+    }
+  }
+  const sundayEvidence = sundayClaim?.evidence.find(
+    (evidence) => evidence.sourceId === sundayWorkbookSource?.id
+  );
+  if (sundayEvidence?.relationship !== "private-support" || sundayEvidence.renderCitation) {
+    participationLineageErrors.push(
+      "The Sunday Dinner aggregate claim must remain non-rendered private support"
+    );
+  }
+
+  for (const id of [
+    "SRC-FACEBOOK-CALLSCRIPT-PAGE-2026",
+    "SRC-FACEBOOK-CALLSCRIPT-DCA-EVENT-DISCUSSION-2017",
+    "SRC-FACEBOOK-NYCAC-FIRST-GENERAL-MEETING-2017"
+  ]) {
+    const source = sourceById.get(id);
+    if (source?.visibility !== "public" || !source.canonicalUrl) {
+      participationLineageErrors.push(`${id} must remain a public, linkable source`);
+    }
+  }
+
+  const lineageClaim = claimById.get("CLM-CALLSCRIPT-NYCAC-ORGANIZING-SEQUENCE-2017");
+  const lineageBoundaryText = JSON.stringify([
+    lineageClaim,
+    sourceById.get("SRC-FACEBOOK-CALLSCRIPT-PAGE-2026")?.doesNotEstablish,
+    sourceById.get("SRC-FACEBOOK-CALLSCRIPT-DCA-EVENT-DISCUSSION-2017")?.doesNotEstablish,
+    sourceById.get("SRC-FACEBOOK-NYCAC-FIRST-GENERAL-MEETING-2017")?.doesNotEstablish
+  ]).toLowerCase();
+  if (lineageClaim?.status !== "inference" || (lineageClaim?.evidence.length ?? 0) < 3) {
+    participationLineageErrors.push(
+      "The Call Script to NYC Artist Coalition relationship must remain an evidence-linked inference"
+    );
+  }
+  for (const marker of [
+    "collective",
+    "not proof",
+    "individual authorship",
+    "sole founding",
+    "response labels",
+    "not attendance",
+    "policy causality"
+  ]) {
+    if (!lineageBoundaryText.includes(marker)) {
+      participationLineageErrors.push(`Participation-lineage boundaries are missing: ${marker}`);
+    }
+  }
+
+  const roleInquiry = inquiryById.get(
+    "INQ-CALLSCRIPT-NYCAC-JAMIE-ROLE-ATTRIBUTION-2026"
+  );
+  const roleInquiryText = JSON.stringify(roleInquiry ?? {}).toLowerCase();
+  if (
+    roleInquiry?.resultStatus !== "inconclusive" ||
+    !roleInquiryText.includes("collaborator") ||
+    !roleInquiryText.includes("first-person memory") ||
+    !roleInquiryText.includes("not independent corroboration")
+  ) {
+    participationLineageErrors.push(
+      "Jamie's Call Script and early coalition role must remain an inconclusive, collaborator-review inquiry"
+    );
+  }
+
+  const participationLineageRecords = [
+    ...requiredParticipationLineageIntakeIds.map((id) =>
+      knowledgeBank.intakes.find((record) => record.id === id)
+    ),
+    ...requiredParticipationLineageSourceIds.map((id) => sourceById.get(id)),
+    ...requiredParticipationLineageClaimIds.map((id) => claimById.get(id)),
+    ...requiredParticipationLineageInquiryIds.map((id) => inquiryById.get(id))
+  ].filter(Boolean);
+  const serializedParticipationLineage = JSON.stringify(participationLineageRecords);
+  for (const marker of blockedPublicRepoMarkers) {
+    if (serializedParticipationLineage.toLowerCase().includes(marker.toLowerCase())) {
+      participationLineageErrors.push(
+        `Participation-lineage records contain blocked public-repo marker: ${marker}`
+      );
+    }
   }
 
   for (const id of requiredSharedDriveIntakeIds) {
@@ -2364,7 +2600,8 @@ export function validateKnowledgeIntake() {
     ...sharedDriveProductionErrors,
     ...socialMediaProductionErrors,
     ...nycArtCXArchivalProductionErrors,
-    ...urbanhermitProductionErrors
+    ...urbanhermitProductionErrors,
+    ...participationLineageErrors
   );
   return {
     errors,
@@ -2423,6 +2660,11 @@ export function validateKnowledgeIntake() {
         passed: urbanhermitProductionErrors.length === 0,
         errors: urbanhermitProductionErrors,
         evidence: "Three independent authenticated passes reconcile all 434 live-profile records; the public repo keeps only aggregates, digests, and selected role-bearing sources; 321 posted URLs remain dispositioned as a protected research queue; 15 mission-relevant third-party records from nine accounts and two conversation contexts retain bounded stakeholder meaning; all eight new claims remain held; and the all-ever owner-archive question stays open."
+      },
+      participationLineage: {
+        passed: participationLineageErrors.length === 0,
+        errors: participationLineageErrors,
+        evidence: `${requiredParticipationLineageSourceIds.length} sources, ${requiredParticipationLineageClaimIds.length} claims, ${requiredParticipationLineageInquiryIds.length} inquiries, and ${requiredParticipationLineageIntakeIds.length} intakes preserve reproducible WOW List scale, protected Sunday Dinner continuity aggregates, and the held Call Script-to-NYC Artist Coalition participatory formation sequence.`
       }
     }
   };

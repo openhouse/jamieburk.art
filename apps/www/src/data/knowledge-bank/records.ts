@@ -115,6 +115,12 @@ import {
   jamiePersonalFacebookPostResearchInquiries20260716,
   jamiePersonalFacebookPostSourceRecords20260716
 } from "./jamie-personal-facebook-posts-2026-07-16.ts";
+import {
+  participationLineageClaimRecords20260716,
+  participationLineageIntakeRecords20260716,
+  participationLineageResearchInquiries20260716,
+  participationLineageSourceRecords20260716
+} from "./wowlist-sunday-dinner-callscript-2026-07-16.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -136,7 +142,8 @@ const knowledgeBankInput = {
     ...facebookEventArchiveIntakeRecords20260716,
     ...wowListFacebookPostIntakeRecords20260716,
     ...nycacFacebookPostIntakeRecords20260716,
-    ...jamiePersonalFacebookPostIntakeRecords20260716
+    ...jamiePersonalFacebookPostIntakeRecords20260716,
+    ...participationLineageIntakeRecords20260716
   ],
   sources: [
     {
@@ -279,7 +286,8 @@ const knowledgeBankInput = {
     ...facebookEventArchiveSourceRecords20260716,
     ...wowListFacebookPostSourceRecords20260716,
     ...nycacFacebookPostSourceRecords20260716,
-    ...jamiePersonalFacebookPostSourceRecords20260716
+    ...jamiePersonalFacebookPostSourceRecords20260716,
+    ...participationLineageSourceRecords20260716
   ],
   claims: [
     {
@@ -386,7 +394,8 @@ const knowledgeBankInput = {
     ...facebookEventArchiveClaimRecords20260716,
     ...wowListFacebookPostClaimRecords20260716,
     ...nycacFacebookPostClaimRecords20260716,
-    ...jamiePersonalFacebookPostClaimRecords20260716
+    ...jamiePersonalFacebookPostClaimRecords20260716,
+    ...participationLineageClaimRecords20260716
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -418,7 +427,8 @@ const knowledgeBankInput = {
     ...facebookEventArchiveResearchInquiries20260716,
     ...wowListFacebookPostResearchInquiries20260716,
     ...nycacFacebookPostResearchInquiries20260716,
-    ...jamiePersonalFacebookPostResearchInquiries20260716
+    ...jamiePersonalFacebookPostResearchInquiries20260716,
+    ...participationLineageResearchInquiries20260716
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },

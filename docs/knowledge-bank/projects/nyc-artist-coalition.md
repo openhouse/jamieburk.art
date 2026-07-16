@@ -130,3 +130,27 @@ endorsement, mandate, or impact.
 
 See the [full public-safe event archival-production note](nyc-artist-coalition-facebook-events.md)
 and [intake receipt](../runs/2026-07-15-nycac-facebook-events-full-population.md).
+
+## Call Script and participatory formation
+
+Public records now preserve a more specific early sequence. The current Call
+Script Page links to `popular.vote`, a recovered WOW List civic event-sharing
+surface. After the January 27, 2017, Department of Cultural Affairs gathering,
+a Call Script discussion post proposed organizing a united voice and a group
+email. A January 31 NYC Artist Coalition poll invited participants to choose a
+follow-up date and later set its agenda. The February 6 general-meeting
+description invited people to create a coalition, direct its work, build a
+network of mutual support and advocacy, and develop cultural-plan
+recommendations together.
+
+This is strong evidence of participatory organizational formation and a
+continuity of project practices. It is not proof that WOW List or Call Script
+alone caused the coalition, that Jamie authored every project-account post, or
+that Jamie was the sole founder or facilitator. Current Facebook host displays
+may reflect later edits, and platform response labels remain distinct from
+attendance, reach, endorsement, or impact.
+
+Jamie's more specific authorship, facilitation, and infrastructure role remains
+an open inquiry requiring dated role-bearing evidence or collaborator review
+before a stronger public projection is selected. See the
+[participation-lineage research note](../research/2026-07-16-wowlist-sunday-dinner-callscript-lineage.md).

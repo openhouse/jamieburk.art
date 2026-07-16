@@ -133,3 +133,11 @@ posts, native IDs, ordinary-life context, audience-unknown material, comments,
 responder identities, and authenticated routes remain outside the repository.
 Six individually public-audience-verified project traces and one close-read
 article entered the bank; no website copy was automatically selected.
+
+See the
+[WOW List, Sunday Dinner, and Call Script archival-production pass](research/2026-07-16-wowlist-sunday-dinner-callscript-lineage.md)
+for protected reproducible database and workbook aggregates, a public
+Call Script-to-`popular.vote` edge, and the held participatory sequence into
+early NYC Artist Coalition organizing. The underlying community records,
+row-level data, individual post authorship, and personal-role attribution
+remain protected or explicitly open.

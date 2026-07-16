@@ -117,3 +117,28 @@ entire census. See
 [the Facebook post research note](../research/2026-07-16-wowlist-facebook-posts-full-population.md)
 for the population fingerprint, safe source inventory, limitations, and intake
 dispositions.
+
+## Production database snapshot
+
+A protected July 2017 production database snapshot now independently
+reproduces the rounded public scale sentence: 1,846 user rows, 16,142 post and
+event rows, and 35 city-region pairs with at least 50 geocoded posts. The
+public aggregate is therefore a redacted projection of reproducible protected
+analysis, while still not being an audit independent of Jamie's archive.
+
+Database rows are not current active people, verified attendance, adoption,
+reach, or impact. The geographic threshold documents activity rather than
+official chapters. No user, event, organizer, geolocation, authentication, or
+contact records entered the repository.
+
+The same pass documents a held project lineage: the current Call Script Page
+links to `popular.vote`, whose December 2016 archive identifies it as a WOW
+List civic event-sharing surface. Public January-February 2017 records then
+show Call Script and NYC Artist Coalition project accounts using collective
+voice, date selection, participant agenda-setting, and coalition-formation
+language. This sequence does not establish Jamie's authorship of every post or
+sole causality for the coalition's formation.
+
+See the
+[participation-lineage research note](../research/2026-07-16-wowlist-sunday-dinner-callscript-lineage.md)
+for methods, aggregate controls, atomic claims, and open role attribution.

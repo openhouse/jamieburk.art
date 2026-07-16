@@ -439,7 +439,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "WOWList recorded activity across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, a public-safe aggregate summary, and a protected reproducible July 2017 production-database snapshot.",
     guardrail:
       "Keep documented organizer use separate from aggregate geographic activity, and do not describe city activity as official chapters.",
     doNotSay: [
@@ -457,7 +458,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -474,14 +475,16 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. Protected primary records directly document a residency acceptance and access workflow and a recurring invitation, response, attendance-signal, and follow-up system.",
     sourceBasis:
-      "Approved resume language, Jamie review confirmation, the public Sunday Dinner RSVP page, a July 2023 residency onboarding letter, and a 2025-2026 invitation and continuity workbook.",
+      "Approved resume language, Jamie review confirmation, the public Sunday Dinner RSVP page, a protected 2012-2021 historical operations workbook, a July 2023 residency onboarding letter, and a 2025-2026 invitation and continuity workbook.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only. Treat the historical workbook as protected operational evidence, not an audited attendance census, and keep the 20+ resident-artist aggregate separate from the newly supported 300+ gathering record.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
-      "Attendance database",
-      "Independent verification of the 300+ gathering or 20+ resident-artist aggregate from the reviewed Shared Drive records"
+      "Public attendance database",
+      "409 workbook rows equal 409 unique people",
+      "2,767 affirmative marks equal unique attendees or audited physical attendance",
+      "Independent verification of the 20+ resident-artist aggregate"
     ],
     protectedBoundaries: [
       "Guest lists",
@@ -494,7 +497,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
