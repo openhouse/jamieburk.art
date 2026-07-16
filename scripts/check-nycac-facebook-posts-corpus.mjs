@@ -391,6 +391,9 @@ export function checkRepository() {
   const run = read(
     "docs/knowledge-bank/runs/2026-07-15-nycac-facebook-posts-full-population.md"
   );
+  const evalRun = read(
+    "docs/evals/runs/2026-07-16-nycac-facebook-posts-full-population.md"
+  );
   const dossier = read(
     "docs/knowledge-bank/projects/nyc-artist-coalition.md"
   );
@@ -427,6 +430,9 @@ export function checkRepository() {
     run.replace(/\s+/g, " "),
     /All three projections remain held from the website/
   );
+  assert.ok(evalRun.includes("Decision: `pass_human_review_pending`"));
+  assert.ok(evalRun.includes("4/4"));
+  assert.ok(evalRun.includes("no concrete defects"));
   assert.ok(dossier.includes("## Facebook Page operating record"));
 
   return { corpus, manifest, result };
