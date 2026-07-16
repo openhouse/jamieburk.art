@@ -1,0 +1,20 @@
+{
+  "commit": "7a496aad750b21752dd64972cd373368e4d11591",
+  "fingerprint": "sha256:b4a0fc775d1245897ee68c31ea8ffa93b6ca3fc6d083ec1b60a723e9301597dd",
+  "score": 63.75,
+  "scores": {
+    "capture_integrity": 0,
+    "source_decomposition": 3,
+    "claim_atomicity": 3,
+    "provenance_closure": 4,
+    "status_separation": 1,
+    "project_context": 1,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "observations": [
+    "The accepted PR head had a strong source, claim, inquiry, correction, and public citation system.",
+    "It had no intake objects for submitted fragments and no explicit project or entity records.",
+    "Knowledge maturity, publication safety, and editorial selection were not independent claim dimensions."
+  ]
+}

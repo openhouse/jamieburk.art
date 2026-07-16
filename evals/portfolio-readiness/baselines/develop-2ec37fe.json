@@ -1,0 +1,29 @@
+{
+  "id": "develop-2ec37fe-application-baseline",
+  "commit": "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  "fingerprint": "sha256:ef680f17bf4b484d295a92a226ef59e15f3890318fbf6fb07c6ca5c02a9a781f",
+  "profiles": [
+    "application_ready",
+    "production_ready"
+  ],
+  "evaluatedAt": "2026-07-12",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 2,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 2
+  },
+  "weightedScore": 84.5,
+  "passed": false,
+  "highestValueFailure": "reader_effort",
+  "evidence": [
+    "The resume page narrated the internal phone-in-PDF approval decision.",
+    "The HJE open field described screenshot approval as work required before launch."
+  ]
+}

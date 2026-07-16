@@ -1,0 +1,30 @@
+{
+  "id": "feature-evals-C-93c49ff8-chad-baseline",
+  "commit": "93c49ff8f943c7497dbf51c117b3403543ad2bf4",
+  "fingerprint": "sha256:c472c001210026abc05f1aac0c0ced64e4559677bb0597bfa80460b01142366f",
+  "profiles": [
+    "application_ready",
+    "production_ready"
+  ],
+  "evaluatedAt": "2026-07-13",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 2,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
+  "weightedScore": 83.5,
+  "passed": false,
+  "highestValueFailure": "chad_lens",
+  "evidence": [
+    "The homepage used an unexplained OTI acronym and described a role-fit proof surface instead of directly helping the reader understand the work.",
+    "Several case studies narrated hiring, claim-safety, or approval logic inside public copy rather than stating the work and boundary directly."
+  ]
+}

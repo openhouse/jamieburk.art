@@ -1,0 +1,99 @@
+{
+  "observedAt": "2026-07-14",
+  "privateArtifactId": "nycartc-facebook-public-post-census-2026-07-14",
+  "publicTimeline": {
+    "terminalTraversalPasses": 2,
+    "distinctScrollCadences": true,
+    "retainedUniquePosts": 444,
+    "exactIdentitySetMatchAcrossPasses": true,
+    "firstPassSortedIdSetSha256": "f1f00d902415ebad0aa37043d7f64070d754c17449c396ac61aa34dec7733955",
+    "secondPassSortedIdSetSha256": "f1f00d902415ebad0aa37043d7f64070d754c17449c396ac61aa34dec7733955",
+    "fingerprintPreimage": {
+      "input": "each retained records[].key exactly as captured",
+      "encoding": "UTF-8",
+      "normalization": "none",
+      "ordering": "ascending bytewise order under LC_ALL=C",
+      "delimiter": "LF",
+      "trailingDelimiter": true,
+      "duplicatePolicy": "one line for each of 444 unique retained keys",
+      "algorithm": "SHA-256"
+    },
+    "firstPassTerminalScrollsWithoutAddition": 42,
+    "secondPassTerminalScrollsWithoutAddition": 41,
+    "recoveredStart": "2017-01-29",
+    "recoveredEnd": "2021-09-15",
+    "nativeExport": false,
+    "deletionHistory": false,
+    "lifetimePopulationClaim": false
+  },
+  "forms": {
+    "eventRoute": 150,
+    "standalonePost": 138,
+    "originalMediaPost": 78,
+    "resharedStory": 52,
+    "sourceOrResourceRoute": 26,
+    "total": 444
+  },
+  "primaryThemes": {
+    "nightlifeEnforcementAndGovernance": 157,
+    "generalCoalitionCommunication": 95,
+    "commercialRentAndTenancy": 71,
+    "culturalSpaceCare": 47,
+    "publicMeetingsAndParticipation": 25,
+    "fundingAndOperationalResources": 21,
+    "eventAndCulturalDistribution": 15,
+    "pressAndPublicKnowledge": 11,
+    "equitySolidarityAndMutualAid": 2,
+    "total": 444
+  },
+  "multiLabelThemeOccurrences": {
+    "nightlifeEnforcementAndGovernance": 177,
+    "publicMeetingsAndParticipation": 121,
+    "culturalSpaceCare": 82,
+    "commercialRentAndTenancy": 71,
+    "eventAndCulturalDistribution": 63,
+    "fundingAndOperationalResources": 44,
+    "pressAndPublicKnowledge": 24,
+    "equitySolidarityAndMutualAid": 17
+  },
+  "stakeholderRouteOccurrences": {
+    "nycCouncilMembersAndCouncil": 88,
+    "nycCulturalAndNightlifeAgencies": 40,
+    "culturalAndAdvocacyPartners": 39,
+    "nycBusinessAndEnforcementAgencies": 13,
+    "pressAndPublicInformationOrganizations": 12,
+    "unit": "rule-matched record occurrences",
+    "verifiedInboundEngagement": false
+  },
+  "currentVisibleInteractionSnapshot": {
+    "recordsWithAtLeastOneSignal": 389,
+    "reactions": 2374,
+    "comments": 212,
+    "shares": 611,
+    "uniquePeople": false,
+    "historicalReach": false,
+    "attendance": false,
+    "endorsement": false,
+    "impact": false
+  },
+  "postedUrlInventory": {
+    "outboundLinkOccurrences": 64,
+    "uniqueUrls": 39,
+    "postedUrlIsAutomaticCorroboration": false,
+    "postedUrlProvesReadershipOrOutcome": false
+  },
+  "roleControls": {
+    "facebookCurrentlyListsPageAmongPagesJamieManages": true,
+    "currentTaskAccessObserved": true,
+    "historicHumanPublisherFieldObserved": false,
+    "jamieMemory": "predominant-but-shared-use",
+    "recordLevelHumanAttribution": false,
+    "soleAdministrationClaim": false
+  },
+  "followerDisplayBoundary": {
+    "publicPageRoundedDisplay": "1.5K",
+    "businessSuiteRoundedDisplay": "1.6K",
+    "exactCountClaim": false,
+    "reachOrImpactClaim": false
+  }
+}

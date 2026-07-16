@@ -17,7 +17,7 @@ const operationsMap = [
 
 const proofMap = [
   {
-    project: "HJE",
+    project: "Harry J. Epstein Company",
     proof:
       "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
   },
@@ -60,7 +60,7 @@ const proofMap = [
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
   description:
-    "Role-specific proof surface for technical operations, implementation, product operations, documentation systems, and durable handoffs.",
+    "How Jamie Burkart builds operating structure for technical operations, implementation, product operations, documentation, and durable handoffs.",
   path: "/work/technical-operations"
 });
 

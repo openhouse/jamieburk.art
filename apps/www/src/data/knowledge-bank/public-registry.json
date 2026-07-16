@@ -1,6 +1,184 @@
 {
   "sources": [
     {
+      "id": "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+      "title": "Awaiting the Night Mayor",
+      "organization": "The Village Voice",
+      "author": "Roshan Abraham",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-11-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.villagevoice.com/awaiting-the-night-mayor/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Roshan Abraham, 'Awaiting the Night Mayor,' The Village Voice, November 17, 2017.",
+      "publicNote": "Independent reporting described about one hundred people gathering at Market Hotel for the NYC Artist Coalition's Save NYC Spaces town hall with Council members and city-agency representatives.",
+      "locator": "Article headline, body, event description, and attributed reporting.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie's individual production tasks",
+        "Facebook response totals as attendance",
+        "sole coalition credit or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCARTC-EVENT-1833265643557435",
+      "title": "NYC Artist Coalition - March General Meeting",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-03-06",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/1833265643557435/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'NYC Artist Coalition - March General Meeting,' Facebook event for 2017-03-06.",
+      "publicNote": "The event archive records a recurring-meeting at The Floasis focused on safety-town-halls-and-survey-design.",
+      "locator": "substantive-current-body; Page relationship: direct-card-host; listed host: NYC Artist Coalition.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "physical attendance or unique people from Facebook response signals",
+        "Jamie's authorship or production of the individual event page",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCARTC-EVENT-790581997948463",
+      "title": "MARCH Raids in NYC - City Hall Hearing #TalksNotRaids",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/790581997948463/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'MARCH Raids in NYC - City Hall Hearing #TalksNotRaids,' Facebook event for 2019-02-11.",
+      "publicNote": "The event archive records a public-hearing at New York City Hall focused on Talks-Not-Raids.",
+      "locator": "substantive-current-body; Page relationship: direct-card-host; listed host: NYC Artist Coalition.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "physical attendance or unique people from Facebook response signals",
+        "Jamie's authorship or production of the individual event page",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+      "title": "Jamie Burkart approved public resume",
+      "organization": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart, approved public resume, KC Town Hall LLC experience entry, 2026.",
+      "publicNote": "In his approved public resume, Jamie describes serving as KC Town Hall co-founder and project manager and co-leading redevelopment planning and public-benefit documentation.",
+      "locator": "PDF p. 2, KC Town Hall LLC section.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "independent corroboration of Jamie's role description",
+        "City Council action or appropriation",
+        "an executed funding agreement",
+        "disbursement or receipt",
+        "construction or completion"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+      "title": "Central City Economic Development Sales Tax Board meeting packet",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Board meeting packet, 2019.",
+      "publicNote": "The packet names Jamie as the presenter for the KC Town Hall proposal and records all four participating Board members voting to recommend $490,539 to the City Council.",
+      "locator": "PDF pp. 6 and 13: June 12 presentation table and July 16 recommendation minutes.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "City Council action",
+        "a funding agreement",
+        "disbursement or receipt",
+        "sole ownership or sole authorship of the proposal",
+        "completed construction"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+      "title": "Kansas City Council meeting record, September 26, 2019",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/MeetingDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GID=821&LEGID=14410",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Council meeting record, September 26, 2019, files 190642 and 190649.",
+      "publicNote": "The record shows the Council passed Ordinance 190642 as substituted and adopted Resolution 190649 as substituted.",
+      "locator": "Meeting Items, files 190642 and 190649.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "an individual roll-call tally",
+        "execution of a funding agreement",
+        "disbursement or receipt",
+        "construction or completion",
+        "Jamie's role in the Council's decision"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+      "title": "Authenticated Committee Substitute for Ordinance 190642",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628353&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Committee Substitute for Ordinance 190642, passed September 26, 2019.",
+      "publicNote": "The authenticated ordinance appropriates Round Two CCED project funds and lists a $490,539 KC Town Hall award.",
+      "locator": "Authenticated ordinance pp. 1-2, Section 2 and KC Town Hall project line.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "execution of a funding agreement",
+        "disbursement or receipt",
+        "expenditure",
+        "construction or completion",
+        "individual causality for the Council action"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+      "title": "Authenticated Second Committee Substitute for Resolution 190649",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628240&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Second Committee Substitute for Resolution 190649, adopted September 26, 2019.",
+      "publicNote": "The resolution accepts the Board recommendation for up to $490,539 in eligible KC Town Hall costs and authorizes funding-agreement negotiations subject to specified uses and conditions.",
+      "locator": "Authenticated resolution pp. 1-2, title and Sections 1-3.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "an executed funding agreement",
+        "disbursement or receipt",
+        "eligibility of every element in the original proposal",
+        "construction or completion"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -45,25 +223,6 @@
       ]
     },
     {
-      "id": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-      "title": "New York City Council Hackathon promotional graphic",
-      "organization": "New York City Council / Civic Hall",
-      "kind": "promotional-graphic",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-11",
-      "assetUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
-      "preferredPublicUrl": "asset",
-      "publicCitation": "NYC Council-branded promotional graphic reading 'New York City Council Hackathon' and displaying labs.council.nyc.",
-      "publicNote": "The graphic supports the visible event branding, not a longer formal registration title.",
-      "doesNotEstablish": [
-        "a longer formal registration title",
-        "the agenda",
-        "breakout structure",
-        "participant roster"
-      ]
-    },
-    {
       "id": "SRC-CALLNYC-POLITICO-2016-03-14",
       "title": "Website provides new information about council members' focus",
       "organization": "Politico New York",
@@ -100,9 +259,543 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "Contemporaneous reporting identifies Jamie with NYC Artist Coalition and documents his fire-code study groups and public call for full Cabaret Law repeal.",
+      "locator": "Paragraphs identifying Jamie, the fire-code study groups, and his City Hall repeal position.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie as sole founder or leader of NYC Artist Coalition",
+        "Jamie's exact role in drafting legislation",
+        "sole causality for repeal",
+        "creation of the Office of Nightlife",
+        "the final enacted outcome"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+      "title": "With Its 'No Dancing' Law Verging On Repeal, New York Legitimizes Its Nightlife",
+      "organization": "NPR",
+      "author": "Jane Lerner",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-20",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife?renderPlatform=nprone_ios&unified=true",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jane Lerner, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' NPR, September 20, 2017.",
+      "publicNote": "Contemporaneous reporting describes collective Let NYC Dance mobilization, identifies Jamie as a founding coalition member using a name variant, and reports enactment of the Office of Nightlife legislation.",
+      "locator": "Paragraphs on Let NYC Dance, Jamie's coalition role, the Office of Nightlife, and his repeal position.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie as the coalition's sole founder",
+        "Jamie's exact causal contribution to creating the Office of Nightlife",
+        "Jamie as the author or sponsor of legislation",
+        "final Cabaret Law enactment after the article date",
+        "sole coalition causality for policy outcomes"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+      "title": "6 Things to Know About Making DIY Spaces Work",
+      "organization": "Bedford + Bowery",
+      "author": "Cassidy Dawn Graves",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-02-07",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cassidy Dawn Graves, '6 Things to Know About Making DIY Spaces Work,' Bedford + Bowery, February 7, 2017.",
+      "publicNote": "Contemporaneous reporting identifies Jamie as an NYC Artist Coalition organizer, describes a coalition-organized safety and policy meeting, and attributes to Jamie that more than 100 people had joined its mutual-aid network.",
+      "locator": "Paragraphs describing the Magick City meeting and Jamie's organizer attribution and mutual-aid signup statement, especially article lines 20-25.",
+      "doesNotEstablish": [
+        "an independently audited signup total",
+        "Jamie as sole organizer or sole founder",
+        "adoption of the proposals by the Department of Cultural Affairs",
+        "the complete coalition membership or organizer roster"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+      "title": "Let NYC Dance: The Battle to Save New York City's Nightlife",
+      "organization": "Mixmag",
+      "author": "Miranda Bryant",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-20",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://mixmag.net/feature/let-nyc-dance-the-battle-to-save-new-york-citys-nightlife",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Miranda Bryant, 'Let NYC Dance: The Battle to Save New York City's Nightlife,' Mixmag, September 20, 2017.",
+      "publicNote": "Reporting from the Cabaret Law hearing identifies Jamie as an NYC Artist Coalition member and documents his testimony about the law's use against community spaces.",
+      "locator": "Article paragraphs on the hearing and Jamie's testimony, especially lines 84-94.",
+      "doesNotEstablish": [
+        "Jamie as sole campaign leader",
+        "Jamie's authorship of repeal legislation",
+        "sole causality for repeal",
+        "the final enacted-law chronology"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
+      "title": "NYC Artist Coalition Letter on the Office of Nightlife",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-08",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://savenycspaces.nycartc.com/download/Night-Mayor-Letter-MOME-9-23-17.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, letter to the Mayor's Office of Media and Entertainment and Department of Cultural Affairs, September 8, 2017.",
+      "publicNote": "A coalition letter records a meeting with city cultural agencies, presents recommendations for the new Office of Nightlife, and invites officials to an October 11 Market Hotel town hall organized with sixteen named partner organizations and venues.",
+      "locator": "Pages 1-3, especially the addressees and purpose on page 1, recommendations on pages 2-3, and October 11 town-hall invitation and signatories on page 3.",
+      "doesNotEstablish": [
+        "Jamie's individual authorship of the letter",
+        "Jamie's exact production responsibilities",
+        "attendance or effects of the announced town hall",
+        "city adoption of every recommendation",
+        "sole coalition causality for creating the Office"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+      "title": "What Can the Night Mayor Do? The DIY Scene Discusses",
+      "organization": "Bedford + Bowery",
+      "author": "Cassidy Dawn Graves",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-12",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
+      "publicNote": "Contemporaneous reporting confirms the coalition's October 11 Market Hotel town hall, identifies Jamie among NYC Artist Coalition participants, and documents participation by cultural organizations, three Council members, and city cultural officials.",
+      "locator": "Opening account of the town hall and participant description, especially article lines 23-30.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "a reliable numeric attendance count",
+        "Jamie's exact production responsibilities",
+        "Jamie as sole organizer",
+        "direct policy effects attributable to the town hall"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+      "title": "Committee on Small Business Hearing Transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-10-22",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on Small Business hearing transcript, October 22, 2018, pp. 346-348.",
+      "publicNote": "The official transcript identifies Jamie as an NYC Artist Coalition member and records his testimony connecting cultural-space safety and survival to commercial affordability while supporting Intro 737.",
+      "locator": "Transcript pages 346-348, Jamie Burkart testimony, especially PDF text lines 16640-16730.",
+      "doesNotEstablish": [
+        "legislative passage of Intro 737",
+        "Jamie's authorship of the bill",
+        "Jamie's sole leadership of commercial-affordability advocacy",
+        "the accuracy of every proper name marked uncertain by the transcription service"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+      "title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+      "organization": "Talks Not Raids coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://talksnotraids.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Talks Not Raids coalition, 'Transparency on M.A.R.C.H. Raids in NYC,' public campaign site.",
+      "publicNote": "The campaign surface explains its M.A.R.C.H. transparency position, links Intro 1156, tracks fifteen named Council supporters at the captured state, supplies a call script, credits a multi-organization coalition, and provides press and media assets.",
+      "locator": "Campaign sections 'NYC's M.A.R.C.H. Raids,' 'Progress,' Council supporter tracker, coalition credits, press links, and media kit, especially page lines 46-175.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie's individual authorship or implementation role",
+        "independent verification of the campaign's reported M.A.R.C.H. action count",
+        "sole campaign causality for legislative enactment",
+        "that M.A.R.C.H. was disbanded",
+        "the final number of Council sponsors"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220",
+      "title": "Introduction 1156-2018 / Local Law 220 of 2019",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-12-15",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Introduction 1156-2018, enacted as Local Law 220 of 2019.",
+      "publicNote": "The official legislative record shows nineteen Council sponsors and enactment of M.A.R.C.H. reporting, specified advance-notice, and nightlife-establishment inspection-reporting requirements as Local Law 220 of 2019.",
+      "locator": "Legislation details, enactment status and date, sponsors, summary, history, and enacted text, especially page lines 31-43 and 60-107.",
+      "doesNotEstablish": [
+        "Jamie's individual role",
+        "NYC Artist Coalition's exact causal contribution",
+        "sole causality by Talks Not Raids",
+        "disbandment of M.A.R.C.H.",
+        "perfect compliance with or later effects of the law"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+      "title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures",
+      "organization": "Save NYC Spaces coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://savenycspaces.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Save NYC Spaces coalition, 'New Nightlife Mayor Must Assist Diverse Cultures,' public campaign site.",
+      "publicNote": "The public campaign surface credits NYC Artist Coalition and partner organizations, attributes a statement about grassroots cultural spaces to Jamie, presents Office of Nightlife priorities, and supplies press links and downloadable media assets.",
+      "locator": "Campaign priorities, Jamie attribution, coalition list, press links, and media kit, especially page lines 38-52, 169-183, and 238-299.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie's authorship or implementation of the campaign surface",
+        "Jamie's exact role in organizing every listed partner",
+        "independent verification of every campaign assertion",
+        "sole coalition causality for Office of Nightlife policy"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+      "title": "Let NYC Dance: Movement to Repeal the Cabaret Law",
+      "organization": "Let NYC Dance coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://letnycdance.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Let NYC Dance coalition, public campaign site and Press section.",
+      "publicNote": "The live campaign site documents the repeal call, Council-support interface, coalition credits, media kit, and a Press section containing twenty-one article placements.",
+      "locator": "Campaign call to action, progress tracker, coalition credits, media kit, and Press section headed 'Press'.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie's sole ownership of the campaign or every editorial decision.",
+        "That every listed article names Jamie or endorses every campaign claim.",
+        "Audience reach or causal allocation for Cabaret Law repeal."
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
+      "title": "Fair Rent NYC archived campaign site",
+      "organization": "Fair Rent NYC coalition",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "capturedAt": "2021-12-01T10:44:25Z",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://fairrentnyc.nycartc.com/",
+      "archiveUrl": "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Fair Rent NYC coalition, archived campaign site, December 1, 2021 capture.",
+      "publicNote": "The archived campaign surface preserves its Commercial Rent Stabilization framing, coalition interface, media materials, and a Press section containing nine article placements.",
+      "locator": "December 1, 2021 Wayback capture, Press section headed 'Press', plus campaign and coalition sections.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "The current contents of the live domain.",
+        "That every listed article names Jamie or endorses every campaign claim.",
+        "Audience reach or causal allocation for legislative outcomes."
+      ]
     }
   ],
   "claims": [
+    {
+      "id": "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie describes helping establish and produce a recurring coalition practice that brought artists together in cultural spaces, connected practical support and listening to public action, and enabled collaborators to turn concerns into campaigns; the work was shared across the coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FB-NYCARTC-EVENT-1833265643557435",
+          "relationship": "direct-support",
+          "supports": [
+            "recurring meeting format combining safety, listening, survey, and town-hall work"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-NYCARTC-EVENT-790581997948463",
+          "relationship": "direct-support",
+          "supports": [
+            "public-hearing pathway using 'Being there changes everything' and asking participants to tell their stories"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "independent reporting on the Market Hotel town hall and broader town-hall practice"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's named coalition advocacy and practical fire-safety study groups"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's early organizer role and coalition meeting context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public role wording is attributed to Jamie's first-person account; the event and reporting sources establish the collective practice and context, not his exact production share.",
+        "Credit the event practice and outcomes collectively; Jamie's first-person account supports contribution, not sole organization or authorship.",
+        "Do not attribute every event page, invitation, or facilitation decision to Jamie without event-level production evidence or collaborator confirmation.",
+        "The event record supports a recurring rotating-venue practice, not an uninterrupted monthly schedule in every year.",
+        "Policy outcomes require independent official evidence and collective-work language."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In his approved public resume, Jamie describes serving as KC Town Hall co-founder and project manager and co-leading redevelopment planning and public-benefit documentation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "attributed co-founder and project-manager role",
+            "attributed co-leadership of redevelopment planning and public-benefit documentation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is Jamie's approved public account of his role, not independent third-party corroboration.",
+        "The resume supports the role description but does not establish the Board recommendation, Council action, appropriation, disbursement, or completion."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-PRESENTER-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Official Board records name Jamie as the KC Town Hall presenter.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's presenter role",
+            "$490,539 request"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Presenter does not mean sole author, owner, or organizer of the collective project."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "On July 16, 2019, all four participating CCED Board members voted to recommend the $490,539 KC Town Hall proposal to the City Council for approval and funding.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "July 16, 2019 recommendation",
+            "$490,539 amount",
+            "four affirmative Board votes",
+            "recommendation to City Council"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The four affirmative votes belong to the CCED Board, not to the City Council.",
+        "The recommendation was not a Council appropriation, funding agreement, disbursement, or receipt."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "On September 26, 2019, the Kansas City Council adopted Resolution 190649, accepting the Board recommendation for up to $490,539 in eligible KC Town Hall costs and authorizing funding-agreement negotiations.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Council action date",
+            "adoption of Resolution 190649"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+          "relationship": "direct-support",
+          "supports": [
+            "acceptance of Board recommendation",
+            "$490,539 limit",
+            "authorization to negotiate"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Acceptance and authorization to negotiate do not establish an executed funding agreement, appropriation by themselves, disbursement, receipt, expenditure, or construction.",
+        "The official meeting record does not supply an individual roll-call tally for these Council actions.",
+        "Government action should not be converted into sole causality by Jamie or KC Town Hall."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "That day, the Council also passed Ordinance 190642, which appropriated $490,539 for KC Town Hall.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Official records show that the City Council appropriated $490,539 for KC Town Hall.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "Council action date",
+            "passage of Ordinance 190642"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+          "relationship": "direct-support",
+          "supports": [
+            "appropriation",
+            "KC Town Hall project line",
+            "$490,539 amount"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Appropriation does not establish an executed funding agreement, disbursement, receipt, expenditure, construction, or completion.",
+        "The official meeting record does not supply an individual roll-call tally for this Council action.",
+        "Government action should not be converted into sole causality by Jamie or KC Town Hall."
+      ]
+    },
     {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
@@ -171,36 +864,8 @@
           "renderCitation": true
         }
       ],
-      "boundaries": []
-    },
-    {
-      "id": "CLM-CALLNYC-EVENT-BRANDING",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/callnyc"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-          "relationship": "direct-support",
-          "supports": [
-            "graphic wording",
-            "event branding"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
       "boundaries": [
-        "Treat the wording as visible branding, not proof of a longer formal registration title."
+        "Preserve attribution to the Council and the narrower CouncilStat wording."
       ]
     },
     {
@@ -228,7 +893,7 @@
         },
         {
           "key": "resume-html",
-          "text": "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+          "text": "Built CallNYC.org after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating public data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -299,9 +964,438 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-NYCARTC-FOUNDING-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Contemporaneous reporting identified Jamie as a founding member of NYC Artist Coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "founding-member attribution"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's NYC Artist Coalition affiliation",
+            "coalition name"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "NPR used the name variant 'NYC Arts Coalition'; Gothamist used 'NYC Artist Coalition.'"
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2017, Jamie organized fire-code study groups for DIY venues and publicly called for full Cabaret Law repeal as NYC Artist Coalition mobilized with other groups under Let NYC Dance.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "fire-code study groups",
+            "public repeal advocacy",
+            "coalition affiliation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "collective mobilization under Let NYC Dance",
+            "Jamie's public repeal position"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's City Council hearing testimony",
+            "coalition affiliation",
+            "public repeal argument"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Advocacy and coalition mobilization do not establish sole causality for legislative outcomes."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "By February 2017, contemporaneous reporting identified Jamie as an NYC Artist Coalition organizer working with artists and venue communities on safety, cultural-space preservation, and recommendations for city cultural officials.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "organizer attribution",
+            "meeting purpose",
+            "safety and policy work"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Organizer attribution does not establish sole leadership, sole founding, or ownership of participants' work."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-MUTUAL-AID-SIGNUPS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In the same report, Jamie said more than 100 people had joined the coalition's mutual-aid network, offering skills ranging from zoning knowledge to DJ access.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's attributed count",
+            "mutual-aid network",
+            "examples of member skills"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Keep the count attributed to Jamie; the article is not an independent audit of signup records or active participation."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In October 2017, NYC Artist Coalition spearheaded a Market Hotel town hall about the new Office of Nightlife. Independent reporting described a crowd of about one hundred, while contemporaneous reporting identified Jamie among coalition participants and documented participation by cultural organizations, Council members, and city cultural officials.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "coalition organizing role",
+            "date",
+            "venue",
+            "partner signatories"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "event occurred",
+            "coalition spearheaded it",
+            "Jamie's participation",
+            "institutional participation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "approximately one hundred attendees",
+            "Council and city-agency participation",
+            "recurring coalition town-hall practice"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "About one hundred is a contemporaneous journalistic description, not an audited attendance count; the sources establish Jamie's participation, not his exact production responsibilities."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-SBJSA-TESTIMONY-2018",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "At an October 2018 City Council hearing, Jamie testified as an NYC Artist Coalition member, connecting cultural-space safety and survival to commercial affordability and supporting the Small Business Jobs Survival Act.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's hearing appearance",
+            "coalition affiliation",
+            "safety-affordability argument",
+            "support for Intro 737"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Testimony establishes Jamie's advocacy and reasoning, not legislative authorship, passage, or sole campaign leadership."
+      ]
+    },
+    {
+      "id": "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The Talks Not Raids campaign surface translated M.A.R.C.H. transparency goals into an issue explainer, bill link, Council-support tracker, call script, coalition credits, and media kit.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "campaign interface",
+            "bill link",
+            "support tracker",
+            "call script",
+            "coalition credits",
+            "media kit"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public page establishes campaign content and interface, not Jamie's individual authorship, an audited M.A.R.C.H. action count, or legislative causality."
+      ]
+    },
+    {
+      "id": "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The campaign supported Intro 1156. Council records show the measure later had nineteen sponsors and became Local Law 220 of 2019, requiring M.A.R.C.H. reporting and advance notice in specified circumstances.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "relationship": "context",
+          "supports": [
+            "campaign support for Intro 1156",
+            "coalition context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220",
+          "relationship": "direct-support",
+          "supports": [
+            "nineteen sponsors",
+            "enactment date",
+            "Local Law number",
+            "reporting and notice provisions"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The sequence does not assign causal shares to Talks Not Raids, Jamie, NYC Artist Coalition, legislators, officials, or partner organizations and does not establish that M.A.R.C.H. was disbanded."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and the archived FairRentNYC campaign, the recovered Press sections catalog 45 placements linking 44 distinct press or issue-context articles.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "twenty-one ordered Let NYC Dance press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "seven ordered Talks Not Raids press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "eight ordered Save NYC Spaces press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
+          "relationship": "direct-support",
+          "supports": [
+            "nine ordered Fair Rent NYC press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "One NPR article appears in two campaign Press sections, producing forty-five placements and forty-four distinct source identities.",
+        "Campaign inclusion does not establish that every article names Jamie, endorses the campaign, or measures audience reach.",
+        "Article bodies remain metadata-reviewed unless a separate close reading is recorded."
+      ]
     }
   ],
   "pages": [
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+        "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+        "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+        "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+        "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+      ],
+      "occurrences": [
+        {
+          "id": "planning-and-documentation-role",
+          "claimId": "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026"
+          ]
+        },
+        {
+          "id": "presenter-role",
+          "claimId": "CLM-KC-TOWN-HALL-PRESENTER-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019"
+          ]
+        },
+        {
+          "id": "board-recommendation",
+          "claimId": "CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019"
+          ]
+        },
+        {
+          "id": "council-acceptance",
+          "claimId": "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+            "SRC-KC-TOWN-HALL-RESOLUTION-190649"
+          ]
+        },
+        {
+          "id": "council-appropriation",
+          "claimId": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+            "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+          ]
+        }
+      ]
+    },
     {
       "id": "callnyc",
       "surface": "/work/callnyc",
@@ -309,8 +1403,7 @@
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
-        "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-GITHUB-REPOSITORY"
       ],
       "occurrences": [
         {
@@ -340,14 +1433,6 @@
           ]
         },
         {
-          "id": "event-branding",
-          "claimId": "CLM-CALLNYC-EVENT-BRANDING",
-          "projection": "case-study",
-          "sourceIds": [
-            "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
-          ]
-        },
-        {
           "id": "press-coverage",
           "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
           "projection": "case-study",
@@ -362,6 +1447,120 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+        "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+        "SRC-FB-NYCARTC-EVENT-1833265643557435",
+        "SRC-FB-NYCARTC-EVENT-790581997948463",
+        "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+        "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+        "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+        "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+        "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
+        "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
+        "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+        "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+        "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+        "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
+      ],
+      "occurrences": [
+        {
+          "id": "nycartc-founding-role",
+          "claimId": "CLM-NYCARTC-FOUNDING-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+            "SRC-NYCARTC-GOTHAMIST-CABARET-2017"
+          ]
+        },
+        {
+          "id": "nycartc-participation-system",
+          "claimId": "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FB-NYCARTC-EVENT-1833265643557435",
+            "SRC-FB-NYCARTC-EVENT-790581997948463",
+            "SRC-NYCARTC-BNB-DIY-SPACES-2017"
+          ]
+        },
+        {
+          "id": "nycartc-cabaret-advocacy",
+          "claimId": "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+            "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+            "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"
+          ]
+        },
+        {
+          "id": "nycartc-campaign-press-corpus",
+          "claimId": "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+            "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+            "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+            "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021"
+          ]
+        },
+        {
+          "id": "nycartc-early-organizer",
+          "claimId": "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-BNB-DIY-SPACES-2017"
+          ]
+        },
+        {
+          "id": "nycartc-mutual-aid-signups",
+          "claimId": "CLM-NYCARTC-MUTUAL-AID-SIGNUPS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-BNB-DIY-SPACES-2017"
+          ]
+        },
+        {
+          "id": "nycartc-october-town-hall",
+          "claimId": "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
+            "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+            "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017"
+          ]
+        },
+        {
+          "id": "nycartc-sbjsa-testimony",
+          "claimId": "CLM-NYCARTC-SBJSA-TESTIMONY-2018",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"
+          ]
+        },
+        {
+          "id": "talks-not-raids-campaign",
+          "claimId": "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN"
+          ]
+        },
+        {
+          "id": "talks-not-raids-outcome",
+          "claimId": "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+            "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
           ]
         }
       ]

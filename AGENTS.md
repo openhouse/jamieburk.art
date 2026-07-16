@@ -30,6 +30,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run test:evals`
+- `npm run evals:application`
+- `npm run evals:production`
 
 ## Public-Safety Rules
 
@@ -73,11 +76,38 @@ The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
+### Knowledge Lifecycle
+
+- Capture every submitted fragment with a stable intake ID and disposition.
+- Keep knowledge maturity, publication safety, and editorial selection separate.
+- A memory is a research lead, not a confirmed claim.
+- Closely read sources into both support and non-support fields.
+- Keep private originals outside the public repo behind opaque locator IDs.
+- Do not project every mature claim onto the site.
+- Run `npm run evals:knowledge` before opening or updating a knowledge-bank PR.
+
 ## Chad Lens
 
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
+
+The application eval requires a dedicated `chad-editorial` judgment in addition
+to deterministic phrase checks. A generic hiring-manager pass cannot substitute
+for this review.
+
+## Recursive Evals
+
+Use `evals/portfolio-readiness/suite.json` as the frozen contract for an
+optimization cycle. Run deterministic gates before model judgment. Change one
+highest-value failing criterion at a time, compare against the accepted
+baseline, reject public-safety or claim-integrity regressions, and stop when the
+selected profile reaches its configured consecutive-pass criterion.
+
+Do not improve a score by editing the eval during a candidate comparison,
+hiding a finding, adding unsupported claims, publishing protected evidence, or
+moving internal evaluation narration into public copy. Application-ready does
+not imply production-ready.
 
 ## Scope Rules
 

@@ -1,6 +1,6 @@
 # CallNYC citational record
 
-**Reviewed:** 2026-07-11
+**Reviewed:** 2026-07-15
 
 **Public surface:** `/work/callnyc`
 
@@ -31,11 +31,26 @@ product, a documented formal submission, or a documented winner.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
 - Public CallNYC GitHub repository.
+- Four recovered 2016 posts in which then-serving Council member accounts
+  quote-posted a CallNYC result or directly shared CallNYC.org.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
+
+## Recovered Council-account amplification
+
+The current social archive recovered public amplification by at least four
+then-serving Council member accounts in 2016: Mathieu Eugene, Helen Rosenthal,
+Rosie Mendez, and Ydanis Rodriguez. Three quote-posted a CallNYC result and one
+directly shared CallNYC.org. Official Council person records support the
+officeholder context.
+
+This establishes bounded public amplification. It does not establish formal
+endorsement, Council adoption, offline use, constituent outcomes, approval of
+every ranking, likes hidden from the current interface, or a complete historic
+engagement roster. Three profile-counted CallNYC records remain unavailable.
 
 ## Bounded research finding
 
@@ -55,18 +70,22 @@ registration contents, and a complete participant list were not recovered.
 
 ## Corrections
 
-The correction registry preserves three active decisions:
+The correction registry preserves four active decisions:
 
 - project chronology: `2014-2015` to `2016`;
 - event superlative: `first civic-data hackathon` to
-  `first CouncilStat hackathon`;
+  the attributed sentence `The Council described the gathering as its first
+  CouncilStat hackathon.`;
+- resume projection: the unqualified first-CouncilStat formulation to Jamie's
+  participation in a January 2016 constituent-services hackathon at Civic Hall;
 - event hours: a limited participant-photo timestamp inference to the direct
   Civic Hall announcement of `1-3 p.m.`
 
-The approved resume wording is:
+The approved resume wording is deliberately separate from the Council's
+attributed first-CouncilStat description:
 
-> Built CallNYC.org as an independent follow-on to the New York City Council's
-> first CouncilStat hackathon, translating constituent-services data into
+> Built CallNYC.org after participating in a January 2016 New York City Council
+> constituent-services hackathon at Civic Hall, translating public data into
 > resident-facing issue pages and next-step guidance; covered in Politico New
 > York.
 
