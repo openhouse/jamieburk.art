@@ -116,6 +116,17 @@ all 45 listings across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and the
 December 2021 Fair Rent NYC capture, with 44 unique canonical article records.
 The frozen extraction fixture makes collection membership reproducible.
 
+The authenticated [NYC Artist Coalition Facebook post pass](projects/nyc-artist-coalition-facebook-posts.md)
+accounts for all 444 rows and 444 unique post IDs in five annual Meta Business
+Suite Published exports across the surviving 2017-2021 chronology, cross-checked
+against a terminal Page-feed traversal. Its
+[public-safe corpus](corpora/nycartc-facebook-posts-full-population.json) and
+manifest preserve 67 posted routes, mission and civic-interface patterns, and
+bounded owner-export metrics while withholding raw exports, post bodies,
+platform IDs, engager identities, sensitive routes, and authenticated state.
+Shared-account human authorship and incoming stakeholder-group engagement remain
+explicit research questions; no website copy changes were made from this pass.
+
 The [WOW List Facebook post archival-production report](projects/wowlist-facebook-posts.md)
 accounts for all 57 records in a terminal 19-page protected capture and gives
 each a public-safe content, live, and publisher-attribution disposition. The

@@ -4,6 +4,7 @@ import { socialLifecycle } from "./social-lifecycle.ts";
 import { nycartcXLifecycle } from "./nycartc-x-lifecycle.ts";
 import { urbanhermitXEntities, urbanhermitXLifecycle, urbanhermitXProject } from "./urbanhermit-x-lifecycle.ts";
 import { nycacFacebookEventLifecycle } from "./nycac-facebook-events-lifecycle.ts";
+import { nycacFacebookPostLifecycle } from "./nycac-facebook-posts-lifecycle.ts";
 import { personalWowListFacebookEventLifecycle } from "./personal-wowlist-facebook-events-lifecycle.ts";
 import { wowlistFacebookPostLifecycle } from "./wowlist-facebook-posts-lifecycle.ts";
 
@@ -68,6 +69,7 @@ const knowledgeLifecycleInput = {
     ...nycartcXLifecycle.leads,
     ...urbanhermitXLifecycle.leads,
     ...nycacFacebookEventLifecycle.leads,
+    ...nycacFacebookPostLifecycle.leads,
     ...personalWowListFacebookEventLifecycle.leads,
     ...wowlistFacebookPostLifecycle.leads,
     { id: "LEAD-HJE-REVENUE-GROWTH-CONTEXT", title: "Harry J. Epstein Company revenue-growth contribution context", kind: "memory", capturedAt: "2026-07-15", capturedBy: "Jamie Burkart", state: "extracted", visibility: "public-safe", publicSummary: "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth at Harry J. Epstein Company.", projectAssociationStatus: "assigned", projectIds: ["PRJ-HARRY-J-EPSTEIN"], entityIds: ["ENT-JAMIE-BURKART", "ENT-HARRY-J-EPSTEIN"], sourceIds: ["SRC-JAMIE-APPROVED-RESUME-2026-07-13", "SRC-HJE-REVENUE-CONTEXT-2026"], candidateClaimIds: ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION"], researchTaskIds: ["TASK-HJE-REVENUE-GROWTH-CORROBORATION"], nextAction: "Seek bounded collaborator or business-record corroboration; keep all public wording explicitly self-reported and contributory." },
@@ -133,6 +135,7 @@ const knowledgeLifecycleInput = {
     ...nycartcXLifecycle.observations,
     ...urbanhermitXLifecycle.observations,
     ...nycacFacebookEventLifecycle.observations,
+    ...nycacFacebookPostLifecycle.observations,
     ...personalWowListFacebookEventLifecycle.observations,
     ...wowlistFacebookPostLifecycle.observations,
     { id: "OBS-HJE-APPROVED-RESUME-REVENUE-CONTRIBUTION", sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", projectIds: ["PRJ-HARRY-J-EPSTEIN"], entityIds: ["ENT-JAMIE-BURKART", "ENT-HARRY-J-EPSTEIN"], statement: "Jamie's approved public resume says his web, e-commerce, marketing, analytics, and operations improvements contributed to a period of 2x revenue growth at Harry J. Epstein Company.", locator: "Selected Impact and Harry J. Epstein Company experience, pages 1-2", evidenceRole: "direct-support", certainty: "moderate", doesNotEstablish: ["independent corroboration", "sole causation", "a precise public revenue total or date range"], candidateClaimIds: ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION"], reviewedAt: "2026-07-15" },
@@ -250,6 +253,7 @@ const knowledgeLifecycleInput = {
     ...nycartcXLifecycle.candidateClaims,
     ...urbanhermitXLifecycle.candidateClaims,
     ...nycacFacebookEventLifecycle.candidateClaims,
+    ...nycacFacebookPostLifecycle.candidateClaims,
     ...personalWowListFacebookEventLifecycle.candidateClaims,
     ...wowlistFacebookPostLifecycle.candidateClaims,
     { id: "CND-CALLNYC-COUNCIL-ENGAGEMENT", projectIds: ["PRJ-CALLNYC"], proposition: "CallNYC paired 61 issue pages with recognition posts directed to 26 Council accounts, and a full-population disposition pass recovered attributable engagement from at least 19 serving 2016 Council member accounts.", maturity: "promoted", confidence: "high", observationIds: ["OBS-CALLNYC-SOCIAL-RECOVERY", "OBS-CALLNYC-SOCIAL-COUNCIL-LOWER-BOUND"], requiredEvidence: ["Authenticated population disposition", "Named and deduplicated interaction ledger", "Defined Council-member roster and dates", "Missing-data and lower-bound disclosure"], boundaries: ["Use at least 19, not exactly 19.", "Interaction is not endorsement, adoption, or current-service status.", "Do not assign every account post to Jamie."], antiClaims: ["A PDF screenshot is a comprehensive timeline", "Exactly 19 Council members ever engaged", "Nineteen Council members endorsed or adopted CallNYC", "Likes were audited"], counterevidencePosture: "Add inaccessible, deleted, newly recovered, or conflicting interactions; distinguish member, staff, campaign, and institutional accounts and revise the floor without hiding earlier methodology.", sourceIndependenceNote: "The authenticated research run establishes the collection result, named public post and repost-list sources establish interaction edges, and official Council minutes corroborate officeholder status.", researchTaskIds: ["TASK-CALLNYC-COUNCIL-ENGAGEMENT"], promotionDecisionIds: ["DEC-CALLNYC-COUNCIL-ENGAGEMENT-RESEARCH", "DEC-CALLNYC-COUNCIL-ENGAGEMENT-PROMOTE"], targetCanonicalClaimId: "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT", updatedAt: "2026-07-15" },
@@ -327,6 +331,7 @@ const knowledgeLifecycleInput = {
     ...nycartcXLifecycle.candidateEvents,
     ...urbanhermitXLifecycle.candidateEvents,
     ...nycacFacebookEventLifecycle.candidateEvents,
+    ...nycacFacebookPostLifecycle.candidateEvents,
     ...personalWowListFacebookEventLifecycle.candidateEvents,
     ...wowlistFacebookPostLifecycle.candidateEvents
   ],
@@ -335,6 +340,7 @@ const knowledgeLifecycleInput = {
     ...nycartcXLifecycle.researchTasks,
     ...urbanhermitXLifecycle.researchTasks,
     ...nycacFacebookEventLifecycle.researchTasks,
+    ...nycacFacebookPostLifecycle.researchTasks,
     ...personalWowListFacebookEventLifecycle.researchTasks,
     ...wowlistFacebookPostLifecycle.researchTasks,
     { id: "TASK-HJE-REVENUE-GROWTH-CORROBORATION", candidateClaimIds: ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION"], question: "Can a bounded collaborator statement or privacy-preserving business record independently corroborate the approximate HJE revenue-growth period and Jamie's contribution?", status: "open", priority: "high", methods: ["Request a public-safe collaborator proof note that distinguishes Jamie's workstreams from sole causation", "Seek a privacy-preserving dated aggregate or attestation without publishing revenue totals", "Compare any new evidence with the approved resume and protected operating context", "Revise or withdraw the metric if stronger evidence narrows its scale, period, or contribution framing"], sourceIds: ["SRC-JAMIE-APPROVED-RESUME-2026-07-13", "SRC-HJE-REVENUE-CONTEXT-2026"], observationIds: ["OBS-HJE-APPROVED-RESUME-REVENUE-CONTRIBUTION", "OBS-HJE-PROTECTED-REVENUE-CONTEXT"], findings: ["The current first-person and protected sources support an explicitly self-reported contribution claim", "No independent corroboration suitable for the public repository has yet been recovered"], limitations: ["Private revenue totals, date ranges, dashboards, customer data, vendor terms, and internal analytics remain protected", "The current evidence does not establish sole causation or an independently audited metric"], nextActions: ["Seek bounded collaborator corroboration", "Seek a privacy-preserving aggregate or attestation", "Keep the qualifier visible on every public projection until stronger evidence changes the evidence class"], openedAt: "2026-07-15" },
@@ -438,6 +444,7 @@ const knowledgeLifecycleInput = {
     ...urbanhermitXLifecycle.promotionDecisions,
     { id: "DEC-HJE-REVENUE-GROWTH-PROMOTE-2026-07-15", candidateClaimId: "CND-HJE-REVENUE-GROWTH-CONTRIBUTION", decision: "promote", rationale: "Jamie's approved public resume and protected operating context support a careful, self-reported contribution claim while the canonical boundaries reject sole causation and independent-audit implications.", evidenceThreshold: "Jamie-approved public wording, protected operating context, self-reported qualifier, exact-surface approval, and private-business-data exclusions.", decidedAt: "2026-07-15", decidedBy: ["Jamie Burkart", "Codex portfolio-eval review"], reviewAuthority: "jamie-approved", humanReviewStatus: "approved", humanReviewer: "Jamie Burkart", targetCanonicalClaimId: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", allowedSurfaces: ["knowledge-bank", "/", "/work", "/work/technical-operations", "/resume", "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", "/work/harry-j-epstein"], guardrails: ["Attribute the metric to Jamie's approved public account", "Use contribution language only", "Do not imply independent corroboration or sole causation", "Keep private revenue and business records offline"] },
     ...nycacFacebookEventLifecycle.promotionDecisions,
+    ...nycacFacebookPostLifecycle.promotionDecisions,
     ...personalWowListFacebookEventLifecycle.promotionDecisions,
     ...wowlistFacebookPostLifecycle.promotionDecisions,
     { id: "DEC-WATERWAYS-RAFT-PROMOTE", candidateClaimId: "CND-WATERWAYS-RAFT-EXPEDITION", decision: "promote", rationale: "Independent contemporary reporting supports a strong narrow origin-and-voyage claim.", evidenceThreshold: "Named role plus documented collective voyage in an independent contemporaneous source.", decidedAt: "2026-07-12", decidedBy: ["Codex public-source review"], targetCanonicalClaimId: "CLM-WATERWAYS-RAFT-EXPEDITION-2007", allowedSurfaces: ["knowledge-bank", "future-waterways-case-study"], guardrails: ["Keep collective credit", "Do not claim a Gulf endpoint"] },

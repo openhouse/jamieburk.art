@@ -256,21 +256,53 @@ const populationLead = knowledgeLifecycle.leads.find(
 const roleLead = knowledgeLifecycle.leads.find(
   (item) => item.id === "LEAD-NYCAC-FACEBOOK-EVENT-PRACTICE-MEMORY"
 );
-const lifecyclePrefix = /(NYCAC-FACEBOOK|NYCAC-PARTICIPATION|NYCAC-DEMOCRATIC)/;
+const eventObservationIds = new Set([
+  "OBS-NYCAC-FACEBOOK-EVENT-POPULATION",
+  "OBS-NYCAC-FACEBOOK-EVENT-CHRONOLOGY",
+  "OBS-NYCAC-FACEBOOK-ROTATING-MEETINGS",
+  "OBS-NYCAC-FACEBOOK-CIVIC-CULTURAL-INTERFACES",
+  "OBS-NYCAC-FACEBOOK-RESPONSE-SIGNALS",
+  "OBS-NYCAC-FACEBOOK-POSTED-SOURCE-ROUTES",
+  "OBS-NYCAC-FACEBOOK-DETAIL-AVAILABILITY",
+  "OBS-NYCAC-FACEBOOK-JAMIE-ROLE-MEMORY",
+  "OBS-NYCAC-FACEBOOK-DEMOCRACY-LAB-INTERPRETATION"
+]);
+const eventCandidateIds = new Set([
+  "CND-NYCAC-FACEBOOK-EVENT-POPULATION",
+  "CND-NYCAC-PARTICIPATION-SYSTEM",
+  "CND-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS",
+  "CND-NYCAC-DEMOCRATIC-LISTENING-PRACTICE"
+]);
+const eventTransitionIds = new Set([
+  "EVT-NYCAC-FACEBOOK-EVENT-POPULATION-PROMOTED",
+  "EVT-NYCAC-PARTICIPATION-SYSTEM-PROMOTED",
+  "EVT-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS-PROMOTED",
+  "EVT-NYCAC-DEMOCRATIC-LISTENING-PRACTICE-PROMOTED"
+]);
+const eventTaskIds = new Set([
+  "TASK-NYCAC-FACEBOOK-EVENT-OWNER-EXPORT",
+  "TASK-NYCAC-FACEBOOK-EVENT-ROLE-AND-ATTENDANCE"
+]);
+const eventDecisionIds = new Set([
+  "DEC-NYCAC-FACEBOOK-EVENT-POPULATION-PROMOTE",
+  "DEC-NYCAC-PARTICIPATION-SYSTEM-PROMOTE",
+  "DEC-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS-PROMOTE",
+  "DEC-NYCAC-DEMOCRATIC-LISTENING-PRACTICE-PROMOTE"
+]);
 const lifecycleObservations = knowledgeLifecycle.observations.filter((item) =>
-  lifecyclePrefix.test(item.id)
+  eventObservationIds.has(item.id)
 );
 const lifecycleCandidates = knowledgeLifecycle.candidateClaims.filter((item) =>
-  lifecyclePrefix.test(item.id)
+  eventCandidateIds.has(item.id)
 );
 const lifecycleEvents = knowledgeLifecycle.candidateEvents.filter((item) =>
-  lifecyclePrefix.test(item.id)
+  eventTransitionIds.has(item.id)
 );
 const lifecycleTasks = knowledgeLifecycle.researchTasks.filter((item) =>
-  item.id.startsWith("TASK-NYCAC-FACEBOOK")
+  eventTaskIds.has(item.id)
 );
 const lifecycleDecisions = knowledgeLifecycle.promotionDecisions.filter((item) =>
-  lifecyclePrefix.test(item.id)
+  eventDecisionIds.has(item.id)
 );
 const participationClaim = claimById.get("CLM-NYCAC-PARTICIPATION-SYSTEM");
 const responseClaim = claimById.get("CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS");
