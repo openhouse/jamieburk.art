@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "suite_id": "portfolio-blind-spots",
+  "title": "Jamie Burkart portfolio blind-spot controls",
+  "objective": "Turn the portfolio's known evidence, audience, outcome, visual, and maintenance blind spots into observable criteria without allowing an agent to fabricate human review or market response.",
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "labels": {
+      "0": "absent or contradicted",
+      "1": "protocol only or materially incomplete",
+      "2": "bounded foundation present",
+      "3": "strong and independently usable",
+      "4": "complete, current, and independently verified"
+    }
+  },
+  "allowed_statuses": [
+    "criteria_met",
+    "human_blocked",
+    "iterate"
+  ],
+  "hard_constraints": [
+    "An agent may not invent collaborator approval, hiring-reader observations, references, interviews, application outcomes, analytics, or photo rights.",
+    "A protocol is not evidence that the human activity occurred.",
+    "Public artifacts may not expose private correspondence, contact lists, applicant data, audience identities, private analytics, or uncleared media.",
+    "Action-to-outcome chains must distinguish Jamie's work, team or movement work, institutional action, and observed result.",
+    "The public website remains a selective projection of the knowledge bank rather than a complete mirror of it."
+  ],
+  "evals": [
+    {
+      "id": "BS-001",
+      "title": "Collaborator corroboration and independent collective-credit review",
+      "blind_spot": "The archive contains strong records but too little exact-candidate review by people who participated in collective work.",
+      "grader": "human_approval",
+      "weight": 16,
+      "human_evidence_required": true,
+      "inputs": [
+        "candidate commit",
+        "collective-credit claim inventory",
+        "public-safe collaborator review protocol"
+      ],
+      "pass_criteria": [
+        "At least two independent reviewers assess the exact candidate's collective-credit and role language.",
+        "At least one relevant collaborator confirms, complicates, or corrects each promoted role claim that currently depends primarily on Jamie's recollection.",
+        "Corrections, disagreements, permission limits, and not-observed areas remain visible.",
+        "AI-assisted archival notes are never represented as collaborator testimony."
+      ],
+      "stopping_boundary": "Stop human-blocked until real reviews of the exact candidate are recorded."
+    },
+    {
+      "id": "BS-002",
+      "title": "First-screen hiring conversion and decisive role fit",
+      "blind_spot": "A reader may admire the work without knowing what role to hire Jamie for or what he will make usable.",
+      "grader": "deterministic",
+      "weight": 15,
+      "human_evidence_required": false,
+      "inputs": [
+        "homepage hero",
+        "Technical Operations page",
+        "resume",
+        "primary calls to action"
+      ],
+      "pass_criteria": [
+        "The first viewport names Technical Project Manager, Product Operations, and Implementation.",
+        "The first viewport names Jamie's action, concrete work products, and the practical end served.",
+        "Selected work, resume, and contact actions are immediately available.",
+        "Emergence and transition are framed as normal working conditions rather than organizational failure or shame."
+      ],
+      "stopping_boundary": "Do not add more homepage claims when clearer selection or sequencing will solve the problem."
+    },
+    {
+      "id": "BS-003",
+      "title": "Current professional evidence and forward trajectory",
+      "blind_spot": "Historical work can overshadow Jamie's current technical, product-operations, data, and AI-evaluation practice.",
+      "grader": "hybrid",
+      "weight": 14,
+      "human_evidence_required": false,
+      "inputs": [
+        "2025-2026 proof records",
+        "resume",
+        "Source-Backed Team Memory lab",
+        "AI Evals professional-development record"
+      ],
+      "pass_criteria": [
+        "At least four governed proof records establish substantive 2025-2026 work or professional development.",
+        "The evidence spans implementation, data or knowledge systems, and AI evaluation rather than relying on a credential alone.",
+        "Current experiments remain distinguished from completed client delivery or production software.",
+        "The current role family is explicit across the homepage, resume, and Technical Operations page."
+      ],
+      "stopping_boundary": "Do not turn a proposal, lab, course, or working corpus into an unearned production-delivery claim."
+    },
+    {
+      "id": "BS-004",
+      "title": "Observed hiring-reader comprehension and market response",
+      "blind_spot": "Internal evals cannot establish what recruiters and hiring managers actually notice, misunderstand, or act upon.",
+      "grader": "human_approval",
+      "weight": 15,
+      "human_evidence_required": true,
+      "inputs": [
+        "exact candidate URLs",
+        "blind-reader task protocol",
+        "public-safe application-response aggregate"
+      ],
+      "pass_criteria": [
+        "At least five independent hiring readers complete the same timed comprehension tasks against the exact candidate.",
+        "At least two readers have hiring or recruiting experience relevant to technical project management, implementation, product operations, or civic technology.",
+        "The record separates observed behavior from participant interpretation and optimization history.",
+        "A bounded application sample records response patterns without publishing employer, contact, compensation, or private correspondence data."
+      ],
+      "stopping_boundary": "Stop human-blocked until real reader sessions and a bounded market-feedback sample exist."
+    },
+    {
+      "id": "BS-005",
+      "title": "Action-to-outcome chains for the three lead case studies",
+      "blind_spot": "Artifacts and public outcomes can sit near each other without establishing Jamie's specific action or the boundary between contribution and causation.",
+      "grader": "hybrid",
+      "weight": 15,
+      "human_evidence_required": false,
+      "inputs": [
+        "Harry J. Epstein Company",
+        "FairRentNYC and Commercial Rent Stabilization",
+        "CallNYC",
+        "knowledge-bank claims and proof records"
+      ],
+      "pass_criteria": [
+        "Exactly three lead chains name context, Jamie's action, work product, observable result, and source-backed boundary.",
+        "Every proof and claim identifier resolves.",
+        "Collective and institutional outcomes remain distinct from Jamie's contribution.",
+        "No chain substitutes chronology, platform metrics, or adjacent policy outcomes for causation."
+      ],
+      "stopping_boundary": "Hold or soften a result when the causal bridge is not independently supported."
+    },
+    {
+      "id": "BS-006",
+      "title": "Rights-aware visual evidence on lead work",
+      "blind_spot": "The portfolio describes materially and relationally rich work but currently exposes no rights-cleared project-image set.",
+      "grader": "human_approval",
+      "weight": 13,
+      "human_evidence_required": true,
+      "inputs": [
+        "public asset inventory",
+        "photo-editor selects",
+        "rights and consent register",
+        "lead case studies"
+      ],
+      "pass_criteria": [
+        "At least three lead case studies contain a genuine project image or inspectable visual artifact.",
+        "Every selected visual has subject, date or bounded chronology, project context, photographer, rights holder, permission status, consent status, alt text, and caption.",
+        "The visual demonstrates a specific work condition, artifact, interaction, or result rather than supplying atmosphere.",
+        "Uncleared media remains outside the public repository and website."
+      ],
+      "stopping_boundary": "Stop human-blocked until an editor selects material and rights and consent are cleared."
+    },
+    {
+      "id": "BS-007",
+      "title": "Knowledge-bank maintenance and drift visibility",
+      "blind_spot": "A deep knowledge bank can become difficult to maintain unless staleness, unresolved claims, orphan records, and target-role coverage stay visible.",
+      "grader": "deterministic",
+      "weight": 12,
+      "human_evidence_required": false,
+      "inputs": [
+        "knowledge-bank records",
+        "proof records",
+        "maintenance report",
+        "research queue"
+      ],
+      "pass_criteria": [
+        "A reproducible report inventories sources, assertions, claims, proof records, research tasks, held claims, contradictions, and stale reviews.",
+        "Every identifier reference resolves and every intake-linked source is decomposed into at least one atomic assertion.",
+        "The report names the review-age policy and never treats a held or not-recovered claim as publication-ready.",
+        "Technical project management, product operations, implementation, data or knowledge systems, and AI evaluation each retain governed proof coverage."
+      ],
+      "stopping_boundary": "A maintenance report may expose work to do; it must not rewrite claims or approve projections automatically."
+    }
+  ]
+}

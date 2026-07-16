@@ -678,6 +678,19 @@ export const socialAccountProductionBatch20260714: {
       reviewedAt: "2026-07-14",
       reviewedBy
     },
+    {
+      id: "AST-NAC-ESPINAL-TNR-PUBLIC-CREDIT-2019",
+      sourceId: "SRC-NAC-COUNCIL-ESPINAL-TNR-2019",
+      project: "nyc-artist-coalition",
+      assertion:
+        "Rafael Espinal publicly thanked NYC Artist Coalition and described working with the coalition on Save NYC Spaces and Talks Not Raids in February 2019.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-NAC-SOCIAL-COUNCIL-ENGAGEMENT"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy
+    },
     ...[
       ["ESPINAL", "SRC-NYC-COUNCIL-PERSON-ESPINAL", "Rafael Espinal"],
       ["LEVIN", "SRC-NYC-COUNCIL-PERSON-LEVIN", "Stephen Levin"],

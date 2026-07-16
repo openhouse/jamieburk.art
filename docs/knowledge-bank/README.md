@@ -184,3 +184,14 @@ Its [project note](projects/nyc-artist-coalition-government-value.md) and
 direct evidence from interpretation, preserve one explicit recovered
 Finkelpearl reference without calling the transcript census complete, and hold
 new website projection for collective-credit review.
+
+The [portfolio blind-spot suite](evals/portfolio-blind-spots.md) governs seven
+remaining readiness risks: external corroboration, role conversion, recent
+evidence, hiring-reader observation, action-to-outcome chains, visual rights,
+and knowledge-bank maintenance. Its recursive run brings all four
+machine-actionable criteria to their stopping conditions while preserving
+three explicit human gates for exact-candidate review, observed hiring use,
+and rights-cleared visual selection. Run `npm run eval:blind-spots`,
+`npm run test:blind-spots`, and `npm run report:knowledge-maintenance` to
+reproduce the current result. The [hill-climb run record](runs/2026-07-15-portfolio-blind-spots-hill-climb.md)
+documents the baseline, iterations, measured score, and stopping boundary.

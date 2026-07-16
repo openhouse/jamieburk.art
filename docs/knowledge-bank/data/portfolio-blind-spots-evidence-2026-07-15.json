@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "suiteId": "portfolio-blind-spots",
+  "reviewedAt": "2026-07-15",
+  "candidateBasis": "feature/evals-I working tree; human evidence must be renewed against the exact commit before approval",
+  "results": [
+    {
+      "evalId": "BS-001",
+      "score": 2,
+      "status": "human_blocked",
+      "evidence": [
+        "docs/knowledge-bank/evals/portfolio-blind-spots.md#bs-001-collaborator-corroboration-and-independent-review",
+        "docs/knowledge-bank/approval-register.md"
+      ],
+      "observations": [
+        "A public-safe review protocol and correction fields now exist.",
+        "Zero independent exact-candidate reviews are recorded.",
+        "No collaborator review is inferred from public coverage, Jamie's recollection, or AI-assisted archive notes."
+      ],
+      "nextStep": "Obtain two independent exact-candidate reviews and project-relevant collaborator responses."
+    },
+    {
+      "evalId": "BS-002",
+      "score": 4,
+      "status": "criteria_met",
+      "evidence": [
+        "apps/www/src/components/Hero.tsx",
+        "apps/www/src/app/page.tsx",
+        "apps/www/src/app/work/technical-operations/page.tsx",
+        "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt"
+      ],
+      "observations": [
+        "The first viewport names Technical Project Manager, Product Operations, and Implementation.",
+        "The hero states Jamie's action, concrete operating artifacts, and the ends of decisions, launch, and ownership transfer.",
+        "Selected work, resume, and contact actions are present.",
+        "Current language treats stakeholder needs and operating structure as emerging or still forming rather than dysfunctional."
+      ],
+      "nextStep": null
+    },
+    {
+      "evalId": "BS-003",
+      "score": 4,
+      "status": "criteria_met",
+      "evidence": [
+        "apps/www/src/data/proofs.ts",
+        "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+        "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt"
+      ],
+      "observations": [
+        "Five governed records establish substantive 2025-2026 implementation, data, knowledge-system, product-operations, and AI-evaluation work or professional development.",
+        "Source-Backed Team Memory remains a bounded lab and consulting method rather than a completed client engagement or production SaaS.",
+        "AI Evals is represented as professional development rather than instructor affiliation or certification authority."
+      ],
+      "nextStep": null
+    },
+    {
+      "evalId": "BS-004",
+      "score": 1,
+      "status": "human_blocked",
+      "evidence": [
+        "docs/knowledge-bank/evals/portfolio-blind-spots.md#bs-004-hiring-reader-and-market-observation"
+      ],
+      "observations": [
+        "A fixed timed-task protocol and privacy-safe result schema now exist.",
+        "Zero independent hiring-reader sessions are recorded.",
+        "Zero application-response observations are recorded in the public-safe aggregate."
+      ],
+      "nextStep": "Run five blind-reader sessions, including two relevant hiring practitioners, then append only consented aggregate findings."
+    },
+    {
+      "evalId": "BS-005",
+      "score": 4,
+      "status": "criteria_met",
+      "evidence": [
+        "docs/knowledge-bank/evals/portfolio-blind-spots.md#bs-005-three-lead-action-to-outcome-chains",
+        "apps/www/src/data/proofs.ts",
+        "apps/www/src/data/knowledge-bank/records.ts"
+      ],
+      "observations": [
+        "Exactly three lead chains distinguish context, Jamie's action, work products, observable results, and causal boundaries.",
+        "All referenced proof and claim identifiers resolve.",
+        "Collective and institutional outcomes remain separate from Jamie's contribution."
+      ],
+      "nextStep": null
+    },
+    {
+      "evalId": "BS-006",
+      "score": 1,
+      "status": "human_blocked",
+      "evidence": [
+        "apps/www/public",
+        "docs/knowledge-bank/evals/portfolio-blind-spots.md#bs-006-rights-aware-visual-edit"
+      ],
+      "observations": [
+        "The public asset tree contains the approved resume PDF and no raster project-image files.",
+        "A rights, consent, caption, and claim-linkage schema now exists.",
+        "Zero photo-editor selections or rights-cleared project visuals are recorded."
+      ],
+      "nextStep": "Have a photo editor select material for three lead case studies, then complete rights and consent review before adding files."
+    },
+    {
+      "evalId": "BS-007",
+      "score": 4,
+      "status": "criteria_met",
+      "evidence": [
+        "scripts/report-knowledge-maintenance.mjs",
+        "docs/knowledge-bank/evals/portfolio-blind-spots.md#bs-007-maintenance-dashboard",
+        "npm run report:knowledge-maintenance"
+      ],
+      "observations": [
+        "The reproducible report inventories the knowledge lifecycle, review age, integrity, and target-role coverage.",
+        "The hill climb decomposed the previously unlinked Espinal source into an atomic assertion.",
+        "No unresolved source IDs, intake sources without assertions, unlinked sources, duplicate IDs, or reviews older than the 90-day policy remain in the current report.",
+        "Held and not-recovered records remain visible and unpromoted."
+      ],
+      "nextStep": null
+    }
+  ],
+  "humanEvidence": {
+    "independentExactCandidateReviews": 0,
+    "projectRelevantCollaboratorResponses": 0,
+    "hiringReaderSessions": 0,
+    "relevantHiringPractitionerSessions": 0,
+    "publicSafeApplicationResponseObservations": 0,
+    "photoEditorSelections": 0,
+    "rightsClearedLeadProjectVisuals": 0
+  },
+  "roleConversion": {
+    "roleFamily": [
+      "Technical Project Manager",
+      "Product Operations",
+      "Implementation"
+    ],
+    "action": "turning emerging stakeholder needs into clear requirements, coordinated workflows, decision records, onboarding materials, and durable handoffs",
+    "ends": [
+      "make decisions",
+      "launch public work",
+      "transfer ownership"
+    ],
+    "primaryActions": [
+      "/work",
+      "/resume",
+      "/contact"
+    ],
+    "leadProjects": [
+      "harry-j-epstein",
+      "fair-rent-nyc",
+      "callnyc"
+    ]
+  },
+  "currentEvidence": [
+    {
+      "proofId": "fair-rent-public-data-pilot",
+      "period": "2026",
+      "dimension": "data-product requirements and privacy-by-design",
+      "boundary": "Proposal and product specification, not City adoption or implementation."
+    },
+    {
+      "proofId": "commercial-vacancy-quarterly-corpus",
+      "period": "Q4 2005-Q4 2025 corpus assembled and reviewed in 2026",
+      "dimension": "data operations and source organization",
+      "boundary": "Corpus assembly, not authorship of the underlying HUD-USPS data."
+    },
+    {
+      "proofId": "source-backed-team-memory-method",
+      "period": "2026",
+      "dimension": "source-backed knowledge systems and human review",
+      "boundary": "Bounded lab and consulting method, not production SaaS or completed client delivery."
+    },
+    {
+      "proofId": "product-operations-delivery-practice",
+      "period": "reviewed 2026",
+      "dimension": "requirements-to-handoff product operations",
+      "boundary": "Transferable operating practice grounded in project evidence, not a certification."
+    },
+    {
+      "proofId": "ai-evals-professional-development",
+      "period": "2026",
+      "dimension": "AI evaluation professional development",
+      "boundary": "Course completion, not instructor affiliation or certification authority."
+    }
+  ],
+  "outcomeChains": [
+    {
+      "project": "Harry J. Epstein Company",
+      "context": "An established industrial supplier was adapting legacy operating knowledge and customer service to e-commerce.",
+      "jamieAction": "Jamie helped translate operating knowledge into web, e-commerce, analytics, marketing, content, and workflow improvements.",
+      "workProducts": [
+        "searchable e-commerce and product content",
+        "analytics and marketing workflows",
+        "repeatable digital operating practices"
+      ],
+      "observableResult": "Customers gained a clearer way to find and order products, internal stakeholders gained more repeatable digital workflows, and Jamie contributed to a period of revenue growth.",
+      "proofIds": [
+        "hje-modernization-stewardship",
+        "hje-revenue-growth-contribution"
+      ],
+      "claimIds": [],
+      "sourceBackedBoundary": "The record supports contribution and stewardship; it does not establish that Jamie solely caused growth or owned all business outcomes."
+    },
+    {
+      "project": "FairRentNYC and Commercial Rent Stabilization",
+      "context": "A multi-organization collaboration needed shared campaign memory, source lineage, public action tools, and bounded data-product requirements.",
+      "jamieAction": "Jamie built and stewarded shared memory, created a legislative provenance map, helped coordinate a versioned website relaunch, organized a vacancy-data corpus, and specified a privacy-preserving pilot.",
+      "workProducts": [
+        "campaign memory and action tracking",
+        "legislative source map and provenance redline",
+        "versioned public website relaunch",
+        "81-quarter vacancy corpus",
+        "aggregate commercial-data pilot specification"
+      ],
+      "observableResult": "Collaborators gained traceable decisions, public action paths, source lineage, and a smallest-serious data-product scope.",
+      "proofIds": [
+        "fair-rent-campaign-memory",
+        "fair-rent-source-map",
+        "fair-rent-2023-web-relaunch",
+        "commercial-vacancy-quarterly-corpus",
+        "fair-rent-public-data-pilot"
+      ],
+      "claimIds": [
+        "CLM-CRS-SHARED-MEMORY-SYSTEM",
+        "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
+        "CLM-FAIRRENT-WEB-RELAUNCH-2023"
+      ],
+      "sourceBackedBoundary": "The record establishes Jamie's operating contribution; it does not establish sole campaign leadership, legislative authorship, policy causation, or City adoption of the data proposal."
+    },
+    {
+      "project": "CallNYC",
+      "context": "Constituent-services open data was difficult for residents to interpret as issue pathways and practical next steps.",
+      "jamieAction": "Jamie built an independent prototype and iterated its issue taxonomy, guidance, and public communication from observed data and user-facing constraints.",
+      "workProducts": [
+        "resident-facing issue pages",
+        "district and representative context",
+        "next-step guidance",
+        "repeatable social translation system"
+      ],
+      "observableResult": "The archived interface made issue pathways and possible next steps more legible and received public coverage and visible engagement from Council-member accounts.",
+      "proofIds": [
+        "callnyc-civic-data-guidance"
+      ],
+      "claimIds": [
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "CLM-CALLNYC-PRODUCT-ITERATION-DECISIONS"
+      ],
+      "sourceBackedBoundary": "CallNYC remained independent, archived, and unofficial; coverage and visible engagement do not establish City adoption, current service, universal reach, or policy impact."
+    }
+  ],
+  "visualEvidence": {
+    "publicProjectImageFiles": [],
+    "otherPublicAssets": [
+      "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+    ],
+    "requiredFields": [
+      "subject",
+      "dateOrBoundedChronology",
+      "projectContext",
+      "photographer",
+      "rightsHolder",
+      "permissionStatus",
+      "consentStatus",
+      "altText",
+      "caption",
+      "supportedClaimIds"
+    ],
+    "targetLeadProjects": [
+      "harry-j-epstein",
+      "fair-rent-nyc",
+      "callnyc"
+    ]
+  },
+  "maintenanceSnapshot": {
+    "reviewAgePolicyDays": 90,
+    "inventory": {
+      "intake": 62,
+      "sources": 253,
+      "sourceAssertions": 338,
+      "claims": 108,
+      "proofRecords": 44,
+      "researchTasks": 58,
+      "researchInquiries": 27,
+      "citationPages": 5
+    },
+    "heldClaimCount": 46,
+    "notRecoveredClaimCount": 3,
+    "inferenceClaimCount": 5,
+    "contradictoryAssertionCount": 0,
+    "queuedResearchTaskCount": 38,
+    "inProgressResearchTaskCount": 13,
+    "staleClaimCount": 0,
+    "staleProofCount": 0,
+    "unresolvedSourceIdCount": 0,
+    "intakeSourcesWithoutAssertionCount": 0,
+    "unlinkedSourceCount": 0,
+    "duplicateIdCount": 0,
+    "targetRoleCoverageMinimum": {
+      "technicalProjectManagement": 3,
+      "productOperations": 3,
+      "implementation": 6,
+      "dataOrKnowledgeSystems": 6,
+      "aiEvaluation": 1
+    },
+    "fingerprint": "7ea9ff9fc061d0b7cbaaa563f689389425f416086cd7b9c6008975c3b253e004"
+  }
+}

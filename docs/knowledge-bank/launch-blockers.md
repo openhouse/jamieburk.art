@@ -18,4 +18,12 @@
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.
+- [ ] Two independent reviewers assess the exact candidate, including at least
+  one project-relevant collaborator response.
+- [ ] Five blind hiring readers, including two relevant hiring practitioners,
+  complete the timed role-and-evidence tasks.
+- [ ] A bounded public-safe application-response sample is reviewed for role
+  comprehension and next-step behavior.
+- [ ] A photo editor selects lead-project visuals and rights, consent, captions,
+  alt text, and claim linkage are complete before publication.
 - [ ] Jamie approves final production deploy.
