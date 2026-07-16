@@ -353,7 +353,8 @@ const knowledgeBankInput = {
       surface: "/work/wowlist",
       sourceOrder: [
         "SRC-X-WOWLIST-PUNKS-USE-2015",
-        "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
+        "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
+        "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026"
       ],
       occurrences: [
         {
@@ -367,6 +368,12 @@ const knowledgeBankInput = {
           claimId: "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
           projection: "case-study",
           sourceIds: ["SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"]
+        },
+        {
+          id: "historical-scale-snapshot",
+          claimId: "CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT",
+          projection: "case-study",
+          sourceIds: ["SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026"]
         }
       ]
     },

@@ -303,6 +303,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## wowlist-historical-scale-snapshot - Aggregate historical scale
+
+**Status:** Ready with boundaries
+**Support level:** Moderate
+**Evidence class:** Approved public-safe aggregate historical summary
+**Public wording:** Historical product records preserve the scale: 1,800+ users and 16,000+ posts/events across roughly 35 city ecosystems.
+**Detailed public-safe wording:** The public-safe aggregate summary reports more than 1,800 historical users, more than 16,000 historical posts and events, and activity across roughly 35 city ecosystems.
+**Where to project:** WOW List case study and work-card summary.
+**Why it matters:** Gives the product story a bounded scale snapshot while keeping private user, organizer, and geolocation records out of the public portfolio.
+**Guardrail:** This is an approved aggregate historical summary, not an independent audit. City ecosystems are not official chapters, and the figures do not describe current activity.
+**Do not say:** An independent audit verified every aggregate; WOW List had official chapters in 35 cities; these figures describe current activity.
+**Protected boundaries:** Individual user rows, organizer contacts, geolocation records, and raw community data remain private.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  

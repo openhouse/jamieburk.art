@@ -54,6 +54,11 @@ It preserves the public interface and find-and-share product positioning. It
 does not establish usage scale, adoption, the complete workflow, or the
 complete project team.
 
+The public scale sentence now resolves to its own located claim and public-safe
+aggregate source. The source reports 1,800+ users, 16,000+ posts/events, and
+activity across roughly 35 city ecosystems, with an explicit boundary that the
+summary is not an independent audit or a current-activity measure.
+
 The complete population also surfaced nine representative mission-relevant
 destinations, including DIY cultural reporting, an all-ages organizing manual,
 the Allied Media Conference, cultural-space safety and mourning records,

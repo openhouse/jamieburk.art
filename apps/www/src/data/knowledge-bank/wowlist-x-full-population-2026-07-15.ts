@@ -90,6 +90,32 @@ export const wowListFullPopulationSourceRecords20260715 = [
       "the complete project team"
     ]
   },
+  {
+    id: "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
+    title: "WOW List public-safe aggregate historical summary",
+    organization: "Jamie Burkart portfolio knowledge bank",
+    author: "Jamie Burkart and Codex archival review",
+    kind: "research-run",
+    visibility: "public",
+    preservationStatus: "live",
+    capturedAt: reviewedAt,
+    accessedAt: reviewedAt,
+    canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/wowlist.md",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Jamie Burkart portfolio knowledge bank, public-safe WOW List aggregate historical summary, reviewed July 15, 2026.",
+    publicNote: "The summary preserves approved aggregate historical figures while excluding private user, organizer, and geolocation records.",
+    supportsGenerally: [
+      "more than 1,800 historical users",
+      "more than 16,000 historical posts and events",
+      "activity across roughly 35 city ecosystems"
+    ],
+    doesNotEstablish: [
+      "an independent audit of the aggregates",
+      "current platform activity",
+      "official chapters in 35 cities",
+      "individual user or organizer records"
+    ]
+  },
   socialPost(
     "SRC-X-WOWLIST-NYCDIY-2016",
     "WOW List explanation of the NYC DIY calendar workflow",
@@ -540,6 +566,31 @@ export const wowListFullPopulationClaimRecords20260715 = [
     reviewedBy: ["Jamie Burkart", "Codex public-web archival review"]
   },
   {
+    id: "CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT",
+    project: "wowlist",
+    internalClaim: "Approved aggregate historical records report more than 1,800 users, more than 16,000 posts and events, and activity across roughly 35 city ecosystems.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "Historical product records preserve the scale: 1,800+ users and 16,000+ posts/events across roughly 35 city ecosystems.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/work/wowlist"]
+    }],
+    evidence: [{
+      sourceId: "SRC-WOWLIST-PUBLIC-SAFE-AGGREGATE-2026",
+      relationship: "direct-support",
+      supports: ["the three reported aggregate historical scale fields"],
+      confidence: "moderate",
+      renderCitation: true
+    }],
+    boundaries: ["The aggregate summary is approved and public-safe but is not an independent audit; city ecosystems are not official chapters or a current-activity measure."],
+    antiClaims: ["An independent audit verified every aggregate", "WOW List had official chapters in 35 cities", "The figures describe current activity"],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex evidence-boundary review"]
+  },
+  {
     id: "CLM-WOWLIST-SOURCE-CURATION-PRACTICE",
     project: "wowlist",
     internalClaim: "The complete displayed population includes mission-relevant sources about DIY cultural documentation, all-ages organizing, cultural-space support and safety, mutual aid, and participatory media.",
@@ -576,49 +627,49 @@ export const wowListFullPopulationClaimRecords20260715 = [
       {
         sourceId: "SRC-WOWLIST-GOOD-TIMES-ZINES-2015",
         relationship: "context",
-        supports: ["DIY cultural documentation in a source circulated by the account"],
+        supports: ["DIY cultural documentation represented by this destination"],
         confidence: "high",
         renderCitation: false
       },
       {
         sourceId: "SRC-WOWLIST-GRASSTRONAUT-HOMEWORK-2015",
         relationship: "context",
-        supports: ["all-ages music organizing guidance in a source circulated by the account"],
+        supports: ["all-ages music organizing guidance represented by this destination"],
         confidence: "high",
         renderCitation: false
       },
       {
         sourceId: "SRC-WOWLIST-MEOW-WOLF-DIY-FUND-2017",
         relationship: "context",
-        supports: ["a DIY-space funding resource redistributed by the account"],
+        supports: ["a DIY-space funding resource represented by this destination"],
         confidence: "high",
         renderCitation: false
       },
       {
         sourceId: "SRC-WOWLIST-KQED-GHOST-SHIP-2016",
         relationship: "context",
-        supports: ["cultural-space safety and mourning context redistributed by the account"],
+        supports: ["cultural-space safety and mourning represented by this destination"],
         confidence: "high",
         renderCitation: false
       },
       {
         sourceId: "SRC-WOWLIST-STANDING-ROCK-2016",
         relationship: "context",
-        supports: ["an Indigenous-led mutual-aid resource redistributed by the account"],
+        supports: ["an Indigenous-led mutual-aid resource represented by this destination"],
         confidence: "high",
         renderCitation: false
       },
       {
         sourceId: "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015",
         relationship: "context",
-        supports: ["participatory-media convening context circulated by the account"],
+        supports: ["participatory-media convening context represented by this destination"],
         confidence: "high",
         renderCitation: false
       },
       {
         sourceId: "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
         relationship: "context",
-        supports: ["the archived civic event-sharing surface circulated by the account"],
+        supports: ["the archived civic event-sharing surface represented by this destination"],
         confidence: "high",
         renderCitation: false
       }
@@ -702,6 +753,7 @@ export const wowListFullPopulationIntakeRecords20260715 = [
       "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
       "CLM-WOWLIST-CALENDAR-COMMUNITY-DIALOGUE",
       "CLM-WOWLIST-ARCHIVED-HOME-POSITIONING",
+      "CLM-WOWLIST-HISTORICAL-SCALE-SNAPSHOT",
       "CLM-WOWLIST-SOURCE-CURATION-PRACTICE"
     ],
     inquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
