@@ -301,6 +301,16 @@ test("shared observations carry candidate-specific evidence roles and limits", (
     candidateClaimIds.every((id) => candidateRelationships.some(({ candidateClaimId }) => candidateClaimId === id))
   ));
 
+  const blanketRelationships = structuredClone(knowledgeLifecycle);
+  const blanketObservation = blanketRelationships.observations.find(({ id }) => id === "OBS-WOWLIST-FACEBOOK-MISSION-AND-STAKEHOLDER-PATTERNS");
+  blanketObservation.candidateRelationships = blanketObservation.candidateClaimIds.map((candidateClaimId) => ({
+    candidateClaimId,
+    evidenceRole: blanketObservation.evidenceRole,
+    supports: blanketObservation.statement,
+    limitations: blanketObservation.doesNotEstablish,
+  }));
+  assert.match(validateKnowledgeLifecycle(blanketRelationships).join("\n"), /identical blanket evidence relationships/);
+
   const directSupport = retrieveKnowledgePalette({
     projectId: "PRJ-NYC-ARTIST-COALITION",
     evidenceRole: "direct-support"
@@ -821,12 +831,24 @@ test("WOW List retrieval preserves research depth and exact-route selectivity", 
 
   const publicCaseStudy = retrieveKnowledgePalette({ surface: "/work/wowlist", publicationSafe: true });
   const publicCandidateIds = new Set(publicCaseStudy.candidates.map(({ id }) => id));
+  const publicCanonicalIds = new Set(publicCaseStudy.canonicalClaims.map(({ id }) => id));
   assert.ok(publicCandidateIds.has("CND-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT"));
+  assert.ok(!publicCandidateIds.has("CND-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"));
+  assert.ok(!publicCanonicalIds.has("CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"));
   assert.ok(!publicCandidateIds.has("CND-WOWLIST-FACEBOOK-POST-POPULATION"));
   assert.ok(!publicCandidateIds.has("CND-WOWLIST-FACEBOOK-OPERATING-PRACTICE"));
   assert.ok(!publicCandidateIds.has("CND-WOWLIST-FACEBOOK-CARE-ADVOCACY-ARC"));
   assert.deepEqual(publicCaseStudy.researchTasks, []);
   assert.deepEqual(publicCaseStudy.mediaLeads, []);
+
+  const retiredDecision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-WOWLIST-SOCIAL-CASE-STUDY-RETIRE");
+  assert.equal(retiredDecision?.decision, "retire");
+  assert.equal(retiredDecision?.supersedesDecisionId, "DEC-WOWLIST-SOCIAL-PROMOTE");
+  assert.deepEqual(retiredDecision?.allowedSurfaces, []);
+
+  const staleRetirement = structuredClone(knowledgeLifecycle);
+  staleRetirement.promotionDecisions.find(({ id }) => id === "DEC-WOWLIST-SOCIAL-CASE-STUDY-RETIRE").supersedesDecisionId = undefined;
+  assert.match(validateKnowledgeLifecycle(staleRetirement).join("\n"), /Inactive canonical projection .* retains active route authorization/);
 });
 
 test("WOW List visual research remains a rights-gated evidence feedback loop", () => {
@@ -845,6 +867,7 @@ test("WOW List visual research remains a rights-gated evidence feedback loop", (
   assert.equal(media?.consentStatus, "review-needed");
   assert.equal(media?.displayStatus, "hold");
   assert.equal(media?.contentReviewStatus, "not-authorized");
+  assert.deepEqual(media?.contentReviewTaskIds, [task.id]);
   assert.ok(media?.researchTaskIds.includes(task.id));
 
   const unauthorizedReview = structuredClone(knowledgeLifecycle);
@@ -852,6 +875,20 @@ test("WOW List visual research remains a rights-gated evidence feedback loop", (
   assert.match(
     validateKnowledgeLifecycle(unauthorizedReview).join("\n"),
     /cannot enter in-progress before media lead MEDIA-WOWLIST-MEMBERS-MEETING-2015 receives content-review authorization/,
+  );
+
+  const omittedTaskGate = structuredClone(knowledgeLifecycle);
+  delete omittedTaskGate.researchTasks.find(({ id }) => id === task.id).requiresContentReviewAuthorization;
+  assert.match(
+    validateKnowledgeLifecycle(omittedTaskGate).join("\n"),
+    /must declare content-review authorization/,
+  );
+
+  const omittedMediaAssignment = structuredClone(knowledgeLifecycle);
+  delete omittedMediaAssignment.mediaLeads.find(({ id }) => id === media.id).contentReviewTaskIds;
+  assert.match(
+    validateKnowledgeLifecycle(omittedMediaAssignment).join("\n"),
+    /must explicitly declare content-review task IDs/,
   );
 
   const ungovernedAuthorization = structuredClone(media);

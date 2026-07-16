@@ -51,6 +51,9 @@ lead -> source -> atomic observation -> candidate claim -> research task
 8. **Return visual discoveries to research.** Photo editors receive bounded
    prompts. A visual discovery becomes a lead or observation only after date,
    place, identity, role, rights, consent, and meaning are separately reviewed.
+   Protected content review is assigned by the media record, not inferred from
+   an optional task flag, and requires recorded human authorization before the
+   assigned task can advance.
 
 ## Commands
 

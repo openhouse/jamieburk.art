@@ -535,7 +535,7 @@ const knowledgeLifecycleInput = {
     { id: "MEDIA-CHESTNUT-DUMPSTER-DAY-COMMS", title: "Chestnut Dumpster Day communications package", projectIds: ["PRJ-KC-TOWN-HALL", "PRJ-TIRED-OF-TIRES", "PRJ-CLEVELAND-AVE-UNIFY-BEAUTIFY"], kind: "collection", publicSafeDescription: "A protected multi-format neighborhood package includes banner and flier source files, exports, a distribution photograph, and geospatial reference material.", protectedLocatorId: "ARCHIVE-CHESTNUT-DUMPSTER-DAY-COMMS-001", sourceIds: ["SRC-CHESTNUT-DUMPSTER-DAY-COMMS-PACKAGE"], rightsStatus: "unknown", consentStatus: "review-needed", displayStatus: "hold", candidateClaimIds: ["CND-EAST-KC-PRO-BONO-COMMUNICATIONS"], researchTaskIds: ["TASK-CLEVELAND-AVE-ROLE-IMPACT", "TASK-GOOGLE-SHARED-DRIVE-ARCHIVE-PRODUCTION-2026-07-15"], researchPrompt: "Recover authorship and date metadata, identify the public distribution context, and seek partner confirmation without exposing residents, contacts, or private event records.", status: "reviewed" },
     { id: "MEDIA-NYCA-SAVE-JIMMYS-CORNER-PHOTOS-2026", title: "Save Jimmy's Corner photo package", projectIds: ["PRJ-NYC-ARTIST-COALITION"], kind: "collection", publicSafeDescription: "A protected dated photographic sequence is associated at folder level with Jamie and NYC Artist Coalition.", protectedLocatorId: "ARCHIVE-NYCA-SAVE-JIMMYS-CORNER-PHOTOS-2026-001", sourceIds: ["SRC-NYCA-SAVE-JIMMYS-CORNER-PHOTO-PACKAGE-2026"], rightsStatus: "unknown", consentStatus: "review-needed", displayStatus: "hold", candidateClaimIds: [], researchTaskIds: ["TASK-GOOGLE-SHARED-DRIVE-ARCHIVE-PRODUCTION-2026-07-15", "TASK-PHOTO-ARCHIVE-CURATION"], researchPrompt: "Establish event context, image-level authorship, depicted identities, rights, and consent before treating any frame as factual evidence or a display candidate.", status: "queued" },
     { id: "MEDIA-SUNDAY-DINNER-ZOOM-ARCHIVE", title: "Sunday Dinner Zoom recording archive", projectIds: ["PRJ-SUNDAY-DINNER-196"], kind: "collection", publicSafeDescription: "Protected meeting recordings and export variants document a digital continuity layer without authorizing participant identification or public reuse.", protectedLocatorId: "ARCHIVE-SUNDAY-DINNER-ZOOM-001", sourceIds: ["SRC-SUNDAY-DINNER-ZOOM-ARCHIVE"], rightsStatus: "unknown", consentStatus: "review-needed", displayStatus: "hold", candidateClaimIds: [], researchTaskIds: ["TASK-GOOGLE-SHARED-DRIVE-ARCHIVE-PRODUCTION-2026-07-15"], researchPrompt: "Keep the archive closed unless a specific research question and consent path justify content review; do not infer gathering count or participant approval from file volume.", status: "held" },
-    { id: "MEDIA-WOWLIST-MEMBERS-MEETING-2015", title: "WOW List members meeting video", projectIds: ["PRJ-WOWLIST"], kind: "video", publicSafeDescription: "A protected 2015 members-meeting recording may provide future platform-history and operating-method context.", protectedLocatorId: "ARCHIVE-WOWLIST-MEMBERS-MEETING-2015-001", sourceIds: ["SRC-WOWLIST-MEMBERS-MEETING-VIDEO-2015"], rightsStatus: "unknown", consentStatus: "review-needed", displayStatus: "hold", candidateClaimIds: ["CND-WOWLIST-FACEBOOK-OPERATING-PRACTICE", "CND-WOWLIST-FACEBOOK-CARE-ADVOCACY-ARC"], researchTaskIds: ["TASK-GOOGLE-SHARED-DRIVE-ARCHIVE-PRODUCTION-2026-07-15", "TASK-WOWLIST-MEMBERS-MEETING-VISUAL-RESEARCH"], researchPrompt: "Resolve rights and consent first; then close-read only against a bounded platform-history or operating-method question, create atomic observations, protect participant identity, and keep evidence discovery separate from display authorization.", contentReviewStatus: "not-authorized", status: "queued" }
+    { id: "MEDIA-WOWLIST-MEMBERS-MEETING-2015", title: "WOW List members meeting video", projectIds: ["PRJ-WOWLIST"], kind: "video", publicSafeDescription: "A protected 2015 members-meeting recording may provide future platform-history and operating-method context.", protectedLocatorId: "ARCHIVE-WOWLIST-MEMBERS-MEETING-2015-001", sourceIds: ["SRC-WOWLIST-MEMBERS-MEETING-VIDEO-2015"], rightsStatus: "unknown", consentStatus: "review-needed", displayStatus: "hold", candidateClaimIds: ["CND-WOWLIST-FACEBOOK-OPERATING-PRACTICE", "CND-WOWLIST-FACEBOOK-CARE-ADVOCACY-ARC"], researchTaskIds: ["TASK-GOOGLE-SHARED-DRIVE-ARCHIVE-PRODUCTION-2026-07-15", "TASK-WOWLIST-MEMBERS-MEETING-VISUAL-RESEARCH"], contentReviewTaskIds: ["TASK-WOWLIST-MEMBERS-MEETING-VISUAL-RESEARCH"], researchPrompt: "Resolve rights and consent first; then close-read only against a bounded platform-history or operating-method question, create atomic observations, protect participant identity, and keep evidence discovery separate from display authorization.", contentReviewStatus: "not-authorized", status: "queued" }
   ]
 };
 
@@ -633,14 +633,20 @@ export const knowledgeLifecycle = knowledgeLifecycleSchema.parse({
 
     return {
       ...observation,
-      candidateRelationships: observation.candidateClaimIds.map((candidateClaimId) =>
-        relationshipByCandidate.get(candidateClaimId) ?? {
-          candidateClaimId,
-          evidenceRole: observation.evidenceRole,
-          supports: observation.statement,
-          limitations: observation.doesNotEstablish,
-        }
-      )
+      candidateRelationships: observation.candidateClaimIds.length > 1
+        ? configuredRelationships
+        : observation.candidateClaimIds.map((candidateClaimId) =>
+            relationshipByCandidate.get(candidateClaimId) ?? {
+              candidateClaimId,
+              evidenceRole: observation.evidenceRole,
+              supports: observation.statement,
+              limitations: observation.doesNotEstablish,
+            }
+          )
     };
-  })
+  }),
+  mediaLeads: knowledgeLifecycleInput.mediaLeads.map((item) => ({
+    ...item,
+    contentReviewTaskIds: "contentReviewTaskIds" in item ? item.contentReviewTaskIds : [],
+  })),
 });

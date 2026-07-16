@@ -242,6 +242,7 @@ export const mediaLeadSchema = z.object({
   displayStatus: z.enum(["candidate", "metadata-only", "hold", "do-not-publish"]),
   candidateClaimIds: idList,
   researchTaskIds: idList,
+  contentReviewTaskIds: idList.optional(),
   researchPrompt: z.string().min(1),
   contentReviewStatus: z.enum(["not-authorized", "authorized", "completed"]).optional(),
   contentReviewAuthority: z.enum(["jamie-approved", "collaborator-approved"]).optional(),

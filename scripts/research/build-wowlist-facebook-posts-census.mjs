@@ -243,6 +243,8 @@ const output = {
   generatedAt: "2026-07-15",
   project: "WOW List",
   surface: "Facebook page posts",
+  platform: "facebook",
+  corpusId: "wowlist-facebook-owner-posts-2026-07-15",
   publicSafety: {
     status: "public-safe-project-account-census",
     included:

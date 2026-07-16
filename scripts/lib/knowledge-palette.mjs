@@ -21,7 +21,7 @@ export function retrieveKnowledgePalette(filters = {}) {
     ? knowledgeLifecycle.editorialBriefs.find(({ id }) => id === filters.briefId)
     : undefined;
   if (filters.briefId && !exactBrief) throw new Error(`Unknown editorial brief ${filters.briefId}`);
-  const matchingBriefs = exactBrief
+  const candidateBriefs = exactBrief
     ? [exactBrief]
     : knowledgeLifecycle.editorialBriefs.filter((brief) =>
       filters.surface
@@ -30,6 +30,9 @@ export function retrieveKnowledgePalette(filters = {}) {
           (!filters.purposeTag || brief.purposeTags.includes(filters.purposeTag)) &&
           Boolean(filters.audienceTag || filters.purposeTag)
     );
+  const matchingBriefs = filters.publicationSafe && filters.surface
+    ? candidateBriefs.filter((brief) => brief.status === "active" && brief.publicationIntent === "public-composition")
+    : candidateBriefs;
 
   const selectedProjectIds = new Set([
     ...matchingBriefs.flatMap(({ projectIds }) => projectIds),

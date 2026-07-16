@@ -20,6 +20,8 @@ const builderPath =
 const fixture = JSON.parse(await readFile(fixturePath, "utf8"));
 
 test("WOW List Facebook census reconciles the full recovered population", () => {
+  assert.equal(fixture.platform, "facebook");
+  assert.equal(fixture.corpusId, "wowlist-facebook-owner-posts-2026-07-15");
   assert.equal(fixture.populationReconciliation.protectedCapturePageCount, 19);
   assert.equal(fixture.populationReconciliation.protectedCaptureTerminal, true);
   assert.equal(fixture.populationReconciliation.protectedCaptureUniqueRecordCount, 57);

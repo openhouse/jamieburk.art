@@ -123,6 +123,14 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     if (JSON.stringify(linked) !== JSON.stringify(related)) {
       errors.push(`Observation ${observation.id} must define a candidate-specific evidence relationship for every linked candidate`);
     }
+    if (observation.candidateClaimIds.length > 1 && observation.candidateRelationships.length > 1) {
+      const relationshipSignatures = new Set(observation.candidateRelationships.map(({ evidenceRole, supports, limitations }) =>
+        JSON.stringify({ evidenceRole, supports, limitations })
+      ));
+      if (relationshipSignatures.size === 1) {
+        errors.push(`Observation ${observation.id} uses identical blanket evidence relationships for multiple candidates`);
+      }
+    }
     for (const candidateClaimId of relationshipIds) {
       if (!observation.candidateClaimIds.includes(candidateClaimId)) {
         errors.push(`Observation ${observation.id} relationship references unlinked candidate ${candidateClaimId}`);
@@ -222,11 +230,14 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     if (task.status === "completed" && !task.completedAt) errors.push(`Completed research task ${task.id} has no completion date`);
     if (task.status === "completed" && !task.findings.length) errors.push(`Completed research task ${task.id} has no findings`);
     if (task.status !== "completed" && task.completedAt) errors.push(`Incomplete research task ${task.id} has a completion date`);
+    const contentReviewMedia = input.mediaLeads.filter((item) => item.contentReviewTaskIds?.includes(task.id));
+    if (contentReviewMedia.length && task.requiresContentReviewAuthorization !== true) {
+      errors.push(`Research task ${task.id} must declare content-review authorization because a media lead assigns it protected content review`);
+    }
     if (task.requiresContentReviewAuthorization) {
-      const linkedMedia = input.mediaLeads.filter((item) => item.researchTaskIds.includes(task.id));
-      if (!linkedMedia.length) errors.push(`Research task ${task.id} requires content-review authorization but has no linked media lead`);
+      if (!contentReviewMedia.length) errors.push(`Research task ${task.id} requires content-review authorization but no media lead assigns it protected content review`);
       if (task.status !== "open") {
-        for (const item of linkedMedia) {
+        for (const item of contentReviewMedia) {
           if (!["authorized", "completed"].includes(item.contentReviewStatus)) {
             errors.push(`Research task ${task.id} cannot enter ${task.status} before media lead ${item.id} receives content-review authorization`);
           }
@@ -279,6 +290,14 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
           activeDecisionsFor(candidate).some((decision) => authorizesSurface(decision, surface))
         );
         if (!authorized) errors.push(`Active canonical projection ${claim.id} lacks current human approval for ${surface}`);
+      }
+    }
+    for (const projection of claim.projections.filter(({ status }) => status !== "active")) {
+      for (const surface of projection.surfaces) {
+        const staleAuthorization = lifecycleCandidates.some((candidate) =>
+          activeDecisionsFor(candidate).some((decision) => authorizesSurface(decision, surface))
+        );
+        if (staleAuthorization) errors.push(`Inactive canonical projection ${claim.id} retains active route authorization for ${surface}`);
       }
     }
   }
@@ -445,6 +464,11 @@ export function validateKnowledgeLifecycle(input = knowledgeLifecycle) {
     checkRefs(errors, `Media lead ${item.id}`, item.projectIds, projects, "project");
     checkRefs(errors, `Media lead ${item.id}`, item.candidateClaimIds, candidates, "candidate claim");
     checkRefs(errors, `Media lead ${item.id}`, item.researchTaskIds, tasks, "research task");
+    if (!Array.isArray(item.contentReviewTaskIds)) errors.push(`Media lead ${item.id} must explicitly declare content-review task IDs`);
+    checkRefs(errors, `Media lead ${item.id} content review`, item.contentReviewTaskIds ?? [], tasks, "research task");
+    for (const taskId of item.contentReviewTaskIds ?? []) {
+      if (!item.researchTaskIds.includes(taskId)) errors.push(`Media lead ${item.id} assigns content review to unlinked research task ${taskId}`);
+    }
     checkRefs(errors, `Media lead ${item.id}`, item.sourceIds, sources, "source");
     if (!item.protectedLocatorId && !item.sourceIds.length) errors.push(`Media lead ${item.id} has neither an opaque locator nor a canonical source`);
     if (item.displayStatus === "candidate" && (item.rightsStatus !== "cleared" || !["cleared", "not-applicable"].includes(item.consentStatus))) errors.push(`Display candidate ${item.id} lacks rights or consent clearance`);

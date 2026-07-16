@@ -11,7 +11,6 @@ import {
   wowListArchiveSummary,
   wowListStakeholderSignals
 } from "../apps/www/src/data/knowledge-bank/social-archive.ts";
-import { wowlistFacebookPostReviewSummary } from "../apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts";
 import { knowledgeLifecycle } from "../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 
@@ -28,28 +27,34 @@ const expect = (condition, message) => {
   if (!condition) failures.push(message);
 };
 const uniqueCount = (values) => new Set(values).size;
-const validateWowListPlatformCorpusBoundary = ({ xRecovered, facebookRecovered }) => {
+const recordSetDigest = (values) => createHash("sha256").update([...values].sort().join("\n")).digest("hex");
+const wowListFacebookFixture = JSON.parse(readFileSync(
+  "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+  "utf8",
+));
+const validateWowListPlatformCorpusBoundary = ({ xCorpus, facebookCorpus }) => {
   const errors = [];
-  if (xRecovered === facebookRecovered) {
+  const xIds = xCorpus.records.map(({ statusId }) => statusId);
+  const facebookIds = facebookCorpus.records.map(({ postId }) => postId);
+  if (xCorpus.platform !== "x" || xCorpus.corpusId !== "wowlist-x-profile-2026-07-15") {
+    errors.push("WOW List X corpus identity is missing or invalid");
+  }
+  if (facebookCorpus.platform !== "facebook" || facebookCorpus.corpusId !== "wowlist-facebook-owner-posts-2026-07-15") {
+    errors.push("WOW List Facebook corpus identity is missing or invalid");
+  }
+  if (xCorpus.corpusId === facebookCorpus.corpusId) errors.push("WOW List platform corpora share an identity");
+  if (xIds.length === facebookIds.length) {
     errors.push("WOW List X and Facebook recovered-population denominators were conflated");
   }
+  if (xCorpus.recordSetSha256 !== "495bf365fa0de54f5fe16be96127681b7f1f75e6bb5fe4ae9f6b82bc72081776" || recordSetDigest(xIds) !== xCorpus.recordSetSha256) {
+    errors.push("WOW List X record-set provenance changed");
+  }
+  if (recordSetDigest(facebookIds) !== "0375eb75ef7780ee4675d19a2d0d5a76096522d8c8b825e87c8e01ec59d7e4b1") {
+    errors.push("WOW List Facebook record-set provenance changed");
+  }
+  if (xIds.some((id) => facebookIds.includes(id))) errors.push("WOW List X and Facebook record identities overlap");
   return errors;
 };
-
-expect(
-  validateWowListPlatformCorpusBoundary({
-    xRecovered: wowListArchiveSummary.recovered,
-    facebookRecovered: wowlistFacebookPostReviewSummary.recoveredPostCount,
-  }).length === 0,
-  "WOW List X and Facebook corpus boundaries diverged",
-);
-expect(
-  validateWowListPlatformCorpusBoundary({
-    xRecovered: wowListArchiveSummary.recovered,
-    facebookRecovered: wowListArchiveSummary.recovered,
-  }).length > 0,
-  "WOW List platform boundary validator accepted a denominator-conflation mutation",
-);
 
 const collectFixtureSchemaFailures = (fixture) => {
   const schemaFailures = [];
@@ -78,7 +83,7 @@ const collectFixtureSchemaFailures = (fixture) => {
       types: ["original", "reply", "repost"]
     },
     wowList: {
-      accountKeys: ["account", "profileReported", "records"],
+      accountKeys: ["account", "platform", "corpusId", "recordSetSha256", "profileReported", "records"],
       recordKeys: ["statusId", "publishedOn", "type", "postedUrlCount"],
       types: ["authored", "reply", "reposted"]
     },
@@ -199,6 +204,23 @@ if (existsSync(populationFixturePath)) {
   }
   privacySchemaMutationCases = forbiddenMutations.length;
 
+  expect(
+    validateWowListPlatformCorpusBoundary({
+      xCorpus: populationFixture.wowList,
+      facebookCorpus: wowListFacebookFixture,
+    }).length === 0,
+    "WOW List X and Facebook corpus identities or record sets diverged",
+  );
+  const contaminatedWowListX = structuredClone(populationFixture.wowList);
+  contaminatedWowListX.records[0].statusId = wowListFacebookFixture.records[0].postId;
+  expect(
+    validateWowListPlatformCorpusBoundary({
+      xCorpus: contaminatedWowListX,
+      facebookCorpus: wowListFacebookFixture,
+    }).length > 0,
+    "WOW List platform boundary validator accepted a Facebook record in the X corpus",
+  );
+
   const callNycRecords = populationFixture.callnyc?.records ?? [];
   const callNycStatusIds = callNycRecords.map(({ statusId }) => statusId);
   const recognitionRecords = callNycRecords.filter(({ recognitionHandle }) => recognitionHandle);
@@ -224,6 +246,9 @@ if (existsSync(populationFixturePath)) {
   const wowListRecords = populationFixture.wowList?.records ?? [];
   const wowListStatusIds = wowListRecords.map(({ statusId }) => statusId);
   expect(populationFixture.wowList?.account === "@wowlist", "WOW List fixture account changed");
+  expect(populationFixture.wowList?.platform === "x", "WOW List fixture platform changed");
+  expect(populationFixture.wowList?.corpusId === "wowlist-x-profile-2026-07-15", "WOW List fixture corpus identity changed");
+  expect(populationFixture.wowList?.recordSetSha256 === recordSetDigest(wowListStatusIds), "WOW List fixture record-set digest diverged");
   expect(populationFixture.wowList?.profileReported === 38, "WOW List fixture profile count must remain 38");
   expect(wowListRecords.length === populationFixture.wowList?.profileReported, "WOW List fixture does not reconcile to the profile count");
   expect(uniqueCount(wowListStatusIds) === wowListRecords.length && wowListStatusIds.every((id) => /^\d+$/.test(id)), "WOW List fixture status IDs are invalid or duplicated");

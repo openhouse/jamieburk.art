@@ -52,6 +52,10 @@ application source that produced it; the release check fails when either drifts.
 Publication-safe destination queries do not infer additional canonical claims
 from a related project. They return only manifest-selected claims and
 candidates with current approval for those claims and that destination.
+Surface queries also ignore internal and research briefs: only the active
+public-composition brief may select a public candidate palette. Retiring a
+projection requires a superseding decision so stale route authorization cannot
+restore deprecated copy.
 Every publication-safe query omits research tasks and media. Those records
 remain available to internal planning queries and require a separate explicit
 publication path.

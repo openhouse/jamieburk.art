@@ -1875,6 +1875,9 @@
   },
   "wowList": {
     "account": "@wowlist",
+    "platform": "x",
+    "corpusId": "wowlist-x-profile-2026-07-15",
+    "recordSetSha256": "495bf365fa0de54f5fe16be96127681b7f1f75e6bb5fe4ae9f6b82bc72081776",
     "profileReported": 38,
     "records": [
       {

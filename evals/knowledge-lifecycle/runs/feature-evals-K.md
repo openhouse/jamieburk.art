@@ -456,3 +456,29 @@ exact-head independent semantic evaluation remains required.
 The focused lifecycle, Facebook, and social-archive gates pass after this
 repair. A new exact-head pair is required because the prior judge evaluated the
 superseded revision.
+
+## WOW List cross-corpus governance repair
+
+- A second independent judge challenged the prior revision with stronger
+  mutations and found three release-blocking paths: a retired X-era decision
+  could still authorize `/work/wowlist`, protected media review depended on an
+  optional task flag, and a Facebook record ID could enter the X fixture while
+  the denominator-only boundary check still passed.
+- Added a Jamie-approved retirement decision that supersedes the old X
+  case-study authorization while retaining the 38-record corpus as internal
+  knowledge-bank depth. Publication-safe surface retrieval now uses only the
+  active `public-composition` brief, so internal briefs cannot widen a public
+  palette.
+- Made protected content-review assignments originate on the media record.
+  Every media lead now carries an explicit content-review task list, and a
+  linked task cannot omit or downgrade its authorization requirement.
+- Added platform and corpus identities, a pinned X record-set digest, a pinned
+  Facebook record-set digest, record-set disjointness, and a direct
+  cross-platform contamination mutation.
+- Rejected identical blanket relationships on multi-candidate observations and
+  stopped synthesizing missing multi-candidate relationships from
+  observation-wide prose.
+
+The focused typecheck, 47 lifecycle tests, social-archive gate, and seven-test
+WOW List Facebook suite pass. Fresh exact-head semantic evaluation remains
+required after committing this repair.
