@@ -1,8 +1,9 @@
 # NYC Artist Coalition and nightlife policy
 
-Status: developing knowledge cluster with strong public support and several
-open role questions. One new official-testimony claim is selected for the
-FairRentNYC case study; other new records remain unsurfaced.
+Status: developing knowledge cluster with strong public support, a newly
+documented institution-facing function, and several open role questions. One
+official-testimony claim is selected for the FairRentNYC case study; the new
+institutional-value records remain unsurfaced.
 
 The campaign press catalog now preserves 45 placements across Let NYC Dance,
 Talks Not Raids, Save NYC Spaces, and Fair Rent NYC as 44 canonical article
@@ -26,6 +27,10 @@ one person or organization.
 | Mixmag, September 2017 | Jamie testified at a Council hearing as an NYC Artist Coalition member about discriminatory Cabaret Law enforcement. | Hearing production, legislative authorship, or individual causality for repeal. |
 | Bedford + Bowery, October 2017 | NYC Artist Coalition spearheaded a Market Hotel town hall; Jamie and Olympia Kazi were named among coalition speakers. | Jamie's exact production or facilitation duties and later office outcomes. |
 | CreateNYC public appendix, March 2017 | The coalition collectively requested Cabaret Law repeal, MARCH transparency, cultural liaisons, urgent repairs support, and affordability measures. | Individual authorship, implementation, or MARCH disbanding. |
+| Finkelpearl CreateNYC testimony, February 2017 | DCLA presented the DIY Office Hours as producing formal recommendations, continued organizing, and an ongoing agency relationship. | The testimony does not name NYC Artist Coalition or reveal Finkelpearl's private motive. |
+| DCLA commissioner message | DCLA explicitly said CreateNYC Office Hours helped launch NYC Artist Coalition and connected continued public dialogue to what residents want from government support for culture. | Complete founding history, individual credit, dependency, or adoption of every recommendation. |
+| NYC Council Cabaret Law hearing, June 2017 | Multiple coalition participants testified; Jamie identified himself as a coalition member asking the Council to repeal the law. | Bill authorship, automatic acceptance, or policy causality. |
+| NYC Council stated meeting, June 2017 | Espinal credited Dance Liberation Network and NYC Artist Coalition for ground work that brought attention to Intro 1652 while urging colleagues to sign on. | Indispensability, sole causality, or Jamie's individual share of the credited work. |
 | NYC Council transcript, October 2018 | Jamie testified as an NYC Artist Coalition member for Intro 737 and commercial rent protections for cultural spaces. | Legislative authorship, passage, or sole campaign leadership. |
 
 NPR uses a variant coalition name in its published identification. The bank
@@ -46,6 +51,16 @@ for the knowledge cluster.
 - `CLM-NYCAC-CREATENYC-RECOMMENDATIONS-2017`
 - `CLM-NYCAC-CREATENYC-MARCH-TRANSPARENCY-2017`
 - `CLM-NYCAC-CREATENYC-SUPPORT-PROPOSALS-2017`
+- `CLM-DCLA-DIY-ENGAGEMENT-IN-COUNCIL-TESTIMONY-2017`
+- `CLM-DCLA-OFFICE-HOURS-HELPED-LAUNCH-NYCAC-2017`
+- `CLM-NYCAC-COUNCIL-TESTIMONY-PARTICIPATION-2017`
+- `CLM-ESPINAL-CREDITED-NYCAC-GROUND-WORK-2017`
+- `CLM-JAMIE-NYCAC-INSTITUTIONAL-PARTICIPATION-2017`
+- `CLM-FINKELPEARL-DIY-EXAMPLE-INSTITUTIONAL-UTILITY-2017` (`inference`)
+- `CLM-NYCAC-DCLA-KNOWLEDGE-INTERMEDIARY-2017` (`inference`)
+- `CLM-NYCAC-COUNCIL-POLICY-INTERFACE-2017` (`inference`)
+- `CLM-NYCAC-ESPINAL-RECIPROCAL-LEGISLATIVE-RELATIONSHIP-2017` (`inference`)
+- `CLM-JAMIE-NYCAC-INSTITUTIONAL-INTERFACE-CONTRIBUTION-2017` (`inference`)
 - `CLM-NYCAC-SBJSA-TESTIMONY-2018`
 
 The strongest current public-source formulation is that reporting documents
@@ -53,6 +68,37 @@ Jamie performing specific safety-education and repeal-advocacy work as part of
 NYC Artist Coalition, and identifies him as a founding member. It does not yet
 support a complete account of his instrumental founding or policy-development
 role.
+
+## Institutional value
+
+The official records now support a clearer account of why the coalition's work
+was useful inside government. NYC Artist Coalition aggregated recurring
+experience from community-driven cultural spaces, translated that experience
+into formal recommendations and testimony, and sustained an interlocutor after
+the initial DCLA meeting. DCLA gained structured feedback from a field that did
+not map neatly onto formal cultural institutions. Council actors gained public
+testimony, problem definitions, proposed remedies, and an organized
+constituency relevant to oversight and legislation.
+
+Finkelpearl's February testimony used the DIY Office Hours as an example while
+arguing that CreateNYC engagement was already producing action, recommendations,
+and continuing relationships. It is reasonable to infer that the example helped
+make the value of the engagement process legible to the Council; the testimony
+does not state his private motive.
+
+Espinal's public statement is more direct. While asking colleagues to support
+Intro 1652, he credited Dance Liberation Network and NYC Artist Coalition for
+ground work that brought attention to the bill. The resulting relationship is
+best understood as reciprocal: organizers supplied field knowledge, testimony,
+and public attention; Espinal supplied a hearing, sponsorship, and a legislative
+route. This does not establish dependency, bill authorship, or sole causality.
+
+Jamie's documented founding-member identification, fire-code study groups,
+public advocacy, Council testimony, and town-hall speaking place him inside
+this institution-facing work. They support a held inference that he helped
+build and operate the interface; the complete division of labor remains open.
+See the
+[institutional-value research note](../research/2026-07-16-nycac-institutional-value.md).
 
 ## Open research
 
@@ -70,6 +116,10 @@ role.
   enactment, and early operating design.
 - Research Talks Not Raids, its transparency work concerning MARCH raids, and
   the evidence for any contribution to institutional change.
+- Seek dated role-bearing records and collaborator review that can allocate
+  Jamie's formation, recommendation-drafting, communications, and
+  event-production contributions within the now-supported institutional
+  interface.
 
 ## Editorial position
 

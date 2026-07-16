@@ -349,6 +349,42 @@ export const requiredParticipationLineageInquiryIds = [
   "INQ-CALLSCRIPT-NYCAC-JAMIE-ROLE-ATTRIBUTION-2026"
 ];
 
+export const requiredInstitutionalValueSourceIds = [
+  "SRC-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2017",
+  "SRC-DCLA-FINKELPEARL-MESSAGE-NYCAC-2017",
+  "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19",
+  "SRC-NYC-COUNCIL-ESPINAL-COALITION-CREDIT-2017-06-21"
+];
+
+export const requiredInstitutionalValueDirectClaimIds = [
+  "CLM-DCLA-DIY-ENGAGEMENT-IN-COUNCIL-TESTIMONY-2017",
+  "CLM-DCLA-OFFICE-HOURS-HELPED-LAUNCH-NYCAC-2017",
+  "CLM-NYCAC-COUNCIL-TESTIMONY-PARTICIPATION-2017",
+  "CLM-ESPINAL-CREDITED-NYCAC-GROUND-WORK-2017",
+  "CLM-JAMIE-NYCAC-INSTITUTIONAL-PARTICIPATION-2017"
+];
+
+export const requiredInstitutionalValueInferenceClaimIds = [
+  "CLM-FINKELPEARL-DIY-EXAMPLE-INSTITUTIONAL-UTILITY-2017",
+  "CLM-NYCAC-DCLA-KNOWLEDGE-INTERMEDIARY-2017",
+  "CLM-NYCAC-COUNCIL-POLICY-INTERFACE-2017",
+  "CLM-NYCAC-ESPINAL-RECIPROCAL-LEGISLATIVE-RELATIONSHIP-2017",
+  "CLM-JAMIE-NYCAC-INSTITUTIONAL-INTERFACE-CONTRIBUTION-2017"
+];
+
+export const requiredInstitutionalValueIntakeIds = [
+  "INTAKE-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2026",
+  "INTAKE-DCLA-FINKELPEARL-MESSAGE-NYCAC-2026",
+  "INTAKE-NYC-COUNCIL-CABARET-HEARING-2017-2026",
+  "INTAKE-NYC-COUNCIL-ESPINAL-COALITION-CREDIT-2026",
+  "INTAKE-NYCAC-INSTITUTIONAL-VALUE-QUESTION-2026"
+];
+
+export const requiredInstitutionalValueInquiryIds = [
+  "INQ-NYCAC-INSTITUTIONAL-VALUE-2017",
+  "INQ-NYCAC-ESPINAL-RECIPROCAL-RELATIONSHIP-2017"
+];
+
 const blockedPublicRepoMarkers = [
   "/Users/",
   "/Volumes/",
@@ -387,6 +423,7 @@ export function validateKnowledgeIntake() {
   const nycArtCXArchivalProductionErrors = [];
   const urbanhermitProductionErrors = [];
   const participationLineageErrors = [];
+  const institutionalValueErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -2589,6 +2626,157 @@ export function validateKnowledgeIntake() {
     }
   }
 
+  for (const id of requiredInstitutionalValueIntakeIds) {
+    const intake = knowledgeBank.intakes.find((record) => record.id === id);
+    if (!intake) {
+      institutionalValueErrors.push(`Missing institutional-value intake: ${id}`);
+      continue;
+    }
+    if (intake.editorialState !== "unsurfaced") {
+      institutionalValueErrors.push(`${id} must remain unsurfaced in this research pass`);
+    }
+  }
+
+  for (const id of requiredInstitutionalValueSourceIds) {
+    const source = sourceById.get(id);
+    if (!source) {
+      institutionalValueErrors.push(`Missing institutional-value source: ${id}`);
+      continue;
+    }
+    if (
+      source.visibility !== "public" ||
+      source.preservationStatus !== "live" ||
+      !source.canonicalUrl
+    ) {
+      institutionalValueErrors.push(`${id} must remain a live, public, linkable official source`);
+    }
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      institutionalValueErrors.push(`${id} needs explicit support and does-not-establish boundaries`);
+    }
+    const linkedIntake = knowledgeBank.intakes.some((intake) => intake.sourceIds.includes(id));
+    const linkedClaim = knowledgeBank.claims.some((claim) =>
+      claim.evidence.some((evidence) => evidence.sourceId === id)
+    );
+    const linkedInquiry = knowledgeBank.researchInquiries.some((inquiry) =>
+      inquiry.sourceIds.includes(id)
+    );
+    if (!linkedIntake || !linkedClaim || !linkedInquiry) {
+      institutionalValueErrors.push(`${id} needs intake, claim, and inquiry edges`);
+    }
+  }
+
+  for (const id of requiredInstitutionalValueDirectClaimIds) {
+    const claim = claimById.get(id);
+    if (!claim) {
+      institutionalValueErrors.push(`Missing direct institutional-value claim: ${id}`);
+      continue;
+    }
+    if (!["confirmed", "confirmed-with-boundary"].includes(claim.status)) {
+      institutionalValueErrors.push(`${id} must remain a direct, confirmed claim`);
+    }
+    if (!claim.evidence.some((evidence) => evidence.relationship === "direct-support")) {
+      institutionalValueErrors.push(`${id} needs at least one direct-support relationship`);
+    }
+    if (claim.projections.some((projection) => projection.status === "active")) {
+      institutionalValueErrors.push(`${id} must remain held until editorial selection`);
+    }
+  }
+
+  for (const id of requiredInstitutionalValueInferenceClaimIds) {
+    const claim = claimById.get(id);
+    if (!claim) {
+      institutionalValueErrors.push(`Missing inferred institutional-value claim: ${id}`);
+      continue;
+    }
+    if (claim.status !== "inference") {
+      institutionalValueErrors.push(`${id} must remain explicitly labeled inference`);
+    }
+    if (claim.projections.some((projection) => projection.status === "active")) {
+      institutionalValueErrors.push(`${id} must remain held until editorial selection`);
+    }
+  }
+
+  for (const id of requiredInstitutionalValueInquiryIds) {
+    const inquiry = inquiryById.get(id);
+    if (!inquiry) {
+      institutionalValueErrors.push(`Missing institutional-value inquiry: ${id}`);
+      continue;
+    }
+    if (inquiry.resultStatus !== "partially-recovered") {
+      institutionalValueErrors.push(`${id} must preserve unresolved role, motive, or causality questions`);
+    }
+  }
+
+  const finkelpearlTestimonySource = sourceById.get(
+    "SRC-DCLA-FINKELPEARL-CREATENYC-TESTIMONY-2017"
+  );
+  const finkelpearlDirectClaim = claimById.get(
+    "CLM-DCLA-DIY-ENGAGEMENT-IN-COUNCIL-TESTIMONY-2017"
+  );
+  const finkelpearlBoundaryText = JSON.stringify([
+    finkelpearlTestimonySource?.doesNotEstablish,
+    finkelpearlDirectClaim?.boundaries,
+    finkelpearlDirectClaim?.antiClaims
+  ]).toLowerCase();
+  if (!finkelpearlBoundaryText.includes("does not name nyc artist coalition")) {
+    institutionalValueErrors.push(
+      "Finkelpearl's February testimony must remain distinct from the separate explicit NYC Artist Coalition linkage"
+    );
+  }
+
+  const espinalSource = sourceById.get(
+    "SRC-NYC-COUNCIL-ESPINAL-COALITION-CREDIT-2017-06-21"
+  );
+  const espinalSourceText = JSON.stringify([
+    espinalSource?.publicNote,
+    espinalSource?.supportsGenerally,
+    espinalSource?.doesNotEstablish
+  ]).toLowerCase();
+  for (const marker of ["ground work", "attention", "sign", "alone"]) {
+    if (!espinalSourceText.includes(marker)) {
+      institutionalValueErrors.push(`Espinal's direct source record is missing the ${marker} boundary`);
+    }
+  }
+
+  const institutionalClaims = [
+    ...requiredInstitutionalValueDirectClaimIds,
+    ...requiredInstitutionalValueInferenceClaimIds
+  ].map((id) => claimById.get(id));
+  const institutionalBoundaryText = JSON.stringify(
+    institutionalClaims.map((claim) => ({
+      status: claim?.status,
+      boundaries: claim?.boundaries,
+      antiClaims: claim?.antiClaims
+    }))
+  ).toLowerCase();
+  for (const marker of [
+    "private motive",
+    "depend",
+    "indispensable",
+    "collective",
+    "caus"
+  ]) {
+    if (!institutionalBoundaryText.includes(marker)) {
+      institutionalValueErrors.push(`Institutional-value claims are missing the ${marker} boundary`);
+    }
+  }
+
+  const serializedInstitutionalValue = JSON.stringify([
+    requiredInstitutionalValueIntakeIds.map((id) =>
+      knowledgeBank.intakes.find((record) => record.id === id)
+    ),
+    requiredInstitutionalValueSourceIds.map((id) => sourceById.get(id)),
+    institutionalClaims,
+    requiredInstitutionalValueInquiryIds.map((id) => inquiryById.get(id))
+  ]).toLowerCase();
+  for (const marker of blockedPublicRepoMarkers) {
+    if (serializedInstitutionalValue.includes(marker.toLowerCase())) {
+      institutionalValueErrors.push(
+        `Institutional-value records contain blocked public-repo marker: ${marker}`
+      );
+    }
+  }
+
   errors.push(
     ...coverageErrors,
     ...researchErrors,
@@ -2601,7 +2789,8 @@ export function validateKnowledgeIntake() {
     ...socialMediaProductionErrors,
     ...nycArtCXArchivalProductionErrors,
     ...urbanhermitProductionErrors,
-    ...participationLineageErrors
+    ...participationLineageErrors,
+    ...institutionalValueErrors
   );
   return {
     errors,
@@ -2665,6 +2854,11 @@ export function validateKnowledgeIntake() {
         passed: participationLineageErrors.length === 0,
         errors: participationLineageErrors,
         evidence: `${requiredParticipationLineageSourceIds.length} sources, ${requiredParticipationLineageClaimIds.length} claims, ${requiredParticipationLineageInquiryIds.length} inquiries, and ${requiredParticipationLineageIntakeIds.length} intakes preserve reproducible WOW List scale, protected Sunday Dinner continuity aggregates, and the held Call Script-to-NYC Artist Coalition participatory formation sequence.`
+      },
+      institutionalValue: {
+        passed: institutionalValueErrors.length === 0,
+        errors: institutionalValueErrors,
+        evidence: `${requiredInstitutionalValueSourceIds.length} official sources, ${requiredInstitutionalValueDirectClaimIds.length} direct claims, ${requiredInstitutionalValueInferenceClaimIds.length} inference claims, ${requiredInstitutionalValueInquiryIds.length} inquiries, and ${requiredInstitutionalValueIntakeIds.length} intakes preserve DCLA, Council, Finkelpearl, Espinal, and Jamie role boundaries without automatic public projection.`
       }
     }
   };

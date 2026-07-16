@@ -16,7 +16,7 @@ import { knowledgeBank } from
   "../apps/www/src/data/knowledge-bank/records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v20/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v21/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");
@@ -84,6 +84,7 @@ const intakeValidation = validateKnowledgeIntake();
 for (const [criterionId, checkName] of [
   ["INTAKE-001", "coverage"],
   ["RESEARCH-001", "research"],
+  ["INSTITUTION-001", "institutionalValue"],
   ["ARCHIVE-001", "archiveProduction"],
   ["ARCHIVE-002", "archiveProduction"],
   ["ARCHIVE-003", "participationLineage"],

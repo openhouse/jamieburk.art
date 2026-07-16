@@ -28,6 +28,18 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say Finkelpearl's February 2017 testimony named NYC Artist Coalition;
+it described the DIY community. Use the separate DCLA commissioner message for
+the explicit coalition link.
+
+Do not turn institutional usefulness into literal dependency. The records do
+not establish that DCLA, the Council, Finkelpearl, or Espinal could not act
+without the coalition, or that coalition activity alone caused a bill to pass.
+
+Do not turn Espinal's collective credit to Dance Liberation Network and NYC
+Artist Coalition into Jamie's sole credit, bill authorship, or a private-motive
+claim.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

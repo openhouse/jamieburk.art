@@ -219,6 +219,23 @@ job-application site.
 **Canonical claim:** `CLM-NYCAC-PARTICIPATION-SYSTEM`.
 **Last reviewed:** 2026-07-16
 
+## nyc-artist-coalition-institutional-interface - Field-to-government translation
+
+**Status:** Held inference built on confirmed official records
+**Support level:** Strong for the underlying events; moderate for the institutional synthesis
+**Evidence class:** DCLA testimony / official DCLA statement / coalition submission / NYC Council transcripts / public reporting
+**Public wording:** Jamie helped build and operate NYC Artist Coalition's interface between community-driven cultural spaces and city government.
+**Detailed public-safe wording:** Official records show the coalition translating DIY-space experience into formal recommendations and Council testimony, sustaining dialogue with DCLA, and bringing organized public attention to legislative work. Public sources place Jamie in that interface as a founding member, safety-study organizer, repeal advocate, Council witness, and town-hall speaker.
+**Where to project:** Knowledge bank only until a specific hiring argument is selected and Jamie's role receives final review.
+**Why it matters:** It explains the operating value of the work: distributed cultural knowledge became structured input that agencies and legislators could hear, test, and act around without reducing the coalition to one campaign or one outcome.
+**Guardrail:** Keep direct institutional statements separate from analysis. Finkelpearl's testimony names the DIY community, while a separate DCLA message explicitly links Office Hours to NYC Artist Coalition. Treat `needed` as reciprocal institutional usefulness, not dependency or private motive.
+**Do not say:** DCLA or the Council depended on NYC Artist Coalition; Finkelpearl stated his private motive; the coalition represented every artist; Jamie alone created the interface; NYC Artist Coalition wrote Intro 1652; coalition work alone caused repeal or implementation.
+**Protected boundaries:** Private coalition strategy, correspondence, collaborator roles, government conversations, and unapproved drafting records stay offline.
+**Canonical direct claims:** `CLM-DCLA-DIY-ENGAGEMENT-IN-COUNCIL-TESTIMONY-2017`, `CLM-DCLA-OFFICE-HOURS-HELPED-LAUNCH-NYCAC-2017`, `CLM-NYCAC-COUNCIL-TESTIMONY-PARTICIPATION-2017`, `CLM-ESPINAL-CREDITED-NYCAC-GROUND-WORK-2017`, `CLM-JAMIE-NYCAC-INSTITUTIONAL-PARTICIPATION-2017`.
+**Canonical inference claims:** `CLM-FINKELPEARL-DIY-EXAMPLE-INSTITUTIONAL-UTILITY-2017`, `CLM-NYCAC-DCLA-KNOWLEDGE-INTERMEDIARY-2017`, `CLM-NYCAC-COUNCIL-POLICY-INTERFACE-2017`, `CLM-NYCAC-ESPINAL-RECIPROCAL-LEGISLATIVE-RELATIONSHIP-2017`, `CLM-JAMIE-NYCAC-INSTITUTIONAL-INTERFACE-CONTRIBUTION-2017`.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-16
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful
