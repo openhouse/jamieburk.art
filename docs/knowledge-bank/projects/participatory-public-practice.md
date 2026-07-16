@@ -20,10 +20,13 @@ addresses, access instructions, and media remain excluded.
 
 ## Waterways expedition and public programs
 
-Jamie conceived and organized a collaborative bicycle-powered raft expedition
-from Kansas City down the Missouri and Mississippi rivers. Reviewed public
-sources include a 2009 independent follow-up reporting that Jamie and the crew
-reached the Gulf of Mexico four months after leaving Kansas City. Jamie later
+Jamie conceived, co-built, and organized a collaborative bicycle-powered raft
+expedition from Kansas City down the Missouri and Mississippi rivers. A 2007
+independent report says he and Libby Hendon spent weeks constructing the
+recycled-material raft and that the group traveled more than 1,000 miles before
+a Coast Guard interruption. A 2009 independent follow-up reports that Jamie and
+the crew reached the Gulf of Mexico four months after leaving Kansas City.
+Jamie later
 spearheaded *Great Accommodations*, a participatory exhibition and public
 program that treated connected rivers as a social network linking cities,
 stories, correspondence, and possible ways of living.
@@ -62,6 +65,20 @@ decision-making, and distributed documentation.
 
 **Boundaries:** Participant activity and decisions remain collective work.
 Images, names, and private details require separate review before publication.
+
+## Public event practice
+
+A capture-date review of Jamie's authenticated personal Facebook Past Events
+surface recovered 20 records that explicitly identify him as organizer from
+December 2006 through February 2017. Fourteen selected public-safe records span
+participatory art, waterways and mobility, small-space performance, communal
+meals, media discussion, and civic gathering. Six ordinary-life records remain
+outside the public selected ledger.
+
+The event population is evidence of a durable public-invitation practice, not
+a complete production history. The other 491 cards on the profile surface are
+profile-associated research leads only; they do not establish Jamie's
+attendance, interest, authorship, production, support, or endorsement.
 
 ## NTER CHNG
 
@@ -114,6 +131,7 @@ be reviewed before republication.
 ## Sources
 
 - The Pitch, "When artists turn Huck Finn" (2007).
+- The Pitch, "Artists Turned Huck Finn, Part III" (2007).
 - The Pitch, "Former Huck Finn artist now working in a pink, plastic bubble"
   (2009).
 - Charlotte Street, "Great Accommodations with Jamie Burkart" (2009).
@@ -128,6 +146,9 @@ be reviewed before republication.
 - Public-safe archival summary of NTER CHNG's January 2010 exhibit text.
 - Public-safe archival summary of the April 2011 America: Now and Here
   installation plan.
+- [Public-safe minimized Facebook event ledger](../corpora/facebook-personal-wowlist-events-public-ledger-2026-07-16.json)
+  and [full-population run note](../runs/2026-07-16-facebook-personal-wowlist-events.md)
+  (July 16, 2026).
 - Horse Lords, "Truthers (Official Video)" (2016).
 - Lars Gotrich, "Video: Horse Lords' Hypnotic 'Truthers' Will Blast Your
   Noodle," NPR Illinois (2016).

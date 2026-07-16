@@ -114,6 +114,7 @@ Hold:
 1. Classify all 35 destinations as live, archived, redirected, dead, or not recovered.
 2. Resolve or preserve uncertainty around the historical `@wowlistnyc` label.
 3. Seek public or collaborator evidence that can distinguish account creation, identity design, administration, posting strategy, and individual post authorship.
+4. Request a Meta Page owner export or recover dated Facebook captures: one authenticated July 16, 2026 rendering exposed no Events section, a volatile interface observation rather than evidence of no historical events.
 
 ## Active Claim Projection
 

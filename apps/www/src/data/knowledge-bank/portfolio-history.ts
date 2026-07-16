@@ -309,22 +309,23 @@ export const portfolioHistoryClaims = [
   {
     id: "CLM-WATERWAYS-RAFT-EXPEDITION",
     project: "waterways-participatory-practice",
-    internalClaim: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; a later independent report says the crew reached the Gulf of Mexico four months after leaving Kansas City.",
+    internalClaim: "Jamie conceived, co-built, and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; independent reporting says he and Libby Hendon spent weeks constructing the recycled-material raft, the group traveled more than 1,000 miles before a Coast Guard interruption, and the crew later reached the Gulf of Mexico four months after leaving Kansas City.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; a later independent report says the crew reached the Gulf of Mexico four months after leaving Kansas City.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Retain in the historical bank because it establishes initiative, duration, and independently corroborated terminus; hold from hiring pages until an inspectable artifact and concise present-day bridge are ready." },
+      { key: "archive-note", text: "Jamie conceived, co-built, and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers. Independent reporting says he and Libby Hendon spent weeks constructing the recycled-material raft, the group traveled more than 1,000 miles before a Coast Guard interruption, and the crew later reached the Gulf after four months.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Retain in the historical bank because it establishes initiative, hands-on implementation, duration, and independently corroborated terminus; hold from hiring pages until an inspectable artifact and concise present-day bridge are ready." },
       { key: "about", text: "Conceived and organized a collaborative raft project whose crew reached the Gulf of Mexico four months after leaving Kansas City.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
     ],
     evidence: [
       { sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["Jamie originated the raft expedition idea", "the project investigated Kansas City's relationship to the Missouri River"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-WATERWAYS-PITCH-PART-III-2007-11-12", relationship: "corroborating", supports: ["Jamie Burkart and Libby Hendon's participation", "their weeks spent constructing the recycled-material raft", "the expedition's public title", "more than 1,000 miles traveled before the reported Coast Guard interruption"], publicNote: "This independent mid-journey report adds direct implementation evidence and a dated route checkpoint; it does not establish the later Gulf terminus or a complete route.", confidence: "high", renderCitation: true },
       { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", relationship: "direct-support", supports: ["Jamie's published account that he organized the bicycle-powered raft project", "Jamie's published account of traveling from Kansas City down the Missouri and Mississippi rivers for four months until the water reached salt"], publicNote: "Charlotte Street reproduces Jamie's first-person retrospective account; it is public evidence of his account, not an independent route log.", confidence: "moderate", renderCitation: true },
       { sourceId: "SRC-WATERWAYS-PITCH-GULF-2009-09-03", relationship: "corroborating", supports: ["Jamie and the raft crew reached the Gulf of Mexico", "the journey lasted four months"], publicNote: "The Pitch independently corroborates the collaborative crew's Gulf terminus and four-month duration, but it is not a complete route log.", confidence: "high", renderCitation: true }
     ],
     boundaries: ["Describe the expedition as collaborative.", "The later report independently corroborates the Gulf terminus and four-month duration, not every stop, participant, or route detail."],
     antiClaims: ["Jamie completed the expedition alone.", "The reviewed sources independently establish every stop or participant."],
     researchInquiryIds: ["INQ-WATERWAYS-FULL-PROGRAM-CORPUS"],
-    reviewedAt: "2026-07-12",
-    reviewedBy: ["Codex public-source review"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Codex public-source review", "Codex Facebook-events source maturation review"]
   },
   {
     id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS",
@@ -451,14 +452,16 @@ export const portfolioHistoryInquiries = [
     project: "waterways-participatory-practice",
     question: "What is the complete chronology, route, collaborator network, public-program inventory, and surviving artifact set for Jamie's raft and waterways practice?",
     methods: [
-      "Reviewed the supplied 2007 Pitch article, the 2009 Pitch follow-up, and the Charlotte Street institutional event page.",
+      "Reviewed the supplied August 2007 Pitch article, the newly recovered November 2007 Pitch mid-journey report, the 2009 Pitch follow-up, and the Charlotte Street institutional event page.",
       "Separated direct reporting from Jamie's quoted retrospective account.",
       "Recorded route, duration, program, and collaboration limits as claim boundaries."
     ],
-    runAt: "2026-07-12",
+    runAt: "2026-07-16",
     resultStatus: "partially-recovered",
     findings: [
       "The Pitch attributes the expedition concept to Jamie and documents the recycled-material raft project.",
+      "The November 2007 Pitch report says Jamie Burkart and Libby Hendon spent weeks constructing the recycled-material raft.",
+      "The November 2007 Pitch report names Jamie Burkart and Libby Hendon and says the collaborative group had traveled more than 1,000 miles before a Coast Guard interruption.",
       "Charlotte Street documents Great Accommodations and quotes Jamie's account of a four-month journey reaching salt water.",
       "The 2009 Pitch follow-up independently reports that Jamie and the collaborative crew reached the Gulf of Mexico four months after leaving Kansas City.",
       "The reviewed sources support a substantial participatory waterways practice but not its complete chronology or artifact corpus."
@@ -468,7 +471,7 @@ export const portfolioHistoryInquiries = [
       "The Gulf terminus and four-month duration are independently corroborated, but the complete route remains unrecovered.",
       "Photographs, correspondence, video, and additional programs remain to be inventoried and reviewed for rights and consent."
     ],
-    sourceIds: ["SRC-WATERWAYS-PITCH-2007-08-09", "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
+    sourceIds: ["SRC-WATERWAYS-PITCH-2007-08-09", "SRC-WATERWAYS-PITCH-PART-III-2007-11-12", "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
     publicSummary: "Public reporting and an institutional exhibition record establish Jamie's collaborative raft expedition, the crew's Gulf terminus after four months, and Jamie's participatory waterways practice; the complete route, collaborator, program, and artifact corpus remains under research."
   },
   {

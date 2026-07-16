@@ -169,3 +169,13 @@ protected archive. Selected public attributions deepen WOW List, Horse Lords,
 8th Street Tunnel, NYC Artist Coalition, and Tired of Tires records without
 adding a new website projection. See the
 [research run](runs/2026-07-15-urbanhermit-x-full-population.md).
+
+The July 16 [personal and WOW List Facebook event pass](projects/personal-and-wowlist-facebook-events.md)
+accounts for all 511 cards exposed by Jamie's personal Past Events surface,
+separates 20 explicit organizer records from 491 profile-associated research
+leads, and records one current WOW List Page rendering with no Events section
+as a historical-preservation inquiry. The complete personal index remains
+protected; the public repo keeps a minimized ledger, integrity digests,
+selected mission-relevant events, and strict response and stakeholder
+boundaries. See the
+[research run](runs/2026-07-16-facebook-personal-wowlist-events.md).
