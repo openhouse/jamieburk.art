@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "capturedAt": "2026-07-16",
+  "capturedAt": "2026-07-15",
   "sourceInputs": [
     "apps/www/src",
     "apps/www/next.config.ts",
@@ -22,7 +22,7 @@
     "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-lifecycle.ts",
     "apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts"
   ],
-  "sourceSha256": "cb4ecfc38b0c814f197ba00982ea9ba8a2b4bf4c8d3b77b9cbec662ea2f693bd",
+  "sourceSha256": "2c2846120ece72a83e4e78fd5764060d397a4d95cdb8e7560146ed2e945a36b7",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -108,7 +108,7 @@
       "route": "/work/harry-j-epstein",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/harry-j-epstein-mobile-320.png",
-      "artifactSha256": "b7f63638bffc32e90d9fa12ced5d79acb55fa1b61b354c81bae266522341e156"
+      "artifactSha256": "ce125a1afb734a3b2e87852728d6c07906e215018a2b850a5f3a1c9fd4512a84"
     },
     {
       "route": "/work/callnyc",
@@ -120,7 +120,7 @@
       "route": "/work/callnyc",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/callnyc-mobile-320.png",
-      "artifactSha256": "08fd08e2de4c8e578993d7f8d3ce62bb49640d37710c6b9aca8af9464f2113ba"
+      "artifactSha256": "b56226d3ead58d7f93a1d5cfb46b93aa0bc82d160d65e1ff263242fe5057083c"
     },
     {
       "route": "/work/fair-rent-nyc",
@@ -132,7 +132,7 @@
       "route": "/work/fair-rent-nyc",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/fair-rent-nyc-mobile-320.png",
-      "artifactSha256": "38e5212ac71ade3048719a84337402de1c8ccada9f10da4bf8fdc62329a44ed9"
+      "artifactSha256": "b392e50cb5a0a11d25e6656be9f1dcb1c81800eee8366a886d95491efec21742"
     },
     {
       "route": "/work/wowlist",
@@ -144,7 +144,7 @@
       "route": "/work/wowlist",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
-      "artifactSha256": "99b7136190c431abfd37889f905bb51d6926cb0125bf92c5b175f124a2709564"
+      "artifactSha256": "87d50700486a8854630c9679da34f0b1b16d073027a05290cad76c08448042a4"
     },
     {
       "route": "/work/kc-town-hall",
@@ -156,7 +156,7 @@
       "route": "/work/kc-town-hall",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/kc-town-hall-mobile-320.png",
-      "artifactSha256": "944b6608bceb3a1021c2c94cf7b90a2a1ba6d124e584e01e272c8bb5ddc1e428"
+      "artifactSha256": "c61cdcc17787a2c5fe505a2b86e70cc0c3c7c54d9c2979920b0ae378b9cc5784"
     },
     {
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
