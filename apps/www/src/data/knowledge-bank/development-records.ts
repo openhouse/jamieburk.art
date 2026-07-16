@@ -40,6 +40,28 @@ export const developmentCaptures = [
     disposition: "Decompose the institutional page into atomic observations and distinguish Jamie's direct work from collaborator and participant contributions."
   },
   {
+    id: "CAP-WATERWAYS-KC-STAR-ARTICLE-2026",
+    receivedAt: "2026-07-16",
+    submittedBy: "Jamie Burkart",
+    kind: "artifact",
+    summary: "A two-page Kansas City Star feature published while the participatory raft expedition was underway in Louisiana, including front-page coverage, credited photographs, crew identification, project history, and interviews.",
+    status: "integrated",
+    publicSafety: "protected-pointer",
+    potentialProjectIds: ["waterways"],
+    potentialClaimFamilies: ["expedition origin", "front-page coverage", "expedition scale", "participatory waterways method", "collective repair and resumption"],
+    sourceIds: ["SRC-WATERWAYS-KC-STAR-2007-11-15"],
+    observationIds: [
+      "OBS-WATERWAYS-KCSTAR-FRONT-PAGE",
+      "OBS-WATERWAYS-KCSTAR-ORIGIN",
+      "OBS-WATERWAYS-KCSTAR-SCALE-AND-ROUTE",
+      "OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD",
+      "OBS-WATERWAYS-KCSTAR-INTERRUPTION-AND-RESUMPTION",
+      "OBS-WATERWAYS-KCSTAR-CULTURAL-CONNECTION"
+    ],
+    researchTaskIds: ["RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION"],
+    disposition: "Retained source metadata and paraphrased observations, strengthened role and method claims, kept the still-underway endpoint explicit, and left the copyrighted PDF and photographs outside Git pending rights review."
+  },
+  {
     id: "CAP-OPEN-HOUSE-GOOD-TIMES-LINK-2026",
     receivedAt: "2026-07-13",
     submittedBy: "Jamie Burkart",
@@ -230,6 +252,43 @@ export const developmentSources = [
     doesNotEstablish: ["sole authorship of every contribution", "that every invited river community participated", "measured attendance or impact", "the complete expedition route from independent records", "ownership of participant stories"]
   },
   {
+    id: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    title: "In the name of art, go with the flow",
+    organization: "The Kansas City Star",
+    author: "Darryl Levings",
+    kind: "published-article",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    publishedAt: "2007-11-15",
+    accessedAt: "2026-07-16",
+    publicCitation: "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, pp. A1, A4.",
+    publicNote: "The user-supplied two-page newspaper PDF remains outside Git. Its front-page photograph is credited to Joshua Corban of The Vicksburg Post; continuation-page photographs are credited to Brian Loden and Joshua Corban of The Vicksburg Post. Reuse rights and depicted-person consent have not been established.",
+    protectedLocatorId: "ARCHIVE-WATERWAYS-KCSTAR-ARTICLE-2007-001",
+    media: {
+      mediaKind: "document",
+      rightsStatus: "unknown",
+      consentStatus: "review-needed",
+      publicDisplayStatus: "metadata-only"
+    },
+    supportsGenerally: [
+      "The Kansas City Star featured the expedition on its front page and continued the report on page A4",
+      "the article attributes the originating expedition idea to Jamie",
+      "the three-person crew included Jamie Burkart, Libby Hendon, and Laura Mattingly at the reported Louisiana stage",
+      "the bicycle-paddlewheel raft was built collectively from discarded materials",
+      "the expedition had traveled more than 1,000 miles and resumed after a 51-day Vicksburg interruption",
+      "friends joined for stretches and Jamie described inviting people aboard",
+      "Jamie framed the river as a possible cultural connection between Kansas City's West Bottoms and Delta communities"
+    ],
+    doesNotEstablish: [
+      "arrival at the Gulf of Mexico or salt water",
+      "that Jamie alone built or operated the raft",
+      "a complete route log or participant roster",
+      "measured cultural, environmental, or economic impact",
+      "audience size, endorsement, or the effect of front-page coverage",
+      "permission to republish the newspaper pages or credited photographs"
+    ]
+  },
+  {
     id: "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
     title: "Open House",
     organization: "Good Times",
@@ -305,6 +364,78 @@ export const developmentObservations = [
     limitations: ["The surviving page excerpt does not provide a complete participant list, build history, or final route."],
     supportsClaimIds: ["CLM-WATERWAYS-EXPEDITION-CONCEPTION"],
     reviewedAt: "2026-07-13"
+  },
+  {
+    id: "OBS-WATERWAYS-KCSTAR-FRONT-PAGE",
+    sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    project: "waterways",
+    statement: "The Kansas City Star featured the raft expedition with a crew photograph and article on its November 15, 2007 front page, then continued the report on page A4.",
+    observationType: "visual",
+    locator: "Page A1, lower-center feature; page A4 continuation header.",
+    confidence: "high",
+    limitations: ["Prominent placement establishes contemporaneous press attention, not audience size, endorsement, conversion, or project impact."],
+    supportsClaimIds: ["CLM-WATERWAYS-KCSTAR-FRONT-PAGE-COVERAGE"],
+    reviewedAt: "2026-07-16"
+  },
+  {
+    id: "OBS-WATERWAYS-KCSTAR-ORIGIN",
+    sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    project: "waterways",
+    statement: "The article reports that the expedition began with an idea by Jamie and identifies his digital-media background and prior participatory art practice as project context.",
+    observationType: "attributed",
+    locator: "Page A4, second column, paragraph beginning 'Where does this odyssey begin?'",
+    confidence: "high",
+    limitations: ["Originating the idea does not assign Jamie sole authorship of collective construction, travel, repair, or participation."],
+    supportsClaimIds: ["CLM-WATERWAYS-EXPEDITION-CONCEPTION", "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE"],
+    reviewedAt: "2026-07-16"
+  },
+  {
+    id: "OBS-WATERWAYS-KCSTAR-SCALE-AND-ROUTE",
+    sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    project: "waterways",
+    statement: "The report identifies Jamie Burkart, Libby Hendon, and Laura Mattingly as the crew then traveling south of Baton Rouge and says the expedition had passed the 1,000-mile marker on a roughly 12-by-13-foot bicycle-paddlewheel raft built from discarded materials.",
+    observationType: "explicit",
+    locator: "Page A1 crew paragraphs and photograph caption; page A4, first two columns.",
+    confidence: "high",
+    limitations: ["The mileage is reported rather than derived from a route log, and the article does not establish the expedition's final endpoint."],
+    supportsClaimIds: ["CLM-WATERWAYS-RAFT-EXPEDITION-SCALE"],
+    reviewedAt: "2026-07-16"
+  },
+  {
+    id: "OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD",
+    sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    project: "waterways",
+    statement: "The article describes the project as a lived river experience centered on meeting people, records friends joining for stretches at multiple cities, and reports Jamie inviting people they met to come aboard.",
+    observationType: "explicit",
+    locator: "Page A4, second column project-purpose and participant paragraphs; final column voice-message passage.",
+    confidence: "high",
+    limitations: ["The article does not enumerate every participant, distinguish every participation mode, or measure what participants experienced."],
+    supportsClaimIds: ["CLM-WATERWAYS-RAFT-EXPEDITION-SCALE", "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD"],
+    reviewedAt: "2026-07-16"
+  },
+  {
+    id: "OBS-WATERWAYS-KCSTAR-INTERRUPTION-AND-RESUMPTION",
+    sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    project: "waterways",
+    statement: "The report says the crew spent 51 days stranded after the Coast Guard beached the raft near Vicksburg, received food, legal help, work, and recovery assistance from local supporters, repaired the craft, added safety and steering equipment, and resumed the voyage.",
+    observationType: "explicit",
+    locator: "Page A4, third and fourth columns, Coast Guard and Vicksburg-support sequence.",
+    confidence: "high",
+    limitations: ["The account establishes interruption, community support, repair, and resumption, not a final legal ruling or later endpoint."],
+    supportsClaimIds: ["CLM-WATERWAYS-RAFT-EXPEDITION-SCALE"],
+    reviewedAt: "2026-07-16"
+  },
+  {
+    id: "OBS-WATERWAYS-KCSTAR-CULTURAL-CONNECTION",
+    sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    project: "waterways",
+    statement: "The article reports Jamie describing Kansas City's river as socially invisible or reduced to a boundary and industrial corridor, then proposing that passage between the West Bottoms and Delta towns could awaken a cultural connection through the river.",
+    observationType: "attributed",
+    locator: "Page A4, final column, Jamie's voice-message passage.",
+    confidence: "high",
+    limitations: ["This records Jamie's contemporaneous interpretation and purpose; it does not establish that a cultural connection was achieved or measured."],
+    supportsClaimIds: ["CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD"],
+    reviewedAt: "2026-07-16"
   },
   {
     id: "OBS-WATERWAYS-CHARLOTTE-PROGRAM",
@@ -469,19 +600,67 @@ export const developmentClaims = [
     id: "CLM-WATERWAYS-EXPEDITION-CONCEPTION",
     project: "waterways",
     claimType: "action",
-    internalClaim: "Jamie conceived an experiential boat expedition exploring Kansas City's relationship with the Missouri River; contemporaneous reporting describes the group crossing Missouri on a homemade raft built from recycled materials.",
-    epistemicState: "sourced",
+    internalClaim: "Two independent contemporaneous reports support that Jamie originated an experiential boat expedition exploring Kansas City's relationship with the Missouri River, while the wider record preserves collective construction, travel, repair, and participation.",
+    epistemicState: "corroborated",
     publicationState: "public-safe",
     selectionState: "dormant",
     status: "confirmed-with-boundary",
-    observationIds: ["OBS-WATERWAYS-PITCH-EXPEDITION-IDEA", "OBS-WATERWAYS-PITCH-RAFT-AND-TROLLEY"],
-    projections: [{ key: "archive-note", text: "Jamie conceived an experiential Missouri River expedition that a group began on a homemade recycled-material raft.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/waterways-and-participatory-art"] }],
-    evidence: [{ sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["reported conception of the experiential expedition", "the group's early raft travel across Missouri", "the trolley-screening context for Jamie's river inquiry"], locator: "Opening article paragraphs", confidence: "high", renderCitation: false }],
+    observationIds: ["OBS-WATERWAYS-PITCH-EXPEDITION-IDEA", "OBS-WATERWAYS-PITCH-RAFT-AND-TROLLEY", "OBS-WATERWAYS-KCSTAR-ORIGIN"],
+    projections: [{ key: "archive-note", text: "Jamie originated an experiential Missouri River expedition that a group undertook on a homemade recycled-material raft.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/waterways-and-participatory-art"] }],
+    evidence: [
+      { sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["reported conception of the experiential expedition", "the group's early raft travel across Missouri", "the trolley-screening context for Jamie's river inquiry"], locator: "Opening article paragraphs", confidence: "high", renderCitation: false },
+      { sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15", relationship: "corroborating", supports: ["Jamie's originating idea", "the collective crew and later expedition context"], locator: "Page A4, second column, expedition-origin paragraph.", confidence: "high", renderCitation: false }
+    ],
     boundaries: ["Preserve the collective expedition frame and do not imply Jamie alone built, operated, or completed the raft journey."],
     antiClaims: ["Jamie single-handedly built and sailed the raft to the Gulf of Mexico", "The Pitch documents the complete expedition route"],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-13",
-    reviewedBy: ["Codex public-source review"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
+    id: "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD",
+    project: "waterways",
+    claimType: "method",
+    internalClaim: "Jamie used the raft expedition as a participatory inquiry into the river as social and cultural infrastructure, inviting people aboard and connecting Kansas City's West Bottoms with the lived experience of Delta communities.",
+    epistemicState: "corroborated",
+    publicationState: "public-safe",
+    selectionState: "candidate",
+    status: "confirmed-with-boundary",
+    observationIds: ["OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD", "OBS-WATERWAYS-KCSTAR-CULTURAL-CONNECTION", "OBS-WATERWAYS-SOUNDINGS-PARTICIPATION"],
+    projections: [
+      { key: "archive-note", text: "Used the raft expedition as a participatory inquiry into the river as social and cultural infrastructure, inviting people aboard and tracing a possible cultural connection between Kansas City's West Bottoms and Delta communities.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/waterways-and-participatory-art"] },
+      { key: "case-study", text: "Designed the expedition as a participatory inquiry: people joined the raft along the route while the river became a way to connect communities, stories, and lived experience.", status: "hold", citationRequired: true, surfaces: [] }
+    ],
+    evidence: [
+      { sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15", relationship: "direct-support", supports: ["the project's lived-experience purpose", "friends joining for route segments", "Jamie's invitations to come aboard", "Jamie's cultural-connection framing"], locator: "Page A4, project-purpose, participation, and final voice-message passages.", confidence: "high", renderCitation: false },
+      { sourceId: "SRC-WATERWAYS-SOUNDINGS-RAFT-2007", relationship: "corroborating", supports: ["invitations for people to join and experience river communities"], locator: "Participation paragraph beginning 'Burkart says they have been inviting people.'", confidence: "high", renderCitation: false }
+    ],
+    boundaries: ["Treat the cultural-connection language as Jamie's documented purpose and interpretation, not measured impact.", "Preserve Libby Hendon, Laura Mattingly, other builders and travelers, route participants, and host communities as part of the collective work."],
+    antiClaims: ["The expedition measurably transformed river communities", "Jamie alone designed every participatory encounter", "Every person who joined the raft is identified"],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
+    id: "CLM-WATERWAYS-KCSTAR-FRONT-PAGE-COVERAGE",
+    project: "waterways",
+    claimType: "context",
+    internalClaim: "The Kansas City Star featured the raft expedition on its November 15, 2007 front page and continued the report on page A4.",
+    epistemicState: "sourced",
+    publicationState: "public-safe",
+    selectionState: "candidate",
+    status: "confirmed-with-boundary",
+    observationIds: ["OBS-WATERWAYS-KCSTAR-FRONT-PAGE"],
+    projections: [
+      { key: "archive-note", text: "The Kansas City Star featured the expedition on its November 15, 2007 front page and continued the report on page A4.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/waterways-and-participatory-art"] },
+      { key: "case-study", text: "Featured on the front page of The Kansas City Star while the expedition was underway in Louisiana.", status: "hold", citationRequired: true, surfaces: [] }
+    ],
+    evidence: [{ sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15", relationship: "direct-support", supports: ["front-page placement", "page A4 continuation"], locator: "Pages A1 and A4.", confidence: "high", renderCitation: false }],
+    boundaries: ["Front-page placement establishes press attention, not endorsement, audience size, conversion, or public impact.", "The scanned pages and credited photographs remain metadata-only pending rights review."],
+    antiClaims: ["The Kansas City Star endorsed the project", "Front-page coverage proves cultural impact", "The newspaper pages or photographs are cleared for portfolio display"],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
   },
   {
     id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM",

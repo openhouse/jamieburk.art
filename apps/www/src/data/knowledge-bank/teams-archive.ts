@@ -1206,7 +1206,7 @@ export const teamsArchiveClaims = [
     project: "waterways",
     claimType: "scale",
     internalClaim:
-      "Jamie co-created and traveled on a participatory recycled-material raft expedition that covered more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers.",
+      "Jamie originated, co-created, and traveled on a participatory recycled-material raft expedition that covered more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers into Louisiana.",
     epistemicState: "corroborated",
     publicationState: "public-safe",
     selectionState: "candidate",
@@ -1218,18 +1218,22 @@ export const teamsArchiveClaims = [
       "OBS-WATERWAYS-SOUNDINGS-CONSTRUCTION",
       "OBS-WATERWAYS-SOUNDINGS-PARTICIPATION",
       "OBS-WATERWAYS-9NEWS-CREW",
+      "OBS-WATERWAYS-KCSTAR-ORIGIN",
+      "OBS-WATERWAYS-KCSTAR-SCALE-AND-ROUTE",
+      "OBS-WATERWAYS-KCSTAR-PARTICIPATORY-METHOD",
+      "OBS-WATERWAYS-KCSTAR-INTERRUPTION-AND-RESUMPTION",
     ],
     projections: [
       {
         key: "archive-note",
-        text: "Jamie co-created and traveled on a participatory recycled-material raft expedition that covered more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers. Contemporary reporting documents collaborative construction, invitations for people to join, a Coast Guard interruption near Vicksburg, and resumption after repair and inspection; arrival at the Gulf has not yet been recovered from the reviewed sources.",
+        text: "Jamie originated, co-created, and traveled on a participatory recycled-material raft expedition that covered more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers into Louisiana. Contemporary reporting documents collaborative construction, invitations for people to join, a Coast Guard interruption near Vicksburg, and resumption after repair and inspection; arrival at the Gulf has not yet been recovered from the reviewed sources.",
         status: "active",
         citationRequired: false,
         surfaces: ["docs/knowledge-bank/projects/teams-archive-production"],
       },
       {
         key: "case-study",
-        text: "Co-created a participatory recycled-material raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers.",
+        text: "Originated and co-created a participatory recycled-material raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers into Louisiana.",
         status: "hold",
         citationRequired: true,
         surfaces: [],
@@ -1265,10 +1269,25 @@ export const teamsArchiveClaims = [
         confidence: "high",
         renderCitation: false,
       },
+      {
+        sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+        relationship: "corroborating",
+        supports: [
+          "Jamie's originating idea",
+          "more-than-1,000-mile progress into Louisiana",
+          "crew and collective-construction context",
+          "participatory invitations",
+          "Vicksburg interruption, community support, repair, and resumption",
+        ],
+        locator: "Pages A1 and A4.",
+        confidence: "high",
+        renderCitation: false,
+      },
     ],
     boundaries: [
       "Credit Libby Hendon, Laura Mattingly, the other builders and travelers, Vicksburg supporters, and the wider participant network.",
       "Say the expedition traveled toward the Gulf; the reviewed sources do not establish arrival at the Gulf of Mexico.",
+      "The Kansas City Star article was published while the expedition was underway and therefore cannot establish its later endpoint.",
       "Do not convert reported mileage into a precise route log or measured impact claim.",
     ],
     antiClaims: [
@@ -1279,7 +1298,7 @@ export const teamsArchiveClaims = [
     ],
     researchTaskIds: ["RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION"],
     researchInquiryIds: [],
-    reviewedAt: "2026-07-14",
+    reviewedAt: "2026-07-16",
     reviewedBy: ["Jamie Burkart", "Codex archival review"],
   },
   {
@@ -1572,10 +1591,14 @@ export const teamsArchiveResearchTasks = [
       "Can a contemporaneous source establish the raft expedition's endpoint after the documented November 2007 resumption?",
     priority: "medium",
     status: "open",
-    captureIds: ["CAP-TEAMS-JPH-RAFT-EXPEDITION-2026"],
+    captureIds: [
+      "CAP-TEAMS-JPH-RAFT-EXPEDITION-2026",
+      "CAP-WATERWAYS-KC-STAR-ARTICLE-2026",
+    ],
     sourceIds: [
       "SRC-WATERWAYS-PITCH-PART-III-2007-11-12",
       "SRC-WATERWAYS-SOUNDINGS-RAFT-2007",
+      "SRC-WATERWAYS-KC-STAR-2007-11-15",
     ],
     claimIds: [raftClaimId],
     successCriteria: [
@@ -1588,9 +1611,9 @@ export const teamsArchiveResearchTasks = [
       "Do not promote Gulf-arrival wording unless the endpoint is explicit.",
     ],
     publicNote:
-      "Reviewed reporting confirms more than 1,000 miles and resumption after repair, but not arrival at the Gulf.",
+      "Reviewed reporting confirms more than 1,000 miles into Louisiana and resumption after repair, but not arrival at the Gulf.",
     owner: "Jamie Burkart / archival review",
-    reviewedAt: "2026-07-14",
+    reviewedAt: "2026-07-16",
   },
   {
     id: "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",

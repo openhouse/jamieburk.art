@@ -41,15 +41,25 @@ records are metadata-only and never render as public citations.
 
 ### Waterways Expedition
 
-- `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`: three contemporaneous reports support
-  that Jamie co-created and traveled on a collaborative recycled-material raft
-  expedition that covered more than 1,000 miles from Kansas City down the
-  Missouri and Mississippi Rivers. The reporting also supports participatory
-  invitations, a Vicksburg interruption, repair, inspection, and resumption.
+- `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`: three contemporaneous reports from the
+  July 14 Teams pass, joined on July 16 by a metadata-only Kansas City Star
+  source, support that Jamie originated, co-created, and traveled on a
+  collaborative recycled-material raft expedition that covered more than 1,000
+  miles from Kansas City down the Missouri and Mississippi Rivers into
+  Louisiana. The reporting also supports participatory invitations, a
+  Vicksburg interruption, repair, inspection, and resumption.
 
-The claim remains a future feature candidate. The reviewed sources support
-travel toward the Gulf, not arrival there. Endpoint corroboration is an open
-research task.
+- `CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD`: the later source strengthens the
+  project's invitation-based method and Jamie's framing of the river as social
+  and cultural infrastructure.
+
+- `CLM-WATERWAYS-KCSTAR-FRONT-PAGE-COVERAGE`: the newspaper placed the story on
+  A1 and continued it on A4. This records press attention, not endorsement,
+  audience reach, or impact; the scan and photographs remain outside Git.
+
+The claims remain future feature candidates. The reviewed sources support
+travel into Louisiana toward the Gulf, not arrival there. Endpoint
+corroboration is an open research task.
 
 ### Public-Knowledge Production
 

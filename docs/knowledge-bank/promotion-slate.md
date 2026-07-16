@@ -129,10 +129,18 @@ website selection. It is a recommendation, not publication approval.
 
 ## Strong Future Feature Candidates
 
-- `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`: three contemporaneous reports now
-  support more than 1,000 miles, collective construction, participatory intent,
-  interruption, repair, and resumption. Best use: a waterways case after visual
-  rights review. Keep the Gulf endpoint unresolved.
+- `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`: four contemporaneous reports now
+  support Jamie's originating idea, more than 1,000 miles into Louisiana,
+  collective construction, participatory intent, interruption, repair, and
+  resumption. Best use: a waterways case after visual-rights review. Keep the
+  Gulf endpoint unresolved.
+- `CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD`: strong method evidence connecting
+  invitation, route participation, lived river experience, and Jamie's
+  cultural-infrastructure framing. Best use: a future participatory-program or
+  civic-systems lineage, with collective credit and no measured-impact claim.
+- `CLM-WATERWAYS-KCSTAR-FRONT-PAGE-COVERAGE`: strong press-context evidence for
+  a future case study. Keep coverage separate from endorsement, audience reach,
+  and impact; do not display the scan or credited photographs without review.
 - `CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW`: the protected working record and
   public revision history support a legible archive-to-public-knowledge
   workflow with Dorothy Howard's distinct editorial credit. Best use: future
@@ -172,8 +180,9 @@ website selection. It is a recommendation, not publication approval.
 ## Strong Supporting Proof
 
 - `CLM-WATERWAYS-EXPEDITION-CONCEPTION`: strong for initiative and long-running
-  waterways inquiry; research the complete route and participant credits before
-  making it a lead outcome story.
+  waterways inquiry; two contemporary reports now support Jamie's originating
+  role. Research the complete route and participant credits before making it a
+  lead outcome story.
 - `CLM-NYCAC-FIRE-CODE-STUDY-GROUPS`: strong direct organizing action; seek
   curriculum and participant records before making it a lead result. Jamie's
   public pass-rate statement remains attributed pending metric corroboration.

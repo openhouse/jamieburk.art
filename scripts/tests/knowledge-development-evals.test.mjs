@@ -2164,8 +2164,18 @@ test("raft scale remains collective and does not promote the unrecovered Gulf en
   const claim = teamsArchiveClaims.find(
     (item) => item.id === "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
   );
+  const task = teamsArchiveResearchTasks.find(
+    (item) => item.id === "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
+  );
   assert.equal(claim.epistemicState, "corroborated");
   assert.equal(claim.selectionState, "candidate");
+  assert.match(claim.internalClaim, /originated, co-created, and traveled/i);
+  assert.match(claim.internalClaim, /into Louisiana/i);
+  assert.ok(
+    claim.evidence.some(
+      (item) => item.sourceId === "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    ),
+  );
   assert.ok(
     claim.boundaries.some((item) => /toward the Gulf/i.test(item)),
   );
@@ -2176,6 +2186,13 @@ test("raft scale remains collective and does not promote the unrecovered Gulf en
     "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
   ]);
   assert.ok(
+    task.captureIds.includes("CAP-WATERWAYS-KC-STAR-ARTICLE-2026"),
+  );
+  assert.ok(
+    task.sourceIds.includes("SRC-WATERWAYS-KC-STAR-2007-11-15"),
+  );
+  assert.match(task.publicNote, /into Louisiana/i);
+  assert.ok(
     claim.projections
       .filter((projection) => projection.key === "case-study")
       .every(
@@ -2183,6 +2200,65 @@ test("raft scale remains collective and does not promote the unrecovered Gulf en
           projection.status === "hold" && projection.surfaces.length === 0,
       ),
   );
+});
+
+test("Kansas City Star raft coverage is decomposed without publishing the scan or overstating its proof", () => {
+  const capture = knowledgeBank.captures.find(
+    (item) => item.id === "CAP-WATERWAYS-KC-STAR-ARTICLE-2026",
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WATERWAYS-KC-STAR-2007-11-15",
+  );
+  const sourceObservations = knowledgeBank.observations.filter(
+    (item) => item.sourceId === source.id,
+  );
+  const conceptionClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATERWAYS-EXPEDITION-CONCEPTION",
+  );
+  const methodClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD",
+  );
+  const coverageClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATERWAYS-KCSTAR-FRONT-PAGE-COVERAGE",
+  );
+
+  assert.equal(capture.publicSafety, "protected-pointer");
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.equal(source.preservationStatus, "private");
+  assert.equal(source.protectedLocatorId, "ARCHIVE-WATERWAYS-KCSTAR-ARTICLE-2007-001");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.equal(source.archiveUrl, undefined);
+  assert.equal(source.assetUrl, undefined);
+  assert.equal(source.media.rightsStatus, "unknown");
+  assert.equal(source.media.consentStatus, "review-needed");
+  assert.equal(source.media.publicDisplayStatus, "metadata-only");
+  assert.equal(sourceObservations.length, 6);
+
+  assert.equal(conceptionClaim.epistemicState, "corroborated");
+  assert.match(conceptionClaim.internalClaim, /originated/i);
+  assert.equal(methodClaim.epistemicState, "corroborated");
+  assert.equal(methodClaim.selectionState, "candidate");
+  assert.equal(coverageClaim.selectionState, "candidate");
+  assert.ok(
+    [methodClaim, coverageClaim].every((claim) =>
+      claim.projections
+        .filter((projection) => projection.key === "case-study")
+        .every(
+          (projection) =>
+            projection.status === "hold" && projection.surfaces.length === 0,
+        ),
+    ),
+  );
+  assert.ok(
+    coverageClaim.boundaries.some((item) => /not endorsement/i.test(item)),
+  );
+  assert.ok(
+    source.doesNotEstablish.some((item) => /arrival at the Gulf/i.test(item)),
+  );
+
+  const payload = JSON.stringify({ capture, source, sourceObservations });
+  assert.doesNotMatch(payload, /\/Users\/|\/Volumes\/|Downloads|KC_Star_Article\.pdf/i);
+  assert.doesNotMatch(payload, /@|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/);
 });
 
 test("June job-hunt packets preserve recovered proposal evidence and the follow-up gap", () => {

@@ -114,8 +114,20 @@ claim beyond the wording and guardrails here.
 ### CLM-WATERWAYS-RAFT-EXPEDITION-SCALE
 
 **Status:** Public-safe candidate, held from current site
-**Public wording:** Jamie co-created and traveled on a participatory recycled-material raft expedition that covered more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers.
-**Guardrail:** Preserve collective credit and say "toward the Gulf," not that the reviewed sources confirm arrival there.
+**Public wording:** Jamie originated, co-created, and traveled on a participatory recycled-material raft expedition that covered more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers into Louisiana.
+**Guardrail:** Preserve collective credit and say "toward the Gulf," not that the reviewed sources confirm arrival there. The Kansas City Star report was published while the expedition was still underway.
+
+### CLM-WATERWAYS-PARTICIPATORY-RIVER-METHOD
+
+**Status:** Public-safe candidate, held from current site
+**Public wording:** Jamie used the raft expedition as a participatory inquiry into the river as social and cultural infrastructure, inviting people aboard and tracing a possible cultural connection between Kansas City's West Bottoms and Delta communities.
+**Guardrail:** This records purpose and method, not measured participant experience or cultural impact. Preserve collective crew, participant, and host-community credit.
+
+### CLM-WATERWAYS-KCSTAR-FRONT-PAGE-COVERAGE
+
+**Status:** Public-safe candidate, held from current site
+**Public wording:** The Kansas City Star featured the raft expedition on its November 15, 2007 front page and continued the report on page A4 while the expedition was underway in Louisiana.
+**Guardrail:** Coverage is not endorsement, reach, conversion, or impact. The newspaper scan and credited photographs are not cleared for public display.
 
 ### CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW
 

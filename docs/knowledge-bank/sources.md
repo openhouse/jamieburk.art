@@ -289,6 +289,12 @@ them is non-citing. The later June 2026 job-hunt packet had not materialized by
 the end of the pass, so it produced a retrieval task rather than inferred
 observations. See `docs/knowledge-bank/projects/teams-archive-production.md`.
 
+On July 16, a user-supplied two-page Kansas City Star article from November 15,
+2007, added one metadata-only source record to the waterways corpus. The scan
+remains outside Git. Its bibliographic metadata and six paraphrased observations
+strengthen the expedition-origin, scale, participatory-method, and press-context
+claims while preserving the still-underway endpoint and image-rights boundaries.
+
 ## Google Drive Shared Drive Archival Production
 
 The July 14 Shared Drive pass recorded an aggregate inventory of 110 accessible

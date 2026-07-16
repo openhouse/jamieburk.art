@@ -132,9 +132,13 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Commercial Rent Stabilization data design: Jamie's privacy-preserving pilot
   requirements are approved as implementation design, not City adoption,
   dataset release, or access to confidential filings.
-- Waterways raft expedition: more than 1,000 miles, collaborative construction,
-  participatory invitations, and resumption after repair are approved for the
-  knowledge bank. Gulf arrival remains unconfirmed and is not approved.
+- Waterways raft expedition: Jamie's originating idea, collective
+  co-creation, more than 1,000 miles into Louisiana, participatory invitations,
+  and resumption after repair are approved for the knowledge bank. The
+  participatory-method and Kansas City Star front-page-coverage claims are also
+  approved for the knowledge bank, but no website projection is selected.
+  Gulf arrival remains unconfirmed and is not approved. The newspaper scan and
+  credited photographs remain metadata-only pending rights and consent review.
 - NYC Artist Coalition Wikipedia workflow: Jamie's source assembly and initial
   draft, Dorothy Howard's review and mainspace move, and later-editor credit are
   approved for the knowledge bank. No website projection is selected.

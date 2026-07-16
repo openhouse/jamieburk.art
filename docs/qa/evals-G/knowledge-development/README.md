@@ -1,13 +1,25 @@
 # Recursive Knowledge-Development Run
 
-- Date: 2026-07-13 to 2026-07-15
+- Date: 2026-07-13 to 2026-07-16
 - Branch: `feature/evals-G`
 - Suite: `knowledge-development-lifecycle`, version 1
 - Decision: deterministic criteria met; fresh independent judgments pending
 - Final candidate fingerprint:
-  `370218ee39146fe8111e3ed79d3a187629cc49fa44639e57b0d782b5690ae536`
+  `556ec75dd28fb87f5e984e93fae2aea3752327e64c89167aa842dc00cc08b2d3`
 
 ## Result
+
+The July 16 waterways pass integrated a user-supplied November 15, 2007,
+Kansas City Star feature as protected, metadata-only evidence. It strengthens
+the public-safe knowledge-bank wording from co-creation alone to Jamie having
+originated, co-created, and traveled on the participatory raft expedition for
+more than 1,000 miles into Louisiana. It also develops distinct participatory-
+method and front-page-coverage claims while holding Gulf arrival, measured
+impact, endorsement, audience reach, and image rights. No website projection
+was selected. Two frozen local passes scored `0.88`, exceeded the `0.85`
+threshold, and produced the same fingerprint; independent and human judgments
+remain open. See
+[`2026-07-16-kc-star-article-ingestion-and-hill-climb.md`](./2026-07-16-kc-star-article-ingestion-and-hill-climb.md).
 
 The latest institutional-value expansion recovered five public DCLA, Council,
 CreateNYC, and coalition records. It establishes the chronology between Tom

@@ -192,8 +192,13 @@ requested dataset was released, or that Jamie accessed confidential RPIE
 filings.
 
 Do not say Jamie alone built the raft or completed the expedition. The reviewed
-sources confirm more than 1,000 miles and later resumption, but not arrival at
-the Gulf of Mexico.
+sources confirm Jamie's originating idea, collective construction, more than
+1,000 miles into Louisiana, and later resumption, but not arrival at the Gulf
+of Mexico.
+
+Do not turn The Kansas City Star's front-page placement into endorsement,
+audience reach, conversion, or cultural impact. Do not republish the newspaper
+scan or credited photographs without rights and depicted-person consent review.
 
 Do not say Jamie independently authored the final NYC Artist Coalition
 Wikipedia article, that Dorothy Howard's edit constituted Wikimedia
