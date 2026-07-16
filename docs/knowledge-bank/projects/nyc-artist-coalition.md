@@ -110,3 +110,23 @@ close-read mission-relevant articles, and separate claims for population
 provenance, source routing, and stakeholder exchange. It preserves the 1,757
 unresolved slots instead of calling them recovered and holds all new website
 projections pending editorial selection.
+
+## Facebook event system
+
+The authenticated Facebook event pass accounts for every slot in the
+capture-date Past Events control: 33 public event identities were recovered and
+one historical slot remains unresolved. The chronology spans 2017 through 2021
+and includes 12 recurring coalition meetings, practical safety and legal
+sessions, cultural-space support, campaign actions, hearings, nightlife and
+commercial-rent work, and pandemic relief coordination.
+
+Jamie identifies helping establish and produce this recurring participation
+system as a substantial contribution. The event pages independently establish
+the collective pattern, while public reporting corroborates his founding
+coalition role, fire-code study groups, and City Hall advocacy. They do not
+assign him authorship or production of every event. Facebook response labels
+remain held interface signals, not attendance, unique people, reach,
+endorsement, mandate, or impact.
+
+See the [full public-safe event archival-production note](nyc-artist-coalition-facebook-events.md)
+and [intake receipt](../runs/2026-07-15-nycac-facebook-events-full-population.md).

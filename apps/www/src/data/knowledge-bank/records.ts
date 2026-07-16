@@ -73,6 +73,12 @@ import {
   urbanhermitFullPopulationResearchInquiries20260715,
   urbanhermitFullPopulationSourceRecords20260715
 } from "./urbanhermit-x-full-population-2026-07-15.ts";
+import {
+  nycacFacebookEventClaims,
+  nycacFacebookEventInquiries,
+  nycacFacebookEventIntake,
+  nycacFacebookEventSources
+} from "./nycac-facebook-events-full-population.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -87,7 +93,8 @@ const knowledgeBankInput = {
     ...wowListFullPopulationIntakeRecords20260715,
     ...kcTownHallFullPopulationIntakeRecords20260715,
     ...nycArtCXArchivalIntakeRecords20260715,
-    ...urbanhermitFullPopulationIntakeRecords20260715
+    ...urbanhermitFullPopulationIntakeRecords20260715,
+    ...nycacFacebookEventIntake
   ],
   sources: [
     {
@@ -223,7 +230,8 @@ const knowledgeBankInput = {
     ...wowListFullPopulationSourceRecords20260715,
     ...kcTownHallFullPopulationSourceRecords20260715,
     ...nycArtCXArchivalSourceRecords20260715,
-    ...urbanhermitFullPopulationSourceRecords20260715
+    ...urbanhermitFullPopulationSourceRecords20260715,
+    ...nycacFacebookEventSources
   ],
   claims: [
     {
@@ -323,7 +331,8 @@ const knowledgeBankInput = {
     ...wowListFullPopulationClaimRecords20260715,
     ...kcTownHallFullPopulationClaimRecords20260715,
     ...nycArtCXArchivalClaimRecords20260715,
-    ...urbanhermitFullPopulationClaimRecords20260715
+    ...urbanhermitFullPopulationClaimRecords20260715,
+    ...nycacFacebookEventClaims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -348,7 +357,8 @@ const knowledgeBankInput = {
     ...wowListFullPopulationResearchInquiries20260715,
     ...kcTownHallFullPopulationResearchInquiries20260715,
     ...nycArtCXArchivalResearchInquiries20260715,
-    ...urbanhermitFullPopulationResearchInquiries20260715
+    ...urbanhermitFullPopulationResearchInquiries20260715,
+    ...nycacFacebookEventInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -472,13 +482,18 @@ const knowledgeBankInput = {
         "SRC-X-NYCARTC-BRANNAN-2019",
         "SRC-X-NYCARTC-VAN-BRAMER-2020",
         "SRC-X-NYCARTC-LEVINE-REPLY-2020",
-        "SRC-X-NYCARTC-LANDER-REPLY-2021"
+        "SRC-X-NYCARTC-LANDER-REPLY-2021",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+        "SRC-NYCAC-GOTHAMIST-CABARET-2017",
+        "SRC-NYCAC-NPR-NIGHTLIFE-2017",
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017"
       ],
       occurrences: [
         { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study" },
         { id: "public-baseline-pilot", claimId: "CLM-CRS-PUBLIC-BASELINE-PILOT-2026", projection: "case-study" },
         { id: "shared-campaign-identity", claimId: "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY", projection: "case-study", sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018"] },
-        { id: "council-account-engagement", claimId: "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", "SRC-X-NYCARTC-ESPINAL-2017", "SRC-X-NYCARTC-LEVIN-2019", "SRC-X-NYCARTC-RIVERA-2021", "SRC-X-NYCARTC-BRANNAN-2019", "SRC-X-NYCARTC-VAN-BRAMER-2020", "SRC-X-NYCARTC-LEVINE-REPLY-2020", "SRC-X-NYCARTC-LANDER-REPLY-2021"] }
+        { id: "council-account-engagement", claimId: "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", "SRC-X-NYCARTC-ESPINAL-2017", "SRC-X-NYCARTC-LEVIN-2019", "SRC-X-NYCARTC-RIVERA-2021", "SRC-X-NYCARTC-BRANNAN-2019", "SRC-X-NYCARTC-VAN-BRAMER-2020", "SRC-X-NYCARTC-LEVINE-REPLY-2020", "SRC-X-NYCARTC-LANDER-REPLY-2021"] },
+        { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCAC-GOTHAMIST-CABARET-2017", "SRC-NYCAC-NPR-NIGHTLIFE-2017", "SRC-COMMUNITY-GREENE-HILL-QA-2017"] }
       ]
     },
     {

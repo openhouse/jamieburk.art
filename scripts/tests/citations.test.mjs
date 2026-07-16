@@ -27,6 +27,21 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
+test("NYC Artist Coalition participation citation exposes only selected public sources", () => {
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "fair-rent-nyc",
+      "coalition-participation-system"
+    ).sources.map((item) => item.source.id),
+    [
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+      "SRC-NYCAC-GOTHAMIST-CABARET-2017",
+      "SRC-NYCAC-NPR-NIGHTLIFE-2017",
+      "SRC-COMMUNITY-GREENE-HILL-QA-2017"
+    ]
+  );
+});
+
 test("shared citation boundaries consolidate only declared source limits", () => {
   for (const pageId of ["callnyc", "fair-rent-nyc", "kc-town-hall"]) {
     const page = citationPagesById[pageId];

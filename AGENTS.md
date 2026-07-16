@@ -31,6 +31,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run test:citations`
 - `npm run report:citations`
 - `npm run check:knowledge-intake`
+- `npm run check:nycac-facebook-events`
+- `npm run evals:nycac-facebook-events`
 
 ## Public-Safety Rules
 
@@ -127,6 +129,13 @@ change for V1.
   adoption, reach, or policy causality.
 - No verified account recovered means only that the bounded pass did not
   recover one; it never means no account existed.
+- Treat Facebook Past Events as a dated interface population. Reconcile the
+  displayed host control to recovered and explicitly unresolved slots; do not
+  rename a reconciled control full historical content recovery.
+- Facebook response labels are not attendance, unique people, reach,
+  endorsement, mandate, or impact. Keep organizer, cohost, venue, and official
+  displays bounded to an event-level interface unless another source supports
+  a stronger relationship.
 
 ## Launch-Readiness Evals
 

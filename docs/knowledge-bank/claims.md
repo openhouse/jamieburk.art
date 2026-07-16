@@ -3,6 +3,27 @@
 This is the human-readable claim register. Public pages should not strengthen a
 claim beyond the wording and guardrails here.
 
+## NYC Artist Coalition Facebook event population
+
+The July 15 detail capture and July 16 live-index replay give every slot in
+Facebook's 34-event control a disposition: 33 event identities were recovered
+and one historical slot remains unresolved.
+
+- `CLM-NYCAC-FACEBOOK-EVENT-POPULATION` preserves that bounded population.
+- `CLM-NYCAC-PARTICIPATION-SYSTEM` selects one first-person case-study claim
+  about Jamie helping establish and produce the recurring participation system.
+- `CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS` keeps dated response labels held
+  as interface signals, never attendance, unique people, reach, or impact.
+- `CLM-NYCAC-FACEBOOK-EVENT-SOURCE-ROUTES` records seven posted article routes
+  without treating links as endorsement or role evidence.
+- `CLM-NYCAC-FACEBOOK-EVENT-STAKEHOLDER-INTERFACES` records cross-sector event
+  interfaces without converting them into endorsement or policy causality.
+- `CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE` preserves Jamie's democracy-lab,
+  believing-artists, and events-as-art interpretation as attributed and held.
+
+This is 100 percent control-slot accounting, not a native Meta owner export or
+a claim that every historical event ever created remains visible.
+
 ## Urbanhermit archival production - held claim palette
 
 The July 15, 2026 pass accounts for all 434 records represented by the live
@@ -181,6 +202,22 @@ job-application site.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-09
+
+## nyc-artist-coalition-participation-system - Recurring participation infrastructure
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Jamie helped establish and produce NYC Artist Coalition's recurring participation system across rotating cultural-space meetings, practical support sessions, public actions, hearings, and relief convenings.
+**Detailed public-safe wording:** The recovered record spans 33 public event identities from 2017 through 2021, including 12 recurring meetings, ten named physical cultural spaces, practical safety and legal sessions, town halls, hearings, campaign actions, and relief coordination. Jamie's broad production role is grounded in his first-hand account; public reporting separately corroborates his founding coalition role, fire-code study groups, and City Hall advocacy.
+**Where to project:** FairRentNYC case study only.
+**Why it matters:** Shows Jamie designing recurring participation infrastructure that connected cultural-space listening, practical support, public communication, and civic action.
+**Guardrail:** Preserve collective authorship and never convert Facebook response labels into attendance, reach, endorsement, or impact.
+**Do not say:** Jamie solely produced every NYC Artist Coalition event; Jamie alone caused a policy outcome; Facebook responses equal attendance or unique reach; all 34 historical event pages were recovered.
+**Protected boundaries:** Raw event descriptions, attendee and guest identities, comments and reactions, contact details, meeting credentials, private working documents, page-administration history, and authenticated-session state stay offline.
+**Review owner:** Jamie
+**Canonical claim:** `CLM-NYCAC-PARTICIPATION-SYSTEM`.
+**Last reviewed:** 2026-07-16
 
 ## wowlist-community-platform - Followable community platform
 

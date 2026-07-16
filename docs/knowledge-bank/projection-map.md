@@ -55,6 +55,16 @@ imply production SaaS.
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
 
+## NYC Artist Coalition Facebook event palette
+
+| Claim | Decision | Reason |
+| --- | --- | --- |
+| `CLM-NYCAC-PARTICIPATION-SYSTEM` | FairRentNYC case study | The first-person role claim makes Jamie's recurring operating contribution legible while preserving collective event and policy credit. |
+| `CLM-NYCAC-FACEBOOK-EVENT-POPULATION` | Knowledge bank only | The 33-recovered-plus-one-unresolved control is research provenance, not headline portfolio copy. |
+| `CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS` | Hold from site | Facebook response labels are not attendance, unique people, reach, endorsement, or impact. |
+| `CLM-NYCAC-FACEBOOK-EVENT-STAKEHOLDER-INTERFACES` | Knowledge bank only | Organizer, cohost, venue, and official displays establish event-level interfaces, not continuing partnerships or endorsements. |
+| `CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE` | Hold for an attributed essay or participant-supported account | Jamie's democracy-lab and events-as-art interpretation is meaningful, but it is not a measured outcome or participant consensus. |
+
 ## Urbanhermit held palette
 
 | Claim | Decision | Reason |
