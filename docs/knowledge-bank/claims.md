@@ -38,12 +38,12 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / protected first-person operational context
-**Public wording:** Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.
-**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
+**Public wording:** Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth.
+**Detailed public-safe wording:** Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth. This is an approved first-person contribution claim, not an independently audited metric or a claim of sole causation.
 **Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
 **Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
 **Canonical claim:** `CLM-HJE-REVENUE-GROWTH-CONTRIBUTION`
-**Guardrail:** Attribute the metric to Jamie's approved public account; it is not independently corroborated. It must stay as contribution language.
+**Guardrail:** Keep the first-person evidence label visible. The metric is not independently corroborated and must stay as contribution language.
 **Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.
 **Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.
 **Review owner:** Jamie

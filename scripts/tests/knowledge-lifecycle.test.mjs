@@ -408,7 +408,8 @@ test("promotion targets and supersession references stay coherent", () => {
 
 test("public briefs resolve to claims actually used on their target pages", () => {
   const broken = structuredClone(knowledgeLifecycle);
-  broken.editorialBriefs[0].canonicalClaimIds = ["CLM-WATERWAYS-RAFT-EXPEDITION-2007"];
+  const brief = broken.editorialBriefs.find(({ id }) => id === "BRIEF-JOB-APPLICATION-CURRENT");
+  brief.canonicalClaimIds = ["CLM-WATERWAYS-RAFT-EXPEDITION-2007"];
   assert.match(validateKnowledgeLifecycle(broken).join("\n"), /not present on a target page/);
 });
 
@@ -428,10 +429,12 @@ test("public briefs require active human approval for their exact surfaces", () 
 
 test("public briefs cannot bypass lifecycle approval or silently omit page claims", () => {
   const bypass = structuredClone(knowledgeLifecycle);
-  bypass.editorialBriefs[0].candidateClaimIds = bypass.editorialBriefs[0].candidateClaimIds.filter((id) => id !== "CND-CALLNYC-INDEPENDENT-FOLLOW-ON");
+  const bypassBrief = bypass.editorialBriefs.find(({ id }) => id === "BRIEF-JOB-APPLICATION-CURRENT");
+  bypassBrief.candidateClaimIds = bypassBrief.candidateClaimIds.filter((id) => id !== "CND-CALLNYC-INDEPENDENT-FOLLOW-ON");
   assert.match(validateKnowledgeLifecycle(bypass).join("\n"), /bypasses lifecycle promotion/);
   const omission = structuredClone(knowledgeLifecycle);
-  omission.editorialBriefs[0].canonicalClaimIds = omission.editorialBriefs[0].canonicalClaimIds.filter((id) => id !== "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON");
+  const omissionBrief = omission.editorialBriefs.find(({ id }) => id === "BRIEF-JOB-APPLICATION-CURRENT");
+  omissionBrief.canonicalClaimIds = omissionBrief.canonicalClaimIds.filter((id) => id !== "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON");
   assert.match(validateKnowledgeLifecycle(omission).join("\n"), /neither selects nor explicitly excludes/);
 });
 
@@ -629,6 +632,28 @@ test("self-reported aggregates retain their qualifier through public composition
   assert.match(readFileSync("apps/www/src/app/work/technical-operations/page.tsx", "utf8"), /report building repeatable support systems for 20\+ resident artists/);
 });
 
+test("the HJE revenue contribution retains intake, research, and visible attribution", () => {
+  const lead = knowledgeLifecycle.leads.find(({ id }) => id === "LEAD-HJE-REVENUE-GROWTH-CONTEXT");
+  const candidate = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-HJE-REVENUE-GROWTH-CONTRIBUTION");
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-HJE-REVENUE-GROWTH-CORROBORATION");
+  const canonical = knowledgeBank.claims.find(({ id }) => id === "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION");
+
+  assert.equal(lead?.state, "extracted");
+  assert.deepEqual(lead?.candidateClaimIds, [candidate?.id]);
+  assert.deepEqual(lead?.researchTaskIds, [task?.id]);
+  assert.equal(task?.status, "open");
+  assert.deepEqual(candidate?.researchTaskIds, [task?.id]);
+  assert.equal(candidate?.publicEvidenceQualifier?.kind, "self-reported");
+  assert.ok(canonical?.researchInquiryIds.includes("INQ-HJE-REVENUE-GROWTH-CORROBORATION-2026"));
+
+  const activeMetricProjections = canonical?.projections.filter(
+    ({ status, text }) => status === "active" && /2x revenue growth|revenue approximately doubled/i.test(text)
+  ) ?? [];
+  assert.equal(activeMetricProjections.length, 6);
+  assert.ok(activeMetricProjections.every(({ text }) => /Jamie reports/i.test(text)));
+  assert.ok(activeMetricProjections.every(({ text }) => /contribut/i.test(text)));
+});
+
 test("intake rejects unknown graph associations", () => {
   const result = spawnSync(process.execPath, [
     "scripts/intake-knowledge-lead.mjs",
@@ -731,11 +756,19 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.deepEqual(resumePdf.researchTasks, []);
   assert.deepEqual(resumePdf.mediaLeads, []);
 
-  const hjeProofs = retrieveKnowledgePalette({ proofSurface: "/work/harry-j-epstein", publicationSafe: true });
+  const hjeProofs = retrieveKnowledgePalette({
+    briefId: "BRIEF-HJE-CURRENT",
+    surface: "/work/harry-j-epstein",
+    proofSurface: "/work/harry-j-epstein",
+    publicationSafe: true
+  });
   assert.deepEqual(hjeProofs.projects.map(({ id }) => id), ["PRJ-HARRY-J-EPSTEIN"]);
   assert.deepEqual(hjeProofs.canonicalClaims.map(({ id }) => id), ["CLM-HJE-REVENUE-GROWTH-CONTRIBUTION"]);
   assert.deepEqual(hjeProofs.candidates.map(({ id }) => id), ["CND-HJE-REVENUE-GROWTH-CONTRIBUTION"]);
   assert.deepEqual(hjeProofs.researchTasks, []);
+  assert.equal(hjeProofs.brief?.id, "BRIEF-HJE-CURRENT");
+  assert.ok(hjeProofs.publicationAuthorizations.length > 0);
+  assert.ok(hjeProofs.publicationAuthorizations.every(({ authorized }) => authorized));
 
   const plannedNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study" });
   const publicNightlife = retrieveKnowledgePalette({ surface: "future-nightlife-case-study", publicationSafe: true });

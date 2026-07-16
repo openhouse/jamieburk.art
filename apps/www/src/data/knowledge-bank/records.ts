@@ -1176,12 +1176,12 @@ const knowledgeBankInput = {
       internalClaim: "Jamie improved HJE's web, e-commerce, analytics, marketing, content, and operational workflows during a period in which the business's revenue approximately doubled; the available evidence supports contribution, not sole causation.",
       status: "confirmed-with-boundary",
       projections: [
-        { key: "homepage", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/"] },
-        { key: "work-card", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/work"] },
-        { key: "technical-operations", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
-        { key: "resume-html", text: "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/resume"] },
-        { key: "resume-pdf", text: "Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company, contributing to 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] },
-        { key: "case-study", text: "Jamie contributed to a period of 2x revenue growth while supporting e-commerce and marketing systems and helping translate legacy operating knowledge into more durable digital workflows.", status: "active", citationRequired: true, surfaces: ["/work/harry-j-epstein"] }
+        { key: "homepage", text: "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/"] },
+        { key: "work-card", text: "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/work"] },
+        { key: "technical-operations", text: "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
+        { key: "resume-html", text: "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth.", status: "active", citationRequired: false, surfaces: ["/resume"] },
+        { key: "resume-pdf", text: "Jamie reports that his web, e-commerce, marketing, analytics, and operations improvements contributed during a period of 2x revenue growth at Harry J. Epstein Company.", status: "active", citationRequired: false, surfaces: ["/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"] },
+        { key: "case-study", text: "Jamie reports that his work contributed during a period of 2x revenue growth while supporting e-commerce and marketing systems and helping translate legacy operating knowledge into more durable digital workflows.", status: "active", citationRequired: true, surfaces: ["/work/harry-j-epstein"] }
       ],
       evidence: [
         { sourceId: "SRC-JAMIE-APPROVED-RESUME-2026-07-13", relationship: "direct-support", supports: ["Jamie's approved public wording", "his self-reported operating contribution", "the bounded 2x revenue-growth figure"], locator: "Selected Impact and Harry J. Epstein Company experience, pages 1-2", confidence: "moderate", renderCitation: true },
@@ -1189,7 +1189,7 @@ const knowledgeBankInput = {
       ],
       boundaries: ["Attribute the metric to Jamie's approved public account; it is not independently corroborated.", "Always use contribution language and keep the business's other people, decisions, products, market conditions, and operating factors in the causal frame.", "Do not publish private revenue amounts, date ranges, dashboards, customer data, vendor terms, or internal analytics."],
       antiClaims: ["Jamie caused HJE revenue to double", "Jamie single-handedly doubled revenue", "The portfolio publishes an independently audited revenue metric", "The claim establishes a precise public revenue total or period"],
-      researchInquiryIds: [],
+      researchInquiryIds: ["INQ-HJE-REVENUE-GROWTH-CORROBORATION-2026"],
       reviewedAt: "2026-07-15",
       reviewedBy: ["Jamie Burkart", "Codex public-safety and portfolio-eval review"]
     },
@@ -1522,6 +1522,18 @@ const knowledgeBankInput = {
     }
   ],
   researchInquiries: [
+    {
+      id: "INQ-HJE-REVENUE-GROWTH-CORROBORATION-2026",
+      project: "harry-j-epstein",
+      question: "Can a bounded collaborator statement or privacy-preserving business record independently corroborate the approximate revenue-growth period and Jamie's contribution without exposing confidential business data?",
+      methods: ["Request a public-safe collaborator proof note that distinguishes Jamie's workstreams from sole causation", "Seek a privacy-preserving dated aggregate or attestation that supports the approximate growth period without publishing revenue totals", "Revise or withdraw the metric if stronger evidence narrows the scale, period, or contribution framing"],
+      runAt: "2026-07-15",
+      resultStatus: "partially-recovered",
+      findings: ["Jamie's approved public resume and protected first-person operating context support the current self-reported contribution claim", "No independent corroboration suitable for the public repository has yet been recovered"],
+      limitations: ["The current evidence is first-person and protected", "Private revenue totals, date ranges, dashboards, customer records, and vendor terms remain outside the repository"],
+      sourceIds: ["SRC-JAMIE-APPROVED-RESUME-2026-07-13", "SRC-HJE-REVENUE-CONTEXT-2026"],
+      publicSummary: "Independent corroboration remains an open research task; public wording stays explicitly self-reported and contributory."
+    },
     ...socialArchiveResearchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...nycartcXCorpusResearchInquiries,

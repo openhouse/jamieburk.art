@@ -110,16 +110,16 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to a period of 2x revenue growth.",
+      "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth.",
     shortWording:
-      "Jamie improved web, e-commerce, analytics, marketing, content, and operational workflows, contributing to 2x revenue growth",
+      "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth",
     detailedPublicWording:
-      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
+      "Jamie reports that his web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed during a period of 2x revenue growth. This is an approved first-person contribution claim, not an independently audited metric or a claim of sole causation.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
-    sourceNote: "Keep causal language careful and aggregate.",
+    sourceNote: "Keep the first-person evidence label, causal boundary, and aggregate framing visible.",
     whyItMatters:
       "Provides a concise business-impact proof point while retaining careful causality.",
-    guardrail: "Must stay as contribution language.",
+    guardrail: "Must stay explicitly self-reported and use contribution language.",
     doNotSay: [
       "Caused 2x revenue growth",
       "Single-handedly doubled revenue",

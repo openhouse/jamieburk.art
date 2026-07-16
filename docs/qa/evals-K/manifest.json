@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "3f73b890a255e323a8f868eadb08d40a7a0f764ca90d5e3899d0448cd548a930",
+  "sourceSha256": "ad0c2ddba165f36b6f263adf5b60099702ef7fbf4a22a768a0de5c389ab45f38",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -67,7 +67,7 @@
       "route": "/resume",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/resume-desktop.png",
-      "artifactSha256": "b8b6aa913839e1632cf1dce024cb35405bdecb1d1322523d02d03185ee521732"
+      "artifactSha256": "cbde3c3de6e564f44fc5005e49e516645cedfe1d5d63bba64794b118a95c2138"
     },
     {
       "route": "/resume",
@@ -91,7 +91,7 @@
       "route": "/work/harry-j-epstein",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/harry-j-epstein-desktop.png",
-      "artifactSha256": "c1d471f04d1fd7548777cb25171998fff4bc1881422455c6ece46aabcf8ba0df"
+      "artifactSha256": "40e56239ea8b7f5b92e4d5ba2c9f052ffdd804d2e00f32c9bb0e52936582fab5"
     },
     {
       "route": "/work/harry-j-epstein",
@@ -151,13 +151,13 @@
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "viewport": "PDF page 1 at 144 DPI",
       "artifactPath": "docs/qa/evals-K/resume-page-1.png",
-      "artifactSha256": "9e4c0cf496aea5f58e8662f379e925aa1f9ac7e091148ed5533538f26373eff9"
+      "artifactSha256": "ca9789cef2607aaab9947ab1f835e11e1c06c1a8912055959b7bd322fdc11d78"
     },
     {
       "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "viewport": "PDF page 2 at 144 DPI",
       "artifactPath": "docs/qa/evals-K/resume-page-2.png",
-      "artifactSha256": "17986ef6489b97ef6a260e830bfa102ca379efd1456853d6a8fdf7776dd5669f"
+      "artifactSha256": "2ccdb3ae8b53f637212c87f74ad77e9bd0e49b061df487a9b4b8d693a514bf9d"
     }
   ]
 }
