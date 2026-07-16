@@ -550,46 +550,22 @@ const knowledgeBankInput = {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
       sharedBoundary:
-        "Across the shared-account and Council-member records below, account activity does not establish Jamie's post-level authorship, official Council endorsement, a complete historical census, reach, or policy causality.",
-      sourceBoundaryOmissions: {
-        "SRC-X-NYCARTC-PROFILE-AUDIT-2026": [
-          "Jamie's authorship of team posts",
-          "official Council endorsement, reach, or policy causality"
-        ],
-        "SRC-X-NYCARTC-ESPINAL-2017": [
-          "Jamie's authorship",
-          "Council endorsement of every coalition campaign"
-        ],
-        "SRC-X-NYCARTC-LEVIN-2019": ["official endorsement"],
-        "SRC-X-NYCARTC-RIVERA-2021": ["official Council endorsement", "Jamie's authorship"],
-        "SRC-X-NYCARTC-BRANNAN-2019": ["official endorsement", "Jamie's authorship"],
-        "SRC-X-NYCARTC-VAN-BRAMER-2020": ["official endorsement", "Jamie's authorship"],
-        "SRC-X-NYCARTC-LEVINE-REPLY-2020": ["mission-specific endorsement", "Jamie's authorship"],
-        "SRC-X-NYCARTC-LANDER-REPLY-2021": ["official Council endorsement", "Jamie's authorship"]
-      },
+        "The sources support a recurring coalition participation system, Jamie's attributed contribution, and a public-data proposal. They do not establish Jamie's authorship of every event, attendance, endorsement, a continuing partnership, policy causality, or adoption of the proposal.",
+      sourceBoundaryOmissions: {},
       sourceOrder: [
-        "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
-        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27",
-        "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
-        "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
-        "SRC-X-NYCARTC-ESPINAL-2017",
-        "SRC-X-NYCARTC-LEVIN-2019",
-        "SRC-X-NYCARTC-RIVERA-2021",
-        "SRC-X-NYCARTC-BRANNAN-2019",
-        "SRC-X-NYCARTC-VAN-BRAMER-2020",
-        "SRC-X-NYCARTC-LEVINE-REPLY-2020",
-        "SRC-X-NYCARTC-LANDER-REPLY-2021",
         "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
         "SRC-NYCAC-GOTHAMIST-CABARET-2017",
         "SRC-NYCAC-NPR-NIGHTLIFE-2017",
-        "SRC-COMMUNITY-GREENE-HILL-QA-2017"
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27"
       ],
       occurrences: [
-        { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study" },
-        { id: "public-baseline-pilot", claimId: "CLM-CRS-PUBLIC-BASELINE-PILOT-2026", projection: "case-study" },
-        { id: "shared-campaign-identity", claimId: "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY", projection: "case-study", sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018"] },
-        { id: "council-account-engagement", claimId: "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", "SRC-X-NYCARTC-ESPINAL-2017", "SRC-X-NYCARTC-LEVIN-2019", "SRC-X-NYCARTC-RIVERA-2021", "SRC-X-NYCARTC-BRANNAN-2019", "SRC-X-NYCARTC-VAN-BRAMER-2020", "SRC-X-NYCARTC-LEVINE-REPLY-2020", "SRC-X-NYCARTC-LANDER-REPLY-2021"] },
-        { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCAC-GOTHAMIST-CABARET-2017", "SRC-NYCAC-NPR-NIGHTLIFE-2017", "SRC-COMMUNITY-GREENE-HILL-QA-2017"] }
+        {
+          id: "coalition-participation-system",
+          claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          projection: "case-study"
+        },
+        { id: "public-baseline-pilot", claimId: "CLM-CRS-PUBLIC-BASELINE-PILOT-2026", projection: "case-study" }
       ]
     },
     {
@@ -614,27 +590,20 @@ const knowledgeBankInput = {
           "that construction began or was completed",
           "that Jamie personally received the appropriation",
           "that Jamie alone caused the Council action"
-        ],
-        "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022": [
-          "that a funding agreement was later executed",
-          "construction or project completion"
         ]
       },
       sourceOrder: [
         "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
         "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
-        "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
         "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
         "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018",
-        "SRC-X-KCTOWNHALL-FULL-POPULATION-2026",
-        "SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019"
+        "SRC-X-KCTOWNHALL-FULL-POPULATION-2026"
       ],
       occurrences: [
         { id: "public-proposal", claimId: "CLM-KC-TOWN-HALL-PROPOSAL-2019", projection: "case-study" },
         { id: "council-acceptance", claimId: "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019", projection: "case-study" },
         { id: "council-appropriation", claimId: "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019", projection: "case-study" },
-        { id: "interim-funding-status", claimId: "CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022", projection: "case-study" },
         { id: "project-withdrawal", claimId: "CLM-KC-TOWN-HALL-WITHDRAWN-2024", projection: "case-study" },
         {
           id: "resident-input-surface",
@@ -645,18 +614,6 @@ const knowledgeBankInput = {
         {
           id: "tire-operating-pattern",
           claimId: "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN",
-          projection: "case-study",
-          sourceIds: ["SRC-X-KCTOWNHALL-FULL-POPULATION-2026"]
-        },
-        {
-          id: "tire-dropoff-corroboration",
-          claimId: "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
-          projection: "case-study",
-          sourceIds: ["SRC-X-KCTOWNHALL-BTG-TIRE-DROPOFF-2019"]
-        },
-        {
-          id: "council-response-floor",
-          claimId: "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR",
           projection: "case-study",
           sourceIds: ["SRC-X-KCTOWNHALL-FULL-POPULATION-2026"]
         }

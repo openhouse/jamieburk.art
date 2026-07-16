@@ -1439,6 +1439,22 @@ export function validateKnowledgeIntake() {
     "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
     "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR"
   ];
+  const selectedKcTownHallPageSourceIds = [
+    "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+    "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+    "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+    "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
+    "SRC-X-KCTOWNHALL-NEIGHBORHOOD-PROCESS-2018",
+    "SRC-X-KCTOWNHALL-FULL-POPULATION-2026"
+  ];
+  const selectedKcTownHallPageClaimIds = [
+    "CLM-KC-TOWN-HALL-PROPOSAL-2019",
+    "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019",
+    "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
+    "CLM-KC-TOWN-HALL-WITHDRAWN-2024",
+    "CLM-KCTOWNHALL-RESIDENT-INPUT-SURFACE",
+    "CLM-KCTOWNHALL-TIRE-OPERATING-PATTERN"
+  ];
   const requiredKcTownHallPracticeSourceIds = [
     "SRC-KCTH-CCED-PROPOSAL-PHASE-ONE-2019",
     "SRC-KCTH-JAMIE-FIELD-PRACTICE-MEMORY-2026",
@@ -1708,20 +1724,22 @@ export function validateKnowledgeIntake() {
     const occurrenceClaimIds = new Set(
       kcTownHallPage.occurrences.map((occurrence) => occurrence.claimId)
     );
-    for (const claimId of [
-      ...requiredKcTownHallClaimIds,
-      ...requiredKcTownHallSocialPageClaimIds
-    ]) {
+    for (const claimId of selectedKcTownHallPageClaimIds) {
       if (!occurrenceClaimIds.has(claimId)) {
         kcTownHallErrors.push(`KC Town Hall page plan does not render ${claimId}`);
       }
     }
-    const expectedSourceOrder = [
-      ...requiredKcTownHallSourceIds,
-      ...requiredKcTownHallSocialPageSourceIds
-    ];
-    if (JSON.stringify(kcTownHallPage.sourceOrder) !== JSON.stringify(expectedSourceOrder)) {
-      kcTownHallErrors.push("KC Town Hall source order must preserve the municipal chronology followed by the public operating and stakeholder record");
+    for (const claimId of [
+      "CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022",
+      "CLM-KCTOWNHALL-TIRE-DROPOFF-CORROBORATION",
+      "CLM-KCTOWNHALL-COUNCIL-RESPONSE-FLOOR"
+    ]) {
+      if (occurrenceClaimIds.has(claimId)) {
+        kcTownHallErrors.push(`${claimId} should remain in the knowledge bank without occupying the selected KC Town Hall page narrative`);
+      }
+    }
+    if (JSON.stringify(kcTownHallPage.sourceOrder) !== JSON.stringify(selectedKcTownHallPageSourceIds)) {
+      kcTownHallErrors.push("KC Town Hall source order must match the selected municipal, neighborhood-input, and operating-practice narrative");
     }
     if (
       kcTownHallPage.sourceOrder.includes("SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026") ||

@@ -97,7 +97,9 @@ and opaque protected locator.
 `npm run check:knowledge-intake` validates required intake coverage, stable
 destinations, canonical links, projection discipline, campaign press
 provenance, protected cloud-source boundaries, and blocked path or link
-markers. The launch-readiness v10 suite includes:
+markers. AGENTS.md and the active runner identify the current suite; at this
+review it is launch-readiness v22. Its intake and decomposition criteria
+include:
 
 - `INTAKE-001` for lossless public-safe capture;
 - `DISPOSITION-001` for resolvable destinations;
@@ -108,6 +110,13 @@ markers. The launch-readiness v10 suite includes:
 - `GDRIVE-001` for governed Shared Drive inventory, close reading, and selective projection;
 - `KCTH-001` for the bounded KC Town Hall municipal and stewardship sequence;
 - `DECOMP-001` for independent semantic review of source decomposition.
+
+`records.ts` and its imported modules are canonical for citational claims,
+atomic evidence relationships, and source limits. `proofs.ts` is a curated
+public-safe capability and surface-selection layer. It may summarize approved
+claims for hiring-facing composition, but it may not independently strengthen
+or contradict the canonical records. The knowledge-bank and public-safety
+checks enforce that boundary.
 
 The deterministic gates can prove structural completeness. Two independent
 semantic graders must still assess whether the decomposition is accurate,

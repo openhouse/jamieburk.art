@@ -611,7 +611,7 @@ export const proofClaims: ProofClaim[] = [
       "Private transcript excerpts",
       "Private company context"
     ],
-    surfaces: ["technical-operations", "lab"],
+    surfaces: ["homepage", "technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
     lastReviewed: "2026-07-14"
@@ -702,11 +702,10 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 }
 
 export const homepageProofs = [
-  "career-operating-structure-14-years",
   "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure"
+  "callnyc-civic-data-guidance",
+  "source-backed-team-memory-method"
 ].map(requireReadyOrCarefulProof);
 
 export const resumeProofHighlights = [
@@ -730,9 +729,7 @@ export const technicalOperationsProofRows = [
     toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
     proofIds: [
       "technical-operations-operating-backbone",
-      "hje-modernization-stewardship",
-      "callnyc-civic-data-guidance",
-      "wowlist-community-platform"
+      "hje-modernization-stewardship"
     ]
   },
   {
@@ -740,8 +737,6 @@ export const technicalOperationsProofRows = [
     toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
     proofIds: [
       "fair-rent-campaign-memory",
-      "fair-rent-source-map",
-      "fair-rent-public-data-pilot",
       "kc-town-hall-public-benefit-documentation"
     ]
   },
@@ -749,8 +744,7 @@ export const technicalOperationsProofRows = [
     capability: "Operating documentation people use",
     toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
     proofIds: [
-      "fair-rent-campaign-memory",
-      "sunday-dinner-196-participation-infrastructure",
+      "fair-rent-source-map",
       "source-backed-team-memory-method"
     ]
   },
@@ -758,13 +752,8 @@ export const technicalOperationsProofRows = [
     capability: "Public-facing launch and adoption",
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
-      "nyc-artist-coalition-public-web-infrastructure",
-      "project-social-identity-systems",
-      "nyc-artist-coalition-civic-systems",
-      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
-      "wowlist-community-platform",
-      "hje-revenue-growth-contribution"
+      "wowlist-community-platform"
     ]
   }
 ].map((row) => ({
