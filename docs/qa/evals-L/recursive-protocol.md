@@ -66,6 +66,12 @@ website projection. It fails when evidence is orphaned, inference is promoted,
 source limitations disappear, or unselected depth leaks into the public
 citation layer.
 
+For archival article additions, the exact source posture must travel with the
+claim. A protected or metadata-only scan may strengthen the graph without being
+republished; in-progress reporting cannot silently become endpoint proof; and
+named participants must not be flattened into sole authorship or a presumed
+complete roster.
+
 ### CallNYC X Corpus Criterion
 
 `npm run evals:callnyc-x` recomputes the archival findings from the public

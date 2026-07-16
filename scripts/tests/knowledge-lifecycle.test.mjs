@@ -294,6 +294,61 @@ test("claim maturity matches recovered evidence", () => {
   );
 });
 
+test("Kansas City Star raft coverage strengthens the claim without collapsing boundaries", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const observationById = new Map(
+    knowledgeBank.observations.map((observation) => [observation.id, observation])
+  );
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-2026-07-16-KC-STAR-RAFT-ARTICLE"
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WATERWAYS-RAFT-EXPEDITION"
+  );
+  const observationIds = [
+    "OBS-WATERWAYS-KC-STAR-FRONT-PAGE",
+    "OBS-WATERWAYS-KC-STAR-CREW",
+    "OBS-WATERWAYS-KC-STAR-CRAFT",
+    "OBS-WATERWAYS-KC-STAR-IN-PROGRESS",
+    "OBS-WATERWAYS-KC-STAR-PARTICIPATORY-PURPOSE",
+    "OBS-WATERWAYS-KC-STAR-INTERRUPTION-RECOVERY",
+    "OBS-WATERWAYS-PITCH-PART-III-CORROBORATION"
+  ];
+
+  assert.equal(intake?.researchStatus, "researched");
+  assert.equal(intake?.publicationStatus, "knowledge-bank-only");
+  assert.deepEqual(intake?.sourceIds, [
+    "SRC-WATERWAYS-KC-STAR-2007-11-15",
+    "SRC-WATERWAYS-PITCH-PART-III-2007-11-12"
+  ]);
+  assert.ok(observationIds.every((id) => observationById.has(id)));
+  assert.equal(
+    sourceById.get("SRC-WATERWAYS-KC-STAR-2007-11-15")?.visibility,
+    "public-metadata-only"
+  );
+  assert.equal(
+    sourceById.get("SRC-WATERWAYS-KC-STAR-2007-11-15")?.media?.publicDisplayStatus,
+    "hold"
+  );
+  assert.equal(
+    sourceById.get("SRC-WATERWAYS-PITCH-PART-III-2007-11-12")?.visibility,
+    "public"
+  );
+  assert.ok(
+    claim?.evidence.some(
+      (item) => item.sourceId === "SRC-WATERWAYS-KC-STAR-2007-11-15"
+    )
+  );
+  assert.ok(
+    claim?.evidence.some(
+      (item) => item.sourceId === "SRC-WATERWAYS-PITCH-PART-III-2007-11-12"
+    )
+  );
+  assert.ok(claim?.boundaries.some((value) => /journey in progress/i.test(value)));
+  assert.ok(claim?.boundaries.some((value) => /crew then traveling/i.test(value)));
+  assert.ok(claim?.antiClaims.some((value) => /already reached the Gulf/i.test(value)));
+});
+
 test("social account archive preserves collective credit and bounded engagement", () => {
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));

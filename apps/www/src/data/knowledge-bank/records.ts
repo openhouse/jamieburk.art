@@ -126,6 +126,11 @@ import {
   ucscNarrativeEvaluationResearchInquiries,
   ucscNarrativeEvaluationSources
 } from "./ucsc-narrative-evaluations.ts";
+import {
+  waterwaysKcStarIntakeItems,
+  waterwaysKcStarObservations,
+  waterwaysKcStarSources
+} from "./waterways-kc-star-2007.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -147,6 +152,7 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostIntakeItems,
     ...nycacInstitutionalInterfaceIntakeItems,
     ...ucscNarrativeEvaluationIntakeItems,
+    ...waterwaysKcStarIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -449,6 +455,7 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostSources,
     ...nycacInstitutionalInterfaceSources,
     ...ucscNarrativeEvaluationSources,
+    ...waterwaysKcStarSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1482,6 +1489,7 @@ const knowledgeBankInput = {
     ...jamiePersonalFacebookPostObservations,
     ...nycacInstitutionalInterfaceObservations,
     ...ucscNarrativeEvaluationObservations,
+    ...waterwaysKcStarObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -2202,19 +2210,51 @@ const knowledgeBankInput = {
           supports: ["Gulf of Mexico endpoint", "four-month duration", "collaborative expedition", "connection to Great Accommodations"],
           confidence: "high",
           renderCitation: true
+        },
+        {
+          sourceId: "SRC-WATERWAYS-KC-STAR-2007-11-15",
+          relationship: "corroborating",
+          supports: [
+            "Jamie's originating idea",
+            "the named in-progress crew",
+            "found-material bicycle-powered construction",
+            "more than 1,000 miles traveled",
+            "participatory purpose",
+            "operational interruption and recovery"
+          ],
+          locator: "Print edition pages A1 and A4",
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-WATERWAYS-PITCH-PART-III-2007-11-12",
+          relationship: "corroborating",
+          supports: [
+            "project title",
+            "July 21 Kaw Point departure",
+            "recycled construction",
+            "more than 1,000 miles traveled",
+            "Coast Guard interruption",
+            "Vicksburg repair and community assistance"
+          ],
+          confidence: "high",
+          renderCitation: true
         }
       ],
       boundaries: [
         "Describe the expedition as collaborative; do not erase fellow travelers or hosts.",
-        "Do not imply that the recovered sources provide a complete route log or participant roster."
+        "Do not imply that the recovered sources provide a complete route log or participant roster.",
+        "The November 2007 reports document the journey in progress; later sources, not the Kansas City Star scan by itself, establish the eventual Gulf endpoint.",
+        "The trio named in the Kansas City Star was the crew then traveling, not necessarily every participant across every stage."
       ],
       antiClaims: [
         "Jamie completed the expedition alone.",
-        "The recovered sources establish every participant or stop."
+        "The recovered sources establish every participant or stop.",
+        "The November 2007 Kansas City Star report proves that the crew had already reached the Gulf."
       ],
       researchInquiryIds: [],
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Jamie Burkart", "Codex source review"]
+      reviewedAt: "2026-07-16",
+      reviewedBy: ["Jamie Burkart", "Codex PDF and source review"]
     },
     {
       id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS",
