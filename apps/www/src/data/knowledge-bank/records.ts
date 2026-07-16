@@ -244,17 +244,17 @@ const knowledgeBankInput = {
       visibility: "public-metadata-only",
       preservationStatus: "archived",
       publishedAt: "2007-11-15",
-      accessedAt: "2026-07-15",
-      metadataVerifiedAt: "2026-07-15",
-      metadataVerifiedBy: "Codex protected-archive review",
+      accessedAt: "2026-07-16",
+      metadataVerifiedAt: "2026-07-16",
+      metadataVerifiedBy: "Jamie Burkart and Codex visual artifact review",
       reviewStatus: "close-read",
-      contentReviewedAt: "2026-07-15",
-      contentReviewedBy: "Codex protected-archive review",
+      contentReviewedAt: "2026-07-16",
+      contentReviewedBy: "Jamie Burkart and Codex visual artifact review",
       publicCitation: "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, pages A1 and A4.",
       publicNote: "A preserved newspaper clipping documents the collective raft expedition from Kansas City into Louisiana, Jamie's initiating idea, and the project's public-waterway framing.",
       protectedLocatorId: "ARCHIVE-WATERWAYS-KC-STAR-RAFT-2007-001",
-      supportsGenerally: ["the expedition traveled from Kansas City into Louisiana", "the crew had traveled more than 1,000 miles", "Jamie initiated the expedition idea", "the crew resumed after modifying the raft during a regulatory pause", "the project treated the river as civic and cultural space"],
-      doesNotEstablish: ["that Jamie traveled alone", "that Jamie alone built the raft", "that the raft reached the Gulf of Mexico"]
+      supportsGenerally: ["the expedition traveled from Kansas City into Louisiana", "the crew had traveled more than 1,000 miles", "Jamie initiated the expedition idea", "James Burkart, Libby Hendon, and Laura Mattingly were the three-person traveling crew documented at that stage", "the crew resumed after modifying the raft during a regulatory pause", "Jamie framed the river as overlooked civic space and a cultural connection between Kansas City's West Bottoms and Delta towns", "the project title expressed a saltwater aspiration"],
+      doesNotEstablish: ["that Jamie traveled alone", "that Jamie alone built the raft", "a complete roster or allocation of every project role", "that the raft reached the Gulf of Mexico", "that the project's saltwater title proves endpoint completion"]
     },
     {
       id: "SRC-WATERWAYS-WLBT-RAFT-2007",
@@ -1469,14 +1469,14 @@ const knowledgeBankInput = {
       projections: [{ key: "archive-note", text: "Jamie organized a collective recycled-material, bicycle-powered raft expedition that traveled more than 1,000 miles from Kansas City into Louisiana, adapting and resuming after a regulatory pause with community support.", status: "hold", citationRequired: true, surfaces: [] }],
       evidence: [
         { sourceId: "SRC-WATERWAYS-PITCH-HUCK-FINN-2007", relationship: "direct-support", supports: ["Jamie's role in originating the expedition concept", "the Kansas City departure", "regional transportation-history framing"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-WATERWAYS-KANSAS-CITY-STAR-RAFT-2007", relationship: "direct-support", supports: ["the Kansas City-to-Louisiana route", "more than 1,000 miles of collective travel", "Jamie's initiating idea", "the river-as-civic-space method", "resumption after a regulatory pause"], locator: "Pages A1 and A4", confidence: "high", renderCitation: false },
+        { sourceId: "SRC-WATERWAYS-KANSAS-CITY-STAR-RAFT-2007", relationship: "direct-support", supports: ["the Kansas City-to-Louisiana route", "more than 1,000 miles of collective travel", "Jamie's initiating idea", "the named three-person traveling crew", "the river-as-civic-space method", "resumption after a regulatory pause"], locator: "Pages A1 and A4", confidence: "high", renderCitation: false },
         { sourceId: "SRC-WATERWAYS-WLBT-RAFT-2007", relationship: "corroborating", supports: ["Jamie as journey organizer", "more than 1,000 miles", "Louisiana route", "bicycle-powered paddlewheels", "collective crew"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-WATERWAYS-PITCH-HUCK-FINN-PART-III-2007", relationship: "corroborating", supports: ["more than 1,000 miles", "resumption after a regulatory pause", "community and legal support in Vicksburg"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009", relationship: "corroborating", supports: ["the earlier river expedition and Jamie's continuing waterways practice"], confidence: "moderate", renderCitation: true }
       ],
-      boundaries: ["Describe the expedition as collective work and credit Libby Hendon, Laura Mattingly, and other builders and participants when space permits.", "The reviewed sources establish travel into Louisiana but do not establish that the raft reached the Gulf of Mexico."],
-      antiClaims: ["Jamie alone built or completed the expedition", "The raft reached the Gulf of Mexico", "The regulatory pause ended without material changes or outside assistance"],
-      researchInquiryIds: [], reviewedAt: "2026-07-15", reviewedBy: ["Codex protected-archive and public-source review"]
+      boundaries: ["Describe the expedition as collective work and credit Libby Hendon, Laura Mattingly, and other builders and participants when space permits.", "The reviewed sources establish travel into Louisiana but do not establish that the raft reached the Gulf of Mexico.", "Treat the project's saltwater title as aspiration and identity, not endpoint proof."],
+      antiClaims: ["Jamie alone built or completed the expedition", "The raft reached the Gulf of Mexico", "The project title proves the expedition reached salt water", "The regulatory pause ended without material changes or outside assistance"],
+      researchInquiryIds: [], reviewedAt: "2026-07-16", reviewedBy: ["Jamie Burkart", "Codex visual artifact and public-source review"]
     },
     {
       id: "CLM-CRS-SHARED-PUBLIC-GOODS-OPERATING-PLAN-2026",

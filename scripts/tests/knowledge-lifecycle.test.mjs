@@ -286,6 +286,46 @@ test("Teams archive production promotes bounded methods while holding unsupporte
   assert.equal(sprintProof?.canonicalClaimIds, undefined);
 });
 
+test("the Kansas City Star preservation copy remains deduplicated, decomposed, and unprojected", () => {
+  const lead = knowledgeLifecycle.leads.find(({ id }) => id === "LEAD-WATERWAYS-KC-STAR-RAFT-RECONCILIATION-20260716");
+  const source = knowledgeBank.sources.find(({ id }) => id === "SRC-WATERWAYS-KANSAS-CITY-STAR-RAFT-2007");
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-WATERWAYS-KC-STAR-RECONCILIATION-2026-07-16");
+  const expedition = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-WATERWAYS-RAFT-EXPEDITION");
+  const gulf = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-WATERWAYS-RAFT-GULF-ENDPOINT");
+  const claim = knowledgeBank.claims.find(({ id }) => id === "CLM-WATERWAYS-RAFT-EXPEDITION-2007");
+  const collective = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-KC-STAR-RAFT-COLLECTIVE-IDENTITY-2007");
+  const civic = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-KC-STAR-RAFT-CIVIC-CULTURAL-FRAMING-2007");
+  const titleBoundary = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-KC-STAR-RAFT-SALTWATER-TITLE-BOUNDARY-2007");
+
+  assert.equal(lead?.duplicateOfLeadId, "LEAD-WATERWAYS-RAFT-ROUTE-ARCHIVE");
+  assert.equal(lead?.protectedLocatorId, source?.protectedLocatorId);
+  assert.equal(source?.visibility, "public-metadata-only");
+  assert.equal(source?.canonicalUrl, undefined);
+  assert.equal(source?.archiveUrl, undefined);
+  assert.equal(source?.contentReviewedAt, "2026-07-16");
+  assert.match(source?.publicCitation ?? "", /pages A1 and A4/);
+
+  assert.equal(collective?.evidenceRole, "direct-support");
+  assert.match(collective?.statement ?? "", /Libby Hendon, and Laura Mattingly/);
+  assert.ok(collective?.doesNotEstablish.some((item) => /complete roster/i.test(item)));
+  assert.equal(civic?.evidenceRole, "direct-support");
+  assert.match(civic?.statement ?? "", /cultural connection/);
+  assert.equal(titleBoundary?.evidenceRole, "supports-boundary");
+  assert.ok(titleBoundary?.doesNotEstablish.some((item) => /Gulf of Mexico/i.test(item)));
+
+  assert.ok(expedition?.observationIds.includes(collective.id));
+  assert.ok(expedition?.observationIds.includes(civic.id));
+  assert.equal(gulf?.maturity, "held");
+  assert.ok(gulf?.observationIds.includes(titleBoundary.id));
+  assert.ok(gulf?.antiClaims.some((item) => /title proves/i.test(item)));
+  assert.equal(task?.status, "completed");
+  assert.deepEqual(task?.sourceIds, [source.id]);
+  assert.equal(task?.observationIds.length, 3);
+  assert.ok(task?.limitations.some((item) => /raw scan.*outside the public repository/i.test(item)));
+  assert.equal(claim?.projections[0]?.status, "hold");
+  assert.deepEqual(claim?.projections[0]?.surfaces, []);
+});
+
 test("Teams archive follow-up deepens role evidence without leaking protected records or forcing website copy", () => {
   const run = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-TEAMS-ICLOUD-ARCHIVE-PRODUCTION-FOLLOW-UP-2026-07-16");
   const matmos = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-MATMOS-CONSUMING-FLAME-PARTICIPANT");
