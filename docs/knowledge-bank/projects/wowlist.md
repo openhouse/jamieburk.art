@@ -49,6 +49,11 @@ as made by its co-organizer Jamie Burkart. Population accounting, engagement
 totals, and broader source curation remain in the knowledge bank rather than
 competing with Jamie's role on the public page.
 
+A May 12, 2017 Wayback capture is selected as the page's one visual artifact.
+It preserves the public interface and find-and-share product positioning. It
+does not establish usage scale, adoption, the complete workflow, or the
+complete project team.
+
 The complete population also surfaced nine representative mission-relevant
 destinations, including DIY cultural reporting, an all-ages organizing manual,
 the Allied Media Conference, cultural-space safety and mourning records,

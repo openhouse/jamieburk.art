@@ -457,8 +457,27 @@ const workItemsInput = [
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
-    artifactTypes: [],
-    artifacts: [],
+    artifactTypes: ["website", "public-safe screenshot"],
+    artifacts: [
+      {
+        title: "Archived WOW List home page",
+        description:
+          "The May 2017 public interface presented WOW List as a simple way to find and share things to do in real life.",
+        type: "public-safe screenshot",
+        asset: {
+          src: "/artifacts/wowlist/archived-home-2017.png",
+          width: 1440,
+          height: 934,
+          alt: "Archived WOW List home page with the hand-painted project mark, people gathered around a table, device drawings, and find-and-share product language.",
+          caption:
+            "Archived May 2017 home page. The interface pairs WOW List's hand-made visual identity with a direct promise to help people find and share things to do in real life.",
+          sourceUrl: "https://web.archive.org/web/20170512190157/https://wowlist.org/",
+          capturedAt: "2017-05-12",
+          evidenceScope: "direct",
+          rightsStatus: "public-web-capture"
+        }
+      }
+    ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
     capabilities: [
       "Django",

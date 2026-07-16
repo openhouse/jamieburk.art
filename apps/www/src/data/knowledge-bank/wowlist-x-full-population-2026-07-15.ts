@@ -63,6 +63,33 @@ export const wowListFullPopulationSourceRecords20260715 = [
       "reach, conversion, endorsement, attendance, or platform-wide adoption"
     ]
   },
+  {
+    id: "SRC-WOWLIST-ARCHIVED-HOME-2017",
+    title: "Archived WOW List home page",
+    organization: "WOW List",
+    kind: "archived-web-capture",
+    visibility: "public",
+    preservationStatus: "archived",
+    capturedAt: "2017-05-12T19:01:57Z",
+    accessedAt: reviewedAt,
+    canonicalUrl: "https://wowlist.org/",
+    archiveUrl: "https://web.archive.org/web/20170512190157/https://wowlist.org/",
+    assetUrl: "https://jamieburk.art/artifacts/wowlist/archived-home-2017.png",
+    preferredPublicUrl: "archive",
+    publicCitation: "WOW List, archived public home page, May 12, 2017.",
+    publicNote: "The capture preserves the public interface, project mark, find-and-share positioning, and invitation to help test the service.",
+    supportsGenerally: [
+      "the May 2017 public interface",
+      "find-and-share product positioning",
+      "a public invitation to help test WOW List"
+    ],
+    doesNotEstablish: [
+      "user or event totals",
+      "community adoption",
+      "the complete publishing workflow",
+      "the complete project team"
+    ]
+  },
   socialPost(
     "SRC-X-WOWLIST-NYCDIY-2016",
     "WOW List explanation of the NYC DIY calendar workflow",
@@ -488,6 +515,31 @@ export const wowListFullPopulationClaimRecords20260715 = [
     reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
   },
   {
+    id: "CLM-WOWLIST-ARCHIVED-HOME-POSITIONING",
+    project: "wowlist",
+    internalClaim: "A May 2017 archived WOW List home page presented the service as a simple way to find and share things to do in real life and invited people to help test it.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "The archived 2017 home page framed WOW List as a simple way to find and share things to do in real life.",
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
+    }],
+    evidence: [{
+      sourceId: "SRC-WOWLIST-ARCHIVED-HOME-2017",
+      relationship: "direct-support",
+      supports: ["the visible May 2017 interface and public product positioning"],
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The archived home page does not establish usage scale, adoption, the complete workflow, or the complete project team."],
+    antiClaims: ["The home page proves platform-wide adoption", "The capture documents the complete product"],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex public-web archival review"]
+  },
+  {
     id: "CLM-WOWLIST-SOURCE-CURATION-PRACTICE",
     project: "wowlist",
     internalClaim: "The complete displayed population includes mission-relevant sources about DIY cultural documentation, all-ages organizing, cultural-space support and safety, mutual aid, and participatory media.",
@@ -649,6 +701,7 @@ export const wowListFullPopulationIntakeRecords20260715 = [
       "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
       "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
       "CLM-WOWLIST-CALENDAR-COMMUNITY-DIALOGUE",
+      "CLM-WOWLIST-ARCHIVED-HOME-POSITIONING",
       "CLM-WOWLIST-SOURCE-CURATION-PRACTICE"
     ],
     inquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],

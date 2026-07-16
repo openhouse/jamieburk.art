@@ -18,6 +18,11 @@ reply materialized only in Replies. The deduplicated union contains 38 unique
 status IDs, exactly matching the profile control. Every recovered record was
 reviewed.
 
+The same archival pass recovered a May 12, 2017 Wayback capture of the WOW
+List home page. The capture is retained as direct evidence of the public
+interface and find-and-share positioning, not as evidence of usage scale or
+platform adoption.
+
 The population contains:
 
 - 16 original posts;

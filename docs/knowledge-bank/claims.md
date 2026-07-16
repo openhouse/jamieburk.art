@@ -288,6 +288,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## wowlist-archived-home-positioning - Archived public interface
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Public Wayback capture
+**Public wording:** The archived 2017 home page framed WOW List as a simple way to find and share things to do in real life.
+**Detailed public-safe wording:** A May 12, 2017 capture preserves the public interface, project mark, find-and-share positioning, and invitation to help test the service.
+**Where to project:** WOW List case-study artifact.
+**Why it matters:** Gives a hiring reader one authentic, inspectable product surface instead of a descriptive placeholder.
+**Guardrail:** The capture establishes the interface and visible positioning at that date, not usage scale, adoption, the complete workflow, or the complete team.
+**Do not say:** The home page proves platform-wide adoption; the capture documents the complete product.
+**Protected boundaries:** The public capture does not require private user or organizer records.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  
