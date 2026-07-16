@@ -1,0 +1,180 @@
+{
+  "suiteId": "portfolio-launch-readiness",
+  "suiteVersion": "1.3.0",
+  "commit": "6a37127a3bfb984a48da42686e2445f15f977506",
+  "judge": {
+    "model": "OpenAI GPT-5 Codex independent judge",
+    "independentPass": true,
+    "scores": [
+      {
+        "criterionId": "hiring-reader-clarity",
+        "score": 4,
+        "evidence": [
+          "/: The hero immediately identifies Jamie's target role, ambiguity-to-launch value proposition, and work, resume, and contact actions.",
+          "/: The Start here section gives hiring readers an explicit route through role-fit proof and three flagship projects.",
+          "/resume: The opening connects Jamie's professional shape to ownership clarity, dependency visibility, delivery workflows, decision records, and maintainable handoffs."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve the concise employer-neutral framing, direct application path, and pending named-human blind-reader gate."
+      },
+      {
+        "criterionId": "agency-purpose-usability",
+        "score": 4,
+        "evidence": [
+          "/work/harry-j-epstein: Jamie's implementation work is connected to customer product discovery, maintainable e-commerce workflows, and preservation of company voice.",
+          "/work/fair-rent-nyc: Jamie's documentation and web contributions produce reusable coalition memory, source navigation, coordination tools, and public action paths.",
+          "/work/callnyc: Jamie's independent build turns administrative records into issue pathways, district context, and bounded resident-facing guidance.",
+          "/about and CLM-RIVER-EXPEDITION-ORIGIN: Jamie's origin role, the crew's embodied implementation, participant invitation, and cultural purpose appear together with named collective credit."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve the distinction between usable results and unsupported adoption, audience, causality, or measured-impact claims."
+      },
+      {
+        "criterionId": "chad-lens",
+        "score": 4,
+        "evidence": [
+          "/: The hero joins Jamie's agency, the end served, and the workflows, public tools, documentation, maintenance, and handoffs people retain.",
+          "/resume: The first screen combines Jamie's action, delivery purpose, operating structure, and reusable records without specialist decoding.",
+          "/work/technical-operations: The opening states Jamie's scoping-to-launch role and the decisions, workflows, onboarding, and handoffs teams can continue using.",
+          "/work/harry-j-epstein: The first-pass summary connects Jamie's contribution to customer and business needs while retaining company-level causal limits.",
+          "/work/fair-rent-nyc: The first-pass summary names Jamie's direct contributions, collaborator use, and the collective campaign-outcome boundary.",
+          "/work/callnyc: The summary joins Jamie's independent build, resident purpose, usable interface, source context, and unofficial-service boundary."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve direct agency without converting contribution into sole causality, official authority, legal expertise, or repetitive keyword-driven rhetoric."
+      },
+      {
+        "criterionId": "margaret-morse-lens",
+        "score": 4,
+        "evidence": [
+          "/about: The first-pass throughline connects digital media, social software, media archaeology, participatory installation, hospitality, and close attention to Jamie's current operating practice.",
+          "/about and CLM-RIVER-EXPEDITION-ORIGIN: The river expedition supplies a specific embodied example joining concept, found-material construction, place, participant invitation, collective execution, and adaptation under constraints.",
+          "SRC-KCSTAR-RIVER-EXPEDITION-2007: Contemporary reporting supports Jamie's origin role, named crew, participatory purpose, and cultural-connection framing while excluding measured outcomes and sole authorship.",
+          "/work/196-sunday-dinner: Hospitality, invitations, repetition, introductions, and handoffs function as participation infrastructure rather than decorative biography.",
+          "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010: Software, a constructed gallery interface, visitor phones, and shared dialogue provide a source-backed artistic and media-archaeological example.",
+          "/: The method statement explains the present professional value of this formation as designing entry conditions, visible feedback, and structures others can adapt."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Keep the lens an editorial interpretation rather than a current Margaret Morse endorsement, and preserve collective credit, source limits, privacy, and media-rights boundaries."
+      },
+      {
+        "criterionId": "warren-sack-lens",
+        "score": 4,
+        "evidence": [
+          "/work/technical-operations: The role-fit page names entry, contribution, signal-to-decision paths, and documentation that lets another person continue the loop.",
+          "/work/wowlist: Organizer language becomes followable feeds, and publishing and sharing create further discovery routes without one central editor.",
+          "/work/196-sunday-dinner: Invitations, repetition, introductions, hosting rhythms, documentation, and handoffs turn recurring participation into a continuable system.",
+          "/work/fair-rent-nyc: Meetings, sources, questions, action trackers, and public/private lanes become reusable coalition memory feeding later orientation and decisions.",
+          "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010: The example joins physical structure, software, personal phones, visitor action, shared dialogue, and precise co-maker credit.",
+          "CLM-RIVER-EXPEDITION-ORIGIN: The new projection adds an embodied participatory interface in which a working craft, invitations, waterways, and collective operation connect social purpose to a concrete mechanism."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Keep the lens an editorial interpretation rather than a current Warren Sack endorsement, and preserve shared authorship, non-adoption boundaries, recovered-population limits, and protected participant data."
+      },
+      {
+        "criterionId": "role-fit-proof",
+        "score": 4,
+        "evidence": [
+          "/work/technical-operations: Concrete proof spans scoping, delivery coordination, dependencies, risks, planning cycles, decisions, onboarding, status reporting, launch support, and handoffs.",
+          "/work/harry-j-epstein: The case demonstrates legacy-system translation, incremental implementation, analytics judgment, stakeholder coordination, content operations, and maintainable e-commerce workflows.",
+          "/work/fair-rent-nyc and /work/callnyc: The cases demonstrate source mapping, coalition operations, action tracking, public-data translation, information architecture, interface delivery, and scope control.",
+          "/lab/source-backed-team-memory: The bounded method demonstrates documentation architecture, human review, decision lineage, onboarding context, and privacy-aware AI readiness."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve concrete implementation evidence and avoid replacing it with unsupported leadership, certification, adoption, or impact claims."
+      },
+      {
+        "criterionId": "evidence-traceability",
+        "score": 3,
+        "evidence": [
+          "/about and CLM-RIVER-EXPEDITION-ORIGIN: The new claim renders a metadata-only Kansas City Star note plus public WLBT and Pitch corroboration, with source-specific limitations and backlinks.",
+          "/work/callnyc, /work/harry-j-epstein, /work/fair-rent-nyc, and /work/wowlist: Important claims use structured Claim or Cite occurrences and ordered source notes with explicit boundaries.",
+          "SRC-KCSTAR-RIVER-EXPEDITION-2007: The public note honestly states that no public article URL was recovered and that the copyrighted scan is not republished, limiting direct public inspection.",
+          "apps/www/src/data/proofs.ts: The separate 20-plus resident-artist figure remains prominent without its own structured canonical claim-and-citation path."
+        ],
+        "smallestChange": "Create and render a separate canonical claim and bounded source note for the 20-plus resident-artist figure.",
+        "preserve": "Do not expose participant rows, contacts, attendance details, protected locators, private archive paths, or stronger conclusions than the source basis supports."
+      },
+      {
+        "criterionId": "collective-credit-and-anti-claims",
+        "score": 4,
+        "evidence": [
+          "CLM-RIVER-EXPEDITION-ORIGIN: Libby Hendon and Laura Mattingly are named with Jamie, while the claim rejects sole construction, operation, completion, complete contribution accounting, and measured impact.",
+          "/work/fair-rent-nyc: Jamie's co-founder, documentation, and web-infrastructure contributions remain distinct from collective campaign and policy outcomes.",
+          "/work/wowlist: Jamie's co-builder role remains distinct from collaborator authorship, participant activity, adoption, satisfaction, and cultural impact.",
+          "/work/196-sunday-dinner: Jamie's operating role and the wider community remain credited without converting aggregate records into sole ownership or participant outcomes.",
+          "/work/callnyc: Jamie's independent prototype remains distinct from Council data, institutional commissioning, endorsement, and official-service authority."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Preserve named collaborators, collective campaign credit, deferred role claims, and prohibitions on sole authorship, policy causation, attendance inference, and adoption claims."
+      },
+      {
+        "criterionId": "public-safety-and-boundaries",
+        "score": 4,
+        "evidence": [
+          "SRC-KCSTAR-RIVER-EXPEDITION-2007: The scan remains protected and metadata-only; the record exposes no archive path, invents no URL, and keeps display permission unresolved.",
+          "CLM-RIVER-EXPEDITION-ORIGIN: The active projection retains crew credit, separates in-progress Louisiana evidence from later Gulf completion, and rejects measured civic or cultural outcomes.",
+          "/work/callnyc: The archive disclaimer prevents historical officeholders, categories, statistics, and contacts from being mistaken for current official guidance.",
+          "/work/fair-rent-nyc and /work/196-sunday-dinner: Specific positive claims coexist with explicit omissions of private coalition, legal-review, participant, attendance, and unapproved-image material.",
+          "docs/knowledge-bank/corroboration-register.json: Pending corroboration has bounded questions, evidence requirements, owners, stop conditions, and projection rules without being represented as completed.",
+          "docs/knowledge-bank/media-provenance.json: Displayed captures have documented provenance while rights confirmation remains explicitly assigned to the human gate."
+        ],
+        "smallestChange": "No change; this criterion is already 4/4.",
+        "preserve": "Do not certify media rights, collaborator approval, claim corroboration, blind-reader completion, or production authorization, and keep protected evidence and locators offline."
+      },
+      {
+        "criterionId": "visual-proof",
+        "score": 2,
+        "evidence": [
+          "reports/generated/launch-browser.json: HJE, FairRentNYC, and CallNYC each render one image across all four viewports; the other case-study routes render none.",
+          "/work/harry-j-epstein, /work/fair-rent-nyc, and /work/callnyc: Each displayed interface capture is relevant and includes alt text, caption, date, and a public-source link.",
+          "apps/www/src/data/work.ts: WOWList, Sunday Dinner, and KC Town Hall galleries contain descriptive cards rather than inspectable visual artifacts.",
+          "docs/knowledge-bank/media-provenance.json: All three displayed captures remain pending human release confirmation, so final rights clearance cannot be certified.",
+          "SRC-KCSTAR-RIVER-EXPEDITION-2007: The newspaper scan is correctly withheld as metadata-only and therefore adds evidence depth but no visual-proof credit."
+        ],
+        "smallestChange": "After documented human rights approval, add one real, captioned, provenance-backed WOWList interface artifact or privacy-safe Sunday Dinner operating artifact.",
+        "preserve": "Do not use decorative media, participant imagery, private records, unapproved community artifacts, or public availability as a substitute for rights confirmation."
+      },
+      {
+        "criterionId": "completion-confidence",
+        "score": 3,
+        "evidence": [
+          "reports/generated/launch-browser.json: All 14 routes return 200 at four viewports with one H1, no overflow, no browser errors, and staging-oriented noindex metadata.",
+          "docs/knowledge-bank/launch-blockers.md: Media rights, collaborator-sensitive credit, corroboration, blind-reader validation, and production approval remain explicit human or release-time gates.",
+          "docs/production-cutover.md: A reversible fingerprint, verification, and rollback runbook exists, but there is no evidence that the authorized primary-domain cutover occurred.",
+          "/work/kc-town-hall: The instruction that public wording should remain tied to a funding figure unless separately approved reads as editor-facing workflow.",
+          "/colophon and /resume: Production-indexing review and approved-resume phrasing expose minor release-process language on otherwise composed public pages."
+        ],
+        "smallestChange": "After the named human gates and authorized primary-domain verification are complete, replace the remaining editor-facing approval language with stable reader-facing boundaries.",
+        "preserve": "Preserve staging noindex, the cutover and rollback contract, every unresolved human gate, and Jamie's exclusive production-approval authority."
+      }
+    ]
+  },
+  "humanGates": [
+    {
+      "gateId": "jamie-production-approval",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "media-rights-and-consent",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "collaborator-sensitive-credit",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "collaborator-claim-corroboration",
+      "status": "pending",
+      "verifiedBy": null
+    },
+    {
+      "gateId": "blind-hiring-reader-validation",
+      "status": "pending",
+      "verifiedBy": null
+    }
+  ]
+}

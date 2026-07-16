@@ -1,0 +1,302 @@
+{
+  "schemaVersion": "1.0",
+  "account": "@urbanhermit",
+  "generatedAt": "2026-07-14",
+  "privacyBoundary": "Aggregate-only disposition of the recoverable current @urbanhermit explicit-mention search floor. Handles, status IDs, URLs, exact dates, full text, relationship details, and reaction metrics are excluded; selected professional records are modeled separately as typed sources.",
+  "searchAudit": {
+    "queryDescription": "Explicit mentions of @urbanhermit excluding records authored by the account",
+    "recordsDirectlyReverified": 26,
+    "distinctPublicAccounts": 17,
+    "oldestRecoveredYear": 2014,
+    "newestRecoveredYear": 2023,
+    "searchIsHistoricalFloorNotPlatformExport": true,
+    "governmentOrPublicOfficialAccountsRecovered": 0
+  },
+  "aggregateFindings": {
+    "byStakeholderGroup": {
+      "community-peer-or-personal-context": 7,
+      "professional-institution": 1,
+      "cultural-or-technical-collaborator": 7,
+      "journalist-designer-or-civic-peer": 5,
+      "project-account": 6
+    },
+    "byPrimaryTheme": {
+      "community-and-relationship-context": 6,
+      "public-digital-community-infrastructure": 1,
+      "creative-technology-and-media": 4,
+      "public-history-and-neighborhood-operations": 4,
+      "cultural-history": 1,
+      "civic-design-and-public-interfaces": 5,
+      "civic-policy-and-cultural-space": 5
+    },
+    "byInteractionContext": {
+      "general-public-conversation": 8,
+      "role-or-project-attribution": 11,
+      "mission-related-thread": 7
+    },
+    "missionRelevantContextRecords": 18,
+    "generalPublicConversationRecords": 8
+  },
+  "records": [
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-001",
+      "year": 2014,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "community-peer-or-personal-context",
+      "primaryTheme": "community-and-relationship-context",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-002",
+      "year": 2015,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "professional-institution",
+      "primaryTheme": "public-digital-community-infrastructure",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-003",
+      "year": 2016,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "cultural-or-technical-collaborator",
+      "primaryTheme": "creative-technology-and-media",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-004",
+      "year": 2016,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "community-peer-or-personal-context",
+      "primaryTheme": "community-and-relationship-context",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-005",
+      "year": 2016,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "cultural-or-technical-collaborator",
+      "primaryTheme": "creative-technology-and-media",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-006",
+      "year": 2016,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "cultural-or-technical-collaborator",
+      "primaryTheme": "creative-technology-and-media",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-007",
+      "year": 2016,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "cultural-or-technical-collaborator",
+      "primaryTheme": "creative-technology-and-media",
+      "interactionContext": "mission-related-thread",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-008",
+      "year": 2016,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "cultural-or-technical-collaborator",
+      "primaryTheme": "public-history-and-neighborhood-operations",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-009",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "cultural-or-technical-collaborator",
+      "primaryTheme": "cultural-history",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-010",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "journalist-designer-or-civic-peer",
+      "primaryTheme": "civic-design-and-public-interfaces",
+      "interactionContext": "mission-related-thread",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-011",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "journalist-designer-or-civic-peer",
+      "primaryTheme": "civic-design-and-public-interfaces",
+      "interactionContext": "mission-related-thread",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-012",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "journalist-designer-or-civic-peer",
+      "primaryTheme": "civic-design-and-public-interfaces",
+      "interactionContext": "mission-related-thread",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-013",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "journalist-designer-or-civic-peer",
+      "primaryTheme": "civic-design-and-public-interfaces",
+      "interactionContext": "mission-related-thread",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-014",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "community-peer-or-personal-context",
+      "primaryTheme": "civic-design-and-public-interfaces",
+      "interactionContext": "mission-related-thread",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-015",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "project-account",
+      "primaryTheme": "civic-policy-and-cultural-space",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-016",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "journalist-designer-or-civic-peer",
+      "primaryTheme": "civic-policy-and-cultural-space",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-017",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "project-account",
+      "primaryTheme": "civic-policy-and-cultural-space",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-018",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "project-account",
+      "primaryTheme": "civic-policy-and-cultural-space",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-019",
+      "year": 2017,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "project-account",
+      "primaryTheme": "civic-policy-and-cultural-space",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-020",
+      "year": 2019,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "project-account",
+      "primaryTheme": "public-history-and-neighborhood-operations",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-021",
+      "year": 2019,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "project-account",
+      "primaryTheme": "public-history-and-neighborhood-operations",
+      "interactionContext": "role-or-project-attribution",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-022",
+      "year": 2022,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "community-peer-or-personal-context",
+      "primaryTheme": "public-history-and-neighborhood-operations",
+      "interactionContext": "mission-related-thread",
+      "missionRelevantContext": true,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-023",
+      "year": 2023,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "community-peer-or-personal-context",
+      "primaryTheme": "community-and-relationship-context",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-024",
+      "year": 2023,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "cultural-or-technical-collaborator",
+      "primaryTheme": "community-and-relationship-context",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-025",
+      "year": 2023,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "community-peer-or-personal-context",
+      "primaryTheme": "community-and-relationship-context",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    },
+    {
+      "ledgerId": "URBANHERMIT-INBOUND-026",
+      "year": 2023,
+      "evidenceDisposition": "explicit-handle-directly-reverified",
+      "stakeholderGroup": "community-peer-or-personal-context",
+      "primaryTheme": "community-and-relationship-context",
+      "interactionContext": "general-public-conversation",
+      "missionRelevantContext": false,
+      "publicDetailStatus": "aggregate-only"
+    }
+  ]
+}

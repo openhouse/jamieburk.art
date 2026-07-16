@@ -7,7 +7,7 @@ export function ProofStrip() {
         {homepageProofs.map((proof) => (
           <div className="min-h-32 bg-jb-blue px-5 py-6" key={proof.id}>
             <p className="text-base font-semibold leading-6">
-              {proof.shortWording ?? proof.publicWording}
+              {proof.detailedPublicWording ?? proof.publicWording}
             </p>
           </div>
         ))}

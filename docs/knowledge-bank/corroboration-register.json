@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "reviewedAt": "2026-07-15",
+  "rule": "This public-safe register routes human corroboration. A pending item is not evidence, permission, endorsement, or approval for website projection.",
+  "items": [
+    {
+      "claimId": "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+      "priority": "critical",
+      "status": "pending",
+      "ownerClass": "Authorized company collaborator or records holder",
+      "question": "Can an authorized reviewer confirm the comparison period, same-basis revenue arithmetic, and Jamie's bounded contribution across web, e-commerce, marketing, analytics, content, and operations?",
+      "acceptedEvidence": [
+        "Dated same-basis financial comparison approved for public summary",
+        "Dated written confirmation distinguishing company outcome from Jamie's contribution"
+      ],
+      "stopCondition": "Keep the numerical claim on hold unless both financial comparison and contribution confirmation are present.",
+      "projectionRule": "Do not project the 2x figure; use independently reported company context in the interim."
+    },
+    {
+      "claimId": "CLM-NYCARTC-CREATION-ROLE-SEED",
+      "priority": "high",
+      "status": "pending",
+      "ownerClass": "NYC Artist Coalition co-founder or early collaborator",
+      "question": "How should Jamie's instrumental role in establishing the coalition be described while preserving the distinct initiating and sustaining work of other co-founders and collaborators?",
+      "acceptedEvidence": [
+        "Dated collaborator recollection approved for public-safe paraphrase",
+        "Contemporaneous formation, account, domain, meeting, or launch record"
+      ],
+      "stopCondition": "Retain co-founder wording already approved; do not add sole-founder, exclusive-causation, or universal-representation language.",
+      "projectionRule": "Any stronger creation claim requires named corroboration and precise collective credit."
+    },
+    {
+      "claimId": "CLM-SOCIAL-ACCOUNT-ESTABLISHMENT-SEED",
+      "priority": "high",
+      "status": "pending",
+      "ownerClass": "Project collaborator with account-formation knowledge or authorized platform records holder",
+      "question": "Which project accounts did Jamie establish, and which later publishing or stewardship responsibilities were shared with collaborators?",
+      "acceptedEvidence": [
+        "Account-creation notice or dated platform record",
+        "Collaborator confirmation distinguishing account establishment from later post authorship"
+      ],
+      "stopCondition": "Do not infer account creation or individual post authorship from current administrator access, public bylines, or account voice.",
+      "projectionRule": "Keep establishment claims in research until creation evidence or collaborator confirmation is recovered."
+    },
+    {
+      "claimId": "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019",
+      "priority": "critical",
+      "status": "pending",
+      "ownerClass": "Project collaborator, contractor, architect, engineer, or records holder with Phase One knowledge",
+      "question": "Can a dated after-the-fact record corroborate Phase One completion in 2019 and Jamie's owner-side daily field-coordination and general-contractor function?",
+      "acceptedEvidence": [
+        "Completion photograph set or dated closeout record",
+        "Contractor, architect, engineer, or collaborator confirmation",
+        "Invoice, inspection, permit, or scope-completion record approved for public-safe description"
+      ],
+      "stopCondition": "Do not imply licensure, sole construction credit, or that the later City appropriation funded Phase One.",
+      "projectionRule": "Keep the implementation claim in reserve until completion and role are independently corroborated."
+    },
+    {
+      "claimId": "CLM-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS-2019-2021",
+      "priority": "high",
+      "status": "pending",
+      "ownerClass": "Neighborhood-association collaborator, city partner, or recurring participant",
+      "question": "Can collaborators distinguish Jamie's workflow design, city coordination, monthly operations, and physical pickup work from the wider neighborhood program?",
+      "acceptedEvidence": [
+        "Collaborator confirmation approved for public-safe paraphrase",
+        "Dated route sheet, city coordination record, or recurring program artifact",
+        "Independent public acknowledgment of Jamie's hands-on participation"
+      ],
+      "stopCondition": "Do not convert social posts into completed-pickup counts or account-reported totals into audited outcomes.",
+      "projectionRule": "Use recurring collective operations language only after role corroboration; keep Indian Mound expansion open until separately supported."
+    },
+    {
+      "claimId": "CLM-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY-CONTRIBUTION-2019",
+      "priority": "high",
+      "status": "pending",
+      "ownerClass": "Program originator, coalition collaborator, neighborhood host, or public records holder",
+      "question": "Can collaborators confirm Jamie's bounded contribution to identity, maps, photography, social presence, handbills, and listening-session materials?",
+      "acceptedEvidence": [
+        "Program-originator or collaborator confirmation",
+        "Dated design files, meeting packets, maps, or public posts with attributable provenance",
+        "Official record connecting identified priorities to a later decision without assigning sole causation"
+      ],
+      "stopCondition": "Credit Pastor Lee's originating corridor vision and do not claim that the program caused a specific capital allocation.",
+      "projectionRule": "Keep Jamie's contribution unprojected until role attribution is corroborated."
+    }
+  ]
+}

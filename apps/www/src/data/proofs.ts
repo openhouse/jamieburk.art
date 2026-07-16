@@ -51,7 +51,7 @@ export const proofClaims: ProofClaim[] = [
       "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
     shortWording: "14+ years creating operating structure",
     detailedPublicWording:
-      "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
+      "Jamie creates operating structure where requirements, ownership, and handoffs are unclear so teams can move work toward launch, preserve decisions, onboard people, and maintain what they build.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
     whyItMatters:
       "Establishes the throughline across projects without forcing one job title onto every period of work.",
@@ -101,19 +101,22 @@ export const proofClaims: ProofClaim[] = [
   },
   {
     id: "hje-revenue-growth-contribution",
-    status: "careful",
-    supportLevel: "careful",
-    evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
+    status: "pending",
+    supportLevel: "pending",
+    evidenceClass: ["approved-resume"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
     shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
-    sourceBasis: "Approved resume language and public-safe firsthand operational context.",
-    sourceNote: "Keep causal language careful and aggregate.",
+    sourceBasis:
+      "Approved resume language only; independent financial and contribution corroboration remains open.",
+    sourceNote:
+      "Retain as a research-stage claim. Do not project until the comparison and contribution-confirmation acceptance rule is met.",
     whyItMatters:
-      "Provides a concise business-impact proof point while retaining careful causality.",
-    guardrail: "Must stay as contribution language.",
+      "Preserves a potentially valuable business-impact claim while making the remaining verification work explicit.",
+    guardrail:
+      "Internal research only until the comparison period, same-basis arithmetic, and authorized contribution confirmation are recovered.",
     doNotSay: [
       "Caused 2x revenue growth",
       "Single-handedly doubled revenue",
@@ -126,10 +129,10 @@ export const proofClaims: ProofClaim[] = [
       "Vendor terms",
       "Internal analytics"
     ],
-    surfaces: ["homepage", "resume", "technical-operations", "case-study"],
+    surfaces: ["internal-only"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "implementation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "callnyc-civic-data-guidance",
@@ -140,7 +143,7 @@ export const proofClaims: ProofClaim[] = [
       "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
     shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
+      "Jamie independently built CallNYC to turn open constituent-services data into issue pathways, district context, and archived resident-facing guidance while keeping its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
       "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
     guardrail: "Always describe it as archived and unofficial.",
@@ -153,7 +156,7 @@ export const proofClaims: ProofClaim[] = [
       "Legal guidance"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
     lastReviewed: "2026-07-11"
@@ -314,13 +317,13 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform with recorded activity across at least 35 city/region groups by July 2017.",
+    shortWording: "WOWList recorded activity across 35+ city/region groups",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+      "Jamie co-built WOWList's event workflows and public web system so local calendar organizers could publish, follow, and distribute events through community language; a July 2017 snapshot records 1,846 users, 16,142 posts/events, and 35 city/region groups with at least 50 geocoded posts/events.",
+    sourceBasis: "Public origin evidence and a metadata-only aggregate review of a protected July 2017 production snapshot.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Describe point-in-time database activity, not unique active users, adoption, official chapters, satisfaction, or impact.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -352,7 +355,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, an independent 2017 description of weekly community dinners, a metadata-only aggregate workbook review supporting more than 300 numbered gathering records, and public Facebook event pages documenting selected gatherings.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -430,11 +434,15 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+    sourceBasis:
+      "Approved resume language, the 2019 CCED Board packet, the September 26, 2019 Council record and Resolution 190649, Ordinance 240317, and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received or disbursed; it remained unused and was reclaimed after the project withdrew in 2024.",
     doNotSay: [
-      "Final funding received",
+      "Funding received or disbursed",
+      "Executed funding agreement",
+      "Construction or completed development",
+      "Known reason for the project's withdrawal",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"
@@ -449,7 +457,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "source-backed-team-memory-method",
@@ -460,7 +468,7 @@ export const proofClaims: ProofClaim[] = [
       "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
+      "Jamie is developing a bounded method that separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
@@ -519,7 +527,7 @@ export const proofClaims: ProofClaim[] = [
       "Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.",
     shortWording: "Completed AI Evals for Engineers & PMs in 2026",
     detailedPublicWording:
-      "Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.",
+      "Jamie completed coursework in application-centric evals, error analysis, traces, and human review to strengthen how he defines success, investigates failures, and evaluates AI-assisted systems without treating model output as self-validating.",
     sourceBasis: "Approved resume language and public-safe certificate.",
     guardrail:
       "Treat as professional development, not instructor affiliation or certification authority beyond completion.",
@@ -567,7 +575,6 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 
 export const homepageProofs = [
   "career-operating-structure-14-years",
-  "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure"
@@ -576,7 +583,6 @@ export const homepageProofs = [
 export const resumeProofHighlights = [
   "career-operating-structure-14-years",
   "hje-modernization-stewardship",
-  "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "callnyc-civic-data-guidance",
@@ -625,7 +631,7 @@ export const technicalOperationsProofRows = [
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
-      "hje-revenue-growth-contribution"
+      "hje-modernization-stewardship"
     ]
   }
 ].map((row) => ({

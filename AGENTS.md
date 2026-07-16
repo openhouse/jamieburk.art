@@ -85,6 +85,21 @@ Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser
 private document browser, full photo archive, heavy animation, or major framework
 change for V1.
 
+## Recursive Launch Evals
+
+For launch-readiness work, use `evals/launch-readiness/suite.json` as the
+objective contract and follow `evals/launch-readiness/agent-loop.md`.
+
+- Run `npm run eval:launch` before and after each iteration.
+- Run the browser eval at the target environment and supported viewports.
+- Use a fresh independent judge pass; an implementation agent must not grade
+  its own patch as the only judge.
+- Never self-certify Jamie approval, collaborator approval, rights, or consent.
+- Accept a patch only when the lexicographic objective improves and existing
+  knowledge-bank guardrails still pass.
+- Stop after two plateau iterations or eight total iterations and request human
+  input rather than widening scope indefinitely.
+
 ## Deployment
 
 Staging first: `staging.jamieburk.art`, noindex.

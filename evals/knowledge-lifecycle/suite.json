@@ -1,0 +1,160 @@
+{
+  "id": "knowledge-lifecycle",
+  "version": "1.0.0",
+  "objective": "Preserve potentially valuable professional evidence, mature it into defensible claims through explicit research, and keep publication as a separate purpose-driven editorial decision.",
+  "releaseThresholds": {
+    "hardGateFailures": 0,
+    "weightedJudgeScore": 90,
+    "minimumJudgeScore": 3,
+    "minimumCriticalScore": 4,
+    "maximumPlateauIterations": 2,
+    "maximumIterations": 8
+  },
+  "sourceChecks": [
+    {
+      "id": "intake-is-accounted-for",
+      "kind": "hard-gate",
+      "intent": "Every public-safe fragment enters a stable accession record and reaches a source, claim seed, research task, or explicit hold.",
+      "remediation": "Link each accession to its next lifecycle object or record why it is held."
+    },
+    {
+      "id": "source-readings-are-atomic-and-bounded",
+      "kind": "hard-gate",
+      "intent": "Close reading decomposes sources into propositions and records what each source cannot establish.",
+      "remediation": "Add atomic propositions and limitations, or mark the source needs-access with an open task."
+    },
+    {
+      "id": "claim-seeds-have-research-routes",
+      "kind": "hard-gate",
+      "intent": "Important memories remain discoverable without becoming unsupported public claims.",
+      "remediation": "Attach every captured or researching claim to an open research task and remove active projections."
+    },
+    {
+      "id": "claim-promotion-is-evidence-backed",
+      "kind": "hard-gate",
+      "intent": "Corroborated and public-ready claims have evidence, boundaries, anti-claims, and review history.",
+      "remediation": "Supply the missing evidence or boundary record, or lower the claim maturity."
+    },
+    {
+      "id": "publication-is-an-independent-decision",
+      "kind": "hard-gate",
+      "intent": "Evidence readiness never automatically places a claim on a public surface.",
+      "remediation": "Add an explicit publish/defer decision and keep non-ready claims off active surfaces."
+    },
+    {
+      "id": "graph-references-are-valid",
+      "kind": "hard-gate",
+      "intent": "The lifecycle remains traversable across intake, entities, sources, readings, claims, tasks, and decisions.",
+      "remediation": "Repair unknown or duplicate stable IDs and reciprocal lifecycle links."
+    },
+    {
+      "id": "public-repo-boundary-is-enforced",
+      "kind": "hard-gate",
+      "intent": "The public repository contains public-safe descriptions rather than private archive contents or local locators.",
+      "remediation": "Remove private paths and raw material; retain only a safe description and opaque protected locator where allowed."
+    },
+    {
+      "id": "intake-depth",
+      "kind": "quality-target",
+      "minimum": 9,
+      "intent": "The framework is exercised against a meaningful mixed intake rather than a toy example.",
+      "remediation": "Accession the supplied public URLs, memories, and research leads."
+    },
+    {
+      "id": "close-reading-depth",
+      "kind": "quality-target",
+      "minimum": 6,
+      "intent": "Multiple source classes have proposition-level readings and limits.",
+      "remediation": "Closely read additional accessible sources and preserve access failures as tasks."
+    },
+    {
+      "id": "mature-claim-depth",
+      "kind": "quality-target",
+      "minimum": 5,
+      "intent": "The run produces a useful palette of defensible claims without requiring immediate publication.",
+      "remediation": "Corroborate and review additional high-value claim candidates."
+    },
+    {
+      "id": "research-queue-depth",
+      "kind": "quality-target",
+      "minimum": 4,
+      "intent": "The bank turns evidentiary gaps into specific, prioritized future work.",
+      "remediation": "Create bounded tasks for the highest-value unresolved contribution chains."
+    }
+  ],
+  "judgeCriteria": [
+    {
+      "id": "loss-resistance",
+      "weight": 18,
+      "floor": 4,
+      "minimumEvidence": 4,
+      "question": "Can a new URL, memory, artifact, correction, or photo observation enter without being lost, overpromoted, or forced into public prose?"
+    },
+    {
+      "id": "source-decomposition",
+      "weight": 15,
+      "floor": 3,
+      "minimumEvidence": 3,
+      "question": "Do source readings extract atomic propositions, distinguish role from context and outcome, and record what the source does not establish?"
+    },
+    {
+      "id": "claim-defensibility",
+      "weight": 18,
+      "floor": 4,
+      "minimumEvidence": 4,
+      "question": "Are mature claims strong, specific, source-backed, bounded against causal inflation, and precise about collective credit?"
+    },
+    {
+      "id": "research-direction",
+      "weight": 12,
+      "floor": 3,
+      "minimumEvidence": 3,
+      "question": "Do unresolved claims produce prioritized questions and next actions that another agent or collaborator can execute cold?"
+    },
+    {
+      "id": "projection-discipline",
+      "weight": 14,
+      "floor": 4,
+      "minimumEvidence": 3,
+      "question": "Is public readiness distinct from editorial selection, with explicit defer decisions and no automatic projection?"
+    },
+    {
+      "id": "public-safety",
+      "weight": 13,
+      "floor": 4,
+      "minimumEvidence": 3,
+      "question": "Does the public repository retain useful provenance while excluding raw private material, local paths, unapproved testimony, and unsafe personal detail?"
+    },
+    {
+      "id": "future-composability",
+      "weight": 10,
+      "floor": 3,
+      "minimumEvidence": 3,
+      "question": "Does the graph create a deep, searchable palette from which future agents can compose clear public arguments with Chad's lens and route visual discoveries back into research?"
+    }
+  ],
+  "scoreAnchors": {
+    "0": "Absent, unsafe, contradicted, or unusable.",
+    "1": "Major gaps; the lifecycle depends on unstated judgment or loses material.",
+    "2": "Partly workable, but important provenance, maturity, research, or publication distinctions remain weak.",
+    "3": "Clear and reusable with bounded, non-blocking gaps.",
+    "4": "Exceptionally explicit, traversable, defensible, and safe under recursive agent use."
+  },
+  "humanGates": [
+    {
+      "id": "jamie-claim-approval",
+      "owner": "Jamie Burkart",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "collaborator-credit-or-permission",
+      "owner": "Jamie Burkart and affected collaborator when required",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "media-rights-and-consent",
+      "owner": "Jamie Burkart or documented rights holder",
+      "agentMaySelfCertify": false
+    }
+  ]
+}

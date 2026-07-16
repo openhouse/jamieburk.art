@@ -35,9 +35,51 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:evals
+npm run test:evals
+npm run eval:launch
+npm run check:knowledge-lifecycle
+npm run test:knowledge-lifecycle
+npm run eval:knowledge-lifecycle
+npm run eval:knowledge-lifecycle:gate
+npm run eval:launch:browser -- --url http://127.0.0.1:3000 --profile local
 npm run preflight:staging
 npm run preflight:production
 ```
+
+## Launch Readiness Evals
+
+`evals/launch-readiness/` turns the portfolio's launch intentions into a
+recursive improvement contract for implementation and judge agents. It keeps
+deterministic source gates, browser behavior, LLM-judged editorial quality, and
+human approvals separate so an agent cannot award itself consent or production
+approval.
+
+```bash
+# Report source-level release blockers and quality targets.
+npm run eval:launch
+
+# Test a running build at the supported routes and viewports.
+npm run eval:launch:browser -- \
+  --url https://staging.jamieburk.art \
+  --profile staging
+
+# Compare two complete reports lexicographically.
+npm run eval:launch:compare -- before.json after.json
+```
+
+Read `evals/launch-readiness/agent-loop.md` before recursive work. A full
+release decision also needs an independent assessment based on
+`judge-prompt.md`, a passing browser report, and named confirmation of every
+human gate. `npm run preflight:production` intentionally enforces the
+source-level launch gate.
+
+The suite maps eight recurring blind spots to deterministic, browser, judge,
+and human evaluations. See
+`evals/launch-readiness/blind-reader-protocol.md`,
+`docs/knowledge-bank/corroboration-register.json`, and
+`docs/production-cutover.md` for human handoff paths that agents may prepare but
+may not self-certify.
 
 ## Knowledge Bank
 
@@ -50,6 +92,11 @@ This repo includes a public-safe knowledge bank for professional claims:
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
+
+`docs/knowledge-bank/lifecycle.md` defines the loss-resistant path from intake
+through source reading, claim maturity, research, and an independent
+publication decision. The recursive checks live in
+`evals/knowledge-lifecycle/`.
 
 The knowledge bank is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,

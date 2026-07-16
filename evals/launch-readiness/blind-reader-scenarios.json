@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "scenarios": [
+    {
+      "id": "hiring-first-pass",
+      "readerRole": "Hiring manager or recruiter unfamiliar with Jamie",
+      "timeboxMinutes": 3,
+      "task": "Review the homepage and follow any path you choose to decide what Jamie does and whether to continue.",
+      "questions": [
+        "What role is Jamie seeking?",
+        "What recurring problem does he solve?",
+        "Which two examples make that believable?",
+        "What would you do next?"
+      ],
+      "passCriteria": [
+        "Names technical project management, product operations, or implementation without coaching",
+        "Explains the operating-structure throughline in plain language",
+        "Names two concrete projects or results",
+        "Finds work, resume, or contact as a next action"
+      ]
+    },
+    {
+      "id": "evidence-trace",
+      "readerRole": "Skeptical evidence-minded reader",
+      "timeboxMinutes": 5,
+      "task": "Choose one significant factual claim and determine what supports it and what the source does not establish.",
+      "questions": [
+        "Which claim did you inspect?",
+        "Could you reach a source or source note?",
+        "What limit remained visible?"
+      ],
+      "passCriteria": [
+        "Reaches an inspectable citation or bounded source note",
+        "Can distinguish support from limitation",
+        "Does not need private evidence to understand the public claim"
+      ]
+    },
+    {
+      "id": "collective-credit",
+      "readerRole": "Former collaborator or collective-work reviewer",
+      "timeboxMinutes": 5,
+      "task": "Review one coalition or community case study and describe Jamie's contribution, the collective accomplishment, and any causal limit.",
+      "questions": [
+        "What did Jamie do?",
+        "Who else receives credit?",
+        "What outcome or ownership claim is the page careful not to make?"
+      ],
+      "passCriteria": [
+        "Identifies Jamie's agency without assigning sole ownership",
+        "Recognizes collaborators or collective context",
+        "Preserves the page's causal boundary"
+      ]
+    },
+    {
+      "id": "application-action-path",
+      "readerRole": "Applicant-tracking or accessibility-minded reviewer",
+      "timeboxMinutes": 4,
+      "task": "Using keyboard navigation where possible, locate role-fit proof, open the resume, and find a contact method.",
+      "questions": [
+        "Were all three destinations reachable?",
+        "Was focus visible and order coherent?",
+        "Did any label, overflow, or document behavior create uncertainty?"
+      ],
+      "passCriteria": [
+        "Reaches Technical Operations, resume, and contact without assistance",
+        "Visible focus remains usable",
+        "No critical overflow, unlabeled control, or dead-end appears"
+      ]
+    }
+  ]
+}
