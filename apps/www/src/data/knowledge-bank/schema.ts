@@ -344,7 +344,11 @@ export const citationPageSchema = z.object({
   id: stableIdSchema,
   surface: z.string().min(1),
   sourceOrder: z.array(stableIdSchema),
-  occurrences: z.array(citationOccurrenceSchema)
+  occurrences: z.array(citationOccurrenceSchema),
+  sharedBoundary: z.string().min(1).optional(),
+  sourceBoundaryOmissions: z
+    .record(stableIdSchema, z.array(z.string().min(1)).min(1))
+    .optional()
 });
 
 export const campaignPressPlacementSchema = z.object({

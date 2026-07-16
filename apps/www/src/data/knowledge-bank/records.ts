@@ -349,6 +349,30 @@ const knowledgeBankInput = {
     {
       id: "callnyc",
       surface: "/work/callnyc",
+      sharedBoundary:
+        "Across the account records below, public interaction is a bounded recovery floor. It does not establish Council endorsement or adoption, policy causality, complete historical engagement, or post-level authorship.",
+      sourceBoundaryOmissions: {
+        "SRC-X-CALLNYC-MATTEO-REPLY-2016": ["formal endorsement", "Council adoption"],
+        "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016": [
+          "formal endorsement",
+          "Council adoption",
+          "policy causality"
+        ],
+        "SRC-X-CALLNYC-MENDEZ-QUOTE-2016": [
+          "formal endorsement",
+          "Council adoption",
+          "policy causality"
+        ],
+        "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016": [
+          "formal endorsement",
+          "Council adoption"
+        ],
+        "SRC-X-CALLNYC-EUGENE-QUOTE-2016": [
+          "formal endorsement",
+          "Council adoption",
+          "policy causality"
+        ]
+      },
       sourceOrder: [
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
@@ -409,6 +433,24 @@ const knowledgeBankInput = {
     {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
+      sharedBoundary:
+        "Across the shared-account and Council-member records below, account activity does not establish Jamie's post-level authorship, official Council endorsement, a complete historical census, reach, or policy causality.",
+      sourceBoundaryOmissions: {
+        "SRC-X-NYCARTC-PROFILE-AUDIT-2026": [
+          "Jamie's authorship of team posts",
+          "official Council endorsement, reach, or policy causality"
+        ],
+        "SRC-X-NYCARTC-ESPINAL-2017": [
+          "Jamie's authorship",
+          "Council endorsement of every coalition campaign"
+        ],
+        "SRC-X-NYCARTC-LEVIN-2019": ["official endorsement"],
+        "SRC-X-NYCARTC-RIVERA-2021": ["official Council endorsement", "Jamie's authorship"],
+        "SRC-X-NYCARTC-BRANNAN-2019": ["official endorsement", "Jamie's authorship"],
+        "SRC-X-NYCARTC-VAN-BRAMER-2020": ["official endorsement", "Jamie's authorship"],
+        "SRC-X-NYCARTC-LEVINE-REPLY-2020": ["mission-specific endorsement", "Jamie's authorship"],
+        "SRC-X-NYCARTC-LANDER-REPLY-2021": ["official Council endorsement", "Jamie's authorship"]
+      },
       sourceOrder: [
         "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
         "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27",

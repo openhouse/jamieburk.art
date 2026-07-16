@@ -5,6 +5,7 @@ type SourceNoteProps = {
   number: number;
   noteId: string;
   backlinks: Array<{ id: string; occurrenceId: string }>;
+  boundaryOmissions?: readonly string[];
 };
 
 function preferredUrl(source: PublicSourceRecord) {
@@ -15,8 +16,17 @@ function preferredUrl(source: PublicSourceRecord) {
   return source.canonicalUrl ?? source.archiveUrl ?? source.assetUrl;
 }
 
-export function SourceNote({ backlinks, noteId, number, source }: SourceNoteProps) {
+export function SourceNote({
+  backlinks,
+  boundaryOmissions = [],
+  noteId,
+  number,
+  source
+}: SourceNoteProps) {
   const primaryUrl = preferredUrl(source);
+  const sourceBoundaries = source.doesNotEstablish.filter(
+    (boundary) => !boundaryOmissions.includes(boundary)
+  );
   const secondaryLinks = [
     { label: "Original post", url: source.canonicalUrl },
     { label: "Archived copy", url: source.archiveUrl },
@@ -42,9 +52,9 @@ export function SourceNote({ backlinks, noteId, number, source }: SourceNoteProp
         </p>
       ) : null}
       {source.publicNote ? <p className="jb-endnote-boundary">{source.publicNote}</p> : null}
-      {source.doesNotEstablish.length ? (
+      {sourceBoundaries.length ? (
         <p className="jb-endnote-boundary">
-          <strong>Boundary:</strong> This source does not establish {source.doesNotEstablish.join(", ")}.
+          <strong>Boundary:</strong> This source does not establish {sourceBoundaries.join(", ")}.
         </p>
       ) : null}
       <p className="jb-endnote-backlinks">

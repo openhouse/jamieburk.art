@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
-import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
+import { citationNoteId, citationPagesById, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
 
 test("canonical registry passes deterministic validation", () => assert.deepEqual(validateKnowledgeBank(), []));
@@ -25,6 +25,18 @@ test("repeated sources retain one note and unique backlinks", () => {
 
 test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
+});
+
+test("shared citation boundaries consolidate only declared source limits", () => {
+  for (const pageId of ["callnyc", "fair-rent-nyc"]) {
+    const page = citationPagesById[pageId];
+    assert.ok(page.sharedBoundary);
+    for (const [sourceId, omissions] of Object.entries(page.sourceBoundaryOmissions)) {
+      const source = publicCitationRegistry.sources.find((item) => item.id === sourceId);
+      assert.ok(source, `${sourceId} must remain in the public registry`);
+      assert.ok(omissions.every((boundary) => source.doesNotEstablish.includes(boundary)));
+    }
+  }
 });
 
 test("Claim resolver returns only active approved projections", () => {
