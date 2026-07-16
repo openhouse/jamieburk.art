@@ -11,6 +11,7 @@ import {
   wowListArchiveSummary,
   wowListStakeholderSignals
 } from "../apps/www/src/data/knowledge-bank/social-archive.ts";
+import { wowlistFacebookPostReviewSummary } from "../apps/www/src/data/knowledge-bank/wowlistFacebookPosts.ts";
 import { knowledgeLifecycle } from "../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 
@@ -27,6 +28,28 @@ const expect = (condition, message) => {
   if (!condition) failures.push(message);
 };
 const uniqueCount = (values) => new Set(values).size;
+const validateWowListPlatformCorpusBoundary = ({ xRecovered, facebookRecovered }) => {
+  const errors = [];
+  if (xRecovered === facebookRecovered) {
+    errors.push("WOW List X and Facebook recovered-population denominators were conflated");
+  }
+  return errors;
+};
+
+expect(
+  validateWowListPlatformCorpusBoundary({
+    xRecovered: wowListArchiveSummary.recovered,
+    facebookRecovered: wowlistFacebookPostReviewSummary.recoveredPostCount,
+  }).length === 0,
+  "WOW List X and Facebook corpus boundaries diverged",
+);
+expect(
+  validateWowListPlatformCorpusBoundary({
+    xRecovered: wowListArchiveSummary.recovered,
+    facebookRecovered: wowListArchiveSummary.recovered,
+  }).length > 0,
+  "WOW List platform boundary validator accepted a denominator-conflation mutation",
+);
 
 const collectFixtureSchemaFailures = (fixture) => {
   const schemaFailures = [];

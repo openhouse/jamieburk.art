@@ -795,6 +795,47 @@ test("editorial briefs resolve a selective, purpose-specific palette", () => {
   assert.throws(() => retrieveKnowledgePalette({ publicationSafe: true }), /requires an exact surface/);
 });
 
+test("WOW List retrieval preserves research depth and exact-route selectivity", () => {
+  const project = retrieveKnowledgePalette({ projectId: "PRJ-WOWLIST" });
+  const projectCandidateIds = new Set(project.candidates.map(({ id }) => id));
+  const projectTaskIds = new Set(project.researchTasks.map(({ id }) => id));
+
+  assert.ok(projectCandidateIds.has("CND-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT"));
+  assert.ok(projectCandidateIds.has("CND-WOWLIST-FACEBOOK-POST-POPULATION"));
+  assert.ok(projectCandidateIds.has("CND-WOWLIST-FACEBOOK-CARE-ADVOCACY-ARC"));
+  assert.ok(projectCandidateIds.has("CND-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"));
+  assert.ok(projectTaskIds.has("TASK-WOWLIST-FACEBOOK-NATIVE-EXPORT"));
+  assert.ok(projectTaskIds.has("TASK-WOWLIST-FACEBOOK-ENGAGEMENT-CORROBORATION"));
+  assert.ok(projectTaskIds.has("TASK-WOWLIST-MEMBERS-MEETING-VISUAL-RESEARCH"));
+  assert.ok(project.mediaLeads.some(({ id, displayStatus }) => id === "MEDIA-WOWLIST-MEMBERS-MEETING-2015" && displayStatus === "hold"));
+
+  const publicCaseStudy = retrieveKnowledgePalette({ surface: "/work/wowlist", publicationSafe: true });
+  const publicCandidateIds = new Set(publicCaseStudy.candidates.map(({ id }) => id));
+  assert.ok(publicCandidateIds.has("CND-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT"));
+  assert.ok(!publicCandidateIds.has("CND-WOWLIST-FACEBOOK-POST-POPULATION"));
+  assert.ok(!publicCandidateIds.has("CND-WOWLIST-FACEBOOK-OPERATING-PRACTICE"));
+  assert.ok(!publicCandidateIds.has("CND-WOWLIST-FACEBOOK-CARE-ADVOCACY-ARC"));
+  assert.deepEqual(publicCaseStudy.researchTasks, []);
+  assert.deepEqual(publicCaseStudy.mediaLeads, []);
+});
+
+test("WOW List visual research remains a rights-gated evidence feedback loop", () => {
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-WOWLIST-MEMBERS-MEETING-VISUAL-RESEARCH");
+  const brief = knowledgeLifecycle.editorialBriefs.find(({ id }) => id === "BRIEF-WOWLIST-VISUAL-RESEARCH");
+  const media = knowledgeLifecycle.mediaLeads.find(({ id }) => id === "MEDIA-WOWLIST-MEMBERS-MEETING-2015");
+
+  assert.equal(task?.status, "open");
+  assert.deepEqual(task?.sourceIds, ["SRC-WOWLIST-MEMBERS-MEETING-VIDEO-2015"]);
+  assert.ok(task?.methods.some((item) => /atomic observation/i.test(item)));
+  assert.ok(task?.limitations.some((item) => /not authorized for public display/i.test(item)));
+  assert.equal(brief?.publicationIntent, "internal-brief");
+  assert.deepEqual(brief?.mediaLeadIds, ["MEDIA-WOWLIST-MEMBERS-MEETING-2015"]);
+  assert.equal(media?.rightsStatus, "unknown");
+  assert.equal(media?.consentStatus, "review-needed");
+  assert.equal(media?.displayStatus, "hold");
+  assert.ok(media?.researchTaskIds.includes(task.id));
+});
+
 test("retrieval composes cross-project palettes by time, entity, evidence, priority, audience, and purpose", () => {
   const earlyPractice = retrieveKnowledgePalette({
     entityId: "ENT-JAMIE-BURKART",

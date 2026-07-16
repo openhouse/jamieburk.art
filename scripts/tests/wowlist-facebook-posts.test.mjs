@@ -178,6 +178,45 @@ test("knowledge bank integrates governed Facebook sources and claims", () => {
         /No stable full-population/.test(observation.statement),
     ),
   );
+
+  const publishing = knowledgeLifecycle.candidateClaims.find(
+    ({ id }) => id === "CND-WOWLIST-FACEBOOK-PUBLISHING-MANAGEMENT",
+  );
+  assert.ok(
+    publishing?.observationIds.includes(
+      "OBS-WOWLIST-FACEBOOK-SOCIAL-MANAGEMENT-MEMORY",
+    ),
+  );
+
+  const care = knowledgeLifecycle.candidateClaims.find(
+    ({ id }) => id === "CND-WOWLIST-FACEBOOK-CARE-ADVOCACY-ARC",
+  );
+  const sourceObservationIds = [
+    "OBS-WOWLIST-FACEBOOK-EAST-BAY-GHOST-SHIP-SOURCE",
+    "OBS-WOWLIST-FACEBOOK-WILLAMETTE-KNOW-CLOSING-SOURCE",
+    "OBS-WOWLIST-FACEBOOK-PEHRSPACE-FUNDRAISER-SOURCE",
+    "OBS-WOWLIST-FACEBOOK-WESTWORD-DENVER-FUND-SOURCE",
+  ];
+  assert.ok(sourceObservationIds.every((id) => care?.observationIds.includes(id)));
+  for (const observationId of [
+    "OBS-WOWLIST-FACEBOOK-POST-POPULATION",
+    "OBS-WOWLIST-FACEBOOK-LIVE-BIDIRECTIONAL-CONTROL",
+    "OBS-WOWLIST-FACEBOOK-PUBLISHER-AUDIT",
+    "OBS-WOWLIST-FACEBOOK-SOCIAL-MANAGEMENT-MEMORY",
+    "OBS-WOWLIST-FACEBOOK-OPERATING-PATTERN",
+    ...sourceObservationIds,
+  ]) {
+    const observation = knowledgeLifecycle.observations.find(
+      ({ id }) => id === observationId,
+    );
+    assert.ok(observation?.candidateRelationships.length, observationId);
+    assert.ok(
+      observation.candidateRelationships.every(
+        ({ supports, limitations }) => supports.length > 0 && limitations.length > 0,
+      ),
+      observationId,
+    );
+  }
 });
 
 test("only the bounded Facebook publishing role projects to the WOW List case study", async () => {

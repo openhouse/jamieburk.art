@@ -269,6 +269,8 @@ export const wowlistFacebookPostSources = [
     preservationStatus: "live",
     publishedAt: "2017-03-09",
     accessedAt: "2026-07-15",
+    metadataVerifiedAt: "2026-07-15",
+    metadataVerifiedBy: "Codex canonical-page and corpus-fixture close read",
     canonicalUrl:
       "https://www.westword.com/arts-culture/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025/",
     preferredPublicUrl: "canonical",
@@ -298,6 +300,8 @@ export const wowlistFacebookPostSources = [
     preservationStatus: "live",
     publishedAt: "2016-12-03",
     accessedAt: "2026-07-15",
+    metadataVerifiedAt: "2026-07-15",
+    metadataVerifiedBy: "Codex canonical-page and corpus-fixture close read",
     canonicalUrl:
       "https://eastbayexpress.com/artists-who-survived-oakland-warehouse-fire-discuss-the-tragedy-those-missing-need-for-safe-underground-spaces-2-1/",
     preferredPublicUrl: "canonical",
@@ -327,6 +331,8 @@ export const wowlistFacebookPostSources = [
     preservationStatus: "live",
     publishedAt: "2016-07-01",
     accessedAt: "2026-07-15",
+    metadataVerifiedAt: "2026-07-15",
+    metadataVerifiedBy: "Codex canonical-page and corpus-fixture close read",
     canonicalUrl: "https://www.wweek.com/bars/2016/07/01/the-know-is-closing/",
     preferredPublicUrl: "canonical",
     publicCitation:
@@ -354,6 +360,8 @@ export const wowlistFacebookPostSources = [
     preservationStatus: "live",
     publishedAt: "2016-06-10",
     accessedAt: "2026-07-15",
+    metadataVerifiedAt: "2026-07-15",
+    metadataVerifiedBy: "Codex canonical-page and corpus-fixture close read",
     canonicalUrl: "https://www.gofundme.com/f/pehrspace",
     preferredPublicUrl: "canonical",
     publicCitation:

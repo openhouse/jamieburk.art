@@ -408,3 +408,27 @@ on the pull request; production remains Jamie's explicit decision.
 
 The lifecycle validator and all 45 lifecycle tests pass. Fresh exact-head
 semantic evaluation remains required after the final artifact refresh.
+
+## WOW List Facebook decomposition and visual-feedback repair
+
+- The first adversarial lifecycle pair accepted the public-safety and
+  governance boundaries but one judge found that Jamie's recollection and four
+  selected external source readings were not yet represented as atomic
+  observations.
+- Added source-specific observations and candidate relationships for the
+  first-person role recollection, Ghost Ship artist testimony, The Know's
+  rent-pressure closure, the pehrspace relocation fundraiser, and Denver's
+  combined DIY-space funding, safety, code-guidance, and policy response.
+- Added a rights- and consent-gated research task and internal editorial brief
+  for the protected 2015 members-meeting video. Visual discoveries must become
+  source-positioned atomic observations before claim association, and the
+  brief does not authorize display.
+- Added project-level retrieval coverage proving that unprojected candidates,
+  open tasks, and held media remain available internally while the public WOW
+  List route receives only its exact approved selection.
+- Added a corpus-boundary mutation check so the 38-record `@wowlist` X
+  population cannot silently replace the 57-record Facebook population.
+
+The repaired lifecycle validator, 47 lifecycle tests, focused seven-test
+Facebook suite, social-archive gate, and visual-evidence gate pass. Fresh
+exact-head independent semantic evaluation remains required.
