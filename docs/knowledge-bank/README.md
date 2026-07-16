@@ -214,3 +214,13 @@ identities, sensitive routes, and owner exports remain protected. Jamie's
 predominant-use recollection is preserved as an inquiry rather than converted
 into authorship of the shared account. See the
 [research run](runs/2026-07-15-nycac-facebook-posts-full-population.md).
+
+The July 16 [personal Facebook post pass](projects/jamie-personal-facebook-posts.md)
+accounts for all 1,243 records currently returned by Manage Posts filtered to
+Posted by You. Two independent methods recover the same population and visible
+endpoints while exposing different audience and URL fields. The public repo
+retains aggregate controls, cryptographic commitments, 549 normalized source
+and action-route leads, six individually rechecked Public sources, and strict
+engagement boundaries. Bulk text, nonpublic and unlabeled record contents,
+comments, identities, media, sensitive routes, protected paths, and
+authenticated state remain outside Git.

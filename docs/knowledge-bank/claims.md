@@ -279,6 +279,41 @@ bibliography claim:
 **Measurement boundary:** The 30+ figure is an approximate aggregate across an evolving multi-document artifact suite, not one fixed or official document. Page totals vary by version and rendering.
 **Last reviewed:** 2026-07-15
 
+# 2026-07-16 Jamie personal Facebook archival production
+
+The complete capture-date owner-filtered population is a research control, not
+a portfolio metric. Two methods independently recovered 1,243 current records
+with the same visible endpoints. Different audience and URL coverage is retained
+as method-specific evidence rather than silently merged.
+
+### `CLM-JAMIE-FACEBOOK-PARTICIPATION-ROUTING-PRACTICE`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** Selected public posts show Jamie repeatedly connecting
+project explanation and source material to concrete participation routes.
+**Projection:** Active archive note; held from the website and resume.
+**Guardrail:** The posts do not establish clicks, calls, attendance, conversion,
+endorsement, policy causation, or impact. Collective material retains collective
+credit.
+
+### `CLM-JAMIE-FACEBOOK-POSTED-SOURCE-ROUTING`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** The full pass recovered 549 normalized external source
+and action-route leads; selected independently reviewed destinations are linked
+to existing knowledge-bank records.
+**Projection:** Active archive note; no website metric.
+**Guardrail:** A posted URL is not corroboration until the destination is
+recovered, close-read, and connected to an exact proposition.
+
+### `CLM-JAMIE-FACEBOOK-SELECTED-PUBLIC-SIGNALS`
+
+**Status:** Use with care
+**Projection:** Hold.
+**Guardrail:** Selected aggregate counters are mutable July 16, 2026 interface
+observations, not unique people, reach, stakeholder engagement, endorsement,
+attendance, conversion, causality, or impact. Do not sum them.
+
 ## fair-rent-source-map - Legislative source map and provenance redline
 
 **Status:** Careful

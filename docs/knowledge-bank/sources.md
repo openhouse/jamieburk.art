@@ -199,6 +199,29 @@ URLs: 10 records map to promoted sources, 15 to governed operational-link
 families, and six to a named recovery inquiry. A disposition records what may be
 done with a link; it does not make every destination claim-ready.
 
+### Jamie personal Facebook owner-post corpus
+
+The July 16 archival-production pass accounts for 1,243 records currently
+returned by Facebook Manage Posts filtered to Posted by You. A 621-page graph
+cursor traversal and a separate visual traversal recovered the same population
+and visible December 2006 through June 2022 endpoints. The public control
+artifact preserves both capture commitments and method-specific distributions;
+it does not publish protected rows.
+
+The structural pass recovered 430 URL-bearing records and 549 normalized
+external destinations. Five selected destinations were associated with existing
+close-read Charlotte Street, Pitch, Gothamist, WNYC, and NPR source records; one
+Rolling Stone route remains a retrieval-blocked lead. Posting is not evidence
+of authorship, agreement, partnership, readership, endorsement, conversion, or
+outcome.
+
+Six individually rechecked Public posts preserve dated first-party traces for
+NTER CHNG, WOW List, CouncilStat, Let NYC Dance, KC Town Hall, and Talks Not
+Raids. They support chronology, attributed wording, collective credit, and a
+bounded participation-routing practice. Bulk post text, Friends and Only me
+records, unlabeled contents, comments, responder identities, ordinary personal
+context, media, sensitive URLs, and authenticated state remain protected.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing
