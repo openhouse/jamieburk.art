@@ -378,9 +378,10 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Jamie co-built WOWList; historical records show use across 35+ city scenes, each with 50+ geocoded posts/events",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and a protected production-database analysis with public-safe aggregate findings.",
+    sourceBasis:
+      "Approved resume language, a protected production-database analysis with public-safe aggregate findings, and a public 2016 Sunday Dinner event page that links directly to its WOW List event route.",
     guardrail:
-      "Use rounded historical aggregates; define the 35+ city-scene figure by the documented threshold of at least 50 geocoded posts/events, and do not describe those scenes as official chapters or current service.",
+      "Use rounded historical aggregates; define the 35+ city-scene figure by the documented threshold of at least 50 geocoded posts/events; treat the Sunday Dinner link as one concrete route, not an adoption or traffic census; and do not describe scenes as official chapters or current service.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -394,7 +395,11 @@ export const proofClaims: ProofClaim[] = [
       "Unapproved community artifacts"
     ],
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
-    canonicalClaimIds: ["CLM-WOWLIST-HISTORICAL-SCALE", "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"],
+    canonicalClaimIds: [
+      "CLM-WOWLIST-HISTORICAL-SCALE",
+      "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+      "CLM-FACEBOOK-WOWLIST-IN-PRACTICE"
+    ],
     requiredCanonicalClaimIds: ["CLM-WOWLIST-HISTORICAL-SCALE"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
@@ -416,9 +421,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "For Sunday Dinner, Jamie worked with Julia Fredenberg on invitation, hosting, documentation, and continuity; his approved resume reports 300+ gatherings. For 196 Artists Residency, Jamie reports supporting 20+ resident artists through intake, onboarding, scheduling, hospitality, facilitation, and artist-support practices.",
     sourceBasis:
-      "Approved resume language and public-safe aggregate project history support the scale claim; a Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation. A protected 2023 acceptance record supports the residency's proposal-review, pre-arrival-planning, space-configuration, and access methods, not the 20+ aggregate.",
+      "Approved resume language and public-safe aggregate project history support the scale claim; a Greene Hill Food Co-op Q&A and the surviving public project archive separately support weekly open co-hosting and participatory documentation. Public Facebook event pages preserve 100th and 200th Sunday Dinner milestone titles with exact organizer displays. A protected 2023 acceptance record supports the residency's proposal-review, pre-arrival-planning, space-configuration, and access methods, not the 20+ aggregate.",
     guardrail:
-      "Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; attribute both aggregates to Jamie's approved resume and use 'Jamie reports' for the 20+ residency scale; keep the two role and date ranges distinct.",
+      "Keep the page summary-only; credit Julia Fredenberg wherever Sunday Dinner hosting is named; treat the numbered Facebook titles as contemporaneous milestones rather than an independent count audit; attribute both aggregates to Jamie's approved resume and use 'Jamie reports' for the 20+ residency scale; keep the two role and date ranges distinct.",
     doNotSay: [
       "Jamie was Sunday Dinner's sole host or sole creator",
       "Institutional ownership of participants' work",
@@ -434,6 +439,11 @@ export const proofClaims: ProofClaim[] = [
       "Unapproved photos"
     ],
     surfaces: ["homepage", "resume", "resume-pdf", "technical-operations", "work-card", "case-study"],
+    canonicalClaimIds: [
+      "CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017",
+      "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
+      "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES"
+    ],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
     lastReviewed: "2026-07-15"

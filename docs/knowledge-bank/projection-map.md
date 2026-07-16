@@ -290,6 +290,7 @@ composed public surface, not a claim database.
 
 - `CLM-WOWLIST-HISTORICAL-SCALE`
 - `CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT`
+- `CLM-FACEBOOK-WOWLIST-IN-PRACTICE`
 
 ### Exclusions
 
@@ -297,11 +298,13 @@ composed public surface, not a claim database.
 - Official city chapters
 - Unsupported current-status claims
 - Complete adoption claims
+- Traffic or conversion claims from one link
 
 ### Guardrails
 
 - Protect user data
 - Define the 35+ city-scene figure by at least 50 geocoded posts/events
+- Treat the Sunday Dinner link as one concrete route
 - Keep social counters out of impact claims
 - Keep collective credit visible
 ## `/work/196-sunday-dinner`
@@ -317,16 +320,21 @@ composed public surface, not a claim database.
 
 ### Required Canonical Claims
 
-- None
+- `CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017`
+- `CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE`
+- `CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES`
 
 ### Exclusions
 
 - Private participant records
 - Independent validation of self-reported aggregates
+- Attendance inferred from Facebook response labels
 
 ### Guardrails
 
 - Keep the two practices distinct
+- Credit Julia Fredenberg on the 200th milestone
+- Treat numbered titles as contemporaneous records
 - Use 'Jamie reports' for the 20+ residency scale
 - Do not publish participant media without review
 ## `/work/kc-town-hall`

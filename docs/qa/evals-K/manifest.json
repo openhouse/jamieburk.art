@@ -11,7 +11,7 @@
     "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
     "apps/www/src/data/knowledge-bank/lifecycle-schema.ts"
   ],
-  "sourceSha256": "c72167454d64b03425ed5a3eadcd0e4dc4a9902deb173877b0e03a12b5e13460",
+  "sourceSha256": "1ffcbaa99a6dc460fd73939730a26214b9b6c709bbc0bdf421ff5a912643ee90",
   "qaMatrix": {
     "resultsPath": "docs/qa/evals-K/route-matrix.json",
     "routes": 14,
@@ -127,13 +127,13 @@
       "route": "/work/wowlist",
       "viewport": "1440x1000",
       "artifactPath": "docs/qa/evals-K/wowlist-desktop.png",
-      "artifactSha256": "12bd12101696a46d84271915169d755066b809ef85d7ff12ebe0a7522ec931d6"
+      "artifactSha256": "96658e46ca3f291057cd8380729fdd840b73de6d8ba795567878e5e2c27c2fea"
     },
     {
       "route": "/work/wowlist",
       "viewport": "320x740",
       "artifactPath": "docs/qa/evals-K/wowlist-mobile-320.png",
-      "artifactSha256": "bd4e4feef0643599000b3093246e4568280a765d7d627cfd63534559328245b9"
+      "artifactSha256": "78b74152df52aa33a140b6381d5749afff4fca94d21f14ca63fe0c7c9844444d"
     },
     {
       "route": "/work/kc-town-hall",

@@ -271,6 +271,50 @@
       ]
     },
     {
+      "id": "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+      "title": "SUNDAY DINNER Turns 100! Facebook event",
+      "author": "Jamie Burkart",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-03-09",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-safe archival review",
+      "canonicalUrl": "https://www.facebook.com/events/702417306475691/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "'SUNDAY DINNER Turns 100!,' Facebook event, March 9, 2014.",
+      "publicNote": "The public event page names Jamie as organizer and presents the gathering as the 100th Sunday Dinner.",
+      "doesNotEstablish": [
+        "an independent audit of 100 gatherings",
+        "attendance",
+        "sole production",
+        "the complete Sunday Dinner history"
+      ]
+    },
+    {
+      "id": "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+      "title": "200th Sunday Dinner! Facebook event",
+      "organization": "Sunday Dinner",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-06-26",
+      "accessedAt": "2026-07-15",
+      "metadataVerifiedAt": "2026-07-15",
+      "metadataVerifiedBy": "Codex authenticated public-safe archival review",
+      "canonicalUrl": "https://www.facebook.com/events/551536301637994/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "'200th Sunday Dinner! Special! Wow! Amazing! Interesting!,' Facebook event, June 26, 2016.",
+      "publicNote": "The public event page names Julia Fredenburg and Jamie Burkart as co-organizers, presents the event as the 200th Sunday Dinner, and links to a WOW List event page.",
+      "doesNotEstablish": [
+        "an independent audit of 200 gatherings",
+        "attendance",
+        "sole production by Jamie",
+        "the complete Sunday Dinner history"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -1034,6 +1078,81 @@
       ]
     },
     {
+      "id": "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public event pages preserve a 100th Sunday Dinner milestone in 2014, naming Jamie as organizer, and a 200th in 2016, naming Julia Fredenburg and Jamie as co-organizers. The numbered titles are contemporaneous records, not an independent audit of every gathering.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "public 100th Sunday Dinner event-page milestone",
+            "Jamie organizer display for the 100th event"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public 200th Sunday Dinner event-page milestone",
+            "Julia Fredenburg and Jamie Burkart co-organizer display"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat 100th and 200th as contemporaneous event-page milestone titles, not independently audited totals.",
+        "Preserve Julia Fredenburg's co-organizer credit on the 200th event.",
+        "Do not infer attendance or continuous weekly frequency from the two pages.",
+        "The pages do not independently verify the current 300-plus aggregate claim."
+      ]
+    },
+    {
+      "id": "CLM-FACEBOOK-WOWLIST-IN-PRACTICE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A public 2016 event page for the 200th Sunday Dinner links directly to its WOW List event page, preserving one concrete route from the recurring gathering into the community-calendar platform.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "direct WOW List route from the 200th Sunday Dinner page"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is one documented route, not a complete adoption or traffic census.",
+        "The historical WOW List page may no longer resolve.",
+        "The event-page link does not establish who entered the event into WOW List.",
+        "Keep platform and Sunday Dinner credit shared."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -1608,7 +1727,9 @@
       "sourceOrder": [
         "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017",
         "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE",
-        "SRC-JAMIE-APPROVED-RESUME-2026-07-13"
+        "SRC-JAMIE-APPROVED-RESUME-2026-07-13",
+        "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+        "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
       ],
       "occurrences": [
         {
@@ -1620,6 +1741,15 @@
           "id": "residency-founder-scale",
           "claimId": "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE",
           "projection": "case-study"
+        },
+        {
+          "id": "facebook-milestone-records",
+          "claimId": "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+            "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
+          ]
         }
       ]
     },
@@ -1680,7 +1810,8 @@
         "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
         "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
         "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
-        "SRC-WOWLIST-SBDIY-ADOPTION"
+        "SRC-WOWLIST-SBDIY-ADOPTION",
+        "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
       ],
       "occurrences": [
         {
@@ -1702,6 +1833,14 @@
             "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
             "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
             "SRC-WOWLIST-SBDIY-ADOPTION"
+          ]
+        },
+        {
+          "id": "sunday-dinner-event-route",
+          "claimId": "CLM-FACEBOOK-WOWLIST-IN-PRACTICE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
           ]
         }
       ]

@@ -25,6 +25,11 @@ import {
   nycacFacebookEventResearchInquiries,
   nycacFacebookEventSources
 } from "./nycac-facebook-events.ts";
+import {
+  personalWowListFacebookEventClaims,
+  personalWowListFacebookEventResearchInquiries,
+  personalWowListFacebookEventSources
+} from "./personal-wowlist-facebook-events-2026-07.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -35,6 +40,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusSources,
     ...urbanhermitXCorpusSources,
     ...nycacFacebookEventSources,
+    ...personalWowListFacebookEventSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1146,6 +1152,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusClaims,
     ...urbanhermitXCorpusClaims,
     ...nycacFacebookEventClaims,
+    ...personalWowListFacebookEventClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -1480,6 +1487,7 @@ const knowledgeBankInput = {
     ...nycartcXCorpusResearchInquiries,
     ...urbanhermitXCorpusResearchInquiries,
     ...nycacFacebookEventResearchInquiries,
+    ...personalWowListFacebookEventResearchInquiries,
     {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
@@ -1529,10 +1537,11 @@ const knowledgeBankInput = {
     {
       id: "196-sunday-dinner",
       surface: "/work/196-sunday-dinner",
-      sourceOrder: ["SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE", "SRC-JAMIE-APPROVED-RESUME-2026-07-13"],
+      sourceOrder: ["SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017", "SRC-SUNDAY-DINNER-PUBLIC-ARCHIVE", "SRC-JAMIE-APPROVED-RESUME-2026-07-13", "SRC-FACEBOOK-SUNDAY-DINNER-100-2014", "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"],
       occurrences: [
         { id: "weekly-open-hosting", claimId: "CLM-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017", projection: "case-study" },
-        { id: "residency-founder-scale", claimId: "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE", projection: "case-study" }
+        { id: "residency-founder-scale", claimId: "CLM-196-ARTISTS-RESIDENCY-FOUNDER-SCALE", projection: "case-study" },
+        { id: "facebook-milestone-records", claimId: "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES", projection: "case-study", sourceIds: ["SRC-FACEBOOK-SUNDAY-DINNER-100-2014", "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"] }
       ]
     },
     {
@@ -1549,10 +1558,11 @@ const knowledgeBankInput = {
     {
       id: "wowlist",
       surface: "/work/wowlist",
-      sourceOrder: ["SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-WOWLIST-FULL-POPULATION-2026-07-15", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"],
+      sourceOrder: ["SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15", "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-WOWLIST-FULL-POPULATION-2026-07-15", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION", "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"],
       occurrences: [
         { id: "historical-scale", claimId: "CLM-WOWLIST-HISTORICAL-SCALE", projection: "case-study", sourceIds: ["SRC-WOWLIST-PRODUCTION-ARCHIVE-PUBLIC-SUMMARY-2026-07-15"] },
-        { id: "social-provenance-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-WOWLIST-FULL-POPULATION-2026-07-15", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] }
+        { id: "social-provenance-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-WOWLIST-FULL-POPULATION-2026-07-15", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] },
+        { id: "sunday-dinner-event-route", claimId: "CLM-FACEBOOK-WOWLIST-IN-PRACTICE", projection: "case-study", sourceIds: ["SRC-FACEBOOK-SUNDAY-DINNER-200-2016"] }
       ]
     },
     {
