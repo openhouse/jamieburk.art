@@ -311,6 +311,89 @@ export const icloudArchiveSources = [
       "professional licensure",
       "the current course syllabus"
     ]
+  },
+  {
+    id: "SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+    title: "A Sorted Audio File",
+    organization: "Monthly Music Hackathon NYC / Music Community Lab",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2013-02-27",
+    accessedAt: "2026-07-16",
+    canonicalUrl:
+      "https://monthlymusichackathon.org/post/44177616179/sortedaudio",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "Monthly Music Hackathon NYC, 'A Sorted Audio File,' February 27, 2013.",
+    publicNote:
+      "The institutional project page records that Jamie made a Max/MSP program at the February 2013 Music Hackathon NYC that segmented an audio file and reordered the clips by pitch.",
+    supportsGenerally: [
+      "Jamie made a Max/MSP program at the February 2013 Music Hackathon NYC",
+      "the program divided audio into small segments",
+      "the demonstrated implementation sorted the segments by pitch"
+    ],
+    doesNotEstablish: [
+      "the complete source code or implementation details",
+      "Jamie's authorship or ownership of the source song",
+      "permission to republish the linked audio",
+      "a broader role in organizing Monthly Music Hackathon NYC"
+    ]
+  },
+  {
+    id: "SRC-CRS-POWER-MAP-MESSAGING-GRID-2026",
+    title:
+      "Commercial Rent Stabilization internal power map and functional messaging grid",
+    organization: "NYC Artist Coalition",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-02-06",
+    accessedAt: "2026-07-16",
+    publicCitation:
+      "Public-safe archival review of Jamie Burkart's Commercial Rent Stabilization power map and functional messaging grid, February 2026.",
+    publicNote:
+      "The protected working artifact joins stakeholder mapping, audience-specific communication, testimony safety, coalition governance, and 30/60/90-day execution planning in one operational model.",
+    protectedLocatorId: "ARCHIVE-CRS-POWER-MAP-MESSAGING-GRID-2026",
+    supportsGenerally: [
+      "Jamie created an operational stakeholder power map and audience-specific messaging grid",
+      "the artifact linked targets to owners, next asks, message needs, and messengers",
+      "the artifact included testimony safety and public-private boundaries",
+      "the artifact included coalition governance and a 30/60/90-day execution structure"
+    ],
+    doesNotEstablish: [
+      "that the working plan was collectively approved or fully executed",
+      "that Jamie led or owned the coalition or campaign",
+      "that every target, message, milestone, or recommendation remained current",
+      "permission to publish internal strategy, names, assignments, or testimony leads"
+    ]
+  },
+  {
+    id: "SRC-JOB-HUNT-CONTEXT-OUTLINE-2026",
+    title: "Job-Hunt Context Outline",
+    organization: "Jamie Burkart job-hunt archive",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-07-03",
+    accessedAt: "2026-07-16",
+    publicCitation:
+      "Public-safe archival review of Jamie Burkart's private Job-Hunt Context Outline, July 2026.",
+    publicNote:
+      "The protected orientation record maps Jamie's current role positioning, candidate case studies, evidence locations, public-safety boundaries, and a verification queue for quantified claims. It is a research control record, not accomplishment evidence.",
+    protectedLocatorId: "ARCHIVE-JOB-HUNT-CONTEXT-OUTLINE-2026",
+    supportsGenerally: [
+      "the job-hunt archive uses technical project management, product operations, civic technology, implementation, and documentation systems as its organizing role frame",
+      "the outline distinguishes public collateral from private source material",
+      "the outline identifies quantified claims that require source review before prominent external use"
+    ],
+    doesNotEstablish: [
+      "any accomplishment claim by itself",
+      "the accuracy of resume metrics without underlying evidence",
+      "independent market validation of the role positioning",
+      "permission to publish private transcripts, messages, legal records, or financial material"
+    ]
   }
 ] satisfies SourceRecord[];
 
@@ -419,10 +502,67 @@ export const icloudArchiveClaims = [
     reviewedBy: ["Jamie Burkart", "Codex iCloud, public-source, and social-archive review"]
   },
   {
+    id: "CLM-MUSIC-HACKATHON-SORTED-AUDIO",
+    project: "monthly-music-hackathon",
+    internalClaim:
+      "At the February 2013 Music Hackathon NYC, Jamie built a Max/MSP program that divided an audio file into small segments and reordered the clips by pitch.",
+    status: "confirmed-with-boundary",
+    projections: [
+      {
+        key: "archive-note",
+        text:
+          "Built a Max/MSP program at the February 2013 Music Hackathon NYC that segmented an audio file and reordered the clips by pitch.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"],
+        rationale:
+          "Retain a compact, externally attributed creative-technology example in the knowledge bank without adding another project to the current hiring-site composition."
+      },
+      {
+        key: "about",
+        text:
+          "Built an experimental Max/MSP audio-sorting program at Music Hackathon NYC.",
+        status: "hold",
+        citationRequired: true,
+        surfaces: [],
+        rationale:
+          "Hold until a broader creative-technology composition needs this evidence and the linked audio's publication rights are reviewed."
+      }
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+        relationship: "direct-support",
+        supports: [
+          "Jamie's authorship of the Max/MSP program",
+          "February 2013 Music Hackathon NYC context",
+          "audio segmentation and pitch-sorting behavior"
+        ],
+        confidence: "high",
+        renderCitation: true
+      }
+    ],
+    boundaries: [
+      "Describe the specific recorded program behavior rather than a generalized audio-engineering platform.",
+      "Do not imply Jamie authored or owns Spencer Owen's source song.",
+      "Do not republish the linked audio without a separate rights review.",
+      "Do not infer an organizing role in Monthly Music Hackathon NYC from this participant project."
+    ],
+    antiClaims: [
+      "Jamie organized Monthly Music Hackathon NYC.",
+      "Jamie wrote the source song used in the demonstration.",
+      "The archived page preserves the complete source code.",
+      "The project was a production audio product."
+    ],
+    researchInquiryIds: ["INQ-MUSIC-HACKATHON-SORTED-AUDIO-IMPLEMENTATION"],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Jamie Burkart", "Codex iCloud and public-source review"]
+  },
+  {
     id: "CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE",
     project: "fair-rent-nyc",
     internalClaim:
-      "Jamie built and stewarded a multi-document Commercial Rent Stabilization campaign-memory and coordination system spanning 30+ pages in the working artifact set, including running minutes, a 90-day operating plan, decision and action records, consent-aware story handling, and public-private boundary management.",
+      "Jamie built and stewarded a multi-document Commercial Rent Stabilization campaign-memory and coordination system spanning 30+ pages in the working artifact set, including running minutes, a 90-day operating plan, decision and action records, stakeholder power mapping, audience-specific messaging, consent-aware story handling, and public-private boundary management.",
     status: "use-with-care",
     projections: [
       {
@@ -438,7 +578,7 @@ export const icloudArchiveClaims = [
       {
         key: "technical-operations",
         text:
-          "Built and stewarded 30+ pages of campaign memory, including decision records, source maps, action trackers, and public/private boundary management.",
+          "Built and stewarded 30+ pages of campaign memory, including decision records, source maps, stakeholder power mapping, action trackers, and public/private boundary management.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/technical-operations"],
@@ -448,7 +588,7 @@ export const icloudArchiveClaims = [
       {
         key: "archive-note",
         text:
-          "Built a shared campaign-memory system for Commercial Rent Stabilization, including evolving running minutes, a 90-day operating plan, action and decision records, consent states, and public-private governance.",
+          "Built a shared campaign operating system for Commercial Rent Stabilization, including evolving running minutes, a 90-day plan, stakeholder power mapping, an audience-specific messaging grid, action and decision records, consent states, and public-private governance.",
         status: "active",
         citationRequired: false,
         surfaces: ["docs/knowledge-bank/projects/fair-rent-nyc"],
@@ -492,13 +632,27 @@ export const icloudArchiveClaims = [
         locator: "May 2026 ten-page provenance redline",
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-CRS-POWER-MAP-MESSAGING-GRID-2026",
+        relationship: "private-support",
+        supports: [
+          "Jamie's creation of an operational stakeholder power map",
+          "audience-specific message and messenger planning",
+          "testimony safety and public-private boundaries",
+          "coalition governance and 30/60/90-day execution structure"
+        ],
+        locator: "February 2026 internal operating-map artifact",
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: [
       "The 30+ figure is an approximate aggregate across an evolving multi-document suite, not the page count of one document.",
       "Page totals vary by version, export, and rendering; retain the number only with this measurement boundary in the canonical record.",
       "Use collective-work language and do not imply Jamie led or owned the movement.",
-      "Do not publish raw minutes, names, stories, legal-review material, live strategy, or contact data."
+      "Do not imply that working plans, targets, messages, or milestones were collectively approved or completed.",
+      "Do not publish raw minutes, names, assignments, testimony leads, stories, legal-review material, live strategy, or contact data."
     ],
     antiClaims: [
       "Jamie led the Commercial Rent Stabilization movement.",
@@ -507,8 +661,8 @@ export const icloudArchiveClaims = [
       "Every action or proposal recorded in the working documents was adopted or completed."
     ],
     researchInquiryIds: ["INQ-CRS-ARTIFACT-SUITE-MEASUREMENT"],
-    reviewedAt: "2026-07-15",
-    reviewedBy: ["Jamie Burkart", "Codex iCloud archival review"]
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Jamie Burkart", "Codex iCloud archival follow-up"]
   },
   {
     id: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
@@ -849,6 +1003,59 @@ export const icloudArchiveInquiries = [
     publicSummary:
       "The method is concrete and publicly bounded; deployment evidence and measured outcomes remain open.",
     protectedLocatorId: "RESEARCH-SBTM-PILOT-VALIDATION-2026"
+  },
+  {
+    id: "INQ-MUSIC-HACKATHON-SORTED-AUDIO-IMPLEMENTATION",
+    project: "monthly-music-hackathon",
+    question:
+      "What source code, implementation notes, audio permissions, or collaborator records can further document Jamie's 2013 Max/MSP audio-sorting project?",
+    methods: [
+      "Close-read the captured Monthly Music Hackathon NYC project page.",
+      "Verified the public institutional page in a live browser on July 16, 2026.",
+      "Separated the documented program behavior from source-code, music-authorship, product, and organizer claims."
+    ],
+    runAt: "2026-07-16",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The institutional page directly attributes the Max/MSP program to Jamie.",
+      "The page documents audio segmentation and a pitch-sorted demonstration.",
+      "The page links to an audio example but does not expose complete source code or publication permissions."
+    ],
+    limitations: [
+      "No source code or implementation notes were recovered in this pass.",
+      "The linked audio's current availability and republication rights were not established.",
+      "The page does not establish a broader organizing role in Monthly Music Hackathon NYC."
+    ],
+    sourceIds: ["SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013"],
+    publicSummary:
+      "Monthly Music Hackathon NYC directly documents Jamie's 2013 Max/MSP audio-segmentation and pitch-sorting program; source code, implementation detail, and audio rights remain open."
+  },
+  {
+    id: "INQ-JOB-HUNT-PROOF-COVERAGE-2026",
+    project: "professional-positioning",
+    question:
+      "Which quantified claims flagged by the July 2026 job-hunt orientation now have canonical evidence, and which still require stronger support?",
+    methods: [
+      "Close-read the job-hunt context outline and its claim-verification queue.",
+      "Compared each flagged metric with the current canonical claims, source records, measurement boundaries, and anti-claims.",
+      "Kept the orientation record as research control rather than accomplishment evidence."
+    ],
+    runAt: "2026-07-16",
+    resultStatus: "partially-recovered",
+    findings: [
+      "WOW List's roughly 35 city ecosystems, KC Town Hall's public funding record, and the 30+ page Commercial Rent Stabilization artifact scale now have canonical evidence chains with explicit boundaries.",
+      "The 300+ gathering scale has a protected ledger and measurement boundary.",
+      "The 2x revenue contribution claim remains careful rather than independently verified, and the 20+ resident-artist aggregate remains only partially established."
+    ],
+    limitations: [
+      "The job-hunt outline is a private synthesis and does not prove accomplishments by itself.",
+      "Private financial evidence is not published and the 2x claim must retain contribution language.",
+      "The reviewed residency records do not independently establish the complete 20+ resident-artist aggregate."
+    ],
+    sourceIds: ["SRC-JOB-HUNT-CONTEXT-OUTLINE-2026"],
+    publicSummary:
+      "A proof-coverage audit matured several once-open metrics while retaining careful language for the 2x revenue contribution and an explicit evidence gap for the 20+ resident-artist aggregate.",
+    protectedLocatorId: "RESEARCH-JOB-HUNT-PROOF-COVERAGE-2026"
   }
 ] satisfies ResearchInquiry[];
 
@@ -965,6 +1172,76 @@ export const icloudArchiveIntake = [
       "Do not imply instructor affiliation.",
       "Do not publish private coursework, cohort records, or portal identifiers.",
       "Keep Jamie's completed-cohort curriculum distinct from the changing public syllabus."
+    ]
+  },
+  {
+    id: "INT-ICLOUD-JAMIE-PROJECTS-HISTORY-MUSIC-HACKATHON-2026-07-16",
+    receivedAt: "2026-07-16",
+    kind: "public-url",
+    visibility: "public-safe",
+    title: "Monthly Music Hackathon audio-program evidence",
+    description:
+      "Close reading of a project-history capture and the live institutional page recovered a compact 2013 creative-technology credit: Jamie made a Max/MSP program that segmented audio and reordered the clips by pitch.",
+    whyItMatters:
+      "Adds a precise, externally attributed example of Jamie's longstanding practice across code, media, experimentation, and public creative communities.",
+    projectIds: ["monthly-music-hackathon", "participatory-public-practice"],
+    status: "matured",
+    disposition: "claim-created",
+    dispositionNote:
+      "Matured a bounded archive claim, held it from the current website, and opened implementation and rights research.",
+    sourceIds: ["SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013"],
+    claimIds: ["CLM-MUSIC-HACKATHON-SORTED-AUDIO"],
+    inquiryIds: ["INQ-MUSIC-HACKATHON-SORTED-AUDIO-IMPLEMENTATION"],
+    boundaries: [
+      "Do not imply authorship of the source song or an organizer role.",
+      "Do not republish the linked audio without rights review.",
+      "Keep the current website projection held unless a creative-technology composition needs it."
+    ]
+  },
+  {
+    id: "INT-ICLOUD-CRS-OPERATING-MAP-2026-07-16",
+    receivedAt: "2026-07-16",
+    kind: "public-safe-memory",
+    visibility: "protected-summary",
+    title: "Commercial Rent Stabilization operating-map evidence",
+    description:
+      "A protected February 2026 artifact strengthens Jamie's campaign-memory claim with direct evidence of stakeholder power mapping, audience-specific messaging, testimony safety, coalition governance, and 30/60/90-day execution planning.",
+    whyItMatters:
+      "Makes the delivery value of Jamie's documentation concrete for technical-operations and public-service readers without publishing live strategy or absorbing collective campaign credit.",
+    projectIds: ["fair-rent-nyc", "commercial-rent-stabilization"],
+    status: "matured",
+    disposition: "source-recorded",
+    dispositionNote:
+      "Added direct protected support to the existing campaign-memory claim and strengthened its approved Technical Operations projection.",
+    sourceIds: ["SRC-CRS-POWER-MAP-MESSAGING-GRID-2026"],
+    claimIds: ["CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE"],
+    boundaries: [
+      "Do not publish internal names, assignments, targets, messages, milestones, testimony leads, or strategy.",
+      "Do not imply that a working plan was collectively adopted or fully executed.",
+      "Use collective-work language and keep Jamie's direct artifact authorship distinct from campaign ownership."
+    ]
+  },
+  {
+    id: "INT-ICLOUD-JOB-HUNT-EVIDENCE-CONTROL-2026-07-16",
+    receivedAt: "2026-07-16",
+    kind: "claim-hypothesis",
+    visibility: "protected-summary",
+    title: "Job-hunt quantified-claim evidence control",
+    description:
+      "The private job-hunt context outline was used as a verification queue and compared with the current canonical claim graph; it was not treated as proof of the accomplishments it summarizes.",
+    whyItMatters:
+      "Keeps the public portfolio's strongest metrics ambitious and accurate by recording which claims matured, which remain careful, and which still need research.",
+    projectIds: ["professional-positioning", "technical-operations"],
+    status: "researching",
+    disposition: "inquiry-opened",
+    dispositionNote:
+      "Recorded the orientation source as protected research control and retained open evidence work for the 2x revenue contribution and 20+ resident-artist aggregate.",
+    sourceIds: ["SRC-JOB-HUNT-CONTEXT-OUTLINE-2026"],
+    inquiryIds: ["INQ-JOB-HUNT-PROOF-COVERAGE-2026"],
+    boundaries: [
+      "Do not use a resume or job-hunt synthesis as independent accomplishment evidence.",
+      "Do not publish private messages, transcripts, financial records, legal materials, or archive paths.",
+      "Retain contribution language and measurement boundaries until stronger evidence changes the claim status."
     ]
   }
 ] satisfies IntakeRecordInput[];

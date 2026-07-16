@@ -58,9 +58,9 @@ artifacts, rights review, and editorial space.
 
 ### iCloud Teams archive production
 
-The July 15 archive-production pass used project overview files to orient three
-large iCloud working archives, then close-read a bounded set of relevant anchor
-records. It added ten typed source records:
+The July 15-16 archive-production passes used project overview files to orient
+three large iCloud working archives, then close-read a bounded set of relevant
+anchor records. They added thirteen typed source records:
 
 - the official Horse Lords *Truthers* video page;
 - Lars Gotrich's contemporaneous NPR feature about the video;
@@ -70,12 +70,24 @@ records. It added ten typed source records:
   records plus the public lab page;
 - Jamie's protected certificate of completion, Maven's public AI Evals course
   page, and a protected completed-cohort portal summary.
+- Monthly Music Hackathon NYC's public record of Jamie's 2013 Max/MSP
+  audio-segmentation and pitch-sorting program;
+- a protected summary of Jamie's Commercial Rent Stabilization stakeholder
+  power map and functional messaging grid;
+- a protected job-hunt context outline used as an evidence-control record, not
+  accomplishment evidence.
 
 Public records retain their canonical URLs. Protected records expose only a
 stable locator, public-safe source description, supported propositions, and
 explicit non-support. The repository does not contain iCloud paths, raw
 documents, collaborator lists, live strategy, pricing, transcripts, course
 materials, portal identifiers, or private contact information.
+
+The stakeholder-map record supports the existence and design of an operating
+artifact. It does not establish collective approval, completion of its
+milestones, or permission to publish its targets, owners, messages, testimony
+leads, or strategy. The job-hunt outline can identify hypotheses and evidence
+gaps, but it cannot prove the claims it summarizes.
 
 The public Maven syllabus continues to change. It supports the course title,
 instructors, broad educational context, and certificate format; Jamie's

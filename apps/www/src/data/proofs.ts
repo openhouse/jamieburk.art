@@ -175,11 +175,12 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign memory, including decision records, source maps, stakeholder power mapping, action trackers, and public/private boundary management.",
     shortWording: "Jamie built and stewarded 30+ pages of civic campaign memory",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+      "Jamie synthesized meetings, decision records, action items, legal/policy questions, stakeholder power mapping, audience-specific messaging, testimony safety, city/state strategy lanes, and public/private boundaries into shared memory and actionable workstreams.",
+    sourceBasis:
+      "Approved resume language and protected review of Jamie-authored campaign-memory, operating-plan, and stakeholder-map artifacts.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -203,7 +204,7 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
     canonicalClaimIds: ["CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "fair-rent-source-map",

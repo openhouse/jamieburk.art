@@ -18,6 +18,19 @@ running-minutes snapshot, a later 6,532-word working version, a 2,377-word
 version, export, tracked-change state, and rendering. Overlapping minutes
 versions are not counted as independent documents.
 
+## Stakeholder power map and messaging grid
+
+A protected February 2026 artifact authored by Jamie translates the campaign's
+complex operating environment into one model spanning stakeholder power
+mapping, relationship ownership, next asks, audience-specific communication,
+messenger and testimony safety, coalition governance, and 30/60/90-day
+execution planning.
+
+This is evidence of Jamie's operating-artifact design, not proof that every
+target, message, recommendation, or milestone was collectively approved,
+remained current, or was completed. Names, assignments, testimony leads, and
+strategy remain outside this public repository.
+
 ## Legislative provenance
 
 Jamie prepared a ten-page legislative provenance redline using tracked changes
@@ -56,6 +69,8 @@ campaign.
 - Do not imply that Jamie authored or owned the underlying legislation.
 - Do not publish raw minutes, names, stories, strategy, contact data,
   correspondence, or legal-review context.
+- Do not publish internal targets, assignments, messaging, testimony leads, or
+  milestones from the stakeholder-map artifact.
 - Do not describe recorded proposals or action items as adopted or completed
   without separate evidence.
 

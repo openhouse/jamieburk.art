@@ -101,6 +101,14 @@ The July 15 iCloud archive-production pass adds focused project records for
 visual and participatory work remains grouped in
 [participatory public practice](projects/participatory-public-practice.md).
 
+The July 16 iCloud follow-up adds a public 2013 Max/MSP project record,
+strengthens the Commercial Rent Stabilization operating-infrastructure claim
+with a protected stakeholder-map and messaging-grid artifact, and uses the
+private [job-hunt orientation](projects/job-hunt-evidence-control.md) as an
+evidence-control queue rather than proof of its own summaries. The website
+gains the sharper CRS operating-artifact language; the music project remains
+knowledge-bank depth.
+
 The July 15 [Google Drive Shared Drive archival-production pass](projects/google-drive-archive-production.md)
 adds a privacy-screened corpus method plus concrete records for commercial
 vacancy public-data design, Fair Rent NYC web operations, and Sunday Dinner /

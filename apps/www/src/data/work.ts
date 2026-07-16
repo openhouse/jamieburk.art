@@ -23,6 +23,7 @@ const artifactTypeSchema = z.enum([
   "website",
   "workflow",
   "source map",
+  "stakeholder map",
   "decision record",
   "public handout",
   "meeting memory",
@@ -195,8 +196,8 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, a smallest-publishable public-data pilot brief, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
-    artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
+      "Running minutes, action trackers, source maps, stakeholder power mapping, audience-specific messaging, legal/policy question logs, a smallest-publishable public-data pilot brief, public-safe explanations, public campaign websites, and shared campaign memory.",
+    artifactTypes: ["website", "source map", "stakeholder map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
         title: "Campaign-memory spine",
@@ -215,6 +216,12 @@ const workItemsInput = [
         description:
           "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
         type: "decision record"
+      },
+      {
+        title: "Stakeholder power map and messaging grid",
+        description:
+          "An internal operating model connecting stakeholder needs, relationship ownership, next asks, message discipline, messenger safety, governance, and execution cadence.",
+        type: "stakeholder map"
       },
       {
         title: "Public campaign web surfaces",
@@ -240,6 +247,8 @@ const workItemsInput = [
     capabilities: [
       "Meeting Synthesis",
       "Source Mapping",
+      "Stakeholder Mapping",
+      "Policy Communications",
       "Action Tracking",
       "Campaign Websites",
       "Public Guidance",
@@ -269,6 +278,7 @@ const workItemsInput = [
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
+      "Stakeholder power mapping, audience-specific messaging, testimony safety, and execution planning",
       "Commercial vacancy and lease-cost pilot brief with explicit privacy requirements",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "Legal/policy questions organized for collaborators",
@@ -276,7 +286,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, stakeholder power mapping, policy-communications materials, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

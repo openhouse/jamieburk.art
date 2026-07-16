@@ -128,6 +128,19 @@ support any claim that Jamie wrote or performed the music. Mutable view and
 engagement counts are excluded. Video, thumbnail, and still-image rights must
 be reviewed before republication.
 
+## Monthly Music Hackathon - sorted audio
+
+Monthly Music Hackathon NYC's February 2013 project page records Jamie building
+a Max/MSP program that divided an audio file into small segments and reordered
+the clips by pitch. The public record is a compact early example of Jamie
+working across code, sound, experimentation, and a participatory technical
+community.
+
+**Boundaries:** The page documents one participant project, not an organizer
+role or production product. It does not preserve the complete source code.
+Jamie did not author the source song named by the page, and the linked audio
+requires a separate rights review before republication.
+
 ## Sources
 
 - The Pitch, "When artists turn Huck Finn" (2007).
@@ -152,3 +165,4 @@ be reviewed before republication.
 - Horse Lords, "Truthers (Official Video)" (2016).
 - Lars Gotrich, "Video: Horse Lords' Hypnotic 'Truthers' Will Blast Your
   Noodle," NPR Illinois (2016).
+- Monthly Music Hackathon NYC, "A Sorted Audio File" (2013).

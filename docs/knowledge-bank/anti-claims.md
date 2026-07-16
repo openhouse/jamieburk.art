@@ -238,3 +238,15 @@ not by itself proof of production AI-system outcomes.
 
 Do not treat the changing public syllabus as identical to Jamie's completed
 cohort or publish private coursework, participant information, or portal data.
+
+## Monthly Music Hackathon
+
+Do not say Jamie organized Monthly Music Hackathon NYC, authored Spencer
+Owen's source song, preserved complete source code, or built a production audio
+product. Do not republish the linked audio without rights review.
+
+## Job-hunt evidence control
+
+Do not use a resume, job-hunt outline, AI-assisted synthesis, or archive folder
+name as independent accomplishment evidence. These records may orient research
+and identify verification gaps; the underlying sources must support the claim.

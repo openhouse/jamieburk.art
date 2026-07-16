@@ -1056,10 +1056,10 @@ test("NTER CHNG does not silently enter the current website or resume", () => {
 });
 
 test("iCloud archive production is source-backed, bounded, and fully dispositioned", () => {
-  assert.equal(icloudArchiveSources.length, 10);
-  assert.equal(icloudArchiveClaims.length, 5);
-  assert.equal(icloudArchiveInquiries.length, 3);
-  assert.equal(icloudArchiveIntake.length, 4);
+  assert.equal(icloudArchiveSources.length, 13);
+  assert.equal(icloudArchiveClaims.length, 6);
+  assert.equal(icloudArchiveInquiries.length, 5);
+  assert.equal(icloudArchiveIntake.length, 7);
 
   const sourceIds = new Set(icloudArchiveSources.map((source) => source.id));
   const claimIds = new Set(icloudArchiveClaims.map((claim) => claim.id));
@@ -1067,18 +1067,23 @@ test("iCloud archive production is source-backed, bounded, and fully disposition
     icloudArchiveInquiries.map((inquiry) => inquiry.id)
   );
 
-  assert.ok(
-    icloudArchiveIntake.every(
-      (record) => record.status === "matured" && record.claimIds.length > 0
-    )
+  const maturedIntake = icloudArchiveIntake.filter(
+    (record) => record.status === "matured"
   );
+  const researchingIntake = icloudArchiveIntake.filter(
+    (record) => record.status === "researching"
+  );
+  assert.equal(maturedIntake.length, 6);
+  assert.ok(maturedIntake.every((record) => record.claimIds.length > 0));
+  assert.equal(researchingIntake.length, 1);
+  assert.ok(researchingIntake.every((record) => record.inquiryIds.length > 0));
   assert.deepEqual(
     new Set(icloudArchiveIntake.flatMap((record) => record.sourceIds)),
     sourceIds
   );
   assert.ok(
     icloudArchiveIntake
-      .flatMap((record) => record.claimIds)
+      .flatMap((record) => record.claimIds ?? [])
       .every((claimId) => claimIds.has(claimId))
   );
   assert.ok(
@@ -1125,6 +1130,70 @@ test("iCloud archive production is source-backed, bounded, and fully disposition
   );
 });
 
+test("iCloud follow-up separates public proof, protected operations, and research control", () => {
+  const sourceById = new Map(
+    icloudArchiveSources.map((source) => [source.id, source])
+  );
+  const claimById = new Map(
+    icloudArchiveClaims.map((claim) => [claim.id, claim])
+  );
+  const inquiryById = new Map(
+    icloudArchiveInquiries.map((inquiry) => [inquiry.id, inquiry])
+  );
+
+  const musicSource = sourceById.get("SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013");
+  const musicClaim = claimById.get("CLM-MUSIC-HACKATHON-SORTED-AUDIO");
+  assert.equal(musicSource.visibility, "public");
+  assert.equal(
+    musicSource.canonicalUrl,
+    "https://monthlymusichackathon.org/post/44177616179/sortedaudio"
+  );
+  assert.match(musicClaim.internalClaim, /Max\/MSP.*segments.*pitch/i);
+  assert.equal(
+    musicClaim.projections.find((item) => item.key === "about").status,
+    "hold"
+  );
+  assert.ok(musicClaim.antiClaims.some((item) => /organized/i.test(item)));
+
+  const operatingSource = sourceById.get(
+    "SRC-CRS-POWER-MAP-MESSAGING-GRID-2026"
+  );
+  const campaignMemory = claimById.get(
+    "CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE"
+  );
+  assert.equal(operatingSource.visibility, "protected");
+  assert.equal(operatingSource.canonicalUrl, undefined);
+  assert.ok(
+    campaignMemory.evidence.some(
+      (item) =>
+        item.sourceId === operatingSource.id &&
+        item.relationship === "private-support" &&
+        item.renderCitation === false
+    )
+  );
+  assert.match(
+    campaignMemory.projections.find(
+      (item) => item.key === "technical-operations"
+    ).text,
+    /stakeholder power mapping/i
+  );
+  assert.ok(
+    campaignMemory.boundaries.some((item) => /collectively approved or completed/i.test(item))
+  );
+
+  const controlSource = sourceById.get("SRC-JOB-HUNT-CONTEXT-OUTLINE-2026");
+  const proofAudit = inquiryById.get("INQ-JOB-HUNT-PROOF-COVERAGE-2026");
+  assert.equal(controlSource.visibility, "protected");
+  assert.ok(
+    icloudArchiveClaims.every((claim) =>
+      claim.evidence.every((item) => item.sourceId !== controlSource.id)
+    )
+  );
+  assert.equal(proofAudit.resultStatus, "partially-recovered");
+  assert.ok(proofAudit.findings.some((item) => /2x revenue.*careful/i.test(item)));
+  assert.ok(proofAudit.findings.some((item) => /20\+ resident-artist.*partially/i.test(item)));
+});
+
 test("iCloud claims preserve Chad's lens without erasing boundaries", () => {
   const claimById = new Map(icloudArchiveClaims.map((claim) => [claim.id, claim]));
   const horseLords = claimById.get("CLM-HORSE-LORDS-TRUTHERS-VIDEO");
@@ -1136,6 +1205,9 @@ test("iCloud claims preserve Chad's lens without erasing boundaries", () => {
   );
   const teamMemory = claimById.get("CLM-SOURCE-BACKED-TEAM-MEMORY-METHOD");
   const aiEvals = claimById.get("CLM-AI-EVALS-PROFESSIONAL-DEVELOPMENT");
+  const musicHackathon = claimById.get(
+    "CLM-MUSIC-HACKATHON-SORTED-AUDIO"
+  );
 
   assert.match(horseLords.internalClaim, /co-created.*M\.C\. Schmidt/i);
   assert.ok(horseLords.antiClaims.some((item) => /alone/i.test(item)));
@@ -1169,6 +1241,15 @@ test("iCloud claims preserve Chad's lens without erasing boundaries", () => {
   assert.match(aiEvals.internalClaim, /completed/i);
   assert.ok(
     aiEvals.boundaries.some((item) => /professional licensure/i.test(item))
+  );
+
+  assert.match(musicHackathon.internalClaim, /built a Max\/MSP program/i);
+  assert.ok(
+    musicHackathon.boundaries.some((item) => /source song/i.test(item))
+  );
+  assert.equal(
+    musicHackathon.projections.find((item) => item.key === "about").status,
+    "hold"
   );
 
   const expectedProofLinks = new Map([

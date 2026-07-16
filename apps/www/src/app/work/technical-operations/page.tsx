@@ -21,6 +21,10 @@ const commercialVacancyProof = getClaimProjection(
   "/work/technical-operations"
 );
 
+const commercialRentOperationsProof = requireReadyOrCarefulProof(
+  "fair-rent-campaign-memory"
+);
+
 const sundayDinnerOperationsProof = getClaimProjection(
   "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
   "technical-operations",
@@ -57,8 +61,7 @@ const proofMap = [
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
-    proof:
-      "Jamie built and stewarded 30+ pages of campaign memory, including decision records, source maps, action trackers, and public/private boundary management."
+    proof: commercialRentOperationsProof.publicWording
   },
   {
     project: "Commercial vacancy public-data framing",

@@ -26,8 +26,9 @@ data, correspondence, credentials, and unapproved images remain outside this
 repository.
 
 Large private archives enter through modular typed ledgers as protected
-summaries, not raw file inventories. The July 15 iCloud pass added four matured
-intake records in `icloud-archive-production.ts`, covering Jamie Projects
-History, Commercial Rent Stabilization, Source-Backed Team Memory, and AI Evals
-professional development. Each record links every reviewed source to a claim
-and, where uncertainty remains, an inquiry.
+summaries, not raw file inventories. The July 15-16 iCloud passes now contain
+seven intake records in `icloud-archive-production.ts`: six matured records
+covering Jamie Projects History, Commercial Rent Stabilization, Source-Backed
+Team Memory, and AI Evals professional development, plus one researching
+job-hunt evidence-control record. Every reviewed source is dispositioned; the
+job-hunt outline routes to an inquiry and never becomes accomplishment proof.

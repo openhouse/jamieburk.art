@@ -594,3 +594,44 @@ Husain and Shreya Shankar through Maven in 2026.
 **Guardrail:** Treat this as course completion and professional development,
 not instructor affiliation, professional licensure, or evidence of production
 outcomes by itself.
+
+# 2026-07-16 iCloud Teams follow-up
+
+The follow-up added three non-duplicative source records. One matured a new
+historical claim, one directly strengthened an existing civic-operations
+claim, and one remains research control rather than accomplishment evidence.
+
+### `CLM-MUSIC-HACKATHON-SORTED-AUDIO`
+
+**Status:** Confirmed with boundary
+**Public-safe wording:** Built a Max/MSP program at the February 2013 Music
+Hackathon NYC that segmented an audio file and reordered the clips by pitch.
+**Projection:** Active as a historical archive note. About and website
+projection remain held.
+**Guardrail:** Do not imply Jamie authored the source song, organized Monthly
+Music Hackathon NYC, preserved complete source code, or built a production
+audio product. The linked audio requires a separate rights review.
+
+### `CLM-CRS-CAMPAIGN-MEMORY-INFRASTRUCTURE` - strengthened
+
+The protected evidence chain now includes a February 2026 operating artifact
+joining stakeholder power mapping, audience-specific messaging, testimony
+safety, coalition governance, and 30/60/90-day execution planning. The
+Technical Operations projection now names stakeholder power mapping.
+
+**Guardrail:** The artifact proves Jamie created the operating model. It does
+not prove that every working target, message, recommendation, or milestone was
+collectively adopted, remained current, or was completed. Internal strategy
+and assignments remain private.
+
+### Job-hunt evidence control
+
+`SRC-JOB-HUNT-CONTEXT-OUTLINE-2026` routes only to
+`INQ-JOB-HUNT-PROOF-COVERAGE-2026`. The comparison found canonical evidence
+chains for WOW List's roughly 35 city ecosystems, KC Town Hall's public funding
+record, the CRS 30+ page aggregate, and the Sunday Dinner 300+ gathering scale.
+The 2x revenue contribution remains careful, and the 20+ resident-artist
+aggregate remains only partially established.
+
+**Guardrail:** A resume, job-hunt outline, or AI-assisted synthesis cannot
+serve as independent evidence for the accomplishment claims it summarizes.
