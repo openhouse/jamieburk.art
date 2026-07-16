@@ -143,6 +143,17 @@ requires a separate rights review before republication.
 
 ## Sources
 
+The protected Sunday Dinner workbook contains 345 event columns carrying
+numeric prefixes across January 2012-March 2021. A full structural pass found
+2,714 affirmative attendance marks in those columns, with 273 columns carrying
+at least five marks. Only 340 prefixes are distinct because five repeat or
+conflict; "345 prefixed event columns" replaces the earlier "345 numbered
+events" shorthand.
+
+These aggregate marks support a sustained recurring practice. They are not
+unique people, audited door counts, or meals served. Person-level attendance,
+contacts, notes, and invitation status remain protected.
+
 - The Pitch, "When artists turn Huck Finn" (2007).
 - The Pitch, "Artists Turned Huck Finn, Part III" (2007).
 - The Pitch, "Former Huck Finn artist now working in a pink, plastic bubble"

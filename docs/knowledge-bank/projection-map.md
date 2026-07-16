@@ -107,6 +107,8 @@ citations.
 | `CLM-URBANHERM-X-VISIBLE-TRACTION-SNAPSHOT` | Hold from all accomplishment messaging | Volatile interaction units are not unique people, reach, conversion, attendance, or impact. |
 | `CLM-URBANHERM-WOWLIST-PEER-ATTRIBUTION` | Hold from site; retain as role corroboration | Strong external role evidence is available when a future audience needs it; the current WOW List case study already has a clear product-and-community argument. |
 | `CLM-URBANHERM-NYCAC-PUBLIC-SPEAKER-ATTRIBUTION` | Hold from site; retain for future coalition composition | Specific speaker and peer attributions strengthen Jamie's record, but a dedicated NYC Artist Coalition composition is needed to preserve collective and policy credit. |
+| `CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE` | Active on `/work/wowlist` | A single bounded sentence shows civic reuse of the participation model; exact database associations and unresolved authorship stay in the bank. |
+| `CLM-SUNDAY-DINNER-ATTENDANCE-LEDGER-STRUCTURE` | Archive note only | The aggregate structure strengthens the 300-plus gathering claim, but attendance-mark counts add ambiguity to the public hiring page and remain protected-summary evidence. |
 
 The Urbanhermit hold palette generated a public-safe
 [audience comparison and photo-editor brief](briefs/urbanhermit-photo-editor-brief.md).

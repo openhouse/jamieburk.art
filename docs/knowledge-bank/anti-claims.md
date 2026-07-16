@@ -250,3 +250,15 @@ product. Do not republish the linked audio without rights review.
 Do not use a resume, job-hunt outline, AI-assisted synthesis, or archive folder
 name as independent accomplishment evidence. These records may orient research
 and identify verification gaps; the underlying sources must support the claim.
+
+## Participation lineage
+
+Do not say WOW List alone created NYC Artist Coalition or that Jamie solely
+founded or produced it. Do not convert the January 2017 event's current
+Facebook response label into 445 attendees, or database event, mapping, follow,
+and star rows into unique participants or endorsements.
+
+Do not say Sunday Dinner had 2,714 unique attendees or served 2,714 meals. The
+workbook contains affirmative attendance marks, not unique-person or meal
+counts. Do not describe its 345 prefixed event columns as 345 distinct sequence
+numbers.

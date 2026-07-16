@@ -133,20 +133,24 @@ export const googleDriveArchiveSources = [
     visibility: "protected",
     preservationStatus: "private",
     capturedAt: "2012-01-22 through 2021-03-07",
-    accessedAt: "2026-07-15",
+    accessedAt: "2026-07-16",
     publicCitation:
       "Public-safe structural review of the Sunday Dinner operations ledger, 2012-2021.",
     publicNote:
-      "The protected ledger contains 345 numbered event columns spanning January 2012 through March 2021. Person-level coordination fields and attendance detail remain outside the public repository.",
+      "The protected ledger contains 345 event columns carrying numeric prefixes across January 2012 through March 2021. A full structural pass found 2,714 affirmative attendance marks in those columns; person-level coordination and attendance remain outside the public repository.",
     protectedLocatorId: "ARCHIVE-SUNDAY-DINNER-OPERATIONS-LEDGER-2012-2021",
     supportsGenerally: [
-      "the ledger records 345 numbered Sunday Dinner event entries",
+      "the ledger records 345 Sunday Dinner event columns carrying numeric prefixes",
       "the numbered entries span January 2012 through March 2021",
       "the structure supported recurring event coordination and continuity",
+      "2,714 affirmative attendance marks appear in the prefixed event columns",
+      "273 prefixed columns contain at least five affirmative attendance marks",
       "the archive materially supports the public-safe 300-plus gathering scale"
     ],
     doesNotEstablish: [
-      "that every numbered entry occurred exactly as planned",
+      "that every event column independently proves a completed gathering",
+      "345 distinct sequence numbers; five numeric prefixes repeat or conflict",
+      "unique people, externally audited attendance, or meals served",
       "a complete attendance total",
       "the 20-plus resident-artist aggregate",
       "permission to publish names, phone numbers, email addresses, notes, attendance detail, or preferences",
@@ -471,13 +475,13 @@ export const googleDriveArchiveClaims = [
     id: "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
     project: "196-sunday-dinner",
     internalClaim:
-      "A protected Sunday Dinner ledger records 345 numbered event entries from January 2012 through March 2021, materially supporting the public-safe 300-plus gathering scale. A separate Jamie-authored 2023 residency acceptance template defines a repeatable onboarding sequence with a residency window, pre-arrival call, space configuration, and independent access.",
+      "A protected Sunday Dinner ledger records 345 prefixed event columns from January 2012 through March 2021, materially supporting the public-safe 300-plus gathering scale. A separate Jamie-authored 2023 residency acceptance template defines a repeatable onboarding sequence with a residency window, pre-arrival call, space configuration, and independent access.",
     status: "confirmed-with-boundary",
     projections: [
       {
         key: "case-study",
         text:
-          "A protected operations ledger records 345 numbered Sunday Dinner events from 2012 through 2021. A separate 2023 acceptance template turns artist support into a repeatable onboarding sequence: a defined residency window, a pre-arrival call, space configuration, and independent access.",
+          "A protected operations ledger records 345 Sunday Dinner event columns from 2012 through 2021. A separate 2023 acceptance template turns artist support into a repeatable onboarding sequence: a defined residency window, a pre-arrival call, space configuration, and independent access.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/196-sunday-dinner"],
@@ -487,7 +491,7 @@ export const googleDriveArchiveClaims = [
       {
         key: "technical-operations",
         text:
-          "Maintained a ledger with 345 numbered Sunday Dinner event records and a reusable residency onboarding sequence covering preparation, space configuration, and independent access.",
+          "Maintained a ledger with 345 Sunday Dinner event columns and a reusable residency onboarding sequence covering preparation, space configuration, and independent access.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/technical-operations"],
@@ -497,7 +501,7 @@ export const googleDriveArchiveClaims = [
       {
         key: "archive-note",
         text:
-          "The reviewed archive includes a 345-event Sunday Dinner operating ledger and a 2023 residency acceptance and onboarding template.",
+          "The reviewed archive includes a Sunday Dinner operating ledger with 345 prefixed event columns and a 2023 residency acceptance and onboarding template.",
         status: "active",
         citationRequired: false,
         surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"],
@@ -510,12 +514,12 @@ export const googleDriveArchiveClaims = [
         sourceId: "SRC-SUNDAY-DINNER-OPERATIONS-LEDGER-2012-2021",
         relationship: "private-support",
         supports: [
-          "345 numbered event entries",
+          "345 prefixed event columns",
           "January 2012 through March 2021 date span",
           "recurring coordination structure",
           "the 300-plus gathering portion of the public-safe aggregate"
         ],
-        locator: "Header structure only; person-level rows excluded",
+        locator: "Aggregate workbook structure only; person-level rows excluded",
         confidence: "high",
         renderCitation: false
       },
@@ -536,7 +540,7 @@ export const googleDriveArchiveClaims = [
     ],
     boundaries: [
       "Do not publish person-level rows, names, contact details, notes, preferences, attendance detail, addresses, or access instructions.",
-      "The ledger records 345 numbered event entries; it does not independently prove that every entry occurred exactly as planned.",
+      "The ledger records 345 prefixed event columns; it does not independently prove that every column represents a completed gathering or a distinct sequence number.",
       "The reviewed Shared Drive records do not independently establish the 20-plus resident-artist aggregate.",
       "Do not identify the resident represented in the template without permission.",
       "Do not imply institutional ownership of participant or resident work."
@@ -892,7 +896,7 @@ export const googleDriveArchiveIntake = [
     visibility: "protected-summary",
     title: "Sunday Dinner and 196 operating records",
     description:
-      "Structural review of a 345-event ledger and a 2023 residency acceptance template strengthened the recurring-operations and onboarding evidence behind the public summary.",
+      "Structural review of a ledger with 345 prefixed event columns and a 2023 residency acceptance template strengthened the recurring-operations and onboarding evidence behind the public summary.",
     whyItMatters:
       "Turns a broad participation claim into concrete evidence of scale, preparation, space configuration, access, and continuity without exposing people-level records.",
     projectIds: ["196-sunday-dinner"],
@@ -908,7 +912,8 @@ export const googleDriveArchiveIntake = [
     inquiryIds: ["INQ-GDRIVE-SHARED-DRIVE-TRIAGE-2026"],
     boundaries: [
       "Do not publish people-level rows, contact details, notes, preferences, attendance detail, addresses, access instructions, or resident identity.",
-      "Do not treat a numbered entry as independent proof that every gathering occurred exactly as planned.",
+      "Do not treat an event column as independent proof that every gathering occurred exactly as planned.",
+      "Do not treat the 345 prefixed columns as 345 distinct sequence numbers, unique people, audited attendance, or meals served.",
       "Do not claim that these records independently prove the 20-plus resident-artist aggregate."
     ]
   },

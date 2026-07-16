@@ -431,7 +431,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "A protected aggregate review of the July 2017 production database snapshot, Greene Hill Food Co-op's 2017 profile, an independent sbdiy calendar integration, a reproducible 38-of-38 X corpus, and a public-safe 54-post Facebook owner record with 51 Jamie Page-publisher bylines and collective-credit boundaries retained.",
+      "A protected aggregate review of the July 2017 production database snapshot, Greene Hill Food Co-op's 2017 profile, an independent sbdiy calendar integration, a reproducible 38-of-38 X corpus, a public-safe 54-post Facebook owner record, and a bounded civic-participation lineage from popular.vote and Call Script into recurring NYC Artist Coalition meetings.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -444,6 +444,7 @@ const workItemsInput = [
       "Three recovered public product-support conversations and community-made onboarding",
       "Complete 38-item public social corpus",
       "Facebook publishing stewardship across a surviving 54-post owner record",
+      "Civic reuse through popular.vote, Call Script public-input gathering, and a route into recurring NYC Artist Coalition meetings",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],
@@ -503,7 +504,7 @@ const workItemsInput = [
     evidence: [
       "300+ hosted gatherings",
       "20+ resident artists supported",
-      "345 numbered event records spanning 2012-2021",
+      "345 prefixed event columns spanning 2012-2021",
       "Residency acceptance and onboarding template",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"

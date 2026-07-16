@@ -123,6 +123,12 @@ import {
   personalFacebookPostIntake,
   personalFacebookPostSources
 } from "./personal-facebook-posts-2026-07.ts";
+import {
+  participationLineageClaims,
+  participationLineageInquiries,
+  participationLineageIntake,
+  participationLineageSources
+} from "./participation-lineage.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -146,7 +152,8 @@ const knowledgeBankInput = {
     ...wowListFacebookPostIntake,
     ...nycacFacebookPostIntake,
     ...kcSpacesFundFacebookPostIntake,
-    ...personalFacebookPostIntake
+    ...personalFacebookPostIntake,
+    ...participationLineageIntake
   ],
   sources: [
     {
@@ -289,7 +296,8 @@ const knowledgeBankInput = {
     ...wowListFacebookPostSources,
     ...nycacFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
-    ...personalFacebookPostSources
+    ...personalFacebookPostSources,
+    ...participationLineageSources
   ],
   claims: [
     {
@@ -396,7 +404,8 @@ const knowledgeBankInput = {
     ...wowListFacebookPostClaims,
     ...nycacFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
-    ...personalFacebookPostClaims
+    ...personalFacebookPostClaims,
+    ...participationLineageClaims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -410,12 +419,13 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...portfolioHistoryInquiries, ...campaignPressInquiries, ...kcTownHallCouncilActionInquiries, ...kcTownHallStewardshipTransitionInquiries, ...kcTownHallPhaseOneNeighborhoodInquiries, ...nterChngInquiries, ...icloudArchiveInquiries, ...googleDriveArchiveInquiries, ...socialMediaArchiveInquiries, ...callNycFullPopulationInquiries, ...wowListFullPopulationInquiries, ...kcTownHallFullPopulationInquiries, ...nycArtistCoalitionFullPopulationInquiries, ...urbanhermitFullPopulationInquiries, ...nycacFacebookEventInquiries, ...facebookPersonalWowListEventInquiries, ...wowListFacebookPostInquiries, ...nycacFacebookPostInquiries, ...kcSpacesFundFacebookPostInquiries, ...personalFacebookPostInquiries],
+  }, ...portfolioHistoryInquiries, ...campaignPressInquiries, ...kcTownHallCouncilActionInquiries, ...kcTownHallStewardshipTransitionInquiries, ...kcTownHallPhaseOneNeighborhoodInquiries, ...nterChngInquiries, ...icloudArchiveInquiries, ...googleDriveArchiveInquiries, ...socialMediaArchiveInquiries, ...callNycFullPopulationInquiries, ...wowListFullPopulationInquiries, ...kcTownHallFullPopulationInquiries, ...nycArtistCoalitionFullPopulationInquiries, ...urbanhermitFullPopulationInquiries, ...nycacFacebookEventInquiries, ...facebookPersonalWowListEventInquiries, ...wowListFacebookPostInquiries, ...nycacFacebookPostInquiries, ...kcSpacesFundFacebookPostInquiries, ...personalFacebookPostInquiries, ...participationLineageInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
     { id: "COR-WOWLIST-RESUME-ADOPTION-2026", claimId: "CLM-WOWLIST-ARCHIVE-SCALE", previousText: "adopted by DIY arts and music organizers across roughly 35 city ecosystems; secured adoption by local calendar organizers", replacementText: "used by DIY arts and music organizers, with recorded activity across roughly 35 city ecosystems; supported local calendar organizers", reason: "The evidence supports concrete use plus a historical activity grouping; it does not support individual ownership of organizer adoption across all 35 ecosystems.", decidedAt: "2026-07-15", affectedSurfaces: ["resume", "knowledge-bank"], status: "active" },
+    { id: "COR-SUNDAY-DINNER-PREFIXED-COLUMNS-2026", claimId: "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS", previousText: "345 numbered event entries", replacementText: "345 prefixed event columns", reason: "The full workbook pass found 345 event columns carrying numeric prefixes but only 340 distinct prefixes because five prefixes repeat or conflict.", decidedAt: "2026-07-16", affectedSurfaces: ["/work/196-sunday-dinner", "/work/technical-operations", "knowledge-bank"], status: "active" },
     ...kcTownHallCouncilActionCorrections
   ],
   pages: [{

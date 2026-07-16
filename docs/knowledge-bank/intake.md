@@ -32,3 +32,9 @@ covering Jamie Projects History, Commercial Rent Stabilization, Source-Backed
 Team Memory, and AI Evals professional development, plus one researching
 job-hunt evidence-control record. Every reviewed source is dispositioned; the
 job-hunt outline routes to an inquiry and never becomes accomplishment proof.
+
+The July 16 participation-lineage module adds three matured intake records:
+the WOW List civic-tag aggregate, the Sunday Dinner attendance-ledger
+structure, and the Call Script / DCLA discussion chronology. Every item has a
+claim and inquiry disposition. The Sunday Dinner intake also records the
+correction from "345 numbered event entries" to "345 prefixed event columns."

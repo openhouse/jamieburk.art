@@ -905,6 +905,47 @@
         "engager identity, stakeholder-group counts, endorsement, attendance, reach, conversion, or impact",
         "causation of linked campaigns or reported outcomes"
       ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017",
+      "title": "Call Script Facebook Page",
+      "organization": "Call Script",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-16",
+      "canonicalUrl": "https://www.facebook.com/callscript",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Call Script public Facebook Page, reviewed July 16, 2026.",
+      "publicNote": "The Page identifies Call Script with the invitation 'Call your representatives. simply make change' and links to popular.vote.",
+      "doesNotEstablish": [
+        "the Page's complete publishing history",
+        "who authored every Page post",
+        "Jamie's sole ownership or production",
+        "measured participation or policy impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+      "title": "NYC DIY Spaces post Ghost Ship: Department of Cultural Affairs meeting discussion",
+      "organization": "NYC Artist Coalition / Call Script",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-01-27",
+      "accessedAt": "2026-07-16",
+      "canonicalUrl": "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public Facebook event and discussion for 'NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting,' January 27, 2017.",
+      "publicNote": "The public event names NYC Artist Coalition and Call Script among its presenters. In the discussion, Call Script invited participants to brainstorm asks, shared peer-coalition learning, and later NYC Artist Coalition directed participants to a February 6 general meeting at Magick City.",
+      "doesNotEstablish": [
+        "that every responder attended",
+        "that a current Facebook response label is historical attendance or unique reach",
+        "who authored every Page post or comment",
+        "that Jamie alone created or produced the event, Call Script, or NYC Artist Coalition",
+        "that the event caused coalition formation or a policy outcome",
+        "permission to republish sensitive participant stories"
+      ]
     }
   ],
   "claims": [
@@ -1558,7 +1599,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "A protected operations ledger records 345 numbered Sunday Dinner events from 2012 through 2021. A separate 2023 acceptance template turns artist support into a repeatable onboarding sequence: a defined residency window, a pre-arrival call, space configuration, and independent access.",
+          "text": "A protected operations ledger records 345 Sunday Dinner event columns from 2012 through 2021. A separate 2023 acceptance template turns artist support into a repeatable onboarding sequence: a defined residency window, a pre-arrival call, space configuration, and independent access.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1568,7 +1609,7 @@
         },
         {
           "key": "technical-operations",
-          "text": "Maintained a ledger with 345 numbered Sunday Dinner event records and a reusable residency onboarding sequence covering preparation, space configuration, and independent access.",
+          "text": "Maintained a ledger with 345 Sunday Dinner event columns and a reusable residency onboarding sequence covering preparation, space configuration, and independent access.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1578,7 +1619,7 @@
         },
         {
           "key": "archive-note",
-          "text": "The reviewed archive includes a 345-event Sunday Dinner operating ledger and a 2023 residency acceptance and onboarding template.",
+          "text": "The reviewed archive includes a Sunday Dinner operating ledger with 345 prefixed event columns and a 2023 residency acceptance and onboarding template.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1590,7 +1631,7 @@
       "evidence": [],
       "boundaries": [
         "Do not publish person-level rows, names, contact details, notes, preferences, attendance detail, addresses, or access instructions.",
-        "The ledger records 345 numbered event entries; it does not independently prove that every entry occurred exactly as planned.",
+        "The ledger records 345 prefixed event columns; it does not independently prove that every column represents a completed gathering or a distinct sequence number.",
         "The reviewed Shared Drive records do not independently establish the 20-plus resident-artist aggregate.",
         "Do not identify the resident represented in the template without permission.",
         "Do not imply institutional ownership of participant or resident work."
@@ -2308,6 +2349,90 @@
         "The public channels corroborate identity consistency; Jamie's firsthand clarification supplies the naming-support and non-posting account, pending collaborator confirmation of process detail.",
         "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as named by the fundraiser."
       ]
+    },
+    {
+      "id": "CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The platform's participation model also moved into civic use: popular.vote organized post-election events, Call Script gathered public asks around a January 2017 cultural-agency meeting, and a coalition follow-up routed people into NYC Artist Coalition's recurring meetings.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ],
+          "rationale": "Show how a community-calendar operating model became civic participation infrastructure without claiming sole authorship or linear policy causality."
+        },
+        {
+          "key": "archive-note",
+          "text": "The archive documents a bounded lineage from Sunday Dinner to WOW List, popular.vote, Call Script, and recurring NYC Artist Coalition participation.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/wowlist",
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ],
+          "rationale": "Preserve the cross-project relationship as a queryable claim with its causal and authorship boundaries attached."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+          "relationship": "corroborating",
+          "supports": [
+            "Sunday Dinner lineage",
+            "WOW List's community-calendar role"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-POPULAR-VOTE-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "popular.vote civic-calendar reuse"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Call Script's public link to popular.vote"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "public-input solicitation",
+            "peer-coalition learning",
+            "the February 6 coalition-meeting follow-up"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "the recurring NYC Artist Coalition meeting system"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is a documented lineage of operating models and public chronology, not proof that one project alone caused the next.",
+        "Do not assign every WOW List record, Call Script post, event, or coalition action to Jamie.",
+        "Keep popular.vote, Call Script, and NYC Artist Coalition collaborator credit intact.",
+        "Facebook response labels are not attendance, unique people, reach, endorsement, or impact.",
+        "The lineage does not establish sole founding credit or policy causality."
+      ]
     }
   ],
   "pages": [
@@ -2416,7 +2541,10 @@
         "SRC-WOWLIST-POPULAR-VOTE-2016",
         "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
         "SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026",
-        "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
+        "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026",
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017",
+        "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
       ],
       "occurrences": [
         {
@@ -2489,6 +2617,18 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
+          ]
+        },
+        {
+          "id": "civic-participation-lineage",
+          "claimId": "CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+            "SRC-WOWLIST-POPULAR-VOTE-2016",
+            "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017",
+            "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+            "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
           ]
         }
       ]

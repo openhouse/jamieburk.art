@@ -286,3 +286,17 @@ visible text, public conversation context, and dated visible interaction labels
 may be retained for reproducibility with explicit attribution and uncertainty
 boundaries. This exception does not permit private or unpublished community
 records.
+
+## Participation Lineage Sources
+
+The July 16 participation-lineage pass adds four typed sources: a protected
+aggregate review of civic tags in the 2017 WOW List snapshot, the public Call
+Script Page, the public January 2017 DCLA event discussion, and a protected
+authenticated-review record. The existing protected Sunday Dinner workbook
+source was strengthened through a full structural pass.
+
+The source layer may retain public-safe aggregate counts. It may not publish
+raw database rows, person-level workbook records, authenticated state,
+sensitive stories, or private paths. Event rows, calendar mappings, attendance
+marks, and Facebook response labels remain explicitly distinct from unique
+people, attendance, endorsement, and impact.

@@ -654,7 +654,10 @@ export const sourceExpansionPages = [
       "SRC-WOWLIST-POPULAR-VOTE-2016",
       "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016",
       "SRC-WOWLIST-FACEBOOK-POST-LEDGER-2026",
-      "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"
+      "SRC-WOWLIST-TECHNICAL-ARCHIVE-2026",
+      "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017",
+      "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
     ],
     occurrences: [
       {
@@ -720,6 +723,18 @@ export const sourceExpansionPages = [
         claimId: "CLM-WOWLIST-TECHNICAL-CONTRIBUTION",
         projection: "case-study",
         sourceIds: ["SRC-WOWLIST-TECHNICAL-ARCHIVE-2026"]
+      },
+      {
+        id: "civic-participation-lineage",
+        claimId: "CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+          "SRC-WOWLIST-POPULAR-VOTE-2016",
+          "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017",
+          "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+          "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
+        ]
       }
     ]
   },

@@ -40,7 +40,7 @@ test("multi-source occurrences preserve editorial order", () => {
 });
 
 test("new case-study citations expose only selected public sources", () => {
-  assert.equal(resolveCitationReferences("wowlist").length, 15);
+  assert.equal(resolveCitationReferences("wowlist").length, 18);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
   assert.equal(resolveCitationReferences("fair-rent-nyc").length, 12);
   assert.equal(resolveCitationReferences("kc-town-hall").length, 12);
@@ -130,6 +130,18 @@ test("new case-study citations expose only selected public sources", () => {
       "SRC-WOWLIST-KQED-GHOST-SHIP-VIGIL-2016"
     ]
   );
+  assert.deepEqual(
+    resolveCitationOccurrence("wowlist", "civic-participation-lineage").sources.map(
+      (item) => item.source.id
+    ),
+    [
+      "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+      "SRC-WOWLIST-POPULAR-VOTE-2016",
+      "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017",
+      "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"
+    ]
+  );
   assert.ok(
     resolveCitationReferences("wowlist").every(
       (item) => item.source.id !== "SRC-WOWLIST-GOOD-TIMES-ZINES-2-2015"
@@ -182,7 +194,7 @@ test("Claim resolver returns only active approved projections", () => {
       "case-study",
       "/work/196-sunday-dinner"
     ).text,
-    /345 numbered Sunday Dinner events/
+    /345 Sunday Dinner event columns/
   );
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
@@ -191,12 +203,17 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 5);
+  assert.equal(knowledgeBank.corrections.length, 6);
   const wowlistCorrection = knowledgeBank.corrections.find(
     (correction) => correction.id === "COR-WOWLIST-RESUME-ADOPTION-2026"
   );
   assert.match(wowlistCorrection.previousText, /secured adoption/);
   assert.match(wowlistCorrection.replacementText, /recorded activity/);
+  const sundayCorrection = knowledgeBank.corrections.find(
+    (correction) => correction.id === "COR-SUNDAY-DINNER-PREFIXED-COLUMNS-2026"
+  );
+  assert.match(sundayCorrection.previousText, /345 numbered event entries/);
+  assert.match(sundayCorrection.replacementText, /345 prefixed event columns/);
 });
 
 test("negative research preserves scope and limitations", () => {

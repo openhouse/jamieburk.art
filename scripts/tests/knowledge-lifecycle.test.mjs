@@ -51,6 +51,12 @@ import {
   googleDriveArchiveSources
 } from "../../apps/www/src/data/knowledge-bank/google-drive-archive-production.ts";
 import {
+  participationLineageClaims,
+  participationLineageInquiries,
+  participationLineageIntake,
+  participationLineageSources
+} from "../../apps/www/src/data/knowledge-bank/participation-lineage.ts";
+import {
   callNycCouncilReposts,
   callNycMemberAuthoredInteractions,
   kcSpacesFundHighlights,
@@ -1543,7 +1549,7 @@ test("Google Drive findings promote only what the reviewed records establish", (
   const participation = claimsById.get(
     "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS"
   );
-  assert.match(participation.internalClaim, /345 numbered event entries/);
+  assert.match(participation.internalClaim, /345 prefixed event columns/);
   assert.ok(
     participation.boundaries.some((item) => /20-plus resident-artist aggregate/i.test(item))
   );
@@ -1565,8 +1571,72 @@ test("Google Drive findings promote only what the reviewed records establish", (
   );
   assert.deepEqual(
     proofById.get("sunday-dinner-196-participation-infrastructure").canonicalClaimIds,
-    [participation.id]
+    [participation.id, "CLM-SUNDAY-DINNER-ATTENDANCE-LEDGER-STRUCTURE"]
   );
+});
+
+test("participation lineage is strong, bounded, and newspaper safe", () => {
+  assert.equal(participationLineageSources.length, 4);
+  assert.equal(participationLineageClaims.length, 2);
+  assert.equal(participationLineageInquiries.length, 2);
+  assert.equal(participationLineageIntake.length, 3);
+
+  const sourceById = new Map(
+    participationLineageSources.map((source) => [source.id, source])
+  );
+  const claimById = new Map(
+    participationLineageClaims.map((claim) => [claim.id, claim])
+  );
+
+  const database = sourceById.get("SRC-WOWLIST-CIVIC-LINEAGE-AGGREGATES-2017");
+  assert.equal(database.visibility, "protected");
+  assert.match(database.publicNote, /Popular Vote/);
+  assert.match(database.publicNote, /NYC Artist Coalition/);
+  assert.ok(database.doesNotEstablish.some((item) => /unique people/i.test(item)));
+
+  const sunday = claimById.get(
+    "CLM-SUNDAY-DINNER-ATTENDANCE-LEDGER-STRUCTURE"
+  );
+  assert.match(sunday.internalClaim, /2,714 affirmative attendance marks/);
+  assert.ok(sunday.antiClaims.includes("Sunday Dinner had 2,714 unique attendees."));
+  assert.ok(sunday.antiClaims.includes("The workbook proves 2,714 meals were served."));
+  assert.ok(
+    sunday.boundaries.some((item) => /person-level attendance/i.test(item))
+  );
+
+  const lineage = claimById.get("CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE");
+  assert.ok(
+    lineage.projections.some(
+      (projection) =>
+        projection.key === "case-study" &&
+        projection.status === "active" &&
+        projection.surfaces.includes("/work/wowlist")
+    )
+  );
+  for (const antiClaim of [
+    "Jamie solely founded or produced NYC Artist Coalition.",
+    "The January 2017 event response label proves 445 people attended.",
+    "Database follows, stars, event rows, or calendar mappings equal unique participants or endorsements."
+  ]) {
+    assert.ok(lineage.antiClaims.includes(antiClaim));
+  }
+
+  const callScript = sourceById.get(
+    "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017"
+  );
+  assert.match(callScript.canonicalUrl, /388137698233507/);
+  assert.ok(
+    callScript.doesNotEstablish.some((item) => /who authored every Page post/i.test(item))
+  );
+
+  const serialized = JSON.stringify({
+    sources: participationLineageSources,
+    claims: participationLineageClaims,
+    inquiries: participationLineageInquiries,
+    intake: participationLineageIntake
+  });
+  assert.doesNotMatch(serialized, /\/Users\/|\/Volumes\/|docs\.google\.com\/spreadsheets/);
+  assert.doesNotMatch(serialized, /Talking with people:/);
 });
 
 test("unresolved Shared Drive artifacts remain inquiries, not accomplishments", () => {

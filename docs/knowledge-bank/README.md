@@ -232,3 +232,12 @@ and action-route leads, six individually rechecked Public sources, and strict
 engagement boundaries. Bulk text, nonpublic and unlabeled record contents,
 comments, identities, media, sensitive routes, protected paths, and
 authenticated state remain outside Git.
+
+The July 16 [participation-lineage pass](projects/participation-lineage.md)
+connects Sunday Dinner's recurring operating record, WOW List's followable
+calendar model, `popular.vote`, Call Script's public-input use, and a concrete
+route into recurring NYC Artist Coalition meetings. It corrects “345 numbered
+events” to “345 prefixed event columns,” retains aggregate attendance and
+database associations as bounded archival evidence, and promotes one concise
+civic-reuse sentence to the WOW List case study. See the
+[research run](runs/2026-07-16-participation-lineage.md).

@@ -635,3 +635,30 @@ aggregate remains only partially established.
 
 **Guardrail:** A resume, job-hunt outline, or AI-assisted synthesis cannot
 serve as independent evidence for the accomplishment claims it summarizes.
+
+### `CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE`
+
+The reviewed record documents a bounded operating lineage from Sunday Dinner's
+recurring calendar practice through WOW List, `popular.vote`, Call Script's
+public-input use around a January 2017 cultural-agency convening, and a
+follow-up route into recurring NYC Artist Coalition meetings.
+
+**Projection:** Active on the WOW List case study in a concise civic-reuse
+sentence; active as a deeper archive note.
+
+**Guardrail:** The chronology and data model do not prove sole authorship,
+sole founding credit, physical attendance, unique reach, endorsement,
+coalition-formation causality, or policy causality.
+
+### `CLM-SUNDAY-DINNER-ATTENDANCE-LEDGER-STRUCTURE`
+
+A full workbook pass found 345 prefixed event columns, 340 distinct numeric
+prefixes, and 2,714 affirmative attendance marks in the prefixed columns. The
+aggregate materially supports a sustained recurring practice.
+
+**Projection:** Active only as a knowledge-bank archive note. The website keeps
+the simpler approved 300-plus gathering scale.
+
+**Guardrail:** Marks are not unique people, audited door counts, or meals
+served. Person-level rows remain protected, and the workbook's "Meals Served"
+inscription remains unresolved.

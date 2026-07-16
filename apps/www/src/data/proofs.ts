@@ -388,7 +388,7 @@ export const proofClaims: ProofClaim[] = [
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform used by DIY arts and music organizers, with recorded activity across roughly 35 city ecosystems.",
     shortWording: "Jamie co-built WOWList across roughly 35 city ecosystems",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers. Its participation model also moved into bounded civic use through popular.vote, Call Script public-input gathering, and a route into recurring NYC Artist Coalition meetings.",
     sourceBasis:
       "Approved resume language, public-safe aggregate historical summary, public organizer integrations, and a deterministic 38-of-38 project-account corpus preserving product-support and civic-care patterns.",
     guardrail:
@@ -414,9 +414,10 @@ export const proofClaims: ProofClaim[] = [
       "CLM-WOWLIST-PUBLIC-COMMUNITY-USE",
       "CLM-WOWLIST-SOCIAL-PROVENANCE-SUPPORT",
       "CLM-WOWLIST-PRODUCT-SUPPORT-LOOP",
-      "CLM-WOWLIST-CIVIC-CARE-USE"
+      "CLM-WOWLIST-CIVIC-CARE-USE",
+      "CLM-WOWLIST-CIVIC-PARTICIPATION-LINEAGE"
     ],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-07-16"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -431,15 +432,17 @@ export const proofClaims: ProofClaim[] = [
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "Jamie created repeatable systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. A protected ledger records 345 numbered events, and a 2023 acceptance template preserves a concrete residency onboarding sequence.",
+      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. A protected ledger contains 345 prefixed event columns, and a 2023 acceptance template preserves a concrete residency onboarding sequence.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate project history, protected structural review of a 345-event ledger, and a Jamie-authored residency onboarding template. The reviewed Shared Drive records do not independently establish the 20+ resident-artist aggregate.",
+      "Approved resume language, public-safe aggregate project history, protected structural review of 345 prefixed event columns and their aggregate attendance structure, and a Jamie-authored residency onboarding template. The reviewed Shared Drive records do not independently establish the 20+ resident-artist aggregate.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
-      "Attendance database"
+      "Attendance database",
+      "2,714 unique attendees",
+      "2,714 meals served"
     ],
     protectedBoundaries: [
       "Guest lists",
@@ -452,8 +455,11 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    canonicalClaimIds: ["CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS"],
-    lastReviewed: "2026-07-15"
+    canonicalClaimIds: [
+      "CLM-SUNDAY-DINNER-RESIDENCY-OPERATING-RECORDS",
+      "CLM-SUNDAY-DINNER-ATTENDANCE-LEDGER-STRUCTURE"
+    ],
+    lastReviewed: "2026-07-16"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

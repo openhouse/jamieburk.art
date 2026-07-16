@@ -29,6 +29,19 @@ are historical snapshot counts, not current activity, official chapters, or
 proof that every record became a completed public event. Person-level rows and
 raw community records remain outside the repository.
 
+## Civic Participation Lineage
+
+The same snapshot contains first-class followable tags named Popular Vote and
+NYC Artist Coalition. Public sources connect Call Script to `popular.vote` and
+show Call Script using a January 2017 DCLA event discussion to invite practical
+asks and share peer learning. A later NYC Artist Coalition post in that
+discussion routed participants to the February 6 general meeting.
+
+This is a bounded operating-model lineage from recurring community calendars
+into civic participation. Database rows and Facebook response labels are not
+unique people, attendance, endorsement, or impact; the chronology does not
+establish sole authorship, sole founding credit, or policy causality.
+
 ## Technical contribution
 
 A separate public-safe structural review of the code archive, project
@@ -144,3 +157,8 @@ infrastructure, and an archived article about self-authored DIY documentation.
 The Facebook Page extended that operating practice: calendar onboarding and
 participatory feedback sat alongside event distribution, cultural-space
 recovery and funding, civic-action calendars, and community care.
+
+The platform's participation model also moved into civic use: `popular.vote`
+organized post-election events, Call Script gathered public asks around a
+January 2017 cultural-agency meeting, and a coalition follow-up routed people
+into NYC Artist Coalition's recurring meetings.

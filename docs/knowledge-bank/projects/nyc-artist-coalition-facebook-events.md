@@ -117,6 +117,14 @@ The sequence makes an operating loop visible:
    action.
 5. Return, report back, revise priorities, and continue.
 
+The public January 27, 2017, DCLA event discussion adds a concrete transition
+into that loop. Call Script invited participants to brainstorm practical asks
+and shared peer-coalition learning; a later NYC Artist Coalition post directed
+participants to the February 6 general meeting at Magick City. This documents
+a route from one public convening into recurring coalition participation. It
+does not establish individual Page-post authorship, physical attendance, sole
+founding credit, coalition-formation causality, or policy causality.
+
 This supports a rotating-venue and recurring-practice claim. It does not prove
 that a meeting occurred every calendar month, that every event used a different
 venue, or that one event caused a policy outcome.
