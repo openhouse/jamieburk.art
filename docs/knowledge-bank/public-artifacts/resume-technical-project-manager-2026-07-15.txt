@@ -14,14 +14,14 @@ CORE CAPABILITIES
 Product operations & implementation              Knowledge systems & documentation                 Web, open data & civic technology
 Requirements, workflow mapping, user             Documentation architecture, meeting               JavaScript / TypeScript, Node.js, React /
 stories, acceptance criteria, decision logs,     synthesis, source maps, shared drives, public     Next.js, Ember.js, Python / Django, SQL, Git /
-action tracking, rollout planning, UAT / QA,     guidance, resource libraries, reusable            GitHub, Docker / Dokku, QGIS, open-data
-stakeholder updates, adoption, and handoffs.     templates, and searchable reference               workflows, APIs, and data-product
-                                                 systems.                                          requirements.
+action tracking, rollout planning, user          guidance, resource libraries, reusable            GitHub, Docker / Dokku, QGIS, open-data
+acceptance and quality testing, stakeholder      templates, and searchable reference               workflows, APIs, and data-product
+updates, adoption, and handoffs.                 systems.                                          requirements.
 
 SELECTED IMPACT
 
-    Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company; Jamie reports that this work
-    contributed during a period of 2x revenue growth while helping an 80-plus-year-old industrial business adapt to e-commerce.
+    Improved Harry J. Epstein Company's web, e-commerce, marketing, analytics, and operational systems; Jamie reports that this work
+    contributed during a period of 2x revenue growth while helping the 80-plus-year-old business adapt to e-commerce.
     Built CallNYC.org as an archived, unofficial independent follow-on to the New York City Council's first CouncilStat hackathon, translating
     constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
     Built and stewarded 30-plus pages of shared campaign memory and coordination infrastructure for a 2026 Commercial Rent Stabilization
@@ -35,22 +35,21 @@ SELECTED IMPACT
     Artists Residency in 2020; Jamie reports supporting 20-plus resident artists through repeatable onboarding, hospitality, facilitation,
     documentation, and continuity systems.
 
-
-
-
-                                                                                          Jamie Burkart | Technical Project Manager | July 2026
-EXPERIENCE
-
-THICK ARTS - Founder, Technical Project Manager & Web Systems Lead                                                                                2012-Present
+EXPERIENCE
+THICK ARTS - Founder, Technical Project Manager & Web Systems Lead                                                                        2012-Present
 New York, NY / Remote
     Lead an independent web strategy, design, and engineering studio delivering maintainable publishing systems, campaign hubs, e-
     commerce workflows, documentation infrastructure, resource libraries, and post-launch maintenance.
     Translate stakeholder needs into requirements, information architecture, content models, technical scopes, implementation plans, public
     interfaces, launch plans, maintenance workflows, adoption materials, and handoff documentation.
-    Led digital transformation work for Harry J. Epstein Company across e-commerce, analytics, content, marketing, and operational
-    workflows while preserving the company's distinctive institutional voice.
+    Led the web-systems work within Harry J. Epstein Company's broader digital modernization, spanning e-commerce, analytics, content,
+    marketing, and operational workflows while preserving the company's distinctive institutional voice.
 
-NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy                                                               2017-Present
+
+
+
+                                                                                          Jamie Burkart | Technical Project Manager | July 2026
+NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations & Policy                                                               2017-Present
 Communications
 New York, NY
     Build and steward campaign and knowledge infrastructure for commercial rent stabilization, storefront stability, cultural-space advocacy,
@@ -60,7 +59,7 @@ New York, NY
     Translate policy, public-data, and coalition needs into practical materials for work around Cabaret Law repeal, the Office of Nightlife,
     nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
     Developed policy-neutral public-data framing around commercial vacancy, occupancy, lease-cost indicators, storefront data, Local Law
-    157, and RPIE-derived aggregate reporting.
+    157, and aggregate reporting derived from Real Property Income and Expense filings.
 
 WOWList.org - Co-Founder, Product & Community Systems                                                                                                 2015-2020
 New York, NY / Remote
@@ -86,7 +85,6 @@ Kansas City, MO
 table, and Ordinance 240317 (March 28, 2024). Source links: jamieburk.art/work/kc-town-hall.
 
 EDUCATION & PROFESSIONAL DEVELOPMENT
-
 AI Evals for Engineers & PMs - Shreya Shankar & Hamel Husain / Maven, 2026. Application-centric evals, error analysis, annotation
 workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.
 University of California, Santa Cruz - B.A., Film & Digital Media, Honors.

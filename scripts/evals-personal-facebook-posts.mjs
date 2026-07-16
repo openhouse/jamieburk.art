@@ -174,13 +174,23 @@ const selectedSourceIds = [
   personalFacebookPostSourceIds.waterways,
   personalFacebookPostSourceIds.nterChng,
 ];
+const selectedSources = selectedSourceIds.map((id) => knowledgeBank.sources.find((source) => source.id === id));
+const selectedObservations = selectedSourceIds.map((id) =>
+  knowledgeLifecycle.observations.filter((observation) => observation.sourceId === id)
+);
+const sourceTask = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-FACEBOOK-JAMIE-POSTED-SOURCE-REVIEW");
 check(
   "Civic relay claim",
-  "Selected public specimens support a bounded cross-project relay practice with collective and causal guardrails",
+  "Selected public specimens are close-read, atomically decomposed, and support a bounded cross-project relay practice",
   12,
-  selectedSourceIds.every((id) => sourceIds.has(id)) &&
+    selectedSourceIds.every((id) => sourceIds.has(id)) &&
+    selectedSources.every((source) => source?.reviewStatus === "close-read" && source.contentReviewedAt && source.contentReviewedBy) &&
+    selectedObservations.every((observations) => observations.length === 1 && observations[0].locator.includes("Public post dated")) &&
+    selectedSourceIds.every((id) => sourceTask?.sourceIds.includes(id)) &&
+    selectedObservations.every(([observation]) => sourceTask?.observationIds.includes(observation.id)) &&
     populationClaim?.status === "confirmed-with-boundary" &&
     relayClaim?.status === "confirmed-with-boundary" &&
+    selectedSourceIds.every((id) => relayClaim.evidence.some(({ sourceId }) => sourceId === id)) &&
     relayClaim.projections.every(({ status, surfaces }) => status === "hold" && surfaces.length === 0) &&
     relayClaim.antiClaims.includes("Posting proves policy causation") &&
     relayClaim.antiClaims.includes("Stakeholder references prove incoming engagement") &&

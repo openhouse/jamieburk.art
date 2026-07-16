@@ -5,6 +5,10 @@ import { readFileSync } from "node:fs";
 import { knowledgeLifecycle } from "../../apps/www/src/data/knowledge-bank/lifecycle-records.ts";
 import { intakeAmendmentSchema, intakeReceiptSchema, mediaLeadSchema } from "../../apps/www/src/data/knowledge-bank/lifecycle-schema.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  personalFacebookPostClaimIds,
+  personalFacebookPostSourceIds,
+} from "../../apps/www/src/data/knowledge-bank/personal-facebook-posts.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateAppendOnlySnapshots } from "../lib/append-only-history.mjs";
 import { integrityArtifactPaths, validateIntegrityCheckpoints, validateRetirementLedger } from "../lib/knowledge-integrity-validation.mjs";
@@ -67,6 +71,47 @@ test("the July 13 ten-source ingestion remains complete and decomposed", () => {
   assert.ok(sourceIds.every((id) => observedSources.has(id)));
   assert.deepEqual(task?.sourceIds, sourceIds);
   assert.equal(task?.status, "completed");
+});
+
+test("selected personal Facebook specimens remain close-read, atomic, and retrievable", () => {
+  const selections = [
+    [personalFacebookPostSourceIds.wowListPractice, "PRJ-WOWLIST"],
+    [personalFacebookPostSourceIds.nycacMeeting, "PRJ-NYC-ARTIST-COALITION"],
+    [personalFacebookPostSourceIds.cabaretHearing, "PRJ-NYC-ARTIST-COALITION"],
+    [personalFacebookPostSourceIds.saveNycSpaces, "PRJ-NYC-ARTIST-COALITION"],
+    [personalFacebookPostSourceIds.nightMayor, "PRJ-NYC-ARTIST-COALITION"],
+    [personalFacebookPostSourceIds.kcTownHall, "PRJ-KC-TOWN-HALL"],
+    [personalFacebookPostSourceIds.passSbjSA, "PRJ-FAIR-RENT-CRS"],
+    [personalFacebookPostSourceIds.talksNotRaids, "PRJ-NYC-ARTIST-COALITION"],
+    [personalFacebookPostSourceIds.waterways, "PRJ-WATERWAYS-PARTICIPATORY-ART"],
+    [personalFacebookPostSourceIds.nterChng, "PRJ-NTER-CHNG"],
+  ];
+  const relay = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-FACEBOOK-JAMIE-CIVIC-RELAY-PRACTICE");
+  const sourceTask = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-FACEBOOK-JAMIE-POSTED-SOURCE-REVIEW");
+  const canonical = knowledgeBank.claims.find(({ id }) => id === personalFacebookPostClaimIds.civicRelay);
+  const reserve = retrieveKnowledgePalette({ briefId: "BRIEF-FACEBOOK-JAMIE-PERSONAL-POST-RESERVE" });
+  const reserveSourceIds = new Set(reserve.sources.map(({ id }) => id));
+
+  assert.equal(selections.length, 10);
+  for (const [sourceId, projectId] of selections) {
+    const source = knowledgeBank.sources.find(({ id }) => id === sourceId);
+    const observations = knowledgeLifecycle.observations.filter((observation) => observation.sourceId === sourceId);
+
+    assert.equal(source?.reviewStatus, "close-read");
+    assert.equal(source?.contentReviewedAt, "2026-07-16");
+    assert.ok(source?.contentReviewedBy);
+    assert.equal(observations.length, 1);
+    assert.ok(observations[0].locator.includes("Public post dated"));
+    assert.ok(observations[0].projectIds.includes(projectId));
+    assert.ok(relay?.observationIds.includes(observations[0].id));
+    assert.ok(sourceTask?.sourceIds.includes(sourceId));
+    assert.ok(sourceTask?.observationIds.includes(observations[0].id));
+    assert.ok(canonical?.evidence.some((evidence) => evidence.sourceId === sourceId));
+    assert.ok(reserveSourceIds.has(sourceId));
+
+    const projectPalette = retrieveKnowledgePalette({ projectId });
+    assert.ok(projectPalette.sources.some(({ id }) => id === sourceId));
+  }
 });
 
 test("the KC Town Hall Council lifecycle rejects appropriation-as-receipt", () => {

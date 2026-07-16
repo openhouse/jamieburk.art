@@ -30,9 +30,6 @@ export function Hero() {
               <Link className="text-jb-blue hover:text-jb-green" href="/contact">
                 Contact
               </Link>
-              <Link className="text-jb-blue hover:text-jb-green" href="/work">
-                All work
-              </Link>
             </div>
           </div>
           <p className="mt-5 text-sm font-medium text-jb-ink/64 sm:mt-6">
