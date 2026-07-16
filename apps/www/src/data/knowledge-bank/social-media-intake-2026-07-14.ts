@@ -76,7 +76,7 @@ export const socialMediaSourceRecords20260714 = [
     canonicalUrl: "https://x.com/NYCArtC",
     preferredPublicUrl: "canonical",
     publicCitation: "Authenticated read-only review of the public @NYCArtC profile, timeline recoveries, and inbound public interactions, July 14, 2026.",
-    publicNote: "The profile names #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. A cross-surface archival pass dispositioned the 5,124-post profile control as 3,367 item-level recoveries and 1,757 unresolved historical slots.",
+    publicNote: "The profile names #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. The dated recovery scope is maintained in the repository knowledge bank and is not projected through this page-local source note.",
     supportsGenerally: [
       "the shared coalition handle and four-campaign identity",
       "public use from 2017 through 2026",
