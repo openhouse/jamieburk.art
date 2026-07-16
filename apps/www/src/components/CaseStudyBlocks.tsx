@@ -26,7 +26,7 @@ export function AtAGlance({
       <dl className="mt-5 grid gap-4 sm:grid-cols-2">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="text-xs font-semibold uppercase text-jb-paper/80">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -34,7 +34,7 @@ export function AtAGlance({
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="text-xs font-semibold uppercase text-jb-paper/80">
           Tags
         </p>
         <div className="mt-3">
@@ -89,7 +89,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                 <p className="mt-3 text-sm leading-6 text-jb-ink/76">
                   {artifact.asset?.caption}
                 </p>
-                <p className="mt-3 text-xs leading-5 text-jb-ink/64">
+                <p className="mt-3 text-xs leading-5 text-jb-ink/72">
                   {artifact.asset?.rightsStatus === "approved"
                     ? `Public-safe source artifact dated ${artifact.asset.capturedAt}.`
                     : `Captured ${artifact.asset?.capturedAt} from a public web surface.`}
