@@ -349,3 +349,20 @@ a specific capital allocation without proposition-level public records.
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+## River-Raft Expedition
+
+The Kansas City Star report was published before the voyage ended. Do not say
+the article proves that the raft reached the Gulf of Mexico, completed a
+salt-water endpoint, followed an exact complete route, or establishes the final
+duration.
+
+Do not erase Libby Hendon, Laura Mattingly, other participants, hosts, or
+helpers. Do not turn the crew then traveling into a complete project roster or
+turn the source's originating-role attribution into sole authorship or sole
+execution.
+
+Do not infer Coast Guard approval from the reported interruption and restart.
+Do not publish the newspaper scan, photographs, article body text, reporter
+contact details, or private locator without separate permission and rights
+review.

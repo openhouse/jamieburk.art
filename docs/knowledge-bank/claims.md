@@ -1079,3 +1079,32 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Working-document locators, meeting-access paths, unresolved sensitive destinations, raw descriptions, and private interface context stay outside the repository.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
+
+## river-raft-kc-star-contemporaneous-record - Contemporary expedition record
+
+**Status:** Reserve
+**Support level:** Strong with source and endpoint boundaries
+**Evidence class:** Protected contemporary independent reporting
+**Public wording:** The Kansas City Star's November 15, 2007, front-page report
+attributes the expedition's originating idea to Jamie and documents the
+three-person traveling crew then on the river, recycled-material construction,
+bicycle-powered propulsion, route progress, institutional interruption, and
+participatory purpose.
+**Detailed public-safe wording:** The report identifies Jamie Burkart, Libby
+Hendon, and Laura Mattingly as the crew then traveling; reports a July 21 West
+Bottoms departure, progress beyond 1,000 miles, and a 51-day Vicksburg
+interruption; and describes a project organized around experiencing rivers and
+meeting people.
+**Where to project:** Knowledge-bank project note only.
+**Why it matters:** Adds contemporary independent depth to the expedition's
+origin, operation, collective context, and public purpose.
+**Guardrail:** The report was published before the voyage ended. Use the named
+crew as a moment-specific description, not a complete participant roster.
+**Do not say:** Do not say the article proves arrival at the Gulf, a completed
+salt-water endpoint, an exact complete route, a complete crew, sole authorship,
+or Coast Guard approval.
+**Protected boundaries:** The newspaper scan, article body text, photographs,
+reporter contact details, and private locator remain outside the repository;
+reproduction requires rights review.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-16

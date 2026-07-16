@@ -101,6 +101,16 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - **Recursive social-systems editorial review:** an independent reviewer uses
   only the public site to trace relation model, implementation, interface or
   embodied interaction, documentation, use context, and collective credit.
+- **KC Star river-raft evidence:** the article has a durable intake, source,
+  claim, project relationship, partially recovered inquiry, publication
+  decision, source-coverage statement, approval boundary, anti-claims, and
+  complete change record; its protected scan and contact details remain absent
+  from the repository and the reserve claim remains absent from the public
+  site.
+- **KC Star media-rights review:** before any newspaper page or photograph is
+  considered for publication, a human reviewer records rights, permission,
+  vulnerability, caption, and purpose decisions. Protected custody is not
+  permission.
 
 ## Anti-gaming rules
 
@@ -171,3 +181,9 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   sum unstable response displays; infer that WOW List never had an event from
   a current zero display; or silently promote reserve event claims onto the
   public site.
+- Do not satisfy the KC Star river-raft evidence gate by copying the newspaper
+  PDF, article body, photographs, reporter contact details, or private locator
+  into the public repository; converting a crew-at-publication description
+  into a complete roster; claiming a final Gulf endpoint from a pre-completion
+  report; inferring Coast Guard approval; or silently projecting reserve depth
+  onto the current site.

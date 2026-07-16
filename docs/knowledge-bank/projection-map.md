@@ -184,3 +184,10 @@ source-backed public proofs. No professor name, evaluation text, grade, or
 endorsement is auto-projected to the website. Any later visible composition
 must answer a specific audience need, rely on public-safe project evidence, and
 retain the source and collective-credit boundaries of the underlying work.
+
+The KC Star raft report remains reserve depth. It strengthens the expedition
+record and future cultural, participatory-program, or photo-editor composition,
+but the current hiring composition does not require another visible raft claim.
+No scanned page, newspaper photograph, or article text is projected. Any later
+use must retain the pre-completion publication boundary, collective credit, and
+separate media-rights review.

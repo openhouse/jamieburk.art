@@ -245,10 +245,10 @@ export const frameworkIntake = [
     status: "researching",
     dispositions: ["project-linked", "claim-created", "inquiry-created"],
     projectIds: ["great-accommodations"],
-    sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"],
-    claimIds: ["CLM-RIVER-RAFT-EXPEDITION"],
+    sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-RIVER-RAFT-KC-STAR-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"],
+    claimIds: ["CLM-RIVER-RAFT-EXPEDITION", "CLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD"],
     inquiryIds: ["INQ-RIVER-RAFT-EXACT-ROUTE"],
-    notes: ["Current sources support four months and reaching salt water, but not an exact Gulf endpoint."]
+    notes: ["The KC Star report closes substantial inception, crew, construction, progress, interruption, and purpose details. The complete route, participant population, and final endpoint remain open."]
   },
   {
     id: "LEAD-WATERWAYS-PUBLIC-ENGAGEMENT-MEMORY",
@@ -280,6 +280,21 @@ export const frameworkIntake = [
     claimIds: ["CLM-RIVER-RAFT-EXPEDITION"],
     inquiryIds: [],
     notes: []
+  },
+  {
+    id: "LEAD-RIVER-RAFT-KC-STAR-2007",
+    receivedAt: "2026-07-16",
+    suppliedBy: "Jamie Burkart",
+    kind: "article",
+    title: "Kansas City Star river-raft front-page report",
+    summary: "A protected two-page newspaper record supplies contemporary independent evidence for the expedition's inception, crew context, construction, route progress, institutional interruption, and participatory purpose.",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "inquiry-created", "project-linked", "protected-from-publication"],
+    projectIds: ["great-accommodations", "participatory-public-practice"],
+    sourceIds: ["SRC-RIVER-RAFT-KC-STAR-2007"],
+    claimIds: ["CLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD", "CLM-RIVER-RAFT-EXPEDITION"],
+    inquiryIds: ["INQ-RIVER-RAFT-EXACT-ROUTE"],
+    notes: ["The newspaper citation and bounded paraphrase are public-safe. The locally preserved scan and its photographs remain protected pending rights review."]
   },
   {
     id: "LEAD-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
@@ -924,8 +939,8 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "reserve",
     themes: ["waterways", "public engagement", "participatory programs"],
-    sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"],
-    claimIds: ["CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-PROGRAM", "CLM-RIVER-RAFT-EXPEDITION"],
+    sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-RIVER-RAFT-KC-STAR-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"],
+    claimIds: ["CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-PROGRAM", "CLM-RIVER-RAFT-EXPEDITION", "CLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD"],
     inquiryIds: ["INQ-RIVER-RAFT-EXACT-ROUTE", "INQ-WATERWAYS-PUBLIC-PROGRAMS"],
     photoBrief: {
       status: "candidates-located",
@@ -1332,6 +1347,47 @@ export const frameworkSources = [
     publicNote: "The contemporaneous report attributes the expedition idea to Jamie and connects it to Kansas City transportation history and the Missouri River.",
     supportsGenerally: ["Jamie conceived the expedition", "recycled-material raft", "Missouri River and transportation-history context"],
     doesNotEstablish: ["the complete route to the Gulf of Mexico", "the expedition's final endpoint", "solo authorship of the collective voyage", "the complete crew roster"]
+  },
+  {
+    id: "SRC-RIVER-RAFT-KC-STAR-2007",
+    title: "In the name of art, go with the flow",
+    organization: "The Kansas City Star",
+    author: "Darryl Levings",
+    kind: "published-article",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    publishedAt: "2007-11-15",
+    accessedAt: "2026-07-16",
+    publicCitation: "Darryl Levings, 'In the name of art, go with the flow,' The Kansas City Star, November 15, 2007, pp. A1, A4.",
+    publicNote: "The front-page and A4 report attributes the originating idea to Jamie and documents the crew then on the river, raft construction and propulsion, July departure, progress beyond 1,000 miles, a 51-day Vicksburg interruption, and the participatory river-and-community purpose.",
+    supportsGenerally: [
+      "the originating idea attributed to Jamie",
+      "July 21, 2007, departure from Kansas City's West Bottoms",
+      "Libby Hendon, Laura Mattingly, and Jamie Burkart as the three-person traveling crew then on the river",
+      "a roughly 12-by-13-foot raft built in three weeks from discarded building materials and soda-syrup drums",
+      "two bicycles linked to a paddlewheel",
+      "progress beyond the 1,000-mile marker",
+      "a 51-day interruption after the Coast Guard beached the raft near Vicksburg",
+      "a living river experience organized around meeting people and reconsidering cultural connections between river places"
+    ],
+    doesNotEstablish: [
+      "the complete crew or participant population across the full voyage",
+      "the exact complete route or every host community",
+      "the final endpoint or completed arrival at the Gulf of Mexico",
+      "Jamie's sole authorship or performance of the collective expedition",
+      "Coast Guard approval or endorsement",
+      "rights to reproduce the newspaper pages or photographs"
+    ],
+    protectedLocatorId: "LOC-RIVER-RAFT-KC-STAR-2007-PDF",
+    media: {
+      mediaKind: "document",
+      rightsStatus: "unknown",
+      consentStatus: "review-needed",
+      publicDisplayStatus: "metadata-only",
+      visibleText: ["In the name of art, go with the flow", "RIVER: Adventure of a lifetime takes three friends from KC to Louisiana"],
+      captureTimestamp: "November 15, 2007",
+      timestampConfidence: "high"
+    }
   },
   {
     id: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009",
@@ -1809,13 +1865,53 @@ export const frameworkClaims = [
     evidence: [
       { sourceId: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", relationship: "direct-support", supports: ["four-month journey", "Missouri and Mississippi Rivers", "reaching salt water", "Jamie's organizing role"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-RAFT-PITCH-2007", relationship: "corroborating", supports: ["Jamie conceived the expedition", "recycled-material raft", "Missouri River context"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-RIVER-RAFT-KC-STAR-2007", relationship: "private-support", supports: ["originating idea attributed to Jamie", "July 21 departure", "three-person traveling crew then on the river", "raft construction and propulsion", "progress beyond 1,000 miles", "51-day Vicksburg interruption", "participatory river-and-community purpose"], locator: "Protected metadata review of the November 15, 2007, front-page and A4 report", confidence: "high", renderCitation: false },
       { sourceId: "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009", relationship: "corroborating", supports: ["Missouri and Mississippi journey", "reaching water that tasted salt", "collective trust and assistance"], confidence: "high", renderCitation: true }
     ],
     boundaries: ["Current sources do not establish an exact Gulf of Mexico endpoint.", "Describe the voyage as collective and do not erase the crew or host communities."],
     antiClaims: ["Jamie traveled alone", "The reviewed sources prove the exact final destination was the Gulf of Mexico"],
     researchInquiryIds: ["INQ-RIVER-RAFT-EXACT-ROUTE"],
-    reviewedAt: "2026-07-12",
+    reviewedAt: "2026-07-16",
     reviewedBy: ["Jamie Burkart", "Codex source review"]
+  },
+  {
+    id: "CLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD",
+    project: "great-accommodations",
+    internalClaim: "The Kansas City Star's November 15, 2007, front-page report attributes the expedition's originating idea to Jamie and independently documents the three-person traveling crew then on the river, recycled-material construction, bicycle-powered propulsion, July 21 departure, progress beyond 1,000 miles, a 51-day Vicksburg interruption, and a participatory river-and-community purpose.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "reserve",
+    projections: [{
+      key: "archive-note",
+      text: "A November 2007 Kansas City Star front-page report attributed the river expedition's originating idea to Jamie and documented its collective crew, recycled-material construction, bicycle-powered propulsion, route progress, institutional interruption, and participatory purpose.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["docs/knowledge-bank/projects/participatory-public-programs"]
+    }],
+    evidence: [{
+      sourceId: "SRC-RIVER-RAFT-KC-STAR-2007",
+      relationship: "private-support",
+      supports: ["originating idea attributed to Jamie", "three-person traveling crew then on the river", "construction and bicycle propulsion", "July 21 departure", "progress beyond 1,000 miles", "51-day Vicksburg interruption", "participatory river-and-community purpose"],
+      locator: "Protected metadata review of the November 15, 2007, front-page and A4 report",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: [
+      "The article was published before the voyage ended and does not establish the final endpoint or completed arrival at salt water.",
+      "The named three-person crew describes the traveling crew at the time of reporting, not every participant, passenger, host, helper, or collaborator across the project.",
+      "The source attributes the originating idea to Jamie but does not establish sole authorship or sole execution.",
+      "Newspaper page and photograph reproduction requires separate rights review."
+    ],
+    antiClaims: [
+      "The article proves arrival at the Gulf of Mexico",
+      "Jamie traveled or created the project alone",
+      "The three named travelers were the complete project participant population",
+      "The Coast Guard approved or endorsed the project",
+      "Archive custody grants permission to reproduce the article or photographs"
+    ],
+    researchInquiryIds: ["INQ-RIVER-RAFT-EXACT-ROUTE"],
+    reviewedAt: "2026-07-16",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
   },
   {
     id: "CLM-NYCARTC-CABARET-ORGANIZING",
@@ -1987,7 +2083,32 @@ export const frameworkInquiries = [
   openInquiry("INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "nyc-artist-coalition", "What public records establish Jamie's and NYC Artist Coalition's roles in advocacy surrounding creation of the Office of Nightlife?", ["Review legislation, hearings, testimony, coalition pages, and contemporaneous press.", "Identify Jamie-authored or Jamie-produced public artifacts."], ["Reporting establishes coalition advocacy and Jamie's public participation, not sole causality or every production task."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018", "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021"]),
   openInquiry("INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "nyc-artist-coalition", "Which nightlife town halls did Jamie produce, what was his role, who participated, and what public outputs followed?", ["Recover event programs, recordings, photographs, and production records.", "Map production tasks, collaborators, attendance, and outputs."], ["One town hall is now externally documented; exact production ownership and attendance remain open."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"]),
   openInquiry("INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "nyc-artist-coalition", "What did Talks Not Raids do, what role did Jamie play, what transparency was achieved, and what public record establishes changes to MARCH?", ["Map Jamie's individual authorship and operational role.", "Review implementation reports and later agency structure.", "Define what disbanded means in the public record."], ["The campaign and legislative outcome are documented, but Jamie's individual role and any disbandment claim remain unverified."], ["SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"]),
-  openInquiry("INQ-RIVER-RAFT-EXACT-ROUTE", "great-accommodations", "What exact route, dates, crew, host communities, interruptions, and endpoint are documented for the raft expedition?", ["Recover route logs, contemporary press, photographs, correspondence, and collaborator accounts.", "Distinguish reaching salt water from a documented Gulf endpoint."], ["Current sources do not establish the exact final endpoint or complete crew."], ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"]),
+  {
+    id: "INQ-RIVER-RAFT-EXACT-ROUTE",
+    project: "great-accommodations",
+    question: "What exact route, dates, crew, host communities, interruptions, and endpoint are documented for the raft expedition?",
+    methods: [
+      "Close-read the preserved contemporary newspaper report and reconcile it with existing public reporting and institutional records.",
+      "Recover route logs, photographs, correspondence, collaborator accounts, and later completion records.",
+      "Distinguish reaching salt water from a documented Gulf endpoint and distinguish the crew at one moment from the complete participant population."
+    ],
+    runAt: "2026-07-16",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The Kansas City Star reports a July 21, 2007, departure from Kansas City's West Bottoms after a three-week build.",
+      "The report identifies Jamie Burkart, Libby Hendon, and Laura Mattingly as the traveling crew then on the river and notes that friends joined for stretches.",
+      "The report documents a roughly 12-by-13-foot raft built from discarded building materials and soda-syrup drums, propelled when needed by two bicycles linked to a paddlewheel.",
+      "By November 15 the crew had passed the 1,000-mile marker, resumed travel after a 51-day interruption near Vicksburg, and was reported south of Baton Rouge.",
+      "The report attributes the originating idea to Jamie and describes the purpose as experiencing the rivers, meeting people, and awakening cultural connection among river places."
+    ],
+    limitations: [
+      "The report was published before the expedition ended and does not establish the final endpoint, completed arrival at salt water, or the final duration.",
+      "The named traveling crew is not a complete roster of all participants, passengers, hosts, helpers, builders, or collaborators.",
+      "The exact day-by-day route, every stop and host community, and the complete interruption and completion chronology remain unrecovered."
+    ],
+    sourceIds: ["SRC-RAFT-PITCH-2007", "SRC-RIVER-RAFT-KC-STAR-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"],
+    publicSummary: "A contemporary front-page report now establishes the July 21 West Bottoms departure, crew then traveling, construction and propulsion, progress beyond 1,000 miles, 51-day Vicksburg interruption, and participatory purpose. The complete route, participant population, and final endpoint remain open."
+  },
   openInquiry("INQ-WATERWAYS-PUBLIC-PROGRAMS", "great-accommodations", "What participatory programs did Jamie create to connect residents and river cities through shared waterways?", ["Inventory Great Accommodations programs, correspondence, software, walks, screenings, and community contributions.", "Recover dates, collaborators, attendance, artifacts, and public outcomes."], ["Two public records and one independent review still do not provide a complete program inventory."], ["SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"]),
   openInquiry("INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL", "participatory-public-practice", "Does the wider record support a longitudinal professional claim connecting early participatory art, recurring cultural programs, civic systems, and source-backed team memory?", ["Build a dated cross-project source map.", "Test continuities and discontinuities in Jamie's role, methods, outputs, and participant agency.", "Seek counterexamples and collaborator perspectives."], ["A compelling pattern is not yet a confirmed public claim.", "Distinct communities must retain their own context."], ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-GREAT-ACCOMMODATIONS-ARTTATTLER-2009"]),
   openInquiry("INQ-NPR-CABARET-SOURCE-CAPTURE", "nyc-artist-coalition", "What claims and context does the supplied NPR Cabaret Law article support after durable capture and close reading?", ["Recover the article through a stable public or archived copy.", "Record exact attribution, date, supported propositions, and limitations."], ["Canonical metadata and two campaign-index relationships are captured, but the article was not available for close reading in this run."], ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017"]),
@@ -2033,6 +2154,7 @@ const publicationDecisionInputs: Array<[
   ["PUB-OPEN-HOUSE-PARTICIPATORY", "CLM-OPEN-HOUSE-PARTICIPATORY-PROGRAM", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Strong source-backed depth held outside the current site composition."],
   ["PUB-GREAT-ACCOMMODATIONS-PARTICIPATORY", "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-PROGRAM", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Strong source-backed depth held for future audience needs."],
   ["PUB-RIVER-RAFT-EXPEDITION", "CLM-RIVER-RAFT-EXPEDITION", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Compelling evidence retained with route and collective-work boundaries."],
+  ["PUB-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS", "CLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Contemporary independent depth strengthens the route record without adding another visible hiring-site claim or publishing protected media."],
   ["PUB-NYCARTC-CABARET-ORGANIZING", "CLM-NYCARTC-CABARET-ORGANIZING", "selected", ["/work/fair-rent-nyc", "/work/technical-operations"], "Adds concrete public evidence of Jamie's bounded organizing role."],
   ["PUB-NYCARTC-EARLY-MUTUAL-AID", "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING", "selected", ["/work/fair-rent-nyc"], "Makes Jamie's early organizer role and the coalition's practical mutual-aid work legible."],
   ["PUB-NYCARTC-NIGHTLIFE-TOWN-HALL", "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL", "selected", ["/work/fair-rent-nyc"], "Shows Jamie participating in a coalition-led public feedback structure for a new city office."],
@@ -2055,7 +2177,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   audiences: ["hiring managers", "public-interest technology peers", "future editors"],
   surfaces,
   rationale,
-    decidedAt: [
+    decidedAt: id === "PUB-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS" ? "2026-07-16" : [
       "PUB-196-RESIDENCY-ONBOARDING-2023",
       "PUB-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
       "PUB-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017"

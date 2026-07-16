@@ -1,6 +1,6 @@
 # Participatory Public Programs
 
-**Reviewed:** 2026-07-14
+**Reviewed:** 2026-07-16
 
 This note preserves source-backed depth that is not currently required on the
 public portfolio site.
@@ -42,8 +42,29 @@ described a bicycle-powered paddlewheel raft journey down the Missouri and
 Mississippi Rivers that lasted four months, until the water tasted salt.
 
 The reviewed sources do not establish the exact final endpoint as the Gulf of
-Mexico or provide a complete crew and route record. Those questions remain
-open.
+Mexico or provide a complete crew and route record. A contemporary newspaper
+source now partially recovers the route record, while those remaining
+questions stay open.
+
+## Kansas City Star Front-Page Record
+
+Darryl Levings's November 15, 2007, front-page report in The Kansas City Star
+attributes the expedition's originating idea to Jamie. It documents a July 21
+departure from Kansas City's West Bottoms, a raft built in three weeks from
+discarded building materials and soda-syrup drums, and a bicycle-powered
+paddlewheel used when propulsion was needed.
+
+The report identifies Jamie, Libby Hendon and Laura Mattingly as the
+three-person traveling crew then on the river. It also says friends joined for
+stretches, so those names are not a complete crew roster or complete project
+population. By publication, the crew had passed the 1,000-mile marker and
+resumed travel after a 51-day interruption near Vicksburg.
+
+The source also clarifies the work's purpose: experiencing and meeting people
+along the rivers while making cultural connections among river places more
+visible. Because the report was published before the voyage ended, it is not
+proof of the final endpoint, completed arrival at salt water, final duration,
+or exact complete route.
 
 ## Claudette's Theatre on Wheels
 

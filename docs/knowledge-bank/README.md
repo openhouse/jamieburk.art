@@ -13,6 +13,13 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+The July 16 Kansas City Star raft pass demonstrates protected-source intake.
+The source record stores public bibliographic metadata, bounded paraphrase,
+proposition-level support, explicit non-affordances, and a protected locator ID
+without storing the newspaper scan, article body, photographs, contact details,
+or private filesystem location. Its route inquiry is partially recovered while
+the final endpoint and complete participant population remain open.
+
 ## Portfolio Blind-Spot Controls
 
 The knowledge bank also tracks the distance between evidence depth and external

@@ -560,3 +560,44 @@ professor material or new creative-practice claim was added to the public site.
 The independent `embodied-practice-editorial-review` and
 `recursive-social-systems-editorial-review` remain `manual-required` and
 unrun.
+
+## Kansas City Star River-Raft Evidence Pass
+
+The July 16 pass close-read a privately supplied two-page Kansas City Star
+report from November 15, 2007. The source entered the public-safe knowledge bank
+as metadata, bounded paraphrase, proposition-level support, explicit
+non-affordances, and a protected locator ID. The PDF, article body, newspaper
+photographs, reporter contact details, and private source location did not enter
+the repository.
+
+The first executable run scored **98/100**. Every prior hard gate passed; the
+new `kc-star-river-raft-evidence` gate failed because its complete intake,
+claim, source, inquiry, publication, coverage, approval, anti-claim, and change-
+record lifecycle did not yet exist.
+
+The hill climb added that lifecycle and moved the exact-route inquiry from
+`open` to `partially-recovered`. The report now supports a July 21 West Bottoms
+departure, the three-person crew then traveling, discarded-material
+construction, bicycle-linked paddlewheel propulsion, progress beyond 1,000
+miles, a 51-day Vicksburg interruption, and the participatory river-and-
+community purpose. The complete route, complete participant population, final
+duration, and final endpoint remain open because the report was published
+before the voyage ended.
+
+Five adversarial tests reject endpoint and roster inflation, silent public-site
+projection, protected-PDF publication, weakened source custody, and private-
+locator leakage. The deterministic suite now passes **138 tests**. The final
+launch evaluation reaches **100/100**, with the new gate and every prior hard
+gate passing.
+
+The first complete-check run then exposed one stale citation-test population
+constant: intake had correctly grown by one, while the no-silent-loss test still
+expected the previous total. The control was advanced and given a direct
+assertion for `LEAD-RIVER-RAFT-KC-STAR-2007`; the complete check rerun passed.
+
+No new website or resume copy was selected. The source remains reserve depth,
+and `kc-star-river-raft-media-rights-review` remains a required, unrun human
+gate. The complete `npm run check` gate passes with citation validation and 19
+citation tests, 138 deterministic eval tests, TypeScript, lint, the production
+build, standalone assets, knowledge-bank integrity, public safety, route
+validation, and launch readiness.

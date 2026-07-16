@@ -36,6 +36,10 @@ public portfolio surface.
   relations, implementation, interaction, documentation, use, dialogue, and
   collective credit remain connected without historical-to-current skill
   inflation.
+- [x] The Kansas City Star river-raft evidence passes as an automated hard
+  gate: source metadata, bounded claims, collective credit, partially recovered
+  route findings, publication restraint, and the protected-media boundary are
+  represented across the structured and human-readable knowledge bank.
 
 ## Human gates
 
@@ -64,6 +68,9 @@ public portfolio surface.
   public site without private professor material.
 - [ ] An independent reviewer applies the recursive social-systems lens to the
   current public site without private professor material.
+- [ ] A human reviewer clears rights, permission, vulnerability, caption, and
+  purpose before any Kansas City Star page or photograph is considered for
+  public use. Protected archive custody does not satisfy this gate.
 
 Names, credits, screenshots, quotes, photos, and collaborator-sensitive claims
 remain omitted unless already public-safe or specifically approved.

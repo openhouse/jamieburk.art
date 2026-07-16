@@ -290,3 +290,19 @@ details, screenshots, and private locators remain outside the repository.
 Current public claims continue to rely on the separately sourced project
 record, including *Time Is Long*, NTER CHNG, A Sorted Audio File, WOW List,
 CallNYC, and the public-program records.
+
+## 2026-07-16 KC Star Raft Evidence
+
+The protected newspaper source adds a contemporary independent report to the
+existing public Pitch, Charlotte Street, and ArtTattler record. It supports the
+originating role, crew then traveling, construction, propulsion, departure,
+progress, interruption, and participatory purpose at proposition level.
+
+The route inquiry moves to partially recovered. A July 21 West Bottoms
+departure, progress beyond 1,000 miles, a 51-day Vicksburg interruption, and a
+location south of Baton Rouge by publication are now documented. The complete
+route, complete participant population, and final endpoint remain open.
+
+This is protected-source support rather than a rendered public citation. The
+source's public metadata and bounded paraphrase may be used, while the scan,
+photographs, article text, contact details, and private locator remain excluded.

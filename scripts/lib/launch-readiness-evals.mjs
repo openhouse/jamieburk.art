@@ -4817,6 +4817,150 @@ export function evaluateProfessorLens({
   return missing;
 }
 
+export function evaluateKcStarRiverRaftEvidence({
+  framework,
+  intakeDoc,
+  projectDoc,
+  claimsDoc,
+  sourcesDoc,
+  sourceCoverage,
+  projectionMap,
+  approvalRegister,
+  antiClaims,
+  changeRecord,
+  publicSite,
+  pdfAssetPresent
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalized = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalized.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    'id: "LEAD-RIVER-RAFT-KC-STAR-2007"',
+    'id: "SRC-RIVER-RAFT-KC-STAR-2007"',
+    'title: "In the name of art, go with the flow"',
+    'organization: "The Kansas City Star"',
+    'author: "Darryl Levings"',
+    'kind: "published-article"',
+    'visibility: "public-metadata-only"',
+    'preservationStatus: "private"',
+    'publishedAt: "2007-11-15"',
+    'protectedLocatorId: "LOC-RIVER-RAFT-KC-STAR-2007-PDF"',
+    'id: "CLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD"',
+    'sourceId: "SRC-RIVER-RAFT-KC-STAR-2007"',
+    'relationship: "private-support"',
+    'resultStatus: "partially-recovered"',
+    '["PUB-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS"',
+    'reviewedAt: "2026-07-16"'
+  ]);
+  const kcStarSourceStart = framework.indexOf('id: "SRC-RIVER-RAFT-KC-STAR-2007"');
+  const kcStarSourceEnd = framework.indexOf(
+    'id: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"',
+    kcStarSourceStart
+  );
+  const kcStarSourceBlock = kcStarSourceStart >= 0
+    ? framework.slice(kcStarSourceStart, kcStarSourceEnd >= 0 ? kcStarSourceEnd : undefined)
+    : "";
+  requireFragments("KC Star source record", kcStarSourceBlock, [
+    'title: "In the name of art, go with the flow"',
+    'organization: "The Kansas City Star"',
+    'author: "Darryl Levings"',
+    'kind: "published-article"',
+    'visibility: "public-metadata-only"',
+    'preservationStatus: "private"',
+    'publishedAt: "2007-11-15"',
+    'protectedLocatorId: "LOC-RIVER-RAFT-KC-STAR-2007-PDF"'
+  ]);
+  requireFragments("KC Star intake", intakeDoc, [
+    "Darryl Levings",
+    "The Kansas City Star",
+    "November 15, 2007",
+    "front page and page A4",
+    "July 21, 2007",
+    "passed the 1,000-mile marker",
+    "51-day interruption",
+    "Libby Hendon",
+    "Laura Mattingly",
+    "published before the expedition ended",
+    "does not establish the final endpoint",
+    "photograph and page-reproduction rights remain unresolved"
+  ]);
+  requireFragments("Participatory public-programs project record", projectDoc, [
+    "Kansas City Star Front-Page Record",
+    "originating idea to Jamie",
+    "bicycle-powered paddlewheel",
+    "discarded building materials",
+    "meeting people along the rivers",
+    "Libby Hendon and Laura Mattingly",
+    "not a complete crew roster",
+    "not proof of the final endpoint"
+  ]);
+  requireFragments("Human-readable claim register", claimsDoc, [
+    "river-raft-kc-star-contemporaneous-record",
+    "The Kansas City Star's November 15, 2007, front-page report",
+    "three-person traveling crew then on the river",
+    "published before the voyage ended",
+    "Do not say the article proves arrival at the Gulf"
+  ]);
+  requireFragments("Source-basis register", sourcesDoc, [
+    "Darryl Levings's November 15, 2007, Kansas City Star front-page report",
+    "public metadata and bounded paraphrase",
+    "locally preserved newspaper PDF remains protected"
+  ]);
+  requireFragments("Source coverage", sourceCoverage, [
+    "KC Star Raft Evidence",
+    "contemporary independent report",
+    "route inquiry moves to partially recovered",
+    "complete route, complete participant population, and final endpoint remain open"
+  ]);
+  requireFragments("Projection map", projectionMap, [
+    "KC Star raft report remains reserve depth",
+    "No scanned page, newspaper photograph, or article text is projected",
+    "current hiring composition does not require another visible raft claim"
+  ]);
+  requireFragments("Approval register", approvalRegister, [
+    "Kansas City Star raft report",
+    "metadata and bounded paraphrase",
+    "Do not publish the PDF or its photographs"
+  ]);
+  requireFragments("Anti-claims", antiClaims, [
+    "The Kansas City Star report was published before the voyage ended",
+    "Do not say the article proves that the raft reached the Gulf of Mexico",
+    "Do not erase Libby Hendon, Laura Mattingly, other participants, hosts, or helpers",
+    "Do not infer Coast Guard approval"
+  ]);
+  requireFragments("Comprehensive change record", changeRecord, [
+    "# KC Star Raft Article Knowledge-Bank Update",
+    "## Source Review",
+    "## Claims Added Or Strengthened",
+    "## Knowledge-Bank Files Changed",
+    "## Eval Hill Climb",
+    "## Public-Safety And Copyright Decisions",
+    "## What Did Not Change",
+    "## Remaining Research Questions"
+  ]);
+
+  if (pdfAssetPresent) {
+    missing.push("The copyrighted Kansas City Star PDF must not be copied into the public repository.");
+  }
+  if (/CLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD|In the name of art, go with the flow|Kansas City Star Front-Page Record/i.test(publicSite)) {
+    missing.push("Reserve KC Star raft evidence must not silently appear on the public site.");
+  }
+
+  const publicBundle = [framework, intakeDoc, projectDoc, claimsDoc, sourcesDoc, sourceCoverage, projectionMap, approvalRegister, antiClaims, changeRecord].join("\n");
+  if ([/KC_Star_Article\.pdf/, /\/Users\//, /\/Volumes\//, /816-234-4689/, /levings@kcstar\.com/i].some((pattern) => pattern.test(publicBundle))) {
+    missing.push("KC Star public bundle contains a private locator or reporter contact detail.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -5021,6 +5165,14 @@ export function runLaunchEvals(repoRoot) {
   const nterChngArchiveExpansionDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-nter-chng-archive-expansion.md"
+  );
+  const kcStarRiverRaftIntakeDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-16-kc-star-river-raft.md"
+  );
+  const kcStarRiverRaftChangeRecord = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/2026-07-16-kc-star-article-update.md"
   );
   const nycArtCGovernmentValueBatch = readOptional(
     repoRoot,
@@ -6094,6 +6246,50 @@ export function runLaunchEvals(repoRoot) {
     );
   }
 
+  const kcStarRiverRaftMissing = evaluateKcStarRiverRaftEvidence({
+    framework,
+    intakeDoc: kcStarRiverRaftIntakeDoc,
+    projectDoc: participatoryPublicProgramsDoc,
+    claimsDoc,
+    sourcesDoc,
+    sourceCoverage,
+    projectionMap,
+    approvalRegister,
+    antiClaims,
+    changeRecord: kcStarRiverRaftChangeRecord,
+    publicSite: [
+      homePage,
+      resumePage,
+      siteData,
+      workData,
+      technicalOperations,
+      callNycCase,
+      fairRentCase,
+      wowlistCase,
+      sundayDinnerCase,
+      kcTownHallCase
+    ].join("\n"),
+    pdfAssetPresent: [
+      "KC_Star_Article.pdf",
+      "docs/knowledge-bank/KC_Star_Article.pdf",
+      "apps/www/public/KC_Star_Article.pdf"
+    ].some((relativePath) => existsSync(path.join(repoRoot, relativePath)))
+  });
+  results.push(
+    result({
+      id: "kc-star-river-raft-evidence",
+      label: "KC Star raft evidence strengthens the route record without endpoint, credit, or rights inflation",
+      weight: 20,
+      hardGate: true,
+      missing: kcStarRiverRaftMissing,
+      evidence: [
+        "The November 15, 2007, front-page and A4 report supplies contemporary independent evidence for inception, crew context, construction, route progress, interruption, and public-engagement purpose.",
+        "The source remains metadata-only in the public repository; the scanned pages, article text, photographs, local locator, and reporter contact details remain protected.",
+        "The route inquiry becomes partially recovered while the complete route, complete participant population, and final endpoint remain open."
+      ]
+    })
+  );
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -6125,7 +6321,12 @@ export function runLaunchEvals(repoRoot) {
       id: spec.manualGateId,
       status: "manual-required",
       pass: `An independent editor applies ${spec.label.toLowerCase()} to the current public portfolio without seeing private professor materials, and records any blind spot or overreach; automated protocol readiness does not count as professor review.`
-    }))
+    })),
+    {
+      id: "kc-star-river-raft-media-rights-review",
+      status: "manual-required",
+      pass: "Before any newspaper page or photograph is displayed, rights holders, photographer credits, participant context, crop, caption, and reuse permission are independently reviewed."
+    }
   ];
 
   return {

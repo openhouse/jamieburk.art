@@ -383,6 +383,20 @@ Raw text, grades, student data, correspondence, contact details, screenshots,
 and private locators remain protected. Current portfolio claims continue to use
 separately sourced public project evidence.
 
+### July 16 Kansas City Star Raft Source
+
+Darryl Levings's November 15, 2007, Kansas City Star front-page report provides
+a contemporary independent record of the river expedition's originating idea,
+crew then traveling, build, propulsion, progress, interruption, and
+participatory purpose. The source is represented through public metadata and
+bounded paraphrase only.
+
+The locally preserved newspaper PDF remains protected. The repository excludes
+the scan, article body text, photographs, reporter contact details, and private
+locator. The report was published before the expedition ended and cannot prove
+the final endpoint, complete route, complete participant population, or Coast
+Guard approval.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

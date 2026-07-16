@@ -17,6 +17,7 @@ import {
   evaluateKcTownHallCouncilAllocation,
   evaluateKcTownHallFullPopulationArchive,
   evaluateKcTownHallPhaseOneNeighborhoodPractice,
+  evaluateKcStarRiverRaftEvidence,
   evaluateKnowledgeLifecycle,
   evaluateNterChngArchiveExpansion,
   evaluateNycArtCGovernmentInstitutionalValue,
@@ -2388,4 +2389,81 @@ test("professor lenses reject private locator leakage and silent public professo
   });
   assert.ok(privateFailures.some((failure) => failure.includes("private locator")));
   assert.ok(projectionFailures.some((failure) => failure.includes("must not silently appear")));
+});
+
+const kcStarRiverRaftFixture = {
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  intakeDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-16-kc-star-river-raft.md"),
+  projectDoc: readRepoFile("docs/knowledge-bank/projects/participatory-public-programs.md"),
+  claimsDoc: readRepoFile("docs/knowledge-bank/claims.md"),
+  sourcesDoc: readRepoFile("docs/knowledge-bank/sources.md"),
+  sourceCoverage: readRepoFile("docs/knowledge-bank/source-coverage.md"),
+  projectionMap: readRepoFile("docs/knowledge-bank/projection-map.md"),
+  approvalRegister: readRepoFile("docs/knowledge-bank/approval-register.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md"),
+  changeRecord: readRepoFile("docs/knowledge-bank/2026-07-16-kc-star-article-update.md"),
+  publicSite: [
+    readRepoFile("apps/www/src/app/page.tsx"),
+    readRepoFile("apps/www/src/app/work/page.tsx"),
+    readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+    readRepoFile("apps/www/src/app/resume/page.tsx"),
+    readRepoFile("apps/www/src/data/proofs.ts")
+  ].join("\n"),
+  pdfAssetPresent: false
+};
+
+test("KC Star raft evidence passes with a complete bounded lifecycle", () => {
+  assert.deepEqual(evaluateKcStarRiverRaftEvidence(kcStarRiverRaftFixture), []);
+});
+
+test("KC Star raft evidence rejects endpoint and crew-boundary inflation", () => {
+  const failures = evaluateKcStarRiverRaftEvidence({
+    ...kcStarRiverRaftFixture,
+    intakeDoc: kcStarRiverRaftFixture.intakeDoc
+      .replace("published before the expedition ended", "published during the expedition")
+      .replace(/does not\s+establish\s+the final endpoint/, "establishes the final endpoint"),
+    projectDoc: kcStarRiverRaftFixture.projectDoc.replace(
+      "not a complete crew roster",
+      "a complete crew roster"
+    )
+  });
+  assert.ok(failures.some((failure) => failure.includes("published before the expedition ended")));
+  assert.ok(failures.some((failure) => failure.includes("does not establish the final endpoint")));
+  assert.ok(failures.some((failure) => failure.includes("not a complete crew roster")));
+});
+
+test("KC Star raft evidence rejects silent public-site projection", () => {
+  const failures = evaluateKcStarRiverRaftEvidence({
+    ...kcStarRiverRaftFixture,
+    publicSite: `${kcStarRiverRaftFixture.publicSite}\nCLM-RIVER-RAFT-KC-STAR-CONTEMPORANEOUS-RECORD`
+  });
+  assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
+});
+
+test("KC Star raft evidence rejects copying the protected PDF into the repo", () => {
+  const failures = evaluateKcStarRiverRaftEvidence({
+    ...kcStarRiverRaftFixture,
+    pdfAssetPresent: true
+  });
+  assert.ok(failures.some((failure) => failure.includes("must not be copied")));
+});
+
+test("KC Star raft evidence rejects weakened source custody and private leakage", () => {
+  const boundaryFailures = evaluateKcStarRiverRaftEvidence({
+    ...kcStarRiverRaftFixture,
+    framework: kcStarRiverRaftFixture.framework
+      .replace(
+        'visibility: "public-metadata-only",\n    preservationStatus: "private",',
+        'visibility: "public",\n    preservationStatus: "public",'
+      )
+      .replace('protectedLocatorId: "LOC-RIVER-RAFT-KC-STAR-2007-PDF"', '')
+  });
+  const leakageFailures = evaluateKcStarRiverRaftEvidence({
+    ...kcStarRiverRaftFixture,
+    changeRecord: `${kcStarRiverRaftFixture.changeRecord}\n/Users/private/source`
+  });
+  assert.ok(boundaryFailures.some((failure) => failure.includes('visibility: "public-metadata-only"')));
+  assert.ok(boundaryFailures.some((failure) => failure.includes('preservationStatus: "private"')));
+  assert.ok(boundaryFailures.some((failure) => failure.includes("protectedLocatorId")));
+  assert.ok(leakageFailures.some((failure) => failure.includes("private locator")));
 });

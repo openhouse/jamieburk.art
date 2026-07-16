@@ -53,6 +53,12 @@ The repo is public. Approval here means approved for public-safe repository and 
   details, and private locators are not approved. Do not imply present professor
   opinion, professor authorship of the evals, current endorsement, or current
   proficiency from historical records.
+- Kansas City Star raft report: bibliographic metadata and bounded paraphrase
+  are approved as reserve knowledge-bank depth. Do not publish the PDF or its
+  photographs, reporter contact details, article body text, or private locator.
+  Preserve Libby Hendon and Laura Mattingly as the crew then traveling, other
+  participants and hosts, the pre-completion publication date, and the open
+  final-endpoint question.
 - NTER CHNG exhibition record: America: Now and Here's archived official pages
   are approved as direct evidence of 2011 exhibition inclusion, shared
   visual-artist credit, and observed visitor use. Keep the Nerman Museum page
